@@ -1782,12 +1782,19 @@ def generate_report(constraint_id, data, iteration_round=None):
     # Post-synthesis (only if T12 flags exist)
     post = build_post_synthesis(constraint_id, data["pipeline"])
 
+    # Axiom 2: Chi/Epsilon decomposition
+    try:
+        from chi_variance_decomposition import build_axiom2_section
+        l2_axiom2 = build_axiom2_section(constraint_id, data["pipeline"])
+    except ImportError:
+        l2_axiom2 = ""
+
     sections = [
         banner,
         build_level_header(1, "SELF-CONSISTENCY"),
         l1_identity, l1_contamination, l1_orbit, l1_omega,
         build_level_header(2, "DIAGNOSTIC CONVERGENCE"),
-        l2_convergence, l2_maxent, l2_wasserstein, l2_cohomology, l2_persistence, l2_abductive, l2_verdict, l2_theorems,
+        l2_convergence, l2_maxent, l2_wasserstein, l2_cohomology, l2_persistence, l2_abductive, l2_axiom2, l2_verdict, l2_theorems,
         build_level_header(3, "CORPUS POSITIONING"),
         l3_distribution, l3_structural,
     ]

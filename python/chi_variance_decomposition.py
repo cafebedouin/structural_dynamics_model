@@ -1,15 +1,19 @@
 #!/usr/bin/env python3
 """Chi Variance Decomposition Analysis
 
-Three-part analysis of Chi variability across perspectives for tangled_rope
-constraints:
+Four-part analysis of Chi variability across perspectives:
   1. Variance decomposition into f(d) vs scope modifier contributions
   2. Scope modifier sensitivity sweep (stability test)
   3. Dominant divergence pair analysis with counterfactual
+  4. Axiom 2 full-corpus decomposition (all types, per-type breakdown)
+
+Part 4 runs on the FULL corpus (all constraint types), decomposes per-observer
+chi variance into directionality f(d) vs scope sigma(S) contributions, and
+produces an Axiom 2 verdict (SUPPORTED/CHALLENGED/AMBIGUOUS).
 
 Prerequisites:
   - enriched_pipeline.json with perspective_chi fields
-  - tangled_gradient_data.json with subtype classifications
+  - tangled_gradient_data.json with subtype classifications (Parts 1-3)
 
 Reads:  outputs/enriched_pipeline.json
         outputs/tangled_gradient_data.json
@@ -17,6 +21,8 @@ Reads:  outputs/enriched_pipeline.json
 
 Writes: outputs/chi_variance_decomposition_data.json
         docs/chi_variance_decomposition.md
+        outputs/chi_epsilon_decomposition.json
+        outputs/chi_epsilon_decomposition_report.md
 
 Usage:  python3 python/chi_variance_decomposition.py
 """
@@ -42,6 +48,14 @@ DOCS_DIR = ROOT_DIR / "docs"
 REPORT_PATH = DOCS_DIR / "chi_variance_decomposition.md"
 DATA_PATH = OUTPUT_DIR / "chi_variance_decomposition_data.json"
 TANGLED_GRADIENT_PATH = OUTPUT_DIR / "tangled_gradient_data.json"
+
+# Part 4: Axiom 2 full-corpus outputs
+AXIOM2_REPORT_PATH = OUTPUT_DIR / "chi_epsilon_decomposition_report.md"
+AXIOM2_DATA_PATH = OUTPUT_DIR / "chi_epsilon_decomposition.json"
+
+# Near-uniform variance threshold — constraints below this have negligible
+# inter-observer variance and are excluded from corpus-level aggregation.
+NEAR_UNIFORM_THRESHOLD = 1e-6
 
 PERSPECTIVE_KEYS = ["powerless", "moderate", "institutional", "analytical"]
 
@@ -823,7 +837,439 @@ def run_pair_analysis(population, tangled_gradient):
 
 
 # ---------------------------------------------------------------------------
-# Report generation
+# Part 4: Axiom 2 Full-Corpus Decomposition
+# ---------------------------------------------------------------------------
+
+def classify_dominant_factor(decomp):
+    """Classify which factor dominates a constraint's inter-observer variance.
+
+    Returns one of: "directionality", "scope", "interaction", "none".
+    "none" means near-uniform (Var_total < threshold).
+    """
+    if decomp["var_total"] < NEAR_UNIFORM_THRESHOLD:
+        return "none"
+    fd_f = decomp["fd_fraction"]
+    sc_f = decomp["scope_fraction"]
+    if fd_f > sc_f and fd_f > 0.6:
+        return "directionality"
+    if sc_f > fd_f and sc_f > 0.6:
+        return "scope"
+    return "interaction"
+
+
+def run_axiom2_decomposition(all_constraints):
+    """Part 4: Full-corpus variance decomposition for Axiom 2 testing.
+
+    Analyzes ALL constraint types, not just tangled_rope.
+    Returns per-constraint decomposition with dominant_factor, per-type
+    breakdown, top-10 lists, worked examples, and Axiom 2 verdict.
+    """
+    per_constraint = {}
+    skipped = 0
+    near_uniform = 0
+
+    for c in all_constraints:
+        cid = c["id"]
+        components = extract_chi_components(c)
+        if components is None:
+            skipped += 1
+            continue
+        decomp = decompose_variance_single(components)
+        decomp["claimed_type"] = c.get("claimed_type", "unknown")
+        decomp["dominant_factor"] = classify_dominant_factor(decomp)
+        if decomp["var_total"] < NEAR_UNIFORM_THRESHOLD:
+            near_uniform += 1
+        per_constraint[cid] = decomp
+
+    # Separate non-uniform for corpus-level stats
+    non_uniform = {cid: d for cid, d in per_constraint.items()
+                   if d["var_total"] >= NEAR_UNIFORM_THRESHOLD}
+
+    # Per-type breakdown
+    type_order = ["mountain", "rope", "tangled_rope", "snare",
+                  "scaffold", "piton", "unknown"]
+    by_type = {}
+    for ctype in type_order:
+        subset = {cid: d for cid, d in non_uniform.items()
+                  if d["claimed_type"] == ctype}
+        if not subset:
+            continue
+        fd_fracs = [d["fd_fraction"] for d in subset.values()]
+        sc_fracs = [d["scope_fraction"] for d in subset.values()]
+        dom_counts = Counter(d["dominant_factor"] for d in subset.values())
+        by_type[ctype] = {
+            "n": len(subset),
+            "fd_fraction": desc_stats(fd_fracs),
+            "scope_fraction": desc_stats(sc_fracs),
+            "dominant_factor_counts": dict(dom_counts),
+        }
+
+    # Corpus-level aggregation (non-uniform only)
+    all_fd_fracs = [d["fd_fraction"] for d in non_uniform.values()]
+    all_sc_fracs = [d["scope_fraction"] for d in non_uniform.values()]
+    corpus_dom_counts = Counter(d["dominant_factor"] for d in non_uniform.values())
+
+    # Corpus-level f_share using mean variance ratio (not mean of fractions)
+    total_var_fd = sum(d["var_fd"] for d in non_uniform.values())
+    total_var_scope = sum(d["var_scope"] for d in non_uniform.values())
+    total_var_total = sum(d["var_total"] for d in non_uniform.values())
+    if total_var_total > 0:
+        corpus_fd_share = total_var_fd / total_var_total
+        corpus_scope_share = total_var_scope / total_var_total
+        corpus_cross_share = 1.0 - corpus_fd_share - corpus_scope_share
+    else:
+        corpus_fd_share = corpus_scope_share = corpus_cross_share = 0.0
+
+    # Top 10 by f_share (highest fd_fraction)
+    sorted_by_fd = sorted(non_uniform.items(),
+                          key=lambda x: x[1]["fd_fraction"], reverse=True)
+    top10_fd = [(cid, d["fd_fraction"], d["scope_fraction"],
+                 d["claimed_type"], d["var_total"])
+                for cid, d in sorted_by_fd[:10]]
+
+    # Top 10 by scope_share (highest scope_fraction)
+    sorted_by_scope = sorted(non_uniform.items(),
+                             key=lambda x: x[1]["scope_fraction"], reverse=True)
+    top10_scope = [(cid, d["fd_fraction"], d["scope_fraction"],
+                    d["claimed_type"], d["var_total"])
+                   for cid, d in sorted_by_scope[:10]]
+
+    # Axiom 2 verdict
+    if corpus_fd_share > 0.7:
+        verdict = "SUPPORTED"
+        verdict_detail = (
+            f"Directionality f(d(P)) accounts for {corpus_fd_share*100:.1f}% "
+            f"of inter-observer chi variance. Power-modulated directionality "
+            f"is the primary driver of observer-dependent extraction, "
+            f"confirming Axiom 2."
+        )
+    elif corpus_scope_share > corpus_fd_share:
+        verdict = "CHALLENGED"
+        verdict_detail = (
+            f"Scope sigma(S(P)) accounts for more inter-observer chi variance "
+            f"({corpus_scope_share*100:.1f}%) than directionality "
+            f"({corpus_fd_share*100:.1f}%). Observational reach, not "
+            f"power-modulated perception, drives classification divergence."
+        )
+    else:
+        verdict = "AMBIGUOUS"
+        verdict_detail = (
+            f"Directionality ({corpus_fd_share*100:.1f}%) and scope "
+            f"({corpus_scope_share*100:.1f}%) contribute comparably to "
+            f"inter-observer chi variance. Neither factor clearly dominates."
+        )
+
+    # Worked examples: pick one mountain/rope (low var), one TR with high
+    # var, and one from top scope list
+    examples = {}
+    # Low-variance example (mountain or rope)
+    for cid, d in per_constraint.items():
+        if d["claimed_type"] in ("mountain", "rope") and d["var_total"] < NEAR_UNIFORM_THRESHOLD:
+            examples["low_variance"] = _build_worked_example(cid, d, all_constraints)
+            break
+    # If no near-uniform mountain/rope, pick lowest-variance one
+    if "low_variance" not in examples:
+        low_var_candidates = [(cid, d) for cid, d in per_constraint.items()
+                              if d["claimed_type"] in ("mountain", "rope")]
+        if low_var_candidates:
+            low_var_candidates.sort(key=lambda x: x[1]["var_total"])
+            cid, d = low_var_candidates[0]
+            examples["low_variance"] = _build_worked_example(cid, d, all_constraints)
+
+    # f(d)-dominated tangled_rope
+    for cid, d in sorted_by_fd:
+        if d["claimed_type"] == "tangled_rope" and d["var_total"] >= NEAR_UNIFORM_THRESHOLD:
+            examples["fd_dominated"] = _build_worked_example(cid, d, all_constraints)
+            break
+
+    # Scope-elevated example from top scope list
+    if top10_scope:
+        cid = top10_scope[0][0]
+        examples["scope_elevated"] = _build_worked_example(
+            cid, per_constraint[cid], all_constraints)
+
+    return {
+        "per_constraint": per_constraint,
+        "skipped": skipped,
+        "near_uniform_count": near_uniform,
+        "non_uniform_count": len(non_uniform),
+        "by_type": by_type,
+        "corpus_level": {
+            "fd_share": round(corpus_fd_share, 6),
+            "scope_share": round(corpus_scope_share, 6),
+            "cross_share": round(corpus_cross_share, 6),
+            "fd_fraction_stats": desc_stats(all_fd_fracs),
+            "scope_fraction_stats": desc_stats(all_sc_fracs),
+            "dominant_factor_counts": dict(corpus_dom_counts),
+        },
+        "top10_fd": top10_fd,
+        "top10_scope": top10_scope,
+        "verdict": verdict,
+        "verdict_detail": verdict_detail,
+        "worked_examples": examples,
+    }
+
+
+def _build_worked_example(cid, decomp, all_constraints):
+    """Build a worked example dict for the report."""
+    # Find the original constraint to get raw chi values
+    constraint = None
+    for c in all_constraints:
+        if c["id"] == cid:
+            constraint = c
+            break
+    components = extract_chi_components(constraint) if constraint else None
+
+    example = {
+        "id": cid,
+        "claimed_type": decomp["claimed_type"],
+        "var_total": decomp["var_total"],
+        "var_fd": decomp["var_fd"],
+        "var_scope": decomp["var_scope"],
+        "fd_fraction": decomp["fd_fraction"],
+        "scope_fraction": decomp["scope_fraction"],
+        "dominant_factor": decomp["dominant_factor"],
+        "chi_values": decomp["chi_values"],
+    }
+    if components:
+        example["epsilon"] = components["epsilon"]
+        example["f_d"] = {pk: round(v, 6) for pk, v in components["f_d"].items()}
+        example["scope_mod"] = {pk: round(v, 4) for pk, v in components["scope_mod"].items()}
+    return example
+
+
+def _characterize_top_scope(top10_scope, all_constraints):
+    """Characterize what the top-10 scope-share constraints have in common."""
+    if not top10_scope:
+        return "No scope-elevated constraints found."
+
+    types = Counter()
+    for cid, _, _, ctype, _ in top10_scope:
+        types[ctype] += 1
+
+    # Get scope distributions
+    scope_ranges = []
+    for cid, _, _, _, _ in top10_scope:
+        for c in all_constraints:
+            if c["id"] == cid:
+                pchi = c.get("perspective_chi", {})
+                scopes = [pchi.get(pk, {}).get("scope_mod") for pk in PERSPECTIVE_KEYS]
+                scopes = [s for s in scopes if s is not None]
+                if scopes:
+                    scope_ranges.append(max(scopes) - min(scopes))
+                break
+
+    lines = []
+    lines.append(f"Type distribution: {dict(types)}")
+    if scope_ranges:
+        lines.append(f"Mean scope range: {sum(scope_ranges)/len(scope_ranges):.4f}")
+    return " | ".join(lines)
+
+
+def write_axiom2_report(a2_results, all_constraints):
+    """Write the Axiom 2 decomposition report."""
+    now = datetime.now().strftime("%Y-%m-%d %H:%M")
+    lines = []
+    w = lines.append
+
+    w("# Chi/Epsilon Variance Decomposition — Axiom 2 Test\n")
+    w(f"*Generated {now} by `python/chi_variance_decomposition.py` (Part 4)*\n")
+    w("---\n")
+
+    # 1. Executive Summary
+    w("## 1. Executive Summary\n")
+    total = len(a2_results["per_constraint"])
+    non_uniform = a2_results["non_uniform_count"]
+    near_uniform = a2_results["near_uniform_count"]
+    cl = a2_results["corpus_level"]
+
+    w(f"**Axiom 2 Verdict: {a2_results['verdict']}**\n")
+    w(f"{a2_results['verdict_detail']}\n")
+    w(f"Analyzed **{total}** constraints ({non_uniform} with non-trivial "
+      f"inter-observer variance, {near_uniform} near-uniform excluded from "
+      f"aggregation, {a2_results['skipped']} skipped for missing data).\n")
+
+    # 2. Corpus-level shares
+    w("## 2. Corpus-Level Variance Shares\n")
+    w("Computed as total Var_fd / total Var_total across all non-uniform "
+      "constraints (variance-weighted, not mean-of-fractions):\n")
+    w(f"| Component | Share |")
+    w(f"| :--- | ---: |")
+    w(f"| f(d) directionality | {cl['fd_share']*100:.1f}% |")
+    w(f"| sigma(S) scope | {cl['scope_share']*100:.1f}% |")
+    w(f"| Interaction (cross-term) | {cl['cross_share']*100:.1f}% |")
+    w("")
+    w(f"Sum check: {cl['fd_share']+cl['scope_share']+cl['cross_share']:.6f} "
+      f"(should be 1.000000)\n")
+
+    fd_stats = cl["fd_fraction_stats"]
+    sc_stats = cl["scope_fraction_stats"]
+    if fd_stats:
+        w(f"Per-constraint fd_fraction: mean={fmt(fd_stats['mean'],4)}, "
+          f"median={fmt(fd_stats['median'],4)}, "
+          f"std={fmt(fd_stats['std'],4)}\n")
+    if sc_stats:
+        w(f"Per-constraint scope_fraction: mean={fmt(sc_stats['mean'],4)}, "
+          f"median={fmt(sc_stats['median'],4)}, "
+          f"std={fmt(sc_stats['std'],4)}\n")
+
+    # 3. Per-type breakdown
+    w("## 3. Per-Type Breakdown\n")
+    headers = ["Type", "N", "Mean fd_frac", "Med fd_frac",
+               "Mean scope_frac", "fd-dom", "scope-dom", "interaction"]
+    rows = []
+    for ctype, tdata in sorted(a2_results["by_type"].items(),
+                                key=lambda x: -x[1]["n"]):
+        fd_s = tdata["fd_fraction"]
+        sc_s = tdata["scope_fraction"]
+        dc = tdata["dominant_factor_counts"]
+        rows.append([
+            ctype, str(tdata["n"]),
+            fmt(fd_s["mean"] if fd_s else None, 4),
+            fmt(fd_s["median"] if fd_s else None, 4),
+            fmt(sc_s["mean"] if sc_s else None, 4),
+            str(dc.get("directionality", 0)),
+            str(dc.get("scope", 0)),
+            str(dc.get("interaction", 0)),
+        ])
+    w(md_table(headers, rows, ["l", "r", "r", "r", "r", "r", "r", "r"]))
+    w("")
+
+    # 4. Dominant factor distribution
+    w("## 4. Dominant Factor Distribution\n")
+    dc = cl["dominant_factor_counts"]
+    total_nu = sum(dc.values())
+    headers = ["Factor", "Count", "%"]
+    rows = [
+        ["directionality", str(dc.get("directionality", 0)),
+         fmt(pct(dc.get("directionality", 0), total_nu))],
+        ["scope", str(dc.get("scope", 0)),
+         fmt(pct(dc.get("scope", 0), total_nu))],
+        ["interaction", str(dc.get("interaction", 0)),
+         fmt(pct(dc.get("interaction", 0), total_nu))],
+    ]
+    w(md_table(headers, rows, ["l", "r", "r"]))
+    w("")
+
+    # 5. Top 10 lists
+    w("## 5. Top 10 by f(d) Share\n")
+    headers = ["Constraint", "fd_frac", "scope_frac", "Type", "Var_total"]
+    rows = []
+    for cid, fd_f, sc_f, ctype, vt in a2_results["top10_fd"]:
+        rows.append([cid, fmt(fd_f, 4), fmt(sc_f, 4), ctype, fmt(vt, 8)])
+    w(md_table(headers, rows, ["l", "r", "r", "l", "r"]))
+    w("")
+
+    w("## 6. Top 10 by Scope Share\n")
+    headers = ["Constraint", "fd_frac", "scope_frac", "Type", "Var_total"]
+    rows = []
+    for cid, fd_f, sc_f, ctype, vt in a2_results["top10_scope"]:
+        rows.append([cid, fmt(fd_f, 4), fmt(sc_f, 4), ctype, fmt(vt, 8)])
+    w(md_table(headers, rows, ["l", "r", "r", "l", "r"]))
+    w("")
+
+    # 6b. Top scope characterization
+    w("### 6.1 Top Scope-Share Characterization\n")
+    w(_characterize_top_scope(a2_results["top10_scope"], all_constraints))
+    w("\n")
+
+    # 7. Worked examples
+    w("## 7. Worked Examples\n")
+    for label, ex in a2_results["worked_examples"].items():
+        if not ex:
+            continue
+        w(f"### 7.{list(a2_results['worked_examples'].keys()).index(label)+1} "
+          f"{label.replace('_', ' ').title()}: `{ex['id']}`\n")
+        w(f"- **Type**: {ex['claimed_type']}")
+        w(f"- **Dominant factor**: {ex['dominant_factor']}")
+        if "epsilon" in ex:
+            w(f"- **Epsilon (base extraction)**: {ex['epsilon']}")
+        w(f"- **Var_total**: {fmt(ex['var_total'], 8)}")
+        w(f"- **Var_fd**: {fmt(ex['var_fd'], 8)} "
+          f"({fmt(ex['fd_fraction']*100, 1)}%)")
+        w(f"- **Var_scope**: {fmt(ex['var_scope'], 8)} "
+          f"({fmt(ex['scope_fraction']*100, 1)}%)")
+        w("")
+        if "f_d" in ex and "scope_mod" in ex:
+            w("| Perspective | chi | f(d) | scope_mod |")
+            w("| :--- | ---: | ---: | ---: |")
+            for pk in PERSPECTIVE_KEYS:
+                chi_v = ex["chi_values"].get(pk, "---")
+                fd_v = ex["f_d"].get(pk, "---")
+                sm_v = ex["scope_mod"].get(pk, "---")
+                w(f"| {pk} | {fmt(chi_v, 6)} | {fmt(fd_v, 6)} | {fmt(sm_v, 4)} |")
+            w("")
+
+    # 8. Zero-handling documentation
+    w("## 8. Zero-Handling and Methodology\n")
+    w("**Decomposition formula** (counterfactual variance decomposition):\n")
+    w("```")
+    w("chi_i         = epsilon * f(d)_i * sigma(S)_i       -- actual")
+    w("chi_fd_only_i = epsilon * f(d)_i * 1.0              -- scope neutralized")
+    w("chi_scope_only_i = epsilon * mean(f(d)) * sigma(S)_i -- directionality neutralized")
+    w("")
+    w("Var_total = Var(chi_1..chi_4)")
+    w("Var_fd    = Var(chi_fd_only_1..chi_fd_only_4)")
+    w("Var_scope = Var(chi_scope_only_1..chi_scope_only_4)")
+    w("Var_interaction = Var_total - Var_fd - Var_scope")
+    w("```\n")
+    w("**Why not log-space:** 17.5% of chi values are negative (institutional "
+      "observer has f(d) < 0). Log decomposition would require excluding the "
+      "most theoretically important observer.\n")
+    w(f"**Near-uniform threshold:** Var(chi) < {NEAR_UNIFORM_THRESHOLD}. "
+      f"{near_uniform} constraints excluded.\n")
+    w("**Negative interaction:** When f(d) and scope variations are "
+      "anti-correlated, their product has less variance than the sum of "
+      "individual variances. This makes Var_interaction negative and "
+      "fd_fraction + scope_fraction > 1.0. This is expected.\n")
+
+    # Write
+    with open(AXIOM2_REPORT_PATH, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines) + "\n")
+    print(f"Axiom 2 report written to {AXIOM2_REPORT_PATH}")
+
+
+def build_axiom2_section(constraint_id, pipeline_data):
+    """Build per-constraint Axiom 2 section for enhanced_report.py.
+
+    Returns markdown string with chi vector, dominant factor, and shares.
+    """
+    entry = None
+    for c in pipeline_data.get("per_constraint", []):
+        if c.get("id") == constraint_id:
+            entry = c
+            break
+    if not entry:
+        return ""
+
+    components = extract_chi_components(entry)
+    if components is None:
+        return ""
+
+    decomp = decompose_variance_single(components)
+    dominant = classify_dominant_factor(decomp)
+
+    lines = []
+    w = lines.append
+    w("\n### AXIOM 2: Chi/Epsilon Decomposition\n")
+    w(f"**Dominant factor**: {dominant}")
+    w(f"  Var_total={fmt(decomp['var_total'], 8)}, "
+      f"Var_fd={fmt(decomp['var_fd'], 8)} ({fmt(decomp['fd_fraction']*100, 1)}%), "
+      f"Var_scope={fmt(decomp['var_scope'], 8)} ({fmt(decomp['scope_fraction']*100, 1)}%)\n")
+
+    w("| Perspective | chi | f(d) | scope_mod |")
+    w("| :--- | ---: | ---: | ---: |")
+    for pk in PERSPECTIVE_KEYS:
+        chi_v = components["chi_full"][pk]
+        fd_v = components["f_d"][pk]
+        sm_v = components["scope_mod"][pk]
+        w(f"| {pk} | {fmt(chi_v, 6)} | {fmt(fd_v, 6)} | {fmt(sm_v, 4)} |")
+    w("")
+    return "\n".join(lines)
+
+
+# ---------------------------------------------------------------------------
+# Report generation (Parts 1-3, tangled_rope only — original)
 # ---------------------------------------------------------------------------
 
 def write_report(results, overrides, scope_map, scope_warnings):
@@ -1252,12 +1698,13 @@ def main():
 
     tangled_gradient = tangled_gradient_raw.get("per_constraint", {})
 
-    # Filter tangled_rope population
-    per_constraint = enriched.get("per_constraint", [])
-    population = [c for c in per_constraint
+    # All constraints and tangled_rope subset
+    per_constraint_all = enriched.get("per_constraint", [])
+    population = [c for c in per_constraint_all
                   if c.get("claimed_type") == "tangled_rope"]
 
-    print(f"Population: {len(population)} tangled_rope constraints")
+    print(f"Total constraints: {len(per_constraint_all)}")
+    print(f"Tangled_rope subset: {len(population)}")
     print(f"Tangled gradient entries: {len(tangled_gradient)}")
 
     # Discover scope mapping
@@ -1292,7 +1739,7 @@ def main():
     p3 = run_pair_analysis(population, tangled_gradient)
     print(f"  Pairs analyzed: {p3['all_pairs']['n']} genuinely perspectival")
 
-    # Assemble results
+    # Assemble results (Parts 1-3)
     results = {
         "generated": datetime.now().isoformat(),
         "population_size": len(population),
@@ -1318,13 +1765,58 @@ def main():
         "part3_divergence_pairs": p3,
     }
 
-    # Write JSON
+    # Write JSON (Parts 1-3)
     with open(DATA_PATH, "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2)
     print(f"\nData written to {DATA_PATH}")
 
-    # Write report
+    # Write report (Parts 1-3)
     write_report(results, overrides, scope_map, scope_warnings)
+
+    # Part 4: Axiom 2 full-corpus decomposition
+    print("\nPart 4: Axiom 2 Full-Corpus Decomposition...")
+    a2 = run_axiom2_decomposition(per_constraint_all)
+    print(f"  Decomposed: {len(a2['per_constraint'])} constraints "
+          f"(skipped: {a2['skipped']}, near-uniform: {a2['near_uniform_count']})")
+    print(f"  Verdict: {a2['verdict']}")
+    cl = a2["corpus_level"]
+    print(f"  f(d) share: {cl['fd_share']*100:.1f}%, "
+          f"scope share: {cl['scope_share']*100:.1f}%, "
+          f"cross: {cl['cross_share']*100:.1f}%")
+
+    # Write Axiom 2 JSON (exclude per_constraint to keep file manageable)
+    a2_export = {
+        "generated": datetime.now().isoformat(),
+        "total_constraints": len(a2["per_constraint"]),
+        "skipped": a2["skipped"],
+        "near_uniform_count": a2["near_uniform_count"],
+        "non_uniform_count": a2["non_uniform_count"],
+        "near_uniform_threshold": NEAR_UNIFORM_THRESHOLD,
+        "corpus_level": a2["corpus_level"],
+        "by_type": a2["by_type"],
+        "verdict": a2["verdict"],
+        "verdict_detail": a2["verdict_detail"],
+        "top10_fd": [{"id": cid, "fd_fraction": fd, "scope_fraction": sc,
+                      "type": ct, "var_total": vt}
+                     for cid, fd, sc, ct, vt in a2["top10_fd"]],
+        "top10_scope": [{"id": cid, "fd_fraction": fd, "scope_fraction": sc,
+                         "type": ct, "var_total": vt}
+                        for cid, fd, sc, ct, vt in a2["top10_scope"]],
+        "worked_examples": a2["worked_examples"],
+        "per_constraint": {cid: {
+            "fd_fraction": d["fd_fraction"],
+            "scope_fraction": d["scope_fraction"],
+            "dominant_factor": d["dominant_factor"],
+            "var_total": d["var_total"],
+            "claimed_type": d["claimed_type"],
+        } for cid, d in a2["per_constraint"].items()},
+    }
+    with open(AXIOM2_DATA_PATH, "w", encoding="utf-8") as f:
+        json.dump(a2_export, f, indent=2)
+    print(f"Axiom 2 data written to {AXIOM2_DATA_PATH}")
+
+    # Write Axiom 2 report
+    write_axiom2_report(a2, per_constraint_all)
 
     return 0
 

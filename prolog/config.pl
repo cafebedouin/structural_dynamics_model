@@ -79,6 +79,37 @@ param(critical_mass_threshold, 3).
    effective extraction. Larger scope = harder verification = more
    extraction hidden behind complexity.
    Formula: χ = ε × π(P) × σ(S)
+
+   DESIGN DECISION: σ is observer-specific, constraint-independent.
+   The same six values apply to all 3,253 constraints. This is a
+   justified simplification, not a modeling gap:
+
+   (1) No constraint-level scope data exists. constraint_metric/3
+       stores only extractiveness, suppression_requirement, and
+       theater_ratio — no domain, geographic reach, or jurisdictional
+       scope. spatial_scope appears only in observer context tuples.
+
+   (2) σ contributes <7% of inter-observer χ variance. f(d)
+       accounts for 93.7–98.6%; the σ range (0.8–1.2, ±20%) is
+       modest compared to f(d)'s range (-0.20 to 1.50).
+
+   (3) All six scope_modifier params are classification-INERT under
+       ±25% perturbation (config sensitivity sweep, Feb 2026). σ
+       scales χ magnitude but never crosses threshold boundaries.
+
+   (4) σ as "observer verification capacity" is architecturally
+       coherent. Making σ constraint-specific would reframe it as
+       "constraint visibility at scope" — a different concept that
+       would require new per-constraint scope metadata and a
+       reformulation of Axiom 2.
+
+   Paper §6.6: "The scope modifier σ is currently observer-specific
+   and constraint-independent; a constraint-specific variant
+   (encoding intrinsic jurisdictional reach) would require new
+   per-constraint scope metadata and is expected to have minimal
+   classification impact given that σ accounts for less than 7% of
+   inter-observer χ variance and all scope parameters are
+   classification-inert under ±25% perturbation."
    ================================================================ */
 
 param(scope_modifier_local,        0.8).   % Easy verification, extraction dampened
