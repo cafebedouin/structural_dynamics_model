@@ -304,6 +304,7 @@ def _prolog_covering():
     result = run_prolog(
         ["stack.pl", "covering_analysis.pl"],
         "run_covering_analysis",
+        timeout=900,
     )
     (OUTPUTS_DIR / "covering_analysis.md").write_text(result.stdout, encoding="utf-8")
 

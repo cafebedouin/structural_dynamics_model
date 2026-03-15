@@ -242,6 +242,13 @@ def fit_alternative_distributions(values):
     if not HAS_SCIPY or n < 10:
         return results
 
+    # Skip if data has (near-)zero range — fitting is meaningless and
+    # triggers scipy RuntimeWarning (division by zero) and sklearn
+    # ConvergenceWarning (can't find 2 clusters).
+    spread = max(values) - min(values)
+    if spread < 1e-10:
+        return results
+
     # Single normal
     try:
         mu, sigma = scipy.stats.norm.fit(values)
@@ -293,6 +300,9 @@ def fit_alternative_distributions(values):
         try:
             import numpy as np
             X = np.array(values).reshape(-1, 1)
+            # Need at least 2 distinct values for a 2-component mixture
+            if len(set(values)) < 2:
+                raise ValueError("fewer than 2 distinct values")
             gm = GaussianMixture(n_components=2, random_state=42)
             gm.fit(X)
             ll = gm.score(X) * n  # score returns per-sample avg log-likelihood
