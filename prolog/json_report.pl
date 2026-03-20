@@ -414,6 +414,21 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     ;   format(S, '      "orbit_monotonicity": null,~n', [])
     ),
 
+    % arakelov_height (boundary complexity diagnostic)
+    (   catch(arakelov_height:arakelov_height_pair(C, ArakH, ArakCtx), _, fail)
+    ->  ArakCtx = context(agent_power(ArakPower), _, _, _),
+        (   catch(arakelov_height:signature_pressure(C, ArakCtx, ArakSP), _, (ArakSP = 0.0))
+        ->  true
+        ;   ArakSP = 0.0
+        ),
+        format(S, '      "arakelov_height": ~6f,~n', [ArakH]),
+        format(S, '      "arakelov_height_context": "~w",~n', [ArakPower]),
+        format(S, '      "signature_pressure": ~6f,~n', [ArakSP])
+    ;   format(S, '      "arakelov_height": null,~n', []),
+        format(S, '      "arakelov_height_context": null,~n', []),
+        format(S, '      "signature_pressure": null,~n', [])
+    ),
+
     % transition_boundaries (where type-switching occurs in orbit)
     (   catch(grothendieck_cohomology:transition_boundaries(C, TBounds), _, fail)
     ->  format(S, '      "transition_boundaries": [', []),

@@ -209,6 +209,10 @@ PIPELINE_FIELDS = [
     ("contextuality_fraction",  (int, float), True),   # H1/6, null if obstruction unavailable
     ("orbit_monotonicity",      str,          True),   # constant|monotone_ascending|monotone_descending|non_monotone|incomparable
     ("transition_boundaries",   list,         False),  # [{position, from, to}, ...], empty if no transitions
+    # --- Arakelov height (boundary complexity diagnostic) ---
+    ("arakelov_height",         (int, float), True),   # null if MaxEnt unavailable
+    ("arakelov_height_context", str,          True),   # powerless|moderate|institutional|analytical
+    ("signature_pressure",      (int, float), True),   # null if MaxEnt unavailable
 ]
 
 ENRICHED_EXTRA_FIELDS = [
