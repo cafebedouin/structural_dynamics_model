@@ -52,6 +52,16 @@
 :- multifile directionality_override/3.
 :- dynamic directionality_override/3.
 
+% Cognitive displacement: per-position δ fact table (v6.1)
+% Dynamic so sweeps can retract/assert without touching config params.
+:- dynamic positional_displacement/2.
+positional_displacement(powerless,     0.0).
+positional_displacement(moderate,      0.0).
+positional_displacement(powerful,      0.0).
+positional_displacement(organized,     0.0).
+positional_displacement(institutional, 0.0).
+positional_displacement(analytical,    0.0).
+
 % Required modules
 :- use_module(constraint_data, [base_extractiveness/2, suppression_score/2]).
 :- use_module(config).
@@ -371,11 +381,26 @@ resolve_coalition_power(Power, _, Power). % Default: power remains unchanged
 
 
 % ----------------------------------------------------------------------------
+% Cognitive Displacement Resolution
+% ----------------------------------------------------------------------------
+
+%% resolve_displacement(+PowerAtom, -Delta)
+%  Returns cognitive displacement δ for the given power position.
+%  In uniform mode: reads global param (sweepable by config_sensitivity_sweep).
+%  In positional mode: reads per-position dynamic fact (sweepable by δ-sweep).
+resolve_displacement(Power, Delta) :-
+    config:param(cognitive_displacement_profile, Profile),
+    (   Profile = positional
+    ->  positional_displacement(Power, Delta)
+    ;   config:param(cognitive_displacement, Delta)
+    ).
+
+% ----------------------------------------------------------------------------
 % Calculate Extractiveness for Specific Agent
 % ----------------------------------------------------------------------------
 
-% Formula: χ = ε × f(d) × σ(S)
-% where f(d) is the sigmoid directionality function (v5.0)
+% Formula: χ = ε × f(d_eff) × σ(S)
+% where d_eff = clamp(d + δ, 0, 1) and f is the sigmoid (v6.1)
 extractiveness_for_agent(Constraint, Context, Score) :-
     Context = context(agent_power(Power), _, _, spatial_scope(Scope)),
     resolve_coalition_power(Power, Constraint, ResolvedPower),
@@ -385,7 +410,9 @@ extractiveness_for_agent(Constraint, Context, Score) :-
     config:param(extractiveness_metric_name, ExtMetricName),
     narrative_ontology:constraint_metric(Constraint, ExtMetricName, BaseScore),
     derive_directionality(Constraint, ResolvedContext, D),
-    sigmoid_f(D, PowerMod),
+    resolve_displacement(ResolvedPower, Delta),
+    D_eff is max(0.0, min(1.0, D + Delta)),
+    sigmoid_f(D_eff, PowerMod),
     scope_modifier(Scope, ScopeMod),
     Score is BaseScore * PowerMod * ScopeMod.
 

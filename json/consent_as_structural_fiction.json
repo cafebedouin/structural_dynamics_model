@@ -1,0 +1,181 @@
+{
+  "header": {
+    "constraint_id": "consent_as_structural_fiction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "consent_arb"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Mandatory Arbitration as Consent Fiction",
+    "topic_domain": "labor_law/dispute_resolution/corporate_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "large_employers",
+      "arbitration_providers"
+    ],
+    "victims": [
+      "low_wage_workers",
+      "collective_bargaining_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Low-Wage Worker"
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Professional Employee"
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Large Employer"
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Rights Coalition"
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Judicial System"
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "consent_threshold_ambiguity",
+      "question": "At what level of economic duress does 'consent' to arbitration become structurally meaningless?",
+      "resolution_mechanism": "Empirical analysis of worker bargaining power by wage quintile, employment market conditions, and alternative employment availability; comparison of arbitration clause acceptance rates across economic conditions",
+      "impact": "If threshold is low (workers retain meaningful choice even at low wages): classification shifts toward rope from more perspectives. If threshold is high (consent is fiction for most workers): classification shifts toward snare from more perspectives.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Economic duress threshold for meaningful consent"
+    },
+    {
+      "id": "arbitration_outcome_bias",
+      "question": "Do arbitration outcomes systematically favor employers beyond what would be expected from case selection effects?",
+      "resolution_mechanism": "Controlled comparison of similar cases in arbitration vs litigation; analysis of repeat-player effects; examination of arbitrator selection mechanisms and career incentives",
+      "impact": "If no systematic bias: extractiveness is lower, coordination function is genuine. If strong bias: extractiveness is higher, coordination function is theater.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether arbitration outcomes show systematic employer bias"
+    },
+    {
+      "id": "class_action_waiver_impact",
+      "question": "Does the bundling of arbitration clauses with class action waivers constitute a separate extractive mechanism or an inherent feature of the arbitration constraint?",
+      "resolution_mechanism": "Decomposition analysis: separate constraint stories for arbitration-without-waiver vs arbitration-with-waiver; measurement of extractiveness delta",
+      "impact": "If separable: two linked constraints with different epsilon values. If inherent: single constraint with higher extractiveness.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether class action waiver is separable constraint"
+    },
+    {
+      "id": "legislative_sunset_probability",
+      "question": "What is the probability that legislative reform (e.g., Forced Arbitration Injustice Repeal Act) will meaningfully constrain mandatory arbitration within a generational timeframe?",
+      "resolution_mechanism": "Political economy analysis of employer lobbying power, legislative coalition stability, judicial deference patterns; historical analysis of similar labor law reform attempts",
+      "impact": "If high probability: scaffold classification from organized perspective is justified. If low probability: scaffold is aspirational rather than structural.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Probability of legislative reform success"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Mandatory arbitration clauses in employment contracts present a structural fiction: the legal doctrine of 'consent' applied to a mechanism that workers cannot meaningfully negotiate. The constraint operates through the Federal Arbitration Act's enforcement of arbitration agreements, but the bilateral contract framing obscures the unilateral imposition. 56.2% of private-sector nonunion workers are bound by arbitration clauses, rising to 67.7% at firms with 5000+ employees. The size correlation reveals the constraint's structural logic: large employers have sufficient bargaining power to impose arbitration universally, while smaller employers face higher relative costs and worker resistance. The constraint exhibits genuine coordination function (dispute resolution is necessary) alongside asymmetric extraction (workers lose access to courts, class actions, and public precedent). The theater ratio (0.68) reflects that the 'consent' ritual \u2014 signing the employment contract \u2014 is performative: workers sign because employment is conditioned on acceptance, not because they have evaluated and agreed to the arbitration terms. The constraint has accumulated extraction over time as arbitration clauses have expanded from executive contracts to frontline workers and as class action waivers have been bundled with arbitration mandates.",
+    "key_agents": [
+      "Low-Wage Workers: Primary victim (powerless/trapped) \u2014 cannot negotiate contract terms, cannot afford to decline employment, lose access to courts and collective action",
+      "Professional Employees: Secondary victim (moderate/constrained) \u2014 have some labor market mobility but face industry-wide arbitration adoption; bear costs but retain some exit options",
+      "Large Employers: Primary beneficiary (institutional/arbitrage) \u2014 gain predictable dispute costs, avoid class actions, benefit from repeat-player advantage in arbitration",
+      "Arbitration Providers: Secondary beneficiary (institutional/arbitrage) \u2014 profit from employer-paid arbitration volume; career incentives favor employer-friendly outcomes",
+      "Labor Rights Coalition: Organized agents (organized/constrained) \u2014 legislative reform efforts (FAIR Act) face employer lobbying; see potential sunset but lack power to force it",
+      "Judicial System: Institutional actor (institutional/constrained) \u2014 enforces arbitration clauses under FAA precedent while recognizing the consent fiction; maintains ritual of contract doctrine despite structural reality",
+      "Collective Bargaining Capacity: Abstract victim (powerless/trapped) \u2014 class action waivers prevent aggregation of small-value claims; workers cannot organize around shared grievances"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. Workers lose access to courts, public precedent, discovery rights, jury trials, and class actions. Employers gain cost predictability, repeat-player advantage, and insulation from collective claims. The extraction is substantial but not total \u2014 arbitration does provide some dispute resolution, and some workers (high-skill professionals) retain enough bargaining power to negotiate terms or exit. The value reflects that the coordination function (dispute resolution) is real but heavily asymmetric. Suppression (0.72): High. Workers face structural barriers to exit: employment is conditioned on arbitration acceptance, industry-wide adoption eliminates alternatives, low-wage workers cannot afford to decline jobs, and judicial enforcement under the FAA forecloses legal challenge. Suppression is not total (0.95+) because some workers have labor market mobility and some employers (small firms, competitive labor markets) face costs to imposing arbitration. Theater ratio (0.68): High. The 'consent' ritual is performative: workers sign arbitration clauses as a condition of employment, not as a result of negotiation or informed agreement. The bilateral contract framing obscures the unilateral imposition. Theater has increased over time as arbitration has expanded from negotiated executive agreements to non-negotiable frontline worker contracts.",
+    "directionality_logic": "Large employers are primary beneficiaries with arbitrage exit options \u2014 they can choose whether to impose arbitration and can exit to litigation if arbitration becomes unfavorable. Their structural position yields low d (beneficiary + arbitrage) and low or negative effective extraction. Low-wage workers are primary victims with trapped exit options \u2014 they cannot negotiate contract terms, cannot afford to decline employment, and face industry-wide arbitration adoption. Their structural position yields high d (victim + trapped) and maximum effective extraction. Professional employees occupy a middle position: they are victims (lose court access) but have constrained rather than trapped exit (some labor market mobility, some negotiation leverage). Organized labor coalitions see a potential sunset (legislative reform) but lack the power to force it, yielding moderate extraction. The judicial system enforces the constraint while recognizing its fictional basis \u2014 it is constrained by FAA precedent but could exit through doctrinal revision. The analytical observer sees both the genuine coordination function (dispute resolution) and the asymmetric extraction (loss of collective action, repeat-player bias).",
+    "perspectival_gap": "The low-wage worker sees a snare: mandatory arbitration is pure extraction with no meaningful consent and no exit. The professional employee sees a tangled rope: arbitration provides some dispute resolution benefit but extracts court access and collective action rights; they have some exit options but face industry-wide adoption. The large employer sees a rope: arbitration is a coordination mechanism that solves the problem of unpredictable litigation costs; they are net beneficiaries. The labor rights coalition sees a scaffold: mandatory arbitration is a temporary problem that legislative reform (FAIR Act) will sunset, though the timeline is uncertain and depends on political coalition strength. The judicial system sees a piton: the consent doctrine is a degraded ritual maintained through precedent inertia (FAA enforcement) despite recognition that 'consent' is fictional for most workers. The analytical observer sees a tangled rope: the constraint has genuine coordination function (dispute resolution is necessary) but embeds asymmetric extraction (loss of courts, class actions, public precedent) that the consent framing obscures.",
+    "mandatrophy_analysis": "The constraint resolves the mandatrophy by demonstrating that 'consent' operates at two levels: the legal fiction (workers sign, therefore they consent) and the structural reality (workers sign because employment is conditioned on acceptance). The legal fiction enables the coordination function (dispute resolution) to be framed as bilateral agreement, obscuring the unilateral imposition. The perspectival gap reveals this: employers see coordination (rope), trapped workers see extraction (snare), and the analytical observer sees both (tangled rope). The mandatrophy is not 'is this coordination or extraction?' but 'whose perspective determines the classification?' The constraint's tangled rope classification at the analytical level reflects that both functions are structurally real: arbitration does resolve disputes (coordination) and does extract court access and collective action rights (extraction). The consent fiction is the mechanism that allows the extraction to be presented as coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "repeat_player_structural_advantage"
+    ],
+    "dual_formulation_note": "The consent fiction is downstream of the repeat-player advantage (employers face the same arbitrators repeatedly; workers do not) but represents a distinct structural constraint. The upstream constraint (repeat player advantage) is a mountain \u2014 an inherent feature of any dispute resolution system with institutional repeat players. The downstream constraint (consent as fiction) is a tangled rope \u2014 a contingent institutional arrangement that uses the consent doctrine to obscure unilateral imposition."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ]
+}

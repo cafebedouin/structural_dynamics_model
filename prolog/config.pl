@@ -143,6 +143,15 @@ param(canonical_d_organized,     0.3990).
 param(canonical_d_institutional, 0.00).
 param(canonical_d_analytical,    0.7250).
 
+% --- Cognitive Displacement (Observer Calibration) ---
+% Additive perturbation to directionality d, modeling systematic
+% perceptual bias characteristic of the observer's cognitive apparatus.
+% δ > 0: over-detects extraction.  δ < 0: over-detects coordination.
+param(cognitive_displacement, 0.0).
+% Profile mode: 'uniform' applies global δ to all positions;
+% 'positional' reads per-position δ from positional_displacement/2.
+param(cognitive_displacement_profile, uniform).
+
 /* ================================================================
    5. INTENT & DETECTION THRESHOLDS
    Consolidated parameters for the intent_engine and pattern_analysis.

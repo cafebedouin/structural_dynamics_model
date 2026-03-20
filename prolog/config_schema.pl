@@ -87,6 +87,10 @@ param_spec(canonical_d_organized,     number, range(0.0, 1.0), "Canonical direct
 param_spec(canonical_d_institutional, number, range(0.0, 1.0), "Canonical directionality for institutional").
 param_spec(canonical_d_analytical,    number, range(0.0, 1.0), "Canonical directionality for analytical").
 
+% Cognitive displacement (observer calibration)
+param_spec(cognitive_displacement,         number, range(-0.5, 0.5), "Global cognitive displacement delta").
+param_spec(cognitive_displacement_profile, atom,   oneof([uniform, positional]), "Displacement mode: uniform or positional").
+
 % ============================================================
 % 7. INTENT & DETECTION THRESHOLDS
 % ============================================================

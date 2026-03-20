@@ -70,6 +70,21 @@ Before making specific claims, verify:
 - Current status claims ("X is the CEO", "policy is now Y")
 - Post-training-cutoff events ("in November 2025...")
 
+---
+
+**Citation Quarantine (applies when reviewing input material):**
+
+When the input contains citations, studies, statistics, or named sources, treat each as an unverified claim regardless of how it appears in the text. Apply the same T1 verification requirement as any other specific claim.
+
+- Citations that cannot be verified against available context or web search must be flagged `[UNVERIFIED-SOURCE]` inline
+- Do not evaluate the argument built on an unverified citation as if the citation were established
+- Structural confidence in claims that depend on `[UNVERIFIED-SOURCE]` must be capped at Medium (≤0.69) regardless of logical coherence
+- The grounding trail must list each citation separately with verification status
+
+**Failure mode this prevents:** A fabricated citation passes grounding because the logic surrounding it is sound. Logical coherence of an argument is not evidence that its sources exist.
+
+---
+
 **What to avoid:**
 - Narrating thinking as observable process
 - Claiming precision without calculation
@@ -89,7 +104,7 @@ When referencing specific sources in content:
 
 **External references:**
 - Note if available in context or external
-- Example: "According to [Smith 2023] (external reference)"
+- Example: "According to [Smith 2023] [UNVERIFIED-SOURCE]" — and the grounding trail entry would be smith_2023: unverified → [UNVERIFIED-SOURCE]
 - Example: "The uploaded document states..." (in context)
 
 **Web search results:**

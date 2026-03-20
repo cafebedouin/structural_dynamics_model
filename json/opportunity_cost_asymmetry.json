@@ -1,0 +1,180 @@
+{
+  "header": {
+    "constraint_id": "opportunity_cost_asymmetry",
+    "version": "1.0",
+    "generated_date": "2025-01-02",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "opp_cost"
+  },
+  "base_properties": {
+    "extractiveness": 0.22,
+    "suppression": 0.18,
+    "theater_ratio": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "Opportunity Cost Asymmetry in Long-Form Creative Projects",
+    "topic_domain": "writing_psychology/creative_labor_economics/professional_identity",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "book_publishers",
+      "long_form_readers",
+      "author_legacy_building"
+    ],
+    "victims": [
+      "serial_content_audience",
+      "author_income_stability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Established Writer with Options",
+      "comment": "PERSPECTIVE 1: ESTABLISHED WRITER (ROPE) \u2014 Has platform flexibility and can choose between book projects and serial content based on strategic goals. The time allocation is a coordination problem: how to balance deep work (books) with audience maintenance (posts/essays). Experiences the constraint as a legitimate trade-off with agency to optimize. Low extraction because the writer controls the choice and benefits from both pathways."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Career Writer Under Contract",
+      "comment": "PERSPECTIVE 2: MID-CAREER WRITER UNDER CONTRACT (TANGLED ROPE) \u2014 Book advance creates financial lock-in; abandoning the project means returning money and damaging publisher relationships. The constraint coordinates deep work but extracts through opportunity cost: years of foregone essay income, audience atrophy, and platform decay. Genuine coordination function (the advance funds focused work time) coexists with asymmetric extraction (the writer bears all downside risk if the book underperforms or the audience fragments)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "label": "The Identity-Fused Book Author",
+      "comment": "PERSPECTIVE 3: IDENTITY-FUSED AUTHOR (SNARE) \u2014 Writer whose professional identity is constituted through 'being a book author' rather than 'being a writer.' Cannot perceive serial content as legitimate output\u2014essays feel like procrastination, posts feel like distraction. The book project extracts years of productive time while the writer's income collapses and audience disappears, but exit is unthinkable because it would require abandoning the identity frame. Structurally mobile (could pivot to essays) but cognitively trapped by identity fusion with the book-author role."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Book Publisher",
+      "comment": "PERSPECTIVE 4: BOOK PUBLISHER (ROPE) \u2014 Benefits from author time concentration. The constraint coordinates author effort toward a high-value single artifact (the book) that the publisher can monetize through multiple channels (hardcover, paperback, foreign rights, film options). Experiences minimal extraction\u2014the publisher's downside is capped (advance is sunk cost) while upside is uncapped. Can arbitrage across many authors, so any single book's failure is portfolio-diversified."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Hybrid Publishing Ecosystem",
+      "comment": "PERSPECTIVE 5: HYBRID PUBLISHING ECOSYSTEM (SCAFFOLD) \u2014 Substack, Patreon, and serialized platforms are building alternative pathways that reduce opportunity cost asymmetry. Writers can now serialize book-length work while maintaining audience contact and income flow (e.g., Gwern's incremental essays, Scott Alexander's serialized sequences). The traditional book-or-nothing constraint has a sunset as hybrid models mature. Organized agents (platform builders, early adopters) see this as temporary coordination problem being solved by infrastructure."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Cognitive Load View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / COGNITIVE LOAD VIEW (MOUNTAIN) \u2014 From a universal perspective, deep creative work requires sustained attention that is genuinely incompatible with frequent context-switching to serial content. The opportunity cost asymmetry reflects an immutable cognitive constraint: you cannot hold a book-length argument structure in working memory while also optimizing for weekly essay production. This perspective naturalizes the trade-off as a law of creative cognition rather than a contingent feature of publishing economics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "serialization_equivalence",
+      "question": "Can book-length work be produced serially without quality loss, or does the book format require sustained uninterrupted focus that serial production cannot provide?",
+      "resolution_mechanism": "Comparative quality analysis of serialized-then-compiled books vs. traditionally-written books; reader comprehension and argument coherence metrics; author self-reports of cognitive load differences",
+      "impact": "If serialization is equivalent: the opportunity cost asymmetry is purely a publishing industry artifact (Snare from more perspectives). If serialization degrades quality: the asymmetry reflects genuine cognitive constraints (Mountain from more perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether book-quality work can be produced serially"
+    },
+    {
+      "id": "audience_decay_reversibility",
+      "question": "Is audience atrophy during multi-year book projects reversible, or does the loss represent permanent platform damage?",
+      "resolution_mechanism": "Longitudinal tracking of writer audiences before/during/after book projects; engagement recovery timelines; comparison of writers who returned to serial content vs. those who did not",
+      "impact": "If reversible: opportunity cost is lower than measured (coordination problem). If irreversible: opportunity cost is higher (extraction mechanism with permanent damage).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether audience loss during book projects is recoverable"
+    },
+    {
+      "id": "income_stability_threshold",
+      "question": "At what income level does book advance lock-in transition from coordination (funding focused work) to extraction (trapping writer in unprofitable project)?",
+      "resolution_mechanism": "Analysis of advance-to-earnings ratios; writer financial outcomes for different advance sizes; correlation between advance magnitude and project completion rates",
+      "impact": "If threshold is low (e.g., $10k advance): most book contracts are extractive. If threshold is high (e.g., $100k+ advance): most contracts are legitimate coordination with fair risk-sharing.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Income threshold where advance becomes lock-in rather than support"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1,
+      "id_override": "theater_initial"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.12,
+      "id_override": "theater_mid"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.15,
+      "id_override": "theater_final"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15,
+      "id_override": "extract_initial"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.18,
+      "id_override": "extract_mid"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.22,
+      "id_override": "extract_final"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The opportunity cost asymmetry in long-form creative projects creates a structural tension between deep work (books requiring years of sustained focus) and serial content (essays/posts maintaining audience contact and income flow). The Tim Urban case is diagnostic: 13 Wait But Why posts in 2016, then 1 post across 2017-2018 during book project, followed by permanent platform decay. The constraint exhibits multiple DR types depending on the writer's structural position: established writers with platform flexibility experience it as pure coordination (Rope), mid-career writers under contract experience mixed coordination and extraction (Tangled Rope), identity-fused authors experience cognitive entrapment (Snare via identity_locked exit), publishers experience pure benefit (Rope from institutional position), and the emerging hybrid publishing ecosystem sees a sunset (Scaffold). The analytical observer risks naturalizing the trade-off as an immutable cognitive constraint (Mountain) when much of the asymmetry derives from contingent publishing economics rather than creative cognition limits.",
+    "key_agents": [
+      "Established Writer with Options: Primary beneficiary when mobile (moderate/mobile) \u2014 can optimize between book and serial content strategically; experiences coordination",
+      "Mid-Career Writer Under Contract: Mixed position (moderate/constrained) \u2014 book advance funds focused work but creates lock-in; bears opportunity cost risk",
+      "Identity-Fused Book Author: Primary victim (powerless/identity_locked) \u2014 professional identity constituted through book-author role; cannot perceive serial content as legitimate; structurally mobile but cognitively trapped",
+      "Book Publisher: Primary beneficiary (institutional/arbitrage) \u2014 captures value from author time concentration; portfolio-diversified across many authors",
+      "Serial Content Audience: Secondary victim (powerless/trapped) \u2014 loses access to writer's output during book years; cannot exit or organize",
+      "Hybrid Publishing Ecosystem: Organized agents (organized/mobile) \u2014 Substack, Patreon, serialization platforms building alternative pathways with lower opportunity cost",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing publishing economics as cognitive limits"
+    ],
+    "logic_rationale": "Extractiveness (0.22): Low-moderate. The opportunity cost is real\u2014years of foregone essay income, audience atrophy, platform decay\u2014but much of this represents legitimate trade-offs in creative labor allocation rather than pure extraction. Writers with mobility can optimize; those under contract face genuine coordination (advance funding) alongside extraction (risk asymmetry). The value reflects that the asymmetry is partly structural (cognitive load limits) and partly contingent (publishing industry norms). Suppression (0.18): Low. Exit barriers are primarily psychological (identity fusion, sunk cost fallacy) and contractual (advance repayment) rather than structural. Most writers can pivot back to serial content, though at reputational and financial cost. The low suppression reflects that alternatives exist\u2014hybrid models, serialization platforms, self-publishing\u2014even if adoption requires overcoming identity frames. Theater ratio (0.15): Low. The constraint has minimal performative content. Book projects genuinely require sustained focus; the time allocation is a real coordination problem, not a ritual. The slight theater component reflects publishing industry signaling (book-as-credential) but the core function is legitimate deep work coordination.",
+    "directionality_logic": "Directionality is derived from structural position and beneficiary/victim relationships. Publishers are clear beneficiaries with arbitrage exit\u2014they capture value from author time concentration and diversify risk across portfolios, yielding low d and negative effective extraction. Established writers with mobile exit options are also beneficiaries when they choose book projects strategically\u2014the constraint coordinates their deep work, yielding low d. Mid-career writers under contract occupy a mixed position: they benefit from advance funding (beneficiary aspect) but bear opportunity cost risk (victim aspect), with constrained exit due to contractual lock-in. This yields moderate d. Identity-fused authors are victims with identity_locked exit\u2014their professional identity is constituted through the book-author role, making exit cognitively impossible despite structural mobility. This yields high d and high experienced extraction, producing the Snare classification. The serial content audience is a victim with trapped exit (cannot organize or exit), but as an abstract collective, their extraction is diffuse rather than concentrated. The hybrid publishing ecosystem (organized agents with mobile exit) sees low extraction because they are building the alternative pathways that reduce the asymmetry.",
+    "perspectival_gap": "The constraint demonstrates how the same structural phenomenon\u2014time spent on book projects displacing serial content\u2014appears as coordination, mixed coordination-extraction, or pure extraction depending on the observer's position. Established writers with options see Rope (strategic choice between deep and serial work). Mid-career writers under contract see Tangled Rope (advance funds focus but creates lock-in). Identity-fused authors see Snare (cognitive entrapment despite structural mobility). Publishers see Rope (pure benefit from author time concentration). The hybrid ecosystem sees Scaffold (temporary problem being solved by serialization platforms). The analytical observer risks seeing Mountain (naturalizing publishing economics as cognitive limits). The perspectival gap reveals that 'opportunity cost asymmetry' is not a single phenomenon but a presheaf over observation sites\u2014the classification depends on who is measuring and from what structural position.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that the Rope classification (claimed type) is legitimate from multiple perspectives but coexists with Tangled Rope and Snare classifications from other positions. The established writer's Rope is their genuine experience\u2014they have agency and benefit from both pathways. The publisher's Rope is also genuine\u2014they capture value with minimal extraction. But the mid-career writer's Tangled Rope is equally real\u2014the advance coordinates but also extracts through risk asymmetry. And the identity-fused author's Snare is the most severe\u2014cognitive entrapment produces maximum extraction despite structural mobility. The mandatrophy is not 'is this coordination or extraction?' but 'for whom is it coordination, and for whom is it extraction?' The low base extractiveness (0.22) reflects that the constraint is primarily coordination with extraction concentrated on specific subpopulations (contracted writers, identity-fused authors) rather than universal extraction. The Rope classification is correct for the modal case (writers with options) but incomplete without the Tangled Rope and Snare perspectives."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is structurally independent but could be linked to broader creative labor constraints (platform dependency, audience capture, identity-based lock-in) in future corpus expansion."
+  },
+  "directionality_overrides": []
+}
