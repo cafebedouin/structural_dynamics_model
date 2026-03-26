@@ -116,6 +116,7 @@ narrative_ontology:constraint_claim(female_epistemic_marginalization, snare).
 narrative_ontology:human_readable(female_epistemic_marginalization, "Female Epistemic Marginalization").
 narrative_ontology:topic_domain(female_epistemic_marginalization, "epistemology/social_structures/gender").
 
+domain_priors:requires_active_enforcement(female_epistemic_marginalization).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(female_epistemic_marginalization, male_epistemic_gatekeepers).
 narrative_ontology:constraint_victim(female_epistemic_marginalization, female_knowledge_producers).

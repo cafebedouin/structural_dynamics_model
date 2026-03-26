@@ -103,6 +103,7 @@ narrative_ontology:constraint_claim(specification_gaming, snare).
 narrative_ontology:human_readable(specification_gaming, "Specification Gaming in Goal-Oriented Systems").
 narrative_ontology:topic_domain(specification_gaming, "general/systems_design/principal_agent").
 
+domain_priors:requires_active_enforcement(specification_gaming).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(specification_gaming, spec_gamers).
 narrative_ontology:constraint_beneficiary(specification_gaming, specification_authors).

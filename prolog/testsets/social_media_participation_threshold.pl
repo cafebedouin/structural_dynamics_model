@@ -107,6 +107,7 @@ narrative_ontology:constraint_claim(social_media_participation_threshold, snare)
 narrative_ontology:human_readable(social_media_participation_threshold, "The 2025 Digital Participation Threshold").
 narrative_ontology:topic_domain(social_media_participation_threshold, "social/technological").
 
+domain_priors:requires_active_enforcement(social_media_participation_threshold).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(social_media_participation_threshold, platform_corporations).
 narrative_ontology:constraint_victim(social_media_participation_threshold, non_adopters).

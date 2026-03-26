@@ -105,6 +105,7 @@ narrative_ontology:constraint_claim(collective_stupidity_2026, snare).
 narrative_ontology:human_readable(collective_stupidity_2026, "The Cipolla-Galloway Stupidity Snare").
 narrative_ontology:topic_domain(collective_stupidity_2026, "social/behavioral").
 
+domain_priors:requires_active_enforcement(collective_stupidity_2026).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(collective_stupidity_2026, collective_welfare).
 narrative_ontology:constraint_victim(collective_stupidity_2026, rational_agents).

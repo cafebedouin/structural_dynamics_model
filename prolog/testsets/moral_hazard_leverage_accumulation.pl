@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(moral_hazard_leverage_accumulation, snare).
 narrative_ontology:human_readable(moral_hazard_leverage_accumulation, "Moral Hazard Leverage Accumulation in Financial Markets").
 narrative_ontology:topic_domain(moral_hazard_leverage_accumulation, "financial_systems/macroeconomic_stability").
 
+domain_priors:requires_active_enforcement(moral_hazard_leverage_accumulation).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(moral_hazard_leverage_accumulation, systemically_important_financial_institutions).
 narrative_ontology:constraint_beneficiary(moral_hazard_leverage_accumulation, large_leverage_holders).

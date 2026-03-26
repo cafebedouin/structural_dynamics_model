@@ -114,6 +114,7 @@ narrative_ontology:constraint_claim(huang_expectation_resilience_2026, snare).
 narrative_ontology:human_readable(huang_expectation_resilience_2026, "The Stanford Expectation Trap (Resilience Scarcity)").
 narrative_ontology:topic_domain(huang_expectation_resilience_2026, "social/technological/psychological").
 
+domain_priors:requires_active_enforcement(huang_expectation_resilience_2026).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(huang_expectation_resilience_2026, elite_institution_graduates).
 narrative_ontology:constraint_victim(huang_expectation_resilience_2026, high_expectation_cohorts).

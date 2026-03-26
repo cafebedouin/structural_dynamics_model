@@ -110,6 +110,7 @@ narrative_ontology:constraint_claim(downward_mobility_precarity, snare).
 narrative_ontology:human_readable(downward_mobility_precarity, "Downward Mobility Precarity: The Fear-Based Constraint on Labor Exit").
 narrative_ontology:topic_domain(downward_mobility_precarity, "economic/social/psychological").
 
+domain_priors:requires_active_enforcement(downward_mobility_precarity).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(downward_mobility_precarity, capital_holding_employers).
 narrative_ontology:constraint_beneficiary(downward_mobility_precarity, financial_services_sector).

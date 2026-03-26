@@ -109,6 +109,7 @@ narrative_ontology:constraint_claim(caregiver_labor_undervaluation, snare).
 narrative_ontology:human_readable(caregiver_labor_undervaluation, "Caregiver Labor Undervaluation").
 narrative_ontology:topic_domain(caregiver_labor_undervaluation, "social/economic/labor").
 
+domain_priors:requires_active_enforcement(caregiver_labor_undervaluation).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(caregiver_labor_undervaluation, state_welfare_systems).
 narrative_ontology:constraint_beneficiary(caregiver_labor_undervaluation, employing_households).

@@ -104,6 +104,7 @@ narrative_ontology:constraint_claim(challenger_thermal_protection_failure, snare
 narrative_ontology:human_readable(challenger_thermal_protection_failure, "Challenger Thermal Protection System Failure and Organizational Extraction").
 narrative_ontology:topic_domain(challenger_thermal_protection_failure, "aerospace/organizational_failure").
 
+domain_priors:requires_active_enforcement(challenger_thermal_protection_failure).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(challenger_thermal_protection_failure, astronaut_crew).
 narrative_ontology:constraint_victim(challenger_thermal_protection_failure, space_program_public_trust).

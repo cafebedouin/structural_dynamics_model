@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(algorithmic_opacity_extraction, snare).
 narrative_ontology:human_readable(algorithmic_opacity_extraction, "Algorithmic Opacity as an Extraction Mechanism").
 narrative_ontology:topic_domain(algorithmic_opacity_extraction, "technology/economics/governance").
 
+domain_priors:requires_active_enforcement(algorithmic_opacity_extraction).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(algorithmic_opacity_extraction, algorithm_designers).
 narrative_ontology:constraint_beneficiary(algorithmic_opacity_extraction, platform_operators).

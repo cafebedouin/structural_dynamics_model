@@ -112,6 +112,7 @@ narrative_ontology:constraint_claim(romantic_narrative_entrenchment, snare).
 narrative_ontology:human_readable(romantic_narrative_entrenchment, "Romantic Narrative Entrenchment in Pair Bonding").
 narrative_ontology:topic_domain(romantic_narrative_entrenchment, "interpersonal/relationship_dynamics").
 
+domain_priors:requires_active_enforcement(romantic_narrative_entrenchment).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(romantic_narrative_entrenchment, narrative_beneficiary_partner).
 narrative_ontology:constraint_victim(romantic_narrative_entrenchment, entrapped_partner).

@@ -110,6 +110,7 @@ narrative_ontology:constraint_claim(digital_literacy_inequality, snare).
 narrative_ontology:human_readable(digital_literacy_inequality, "Digital Literacy Inequality and Economic Exclusion").
 narrative_ontology:topic_domain(digital_literacy_inequality, "economic/social/technological").
 
+domain_priors:requires_active_enforcement(digital_literacy_inequality).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(digital_literacy_inequality, tech_platform_corporations).
 narrative_ontology:constraint_beneficiary(digital_literacy_inequality, credential_gatekeepers).

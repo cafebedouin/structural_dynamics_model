@@ -107,6 +107,7 @@ narrative_ontology:constraint_claim(tail_event_cascade_coupling, snare).
 narrative_ontology:human_readable(tail_event_cascade_coupling, "Tail Event Cascade Coupling: Systemic Risk Hidden in Correlation Assumptions").
 narrative_ontology:topic_domain(tail_event_cascade_coupling, "financial_systems/risk_modeling/systemic_collapse").
 
+domain_priors:requires_active_enforcement(tail_event_cascade_coupling).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(tail_event_cascade_coupling, risk_model_vendors).
 narrative_ontology:constraint_beneficiary(tail_event_cascade_coupling, financial_institutions_with_hedging_capacity).

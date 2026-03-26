@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(vesting_cliff_trap, snare).
 narrative_ontology:human_readable(vesting_cliff_trap, "Vesting Cliff Trap in Equity Compensation").
 narrative_ontology:topic_domain(vesting_cliff_trap, "economic/labor/compensation").
 
+domain_priors:requires_active_enforcement(vesting_cliff_trap).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(vesting_cliff_trap, employer_capital_preservation).
 narrative_ontology:constraint_victim(vesting_cliff_trap, employee_mobility).

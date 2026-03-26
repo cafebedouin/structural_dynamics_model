@@ -105,6 +105,7 @@ narrative_ontology:constraint_claim(awareness_without_leverage, snare).
 narrative_ontology:human_readable(awareness_without_leverage, "The Cassandra Paradox: Awareness Without Leverage").
 narrative_ontology:topic_domain(awareness_without_leverage, "social/political").
 
+domain_priors:requires_active_enforcement(awareness_without_leverage).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(awareness_without_leverage, informed_observers).
 narrative_ontology:constraint_victim(awareness_without_leverage, epistemic_commons).

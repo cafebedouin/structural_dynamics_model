@@ -121,6 +121,7 @@ narrative_ontology:constraint_claim(semiconductor_fabrication_chokepoint, snare)
 narrative_ontology:human_readable(semiconductor_fabrication_chokepoint, "The geopolitical and capital chokepoint of leading-edge semiconductor manufacturing").
 narrative_ontology:topic_domain(semiconductor_fabrication_chokepoint, "technological/geopolitical/economic").
 
+domain_priors:requires_active_enforcement(semiconductor_fabrication_chokepoint).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(semiconductor_fabrication_chokepoint, tsmc).
 narrative_ontology:constraint_beneficiary(semiconductor_fabrication_chokepoint, us_state_department).

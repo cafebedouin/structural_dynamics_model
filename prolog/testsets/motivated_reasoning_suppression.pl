@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(motivated_reasoning_suppression, snare).
 narrative_ontology:human_readable(motivated_reasoning_suppression, "Motivated Reasoning Suppression of Uncomfortable Truths").
 narrative_ontology:topic_domain(motivated_reasoning_suppression, "cognitive/epistemic").
 
+domain_priors:requires_active_enforcement(motivated_reasoning_suppression).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(motivated_reasoning_suppression, identity_preserving_narratives).
 narrative_ontology:constraint_beneficiary(motivated_reasoning_suppression, comfortable_existing_beliefs).

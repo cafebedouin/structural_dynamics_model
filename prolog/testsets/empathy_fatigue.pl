@@ -105,6 +105,7 @@ narrative_ontology:constraint_claim(empathy_fatigue, snare).
 narrative_ontology:human_readable(empathy_fatigue, "Empathy Fatigue: Structural Depletion of Emotional Labor Capacity").
 narrative_ontology:topic_domain(empathy_fatigue, "social/psychological/interpersonal").
 
+domain_priors:requires_active_enforcement(empathy_fatigue).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(empathy_fatigue, high_demand_populations).
 narrative_ontology:constraint_beneficiary(empathy_fatigue, institutional_care_systems).

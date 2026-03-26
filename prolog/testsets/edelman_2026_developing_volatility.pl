@@ -107,6 +107,7 @@ narrative_ontology:constraint_claim(edelman_2026_developing_volatility, snare).
 narrative_ontology:human_readable(edelman_2026_developing_volatility, "The Developing Market Trust Surge").
 narrative_ontology:topic_domain(edelman_2026_developing_volatility, "economic/technological").
 
+domain_priors:requires_active_enforcement(edelman_2026_developing_volatility).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(edelman_2026_developing_volatility, foreign_disinformation_actors).
 narrative_ontology:constraint_beneficiary(edelman_2026_developing_volatility, ai_platform_extractors).

@@ -113,6 +113,7 @@ narrative_ontology:constraint_claim(existential_coordination_failure, snare).
 narrative_ontology:human_readable(existential_coordination_failure, "Existential Coordination Failure").
 narrative_ontology:topic_domain(existential_coordination_failure, "global_governance/existential_risk").
 
+domain_priors:requires_active_enforcement(existential_coordination_failure).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(existential_coordination_failure, future_generations).
 narrative_ontology:constraint_victim(existential_coordination_failure, planetary_biosphere).

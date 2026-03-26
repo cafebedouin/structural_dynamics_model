@@ -108,6 +108,7 @@ narrative_ontology:constraint_claim(lsd_microdosing_professional_openness, snare
 narrative_ontology:human_readable(lsd_microdosing_professional_openness, "The Permanent Openness Shift from Microdosing").
 narrative_ontology:topic_domain(lsd_microdosing_professional_openness, "psychological/professional/biochemical").
 
+domain_priors:requires_active_enforcement(lsd_microdosing_professional_openness).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(lsd_microdosing_professional_openness, technology_companies).
 narrative_ontology:constraint_beneficiary(lsd_microdosing_professional_openness, creative_industries).

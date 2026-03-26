@@ -107,6 +107,7 @@ narrative_ontology:constraint_claim(car_ownership_norm_us, snare).
 narrative_ontology:human_readable(car_ownership_norm_us, "The Norm of Individual Car Ownership in the US").
 narrative_ontology:topic_domain(car_ownership_norm_us, "economic/social_infrastructure").
 
+domain_priors:requires_active_enforcement(car_ownership_norm_us).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(car_ownership_norm_us, automotive_manufacturers).
 narrative_ontology:constraint_beneficiary(car_ownership_norm_us, fossil_fuel_industry).

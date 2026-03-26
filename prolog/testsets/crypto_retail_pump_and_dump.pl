@@ -108,6 +108,7 @@ narrative_ontology:constraint_claim(crypto_retail_pump_and_dump, snare).
 narrative_ontology:human_readable(crypto_retail_pump_and_dump, "Cryptocurrency Retail Pump-and-Dump Extraction").
 narrative_ontology:topic_domain(crypto_retail_pump_and_dump, "financial_markets/cryptocurrency").
 
+domain_priors:requires_active_enforcement(crypto_retail_pump_and_dump).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(crypto_retail_pump_and_dump, early_insiders).
 narrative_ontology:constraint_beneficiary(crypto_retail_pump_and_dump, exchange_operators).

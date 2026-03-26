@@ -109,6 +109,7 @@ narrative_ontology:constraint_claim(metric_fixation_goodhart, snare).
 narrative_ontology:human_readable(metric_fixation_goodhart, "Metric Fixation and Goodhart's Law").
 narrative_ontology:topic_domain(metric_fixation_goodhart, "organizational_governance/measurement_systems").
 
+domain_priors:requires_active_enforcement(metric_fixation_goodhart).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(metric_fixation_goodhart, metric_administrators).
 narrative_ontology:constraint_beneficiary(metric_fixation_goodhart, political_actors_controlling_metrics).

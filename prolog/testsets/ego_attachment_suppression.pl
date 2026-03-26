@@ -117,6 +117,7 @@ narrative_ontology:constraint_claim(ego_attachment_suppression, snare).
 narrative_ontology:human_readable(ego_attachment_suppression, "Ego Attachment and Self-Suppression Constraint").
 narrative_ontology:topic_domain(ego_attachment_suppression, "psychology/interpersonal/identity").
 
+domain_priors:requires_active_enforcement(ego_attachment_suppression).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(ego_attachment_suppression, identity_protectors).
 narrative_ontology:constraint_beneficiary(ego_attachment_suppression, ego_maintenance_systems).

@@ -107,6 +107,7 @@ narrative_ontology:constraint_claim(liquidity_illusion, snare).
 narrative_ontology:human_readable(liquidity_illusion, "The Exit Door Mirage").
 narrative_ontology:topic_domain(liquidity_illusion, "economic/technological").
 
+domain_priors:requires_active_enforcement(liquidity_illusion).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(liquidity_illusion, market_makers).
 narrative_ontology:constraint_beneficiary(liquidity_illusion, early_exit_beneficiaries).

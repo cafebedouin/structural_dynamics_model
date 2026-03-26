@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(copyright_attribution_erasure, snare).
 narrative_ontology:human_readable(copyright_attribution_erasure, "Copyright Attribution Erasure").
 narrative_ontology:topic_domain(copyright_attribution_erasure, "intellectual_property/creative_work").
 
+domain_priors:requires_active_enforcement(copyright_attribution_erasure).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(copyright_attribution_erasure, aggregators_and_platforms).
 narrative_ontology:constraint_beneficiary(copyright_attribution_erasure, derivative_users).

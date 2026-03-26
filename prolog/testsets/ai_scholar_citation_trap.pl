@@ -107,6 +107,7 @@ narrative_ontology:constraint_claim(ai_scholar_citation_trap, snare).
 narrative_ontology:human_readable(ai_scholar_citation_trap, "AI Scholarly Citation System (OpenScholar Citation Trap)").
 narrative_ontology:topic_domain(ai_scholar_citation_trap, "technological/epistemic_infrastructure").
 
+domain_priors:requires_active_enforcement(ai_scholar_citation_trap).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(ai_scholar_citation_trap, ai_model_developers).
 narrative_ontology:constraint_beneficiary(ai_scholar_citation_trap, citation_aggregation_platforms).

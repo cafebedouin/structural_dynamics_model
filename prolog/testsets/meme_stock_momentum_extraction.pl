@@ -116,6 +116,7 @@ narrative_ontology:constraint_claim(meme_stock_momentum_extraction, snare).
 narrative_ontology:human_readable(meme_stock_momentum_extraction, "Meme Stock Momentum Extraction").
 narrative_ontology:topic_domain(meme_stock_momentum_extraction, "financial_markets/retail_investor_dynamics").
 
+domain_priors:requires_active_enforcement(meme_stock_momentum_extraction).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(meme_stock_momentum_extraction, institutional_shorters).
 narrative_ontology:constraint_beneficiary(meme_stock_momentum_extraction, early_meme_coordinators).

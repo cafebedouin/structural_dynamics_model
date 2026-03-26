@@ -113,6 +113,7 @@ narrative_ontology:constraint_claim(social_media_addiction_loop, snare).
 narrative_ontology:human_readable(social_media_addiction_loop, "Social Media Addiction Loop").
 narrative_ontology:topic_domain(social_media_addiction_loop, "digital_psychology/behavioral_extraction").
 
+domain_priors:requires_active_enforcement(social_media_addiction_loop).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(social_media_addiction_loop, platform_operators).
 narrative_ontology:constraint_beneficiary(social_media_addiction_loop, advertising_networks).

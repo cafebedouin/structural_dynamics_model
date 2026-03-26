@@ -108,6 +108,7 @@ narrative_ontology:constraint_claim(institutional_capture_snare, snare).
 narrative_ontology:human_readable(institutional_capture_snare, "Institutional Capture Snare: Regulatory Extraction Through Normalization").
 narrative_ontology:topic_domain(institutional_capture_snare, "institutional_politics/regulatory_capture").
 
+domain_priors:requires_active_enforcement(institutional_capture_snare).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(institutional_capture_snare, public_interest_constituency).
 narrative_ontology:constraint_victim(institutional_capture_snare, regulated_market_entrants).

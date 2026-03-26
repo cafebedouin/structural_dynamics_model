@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(climate_driven_ecosystem_state_change, snare
 narrative_ontology:human_readable(climate_driven_ecosystem_state_change, "Climate-Driven Ecosystem State Change as Extractive Constraint").
 narrative_ontology:topic_domain(climate_driven_ecosystem_state_change, "environmental/ecological/climate").
 
+domain_priors:requires_active_enforcement(climate_driven_ecosystem_state_change).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(climate_driven_ecosystem_state_change, carbon_intensive_industries).
 narrative_ontology:constraint_beneficiary(climate_driven_ecosystem_state_change, short_term_profit_maximizers).

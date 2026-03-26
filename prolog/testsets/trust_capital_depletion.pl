@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(trust_capital_depletion, snare).
 narrative_ontology:human_readable(trust_capital_depletion, "Trust Capital Depletion in Institutional Relationships").
 narrative_ontology:topic_domain(trust_capital_depletion, "institutional_dynamics/relational_economics").
 
+domain_priors:requires_active_enforcement(trust_capital_depletion).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(trust_capital_depletion, immediate_extractors).
 narrative_ontology:constraint_victim(trust_capital_depletion, trust_commons).

@@ -105,6 +105,7 @@ narrative_ontology:constraint_claim(civilian_targeting_accountability, snare).
 narrative_ontology:human_readable(civilian_targeting_accountability, "Civilian Targeting Accountability in Armed Conflict").
 narrative_ontology:topic_domain(civilian_targeting_accountability, "military/legal/humanitarian").
 
+domain_priors:requires_active_enforcement(civilian_targeting_accountability).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(civilian_targeting_accountability, military_command_structures).
 narrative_ontology:constraint_beneficiary(civilian_targeting_accountability, state_security_apparatus).

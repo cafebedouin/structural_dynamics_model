@@ -105,6 +105,7 @@ narrative_ontology:constraint_claim(social_stigma_suppression, snare).
 narrative_ontology:human_readable(social_stigma_suppression, "Social Stigma Suppression Mechanism").
 narrative_ontology:topic_domain(social_stigma_suppression, "social/psychological/institutional").
 
+domain_priors:requires_active_enforcement(social_stigma_suppression).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(social_stigma_suppression, stigmatized_individuals).
 narrative_ontology:constraint_victim(social_stigma_suppression, stigmatized_communities).

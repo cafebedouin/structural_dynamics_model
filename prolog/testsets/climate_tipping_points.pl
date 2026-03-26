@@ -111,6 +111,7 @@ narrative_ontology:constraint_claim(climate_tipping_points, snare).
 narrative_ontology:human_readable(climate_tipping_points, "Climate Tipping Points as Irreversible Constraint").
 narrative_ontology:topic_domain(climate_tipping_points, "climate_physics/geopolitical_economy").
 
+domain_priors:requires_active_enforcement(climate_tipping_points).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(climate_tipping_points, high_emission_producers).
 narrative_ontology:constraint_beneficiary(climate_tipping_points, incumbent_energy_sectors).

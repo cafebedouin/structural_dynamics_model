@@ -111,6 +111,7 @@ narrative_ontology:constraint_claim(presidential_war_powers_usurpation, snare).
 narrative_ontology:human_readable(presidential_war_powers_usurpation, "Presidential War Powers Usurpation and Congressional Erosion").
 narrative_ontology:topic_domain(presidential_war_powers_usurpation, "constitutional_law/political_power/executive_authority").
 
+domain_priors:requires_active_enforcement(presidential_war_powers_usurpation).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(presidential_war_powers_usurpation, executive_branch_institutional_actors).
 narrative_ontology:constraint_victim(presidential_war_powers_usurpation, congressional_authority).

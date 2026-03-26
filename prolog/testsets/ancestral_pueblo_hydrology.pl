@@ -111,6 +111,7 @@ narrative_ontology:constraint_claim(ancestral_pueblo_hydrology, snare).
 narrative_ontology:human_readable(ancestral_pueblo_hydrology, "Ancestral Puebloan Hydrological Debt").
 narrative_ontology:topic_domain(ancestral_pueblo_hydrology, "environmental/social").
 
+domain_priors:requires_active_enforcement(ancestral_pueblo_hydrology).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(ancestral_pueblo_hydrology, regional_elite_households).
 narrative_ontology:constraint_victim(ancestral_pueblo_hydrology, subsistence_farmers).

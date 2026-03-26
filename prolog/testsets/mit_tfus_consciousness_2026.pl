@@ -111,6 +111,7 @@ narrative_ontology:constraint_claim(mit_tfus_consciousness_2026, snare).
 narrative_ontology:human_readable(mit_tfus_consciousness_2026, "MIT tFUS Causal Consciousness Roadmap — Asymmetric Access to Deep-Brain Manipulation").
 narrative_ontology:topic_domain(mit_tfus_consciousness_2026, "neurotechnology/neuroethics/dual-use").
 
+domain_priors:requires_active_enforcement(mit_tfus_consciousness_2026).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(mit_tfus_consciousness_2026, neurotechnology_researchers).
 narrative_ontology:constraint_beneficiary(mit_tfus_consciousness_2026, military_bioweapons_programs).

@@ -109,6 +109,7 @@ narrative_ontology:constraint_claim(debt_trap_microfinance, snare).
 narrative_ontology:human_readable(debt_trap_microfinance, "Microfinance Debt Trap").
 narrative_ontology:topic_domain(debt_trap_microfinance, "economic/development_finance").
 
+domain_priors:requires_active_enforcement(debt_trap_microfinance).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(debt_trap_microfinance, microfinance_institutions).
 narrative_ontology:constraint_beneficiary(debt_trap_microfinance, loan_officers).

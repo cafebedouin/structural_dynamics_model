@@ -103,6 +103,7 @@ narrative_ontology:constraint_claim(insult_wisdom_training, snare).
 narrative_ontology:human_readable(insult_wisdom_training, "The Odd Assignment (Paying for Insults)").
 narrative_ontology:topic_domain(insult_wisdom_training, "religious/social/philosophical").
 
+domain_priors:requires_active_enforcement(insult_wisdom_training).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(insult_wisdom_training, master_teacher).
 narrative_ontology:constraint_beneficiary(insult_wisdom_training, insulters_community).

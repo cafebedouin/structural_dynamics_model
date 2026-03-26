@@ -103,6 +103,7 @@ narrative_ontology:constraint_claim(digital_divide_exclusion, snare).
 narrative_ontology:human_readable(digital_divide_exclusion, "Digital Divide Exclusion from Economic and Social Participation").
 narrative_ontology:topic_domain(digital_divide_exclusion, "economic/social/technological").
 
+domain_priors:requires_active_enforcement(digital_divide_exclusion).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(digital_divide_exclusion, digital_infrastructure_owners).
 narrative_ontology:constraint_beneficiary(digital_divide_exclusion, high_connectivity_populations).

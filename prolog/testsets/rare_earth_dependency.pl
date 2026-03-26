@@ -108,6 +108,7 @@ narrative_ontology:constraint_claim(rare_earth_dependency, snare).
 narrative_ontology:human_readable(rare_earth_dependency, "Strategic Rare Earth Element Dependency").
 narrative_ontology:topic_domain(rare_earth_dependency, "economic/geopolitical").
 
+domain_priors:requires_active_enforcement(rare_earth_dependency).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(rare_earth_dependency, monopoly_producer).
 narrative_ontology:constraint_victim(rare_earth_dependency, dependent_nation).

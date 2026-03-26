@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(olympic_host_infrastructure_debt, snare).
 narrative_ontology:human_readable(olympic_host_infrastructure_debt, "Olympic Host Infrastructure Debt Trap").
 narrative_ontology:topic_domain(olympic_host_infrastructure_debt, "economic_policy/urban_development").
 
+domain_priors:requires_active_enforcement(olympic_host_infrastructure_debt).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(olympic_host_infrastructure_debt, international_olympic_committee).
 narrative_ontology:constraint_beneficiary(olympic_host_infrastructure_debt, construction_contractors).

@@ -113,6 +113,7 @@ narrative_ontology:constraint_claim(behavioral_addiction_mechanisms, snare).
 narrative_ontology:human_readable(behavioral_addiction_mechanisms, "Behavioral Addiction Mechanisms: Neurological Lock-In and Extraction").
 narrative_ontology:topic_domain(behavioral_addiction_mechanisms, "neuroscience/psychology/behavioral_health").
 
+domain_priors:requires_active_enforcement(behavioral_addiction_mechanisms).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(behavioral_addiction_mechanisms, behavior_design_operators).
 narrative_ontology:constraint_beneficiary(behavioral_addiction_mechanisms, platform_incentive_architects).

@@ -107,6 +107,7 @@ narrative_ontology:constraint_claim(superbowl_advertising_extraction, snare).
 narrative_ontology:human_readable(superbowl_advertising_extraction, "Super Bowl Advertising Market Extraction").
 narrative_ontology:topic_domain(superbowl_advertising_extraction, "economic/media").
 
+domain_priors:requires_active_enforcement(superbowl_advertising_extraction).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(superbowl_advertising_extraction, nfl_broadcast_network).
 narrative_ontology:constraint_beneficiary(superbowl_advertising_extraction, nfl_league_office).

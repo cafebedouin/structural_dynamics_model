@@ -104,6 +104,7 @@ narrative_ontology:constraint_claim(structural_opacity_of_self, snare).
 narrative_ontology:human_readable(structural_opacity_of_self, "Structural Opacity of Self-Knowledge").
 narrative_ontology:topic_domain(structural_opacity_of_self, "cognitive_science/evolutionary_psychology/philosophy_of_mind").
 
+domain_priors:requires_active_enforcement(structural_opacity_of_self).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(structural_opacity_of_self, psychological_homeostasis).
 narrative_ontology:constraint_beneficiary(structural_opacity_of_self, ego_defense_mechanisms).

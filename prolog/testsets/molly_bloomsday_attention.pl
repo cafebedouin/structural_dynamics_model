@@ -108,6 +108,7 @@ narrative_ontology:constraint_claim(molly_bloomsday_attention, snare).
 narrative_ontology:human_readable(molly_bloomsday_attention, "Molly Bloomsday Attention: Gendered Literary Canonicity and Interpretive Labor").
 narrative_ontology:topic_domain(molly_bloomsday_attention, "literary_studies/cultural_representation").
 
+domain_priors:requires_active_enforcement(molly_bloomsday_attention).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(molly_bloomsday_attention, male_literary_establishment).
 narrative_ontology:constraint_beneficiary(molly_bloomsday_attention, joyce_interpretive_industry).

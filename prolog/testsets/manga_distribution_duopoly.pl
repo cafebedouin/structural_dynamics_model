@@ -109,6 +109,7 @@ narrative_ontology:constraint_claim(manga_distribution_duopoly, snare).
 narrative_ontology:human_readable(manga_distribution_duopoly, "Manga Distribution Duopoly in North America").
 narrative_ontology:topic_domain(manga_distribution_duopoly, "economic/publishing").
 
+domain_priors:requires_active_enforcement(manga_distribution_duopoly).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(manga_distribution_duopoly, independent_manga_creators).
 narrative_ontology:constraint_victim(manga_distribution_duopoly, small_publishing_houses).

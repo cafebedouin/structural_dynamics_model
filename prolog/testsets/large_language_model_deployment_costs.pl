@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(large_language_model_deployment_costs, snare
 narrative_ontology:human_readable(large_language_model_deployment_costs, "Large Language Model Deployment Cost Barrier").
 narrative_ontology:topic_domain(large_language_model_deployment_costs, "artificial_intelligence/economic_access").
 
+domain_priors:requires_active_enforcement(large_language_model_deployment_costs).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(large_language_model_deployment_costs, compute_infrastructure_providers).
 narrative_ontology:constraint_beneficiary(large_language_model_deployment_costs, frontier_model_developers).

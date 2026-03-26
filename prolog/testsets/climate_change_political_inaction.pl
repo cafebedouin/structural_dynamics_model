@@ -110,6 +110,7 @@ narrative_ontology:constraint_claim(climate_change_political_inaction, snare).
 narrative_ontology:human_readable(climate_change_political_inaction, "Climate Change Political Inaction Constraint").
 narrative_ontology:topic_domain(climate_change_political_inaction, "climate_policy/political_economy").
 
+domain_priors:requires_active_enforcement(climate_change_political_inaction).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(climate_change_political_inaction, fossil_fuel_industry).
 narrative_ontology:constraint_beneficiary(climate_change_political_inaction, carbon_intensive_capital).

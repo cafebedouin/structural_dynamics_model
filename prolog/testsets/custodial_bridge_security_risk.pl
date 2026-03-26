@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(custodial_bridge_security_risk, snare).
 narrative_ontology:human_readable(custodial_bridge_security_risk, "Custodial Bridge Security Risk in Cross-Chain Asset Transfer").
 narrative_ontology:topic_domain(custodial_bridge_security_risk, "blockchain/cryptocurrency/systemic_risk").
 
+domain_priors:requires_active_enforcement(custodial_bridge_security_risk).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(custodial_bridge_security_risk, bridge_operators).
 narrative_ontology:constraint_beneficiary(custodial_bridge_security_risk, institutional_custodians).

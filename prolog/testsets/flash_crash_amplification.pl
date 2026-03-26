@@ -108,6 +108,7 @@ narrative_ontology:constraint_claim(flash_crash_amplification, snare).
 narrative_ontology:human_readable(flash_crash_amplification, "Flash Crash Amplification in Automated Trading Systems").
 narrative_ontology:topic_domain(flash_crash_amplification, "financial_systems/market_microstructure").
 
+domain_priors:requires_active_enforcement(flash_crash_amplification).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(flash_crash_amplification, high_frequency_trading_firms).
 narrative_ontology:constraint_beneficiary(flash_crash_amplification, market_makers_with_speed_advantage).

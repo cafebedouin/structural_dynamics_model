@@ -110,6 +110,7 @@ narrative_ontology:constraint_claim(carbon_externality, snare).
 narrative_ontology:human_readable(carbon_externality, "Carbon Externality: Atmospheric Cost Transfer").
 narrative_ontology:topic_domain(carbon_externality, "environmental/economic/political").
 
+domain_priors:requires_active_enforcement(carbon_externality).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(carbon_externality, carbon_emitting_industries).
 narrative_ontology:constraint_beneficiary(carbon_externality, high_consumption_populations).

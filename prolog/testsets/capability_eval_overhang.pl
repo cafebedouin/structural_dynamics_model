@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(capability_eval_overhang, snare).
 narrative_ontology:human_readable(capability_eval_overhang, "The Blind Spot of Power: AI Capability Evaluation Overhang").
 narrative_ontology:topic_domain(capability_eval_overhang, "technological/AI/governance").
 
+domain_priors:requires_active_enforcement(capability_eval_overhang).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(capability_eval_overhang, ai_capability_developers).
 narrative_ontology:constraint_beneficiary(capability_eval_overhang, frontier_labs).

@@ -109,6 +109,7 @@ narrative_ontology:constraint_claim(mirror_of_erised_expectation, snare).
 narrative_ontology:human_readable(mirror_of_erised_expectation, "The Erised Career/Stability Mirror").
 narrative_ontology:topic_domain(mirror_of_erised_expectation, "psychological/economic").
 
+domain_priors:requires_active_enforcement(mirror_of_erised_expectation).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(mirror_of_erised_expectation, institutional_credentialists).
 narrative_ontology:constraint_beneficiary(mirror_of_erised_expectation, narrative_gatekeepers).

@@ -105,6 +105,7 @@ narrative_ontology:constraint_claim(theatrical_neutrality, snare).
 narrative_ontology:human_readable(theatrical_neutrality, "Theatrical Neutrality: The View from Nowhere as Epistemic Extraction").
 narrative_ontology:topic_domain(theatrical_neutrality, "epistemology/media/rhetoric").
 
+domain_priors:requires_active_enforcement(theatrical_neutrality).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(theatrical_neutrality, asymmetric_claim_generators).
 narrative_ontology:constraint_beneficiary(theatrical_neutrality, institutional_neutrality_performers).

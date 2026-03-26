@@ -110,6 +110,7 @@ narrative_ontology:constraint_claim(self_surpassing_superman, snare).
 narrative_ontology:human_readable(self_surpassing_superman, "The Rearing of the Superman (Übermensch) — Self-Surpassing Imperative").
 narrative_ontology:topic_domain(self_surpassing_superman, "philosophical/social").
 
+domain_priors:requires_active_enforcement(self_surpassing_superman).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(self_surpassing_superman, master_value_practitioners).
 narrative_ontology:constraint_victim(self_surpassing_superman, slave_morality_adherents).

@@ -113,6 +113,7 @@ narrative_ontology:constraint_claim(currency_debasement_extraction, snare).
 narrative_ontology:human_readable(currency_debasement_extraction, "Currency Debasement Extraction via Monetary Inflation").
 narrative_ontology:topic_domain(currency_debasement_extraction, "monetary_policy/political_economy").
 
+domain_priors:requires_active_enforcement(currency_debasement_extraction).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(currency_debasement_extraction, debt_holders).
 narrative_ontology:constraint_beneficiary(currency_debasement_extraction, asset_owners).

@@ -111,6 +111,7 @@ narrative_ontology:constraint_claim(misinformation_production_incentive, snare).
 narrative_ontology:human_readable(misinformation_production_incentive, "Misinformation Production Incentive Structure").
 narrative_ontology:topic_domain(misinformation_production_incentive, "information/media/politics").
 
+domain_priors:requires_active_enforcement(misinformation_production_incentive).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(misinformation_production_incentive, content_creators_optimizing_engagement).
 narrative_ontology:constraint_beneficiary(misinformation_production_incentive, platforms_maximizing_time_on_site).

@@ -109,6 +109,7 @@ narrative_ontology:constraint_claim(student_loan_interest_accrual, snare).
 narrative_ontology:human_readable(student_loan_interest_accrual, "Student Loan Interest Accrual During Deferment").
 narrative_ontology:topic_domain(student_loan_interest_accrual, "economic/debt/higher_education").
 
+domain_priors:requires_active_enforcement(student_loan_interest_accrual).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(student_loan_interest_accrual, loan_servicers).
 narrative_ontology:constraint_beneficiary(student_loan_interest_accrual, federal_treasury).

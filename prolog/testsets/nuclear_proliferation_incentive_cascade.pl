@@ -105,6 +105,7 @@ narrative_ontology:constraint_claim(nuclear_proliferation_incentive_cascade, sna
 narrative_ontology:human_readable(nuclear_proliferation_incentive_cascade, "Nuclear Proliferation Incentive Cascade").
 narrative_ontology:topic_domain(nuclear_proliferation_incentive_cascade, "international_security/geopolitics").
 
+domain_priors:requires_active_enforcement(nuclear_proliferation_incentive_cascade).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(nuclear_proliferation_incentive_cascade, nuclear_armed_states).
 narrative_ontology:constraint_victim(nuclear_proliferation_incentive_cascade, non_nuclear_states).

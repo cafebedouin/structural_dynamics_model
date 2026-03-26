@@ -109,6 +109,7 @@ narrative_ontology:constraint_claim(scam_doubt_manufacturing, snare).
 narrative_ontology:human_readable(scam_doubt_manufacturing, "The Playbook for Manufacturing Scientific Doubt (SCAMs)").
 narrative_ontology:topic_domain(scam_doubt_manufacturing, "economic/political").
 
+domain_priors:requires_active_enforcement(scam_doubt_manufacturing).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(scam_doubt_manufacturing, incumbent_industries).
 narrative_ontology:constraint_beneficiary(scam_doubt_manufacturing, doubt_manufacturing_firms).

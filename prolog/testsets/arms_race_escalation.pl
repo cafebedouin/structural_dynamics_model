@@ -111,6 +111,7 @@ narrative_ontology:constraint_claim(arms_race_escalation, snare).
 narrative_ontology:human_readable(arms_race_escalation, "Arms Race Escalation Dynamic").
 narrative_ontology:topic_domain(arms_race_escalation, "geopolitical/military/security").
 
+domain_priors:requires_active_enforcement(arms_race_escalation).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(arms_race_escalation, defense_contractors).
 narrative_ontology:constraint_beneficiary(arms_race_escalation, military_establishments).

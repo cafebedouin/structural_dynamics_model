@@ -107,6 +107,7 @@ narrative_ontology:constraint_claim(debt_dependency_traps, snare).
 narrative_ontology:human_readable(debt_dependency_traps, "Debt Dependency Traps in Consumer and Development Finance").
 narrative_ontology:topic_domain(debt_dependency_traps, "economic/political/social").
 
+domain_priors:requires_active_enforcement(debt_dependency_traps).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(debt_dependency_traps, creditors).
 narrative_ontology:constraint_beneficiary(debt_dependency_traps, financial_intermediaries).

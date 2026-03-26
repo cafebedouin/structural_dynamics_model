@@ -249,21 +249,23 @@ is_tangled_rope(ConstraintID) :-
     has_coordination_function(ConstraintID),
     has_asymmetric_extraction(ConstraintID).
 
-%% has_coordination_function(+ConstraintID)
+%% has_coordination_function(?ConstraintID)
 %  Check if constraint solves a collective action problem.
 %  Evidence: Has multiple beneficiaries or provides network effects.
 %  Note: constraint_beneficiary/2 is defined in individual test files.
+%  No cut — callers handle deduplication (sort/set/if-then-else).
+%  A bare cut or once/1 here prevents enumeration with unbound C.
 has_coordination_function(ConstraintID) :-
-    constraint_beneficiary(ConstraintID, _),
-    !.
+    constraint_beneficiary(ConstraintID, _).
 
-%% has_asymmetric_extraction(+ConstraintID)
+%% has_asymmetric_extraction(?ConstraintID)
 %  Check for asymmetric beneficiary distribution.
 %  Evidence: Has victims or concentrated benefits.
 %  Note: constraint_victim/2 is defined in individual test files.
+%  No cut — callers handle deduplication (sort/set/if-then-else).
+%  A bare cut or once/1 here prevents enumeration with unbound C.
 has_asymmetric_extraction(ConstraintID) :-
-    constraint_victim(ConstraintID, _),
-    !.
+    constraint_victim(ConstraintID, _).
 
 /* ==========================================================================
    INDEXICAL GATE (v3.1)

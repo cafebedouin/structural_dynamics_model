@@ -109,6 +109,7 @@ narrative_ontology:constraint_claim(uk_housing_market_access, snare).
 narrative_ontology:human_readable(uk_housing_market_access, "UK Housing Market Access Constraint").
 narrative_ontology:topic_domain(uk_housing_market_access, "economic/housing/financial").
 
+domain_priors:requires_active_enforcement(uk_housing_market_access).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(uk_housing_market_access, existing_property_owners).
 narrative_ontology:constraint_beneficiary(uk_housing_market_access, financial_institutions).

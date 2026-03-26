@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(large_language_model_training_attribution, s
 narrative_ontology:human_readable(large_language_model_training_attribution, "LLM Training Data Attribution and Consent Extraction").
 narrative_ontology:topic_domain(large_language_model_training_attribution, "artificial_intelligence/intellectual_property/labor").
 
+domain_priors:requires_active_enforcement(large_language_model_training_attribution).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(large_language_model_training_attribution, llm_developers).
 narrative_ontology:constraint_victim(large_language_model_training_attribution, training_data_creators).

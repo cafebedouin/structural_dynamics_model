@@ -111,6 +111,7 @@ narrative_ontology:constraint_claim(algorithmic_opacity_and_leverage, snare).
 narrative_ontology:human_readable(algorithmic_opacity_and_leverage, "Algorithmic Opacity and Leverage in Automated Decision Systems").
 narrative_ontology:topic_domain(algorithmic_opacity_and_leverage, "technology/governance/economics").
 
+domain_priors:requires_active_enforcement(algorithmic_opacity_and_leverage).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(algorithmic_opacity_and_leverage, algorithm_deploying_institutions).
 narrative_ontology:constraint_beneficiary(algorithmic_opacity_and_leverage, algorithm_designers).

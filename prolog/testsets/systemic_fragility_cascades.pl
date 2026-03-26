@@ -109,6 +109,7 @@ narrative_ontology:constraint_claim(systemic_fragility_cascades, snare).
 narrative_ontology:human_readable(systemic_fragility_cascades, "Systemic Fragility Cascades: The Coupling of Distributed Dependencies into Irreversible Collapse").
 narrative_ontology:topic_domain(systemic_fragility_cascades, "systems_resilience/network_dynamics/institutional_failure").
 
+domain_priors:requires_active_enforcement(systemic_fragility_cascades).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(systemic_fragility_cascades, peripheral_agents).
 narrative_ontology:constraint_victim(systemic_fragility_cascades, economically_vulnerable_populations).

@@ -103,6 +103,7 @@ narrative_ontology:constraint_claim(supplier_consolidation_barrier, snare).
 narrative_ontology:human_readable(supplier_consolidation_barrier, "Supplier Consolidation Barrier").
 narrative_ontology:topic_domain(supplier_consolidation_barrier, "economic_policy/industrial_organization").
 
+domain_priors:requires_active_enforcement(supplier_consolidation_barrier).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(supplier_consolidation_barrier, dominant_suppliers).
 narrative_ontology:constraint_victim(supplier_consolidation_barrier, dependent_manufacturers).

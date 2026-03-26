@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(destination_labor_market_saturation, snare).
 narrative_ontology:human_readable(destination_labor_market_saturation, "Destination Labor Market Saturation").
 narrative_ontology:topic_domain(destination_labor_market_saturation, "labor_economics/migration").
 
+domain_priors:requires_active_enforcement(destination_labor_market_saturation).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(destination_labor_market_saturation, incumbent_workers_destination).
 narrative_ontology:constraint_beneficiary(destination_labor_market_saturation, wage_suppression_beneficiaries).

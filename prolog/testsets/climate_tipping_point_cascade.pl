@@ -111,6 +111,7 @@ narrative_ontology:constraint_claim(climate_tipping_point_cascade, snare).
 narrative_ontology:human_readable(climate_tipping_point_cascade, "Climate Tipping Point Cascade Lock-in").
 narrative_ontology:topic_domain(climate_tipping_point_cascade, "climate_systems/geopolitical_economy").
 
+domain_priors:requires_active_enforcement(climate_tipping_point_cascade).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(climate_tipping_point_cascade, fossil_fuel_extractors).
 narrative_ontology:constraint_beneficiary(climate_tipping_point_cascade, carbon_intensive_industries).

@@ -107,6 +107,7 @@ narrative_ontology:constraint_claim(trillion_bond_rush_2026, snare).
 narrative_ontology:human_readable(trillion_bond_rush_2026, "Global $1 Trillion Bond Issuance Record (2026)").
 narrative_ontology:topic_domain(trillion_bond_rush_2026, "economic/financial").
 
+domain_priors:requires_active_enforcement(trillion_bond_rush_2026).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(trillion_bond_rush_2026, investment_banks).
 narrative_ontology:constraint_beneficiary(trillion_bond_rush_2026, sovereign_issuers_credit_access).

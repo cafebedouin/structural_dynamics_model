@@ -113,6 +113,7 @@ narrative_ontology:constraint_claim(big_data_astrophysics_arbitrage, snare).
 narrative_ontology:human_readable(big_data_astrophysics_arbitrage, "Big Data Arbitrage in Modern Astrophysics").
 narrative_ontology:topic_domain(big_data_astrophysics_arbitrage, "technological/astronomy").
 
+domain_priors:requires_active_enforcement(big_data_astrophysics_arbitrage).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(big_data_astrophysics_arbitrage, data_infrastructure_operators).
 narrative_ontology:constraint_beneficiary(big_data_astrophysics_arbitrage, machine_learning_specialists).

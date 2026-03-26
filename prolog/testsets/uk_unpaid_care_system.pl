@@ -113,6 +113,7 @@ narrative_ontology:constraint_claim(uk_unpaid_care_system, snare).
 narrative_ontology:human_readable(uk_unpaid_care_system, "The UK's Reliance on Unpaid Carers for Social and Healthcare").
 narrative_ontology:topic_domain(uk_unpaid_care_system, "economic/social").
 
+domain_priors:requires_active_enforcement(uk_unpaid_care_system).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(uk_unpaid_care_system, nhs_government_budget).
 narrative_ontology:constraint_beneficiary(uk_unpaid_care_system, social_care_providers).

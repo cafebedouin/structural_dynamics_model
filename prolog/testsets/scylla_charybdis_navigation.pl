@@ -100,6 +100,7 @@ narrative_ontology:constraint_claim(scylla_charybdis_navigation, snare).
 narrative_ontology:human_readable(scylla_charybdis_navigation, "Scylla-Charybdis Navigation Dilemma").
 narrative_ontology:topic_domain(scylla_charybdis_navigation, "strategic_choice/institutional_constraints").
 
+domain_priors:requires_active_enforcement(scylla_charybdis_navigation).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(scylla_charybdis_navigation, constraint_architect).
 narrative_ontology:constraint_victim(scylla_charybdis_navigation, navigating_agent).

@@ -104,6 +104,7 @@ narrative_ontology:constraint_claim(methane_emissions_deregulation, snare).
 narrative_ontology:human_readable(methane_emissions_deregulation, "Methane Emissions Deregulation and Climate Extraction").
 narrative_ontology:topic_domain(methane_emissions_deregulation, "environmental_policy/climate/energy").
 
+domain_priors:requires_active_enforcement(methane_emissions_deregulation).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(methane_emissions_deregulation, fossil_fuel_producers).
 narrative_ontology:constraint_beneficiary(methane_emissions_deregulation, natural_gas_companies).

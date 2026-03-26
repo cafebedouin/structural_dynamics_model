@@ -104,6 +104,7 @@ narrative_ontology:constraint_claim(consumer_status_signaling, snare).
 narrative_ontology:human_readable(consumer_status_signaling, "Consumer Status Signaling Through Positional Goods").
 narrative_ontology:topic_domain(consumer_status_signaling, "economic/social/behavioral").
 
+domain_priors:requires_active_enforcement(consumer_status_signaling).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(consumer_status_signaling, luxury_brand_producers).
 narrative_ontology:constraint_beneficiary(consumer_status_signaling, status_arbiters).

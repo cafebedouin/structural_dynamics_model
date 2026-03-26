@@ -111,6 +111,7 @@ narrative_ontology:constraint_claim(narcissistic_ego_maintenance, snare).
 narrative_ontology:human_readable(narcissistic_ego_maintenance, "The Mirror Trap: Narcissistic Ego Maintenance").
 narrative_ontology:topic_domain(narcissistic_ego_maintenance, "psychological/social").
 
+domain_priors:requires_active_enforcement(narcissistic_ego_maintenance).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(narcissistic_ego_maintenance, the_echo).
 narrative_ontology:constraint_victim(narcissistic_ego_maintenance, emotional_authenticity).

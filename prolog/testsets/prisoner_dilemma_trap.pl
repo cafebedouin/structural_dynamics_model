@@ -101,6 +101,7 @@ narrative_ontology:constraint_claim(prisoner_dilemma_trap, snare).
 narrative_ontology:human_readable(prisoner_dilemma_trap, "Prisoner's Dilemma Trap: Mutual Defection Under Payoff Asymmetry").
 narrative_ontology:topic_domain(prisoner_dilemma_trap, "game_theory/strategic_interaction").
 
+domain_priors:requires_active_enforcement(prisoner_dilemma_trap).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(prisoner_dilemma_trap, individual_defectors).
 narrative_ontology:constraint_victim(prisoner_dilemma_trap, cooperative_equilibrium).

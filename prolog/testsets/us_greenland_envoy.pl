@@ -101,6 +101,7 @@ narrative_ontology:constraint_claim(us_greenland_envoy, snare).
 narrative_ontology:human_readable(us_greenland_envoy, "US Special Envoy for Greenlandic Affairs").
 narrative_ontology:topic_domain(us_greenland_envoy, "geopolitical/economic").
 
+domain_priors:requires_active_enforcement(us_greenland_envoy).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(us_greenland_envoy, us_strategic_interests).
 narrative_ontology:constraint_victim(us_greenland_envoy, greenlandic_sovereignty).

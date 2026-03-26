@@ -111,6 +111,7 @@ narrative_ontology:constraint_claim(dublin_economic_desperation, snare).
 narrative_ontology:human_readable(dublin_economic_desperation, "Dublin Economic Desperation and Survival Extraction").
 narrative_ontology:topic_domain(dublin_economic_desperation, "urban_economics/labor_exploitation").
 
+domain_priors:requires_active_enforcement(dublin_economic_desperation).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(dublin_economic_desperation, landlords).
 narrative_ontology:constraint_beneficiary(dublin_economic_desperation, service_sector_employers).

@@ -116,6 +116,7 @@ narrative_ontology:constraint_claim(axiom_reasoner_2026, snare).
 narrative_ontology:human_readable(axiom_reasoner_2026, "Axiom's Self-Improving Superintelligent Reasoner").
 narrative_ontology:topic_domain(axiom_reasoner_2026, "technological/scientific").
 
+domain_priors:requires_active_enforcement(axiom_reasoner_2026).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(axiom_reasoner_2026, axiom_research_team).
 narrative_ontology:constraint_beneficiary(axiom_reasoner_2026, academic_reputation_system).

@@ -101,6 +101,7 @@ narrative_ontology:constraint_claim(supplement_marketing_claims_verification, sn
 narrative_ontology:human_readable(supplement_marketing_claims_verification, "Supplement Marketing Claims Verification Bottleneck").
 narrative_ontology:topic_domain(supplement_marketing_claims_verification, "health_commerce/regulatory_enforcement").
 
+domain_priors:requires_active_enforcement(supplement_marketing_claims_verification).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(supplement_marketing_claims_verification, supplement_manufacturers).
 narrative_ontology:constraint_beneficiary(supplement_marketing_claims_verification, marketing_intermediaries).

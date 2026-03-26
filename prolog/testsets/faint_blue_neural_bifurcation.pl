@@ -108,6 +108,7 @@ narrative_ontology:constraint_claim(faint_blue_neural_bifurcation, snare).
 narrative_ontology:human_readable(faint_blue_neural_bifurcation, "The \"Ken\" Neural Enhancement Bifurcation").
 narrative_ontology:topic_domain(faint_blue_neural_bifurcation, "technological/social/pharmaceutical").
 
+domain_priors:requires_active_enforcement(faint_blue_neural_bifurcation).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(faint_blue_neural_bifurcation, developer_network).
 narrative_ontology:constraint_beneficiary(faint_blue_neural_bifurcation, institutional_distributors).

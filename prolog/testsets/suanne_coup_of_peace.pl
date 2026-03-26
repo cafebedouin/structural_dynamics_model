@@ -110,6 +110,7 @@ narrative_ontology:constraint_claim(suanne_coup_of_peace, snare).
 narrative_ontology:human_readable(suanne_coup_of_peace, "The Hostile Social Environment at the Lead Basketball Game").
 narrative_ontology:topic_domain(suanne_coup_of_peace, "social/cultural").
 
+domain_priors:requires_active_enforcement(suanne_coup_of_peace).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(suanne_coup_of_peace, lead_community_white_residents).
 narrative_ontology:constraint_victim(suanne_coup_of_peace, pine_ridge_basketball_team).

@@ -108,6 +108,7 @@ narrative_ontology:constraint_claim(metacognitive_illusion, snare).
 narrative_ontology:human_readable(metacognitive_illusion, "Metacognitive Illusion: The Trap of Introspective Authority").
 narrative_ontology:topic_domain(metacognitive_illusion, "epistemology/cognitive_science/psychology").
 
+domain_priors:requires_active_enforcement(metacognitive_illusion).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(metacognitive_illusion, institutional_gatekeepers).
 narrative_ontology:constraint_victim(metacognitive_illusion, individual_cognizers).

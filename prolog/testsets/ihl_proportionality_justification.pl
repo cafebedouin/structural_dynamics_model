@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(ihl_proportionality_justification, snare).
 narrative_ontology:human_readable(ihl_proportionality_justification, "IHL Proportionality Justification in Armed Conflict").
 narrative_ontology:topic_domain(ihl_proportionality_justification, "international_humanitarian_law/military_operations").
 
+domain_priors:requires_active_enforcement(ihl_proportionality_justification).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(ihl_proportionality_justification, military_forces_conducting_operations).
 narrative_ontology:constraint_victim(ihl_proportionality_justification, civilian_populations_in_conflict_zones).

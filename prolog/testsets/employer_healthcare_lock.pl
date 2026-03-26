@@ -109,6 +109,7 @@ narrative_ontology:constraint_claim(employer_healthcare_lock, snare).
 narrative_ontology:human_readable(employer_healthcare_lock, "Employer-Mediated Healthcare Lock in the United States").
 narrative_ontology:topic_domain(employer_healthcare_lock, "economic/labor/healthcare").
 
+domain_priors:requires_active_enforcement(employer_healthcare_lock).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(employer_healthcare_lock, large_employers).
 narrative_ontology:constraint_beneficiary(employer_healthcare_lock, health_insurance_carriers).

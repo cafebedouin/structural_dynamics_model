@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(income_inequality_accumulation, snare).
 narrative_ontology:human_readable(income_inequality_accumulation, "Income Inequality Accumulation Trap").
 narrative_ontology:topic_domain(income_inequality_accumulation, "economic/structural").
 
+domain_priors:requires_active_enforcement(income_inequality_accumulation).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(income_inequality_accumulation, capital_owners).
 narrative_ontology:constraint_beneficiary(income_inequality_accumulation, high_wealth_cohort).

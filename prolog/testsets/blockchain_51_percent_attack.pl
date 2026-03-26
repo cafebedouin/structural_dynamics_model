@@ -101,6 +101,7 @@ narrative_ontology:constraint_claim(blockchain_51_percent_attack, snare).
 narrative_ontology:human_readable(blockchain_51_percent_attack, "51% Attack Vulnerability in Proof-of-Work Blockchains").
 narrative_ontology:topic_domain(blockchain_51_percent_attack, "cryptography/distributed_systems/economic_security").
 
+domain_priors:requires_active_enforcement(blockchain_51_percent_attack).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(blockchain_51_percent_attack, attacker_with_hashpower_majority).
 narrative_ontology:constraint_beneficiary(blockchain_51_percent_attack, mining_pool_operators).

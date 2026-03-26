@@ -111,6 +111,7 @@ narrative_ontology:constraint_claim(currency_exposure_debt_cycles, snare).
 narrative_ontology:human_readable(currency_exposure_debt_cycles, "Currency Exposure Debt Cycles: Structural Trap for Foreign-Currency-Denominated Borrowers").
 narrative_ontology:topic_domain(currency_exposure_debt_cycles, "economic/financial/macroeconomic").
 
+domain_priors:requires_active_enforcement(currency_exposure_debt_cycles).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(currency_exposure_debt_cycles, foreign_currency_creditors).
 narrative_ontology:constraint_beneficiary(currency_exposure_debt_cycles, currency_speculators).

@@ -107,6 +107,7 @@ narrative_ontology:constraint_claim(information_asymmetry_rent_extraction, snare
 narrative_ontology:human_readable(information_asymmetry_rent_extraction, "Information Asymmetry Rent Extraction").
 narrative_ontology:topic_domain(information_asymmetry_rent_extraction, "economic/information/structural").
 
+domain_priors:requires_active_enforcement(information_asymmetry_rent_extraction).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(information_asymmetry_rent_extraction, informed_agents).
 narrative_ontology:constraint_victim(information_asymmetry_rent_extraction, uninformed_agents).

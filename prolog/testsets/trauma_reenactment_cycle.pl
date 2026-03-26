@@ -104,6 +104,7 @@ narrative_ontology:constraint_claim(trauma_reenactment_cycle, snare).
 narrative_ontology:human_readable(trauma_reenactment_cycle, "Trauma Reenactment Cycle").
 narrative_ontology:topic_domain(trauma_reenactment_cycle, "psychological/interpersonal").
 
+domain_priors:requires_active_enforcement(trauma_reenactment_cycle).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(trauma_reenactment_cycle, trauma_survivor).
 

@@ -103,6 +103,7 @@ narrative_ontology:constraint_claim(union_corruption, snare).
 narrative_ontology:human_readable(union_corruption, "Union Leadership Corruption and Member Entrenchment").
 narrative_ontology:topic_domain(union_corruption, "labor/organizational/political").
 
+domain_priors:requires_active_enforcement(union_corruption).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(union_corruption, corrupt_leadership).
 narrative_ontology:constraint_victim(union_corruption, rank_and_file_members).

@@ -112,6 +112,7 @@ narrative_ontology:constraint_claim(genetic_predisposition, snare).
 narrative_ontology:human_readable(genetic_predisposition, "Socio-Economic Response to Genetic Predisposition").
 narrative_ontology:topic_domain(genetic_predisposition, "technological/social/economic").
 
+domain_priors:requires_active_enforcement(genetic_predisposition).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(genetic_predisposition, genetic_testing_industry).
 narrative_ontology:constraint_beneficiary(genetic_predisposition, insurance_gatekeepers).

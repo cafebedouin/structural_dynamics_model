@@ -113,6 +113,7 @@ narrative_ontology:constraint_claim(climate_lag_amplification, snare).
 narrative_ontology:human_readable(climate_lag_amplification, "Climate Lag Amplification: The Structural Trap Between Emissions and Atmospheric Response").
 narrative_ontology:topic_domain(climate_lag_amplification, "climate_systems/planetary_physics/policy").
 
+domain_priors:requires_active_enforcement(climate_lag_amplification).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(climate_lag_amplification, future_generations).
 narrative_ontology:constraint_victim(climate_lag_amplification, global_south_populations).

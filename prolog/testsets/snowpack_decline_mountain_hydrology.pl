@@ -107,6 +107,7 @@ narrative_ontology:constraint_claim(snowpack_decline_mountain_hydrology, snare).
 narrative_ontology:human_readable(snowpack_decline_mountain_hydrology, "Snowpack Decline and Mountain Hydrology Constraint").
 narrative_ontology:topic_domain(snowpack_decline_mountain_hydrology, "environmental/hydrology/climate").
 
+domain_priors:requires_active_enforcement(snowpack_decline_mountain_hydrology).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(snowpack_decline_mountain_hydrology, downstream_agricultural_communities).
 narrative_ontology:constraint_victim(snowpack_decline_mountain_hydrology, urban_water_systems).

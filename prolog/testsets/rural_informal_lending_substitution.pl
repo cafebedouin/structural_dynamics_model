@@ -103,6 +103,7 @@ narrative_ontology:constraint_claim(rural_informal_lending_substitution, snare).
 narrative_ontology:human_readable(rural_informal_lending_substitution, "Rural Informal Lending Substitution Trap").
 narrative_ontology:topic_domain(rural_informal_lending_substitution, "economic/financial/social").
 
+domain_priors:requires_active_enforcement(rural_informal_lending_substitution).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(rural_informal_lending_substitution, moneylender_networks).
 narrative_ontology:constraint_victim(rural_informal_lending_substitution, small_farmers).

@@ -108,6 +108,7 @@ narrative_ontology:constraint_claim(routine_as_substitute_master, snare).
 narrative_ontology:human_readable(routine_as_substitute_master, "Routine as Substitute Master: Habit-Based Servitude Without External Authority").
 narrative_ontology:topic_domain(routine_as_substitute_master, "philosophy_of_work/political_economy/ethics").
 
+domain_priors:requires_active_enforcement(routine_as_substitute_master).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(routine_as_substitute_master, organizational_efficiency_systems).
 narrative_ontology:constraint_beneficiary(routine_as_substitute_master, productivity_optimization_frameworks).

@@ -114,6 +114,7 @@ narrative_ontology:constraint_claim(deforestation_commons, snare).
 narrative_ontology:human_readable(deforestation_commons, "Deforestation Commons Trap").
 narrative_ontology:topic_domain(deforestation_commons, "environmental/economic/social").
 
+domain_priors:requires_active_enforcement(deforestation_commons).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(deforestation_commons, industrial_logging_operators).
 narrative_ontology:constraint_beneficiary(deforestation_commons, agricultural_frontier_investors).

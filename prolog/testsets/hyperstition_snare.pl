@@ -105,6 +105,7 @@ narrative_ontology:constraint_claim(hyperstition_snare, snare).
 narrative_ontology:human_readable(hyperstition_snare, "Hyperstition as Terminal Snare (Propagation Consumes the Verification Mechanism)").
 narrative_ontology:topic_domain(hyperstition_snare, "epistemology/political_economy/media").
 
+domain_priors:requires_active_enforcement(hyperstition_snare).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(hyperstition_snare, propagators_of_successful_ideas).
 narrative_ontology:constraint_beneficiary(hyperstition_snare, political_movements_riding_propagation).

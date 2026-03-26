@@ -105,6 +105,7 @@ narrative_ontology:constraint_claim(guilt_activation_social_control, snare).
 narrative_ontology:human_readable(guilt_activation_social_control, "Guilt Activation Social Control Mechanism").
 narrative_ontology:topic_domain(guilt_activation_social_control, "interpersonal_psychology/social_control").
 
+domain_priors:requires_active_enforcement(guilt_activation_social_control).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(guilt_activation_social_control, guilt_activator).
 narrative_ontology:constraint_victim(guilt_activation_social_control, guilt_target).

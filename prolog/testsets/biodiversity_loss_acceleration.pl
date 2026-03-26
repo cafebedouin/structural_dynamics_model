@@ -109,6 +109,7 @@ narrative_ontology:constraint_claim(biodiversity_loss_acceleration, snare).
 narrative_ontology:human_readable(biodiversity_loss_acceleration, "Biodiversity Loss Acceleration").
 narrative_ontology:topic_domain(biodiversity_loss_acceleration, "ecological/environmental/economic").
 
+domain_priors:requires_active_enforcement(biodiversity_loss_acceleration).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(biodiversity_loss_acceleration, industrial_agriculture_sector).
 narrative_ontology:constraint_beneficiary(biodiversity_loss_acceleration, extractive_resource_industries).

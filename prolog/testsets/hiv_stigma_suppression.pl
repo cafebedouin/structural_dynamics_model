@@ -110,6 +110,7 @@ narrative_ontology:constraint_claim(hiv_stigma_suppression, snare).
 narrative_ontology:human_readable(hiv_stigma_suppression, "HIV Stigma and Suppression of Disclosure").
 narrative_ontology:topic_domain(hiv_stigma_suppression, "public_health/social/identity").
 
+domain_priors:requires_active_enforcement(hiv_stigma_suppression).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(hiv_stigma_suppression, stigma_perpetuators).
 narrative_ontology:constraint_beneficiary(hiv_stigma_suppression, risk_denial_institutions).

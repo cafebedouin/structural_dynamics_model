@@ -105,6 +105,7 @@ narrative_ontology:constraint_claim(venture_capital_ponzi_scaling, snare).
 narrative_ontology:human_readable(venture_capital_ponzi_scaling, "Venture Capital Ponzi Scaling Mechanism").
 narrative_ontology:topic_domain(venture_capital_ponzi_scaling, "finance/technology/institutional_economics").
 
+domain_priors:requires_active_enforcement(venture_capital_ponzi_scaling).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(venture_capital_ponzi_scaling, early_stage_venture_firms).
 narrative_ontology:constraint_beneficiary(venture_capital_ponzi_scaling, founder_insiders).

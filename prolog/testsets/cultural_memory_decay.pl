@@ -102,6 +102,7 @@ narrative_ontology:constraint_claim(cultural_memory_decay, snare).
 narrative_ontology:human_readable(cultural_memory_decay, "The Digital Dark Age Siphon").
 narrative_ontology:topic_domain(cultural_memory_decay, "social/technological").
 
+domain_priors:requires_active_enforcement(cultural_memory_decay).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(cultural_memory_decay, platform_operators).
 narrative_ontology:constraint_beneficiary(cultural_memory_decay, proprietary_format_vendors).

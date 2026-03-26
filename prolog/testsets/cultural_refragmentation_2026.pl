@@ -115,6 +115,7 @@ narrative_ontology:constraint_claim(cultural_refragmentation_2026, snare).
 narrative_ontology:human_readable(cultural_refragmentation_2026, "The Re-Fragmentation Snare (Interesting Times)").
 narrative_ontology:topic_domain(cultural_refragmentation_2026, "social/political").
 
+domain_priors:requires_active_enforcement(cultural_refragmentation_2026).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(cultural_refragmentation_2026, fragmentation_accelerators).
 narrative_ontology:constraint_beneficiary(cultural_refragmentation_2026, platform_operators).

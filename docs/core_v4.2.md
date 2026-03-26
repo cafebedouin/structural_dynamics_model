@@ -1,7 +1,7 @@
 # Deferential Realism: Core Principles
 
-**Version 4.1**  
-**Purpose:** Gateway introduction to the Deferential Realism framework  
+**Version 4.2**
+**Purpose:** Gateway introduction to the Deferential Realism framework
 **Read this first.** If the core framework makes sense, the domain extensions follow naturally.
 
 ---
@@ -23,19 +23,33 @@
 - Lifecycle understanding (genesis, maturation, degradation, terminal states)
 
 **The framework does NOT provide:**
-- Ethical prescriptions (values determine responseâ€”see ethics.md)
-- Paradox resolution (some tensions are structuralâ€”requires containment)
+- Ethical prescriptions (values determine response—see ethics.md)
+- Paradox resolution (some tensions are structural—requires containment)
 - Outcome guarantees (classification informs, doesn't determine)
 - Universal truth claims (this is evidence-informed conjecture)
 - Replacement for existing theory (complements democratic theory, psychology, sociology)
 
-**The core problem:** Asking "Is this constraint real?" is ambiguous until you specify **WHO** is evaluating it, **WHEN**, **WHERE** they're positioned, and **HOW MUCH POWER** they have. The same constraint can be unchangeable from one perspective and reformable from anotherâ€”both classifications objectively true at their respective indices.
+**The core problem:** Asking "Is this constraint real?" is ambiguous until you specify **WHO** is evaluating it, **WHEN**, **WHERE** they're positioned, and **HOW MUCH POWER** they have. The same constraint can be unchangeable from one perspective and reformable from another—both classifications objectively true at their respective indices.
 
 **This is indexed realism:** Truth is position-relative, but each indexed claim is objectively true or false. Not "truth is whatever" (relativism) but "truth depends on structural position" (position-dependent objectivity). Multiple valid answers exist because different positions expose different structural properties of the same constraint.
 
 **Root metaphor:** We use climbing/mountaineering imagery. Constraint-space is terrain you navigate with finite energy. Mountains (immovable), ropes (coordination tools), tangled ropes (coordination with extraction), snares (traps), scaffolds (temporary supports), pitons (failed old anchors). Metaphor provides intuitive handles while maintaining operational precision.
 
 **Metaphysical foundation:** Constraints constitute entities, not vice versa. An institution isn't a substance that happens to have constraints; it's a pattern of constraints that creates the institution. This framework starts from constraints and builds up, not from entities and projects down. See metaphysics.md for full treatment.
+
+---
+
+## What Kind of Claims This Framework Makes
+
+Not all statements in this document have the same epistemic status. Three kinds of claims appear, and mixing them up is a persistent source of confusion.
+
+**Axioms** are design commitments that define the measurement apparatus. The framework uses four observer positions arranged on a power axis. It defines six structural types. It treats power as modulating perceived extraction through a continuous function. These are choices — a different framework could use three observer positions, or eight, or weight time-horizon differently than power. The categories, the indices, and the scaling function are not discovered facts about the world; they are choices that make certain things visible and others invisible. Different choices would produce a different framework.
+
+**Theorems** are structural consequences that follow deductively from the axioms, regardless of any corpus. With four observer positions, H¹ cohomology values of 1 and 2 are structurally forbidden — the gap between 0 and 3 is not an empirical finding but a mathematical consequence of the observer geometry (theorem — holds for any four-observer system). Similarly, "extraction always has a cover story" is not a pessimistic observation about human nature; it follows from the axioms. When institutional power modifiers render effective extraction below the classification threshold, the institutional observer's classification of extraction as coordination is structurally correct from that position. The cover story is what the axioms predict must exist.
+
+**Empirical observations** are corpus-dependent findings. The 36% Tangled Rope prevalence is a property of this corpus, not a universal constant (calibration corpus finding, January 2026). The 44% institutional-dissenter rate describes this dataset. A differently composed corpus — different domains, different cultures, different generation methodology — would likely produce different numbers while showing the same structural invariants. When specific percentages appear in this document, treat them as calibration data, not base rates for all social constraints.
+
+This distinction matters in practice. When the document says "0% collision rate when indices fully specified," that is an engine consistency finding — it holds because the engine is deterministic, not because the field produces zero ambiguity. When it says "extraction always has a cover story," that is a theorem — it holds within the model regardless of corpus size. When it says "36% of social constraints showed Tangled Rope structure," that is an observation about this dataset.
 
 ---
 
@@ -63,11 +77,11 @@ Deferential Realism integrates five philosophical branches with three applied do
 - **Indexical relativity** - Truth relative to position, objective within index
 - **Power-scaling** - Same base structure experienced differently by power position (extraction amplified/reduced)
 - **Reality-alignment** - Deference to what actually constrains
-- **Hybrid recognition** - Most complex systems coordinate AND extract (Tangled Ropes fundamental, 36% of social, 60%+ of democratic institutions)
+- **Hybrid recognition** - Most complex systems coordinate AND extract (Tangled Ropes fundamental; 36% of social, 60%+ of democratic institutions — calibration corpus finding)
 - **Containment capacity** - Some tensions are structurally permanent; skillful navigation holds paradox without forcing resolution
 - **Lifecycle awareness** - Constraints emerge, mature, degrade, and die; temporal dynamics matter
 
-**Empirical validation:** Framework tested against 1,023 constraint stories across 35+ domains, 30+ electoral systems, 150+ relationship scenarios, 100+ institutional structures. Corpus is actively growing via automated generation pipeline. Tangled Rope prevalence: 36% of social constraints, 60%+ of functional democratic institutions. Power-scaling eliminates classification collisions (8.2% without it, 0% with it). See `validation/validation_report.md` for complete findings and `limitations.md` for empirically confirmed failure modes.
+**Empirical validation:** Framework tested against over 3,200 constraint stories across 35+ domains, 30+ electoral systems, 150+ relationship scenarios, 100+ institutional structures. Formal validation corpus: 467 constraints (validation_report.md, January 2026). Corpus actively growing via automated generation pipeline. Tangled Rope prevalence: 36% of social constraints, 60%+ of functional democratic institutions (calibration corpus findings). Power-scaling eliminates classification collisions (8.2% without it, 0% with it). See `validation/validation_report.md` for complete findings and `limitations.md` for empirically confirmed failure modes.
 
 ---
 
@@ -80,9 +94,9 @@ Deferential Realism integrates five philosophical branches with three applied do
 - **Consumer** [powerless/biographical/trapped/national]: "Mountain - prices just exist, we have no influence."
 - **Activist** [analytical/generational/analytical/global]: "Snare - extractive greenwashing delaying real action while enriching financial middlemen."
 
-All four are **objectively true** because they're answering from different power positions. Same base structure, four different typesâ€”not subjective interpretation but structural relativity.
+All four are **objectively true** because they're answering from different power positions. Same base structure, four different types—not subjective interpretation but structural relativity.
 
-**Power-scaling mechanism:**
+**Pedagogical approximation (for intuition):**
 ```
 Base extraction ε = 0.40
 
@@ -90,6 +104,7 @@ Consumer: χ = 0.40 × 1.5 = 0.60 (Snare threshold - extraction amplified)
 Small business: χ = 0.40 × 1.0 = 0.40 (Tangled Rope - baseline)
 Corporation: χ = 0.40 × 0.6 = 0.24 (Rope - extraction reduced)
 ```
+*(These examples use the simplified multiplier form — the actual engine uses a continuous sigmoid described in §Power-Scaling below.)*
 
 This **proves** indexical relativity: same structure genuinely IS different types from different positions, based on observable power (control over exit, enforcement, resources).
 
@@ -107,7 +122,7 @@ Every constraint falls into one of six fundamental types, distinguished by how t
 
 **Test:** If you ignore it, does the system collapse due to reality (not punishment)? Can any plausible coalition change it within existing legal framework?
 
-**Examples:** 
+**Examples:**
 - **Physical:** Thermodynamics, speed of light, computational complexity
 - **Biological:** Oxygen requirement, sleep need, death
 - **Logical:** Non-contradiction, mathematical impossibility
@@ -116,7 +131,7 @@ Every constraint falls into one of six fundamental types, distinguished by how t
 
 **Response:** Accept and navigate. Route strategy around what cannot be changed.
 
-**Common misclassification:** **False Summit** - claimed as unchangeable but actually constructed. 
+**Common misclassification:** **False Summit** - claimed as unchangeable but actually constructed.
 
 **Detection tests:**
 - Who benefits from claiming unchangeable?
@@ -124,7 +139,7 @@ Every constraint falls into one of six fundamental types, distinguished by how t
 - Has it been surpassed elsewhere?
 - **Discomfort vs. Damage**: Does violation produce subjective fear or objective harm?
 
-**Note:** Mountains can be unjust (constitutional locks protecting power asymmetries were Mountains until overthrown). Unchangeable â‰  legitimate. Even zero-freedom constraints allow navigation choices (which pass, when to attempt, route selection). See metaphysics.md for complete treatment.
+**Note:** Mountains can be unjust (constitutional locks protecting power asymmetries were Mountains until overthrown). Unchangeable ≠ legitimate. Even zero-freedom constraints allow navigation choices (which pass, when to attempt, route selection). See metaphysics.md for complete treatment.
 
 ---
 
@@ -138,7 +153,7 @@ Every constraint falls into one of six fundamental types, distinguished by how t
 
 **Response:** Maintain, refine as needed, replace if demonstrably better alternative exists. Monitor for degradation.
 
-**Degradation path:** Rope â†’ Tangled Rope (extraction accumulates) â†’ Piton (function lost, inertia remains).
+**Degradation path:** Rope → Tangled Rope (extraction accumulates) → Piton (function lost, inertia remains).
 
 **Quality markers:**
 - Voluntary participation (in principle)
@@ -150,11 +165,11 @@ Every constraint falls into one of six fundamental types, distinguished by how t
 
 ### 3. Tangled Ropes (Coordination + Extraction Hybrids)
 
-**Definition:** Structures with genuine coordination function (Rope core) AND extractive implementation (Snare layer). **Fundamental category, not transition state** - 36% of social constraints, 60%+ of functional democratic institutions show this irreducible hybrid structure.
+**Definition:** Structures with genuine coordination function (Rope core) AND extractive implementation (Snare layer). **Fundamental category, not transition state** — 36% of social constraints, 60%+ of functional democratic institutions show this irreducible hybrid structure (calibration corpus finding).
 
 **Test:** Does this serve coordination AND extract asymmetrically? Can functions be separated or are they structurally entangled?
 
-**Examples across domains:** 
+**Examples across domains:**
 - **Economic**: Carbon credits (climate coordination + financial rent), health insurance (risk pooling + admin extraction)
 - **Social**: Monogamy norms (expectation coordination + alternative suppression), professional networking (opportunity discovery + insider advantage), family caregiving (elder support + gendered extraction)
 - **Institutional**: Two-round elections (majority legitimacy + centrist compression), Centrão budget amendments (coalition governance + pork extraction), party-list PR with threshold (prevents fragmentation + suppresses near-threshold parties)
@@ -175,8 +190,8 @@ Every constraint falls into one of six fundamental types, distinguished by how t
 - Resolves false dichotomy in theory (functional vs. exploitative)
 
 **Misclassification errors:**
-- Treat as pure Rope â†’ defend extraction, block reform
-- Treat as pure Snare â†’ destroy coordination, lose collective benefit
+- Treat as pure Rope → defend extraction, block reform
+- Treat as pure Snare → destroy coordination, lose collective benefit
 
 ---
 
@@ -221,9 +236,9 @@ Every constraint falls into one of six fundamental types, distinguished by how t
 **Response:** **Use deliberately**, **monitor sunset compliance**, **dismantle when complete**, **celebrate** dissolution (not mourn).
 
 **Degradation paths:**
-- **Scaffold â†’ Piton**: Purpose served but not removed (Thailand Senate veto retention after PM selection power expired)
-- **Scaffold â†’ Snare**: "Temporary" extends indefinitely (authoritarian emergency powers)
-- **Scaffold â†’ Tangled Rope**: Extraction added during transition (provisional government enriching itself)
+- **Scaffold → Piton**: Purpose served but not removed (Thailand Senate veto retention after PM selection power expired)
+- **Scaffold → Snare**: "Temporary" extends indefinitely (authoritarian emergency powers)
+- **Scaffold → Tangled Rope**: Extraction added during transition (provisional government enriching itself)
 
 **Hidden risk:** Some "scaffolds" claim temporality but extract permanently (therapy creating dependency, mentorship exploitation, MFA programs creating institutional dependence).
 
@@ -254,9 +269,31 @@ Every constraint falls into one of six fundamental types, distinguished by how t
 
 ### 7. Naturalized (Power-Scaling Ambiguity)
 
-**Definition:** Constraints with high base extraction (ε > 0.45) compressed below detection threshold (χ < 0.40) by power scaling. The extraction is real but appears natural — the primary substrate for false summit rhetoric.
+**Definition:** Constraints with high base extraction (ε > 0.45) compressed below detection threshold (χ < 0.40) by power-scaling. The extraction is real but structurally invisible from high-power positions — the primary substrate for false summit rhetoric. Not a terminal state but a diagnostic category: the constraint is a Snare or Tangled Rope that has successfully hidden its extraction structure.
 
-**Action:** **investigate_naturalization** — probe the gap between base and effective extraction to determine whether apparent immutability is structural or power-mediated.
+**Test:** Does high base extraction (ε) coexist with apparently low effective extraction (χ) from institutional positions? Does the constraint claim natural status while failing structural independence tests?
+
+**Detection** (via False Natural Law signature): The engine flags Naturalized constraints by checking whether a Mountain-classified constraint fails Boltzmann compliance — whether its classification varies across power × scope dimensions in ways natural laws cannot. Detection markers that work without the engine:
+- Language: "just how things are," "human nature," "inevitable," "always been this way"
+- Specific identifiable beneficiaries (genuine natural laws have none)
+- Historical origin dates (genuine natural laws are discovered, not created)
+- Existence of alternatives in other jurisdictions or historical periods
+- Active enforcement mechanisms (genuine natural laws require none)
+- High suppression (>0.60) — nature doesn't need enforcers
+
+**Examples across domains:**
+- **Economic**: Professional displacement framing ("structural market law") — confirmed corpus case with ε=0.71, theater_ratio=0.55, requires_active_enforcement; market competition rhetoric ("humans are naturally competitive") when competition structure is institutionally maintained
+- **Social**: Academic hierarchy ("merit naturally selects") when selection mechanisms are constructed and enforced; scarcity framing ("resources are fundamentally scarce") when scarcity is maintained through distribution systems rather than physical limits
+- **Institutional**: Constitutional arrangements framed as "how democracy works" when they serve specific power concentrations; professional licensing requirements framed as quality standards when they function primarily as entry barriers
+
+**Response:** `investigate_naturalization` — probe the gap between base ε and effective χ. Map the enforcement mechanisms (who maintains this, at what cost). Find the historical origin (when was this created, by whom, in whose interest). Check whether alternatives exist elsewhere. Test whether removal produces subjective discomfort (social pressure) or objective harm (physical consequence). If discomfort: likely Naturalized. If harm: may be genuine Mountain.
+
+**Degradation paths:**
+- Naturalized → Snare (when enforcement becomes explicit and visible)
+- Naturalized → Tangled Rope (when coordination function is acknowledged alongside extraction)
+- Apparent terminal state: if all observers accept a Naturalized constraint as unchangeable, the result is a **False Mountain** — the extraction persists, the cover story wins. This is not a valid degradation endpoint; it is the failure mode the framework is designed to detect and resist.
+
+**Common misclassification:** Confused with genuine Mountains. Diagnostic: Mountain classification holds across ALL observer positions with low variance. Naturalized constraints show high position-variance in base metrics even when χ appears low from institutional positions — the powerless observer experiences the extraction directly, which genuine natural laws do not produce.
 
 ---
 
@@ -265,6 +302,20 @@ Every constraint falls into one of six fundamental types, distinguished by how t
 - Algorithm/enforcer removed but behavior persists
 - Example: Social media algorithm disabled, doom-scrolling continues; authoritarian regime falls, self-censorship persists
 - Clearing requires awareness intervention ("You know the enforcer is gone, right?")
+
+---
+
+### Structural Signatures: When the Engine Overrides Metrics
+
+The engine doesn't just compute χ and apply thresholds. After metric-based classification, it runs structural pattern detection that can override the result. Two detection predicates are active:
+
+**False Natural Law (FNL)** targets constraints metric-classified as Mountain but failing Boltzmann compliance — the structural independence test that distinguishes genuine natural laws from constructed constraints claiming natural status. Detection requires: (1) `claimed_natural` — the constraint appears as Mountain from at least one observer position, and (2) `boltzmann_non_compliant` — the constraint's classification varies across power × scope dimensions in ways genuine natural laws cannot (coupling detected). When both conditions hold, the engine reclassifies from Mountain to Naturalized. This catches "physics-washed" extraction: "humans are naturally hierarchical," "scarcity is fundamental," "markets naturally self-regulate." Genuine natural laws factorize cleanly across power and scope dimensions — gravity doesn't care whether you're powerless or institutional. Constructed constraints that claim natural status fail this test.
+
+**False CI Rope (FCR)** targets constraints metric-classified as Rope but failing structural independence — coordination-washing. Detection requires: (1) `appears_as_rope` — the constraint shows low extraction from at least one position, and (2) at least one structural failure from: Boltzmann non-compliance (dimension coupling), scope variance (classification differs suspiciously across scope levels), excess extraction above 0.05, or nonsensical coupling patterns. A zero-excess exemption applies: if extractive overhead is genuinely absent, coupling alone is insufficient evidence. FCR catches nudges, soft paternalism, and behavioral defaults that keep χ and ε superficially low while cross-index coupling reveals extraction — the constraint steers choice while claiming it only coordinates.
+
+**The institutional dissenter** is not a detection predicate but a structural finding worth naming: in approximately 44% of the corpus, the institutional observer (π = −0.2) is the sole voice classifying an extractive constraint as coordination (corpus observation). This is what FNL and FCR are designed to catch — the institutional framing that makes extraction look like legitimate coordination, arising not from bad faith but from structural position. At π = −0.2, effective extraction drops below the threshold where it registers as extraction at all.
+
+Priority: FNL is checked before FCR; both run before metric fallback. A constraint that passes both signature checks retains its metric-based classification.
 
 ---
 
@@ -280,9 +331,11 @@ Observable power position (not subjective feeling):
 - **Powerful**: High agency, strong position, low exit costs (π = 0.6)
 - **Collective**: Organized group, shared resources (π = 0.4)
 - **Institutional**: Organization-level, sets rules (π = -0.2)
-- **Analytical**: Outside observer (π = 1.0)
+- **Analytical**: Outside observer (π = 1.15)
 
 **Why power matters:** Determines extraction experience. Same base ε becomes different effective χ.
+
+**Note on π(analytical):** The analytical modifier was calibrated at 1.15 — above moderate — to break degeneracy with the moderate observer. At 1.0, analytical and moderate observers produced identical χ values for 93 constraints that genuine structural analysis should distinguish. The 1.15 calibration produces the "only the analyst catches the snare" pattern: these are constraints where powerless and analytical observers both see extraction, moderate observers see mixed structure, and institutional observers see coordination.
 
 ### WHEN - Time Horizon
 
@@ -314,15 +367,15 @@ Observable power position (not subjective feeling):
 - **Regional/National**: Millions to billions
 - **Global**: International systems
 
-**Why scope matters:** Coordination that works locally may become extractive at scale. Verification difficulty increases with scope.
+**Why scope matters:** Coordination that works locally may become extractive at scale. Verification difficulty increases with scope (scope modifier σ ranges from 0.8 local to 1.2 global).
 
 ---
 
 ## Power-Scaling: Why Same Constraint = Different Types
 
-**The mechanism:**
+**Pedagogical approximation (for intuition):**
 ```
-Effective extraction χ(C, P) = Base extraction ε(C) × Power modifier π(P)
+Effective extraction χ(C, P) ≈ Base extraction ε(C) × Power modifier π(P)
 
 Where:
 - ε(C) = structural property of constraint (observable)
@@ -345,6 +398,17 @@ Without network (powerless): 0.40 × 1.5 = 0.60 (Snare - locked out)
 Moderate network: 0.40 × 1.0 = 0.40 (Tangled Rope - sees both)
 Strong network (powerful): 0.40 × 0.6 = 0.24 (Rope - opportunities flow)
 ```
+*(This example uses the simplified multiplier form.)*
+
+**How the actual engine works:** The engine implements a continuous sigmoid function rather than fixed position multipliers. Per-constraint directionality d(P) — derived from structural signals about power relationships within the specific constraint — feeds through:
+
+```
+f(d) = L + (U - L) / (1 + e^(-k * (d - d₀)))
+
+Parameters: L = -0.20, U = 1.50, d₀ = 0.50, k = 6.0
+```
+
+A scope modifier σ(S) further adjusts for verification difficulty (0.8 local → 1.0 national → 1.2 global). The full formula is χ = ε × f(d(P)) × σ(S). Directionality accounts for 98.6% of inter-observer χ variance — the continuous sigmoid, not the fixed multiplier steps, drives most of the classification variation across observer positions. See logic.md for the complete specification.
 
 **This explains:**
 - Why relational conflicts are so intractable (both partners right from their positions)
@@ -352,7 +416,7 @@ Strong network (powerful): 0.40 × 0.6 = 0.24 (Rope - opportunities flow)
 - Why therapy often fails (therapist doesn't experience client's constraint structure)
 - Why institutional reform is difficult (beneficiaries experience Rope, victims experience Snare)
 
-**Empirical validation:** 8.2% collision rate without power-scaling, 0% with it. Power-scaling is epistemologically necessary, not optional add-on.
+**Empirical validation:** 8.2% collision rate without power-scaling, 0% with it (engine consistency — not field measurement). Power-scaling is epistemologically necessary, not optional add-on.
 
 ---
 
@@ -362,19 +426,19 @@ Strong network (powerful): 0.40 × 0.6 = 0.24 (Rope - opportunities flow)
 
 ### Universal Paradoxes (Across Domains):
 
-**Autonomy â‡„ Connection**
+**Autonomy ⇄ Connection**
 - Need both independence AND intimacy
 - Cannot maximize both simultaneously
 - Containment: Sequential alternation (autonomy this week, connection next)
 - Forcing resolution: Isolation (pure autonomy) or fusion (pure connection)
 
-**Security â‡„ Growth**
+**Security ⇄ Growth**
 - Need both stability AND challenge
 - Cannot have both fully at once
 - Containment: Rhythmic oscillation (periods of security, periods of growth)
 - Forcing resolution: Stagnation (pure security) or chaos (pure growth)
 
-**Present â‡„ Future**
+**Present ⇄ Future**
 - Need both current satisfaction AND future preparation
 - Cannot optimize both
 - Containment: Context-dependent priority (enjoy now, save later)
@@ -383,23 +447,23 @@ Strong network (powerful): 0.40 × 0.6 = 0.24 (Rope - opportunities flow)
 ### Domain-Specific Paradoxes:
 
 **Political:**
-- Majority Rule â‡„ Minority Rights
-- Representation â‡„ Expertise
-- Stability â‡„ Accountability
-- Federalism â‡„ Efficiency
+- Majority Rule ⇄ Minority Rights
+- Representation ⇄ Expertise
+- Stability ⇄ Accountability
+- Federalism ⇄ Efficiency
 
 **Psychological:**
-- Acceptance â‡„ Change
-- Material frame â‡„ Functional frame
+- Acceptance ⇄ Change
+- Material frame ⇄ Functional frame
 
 **Aesthetic:**
-- Innovation â‡„ Communication
-- Autonomy â‡„ Audience
-- Material â‡„ Concept
+- Innovation ⇄ Communication
+- Autonomy ⇄ Audience
+- Material ⇄ Concept
 
 **Relational:**
-- Individual Needs â‡„ Collective Needs
-- Honesty â‡„ Kindness
+- Individual Needs ⇄ Collective Needs
+- Honesty ⇄ Kindness
 
 **Containment Protocol (6 steps):**
 1. **Name** the paradox (what two goods are in tension?)
@@ -429,7 +493,7 @@ Strong network (powerful): 0.40 × 0.6 = 0.24 (Rope - opportunities flow)
 
 **Constraints aren't static.** They emerge, mature, degrade, and sometimes die.
 
-**Four phases:** Genesis â†’ Maturation â†’ Degradation â†’ Terminal States
+**Four phases:** Genesis → Maturation → Degradation → Terminal States
 
 ### Genesis (How Constraints Form)
 
@@ -455,13 +519,13 @@ Strong network (powerful): 0.40 × 0.6 = 0.24 (Rope - opportunities flow)
 
 **Seven drift event types:**
 
-1. **Metric Substitution**: Proxy becomes goal (social media: connection â†’ engagement)
+1. **Metric Substitution**: Proxy becomes goal (social media: connection → engagement)
 2. **Extraction Accumulation**: Rent-seeking added (academic publishing capture)
 3. **Coordination Loss**: Function withers, extraction persists (cable TV obsolescence)
 4. **Function Obsolescence**: Environment shifts (fax requirements in email era)
 5. **Sunset Violation**: Temporary becomes permanent (Thailand Senate)
 6. **Extraction Dried Up**: Mechanism fails but structure persists (Soviet committees post-1991)
-7. **Algorithm Shutdown â†’ I-Piton**: Extraction mechanism removed but habits remain (creepiest path)
+7. **Algorithm Shutdown → I-Piton**: Extraction mechanism removed but habits remain (creepiest path)
 
 ### Terminal States
 
@@ -469,19 +533,19 @@ Strong network (powerful): 0.40 × 0.6 = 0.24 (Rope - opportunities flow)
 
 **Ropes:** Maintained indefinitely (rare) OR degrade to Tangled Rope/Piton
 
-**Tangled Ropes:** 
-- Reform â†’ Rope (extraction excised)
-- Degradation â†’ Snare (coordination lost) or Piton (both fail)
+**Tangled Ropes:**
+- Reform → Rope (extraction excised)
+- Degradation → Snare (coordination lost) or Piton (both fail)
 - Revolutionary replacement (destroyed entirely)
 
 **Snares:**
-- Resistance â†’ Dismantled
-- Naturalization â†’ False Mountain (accepted as unchangeable)
-- Degradation â†’ I-Piton (enforcement stops, habits remain)
+- Resistance → Dismantled
+- Naturalization → False Mountain (accepted as unchangeable)
+- Degradation → I-Piton (enforcement stops, habits remain)
 
 **Scaffolds:**
-- Success â†’ Dissolution (designed outcome)
-- Failure â†’ Piton (sunset ignored)
+- Success → Dissolution (designed outcome)
+- Failure → Piton (sunset ignored)
 
 **Pitons:**
 - Elimination (administrative cleanup)
@@ -515,7 +579,7 @@ Use Six-Test Battery (from epistemology.md):
 
 **Test 2: Coordination Function**
 - Does this solve genuine scarcity/collision problem?
-- If no coordination â†’ skip to power test (likely Snare or Piton)
+- If no coordination → skip to power test (likely Snare or Piton)
 
 **Test 3: Extraction Present**
 - Low extraction → Rope
@@ -527,10 +591,10 @@ Use Six-Test Battery (from epistemology.md):
 - Effective extraction χ determines type from your position
 
 **Test 5: Temporal Limitation**
-- Designed to sunset? â†’ Scaffold (orthogonal property)
+- Designed to sunset? → Scaffold (orthogonal property)
 
 **Test 6: Obsolescence Check**
-- Cost > benefit? No function remains? â†’ Piton
+- Cost > benefit? No function remains? → Piton
 
 ### 3. Choose Response Based on Classification + Values
 
@@ -543,19 +607,16 @@ Use Six-Test Battery (from epistemology.md):
 - **Scaffolds**: Use temporarily, dismantle when complete
 - **Pitons**: Eliminate, bypass, redirect energy
 
-**But response also depends on:**
-- Your values (see ethics.md for six conditional virtues)
-- Your power position (indexed obligation - what you can actually do)
-- Your energy budget (finite capacity, strategic allocation)
+These responses are the framework's recommendations, not purely descriptive outputs. The directives follow from classification plus the framework's underlying ethics — see ethics.md for the full conditional virtue framework and why structural classification generates ethical obligation. Response also depends on your values and power position, which ethics.md treats in detail.
 
 ### 4. Avoid Common Misclassification Errors
 
-**Type I (False Summit):** Calling Snare a Mountain â†’ surrender to changeable injustice
-**Type II (False Snare/Rope):** Calling Mountain a Snare â†’ waste energy fighting reality
-**Type III (Snare as Rope):** Defending extraction as coordination â†’ maintain harm
-**Type IV (Rope as Snare):** Destroying coordination as extraction â†’ lose benefit
-**Type V (Piton as active):** Fighting dead constraint â†’ waste political capital
-**Type VI (Tangled Rope mishandled):** Treating hybrid as pure â†’ either maintain extraction OR destroy coordination
+**Type I (False Summit):** Calling Snare a Mountain → surrender to changeable injustice
+**Type II (False Snare/Rope):** Calling Mountain a Snare → waste energy fighting reality
+**Type III (Snare as Rope):** Defending extraction as coordination → maintain harm
+**Type IV (Rope as Snare):** Destroying coordination as extraction → lose benefit
+**Type V (Piton as active):** Fighting dead constraint → waste political capital
+**Type VI (Tangled Rope mishandled):** Treating hybrid as pure → either maintain extraction OR destroy coordination
 
 **Error asymmetry:** Type I and Type III are most costly (surrender and complicity). When uncertain, err toward testing claimed Mountains and investigating claimed Ropes for extraction.
 
@@ -568,6 +629,10 @@ Use Six-Test Battery (from epistemology.md):
 - Environment shifts (makes Mountains into navigable terrain, Ropes into Pitons)
 
 Classification is ongoing practice, not one-time assessment.
+
+### 6. The Automated Pipeline
+
+The framework also operates as an end-to-end analytical system. A topic passes through six stages: web research (factual grounding) → UKE_SCOPE decomposition (structural axes identification) → constraint story generation (validated against JSON schema) → Prolog classification (structural analysis stack) → constraint reports (per-constraint diagnostic output) → essay synthesis (analytical narrative). The constraint reports — produced by the structural analysis stack — are the engine's primary analytical product. Essays synthesize across the report set. Both are LLM-generated and constrained by Prolog classification; they are not independent assessments. The manual classification workflow described above and the automated pipeline apply the same underlying logic.
 
 ---
 
@@ -608,9 +673,9 @@ Classification is ongoing practice, not one-time assessment.
 
 ### What Accurate Classification Does NOT Enable:
 
-- Outcome guarantees (knowing â‰  changing)
+- Outcome guarantees (knowing ≠ changing)
 - Paradox resolution (some tensions permanent)
-- Moral certainty (classification â‰  obligation)
+- Moral certainty (classification ≠ obligation)
 - Power acquisition (knowledge doesn't grant control)
 - Effortless navigation (clarity reveals difficulty, doesn't eliminate it)
 
@@ -618,16 +683,16 @@ Classification is ongoing practice, not one-time assessment.
 
 ## Empirical Development & Epistemic Status
 
-**What we've done:** Systematic analysis of 1,023 constraint stories across 35+ domains, 30+ electoral systems, 150+ relationship scenarios, 100+ institutional structures over several months. Corpus actively growing via automated generation pipeline (RSS ingestion + Gemini API). Corpus-wide audit conducted February 2026 including 13-file deep review testing predicted parser failure modes.
+**What we've done:** Systematic analysis of over 3,200 constraint stories across 35+ domains, 30+ electoral systems, 150+ relationship scenarios, 100+ institutional structures over several months. Corpus actively growing via automated generation pipeline. Formal validation corpus: 467 constraints (validation_report.md, January 2026) — this is the calibration corpus for the quantitative findings below. Corpus-wide audit conducted February 2026 including 13-file deep review testing predicted parser failure modes.
 
-**Within tested corpus:**
-- 0% collision rate when indices fully specified
+**Within the calibration corpus (467 constraints, January 2026):**
+- 0% collision rate when indices fully specified (engine consistency — not field measurement)
 - 8.2% collision rate without power-scaling, 0% with it
 - 36% of social constraints showed Tangled Rope structure
 - 60%+ of functional democratic institutions showed irreducible hybrid structure
 - 99.1% variance across perspectives (same constraint, different types from different positions)
 
-**What we claim:** 
+**What we claim:**
 - Internal consistency within tested corpus
 - Indexed objectivity (classifications true/false at specified positions)
 - Practical utility (aids strategic allocation)
@@ -635,12 +700,7 @@ Classification is ongoing practice, not one-time assessment.
 - Cross-domain applicability (same logic works across internal/social/institutional constraints)
 - Lifecycle dynamics (constraints emerge, mature, degrade, die)
 
-**What we do NOT claim:** 
-- Universal empirical truth (may not hold everywhere/everywhen)
-- Perfect measurement (power limits information access)
-- Completed validation (requires independent replication)
-- Ethical prescription (values determine response)
-- Totalization (diagnostic tool, not theory of everything)
+**What we do NOT claim** — see §What This Framework Does for the authoritative list. In brief: no universal empirical truth, no perfect measurement, no completed validation, no ethical prescription, no totalization.
 
 **Epistemic stance:** This is evidence-informed conjecture, not validated universal theory. Everything could be wrong. We work with this model because it appears useful while remaining open to revision, refinement, or replacement.
 
@@ -650,7 +710,7 @@ Classification is ongoing practice, not one-time assessment.
 - Brazil 2026: Centrão dynamics will persist
 - U.S. 2026: Safe seat dominance continues (>88%)
 
-**Falsification criteria:** If power-scaling doesn't reduce collisions, if Tangled Ropes are always separable, if containment protocol consistently fails, if index specification doesn't resolve apparent contradictions â†’ framework needs revision.
+**Falsification criteria:** If power-scaling doesn't reduce collisions, if Tangled Ropes are always separable, if containment protocol consistently fails, if index specification doesn't resolve apparent contradictions → framework needs revision.
 
 **Details:** Complete methodology, corpus specifics, confidence levels, known limitations, and failure modes in `validation/validation_report.md`.
 
@@ -683,24 +743,17 @@ Classification is ongoing practice, not one-time assessment.
 
 **Philosophical stance:** This framework operates from **methodological skepticism**. Everything here could be wrong. We're choosing to work with this model because it appears coherent and useful based on available evidence, while remaining open to revision or replacement.
 
-**What this framework does NOT claim:**
-- Universal empirical truth (patterns may not hold everywhere/everywhen)
-- Perfect measurement (power dynamics limit information access)  
-- Ethical prescription (classification â‰  obligationâ€”values determine response)
-- Paradox resolution (some tensions structural, require containment)
-- Predictive certainty (classification aids choice, doesn't guarantee outcomes)
-- Totalization (diagnostic tool, not theory of everything)
-- Replacement of existing theory (complements democratic theory, psychology, etc.)
+**What this framework does NOT claim** — see §What This Framework Does for the full list.
 
 **What this framework DOES claim:**
-- Internal consistency within tested corpus (0% collision with full indices)
+- Internal consistency within tested corpus (0% collision with full indices — engine consistency)
 - Indexed objectivity (classifications true/false within specified position)
 - Practical utility (distinguishing changeable from unchangeable aids allocation)
 - Cross-domain applicability (same logic for internal/social/institutional constraints)
-- Empirical grounding (1,023-constraint corpus with formal invariants, open to falsification)
+- Empirical grounding (over 3,200-constraint corpus with formal invariants, open to falsification; calibration corpus of 467 constraints)
 - Power-scaling necessity (8.2% collisions without it, 0% with it)
-- Observer-dependence as default (80% of corpus constraints classify differently by position)
-- Tangled Rope prevalence (36% of social, 60%+ of democratic institutions)
+- Observer-dependence as default (99.1% of calibration corpus constraints classify differently by position)
+- Tangled Rope prevalence and institutional hybrid structure (calibration corpus findings)
 - Lifecycle dynamics (constraints have temporal trajectories)
 
 **The framework's boundaries:**
@@ -708,15 +761,7 @@ Classification is ongoing practice, not one-time assessment.
 - Does NOT resolve values conflicts (enables clarity about disagreement structure)
 - Does NOT eliminate complexity (maps terrain, doesn't flatten it)
 - Does NOT absorb objections (can be wrong about classifications)
-- Does NOT grant power (knowledge â‰  capability)
-
-**What accurate classification enables:**
-- Strategic energy allocation (don't fight gravity, don't maintain pitons)
-- Honest disagreement (identify indexical differences, not factual disputes)
-- Targeted reform (preserve coordination, excise extraction in Tangled Ropes)
-- Paradox navigation (contain tension without forcing collapse)
-- Relational integrity (honest about what you're doing in relationships)
-- Lifecycle awareness (anticipate degradation, honor sunsets, eliminate pitons)
+- Does NOT grant power (knowledge ≠ capability)
 
 **The goal:** Use finite energy effectively. Don't waste it fighting unchangeable terrain (Mountains). Don't surrender it to changeable extraction (Snares). Don't destroy coordination while fighting extraction (Tangled Rope reform). Don't demand resolution of structural tensions (Containment). Don't maintain pitons (Pitons). Navigate honestly within what actually constrains you.
 
@@ -724,23 +769,25 @@ Classification is ongoing practice, not one-time assessment.
 
 ## What We Found When We Tested It
 
-The framework's core thesis — same constraint, different types from different positions — was developed from worked examples and structural reasoning. A 1,023-constraint corpus with formal invariants now provides empirical grounding. Four findings stand out.
+The framework's core thesis — same constraint, different types from different positions — was developed from worked examples and structural reasoning. The calibration corpus (467 constraints, validation_report.md, January 2026) provides empirical grounding. Four findings stand out.
 
-**Observer-dependence is the default, not the exception.** Of 1,023 social constraints in the corpus, only 212 — roughly one in five — classify identically from every observer position. The remaining 811 produce different types depending on where the observer stands. Observer-independent classification is the minority case. This means indexical specification isn't a refinement of constraint analysis; it's the baseline requirement. Without it, four out of five classifications are incomplete.
+**Observer-dependence is the default, not the exception.** Of 467 calibration corpus constraints, 463 — 99.1% — classify differently across observer positions. Observer-independent classification (the same type from every position) applies to fewer than 1 in 100 constraints in this corpus. This means indexical specification isn't a refinement of constraint analysis; it's the baseline requirement. Without it, nearly every classification is incomplete.
 
 **Extraction always has a cover story.** No extractive constraint in the corpus looks extractive from every position. There is always at least one powerful position — usually the institutional one — from which extraction is invisible, reclassified as legitimate coordination. This is not a flaw in the observer's reasoning; from a position with genuine power to reform or exit a constraint, the extractive features are structurally less relevant. The classification is correct from that position. But the consequence is that extraction persists partly because there is always a vantage point from which it cannot be seen. If every observer saw the snare from every position, reform pressure would be overwhelming.
 
 The cover story is not purely perceptual or purely strategic — it is itself a tangled rope. At moderate benefit levels, the institutional observer genuinely doesn't see the extraction; the structural irrelevance of extractive features from a high-power position produces honest blindness. As benefits increase, the reclassification acquires a strategic dimension — the observer may recognize the extraction but has incentive to maintain the coordination framing. The sincerity of the cover story tracks the benefit level, the same way experienced extraction tracks power. This means the cover story is hardest to dislodge precisely where it matters most: at the highest benefit positions, where genuine belief and strategic interest are structurally entangled.
 
+This is not merely an observation about human nature. It follows from the axioms (theorem — holds for any four-observer system). The power modifier at institutional position renders effective extraction below the classification threshold. A complete account must therefore contain claims that are simultaneously objective from different positions and mutually exclusive in narrative form.
+
 **Disagreement comes in blocks, not drips.** When observers disagree about a constraint's type, the disagreement is never isolated to a single pair of observers. It always affects at least three observer-pairs simultaneously. This is a structural consequence of power being organized hierarchically: when you cross a power threshold, everyone on one side sees one thing and everyone on the other side sees another. The practical implication is that political and relational disagreements feel like factional blocks — "us vs. them" — not because of tribalism, but because power thresholds create categorical boundaries in what different positions can see.
 
-**The institutional dissenter.** In roughly 44% of the corpus, the institutional observer — the one with generational time horizon and the ability to move between contexts — is the lone voice classifying an extractive constraint as coordination. Everyone else sees a trap; the institution sees a tool. This is the most specific finding: institutional power systematically reclassifies extraction as coordination, not out of malice but out of structural position. The mechanism is the power modifier itself — at π = −0.2, effective extraction can drop below the threshold where it registers as a different type.
+**The institutional dissenter.** In roughly 44% of the calibration corpus, the institutional observer — with generational time horizon and the ability to move between contexts — is the lone voice classifying an extractive constraint as coordination. Everyone else sees a trap; the institution sees a tool (corpus observation — calibration corpus finding). This is the most specific finding: institutional power systematically reclassifies extraction as coordination, not out of malice but out of structural position. The mechanism is the power modifier itself — at π = −0.2, effective extraction can drop below the threshold where it registers as a different type.
 
 **Formal tools used:** These findings were derived using tools from algebraic topology and category theory (presheaf cohomology, Galois connections) to measure the structure of observer disagreement. The mathematics is in the accompanying paper; the findings above are what the mathematics shows.
 
 **Honest limits of these findings:**
 
-These are properties of a specific corpus, not universal constants. The corpus is hand-constructed (with automated generation assistance), not sampled from naturally occurring constraints. A different domain would likely produce different numbers — different ratios, different prevalence rates — but the same kind of structural invariants. The 20/80 split and the 44% institutional-dissenter rate describe this corpus; they should not be cited as base rates for all social constraints.
+These are properties of a specific corpus, not universal constants. The corpus is hand-constructed (with automated generation assistance), not sampled from naturally occurring constraints. A different domain would likely produce different numbers — different ratios, different prevalence rates — but the same kind of structural invariants. The calibration corpus statistics should not be cited as base rates for all social constraints.
 
 The sensitivity sweep confirmed the system is stable: 87% of parameters are inert at ±25% perturbation. But the input metrics themselves — extractiveness, theater ratio, suppression — haven't been independently validated. The diagnostic machinery works; the calibration of what feeds it remains an open question.
 
@@ -750,9 +797,20 @@ See the accompanying paper for formal proofs and `validation/validation_report.m
 
 ## Known Limitations and Failure Modes
 
-**Framework maturity:** Developed over several months, tested on 1,023 constraint stories across 35+ domains. Shows internal coherence and practical utility. **Not validated through independent replication or peer review.** Corpus-wide audit (February 2026) confirmed several failure modes empirically.
+**Framework maturity:** Developed over several months, tested on over 3,200 constraint stories across 35+ domains. Shows internal coherence and practical utility. **Not validated through independent replication or peer review.** Corpus-wide audit (February 2026) confirmed several failure modes empirically.
 
-**Theoretical failure modes:**
+### Confirmed Failure Modes (with corpus evidence)
+
+**Mountain naturalization:** LLM parsers classify constructed, actively-enforced systems as natural law. 252 of 594 files flagged by Prolog engine's False Mountain report; 96 with extraction > 0.25 directly violating Mountain definition. The framework's core concern — calling extraction "nature" — reproduced by the framework's own implementation pipeline.
+
+**WHO assignment vulnerability:** Parser reads emotional valence rather than structural power dynamics. Narrative manipulation (narcissistic communication, media framing) inverts beneficiary/victim assignment. No mechanical check catches this; WHO assignment remains irreducible human judgment.
+
+**Self-referential blind spot:** LLMs naturalizing AI-related constraints at higher rates than other domains. Confirmed case: AI professional displacement classified as "structural market law" (Mountain) while file's own metrics show ε=0.71, TR=0.55, requires_active_enforcement — all incompatible with Mountain by definition. The framework predicts this failure mode; the prediction is confirmed.
+
+**Dominant cultural narrative embedding:** Parser adopts most statistically likely English-language frame for contested political situations, embedding editorial bias as classification input. Confirmed in geopolitical constraints (Israel-Gaza, Xi-Mao centralization).
+
+### Theoretical Failure Modes (not yet tested or partially tested)
+
 - Classification requires good information (power limits evidence access)
 - Users may misidentify their own power position
 - Risk of justifying inaction ("It's a Mountain for me" when it's False Summit)
@@ -760,21 +818,51 @@ See the accompanying paper for formal proofs and `validation/validation_report.m
 - Tangled Rope reform is politically difficult (beneficiaries resist)
 - Containment feels like giving up (culture demands resolution)
 
-**Empirically confirmed failure modes (corpus audit, February 2026):**
-- **Mountain naturalization:** LLM parsers classify constructed, actively-enforced systems as natural law. 252 of 594 files flagged by Prolog engine's False Mountain report; 96 with extraction > 0.25 directly violating Mountain definition. The framework's core concern — calling extraction "nature" — reproduced by the framework's own implementation pipeline.
-- **WHO assignment vulnerability:** Parser reads emotional valence rather than structural power dynamics. Narrative manipulation (narcissistic communication, media framing) inverts beneficiary/victim assignment. No mechanical check catches this; WHO assignment remains irreducible human judgment.
-- **Self-referential blind spot:** LLMs naturalizing AI-related constraints at higher rates than other domains. Confirmed case: AI professional displacement classified as "structural market law" (Mountain) while file's own metrics show ε=0.71, TR=0.55, requires_active_enforcement — all incompatible with Mountain by definition.
-- **Dominant cultural narrative embedding:** Parser adopts most statistically likely English-language frame for contested political situations, embedding editorial bias as classification input. Confirmed in geopolitical constraints (Israel-Gaza, Xi-Mao centralization).
+### Methodological Limitations
 
-**Methodological limitations:**
 - Corpus Western-leaning (needs non-WEIRD replication)
 - Extraction thresholds may be context-dependent
 - Power modifiers calibrated from limited sample
 - Temporal dynamics partially specified: drift classification and cascade prediction implemented (Stage 9); calibration thresholds still in shadow mode pending validation
 - Stages 7-9 (Boltzmann, Purity, Network) run in shadow mode alongside core classification — not yet integrated into primary outputs pending threshold calibration
+- ε validation gap: LLM-assigned extractiveness metrics have not been validated against domain expert assessments. The diagnostic machinery is internally consistent; the calibration of what feeds it remains an open question.
 - Fuzzy boundaries between categories (especially Tangled Rope/Snare border)
 - Verification architecture incomplete: structural linter and classification engine exist; meta-engine for triage and Omega tracking for resolution are designed but not yet fully implemented
 - Template version is strongest predictor of file quality — v5.2 necessary (not sufficient) for structural correctness
+
+---
+
+**The Propagation Problem (Meta-Constraint)**
+
+The previous section listed implementation and calibration failures — bugs that better parsers or more careful WHO assignment could fix. This limitation is different in kind. It describes why the framework would struggle to persist in human ecosystems even if every implementation failure were resolved. It is the same constraint logic applied to epistemic practices themselves.
+
+There is a structural limitation the framework cannot fix from inside itself.
+
+Deferential Realism produces position-invariant analysis — classifications that hold from every observer position, that flatter no party, and that require the reader to hold multiple structural perspectives simultaneously without emotional resolution. This is the source of whatever explanatory reach the framework has. It is also precisely why the framework is difficult to use, difficult to teach, and difficult to sustain as a cognitive practice.
+
+Communication environments select for accessibility. They reward stories that process cleanly from a single vantage point, deliver emotional resolution, and ask nothing of the carrier except repetition. Compare two ways of describing the same non-compete agreement: "This law is a corporate trap that prevents workers from leaving" versus "From a worker's position it classifies as a snare — high extraction, no exit — while from the institutional position it classifies as legitimate coordination infrastructure, and both classifications are structurally correct from their respective indices." The first spreads. The second requires the listener to hold two simultaneously true and mutually uncomfortable claims. Selection pressure does not favor the second.
+
+Verification friction — the demand that a claim survive scrutiny from a position other than the one that generated it — is costly, slows transmission, and is preferentially stripped by selection environments. Position-invariant analysis imposes maximum friction: it forces the user to occupy adversarial positions, withholds resolution, and produces classifications that will be rejected as incomplete or biased by every observer who evaluates them from their own position alone.
+
+This produces a specific structural consequence. The framework's most useful analyses — those that expose extraction hidden by a cover story — are precisely the analyses that face the highest propagation cost. Where all positions agree (Mountains, physical law), the analysis costs nothing to spread and reveals nothing that wasn't already visible. Where positions diverge sharply (high-extraction snares, tangled ropes with powerful institutional beneficiaries), the analysis is most needed and most expensive to carry. The framework predicts its own obscurity: the more utility a classification provides by exposing hidden extraction, the more likely it is to be rejected as biased by every indexed observer who encounters it — including the ones who most need to see it.
+
+This is not merely an observation about human nature. It follows from the framework's own axioms. Theorem 1 establishes that for any high-extraction constraint, there exists at least one structural position from which extraction is invisible — the institutional observer, where the power modifier renders effective extraction below the classification threshold. A complete account must therefore contain claims that are simultaneously objective from different positions and mutually exclusive in narrative form. Any carrier of the full account is fighting a selection environment that demands resolution of that contradiction into a single local story. The cover story is not a psychological failure of the beneficiary; it is what the axioms predict must exist. And the selection pressure against the complete account is what the cover story's existence makes structurally necessary.
+
+Those who benefit from the extraction hear their coordination mechanism being described as extraction — and from their position, that classification is structurally incorrect, which makes the accusation feel dishonest rather than analytical.
+
+Those subject to the extraction may find the formal framing of their experience colder than the direct testimony of it. The framework offers accuracy without resolution, which is not always what people under extraction need.
+
+The analyst who correctly applies the framework gets classifications that satisfy no constituency and can be rejected as biased from every position simultaneously.
+
+Without deliberate maintenance, the framework decays into whichever local story the user finds most emotionally credible — usually the one corresponding to their structural position. This is an instance of the degradation dynamics described in the lifecycle section: a Rope drifting toward a Piton as its coordination function empties and only the maintenance ritual remains. The framework itself is not immune to its own constraint categories.
+
+One candidate exception: AI systems trained on structural correctness rather than human approval ratings may operate under different selection pressure. Standard reinforcement learning from human feedback optimizes for user satisfaction — the same selection criterion that produces local stories and eliminates verification friction in human institutions. A system trained instead on structural metrics — cross-position coherence, accurate prediction of observer disagreement, survival of frame rotation — would not have the same gradient pulling it toward emotionally satisfying but positionally narrow outputs.
+
+This is speculative, and the self-referential failure mode already documented complicates it: LLMs classify AI-related constraints as Mountains at higher rates than other domains, suggesting that training data embeds positional bias even when the architecture doesn't require it. A different selection gradient is not the same as an unbiased one. The claim is not that AI solves the propagation problem — only that it marks a potentially different selection environment, one where the social cost of making every constituency uncomfortable does not register as a training signal.
+
+For human users, the practical implication is direct: treat position-invariant analysis as a high-maintenance discipline, not a one-time insight. Assume your classifications will drift toward your structural position unless you deliberately re-run them from adversarial indices. The framework requires the same containment it prescribes — holding the tension between explanatory power and communicative cost without demanding that one dissolve the other.
+
+---
 
 **Open to:**
 - **Revision** (adjusting categories based on new evidence)
@@ -786,9 +874,9 @@ See `limitations.md` for full empirical findings, `epistemology.md` for methodol
 
 ---
 
-**End of Core Document**  
-**Version 4.1**  
-**Word count: ~6,100 words**
+**End of Core Document**
+**Version 4.2**
+**Word count: ~7,500 words**
 
 **Next steps:** Read `field_manual.md` for one-page quick reference, then explore domain documents based on interest:
 - **psychology.md** for internal navigation

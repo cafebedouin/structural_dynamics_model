@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(cascading_constraint_failure, snare).
 narrative_ontology:human_readable(cascading_constraint_failure, "The Dominos of Systemic Collapse").
 narrative_ontology:topic_domain(cascading_constraint_failure, "technological/infrastructural/economic").
 
+domain_priors:requires_active_enforcement(cascading_constraint_failure).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(cascading_constraint_failure, dependent_systems).
 narrative_ontology:constraint_victim(cascading_constraint_failure, redundancy_margins).

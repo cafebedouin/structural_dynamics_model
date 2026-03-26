@@ -111,6 +111,7 @@ narrative_ontology:constraint_claim(model_collapse_loss_of_capability, snare).
 narrative_ontology:human_readable(model_collapse_loss_of_capability, "Model Collapse and Loss of Capability in AI Training").
 narrative_ontology:topic_domain(model_collapse_loss_of_capability, "artificial_intelligence/machine_learning").
 
+domain_priors:requires_active_enforcement(model_collapse_loss_of_capability).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(model_collapse_loss_of_capability, proprietary_model_developers).
 narrative_ontology:constraint_victim(model_collapse_loss_of_capability, open_source_training_commons).

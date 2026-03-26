@@ -104,6 +104,7 @@ narrative_ontology:constraint_claim(monopsony_labor_market, snare).
 narrative_ontology:human_readable(monopsony_labor_market, "Monopsony Labor Market Extraction").
 narrative_ontology:topic_domain(monopsony_labor_market, "economic/labor_markets").
 
+domain_priors:requires_active_enforcement(monopsony_labor_market).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(monopsony_labor_market, dominant_employer).
 narrative_ontology:constraint_victim(monopsony_labor_market, low_skill_workers).

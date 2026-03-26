@@ -116,6 +116,7 @@ narrative_ontology:constraint_claim(atmospheric_carbon_accumulation, snare).
 narrative_ontology:human_readable(atmospheric_carbon_accumulation, "Atmospheric Carbon Accumulation and Climate Forcing").
 narrative_ontology:topic_domain(atmospheric_carbon_accumulation, "planetary_climate/biogeochemical_constraints").
 
+domain_priors:requires_active_enforcement(atmospheric_carbon_accumulation).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(atmospheric_carbon_accumulation, fossil_fuel_extractors).
 narrative_ontology:constraint_beneficiary(atmospheric_carbon_accumulation, carbon_intensive_industry).

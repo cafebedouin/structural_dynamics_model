@@ -114,6 +114,7 @@ narrative_ontology:constraint_claim(groundwater_depletion, snare).
 narrative_ontology:human_readable(groundwater_depletion, "Groundwater Depletion and Aquifer Extraction").
 narrative_ontology:topic_domain(groundwater_depletion, "environmental/resource_management/agriculture").
 
+domain_priors:requires_active_enforcement(groundwater_depletion).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(groundwater_depletion, agricultural_irrigators).
 narrative_ontology:constraint_beneficiary(groundwater_depletion, industrial_water_users).

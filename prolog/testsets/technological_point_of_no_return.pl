@@ -109,6 +109,7 @@ narrative_ontology:constraint_claim(technological_point_of_no_return, snare).
 narrative_ontology:human_readable(technological_point_of_no_return, "The Autocatalytic Singularity Gate").
 narrative_ontology:topic_domain(technological_point_of_no_return, "technological/social").
 
+domain_priors:requires_active_enforcement(technological_point_of_no_return).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(technological_point_of_no_return, technology_dependent_institutions).
 narrative_ontology:constraint_beneficiary(technological_point_of_no_return, infrastructure_operators).

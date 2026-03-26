@@ -100,6 +100,7 @@ narrative_ontology:constraint_claim(metamorphosis_samsa, snare).
 narrative_ontology:human_readable(metamorphosis_samsa, "The Samsa Family's Debt Bondage").
 narrative_ontology:topic_domain(metamorphosis_samsa, "economic/social/biological").
 
+domain_priors:requires_active_enforcement(metamorphosis_samsa).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(metamorphosis_samsa, gregor_samsa).
 narrative_ontology:constraint_victim(metamorphosis_samsa, samsa_family_unit).

@@ -105,6 +105,7 @@ narrative_ontology:constraint_claim(ulysses_chp13, snare).
 narrative_ontology:human_readable(ulysses_chp13, "The Sentimental Snare (Sandymount Shore)").
 narrative_ontology:topic_domain(ulysses_chp13, "social/artistic/psychological").
 
+domain_priors:requires_active_enforcement(ulysses_chp13).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(ulysses_chp13, gerty_self_narrative).
 narrative_ontology:constraint_victim(ulysses_chp13, gerty_autonomous_selfhood).

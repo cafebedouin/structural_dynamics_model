@@ -118,6 +118,7 @@ narrative_ontology:constraint_claim(adolescent_neural_development_harm, snare).
 narrative_ontology:human_readable(adolescent_neural_development_harm, "Adolescent Neural Development Harm from Digital Technology Exposure").
 narrative_ontology:topic_domain(adolescent_neural_development_harm, "neurodevelopmental/public_health/technology_policy").
 
+domain_priors:requires_active_enforcement(adolescent_neural_development_harm).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(adolescent_neural_development_harm, technology_platform_operators).
 narrative_ontology:constraint_beneficiary(adolescent_neural_development_harm, advertising_industrial_complex).

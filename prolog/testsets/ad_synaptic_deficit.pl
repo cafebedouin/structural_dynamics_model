@@ -114,6 +114,7 @@ narrative_ontology:constraint_claim(ad_synaptic_deficit, snare).
 narrative_ontology:human_readable(ad_synaptic_deficit, "Synaptic Liquidation (Neuro-Degenerative Debt)").
 narrative_ontology:topic_domain(ad_synaptic_deficit, "biological/technological").
 
+domain_priors:requires_active_enforcement(ad_synaptic_deficit).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(ad_synaptic_deficit, cognitive_function).
 narrative_ontology:constraint_victim(ad_synaptic_deficit, network_capacity).

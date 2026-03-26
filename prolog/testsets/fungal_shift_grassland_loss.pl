@@ -107,6 +107,7 @@ narrative_ontology:constraint_claim(fungal_shift_grassland_loss, snare).
 narrative_ontology:human_readable(fungal_shift_grassland_loss, "Ecological Transition from Grassland to Scrub via Fungal Network Disruption").
 narrative_ontology:topic_domain(fungal_shift_grassland_loss, "ecological/climate/soil_biology").
 
+domain_priors:requires_active_enforcement(fungal_shift_grassland_loss).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(fungal_shift_grassland_loss, grassland_plant_communities).
 narrative_ontology:constraint_victim(fungal_shift_grassland_loss, grassland_dependent_fauna).

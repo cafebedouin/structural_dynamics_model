@@ -111,6 +111,7 @@ narrative_ontology:constraint_claim(ukrainian_energy_security_dependency, snare)
 narrative_ontology:human_readable(ukrainian_energy_security_dependency, "Ukrainian Energy Security Dependency on Russian Gas and Coal Supplies").
 narrative_ontology:topic_domain(ukrainian_energy_security_dependency, "geopolitical/energy_security").
 
+domain_priors:requires_active_enforcement(ukrainian_energy_security_dependency).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(ukrainian_energy_security_dependency, russian_energy_exporters).
 narrative_ontology:constraint_beneficiary(ukrainian_energy_security_dependency, russian_state_revenues).

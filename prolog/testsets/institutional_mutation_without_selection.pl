@@ -109,6 +109,7 @@ narrative_ontology:constraint_claim(institutional_mutation_without_selection, sn
 narrative_ontology:human_readable(institutional_mutation_without_selection, "The Zombie Bureaucracy Drift").
 narrative_ontology:topic_domain(institutional_mutation_without_selection, "organizational/political").
 
+domain_priors:requires_active_enforcement(institutional_mutation_without_selection).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(institutional_mutation_without_selection, public_stakeholders).
 narrative_ontology:constraint_victim(institutional_mutation_without_selection, subordinate_staff).

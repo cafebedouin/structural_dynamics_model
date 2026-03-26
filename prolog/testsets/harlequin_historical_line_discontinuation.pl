@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(harlequin_historical_line_discontinuation, s
 narrative_ontology:human_readable(harlequin_historical_line_discontinuation, "Harlequin's Discontinuation of its Dedicated Historical Romance Imprint").
 narrative_ontology:topic_domain(harlequin_historical_line_discontinuation, "economic/publishing").
 
+domain_priors:requires_active_enforcement(harlequin_historical_line_discontinuation).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(harlequin_historical_line_discontinuation, harlequin_parent_company).
 narrative_ontology:constraint_beneficiary(harlequin_historical_line_discontinuation, contemporary_romance_imprints).

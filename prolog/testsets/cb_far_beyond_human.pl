@@ -109,6 +109,7 @@ narrative_ontology:constraint_claim(cb_far_beyond_human, snare).
 narrative_ontology:human_readable(cb_far_beyond_human, "AI Alignment Problem: Goal Misspecification Under Asymmetric Capability Growth").
 narrative_ontology:topic_domain(cb_far_beyond_human, "technological/AI_safety").
 
+domain_priors:requires_active_enforcement(cb_far_beyond_human).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(cb_far_beyond_human, capability_researchers).
 narrative_ontology:constraint_beneficiary(cb_far_beyond_human, frontier_labs).

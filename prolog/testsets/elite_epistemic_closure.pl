@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(elite_epistemic_closure, snare).
 narrative_ontology:human_readable(elite_epistemic_closure, "Elite Epistemic Closure").
 narrative_ontology:topic_domain(elite_epistemic_closure, "general/epistemic_authority").
 
+domain_priors:requires_active_enforcement(elite_epistemic_closure).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(elite_epistemic_closure, credentialed_elite).
 narrative_ontology:constraint_victim(elite_epistemic_closure, non_elite_knowledge_producers).

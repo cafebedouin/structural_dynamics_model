@@ -113,6 +113,7 @@ narrative_ontology:constraint_claim(meaning_seeking_under_finitude, snare).
 narrative_ontology:human_readable(meaning_seeking_under_finitude, "Meaning-Seeking Under Finitude: The Existential Extraction Trap").
 narrative_ontology:topic_domain(meaning_seeking_under_finitude, "existential/psychological/philosophical").
 
+domain_priors:requires_active_enforcement(meaning_seeking_under_finitude).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(meaning_seeking_under_finitude, finite_conscious_agents).
 

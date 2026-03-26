@@ -105,6 +105,7 @@ narrative_ontology:constraint_claim(living_donor_coercion_risk, snare).
 narrative_ontology:human_readable(living_donor_coercion_risk, "Living Donor Coercion Risk in Organ Transplantation").
 narrative_ontology:topic_domain(living_donor_coercion_risk, "medical/bioethics/healthcare_access").
 
+domain_priors:requires_active_enforcement(living_donor_coercion_risk).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(living_donor_coercion_risk, transplant_recipients).
 narrative_ontology:constraint_beneficiary(living_donor_coercion_risk, transplant_surgeons).

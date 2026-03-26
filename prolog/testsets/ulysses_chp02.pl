@@ -102,6 +102,7 @@ narrative_ontology:constraint_claim(ulysses_chp02, snare).
 narrative_ontology:human_readable(ulysses_chp02, "The Nightmare of History (Dalkey School)").
 narrative_ontology:topic_domain(ulysses_chp02, "economic/social/political").
 
+domain_priors:requires_active_enforcement(ulysses_chp02).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(ulysses_chp02, colonial_church).
 narrative_ontology:constraint_beneficiary(ulysses_chp02, british_imperial_authority).

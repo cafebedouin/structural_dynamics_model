@@ -113,6 +113,7 @@ narrative_ontology:constraint_claim(supply_chain_monopoly_power, snare).
 narrative_ontology:human_readable(supply_chain_monopoly_power, "Supply Chain Monopoly Power Extraction").
 narrative_ontology:topic_domain(supply_chain_monopoly_power, "economic/industrial_organization").
 
+domain_priors:requires_active_enforcement(supply_chain_monopoly_power).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(supply_chain_monopoly_power, monopoly_controller).
 narrative_ontology:constraint_victim(supply_chain_monopoly_power, dependent_suppliers).

@@ -107,6 +107,7 @@ narrative_ontology:constraint_claim(columbia_foam_shedding_hazard, snare).
 narrative_ontology:human_readable(columbia_foam_shedding_hazard, "Columbia Foam Shedding Hazard: Institutional Suppression of Known Launch Risk").
 narrative_ontology:topic_domain(columbia_foam_shedding_hazard, "aerospace_safety/institutional_failure").
 
+domain_priors:requires_active_enforcement(columbia_foam_shedding_hazard).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(columbia_foam_shedding_hazard, crew_members).
 narrative_ontology:constraint_victim(columbia_foam_shedding_hazard, mission_safety).

@@ -109,6 +109,7 @@ narrative_ontology:constraint_claim(planetary_boundaries, snare).
 narrative_ontology:human_readable(planetary_boundaries, "Planetary Boundaries Framework").
 narrative_ontology:topic_domain(planetary_boundaries, "environmental/economic").
 
+domain_priors:requires_active_enforcement(planetary_boundaries).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(planetary_boundaries, high_consumption_economies).
 narrative_ontology:constraint_beneficiary(planetary_boundaries, extractive_industries).

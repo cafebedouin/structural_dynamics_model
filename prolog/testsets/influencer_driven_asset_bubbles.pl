@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(influencer_driven_asset_bubbles, snare).
 narrative_ontology:human_readable(influencer_driven_asset_bubbles, "Influencer-Driven Asset Bubbles").
 narrative_ontology:topic_domain(influencer_driven_asset_bubbles, "financial_markets/social_dynamics").
 
+domain_priors:requires_active_enforcement(influencer_driven_asset_bubbles).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(influencer_driven_asset_bubbles, early_influencers_and_insiders).
 narrative_ontology:constraint_victim(influencer_driven_asset_bubbles, retail_investors).

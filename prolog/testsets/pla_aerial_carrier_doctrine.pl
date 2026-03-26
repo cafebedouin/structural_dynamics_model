@@ -102,6 +102,7 @@ narrative_ontology:constraint_claim(pla_aerial_carrier_doctrine, snare).
 narrative_ontology:human_readable(pla_aerial_carrier_doctrine, "China's Development of an Aerial Drone Carrier Doctrine").
 narrative_ontology:topic_domain(pla_aerial_carrier_doctrine, "technological/military/political").
 
+domain_priors:requires_active_enforcement(pla_aerial_carrier_doctrine).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(pla_aerial_carrier_doctrine, regional_air_sovereignty).
 narrative_ontology:constraint_victim(pla_aerial_carrier_doctrine, contested_airspace_states).

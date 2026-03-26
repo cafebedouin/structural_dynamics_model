@@ -113,6 +113,7 @@ narrative_ontology:constraint_claim(ai_infrastructure_moat, snare).
 narrative_ontology:human_readable(ai_infrastructure_moat, "AI Infrastructure Moat: Capital Concentration and Competitive Lock-In").
 narrative_ontology:topic_domain(ai_infrastructure_moat, "technology/economics/governance").
 
+domain_priors:requires_active_enforcement(ai_infrastructure_moat).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(ai_infrastructure_moat, large_ai_developers).
 narrative_ontology:constraint_beneficiary(ai_infrastructure_moat, semiconductor_manufacturers).

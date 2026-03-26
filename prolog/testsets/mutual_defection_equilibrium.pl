@@ -101,6 +101,7 @@ narrative_ontology:constraint_claim(mutual_defection_equilibrium, snare).
 narrative_ontology:human_readable(mutual_defection_equilibrium, "The Infinite Prisoner's Dilemma Stalemate").
 narrative_ontology:topic_domain(mutual_defection_equilibrium, "economic/social").
 
+domain_priors:requires_active_enforcement(mutual_defection_equilibrium).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(mutual_defection_equilibrium, all_agents).
 narrative_ontology:constraint_victim(mutual_defection_equilibrium, collective_welfare).

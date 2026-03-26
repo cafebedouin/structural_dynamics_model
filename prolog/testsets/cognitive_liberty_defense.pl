@@ -108,6 +108,7 @@ narrative_ontology:constraint_claim(cognitive_liberty_defense, snare).
 narrative_ontology:human_readable(cognitive_liberty_defense, "Cognitive Liberty Defense: The Right to Mental Autonomy Under Coercive Influence").
 narrative_ontology:topic_domain(cognitive_liberty_defense, "cognitive_science/ethics/governance").
 
+domain_priors:requires_active_enforcement(cognitive_liberty_defense).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(cognitive_liberty_defense, individual_cognitive_agents).
 narrative_ontology:constraint_victim(cognitive_liberty_defense, epistemic_autonomy).

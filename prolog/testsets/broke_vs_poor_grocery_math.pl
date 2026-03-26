@@ -112,6 +112,7 @@ narrative_ontology:constraint_claim(broke_vs_poor_grocery_math, snare).
 narrative_ontology:human_readable(broke_vs_poor_grocery_math, "The Cognitive Load of Poverty (Grocery Math)").
 narrative_ontology:topic_domain(broke_vs_poor_grocery_math, "economic/social").
 
+domain_priors:requires_active_enforcement(broke_vs_poor_grocery_math).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(broke_vs_poor_grocery_math, low_income_households).
 narrative_ontology:constraint_victim(broke_vs_poor_grocery_math, cognitive_capacity_poor).

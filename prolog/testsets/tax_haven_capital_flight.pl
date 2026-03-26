@@ -108,6 +108,7 @@ narrative_ontology:constraint_claim(tax_haven_capital_flight, snare).
 narrative_ontology:human_readable(tax_haven_capital_flight, "Tax Haven Capital Flight and Revenue Extraction").
 narrative_ontology:topic_domain(tax_haven_capital_flight, "economic_policy/taxation").
 
+domain_priors:requires_active_enforcement(tax_haven_capital_flight).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(tax_haven_capital_flight, multinational_corporations).
 narrative_ontology:constraint_beneficiary(tax_haven_capital_flight, wealth_concentrators).

@@ -103,6 +103,7 @@ narrative_ontology:constraint_claim(resource_monopoly_pricing, snare).
 narrative_ontology:human_readable(resource_monopoly_pricing, "Resource Monopoly Pricing Constraint").
 narrative_ontology:topic_domain(resource_monopoly_pricing, "economic/industrial").
 
+domain_priors:requires_active_enforcement(resource_monopoly_pricing).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(resource_monopoly_pricing, monopoly_holder).
 narrative_ontology:constraint_victim(resource_monopoly_pricing, dependent_consumers).

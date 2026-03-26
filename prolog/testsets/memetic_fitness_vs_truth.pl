@@ -109,6 +109,7 @@ narrative_ontology:constraint_claim(memetic_fitness_vs_truth, snare).
 narrative_ontology:human_readable(memetic_fitness_vs_truth, "The Viral Distortion: Memetic Fitness Decoupling from Truth").
 narrative_ontology:topic_domain(memetic_fitness_vs_truth, "social/informational/technological").
 
+domain_priors:requires_active_enforcement(memetic_fitness_vs_truth).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(memetic_fitness_vs_truth, attention_extraction_platforms).
 narrative_ontology:constraint_beneficiary(memetic_fitness_vs_truth, engagement_incentive_actors).

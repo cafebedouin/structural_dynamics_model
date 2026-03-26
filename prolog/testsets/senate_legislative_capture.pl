@@ -108,6 +108,7 @@ narrative_ontology:constraint_claim(senate_legislative_capture, snare).
 narrative_ontology:human_readable(senate_legislative_capture, "Senate Legislative Capture by Concentrated Corporate Interests").
 narrative_ontology:topic_domain(senate_legislative_capture, "political_economy/governance").
 
+domain_priors:requires_active_enforcement(senate_legislative_capture).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(senate_legislative_capture, concentrated_corporate_interests).
 narrative_ontology:constraint_beneficiary(senate_legislative_capture, wealthy_campaign_donors).

@@ -114,6 +114,7 @@ narrative_ontology:constraint_claim(smartphone_ubiquity, snare).
 narrative_ontology:human_readable(smartphone_ubiquity, "The Smartphone Ubiquity Constraint").
 narrative_ontology:topic_domain(smartphone_ubiquity, "technological/social/economic").
 
+domain_priors:requires_active_enforcement(smartphone_ubiquity).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(smartphone_ubiquity, platform_corporations).
 narrative_ontology:constraint_beneficiary(smartphone_ubiquity, advertising_ecosystem).

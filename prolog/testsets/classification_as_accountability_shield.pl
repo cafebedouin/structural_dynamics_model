@@ -111,6 +111,7 @@ narrative_ontology:constraint_claim(classification_as_accountability_shield, sna
 narrative_ontology:human_readable(classification_as_accountability_shield, "Classification As Accountability Shield").
 narrative_ontology:topic_domain(classification_as_accountability_shield, "governance/institutional_dynamics").
 
+domain_priors:requires_active_enforcement(classification_as_accountability_shield).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(classification_as_accountability_shield, institutional_decision_maker).
 narrative_ontology:constraint_victim(classification_as_accountability_shield, accountability_claimants).

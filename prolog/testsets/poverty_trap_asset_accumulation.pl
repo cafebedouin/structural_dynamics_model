@@ -101,6 +101,7 @@ narrative_ontology:constraint_claim(poverty_trap_asset_accumulation, snare).
 narrative_ontology:human_readable(poverty_trap_asset_accumulation, "Poverty Trap Asset Accumulation Barrier").
 narrative_ontology:topic_domain(poverty_trap_asset_accumulation, "economic/poverty").
 
+domain_priors:requires_active_enforcement(poverty_trap_asset_accumulation).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(poverty_trap_asset_accumulation, high_net_worth_investors).
 narrative_ontology:constraint_beneficiary(poverty_trap_asset_accumulation, financial_intermediaries).

@@ -112,6 +112,7 @@ narrative_ontology:constraint_claim(opioid_mortality_deaths_despair, snare).
 narrative_ontology:human_readable(opioid_mortality_deaths_despair, "Opioid Mortality Deaths Despair Cycle").
 narrative_ontology:topic_domain(opioid_mortality_deaths_despair, "public_health/economic/social").
 
+domain_priors:requires_active_enforcement(opioid_mortality_deaths_despair).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(opioid_mortality_deaths_despair, pharmaceutical_manufacturers).
 narrative_ontology:constraint_beneficiary(opioid_mortality_deaths_despair, opioid_distributors).

@@ -109,6 +109,7 @@ narrative_ontology:constraint_claim(synthetic_data_feedback_loop, snare).
 narrative_ontology:human_readable(synthetic_data_feedback_loop, "The Model Autophagy Trap").
 narrative_ontology:topic_domain(synthetic_data_feedback_loop, "technological/AI/informational").
 
+domain_priors:requires_active_enforcement(synthetic_data_feedback_loop).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(synthetic_data_feedback_loop, model_training_providers).
 narrative_ontology:constraint_beneficiary(synthetic_data_feedback_loop, commercial_ai_platforms).

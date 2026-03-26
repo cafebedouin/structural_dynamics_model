@@ -109,6 +109,7 @@ narrative_ontology:constraint_claim(uk_unpaid_care_labor_trap, snare).
 narrative_ontology:human_readable(uk_unpaid_care_labor_trap, "UK Unpaid Care Labor Trap").
 narrative_ontology:topic_domain(uk_unpaid_care_labor_trap, "social_policy/gender_economics/care_work").
 
+domain_priors:requires_active_enforcement(uk_unpaid_care_labor_trap).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(uk_unpaid_care_labor_trap, state_welfare_system).
 narrative_ontology:constraint_beneficiary(uk_unpaid_care_labor_trap, employed_care_recipients).

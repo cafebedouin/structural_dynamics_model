@@ -107,6 +107,7 @@ narrative_ontology:constraint_claim(uk_ssp_eligibility, snare).
 narrative_ontology:human_readable(uk_ssp_eligibility, "UK Statutory Sick Pay (SSP) Eligibility and Rate").
 narrative_ontology:topic_domain(uk_ssp_eligibility, "economic/political").
 
+domain_priors:requires_active_enforcement(uk_ssp_eligibility).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(uk_ssp_eligibility, employers_salaried_bracket).
 narrative_ontology:constraint_beneficiary(uk_ssp_eligibility, treasury_exchequer).

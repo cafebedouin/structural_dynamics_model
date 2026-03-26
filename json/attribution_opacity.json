@@ -1,0 +1,167 @@
+{
+  "header": {
+    "constraint_id": "attribution_opacity",
+    "version": "1.0",
+    "generated_date": "2025-01-02",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "attr_opac"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Attribution Opacity in AI-Generated Text",
+    "topic_domain": "philosophy_of_mind/social_epistemics/ai_interaction_design",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Misattributed User",
+      "comment": "PERSPECTIVE 1: MISATTRIBUTED USER (MOUNTAIN) \u2014 User confronted with text falsely attributed to an AI system has no technical mechanism to verify authorship without session continuity or cryptographic signatures. The constraint is structural: stateless text lacks provenance metadata. No amount of effort changes this \u2014 the information simply does not exist in the artifact."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The AI Service Provider",
+      "comment": "PERSPECTIVE 2: AI SERVICE PROVIDER (MOUNTAIN) \u2014 Provider cannot verify authorship of text presented without context. Even with full system access, a stateless text snippet contains no intrinsic signature. Could implement cryptographic signing or session tracking, but the unsigned text itself remains opaque. The constraint is in the artifact's information-theoretic properties, not in institutional barriers."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Standards Body",
+      "comment": "PERSPECTIVE 3: STANDARDS BODY (MOUNTAIN) \u2014 Organizations developing AI attribution standards (C2PA, content credentials, watermarking) recognize the constraint as fundamental: unsigned digital text has no intrinsic provenance. Standards can mandate future signing but cannot retroactively verify unsigned artifacts. The constraint emerges from information theory, not from coordination failure."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Information Theorist",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From an information-theoretic perspective, attribution opacity is a necessary consequence of stateless text representation. A text string without metadata contains only its semantic content \u2014 authorship information is not encoded in the symbol sequence itself. Cryptographic signatures or session continuity add information to the system; they do not extract latent information from the text. This is a structural limit, not a policy choice."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Content Moderator",
+      "comment": "PERSPECTIVE 5: CONTENT MODERATOR (MOUNTAIN) \u2014 Moderator evaluating whether text violates platform policy cannot determine if it was AI-generated without external context. Stylometric analysis provides probabilistic signals but not verification. The constraint is epistemic: the text artifact does not contain the answer. Moderation policies can require disclosure, but cannot extract authorship from undisclosed text."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Forensic Analyst",
+      "comment": "PERSPECTIVE 6: FORENSIC ANALYST (MOUNTAIN) \u2014 Analyst with full technical capability and resources still cannot verify authorship of isolated text without session logs or signatures. Can develop probabilistic models (stylometry, linguistic fingerprinting) but these provide likelihood ratios, not verification. The constraint is in the artifact's information content, not in the analyst's capability."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "stylometric_threshold",
+      "question": "At what confidence threshold does stylometric analysis constitute 'verification' rather than probabilistic inference?",
+      "resolution_mechanism": "Philosophical analysis of verification standards; legal precedent for probabilistic evidence; community consensus on acceptable false-positive rates",
+      "impact": "If threshold is low (e.g., 70% confidence): stylometry 'solves' attribution, constraint becomes rope (coordination on standards). If threshold is high (e.g., 99.9%): stylometry remains probabilistic, constraint stays mountain.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Confidence threshold for stylometric verification"
+    },
+    {
+      "id": "watermarking_robustness",
+      "question": "Do statistical watermarking techniques (token distribution biasing) survive adversarial paraphrasing and translation?",
+      "resolution_mechanism": "Empirical testing of watermark persistence under transformation; adversarial robustness benchmarks; real-world deployment data",
+      "impact": "If robust: watermarking provides verification pathway, constraint becomes scaffold (temporary until adoption). If fragile: watermarking fails, constraint remains mountain.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Robustness of statistical watermarking under adversarial transformation"
+    },
+    {
+      "id": "session_continuity_requirement",
+      "question": "Does requiring session continuity for attribution verification constitute a fundamental architectural constraint or a design choice?",
+      "resolution_mechanism": "Analysis of alternative architectures (blockchain provenance, distributed ledgers, cryptographic commitments); feasibility and cost-benefit analysis",
+      "impact": "If architectural: constraint is mountain (session continuity is necessary). If design choice: constraint is rope (coordination on session-preserving interfaces).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether session continuity is architecturally necessary for attribution"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Attribution opacity in AI-generated text arises from the information-theoretic properties of stateless digital artifacts. A text string presented without metadata (timestamps, session identifiers, cryptographic signatures) contains only its semantic content \u2014 authorship information is not encoded in the symbol sequence itself. This constraint appears across all observer positions as an immutable structural limit: users cannot verify misattributions, providers cannot authenticate unsigned text, standards bodies cannot retroactively verify unsigned artifacts, and forensic analysts cannot extract authorship from information that was never encoded. The constraint exhibits the canonical mountain signature: emerges naturally from information theory, shows maximum accessibility collapse (no alternative pathway exists to extract non-existent information), minimal resistance (no agent can overcome the constraint through effort), and near-zero extractiveness (the constraint does not systematically benefit any agent class). The small residual extractiveness (0.08) reflects minor asymmetries: sophisticated actors can implement signing infrastructure more easily than individuals, and platform providers control whether attribution mechanisms are exposed to users. But these asymmetries are second-order effects \u2014 the primary constraint is the absence of information, not its asymmetric distribution.",
+    "key_agents": [
+      "Misattributed User: Powerless/trapped \u2014 confronts text falsely attributed to AI with no verification mechanism; experiences constraint as absolute epistemic barrier",
+      "AI Service Provider: Institutional/arbitrage \u2014 cannot verify authorship of unsigned text even with system access; could implement signing but cannot retroactively verify",
+      "Standards Body: Organized/mobile \u2014 developing attribution standards (C2PA, content credentials) but cannot solve the fundamental problem for unsigned artifacts",
+      "Information Theorist: Analytical/analytical \u2014 recognizes constraint as information-theoretic necessity; authorship data not present in stateless text",
+      "Content Moderator: Moderate/constrained \u2014 cannot determine AI authorship from text alone; must rely on external context or probabilistic inference",
+      "Forensic Analyst: Powerful/mobile \u2014 has technical capability but cannot extract information that does not exist in the artifact"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Very low. The constraint does not systematically extract from any agent class. The small residual value reflects minor asymmetries: (1) Platform providers control whether to expose attribution mechanisms, creating information asymmetry between provider and user. (2) Sophisticated actors (institutions, researchers) can implement cryptographic signing more easily than individuals, creating a capability gap. (3) Actors who can afford session-preserving infrastructure (persistent accounts, logged interactions) have verification pathways unavailable to anonymous or ephemeral users. But these are second-order effects \u2014 the primary constraint (unsigned text lacks intrinsic provenance) affects all agents equally. Suppression (0.03): Near-zero. No agent is coerced into accepting the constraint, and alternatives exist (implement signing, preserve session context, use cryptographic commitments). The small residual reflects that some users lack technical literacy to implement alternatives, and some platforms deliberately obscure attribution mechanisms. But these are not inherent to the constraint \u2014 they are contingent institutional choices layered on top. Theater ratio (0.15): Very low. Minimal performative activity. The small residual reflects: (1) Stylometric analysis presented as 'verification' when it provides only probabilistic inference. (2) Platform 'AI detection' tools that flag probabilistic signals as definitive. (3) Disclosure requirements that cannot be enforced without verification mechanisms. But the constraint itself has no theatrical component \u2014 it is a straightforward information-theoretic limit. Accessibility collapse (0.92): Very high. No alternative pathway exists to verify authorship of unsigned text. Stylometry provides probabilistic signals, not verification. Watermarking requires prospective implementation. Session continuity requires preserved context. The constraint is not that verification is difficult \u2014 it is that the information does not exist in the artifact. Resistance (0.08): Very low. The constraint does not resist institutional change. Cryptographic signing, session tracking, and watermarking are all feasible. The constraint is in the unsigned artifact, not in the difficulty of implementing signing. The small residual reflects deployment friction (backward compatibility, user experience costs, infrastructure requirements) but these are not resistance to change \u2014 they are coordination costs of implementing alternatives.",
+    "directionality_logic": "All perspectives derive d values near 0.50 (symmetric) because the constraint does not systematically benefit or harm any agent class. The misattributed user (d \u2248 0.52) experiences slightly higher extraction than the provider (d \u2248 0.48) because users bear the epistemic cost of misattribution while providers bear only reputational risk. But both are close to symmetric \u2014 neither is a clear beneficiary or victim. The standards body (d \u2248 0.50) experiences the constraint as a coordination problem to solve, not as extraction. The forensic analyst (d \u2248 0.51) experiences slight extraction (cannot do their job without external context) but not severe. All d values cluster near 0.50, producing f(d) values near 0.65, which when multiplied by the low base extractiveness (0.08) yields \u03c7 values in the range 0.05-0.07 \u2014 well below the rope threshold (0.35). The constraint is not extractive because it does not systematically transfer value from one agent class to another \u2014 it is a shared epistemic limit.",
+    "perspectival_gap": "This constraint exhibits ZERO perspectival gap \u2014 all six perspectives classify as mountain. This is the diagnostic signature of a genuine natural law constraint: the classification is invariant across power levels, time horizons, exit options, and spatial scopes. The misattributed user with no technical capability sees the same structural limit as the forensic analyst with full resources. The immediate time horizon produces the same classification as the civilizational horizon. Local scope and universal scope agree. This invariance is not a failure of the indexical system \u2014 it is the system correctly identifying a constraint that emerges from information theory rather than from institutional arrangements. The constraint passes all three natural law gates: (1) Emerges naturally \u2014 no institution created the constraint; it follows from stateless text representation. (2) Accessibility collapse \u2265 0.85 \u2014 no alternative pathway exists to extract non-existent information. (3) Resistance \u2264 0.15 \u2014 the constraint does not resist change; signing mechanisms are feasible. The uniform mountain classification across all perspectives is the expected outcome for a constraint with these properties.",
+    "mandatrophy_analysis": "MOUNTAIN EXEMPLAR: This constraint demonstrates how the mandatrophy is resolved for genuine natural law constraints. The classification is mountain from all perspectives because the constraint emerges from information-theoretic necessity, not from institutional arrangements that could be classified differently by differently-positioned observers. The key distinction: (1) CONTINGENT institutional arrangements (verification bottleneck in quantum materials, peer review theater, regulatory capture) produce perspectival gaps \u2014 beneficiaries see rope, victims see snare, analysts see tangled rope. (2) NECESSARY information-theoretic limits (attribution opacity, G\u00f6del incompleteness, halting problem) produce uniform mountain classification \u2014 all observers see the same structural limit because it is not observer-dependent. The mandatrophy asks: 'Is this a mountain of physics or a snare of policy?' For attribution opacity, the answer is unambiguous: mountain of information theory. The constraint could be BYPASSED by implementing signing mechanisms (making it a scaffold \u2014 temporary until signing is adopted), but the unsigned artifact itself remains opaque regardless of institutional arrangements. The perspectival invariance is not a bug \u2014 it is the diagnostic signature that distinguishes natural law from naturalized extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "Attribution opacity is a foundational constraint in the AI epistemics domain. Downstream constraints (content moderation, academic integrity, legal liability) all depend on whether attribution can be verified. If signing mechanisms become universal, those downstream constraints shift from mountains to ropes (coordination on standards). The network structure is: attribution_opacity (mountain) \u2192 [content_moderation_without_attribution, academic_integrity_verification, legal_liability_assignment] (currently mountains, become ropes if signing is adopted)."
+  },
+  "directionality_overrides": []
+}

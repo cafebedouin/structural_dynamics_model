@@ -112,6 +112,7 @@ narrative_ontology:constraint_claim(self_deception_maintenance, snare).
 narrative_ontology:human_readable(self_deception_maintenance, "Self-Deception Maintenance Constraint").
 narrative_ontology:topic_domain(self_deception_maintenance, "psychology/cognition/interpersonal").
 
+domain_priors:requires_active_enforcement(self_deception_maintenance).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(self_deception_maintenance, protected_identity).
 narrative_ontology:constraint_beneficiary(self_deception_maintenance, anxiety_avoidance_system).

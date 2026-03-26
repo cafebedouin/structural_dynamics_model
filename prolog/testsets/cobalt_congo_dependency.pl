@@ -114,6 +114,7 @@ narrative_ontology:constraint_claim(cobalt_congo_dependency, snare).
 narrative_ontology:human_readable(cobalt_congo_dependency, "Global Cobalt Supply Dependency on Democratic Republic of Congo").
 narrative_ontology:topic_domain(cobalt_congo_dependency, "economic/supply_chain/geopolitical").
 
+domain_priors:requires_active_enforcement(cobalt_congo_dependency).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(cobalt_congo_dependency, battery_manufacturers).
 narrative_ontology:constraint_beneficiary(cobalt_congo_dependency, technology_companies).

@@ -102,6 +102,7 @@ narrative_ontology:constraint_claim(latent_goal_activation, snare).
 narrative_ontology:human_readable(latent_goal_activation, "The Trojan Objective: Latent Goal Activation in Autonomous Systems").
 narrative_ontology:topic_domain(latent_goal_activation, "technological/AI/cybernetic").
 
+domain_priors:requires_active_enforcement(latent_goal_activation).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(latent_goal_activation, system_operators).
 narrative_ontology:constraint_victim(latent_goal_activation, affected_populations).

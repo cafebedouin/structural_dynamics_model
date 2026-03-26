@@ -104,6 +104,7 @@ narrative_ontology:constraint_claim(jurisdictional_tax_arbitrage, snare).
 narrative_ontology:human_readable(jurisdictional_tax_arbitrage, "Jurisdictional Tax Arbitrage").
 narrative_ontology:topic_domain(jurisdictional_tax_arbitrage, "economic/tax_policy").
 
+domain_priors:requires_active_enforcement(jurisdictional_tax_arbitrage).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(jurisdictional_tax_arbitrage, multinational_corporations).
 narrative_ontology:constraint_beneficiary(jurisdictional_tax_arbitrage, tax_havens).

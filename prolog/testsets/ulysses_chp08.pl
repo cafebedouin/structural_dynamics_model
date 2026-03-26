@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(ulysses_chp08, snare).
 narrative_ontology:human_readable(ulysses_chp08, "The Lestrygonian Food Chain (Lunchtime Dublin)").
 narrative_ontology:topic_domain(ulysses_chp08, "social/economic/biological").
 
+domain_priors:requires_active_enforcement(ulysses_chp08).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(ulysses_chp08, merchant_class).
 narrative_ontology:constraint_beneficiary(ulysses_chp08, restaurant_owners).

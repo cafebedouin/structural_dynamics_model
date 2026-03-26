@@ -103,6 +103,7 @@ narrative_ontology:constraint_claim(evidence_half_life, snare).
 narrative_ontology:human_readable(evidence_half_life, "The Epistemic Decay Constant").
 narrative_ontology:topic_domain(evidence_half_life, "technological/scientific/legal").
 
+domain_priors:requires_active_enforcement(evidence_half_life).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(evidence_half_life, rapid_claim_makers).
 narrative_ontology:constraint_beneficiary(evidence_half_life, digital_platform_operators).

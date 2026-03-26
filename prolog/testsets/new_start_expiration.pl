@@ -107,6 +107,7 @@ narrative_ontology:constraint_claim(new_start_expiration, snare).
 narrative_ontology:human_readable(new_start_expiration, "New START Treaty Expiration and Nuclear Constraint Collapse").
 narrative_ontology:topic_domain(new_start_expiration, "geopolitical/nuclear_security").
 
+domain_priors:requires_active_enforcement(new_start_expiration).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(new_start_expiration, us_military_industrial_complex).
 narrative_ontology:constraint_beneficiary(new_start_expiration, russian_military_establishment).

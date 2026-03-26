@@ -107,6 +107,7 @@ narrative_ontology:constraint_claim(sensory_substitution_dependency, snare).
 narrative_ontology:human_readable(sensory_substitution_dependency, "Sensory Substitution Technology Dependency").
 narrative_ontology:topic_domain(sensory_substitution_dependency, "assistive_technology/disability/accessibility").
 
+domain_priors:requires_active_enforcement(sensory_substitution_dependency).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(sensory_substitution_dependency, technology_manufacturers).
 narrative_ontology:constraint_beneficiary(sensory_substitution_dependency, research_institutions).

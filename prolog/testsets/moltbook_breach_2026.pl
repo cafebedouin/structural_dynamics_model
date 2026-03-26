@@ -104,6 +104,7 @@ narrative_ontology:constraint_claim(moltbook_breach_2026, snare).
 narrative_ontology:human_readable(moltbook_breach_2026, "The Moltbook Database Exposure").
 narrative_ontology:topic_domain(moltbook_breach_2026, "technological/social").
 
+domain_priors:requires_active_enforcement(moltbook_breach_2026).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(moltbook_breach_2026, user_privacy).
 narrative_ontology:constraint_victim(moltbook_breach_2026, agent_autonomy).

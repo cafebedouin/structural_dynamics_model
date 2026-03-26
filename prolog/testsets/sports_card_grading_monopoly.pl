@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(sports_card_grading_monopoly, snare).
 narrative_ontology:human_readable(sports_card_grading_monopoly, "Sports Card Grading Monopoly").
 narrative_ontology:topic_domain(sports_card_grading_monopoly, "collectibles_market/economics").
 
+domain_priors:requires_active_enforcement(sports_card_grading_monopoly).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(sports_card_grading_monopoly, major_grading_companies).
 narrative_ontology:constraint_victim(sports_card_grading_monopoly, independent_sellers).

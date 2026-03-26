@@ -113,6 +113,7 @@ narrative_ontology:constraint_claim(ideological_movement_loyalty_traps, snare).
 narrative_ontology:human_readable(ideological_movement_loyalty_traps, "Ideological Movement Loyalty Traps").
 narrative_ontology:topic_domain(ideological_movement_loyalty_traps, "social/ideological/organizational").
 
+domain_priors:requires_active_enforcement(ideological_movement_loyalty_traps).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(ideological_movement_loyalty_traps, movement_leadership).
 narrative_ontology:constraint_victim(ideological_movement_loyalty_traps, rank_and_file_adherents).

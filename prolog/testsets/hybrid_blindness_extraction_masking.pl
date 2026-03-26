@@ -107,6 +107,7 @@ narrative_ontology:constraint_claim(hybrid_blindness_extraction_masking, snare).
 narrative_ontology:human_readable(hybrid_blindness_extraction_masking, "Hybrid Blindness Extraction Masking").
 narrative_ontology:topic_domain(hybrid_blindness_extraction_masking, "epistemic/systemic/institutional").
 
+domain_priors:requires_active_enforcement(hybrid_blindness_extraction_masking).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(hybrid_blindness_extraction_masking, extraction_architects).
 narrative_ontology:constraint_beneficiary(hybrid_blindness_extraction_masking, institutional_gatekeepers).

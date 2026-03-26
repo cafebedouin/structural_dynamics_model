@@ -110,6 +110,7 @@ narrative_ontology:constraint_claim(occupational_carcinogen_exposure, snare).
 narrative_ontology:human_readable(occupational_carcinogen_exposure, "Occupational Carcinogen Exposure as Structural Extraction").
 narrative_ontology:topic_domain(occupational_carcinogen_exposure, "labor/occupational_health/environmental").
 
+domain_priors:requires_active_enforcement(occupational_carcinogen_exposure).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(occupational_carcinogen_exposure, industry_cost_minimizers).
 narrative_ontology:constraint_victim(occupational_carcinogen_exposure, exposed_workers).

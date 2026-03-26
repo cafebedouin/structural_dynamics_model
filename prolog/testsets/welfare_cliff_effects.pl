@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(welfare_cliff_effects, snare).
 narrative_ontology:human_readable(welfare_cliff_effects, "Welfare Cliff Effects: Poverty Trap Through Benefit Discontinuity").
 narrative_ontology:topic_domain(welfare_cliff_effects, "economic_policy/social_welfare").
 
+domain_priors:requires_active_enforcement(welfare_cliff_effects).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(welfare_cliff_effects, fiscal_conservatism_coalition).
 narrative_ontology:constraint_beneficiary(welfare_cliff_effects, administrative_overhead_reduction).

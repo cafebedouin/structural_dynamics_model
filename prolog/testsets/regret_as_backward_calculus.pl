@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(regret_as_backward_calculus, snare).
 narrative_ontology:human_readable(regret_as_backward_calculus, "Regret as Backward Calculus").
 narrative_ontology:topic_domain(regret_as_backward_calculus, "moral_psychology/existential_philosophy/decision_theory").
 
+domain_priors:requires_active_enforcement(regret_as_backward_calculus).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(regret_as_backward_calculus, future_choice_capacity).
 narrative_ontology:constraint_victim(regret_as_backward_calculus, present_moment_engagement).

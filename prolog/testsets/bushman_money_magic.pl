@@ -108,6 +108,7 @@ narrative_ontology:constraint_claim(bushman_money_magic, snare).
 narrative_ontology:human_readable(bushman_money_magic, "The Trickster's Asymmetric Scam").
 narrative_ontology:topic_domain(bushman_money_magic, "economic/social").
 
+domain_priors:requires_active_enforcement(bushman_money_magic).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(bushman_money_magic, jackal_trickster).
 narrative_ontology:constraint_victim(bushman_money_magic, cattle_ranchers).

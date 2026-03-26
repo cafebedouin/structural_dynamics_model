@@ -105,6 +105,7 @@ narrative_ontology:constraint_claim(hiring_discrimination_automation, snare).
 narrative_ontology:human_readable(hiring_discrimination_automation, "Hiring Discrimination Automation").
 narrative_ontology:topic_domain(hiring_discrimination_automation, "labor_economics/algorithmic_governance").
 
+domain_priors:requires_active_enforcement(hiring_discrimination_automation).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(hiring_discrimination_automation, hiring_organizations).
 narrative_ontology:constraint_beneficiary(hiring_discrimination_automation, algorithm_vendors).

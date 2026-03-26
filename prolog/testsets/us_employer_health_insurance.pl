@@ -109,6 +109,7 @@ narrative_ontology:constraint_claim(us_employer_health_insurance, snare).
 narrative_ontology:human_readable(us_employer_health_insurance, "US Employer-Sponsored Insurance (ESI) System").
 narrative_ontology:topic_domain(us_employer_health_insurance, "economic/social").
 
+domain_priors:requires_active_enforcement(us_employer_health_insurance).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(us_employer_health_insurance, large_employers).
 narrative_ontology:constraint_beneficiary(us_employer_health_insurance, health_insurers).

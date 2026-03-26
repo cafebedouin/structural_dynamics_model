@@ -104,6 +104,7 @@ narrative_ontology:constraint_claim(ulysses_chp01, snare).
 narrative_ontology:human_readable(ulysses_chp01, "The Martello Tower Usurpation (Ulysses, June 16, 1904)").
 narrative_ontology:topic_domain(ulysses_chp01, "social/political/religious").
 
+domain_priors:requires_active_enforcement(ulysses_chp01).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(ulysses_chp01, buck_mulligan).
 narrative_ontology:constraint_beneficiary(ulysses_chp01, british_colonial_apparatus).

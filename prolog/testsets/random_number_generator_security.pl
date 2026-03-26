@@ -105,6 +105,7 @@ narrative_ontology:constraint_claim(random_number_generator_security, snare).
 narrative_ontology:human_readable(random_number_generator_security, "Random Number Generator Security Constraint").
 narrative_ontology:topic_domain(random_number_generator_security, "cryptography/computer_security").
 
+domain_priors:requires_active_enforcement(random_number_generator_security).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(random_number_generator_security, rng_implementation_architects).
 narrative_ontology:constraint_victim(random_number_generator_security, cryptographic_system_users).

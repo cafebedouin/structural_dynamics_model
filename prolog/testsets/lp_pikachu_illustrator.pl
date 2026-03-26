@@ -104,6 +104,7 @@ narrative_ontology:constraint_claim(lp_pikachu_illustrator, snare).
 narrative_ontology:human_readable(lp_pikachu_illustrator, "Artificial Value Creation in High-End Collectibles Market").
 narrative_ontology:topic_domain(lp_pikachu_illustrator, "economic/technological").
 
+domain_priors:requires_active_enforcement(lp_pikachu_illustrator).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(lp_pikachu_illustrator, celebrity_influencers).
 narrative_ontology:constraint_beneficiary(lp_pikachu_illustrator, grading_cartels).

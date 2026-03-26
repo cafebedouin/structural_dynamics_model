@@ -102,6 +102,7 @@ narrative_ontology:constraint_claim(openai_health_review, snare).
 narrative_ontology:human_readable(openai_health_review, "OpenAI ChatGPT Health Review Service").
 narrative_ontology:topic_domain(openai_health_review, "technological/economic").
 
+domain_priors:requires_active_enforcement(openai_health_review).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(openai_health_review, openai_revenue_capture).
 narrative_ontology:constraint_beneficiary(openai_health_review, subscription_tier_expansion).

@@ -103,6 +103,7 @@ narrative_ontology:constraint_claim(rotation_seven_black_soil, snare).
 narrative_ontology:human_readable(rotation_seven_black_soil, "R7 Black Soil Toxicity").
 narrative_ontology:topic_domain(rotation_seven_black_soil, "biological/environmental").
 
+domain_priors:requires_active_enforcement(rotation_seven_black_soil).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(rotation_seven_black_soil, containment_protocols).
 narrative_ontology:constraint_victim(rotation_seven_black_soil, exposed_station_personnel).

@@ -112,6 +112,7 @@ narrative_ontology:constraint_claim(landscape_of_fear_2026, snare).
 narrative_ontology:human_readable(landscape_of_fear_2026, "The Landscape of Fear").
 narrative_ontology:topic_domain(landscape_of_fear_2026, "biological/behavioral_ecology").
 
+domain_priors:requires_active_enforcement(landscape_of_fear_2026).
 domain_priors:emerges_naturally(landscape_of_fear_2026).
 
 % --- Structural relationships ---

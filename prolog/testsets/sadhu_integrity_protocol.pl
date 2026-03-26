@@ -103,6 +103,7 @@ narrative_ontology:constraint_claim(sadhu_integrity_protocol, snare).
 narrative_ontology:human_readable(sadhu_integrity_protocol, "The Integrity Requirement (Sadhu's Sugar)").
 narrative_ontology:topic_domain(sadhu_integrity_protocol, "social/ethical").
 
+domain_priors:requires_active_enforcement(sadhu_integrity_protocol).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(sadhu_integrity_protocol, advice_dispensers).
 narrative_ontology:constraint_victim(sadhu_integrity_protocol, advice_seekers).

@@ -107,6 +107,7 @@ narrative_ontology:constraint_claim(us_sdf_alliance_abandonment_2026, snare).
 narrative_ontology:human_readable(us_sdf_alliance_abandonment_2026, "US Strategic Alliance Abandonment (Syria 2026)").
 narrative_ontology:topic_domain(us_sdf_alliance_abandonment_2026, "geopolitical/military_alliance").
 
+domain_priors:requires_active_enforcement(us_sdf_alliance_abandonment_2026).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(us_sdf_alliance_abandonment_2026, sdf_forces).
 narrative_ontology:constraint_victim(us_sdf_alliance_abandonment_2026, kurdish_civilian_populations).

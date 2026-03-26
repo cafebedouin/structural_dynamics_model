@@ -111,6 +111,7 @@ narrative_ontology:constraint_claim(institutional_trust_decay, snare).
 narrative_ontology:human_readable(institutional_trust_decay, "The Legitimacy Void: Institutional Trust Decay").
 narrative_ontology:topic_domain(institutional_trust_decay, "social/political/institutional").
 
+domain_priors:requires_active_enforcement(institutional_trust_decay).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(institutional_trust_decay, institutional_functioning).
 narrative_ontology:constraint_victim(institutional_trust_decay, civic_participation).

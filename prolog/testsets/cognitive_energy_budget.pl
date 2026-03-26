@@ -115,6 +115,7 @@ narrative_ontology:constraint_claim(cognitive_energy_budget, snare).
 narrative_ontology:human_readable(cognitive_energy_budget, "The Attention Exhaustion Trap").
 narrative_ontology:topic_domain(cognitive_energy_budget, "cognitive/technological/social").
 
+domain_priors:requires_active_enforcement(cognitive_energy_budget).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(cognitive_energy_budget, attention_extraction_platforms).
 narrative_ontology:constraint_beneficiary(cognitive_energy_budget, advertisers).

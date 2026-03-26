@@ -115,6 +115,7 @@ narrative_ontology:constraint_claim(collective_action_capacity_collapse, snare).
 narrative_ontology:human_readable(collective_action_capacity_collapse, "Collective Action Capacity Collapse").
 narrative_ontology:topic_domain(collective_action_capacity_collapse, "political_economy/coordination_failure").
 
+domain_priors:requires_active_enforcement(collective_action_capacity_collapse).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(collective_action_capacity_collapse, incumbent_beneficiaries).
 narrative_ontology:constraint_victim(collective_action_capacity_collapse, distributed_collective_agents).

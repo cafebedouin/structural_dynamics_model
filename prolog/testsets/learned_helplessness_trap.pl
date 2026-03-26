@@ -117,6 +117,7 @@ narrative_ontology:constraint_claim(learned_helplessness_trap, snare).
 narrative_ontology:human_readable(learned_helplessness_trap, "Learned Helplessness Trap: Internalized Powerlessness as Self-Sustaining Extraction").
 narrative_ontology:topic_domain(learned_helplessness_trap, "psychology/behavioral_economics/social_dynamics").
 
+domain_priors:requires_active_enforcement(learned_helplessness_trap).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(learned_helplessness_trap, extraction_beneficiary).
 narrative_ontology:constraint_victim(learned_helplessness_trap, helpless_agent).

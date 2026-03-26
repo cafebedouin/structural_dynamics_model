@@ -105,6 +105,7 @@ narrative_ontology:constraint_claim(teaching_horses_to_sing, snare).
 narrative_ontology:human_readable(teaching_horses_to_sing, "The Sing-or-Die Gambit").
 narrative_ontology:topic_domain(teaching_horses_to_sing, "political/power_dynamics").
 
+domain_priors:requires_active_enforcement(teaching_horses_to_sing).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(teaching_horses_to_sing, condemned_prisoner).
 narrative_ontology:constraint_victim(teaching_horses_to_sing, monarch_agency).

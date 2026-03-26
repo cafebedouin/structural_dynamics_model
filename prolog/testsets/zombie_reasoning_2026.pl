@@ -99,6 +99,7 @@ narrative_ontology:constraint_claim(zombie_reasoning_2026, snare).
 narrative_ontology:human_readable(zombie_reasoning_2026, "The Zombie Reasoning Epistemic Snare").
 narrative_ontology:topic_domain(zombie_reasoning_2026, "philosophical/technological").
 
+domain_priors:requires_active_enforcement(zombie_reasoning_2026).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(zombie_reasoning_2026, imprecise_ai_vendors).
 narrative_ontology:constraint_beneficiary(zombie_reasoning_2026, hype_amplifiers).

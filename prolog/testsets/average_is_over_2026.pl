@@ -111,6 +111,7 @@ narrative_ontology:constraint_claim(average_is_over_2026, snare).
 narrative_ontology:human_readable(average_is_over_2026, "The AI-Talent Barbell Economy").
 narrative_ontology:topic_domain(average_is_over_2026, "economic/technological").
 
+domain_priors:requires_active_enforcement(average_is_over_2026).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(average_is_over_2026, elite_ai_native_talent).
 narrative_ontology:constraint_beneficiary(average_is_over_2026, capital_owners_of_ai_infrastructure).

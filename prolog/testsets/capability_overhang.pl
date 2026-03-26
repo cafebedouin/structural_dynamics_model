@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(capability_overhang, snare).
 narrative_ontology:human_readable(capability_overhang, "Capability Overhang: The Asymmetry Between Realized and Unrealized Potential").
 narrative_ontology:topic_domain(capability_overhang, "systems_theory/governance/institutional_dynamics").
 
+domain_priors:requires_active_enforcement(capability_overhang).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(capability_overhang, resource_constrained_actors).
 narrative_ontology:constraint_victim(capability_overhang, social_coordination_systems).

@@ -110,6 +110,7 @@ narrative_ontology:constraint_claim(capability_acceleration_outpacing_safety, sn
 narrative_ontology:human_readable(capability_acceleration_outpacing_safety, "Capability Acceleration Outpacing Safety Verification").
 narrative_ontology:topic_domain(capability_acceleration_outpacing_safety, "artificial_intelligence/systemic_risk").
 
+domain_priors:requires_active_enforcement(capability_acceleration_outpacing_safety).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(capability_acceleration_outpacing_safety, capability_research_institutions).
 narrative_ontology:constraint_beneficiary(capability_acceleration_outpacing_safety, corporate_ai_developers).

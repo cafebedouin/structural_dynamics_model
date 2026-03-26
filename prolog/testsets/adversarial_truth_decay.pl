@@ -112,6 +112,7 @@ narrative_ontology:constraint_claim(adversarial_truth_decay, snare).
 narrative_ontology:human_readable(adversarial_truth_decay, "The Epistemic Siege: Asymmetric Cost of Misinformation Generation vs. Truth Verification").
 narrative_ontology:topic_domain(adversarial_truth_decay, "social/technological/political").
 
+domain_priors:requires_active_enforcement(adversarial_truth_decay).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(adversarial_truth_decay, bad_faith_actors).
 narrative_ontology:constraint_beneficiary(adversarial_truth_decay, narrative_capture_institutions).

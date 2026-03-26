@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(antikythera_knowledge_loss, snare).
 narrative_ontology:human_readable(antikythera_knowledge_loss, "Loss of Hellenistic Precision Gearing Knowledge").
 narrative_ontology:topic_domain(antikythera_knowledge_loss, "technological/epistemic").
 
+domain_priors:requires_active_enforcement(antikythera_knowledge_loss).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(antikythera_knowledge_loss, hellenistic_technical_tradition).
 narrative_ontology:constraint_victim(antikythera_knowledge_loss, mechanical_knowledge_continuity).

@@ -103,6 +103,7 @@ narrative_ontology:constraint_claim(sleep_deprivation_cycle, snare).
 narrative_ontology:human_readable(sleep_deprivation_cycle, "Sleep Deprivation Cycle").
 narrative_ontology:topic_domain(sleep_deprivation_cycle, "physiology/behavioral_psychology").
 
+domain_priors:requires_active_enforcement(sleep_deprivation_cycle).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(sleep_deprivation_cycle, sleep_deprived_individual).
 

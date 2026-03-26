@@ -114,6 +114,7 @@ narrative_ontology:constraint_claim(meritocracy_theater, snare).
 narrative_ontology:human_readable(meritocracy_theater, "Meritocracy Theater: Performative Selection Masking Structural Extraction").
 narrative_ontology:topic_domain(meritocracy_theater, "social/institutional/economic").
 
+domain_priors:requires_active_enforcement(meritocracy_theater).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(meritocracy_theater, institutional_gatekeepers).
 narrative_ontology:constraint_beneficiary(meritocracy_theater, incumbent_advantage_holders).

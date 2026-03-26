@@ -108,6 +108,7 @@ narrative_ontology:constraint_claim(climate_policy_extraction, snare).
 narrative_ontology:human_readable(climate_policy_extraction, "The Decarbonization Snare (Climate-Identity Collision)").
 narrative_ontology:topic_domain(climate_policy_extraction, "environmental/political").
 
+domain_priors:requires_active_enforcement(climate_policy_extraction).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(climate_policy_extraction, regional_fossil_fuel_workers).
 narrative_ontology:constraint_victim(climate_policy_extraction, hydrocarbon_dependent_communities).

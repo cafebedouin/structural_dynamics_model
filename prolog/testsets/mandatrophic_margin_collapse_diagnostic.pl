@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(mandatrophic_margin_collapse_diagnostic, sna
 narrative_ontology:human_readable(mandatrophic_margin_collapse_diagnostic, "Mandatrophy (Systemic Resilience Wasting)").
 narrative_ontology:topic_domain(mandatrophic_margin_collapse_diagnostic, "institutional/technological").
 
+domain_priors:requires_active_enforcement(mandatrophic_margin_collapse_diagnostic).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(mandatrophic_margin_collapse_diagnostic, mandate_enforcing_institution).
 narrative_ontology:constraint_victim(mandatrophic_margin_collapse_diagnostic, system_resilience_margin).

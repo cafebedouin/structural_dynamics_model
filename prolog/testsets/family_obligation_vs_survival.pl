@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(family_obligation_vs_survival, snare).
 narrative_ontology:human_readable(family_obligation_vs_survival, "Family Obligation vs Survival: Identity-Lock in Kinship Systems").
 narrative_ontology:topic_domain(family_obligation_vs_survival, "social/interpersonal/economic").
 
+domain_priors:requires_active_enforcement(family_obligation_vs_survival).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(family_obligation_vs_survival, primary_dependent_beneficiaries).
 narrative_ontology:constraint_victim(family_obligation_vs_survival, obligated_adult_member).

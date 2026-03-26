@@ -101,6 +101,7 @@ narrative_ontology:constraint_claim(entertainment_industry_access_inequality, sn
 narrative_ontology:human_readable(entertainment_industry_access_inequality, "Entertainment Industry Access Inequality").
 narrative_ontology:topic_domain(entertainment_industry_access_inequality, "media/entertainment/economics").
 
+domain_priors:requires_active_enforcement(entertainment_industry_access_inequality).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(entertainment_industry_access_inequality, established_industry_gatekeepers).
 narrative_ontology:constraint_beneficiary(entertainment_industry_access_inequality, legacy_talent_agents).

@@ -105,6 +105,7 @@ narrative_ontology:constraint_claim(sunk_cost_escalation, snare).
 narrative_ontology:human_readable(sunk_cost_escalation, "Sunk Cost Escalation (Commitment Trap)").
 narrative_ontology:topic_domain(sunk_cost_escalation, "behavioral_economics/decision_theory").
 
+domain_priors:requires_active_enforcement(sunk_cost_escalation).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(sunk_cost_escalation, escalating_agent).
 narrative_ontology:constraint_victim(sunk_cost_escalation, system_resources).

@@ -109,6 +109,7 @@ narrative_ontology:constraint_claim(shadow_banking_leverage_amplification, snare
 narrative_ontology:human_readable(shadow_banking_leverage_amplification, "Shadow Banking Leverage Amplification Trap").
 narrative_ontology:topic_domain(shadow_banking_leverage_amplification, "financial_systemic_risk").
 
+domain_priors:requires_active_enforcement(shadow_banking_leverage_amplification).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(shadow_banking_leverage_amplification, financial_intermediaries).
 narrative_ontology:constraint_beneficiary(shadow_banking_leverage_amplification, institutional_arbitrageurs).

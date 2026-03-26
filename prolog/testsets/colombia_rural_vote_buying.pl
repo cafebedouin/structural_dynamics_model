@@ -111,6 +111,7 @@ narrative_ontology:constraint_claim(colombia_rural_vote_buying, snare).
 narrative_ontology:human_readable(colombia_rural_vote_buying, "Rural Vote Buying in Colombian Elections").
 narrative_ontology:topic_domain(colombia_rural_vote_buying, "political_economy/electoral_capture").
 
+domain_priors:requires_active_enforcement(colombia_rural_vote_buying).
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(colombia_rural_vote_buying, rural_voters).
 narrative_ontology:constraint_victim(colombia_rural_vote_buying, electoral_legitimacy).

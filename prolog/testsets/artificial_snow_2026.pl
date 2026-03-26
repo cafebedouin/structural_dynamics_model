@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(artificial_snow_2026, snare).
 narrative_ontology:human_readable(artificial_snow_2026, "Olympic Artificial Snow Dependency").
 narrative_ontology:topic_domain(artificial_snow_2026, "environmental/cultural").
 
+domain_priors:requires_active_enforcement(artificial_snow_2026).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(artificial_snow_2026, olympic_organizing_committee).
 narrative_ontology:constraint_beneficiary(artificial_snow_2026, alpine_skiing_apparatus_manufacturers).

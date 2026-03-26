@@ -108,6 +108,7 @@ narrative_ontology:constraint_claim(household_debt_accumulation_cycle, snare).
 narrative_ontology:human_readable(household_debt_accumulation_cycle, "Household Debt Accumulation Cycle").
 narrative_ontology:topic_domain(household_debt_accumulation_cycle, "economic/financial").
 
+domain_priors:requires_active_enforcement(household_debt_accumulation_cycle).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(household_debt_accumulation_cycle, financial_institutions).
 narrative_ontology:constraint_beneficiary(household_debt_accumulation_cycle, creditors).

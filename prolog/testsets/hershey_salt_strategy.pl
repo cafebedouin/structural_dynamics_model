@@ -107,6 +107,7 @@ narrative_ontology:constraint_claim(hershey_salt_strategy, snare).
 narrative_ontology:human_readable(hershey_salt_strategy, "Hershey's Salt Inclusion Strategy").
 narrative_ontology:topic_domain(hershey_salt_strategy, "economic/food_manufacturing").
 
+domain_priors:requires_active_enforcement(hershey_salt_strategy).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(hershey_salt_strategy, hershey_shareholders).
 narrative_ontology:constraint_beneficiary(hershey_salt_strategy, hershey_marketing_division).

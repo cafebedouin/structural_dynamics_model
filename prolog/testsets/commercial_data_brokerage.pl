@@ -105,6 +105,7 @@ narrative_ontology:constraint_claim(commercial_data_brokerage, snare).
 narrative_ontology:human_readable(commercial_data_brokerage, "The Commercial Data Brokerage Ecosystem").
 narrative_ontology:topic_domain(commercial_data_brokerage, "technological/economic").
 
+domain_priors:requires_active_enforcement(commercial_data_brokerage).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(commercial_data_brokerage, data_brokers).
 narrative_ontology:constraint_beneficiary(commercial_data_brokerage, advertising_platforms).

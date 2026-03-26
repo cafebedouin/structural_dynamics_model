@@ -109,6 +109,7 @@ narrative_ontology:constraint_claim(ocean_acidification, snare).
 narrative_ontology:human_readable(ocean_acidification, "Ocean Acidification as Structural Extraction").
 narrative_ontology:topic_domain(ocean_acidification, "environmental/biogeochemical").
 
+domain_priors:requires_active_enforcement(ocean_acidification).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(ocean_acidification, fossil_fuel_extractors).
 narrative_ontology:constraint_beneficiary(ocean_acidification, carbon_intensive_industries).

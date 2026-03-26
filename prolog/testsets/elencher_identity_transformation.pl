@@ -108,6 +108,7 @@ narrative_ontology:constraint_claim(elencher_identity_transformation, snare).
 narrative_ontology:human_readable(elencher_identity_transformation, "Zetetic Elencher Radical Identity Flux").
 narrative_ontology:topic_domain(elencher_identity_transformation, "technological/social/philosophical").
 
+domain_priors:requires_active_enforcement(elencher_identity_transformation).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(elencher_identity_transformation, elencher_core_leadership).
 narrative_ontology:constraint_beneficiary(elencher_identity_transformation, ideological_coherence_maintainers).

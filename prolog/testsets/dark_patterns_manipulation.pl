@@ -107,6 +107,7 @@ narrative_ontology:constraint_claim(dark_patterns_manipulation, snare).
 narrative_ontology:human_readable(dark_patterns_manipulation, "Dark Patterns (Interface Coercion)").
 narrative_ontology:topic_domain(dark_patterns_manipulation, "technological/economic").
 
+domain_priors:requires_active_enforcement(dark_patterns_manipulation).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(dark_patterns_manipulation, platform_operators).
 narrative_ontology:constraint_victim(dark_patterns_manipulation, end_users).

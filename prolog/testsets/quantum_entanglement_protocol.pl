@@ -106,6 +106,7 @@ narrative_ontology:constraint_claim(quantum_entanglement_protocol, snare).
 narrative_ontology:human_readable(quantum_entanglement_protocol, "Instantaneous Quantum Entanglement Communication (Hypothetical)").
 narrative_ontology:topic_domain(quantum_entanglement_protocol, "technological/scientific").
 
+domain_priors:requires_active_enforcement(quantum_entanglement_protocol).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(quantum_entanglement_protocol, earth_based_control_authority).
 narrative_ontology:constraint_beneficiary(quantum_entanglement_protocol, protocol_implementers).

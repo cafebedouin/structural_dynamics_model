@@ -107,6 +107,7 @@ narrative_ontology:constraint_claim(taiwan_semiconductor_concentration, snare).
 narrative_ontology:human_readable(taiwan_semiconductor_concentration, "Taiwan Semiconductor Concentration and Global Supply Chain Dependency").
 narrative_ontology:topic_domain(taiwan_semiconductor_concentration, "economic/geopolitical").
 
+domain_priors:requires_active_enforcement(taiwan_semiconductor_concentration).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(taiwan_semiconductor_concentration, taiwan_semiconductor_manufacturers).
 narrative_ontology:constraint_beneficiary(taiwan_semiconductor_concentration, advanced_chip_designers).

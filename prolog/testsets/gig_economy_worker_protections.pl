@@ -110,6 +110,7 @@ narrative_ontology:constraint_claim(gig_economy_worker_protections, snare).
 narrative_ontology:human_readable(gig_economy_worker_protections, "Gig Economy Worker Protections Classification").
 narrative_ontology:topic_domain(gig_economy_worker_protections, "labor/economic_policy").
 
+domain_priors:requires_active_enforcement(gig_economy_worker_protections).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(gig_economy_worker_protections, platform_corporations).
 narrative_ontology:constraint_beneficiary(gig_economy_worker_protections, consumer_base).

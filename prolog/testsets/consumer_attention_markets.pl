@@ -110,6 +110,7 @@ narrative_ontology:constraint_claim(consumer_attention_markets, snare).
 narrative_ontology:human_readable(consumer_attention_markets, "Consumer Attention Capture and Behavioral Extraction").
 narrative_ontology:topic_domain(consumer_attention_markets, "digital_markets/behavioral_economics/technology").
 
+domain_priors:requires_active_enforcement(consumer_attention_markets).
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(consumer_attention_markets, attention_platform_operators).
 narrative_ontology:constraint_beneficiary(consumer_attention_markets, behavioral_data_extractors).
