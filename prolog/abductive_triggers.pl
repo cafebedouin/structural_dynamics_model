@@ -987,3 +987,70 @@ trigger_classical_oracle_failure(C, Context, Hypothesis) :-
         Confidence,
         investigation(inspect_metrics, C)
     ).
+
+/* ================================================================
+   TRIGGER 17: MOUNTAIN EXTRACTION ACCUMULATION (T17) — v6.9
+   ================================================================
+   Advisory trigger: fires when a constraint classified as Mountain
+   has rising extraction in temporal drift data (extraction_accumulation
+   at warning or critical severity). Unlike the false_summit_mountain
+   signature override (Gap A), which catches constructed mountains at
+   classification time, T17 catches genuine mountains that are
+   accumulating extraction over time — the temporal analogue.
+
+   This trigger does NOT produce a classification override. It flags
+   the constraint for reclassification review in the diagnostic report.
+   Hard override via temporal signature (Gap B) is deferred to v7.0
+   pending pipeline ordering changes (drift scan must precede
+   classification for a hard override to be sound).
+
+   Requires: drift data (no subsystem guard; fails silently if absent).
+   ================================================================ */
+
+trigger_mountain_extraction_accumulation(C, Context, Hypothesis) :-
+    % Must be currently classified as mountain
+    catch(drl_core:dr_type(C, Context, mountain), _, fail),
+    % Must have extraction_accumulation drift event with directional evidence
+    catch(drl_lifecycle:drift_event(C, extraction_accumulation,
+          evidence(extraction_delta, T1, T2, V1, V2)), _, fail),
+    T2 > T1, V2 > V1,
+    % Must be at warning or critical severity
+    catch(drl_lifecycle:drift_severity(C, extraction_accumulation, Severity), _, fail),
+    member(Severity, [warning, critical]),
+    % Collect contextual evidence
+    DeltaV is V2 - V1,
+    catch(drl_core:base_extractiveness(C, BaseEps), _, (BaseEps = V2)),
+    catch(boltzmann_compliance:cross_index_coupling(C, CouplingScore), _, (CouplingScore = 0.0)),
+    EvidenceLines = [
+        evidence_line(drift, extraction_accumulation, evidence(T1, T2, V1, V2)),
+        evidence_line(drift, severity, Severity),
+        evidence_line(drift, delta_v, DeltaV),
+        evidence_line(signature, current_type, mountain),
+        evidence_line(signature, base_extractiveness, BaseEps),
+        evidence_line(signature, coupling_score, CouplingScore)
+    ],
+    Explanations = [
+        explanation(
+            temporal_type_drift,
+            high,
+            'Constraint is currently classified as Mountain but extractiveness has increased since initial measurement. If extraction continues accumulating, the Mountain classification may no longer hold. Reclassification review warranted — consider whether false_summit_mountain signature applies to the current metric state.'
+        ),
+        explanation(
+            measurement_noise,
+            medium,
+            'Extraction delta may reflect measurement variance rather than genuine structural change. Verify temporal data quality and whether the accumulation is sustained before acting.'
+        )
+    ],
+    BaseConf is min(0.80, 0.55 + DeltaV * 0.5),
+    compute_confidence(EvidenceLines, BaseConf, Confidence),
+    config:param(abductive_confidence_floor, Floor),
+    Confidence >= Floor,
+    Hypothesis = hypothesis(
+        C,
+        mountain_extraction_accumulation,
+        anomaly(rising_extraction_in_mountain, Severity-DeltaV),
+        EvidenceLines,
+        Explanations,
+        Confidence,
+        investigation(monitor_drift, C)
+    ).

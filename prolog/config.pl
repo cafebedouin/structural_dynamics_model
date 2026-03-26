@@ -441,6 +441,7 @@ param(fpn_epsilon,                             0.001). % Convergence threshold (
 param(fpn_max_iterations,                      20).    % Hard cap (2x theoretical worst case)
 param(fpn_enabled,                             1).     % Graduated Phase 7-T2: FPN iteration enabled
 param(fcr_override_enabled,                    1).     % 1=FCR overrides classification, 0=detection only (ablation)
+param(false_summit_override_target,    tangled_rope).  % v6.9: reclassification target for false summit mountains
 param(corpus_path,                       'testsets').   % Directory to load testsets from (relative to prolog/)
 
 /* ================================================================

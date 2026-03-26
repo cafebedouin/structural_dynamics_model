@@ -4,6 +4,7 @@
     explain_signature/3,
     integrate_signature_with_modal/3,
     false_natural_law/2,
+    false_summit_mountain/2,
     coupling_invariant_rope/2,
     false_ci_rope/2,
     structural_purity/2,
@@ -75,6 +76,16 @@ constraint_signature(C, false_natural_law) :-
 % Checked BEFORE CI_Rope to catch constraints that would falsely certify.
 constraint_signature(C, false_ci_rope) :-
     false_ci_rope(C, _), !.
+
+% Metric-derived: False Summit Mountain (v6.9)
+% Intercepts constraints that meet all mountain metric thresholds but have
+% identifiable beneficiaries. Genuine natural laws have zero beneficiaries;
+% a mountain with beneficiaries indicates a naturalized constructed constraint.
+% Checked BEFORE natural_law so beneficiary-bearing constraints are not
+% certified as natural law (natural_law_signature also requires BeneficiaryCount==0,
+% so this is belt-and-suspenders correctness, not strictly necessary).
+constraint_signature(C, false_summit_mountain) :-
+    false_summit_mountain(C, _), !.
 
 % Boltzmann-derived: Natural Law via Emergence (v6.1)
 % Intercepts before CI_Rope for natural laws with incidental beneficiaries.
@@ -430,6 +441,17 @@ signature_confidence(C, coupling_invariant_rope, Confidence) :-
     ;   Confidence = medium
     ), !.
 
+% False Summit Mountain confidence: scales with beneficiary count and coupling score.
+% Zero coupling (common for Mountains) → medium; high coupling → high.
+signature_confidence(C, false_summit_mountain, Confidence) :-
+    (   false_summit_mountain(C, fsm_evidence(BCount, CScore))
+    ->  (   CScore > 0.25 -> Confidence = high
+        ;   BCount > 1   -> Confidence = medium
+        ;                   Confidence = low
+        )
+    ;   Confidence = low
+    ), !.
+
 % Profile-based confidence (v3.2 original pipeline)
 signature_confidence(C, Signature, Confidence) :-
     get_constraint_profile(C, Profile),
@@ -551,6 +573,16 @@ explain_signature(C, constructed_high_extraction, Explanation) :-
     format(atom(Explanation),
            'CONSTRUCTED HIGH-EXTRACTION signature for ~w: Enforcement present (suppression=~2f, resistance=~2f) with high extraction (~2f). This is an extraction mechanism that metrics failed to classify as snare.',
            [C, S, R, Ext]).
+
+explain_signature(C, false_summit_mountain, Explanation) :-
+    (   false_summit_mountain(C, fsm_evidence(BCount, CScore))
+    ->  format(atom(Explanation),
+               'FALSE SUMMIT MOUNTAIN signature for ~w: Meets all mountain metric thresholds (low extractiveness, low suppression, emerges naturally) but has ~d identifiable beneficiaries. Genuine natural laws have zero beneficiaries. This constraint has been naturalized — its constructed origin has become invisible. Coupling score=~3f.',
+               [C, BCount, CScore])
+    ;   format(atom(Explanation),
+               'FALSE SUMMIT MOUNTAIN signature for ~w: Mountain metrics with identifiable beneficiaries. Use false_summit_mountain/2 for detailed evidence.',
+               [C])
+    ).
 
 explain_signature(C, false_natural_law, Explanation) :-
     (   false_natural_law(C, fnl_evidence(Claim, _BoltzResult, CouplingScore,
@@ -706,6 +738,16 @@ resolve_modal_signature_conflict(ModalType, false_ci_rope, Result) :-
 
 % Coordination scaffolds should be ROPES not mountains
 resolve_modal_signature_conflict(mountain, coordination_scaffold, Result) :- !, Result = rope.
+
+% False Summit Mountain override (v6.9): mountain with beneficiary → tangled_rope
+% The config param allows ablation studies (set target to mountain to disable).
+resolve_modal_signature_conflict(mountain, false_summit_mountain, Result) :-
+    !,
+    (   config:param(false_summit_override_target, Target)
+    ->  Result = Target
+    ;   Result = tangled_rope
+    ).
+resolve_modal_signature_conflict(unknown, false_summit_mountain, Result) :- !, Result = tangled_rope.
 
 % Constructed constraints override mountain classification
 resolve_modal_signature_conflict(mountain, constructed_low_extraction, Result) :- !, Result = rope.
@@ -1101,3 +1143,67 @@ fcr_test_failure(C, excess_above_floor(Excess)) :-
 fcr_test_failure(C, nonsensical_coupling(Strength)) :-
     detect_nonsensical_coupling(C, Pairs, Strength),
     Pairs \= [].
+
+/* ================================================================
+   SIGNATURE: FALSE SUMMIT MOUNTAIN (FSM) — v6.9
+   ================================================================
+   FSM(C) :-
+       mountain_metric_profile(C),       % low ε, low suppression, emerges naturally
+       constraint_beneficiary(C, _).     % has identifiable beneficiaries
+
+   Unlike FNL (which requires Boltzmann non-compliance) and FCR
+   (which requires rope-appearing metrics), FSM targets the specific
+   case where a Mountain meets ALL metric thresholds but has
+   beneficiaries that reveal its constructed origin.
+
+   Genuine natural laws have zero beneficiaries: they benefit no
+   particular agent because they are structural features of reality.
+   A "natural law" with beneficiaries is a naturalized construct —
+   a constraint whose constructed origin has been made invisible
+   through historical accumulation.
+
+   Key design decision: coupling is NOT a hard gate. Mountains are
+   immune to contamination (type_contamination_strength = 0.0,
+   type_immunity = 0.0), so their coupling scores are typically zero
+   even when the underlying extractive structure is present. Requiring
+   non-zero coupling would cause FSM to miss the very constraints it
+   is designed to catch.
+
+   ACTIVE: FSM detection triggers the tangled_rope override via
+   constraint_signature/2 → resolve_modal_signature_conflict/3
+   (mountain + false_summit_mountain → tangled_rope). Operational
+   since v6.9.
+   ================================================================ */
+
+%% false_summit_mountain(+C, -Evidence)
+%  Detects mountain-classified constraints with identifiable beneficiaries.
+%  Primary gate: beneficiary presence (not coupling score).
+%  Coupling collected as diagnostic evidence for abductive T17 trigger.
+%
+%  Evidence = fsm_evidence(BeneficiaryCount, CouplingScore)
+false_summit_mountain(C, fsm_evidence(BeneficiaryCount, CouplingScore)) :-
+    % Metric profile must be consistent with mountain classification.
+    % Replicate mountain conditions from classify_from_metrics/6 without
+    % the context-dependent immutability check (which varies by observer).
+    drl_core:base_extractiveness(C, BaseEps),
+    config:param(mountain_extractiveness_max, MaxX),
+    BaseEps =< MaxX,
+    drl_core:get_raw_suppression(C, Supp),
+    config:param(mountain_suppression_ceiling, SuppCeil),
+    Supp =< SuppCeil,
+    domain_priors:emerges_naturally(C),
+
+    % Primary gate: must have at least one identifiable beneficiary.
+    % Genuine natural laws have none — beneficiary presence is the
+    % structural signal of constructedness.
+    findall(B, narrative_ontology:constraint_beneficiary(C, B), Beneficiaries),
+    Beneficiaries \= [],
+    length(Beneficiaries, BeneficiaryCount),
+
+    % Coupling as diagnostic evidence only — not a hard gate.
+    % Many false summits have zero coupling because Mountain immunity
+    % prevents contamination network from registering the structure.
+    (   catch(cross_index_coupling(C, CS), _, CS = 0.0)
+    ->  CouplingScore = CS
+    ;   CouplingScore = 0.0
+    ).

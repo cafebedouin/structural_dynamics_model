@@ -307,6 +307,7 @@ param_spec(fpn_epsilon,        number, positive,        "FPN convergence thresho
 param_spec(fpn_max_iterations, integer, positive,        "FPN hard iteration cap").
 param_spec(fpn_enabled,        integer, oneof([0, 1]),  "0=one-hop propagation, 1=fixed-point iteration").
 param_spec(fcr_override_enabled, integer, oneof([0, 1]), "1=FCR overrides classification, 0=detection only (ablation)").
+param_spec(false_summit_override_target, atom, oneof([mountain, rope, scaffold, piton, tangled_rope, snare]), "v6.9: reclassification target for false summit mountains (set to mountain to disable)").
 param_spec(corpus_path,          atom,    any,            "Directory to load testsets from (relative to prolog/)").
 
 % ============================================================

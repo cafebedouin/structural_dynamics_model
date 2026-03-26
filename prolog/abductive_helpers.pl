@@ -59,6 +59,7 @@
 %  Signatures that unconditionally override the metric-based type.
 known_override_signature(false_natural_law).
 known_override_signature(false_ci_rope).
+known_override_signature(false_summit_mountain).
 known_override_signature(coupling_invariant_rope).
 known_override_signature(natural_law).
 known_override_signature(coordination_scaffold).
@@ -70,6 +71,7 @@ known_override_signature(constructed_constraint).
 %  The type that a signature override forces.
 override_target(false_natural_law,          tangled_rope).
 override_target(false_ci_rope,              tangled_rope).
+override_target(false_summit_mountain,      tangled_rope).
 override_target(coupling_invariant_rope,    rope).
 override_target(natural_law,                mountain).
 override_target(coordination_scaffold,      rope).
