@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "audience_incentive_mechanism",
+    "version": "1.0",
+    "generated_date": "2025-01-02",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "aud_incent"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.22,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Audience Incentive Mechanism in Public Discourse",
+    "topic_domain": "philosophy_of_language/discourse_analysis/social_epistemology",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "public_discourse_participants",
+      "audience_members",
+      "concept_originators"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Public Discourse Participant",
+      "comment": "PERSPECTIVE 1: PUBLIC DISCOURSE PARTICIPANT (ROPE) \u2014 Experiences the audience incentive mechanism as a coordination device that enables efficient social signaling and group identification. The performance rewards (likes, shares, status markers) solve the legitimate problem of 'how do I signal my values and find my community?' The extraction is minimal \u2014 the participant chooses which concepts to deploy as badges and can exit any particular discourse community at low cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Audience Member",
+      "comment": "PERSPECTIVE 2: AUDIENCE MEMBER (ROPE) \u2014 Benefits from the sorting function: badge deployment allows rapid identification of in-group vs out-group, reducing cognitive load in evaluating claims. The mechanism coordinates attention allocation \u2014 audience members can quickly assess whether a speaker shares their values without deep engagement with arguments. Low extraction because the audience retains choice over which signals to trust."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Concept Originator",
+      "comment": "PERSPECTIVE 3: CONCEPT ORIGINATOR (ROPE) \u2014 Academics, public intellectuals, and thought leaders who introduce concepts benefit from the audience incentive mechanism through citation, influence, and status. The mechanism amplifies their work by creating a class of badge-wearers who propagate the concept. Minimal extraction \u2014 the originator's work reaches wider audiences through the signaling function, and they retain control over their analytical contributions."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Epistemic Reform Coalition",
+      "comment": "PERSPECTIVE 4: EPISTEMIC REFORM COALITION (SCAFFOLD) \u2014 Organized agents working on discourse norms (fact-checking initiatives, epistemic humility movements, long-form journalism) see the audience incentive mechanism as a temporary coordination problem being addressed by platform design changes and norm shifts. Substack, Patreon, and other direct-support models reduce dependence on engagement metrics; slow-media movements promote depth over virality. The coalition sees a sunset: as alternative reward structures mature, the performance incentive loses force."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Tool-Using Analyst",
+      "comment": "PERSPECTIVE 5: TOOL-USING ANALYST (TANGLED ROPE) \u2014 Participants who deploy concepts as analytical tools rather than badges experience mixed coordination and extraction. The mechanism coordinates discourse by establishing shared vocabulary, but it also creates career pressure to perform badge-wearing for visibility. The analyst benefits from the shared conceptual infrastructure but bears the cost of reduced engagement when using concepts analytically rather than performatively. Moderate extraction because the analyst has some exit options (niche audiences, alternative platforms) but faces real career costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (ROPE) \u2014 From a civilizational perspective, the audience incentive mechanism is a low-extraction coordination device that solves the problem of distributed attention allocation in large-scale public discourse. The performance rewards are not extractive overhead but functional signals that enable efficient sorting. The mechanism's extractiveness is bounded by exit options \u2014 participants can choose alternative platforms, niche communities, or private discourse when performance incentives misalign with their goals."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "badge_tool_boundary",
+      "question": "Is there a sharp boundary between badge-wearing and tool-using, or is it a continuous spectrum with context-dependent thresholds?",
+      "resolution_mechanism": "Linguistic analysis of concept deployment patterns; correlation between deployment type and subsequent argumentative moves; experimental manipulation of audience presence",
+      "impact": "If sharp boundary: the mechanism cleanly separates coordination (badge) from analytical work (tool). If continuous spectrum: the extraction is lower than feared because most deployment is mixed-mode.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether badge/tool distinction is categorical or continuous"
+    },
+    {
+      "id": "platform_design_causality",
+      "question": "Do engagement metrics cause badge-wearing, or do they merely reveal pre-existing social signaling preferences?",
+      "resolution_mechanism": "Comparative analysis of discourse patterns on platforms with different reward structures (HackerNews karma vs Twitter likes vs academic citations); longitudinal tracking of individual behavior across platform migrations",
+      "impact": "If causal: platform design changes can reduce extraction. If revealing: the mechanism is coordination of pre-existing preferences, not extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether engagement metrics cause or reveal signaling behavior"
+    },
+    {
+      "id": "analytical_depth_tradeoff",
+      "question": "Does badge-wearing actually reduce analytical depth, or does it enable analytical work by building audience and credibility?",
+      "resolution_mechanism": "Longitudinal analysis of public intellectuals' work: correlation between badge deployment frequency and depth of subsequent analytical contributions; comparison of badge-wearers vs non-badge-wearers on long-term intellectual productivity",
+      "impact": "If reduces depth: extraction is real and the tangled_rope perspective is justified. If enables depth: the mechanism is pure coordination (rope from all perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether badge-wearing trades off against or enables analytical depth"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "aud_incent_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3,
+      "id_override": "aud_incent_theater_t5"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35,
+      "id_override": "aud_incent_theater_t10"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12,
+      "id_override": "aud_incent_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.15,
+      "id_override": "aud_incent_extract_t5"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.18,
+      "id_override": "aud_incent_extract_t10"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The audience incentive mechanism in public discourse creates performance rewards (engagement metrics, status markers, belonging signals) that select for social signaling over analytical work. When concepts are deployed in public contexts, speakers face a choice: use the concept as an analytical tool (applying it to generate insight) or as a badge (displaying it to signal group membership and values). The mechanism coordinates attention allocation and group identification but introduces mild extraction when performance incentives misalign with analytical goals. This constraint is downstream of context_dependent_concept_function (the mountain constraint establishing that concepts have different functions in different contexts) \u2014 the audience incentive mechanism is the specific coordination device that implements the context-dependent function shift in public discourse. The constraint's low extractiveness (0.18) reflects that the mechanism is primarily coordinative: it solves real problems (distributed attention allocation, group identification, credibility signaling) with bounded extraction. The theater ratio (0.35) captures that some badge-wearing is performative (displaying concepts without understanding them) but much of it is functional signaling.",
+    "key_agents": [
+      "Public Discourse Participants: Primary beneficiaries (moderate/mobile) \u2014 use performance rewards to signal values and find community; low extraction because exit is available",
+      "Audience Members: Primary beneficiaries (moderate/mobile) \u2014 benefit from sorting function that reduces cognitive load in evaluating claims",
+      "Concept Originators: Primary beneficiaries (institutional/arbitrage) \u2014 academics and thought leaders whose concepts are amplified through badge-wearing",
+      "Tool-Using Analysts: Mixed position (moderate/constrained) \u2014 benefit from shared vocabulary but face career pressure to perform badge-wearing for visibility",
+      "Epistemic Reform Coalition: Organized agents (organized/constrained) \u2014 building alternative reward structures (Substack, Patreon, slow media) that reduce dependence on engagement metrics"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low. The audience incentive mechanism is primarily a coordination device. The performance rewards solve legitimate problems: how to allocate attention in large-scale discourse, how to identify in-group vs out-group, how to build credibility and audience. The extraction is real but bounded \u2014 tool-using analysts face career pressure to badge-wear, and some analytical depth is traded for visibility \u2014 but the mechanism does not trap participants. Exit options are available (niche audiences, alternative platforms, private discourse), and much badge-wearing is functional rather than purely performative. Suppression (0.22): Low. The mechanism does not actively suppress alternatives. Participants can choose tool-using over badge-wearing at the cost of reduced engagement, but this is a tradeoff rather than coercion. Alternative platforms with different reward structures exist and are growing. The suppression reflects career pressure and visibility costs, not structural barriers. Theater ratio (0.35): Moderate-low. Some badge-wearing is performative (displaying concepts without understanding them), but much of it is functional signaling that serves real coordination purposes. The theater has increased slightly over the interval as engagement metrics have become more sophisticated and platform algorithms have optimized for virality, but the mechanism retains substantial functional content.",
+    "directionality_logic": "All primary agents are beneficiaries with mobile or arbitrage exit options, producing low directionality values and low or negative effective extraction. Public discourse participants (moderate/mobile) experience the mechanism as coordination \u2014 they choose which concepts to deploy as badges and can exit any particular discourse community at low cost. Audience members (moderate/mobile) benefit from the sorting function without bearing significant costs. Concept originators (institutional/arbitrage) benefit from amplification with minimal extraction. The tool-using analyst (moderate/constrained) is the only agent with mixed experience \u2014 they benefit from shared vocabulary but face career pressure to badge-wear, producing moderate directionality and moderate effective extraction. The epistemic reform coalition (organized/constrained) sees a sunset \u2014 alternative reward structures are maturing \u2014 producing low effective extraction despite constrained exit because they have agency and see a path forward.",
+    "perspectival_gap": "The constraint classifies as rope from most perspectives because the mechanism is primarily coordinative with low extraction. Public discourse participants, audience members, and concept originators all experience net benefits. The analytical observer sees a low-extraction coordination device that solves real problems in distributed attention allocation. The tool-using analyst sees tangled_rope \u2014 mixed coordination and extraction \u2014 because they face career pressure to badge-wear despite preferring tool-using. The epistemic reform coalition sees scaffold \u2014 a temporary coordination problem with a sunset as alternative reward structures mature. The perspectival gap is narrow because the extraction is genuinely low and exit options are available. The mechanism does not trap participants or suppress alternatives; it coordinates attention with bounded performance incentives.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that low-extraction coordination mechanisms can introduce performance incentives without becoming extractive. The audience incentive mechanism is not a snare disguised as rope \u2014 it is a genuine rope with mild extraction visible from the tool-using analyst's perspective. The key structural features that keep extraction low: (1) exit options are available (alternative platforms, niche audiences, private discourse), (2) the mechanism does not actively suppress alternatives, (3) much badge-wearing is functional signaling rather than pure performance, (4) the coordination benefits (attention allocation, group identification, credibility signaling) are real and substantial. The tangled_rope classification from the tool-using analyst's perspective is legitimate \u2014 they experience mixed coordination and extraction \u2014 but the extraction is bounded by their constrained (not trapped) exit options and the availability of alternative reward structures."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of context_dependent_concept_function (the mountain constraint establishing that concepts have different functions in different contexts). The audience incentive mechanism is the specific coordination device that implements the context-dependent function shift in public discourse. The upstream constraint has \u03b5 \u2248 0.05 (mountain \u2014 the context-dependence is a structural feature of language). This constraint has \u03b5 = 0.18 (rope \u2014 the performance rewards are a coordination mechanism with bounded extraction)."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "context_dependent_concept_function"
+    ]
+  }
+}

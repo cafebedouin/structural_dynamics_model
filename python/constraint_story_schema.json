@@ -363,6 +363,26 @@
       }
     },
     {
+      "$comment": "FSM candidate: Mountain with declared beneficiaries. false_summit_mountain in signature_detection.pl gates on beneficiary presence alone (coupling is diagnostic only). Require omegas to document the natural-law vs. constructed ambiguity.",
+      "if": {
+        "properties": {
+          "base_properties": {
+            "properties": {
+              "claimed_type": { "const": "mountain" },
+              "beneficiaries": { "type": "array", "minItems": 1 }
+            },
+            "required": ["claimed_type", "beneficiaries"]
+          }
+        }
+      },
+      "then": {
+        "required": ["omegas"],
+        "properties": {
+          "omegas": { "type": "array", "minItems": 1 }
+        }
+      }
+    },
+    {
       "if": {
         "properties": {
           "base_properties": {

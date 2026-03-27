@@ -1755,6 +1755,136 @@ def build_post_synthesis(constraint_id, pipeline_data):
     return "\n".join(lines)
 
 
+# --- Cross-Constraint Convergence Section ---
+
+def build_cross_constraint_section(constraint_id, evaluative_data):
+    """Render ═══ CROSS-CONSTRAINT CONVERGENCE ═══ for this constraint.
+
+    Loads from evaluative_convergence.json (evaluative_data).
+    Returns empty string if the constraint does not appear in any constraint_set,
+    or if evaluative_data is None/empty.
+    """
+    if not evaluative_data:
+        return ""
+
+    key = constraint_id.lower()
+    matched_sets = [
+        s for s in evaluative_data.get("constraint_sets", [])
+        if any(c.lower() == key for c in s.get("constraints", []))
+    ]
+    if not matched_sets:
+        return ""
+
+    lines = ["\n═══ CROSS-CONSTRAINT CONVERGENCE ═══\n"]
+
+    for cset in matched_sets:
+        set_id = cset.get("set_id", "?")
+        members = cset.get("constraints", [])
+        beneficiary = cset.get("shared_beneficiary")
+
+        if beneficiary:
+            lines.append(f"  Set: {set_id} (beneficiary: {beneficiary}, n={len(members)})")
+        else:
+            lines.append(f"  Set: {set_id} (network adjacency, n={len(members)})")
+        lines.append(f"  Members: {', '.join(members)}")
+        lines.append("")
+
+        patterns = cset.get("convergence_patterns", [])
+
+        # --- CONVERGENCE PATTERNS ---
+        lines.append("  --- CONVERGENCE PATTERNS ---")
+        lines.append("")
+        if not patterns:
+            lines.append("  No convergence patterns detected for this set.")
+        for p in patterns:
+            pname = p.get("pattern", "?")
+            ev = p.get("evidence", {})
+            involved = p.get("constraints_involved", [])
+            lines.append(f"  [{pname}]")
+
+            if pname == "convergent_signature":
+                lines.append(f"    Shared signature:  {ev.get('shared_signature', '?')}")
+                lines.append(f"    Constraints:       {', '.join(ev.get('constraints', []))}")
+
+            elif pname == "convergent_institutional":
+                lines.append(f"    Institutional type: {ev.get('institutional_type', '?')}")
+                lines.append(f"    Analytical type:    {ev.get('analytical_type', '?')}")
+                lines.append(f"    Constraints:        {', '.join(ev.get('constraints_with_split', []))}")
+
+            elif pname == "convergent_drift":
+                lines.append(f"    Drift type:   {ev.get('shared_drift_type', '?')}")
+                lines.append(f"    Severity:     {ev.get('severity', '?')}")
+                lines.append(f"    Constraints:  {', '.join(ev.get('constraints', []))}")
+
+            elif pname == "cover_story_topology":
+                face = ev.get("face_constraint", "?")
+                extractive = ev.get("extractive_members", [])
+                lines.append(f"    Face constraint:      {face}")
+                lines.append(f"    Extractive members:   {', '.join(extractive)}")
+                lines.append(f"    Face ε:               {ev.get('face_base_extractiveness', '?')}")
+                lines.append(f"    Intrinsic purity:     {ev.get('face_intrinsic_purity', '?')}")
+                lines.append(f"    Propagation delta:    {ev.get('face_propagation_delta', '?')}")
+                for qn in ev.get("qualifying_neighbors", []):
+                    lines.append(
+                        f"    Qualifying neighbor:  {qn['constraint_id']} "
+                        f"(type={qn['neighbor_type']}, "
+                        f"purity={qn['neighbor_purity']}, "
+                        f"shared_sig={qn['shared_signature']})"
+                    )
+            lines.append("")
+
+        # --- DEFENSIBILITY ASSESSMENT ---
+        defensibility = cset.get("defensibility", {})
+        constrained = defensibility.get("constrained_positions", [])
+        indefensible = defensibility.get("indefensible_positions", [])
+
+        if constrained or indefensible:
+            lines.append("  --- DEFENSIBILITY ASSESSMENT ---")
+            lines.append("")
+            if constrained:
+                lines.append("  Constrained positions:")
+                for pos in constrained:
+                    lines.append(f"    - {pos}")
+                lines.append("")
+            if indefensible:
+                lines.append("  Indefensible positions:")
+                for ip in indefensible:
+                    lines.append(f"    Position: {ip.get('position', '?')}")
+                    lines.append(f"    Ruled out by: {ip.get('ruled_out_by', '?')}")
+                    lines.append("")
+
+        # --- COVER STORY TOPOLOGY ---
+        cover_pattern = next(
+            (p for p in patterns if p.get("pattern") == "cover_story_topology"), None
+        )
+        if cover_pattern:
+            ev = cover_pattern.get("evidence", {})
+            face = ev.get("face_constraint", "?")
+            extractive_members = ev.get("extractive_members", [])
+
+            lines.append("  --- COVER STORY TOPOLOGY ---")
+            lines.append("")
+            if key == face.lower():
+                lines.append(f"  Role: COVER STORY FACE")
+                lines.append(
+                    f"  This constraint ({constraint_id}) presents with low extractiveness "
+                    f"(ε={ev.get('face_base_extractiveness', '?')}) and high intrinsic purity "
+                    f"({ev.get('face_intrinsic_purity', '?')}), but is contaminated by "
+                    f"extractive neighbors ({', '.join(extractive_members)}) via the FPN network "
+                    f"(propagation delta={ev.get('face_propagation_delta', '?')})."
+                )
+            else:
+                lines.append(f"  Role: EXTRACTIVE MEMBER")
+                lines.append(
+                    f"  This constraint ({constraint_id}) is an extractive member of a "
+                    f"cover story group. The face constraint ({face}) provides structural "
+                    f"legitimation that conceals the extraction."
+                )
+            lines.append("")
+
+    return "\n".join(lines)
+
+
 # --- Report Assembly ---
 
 def assemble_report(header, prolog_output, sections):
@@ -1882,6 +2012,11 @@ def generate_report(constraint_id, data, iteration_round=None):
 
     full_report = assemble_report(header, prolog_output, sections)
 
+    # Append cross-constraint convergence section (after Prolog remainder + POST-SYNTHESIS)
+    cross = build_cross_constraint_section(constraint_id, data["evaluative"])
+    if cross.strip():
+        full_report += "\n" + cross
+
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     out_path = REPORTS_DIR / f"{constraint_id}_report.md"
     with open(out_path, "w", encoding="utf-8") as f:
@@ -1892,6 +2027,32 @@ def generate_report(constraint_id, data, iteration_round=None):
     # --- Emit JSON sidecar ---
     entry = find_constraint_entry(data["pipeline"], constraint_id)
     sidecar = build_sidecar_data(constraint_id, entry, prolog_output, iteration_round)
+
+    # Add evaluative convergence data for this constraint
+    evaluative_data = data.get("evaluative")
+    if evaluative_data:
+        key = constraint_id.lower()
+        matched_sets = [
+            s for s in evaluative_data.get("constraint_sets", [])
+            if any(c.lower() == key for c in s.get("constraints", []))
+        ]
+        sidecar["evaluative_convergence"] = {
+            "in_sets": [s["set_id"] for s in matched_sets],
+            "pattern_count": sum(
+                len(s.get("convergence_patterns", [])) for s in matched_sets
+            ),
+            "cover_story_role": None,
+        }
+        for s in matched_sets:
+            for p in s.get("convergence_patterns", []):
+                if p.get("pattern") == "cover_story_topology":
+                    face = p.get("evidence", {}).get("face_constraint", "")
+                    if face.lower() == key:
+                        sidecar["evaluative_convergence"]["cover_story_role"] = "face"
+                    else:
+                        sidecar["evaluative_convergence"]["cover_story_role"] = "extractive_member"
+    else:
+        sidecar["evaluative_convergence"] = None
 
     # Validate (warn but don't block)
     try:
@@ -1947,14 +2108,16 @@ def main():
 
     # Load all data sources once
     data = {
-        "pipeline": load_json(OUTPUTS_DIR / "enriched_pipeline.json", "enriched_pipeline.json"),
-        "orbit":    load_json(OUTPUTS_DIR / "orbit_data.json", "orbit_data.json"),
-        "omega":    load_json(OUTPUTS_DIR / "enriched_omega_data.json", "enriched_omega_data.json"),
-        "corpus":   load_json(OUTPUTS_DIR / "corpus_data.json", "corpus_data.json"),
+        "pipeline":    load_json(OUTPUTS_DIR / "enriched_pipeline.json", "enriched_pipeline.json"),
+        "orbit":       load_json(OUTPUTS_DIR / "orbit_data.json", "orbit_data.json"),
+        "omega":       load_json(OUTPUTS_DIR / "enriched_omega_data.json", "enriched_omega_data.json"),
+        "corpus":      load_json(OUTPUTS_DIR / "corpus_data.json", "corpus_data.json"),
         "persistence": load_json(SCRIPT_DIR / "persistence_results.json", "persistence_results.json"),
-        "maxent":   load_text(OUTPUTS_DIR / "maxent_report.md", "maxent_report.md"),
-        "pattern":  load_text(OUTPUTS_DIR / "pattern_mining.md", "pattern_mining.md"),
-        "covering": load_text(OUTPUTS_DIR / "covering_analysis.md", "covering_analysis.md"),
+        "maxent":      load_text(OUTPUTS_DIR / "maxent_report.md", "maxent_report.md"),
+        "pattern":     load_text(OUTPUTS_DIR / "pattern_mining.md", "pattern_mining.md"),
+        "covering":    load_text(OUTPUTS_DIR / "covering_analysis.md", "covering_analysis.md"),
+        "evaluative":  load_json(OUTPUTS_DIR / "evaluative_convergence.json",
+                                 "evaluative_convergence.json"),
     }
 
     # Generate reports

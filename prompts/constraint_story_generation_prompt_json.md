@@ -263,11 +263,23 @@ Define the objective metrics of the constraint. These are the structural inputs 
 
 | Declaration | JSON Field | Purpose |
 |---|---|---|
-| Beneficiary groups | `base_properties.beneficiaries[]` | **REQUIRED for all non-mountain.** Identifies who benefits. Derives coordination function (required for Tangled Rope and Scaffold gates). Feeds directionality: beneficiaries get low d → low/negative χ. |
+| Beneficiary groups | `base_properties.beneficiaries[]` | **REQUIRED for all non-mountain; OPTIONAL on mountain (FSM candidate — see below).** Identifies who benefits. Derives coordination function (required for Tangled Rope and Scaffold gates). Feeds directionality: beneficiaries get low d → low/negative χ. |
 | Victim groups | `base_properties.victims[]` | **REQUIRED for snare and tangled_rope.** Identifies who bears costs. Derives asymmetric extraction (required for Tangled Rope gate). Feeds directionality: victims get high d → high χ. |
 | Active enforcement | `base_properties.requires_active_enforcement` | Required for Tangled Rope gate. |
 
 **Naming rules**: Use specific, domain-derived group names. `low_income_borrowers` not `affected_parties`. `journal_publishers` not `stakeholders`. The group name should identify a real-world actor.
+
+#### False Summit Detection (FSM)
+
+The `false_summit_mountain` signature evaluates any Mountain constraint that declares at least one beneficiary. If the mountain's metric profile passes the mountain gates (ε ≤ 0.25, suppression ≤ 0.05, `emerges_naturally: true`) **and** at least one `constraint_beneficiary` fact is present in the compiled `.pl`, FSM fires and the engine reclassifies to the configured override target (`false_summit_override_target` in `config.pl`, default: `tangled_rope`) via the signature override chain.
+
+**Use FSM authoring when:** the domain presents a constraint as natural law but identifiable beneficiaries exist — corporations that benefit from treating a labor dynamic as "natural," regimes that benefit from treating an allocation outcome as inevitable, disciplines that benefit from treating a contested empirical claim as settled.
+
+**Coupling is not a gate.** The engine collects `cross_index_coupling` as diagnostic evidence for downstream analysis, but beneficiary presence alone suffices. Many false summits have zero coupling because Mountain immunity prevents the contamination network from registering the structure. Do not require high coupling before declaring beneficiaries.
+
+**Schema enforcement:** Declaring beneficiaries on a Mountain requires at least one omega variable (enforced by the schema). Document the irreducible uncertainty: "Is this constraint a genuine natural law, or a constructed constraint that benefits identifiable agents?"
+
+**T17 interaction (advisory):** If you include temporal measurements showing rising `base_extractiveness` over time, the T17 abductive trigger (`mountain_extraction_accumulation`) fires when severity reaches warning or critical. T17 does not reclassify — it produces a hypothesis for investigation. Include temporal measurements on Mountain stories when the historical record shows accumulating extraction.
 
 **Additional flags:**
 
@@ -375,7 +387,7 @@ Do NOT use `identity_locked` when:
 
 Some constraints classify identically from ALL perspectives. In these cases, the perspectival minimum is relaxed — you do not need powerless/institutional if they would produce the same type:
 
-* **Mountain-only (Natural Law)**: Logical/physical/mathematical limits (e.g., Gödel's Incompleteness, Halting Problem, speed of light). NL(C) → Mountain for all I. Base extraction ≤ 0.25, suppression ≤ 0.05. Include at least 2-3 perspectives to show the invariance, but all may be Mountain. No beneficiary/victim needed. Mountain-only constraints are invariant across all observables and measurement methodologies. If a constraint appears to be a Mountain under one observable but classifies differently under another, either (a) the alternative observable is revealing a structurally different constraint that should be decomposed into its own story, or (b) the Mountain classification was incorrect.
+* **Mountain-only (Natural Law)**: Logical/physical/mathematical limits (e.g., Gödel's Incompleteness, Halting Problem, speed of light). NL(C) → Mountain for all I. Base extraction ≤ 0.25, suppression ≤ 0.05. Include at least 2-3 perspectives to show the invariance, but all may be Mountain. No beneficiary/victim needed for genuine natural laws. To model a **false-summit candidate** (a constraint presented as natural law but with identifiable beneficiaries), declare beneficiaries — this triggers FSM engine evaluation and may reclassify the constraint. See False Summit Detection above. Mountain-only constraints without beneficiaries are invariant across all observables and measurement methodologies. If a constraint appears to be a Mountain under one observable but classifies differently under another, either (a) the alternative observable is revealing a structurally different constraint that should be decomposed into its own story, or (b) the Mountain classification was incorrect.
 * **Rope-only (Pure Coordination)**: Low-extraction coordination mechanisms where no agent perceives meaningful extraction (e.g., metasurface light steering, cooperative mineral sourcing). Base extraction ≤ 0.05, suppression low. Include at least 2 perspectives, but all may be Rope. Beneficiary recommended; victim usually absent.
 
 ### Generative Commentary
@@ -552,7 +564,8 @@ The `uke_scope` section in the JSON is **informational** — it preserves proven
 
 Before outputting your JSON, verify:
 
-* [ ] **Beneficiary/Victim Declared**: Every non-mountain constraint has `base_properties.beneficiaries[]` with at least one entry. Snare and tangled_rope also require `base_properties.victims[]`. Group names are domain-specific, not generic placeholders (`low_income_borrowers` not `affected_parties`).
+* [ ] **Beneficiary/Victim Declared**: Every non-mountain constraint has `base_properties.beneficiaries[]` with at least one entry. Snare and tangled_rope also require `base_properties.victims[]`. Group names are domain-specific, not generic placeholders (`low_income_borrowers` not `affected_parties`). Mountains may declare beneficiaries to trigger FSM evaluation — see FSM check below.
+* [ ] **FSM Intent Check**: If a mountain declares beneficiaries, is this intentional FSM authoring? Verify the story has at least one omega variable documenting the natural-law vs. constructed ambiguity (required by schema). If beneficiaries were declared by mistake on a genuine natural law, remove them.
 * [ ] **Threshold Accuracy**: Mountains ε ≤ 0.25, suppression ≤ 0.05. Snares ε ≥ 0.46, suppression ≥ 0.60, χ ≥ 0.66.
 * [ ] **Mountain NL Profile**: If claiming mountain, includes `base_properties.accessibility_collapse` ≥ 0.85, `base_properties.resistance` ≤ 0.15, and `base_properties.emerges_naturally: true`. Without all three, the NL certification chain fails and the mountain metric gate does not fire.
 * [ ] **Index Completeness**: Do your perspectives use the expanded 2026 values (e.g., `arbitrage`, `civilizational`)?
@@ -592,7 +605,7 @@ The corpus needs balanced representation across all six types. When choosing sce
 | **Snare** (needed) | Debt traps, predatory lending, coercive labor, monopolistic extraction, surveillance systems | ε ≥ 0.46, suppression ≥ 0.60, χ ≥ 0.66 | victims required |
 | **Inter-institutional** (NEW, needed) | Regulatory capture, trade agreements, sanctions, church/state, union/management | Varies by institutional perspective | Multiple institutional perspectives + overrides |
 | **Same-level lateral** (NEW, needed) | Peer manipulation, communal narcissism, workplace gatekeeping, interstate regulatory arbitrage, norm-setting | Varies by actor perspective | Differentiated exit_options + beneficiary/victim per actor |
-| **Mountain** (well-covered, needs NL metrics) | Mathematical theorems, physical laws, logical limits | ε ≤ 0.25, suppression ≤ 0.05, accessibility_collapse ≥ 0.85, resistance ≤ 0.15, emerges_naturally | No beneficiary/victim needed |
+| **Mountain** (well-covered, needs NL metrics) | Mathematical theorems, physical laws, logical limits | ε ≤ 0.25, suppression ≤ 0.05, accessibility_collapse ≥ 0.85, resistance ≤ 0.15, emerges_naturally | No beneficiary/victim needed for genuine natural laws. False-summit candidates: declare beneficiaries + add omegas (triggers FSM). |
 | **Rope** (well-covered) | Standards, protocols, cooperative agreements, coordination mechanisms | ε ≤ 0.45, χ ≤ 0.35 | beneficiaries; victims usually absent |
 | **Piton** (well-covered) | Degraded institutions, vestigial regulations, theatrical compliance | ε ≤ 0.25, theater ≥ 0.70 | victims possible; beneficiaries unlikely |
 | **Interpersonal dynamics** (NEW, needed) | Abusive relationships, mentorship dynamics, family structures, therapeutic boundaries, cult dynamics, community bonds | Varies by decomposed story; expect constraint families of 2–4 linked stories | identity_locked exit, attachment_coordination or identity_coordination type, cyclical measurements, suppression ambiguity omegas |

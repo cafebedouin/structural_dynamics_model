@@ -619,6 +619,49 @@ def _phase_omega_enrichment(progress):
 
 
 # ---------------------------------------------------------------------------
+# Phase 9: CROSS-CONSTRAINT ANALYSIS (parallel 9a, then sequential 9b)
+# ---------------------------------------------------------------------------
+
+def _phase_cross_constraint(progress, parallel):
+    """Phase 9a: scenario convergence + omega cross-constraint (parallel)."""
+    if progress:
+        progress("pipeline", "[XCON] Running cross-constraint analyses...")
+
+    def _scenario():
+        import scenario_convergence
+        scenario_convergence.run()
+
+    def _omega_xcon():
+        import omega_cross_constraint
+        omega_cross_constraint.run()
+
+    tasks = [
+        ("scenario_convergence",   _scenario),
+        ("omega_cross_constraint",  _omega_xcon),
+    ]
+    results = _run_parallel(tasks, progress, parallel)
+
+    if progress:
+        ok = sum(1 for r in results if r.status == "ok")
+        progress("pipeline", f"[XCON] Done ({ok}/{len(results)} succeeded).")
+
+    return results
+
+
+def _phase_evaluative_convergence(progress):
+    """Phase 9b: evaluative convergence synthesis (sequential, always runs)."""
+    if progress:
+        progress("pipeline", "[EVAL] Running evaluative convergence synthesis...")
+
+    def _eval():
+        import evaluative_convergence
+        evaluative_convergence.main()
+
+    result = _run_step("evaluative_convergence", _eval, progress)
+    return [result]
+
+
+# ---------------------------------------------------------------------------
 # Main pipeline
 # ---------------------------------------------------------------------------
 
@@ -698,6 +741,14 @@ def run_pipeline(
 
     # Phase 8: OMEGA ENRICHMENT (sequential)
     collect(_phase_omega_enrichment(progress))
+
+    # Phase 9: CROSS-CONSTRAINT ANALYSIS (depends on enriched_pipeline.json)
+    if (OUTPUTS_DIR / "enriched_pipeline.json").exists():
+        collect(_phase_cross_constraint(progress, parallel))
+        collect(_phase_evaluative_convergence(progress))
+    else:
+        if progress:
+            progress("pipeline", "[XCON] Skipping (enriched_pipeline.json missing).")
 
     pipeline_result.total_duration_s = time.time() - t0
 
