@@ -106,30 +106,17 @@
 :- use_module(config).
 
 % ============================================================================
-% STANDARD CONTEXTS (local copy)
+% SITE CONTEXTS (v2.0)
 % ============================================================================
-% Same four canonical contexts as drl_core.pl and drl_modal_logic.pl.
-% Defined locally because neither module exports standard_context/1.
-
-standard_context(context(agent_power(powerless),
-                        time_horizon(biographical),
-                        exit_options(trapped),
-                        spatial_scope(local))).
-
-standard_context(context(agent_power(moderate),
-                        time_horizon(biographical),
-                        exit_options(mobile),
-                        spatial_scope(national))).
-
-standard_context(context(agent_power(institutional),
-                        time_horizon(generational),
-                        exit_options(arbitrage),
-                        spatial_scope(national))).
-
-standard_context(context(agent_power(analytical),
-                        time_horizon(civilizational),
-                        exit_options(analytical),
-                        spatial_scope(global))).
+% Local standard_context/1 clauses removed. gauge_orbit/2 and
+% preserved_under_context_shift/2 now delegate to
+% constraint_indexing:site_contexts/1, which defaults to the 4 canonical
+% contexts and is configurable (see site_contexts_product/1).
+%
+% NOTE: drl_core.pl retains its own standard_context/1 fixed at 4 canonical
+% contexts for classification semantics (snare_immutability_check/1,
+% dr_mismatch/4). That predicate is intentionally NOT shared with the
+% measurement site — see constraint_indexing.pl SITE CONTEXTS section.
 
 /* ================================================================
    SECTION 1: GAUGE ORBIT & CONSISTENCY CONDITION
@@ -155,8 +142,9 @@ standard_context(context(agent_power(analytical),
 %  OrbitPoints = [orbit_point(Type, Context), ...]
 %  Sorted for stable comparison.
 gauge_orbit(C, OrbitPoints) :-
+    constraint_indexing:site_contexts(Contexts),
     findall(orbit_point(Type, Ctx),
-            (standard_context(Ctx),
+            (member(Ctx, Contexts),
              drl_core:dr_type(C, Ctx, Type)),
             Points),
     sort(Points, OrbitPoints).

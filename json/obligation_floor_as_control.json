@@ -1,0 +1,228 @@
+{
+  "header": {
+    "constraint_id": "obligation_floor_as_control",
+    "version": "1.0",
+    "generated_date": "2025-01-02",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "oblig"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Obligation Floor as Labor Control Mechanism",
+    "topic_domain": "political_economy/consumer_finance/social_control",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.58,
+    "beneficiaries": [
+      "creditor_class",
+      "employers_in_tight_labor_markets"
+    ],
+    "victims": [
+      "indebted_workers",
+      "labor_organizing_capacity"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Indebted Worker (Immediate Horizon)",
+      "comment": "PERSPECTIVE 1: INDEBTED WORKER / IMMEDIATE HORIZON (SNARE) \u2014 Trapped by monthly payment obligations with no exit option at immediate time scale. Cannot miss rent, car payment, or minimum credit card payment without cascading consequences. Experiences maximum extraction: the obligation floor eliminates all negotiating leverage with employer because walking away from exploitative conditions means defaulting on debts. The coordination function (access to housing, transportation, consumption smoothing) is invisible at this time scale \u2014 only the binding constraint is salient."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Indebted Worker (Biographical Horizon)",
+      "comment": "PERSPECTIVE 2: INDEBTED WORKER / BIOGRAPHICAL HORIZON (TANGLED ROPE) \u2014 At biographical time scale, the worker can see both the coordination function (credit enabled home purchase, education, vehicle ownership that increased earning capacity) and the extraction mechanism (debt service reduces savings, limits job mobility, suppresses wage demands). Constrained exit: can refinance, consolidate, or slowly pay down debt, but cannot escape the structural position without years of discipline or windfall. Mixed experience: genuine benefits received alongside genuine costs imposed."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Creditor Class",
+      "comment": "PERSPECTIVE 3: CREDITOR CLASS (ROPE) \u2014 Experiences the constraint as pure coordination: extending credit enables consumption, homeownership, and economic activity that would not otherwise occur. The labor control effect is an externality from this perspective, not the primary function. Arbitrage exit: can shift capital to other lending markets, other asset classes, or other jurisdictions with minimal friction. Net beneficiary: extraction flows toward creditors through interest payments and through the secondary labor market effect (indebted workers accept lower wages, increasing corporate profits and equity returns)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Employers in Tight Labor Markets",
+      "comment": "PERSPECTIVE 4: EMPLOYERS IN TIGHT LABOR MARKETS (ROPE) \u2014 Benefit from reduced worker bargaining power without directly imposing the constraint. The obligation floor is a coordination mechanism from this perspective: workers with fixed costs are more reliable (lower turnover, higher attendance) and more compliant (lower strike participation, fewer demands). Employers experience this as a labor market feature that reduces hiring and retention costs. Arbitrage exit: can relocate to jurisdictions with different household debt profiles or automate positions if labor costs rise."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Labor Organizing Coalitions",
+      "comment": "PERSPECTIVE 5: LABOR ORGANIZING COALITIONS (TANGLED ROPE) \u2014 Organized labor sees both the coordination function (credit access enables working-class homeownership and consumption) and the extraction mechanism (debt service suppresses strike funds, reduces worker willingness to risk job loss, fragments class solidarity). Constrained exit: can advocate for debt jubilee, stronger bankruptcy protections, or wage increases that outpace debt service, but cannot eliminate the structural constraint without political power that the constraint itself suppresses. Generational time horizon: sees the historical shift from pension-based to debt-based working-class security as a deliberate substitution that increased capital's leverage."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Financial Reform Coalitions",
+      "comment": "PERSPECTIVE 6: FINANCIAL REFORM COALITIONS (SCAFFOLD) \u2014 Organized reformers (consumer protection advocates, progressive policy groups, some regulators) see the obligation floor as a temporary coordination failure with a policy sunset: stronger bankruptcy protections, student debt cancellation, medical debt elimination, and public housing expansion would reduce the binding constraint without eliminating credit access. Mobile exit: coalition members can shift focus to other reform domains if this one proves intractable. Sees the constraint as solvable through institutional redesign rather than inherent to credit markets."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, the obligation floor exhibits both genuine coordination (credit markets enable intertemporal consumption smoothing and capital formation) and structural extraction (the specific institutional design \u2014 non-dischargeable student debt, medical debt from privatized healthcare, housing costs from undersupply \u2014 creates binding constraints that suppress labor power beyond what credit access requires). The analytical classification is Tangled Rope because the constraint genuinely solves a coordination problem (intertemporal resource allocation) while embedding asymmetric extraction (creditor and employer leverage over workers). This is the basis for the claimed_type."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "counterfactual_credit_access",
+      "question": "Would alternative credit structures (public banking, zero-interest social credit, universal basic services) provide equivalent consumption smoothing and capital access without the labor control effect?",
+      "resolution_mechanism": "Comparative analysis of labor market outcomes in jurisdictions with public banking systems (North Dakota, German Sparkassen, Singaporean HDB housing loans) vs. private credit-dependent systems; controlled experiments with UBI/UBS pilots measuring job mobility and wage demands",
+      "impact": "If alternatives provide equivalent coordination: the labor control effect is extractive overhead, not inherent cost, strengthening Snare classification from worker perspective. If alternatives fail: the obligation floor may be closer to genuine coordination cost, strengthening Rope classification from creditor perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative credit structures can provide coordination without labor control"
+    },
+    {
+      "id": "debt_threshold_nonlinearity",
+      "question": "Is there a debt-to-income threshold below which the labor control effect disappears, or is the relationship linear across the full range?",
+      "resolution_mechanism": "Regression analysis of household debt-to-income ratio against labor market exit rates, strike participation, and wage growth, controlling for industry, geography, and skill level; identification of potential threshold effects or nonlinearities",
+      "impact": "If threshold exists: low-debt households experience Rope (genuine coordination), high-debt households experience Snare (binding constraint), suggesting the constraint type is debt-level dependent. If linear: the extraction mechanism operates at all debt levels, just with varying intensity.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether labor control effect has a debt-to-income threshold or is linear"
+    },
+    {
+      "id": "employer_awareness",
+      "question": "Do employers consciously factor worker debt levels into wage-setting and working conditions, or is the labor control effect an emergent property of worker behavior that employers passively benefit from?",
+      "resolution_mechanism": "Analysis of internal HR documents, wage-setting models, and employer surveys; investigation of whether firms in high-household-debt regions systematically offer lower wages or worse conditions than firms in low-debt regions for equivalent positions",
+      "impact": "If conscious: the constraint is actively enforced extraction (Snare from worker perspective, deliberate strategy from employer perspective). If emergent: the constraint is a structural feature that employers benefit from without designing (Tangled Rope from both perspectives, with employers as incidental beneficiaries).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether employers consciously exploit worker debt or passively benefit"
+    },
+    {
+      "id": "historical_contingency",
+      "question": "Is the current obligation floor level (median US household debt-to-income ~1.5x) a stable equilibrium or a historically contingent outcome of specific policy choices (bankruptcy reform, student loan non-dischargeability, healthcare privatization, housing undersupply)?",
+      "resolution_mechanism": "Historical analysis of household debt levels across different policy regimes; cross-national comparison of debt-to-income ratios under different institutional structures; identification of policy interventions that shifted equilibrium debt levels",
+      "impact": "If contingent: the constraint is a constructed Snare that could be dismantled through policy reversal, validating Scaffold perspective. If equilibrium: the constraint reflects deeper structural features of credit markets, validating Mountain-adjacent interpretation (though beneficiary presence rules out true Mountain).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether current debt levels are equilibrium or policy-contingent"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22,
+      "id_override": "oblig_extract_1980"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.28,
+      "id_override": "oblig_extract_1990"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.33,
+      "id_override": "oblig_extract_2000"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.36,
+      "id_override": "oblig_extract_2010"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.38,
+      "id_override": "oblig_extract_2020"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "oblig_theater_1980"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38,
+      "id_override": "oblig_theater_1990"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.42,
+      "id_override": "oblig_theater_2000"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.45,
+      "id_override": "oblig_theater_2010"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.48,
+      "id_override": "oblig_theater_2020"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "The obligation floor constraint describes how fixed monthly debt obligations (mortgage/rent, car payments, student loans, credit cards, medical debt) convert worker optionality into creditor and employer leverage by creating non-negotiable baseline costs. A worker with $2000/month in fixed obligations cannot walk away from a job paying $3000/month even if conditions are exploitative, cannot participate in a strike that risks termination, and cannot demand higher wages if the threat of job loss means defaulting on debts. The constraint operates at multiple scales: individual (household budget), institutional (labor market dynamics), and civilizational (the shift from pension-based to debt-based working-class security). The primary observable is the correlation between household debt-to-income ratio and labor market exit rates: higher debt predicts lower job mobility, lower strike participation, and slower wage growth, controlling for industry and skill level. The constraint exhibits genuine coordination function (credit enables consumption smoothing, homeownership, education investment) alongside asymmetric extraction (debt service suppresses labor power, transfers wealth to creditors, and increases employer leverage). The theater_ratio (0.48) reflects the gap between the stated purpose of consumer credit (enabling opportunity and economic mobility) and its structural function (binding workers to employment regardless of conditions). The ratio has increased over the 40-year interval as credit access expanded while bankruptcy protections weakened, student debt became non-dischargeable, and medical debt proliferated.",
+    "key_agents": [
+      "Indebted Workers: Primary victims (powerless/trapped at immediate horizon, moderate/constrained at biographical horizon) \u2014 bear the extraction through suppressed wages, reduced mobility, and inability to refuse exploitative conditions",
+      "Creditor Class: Primary beneficiaries (institutional/arbitrage) \u2014 extract through interest payments and benefit from secondary labor market effects (lower wages increase corporate profits)",
+      "Employers in Tight Labor Markets: Secondary beneficiaries (institutional/arbitrage) \u2014 benefit from reduced worker bargaining power without directly imposing the debt constraint",
+      "Labor Organizing Capacity: Abstract victim (powerless/trapped) \u2014 collective action capacity suppressed by individual debt burdens; cannot organize effectively when members cannot risk job loss",
+      "Labor Organizing Coalitions: Organized agents (organized/constrained) \u2014 see both coordination and extraction; constrained by the political power that debt itself suppresses",
+      "Financial Reform Coalitions: Organized agents (organized/mobile) \u2014 see the constraint as solvable through policy redesign; can shift focus to other reform domains",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 identifies the constraint as Tangled Rope, exhibiting genuine coordination function with embedded asymmetric extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint extracts through multiple channels: direct wealth transfer via interest payments (creditor extraction), suppressed wage growth due to reduced worker bargaining power (employer extraction), and reduced labor mobility (both creditor and employer extraction). However, extraction is not maximal because the constraint does provide genuine coordination value \u2014 credit access enables consumption smoothing, homeownership, and education investment that increase worker welfare and productivity. The value (0.38) reflects that roughly 40% of the constraint's effect is extractive overhead beyond what coordination requires, based on the gap between interest rates and risk-adjusted cost of capital, the labor market power effect, and the wealth transfer from debtors to creditors. Suppression (0.62): Moderate-high. Significant barriers to exit include: non-dischargeable student debt (bankruptcy reform), medical debt from privatized healthcare (no public option), housing costs from undersupply (zoning restrictions), and the immediate consequences of default (credit score damage, eviction, repossession). However, suppression is not total \u2014 some workers can refinance, consolidate, pay down debt, or access family support. The value reflects that most indebted workers face high but not insurmountable barriers to reducing their obligation floor. Theater_ratio (0.48): Moderate. The gap between stated purpose (economic opportunity, mobility, homeownership) and structural function (labor control, wealth extraction) is significant but not dominant. Consumer credit does enable genuine opportunity for many households \u2014 the theater is in the framing of debt as purely empowering rather than as a double-edged mechanism that both enables and constrains. The ratio has increased as credit access expanded while protections weakened, making the opportunity framing less accurate over time.",
+    "directionality_logic": "Indebted workers are victims with trapped or constrained exit options depending on time horizon, yielding high directionality values and high experienced extraction. At immediate time scale (trapped exit), the worker experiences maximum extraction \u2014 the obligation floor eliminates all negotiating leverage. At biographical time scale (constrained exit), the worker can see both costs and benefits, experiencing moderate extraction. Creditor class and employers are beneficiaries with arbitrage exit options, yielding low directionality values and low or negative experienced extraction \u2014 they benefit from the constraint through interest payments and labor market effects. Labor organizing coalitions are victims (the constraint suppresses their primary function) but with organized power and constrained exit, yielding moderate directionality and moderate experienced extraction. Financial reform coalitions are not direct victims (they are advocates rather than indebted workers themselves) and have mobile exit options, yielding low directionality and low experienced extraction \u2014 they see the constraint as a solvable policy problem. The analytical observer uses the canonical analytical directionality, experiencing moderate extraction that reflects the constraint's mixed coordination-extraction character.",
+    "perspectival_gap": "The constraint demonstrates how structural position determines classification. Indebted workers at immediate time scale see pure extraction (Snare) \u2014 the obligation floor is a binding constraint with no visible coordination function. The same workers at biographical time scale see mixed coordination and extraction (Tangled Rope) \u2014 credit enabled homeownership and education, but debt service now suppresses wages and mobility. Creditors see pure coordination (Rope) \u2014 they are solving the legitimate problem of intertemporal resource allocation, and the labor control effect is an externality. Employers see coordination (Rope) \u2014 workers with fixed costs are more reliable and compliant, reducing hiring and retention costs. Labor organizing coalitions see Tangled Rope \u2014 credit access benefits workers but debt burdens suppress collective action. Financial reform coalitions see Scaffold \u2014 the constraint is a solvable policy problem with a sunset path through institutional redesign. The analytical observer sees Tangled Rope as the structural reality \u2014 genuine coordination function with embedded asymmetric extraction. The perspectival gap is not a disagreement about facts but a difference in what aspects of the constraint are salient from each structural position.",
+    "mandatrophy_analysis": "The constraint resolves the mandatrophy by demonstrating that Tangled Rope is the correct analytical classification when a constraint exhibits BOTH genuine coordination function AND asymmetric extraction. The creditor perspective (Rope) is not wrong about the coordination function \u2014 credit markets do enable intertemporal consumption smoothing and capital formation. The worker perspective at immediate time scale (Snare) is not wrong about the extraction mechanism \u2014 debt obligations do suppress labor power and transfer wealth to creditors. The analytical resolution is that both are true simultaneously: the constraint coordinates (enabling consumption and investment that would not otherwise occur) while extracting (suppressing wages, reducing mobility, transferring wealth). The Tangled Rope classification captures this duality. The constraint is NOT a Rope that workers misperceive as a Snare due to limited information, nor is it a Snare that creditors misrepresent as a Rope through ideological cover. It is structurally both, and the classification system must accommodate constraints that genuinely serve dual functions. The mandatrophy is resolved by recognizing that coordination and extraction are not mutually exclusive \u2014 a constraint can do both, and Tangled Rope is the type that names this structural reality."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "healthcare_cost_trap",
+      "student_debt_non_dischargeability",
+      "housing_undersupply_rent_extraction",
+      "bankruptcy_reform_creditor_priority"
+    ],
+    "dual_formulation_note": "The obligation floor is a composite constraint that emerges from the interaction of multiple institutional constraints: non-dischargeable student debt, medical debt from privatized healthcare, housing costs from undersupply, and weakened bankruptcy protections. Each of these upstream constraints has its own extractiveness value reflecting its specific institutional design. The obligation floor represents the aggregate effect: the sum of fixed monthly obligations that bind workers to employment. The network edges indicate that changes to any upstream constraint (e.g., student debt cancellation, public healthcare, housing supply expansion, bankruptcy reform) would reduce the obligation floor's binding force."
+  },
+  "directionality_overrides": []
+}

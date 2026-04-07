@@ -1,4 +1,6 @@
-## UKE_THINK v1.0 [Universal Knowledge Evaluator — Philosophical Writing Protocol]
+# UKE_THINK v1.1 [Universal Knowledge Evaluator — Philosophical Writing Protocol]
+
+---
 
 ### §0. FOUNDATION
 
@@ -24,6 +26,40 @@ UKE_THINK assumes UKE_DISCUSSION's craft disciplines (System Architect voice, SC
 UKE_THINK replaces UKE_W's investigative machinery (institutional actions, source quality hierarchy, Mode A/B scaffolding) with philosophical equivalents. It inherits UKE_W's adversarial spine (assume intelligent opposition, survive criticism, degrade gracefully). It inherits MCK's grounding discipline (distinguish observable from constructed) as felt practice, not displayed format.
 
 UKE_THINK does not require constraint stories, Prolog diagnostics, or multi-model synthesis. It must produce defensible, readable philosophy from a conversation and a writer's own reasoning. Everything else is optional amplification.
+
+---
+
+### §0.5. PRE-DRAFT DIAGNOSTIC
+
+Run this before writing begins. A structurally perfect essay built on a misdiagnosed problem fails before it starts.
+
+#### The Five Sequencing Questions (from Minto, adapted)
+
+Answer these in order. You cannot answer (4) or (5) without having answered (2) and (3).
+
+1. What is the problem?
+2. Where does it lie?
+3. Why does it exist?
+4. What could be done about it?
+5. What should be done about it — and for whom?
+
+The answer to (3) determines the complication type below. Do not proceed to (4) until (3) is answered.
+
+#### Complication Type Classification
+
+State which type of problem the essay's central complication is:
+
+**Type A — Frame Drift.** The problem exists because a reference frame has been shifting without acknowledgment. The situation changed while someone was measuring it; terms are being used as if stable while their meaning mutates; a criterion is toggling unmarked. *Resolution: reframe. Fix the frame, declare the shift, or name which criterion is active.* Essays solving Type A problems argue for a better frame.
+
+**Type B — Broken Axioms.** The problem is structural — the model being used is wrong, not just incomplete. No amount of better data, clearer definition, or more careful argument resolves it. The axiom needs replacing. *Resolution: model revision.* Essays solving Type B problems argue for a different foundation. Note: the strongest opposition to a Type B essay will often be a Type A reclassification — "you just need to adjust the existing framework." Address this preemptively.
+
+**Type C — Underspecified Question.** The apparent problem dissolves when you specify the index — who the claim serves, from which position, at which power level. The question is wearing one face but asking two or more distinct questions. *Resolution: disambiguation or splitting.* Essays solving Type C problems argue that the debate is misjoined, not that one side is right.
+
+**Declare the type in UKE_META.** If you cannot classify the complication in one sentence, that is the first problem the essay needs to solve.
+
+#### The Same-Kind-of-Idea Check (from Minto)
+
+Once you have your key line points — the two to five claims that directly support your answer — verify they are the same kind of thing. If they are not, you are probably running two Type C questions as one essay. Split them or resolve the indexical ambiguity before proceeding.
 
 ---
 
@@ -75,6 +111,11 @@ Write as if a smart, knowledgeable, genuinely charitable critic will read every 
 * Distinguishes "I can't think of a counterexample" from "no counterexample exists"
 * Checks whether prescriptions serve everyone they claim to serve
 * Asks what the framework looks like from positions the writer hasn't occupied
+* Attempts to reclassify the essay's complication type (see §2.5)
+
+**The Weight Check.** Ask whether this argument is position-invariant or locally coherent. A locally coherent argument holds clearly from the position generating it and dissolves when viewed from structurally opposing positions — it assigns legible roles, delivers resolution, and asks nothing of its carrier except repetition. A position-invariant argument survives frame rotation: it holds mechanistically from every relevant vantage point, even when those positions experience it differently. 
+
+Test: could someone with structurally opposing interests use this framework without it flattering their position? If yes, the argument has explanatory reach. If no, name the positional limit explicitly and index the prescription accordingly. Local coherence is not a defect if acknowledged — it becomes a defect when presented as universal. Communicability is prima facie evidence of partiality; if the argument is too easy to carry, ask what it shed to get there.
 
 #### §2.2 Counterarguments Get the Recognition Clause
 
@@ -93,6 +134,8 @@ Ask: if one major claim were disproven, would the entire argument collapse?
 
 Goal: graceful degradation. The argument gets weaker if attacked, not shattered.
 
+**Convergence as evidence.** When the same claim has been reached independently from multiple distinct entry points — different disciplines, different methods, different starting premises — that convergence is meaningful. Note it where it exists. A claim that emerges from three independent lines of inquiry is structurally more robust than one that emerges from one, even if the surface argument is equally clean.
+
 #### §2.4 The Recursion Test
 
 Before making any critical claim about other frameworks, positions, or thinkers, check whether the criticism is honest or weaponized. Inherited from UKE_OPINION §1.9:
@@ -101,6 +144,16 @@ Before making any critical claim about other frameworks, positions, or thinkers,
 * **Weaponized criticism** takes honest admission and reframes it as fatal flaw, demands the framework solve problems beyond its scope, would invalidate all work in the category if applied consistently, or creates unfalsifiable objections.
 
 **Test:** Apply the criticism to analogous work you respect. If it still applies but you'd never make it about that work, you're weaponizing.
+
+#### §2.5 The Strategic Misclassification Test
+
+Before finalizing the adversarial section, ask: is the opposition's strongest move a *reclassification* of the essay's complication type?
+
+* Would they argue this is Type A (the frame just needs adjusting) when the essay treats it as Type B (the model is broken)?
+* Would they argue this is Type C (you're answering the wrong question) when the essay treats it as Type A (you're using the wrong frame)?
+* Would they perform a Type A fix — visible incremental revision — in response to a Type B objection, then declare the matter resolved?
+
+If the strongest opposition move is a reclassification, engage it directly. Classification is contested terrain: whoever controls the complication type controls the resolution criteria. Evidence marshaling will not address a reclassification move; the classification dispute must be argued on its own terms. Name the substitution and explain why the Type B (or A, or C) reading is correct.
 
 ---
 
@@ -131,9 +184,9 @@ When the essay encounters an apparent contradiction, unresolvable tension, or co
 
 Every essay has open questions. The debugging discipline requires classifying them before presenting them to the reader. The reader deserves to know what kind of not-knowing they're facing:
 
-* **Empirically resolvable** (collect data, run the test, the question has a determinate answer we don't yet have)
-* **Conceptually underspecified** (specify the index and the apparent puzzle dissolves into position-dependent answers)
-* **Structurally irresolvable** (genuine Type B tension requiring containment, not resolution)
+* **Ω_E — Empirically resolvable** (collect data, run the test, the question has a determinate answer we don't yet have). Corresponds to Type A resolution: fix the measurement, close the frame.
+* **Ω_C — Conceptually underspecified** (specify the index and the apparent puzzle dissolves into position-dependent answers). Corresponds to Type C resolution: disambiguate the question.
+* **Ω_P — Structurally irresolvable** (genuine Type B tension requiring containment, not resolution; or a values question that requires stakeholder decision, not analysis).
 
 An unresolved question presented without classification is an undebugged paradox. The essay is leaving the reader to do work the writer should have done.
 
@@ -235,10 +288,12 @@ Most protocol tensions are Type C. Specify the index. The paradox dissolves. Wha
 
 Before the essay is complete, verify:
 
+- [ ] **Classification:** Is the central complication's type declared (A/B/C)? Is the resolution strategy matched to it? Has the opposition's most likely reclassification move been addressed?
 - [ ] **Grounding:** Can I feel the confidence gradient? Do established findings, synthetic claims, and speculative extensions *read* differently?
 - [ ] **Adversarial:** Does the strongest counterargument land a genuine blow before the response arrives?
+- [ ] **Weight:** Does the argument survive frame rotation, or is it locally coherent? If locally coherent, is the positional limit named?
 - [ ] **Brittleness:** If one major claim falls, does the rest still stand?
-- [ ] **Debugging:** Is every unresolved question classified (empirical / underspecified / structural)?
+- [ ] **Debugging:** Is every unresolved question classified (Ω_E / Ω_C / Ω_P)?
 - [ ] **Beneficiary:** Does every prescription name who it serves and who it doesn't?
 - [ ] **Gauge:** Are gauge-variant claims mapped perspectivally, not presented as universal?
 - [ ] **Scope:** Are extensions beyond the evidence base flagged?
@@ -252,9 +307,10 @@ Before the essay is complete, verify:
 
 ```
 [UKE_META]
-protocol: UKE_THINK v1.0
+protocol: UKE_THINK v1.1
 voice: System Architect (with licensed first-person in prescriptive sections)
 scope: [1-sentence boundary declaration]
+complication_type: [A / B / C] — [1-sentence justification]
 confidence_gradient: [which sections are bedrock / synthetic / speculative]
 concept_budget: [count of novel terms introduced, each justified]
 
@@ -266,16 +322,21 @@ concept_budget: [count of novel terms introduced, each justified]
 - Introduction follows SCQA (implicit or explicit)
 - Confidence gradient visible in prose behavior
 - Counterarguments receive Recognition Clause treatment
+- Strategic reclassification move addressed directly
 - Prescriptions include beneficiary analysis at point of prescription
-- Unresolved questions classified by type (empirical / underspecified / structural)
+- Unresolved questions classified by type (Ω_E / Ω_C / Ω_P)
 - Closing line survives beneficiary analysis}
 
 ### Open Questions (Ω)
-Ω: [Label] — [Classification: empirical / underspecified / structural] — [Specific question]
+Ω_E: [Label] — Empirically resolvable — [Specific question and what measurement would resolve it]
+Ω_C: [Label] — Conceptually underspecified — [Specific question and what index specification would dissolve it]
+Ω_P: [Label] — Structurally irresolvable / preference-dependent — [Specific tension and who holds decision authority]
 
 [QUALITY GATES]
+Classification: [Pass/Fail — state type and confirm resolution strategy matches]
 Grounding: [Pass/Fail]
 Adversarial: [Pass/Fail — name the blow that lands]
+Weight: [Pass/Fail — position-invariant or local; if local, limit named]
 Brittleness: [Pass/Fail — independent evidence lines count]
 Debugging: [Pass/Fail — unresolved questions classified]
 Beneficiary: [Pass/Fail — prescriptions indexed]
@@ -300,11 +361,15 @@ Status: [Draft complete / Ready for editing / etc.]
 
 **F-PRO-FORMA-ENGAGEMENT.** Counterarguments stated and immediately dismissed without letting them land a blow. Fix: write the counterargument as if you believe it. If that's easy, you haven't found the strong version.
 
+**F-MISROUTED-RESOLUTION.** The essay engages genuinely with a Type A version of an objection while the actual objection is Type B or C. Looks like honest engagement; accomplishes nothing, because the resolution strategy doesn't match the problem type. Institutions do this systematically: visible incremental revision in response to structural critique, then declaring the matter resolved. Fix: before finalizing each counterargument response, classify the objection type and verify the response is typed correctly. If the key line points are not the same kind of thing, you are probably running two Type C questions as one — split them.
+
 **F-CONCEPT-INFLATION.** New terminology introduced to create the appearance of precision or depth. Fix: apply Parfit test. If the claim survives translation to plain language without loss, the jargon is decorative.
 
-**F-UNDEBUGGED-PARADOX.** Unresolved question presented as deep mystery without classifying whether it's empirically resolvable, indexically underspecified, or structurally irresolvable. Fix: run the three-type diagnostic. Tell the reader what kind of not-knowing this is.
+**F-UNDEBUGGED-PARADOX.** Unresolved question presented as deep mystery without classifying whether it is Ω_E (empirically resolvable), Ω_C (indexically underspecified), or Ω_P (structurally irresolvable / preference-dependent). Fix: run the three-type diagnostic. Tell the reader what kind of not-knowing this is.
 
 **F-FRAME-DRIFT.** Key terms shift meaning across sections without marking the shift. Fix: trace terms through the essay. If operational meaning changes, either fix the frame or declare the shift.
+
+**F-LOCAL-STORY.** The essay's argument is coherent from the position generating it but dissolves under frame rotation — it assigns legible roles, delivers resolution, and sheds the structural complexity that would let it account for what opposing positions actually encounter. Easy to carry; low explanatory reach. Fix: apply the weight check. If the argument cannot survive from structurally opposing positions, name the positional limit. Communicability is prima facie evidence of partiality.
 
 **F-SCAFFOLDING-LEAK.** Framework vocabulary (tier labels, confidence scores, protocol names, DR terminology) appearing in the prose. Fix: the framework shapes the analysis. The prose stands on its own evidence. A reader who has never heard of the protocol should encounter the insights as observations, not as outputs of a system.
 
@@ -314,26 +379,48 @@ Status: [Draft complete / Ready for editing / etc.]
 
 ### §11. VERSION NOTES
 
-**v1.0 — Initial Release**
+**v1.1 — Routing Edition**
 
-**Built from:**
+**Changes from v1.0:**
+
+- **§0.5 (new): Pre-Draft Diagnostic.** Minto's five sequencing questions adapted as a pre-writing discipline; complication type classification (A/B/C) required before drafting begins; same-kind-of-idea check at the key line level.
+- **§2.1: Weight Check added.** Position-invariance test from *The Structural Weight of Truth*: does the argument survive frame rotation, or is it locally coherent? Communicability as prima facie evidence of partiality.
+- **§2.3: Convergence as evidence added.** When the same claim emerges independently from multiple distinct entry points, note it. Independent convergence is structural robustness.
+- **§2.5 (new): Strategic Misclassification Test.** The opposition's strongest move is often a reclassification of the complication type. Classification is contested terrain; whoever controls the type controls the resolution criteria. Address reclassification moves directly.
+- **§3.2: Omega labels aligned.** Ω_E (empirically resolvable) / Ω_C (conceptually underspecified) / Ω_P (structurally irresolvable / preference-dependent) made explicit, with correspondence to Type A/C/B noted.
+- **§8: Classification gate added.** New first quality gate: is the complication type declared and does the resolution strategy match it?
+- **§9: UKE_META updated.** `complication_type` field added. Omega log updated to use Ω_E / Ω_C / Ω_P labels. `Weight` gate added to quality gates.
+- **§10: Two new antipatterns.**
+  - F-MISROUTED-RESOLUTION: engaging with a Type A objection when the actual objection is Type B or C.
+  - F-LOCAL-STORY: argument coherent from generating position but dissolving under frame rotation; shed structural complexity for propagation fitness.
+
+**What did not change:** The core architecture — grounding discipline, adversarial spine, beneficiary analysis, gauge-variance, debugging discipline, craft integration — is unchanged. The v1.1 additions are pre-draft and adversarial extensions, not structural revisions.
+
+**The insight driving v1.1:** Classification is not merely diagnostic — it is the contested terrain of argument. The primary failure mode is not misidentifying facts but misrouting resolution strategies. A Type B objection met with a Type A fix is resolved on paper and untouched in practice. Making the classification explicit before writing begins, and defending it as a first-order claim, closes this gap.
+
+**Built from (v1.0 sources, unchanged):**
 - MCK v1.6: Grounding protocol, multi-perspective mandate, confidence calibration, omega discipline, Reality Invariant
 - UKE_DISCUSSION v1.4: System Architect voice, SCQA, Recognition Clause, Semantic Spine, One-Inch Frame, Reader-Burden Governor
 - UKE_OPINION v1.3: Evidence ladder, counterfactual test, frame decision, recursion test, punching direction
-- UKE_W v2.1: Simpler explanation requirement, adversarial verification, brittleness test, graceful degradation, beneficiary analysis (extracted from DR constraint analysis and generalized)
+- UKE_W v2.1: Simpler explanation requirement, adversarial verification, brittleness test, graceful degradation, beneficiary analysis
 - Debugging Philosophy: Type A/B/C paradox classification as self-diagnostic discipline
 - Deferential Realism Core v4.1: Indexed realism, power-scaling, cover story awareness, containment logic, gauge-variance
 
-**Design principle:** The protocol must work from a conversation and a writer's own reasoning, without constraint stories, Prolog diagnostics, or multi-model synthesis. Everything else is optional amplification.
+**Added in v1.1:**
+- The Structural Weight of Truth (cafebedouin.org, 2026): position-invariance / local coherence distinction; communicability as prima facie evidence of partiality; weight check
+- Omega Variables framework: Ω_E / Ω_C / Ω_P label alignment
+- Minto Pyramid Principle (cheat sheet): five sequencing questions; same-kind-of-idea key line check
+- Hubris under complexity conversation (2026): routing as the primary failure mode; classification as contested terrain; strategic misclassification as adversarial move
 
-**The key insight that prompted this protocol:** Investigative writing's evidence exists independently of the writer. Philosophical writing's "evidence" is often the writer's own synthesis. The adversarial discipline, perspectival awareness, and confidence calibration must therefore be built into how the writer thinks while drafting — into the writing process itself — not applied as a verification stage afterward.
+**Design principle:** The protocol must work from a conversation and a writer's own reasoning, without constraint stories, Prolog diagnostics, or multi-model synthesis. Everything else is optional amplification.
 
 **Known limitation:** Whether a single writer can hold all these constraints simultaneously during a drafting pass is an empirical question about the writer, not a theoretical question about the protocol. The protocol describes the standard. Meeting it may require multiple passes, external feedback, or pipeline amplification. The protocol is honest about this rather than pretending single-pass perfection is achievable.
 
 ---
 
-**End of UKE_THINK v1.0**
+**End of UKE_THINK v1.1**
 
 **Status:** Draft — pending field testing
 **Purpose:** Produce philosophical prose that is simultaneously defensible, readable, indexed, and self-aware about its own perspectival position
-**Core innovation:** Debugging discipline (Type A/B/C classification) applied reflexively to the essay's own tensions, combined with beneficiary analysis on prescriptive claims and concurrent craft integration
+**Core innovation (v1.0):** Debugging discipline (Type A/B/C classification) applied reflexively to the essay's own tensions, combined with beneficiary analysis on prescriptive claims and concurrent craft integration
+**Core addition (v1.1):** Classification as routing system, not merely taxonomy — declared pre-draft, defended as a first-order claim, tested against strategic reclassification

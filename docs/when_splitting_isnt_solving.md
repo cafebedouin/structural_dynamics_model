@@ -1,0 +1,280 @@
+# When Splitting Isn't Solving: Sheaves, Presheaves, and the Structure of Indexical Disagreement
+
+**cafebedouin@gmail.com**
+
+---
+
+## Abstract
+
+Index specification — declaring *whose* perspective, *when*, *from where* — dissolves a class of philosophical paradoxes by splitting ambiguous queries into multiple consistent answers (Type C resolution). But not all splits are equal. Some produce independent answers that assemble into a global picture: the coin is fair *and* Beauty's self-locating credence is 1/3 — no tension, different questions. Others produce answers that are structurally coupled through a common generative mechanism, where the coupling itself carries information that neither indexed answer contains alone.
+
+This paper formalizes the distinction. Clean splits satisfy the sheaf gluing axiom: local data (per-observer classifications) paste together into a globally consistent assignment. Structured splits violate it: local classifications are individually coherent but globally incompatible, and the incompatibility is not a defect but a measurable signal. The sheaf/presheaf boundary is the formal criterion separating paradoxes that dissolve under index specification from disagreements that survive it — and whose survival structure is the object of study.
+
+We connect this distinction to an existing computational framework (Deferential Realism) where presheaf cohomology (H¹), Arakelov height, and lattice structure analysis already measure the internal geometry of structured splits over a corpus of 3,301 social constraints. A product-site expansion — computing classifications at 156 observer contexts instead of the original 4 — confirms that the binary sheaf/presheaf classification is preserved exactly, with zero crossings in either direction, while revealing a layered internal architecture: power controls the primary sheaf/presheaf boundary, while exit quality and scope level cross classification thresholds within power-level blocks for 89% of manifest presheaves. The connection yields a three-regime classification of post-specification states — genuine sheaf (global agreement), fragile presheaf (apparent agreement, structurally precarious), and manifest presheaf (open disagreement with measurable geometry). This boundary not only refines the Type C class but explains why some perspectival disagreements dissolve socially while others persist as structurally necessary features of power-indexed domains.
+
+**Keywords:** paradoxes, indexicality, sheaf theory, presheaves, observer-dependence, perspectival disagreement, contextuality, power-modulated perception
+
+---
+
+## 1. The Problem: What Happens After You Split the Query?
+
+### 1.1 Type C Resolution and Its Limits
+
+A companion paper (the Debugging Philosophy trifurcation) classifies philosophical paradoxes into three operationally distinct types based on their generative mechanism. Type A paradoxes arise from unmarked drift across reasoning stages and dissolve under frame-fixing. Type B paradoxes arise from axiomatic inconsistency and require system-level revision. Type C paradoxes arise from indexical underspecification — a grammatically singular question packaging multiple distinct queries — and dissolve when the index is specified. The diagnostic test for Type C says: specify the index, get consistent answers, stop.
+
+This paper argues that the instruction to "stop" is premature for a structurally important subclass of Type C paradoxes.
+
+The Sleeping Beauty problem illustrates clean resolution. "What is her credence that the coin landed heads?" maps to two distinct queries. From the objective index: what is the frequency of Heads in the coin's state space? Answer: 1/2. From the self-locating index: given that I am awake, what is the probability I am in a Heads-branch? Answer: 1/3. Once specified, each answer is consistent and complete. The answers do not constrain each other. No structural relationship between the two indices produces either value from the other. They are answers to genuinely different questions wearing the same grammatical mask. (Some philosophers argue these probabilities *are* linked through updating rules and should constrain each other. Readers who accept this may treat Sleeping Beauty as a weakly coupled presheaf rather than a clean sheaf — which strengthens rather than undermines the distinction this paper develops, since it means even fewer Type C paradoxes are genuinely terminal.)
+
+But consider a different kind of split. "Is this non-compete agreement a coordination mechanism or an extraction trap?" Split by observer position, the framework produces:
+
+From the institutional position (employer, directionality d = 0.00), power-scaled extractiveness χ = 0.70 × (−0.12) × 1.0 = −0.08, classifying the constraint as Rope (coordination). From the powerless position (worker, d = 1.00), χ = 0.70 × 1.42 × 0.8 = 0.79, classifying the constraint as Snare (extraction).
+
+These answers are not independent. They are generated by the *same* base extractiveness (ε = 0.70) passing through the *same* sigmoid function at different power positions. The institutional observer *must* classify as coordination when the powerless observer classifies as extraction — this is a theorem of the system, not a contingent finding. The disagreement is not residual ambiguity; it is a structural consequence of how power modulates the perception of extraction.
+
+### 1.2 The Core Question
+
+When index specification produces multiple consistent answers, what determines whether those answers are (a) independent — genuinely different questions, no structural coupling, nothing further to study — or (b) coupled — forced into disagreement by a shared generative mechanism, where the coupling structure is itself informative?
+
+Standard philosophical methodology has no formal criterion for this distinction. The contribution of this paper is to provide one.
+
+**The central claim.** A Type C split is *clean* if and only if the post-specification assignment satisfies the sheaf gluing axiom — local data from each observer position pastes together into a globally consistent classification. It is *structured* if and only if the gluing axiom fails — local classifications are individually coherent but globally incompatible, and the pattern of incompatibility is itself a measurable structural feature of the domain.
+
+More precisely, the sheaf condition is necessary and sufficient for the absence of *gluing-relevant coupling* — coupling that produces incompatible outputs on shared observables. Weak coupling that does not cross classification thresholds may exist without breaking gluing; the criterion tracks disagreement that matters structurally, not all possible dependence between indexed answers.
+
+The sheaf/presheaf boundary is the formal criterion distinguishing dissolvable ambiguity from generative disagreement — and, as we will argue, it formalizes the difference between "there is no view from nowhere" as a philosophical slogan and "there is no view from nowhere" as a measurable structural fact.
+
+Section 2 introduces the sheaf/presheaf criterion and the Coupling Diagnostic. Section 3 shows how an existing computational framework measures gluing failure and presents the product-site stability result. Section 4 draws out implications for paradox theory, observer-dependent classification, and the dynamics of regime transitions. Section 5 states limitations and open questions.
+
+---
+
+## 2. The Sheaf/Presheaf Criterion
+
+### 2.1 Setup
+
+Observer positions are modeled as objects in a category **C** whose morphisms encode structural transitions — gaining power, extending time horizon, acquiring exit options. Classification data — the type assigned to a constraint at each observer position — form a presheaf **F** on this category: an assignment of a classification to each observer context, together with restriction maps describing how classifications transform along transitions between contexts.
+
+The question "does this presheaf glue?" becomes the formal version of "does this disagreement dissolve under specification?"
+
+A technical note for readers unfamiliar with sheaf theory: every sheaf is a presheaf, but not conversely. Presheaves are the more general objects — assignments of data to contexts with restriction maps. Sheaves are presheaves that additionally satisfy the gluing axiom. The question this paper asks is: which presheaves arising from observer-dependent classification actually satisfy that additional condition?
+
+### 2.2 The Gluing Axiom
+
+A presheaf F is a **sheaf** if, whenever local sections (per-observer classifications) agree on overlaps, they paste together into a unique global section — a single classification valid across all positions.
+
+What counts as an overlap? An overlap between two observer positions is any structural feature of the constraint that is accessible from both positions — any shared observable that both observers can evaluate. In the computational framework, overlaps are the observer-independent parameters: base extractiveness ε, suppression level, theater ratio, and structural signatures. These are the features that remain invariant under transitions between observer contexts; they are what the restriction maps preserve. If two observers assign different classifications despite agreeing on all shared observables, the presheaf fails to glue — not because the observers lack information, but because the index-specific transformations (power scaling, scope modification) applied to the same shared data produce incompatible outputs.
+
+Intuitively: if two people agree on every fact they can both check yet still reach opposite conclusions because of where they stand, no single conclusion reconciles them. The gluing axiom fails, and the pattern of failure encodes the structure of their disagreement.
+
+This analysis assumes that the shared parameter vector θ is well-defined and observer-invariant. Observers may disagree about classifications but agree on base facts. If observers also disagree about base facts — if the overlap itself is contested — the framework requires a prior step of establishing shared observables before the Coupling Diagnostic applies. This paper assumes that step is complete.
+
+Formally: for any covering family {Uᵢ → U}, if local sections sᵢ ∈ F(Uᵢ) satisfy sᵢ|_{Uᵢ ∩ Uⱼ} = sⱼ|_{Uᵢ ∩ Uⱼ} for all i,j, there exists a unique s ∈ F(U) with s|_{Uᵢ} = sᵢ.
+
+### 2.3 Clean Splits Are Sheaves
+
+When index specification produces independent answers, the local data glues. The 1/2 answer (objective index) and the 1/3 answer (self-locating index) do not conflict on any shared structural feature — they simply measure different things. A global assignment exists: "the coin is fair and the self-locating credence conditional on awakening is 1/3." No information is lost or distorted in the global picture.
+
+A Type C paradox has a *clean split* if and only if the post-specification assignment satisfies the sheaf condition. Resolution is complete. The paradox was purely a specification error.
+
+The sheaf condition requires agreement across *all* classification-relevant axes, not just the most salient one. In observer-dependent classification, at least two independent axes generate observer variation: power-scaled extractiveness (how much does this constraint take from me?) and context-indexed immutability (can this constraint change from where I stand?). A constraint with uniformly low extraction across all observers can still fail the sheaf condition if observers disagree on permanence — different time horizons produce different immutability assessments. This means the sheaf condition is harder to satisfy than a single-axis analysis would suggest, and constraints that appear to be clean splits on one axis may be structured splits on another. A product-site run across 156 observer contexts reveals that power is the dominant axis — it determines whether a constraint is a presheaf at all — but Exit and Scope also cross classification thresholds within power-level blocks for 89% of manifest presheaves. The theoretical possibility of multi-axis presheaf structure is not merely theoretical; it is the norm in this corpus.
+
+### 2.4 Structured Splits Are Presheaves
+
+When index specification produces coupled answers, the local data does *not* glue. The institutional observer's "Rope" and the powerless observer's "Snare" cannot paste into a single global classification — not because one is wrong, but because the gluing axiom fails. The constraint is objectively both types simultaneously, at different indices, and no global section within this representational scheme captures both.
+
+A Type C paradox has a *structured split* if and only if the post-specification assignment violates the sheaf condition. Resolution through specification is necessary but not sufficient. The residual structure — the specific pattern of gluing failure — is the object of further study.
+
+### 2.5 The Key Distinction
+
+The sheaf/presheaf boundary is not a property of the paradox's difficulty or importance. It is a structural property of the coupling mechanism between indexed answers.
+
+A **sheaf** (clean split) arises when answers are generated by independent mechanisms at each index. No shared parameter forces disagreement. The "paradox" was a packaging error.
+
+A **presheaf** (structured split) arises when answers are generated by a shared mechanism — a common parameter vector θ with index-specific transformations f_i(θ) — that produces different outputs at different indices. The disagreement is forced, a theorem of the system, not an accident of formulation.
+
+More precisely: two indexed answers share a generative mechanism when both are functions of a common parameter vector θ (base extractiveness ε, suppression, structural signatures) transformed by index-specific operations f_i(θ) (power scaling χ_i = ε × f(d(P_i)) × σ(S_i)). The shared θ is what makes the answers coupled rather than merely coexistent. In the Deferential Realism framework, this structure is explicit: ε is the shared parameter, the sigmoid and scope modifier are the index-specific transformations, and the institutional observer's negative f(d) is the mechanism that forces opposite classifications from the same base data.
+
+**The Coupling Diagnostic.** Vary θ. Do the indexed answers f_i(θ) change in a correlated way? If yes — if shifting base extractiveness simultaneously moves both the institutional and powerless classifications — the split is structured (presheaf). If the answers are invariant to each other's generating parameters, the split is clean (sheaf). This test is the operational definition of structured disagreement.
+
+A note on representation dependence: the sheaf/presheaf classification is empirically stable under refinement of the observer site (confirmed below), but it is not guaranteed to be invariant under changes to the parameterization θ or the transformation family {f_i}. A different representational scheme — different observer categories, different restriction maps, different shared parameters — might produce a different sheaf/presheaf boundary. What the stability result shows is that the distinction is robust to how finely you sample the observer space, not that it is independent of all modeling choices.
+
+---
+
+## 3. Measuring Presheaf Failure: What the Coupling Structure Contains
+
+Once we know whether a split glues, the next question is: how does it fail to glue? The Coupling Diagnostic identifies structured splits; it does not measure the internal geometry of the failure. The Deferential Realism framework already computes orthogonal diagnostics — H¹ (obstruction count), Arakelov height (fragility), and lattice structure analysis (which index dimensions drive disagreement) — which together carve the space of post-specification states into three regimes. A product-site expansion from 4 to 156 observer contexts confirms the binary sheaf/presheaf boundary as stable under refinement while revealing a layered internal architecture within manifest presheaves.
+
+**Methodological note.** All product-site claims in this section are empirical findings about the current Deferential Realism implementation and its 3,301-constraint corpus, not universal theorems of sheaf theory. The formal criterion (sheaf vs. presheaf) is general; the specific diagnostics (H¹ values, block sizes, vulnerability concentrations) are properties of this implementation. A different corpus or different axioms would produce different numbers while the formal framework remains applicable.
+
+### 3.1 Cohomology as Obstruction Measure
+
+H¹ of the presheaf measures the obstruction to gluing. Philosophically, H¹ is the minimum irreducible disagreement that cannot be eliminated without altering at least one observer's structural position. H¹ = 0 means gluing succeeds — the classification orbit is constant across all observer positions. H¹ > 0 means gluing fails, and the value counts the number of classification disagreements between observer pairs as the orbit traverses the observer category.
+
+In the computational framework, H¹ is computed by pair-counting: for each pair of observer positions, check whether the assigned types agree. The implementation's `descent_status/2` predicate is the sheaf condition under another name: `descends(Type)` when all observers agree (sheaf), `fails_descent(H1, UniqueTypes)` when any disagree (presheaf).
+
+**The H¹ gap and block structure.** On a 4-observer site, pair-counting on 4-element classification vectors produces a structural gap: H¹ values of 1 and 2 are impossible. The minimum non-zero value is 3. The intuition is simple: with four observers, any single outlier disagrees with three others, producing three pairwise mismatches. You cannot have "just one" disagreement — the combinatorics of the observer category forbid it.
+
+A product-site expansion — computing classifications at 156 observer contexts spanning 4 power levels × 3 time horizons × 5 exit options × 3 scope levels — reveals that the gap does not close with higher resolution. The minimum non-zero H¹ on the product site is 3,380, reflecting a 26-context minority against a 130-context majority. Classification changes primarily at power-level boundaries, with each power level occupying a block of approximately 39 contexts. But the blocks are not internally monolithic: a finer-grained analysis reveals that 89.3% of manifest presheaves (760 out of 851) have intra-block variation, where Exit and Scope axes also cross classification thresholds within a single power level. The remaining 10.7% (91 constraints) are pure power-axis presheaves with perfectly constant blocks.
+
+The internal structure of mixed blocks is systematic, not scattered. Virtually all mixed blocks (99.8%) involve exactly one threshold crossing, partitioning the block into two coherent type regions. The most common pattern (55%) is a snare/tangled_rope split driven by the scope modifier: σ(local) = 0.8 versus σ(global) = 1.2 creates enough χ variation to cross the snare threshold. The second pattern (36%) involves naturalized/rope classification at the institutional power level, driven by the effective_immutability table: exit quality determines whether a near-zero-χ constraint is classified as mountain (→ naturalized) or rope. Exit and Scope contribute nearly equally as secondary axes (E involved in 81% of mixed blocks, S in 76%), most commonly together (E+S jointly driving 55.8% of mixed blocks). Time appears in only 13.1% of mixed blocks, always in combination with Exit, through Hub 2 immutability table interactions.
+
+This means structured splits are never "barely structured" — but the structure is richer than block-level analysis initially suggested. Power controls whether a constraint is a presheaf at all. Exit and Scope determine the internal classification surface within power-level blocks. The classification landscape is a P × E × S lattice with T as an occasional modifier, not a 1D power axis with edge effects.
+
+**Site stability.** In the current DR corpus and implementation, the 156-context product-site expansion preserves the binary sheaf/presheaf classification of the 4-context site exactly: every constraint with H¹ = 0 on the 4-point site has H¹ = 0 on the 156-point site, and every constraint with H¹ > 0 on the 4-point site has H¹ > 0, with zero crossings in either direction. 74.2% of the corpus (2,450/3,301 constraints) are sheaves on both sites. The collapsed 4-point site is a sufficient oracle for the binary sheaf/presheaf classification, even though the magnitude of obstruction and the distribution of disagreement are site-dependent. The specific H¹ value scales with the number of disagreeing context pairs, but whether H¹ is zero or non-zero — whether the presheaf glues — does not depend on measurement resolution in this implementation. This stability licenses treating the sheaf/presheaf distinction as a structural feature of the constraint rather than an artifact of coarse measurement — though it remains an empirical finding about this system, not a general guarantee for all sheaf-theoretic frameworks.
+
+**Representation robustness.** A systematic perturbation study across 32 parameter settings confirms the binary boundary's stability profile. The sheaf/presheaf classification is fully invariant under exit modulation rescaling (0×–3×) and classification threshold variation (rope_chi_ceiling ±14%, snare_chi_floor ±18%). A stronger test replaces the sigmoid entirely with 6 alternative monotone functions — piecewise linear, square root (concave), quadratic (convex), step function, and two sign-flip-removing controls. The sign-flip is not the load-bearing feature: both controls without a sign-flip produce comparable or larger presheaf populations than the sigmoid baseline. Presheaf structure is a generic consequence of power-modulated perception — any monotone function with sufficient f(d) spread between observer positions produces structured disagreement. The specific presheaf set is shape-dependent (Jaccard similarity 0.685–0.828 across all 6 variants), meaning the sigmoid determines *which* constraints are presheaves, not *whether* presheaf structure exists. The boundary is therefore a structural property of power-modulated perception itself, not an artifact of any particular functional form.
+
+**Dimensional structure.** The index space has a clear hierarchy. Power is the primary axis: it determines whether the presheaf glues at all (the sheaf/presheaf boundary is power-driven and site-invariant). Exit and Scope are secondary axes: they cross classification thresholds within power-level blocks for nearly all manifest presheaves (E: 81%, S: 76%), producing internal block structure that the 4-point canonical site cannot detect. Time is tertiary: it appears in only 13.1% of mixed blocks, always in combination with Exit, through the effective_immutability table. The hierarchy — P > E ≈ S > T — reflects the relative magnitudes of the index-specific transformations: the power-driven sigmoid produces sign flips (f(d) going negative at institutional), scope modifiers produce ±25% χ variation, exit modulation produces ±0.08 d variation, and time horizon enters only through a discrete immutability lookup at near-zero χ. Whether this hierarchy is a genuine feature of power-indexed social constraints or a property of the current axioms and corpus remains open (see Section 5.2).
+
+**Nash distance.** The existing framework also computes a Nash stability measure: the minimum number of single-observer classification changes needed to achieve a constant orbit. Nash distance = 0 if and only if H¹ = 0 — this is a definitional identity, not an empirical correlation. The product-site run reveals a further consequence: all 267 constraints that had Nash distance 1 on the 4-point site (where changing the institutional observer alone would achieve consensus) become Nash-stable on the 156-point site (Nash distance ≥ 2). The single institutional "outlier" was an artifact of having only one institutional context point; on the full product site, the institutional position occupies a 48-context block, and no single-context change resolves the disagreement. Nash vulnerability is site-dependent in a way that the sheaf/presheaf boundary is not.
+
+### 3.2 The Three Post-Specification Regimes
+
+The sheaf/presheaf distinction, combined with the Arakelov height diagnostic, yields three regimes:
+
+| Regime | H¹ (4-point) | H¹ (product) | Arakelov Height | Interpretation | Status |
+|---|---|---|---|---|---|
+| Genuine Sheaf | 0 | 0 | Low | Agreement structurally supported | Terminal |
+| Fragile Presheaf | 0 | 0 | High | Agreement structurally precarious | Metastable |
+| Manifest Presheaf | ≥ 3 | ≥ 3,380 | — | Disagreement structurally forced | Generative |
+
+**Regime 1: Genuine Sheaf.** All observers agree. The classification glues globally. No residual structure. These include uncontested Ropes where coordination is visible from every position, and Mountains where both extraction and immutability assessments are uniform across observer contexts.
+
+A complication: Mountains are not automatically sheaves. Mountain classification depends on two independent gates — power-scaled extractiveness (Hub 1: is χ near zero?) and context-indexed immutability (Hub 2: does this constraint appear permanent from this observer's time horizon and exit-option perception?). A constraint can pass Hub 1 uniformly across all observers but vary on Hub 2, yielding Mountain from some contexts and Rope from others. Genuine sheaf status for any specific Mountain is an empirical finding, not a type-level guarantee. The product-site run confirms that Hub 2 variation does cross classification thresholds at the institutional power level — mountain/rope splits driven by the effective_immutability table account for 1.3% of intra-block transitions — but these occur only within already-presheaf constraints and do not convert sheaves into presheaves.
+
+**Regime 2: Fragile Presheaf.** All observers currently agree, but the agreement is structurally precarious. The sheaf condition holds, but only because a parameter sits near a threshold without crossing it. Small perturbations could break the gluing, converting a genuine sheaf into a manifest presheaf in a single step. In the DR framework, 238 constraints have H¹ = 0 across all diagnostics yet sit on steep MaxEnt ridges where the probabilistic classifier's pre-correction mass was genuinely split before a structural signature forced consensus. Fisher curvature — measuring how sharply the probability distribution changes under small perturbations to base extractiveness — distinguishes fragile-consensus (143 constraints, steep ridge) from robust-consensus (89 constraints, signature-anchored). Fisher curvature is uncorrelated with confidence margin (r = 0.064), confirming it captures a dimension of fragility invisible to the deterministic classifier's distance-from-threshold measure.
+
+**A concrete illustration.** Consider a professional licensing requirement with base extractiveness ε = 0.38. At all four observer positions, the power-scaled χ values cluster between 0.22 and 0.34, all below the tangled_rope threshold, all classifying as Rope. Every diagnostic says: consensus. But the Arakelov height is elevated because the probabilistic classifier assigned substantial probability mass to tangled_rope at the powerless and moderate positions before the threshold gate forced a Rope classification. The constraint is a sheaf only because ε sits just below the value where the powerless observer's amplified χ would cross the tangled_rope floor. A regulatory change that slightly increases compliance costs (ε shifts from 0.38 to 0.44) would push the powerless observer's χ above the threshold while leaving the institutional observer's χ well below it — converting a genuine sheaf into a manifest presheaf in a single step. The consensus was real but contingent on a parameter value that nothing in the system protects. Systems do not gradually become controversial. They sit in Regime 2 and then flip discontinuously into Regime 3.
+
+**Regime 3: Manifest Presheaf.** Gluing fails openly. Observer classifications disagree across threshold boundaries, and the failure has measurable geometry.
+
+The product-site run reveals a layered internal architecture. The primary disagreement is between power levels: classification changes at power-level boundaries, with each power level occupying a block of approximately 39 contexts. Of 851 non-constant constraints, 252 (30%) have the institutional power level as the "odd one out" — the block where the constraint is classified as coordination while other power levels classify it as extraction. But the blocks are not uniform. A finer analysis reveals that 89.3% of manifest presheaves have secondary variation within power-level blocks, driven by Exit and Scope axes. Exit quality and scope level independently cross classification thresholds within blocks, producing a P × E × S lattice structure. Only 91 constraints (10.7%) show pure power-axis disagreement with perfectly constant blocks — all of them mid-range-ε tangled_rope constraints where the institutional sign-flip is the only threshold crossing and E/S modulations are too small to reach any boundary.
+
+The institutional position illustrates both layers. At the primary level, institutional power creates a classification discontinuity: constraints classified as extraction from other power levels are classified as coordination from institutional. At the secondary level, the institutional block itself has internal structure in 79% of cases — different exit options produce different classifications (naturalized vs. rope) because near-zero χ values make the immutability gate the tiebreaker.
+
+On the 4-point site, institutional distinctiveness appeared as a Nash vulnerability: 94% of single-observer resolutions ran through the institutional observer. On the product site, that framing dissolves. The institutional position occupies a block of contexts, not a single point, and no single-context change resolves the disagreement. What was a Nash vulnerability on the collapsed projection is a classification discontinuity on the full product site.
+
+The philosophical interpretation survives this correction and is strengthened by it. Power constitutively shapes what counts as true from a given position. The institutional observer sees coordination where others see extraction because the institutional observer benefits from the arrangement. The apparent tautology — those who benefit from extraction experience it as beneficial — is precisely the structural insight. The presheaf formalism makes this precise: the same base data θ, under index-specific transformations indexed by power, produces genuinely different but positionally correct classifications. The system maps the same underlying parameters to different classifications at the institutional index — not because the institutional observer sees differently, but because the transformation function at that index produces a different output from the same input.
+
+The layered structure makes this richer, not weaker. The institutional power level does not just flip the classification at a single point — it creates an entire region of index space where the world looks different. And within that region, exit quality further modulates what kind of coordination the institutional observer sees: a constraint with high exit options appears as a standard rope (coordination mechanism), while one with trapped exit options appears as naturalized (something that looks like natural law but isn't). The institutional position has internal structure that the 4-point site collapses into a single classification.
+
+The broader implication is that the presheaf structure is what "there is no view from nowhere" looks like when formalized. Every observer position — including the analytical position, which is closest to a God's-eye view — is still *a* view, shaped by its structural relationship to the constraint. Even the most comprehensive perspective is indexed. The presheaf does not glue not because someone is wrong, but because no position within this representational scheme yields a global section — the constraint is genuinely different things from different positions, and no position transcends its own index.
+
+This connects to a long tradition in political epistemology — from standpoint epistemology (Harding, Haraway) to Chomsky and Herman's manufacturing consent to Foucault's power-conditioned visibility. What the presheaf framework adds is not the insight (which is old) but the measurement apparatus: the lattice structure shows exactly where the classification landscape fractures and at what resolution, the 30% institutional-odd-one-out figure pins the primary mechanism to a specific power level, and the site stability of the sheaf/presheaf boundary confirms this is a property of the constraints themselves rather than an artifact of any particular measurement resolution.
+
+### 3.3 Why Regime 2 Matters
+
+Regime 2 is invisible to the debugging paper's diagnostic. The Type C test would say: "all observers agree, no paradox, stop." But the agreement is a surface phenomenon — the constraint sits on a ridge where small changes in base extractiveness, power calibration, or scope modifier would break consensus and reveal manifest presheaf structure. These are the constraints most vulnerable to reclassification under political, economic, or institutional change.
+
+Two independent measures of boundary proximity confirm this vulnerability. Metric-distance analysis identifies constraints where χ falls within 0.10 of a classification boundary — a static measure of how close the deterministic classifier sits to a threshold. Cognitive displacement analysis identifies constraints where the smallest perturbation δ to observer orientation induces a classification flip — a functional measure of how much positional variation the classification can absorb. These are different populations measuring different things, but both converge on the same structural conclusion: a substantial fraction of H¹ = 0 constraints are sheaves only contingently.
+
+The lattice structure sharpens the dynamics of regime transition. The primary sheaf-to-presheaf transition requires a power-level boundary crossing — a phase transition, not gradual degradation. But within an existing presheaf, secondary transitions along Exit and Scope axes can restructure the internal classification surface without changing the binary sheaf/presheaf status. A constraint can move from a two-type orbit to a three-type orbit, or shift which contexts within a block are the minority, through Exit or Scope modulation alone. This means presheaves have internal dynamics invisible to the binary classification — the presheaf stays a presheaf, but its geometry changes.
+
+---
+
+## 4. Implications
+
+### 4.1 For Paradox Theory
+
+The trifurcation framework gains a refinement: Type C subdivides into C-sheaf (clean, terminal) and C-presheaf (structured, generative). The full diagnostic procedure for a Type C paradox becomes:
+
+1. Specify indices (who, when, where, which framework).
+2. Identify candidate shared parameters θ.
+3. Apply the Coupling Diagnostic: vary θ, test for correlated outputs.
+4. Check the gluing condition on the resulting assignment.
+5. If gluing succeeds → **C-sheaf** (terminal). Test fragility via Arakelov height.
+6. If gluing fails → **C-presheaf** (generative). Measure obstruction via H¹ and lattice structure analysis (which index dimensions cross classification thresholds, and at what power levels).
+
+Applied to natural-language paradoxes, steps 2–3 may require interpretive judgment about shared parameters, but the site stability result suggests the resulting binary classification is robust to reasonable operationalizations. This turns the sheaf/presheaf distinction from a classification into a method — an operational procedure that any analyst can apply to a Type C paradox once indices are specified.
+
+### 4.2 For Observer-Dependent Classification
+
+The DR framework currently treats all constraints as presheaves by design commitment. The sheaf/presheaf distinction introduces a diagnostic question the framework does not currently ask: which constraints actually are sheaves?
+
+The answer is more restrictive than intuition suggests. Mountains — the paradigm case of universal agreement — are not guaranteed sheaves, because immutability is evaluated through context-indexed gates that can produce observer variation independent of extractiveness. Sheaf status must be verified empirically for each constraint, not assumed from type membership. The genuine sheaves are those where all classification-relevant axes produce agreement across all observer positions.
+
+The interesting cases are the ones the current framework lumps together under H¹ = 0: some are genuine sheaves (stable global agreement), others are fragile presheaves (apparent agreement that would break under perturbation). The framework already computes the data needed to distinguish them but does not compose it into a single diagnostic.
+
+### 4.3 For the Propagation Problem
+
+The DR framework's propagation problem — position-invariant analysis is hard to communicate because it satisfies no constituency — is precisely a presheaf phenomenon. The analysis does not glue into a single story because the gluing axiom fails. The framework predicts its own communicative difficulty as a structural consequence of its own mathematics.
+
+Clean splits (sheaves) propagate easily — "it depends on which question you're asking" is a satisfying resolution that audiences accept. Structured splits (presheaves) resist propagation — "both classifications are objectively correct at their respective indices, and the disagreement between them is forced by axioms you can't individually reject" is a message that no constituency finds comfortable. The sheaf/presheaf distinction explains why some perspectival disagreements resolve socially and others do not.
+
+### 4.4 For Regime Dynamics
+
+The three-regime partition is a static snapshot. Constraints also exist in networks, and the network exerts pressure on regime membership. The DR framework implements this as purity contamination: a constraint's effective health degrades when neighboring constraints have high extraction, with type-specific attenuation. A genuine sheaf embedded in a snare-heavy network can be under contamination pressure that no static diagnostic captures — its classification is stable now, but the network environment is eroding the conditions that sustain stability.
+
+Combined with the entropy principle from the DR lifecycle dynamics — decay toward extraction is low-energy, reform toward coordination requires intervention — purity contamination introduces a directional bias: sheaf → fragile presheaf → manifest presheaf is the natural degradation path, and the reverse requires active work. The three-regime classification is where a constraint sits; purity contamination is one of the forces that moves it.
+
+---
+
+## 5. Scope and Limitations
+
+### 5.1 What This Paper Does Not Claim
+
+This paper does not claim that all philosophical paradoxes reduce to sheaf theory. The sheaf/presheaf distinction applies specifically to Type C paradoxes (indexical ambiguity) and has nothing to say about Type A (drift) or Type B (structural fracture).
+
+It does not claim that the specific H¹ value is site-independent. The value scales with site size (from a maximum of 6 on the 4-point site to over 12,000 on the 156-point site). What is site-independent, in this implementation and corpus, is the binary sheaf/presheaf classification — whether H¹ is zero or non-zero.
+
+It does not claim that the classification landscape is one-dimensional. Power controls the binary sheaf/presheaf boundary, but Exit and Scope independently cross classification thresholds within power-level blocks for 89% of manifest presheaves. The landscape is a P × E × S lattice with T as an occasional modifier. Whether the P > E ≈ S > T hierarchy holds across different corpora and axiom sets is an open empirical question.
+
+It does not claim that Mountains are sheaves by type definition. Mountain classification depends on context-indexed immutability assessments that can vary across observer positions independently of extractiveness. Sheaf status is an empirical finding, not a type-level guarantee. Hub 2 variation does cross classification thresholds at the institutional power level within already-presheaf constraints, but does not convert sheaves into presheaves in the current corpus.
+
+It does not claim that the sheaf/presheaf boundary produces the same presheaf set under all power transformations. The boundary is invariant under index-specific modulations (exit quality, scope level, classification thresholds). An alternative function test — replacing the sigmoid with 6 alternative monotone transformations — confirms that presheaf structure is generic: any monotone function with sufficient observer spread produces structured disagreement. But the specific set of presheaf constraints is shape-dependent (Jaccard 0.685–0.828 across variants), meaning the sigmoid determines which constraints are presheaves, not whether presheaf structure exists. The boundary is a structural property of power-modulated perception, not of any particular functional form — but calibrating which functional form best approximates real-world power-perception relationships is an open empirical question.
+
+It does not adjudicate between indexed classifications. The framework measures disagreement structure; it does not say which observer is right.
+
+### 5.2 Open Questions
+
+1. **Is the sheaf/presheaf distinction decidable for natural-language paradoxes?** The formal criterion is clear for computational systems with explicit parameter spaces. For natural-language paradoxes, the "shared mechanism" may be implicit or contested. The site stability finding — the binary distinction survives a 40× expansion in measurement resolution — suggests the distinction is robust enough to survive imprecise operationalization, but the computational framework provides no direct evidence on the natural-language question.
+
+2. **Does the three-regime classification exhaust the space?** The product-site run settles the binary question but Regime 2 (fragile presheaf) has not been re-examined on the product site. The Arakelov landscape may shift when heights are maximized over 156 contexts instead of 4. Whether the 238-constraint Arakelov unique set from the 4-point site survives, expands, or restructures on the product site remains open.
+
+3. **What is the relationship between fragile presheaves and Type A drift?** The primary sheaf-to-presheaf transition requires a power-level boundary crossing — a phase transition. But the lattice structure reveals a secondary drift pathway: within an existing presheaf, changes in exit quality or scope level can restructure the internal classification surface without changing sheaf/presheaf status. A constraint can drift from a two-type orbit to a three-type orbit through E or S modulation alone. Whether these internal-geometry drifts are precursors to primary transitions (fragile → manifest) or independent dynamics is an open question. The computational infrastructure exists but the analysis has not been run.
+
+4. **Is the P > E ≈ S > T hierarchy a feature of the domain or the axioms?** The dimensional hierarchy — power as the dominant axis, Exit and Scope as secondary, Time as tertiary — could reflect a genuine structural property of power-indexed social constraints (power is the dominant variable, with exit quality and scope level as meaningful secondary modulators), or it could reflect calibration choices in the axioms (the sigmoid produces sign flips that dwarf the ±25% scope modifier and ±0.08 exit modulation). The 91 pure power-axis presheaves (mid-range ε, immune to E/S variation) versus the 760 mixed presheaves (threshold-proximate, sensitive to E/S) suggest the hierarchy is partly geometric: whether secondary axes have classificatory leverage depends on proximity to threshold boundaries in the (ε, d, σ) parameter space. A corpus with different calibration — stronger scope modifiers, larger exit modulation — could produce a different hierarchy. Whether the current calibration reflects the real-world relative magnitudes of these effects is the sharpest empirical question the analysis produces.
+
+5. **Can the sheaf condition be tested empirically for normative paradoxes?** The Trolley Problem was flagged as an A+C hybrid. If the Type C component is a structured split, the residual moral discomfort after index specification is not just "choosing one value system over another" but a response to the forced coupling between value systems that the presheaf structure encodes.
+
+6. **What is the relationship to contextuality in quantum foundations?** Abramsky and Brandenburger formalize contextuality — the impossibility of assigning globally consistent values to observables across incompatible measurement contexts — using sheaf theory on measurement scenarios. Both settings feature incompatible local assignments across contexts with cohomological obstructions to global sections; the difference is that social cases involve explicit indexical transformations (power scaling) while quantum ones involve measurement contexts. The formal structure of obstruction is shared, even though the generating mechanisms differ. The site stability finding strengthens the parallel: like quantum contextuality, the obstruction in the DR framework is a property of the system, not of the measurement resolution. This suggests that structured disagreement in social systems may be a form of contextuality over social observables. Whether this parallel reflects shared deep structure or merely shared formalism remains open, but if it holds, the cross-disciplinary reach would be significant.
+
+---
+
+## 6. Conclusion
+
+Philosophical paradoxes generated by indexical underspecification — Type C in the trifurcation framework — have traditionally been treated as resolved once the index is specified. This paper argues that specification is sometimes the beginning of the analysis, not the end.
+
+The sheaf/presheaf boundary provides the formal criterion. When specification produces independent answers that assemble into a global picture, the paradox was a packaging error (clean split, sheaf). When specification produces coupled answers forced into disagreement by a shared generative mechanism, the disagreement is structural and its geometry is an object of study (structured split, presheaf). The Coupling Diagnostic — vary the shared parameter vector θ and watch whether indexed outputs move together — is the operational test.
+
+The Deferential Realism framework provides the worked example. Over a corpus of 3,301 social constraints, presheaf cohomology measures the obstruction to gluing, Arakelov height identifies fragile consensus, and a product-site expansion from 4 to 156 observer contexts confirms that the binary sheaf/presheaf classification is preserved exactly under a 40× increase in measurement resolution. Second, perturbation and alternative function tests confirm the boundary is invariant under index-specific modulations, and that presheaf structure is generic to any monotone power transformation — not specific to the sigmoid (Jaccard 0.685–0.828 across 6 alternative functional forms). The lattice structure finding — classification varying primarily at power-level boundaries, with systematic secondary variation along Exit and Scope axes within blocks — connects the formal machinery to a long tradition of political epistemology: power shapes what counts as true from a given position, and the presheaf structure is what that claim looks like when formalized. Exit quality and scope level add further internal structure, producing a classification landscape richer than any single axis can capture.
+
+The three-regime classification — genuine sheaf, fragile presheaf, manifest presheaf — gives this structure practical bite. Regime 2 is the most immediately useful: constraints where consensus is real but contingent, where small parameter changes would reveal latent disagreement. These are the constraints most likely to undergo sudden reclassification under political, economic, or institutional change — and they are invisible to any diagnostic that stops at "all observers currently agree."
+
+The deeper claim is that structured disagreement — perspectival incompatibility that survives index specification — is not a defect to be resolved but a structural feature to be measured. The sheaf/presheaf boundary is the formal criterion for when disagreement is eliminable and when it is not. In the domains where it is not, the pattern of failure is itself informative, and the presheaf is the right mathematical object for studying it.
+
+---
+
+## References
+
+1. Abramsky, S. & Brandenburger, A. (2011). The sheaf-theoretic structure of non-locality and contextuality. *New Journal of Physics*, 13(11), 113036.
+
+2. Chomsky, N. & Herman, E. S. (1988). *Manufacturing Consent: The Political Economy of the Mass Media*. New York: Pantheon Books.
+
+3. Elga, A. (2000). Self-locating belief and the Sleeping Beauty problem. *Analysis*, 60(2), 143-147.
+
+4. Foucault, M. (1975). *Discipline and Punish: The Birth of the Prison*. Trans. A. Sheridan. New York: Pantheon Books.
+
+5. Foucault, M. (1980). *Power/Knowledge: Selected Interviews and Other Writings, 1972-1977*. Ed. C. Gordon. New York: Pantheon Books.
+
+6. Haraway, D. (1988). Situated knowledges: The science question in feminism and the privilege of partial perspective. *Feminist Studies*, 14(3), 575-599.
+
+7. Harding, S. (1986). *The Science Question in Feminism*. Ithaca: Cornell University Press.
+
+8. Mac Lane, S. & Moerdijk, I. (1992). *Sheaves in Geometry and Logic: A First Introduction to Topos Theory*. New York: Springer-Verlag.
+
+9. Nagel, T. (1986). *The View from Nowhere*. New York: Oxford University Press.
+
+10. Perry, J. (1979). The problem of the essential indexical. *Noûs*, 13(1), 3-21.
+
+11. Rosiak, D. (2022). *Sheaf Theory through Examples*. Cambridge: MIT Press.

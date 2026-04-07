@@ -23,10 +23,11 @@ from collections import Counter, defaultdict, deque
 from datetime import datetime, timezone
 from pathlib import Path
 
-PIPELINE = Path("outputs/enriched_pipeline.json")
-SCENARIO = Path("outputs/scenario_convergence.json")
-OMEGA    = Path("outputs/omega_cross_constraint.json")
-OUT_JSON = Path("outputs/evaluative_convergence.json")
+_REPO_ROOT = Path(__file__).resolve().parent.parent
+PIPELINE = _REPO_ROOT / "outputs/enriched_pipeline.json"
+SCENARIO = _REPO_ROOT / "outputs/scenario_convergence.json"
+OMEGA    = _REPO_ROOT / "outputs/omega_cross_constraint.json"
+OUT_JSON = _REPO_ROOT / "outputs/evaluative_convergence.json"
 
 
 # ---------------------------------------------------------------------------

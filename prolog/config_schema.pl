@@ -90,6 +90,7 @@ param_spec(canonical_d_analytical,    number, range(0.0, 1.0), "Canonical direct
 % Cognitive displacement (observer calibration)
 param_spec(cognitive_displacement,         number, range(-0.5, 0.5), "Global cognitive displacement delta").
 param_spec(cognitive_displacement_profile, atom,   oneof([uniform, positional]), "Displacement mode: uniform or positional").
+param_spec(power_function, atom, oneof([sigmoid, piecewise_linear, piecewise_no_flip, sqrt_flip, quadratic_flip, step_flip, sigmoid_shifted]), "Power transformation function variant for sensitivity testing").
 
 % ============================================================
 % 7. INTENT & DETECTION THRESHOLDS
@@ -377,6 +378,7 @@ param_spec(trajectory_coupling_band_width,      number,  range(0.0, 1.0), "Coupl
 % ============================================================
 
 param_spec(cohomology_enabled, integer, oneof([0, 1]), "0=disabled, 1=enabled").
+param_spec(site_mode, atom, oneof([canonical, product]), "canonical=4-context site (default); product=156-point curated site").
 
 
 /* ================================================================

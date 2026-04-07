@@ -102,30 +102,24 @@ cohomology_cleanup :-
 /* ================================================================
    CANONICAL CONTEXT ORDER
 
-   The orbit vector must enumerate contexts in a fixed canonical
-   order so that positional comparisons are meaningful. This order
-   matches dirac_classification:standard_context/1 clause order
-   and drl_core:standard_context/1 clause order.
+   The orbit vector enumerates contexts in a fixed canonical order so
+   that positional comparisons are meaningful. ordered_contexts/1
+   delegates to constraint_indexing:site_contexts/1, which defaults
+   to the 4 canonical contexts and can be switched to the product
+   site by changing that predicate.
+
+   H¹ = count of disagreeing context-pairs across the observer site.
+   On the canonical 4-point site: range 0..6 = C(4,2).
+     Gap: H¹ ∈ {0, 3, 4, 5, 6} (values 1, 2 are impossible).
+   On the 156-point product site: range 0..C(156,2) = 0..12,090.
+     Minimum nonzero H¹ = 3,380 (26 minority × 130 majority contexts).
+     Classification is quantized in power-level blocks of ~39 contexts.
+   The binary distinction (H¹ = 0 vs H¹ > 0) is site-invariant in the
+   current corpus (zero crossings across 3,301 constraints).
    ================================================================ */
 
-ordered_contexts([
-    context(agent_power(powerless),
-            time_horizon(biographical),
-            exit_options(trapped),
-            spatial_scope(local)),
-    context(agent_power(moderate),
-            time_horizon(biographical),
-            exit_options(mobile),
-            spatial_scope(national)),
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(national)),
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))
-]).
+ordered_contexts(Contexts) :-
+    constraint_indexing:site_contexts(Contexts).
 
 /* ================================================================
    ORBIT VECTOR — fixed-order type evaluation

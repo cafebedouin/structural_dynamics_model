@@ -20,9 +20,10 @@ import json
 from pathlib import Path
 from collections import defaultdict, Counter
 
-PIPELINE = Path("outputs/enriched_pipeline.json")
-OUT_JSON = Path("outputs/scenario_convergence.json")
-OUT_MD   = Path("outputs/scenario_convergence_report.md")
+_REPO_ROOT = Path(__file__).resolve().parent.parent
+PIPELINE = _REPO_ROOT / "outputs/enriched_pipeline.json"
+OUT_JSON = _REPO_ROOT / "outputs/scenario_convergence.json"
+OUT_MD   = _REPO_ROOT / "outputs/scenario_convergence_report.md"
 
 EXTRACTIVE_TYPES = {"snare", "tangled_rope", "piton"}
 PROTECTIVE_TYPES = {"mountain", "rope", "scaffold"}

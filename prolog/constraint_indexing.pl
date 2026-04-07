@@ -42,7 +42,12 @@
     % Observer accessibility (formal restriction operator)
     observer_accessible/3,
     feature_access/3,
-    classify_from_restricted/3
+    classify_from_restricted/3,
+
+    % Configurable observer site (v6.2)
+    site_contexts/1,            % → site_contexts_canonical/1 by default
+    site_contexts_canonical/1,  % the 4 canonical contexts (read-only)
+    site_contexts_product/1     % 156-point curated product site
 ]).
 
 :- multifile constraint_classification/3.
@@ -264,12 +269,67 @@ scope_modifier(universal,    Mod) :- config:param(scope_modifier_universal, Mod)
 %   d ≈ 1.0  → powerless target (f ≈ 1.50)
 
 %% sigmoid_f(+D, -F)
-%  Compute the sigmoid power modifier from directionality value D.
+%  Compute the power modifier from directionality value D.
+%  Dispatches to alt_sigmoid_f/3 based on config param power_function.
 sigmoid_f(D, F) :-
+    (   config:param(power_function, Variant)
+    ->  alt_sigmoid_f(Variant, D, F)
+    ;   alt_sigmoid_f(sigmoid, D, F)
+    ).
+
+%% alt_sigmoid_f(+Variant, +D, -F)
+%  Alternative power transformation functions. All map D ∈ [0,1] to
+%  approximately the same range [~-0.20, ~1.50] as the sigmoid baseline.
+
+% Default: standard logistic sigmoid
+alt_sigmoid_f(sigmoid, D, F) :-
     config:param(sigmoid_lower, L),
     config:param(sigmoid_upper, U),
     config:param(sigmoid_midpoint, D0),
     config:param(sigmoid_steepness, K),
+    Range is U - L,
+    Exponent is -K * (D - D0),
+    F is L + Range / (1 + exp(Exponent)).
+
+% Piecewise linear (sign-flip preserved): zero-crossing at d=0.10
+% f(0.0)=-0.12, f(0.10)=0.00, f(0.50)=0.70, f(1.0)=1.42
+alt_sigmoid_f(piecewise_linear, D, F) :-
+    (   D =< 0.10
+    ->  F is -0.12 + (D * 1.2)
+    ;   D =< 0.50
+    ->  F is 0.00 + ((D - 0.10) * 1.75)
+    ;   F is 0.70 + ((D - 0.50) * 1.44)
+    ).
+
+% Piecewise linear (sign-flip removed — CONTROL): f(0)=+0.05, no negative region
+% Null hypothesis: removing sign-flip should destroy presheaf structure
+alt_sigmoid_f(piecewise_no_flip, D, F) :-
+    F is 0.05 + (D * 1.37).
+
+% Square root / concave (sign-flip preserved): rapid initial rise
+% f(0.0)=-0.12, f(0.25)=0.65, f(0.50)=0.97, f(1.0)=1.42
+alt_sigmoid_f(sqrt_flip, D, F) :-
+    F is -0.12 + 1.54 * sqrt(D).
+
+% Quadratic / convex (sign-flip preserved): slow initial rise
+% f(0.0)=-0.12, f(0.25)=0.08, f(0.50)=0.27, f(1.0)=1.42
+alt_sigmoid_f(quadratic_flip, D, F) :-
+    F is -0.12 + 1.54 * D * D.
+
+% Step function (extreme nonlinearity, sign-flip preserved): three discrete levels
+% f<0.15=-0.12, f∈[0.15,0.85)=0.70, f≥0.85=1.42
+alt_sigmoid_f(step_flip, D, F) :-
+    (   D < 0.15
+    ->  F is -0.12
+    ;   D < 0.85
+    ->  F is 0.70
+    ;   F is 1.42
+    ).
+
+% Sigmoid shifted (d0=0.25): sign-flip at institutional is removed
+% f(0.0)≈+0.22 (positive — no institutional sign-flip), f(0.25)≈0.65, f(1.0)≈1.49
+alt_sigmoid_f(sigmoid_shifted, D, F) :-
+    L is -0.20, U is 1.50, D0 is 0.25, K is 6.0,
     Range is U - L,
     Exponent is -K * (D - D0),
     F is L + Range / (1 + exp(Exponent)).
@@ -783,6 +843,78 @@ restricted_classify(_C, Eps, Chi, _Supp, Theater, _Mut, piton) :-
     number(Theater), Theater >= 0.70,
     Chi =< 0.25, Eps > 0.10, !.
 restricted_classify(_C, _Eps, _Chi, _Supp, _Theater, _Mut, indeterminate).
+
+% ============================================================================
+% SITE CONTEXTS — configurable observer site for measurement predicates (v6.2)
+% ============================================================================
+% DESIGN NOTE: Two distinct context predicates serve two distinct roles.
+%
+%   standard_context/1 (in drl_core.pl) — CLASSIFICATION reference frame.
+%     Used by snare_immutability_check/1, dr_mismatch/4, cross_context_analysis/2.
+%     Asks structural questions: "could someone with actual power change this?"
+%     FIXED at 4 canonical contexts. Must not expand with the cohomology site
+%     or the mountain/snare distinction collapses (historical/* → rope always
+%     passes, making everything trivially snare-eligible).
+%
+%   site_contexts/1 (this predicate) — MEASUREMENT site.
+%     Used by cohomological_obstruction/3, gauge_orbit/2, wasserstein_contexts/1,
+%     arakelov_height_pair/3. Measures disagreement across observer positions.
+%     CONFIGURABLE. Default: 4 canonical (identical outputs to pre-v6.2).
+%     Product site: 156-point curated expansion.
+
+%% site_contexts(-Contexts) is det.
+%% Returns the observer site for measurement predicates.
+%% Controlled by config:param(site_mode, Mode).
+%% Classification predicates in drl_core.pl use standard_context/1
+%% which is FIXED at 4 canonical contexts regardless of site_mode.
+site_contexts(Contexts) :-
+    config:param(site_mode, Mode),
+    site_contexts_for_mode(Mode, Contexts).
+
+site_contexts_for_mode(canonical, Contexts) :-
+    site_contexts_canonical(Contexts).
+site_contexts_for_mode(product, Contexts) :-
+    site_contexts_product(Contexts).
+
+%% site_contexts_canonical(-Contexts) is det.
+%  The 4 canonical observer contexts. This predicate never changes.
+site_contexts_canonical([
+    context(agent_power(powerless), time_horizon(biographical),
+            exit_options(trapped), spatial_scope(local)),
+    context(agent_power(moderate), time_horizon(biographical),
+            exit_options(mobile), spatial_scope(national)),
+    context(agent_power(institutional), time_horizon(generational),
+            exit_options(arbitrage), spatial_scope(national)),
+    context(agent_power(analytical), time_horizon(civilizational),
+            exit_options(analytical), spatial_scope(global))
+]).
+
+%% site_contexts_product(-Contexts) is det.
+%  Curated 156-point product site: 4P × 3T × 5E × 3S minus 24 category-error
+%  combinations where exit_options(analytical) is paired with non-civilizational
+%  time horizons (the analytical stance is definitionally civilizational-scale).
+%
+%  Excluded power atoms: powerful, organized
+%    (non-canonical; no canonical_d calibration; expand to 6P in Phase 3 if
+%    power-axis decomposition shows P drives most obstruction)
+%  Excluded time horizons: immediate, historical
+%    (immediate: no effective_immutability entries for analytical_exit;
+%     historical: wildcard → always rope, trivially passes snare gate)
+%  Excluded exit options: identity_locked
+%    (fine-grained mid-exit; thin corpus coverage)
+%  Excluded scope values: regional, continental, universal
+%    (non-canonical; scope_modifier params are less calibrated)
+site_contexts_product(Contexts) :-
+    findall(
+        context(agent_power(P), time_horizon(T), exit_options(E), spatial_scope(S)),
+        (   member(P, [powerless, moderate, institutional, analytical]),
+            member(T, [biographical, generational, civilizational]),
+            member(E, [trapped, constrained, mobile, arbitrage, analytical]),
+            member(S, [local, national, global]),
+            \+ (E = analytical, T \= civilizational)
+        ),
+        Contexts
+    ).
 
 % ============================================================================
 % INTEGRATION NOTES

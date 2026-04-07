@@ -67,26 +67,11 @@
 extraction_chain([mountain, rope, tangled_rope, snare]).
 
 %% Standard observer contexts in canonical order (U1..U4).
-%  Local copy — matches grothendieck_cohomology:ordered_contexts/1
-%  and dirac_classification:standard_context/1 clause order.
-wasserstein_contexts([
-    context(agent_power(powerless),
-            time_horizon(biographical),
-            exit_options(trapped),
-            spatial_scope(local)),
-    context(agent_power(moderate),
-            time_horizon(biographical),
-            exit_options(mobile),
-            spatial_scope(national)),
-    context(agent_power(institutional),
-            time_horizon(generational),
-            exit_options(arbitrage),
-            spatial_scope(national)),
-    context(agent_power(analytical),
-            time_horizon(civilizational),
-            exit_options(analytical),
-            spatial_scope(global))
-]).
+%  Delegates to constraint_indexing:site_contexts/1 (v2.0).
+%  Default: 4 canonical contexts. Switch to product site by changing
+%  site_contexts/1 in constraint_indexing.pl.
+wasserstein_contexts(Contexts) :-
+    constraint_indexing:site_contexts(Contexts).
 
 /* ================================================================
    CDF CONSTRUCTION

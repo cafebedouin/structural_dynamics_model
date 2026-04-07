@@ -46,6 +46,7 @@
 :- use_module(bifurcation_export, []).
 :- use_module(persistence_export, []).
 :- use_module(arakelov_height, []).
+:- use_module(sheaf_analysis, []).
 :- use_module(constraint_bridge, []).
 :- use_module(uke_dr_bridge, []).
 :- use_module(report_generator, []).

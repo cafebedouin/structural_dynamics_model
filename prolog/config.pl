@@ -143,6 +143,11 @@ param(canonical_d_organized,     0.3990).
 param(canonical_d_institutional, 0.00).
 param(canonical_d_analytical,    0.7250).
 
+% Power transformation function for sigmoid_f/2 dispatch.
+% sigmoid (default) | piecewise_linear | piecewise_no_flip | sqrt_flip |
+%                     quadratic_flip | step_flip | sigmoid_shifted
+param(power_function, sigmoid).
+
 % --- Cognitive Displacement (Observer Calibration) ---
 % Additive perturbation to directionality d, modeling systematic
 % perceptual bias characteristic of the observer's cognitive apparatus.
@@ -538,6 +543,16 @@ param(trajectory_coupling_band_width,      0.15).    % Coupling match tolerance 
    ================================================================ */
 
 param(cohomology_enabled,                  1).       % Graduated Phase 7-T1: computation runs unconditionally
+
+%% Site mode: controls which observer site measurement predicates use.
+%% 'canonical' = 4 canonical contexts (default, fast)
+%% 'product'   = 156-point curated product site (slower, higher resolution)
+%%
+%% The binary sheaf/presheaf classification is identical on both sites
+%% (confirmed: zero crossings across 3,301 constraints).
+%% Use 'product' for block structure analysis and dimensional decomposition.
+%% Use 'canonical' for routine classification and sheaf_status checks.
+param(site_mode, canonical).
 
 /* ================================================================
    ENABLE-FLAG SEMANTICS

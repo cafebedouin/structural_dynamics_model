@@ -1755,6 +1755,178 @@ def build_post_synthesis(constraint_id, pipeline_data):
     return "\n".join(lines)
 
 
+# --- XCON Synthesis Section ---
+
+def build_xcon_synthesis_section(
+    constraint_id, evaluative_data, scenario_data, omega_xcon_data, pipeline_data
+):
+    """Render ## XCON SYNTHESIS block when cross-corpus convergence threshold is met.
+
+    Threshold (all three required):
+    1. Cover story topology confirmed: constraint appears as face or extractive member
+       in any cover_story_topology pattern across all evaluative constraint sets.
+    2. Evaluative convergence group representing ≥10% of corpus, with at least one
+       directional convergence pattern in that group.
+    3. Omega narrowings ≥50 with directional consistency across all beneficiary groups.
+
+    Returns empty string when threshold is not met (no placeholder emitted).
+    """
+    if not evaluative_data:
+        return ""
+
+    key = constraint_id.lower()
+    all_sets = evaluative_data.get("constraint_sets", [])
+
+    # --- Condition 1: Cover story topology ---
+    cover_confirmed = False
+    cover_role = None
+    for cset in all_sets:
+        for p in cset.get("convergence_patterns", []):
+            if p.get("pattern") != "cover_story_topology":
+                continue
+            ev = p.get("evidence", {})
+            face = (ev.get("face_constraint") or "").lower()
+            extractive = [m.lower() for m in ev.get("extractive_members", [])]
+            involved = [c.lower() for c in p.get("constraints_involved", [])]
+            if key == face or key in extractive or key in involved:
+                cover_confirmed = True
+                cover_role = "face" if key == face else "extractive member"
+                break
+        if cover_confirmed:
+            break
+
+    if not cover_confirmed:
+        return ""
+
+    # --- Condition 2: Evaluative convergence ≥10% of corpus with directional pattern ---
+    total_corpus = len(pipeline_data.get("per_constraint", [])) if pipeline_data else 0
+    matched_sets = [
+        s for s in all_sets
+        if any(c.lower() == key for c in s.get("constraints", []))
+    ]
+
+    convergence_met = False
+    qualifying_patterns = []  # collect for plain-language translation
+    if total_corpus > 0:
+        for cset in matched_sets:
+            group_size = len(cset.get("constraints", []))
+            if group_size / total_corpus < 0.10:
+                continue
+            directional = [
+                p for p in cset.get("convergence_patterns", [])
+                if p.get("pattern") in {
+                    "convergent_signature", "convergent_institutional", "convergent_drift"
+                } and p.get("evidence")
+            ]
+            if directional:
+                convergence_met = True
+                qualifying_patterns.extend(directional)
+                break
+
+    if not convergence_met:
+        return ""
+
+    # --- Condition 3: Omega narrowings ≥50 with directional consistency ---
+    omega_count = 0
+    omega_types_seen = set()
+    if omega_xcon_data:
+        for beneficiary_group in omega_xcon_data.values():
+            constraints_map = beneficiary_group.get("constraints", {})
+            # omega_cross_constraint.json keys constraints by their original ID
+            entries = None
+            for cid, narrows in constraints_map.items():
+                if cid.lower() == key:
+                    entries = narrows
+                    break
+            if entries:
+                omega_count += len(entries)
+                for e in entries:
+                    omega_types_seen.add(e.get("omega_type", ""))
+
+    # Directional consistency: single omega_type, or at most one empty/unknown entry mixed in
+    directionally_consistent = (
+        omega_count >= 50
+        and len(omega_types_seen - {""}) <= 1
+    )
+
+    if not directionally_consistent:
+        return ""
+
+    # --- All conditions met — build block ---
+    entry = find_constraint_entry(pipeline_data, constraint_id) if pipeline_data else None
+    h1 = entry.get("h1_band") if entry else None
+
+    lines = ["", "## XCON SYNTHESIS", ""]
+    lines.append(f"Cross-constraint convergence confirmed for {constraint_id}.")
+    lines.append("")
+    lines.append("Elevated findings (treat as primary claims, not perspectival readings):")
+
+    # Cover story topology finding
+    lines.append(
+        f"- Cover story topology confirmed: this constraint serves as {cover_role} "
+        f"in a cross-corpus pattern."
+    )
+
+    # Directional convergence patterns
+    for p in qualifying_patterns:
+        pname = p.get("pattern", "")
+        ev = p.get("evidence", {})
+        if pname == "convergent_signature":
+            sig = ev.get("shared_signature", "?")
+            n = len(ev.get("constraints", []))
+            lines.append(
+                f"- Consistent {sig} structural signature confirmed across {n} constraints "
+                f"in the corpus."
+            )
+        elif pname == "convergent_institutional":
+            inst = ev.get("institutional_type", "?")
+            anal = ev.get("analytical_type", "?")
+            n = len(ev.get("constraints_with_split", []))
+            lines.append(
+                f"- Institutional observers classify this as {inst}; analytical observers "
+                f"classify it as {anal} — systematic divergence confirmed across {n} constraints "
+                f"cross-corpus."
+            )
+        elif pname == "convergent_drift":
+            drift = ev.get("shared_drift_type", "?")
+            sev = ev.get("severity", "?")
+            n = len(ev.get("constraints", []))
+            lines.append(
+                f"- Convergent {drift} drift pattern confirmed at {sev} severity "
+                f"across {n} constraints."
+            )
+
+    # Omega narrowings finding
+    omega_type_label = next(iter(omega_types_seen - {""}), "directional") if omega_types_seen else "directional"
+    lines.append(
+        f"- {omega_count} cross-corpus omega narrowings with consistent {omega_type_label} "
+        f"direction confirmed."
+    )
+
+    lines.append("")
+    if h1 is not None:
+        lines.append(
+            f"Indexed divergence (H\u00b9={h1}) is explanatory context for the above, "
+            f"not epistemic caution: it shows why these mechanisms were structurally "
+            f"hard to see from single observer positions."
+        )
+    else:
+        lines.append(
+            "Indexed divergence (H\u00b9 data unavailable) — see CONTEXTUALITY & MONOTONICITY "
+            "section. The divergence score is explanatory context for the above, not epistemic "
+            "caution: it shows why these mechanisms were structurally hard to see from single "
+            "observer positions."
+        )
+    lines.append("")
+    lines.append(
+        "NOTE: F-UNSUPPORTED-TRANSLATION applies. Each elevated finding requires "
+        "independent Tier 1 evidence before inclusion in essay."
+    )
+    lines.append("")
+
+    return "\n".join(lines)
+
+
 # --- Cross-Constraint Convergence Section ---
 
 def build_cross_constraint_section(constraint_id, evaluative_data):
@@ -1998,8 +2170,17 @@ def generate_report(constraint_id, data, iteration_round=None):
     except ImportError:
         l2_axiom2 = ""
 
+    xcon_synthesis = build_xcon_synthesis_section(
+        constraint_id,
+        data["evaluative"],
+        data.get("scenario"),
+        data.get("omega_xcon"),
+        data["pipeline"],
+    )
+
     sections = [
         banner,
+        xcon_synthesis,
         build_level_header(1, "SELF-CONSISTENCY"),
         l1_identity, l1_contamination, l1_orbit, l1_omega,
         build_level_header(2, "DIAGNOSTIC CONVERGENCE"),
@@ -2118,6 +2299,10 @@ def main():
         "covering":    load_text(OUTPUTS_DIR / "covering_analysis.md", "covering_analysis.md"),
         "evaluative":  load_json(OUTPUTS_DIR / "evaluative_convergence.json",
                                  "evaluative_convergence.json"),
+        "scenario":    load_json(OUTPUTS_DIR / "scenario_convergence.json",
+                                 "scenario_convergence.json"),
+        "omega_xcon":  load_json(OUTPUTS_DIR / "omega_cross_constraint.json",
+                                 "omega_cross_constraint.json"),
     }
 
     # Generate reports
