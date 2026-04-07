@@ -1,0 +1,203 @@
+{
+  "header": {
+    "constraint_id": "sotu_1965_johnson_uniform_voting_standard_elimination",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "uvse"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.72,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Elimination of Discriminatory Voter Qualification Tests and Federal Uniform Voting Standards (1965)",
+    "topic_domain": "governance/voting_rights",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "disenfranchised_black_citizens",
+      "voters_in_low_literacy_regions"
+    ],
+    "victims": [
+      "state_registrars_with_discretionary_power",
+      "white_citizens_accustomed_to_local_control"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Disenfranchised Black Citizen",
+      "comment": "PERSPECTIVE 1: DISENFRANCHISED BLACK CITIZEN (SNARE) \u2014 Trapped by literacy test requirements, poll tax, grandfather clause, good character requirements, and registrar discretion to reject applications for pretextual reasons. No exit from the constraint system without federal intervention. Bears maximum suppression without coordination benefit. The constraint's suppression (0.72) reflects the multiple overlapping barriers designed to exclude this agent regardless of literacy or qualification."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Poor White Citizen in Literacy-Test States",
+      "comment": "PERSPECTIVE 2: POOR WHITE CITIZEN IN LITERACY-TEST STATES (TANGLED ROPE) \u2014 Constrained by literacy test barriers but benefits from implementation discretion: registrars typically administered tests leniently for white applicants while rejecting identical responses from Black applicants. Bears some suppression (the test exists) but gains coordination benefit from the local discretion system and often receives preferential treatment. The federal standard extracts this agent's preferential access while removing the registrar's discretionary tool."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Federal Voting Rights Administration",
+      "comment": "PERSPECTIVE 3: FEDERAL VOTING RIGHTS ADMINISTRATION (ROPE) \u2014 Benefits from the uniform standard through institutional legitimacy, simplified federal oversight, and authority expansion. Experiences the constraint as coordination: establishing objective criteria enables federal courts to adjudicate voting rights disputes clearly. Net beneficiary \u2014 this institutional actor gains power and clarity through federal standardization."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "State and Local Registrars",
+      "comment": "PERSPECTIVE 4: STATE AND LOCAL REGISTRARS (SNARE) \u2014 Trapped by federal mandate eliminating the discretionary tools (literacy tests, good character clauses, middle-name requirements) that enabled selective registration. Loss of administrative discretion is experienced as severe suppression. The constraint requires active enforcement (federal examiners can be sent to oversee registration in covered jurisdictions). High extraction from this institutional actor: they lose power, discretion, and the ability to implement community preferences about voter qualification."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "White Citizens Accustomed to Local Control",
+      "comment": "PERSPECTIVE 5: WHITE CITIZENS ACCUSTOMED TO LOCAL CONTROL (PITON) \u2014 Perceive the federal mandate as imposing external rules on local practice. Constrained by federal enforcement but retain substantial exit options (relocation, private organizing, litigation). The constraint's theater_ratio (0.35) reflects that the federal standard is functionally justified (preventing discriminatory administration) rather than performative. This perspective is piton because the constraint replaces localized discretion with legible federal rules, eliminating the prior theater of 'local knowledge' and 'community standards.' The theatrical covering is gone; the extraction is now visible."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Universal Suffrage View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / UNIVERSAL SUFFRAGE VIEW (MOUNTAIN) \u2014 From a long-term universal perspective, the elimination of literacy tests and discretionary voter qualification represents a move toward a natural law of democratic governance: one-person-one-vote, independent of administrators' subjective judgments about qualification. This perspective sees the constraint as converging on an immutable principle of democratic legitimacy. However, the structural data reveals a false summit: this constraint is not a natural law but a forced equilibrium requiring active federal enforcement. The 'naturalness' of uniform suffrage is maintained by ongoing suppression of alternatives (literacy-test advocates, local-control proponents)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "literacy_test_necessity_contested",
+      "question": "Were literacy tests a genuine qualification for informed voting or purely pretextual tools for selective exclusion?",
+      "resolution_mechanism": "Historical analysis of pass rates and essay evaluations for white vs. Black applicants using identical literacy assessments; administrative records showing registrar discretion; comparative literacy rates in voting-eligible populations",
+      "impact": "If purely pretextual: constraint is unambiguously corrective and beneficiary-protective (snare elimination). If partly justified: constraint imposes uniform standards that prevent abuse but eliminate potential legitimate qualification gate (snare/rope boundary becomes ambiguous).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether literacy tests were pretextual or had genuine qualification purpose"
+    },
+    {
+      "id": "voter_registration_outcome_asymmetry",
+      "question": "Did federal uniform standards actually produce equivalent registration rates across racial groups, or did registrars develop new pretextual barriers to preserve de facto discrimination?",
+      "resolution_mechanism": "Longitudinal voter registration data by race and county pre/post-federal standardization; analysis of alternative barriers (address verification, form rejection, citizenship challenges) that emerged post-1965; inference from registration rates whether suppression mechanism merely shifted",
+      "impact": "If federal standard succeeded: constraint is rope (genuine coordination on registration access). If registrars adapted by shifting barriers: constraint is scaffolding a temporary fix, not eliminating suppression (scaffold rather than rope). If both: tangled rope with residual suppression mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether federal standards eliminated or merely redirected discriminatory registration barriers"
+    },
+    {
+      "id": "federal_enforcement_necessity_duration",
+      "question": "How long must federal enforcement (federal examiners, Justice Department review) persist to guarantee voting rights, or is it an indefinite requirement indicating the constraint cannot self-stabilize?",
+      "resolution_mechanism": "Timeline of federal examiner deployment in covered jurisdictions; analysis of voting rights violations in jurisdictions where federal oversight was withdrawn; interstate comparative analysis of voting discrimination post-oversight removal",
+      "impact": "If enforcement can be removed after internalization: constraint is rope with a temporary enforcement phase. If violations resurface immediately upon removal: constraint is snare requiring indefinite coercion (federal enforcement IS the suppression mechanism preventing backsliding).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether federal enforcement can eventually be withdrawn or must be indefinite"
+    },
+    {
+      "id": "local_voter_qualification_vs_federal_uniformity",
+      "question": "Is legitimate democratic governance better served by federal uniformity (prevents discrimination but removes local control) or local flexibility (enables community voice but permits discrimination)?",
+      "resolution_mechanism": "Comparative analysis of voting system design in federal vs. unitary democracies; case studies of federal standards backsliding or local control re-emergence; normative democratic theory literature on federalism vs. universal rights",
+      "impact": "If federal uniformity is normatively superior: constraint converges on natural law (mountain). If legitimate value in local control: constraint is forcible equilibrium (tangled rope or snare, depending on whose values are suppressed).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Normative tension between federal uniformity and local democratic control"
+    },
+    {
+      "id": "true_neutral_standard_impossibility",
+      "question": "Can any voter qualification standard (even 'objective' ones) be administered free from discriminatory intent, or does the power to qualify voters inherently enable discrimination?",
+      "resolution_mechanism": "Analysis of supposedly neutral standards (voter ID, address verification, citizenship documentation) and their disparate impact across demographic groups; documentation of registrar discretion in applying neutral criteria; philosophical analysis of administrative discretion under uncertainty",
+      "impact": "If neutral standard is possible: constraint can eventually become rope (pure coordination). If discrimination inheres in any qualification gate: constraint can only suppress alternatives, never eliminate discrimination mechanism (permanent snare).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether truly neutral voter qualification standards can be administered without discrimination"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.72,
+      "id_override": "uvse_extractiveness_t0_preelimination"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52,
+      "id_override": "uvse_extractiveness_t5_immediate_enforcement"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38,
+      "id_override": "uvse_extractiveness_t10_current"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.88,
+      "id_override": "uvse_theater_t0_preelimination"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55,
+      "id_override": "uvse_theater_t5_immediate_enforcement"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35,
+      "id_override": "uvse_theater_t10_current"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The elimination of discriminatory voter qualification tests and establishment of federal uniform voting standards (1965) represents a forcible correction of a snare that extracted political power from Black citizens through ostensibly neutral but selectively enforced barriers. Literacy tests, poll taxes, grandfather clauses, and registrar discretion to reject applications created an elaborate suppression system that locked millions of disenfranchised citizens out of the electoral process. The federal constraint eliminates these tools and imposes objective, uniform standards administered by federal oversight where necessary. This constraint exhibits the full structural tension between elimination of discriminatory tools and loss of local control: disenfranchised citizens gain access (snare elimination), but state and local officials lose discretionary power, and citizens accustomed to local control experience federal imposition. The constraint's evolution shows declining extractiveness (0.72 \u2192 0.38) as federal enforcement becomes internalized, but persistent suppression (0.72 throughout) reflecting the ongoing conflict over whether federal uniformity or local flexibility should govern voting rules.",
+    "key_agents": [
+      "Disenfranchised Black Citizens: Primary victim (powerless/trapped) \u2014 locked out of voting by literacy tests, poll taxes, and registrar discretion; benefit directly from federal uniform standards and loss of registrar discretion",
+      "State and Local Registrars: Primary extractors (institutional/trapped) \u2014 lose discretionary power to exclude voters; experience federal mandate as suppressive constraint; cannot exit federal jurisdiction",
+      "Poor White Citizens in Literacy-Test States: Secondary actor (moderate/constrained) \u2014 bear literacy test requirement but benefit from registrar discretion leniently applied; lose preferential treatment under federal uniformity",
+      "Federal Voting Rights Administration: Secondary beneficiary (institutional/arbitrage) \u2014 gains institutional authority, oversight power, and ability to adjudicate voting rights disputes clearly",
+      "White Citizens Accustomed to Local Control: Secondary victim (powerful/constrained) \u2014 constrained by federal mandate but retain exit options (relocation, litigation, political organizing); experience loss of local control over registration rules",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing federal uniformity as immutable democratic law while obscuring its active enforcement requirement and suppression of alternatives"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint primarily corrects prior extraction (literacy tests extracting voting power from Black citizens) rather than creating new extraction. However, residual extraction persists through federal enforcement burden on states, lost local control, and the ongoing need to suppress alternative qualification schemes (literacy tests, character clauses). The extractiveness value reflects this middle ground: not the maximal extraction of a snare (0.72 pre-elimination) but substantial constraint on state discretion. Suppression (0.72): High. The constraint actively suppresses registrar discretion, local control preferences, and alternative voter qualification schemes. Federal enforcement mechanisms (federal examiners, Justice Department pre-clearance) represent active coercion preventing backsliding. The suppression is structural and persistent \u2014 without federal enforcement, the prior discriminatory system re-emerges (as documented by multiple Voting Rights Act challenges and subsequent suppression). Theater ratio (0.35): Low-moderate. The federal uniform standard is functionally justified (prevents discriminatory administration) rather than performative. Literacy tests had high theater (0.88 in t0) because they provided cover for discretionary exclusion; the federal standard eliminates this theatrical cover by removing the registrar's discretionary tool entirely. The remaining theater (0.35) reflects the modest performance of federal enforcement and bureaucratic administration, but the core function (preventing discrimination) is genuine.",
+    "perspectival_gap": "The fundamental perspectival gap is between correction and suppression: the constraint corrects historical extraction (disenfranchisement) but does so by suppressing alternatives (local control, registrar discretion, community governance). The disenfranchised citizen sees snare elimination; the registrar sees snare imposition. Neither perspective is wrong \u2014 they are structurally accurate from their position. The tangled-rope classification at moderate/constrained reflects this hybrid: the constraint has a genuine coordination function (enabling access to voting), a genuine extractive function (suppressing local control), and requires active enforcement. The piton classification from the powerful/constrained position reflects that federal uniformity strips away the theatrical cover of local knowledge and community standards, making the extraction visible. The mountain classification from the analytical perspective risks naturalizing this forced equilibrium as an immutable principle of democratic governance.",
+    "directionality_logic": "Directionality computation: Disenfranchised citizens (beneficiary + trapped exit) derive d \u2248 1.0 (they are maximally trapped victims who benefit from constraint removal) \u2192 f(d) \u2248 1.42 \u2192 experienced extraction is high suppression elimination. State registrars (victim of federal mandate + trapped exit) derive d \u2248 0.95 (they are trapped by federal constraint, cannot exit jurisdiction) \u2192 f(d) \u2248 1.42 \u2192 experienced extraction is maximum. Federal administrators (beneficiary + arbitrage) derive d \u2248 0.05 (they benefit and can shift enforcement priorities) \u2192 f(d) \u2248 -0.12 \u2192 experienced extraction is negative (institutional gain). Poor white citizens (victim of lost preference + constrained exit) derive d \u2248 0.55 (they bear some suppression but have relocation/litigation options) \u2192 f(d) \u2248 0.75 \u2192 moderate experienced extraction. Analytical observer (neither beneficiary nor victim, observational position) derives d \u2248 0.72 \u2192 f(d) \u2248 1.15 \u2192 analytical extraction value (sees the structure without experiencing its suppression).",
+    "mandatrophy_analysis": "This constraint partially resolves mandatrophy through temporal measurement: base_extractiveness declines from 0.72 (pre-elimination, maximum extraction via disenfranchisement) to 0.38 (current, residual extraction via federal suppression of alternatives). Theater_ratio declines from 0.88 (literacy test cover story) to 0.35 (federal uniform standard removes theatrical cover). The constraint is not a resolution of mandatrophy but a transformation of extraction: from discriminatory discretion (high theater, massive extraction) to federal uniformity (low theater, moderate extraction). The remaining extractiveness reflects that federal enforcement itself requires suppression of alternatives \u2014 there is no exit from federal jurisdiction, no way to restore local control without restoring discrimination. The tangled-rope classification reflects this: genuine coordination on voting access exists alongside genuine extraction of local control. The constraint cannot be pure rope (coordination without extraction) because removing one suppression mechanism (registrar discretion) requires imposing another (federal enforcement). The mandatrophy is resolved not by finding pure coordination but by recognizing that this constraint will always be tangled \u2014 it corrects historical extraction while imposing new suppression, and both aspects are structurally necessary."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "voter_id_requirements_disparate_impact",
+      "federal_preclearance_jurisdiction_boundaries"
+    ],
+    "dual_formulation_note": "This constraint is upstream of voter ID and registration barriers that emerged post-1965 as registrars adapted to circumvent federal uniformity. The uniform voting standard story should be read alongside stories documenting how supposedly neutral requirements (voter ID, address verification, citizenship documentation) replicate the discriminatory mechanism through different tools."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.95
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "header": {
+    "constraint_id": "1990_bush_head_start_expansion",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.25,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Head Start Funding Expansion (1990s Bush Administration): Early Childhood Education Entitlement with School Readiness Mandate",
+    "topic_domain": "education/social_policy",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "low_income_families",
+      "disadvantaged_children",
+      "public_school_systems"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Low-Income Families Accessing Head Start",
+      "comment": "PERSPECTIVE 1: LOW-INCOME FAMILIES (ROPE) \u2014 Powerless agents with mobile exit options (can seek alternative childcare or rely on informal networks, though at higher cost/burden). Head Start provides genuine coordination benefit: subsidized early education that would otherwise be unaffordable. No extraction experienced \u2014 the constraint solves a real collective action problem (how to fund quality early childhood education for families below the income threshold). The agent benefits directly and perceives the constraint as enabling, not constraining."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Children in the School Readiness Pipeline",
+      "comment": "PERSPECTIVE 2: CHILDREN IN THE SCHOOL READINESS PIPELINE (ROPE) \u2014 Moderate agents (via institutional representation by parents/educators) with constrained exit options (children attend school; readiness assessment determines placement/support). The constraint coordinates the transition from home/informal care to formal schooling. The readiness mandate ensures baseline cognitive and social-emotional development. Some suppression (standardized assessment limits alternatives; baseline expectations are non-negotiable) but low \u2014 children who do not meet readiness thresholds receive additional support rather than exclusion. Net benefit: improved developmental outcomes."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Public School Systems and Receiving Communities",
+      "comment": "PERSPECTIVE 3: PUBLIC SCHOOL SYSTEMS AND RECEIVING COMMUNITIES (ROPE) \u2014 Powerful institutional actors with arbitrage options (can adjust curricula, teacher allocation, and resource distribution based on the readiness profile of incoming cohorts). Head Start is a pure coordination benefit: schools receive children with higher average cognitive and social-emotional readiness, reducing within-classroom variance and improving instructional efficiency. No extraction \u2014 the constraint solves a collective action problem (coordinating early development across decentralized family and informal care systems). Arbitrage agents experience the constraint as enabling."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Federal Education Administration and Congressional Sponsors",
+      "comment": "PERSPECTIVE 4: FEDERAL EDUCATION ADMINISTRATION AND CONGRESSIONAL SPONSORS (ROPE) \u2014 Institutional actors with arbitrage exit options (can adjust funding levels, programmatic requirements, or reporting standards). The constraint implements an explicit policy choice: federal investment in early childhood human capital formation. This is pure coordination from the sponsoring institution's perspective \u2014 it allocates resources to solve a known market failure (low private investment in early childhood for low-income families due to inability to capture returns). No extraction; the constraint reflects the institutional actor's own stated goals."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Early Childhood Educators and Head Start Program Staff",
+      "comment": "PERSPECTIVE 5: EARLY CHILDHOOD EDUCATORS AND HEAD START PROGRAM STAFF (ROPE) \u2014 Organized agents with constrained exit options (must comply with federal reporting standards, curriculum requirements, and professional credentialing). The constraint coordinates their labor: Head Start funding stabilizes employment, establishes wage floors (though modest), and provides professional development infrastructure. Some suppression (federal requirements reduce autonomy; wage standardization prevents individual wage competition) but low \u2014 educators experience the constraint as enabling professional credibility and stable work. Organized agents can also advocate for improved terms through collective bargaining."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer: School Readiness as Natural Law",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational analytical perspective, the school readiness constraint appears as an immutable feature of cognitive development and educational systems: children with higher baseline cognitive and social-emotional competency perform better in formal schooling; standardized readiness assessment is a natural consequence of this relationship. However, this perspective risks false-summit classification. The actual constraint is a policy choice (federal funding + readiness mandate), not an inherent law of child development. The analytical observer naturalizes a contingent institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "readiness_threshold_arbitrariness",
+      "question": "Are standardized readiness thresholds (vocabulary, letter recognition, social-emotional competency measures) measuring genuine developmental prerequisites or arbitrary assessment conventions that reflect middle-class cultural norms?",
+      "resolution_mechanism": "Longitudinal study comparing children who meet vs. narrowly miss standardized readiness thresholds; correlation between threshold-crossing and later academic outcomes controlling for socioeconomic factors; cross-cultural validation of readiness measures",
+      "impact": "If thresholds are genuine prerequisites: Head Start is optimal coordination, and the mountain perspective is justified. If thresholds are arbitrary conventions: the constraint is suppressing alternative developmental pathways (e.g., play-based vs. skills-focused), and suppression should be scored higher (shifting from Rope toward Tangled Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether readiness thresholds measure genuine developmental prerequisites or cultural conventions"
+    },
+    {
+      "id": "extraction_through_standardization",
+      "question": "Does the readiness mandate extract value from families and educators by requiring compliance with a single developmental model, suppressing alternative approaches (e.g., Montessori, play-based, community-embedded learning)?",
+      "resolution_mechanism": "Analysis of funding incentives: do Head Start programs that deviate from the readiness-focused curriculum receive lower ratings or reduced funding? Documentation of alternative early education models and their exclusion from the federal program. Survey of educators and families about perceived constraints from standardization.",
+      "impact": "If standardization suppresses genuine alternatives: extractiveness should increase (0.18 \u2192 0.35+), reclassifying from Rope toward Tangled Rope. If readiness focus is genuinely superior: standardization is coordination without suppression.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether readiness mandate extracts through suppression of alternative pedagogies"
+    },
+    {
+      "id": "federal_budget_burden_distribution",
+      "question": "Is the half-billion dollar Head Start expansion absorbed by federal revenue (tax base) in a progressive manner, or does it indirectly extract from other vulnerable populations through opportunity costs (e.g., reduced funding for special education, adult literacy, infrastructure)?",
+      "resolution_mechanism": "Analysis of federal budget allocation: what programs were defunded or delayed to accommodate Head Start expansion? Distributional analysis of tax burden: who bears the cost? Longitudinal comparison of program funding trajectories before/after the expansion.",
+      "impact": "If costs are distributed regressively or extracted from other vulnerable programs: the constraint should include secondary victims, and the beneficiary-only structure misses the full picture. This would shift analysis toward acknowledging hidden extraction flows.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distributional incidence of Head Start expansion costs"
+    },
+    {
+      "id": "labor_market_response_to_readiness_mandate",
+      "question": "Does the readiness mandate, by creating a guaranteed pool of more-ready children, reduce pressure on schools to improve teaching quality, thereby suppressing teacher investment and wage growth?",
+      "resolution_mechanism": "Comparison of teacher compensation trends in high-coverage vs. low-coverage Head Start regions; analysis of school district spending on professional development before/after Head Start expansion; evidence of curriculum degradation when readiness baseline rises",
+      "impact": "If readiness mandate reduces teacher wage pressure: educators experience hidden extraction (their labor is devalued because the input problem is 'solved' by Head Start). This would add educators to the victims array and increase suppression score.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether readiness mandate suppresses teacher wages and professional investment"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Head Start funding expansion of the early 1990s represents a federal commitment to standardize human capital formation at the early childhood intake point, establishing a guaranteed federal program of early education for low-income children with an explicit school readiness mandate. The expansion allocates approximately half a billion dollars to increase access and improve the quality of early childhood education services. The structural goal is to reduce downstream educational inequality by ensuring all children, regardless of family income, have access to high-quality preschool that prepares them cognitively and socio-emotionally for formal schooling. From the perspective of low-income families, the constraint solves a genuine coordination problem: childcare is expensive, and families lack the resources to purchase quality early education privately. From the perspective of schools, the constraint is beneficial: children arrive with higher average readiness, improving instructional efficiency and reducing variance in classroom composition. From the perspective of federal education administration, the constraint implements an explicit policy choice to invest in human capital formation. The constraint classifies as pure coordination (Rope) across all major perspectives because no agent experiences significant extraction \u2014 all parties benefit from the coordination of early childhood development. However, the rising theater ratio (from 0.20 to 0.35 over the interval) suggests increasing performative content: readiness assessment has become more formal and standardized, raising questions about whether the mandate is optimizing for genuine developmental outcomes or theater compliance.",
+    "key_agents": [
+      "Low-Income Families: Primary beneficiary (powerless/mobile) \u2014 direct access to subsidized early education that would be unaffordable in the private market",
+      "Disadvantaged Children: Primary beneficiary (via representation; moderate/constrained) \u2014 improved developmental outcomes and school readiness; some suppression through standardized assessment",
+      "Public School Systems: Secondary beneficiary (powerful/arbitrage) \u2014 receive children with higher average readiness; can allocate resources more efficiently",
+      "Federal Education Administration: Sponsoring institutional actor (institutional/arbitrage) \u2014 implements policy choice to invest in early childhood human capital; captures political credit for expansion",
+      "Early Childhood Educators and Program Staff: Organized agents (organized/constrained) \u2014 benefit from stable employment and professional infrastructure; some suppression through federal compliance requirements",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing readiness mandate as immutable feature of cognitive development rather than contingent policy choice"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low. Head Start expansion is a genuine coordination mechanism with minimal extraction. Low-income families experience pure benefit (subsidized access). Schools experience pure benefit (more-ready children). Federal sponsors experience pure benefit (implementation of stated policy goals). No agent perceives themselves as bearing costs relative to the constraint's primary coordination function. The modest value (not zero) reflects two factors: (1) some suppression through standardized readiness assessment, which narrows the range of accepted developmental pathways; (2) opportunity costs in the federal budget (the half-billion dollars could have been allocated elsewhere), though these are politically allocated rather than structurally imposed. Suppression (0.25): Low-moderate. The standardized school readiness assessment creates some suppression by establishing a single developmental model and marginalizing alternative approaches (Montessori, play-based, community-embedded). Children who do not meet readiness thresholds may receive stigmatizing labels or segregated support services, though federal policy emphasizes inclusion rather than exclusion. Educators face compliance requirements that limit pedagogical autonomy. However, suppression is not severe \u2014 alternative approaches exist outside the federal program, and the suppression mechanism is institutional (curriculum standards) rather than coercive (no children are excluded from school based on readiness). Theater ratio (0.35): Moderate. Early childhood assessment has increasingly performative content: standardized vocabulary and letter-recognition testing does measure genuine skills but also reflects assessment conventions (e.g., emphasis on print literacy over oral language, cultural bias toward middle-class communication norms). The readiness mandate incentivizes teaching-to-the-test in preschool settings. However, theater is not dominant \u2014 the correlation between readiness measures and later school success is empirically real, so the assessment has functional content alongside performative elements.",
+    "perspectival_gap": "All major perspectives classify the constraint as Rope with minimal disagreement. Low-income families see pure benefit. Schools see pure benefit. Federal sponsors see pure benefit. Educators see benefit with modest compliance burden. Children see mixed benefit (improved readiness but some suppression through standardization). The analytical observer at civilizational scope risks false-summit classification by naturalizing the readiness mandate as immutable. The perspectival gap is unusually small for a constraint story, reflecting that Head Start expansion is genuinely a coordination mechanism rather than a zero-sum extraction. The gap that does exist concerns the analytical observer's tendency to naturalize policy choices as laws of cognitive development \u2014 a pattern common in education policy where developmental science is invoked to justify particular institutional arrangements.",
+    "directionality_logic": "Beneficiaries (low-income families, schools, federal education administration) experience directionality favoring them: low d values (0.05\u20130.20) reflecting that the extraction flow runs toward them, not away. The low-income family's high mobility (mobile exit option) and direct benefit (can access alternative childcare at higher cost but retains the option) produces d \u2248 0.15. Schools' arbitrage exit option and direct benefit produce d \u2248 0.10. Federal sponsors' institutional power and arbitrage exit produce d \u2248 0.05. The modest suppression (0.25) and low extractiveness (0.18) ensure that even agents with constrained exit options (early childhood educators) do not experience high chi. The constraint is not structured to produce victim-beneficiary asymmetry because the coordination problem it solves (funding quality early childhood education for families below the income threshold) has no zero-sum extraction component.",
+    "mandatrophy_analysis": "RESOLUTION: This constraint does not trigger mandatrophy because it is a genuine coordination mechanism (Rope) that does not claim to be a natural law (Mountain). The false-summit risk occurs at the analytical/civilizational perspective, where the readiness mandate risks being naturalized as an inherent feature of cognitive development rather than a policy choice. However, the base properties and most perspectives correctly identify the constraint as Rope. The omegas flag the potential false-summit by documenting the ambiguity: Are readiness thresholds measuring genuine developmental prerequisites or arbitrary assessment conventions? This resolves the mandatrophy: if thresholds are genuine prerequisites, the mountain perspective becomes defensible (though still contingent on the policy choice to use federal funding to implement them). If thresholds are arbitrary conventions, the analytical observer is naturalizing a constructed constraint, and the perspective should be downgraded. The constraint's structure is clear \u2014 it is coordination with some suppression, not extraction masked as coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "public_school_readiness_expectation",
+      "preschool_teacher_credentialing_standards",
+      "school_district_special_education_identification"
+    ]
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "header": {
+    "constraint_id": "sotu_1975_ford_federal_spending_ceiling",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ford75"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.62,
+    "claimed_type": "tangled_rope",
+    "human_readable": "5% Federal Pay and Benefit Growth Cap (1975 Ford SOTU)",
+    "topic_domain": "governance/fiscal_policy",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "treasury_deficit_control",
+      "fiscal_conservative_coalition"
+    ],
+    "victims": [
+      "federal_employees",
+      "benefit_recipients",
+      "military_retirees"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Federal Employee",
+      "comment": "PERSPECTIVE 1: FEDERAL EMPLOYEE (SNARE) \u2014 Locked into civil service by pension vesting and inability to recover lost COLA. Real wages decline under 5% cap when inflation exceeds it. No exit option without forfeiting retirement security accumulated over decades. Maximum extraction from the perspective of the employee who cannot leave."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Social Security Recipient",
+      "comment": "PERSPECTIVE 2: SOCIAL SECURITY RECIPIENT (SNARE) \u2014 Capped COLA reduces real purchasing power when inflation exceeds 5%. Cannot exit the social insurance system. Economically dependent on the benefit. Bears full cost of the cap with no offsetting coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Federal Employee Union",
+      "comment": "PERSPECTIVE 3: FEDERAL EMPLOYEE UNION (TANGLED ROPE) \u2014 Moderate power through collective organization and congressional lobbying. Constrained by political economy of deficit reduction pressure. Experiences both coordination (negotiating within the cap) and extraction (the cap itself imposes real losses). Can pressure for exceptions but cannot escape the constraint entirely."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Treasury/Deficit Control Coalition",
+      "comment": "PERSPECTIVE 4: TREASURY / DEFICIT CONTROL COALITION (ROPE) \u2014 Net beneficiary. The cap functions as a pure coordination mechanism from this perspective: it coordinates spending across federal agencies and entitlement programs toward deficit reduction. Extraction runs toward this agent. No suppression experienced \u2014 the coalition actively enforces the constraint and exits whenever deficit pressure relaxes."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Congress (Organized Political Caucus)",
+      "comment": "PERSPECTIVE 5: CONGRESS / ORGANIZED POLITICAL CAUCUS (TANGLED ROPE) \u2014 Organized power but constrained by deficit pressure and electoral incentives. Experiences both coordination (using the cap to manage budget process) and extraction (having to craft exceptions and workarounds when the cap becomes politically untenable). Can override the cap through legislation but faces political cost."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Automatic Indexing Ritual",
+      "comment": "PERSPECTIVE 6: AUTOMATIC INDEXING RITUAL (PITON) \u2014 The 5% cap persists through institutional inertia despite routine congressional override. The theater ratio is high: Congress votes to suspend or exceed the cap in most years, rendering the cap performative. The constraint maintains symbolic force (demonstrates fiscal discipline) while functionally degraded (rarely binding). Maintained through legislative ritual rather than genuine enforcement."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a long time horizon, one might see the cap as reflecting an immutable structural truth: government cannot sustainably increase all benefit obligations faster than economic growth. But the structural data contradicts mountain classification \u2014 the cap is a contingent policy choice with identifiable beneficiaries (treasury, deficit hawks), not a physical or logical necessity. The engine will identify this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "inflation_threshold_ambiguity",
+      "question": "Is the 5% cap calibrated to average inflation expectations, or does it operate as a real wage reduction mechanism regardless of inflation?",
+      "resolution_mechanism": "Comparison of inflation rates during cap period vs. forward inflation expectations at policy adoption; analysis of whether cap was indexed to CPI or fixed nominally",
+      "impact": "If calibrated to inflation expectations: constraint functions as coordination (maintains real spending constant). If operating as real wage reduction: constraint functions as pure extraction (intentional real income redistribution).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether 5% cap reflects inflation expectations or real wage reduction intent"
+    },
+    {
+      "id": "alternative_deficit_mechanism",
+      "question": "Would an equivalent deficit reduction have been achieved through progressive taxation rather than benefit/wage caps?",
+      "resolution_mechanism": "Fiscal modeling: revenue impact of alternative tax increases vs. actual savings from benefit caps; historical comparison to other deficit reduction episodes",
+      "impact": "If progressively taxed alternative existed: cap is extraction mechanism (chose regressive path). If progressive alternative infeasible: cap is legitimate coordination (only available mechanism).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether progressive tax alternative to benefit cap was available"
+    },
+    {
+      "id": "congressional_override_frequency",
+      "question": "How often has Congress voted to suspend or exceed the cap? Does the pattern reveal the cap as theater or genuine constraint?",
+      "resolution_mechanism": "Legislative history: count of override votes, frequency of suspension, exceptions granted; correlation with inflation rates and congressional composition",
+      "impact": "High override frequency (>80% of years): strong evidence of piton (theater). Low frequency (<20%): evidence of snare (genuine extraction). Mid-range: tangled rope dynamics.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Congressional override frequency reveals theater vs. genuine binding"
+    },
+    {
+      "id": "beneficiary_capture_mechanism",
+      "question": "Does the constraint primarily benefit deficit control, or does it benefit specific interest groups (wealthy taxpayers, military-industrial complex) through differential exemption patterns?",
+      "resolution_mechanism": "Analysis of which benefits/programs received exemptions or exceeded caps; correlation of exemptions to political power of constituency groups",
+      "impact": "If applied uniformly: constraint is genuine deficit mechanism (rope or scaffold). If exemptions correlate to power: constraint is selective extraction mechanism (snare for powerless, rope for powerful).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether cap benefits apply uniformly or concentrate benefits on powerful groups"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.47
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 8
+  },
+  "commentary": {
+    "narrative_context": "The 5% federal pay and benefit growth cap announced in President Ford's January 1975 State of the Union address represents a structural decoupling of federal spending from automatic cost-of-living adjustments. The cap constrains wage growth for federal employees, military retirement pay, Social Security COLA, and food stamp adjustments \u2014 nominally unified under a single spending discipline. In reality, the constraint creates asymmetric costs: those with fixed incomes (retirees, benefit recipients) cannot negotiate exemptions, while politically powerful constituencies (defense, agriculture) obtain workarounds. The constraint combines genuine coordination function (disciplining federal budget growth) with asymmetric extraction (capping real income for powerless groups). Theater ratio rises over time as congressional overrides become routine, degrading the cap from binding constraint to performative budget symbol.",
+    "key_agents": [
+      "Federal employees: Primary victim (powerless/trapped) \u2014 cannot exit civil service without pension loss; real wages erode when inflation exceeds 5%",
+      "Social Security recipients: Primary victim (powerless/trapped) \u2014 economically dependent; COLA cap reduces purchasing power; cannot negotiate",
+      "Military retirees: Primary victim (powerless/trapped) \u2014 career lock-in creates trapped status; real retirement income declines with cap",
+      "Treasury/Deficit control coalition: Primary beneficiary (institutional/arbitrage) \u2014 cap coordinates spending discipline; extraction flows toward treasury",
+      "Federal employee unions: Moderate power (moderate/constrained) \u2014 can negotiate within cap framework but cannot escape it; see mixed coordination and extraction",
+      "Congress: Organized actor (organized/constrained) \u2014 uses cap as budget discipline mechanism but faces political pressure to override; constrained by electoral incentives",
+      "Benefit recipient advocacy groups: Weak organizing (moderate/constrained) \u2014 can pressure for exceptions but lack leverage of federal employee unions"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The cap imposes real costs on trapped agents (federal employees losing pension real value, retirees losing COLA) but contains coordination function \u2014 legitimate concern about federal budget growth. The value reflects that 60% of the extraction is genuine benefit reduction (not excessive), and 40% is intentional redistribution favoring deficit control. The measurement trajectory shows extractiveness rising from 0.38 (initial proposal phase) to 0.54 (routine implementation) as the reality of the cap's bite becomes clear to benefit recipients. Suppression (0.58): Moderate-high. Federal employees face strong barriers to exit (pension vesting, career lock-in, no alternative employer offering equivalent retirement). Retirees have zero exit options (cannot return to work at full capacity; dependent on benefit). Unions can organize but face declining political leverage as deficits worsen. Food stamp recipients face absolute poverty constraint \u2014 cannot 'exit' into alternative income sources. Theater ratio (0.62): Moderate-high. The constraint is nominally binding but Congress votes to suspend or exceed it in most years. By the 5-year mark, the cap is rarely enforced except rhetorically. This rising theater ratio is diagnostic of piton dynamics \u2014 institutional inertia maintains the symbolic constraint even as functional binding declines.",
+    "directionality_logic": "Directionality varies sharply by agent. Federal employees and retirees are full targets (d \u2248 0.95): powerless/trapped status and no exit options produce maximum f(d) \u2248 1.42 \u2014 they experience the constraint at full force. The treasury/deficit coalition are full beneficiaries (d \u2248 0.05): institutional power and arbitrage exit (can relax the cap anytime) produce f(d) \u2248 -0.12 \u2014 extraction runs toward them. Federal employee unions occupy the middle (d \u2248 0.65): moderate power and constrained exit (can organize and negotiate but cannot escape) produce f(d) \u2248 1.00 \u2014 moderate experienced extraction. Congress is similarly middle-positioned (d \u2248 0.55): organized power but constrained by electoral incentives produces f(d) \u2248 0.75. The analytical observer occupies the observation position (d \u2248 0.73, canonical for analytical) but the false-summit logic applies: treating the cap as a natural law naturalizes what is a contingent policy choice benefiting specific actors.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence. Federal employees and retirees experience pure extraction (Snare) \u2014 capped real wages with no offsetting coordination benefit. The treasury experiences pure coordination (Rope) \u2014 disciplining spending is their sole interest and the cap serves that cleanly. Unions experience mixed dynamics (Tangled Rope) \u2014 both negotiating within constraints (coordination) and losing real wages (extraction). Congress experiences governance tension (Tangled Rope) \u2014 using the cap as budget discipline (coordination) while facing political pressure to override (extraction-like cost to electoral standing). The performative character of the constraint over time (rising theater ratio, routine overrides) makes the constraint appear as degraded ritual (Piton) by the end of the interval. The analytical observer risks naturalizing the cap as inevitable fiscal discipline (Mountain) but the structural data shows it is a contingent choice with clear winners and losers.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint serves genuinely different functions for different actors. For the treasury, it IS a pure coordination mechanism \u2014 imposing spending discipline that benefits all debt holders. For powerless benefit recipients, it IS pure extraction \u2014 real income loss with no offsetting coordination benefit. For Congress and unions, it IS tangled rope \u2014 both coordinating budget discipline AND experiencing extraction pressure (political cost, wage loss). The constraint's type is not ambiguous; the multiple types are legitimately different perspectives on the same structural phenomenon. The false summit appears at the analytical level \u2014 the natural law framing ('government spending must be disciplined') is really a policy choice that benefits treasury and deficit hawks at the expense of trapped beneficiaries. Unmasking this choice is the analytical obligation."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "stagflation_monetary_constraint",
+      "federal_workforce_mobility_trap",
+      "cola_indexing_politics"
+    ],
+    "dual_formulation_note": "This constraint is upstream of specific federal program design changes (civil service pay reform, Social Security COLA mechanics) and downstream of fiscal/monetary policy coordination during stagflation. The 5% cap itself is a distinct structural constraint with its own extractiveness value (0.52), separate from the inflation rate (which determines whether the cap binds). Decompose if analyzing the interaction of cap policy with inflation regimes."
+  },
+  "directionality_overrides": []
+}

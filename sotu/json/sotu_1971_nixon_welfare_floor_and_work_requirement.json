@@ -1,0 +1,218 @@
+{
+  "header": {
+    "constraint_id": "sotu_1971_nixon_welfare_floor_and_work_requirement",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sotu_1971"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Income Floor with Mandatory Work Requirements (Nixon 1971)",
+    "topic_domain": "social_policy/welfare_reform",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "taxpayers_and_working_families",
+      "fiscal_conservatives"
+    ],
+    "victims": [
+      "welfare_recipients_unable_to_work",
+      "single_parents_with_childcare_burden",
+      "children_in_low_income_families"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Single Parent with Childcare Burden",
+      "comment": "PERSPECTIVE 1: SINGLE PARENT WITH CHILDCARE BURDEN (SNARE) \u2014 Trapped by the requirement to work while lacking affordable childcare, accessible employment, and transportation. The income floor exists but only if work requirements are met. Discretionary non-work income is eliminated. Suppression is structural: labor market entry is blocked by childcare costs that exceed the minimum income supplement. No exit option exists that preserves family income and child welfare."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Able-Bodied Welfare Recipient",
+      "comment": "PERSPECTIVE 2: ABLE-BODIED WELFARE RECIPIENT (TANGLED ROPE) \u2014 Experiences genuine coordination benefit (income floor eliminates means-testing stigma, provides stability) alongside asymmetric extraction (mandatory work requirement without childcare support, loss of discretionary income, labor-market discipline). Can exit through employment but at significant cost (foregone non-work income, time poverty). The constraint coordinates family stability while extracting work participation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Taxpayers and Working Families",
+      "comment": "PERSPECTIVE 3: TAXPAYERS AND WORKING FAMILIES (ROPE) \u2014 Benefit from reduced welfare fraud, means-testing elimination, and the disciplinary signal that work is required. The constraint solves a coordination problem: how to ensure welfare supports families without creating perverse incentives. This agent perceives the constraint as pure coordination with minimal cost extraction. Can arbitrage by supporting the program (political capital, tax benefit framing)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Child Advocacy and Anti-Poverty Organizations",
+      "comment": "PERSPECTIVE 4: CHILD ADVOCACY ORGANIZATIONS (TANGLED ROPE) \u2014 Organized agents (child welfare advocates, anti-poverty researchers) see coordination benefit (stable income floor improves child development outcomes) but also extraction (work requirements without childcare support, labor-market discipline, dignity extraction via stigma reduction paired with behavioral conditioning). Constrained by need to work within existing policy frameworks; cannot fully exit without losing credibility."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Welfare Bureaucracy",
+      "comment": "PERSPECTIVE 5: WELFARE BUREAUCRACY (PITON) \u2014 The administrative system transitions from means-testing verification to work-requirement monitoring, but much of the bureaucratic theater persists under new form. Eligibility verification is replaced by work verification, but the performative aspect (documenting worthiness) remains. Theater_ratio is elevated because the 'work requirement' becomes a ritual of behavioral monitoring rather than functional labor-force integration. The bureaucracy maintains itself through procedural complexity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Labor Supply Naturalism)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / LABOR SUPPLY NATURALISM (MOUNTAIN) \u2014 From a civilizational perspective, the constraint appears to articulate an immutable principle: able-bodied adults must work to receive income; income floors must include work incentives. This perspective naturalizes what is actually a constructed policy choice \u2014 treating labor supply responsiveness, deservingness categories, and work ethic as natural laws rather than contingent institutional arrangements. The engine identifies this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "childcare_cost_structural_trap",
+      "question": "Are childcare costs an external structural barrier (unmeasured poverty) or a legitimate labor-market cost that welfare recipients should bear?",
+      "resolution_mechanism": "Empirical comparison: (a) childcare cost as percentage of minimum income across state/regional markets; (b) employment rates of welfare recipients with vs without childcare subsidies; (c) comparison to control group without childcare barriers",
+      "impact": "If childcare is unmeasured barrier: single parents are trapped by structural factors, not individual work capacity. Snare classification becomes appropriate for all low-income parents. If childcare is legitimate labor cost: constraint is more rope-like for those who can absorb the cost. Classification gap reveals whether work requirement assumes household resource sharing (two-parent model) that single parents cannot access.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether childcare costs create structural traps"
+    },
+    {
+      "id": "deserving_undeserving_taxonomy_coherence",
+      "question": "Does the 'deserving/undeserving' distinction produce a coherent category separation in practice, or do situational factors (disability onset, job loss, family disruption) make the distinction unstable?",
+      "resolution_mechanism": "Longitudinal analysis of welfare recipients: (a) tracking of those classified as 'able-bodied' who subsequently develop work-limiting conditions; (b) employment outcome tracking to identify those who cannot sustain work despite good-faith effort; (c) comparison of ex-ante classifications to realized outcomes",
+      "impact": "If distinction is stable: work requirements accurately target the right population. If unstable: work requirement creates extraction from misclassified disabled/displaced workers. This determines whether the suppression value (0.65) is justified as behavioral incentive or revealed as coercive misidentification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Coherence of deserving/undeserving distinction in practice"
+    },
+    {
+      "id": "stigma_elimination_trade_off",
+      "question": "Does replacing means-testing with work requirements eliminate stigma or merely substitute one form of degradation (unworthiness of means-testing) for another (unworthiness of joblessness)?",
+      "resolution_mechanism": "Qualitative research: welfare recipient narratives comparing stigma experience under means-testing vs work-requirement regimes; survey data on public attitudes toward welfare recipients vs unemployed workers; longitudinal identity and self-concept measures",
+      "impact": "If work requirement reduces stigma: constraint achieves stated goal (dignity-preserving income floor). If stigma merely shifts form: constraint extracts psychological cost alongside income extraction; the dignity benefit is theatrical. This determines whether beneficiaries genuinely experience rope (coordination with dignity) or tangled_rope (extraction disguised as dignity).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether work requirements reduce or merely relocate stigma"
+    },
+    {
+      "id": "work_incentive_magnitude_calibration",
+      "question": "Are work incentives (income supplements for employment) sufficient to overcome labor-market barriers, or are they merely performative signals of behavioral expectation?",
+      "resolution_mechanism": "Comparative labor-supply elasticity: (a) employment rate increases under income floor alone vs income floor + work incentive; (b) wage-income correlation for welfare recipients with vs without incentive structures; (c) counterfactual: what employment rate would prevail without any income floor (true labor supply) vs with generous unconditional floor (behavioral response to income floor alone)",
+      "impact": "If incentives are effective: constraint solves coordination problem (income security + work participation). If performative: work requirement is extraction mechanism (disciplining behavior via financial penalty for non-work, not genuine incentive). Theater_ratio may be underestimated if incentive structure is theatrical.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether work incentives are effective or performative"
+    },
+    {
+      "id": "intergenerational_extraction_from_children",
+      "question": "Does the constraint extract from children in the form of time poverty (parental work requirements reducing parental availability) even while increasing material resources?",
+      "resolution_mechanism": "Longitudinal comparison: (a) child development outcomes (cognitive, socio-emotional, attachment) in welfare-recipient families before vs after work requirements; (b) parental time availability and childcare quality as mediators; (c) comparison to control group receiving income floor without work requirements (if such comparison is available)",
+      "impact": "If time poverty outweighs material benefit: constraint extracts from children's development, making them indirect victims despite material gain. Single victims-declaration (children as beneficiaries) becomes inadequate \u2014 children are simultaneously beneficiaries (income) and victims (time availability, parental stress). This reveals hidden extraction layer.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether work requirements extract time from children"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "sotu_1971_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.48,
+      "id_override": "sotu_1971_extract_t2"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55,
+      "id_override": "sotu_1971_extract_t5"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52,
+      "id_override": "sotu_1971_extract_t10"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "sotu_1971_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.5,
+      "id_override": "sotu_1971_theater_t2"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58,
+      "id_override": "sotu_1971_theater_t5"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58,
+      "id_override": "sotu_1971_theater_t10"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "In 1971, President Nixon proposed the Family Assistance Plan, a guaranteed minimum income floor for all families with children paired with mandatory work requirements and incentive structures for able-bodied recipients. The constraint aimed to eliminate means-testing stigma while creating a disciplinary mechanism that separated deserving poor (unable to work, elderly, disabled) from undeserving poor (able but unwilling). Taxpayers and working families benefit from reduced fraud and behavioral assurance; welfare recipients gain income stability and dignity-preserving access without means-testing scrutiny; but they lose discretionary non-work income and gain mandatory work participation. Children benefit from increased family resources but potentially lose parental time availability. The constraint operates as a hybrid coordination-extraction mechanism: it genuinely solves the problem of how to provide income security without creating work disincentives, but it also extracts labor participation and behavioral conformity from welfare recipients, particularly single parents with childcare barriers. The measurement trajectory shows extractiveness rising sharply in years 0-2 (as work requirements become operationalized and understood as non-negotiable), then plateauing as recipients adapt. Theater_ratio rises steadily as work-requirement bureaucracy develops, suggesting that the behavioral monitoring and documentation of work-seeking efforts become increasingly performative over time.",
+    "key_agents": [
+      "Single Parents with Childcare Burden: Primary victim (powerless/trapped) \u2014 cannot exit work requirements due to childcare costs and labor-market barriers; structurally trapped by requirement to work while lacking childcare support",
+      "Able-Bodied Welfare Recipients: Secondary victim (moderate/constrained) \u2014 face work requirements with high costs; can exit through employment but lose income stability and discretionary non-work time",
+      "Children in Low-Income Families: Indirect victim/beneficiary (powerless/trapped) \u2014 gain income resources but lose parental time; extraction is hidden in time poverty and developmental stress",
+      "Taxpayers and Working Families: Primary beneficiary (institutional/arbitrage) \u2014 gain assurance that welfare system discourages free-riding; experience reduced fraud and means-testing stigma",
+      "Fiscal Conservatives: Secondary beneficiary (powerful/arbitrage) \u2014 benefit from narrative of behavioral discipline and work incentives; political capital from 'tough on welfare' positioning",
+      "Welfare Bureaucracy: Institutional maintainer (institutional/arbitrage) \u2014 transitions from means-testing verification to work-requirement monitoring; maintains theater through procedural complexity",
+      "Disability Advocates and Social Workers: Organized observers (organized/constrained) \u2014 see extraction from misclassified disabled recipients; constrained by institutional power of work-requirement regime"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts work participation and behavioral conformity from welfare recipients, particularly those with structural barriers to employment (single parents, disabled workers misclassified as able-bodied). The extraction is not total because the income floor provides genuine material benefit; recipients are not impoverished into compliance but rather conditioned into compliance. The measurement trajectory shows initial rise (0.35 \u2192 0.48) as work requirements become operationalized, then plateau (0.48 \u2192 0.55) as the regime stabilizes. Suppression (0.65): High. Childcare costs, labor-market discrimination, disability misclassification, and transportation barriers create structural obstacles to work participation. The 'voluntary' nature of the income floor is conditional on meeting work requirements that many recipients cannot realistically meet. The constraint does not trap recipients through legal prohibition but through economic necessity: the income floor exists only if work requirements are satisfied, creating de facto compulsion. Theater_ratio (0.58): Moderate-high. Work-requirement verification becomes a bureaucratic ritual over time. Case workers document job-seeking efforts, training participation, and employment interviews in ways that mirror means-testing documentation practices. The theater increases (0.42 \u2192 0.50 \u2192 0.58) as the regime matures because the performative aspects (demonstrating worthiness through work-seeking behavior) become more ritualized. Income floor provision (the genuine coordination benefit) remains constant; the behavioral monitoring (theatrical extraction mechanism) expands. Claimed Type (tangled_rope): The constraint genuinely coordinates family income stability with work participation incentives (rope benefit) but extracts labor compliance and behavioral conformity from recipients unable to meet work requirements (snare extraction). The coexistence of genuine coordination and asymmetric extraction is the signature tangled rope structure.",
+    "perspectival_gap": "The constraint achieves maximum perspectival divergence because the same institutional structure (income floor + work requirement) produces opposite structural effects for beneficiaries versus victims. Taxpayers perceive pure coordination (Rope): 'This solves the problem of how to help poor families without creating work disincentives.' Single parents perceive a trap (Snare): 'I cannot work because childcare costs exceed the income floor, but I cannot access the income floor without working.' This is not a communication gap \u2014 it reflects real structural asymmetry. The beneficiary's experience (coordination) and the victim's experience (extraction) are both accurate descriptions of how the constraint operates. The perspectival gap is a diagnostic signal of tangled rope structure: genuine coordination function coexisting with asymmetric extraction.",
+    "directionality_logic": "The directionality derivation operates as follows: (1) Taxpayers and working families are declared beneficiaries (constraint reduces perceived free-riding, provides behavioral assurance). With institutional power and arbitrage exit, their derived d \u2248 0.05-0.15 (full beneficiary range). f(d) \u2248 -0.12, producing negative effective extraction \u03c7 \u2014 they benefit. (2) Single parents unable to work due to childcare barriers are primary victims. Powerless, trapped exit, high structural extraction. Derived d \u2248 0.90-0.95. f(d) \u2248 1.40, producing high effective extraction \u03c7. (3) Able-bodied recipients able to work but at significant cost are secondary victims. Moderate power, constrained exit. Derived d \u2248 0.55-0.65. f(d) \u2248 0.75, producing moderate effective extraction \u03c7. (4) Welfare bureaucracy benefits from regime expansion and funding. Institutional power, arbitrage exit. Derived d \u2248 0.10-0.20. f(d) \u2248 0.00, low extraction experienced. The perspectival gap (rope for beneficiaries, snare for victims, tangled rope for moderate actors) is a direct consequence of the beneficiary/victim structure and exit options.",
+    "mandatrophy_analysis": "The constraint resolves the mandatrophy by demonstrating that tangled rope is the correct classification precisely because beneficiaries (taxpayers) genuinely perceive the constraint as coordination (rope) while victims (welfare recipients unable to meet work requirements) genuinely perceive it as extraction (snare). The temptation to collapse to a single type ('This is really just a work incentive program' = Rope only, or 'This is really coercive behavioral conditioning' = Snare only) misconstrues the structure. The constraint IS both coordination and extraction \u2014 these are not alternative interpretations but simultaneous structural features. Taxpayers benefit from reduced fraud perception (genuine coordination benefit); welfare recipients are extracted from (behavioral compliance requirement). The mandatrophy is resolved by the indexical framework: from the beneficiary index (institutional power, arbitrage), the constraint is Rope; from the victim index (powerless, trapped), the constraint is Snare; from the analytical index (civilizational scope), the constraint is Tangled Rope. No single type is 'correct' \u2014 they are all accurate from their respective indices. The false summit detector flags the mountain perspective (analytical observer naturalizing work requirement as law) correctly: the work requirement is a contingent institutional choice, not an immutable principle."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "welfare_stigma_means_testing_regime",
+      "childcare_affordability_barrier"
+    ],
+    "dual_formulation_note": "This constraint is downstream of the welfare stigma problem (means-testing verification as degrading) and upstream of childcare affordability constraints. The income floor partially solves the stigma problem while creating work-requirement barriers that intersect with childcare availability. Decomposition: (1) welfare_floor_income_coordination (\u03b5 \u2248 0.15, Rope) \u2014 pure coordination benefit of guaranteed minimum income; (2) work_requirement_extraction (\u03b5 \u2248 0.62, Snare) \u2014 pure extraction mechanism of mandatory work participation; (3) this story (sotu_1971) combines both at \u03b5 = 0.52 (Tangled Rope). The two substories have different \u03b5 values because the observable shifts from 'does the income floor improve family stability?' to 'does the work requirement increase labor compliance?' Two distinct constraints linked by network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

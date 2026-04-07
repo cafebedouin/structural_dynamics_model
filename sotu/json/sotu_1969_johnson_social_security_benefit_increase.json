@@ -1,0 +1,163 @@
+{
+  "header": {
+    "constraint_id": "sotu_1969_johnson_social_security_benefit_increase",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ss69"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.25,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Social Security 13% Benefit Increase (1969)",
+    "topic_domain": "social_policy/federal_entitlements",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "elderly_minimum_beneficiaries",
+      "disabled_workers",
+      "surviving_spouses"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Elderly Minimum Beneficiary",
+      "comment": "PERSPECTIVE 1: ELDERLY MINIMUM BENEFICIARY (ROPE) \u2014 The constraint solves a genuine coordination problem: translating workforce contributions into reliable income at retirement. From this agent's position, the 13% increase represents genuine coordination benefit with minimal extraction overhead. The beneficiary is constrained (cannot exit the social insurance system) but perceives the system as fundamentally fair \u2014 a social contract that delivers promised benefits with periodic adjustments for cost of living."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Senior Advocacy Groups",
+      "comment": "PERSPECTIVE 2: SENIOR ADVOCACY GROUPS (ROPE) \u2014 Organized agents (AARP, senior unions) see the benefit increase as a victory for coordinated pressure on the political system. They have agency \u2014 they negotiated this increase through advocacy. The constraint they operate within (federal entitlements bureaucracy) is fundamentally a coordination mechanism with low extraction. They perceive genuine benefit and their organized power is acknowledged by the policymaking process."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Federal Government (Social Security Administration)",
+      "comment": "PERSPECTIVE 3: FEDERAL GOVERNMENT / SSA (TANGLED ROPE) \u2014 The SSA experiences the constraint as mixed coordination and asymmetric extraction. Genuinely coordinating retirement income (coordination benefit) while also managing the fiscal burden of expanded entitlements (extraction cost borne by general revenue and payroll taxes). The agency is constrained by political pressure and demographic trends but also captures administrative authority. Mandated to administer benefits accurately but also pressured to contain costs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Workers and Employers (Payroll Tax Base)",
+      "comment": "PERSPECTIVE 4: WORKERS AND EMPLOYERS (TANGLED ROPE) \u2014 Face increased payroll tax burden to fund expanded benefits, but also benefit from the coordination function of a stable retirement system that reduces pressure for family support and emergency poor relief. They are powerful enough to negotiate terms (through labor unions and business lobbies) but cannot exit the system. Mixed extraction and coordination benefit \u2014 they bear costs but also benefit from the social stability the system provides."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Social Insurance Logic)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (ROPE) \u2014 From a civilizational perspective, Social Security represents a pure coordination mechanism: pooling lifetime earnings into a collective insurance fund against poverty in old age. The 1969 benefit increase is a straightforward adjustment to preserve purchasing power \u2014 a maintenance update to the coordination system. Low extractiveness because the system's primary function (spreading risk across generations and across the income distribution) is genuine, not extractive theater."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "payroll_tax_incidence_ambiguity",
+      "question": "Who ultimately bears the payroll tax increase: workers (reduced wages), employers (reduced profits), or consumers (higher prices)?",
+      "resolution_mechanism": "Labor economics analysis of wage responsiveness to payroll tax changes; empirical incidence studies comparing wage growth in high-tax vs low-tax states before and after tax increases",
+      "impact": "If burden falls on workers: extraction cost for worker perspective rises, Tangled Rope \u2192 Snare. If burden falls on employers/consumers: distribution is diffuse, supports Rope classification. If mixed: Tangled Rope classification stands.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Incidence of payroll tax increase among workers, employers, consumers"
+    },
+    {
+      "id": "benefit_adequacy_floor_setting",
+      "question": "Does establishing a minimum benefit level ($80/month) create a permanent obligation to adjust for inflation, or can future policymakers allow real purchasing power to erode?",
+      "resolution_mechanism": "Historical analysis of subsequent benefit adjustments; legislative record documenting whether decision-makers perceived a binding floor commitment or a one-time political win",
+      "impact": "If binding obligation: the constraint is creating institutional path dependency (increases future extraction risk if inflation outpaces wage growth). If one-time win: constraint is simpler coordination mechanism with no long-term extraction accumulation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether minimum benefit creates binding inflation-adjustment obligation"
+    },
+    {
+      "id": "demographic_sustainability",
+      "question": "Is the payroll tax structure sustainable under shifting worker-to-beneficiary ratios as the population ages?",
+      "resolution_mechanism": "Actuarial projections of the Social Security trust fund under various demographic scenarios; comparative analysis with pay-as-you-go systems in other nations experiencing population aging",
+      "impact": "If unsustainable: the constraint will eventually accumulate extraction (current beneficiaries gain; future taxpayers pay \u2014 potential future Snare classification). If sustainable at current rates: the Rope classification is durable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Long-term financial sustainability under demographic aging"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 5
+  },
+  "commentary": {
+    "narrative_context": "The 1969 Social Security benefit increase represents a straightforward expansion of an existing coordination mechanism: the federal social insurance system that pools lifetime payroll contributions into retirement income. The 13% increase raises the minimum monthly benefit from $55 to $80, directly addressing elderly poverty at the lower end of the income distribution. This constraint demonstrates the Rope classification in its purest form \u2014 a mechanism for coordinating retirement security across generations with minimal extraction overhead. The increase strengthens the social expectation that benefit adequacy is a federal obligation subject to periodic revision based on cost of living, creating institutional path dependency that shapes future policymaking. The constraint operates within the Democratic majority of the 89th Congress and reflects postwar consensus that Social Security is a universal entitlement program, not a means-tested poverty program. The theater ratio (0.35) reflects modest performative content: the benefit increase includes ceremonial congressional debate about 'strengthening' the safety net, but the substance is straightforward \u2014 higher transfer payments with transparent funding mechanisms (payroll taxes and general revenue contributions).",
+    "key_agents": [
+      "Elderly Minimum Beneficiaries: Primary beneficiary (powerless/constrained) \u2014 receive direct income increase; constrained by lack of alternative retirement income sources",
+      "Disabled Workers and Surviving Spouses: Secondary beneficiary (powerless/constrained) \u2014 some eligible under Social Security Disability Insurance and survivor benefit provisions; benefit from the same minimum increase",
+      "Senior Advocacy Groups: Organized beneficiary (organized/constrained) \u2014 AARP, senior unions, senior centers; mobilized political pressure for increase; have agency within the advocacy ecosystem",
+      "Federal Government / SSA: Institutional administrator (institutional/constrained) \u2014 manages benefit distribution, collects payroll taxes, coordinates intergenerational transfers; constrained by demographic trends and fiscal politics",
+      "Workers and Employers: Tax base (powerful/mobile) \u2014 bear increased payroll tax burden; have mobile alternatives (labor mobility, wage negotiation, capital flight) but cannot exit the system entirely",
+      "Congress: Legislative authority (institutional/arbitrage) \u2014 sets benefit levels and tax rates; has arbitage options (can adjust taxes, benefits, funding mechanisms); captures political credit for expansion"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low-moderate. The constraint's primary function is coordinating retirement income \u2014 pooling payroll contributions and distributing them according to a legislated formula. The 13% increase is a maintenance adjustment to the coordination mechanism, not an extractive overlay. However, extractiveness is not zero because the system creates fiscal pressure on general revenues and payroll taxes, and the benefit formula produces unequal returns on contributions (lower-wage workers receive higher replacement rates, higher-wage workers lower returns). This redistribution is intentional but counts as a form of extraction within the economic sense. Suppression (0.25): Low-moderate. The constraint operates through law and administrative procedure with transparency \u2014 beneficiaries, employers, and workers all know the tax rates and benefit formulas. However, suppression exists in the structural sense that workers have limited choice about whether to participate, elderly beneficiaries have limited alternatives to Social Security income, and the payroll tax is withheld automatically. These are not coercive in the snare sense but constitute structural constraints on exit. Theater ratio (0.35): Low. The benefit increase is announced plainly \u2014 no elaborate justification theater required. Congress debates the increase in terms of cost-of-living adjustment and poverty reduction, which are substantive arguments rather than performative ones. The theater comes from ceremonial framing ('strengthening the safety net') but the core transaction is transparent: higher transfers funded by higher taxes.",
+    "directionality_logic": "Beneficiaries derive positive d (low extraction experienced) because the constraint delivers promised benefits with periodic adjustment for adequacy. The elderly minimum beneficiary is a full beneficiary of the increase (derives d \u2248 0.10\u20130.20), so experiences low effective extraction. Organized senior groups have agency in the political process (exit_options: constrained but with mobilization capacity), yielding d \u2248 0.25\u20130.35. Workers and employers face cost without direct benefit (are not elderly, not disabled, not survivors eligible for benefits), deriving higher d \u2248 0.55\u20130.65 \u2014 they bear extraction. However, workers also benefit from the coordination function (stable social order, reduced family support obligations), which moderates their d value. The institutional perspectives (SSA, Congress) operate in a mixed mode: they benefit from the administrative function (arbitrage exit \u2014 they can adjust terms) but also bear fiscal constraints (constrained exit \u2014 they cannot simply raise taxes or cut benefits without political cost). Overall extractiveness is low because the coordination function is genuine and primary; the extraction is secondary and transparent.",
+    "perspectival_gap": "The elderly beneficiary and senior advocacy groups see pure coordination (Rope) \u2014 the system delivers reliable income and the increase proves it is working. The payroll tax base sees mixed extraction and coordination (Tangled Rope) \u2014 they bear cost but also benefit from social stability. Congress and the SSA see institutional management of a complex system (Tangled Rope at the administrative level, Rope at the policy intent level). The analytical observer sees coordination logic (Rope) \u2014 the system's fundamental purpose is pooling risk across generations, which is genuine. No agent perceives this as extraction-dominated (Snare) in 1969, because the system's solvency is not yet in question and the demographic tail winds are favorable (worker-to-beneficiary ratio is still healthy). The perspectival gap is narrow \u2014 all perspectives classify as Rope or Tangled Rope, indicating broad consensus that the constraint serves a genuine coordination function.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by remaining solidly in the coordination camp across all perspectives. No perspective sees this as pure extraction or coercive theater. The beneficiaries see genuine benefit; the tax base sees both cost and benefit; the administrators see both function and constraint. The lack of mandatrophy \u2014 the absence of a gap between 'this is extraction being labeled coordination' or vice versa \u2014 indicates the 1969 consensus was accurate: Social Security is fundamentally a coordination mechanism, not an extraction mechanism. The extraction risk lies in future uncertainty (demographic aging, wage stagnation, political inability to raise taxes) rather than in the present institutional structure. The theatrical language ('strengthening the safety net') is modest and not covering a functional void. This is a clean Rope story."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "payroll_tax_ceiling_emergence",
+      "entitlement_spending_path_dependency"
+    ],
+    "dual_formulation_note": "The 1969 benefit increase is a policy adjustment within the existing Social Security institutional structure. It represents expansion of coordination function rather than creation of new constraints. Related upstream constraints include the original Social Security program structure (1935) and the OASI/DI/SSI framework (1956\u20131972). Downstream constraints emerge from the path dependency this increase creates \u2014 future policymakers face a baseline expectation of benefit adequacy and regular cost-of-living adjustment."
+  },
+  "directionality_overrides": []
+}

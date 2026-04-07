@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "sotu_1948_truman_social_security_expansion",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sstu"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.62,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "SOTU 1948 Truman Social Security Expansion Proposal",
+    "topic_domain": "social_policy/income_security",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "uncovered_agricultural_workers",
+      "uncovered_domestic_workers",
+      "uncovered_self_employed",
+      "existing_beneficiaries_higher_rates",
+      "low_income_families"
+    ],
+    "victims": [
+      "higher_income_earners_increased_taxation",
+      "employers_payroll_tax_increase",
+      "general_taxpayers_revenue_cost"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Uncovered Agricultural Worker",
+      "comment": "PERSPECTIVE 1: UNCOVERED AGRICULTURAL WORKER (ROPE) \u2014 Previously excluded from any Social Security protection. The expansion closes a systemic coordination gap: agricultural workers can now participate in income-smoothing mechanism alongside industrial workers. Minimal extraction from this agent's perspective; primarily perceives coordination function. Trapped by economic circumstances (agricultural labor offers no exit), but the constraint enables rather than constrains."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Higher-Income Private Sector Worker",
+      "comment": "PERSPECTIVE 2: HIGHER-INCOME PRIVATE SECTOR WORKER (TANGLED ROPE) \u2014 Bears increased payroll taxation but receives higher benefit levels and security. Coordination function is genuine (pooled insurance against unemployment/disability/old age), but asymmetric extraction occurs: this agent subsidizes lower-wage workers' participation and higher replacement rates. Constrained by taxation but not trapped (wage employment alternatives exist, though tax differential may discourage mobility at margins)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Agricultural Employer Lobby",
+      "comment": "PERSPECTIVE 3: AGRICULTURAL EMPLOYER LOBBY (SNARE) \u2014 Faces direct extraction through expanded payroll tax obligations and loss of labor cost advantage. Previously could avoid Social Security contributions by employing uncovered workers; expansion forces inclusion. Structurally has exit options (capital mobility, shift to mechanization, relocation), but the constraint's enforcement mechanisms (federal mandate, withholding) make exit costly. Experiences maximal extraction relative to their power level \u2014 a well-organized actor being forced to internalize externality."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Federal Government (Revenue and Liability Side)",
+      "comment": "PERSPECTIVE 4: FEDERAL GOVERNMENT\u2014REVENUE AND LIABILITY PERSPECTIVE (TANGLED ROPE) \u2014 Coordination function is substantial: managing national risk pooling across millions of workers. But extraction asymmetry exists: Treasury bears the cost of expanded benefits while revenue recovery depends on sustained payroll taxation compliance. Government is constrained by electoral cycles and budget pressure but not trapped (it can adjust rates, eligibility, or general revenue allocation). The expansion increases long-term liabilities relative to immediate revenue, creating intergenerational extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Movement and Progressive Coalition",
+      "comment": "PERSPECTIVE 5: LABOR MOVEMENT AND PROGRESSIVE COALITION (SCAFFOLD) \u2014 Organized advocates viewing the expansion as temporary correction of Depression-era institutional gaps. See the constraint as having a generational sunset: once universal coverage and benefit adequacy are achieved, the expansion's redistributive function completes and transitions to pure coordination (steady-state Social Security). Theater ratio reflects political positioning and rhetorical frames around 'crisis' and 'security', but the underlying mechanism is durable. Suppression appears low from this perspective because the coalition supports the expansion and sees exit path (completion of reform agenda)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Social Security Administration (Institutional Maintenance)",
+      "comment": "PERSPECTIVE 6: SOCIAL SECURITY ADMINISTRATION\u2014INSTITUTIONAL PERFORMANCE (PITON) \u2014 The expansion requires SSA to absorb millions of new claimants, creating administrative theater: eligibility determination, record-keeping, claims processing become performatively complex. The agency's primary function (income security) is genuine, but much of its institutional practice becomes self-justifying bureaucratic maintenance\u2014forms, verification procedures, administrative hierarchies persist because 'that's how Social Security works', not because they optimize for claimant welfare. Theater ratio reflects the performative administrative apparatus."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Economic Necessity View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER\u2014ECONOMIC NECESSITY FRAME (MOUNTAIN) \u2014 From civilizational distance, income security against unemployment, old age, and loss of wage-earner in complex industrial economies is an irreducible structural necessity. Markets alone cannot handle the magnitude and timing of these risks; pooled insurance is not optional. This perspective risks naturalizing what is actually a contingent policy choice\u2014treating Truman's expansion as discovering a natural economic law rather than constructing a political arrangement. The engine's false summit detector will identify this as naturalization of a contested distributional choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "sustainability_financing_mechanism",
+      "question": "Can the expanded program be financed indefinitely through payroll taxation alone, or does it require sustained general revenue subsidy?",
+      "resolution_mechanism": "Demographic projections combined with benefit formula analysis; comparison of payroll tax revenue to projected benefit payments over 30+ years under varying wage-growth and life-expectancy scenarios",
+      "impact": "If payroll-tax-sustainable: program is self-financing coordination mechanism (Rope for most actors). If requires general subsidy: intergenerational extraction occurs (Snare for future workers, Tangled Rope for current beneficiaries), and classification shifts toward snare or tangled_rope across longer time horizons.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether expanded Social Security can sustain itself through payroll taxation"
+    },
+    {
+      "id": "wage_suppression_incidence",
+      "question": "To what extent does payroll tax expansion suppress nominal wage growth for covered workers, shifting extraction burden backward to employees rather than appearing as employer cost?",
+      "resolution_mechanism": "Wage growth trajectories pre- and post-expansion controlling for productivity, sectoral shifts, and union organizing; econometric incidence analysis of tax burden between employers and workers",
+      "impact": "If workers bear majority incidence (>60%): extraction from workers is higher than apparent; the constraint appears less redistributive than nominal structure suggests. Classification from moderate/higher-income perspective shifts toward Snare. If employers bear incidence: expansion is more successfully extractive against capital.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Wage suppression incidence of payroll tax expansion"
+    },
+    {
+      "id": "behavioral_adaptation_labor_supply",
+      "question": "Does expanded unemployment and old-age security reduce labor force participation, and if so, does reduced participation offset redistributive gains through lower tax revenue?",
+      "resolution_mechanism": "Labor force participation rates by age and sector pre- and post-expansion; correlation analysis between benefit generosity increases and subsequent participation changes, controlling for secular trends",
+      "impact": "If participation drop >5%: tax base erosion may force rate increases or benefit cuts, transforming expansion into intertemporal extraction (lower participation workers subsidize higher-participation cohorts). Classification remains Tangled Rope but with asymmetry reversed over time.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Labor supply behavioral response to expanded benefits"
+    },
+    {
+      "id": "coverage_enforcement_gap",
+      "question": "What proportion of nominally covered workers actually register with Social Security and pay taxes, versus the proportion of uncovered who work informally despite legal requirement?",
+      "resolution_mechanism": "Tax compliance audit data; comparison of reported beneficiaries to eligible population; analysis of informal economy labor in nominally covered sectors",
+      "impact": "If enforcement gap >20%: program's redistribution reaches only fraction of intended beneficiaries, and actual extraction from compliant workers is higher than designed. Snare classification strengthens for tax-compliant workers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Gap between legal coverage and actual enrollment/compliance"
+    },
+    {
+      "id": "political_sustainability_retrenchment",
+      "question": "Will organized beneficiary constituencies (labor, elderly, low-income) successfully defend the expanded program against future retrenchment pressures, or will the expansion be treated as temporary and rolled back?",
+      "resolution_mechanism": "Political economy analysis of benefit defense vs. fiscal pressure; precedent analysis from other New Deal programs; constituency strength measurement (membership numbers, political mobilization capacity)",
+      "impact": "If defensible (high constituency strength): expansion becomes durable Tangled Rope / steady Rope. If vulnerable (low constituency strength relative to fiscal pressure): expansion is Scaffold with genuine sunset, and theater ratio measures political salience rather than functional performance.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Political sustainability of expanded Social Security against retrenchment pressure"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Truman's 1948 proposal expands Social Security to cover millions of previously uncovered workers\u2014agricultural laborers, domestic workers, self-employed persons\u2014and increases benefit levels for all participants. The expansion redistributes income from higher-wage earners and employers toward low-income workers and their dependents, funded through increased payroll taxation and general revenue. The constraint demonstrates the structure of a hybrid coordination-extraction mechanism: the genuine coordination function (pooling risk across larger population, enabling income smoothing against unemployment and old age) coexists with asymmetric extraction (higher-wage workers and employers subsidize lower-wage workers' participation and higher replacement rates). The constraint's theater ratio (0.35) reflects the rhetorical framing around 'security' and 'protection' that obscures the underlying redistributive mechanism. The suppression measure (0.62) captures both the elimination of alternatives for newly covered workers (who are now mandatorily enrolled) and the difficulty for employers of exiting payroll tax obligations. The extractiveness trajectory (0.15\u21920.38) shows rising extraction as the scope of the program expands and beneficiary base deepens, but extractiveness remains moderate because the expansion also delivers genuine coordination benefits\u2014workers previously without any protection now have income security.",
+    "key_agents": [
+      "Uncovered agricultural workers: Primary beneficiary (powerless/trapped) \u2014 gain entry to Social Security system; extraction from their perspective is minimal because they have no exit options and see the constraint as enabling security rather than constraining choice",
+      "Uncovered domestic workers: Primary beneficiary (powerless/trapped) \u2014 similar to agricultural workers; gain coverage but are structurally dependent on employment continuity",
+      "Higher-income private sector workers: Primary victim (moderate/constrained) \u2014 pay increased payroll taxation; enjoy higher benefits but subsidize lower-wage workers' participation; can consider geographic mobility or sectoral shift but at cost",
+      "Agricultural employers: Secondary victim (powerful/mobile) \u2014 lose labor cost advantage from exclusion; forced to internalize Social Security costs; have capital mobility and mechanization options but at capital cost",
+      "Federal government / Treasury: Institutional actor (institutional/constrained) \u2014 bears long-term benefit liability; revenue recovery depends on payroll tax compliance and sustained economic growth",
+      "Labor movement and progressive coalition: Organized actors (organized/constrained) \u2014 primary advocates for expansion; view it as temporary correction with sunset (once universal coverage achieved)",
+      "Social Security Administration: Institutional actor (institutional/arbitrage) \u2014 benefits from expanded mandate and budgetary authority; sees expansion as justification for administrative growth",
+      "Analytical observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing the expansion as economic necessity rather than contingent political choice"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate-high. The expansion redistributes income from higher-wage earners and employers toward lower-wage workers and previously uncovered populations. This redistribution is genuine\u2014not merely perceived but structural. Higher-wage workers' payroll taxes rise, and the benefit replacement rate is progressive (lower-wage workers get higher replacement percentages). However, extractiveness is not extreme (not 0.70+) because the constraint also delivers coordination benefits to all participants: pooled insurance against unemployment, old-age, and survivor risk. The expansion's primary function is coordination; extraction is the asymmetric distribution of that coordination's cost-benefit. Suppression (0.62): Moderate-high. Newly covered workers face mandatory enrollment with no opt-out (suppression for them is the elimination of alternatives to participation). Employers face mandatory payroll tax obligation with no exit other than capital mobility or sectoral shift (high but not total suppression). Higher-wage workers face taxation they cannot easily avoid without leaving the labor force (high suppression). The suppression reflects the program's mandatory, universal character\u2014it is enforced federal policy, not voluntary coordination. Theater ratio (0.35): Low-moderate. The expansion's justification rhetoric emphasizes 'security', 'protection', and 'social responsibility', but the underlying mechanism is straightforward redistribution of income through mandatory pooled insurance. There is some performative framing (e.g., treating the program as 'insurance' rather than explicitly as redistribution), but the functional mechanism is clear and the administrative apparatus is relatively lean compared to later bureaucratic elaboration. Theater increases slightly over the interval as enrollment and claims processing complexity rise, but remains dominated by functional activity.",
+    "directionality_logic": "The directionality computation (d \u2192 f(d) \u2192 \u03c7) flows from beneficiary/victim declarations and exit options. Uncovered workers declared as beneficiaries with trapped exit options (d \u2248 0.15) experience low/negative effective extraction f(d) \u2248 -0.01 to 0.02\u2014they perceive the constraint as beneficial. Higher-wage workers declared as victims with constrained exit options (d \u2248 0.70) experience moderate-high effective extraction f(d) \u2248 1.00. Employers declared as victims with mobile exit options (d \u2248 0.85) experience high effective extraction f(d) \u2248 1.15, but their high power level and capital mobility options mean they can negotiate exceptions or invest in mechanization to reduce tax exposure. The federal government as institutional actor with constrained exit (d \u2248 0.60) experiences moderate effective extraction f(d) \u2248 0.80, reflecting that government bears benefit liability but can adjust tax rates and revenue sources\u2014constrained but not trapped. The labor movement with organized power and constrained exit (d \u2248 0.40) experiences low-to-moderate effective extraction f(d) \u2248 0.40, reflecting that the coalition supports the expansion and sees it as temporary correction. The piton perspective derives from the institutional maintenance view rather than from high directionality d\u2014the Social Security Administration experiences the constraint as providing institutional purpose and budgetary justification, not as extracting from it.",
+    "perspectival_gap": "This constraint exhibits substantial perspectival divergence, revealing the distributional tensions embedded in the expansion. The uncovered agricultural worker sees pure coordination (Rope)\u2014the constraint solves their risk exposure problem and enables income smoothing. The higher-income worker sees mixed coordination and extraction (Tangled Rope)\u2014they benefit from coverage but subsidize others. The agricultural employer sees pure extraction (Snare)\u2014they lose a cost advantage and are forced to internalize externality. The federal government sees intergenerational coordination with debt burden (Tangled Rope)\u2014current revenue is adequate but long-term sustainability depends on demographics and wage growth. The labor movement sees temporary correction (Scaffold)\u2014the expansion is a step toward universal coverage with a natural sunset once the goal is achieved. The SSA sees institutional purpose and growth (Piton)\u2014the agency's maintenance and expansion become self-justifying. The analytical observer at civilizational distance risks seeing economic necessity (Mountain)\u2014treating income security against unemployment and old age as a discovered natural law rather than a constructed political choice. The false summit detector identifies this last perspective as naturalization.",
+    "perspectival_gap_detail": "The gap between uncovered_worker and higher_income_worker is the sharpest: one gains security at zero cost (positive perception), the other pays increased tax (negative perception). Both are genuinely beneficiaries (both get coverage and benefits), but the asymmetric cost structure creates opposing experiential polarities. The gap between agricultural_employer and labor_movement reflects the difference between agents forced to absorb cost and agents who designed the expansion\u2014one sees extraction, one sees correction. The gap between federal_government (constrained by long-term liability) and piton_perspective (celebrating institutional growth) reveals the temporal divergence: government at generational horizon sees debt burden, while institutional maintenance view sees budgetary growth as success.",
+    "directionality_logic_detail": "The expansion's directionality structure is designed to extract from middle-to-high-income earners and employers toward low-income workers and uncovered populations. The derived d-values reflect this: beneficiaries (uncovered workers, lower-income families) have low d (0.10-0.20); victims (higher-wage earners, employers) have high d (0.70-0.90). The sigmoid f(d) amplifies this: beneficiaries experience f(d) in range [-0.12, 0.15] (negative or very low effective extraction, meaning they perceive benefit), while victims experience f(d) in range [1.00, 1.20] (high effective extraction). The scope modifier \u03c3(S) = 1.0 (national scope) applies uniformly, so \u03c7 = \u03b5 \u00d7 f(d) \u00d7 1.0. For uncovered workers: \u03c7 = 0.38 \u00d7 0.02 \u00d7 1.0 \u2248 0.008 (negligible experienced extraction, high coordination benefit). For higher-wage workers: \u03c7 = 0.38 \u00d7 1.00 \u00d7 1.0 \u2248 0.38 (moderate experienced extraction). For employers: \u03c7 = 0.38 \u00d7 1.15 \u00d7 1.0 \u2248 0.44 (high experienced extraction, approaching snare threshold). The directionality overrides array is empty because the structural derivation (beneficiary/victim + exit options \u2192 d) produces the correct perspective distributions.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that Tangled Rope is the stable equilibrium classification for a successful income-security expansion. The constraint is NOT pure extraction (Snare) because it delivers genuine coordination benefits to all participants\u2014the pooled insurance mechanism is real and valuable. But it is NOT pure coordination (Rope) because it imposes asymmetric costs on higher-wage earners and employers who subsidize lower-wage workers' participation and higher replacement rates. The constraint is also NOT temporary (Scaffold) because Social Security, once established, does not have a designed sunset\u2014the expansion integrates permanently into the institutional structure. The piton perspective (institutional maintenance and theater) is real but secondary\u2014the constraint's primary function is coordination with asymmetric distribution, not pure performance. The mountain perspective (economic necessity) risks naturalizing a political choice. The correct equilibrium is Tangled Rope: genuine coordination function (pooled insurance) with asymmetric extraction (progressive redistribution). This classification is stable because both elements are real and structural, not because observers disagree about the constraint's nature."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "postwar_labor_bargaining_structure",
+      "federal_fiscal_capacity_constraints",
+      "intergenerational_social_contract"
+    ],
+    "dual_formulation_note": "This expansion is downstream of Depression-era Social Security establishment (\u03b5=0.25, Mountain-to-Rope across perspectives) and upstream of post-1970s sustainability debates (\u03b5=0.45-0.55, Tangled Rope-to-Snare as demographics shift). The expansion's \u03b5=0.38 represents the equilibrium point where genuine coordination function is maximized and redistribution is politically sustainable\u2014neither pure Rope (no redistribution) nor pure Snare (redistribution becomes visible and vulnerable to retrenchment)."
+  },
+  "directionality_overrides": []
+}

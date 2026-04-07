@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "sotu_1968_johnson_san_antonio_formula",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "saa"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "San Antonio Formula: Conditional Bombing Cessation in Vietnam War Negotiations",
+    "topic_domain": "foreign_policy/military_strategy/negotiation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "united_states_military_establishment",
+      "johnson_administration_negotiators"
+    ],
+    "victims": [
+      "north_vietnamese_civilian_population",
+      "south_vietnamese_civilian_population",
+      "mutual_de_escalation_possibility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Vietnamese Civilians in Bombing Zones",
+      "comment": "PERSPECTIVE 1: VIETNAMESE CIVILIANS (SNARE) \u2014 Trapped in active conflict zones with no exit option and no voice in the negotiation structure. Bear the full extraction cost of the bombing continuation while conditionality is debated. The constraint uses their vulnerability (inability to stop bombing without reciprocal commitment) as enforcement mechanism. Maximum experienced extraction \u2014 no coordination benefit, pure coercion."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "North Vietnamese Leadership",
+      "comment": "PERSPECTIVE 2: NORTH VIETNAMESE LEADERSHIP (TANGLED ROPE) \u2014 Constrained by military capability limitations and geopolitical isolation; also benefits from the formula's implicit recognition that negotiations are possible. The constraint creates a genuine coordination function (establishing preconditions for talks) but embeds asymmetric extraction (bombing continues unless Hanoi capitulates to conditionality). Mixed cost and benefit \u2014 constrained agency but not powerless."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "U.S. Military and Diplomatic Establishment",
+      "comment": "PERSPECTIVE 3: U.S. MILITARY AND DIPLOMATIC ESTABLISHMENT (ROPE) \u2014 Benefits from the formula's preservation of military advantage during negotiations and from the appearance of pursuing peace while maintaining coercive pressure. The constraint is experienced as pure coordination: establishing clear terms for de-escalation. Experiences minimal extraction \u2014 the mechanism channels benefits toward this agent. Arbitrage exit option because the establishment can withdraw from negotiations unilaterally and resume full bombing."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "American Anti-War Movement",
+      "comment": "PERSPECTIVE 4: AMERICAN ANTI-WAR MOVEMENT (PITON) \u2014 Organized but constrained by limited political power during wartime. The formula is experienced as degraded rhetoric: it appears to pursue peace ('productive talks') while maintaining bombing until conditions are met. Theater is moderate-to-high (0.55) because the formula's language suggests genuine deescalation pathway while institutional reality continues extraction. The movement has agency and exit (protest, political pressure) but constrained effectiveness."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Mediation Framework",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL MEDIATION FRAMEWORK (SCAFFOLD) \u2014 Organizations like the UN and non-aligned nations see the formula as a temporary coordination mechanism with sunset logic: once talks commence and demonstrate productivity, bombing should cease. The mechanism is experienced as Scaffold because it has explicit conditions for termination and represents institutional learning from previous escalation spirals. International mediators have agency (can mediate alternative frameworks) and see the formula as transitional toward sustainable negotiation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, the San Antonio Formula exhibits genuine coordination function (establishing preconditions for dialogue that both sides can verify and honor) simultaneously with asymmetric extraction (continuing civilian harm to enforce conditionality that favors the more militarily powerful party). The constraint is not a mountain (not inevitable to war) nor a pure snare (genuine coordination elements exist), but a true hybrid where the coordination and extraction functions cannot be separated."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "productivity_threshold_ambiguity",
+      "question": "What constitutes 'prompt, productive peace talks' sufficient to trigger bombing cessation?",
+      "resolution_mechanism": "Analysis of stated criteria vs. actual implementation; examination of how negotiators on each side defined 'productivity' and whether definitions were symmetrical or asymmetrically favored U.S. interests",
+      "impact": "If threshold was asymmetric (favoring U.S. interpretation): constraint functions as pure extraction mechanism disguised as coordination. If symmetric: genuine coordination mechanism with residual power asymmetry.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Definition and symmetry of productivity criteria for bombing cessation"
+    },
+    {
+      "id": "conditionality_enforceability",
+      "question": "Could North Vietnam realistically meet the formula's conditions (commit to productive talks, cease infiltration, recognize South Vietnam sovereignty) without losing negotiating position?",
+      "resolution_mechanism": "Game-theoretic analysis of North Vietnamese position: whether accepting conditions meant conceding political goals; examination of historical parallel cases where conditionality was symmetric vs. imposed by dominant power",
+      "impact": "If conditions were non-survivable: formula is extraction mechanism using civilian harm as enforcement. If conditions were negotiable: genuine coordination mechanism with power asymmetry.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Realistic feasibility of meeting conditions without capitulation"
+    },
+    {
+      "id": "bombing_continuation_justification",
+      "question": "Was bombing continuation during the 'conditionality waiting period' militarily necessary, or was it primarily coercive leverage?",
+      "resolution_mechanism": "Military analysis of U.S. strategic position; comparison of bombing effectiveness during negotiation period vs. previous phases; examination of military command memoranda on bombing rationale",
+      "impact": "If military necessity: suppression justified as war cost. If coercive leverage: suppression is pure extraction mechanism, raising snare classification probability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Military necessity vs. coercive leverage for bombing continuation"
+    },
+    {
+      "id": "civilian_cost_distribution",
+      "question": "How were civilian casualties distributed between North and South Vietnam, and did the formula implicitly allocate higher costs to one side?",
+      "resolution_mechanism": "Historical casualty data by geography; analysis of bombing tonnage distribution; examination of whether Northern civilians bore disproportionate cost due to formula mechanics",
+      "impact": "If asymmetric: constraint functions as explicit extraction from civilian population of less powerful party. Raises snare severity and clarifies victim status.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Civilian casualty distribution and formula asymmetry"
+    },
+    {
+      "id": "alternative_cessation_pathways",
+      "question": "What other de-escalation mechanisms were theoretically available, and why was conditionality selected?",
+      "resolution_mechanism": "Analysis of Johnson administration deliberations; examination of alternative proposals from military, State Department, and international mediators; comparison of constraint types each alternative would instantiate",
+      "impact": "If alternatives existed but were rejected: choice of conditionality reveals preference for extraction mechanism. If formula was unique viable option: may reflect genuine coordination necessity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Availability and rejection of alternative de-escalation mechanisms"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 8
+  },
+  "commentary": {
+    "narrative_context": "The San Antonio Formula (announced March 1968 by President Johnson) tied U.S. bombing cessation to North Vietnamese commitment to 'prompt, productive peace talks' without simultaneously expanding the war. This constraint exhibits the core structure of Tangled Rope: genuine coordination elements (establishing verifiable conditions for dialogue) combined with asymmetric extraction (continuation of bombing against civilian population until conditions are met). The constraint benefits the U.S. military establishment by preserving bombing advantage during negotiations and maintains coercive pressure on Hanoi while claiming pursuit of peace. It costs Vietnamese civilians in North and South active conflict zones, who bear continued bombing harm while political conditionality is debated. The constraint's theater ratio (0.55) reflects moderate performative content: the language of 'productive talks' obscures that productivity thresholds were asymmetrically defined and that bombing continuation served coercive rather than purely military purposes. Extractiveness increased over the formula's application period (0.42 to 0.58) as civilian costs accumulated and negotiation preconditions remained unmet.",
+    "key_agents": [
+      "United States Military Establishment and Johnson Administration: Primary beneficiary (institutional/arbitrage) \u2014 preserve bombing advantage, maintain coercive leverage, claim pursuit of peace while continuing war",
+      "North Vietnamese Leadership: Secondary actor (powerful/constrained) \u2014 constrained by military and geopolitical position; seek de-escalation but cannot accept conditionality without appearing to capitulate",
+      "North Vietnamese Civilian Population: Primary victim (powerless/trapped) \u2014 bear continued bombing harm with no voice in conditionality debate",
+      "South Vietnamese Civilian Population: Secondary victim (powerless/trapped) \u2014 continued warfare in their territory while U.S. conditions for ceasefire remain unmet",
+      "American Anti-War Movement: Organized observer (organized/constrained) \u2014 recognize formula as theater but have limited political power to change policy",
+      "International Mediation Framework (UN, Non-Aligned Nations): Organized observer (organized/arbitrage) \u2014 see formula as temporary coordination mechanism with sunset logic toward genuine negotiation"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The formula preserves military advantage (benefits U.S.) while requiring North Vietnam to meet preconditions (costs North Vietnam). The extraction flow is asymmetric but not total \u2014 genuine coordination elements exist (establishing verifiable conditions for talks), so this is not a pure snare (0.66+). Suppression (0.68): High. Bombing continuation against civilian population is the enforcement mechanism; North Vietnam has no exit option except acceptance of conditions. Civilian population has zero exit options. High suppression reflects that continued warfare is the coercive instrument. Theater ratio (0.55): Moderate. The formula's language emphasizes 'productive peace talks' and de-escalation, but the underlying mechanism (bombing continuation) is performative theater masking coercive pressure. Theater increases over time as the formula's conditions remain unmet and bombing continues, suggesting performative content is masking unchanged policy.",
+    "perspectival_gap": "Gap between beneficiary (institutional U.S., experiences Rope) and trapped victim (civilians, experiences Snare): U.S. sees coordination mechanism establishing clear cessation terms; civilians see bombing continuation as extraction mechanism masquerading as conditionality negotiation. Gap between constrained actor (North Vietnamese leadership, experiences Tangled Rope) and beneficiary (U.S., experiences Rope): leadership recognizes both coordination elements and extraction pressure; U.S. emphasizes coordination while downplaying coercive pressure. Gap between organized observer (anti-war movement, experiences Piton) and institutional beneficiary (U.S., experiences Rope): movement recognizes formula as degraded theater (bombing continues while talking about peace); institutional actors frame formula as successful coordination. The analytical observer resolves these gaps by identifying the constraint as genuinely Tangled Rope: the coordination and extraction functions cannot be disentangled because the conditionality mechanism is simultaneously the coordination tool and the coercive enforcement mechanism.",
+    "directionality_logic": "The formula's directionality is structured around military power asymmetry. The U.S. side has arbitrage options (can resume full bombing, can negotiate with South Vietnam, has geopolitical alternatives); North Vietnam is constrained (limited military options, international isolation, cannot withstand indefinite bombing). Vietnamese civilians are trapped with no exit. This asymmetry in exit options drives the directionality: low d (benefits) for U.S. institutional actors, high d (extraction) for North Vietnamese leadership and trapped civilians. The formula systematizes this power asymmetry by encoding it into negotiation preconditions. Beneficiaries (U.S. military) derive low effective extraction; victims (civilians, constrained North Vietnamese) derive high extraction. The suppression value (0.68) reflects that the coercive mechanism (bombing) is the primary enforcement tool, not agreement or shared interest.",
+    "mandatrophy_analysis": "RESOLUTION: The constraint is legitimately Tangled Rope, not misclassified as pure Rope or pure Snare. The mandatrophy is resolved by recognizing that genuine coordination elements (establishing preconditions for dialogue that both sides can verify) coexist with asymmetric extraction (bombing continuation enforced by military power differential). The beneficiary (U.S.) experiences genuine coordination benefit (establishes clear terms for cessation, channels leverage). The victim (civilians, constrained North Vietnam) experiences genuine extraction cost (continued bombing harm, asymmetric negotiation burden). This is not a false positive where extraction is hidden in coordination language \u2014 the extraction is explicit and structural. The formula is not a pure snare because some agents (international mediators, negotiators on both sides) perceive genuine coordination value. It is not a pure rope because asymmetric extraction is fundamental, not incidental. The Tangled Rope classification is confirmed by: (1) requires_active_enforcement=true (bombing is the enforcement mechanism), (2) beneficiaries=[U.S. military], (3) victims=[civilians, mutual de-escalation], (4) extractiveness > 0.46, (5) genuine coordination function exists (establishing verifiable preconditions) and genuine extraction flow (bombing asymmetry). All gates pass."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "vietnam_war_bombing_campaign",
+      "paris_peace_negotiations",
+      "operation_rolling_thunder"
+    ]
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.55
+    }
+  ]
+}

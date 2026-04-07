@@ -1,0 +1,207 @@
+{
+  "header": {
+    "constraint_id": "sotu_1985_reagan_enterprise_zones_establishment",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ez1985"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Enterprise Zones Establishment (SOTU 1985)",
+    "topic_domain": "regulatory/economic_development",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "external_capital_investors",
+      "zone_entrepreneurs_with_access"
+    ],
+    "victims": [
+      "displaced_lower_income_residents",
+      "non_zone_local_businesses",
+      "municipal_tax_base"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Displaced Lower-Income Residents",
+      "comment": "PERSPECTIVE 1: DISPLACED RESIDENTS (SNARE) \u2014 Face gentrification pressure and displacement as zone investment raises property values and rents. Trapped by lack of capital for relocation, limited job mobility outside zone, and wage stagnation relative to property cost increases. Maximum extraction from their position: they bear the direct cost of zone-driven displacement with minimal exit options. The zone's investment mechanism extracts neighborhood stability."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "Pre-Existing Zone Businesses",
+      "comment": "PERSPECTIVE 2: PRE-EXISTING LOCAL BUSINESSES (TANGLED ROPE) \u2014 Benefit from expanded local demand and reduced tax burden if they qualify; harmed by competition from subsidized newcomers, increased property rents, and regulatory complexity of zone structures. Constrained by limited capital and relocation costs. Mixed extraction: some businesses see coordination (shared infrastructure improvements, expanded customer base) alongside extraction (competitive disadvantage from subsidized entrants, rent increases)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "External Capital and Zone-Eligible Entrepreneurs",
+      "comment": "PERSPECTIVE 3: EXTERNAL CAPITAL & ELIGIBLE ENTREPRENEURS (ROPE) \u2014 Primary beneficiaries. Experience the zone as pure coordination mechanism: tax incentives and regulatory relief reduce friction for investment and business formation. High exit options (capital is mobile, entrepreneurs can relocate to other zones or non-zone jurisdictions). The constraint solves their coordination problem: aligning municipal incentives with investor interests. Net positive extractiveness flow toward this agent."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Municipal Development Authorities",
+      "comment": "PERSPECTIVE 4: MUNICIPAL DEVELOPMENT AUTHORITIES (SCAFFOLD) \u2014 Experience the constraint as temporary coordination with explicit sunset: zone designations are meant to be time-limited (typically 10-20 year terms) to prevent permanent regulatory divergence. Low effective extraction because the constraint has a defined endpoint and municipalities retain agency over zone parameters. Development authorities see the theater as moderate: zone metrics (jobs created, tax revenue recovered) are tracked and measured, distinguishing real coordination from performative theater."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Regulatory Apparatus",
+      "comment": "PERSPECTIVE 5: REGULATORY APPARATUS (PITON) \u2014 The zone structure maintains significant performative content: zone designation creates administrative overhead (eligibility verification, compliance tracking) with uncertain actual impact on economic mobility. Many zones show minimal employment growth or capital formation despite tax incentives. The regulatory mechanism persists through institutional inertia and political rhetoric despite degraded real function. Theater ratio rises as zones age and original productivity gains plateau \u2014 the regulatory structure becomes maintenance of zone identity rather than economic stimulus."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Market-Based Naturalness View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / MARKET-BASED NATURALNESS (MOUNTAIN) \u2014 Risk naturalizing the zone structure as an immutable market mechanism: 'capital flows to regulatory arbitrage opportunities' and 'entrepreneurs respond to incentives' appear as laws of economic behavior. But the structural data contradicts this naturalization \u2014 identifiable beneficiaries (external investors), identifiable victims (existing residents, municipal tax base), and active enforcement mechanisms indicate a constructed institutional arrangement, not a natural law. Engine false summit detector will flag the naturalizing frame."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "displacement_causation_ambiguity",
+      "question": "What proportion of gentrification and displacement in zone areas is caused by zone designation vs. independent urban trends?",
+      "resolution_mechanism": "Comparative analysis of property value and rent trajectories in designated zones vs. demographically similar non-zone neighborhoods over 10-20 year periods; instrumental variable analysis of zone eligibility cutoffs",
+      "impact": "If zone-caused displacement > 40%: snare classification for residents is confirmed; extraction from local stability is primary effect. If zone-caused < 20%: gentrification may be independent of zone mechanism; extraction may be overstated.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal attribution of displacement to zone designation vs. independent trends"
+    },
+    {
+      "id": "job_creation_versus_relocation",
+      "question": "Do enterprise zones create net new employment or primarily relocate existing jobs from non-zone areas?",
+      "resolution_mechanism": "Regional employment analysis; tracking of business relocations into zones vs. new formations; comparison with counterfactual employment growth in absence of zones",
+      "impact": "If net new > 50% of zone employment: coordination function is real (Rope classification gains support). If primarily relocation < 30% net new: zones are extraction mechanism disguised as development (Snare/Tangled Rope confirmed); redistribution without creation.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether zone employment is net new creation or job relocation"
+    },
+    {
+      "id": "tax_incentive_deadweight_loss",
+      "question": "What fraction of zone investments would have occurred absent the tax incentives (deadweight loss in incentive spending)?",
+      "resolution_mechanism": "Business surveys on investment decisions; comparison of zone businesses' reported incentive sensitivity to non-zone business investment patterns; elasticity estimation",
+      "impact": "If deadweight loss > 70%: zone tax expenditure is mostly transfer to investors who would have invested anyway (high extraction from tax base). If deadweight loss < 30%: incentives are genuinely marginal to investment decisions; real coordination function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of zone investment that would occur without tax incentives"
+    },
+    {
+      "id": "minority_entrepreneurship_access",
+      "question": "Do enterprise zones meaningfully increase entrepreneurship rates among minority and lower-income populations, or do incentives primarily benefit external capital?",
+      "resolution_mechanism": "Demographic analysis of zone business ownership; comparison of minority business formation rates in zones vs. non-zones; capital access analysis for minority entrepreneurs",
+      "impact": "If minority entrepreneurship access rises > 20%: stated purpose (breaking poverty cycles via entrepreneurship) is partially realized; tangled rope structure holds. If < 5% increase: zone structure primarily benefits external capital (pure extraction mechanism); snare classification strengthened.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Access to entrepreneurship opportunities for minorities in enterprise zones"
+    },
+    {
+      "id": "regulatory_sandboxing_spillover",
+      "question": "Do regulatory relief mechanisms in zones create spillover effects or maintain separate enforcement regimes?",
+      "resolution_mechanism": "Audit of regulatory compliance and enforcement intensity in zones vs. non-zones; analysis of whether reduced regulations create competitive advantages or local inefficiencies; environmental and labor standard compliance tracking",
+      "impact": "If spillover effects are significant: zones create regulatory arbitrage externalities (pollution, labor violations leak into non-zone areas); extraction mechanism extends beyond direct residents. If contained: extraction is localized.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Spillover effects of zone regulatory relief into surrounding areas"
+    },
+    {
+      "id": "municipal_fiscal_sustainability",
+      "question": "Do zones eventually recover foregone tax revenue through economic growth, or do municipalities face permanent fiscal loss?",
+      "resolution_mechanism": "20-30 year fiscal analysis of zone cities; tracking of tax base growth, municipal revenue per capita, and service provision quality post-zone designation vs. pre-zone baseline",
+      "impact": "If recovery > 80%: tangled rope (short-term extraction offset by long-term coordination gains). If recovery < 30%: permanent extraction from municipal tax base; snare classification for cities supported by zone tax revenue.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Municipal fiscal recovery from foregone zone tax revenues"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Enterprise zones represent a foundational regulatory sandboxing mechanism intended to decentralize economic opportunity through localized tax and regulatory relief. The 1985 SOTU framing positions zones as mechanisms for 'breaking poverty cycles' by enabling entrepreneurship in 'abandoned corners' of economically depressed areas. The constraint exhibits genuine coordination function (reducing friction for capital-entrepreneur alignment in underserved markets) alongside extractive dynamics (displacement pressure, municipal fiscal loss, beneficiary concentration). The theater ratio (0.55) reflects moderate performative content: zone success is measured through employment and revenue metrics that may not capture actual impact on target populations or local economic stability. Base extractiveness rises from 0.35 to 0.52 over the measurement interval, indicating that as zones mature, extractive mechanisms (displacement, tax base erosion, competitive disadvantage for non-zone local businesses) become more salient than coordination gains.",
+    "key_agents": [
+      "Displaced Lower-Income Residents: Primary victim (powerless/trapped) \u2014 face gentrification and displacement; lack capital for relocation or alternative employment",
+      "Pre-Existing Local Businesses: Secondary victim (moderate/constrained) \u2014 face competition from subsidized entrants and rising property costs; constrained by limited capital",
+      "External Capital Investors & Zone-Eligible Entrepreneurs: Primary beneficiaries (powerful/arbitrage) \u2014 experience zone as pure coordination; high exit options; capture tax incentive value",
+      "Municipal Development Authorities: Organized agents (organized/constrained) \u2014 frame zone as temporary development stimulus with sunset; constrained by fiscal pressures",
+      "Regulatory Apparatus: Institutional actor (institutional/arbitrage) \u2014 maintains zone administrative structure; theater increases as original productivity gains plateau",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing zone structure as market mechanism; false summit risk for treating regulatory arbitrage as natural economic law"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderately high and rising. Initial zones (t=0, \u03b5=0.35) show genuine coordination function as reduced friction enables previously blocked capital-entrepreneur pairings. But as zones mature (t=10, \u03b5=0.52), extractive mechanisms dominate: gentrification-driven displacement of lower-income residents, municipal tax base erosion, and competitive disadvantage for non-zone local businesses accumulate. The rising trajectory reflects deadweight loss in tax incentives (investors who would have invested anyway capture most subsidy) and minimal net new job creation for target populations. Suppression (0.48): Moderate. Residents face material barriers (lack of capital for relocation, limited employment mobility, information asymmetries about zone eligibility) but not total lockout \u2014 some lower-income entrepreneurs do access zone benefits. Pre-existing businesses face high-but-surmountable costs (relocation, competitive adaptation). Municipal governments retain some agency (zone parameters negotiable). Theater ratio (0.55): Zone metrics (jobs created, tax revenue recovered, businesses formed) are measured and tracked, distinguishing real progress from pure performance. But many zones show minimal employment growth or capital formation despite incentives, and the metrics don't capture displacement or broader inequality effects. Theater increases over time as zones age and original productivity gains plateau while administrative overhead persists.",
+    "perspectival_gap": "This constraint demonstrates how a single regulatory mechanism produces radically different classification outcomes depending on agent position. The external investor (powerful/arbitrage) sees Rope \u2014 coordination mechanism that solves their capital allocation problem. The displaced resident (powerless/trapped) sees Snare \u2014 pure extraction with no exit and no coordination benefit for them. The pre-existing local business (moderate/constrained) sees Tangled Rope \u2014 genuine coordination (shared infrastructure) alongside extraction (unfair competition). The municipal development authority (organized/constrained) sees Scaffold \u2014 temporary development tool with sunset and measured outcomes. The regulatory apparatus (institutional/arbitrage) sees Piton \u2014 performative zone administration that persists through inertia despite minimal impact. The civilizational analytical observer risks seeing Mountain (market-based naturalness) but structural data reveals false summit \u2014 the zone is constructed institutional arrangement, not natural law.",
+    "directionality_logic": "Each agent's experienced extractiveness (chi) is computed from their structural relationship to the zone mechanism. External capital investors are beneficiaries with arbitrage exit options: low d produces negative chi (subsidy flow toward them). Displaced residents are victims with zero exit: high d produces high chi (extraction from them). Pre-existing businesses are victims with constrained exit: moderate-high d produces moderate-high chi. Municipalities are mixed (tax revenue loss then recovery) with constrained exit: moderate d produces moderate chi. The beneficiary concentration effect: external capital captures most of the tax incentive value (realized as higher returns), while victims are spread across multiple classes (residents, local businesses, municipal tax base), preventing coalition. This distribution asymmetry is why the constraint persists despite negative effects on majority of local agents \u2014 beneficiaries are concentrated and organized; victims are diffused and have conflicting interests.",
+    "mandatrophy_analysis": "CLASSIFICATION STABILITY: The Tangled Rope classification holds across the entire interval because both coordination and extraction functions remain present. However, the proportional balance shifts: early zones (t=0-5) show stronger coordination function (capital access genuinely unlocked); mature zones (t=5-10) show stronger extraction function (displacement and fiscal loss dominate). The classification doesn't change because both are structural features. The rising extractiveness reflects the proportional shift, not category shift. At high enough extractiveness (\u03b5 > 0.70), the constraint could reclassify to Snare; the measurement trajectory suggests this threshold could be approached in the 15-20 year range if displacement and fiscal loss continue to accelerate."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "gentrification_displacement_mechanism",
+      "municipal_fiscal_sustainability_crisis",
+      "regulatory_arbitrage_in_labor_standards"
+    ],
+    "dual_formulation_note": "Enterprise zones decompose into three structurally distinct constraints: (1) Capital allocation coordination (enterprise zone mechanism itself), (2) Gentrification-driven displacement (victims: existing residents; mechanism: property value appreciation), (3) Municipal fiscal sustainability (victims: municipal tax base; mechanism: foregone revenue). Each has distinct \u03b5 values and victim populations. The zone establishment story (this file) is upstream; gentrification and fiscal sustainability are downstream effects that would not occur absent the zone mechanism's capital attraction function."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.5
+    }
+  ]
+}

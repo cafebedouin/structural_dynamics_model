@@ -1,0 +1,221 @@
+{
+  "header": {
+    "constraint_id": "sotu_1996_clinton_balanced_budget_requirement",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bb96"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "7-Year Balanced Budget Mandate with Deficit Elimination and Modest Tax Cut (SOTU 1996)",
+    "topic_domain": "fiscal_policy/institutional_economics",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "future_taxpayers",
+      "debt_service_recipients",
+      "institutional_credibility"
+    ],
+    "victims": [
+      "discretionary_federal_spending",
+      "means_tested_programs",
+      "working_poor"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Discretionary Program Beneficiaries",
+      "comment": "PERSPECTIVE 1: DISCRETIONARY PROGRAM BENEFICIARIES (SNARE) \u2014 Federal employees, researchers dependent on NIH/NSF grants, infrastructure workers, and vulnerable populations relying on means-tested programs face non-negotiable spending cuts. No exit option; federal budget constraints apply uniformly. Full extraction borne by those dependent on government spending."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Working Poor and Social Program Participants",
+      "comment": "PERSPECTIVE 2: WORKING POOR AND SOCIAL PROGRAM PARTICIPANTS (TANGLED ROPE) \u2014 Experience both coordination benefit (deficit reduction lowers long-term interest rates, reducing mortgage and loan costs) and extraction (program cuts reduce immediate aid). Can exit some programs through employment but at high cost; constrained by lack of alternative safety nets. Mixed extraction-coordination dynamic."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Future Taxpayers and Debt Market Actors",
+      "comment": "PERSPECTIVE 3: FUTURE TAXPAYERS AND DEBT MARKET ACTORS (ROPE) \u2014 Primary beneficiaries of deficit reduction. Institutional actors (pension funds, foreign governments holding Treasury bonds, future tax base) benefit from lower debt service obligations. Can arbitrage between Treasury bonds and alternative investments; experience the constraint as pure coordination of fiscal responsibility. Minimal extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Congressional Budget Process and Fiscal Monitors",
+      "comment": "PERSPECTIVE 4: CONGRESSIONAL BUDGET PROCESS AND FISCAL MONITORS (SCAFFOLD) \u2014 Organized agents (CBO, fiscal hawks, budget committees) experience the mandate as a temporary coordination mechanism with built-in sunset: the balanced budget constraint forces prioritization for 7 years, after which the mechanism naturally expires. Modest theater (payroll tax collections, spending caps) but genuine enforcement function. Sunset structure embedded in the 7-year timeline."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Executive and Legislative Leadership",
+      "comment": "PERSPECTIVE 5: EXECUTIVE AND LEGISLATIVE LEADERSHIP (PITON) \u2014 Presidents and Congressional leaders can claim credit for fiscal responsibility without bearing implementation costs personally. The constraint is performative for leadership: announcing deficit reduction commitment generates political capital regardless of actual implementation trajectory. Leadership has exits (blame bureaucrats for implementation failures, negotiate exemptions) but chooses to maintain the constraint's theater for political benefit."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Fiscal Mathematics View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / FISCAL MATHEMATICS VIEW (MOUNTAIN) \u2014 From a civilizational perspective, the balanced budget imperative emerges as a natural law: the government cannot spend more than it collects indefinitely without creating fiscal crisis, currency devaluation, or debt spiral. This perspective treats the constraint as mathematically inevitable. However, the structural data contradicts the mountain classification \u2014 identifiable beneficiaries exist, enforcement is institutional rather than emergent, and the 7-year timeline is policy-chosen rather than physics-derived. Engine false-summit detection should flag this as naturalization of a contingent institutional choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "deficit_necessity_empirical",
+      "question": "Is persistent federal deficit spending structurally necessary for full employment and economic growth, or can balanced budgets be achieved without unacceptable employment costs?",
+      "resolution_mechanism": "Comparison of employment trajectories and GDP growth in balanced-budget vs deficit-spending economies; econometric analysis of Okun's law and fiscal multiplier estimates for 1990s fiscal consolidation",
+      "impact": "If deficit necessary: the balanced budget constraint is extractive from employment (Snare becomes dominant). If not necessary: constraint is coordination mechanism (Rope becomes dominant). This determines whether the mandate is destructive or optimal.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether persistent deficits are structurally necessary for employment"
+    },
+    {
+      "id": "distribution_of_burden",
+      "question": "Do spending cuts fall equally across income groups, or are they concentrated on means-tested and discretionary programs serving lower-income beneficiaries?",
+      "resolution_mechanism": "Distributional analysis of actual budget cuts 1996-2002; income-weighted incidence analysis comparing tax and transfer impacts across deciles",
+      "impact": "If equally distributed: constraint is symmetric coordination (Rope). If concentrated on low-income programs: constraint is regressive extraction mechanism (Snare becomes dominant perspective for affected groups).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Distribution of spending cuts across income groups"
+    },
+    {
+      "id": "credibility_premium_magnitude",
+      "question": "How much does the balanced budget commitment reduce federal borrowing costs relative to counterfactual deficit-spending trajectory?",
+      "resolution_mechanism": "Treasury bond yield analysis; estimation of interest-rate savings attributable to credibility premium from fiscal consolidation announcements vs actual deficit reduction",
+      "impact": "If premium > 1% of GDP: coordination benefit is substantial (Rope strengthened). If premium < 0.2% of GDP: benefit is marginal relative to distribution costs (Tangled Rope weakens to Snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Magnitude of borrowing cost reduction from balanced budget credibility"
+    },
+    {
+      "id": "temporal_irreversibility",
+      "question": "Are the spending cuts reversible after the 7-year period, or do they create institutional path dependence that persists even if the deficit target is met?",
+      "resolution_mechanism": "Historical analysis of federal spending patterns post-2002; tracking of program discontinuations vs temporary suspensions; institutional memory loss in eliminated offices",
+      "impact": "If reversible: Scaffold classification is accurate (true sunset). If irreversible: the 7-year frame is theater masking permanent extraction (constraint reclassifies to Snare or Piton).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Reversibility of spending cuts after 7-year period"
+    },
+    {
+      "id": "growth_rate_elasticity",
+      "question": "Does the balanced budget constraint reduce economic growth sufficiently to increase debt-to-GDP ratio despite nominal deficit elimination?",
+      "resolution_mechanism": "Counterfactual simulation of GDP growth under alternative fiscal scenarios; econometric estimation of fiscal multipliers for 1996-2002 period; debt-to-GDP trajectory analysis",
+      "impact": "If growth reduction is severe: constraint defeats its own purpose (debt ratio rises due to denominator collapse) \u2014 reclassifies to Snare extracting from future GDP growth. If growth impact is modest: coordination logic strengthened.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether balanced budget reduces growth enough to worsen debt-to-GDP ratio"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 7
+  },
+  "commentary": {
+    "narrative_context": "The 1996 Balanced Budget Mandate, enacted through the Balanced Budget Act of 1997, created a binding institutional constraint requiring the federal government to eliminate permanent deficit spending within 7 years through combined spending reductions and modest tax relief. The constraint forces a tradeoff between immediate spending and long-term debt service costs, benefiting future taxpayers and creditors while imposing extraction costs on agencies and program beneficiaries. This constraint exhibits all six DR types from different perspectives: it appears as an immutable fiscal law (mountain), a coordination mechanism solving a collective-action deficit problem (rope), a mixed coordination-extraction hybrid (tangled_rope), a performative political commitment (piton), a temporary fiscal correction (scaffold), and pure extraction for those dependent on reduced spending (snare). The constraint's extractiveness increased from 0.35 to 0.58 over the 7-year interval as the baseline spending cuts deepened and supplemental cuts accumulated. Theater ratio remained low (0.32\u20130.42) because the deficit targets were measurable and objective, reducing performative cover-up relative to institutional constraints with vaguer success metrics.",
+    "key_agents": [
+      "Future Taxpayers and Debt Market Actors: Primary beneficiaries (institutional/arbitrage) \u2014 gain from lower interest costs on Treasury debt and reduced future tax burdens as debt service declines",
+      "Federal Discretionary Spending Agencies: Primary victims (powerless/trapped) \u2014 face non-negotiable budget caps and must implement cuts; no exit option",
+      "Working Poor and Means-Tested Program Participants: Secondary victims (moderate/constrained) \u2014 experience both benefit (lower long-term interest rates) and cost (reduced program access); constrained by lack of alternatives",
+      "Congressional Budget Process and Fiscal Hawks: Organized agents (organized/constrained) \u2014 manage implementation; have agency in prioritizing cuts but constrained by political feasibility",
+      "Executive and Legislative Leadership: Institutional actors (powerful/mobile) \u2014 can claim credit for responsibility and exit through blame-shifting; experience constraint as politically beneficial theater",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks treating fiscal accounting identity as natural law rather than institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high and rising. The constraint accumulates extraction over time as deadline approaches and baseline cuts deepen. Initial extractiveness (0.35) reflects modest tax relief and early spending adjustments. By year 7, extractiveness reaches 0.58 as supplemental cuts target programs with high political salience but low enforcement capacity (welfare reform, NIH funding, infrastructure maintenance). The rising trajectory indicates that the constraint functions less as balanced coordination and more as a ratcheting extraction mechanism \u2014 each year's success enables tighter constraints in the next year. Suppression (0.48): Moderate. Federal agencies and program recipients face real constraints on exit options \u2014 they cannot opt out of budget cuts \u2014 but suppression is not total. Congress can pass supplemental appropriations, agencies can shift funds between line items, and political pressure can force exemptions. The restraint is institutional rather than absolute. Theater ratio (0.38): Low-moderate. Deficit measurements are objective and verifiable (CBO estimates), reducing performative cover-up compared to more subjective institutional constraints. However, theater emerges in the timing of counting methodologies (off-budget accounts, Social Security trust fund status) and in the announcement rhetoric relative to actual implementation difficulty.",
+    "directionality_logic": "Each perspective's experienced extractiveness (\u03c7) is computed from the base extractiveness (\u03b5), the agent's directionality value (d reflecting their structural position), and the scope modifier (\u03c3=1.0 for national scope). Primary beneficiaries (future taxpayers, institutional creditors) have low d values because they benefit from deficit reduction; \u03c7 for these agents is dampened (partially negative), they perceive rope or coordination benefit. Victims dependent on discretionary spending have high d values (they bear full extraction cost); \u03c7 for these agents is amplified, producing snare perception. Organized agents with political agency have moderate d values; they perceive tangled rope (mixed cost and ability to influence cuts). Leadership with mobility have very low d values relative to extraction; they perceive piton (performative burden). The deficit itself is structural \u2014 the government collects less than it spends \u2014 so the constraint cannot be evaded; only the distribution of adjustment burden can be negotiated.",
+    "perspectival_gap": "The perspectival gap in this constraint is primarily distributional rather than perceptual. All perspectives agree that the deficit exists and must be addressed; they disagree on who bears the adjustment cost. Future taxpayers experience rope (pure coordination benefit). Working poor experience tangled rope (mixed extraction and benefit). Federal employees experience snare (pure extraction). Leadership experiences piton (low personal cost, high political benefit). The analytical observer risks mountain classification by treating deficit arithmetic as natural law, but the structural data contradicts this: the balanced budget requirement is a policy choice with identifiable beneficiaries (future creditors) and victims (current program beneficiaries). The constraint is institutional, not emergent from physics or mathematics.",
+    "directionality_logic_detail": "Beneficiaries (future_taxpayers, debt_service_recipients, institutional_credibility): Institutional power, arbitrage exit options \u2192 low d (~0.15) \u2192 negative/low \u03c7 \u2192 Rope classification. These agents benefit directly from deficit reduction and can arbitrage between Treasury investments and alternatives. Victims (discretionary_federal_spending, means_tested_programs, working_poor): Powerless/moderate power, trapped/constrained exit \u2192 high d (0.85\u20130.95 for trapped, 0.55\u20130.65 for constrained) \u2192 high \u03c7 \u2192 Snare/Tangled Rope classification. These agents bear costs with limited alternatives. Organized Congressional actors: Organized power, constrained exit \u2192 moderate d (~0.50) \u2192 moderate \u03c7 \u2192 Tangled Rope/Scaffold classification. They have agency in implementing cuts but are constrained by political feasibility and long-term career dependence on fiscal credibility.",
+    "mandatrophy_analysis": "The balanced budget constraint resolves the mandatrophy through temporal decomposition: in the short term (immediate/biographical horizon), it is an extraction mechanism (Snare) for those dependent on federal spending; in the medium term (generational horizon), it is a coordination mechanism (Rope) for those benefiting from lower debt service; in the long term (civilizational horizon), it is either a natural law (Mountain \u2014 if the deficit was truly unsustainable) or a false summit (if lower-deficit alternatives were viable). The constraint's extractiveness (0.52) is above the pure-coordination threshold (0.35) and below the pure-extraction threshold (0.66), placing it correctly as Tangled Rope: it provides genuine coordination benefit (deficit reduction lowers interest costs) alongside asymmetric extraction (benefits concentrated on future creditors, costs concentrated on current program beneficiaries). The false-summit candidate evaluation: does the constraint serve identifiable beneficiaries (future taxpayers, creditors)? Yes. Can these beneficiaries be replaced by alternative beneficiaries if the constraint is removed? Yes \u2014 if the deficit were allowed to grow, current program beneficiaries would be the beneficiaries. This confirms Tangled Rope over Mountain: the constraint is institutional choice, not natural law.",
+    "identity_lock_analysis": "Identity lock does not appear in this constraint's primary perspectives because the constraint operates through material incentives (funding availability, program capacity) rather than through internalized identity fusion. However, Congressional leadership risks identity lock to balanced-budget norms: a legislator may internalize 'responsible budgeting' as core to their professional identity, creating path dependence that persists even if economic conditions change. This would appear as (institutional, identity_locked) in a perspective modeling a captured fiscal hawk \u2014 someone who perceives deficit reduction as essential to their identity as a policy leader, independent of empirical fiscal conditions. Not declared here because the constraint's primary enforcement is material, not cognitive.",
+    "suppression_mechanism": "Suppression in this constraint is institutional and structural, not internalized. Federal agencies cannot exit budget constraints through reframing or identity negotiation \u2014 the budget authority is legally fixed. Suppression arises from: (1) inability to increase revenue (spending cuts are mandated, tax increases are forbidden), (2) inability to reduce mandatory spending significantly (Social Security, Medicare entitlements are politically protected), and (3) inability to opt out of federal operations (defense, national parks, courts must be funded). The suppression is high for discretionary agencies but low for politically protected programs and tax beneficiaries, creating the regressive incidence pattern detected in the distribution omega. This is not a case where suppression would persist after constraint removal \u2014 agencies would immediately revert to pre-constraint spending levels if the budget cap were lifted. Suppression is structural to the constraint, not internalized into agency culture."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "social_security_trust_fund_depletion",
+      "medicare_solvency_crisis",
+      "declining_federal_research_investment"
+    ],
+    "dual_formulation_note": "The balanced budget constraint is the upstream institutional mechanism affecting downstream fiscal crises. Social Security trust fund depletion and Medicare solvency reflect long-term consequences of deficit reduction prioritizing discretionary spending cuts over entitlement reform. Federal research investment decline is a direct consequence of the 7-year spending caps."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.45
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "federal_deficit_accumulation",
+      "national_debt_service_expansion"
+    ]
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "sotu_1979_carter_hospital_cost_containment",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hcc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Federal Hospital Cost Containment Regulation (1979 Carter Proposal)",
+    "topic_domain": "healthcare/economic_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "federal_government",
+      "taxpayers",
+      "insured_patients"
+    ],
+    "victims": [
+      "hospital_providers",
+      "healthcare_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Frontline Healthcare Worker",
+      "comment": "PERSPECTIVE 1: FRONTLINE HEALTHCARE WORKER (SNARE) \u2014 Nurses, technicians, and support staff face wage suppression and staffing reduction directly caused by hospital cost caps. Cannot exit the healthcare system without retraining; cannot negotiate wages effectively under federal caps. Experiences maximum extraction with minimal coordination benefit. Federal price control removes their leverage in local labor markets."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Hospital Network Administrator",
+      "comment": "PERSPECTIVE 2: HOSPITAL NETWORK ADMINISTRATOR (TANGLED ROPE) \u2014 Experiences genuine coordination benefit (federal oversight reduces local rent-seeking, enables planning), but also faces strict cost constraints that force difficult allocation choices. Can adjust operations and potentially shift costs to outpatient care, but cannot exit federal regulation. Moderate power but high constraint. Benefits from regulatory predictability alongside costs of enforcement compliance."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Federal Government and Taxpayers",
+      "comment": "PERSPECTIVE 3: FEDERAL GOVERNMENT AND TAXPAYERS (ROPE) \u2014 Clear beneficiaries with arbitrage options: can adjust policy, redirect savings to other programs, exit commitment through legislative repeal. Experiences the constraint as pure coordination: federal spending control aligns incentives across the healthcare market. $60 billion in projected savings flows primarily to this group. Net positive directionality."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "State and Local Health Planning Agencies",
+      "comment": "PERSPECTIVE 4: STATE AND LOCAL HEALTH PLANNING AGENCIES (PITON) \u2014 Nominally coordinating actors (certificate-of-need programs, regional planning), but their function degrades under federal caps. They lose local discretion as federal rules become compliance theater. The constraint maintains their institutional presence but hollows their actual decision-making authority. Theater ratio rises as planning becomes regulatory compliance rather than adaptive resource allocation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Insured Patients and Employer Groups",
+      "comment": "PERSPECTIVE 5: INSURED PATIENTS AND EMPLOYER GROUPS (TANGLED ROPE) \u2014 Benefit from controlled premium growth and federal cost containment, but also constrained by reduced service availability and longer wait times as hospitals economize. Genuine coordination of catastrophic risk pooling exists alongside extraction through access restrictions. Lower income patients within this group bear disproportionate access costs."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Hospital Industry Coalition (1979-1982)",
+      "comment": "PERSPECTIVE 6: HOSPITAL INDUSTRY COALITION (SCAFFOLD) \u2014 Organized hospitals accept temporary cost controls as preferable to market competition pressure, but with explicit sunset logic: the industry proposes voluntary compliance with 9% annual cost growth caps as an alternative to federal mandatory controls. If industry meets targets, legislation is suspended. Classification as Scaffold derives from the coalition's framing of this as temporary, conditional commitment with negotiated exit terms."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Inflationary Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a macroeconomic perspective, hospital cost inflation is treated as an immutable feature of healthcare markets: demand is inelastic (life-or-death decisions), supply is monopolistic (location-based hospital markets), and information asymmetries prevent price competition. Price controls appear as necessary corrections to market failure. This perspective risks treating the political economy of hospital pricing (technology adoption, capital intensity, labor practices) as natural constraints rather than institutional choices."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "voluntary_vs_mandatory_equivalence",
+      "question": "Does the hospital industry's voluntary 9% growth cap commitment represent genuine coordination, or is it a negotiating position designed to forestall mandatory federal controls while preserving pricing power?",
+      "resolution_mechanism": "Comparative historical analysis: track actual cost growth under voluntary compliance (1979-1982) versus mandatory federal cap scenarios in states that later implemented tighter controls. Measure compliance rates and industry evasion tactics (cost-shifting to outpatient care, diagnostic reclassification).",
+      "impact": "If voluntary compliance succeeds: constraint classifies as Scaffold with genuine sunset. If industry systematically evades: constraint is Tangled Rope or Snare, and voluntary commitment masks extraction. Classification pivots on empirical compliance data.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether voluntary industry compliance represents genuine coordination or evasion"
+    },
+    {
+      "id": "cost_shifting_mechanism",
+      "question": "Do federal hospital cost caps simply transfer extraction to outpatient facilities, nursing homes, and insurance deductibles rather than reducing overall healthcare extraction?",
+      "resolution_mechanism": "Longitudinal cost tracking across hospital, ambulatory, long-term care, and out-of-pocket spending post-implementation. Measure whether savings claimed for federal budget appear as cost increases elsewhere in healthcare system.",
+      "impact": "If costs shift but total extraction unchanged: the constraint is Tangled Rope or Snare for the healthcare system overall, despite appearing as Rope for federal actors. If overall extraction genuinely decreases: the constraint is real coordination.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether cost caps shift extraction rather than reduce it"
+    },
+    {
+      "id": "frontline_wage_suppression_causality",
+      "question": "Are healthcare worker wage freezes causally driven by federal price controls, or are they independent responses to inflation and labor supply conditions?",
+      "resolution_mechanism": "Comparative wage growth analysis: hospital workers subject to federal caps versus workers in non-hospital healthcare (outpatient, insurance) and other regulated industries (utilities, telecommunications) during the same period. Controls for labor market tightness and inflation.",
+      "impact": "If causally driven: suppression component of the constraint is structural and targets frontline workers specifically. If independent: the constraint's suppression is lower than appears, and wage stagnation reflects broader macroeconomic factors.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether federal caps directly cause healthcare worker wage suppression"
+    },
+    {
+      "id": "federal_extraction_intent",
+      "question": "Does the $25 billion federal budget savings component represent legitimate cost containment, or is it implicit extraction from healthcare sector to federal coffers?",
+      "resolution_mechanism": "Fiscal analysis of budget allocation: where do federal savings flow? Enhanced Medicare benefit generosity, investment in preventive care, or general appropriations? If savings are diverted to unrelated spending, the constraint has a federal extraction component.",
+      "impact": "If savings invested in healthcare infrastructure: constraint is coordination with unequal benefit distribution (Tangled Rope). If diverted to general spending: constraint has explicit extraction mechanism (Snare component).",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether federal budget savings represent legitimate cost control or federal extraction"
+    },
+    {
+      "id": "market_discipline_counterfactual",
+      "question": "Would unregulated market competition (consumer price sensitivity, provider competition) achieve equivalent or superior cost control compared to federal price regulation?",
+      "resolution_mechanism": "Counterfactual analysis: compare hospital cost growth in regulated versus less-regulated healthcare systems (e.g., pre-regulation baseline, state variations in certificate-of-need stringency). International comparison with market-based systems (Switzerland, Netherlands).",
+      "impact": "If market discipline would succeed: federal regulation is extractive overhead (Snare component). If market discipline fails (information asymmetry, monopolistic markets): federal regulation is necessary coordination (Rope component).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Counterfactual: whether market discipline would match federal regulation effectiveness"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "Carter's 1979 hospital cost containment proposal frames spiraling healthcare costs as an inflationary threat requiring federal price regulation. The constraint operates through mandatory spending caps on hospital revenues, coupled with utilization review to reduce unnecessary procedures. The mechanism creates an asymmetric distribution: federal government, taxpayers, and insured patients benefit from $60 billion in projected savings; hospital providers and healthcare workers bear the costs through constrained revenues, reduced staffing, and wage suppression. The constraint exhibits simultaneous coordination (federal price control reduces uncoordinated cost escalation) and extraction (concentrated on healthcare workers and smaller hospitals with limited market power). The regulation centralizes pricing authority in federal hands rather than allowing market negotiation or local adaptation, creating a network of compliance infrastructure (utilization review committees, cost accounting requirements) whose theater ratio increases over the implementation period as compliance becomes an end in itself rather than a means to cost control. This represents a textbook Tangled Rope: genuine coordination function (containing aggregate healthcare costs) layered with asymmetric extraction (burden falls on powerless frontline workers while benefits concentrate on taxpayers and federal budget).",
+    "key_agents": [
+      "Federal Government / Medicare/Medicaid: Primary beneficiary (institutional/arbitrage) \u2014 captures $25 billion in federal budget savings and regulatory control authority; can exit through legislative repeal",
+      "Taxpayers and Insured Patients: Secondary beneficiary (moderate/constrained) \u2014 benefit from controlled premium growth and $35 billion in reduced out-of-pocket costs; constrained by potential service reductions",
+      "Hospital Providers (Large Networks): Moderate power (powerful/constrained) \u2014 face strict cost caps but retain some capacity to shift costs to outpatient care and adjust operations; can negotiate with federal regulators",
+      "Frontline Healthcare Workers: Primary victim (powerless/trapped) \u2014 face wage suppression and staffing reduction with no exit capacity; cannot renegotiate compensation under federal controls; subject to maximum extraction",
+      "State and Local Planning Agencies: Institutional actors (organized/constrained) \u2014 nominally coordinating actors whose actual discretion declines as federal compliance requirements expand",
+      "Hospital Industry Coalition: Organized negotiators (organized/constrained) \u2014 propose voluntary 9% growth cap as alternative to federal mandate; conditional commitment with sunset logic",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing political economy of hospital pricing as immutable market failure rather than institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts from healthcare providers and workers primarily through revenue caps and staffing restrictions. The $60 billion in savings (over 5 years, ~$12 billion annually) represents extraction from providers at 1979 baseline hospital spending of ~$100 billion \u2014 approximately 12% annual extraction. However, extraction is not total because hospitals retain capacity to cost-shift to outpatient care, adjust service mix, and negotiate pricing for new technologies. Measurement at t=4 (end of proposal interval) reflects increasing extractiveness as compliance mechanisms tighten and evasion options narrow. Suppression (0.65): Moderate-high. Hospitals and healthcare workers cannot easily exit federal price controls (national scope, universal application to Medicare/Medicaid providers). However, suppression is not total because providers can petition for exceptions, shift costs across service lines, and lobby for policy changes. Healthcare workers cannot negotiate wages, but some can transition to less-regulated outpatient settings. Theater ratio (0.48): Moderate. Utilization review committees and cost accounting requirements do perform genuine coordination functions (identifying unnecessary procedures, preventing local cost escalation), but some compliance activity becomes theater as regulators and providers game the system. Theater increases slightly over the interval (t=0 to t=4) as compliance infrastructure matures and documentation requirements expand beyond the functional minimum.",
+    "directionality_logic": "Beneficiary status flows to federal government ($25B budget savings), taxpayers (~$35B in premium/out-of-pocket reductions), and employed insured patients. Victim status flows to healthcare providers (revenue constraints) and especially frontline healthcare workers (wage suppression). Derived directionality computations: federal actors (institutional power, arbitrage options) derive d \u2248 0.05-0.10 (strong beneficiary position); large hospital networks (powerful, constrained) derive d \u2248 0.55 (near-center, moderate extraction); smaller hospitals (powerful but location-trapped) derive d \u2248 0.75 (high extraction); healthcare workers (powerless, trapped) derive d \u2248 0.95 (maximum extraction target). The sig() function f(d) applies the standard sigmoid mapping, producing the perspectival gradation from negative \u03c7 (beneficiary) through moderate \u03c7 (tangled) to high \u03c7 (snare).",
+    "perspectival_gap": "The constraint demonstrates a profound perspectival gap across power and exit dimensions. Federal government sees pure coordination (Rope) \u2014 price controls solve the inflation problem by centralizing market authority. Large hospital networks see mixed coordination and constraint (Tangled Rope) \u2014 federal oversight prevents uncoordinated cost escalation, but also restricts their pricing flexibility. Frontline healthcare workers see pure extraction (Snare) \u2014 federal caps suppress their wages with no offsetting benefit. The hospital industry coalition sees temporary conditional constraint (Scaffold) \u2014 proposing voluntary compliance as an alternative exit path. State and local planning agencies see degraded authority (Piton) \u2014 maintaining institutional presence but losing real decision-making power as federal rules replace local adaptive capacity. The analytical observer risks seeing natural economic law (Mountain) \u2014 treating healthcare market failure as immutable rather than as a consequence of specific institutional arrangements (insurance pooling, provider licensing, capital intensity, information asymmetry). The perspectival gap reveals that the constraint's classification depends entirely on the observer's position in the extraction flow: beneficiaries with exit options see coordination; trapped agents with no voice see extraction.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy through explicit structural decomposition. The federal government and taxpayers experience pure coordination (Rope perspective) \u2014 the constraint solves a genuine collective action problem (hospital cost escalation without private price competition). Simultaneously, frontline healthcare workers experience pure extraction (Snare perspective) \u2014 the constraint's costs are imposed without their consent and with no offsetting benefit. Both readings are structurally accurate; neither is a perceptual error. The Tangled Rope classification at the institutional and moderate power levels captures the hybrid: genuine coordination function (federal cost control addresses market failure) coexists with asymmetric extraction (burden concentrated on powerless agents). Mandatrophy is resolved by recognizing that the constraint solves a real problem while creating new extraction mechanisms \u2014 it is coordination that extracts from the weakest participants. The false-summit risk arises when the constraint is framed as natural economic law (Mountain) rather than as a political economy choice: healthcare cost inflation is treated as immutable market failure, naturalizing the need for federal intervention while hiding the choice of WHO bears the costs of adjustment. The analytical perspective approaches this false summit and must be explicitly flagged: the constraint appears unchangeable only if you accept the framing that hospital cost growth is inevitable. If you recognize it as institutional (choice of payment mechanisms, provider incentives, insurance pooling), the constraint becomes a contestable political economy question rather than natural law."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "healthcare_provider_bargaining_power",
+      "medicaid_fee_schedule_negotiation",
+      "certificate_of_need_hospital_expansion"
+    ],
+    "dual_formulation_note": "This constraint is part of a regulatory ecosystem for healthcare cost control spanning federal price regulation, state certificate-of-need programs, and Medicaid fee negotiation. Each component has its own extractiveness value: federal rate-setting (\u03b5=0.58), state CON boards (\u03b5=0.52), and Medicaid fee schedules (\u03b5=0.48). The three constraints are linked through regulatory coordination \u2014 federal rules shape state implementation, which shapes Medicaid outcomes. Decomposition reflects that each regulatory mechanism has distinct beneficiaries (federal budget vs. state administrative control vs. federal program solvency) and victims (hospital revenues, healthcare workers, patient access)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.72,
+      "rationale": "Small rural hospitals classified as 'powerful' (structural role) but actually highly constrained by federal caps and geographic isolation. Override d upward from canonical 0.48 to 0.72 to reflect that these providers are trapped in federal regulation with minimal evasion capacity despite nominal 'powerful' classification. Large urban hospital networks retain genuine powerful status with d ~0.48-0.55; rural hospitals downgrade to trapped-equivalent directionality despite retaining powerful designation."
+    }
+  ]
+}

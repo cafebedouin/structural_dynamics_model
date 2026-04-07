@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "1966_johnson_great_society_health_education_expansion",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gsedu"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.28,
+    "theater_ratio": 0.42,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Federal Health and Education Program Expansion via Great Society (1965-1975)",
+    "topic_domain": "social_policy/education/public_health",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "low_income_families",
+      "students_in_poverty",
+      "healthcare_service_providers",
+      "federal_administrative_apparatus"
+    ],
+    "victims": [
+      "taxpayer_base",
+      "state_fiscal_autonomy",
+      "private_welfare_institutions"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Low-Income Family",
+      "comment": "PERSPECTIVE 1: LOW-INCOME FAMILY (ROPE) \u2014 Structurally mobile (could relocate, children could enter workforce) but constrained by economic dependency. The federal programs provide direct coordination benefit: food assistance, healthcare, educational access. Suppression is real (poverty itself is the constraint) but the coordination function is genuine \u2014 programs solve the collective problem of vulnerable populations accessing basic services. Family experiences net benefit; extraction is minimal relative to gained access."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The State Government",
+      "comment": "PERSPECTIVE 2: STATE GOVERNMENT (TANGLED ROPE) \u2014 Previously autonomous in welfare policy; now constrained by federal mandate and budget match requirements. Experiences coordination benefit (federal standards enable interstate coordination, prevent race-to-the-bottom in education quality) alongside asymmetric extraction (federal rules reduce state discretion, federal matching requirements strain state budgets). State-level enforcement of federal curriculum and healthcare standards creates dual accountability structure: state bureaucrats report to both state voters and federal administrators."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Fiscal Commons / Taxpayer Base",
+      "comment": "PERSPECTIVE 3: FISCAL COMMONS / TAXPAYER BASE (SNARE) \u2014 Organized extraction without coordination benefit. Federal taxation to fund social programs is mandatory; taxpayers cannot exit the system. Extraction is structured, not negotiated. No coordination benefit accrues to individual taxpayers (unlike state-level redistribution where community members vote directly). Maximum suppression: tax compliance is legally enforced; refusal has criminal consequences. The taxpayer base bears costs without meaningful voice in allocation decisions at federal scale."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Federal Administrative Apparatus",
+      "comment": "PERSPECTIVE 4: FEDERAL ADMINISTRATIVE APPARATUS (TANGLED ROPE) \u2014 Benefits from program expansion (budget growth, institutional prestige, expanded jurisdiction). Experiences genuine coordination problem: scaling healthcare and education delivery across 50 states requires standardized protocols, funding mechanisms, enforcement capacity. Federal agencies coordinate this at scale. But also extracts: bureaucratic requirements create processing overhead; federal compliance regimes generate rents for consulting firms and administrative contractors. Agency experiences this as coordination; beneficiary populations experience it as bureaucracy."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Private Welfare Institutions",
+      "comment": "PERSPECTIVE 5: PRIVATE WELFARE INSTITUTIONS (PITON) \u2014 Churches, voluntary organizations, and private charities previously provided education and healthcare to poor populations. Federal programs displace this role, reducing the institutional function of private welfare. These institutions persist in reduced capacity (pastoral care, supplementary services) but lose their primary function (basic service delivery). Theater increases as these institutions emphasize cultural/spiritual role rather than material provision. Extracted from their historical role by federal displacement, yet maintained through inertia and community attachment."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Civil Rights Coalition",
+      "comment": "PERSPECTIVE 6: CIVIL RIGHTS COALITION (SCAFFOLD) \u2014 Benefits from federal enforcement mechanisms that (1) redirect resources to historically excluded populations and (2) override state-level segregation barriers. Sees programs as temporary leverage points \u2014 federal enforcement creates political space for local organizing and demands escalation. Coalition members experience high agency; suppression is low (enforcement can be escalated, programs can be expanded). Sunset clause: as institutional integration and federal civil rights law mature, the need for program-based redistribution as a tool for overcoming segregation decreases."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational scope, the Great Society programs appear to solve an immutable problem: pre-modern societies distribute survival resources through kinship and community; industrial societies require institutional mechanisms. Poverty and health inequality are structural features of market economies; federal redistribution is an inevitable institutional response. This perspective risks naturalizing what is a contingent political choice \u2014 treating the federal coordination mechanism as inherent to industrial society rather than as a specific institutional design. The engine's false summit detector will identify beneficiary presence, revealing the naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_vs_extraction_boundary",
+      "question": "What proportion of the programs' cost is genuine coordination overhead (standardization, enforcement infrastructure) vs. redistributive extraction (transfer from high-income to low-income agents)?",
+      "resolution_mechanism": "Decompose program budgets into administrative cost vs. direct service delivery. Compare federal unit costs to state-level or private-provider unit costs for equivalent services. Measure coordination benefits (interstate standardization, prevention of race-to-bottom) directly.",
+      "impact": "High coordination cost (>40% of budget): reclassify toward Rope from multiple perspectives. Low coordination cost (<20%): reclassify toward Snare/Tangled Rope \u2014 emphasizes redistribution over coordination.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of cost that is genuine coordination overhead vs. redistribution"
+    },
+    {
+      "id": "state_autonomy_externality",
+      "question": "Does federal standardization of education and health prevent destructive interstate competition (positive coordination), or does it displace legitimate state-level policy experimentation (negative extraction from state autonomy)?",
+      "resolution_mechanism": "Counterfactual analysis: what would education outcomes look like under a system of pure state competition without federal baseline standards? Measure correlation between federal standardization and convergence of education quality, and correlation between state freedom and outcome divergence.",
+      "impact": "If prevention of race-to-bottom is substantial: coordination frame strengthens (Rope/Tangled Rope). If state innovation is suppressed: extraction frame strengthens (Snare perspective on states).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether federal standardization prevents destructive competition or suppresses state experimentation"
+    },
+    {
+      "id": "civil_rights_enforcement_coupling",
+      "question": "Are the health and education programs primarily mechanisms for resource redistribution to the poor, or are they primarily mechanisms for enforcing civil rights integration against segregationist state resistance?",
+      "resolution_mechanism": "Temporal analysis: compare program expansion rates in segregationist vs. non-segregationist states. Analyze federal enforcement rhetoric and conditional funding requirements. Measure what fraction of program expansion correlates with civil rights enforcement vs. poverty reduction goals.",
+      "impact": "If primarily civil rights enforcement: scaffold perspective is correct; programs have sunset logic (enforcement obsolete as segregation is defeated). If primarily redistribution: programs are indefinite (poverty is persistent); sunset logic fails.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether programs are primarily about redistribution or civil rights enforcement"
+    },
+    {
+      "id": "tax_compliance_voluntary_exit",
+      "question": "Do taxpayers in the Snare perspective have realistic exit options (relocation, tax avoidance, economic restructuring) that are suppressed by law, or is suppression complete at a structural level?",
+      "resolution_mechanism": "Economic mobility analysis: measure percentage of high-income earners who relocate to avoid progressive taxation, measure tax avoidance strategies available, measure enforcement intensity across income levels. Determine if exit suppression is legal (criminal penalty for tax evasion) or structural (no realistic alternative revenue source).",
+      "impact": "If realistic exit options exist but are suppressed by law: Snare classification holds (legal suppression). If exit is structurally impossible: reclassify toward Mountain (natural law of fiscal aggregation) or Rope (coordination benefit of stable revenue).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether taxpayers face legal or structural suppression of exit options"
+    },
+    {
+      "id": "private_welfare_displacement_mechanism",
+      "question": "Do federal programs displace private welfare institutions through direct crowding-out (government services replace private services at lower cost), or through reallocation of donor interest (charitable giving shifts from private welfare to federal programs)?",
+      "resolution_mechanism": "Time series analysis of private charitable giving, private institution funding, and program participation. Measure whether private institutions shrink due to loss of client demand (crowding-out) or loss of donor support (reallocation).",
+      "impact": "If crowding-out: Piton classification is correct (institutions lose function but persist through inertia). If reallocation: institutions actively decline (stronger Snare perspective on private institutions).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether private welfare displacement is via crowding-out or donor reallocation"
+    },
+    {
+      "id": "false_summit_institutional_naturalization",
+      "question": "Is federal coordination of health and education inherent to industrial society (Mountain), or is it a contingent institutional design that benefits specific actors?",
+      "resolution_mechanism": "Comparative analysis: countries at similar development levels with different institutional designs (market-based, decentralized, private-provision dominant). Measure whether outcomes (health, education) differ substantially or converge despite institutional diversity. If convergence: federal coordination may be natural law. If divergence: institutional design is consequential and contingent.",
+      "impact": "If natural law: Mountain holds. If contingent institutional design: false summit triggers (beneficiaries present) and reclassifies to Tangled Rope or Snare depending on perspective.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether federal coordination is inherent to industrial society or contingent design"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 1965,
+    "end": 1975
+  },
+  "commentary": {
+    "narrative_context": "President Lyndon Johnson's Great Society initiatives (1965-1969, sustained through the 1970s) represent a pivotal institutional expansion: the federal government assumes primary responsibility for redistributing resources to vulnerable populations through health and education programs (Medicare, Medicaid, Title I education funding). This constraint exhibits the defining feature of Tangled Rope: genuine coordination function (scaling education and healthcare delivery across 50 states requires federal standardization and funding mechanisms) combined with asymmetric extraction (federal bureaucracy creates compliance overhead; federal taxation is mandatory; state autonomy is reduced). The constraint's perspectival structure reveals the core tension of the Great Society: presented as moral coordination (ensuring vulnerable populations access basic services), experienced by some as coercive redistribution (mandatory taxation), by others as displacement (private welfare institutions), and by states as loss of autonomy. The theater ratio's rise (0.28 \u2192 0.42 over the interval) reflects increasing bureaucratization: as programs mature, administrative processing and compliance documentation grow faster than service delivery growth, suggesting Goodhart drift \u2014 the programs' original coordination function (ensuring access) is increasingly obscured by theater (forms, reporting requirements, eligibility verification).",
+    "key_agents": [
+      "Low-Income Families and Students: Primary beneficiary (powerless/constrained) \u2014 gain access to education, healthcare, nutrition assistance; net benefit despite constrained structural position",
+      "State Governments: Secondary actor (organized/constrained) \u2014 lose autonomy in welfare policy; gain access to federal resources and coordination benefits; experience extraction through match requirements and reduced discretion",
+      "Federal Taxpayer Base: Primary victim (powerless/trapped) \u2014 mandatory extraction without direct coordination benefit; structured legal suppression; no exit mechanism",
+      "Federal Administrative Apparatus: Primary beneficiary (powerful/mobile) \u2014 budget growth, institutional prestige, expanded jurisdiction; experiences genuine coordination function (scaling delivery across states)",
+      "Private Welfare Institutions: Displaced actor (institutional/arbitrage) \u2014 lose primary function as federal programs provide basic services; maintain reduced roles through institutional inertia",
+      "Civil Rights Coalition: Organized agents (institutional/arbitrage) \u2014 leverage federal enforcement to override state segregation barriers; experience programs as temporary political tools with sunset logic",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional design as inherent to industrial society"
+    ],
+    "logic_rationale": "Extractiveness (0.35): Moderate. The constraint exhibits both genuine coordination (standardization enables interstate cooperation, prevents destructive competition, scales delivery) and extraction (federal bureaucracy adds overhead; mandatory taxation; state autonomy reduced). The 0.35 value reflects that the coordination function is substantial but not dominant. Rising from 0.18 (initial programs, high coordination enthusiasm) to 0.35 (mature programs, bureaucracy entrenched) suggests Goodhart drift \u2014 original coordination intent increasingly displaced by administrative theater. Suppression (0.28): Moderate. Legal suppression of taxpayer exit is complete (criminal penalties for tax evasion), but program beneficiaries experience low suppression (programs are visible, tangible benefits, not coercive). State governments experience moderate suppression (federal mandates constrain options but don't eliminate them). Overall: legal suppression is real but not catastrophic; beneficiary populations experience programs as enabling rather than suppressive. Theater ratio (0.42): Moderate-rising. Early programs are high-function, low-theater (food assistance, school funding). As bureaucratization increases, theater grows: eligibility verification, compliance documentation, outcome measurement become increasingly performative (e.g., programs emphasize metrics that satisfy federal reporting requirements rather than optimizing service delivery). The trajectory suggests Piton drift \u2014 if theater continues rising, perspective classification will eventually shift from Tangled Rope toward Piton (degraded institutional function maintained through inertia).",
+    "perspectival_gap": "This constraint's perspectival structure reveals the core conflict between redistributive institutions and federalist structure. The low-income family sees a coordinating mechanism (Rope); the taxpayer sees an extraction mechanism (Snare); the state sees both (Tangled Rope). The gap is not perceptual error but structural reality: the same institutional apparatus is genuinely both coordinating (for those who gain access) and extractive (for those who pay for others' access). The framework dissolves the false debate ('is the Great Society good or bad?') by classifying what it is from each structural position. To powerless families, it is good (coordinate access solution). To taxpayers, it is coercive (mandatory extraction). To states, it is mixed (gains and losses). The mandatrophy resolution is: all perspectives are correct from their structural positions. The constraint is a Tangled Rope from the institutional design perspective because it genuinely coordinates while genuinely extracting.",
+    "directionality_logic": "Directionality is derived from beneficiary/victim status combined with exit options. Low-income families are beneficiaries with constrained exit: d \u2248 0.30 (derive from beneficiary status + constrained exit). Taxpayers are victims with trapped exit (legal suppression): d \u2248 0.92 (maximum extraction). States are mixed (both beneficiary and victim): d \u2248 0.55 (federal matching funds provide benefit; federal mandates extract autonomy). Federal administrators are beneficiaries with mobile/arbitrage exit: d \u2248 0.10 (low extraction, high institutional benefit). Private institutions are victims with arbitrage exit (can relocate focus to other activities): d \u2248 0.65 (moderate extraction via displacement). Civil rights coalition are beneficiaries with constrained-to-organized exit (increasing power): d \u2248 0.35 (moderate benefit, increasing agency). The chi values derive from these d values via the sigmoid f(d), producing the perspectival classifications: beneficiaries with low d \u2192 Rope or Scaffold; victims with high d \u2192 Snare; mixed positions with mid-range d \u2192 Tangled Rope.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the Great Society combines genuine coordination function with asymmetric extraction, which is exactly the Tangled Rope definition. The coordination function is real: scaling education and healthcare access across 50 states requires federal standardization, funding, and enforcement. No state alone can solve the coordination problem of preventing a race-to-the-bottom in education quality or ensuring access for mobile populations. The asymmetric extraction is also real: federal bureaucracy creates processing overhead; federal tax structure is mandatory with legal suppression of exit; some actors (private welfare institutions, state governments) bear costs without equivalent benefit. The Tangled Rope classification recognizes both: this is not pure redistribution (which could be Rope) and not pure extraction (which would be Snare). It is hybrid \u2014 the coordination function is genuinely necessary, and the extraction is genuinely asymmetric. The theater ratio's rise suggests drift toward Piton (where coordination function atrophies but bureaucracy persists), but at the 1965-1975 interval, the Tangled Rope holds. The false summit perspective (Mountain) is a naturalization risk: treating federal coordination as inherent to industrial society rather than as a contingent institutional design with real distributive consequences."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "medicaid_state_match_burden",
+      "education_funding_equity_federal_mandate",
+      "civil_rights_enforcement_via_federal_spending"
+    ],
+    "dual_formulation_note": "The Great Society programs can be decomposed into structurally distinct constraints: (1) Medicare/Medicaid funding mechanism (resource allocation, high base_extractiveness from federal taxation), (2) Title I education funding (coordination of interstate education standards, lower extractiveness), (3) Civil rights enforcement via spending conditionality (organizational enforcement, moderate extractiveness). Each constraint family member has different epsilon values reflecting their primary function and extraction asymmetry. This story captures the unified institutional apparatus; decomposed stories would highlight the distinct coordination and extraction mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ]
+}

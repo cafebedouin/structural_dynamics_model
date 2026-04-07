@@ -1,0 +1,188 @@
+{
+  "header": {
+    "constraint_id": "sotu_1989_bush_line_item_veto_proposal",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "liv"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Presidential Line-Item Veto Authority (1989 Bush Proposal)",
+    "topic_domain": "governance/constitutional_executive_power",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "executive_branch",
+      "fiscal_discipline_advocates"
+    ],
+    "victims": [
+      "congressional_committee_authority",
+      "legislative_distributive_bargaining"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Backbench Legislator",
+      "comment": "PERSPECTIVE 1: BACKBENCH LEGISLATOR (SNARE) \u2014 Junior members lose negotiating leverage over district-specific appropriations. Cannot exit the constraint without abandoning legislative effectiveness; committee seniority and distributive bargaining are the primary mechanism through which backbenchers deliver constituent services. Line-item veto shifts all item-level power to the executive, leaving backbenchers with no recourse. Maximum extraction from the perspective of a member whose value to their district depends on winning budget items."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Committee Chair",
+      "comment": "PERSPECTIVE 2: COMMITTEE CHAIR (TANGLED ROPE) \u2014 Powerful position but constrained by executive veto threat. Committee chairs retain negotiating leverage over bills as wholes but lose authority over item-level trades. They benefit from the budgeting coordination function \u2014 appropriations committees allocate resources across competing priorities \u2014 but also bear extraction as item-level control shifts to the executive. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Executive Branch",
+      "comment": "PERSPECTIVE 3: EXECUTIVE BRANCH (ROPE) \u2014 Gains selective veto authority without losing the ability to sign bills. Item-level veto is a pure coordination gain from the executive perspective: it enables the President to pass the appropriations bill while striking items deemed wasteful, eliminating the all-or-nothing veto threat that Congress exploits. The executive experiences this as solving a collective action problem, not extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Fiscal Reform Coalition",
+      "comment": "PERSPECTIVE 4: FISCAL REFORM COALITION (SCAFFOLD) \u2014 Organized advocates for spending discipline (OMB, GAO, fiscal hawks) see line-item veto as a temporary mechanism to curb distributive bargaining excess during periods of high deficits. The sunset logic is implicit: if spending discipline reforms succeed and appropriations process reforms take hold, the need for line-item veto diminishes. Coalition members are constrained by political feasibility but see an exit path through structural reform of the budgeting process."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Congressional Leadership (Both Chambers)",
+      "comment": "PERSPECTIVE 5: CONGRESSIONAL LEADERSHIP (TANGLED ROPE) \u2014 Leadership has high-level negotiating power with the executive and can condition support for other initiatives on resistance to line-item veto. They experience both the coordination function (budget bills do get passed, coordination happens) and the extraction (item-level power shifts away). Leadership is mobile \u2014 they can choose legislative strategies, form coalitions, leverage other political issues \u2014 but the structural reality is mixed: they retain some control but cede some authority."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Separation of Powers View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / SEPARATION OF POWERS VIEW (MOUNTAIN) \u2014 From a constitutional theory perspective, the line-item veto is sometimes framed as an immutable feature of separated government: if Congress has power over the purse, the executive must have means to contest it, and item-level veto is the natural logical counterpart. However, the Constitution explicitly grants Congress appropriations power and the President the option of signing or rejecting bills in whole \u2014 no enumeration of item-level veto exists. The mountain classification is a false summit: the 'natural law' framing naturalizes a contested constitutional power reallocation."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "constitutional_authority_ambiguity",
+      "question": "Does the President possess inherent constitutional authority to execute line-item veto, or is it a pure statutory/legislative power that requires Constitutional amendment?",
+      "resolution_mechanism": "Supreme Court adjudication (Clinton v. City of New York, 1998) resolved as statutory authority only \u2014 Congress cannot delegate item-level veto to the executive without constitutional amendment. The constraint's nature changed from a governance coordination mechanism to a constitutional power struggle.",
+      "impact": "If executive authority: constraint is constitutional separation-of-powers coordination mechanism (Rope, with mountain elements). If legislative delegation only: constraint is a statutory power reallocation requiring supermajority support (Snare from Congressional perspective, requiring active legislative coalition).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether line-item veto is constitutional executive power or requires amendment"
+    },
+    {
+      "id": "fiscal_discipline_mechanism_effectiveness",
+      "question": "Does item-level veto actually reduce wasteful spending, or do executive veto patterns reflect other political objectives unrelated to fiscal discipline?",
+      "resolution_mechanism": "Empirical analysis of veto patterns in jurisdictions that implemented line-item veto (43 US states, 1990s-2010s). Correlation between veto use and measures of spending efficiency, pork-barrel reduction, deficit decline.",
+      "impact": "If effective at reducing waste: tangled rope classification confirmed \u2014 genuine coordination function paired with power shift. If veto pattern reflects executive political preferences (targeting opposition districts, rewarding allies): constraint is pure extraction (Snare), with 'fiscal discipline' as theatrical justification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether line-item veto reduces wasteful spending or reflects executive political preferences"
+    },
+    {
+      "id": "legislative_adaptation_response",
+      "question": "How do legislatures adapt their appropriations strategies when facing item-level veto authority? Do they shift to omnibus bills, lump-sum appropriations, or other mechanisms that restore legislative leverage?",
+      "resolution_mechanism": "Comparative analysis of appropriations structures in states with vs. without line-item veto. Measurement of bill complexity, spending earmark concentration, executive veto override rates.",
+      "impact": "If legislatures successfully adapt: suppression is lower than assessed (0.58 \u2192 0.35-0.40) \u2014 Congress retains counter-leverage. If legislative adaptation fails: suppression is higher (0.58 \u2192 0.70+) \u2014 executive gains durable control.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Legislative adaptation strategies in response to line-item veto authority"
+    },
+    {
+      "id": "partisan_asymmetry_in_veto_use",
+      "question": "Does line-item veto disproportionately target appropriations favored by the opposing party, making it a partisan extraction mechanism rather than a fiscal discipline tool?",
+      "resolution_mechanism": "Historical veto data from states and federal contexts. Regression analysis of veto targets against partisan composition of legislators requesting items, presidential party affiliation, electoral competitiveness.",
+      "impact": "If veto is partisan-asymmetric: suppression rises (constraints oppositions' legislative effectiveness), extractiveness rises (asymmetric power shift), constraint reclassifies toward Snare. If veto pattern is fiscally neutral: constraint remains Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether line-item veto use exhibits partisan bias"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "The line-item veto proposal emerges from structural tension in the appropriations process: Congress controls the purse via appropriations bills but the President holds the all-or-nothing veto, creating two opposing leverage points. Presidents (from Reagan onward) sought to shift to item-level veto, framing it as fiscal discipline mechanism. Congress resisted, defending committee authority and distributive bargaining. The constraint exhibits dual nature: genuine coordination function (enabling President to strike items without rejecting entire bills, reducing wasteful spending) paired with asymmetric power extraction (shifting item-level authority from Congress to executive). The theater ratio (0.48) reflects moderate performative content \u2014 'fiscal discipline' framing obscures real objective of executive power expansion, yet some genuine budget coordination does occur. Extractiveness rises from 0.35 (initial proposal) to 0.52 (after state implementations demonstrate partisan veto patterns), showing accumulating evidence of executive power rather than pure fiscal discipline.",
+    "key_agents": [
+      "Executive Branch: Primary beneficiary (institutional/arbitrage) \u2014 gains item-level veto authority and selective power over appropriations without losing ability to sign bills",
+      "Congressional Committee Authority: Primary victim (powerful/constrained) \u2014 loses control over item-level appropriations trades, constrained by executive veto threat",
+      "Backbench Legislators: Secondary victim (powerless/trapped) \u2014 lose distributive bargaining leverage over district-specific spending items; cannot exit without abandoning legislative effectiveness",
+      "Fiscal Reform Coalition: Organized coalition (organized/constrained) \u2014 advocates for spending discipline see line-item veto as temporary reform mechanism; expect sunset as budgeting process reforms mature",
+      "Congressional Leadership: Mixed position (organized/mobile) \u2014 retain negotiating leverage with executive and can condition support on other priorities; experience mixed coordination and extraction",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing power reallocation as separation-of-powers necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint shifts item-level appropriations authority from Congress to the executive, reducing Congressional committee power and backbench distributive leverage. However, extractiveness is not maximal (0.66+) because Congress retains the ability to override vetoes (with supermajority), and empirically, legislatures adapt by restructuring appropriations bills. The 0.52 reflects that the power shift is real and asymmetric but not absolute \u2014 Congress can develop counter-leverage. Suppression (0.58): Moderate-high. Significant barriers to Congressional resistance include: presidential popularity, deficit politics favoring executive discipline framing, backbencher isolation (individual members cannot defend their items against executive veto), and strategic difficulty of organizing supermajority override. However, suppression is not total because Congressional leadership can condition support on other issues and can frame item-level veto as unconstitutional power grab. Theater ratio (0.48): Moderate. The 'fiscal discipline' framing is substantially performative \u2014 partisan veto patterns in state contexts show executives using item-level veto for political targeting, not efficiency. But genuine budget coordination does occur \u2014 Presidents do sometimes use item-level veto to strike what they judge as wasteful items, not purely for partisan advantage. The ratio of performative to functional content is moderate.",
+    "directionality_logic": "Each perspective's d value derives from the agent's structural relationship to the power shift. Beneficiaries (executive) have arbitrage options \u2014 they can negotiate across multiple issues, leverage public opinion, extract concessions on unrelated legislation. Victims (backbenchers) are trapped \u2014 they depend on committee distributive bargaining and have no substitute source of district value. Intermediate actors (committee chairs, Congressional leadership) have constrained or mobile options, respectively, placing them between the extremes. The suppression metric (0.58) reflects real barriers to Congressional resistance: deficit politics, presidential popularity, difficulty organizing supermajority overrides, and strategic isolation of individual backbenchers. The extractiveness metric (0.52) reflects that the power shift is real but not absolute \u2014 Congress can adapt, override, or condition support.",
+    "perspectival_gap": "The original research group (executive) sees rope \u2014 a coordination mechanism enabling efficient budget vetoes. Fiscal discipline advocates see scaffold \u2014 a temporary reform tool with sunset as budgeting reform matures. Committee chairs see tangled rope \u2014 mixed coordination (bills do get passed) and extraction (item-level power shifts). Congressional leaders see tangled rope differently (organized/mobile) \u2014 they retain high-level leverage and can condition support on other priorities. Backbenchers see snare \u2014 they are trapped in a committee system where item-level veto eliminates their primary leverage mechanism. The analytical observer risks mountain \u2014 framing item-level veto as a natural corollary of separated government \u2014 but the structural data shows this is false summit: the Constitution does not enumerate item-level veto, and its presence depends on legislative/constitutional choice.",
+    "mandatrophy_analysis": "TANGLED ROPE VALIDATION: The constraint satisfies all three gates for tangled rope classification. First, it has a genuine coordination function: Presidents can strike items without rejecting entire bills, enabling more efficient budget negotiation and reducing all-or-nothing veto standoffs. Second, it has asymmetric extraction: item-level authority shifts from Congress to the executive, reducing Congressional committee power and distributive leverage. Third, it requires active enforcement: the executive must actively use item-level veto; Congress must actively resist or condition support. The mandatrophy is resolved by recognizing that the same structural mechanism that enables coordination (selective item veto) also enables extraction (shifting power away from Congress). The constraint is not a snare disguised as rope; it is genuinely hybrid. The theater ratio (0.48) is low enough that the coordination function is real, not merely performative cover for extraction. The empirical question of whether executives use item-level veto for fiscal discipline (Rope) or political targeting (Snare) remains unresolved \u2014 see omegas 2 and 4."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "congressional_appropriations_process",
+      "executive_veto_override_supermajority",
+      "budget_deficit_constraint"
+    ],
+    "dual_formulation_note": "The line-item veto proposal exists in dual formulation: constitutional power reallocation (whether the executive can exercise item-level veto at all) and structural governance constraint (how item-level veto shifts appropriations leverage). The constitutional constraint has \u03b5 near 0 (either the power exists or it does not) \u2014 resolved by Clinton v. City of New York (1998) as statutory delegation only. The governance constraint has \u03b5=0.52 (the structural power shift conditional on authorization) \u2014 this story analyzes the governance constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.58
+    }
+  ]
+}

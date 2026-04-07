@@ -1,0 +1,207 @@
+{
+  "header": {
+    "constraint_id": "sotu_1957_eisenhower_wage_productivity_alignment",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "wageprod"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Wage-Productivity Alignment Norm (Eisenhower 1957)",
+    "topic_domain": "labor/macroeconomic_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "consumers",
+      "retirees_on_fixed_income",
+      "business_capital_owners"
+    ],
+    "victims": [
+      "organized_labor",
+      "wage_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Unorganized Worker",
+      "comment": "PERSPECTIVE 1: UNORGANIZED WORKER (SNARE) \u2014 No collective bargaining power; faces wage discipline enforced through employer coordination and inflation pressure. Cannot exit labor market without destitution. Productivity gains are extracted from labor toward capital and consumer prices. Maximum suppression: individual workers cannot coordinate, cannot arbitrage, cannot escape."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Organized Union",
+      "comment": "PERSPECTIVE 2: ORGANIZED UNION (TANGLED ROPE) \u2014 Genuine coordination function: wage negotiations link labor compensation to technological progress, align incentives for workers to support productivity improvements. Asymmetric extraction: union coordinates for workers' benefit but faces constraint that limits wage growth to productivity gains only, preventing capture of inflation premium or rent extraction. High suppression through political rhetoric and employer coordination against 'wage-driven inflation' claims."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Capital and Business Management",
+      "comment": "PERSPECTIVE 3: CAPITAL AND BUSINESS MANAGEMENT (ROPE) \u2014 Primary beneficiary. Wages are disciplined; productivity gains can be distributed to capital returns, dividend increases, or price reductions without labor capturing inflation adjustment. Experiences the constraint as coordination: it aligns labor incentives with efficiency improvements. Net beneficiary through arbitrage: can shift between wage concessions, price increases, and profit distribution."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Consumers and Retirees",
+      "comment": "PERSPECTIVE 4: CONSUMERS AND RETIREES (ROPE) \u2014 Beneficiaries of price stability. Wage restraint prevents cost-push inflation from eroding purchasing power and fixed-income pensions. Experiences the constraint as coordination: it protects the macroeconomic commons. Powerful because aggregated consumer interest aligns with state monetary policy; mobile because can migrate purchasing to alternative goods/services if inflation occurs."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Keynesian Macroeconomic Policy Establishment",
+      "comment": "PERSPECTIVE 5: MACROECONOMIC POLICY ESTABLISHMENT (PITON) \u2014 Maintains wage-productivity alignment norm through Federal Reserve rhetoric and labor statistics publication. Theater ratio reflects that the 'alignment' is largely performative: actual wage-productivity coupling decouples in practice (wages stagnate while productivity grows), yet the norm persists through policy language and union acceptance. The constraint is degraded \u2014 it no longer functionally achieves price stability or fair distribution, yet institutional inertia maintains the framing."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Post-War Consensus Building (Cold War Context)",
+      "comment": "PERSPECTIVE 6: POST-WAR CONSENSUS SCAFFOLD (SCAFFOLD) \u2014 The wage-productivity alignment norm emerges from Cold War consensus-building: labor accepts wage discipline in exchange for full employment commitment, welfare expansion, and corporate tax burden. This is a temporary coordination mechanism with a sunset: it relied on sustained productivity growth, industrial unionism, and tacit capital-labor accord. As productivity growth slowed (1970s) and globalization fragmented the manufacturing base, the sunset clause activated. The scaffold has low effective extraction because it is explicitly temporary and both labor and capital experienced it as a negotiated compromise."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Naturalized View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURALIZED VIEW (MOUNTAIN) \u2014 From a civilizational perspective, the wage-productivity link appears as an immutable feature of rational economics: if wages rise faster than productivity, inflation must follow; inflation erodes real gains. The constraint appears as a law of macroeconomic arithmetic. However, structural data contradicts this: the norm has explicit beneficiaries (consumers, capital), explicit victims (organized labor), and explicit enforcement mechanisms (employer coordination, political rhetoric). The engine detects this as a false summit \u2014 naturalizing a contingent institutional arrangement as economic law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "productivity_measurement_ambiguity",
+      "question": "How should productivity be measured: output per worker, output per hour, total factor productivity, or sector-specific metrics? Do different measures yield different wage baselines?",
+      "resolution_mechanism": "Comparative analysis of wage outcomes under different productivity metrics; regression analysis of wage settlement outcomes against productivity measure choice",
+      "impact": "If total factor productivity is used: capital gains are included in 'productivity,' reducing wage-share baseline. If output per hour is used: wage claims are higher. Measurement choice determines how much extraction is hidden inside accounting definitions.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Productivity measurement methodology determines wage-share baseline"
+    },
+    {
+      "id": "capital_gains_distribution_ambiguity",
+      "question": "Are productivity gains from capital investment (automation, tooling, capacity expansion) legitimately excluded from the wage-productivity link, or does this constitute hidden extraction of labor's share?",
+      "resolution_mechanism": "Historical decomposition of productivity growth into labor-contributed vs. capital-contributed components; comparison to pre-1930s labor bargaining frameworks that included capital gains",
+      "impact": "If capital-driven productivity gains are legitimately excluded: wage-productivity alignment is fair coordination (Rope). If they are hidden extraction: the constraint is more extractive than classified (Snare), and beneficiaries include not just consumers but also capital accumulation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether capital-driven productivity gains should be included in wage-share calculations"
+    },
+    {
+      "id": "full_employment_commitment_enforcement",
+      "question": "Was the full employment commitment (the scaffold's quid pro quo for labor's wage discipline) actually enforced, or did it serve as rhetorical cover for wage extraction?",
+      "resolution_mechanism": "Longitudinal comparison of unemployment rates, job creation, and wage growth across periods; analysis of whether full employment was pursued when conflicts with price stability",
+      "impact": "If full employment was maintained: scaffold perspective is accurate, and the constraint had genuine coordination function. If full employment was abandoned when inflation fears arose: the scaffold's sunset was engineered by policy reversal, and the constraint degraded to pure extraction (Snare from labor perspective).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether full employment commitment was enforced as negotiated quid pro quo"
+    },
+    {
+      "id": "inflation_causation_attribution",
+      "question": "What portion of post-1957 inflation was actually caused by wage pressure ('wage-driven inflation') vs. other sources (oil shocks, monetary expansion, import competition, demand-pull inflation)?",
+      "resolution_mechanism": "Econometric decomposition of inflation causes; comparison of wage share to inflation correlation across OECD countries; analysis of wage lag vs. price lag in historical data",
+      "impact": "If wage-driven inflation is primary cause: constraint is justified and functional (Rope). If other factors dominate: wage-productivity alignment is theater for extracting labor without addressing actual inflation sources (Piton degradation or Snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Attribution of inflation causation to wage pressure vs. other sources"
+    },
+    {
+      "id": "identity_lock_on_organized_labor",
+      "question": "Do organized labor unions maintain the wage-productivity norm despite growing evidence of its asymmetric extraction because their institutional identity is fused with the compromise framework itself?",
+      "resolution_mechanism": "Institutional history analysis; interviews and statements from union leadership; comparison of union positions on alternative wage-setting mechanisms (living-wage floors, sectoral bargaining, profit-sharing) vs. wage-productivity attachment",
+      "impact": "If identity-locked: unions are constrained by cognitive capture, not material barriers. They could exit (demand full cost-of-living adjustment, sectoral bargaining, worker ownership stakes) but identity fusion with the post-war compromise prevents them from seeing alternatives.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Identity fusion of organized labor with post-war compromise framework"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The wage-productivity alignment norm, articulated by President Eisenhower in 1957, institutionalized a constraint on labor-market wage-setting by framing wage increases as legitimate only when coupled to productivity improvements. This constraint functioned simultaneously as a coordination mechanism (aligning labor incentives with technological improvement), a consumption protection mechanism (restraining cost-push inflation), and an extraction mechanism (preventing labor from capturing inflation premiums or technological rent-sharing). The constraint exemplifies the DR framework's core insight: the same structural phenomenon appears as pure coordination (Rope) from capital's perspective, temporary compromise (Scaffold) from Cold War consensus view, extraction (Snare) from unorganized labor's perspective, and immutable law (Mountain) from naturalized economic theory. The extractiveness has grown over the measurement interval (0.28 \u2192 0.52) as actual wage-productivity decoupling has increased while the norm persists. Theater ratio has risen (0.45 \u2192 0.64) as the performative content of the constraint has increased: policy institutions maintain the rhetoric of wage-productivity alignment despite decoupling in practice, indicating Piton degradation.",
+    "key_agents": [
+      "Organized Labor Unions: Primary victim (organized/constrained) \u2014 coordinating function for workers but facing asymmetric extraction through wage discipline; identity-fused with post-war compromise framework",
+      "Unorganized Workers: Secondary victim (powerless/trapped) \u2014 face wage pressure without collective voice; cannot arbitrage or exit labor market; maximum suppression",
+      "Capital and Business Management: Primary beneficiary (institutional/arbitrage) \u2014 wage discipline enables profit capture, price flexibility, and productivity-gain distribution to capital returns",
+      "Consumers and Retirees: Secondary beneficiary (powerful/mobile) \u2014 benefit from price stability and purchasing power protection; aggregated interest aligns with macroeconomic policy",
+      "Federal Reserve and Macroeconomic Policy Establishment: Institutional enforcer (institutional/arbitrage) \u2014 maintains norm through labor statistics, rhetoric, and interest rate policy; operates with performative component (Piton observation)",
+      "Cold War Consensus Institutions: Temporary mediator (organized/constrained) \u2014 built temporary labor-capital accord with full employment commitment as quid pro quo; sunset activated in 1970s as productivity growth slowed"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint redistributes productivity gains away from labor toward capital and consumers. Base value reflects that the norm has genuine coordination function (aligns incentives) alongside extraction (restricts wage growth to productivity only, excluding inflation adjustment or rent-sharing). The value reflects early-1970s dynamics when decoupling begins but norm persists. Growth trajectory (0.28 \u2192 0.52) indicates increasing extractiveness as actual wage-productivity gap widens while constraint remains enforced. Suppression (0.58): Moderate-high. Organized labor faces political pressure, employer coordination against 'wage-driven inflation' rhetoric, and macroeconomic policy headwinds. Unorganized workers face market-mediated suppression. However, suppression is not total: unions retain some bargaining power, sectoral variation exists, and mobility (sectoral or international) provides partial exits for some workers. Theater ratio (0.64): Moderate-high. The constraint increasingly operates as performative theater: policy institutions maintain wage-productivity rhetoric while actual decoupling is visible in data. Unions accept the frame despite growing evidence of asymmetry. Theater growth (0.45 \u2192 0.64) reflects degradation over time as the constraint's functional coordination purpose (align labor to productivity) has been replaced by extractive theater (constrain labor while capital gains accumulate).",
+    "directionality_logic": "Directionality is derived from beneficiary/victim declarations and exit modulation. Capital (beneficiary + arbitrage exit) derives d \u2248 0.15 \u2192 f(d) \u2248 -0.02 \u2192 negative or near-zero \u03c7; they experience negative effective extraction (the constraint benefits them). Consumers (beneficiary + mobile exit) derive d \u2248 0.35 \u2192 f(d) \u2248 0.25 \u2192 low positive \u03c7; they experience the constraint as net beneficial. Organized labor (victim + constrained exit) derives d \u2248 0.75 \u2192 f(d) \u2248 1.08 \u2192 high \u03c7; they experience high effective extraction. Unorganized workers (victim + trapped exit) derive d \u2248 0.90 \u2192 f(d) \u2248 1.32 \u2192 maximum \u03c7; they experience maximum extraction. The directionality asymmetry is structural: capital can choose measurement methods, sectoral strategies, and timing, while labor cannot choose to ignore wage-productivity constraint without violating the political-economic framework. The scope modifier \u03c3(S) = 1.0 for national scope (baseline). No directionality overrides are required; the derivation chain captures the asymmetry directly.",
+    "perspectival_gap": "The constraint produces maximum perspectival divergence across the observation site. Capital and management see Rope: wage-productivity alignment is a coordination mechanism that aligns labor incentives with efficiency and enables price stability. Consumers see Rope: the constraint protects their purchasing power. The Cold War consensus infrastructure sees Scaffold: the constraint is a temporary compromise with a negotiated sunset (full employment as quid pro quo). Unorganized workers see Snare: wage discipline is extraction with no exit and no compensation. Organized labor sees Tangled Rope: the constraint has genuine coordination function (aligns labor to technological progress) but asymmetric extraction (prevents inflation adjustment, prevents profit-sharing, prevents rent capture). The macroeconomic policy establishment sees Piton: the constraint persists through institutional inertia despite decoupling in practice. The analytical observer naturalize it as Mountain: wage-productivity alignment is an economic law. This perspectival range demonstrates the full spectrum of the constraint classification system and instantiates the DR framework's core claim that no single type is 'correct' \u2014 the presheaf of perspectives IS the constraint's structural reality.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint's type varies legitimately with perspective, and no single type is 'the truth.' The resolution is achieved through three insights: (1) The constraint has genuine coordination function (alignment of labor incentives to productivity improvement) \u2014 this justifies Rope from capital's perspective and Scaffold from post-war consensus view. (2) The constraint has asymmetric extraction (prevents labor from capturing inflation premiums or technological rents) \u2014 this justifies Tangled Rope from organized labor's perspective and Snare from unorganized workers' perspective. (3) The constraint is increasingly performative (rhetoric persists despite decoupling evidence) \u2014 this justifies Piton classification from the macroeconomic policy establishment. (4) The mountain classification reveals false-summit naturalization: the constraint is not an economic law but a negotiated institutional arrangement with identifiable beneficiaries and a contingent sunset clause. The mandatrophy resolution is the constraint's perspectival spectrum itself: all types are correct from their respective structural positions. The analytical task is to understand why the same constraint produces divergent classifications \u2014 the answer lies in directionality asymmetry, beneficiary/victim asymmetry, and exit-option asymmetry."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "phillips_curve_empirical_expectations",
+      "post_war_labor_capital_accord",
+      "inflation_targeting_regime"
+    ],
+    "dual_formulation_note": "The wage-productivity alignment norm is downstream of the post-war labor-capital accord and upstream of inflation-targeting regimes. The post-war accord (\u03b5 \u2248 0.30, Scaffold) established the full employment quid pro quo; the wage-productivity norm operationalized one side of that bargain. Later inflation-targeting frameworks (\u03b5 \u2248 0.68, Snare) abandoned the full employment commitment but retained the wage-discipline rhetoric, degrading the constraint from Scaffold to Snare. These stories form a family showing institutional evolution: temporary consensus (Scaffold) \u2192 degraded consensus (Piton) \u2192 pure extraction under new framework (Snare)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.72
+    }
+  ]
+}

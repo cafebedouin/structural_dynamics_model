@@ -1,0 +1,228 @@
+{
+  "header": {
+    "constraint_id": "sotu_1947_truman_wartime_emergency_controls_termination",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "warctrl"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Systematic Repeal of Wartime Emergency Economic Controls (1947)",
+    "topic_domain": "regulatory/economic_policy",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "business_enterprises",
+      "agricultural_producers"
+    ],
+    "victims": [
+      "wage_workers",
+      "urban_consumers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Wage Worker",
+      "comment": "PERSPECTIVE 1: WAGE WORKER (SNARE) \u2014 Faces decontrol of prices without corresponding wage decontrol. Real wages decline as prices rise. No exit mechanism: workers cannot opt out of the consumer economy or leave the labor market without severe cost. Trapped by economic necessity. Maximum experienced extraction from the standpoint of lost purchasing power."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Urban Consumer",
+      "comment": "PERSPECTIVE 2: URBAN CONSUMER (SNARE) \u2014 Faces decontrol of food, fuel, and housing prices. Cannot produce subsistence goods independently. Dependent on market availability at affordable prices. Decontrol creates immediate extraction through price spikes. No exit option from the consumer role. Trapped by geographic and economic circumstances in wage-dependent cities."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Business Enterprises",
+      "comment": "PERSPECTIVE 3: BUSINESS ENTERPRISES (ROPE) \u2014 Primary beneficiary. Decontrol removes ceiling prices and production mandates, enabling profit optimization. Experiences constraint as coordination mechanism: the legislative process for selective repeal is orderly, transparent, and enables business planning. Can arbitrage regulatory gaps (lobbying for favorable repeal terms). Net beneficiary with significant exit capacity."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Agricultural Producers",
+      "comment": "PERSPECTIVE 4: AGRICULTURAL PRODUCERS (ROPE) \u2014 Primary beneficiary. Price controls have suppressed farm income; decontrol enables market pricing. Farm organizations have organized lobby power. Can arbitrage legislative process to ensure favorable repeal terms. Experienced constraint as manageable coordination problem with clear exit pathway (lobbying for farmer-favorable statutes)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Labor Organizations",
+      "comment": "PERSPECTIVE 5: LABOR ORGANIZATIONS (TANGLED ROPE) \u2014 Organized agents with moderate constraints. Can lobby Congress and organize wage demands, but face political headwinds post-WWII. The constraint has genuine coordination function (orderly legislative transition from wartime to peacetime economy) but asymmetrically benefits business over labor. Labor gains some agency through organization and negotiation capacity but faces suppression through weak bargaining position and anti-union political momentum."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Congressional Oversight",
+      "comment": "PERSPECTIVE 6: CONGRESSIONAL OVERSIGHT (SCAFFOLD) \u2014 Congress has sunset mechanism built in: statutes are classified as temporary/emergency and Congress must affirmatively repeal each one. This creates opportunity for negotiated phase-out with conditions (price stabilization, wage adjustments, consumer protections) rather than wholesale decontrol. The oversight function is real and has agency, creating a temporary constraint with a sunset: as Congress repeals statutes, the decontrol accelerates but in discretionary increments rather than all-at-once shock."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "War-Era Administrative State",
+      "comment": "PERSPECTIVE 7: WAR-ERA ADMINISTRATIVE STATE (PITON) \u2014 From the civilizational perspective, wartime economic controls were a temporary response to singular crisis conditions (war production coordination). Peacetime return to market mechanisms is framed as natural resumption of normal economic order. The administrative apparatus that enforced controls persists through institutional inertia but its function has largely atrophied \u2014 war is over, emergency is nominally ended, so peacetime 'normalcy' seems inevitable. This perspective obscures that the 'normal' state involves accepting price volatility and consumer vulnerability that wartime controls prevented."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Market Equilibrium Naturalization",
+      "comment": "PERSPECTIVE 8: MARKET EQUILIBRIUM NATURALIZATION (MOUNTAIN) \u2014 The analytical observer at civilizational scope risks reading this constraint as a natural law: markets are 'naturally' efficient, price controls 'naturally' create distortion, decontrol 'naturally' restores balance. The economy moves from artificial wartime constraint back to natural market clearing. This perspective naturalizes contingent policy choices as immutable economic laws. False summit risk: the 'natural' market is itself constructed through legal frameworks (contract law, property rights enforcement, bankruptcy rules) and benefits identifiable agents (business, agriculture) while imposing costs on others (workers, consumers)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "price_path_after_decontrol",
+      "question": "Will price increases after decontrol be temporary (supply catches up, inflation moderates) or persistent (structural scarcity, oligopolistic pricing)?",
+      "resolution_mechanism": "Post-1947 price data tracking: inflation rate trajectory for key commodities (food, fuel, housing) 1947-1952; comparison to pre-1941 price baselines and post-WWII production capacity",
+      "impact": "If temporary: extraction is transitional cost of economic adjustment, scaffold sunset is appropriate. If persistent: extraction is permanent wealth transfer from workers/consumers to business/agriculture, classification should be snare rather than tangled_rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether post-decontrol price increases are temporary or persistent"
+    },
+    {
+      "id": "wage_adjustment_lag",
+      "question": "Do wages adjust at rates comparable to price increases, or is there systematic lag that enables real-wage decline?",
+      "resolution_mechanism": "Real wage indices 1947-1952: nominal wage growth vs. CPI inflation for key wage-earning sectors (manufacturing, agriculture, service); union contract negotiation cycles and strike frequency data",
+      "impact": "If lag < 6 months: workers retain purchasing power, extraction is moderate. If lag > 12 months: systematic real-wage decline, extraction is severe and suppression is higher than measured (workers cannot bargain effectively).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Timeline lag between price increases and wage adjustments"
+    },
+    {
+      "id": "congressional_repeal_selectivity",
+      "question": "Does Congress selectively repeal (negotiated, conditioned decontrol) or wholesale repeal (all statutes repealed in batch)?",
+      "resolution_mechanism": "Legislative history 1947-1948: count of repeal bills, amendments, conditions attached; timing of repeal vs. price spike events; evidence of labor/consumer lobbying influence on repeal terms",
+      "impact": "If selective: scaffold perspective confirmed, Congress has real agency to phase decontrol and negotiate protections. If wholesale: Congress is nominal actor with limited discretion, decontrol is de facto determined by executive/business pressure, constraint reclassifies toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Congressional repeal is selective/conditioned or wholesale"
+    },
+    {
+      "id": "black_market_emergence",
+      "question": "Did wartime controls prevent black markets, or will decontrol prevent price gouging through competitive markets?",
+      "resolution_mechanism": "Historical data on black market activity during WWII vs. post-decontrol price gouging complaints and enforcement actions; analysis of whether controlled prices prevented or merely displaced extraction",
+      "impact": "If controls prevented black markets: decontrol reduces total extraction (legal markets are more transparent/competitive). If controls created black markets: decontrol legitimizes existing extraction, reclassifies from snare to rope/tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether wartime controls prevented or displaced extraction into black markets"
+    },
+    {
+      "id": "beneficiary_coalition_cohesion",
+      "question": "Do business and agricultural beneficiaries form stable coalition for coordinated repeal, or compete for favorable terms?",
+      "resolution_mechanism": "Lobbying activity data: shared vs. conflicting interests (e.g., food processors vs. farmers on agricultural price controls); legislative voting patterns by industry sector; evidence of business-labor coalition attempts",
+      "impact": "If cohesive: beneficiaries have organized power and can impose maximum extraction. If fractured: labor/consumer advocates may exploit divisions and negotiate better terms. Affects suppression level and whether scaffold phase-in is real.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cohesion of beneficiary coalition (business and agricultural producers)"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.51
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "In 1947, President Truman proposed systematic repeal of federal emergency economic controls imposed during World War II. Wartime controls had regulated prices, production, and resource allocation across agriculture, manufacturing, transportation, and consumer goods to coordinate war production and prevent profiteering. The constraint examined here is the legislative process of decontrolling this economy: Congress would review statutes classified as temporary or emergency measures and selectively repeal them, returning decision-making from government mandate to private enterprise. This constraint exhibits a stark distributional asymmetry: business enterprises and agricultural producers benefit from price and production decontrol, while wage workers and urban consumers face price increases without corresponding wage decontrol. The temporal asymmetry creates a window of extraction: workers and consumers bear the cost of rising prices immediately, while wage adjustment lags by months or longer. The repeal process is ostensibly orderly and legislative, creating appearances of coordination, but the underlying mechanism transfers wealth from labor and consumers to capital and agriculture.",
+    "key_agents": [
+      "Wage Workers: Primary victim (powerless/trapped) \u2014 face real-wage decline as prices decontrol without wage adjustment",
+      "Urban Consumers: Primary victim (powerless/trapped) \u2014 dependent on market availability at affordable prices; no exit from consumption",
+      "Business Enterprises: Primary beneficiary (institutional/arbitrage) \u2014 gain profit optimization, pricing power, and production autonomy; organized lobby capacity",
+      "Agricultural Producers: Primary beneficiary (institutional/arbitrage) \u2014 gain market pricing for agricultural commodities; organized farm lobby",
+      "Labor Organizations: Secondary actor (organized/constrained) \u2014 can lobby and negotiate but face weak bargaining position post-WWII",
+      "Congress: Institutional actor with temporary authority (institutional/arbitrage) \u2014 holds selective repeal authority but faces business/agricultural lobbying pressure",
+      "War-Era Administrative State: Institutional persistence (analytical/analytical) \u2014 wartime controls apparatus persists through inertia despite peacetime conditions"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The decontrol process systematically transfers wealth from workers/consumers to business/agriculture through the pricing asymmetry. However, extraction is not maximal because: (1) Congressional oversight creates potential for phase-in and conditioned repeal, (2) labor organizations retain some bargaining capacity, (3) business beneficiaries face competition that limits pricing power. The measured value reflects that this is genuine extraction (not coordination) but tempered by institutional constraints. Theater ratio (0.48): Moderate. The legislative repeal process is substantially real \u2014 Congress must vote, debate statutes, and make explicit choices about which controls to repeal. This is lower theater than pure administrative fiat would be. However, the framing of decontrol as 'returning to normalcy' obscures the policy choice being made and the distributional consequences. Suppression (0.58): Moderate-high. Suppression includes: wage workers' inability to exit wage dependence or consumer markets; political weakness of labor organizations post-WWII; lack of information available to consumers about price trajectory; institutional inertia favoring business positions. However, suppression is not maximal because Congress retains formal authority and could condition repeal.",
+    "directionality_logic": "The constraint's directionality derives from the structural position of each agent relative to the extraction flow. Wage workers (powerless/trapped) have d \u2248 0.95: they face material barriers to exit the labor market and consumer economy, and they bear the cost of price increases without corresponding income adjustment. The d value is high because the binding constraint is material (economic necessity), not choice. Urban consumers (powerless/trapped) have similar d \u2248 0.92: geographic and economic dependence on market availability creates structural entrenchment. Business enterprises (institutional/arbitrage) have d \u2248 0.08: they benefit from decontrol and have organized lobbying capacity (arbitrage option) to influence which statutes are repealed. Agricultural producers (institutional/arbitrage) have d \u2248 0.12: they benefit from price decontrol and have farm organization lobbying power. Labor organizations (organized/constrained) have d \u2248 0.60: they can negotiate and lobby but face structural constraints (weak post-WWII bargaining position, anti-union political momentum). The directionality computation via the sigmoid f(d) amplifies the extractiveness experienced by trapped victims while dampening it for beneficiaries with exit options, producing chi values that reflect the perspectival gap between workers (high chi = high experienced extraction) and business (low or negative chi = experienced coordination benefit).",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence across the eight perspectives. Wage workers and urban consumers experience this as a snare: they face extraction with no exit option, and the legislative process is theater \u2014 the outcome (price increases) is predetermined by business/agricultural lobbying power, and Congress's nominal role obscures the distributional asymmetry. Business enterprises and agricultural producers experience this as rope: they see genuine coordination (orderly legislative transition from wartime to peacetime economy) and clear benefit from decontrol. Labor organizations experience it as tangled rope: they have some agency through organization and negotiation but face structural suppression and asymmetric extraction. Congress experiences it as scaffold: it holds formal authority to condition repeal and phase-in decontrol, creating potential for negotiated transition with protections. The war-era administrative state experiences it as piton: wartime controls persist through institutional inertia, and decontrol is framed as natural resumption of normalcy. The civilizational analytical observer risks seeing mountain: markets naturally return to equilibrium after artificial wartime constraint, decontrol is inevitable economic law. This false summit naturalizes contingent policy as inevitable economic reality.",
+    "directionality_logic_detailed": "Each perspective's directionality is derived from the agent's structural position \u2014 their power atom, exit options, and beneficiary/victim status \u2014 rather than from their subjective experience. Trapped agents (workers, consumers) receive maximum d values (0.92-0.95) because their exit costs are material and insurmountable: they cannot choose not to be wage workers or consumers without fundamental changes to their economic survival. Beneficiaries with arbitrage options (business, agriculture) receive minimum d values (0.08-0.12) because decontrol enables them to extract value and they have organized capacity to influence which statutes are repealed \u2014 arbitrage exit means they can navigate regulatory gaps. Organized but constrained agents (labor) receive moderate d values (0.55-0.65) because they have some agency through organization but face structural barriers (weak bargaining position, anti-union political momentum) that limit their effective exit capacity. The temporal dimension affects d through the constraint's phase-in: immediate decontrol would produce higher d values for victims (they face shock prices immediately) and lower d for beneficiaries (they capture gains immediately); phased decontrol would moderate d values for both sides because adjustment happens gradually. The measurements show extractiveness increasing over time (0.25 \u2192 0.61 over 6 years) as decontrol accelerates, which implies d values are rising for victims and suppression is becoming more entrenched.",
+    "perspectival_gap_analysis": "The wage worker (Snare) sees maximum extraction because they experience the constraint as both immediate (prices rise now) and inescapable (they cannot opt out of consumption or labor markets). The timeline for real-wage adjustment (typically 6-12 months) means there is a genuine window of extraction where prices have risen but wages have not. The business enterprise (Rope) sees coordination benefit because decontrol enables profit optimization and the legislative process is orderly and transparent \u2014 they can plan around known repeal schedules and have organization capacity to influence outcomes. The labor organization (Tangled Rope) sits between these extremes: they can lobby and negotiate (some agency), but they face political headwinds and cannot prevent the overall decontrol trajectory (suppression). Congress (Scaffold) sees the constraint as temporary and conditioned: Congress retains authority to repeal each statute individually, creating potential for phase-in and negotiated protection. The war-era administrative state (Piton) sees the constraint as a degraded institutional practice: wartime controls served a specific crisis-coordination function (war production), and peacetime decontrol is framed as inevitable return to normal market operations. The theatrical element here is the naturalization of 'market normalcy' \u2014 the assumption that markets without controls are the natural state, rather than one possible institutional arrangement among others. The civilizational analytical observer (Mountain) risks seeing immutable economic law \u2014 that markets naturally equilibrate and that controls necessarily distort. This is a false summit because the actual constraint is constructed through legislation and lobbying, not inherent to economics.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that the same structural phenomenon (decontrol of WWII-era price and production controls) constitutes both genuine coordination and asymmetric extraction, depending on the agent's position. Business enterprises see pure coordination (Rope) \u2014 decontrol enables collective economic planning transition from wartime to peacetime, orderly and beneficial. Wage workers see pure extraction (Snare) \u2014 decontrol imposes costs without consent or compensation. The tangled rope classification correctly captures the constraint's hybrid nature: there is a genuine coordination function (managing the economic transition, enabling private enterprise planning) AND asymmetric extraction (wealth transfer from workers/consumers to business/agriculture). The ambiguity is not in the classification but in whether the coordination benefit justifies the extraction cost \u2014 a question that depends on values (how much suffering is acceptable for economic efficiency?) rather than empirical facts. The false summit mountain perspective reveals that naturalizing this constraint as economic law obscures the contingent policy choice being made. The scaffold perspective shows that Congress has actual agency to phase-in decontrol and negotiate conditions, making the constraint temporarily empowered rather than inherently immutable. The piton perspective shows that wartime controls persist through institutional inertia and framed as 'abnormal', preparing ground for the assumption that decontrol is 'normal' \u2014 another mechanism that supports the false summit."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "inflation_wage_lag_1947_1952",
+      "post_war_labor_movement_suppression"
+    ],
+    "dual_formulation_note": "This constraint is part of the post-WWII economic settlement cluster. Upstream: wartime price/production control mechanism (coordination function; \u03b5 \u2248 0.10, Mountain). This story: decontrol repeal process (\u03b5 = 0.52, Tangled Rope). Downstream: inflation and wage adjustment dynamics (\u03b5 \u2248 0.48-0.65 depending on sector and timeline)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.6
+    }
+  ]
+}

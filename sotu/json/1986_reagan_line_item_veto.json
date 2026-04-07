@@ -1,0 +1,210 @@
+{
+  "header": {
+    "constraint_id": "1986_reagan_line_item_veto",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Presidential Line-Item Veto Authority (Reagan Era)",
+    "topic_domain": "governance/executive_power",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "executive_branch",
+      "fiscal_discipline_advocates"
+    ],
+    "victims": [
+      "legislative_minority_protection",
+      "local_appropriations_coalition"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Legislative Minority",
+      "comment": "PERSPECTIVE 1: LEGISLATIVE MINORITY (SNARE) \u2014 Minority party members and backbench legislators face maximum extraction without exit. Line-item veto removes their leverage point (logrolling coalitions that require broad support). A measure they secured through negotiation can be eliminated unilaterally by the President. Suppression is structural: Congress can override, but only with supermajority discipline that the minority cannot enforce. The constraint removes their ability to embed preferred measures inside omnibus bills."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Congressional Majority",
+      "comment": "PERSPECTIVE 2: CONGRESSIONAL MAJORITY (TANGLED ROPE) \u2014 The majority party experiences coordination benefit (line-item veto removes cover for wasteful spending that embarrasses them) alongside extraction (they lose the ability to use logrolling to bind coalition members who might otherwise defect). They retain override power but face supermajority costs. The constraint enforces fiscal discipline on their own caucus, which is partially desired and partially resented."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Executive Branch",
+      "comment": "PERSPECTIVE 3: EXECUTIVE BRANCH (ROPE) \u2014 Primary beneficiary experiencing pure coordination gain. Line-item veto enables the President to implement fiscal policy preferences without confrontation over entire bills. The executive can now negotiate from a position of selective acceptance rather than binary sign/veto. The constraint solves a genuine coordination problem: how to reject wasteful measures without creating legislative deadlock."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Small-Jurisdiction Constituencies",
+      "comment": "PERSPECTIVE 4: SMALL-JURISDICTION CONSTITUENCIES (SNARE) \u2014 Rural, small-state, and economically disadvantaged constituencies lose structural protection. Their representatives historically secured local benefits (infrastructure, military base funding, research facilities) through coalition participation and logrolling. Line-item veto allows the President to strip these items while maintaining the bill. These constituencies have no alternative mechanism to secure federal investment \u2014 the logrolling coalition was their only leverage point."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Large-State Congressional Delegations",
+      "comment": "PERSPECTIVE 5: LARGE-STATE CONGRESSIONAL DELEGATIONS (TANGLED ROPE) \u2014 States with powerful delegations experience mixed effects. They retain sufficient scale to negotiate directly with the executive (mobile exit option), but their internal coalition discipline tightens. They can credibly threat override (supermajority power concentrated in large-state members), creating a coordination mechanism but also extracting loyalty from their own members."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Anti-Deficit Coalition",
+      "comment": "PERSPECTIVE 6: ANTI-DEFICIT COALITION (SCAFFOLD) \u2014 Fiscal hawks and budget-transparency advocates see line-item veto as a temporary structural improvement with a sunset. Their hope is that removing the hidden costs of logrolling will increase public awareness of actual spending distribution, enabling more explicit legislative choices. Suppression is moderate because the coalition has organizational capacity. But this is a temporary solution: if presidential line-item veto authority persists, it becomes normal power distribution rather than a correction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Separation-of-Powers Doctrine",
+      "comment": "PERSPECTIVE 7: SEPARATION-OF-POWERS DOCTRINE (PITON) \u2014 Constitutional law sees line-item veto as a degraded institutional principle. The traditional account maintains that the President must accept or reject bills in their entirety \u2014 this entire-bill rule is what enables Congress to force presidential choice between compromise and deadlock. Line-item veto weakens this structural tension, making the President less dependent on legislative cooperation. The doctrine persists as a formal principle even as line-item veto undermines it, hence piton (theater_ratio 0.35 reflects moderate performative content \u2014 separation-of-powers rhetoric remains even as the actual separation shifts)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational scope, line-item veto is a hybrid that simultaneously coordinates (removes legislative deadlock over waste) and extracts (concentrates power toward the executive, away from dispersed coalition-building). The constraint is not immutable \u2014 43 states deploy it successfully, suggesting it is a contingent governance choice rather than a natural law of executive-legislative relations. The analytical perspective reveals that whether line-item veto is 'good governance' or 'executive power grab' depends entirely on the observer's position in the extraction flow."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "veto_override_supermajority_discipline",
+      "question": "Can Congress consistently achieve supermajority discipline to override presidential line-item vetoes on economically important measures?",
+      "resolution_mechanism": "Historical data from state-level line-item veto usage: override rates for line items vs full-bill vetoes; analysis of whether override coalitions hold or dissolve",
+      "impact": "If override discipline is high: suppression remains moderate, constraint remains Tangled Rope. If override discipline fails: suppression rises to 0.65+, constraint reclassifies to Snare across more perspectives.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Congress can achieve supermajority veto override discipline"
+    },
+    {
+      "id": "hidden_logrolling_reemergence",
+      "question": "If line-item veto authority is granted, does logrolling migrate to non-appropriations legislation, or does it genuinely disappear?",
+      "resolution_mechanism": "Comparative analysis of legislative mechanisms before and after line-item veto adoption at state level; tracking of bill complexity, rider insertion, and coalition formation patterns",
+      "impact": "If logrolling remerges: the constraint removes a visible mechanism but doesn't solve the underlying coordination problem \u2014 extractiveness remains high but visibility drops (theater increases). If logrolling genuinely diminishes: the constraint does reduce hidden extraction (theater drops, extractiveness drops to 0.35-0.40).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether logrolling reemerges in non-appropriations legislation"
+    },
+    {
+      "id": "executive_line_item_pattern_bias",
+      "question": "Does presidential line-item veto usage correlate with partisan geography or budgetary principle?",
+      "resolution_mechanism": "Analysis of state-level line-item veto usage: distribution of vetoed items by geography (small-state vs large-state), party of executive vs legislature, fiscal ideology of veto justifications",
+      "impact": "If usage is partisan/geographic: line-item veto is a mechanism for extracting resources from opposition areas (extractiveness rises to 0.60+, suppression rises). If usage is principled (consistent budget rules): constraint remains true Tangled Rope balancing coordination and fairness.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether line-item veto usage is partisan/geographic or principled"
+    },
+    {
+      "id": "small_constituency_adjustment_mechanism",
+      "question": "What alternative mechanism protects small-jurisdiction interests if logrolling is unavailable?",
+      "resolution_mechanism": "Institutional design analysis: can direct executive negotiation, formula-based appropriations, or centralized competitive grant processes replace logrolling without creating new extraction mechanisms?",
+      "impact": "If no alternative exists: the constraint permanently disempowers small constituencies, reclassifying from Snare to a degraded state (modified Mountain \u2014 immutable dispowerment). If alternatives emerge: constraint can stabilize as a true Tangled Rope with new equilibrium.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Alternative protection mechanisms for small-constituency interests"
+    },
+    {
+      "id": "constitutional_delegation_scope",
+      "question": "Is line-item veto authority constitutional as a statutory delegation, or does it require a constitutional amendment?",
+      "resolution_mechanism": "Constitutional law analysis and Supreme Court review of delegation doctrine (post-Schechter, post-Mistretta); historical precedent for presidential appropriations management authority",
+      "impact": "If constitutional: the constraint is durable and enforceable. If unconstitutional: the constraint is a spectacular failure \u2014 Congress grants authority the President cannot exercise, creating theater without function (piton reclassification with theater rising to 0.75+).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Constitutional status of statutory line-item veto delegation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The presidential line-item veto is a proposed mechanism to grant the executive selective power to eliminate individual appropriations items from spending bills without vetoing the entire legislation. Reagan administration advocates frame it as a check against 'waste' and 'measures that could not pass on their own merit,' modeling it on authority used by 43 state governors. The constraint exhibits genuine structural hybridity: it solves a real coordination problem (presidential deadlock over logrolling-laden bills) while simultaneously extracting power from legislative coalitions and dispersing it toward the executive. The line-item veto is neither pure coordination (Rope) nor pure extraction (Snare), but a genuine Tangled Rope \u2014 it requires active enforcement (presidential selectivity in veto application) and simultaneously benefits some agents (the executive, fiscal hawks) while imposing asymmetric costs on others (legislative minorities, small-jurisdiction coalitions). The theater ratio (0.35) reflects moderate performative content: the constraint operates on a real budgetary mechanism (appropriations), not a purely ceremonial one, but part of the political claim ('checking waste') exceeds the actual structural effect (shifting power, not eliminating waste).",
+    "key_agents": [
+      "Executive Branch: Primary beneficiary (institutional/arbitrage) \u2014 gains selective power without full-bill veto cost; can implement fiscal preferences through item-by-item negotiation",
+      "Legislative Minority: Primary victim (powerless/trapped) \u2014 loses leverage point (logrolling coalitions); measures secured through negotiation can be stripped unilaterally",
+      "Small-Jurisdiction Constituencies: Secondary victim (powerless/trapped) \u2014 historically protected through logrolling; lose structural mechanism to secure federal investment in local infrastructure and facilities",
+      "Fiscal Discipline Advocates: Beneficiary (organized/constrained) \u2014 see constraint as temporary improvement to budget transparency and removal of hidden logrolling costs",
+      "Congressional Majority: Mixed (organized/constrained) \u2014 gains discipline enforcement on their own caucus (coordination benefit) but loses coalition flexibility and internal leverage",
+      "Large-State Delegations: Mixed (powerful/mobile) \u2014 retain negotiating power with executive but face tighter internal discipline and supermajority coordination requirements for override",
+      "Separation-of-Powers Doctrine: Institutional principle (institutional/arbitrage) \u2014 sees line-item veto as degradation of structural tension between branches; persists through inertia rather than function"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint concentrates power toward the executive and away from logrolling coalitions. The original Reagan framing minimizes this by emphasizing 'waste elimination,' but the structural effect is clear: legislative minorities and small constituencies lose their primary leverage mechanism. The 0.52 value reflects that the extraction is real but not absolute \u2014 Congress retains override authority (supermajority) and retains the ability to refuse to pass bills. If override supermajority discipline fails (omega_1), extractiveness would rise to 0.65+. Suppression (0.48): Moderate. Structural barriers to override include supermajority requirements and legislative time scarcity. But suppression is not total \u2014 Congress can theoretically override on every single item if it maintains discipline. The 0.48 value reflects that the constraint creates real barriers but not immobility. Theater ratio (0.35): Moderate-low. The constraint operates on a genuine mechanism (appropriations), so the theater is not dominant. However, part of the political justification ('eliminating waste') is rhetorical cover for the actual effect (shifting power). If the constraint is deployed to systematically veto small-jurisdiction items (omega_3), theater would rise as the 'waste elimination' framing becomes transparently partisan.",
+    "perspectival_gap": "The maximum perspectival disagreement occurs between the executive (Rope) and the legislative minority (Snare). The executive experiences the constraint as solving a coordination problem \u2014 they gain the ability to implement fiscal preferences without threatening the entire budget. The legislative minority experiences the same structural change as pure extraction \u2014 they lose their primary mechanism (logrolling participation) to secure measures. These are the same constraint producing opposite classifications because the agents occupy opposite structural positions in the extraction flow. The resolution is not 'which classification is correct?' but 'the constraint IS a Tangled Rope because it combines genuine coordination function (removing deadlock) with asymmetric extraction (dispersing power toward executive, away from coalitions).'",
+    "directionality_logic": "Beneficiary directionality (d \u2248 0.10): Executive branch has full arbitrage exit \u2014 they can negotiate selectively or refuse to spend, experiencing low directionality toward the constraint. Victim directionality (d \u2248 0.90): Legislative minorities and small constituencies have trapped exit \u2014 no alternative mechanism to secure appropriations, experiencing maximum directionality as targets of extraction. Supermajority override option (d \u2248 0.55): Congressional actors experience moderate directionality \u2014 they can theoretically override but face supermajority coordination costs. Fiscal hawks (d \u2248 0.40): They are beneficiaries of the constraint (it removes hidden waste) but face constrained exit if the constraint is deployed in partisan fashion (omega_3). The directionality derivation chain reflects that 'constrained exit + beneficiary status' produces lower d than 'constrained exit + victim status,' creating measurable perspectival gaps through the f(d) sigmoid function.",
+    "mandatrophy_analysis": "The mandatrophy is NOT resolved (mandatrophy_resolved: false) because the constraint's extraction function is still contested and context-dependent. The constraint is claimed as pure coordination ('eliminating waste') but operates as Tangled Rope because asymmetric power shifts are embedded in the mechanism. The irresolvable question: Is presidential line-item veto a neutral tool (Rope) or an extraction mechanism (Snare/Tangled Rope)? The answer depends on downstream usage (omega_3: does the President deploy it to systematically disadvantage opposition areas?). The constraint cannot resolve its own mandatrophy without additional enforcement \u2014 an independent accounting of veto patterns would be required to determine whether extraction is incidental (true Tangled Rope) or systematic (closer to Snare). Until that analysis exists, the constraint lives in genuine hybridity: it IS a Tangled Rope, but agents disagree on whether it is Rope-primary or Snare-primary."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "legislative_logrolling_dependency",
+      "congressional_majority_coalition_formation"
+    ],
+    "dual_formulation_note": "Line-item veto is downstream of logrolling-dependent legislative processes and upstream of shifts in majority coalition discipline. Separate stories would address (1) the structural logic of logrolling itself (how it solves coalition problems) and (2) the mechanisms by which line-item veto alters coalition formation. This story focuses on the veto mechanism as a hybrid constraint."
+  },
+  "directionality_overrides": []
+}

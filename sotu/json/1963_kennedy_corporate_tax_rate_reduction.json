@@ -1,0 +1,230 @@
+{
+  "header": {
+    "constraint_id": "1963_kennedy_corporate_tax_rate_reduction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ktax"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Kennedy Corporate Tax Rate Reduction (1963)",
+    "topic_domain": "economic/fiscal/labor",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "capital_intensive_firms",
+      "equity_holders",
+      "institutional_investors"
+    ],
+    "victims": [
+      "labor_force_purchasing_power",
+      "public_revenue_base",
+      "non_capital_sectors"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Industrial Worker",
+      "comment": "PERSPECTIVE 1: INDUSTRIAL WORKER (SNARE) \u2014 Trapped in labor market with no exit. Receives promised job creation benefits only if capital investment actually materializes and corporations choose labor-intensive expansion. Tax reduction creates no direct wage improvement; worker bears risk of capital hoarding or automation while capital gains accrue to shareholders. Zero direct benefit, high suppression through unemployment threat."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Small Business Owner (Non-Capital-Intensive)",
+      "comment": "PERSPECTIVE 2: SMALL BUSINESS OWNER (TANGLED ROPE) \u2014 Moderate power, constrained exit. Benefits modestly from growth stimulus and lower general tax rates, but investment credit targets capital-intensive firms (manufacturing, utilities, railroads). Constrained by limited access to investment incentives that large firms exploit. Experiences mixed coordination (general growth signal) and extraction (relative disadvantage in incentive structure)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Capital-Intensive Firm (Primary Beneficiary)",
+      "comment": "PERSPECTIVE 3: CAPITAL-INTENSIVE FIRM (ROPE) \u2014 Institutional power with arbitrage options (can relocate capacity, adjust investment timing, shift to favorable jurisdictions). Experiences constraint as pure coordination: tax reduction and investment credit solve the legitimate problem of coordinating investor expectations around after-tax returns. Low suppression; high agency. Direct extraction reduces their cost of capital by estimated 1.5-2.5 percentage points."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Industrial Union (Wage Labor Coalition)",
+      "comment": "PERSPECTIVE 4: INDUSTRIAL UNION (TANGLED ROPE) \u2014 Institutional power but constrained exit (locked into economy-wide labor market). Nominally benefits from growth stimulus and job creation (coordination function); actually constrained by capital mobility and relative wage decline during growth period. Investment credit favors automation and capital deepening over labor absorption. Real wage suppression during expansion period contradicts promised coordination benefit."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Development-Focused Policymaker",
+      "comment": "PERSPECTIVE 5: DEVELOPMENT-FOCUSED POLICYMAKER (SCAFFOLD) \u2014 Powerful, mobile across policy regimes. Sees tax reduction as temporary growth stimulus with sunset logic: boost capital formation and capacity in the early 1960s, then normalize rates after growth solidifies and unemployment declines. Investment credit is explicitly time-bound (accelerated depreciation has declining effect as stock capital deepens). Theater ratio reflects supply-side narrative covering what is actually a capital-reallocation mechanism."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Fiscal Orthodoxy Institutional Actor",
+      "comment": "PERSPECTIVE 6: FISCAL ORTHODOXY (PITON) \u2014 Traditional revenue principle 'taxation should be neutral, high and broad' persists despite contradictory supply-side rationale (selective rate reduction + targeted credits). Fiscal orthodoxy maintains ritual argument that 'general prosperity benefits everyone' while the mechanism actually concentrates capital gains. Theater ratio (0.58) reflects the gap between the coordination narrative (growth enables jobs) and the mechanism (capital-selective incentives extract from labor and revenue base)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Historical Perspective)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 50+ years of economic data enable cross-national comparison. Tax reduction does coordinate capital allocation (genuine coordination function) and does extract from labor share (genuine extraction). Empirical outcome: capital stock increased, labor share declined 1963-1980, wage-productivity divergence began. The constraint's classification as Tangled Rope is confirmed by structural fact \u2014 genuine coordination with asymmetric extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "labor_absorption_mechanism",
+      "question": "Does tax-reduced capital investment increase absolute employment demand, or is employment displacement (automation) equivalent to or exceeds net new job creation?",
+      "resolution_mechanism": "Sector-level employment data pre/post 1963-65; decomposition of employment change into new hires vs automation-driven displacement; comparison to counterfactual (employment trajectory under unchanged tax rates)",
+      "impact": "If net positive employment: constraint includes genuine coordination function for labor (weak tangled_rope). If net zero or negative: extraction function dominates, capital hoarding risk is realized (strong snare for labor). If automation exceeds new hires: false coordination narrative (piton).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether tax reduction produces net job creation or net labor displacement"
+    },
+    {
+      "id": "investment_credit_targeting",
+      "question": "Does investment credit incentive structure favor labor-intensive sectors (food processing, textiles, agriculture) equally with capital-intensive sectors (machinery, utilities, chemicals)?",
+      "resolution_mechanism": "Cross-sector analysis of investment credit utilization by industry; measurement of credit as percentage of corporate tax liability by sector; correlation between sector capital intensity and credit utilization rates",
+      "impact": "If uniform: all sectors benefit equally (pure coordination). If capital-biased: labor-intensive sectors extract less value, creating relative disadvantage (tangled_rope confirmed). If highly capital-biased: labor sectors functionally excluded from incentive structure (snare confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether investment credit incentives are distributed equally across labor-intensive and capital-intensive sectors"
+    },
+    {
+      "id": "capital_hoarding_propensity",
+      "question": "Given the tax reduction, do corporations expand productive capacity or accumulate cash, acquire existing assets, or adjust financial structure without increasing real economic activity?",
+      "resolution_mechanism": "Decomposition of corporate cash flow post-tax reduction into: tangible capital formation (plant, equipment, R&D) vs financial restructuring (dividends, buybacks, balance-sheet optimization); sector-level comparison of capital formation rates to investment credit utilization",
+      "impact": "If capital formation dominates: coordination function is real, job creation mechanism activated. If cash accumulation or financial activity dominates: tax reduction is pure extraction (capital gains without employment impact). If mixed: tangled_rope confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether corporations use tax savings for productive capital formation or financial manipulation"
+    },
+    {
+      "id": "labor_share_causation",
+      "question": "Does the post-1963 labor share decline (from ~66% to ~62% by 1980) derive from tax-driven capital substitution or from exogenous forces (globalization, skill-biased tech change, union decline)?",
+      "resolution_mechanism": "Econometric decomposition of labor share change using factor substitution elasticity estimates; comparison of labor share trajectory across countries with different corporate tax policies; identification of sector-level substitution patterns correlated with investment credit utilization",
+      "impact": "If tax-driven substitution is primary cause: extraction mechanism is confirmed at scale. If exogenous factors dominate: tax reduction may have minimal causal role in extraction. If mixed: tangled_rope with quantified extraction component.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal attribution of labor share decline to corporate tax policy vs other structural factors"
+    },
+    {
+      "id": "supply_side_multiplier_magnitude",
+      "question": "What is the actual output multiplier for corporate tax reduction \u2014 does each dollar of tax relief generate $1.50 of GDP growth (supply-side claim) or $0.50 (Keynesian estimate) or something else?",
+      "resolution_mechanism": "Econometric estimation of tax reduction impact on subsequent GDP growth, capital formation, and employment; comparison to contemporary fiscal stimulus (government spending multiplier); adjustment for confounding factors (Vietnam War defense spending, monetary policy)",
+      "impact": "High multiplier (>1.0): supply-side coordination claim validated. Low multiplier (<0.5): extraction mechanism confirmed (capital income transfer without productivity effect). Medium multiplier (0.5-1.0): tangled_rope confirmed with partial coordination benefit.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Empirical magnitude of output multiplier for corporate tax reduction"
+    },
+    {
+      "id": "distributional_incidence_timing",
+      "question": "When are the distributional benefits of tax reduction realized \u2014 immediately to shareholders, or only after capital stock expansion translates to wage growth (delayed coordination)?",
+      "resolution_mechanism": "Time-series analysis of share prices, dividend payouts, and capital gains vs wage growth and employment rates post-tax reduction; measurement of lag between tax policy implementation and labor market benefits",
+      "impact": "If benefits to capital are immediate and wages are delayed >3 years: extractive dynamics are confirmed (temporal extraction). If benefits align temporally: coordination function more plausible. If wage benefits never materialize: extraction is permanent.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Temporal distribution of tax reduction benefits between capital and labor"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.61
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "President Kennedy's 1963 corporate tax rate reduction from 52% to 47% represents a systematic shift from revenue-maximizing taxation toward supply-side capital incentive policy. The mechanism couples a 5-percentage-point statutory rate cut with investment credits, accelerated depreciation, and capital gains preferences, reducing corporate tax liabilities by $2.5 billion initially plus $2 billion carryover from prior-year reforms. The policy is explicitly justified through a coordination narrative: lower after-tax returns on investment discourage capital formation, restricting productive capacity and constraining job creation. By aligning after-tax returns with expected profit rates, the tax reduction removes a 'coordination problem' where private investment incentives diverge from public growth objectives. However, the mechanism also operates as extraction: by concentrating tax reduction benefits on capital-intensive sectors, by deferring or eliminating taxation of capital gains, and by timing the benefits to capital holders before labor market effects materialize, the policy redistributes income from the tax base (and thus from public goods and labor-intensive sectors) toward equity and capital holders. The constraint exemplifies Tangled Rope classification: it genuinely solves the investment incentive coordination problem (firms do respond to after-tax return signals) while simultaneously extracting from labor share, public revenue capacity, and non-capital-intensive sectors.",
+    "key_agents": [
+      "Capital-Intensive Firms: Primary beneficiary (institutional/arbitrage) \u2014 machinery, utilities, railroads, chemicals enjoy direct tax reduction and investment credits",
+      "Equity Holders & Investors: Primary beneficiary (institutional/arbitrage) \u2014 realize capital gains from dividend policy changes and asset appreciation enabled by tax reduction",
+      "Industrial Workers: Primary victim (powerless/trapped) \u2014 labor market participants with no exit; bear suppression from capital substitution and wage pressure during capital-intensive growth phase",
+      "Labor Union Leadership: Secondary actor (institutional/constrained) \u2014 institutionally powerful but locked into economy-wide bargaining; can coordinate on general growth but constrained by capital mobility",
+      "Non-Capital-Intensive Small Business: Secondary victim (moderate/constrained) \u2014 receive partial benefits from general growth stimulus but excluded from capital-intensive investment credit structure",
+      "Fiscal Administrators: Secondary actor (institutional/arbitrage) \u2014 maintain orthodoxy narrative (growth benefits all) while managing revenue loss and distributional consequences",
+      "Development Policymakers: Strategic actor (powerful/mobile) \u2014 view tax reduction as temporary supply-side stimulus with sunset logic; can adjust rates downward during slack demand, upward during full employment",
+      "Analytical Observer: Civilizational position (analytical/analytical) \u2014 50+ years of data enable retrospective assessment of actual coordination vs extraction outcomes"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The tax reduction provides genuine coordination benefit (aligns investment incentives with growth objectives; removes distortion in capital formation decision-making) but simultaneously concentrates extractive benefit on capital holders through: (1) immediate capital gains from dividend policy liberalization, (2) relative shift in incidence from capital income to labor income, (3) timing gap between capital benefits (immediate) and labor benefits (delayed/uncertain). The measurement trajectory (0.38\u21920.58 over ten years) reflects increasing realization of extraction dynamics: initial period emphasizes coordination narrative and general growth; by end of decade, distributional consequences (labor share decline, wage-productivity divergence) become apparent. Theater ratio (0.52\u21920.61): Moderate, increasing. The coordination narrative ('tax reduction encourages investment which creates jobs') is empirically partially validated but masks the mechanism: tax reduction directly increases capital income regardless of whether productivity effects materialize. Theater increases over time as the employment coordination benefit becomes less clear while capital income benefits remain stable. Suppression (0.48): Moderate. Workers and non-capital-intensive sectors face real but not insurmountable constraints \u2014 labor market remains functional, wage bargaining is constrained but not eliminated by the policy. Suppression is lower than in extractive-only constraints because the growth stimulus has genuine coordination function that partially reallocates capital to productive use (not pure rent extraction).",
+    "directionality_logic": "The constraint's directionality values (d) derive from the structural position of each agent relative to the tax reduction mechanism. Capital-intensive firms and equity holders are beneficiaries with arbitrage options (can invest elsewhere, relocate, adjust payout policies), yielding low d and negative experienced extractiveness. Industrial workers are trapped victims (no exit from labor market, constrained by capital mobility), yielding high d and high experienced extractiveness. Non-capital-intensive small business occupy intermediate positions (moderate power, constrained exit) with mixed directionality. The labor union has institutional power but constrained exit from the national economy, creating asymmetric directionality: they benefit from general growth (coordination function) but bear extraction through relative wage decline (capital substitution effect). The analytical observer's perspective confirms the tangled_rope classification through historical outcome measurement: both coordination function (capital formation did increase, capacity expanded) and extraction function (labor share declined, wage-productivity divergence emerged) are empirically validated.",
+    "perspectival_gap": "The primary perspectival gap separates beneficiaries (capital-intensive firms, equity holders) from victims (workers, non-capital sectors). Beneficiaries experience the constraint as Rope \u2014 a coordination mechanism that solves the investment incentive problem. Their perceived extraction is near-zero (the tax reduction is experienced as removal of distortion, not imposition of cost). Victims experience the constraint as Snare \u2014 they receive promised job creation benefits that depend on entrepreneurial discretion and capital allocation decisions outside their control, while bearing direct cost through relative income decline. The gap reflects genuine structural asymmetry: beneficiaries control the capital allocation mechanism and can realize benefits independent of labor market conditions; victims cannot. The institutional union occupies the perspectival middle (Tangled Rope) \u2014 they see both the growth stimulus coordination benefit and the capital substitution extraction mechanism. The fiscal administrator sees the constraint as a temporary policy lever (Scaffold perspective) with intentional sunset when unemployment normalizes; this view is contradicted by the measurement trajectory showing persistent extraction beyond the intended temporary period. The policymaker's intended sunset mechanism fails because the political economy of tax reduction (concentrated benefits to capital, diffuse costs to labor and public revenue) creates structural lock-in: reverting to 52% rates becomes politically impossible once firms have restructured around 47% assumptions.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION VIA NETWORK DECOMPOSITION: The Kennedy corporate tax reduction appears to mandate a choice between 'coordination mechanism' (Rope) and 'extraction mechanism' (Snare). The mandatrophy resolves by recognizing these as perspectives on the same constraint from different structural positions, unified by the Tangled Rope classification. The constraint genuinely serves coordination function (aligns investment incentives, solves capital formation coordination problem) AND genuinely serves extraction function (concentrates benefits on capital, depresses labor share, redistributes income from public revenue base). Both are real, not one illusory. The mistake is assuming a constraint must be either-or; Tangled Rope classification means it is both. The measurement trajectory (increasing extractiveness from 0.38 to 0.58 over 10 years) reveals that the extraction component becomes more visible as the coordination benefit saturates: initial years emphasize growth and job creation (coordination dominates perceived experience); later years show persistent capital income gains and persistent labor share decline (extraction component becomes salient). The constraint also exhibits the Goodhart degradation pattern: the theater ratio increases from 0.52 to 0.61, reflecting that the coordination narrative ('tax reduction creates jobs') becomes increasingly decoupled from reality as distributional outcomes reveal the extraction mechanism. By the late 1970s, the coordination narrative persists (firms do respond to tax incentives) but the employment creation claim becomes threadbare as wage-productivity divergence emerges. The falsifiability criterion is satisfied: if empirical data had shown net job creation equal to or exceeding coordination narrative predictions, and no labor share decline, the Snare classification would not apply; instead the data confirms both coordination function (capital formation increased) and extraction function (labor share declined), validating the Tangled Rope classification and requiring mandatory enforcement of both beneficiary and victim declarations."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "postwar_capital_labor_compromise",
+      "wage_productivity_divergence_onset",
+      "multinational_capital_mobility_expansion"
+    ],
+    "dual_formulation_note": "The tax rate reduction is the primary mechanism in this constraint; downstream constraints (wage-productivity divergence) are causal consequences of the tax policy's distributional effects. The constraint family models: (1) the tax policy as a resource allocation coordination mechanism, (2) the distributional outcome as capital income extraction, (3) the narrative decoupling as theater ratio increase, and (4) the political lock-in preventing policy reversal as inertial piton dynamics emerging from the tangled rope structure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.62
+    }
+  ]
+}

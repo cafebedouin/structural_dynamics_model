@@ -1,0 +1,191 @@
+{
+  "header": {
+    "constraint_id": "sotu_1950_truman_selective_service_maintenance",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sotu_ss"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Selective Service System (Peacetime Conscription)",
+    "topic_domain": "military/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_military_apparatus",
+      "defense_industrial_base"
+    ],
+    "victims": [
+      "conscripted_male_population",
+      "voluntary_military_labor_market"
+    ],
+    "emerges_naturally": false,
+    "accessibility_collapse": 0.0,
+    "resistance": 0.0
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Conscripted Male Population",
+      "comment": "PERSPECTIVE 1: CONSCRIPTED MALE POPULATION (SNARE) \u2014 Legal obligation with severe penalties for refusal (imprisonment, social stigma). Draft-age males face zero meaningful exit options: conscription is universal and compulsory, with no conscientious objector pathways in the 1950 Truman framing. Trapped agents experience maximum extraction \u2014 their labor is coerced, their opportunity costs are absorbed by the state, and their exit is blocked by law and social enforcement. No coordination benefit is apparent from this position; the constraint is pure forced labor transfer."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Professional Military Officer Corps",
+      "comment": "PERSPECTIVE 2: PROFESSIONAL MILITARY OFFICER CORPS (TANGLED ROPE) \u2014 Constrained exit: officers benefit from conscription's supply of personnel and the stable force structure it enables, but face career costs (longer active duty, integration challenges with conscripted troops). Genuine coordination function: conscription creates predictable personnel flows enabling long-range force planning. Asymmetric extraction: officer careers advance through commanding conscript masses, concentrating advancement in professional hands while conscripts absorb service costs. Mixed experience \u2014 significant benefit and significant constraint."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State Military Apparatus",
+      "comment": "PERSPECTIVE 3: STATE MILITARY APPARATUS (ROPE) \u2014 Primary beneficiary with arbitrage options (can adjust conscription levels, manage policy, capture surplus via administrative control). Experiences the constraint as pure coordination: conscription solves the collective action problem of force assembly without relying on volatile labor markets. Extracts immediate value (conscript labor, sustained readiness) with minimal direct cost to state apparatus. The constraint is functional cooperation \u2014 the state coordinates the distribution of service obligations that sustain military capacity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Defense Industrial Base",
+      "comment": "PERSPECTIVE 4: DEFENSE INDUSTRIAL BASE (TANGLED ROPE) \u2014 Organized beneficiary constrained by dependence on state procurement and conscription-sustained military expansion. Genuine coordination: conscription enables sustained defense spending, predictable force modernization cycles, and technology procurement pipelines. Asymmetric extraction: defense contractors capture surplus via cost-plus contracts while conscripts absorb wage and opportunity costs. Organizational power enables partial exit (diversification, international sales) but major dependence remains. Strong coordination function with embedded extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Anti-Conscription Coalition (Emerging)",
+      "comment": "PERSPECTIVE 5: ANTI-CONSCRIPTION COALITION / ORGANIZED RESISTANCE (SCAFFOLD) \u2014 Emerging organized opposition (pacifist churches, civil rights organizations) sees conscription as temporary violation with moral sunset. Low effective extraction from this perspective because coalition perceives alternative pathways: voluntary military, universal civilian service, or demilitarization. Coalition constraints are real (legal penalties, social cost) but exit path is visible (political change, cultural shift). Theater is moderate \u2014 conscription performs legitimacy via universal male citizenship, but the performance is increasingly contested."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Cold War Necessity View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / COLD WAR NECESSITY (MOUNTAIN) \u2014 From the civilizational/global perspective of 1950, conscription appears as an immutable requirement of geopolitical structure: the USSR maintains conscription, collective security requires sustained NATO force projection, and no democratic state can match professional military recruitment during peacetime military buildup. The constraint appears as natural law of geopolitical necessity. However, structural beneficiaries exist (state apparatus, defense industry) and victims are identifiable (conscripted males), triggering false summit evaluation. The 'immutable geopolitical necessity' naturalizes a contingent institutional choice to distribute military burdens via conscription rather than alternative mechanisms."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "voluntary_recruitment_feasibility",
+      "question": "Could sustained military force projection have been achieved via higher professional military wages and benefits rather than conscription?",
+      "resolution_mechanism": "Historical comparative analysis: contrast actual conscription-based force with counterfactual all-volunteer professional military; economic modeling of recruitment elasticity to compensation; international comparison of all-volunteer military effectiveness (UK, other NATO countries with higher professional pay)",
+      "impact": "If feasible: conscription is pure extraction mechanism (Snare from field perspective) hiding behind manufactured necessity. If infeasible: conscription is justified coordination mechanism (Rope from state perspective). Most likely: mixed \u2014 partial feasibility up to force size ceiling, creating genuine coordination problem above that threshold.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether voluntary recruitment could have replaced conscription"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "To what degree is suppression of exit in the Selective Service System structural (legal penalties, enforcement apparatus) versus internalized (patriotic duty, masculinity norms)?",
+      "resolution_mechanism": "Comparative analysis of post-Vietnam conscription: exit behavior after conscription ended (did previously internalized obligation disappear?); survey data on conscripts' perceived coercion vs duty; analysis of conscientious objector pathways and their use rates as proxy for internalization levels",
+      "impact": "If primarily structural: suppression metric is accurate; post-conscription voluntary recruitment would succeed. If primarily internalized: suppression metric underestimates true constraint power; internalized obligation persists after legal mechanism removed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of structural vs internalized suppression in conscription"
+    },
+    {
+      "id": "state_apparatus_extractive_intent",
+      "question": "Is the Selective Service System intentionally designed to extract labor for state military purposes, or is conscription a regrettable necessity perceived as burden-sharing?",
+      "resolution_mechanism": "Analysis of Truman administration documents, Defense Department policy memoranda, and Congressional testimony; examination of conscription policy evolution and alternative proposals entertained; comparative study of conscription framing in Cold War rhetoric vs actual policy mechanics",
+      "impact": "If intentional extraction: Snare classification from state perspective is incorrect; state should show constrained rather than arbitrage exit. If burden-sharing framing: state genuinely views conscription as temporary necessity, changing time_horizon (biographical \u2192 generational suggests sunset, supporting Scaffold classification).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether Selective Service represents extraction or burden-sharing"
+    },
+    {
+      "id": "coalition_power_threshold",
+      "question": "At what scale of organized anti-conscription coalition does the constraint shift from Snare (for organized agents) to Tangled Rope or Scaffold?",
+      "resolution_mechanism": "Historical track: organize coalition membership (churches, civil rights, student organizations) and cross-reference against shifts in draft policy flexibility (conscientious objector pathways, educational deferments, medical exemptions); measure coalition growth over interval and correlate with policy loosening",
+      "impact": "If threshold < 10% organized opposition: coalition power is real and constraint tightens (coalitions extract concessions, lowering effeciveness \u03c7). If threshold > 30%: coalition effects emerge only in near-term, supporting Scaffold classification's sunset claim.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for organized opposition to shift constraint classification"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.56
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "In 1950, President Truman justified the continuation of the Selective Service System as essential to Cold War national defense and UN collective security commitments following World War II. The constraint operates by distributing military service obligations compulsorily across the male population via legal conscription, concentrating defense capacity and decision-making power in state military apparatus while imposing direct service costs (opportunity costs, life risk, time burden) on conscripted individuals. This tension \u2014 between the state's genuine need for sustained military readiness and the conscript population's forced labor transfer \u2014 generates the DR classification puzzle: from the state's institutional perspective, conscription solves a critical collective action problem (assembling force without volatile labor markets). From the conscript's perspective, it is coercive extraction with legal force backing exit suppression. The constraint exhibits all six DR types across its observational positions, making it a diagnostic exemplar for how structural arrangements that appear as natural necessity to beneficiaries appear as pure extraction to victims.",
+    "key_agents": [
+      "State Military Apparatus: Primary beneficiary (institutional/arbitrage) \u2014 captures compulsory labor supply, sustains force readiness, controls service duration and assignment; minimal exit costs from state perspective",
+      "Conscripted Male Population: Primary victim (powerless/trapped) \u2014 faces legal obligation with severe penalties, zero exit options, absorbed opportunity costs and life risk; experiences extraction with no apparent coordination benefit",
+      "Defense Industrial Base: Secondary beneficiary (organized/constrained) \u2014 depends on sustained military spending enabled by conscription-powered force structure and modernization cycles",
+      "Professional Military Officer Corps: Mixed agent (moderate/constrained) \u2014 benefits from conscript supply and career advancement paths but faces integration challenges and extended active duty",
+      "Anti-Conscription Coalition: Emerging organized agent (organized/constrained) \u2014 pacifist churches, civil rights organizations perceiving conscription as temporary violation with moral sunset",
+      "Analytical Observer: Civilizational position (analytical/analytical) \u2014 risks naturalizing geopolitical necessity framing that masks contingent institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The state extracts substantial labor value from conscripts (two years of service, minimal compensation, directed labor allocation) but the extraction is bounded by duration (peacetime conscription is framed as temporary) and partial legitimacy (framed as national defense burden-sharing, not pure coercion). Suppression (0.72): High. Multiple suppression mechanisms operate: legal penalties for non-compliance (federal prosecution, imprisonment), social enforcement (patriotic duty, masculinity norms tying military service to citizenship), and administrative barriers (no meaningful conscientious objector pathways in 1950 framing, limited deferment windows). However, suppression is not total (some deferments exist for critical occupations, educational paths) \u2014 hence 0.72 rather than 0.85+. Theater ratio (0.48): Moderate-low. Conscription performs legitimacy via universal male citizenship framing and rhetorical tie to UN collective security. But the mechanism itself is largely functional rather than performative \u2014 conscription actually does deliver manpower for force readiness, not merely the appearance of it. The theater is present but not dominant; contrast this with purely performative ritual systems (piton) that maintain activity without functional output.",
+    "directionality_logic": "The chi formula \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) applies scope modifier \u03c3(national) = 1.0 (national scope does not amplify or dampen relative to standard). Extracted values: conscript perspective: \u03c7 \u2248 0.58 \u00d7 1.42 \u00d7 1.0 \u2248 0.82 (high experienced extraction); state apparatus: \u03c7 \u2248 0.58 \u00d7 (-0.12) \u00d7 1.0 \u2248 -0.07 (extraction captured as surplus); moderate professional officers: \u03c7 \u2248 0.58 \u00d7 0.75 \u00d7 1.0 \u2248 0.44 (moderate extraction). These computed \u03c7 values anchor the classification types per the canonical rules: \u03c7 > 0.66 \u2192 Snare, 0.40 \u2264 \u03c7 \u2264 0.90 \u2192 Tangled Rope, \u03c7 < 0.35 + coordination \u2192 Rope.",
+    "perspectival_gap": "Maximum divergence between victim and beneficiary perspectives. Conscripted males (d=0.95) experience \u03c7 \u2248 0.82 and classify as Snare: high extraction, high suppression, minimal coordination benefit perceived. State apparatus (d=0.05) experiences \u03c7 \u2248 -0.07 and classifies as Rope: extraction flows toward them, coordination function is central to their functional view. This gap reflects that the same institutional mechanism is extraction mechanism from victim position and coordination mechanism from beneficiary position. The gap is not measurement error \u2014 it is a genuine structural feature of asymmetric power. The scaffold perspective (anti-conscription coalition, d \u2248 0.68) experiences moderate \u03c7 \u2248 0.39 and sees temporary problem with visible sunset, lowering experienced severity relative to the trapped perspective. The false summit mountain perspective naturalizes the state's coordination framing as inevitable geopolitical law, missing the contingency that voluntary professional military or alternative conscription designs could have solved the same coordination problem.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by demonstrating that Snare and Rope classifications are perspectival, not contradictory. The same structural mechanism is extractive from the victim's position and coordinative from the beneficiary's position. The mandatrophy question \u2014 'Is conscription extraction or coordination?' \u2014 has no single answer; it has six answers depending on structural position. The false summit mountain classification reveals that the 'inevitable geopolitical necessity' framing naturalizes a contingent institutional choice. Alternative designs existed (all-volunteer professional military, higher-wage recruitment, rotating short-service conscription with lower suppression, international burden-sharing mechanisms). The Truman administration's choice to frame conscription as inherent to Cold War survival rather than as one option among several is the naturalizing move the framework detects. The mandatrophy is resolved when we recognize that the constraint's extractiveness (0.58) and classification type (tangled_rope from state perspective, snare from conscript perspective) are structural facts about the system, not logical contradictions. Both types are correct; they describe different agents' structural experiences."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "military_industrial_complex_expansion",
+      "cold_war_security_state_formation"
+    ],
+    "dual_formulation_note": "The Selective Service System is a structural component of the emerging Cold War military-industrial complex. The conscription mechanism enables sustained defense spending and force projection that benefits defense contractors and military planning apparatus. Upstream constraints (Soviet military posture, geopolitical bipolarity) create the necessity framing for conscription; downstream constraints (defense industrial procurement, military-university research coupling) depend on conscription-enabled force readiness."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    }
+  ]
+}

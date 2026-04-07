@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "sotu_1975_ford_veto_moratorium_new_programs",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ford_veto"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Ford Administration Veto Moratorium on New Federal Programs (FY1976)",
+    "topic_domain": "governance/fiscal_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "executive_branch_deficit_control",
+      "fiscal_conservatives"
+    ],
+    "victims": [
+      "program_expansion_constituencies",
+      "congressional_legislative_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "New Program Constituencies (Unorganized Demand)",
+      "comment": "PERSPECTIVE 1: UNORGANIZED CONSTITUENCIES SEEKING NEW PROGRAMS (SNARE) \u2014 School districts, welfare advocates, environmental groups, and labor unions seeking new federal initiatives face a veto threat with no countervailing power. Congressional allies exist but lack override votes. Cannot exit the constraint without organizing into coalition or waiting out administration. Maximum experienced extraction \u2014 the moratorium forces a two-thirds supermajority requirement for any new initiative, effectively terminating legislative agenda."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Congressional Democratic Leadership",
+      "comment": "PERSPECTIVE 2: CONGRESSIONAL DEMOCRATIC LEADERSHIP (TANGLED ROPE) \u2014 Benefits from the constraint's clarity (unambiguous veto signal enables strategic focus). Faces high cost to override (two-thirds threshold). Can coordinate internally and occasionally override on priority items. Extraction is real (legislative agenda constrained) but not maximal \u2014 some alternatives exist (budget amendments, rider insertion, post-FY1976 initiatives). Bipartisan logic: some Republicans want spending control, some Democrats want to preserve override possibility."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Executive Office of the President",
+      "comment": "PERSPECTIVE 3: EXECUTIVE OFFICE OF THE PRESIDENT (ROPE) \u2014 Primary beneficiary. The veto moratorium achieves genuine coordination: consolidates executive authority over budgetary scope, clarifies fiscal boundaries, enables credible commitment to deficit control. The constraint is a coordination tool for the executive \u2014 it solves the problem of legislative scope-creep by establishing a bright-line rule. Extraction runs toward this agent (increased budgetary authority), but the mechanism is coordination, not coercion."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Fiscal Conservative Coalition",
+      "comment": "PERSPECTIVE 4: FISCAL CONSERVATIVE COALITION (SCAFFOLD) \u2014 The moratorium is explicitly temporary policy for FY1976 (with implicit possibility of continuation). Organized agents (Office of Management and Budget, fiscal hawks in Congress, business groups) see the constraint as a temporary mechanism to break the deficit-spending cycle. Low extraction because exit is visible (moratorium lifts after FY1976) and alternative pathways exist (consolidation, efficiency, economic growth reducing deficit without new programs). Sunset clause is implicit in annual appropriation cycles."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Congressional Appropriations Process (Institutional Inertia)",
+      "comment": "PERSPECTIVE 5: CONGRESSIONAL APPROPRIATIONS MACHINERY (PITON) \u2014 The veto moratorium invokes the formal legislative process (override votes, appropriation markup) but substantially short-circuits the normal authorization and committee deliberation functions. The appropriations process persists in ceremonial form (budget hearings, committee markups) while the real decision (veto threat) lies outside. Theater ratio high: procedure occurs (markup, floor votes) but outcomes predetermined by veto threat. The institutional apparatus continues through inertia because no alternative budgeting system has fully replaced it."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Constitutional Fiscal Immobility)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / CONSTITUTIONAL LOGIC VIEW (MOUNTAIN) \u2014 From a civilizational/universal analytical perspective, the veto power is constitutionally immutable \u2014 the President's ability to block legislation is a structural feature of separation of powers written into the Constitution. No agent can exit or override this constraint without constitutional amendment. From this view, the moratorium merely operationalizes an already-existing constitutional architecture. However, the structural data contradicts the mountain classification \u2014 identifiable beneficiaries (executive branch), victims (program constituencies), and active enforcement (threat) indicate a contingent political strategy, not a natural law. The engine will detect this as a false summit, revealing that constitutional framing naturalizes what is actually a discretionary policy choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "veto_threat_vs_actual_exercise",
+      "question": "Is the moratorium's extraction mechanism the veto threat itself, or does it require actual vetoes to function?",
+      "resolution_mechanism": "Historical analysis: count actual vetoes issued in FY1976 vs threat-induced legislative withdrawals; identify bills that failed markup vs those that passed but without new program elements due to anticipatory accommodation",
+      "impact": "If threat-based (preventative): extraction operates through coordination of expectations and can persist with zero actual vetoes. If exercise-based (punitive): extraction requires actual vetoes to signal credibility, making it resource-intensive and potentially less sustainable.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether moratorium operates through threat or through actual vetoes"
+    },
+    {
+      "id": "definitional_scope_ambiguity",
+      "question": "What counts as a 'new program'? Does expansion of existing programs constitute a new program, or only addition of genuinely novel functions?",
+      "resolution_mechanism": "Examination of OMB guidance memoranda and veto rationales; identification of edge cases where agencies or Congress attempted to redefine existing programs; analysis of bills that failed because of classification ambiguity",
+      "impact": "If strictly defined (novel function only): many legislative workarounds available (program expansion, consolidation, redefinition). If broadly defined (any expansion): suppression is higher, extraction is more severe. Classification could shift from Tangled Rope to Snare if definition is expansive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Definitional boundary of 'new program'"
+    },
+    {
+      "id": "congressional_coalition_formation",
+      "question": "Can unified congressional action overcome the veto threat through high-salience program overrides, or is the two-thirds threshold insurmountable?",
+      "resolution_mechanism": "Tracking of override attempts; identification of coalition patterns for successful vs unsuccessful overrides; assessment of whether program salience correlates with override success",
+      "impact": "If coalitions can form reliably: scaffold classification confirmed, exits exist. If threshold is consistently insurmountable: snare classification likely, suppression increases, extraction becomes more severe.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Coalition capacity to override veto on priority programs"
+    },
+    {
+      "id": "deficit_reduction_efficacy",
+      "question": "Does the moratorium actually reduce deficit growth, or does it merely shift spending to uncovered categories (mandatory entitlements, interest on debt, defense)?",
+      "resolution_mechanism": "Comparative analysis: FY1976 deficit vs counterfactual projection without moratorium; tracking of spending changes by program category; assessment of whether excluded categories (mandatory spending, defense) increased proportionally",
+      "impact": "If effective at reducing deficit: rope classification for beneficiaries confirmed (genuine coordination function). If merely categorical shifting: tangled rope classification more accurate (appearance of control without real fiscal impact, higher theater).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Actual fiscal impact of moratorium on deficit reduction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "President Gerald Ford's commitment in the January 1975 State of the Union to veto all new federal spending programs except energy, combined with an administrative freeze on new program initiation through FY1976, represents a structural constraint on legislative budgetary scope. The moratorium emerged from Ford's conviction that deficit spending (then running at $53 billion annually) required executive discipline over program expansion. The constraint manifests as a credible threat \u2014 Congress must either accept the moratorium or command a two-thirds supermajority to override vetoes on any initiative. The mechanism is both coordinative (it clarifies executive fiscal boundaries and consolidates executive authority) and extractive (it prevents legislative expansion of federal scope and shifts the burden of proof onto Congress to demonstrate veto-override consensus). The constraint exhibits properties of Tangled Rope: genuine coordination function (defining fiscal limits, signaling deficit seriousness) coexists with asymmetric extraction (constituencies seeking new programs face higher legislative bar; executive gains unilateral agenda-setting power). From different structural positions, the moratorium appears as pure coordination (Rope from executive perspective), temporary problem-solving (Scaffold from fiscal conservative perspective), performative ritual (Piton from appropriations machinery perspective), crushing barrier (Snare from unorganized constituencies perspective), mixed burden (Tangled Rope from Congress perspective), and constitutional immutability (Mountain from naturalized separation-of-powers perspective). The false summit detector identifies the mountain classification as naturalization of a discretionary policy choice.",
+    "key_agents": [
+      "Executive Branch (Office of the President / OMB): Primary beneficiary (institutional/arbitrage) \u2014 consolidates budgetary authority, credibly commits to deficit control, gains unilateral veto power over legislative scope",
+      "Congressional Democratic Leadership: Secondary institutional actor (organized/constrained) \u2014 faces veto threat but can coordinate and occasionally override; benefits from clarity on executive boundaries; constrained by two-thirds threshold",
+      "Fiscal Conservative Coalition: Organized beneficiary (organized/mobile) \u2014 benefits from moratorium on deficit growth; temporary commitment aligns with FY1976 crisis narrative; exit visible (moratorium expires)",
+      "Program Expansion Constituencies (schools, welfare, environment, labor): Primary victims (powerless/trapped) \u2014 cannot exit constraint without coalition formation; face indefinite delay for new initiatives; no countervailing power during FY1976",
+      "Congressional Appropriations Process: Institutional actor (powerful/mobile) \u2014 maintains ceremonial function (hearings, markups) while real authority shifted to executive veto threat; process persists through inertia rather than substantive role",
+      "Analytical Observer: Civilizational context (analytical/analytical) \u2014 risks naturalizing executive veto as constitutional immutability rather than discretionary policy choice"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The moratorium imposes real fiscal constraints on new initiatives, effectively elevating the legislative bar from simple majority (authorization) to supermajority (override). The extractiveness is not maximal (0.70+) because exit options exist (override votes, post-FY1976 legislation, workarounds via program expansion or executive agency reinterpretation). The rise from 0.35 at FY1975 start to 0.52 by mid-FY1976 reflects increasing congressional accommodation \u2014 agencies and advocates internalize the veto threat, reducing formal veto exercises needed. Suppression (0.65): Moderate-high. Constituencies face real barriers: two-thirds override threshold is empirically high (only 9 of 37 Ford vetoes were overridden during his presidency), Congressional Democrats control only simple majority, and political costs of override attempts discourage frequent challenges. But suppression is not total (0.85+) because override options exist and some initiatives do succeed. Theater ratio (0.48): Moderate. The moratorium has genuine fiscal function (deficit reduction, scope boundary) but also performative elements (SOTU rhetoric, budget theater, committee hearings that confirm predetermined veto outcomes). Theater rises slightly as the fiscal emergency narrative matures into routine practice.",
+    "perspectival_gap": "The constraint demonstrates how a single structural phenomenon \u2014 executive veto threat over fiscal scope \u2014 produces divergent classifications based on observer position. The Executive Office sees coordination (Rope): the moratorium solves the governance problem of credible fiscal commitment. Congressional Democrats see extraction under coordination (Tangled Rope): the threat creates real constraint on legislative agenda while some coordination benefit exists (clarified executive boundaries). Unorganized constituencies see pure extraction (Snare): they cannot organize, cannot override, cannot exit. The fiscal conservative coalition sees temporary control (Scaffold): the moratorium is explicitly FY1976-bounded, sunset is visible. The appropriations process sees institutional degradation (Piton): the machinery persists but outcomes are predetermined. The analytical observer risks seeing constitutional law (Mountain): the veto power is constitutionally immutable. But the structural data reveals this mountain as false \u2014 the discretionary invocation of veto power over program scope is a policy choice, not a constitutional requirement. The gap between the mountain perspective and the snare/rope perspectives is the most diagnostic \u2014 it reveals that constitutional framing naturalizes what is actually a political strategy.",
+    "directionality_logic": "The directionality derivation flows from beneficiary/victim status and exit options. Executive Office (beneficiary + arbitrage) gets d \u2248 0.12, producing f(d) \u2248 -0.08, chi contribution is negative (extraction favors this agent). Unorganized constituencies (victim + trapped) get d \u2248 0.92, producing f(d) \u2248 1.38, chi contribution is maximized. Congressional Democrats (mixed, organized, constrained) get d \u2248 0.58, producing f(d) \u2248 0.65. Fiscal conservatives (beneficiary + mobile) get d \u2248 0.22, producing f(d) \u2248 0.08. The appropriations process (institutional, mobile but degraded function) gets d \u2248 0.65, producing f(d) \u2248 1.00. These d values encode real structural relationships: who can escape, who is trapped, who benefits, who bears costs.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy through perspectival specificity. The question is not 'is this Rope or Snare?' but 'which structural position are you measuring from?' From the Executive Office perspective, the moratorium IS a coordination mechanism (Rope) \u2014 it solves the fiscal governance problem. From the constituency perspective, it IS pure extraction (Snare) \u2014 they face a barrier they cannot surmount. From the Congressional perspective, it IS a hybrid (Tangled Rope) \u2014 some coordination benefit, real extraction cost. From the crisis-management perspective, it IS temporary scaffolding (Scaffold). These are not contradictory \u2014 they are different instantiations of the same constraint evaluated at different points on the (P,T,E,S) lattice. The mandatrophy is resolved by accepting that a constraint can be any type depending on observer position, and that all positions are valid. What prevents mislabeling is the structural data: executive veto threat (enforcement), beneficiaries (deficit control advocates), victims (new program constituencies), and temporary framing (FY1976 bounds). These facts anchor the classification across perspectives."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "congressional_spending_authority_limitation",
+      "executive_budgetary_impoundment_authority"
+    ],
+    "dual_formulation_note": "The veto moratorium is downstream of the broader separation-of-powers architecture (executive veto power) and upstream of specific appropriation battles (education, social services, environmental programs). The moratorium represents a strategic invocation of existing constitutional authority, not a novel constraint creation. The network links track how the veto threat propagates to specific program debates."
+  },
+  "directionality_overrides": []
+}

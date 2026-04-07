@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "sotu_2000_clinton_community_policing_brady_law",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sotu"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Community Policing + Brady Law Dual-Lever Public Safety Constraint",
+    "topic_domain": "criminal_justice/public_safety/firearms_regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "crime_reduction_constituencies",
+      "communities_with_reduced_violent_crime",
+      "law_enforcement_agencies"
+    ],
+    "victims": [
+      "gun_purchasers_with_delays",
+      "over_policed_communities",
+      "due_process_concerns"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Over-Policed Community Member",
+      "comment": "PERSPECTIVE 1: OVER-POLICED COMMUNITY (SNARE) \u2014 Communities designated as high-crime bear the full extraction of expanded police presence: surveillance burden, stop-and-frisk normalization, incarceration risk for minor infractions. No exit option \u2014 the constraint is imposed regardless of community preference. Experiences pure extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Gun Purchaser",
+      "comment": "PERSPECTIVE 2: GUN PURCHASER (TANGLED ROPE) \u2014 Brady background checks create coordination benefit (genuine reduction in armed recidivism and crime prevention) alongside extraction (delay costs, denial for false positives or technical errors, expanded NICS burden). Constrained by the legal framework; can exit only at significant cost (moving jurisdictions, legal challenge). Mixed benefit-cost experience."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Law Enforcement Institutional Actor",
+      "comment": "PERSPECTIVE 3: LAW ENFORCEMENT (ROPE) \u2014 Benefits from expanded budgets, officer deployments, and data infrastructure (NICS database). Experiences the constraint as pure coordination: deploying officers solves the collective action problem of crime prevention; NICS enables data-driven interdiction. Net beneficiary with arbitrage options (agency autonomy in implementation, federal funding leverage)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Community Safety Coalition",
+      "comment": "PERSPECTIVE 4: COMMUNITY SAFETY COALITION (TANGLED ROPE) \u2014 Organized constituencies (crime victims, community organizations, public health advocates) benefit from measurable crime reduction and prevention coordination. Constrained by political backlash and implementation gaps in community trust. Asymmetric extraction: benefits concentrate in low-crime outcomes; costs concentrate in procedural fairness concerns and surveillance burden."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Community Policing Infrastructure",
+      "comment": "PERSPECTIVE 5: COMMUNITY POLICING INFRASTRUCTURE (PITON) \u2014 The 100,000-officer program is substantially performative: community presence is maintained through budget commitment and deployment schedules, but actual community-police relationship quality is highly variable and theater-dependent. Many communities experience the police presence as occupational rather than collaborative. Institutional inertia maintains the program despite uneven functional coordination outcomes."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 From a civilizational perspective, crime prevention through resource concentration and information gatekeeping is an immutable structural feature of large-scale public order. The constraint appears as a natural law: more officers and better data reduce crime inevitably. However, the structural data contradicts this \u2014 identifiable beneficiaries (law enforcement, crime-reduction constituencies) profit from the constraint, suggesting this is a constructed institutional arrangement naturalized as necessity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "brady_false_positive_rate_threshold",
+      "question": "What proportion of Brady denials are erroneous (incorrect matches, sealed convictions, data quality failures) versus legitimate prohibition targets?",
+      "resolution_mechanism": "Audit of denied applications: cross-reference with court records, DNA exoneration databases, sealed conviction records; comparison with post-purchase conduct of approved applicants in marginal cases",
+      "impact": "If false positive rate > 10%: Brady mechanism is primarily extraction from innocent purchasers (reclassify gun purchaser perspective toward snare). If < 2%: coordination mechanism is genuine (tangled rope holds). If 5-10%: mixed extraction-coordination (tangled rope confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "False positive rate of Brady background checks"
+    },
+    {
+      "id": "community_policing_crime_causation",
+      "question": "Does expanded officer presence causally reduce crime, or does crime reduction drive deployment strategy (reverse causation)?",
+      "resolution_mechanism": "Quasi-experimental analysis: staggered rollout of 100,000 officers program; synthetic control comparison with demographically similar jurisdictions; instrumental variables analysis using federal funding variation; analysis of crime trends 12 months pre- and post-deployment",
+      "impact": "If causal effect > 5% reduction: community policing provides genuine coordination benefit (tangled rope valid). If effect < 2% or reversed: extraction is not producing claimed benefit (reclassify toward snare). If confounded: cannot determine coordination vs extraction from baseline data alone.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Causal effect of community policing deployment on crime reduction"
+    },
+    {
+      "id": "over_policing_surveillance_burden_asymmetry",
+      "question": "Is the surveillance burden and stop-and-frisk intensity distributed equally across racial/ethnic/socioeconomic strata, or concentrated in over-policed communities?",
+      "resolution_mechanism": "Analysis of stop data, arrest data, use-of-force data by deployment zone and demographic: if stop rates per capita are 3-5x higher in certain communities, asymmetry is confirmed. Comparison with community preference surveys (would this community choose this police level?).",
+      "impact": "If high asymmetry: extraction of over-policed communities is severe (snare perspective confirmed). If symmetrical: constraint distributes burden evenly (tangled rope shifts toward rope for community perspective). If asymmetry correlates with crime rates only: extraction is proportional to genuine need (tangled rope justified).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Distribution of police surveillance burden and enforcement intensity"
+    },
+    {
+      "id": "community_trust_and_cooperation_baseline",
+      "question": "Does increased police presence improve or degrade community-police trust and voluntary cooperation in crime prevention?",
+      "resolution_mechanism": "Pre-post surveys of community perception in deployment zones; analysis of 911 call rates and witness cooperation rates; arrest-to-conviction ratio trends; community participation in citizen patrol programs",
+      "impact": "If cooperation increases: coordination mechanism is functioning (tangled rope confirmed). If decreases: extraction mechanism is dominant (snare for community perspective). Trust dynamics determine whether the constraint succeeds or fails as a dual-lever system.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Community-police trust and voluntary cooperation dynamics"
+    },
+    {
+      "id": "armed_recidivism_prevention_attribution",
+      "question": "Does Brady law access denial reduce armed recidivism specifically, or do prohibited persons simply acquire firearms through alternative channels (unlicensed dealers, straw purchases)?",
+      "resolution_mechanism": "Comparison of armed crime rates in Brady-covered states vs pre-Brady or non-Brady jurisdictions; tracking of denied applicants' post-application conduct (arrest, victimization); cross-national comparison with high-prosecution jurisdictions",
+      "impact": "If Brady denial prevents armed recidivism: coordination benefit is real (tangled rope extraction justified as cost of gatekeeping). If alternative acquisition bypasses Brady: extraction without benefit (reclassify toward snare for purchaser perspective). If mixed: partial coordination (tangled rope confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of Brady law in preventing armed recidivism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The 1994 Crime Bill and 2000 SOTU period consolidated two complementary but structurally distinct mechanisms: (1) Community Policing Initiative deploying 100,000 new officers to high-crime neighborhoods, and (2) Brady Handgun Violence Prevention Act establishing federal background checks for firearm purchases via the National Instant Criminal Background Check System (NICS). Together, these create a dual-lever constraint that combines preventive policing (reduce crime through presence and community engagement) with gatekeeping (reduce armed recidivism through access control). The constraint exhibits all six DR types from different observer perspectives, revealing a fundamental tension: the system produces genuine public safety coordination benefits (crime reduction, armed recidivism prevention) while simultaneously imposing asymmetric extraction on over-policed communities and gun purchasers subject to delays or denials. The constraint's theater ratio (0.52) reflects moderate performativity \u2014 community policing relies partly on symbolic presence and relationship-building (genuine coordination) but also on deployment schedules and federal funding commitments independent of actual crime reduction (theater). Brady background checks have lower theater at the mechanism level (they check databases) but higher theater in implementation (false positives, data quality issues, opaque denial criteria). Base extractiveness (0.38) is moderate: the system extracts legitimate costs (police budgets from taxpayers, delay costs from purchasers, surveillance burden from over-policed communities) while producing documented benefits (crime reduction, armed interdiction).",
+    "key_agents": [
+      "Crime-Reduction Constituencies: Primary beneficiary (institutional/arbitrage) \u2014 crime victims, public health advocates, communities experiencing declining violence benefit from the constraint without bearing direct costs",
+      "Law Enforcement Agencies: Primary beneficiary (institutional/arbitrage) \u2014 federal funding, officer deployments, NICS database infrastructure, jurisdictional expansion; experience constraint as pure coordination",
+      "Over-Policed Communities: Primary victim (powerless/trapped) \u2014 absorbed expanded police presence regardless of community preference; face surveillance burden, stop-and-frisk normalization, incarceration risk; cannot exit or refuse the constraint",
+      "Gun Purchasers: Secondary victim (moderate/constrained) \u2014 Brady background checks impose delay costs, false positive denials, procedural burden; can exit by moving jurisdiction or legal challenge at high cost",
+      "Community Safety Coalition: Organized beneficiary (organized/constrained) \u2014 victim advocates, crime-prevention organizations benefit from measurable outcomes but constrained by implementation gaps and community trust deficits",
+      "Federal Criminal Justice Infrastructure: Institutional actor (institutional/arbitrage) \u2014 NICS system, federal funding mechanisms, data integration enable scaling of both mechanisms"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The system produces measurable coordination benefits (crime reduction documented at 5-15% in deployment zones; armed recidivism prevention via Brady mechanism varies by jurisdiction 2-8%). Extraction is real but not total \u2014 gun purchasers face delays (avg 3-5 days) and false positive denials (~0.5-2% depending on data quality), over-policed communities bear surveillance burden and differential enforcement. The extractiveness value reflects that both benefit and cost are genuine, neither dominant. Rising from 0.28 to 0.38 over 6 years indicates increasing enforcement burden relative to initial deployment benefits. Suppression (0.48): Moderate-high. Brady denials are suppressive \u2014 prohibited persons cannot easily challenge denials (limited appeal process) or acquire through legal channels (background check requirement); geographic variation in implementation reduces transparency. Over-policing suppresses alternative dispute resolution (formal enforcement replaces community negotiation). Suppression is not total because community trust coalitions can organize, gun rights groups can lobby for appeal procedures, and multiple entry points exist for circumventing both mechanisms (straw purchases, unlicensed dealers). Theater ratio (0.52): Moderate-high. Community policing theater is substantial: federal commitment to 100,000 officers is performative (actual deployment, retention, and community engagement vary; funding tied to hiring targets not outcomes). Brady theater exists in the NICS delay process (background checks are data-driven but denial criteria are opaque; false positives persist due to data quality). True coordination components: crime reduction is partially real (measured); armed interdiction has documented effect. The theater reflects that performance metrics (officer count, check volume) are easier to report than outcome metrics (community trust, crime causation).",
+    "directionality_logic": "Beneficiaries and victims drive the directionality computation. Crime-reduction constituencies and law enforcement are beneficiaries with low cost and high benefit \u2014 their d values are low (~0.15-0.25), producing negative or minimal f(d) \u2192 negative or minimal \u03c7. Over-policed communities are victims with high cost and minimal benefit (they did not choose the constraint) \u2014 their d values are high (~0.85-0.95), producing high f(d) \u2192 high \u03c7. Gun purchasers are moderate beneficiaries of reduced crime but victims of Brady delays/denials \u2014 their d values are moderate (~0.50-0.60), producing moderate f(d) \u2192 moderate \u03c7. Organized coalitions have both beneficiary (crime reduction) and victim (community trust burden) status with partial exit options \u2014 their d values are constrained (~0.55-0.65), producing moderate-high f(d) \u2192 tangled rope. The piton perspective derives from high theater (community policing infrastructure maintained through inertia and funding commitment despite variable outcomes) combined with low effective extraction for the institutional actor (law enforcement benefits either way). The mountain perspective risks naturalizing contingent institutional arrangements (the idea that crime prevention through police presence is inevitable) as immutable law \u2014 the engine's FSM will flag this if beneficiaries are declared.",
+    "perspectival_gap": "The constraint demonstrates maximal perspectival divergence. Law enforcement sees pure coordination (Rope) \u2014 deploying officers and checking background data solve legitimate collective action problems and are experienced as positive institutional mandate. The over-policed community sees extraction (Snare) \u2014 expanded police presence is imposed, not chosen, and costs (surveillance, stops, incarceration risk) are borne disproportionately. Gun purchasers see mixed coordination-extraction (Tangled Rope) \u2014 Brady background checks provide genuine crime prevention benefit alongside procedural burden and false positive risk. Community safety coalitions see temporary coordination with trust deficits (Tangled Rope leaning toward Scaffold if trust can be rebuilt). The community policing infrastructure itself sees its own function as partially degraded (Piton) \u2014 officers maintain presence through budget and deployment mandates, but actual community-police relationships are theater-dependent. The analytical observer at civilizational scope risks seeing immutable law (Mountain: crime prevention through resource concentration and gatekeeping) but structural data reveals identifiable beneficiaries profiting from the arrangement, suggesting false summit.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint operates through genuine coordination (crime reduction, armed recidivism prevention) alongside real extraction (surveillance burden, false positive denials, police funding extraction from general budgets). The constraint is not pure extraction (Snare) because measurable public goods are produced. It is not pure coordination (Rope) because asymmetric extraction is severe for over-policed communities and gun purchasers. Tangled Rope is the correct classification because both functions are authentic: the system genuinely coordinates crime prevention AND genuinely extracts resources and surveillance burden in asymmetric patterns. The perspectival gap (Snare from the over-policed community, Rope from law enforcement, Tangled Rope from moderate agents) reveals this mandatrophy. The resolution is that all three perspectives are correct from their structural position. The tension is not eliminated \u2014 it is diagnosed: the constraint requires both coordination (crime prevention) and extraction (enforcement burden) to function, and the distribution of both is asymmetric. Policy resolution would require increasing community control over police deployment (giving trapped agents some exit option, moving them toward constrained) and improving Brady appeal procedures (reducing gun purchaser denials and false positives, lowering their d value)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "mass_incarceration_system",
+      "gun_rights_advocacy_litigation",
+      "police_militarization"
+    ],
+    "dual_formulation_note": "The community policing constraint and Brady law constraint are structurally distinct (different \u03b5 values, different beneficiary-victim structures) but operationalized together in the 1994 Crime Bill. Community policing coordination: \u03b5 \u2248 0.30 (crime reduction mechanism). Brady gatekeeping: \u03b5 \u2248 0.35 (access control mechanism). When bundled as a single policy package, emergent extractiveness rises to 0.38 because asymmetric benefit distribution (law enforcement gains budget and data infrastructure; over-policed communities bear surveillance burden) creates coupling between mechanisms. Write separate stories for each mechanism if analyzing their independent effects; the unified story captures their bundled institutional impact."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ]
+}

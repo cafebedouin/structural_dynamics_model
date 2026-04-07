@@ -1,0 +1,216 @@
+{
+  "header": {
+    "constraint_id": "sotu_1956_eisenhower_federal_payroll_reduction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sotu56"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Federal Government Workforce Contraction (1956 Eisenhower Payroll Reduction)",
+    "topic_domain": "governance/labor_policy/budgetary_constraint",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "taxpayers_middle_upper_income",
+      "balanced_budget_coalition",
+      "private_sector_employers"
+    ],
+    "victims": [
+      "federal_workers_displaced",
+      "state_capacity_for_programs",
+      "federal_service_continuity"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Displaced Federal Worker",
+      "comment": "PERSPECTIVE 1: DISPLACED FEDERAL WORKER (SNARE) \u2014 Trapped by loss of secure employment with no alternative pathway at equivalent salary/benefits. No agency in the reduction decision; bears full extraction cost. Career disruption, retraining burden, geographic relocation. Maximum suppression: employment options are constrained by specialization, age, regional labor market conditions, and loss of pension vesting in some cases."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "State Government Capacity",
+      "comment": "PERSPECTIVE 2: STATE GOVERNMENT CAPACITY (TANGLED ROPE) \u2014 Experiences mixed effects. Federal contraction constrains state capacity for new programs (reduced federal co-funding, reduced federal payroll spending in state economies). But also faces coordination benefit: federal withdrawal creates space for state-level solutions and local adaptation. Constrained exit \u2014 states cannot unilaterally expand federal employment, but can implement alternative programs. Moderate extraction with genuine coordination element."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Balanced Budget Coalition",
+      "comment": "PERSPECTIVE 3: BALANCED BUDGET COALITION (ROPE) \u2014 Primary beneficiary (institutional actors: fiscal conservatives, congressional budget hawks, taxpayer advocacy groups). Achieves coordination goal: reducing deficit spending while maintaining core federal functions. Arbitrage position \u2014 can exit the constraint by supporting federal expansion, but chooses payroll reduction as preferred pathway. Net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Private Sector Employers",
+      "comment": "PERSPECTIVE 4: PRIVATE SECTOR EMPLOYERS (ROPE) \u2014 Secondary beneficiary (organized institutional actors). Federal workforce reduction increases labor supply to private sector; reduces wage pressure; reduces government competition for talent. Coordination function: efficient labor reallocation from public to private use. Arbitrage position \u2014 can hire federal workers released by contraction or absorb their skills. Net beneficiary."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Taxpayer (Aggregate/Ideological View)",
+      "comment": "PERSPECTIVE 5: THE TAXPAYER / ANTI-GOVERNMENT IDEOLOGY (MOUNTAIN) \u2014 From the ideological perspective (widely distributed institutional/powerful agents), federal payroll reduction appears as a natural law: government spending must be constrained by fiscal discipline; bloated bureaucracies are inefficient and must be pruned; minimal government is a structural principle, not a contingent choice. This perspective risks false summit classification \u2014 the 'naturalization' of anti-government ideology as immutable law."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Cross-position analysis reveals the constraint as embedded coordination (maintaining core functions while reducing payroll) with structural asymmetry (workers bear concentrated costs; benefits diffuse across taxpayer base). The constraint coordinates deficit reduction but extracts from a concentrated, trapped population. The mountain perspective (natural law) is perspectival, not objective."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "federal_function_substitution",
+      "question": "Can 297,000 positions be eliminated while maintaining equivalent federal service capacity, or does service degradation follow the reduction?",
+      "resolution_mechanism": "Comparative analysis of federal service metrics (processing times, error rates, program reach) before and after reduction; measurement of task consolidation vs service loss; tracking of deferred maintenance and backlog accumulation",
+      "impact": "If service maintained: constraint is pure coordination (lower chi). If service degrades: constraint masks service extraction wrapped in efficiency language (higher chi, reclassify toward snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree to which service capacity is maintained vs degraded by payroll reduction"
+    },
+    {
+      "id": "private_sector_absorption_capacity",
+      "question": "Can private sector actually absorb 297,000 federal workers at equivalent wages and working conditions, or are many absorbed at lower salary/security?",
+      "resolution_mechanism": "Longitudinal tracking of displaced federal workers' employment trajectories; wage comparison (federal vs private sector post-placement); benefits comparison; sector distribution; geographic matching analysis",
+      "impact": "If absorbed at equivalent: extraction is lower, constraint appears more coordinated. If absorbed at lower wages/conditions: extraction is higher, worker victimization is worse, classify toward snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree of wage/benefits loss for absorbed federal workers"
+    },
+    {
+      "id": "ideological_naturalization",
+      "question": "Is federal payroll reduction presented as natural law (fiscal discipline, government efficiency) rather than as a contingent policy choice with distributional consequences?",
+      "resolution_mechanism": "Content analysis of political rhetoric surrounding the reduction; examination of whether alternatives (progressive taxation, programmatic efficiency, federal expansion with cost offsets) are presented as serious options or dismissed as infeasible; tracking of false summit detection by engine (beneficiary presence on mountain classification)",
+      "impact": "If heavily naturalized: constraint gains ideological immunity from challenge; false summit detection fires (engine reclassifies mountain \u2192 tangled rope). If presented as choice: political accountability is clearer; distributional debate is possible.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Degree to which payroll reduction is naturalized as law vs presented as policy choice"
+    },
+    {
+      "id": "regional_vulnerability_concentration",
+      "question": "Are federal jobs concentrated in specific regions, creating regional extraction while other regions benefit from tax reduction?",
+      "resolution_mechanism": "Geographic analysis of federal employment density; mapping of job losses by region; correlation with regional economic indicators; tracking of regional migration post-reduction",
+      "impact": "If concentrated regionally: some regions experience snare (trapped workers, economic collapse); others experience rope (tax benefits without cost). Constraint is spatially heterogeneous \u2014 may require separate stories by region.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Geographic concentration of federal job losses vs tax benefits"
+    },
+    {
+      "id": "pension_vesting_asymmetry",
+      "question": "For workers near vesting (5-10 years from pension), does forced reduction cause loss of pension rights, creating extraction beyond wage loss?",
+      "resolution_mechanism": "Analysis of pension law at the time; tracking of vesting status of displaced workers; measurement of pension loss by vesting proximity; comparison to forced retirement packages",
+      "impact": "If pension loss is significant: suppression increases dramatically (workers lose both current wage and future security). If pension transfers or buyouts protect vesting: suppression is lower.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which payroll reduction causes pension vesting loss"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "sotu56_extractiveness_1953"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48,
+      "id_override": "sotu56_extractiveness_1956"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.52,
+      "id_override": "sotu56_extractiveness_1960"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "sotu56_theater_1953"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.38,
+      "id_override": "sotu56_theater_1956"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.42,
+      "id_override": "sotu56_theater_1960"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 7
+  },
+  "commentary": {
+    "narrative_context": "The federal workforce contraction of 1956 represents a deliberate structural reduction in government employment, eliminating approximately 297,000 positions while claiming to maintain operational capacity and fiscal discipline. The constraint embeds a presumption against federal expansion and operationalizes an ideology of minimal government. It benefits taxpayers (through lower federal spending) and balanced-budget advocates by creating a visible payroll reduction; it costs displaced federal workers (trapped with no equivalent alternative) and constrains state capacity for new programs (federal co-funding declines). Structurally, the constraint combines genuine coordination (reducing deficit spending while attempting to maintain core functions) with asymmetric extraction (concentrated costs on workers; diffuse benefits across taxpayer base). The theater ratio rises over time as the reduction persists \u2014 initial claims of 'efficiency improvement' and 'elimination of wasteful positions' face reality testing as service backlogs accumulate and deferred work becomes visible. This is a diagnostic case for how coordination functions can embed substantial extraction when the distributional consequences are concentrated on a powerless population.",
+    "key_agents": [
+      "Displaced Federal Workers: Primary victims (powerless/trapped) \u2014 297,000 individuals with no exit option; bear concentrated costs of reduced wages, lost benefits, retraining burden, geographic relocation",
+      "Balanced Budget Coalition: Primary beneficiary (institutional/arbitrage) \u2014 fiscal conservatives, congressional budget hawks, taxpayer advocacy groups; achieve deficit reduction goal",
+      "Taxpayers (especially middle/upper income): Secondary beneficiary (powerful/mobile) \u2014 aggregate population experiencing reduced federal income taxes through lower spending",
+      "Private Sector Employers: Secondary beneficiary (organized/arbitrage) \u2014 benefit from labor supply increase and reduced wage pressure; can recruit federal workers",
+      "State Governments: Victim (moderate/constrained) \u2014 federal co-funding declines; space created for state-level solutions but constrained by loss of federal spending in state economies",
+      "Federal Service Continuity: Victim (powerless/trapped) \u2014 abstract institutional capacity facing degradation through reduced staffing; cannot exit or organize resistance"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The reduction produces real extraction from displaced workers (wage loss, benefit loss, career disruption) but also achieves genuine coordination benefit (deficit reduction, maintained core services with lower payroll). The value of 0.52 reflects the mixed nature \u2014 this is not pure extraction (which would be >0.66 snare threshold) but substantial asymmetric extraction embedded in coordination. Suppression (0.68): High. Workers face severe suppression: employment alternatives are constrained by skill specialization and regional labor market conditions; pension vesting creates lock-in (losing years of service if forced out); age discrimination affects older workers; relocation burden is high. Suppression is partially structural (labor market scarcity) and partially imposed (government choice to cut rather than reallocate). Theater ratio (0.38 rising to 0.42): Moderate, increasing. Initial reduction is presented as efficiency improvement (elimination of wasteful positions) with relatively low performative content \u2014 decisions appear technical/budgetary. Theater increases over time as backlogs accumulate and deferred work becomes visible, suggesting the 'efficiency' framing is not fully supported by outcomes. The constraint's claimed_type of tangled_rope is correct \u2014 genuine coordination (deficit control) is inseparable from asymmetric extraction (worker displacement).",
+    "perspectival_gap": "The perspectival gaps are stark and reveal the constraint's extractive logic. The displaced worker sees pure snare (trapped, maximum extraction). The beneficiary coalition sees pure rope (coordination, deficit reduction achieved). The state sees tangled rope (coordination benefit from federal withdrawal mixed with extraction of state capacity). The taxpayer ideology sees mountain (natural law of fiscal discipline) which the engine identifies as false summit. The analytical observer sees tangled rope \u2014 genuine coordination with concentrated extraction. The gap between beneficiary perspective (rope) and victim perspective (snare) is the diagnostic signature of asymmetric extraction masquerading as coordination. If the constraint were pure coordination, all perspectives should converge \u2014 some would see rope, some would see more efficient rope, but none would see snare.",
+    "directionality_logic": "Directionality values derive from structural relationships. Displaced workers: d \u2248 0.95 (trapped victims, no exit \u2192 maximum f(d)). Balanced budget coalition: d \u2248 0.05 (beneficiary with arbitrage exit \u2192 minimum f(d)). Taxpayers: d \u2248 0.10 (beneficiary with mobile exit \u2192 near-minimum f(d)). Private employers: d \u2248 0.15 (beneficiary with arbitrage exit \u2192 low f(d)). State governments: d \u2248 0.70 (mixed victim-beneficiary status with constrained exit; coordination benefit from federal withdrawal mixed with extraction of capacity). Federal service continuity: d \u2248 1.0 (powerless victim, trapped, cannot exit). The directive asymmetry \u2014 beneficiaries cluster at d \u2248 0.05\u20130.15, victims cluster at d \u2248 0.70\u20131.0 \u2014 is the structural hallmark of extraction embedded in coordination.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy through the tangled rope classification: it is genuinely both coordination (reduces federal spending, maintains core service delivery in theory) and extraction (concentrates costs on trapped workers). The mandatrophy would arise if the analyst tried to classify this as 'pure coordination' (rope) \u2014 that classification would be false, masking asymmetric extraction. The mountain perspective ('fiscal discipline is natural law') is correctly identified by the engine as false summit: beneficiaries exist (balanced budget coalition, taxpayers), ideology is naturalized, and the constraint is contingent on political choice. The analytical observer's tangled rope classification captures the true structure: coordination function + asymmetric extraction + active enforcement (government power to terminate employment). Mandatrophy resolves when the analysis refuses to collapse this into either 'good coordination' or 'bad extraction' and instead models it as both."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "federal_civil_service_mobility",
+      "state_federal_fiscal_federalism",
+      "government_workforce_loyalty_programs"
+    ],
+    "dual_formulation_note": "The payroll reduction operates at two structural levels: (1) the coordination of deficit reduction (federal budget balance) with (2) the extraction mechanism targeting federal workers. These could decompose into separate stories if the empirical question is whether service capacity actually survives the reduction unchanged. If service degradation follows, a second story (federal_service_degradation) would have higher extractiveness (\u03b5 \u2248 0.65) and would classify as snare from analytical perspective. Current story assumes service maintenance; decompose if service loss is empirically documented."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "eisenhower_balanced_budget_doctrine",
+      "post_war_defense_spending_debates"
+    ]
+  }
+}

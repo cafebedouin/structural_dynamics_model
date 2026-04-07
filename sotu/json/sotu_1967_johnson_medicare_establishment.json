@@ -1,0 +1,216 @@
+{
+  "header": {
+    "constraint_id": "sotu_1967_johnson_medicare_establishment",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "medicare"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.35,
+    "theater_ratio": 0.42,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Medicare Establishment as Federal Healthcare Entitlement (1967)",
+    "topic_domain": "healthcare/social_policy/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "elderly_americans_65_plus",
+      "low_income_seniors",
+      "hospital_systems",
+      "medical_device_manufacturers"
+    ],
+    "victims": [
+      "working_age_taxpayers",
+      "federal_budget_capacity",
+      "healthcare_cost_control_mechanisms"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Elderly Beneficiary (Access Secured)",
+      "comment": "PERSPECTIVE 1: ELDERLY BENEFICIARY (ROPE) \u2014 From the senior's structural position, Medicare is experienced as pure coordination: the constraint solves the catastrophic-cost problem through collective risk pooling. Beneficiaries are trapped in the system by age, but they see it as liberation from the prior constraint (uninsured medical bankruptcy). The extraction they perceive is minimal \u2014 they pay premiums and deductibles, but the constraint protects them from infinite medical debt. Coordination function is genuine and dominant."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Working-Age Taxpayer (Payroll Tax Burden)",
+      "comment": "PERSPECTIVE 2: WORKING-AGE TAXPAYER (TANGLED ROPE) \u2014 Constrained by mandatory payroll taxation (2.9% income-based, no cap as of 2020s) with no exit option and limited political voice. Experiences genuine extraction: a portion of wages flows to seniors' healthcare regardless of individual choice. However, also benefits from coordination: when they reach 65, the same mechanism protects them. The constraint is hybrid \u2014 mandatory collective insurance (coordination) with age-based wealth transfer (extraction from younger to older). Suppression is moderate: technically mobile to other countries, but exit costs are high (losing accumulated benefits, social ties)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Hospital System and Medical-Industrial Complex",
+      "comment": "PERSPECTIVE 3: HOSPITAL/PHARMACEUTICAL SECTOR (SNARE) \u2014 Appears as beneficiary but inverts to victim under behavioral scrutiny. Hospitals and device manufacturers initially benefit from guaranteed Medicare reimbursement and predictable demand. However, the constraint becomes snare-like when viewed from their incentive structure: Medicare payment rates are administratively set, not market-determined. Hospitals capture extraction from the constraint (guaranteed revenue) but are caught in the mechanism itself \u2014 they cannot refuse Medicare patients, cannot set prices freely, and face regulatory overhead. The sector develops organizational dependencies on Medicare revenue, making exit (shifting to all-private-pay) structurally infeasible. Effective extraction is high because the sector is locked into the system by prior investments in scale and capacity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Federal Government (Cost Control vs. Benefit Expansion)",
+      "comment": "PERSPECTIVE 4: FEDERAL GOVERNMENT (TANGLED ROPE) \u2014 Institutionally constrained by political commitment to the entitlement once established. Genuine coordination function: pooling elderly healthcare costs prevents catastrophic family bankruptcies and reduces demand for state/local charity care. But also genuine extraction: program costs grow with population aging, medical inflation, and political inability to cut benefits or enforce cost controls. The constraint enforces coordination (universal coverage, prevention of medical poverty) while simultaneously extracting from the federal budget with declining elasticity. Institutional exit is politically impossible \u2014 reducing Medicare is a third-rail issue \u2014 making the government's exit_options effectively constrained."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Healthcare Cost Crisis (Systemic Coordination Failure)",
+      "comment": "PERSPECTIVE 5: HEALTHCARE SYSTEM AS ORGANIZED AGENT (TANGLED ROPE) \u2014 From the perspective of the healthcare system itself (as a complex adaptive entity), Medicare creates both coordination and extraction. It coordinates demand (seniors access care) and supply (hospitals receive payment), but also extracts by creating moral hazard: unlimited reimbursement for procedures reduces cost sensitivity for both providers and patients. This generates the inflation spiral \u2014 higher costs trigger higher extraction. The system is constrained because Medicare funding is insufficient to cover demand (deductibles, premiums rise) but sufficient to lock in institutional dependencies (hospitals, providers, pharma depend on Medicare scale). The constraint simultaneously solves the access problem and creates the cost problem."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "The Analytical Observer (Temporary Institutional Solution)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SCAFFOLD) \u2014 From a long-term structural perspective, Medicare appears as a temporary institutional solution to a mid-20th-century coordination problem (catastrophic elderly healthcare costs in a pre-welfare society). The constraint exhibits scaffold properties: it solved the acute problem (medical poverty for seniors) but contains the seeds of its own unsustainability (cost inflation, population aging, budget constraints). The sunset is implicit in the demographics: as life expectancy increases and the ratio of retirees to workers rises, the payroll-tax-based funding model faces exponential pressure. The scaffold's function is gradually transferring from solving access to managing cost, a phase transition that looks like structural failure but is actually the constraint reaching its sunset. Theater_ratio is moderate (0.42) because while Medicare administrative burden exists, the core coordination function (universal coverage) remains genuine."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "extraction_vs_insurance_premium_ambiguity",
+      "question": "Is Medicare's extraction from working-age taxpayers genuine redistribution, or is it a legitimate insurance premium that they will collect in old age, making the net extraction zero across the lifespan?",
+      "resolution_mechanism": "Longitudinal lifetime fiscal analysis: track cohorts from working age through retirement; calculate whether average payroll tax paid equals average benefits received. Intergenerational accounting: assess whether younger cohorts are subsidizing older cohorts (extraction) or paying actuarially fair premiums (insurance).",
+      "impact": "If net-zero across lifespan: constraint reclassifies as Rope (pure coordination) from working-age perspective. If younger cohorts systematically underfunded: constraint remains Tangled Rope (age-based extraction layered on coordination). This determines whether the constraint is an intergenerational Ponzi or a legitimate insurance mechanism.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Lifetime fiscal impact of Medicare taxation: insurance premium vs. redistribution"
+    },
+    {
+      "id": "hospital_sector_extraction_direction",
+      "question": "Do hospitals experience Medicare as a beneficial guaranteed-revenue mechanism or as a constraining price-control mechanism that extracts surplus they would capture in a free market?",
+      "resolution_mechanism": "Comparative analysis of hospital profitability and reinvestment in Medicare-heavy vs. private-pay-heavy markets. Historical pricing data: charting hospital price trajectories before and after Medicare introduction. Sector capital allocation: whether hospitals withdraw from areas with high Medicare concentration.",
+      "impact": "If hospitals benefit net: reclassify hospital perspective from Snare to Rope or Tangled Rope (genuine mixed benefit). If hospitals experience extraction: classification stands. This determines whether the constraint extracts from medical providers or merely coordinates them.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Net directional impact of Medicare pricing on hospital sector profitability"
+    },
+    {
+      "id": "cost_inflation_driver_attribution",
+      "question": "To what degree is healthcare cost inflation in the Medicare era attributable to: (a) moral hazard from unlimited reimbursement; (b) technological advancement increasing treatment costs; (c) aging population requiring more intensive care; (d) market power of pharmaceutical and device manufacturers?",
+      "resolution_mechanism": "Decomposition analysis isolating each factor's contribution via regression, international comparison (countries with different cost-control mechanisms), and historical counterfactuals (what would per-capita costs be without Medicare's moral hazard effect?).",
+      "impact": "If moral hazard dominates (>50%): suppression classification rises (the constraint is sustaining inefficient behavior). If technology/aging dominates: suppression classification holds (cost growth is inevitable). If pharma/device sector dominates: reclassify hospital/pharma perspective as Snare (they are extracting from the system). Attribution determines whether extraction is endogenous to the constraint or exogenous.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cost inflation attribution in Medicare era"
+    },
+    {
+      "id": "political_exit_feasibility",
+      "question": "Under what political and demographic conditions could Medicare be structurally dismantled or fundamentally restructured, and is the observed political immobility a structural feature or a contingent political equilibrium?",
+      "resolution_mechanism": "Political economy analysis of coalition durability: seniors as voting bloc, beneficiary industries as lobbying power, rhetorical entrenchment ('earned benefit' vs. 'entitlement'). Demographic stress testing: as healthcare costs reach crisis thresholds, does political coalescence for fundamental restructuring become possible?",
+      "impact": "If dismantling is structurally infeasible: government's exit_options remain 'constrained' and perspective remains Tangled Rope. If restructuring becomes politically feasible under stress: exit_options shift to 'mobile' and perspective shifts to Rope or Scaffold (institutional agency emerges). This determines whether the constraint's persistence is structural or contingent.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Political structural limits to Medicare restructuring or dissolution"
+    },
+    {
+      "id": "coordination_function_genuine_vs_rhetorical",
+      "question": "Is the coordination function of Medicare (universal elderly healthcare access) structural and irreplaceable, or could alternative mechanisms (private insurance with subsidies, negative income tax, etc.) solve the same coordination problem with lower extraction?",
+      "resolution_mechanism": "Comparative institutional analysis: countries with different elderly healthcare models and their outcomes on access, cost, equity. Counterfactual historical analysis: what would have been the outcome of targeted subsidies vs. universal Medicare?",
+      "impact": "If coordination is genuinely irreplaceable: Tangled Rope classification stands (coordination function is real, extraction is endemic cost). If alternatives exist with lower extraction: reclassify as Snare (the constraint is chosen form of extraction, not inevitable coordination mechanism).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether Medicare's coordination function is unique or replaceable by lower-extraction alternatives"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28,
+      "id_override": "extractiveness_1967"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.45,
+      "id_override": "extractiveness_1992"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.52,
+      "id_override": "extractiveness_2017"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "theater_1967"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.38,
+      "id_override": "theater_1992"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.42,
+      "id_override": "theater_2017"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Medicare, established in 1965 and implemented in 1967, represents a structural shift in elderly healthcare provision from private/familial/charitable responsibility to federal entitlement. The constraint creates a permanent institutional obligation funded through mandatory payroll taxation (2.9% on earnings) and general revenue appropriations. Beneficiaries are Americans aged 65+ (approximately 68+ million as of 2024); costs are distributed across working-age taxpayers and the federal budget. Structurally, Medicare abolished medical bankruptcy as a primary economic outcome for the elderly, converting catastrophic healthcare costs into a managed collective risk pool. However, the constraint simultaneously creates extraction mechanisms: moral hazard from unlimited reimbursement, hospital sector dependence on Medicare payment rates, federal budget pressure, and age-based wealth transfer from younger to older cohorts. The constraint exhibits all six DR types from different structural positions, making it a diagnostic exemplar for how a single large institutional arrangement can be simultaneously experienced as pure coordination (elderly beneficiary), mixed extraction-coordination (working-age taxpayer), cost-control constraint (hospital system), intergenerational commitment (federal government), systemic contradiction (healthcare system itself), and unsustainable scaffold (analytical observer). The extractiveness has increased from 0.28 (1967, when elderly poverty was the dominant problem) to 0.52 (2017, when healthcare cost inflation dominates), revealing how a coordination mechanism can accumulate extraction over time as its primary problem-solving function succeeds and secondary extraction mechanisms emerge.",
+    "key_agents": [
+      "Elderly Americans 65+: Primary beneficiary (powerless/trapped at age 65+, but liberated from prior constraint of medical bankruptcy). Experiences constraint as Rope (pure coordination/liberation).",
+      "Working-age Taxpayers: Secondary victim (moderate/constrained by mandatory payroll taxation with no exit option). Experiences constraint as Tangled Rope (insurance premium + age-based extraction).",
+      "Hospital Systems and Medical Device Manufacturers: Apparent beneficiary, structural victim (powerful/arbitrage exit but locked into dependency on Medicare revenue). Experiences constraint as Snare (guaranteed revenue + price control).",
+      "Federal Government: Institutional actor (institutional/constrained by political commitment once entitlement established). Experiences constraint as Tangled Rope (coordination obligation + budget extraction).",
+      "Healthcare System (aggregate): Organized collective (organized/constrained). Experiences constraint as Tangled Rope (demand coordination + moral hazard inflation).",
+      "Analytical Observer: Systemic perspective (analytical/analytical). Sees constraint as Scaffold (temporary solution to mid-20th-century problem, approaching sunset as demographics shift)."
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint has accumulated extraction over 50+ years. Initial extractiveness was lower (0.28 in 1967) because the dominant problem was elderly medical poverty and access \u2014 Medicare's primary function was genuinely solving an acute coordination failure. As elderly healthcare access improved and medical technology expanded, the constraint accumulated secondary extraction mechanisms: unlimited fee-for-service reimbursement incentivizes procedure inflation; hospital dependence on Medicare creates monopoly-like pricing power; aging population increases per-capita costs beyond inflation; younger cohorts' payroll tax burden rises exponentially as the ratio of retirees to workers increases. The current 0.52 value reflects that extraction (cost inflation, intergenerational transfer, federal budget pressure) is now comparable to coordination benefit (universal coverage). Suppression (0.35): Moderate. Working-age taxpayers face suppression through mandatory payroll taxation with no exit option and limited political voice (voting against Medicare is electorally impossible). Elderly beneficiaries face suppression in the form of deductibles, copayments, and coverage gaps. However, suppression is not total \u2014 alternative insurance (Medigap, Medicare Advantage) provides some exit pathways, and the constraint is politically transparent (not hidden). Theater ratio (0.42): Moderate-low, increasing slightly over time. Medicare administrative requirements (prior authorization, billing codes, appeals processes) constitute theater, but the core coordination function (universal coverage, pooled risk) remains substantive. The constraint's theater has increased from 0.25 (1967, when administrative simplicity was higher) to 0.42 (2017, as compliance complexity has grown), but theater has not dominated function yet (would require >0.70 for Piton classification). This trajectory suggests the constraint is approaching the phase transition from Tangled Rope to Scaffold as cost controls and coverage restrictions tighten.",
+    "perspectival_gap": "All six perspectives produce different classifications despite identical base metrics. This is NOT a measurement error but a demonstration of how indexical position determines experienced constraint type. The elderly see Rope (pure coordination) because they are structurally mobile (exit option: become uninsured, move to private insurance) but experience the constraint as liberatory. The working-age see Tangled Rope because they experience both coordination (future protection) and extraction (current mandatory cost). The hospital system sees Snare because while beneficiary on paper, they are functionally locked into the constraint. The federal government sees Tangled Rope because institutional commitment creates constrained exit despite policy agency. The healthcare system sees Tangled Rope because demand coordination creates inflation extraction. The analytical observer sees Scaffold because the constraint's sunset condition (demographic unsustainability) is structurally embedded. These are not disagreements about facts \u2014 they are structural disagreements about which effects dominate from which position. The perspectival gap is the constraint's true signature.",
+    "directionality_logic": "Directionality values (d) are derived from agent power, exit options, and beneficiary/victim declarations. Elderly beneficiaries have low d (0.15\u20130.25) because they benefit and are trapped, making them net receivers of value extraction in their direction (negative effective extraction for them). Working-age taxpayers have moderate-high d (0.60\u20130.75) because they bear costs (mandatory taxation) with constrained exit, making them targets of extraction. Hospital systems have ambiguous d (0.30\u20130.50) because they are formal beneficiaries (guaranteed revenue) but structural victims (locked into dependency and price control). The federal government has high d (0.70\u20130.85) because it bears the budget extraction while unable to exit (politically constrained). The analytical observer has moderate d (0.70) derived from standard canonical fallback for analytical position. These directionality values drive the chi calculations: elderly beneficiaries experience low/negative chi (they are net beneficiaries); working-age taxpayers experience high chi (they bear extraction); hospital systems experience moderate chi (mixed benefit and constraint); federal government experiences high chi (budget extraction). The perspectival gap in chi is large because the indexical tuple (P, T, E, S) varies dramatically across perspectives \u2014 power ranges from powerless to institutional, exit ranges from trapped to arbitrage, and this variation drives both the classification differences and the directionality differences.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by distinguishing coordination function (genuine: universal elderly healthcare access) from extraction function (accumulated: cost inflation, intergenerational transfer, federal budget pressure). The constraint is legitimately Tangled Rope \u2014 it solves a real coordination problem while simultaneously extracting. The mandatrophy is resolved by the structural data: beneficiaries exist (elderly Americans, working-age future beneficiaries), victims exist (working-age taxpayers, federal budget, healthcare cost control), and active enforcement exists (mandatory payroll taxation, federal administration). The apparent contradiction between 'elderly see Rope' and 'analytical observer sees Scaffold' is not contradiction but structural fact \u2014 the constraint simultaneously IS a coordination mechanism AND is approaching unsustainability. The six perspectives are not competing hypotheses but different cuts through a complex institutional reality. The mandatrophy failure would be to claim the constraint is ONLY extraction (missing the genuine coordination) or ONLY coordination (missing the accumulated extraction). The DR framework resolves this by making both true simultaneously through perspectival indexing."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "medicaid_expansion_1967",
+      "healthcare_cost_inflation_mechanism",
+      "pharmaceutical_pricing_power",
+      "hospital_sector_consolidation",
+      "payroll_tax_intergenerational_transfer"
+    ],
+    "dual_formulation_note": "Medicare can be decomposed into multiple distinct constraints with different \u03b5 values: (1) elderly_healthcare_access (\u03b5=0.15, Rope) \u2014 pure coordination of access; (2) healthcare_cost_inflation (\u03b5=0.62, Snare) \u2014 unlimited reimbursement creates moral hazard; (3) payroll_tax_system (\u03b5=0.48, Tangled Rope) \u2014 mandatory wealth transfer with coordination function; (4) federal_budget_entitlement (\u03b5=0.55, Tangled Rope) \u2014 institutional commitment to unsustainable growth. This story treats Medicare as a single macro constraint with \u03b5=0.52, balancing these sub-constraints. The decomposition is available for finer-grained analysis but requires separate constraint files."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.78
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "elderly_medical_poverty_1960s",
+      "family_healthcare_dependency_system"
+    ]
+  }
+}

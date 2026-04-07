@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "sotu_1973_nixon_revenue_sharing",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_sotu_1973_nixon_revenue_sharing"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Nixon Revenue Sharing: Federal-State Fiscal Authority Redistribution (1973)",
+    "topic_domain": "governance/federalism",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_local_governments",
+      "regional_autonomy_advocates"
+    ],
+    "victims": [
+      "federal_policy_uniformity",
+      "marginalized_communities_in_low_tax_regions"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Poor Communities in Low-Tax States",
+      "comment": "PERSPECTIVE 1: POOR COMMUNITIES IN LOW-TAX STATES (SNARE) \u2014 Trapped within regional fiscal systems that lack revenue to provide services. Revenue sharing shifts federal funds to state control, but those funds flow according to state spending priorities, which may not prioritize poor communities. No exit: geographic mobility is costly; federal safety net is reduced. Extraction maximized by both suppression (immobility) and the de facto redirection of federal resources away from needs-based allocation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Civil Rights Enforcement Organizations",
+      "comment": "PERSPECTIVE 2: CIVIL RIGHTS ENFORCEMENT ORGANIZATIONS (TANGLED ROPE) \u2014 Constrained by reliance on federal enforcement leverage (EPA, DOJ, HHS compliance monitoring). Revenue sharing reduces federal conditionality: states receive funds with fewer strings attached. These organizations benefit from coordination aspects (clearer state-local resource allocation) but bear extraction as federal enforcement capacity declines. Can exit through litigation or advocacy, but at high institutional cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "State and Local Government Leaders",
+      "comment": "PERSPECTIVE 3: STATE AND LOCAL GOVERNMENT LEADERS (ROPE) \u2014 Primary beneficiaries with arbitrage options. Revenue sharing expands fiscal discretion, eliminates federal mandates, and allows tailoring of spending to local priorities. Experiences constraint as coordination mechanism: funds flow predictably, decision-making is localized, political credit flows to local actors. Net positive \u2014 arbitrage exit means they can adapt spending as needs change."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Federalism Reform Coalition",
+      "comment": "PERSPECTIVE 4: FEDERALISM REFORM COALITION (SCAFFOLD) \u2014 Organized advocates for decentralized governance view revenue sharing as temporary mechanism to rebalance federal-state power. Sunset clause implicit: as states prove capable of independent fiscal management, further devolution becomes possible. Theater ratio moderate-high because the 'new federalism' framing performs decentralization while maintaining federal-state fiscal interdependence. Constraint seen as transitional, not permanent."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Federal Centralization Apparatus",
+      "comment": "PERSPECTIVE 5: FEDERAL CENTRALIZATION APPARATUS (PITON) \u2014 Federal bureaucratic institutions maintain formal commitment to revenue sharing compliance, but the actual function (federal control over state spending via conditional grants) persists through non-revenue-sharing mechanisms (Medicare, Medicaid, conditional grants on remaining budget). Theater high: revenue sharing appears to decentralize while the federal system continues steering state behavior through multiple channels. The constraint's formal function has atrophied; its enforcement persists through institutional inertia."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer: Natural Federalism",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL FEDERALISM (MOUNTAIN) \u2014 Civilizational view: federalism is a structural necessity for governing large territories with diverse preferences. Revenue sharing becomes a natural law \u2014 any large polity must distribute fiscal authority across levels or collapse under central overhead. However, structural data contradicts this: identifiable beneficiaries (state leaders, regional elites) and victims (powerless communities, federal enforcement capacity) exist. This perspective risks naturalizing a contingent power redistribution as an immutable feature of governance."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "federal_enforcement_substitution",
+      "question": "Do non-revenue-sharing federal mechanisms (Medicare, Medicaid, conditional grants) substitute for revenue-sharing federal control, or do they represent genuine decentralization?",
+      "resolution_mechanism": "Analysis of federal leverage pathways: track federal leverage in healthcare, education, and environmental domains pre- vs post-revenue-sharing. Measure extent to which states must comply with federal standards to access remaining conditional funds.",
+      "impact": "If substitution: revenue sharing is theater masking continued federal control. If genuine decentralization: extraction is lower than measured. Classification shifts from Tangled Rope toward Rope for federal-state relationship.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether federal non-revenue-sharing mechanisms substitute for devolved fiscal control"
+    },
+    {
+      "id": "state_fiscal_inequality_mechanism",
+      "question": "Do states with lower tax bases use revenue-shared federal funds to supplement essential services, or do they divert funds to reduce local tax burdens on wealthy taxpayers?",
+      "resolution_mechanism": "State-level budget analysis comparing revenue-shared fund allocation: per-capita spending on education, healthcare, social services by state income quartile. Time-series analysis of state tax policy before/after revenue sharing.",
+      "impact": "If diverted to tax reduction: extraction on poor communities increases. If used for services: extraction is lower. This determines whether victims classification is accurate or whether some states use revenue sharing for regressive redistribution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "State allocation of revenue-shared federal funds: services vs tax relief"
+    },
+    {
+      "id": "cross_state_mobility_elasticity",
+      "question": "Does revenue sharing increase or decrease cross-state migration by poor households seeking services, and does that migration pressure affect state spending decisions?",
+      "resolution_mechanism": "Migration flow analysis: interstate mobility patterns for low-income households pre- vs post-revenue-sharing. Regression analysis of state spending generosity vs observed migration flows. State policy response to migration (e.g., residency requirements, benefit restrictions).",
+      "impact": "High migration elasticity: states reduce welfare spending to avoid attracting poor households (race-to-the-bottom). Low elasticity: revenue sharing enables service differentiation without competitive pressure. High elasticity supports Snare classification; low elasticity supports Rope or Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether revenue sharing triggers competitive reduction of social spending"
+    },
+    {
+      "id": "federal_enforcement_timeline",
+      "question": "How long after revenue sharing did federal enforcement leverage in civil rights, environmental protection, and labor standards measurably decline?",
+      "resolution_mechanism": "Timeline analysis: EPA enforcement actions, DOJ civil rights litigation, OSHA enforcement rates in 1973-1978 vs 1978-1983. Correlation with revenue sharing implementation and state budget constraints.",
+      "impact": "If decline occurs immediately: revenue sharing directly reduces federal capacity. If decline is delayed or absent: federal enforcement persists through non-fiscal mechanisms. Affects classification of victim group (federal enforcement orgs) impact.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Temporal lag between revenue sharing and federal enforcement decline"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.36
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The 1973 Nixon Revenue Sharing proposal represents a structural shift in the federal-state fiscal relationship, positioning decentralization of spending authority as a mechanism to enhance local autonomy while reducing federal policy leverage. The proposal coordinates legitimate local adaptation to regional needs while simultaneously extracting federal enforcement capacity in civil rights, environmental protection, and social safety nets. The constraint exhibits all six DR types from different observation points, with the critical diagnostic gap between beneficiaries (state leaders, regional autonomy advocates) and victims (powerless communities in low-tax regions, federal enforcement institutions). The theater ratio rises over the interval as revenue sharing becomes institutionalized ritual: state governments perform fiscal autonomy while federal power persists through conditional grants on remaining funds (Medicare, Medicaid, highway funding). The extractiveness increases moderately as states adapted to the new fiscal regime, with some using federal revenue-shared funds to reduce local taxes rather than maintain service levels.",
+    "key_agents": [
+      "State and Local Government Leaders: Primary beneficiaries (institutional/arbitrage) \u2014 gain fiscal discretion, political credit, and reduced federal conditionality. Arbitrage exit allows adaptation to changing priorities.",
+      "Poor Communities in Low-Tax States: Primary victims (powerless/trapped) \u2014 trapped within regional fiscal systems with limited revenue bases. Federal safety net reduced. No geographic mobility without significant cost.",
+      "Civil Rights and Environmental Enforcement Organizations: Secondary victims (moderate/constrained) \u2014 federal agencies lose conditionality leverage as states receive unconditional revenue shares. Constrained by reduced enforcement funding and political support for federal mandates.",
+      "Federalism Reform Coalition: Organized advocates (organized/constrained) \u2014 view revenue sharing as transitional mechanism toward full decentralization. Constrained by dependence on federal political support to implement further devolution.",
+      "Federal Centralization Apparatus: Institutional actor (institutional/arbitrage) \u2014 maintains formal compliance with revenue sharing while using non-revenue-sharing mechanisms (conditional grants) to preserve federal leverage. Theater high as apparatus performs devolution while sustaining control.",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing a contingent power redistribution as an immutable feature of governing large territories."
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. Revenue sharing benefits state leaders and regional elites through expanded fiscal discretion (coordination function: ~0.15 extraction inherent to allocation). But the constraint also extracts from powerless communities and federal enforcement capacity through the mechanism of fiscal devolvement without corresponding reduction in inequality (extraction component: ~0.23). The net reflects genuine coordination mixed with genuine extraction. Suppression (0.42): Moderate. Barriers to exit include geographic immobility for poor households, federal enforcement dependence for civil rights organizations, and political path-dependence of state fiscal systems. Not total suppression \u2014 some migration is possible, some federal enforcement persists, but significant barriers exist. Theater ratio (0.55): Moderate-high. Revenue sharing performs federalism reform while maintaining de facto federal control through conditional grants on non-revenue-shared funds. The performance increases over the interval as the apparatus adapts.",
+    "perspectival_gap": "The critical gap separates beneficiaries from victims. State leaders perceive coordination (Rope) \u2014 revenue sharing solves the legitimate problem of tailoring spending to local needs. Poor communities perceive extraction (Snare) \u2014 devolution of authority without devolution of equalization mechanisms leaves them dependent on low-tax-base state budgets. Civil rights organizations perceive mixed coordination-extraction (Tangled Rope) \u2014 the system enables some state innovation in rights protection but reduces federal enforcement leverage. The analytical observer risks perceiving natural federalism (Mountain) \u2014 decentralization appears as an inevitable feature of governing large polities \u2014 but structural data reveals this as false summit: specific institutional actors benefit; specific vulnerable populations bear costs.",
+    "directionality_logic": "Directionality values (d) for each perspective are derived from the agent's structural relationship to the extraction flow. State leaders have low d (beneficiaries with arbitrage exit options, ~0.15): they experience negative effective extraction, receiving fiscal benefits. Poor communities have high d (victims with trapped exit options, ~0.95): they experience maximum extraction, bearing costs of reduced federal redistribution without exit. Civil rights organizations have moderate d (victims with constrained exit, ~0.70): they lose federal leverage but can continue advocating and litigating. The federal apparatus has low d (beneficiary with arbitrage exit, ~0.20): it maintains leverage through alternative mechanisms. The piton classification emerges from theater ratio (0.55, rising) indicating performative compliance rather than functional decentralization.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that revenue sharing is genuinely Tangled Rope: it coordinates local adaptation while extracting federal enforcement capacity. The false-summit risk is the natural-law reading (Federalism is inherent; decentralization is inevitable). The actual structure is contingent institutional choice with distributional consequences. The piton perspective (federal apparatus) captures an important secondary dynamic: revenue sharing performs decentralization while the apparatus continues steering state behavior through remaining conditional grants. The scaffold perspective reveals that the constraint is not necessarily permanent \u2014 alternative mechanisms (direct federal spending, national minimum standards, federal enforcement without fiscal conditionality) could restructure the relationship. The snare perspective (poor communities) reveals the extraction mechanism: fiscal devolution without equalization is a way of reducing federal redistribution while claiming to enhance local autonomy. This is not mandatrophy collapse \u2014 each perspective is analytically sound \u2014 but rather a clarification that the constraint's classification depends critically on whether the observation includes the distributional consequences across income levels and federal functions."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "federal_conditional_grant_system",
+      "medicaid_state_matching_requirement",
+      "interstate_welfare_competition"
+    ],
+    "dual_formulation_note": "Revenue sharing operates upstream in the federal-state fiscal relationship; its effects propagate through conditional grant systems, Medicaid state matching, and interstate fiscal competition. Each downstream constraint has its own \u03b5 value reflecting observable-specific measurement. The family is linked through the decentralization mechanism: revenue sharing initiates the shift in fiscal authority that downstream constraints operationalize."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.75
+    }
+  ]
+}

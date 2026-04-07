@@ -1,0 +1,231 @@
+{
+  "header": {
+    "constraint_id": "sotu_1997_clinton_welfare_employment_transition",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "welt"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Welfare-to-Work Employment Transition (1997 PRWORA)",
+    "topic_domain": "social_policy/labor_market",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "employers_of_welfare_workers",
+      "state_administrators",
+      "tax_credit_recipients"
+    ],
+    "victims": [
+      "welfare_recipients_forced_transition",
+      "low_wage_workers_labor_market_competition"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Welfare Recipient Under Mandate",
+      "comment": "PERSPECTIVE 1: WELFARE RECIPIENT (SNARE) \u2014 Trapped by work requirement with no genuine choice. Loses benefits if refusing work; faces low-wage labor market with limited bargaining power. The constraint extracts compliance (work obligation) and vulnerability (willingness to accept poor conditions to retain benefits access). Zero degrees of freedom within biographical horizon."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Low-Wage Worker Without Welfare History",
+      "comment": "PERSPECTIVE 2: LOW-WAGE WORKER (SNARE) \u2014 Faces labor market saturated with welfare-to-work entrants subsidized by employers. Wage suppression and reduced bargaining power from the influx of desperate workers. No organizational capacity to resist or exit. Bears extraction through competitive displacement."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Employer Hiring Welfare Workers",
+      "comment": "PERSPECTIVE 3: EMPLOYER (ROPE) \u2014 Experiences pure coordination: tax credits, subsidized training, government-assured worker pipeline. Benefits from reduced hiring costs and assured labor supply. The constraint solves a coordination problem (matching welfare workers with employers) while extracting value (lower wages, subsidies, reduced liability for training). Beneficiary with maximum optionality."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "State Welfare Administration",
+      "comment": "PERSPECTIVE 4: STATE WELFARE ADMINISTRATION (TANGLED ROPE) \u2014 Constrained by federal matching requirements and job placement targets, but benefits from reduced welfare caseloads and cost savings. Coordinates state-level employment infrastructure (training programs, childcare subsidies, job matching). Genuine coordination function coupled with extractive pressure to reduce visible welfare dependency (theater). Can exit through federal compliance violations but at severe cost."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Support Service Infrastructure (Time-Limited)",
+      "comment": "PERSPECTIVE 5: SUPPORT SERVICES (SCAFFOLD) \u2014 Training programs, childcare subsidies, transportation assistance, and job placement services are structured as temporary scaffolding. Designed to bridge transition; sunset logic embedded in the policy (services time-limited, phased out as recipients move into stable employment). Low theater because services have genuine functional purpose. Constrained by time-limit gates and funding cycles. Classified as scaffold if exit path is real (recipients become self-sufficient); classified as tangled rope if services become permanent subsidy for chronic low-wage work."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Work Ethic Narrative",
+      "comment": "PERSPECTIVE 6: WORK ETHIC NARRATIVE (PITON) \u2014 The cultural framing of welfare-to-work as moral imperative (work is dignifying, welfare is dependency, employment solves poverty) persists despite evidence that many recipients are already working, that transition jobs often pay below subsistence, and that work requirement + low wages + time-limited services creates perpetual precarity. The narrative maintains legitimacy through performative job placement statistics while the actual mechanism extracts effort and suppresses alternatives. Theater ratio reflects the gap between policy rhetoric (empowerment through work) and structural reality (subsidized precarity)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "national",
+      "label": "Analytical Observer (Structural View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 The constraint exhibits genuine coordination (matching welfare workers with employers, bundling support services) coupled with asymmetric extraction (wage suppression, vulnerability creation, shift of dependency risk from the state to the individual). The beneficiary structure is institutional/multinational: employers benefit through subsidies; states benefit through caseload reduction; welfare recipients and low-wage workers bear costs. The constraint persists because it solves problems for the powerful while distributing costs to the powerless."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "transition_trajectory_sustainability",
+      "question": "Do welfare-to-work entrants sustain employment at above-poverty wages, or do they cycle between low-wage work and welfare re-enrollment?",
+      "resolution_mechanism": "Longitudinal income tracking; comparison of post-transition earnings to poverty line and to comparable non-welfare workers; measurement of welfare re-enrollment rates within 3, 5, and 10 years",
+      "impact": "If sustained above poverty: constraint is temporary bridge (scaffold). If cyclical or chronically low-wage: constraint is permanent extraction mechanism disguised as transition (snare). If mixed outcomes vary by region/subgroup: constraint is tangled rope with differential vulnerability.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether welfare-to-work creates sustainable above-poverty employment"
+    },
+    {
+      "id": "support_service_adequacy_decay",
+      "question": "Do time-limited support services (childcare, training, transportation) provide sufficient duration for recipients to reach stable employment, or are they intentionally undersized to force rapid labor market entry?",
+      "resolution_mechanism": "Cost-benefit analysis of support service duration vs. typical time to skill acquisition and stable job placement; comparison of actual service usage to recipient-identified need; state administrative documentation of service allocation decisions",
+      "impact": "If adequate: support services function as real scaffolding (sunset justified). If undersized: services are theater (piton) or extractive accelerants (snare) pushing recipients into precarity before readiness.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether support services are adequately sized or theater"
+    },
+    {
+      "id": "wage_suppression_magnitude",
+      "question": "What fraction of the welfare-to-work wage depression (relative to comparable non-subsidized hiring) accrues to the employer tax credit, and what fraction is pure extraction from the worker's bargaining power collapse?",
+      "resolution_mechanism": "Matched-pair analysis: welfare workers' wages vs. non-welfare workers in identical roles; employer survey of tax credit value vs. actual wage reduction; measurement of counterfactual hiring rates absent the tax credit",
+      "impact": "If tax credit equals wage reduction: the extraction is approximately transparent (tangled rope). If wage reduction exceeds tax credit: pure extraction is present (snare component confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Decomposition of wage suppression into credit value and pure extraction"
+    },
+    {
+      "id": "institutional_benefit_concentration",
+      "question": "Does the policy disproportionately benefit large employers and franchise chains capable of navigating tax credit administration, or do small employers capture equivalent value?",
+      "resolution_mechanism": "IRS Form 8586 data (Work Opportunity Tax Credit claims) stratified by employer size and industry; administrative interviews with tax preparers and HR departments at different scales",
+      "impact": "If concentrated in large firms: the constraint creates institutional hierarchy (large-firm beneficiaries, small-firm competitors, workers) suggesting hidden power asymmetry. If distributed: the constraint is more genuinely tangled rope across institutional spectrum.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether policy benefits concentrate in large employers"
+    },
+    {
+      "id": "state_caseload_reduction_mechanism",
+      "question": "Are declining welfare caseloads due to successful employment transitions, benefit time limits forcing people off rolls, or movement to disability/SSDI programs?",
+      "resolution_mechanism": "Cohort tracking of welfare exits; comparison of caseload decline rates to employment entry rates; measurement of SSDI application rates and approval rates for welfare leavers during transition period",
+      "impact": "If mostly employment: constraint functions as described (tangled rope). If mostly time limits or SSDI redirection: constraint achieves cost reduction through administrative exclusion, not successful transition (snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Mechanism of welfare caseload reduction"
+    },
+    {
+      "id": "employer_labor_demand_substitution",
+      "question": "Does the subsidized welfare-worker hiring substitute for ordinary hiring that would occur without the tax credit, or does it create genuinely new jobs?",
+      "resolution_mechanism": "Matched control analysis: hiring patterns in firms with high tax credit utilization vs. firms without; measurement of overall labor force participation and unemployment in states with aggressive vs. passive welfare-to-work programs",
+      "impact": "If substitution: the policy redistributes jobs from non-subsidized workers to subsidized workers without increasing employment (pure redistribution favoring employers). If new job creation: the constraint creates genuine coordination value.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether tax credits create new jobs or substitute"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The 1997 Personal Responsibility and Work Opportunity Reconciliation Act (PRWORA) institutionalized a constraint coupling mandatory work requirements for welfare recipients with employer tax credits (Work Opportunity Tax Credit), state job placement targets, and government-funded transition services (training, childcare, transportation). The constraint exhibits all classic features of tangled rope: genuine coordination function (matching workers with employers, bundling support services to enable transition) coupled with asymmetric extraction (wage suppression, vulnerability creation, shift of social risk from the state to the individual labor market). The constraint redistributes benefits to employers (subsidized hiring, reduced training costs, labor supply assurance) and states (reduced visible welfare caseloads, cost savings) while imposing costs on welfare recipients (work obligation, wage reduction, precarity) and low-wage workers generally (labor market saturation, wage depression). The theater ratio (0.48, increasing to 0.52) reflects the gap between policy narrative (work promotes dignity and self-sufficiency) and structural reality (many transition jobs are part-time, minimum-wage, or below-subsistence; support services time-limited; work obligations coerce labor market entry regardless of readiness). The constraint's extractiveness increased from 0.42 to 0.60 over the interval as the initial coordination phase (matching workers to jobs, establishing services) gave way to enforcement-heavy management of long-term precarity.",
+    "key_agents": [
+      "Welfare Recipients Under Mandate: Primary victims (powerless/trapped) \u2014 lose benefits if refusing work; forced into labor market with minimal bargaining power; face time-limited support services",
+      "Low-Wage Workers Without Welfare History: Secondary victims (powerless/trapped) \u2014 face wage suppression and competitive displacement from influx of subsidized welfare-worker hiring",
+      "Employers Hiring Welfare Workers: Primary beneficiaries (institutional/arbitrage) \u2014 receive tax credits, government-subsidized training, assured worker pipeline; benefit from reduced bargaining power of hires",
+      "State Welfare Administration: Institutional actor (organized/constrained) \u2014 constrained by federal compliance and caseload reduction targets; benefits from reduced visible welfare dependency and cost savings; coordinates state employment infrastructure",
+      "Support Service Providers: Secondary institutional actor (institutional/constrained) \u2014 provide training, childcare, transportation, job placement services; benefit from contract funding; constrained by time-limited authorization and sufficiency debates",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 observes genuine coordination coupled with structural extraction; notes tension between sunset logic (services time-limited) and perpetual precarity (workers cycling through low-wage labor)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts compliance (work obligation, time-limited services force rapid labor market entry), wages (employers capture tax credit value; workers' reduced bargaining power suppresses wages below counterfactual), and risk (shift of income volatility from guaranteed transfer to contingent employment). However, extractiveness is not maximal (snare range \u2265 0.66) because genuine coordination components exist: employers are solving a hiring problem; states are enabling infrastructure development; many recipients genuinely transition into sustained employment (though a subpopulation cycles or remains chronically precarious). The measurement trajectory (0.42 \u2192 0.60) shows extractiveness increasing as the initial enthusiasm phase (successful placements, visible caseload reduction) gave way to long-term management of precarity. Suppression (0.65): High. Multiple suppression mechanisms: time-limited support services force rapid entry before readiness; work requirements eliminate refusal option; low-wage job saturation limits bargaining power; childcare/transportation support undersizing constrains choice; time limits on benefits reset the pressure periodically. Suppression is structural (external barriers) but also partly internalized through the cultural narrative that work is morally obligatory. Theater ratio (0.48, rising to 0.52): Moderate, increasing. Policy rhetoric emphasizes dignity, self-sufficiency, and economic empowerment through work. Actual outcome for many recipients: part-time, minimum-wage, or below-subsistence jobs with high turnover, minimal benefits, and chronic instability. The theater increases over time as policy success is measured by caseload reduction and job placement statistics (which remain high) while income stability and poverty reduction metrics show persistent problems (which remain hidden from statistical visibility).",
+    "directionality_logic": "The beneficiary-victim asymmetry drives high effective extractiveness. Employers benefit from subsidized hiring \u2014 the tax credit reduces labor costs, government training reduces firm investment, assured worker pipeline reduces search time. The derivation yields low directionality (d \u2248 0.10\u20130.20) for employers: beneficiary status + arbitrage exit \u2192 low d \u2192 negative f(d) \u2192 constraint appears to benefit this agent. Welfare recipients and low-wage workers, by contrast, are victims with trapped or constrained exit. Victims + trapped exit \u2192 high d \u2192 high f(d) \u2192 constraint extracts from these agents. States occupy an intermediate position: beneficiary of reduced caseloads but constrained by federal compliance requirements and political pressure to maintain visible success. The inter-institutional perspective shows the constraint working as a coordination mechanism that systematically advantages employers and states while disadvantaging individual workers. The analytical observer's directionality is high (d \u2248 0.72) because the analyst measures impact across all agents and sees net extraction despite coordinated appearance.",
+    "perspectival_gap": "The constraint produces sharp perspectival divergence. From the employer's view (rope), the policy is pure coordination: it solves the hiring problem, provides trained workers, and creates a stable labor supply. From the welfare recipient's view (snare), it is pure extraction: work requirement with no genuine choice, time-limited services that don't match actual transition time, wages that don't sustain independence. From the state administrator's view (tangled rope), it is mixed: coordination function (infrastructure, service delivery) coupled with extractive pressure (federal targets, caseload reduction metrics). The support services perspective splits: if services are adequate and recipients achieve sustained employment, they are genuine scaffold (temporary bridge). If services are undersized theater designed to accelerate labor market entry before readiness, they become extractive (snare component). The work ethic narrative (piton) frames the whole constraint as morally necessary and individually empowering while remaining largely indifferent to structural outcomes.",
+    "directionality_logic_institutional": "State administrators represent a captured institutional middle: they coordinate federal/state partnership (beneficiary position with constrained exit \u2014 federal grants fund services, but losing federal funding is catastrophic). They also manage enforcement pressure on welfare recipients (institutional power but constrained by political need to show both success and compassion). The employer and state perspectives do not occupy the same institutional level in a meaningful sense: employers have arbitrage (can exit by simply not hiring welfare workers; no legal requirement; choice is fully optional), while states have constrained exit (cannot refuse federal requirements without losing all Title IV-E funding). This asymmetry, captured in the directionality derivation, explains why the constraint is rope from the employer view but tangled rope from the state view \u2014 states genuinely need the coordination function, while employers merely benefit from it.",
+    "perspectival_gap_interinstitutional": "This constraint exemplifies inter-institutional asymmetry: two institutional actors (employers and states) have structurally different relationships to the same constraint. The employer is a beneficiary with arbitrage exit \u2014 can walk away without cost. The state is a constrained beneficiary \u2014 must participate in federal program structure to fund services; walking away means federal funding loss and immediate crisis in state-level safety net. The directionality derivation captures this: employer d \u2248 0.10 (arbitrage reduces weight of beneficiary status), state d \u2248 0.35\u20130.40 (constrained exit increases vulnerability despite beneficiary status). The perspectives should differ not just in classification but in the degree of extraction experienced by each institutional actor.",
+    "mandatrophy_analysis": "The constraint resolves the mandatrophy by showing that tangled rope and snare classifications are not contradictory but perspectival. From any single observer position (beneficiary, victim, analyst), the classification is unambiguous. The apparent conflict arises only when trying to assign a single type to a constraint that structurally produces different outcomes for different agents. The tangled rope classification is correct from the institutional analyst's perspective: the constraint genuinely coordinates (matches workers with jobs, funds services, solves state program structure) while extracting asymmetrically (workers bear risk, employers capture value, states shift dependency costs). The snare classification is correct from the trapped welfare recipient's perspective: they experience no coordination benefit, only extraction (work requirement, wage suppression, precarity). The piton classification reveals that cultural framing (work ethic narrative) maintains the constraint's legitimacy by naturalizing outcomes as individual choices and moral imperatives, masking the structural extraction. The scaffold classification is conditional: if support services actually enable sustained above-poverty employment, the sunset logic is real and the constraint functions as described. If services are theater undersized by design, the scaffold is a false frame and the constraint is snare with temporary theater.",
+    "identity_locked_note": "Some welfare recipients experience identity-locked dynamics: their identity has incorporated welfare dependence (or rejection/stigmatization of welfare dependence) to such a degree that work requirement, while externally imposed, activates internalized moral pressure. For these agents, the constraint's suppression is partly structural (time limits, mandatory work) and partly internalized (shame about dependency, moral endorsement of work obligation). The measurements cannot distinguish these mechanisms, requiring the omega variable on suppression mechanism ambiguity. If an agent's suppression persists after the structural constraint is removed (e.g., after finding stable employment, they continue overworking to avoid perceived dependency risk), the identity lock is confirmed.",
+    "temporal_trajectory_note": "The measurement trajectory (extractiveness 0.42 \u2192 0.60) reflects a policy lifecycle: initial phase (1997\u20132000) focused on visible success (job placements, caseload reduction, employer enthusiasm); second phase (2000\u20132005) revealed long-term precarity (many workers cycling between low-wage work and welfare, chronic instability); third phase (2005+) normalized precarity as expected outcome. Theater ratio increases because success metrics (placements, caseload reduction) continue climbing even as income stability metrics stagnate, creating growing gap between narrative and reality. The Goodhart deterioration pattern is classic: states optimize for what they measure (job placements, caseload reduction) rather than what they intend (sustained above-poverty employment). Extractiveness increases as the constraint shifts from coordination (early phase) to enforcement of precarity (later phase)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "earned_income_tax_credit_behavioral_incentive",
+      "minimum_wage_suppression_low_skill_labor_market",
+      "childcare_affordability_double_bind"
+    ],
+    "dual_formulation_note": "Welfare-to-work is upstream of low-wage labor market wage suppression and downstream of federal safety net restructuring. The constraint family shows how policy coordination at state level (welfare-to-work) propagates to labor market effects (wage suppression) and access constraints (childcare affordability). Each story has different epsilon: welfare-to-work itself is high-extractive tangled rope; minimum wage suppression is snare (powerless workers trapped); childcare affordability is tangled rope (families forced into precarious dual-earning or single-breadwinner traps)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35,
+      "note": "State administrators: beneficiary of caseload reduction but constrained by federal requirements. Difference from employer d \u2248 0.15 reflects constrained (federal grant dependency) vs. arbitrage (optional participation) exit options."
+    }
+  ]
+}

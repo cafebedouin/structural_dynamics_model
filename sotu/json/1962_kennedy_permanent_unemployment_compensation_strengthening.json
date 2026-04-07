@@ -1,0 +1,206 @@
+{
+  "header": {
+    "constraint_id": "1962_kennedy_permanent_unemployment_compensation_strengthening",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "puc"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.48,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Permanent Strengthening of Unemployment Compensation System",
+    "topic_domain": "economic_policy/labor/social_insurance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "jobless_workers",
+      "aggregate_demand_stabilizers"
+    ],
+    "victims": [
+      "payroll_tax_contributors",
+      "federal_budget_bearers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Jobless Worker",
+      "comment": "PERSPECTIVE 1: JOBLESS WORKER (ROPE) \u2014 Trapped in joblessness (biological and economic need for income), but the permanent automatic system coordinates genuine collective action: pooling risk across the employed population to ensure purchasing power during involuntary unemployment. The worker benefits from both the coordination function (risk pooling) and the adequacy design (maintaining living standards). Experiences this as pure coordination despite being trapped \u2014 the constraint exists to solve their coordination problem with employed contributors."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Employed Payroll Tax Contributor",
+      "comment": "PERSPECTIVE 2: EMPLOYED PAYROLL TAX CONTRIBUTOR (TANGLED ROPE) \u2014 Constrained by mandatory payroll taxation and social insurance norms. Experiences both coordination (unemployment risk pooling protects the contributor if they become jobless) and asymmetric extraction (permanent strengthening increases their marginal tax burden compared to minimal pre-reform system). The constraint coordinates genuine risk-sharing while extracting automatic revenue. Moderate power because contributors can exit partially through income mobility or tax arbitrage but face high social and legal barriers."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Business Enterprise",
+      "comment": "PERSPECTIVE 3: BUSINESS ENTERPRISE (TANGLED ROPE) \u2014 Mobile relative to payroll taxation (can relocate, adjust compensation structures, invest in automation) but benefits from a stabilized consumer base. Permanent unemployment strengthening coordinates demand stability (employees of other firms remain solvent customers) while extracting via higher employer-side payroll contributions. Powerful agents can model the cost-benefit calculus and may exit through relocation or capital substitution. Net extraction depends on elasticity of labor demand and capital mobility."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Federal Government",
+      "comment": "PERSPECTIVE 4: FEDERAL GOVERNMENT (SCAFFOLD) \u2014 Constrained by fiscal sustainability and electoral cycles. Permanent automatic unemployment strengthening is a scaffold: it solves the crisis-driven politics of temporary supplemental benefits by converting emergency measures into structural formula-driven payments. Theater is low (the mechanism is mechanically simple: triggers automatically when unemployment rises, recedes when it falls). The scaffold has an implicit sunset: if structural unemployment falls substantially or if labor dynamics change fundamentally, the need for generous permanent benefits may decline. Federal coordination function is creating counter-cyclical automatic stabilization; extraction is the permanent fiscal burden. Generational perspective reveals that this is temporary support for a specific historical phase of labor market volatility."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Low-Wage Workers Without Savings",
+      "comment": "PERSPECTIVE 5: LOW-WAGE WORKERS WITHOUT SAVINGS (SNARE) \u2014 Trapped in precarious employment and dependency on wages for survival. From their generational perspective, permanent unemployment strengthening alone is insufficient \u2014 the constraint extracts by requiring joblessness as the trigger condition. Even with adequate benefits, the worker must become involuntarily unemployed to receive support. This perspective sees pure extraction: the constraint requires a catastrophic status change (job loss) to deliver protection. Suppression is high because the worker cannot avoid the employment system or build independent security."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Insurance Industry Intermediary",
+      "comment": "PERSPECTIVE 6: INSURANCE INDUSTRY INTERMEDIARY (PITON) \u2014 Arbitrage position (can route capital flows, lobby for policy design that maintains intermediary role). Permanent unemployment strengthening converts unemployment support from state-managed direct provision to a hybrid system where private unemployment insurance, state programs, and federal supplements coexist in a complex regulatory architecture. The intermediary maintains roles in claims adjudication, fraud detection, and fund management, but the actual coordination function (risk pooling) is performed directly by the social insurance mechanism. Theater is high (intermediaries perform compliance, dispute resolution, actuarial framing) but function is degraded \u2014 the direct coordination mechanism is simpler and more effective. Piton classification reflects institutional inertia: intermediaries persist through regulatory capture and path dependency rather than because their services are essential to the core coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational/global scope, permanent unemployment strengthening is a mixed coordination-extraction system. It coordinates counter-cyclical demand stabilization (genuine collective action problem solved: individual workers cannot maintain purchasing power during unemployment, yet aggregate demand maintenance benefits all participants). It simultaneously extracts by creating permanent fiscal obligations and implicit redistribution from capital to labor through payroll taxation. Global perspective reveals competitiveness effects: permanent high unemployment benefits create wage-floor effects and labor cost differentials relative to lower-protection jurisdictions. The constraint is neither pure coordination nor pure extraction but a structured hybrid."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "adequacy_threshold_definition",
+      "question": "What percentage of prior wage constitutes 'adequate' purchasing power maintenance \u2014 and how is that adequacy measured across income levels?",
+      "resolution_mechanism": "Empirical comparison of jobless-period consumption patterns and poverty rates at different replacement ratios (50%, 66%, 80%, 90%); correlation with return-to-work employment quality",
+      "impact": "If adequacy threshold is high (80%+): constraints on work incentives and labor market friction increase (snare extraction becomes salient). If threshold is low (50%): adequacy goal is not achieved, constraint becomes facade. Threshold directly determines whether this is genuine coordination or partially extractive benefit reduction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Definition of adequate benefit level to maintain purchasing power"
+    },
+    {
+      "id": "fiscal_sustainability_horizon",
+      "question": "Over what time horizon is permanent strengthening fiscally sustainable without requiring payroll tax increases that exceed labor cost absorption capacity?",
+      "resolution_mechanism": "Long-run labor demand elasticity modeling; historical comparison to other nations' permanent unemployment insurance (Germany, Netherlands, Denmark); sensitivity analysis on full-employment unemployment rates and benefit duration",
+      "impact": "If sustainable indefinitely: constraint is genuine coordination (risk pooling cost is manageable). If unsustainable beyond 20-30 years: constraint is partially extractive (transfers intergenerational fiscal burden to future workers). Affects whether scaffold classification (with sunset) is more appropriate than tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Long-term fiscal sustainability of permanent generous benefits"
+    },
+    {
+      "id": "labor_market_incentive_effects",
+      "question": "Do permanent adequate unemployment benefits reduce job-search intensity and employment duration in ways that harm both individual worker prospects and aggregate labor utilization?",
+      "resolution_mechanism": "Quasi-experimental analysis of benefit changes (state-level variation, temporary federal supplements); comparison of return-to-work employment quality and wage trajectories; job-search behavior modeling",
+      "impact": "If incentive effects are significant: constraint creates snare-like properties even for beneficiaries (workers become trapped in unemployment by reduced work incentives, leading to worse long-term outcomes). If effects are minimal: coordination function is preserved. Affects classification from jobless worker perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Work incentive effects of permanent adequate unemployment benefits"
+    },
+    {
+      "id": "political_economy_lock_in",
+      "question": "Once permanent generous unemployment benefits are institutionalized, can they be reduced or modified without triggering profound political backlash and institutional path dependence?",
+      "resolution_mechanism": "Historical analysis of benefit reductions in other nations; political economy modeling of constituency lock-in; welfare state retrenchment literature",
+      "impact": "If lock-in is strong: this constraint becomes piton-like (the permanent mechanism, once established, persists regardless of changing labor market conditions, creating theatrical maintenance costs). If lock-in is weak: the scaffold's sunset is credible (reform can adjust benefits as conditions change). Affects characterization of sustainability and institutional flexibility.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Political sustainability and reversibility of permanent benefit systems"
+    },
+    {
+      "id": "wage_compression_and_labor_supply",
+      "question": "Does permanent adequate unemployment insurance create wage floors and labor supply elasticity changes that compress wage inequality but also reduce low-skill employment opportunities?",
+      "resolution_mechanism": "Comparative labor market data across high vs. low unemployment-protection jurisdictions; wage distribution analysis; employment rate analysis by skill level",
+      "impact": "If compression occurs with employment loss for low-skill workers: constraint extracts from that population (snare properties). If compression occurs with maintained employment: constraint achieves coordination without extraction. Affects whether the constraint genuinely benefits all workers or creates hidden extraction channels.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Wage and employment distributional effects of permanent benefits"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The permanent strengthening of unemployment compensation represents a fundamental shift in how liberal democracies approach income security during involuntary joblessness. Rather than treating unemployment support as a temporary emergency measure requiring repeated congressional action during recessions, this constraint institutionalizes adequacy as automatic: benefits are formula-driven, scale with unemployment conditions, and maintain workers' purchasing power without requiring political intervention. This structural reform delinks benefit adequacy from the electoral cycle and creates a genuine automatic stabilizer for aggregate demand. The constraint exhibits the full range of DR classifications because it simultaneously coordinates genuine collective action (risk pooling across the employed population) and extracts asymmetrically (permanent tax obligations on contributors and federal fiscal burden). The perspectival gap reveals that the constraint's character depends on observer position: jobless workers see pure coordination; contributors see mixed extraction and benefit; powerful firms see competitive pressure and demand stabilization; the government sees fiscal obligation and political relief; and low-wage workers without alternative income sources see insufficient protection requiring joblessness as the trigger condition.",
+    "key_agents": [
+      "Jobless Workers: Primary beneficiary (powerless/trapped) \u2014 benefit from adequate income protection during unemployment; coordination solves their individual income security problem",
+      "Employed Payroll Tax Contributors: Primary victim (moderate/constrained) \u2014 bear permanent tax obligations; benefit from unemployment risk pooling and demand stabilization",
+      "Business Enterprises: Secondary actor (powerful/mobile) \u2014 bear employer-side payroll contributions; benefit from consumer base stability",
+      "Federal Government: Institutional actor (institutional/constrained) \u2014 manages fiscal burden and creates automatic stabilizer mechanism; constrained by budget sustainability",
+      "Low-Wage Workers Without Savings: Vulnerable population (powerless/trapped) \u2014 benefit from benefits only when unemployed, remain trapped in precarity otherwise",
+      "Analytical Observer: Civilizational perspective (institutional/arbitrage) \u2014 sees constraint as mixed coordination-extraction system with distributional consequences"
+    ],
+    "logic_rationale": "Extractiveness (0.35): Moderate. The constraint coordinates genuine collective action (unemployment risk pooling, demand stabilization) but creates permanent asymmetric obligations on contributors and the federal budget. The extractiveness is not high because the coordination function is real and benefits contributors through reduced unemployment risk for themselves. It is not low because the permanent tax obligations and fiscal burden represent genuine extraction from specific groups (payroll taxpayers, federal budget bearers). Theater ratio (0.38): Low-moderate. The mechanism is relatively simple and mechanically driven: unemployment triggers automatic benefit increases; low unemployment triggers decreases. Theater increases modestly over the interval as administrative complexity grows (compliance frameworks, fraud detection) but the core coordination is functional, not theatrical. Suppression (0.48): Moderate. Contributors face mandatory payroll taxation and are suppressed by social norms of supporting the jobless, but are not completely suppressed \u2014 they can partially exit through income mobility, tax arbitrage, or capital relocation. Jobless workers face suppression from biological need and employment-dependency but are partially liberated by adequate benefits.",
+    "directionality_logic": "Directionality varies sharply across agent types. Jobless workers with trapped exit options experience low d (they are pure beneficiaries of the coordination function) and thus low \u03c7. Payroll contributors with constrained exit options experience high d (they bear costs) and moderate \u03c7 reflecting their partial benefit from unemployment risk pooling. Employers with mobile exit options experience moderate d (they bear contributions but benefit from demand stability) and \u03c7 reflects the competitive calculus. The federal government as institutional actor with arbitrage options experiences low d (it gains policy authority and fiscal capacity) despite bearing budget costs \u2014 institutional actors can use fiscal obligations for other political goals. Low-wage workers without savings experience high d (they must become unemployed to benefit) but are structurally trapped, increasing their experienced extraction. The piton perspective (insurance intermediaries) has low d (they benefit from regulatory role) despite not bearing primary costs \u2014 their arbitrage position allows them to maintain rents through institutional design rather than genuine coordination.",
+    "perspectival_gap": "The central perspectival gap is between jobless workers and payroll contributors. Jobless workers see pure coordination (rope) \u2014 the constraint solves their collective income security problem with no extraction apparent. Payroll contributors see tangled rope \u2014 genuine coordination of unemployment risk alongside permanent tax extraction. Powerful firms see tangled rope with mobile escape options \u2014 the constraint coordinates demand stability while extracting through payroll costs, but firms can arbitrage through relocation or substitution. Low-wage workers without savings see snare \u2014 they benefit only when unemployed (crisis state) and remain trapped in precarity otherwise. The federal government sees scaffold \u2014 a temporary solution to the crisis-driven politics of supplemental benefits, with an implicit sunset as labor market conditions evolve. Insurance intermediaries see piton \u2014 a degraded institutional role maintained through regulatory capture rather than essential function. The analytical observer sees tangled rope with competitive effects \u2014 the constraint coordinates genuine stabilization while extracting through permanent fiscal obligations and creating wage-floor effects that may harm low-skill employment.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that permanent unemployment strengthening is genuinely a tangled rope: it coordinates real collective action (unemployment risk pooling, automatic demand stabilization) while simultaneously extracting through permanent tax obligations and redistributing income from contributors to beneficiaries. The perspectival gap reflects real structural differences in how agents experience the constraint, not measurement error. The jobless worker perspective (rope) is valid because the constraint solves their coordination problem. The contributor perspective (tangled rope) is valid because they bear costs alongside benefits. The low-wage worker without savings perspective (snare) is valid because they must become unemployed to benefit. These are not contradictions but structural facts: the same constraint coordinates for some agents while extracting from others. The tangled rope classification at the analytical level captures this hybrid: there is genuine coordination (eliminating the constraint would harm all agents through loss of demand stabilization and unemployment risk pooling) and genuine extraction (the permanent fiscal burden and redistribution create asymmetric costs). The constraint cannot be classified as pure coordination (rope) because the costs are not equally distributed and some agents bear significant extraction. It cannot be classified as pure extraction (snare) because the coordination function is real and benefits even contributors through reduced unemployment risk. Tangled rope is the accurate classification because both functions are present and essential to the constraint's structure."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "counter_cyclical_fiscal_policy",
+      "labor_market_wage_determination",
+      "federal_budget_sustainability"
+    ],
+    "dual_formulation_note": "Permanent unemployment strengthening is upstream of counter-cyclical fiscal policy (it represents one instantiation of automatic stabilizers) and downstream of labor market dynamics (wage determination and employment levels affect the baseline unemployment rate and thus benefit distribution). The constraint family links unemployment insurance design to fiscal policy mechanisms and labor market coordination."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ]
+}

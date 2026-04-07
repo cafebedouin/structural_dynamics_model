@@ -1,0 +1,186 @@
+{
+  "header": {
+    "constraint_id": "sotu_1984_reagan_tax_indexation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "taxidx"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.25,
+    "theater_ratio": 0.15,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Tax Bracket Indexation to Inflation (Reagan 1984)",
+    "topic_domain": "economics/fiscal_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "wage_earners_middle_income",
+      "working_families"
+    ],
+    "victims": [
+      "government_revenue_capacity",
+      "future_discretionary_spending"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Wage Earner",
+      "comment": "PERSPECTIVE 1: WAGE EARNER (ROPE) \u2014 Trapped within employment and income reporting but benefits from the constraint. Indexation prevents bracket creep (implicit inflation tax). The mechanism coordinates genuine collective action benefit: all wage earners protected from erosion of real after-tax income. No extraction experienced \u2014 the powerless agent gains protection at no cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Labor Unions and Worker Organizations",
+      "comment": "PERSPECTIVE 2: LABOR UNIONS (TANGLED ROPE) \u2014 Organized agents benefit from inflation protection but are constrained by political cycles and fiscal policy tradeoffs. The constraint both enables (protects nominal wage gains from tax erosion) and extracts (reduces government capacity for social spending that benefits workers). Mixed experience: genuine coordination benefit layered with asymmetric fiscal extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Federal Government Fiscal Capacity",
+      "comment": "PERSPECTIVE 3: FEDERAL GOVERNMENT (SNARE) \u2014 Structurally trapped by indexation mechanism. Government cannot use inflation as implicit revenue source (erosion of nominal tax thresholds no longer inflates receipts). Experiences pure extraction: benefits flow to wage earners; costs concentrate on government's discretionary spending capacity. Constrained exit: repealing indexation is politically infeasible despite fiscal pressure. No coordination benefit to government \u2014 extraction runs toward citizens."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Capital Markets and High-Income Earners",
+      "comment": "PERSPECTIVE 4: CAPITAL/HIGH-INCOME ACTORS (TANGLED ROPE) \u2014 Can arbitrage around indexation through income timing, deferred compensation, and capital gains. Coordination benefit: indexation provides stable after-tax income predictability enabling longer investment horizons. Extraction benefit: high earners benefit disproportionately from reduced government spending on redistribution and social insurance (government cuts benefits to offset lost bracket-creep revenue). Mixed: genuine coordination + asymmetric income-dependent extraction favoring capital over labor."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Congress and Tax Policy Actors",
+      "comment": "PERSPECTIVE 5: CONGRESS (SCAFFOLD) \u2014 Powerful agents with mobile exit options see indexation as temporary political constraint (sunset). Tax legislation can revise or repeal indexation; recent legislative efforts (2017 TCJA, proposed alternative minimum tax reforms) show the constraint is not immutable. Short-term horizon: indexation enables predictable fiscal planning. Sunset logic: future Congresses can address through tax reform. Theater low: mechanism is transparent, not performative."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (PITON) \u2014 From a civilizational view, tax bracket indexation appears as a permanent institutional feature (immovable constraint). However, structural data reveals degradation: indexation persists despite ongoing fiscal pressure and debates about repealing it (2017, 2021 tax reform proposals). Theater ratio (0.15) is low \u2014 the mechanism is transparent, not performative. But the constraint's function (protecting real wages) has been partly displaced by explicit income-based tax cuts. Indexation operates as a vestigial institutional arrangement maintained through political path dependence, not because it solves the original problem optimally."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "bracket_creep_reversion_risk",
+      "question": "If indexation is repealed, does bracket creep inflation-tax return silently or is it politically impossible to reinstitute without explicit legislation?",
+      "resolution_mechanism": "Historical precedent analysis: pre-1985 bracket-creep tolerance and post-1984 indexation political support. Voter awareness surveys on bracket-creep vs explicit tax increases.",
+      "impact": "If silent reversion is politically feasible: indexation is a low-suppression constraint (voters unaware of implicit tax rise). If explicitly impossible: indexation is high-suppression (political irreversibility despite fiscal pressure). Changes classification from Tangled Rope to Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether bracket creep can return silently or requires explicit reinstatement"
+    },
+    {
+      "id": "real_wage_protection_sufficiency",
+      "question": "How much of the post-1984 real wage stagnation is attributable to indexation removing the implicit wage tax vs. to structural changes (globalization, union decline, productivity slowdown)?",
+      "resolution_mechanism": "Counterfactual fiscal analysis: modeling pre-indexation bracket-creep trajectory under post-1984 inflation assumptions. Cross-country comparison of real wage trends in indexed vs. non-indexed systems.",
+      "impact": "If indexation accounts for >50% of real wage protection: beneficiary classification correct. If <20%: indexation is performative protection (piton signal), and actual wage decline driven by structural factors.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "How much real wage protection indexation provides vs. structural forces"
+    },
+    {
+      "id": "government_revenue_substitution_mechanism",
+      "question": "Did government offset lost bracket-creep revenue through explicit tax increases, spending cuts, or deficit growth? If cuts, which beneficiaries absorbed them?",
+      "resolution_mechanism": "Federal budget analysis 1984-present: revenue composition, spending levels by category, deficit trajectory. Attribution analysis: which populations bore disproportionate cuts (Medicare, Medicaid, education, infrastructure)?",
+      "impact": "If offset by spending cuts: extraction victim is future generations (intergenerational snare). If offset by deficits: extraction is deferred (piton degradation signal). If explicit taxes raised: constraint is weaker than modeled.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "How government offset lost bracket-creep revenue"
+    },
+    {
+      "id": "low_income_earner_bracket_creep_exemption",
+      "question": "Does the earned income tax credit (EITC) expansion and standard deduction indexation since 1984 constitute a compensating mechanism for low-income earners, or is it separate policy?",
+      "resolution_mechanism": "Legislative history: EITC expansion timing relative to bracket indexation. Distributional analysis: net effect on low-income earners (EITC gains vs. bracket-creep protection vs. reduced government services).",
+      "impact": "If EITC is true compensation: low-income beneficiary status is correct (Rope perspective). If EITC is separate policy: low-income wage earners are partially covered by indexation but fully exposed to spending-cut extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether EITC expansion compensates for indexation's spending reduction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The 1984 Tax Indexation constraint represents a structural mechanism that prevents inflation from automatically pushing wage-earners into higher effective tax brackets. Institutionalized as part of the Tax Equity and Fiscal Responsibility Act (TEFRA) amendments, it solves a genuine coordination problem: before 1985, inflation eroded the real value of tax brackets, creating an implicit tax increase that required explicit legislative action to reverse. Indexation converts this into an automatic adjustment, protecting real after-tax purchasing power. However, the constraint exhibits characteristic tangled-rope structure: genuine coordination benefit (wage-earners protected from bracket creep) layered with asymmetric fiscal extraction (government loses implicit revenue source, forcing either explicit tax increases or spending cuts). The rising extractiveness over the 20-year measurement interval reflects growing fiscal pressure as the cumulative cost of lost bracket-creep revenue compounds. The low theater ratio (0.15) indicates this is a transparent mechanism, not a performative one \u2014 indexation actually functions as designed, unlike a piton's degraded institutional ritual.",
+    "key_agents": [
+      "Wage-Earners (Powerless/Trapped): Primary beneficiaries protected from bracket creep; cannot exit employment or income reporting.",
+      "Middle-Income Working Families (Powerless/Trapped): Experience protection from real income erosion but structurally dependent on employment.",
+      "Labor Unions and Worker Organizations (Organized/Constrained): Advocate for indexation; constrained by political cycles and fiscal tradeoffs.",
+      "Federal Government (Institutional/Constrained): Trapped by indexation; loses implicit revenue but cannot politically reverse the constraint.",
+      "Capital Markets and High-Income Earners (Institutional/Arbitrage): Can arbitrage around indexation; benefit disproportionately from reduced government spending.",
+      "Congress and Tax Policymakers (Powerful/Mobile): Can revise indexation through legislation; mobile exit options but face political constraints.",
+      "Future Generations (Powerless/Trapped): Bear extraction cost through reduced government capacity for services, infrastructure, and social insurance.",
+      "Analytical Observer (Analytical/Analytical): Views constraint as institutionalized fiscal choice with path-dependent political immobility."
+    ],
+    "logic_rationale": "Extractiveness (0.32): Moderate. The constraint extracts by removing government's implicit inflation tax but provides genuine coordination benefit to wage-earners. The extraction is not pure coercion (suppression 0.25 is moderate) \u2014 beneficiaries experience real protection, not just reduced coercion. The rising trajectory (0.15 \u2192 0.35 over 20 years) reflects accumulating fiscal pressure as the revenue loss compounds: with higher cumulative inflation, the cost of indexation grows relative to the original baseline. Suppression (0.25): Moderate-low. Wage-earners face moderate barriers to exit (employment is necessary; income cannot be hidden entirely), but the constraint protects rather than suppresses them \u2014 it prevents an implicit tax increase. Government faces higher suppression (cannot politically reverse indexation despite fiscal pressure), but government is the institutional beneficiary of extraction in the opposite direction (structural dependence on wage-earner cooperation). Theater ratio (0.15): Low. Indexation is a transparent automatic mechanism, not performative. Tax brackets adjust with published inflation data; the mechanism is obvious and functional. Unlike a piton (high theater, low function), indexation actually accomplishes what it claims.",
+    "directionality_logic": "The beneficiaries (wage-earners) are structurally trapped with no exit options, yet experience low or negative effective extraction because the constraint protects them. The formula \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) drives this: wage-earners have d \u2248 0.15 (beneficiaries with no exit options = low d value per derivation chain) and f(0.15) \u2248 -0.01 (slightly negative), yielding \u03c7 \u2248 -0.003 (negative extraction \u2014 the constraint subsidizes them). The government, as the victim of lost revenue, has d \u2248 0.85 (institutional actor bearing fiscal cost), yielding f(0.85) \u2248 1.15 (high extraction factor). The scope modifier \u03c3(national) = 1.0 preserves this. High-income earners occupy an intermediate position: they benefit from reduced government spending (which decreases redistributive extraction) but also from stable after-tax income predictability, yielding intermediate directionality. The tangled-rope classification arises from the combination: genuine coordination benefit (protecting real wages) coexists with real asymmetric fiscal extraction (government's revenue capacity decreases, forcing spending cuts that disproportionately affect the poor).",
+    "perspectival_gap": "The wage-earner sees protection and coordination (Rope: all workers benefit together without coercion). The government sees entrapment and extraction (Snare: loses revenue with no political escape). Congress sees a temporary constraint (Scaffold: can revise through legislation). High-income earners see mixed benefit (Tangled Rope: protection for income predictability + extraction benefit through reduced redistribution). Labor organizations see coordination with fiscal tradeoffs (Tangled Rope: workers protected but government capacity constrained). The analytical observer risks misclassifying as immovable (Piton/Mountain: 'this is how inflation works now'), but the political history (repeated attempts to repeal, debate in 2017-2021, structural contingency) reveals it as a path-dependent institutional arrangement, not a natural law. The perspectival gap reveals that indexation simultaneously protects and extracts: the protection is real; the extraction (concentrated on future spending capacity, especially for the poor) is equally real but less visible.",
+    "directionality_overrides": [],
+    "mandatrophy_analysis": "RESOLUTION POINT: The mandatrophy (coordination vs. pure extraction) resolves via careful definition of the extraction flow. Indexation is NOT pure extraction because it genuinely solves a coordination problem: before indexation, wage-earners and government were in a repeated game where inflation eroded wages unless workers demanded (and government granted) explicit compensation. Indexation converts this into automatic protection, benefiting both parties by reducing the annual renegotiation cycle. The extraction emerges not from the coordination mechanism but from its fiscal consequences: government loses revenue flexibility and must cut spending or raise explicit taxes. This extraction is real but is a *consequence* of coordination, not the coordination mechanism itself. The classification as Tangled Rope is correct: genuine coordination (automatic bracket adjustment) + real extraction (fiscal pressure on spending). The mandatrophy is resolved by separating the mechanism (rope: beneficiary and victim both benefit from certainty and automation) from the fiscal consequences (extraction: someone bears the cost of lost revenue)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "progressive_tax_rate_effectiveness",
+      "government_spending_capacity_fiscal_pressure",
+      "inflation_wage_dynamics"
+    ],
+    "dual_formulation_note": "Tax bracket indexation is downstream of the inflation-wage linkage but represents a distinct structural constraint. The upstream constraint (inflation_wage_dynamics) describes how nominal wages adjust to inflation; indexation is a policy response to the coordination problem that inflation creates for tax brackets. The downstream constraints (progressive_tax_effectiveness, fiscal_pressure) are affected by indexation's revenue consequences."
+  }
+}

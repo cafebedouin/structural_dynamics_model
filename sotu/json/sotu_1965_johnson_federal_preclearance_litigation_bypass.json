@@ -1,0 +1,176 @@
+{
+  "header": {
+    "constraint_id": "sotu_1965_johnson_federal_preclearance_litigation_bypass",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "preclear"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.38,
+    "theater_ratio": 0.42,
+    "claimed_type": "rope",
+    "human_readable": "Federal Preclearance Litigation Bypass in Voting Rights Enforcement (1965)",
+    "topic_domain": "governance/voting_rights",
+    "requires_active_enforcement": false,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "disenfranchised_voters",
+      "federal_enforcement_mechanism"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Disenfranchised Voter",
+      "comment": "PERSPECTIVE 1: DISENFRANCHISED VOTER (ROPE) \u2014 Immediate access to voting without waiting 3-7 years for litigation to resolve. The preclearance mechanism solves a pure coordination problem: getting voters registered and protected from discriminatory practices. The voter's exit option is mobile (they can move to non-preclearance jurisdictions, though at high cost). Experienced extractiveness is low \u2014 the mechanism directly benefits this agent."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Federal Enforcement Apparatus",
+      "comment": "PERSPECTIVE 2: FEDERAL ENFORCEMENT APPARATUS (ROPE) \u2014 The preclearance requirement is a coordination mechanism that clarifies which voting practices can proceed vs. which require federal approval before implementation. No extraction occurs toward federal government \u2014 the mechanism is a coordination tool that solves the problem of synchronizing voting access across jurisdictions with asymmetric state compliance. Low effective extraction because enforcement agencies have mobile exit (enforcement funds and authority can be directed elsewhere) and genuine coordination benefit."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "State and Local Election Officials",
+      "comment": "PERSPECTIVE 3: STATE AND LOCAL ELECTION OFFICIALS (SCAFFOLD) \u2014 Temporarily constrained by preclearance requirement; cannot implement voting changes without federal approval. However, this perspective sees a sunset: as voting discrimination decreases and officials achieve compliance norms, preclearance requirements should expire. The constraint is temporary enforcement with a built-in exit path (compliance triggers removal). Extraction is moderate because officials retain some agency and can see a path to sunset."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Civil Rights Organizations",
+      "comment": "PERSPECTIVE 4: CIVIL RIGHTS ORGANIZATIONS (ROPE) \u2014 The preclearance mechanism provides organized civil rights groups with a coordination tool: they can petition federal authorities directly rather than funding protracted litigation. Low-cost coordination for monitoring and enforcing voting access. Organizations have mobile exit and genuine benefit from the enforcement structure. Effective extraction is near zero."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Structural View)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / STRUCTURAL VIEW (MOUNTAIN) \u2014 From a civilizational perspective, the preclearance mechanism solves a fundamental coordination problem: how to enforce constitutional voting rights across jurisdictions with persistent non-compliance. The underlying constraint it addresses \u2014 the constitutional guarantee of voting access \u2014 is a natural law (mountain). Preclearance is the enforcement mechanism that turns the natural law into operational reality. However, this perspective risks naturalizing what is actually a contingent institutional design choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "litigation_delay_quantification",
+      "question": "What is the true distribution of litigation delays under the pre-preclearance system, and how much voter harm occurs during these delays?",
+      "resolution_mechanism": "Historical case-by-case analysis of voting rights litigation timelines pre-1965 vs. post-1965; voter registration impact during delay periods; correlation between delay duration and total votes suppressed",
+      "impact": "If delays average < 1 year: preclearance may be over-engineered for the coordination problem it solves. If delays average > 5 years: preclearance is solving a genuinely severe coordination failure.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Quantification of voter harm during litigation delays"
+    },
+    {
+      "id": "federal_approval_delay_substitution",
+      "question": "Does the preclearance approval process simply substitute federal administrative delays for state litigation delays, without net improvement in voter access speed?",
+      "resolution_mechanism": "Time-series analysis of preclearance submission-to-approval intervals vs. pre-preclearance litigation timelines; voter registration speed under federal preclearance vs. presumed speed under hypothetical immediate court orders",
+      "impact": "If federal approvals are faster: preclearance solves the coordination problem. If federal approvals are similarly slow: the constraint may be a Tangled Rope (coordination + extraction) rather than pure Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether federal preclearance approval substitutes for court delays"
+    },
+    {
+      "id": "sunset_mechanism_robustness",
+      "question": "Is the preclearance sunset mechanism (removal when state achieves compliance track record) actually triggered, or does preclearance persist indefinitely even as discrimination rates decline?",
+      "resolution_mechanism": "Longitudinal analysis of Voting Rights Act Section 5 bailout provisions; count of jurisdictions achieving preclearance bailout; correlation between discrimination metrics and bailout success",
+      "impact": "If bailout is real and achievable: scaffold classification confirmed. If preclearance persists despite compliance: constraint reclassifies toward Piton (degraded institutional inertia) or toward Tangled Rope if federal authorities use preclearance as leverage for other federal goals.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether preclearance sunset mechanism functions as designed"
+    },
+    {
+      "id": "federal_authority_scope_creep",
+      "question": "Does federal preclearance authority remain limited to voting access enforcement, or does the mechanism become a tool for broader federal control over state electoral administration?",
+      "resolution_mechanism": "Analysis of preclearance denials by category (voter access vs. electoral administration vs. political outcomes); correlation between preclearance denials and federal policy preferences unrelated to voting access",
+      "impact": "If scope remains narrow: Rope classification stands. If scope expands: preclearance reclassifies toward Tangled Rope (coordination + broader extraction) or toward Snare (extraction masquerading as coordination).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether federal preclearance authority experiences scope creep"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08,
+      "id_override": "preclear_extractiveness_1965"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.22,
+      "id_override": "preclear_extractiveness_1980"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.28,
+      "id_override": "preclear_extractiveness_1995"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "preclear_theater_1965"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.35,
+      "id_override": "preclear_theater_1980"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.42,
+      "id_override": "preclear_theater_1995"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The federal preclearance mechanism established by the 1965 Voting Rights Act eliminates the structural inefficiency of requiring citizens to litigate voting denials through courts \u2014 a process that creates 3-7 year delays while discrimination continues. By enabling direct federal action to strike down discriminatory practices and implement voter registration without prolonged lawsuits, the mechanism coordinates voting access enforcement across jurisdictions with persistent non-compliance. Disenfranchised voters benefit from immediate federal intervention; state and local officials lose the ability to delay compliance through protracted litigation but retain a sunset path: achieving a clean compliance record allows bailout from preclearance. The constraint exhibits Rope classification \u2014 genuine coordination benefit without significant extraction toward federal authorities \u2014 but shows modest drift toward higher theater over time as the mechanism becomes institutionalized. The extractiveness increase from 0.08 to 0.28 reflects gradual scope expansion beyond immediate voter access into broader electoral administration, creating the omega for scope creep. The theater increase from 0.25 to 0.42 reflects that preclearance submissions become increasingly bureaucratic as officials learn to navigate approval pathways, adding procedural complexity without corresponding voter access gains.",
+    "key_agents": [
+      "Disenfranchised Voters: Primary beneficiary (powerless/mobile) \u2014 gain immediate voting access without years of litigation delay",
+      "Federal Enforcement Apparatus: Institutional beneficiary (institutional/mobile) \u2014 gain direct authority to enforce voting access; experience low extraction",
+      "State and Local Election Officials: Temporary target (powerful/constrained) \u2014 lose litigation delay tactic; face sunset mechanism that provides exit path through compliance",
+      "Civil Rights Organizations: Organized beneficiary (organized/mobile) \u2014 gain low-cost monitoring and enforcement tool via federal preclearance petition",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent enforcement design as structural necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.28): Moderate-low. The preclearance mechanism coordinates voting access by replacing slow litigation with faster federal administrative review. Initial extractiveness is minimal (0.08) \u2014 the mechanism directly solves the coordination problem without asymmetric benefits. However, extractiveness drifts upward over time as federal authorities expand preclearance scope beyond immediate voting access into broader electoral administration (redrawing, voter ID standards, polling location changes), creating secondary extraction not inherent to the coordination function. By 1995, some state officials and local communities experience preclearance as a broader constraint on electoral autonomy, not just voting access. Suppression (0.38): Moderate. State and local officials cannot delay through litigation, but they retain substantial agency \u2014 they can implement changes that pass preclearance, and they have a clear exit path (bailout through compliance). Suppression is not high because the constraint explicitly includes a sunset mechanism. Theater ratio (0.42): Moderate. Initial theater is low (0.25) \u2014 preclearance serves its primary function of faster enforcement. Over time, theater increases (0.42) as preclearance becomes bureaucratized: jurisdictions learn optimization strategies (minimal changes designed to pass review rather than substantive compliance), federal reviewers develop procedural templates, and the system becomes a ritualized exchange rather than substantive voting rights enforcement.",
+    "directionality_logic": "The preclearance mechanism is fundamentally beneficiary-focused: it extracts nothing from federal authorities (they gain enforcement power, which they perceive as a benefit), and it solves a genuine coordination problem (how to protect voting access across non-compliant jurisdictions). State and local officials are the constrained parties, but they have mobile exit options (implement compliant practices, achieve bailout; alternatively, litigate to overturn preclearance, which some southern jurisdictions attempted). The beneficiary-only structure (no victim group declared) indicates a Rope classification, not Snare. The scaffold perspective captures the sunset logic: preclearance is designed to be temporary, expiring as compliance increases. The mountain perspective risks naturalizing a contingent institutional design (federal preclearance) as a necessary structural feature (constitutional voting rights). The directionality is clean: federal authorities and disenfranchised voters benefit; state/local officials lose a delay tactic but gain a exit path; no agent is trapped or extracted from without agency.",
+    "perspectival_gap": "The primary perspectival gap is between the disenfranchised voter (who sees immediate access and low extraction) and the state/local official (who sees temporary constraint with an exit path via compliance). The analytical observer risks collapsing this gap by naturalizing the preclearance mechanism as inherent to constitutional voting rights, when in fact preclearance is a contingent institutional design choice. An alternative mechanism \u2014 rapid court review with strict timelines \u2014 could achieve similar coordination benefits without federal administrative expansion. The gap between the immediate beneficiary perspective (low extraction, high benefit) and the bureaucratized institutional perspective (moderate extraction, high theater) emerges over time as preclearance becomes institutionalized. This gap is diagnostically important: if theater ratio continues rising toward 0.60+, the constraint drifts toward Piton (performative compliance without functional voting protection).",
+    "mandatrophy_analysis": "The mandatrophy is resolved by distinguishing the coordination function (solving the litigation delay problem) from the extraction question (does federal preclearance expand beyond voting access?). The Rope classification holds as long as preclearance scope remains limited to voting access enforcement and the sunset mechanism functions. The omega on scope creep is critical: if federal authorities use preclearance to control electoral administration beyond voting access, the constraint reclassifies toward Tangled Rope (coordination + extraction) or toward Snare (extraction masquerading as coordination). The omega on bailout mechanism is also critical: if preclearance persists indefinitely despite declining discrimination, the constraint becomes Piton (institutional inertia) or Tangled Rope (if persistence serves federal political leverage). The measured drift in extractiveness (0.08 \u2192 0.28) and theater (0.25 \u2192 0.42) provides empirical hooks for mandatrophy resolution: the system itself is signaling scope expansion and bureaucratization that may shift the constraint's character over time."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "voting_rights_act_coverage_formula",
+      "section_4b_preclearance_conditions"
+    ],
+    "dual_formulation_note": "The preclearance litigation bypass is distinct from the Voting Rights Act's broader coverage formula and preclearance conditions. This story focuses on the temporal coordination function (eliminating litigation delay). Upstream constraints (coverage formula, which jurisdictions are covered) have their own \u03b5 values. Downstream constraints (what counts as compliance for bailout) also differ structurally."
+  },
+  "directionality_overrides": []
+}

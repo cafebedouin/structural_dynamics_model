@@ -1,0 +1,224 @@
+{
+  "header": {
+    "constraint_id": "sotu_2004_bush_medicare_prescription_drug_benefit",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mpdp"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.35,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Medicare Prescription Drug Benefit Expansion (2003-2006)",
+    "topic_domain": "healthcare/entitlement_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "senior_citizens_with_medication_needs",
+      "pharmaceutical_manufacturers",
+      "health_insurance_intermediaries"
+    ],
+    "victims": [
+      "general_federal_taxpayers",
+      "medicare_trust_fund_solvency",
+      "future_beneficiaries"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Senior Citizen (Primary Beneficiary)",
+      "comment": "PERSPECTIVE 1: SENIOR CITIZEN WITH HIGH MEDICATION NEEDS (ROPE) \u2014 Experiences the constraint as genuine coordination solving a real collective action problem: prescription drug costs create a coordination failure for elderly agents with limited income and no individual bargaining power against pharmaceutical manufacturers. The benefit reduces this friction. Exit is constrained (could migrate to countries with price controls, or reduce medication compliance) but expensive. The senior perceives genuine net benefit \u2014 the constraint solves the coordination problem of accessing essential medications. The theater ratio is low from this perspective because the benefit delivers tangible outcomes."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Working-Age Taxpayer (Cost Bearer)",
+      "comment": "PERSPECTIVE 2: WORKING-AGE FEDERAL TAXPAYER (SNARE) \u2014 Bears the extraction cost (higher payroll taxes, general revenue increases) with minimal coordination benefit. Constrained by citizenship and tax obligations. The extraction is moderate but durable \u2014 payroll tax increases to support Medicare Part D are structural and difficult to reverse. Exit requires emigration or tax evasion. The working-age taxpayer experiences asymmetric cost allocation without corresponding benefit \u2014 genuine snare structure at biographical timescale."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Pharmaceutical Manufacturer (Indirect Beneficiary)",
+      "comment": "PERSPECTIVE 3: PHARMACEUTICAL MANUFACTURER (TANGLED ROPE) \u2014 Experiences the constraint as coordination (expanded market demand, reduced consumer price sensitivity, increased negotiation complexity) combined with significant extraction (regulation of reimbursement rates, price controls, formulary restrictions). The manufacturer can arbitrage by adjusting pricing, supply, and R&D strategy in response to policy changes. High experienced extraction because government negotiation leverage is increasing, but also genuine coordination benefits (reliable demand, insurance pathway, reduced bad-debt write-offs). The constraint requires active enforcement of reimbursement rules and formulary compliance."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Medicare Trust Fund (Fiscal Victim)",
+      "comment": "PERSPECTIVE 4: MEDICARE TRUST FUND SOLVENCY (SNARE) \u2014 The trust fund is constrained (cannot opt out of financing Part D, cannot adjust contribution rates independently, faces insolvency risk from prescription drug cost growth). Experienced extraction is severe because prescription drug spending growth outpaces general inflation and revenue growth. The trust fund has no exit option and no negotiating power to constrain costs \u2014 manufacturers set prices, beneficiaries demand access, and the trust fund bears the cost asymmetrically. Powerful agent (federal government) but constrained by political inability to cut benefits or raise taxes sufficiently. The snare is structural despite the nominal power level because the political constraints are insurmountable."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Public Health Advocate Coalition (Organized Critic)",
+      "comment": "PERSPECTIVE 5: PUBLIC HEALTH ADVOCATE COALITION (SCAFFOLD) \u2014 Organized agents (Medicare patient advocates, state health departments, consumer groups) see the benefit as a temporary scaffold addressing an immediate coordination failure (medication access for poor seniors) but with built-in sunset logic: the constraint creates incentives for future price reforms (formulary negotiation, government price-setting, international reference pricing). The constraint is high-theater because the benefit expands coverage while explicitly prohibiting Medicare from negotiating drug prices (negotiation prohibition was a manufacturer-favorable compromise). Exit is constrained (advocates want price reforms, not benefit withdrawal) but the sunset is structural \u2014 cost growth will eventually force renegotiation. Theater ratio reflects the compromise: the benefit is performative (solves access without addressing pricing power), but the underlying coordination problem is real."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Insurance Intermediary Network (Institutional Degradation)",
+      "comment": "PERSPECTIVE 6: HEALTH INSURANCE INTERMEDIARIES (PITON) \u2014 The constraint creates administrative overhead that appears to serve coordination but increasingly serves theater: private Medicare Advantage plans, pharmacy benefit managers, and insurance intermediaries manage Part D coverage while capturing rents through administrative margins. The coordination function (connecting beneficiaries to prescriptions) is largely performative because the real work (payment processing, formulary management) is orthogonal to the substantive coordination problem (access). The intermediaries have arbitrage options (adjust margins, change plan design, consolidate) but persist in roles that generate extraction overhead without corresponding value. The constraint persists through institutional inertia rather than functional necessity \u2014 it survives because the beneficiaries, manufacturers, and intermediaries all benefit from the current structure despite its high theater ratio."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalized Necessity View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURALIZED NECESSITY (MOUNTAIN) \u2014 From a civilizational perspective, the constraint can appear as an immutable law of modern healthcare: aging populations require comprehensive medication access; pharmaceutical innovation requires investment incentives; some form of social insurance is necessary for universal coverage; therefore expanded Medicare coverage is natural and inevitable. This perspective naturalizes what is actually a contingent policy choice \u2014 the expansion could have taken alternative forms (government price negotiation, international reference pricing, means-tested coverage, pharmaceutical price controls). The engine's false summit detection should flag this as naturalization of a political arrangement rather than natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "pharmaceutical_pricing_mechanism",
+      "question": "Is the high cost of Part D extraction driven by fundamental pharmaceutical economics (R&D requirements, patent monopolies, clinical complexity) or by regulatory capture (manufacturer pricing power, absence of government negotiation, prohibition on price controls)?",
+      "resolution_mechanism": "Comparative analysis: Part D cost growth vs. international pricing (Canada, Australia, UK, Germany); correlation between negotiation legality and price differentials; analysis of R&D productivity given patent protection and price controls in other countries",
+      "impact": "If fundamental: extraction is natural constraint (mountain-adjacent). If regulatory capture: extraction is contingent policy choice (snare/tangled rope). Cost reduction path and classification change depending on resolution.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether high Part D costs reflect pharmaceutical economics or regulatory capture"
+    },
+    {
+      "id": "senior_bargaining_power",
+      "question": "Are seniors genuinely unable to exit high-cost medications (trapped by medical necessity) or constrained by financial barriers that could be addressed through voucher systems, price negotiation, or international sourcing?",
+      "resolution_mechanism": "Analysis of medication necessity vs. price-sensitivity; tracking of seniors who reduce compliance due to cost vs. those who maintain compliance through savings programs; evaluation of alternative financing mechanisms",
+      "impact": "If trapped: seniors genuinely benefit from coordination (rope classification more accurate). If constrained: alternative mechanisms could provide benefit with lower extraction (reframes the constraint as snare masquerading as coordination). Directionality d-value and classification change.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether seniors are trapped by medical necessity or constrained by financial barriers"
+    },
+    {
+      "id": "trust_fund_insolvency_causation",
+      "question": "Is Part D the primary driver of Medicare Trust Fund insolvency risk, or is insolvency driven by broader healthcare cost inflation and aging demographics independent of prescription drug coverage?",
+      "resolution_mechanism": "Actuarial analysis: Part D contribution to projected trust fund depletion; counterfactual modeling of trust fund trajectory without Part D; correlation between Part D cost growth and overall Medicare spending growth",
+      "impact": "If Part D is primary driver: the constraint bears concentrated responsibility for trust fund harm (snare classification for trust fund perspective is accurate). If Part D is secondary: the constraint is one component of broader structural forces (classification shifts toward rope/scaffold hybrid). Extraction attribution changes.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Part D is primary driver of Medicare Trust Fund insolvency"
+    },
+    {
+      "id": "beneficiary_access_vs_fairness",
+      "question": "Does the constraint genuinely expand access to essential medications for seniors who would otherwise forgo treatment, or does it primarily provide financial transfers to seniors who would access medications anyway through alternative pathways (out-of-pocket savings, manufacturer assistance programs, state programs)?",
+      "resolution_mechanism": "Comparison of medication compliance before and after Part D; analysis of beneficiary population (means-test correlation with actual access barriers); tracking of medication types covered (essential vs. discretionary); evaluation of displacement (does Part D funding simply replace private/state/manufacturer programs)?",
+      "impact": "If genuine access expansion: coordination function is strong (rope classification more accurate, extraction justified as cost of coordination). If primarily transfer: coordination function is weaker (snare/piton classification more accurate, extraction is less justified). Mandatrophy resolution changes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Part D genuinely expands access or primarily transfers resources"
+    },
+    {
+      "id": "negotiation_prohibition_optimality",
+      "question": "Is the explicit prohibition on Medicare negotiating drug prices a necessary condition for pharmaceutical innovation incentives, or a regulatory capture outcome that inflates prices without corresponding innovation benefit?",
+      "resolution_mechanism": "Analysis of pharmaceutical R&D productivity in countries with price negotiation (France, Germany) vs. without (US); correlation between price levels and innovation rates; mechanism design analysis of optimal patent protection vs. price control trade-off",
+      "impact": "If necessary: suppression value decreases (exit constraint is justified). If capture: suppression value should increase (negotiation prohibition artificially constrains exit). Classification and directionality change. Determines whether Part D is Rope (justified compression of alternatives) or Snare (artificial extraction).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether price negotiation prohibition is necessary for innovation or regulatory capture"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28,
+      "id_override": "mpdp_extract_2003"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45,
+      "id_override": "mpdp_extract_2006"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52,
+      "id_override": "mpdp_extract_2009"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "mpdp_theater_2003"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.42,
+      "id_override": "mpdp_theater_2006"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48,
+      "id_override": "mpdp_theater_2009"
+    }
+  ],
+  "interval": {
+    "start": 2003,
+    "end": 2009
+  },
+  "commentary": {
+    "narrative_context": "The Medicare Prescription Drug, Improvement, and Modernization Act (2003) expanded Medicare to cover outpatient prescription drugs beginning in 2006, creating a new entitlement worth approximately $400 billion over the first decade. The constraint exhibits genuine tangled-rope structure: it solves a real coordination problem (seniors' inability to afford essential medications) while simultaneously creating extractive mechanisms (manufacturer pricing power, intermediary rents, trust fund burden). The expansion directed federal resources to primary beneficiaries (seniors with medication needs) and indirect beneficiaries (pharmaceutical manufacturers gaining increased demand and reduced price negotiation). Costs were borne by general federal taxpayers (through tax increases and general revenue), Medicare beneficiaries (through higher premiums), and Medicare Trust Fund solvency (through increased outlays and insolvency risk). The constraint's evolution reveals rising extractiveness and theater as prescription drug costs outpaced inflation and as regulatory capture mechanisms (prohibition on price negotiation, intermediary profit extraction) deepened over time. The policy simultaneously embodies genuine coordination (solving medication access barriers) and significant extraction (absorbing costs that might have been addressed through price negotiation or international reference pricing).",
+    "key_agents": [
+      "Senior Citizens with High Medication Needs: Primary beneficiary (moderate/constrained) \u2014 gain access to affordable medications; net benefit despite constrained alternatives",
+      "Pharmaceutical Manufacturers: Indirect beneficiary (institutional/arbitrage) \u2014 expand market demand and reduce price sensitivity; bear moderate extraction through reimbursement regulation",
+      "Federal Taxpayers (Working Age): Cost bearer (moderate/constrained) \u2014 fund expansion through higher taxes and general revenue; experience snare-like asymmetric cost allocation",
+      "Medicare Trust Fund: Fiscal victim (powerful/constrained) \u2014 constrained by political inability to control costs; experiences generational extraction risk",
+      "Public Health Advocates: Organized critics (organized/constrained) \u2014 see temporary scaffold with sunset logic (eventual price negotiation reform); constrained by political realities",
+      "Health Insurance Intermediaries: Institutional actors (institutional/arbitrage) \u2014 create administrative overhead with modest coordination function; persist through institutional inertia (piton)",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent policy choice as immutable healthcare necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high and rising. The constraint's base extraction starts at 0.28 in 2003 (genuine coordination benefit, limited scope) and rises to 0.52 by 2009 as costs exceed projections and become asymmetrically borne by taxpayers and trust fund. The rise reflects accumulating extraction: initial expansion appeared to solve coordination problem; subsequent cost growth revealed underlying structural asymmetry (beneficiaries enjoy expanded access while costs are externalized to trust fund and future beneficiaries). Suppression (0.35): Moderate. Seniors have constrained but non-zero exit options (medication compliance reduction, international sourcing, manufacturer assistance programs). Taxpayers have higher suppression (citizenship obligation, tax enforcement) but ultimately constrained. The constraint does not rely on maximum coercion \u2014 exit is possible at cost, not impossible. Theater ratio (0.48): Moderate. Initial implementation theater is low (genuine benefit delivery to seniors), but theater increases as the constraint evolves and cost-control performance proves weak. Administrative overhead (intermediaries, formulary management, cost-sharing complexity) grows relative to actual coordination function. By 2009, theater ratio approaches 0.5 as performance-to-overhead ratio declines.",
+    "perspectival_gap": "The perspectival gap is widest between the senior beneficiary (Rope classification, low experienced extraction, genuine coordination function) and the Medicare Trust Fund (Snare classification, maximum experienced extraction, no exit capacity). Both are truthful observations of the same constraint from different structural positions. The gap reveals that the constraint genuinely solves a coordination problem (medication access) while simultaneously externalizing costs (trust fund burden) to agents who cannot exit. The analytical observer's mountain classification is a false summit \u2014 it naturalizes what is actually a contingent policy choice (the expansion could have included price negotiation authority, means-testing, benefit limitations, or alternative financing mechanisms). The false summit occurs when the observer conflates 'aging populations need medications' (genuine coordination problem) with 'the specific structure of Medicare Part D is natural' (contingent policy).",
+    "directionality_logic": "Directionality values (d) vary across perspectives based on structural position relative to extraction flow. Senior beneficiaries with constrained exit options experience moderate d (0.35-0.45) \u2014 they benefit from the constraint but are partially trapped by medical necessity and limited alternatives. Taxpayers bear asymmetric costs and experience high d (0.75-0.85) \u2014 the constraint extracts from them without direct reciprocal benefit. Pharmaceutical manufacturers experience moderate d (0.40-0.50) \u2014 they benefit from expanded demand but face regulatory constraints on pricing. The Medicare Trust Fund experiences extremely high d (0.90+) because it is constrained by political inability to control costs and legal obligation to pay \u2014 the fullest expression of extraction. The analytical observer experiences canonical d (0.73) representing analytical distance and incomplete structural visibility. These d-values feed the sigmoid f(d) to produce experienced chi (effective extractiveness) for each perspective. Beneficiaries experience negative or low chi; cost-bearers experience high chi; the trust fund experiences maximum chi.",
+    "mandatrophy_analysis": "The mandatrophy for this constraint is resolved by recognizing that it is genuinely both coordination AND extraction, depending on perspective. The senior beneficiary's Rope classification is truthful \u2014 the constraint solves real coordination problems (medication access, bargaining power imbalance). The taxpayer's Snare classification is equally truthful \u2014 the constraint extracts disproportionate costs. The constraint is not mislabeled as pure extraction (Snare) when it contains genuine coordination; nor is it mislabeled as pure coordination (Rope) when it contains significant extraction. The tangled-rope classification at the institutional/immediate perspective (pharmaceutical manufacturers) correctly identifies the hybrid structure: the constraint coordinates drug supply and demand while extracting regulatory rent and pricing power. The constraint's classification across perspectives forms a presheaf: different agents legitimately perceive different types because they occupy different structural positions relative to the extraction and coordination flows. The mandate is resolved by accepting that the classification IS the multiplicity of truthful observations, not by reducing to a single type. The widest perspectival gap (beneficiary vs. trust fund) reveals the contingent policy choices embedded in the structure: the constraint could have been designed to avoid trust fund burden (means-tested, price-controlled, time-limited) without losing the coordination benefit. The gap shows that some extraction is a consequence of the specific policy design (negotiation prohibition, open-ended benefit), not an inherent feature of medication access coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "medicare_trust_fund_solvency",
+      "pharmaceutical_pricing_power",
+      "healthcare_cost_inflation"
+    ],
+    "dual_formulation_note": "The prescription drug benefit expansion decomposes into multiple structurally distinct constraints: (1) medication_access_coordination (\u03b5 \u2248 0.20, Rope) \u2014 the genuine coordination problem of connecting seniors to prescriptions; (2) pharmaceutical_pricing_extraction (\u03b5 \u2248 0.65, Snare) \u2014 manufacturer pricing power enabled by negotiation prohibition; (3) trust_fund_burden (\u03b5 \u2248 0.70, Snare) \u2014 cost externalization to future beneficiaries and taxpayers. These three constraints are linked via network effects: the benefit expansion solves (1) while simultaneously enabling (2) and creating (3). The unified 'Medicare Part D' story aggregates these distinct mechanisms into a single tangled-rope narrative; decomposition would clarify which mechanisms are genuinely problematic (pharmaceutical pricing) vs. genuinely beneficial (medication access)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.92,
+      "rationale": "Medicare Trust Fund: Nominally powerful (federal government controls it) but structurally constrained by political inability to cut senior benefits or raise taxes sufficiently. The constraint's cost growth outpaces the fund's revenue growth, creating structural insolvency risk that the fund cannot escape through policy adjustment (adjusting contributions requires political capital; adjusting benefits is politically impossible). Override d upward from derived 0.75 (powerful + constrained) to 0.92 (effectively trapped despite nominal power) to reflect the political constraints that dominate the structural analysis."
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "healthcare_entitlement_expansion",
+      "social_insurance_evolution"
+    ]
+  }
+}

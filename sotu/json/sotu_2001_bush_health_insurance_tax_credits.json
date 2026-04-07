@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "sotu_2001_bush_health_insurance_tax_credits",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hc_tax"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Refundable Tax Credits for Health Insurance Purchase (2001 Bush Proposal)",
+    "topic_domain": "healthcare/economic_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "private_insurance_companies",
+      "uninsured_working_americans",
+      "employers_avoiding_direct_provision"
+    ],
+    "victims": [
+      "federal_treasury",
+      "high_cost_geographic_regions",
+      "chronically_ill_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Chronically Ill Uninsured Worker",
+      "comment": "PERSPECTIVE 1: CHRONICALLY ILL UNINSURED WORKER (SNARE) \u2014 Tax credit insufficient to purchase coverage in high-risk pools or with high deductibles. Pre-existing condition exclusions (legal until 2014) trap this agent despite subsidy. Cannot exit the constraint without abandoning healthcare access or spending beyond the credit. Maximum extraction: subsidy creates illusion of access while maintaining structural exclusion."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Healthy Uninsured Worker in High-Cost Region",
+      "comment": "PERSPECTIVE 2: HEALTHY UNINSURED WORKER IN HIGH-COST REGION (TANGLED ROPE) \u2014 Tax credit enables some insurance purchase (coordination benefit) but deductibles and cost-sharing remain prohibitive. Regional variation in premium costs means credit value differs dramatically by location. Constrained: can purchase insurance but practical coverage remains out of reach in expensive markets. Mixed extraction and coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Private Insurance Industry",
+      "comment": "PERSPECTIVE 3: PRIVATE INSURANCE INDUSTRY (ROPE) \u2014 Tax credits represent pure demand expansion without price controls or direct regulation. Insurers experience this as coordination (market mechanism enabling customer access) with significant extraction benefit (expanded insurable population at federal subsidy). Can arbitrage between premium-setting and subsidy capture. Low effective extraction from their perspective \u2014 the mechanism funds their business expansion."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Public Health Advocates and Employer Coalition",
+      "comment": "PERSPECTIVE 4: PUBLIC HEALTH ADVOCATES AND EMPLOYER COALITION (SCAFFOLD) \u2014 Sees tax credits as temporary mechanism pending more comprehensive reform. Coordination function: expands coverage incrementally while allowing private market to mature. Sunset logic implicit: credits are scaffolding until political consensus reaches universal coverage or public option. Theater ratio moderate \u2014 mechanism performs market-efficiency narrative while structural barriers remain."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Employment-Based Insurance System",
+      "comment": "PERSPECTIVE 5: EMPLOYMENT-BASED INSURANCE SYSTEM (PITON) \u2014 Tax credits preserve and entrench employer-sponsored insurance as the primary coverage pathway despite structural degradation. System increasingly fails to cover part-time workers, gig economy participants, and small-business employees. Credits patch the failure (performative solution) while institutional inertia prevents fundamental restructuring. Theater ratio high: mechanism maintains appearance of employer-based universal access despite growing gaps."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 Market efficiency doctrine treats private insurance with subsidy as natural equilibrium: consumers choose, insurers compete, prices adjust. From this perspective, tax credits are coordination mechanism enabling Pareto improvement with no coercion. However, structural data contradicts mountain classification \u2014 significant beneficiaries (insurance industry, employers avoiding direct provision) and victims (chronically ill, high-cost regions) reveal this as naturalizing policy choice. False summit candidate."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "subsidy_capture_by_premium_expansion",
+      "question": "Do tax credits expand genuine insurance access or primarily fund premium increases by insurers?",
+      "resolution_mechanism": "Pre/post-credit analysis: correlation between credit implementation and average premiums in individual market; comparison of actual coverage uptake vs. model predictions assuming no premium adjustment",
+      "impact": "If premiums rise to capture credits: mechanism is pure extraction (\u03c7 rises, classify as Snare from multiple perspectives). If premiums stable and uptake high: coordination logic holds and Tangled Rope classification confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether tax credits fund genuine access or are captured by premium increases"
+    },
+    {
+      "id": "risk_pool_fragmentation_externality",
+      "question": "Do tax credits subsidizing individual market purchase fragment the insurance pool, raising costs for non-subsidized enrollees and creating negative externality?",
+      "resolution_mechanism": "Risk profile analysis: health risk distribution in individual vs employer-sponsored markets; medical loss ratio trends post-credit; premium trajectory comparison between subsidized and non-subsidized populations",
+      "impact": "If fragmentation occurs: hidden victim group emerges (non-subsidized individual market enrollees), extractiveness reassessed upward, institutional coordination failure more severe. If pools remain stable: subsidy redistributes rather than distorts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether credits fragment insurance pools and create negative externalities"
+    },
+    {
+      "id": "employment_lock_vs_labor_mobility",
+      "question": "Do tax credits for individual purchase increase labor market mobility for workers trapped in employer coverage, or do they primarily serve as supplement for workers already outside employer plans?",
+      "resolution_mechanism": "Longitudinal employment data: job switching rates, self-employment formation, part-time to full-time transitions before and after credit availability; exit-from-employer-coverage rates by credit eligibility",
+      "impact": "If credits enable labor mobility: they unlock coordination benefit and suppress perceived extraction. If credits primarily serve non-employer populations: they coordinate access but don't change fundamental employment-insurance linkage (Scaffold or Piton classification more robust).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether credits enable labor mobility or serve non-employer populations"
+    },
+    {
+      "id": "geographic_cost_variance_and_credit_adequacy",
+      "question": "Is credit magnitude calibrated to reflect geographic variation in insurance costs, or is a uniform federal credit inadequate in high-cost regions?",
+      "resolution_mechanism": "Regional premium analysis: credit-to-minimum-premium ratio by metropolitan area and rural region; coverage gaps in high-cost markets; migration or insurance avoidance patterns correlated with credit inadequacy",
+      "impact": "If uniform credit inadequate in high-cost regions: creates structural inequality (geographic victims emerge), extractiveness locally higher, Snare classification justified for high-cost populations. If regionally adjusted or adequate: Tangled Rope perspective more robust.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether credit magnitude reflects geographic cost variation"
+    },
+    {
+      "id": "moral_hazard_vs_actuarial_selection",
+      "question": "Does the credit mechanism create moral hazard (reduced preventive care due to cost-sharing) or actuarial selection (healthier individuals enroll due to affordability)?",
+      "resolution_mechanism": "Enrollment demographic analysis: health profile of credit-subsidized enrollees vs baseline population; preventive care utilization rates; adverse selection indicators in subsequent years",
+      "impact": "If moral hazard dominates: credits subsidize underutilization (Snare from public health perspective). If selection dominates: credits expand access for healthy uninsured (Rope from public health perspective). If balanced: Tangled Rope confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether credits create moral hazard or actuarial selection effects"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "hc_tax_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48,
+      "id_override": "hc_tax_extract_t5"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52,
+      "id_override": "hc_tax_extract_t10"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "hc_tax_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5,
+      "id_override": "hc_tax_theater_t5"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55,
+      "id_override": "hc_tax_theater_t10"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The refundable tax credit mechanism for health insurance purchase represents a market-based policy approach to expanding coverage among uninsured working Americans. Rather than direct government provision (single-payer), employer mandate, or public option, the mechanism uses federal tax policy to subsidize private insurance purchases by reducing out-of-pocket costs. The constraint exhibits simultaneous coordination (enabling uninsured workers to purchase coverage) and extraction (benefiting insurance companies through expanded subsidized demand while federal treasury bears cost through foregone revenue). The mechanism preserves private insurance market choice while maintaining employment-based coverage as the primary pathway\u2014structural inertia embodied in policy. This creates a hybrid Tangled Rope classification from the analytical perspective, with radically different classifications from beneficiaries (insurance industry sees Rope), victims (chronically ill see Snare), and stakeholder coalitions (public health advocates see Scaffold). The theater ratio rises over the interval as the mechanism's performative function becomes apparent\u2014it appears to solve access problems while structural barriers (pre-existing exclusions, deductible structures, geographic cost variation) remain unchanged.",
+    "key_agents": [
+      "Uninsured working Americans: Primary stated beneficiary (moderate/constrained) \u2014 experience mixed coordination (credit reduces cost) and extraction (inadequate for full coverage, regional variation)",
+      "Private insurance industry: Primary unstated beneficiary (institutional/arbitrage) \u2014 captures demand expansion and subsidy without price competition, benefits from expanded insurable population",
+      "Federal treasury: Victim (institutional/constrained) \u2014 bears cost through foregone tax revenue; constrained to defend deficit rather than expand program",
+      "Chronically ill uninsured: Structural victim (powerless/trapped) \u2014 credit insufficient due to pre-existing exclusion and risk-pool mechanics; no exit from constraint",
+      "Employers avoiding direct provision: Secondary beneficiary (institutional/arbitrage) \u2014 credit enables shift of coverage cost to federal subsidy rather than employer benefit",
+      "High-cost geographic regions: Structural victim (moderate/constrained) \u2014 uniform federal credit inadequate; regional cost variation creates inequality",
+      "Public health advocates: Organized stakeholder (organized/constrained) \u2014 see mechanism as temporary scaffold pending comprehensive reform but constrained by political feasibility"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The mechanism extracts from the federal treasury and accepts higher insurance industry profits through subsidized demand expansion without price constraints. Initial extractiveness lower (0.35) because the mechanism could plausibly coordinate access. It increases to 0.52 as structural barriers prevent the coordination function from materializing\u2014credits subsidize inadequate coverage for high-risk and high-cost populations. The rise reflects discovery that extraction mechanism (subsidizing insurance company profits via expanded enrollee base) dominates coordination mechanism (enabling uninsured access). Suppression (0.48): Moderate. Barriers to exit are substantial but not insurmountable. Workers can purchase coverage with credit but face high deductibles, cost-sharing, and exclusions. Pre-existing condition exclusions (legal until 2014) create effective traps. Geographic cost variation means some regions' suppression is higher. Theater ratio (0.55): Moderate-high, rising over interval. Mechanism performs the narrative of market-based access expansion while preserving employment-based system inertia. Rising theater reflects increasing performative function as access gaps persist despite credits.",
+    "directionality_logic": "Directionality varies sharply by agent structural position. Insurance industry (institutional/arbitrage/beneficiary) experiences low d (~0.15), producing negative \u03c7\u2014the mechanism subsidizes their expansion at federal cost. Uninsured workers (moderate/constrained) experience high d (~0.65-0.75 depending on health risk and region), producing moderate-high \u03c7\u2014they benefit from subsidized access but face non-subsidized costs and exclusions. Chronically ill uninsured (powerless/trapped) experience maximum d (~0.95), producing maximum \u03c7\u2014credit irrelevant due to structural exclusion, full extraction. Federal treasury (institutional/constrained) experiences moderate d (~0.55), constrained by political inability to limit subsidy magnitude despite rising costs. Geographic cost variation creates differentiated d within the uninsured worker category: high-cost regions higher d (trapped by inadequate credit), low-cost regions lower d (credit more effective). Inter-agent directionality conflict is core to Tangled Rope classification\u2014beneficiaries and victims are structurally enmeshed.",
+    "perspectival_gap": "Insurance industry sees pure coordination and benefit (Rope): mechanism enables market growth and customer base expansion through subsidy. Healthy uninsured in low-cost regions see mixed benefit and cost (Tangled Rope or Rope): credit enables coverage purchase; they coordinate the market and benefit from access. Chronically ill uninsured see extraction traps (Snare): credit is insufficient and pre-existing exclusions prevent coverage. High-cost region residents see regional Snare: uniform credit inadequate. Public health advocates see temporary scaffolding (Scaffold): mechanism coordinates access incrementally pending comprehensive reform with sunset as universal coverage approaches. Employment-based insurance system sees preservation of institutional inertia (Piton): credit patches gaps in employment linkage while theatrical maintenance prevents fundamental restructuring. Analytical observer risks seeing natural market equilibrium (Mountain): tax credits enable Pareto improvement through subsidy. False summit: structural data reveals beneficiaries (insurance industry, employers) and victims (chronically ill, high-cost regions), contradicting natural law classification.",
+    "directionality_logic_detail": "The beneficiary/victim declarations drive the directionality derivation. Insurance companies are declared beneficiaries (institutional/arbitrage) \u2192 low d (~0.15) \u2192 negative \u03c7. Uninsured working Americans are declared both beneficiary and victim depending on health status and geography\u2014this dual role creates the core Tangled Rope tension. Federal treasury is victim/constrained \u2192 moderate d \u2192 moderate \u03c7. Chronically ill populations and high-cost regions are victims/trapped \u2192 high d \u2192 high \u03c7. The perspectival gap emerges from these different structural positions: same mechanism, radically different directionality values, therefore radically different experienced extractiveness.",
+    "perspectival_gap_detail": "The insurance industry's Rope classification reflects their genuine experience: the mechanism coordinates demand expansion and enables profitable market growth. The uninsured worker's Tangled Rope reflects mixed experience: the credit enables some access (coordination) but inadequate full coverage and remaining barriers (extraction). The chronically ill's Snare reflects their total extraction: credit meaningless due to exclusions. The scaffold perspective reflects the organized stakeholder's view: mechanism is temporary support structure toward comprehensive reform. The piton perspective reflects institutional inertia: credit maintains theater of employment-based coverage while preventing fundamental restructuring. The mountain perspective reflects risk of naturalizing policy: treating market equilibrium as immutable natural law rather than contingent institutional choice.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by distinguishing genuine coordination (expanding access for some populations) from extraction masquerading as coordination (subsidizing insurance industry profit expansion while creating performative appearance of access). The mechanism simultaneously coordinates (enables uninsured purchase) and extracts (from federal treasury and chronically ill populations). The Tangled Rope classification is correct at analytical perspective: active enforcement required (IRS administration), beneficiaries exist (insurance industry, some uninsured workers), victims exist (chronically ill, high-cost regions). The perspectival gap shows that simpler types (pure Rope or pure Snare) fail from specific vantage points. Insurance industry genuinely experiences Rope; chronically ill genuinely experience Snare; public health advocates genuinely experience Scaffold as sunset logic. No single type is 'the' answer\u2014the constraint is a tangled hybrid revealing how policy mechanisms can simultaneously coordinate some populations and extract from others."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "employer_sponsored_insurance_lock_in",
+      "healthcare_risk_pool_fragmentation",
+      "medicaid_coverage_gap"
+    ],
+    "dual_formulation_note": "Tax credits coordinate access (Rope logic) for some populations but extract from others (Snare logic). Decomposition into separate stories by risk profile would show: (a) healthy_uninsured_tax_credit_access (\u03b5=0.35, Rope), (b) chronically_ill_tax_credit_exclusion (\u03b5=0.75, Snare), (c) insurance_industry_subsidy_capture (\u03b5=0.45, Tangled Rope). Single story maintains because they are inextricably linked\u2014the subsidy extraction and access coordination are simultaneous properties of the same mechanism, not separable constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12,
+      "note": "Insurance industry: beneficiary with arbitrage options and ability to capture subsidy through premium-setting rather than bearing extraction costs. Canonical d for institutional would be ~0.00; override upward slightly (0.12) to reflect that beneficiary status is asymmetric\u2014they set terms while government absorbs cost."
+    }
+  ]
+}

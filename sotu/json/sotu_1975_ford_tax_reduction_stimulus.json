@@ -1,0 +1,213 @@
+{
+  "header": {
+    "constraint_id": "sotu_1975_ford_tax_reduction_stimulus",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ford_tax"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.35,
+    "theater_ratio": 0.42,
+    "claimed_type": "tangled_rope",
+    "human_readable": "1975 Ford Tax Reduction and Stimulus Mechanism",
+    "topic_domain": "economic/fiscal_policy",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "individual_taxpayers",
+      "business_investment_firms",
+      "treasury_short_term_deficit_reduction"
+    ],
+    "victims": [
+      "future_fiscal_capacity",
+      "low_income_nonworking_population"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Unemployed Non-Filer",
+      "comment": "PERSPECTIVE 1: UNEMPLOYED NON-FILER (SNARE) \u2014 Excluded from rebate mechanism because they filed no tax return in 1974. Bears costs of inflation/recession (unemployment, reduced services) but receives no direct stimulus. Trapped in economic downturn with no exit option. Maximum extraction \u2014 the constraint explicitly excludes this agent while distributing benefits to employed taxpayers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Individual Rebate Recipient",
+      "comment": "PERSPECTIVE 2: INDIVIDUAL REBATE RECIPIENT (ROPE) \u2014 Receives direct cash transfer (up to $1,000 per return). Limited by one-time nature of rebate and modest rebate amount relative to annual income. Experiences stimulus as coordination mechanism: government and household solve consumption timing problem together. Mobile \u2014 can spend or save rebate. Net benefit but constrained by program design."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Business Investment Firm",
+      "comment": "PERSPECTIVE 3: BUSINESS INVESTMENT FIRM (ROPE) \u2014 Liberalized investment tax credit (12%) directly subsidizes capital equipment purchases. Arbitrage option: can reallocate investment timing to capture the credit. Experiences constraint as beneficial coordination \u2014 government absorbs cost, firms make investment decisions. Strong net benefit with agency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Future Taxpayer",
+      "comment": "PERSPECTIVE 4: FUTURE TAXPAYER (TANGLED ROPE) \u2014 Bears deferred cost of deficit-financed stimulus through higher future tax burdens or reduced services. Constrained by institutional fiscal structure \u2014 cannot exit the federal tax system. Genuine coordination benefit exists (economic recovery reduces unemployment and raises tax base), but asymmetric distribution of costs (future) and benefits (present) creates extraction. Suppression via institutional inevitability of future fiscal obligation."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Federal Reserve and Fiscal Policymakers",
+      "comment": "PERSPECTIVE 5: FISCAL POLICYMAKERS (SCAFFOLD) \u2014 See stimulus as temporary coordinating intervention with explicit sunset: one-year duration, specific dollar magnitude, time-limited business credit. Organized agents (Congress, Executive) design it as non-permanent. Theater low because the mechanism is transparent: direct cash transfer, identifiable credit. Perceive constraint as soluble \u2014 once recovery proceeds, rebates and credits phase out and normal fiscal structure resumes. Exit path clear."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Keynesian Stabilization Doctrine",
+      "comment": "PERSPECTIVE 6: KEYNESIAN STABILIZATION DOCTRINE (PITON) \u2014 The stimulus mechanism is an instantiation of counter-cyclical fiscal policy (Keynesian framework). The institutional doctrine persists through economic theory and policy training, but its functional relationship to actual economic recovery is contested and increasingly questioned. By 1975, the doctrine's credibility is eroding (stagflation contradicts Phillips curve; velocity assumptions challenged). Theater ratio reflects that the stimulus is largely performative expression of a doctrine rather than a mechanism with high causal efficacy. High institutional inertia \u2014 policymakers continue stimulus because Keynesian theory legitimizes it, not because empirical evidence demonstrates effectiveness. Piton classification derives from theater (0.42) and doctrinal degradation, not from high extractiveness."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Monetary-Real Neutrality View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / MONETARY NEUTRALITY (MOUNTAIN) \u2014 From a civilizational/global analytical perspective, the constraint appears as a natural law of fiscal stimulus: real economic effects require relative price changes or supply-side shifts; nominal redistribution via rebates and credits leaves real constraints unchanged. This perspective sees the stimulus as inherently limited by monetary theory \u2014 you cannot solve real unemployment (reduced capital stock, skill mismatches, sectoral shifts) with nominal transfer mechanisms. However, empirical evidence contradicts this mountain classification, revealing it as a false summit: the constraint is an institutional arrangement (Keynesian policy doctrine) presented as economic necessity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "stimulus_multiplier_uncertainty",
+      "question": "What is the actual short-run fiscal multiplier for 1975 household rebates and business investment credits? Does it exceed 1.0, justifying the stimulus as counter-cyclical?",
+      "resolution_mechanism": "Econometric analysis comparing counties and states with differential rebate take-up rates; comparison of 1975 consumption growth vs. baseline recession trajectory; assessment of crowding-out effects on private investment",
+      "impact": "If multiplier < 0.8: stimulus is net deficit-increasing without significant output recovery (snare perspective dominates). If multiplier > 1.2: stimulus is genuinely counter-cyclical coordination (rope perspective dominates). If 0.8-1.2: tangled rope assessment correct \u2014 coordination mixed with asymmetric fiscal cost.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude of fiscal multiplier for 1975 stimulus mechanisms"
+    },
+    {
+      "id": "business_investment_timing_vs_underlying_demand",
+      "question": "Does the liberalized investment tax credit stimulate net new capital formation, or primarily accelerate investment that would have occurred anyway?",
+      "resolution_mechanism": "Comparison of 1975 capital formation trends vs. 1974 baseline; analysis of whether credit-induced investments have positive NPV absent credit; sector-level analysis of investment timing bunching around credit implementation",
+      "impact": "If net new capital: business investment credit is genuine coordination (reduces intertemporal distortion). If primarily timing acceleration: credit is extraction mechanism disguised as stimulus (benefits present firms, costs future treasury). Classification shift from rope to snare for business perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether investment credit creates net new capital or merely accelerates existing plans"
+    },
+    {
+      "id": "rebate_propensity_to_consume_distribution",
+      "question": "What proportion of rebate income is consumed vs. saved? Does propensity vary by income level, age, and expectation of permanence?",
+      "resolution_mechanism": "Household surveys on rebate spending plans; panel data on consumption changes of rebate recipients; comparison of high-MPC (marginal propensity to consume) groups vs. low-MPC groups",
+      "impact": "If high consumption (MPC > 0.7): stimulus transmits to demand, validating tangled_rope coordination function. If low consumption (MPC < 0.4): rebate is saved/used for debt reduction, reducing stimulus effect and shifting classification toward snare (extraction without coordination benefit). Psychological expectations (one-time vs. permanent income) are critical.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Propensity to consume out of one-time tax rebate"
+    },
+    {
+      "id": "distributional exclusion_mechanism",
+      "question": "Is the exclusion of non-filers (unemployed, disabled, elderly with no income) a structural feature of tax-based targeting or a policy choice?",
+      "resolution_mechanism": "Historical analysis of rebate design: were alternatives with broader coverage (refundable credits, negative income tax, direct payments) considered and rejected? Analysis of coverage rates by income decile.",
+      "impact": "If structural: snare perspective reflects inherent limitation of tax-based transfer (trapment for excluded populations is unavoidable). If policy choice: snare perspective reflects extractive design (rebate could have included non-filers but didn't). Classification of the constraint depends on whether exclusion is mechanism-necessary or contingent-institutional.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether tax-rebate exclusion of non-filers is structural or contingent"
+    },
+    {
+      "id": "long_term_fiscal_sustainability",
+      "question": "Does the deficit-financed stimulus reduce long-term fiscal capacity, or is recovery-driven tax base growth sufficient to offset the cost?",
+      "resolution_mechanism": "Fiscal accounting from 1975 baseline through 1980; comparison of debt-to-GDP trajectory under stimulus vs. no-stimulus scenario; analysis of whether 1975-1980 recovery generated additional tax revenue exceeding rebate and credit costs",
+      "impact": "If deficit is self-correcting through growth: tangled_rope assessment correct (legitimate coordination with deferred cost). If deficit accumulates and constrains future policy: extraction is more severe (future_taxpayer victim perspective validated). Impact on mandatrophy resolution for high-extractiveness constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Long-term fiscal sustainability of 1975 deficit-financed stimulus"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "The 1975 Ford tax reduction and stimulus package represents a demand-side fiscal intervention during the 1974-1975 recession designed to restore consumption and investment. The mechanism distributes $12 billion in individual rebates (12% of 1974 tax payments, capped at $1,000 per return) and liberalizes business investment tax credits to 12%. The constraint operates as a Tangled Rope: genuine coordination function (stimulus addresses demand collapse and unused capital capacity) exists alongside asymmetric extraction (benefits accrue to employed taxpayers and firms with investment capacity; costs accrue to future taxpayers and unemployed non-filers excluded from the rebate base). Theater ratio is moderate (0.42) because the stimulus mechanism is transparent \u2014 direct cash transfers are visible \u2014 but the underlying macroeconomic theory (Keynesian counter-cyclical policy) is increasingly contested by mid-1970s stagflation evidence. The constraint exhibits all six DR types from different perspectives, making it diagnostically rich: unemployed non-filers see Snare (exclusion from benefits), individual recipients see Rope (direct benefit with consumption choice), firms see Rope (subsidized investment), future taxpayers see Tangled Rope (mixed coordination and deferred cost), policymakers see Scaffold (time-limited intervention), economic doctrine sees Piton (Keynesian theory maintaining the stimulus despite mounting evidence of inefficacy), and the analytical observer risks seeing Mountain (natural law of stimulus limitations) but this is a false summit.",
+    "key_agents": [
+      "Individual taxpayers (employed): Primary beneficiary (moderate/mobile) \u2014 receive direct rebates; can choose consumption vs. savings timing",
+      "Business firms with investment plans: Primary beneficiary (powerful/arbitrage) \u2014 capture 12% investment credit; can reallocate investment timing to maximize benefit",
+      "Unemployed non-filers: Primary victim (powerless/trapped) \u2014 excluded from rebate mechanism; bear recession costs without stimulus relief",
+      "Future taxpayers: Secondary victim (moderate/constrained) \u2014 obligated to service deficit-financed stimulus through future taxes or reduced services",
+      "Federal Reserve and fiscal policymakers: Organized coordinators (organized/constrained) \u2014 design stimulus as time-limited intervention with clear sunset; perceive mechanism as temporary solution",
+      "Keynesian macroeconomic doctrine: Institutional framework (institutional/arbitrage) \u2014 legitimizes stimulus as counter-cyclical policy; maintains intellectual coherence despite stagflation contradictions",
+      "Analytical observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing institutional policy as economic law; False Summit detection reveals naturalization of contingent doctrine"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The stimulus mechanism does deliver genuine direct benefits to recipients (rebates, investment credits) and addresses a real coordination problem (demand collapse in recession). However, extractiveness is elevated above zero by: (1) exclusion of non-filers from rebate base, concentrating benefits on employed population; (2) asymmetric temporal distribution (immediate benefits to present agents, deferred costs to future taxpayers); (3) distributional regressivity of flat-cap rebate structure ($1,000 cap benefits lower-income filers more in relative terms but concentrates absolute benefits on median-income filers); (4) uncertainty whether business investment credit stimulates net new capital or merely accelerates existing plans. The extractiveness trajectory shows rise to 0.38 at mid-interval (peak stimulus intensity and uncertainty about effectiveness) then decline to 0.32 at end of interval (stimulus phase-out, recovery beginning to reduce deficit urgency). Theater ratio (0.42): Moderate-low. Direct cash transfers and explicit tax credits are mechanically transparent \u2014 recipients see the benefit, IRS administers the mechanism straightforwardly. Theater does not reflect hidden extraction. Rather, theater reflects that underlying macroeconomic justification (Keynesian stimulus doctrine) is increasingly performative by 1975 \u2014 the theory maintains institutional authority despite stagflation evidence that contradicts Phillips curve assumptions and multiplier expectations. Suppression (0.35): Moderate. Barriers to exit from the constraint's effects are institutional (future taxpayers cannot exit the federal fiscal system) and structural (unemployed cannot retrospectively file tax returns to claim rebates). However, suppression is not total \u2014 individual recipients choose spending timing, firms choose investment timing, future fiscal effects are diffuse and long-delayed, and the stimulus is explicitly temporary. Beneficiaries and victims are not trapped; they are constrained by institutional structure and temporal asymmetry.",
+    "perspectival_gap": "The constraint produces a sharp perspectival gap between beneficiaries (see coordination and benefit) and victims (see extraction or exclusion). Individual rebate recipients see Rope \u2014 straightforward coordination mechanism where government transfers cash and households solve consumption timing. Business firms see Rope \u2014 investment credit directly subsidizes capital formation at clear marginal rate. Both beneficiary perspectives are veridical: the coordination function is real. Unemployed non-filers see Snare \u2014 the constraint explicitly excludes them from benefits while recession imposes costs. Future taxpayers see Tangled Rope \u2014 mixed benefit (economic recovery reduces unemployment and raises future tax base) and cost (deficit-financed stimulus creates fiscal obligation). The perspectival gap is bridged by temporal distribution: immediate beneficiaries have high power and mobile/arbitrage exit options; victim groups are temporally diffuse (future) or politically organized (unemployed) but lack direct participation in stimulus design. Policymakers see Scaffold \u2014 they perceive the stimulus as temporary, time-limited coordination mechanism with clear sunset (one-year duration, specific dollar magnitude). The Piton perspective (degradation of Keynesian doctrine) emerges when comparing 1975 policy environment to pre-stagflation 1960s: the theory maintained authority through inertia and institutional credibility despite mounting empirical contradictions. The analytical observer risks a false-summit Mountain (stimulus is naturally limited by monetary theory and real economy structure) \u2014 but this naturalizes what is actually a contingent policy choice grounded in increasingly questioned doctrine.",
+    "directionality_logic": "Directionality values (d) are derived from structural position: who benefits, who bears costs, what exit options constrain each agent. Individual rebate recipients: beneficiary status + mobile exit (can choose consumption timing) \u2192 low-to-moderate d \u2192 low chi \u2192 Rope experience. Business firms: beneficiary status + arbitrage exit (can reallocate investment timing) \u2192 very low d \u2192 negative/near-zero chi \u2192 strong Rope experience. Unemployed non-filers: victim status + trapped exit (cannot retroactively file; cannot exit recession) \u2192 very high d \u2192 high chi \u2192 Snare experience (maximum experienced extraction). Future taxpayers: mixed victim status (bear deferred costs) + constrained exit (cannot exit federal fiscal system) \u2192 moderate-high d \u2192 moderate chi \u2192 Tangled Rope experience. Policymakers: beneficiary status (doctrine credits them with solving crisis) + constrained exit (institutional obligation to implement monetary-fiscal coordination) \u2192 low-moderate d \u2192 low chi \u2192 Scaffold experience (perceive sunset, not extraction). Keynesian doctrine: beneficiary status (institutional authority and research funding) + arbitrage exit (can modify doctrine, incorporate new evidence) \u2192 very low d \u2192 near-zero chi \u2192 Piton experience (institutionally maintained despite functional degradation). Analytical observer: observer status (external to political-economic structure) \u2192 moderate d \u2192 moderate chi via canonical fallback (0.73). The engine derives d from beneficiary/victim declarations and exit options; the sigmoid f(d) then computes experienced extractiveness chi relative to base extractiveness \u03b5.",
+    "perspectival_gap_explanation": "The gap arises from differential structural positions relative to the stimulus mechanism. Beneficiaries with arbitrage/mobile exit options experience the constraint as pure coordination (Rope) because they participate in and benefit from the mechanism. Victims with trapped/constrained exit experience the same mechanism as extraction because they bear costs (exclusion, future obligation) without participation. The gap is not an artifact of observer position \u2014 it reflects real structural asymmetry. The temporal gap (immediate benefits to present agents, diffuse costs to future agents) enables beneficiary dominance of policy discourse \u2014 those who benefit are present and organized, those who bear costs are future and diffuse. The analytical observer's risk of false-summit Mountain reveals naturalization: framing stimulus limitations as inherent economic laws (monetary neutrality, velocity constraints, real supply-side determinism) is a cover story for institutional doctrine that has lost empirical credibility. The constraint's true structure is institutional-political (Tangled Rope: coordination function mixed with asymmetric distribution), not natural-law (Mountain).",
+    "directionality_logic_detail": "Beneficiary declarations (individual_taxpayers, business_investment_firms, treasury_short_term_deficit_reduction) establish who derives benefits from the constraint. Victim declarations (future_fiscal_capacity, low_income_nonworking_population) establish who bears costs. The engine computes directionality (d) from these structural facts plus exit options: beneficiaries with high exit options (arbitrage, mobile) get low d; victims with low exit options (trapped, constrained) get high d. For individual rebate recipients: declared beneficiary + mobile exit (can choose consumption timing) \u2192 engine derives d \u2248 0.15-0.25 \u2192 f(d) \u2248 -0.01 to 0.15 \u2192 low chi relative to base \u03b5 (0.38) \u2192 chi \u2248 0.05-0.10 \u2192 agent perceives extraction coefficient near zero, classifies constraint as pure coordination (Rope). For unemployed non-filers: declared victim + trapped exit (cannot retroactively file; cannot escape recession) \u2192 engine derives d \u2248 0.95 \u2192 f(d) \u2248 1.42 \u2192 very high chi relative to base \u03b5 (0.38) \u2192 chi \u2248 0.54 \u2192 agent perceives strong extraction, classifies as Snare. For future taxpayers: declared victim + constrained exit (cannot exit federal fiscal system) \u2192 engine derives d \u2248 0.75 \u2192 f(d) \u2248 1.15 \u2192 moderate chi relative to base \u03b5 (0.38) \u2192 chi \u2248 0.44 \u2192 agent perceives mixed coordination and extraction, classifies as Tangled Rope (the actual claimed_type). Scope modifier \u03c3(S): national scope (\u03c3=1.0) applies no scaling; if scope were global, \u03c3(1.2) would amplify chi by 20%. Suppression (0.35) is raw structural property, unscaled by power/scope \u2014 it represents institutional barriers to exit that operate independently of beneficiary/victim distribution.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that extractiveness (0.38) is legitimate: the constraint genuinely coordinates (addresses demand collapse, utilizes unused capital capacity) AND exhibits real asymmetric extraction (benefits to employed/investing agents, costs to unemployed/future agents). The Tangled Rope classification reconciles apparent contradiction: the constraint is not pure coordination (rope) because distributional asymmetry and temporal distribution of costs create extraction; it is not pure extraction (snare) because genuine coordination benefit exists. The constraint's theatrical character (Keynesian doctrine maintaining intellectual authority despite stagflation) explains why the constraint persists despite questionable empirical efficacy. The Piton perspective (economic doctrine degradation) and false-summit Mountain (naturalization of institutional choice) are diagnostic signals that the policy's credibility rests on institutional inertia and doctrinal authority rather than robust empirical validation. Mandatrophy is resolved: the constraint is correctly classified as Tangled Rope when base properties, perspectives, and beneficiary/victim declarations are integrated. The classification is not contradicted by any single perspective \u2014 it is the coherent summary of the structure across all perspectives.",
+    "constraint_identity_note": "This constraint is a specific historical instantiation of demand-side fiscal stimulus. Alternative observables (stimulus size, duration, targeting mechanism, macroeconomic backdrop) could yield different \u03b5 values, producing different constraint families: (1) 'Ford stimulus mechanism design' (\u03b5 \u2248 0.38, institutional choices about rebate cap, investment credit rate, duration); (2) 'one-time rebate marginal propensity to consume' (\u03b5 \u2248 0.15-0.60 depending on consumption vs. savings behavior); (3) 'deficit financing and future fiscal obligation' (\u03b5 \u2248 0.35-0.55 depending on recovery trajectory and debt service costs); (4) 'Keynesian doctrine institutional degradation' (\u03b5 \u2248 0.42 as institutional inertia, separate from stimulus mechanism itself). The primary story treats the stimulus mechanism as a unified constraint (\u03b5=0.38). If future analysis separates doctrine degradation or consumption behavior into distinct constraints, network links would establish the family structure."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "inflation_expectations_1975",
+      "federal_deficit_accumulation_1975_1980",
+      "keynesian_doctrine_credibility_crisis"
+    ],
+    "dual_formulation_note": "The 1975 Ford tax stimulus is structurally upstream of multiple constraint families: inflation expectations (stimulus signals demand-side policy, affects price-setting), deficit accumulation (fiscal cost compounds over recovery period), and Keynesian doctrine (stimulus is institutional expression of theory whose empirical credibility is declining). Separate stories track the constraint's downstream institutional and macroeconomic effects."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.28,
+      "note": "Keynesian doctrine appears as beneficiary (institutional legitimacy for stimulus policy) but is actually partially captured by stagflation evidence that contradicts its core assumptions. Override d upward from typical institutional beneficiary (\u22480.05) to 0.28 to reflect erosion of doctrine's structural authority by mid-1970s."
+    }
+  ]
+}

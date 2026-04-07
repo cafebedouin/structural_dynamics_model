@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "1949_truman_employment_act_1946_enforcement",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "empl_act"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Employment Act of 1946: Government Demand-Side Management Commitment",
+    "topic_domain": "governance/macroeconomic_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "federal_agencies",
+      "regulatory_apparatus"
+    ],
+    "victims": [
+      "private_enterprise",
+      "unorganized_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Unorganized Workers in Cyclical Industries",
+      "comment": "PERSPECTIVE 1: UNORGANIZED WORKERS (SNARE) \u2014 Face involuntary unemployment during downturns despite the Act's stated commitment. Government management of cycles exists but lacks enforcement teeth against cyclical layoffs in textiles, agriculture, construction. Workers cannot exit the constraint; must endure periodic unemployment. High experienced extraction \u2014 the promise of full employment remains unfulfilled for workers without union representation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Large Private Enterprises",
+      "comment": "PERSPECTIVE 2: LARGE PRIVATE ENTERPRISE (TANGLED ROPE) \u2014 Constrained by credit controls and anti-monopoly enforcement (extraction), but benefits from government demand stabilization that prevents catastrophic recessions (coordination). Enterprises must accept regulatory coordination but maintain substantial pricing power and production flexibility. The constraint mixes genuine macroeconomic coordination with asymmetric extraction through regulatory authority \u2014 firms cannot fully exit government demand management but have resources to absorb costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Federal Agencies and Congress",
+      "comment": "PERSPECTIVE 3: FEDERAL AGENCIES / CONGRESS (ROPE) \u2014 Net beneficiaries. The Act grants agencies explicit authority to stabilize cycles through fiscal and monetary coordination. Congress gains legitimacy (full employment commitment) and agencies gain power (regulatory tools). The constraint solves a genuine coordination problem: no private actor can manage demand-side cycles; government can. Pure coordination benefit with low coercion \u2014 agencies experience the constraint as enabling, not extractive."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Organized Labor and Progressive Coalition",
+      "comment": "PERSPECTIVE 4: ORGANIZED LABOR / PROGRESSIVE COALITION (SCAFFOLD) \u2014 See the Employment Act as a temporary institutional bridge toward a stronger social guarantee. Labor unions gained explicit voice in the Act's machinery and see full employment as achievable through coordinated government-labor-industry planning. Their exit path: if government fails to deliver on employment commitment, labor can shift to organizing sector-specific job guarantees or cooperative ownership (mobile exit). The constraint has a sunset logic embedded in its success criterion \u2014 either government achieves full employment (constraint becomes unnecessary) or labor pursues alternative models. Theater ratio is elevated because the Act's machinery (Council of Economic Advisors, policy commissions) performs commitment more than it delivers unconditional employment guarantees."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Neoclassical Economics Establishment",
+      "comment": "PERSPECTIVE 5: NEOCLASSICAL ECONOMICS (PITON) \u2014 By the late 1950s, the Act's Keynesian machinery becomes increasingly performative. Economists maintain the commitment's language and ritual (council reports, policy frameworks) while theoretical priors shift toward belief that markets self-correct and government intervention creates inefficiency. The Act persists through institutional inertia \u2014 the Council of Economic Advisors continues producing reports, agencies maintain demand-management tools \u2014 but the underlying conviction that government can and should stabilize cycles degrades into theater. Theater ratio rises as the academic consensus pivots toward monetarism and supply-side approaches."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer: Natural Law View",
+      "comment": "PERSPECTIVE 6: ANALYTICAL / CIVILIZATIONAL (MOUNTAIN \u2014 FALSE SUMMIT CANDIDATE) \u2014 From a universal civilizational perspective, business cycles appear as immutable features of market economies \u2014 the constraint of economic scarcity and coordination impossibility without government intervention. Market economies inherently generate cycles; government's attempt to manage them appears to be responding to a natural law. However, the structural data contradicts this: identifiable beneficiaries (federal agencies, regulatory apparatus) benefit from the constraint; specific victims (unorganized workers, private firms) bear costs. The engine will flag this as a false summit: the 'immutable economic cycle' framing naturalizes what is actually a contingent institutional arrangement that distributes power toward government agencies."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "counterfactual_cycle_severity_absent_act",
+      "question": "Would business cycles be less severe, equally severe, or more severe in the absence of government demand-side management under the 1946 Act?",
+      "resolution_mechanism": "Comparative historical analysis of pre-1946 cycles vs. post-1946 cycles; econometric decomposition of cycle amplitude attributable to automatic stabilizers vs. discretionary policy; international comparison with non-Keynesian economies.",
+      "impact": "If cycles would be more severe without the Act: constraint is genuine coordination (rope classification predominates). If equally or less severe: constraint is primarily extraction masquerading as necessary management (snare/tangled_rope classification becomes dominant). If severity depends on implementation: classification distribution shifts toward scaffold and piton (government policy choices matter, not immutable necessity).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Counterfactual severity of cycles without Act-driven government management"
+    },
+    {
+      "id": "political_economy_of_full_employment_commitment",
+      "question": "Is the 1946 Act's commitment to full employment a binding legal obligation, a non-binding aspiration, or a framework for contestable policy discretion?",
+      "resolution_mechanism": "Legal analysis of enforcement mechanisms (Congressional mandates, agency authority limits, judicial review standards); historical record of government response to high unemployment (does government mobilize resources or accept unemployment as inevitable?); political consequences of unemployment (does failure to meet commitment trigger policy change or become normalized?).",
+      "impact": "If binding obligation: victims (unorganized workers) have legal ground for remedy (extractiveness drops, snare becomes rope or tangled_rope). If aspiration: victims lack enforcement mechanism (extractiveness stays high, snare classification confirmed). If contestable discretion: classification depends on which political coalition controls government (piton classification indicates degraded commitment).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Legal and political bindingness of full employment commitment"
+    },
+    {
+      "id": "labor_coalition_capture_vs_capacity",
+      "question": "Do organized labor and progressive actors genuinely believe government can deliver full employment through demand-side management, or do they accept the Employment Act as a partial victory while recognizing its insufficient scope?",
+      "resolution_mechanism": "Historical record of labor union demands and rhetoric (are they satisfied with Act provisions or pushing for stronger guarantees like public job creation?); comparative analysis of countries with explicit job guarantee programs vs. U.S. demand-management approach; analysis of when labor abandons demand-side reliance in favor of sector-specific organizing.",
+      "impact": "If genuine belief in sufficient scope: scaffold classification is accurate (organized labor sees real exit path through implementation success). If recognized insufficiency: organized labor is partly captured by the constraint's framework even while organizing alternatives (snare classification of labor rises slightly, theater ratio interpretation changes).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether organized labor views Employment Act as sufficient or partial victory"
+    },
+    {
+      "id": "natural_law_framing_as_extraction_cover",
+      "question": "Does the naturalizing language about 'economic cycles' and 'inherent instability' function as a cover story that justifies government control and privatizes unemployment risk?",
+      "resolution_mechanism": "Discourse analysis: how often does government rhetoric invoke 'natural cycles' to explain unemployment rates? Do policy documents contrast government 'response' to inevitable cycles vs. government 'creation' of full employment? Comparison with societies that frame employment as achievable right rather than cyclical fluctuation.",
+      "impact": "If naturalization is effective rhetorical cover: the mountain classification is a false summit, revealing how government frames its own regulatory power as response to natural necessity rather than as active extraction and reallocation. This supports FSM trigger and reclassification to tangled_rope or snare.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether natural-law framing of cycles serves as extraction cover story"
+    },
+    {
+      "id": "regional_sector_unemployment_persistence",
+      "question": "After 25+ years of Act implementation, why do specific regions and sectors persist in high unemployment despite national demand-side management?",
+      "resolution_mechanism": "Regional unemployment data (are Appalachia, the Great Plains, and industrial heartland disproportionately affected?); sectoral unemployment (agricultural, textile, resource extraction workers face persistent unemployment despite national management); analysis of whether national demand-side management is structurally incapable of addressing structural unemployment.",
+      "impact": "If regional/sectoral persistence is significant: the Act's extraction mechanism is revealed \u2014 it redistributes unemployment toward politically weak regions and sectors while benefiting concentrated industrial centers (extractiveness rating may rise). If regional/sectoral patterns dissolve: demand-side management genuinely solves the full employment problem (extractiveness may drop, rope classification becomes more plausible).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Persistent regional and sectoral unemployment despite national management"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "empl_act_extractiveness_1946"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48,
+      "id_override": "empl_act_extractiveness_1951"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52,
+      "id_override": "empl_act_extractiveness_1956"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45,
+      "id_override": "empl_act_theater_1946"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55,
+      "id_override": "empl_act_theater_1951"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.61,
+      "id_override": "empl_act_theater_1956"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Employment Act of 1946 represents a foundational shift in U.S. governance: explicit federal commitment to use all government resources to promote maximum employment, production, and purchasing power. The constraint operates through demand-side fiscal and monetary coordination, positioning government as the primary stabilizer of business cycles. The Act creates genuine coordination benefits (preventing catastrophic recessions requires state-level demand management) while simultaneously extracting asymmetric costs from powerless and unorganized workers who lack enforceable claim on the 'full employment' commitment. The constraint exhibits six distinct classifications from different perspectives: it appears as enabling coordination to federal agencies (rope), as binding protection to organized labor (scaffold with sunset), as degraded theater to academic economists (piton), as continuing extraction to unorganized workers (snare), as mixed coordination-and-regulation to large firms (tangled rope), and as natural law to the civilizational observer (mountain \u2014 false summit candidate). The theater ratio rises from 0.45 to 0.61 over the measurement interval as the Council of Economic Advisors and policy machinery become increasingly performative \u2014 reports and recommendations persist while actual unemployment volatility remains substantial, particularly for unorganized and regional workers. The extractiveness measurement shows accumulation from 0.35 to 0.52, reflecting the gradual realization that demand-side management cannot eliminate structural unemployment and that the commitment's failure to protect unorganized workers becomes normalized into policy doctrine.",
+    "key_agents": [
+      "Federal Agencies (Congress, Executive, Council of Economic Advisors): Institutional/arbitrage. Primary beneficiary \u2014 gains explicit regulatory authority over macroeconomic coordination and legitimacy through full employment commitment.",
+      "Unorganized Workers in Cyclical Industries: Powerless/trapped. Primary victim \u2014 subject to cyclical unemployment despite Act's stated commitment; lack enforceable claim on government protection.",
+      "Large Private Enterprises: Powerful/constrained. Secondary victim/beneficiary \u2014 constrained by credit controls and anti-monopoly enforcement but benefit from demand stabilization that prevents catastrophic recessions.",
+      "Organized Labor and Progressive Coalition: Organized/mobile. Secondary beneficiary \u2014 gained voice in Act's machinery and see full employment as achievable; maintain alternative models (public sector jobs, cooperatives) as exit paths.",
+      "Neoclassical Economics Establishment: Institutional/arbitrage. Tertiary actor \u2014 maintains performative commitment to Act while intellectual consensus shifts toward market self-correction and government inefficiency.",
+      "Regional and Sectoral Communities: Powerless to moderate/trapped-to-constrained. Secondary victim \u2014 persistent unemployment in specific regions and industries despite national demand-side management reveals constraint's distributional failure."
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The Act combines genuine coordination (demand-side stabilization prevents depression) with asymmetric extraction (government gains regulatory authority, unorganized workers bear employment volatility). The initial extractiveness (0.35) reflects the 1946 moment when the coordination benefit was strong and the regulatory apparatus minimal. By 1956, extractiveness rises to 0.52 as government authority expands and unorganized workers face persistent unemployment in specific sectors and regions despite national management \u2014 the coordination promise degrades into regulation without delivery. Suppression (0.48): Moderate. Unorganized workers cannot collectively exit the constraint (trapped), but large firms have some arbitrage capacity and organized labor maintains alternative models. The suppression is structural (workers lack political power to enforce the employment commitment) but not totalizing (some sectors and regions achieve strong employment). Theater ratio (0.61): Moderate-high. The Council of Economic Advisors and policy apparatus perform commitment more reliably than they deliver unconditional full employment. Reports continue, policy frameworks persist, but actual unemployment volatility remains and concentrates in politically weak regions and sectors. The theater increases over the measurement interval as the gap between commitment language and implementation widens \u2014 the machinery becomes more performative even as extractiveness accumulates.",
+    "perspectival_gap": "The Employment Act creates maximum perspectival divergence through the asymmetry between coordinating commitment and enforcing mechanism. Federal agencies experience the constraint as pure coordination (rope) \u2014 they solve the collective action problem of demand-side cycle management. Unorganized workers experience snare \u2014 the commitment to full employment is stated but the enforcement mechanism targets organized constituencies and leaves structural unemployment concentrated in politically weak regions and sectors. Organized labor experiences scaffold \u2014 they gained explicit voice in the Act's machinery and maintain alternative models (public sector job creation, cooperatives) as exit paths if government fails. Large enterprises experience tangled rope \u2014 they pay regulatory costs (credit controls, antitrust enforcement) but receive demand-stabilization benefits that prevent catastrophic recessions. The neoclassical establishment experiences piton \u2014 the institutional machinery persists while underlying intellectual conviction that government can manage cycles fades, leaving reports and frameworks as performative ritual. The civilizational observer risks mountain classification but the structural data reveals false summit \u2014 identifiable beneficiaries (federal agencies) and victims (unorganized workers) indicate contingent institutional arrangement, not natural law.",
+    "directionality_logic": "Directionality values (d) for each perspective derive from structural position within the extraction and coordination flows. Federal agencies and Congress (beneficiaries, arbitrage exit) experience low d (\u22480.15) \u2014 the constraint extracts from others toward them. Unorganized workers (victims, trapped exit) experience high d (\u22480.95) \u2014 the constraint extracts maximum value from them. Large private enterprises (mixed victim-beneficiary, constrained exit) experience moderate d (\u22480.55) \u2014 they pay regulatory costs but receive demand-stabilization benefits. Organized labor (beneficiary, mobile exit) experience moderate-low d (\u22480.30) \u2014 they benefit from the Act's machinery and maintain exit options. Neoclassical economists (beneficiaries through intellectual authority, arbitrage exit) experience low d (\u22480.10) \u2014 they maintain authority while the theoretical commitment to government management fades. The analytical observer (analytical exit) experiences moderate d (\u22480.70) \u2014 positioned to see the full structure of extraction and coordination but at risk of naturalizing institutional arrangements as immutable necessity.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint demonstrates the full distribution of types across observational positions, with false summit detection as the key diagnostic. The analytical observer at civilizational scope risks mountain classification (business cycles as natural law), but the structural data reveals identifiable beneficiaries (federal agencies gain power) and victims (unorganized workers bear employment volatility). The engine's false summit detector will flag this perspective: the 'immutable economic cycle' framing naturalizes a contingent institutional arrangement. The snare classification (unorganized workers) and rope classification (federal agencies) are not contradictory \u2014 they reflect the same constraint from different structural positions. The scaffold classification (organized labor) is accurate if labor genuinely maintains alternative models (public sector employment, cooperatives) and sees the Act as a transitional bridge. The piton classification (neoclassical economists) reflects genuine degradation: the machinery persists (Council reports continue) while underlying conviction in government capacity declines. The tangled rope classification (large firms) captures the mixed extraction-and-coordination mechanism: firms are constrained by regulation but benefit from demand stabilization. The constraint is resolvable into its constituent parts without contradiction: each type is the accurate reading from its respective observational position."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "federal_reserve_independence_myth",
+      "monetary_policy_discretion_vs_rules"
+    ],
+    "dual_formulation_note": "The Employment Act represents one pole of the demand-side management constraint family. Downstream constraints concern the technical machinery (Federal Reserve coordination, monetary policy rules) and the intellectual contestation (Keynesian vs. neoclassical economics). All stories in the family share the extractiveness measurement trajectory but diverge in how agents experience the regulatory authority asymmetry."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}
