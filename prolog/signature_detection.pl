@@ -423,7 +423,7 @@ signature_confidence(C, false_natural_law, Confidence) :-
     ), !.
 
 signature_confidence(C, false_ci_rope, Confidence) :-
-    (   false_ci_rope(C, fcr_evidence(_, FailedTests, _, _, _))
+    (   false_ci_rope(C, fcr_evidence(_, FailedTests, _, _, _, _))
     ->  length(FailedTests, NF),
         (   NF >= 3 -> Confidence = high
         ;   NF >= 2 -> Confidence = medium
@@ -597,7 +597,7 @@ explain_signature(C, false_natural_law, Explanation) :-
     ).
 
 explain_signature(C, false_ci_rope, Explanation) :-
-    (   false_ci_rope(C, fcr_evidence(AppType, FailedTests, CouplingScore, _, _))
+    (   false_ci_rope(C, fcr_evidence(AppType, FailedTests, CouplingScore, _, _, _))
     ->  length(FailedTests, NF),
         format(atom(Explanation),
                'FALSE CI_ROPE signature for ~w: Appears to be rope (~w) but fails ~d Boltzmann structural test(s): ~w. Coupling score=~w. This constraint is "coordination-washed" — it hides extraction behind low metrics, distributed enforcement, or behavioral defaults.',
@@ -904,14 +904,17 @@ coupling_invariant_rope(C, ci_rope_evidence(Compliance, ScopeResult,
     scope_invariance_test(C, ScopeResult),
     ScopeResult = invariant,
 
-    % Must have no excess extraction (or very close to zero)
-    (   excess_extraction(C, ExcessEps)
-    ->  ExcessEps =< 0.05  % Within noise floor of Boltzmann floor
-    ;   ExcessEps = 0.0    % No extraction data = no excess
-    ),
-
     % Must have a coordination function
-    narrative_ontology:has_coordination_function(C).
+    narrative_ontology:has_coordination_function(C),
+
+    % Collect excess extraction as diagnostic evidence (not a gate).
+    % The floor override in boltzmann_floor_for/2 is editorial data,
+    % not a classification input — gating here allowed overrides to
+    % suppress CI_Rope certification on genuinely coordinating constraints.
+    (   excess_extraction(C, ExcessEps)
+    ->  true
+    ;   ExcessEps = 0.0
+    ).
 
 /* ----------------------------------------------------------------
    META-INVARIANT: STRUCTURAL PURITY
@@ -1038,10 +1041,14 @@ determine_pure_subtype(_, pure_unclassified).
 %  Boltzmann structural tests.
 %
 %  Evidence = fcr_evidence(AppearanceType, FailedTests, CouplingScore,
-%                           ExcessExtraction, ScopeResult)
+%                           ExcessExtraction, ScopeResult, ZeroExcessFlag)
+%
+%  ZeroExcessFlag = zero_excess_exemption_present | none
+%    Records whether the zero-excess exemption condition was met.
+%    Diagnostic only — does not gate the certificate.
 
 false_ci_rope(C, fcr_evidence(AppearanceType, FailedTests, CouplingScore,
-                               ExcessExtraction, ScopeResult)) :-
+                               ExcessExtraction, ScopeResult, ZeroExcessFlag)) :-
     % Must appear to be a rope from metrics
     appears_as_rope(C, AppearanceType),
 
@@ -1063,12 +1070,13 @@ false_ci_rope(C, fcr_evidence(AppearanceType, FailedTests, CouplingScore,
     ;   ScopeResult = unknown
     ),
 
-    % Zero-excess exemption: if a constraint has no extractive overhead,
-    % coupling alone is insufficient evidence of coordination washing.
-    % Scope-sensitive classification with zero excess is the indexical
-    % system working correctly, not a sign of hidden extraction.
-    % Requires at least one non-coupling failure to flag as FCR.
-    \+ zero_excess_coupling_only(ExcessExtraction, FailedTests).
+    % Collect zero-excess exemption status as diagnostic evidence (not a gate).
+    % Floor overrides must not suppress FCR certification. See blocking_gate_audit_20260414.md.
+    % The exemption condition is preserved as a flag for the MaxEnt classifier.
+    (   zero_excess_coupling_only(ExcessExtraction, FailedTests)
+    ->  ZeroExcessFlag = zero_excess_exemption_present
+    ;   ZeroExcessFlag = none
+    ).
 
 %% zero_excess_coupling_only(+Excess, +FailedTests)
 %  True when the ONLY FCR evidence is Boltzmann coupling and
@@ -1137,7 +1145,8 @@ fcr_test_failure(C, scope_variant(UniqueTypes)) :-
 % Test 3: Excess extraction above Boltzmann floor
 fcr_test_failure(C, excess_above_floor(Excess)) :-
     excess_extraction(C, Excess),
-    Excess > 0.05.  % Above noise floor
+    config:param(fcr_excess_floor, NoiseFloor),
+    Excess > NoiseFloor.
 
 % Test 4: Nonsensical coupling (coupling without functional justification)
 fcr_test_failure(C, nonsensical_coupling(Strength)) :-

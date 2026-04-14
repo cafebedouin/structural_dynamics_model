@@ -84,6 +84,23 @@ When index specification produces coupled answers, the local data does *not* glu
 
 A Type C paradox has a *structured split* if and only if the post-specification assignment violates the sheaf condition. Resolution through specification is necessary but not sufficient. The residual structure — the specific pattern of gluing failure — is the object of further study.
 
+**The evaluation/construction distinction.** A recent result in continuous
+mathematics (Odrzywołek 2026) shows that all elementary functions can be generated
+from a single binary operator `eml(x, y) = exp(x) − ln(y)`. The analogy to DR is
+instructive precisely where it breaks down. In the EML result, `exp(x)` is
+*built* from `eml` by composition — the function is constructed from a primitive.
+In DR, a constraint's type at powerless context and its type at institutional
+context are both *revealed* by evaluating `dr_type(C, context)` against the same
+stored data — the types exist independently in the structure; context determines
+which is visible.
+
+This distinction is the mathematical statement of the bridge paper's core claim:
+splitting a constraint's classification across observer positions does not solve
+the underlying structure — it reveals it. The Rope that looks like a Mountain from
+the institutional position and a Snare from the powerless position is not two
+constraints; it is one constraint whose full topology requires multiple observation
+points to map. Splitting the observation is the method; it is not the resolution.
+
 ### 2.5 The Key Distinction
 
 The sheaf/presheaf boundary is not a property of the paradox's difficulty or importance. It is a structural property of the coupling mechanism between indexed answers.
@@ -160,7 +177,7 @@ The layered structure makes this richer, not weaker. The institutional power lev
 
 The broader implication is that the presheaf structure is what "there is no view from nowhere" looks like when formalized. The framework does not prove that there is no view from nowhere; it formalizes, in a domain-specific way, the older philosophical claim that determinate judgment is always indexed to a standpoint. Every observer position — including the analytical position, which is closest to a God's-eye view — is still *a* view, shaped by its structural relationship to the constraint. Even the most comprehensive perspective is indexed. The presheaf does not glue not because someone is wrong, but because no position within this representational scheme yields a global section — the constraint is genuinely different things from different positions, and no position transcends its own index.
 
-This connects to a long tradition in political epistemology — from standpoint epistemology (Harding, Haraway) to Chomsky and Herman's manufacturing consent to Foucault's power-conditioned visibility. What the presheaf framework adds is not the insight (which is old) but the measurement apparatus: the lattice structure shows exactly where the classification landscape fractures and at what resolution, the 30% institutional-odd-one-out figure pins the primary mechanism to a specific power level, and the site stability of the sheaf/presheaf boundary confirms this is a property of the constraints themselves rather than an artifact of any particular measurement resolution.
+This connects to a long tradition in political epistemology — from standpoint epistemology (Harding, Haraway, Collins) to Chomsky and Herman's manufacturing consent to Foucault's power-conditioned visibility. Collins's matrix of domination — where multiple intersecting structural positions (race, class, gender) produce different domains of power and different epistemic access — is the closest existing framework to the P × E × S lattice structure: multiple axes of observer context crossing classification thresholds independently, not a single axis of privilege. What the presheaf framework adds is not the insight (which is old) but the measurement apparatus: the lattice structure shows exactly where the classification landscape fractures and at what resolution, the 30% institutional-odd-one-out figure pins the primary mechanism to a specific power level, and the site stability of the sheaf/presheaf boundary confirms this is a property of the constraints themselves rather than an artifact of any particular measurement resolution.
 
 ### 3.3 Why Regime 2 Matters
 
@@ -200,6 +217,8 @@ The interesting cases are the ones the current framework lumps together under H�
 The DR framework's propagation problem — position-invariant analysis is hard to communicate because it satisfies no constituency — is precisely a presheaf phenomenon. The analysis does not glue into a single story because the gluing axiom fails. The framework predicts its own communicative difficulty as a structural consequence of its own mathematics.
 
 Clean splits (sheaves) propagate easily — "it depends on which question you're asking" is a satisfying resolution that audiences accept. Structured splits (presheaves) resist propagation — "both classifications are objectively correct at their respective indices, and the disagreement between them is forced by axioms you can't individually reject" is a message that no constituency finds comfortable. The sheaf/presheaf distinction explains why some perspectival disagreements resolve socially and others do not.
+
+This connects to Mouffe's agonistic pluralism, which argues that constitutive political antagonisms should be transformed into agonistic relations — managed, not resolved — because they reflect structural features of the political that no deliberative procedure can dissolve. The presheaf formalism provides the mathematical criterion Mouffe's framework lacks: a disagreement is constitutive (presheaf) rather than resolvable (sheaf) when the gluing axiom fails, and the failure is measurable rather than merely asserted.
 
 ### 4.4 For Regime Dynamics
 
@@ -267,20 +286,24 @@ The deeper claim is that structured disagreement — perspectival incompatibilit
 
 2. Chomsky, N. & Herman, E. S. (1988). *Manufacturing Consent: The Political Economy of the Mass Media*. New York: Pantheon Books.
 
-3. Elga, A. (2000). Self-locating belief and the Sleeping Beauty problem. *Analysis*, 60(2), 143-147.
+3. Collins, P. H. (2000). *Black Feminist Thought: Knowledge, Consciousness, and the Politics of Empowerment* (2nd ed.). New York: Routledge.
 
-4. Foucault, M. (1975). *Discipline and Punish: The Birth of the Prison*. Trans. A. Sheridan. New York: Pantheon Books.
+4. Elga, A. (2000). Self-locating belief and the Sleeping Beauty problem. *Analysis*, 60(2), 143-147.
 
-5. Foucault, M. (1980). *Power/Knowledge: Selected Interviews and Other Writings, 1972-1977*. Ed. C. Gordon. New York: Pantheon Books.
+5. Foucault, M. (1975). *Discipline and Punish: The Birth of the Prison*. Trans. A. Sheridan. New York: Pantheon Books.
 
-6. Haraway, D. (1988). Situated knowledges: The science question in feminism and the privilege of partial perspective. *Feminist Studies*, 14(3), 575-599.
+6. Foucault, M. (1980). *Power/Knowledge: Selected Interviews and Other Writings, 1972-1977*. Ed. C. Gordon. New York: Pantheon Books.
 
-7. Harding, S. (1986). *The Science Question in Feminism*. Ithaca: Cornell University Press.
+7. Haraway, D. (1988). Situated knowledges: The science question in feminism and the privilege of partial perspective. *Feminist Studies*, 14(3), 575-599.
 
-8. Mac Lane, S. & Moerdijk, I. (1992). *Sheaves in Geometry and Logic: A First Introduction to Topos Theory*. New York: Springer-Verlag.
+8. Harding, S. (1986). *The Science Question in Feminism*. Ithaca: Cornell University Press.
 
-9. Nagel, T. (1986). *The View from Nowhere*. New York: Oxford University Press.
+9. Mac Lane, S. & Moerdijk, I. (1992). *Sheaves in Geometry and Logic: A First Introduction to Topos Theory*. New York: Springer-Verlag.
 
-10. Perry, J. (1979). The problem of the essential indexical. *Noûs*, 13(1), 3-21.
+10. Mouffe, C. (2005). *On the Political*. London: Routledge.
 
-11. Rosiak, D. (2022). *Sheaf Theory through Examples*. Cambridge: MIT Press.
+11. Nagel, T. (1986). *The View from Nowhere*. New York: Oxford University Press.
+
+12. Perry, J. (1979). The problem of the essential indexical. *Noûs*, 13(1), 3-21.
+
+13. Rosiak, D. (2022). *Sheaf Theory through Examples*. Cambridge: MIT Press.

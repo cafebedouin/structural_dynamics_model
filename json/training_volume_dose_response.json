@@ -1,0 +1,163 @@
+{
+  "header": {
+    "constraint_id": "training_volume_dose_response",
+    "version": "1.0",
+    "generated_date": "2025-02-27",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tvdr"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.12,
+    "theater_ratio": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "Training Volume Dose-Response Relationship for Mortality Risk Reduction",
+    "topic_domain": "exercise_physiology/gerontology/preventive_medicine",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "accessibility_collapse": 0.25,
+    "resistance": 0.3,
+    "beneficiaries": [
+      "high_volume_exercisers",
+      "public_health_agencies",
+      "exercise_science_researchers"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The High-Volume Exerciser",
+      "comment": "PERSPECTIVE 1: HIGH-VOLUME EXERCISER (ROPE) \u2014 Mobile agent who can adjust training volume based on evidence. Experiences the dose-response relationship as pure coordination: the constraint communicates that additional volume beyond public health minimums continues to reduce mortality risk, enabling informed decision-making about time allocation. Minimal extraction \u2014 the information enables optimization without imposing costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Public Health Agency",
+      "comment": "PERSPECTIVE 2: PUBLIC HEALTH AGENCY (ROPE) \u2014 Institutional beneficiary that uses dose-response data to calibrate recommendations. The constraint coordinates population-level messaging: 150 min/week as achievable minimum, with acknowledgment that higher volumes confer additional benefit. Low extraction \u2014 the relationship enables evidence-based guideline setting without imposing structural costs on the agency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Exercise Science Research Community",
+      "comment": "PERSPECTIVE 3: EXERCISE SCIENCE RESEARCH COMMUNITY (ROPE) \u2014 Organized agents who study and communicate dose-response relationships. The constraint coordinates research priorities and public communication: identifying the volume range where marginal benefits diminish enables efficient allocation of research resources and clear messaging. Minimal extraction \u2014 the relationship is a coordination tool for the field."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Time-Constrained Individual",
+      "comment": "PERSPECTIVE 4: TIME-CONSTRAINED INDIVIDUAL (ROPE) \u2014 Moderate power agent with constrained exit (limited discretionary time due to work/family obligations). The dose-response relationship coordinates their decision: knowing that 150 min/week captures substantial mortality benefit while 450+ min/week captures additional but diminishing benefit enables rational time allocation. The constraint is experienced as coordination despite exit constraints \u2014 it provides actionable information without imposing additional costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (ROPE) \u2014 The dose-response relationship is a coordination mechanism that translates biological reality (cardiovascular adaptation, metabolic efficiency, inflammatory modulation) into actionable information. The constraint has minimal extractive overhead: the relationship exists independently of institutional mediation, is accessible through multiple information channels, and imposes no structural barriers to acting on the information. Classification: rope across all perspectives."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "individual_variation_threshold",
+      "question": "At what point does individual genetic/physiological variation make population-level dose-response curves misleading for individual optimization?",
+      "resolution_mechanism": "Genomic and metabolomic profiling to identify responder vs non-responder phenotypes; longitudinal tracking of individual dose-response curves vs population means",
+      "impact": "If individual variation is high: the constraint's coordination function weakens for personalized optimization, though population-level guidance remains valid. If variation is low: the constraint's rope classification is robust across individual and population scales.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether individual variation undermines population dose-response coordination"
+    },
+    {
+      "id": "injury_risk_crossover_point",
+      "question": "Does injury risk at high training volumes (>750 min/week) create a net mortality cost that offsets cardiovascular benefit?",
+      "resolution_mechanism": "Longitudinal cohort studies tracking injury incidence, severity, and downstream mortality effects across volume ranges; comparison of all-cause mortality in high-volume exercisers vs moderate-volume controls accounting for injury-related deaths",
+      "impact": "If injury risk creates net mortality cost above threshold: the dose-response relationship has an optimal ceiling, changing the constraint's shape but not its rope classification. If injury risk is negligible: the relationship remains monotonically beneficial across the measured range.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether injury risk at high volumes offsets mortality benefit"
+    },
+    {
+      "id": "socioeconomic_access_bias",
+      "question": "Do the observed dose-response curves reflect biological reality or socioeconomic confounding (high-volume exercisers have better healthcare access, nutrition, stress profiles)?",
+      "resolution_mechanism": "Stratified analysis controlling for income, education, healthcare access, occupational stress; randomized controlled trials (where feasible) comparing mortality outcomes at different prescribed volumes within matched cohorts",
+      "impact": "If confounding is substantial: the constraint's extractiveness increases \u2014 the dose-response relationship becomes a marker of socioeconomic privilege rather than pure biological coordination. If confounding is minimal: rope classification is robust.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether dose-response reflects biology or socioeconomic confounding"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.07
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The training volume dose-response relationship for mortality risk reduction is a coordination mechanism that translates biological adaptation to aerobic exercise into actionable public health and individual optimization information. Large-scale cohort studies (Arem et al. 2015, Mandsager et al. 2018) demonstrate that all-cause mortality risk continues to decline beyond the public health minimum of 150 minutes per week of moderate-intensity aerobic activity, with additional benefit observed up to 450-750 minutes per week before marginal returns diminish substantially. This constraint coordinates decision-making across multiple scales: individuals allocating discretionary time, public health agencies calibrating recommendations, and researchers prioritizing investigation of mechanisms and boundary conditions. The relationship exhibits minimal extractive overhead \u2014 the information is accessible through multiple channels (peer-reviewed literature, public health guidelines, popular media), requires no institutional gatekeeping to act upon, and imposes no structural barriers beyond the time and physiological capacity required for the activity itself. The constraint's low theater ratio (0.15) reflects that the dose-response relationship is grounded in robust epidemiological data with minimal performative mediation: the hazard ratios are directly measurable, replicable across cohorts, and mechanistically plausible given known cardiovascular and metabolic adaptations to endurance training.",
+    "key_agents": [
+      "High-Volume Exercisers: Primary beneficiary (moderate/mobile) \u2014 gain mortality risk reduction and optimization information; can adjust volume based on evidence",
+      "Public Health Agencies: Institutional beneficiary (institutional/arbitrage) \u2014 use dose-response data to calibrate population-level recommendations and resource allocation",
+      "Exercise Science Researchers: Organized beneficiary (organized/mobile) \u2014 coordinate research priorities and public communication around dose-response relationships",
+      "Time-Constrained Individuals: Moderate beneficiary (moderate/constrained) \u2014 gain actionable information for rational time allocation despite limited discretionary time",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees the constraint as a coordination mechanism translating biological reality into information with minimal extractive overhead"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Very low. The dose-response relationship imposes minimal structural costs beyond the time and effort required for the activity itself. The information is freely accessible, requires no institutional mediation to act upon, and creates no asymmetric extraction between agents. The slight non-zero value reflects minor information asymmetries (access to scientific literature, health literacy required to interpret guidelines) and the opportunity cost of time spent exercising rather than in other activities, but these are coordination costs rather than extractive rents. Suppression (0.12): Very low. Barriers to acting on the dose-response information are primarily individual (time availability, baseline fitness, injury risk) rather than structural. No institutional actor suppresses access to the information or prevents individuals from adjusting training volume. The non-zero value reflects that time scarcity and baseline physiological capacity create real constraints, but these are not imposed by the constraint itself \u2014 they are background conditions the constraint helps agents navigate. Theater ratio (0.15): Very low. The dose-response relationship is grounded in direct epidemiological measurement (hazard ratios from large cohort studies) with minimal performative mediation. Public health guidelines communicate the relationship with some simplification (150 min/week as a round-number minimum) but the underlying data is transparent and the simplification serves coordination rather than obfuscation. The slight increase over the interval (0.10 to 0.15) reflects growing commercialization of fitness tracking and wellness programs that add performative layers (gamification, social comparison, branded training plans) on top of the core dose-response information, but the relationship itself remains empirically grounded.",
+    "directionality_logic": "All agents in this constraint are beneficiaries \u2014 the dose-response relationship provides coordination information without imposing asymmetric extraction. High-volume exercisers benefit from knowing that additional training confers additional mortality benefit. Public health agencies benefit from evidence-based calibration of recommendations. Researchers benefit from a clear empirical relationship to investigate mechanistically. Time-constrained individuals benefit from knowing where marginal returns diminish, enabling rational allocation of limited discretionary time. The constraint has no victims because the information itself imposes no costs \u2014 agents are free to act on it or ignore it based on their own preferences and constraints. The directionality values are uniformly low (beneficiaries with mobile or arbitrage exit options) or moderate (beneficiaries with constrained exit due to time scarcity), producing low effective extraction across all perspectives. The constraint classifies as rope from all perspectives because it coordinates decision-making without extracting rents.",
+    "perspectival_gap": "This constraint exhibits minimal perspectival gap \u2014 all agents classify it as rope because the dose-response relationship functions as pure coordination across all structural positions. The high-volume exerciser, the public health agency, the research community, the time-constrained individual, and the analytical observer all experience the constraint as information that enables optimization without imposing structural costs. The uniformity of classification reflects the constraint's low extractiveness and suppression: there are no trapped agents bearing asymmetric costs, no institutional gatekeepers capturing rents, and no performative mediation obscuring the underlying relationship. The constraint is a diagnostic exemplar of a rope that remains rope across all perspectives \u2014 a coordination mechanism with minimal extractive overhead regardless of the observer's structural position.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that rope classification can be robust across all perspectives when extractiveness and suppression are genuinely low. The dose-response relationship is not mislabeled coordination masking hidden extraction \u2014 it is coordination with minimal overhead. The constraint's victims array is empty because no agent bears asymmetric costs: the information is freely accessible, acting on it is voluntary, and the relationship itself imposes no structural barriers. The omega variables identify genuine empirical uncertainties (individual variation, injury risk, socioeconomic confounding) that could change the constraint's extractiveness if resolved in particular ways, but current evidence supports the rope classification. The constraint is a coordination mechanism that translates biological reality into actionable information, and the classification reflects this structural function accurately."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "age_related_capacity_erosion"
+    ],
+    "dual_formulation_note": "The training volume dose-response relationship is downstream of age-related capacity erosion (a mountain constraint reflecting the biological inevitability of declining VO2max and muscle mass with age). The dose-response relationship coordinates how individuals and populations can modulate the rate of decline through training volume, but it does not eliminate the underlying erosion. The two constraints form a family: the mountain sets the boundary conditions (aging is inevitable), and the rope provides the coordination mechanism (training volume modulates the trajectory within those boundaries)."
+  },
+  "directionality_overrides": []
+}

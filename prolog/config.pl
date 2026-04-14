@@ -405,6 +405,12 @@ param(reform_urgency_reformability_floor,   0.30).
 % Distinguishes necessary complexity increase from extractive increase.
 param(boltzmann_floor_drift_threshold, 0.05).            % DOCS-ONLY: not referenced in executable code
 
+% --- FCR Detection Thresholds ---
+% Excess extraction above this floor triggers the excess_above_floor FCR failure test.
+% Diagnostic threshold (feeds evidence collection, not a certificate gate).
+% Extracted from hardcoded literal per blocking_gate_audit_20260414.md V2 fix.
+param(fcr_excess_floor, 0.05).
+
 /* ================================================================
    8. PURITY-QUALIFIED ACTION THRESHOLDS (v5.1)
    ================================================================ */
