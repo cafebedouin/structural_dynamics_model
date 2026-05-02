@@ -32,6 +32,10 @@
     sigmoid_f/2,
     canonical_d_for_power/2,
     derive_directionality/3,
+    sigmoid_params/5,
+    sigmoid_d1/2,
+    sigmoid_d2/2,
+    constraint_curvature/6,
 
     % Index predicates
     agent_power/1,
@@ -333,6 +337,51 @@ alt_sigmoid_f(sigmoid_shifted, D, F) :-
     Range is U - L,
     Exponent is -K * (D - D0),
     F is L + Range / (1 + exp(Exponent)).
+
+%% sigmoid_params(+Variant, -L, -U, -D0, -K) is det.
+%  Extract sigmoid parameters for smooth variants.
+%  sigmoid_shifted uses hardcoded values matching its alt_sigmoid_f clause.
+sigmoid_params(sigmoid, L, U, D0, K) :-
+    config:param(sigmoid_lower, L),
+    config:param(sigmoid_upper, U),
+    config:param(sigmoid_midpoint, D0),
+    config:param(sigmoid_steepness, K).
+sigmoid_params(sigmoid_shifted, -0.20, 1.50, 0.25, 6.0).
+
+%% sigmoid_d1(+D, -F1) is det.
+%  First derivative f'(d) of the power-scaling sigmoid.
+%  F1 = K*(U-L)*g*(1-g) where g = 1/(1+exp(-K*(d-D0))).
+%  Fails cleanly for non-smooth variants (piecewise, step, sqrt, quadratic).
+%  Cut after config lookup commits to the first (active) power_function value.
+sigmoid_d1(D, F1) :-
+    config:param(power_function, Variant), !,
+    memberchk(Variant, [sigmoid, sigmoid_shifted]),
+    sigmoid_params(Variant, L, U, D0, K),
+    Exponent is -K * (D - D0),
+    G is 1.0 / (1.0 + exp(Exponent)),
+    F1 is K * (U - L) * G * (1.0 - G).
+
+%% sigmoid_d2(+D, -F2) is det.
+%  Second derivative f''(d) of the power-scaling sigmoid.
+%  F2 = K²*(U-L)*g*(1-g)*(1-2*g). Zero at inflection point d=D0 (sigmoid_midpoint).
+%  Antisymmetric around D0. Fails cleanly for non-smooth variants.
+%  Cut after config lookup commits to the first (active) power_function value.
+sigmoid_d2(D, F2) :-
+    config:param(power_function, Variant), !,
+    memberchk(Variant, [sigmoid, sigmoid_shifted]),
+    sigmoid_params(Variant, L, U, D0, K),
+    Exponent is -K * (D - D0),
+    G is 1.0 / (1.0 + exp(Exponent)),
+    F2 is K * K * (U - L) * G * (1.0 - G) * (1.0 - 2.0 * G).
+
+%% constraint_curvature(+C, +Context, -D, -F, -F1, -F2) is det.
+%  Compute directionality D, power modifier F=f(d), f'(d)=F1, f''(d)=F2
+%  for constraint C at observer Context. Fails if power_function is non-smooth.
+constraint_curvature(C, Context, D, F, F1, F2) :-
+    derive_directionality(C, Context, D),
+    sigmoid_f(D, F),
+    sigmoid_d1(D, F1),
+    sigmoid_d2(D, F2).
 
 %% canonical_d_for_power(+PowerAtom, -D)
 %  Map power atom to its canonical directionality value.

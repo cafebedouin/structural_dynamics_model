@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "emotional_register_exit",
+    "version": "1.0",
+    "generated_date": "2025-01-02",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "emreg"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Emotional Register Exit in Institutional Communication",
+    "topic_domain": "healthcare_systems/organizational_behavior/institutional_communication",
+    "requires_active_enforcement": true,
+    "accessibility_collapse": 0.35,
+    "resistance": 0.58,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "institutional_front_line_workers",
+      "institutional_management"
+    ],
+    "victims": [
+      "patients_with_legitimate_technical_claims",
+      "customers_with_legitimate_technical_claims",
+      "institutional_accountability_mechanisms"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Patient with Legitimate Technical Claim",
+      "comment": "PERSPECTIVE 1: PATIENT WITH LEGITIMATE TECHNICAL CLAIM (SNARE) \u2014 Trapped in immediate context with no exit. When the institution shifts to emotional register after technical objection, the patient cannot force return to technical discussion. The register shift functions as pure extraction: it terminates the technical dispute without resolution, transfers emotional labor burden to the patient, and creates a permanent record framing the patient as difficult rather than correct. Maximum experienced extraction from trapped position."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Patient Advocate with Resources",
+      "comment": "PERSPECTIVE 2: PATIENT ADVOCATE WITH RESOURCES (TANGLED ROPE) \u2014 Constrained but not trapped. Can escalate through formal complaint channels, request different providers, or exit to alternative institutions at significant cost. Experiences both coordination (the emotional register sometimes reveals genuine empathy gaps that need addressing) and extraction (the register shift often functions as deflection from accountability). The constraint coordinates legitimate emotional care needs while enabling evasion of technical failures."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Institutional Front-Line Worker",
+      "comment": "PERSPECTIVE 3: INSTITUTIONAL FRONT-LINE WORKER (ROPE) \u2014 Primary beneficiary with arbitrage exit options. The emotional register exit provides a trained, institutionally-sanctioned escape route from technical disputes the worker cannot resolve due to systemic constraints (inadequate staffing, broken systems, contradictory policies). Experiences the constraint as coordination: it gives them a tool to de-escalate conflict and protect their own emotional resources when the institution has failed to provide technical solutions. Net beneficiary \u2014 the register shift runs toward this agent as protection, not away from them as extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Institutional Management",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL MANAGEMENT (ROPE) \u2014 Secondary beneficiary with arbitrage exit. The emotional register exit functions as a liability shield: it converts technical failures (which create legal and regulatory exposure) into emotional conflicts (which are unfalsifiable and unactionable). Management experiences this as coordination: it protects the institution from accountability while maintaining the appearance of patient-centered care. The constraint enables management to avoid costly technical fixes by reframing technical failures as empathy gaps."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Healthcare Quality Improvement Coalition",
+      "comment": "PERSPECTIVE 5: HEALTHCARE QUALITY IMPROVEMENT COALITION (TANGLED ROPE) \u2014 Organized agents (patient safety organizations, quality improvement networks, regulatory bodies) see both coordination and extraction. The emotional register genuinely coordinates care for patients whose needs are primarily emotional, but it also suppresses technical accountability signals that quality improvement depends on. The coalition has mobility (can shift focus to institutions with better accountability) but faces extraction through the constraint's interference with error detection and correction mechanisms."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Patient-Centered Care Framework",
+      "comment": "PERSPECTIVE 6: PATIENT-CENTERED CARE FRAMEWORK (PITON) \u2014 The institutional framework that originally justified emotional register training has degraded into theater. Patient-centered care was designed to address genuine empathy deficits in technical medicine, but the emotional register exit has become a performative script deployed to evade accountability rather than to provide care. The framework persists through institutional inertia (training programs, accreditation requirements, mission statements) despite its functional atrophy. High theater ratio \u2014 the empathy script is performed, not practiced."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From analytical distance, the constraint exhibits both genuine coordination function (some patients do need emotional validation, and some technical disputes mask emotional needs) and asymmetric extraction (the register shift systematically suppresses technical accountability). The constraint coordinates emotional care while extracting from technical dispute resolution. The analytical classification matches the claimed type, confirming this is a structurally mixed coordination-extraction mechanism, not a pure snare misclassified as coordination or vice versa."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legitimate_emotional_need_proportion",
+      "question": "What proportion of emotional register deployments address genuine emotional needs vs deflect from technical failures?",
+      "resolution_mechanism": "Longitudinal outcome tracking: resolution rate and patient satisfaction for technical claims that trigger emotional register vs those that remain in technical register; correlation between register shift and subsequent technical resolution",
+      "impact": "If >70% legitimate: constraint is primarily coordination with extractive edge cases (closer to Rope from more perspectives). If <30% legitimate: constraint is primarily extraction with coordination cover story (closer to Snare from more perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of emotional register deployments addressing genuine emotional needs"
+    },
+    {
+      "id": "register_shift_reversibility",
+      "question": "Can patients successfully return to technical register after emotional register deployment, or is the shift functionally irreversible within the interaction?",
+      "resolution_mechanism": "Conversation analysis of patient-provider interactions: frequency of successful return to technical discussion after empathy script deployment; institutional response to patients who explicitly request return to technical register",
+      "impact": "If reversible: suppression is lower than measured (patients have more agency than structural position suggests). If irreversible: suppression is accurate or understated (register shift is a one-way trap).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether emotional register shift is reversible within interactions"
+    },
+    {
+      "id": "front_line_worker_complicity_vs_constraint",
+      "question": "Do front-line workers deploy emotional register as strategic deflection (complicity) or as trained response to impossible systemic constraints (structural constraint)?",
+      "resolution_mechanism": "Worker testimony and institutional ethnography: do workers recognize the register shift as deflection? Do they have technical solutions they are withholding, or are they genuinely unable to resolve the technical claim due to systemic failures? Correlation between register shift frequency and institutional resource adequacy.",
+      "impact": "If strategic deflection: workers are beneficiaries of extraction mechanism (current model). If structural constraint: workers are also victims, and the true beneficiary is institutional management that has failed to provide adequate resources. This would shift the directionality model significantly.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether front-line workers are complicit beneficiaries or constrained actors"
+    },
+    {
+      "id": "emotional_register_training_origin",
+      "question": "Was emotional register training originally designed as accountability evasion, or has it been repurposed from legitimate patient-centered care pedagogy?",
+      "resolution_mechanism": "Historical analysis of patient-centered care training materials and institutional implementation: original intent vs current deployment patterns; timeline of training emphasis shift relative to liability and regulatory pressure",
+      "impact": "If originally evasive: constraint is a designed extraction mechanism (Snare from more perspectives). If repurposed: constraint is a degraded coordination mechanism (Piton from more perspectives, with higher theater ratio).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Original intent of emotional register training vs current function"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "emreg_theater_initial"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68,
+      "id_override": "emreg_theater_current"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.36
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The emotional register exit is a communication pattern in institutional settings (healthcare, customer service, educational administration) where front-line workers shift from falsifiable technical claims to unfalsifiable emotional framing when losing a dispute on technical merits. A patient objects that their medication dosage is incorrect based on lab values; the provider responds 'I hear that you're feeling anxious about your care.' A customer points out that a billing error violates the service contract; the representative responds 'I understand this has been frustrating for you.' The register shift performs empathy while terminating the technical dispute. This constraint exhibits the full indexical range: pure extraction from the trapped patient's perspective (Snare), mixed coordination-extraction from the constrained advocate's perspective (Tangled Rope), coordination from the institutional worker's perspective (Rope \u2014 it protects them from disputes they cannot resolve due to systemic failures), and degraded coordination from the civilizational perspective (Piton \u2014 patient-centered care training has atrophied into a deflection script). The constraint is downstream of physician_call_reluctance (mountain) \u2014 the emotional register exit is one institutional adaptation to the structural fact that physicians cannot be compelled to engage with technical disputes, so front-line workers are trained to convert technical disputes into emotional interactions that do not require physician involvement.",
+    "key_agents": [
+      "Patient with Legitimate Technical Claim: Primary victim (powerless/trapped) \u2014 cannot force return to technical register; bears full cost of unresolved technical failure plus emotional labor burden of being framed as 'difficult'",
+      "Patient Advocate with Resources: Secondary victim (moderate/constrained) \u2014 can escalate or exit at cost; experiences both coordination (some emotional needs are real) and extraction (register shift often deflects from accountability)",
+      "Institutional Front-Line Worker: Primary beneficiary (institutional/arbitrage) \u2014 the register shift provides a trained escape route from technical disputes the institution has not equipped them to resolve; protects their emotional resources",
+      "Institutional Management: Secondary beneficiary (institutional/arbitrage) \u2014 the register shift converts technical failures (legal/regulatory exposure) into emotional conflicts (unfalsifiable, unactionable); functions as liability shield",
+      "Healthcare Quality Improvement Coalition: Organized observer (organized/mobile) \u2014 sees both coordination (genuine emotional care) and extraction (suppression of technical accountability signals needed for quality improvement)",
+      "Patient-Centered Care Framework: Institutional framework (institutional/analytical) \u2014 originally designed to address empathy deficits, now degraded into performative deflection script (Piton)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees mixed coordination-extraction structure; confirms Tangled Rope classification"
+    ],
+    "logic_rationale": "Extractiveness (0.48): Moderate-high. The register shift extracts from patients by terminating technical disputes without resolution, transferring emotional labor burden, and creating institutional records that frame the patient as emotionally dysregulated rather than technically correct. However, extraction is not maximal because some proportion of register shifts do address genuine emotional needs (omega variable: legitimate_emotional_need_proportion). The value reflects that the constraint has real coordination function alongside its extractive mechanism. Suppression (0.62): High. Patients face significant barriers to forcing return to technical register: the institutional script treats requests to return to technical discussion as further evidence of emotional dysregulation; formal complaint channels are resource-intensive and often ineffective; exiting to alternative institutions is costly and may not be possible (insurance networks, geographic constraints, specialized care needs). The register shift is functionally irreversible within most interactions (omega variable: register_shift_reversibility). Theater ratio (0.68): High and rising. The emotional register is increasingly performative: workers are trained in empathy scripts ('I hear you,' 'I understand your frustration,' 'your feelings are valid') that are deployed as ritual rather than as genuine emotional engagement. The theater has increased over the measurement interval as institutions have formalized and standardized the register shift through training programs, creating a reproducible deflection technique rather than authentic patient-centered care.",
+    "directionality_logic": "The constraint exhibits clear structural asymmetry in who benefits and who bears costs. Institutional actors (front-line workers and management) are beneficiaries: the register shift protects workers from unresolvable disputes and shields management from accountability. Patients with legitimate technical claims are victims: the register shift terminates their dispute without resolution and imposes emotional labor burden. The directionality computation derives from these structural relationships plus exit options. Trapped patients with no exit experience maximum extraction (high d \u2192 high f(d) \u2192 high \u03c7). Institutional actors with arbitrage exit experience the constraint as coordination (low d \u2192 low/negative f(d) \u2192 low/negative \u03c7). The patient advocate with constrained exit experiences mixed extraction-coordination (mid d \u2192 mid f(d) \u2192 mid \u03c7). The organized quality improvement coalition experiences moderate extraction despite mobility because the constraint interferes with their core function (error detection and correction). The analytical observer sees the structural mix directly.",
+    "perspectival_gap": "This constraint demonstrates how the same communication pattern appears as pure extraction, mixed coordination-extraction, or pure coordination depending on structural position. The trapped patient sees a Snare: the register shift is an escape hatch for the institution that leaves the patient's technical claim unresolved and imposes emotional labor burden. The institutional worker sees a Rope: the register shift is a coordination tool that protects them from disputes the institution has not equipped them to resolve. Management sees a Rope: the register shift coordinates liability management by converting technical failures into emotional conflicts. The patient advocate sees a Tangled Rope: the register shift sometimes addresses genuine emotional needs (coordination) but often deflects from technical accountability (extraction). The quality improvement coalition sees a Tangled Rope: the register shift coordinates emotional care but suppresses the technical accountability signals that quality improvement depends on. The patient-centered care framework sees a Piton: the original coordination function (addressing empathy deficits) has degraded into performative deflection. The analytical observer sees a Tangled Rope: the constraint genuinely coordinates emotional care while genuinely extracting from technical accountability. The perspectival gap is not a measurement error \u2014 it is the constraint's indexical structure.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that Tangled Rope classification requires BOTH genuine coordination function AND asymmetric extraction, and that both must be structurally present, not just perceptually claimed. The coordination function is real: some patients do have primarily emotional needs that the technical register cannot address, and the emotional register does provide a communication pathway for those needs. The extraction is also real: the register shift systematically terminates technical disputes without resolution, transfers emotional labor burden to patients, and suppresses accountability signals. The constraint is not a Snare misclassified as coordination (the coordination function is genuine, not cover story) and not a Rope misclassified as extraction (the extraction is structural, not perceptual). The Tangled Rope classification is confirmed by the analytical perspective matching the claimed type, by the presence of both beneficiaries (institutional actors) and victims (patients with technical claims), and by the requirement for active enforcement (institutional training programs that teach the register shift as a technique). The mandatrophy is resolved by showing that the coordination and extraction are structurally inseparable: you cannot remove the extraction (terminate the register shift) without also removing the coordination (lose the pathway for genuine emotional needs), and you cannot remove the coordination without the extraction becoming visible as pure deflection (Snare)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of physician_call_reluctance (mountain). The emotional register exit is one institutional adaptation to the structural fact that physicians cannot be compelled to engage with technical disputes. Front-line workers are trained to convert technical disputes into emotional interactions that do not require physician involvement, because physician involvement is not available as a resolution pathway. The upstream mountain constraint (physician autonomy as immutable professional norm) creates the conditions for the downstream tangled rope (emotional register exit as mixed coordination-extraction mechanism)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.58
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "mod",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "physician_call_reluctance"
+    ]
+  }
+}

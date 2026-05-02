@@ -1,0 +1,212 @@
+{
+  "header": {
+    "constraint_id": "cooperation_credibility",
+    "version": "1.0",
+    "generated_date": "2025-01-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "coop_cred"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AI Safety Cooperation Credibility Gap in US-China Strategic Competition",
+    "topic_domain": "international_relations/technology_governance/strategic_competition",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "chinese_ai_industry",
+      "us_ai_industry"
+    ],
+    "victims": [
+      "global_ai_safety_regime",
+      "alignment_research_community",
+      "non_aligned_states"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Global AI Safety Regime",
+      "comment": "PERSPECTIVE 1: GLOBAL AI SAFETY REGIME (SNARE) \u2014 The abstract collective good of coordinated AI governance cannot exit the strategic competition dynamic. Trapped between two superpowers whose stated commitments to safety are undermined by revealed preferences for competitive advantage. Bears full cost of coordination failure with no agency to enforce compliance or exit the game."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Alignment Research Community",
+      "comment": "PERSPECTIVE 2: ALIGNMENT RESEARCH COMMUNITY (TANGLED ROPE) \u2014 Constrained by dependence on both Chinese and US research ecosystems for data, compute, and collaboration. Benefits from bilateral dialogues that enable information sharing and norm-setting, but extraction occurs through strategic withholding, dual-use restrictions, and pressure to align research agendas with national security priorities. Mixed coordination and extraction \u2014 the dialogues are genuine venues for technical exchange AND tools for competitive intelligence gathering."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Chinese AI Industry",
+      "comment": "PERSPECTIVE 3: CHINESE AI INDUSTRY (ROPE) \u2014 Primary beneficiary. Participation in safety dialogues provides legitimacy, access to Western research, and regulatory cover for rapid deployment. Can arbitrage between domestic permissive environment and international safety theater. Experiences the constraint as coordination: safety rhetoric enables market access and reduces international pressure while domestic incentives remain unchanged. Net beneficiary of the credibility gap."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The US AI Industry",
+      "comment": "PERSPECTIVE 4: US AI INDUSTRY (ROPE) \u2014 Mirror beneficiary. Uses Chinese safety rhetoric as justification for own rapid deployment ('cannot afford to fall behind'). Arbitrages between domestic calls for regulation and international competitive pressure. Benefits from the credibility gap by using it to resist domestic safety constraints while maintaining rhetorical commitment to responsible AI. Both industries benefit from mutual defection disguised as cooperation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Non-Aligned States",
+      "comment": "PERSPECTIVE 5: NON-ALIGNED STATES (TANGLED ROPE) \u2014 Constrained by dependence on either US or Chinese AI infrastructure and unable to exit the bipolar competition. Benefit from bilateral dialogues that set international norms and create space for smaller players, but bear extraction through forced alignment with one bloc's standards, loss of technological sovereignty, and exclusion from governance decisions. The coordination function (norm-setting) is real but asymmetrically distributed."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Multilateral AI Governance Coalition",
+      "comment": "PERSPECTIVE 6: MULTILATERAL AI GOVERNANCE COALITION (SCAFFOLD) \u2014 Organized actors (UN AI Advisory Body, OECD AI Principles, multi-stakeholder initiatives) see the bilateral credibility gap as a temporary coordination failure. Building alternative verification mechanisms: international model registries, third-party auditing, transparency standards that bypass bilateral trust requirements. Sunset logic: as technical verification tools mature and multilateral institutions gain capacity, the bilateral theater becomes less necessary for actual safety coordination. Estimated sunset: 15-25 years for multilateral governance infrastructure to achieve enforcement capacity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, the constraint exhibits genuine coordination (bilateral dialogues do reduce some risks through information sharing and norm convergence) alongside structural extraction (both parties defect on costly safety measures while maintaining cooperation theater). The credibility gap is not pure extraction (snare) because real technical coordination occurs, nor pure coordination (rope) because strategic competition systematically undermines safety commitments. Tangled rope classification reflects irreducible hybrid structure: cooperation and defection are structurally entangled, not separable phases."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "revealed_preference_measurement",
+      "question": "How do we measure the gap between stated safety commitments and revealed preferences in model deployment decisions?",
+      "resolution_mechanism": "Longitudinal tracking of: (1) safety commitments in bilateral dialogues vs actual deployment timelines, (2) domestic governance frameworks vs enforcement actions, (3) resource allocation to safety research vs capability research, (4) model release decisions vs stated risk thresholds",
+      "impact": "If gap is small (< 20% divergence): cooperation is credible, constraint is rope from more perspectives. If gap is large (> 60% divergence): cooperation is theater, constraint is snare from more perspectives. Current estimate: 45-55% divergence, supporting tangled rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Measurement methodology for stated vs revealed safety preferences"
+    },
+    {
+      "id": "strategic_stability_threshold",
+      "question": "At what level of AI capability does strategic instability override safety cooperation incentives?",
+      "resolution_mechanism": "Game-theoretic modeling of cooperation breakdown points; historical analysis of arms control regime failures; identification of capability thresholds where first-mover advantage dominates mutual safety benefits",
+      "impact": "If threshold is high (AGI-level): current cooperation is structurally stable, scaffold perspective strengthened. If threshold is low (GPT-5 level): cooperation is fragile, snare perspective strengthened. Threshold uncertainty drives classification ambiguity.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Capability threshold at which cooperation becomes structurally unstable"
+    },
+    {
+      "id": "verification_feasibility",
+      "question": "Are AI safety commitments technically verifiable without revealing competitive intelligence?",
+      "resolution_mechanism": "Development of privacy-preserving verification protocols (zero-knowledge proofs for model properties, secure multi-party computation for capability assessments); feasibility demonstrations in bilateral or multilateral settings",
+      "impact": "If verification is feasible: cooperation credibility can be established, reducing extraction. If verification is infeasible: cooperation remains unverifiable theater, increasing extraction. Current state: verification protocols exist in research but not deployed at scale.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Technical feasibility of verifying safety commitments without intelligence leakage"
+    },
+    {
+      "id": "domestic_governance_autonomy",
+      "question": "To what extent do Chinese domestic AI governance frameworks reflect genuine safety priorities vs international signaling?",
+      "resolution_mechanism": "Comparative analysis of: (1) enforcement patterns in domestic vs international contexts, (2) resource allocation to safety infrastructure vs capability development, (3) regulatory stringency for domestic vs export models, (4) alignment between stated principles and implemented rules",
+      "impact": "If frameworks reflect genuine priorities: cooperation has domestic political support, reducing credibility gap. If frameworks are primarily signaling: cooperation is theater, increasing credibility gap. Ambiguity in this variable drives uncertainty in beneficiary vs victim classification for Chinese AI industry.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Autonomy of Chinese domestic governance from international signaling incentives"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "coop_cred_theater_2019"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.42,
+      "id_override": "coop_cred_theater_2021"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.51,
+      "id_override": "coop_cred_theater_2023"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58,
+      "id_override": "coop_cred_theater_2025"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32,
+      "id_override": "coop_cred_extract_2019"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.38,
+      "id_override": "coop_cred_extract_2021"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.44,
+      "id_override": "coop_cred_extract_2023"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48,
+      "id_override": "coop_cred_extract_2025"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The cooperation credibility constraint emerges from the structural tension between stated commitments to AI safety in bilateral US-China dialogues and the revealed preferences of both nations' AI industries for competitive advantage through rapid deployment. Chinese participation in international AI safety discussions (bilateral dialogues, multilateral forums, academic exchanges) signals concern for alignment risk and willingness to coordinate on governance. However, domestic incentive structures\u2014state support for AI champions, permissive deployment environments, integration of AI into strategic competition\u2014create systematic pressure to prioritize speed over safety. This is not unique to China; the US exhibits the same pattern with different institutional mechanisms. The constraint is a credibility gap: both parties engage in cooperation theater while defecting on costly safety measures. The gap extracts from the global AI safety regime (which depends on great power coordination) and from smaller states (forced to align with one bloc's standards). It benefits both Chinese and US AI industries by providing regulatory cover for rapid deployment while maintaining international legitimacy. The theater ratio (0.58) reflects that bilateral dialogues produce real technical exchange and norm convergence alongside strategic signaling. The constraint is not pure theater (piton) because genuine coordination occurs, nor pure coordination (rope) because structural incentives systematically undermine safety commitments.",
+    "key_agents": [
+      "Chinese AI Industry: Primary beneficiary (institutional/arbitrage) \u2014 uses safety rhetoric for legitimacy while operating in permissive domestic environment; arbitrages between international norms and domestic incentives",
+      "US AI Industry: Mirror beneficiary (institutional/arbitrage) \u2014 uses Chinese competition as justification for rapid deployment; resists domestic regulation while maintaining responsible AI rhetoric",
+      "Global AI Safety Regime: Primary victim (powerless/trapped) \u2014 abstract collective good with no enforcement mechanism; bears full cost of coordination failure between superpowers",
+      "Alignment Research Community: Secondary victim (moderate/constrained) \u2014 depends on both ecosystems for collaboration; benefits from dialogues but faces extraction through strategic withholding and dual-use restrictions",
+      "Non-Aligned States: Secondary victim (moderate/constrained) \u2014 forced to align with one bloc's standards; excluded from governance decisions; lose technological sovereignty",
+      "Multilateral AI Governance Coalition: Organized agents (organized/mobile) \u2014 UN AI Advisory Body, OECD, multi-stakeholder initiatives building alternative verification mechanisms with sunset logic",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees irreducible hybrid structure where cooperation and defection are entangled, not separable"
+    ],
+    "logic_rationale": "Extractiveness (0.48): Moderate-high. The credibility gap extracts from the global safety regime by undermining coordination, from alignment researchers through strategic withholding, and from non-aligned states through forced bloc alignment. However, extraction is not maximal because real technical coordination does occur in bilateral dialogues\u2014information sharing, norm convergence, and joint research reduce some risks. The value reflects genuine hybrid structure: cooperation and extraction are structurally entangled. Suppression (0.62): High. Significant barriers to alternative coordination pathways include: bipolar strategic competition structure, absence of multilateral enforcement mechanisms, dual-use technology restrictions, national security classification of AI capabilities, and career/funding pressure on researchers to align with national priorities. Suppression is not total because multilateral institutions are building alternative pathways (scaffold perspective), but current alternatives lack enforcement capacity. Theater ratio (0.58): Moderate-high. Bilateral dialogues produce real technical exchange (working groups on model evaluation, safety standards, risk assessment methodologies) alongside strategic signaling. The theater component reflects: commitments made in dialogues that are not reflected in domestic policy, safety rhetoric used to justify competitive deployment, and governance frameworks that signal internationally but lack domestic enforcement. Theater has increased over the interval as strategic competition has intensified and the gap between stated commitments and revealed preferences has widened.",
+    "directionality_logic": "The constraint exhibits asymmetric extraction with multiple beneficiaries and victims. Chinese and US AI industries are both beneficiaries: they experience the constraint as coordination (safety rhetoric provides legitimacy and regulatory cover) while operating in environments that reward rapid deployment. Both can arbitrage between international norms and domestic incentives, giving them low directionality values and negative or low effective extraction. The global AI safety regime is the primary victim: it is powerless (abstract collective good with no advocate) and trapped (cannot exit the bipolar competition). Maximum directionality and maximum effective extraction. The alignment research community and non-aligned states are secondary victims with moderate power and constrained exit: they depend on the bilateral system for access and resources but face extraction through strategic withholding and forced alignment. The multilateral governance coalition has organized power and mobile exit: they are building alternative pathways and see a sunset, giving them low effective extraction despite operating in the same structural environment. The analytical observer sees the irreducible hybrid structure: cooperation is real (information sharing, norm convergence) AND extraction is real (systematic defection on costly measures). Both are structural features, not separable phases.",
+    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon\u2014bilateral AI safety dialogues in the context of strategic competition\u2014appears as different constraint types depending on the observer's structural position. The Chinese and US AI industries see coordination (rope): they are net beneficiaries who experience the dialogues as enabling market access and legitimacy. The multilateral governance coalition sees a temporary problem with a sunset (scaffold): alternative verification mechanisms are maturing and will eventually bypass the bilateral credibility gap. The global AI safety regime sees pure extraction (snare): it is trapped in a coordination failure with no exit and no agency. The alignment research community and non-aligned states see mixed coordination and extraction (tangled rope): they benefit from the dialogues but face systematic extraction through strategic withholding and forced alignment. The analytical observer sees irreducible hybrid structure (tangled rope): cooperation and defection are entangled at the structural level, not separable into phases or perspectives. The perspectival gap is not 'which type is correct?' but 'which structural position are you measuring from?' The presheaf over observation sites captures the full structure.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the mandatrophy by demonstrating that tangled rope classification at the analytical level does not collapse to rope or snare when examined from other perspectives\u2014instead, it reveals that different agents genuinely experience different constraint types based on their structural positions. The Chinese and US AI industries genuinely experience rope (they are net beneficiaries with arbitrage options). The global AI safety regime genuinely experiences snare (it is trapped with no exit). The analytical observer's tangled rope classification is not an average or compromise\u2014it reflects the irreducible structural fact that cooperation and extraction are entangled in this constraint. The bilateral dialogues produce real technical coordination (information sharing reduces some risks) AND systematic defection (both parties prioritize competitive advantage over costly safety measures). These are not separable phases (cooperation now, extraction later) or separable components (cooperation in one domain, extraction in another)\u2014they are structurally simultaneous. The mandatrophy is resolved by showing that the tangled rope classification captures a real structural property (entangled cooperation and extraction) that is distinct from both pure coordination (rope) and pure extraction (snare), and that this structural property coexists with different agents experiencing different types based on their positions in the extraction flow."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_compute_governance",
+      "dual_use_export_controls",
+      "multilateral_ai_treaty"
+    ],
+    "dual_formulation_note": "The cooperation credibility constraint is part of a broader AI governance constraint family. It is downstream of compute governance (hardware restrictions shape deployment incentives) and dual-use export controls (technology transfer restrictions shape cooperation feasibility), and upstream of multilateral treaty efforts (bilateral credibility gap undermines multilateral coordination). Each constraint in the family has its own extractiveness value reflecting different structural mechanisms, but they form a coupled system where degradation in one propagates to others."
+  },
+  "directionality_overrides": []
+}

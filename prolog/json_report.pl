@@ -683,14 +683,18 @@ write_one_perspective_chi(S, C, Power, Comma) :-
     ->  (catch(drl_core:base_extractiveness(C, Epsilon), _, fail) -> true ; Epsilon = null),
         (catch(constraint_indexing:derive_directionality(C, Ctx, D), _, fail) -> true ; D = null),
         (D \= null -> constraint_indexing:sigmoid_f(D, Fd) ; Fd = null),
+        (D \= null -> (catch(constraint_indexing:sigmoid_d1(D, F1d), _, fail) -> true ; F1d = null) ; F1d = null),
+        (D \= null -> (catch(constraint_indexing:sigmoid_d2(D, F2d), _, fail) -> true ; F2d = null) ; F2d = null),
         (catch(constraint_indexing:scope_modifier(Scope, ScopeMod), _, fail) -> true ; ScopeMod = null)
-    ;   Chi = null, Epsilon = null, D = null, Fd = null, ScopeMod = null
+    ;   Chi = null, Epsilon = null, D = null, Fd = null, F1d = null, F2d = null, ScopeMod = null
     ),
     format(S, '        "~w": {', [Power]),
     format(S, '"chi": ', []), write_json_number(S, Chi),
     format(S, ', "epsilon": ', []), write_json_number(S, Epsilon),
     format(S, ', "d": ', []), write_json_number(S, D),
     format(S, ', "f_d": ', []), write_json_number(S, Fd),
+    format(S, ', "f1_d": ', []), write_json_number(S, F1d),
+    format(S, ', "f2_d": ', []), write_json_number(S, F2d),
     format(S, ', "scope_mod": ', []), write_json_number(S, ScopeMod),
     format(S, '}', []),
     (Comma == true -> format(S, ',~n', []) ; format(S, '~n', [])).

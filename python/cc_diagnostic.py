@@ -33,6 +33,7 @@ from pathlib import Path
 CCDP_COORDINATION_BOUNDARY = 0.35   # = rope_chi_ceiling in config.pl
 CCDP_EXTRACTION_BOUNDARY = 0.46     # = snare_epsilon_floor in config.pl
 CCDP_BAND_WIDTH = 0.10
+CCDP_F2D_THRESHOLD_FALLBACK = 3.0   # fallback if corpus has fewer than 4 f2_d values
 
 # Sigmoid params from config.pl (constraint_indexing.pl:256-284)
 SIGMOID_LOWER = -0.20
@@ -1207,6 +1208,19 @@ def run_corpus_audit(enriched_pipeline_path):
     pc = data['per_constraint']
     results = []
 
+    # Pre-pass: compute corpus p75 of |f2_d| for curvature threshold
+    all_f2d_abs = []
+    for item in pc:
+        for pos in OBSERVERS:
+            pchi0 = item.get('perspective_chi', {})
+            if pos in pchi0 and isinstance(pchi0[pos], dict):
+                f2d = pchi0[pos].get('f2_d')
+                if f2d is not None:
+                    all_f2d_abs.append(abs(f2d))
+    all_f2d_abs.sort()
+    f2d_p75 = (all_f2d_abs[int(0.75 * len(all_f2d_abs))]
+               if len(all_f2d_abs) >= 4 else CCDP_F2D_THRESHOLD_FALLBACK)
+
     for item in pc:
         cid = item['id']
         h1 = item.get('h1_band', 0)
@@ -1228,6 +1242,10 @@ def run_corpus_audit(enriched_pipeline_path):
                 'id': cid, 'h1': h1, 'trigger': False,
                 'reason': 'no chi data', 'threshold_distances': {},
                 'delta_band_positions': {},
+                'curvature_alert': False,
+                'curvature_alert_observers': {},
+                'f2d_abs_by_observer': {},
+                'f2d_p75_threshold': f2d_p75,
             })
             continue
 
@@ -1250,6 +1268,21 @@ def run_corpus_audit(enriched_pipeline_path):
         else:
             reason = "triggered"
 
+        # Curvature alert: |f''(d)| > corpus p75 AND chi near boundary
+        curvature_alerts = {}
+        f2d_abs_by_obs = {}
+        for pos in OBSERVERS:
+            if pos in pchi and isinstance(pchi[pos], dict):
+                f2d = pchi[pos].get('f2_d')
+                if f2d is not None:
+                    f2d_abs = abs(f2d)
+                    f2d_abs_by_obs[pos] = f2d_abs
+                    if pos in tdist and f2d_abs > f2d_p75 and tdist[pos][0] < CCDP_BAND_WIDTH:
+                        curvature_alerts[pos] = {
+                            'f2_d_abs': f2d_abs,
+                            'chi_distance': tdist[pos][0],
+                        }
+
         results.append({
             'id': cid,
             'h1': h1,
@@ -1267,12 +1300,16 @@ def run_corpus_audit(enriched_pipeline_path):
             'topic_domain': topic_domain,
             'contamination': contamination,
             'perspective_chi_detail': {pos: pchi[pos] for pos in OBSERVERS if pos in pchi},
+            'curvature_alert': bool(curvature_alerts),
+            'curvature_alert_observers': curvature_alerts,
+            'f2d_abs_by_observer': f2d_abs_by_obs,
+            'f2d_p75_threshold': f2d_p75,
         })
 
-    return results
+    return results, {'f2d_p75': f2d_p75}
 
 
-def generate_audit_report(results, report_dir):
+def generate_audit_report(results, report_dir, meta=None):
     """Generate the CCDP audit report markdown."""
     lines = []
     lines.append("# CCDP Audit Report")
@@ -1342,6 +1379,23 @@ def generate_audit_report(results, report_dir):
         ct = pos_counts.get(pos, 0)
         pct = 100 * ct / len(triggered) if triggered else 0
         lines.append(f"| {pos} | {ct} | {pct:.1f}% |")
+    lines.append("")
+
+    # Curvature alert statistics
+    curvature_alerted = [r for r in results if r.get('curvature_alert')]
+    delta_and_curvature = [r for r in results if r.get('trigger') and r.get('curvature_alert')]
+    curvature_not_delta = [r for r in results if r.get('curvature_alert') and not r.get('trigger')]
+    lines.append("### Curvature Alert Statistics (|f′′(d)| > corpus p75 AND χ near boundary)")
+    lines.append("")
+    threshold = (meta or {}).get('f2d_p75') or next(
+        (r.get('f2d_p75_threshold') for r in results if r.get('f2d_p75_threshold') is not None), None)
+    if threshold is not None:
+        lines.append(f"f′′(d) threshold (corpus p75): {threshold:.4f}")
+    lines.append(f"Curvature alerts: {len(curvature_alerted)} / {total}")
+    if triggered:
+        lines.append(f"δ-band AND curvature (overlap): {len(delta_and_curvature)}"
+                     f" ({100*len(delta_and_curvature)/len(triggered):.1f}% of δ-triggered)")
+    lines.append(f"Curvature only (no δ-band trigger): {len(curvature_not_delta)}")
     lines.append("")
 
     # Detailed table for reported constraints
@@ -1611,19 +1665,21 @@ def main():
         sys.exit(1)
 
     print(f"Running CCDP audit on {enriched_path}...")
-    results = run_corpus_audit(str(enriched_path))
+    results, audit_meta = run_corpus_audit(str(enriched_path))
 
     # Summary
     triggered = [r for r in results if r['trigger']]
     h1_ge3 = [r for r in results if r['h1'] >= 3]
     deep_fracture = [r for r in h1_ge3 if not r['trigger']]
+    curvature_alerted = [r for r in results if r.get('curvature_alert')]
     print(f"  Total constraints: {len(results)}")
     print(f"  H¹ ≥ 3: {len(h1_ge3)}")
     print(f"  CCDP triggered: {len(triggered)}")
     print(f"  Deep fracture: {len(deep_fracture)}")
+    print(f"  Curvature alerts: {len(curvature_alerted)}")
 
     # Generate audit report
-    audit_report = generate_audit_report(results, str(report_dir))
+    audit_report = generate_audit_report(results, str(report_dir), meta=audit_meta)
     audit_path = base_dir / 'outputs' / 'ccdp_audit_report.md'
 
     if dry_run:

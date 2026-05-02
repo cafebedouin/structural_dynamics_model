@@ -1,0 +1,214 @@
+{
+  "header": {
+    "constraint_id": "nonproliferation_feasibility",
+    "version": "1.0",
+    "generated_date": "2025-01-02",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nonprolif"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "AI Nonproliferation Treaty Feasibility",
+    "topic_domain": "international_relations/technology_governance/strategic_competition",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "mallaby_cfr_diplomatic_establishment",
+      "multilateral_treaty_bureaucracy"
+    ],
+    "victims": [
+      "us_technological_advantage",
+      "verification_regime_credibility",
+      "third_party_states"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "US Technological Advantage",
+      "comment": "PERSPECTIVE 1: US TECHNOLOGICAL ADVANTAGE (SNARE) \u2014 Trapped by the proposed treaty structure: scrapping chip controls eliminates the one enforceable mechanism while gaining only unverifiable commitments. Cannot exit the treaty framework once established without diplomatic cost. Bears maximum extraction \u2014 gives up tangible leverage for theatrical compliance."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Third-Party States",
+      "comment": "PERSPECTIVE 2: THIRD-PARTY STATES (SNARE) \u2014 Constrained by great-power treaty architecture that imposes verification burdens and development restrictions without addressing the enforcement asymmetry. Can technically refuse to join but face diplomatic pressure and exclusion from AI governance forums. Experience high extraction through asymmetric compliance costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Mallaby/CFR Diplomatic Establishment",
+      "comment": "PERSPECTIVE 3: MALLABY/CFR DIPLOMATIC ESTABLISHMENT (ROPE) \u2014 Primary beneficiary. Experiences the constraint as pure coordination: the treaty framework creates institutional roles, diplomatic processes, and career pathways regardless of verification feasibility. Extraction runs toward this agent \u2014 they gain status and influence from the treaty architecture itself, not from its functional effectiveness."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Multilateral Treaty Bureaucracy",
+      "comment": "PERSPECTIVE 4: MULTILATERAL TREATY BUREAUCRACY (TANGLED ROPE) \u2014 Benefits from expanded mandate and resources for AI governance but also constrained by the verification impossibility. Genuine coordination function (establishing norms, facilitating dialogue) exists alongside extraction (bureaucratic expansion without enforcement capacity). Mixed experience \u2014 institutional growth coupled with structural futility."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Verification Regime Credibility",
+      "comment": "PERSPECTIVE 5: VERIFICATION REGIME CREDIBILITY (PITON) \u2014 The treaty's verification mechanisms are largely theatrical: model weights diffuse through academic channels, open-source releases, and third-party development that no inspection regime can monitor. The verification ritual persists through diplomatic inertia despite near-zero functional enforcement capacity. High theater ratio \u2014 the regime maintains the form of nonproliferation without the substance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Sees both the genuine coordination need (preventing AI arms race dynamics) and the structural extraction (diplomatic establishment benefits from treaty architecture that cannot achieve its stated purpose). The enforcement asymmetry between chip controls (verifiable, enforceable) and model development restrictions (unverifiable, unenforceable) reveals the trade as structurally incoherent \u2014 scrapping the enforceable mechanism for the unenforceable one is extraction masked as coordination."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "verification_technology_breakthrough",
+      "question": "Could future verification technology (model fingerprinting, training run detection, compute auditing) make AI nonproliferation enforceable at scales comparable to NPT nuclear material accounting?",
+      "resolution_mechanism": "Technical feasibility analysis of proposed verification methods; comparison of evasion costs for AI model development vs nuclear material diversion; assessment of third-party proliferation pathways that bypass verification entirely",
+      "impact": "If verification breakthrough occurs: treaty structure shifts from snare to tangled_rope (genuine coordination function emerges). If verification remains infeasible: current snare classification persists and treaty becomes pure theater.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether verification technology can achieve NPT-comparable enforceability"
+    },
+    {
+      "id": "china_compliance_credibility",
+      "question": "Does China have structural incentives to comply with AI development restrictions when enforcement is unverifiable and strategic advantage from defection is high?",
+      "resolution_mechanism": "Game-theoretic analysis of compliance incentives under unverifiable commitments; historical analysis of Chinese compliance with unenforceable treaty provisions; assessment of domestic political costs of visible vs invisible defection",
+      "impact": "If compliance credible: treaty has coordination value despite verification limits. If compliance not credible: treaty is pure extraction from US (scraps enforceable controls for theatrical commitments).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether China has credible incentives for unverifiable compliance"
+    },
+    {
+      "id": "open_source_proliferation_pathway",
+      "question": "Do open-source model releases and academic diffusion create proliferation pathways that make any bilateral treaty structurally irrelevant?",
+      "resolution_mechanism": "Empirical tracking of frontier model capabilities appearing in open-source releases; analysis of academic publication and replication timelines; assessment of whether US-China restrictions matter when third parties can replicate",
+      "impact": "If open-source pathway dominates: treaty is theater regardless of compliance (the constraint it claims to address is already uncontrollable). If bilateral control remains meaningful: treaty structure matters but enforcement asymmetry remains.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether open-source diffusion makes bilateral treaties irrelevant"
+    },
+    {
+      "id": "chip_control_durability",
+      "question": "How long can chip export controls maintain effectiveness as China develops indigenous semiconductor capabilities and third-party suppliers emerge?",
+      "resolution_mechanism": "Technical assessment of Chinese semiconductor roadmap; analysis of third-party supplier development (Taiwan, South Korea, Netherlands under different political scenarios); projection of compute cost curves and substitution pathways",
+      "impact": "If chip controls have short remaining lifespan: trading them for treaty commitments is less costly (losing an eroding asset). If chip controls remain durable: trading them is high-cost extraction (scrapping a functional mechanism).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Remaining durability of chip export controls as enforcement mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "nonprolif_theater_initial"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48,
+      "id_override": "nonprolif_theater_early"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58,
+      "id_override": "nonprolif_theater_mid"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65,
+      "id_override": "nonprolif_theater_current"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "nonprolif_extract_initial"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52,
+      "id_override": "nonprolif_extract_early"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.61,
+      "id_override": "nonprolif_extract_mid"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68,
+      "id_override": "nonprolif_extract_current"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Sebastian Mallaby's proposal to trade chip export controls for an AI nonproliferation treaty presents a structural trade: scrap an enforceable but eroding mechanism (chip controls) for an unenforceable but diplomatically appealing mechanism (treaty commitments). The constraint's classification depends critically on the enforcement asymmetry between physical goods (chips) and information goods (model weights). NPT-style nonproliferation worked because nuclear material is physical, scarce, and detectable \u2014 uranium enrichment facilities cannot be hidden in academic papers or transmitted via GitHub. AI models are none of these things. The proposed treaty structure creates extraction: the diplomatic establishment gains institutional roles and processes regardless of verification feasibility, while US technological advantage bears the cost of scrapping enforceable controls for theatrical commitments. The theater ratio (0.65) reflects that verification mechanisms for AI development restrictions are largely performative \u2014 no inspection regime can monitor model training runs, weight sharing, or algorithmic insights diffusing through academic channels and open-source releases. The constraint has degraded over the interval as the enforcement asymmetry has become more apparent and open-source proliferation pathways have expanded.",
+    "key_agents": [
+      "US Technological Advantage: Primary victim (powerless/trapped) \u2014 loses enforceable chip controls, gains unverifiable treaty commitments; cannot exit treaty framework once established without diplomatic cost",
+      "Mallaby/CFR Diplomatic Establishment: Primary beneficiary (institutional/arbitrage) \u2014 gains status, institutional roles, and career pathways from treaty architecture regardless of functional effectiveness",
+      "Multilateral Treaty Bureaucracy: Secondary beneficiary (institutional/constrained) \u2014 expands mandate and resources but constrained by verification impossibility; mixed coordination and extraction",
+      "Third-Party States: Secondary victim (moderate/constrained) \u2014 face asymmetric compliance costs and verification burdens without enforcement capacity; constrained by great-power treaty architecture",
+      "Verification Regime Credibility: Institutional victim (institutional/mobile) \u2014 treaty's verification mechanisms are theatrical; regime maintains form without substance",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees enforcement asymmetry revealing the trade as structurally incoherent extraction masked as coordination"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The treaty structure extracts from US technological advantage by trading an enforceable mechanism (chip controls can be monitored at chokepoints, enforced through export licensing, and verified through supply chain auditing) for an unenforceable mechanism (model development restrictions cannot be monitored without inspecting every research lab, university, and compute cluster globally). The diplomatic establishment captures the extraction \u2014 they gain institutional roles from the treaty architecture whether or not it achieves nonproliferation. The value reflects that the enforcement asymmetry is structural, not contingent: information goods diffuse in ways physical goods do not. Suppression (0.72): High. Once the treaty framework is established, exiting it carries significant diplomatic cost. The US cannot easily reverse course without appearing to abandon multilateral cooperation. Third-party states face pressure to join and comply despite asymmetric burdens. The suppression is institutional rather than physical \u2014 the constraint operates through diplomatic norms and reputational costs. Theater ratio (0.65): High and rising. Verification mechanisms for AI development restrictions are substantially performative. Proposed methods (model fingerprinting, compute auditing, training run detection) face fundamental evasion pathways: academic publication of algorithmic insights, open-source model releases, distributed training across jurisdictions, and third-party replication. The theater has increased over the interval as open-source proliferation has expanded and the verification impossibility has become more apparent.",
+    "directionality_logic": "The Mallaby/CFR diplomatic establishment is the primary beneficiary with arbitrage exit options \u2014 they can move between policy roles, think tanks, and academic positions regardless of treaty effectiveness. Their directionality is low (d \u2248 0.10), producing negative or near-zero effective extraction \u2014 they experience the constraint as pure coordination because extraction runs toward them. US technological advantage is the primary victim with trapped exit options \u2014 once chip controls are scrapped and treaty commitments made, reversing course carries prohibitive diplomatic cost. Their directionality is high (d \u2248 0.92), producing maximum effective extraction. Third-party states are secondary victims with constrained exit options \u2014 they can refuse to join but face diplomatic pressure and exclusion from governance forums. Their directionality is moderately high (d \u2248 0.68). The multilateral treaty bureaucracy has mixed beneficiary/victim status with constrained exit \u2014 they gain resources and mandate but are constrained by verification impossibility. Their directionality is moderate (d \u2248 0.45). The verification regime credibility is institutional with mobile exit \u2014 the regime can shift focus to other domains when AI verification proves infeasible. The analytical observer uses the analytical exit option and derives directionality from the structural asymmetry (d \u2248 0.55), seeing both coordination need and extraction mechanism.",
+    "perspectival_gap": "The diplomatic establishment sees pure coordination (Rope) \u2014 the treaty creates institutional processes and dialogue mechanisms that they experience as beneficial regardless of enforcement capacity. US technological advantage sees pure extraction (Snare) \u2014 scrapping enforceable controls for unverifiable commitments with no exit path once the treaty framework is established. Third-party states also see extraction (Snare) \u2014 asymmetric compliance burdens without enforcement capacity. The multilateral bureaucracy sees mixed coordination and extraction (Tangled Rope) \u2014 genuine norm-setting function alongside institutional expansion without verification capacity. The verification regime sees degraded theater (Piton) \u2014 maintains the form of nonproliferation without the substance. The analytical observer sees the enforcement asymmetry revealing extraction masked as coordination (Tangled Rope) \u2014 the genuine coordination need (preventing AI arms race) exists but the proposed mechanism structurally cannot achieve it, making the trade extractive rather than functional.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by revealing that the classification depends on whether the enforcement asymmetry is acknowledged. If AI model development restrictions were enforceable at NPT-comparable levels, the treaty would be genuine coordination (Rope or Tangled Rope depending on compliance costs). But the structural difference between physical goods (chips) and information goods (models) makes enforcement asymmetric: chip controls are verifiable, model restrictions are not. The diplomatic establishment benefits from ignoring this asymmetry \u2014 the treaty architecture creates institutional roles regardless of functional effectiveness. US technological advantage bears the cost of the asymmetry \u2014 loses enforceable leverage, gains theatrical commitments. The mandatrophy is not 'is nonproliferation good?' (yes, preventing AI arms races is a genuine coordination need) but 'does this specific mechanism achieve nonproliferation or does it extract from enforceable controls for diplomatic theater?' The structural data (verification impossibility, open-source proliferation pathways, third-party diffusion) reveals extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of chip_control_efficacy (the enforceable mechanism being traded away) and cooperation_credibility (whether treaty commitments are believable). The nonproliferation feasibility constraint has its own extractiveness reflecting the enforcement asymmetry and institutional extraction, distinct from the upstream constraints' values."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.45
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "chip_control_efficacy",
+      "cooperation_credibility"
+    ]
+  }
+}

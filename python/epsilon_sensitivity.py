@@ -24,6 +24,12 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+try:
+    from scipy import stats as _scipy_stats
+    HAS_SCIPY = True
+except ImportError:
+    HAS_SCIPY = False
+
 from shared.loader import load_json, PIPELINE_JSON, ENRICHED_PIPELINE_JSON, OUTPUT_DIR
 from shared.maxent import (
     compute_profiles, compute_priors, gaussian_ll, boolean_ll,
@@ -204,6 +210,7 @@ def run_analysis(h=0.01, run_all=False):
         fi_by_observer = {"analytical_raw": fi_analytical}
         tv_by_observer = {"analytical_raw": tv_analytical}
 
+        f2d_abs_by_observer = {}
         for obs in OBSERVERS:
             if obs not in pchi:
                 continue
@@ -212,6 +219,9 @@ def run_analysis(h=0.01, run_all=False):
             dist_hi_obs = maxent_single_chi(c, eps_hi, pchi_entry, profiles, priors)
             fi_by_observer[obs] = fisher_info(dist_lo_obs, dist_hi_obs, actual_h)
             tv_by_observer[obs] = total_variation_sensitivity(dist_lo_obs, dist_hi_obs, actual_h)
+            f2d = pchi_entry.get('f2_d')
+            if f2d is not None:
+                f2d_abs_by_observer[obs] = abs(f2d)
 
         result = {
             "id": cid,
@@ -225,6 +235,7 @@ def run_analysis(h=0.01, run_all=False):
             "tv_analytical_raw": tv_analytical,
             "fisher_by_observer": fi_by_observer,
             "tv_by_observer": tv_by_observer,
+            "f2d_abs_by_observer": f2d_abs_by_observer,
         }
         results.append(result)
 
@@ -296,6 +307,82 @@ def run_analysis(h=0.01, run_all=False):
     print(f"    Types: {dict(Counter(r['claimed_type'] for r in fragile))}")
     print(f"  Robust consensus (low Fisher):   {len(robust)}")
     print(f"    Types: {dict(Counter(r['claimed_type'] for r in robust))}")
+    fragile_f2ds = [max(r["f2d_abs_by_observer"].values())
+                    for r in fragile if r.get("f2d_abs_by_observer")]
+    robust_f2ds = [max(r["f2d_abs_by_observer"].values())
+                   for r in robust if r.get("f2d_abs_by_observer")]
+    if fragile_f2ds:
+        print(f"  Fragile consensus mean |f''(d)|: {sum(fragile_f2ds)/len(fragile_f2ds):.4f}"
+              f" (n={len(fragile_f2ds)})")
+    if robust_f2ds:
+        print(f"  Robust consensus  mean |f''(d)|: {sum(robust_f2ds)/len(robust_f2ds):.4f}"
+              f" (n={len(robust_f2ds)})")
+
+    # f''(d) / Fisher correlation analysis
+    OBSERVERS_LOCAL = ["powerless", "moderate", "institutional", "analytical"]
+    f2d_fi_per_obs = []
+    for r in results:
+        for obs in OBSERVERS_LOCAL:
+            f2d_abs = r.get("f2d_abs_by_observer", {}).get(obs)
+            fi = r.get("fisher_by_observer", {}).get(obs)
+            if f2d_abs is not None and fi is not None and isinstance(fi, (int, float)):
+                f2d_fi_per_obs.append((f2d_abs, fi))
+
+    f2d_fi_per_cstr = []
+    for r in results:
+        f2ds = list(r.get("f2d_abs_by_observer", {}).values())
+        fis = [v for v in r.get("fisher_by_observer", {}).values()
+               if v is not None and isinstance(v, (int, float))]
+        if f2ds and fis:
+            f2d_fi_per_cstr.append((max(f2ds), max(fis)))
+
+    f2d_cm_pairs = []
+    for r in results:
+        f2ds = list(r.get("f2d_abs_by_observer", {}).values())
+        cm = r.get("confidence_margin")
+        if f2ds and cm is not None:
+            f2d_cm_pairs.append((max(f2ds), cm))
+
+    def _fmt_corr(pairs):
+        if len(pairs) < 2:
+            return f"{'n/a':>5}", f"{'n/a':>6}", f"{'n/a':>5}", f"{'n/a':>6}", len(pairs)
+        xs = [p[0] for p in pairs]
+        ys = [p[1] for p in pairs]
+        rp, rs, pp, ps = corr_with_p(xs, ys)
+        pp_s = f"{pp:.4f}" if pp is not None else "n/a"
+        ps_s = f"{ps:.4f}" if ps is not None else "n/a"
+        return f"{rp:+.3f}", pp_s, f"{rs:+.3f}", ps_s, len(pairs)
+
+    rp1, pp1, rs1, ps1, n1 = _fmt_corr(f2d_fi_per_obs)
+    rp2, pp2, rs2, ps2, n2 = _fmt_corr(f2d_fi_per_cstr)
+    rp3, pp3, rs3, ps3, n3 = _fmt_corr(f2d_cm_pairs)
+
+    print(f"\nf''(d) Curvature Correlation Analysis")
+    print(f"{'─'*68}")
+    print(f"{'Metric Pair':<33} │ {'N':>5} │ {'r_P':>6} │ {'p_P':>6} │ {'r_S':>6} │ {'p_S':>6}")
+    print(f"{'─'*33}─┼─{'─'*5}─┼─{'─'*6}─┼─{'─'*6}─┼─{'─'*6}─┼─{'─'*6}")
+    print(f"{'|f′′(d)| vs Fisher (per obs)':<33} │ {n1:>5} │ {rp1:>6} │ {pp1:>6} │ {rs1:>6} │ {ps1:>6}")
+    print(f"{'|f′′(d)| vs Fisher (per cstr)':<33} │ {n2:>5} │ {rp2:>6} │ {pp2:>6} │ {rs2:>6} │ {ps2:>6}")
+    print(f"{'|f′′(d)| vs conf_margin':<33} │ {n3:>5} │ {rp3:>6} │ {pp3:>6} │ {rs3:>6} │ {ps3:>6}")
+
+    # Interpretation based on per-observer Pearson r
+    try:
+        r_abs = abs(float(rp1))
+        if r_abs < 0.3:
+            interp = "Low correlation — f''(d) and Fisher capture independent fragility dimensions. COMPLEMENTARY."
+        elif r_abs < 0.7:
+            interp = "Moderate correlation — partial overlap. f''(d) adds information beyond Fisher."
+        else:
+            interp = ("High correlation — f''(d) may be largely redundant with Fisher. "
+                      "Curvature Alert value is computational efficiency, not new information.")
+        print(f"\nInterpretation: {interp}")
+    except (ValueError, TypeError):
+        pass
+
+    # Collect summary values for JSON
+    f2d_fisher_pr = pearson_r([p[0] for p in f2d_fi_per_obs], [p[1] for p in f2d_fi_per_obs]) if len(f2d_fi_per_obs) >= 2 else None
+    f2d_fisher_sr = spearman_r([p[0] for p in f2d_fi_per_obs], [p[1] for p in f2d_fi_per_obs]) if len(f2d_fi_per_obs) >= 2 else None
+    f2d_cm_pr = pearson_r([p[0] for p in f2d_cm_pairs], [p[1] for p in f2d_cm_pairs]) if len(f2d_cm_pairs) >= 2 else None
 
     # Save results
     output = {
@@ -315,6 +402,11 @@ def run_analysis(h=0.01, run_all=False):
             "correlation_with_confidence_margin": pearson_r(fi_for_corr, cm_vals) if len(cm_vals) >= 2 else None,
             "u3_mean_fisher": u3_mean if u3_vals else None,
             "u4_mean_fisher": u4_mean if u4_vals else None,
+            "f2d_fisher_pearson_r": f2d_fisher_pr,
+            "f2d_fisher_spearman_r": f2d_fisher_sr,
+            "f2d_confidence_margin_pearson_r": f2d_cm_pr,
+            "fragile_mean_f2d_abs": sum(fragile_f2ds) / len(fragile_f2ds) if fragile_f2ds else None,
+            "robust_mean_f2d_abs": sum(robust_f2ds) / len(robust_f2ds) if robust_f2ds else None,
         },
         "per_constraint": results,
     }
@@ -338,6 +430,62 @@ def pearson_r(xs, ys):
     if sx < 1e-15 or sy < 1e-15:
         return 0.0
     return cov / (sx * sy)
+
+
+def spearman_r(xs, ys):
+    """Spearman rank correlation (Pearson r of ranks with average-rank tie-breaking)."""
+    n = len(xs)
+    if n < 2:
+        return 0.0
+
+    def _ranks(vals):
+        sorted_with_idx = sorted(enumerate(vals), key=lambda iv: iv[1])
+        ranks = [0.0] * n
+        i = 0
+        while i < n:
+            j = i
+            while j < n - 1 and sorted_with_idx[j + 1][1] == sorted_with_idx[j][1]:
+                j += 1
+            avg_rank = (i + j) / 2.0 + 1
+            for k in range(i, j + 1):
+                ranks[sorted_with_idx[k][0]] = avg_rank
+            i = j + 1
+        return ranks
+
+    return pearson_r(_ranks(xs), _ranks(ys))
+
+
+def _approx_pvalue(r, n):
+    """Approximate two-tailed p-value for Pearson/Spearman r using t approximation."""
+    if n < 3:
+        return None
+    r_clamped = max(-1 + 1e-12, min(1 - 1e-12, r))
+    t = r_clamped * math.sqrt(n - 2) / math.sqrt(1 - r_clamped ** 2)
+    # Normal approximation for large n; erfc for t-to-p
+    # Use math.erfc(|t|/sqrt(2)) as an approximation to 2*(1-Phi(|t|))
+    p = math.erfc(abs(t) / math.sqrt(2))
+    return p
+
+
+def corr_with_p(xs, ys):
+    """Return (pearson_r, spearman_r, p_pearson, p_spearman).
+
+    Uses scipy if available for exact p-values; otherwise uses normal approximation.
+    """
+    n = len(xs)
+    rp = pearson_r(xs, ys)
+    rs = spearman_r(xs, ys)
+    if HAS_SCIPY and n >= 3:
+        try:
+            _, pp = _scipy_stats.pearsonr(xs, ys)
+            _, ps = _scipy_stats.spearmanr(xs, ys)
+        except Exception:
+            pp = _approx_pvalue(rp, n)
+            ps = _approx_pvalue(rs, n)
+    else:
+        pp = _approx_pvalue(rp, n)
+        ps = _approx_pvalue(rs, n)
+    return rp, rs, pp, ps
 
 
 if __name__ == "__main__":

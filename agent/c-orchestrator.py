@@ -133,7 +133,7 @@ class DRAuditOrchestrator:
             "schema":     _load_context_file(str(REPO_ROOT / "python" / "constraint_story_schema.json")),
             "example":    _load_context_file(str(REPO_ROOT / "json" / "antifragility.json")),
 #           "uke_w":      _load_context_file(str(Path(__file__).parent / "uke_write_v2.1.md")),
-            "uke_w":      _load_context_file(str(Path(__file__).parent / "uke_think.md")),
+            "uke_w":      _load_context_file(str(Path(__file__).parent / "uke_summary.md")),
         }
 
     # ------------------------------------------------------------------
