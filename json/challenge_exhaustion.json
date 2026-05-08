@@ -1,0 +1,228 @@
+{
+  "header": {
+    "constraint_id": "challenge_exhaustion",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "chall_exh"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Challenge Exhaustion via Strategic Flooding",
+    "topic_domain": "political_philosophy/rhetoric/epistemology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "claim_flooders",
+      "platform_engagement_metrics"
+    ],
+    "victims": [
+      "truth_maintainers",
+      "epistemic_commons",
+      "casual_observers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "label": "The Truth Maintainer",
+      "comment": "PERSPECTIVE 1: TRUTH MAINTAINER (SNARE) \u2014 Identity-locked to epistemic correction as professional or moral duty. Cannot exit without abandoning self-concept as defender of truth. Faces asymmetric labor burden: each false claim requires research, sourcing, and careful rebuttal, while flooder generates claims costlessly. Burnout is structural outcome. High extraction, high suppression, identity prevents exit despite structural mobility."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Casual Observer",
+      "comment": "PERSPECTIVE 2: CASUAL OBSERVER (SNARE) \u2014 Trapped by information environment with no tools to distinguish truth from flood. Lacks expertise, time, or resources to verify claims independently. Suppression operates through epistemic learned helplessness: after observing maintainers fail to keep pace with flood, observer concludes truth is unknowable and disengages. Maximum extraction of epistemic agency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Claim Flooder",
+      "comment": "PERSPECTIVE 3: CLAIM FLOODER (ROPE) \u2014 Benefits from asymmetric production costs and attention capture. Experiences constraint as pure coordination: flooding is a low-cost strategy for maintaining visibility, shifting Overton window, and exhausting opposition. No suppression experienced. Can exit to alternative platforms or tactics at will. Net beneficiary of the epistemic asymmetry."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Platform",
+      "comment": "PERSPECTIVE 4: PLATFORM (TANGLED ROPE) \u2014 Benefits from engagement metrics (flooding generates clicks, shares, outrage) but also bears reputational cost and regulatory pressure when misinformation spreads. Genuine coordination function exists: platforms do enable information distribution. But extraction is embedded: algorithmic amplification of high-engagement content systematically favors flood over correction. Constrained exit: switching to truth-prioritizing algorithms risks user exodus to competitors."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Fact-Checking Consortium",
+      "comment": "PERSPECTIVE 5: FACT-CHECKING CONSORTIUM (SCAFFOLD) \u2014 Organized institutional response (NewsGuard, Snopes, academic fact-checking networks) building verification infrastructure with explicit sunset logic: if distributed verification tools (browser plugins, AI-assisted claim tracking, community notes) mature, centralized fact-checking becomes unnecessary. Currently experiences moderate extraction (labor-intensive work, limited reach) but has agency and sees exit path through technological scaling."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Domain Expert",
+      "comment": "PERSPECTIVE 6: DOMAIN EXPERT (TANGLED ROPE) \u2014 Moderate power through expertise but constrained by professional norms requiring careful, sourced rebuttals. Benefits from the system when expertise is recognized and cited, but extraction occurs when flood volume exceeds response capacity and expertise is drowned out. Mixed experience: sometimes the constraint enables expert voice amplification, sometimes it ensures expert voice is structurally overwhelmed."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational perspective, recognizes challenge exhaustion as extractive mechanism that degrades epistemic commons. High base extraction, high suppression, no natural sunset. The asymmetry is not a coordination problem to be solved but a weapon to be deployed. Analytical classification as snare reflects structural assessment: this is pure extraction with minimal coordination function."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "automation_threshold",
+      "question": "At what level of AI-assisted verification does the labor asymmetry reverse, making challenge cheaper than claim generation?",
+      "resolution_mechanism": "Empirical measurement of time-to-challenge with and without AI tools; comparison of flooder adaptation strategies when automated challenges appear",
+      "impact": "If threshold is near (2-5 years): scaffold perspective is correct and constraint has sunset. If threshold is far (15+ years) or unreachable due to flooder counter-adaptation: snare classification persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for AI verification to reverse labor asymmetry"
+    },
+    {
+      "id": "identity_lock_necessity",
+      "question": "Is identity-lock (professional duty to correct falsehoods) necessary for maintainer role, or can maintainers operate from pure strategic interest?",
+      "resolution_mechanism": "Comparative analysis of maintainer persistence: identity-driven (journalists, academics, activists) vs interest-driven (corporate PR, political operatives). Measure burnout rates and response decay across groups.",
+      "impact": "If identity-lock is necessary: victim pool is structurally limited to those with relevant professional/moral identity, and flooder can target specific identity groups for exhaustion. If not necessary: victim pool is larger but also more fluid, potentially enabling rotation strategies that reduce individual burnout.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether identity-lock is necessary condition for maintainer role"
+    },
+    {
+      "id": "platform_incentive_alignment",
+      "question": "Do platforms genuinely face reputational cost from misinformation spread, or is the cost theatrical (regulatory performance without structural change)?",
+      "resolution_mechanism": "Longitudinal analysis of platform policy changes vs actual algorithmic behavior; correlation between misinformation scandals and user retention/ad revenue; comparison of stated vs revealed preferences in content moderation",
+      "impact": "If cost is real: platform has genuine incentive to reduce flooding, and tangled_rope classification is accurate. If cost is theatrical: platform is actually a beneficiary (engagement metrics dominate), and classification should shift toward rope from platform perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether platform reputational cost from misinformation is real or theatrical"
+    },
+    {
+      "id": "casual_observer_recovery",
+      "question": "After disengagement due to epistemic learned helplessness, can casual observers re-engage with truth-seeking, or is the suppression permanent?",
+      "resolution_mechanism": "Longitudinal studies of information consumption patterns; intervention studies testing whether improved verification tools or reduced flood volume can restore observer engagement; measurement of epistemic trust recovery timelines",
+      "impact": "If recovery is possible: suppression is high but reversible, and scaffold interventions have real potential. If recovery is rare or slow: suppression approaches permanence, strengthening snare classification from observer perspective.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether epistemic learned helplessness is reversible"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "extr_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.51,
+      "id_override": "extr_t3"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.6,
+      "id_override": "extr_t6"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.65,
+      "id_override": "extr_t9"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.68,
+      "id_override": "extr_t12"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "thtr_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.28,
+      "id_override": "thtr_t3"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.31,
+      "id_override": "thtr_t6"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.33,
+      "id_override": "thtr_t9"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.35,
+      "id_override": "thtr_t12"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "Challenge exhaustion operates through a fundamental asymmetry: generating false or misleading claims is cheap, while correcting them is expensive. A flooder can produce dozens of claims per hour with no research burden, no sourcing requirement, and no reputational cost in communities that reward volume over accuracy. A maintainer must research each claim, find credible sources, construct careful rebuttals, and often face accusations of bias or pedantry for their effort. This asymmetry is not accidental \u2014 it is strategically exploited. Flooding is a weapon: by generating claims faster than they can be challenged, the flooder exhausts the maintainer's capacity, creates the appearance of unresolved controversy, and shifts the epistemic burden from claim-maker to challenger. The constraint exhibits rising extractiveness over the 12-year interval (2014-2026) as social media platforms optimized for engagement amplified flood dynamics, and as political actors learned to weaponize the asymmetry. Theater ratio remains relatively low (0.35) because the extraction mechanism is functional, not performative: flooding genuinely exhausts challengers and degrades epistemic commons. The constraint is downstream of transmissibility_asymmetry (lies spread faster than corrections) and normalization_ratchet (each unchallenged claim shifts baseline acceptability).",
+    "key_agents": [
+      "Truth Maintainers: Primary victim (powerless/identity_locked) \u2014 journalists, fact-checkers, domain experts, activists whose professional or moral identity requires correcting falsehoods; structurally mobile but cannot exit without identity dissolution; face asymmetric labor burden and burnout",
+      "Claim Flooders: Primary beneficiary (institutional/arbitrage) \u2014 political operatives, disinformation networks, engagement farmers who generate high-volume low-cost claims; experience no suppression; can exit to alternative platforms or tactics at will",
+      "Casual Observers: Secondary victim (powerless/trapped) \u2014 general public with no expertise or verification tools; suppressed through epistemic learned helplessness after observing maintainers fail to keep pace with flood",
+      "Platforms: Mixed actor (institutional/constrained) \u2014 benefit from engagement metrics but face reputational and regulatory cost; genuine coordination function exists but extraction is embedded in algorithmic amplification of high-engagement content",
+      "Fact-Checking Consortia: Organized response (organized/mobile) \u2014 institutional verification infrastructure with sunset logic dependent on technological scaling of distributed verification tools",
+      "Domain Experts: Mixed actor (moderate/constrained) \u2014 benefit when expertise is recognized but extraction occurs when flood volume exceeds response capacity and expertise is drowned out",
+      "Epistemic Commons: Abstract victim (powerless/trapped) \u2014 collective good with no advocate; degraded by accumulation of unchallenged false claims"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The labor asymmetry creates severe extraction from maintainers: each false claim requires 10-100x the effort to rebut as it took to generate. Maintainers experience burnout, reduced effectiveness, and eventual withdrawal. Casual observers experience extraction of epistemic agency \u2014 learned helplessness replaces truth-seeking. The value reflects that extraction is not total (some challenges succeed, some maintainers persist) but is severe and structural. Suppression (0.72): High. Multiple suppression mechanisms operate: (1) asymmetric labor costs create resource barrier to challenge, (2) platform algorithms amplify engagement over accuracy, (3) social costs of being 'that person who always corrects people', (4) epistemic learned helplessness in observers, (5) identity-lock prevents maintainer exit despite burnout. Suppression is not total because organized responses (fact-checking consortia) and technological tools (browser plugins, community notes) provide some relief. Theater ratio (0.35): Moderate-low. The constraint is functional, not performative. Flooding genuinely exhausts challengers and shifts discourse. Some theater exists in platform content moderation (policies announced but weakly enforced) and in performative fact-checking (corrections that don't reach the audience that saw the original claim), but the core extraction mechanism is real labor asymmetry, not ritual.",
+    "directionality_logic": "Truth maintainers are victims with identity_locked exit \u2014 they are structurally mobile (could stop correcting falsehoods) but identity-fused with epistemic correction as professional or moral duty. The identity lock is cognitive: exit would require abandoning self-concept as journalist, scientist, educator, or defender of truth. This produces high d (victim + identity_locked) \u2192 high f(d) \u2192 high experienced extraction. Casual observers are victims with trapped exit \u2014 they lack tools, expertise, or time to verify claims independently and cannot exit the information environment. This produces maximum d (victim + trapped) \u2192 maximum f(d) \u2192 maximum experienced extraction. Claim flooders are beneficiaries with arbitrage exit \u2014 they benefit from attention capture and Overton window shifts, and can exit to alternative platforms or tactics costlessly. This produces low d (beneficiary + arbitrage) \u2192 negative f(d) \u2192 negative experienced extraction (net benefit). Platforms are beneficiaries (engagement metrics) with constrained exit \u2014 switching to truth-prioritizing algorithms risks user exodus to competitors. This produces moderate d (beneficiary + constrained) \u2192 moderate f(d) \u2192 moderate experienced extraction, consistent with tangled_rope classification. Domain experts are mixed (sometimes beneficiary when expertise is recognized, sometimes victim when drowned out) with constrained exit (professional norms require careful rebuttals). Fact-checking consortia are beneficiaries (institutional legitimacy) with mobile exit (can pivot to technological scaling). The analytical observer recognizes the structural asymmetry as extractive with no natural coordination function.",
+    "perspectival_gap": "The flooder sees pure coordination (rope) \u2014 flooding is a low-cost strategy for achieving political or commercial goals, with no experienced suppression. The truth maintainer sees pure extraction (snare) \u2014 identity-locked to correction duty, facing asymmetric labor burden and burnout with no exit path. The platform sees mixed coordination and extraction (tangled_rope) \u2014 genuine information distribution function exists, but algorithmic amplification of engagement systematically favors flood over correction. The fact-checking consortium sees temporary problem with sunset (scaffold) \u2014 distributed verification tools will eventually reverse the asymmetry. The casual observer sees pure extraction (snare) \u2014 trapped in degraded information environment with no verification capacity. The domain expert sees mixed experience (tangled_rope) \u2014 sometimes expertise is amplified, sometimes drowned out. The analytical observer sees structural extraction (snare) \u2014 the asymmetry is weaponized, not accidental, and has no natural coordination function. The gap reveals that 'flooding' is simultaneously a coordination strategy (from flooder perspective), an extraction mechanism (from maintainer perspective), and a degraded information market (from platform perspective). No single type captures the full structure \u2014 the presheaf over observation sites is the complete answer.",
+    "mandatrophy_analysis": "Challenge exhaustion resolves the mandatrophy by demonstrating that the same structural asymmetry (cheap claim generation vs expensive correction) is experienced as pure coordination by beneficiaries, pure extraction by victims, and mixed coordination-extraction by institutional actors with dual roles. The flooder genuinely experiences flooding as a coordination strategy \u2014 it solves their problem of maintaining visibility and shifting discourse. The maintainer genuinely experiences flooding as extraction \u2014 it depletes their labor capacity and forces withdrawal. The platform genuinely experiences both \u2014 engagement metrics benefit from flood volume, but reputational cost from misinformation spread creates real constraint. The analytical classification as snare reflects the structural assessment: the asymmetry is weaponized (requires active enforcement through strategic flooding), has identifiable victims (maintainers, observers, epistemic commons), and exhibits high extraction and suppression with no natural sunset. The scaffold perspective (fact-checking consortia) is real but contingent on technological development \u2014 if AI-assisted verification scales, the asymmetry may reverse. The mandatrophy is resolved not by choosing one type but by recognizing that all classifications are legitimate perspectival readings of the same structural data."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "Challenge exhaustion is downstream of transmissibility_asymmetry (mountain: lies spread faster than corrections due to cognitive and network effects) and normalization_ratchet (tangled_rope: each unchallenged claim shifts baseline acceptability). The upstream constraints establish the structural conditions (asymmetric transmission, ratcheting normalization) that make strategic flooding effective as an extraction mechanism. Challenge exhaustion is the weaponization of these asymmetries \u2014 the deliberate exploitation of transmission and normalization dynamics to exhaust opposition."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "transmissibility_asymmetry",
+      "normalization_ratchet"
+    ]
+  }
+}

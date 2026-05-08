@@ -1,0 +1,370 @@
+[
+  {
+    "predicate": "metric_at/4",
+    "definition_file": "prolog/drift_events.pl",
+    "definition_line": 83,
+    "header_comment": "%% metric_at(+C, +Metric, +Time, -Value) / Retrieves measurement at a specific time.",
+    "type_a_grounds": "Point-in-time state access — directly indexes the measurement database by time parameter, implementing the fundamental state-at-T pattern.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "metric_delta/5",
+    "definition_file": "prolog/drift_events.pl",
+    "definition_line": 72,
+    "header_comment": "%% metric_delta(+C, +Metric, -T1, -T2, -Delta) / Finds the earliest and latest measurements and computes the change.",
+    "type_a_grounds": "Compares earliest vs latest measurement across time — explicit before/after delta computation across two timestamps.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "metric_trend/3",
+    "definition_file": "prolog/drift_events.pl",
+    "definition_line": 88,
+    "header_comment": "%% metric_trend(+C, +Metric, -Trend) / Determines if a metric is increasing, decreasing, or stable.",
+    "type_a_grounds": "Classifies the direction of change across time — derives trend (increasing/decreasing/stable) from the temporal delta, abstracting frame mutation into a categorical label.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "drift_velocity/3",
+    "definition_file": "prolog/drift_events.pl",
+    "definition_line": 409,
+    "header_comment": "Computes rate of change of a metric across its measurement history.",
+    "type_a_grounds": "Rate-of-change computation over temporal measurement series — quantifies how fast a constraint property is evolving.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "drift_acceleration/3",
+    "definition_file": "prolog/drift_events.pl",
+    "definition_line": 416,
+    "header_comment": "Computes second-order rate of change (acceleration) of a metric.",
+    "type_a_grounds": "Second-order temporal derivative — measures whether drift itself is speeding up or slowing down, a higher-order frame-mutation tracker.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "drift_event/3",
+    "definition_file": "prolog/drift_events.pl",
+    "definition_line": 186,
+    "header_comment": "Reports detected drift events with evidence tuples (metric_substitution, extraction_accumulation, coordination_loss, function_obsolescence, sunset_violation, extraction_dried_up, internalized_piton, coupling_drift, purity_drift, network_drift).",
+    "type_a_grounds": "Fires when a temporal change pattern (mutation) is confirmed — the event fact itself is a record of a state transition detected across time.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "drift_event/4",
+    "definition_file": "prolog/drift_events.pl",
+    "definition_line": 234,
+    "header_comment": "Context-indexed variant of drift_event/3 — detects drift relative to a specific observer context.",
+    "type_a_grounds": "Context-indexed temporal mutation detection — adds the observer-position dimension to the drift-event temporal pattern.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "detect_metric_substitution/1",
+    "definition_file": "prolog/drift_events.pl",
+    "definition_line": 103,
+    "header_comment": "Detects when theater_score has risen while extractiveness remains high — metric substitution pattern.",
+    "type_a_grounds": "Tests for a cross-metric temporal pattern where one dimension rises while another persists, indicating frame substitution over time.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "detect_extraction_accumulation/1",
+    "definition_file": "prolog/drift_events.pl",
+    "definition_line": 114,
+    "header_comment": "Detects when extractiveness has been increasing over time.",
+    "type_a_grounds": "Directly checks temporal increase in extractiveness — pure Type A detector for accumulation drift.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "detect_coordination_loss/1",
+    "definition_file": "prolog/drift_events.pl",
+    "definition_line": 124,
+    "header_comment": "Detects when coordination effectiveness has declined while extraction persists.",
+    "type_a_grounds": "Detects temporal decline in coordination — a state-mutation detector for the coordination dimension.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "detect_function_obsolescence/1",
+    "definition_file": "prolog/drift_events.pl",
+    "definition_line": 138,
+    "header_comment": "Detects when a constraint's original coordination function has been superseded.",
+    "type_a_grounds": "Tests for obsolescence by checking that alternatives exist and theater has risen — a lifecycle stage transition detector.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "detect_sunset_violation/1",
+    "definition_file": "prolog/drift_events.pl",
+    "definition_line": 150,
+    "header_comment": "Detects when a constraint has exceeded its sunset year.",
+    "type_a_grounds": "Compares constraint's declared endpoint against current year — explicit temporal epoch comparison.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "detect_extraction_dried_up/1",
+    "definition_file": "prolog/drift_events.pl",
+    "definition_line": 160,
+    "header_comment": "Detects when extraction has dropped to near-zero while suppression remains.",
+    "type_a_grounds": "Detects terminal-phase state mutation where the extractive mechanism collapses while enforcement persists.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "detect_is_piton/1",
+    "definition_file": "prolog/drift_events.pl",
+    "definition_line": 170,
+    "header_comment": "Detects when a constraint has calcified into a piton (internalized compliance).",
+    "type_a_grounds": "Tests for the internalized-piton lifecycle terminal state — a stage-arrival detector.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "detect_coupling_drift/1",
+    "definition_file": "prolog/drift_events.pl",
+    "definition_line": 262,
+    "header_comment": "Detects when Boltzmann coupling measure has drifted from baseline.",
+    "type_a_grounds": "Tracks temporal change in coupling structure — detects mutation of the coupling dimension.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "detect_purity_drift/1",
+    "definition_file": "prolog/drift_events.pl",
+    "definition_line": 338,
+    "header_comment": "Detects when purity score has declined over time.",
+    "type_a_grounds": "Tracks temporal degradation of purity — detects the mutation of structural integrity across time.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "constraint_history/3",
+    "definition_file": "prolog/drl_composition.pl",
+    "definition_line": 153,
+    "header_comment": "%% constraint_history(+C, +Context, -Timeline) / PRIMARY API: Collects constraint history FROM A SPECIFIC CONTEXT. Same constraint may have different transformation patterns from different perspectives.",
+    "type_a_grounds": "Builds a sorted timeline of state(T, Type) pairs from measurement timestamps — explicit temporal presheaf construction across all measurement points.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "constraint_history/2",
+    "definition_file": "prolog/drl_composition.pl",
+    "definition_line": 163,
+    "header_comment": "%% constraint_history(+C, -Timeline) / BACKWARD COMPAT: Uses analytical context.",
+    "type_a_grounds": "Backward-compatible variant that delegates to constraint_history/3 — same temporal timeline construction semantics.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "dr_type_at/4",
+    "definition_file": "prolog/drl_composition.pl",
+    "definition_line": 176,
+    "header_comment": "%% dr_type_at(+C, +Time, +Context, -Type) / Determines constraint type at specific time FROM SPECIFIC CONTEXT. DEPRECATED PATH: uses power_modifier/2 (direct multiplication).",
+    "type_a_grounds": "Point-in-time classification — fetches measurements at specific Time T and classifies; the archetypal state-at-T predicate.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "transformation_detected/5",
+    "definition_file": "prolog/drl_composition.pl",
+    "definition_line": 187,
+    "header_comment": "%% transformation_detected(+C, +FromType, +ToType, -T1, -T2) / Detects when constraint transformed from one type to another. Uses actual measurement times.",
+    "type_a_grounds": "Detects type transitions between two timestamps — explicit before/after frame-mutation detection with temporal evidence.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "transformation_type/6",
+    "definition_file": "prolog/drl_composition.pl",
+    "definition_line": 201,
+    "header_comment": "%% transformation_type(+C, +From, +To, +T1, +T2, -Label) / Classifies the type of transformation with semantic label (capture, obsolescence, calcification, discovery).",
+    "type_a_grounds": "Labels the semantic character of a detected frame mutation — builds on transformation_detected/5 to add causal/semantic classification to the temporal event.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "canonical_transformation/6",
+    "definition_file": "prolog/drl_composition.pl",
+    "definition_line": 224,
+    "header_comment": "%% canonical_transformation(?C, ?From, ?To, -T1_earliest, -T2_latest, ?Label) / Returns canonical (deduplicated) transformation.",
+    "type_a_grounds": "Deduplicates multiple detected transitions into a canonical record with earliest T1 and latest T2 — temporal range aggregation of frame-mutation evidence.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "predict_transformation/3",
+    "definition_file": "prolog/drl_composition.pl",
+    "definition_line": 245,
+    "header_comment": "%% predict_transformation(+C, +CurrentType, -LikelyFutureType) / Predicts likely future transformation based on trajectory. Uses least-squares slope on time-sorted measurements.",
+    "type_a_grounds": "Forward projection of temporal trend — extrapolates from historical measurement series to predict future state, a lifecycle progression operation.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "monotonic_increasing/1",
+    "definition_file": "prolog/drl_composition.pl",
+    "definition_line": 297,
+    "header_comment": "Tests whether a sorted T-V pair list shows strictly non-decreasing values.",
+    "type_a_grounds": "Validates monotonic temporal ordering of a measurement series — a trajectory-shape predicate over time-sorted data.",
+    "confidence": "medium"
+  },
+  {
+    "predicate": "monotonic_decreasing/1",
+    "definition_file": "prolog/drl_composition.pl",
+    "definition_line": 305,
+    "header_comment": "Tests whether a sorted T-V pair list shows strictly non-increasing values.",
+    "type_a_grounds": "Validates monotonic decline in a temporal measurement series — trajectory-shape predicate, symmetric to monotonic_increasing/1.",
+    "confidence": "medium"
+  },
+  {
+    "predicate": "non_monotonic_trajectory/2",
+    "definition_file": "prolog/drl_composition.pl",
+    "definition_line": 314,
+    "header_comment": "Tests whether a constraint's metric trajectory is non-monotonic (reversal present).",
+    "type_a_grounds": "Detects non-linear temporal trajectories — identifies constraints where the metric direction reverses, a higher-order temporal pattern.",
+    "confidence": "medium"
+  },
+  {
+    "predicate": "transition_path/4",
+    "definition_file": "prolog/transition_paths.pl",
+    "definition_line": 29,
+    "header_comment": "Defines valid one-step transitions between DR types with structural evidence.",
+    "type_a_grounds": "Encodes directed lifecycle transitions (rope→tangled_rope, tangled_rope→snare, etc.) — the transition graph that frame mutations traverse.",
+    "confidence": "medium"
+  },
+  {
+    "predicate": "degradation_chain/3",
+    "definition_file": "prolog/transition_paths.pl",
+    "definition_line": 98,
+    "header_comment": "%% degradation_chain(+C, -Chain, -Evidence) / Detects multi-step degradation chains by examining measurement history.",
+    "type_a_grounds": "Builds a deduplicated sequence of type states across all measurement timestamps, returning the full temporal type-evolution chain with T1/T2 evidence.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "classify_snapshot/3",
+    "definition_file": "prolog/transition_paths.pl",
+    "definition_line": 120,
+    "header_comment": "%% DEPRECATED PATH: uses power_modifier/2. classify_snapshot(+C, +Time, -Type) / Classifies a constraint at a specific time using measurements available.",
+    "type_a_grounds": "Point-in-time classification at a specified Time — parallel to dr_type_at/4, fetches measurements at Time T and classifies.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "predicted_terminal_state/3",
+    "definition_file": "prolog/transition_paths.pl",
+    "definition_line": 140,
+    "header_comment": "%% predicted_terminal_state(+C, -State, -Confidence) / Predicts the likely terminal lifecycle state.",
+    "type_a_grounds": "Predicts endpoint of lifecycle progression — forward temporal inference from current drift events to projected terminal stage.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "coercion_vector/3",
+    "definition_file": "prolog/coercion_projection.pl",
+    "definition_line": 14,
+    "header_comment": "Retrieves a 4-component measurement vector [A, S, U, R] at a specific Time.",
+    "type_a_grounds": "Fetches multiple measurement dimensions simultaneously at a specific Time T — point-in-time multi-metric state access.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "coercion_magnitude/3",
+    "definition_file": "prolog/coercion_projection.pl",
+    "definition_line": 21,
+    "header_comment": "Computes weighted scalar coercion magnitude at a specific Time.",
+    "type_a_grounds": "Computes aggregate coercive state at a specific Time T — aggregates time-indexed measurements into a scalar magnitude.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "time_point_in_interval/2",
+    "definition_file": "prolog/coercion_projection.pl",
+    "definition_line": 27,
+    "header_comment": "Enumerates valid measurement time points within a named interval.",
+    "type_a_grounds": "Generates valid time points within a temporal interval — the fundamental time-enumeration predicate that enables iteration over temporal states.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "coercion_gradient/4",
+    "definition_file": "prolog/coercion_projection.pl",
+    "definition_line": 41,
+    "header_comment": "Computes forward finite-difference gradient of coercion magnitude between T_now and the next available time point in the interval.",
+    "type_a_grounds": "Forward finite-difference over consecutive time points — temporal derivative at T_now, explicit rate-of-change across adjacent measurements.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "system_gradient/3",
+    "definition_file": "prolog/coercion_projection.pl",
+    "definition_line": 57,
+    "header_comment": "Computes weighted aggregate system-level gradient across all levels at a given Time.",
+    "type_a_grounds": "Aggregates per-level temporal gradients into a system-level rate of change at a specific Time — multi-level temporal derivative.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "dr_gradient_at/3",
+    "definition_file": "prolog/drl_counterfactual.pl",
+    "definition_line": 146,
+    "header_comment": "Computes extractiveness gradient at time T by finding the next measurement and computing X2-X1.",
+    "type_a_grounds": "Point-in-time forward derivative of extractiveness — fetches measurement at T and next-T, computes X2-X1, the canonical temporal gradient operation.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "infer_structural_coupling/3",
+    "definition_file": "prolog/drl_counterfactual.pl",
+    "definition_line": 138,
+    "header_comment": "%% infer_structural_coupling(+C1, +C2, -Strength) / Discovers hidden dependencies via temporal gradient correlation. Strength is sign-agreement ratio across all gradient pairs.",
+    "type_a_grounds": "Correlates temporal gradient series across two constraints — requires iterating over all measurement timestamps to compare directional co-movement.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "analyze_interval/4",
+    "definition_file": "prolog/pattern_analysis.pl",
+    "definition_line": 21,
+    "header_comment": "%% analyze_interval(+IntervalID, -Gradient, -Completeness, -Pattern) / Pure return-value API. Computes interval analysis results without side effects.",
+    "type_a_grounds": "Computes system gradient at T0 and classifies the interval as increasing/decreasing/stable coercion — interval-level temporal state classification.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "analyze_interval/1",
+    "definition_file": "prolog/pattern_analysis.pl",
+    "definition_line": 35,
+    "header_comment": "%% analyze_interval(+IntervalID) / Legacy API. Computes results and asserts them as dynamic facts.",
+    "type_a_grounds": "Legacy wrapper that triggers temporal interval analysis and persists results as dynamic facts — same temporal semantics as analyze_interval/4.",
+    "confidence": "medium"
+  },
+  {
+    "predicate": "classify_interval/3",
+    "definition_file": "prolog/intent_engine.pl",
+    "definition_line": 16,
+    "header_comment": "%% classify_interval(+IntervalID, -Pattern, -Confidence) / Classifies a temporal interval as structural_coercive_intent or a non-intent pattern.",
+    "type_a_grounds": "High-level temporal interval classification — takes a named time interval and determines the overall pattern across its duration.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "network_drift_velocity/4",
+    "definition_file": "prolog/network_dynamics.pl",
+    "definition_line": 126,
+    "header_comment": "%% network_drift_velocity(+C, +Context, -Velocity, -Contributors) / Velocity = sum of contributions (positive = degrading).",
+    "type_a_grounds": "Aggregates temporal drift rates from neighboring constraints — network-level synthesis of per-constraint temporal velocities.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "cascade_prediction/3",
+    "definition_file": "prolog/network_dynamics.pl",
+    "definition_line": 166,
+    "header_comment": "%% cascade_prediction(+C, +Context, -Crossings) / Returns [crossing(ThresholdName, ThresholdValue, TimeYears), ...]. Predicts threshold crossings from current drift velocity.",
+    "type_a_grounds": "Forward time-to-threshold prediction — divides current distance from each threshold by drift velocity to produce time-in-years to crossing.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "fingerprint_drift/2",
+    "definition_file": "prolog/logical_fingerprint.pl",
+    "definition_line": 321,
+    "header_comment": "%% fingerprint_drift(+C, -Drift) / Returns drift(ExtractionTrend, SuppressionTrend, TheaterTrend).",
+    "type_a_grounds": "Encodes the temporal dimension of a logical fingerprint as a triple of metric trends — packages three Type A trend computations into a single fingerprint component.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "metric_trend/3",
+    "definition_file": "prolog/logical_fingerprint.pl",
+    "definition_line": 329,
+    "header_comment": "%% metric_trend(+C, +MetricName, -Trend) / Determines categorical trend from temporal measurements. Returns rising/falling/stable/unknown.",
+    "type_a_grounds": "Duplicate implementation of drift_events:metric_trend/3 — same temporal semantics, returns rising/falling/stable/unknown from measurement series.",
+    "confidence": "high"
+  },
+  {
+    "predicate": "verify_interval_completeness/1",
+    "definition_file": "prolog/data_verification.pl",
+    "definition_line": 58,
+    "header_comment": "%% verify_interval_completeness(+IntervalID) / Checks for the presence of all 4 components across all 4 levels at T0 and Tn.",
+    "type_a_grounds": "Validates temporal data coverage at interval endpoints T0 and Tn — structural check that the measurement database contains the required point-in-time entries.",
+    "confidence": "medium"
+  },
+  {
+    "predicate": "check_paired_measurements/0",
+    "definition_file": "prolog/data_verification.pl",
+    "definition_line": 117,
+    "header_comment": "%% check_paired_measurements / Verifies that extractiveness and suppression_requirement measurements are paired at each time point for each constraint.",
+    "type_a_grounds": "Validates co-temporal pairing of metric measurements — ensures the measurement database has synchronized time points across the two metrics required for classification.",
+    "confidence": "medium"
+  }
+]

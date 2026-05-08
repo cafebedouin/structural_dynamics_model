@@ -1,0 +1,182 @@
+{
+  "header": {
+    "constraint_id": "clinical_authority_topology",
+    "version": "1.0",
+    "generated_date": "2025-01-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "clin_auth"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.04,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Clinical Authority Topology in Healthcare AI",
+    "topic_domain": "healthcare_governance/medical_licensing/ai_regulation",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "beneficiaries": [
+      "licensed_physicians",
+      "medical_licensing_boards",
+      "malpractice_insurers"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Patient Seeking Care",
+      "comment": "PERSPECTIVE 1: PATIENT (MOUNTAIN) \u2014 Patients cannot opt out of the physician-authority requirement. Whether receiving care from a physician using AI tools or seeking direct AI consultation, the legal and insurance framework mandates physician oversight. No alternative care pathways exist within the regulated system. The constraint appears as an immutable feature of how healthcare is structured."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The AI Developer",
+      "comment": "PERSPECTIVE 2: AI DEVELOPER (MOUNTAIN) \u2014 Developers face regulatory approval pathways (FDA Class II/III devices, CE marking) that structurally require physician oversight for clinical deployment. Cannot bring diagnostic or treatment-recommendation AI to market without embedding it in physician-supervised workflows. The constraint is experienced as a fixed regulatory boundary, not a policy choice."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Licensed Physician",
+      "comment": "PERSPECTIVE 3: LICENSED PHYSICIAN (MOUNTAIN) \u2014 Physicians benefit from the constraint (professional monopoly, liability shield when following standard of care, income protection) but also experience it as immutable. Medical licensing is structured around individual practitioner accountability; malpractice law assigns liability to the physician regardless of AI involvement. Even physicians who would prefer to delegate more authority to AI systems cannot do so within the legal framework. The constraint is experienced as a fixed feature of professional practice, not as a policy that could be changed."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Hospital System",
+      "comment": "PERSPECTIVE 4: HOSPITAL SYSTEM (MOUNTAIN) \u2014 Healthcare institutions must structure AI deployment around physician authority to maintain accreditation, insurance contracts, and legal compliance. Cannot create AI-direct-to-patient pathways even if clinical outcomes were equivalent. The constraint is embedded in credentialing requirements, malpractice coverage terms, and regulatory compliance frameworks. Experienced as a structural necessity rather than a policy choice."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a civilizational perspective, the requirement for human clinical authority appears to reflect deep structural features: the irreducibility of moral responsibility (someone must be accountable for life-or-death decisions), the limits of algorithmic transparency (black-box models cannot explain their reasoning in ways that satisfy informed consent), and the social contract of medicine (patients trust persons, not systems). However, the presence of identifiable beneficiaries (physicians, licensing boards, insurers) and the constraint's resistance to change even as AI performance improves suggests this may be a false summit \u2014 a contingent institutional arrangement naturalized as necessity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "moral_responsibility_irreducibility",
+      "question": "Is human clinical authority a genuine requirement of moral responsibility, or can accountability be restructured to accommodate non-human decision-makers?",
+      "resolution_mechanism": "Philosophical analysis of moral agency; legal experiments with algorithmic liability frameworks; cross-cultural comparison of accountability structures in high-stakes domains",
+      "impact": "If irreducible: mountain classification confirmed \u2014 human authority is a structural necessity. If restructurable: false summit \u2014 the constraint naturalizes a contingent institutional choice that protects professional monopoly.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether moral responsibility requires human clinical authority"
+    },
+    {
+      "id": "performance_parity_threshold",
+      "question": "At what level of AI performance (if any) does the physician-oversight requirement become purely extractive rather than protective?",
+      "resolution_mechanism": "Longitudinal outcome studies comparing physician-supervised AI, physician-alone, and (in jurisdictions that permit it) AI-alone diagnostic pathways; analysis of error rates, patient satisfaction, and cost-effectiveness",
+      "impact": "If no threshold exists (human oversight always adds value): mountain confirmed. If threshold exists and is exceeded: constraint becomes snare \u2014 continued physician requirement extracts rents without improving outcomes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Performance threshold at which physician oversight becomes extractive"
+    },
+    {
+      "id": "beneficiary_capture_mechanism",
+      "question": "Do licensing boards and malpractice frameworks resist AI autonomy because of genuine safety concerns or because of professional guild interests?",
+      "resolution_mechanism": "Comparative institutional analysis: correlation between physician representation on regulatory boards and stringency of AI oversight requirements; analysis of regulatory responses to AI performance data; examination of lobbying patterns and regulatory capture indicators",
+      "impact": "If safety-driven: mountain classification supported. If guild-driven: false summit \u2014 the constraint is maintained by beneficiaries who naturalize their interests as patient protection.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory resistance reflects safety or guild interests"
+    },
+    {
+      "id": "informed_consent_algorithmic_limit",
+      "question": "Is the requirement for physician interpretation of AI outputs a genuine necessity of informed consent, or could patients give informed consent to algorithmic recommendations directly?",
+      "resolution_mechanism": "Empirical studies of patient comprehension: comparing understanding of physician-mediated AI explanations vs direct AI explanations; analysis of consent validity in contexts where patients interact with decision-support systems without physician intermediation",
+      "impact": "If physician interpretation is necessary for valid consent: mountain supported. If patients can consent to algorithmic recommendations directly: the physician-intermediation requirement is a false summit protecting professional authority rather than patient autonomy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether informed consent requires physician interpretation of AI"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1,
+      "id_override": "clin_auth_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.12,
+      "id_override": "clin_auth_theater_t5"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15,
+      "id_override": "clin_auth_theater_t10"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12,
+      "id_override": "clin_auth_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.15,
+      "id_override": "clin_auth_extract_t5"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.18,
+      "id_override": "clin_auth_extract_t10"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The clinical authority topology is the legal and professional requirement that licensed physicians retain ultimate decision-making authority over AI-patient interactions, regardless of AI performance levels. This constraint is embedded in medical licensing laws, malpractice liability frameworks, regulatory approval pathways (FDA device classification, CE marking), hospital credentialing requirements, and insurance reimbursement structures. It appears across all major healthcare systems as an immutable feature of medical practice. The constraint is presented as a necessary protection for patient safety and a structural requirement of moral responsibility \u2014 someone must be accountable for life-or-death decisions, and that someone must be a licensed human professional. However, the constraint exhibits a false summit signature: it has identifiable beneficiaries (physicians who maintain professional monopoly and income; licensing boards that maintain gatekeeping authority; malpractice insurers who can assign liability to individuals), it shows rising extractiveness as AI performance improves (the gap between 'physician adds value' and 'physician is legally required' widens), and it resists change even when empirical evidence suggests AI-alone pathways could be safe or superior for specific tasks. The analytical observer risks naturalizing this arrangement \u2014 treating the physician-authority requirement as an inherent feature of healthcare rather than as a contingent institutional structure that serves identifiable interests.",
+    "key_agents": [
+      "Patients: Powerless/trapped \u2014 cannot access AI-direct care pathways within the regulated system; must receive care through physician-supervised channels regardless of preference or AI capability",
+      "AI Developers: Moderate/constrained \u2014 face regulatory approval pathways that structurally require physician oversight; cannot bring diagnostic or treatment AI to market without embedding it in physician-supervised workflows",
+      "Licensed Physicians: Institutional/arbitrage \u2014 primary beneficiaries; maintain professional monopoly, liability protection, and income streams; also experience the constraint as immutable (cannot delegate authority even if desired)",
+      "Medical Licensing Boards: Institutional/arbitrage \u2014 secondary beneficiaries; maintain gatekeeping authority and professional jurisdiction; structure licensing around individual practitioner accountability",
+      "Malpractice Insurers: Institutional/arbitrage \u2014 tertiary beneficiaries; liability assignment to individual physicians simplifies underwriting and claims management",
+      "Hospital Systems: Institutional/constrained \u2014 must structure AI deployment around physician authority to maintain accreditation and legal compliance; cannot experiment with alternative care models",
+      "Analytical Observer: Analytical/analytical \u2014 risks naturalizing the constraint as a necessary feature of moral responsibility or informed consent rather than recognizing it as a contingent institutional arrangement"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low but non-zero and rising. The constraint extracts rents from patients (who pay for physician oversight that may not add clinical value) and from the healthcare system (which must structure workflows around physician authority even when AI could perform tasks autonomously). The extraction is modest because physician oversight does add value in many contexts \u2014 the constraint is not purely extractive. However, extractiveness is rising over the measurement interval as AI performance improves: the gap between 'physician oversight adds value' and 'physician oversight is legally required' widens. At T=0 (early AI deployment), physician oversight was almost always value-additive; at T=10 (mature AI systems), physician oversight is increasingly a legal requirement rather than a clinical necessity for specific tasks. Suppression (0.04): Very low. Alternatives to physician-supervised care are not violently suppressed \u2014 they are simply not legally available within the regulated healthcare system. Patients can access some health information and decision-support tools outside the clinical context (wellness apps, symptom checkers), but these are explicitly not medical care. The suppression is structural (legal barriers) rather than coercive. Theater ratio (0.15): Low but rising. Most physician oversight of AI systems is functional \u2014 physicians review AI recommendations, integrate them with patient history and preferences, and make final decisions. However, theater is increasing as AI systems become more capable: in some contexts (e.g., radiology image analysis, pathology slide review), the physician's role is shifting from 'expert who uses AI as a tool' to 'required signoff on AI output.' The rising theater ratio reflects the constraint's drift from coordination (physician adds value) toward extraction (physician is required by law). Accessibility collapse (0.92): Very high. The constraint is nearly universal within regulated healthcare systems. Patients, developers, hospitals, and even physicians themselves experience it as a fixed boundary. Resistance (0.08): Very low. The constraint is not actively contested by most stakeholders \u2014 it is accepted as a natural feature of medical practice. Emerges naturally (true): The constraint is presented as emerging from the inherent requirements of moral responsibility, informed consent, and patient safety rather than from policy choices or professional interests.",
+    "directionality_logic": "The directionality derivation reveals the false summit structure. Licensed physicians are declared as beneficiaries (they maintain professional monopoly, liability protection, and income) with arbitrage exit options (they can choose whether to use AI tools, can practice in jurisdictions with different regulatory frameworks, can exit to non-clinical roles). This produces low d \u2192 low or negative chi: physicians experience the constraint as coordination or even as a burden (they are legally required to supervise AI even when they trust it). Patients are not declared as victims because the constraint is presented as protective \u2014 but they bear the costs (higher healthcare expenses, restricted access to AI-direct care). The absence of declared victims combined with the presence of declared beneficiaries triggers the false summit detector: a mountain with beneficiaries is a candidate for naturalized extraction. Medical licensing boards and malpractice insurers are also beneficiaries with arbitrage options (they can restructure liability frameworks, can operate in multiple jurisdictions, can exit to other regulatory domains). AI developers are moderate power with constrained exit (they face regulatory barriers but can develop for non-clinical markets or for jurisdictions with different rules). Hospital systems are institutional power with constrained exit (they must comply with licensing and accreditation requirements but have some flexibility in how they structure workflows). The analytical observer uses analytical power with analytical exit and risks seeing the constraint as a mountain \u2014 an immutable requirement of moral responsibility \u2014 when the structural data suggests it is a false summit: a contingent institutional arrangement that benefits identifiable agents and resists change even as the underlying justification (AI cannot perform safely without physician oversight) weakens.",
+    "perspectival_gap": "All perspectives classify this constraint as mountain \u2014 it appears immutable from every structural position. Patients cannot opt out; developers cannot bypass regulatory requirements; physicians cannot delegate authority even if they want to; hospitals cannot restructure care pathways; the analytical observer sees deep structural necessity (moral responsibility, informed consent). This uniform classification is the signature of either a genuine natural law or a successfully naturalized false summit. The false summit detector evaluates: (1) Are there identifiable beneficiaries? Yes \u2014 physicians, licensing boards, insurers. (2) Does the constraint resist change even as the underlying justification weakens? Yes \u2014 regulatory frameworks have not adapted to AI performance improvements; physician-oversight requirements remain constant even for tasks where AI demonstrably matches or exceeds human performance. (3) Is the constraint presented as emerging from natural necessity rather than from policy choices? Yes \u2014 framed as inherent to moral responsibility and patient safety. The combination triggers false summit classification: the constraint is experienced as mountain from all perspectives, but the structural data reveals it as a contingent institutional arrangement that serves identifiable interests. The perspectival gap is not between different types (all see mountain) but between the experienced immutability and the structural contingency.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that mountain classification can be either genuine (natural law) or false (naturalized extraction). The mandatrophy is not 'is this a mountain or something else?' but 'is this mountain real or constructed?' The false summit detector provides the resolution mechanism: a mountain with identifiable beneficiaries, rising extractiveness over time, and resistance to change despite weakening justification is a candidate for reclassification. The constraint's uniform mountain classification across all perspectives is not evidence of natural law \u2014 it is evidence of successful naturalization. The analytical observer's mountain perspective is the most dangerous: by treating physician authority as a structural necessity of moral responsibility, the observer naturalizes a contingent institutional arrangement and prevents recognition of the extraction mechanism. The omega variables document the irreducible uncertainties: Is moral responsibility genuinely irreducible to human agents? Is there a performance threshold at which physician oversight becomes purely extractive? Are regulatory frameworks driven by safety concerns or by guild interests? These questions cannot be resolved from within the mountain frame \u2014 they require recognizing the constraint as contingent and examining the beneficiary structure."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is a candidate for decomposition if future analysis reveals structurally distinct claims: (1) the moral responsibility claim (someone must be accountable), (2) the informed consent claim (patients cannot consent to algorithmic recommendations directly), (3) the liability assignment claim (malpractice law requires individual human defendants). Each may have different epsilon values and different beneficiary structures. Current formulation treats them as a unified constraint because they are legally and institutionally bundled."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "v_low",
+    "hypothesis": "mountain",
+    "downstream_of": []
+  }
+}

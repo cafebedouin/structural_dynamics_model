@@ -1,0 +1,443 @@
+[
+  {
+    "predicate": "metric_at/4",
+    "definition_file": "prolog/drift_events.pl",
+    "audit_classification_of_containing_module": "Type A — clean (Subsystem 9: Drift Analysis)",
+    "call_sites": [
+      {"file": "prolog/transition_paths.pl", "line": 121, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"},
+      {"file": "prolog/transition_paths.pl", "line": 127, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"}
+    ],
+    "notes": "Called within drift_events.pl internally by detectors; externally called by transition_paths.pl:classify_snapshot/3 to fetch measurements at a specific time."
+  },
+  {
+    "predicate": "metric_delta/5",
+    "definition_file": "prolog/drift_events.pl",
+    "audit_classification_of_containing_module": "Type A — clean (Subsystem 9: Drift Analysis)",
+    "call_sites": [
+      {"file": "prolog/drift_events.pl", "line": 89, "caller_module_audit_classification": "Type A — clean (self — used by metric_trend/3)"},
+      {"file": "prolog/drift_events.pl", "line": 410, "caller_module_audit_classification": "Type A — clean (self — used by drift_velocity/3)"}
+    ],
+    "notes": "Used internally within drift_events.pl. No external callers found — serves as foundation for metric_trend and drift_velocity."
+  },
+  {
+    "predicate": "metric_trend/3",
+    "definition_file": "prolog/drift_events.pl",
+    "audit_classification_of_containing_module": "Type A — clean (Subsystem 9: Drift Analysis)",
+    "call_sites": [
+      {"file": "prolog/drift_events.pl", "line": 239, "caller_module_audit_classification": "Type A — clean (self — drift_event/4 extraction_accumulation_indexed)"},
+      {"file": "prolog/drift_events.pl", "line": 255, "caller_module_audit_classification": "Type A — clean (self — drift_event/4 load_bearing_degradation)"},
+      {"file": "prolog/drift_events.pl", "line": 266, "caller_module_audit_classification": "Type A — clean (self — drift_event/3 coupling_drift)"},
+      {"file": "prolog/drift_events.pl", "line": 276, "caller_module_audit_classification": "Type A — clean (self — drift_event/3 boltzmann_floor_drift)"},
+      {"file": "prolog/drift_events.pl", "line": 288, "caller_module_audit_classification": "Type A — clean (self — drift_event/4 coupling_drift_indexed)"},
+      {"file": "prolog/drift_events.pl", "line": 296, "caller_module_audit_classification": "Type A — clean (self — drift_event/4 reform_pressure_detected)"},
+      {"file": "prolog/drift_events.pl", "line": 308, "caller_module_audit_classification": "Type A — clean (self — drift_event/4 reform_pressure_detected variant)"},
+      {"file": "prolog/drift_events.pl", "line": 371, "caller_module_audit_classification": "Type A — clean (self — drift_event/3 purity_drift)"},
+      {"file": "prolog/drift_events.pl", "line": 380, "caller_module_audit_classification": "Type A — clean (self — drift_event/3 purity_drift variant)"},
+      {"file": "prolog/transition_paths.pl", "line": 36, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"},
+      {"file": "prolog/transition_paths.pl", "line": 46, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"},
+      {"file": "prolog/logical_fingerprint.pl", "line": 322, "caller_module_audit_classification": "Cross-cutting A + B + C (Subsystem: Logical Fingerprint)"},
+      {"file": "prolog/logical_fingerprint.pl", "line": 323, "caller_module_audit_classification": "Cross-cutting A + B + C"},
+      {"file": "prolog/logical_fingerprint.pl", "line": 325, "caller_module_audit_classification": "Cross-cutting A + B + C"}
+    ],
+    "notes": "Heavily called within drift_events.pl; also called directly by transition_paths.pl and indirectly by logical_fingerprint.pl (which has its own duplicate metric_trend/3 at line 329)."
+  },
+  {
+    "predicate": "drift_velocity/3",
+    "definition_file": "prolog/drift_events.pl",
+    "audit_classification_of_containing_module": "Type A — clean (Subsystem 9: Drift Analysis)",
+    "call_sites": [
+      {"file": "prolog/drift_events.pl", "line": 402, "caller_module_audit_classification": "Type A — clean (self — drift_event/4 network_drift_indexed)"},
+      {"file": "prolog/network_dynamics.pl", "line": 137, "caller_module_audit_classification": "Outside trifurcation (Subsystem: Network Purity Propagation)"},
+      {"file": "prolog/drift_report.pl", "line": 158, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"}
+    ],
+    "notes": "Called by network_dynamics.pl (classified Outside) to aggregate per-constraint rates into network-level velocity."
+  },
+  {
+    "predicate": "drift_acceleration/3",
+    "definition_file": "prolog/drift_events.pl",
+    "audit_classification_of_containing_module": "Type A — clean (Subsystem 9: Drift Analysis)",
+    "call_sites": [],
+    "notes": "No external call sites found in main prolog modules (excluding testsets/archives). Appears to be defined but not actively called outside its own module."
+  },
+  {
+    "predicate": "drift_event/3",
+    "definition_file": "prolog/drift_events.pl",
+    "audit_classification_of_containing_module": "Type A — clean (Subsystem 9: Drift Analysis)",
+    "call_sites": [
+      {"file": "prolog/drift_report.pl", "line": 32, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"},
+      {"file": "prolog/drift_report.pl", "line": 43, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"},
+      {"file": "prolog/transition_paths.pl", "line": 45, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"},
+      {"file": "prolog/transition_paths.pl", "line": 55, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"},
+      {"file": "prolog/transition_paths.pl", "line": 61, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"},
+      {"file": "prolog/transition_paths.pl", "line": 70, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"},
+      {"file": "prolog/transition_paths.pl", "line": 88, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"},
+      {"file": "prolog/transition_paths.pl", "line": 141, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"},
+      {"file": "prolog/transition_paths.pl", "line": 142, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"},
+      {"file": "prolog/transition_paths.pl", "line": 145, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"},
+      {"file": "prolog/transition_paths.pl", "line": 148, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"},
+      {"file": "prolog/transition_paths.pl", "line": 154, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"},
+      {"file": "prolog/transition_paths.pl", "line": 155, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"},
+      {"file": "prolog/transition_paths.pl", "line": 161, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"},
+      {"file": "prolog/json_report.pl", "line": 1292, "caller_module_audit_classification": "not classified in audit (reporting/output module)"},
+      {"file": "prolog/abductive_triggers.pl", "line": 529, "caller_module_audit_classification": "not classified in audit (abductive engine component)"},
+      {"file": "prolog/abductive_triggers.pl", "line": 1014, "caller_module_audit_classification": "not classified in audit (abductive engine component)"}
+    ],
+    "notes": "Called via drl_lifecycle facade in abductive_triggers.pl and json_report.pl; called directly in transition_paths and drift_report."
+  },
+  {
+    "predicate": "drift_event/4",
+    "definition_file": "prolog/drift_events.pl",
+    "audit_classification_of_containing_module": "Type A — clean (Subsystem 9: Drift Analysis)",
+    "call_sites": [
+      {"file": "prolog/drift_report.pl", "line": 44, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"}
+    ],
+    "notes": "The context-indexed variant is called in drift_report.pl alongside drift_event/3 in an either-or construction."
+  },
+  {
+    "predicate": "detect_metric_substitution/1",
+    "definition_file": "prolog/drift_events.pl",
+    "audit_classification_of_containing_module": "Type A — clean (Subsystem 9: Drift Analysis)",
+    "call_sites": [],
+    "notes": "No external call sites found. Internal detector used by drift_event/3 body but not called directly from outside drift_events.pl."
+  },
+  {
+    "predicate": "detect_extraction_accumulation/1",
+    "definition_file": "prolog/drift_events.pl",
+    "audit_classification_of_containing_module": "Type A — clean (Subsystem 9: Drift Analysis)",
+    "call_sites": [],
+    "notes": "No external call sites found. Same pattern as other detect_*/1 predicates — internal guards for drift_event/3."
+  },
+  {
+    "predicate": "detect_coordination_loss/1",
+    "definition_file": "prolog/drift_events.pl",
+    "audit_classification_of_containing_module": "Type A — clean (Subsystem 9: Drift Analysis)",
+    "call_sites": [],
+    "notes": "No external call sites found."
+  },
+  {
+    "predicate": "detect_function_obsolescence/1",
+    "definition_file": "prolog/drift_events.pl",
+    "audit_classification_of_containing_module": "Type A — clean (Subsystem 9: Drift Analysis)",
+    "call_sites": [],
+    "notes": "No external call sites found."
+  },
+  {
+    "predicate": "detect_sunset_violation/1",
+    "definition_file": "prolog/drift_events.pl",
+    "audit_classification_of_containing_module": "Type A — clean (Subsystem 9: Drift Analysis)",
+    "call_sites": [],
+    "notes": "No external call sites found."
+  },
+  {
+    "predicate": "detect_extraction_dried_up/1",
+    "definition_file": "prolog/drift_events.pl",
+    "audit_classification_of_containing_module": "Type A — clean (Subsystem 9: Drift Analysis)",
+    "call_sites": [],
+    "notes": "No external call sites found."
+  },
+  {
+    "predicate": "detect_is_piton/1",
+    "definition_file": "prolog/drift_events.pl",
+    "audit_classification_of_containing_module": "Type A — clean (Subsystem 9: Drift Analysis)",
+    "call_sites": [],
+    "notes": "No external call sites found."
+  },
+  {
+    "predicate": "detect_coupling_drift/1",
+    "definition_file": "prolog/drift_events.pl",
+    "audit_classification_of_containing_module": "Type A — clean (Subsystem 9: Drift Analysis)",
+    "call_sites": [],
+    "notes": "No external call sites found."
+  },
+  {
+    "predicate": "detect_purity_drift/1",
+    "definition_file": "prolog/drift_events.pl",
+    "audit_classification_of_containing_module": "Type A — clean (Subsystem 9: Drift Analysis)",
+    "call_sites": [],
+    "notes": "No external call sites found."
+  },
+  {
+    "predicate": "constraint_history/3",
+    "definition_file": "prolog/drl_composition.pl",
+    "audit_classification_of_containing_module": "Not classified at predicate granularity; module mentioned only via drl_modal_logic facade; composition module partially Type B via classify_from_metrics",
+    "call_sites": [
+      {"file": "prolog/drl_composition.pl", "line": 157, "caller_module_audit_classification": "same file — used by dr_type_at/4"},
+      {"file": "prolog/drl_composition.pl", "line": 188, "caller_module_audit_classification": "same file — used by transformation_detected/5"}
+    ],
+    "notes": "Only called internally within drl_composition.pl. No external callers in main prolog modules — the public API is via the drl_modal_logic facade."
+  },
+  {
+    "predicate": "constraint_history/2",
+    "definition_file": "prolog/drl_composition.pl",
+    "audit_classification_of_containing_module": "Not classified at predicate granularity; partially Type B via classify_from_metrics",
+    "call_sites": [
+      {"file": "prolog/drl_composition.pl", "line": 164, "caller_module_audit_classification": "same file — delegates to constraint_history/3"}
+    ],
+    "notes": "Backward-compat wrapper; only called internally."
+  },
+  {
+    "predicate": "dr_type_at/4",
+    "definition_file": "prolog/drl_composition.pl",
+    "audit_classification_of_containing_module": "Not classified at predicate granularity; partially Type B via classify_from_metrics",
+    "call_sites": [
+      {"file": "prolog/drl_composition.pl", "line": 157, "caller_module_audit_classification": "same file — called by constraint_history/3 inside findall"}
+    ],
+    "notes": "Called inside constraint_history/3's findall to classify each measurement timestamp. No external direct callers found. Marked DEPRECATED."
+  },
+  {
+    "predicate": "transformation_detected/5",
+    "definition_file": "prolog/drl_composition.pl",
+    "audit_classification_of_containing_module": "Not classified at predicate granularity; partially Type B via classify_from_metrics",
+    "call_sites": [
+      {"file": "prolog/drl_composition.pl", "line": 202, "caller_module_audit_classification": "same file — used by transformation_type/6"},
+      {"file": "prolog/drl_composition.pl", "line": 206, "caller_module_audit_classification": "same file — used by transformation_type/6"},
+      {"file": "prolog/drl_composition.pl", "line": 210, "caller_module_audit_classification": "same file — used by transformation_type/6"},
+      {"file": "prolog/drl_composition.pl", "line": 215, "caller_module_audit_classification": "same file — used by transformation_type/6"},
+      {"file": "prolog/drl_composition.pl", "line": 219, "caller_module_audit_classification": "same file — used by transformation_type/6"}
+    ],
+    "notes": "Called only within transformation_type/6 rules in the same file. No external callers."
+  },
+  {
+    "predicate": "transformation_type/6",
+    "definition_file": "prolog/drl_composition.pl",
+    "audit_classification_of_containing_module": "Not classified at predicate granularity; partially Type B via classify_from_metrics",
+    "call_sites": [
+      {"file": "prolog/drl_composition.pl", "line": 225, "caller_module_audit_classification": "same file — used by canonical_transformation/6"}
+    ],
+    "notes": "Called only by canonical_transformation/6 in the same file. No external callers."
+  },
+  {
+    "predicate": "canonical_transformation/6",
+    "definition_file": "prolog/drl_composition.pl",
+    "audit_classification_of_containing_module": "Not classified at predicate granularity; partially Type B via classify_from_metrics",
+    "call_sites": [],
+    "notes": "No external call sites found. The transformation detection chain (constraint_history → dr_type_at → transformation_detected → transformation_type → canonical_transformation) is entirely internal to drl_composition.pl."
+  },
+  {
+    "predicate": "predict_transformation/3",
+    "definition_file": "prolog/drl_composition.pl",
+    "audit_classification_of_containing_module": "Not classified at predicate granularity; partially Type B via classify_from_metrics",
+    "call_sites": [],
+    "notes": "No external call sites found."
+  },
+  {
+    "predicate": "monotonic_increasing/1",
+    "definition_file": "prolog/drl_composition.pl",
+    "audit_classification_of_containing_module": "Not classified at predicate granularity; partially Type B via classify_from_metrics",
+    "call_sites": [],
+    "notes": "No external call sites found."
+  },
+  {
+    "predicate": "monotonic_decreasing/1",
+    "definition_file": "prolog/drl_composition.pl",
+    "audit_classification_of_containing_module": "Not classified at predicate granularity; partially Type B via classify_from_metrics",
+    "call_sites": [],
+    "notes": "No external call sites found."
+  },
+  {
+    "predicate": "non_monotonic_trajectory/2",
+    "definition_file": "prolog/drl_composition.pl",
+    "audit_classification_of_containing_module": "Not classified at predicate granularity; partially Type B via classify_from_metrics",
+    "call_sites": [
+      {"file": "prolog/drift_report.pl", "line": 163, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"}
+    ],
+    "notes": "Called in drift_report.pl as part of trajectory analysis. The one external call site is in the Type A clean Drift Analysis subsystem."
+  },
+  {
+    "predicate": "transition_path/4",
+    "definition_file": "prolog/transition_paths.pl",
+    "audit_classification_of_containing_module": "Type A — clean (grouped under Drift Analysis as Subsystem 9)",
+    "call_sites": [
+      {"file": "prolog/transition_paths.pl", "line": 98, "caller_module_audit_classification": "same file — used by degradation_chain/3 indirectly via classify_snapshot"}
+    ],
+    "notes": "The transition_path rules are not directly called from outside; degradation_chain/3 builds chains through classify_snapshot/3."
+  },
+  {
+    "predicate": "degradation_chain/3",
+    "definition_file": "prolog/transition_paths.pl",
+    "audit_classification_of_containing_module": "Type A — clean (grouped under Drift Analysis as Subsystem 9)",
+    "call_sites": [],
+    "notes": "No external call sites found in main prolog modules."
+  },
+  {
+    "predicate": "classify_snapshot/3",
+    "definition_file": "prolog/transition_paths.pl",
+    "audit_classification_of_containing_module": "Type A — clean (grouped under Drift Analysis as Subsystem 9)",
+    "call_sites": [
+      {"file": "prolog/transition_paths.pl", "line": 101, "caller_module_audit_classification": "same file — called by degradation_chain/3"}
+    ],
+    "notes": "Called internally by degradation_chain/3. Marked DEPRECATED (uses power_modifier/2 not sigmoid pipeline)."
+  },
+  {
+    "predicate": "predicted_terminal_state/3",
+    "definition_file": "prolog/transition_paths.pl",
+    "audit_classification_of_containing_module": "Type A — clean (grouped under Drift Analysis as Subsystem 9)",
+    "call_sites": [
+      {"file": "prolog/drift_report.pl", "line": 110, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"},
+      {"file": "prolog/drift_report.pl", "line": 152, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"}
+    ],
+    "notes": "Called by drift_report.pl for reporting terminal state predictions."
+  },
+  {
+    "predicate": "coercion_vector/3",
+    "definition_file": "prolog/coercion_projection.pl",
+    "audit_classification_of_containing_module": "Not mentioned in audit at all",
+    "call_sites": [
+      {"file": "prolog/coercion_projection.pl", "line": 22, "caller_module_audit_classification": "same file — used by coercion_magnitude/3"},
+      {"file": "prolog/pattern_analysis.pl", "line": 46, "caller_module_audit_classification": "not mentioned in audit at all"}
+    ],
+    "notes": "Called internally by coercion_magnitude/3 and externally by pattern_analysis.pl's compute_completeness to check data availability at T0 and Tn."
+  },
+  {
+    "predicate": "coercion_magnitude/3",
+    "definition_file": "prolog/coercion_projection.pl",
+    "audit_classification_of_containing_module": "Not mentioned in audit at all",
+    "call_sites": [
+      {"file": "prolog/coercion_projection.pl", "line": 49, "caller_module_audit_classification": "same file — used by coercion_gradient/4"},
+      {"file": "prolog/coercion_projection.pl", "line": 50, "caller_module_audit_classification": "same file — used by coercion_gradient/4"},
+      {"file": "prolog/report_generator.pl", "line": 91, "caller_module_audit_classification": "Partial C, partial B (Mandatrophy Gap)"}
+    ],
+    "notes": "Called by report_generator.pl to compute coercion magnitude at interval endpoint Tn — the report_generator is the Mandatrophy Gap subsystem classified as partial C/partial B."
+  },
+  {
+    "predicate": "time_point_in_interval/2",
+    "definition_file": "prolog/coercion_projection.pl",
+    "audit_classification_of_containing_module": "Not mentioned in audit at all",
+    "call_sites": [
+      {"file": "prolog/coercion_projection.pl", "line": 46, "caller_module_audit_classification": "same file — used by coercion_gradient/4"}
+    ],
+    "notes": "Called internally by coercion_gradient/4 to enumerate future time points."
+  },
+  {
+    "predicate": "coercion_gradient/4",
+    "definition_file": "prolog/coercion_projection.pl",
+    "audit_classification_of_containing_module": "Not mentioned in audit at all",
+    "call_sites": [
+      {"file": "prolog/coercion_projection.pl", "line": 63, "caller_module_audit_classification": "same file — used by system_gradient/3"},
+      {"file": "prolog/pattern_analysis.pl", "line": 23, "caller_module_audit_classification": "not mentioned in audit at all"}
+    ],
+    "notes": "Called by system_gradient/3 internally and by pattern_analysis:analyze_interval/4 externally."
+  },
+  {
+    "predicate": "system_gradient/3",
+    "definition_file": "prolog/coercion_projection.pl",
+    "audit_classification_of_containing_module": "Not mentioned in audit at all",
+    "call_sites": [
+      {"file": "prolog/pattern_analysis.pl", "line": 23, "caller_module_audit_classification": "not mentioned in audit at all"}
+    ],
+    "notes": "Called by pattern_analysis:analyze_interval/4 as the primary temporal gradient computation."
+  },
+  {
+    "predicate": "dr_gradient_at/3",
+    "definition_file": "prolog/drl_counterfactual.pl",
+    "audit_classification_of_containing_module": "Not explicitly classified; part of drl_modal_logic facade; overall drl_counterfactual not a primary subsystem",
+    "call_sites": [
+      {"file": "prolog/drl_counterfactual.pl", "line": 140, "caller_module_audit_classification": "same file — used by infer_structural_coupling/3"},
+      {"file": "prolog/giant_component_analysis.pl", "line": 160, "caller_module_audit_classification": "not classified in audit"},
+      {"file": "prolog/inferred_coupling_protocol.pl", "line": 24, "caller_module_audit_classification": "not classified in audit (protocol/documentation module)"},
+      {"file": "prolog/inferred_coupling_protocol.pl", "line": 101, "caller_module_audit_classification": "not classified in audit"}
+    ],
+    "notes": "Called by giant_component_analysis.pl to filter constraints with temporal gradient data; referenced in inferred_coupling_protocol.pl as documentation of the coupling mechanism."
+  },
+  {
+    "predicate": "infer_structural_coupling/3",
+    "definition_file": "prolog/drl_counterfactual.pl",
+    "audit_classification_of_containing_module": "Not explicitly classified; part of drl_modal_logic facade",
+    "call_sites": [
+      {"file": "prolog/drl_purity_network.pl", "line": 82, "caller_module_audit_classification": "Outside trifurcation (Subsystem: Network Purity Propagation)"},
+      {"file": "prolog/giant_component_analysis.pl", "line": 171, "caller_module_audit_classification": "not classified in audit"},
+      {"file": "prolog/inferred_coupling_protocol.pl", "line": 131, "caller_module_audit_classification": "not classified in audit"}
+    ],
+    "notes": "Called by drl_purity_network.pl (classified Outside trifurcation) to discover inferred edges in the constraint network; also called by giant_component_analysis.pl."
+  },
+  {
+    "predicate": "analyze_interval/4",
+    "definition_file": "prolog/pattern_analysis.pl",
+    "audit_classification_of_containing_module": "Not mentioned in audit at all",
+    "call_sites": [
+      {"file": "prolog/pattern_analysis.pl", "line": 36, "caller_module_audit_classification": "same file — called by analyze_interval/1 wrapper"},
+      {"file": "prolog/report_generator.pl", "line": 421, "caller_module_audit_classification": "Partial C, partial B (Mandatrophy Gap)"}
+    ],
+    "notes": "Called by report_generator.pl's overriding classify_interval/3 implementation to get interval gradient and pattern."
+  },
+  {
+    "predicate": "analyze_interval/1",
+    "definition_file": "prolog/pattern_analysis.pl",
+    "audit_classification_of_containing_module": "Not mentioned in audit at all",
+    "call_sites": [
+      {"file": "prolog/intent_engine.pl", "line": 18, "caller_module_audit_classification": "not mentioned in audit at all"}
+    ],
+    "notes": "Called by intent_engine.pl's classify_interval/3 to populate dynamic facts before querying them."
+  },
+  {
+    "predicate": "classify_interval/3",
+    "definition_file": "prolog/intent_engine.pl",
+    "audit_classification_of_containing_module": "Not mentioned in audit at all",
+    "call_sites": [
+      {"file": "prolog/report_generator.pl", "line": 43, "caller_module_audit_classification": "Partial C, partial B (Mandatrophy Gap)"}
+    ],
+    "notes": "report_generator.pl imports intent_engine but suppresses its classify_interval/3 (line 21: except([classify_interval/3])) and defines its own override; the call at line 43 calls report_generator's local version which delegates to pattern_analysis:analyze_interval/4."
+  },
+  {
+    "predicate": "network_drift_velocity/4",
+    "definition_file": "prolog/network_dynamics.pl",
+    "audit_classification_of_containing_module": "Outside trifurcation (Subsystem: Network Purity Propagation)",
+    "call_sites": [
+      {"file": "prolog/drift_events.pl", "line": 402, "caller_module_audit_classification": "Type A — clean (Subsystem 9: Drift Analysis)"},
+      {"file": "prolog/network_dynamics.pl", "line": 170, "caller_module_audit_classification": "same file — used by cascade_prediction/3"},
+      {"file": "prolog/drift_report.pl", "line": 173, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"}
+    ],
+    "notes": "Called by drift_events.pl to incorporate network velocity into network_drift_indexed event; called by drift_report.pl for reporting."
+  },
+  {
+    "predicate": "cascade_prediction/3",
+    "definition_file": "prolog/network_dynamics.pl",
+    "audit_classification_of_containing_module": "Outside trifurcation (Subsystem: Network Purity Propagation)",
+    "call_sites": [
+      {"file": "prolog/drift_report.pl", "line": 127, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"},
+      {"file": "prolog/drift_report.pl", "line": 177, "caller_module_audit_classification": "Type A — clean (grouped under Drift Analysis)"}
+    ],
+    "notes": "Called by drift_report.pl for threshold-crossing time predictions in reports."
+  },
+  {
+    "predicate": "fingerprint_drift/2",
+    "definition_file": "prolog/logical_fingerprint.pl",
+    "audit_classification_of_containing_module": "Cross-cutting A + B + C (Logical Fingerprint subsystem)",
+    "call_sites": [
+      {"file": "prolog/logical_fingerprint.pl", "line": 96, "caller_module_audit_classification": "same file — used by build_fingerprint/2 main API"},
+      {"file": "prolog/logical_fingerprint.pl", "line": 548, "caller_module_audit_classification": "same file — used by fingerprint comparison"},
+      {"file": "prolog/logical_fingerprint.pl", "line": 549, "caller_module_audit_classification": "same file — used by fingerprint comparison"},
+      {"file": "prolog/logical_fingerprint.pl", "line": 584, "caller_module_audit_classification": "same file — used by fingerprint serialization"}
+    ],
+    "notes": "Called internally within logical_fingerprint.pl to populate the drift dimension of constraint fingerprints."
+  },
+  {
+    "predicate": "metric_trend/3",
+    "definition_file": "prolog/logical_fingerprint.pl",
+    "audit_classification_of_containing_module": "Cross-cutting A + B + C (Logical Fingerprint subsystem)",
+    "call_sites": [
+      {"file": "prolog/logical_fingerprint.pl", "line": 322, "caller_module_audit_classification": "same file — called by fingerprint_drift/2"},
+      {"file": "prolog/logical_fingerprint.pl", "line": 323, "caller_module_audit_classification": "same file — called by fingerprint_drift/2"},
+      {"file": "prolog/logical_fingerprint.pl", "line": 325, "caller_module_audit_classification": "same file — called by fingerprint_drift/2"}
+    ],
+    "notes": "Duplicate implementation of drift_events:metric_trend/3. The logical_fingerprint module defines its own version (slightly different: returns rising/falling vs increasing/decreasing, and handles Pairs=[_] as unknown). Called only internally within logical_fingerprint.pl."
+  },
+  {
+    "predicate": "verify_interval_completeness/1",
+    "definition_file": "prolog/data_verification.pl",
+    "audit_classification_of_containing_module": "Not classified in audit (data validation utility)",
+    "call_sites": [
+      {"file": "prolog/data_verification.pl", "line": 53, "caller_module_audit_classification": "same file — called by verify_structure/0"}
+    ],
+    "notes": "Called by verify_structure/0 which iterates over all intervals. Purely a validation utility; no external callers in main modules."
+  },
+  {
+    "predicate": "check_paired_measurements/0",
+    "definition_file": "prolog/data_verification.pl",
+    "audit_classification_of_containing_module": "Not classified in audit (data validation utility)",
+    "call_sites": [
+      {"file": "prolog/test_harness.pl", "line": 47, "caller_module_audit_classification": "not classified in audit (test infrastructure)"}
+    ],
+    "notes": "Called by test_harness.pl as part of validation suite execution."
+  }
+]

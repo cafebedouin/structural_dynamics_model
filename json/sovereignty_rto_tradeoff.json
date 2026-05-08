@@ -1,0 +1,204 @@
+{
+  "header": {
+    "constraint_id": "sovereignty_rto_tradeoff",
+    "version": "1.0",
+    "generated_date": "2025-01-02",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "sov_rto"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.52,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Sovereignty-RTO Tradeoff in Critical Infrastructure",
+    "topic_domain": "infrastructure_security/disaster_recovery/digital_sovereignty",
+    "requires_active_enforcement": true,
+    "accessibility_collapse": 0.42,
+    "resistance": 0.58,
+    "beneficiaries": [
+      "sovereignty_mandate_organizations",
+      "domestic_infrastructure_vendors",
+      "compliance_audit_teams"
+    ],
+    "victims": [
+      "service_availability_requirements",
+      "operational_staff",
+      "end_users_during_outages"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "End Users During Outages",
+      "comment": "PERSPECTIVE 1: END USERS DURING OUTAGES (SNARE) \u2014 Trapped by service dependency with no alternative during recovery windows. Bear full cost of extended downtime (minutes to hours vs sub-second cloud failover). Cannot exit to alternative providers during sovereignty-mandated infrastructure lock-in. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Operational Staff",
+      "comment": "PERSPECTIVE 2: OPERATIONAL STAFF (TANGLED ROPE) \u2014 Constrained by manual intervention requirements and career risk of failure during recovery. Benefit from job security and specialized expertise value, but bear cognitive load of maintaining complex manual protocols. Genuine coordination function (disaster recovery capability) exists alongside extraction (unnecessary complexity from rejecting automated cloud tooling)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Sovereignty Mandate Organizations",
+      "comment": "PERSPECTIVE 3: SOVEREIGNTY MANDATE ORGANIZATIONS (ROPE) \u2014 Primary beneficiaries. Experience constraint as coordination: protecting critical infrastructure from foreign dependency. Can arbitrage between compliance frameworks and international partnerships. Net beneficiary \u2014 extraction runs toward this agent through regulatory capture of infrastructure procurement."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "Regional Sovereignty Coalition",
+      "comment": "PERSPECTIVE 4: REGIONAL SOVEREIGNTY COALITION (TANGLED ROPE) \u2014 Organized actors (EU digital sovereignty initiatives, multi-nation infrastructure partnerships) see genuine coordination function (reducing geopolitical dependency) but also recognize extraction mechanism (vendor lock-in to domestic providers, reduced innovation). Mobile across regulatory frameworks but constrained by political commitments."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Open Source Infrastructure Movement",
+      "comment": "PERSPECTIVE 5: OPEN SOURCE INFRASTRUCTURE MOVEMENT (SCAFFOLD) \u2014 Sees the tradeoff as temporary coordination problem with sunset logic. Open-source cloud-native tools (Kubernetes, OpenStack, Ceph) enable sovereignty without sacrificing automation. As these mature, the false dichotomy between control and RTO dissolves. Estimated sunset: 5-10 years for open-source disaster recovery automation to match proprietary cloud capabilities."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Recognizes both genuine coordination function (geopolitical risk mitigation, data sovereignty) and extraction mechanism (regulatory capture by domestic vendors, artificial complexity maintaining manual intervention requirements). The tradeoff is not inherent \u2014 it reflects current tooling maturity and institutional path dependencies, not fundamental technical limits."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "rto_floor_ambiguity",
+      "question": "What is the minimum achievable RTO for fully sovereign infrastructure with current open-source tooling?",
+      "resolution_mechanism": "Empirical testing of open-source disaster recovery stacks (Kubernetes HA, Ceph replication, OpenStack multi-region) under realistic failure scenarios; comparison with proprietary cloud RTO benchmarks",
+      "impact": "If open-source RTO approaches cloud RTO (sub-10-second): tradeoff is artificial, extraction mechanism confirmed. If gap remains order-of-magnitude (minutes vs seconds): some coordination cost is genuine technical debt.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Minimum RTO achievable with sovereign open-source infrastructure"
+    },
+    {
+      "id": "sovereignty_threat_model_validity",
+      "question": "Does foreign cloud dependency constitute a genuine national security risk proportional to the RTO cost imposed?",
+      "resolution_mechanism": "Historical analysis of cloud provider compliance with foreign government data requests; game-theoretic modeling of geopolitical leverage scenarios; comparison with other dependency vectors (hardware supply chains, undersea cables)",
+      "impact": "If threat model is valid: coordination function is genuine, higher RTO is justified cost. If threat model is exaggerated: sovereignty mandate is regulatory capture, RTO cost is pure extraction.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Validity of sovereignty threat model justifying RTO tradeoff"
+    },
+    {
+      "id": "manual_intervention_necessity",
+      "question": "Are manual intervention steps in recovery protocols technically necessary for sovereignty, or artifacts of institutional resistance to automation?",
+      "resolution_mechanism": "Protocol decomposition: identify which manual steps verify sovereignty constraints vs which are legacy procedures. Test automated alternatives that preserve sovereignty properties.",
+      "impact": "If manual steps are necessary: suppression is structural. If manual steps are vestigial: suppression is institutional theater, piton signature emerges.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Technical necessity of manual intervention for sovereignty"
+    },
+    {
+      "id": "vendor_capture_extent",
+      "question": "To what extent do sovereignty mandates function as regulatory capture for domestic infrastructure vendors vs genuine security policy?",
+      "resolution_mechanism": "Analysis of procurement patterns: correlation between sovereignty requirements and domestic vendor market share; comparison of technical specifications with vendor capabilities; lobbying expenditure tracking",
+      "impact": "If high capture: beneficiary extraction is primary function, coordination is cover story. If low capture: coordination is genuine, extraction is side effect.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent of domestic vendor regulatory capture"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "sov_rto_theater_initial"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.32,
+      "id_override": "sov_rto_theater_mid"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.38,
+      "id_override": "sov_rto_theater_final"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "sov_rto_extract_initial"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.42,
+      "id_override": "sov_rto_extract_mid"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48,
+      "id_override": "sov_rto_extract_final"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The sovereignty-RTO tradeoff emerges when organizations subject to data sovereignty mandates must choose between absolute infrastructure control (zero cloud dependency) and aggressive recovery time objectives. Cloud providers offer sub-second automated failover through globally distributed infrastructure and mature orchestration tooling. Sovereign infrastructure \u2014 on-premises or domestic-only hosting \u2014 typically requires manual intervention during disaster recovery, extending RTO from seconds to minutes or hours. This constraint exhibits tangled rope structure: genuine coordination function (geopolitical risk mitigation, regulatory compliance, data sovereignty) coexists with extraction mechanism (regulatory capture by domestic vendors, artificial complexity maintaining manual processes, service degradation for end users). The tradeoff is not inherent to sovereignty \u2014 open-source cloud-native tooling is closing the RTO gap \u2014 but current institutional arrangements and vendor incentives maintain the delta. Theater ratio (0.38) reflects that some sovereignty compliance is performative (checkbox audits, vendor certifications) while core technical constraints (data residency, access control) are structural. Extractiveness has increased over the interval (0.35 \u2192 0.48) as sovereignty mandates have expanded faster than open-source disaster recovery automation has matured, widening the RTO gap.",
+    "key_agents": [
+      "Sovereignty Mandate Organizations: Primary beneficiary (institutional/arbitrage) \u2014 regulatory agencies, national security bodies that define and enforce sovereignty requirements; capture procurement decisions",
+      "Domestic Infrastructure Vendors: Secondary beneficiary (institutional/mobile) \u2014 benefit from regulatory moat against foreign cloud providers; reduced competitive pressure on RTO performance",
+      "Service Availability Requirements: Primary victim (powerless/trapped) \u2014 abstract collective good representing user expectation of high availability; cannot exit or organize; bears full cost of extended outages",
+      "Operational Staff: Secondary victim (moderate/constrained) \u2014 face cognitive load of manual recovery protocols and career risk of failure; benefit from job security and expertise value",
+      "End Users During Outages: Tertiary victim (powerless/trapped) \u2014 experience service degradation during recovery windows; no alternative during sovereignty-mandated lock-in",
+      "Open Source Infrastructure Movement: Organized agents (organized/mobile) \u2014 building cloud-native sovereignty-compatible tooling with sunset logic; Kubernetes HA, Ceph, OpenStack",
+      "Regional Sovereignty Coalition: Organized institutional actors (organized/mobile) \u2014 EU digital sovereignty initiatives, multi-nation partnerships; see coordination function but recognize extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.48): Moderate-high. The RTO delta imposes real costs on service availability and operational complexity. Sovereignty mandates create regulatory moat for domestic vendors, reducing competitive pressure on disaster recovery performance. However, extraction is not maximal \u2014 genuine coordination function exists (data sovereignty, geopolitical risk mitigation), and open-source alternatives are emerging. The value reflects that roughly half the RTO cost is extractive overhead (vendor capture, institutional resistance to automation) and half is legitimate coordination cost (current technical maturity gap). Suppression (0.52): Moderate. Significant barriers to alternative approaches include regulatory lock-in (cannot use foreign cloud), procurement constraints (domestic vendor preferences), and institutional path dependencies (manual protocols embedded in compliance frameworks). But suppression is not total \u2014 open-source tooling provides exit path, and some organizations achieve low RTO with sovereign infrastructure through heavy investment. Theater ratio (0.38): Moderate-low. Some sovereignty compliance is performative (vendor certifications, checkbox audits, data residency claims without technical enforcement), but core constraints are structural (actual data location, access control, encryption key management). Theater has increased as sovereignty mandates have expanded into domains where technical enforcement is weaker.",
+    "directionality_logic": "Sovereignty mandate organizations are primary beneficiaries \u2014 they define requirements that create regulatory moat for domestic vendors and expand their institutional authority. Declared as beneficiaries with institutional power and arbitrage exit options, yielding low d and low/negative effective extraction. Domestic infrastructure vendors are secondary beneficiaries \u2014 they capture market share through regulatory protection. Service availability requirements are the primary victim \u2014 an abstract collective good (user expectation of high availability) that cannot exit or organize, bearing full cost of RTO degradation. Declared as victim with powerless/trapped context, yielding high d and high effective extraction. Operational staff are secondary victims \u2014 they bear cognitive load and career risk but also benefit from job security and expertise value. Declared as victims with moderate power and constrained exit, yielding moderate d and moderate extraction. End users during outages are tertiary victims \u2014 trapped by service dependency with no alternative during recovery windows. The perspectival gap emerges from these structural positions: sovereignty mandate organizations see coordination (protecting critical infrastructure), operational staff see mixed coordination and extraction (genuine disaster recovery capability with unnecessary complexity), end users see pure extraction (service degradation with no benefit to them).",
+    "perspectival_gap": "The sovereignty mandate organizations experience this constraint as coordination (Rope) \u2014 they are solving the legitimate problem of geopolitical dependency and data sovereignty. The open-source infrastructure movement sees a temporary problem with a sunset (Scaffold) \u2014 cloud-native tooling is closing the RTO gap, dissolving the false dichotomy between control and automation. Operational staff see mixed coordination and extraction (Tangled Rope) \u2014 genuine disaster recovery capability exists, but manual intervention requirements impose unnecessary complexity that benefits vendor lock-in. End users see pure extraction (Snare) \u2014 extended outages with no alternative during sovereignty-mandated infrastructure lock-in. The analytical observer recognizes both functions (Tangled Rope) \u2014 genuine coordination (geopolitical risk mitigation) coexists with extraction (regulatory capture, artificial complexity). The gap reveals that 'sovereignty requires RTO sacrifice' is a contingent claim, not a natural law \u2014 the constraint's structure depends on current tooling maturity and institutional arrangements, both of which are changing.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating that the sovereignty-RTO tradeoff is neither pure coordination (Rope) nor pure extraction (Snare), but a hybrid (Tangled Rope) where both functions coexist. The coordination function is genuine: data sovereignty and geopolitical risk mitigation are real security concerns, and infrastructure control provides real protection against foreign government leverage. The extraction mechanism is also genuine: sovereignty mandates create regulatory moat for domestic vendors, reducing competitive pressure on RTO performance; manual intervention requirements maintain operational complexity that benefits incumbent expertise; compliance theater (checkbox audits, vendor certifications) substitutes for technical enforcement. The mandatrophy question 'Is this sovereignty or extraction?' has the answer 'Both, and the ratio depends on the observer's structural position.' The open-source movement's scaffold perspective reveals that the tradeoff is not inherent \u2014 technical solutions exist that preserve sovereignty without sacrificing RTO \u2014 but current institutional arrangements maintain the extraction mechanism. The analytical classification as Tangled Rope reflects this structural ambiguity: the constraint cannot be cleanly separated into coordination and extraction components because they are institutionally entangled."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of physical_airgap_authenticity (mountain \u2014 physical isolation as security primitive) and operational_discipline_dependency (snare \u2014 manual protocol complexity). The sovereignty-RTO tradeoff inherits structural properties from both: the mountain upstream constraint establishes that some isolation is technically necessary (genuine coordination floor), while the snare upstream constraint reveals that manual intervention requirements exceed technical necessity (extraction mechanism). The three constraints form a family where the RTO tradeoff is the observable manifestation of deeper structural tensions."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "mod",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "physical_airgap_authenticity",
+      "operational_discipline_dependency"
+    ]
+  }
+}

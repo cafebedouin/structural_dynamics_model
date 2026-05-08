@@ -1,0 +1,172 @@
+{
+  "header": {
+    "constraint_id": "performance_measurement_asymmetry",
+    "version": "1.0",
+    "generated_date": "2025-01-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "perf_meas"
+  },
+  "base_properties": {
+    "extractiveness": 0.22,
+    "suppression": 0.18,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Performance Measurement Asymmetry in Healthcare AI Validation",
+    "topic_domain": "healthcare_ai/clinical_practice/technology_governance",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "ai_development_teams",
+      "academic_research_groups",
+      "regulatory_agencies",
+      "clinical_institutions"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "AI Development Teams",
+      "comment": "PERSPECTIVE 1: AI DEVELOPMENT TEAMS (ROPE) \u2014 Simulation-based validation provides a standardized, reproducible coordination mechanism for iterative development. The asymmetry between simulation and deployment is a legitimate staged-validation pathway: controlled scenarios enable rapid hypothesis testing before expensive clinical trials. Low extraction \u2014 the constraint coordinates development work efficiently."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Academic Research Groups",
+      "comment": "PERSPECTIVE 2: ACADEMIC RESEARCH GROUPS (ROPE) \u2014 Simulation studies solve the coordination problem of comparing algorithmic approaches on standardized benchmarks. The 20-scenario design enables reproducible comparison across research groups. The gap between simulation and clinical deployment is understood as a necessary validation stage, not an extractive barrier. Beneficiary of the coordination function."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Regulatory Agencies",
+      "comment": "PERSPECTIVE 3: REGULATORY AGENCIES (ROPE) \u2014 The measurement asymmetry coordinates the validation pipeline: simulation studies provide preliminary evidence of algorithmic competence; clinical trials provide deployment safety evidence. The staged approach reduces regulatory burden by filtering out non-viable candidates early. Constrained exit (cannot unilaterally change validation standards) but net beneficiary \u2014 the asymmetry makes their job tractable."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "Clinical Institutions",
+      "comment": "PERSPECTIVE 4: CLINICAL INSTITUTIONS (ROPE) \u2014 Hospitals and clinics benefit from the staged validation: simulation studies provide early signal of which AI systems are worth piloting; regulatory approval provides safety assurance before full deployment. The asymmetry coordinates resource allocation \u2014 institutions can track promising systems through the pipeline without committing to unvalidated technology. Mobile exit (can choose which systems to adopt)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "Clinician End-Users",
+      "comment": "PERSPECTIVE 5: CLINICIAN END-USERS (ROPE) \u2014 Physicians using AI decision support benefit from the measurement asymmetry: simulation studies demonstrate algorithmic logic on standardized cases; clinical validation demonstrates safety in real-world conditions. The gap between the two is a feature, not a bug \u2014 it ensures that systems reaching clinical practice have passed both technical and safety gates. Low experienced extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (ROPE) \u2014 The performance measurement asymmetry is a coordination mechanism for staged validation in high-stakes domains. Simulation studies provide a low-cost, high-throughput filter for algorithmic competence; clinical trials provide high-cost, low-throughput validation of real-world safety. The asymmetry is not extractive \u2014 it solves the coordination problem of how to validate complex AI systems without exposing patients to unvalidated technology. The constraint exhibits low extraction, low suppression, and genuine coordination function across all perspectives."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "simulation_fidelity_threshold",
+      "question": "At what level of simulation fidelity does the measurement asymmetry transition from coordination (enabling efficient development) to extraction (creating a misleading validation pathway)?",
+      "resolution_mechanism": "Longitudinal tracking of simulation performance vs clinical performance for deployed AI systems; identification of systematic gaps that simulation studies fail to predict",
+      "impact": "If simulation fidelity is high (correlation > 0.85 between simulation and clinical performance): asymmetry remains coordination. If low (correlation < 0.60): asymmetry becomes extractive \u2014 simulation studies provide false confidence, and the constraint reclassifies toward tangled_rope or snare from patient safety perspectives.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Simulation fidelity threshold for coordination vs extraction"
+    },
+    {
+      "id": "regulatory_capture_risk",
+      "question": "Does the staged validation pathway create regulatory capture opportunities where AI developers influence simulation benchmark design to favor their systems?",
+      "resolution_mechanism": "Analysis of benchmark design governance; identification of conflicts of interest in scenario selection; comparison of industry-designed vs independent benchmarks",
+      "impact": "If capture is minimal: rope classification holds. If capture is significant: the constraint reclassifies toward tangled_rope \u2014 genuine coordination function exists but is contaminated by extractive benchmark gaming.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether benchmark design is captured by AI developers"
+    },
+    {
+      "id": "patient_safety_externality",
+      "question": "Does the measurement asymmetry externalize patient safety risk by allowing systems with high simulation performance but poor real-world robustness to reach clinical deployment?",
+      "resolution_mechanism": "Post-market surveillance data; adverse event reporting for AI-assisted clinical decisions; comparison of simulation-predicted vs observed failure modes",
+      "impact": "If externality is minimal (post-market performance matches simulation predictions): rope classification holds. If externality is significant (simulation studies systematically miss real-world failure modes): constraint reclassifies toward tangled_rope or snare from patient perspectives, with patients as victims.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether measurement asymmetry externalizes patient safety risk"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.22
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The performance measurement asymmetry in healthcare AI validation creates a staged pathway from controlled simulation studies to clinical deployment. AI systems are initially evaluated using synthetic scenarios with physician patient-actors (typically 20 standardized cases) to demonstrate algorithmic competence, then subjected to FDA/regulatory approval processes requiring real-world safety validation before clinical use. This constraint coordinates the validation pipeline by providing a low-cost filter for technical competence before expensive clinical trials. The asymmetry is structural \u2014 simulation studies cannot fully replicate the complexity of real clinical environments \u2014 but serves a coordination function rather than an extractive one. All institutional actors (AI developers, academic researchers, regulators, clinical institutions) benefit from the staged approach, which makes the validation problem tractable. The constraint exhibits low extraction (0.22) and low suppression (0.18), with modest theater (0.35) reflecting that some simulation studies are more performative than predictive. The key analytical question is whether the asymmetry remains coordination (high simulation fidelity, low patient safety externality) or degrades toward extraction (simulation studies provide false confidence, real-world failure modes are systematically missed).",
+    "key_agents": [
+      "AI Development Teams: Primary beneficiary (institutional/mobile) \u2014 simulation studies enable rapid iterative development before clinical trials",
+      "Academic Research Groups: Primary beneficiary (institutional/mobile) \u2014 standardized benchmarks enable reproducible algorithmic comparison",
+      "Regulatory Agencies: Primary beneficiary (institutional/constrained) \u2014 staged validation makes regulatory review tractable by filtering non-viable candidates early",
+      "Clinical Institutions: Primary beneficiary (institutional/mobile) \u2014 can track promising systems through validation pipeline without committing to unvalidated technology",
+      "Clinician End-Users: Beneficiary (moderate/mobile) \u2014 staged validation ensures systems reaching practice have passed both technical and safety gates",
+      "Patients: Potential victim if simulation fidelity is low (powerless/trapped) \u2014 would bear safety risk if simulation studies systematically miss real-world failure modes, but not currently a victim under base case assumptions",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees staged validation as legitimate coordination mechanism for high-stakes AI deployment"
+    ],
+    "logic_rationale": "Extractiveness (0.22): Low. The measurement asymmetry creates a modest career and funding advantage for AI systems with high simulation performance, but this is largely a legitimate first-mover reward for technical competence. The asymmetry does not create significant rent extraction \u2014 all institutional actors benefit from the coordination function. The value reflects that some simulation studies are optimized for benchmark performance rather than clinical relevance (mild gaming), but the gaming is not severe. Suppression (0.18): Low. Alternative validation pathways exist (direct clinical trials, real-world evidence studies, post-market surveillance). The staged approach is not mandatory \u2014 some systems bypass simulation studies entirely. Barriers to alternative validation are primarily resource constraints (clinical trials are expensive) rather than regulatory prohibition. Theater ratio (0.35): Moderate-low. Some simulation studies are performative \u2014 designed to demonstrate algorithmic sophistication rather than predict clinical utility \u2014 but most serve a genuine filtering function. The theater has increased modestly over the interval as simulation benchmarks have become more standardized and gameable, but remains well below the piton threshold (0.70).",
+    "directionality_logic": "All declared beneficiaries are institutional actors with mobile or constrained exit options. AI development teams, academic research groups, and clinical institutions have mobile exit \u2014 they can choose alternative validation pathways or opt out of AI development/adoption entirely. Regulatory agencies have constrained exit \u2014 they cannot unilaterally change validation standards without legislative/policy changes \u2014 but are net beneficiaries because the staged approach makes their regulatory function tractable. No victims are declared in the base case because the constraint does not currently extract from any agent group \u2014 patients would become victims only if simulation fidelity is low (omega variable 1) or patient safety externality is high (omega variable 3), neither of which is established. The directionality derivation produces low d values for all perspectives (beneficiaries with mobile/constrained exit \u2192 d \u2248 0.10-0.25 \u2192 low/negative chi), consistent with rope classification across all perspectives.",
+    "perspectival_gap": "This constraint exhibits minimal perspectival gap \u2014 all agents classify it as rope. The uniformity reflects that the measurement asymmetry genuinely solves a coordination problem (how to validate AI systems efficiently without exposing patients to unvalidated technology) and does not create significant extraction. The staged validation pathway benefits all institutional actors: developers get rapid feedback, researchers get reproducible benchmarks, regulators get tractable review processes, clinicians get safety-validated systems. The lack of perspectival gap is diagnostic \u2014 it indicates a genuine coordination mechanism rather than a contested extraction dynamic. The omega variables identify conditions under which the gap would emerge: if simulation fidelity is low, patients become victims and see the constraint as snare; if regulatory capture is high, the constraint becomes tangled_rope with mixed coordination and extraction. But under base case assumptions (high fidelity, low capture, low externality), the rope classification is stable across all perspectives.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that low-extraction coordination mechanisms can exhibit structural asymmetries without being extractive. The measurement asymmetry \u2014 simulation studies measure different properties than clinical deployment requires \u2014 is real and consequential, but it serves a coordination function rather than enabling rent extraction. The mandatrophy question 'Is this coordination or extraction?' is answered by the structural data: low extractiveness (0.22), low suppression (0.18), all institutional actors as beneficiaries, no declared victims, and uniform rope classification across perspectives. The constraint is coordination. The omega variables preserve analytical humility by identifying conditions under which the classification would change: if simulation fidelity degrades, if regulatory capture increases, or if patient safety externalities emerge, the constraint would reclassify toward tangled_rope or snare. But the current structural evidence supports rope."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is structurally independent \u2014 it represents a validation methodology asymmetry rather than a specific AI system or clinical application. Downstream constraints (specific AI diagnostic systems, treatment recommendation algorithms, clinical decision support tools) would link to this constraint via affects_constraints if their validation pathways exhibit this measurement asymmetry."
+  },
+  "directionality_overrides": []
+}

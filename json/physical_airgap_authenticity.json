@@ -1,0 +1,179 @@
+{
+  "header": {
+    "constraint_id": "physical_airgap_authenticity",
+    "version": "1.0",
+    "generated_date": "2025-02-14",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "airgap"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.03,
+    "theater_ratio": 0.15,
+    "claimed_type": "mountain",
+    "human_readable": "Physical Air-Gap Authenticity Constraint",
+    "topic_domain": "infrastructure_security/disaster_recovery/digital_sovereignty",
+    "emerges_naturally": true,
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08,
+    "beneficiaries": [
+      "security_auditors",
+      "compliance_frameworks",
+      "airgap_hardware_vendors"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Isolated System Under Attack",
+      "comment": "PERSPECTIVE 1: ISOLATED SYSTEM (MOUNTAIN) \u2014 A physically air-gapped system experiences the constraint as absolute: if the network interface is physically absent and the device is in a Faraday-shielded safe, electromagnetic side-channel exfiltration is physically impossible at immediate timescales. The constraint is immutable within the threat model \u2014 no amount of software sophistication can bridge a physical gap that doesn't exist."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Security Architect",
+      "comment": "PERSPECTIVE 2: SECURITY ARCHITECT (MOUNTAIN) \u2014 Designing high-assurance systems, the architect experiences physical air-gapping as a hard constraint: virtual segmentation (VLANs, software firewalls, administrative policies) can always be bypassed by sufficiently sophisticated attackers, but a SATA drive rotated through a safe with no network hardware present cannot be remotely compromised. The constraint is a physical law of information theory \u2014 bits cannot traverse a gap that has no physical medium."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Nation-State Adversary",
+      "comment": "PERSPECTIVE 3: NATION-STATE ADVERSARY (MOUNTAIN) \u2014 Even state-level actors with access to supply chain interdiction, electromagnetic surveillance, and insider recruitment face the physical air-gap as an immutable barrier at the point of enforcement. A device with no network interface, no wireless radios, and no electromagnetic leakage (proper shielding) cannot be remotely accessed. The adversary can compromise the rotation protocol (human factors), the safe (physical access), or the endpoints (before/after air-gap), but cannot bypass the gap itself while it is enforced."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Information Theorist",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From the analytical perspective, the physical air-gap constraint is a direct consequence of the no-cloning theorem and the locality principle in physics: information cannot be transmitted without a physical carrier, and physical carriers cannot traverse a gap instantaneously. Virtual air-gaps (logical segmentation on connected hardware) are not air-gaps in the physical sense \u2014 they are policy constraints that can be violated by software. The distinction is categorical, not gradual. This is a genuine natural law, not a naturalized institutional arrangement."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Compliance Framework Operator",
+      "comment": "PERSPECTIVE 5: COMPLIANCE FRAMEWORK (ROPE) \u2014 Organizations operating under security compliance regimes (NIST 800-53, IEC 62443, national sovereignty frameworks) experience the physical air-gap as a coordination mechanism: the constraint provides a verifiable, auditable boundary that satisfies regulatory requirements and enables certification. The compliance operator benefits from the constraint's clarity \u2014 'network interface physically absent' is easier to audit than 'network access administratively prohibited.' Low extraction, genuine coordination function."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Air-Gap Hardware Vendor",
+      "comment": "PERSPECTIVE 6: HARDWARE VENDOR (ROPE) \u2014 Manufacturers of air-gap transfer devices (data diodes, one-way optical links, SATA rotation systems) experience the constraint as a coordination mechanism that creates a legitimate market for high-assurance hardware. The constraint solves a real problem (verifiable isolation) and the vendor's products are the coordination infrastructure. Beneficiary status derives from market position, but the underlying constraint is physical, not constructed."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "electromagnetic_emanation_threshold",
+      "question": "At what distance and with what equipment does electromagnetic emanation from a physically isolated device become a practical side channel?",
+      "resolution_mechanism": "Empirical testing of TEMPEST attack ranges under varying shielding conditions; measurement of signal-to-noise ratios for different device types and emanation frequencies",
+      "impact": "If practical range > 10 meters with commodity equipment: physical air-gap is weaker than claimed, and Faraday shielding becomes mandatory rather than optional. If practical range < 1 meter with specialized equipment: physical air-gap is robust even without shielding for most threat models.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Practical range and equipment requirements for electromagnetic side-channel attacks"
+    },
+    {
+      "id": "human_protocol_compliance_rate",
+      "question": "What is the empirical compliance rate for physical air-gap rotation protocols in operational environments?",
+      "resolution_mechanism": "Audit data from high-security facilities; incident reports of protocol violations; comparison of designed vs actual rotation procedures",
+      "impact": "If compliance rate < 80%: the constraint's effectiveness is dominated by human factors rather than physical properties, and the mountain classification applies only to the idealized protocol, not the operational reality. If compliance rate > 95%: the physical constraint is the dominant factor.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Operational compliance rate for air-gap rotation protocols"
+    },
+    {
+      "id": "supply_chain_interdiction_prevalence",
+      "question": "How frequently are physical air-gap systems compromised via supply chain interdiction (hardware implants installed before deployment)?",
+      "resolution_mechanism": "Classified intelligence assessments; public incident disclosures; hardware teardown audits of high-security deployments",
+      "impact": "If interdiction is common: the air-gap constraint is bypassed before it is enforced, and the mountain classification applies only to the post-deployment state, not the end-to-end security posture. If interdiction is rare: the physical constraint is the primary security boundary.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Prevalence of supply chain compromise of air-gapped systems"
+    },
+    {
+      "id": "virtual_airgap_sufficiency_threshold",
+      "question": "Under what threat models is virtual air-gapping (logical segmentation on connected hardware) functionally equivalent to physical air-gapping?",
+      "resolution_mechanism": "Comparative analysis of breach rates for physically vs virtually air-gapped systems; formal verification of segmentation enforcement mechanisms; adversary capability modeling",
+      "impact": "If virtual air-gaps are sufficient for most threat models: the physical constraint is over-specified, and the market for physical air-gap hardware is partly extractive (selling unnecessary assurance). If virtual air-gaps are insufficient even for moderate threat models: the physical constraint is correctly specified.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Threat model conditions under which virtual air-gapping is sufficient"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.06
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.08
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The physical air-gap authenticity constraint distinguishes between genuine physical isolation (network hardware physically absent, device in Faraday-shielded safe) and virtual air-gapping (logical segmentation on connected hardware). This is a candidate mountain constraint \u2014 the physical impossibility of transmitting information across a gap with no physical medium \u2014 but with identifiable beneficiaries (compliance frameworks, hardware vendors, security auditors) that trigger false summit detection. The constraint's extractiveness (0.08) is very low, reflecting that the physical limitation is genuine and the beneficiaries' advantage derives from solving a real coordination problem (verifiable isolation) rather than from constructed scarcity. The theater ratio (0.15) is low, indicating that physical air-gap protocols have minimal performative content \u2014 the verification mechanism (physical inspection of hardware, electromagnetic emanation testing, access control logs) directly tests the constraint's enforcement. The constraint exhibits rising extractiveness over the interval (0.05 \u2192 0.08) as the market for air-gap hardware matures and vendors capture more value, but the increase is modest and does not indicate rent-seeking layered onto coordination.",
+    "key_agents": [
+      "Isolated System Under Attack: Experiences the constraint as absolute physical law (powerless/trapped) \u2014 no network interface means no remote access",
+      "Security Architect: Designs systems around the constraint as immutable boundary (moderate/constrained) \u2014 virtual segmentation can be bypassed, physical gaps cannot",
+      "Nation-State Adversary: Faces the constraint as hard limit on remote access capabilities (institutional/arbitrage) \u2014 can compromise endpoints or protocols but not the gap itself",
+      "Information Theorist: Analytical observer (analytical/analytical) \u2014 sees the constraint as consequence of locality and no-cloning theorem",
+      "Compliance Framework Operator: Beneficiary (institutional/arbitrage) \u2014 the constraint provides auditable boundary that satisfies regulatory requirements",
+      "Air-Gap Hardware Vendor: Beneficiary (institutional/arbitrage) \u2014 the constraint creates legitimate market for high-assurance isolation hardware"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Very low. The physical air-gap constraint is a genuine physical limitation \u2014 information cannot traverse a gap with no physical medium. The beneficiaries (compliance frameworks, hardware vendors) capture value by solving the coordination problem of verifiable isolation, not by constructing artificial scarcity. The modest extractiveness reflects: (1) hardware vendors' markup on specialized air-gap devices (data diodes, SATA rotation systems) above commodity hardware costs, (2) compliance frameworks' certification fees, and (3) security auditors' premium for air-gap verification services. But these are coordination costs, not extractive rents \u2014 the underlying constraint is physical. Suppression (0.03): Very low. Alternatives to physical air-gapping exist (virtual segmentation, network policies, software firewalls) and are widely deployed. The constraint does not suppress alternatives \u2014 it defines a specific assurance level that alternatives cannot match. Organizations can choose virtual air-gapping for lower-assurance use cases; the physical constraint applies only when the threat model requires it. Theater ratio (0.15): Low. Physical air-gap verification has minimal performative content. Auditors physically inspect hardware (network interfaces absent), test electromagnetic emanations (Faraday cage effectiveness), and review access logs (safe rotation protocol compliance). These are direct measurements of the constraint's enforcement, not theatrical substitutes. The modest theater reflects documentation overhead (compliance paperwork) and the gap between designed protocols (perfect rotation discipline) and operational reality (human factors, protocol violations).",
+    "directionality_logic": "The constraint has three beneficiary groups and no victims, which is unusual for a mountain and triggers false summit detection. However, the beneficiaries' advantage derives from the constraint's genuine physical properties, not from naturalization of a constructed arrangement. Compliance frameworks benefit because the physical air-gap provides an auditable boundary that satisfies regulatory requirements \u2014 the constraint solves a real coordination problem (how to verify isolation). Hardware vendors benefit because the constraint creates a legitimate market for high-assurance devices \u2014 the products solve a real technical problem (verifiable one-way data transfer, tamper-evident rotation systems). Security auditors benefit because the constraint is easier to verify than virtual alternatives \u2014 'network interface physically absent' is a binary observable, while 'network access administratively prohibited' requires trust in software enforcement. All three beneficiary groups have arbitrage exit options \u2014 they can operate in other security domains if the air-gap market contracts. The directionality values are low (d \u2248 0.05-0.15 for beneficiaries) because the extraction flow runs toward them, but the flow is small because the underlying constraint is physical, not constructed. The isolated system, security architect, and nation-state adversary are not victims \u2014 they experience the constraint as an immutable physical law that they must work around, not as extraction imposed by the beneficiaries.",
+    "perspectival_gap": "All perspectives classify as mountain except the compliance framework and hardware vendor, which classify as rope. This is the diagnostic signature of a genuine natural law with coordination infrastructure built on top. The isolated system, security architect, nation-state adversary, and information theorist all experience the constraint as physically immutable \u2014 information cannot traverse a gap with no physical medium. The compliance framework and hardware vendor experience the constraint as a coordination mechanism \u2014 it solves the problem of verifiable isolation and creates a market for high-assurance hardware. The gap is not a contradiction \u2014 the physical constraint is real (mountain from most perspectives), and the coordination infrastructure is also real (rope from beneficiary perspectives). The false summit detector will flag this constraint because beneficiaries are declared, but the omega variables document that the beneficiaries' advantage derives from solving a genuine coordination problem on top of a genuine physical constraint, not from naturalizing a constructed arrangement.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that a genuine mountain can have beneficiaries without being a false summit. The physical air-gap is an authentic natural law \u2014 the locality principle and no-cloning theorem are not institutional arrangements. But the constraint also enables coordination (compliance frameworks, hardware markets) that creates beneficiaries. The mandatrophy resolution: the mountain classification applies to the physical constraint itself (information cannot traverse a gap with no medium), while the rope classification applies to the coordination infrastructure built on top (auditable boundaries, verifiable isolation hardware). The constraint is not mislabeled \u2014 it is genuinely both. The false summit detector will flag it for review, and the omega variables will document that the beneficiaries' advantage is not evidence of naturalization but evidence of coordination layered on physics. The extractiveness is very low (0.08) because the coordination costs are real and the physical constraint is genuine. If extractiveness were higher (e.g., 0.25+), that would indicate rent-seeking layered onto the coordination, and the mountain classification would be suspect. But at 0.08, the constraint is a mountain with coordination infrastructure, not a false summit."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is a single structural claim with a single epsilon value. Virtual air-gapping (logical segmentation) is not a different measurement of the same constraint \u2014 it is a different constraint entirely, with much higher extractiveness (administrative policies can be bypassed) and different failure modes. If virtual air-gapping were modeled, it would be a separate constraint story (likely tangled_rope or snare depending on the threat model) linked via network.affects_constraints."
+  },
+  "directionality_overrides": []
+}
