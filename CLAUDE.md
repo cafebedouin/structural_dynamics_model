@@ -1,23 +1,69 @@
 ## Project Context
 
 Prolog+Python research infrastructure implementing Deferential Realism (DR).
-76 Prolog modules, 910 testsets, Python orchestration/linting, Streamlit UI.
+76+ Prolog modules, 3,337 main-corpus constraints (`prolog/testsets/`), 189 SOTU
+constraints (`prolog/testsets_sotu/`), 100+ Python analysis scripts.
 
 Key constraint: Correctness and reproducibility matter most. Model provenance
 (which LLM built which testsets) is a feature, not a problem.
 
+**Start here:** `docs/project_orientation.md` is the canonical operational reference for
+any model entering this repo. It covers repo layout, classification architecture, the full
+paper sequence with summaries, empirical findings inventory, open work items, and
+methodological practices. Line-number anchors are anchored to git HEAD `55df084a`
+(2026-05-09); verify before citing, as high-churn files drift.
+
+## Typical Workflow
+
+The primary authoring loop is:
+
+```
+python3 agent/c-orchestrator.py "some topic"
+```
+
+This chains six steps automatically:
+1. **Research** — web search grounding via Haiku
+2. **Decompose** — UKE_SCOPE protocol selects axes (default 3) and produces a manifest
+3. **Generate** — Sonnet generates one constraint story per axis; saves JSON to `json/`
+   and Prolog testset to `prolog/testsets/`
+4. **Corpus update** — runs `python/run_pipeline.py` to re-classify the full corpus
+5. **Reports** — `python/enhanced_report.py` writes `outputs/constraint_reports/<id>_report.md`
+   for each new constraint
+6. **Essay** — Sonnet synthesizes a draft essay from the constraint reports; saved to
+   `outputs/essays/` and `agent/analysis/essays/`
+
+After the run, take `outputs/constraint_reports/*.md` and the essay draft to a model for
+final essay synthesis. Finished essays are posted to cafebedouin.org and are not
+committed to the repo beyond what the pipeline writes automatically.
+
+**Corpus growth:** To expand the corpus without a full topic run, use
+`python3 -m agent.generate_json_haiku` (reads `prolog/beta_seeds.json`, generates via
+Haiku batch API with prompt caching). This is how the corpus grew from ~1,000 to 3,337.
+
 ## Running the System
 
+- Full pipeline (analysis only, no generation): `python3 python/run_pipeline.py`
 - Prolog tests: `cd prolog && swipl -g "[stack], [validation_suite], run_dynamic_suite, halt" -t "halt(1)"`
-- Linter: must be imported as library (`from linter import lint_file`), no __main__ block
+- Linter: must be imported as library (`from linter import lint_file`), not run directly
 - Config sensitivity: `python3 python/config_sensitivity_sweep.py`
 - Directionality sensitivity: `python3 python/directionality_sensitivity_sweep.py`
 
-## Known State (2026-02-28)
+## Known State
 
-- 910/0 tests passing (requires data_repair.pl loaded)
-- 170 config params (154 numeric, swept; 17 directionality constants, swept separately; all inert at ±25%)
-- See AUDIT.md for full findings, MEMORY.md for project history
+- Last audit (2026-02-28): passing tests / param sweep — see AUDIT.md (point-in-time; some findings now resolved)
+- Config params: see `prolog/config.pl` for current count (`grep -c "^param(" prolog/config.pl`)
+- All numeric params inert at ±25%; all 17 directionality constants inert at ±25%
+- Corpus is actively growing; param count and testset numbers will drift — cite the manifest
+
+## Pipeline Output Manifest Convention
+
+Pipeline output JSONs carry a `manifest` top-level key with provenance information:
+timestamp (`pipeline_run_at`), corpus counts (`n_constraints`, `n_sotu_constraints`),
+git commit (`code_commit`, `code_commit_short`), dirty-tree flag (`code_dirty`), and
+`schema_version`. Audits running against pipeline output should cite the manifest in
+their writeups. The corpus is continuously extending (orchestrator runs add constraints),
+so "the corpus" is meaningful only relative to a timestamp; the manifest makes the
+timestamp citable. See `when_apparatus_sharpens_taxonomy.md` §4.1 for context.
 
 ## Architecture Invariants
 
@@ -26,3 +72,44 @@ Key constraint: Correctness and reproducibility matter most. Model provenance
 - Dual threshold: both χ AND ε must be checked
 - .tsx artifacts are outputs, not infrastructure
 - Archive testsets document build provenance, not active code
+
+## Critical Distinctions
+
+**`json/` files are LLM-generated constraint specifications, not analysis output.**
+Each file in `json/` is produced by step 3 of the orchestrator (Sonnet generates it
+from an axis in the UKE_SCOPE manifest). The orchestrator writes the JSON to `json/`
+and the corresponding Prolog testset to `prolog/testsets/`. These files are inputs to
+the analysis pipeline — `run_pipeline.py` reads them; it does not write them. Analysis
+output lives in `outputs/`.
+
+**Canonical framework paper: `docs/deferential_realism_paper_v6.11.md`.** Files
+`deferential_realism_paper.md` through `deferential_realism_paper_v6.10.md` in `docs/`
+are superseded. When the framework spec is needed, use v6.11.
+
+**Formal classification rules: `docs/logic.md`.** This is the spec document; `config.pl`
+must match it. UTF-8 encoding was repaired Feb 2026 (prior versions had mojibake from
+double-encoded characters). Edit tool fails on files with multi-byte mojibake — use sed
+or Python if you encounter this.
+
+**Two deprecated predicates are still loaded at runtime:** `dr_type_at/4` in
+`drl_composition.pl` and `classify_snapshot/3` in `transition_paths.pl` carry DEPRECATED
+markers but are still loaded. Whether they diverge from the canonical sigmoid pipeline
+has not been established — treat as a live risk when reasoning about classification paths.
+
+**`site_contexts_product/1` universal-scope exclusion is load-bearing.** The product site
+excludes `regional`, `continental`, `universal` scopes. The universal exclusion is not
+cosmetic: σ(universal) = 1.0 at the analytical observer position drops χ below
+`rope_chi_ceiling`, causing systematic sheaf→presheaf crossings. Sites that include
+universal scope at the analytical position will not exhibit binary site-stability.
+
+**Pre-computed values live in `outputs/pipeline_output.json`.** H¹, Arakelov heights,
+MaxEnt distributions, and classifications are pre-computed by the pipeline. Read from
+there; do not recompute from scratch.
+
+## Audit Methodology
+
+Completed audit passes follow: **recon** → **proposal** → **execution** → **writeup**.
+Recon establishes what data exists and what questions are answerable. Proposal states
+exactly what will be run and what would constitute each verdict. Execution runs scripts
+and saves raw output. Writeup analyzes from evidence only — never from documentation
+restated as findings. See `docs/project_orientation.md` §8.1 for detail.

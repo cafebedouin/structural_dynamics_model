@@ -11,12 +11,14 @@ Usage:
 
 import contextlib
 import io
+import json
 import subprocess
 import sys
 import threading
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Callable, Optional
 
@@ -28,10 +30,74 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 PROLOG_DIR = REPO_ROOT / "prolog"
 OUTPUTS_DIR = REPO_ROOT / "outputs"
 TESTSETS_DIR = PROLOG_DIR / "testsets"
+TESTSETS_SOTU_DIR = PROLOG_DIR / "testsets_sotu"
 
 # Ensure sibling modules are importable
 if str(Path(__file__).resolve().parent) not in sys.path:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+# ---------------------------------------------------------------------------
+# Manifest helpers
+# ---------------------------------------------------------------------------
+
+def _git_head_sha() -> str:
+    try:
+        result = subprocess.run(
+            ["git", "rev-parse", "HEAD"],
+            cwd=str(REPO_ROOT),
+            capture_output=True,
+            text=True,
+            timeout=10,
+        )
+        return result.stdout.strip() if result.returncode == 0 else "unknown"
+    except Exception:
+        return "unknown"
+
+
+def _git_dirty() -> bool:
+    try:
+        result = subprocess.run(
+            ["git", "status", "--porcelain"],
+            cwd=str(REPO_ROOT),
+            capture_output=True,
+            text=True,
+            timeout=10,
+        )
+        return bool(result.stdout.strip()) if result.returncode == 0 else False
+    except Exception:
+        return False
+
+
+def build_manifest(run_at: str) -> dict:
+    """Build the manifest dict for a pipeline run.
+
+    Args:
+        run_at: ISO 8601 UTC timestamp string captured at pipeline start.
+    """
+    n_constraints = len(list(TESTSETS_DIR.glob("*.pl"))) if TESTSETS_DIR.exists() else 0
+    n_sotu = len(list(TESTSETS_SOTU_DIR.glob("*.pl"))) if TESTSETS_SOTU_DIR.exists() else 0
+    commit = _git_head_sha()
+    return {
+        "pipeline_run_at": run_at,
+        "n_constraints": n_constraints,
+        "n_sotu_constraints": n_sotu,
+        "code_commit": commit,
+        "code_commit_short": commit[:7] if commit != "unknown" else "unknown",
+        "code_dirty": _git_dirty(),
+        "schema_version": 1,
+    }
+
+
+def inject_manifest(json_path: Path, manifest: dict) -> None:
+    """Read *json_path*, prepend manifest as first key, write back."""
+    with open(json_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    # manifest goes first; existing keys follow unchanged
+    out = {"manifest": manifest}
+    out.update(data)
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(out, f, ensure_ascii=False, indent=2)
+
 
 # ---------------------------------------------------------------------------
 # Data classes
@@ -680,6 +746,7 @@ def run_pipeline(
     """
     pipeline_result = PipelineResult()
     t0 = time.time()
+    run_at = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     OUTPUTS_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -711,6 +778,19 @@ def run_pipeline(
         pipeline_result.errors.append(msg)
         pipeline_result.total_duration_s = time.time() - t0
         return pipeline_result
+
+    # Inject manifest into pipeline_output.json
+    def _manifest_step():
+        manifest = build_manifest(run_at)
+        inject_manifest(OUTPUTS_DIR / "pipeline_output.json", manifest)
+        if progress:
+            progress("pipeline",
+                     f"[MANIFEST] Stamped pipeline_output.json: "
+                     f"run_at={manifest['pipeline_run_at']}, "
+                     f"commit={manifest['code_commit_short']}, "
+                     f"n={manifest['n_constraints']}, dirty={manifest['code_dirty']}")
+
+    collect(_run_step("manifest_inject", _manifest_step, progress))
 
     # Phase 4: PYTHON TIER 1 (parallel)
     collect(_phase_python_tier1(progress, parallel))
