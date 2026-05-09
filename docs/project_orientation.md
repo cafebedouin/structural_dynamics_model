@@ -21,7 +21,7 @@ structural_dynamics_model/
 │   ├── narrative_ontology.pl   # Schema and ontology
 │   ├── stack.pl          # Module loader (system entry point)
 │   ├── validation_suite.pl     # Test harness
-│   └── [70+ other modules]
+└── [80+ other modules]
 ├── python/               # Analysis scripts and pipeline orchestration
 │   ├── run_pipeline.py   # Full pipeline orchestrator
 │   ├── linter.py         # Testset linter (import as library)

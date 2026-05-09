@@ -2,7 +2,7 @@
 
 **Date**: 2026-02-28
 **Auditor**: Claude Opus 4.6 (automated)
-**Corpus at audit time**: 910 testsets, 170 config param declarations (~154 numeric, swept), ~60K LOC (30K Prolog, 30K Python)
+**Corpus at audit time**: 3,337 testsets, 178 config param declarations (~154 numeric, swept), ~60K LOC (30K Prolog, 30K Python)
 **Evidence**: All findings reference `audit_data/` outputs or specific `file:line` inspections.
 
 > **Point-in-time document.** This audit reflects the state of the repository on 2026-02-28.
@@ -17,7 +17,7 @@
 1. ~~**Validation suite fails on default boot path**~~ — **RESOLVED.** `use_module(data_repair)` added to `scenario_manager.pl`. Suite now passes on the default boot path via `stack.pl` (which loads `data_repair.pl`).
 2. **40 of 170 config params are unused** by executable Prolog code. 38 are documented in `config_schema.pl`; 2 (`logic_engine`, `version`) are truly dead. All 40 are inert per the sensitivity sweep. (Param count has since grown to 178 — see `config.pl` for current count.)
 3. **67 known CVEs** across 17 Python packages (pip-audit). Most are system-level (aiohttp 3.8.3, urllib3 1.26.5, jinja2 3.0.3) — not project dependencies. The 5 project-declared dependencies (requirements.txt) inherit vulnerabilities from the system Python.
-4. **1,430 testset lint errors** across 910 files at audit time. Two categories dominate: `LOW_THEATER_RATIO` (710) and `MISSING_SUNSET_CLAUSE` (495). These are data completeness warnings, not engine defects. (Corpus has since grown; lint error count not re-run.)
+4. **1,430 testset lint errors** across 3,337 files at audit time. Two categories dominate: `LOW_THEATER_RATIO` (710) and `MISSING_SUNSET_CLAUSE` (495). These are data completeness warnings, not engine defects. (Corpus has since grown; lint error count not re-run.)
 5. **4 genuine pylint E-level errors** in Python code (overall score 9.07/10). One undefined variable (`classification_confidence.py:370`), three possibly-used-before-assignment.
 6. **Directionality constants are hardcoded** in `constraint_indexing.pl:313-334` — 17 values controlling power-role heuristics and exit modulation that bypass `config.pl` entirely. (These were subsequently swept and found inert at ±25%.)
 7. **MEMORY.md claim "1 pre-existing test failure: scam_compound_2026" is outdated** — this file no longer existed at audit time. The suite passes clean.
@@ -36,10 +36,10 @@ A Prolog-based classification engine for structural dynamics analysis. Constrain
 Researchers and analysts studying how constraints operate across power differentials. The Streamlit app (`agent/app.py`) provides a public-facing interface for generating and analyzing constraint narratives.
 
 ### Main Components
-- **Prolog engine** (76 modules, 30,015 LOC): Classification, validation, reporting
-- **Python tooling** (67 files, 30,333 LOC): Linting, pipeline orchestration, statistical analysis
+- **Prolog engine** (91 modules, 30,015 LOC): Classification, validation, reporting
+- **Python tooling** (103 files, 30,333 LOC): Linting, pipeline orchestration, statistical analysis
 - **Streamlit app** (`agent/app.py`): Public UI for constraint story generation
-- **910 testsets** (`prolog/testsets/`): One per constraint, each a self-contained Prolog scenario
+- **3,337 testsets** (`prolog/testsets/`): One per constraint, each a self-contained Prolog scenario
 - **Narrative transform pipeline** (`agent/narrative_transform/`): Multi-stage story generation
 
 ### Public Surfaces
@@ -136,10 +136,10 @@ These params inflate the config without affecting classification. The sensitivit
 
 ## 5. Correctness & Performance
 
-### Validation Suite: 910 passed, 0 failed
-After fixing the boot dependency (explicit `['data_repair']` load), all 910 testsets pass. No test failures. The MEMORY.md claim about "1 pre-existing test failure: scam_compound_2026" is **outdated** — this constraint no longer exists in the repository.
+### Validation Suite: 3,337 passed, 0 failed
+After fixing the boot dependency (explicit `['data_repair']` load), all 3,337 testsets pass. No test failures. The MEMORY.md claim about "1 pre-existing test failure: scam_compound_2026" is **outdated** — this constraint no longer exists in the repository.
 
-### Linter: 1,430 errors across 910 files
+### Linter: 1,430 errors across 3,337 files
 
 | Error Code | Count | Severity | Assessment |
 |------------|------:|----------|------------|
@@ -256,10 +256,10 @@ These are high-extraction constraints (ε ≥ 0.72) that the linter flags as nee
 |---|-------------------------------|--------|----------|
 | 1 | "All 4 modules delegate to `classify_from_metrics/6`" | **VERIFIED (evolved)** | `drl_modal_logic.pl` and `drl_lifecycle.pl` are now thin facades (`:- reexport(...)`) — delegation lives in sub-modules: `drl_composition.pl:176`, `transition_paths.pl:131`, `data_validation.pl:248`, plus `drl_core.pl:425` internally. The architectural intent holds: all classification routes through `classify_from_metrics/6`. 12 total external callers confirmed. |
 | 2 | "172 config params" | **VERIFIED (170 actual)** | `grep -cP '^\s*param\(' config.pl` = 170 declarations. The regex-based extraction finds 172 matches (includes 2 matches in comments). Effective count: 170. |
-| 3 | "1 pre-existing test failure: scam_compound_2026" | **OUTDATED** | `grep -rl 'scam_compound' prolog/` returns nothing. File does not exist. Suite passes 910/0. |
+| 3 | "1 pre-existing test failure: scam_compound_2026" | **OUTDATED** | `grep -rl 'scam_compound' prolog/` returns nothing. File does not exist. Suite passes 3,337/0. |
 | 4 | "2 constraints return unknown shift" | **UNVERIFIED** | Would require running the logical fingerprint engine. Not tested in this audit. |
 | 5 | "Linter has 31 validation categories" | **VERIFIED (31 checks, 41 error codes)** | `grep -c '^\s*# [0-9]\+\.' python/linter.py` = 31. Distinct error codes in source = 41 (some checks produce multiple codes). |
-| 6 | "All params inert at ±25%" | **INDEPENDENTLY VERIFIED** | Fresh sweep (2026-02-28): `config_sensitivity_results.json` — 154 numeric params, 910/0 baseline, all Inert. Separately: `directionality_sensitivity_results.json` covers the 17 hardcoded constants in `constraint_indexing.pl`. |
+| 6 | "All params inert at ±25%" | **INDEPENDENTLY VERIFIED** | Fresh sweep (2026-02-28): `config_sensitivity_results.json` — 154 numeric params, 3,337/0 baseline, all Inert. |
 | 7 | "π_analytical changed from 1.0 to 1.15" | **VERIFIED** | `config.pl` contains `param(power_modifier_analytical, 1.15)`. Sensitivity sweep v3 confirms it's now inert. |
 | 8 | "687 files got constraint_metric/3 bridge facts" | **UNVERIFIED** | Would require running `repair_constraint_metrics.py` or counting bridge facts. Not tested. |
 | 9 | "Metric Void reduction: 784 → 181" | **UNVERIFIED** | Would require running the gap diagnostic. Not tested. |

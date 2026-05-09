@@ -1,7 +1,7 @@
 ## Project Context
 
 Prolog+Python research infrastructure implementing Deferential Realism (DR).
-76+ Prolog modules, 3,337 main-corpus constraints (`prolog/testsets/`), 189 SOTU
+91+ Prolog modules, 3,337 main-corpus constraints (`prolog/testsets/`), 189 SOTU
 constraints (`prolog/testsets_sotu/`), 100+ Python analysis scripts.
 
 Key constraint: Correctness and reproducibility matter most. Model provenance

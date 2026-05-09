@@ -1,96 +1,73 @@
 # Quick Start
 
+This guide covers the primary workflows for interacting with the Deferential Realism research infrastructure.
+
 ## Prerequisites
 
-- **SWI-Prolog** (for Layer 2 validation)
-- **Gemini API access** (for Layer 1 generation, optional)
-- **Claude API access** (for Layer 3 synthesis, optional)
+- **SWI-Prolog** (for the classification engine)
+- **Python 3.10+** (for the analytical pipeline)
+- **API Access** (Gemini for generation, Haiku for research, optional)
 
-## Running Layer 2 Audit Only
+## The Primary Workflow: The Orchestrator
 
-Test the validation system on existing models:
+The most efficient way to generate and analyze new constraints is via the orchestrator. This automates the full lifecycle from research to essay synthesis.
+
+```bash
+python3 agent/c-orchestrator.py "some topic or domain"
+```
+
+**What the Orchestrator does:**
+1. **Research:** Web search grounding via Haiku.
+2. **Decompose:** UKE_SCOPE protocol selects axes and produces a manifest.
+3. **Generate:** Sonnet generates constraint stories; saves JSON to `json/` and Prolog to `prolog/testsets/`.
+4. **Corpus Update:** Runs the analysis pipeline to re-classify the full 3,337-constraint corpus.
+5. **Reports:** Generates enhanced structural reports for the new constraints.
+6. **Essay:** Synthesizes a draft essay from the structural findings.
+
+After the run, review `outputs/constraint_reports/*.md` and the draft essay in `outputs/essays/`.
+
+## Running the Analysis Pipeline
+
+To run the analysis pipeline on the existing corpus without generating new stories:
+
+```bash
+python3 python/run_pipeline.py
+```
+
+This updates `outputs/pipeline_output.json` with the latest classifications, H¹ values, and structural metrics across the 3,337 main-corpus and 189 SOTU-derived constraints.
+
+## Running the Prolog Engine
+
+To verify the engine's internal consistency and run the validation suite:
 
 ```bash
 cd prolog
-swipl
-
-?- [validation_suite].
-?- run_scenario('./testsets/columbia_2026_elections.pl', columbia_2026).
+swipl -g "[stack], [validation_suite], run_dynamic_suite, halt" -t "halt(1)"
 ```
 
-**Output:**
-```
-[CONSTRAINT INVENTORY: REALITY AUDIT]
-  Constraint | Claimed | Actual | Action
-  ----------------------------------------------------------------------
-  c1_term_limit | mountain | mountain | navigate
-  c2_runoff | rope | noose | replace
-  c3_coalition | rope | tangled_rope | reform
+Current state: 910/0 tests passing.
 
-[STRUCTURAL SIGNATURE ANALYSIS]
-  c1_term_limit: natural_law (confidence: high)
-    → No alternatives ever existed, universal inaccessibility
-  
-  c2_runoff: constructed_constraint (confidence: high)
-    → Active enforcement detected (suppression=0.55, resistance=0.65)
-    → Alternatives existed (single-round, ranked-choice)
+## Manual Constraint Authoring (Layer 1 & 2)
 
-[PERSPECTIVAL GAP ANALYSIS]
-  c2_runoff:
-    - Individual (powerless): mountain
-    - Institutional (manager): rope
-    → GAP: Same structure experienced as unchangeable by powerless,
-            as coordination tool by powerful
-```
+If you prefer to author constraints manually:
 
-## Generating New Models (Layer 1)
-
-**Manual Process:**
-
-1. Copy `prompts/constraint_story_generation_prompt.md`
-2. Provide domain description to Gemini:
+1. **Generation:** Use the prompt in `prompts/constraint_story_generation_prompt.md` with an LLM.
+2. **Placement:** Save the resulting Prolog file to `prolog/testsets/`.
+3. **Validation:** Run the Prolog test harness to check for schema compliance:
+   ```prolog
+   ?- [validation_suite].
+   ?- run_scenario('./testsets/your_file.pl', your_id).
    ```
-   Analyze the constraint topology of [domain description].
-   Generate a complete Prolog constraint story file.
-   ```
-3. Save output as `testsets/[domain_name].pl`
-4. Run Layer 2 validation (see above)
-
-**What Layer 1 generates:**
-
-- Base measurements (extractiveness 0.0-1.0, suppression 0.0-1.0)
-- 3+ indexed perspectives (different WHO/WHEN/WHERE/HOW MUCH)
-- Test suite proving indexical variance
-- Beneficiary/victim asymmetry markers
-- Model commentary explaining reasoning
-
-**Validation:** Layer 2 auto-repairs syntax errors, checks schema compliance
 
 ## Synthesizing Analysis (Layer 3)
 
-**Manual Process:**
+The final step is synthesizing high-level insights from the structural data.
 
-1. Run Layer 2 audit, capture executive summary
-2. Perform web search for empirical evidence (Perplexity)
-3. Provide Claude with UKE_W protocol:
-   ```
-   Execute UKE_W v1.0 protocol.
-   
-   Substrate: [Layer 2 audit summary]
-   Evidence: [Web search results]
-   Voice: [System Architect | Critical Essayist]
-   Temperature: [hot | warm | cool]
-   
-   Generate constraint story essay.
-   ```
-4. Claude outputs essay with metadata blocks
+1. Capture the executive summary from the orchestrator or enhanced reports.
+2. Use the UKE_W protocol (`protocols/uke_write_v2.1.md`) to guide an LLM in synthesizing a formal essay.
+3. The result is a "Deferential Realist" analysis that traces every claim back to the structural invariants surfaced by the engine.
 
-**What Layer 3 produces:**
+---
 
-- Evidence-backed narrative (all claims trace to substrate)
-- Collapsed Omegas (uncertainties → defensible assertions)
-- Falsifiable predictions (explicit success/failure criteria)
-- Stakes anchor (why this matters beyond being true)
-- Quality gate validation (substrate fidelity, counterfactuals, etc.)
-
-
+**Last updated:** May 9, 2026
+**Status:** Sync with Corpus v3,337 | Paper v6.11
