@@ -1,0 +1,475 @@
+# Project Orientation: Deferential Realism Research Infrastructure
+
+**Status as of 2026-05-09 (git HEAD: `55df084a`)**
+
+This document is operational reference for any model or person entering the project. It describes what the repo contains, how the apparatus is organized, what the paper sequence has established, and what work is open. It does not re-argue the framework. For the framework, see `deferential_realism_paper_v6.11.md`. For the intellectual arc, see `when_apparatus_sharpens_taxonomy.md`.
+
+---
+
+## 1. Repository Layout
+
+```
+structural_dynamics_model/
+├── prolog/               # All Prolog code — the engine
+│   ├── testsets/         # 3,337 constraint testsets (.pl files)
+│   ├── testsets_sotu/    # 189 SOTU-derived testsets
+│   ├── archives/         # Historical prolog versions (not active)
+│   ├── config.pl         # Single source of truth for param/2 facts
+│   ├── drl_core.pl       # Primary classifier (classify_from_metrics/6)
+│   ├── constraint_indexing.pl  # Hub 1 and Hub 2 implementations
+│   ├── signature_detection.pl  # Structural signature cascade
+│   ├── narrative_ontology.pl   # Schema and ontology
+│   ├── stack.pl          # Module loader (system entry point)
+│   ├── validation_suite.pl     # Test harness
+│   └── [70+ other modules]
+├── python/               # Analysis scripts and pipeline orchestration
+│   ├── run_pipeline.py   # Full pipeline orchestrator
+│   ├── linter.py         # Testset linter (import as library)
+│   ├── sheaf_audit.py    # Sheaf audit script
+│   ├── metric_audit.py   # Metric audit script
+│   ├── bc_coupling_audit.py    # BC coupling audit
+│   ├── config_sensitivity_sweep.py     # Param sensitivity
+│   ├── directionality_sensitivity_sweep.py
+│   └── [100+ other scripts]
+├── json/                 # 3,337 constraint JSON files (pipeline output)
+├── outputs/              # Generated reports and audit outputs
+│   ├── metric_audit_writeup.md     # Metric audit paper (primary)
+│   ├── sheaf_audit_writeup.md      # Sheaf audit paper (primary)
+│   ├── metric_audit_results.{md,json}
+│   ├── sheaf_audit_results.{md,json}
+│   ├── bc_coupling_audit.{md,json}
+│   └── [many other reports]
+├── docs/                 # Framework papers and documentation
+│   ├── deferential_realism_paper_v6.11.md    # Framework paper
+│   ├── when_apparatus_sharpens_taxonomy.md   # Synthesis paper
+│   ├── coupling_structure_evidence.md        # BC coupling + metric-sensitivity audit doc
+│   ├── [13+ framework papers]
+│   └── [many working/draft documents]
+├── agent/                # Agent essays, UKE analysis, perspective experiments
+├── essays/               # Essays generated from corpus
+├── sotu/                 # State of the Union corpus data and processing
+├── AUDIT.md              # Audit findings index
+├── CLAUDE.md             # Project instructions (checked into repo)
+└── quick_start.md
+```
+
+**Key entry points for a new model:**
+
+1. `prolog/drl_core.pl` — understand `classify_from_metrics/6` at line 164 (the canonical threshold predicate; all classification routes here)
+2. `prolog/constraint_indexing.pl` — understand `extractiveness_for_agent/3` at line 513 (Hub 1) and `effective_immutability/3` at lines 191–223 (Hub 2)
+3. `prolog/config.pl` — all threshold values, 178 `param/2` declarations
+4. `docs/deferential_realism_paper_v6.11.md` — framework spec
+5. `docs/when_apparatus_sharpens_taxonomy.md` — synthesis of the audit chain
+
+---
+
+## 2. Running the System
+
+**Prolog tests:**
+```bash
+cd prolog && swipl -g "[stack], [validation_suite], run_dynamic_suite, halt" -t "halt(1)"
+```
+Current state: 910/0 tests passing (requires `data_repair.pl`, which `stack.pl` loads).
+
+**Python pipeline:**
+```bash
+python3 python/run_pipeline.py
+```
+
+**Linter** (must be imported as library, not run directly):
+```python
+from linter import lint_file
+```
+
+**Config sensitivity sweep:**
+```bash
+python3 python/config_sensitivity_sweep.py
+python3 python/directionality_sensitivity_sweep.py
+```
+
+---
+
+## 3. Classification Architecture
+
+### 3.1 The Canonical Predicate
+
+All classification routes through `classify_from_metrics/6` in `prolog/drl_core.pl` at line 164. Signature: `classify_from_metrics(+C, +BaseEps, +Chi, +Supp, +Context, -Type)`. The six type atoms are: `mountain`, `rope`, `tangled_rope`, `snare`, `scaffold`, `piton` (plus `naturalized` and `unknown` for edge cases).
+
+The predicate is called from:
+- `drl_core:dr_type/3` at line 419 (the primary API predicate)
+- `drl_core:metric_based_type_indexed/3` at line 112 (type-specific tests)
+- `drl_composition.pl` at line 176 (via `drl_modal_logic` facade)
+- `transition_paths.pl` at line 131 (via `drl_lifecycle` facade)
+- `data_validation:infer_expected_type/2` (validation layer)
+- 7 additional callers
+
+### 3.2 Two-Hub Architecture
+
+The observer-position inputs to `classify_from_metrics/6` arrive through two independent subsystems, documented in `docs/two_hub_architecture.md`.
+
+**Hub 1 — Power-Scaled Extraction** (`prolog/constraint_indexing.pl`):
+- Entry: `extractiveness_for_agent/3` at line 513
+- Chain: calls `derive_directionality/3` at line 400 → `sigmoid_f/2` → chi score
+- Formula: χ = ε × f(d(P, E)) × σ(S), where:
+  - d is derived from `power_role_heuristic(P, HasBen, HasVic, BaseD)` plus `exit_modulation(E)` (marginal, ±0.05)
+  - For constraints lacking structural data, canonical fallback: d(P) only
+  - σ is read from scope context directly (independent of P, despite prior v6.11 notation)
+- Axes: **P** (dominant) and **S** (scope modifier); **E** is present but marginal
+
+**Hub 2 — Effective Immutability** (`prolog/constraint_indexing.pl`):
+- Entry: `effective_immutability/3` at lines 191–223; `effective_immutability_for_context/2` at line 226
+- Implementation: discrete lookup table mapping (TimeHorizon, ExitOptions) → mountain | rope
+- Called at: `classify_from_metrics/6` mountain gate (line 300) and rope gate (line 341)
+- Axes: **T** and **E** (E is the only axis present in both hubs)
+
+**Design separation rationale:** Hub 1 measures "how much extraction does this observer experience?" (continuous); Hub 2 measures "does this observer perceive the constraint as changeable?" (discrete). Collapsing them would lose the `tangled_rope` vs `snare` distinction (high extraction, mutable vs high extraction, immutable).
+
+### 3.3 Canonical Observer Site
+
+Four canonical observer contexts, defined at `prolog/constraint_indexing.pl:930–939`:
+
+| Label | Power | TimeHorizon | ExitOptions | Scope |
+|---|---|---|---|---|
+| U₁ | powerless | biographical | trapped | local |
+| U₂ | moderate | biographical | mobile | national |
+| U₃ | institutional | generational | arbitrage | national |
+| U₄ | analytical | civilizational | analytical | global |
+
+The 156-point product site (`site_contexts_product/1` at line 956) expands to 4P × 3T × 5E × 3S minus 24 category-error exclusions. Excluded: `powerful`, `organized` (power atoms); `immediate`, `historical` (time horizons); `identity_locked` (exit option); `regional`, `continental`, `universal` (scopes). The universal-scope exclusion is load-bearing: see §7 (Sheaf Audit Finding).
+
+### 3.4 Configuration
+
+`prolog/config.pl` is the single source of truth. 178 `param/2` declarations, approximately 154 numeric (sweepable). All 154 numeric params are inert at ±25% (config sensitivity sweep). The 17 directionality constants (`power_role_heuristic/4`, `exit_modulation/2`) are also inert at ±25% (directionality sensitivity sweep). Sweep results: `python/config_sensitivity_results.json`, `python/directionality_sensitivity_results.json`.
+
+Key threshold params (in `config.pl`):
+- `snare_epsilon_floor` (ε lower bound for snare)
+- `rope_chi_ceiling` (χ upper bound for rope; the boundary the scope-modifier finding depends on)
+- `*_chi_*` params for χ comparisons; `*_epsilon_*` params for ε comparisons
+
+---
+
+## 4. Corpus
+
+**Main corpus:** 3,335 constraints as Prolog testsets in `prolog/testsets/` (3,337 files counted; minor discrepancy from deleted/archived entries). Each testset declares: `constraint_claim/2`, `constraint_metric/3`, structural properties (`constraint_beneficiary/2`, `constraint_victim/2`, etc.), and claimed type. JSON counterparts in `json/`.
+
+**SOTU corpus:** 189 constraints in `prolog/testsets_sotu/`, derived from State of the Union addresses. Shares zero constraint IDs with the main corpus by construction.
+
+**Data repair:** `prolog/data_repair.pl` adds `constraint_metric/3` bridge facts for constraints that had only `domain_priors:base_extractiveness/2` (no `narrative_ontology:constraint_metric/3`). 687 files were repaired via `python/repair_constraint_metrics.py`. Coverage: 99.7%.
+
+**Pipeline output:** `python/run_pipeline.py` generates per-constraint JSON in `json/` and a master `pipeline_output.json`. Pre-computed H¹, Arakelov heights, and classifications live in the pipeline JSON — read from there, do not recompute from scratch.
+
+---
+
+## 5. Paper Sequence
+
+The project's papers form a coherent trajectory. Listed in intellectual-development order.
+
+### 5.1 `debugging_philosophy.md`
+
+**Summary:** Introduces the trifurcation: Type A (frame drift), Type B (structural inconsistency), Type C (indexical underspecification). Each type has a distinct repair: frame-fix, axiom-revise, index-specify. Worked through classical paradoxes (Ship of Theseus, Sorites, Russell, Sleeping Beauty). Foundational taxonomy for all subsequent papers.
+
+**Relationship to apparatus:** Conceptual foundation. The apparatus was built to implement this taxonomy.
+
+**Status:** Canonical reference. Extended by `asymmetry_of_failure_types.md` and `when_apparatus_sharpens_taxonomy.md`.
+
+---
+
+### 5.2 `asymmetry_of_failure_types.md`
+
+**Summary:** Extends the trifurcation from taxonomy to architecture. The three types divide unevenly when built into a working apparatus: Type B is detectable by formal computation; Type C is preventable by schema-layer required indexing; Type A is governable by paired synchronic discipline and diachronic monitoring plus external review. Develops why these are three different relations between failure and formalism, not three intensities of the same operation.
+
+**Relationship to apparatus:** Maps each type to its apparatus implementation. Establishes that the cover-story mechanism makes multi-layer Type B detection necessary (not redundant). Notes that Type A's thin apparatus coverage is architecturally motivated, not accidental.
+
+**Status:** Canonical. Refined by `when_apparatus_sharpens_taxonomy.md`.
+
+---
+
+### 5.3 `when_splitting_isnt_solving.md`
+
+**Summary:** Formalizes the distinction between clean and structured Type C splits using sheaf theory. A split is clean if local observer-position assignments glue into a global section (sheaf); it is structured if they don't (presheaf). The presheaf/sheaf boundary is the formal criterion for "when disambiguation resolves the question vs. when the disagreement is itself informative." Presents the product-site expansion (4 → 156 contexts) and confirms binary site-stability (zero crossings).
+
+**Key numbers:** 3,301-constraint corpus; zero crossings in either direction on the canonical → product-site expansion; three-regime classification (genuine sheaf, fragile presheaf, manifest presheaf).
+
+**Relationship to apparatus:** Connects the cohomological obstruction (H¹) computation in `prolog/grothendieck_cohomology.pl` to the AB contextuality criterion. Formalizes what the gauge orbit and H¹ computations are doing.
+
+**Status:** Canonical. The product-site binary-stability result is v6.11's primary empirical claim. The claim was qualified (not falsified) by the sheaf audit — see §7.4.
+
+---
+
+### 5.4 `metrics_as_routing.md`
+
+**Summary:** Foundation document (labeled as such in the file header). Establishes that framework metrics — ε, χ, power modifiers, thresholds — are routing mechanisms and governance stands, not truth measurements. A threshold at ε = 0.46 is a deliberate line drawn on uncertain ground, not an empirically validated boundary. The distinction is not a technicality: misreading routing as measurement makes the framework look like precision theater.
+
+**Relationship to apparatus:** Applies to all metrics across the framework. Grounding document for reading `config.pl` thresholds correctly.
+
+**Status:** Canonical. Not superseded.
+
+---
+
+### 5.5 `observers_not_humans_v5.md`
+
+**Summary:** Argues that DR's load-bearing claims are structural (apply to any system whose internal states update differentially under position-relative net flows), not anthropocentric. The right physics analogy is universality class: different microscopic dynamics flow to the same coarse-grained orbit structure. Proposes a cross-class validation program (RL agents, animal data, embodied AI). Includes pre-registered falsification protocol for AI agent systems. Documents the negative association between parametric fragility (Arakelov height) and epistemic opacity (FCR/FSM detection): χ² = 10.01, p = 0.0016, Cramér's V = 0.055 — the two diagnostics index opposite failure modes.
+
+**Relationship to apparatus:** v5 (current) corrects v4's mechanism account of the sign-flip: replaced flow-asymmetry derivation with structural-role routing description grounded in `prolog/config.pl` and `prolog/constraint_indexing.pl:430–526`. Perfect threshold separation at d_zero ≈ 0.1642, N=3,314. The fragility/opacity cross-tab is in `docs/results/fragility_cross_tab.md`.
+
+**Status:** Current version is v5. Prior versions (v2–v4) in `docs/` are superseded.
+
+---
+
+### 5.6 `contextuality_paper_v1.md`
+
+**Summary:** Argues that DR's presheaf structure is not analogous to Abramsky-Brandenburger (AB) contextuality — it is structurally identical. The AB obstruction mechanism and the DR H¹ obstruction are the same mathematical object in different domains. All 879 manifest-presheaf constraints (H¹ > 0) are strongly contextual; no global assignment exists in principle. Snare contextuality fraction = 1.0. Mountain contextuality fraction = 0.027 (11/403). The H¹ gap ({1, 2} forbidden) is a structural fingerprint with no direct quantum analogue, arising from discrete site geometry.
+
+**Key numbers:** 3,334-constraint corpus; 879 manifest-presheaf constraints; snare CF = 1.000; mountain CF = 0.027 (11/403); H¹ gap: values 1 and 2 forbidden. The SOTU corpus check (151/151 mountain decoupling) is corpus-limited and not used as evidence for the framework's mountain contextuality fraction.
+
+**Relationship to apparatus:** The K₄ compatibility structure (all four observer positions jointly classifiable) is confirmed empirically — `orbit_vector/2` succeeds on all 3,334 constraints. The mountain CF = 0.027 is computed on the canonical 4-point site.
+
+**Status:** Current (v1). Canonical reference for the contextuality claim.
+
+---
+
+### 5.7 Supporting Framework Papers
+
+**`when_consensus_isnt_coherence.md`** — Develops the cover-story mechanism as a Type B failure mode not captured by single-layer detection. The 62.1 percentage-point gap between chi-layer sign-flip rate (62.4%) and type-layer sign-flip rate (0.3%) for `tangled_rope` constraints is the central finding. The 2×2 cross-tabulation result (parametric fragility and epistemic opacity are *negatively* associated, χ² = 10.01, p = 0.0016) establishes that the two diagnostics catch opposite failure modes. Status: canonical; the companion to `asymmetry_of_failure_types.md` for Type B.
+
+**`when_frame_isnt_foreground.md`** — Argues that Type A is not one of three parallel failure components but the apparatus's primary medium: every engine run compares the LLM-authored constraint hypothesis against the axiom frame. Type B and Type C are subsidiary to this inter-reasoner drift-detection architecture. Documents that Type A material is granularity-promiscuous: a predicate-level investigation found 46 Type A predicates across 10 files, with two-thirds outside the one module the prior module-level audit classified as Type A. Notes deprecated paths (`dr_type_at/4` in `drl_composition.pl`, `classify_snapshot/3` in `transition_paths.pl`) still loaded at runtime. Status: canonical; the counterpart to the `asymmetry_of_failure_types.md` Type A analysis.
+
+**`when_nodes_arent_the_unit.md`** — Develops the network-level cover-story hypothesis: a configuration of individually classifiable constraints that collectively produce type-surface consensus concealing chi-level flow asymmetry no single-constraint diagnostic can detect. Key empirical findings: the top 19 super-spreaders form a near-clique with 80.1% internal edge density, all FCR-detected, all `false_ci_rope`. H¹ > 0 and gauge-variance are definitionally the same 879-constraint set. Gauge-variant constraints are distributed uniformly across the coupling graph (enrichment 0.93×, not clustered). Opens the network-level cover-story question without closing it. Status: the formalism gap preventing completion of the network extension is named explicitly; this remains open.
+
+**`when_metrics_arent_measurement.md`** — Develops the cluster-space taxonomy. Three distinct cluster spaces (observer, idea, metric) with observer × metric correlating at ρ = 0.776 and idea space uncorrelated with both (ρ ≈ 0.20). Central finding: within anomaly regions, the metric representation is invariant to detection pathway — different detection paths (declared-beneficiary mountains, FCR-caught mountains, FSM-caught mountains) produce metrically indistinguishable constraints while sitting at different observer-space distances from clean mountains. The apparatus is observer-complete and idea-incomplete. Closes with a companion-paper handoff to idea-site cohomology. Status: canonical; the empirical basis for the routing-not-measurement claim.
+
+---
+
+### 5.8 `coupling_structure_evidence.md`
+
+**Summary:** Evidence document for two audit passes on a 10-slice working family. First finding (BC coupling): observer specification and structural variation are coupled, forward-asymmetric (Spearman ρ = 0.350 forward, p = 0.037; ρ = −0.121 reverse, n.s.), and geometry-driven (replacing ordinal PTES distance with empirical classification disagreement collapses ρ to 0.010). Second finding (position-geometry metric sensitivity): axis dominance is metric-specific. T leads under extractive fraction (Metric A only); E leads under type entropy, total variation, cover-story flip rate (Metrics B, D, E); S leads under mountain-fraction negative control (Metric C). Cross-metric agreement is weak (ρ range 0.09–0.43, one negative). Three §7 reconciliation pointers, partially closed by subsequent audits.
+
+**Audit data:** `outputs/bc_coupling_audit.{md,json}`, `outputs/position_geometry_metric_sensitivity.{md,json}`.
+
+**Status:** Evidence document; not superseded. §4.4 of the paper summarizes the metric audit refinements as in-place updates.
+
+---
+
+### 5.9 Metric Audit (`outputs/metric_audit_writeup.md`)
+
+**Full title:** *When T Isn't the Boundary: Implementation Structure and Position-Space Geometry in the Deferential Realism Apparatus*
+
+**Summary:** Three audits operationalize the two-hub functional decomposition. Audit 1: E-weighted Hamming produces no measurable advantage over unweighted Hamming (all differences < 0.05). Audit 2: Hub 2 dominates Hub 1 under 4/5 structural metrics (hub2 partial ρ exceeds hub1 by ≥ 0.10 under Metrics A, B, D, E); hubs are statistically independent predictors (ρ = −0.088). Audit 3: T-dominance under Metric A concentrates in Hub-2-internal pairs (T partial ρ = 0.577 internal, 0.147 spanning) — it is a within-rope-group T effect (T partial ρ = 0.762 in E-fixed n=36 cell), not a Hub-2-boundary effect. Code-paper discrepancy in v6.11 Axiom 2: d should be d(P, E) (not d(P)) and σ should be σ(S) (not σ(S(P))); correction applied across 8 locations in v6.11.
+
+**Source:** `outputs/metric_audit_writeup.md`, `outputs/metric_audit_results.{md,json}`, `outputs/audit3_te_robustness.{md,json}`, `python/metric_audit.py`.
+
+**Status:** Complete. Findings incorporated into `coupling_structure_evidence.md` §4.4 and into `when_apparatus_sharpens_taxonomy.md`.
+
+---
+
+### 5.10 Sheaf Audit (`outputs/sheaf_audit_writeup.md`)
+
+**Full title:** *When the Site Changes the Boundary: Scope Modifier Mechanics and the Limits of Site-Stability*
+
+**Summary:** Tests the binary site-stability claim (H¹ = 0 vs H¹ > 0 invariant under site expansion) on the 10-slice Tier-1 working family. Result: 68.98% binary-crossing rate — 1,940 sheaf→presheaf crossings of 2,834 working-set constraints. The mechanism is specific: 91.0% of crossings (1,766) are driven by the 10-slice family's U_4 context using `scope_modifier(universal) = 1.0` instead of the canonical `scope_modifier(global) = 1.2`. At the analytical observer position, σ(universal) = 1.0 drops χ below `rope_chi_ceiling`, reclassifying extraction-adjacent constraints as mountain. The 1,940 crossings concentrate in `tangled_rope` (1,569, 80.9%) and `snare` (337, 17.4%).
+
+The claim is not falsified: the canonical-to-product result stands. The qualification: site-stability holds *only on sites respecting the scope design constraint* (σ ≥ σ(global) at the analytical observer position). The product site's `site_contexts_product/1` already excluded universal scope for this reason; the exclusion was undocumented until the sheaf audit.
+
+**Source:** `outputs/sheaf_audit_writeup.md`, `outputs/sheaf_audit_results.{md,json}`, `python/sheaf_audit.py`.
+
+**Status:** Complete. Findings incorporated into `when_apparatus_sharpens_taxonomy.md` §5.
+
+---
+
+### 5.11 `when_apparatus_sharpens_taxonomy.md` (Synthesis Paper)
+
+**Summary:** Extends the trifurcation a third time with what the audit chain revealed about internal architecture within each type. Three findings: (1) Type C has functional decomposition — the (P, T, E, S) index processes through the two-hub architecture, not a flat 4D space; (2) Type A drift can occur between specification and implementation artifacts — the Axiom 2 notation drift (d(P) → d(P, E); σ(S(P)) → σ(S)) was invisible in the paper for years while the implementation had the correct form; (3) Type B axiomatic claims have a scope-design dimension — the site-stability claim holds only on the design domain, and specifying the domain explicitly is the repair (between Type B and Type C in character). The synthesis does not propose new failure types; it locates internal architecture within the existing three.
+
+**Relationship to apparatus:** Closes the audit chain. Proposes two unimplemented engine extensions (§7, discussed in §8 below).
+
+**Status:** Current. This is the most recent paper in the project sequence (May 2026).
+
+---
+
+### 5.12 `deferential_realism_paper_v6.11.md` (Framework Paper)
+
+**Summary:** The primary framework document. Defines the six constraint types, the PTES index, the dual-threshold classification (χ AND ε), the canonical 4-point site and 156-point product site, Axioms 1–6, the cover-story mechanism, the dimensional hierarchy P > E ≈ S > T (from within-block product-site analysis), and the binary site-stability claim. Corrected in the current version: Axiom 2 notation updated at 8 locations to write d(P, E) and σ(S); construct distinction between within-block hierarchy and between-slice hub decomposition added.
+
+**Prior versions:** `deferential_realism_paper.md` through `deferential_realism_paper_v6.10.md` in `docs/`. These are superseded by v6.11.
+
+**Status:** Current framework reference. Not a successor to any other paper; it is the substrate all other papers operate against.
+
+---
+
+## 6. Empirical Findings Inventory
+
+The following findings are established by the audit chain. Each is anchored to its source.
+
+### 6.1 Canonical Site (4-Point) and Product Site (156-Point) — Binary Stability
+
+**Claim:** H¹ = 0 vs H¹ > 0 is preserved with zero crossings between the canonical 4-point site and the 156-point product-site expansion.
+
+**Source:** `when_splitting_isnt_solving.md`; confirmed in `deferential_realism_paper_v6.11.md`.
+
+**Qualification (from sheaf audit):** The claim holds for sites respecting σ ≥ σ(global) at the analytical position. The product site's exclusion of universal scope is load-bearing. See §7.4.
+
+### 6.2 Mountain Contextuality Fraction
+
+**Claim:** Mountain contextuality fraction = 0.027 (11 of 403 mountain-classified constraints on the canonical site are contextual). Snare contextuality fraction = 1.000.
+
+**Source:** `contextuality_paper_v1.md` §7.2. The 11 contextual mountains have orbit [mountain, scaffold, scaffold, mountain] (H¹ = 4).
+
+**What this is not:** The SOTU corpus check found 151/151 mountain decoupling, but this is corpus-limited (author convention), not evidence for the 0.027 fraction. The 0.027 figure is canonical-site only.
+
+### 6.3 Two-Hub Architecture: Hub 2 Dominance
+
+**Claim:** Hub 2 (T, E → discrete mountain/rope immutability) captures more between-slice structural variance than Hub 1 (P, S → χ via sigmoid) under 4/5 structural-distance metrics. Hub-level predictors are statistically independent (ρ = −0.088).
+
+**Source:** `outputs/metric_audit_writeup.md` Audit 2. Hub2 partial ρ exceeds Hub1 by ≥ 0.10 under Metrics A, B, D, E. The exception is Metric C (mountain-fraction negative control, where Hub 1 leads slightly).
+
+**Code anchors:**
+- Hub 1: `prolog/constraint_indexing.pl:513` (`extractiveness_for_agent/3`), calling `derive_directionality/3` at line 400
+- Hub 2: `prolog/constraint_indexing.pl:191–226` (`effective_immutability/3`, `effective_immutability_for_context/2`)
+
+### 6.4 Within-Rope-Group T-Axis Effect
+
+**Claim:** T-axis dominance under extractive fraction (Metric A) concentrates in pairs where Hub 2 returns the same output (both rope). T partial ρ = 0.577 in internal pairs (n=112 of 253), 0.147 in spanning pairs. Under E-fixed restriction: T partial ρ = 0.762 (n=36).
+
+**Source:** `outputs/metric_audit_writeup.md` Audit 3; `outputs/audit3_te_robustness.{md,json}`.
+
+**Implication:** The prior "T-dominance" label is metric-specific to extractive fraction and does not generalize. The mechanism is variation in Hub 1's χ output across time-horizon values within the rope-immutability regime — T modulates extraction magnitude within rope, not the mountain/rope boundary itself.
+
+### 6.5 Axiom 2 Notation Correction
+
+**Claim:** v6.11's Axiom 2 formula χ = ε × f(d(P)) × σ(S(P)) contained two notation errors. In the structural derivation path, d depends on both P and E (via `power_role_heuristic` plus `exit_modulation`), making the correct notation d(P, E). σ is a function of S read directly from context, independent of P; the correct notation is σ(S), not σ(S(P)).
+
+**Source:** `outputs/metric_audit_writeup.md`; surfaced from audit of `prolog/constraint_indexing.pl:381–406`.
+
+**Resolution:** Corrected in v6.11 across 8 locations. The canonical fallback path (no structural data) does have d = d(P) only; the notation drift affected the general formula.
+
+### 6.6 BC Coupling: Forward-Asymmetric, Geometry-Driven
+
+**Claim:** On the 10-slice Tier-1 working family, PTES distance between observer slices predicts structural distance (forward Spearman ρ = 0.350, p = 0.037). Structural-profile similarity does not predict classification agreement (reverse ρ = −0.121, n.s.). Replacing ordinal PTES distance with empirical classification disagreement collapses the forward correlation to ρ = 0.010 — the coupling is position-space geometry, not classification labels.
+
+**Source:** `coupling_structure_evidence.md` §3; `outputs/bc_coupling_audit.{md,json}`; `python/bc_coupling_audit.py`.
+
+### 6.7 Axis Dominance Is Metric-Specific
+
+**Claim:** Across five structural-distance metrics on the 24-slice expansion: T leads under Metric A (extractive fraction); E leads under Metrics B (type entropy), D (total variation), E (cover-story flip rate); S leads under Metric C (mountain-fraction negative control). Cross-metric ρ ranges 0.09–0.43, with one negative. No single axis ranking is robust across metrics.
+
+**Source:** `coupling_structure_evidence.md` §4; `outputs/position_geometry_metric_sensitivity.{md,json}`.
+
+### 6.8 Sheaf Audit: Scope-Conditional Site-Stability
+
+**Claim:** On the 10-slice Tier-1 working family, binary crossing rate = 68.98% (1,940 of 2,834 working-set constraints cross from canonical sheaf to presheaf). Of these, 91.0% (1,766) are driven by the universal-scope U_4 context. σ(universal) = 1.0 vs σ(global) = 1.2 drops χ below `rope_chi_ceiling` at the analytical position, reclassifying extraction-adjacent constraints as mountain. 1,758 of 1,766 U_4-driven crossings produce mountain at U_4. Crossings concentrate in `tangled_rope` (1,569, 80.9%) and `snare` (337, 17.4%).
+
+**Qualification:** The canonical-to-product binary stability result is not falsified. The site-stability claim holds when σ ≥ σ(global) at the analytical observer position. Sites including universal scope at the analytical position produce systematic crossings.
+
+**Source:** `outputs/sheaf_audit_writeup.md`; `outputs/sheaf_audit_results.{md,json}`; `python/sheaf_audit.py`.
+
+### 6.9 Construct Distinction: Within-Block Hierarchy vs. Between-Slice Hub Decomposition
+
+**Claim:** The v6.11 dimensional hierarchy P > E ≈ S > T (from within-block product-site analysis) and the hub-level finding (Hub 2 > Hub 1 under structural-distance metrics) measure different constructs and do not contradict each other. Within-block analysis asks: holding (T, E, S) constant, how much does classification vary across P levels? Hub-level analysis asks: do slice pairs that differ on (T, E) show more structural distance than pairs differing on (P, S)?
+
+**Source:** `coupling_structure_evidence.md` §7 (third reconciliation pointer); `when_apparatus_sharpens_taxonomy.md` §3.
+
+---
+
+## 7. Open Work
+
+The following items are open as of 2026-05-09. "Open" means not resolved by any completed audit pass.
+
+### 7.1 First §7 Reconciliation Pointer: Canonical-Inclusive Slice Family
+
+The 10-slice working family's canonical U₃ = (institutional, generational, arbitrage, national) is absent; the family has U_3_imm (immediate) and U_3_civ (civilizational) as nearest analogs. Running the BC coupling and metric-sensitivity audits on a slice family containing the canonical 4 points as a subset would let audit results compose cleanly with the framework's canonical-site numbers.
+
+**Source:** `coupling_structure_evidence.md` §7 first pointer; `outputs/sheaf_audit_writeup.md` remaining open items.
+
+### 7.2 Third §7 Reconciliation Pointer: Within-Block Analysis on 10-Slice Family
+
+v6.11's P > E ≈ S > T hierarchy comes from within-block analysis on the 156-context product site. Replicating within-block analysis on the 10-slice family would test whether the hierarchy persists under the slice-family change, holding the within-block construct fixed. This has not been run.
+
+**Source:** `coupling_structure_evidence.md` §7 third pointer.
+
+### 7.3 Arakelov Fragility on 10-Slice Contexts
+
+The sheaf audit's Arakelov sub-question (Q3) is deferred. Computing fragile/genuine sub-partition for 10-slice contexts requires MaxEnt distributions at those contexts. `arakelov_height.pl` uses `maxent_distribution_raw/3`, populated at pipeline-time for `site_contexts/1` contexts only. Adding `site_contexts_ten_slice/1` and re-running the pipeline would unlock this; estimated ~30-minute infrastructure task per the sheaf audit writeup.
+
+**Source:** `outputs/sheaf_audit_writeup.md` §8.
+
+### 7.4 Fragile-Presheaf χ-Distribution Check on 1,569 Tangled-Rope Crossings
+
+The 1,569 `tangled_rope` constraints that cross from sheaf to presheaf under the 10-slice family's U_4 universal-scope context are candidates for inspection: do they show a distinctive χ-distribution at the analytical position that distinguishes them from the 2,245-constraint `tangled_rope` population at large? This check was proposed in the context of the sheaf audit but has not been run.
+
+**Source:** Derived from `outputs/sheaf_audit_writeup.md` §6 type-breakdown finding.
+
+### 7.5 Two Unimplemented Engine Extensions
+
+From `when_apparatus_sharpens_taxonomy.md` §7:
+
+1. **Scope-design validator on `site_contexts/N` predicates.** Would programmatically catch the failure mode the sheaf audit surfaced: any future site predicate that includes universal scope at the analytical position would be flagged before assertions about binary-boundary stability are made against it. The check is: for any proposed site, verify σ ≥ σ(global) at the analytical observer position.
+
+2. **MaxEnt parameterization for arbitrary sites.** Would allow Arakelov fragility to be computed on alternate sites (not just the canonical-site contexts). Unlocks §7.3 and enables the fragile/genuine sub-partition on any expansion site.
+
+Neither adds new findings; both harden the apparatus against rediscovering what the audits already established.
+
+### 7.6 Network-Level Cover Story (Open Question)
+
+`when_nodes_arent_the_unit.md` names the formalism gap that prevents completing the network-level cover-story extension: the contamination model propagates purity (a scalar) but not the chi-vs-type gap signal. Whether the near-clique of 19 super-spreaders constitutes a network-level cover story requires network-chi vs. network-type comparison — a construct that has not been operationalized. This is an open research question, not a deferred audit pass.
+
+---
+
+## 8. Methodological Practices
+
+### 8.1 Audit-Pass Structure
+
+Completed audit passes follow: **recon** (establish what data exists, what questions are answerable) → **proposal** (state exactly what will be run and what would constitute each verdict) → **execution** (run scripts, save raw output) → **writeup** (analyze from evidence, not documentation). The recon and proposal stages are preserved in `outputs/` (e.g., `outputs/metric_audit_recon.md`, `outputs/metric_audit_proposal.md`, `outputs/sheaf_audit_recon.md`).
+
+Epistemic discipline: every finding cites tool output or code inspection. Docs claims verified independently; unverifiable claims marked. Findings that merely confirm documentation are low-value; contradictions and extensions get detailed treatment.
+
+### 8.2 Git and Version Control
+
+The framework author uses git as the primary version-control substrate. Papers are drafted, audited (by Claude instances), and refined iteratively. The commit log records development arc; meaningful commits checkpoint completed passes before moving to the next. Do not amend published commits without asking.
+
+### 8.3 Model Provenance
+
+Which LLM built which testsets is tracked as a feature. The SOTU corpus, the DR corpus, and the UKE corpus all have distinct provenance. Cross-corpus analyses require recognizing this (constraint IDs don't overlap; classification conventions may differ slightly).
+
+### 8.4 Paper Voice and Naming
+
+Framework papers are formal and definitional, with mathematical notation where appropriate — see `metrics_as_routing.md`, `when_apparatus_sharpens_taxonomy.md` for tone templates. Audit writeups are brief, evidence-anchored, with explicit "what this evidence does and does not support" sections. The "When X Isn't Y" title form is project style, not random.
+
+---
+
+## 9. Documents Not Listed in the Task Brief
+
+The following files in `docs/` were not listed in the task brief and may be relevant to a future reader.
+
+**Active documents:**
+- `docs/two_hub_architecture.md` — Implementation-level explanation of the hub decomposition; includes the classical oracle test (8/790 constraints with H¹ > 0 show high MaxEnt divergence; 100% correlation between probabilistic divergence and cohomological obstruction). Canonical reference for the Hub 1 / Hub 2 architectural description.
+- `docs/logic.md` — Formal classification rules and thresholds. UTF-8 encoding was repaired in Feb 2026 (prior versions had mojibake from double-encoded characters). This is the formal spec document; `config.pl` should match it.
+- `docs/trifurcation_mapping_audit.md` — Module-level audit of trifurcation coverage; the audit whose frame-drift is diagnosed in `when_frame_isnt_foreground.md`.
+- `docs/results/fragility_cross_tab.md` — The 2×2 cross-tabulation of parametric fragility vs. epistemic opacity referenced in `observers_not_humans_v5.md` and `when_consensus_isnt_coherence.md`.
+- `docs/observers_not_humans_v2.md` through `v4.md` — Superseded by v5.
+
+**Draft/working documents** (may be incomplete or superseded):
+- `docs/sheaf_presheaf_bridge_paper.md` — An earlier draft version of `when_splitting_isnt_solving.md` (labeled "Draft Skeleton — v0.5"); `when_splitting_isnt_solving.md` is the canonical version.
+- Many `deferential_realism_paper_v*.md` files — Prior framework versions; v6.11 supersedes all.
+
+**Audit infrastructure docs** in `docs/`:
+- `blocking_gate_audit_20260414.md`, `false_ci_rope_audit.md`, `scaffold_piton_gate_audit.md`, `logic_divergence_audit.md`, `report_generator_audit.md` — Specific sub-system audits; generally superseded by the findings incorporated into the paper sequence.
+
+---
+
+## 10. Inconsistencies and Flags for Review
+
+The following are surfaced for the framework author to decide on; none is resolved here.
+
+**1. `sheaf_presheaf_bridge_paper.md` vs `when_splitting_isnt_solving.md`:** The former is labeled "Draft Skeleton — v0.5" and its content appears to be an earlier version of the latter. If `sheaf_presheaf_bridge_paper.md` is fully superseded, it could be archived.
+
+**2. Deprecated paths in `drl_composition.pl` and `transition_paths.pl`:** `when_frame_isnt_foreground.md` notes that `dr_type_at/4` in `drl_composition.pl` and `classify_snapshot/3` in `transition_paths.pl` carry DEPRECATED markers but are still loaded at runtime. Whether the deprecated path diverges from the canonical sigmoid pipeline was not established by the `when_frame_isnt_foreground.md` analysis. This is a live risk if divergence exists.
+
+**3. `site_contexts_product/1` scope exclusion is undocumented in v6.11:** The product site excludes universal scope, and the comment in `prolog/constraint_indexing.pl:954` ("Excluded scope values: regional, continental, universal") does not explain why. The sheaf audit established why (σ(universal) = 1.0 at the analytical position produces systematic crossings). v6.11 could document this explicitly.
+
+**4. "Giant component" terminology in apparatus outputs:** `when_nodes_arent_the_unit.md` clarifies that the "8,650 nodes" figure is a 3-hop reachability set, not component membership; the actual largest connected component is approximately 3,026 constraints. The apparatus's standard output uses "giant component" for the reachability figure. If other documents or reports cite the "giant component" number as component size, this is a potential source of confusion.
+
+**5. Line-number anchors in this document:** Line numbers cited here were verified against git HEAD `55df084a` (2026-05-09). The high-churn files are `prolog/constraint_indexing.pl` (990 lines) and `prolog/signature_detection.pl` (1,218 lines). Any future model reading this document should verify line numbers before citing them, as they may drift with edits.
+
+---
+
+*Document generated 2026-05-09 from direct repo inspection. All numerical claims trace to cited source documents. Anchored line numbers checked against `prolog/constraint_indexing.pl` and `prolog/drl_core.pl` at current HEAD.*
