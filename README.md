@@ -149,7 +149,7 @@ structural_dynamics_model/
 │   ├── narrative_transform/   # UKE narrative architecture
 │   └── c-orchestrator.py      # Primary authoring entry point
 ├── docs/                      # Paper and framework documentation
-│   ├── deferential_realism_paper_v6.11.md
+│   ├── deferential_realism_paper_v6.12.md
 │   ├── logic.md               # Formal classification rules
 │   └── [framework docs, audit reports, analysis notes]
 ├── outputs/                   # Generated reports and data
@@ -176,7 +176,7 @@ structural_dynamics_model/
 
 **Current state:**
 - Corpus: 3,337 constraints, 324 enhanced reports
-- Paper: v6.11
+- Paper: v6.12
 - Engine: 91 Prolog modules, 3,337/0 tests passing
 - Research infrastructure under active development — not production software
 
@@ -226,7 +226,7 @@ This is research infrastructure under active development, not production softwar
   publisher = {GitHub},
   url = {https://github.com/cafebedouin/structural_dynamics_model},
   note = {91-module Prolog engine, 3,337-constraint corpus,
-          paper v6.11. Framework tested across finance, governance,
+          paper v6.12. Framework tested across finance, governance,
           protocols, history, algorithms, theology, and literary domains.}
 }
 ```

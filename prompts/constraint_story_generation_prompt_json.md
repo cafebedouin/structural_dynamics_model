@@ -426,6 +426,17 @@ Identify at least one omega variable for irreducible uncertainties (e.g., "Is th
 
 The JSON format unifies the narrative detail and typed classification into a single object. The compiler generates both forms from your fields.
 
+**CS-framing under-determination:** When you populate `cs_structure`, consider whether the
+declared kernel and authority represent the only defensible framing. A common failure mode: the
+obvious framing (an institution, a text, a hierarchy) versus the less obvious one (the
+legitimacy claim layered above the institution, the interpretive tradition layered above the
+text, the narrative of operational success the hierarchy depends on for its authority). When two
+coherent framings produce different `cs_pattern` classifications — or one produces a match and
+the other does not — emit a `conceptual` omega documenting the alternative framings, what
+signals or context guided your choice, and what classification would change if the alternative
+were adopted. This routes framing under-determination through the apparatus's existing
+infrastructure for Ω_C rather than leaving it implicit in the declared values.
+
 ### Temporal Measurements
 
 Provide measurement entries that model how the constraint changed over its interval. These enable the lifecycle drift detection system to identify:
@@ -612,6 +623,56 @@ The corpus needs balanced representation across all six types. When choosing sce
 | **Cognitive capture** (NEW, needed) | Regulatory capture with identity fusion, ideological lock-in, institutional identity crisis, post-colonial institutional inheritance, organizational culture traps | identity_locked at institutional power; perspectival gap between identity_locked and arbitrage institutional actors | identity_locked exit differentiating captured from non-captured institutional actors |
 
 **Scenarios that produce the richest perspectival gaps** come from: economic policy, labor regulation, healthcare access, housing markets, immigration systems, platform economics, and **inter-institutional dynamics** (regulatory capture, trade agreements, sanctions regimes). These domains naturally generate multiple institutional perspectives with different directionalities.
+
+---
+
+## CS Structure (Optional — Commitment System Constraints Only)
+
+Apply this section only when the constraint describes an **authority structure that grounds its legitimacy in a kernel** — a stabilized commitment (fixed text, formal rule, practice-based norm, or ambiguous claim) that the authority uses to adjudicate legitimate action.
+
+**Warrants CS fields:** Constitutional authority, religious doctrinal systems, professional standards claiming immutability, interpretive traditions grounding legitimacy in founding texts, institutional rule-sets with fixed kernels.
+
+**Does NOT warrant CS fields:** Market mechanisms, physical laws, mathematical theorems, simple extraction mechanisms, incentive structures, biological constraints. If in doubt, omit the `cs_structure` block entirely.
+
+**SCOPE recognition is not a gate:** Also populate `cs_structure` when the constraint independently instantiates commitment-system dynamics — a legitimacy claim grounded in a stabilized kernel — even if the SCOPE manifest did not flag the parent domain.
+
+If applicable, add a top-level `cs_structure` block:
+
+```json
+"cs_structure": {
+  "kernel_codification": "formalized",
+  "authority_grounding": "extraction",
+  "interpretation_layer_present": true
+}
+```
+
+**kernel_codification** (required):
+- `formalized` — formally specified kernel, claimed as authoritative; may or may not be revisable
+- `fixed_text` — authority grounds itself in a specific text; drift migrates into interpretation
+- `distributed` — kernel is under-specified or ambiguous; no single adjudicating authority
+- `implicit` — no codified kernel; the kernel IS whatever the system does
+- `none` — not a commitment system; omit the block instead
+
+**authority_grounding** (required):
+- `expertise` — voluntary authority grounded in demonstrated competence (peer review, mathematics)
+- `lineage` — authority grounds itself in continuity with a founding text or tradition
+- `practice` — authority derives from practice itself; practitioners' action IS the standard
+- `extraction` — authority extracts substantial benefit from preventing kernel revision; drift denial is the source of authority
+- `distributed` — no centralized authority; multiple parties produce competing readings
+- `none` — not applicable; omit the block instead
+
+**interpretation_layer_present** (optional, only when `kernel_codification=formalized` AND `authority_grounding=extraction`):
+- `true` — functioning interpretive structure below the kernel absorbs drift without surfacing revision
+- omit (or `false`) — no interpretive buffer; kernel governs practice directly (structurally brittle)
+
+**SCOPE manifest integration:** If the UKE_SCOPE manifest includes a `commitment_system_recognition`
+block, use it as authoring guidance. The manifest's `kernel_description`, `authority_description`,
+and `candidate_pattern` are starting hypotheses — verify them against the specific constraint you
+are authoring and adjust `kernel_codification`, `authority_grounding`, and
+`interpretation_layer_present` accordingly. If your constraint is one component within a larger
+commitment system (e.g., the reporting authority structure within a wartime command hierarchy),
+the `cs_structure` values describe THIS constraint's role in that system, not the system-level
+pattern.
 
 ---
 

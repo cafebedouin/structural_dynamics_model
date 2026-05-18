@@ -154,7 +154,7 @@ constraint_history(C, Context, Timeline) :-
     constraint_indexing:valid_context(Context),
     findall(state(T, Type),
             (narrative_ontology:measurement(_, C, _, T, _),
-             dr_type_at(C, T, Context, Type)),
+             classify_at_time(C, T, Context, Type)),
             TimelineUnsorted),
     sort(TimelineUnsorted, Timeline).
 
@@ -164,21 +164,17 @@ constraint_history(C, Timeline) :-
     constraint_indexing:default_context(Ctx),
     constraint_history(C, Ctx, Timeline).
 
-%% dr_type_at(+C, +Time, +Context, -Type)
-% Determines constraint type at specific time FROM SPECIFIC CONTEXT
-% Delegates to drl_core:classify_from_metrics/6 (Single Source of Truth)
-%% DEPRECATED PATH: This code uses power_modifier/2 (direct multiplication) for χ computation.
-%% The primary classification path (drl_core:dr_type/3) uses the sigmoid pipeline via
-%% derive_directionality/3 → sigmoid_f/2, which reads canonical_d_* params, not power_modifier_*.
-%% Perturbing power_modifier_analytical does not affect dr_type/3 output.
-%% TODO: Migrate to sigmoid pipeline. See issue: legacy-power-modifier-migration.
-%% Audit date: 2026-03-12
-dr_type_at(C, Time, Context, Type) :-
+%% classify_at_time(+C, +Time, +Context, -Type)
+%  Determines constraint type at a specific time from a given context.
+%  Uses sigmoid pipeline: χ = ε × f(d) × σ(S).
+classify_at_time(C, Time, Context, Type) :-
     (narrative_ontology:measurement(_, C, suppression_requirement, Time, Supp) -> true ; Supp = 0.5),
     (narrative_ontology:measurement(_, C, extractiveness, Time, BaseX) -> true ; BaseX = 0.5),
-    Context = context(agent_power(Power), _, _, _),
-    constraint_indexing:power_modifier(Power, Modifier),
-    Chi is BaseX * Modifier,
+    Context = context(_, _, _, spatial_scope(Scope)),
+    constraint_indexing:derive_directionality(C, Context, D),
+    constraint_indexing:sigmoid_f(D, PowerMod),
+    constraint_indexing:scope_modifier(Scope, ScopeMod),
+    Chi is BaseX * PowerMod * ScopeMod,
     drl_core:classify_from_metrics(C, BaseX, Chi, Supp, Context, Type).
 
 %% transformation_detected(+C, +FromType, +ToType, -T1, -T2)

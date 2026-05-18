@@ -332,6 +332,29 @@
         }
       },
       "additionalProperties": false
+    },
+
+    "cs_structure": {
+      "type": "object",
+      "description": "Commitment-system classification. Omit entirely for non-CS constraints.",
+      "required": ["kernel_codification", "authority_grounding"],
+      "additionalProperties": false,
+      "properties": {
+        "kernel_codification": {
+          "type": "string",
+          "enum": ["formalized", "fixed_text", "distributed", "implicit", "none"],
+          "description": "How the kernel is specified and treated."
+        },
+        "authority_grounding": {
+          "type": "string",
+          "enum": ["expertise", "lineage", "practice", "extraction", "distributed", "none"],
+          "description": "What grounds the authority structure's legitimacy."
+        },
+        "interpretation_layer_present": {
+          "type": "boolean",
+          "description": "Only applicable when kernel_codification=formalized AND authority_grounding=extraction. True = functioning interpretive substructure below the kernel absorbs drift."
+        }
+      }
     }
   },
 
@@ -502,6 +525,30 @@
               "mandatrophy_resolved": { "const": true }
             },
             "required": ["mandatrophy_resolved"]
+          }
+        }
+      }
+    },
+    {
+      "$comment": "CS structure: interpretation_layer_present is only valid when kernel_codification=formalized.",
+      "if": {
+        "properties": {
+          "cs_structure": {
+            "properties": {
+              "interpretation_layer_present": { "const": true }
+            },
+            "required": ["interpretation_layer_present"]
+          }
+        },
+        "required": ["cs_structure"]
+      },
+      "then": {
+        "properties": {
+          "cs_structure": {
+            "properties": {
+              "kernel_codification": { "const": "formalized" }
+            },
+            "required": ["kernel_codification"]
           }
         }
       }

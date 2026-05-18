@@ -1,0 +1,216 @@
+{
+  "header": {
+    "constraint_id": "operational_overextension_cascade",
+    "version": "1.0",
+    "generated_date": "2025-01-10",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "opext"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "Operational Overextension Cascade in Multi-Axis Military Operations",
+    "topic_domain": "military_operations/information_warfare/organizational_pathology",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "senior_command_structure",
+      "political_leadership"
+    ],
+    "victims": [
+      "russian_tactical_units",
+      "frontline_commanders",
+      "logistics_personnel"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Frontline Tactical Unit",
+      "comment": "PERSPECTIVE 1: FRONTLINE TACTICAL UNIT (SNARE) \u2014 Trapped in simultaneous offensive operations without sufficient force density, artillery support, or logistics capacity to achieve any single objective. Cannot refuse orders, cannot consolidate gains, cannot withdraw without authorization. Experiences maximum extraction: ordered to attack in six directions simultaneously while lacking the combat power to succeed in any. The constraint extracts lives, equipment, and unit cohesion with no coordination benefit visible at this level."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Frontline Commander",
+      "comment": "PERSPECTIVE 2: FRONTLINE COMMANDER (SNARE) \u2014 Constrained by hierarchical command structure and career consequences of reporting failure. Receives operationally impossible orders (advance on six axes with insufficient forces) but cannot refuse or request consolidation without risking relief of command. Some agency to manage tactical execution within constraints, but the strategic overextension is imposed from above. High extraction: bears responsibility for unachievable objectives while lacking authority to refuse them."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Logistics and Support Network",
+      "comment": "PERSPECTIVE 3: LOGISTICS NETWORK (TANGLED ROPE) \u2014 Organized logistics personnel experience both coordination function (multi-axis operations require complex supply coordination) and asymmetric extraction (impossible demands, blame for operational failures caused by overextension). The constraint coordinates supply distribution across multiple axes but extracts through impossible requirements: maintain six offensive operations simultaneously with supply lines designed for sequential operations. Mixed experience: genuine coordination problem layered with extractive blame assignment."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Senior Command Structure",
+      "comment": "PERSPECTIVE 4: SENIOR COMMAND (ROPE) \u2014 Benefits from the constraint through political credit for 'offensive operations on all fronts' regardless of tactical outcomes. Experiences the multi-axis strategy as coordination: demonstrating initiative, maintaining pressure, preventing Ukrainian force concentration. Can exit or modify strategy but chooses not to because the political benefits (appearing aggressive, claiming initiative) outweigh tactical costs borne by subordinates. Low effective extraction: the constraint runs toward this agent."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Political Leadership",
+      "comment": "PERSPECTIVE 5: POLITICAL LEADERSHIP (ROPE) \u2014 Primary beneficiary. Multi-axis offensive operations provide domestic propaganda value ('advancing on all fronts'), international signaling ('maintaining initiative'), and political cover for strategic failures. The constraint coordinates political messaging: simultaneous operations create the appearance of strength regardless of territorial outcomes. Maximum benefit, minimal cost: political leadership captures narrative advantage while tactical units bear operational costs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The Ukrainian Defense Forces",
+      "comment": "PERSPECTIVE 6: UKRAINIAN DEFENSE (TANGLED ROPE) \u2014 External actor that experiences both coordination benefit (Russian overextension creates predictable vulnerability patterns, enables efficient counterattack targeting) and extraction cost (must maintain defensive readiness across six axes simultaneously, cannot concentrate forces for decisive counteroffensive). The constraint coordinates Ukrainian defensive strategy (where to position reserves, which axes to reinforce) but extracts through sustained operational tempo requirements. Mixed experience: Russian overextension is both opportunity and burden."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational analytical perspective, the constraint is a snare: a self-reinforcing pathology where beautiful reports feedback (upstream constraint) prevents recognition of overextension, causing continued force dispersion, causing operational failures, causing more beautiful reports to conceal failures. The cascade is structurally extractive: it consumes combat power without achieving strategic objectives, sustained by information suppression rather than coordination logic. High extractiveness, high suppression, no genuine coordination function at the system level."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "force_density_threshold",
+      "question": "What minimum force density (troops per kilometer of front) is required to achieve breakthrough vs. mere contact in modern mechanized warfare?",
+      "resolution_mechanism": "Historical analysis of successful vs. failed offensive operations; correlation between force density, artillery support density, and territorial gains; comparison with Ukrainian force density in successful counteroffensives (Kharkiv, Kherson)",
+      "impact": "If threshold is 5:1 attacker advantage: current Russian operations are tactically rational but under-resourced. If threshold is 3:1: operations are fundamentally irrational, indicating organizational pathology rather than resource constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Minimum force density required for breakthrough operations"
+    },
+    {
+      "id": "command_information_accuracy",
+      "question": "What percentage of ground-truth tactical failures are accurately reported up the command chain vs. concealed or misrepresented in beautiful reports?",
+      "resolution_mechanism": "Comparison of Russian military communications (intercepted) with official reports; analysis of claimed vs. confirmed territorial gains; correlation between reported success and subsequent force redeployment patterns",
+      "impact": "If >70% accurate: overextension is strategic choice with full information. If <30% accurate: overextension is sustained by information suppression, confirming snare classification from analytical perspective.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Accuracy of tactical reporting up command chain"
+    },
+    {
+      "id": "political_vs_military_objective_primacy",
+      "question": "Are multi-axis operations driven by military logic (preventing Ukrainian force concentration) or political logic (maintaining appearance of initiative)?",
+      "resolution_mechanism": "Analysis of operational timing relative to political events (domestic propaganda cycles, international summits, leadership speeches); comparison of force allocation with militarily rational concentration points; assessment of whether operations continue after achieving stated military objectives",
+      "impact": "If military primacy: constraint is tangled rope (genuine coordination with extraction costs). If political primacy: constraint is snare (extraction sustained by political theater).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether operations serve military or political objectives"
+    },
+    {
+      "id": "cascade_reversibility",
+      "question": "Can the overextension cascade be reversed by operational pause and force consolidation, or has it created irreversible structural damage (unit cohesion loss, logistics collapse, command trust breakdown)?",
+      "resolution_mechanism": "Historical analysis of military organizations recovering from overextension; assessment of Russian force reconstitution capacity; measurement of unit cohesion indicators (desertion rates, surrender rates, combat effectiveness) over time",
+      "impact": "If reversible: constraint is temporary snare with exit path. If irreversible: constraint has caused permanent organizational degradation, confirming high long-term extractiveness.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether overextension cascade can be operationally reversed"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45,
+      "id_override": "opext_theater_initial"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.55,
+      "id_override": "opext_theater_early"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.62,
+      "id_override": "opext_theater_mid"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.68,
+      "id_override": "opext_theater_late"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38,
+      "id_override": "opext_extract_initial"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45,
+      "id_override": "opext_extract_early"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52,
+      "id_override": "opext_extract_mid"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.58,
+      "id_override": "opext_extract_late"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "The operational overextension cascade emerges when military forces conduct simultaneous offensive operations across six or more axes without sufficient force density to achieve breakthroughs or consolidate gains in any single sector. This constraint is downstream of the beautiful reports feedback loop: information suppression prevents senior command from recognizing overextension, causing continued force dispersion, causing operational failures, causing more concealment. The cascade extracts combat power, unit cohesion, and logistics capacity from tactical units while providing political and career benefits to senior command and political leadership. The constraint exhibits high theater ratio (0.68) because multi-axis operations create the appearance of initiative and aggression regardless of territorial outcomes \u2014 the performance of offensive action substitutes for the achievement of operational objectives. Ukrainian forces experience the constraint as both opportunity (Russian overextension creates predictable vulnerabilities) and burden (must maintain defensive readiness across all axes). The constraint is sustained by hierarchical command structures that prevent tactical commanders from refusing operationally impossible orders and by political incentives that reward the appearance of offensive action over territorial consolidation.",
+    "key_agents": [
+      "Russian Tactical Units: Primary victim (powerless/trapped) \u2014 ordered to attack in six directions simultaneously without sufficient combat power to succeed in any; cannot refuse orders or consolidate gains",
+      "Frontline Commanders: Secondary victim (moderate/constrained) \u2014 receive impossible orders but cannot refuse without career consequences; bear responsibility for unachievable objectives",
+      "Logistics Personnel: Mixed victim-beneficiary (organized/constrained) \u2014 coordinate complex multi-axis supply operations but bear blame for failures caused by overextension",
+      "Senior Command Structure: Primary beneficiary (institutional/arbitrage) \u2014 capture political credit for 'offensive operations on all fronts' regardless of tactical outcomes",
+      "Political Leadership: Primary beneficiary (institutional/arbitrage) \u2014 extract domestic propaganda value and international signaling benefit from multi-axis operations",
+      "Ukrainian Defense Forces: External actor (powerful/mobile) \u2014 experience both coordination benefit (Russian overextension creates targeting opportunities) and extraction cost (sustained defensive tempo)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 identifies the cascade as organizational pathology sustained by information suppression"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts combat power, lives, equipment, and unit cohesion from tactical units while providing political benefits to senior command. The extraction is substantial but not maximal \u2014 some tactical units achieve local gains, and the multi-axis strategy does prevent Ukrainian force concentration to some degree. However, the ratio of resources consumed to objectives achieved indicates significant extractive overhead. Suppression (0.72): High. Tactical commanders cannot refuse operationally impossible orders without career consequences. Information about overextension and failure is suppressed through beautiful reports feedback. Hierarchical command structure prevents bottom-up correction. Ukrainian counterattacks reveal the suppression: Russian forces are consistently surprised by attacks in sectors they reported as secure. Theater ratio (0.68): High. Multi-axis offensive operations create the appearance of initiative and strength regardless of territorial outcomes. The performance of offensive action (number of active axes, frequency of attacks, claims of advances) substitutes for the achievement of operational objectives (territorial consolidation, breakthrough, enemy force destruction). The theater has increased over time as the gap between claimed and achieved objectives has widened.",
+    "directionality_logic": "Frontline tactical units are victims with trapped exit options \u2014 they experience maximum extraction because they bear the operational costs of overextension with no ability to refuse orders or consolidate gains. Frontline commanders are victims with constrained exit options \u2014 they have some tactical agency but cannot refuse strategic overextension without career consequences. Logistics personnel are organized victims with constrained exit \u2014 they coordinate complex operations but bear extractive blame for failures caused by impossible requirements. Senior command and political leadership are institutional beneficiaries with arbitrage exit \u2014 they capture political credit while bearing minimal operational costs and can modify strategy but choose not to because political benefits outweigh tactical costs borne by subordinates. Ukrainian forces are powerful external actors with mobile exit \u2014 they experience mixed coordination benefit (Russian overextension creates opportunities) and extraction cost (sustained defensive tempo). The analytical observer identifies the system-level pathology: a self-reinforcing cascade where information suppression prevents recognition of overextension.",
+    "perspectival_gap": "The constraint demonstrates extreme perspectival divergence. Frontline tactical units experience pure extraction (snare) \u2014 ordered to achieve impossible objectives with insufficient resources, no exit, no coordination benefit visible at their level. Senior command and political leadership experience pure coordination (rope) \u2014 the multi-axis strategy coordinates political messaging, demonstrates initiative, and provides career benefits regardless of tactical outcomes. Logistics personnel experience mixed coordination and extraction (tangled rope) \u2014 genuine supply coordination problems layered with extractive blame assignment. Ukrainian forces experience the constraint as both opportunity and burden (tangled rope) \u2014 Russian overextension creates targeting opportunities but requires sustained defensive readiness. The analytical observer identifies the cascade as organizational pathology (snare at system level) \u2014 a self-reinforcing cycle sustained by information suppression rather than coordination logic. The gap between the beneficiary's rope and the victim's snare is the diagnostic signature: what appears as coordination from above is experienced as pure extraction from below.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by demonstrating that the same structural phenomenon \u2014 simultaneous operations across six axes without sufficient force density \u2014 is genuinely coordination from the political leadership's perspective (coordinates messaging, demonstrates initiative) and genuinely extraction from the tactical unit's perspective (consumes combat power without achieving objectives). The classification is not 'which type is correct?' but 'which structural position are you measuring from?' The snare classification at the analytical level is not a contradiction of the rope classification at the institutional level \u2014 it is the recognition that what coordinates political theater extracts operational capacity. The beautiful reports feedback loop (upstream constraint) sustains the cascade by preventing information about overextension from reaching decision-makers who could consolidate forces. The mandatrophy is resolved by recognizing that coordination at one level (political messaging) can be extraction at another level (tactical operations) when information suppression prevents feedback correction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of beautiful_reports_feedback_loop. The upstream constraint (information suppression in hierarchical command structures) enables the downstream constraint (operational overextension) by preventing recognition of force dispersion and tactical failures. The two constraints have different extractiveness values reflecting different structural mechanisms: beautiful_reports extracts information accuracy and command trust; operational_overextension extracts combat power and unit cohesion. They form a cascade: information suppression \u2192 continued overextension \u2192 operational failures \u2192 more information suppression."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "mod",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "beautiful_reports_feedback_loop"
+    ]
+  }
+}

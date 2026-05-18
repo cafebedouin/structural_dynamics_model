@@ -16,6 +16,7 @@
 :- use_module(constraint_indexing).
 :- use_module(boltzmann_compliance, []).
 :- use_module(signature_detection, []).
+:- use_module(cs_pattern_detection, []).
 :- use_module(purity_scoring, []).
 :- use_module(structural_signatures).   % facade kept for backward-compat qualified calls
 :- use_module(drl_core).

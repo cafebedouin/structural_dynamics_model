@@ -258,6 +258,19 @@ def build_header(pipeline_data):
             parts.append(f"{n} {band} ({pct}%)")
         lines.append(f"  Confidence: {' | '.join(parts)}")
 
+    # CS pattern distribution (when present)
+    cs_dist = val.get("cs_pattern_distribution") if val else None
+    if cs_dist:
+        cs_total = cs_dist.get("total_with_cs_fields", 0)
+        if cs_total:
+            pat_counts = cs_dist.get("pattern_counts", {})
+            cs_parts = [f"{v} {k}" for k, v in sorted(pat_counts.items()) if k != "no_pattern_match"]
+            verdicts_fired = sum(cs_dist.get("cs_verdicts_fired", {}).values())
+            lines.append(
+                f"  CS patterns: {cs_total} classified | {', '.join(cs_parts)}"
+                + (f" | {verdicts_fired} verdicts fired" if verdicts_fired else "")
+            )
+
     lines.append("")
     return "\n".join(lines)
 
@@ -1728,6 +1741,149 @@ def build_theorem_instantiation(constraint_id, pipeline_data, orbit_data):
     return "\n".join(lines)
 
 
+# --- CS Pattern Detection ---
+
+_CS_PATTERN_PROSE = {
+    "marked_revision": (
+        "Marked Revision: The kernel is precisely specified; authority is voluntary "
+        "and grounded in expertise. Drift is formalized as a proposal-check-absorb "
+        "cycle — acknowledgment is marked and legible rather than silently absorbed. "
+        "Mathematics works this way; healthy long-term relationships and programming "
+        "languages with formal deprecation procedures work this way. The pattern is "
+        "stable when acknowledgment capacity matches environmental change rate. Failure "
+        "mode: authority structure develops extraction stakes in kernel preservation "
+        "that did not exist at founding."
+    ),
+    "interpretive_accretion": (
+        "Interpretive Accretion: The text is fixed; authority grounds itself in "
+        "continuity with the founding text. The formal mechanism for changing the text "
+        "does not function or does not exist. Drift migrates entirely into interpretation "
+        "— everyone insists the kernel controls while operational meaning shifts "
+        "substantially. Brahmanical commentary on the Vedas works this way; Catholic "
+        "doctrinal development and common law jurisprudence work this way. The pattern "
+        "is durable across millennia when the interpretive layer can absorb the "
+        "operational drift the environment produces."
+    ),
+    "diffuse_reconstruction": (
+        "Diffuse Reconstruction: The kernel is under-specified or intentionally "
+        "ambiguous. No centralized authority structure exists to adjudicate. Many "
+        "parties produce mutually incompatible readings claiming the same source. "
+        "The pattern persists indefinitely but lacks operational coherence — it often "
+        "serves strategic purposes for parties who benefit from operational ambiguity. "
+        "The failure condition is the persistent state rather than an event."
+    ),
+    "implicit_practice": (
+        "Implicit Practice: There is no codified kernel — the kernel is whatever the "
+        "system does. Authority is grounded in practice itself; drift is the mechanism "
+        "rather than a failure of it. The UK constitution works this way; craft "
+        "traditions transmitting tacit knowledge through apprenticeship work this way. "
+        "The pattern is stable as long as practice remains coherent. Breakdown is "
+        "severe when practice loses coherence because there is no fixed referent to "
+        "reconstruct from."
+    ),
+    "anchored_fixity_with_accretion": (
+        "Anchored Fixity (with interpretive buffer): The kernel is formalized; the "
+        "authority structure grounds its legitimacy in the kernel's unchangeability "
+        "and extracts substantial benefit from preventing revision. Paired with a "
+        "functioning interpretive substructure below the kernel that absorbs drift "
+        "without surfacing revision. The Hindu Vedic-Brahmanical system, post-development "
+        "Catholic doctrine, and the Confucian commentary tradition operate this way. "
+        "This configuration can persist millennia: the unrevisable kernel is preserved "
+        "while the interpretive layer does the acknowledgment work the kernel cannot do."
+    ),
+    "anchored_fixity_brittle": (
+        "Anchored Fixity (brittle): The kernel is formalized; the authority structure "
+        "grounds its legitimacy in the kernel's unchangeability and extracts substantial "
+        "benefit from preventing revision. No interpretive buffer exists below the kernel "
+        "— the kernel is supposed to govern operational practice directly. This "
+        "configuration is structurally brittle: it produces accumulating gap and "
+        "catastrophic breakdown when environmental change exceeds kernel-governance "
+        "capacity. The Spartan Lycurgan system is the canonical civilizational instance; "
+        "certain forms of religious fundamentalism and trauma responses that treat the "
+        "precipitating event as unrevisable kernel instantiate the same pattern at "
+        "smaller scales."
+    ),
+}
+
+_CS_VERDICT_PROSE = {
+    "false_marked_revision": (
+        "Signals conflict with Marked Revision claim: suppression, theater, or "
+        "enforcement patterns suggest the revision mechanism is not functioning or "
+        "is not voluntary."
+    ),
+    "false_interpretive_accretion": (
+        "Signals conflict with Interpretive Accretion claim: coordination type or "
+        "theater/suppression levels are inconsistent with lineage-grounded authority "
+        "operating through interpretation."
+    ),
+    "false_diffuse_reconstruction": (
+        "Signals conflict with Diffuse Reconstruction claim: suppression or coordination "
+        "type suggests a concentrated enforcer rather than truly distributed authority."
+    ),
+    "false_implicit_practice": (
+        "Signals conflict with Implicit Practice claim: natural-law emergence flag, "
+        "high theater, or high suppression are inconsistent with practice-grounded "
+        "authority."
+    ),
+    "false_anchored_fixity_accretion": (
+        "Signals conflict with Anchored Fixity (with buffer) claim: enforcement "
+        "coordination type or high suppression suggests the interpretive layer may "
+        "not be functioning."
+    ),
+    "false_anchored_fixity_brittle": (
+        "Signals conflict with Anchored Fixity (brittle) claim: identity coordination "
+        "type and moderate suppression suggest a possible informal interpretive buffer "
+        "— consider interpretation_layer_present: true."
+    ),
+}
+
+
+def build_cs_pattern_section(constraint_id, pipeline_data):
+    """CS pattern classification section — L2, after theorem instantiation.
+
+    Returns None when CS fields are absent (legacy constraint or non-CS constraint).
+    Returns a string section when CS fields are present.
+    """
+    if pipeline_data is None:
+        return None
+
+    entry = find_constraint_entry(pipeline_data, constraint_id)
+    if entry is None:
+        return None
+
+    cs_pattern = entry.get("cs_pattern")
+    cs_signals = entry.get("cs_pattern_signals", [])
+    cs_verdicts = entry.get("cs_verdicts", [])
+
+    # Absent when fields missing (legacy constraint)
+    if cs_pattern is None or "cs_fields_absent" in cs_signals:
+        return None
+
+    lines = ["", "--- COMMITMENT SYSTEM PATTERN ---", ""]
+
+    if cs_pattern == "no_pattern_match":
+        lines.append("  No CS pattern detected — signals ambiguous or field combination unrecognized.")
+        if cs_signals:
+            lines.append(f"  (Declared signals: {', '.join(str(s) for s in cs_signals)})")
+        return "\n".join(lines)
+
+    prose = _CS_PATTERN_PROSE.get(cs_pattern)
+    if prose:
+        lines.append(f"  Pattern: {cs_pattern}")
+        lines.append("")
+        lines.append(f"  {prose}")
+        lines.append("")
+        lines.append(f"  Structural signals: {', '.join(str(s) for s in cs_signals)}")
+
+    for verdict in cs_verdicts:
+        verdict_prose = _CS_VERDICT_PROSE.get(verdict, "")
+        lines.append(f"\n  ⚠ {verdict}: {verdict_prose}")
+
+    lines.append("")
+    lines.append("  See: docs/commitment_systems_sketch_v4.md")
+    return "\n".join(lines)
+
+
 # --- Post-Synthesis (T12 flags, from old Section G tail) ---
 
 def build_post_synthesis(constraint_id, pipeline_data):
@@ -2064,7 +2220,7 @@ def assemble_report(header, prolog_output, sections):
 
     Splits Prolog output at the first ==== line after --- LOGICAL FINGERPRINT ---.
     """
-    insertion = "\n".join(sections)
+    insertion = "\n".join(s for s in sections if s is not None)
 
     fp_idx = prolog_output.find(MARKER_FP)
     if fp_idx == -1:
@@ -2149,6 +2305,7 @@ def generate_report(constraint_id, data, iteration_round=None):
     l2_theorems = build_theorem_instantiation(
         constraint_id, data["pipeline"], data["orbit"]
     )
+    l2_cs_pattern = build_cs_pattern_section(constraint_id, data["pipeline"])
     # Level 1: FPN contamination topology (Gap analysis Change 4 — resolved)
     l1_contamination = build_contamination_network(constraint_id, data["pipeline"])
 
@@ -2184,7 +2341,7 @@ def generate_report(constraint_id, data, iteration_round=None):
         build_level_header(1, "SELF-CONSISTENCY"),
         l1_identity, l1_contamination, l1_orbit, l1_omega,
         build_level_header(2, "DIAGNOSTIC CONVERGENCE"),
-        l2_convergence, l2_maxent, l2_wasserstein, l2_cohomology, l2_game_theory, l2_persistence, l2_abductive, l2_axiom2, l2_verdict, l2_theorems,
+        l2_convergence, l2_maxent, l2_wasserstein, l2_cohomology, l2_game_theory, l2_persistence, l2_abductive, l2_axiom2, l2_verdict, l2_theorems, l2_cs_pattern,
         build_level_header(3, "CORPUS POSITIONING"),
         l3_distribution, l3_structural,
     ]

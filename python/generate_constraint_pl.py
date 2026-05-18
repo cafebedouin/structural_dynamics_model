@@ -175,6 +175,14 @@ def _build_multifile_declarations(data):
     if data.get("omegas"):
         decls.append("narrative_ontology:omega_variable/3")
 
+    # CS structure predicates (when cs_structure block is present)
+    if data.get("cs_structure"):
+        decls.append("narrative_ontology:cs_kernel_codification/2")
+        decls.append("narrative_ontology:cs_authority_grounding/2")
+        cs = data["cs_structure"]
+        if cs.get("interpretation_layer_present"):
+            decls.append("narrative_ontology:cs_interpretation_layer_present/1")
+
     # human_readable and topic_domain
     decls.append("narrative_ontology:human_readable/2")
     decls.append("narrative_ontology:topic_domain/2")
@@ -437,6 +445,16 @@ def generate_pl(data):
         emit(f"domain_priors:emerges_naturally({cid}).")
 
     if bp.get("requires_active_enforcement") or bp.get("has_sunset_clause") or bp.get("emerges_naturally"):
+        emit()
+
+    # CS structure fields
+    cs = data.get("cs_structure")
+    if cs:
+        emit("% --- Commitment system structure ---")
+        emit(f"narrative_ontology:cs_kernel_codification({cid}, {cs['kernel_codification']}).")
+        emit(f"narrative_ontology:cs_authority_grounding({cid}, {cs['authority_grounding']}).")
+        if cs.get("interpretation_layer_present"):
+            emit(f"narrative_ontology:cs_interpretation_layer_present({cid}).")
         emit()
 
     # Beneficiaries and victims

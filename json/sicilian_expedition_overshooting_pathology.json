@@ -1,0 +1,196 @@
+{
+  "header": {
+    "constraint_id": "sicilian_expedition_overshooting_pathology",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_sicilian_expedition_overshooting_pathology"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Sicilian Expedition as High-Bandwidth Overshooting Pathology",
+    "topic_domain": "ancient_politics/military_overreach",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "athenian_political_elite",
+      "expedition_architects"
+    ],
+    "victims": [
+      "expeditionary_soldiers",
+      "athenian_strategic_capacity",
+      "allied_forces"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Expeditionary Soldier",
+      "comment": "PERSPECTIVE 1: EXPEDITIONARY SOLDIER (SNARE) \u2014 Conscripted or voluntarily enrolled into an operation authorized by assembly vote but operationally incoherent. No exit option once mobilized. Bears full cost of command failure, logistical collapse, and strategic mismatch. Trapped within a constraint that the outer (assembly) authority imposed without inner (operational) capacity to execute. Maximum suppression \u2014 the soldier cannot refuse a democratic decision, cannot leave mid-campaign, cannot escape the consequences of elite planning failure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Athenian Political Elite",
+      "comment": "PERSPECTIVE 2: ATHENIAN POLITICAL ELITE (TANGLED ROPE) \u2014 Experiences the constraint as both coordination and extraction. The decision coordinates elite political ambitions (imperial expansion, prestige, wealth redistribution to shipbuilders and troops) while extracting unprecedented resources from the treasury and manpower from the citizen body. The elite authorize the expedition, profit from the decision-making authority and resource allocation power, and face lower operational risk than soldiers. Active enforcement required: the assembly vote must be enforced against budget objections and council hesitation. Beneficiaries (political architects) and victims (soldiers and treasury) are distinct. Chi moderates because the elite experience agency \u2014 they can modulate commitment, withdraw, reallocate resources \u2014 but asymmetry remains high."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Allied Syracusan Forces",
+      "comment": "PERSPECTIVE 3: ALLIED SYRACUSAN FORCES (SNARE) \u2014 Promised Athenian support for their conflict with Syracuse but receive incomplete logistical support due to bandwidth collapse. Constrained exit (honor-bound to alliance, dependent on Athenian naval power) but face degraded coordination and resource extraction. The alliance mechanism created suppression: commitment to Athens now carries risk Athens cannot manage. High extraction \u2014 the Syracusan allies are drawn into a larger conflict they cannot control, on terms set by Athenian assembly without their participation."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Athenian Command Structure",
+      "comment": "PERSPECTIVE 4: ATHENIAN COMMAND STRUCTURE (PITON) \u2014 The generals (Nicias, Alcibiades, Lamachos) inherit an operationally incoherent mandate: the assembly authorized an expedition of unprecedented scale without specifying supply chains, force composition, or success criteria. Command becomes performative theater \u2014 generating reports to justify escalation, managing supply shortfalls through improvisation, maintaining morale in a failing operation. The command structure was originally a coordination mechanism (strategic direction, tactical execution) but has degraded into ritual response to assembly pressure. Theater ratio (0.58) reflects that command activity becomes increasingly divorced from operational function \u2014 ceremony of leadership substituting for actual strategic adjustment. The institution persists through inertia, not because it works."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Athenian Strategic Capacity (Systems View)",
+      "comment": "PERSPECTIVE 5: ATHENIAN STRATEGIC CAPACITY (SYSTEMS PERSPECTIVE) \u2014 Organized as a constraint on the city-state itself. Athens authorized commitment rate that exceeded inner operational capacity. The assembly (high-bandwidth outer layer) can make decisions faster than logistics (low-bandwidth inner layer) can execute them. Strategic capacity is the victim: the expedition exhausts the navy's repair cycles, depletes the treasury, constrains future operations, and ultimately undermines the city's ability to defend itself in the Peloponnesian War. The constraint is snare for the system because Athens cannot exit \u2014 once the expedition is authorized and mobilized, the strategic commitment is binding. High suppression: the system is locked into escalation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / OVERSHOOTING PATHOLOGY THESIS (MOUNTAIN CANDIDATE) \u2014 From a civilizational timescale, high-bandwidth outer-layer decision-making producing inner-layer operational collapse appears as a recurring natural law of political systems. Democratic assemblies can authorize commitments faster than military logistics can absorb them. Information bandwidth (rhetoric, persuasion, votes) exceeds operational bandwidth (supply chains, training, intelligence). This is a structural property of the human organizations: outer decision rate > inner execution capacity = overshooting. However, the structural data reveals this is a false summit: the bandwidth mismatch is not immutable. Smaller expeditions (lower outer bandwidth) or more restrictive assembly procedures (slower outer bandwidth) or larger standing armies (higher inner capacity) would prevent the pathology. The 'natural law' naturalizes what is a contingent institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "bandwidth_measurement_ambiguity",
+      "question": "How do we measure and compare decision-making bandwidth (assembly authorization rate) versus operational bandwidth (logistics execution rate)? Are they comparable on the same scale?",
+      "resolution_mechanism": "Quantitative analysis of assembly session frequency, decision-making timescale (votes per month), and logistics cycle times (weeks per supply convoy, months per campaign season). Comparison with successful operations (e.g., Marathon campaign) to establish baseline ratios.",
+      "impact": "If bandwidth mismatch is the primary driver: the constraint is a property of the institutional architecture (reformable). If bandwidth mismatch is secondary to hubris/overconfidence: the constraint is more cognitive (requires different intervention). If bandwidth is immeasurable/incommensurable: the overshooting pathology thesis is conceptual rather than empirical.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Measurability and comparability of decision-making versus operational bandwidth"
+    },
+    {
+      "id": "information_quality_degradation",
+      "question": "Was the assembly's decision driven by incomplete information (bandwidth collapse in information flow) or by deliberate rhetorical manipulation (information suppression)?",
+      "resolution_mechanism": "Historical analysis of debate transcripts (Thucydides), council deliberations, and scout reports available to Nicias and Alcibiades versus information presented to the assembly. Correlation between information asymmetry and vote outcome.",
+      "impact": "If information degradation: constraint is a property of command structure and logistics (fixable). If rhetorical manipulation: constraint is a property of individual actors and persuasion dynamics (requires different analysis). If both: the constraint is composite \u2014 overshooting enabled by information suppression.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Role of information quality versus rhetorical manipulation in assembly decision"
+    },
+    {
+      "id": "exit_mechanism_failure",
+      "question": "Could the assembly have voted to cancel or reduce the expedition after mobilization began, or was the decision-lock absolute?",
+      "resolution_mechanism": "Analysis of Athenian constitutional procedures for withdrawing or modifying assembly decisions; examination of historical precedent (other expeditions recalled, downsized, or redirected); identification of procedural barriers to reversal.",
+      "impact": "If exit was procedurally available: the suppression score (0.72) is overstated, constraint is weaker. If exit was procedurally blocked: the snare classification is reinforced. If exit was procedurally possible but politically impossible (face-saving, ambition sunk-cost): the constraint includes internalized suppression (identity-lock elements).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether assembly could have reversed or modified the expedition decision"
+    },
+    {
+      "id": "false_summit_natural_law_status",
+      "question": "Is the bandwidth-mismatch overshooting pathology a genuine immutable law of political organization, or a contingent institutional artifact?",
+      "resolution_mechanism": "Comparative historical and organizational analysis: examine systems with feedback mechanisms (e.g., quorum requirements, mandatory consultation periods, post-vote review processes) that slow outer-layer decision-making. If such systems successfully prevent overshooting, the 'natural law' is disproven. If overshooting recurs regardless of institutional design, the pathology is more fundamental.",
+      "impact": "If contingent: the constraint should be reclassified from mountain to tangled_rope (reformable institutional design). If fundamental: mountain classification stands, but false-summit risk remains high because beneficiaries (political elites) benefit from fast outer-layer decisions. If both: the constraint is a *design choice* (fast decision-making chosen despite overshooting risk) rather than a natural limit.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Natural law status of bandwidth-mismatch overshooting"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "sicilian_initial_authorization"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52,
+      "id_override": "sicilian_mid_mobilization"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68,
+      "id_override": "sicilian_logistics_collapse"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "sicilian_theater_initial"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.45,
+      "id_override": "sicilian_theater_mid"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58,
+      "id_override": "sicilian_theater_late"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "In 415 BCE, the Athenian assembly voted to launch an expedition to Sicily with unprecedented scale and ambition. The decision was procedurally legitimate \u2014 passed by open debate and majority vote in the world's first democratic assembly \u2014 but operationally catastrophic. The assembly authorized a commitment (60+ ships, thousands of troops, extended overseas campaign) that the city's logistical infrastructure could not support, the military command could not coordinate coherently, and the intelligence apparatus could not adequately plan for. This case exemplifies a failure mode in distributed decision-making: high-bandwidth outer-layer authorization (assembly deliberation and voting) exceeds the low-bandwidth capacity of inner-layer execution (military logistics, naval supply chains, allied coordination). The constraint captures the mechanism by which democratic decisions can become snares \u2014 they are legitimate in form but impossible in operation, binding agents to commitments they cannot fulfill. The extractiveness trajectory (0.35 \u2192 0.68) reflects this escalation: initial authorization extracts political capital and resource commitment, but as logistical collapse becomes evident, the extraction intensifies because the trapped agents (soldiers, allies, treasury) face increasing costs with no exit mechanism.",
+    "key_agents": [
+      "Expeditionary Soldiers: Primary victims (powerless/trapped) \u2014 conscripted or voluntarily enrolled; bear full cost of strategic failure; no exit after mobilization",
+      "Athenian Political Elite: Primary beneficiaries (institutional/arbitrage) \u2014 architects of the expedition; profit from decision-making authority, resource allocation power, and prestige; lower operational risk",
+      "Nicias, Alcibiades, Lamachos: Military Command (institutional/constrained) \u2014 inherit operationally incoherent mandate; manage supply shortfalls through improvisation; become performative theater",
+      "Allied Syracusan Forces: Secondary victims (moderate/constrained) \u2014 depend on Athenian support; trapped in alliance as bandwidth collapses; extraction increases as support degrades",
+      "Athenian Strategic Capacity: Systems-level victim (organized/mobile) \u2014 the city-state itself becomes snared; strategic flexibility exhausted; unable to defend homeland during Peloponnesian War",
+      "Athenian Assembly: Outer decision-making layer (institutional/arbitrage) \u2014 high-bandwidth authority structure; can authorize faster than logistics can execute; benefits from fast decisions; bears no direct operational cost",
+      "Athenian Logistics/Navy: Inner execution layer (institutional/constrained) \u2014 low-bandwidth operational capacity; cannot absorb authorization rate; becomes bottleneck; theater increases as improvisation replaces planning"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High-moderate, rising through the interval. Initial extractiveness (0.35) reflects the authorization phase \u2014 political capital extracted from elite, resource commitment extracted from treasury, but operational cost not yet realized. As the campaign proceeds and logistical inadequacy becomes evident, extractiveness rises (0.52 at mid-mobilization) as the trapped agents face escalating costs. Final measurement (0.68) reflects the constraint's peak severity as soldiers face impossible supply conditions, command becomes increasingly dysfunctional, and Athens cannot withdraw without massive sunk costs. Suppression (0.72): High. Multiple suppression mechanisms operate simultaneously: (1) procedural \u2014 once authorized by assembly vote, individual soldiers cannot refuse (democratic decision binding); (2) social \u2014 honor-bound participation prevents mid-campaign withdrawal; (3) logistical \u2014 committed supplies and troops create path-dependency; (4) informational \u2014 soldiers deployed without accurate knowledge of conditions; (5) strategic \u2014 Athenian commitment to allies creates diplomatic lock-in. Theater ratio (0.58): Moderate-high, rising through interval. Initial theater (0.35) reflects genuine strategic planning and logistics coordination in the authorization phase. As operational collapse becomes evident, theater increases (0.45, then 0.58) as command generates reports justifying escalation, maintains morale through ceremony, and performs strategic adjustment without actual capability. The increase indicates that command activity becomes increasingly divorced from operational function \u2014 performative leadership substituting for strategic realism.",
+    "perspectival_gap": "This constraint demonstrates dramatic perspectival divergence across institutional positions. The political elite experience tangled_rope (they benefit from the decision-making authority and resource allocation; they coordinate a genuine political ambition; but they extract enormous costs from soldiers and treasury). The soldiers experience snare (committed to an operation that cannot succeed; no exit; bearing full cost of command failure). The command structure experiences piton (the institution degrades from operational coordination to performative theater as bandwidth collapse reveals incoherence). The strategic capacity view (systems perspective) experiences snare at a different scale \u2014 Athens becomes locked into a commitment that exhausts its capacity to defend itself. The analytical observer at civilizational scale risks seeing this as a natural law (bandwidth mismatch is inherent to human organization) but the structural data reveals this as a false summit: smaller expeditions, slower assembly procedures, or larger standing armies would prevent the pathology. The elite benefit from fast outer-layer decisions (arbitrage exit option) while soldiers and strategy bear the cost (trapped/constrained exit). This asymmetry is the structural root of the snare.",
+    "directionality_logic": "Directionality (d) is derived from each agent's structural position within the extraction flow. Political elite: d \u2248 0.15 (beneficiaries with arbitrage exit). They authorized the expedition, profit from its authorization, and can reallocate resources or withdraw if politically feasible. Soldiers: d \u2248 0.92 (victims with trapped exit). Committed to operation by assembly vote; no legal or social exit; bear full cost of command failure. Command structure: d \u2248 0.55 (mixed position with constrained exit). Command benefits from operational authority but faces reputational risk from failure; constrained because public commitment and troop dependencies prevent easy reversal. Strategic capacity: d \u2248 0.88 (victim of systems constraint with mobile but slow exit). Athens can change strategy, but path-dependency and sunk costs make exit costly; the constraint is structural to the decision-making architecture. The derived d values explain why elite and soldiers experience fundamentally different classifications: elite arbitrage (low f(d)) produces rope-like experience; soldier entrapment (high f(d)) produces snare experience. The gap is not perceptual \u2014 it is structural.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint avoids overshooting the snare classification by including the tangled_rope perspective (political elite) and clarifying that the snare emerges from a specific structural position (soldiers) rather than characterizing the entire operation as pure extraction. The elite genuinely coordinate a political ambition (imperial expansion, prestige redistribution) alongside extractive resource-taking. The soldiers face pure extraction because they have no coordination benefit \u2014 the operation they are committed to cannot succeed. The mandatrophy is resolved by recognizing that the same constraint can be snare to some agents and tangled_rope to others, depending on directionality. The false summit (mountain as natural law) is identified and documented: bandwidth mismatch appears natural (outer decision-rate always exceeds inner capacity) but is contingent on institutional design (smaller expeditions, slower voting procedures, or larger standing armies would prevent it). The resolution shows that the constraint's classification chain depends critically on exit-option and beneficiary/victim differentiation \u2014 without these distinctions, the whole operation would be mislabeled as either pure coordination (assembly legitimacy) or pure extraction (soldier entrapment), collapsing the actual complexity."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "peloponnesian_war_strategic_exhaustion",
+      "athenian_democratic_decision_pathology",
+      "ancient_logistics_bandwidth_constraint"
+    ],
+    "dual_formulation_note": "The Sicilian Expedition represents a specific instantiation of a more general constraint family: high-bandwidth-outer-layer decision-making producing inner-layer operational collapse. The expedition itself (this story) has extractiveness ~0.68 and classifies as snare. The broader pattern (democratic assembly decision-rate exceeding logistics capacity) appears as a mountain candidate in the analytical perspective. Decomposition: the institutional design constraint (assembly bandwidth vs. logistics bandwidth) is the upstream story with lower extractiveness and potentially mountain classification; the Sicilian Expedition is the downstream manifestation with high extractiveness and snare classification. Both should be linked via network.affects_constraints to show how institutional architecture enables specific catastrophic deployments."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
+}

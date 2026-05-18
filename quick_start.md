@@ -70,4 +70,4 @@ The final step is synthesizing high-level insights from the structural data.
 ---
 
 **Last updated:** May 9, 2026
-**Status:** Sync with Corpus v3,337 | Paper v6.11
+**Status:** Sync with Corpus v3,337 | Paper v6.12

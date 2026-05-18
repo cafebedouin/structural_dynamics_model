@@ -98,7 +98,7 @@ transition_path(C, snare, false_mountain, evidence(naturalized, true, claimed, m
 degradation_chain(C, Chain, evidence(time_span, T1, T2)) :-
     findall(T-Type,
             (narrative_ontology:measurement(_, C, _, T, _),
-             classify_snapshot(C, T, Type)),
+             snapshot_type(C, T, Type)),
             RawPairs),
     RawPairs \= [],
     sort(RawPairs, Sorted),
@@ -109,15 +109,10 @@ degradation_chain(C, Chain, evidence(time_span, T1, T2)) :-
     Sorted = [T1-_|_],
     last(Sorted, T2-_).
 
-%% DEPRECATED PATH: This code uses power_modifier/2 (direct multiplication) for χ computation.
-%% The primary classification path (drl_core:dr_type/3) uses the sigmoid pipeline via
-%% derive_directionality/3 → sigmoid_f/2, which reads canonical_d_* params, not power_modifier_*.
-%% Perturbing power_modifier_analytical does not affect dr_type/3 output.
-%% TODO: Migrate to sigmoid pipeline. See issue: legacy-power-modifier-migration.
-%% Audit date: 2026-03-12
-%% classify_snapshot(+C, +Time, -Type)
+%% snapshot_type(+C, +Time, -Type)
 %  Classifies a constraint at a specific time using measurements available.
-classify_snapshot(C, Time, Type) :-
+%  Uses sigmoid pipeline: χ = ε × f(d) × σ(S).
+snapshot_type(C, Time, Type) :-
     (   drift_events:metric_at(C, base_extractiveness, Time, E)
     ->  true
     ;   drift_events:safe_metric(C, extractiveness, E)
@@ -131,9 +126,11 @@ classify_snapshot(C, Time, Type) :-
     ;   config:param(default_suppression, S)
     ),
     constraint_indexing:default_context(Context),
-    Context = context(agent_power(Power), _, _, _),
-    constraint_indexing:power_modifier(Power, Modifier),
-    Chi is E * Modifier,
+    Context = context(_, _, _, spatial_scope(Scope)),
+    constraint_indexing:derive_directionality(C, Context, D),
+    constraint_indexing:sigmoid_f(D, PowerMod),
+    constraint_indexing:scope_modifier(Scope, ScopeMod),
+    Chi is E * PowerMod * ScopeMod,
     drl_core:classify_from_metrics(C, E, Chi, S, Context, Type).
 
 %% predicted_terminal_state(+ConstraintID, -State, -Confidence)

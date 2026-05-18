@@ -213,6 +213,10 @@ PIPELINE_FIELDS = [
     ("arakelov_height",         (int, float), True),   # null if MaxEnt unavailable
     ("arakelov_height_context", str,          True),   # powerless|moderate|institutional|analytical
     ("signature_pressure",      (int, float), True),   # null if MaxEnt unavailable
+    # --- Commitment system pattern detection ---
+    ("cs_pattern",              str,          True),   # null when cs_structure absent
+    ("cs_pattern_signals",      list,         False),  # [] when cs_structure absent
+    ("cs_verdicts",             list,         False),  # [] when no verdicts fired
 ]
 
 ENRICHED_EXTRA_FIELDS = [

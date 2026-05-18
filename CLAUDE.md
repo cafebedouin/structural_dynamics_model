@@ -82,25 +82,26 @@ and the corresponding Prolog testset to `prolog/testsets/`. These files are inpu
 the analysis pipeline — `run_pipeline.py` reads them; it does not write them. Analysis
 output lives in `outputs/`.
 
-**Canonical framework paper: `docs/deferential_realism_paper_v6.11.md`.** Files
-`deferential_realism_paper.md` through `deferential_realism_paper_v6.10.md` in `docs/`
-are superseded. When the framework spec is needed, use v6.11.
+**Canonical framework paper: `docs/deferential_realism_paper_v6.12.md`.** Files
+`deferential_realism_paper.md` through `deferential_realism_paper_v6.11.md` in `docs/`
+are superseded. When the framework spec is needed, use v6.12.
 
 **Formal classification rules: `docs/logic.md`.** This is the spec document; `config.pl`
 must match it. UTF-8 encoding was repaired Feb 2026 (prior versions had mojibake from
 double-encoded characters). Edit tool fails on files with multi-byte mojibake — use sed
 or Python if you encounter this.
 
-**Two deprecated predicates are still loaded at runtime:** `dr_type_at/4` in
-`drl_composition.pl` and `classify_snapshot/3` in `transition_paths.pl` carry DEPRECATED
-markers but are still loaded. Whether they diverge from the canonical sigmoid pipeline
-has not been established — treat as a live risk when reasoning about classification paths.
+**`dr_type_at/4` and `classify_snapshot/3` have been replaced (2026-05-17):** Both carried
+DEPRECATED markers using the legacy `power_modifier` χ path (χ = ε × π, omitting σ).
+Replaced by `classify_at_time/4` (`drl_composition.pl`) and `snapshot_type/3`
+(`transition_paths.pl`) using the canonical sigmoid pipeline (χ = ε × f(d) × σ(S)).
+Callers `constraint_history/3` and `degradation_chain/3` updated accordingly.
 
-**`site_contexts_product/1` universal-scope exclusion is load-bearing.** The product site
-excludes `regional`, `continental`, `universal` scopes. The universal exclusion is not
-cosmetic: σ(universal) = 1.0 at the analytical observer position drops χ below
-`rope_chi_ceiling`, causing systematic sheaf→presheaf crossings. Sites that include
-universal scope at the analytical position will not exhibit binary site-stability.
+**`site_contexts_product/1` scope exclusion is calibration-based.** The product site
+excludes `regional`, `continental`, `universal` scopes (`constraint_indexing.pl:954–955`).
+σ(universal) = σ(national) = 1.0 (`config.pl:117,120`) — no differential χ effect between
+the two. The actual reason: these three scope atoms appear in no canonical context and their
+scope_modifier values have not been validated against corpus classifications.
 
 **Pre-computed values live in `outputs/pipeline_output.json`.** H¹, Arakelov heights,
 MaxEnt distributions, and classifications are pre-computed by the pipeline. Read from

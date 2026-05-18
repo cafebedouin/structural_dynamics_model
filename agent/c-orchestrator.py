@@ -427,6 +427,10 @@ class DRAuditOrchestrator:
                 source_desc += f"\nBeneficiary: {axis['beneficiary']}"
             if axis.get("victim"):
                 source_desc += f"\nVictim: {axis['victim']}"
+            cs_recog = manifest.get("commitment_system_recognition")
+            if cs_recog:
+                import json as _json
+                source_desc += f"\nCommitment System Recognition: {_json.dumps(cs_recog)}"
 
             # Build upstream context for downstream axes (§5.1)
             upstream_context = ""

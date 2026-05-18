@@ -116,6 +116,41 @@ disciplinary_lenses: [minimum 3 relevant lenses for §2 decomposition]
 
 The disciplinary lenses are drawn from the domain, not from a fixed list. They must be relevant to the specific input, not generic.
 
+### §1.3 Commitment System Recognition
+
+After domain recognition, ask: **Is the domain a commitment system?**
+
+A commitment system is a domain where the **authority's claim to adjudicate legitimate action
+depends on pointing to a fixed, immutable reference point** — the kernel. The kernel may be a
+founding text, a codified rule, a practice-norm claimed as unchangeable, or a deliberately
+ambiguous claim whose interpretation the authority controls.
+
+**Qualifies:** Domains where legitimacy is grounded in fixity — where the authority says "this
+is legitimate because it conforms to [fixed reference]." Examples: constitutional succession
+systems, religious doctrinal traditions, professional standards bodies claiming immutability,
+interpretive traditions grounded in founding texts, military command hierarchies whose
+authority derives from a fixed chain rather than demonstrated competence, dynastic lineage
+frameworks.
+
+**Does not qualify:** Market mechanisms, physical laws, mathematical theorems, technocratic
+authority grounded in revisable expertise, institutional structures whose legitimacy derives
+from democratic mandate or performance rather than kernel fidelity.
+
+If the domain IS a commitment system, identify:
+- **kernel:** What is stabilized — the fixed text, rule, practice-norm, or ambiguous claim.
+- **authority structure:** Who interprets the kernel and what grounds their interpretive legitimacy.
+- **drift status:** `functioning` (revision is institutionally possible), `partial` (interpretive
+  layer absorbs drift without surfacing revision), or `absent` (revision is denied; drift
+  accumulates covertly).
+- **candidate pattern:** Which of the six CS patterns the system appears to instantiate, or
+  `uncertain`.
+
+Record recognition in the manifest as `commitment_system_recognition` (see §5). **If the domain
+is not a commitment system, omit the field entirely — do not emit a null or false value.**
+
+This recognition shapes axis selection. The authority structure itself often warrants its own
+axis when CS analysis is warranted.
+
 ---
 
 ## §2. DECOMPOSITION (Axis Identification)
@@ -269,6 +304,23 @@ The JSON manifest IS the complete output. All information that was previously in
 | `deferred_axes` | Axes not selected, with deferral reasons |
 | `omegas` | Bounded uncertainties with source attribution |
 | `fracture_scan` | Self-scan results as booleans + notes (was in SELF-SCAN) |
+| `commitment_system_recognition` | Optional. Present only when §1.3 identifies a commitment system. Omit entirely otherwise. |
+
+#### `commitment_system_recognition` Object (optional)
+
+When §1.3 identifies a commitment system, include:
+
+```json
+"commitment_system_recognition": {
+  "kernel_description": "one sentence describing the stabilized commitment",
+  "authority_description": "who interprets it and what grounds their legitimacy",
+  "drift_status": "functioning | partial | absent",
+  "candidate_pattern": "<one of six CS pattern names> | uncertain"
+}
+```
+
+These fields are informational hints passed to the generation step. They document the recognition
+for downstream consumption and signal that CS structure should be elicited for relevant axes.
 
 ### §5.1 Upstream Context Payload
 

@@ -19,6 +19,7 @@
 :- use_module(constraint_indexing).
 :- use_module(purity_scoring, [purity_score/2]).
 :- use_module(signature_detection, [false_natural_law/2]).
+:- use_module(cs_pattern_detection, [cs_pattern/3, cs_verdict/2, cs_has_fields/1]).
 :- use_module(logical_fingerprint).
 :- use_module(report_generator).
 :- use_module(drl_lifecycle).
@@ -467,7 +468,26 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     format(S, ',~n', []),
 
     % resolution_strategy — deferred
-    format(S, '      "resolution_strategy": null~n', []),
+    format(S, '      "resolution_strategy": null,~n', []),
+
+    % cs_pattern fields
+    (   catch(cs_pattern_detection:cs_has_fields(C), _, fail)
+    ->  catch(cs_pattern_detection:cs_pattern(C, CsPat, CsSignals), _,
+              (CsPat = null, CsSignals = [])),
+        format(S, '      "cs_pattern": ', []),
+        write_json_string(S, CsPat),
+        format(S, ',~n', []),
+        format(S, '      "cs_pattern_signals": ', []),
+        write_json_string_array(S, CsSignals),
+        format(S, ',~n', []),
+        findall(V, catch(cs_pattern_detection:cs_verdict(C, V), _, fail), Verdicts),
+        format(S, '      "cs_verdicts": ', []),
+        write_json_string_array(S, Verdicts),
+        format(S, '~n', [])
+    ;   format(S, '      "cs_pattern": null,~n', []),
+        format(S, '      "cs_pattern_signals": [],~n', []),
+        format(S, '      "cs_verdicts": []~n', [])
+    ),
 
     % Close object
     (Comma == true -> format(S, '    },~n', []) ; format(S, '    }~n', [])).
@@ -1169,7 +1189,19 @@ write_validation_object(S, Constraints) :-
     tally_signatures(Constraints, SigDist),
     format(S, '    "signature_distribution": ', []),
     write_json_count_object(S, SigDist),
-    format(S, '~n', []),
+    format(S, ',~n', []),
+
+    % cs_pattern_distribution
+    tally_cs_patterns(Constraints, CsPatDist, CsFieldsAbsent, CsTotal, CsVerdictDist),
+    format(S, '    "cs_pattern_distribution": {~n', []),
+    format(S, '      "fields_absent": ~w,~n', [CsFieldsAbsent]),
+    format(S, '      "total_with_cs_fields": ~w,~n', [CsTotal]),
+    format(S, '      "pattern_counts": ', []),
+    write_json_count_object(S, CsPatDist),
+    format(S, ',~n', []),
+    format(S, '      "cs_verdicts_fired": ', []),
+    write_json_count_object(S, CsVerdictDist),
+    format(S, '~n    }~n', []),
 
     format(S, '  }', []).
 
@@ -1312,6 +1344,25 @@ tally_signatures(Constraints, Pairs) :-
             Sigs),
     msort(Sigs, Sorted),
     run_length_encode(Sorted, Pairs).
+
+%% tally_cs_patterns(+Constraints, -PatPairs, -FieldsAbsent, -Total, -VerdictPairs)
+tally_cs_patterns(Constraints, PatPairs, FieldsAbsent, Total, VerdictPairs) :-
+    findall(Pat,
+            (   member(C, Constraints),
+                catch(cs_pattern_detection:cs_has_fields(C), _, fail),
+                catch(cs_pattern_detection:cs_pattern(C, Pat, _), _, fail)),
+            Pats),
+    length(Pats, Total),
+    length(Constraints, CorpusTotal),
+    FieldsAbsent is CorpusTotal - Total,
+    msort(Pats, SortedPats),
+    run_length_encode(SortedPats, PatPairs),
+    findall(V,
+            (   member(C, Constraints),
+                catch(cs_pattern_detection:cs_verdict(C, V), _, fail)),
+            AllVerdicts),
+    msort(AllVerdicts, SortedVerdicts),
+    run_length_encode(SortedVerdicts, VerdictPairs).
 
 %% run_length_encode(+SortedList, -Pairs)
 %  Converts a sorted list into Key-Count pairs.
