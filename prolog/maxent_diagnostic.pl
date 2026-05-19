@@ -407,13 +407,13 @@ task5_gaussian_profiles(Context) :-
     % Report all empirical profiles
     format('EMPIRICAL_PROFILES:~n'),
     format('Type|Metric|Mu|Sigma~n'),
-    forall(maxent_classifier:maxent_profile(Type, Metric, params(Mu, Sigma)),
+    forall(maxent_classifier:maxent_profile(Type, Metric, Context, params(Mu, Sigma)),
         format('~w|~w|~6f|~6f~n', [Type, Metric, Mu, Sigma])),
 
     % Flag suspiciously large sigmas
     format('LARGE_SIGMA_FLAGS:~n'),
     forall((
-        maxent_classifier:maxent_profile(Type, Metric, params(_Mu, Sigma)),
+        maxent_classifier:maxent_profile(Type, Metric, Context, params(_Mu, Sigma)),
         Sigma > 0.25
     ), format('  LARGE_SIGMA: ~w ~w sigma=~6f~n', [Type, Metric, Sigma])),
 

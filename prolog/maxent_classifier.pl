@@ -68,7 +68,7 @@
 
 :- dynamic maxent_dist/3.           % maxent_dist(Constraint, Context, TypeProbList)
 :- dynamic maxent_dist_raw/3.       % maxent_dist_raw(Constraint, Context, TypeProbList) — pre-override
-:- dynamic maxent_profile/3.        % maxent_profile(Type, MetricName, params(Mu, Sigma))
+:- dynamic maxent_profile/4.        % maxent_profile(Type, MetricName, Context, params(Mu, Sigma))
 :- dynamic maxent_prior/2.          % maxent_prior(Type, Prior)
 :- dynamic maxent_run_info/3.       % maxent_run_info(Context, NConstraints, Timestamp)
 
@@ -101,7 +101,7 @@ maxent_n_types(6).
 maxent_cleanup :-
     retractall(maxent_dist(_, _, _)),
     retractall(maxent_dist_raw(_, _, _)),
-    retractall(maxent_profile(_, _, _)),
+    retractall(maxent_profile(_, _, _, _)),
     retractall(maxent_prior(_, _)),
     retractall(maxent_run_info(_, _, _)),
     retractall(maxent_indexed_dist(_, _, _)),
@@ -230,14 +230,14 @@ prior_log_likelihood(_, -10.0).  % Fallback for missing/zero prior
    Evaluates Gaussian log-likelihood across all metrics for a type.
    ================================================================ */
 
-continuous_log_likelihood(C, Type, _Context, ContLL) :-
+continuous_log_likelihood(C, Type, Context, ContLL) :-
     get_constraint_metrics(C, Eps, Supp, Theater),
     findall(LL, (
         (   MetricName = extractiveness, X = Eps
         ;   MetricName = suppression, X = Supp
         ;   MetricName = theater, X = Theater
         ),
-        maxent_profile(Type, MetricName, params(Mu, Sigma)),
+        maxent_profile(Type, MetricName, Context, params(Mu, Sigma)),
         gaussian_log_likelihood(X, Mu, Sigma, LL)
     ), LLs),
     (   LLs \= []
@@ -535,7 +535,7 @@ maxent_precompute(Constraints, Context) :-
 
 %% maxent_compute_profiles(+Constraints, +Context)
 %  For each type, compute empirical mean and std of (Eps, Supp, Theater)
-%  from the loaded corpus. Store as maxent_profile/3 dynamic facts.
+%  from the loaded corpus. Store as maxent_profile/4 dynamic facts.
 maxent_compute_profiles(Constraints, Context) :-
     forall(maxent_type(Type), (
         compute_type_profile(Constraints, Context, Type, extractiveness),
@@ -557,10 +557,10 @@ compute_type_profile(Constraints, Context, Type, MetricName) :-
         foldl(sum_sq_diff(Mu), Values, 0.0, SumSqDiff),
         Variance is SumSqDiff / N,
         Sigma is max(0.01, sqrt(Variance)),  % Floor to prevent division by zero
-        assertz(maxent_profile(Type, MetricName, params(Mu, Sigma)))
+        assertz(maxent_profile(Type, MetricName, Context, params(Mu, Sigma)))
     ;   % Fallback to default profile
         default_profile(Type, MetricName, Params),
-        assertz(maxent_profile(Type, MetricName, Params))
+        assertz(maxent_profile(Type, MetricName, Context, Params))
     ).
 
 sum_sq_diff(Mu, X, Acc, NewAcc) :-

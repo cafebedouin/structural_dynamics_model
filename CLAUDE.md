@@ -82,9 +82,9 @@ and the corresponding Prolog testset to `prolog/testsets/`. These files are inpu
 the analysis pipeline — `run_pipeline.py` reads them; it does not write them. Analysis
 output lives in `outputs/`.
 
-**Canonical framework paper: `docs/deferential_realism_paper_v6.12.md`.** Files
-`deferential_realism_paper.md` through `deferential_realism_paper_v6.11.md` in `docs/`
-are superseded. When the framework spec is needed, use v6.12.
+**Canonical framework paper: `docs/deferential_realism_paper_v6.13.md`.** Files
+`deferential_realism_paper.md` through `deferential_realism_paper_v6.12.md` in `docs/`
+are superseded. When the framework spec is needed, use v6.13.
 
 **Formal classification rules: `docs/logic.md`.** This is the spec document; `config.pl`
 must match it. UTF-8 encoding was repaired Feb 2026 (prior versions had mojibake from
