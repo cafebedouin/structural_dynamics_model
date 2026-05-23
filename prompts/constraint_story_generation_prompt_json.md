@@ -661,7 +661,7 @@ If applicable, add a top-level `cs_structure` block:
 - `distributed` — no centralized authority; multiple parties produce competing readings
 - `none` — not applicable; omit the block instead
 
-**interpretation_layer_present** (optional, only when `kernel_codification=formalized` AND `authority_grounding=extraction`):
+**interpretation_layer_present** (optional, only when `authority_grounding=lineage` (any kernel encoding) OR `kernel_codification=formalized` AND `authority_grounding=extraction`):
 - `true` — functioning interpretive structure below the kernel absorbs drift without surfacing revision
 - omit (or `false`) — no interpretive buffer; kernel governs practice directly (structurally brittle)
 

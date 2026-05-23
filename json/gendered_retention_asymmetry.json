@@ -1,0 +1,222 @@
+{
+  "header": {
+    "constraint_id": "gendered_retention_asymmetry",
+    "version": "1.0",
+    "generated_date": "2025-01-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gra"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Gendered Retention Asymmetry in Clinical Medicine",
+    "topic_domain": "healthcare_workforce_economics/organizational_sociology/gender_studies",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "male_physicians",
+      "traditional_organizational_structures",
+      "healthcare_systems_avoiding_accommodation_costs"
+    ],
+    "victims": [
+      "women_physicians",
+      "healthcare_workforce_diversity",
+      "patient_populations_requiring_continuity"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "The Woman Physician with Caregiving Responsibilities",
+      "comment": "PERSPECTIVE 1: WOMAN PHYSICIAN WITH CAREGIVING (SNARE) \u2014 Identity-locked rather than materially trapped: has medical degree and earning capacity (structurally mobile) but identity is constituted through both professional role and caregiving role. Exit from clinical practice feels like abandoning core identity. Organizational structures offer no accommodation, forcing binary choice between career and caregiving. Maximum extraction: bears full cost of unequal caregiving distribution plus career penalty for attempting both."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Part-Time Physician",
+      "comment": "PERSPECTIVE 2: PART-TIME PHYSICIAN (TANGLED ROPE) \u2014 Constrained by reduced partnership track access, lower compensation per hour, and professional marginalization, but benefits from some schedule flexibility and continued clinical practice. Mixed extraction: the part-time pathway enables continued work but embeds career penalties and reinforces the gender asymmetry by treating accommodation as individual deviation rather than structural norm."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Male Physician with Traditional Family Structure",
+      "comment": "PERSPECTIVE 3: MALE PHYSICIAN TRADITIONAL FAMILY (ROPE) \u2014 Benefits from unequal caregiving distribution: partner absorbs domestic labor, enabling uninterrupted career progression. Experiences constraint as pure coordination: the system rewards continuous availability, which this agent can provide. Net beneficiary of the asymmetry."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Healthcare Organization Avoiding Accommodation",
+      "comment": "PERSPECTIVE 4: HEALTHCARE ORG AVOIDING ACCOMMODATION (ROPE) \u2014 Institutional beneficiary. Avoids costs of onsite childcare, paid parental leave, lactation facilities, and schedule flexibility by externalizing caregiving burden to individual physicians (predominantly women). Experiences constraint as coordination: the system selects for physicians with maximum availability, which traditional structures provide. Extraction flows toward this agent."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Gender Equity Coalition in Medicine",
+      "comment": "PERSPECTIVE 5: GENDER EQUITY COALITION (SCAFFOLD) \u2014 Organized agents (medical associations, advocacy groups, policy coalitions) building alternative structures: paid parental leave mandates, onsite childcare requirements, part-time partnership tracks, lactation facility standards. See the asymmetry as temporary coordination failure with sunset: as accommodation becomes standard practice and younger male physicians demand caregiving time, the binary choice dissolves. Estimated sunset: 15-25 years as generational norms shift and policy mandates accumulate."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Male Physician Seeking Caregiving Time",
+      "comment": "PERSPECTIVE 6: MALE PHYSICIAN SEEKING CAREGIVING (TANGLED ROPE) \u2014 Constrained by professional norms that penalize caregiving regardless of gender, but benefits from lower baseline expectation (4.2% cite childcare as exit reason vs 21.3% for women). Mixed extraction: faces career penalty for accommodation requests but penalty is smaller and less identity-threatening than for women colleagues. This perspective reveals the constraint extracts from caregiving regardless of gender, but asymmetrically."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (SNARE) \u2014 From civilizational/global perspective, the constraint is extractive: organizations externalize caregiving costs onto individual physicians, predominantly women, through structural failure to accommodate reproductive and caregiving needs. The 3-year median career length gap (9 vs 12 years) and 5x differential in childcare-driven exit (21.3% vs 4.2%) are not natural outcomes but products of organizational design choices that benefit from unequal caregiving distribution. High extraction, high suppression, active enforcement through partnership track requirements and schedule inflexibility."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "accommodation_cost_threshold",
+      "question": "At what cost threshold do organizational accommodation investments (onsite childcare, paid leave, schedule flexibility) become economically rational for healthcare systems?",
+      "resolution_mechanism": "Cost-benefit analysis comparing accommodation investment vs physician recruitment/training costs multiplied by differential retention rates; longitudinal data from systems that have implemented full accommodation packages",
+      "impact": "If threshold is lower than current practice suggests, organizations are leaving value on table and the constraint is pure extraction. If threshold is higher, some extraction may be economically rational coordination cost.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Economic threshold for accommodation investment rationality"
+    },
+    {
+      "id": "generational_norm_shift_timeline",
+      "question": "Will younger male physicians demand caregiving time at rates sufficient to dissolve the gender asymmetry, or will traditional norms persist?",
+      "resolution_mechanism": "Longitudinal survey data on caregiving time preferences and actual time allocation by physician cohort and gender; tracking of part-time requests and parental leave utilization by gender over 10-year intervals",
+      "impact": "If male demand for caregiving time rises to match female demand, the scaffold perspective is confirmed and sunset is real. If asymmetry persists across generations, the constraint is structural rather than transitional.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether generational shift will equalize caregiving demand"
+    },
+    {
+      "id": "identity_lock_vs_structural_trap",
+      "question": "Is the primary binding mechanism for women physicians cognitive (identity fusion with both professional and caregiving roles) or material (economic dependency, lack of alternative careers)?",
+      "resolution_mechanism": "Post-exit trajectory analysis: do physicians who leave clinical practice for caregiving reasons return when caregiving demands decrease? Comparison of exit rates between high-earning specialists (low economic dependency) and primary care physicians (higher economic pressure).",
+      "impact": "If identity-locked, the constraint's effective suppression is higher than structural measures suggest because the lock persists after material barriers are removed. If materially trapped, accommodation investments have immediate effect.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Primary mechanism binding women physicians to binary choice"
+    },
+    {
+      "id": "part_time_penalty_magnitude",
+      "question": "What proportion of the part-time physician's career penalty is coordination cost (genuine efficiency loss from reduced availability) vs extractive overhead (organizational punishment for deviation from full-time norm)?",
+      "resolution_mechanism": "Productivity analysis controlling for hours worked; comparison of per-hour compensation and partnership track access between part-time and full-time physicians with equivalent patient outcomes and satisfaction scores",
+      "impact": "If penalty exceeds coordination cost, the part-time pathway is itself an extraction mechanism. If penalty matches coordination cost, it represents fair pricing of reduced availability.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of part-time penalty that is extractive vs coordinative"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45,
+      "id_override": "gra_theater_1990"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.52,
+      "id_override": "gra_theater_2000"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58,
+      "id_override": "gra_theater_2010"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.62,
+      "id_override": "gra_theater_2020"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55,
+      "id_override": "gra_extract_1990"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.6,
+      "id_override": "gra_extract_2000"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.65,
+      "id_override": "gra_extract_2010"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68,
+      "id_override": "gra_extract_2020"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The gendered retention asymmetry in clinical medicine creates a systematic 3-year career length differential (9 years women vs 12 years men) driven by unequal distribution of unpaid caregiving labor and organizational failure to accommodate reproductive and caregiving needs. Women physicians cite childcare as exit reason at 5x the rate of male colleagues (21.3% vs 4.2%). The constraint operates through identity lock rather than material trap: women physicians have medical degrees and earning capacity (structurally mobile) but experience exit as abandoning core identity because both professional role and caregiving role are identity-constituting. Organizations benefit by externalizing caregiving costs, avoiding accommodation investments (onsite childcare, paid parental leave, lactation facilities, schedule flexibility), and capturing the career output of physicians with maximum availability (predominantly men with traditional family structures). The theater ratio (0.58) reflects performative accommodation: diversity statements, mentorship programs, and women-in-medicine initiatives that do not address the structural binding mechanism. The constraint is downstream of administrative_extraction_mechanism: the same organizational structures that extract through administrative burden also extract through caregiving externalization, and both mechanisms disproportionately affect women physicians.",
+    "key_agents": [
+      "Women Physicians with Caregiving: Primary victim (powerless/identity_locked) \u2014 bears full cost of unequal caregiving distribution plus career penalty; identity constituted through both roles",
+      "Part-Time Physicians: Secondary victim (moderate/constrained) \u2014 reduced partnership access and compensation but some flexibility; pathway reinforces asymmetry",
+      "Male Physicians Traditional Family: Primary beneficiary (institutional/arbitrage) \u2014 partner absorbs caregiving, enabling uninterrupted career progression",
+      "Healthcare Organizations Avoiding Accommodation: Primary beneficiary (institutional/arbitrage) \u2014 externalize caregiving costs, avoid accommodation investment",
+      "Gender Equity Coalition: Organized agents (organized/mobile) \u2014 building alternative structures with sunset logic through policy mandates and norm shifts",
+      "Male Physicians Seeking Caregiving: Secondary victim (moderate/constrained) \u2014 face career penalty for accommodation but smaller and less identity-threatening than women",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 identifies structural extraction through organizational design choices"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. Organizations capture career output from physicians with maximum availability while externalizing caregiving costs onto individual physicians, predominantly women. The 3-year career length differential and 5x childcare exit differential are not natural outcomes but products of organizational design. The extraction has increased over the 30-year interval as medical training costs have risen (making early exit more costly) while accommodation investments have remained minimal. Suppression (0.72): High. Binding mechanisms include identity fusion (professional and caregiving roles both identity-constituting), partnership track requirements demanding continuous full-time availability, professional norms penalizing accommodation requests, lack of structural alternatives (part-time tracks are marginal and penalized), and economic sunk costs of medical training. Suppression is cognitive (identity lock) rather than purely material, making it more persistent. Theater ratio (0.58): Moderate-high. Performative accommodation through diversity statements, mentorship programs, women-in-medicine initiatives, and symbolic leadership appointments that do not address structural binding mechanisms. The theater has increased as organizations have adopted diversity rhetoric while avoiding accommodation costs. Genuine accommodation (onsite childcare, paid parental leave, lactation facilities, normalized part-time partnership tracks) remains rare.",
+    "directionality_logic": "Women physicians with caregiving responsibilities are primary victims with identity_locked exit: structurally mobile (medical degree, earning capacity) but functionally trapped by identity fusion with both professional and caregiving roles. The engine derives high d (victim + identity_locked) producing high experienced extraction. Part-time physicians are victims with constrained exit: face career penalties but retain some agency and benefit from continued practice. Male physicians with traditional family structures are beneficiaries with arbitrage exit: partner absorbs caregiving, enabling uninterrupted career progression. Healthcare organizations avoiding accommodation are beneficiaries with arbitrage exit: externalize caregiving costs and capture output from maximum-availability physicians. The gender equity coalition has organized power and mobile exit: building alternative structures and can operate across multiple healthcare systems. Male physicians seeking caregiving time are victims with constrained exit: face career penalty but smaller than women colleagues, revealing the constraint extracts from caregiving regardless of gender but asymmetrically. The analytical observer uses analytical power and exit to identify the structural extraction mechanism.",
+    "perspectival_gap": "The woman physician with caregiving responsibilities experiences pure extraction (Snare) \u2014 forced binary choice between career and caregiving with no accommodation, identity-locked by fusion of both roles. The part-time physician experiences mixed coordination and extraction (Tangled Rope) \u2014 the pathway enables continued work but embeds career penalties and reinforces asymmetry. The male physician with traditional family structure experiences pure coordination (Rope) \u2014 the system rewards continuous availability, which unequal caregiving distribution enables this agent to provide. The healthcare organization avoiding accommodation experiences pure coordination (Rope) \u2014 externalize caregiving costs and select for maximum-availability physicians. The gender equity coalition sees temporary problem with sunset (Scaffold) \u2014 accommodation is becoming standard practice through policy mandates and generational norm shifts. The male physician seeking caregiving time experiences mixed coordination and extraction (Tangled Rope) \u2014 faces career penalty but smaller than women colleagues. The analytical observer identifies pure extraction (Snare) \u2014 organizational design choices that benefit from unequal caregiving distribution. The perspectival gap reveals that beneficiaries experience the constraint as natural coordination while victims experience it as extractive trap, and the analytical view identifies the extraction mechanism that beneficiary perspectives naturalize.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves mandatrophy by demonstrating that the career length differential and childcare exit differential are not natural outcomes of biological difference or individual choice but products of organizational design choices that benefit from unequal caregiving distribution. The coordination function (selecting for physicians with maximum availability) is real but the extraction mechanism (externalizing caregiving costs onto individual physicians, predominantly women, through structural failure to accommodate) is separable and measurable. The 5x differential in childcare-driven exit (21.3% vs 4.2%) and the 3-year career length gap (9 vs 12 years) quantify the extraction. The part-time pathway reveals the hybrid structure: it provides some coordination (continued clinical practice) but embeds extraction (career penalties that exceed coordination costs). The male physician seeking caregiving time perspective reveals the constraint extracts from caregiving regardless of gender but asymmetrically, confirming the mechanism is organizational structure rather than biological necessity. The scaffold perspective (gender equity coalition) identifies the sunset mechanism: as accommodation becomes standard practice and younger male physicians demand caregiving time, the binary choice dissolves. The analytical classification (Snare) is justified by high extraction (0.68), high suppression (0.72), and active enforcement through partnership track requirements and schedule inflexibility."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of administrative_extraction_mechanism: the same organizational structures that extract through administrative burden also extract through caregiving externalization. Both mechanisms disproportionately affect women physicians and both operate through structural failure to accommodate rather than through explicit policy. The gendered retention asymmetry has its own extractiveness value (0.68) reflecting the career length differential and childcare exit differential; the administrative extraction mechanism has its own extractiveness reflecting the documentation burden and time theft. They are structurally distinct constraints that share organizational beneficiaries and victim populations."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "administrative_extraction_mechanism"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": false
+  }
+}

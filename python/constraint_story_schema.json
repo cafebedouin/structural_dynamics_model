@@ -530,7 +530,7 @@
       }
     },
     {
-      "$comment": "CS structure: interpretation_layer_present is only valid when kernel_codification=formalized.",
+      "$comment": "CS structure: interpretation_layer_present is only valid when authority_grounding=lineage (any kernel encoding) OR (kernel_codification=formalized AND authority_grounding=extraction).",
       "if": {
         "properties": {
           "cs_structure": {
@@ -545,10 +545,21 @@
       "then": {
         "properties": {
           "cs_structure": {
-            "properties": {
-              "kernel_codification": { "const": "formalized" }
-            },
-            "required": ["kernel_codification"]
+            "anyOf": [
+              {
+                "properties": {
+                  "authority_grounding": { "const": "lineage" }
+                },
+                "required": ["authority_grounding"]
+              },
+              {
+                "properties": {
+                  "kernel_codification": { "const": "formalized" },
+                  "authority_grounding": { "const": "extraction" }
+                },
+                "required": ["kernel_codification", "authority_grounding"]
+              }
+            ]
           }
         }
       }

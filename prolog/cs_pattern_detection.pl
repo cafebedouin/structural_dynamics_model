@@ -57,6 +57,8 @@ cs_authority_grounding(C, Value) :-
 
 %% cs_interp_layer(+C)
 %  Succeeds iff interpretation_layer_present is declared true for C.
+%  v5 licensing condition: AG=lineage (any KC) OR (KC=formalized AND AG=extraction).
+%  NOTE: this predicate enforces no KC/AG constraint; licensing is structural-by-clause-call.
 cs_interp_layer(C) :-
     narrative_ontology:cs_interpretation_layer_present(C).
 
@@ -115,9 +117,17 @@ cs_classify(C, formalized, extraction, anchored_fixity_with_accretion,
 cs_classify(_, formalized, extraction, anchored_fixity_brittle,
             [kernel_formalized, authority_extraction, interp_layer_absent]) :- !.
 
-% Interpretive accretion — fixed text + lineage authority
+% Interpretive accretion — formalized kernel + lineage authority (principle-anchored)
+% Probe (Change 1): zero corpus instances of lineage+interp-false; interp implied-true.
+% Branch-A collision: privilege_waiver_threshold asserts interp-present but that fact is
+% not read here — interp_layer_implied is derived, not asserted. Latent inconsistency
+% recorded; no fix this round.
+cs_classify(_, formalized, lineage, interpretive_accretion,
+            [kernel_formalized, authority_lineage, interp_layer_implied]) :- !.
+
+% Interpretive accretion — fixed text + lineage authority (text-anchored)
 cs_classify(_, fixed_text, lineage, interpretive_accretion,
-            [kernel_fixed_text, authority_lineage]) :- !.
+            [kernel_fixed_text, authority_lineage, interp_layer_implied]) :- !.
 
 % Diffuse reconstruction — distributed kernel + distributed authority
 cs_classify(_, distributed, distributed, diffuse_reconstruction,

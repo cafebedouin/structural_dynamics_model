@@ -1,0 +1,133 @@
+
+SOVEREIGN INFRASTRUCTURE
+SECURITY ARCHITECTURE
+
+
+
+Data Sovereignty, Attorney-Client Privilege Protection,
+and HIPAA Compliance
+
+EXECUTIVE BRIEF
+Confidential ? Prepared for Review by Managing Partners,
+Compliance Officers, and Professional Liability Carriers
+
+May 2026
+
+I.  The Legal Imperative: US v. Heppner
+
+
+In February 2026, U.S. District Judge Jed Rakoff issued a ruling in United States v. Heppner with immediate and far-reaching implications for any law firm using artificial intelligence tools in its practice. The court held that submitting confidential client information to a public generative AI service constitutes disclosure to a third party ? and that such disclosure waives attorney-client privilege and work-product protection.
+The ruling does not turn on whether the information was used, shared, or retained by the AI provider. It turns on transmission. The moment privileged material travels to a public AI system, the privilege is gone.
+What This Means in Practice
+Most commercial AI tools ? including those marketed to legal professionals ? operate on cloud infrastructure owned and controlled by technology companies. When a attorney pastes a client memo, uploads a deposition transcript, or queries the system about a privileged matter, that information leaves the firm's control and enters a third-party environment. Under Heppner, that act alone may constitute waiver.
+The exposure is not hypothetical. Microsoft Copilot is now integrated into Microsoft 365 by default. Any firm on a qualifying 365 license is one setting away from AI-assisted document drafting that processes file contents in Microsoft's cloud. The same applies to Google Workspace AI features, Adobe AI, and a growing list of productivity tools embedding generative AI as a default capability.
+This is not a technology problem. It is a privilege preservation problem ? and it requires an architectural solution.
+The Sovereign Response
+The sovereign infrastructure stack described in this document was designed specifically to address this exposure. All AI inference is performed locally, on hardware under the firm's direct physical control. No client data is transmitted to any external service without explicit attorney authorization and anonymization. The architecture is not merely compliant with the post-Heppner environment ? it is structured to make privilege waiver architecturally impossible in normal operation.
+
+II.  The Sovereign Stack: A Unified Infrastructure
+
+
+The sovereign infrastructure consists of two purpose-built appliances that function as a single, integrated system. Neither appliance is designed to stand alone as the complete solution; together, they establish a closed trust environment for all sensitive data, identity, and AI operations within the firm.
+Keystone ? The Trusted Root
+Keystone is the foundational infrastructure appliance. It provides identity management, credential vaulting, file storage, encrypted backup, and secure internal communications ? the core services that every other system in the environment depends on. Keystone is not an AI system. It is the security anchor that makes AI safe to operate.
+Every user who accesses the sovereign environment authenticates through Keystone. Access to files, AI services, and internal communications is governed by Keystone's identity layer. When Keystone is offline, the AI appliance does not operate ? by design.
+SAIA ? The Sovereign AI Appliance
+SAIA is a locally-deployed AI inference engine. It processes documents, answers questions, and assists with legal research and drafting ? using AI models that run entirely on hardware physically located in the firm's facility. No query, no document, and no response ever traverses a public network in the normal course of operation.
+SAIA is not a single AI product. It is an architecture. The AI models it runs are open-source and auditable. The software stack that manages ingestion, retrieval, and response is open-source and auditable. There are no black-box components. There are no accounts with third-party AI providers. There is no data leaving the building.
+The Trust Boundary
+The combined system establishes a single, well-defined trust boundary. Inside the boundary: client files, AI inference, attorney work product, internal communications, credentials. Outside the boundary: everything else ? the public internet, cloud services, AI providers, and any system not under the firm's direct control.
+Data flows in (documents uploaded for processing) and work product flows out (documents, memos, summaries produced by attorneys). Neither flow crosses the trust boundary in normal operation. The only authorized path for data to exit ? for optional quality enhancement using external AI services ? requires attorney approval at the time of the specific request, after the relevant information has been automatically anonymized. The architecture physically cannot route unanonymized privileged data to an external service.
+
+III.  Security Architecture
+
+
+The security architecture of the sovereign stack is built on several mutually reinforcing principles. None of these is a single control that could be defeated alone; they are designed to be layered, such that the failure of any one control does not compromise the overall security posture.
+Network Isolation
+Both appliances operate on a dedicated, isolated network segment. All outbound traffic is blocked by default. The AI appliance has no path to the public internet in normal operation. The only permitted external communication occurs through an attorney-gated, anonymization-enforced pathway that requires explicit approval for each transaction. Network isolation is enforced at the firewall level, not just at the software level.
+Zero Telemetry
+All telemetry and usage reporting is disabled in every software component of the stack. This is verified at both the application layer and the network layer ? telemetry endpoints are firewall-blocked regardless of application configuration. No usage data, model queries, document contents, or operational metrics leave the facility.
+Local Identity ? No Cloud Dependency
+All authentication and authorization is managed by the Keystone identity system, which runs entirely on-premises. The sovereign stack does not depend on Microsoft Active Directory, Google Workspace, Okta, or any cloud identity provider. Multi-factor authentication is required for all user access. Loss of internet connectivity does not affect authentication or access control.
+Physical Security and Full-Disk Encryption
+All storage on both appliances is fully encrypted. Encryption keys are bound to hardware security modules, enabling automatic unlock on boot without storing passphrases in accessible locations. In the event of physical theft of any drive or appliance, the encrypted data is unreadable without the corresponding hardware security context. A documented recovery pathway exists for catastrophic hardware failure that does not require remote assistance.
+Sovereign Backup and Offline Rotation
+Backup integrity is maintained through a custody-controlled offline rotation system. Physical backup media is stored in fire- and waterproof safes under direct ownership control ? one on-site, one off-site. Backup media is rotated monthly using a defined procedure with written logs and custody signatures. No backup process requires network connectivity. No backup data is stored in cloud services.
+Importantly, the system is designed so that no single individual ? including the integrator ? can recover the system unilaterally. The owner holds the physical keys and custody of backup media. The integrator holds technical knowledge but not physical access to the keys. This separation of duties is a deliberate design choice, not a limitation.
+Anonymization Gate ? The External AI Boundary
+The one pathway that permits any data to leave the trust boundary is the anonymization gate. When an attorney chooses to submit a document for optional quality enhancement using an external AI service, the system automatically strips all identifying information ? names, entities, case references, dates ? before the request is transmitted. The attorney approves the anonymized version before it leaves. The external service never receives the original document or any identifying information.
+This gate is not a policy. It is an architectural constraint. The system is structurally incapable of routing un-anonymized data to an external service. Bypassing it would require deliberate reconfiguration by a credentialed administrator, which would be logged.
+Immutable Audit Trail
+All system events ? authentication, document access, AI queries, administrative actions, and any use of the external anonymization gate ? are recorded in an append-only, hash-chained audit log. The log cannot be edited or deleted without detection. Logs are written to cold storage on a schedule and are available for compliance review, incident investigation, or carrier audit.
+
+IV.  Compliance Mapping
+
+
+The sovereign stack is designed to satisfy the specific obligations that arise under attorney-client privilege doctrine, the ABA Model Rules of Professional Conduct, and HIPAA, as they apply to law firms handling protected health information in the course of litigation or representation.
+
+ObligationRequirementSovereign Stack ResponseAttorney-Client PrivilegeConfidential communications must not be disclosed to third partiesAll AI inference is local. No data transmitted externally in normal operation. Anonymization gate enforces privilege boundary for any optional external use.Work-Product DoctrineAttorney mental impressions and litigation strategy must be protectedNo cloud AI processing of work product. Audit trail documents all access. Air-gapped updates prevent unauthorized software modifications.ABA Model Rule 1.6Reasonable measures to prevent unauthorized disclosure of client informationNetwork isolation, zero telemetry, MFA, full-disk encryption, and physical custody controls constitute a documented, auditable security program.ABA Model Rule 1.1Competence includes understanding the benefits and risks of technologyArchitecture designed by qualified integrators; documented security controls; training and governance for staff using the system.HIPAA Security RuleAdministrative, physical, and technical safeguards for electronic PHIAccess controls, audit logging, encryption at rest and in transit (within the trust boundary), and a documented breach response pathway.HIPAA Minimum NecessaryAccess to PHI limited to what is necessary for the purposeRole-based file access; AI ingestion pipeline is read-only; no staff account has unrestricted access to all datasets.
+This mapping is not legal advice and does not constitute a compliance certification. It documents the architectural characteristics of the sovereign stack as they relate to the stated obligations. Firms should consult with qualified legal counsel regarding their specific compliance posture.
+
+V.  Threat Model: What the Sovereign Stack Defends Against
+
+
+Understanding the security architecture requires clarity about the threat model it was designed to address. These are not theoretical risks ? they are the specific failure modes that have produced legal liability and regulatory action for law firms in the current environment.
+Inadvertent Cloud Disclosure
+The most common and immediately relevant threat is inadvertent disclosure through integrated cloud AI tools. When Microsoft Copilot, Google Gemini, or similar tools are activated in an environment that contains privileged materials, the risk of processing that material in a cloud environment exists as a default operational condition ? not an exceptional one. The sovereign stack eliminates this exposure entirely by keeping AI inference local.
+Third-Party Data Breach
+Law firms that store client data with cloud AI providers inherit the breach risk of those providers. A data breach at a major AI company that involved ingested legal documents would potentially expose hundreds or thousands of firms simultaneously. Because the sovereign stack holds no data with any third-party AI provider ? and transmits none in normal operation ? this attack surface does not exist.
+Credential Compromise and Lateral Movement
+Compromised user credentials are the leading cause of data breaches across all industries. The sovereign stack's network isolation architecture limits the damage from any single compromised credential to the datasets that credential is authorized to access. There is no path from a compromised attorney workstation to the AI appliance's internal model data or to other attorneys' file datasets. The network is segmented; lateral movement is blocked by design.
+Insider Threat and Unauthorized Access
+The access control architecture limits each user ? including system administrators ? to only what they require for their role. The append-only audit log records all access events and cannot be altered to conceal activity. Physical backup media is under owner custody and cannot be accessed by technical staff outside a supervised rotation window.
+Physical Loss or Theft
+All storage on both appliances is encrypted. Theft of a drive, a backup disk, or the appliance itself does not result in access to plaintext data. The encryption scheme is hardware-bound; drives removed from the system context cannot be decrypted without the corresponding hardware security module.
+Regulatory or Legal Discovery of Third-Party AI Accounts
+A subpoena or regulatory inquiry directed at a cloud AI provider can compel disclosure of any data that provider holds ? including, potentially, queries and documents processed on behalf of a firm's clients. Because the sovereign stack does not maintain any account or data relationship with a cloud AI provider in normal operation, there is no third-party account against which such a demand could be directed.
+
+VI.  Scope and Limitations
+
+
+Accurate representation of security capabilities requires equal clarity about limitations. The sovereign stack is a powerful and well-architected system. It is not a guarantee against all possible risks, and it does not replace attorney judgment or firm governance.
+The Sovereign Stack Does Not Replace Attorney Judgment
+The AI system assists with document processing, research, drafting support, and information retrieval. It does not provide legal advice, and its outputs are not substitutes for attorney review. The quality of outputs depends on the quality of inputs and the governance policies the firm establishes for ingestion and use.
+The Sovereign Stack Does Not Secure Endpoints
+Attorney workstations, laptops, mobile devices, and email clients are outside the trust boundary of the sovereign stack. A compromised attorney workstation can still exfiltrate documents that were legitimately accessed by that attorney. Endpoint security, email security, and device management are necessary complements to this architecture, not replacements for it.
+The Sovereign Stack Does Not Govern External Communications
+Email, calendar, billing systems, and general business software that operate outside the sovereign environment are not protected by this architecture. Firms should continue to manage those systems under their existing IT and compliance programs. The sovereign stack is specifically designed for the data that carries privilege and HIPAA obligation ? not as a replacement for all firm technology.
+The Human Trust Layer
+No technical architecture eliminates the human trust requirement. This system is designed to minimize the number of people who must be trusted and to limit what any single individual can do unilaterally ? but it does not reduce that number to zero. The owner holds physical custody of backup media. The integrator holds technical access during scheduled maintenance. Internal staff govern what enters the knowledge base. Each of these is a trust relationship, and each carries risk that no software control fully eliminates.
+The anonymization gate is a strong architectural control, but it is not an absolute barrier. An attorney with sufficient access and sufficient motivation can find a path around any control. The gate raises the bar significantly; it does not eliminate the need for professional ethics and firm governance. Security is a practice, not a product, and the human beings operating this system are part of its security posture ? for better or worse.
+This is not a weakness unique to this architecture. It is the condition of every security program ever designed. The honest claim is not that human risk has been engineered away ? it is that this architecture was built by people who understand that it hasn?t been, and who designed accordingly: minimal trust surface, separation of duties, physical custody controls, and named, accountable individuals rather than anonymous remote access. A known integrator who shows up in person is a security control. Continuity of those relationships is a security control. That is how serious security programs work.
+Deployment Quality and Integrator Continuity
+The security properties described in this document are realized through deployment and maintained through discipline. Modifications to the architecture, deviations from deployment procedures, or operational practices that bypass defined controls can reduce or eliminate the security guarantees described here. Ongoing integrator engagement and periodic review are part of the designed security model. Conversely, because the entire stack is built on open-source software, open standards, and documented procedures, any competent integrator can assume support responsibilities if circumstances require ? the system is not hostage to any single individual.
+
+VII.  Deployment and Integration Model
+
+
+The sovereign stack is delivered, installed, and maintained by a dedicated integrator who serves as the technical point of accountability for the system. This is not a product that firms self-deploy or manage through a vendor portal. The integrator relationship is a feature of the security model, not an optional service tier.
+Implementation
+Initial deployment includes hardware delivery, configuration, integration with the firm's existing network, identity federation with existing staff accounts, and initial document ingestion for the RAG (retrieval-augmented generation) knowledge base. The process is designed to be non-disruptive to existing operations. Firms do not need to abandon Microsoft 365, existing billing systems, or other infrastructure ? the sovereign stack is additive, protecting the specific data that requires protection.
+Staff Enablement
+The system includes a defined internal governance role ? typically a senior paralegal or office manager ? who serves as the ingestion governance owner. This person manages what materials enter the sovereign knowledge base and establishes firm-specific protocols for AI use. The integrator trains this person and remains available for escalation. Staff do not interact with infrastructure; they interact with a browser-based interface that looks and behaves like other professional research tools.
+Ongoing Maintenance
+Software updates, model updates, and security patches are delivered through an integrator-controlled, offline update process. No update occurs without integrator coordination. The system does not auto-update from the internet. Maintenance windows are scheduled with the firm in advance. An annual support and update contract ensures continuous integrator availability and keeps the system current with the evolving threat and regulatory environment.
+Incident Response
+The integrator maintains documented procedures for the most likely operational scenarios: hardware failure, drive replacement, backup recovery, and the break-glass procedure for catastrophic appliance failure. All procedures are documented and stored with the firm. Recovery from any credentialed failure scenario does not require internet connectivity or vendor support calls.
+
+VIII.  Summary
+
+
+The legal landscape for AI use in law practice changed materially in 2026. The Heppner ruling made clear that using public AI tools to process privileged information is not merely a risk to be managed ? it is a privilege waiver. Firms that continue to rely on cloud-based AI tools for work involving privileged or HIPAA-protected materials do so with full knowledge of that exposure.
+The sovereign infrastructure stack was built to eliminate that exposure. It provides the capabilities of modern AI ? document analysis, legal research assistance, drafting support, and large-scale document review ? within a trust boundary that the firm controls entirely. No data leaves without attorney approval and anonymization. No cloud provider holds firm data. No telemetry leaves the building.
+The architecture is documented, auditable, and designed to support the firm's obligations under privilege doctrine, the ABA Model Rules, and HIPAA. It is delivered and maintained by a dedicated integrator who serves as the technical point of accountability ? not a vendor support line, not a cloud dashboard.
+This is infrastructure built for the way law firms actually work, and the obligations they actually carry.
+
+
+
+Confidential ? For Discussion Purposes Only
+This document does not constitute legal advice. Consult qualified legal counsel regarding specific compliance obligations.
+SOVEREIGN INFRASTRUCTURE SECURITY ARCHITECTURE	CONFIDENTIAL
+
+May 2026	Page 1
+
