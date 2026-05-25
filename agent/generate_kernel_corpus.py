@@ -56,7 +56,7 @@ from agent.story_generator_base import (
 
 # generate_pl and lint_file live in python/ — story_generator_base adds it to sys.path on import
 sys.path.insert(0, str(REPO_ROOT / "python"))
-from generate_constraint_pl import generate_pl, validate_json  # noqa: E402
+from generate_constraint_pl import generate_pl, validate_json, _load_schema  # noqa: E402
 from linter import lint_file                    # noqa: E402
 
 # SCOPE protocol prompt — patched on kernel-frame branch with §1.3-K and expanded CSR object
@@ -363,26 +363,53 @@ def poll_batch(client, batch_id, poll_interval):
         time.sleep(poll_interval)
 
 
-def strip_extra_properties(story: dict, prop_errors: list) -> dict:
-    """Remove properties named in 'Additional properties are not allowed' errors.
+def strip_extra_properties(story: dict, schema: dict) -> tuple:
+    """Remove extra properties at their exact JSON paths (path-aware).
 
-    These are serialization-noise fields the model invented that aren't in the schema.
-    Strips recursively so nested extra props are caught too.
+    Uses jsonschema error objects with .absolute_path to remove only at the
+    specific location where the extra property appears. Avoids collateral damage
+    when a required field (e.g., Omega.description) has the same name as an
+    extra field elsewhere in the document.
+
+    Returns (stripped_story, sorted_list_of_removed_field_names).
     """
-    extra = set()
-    for e in prop_errors:
-        for match in re.findall(r"'([^']+)'", e):
-            if " " not in match:  # exclude 'was unexpected' / 'were unexpected' fragments
-                extra.add(match)
+    import copy
+    try:
+        import jsonschema
+    except ImportError:
+        return story, []
 
-    def remove_from(d):
-        if isinstance(d, dict):
-            return {k: remove_from(v) for k, v in d.items() if k not in extra}
-        if isinstance(d, list):
-            return [remove_from(item) for item in d]
-        return d
+    validator_cls = getattr(jsonschema, "Draft7Validator", jsonschema.Draft4Validator)
+    error_objects = list(validator_cls(schema).iter_errors(story))
 
-    return remove_from(story)
+    removals = []  # (path_list, set_of_field_names)
+    for e in error_objects:
+        if e.validator != "additionalProperties":
+            continue
+        path = list(e.absolute_path)
+        fields = {m for m in re.findall(r"'([^']+)'", e.message) if " " not in m}
+        if fields:
+            removals.append((path, fields))
+
+    if not removals:
+        return story, []
+
+    result = copy.deepcopy(story)
+    removed = set()
+    for path, fields in removals:
+        target = result
+        try:
+            for key in path:
+                target = target[key]
+        except (KeyError, IndexError, TypeError):
+            continue
+        if isinstance(target, dict):
+            for f in fields:
+                if f in target:
+                    target.pop(f)
+                    removed.add(f)
+
+    return result, sorted(removed)
 
 
 def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_log,
@@ -404,6 +431,7 @@ def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_lo
     kernel_membership = {}
     rejected = []
     gen_seeds_by_id = gen_seeds_by_id or {}
+    _schema = _load_schema()  # load once; used by path-aware strip
 
     for result in client.messages.batches.results(batch_id):
         cid = result.custom_id
@@ -429,20 +457,17 @@ def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_lo
             other_errors = [e for e in errors if e not in prop_errors and e not in schema_errors]
 
             if prop_errors and not schema_errors and not other_errors:
-                # Strip invented fields and retry — serialization noise only
-                stripped = strip_extra_properties(story, prop_errors)
+                # Path-aware strip: remove extra fields only at the exact paths where
+                # they appear, preventing collateral removal of same-named required
+                # fields elsewhere (e.g., Omega.description is required).
+                stripped, props_removed = strip_extra_properties(story, _schema)
                 retry_errors = validate_json(stripped)
                 if retry_errors:
                     print(f"  FAIL {cid}: strip retry still invalid: {retry_errors[:2]}")
                     failed += 1
                     continue
                 story = stripped
-                props_removed = set()
-                for e in prop_errors:
-                    for m in re.findall(r"'([^']+)'", e):
-                        if " " not in m:
-                            props_removed.add(m)
-                print(f"  STRIPPED {cid}: removed {sorted(props_removed)}")
+                print(f"  STRIPPED {cid}: removed {props_removed}")
                 errors = []  # fall through to save
 
             elif schema_errors:
