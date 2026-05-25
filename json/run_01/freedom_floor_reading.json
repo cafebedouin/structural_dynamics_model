@@ -1,0 +1,193 @@
+{
+  "header": {
+    "constraint_id": "freedom_floor_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_freedom_floor_reading",
+    "measurement_id_prefix": "ffr"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.22,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Income Support as Autonomy-Enabling Floor (Freedom Floor Reading)",
+    "topic_domain": "political_economy/social_policy/labor_markets",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "precarious_workers",
+      "wage_floor_beneficiaries"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Precarious Worker (Expanded Choice Set)",
+      "comment": "PERSPECTIVE 1: PRECARIOUS WORKER (ROPE) — Income floor expands exit options from trapped (no alternative to exploitative wage) to mobile (can refuse unacceptable terms). Worker experiences the constraint as genuine coordination mechanism: income support enables labor market participation on terms closer to voluntary choice. Low experienced extraction because the mechanism directly enables this agent's mobility."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Working-Class Household (Risk Mitigation)",
+      "comment": "PERSPECTIVE 2: WORKING-CLASS HOUSEHOLD (ROPE) — Experiences income floor as risk-pooling coordination: reduces catastrophic income loss during job transitions, illness, or sectoral decline. Coordination function is genuine — the mechanism solves the collective action problem of income volatility. Suppression is low because the mechanism operates with consent and transparent terms. Worker pays taxes but retains agency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Monopsony Employer (Reduced Wage Suppression)",
+      "comment": "PERSPECTIVE 3: MONOPSONY EMPLOYER (TANGLED ROPE) — Income floor reduces monopsony extractiveness by raising the reservation wage. Employer faces both loss (cannot extract as much labor value) and coordination benefit (more stable labor supply, reduced turnover costs, access to workers with reduced desperation). Mixed experience: extraction cost mixed with genuine operational benefit. Extractiveness is moderate because the mechanism constrains predatory wage-setting while enabling coordination."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Movement (Temporary Wage Support)",
+      "comment": "PERSPECTIVE 4: LABOR MOVEMENT (SCAFFOLD) — Income floor as temporary wage support during labor market transition. Organized labor sees the constraint as a scaffolding mechanism enabling worker mobility that should, ideally, enable workers to organize and demand higher wages, reducing long-term reliance on income support. Sunset clause rationale: as labor organization strengthens and sectoral investment increases, reliance on income floor should decline. Theater is moderate because the mechanism is transparent and results are measurable (employment rates, wage growth)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State (Labor Market Equilibration)",
+      "comment": "PERSPECTIVE 5: THE STATE (ROPE) — Income floor enables state to coordinate labor market equilibration without direct wage-setting intervention. State receives benefit: reduced social crisis, improved public health, lower criminal justice costs, higher productivity. State pays cost: tax revenue commitment. Net experience is coordination (rope) because the mechanism solves a genuine collective action problem — maintaining livable income floor requires coordinated action across tax base; market alone does not produce this equilibration."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Labor Value Floor as Natural Necessity)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational horizon, income floor appears as an immutable requirement for preventing destitution and maintaining labor market participation. Below certain income thresholds, workers cannot participate in markets (malnutrition, homelessness, health collapse prevent work). The floor is not a policy choice but a structural necessity. However, this reading naturalizes what is actually a policy decision — the false summit detector will evaluate whether identifiable beneficiaries (workers gaining mobility, employers gaining stable labor) justify reclassification as a constructed constraint."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "freedom_floor_vs_dependency_trap",
+      "question": "Does income support structurally enable worker autonomy and expanded exit options, or does it create structural dependency that reduces bargaining power and long-term labor supply?",
+      "resolution_mechanism": "Longitudinal tracking of beneficiary employment outcomes; wage trajectory analysis comparing income support recipients to non-recipients; measurement of reservation wage changes; labor supply elasticity at different income floor levels",
+      "impact": "If autonomy-enabling (this reading): classification as rope, low extractiveness, beneficiaries include workers. If dependency-trap (sibling reading): classification shifts toward snare/tangled_rope, higher extractiveness, beneficiaries shift to state/employers. This is the reading-determining omega.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether income support enables or constrains worker autonomy"
+    },
+    {
+      "id": "monopsony_power_reduction_magnitude",
+      "question": "How much does the income floor reduce monopsony extraction, and does the reduction align with the coordination benefits employers gain from stable labor supply?",
+      "resolution_mechanism": "Comparative analysis of wage suppression (wage-to-productivity gap) before and after income floor implementation; measurement of labor turnover and training costs; employer bargaining outcomes (hiring discrimination, conditional work requirements)",
+      "impact": "If reduction is large and benefits exceed costs: employers experience net coordination gain, reinforcing rope classification. If reduction is minimal while suppression remains high: extraction continues, shifting toward tangled_rope with higher asymmetry.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Magnitude of monopsony power reduction from income floor"
+    },
+    {
+      "id": "tax_base_distributional_incidence",
+      "question": "Who bears the extraction cost of the income floor, and does the incidence align with beneficiary gains?",
+      "resolution_mechanism": "Tax incidence analysis by income quintile; effective tax rate comparison across wage and capital income; measurement of tax-funded income support as percentage of total state budget",
+      "impact": "If incidence is progressive (high earners bear most cost) and benefits concentrate on low-wage workers: rope classification is robust. If incidence is regressive or shifted to middle-class wage earners: extractiveness increases, tangled_rope becomes more salient.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distributional incidence of income floor financing"
+    },
+    {
+      "id": "reading_determination_omega",
+      "question": "Is income support primarily a mechanism for expanding worker autonomy and choice (freedom floor reading), or primarily a mechanism for socializing the cost of labor reproduction to benefit employers and capital accumulation (dependency trap or subsidy capture readings)?",
+      "resolution_mechanism": "This omega routes the contested kernel itself. The kernel is income_support_commitment, which can be read as: (a) freedom floor: autonomy-enabling, expands worker exit options, reduces monopsony power (this reading); (b) dependency trap: creates structural reliance on state, reduces wage bargaining power, perpetuates low-wage labor market (sibling reading); (c) subsidy capture: socializes reproduction costs, enables wage suppression, transfers rent to employers (sibling reading). Resolution requires structural analysis of counterfactual wage and employment outcomes.",
+      "impact": "This omega determines which reading is correct. No single empirical test resolves it — the difference between readings is framing of the SAME structural data. The reading-determining factors are: (1) the magnitude of autonomy gains vs. dependency risks; (2) the distribution of extraction costs; (3) the counterfactual wage structure absent the floor; (4) the long-term effect on labor supply and bargaining power. Different frameworks weight these factors differently.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Kernel reading determination: freedom floor vs. dependency trap vs. subsidy capture"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Income support mechanisms (minimum income, unemployment insurance, guaranteed income programs) can be read as either autonomy-enabling tools that expand worker choice sets and reduce employer monopsony power, or as dependency-creating subsidies that enable wage suppression and perpetuate low-wage labor market equilibria. This constraint story instantiates the FREEDOM FLOOR READING — the reading in which income support functions primarily as an expansion of exit options and a reduction in monopsony extraction. From this perspective, workers gain the ability to refuse unacceptable wages because they have an alternative to destitution; employers lose extractive power because workers are no longer forced to accept any available wage; the state gains labor market stability. The mechanism is rope-like: it coordinates income smoothing across the tax base and coordinates labor supply with demand at higher wage equilibria. This reading is one of three possible readings of the contested kernel (income_support_commitment). The sibling readings — dependency_trap_reading and subsidy_capture_reading — would use the same structural data but emphasize different causal channels and long-term outcomes. The distinction between readings is not resolvable by adding more data points; it depends on theoretical framing of how income floors affect labor supply, bargaining power, and wage equilibrium.",
+    "key_agents": [
+      "Precarious Workers: Primary beneficiary (powerless→mobile transition via income floor) — gain expanded exit options, ability to refuse exploitative wages, reduced desperation-driven labor supply",
+      "Working-Class Households: Primary beneficiary (moderate/constrained) — gain income smoothing, reduced vulnerability to job loss, improved household financial security",
+      "Monopsony Employers: Mixed beneficiary/victim (powerful/constrained) — lose extractive power through reduced wage suppression, gain coordination benefits through stable labor supply and reduced turnover",
+      "Labor Movement: Organized agent (organized/constrained) — sees income floor as scaffolding enabling higher bargaining power over time; expects sunset as labor organization strengthens",
+      "State Apparatus: Institutional beneficiary (institutional/arbitrage) — gains labor market equilibration, reduced social crisis costs, improved public health; pays via tax commitment",
+      "Analytical Observer: Civilizational position (analytical/analytical) — risks naturalizing contingent policy choice as immutable economic necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.32): Moderate-low. The income floor generates moderate extraction costs (taxation, bureaucratic overhead, labor supply effects) but its primary function is coordination rather than extraction. Workers gain mobility; employers gain labor market stability. The mechanism does not require coercion — income support operates via transparent tax and transfer mechanisms that beneficiaries understand. Suppression (0.22): Low. While some suppression exists (taxation is compulsory, income floor recipients must meet eligibility criteria), it is far below the levels required for snare or high tangled_rope. Workers retain agency; the mechanism operates openly; exit from participation is theoretically possible (though costly). Theater ratio (0.35): Low-moderate. The income floor mechanism is relatively transparent: benefits are visible, costs are visible (though distributed across tax base), eligibility criteria are explicit. Theater increases modestly over time as administrative complexity grows and political contestation around the floor intensifies, but the mechanism does not degrade to piton levels (where function becomes purely symbolic).",
+    "directionality_logic": "The freedom floor reading emphasizes the beneficiary relationship: workers gain autonomy (exit options improve from trapped to mobile), employers lose extractive power (monopsony suppression declines). This beneficiary structure — with workers as primary beneficiaries gaining expanded choice sets — is the defining feature of this reading. The sibling dependency_trap_reading would emphasize the cost structure (perpetual reliance on state transfers, reduced wage bargaining if workers accept lower wages in exchange for income security, lock-in effects). The subsidy_capture_reading would emphasize the employer benefit (workers accept lower wages because income floor covers the gap, socializing reproduction costs). From the freedom floor perspective, these cost structures are secondary to the autonomy gain. The directionality derivation reflects this: beneficiaries with expanded mobile options experience low effective extraction; victims (employers) lose power but gain coordination benefits, producing mixed experience (tangled_rope).",
+    "perspectival_gap": "The freedom floor reading produces a perspectival gap between beneficiaries who experience autonomy expansion (rope) and the analytical observer who might naturalize the floor as immutable necessity (mountain). The gap reveals whether the floor is a genuine coordination mechanism or a false summit. Monopsony employers occupy a distinctive middle position: they experience both extraction loss (reduced wage suppression) and coordination gain (stable labor supply). This dual experience (tangled_rope) is specific to the freedom floor reading — in the subsidy_capture_reading, employers would experience net benefit (reduced wages offset by lower recruitment costs), shifting toward rope.",
+    "mandatrophy_analysis": "The mandatrophy here is resolved through the reading determination omega: the same structural constraint (income floor mechanism) can be classified differently depending on which reading of the kernel dominates. The freedom floor reading resolves mandatrophy by emphasizing the beneficiary structure (workers gain autonomy) and the coordination function (labor market equilibration). If the empirical data shows that income floors primarily enable worker autonomy and reduce monopsony power, the rope classification is robust. If the empirical data shows that income floors primarily create dependency and enable wage suppression, the dependency_trap_reading would be correct instead, producing higher extractiveness (tangled_rope or snare). The mandatrophy is not 'which type is correct?' but 'which reading of the kernel is empirically supported?'",
+    "kernel_context": "This constraint is ONE READING of the contested kernel: income_support_commitment. The kernel is the commitment to provide income support to workers — the core claim is that income support exists and operates at some level. The three readings instantiate different interpretations of why this commitment exists and what it does: (1) FREEDOM FLOOR READING (this constraint): income support expands worker autonomy and exit options, reduces monopsony power, enables higher-wage equilibria. (2) DEPENDENCY TRAP READING (sibling): income support creates structural reliance on state, enables wage suppression through 'income floor supplement' logic (employers pay lower wages, income floor makes up the gap), perpetuates low-wage labor market. (3) SUBSIDY CAPTURE READING (sibling): income support is primarily a mechanism for socializing the cost of labor reproduction, allowing capital to extract surplus while state bears reproduction cost through taxation. The readings differ not in their empirical claims about what happens (all three agree income support affects wages, labor supply, taxation) but in their structural interpretation of causal direction and benefit distribution. The freedom floor reading emphasizes worker gains; the dependency trap reading emphasizes state lock-in and wage suppression; the subsidy capture reading emphasizes employer gains and capital accumulation. Each reading produces a different constraint story with its own ε, beneficiary/victim structure, and type classification."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "monopsony_wage_suppression",
+      "labor_market_exit_capacity",
+      "reproduction_cost_distribution"
+    ],
+    "dual_formulation_note": "The income support commitment decomposes into three constraint readings with different ε values and beneficiary structures. The freedom floor reading emphasizes worker autonomy gains (ε=0.32, rope). Sibling readings (dependency_trap and subsidy_capture) would show higher extractiveness and different victim/beneficiary distributions. All three readings share the same observable mechanism (income transfers funded by taxation) but interpret its function and incidence differently."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.45
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "income_support_commitment"
+    ]
+  }
+}

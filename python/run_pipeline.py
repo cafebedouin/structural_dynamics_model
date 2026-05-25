@@ -168,6 +168,7 @@ def run_prolog(modules: list[str], goal: str, timeout: int = 300) -> subprocess.
 _PREAMBLE_MARKERS = {
     "orbit":      "<!-- ORBIT_REPORT_START -->",
     "fpn":        "<!-- FPN_REPORT_START -->",
+    "husk":       "<!-- HUSK_REPORT_START -->",
     "maxent":     "<!-- MAXENT_REPORT_START -->",
     "abductive":  "<!-- ABDUCTIVE_REPORT_START -->",
     "trajectory": "<!-- TRAJECTORY_REPORT_START -->",
@@ -286,6 +287,20 @@ def _prolog_orbit():
         (OUTPUTS_DIR / "orbit_report.md").write_text(cleaned, encoding="utf-8")
     else:
         (OUTPUTS_DIR / "orbit_report.md").write_text("", encoding="utf-8")
+
+
+def _prolog_husk():
+    """Run husk_report → husk_data.json (direct) + husk_report.md (stdout)."""
+    result = run_prolog(
+        ["stack.pl", "husk_report.pl"],
+        "run_husk_report",
+    )
+    raw = result.stdout
+    if raw.strip():
+        cleaned = strip_preamble(raw, _PREAMBLE_MARKERS["husk"])
+        (OUTPUTS_DIR / "husk_report.md").write_text(cleaned, encoding="utf-8")
+    else:
+        (OUTPUTS_DIR / "husk_report.md").write_text("", encoding="utf-8")
 
 
 def _prolog_fpn():
@@ -421,6 +436,7 @@ def _phase_prolog(progress, parallel):
         ("validation",  _prolog_validation),
         ("fingerprint", _prolog_fingerprint),
         ("orbit",       _prolog_orbit),
+        ("husk",        _prolog_husk),
         ("fpn",         _prolog_fpn),
         ("maxent",      _prolog_maxent),
         ("abductive",   _prolog_abductive),

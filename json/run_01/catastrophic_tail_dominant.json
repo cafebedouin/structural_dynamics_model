@@ -1,0 +1,224 @@
+{
+  "header": {
+    "constraint_id": "catastrophic_tail_dominant",
+    "version": "1.0",
+    "generated_date": "2026-02-27",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_catastrophic_tail_dominant",
+    "measurement_id_prefix": "catast"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Catastrophic Tail Risk Dominance in Energy Policy Decision-Making",
+    "topic_domain": "risk_assessment/energy_policy/decision_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nuclear_energy_advocates",
+      "low_carbon_institutional_actors"
+    ],
+    "victims": [
+      "fossil_fuel_dependent_communities",
+      "working_class_energy_consumers",
+      "distributed_harm_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Coal Mining and Fossil Fuel Communities"
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Distributed Harm Populations"
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Energy Consumers and Grid Operators"
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Nuclear Energy and Climate Advocates (Institutional)"
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Renewable Energy Transition Advocates (Organized)"
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Risk Assessment and Cost-Benefit Apparatus"
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "tail_weight_specification",
+      "question": "What probability threshold and impact magnitude determine whether a tail risk deserves infinite (or near-infinite) weight in decision-making?",
+      "resolution_mechanism": "Cross-domain analysis of decision thresholds: climate policy (1 in 1000 year catastrophes weighted heavily), AI safety (1 in 10^6 extinction scenarios weighted infinitely), pandemic preparedness (1 in 100 year events weighted moderately). Consistency test: do the same frameworks apply across domains?",
+      "impact": "If threshold is objective and universal: catastrophic tail dominance is mountain (natural law of decision theory). If threshold varies by domain, stakeholder power, and institutional context: it is constructed extraction (snare or tangled rope).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Specification of probability-impact threshold for catastrophic risk weighting"
+    },
+    {
+      "id": "distributed_harm_discounting",
+      "question": "Why are distributed, diffuse harms (air pollution deaths, climate impacts, occupational exposure) systematically underweighted relative to concentrated, single-event catastrophes in formal risk assessment?",
+      "resolution_mechanism": "Comparative analysis of utility functions: probability of death from coal air pollution (distributed, ~7000 annual deaths in high-coal regions) vs probability of nuclear accident deaths (concentrated, ~50 year occurrence). Are utility weights equal? If distributed deaths are discounted, what mechanism justifies the discount?",
+      "impact": "If discounting is justified: tail dominance reflects rational risk preferences. If unjustified: tail dominance is extraction mechanism (victims of distributed harms subsidize catastrophe prevention for beneficiaries of tail-risk-aversion policies). Likely determines if constraint is Rope or Snare from distributed-harm perspective.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Mechanism and justification for discounting distributed harm in risk assessment"
+    },
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "This constraint is ONE reading of the contested kernel acceptable_risk_energy. Which framing dominates decision-making: catastrophic-tail-dominant (this reading), expected-value-dominant (sibling reading), or option-value-preserving (sibling reading)?",
+      "resolution_mechanism": "Policy analysis: track actual budget allocation, regulatory stringency, and energy deployment decisions over time. Which framework's predictions match observed outcomes? Interviews with policy-makers: which risk frame do they cite when justifying decisions? If multiple frames are invoked in different contexts, the kernel is distributed rather than dominated by one reading.",
+      "impact": "If catastrophic-tail-dominant reading dominates: this constraint story is the primary structural description. If expected-value-dominant dominates: expected_value_dominant reading's extractiveness and suppression are higher than catastrophic_tail_dominant's. If option-value-preserving dominates: both other readings are downstream coordination mechanisms. The kernel's reading determines which constraint story is the trunk of the family tree.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Dominance of catastrophic-tail vs expected-value vs option-value framings in actual policy"
+    },
+    {
+      "id": "reversibility_asymmetry",
+      "question": "Is the asymmetry in how fossil fuel and nuclear risks are treated justified by differences in reversibility: are fossil fuel harms more reversible/correctable than nuclear catastrophes?",
+      "resolution_mechanism": "Climate science analysis: are changes from 400+ ppm CO2 reversible on human timescales? Radioactive waste: is containment for 10,000 years sustainable? Can distributed harm be remedied faster than catastrophic harm can be mitigated after occurrence?",
+      "impact": "If nuclear harms are truly less reversible: tail-dominance weighting is justified (mountain-adjacent). If both are comparably irreversible: the asymmetry is constructed and serves extraction logic (snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Comparative reversibility of fossil fuel vs nuclear environmental impacts"
+    },
+    {
+      "id": "infinite_utility_collapse",
+      "question": "When catastrophic risks receive infinite or near-infinite utility weights, does the formal decision apparatus become analytically intractable or does it collapse to a fixed heuristic?",
+      "resolution_mechanism": "Study of risk assessment practice: do researchers actually compute expected values with infinite weights, or do they apply decision rules (e.g., 'nuclear must be < 1 in 10 million annual risk') that bypass optimization? If rules dominate, the apparatus is theater (piton). If optimization persists, the apparatus is genuinely constraining (mountain).",
+      "impact": "If apparatus collapses to heuristic: suppression is high (0.68) and theater is high (0.61), confirming piton classification from risk assessment perspective. If genuine optimization persists: the apparatus is architecturally fundamental, supporting mountain view.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether infinite-weight risk assessment becomes computationally tractable or collapses to heuristic"
+    },
+    {
+      "id": "kernel_sibling_structural_delta",
+      "question": "What are the structural differences between this reading (catastrophic-tail-dominant) and the sibling readings (expected-value-dominant and option-value-preserving)?",
+      "resolution_mechanism": "Constraint family analysis: map the three readings to ε values and victim/beneficiary sets. How does each reading's extractiveness differ? Which reading's beneficiaries and victims overlap? Where does the constraint family's extraction concentration shift as the reading changes?",
+      "impact": "Expected-value-dominant reading: likely lower suppression (distributed harm counted in expected value), lower theater (formal optimization less theatrical when all harms weighted equally). Option-value-preserving reading: likely rope or scaffold classification (coordination benefit of keeping technological options open exceeds extraction). This omega documents why the catastrophic_tail_dominant reading produces the highest extractiveness and suppression of the three.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural and metric differences across the acceptable_risk_energy kernel's three readings"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48,
+      "id_override": "catast_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55,
+      "id_override": "catast_theater_t5"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.61,
+      "id_override": "catast_theater_t10"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "catast_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5,
+      "id_override": "catast_extract_t5"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58,
+      "id_override": "catast_extract_t10"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Energy policy increasingly prioritizes avoiding low-probability catastrophic outcomes (nuclear accidents, supply chain collapse, grid failure) even at the cost of accepting higher expected aggregate harm (continued fossil fuel deaths, air pollution, climate impacts). This constraint represents ONE specific reading of how acceptable risk is framed in energy decision-making — the catastrophic-tail-dominant reading, where tail risks receive disproportionate weight in policy justification. The constraint operates as a hybrid coordination-extraction mechanism: nuclear advocates frame catastrophic risk aversion as a coordination mechanism that serves collective low-carbon transition, but this framing systematically suppresses the voices of distributed-harm populations (fossil fuel workers, air-pollution victims, climate-stressed communities) whose interests conflict with the tail-dominance prioritization. The fossil fuel-dependent communities that bear transition costs are structurally trapped — they face concentrated, immediate unemployment and community collapse, while the catastrophe they are protecting against is diffuse and future-oriented. The constraint's theater ratio (0.61) reflects that formal risk assessment apparatus (expected value calculations, probabilistic analysis, cost-benefit frameworks) performs legitimation work more than analytical work: the frameworks are deployed to justify choices made on institutional and political grounds, not to resolve genuine value conflicts.",
+    "key_agents": [
+      "Nuclear Energy and Climate Advocates (Institutional): Primary beneficiaries — secure funding, regulatory support, and institutional legitimacy through catastrophic tail aversion framing",
+      "Fossil Fuel Dependent Communities (Powerless/Trapped): Primary victims — concentrated, immediate transition costs; bear the implementation burden of catastrophe avoidance",
+      "Distributed Harm Populations (Powerless/Trapped): Primary victims — diffuse deaths from air pollution, climate impacts, occupational exposure; systematically underweighted in formal risk frameworks",
+      "Energy Consumers and Grid Operators (Moderate/Constrained): Mixed role — benefit from coordination (energy supply) and suffer from policy constraints (infrastructure lock-in, transition costs)",
+      "Renewable Energy Coalition (Organized/Constrained): Secondary beneficiary — catastrophic tail aversion accelerates decarbonization but also validates nuclear deployment that competes with renewable expansion",
+      "Risk Assessment Apparatus (Institutional/Mobile): Institutional actor that maintains performative frameworks — formal procedures legitimize politically-determined choices while obscuring value conflicts",
+      "Analytical Observer (Analytical): Risks naturalizing a contingent institutional choice (tail weighting) as a law of rational choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The catastrophic tail-dominant framing produces real redistribution: institutional actors (nuclear advocates, climate establishment) capture policy legitimacy and funding, while distributed-harm populations and fossil fuel communities bear implementation and transition costs. The extraction is not total (0.70+) because some coordination benefit exists — tail aversion does reduce catastrophic risk, and institutional actors genuinely experience lower-probability downside. However, the extraction is substantial because the weighting asymmetry is constructed, not natural: distributed harms are systematically discounted not because they are truly less important but because they are diffuse and politically weak. Suppression (0.68): High. Multiple mechanisms suppress alternatives: (1) Mathematical suppression — infinite or near-infinite utility weights on catastrophes make formal optimization intractable, forcing rigid decision heuristics that close off debate; (2) Epistemic suppression — uncertainty quantification is asymmetric (catastrophic risks quantified with high confidence, distributed harms treated as uncertain); (3) Political suppression — distributed-harm populations lack institutional voice; fossil fuel communities face coordination barriers to collective resistance; (4) Institutional suppression — risk assessment apparatus is gatekept by experts aligned with tail-dominance framing. Theater ratio (0.61): Moderate-high. The formal risk assessment apparatus performs significant legitimation work. Formal procedures (probabilistic risk assessment, cost-benefit analysis, expert elicitation) create appearance of objective analysis while actually encoding contingent value choices (how to weight tail risks, how to discount distributed harms, what probability thresholds matter). The apparatus is theater because it obscures rather than resolves the underlying conflict between tail aversion and aggregate harm reduction.",
+    "perspectival_gap": "The core gap is between how institutional beneficiaries experience the constraint (coordination) and how trapped victims experience it (extraction). The nuclear advocate sees tail aversion as solving a collective problem and views themselves as part of a solution coalition. The coal miner sees tail aversion as the policy justification for shutting down their industry without compensation or support. These are not different interpretations of the same constraint — they are genuinely different structural experiences. The magnitude of the perspective gap correlates with the asymmetry in exit options (arbitrage vs trapped) and power levels (institutional vs powerless). The piton perspective (risk assessment apparatus) occupies a distinct position: it performs legitimate the tail-dominance framing while being somewhat detached from its consequences. The apparatus maintains high theater precisely to manage the perspectival gap — formal procedures create appearance of consensus where genuine value conflict exists.",
+    "directionality_logic": "Each perspective's experienced extractiveness (χ) is computed from base extractiveness (0.58), the agent's directionality value (d derived from power, exit options, and beneficiary/victim status), and scope effects. Institutional beneficiary with arbitrage exit: d ≈ 0.15, f(d) ≈ -0.01, χ ≈ -0.006 (net subsidy — constraint benefits this agent). Powerless victim with trapped exit: d ≈ 0.90, f(d) ≈ 1.28, χ ≈ 0.74 (high extraction — maximum experienced harm). Moderate victim with constrained exit: d ≈ 0.65, f(d) ≈ 1.00, χ ≈ 0.58 (moderate extraction — experiences the constraint as constraining but not inescapable). Organized actor with constrained exit: d ≈ 0.45, f(d) ≈ 0.50, χ ≈ 0.29 (low extraction — has agency and sees alternatives). The spread in χ values across perspectives (from -0.006 to 0.74) reveals the constraint's asymmetry: it creates extreme extraction for powerless agents, no extraction for institutional beneficiaries, and variable extraction for moderate and organized agents.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by differentiating genuine coordination (nuclear advocates do solve a low-carbon transition problem) from constructed extraction (the weighting asymmetry that suppresses distributed-harm voices is not inherent to the problem, but chosen). The tangled-rope classification is correct: the constraint contains both real coordination (tail aversion does reduce catastrophic risk) and real asymmetric extraction (institutional actors benefit while powerless actors bear concentrated costs). The mandatrophy resolution is perspectival: from the beneficiary's view, the constraint is coordination. From the victim's view, it is extraction. The analytical observer's mountain is a false summit — it naturalizes a contingent weighting choice as a law of rational decision theory.",
+    "kernel_context": "This constraint is ONE reading of the contested kernel acceptable_risk_energy. The kernel is the foundational commitment in energy policy: decisions about risk distribution, catastrophic protection, and acceptable harm levels. The catastrophic-tail-dominant reading (this constraint) instantiates ONE way this kernel can be read: tail risks receive disproportionate weight in policy justification, which subordinates distributed-harm voices and benefits institutional actors aligned with tail aversion. The sibling readings are: (1) expected-value-dominant reading: all harms (distributed and catastrophic) are weighted by probability and magnitude, with no privilege given to tail events — this reading produces lower suppression and different beneficiary/victim structure; (2) option-value-preserving reading: risk frameworks prioritize keeping technological options open rather than committing to specific risk hierarchies — this reading produces rope or scaffold classifications, emphasizing coordination over extraction. The catastrophic-tail-dominant reading dominates current energy policy in most Western contexts, but this dominance is contestable. The omegas document the structural points where the reading's assumptions become visible and challengeable."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "expected_value_dominant",
+      "option_value_preserving",
+      "nuclear_waste_intergenerational",
+      "distributed_harm_underweighting"
+    ],
+    "dual_formulation_note": "This constraint is part of the acceptable_risk_energy constraint family with three structurally distinct readings. The catastrophic-tail-dominant reading (ε=0.58, high suppression, piton theater apparatus) is upstream of nuclear-specific constraints (waste storage, safety certification) because tail aversion justifies nuclear deployment. It is sibling to expected-value-dominant (ε likely lower, more balanced harm accounting) and option-value-preserving (ε likely lower, rope classification emphasizing coordination). All three readings operate on the same underlying institutional domain but decompose the 'acceptable risk' commitment differently. Decomposition necessary because measuring the constraint via different risk framings yields materially different ε values, indicating structurally distinct constraints rather than alternative perspectives on one constraint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.9
+    }
+  ]
+}

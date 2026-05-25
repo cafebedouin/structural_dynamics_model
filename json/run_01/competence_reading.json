@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "competence_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_competence_reading",
+    "measurement_id_prefix": "comp"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.35,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Preparedness as Live Exercised Knowledge (Competence Reading)",
+    "topic_domain": "disaster_preparedness/institutional_memory/organizational_resilience",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "operational_leadership",
+      "trained_personnel"
+    ],
+    "victims": [
+      "organizational_capacity_commons",
+      "junior_personnel_time"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Junior Personnel",
+      "comment": "PERSPECTIVE 1: JUNIOR PERSONNEL (SNARE) — Trapped in recurring drill cycles with no discretion over participation. Extractive loop: time investment in repetitive drills with no visible reward; career advancement depends on compliance with an opaque competence standard. Cannot exit without career penalty. No coordination benefit perceived — only extraction of labor and attention."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Mid-Level Coordinator",
+      "comment": "PERSPECTIVE 2: MID-LEVEL COORDINATOR (TANGLED ROPE) — Constrained by resource scarcity and training burden; experiences genuine coordination function (drills do test real decision-making and reveal gaps) alongside extraction (required to justify drills to skeptical leadership, absorb schedule disruptions, maintain training infrastructure). Both costs and benefits are substantial. Some exit available (transfer to non-drill-intensive roles) at moderate career cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Operational Leadership",
+      "comment": "PERSPECTIVE 3: OPERATIONAL LEADERSHIP (ROPE) — Benefits from demonstrable competence assurance. Drills provide actionable intelligence about gaps in operational capacity; live exercise data feeds strategic planning. Low-cost arbitrage exit: leadership can scale or repurpose drill programs without loss of status or institutional position. Net beneficiary — extraction flows toward this agent."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Training Standards Body",
+      "comment": "PERSPECTIVE 4: TRAINING STANDARDS BODY (SCAFFOLD) — Organized agents (certification programs, regulatory bodies, inter-agency working groups) see preparedness drills as a transitional coordination mechanism with clear sunset logic: as organizational memory institutionalizes (documented procedures, digital system handoff, embedded simulation capabilities), the need for live drills declines. Current suppression (procedural overhead, scheduling friction) is tolerated because the sunset path is visible. Theater ratio remains moderate as standards bodies distinguish performative compliance from functional verification."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Ritual Layer",
+      "comment": "PERSPECTIVE 5: INSTITUTIONAL RITUAL LAYER (PITON) — At the civilizational scale, the preparedness drill has become substantially performative. Originally a genuine verification mechanism, it persists through institutional inertia despite degraded function: after-action reviews often repeat findings from previous cycles; recommendations are filed but not systematically implemented; the theater of 'being prepared' substitutes for actual adaptive capacity. High theater ratio (0.68 at civilizational scale) reflects that the ritual itself has become the measure of preparedness rather than actual operational verification."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, some rehearsal of complex operations is inherent to maintaining readiness: knowledge degrades without exercise, personnel turn over, novel situations demand adaptive capacity. This perspective sees preparedness drills as an immutable property of complex systems resilience — a natural law of organizational decay and renewal. However, the structural data (identified beneficiaries, enforcement requirements, theater accumulation) contradicts this naturalization. The engine will detect this as a false summit candidate."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "competence_versus_husk_reading",
+      "question": "Does this preparedness regime instantiate genuine competence maintenance (this reading) or performative husk maintenance (sibling reading)? What observable distinguishes them?",
+      "resolution_mechanism": "Compare drill-to-operational-incident outcomes: if drills reveal and correct gaps that later appear in real incidents, competence reading holds; if drills fail to predict or prevent real-world failures despite passing all exercises, husk reading holds. Measure gap-detection rate and implementation rate of recommendations.",
+      "impact": "Competence reading: extractiveness remains ~0.28 (tangled rope primary). Husk reading: extractiveness rises to ~0.65 (snare primary), theater ratio reaches ~0.80+, beneficiary list narrows to leadership only. The classification hinge depends on whether the drills actually improve decision-making or merely create the appearance of preparation.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether drills maintain genuine competence or merely simulate preparation"
+    },
+    {
+      "id": "generational_knowledge_transfer_mechanism",
+      "question": "Is the primary knowledge transfer mechanism through live drills (this reading assumes yes) or through documented procedures, embedded systems, and digital handoff (would shift toward scaffold/piton)?",
+      "resolution_mechanism": "Track knowledge loss across generational turnover: compare decision-making quality of personnel trained via live drills vs. those trained via documentation and simulation. Measure the tacit knowledge that drills transmit but cannot be documented.",
+      "impact": "If tacit/embodied knowledge is critical and only drills transmit it: competence reading holds, extractiveness justified. If most competence-critical knowledge can be documented: extractiveness may be pure extraction (husk reading), and scaffold sunset logic becomes dominant.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether live drills are necessary for competence maintenance"
+    },
+    {
+      "id": "this_reading_versus_sibling_readings",
+      "question": "This constraint instantiates the competence reading of the preparedness_commitment kernel. What distinguishes it from husk_reading and hybrid_reading?",
+      "resolution_mechanism": "The competence reading assumes that live drills test real decision-making, reveal genuine operational gaps, and transmit tacit knowledge essential for adaptive capacity. The husk_reading assumes that drills create performative assurance while actual competence decays (theater_ratio >> 0.70, beneficiaries narrow). The hybrid_reading assumes both mechanisms coexist with ongoing tension. The three readings have different epsilon values, different beneficiary/victim structures, and different dominant types across perspectives.",
+      "impact": "Competence: ε~0.28, tangled_rope primary, theater_ratio moderate (0.38). Husk: ε~0.65, snare/piton primary, theater_ratio high (0.75+). Hybrid: ε~0.50, mixed perspectives, escalating theater over time. Different sibling readings imply different interventions: competence reading suggests optimization of drill design; husk reading suggests ritual abolition; hybrid reading suggests structural reforms to decouple verification from performance.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "This reading versus sibling readings of the preparedness kernel"
+    },
+    {
+      "id": "d5_organizational_break_risk",
+      "question": "Under what conditions would generational turnover cause a D5 organizational discontinuity (loss of critical procedural knowledge and decision-making capacity)?",
+      "resolution_mechanism": "Historical case analysis: compare organizations that experienced vs. avoided sudden capability loss during major transitions. Measure knowledge transfer success rate; identify failure modes (key personnel departure, undocumented procedures, tacit knowledge erosion). Test whether competence-reading preparedness regimes (live exercise focus) correlate with lower discontinuity risk than husk-reading regimes (documented-procedures-only).",
+      "impact": "If D5 breaks are a real risk mitigated by live drills: competence reading validated, extractiveness cost justified. If D5 breaks can be prevented through documentation and transition management without live drills: competence reading overstates necessity, overlaps with husk reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Risk of D5 organizational discontinuity and role of live drills"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.23
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.32
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Preparedness as live exercised knowledge represents a structural commitment: organizations maintain operational capacity across generational transitions by repeatedly drilling complex procedures under realistic conditions. This constraint simultaneously coordinates essential knowledge transmission and extracts significant costs from personnel and operations. The competence reading instantiates the case where drills genuinely test decision-making, reveal operational gaps, and transmit tacit knowledge that cannot be fully documented. This reading assumes that live exercise is not performative ritual but functional verification — that the drills actually work to maintain adaptive capacity and prevent the catastrophic institutional discontinuities (D5 breaks) that occur when organizational memory fails across personnel turnover. The constraint exhibits a tangled rope structure: genuine coordination function (testing real decisions, transmitting tacit knowledge, revealing gaps) coexists with asymmetric extraction (junior personnel time, organizational schedule disruption, ongoing enforcement requirements). The theater ratio remains moderate (0.38) because the competence reading assumes that drill outcomes directly feed operational strategy — the exercise is not mainly performative, though performative elements (after-action reviews, formal certifications) accumulate over time. The sibling readings (husk_reading, hybrid_reading) instantiate alternative framings where the drill mechanism becomes degraded or mixed; those are separate constraint stories with different epsilon values. This story models the case where preparedness drills work.",
+    "key_agents": [
+      "Operational Leadership: Primary beneficiary (institutional/arbitrage) — benefits from demonstrable competence assurance, actionable intelligence about gaps, strategic planning data; can exit or scale drill programs without career penalty",
+      "Junior Personnel: Primary victim (powerless/trapped) — trapped in recurring drill cycles with no discretion; time extraction without visible reward; career advancement depends on compliance with opaque competence standards",
+      "Mid-Level Coordinator: Secondary victim (moderate/constrained) — resources and burden for training infrastructure; constrained by schedule disruptions and resource scarcity; also benefits from improved operational clarity",
+      "Training Standards Body: Organized agent (organized/constrained) — sees drills as transitional mechanism with sunset logic; embedded simulation and documented procedures will eventually replace live exercises",
+      "Organizational Capacity Commons: Structural victim — abstract collective good (readiness, decision-making speed, adaptive response capability) that is maintained through the constraint but not perceived as beneficiary",
+      "Institutional Ritual Layer: Performs the preparedness function at civilizational scale but risks degradation into pure theater"
+    ],
+    "logic_rationale": "Extractiveness (0.28): Low-moderate. The competence reading assumes that drills genuinely serve a coordination function (test real decisions, transmit tacit knowledge, reveal operational gaps) alongside extraction (personnel time, schedule disruption). The value reflects that both flows are substantial but neither dominates. The original observational basis would show measurable improvements in decision-making quality and operational gap identification correlated with drill participation. If empirical evidence shows drills fail to predict real-world performance or recommendations are not implemented, extractiveness would rise toward husk_reading values (~0.65). Suppression (0.35): Moderate. Barriers to exit or refusal include career penalties, compliance requirements, and institutional culture that normalizes participation. But suppression is not severe — personnel can (at cost) transfer to roles with reduced drill requirements, and organizational leadership can (at risk) deprioritize drills. Theater ratio (0.38): Moderate. Reflects that drills combine genuine verification (live decision-making under realistic conditions) with performative elements (after-action reviews, formal certifications, ritual repetition). The theater ratio increases gradually over the 15-year interval (0.25 → 0.38) as organizational routines ossify and younger personnel encounter repeated drill scenarios without novel learning. This trajectory is consistent with competence reading: as tacit knowledge transfers successfully and procedures stabilize, the theatrical component naturally increases because fewer genuinely novel gaps emerge.",
+    "perspectival_gap": "Operational leadership perceives rope (coordination, actionable intelligence, low-cost arbitrage) while junior personnel perceive snare (extraction, time burden, no escape). Mid-level coordinators perceive tangled rope (both coordination and extraction at substantial levels). Training standards bodies perceive scaffold (temporary coordination problem being solved by procedure documentation and embedded simulation). The institutional ritual layer at civilizational scale risks piton classification (performative persistence of degraded function). The analytical observer risks false-summit mountain classification (naturalizing the necessity of live drills as inherent to organizational resilience). The perspectival gap reveals that the 'necessity' of live drills depends entirely on whether they actually improve decision-making (competence reading, supported by empirical data about gap detection and implementation) or merely simulate preparation (husk reading, where theater ratio >> 0.70 and benefits concentrate entirely on leadership).",
+    "directionality_logic": "Directionality (d) for each perspective is derived from their structural position: operational leadership are beneficiaries with arbitrage exit (low d, negative chi), junior personnel are victims with trapped exit (high d, high chi), mid-level coordinators are both beneficiaries and victims with constrained exit (moderate d, moderate chi). Organized agents with clear sunset paths experience moderate effective extraction despite moderate base extraction (the scaffold structure makes the extraction temporally bounded). The piton perspective at civilizational scale has high theater_ratio but moderate baseline extractiveness — the classification shift depends on whether the ritual has become divorced from functional verification. The mountain perspective at analytical/civilizational scale would derive d from canonical analytical value (0.73), producing false-summit red flags when beneficiaries are declared. The competence reading assumes that beneficiary declarations are legitimate (leadership genuinely benefits from actionable intelligence) and that extracted value correlates with generated value (drills actually improve organizational capacity). The husk reading would contest both of these assumptions.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by distinguishing this reading from its siblings. The competence reading resolves the tension between 'drills are necessary for readiness' and 'drills consume massive organizational resources' by declaring that the resources are extractive but justified: the drills produce genuine coordination benefits (gap identification, tacit knowledge transfer, decision-making verification) that measurably improve operational capacity. The classification as tangled_rope is stable across the competence reading precisely because both extraction and coordination are real and substantial. If empirical analysis shows that drills fail to identify gaps (high false-negative rate against real incidents) or recommendations go unimplemented, the classification would shift toward snare/piton (husk_reading). If analysis shows mixed performance with some drills working and others becoming purely ritual, the classification would shift toward hybrid_reading. The mandatrophy prevention here is categorical: declare which reading you are instantiating (competence, husk, or hybrid) and specify the empirical observable that would differentiate them (drill-to-incident outcome correlation, recommendation implementation rate, tacit knowledge transfer effectiveness). Do not collapse all three readings into a single constraint with measurement uncertainty.",
+    "kernel_context": "This constraint instantiates the competence reading of the preparedness_commitment kernel. The preparedness_commitment kernel is a contested commitment that organizations maintain operational capacity across generational transitions through live exercise of complex procedures. The sibling readings are: (1) husk_reading — where drills become substantially performative, theater increases toward 0.75+, benefits concentrate on leadership, extractiveness rises to ~0.65; (2) hybrid_reading — where drills show mixed performance with some functioning gaps identified and others becoming ritual, extractiveness moderate (~0.50), classifications oscillate across perspectives as the constraint degrades. The competence reading assumes that drills genuinely test decision-making, reveal operational gaps that get implemented, and transmit tacit knowledge essential for adaptive capacity. The key structural delta for this reading is: high adaptive capacity maintained; drills test real decisions and reveal novel gaps; generational turnover absorbed through effective training; D5 organizational breaks avoided or contained. This reading is instantiated when empirical data shows positive correlation between drill participation and operational performance, when gap identification from drills correlates with real-world failure prevention, and when tacit knowledge is successfully transmitted across generations. The alternative readings represent the same kernel under different empirical conditions (husk reading when drills fail to predict real performance; hybrid reading when results are mixed). All three readings are structurally valid readings of the same kernel; they are not observational variants of a single constraint but competing hypotheses about whether live exercise actually improves organizational capacity or merely simulates it."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "husk_reading",
+      "hybrid_reading",
+      "d5_organizational_discontinuity"
+    ],
+    "dual_formulation_note": "The preparedness_commitment kernel admits three structurally distinct constraint readings. The competence_reading assumes live drills genuinely maintain operational capacity and justify their extraction costs. The husk_reading assumes drills have become performative with theater_ratio >> 0.70 and narrowed beneficiaries. The hybrid_reading assumes mixed performance with oscillating classifications. The three readings have different epsilon values (0.28, 0.65, 0.50 respectively) and different dominant types. They are not observational variants of a single constraint but competing empirical hypotheses. See the sibling constraint files for husk_reading and hybrid_reading."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": false
+  }
+}

@@ -107,6 +107,50 @@ scope_modifier values have not been validated against corpus classifications.
 MaxEnt distributions, and classifications are pre-computed by the pipeline. Read from
 there; do not recompute from scratch.
 
+## Math Employed in the Prolog Engine
+
+**Calculus / Analysis:** sigmoid/logistic function, exponential function, linear slope
+(least-squares accumulation), monotonicity test, drift velocity (first-order temporal
+rate), drift acceleration (second-order).
+
+**Probability / Information Theory:** Shannon entropy (normalized H/log N), maximum
+entropy principle, Gaussian log-likelihood, log-sum-exp normalization, prior
+distribution, Kullback-Leibler divergence (threshold), Boltzmann distribution /
+partition function.
+
+**Algebra / Arithmetic:** weighted sum, absolute value, normalization to [0,1]
+(clamping), rounding/floor/ceiling, accumulation via fold, sum/mean/min/max aggregation.
+
+**Threshold / Classification:** dual-threshold classification (χ AND ε), priority cascade
+(mountain > piton > snare > scaffold > rope), complexity-adjusted threshold
+(entropy-weighted).
+
+**Power Scaling:** χ = ε × f(d) × σ(S) (canonical extraction formula), power modifier
+π(P), scope modifier σ(S), sigmoid directionality f(d), cognitive displacement δ.
+
+**Purity / Contamination Algebra:** Gaussian inverted-U (exp(−(x−μ)²/2σ²)), purity
+degradation (max(0, intrinsic − contamination × immunity)), type contamination strength
+coefficients, type immunity/susceptibility factors, information-theoretic excess
+extraction.
+
+**Graph / Network:** BFS on constraint graph, network purity (weighted cluster average),
+contamination cascade/propagation, edge coupling strength.
+
+**Fixed-Point / Iteration:** Jacobi iteration (simultaneous-update), greatest fixed-point
+convergence (monotone convergence theorem), Scott-continuity / monotone endofunctor
+— all in `drl_fpn.pl`.
+
+**Category Theory / Structural:** presheaf evaluation (restriction across observer
+contexts), site/coverage structure (observer-accessible stalks), logical isomorphism
+(fingerprint equivalence), lattice operations (meet/join via max/min).
+
+**Modal / Decision Logic:** modal operators (necessity/possibility) as composition rules,
+Boltzmann factorization test (independence check), sorting/ranking.
+
+Key files: `drl_core.pl`, `constraint_indexing.pl`, `drl_boltzmann_analysis.pl`,
+`boltzmann_compliance.pl`, `drl_purity_network.pl`, `drl_fpn.pl`,
+`maxent_classifier.pl`, `drl_composition.pl`, `logical_fingerprint.pl`.
+
 ## Audit Methodology
 
 Completed audit passes follow: **recon** → **proposal** → **execution** → **writeup**.

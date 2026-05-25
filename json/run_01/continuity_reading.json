@@ -1,0 +1,178 @@
+{
+  "header": {
+    "constraint_id": "continuity_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_continuity_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.28,
+    "suppression": 0.35,
+    "theater_ratio": 0.42,
+    "claimed_type": "rope",
+    "human_readable": "Correct Latin as Living Continuity: Medieval Institutional Coordination",
+    "topic_domain": "historical_linguistics/philology/institutional_practice",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "medieval_institutional_users",
+      "monastic_scriptoria",
+      "church_administrative_apparatus"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Medieval Institutional User",
+      "comment": "PERSPECTIVE 1: MEDIEVAL INSTITUTIONAL USER (ROPE) — For monastery scribes and church administrators, 'correct Latin' is a practical coordination standard: a living language that evolves naturally with use, maintaining intelligibility across generations while accommodating phonetic and morphological drift. The constraint solves the problem of communication without requiring artificial archaism. Benefits from the standard while also shaping it through practice. Exit option is arbitrage — users can adopt local dialects or simplified forms when the administrative cost justifies it, but they remain within the Latin system."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Scribe Learning the Standard",
+      "comment": "PERSPECTIVE 2: THE SCRIBE LEARNING THE STANDARD (ROPE) — For a novice scribe, 'correct Latin' is an evolving standard transmitted through practice and correction. The constraint coordinates knowledge transfer: elders model the current acceptable form; younger scribes internalize it and slightly modify it. Suppression is moderate (punishment for egregious errors, manuscript rejection) but not total — the standard is intentionally flexible enough to accommodate regional and individual variation. Exit is constrained by career path dependence but not trapped — scribes can learn alternative writing systems or dialects if they accept reduced status."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Non-Lettered Laity",
+      "comment": "PERSPECTIVE 3: THE NON-LETTERED LAITY (TANGLED ROPE) — The constraint simultaneously coordinates church communication (laity can hear Mass in a form ancestral to their vernacular) and extracts status asymmetry (literacy itself becomes a gatekeeping mechanism; the non-lettered cannot verify, contest, or participate in written administration). The laity receives some benefit (intelligible sermons, prayer texts) but bears the cost of exclusion from written culture. This is not snare (they are not targets of pure extraction) but tangled rope: genuine coordination function exists alongside asymmetric extraction. Exit is trapped — they cannot learn Latin without institutional access and patronage."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Reconstructionist Classicist (From Outside This Reading)",
+      "comment": "PERSPECTIVE 4: THE RECONSTRUCTIONIST CLASSICIST / EXTERNAL OBSERVER (PITON) — From the perspective of a later classically-trained scholar (e.g., a Renaissance humanist, a modern Latinist), the medieval continuity reading appears as a degraded piton: the medieval Church claims to maintain 'correct Latin' (the original kernel claim), but what they actually maintain is a corrupted, simplified version that has lost Classical grammar and adopted vulgar phonetics. The performance (preserving the name 'Latin') exceeds the function (maintaining Classical standards). Theater ratio is high from this external perspective — the medieval standard is maintained performatively as 'continuity with antiquity' rather than functionally as actual Classical Latin. However, this perspective is NOT the continuity reading itself; it is the perspective of someone rejecting the continuity reading in favor of reconstruction logic."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Continuity Thesis)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / CONTINUITY THESIS (ROPE) — From a linguistic-historical perspective that accepts the continuity reading, Classical Latin did not 'die' — it evolved. The medieval institutional Latin of the 8th-12th centuries is a living continuation of earlier forms, showing expected phonological and morphological changes consistent with language drift. 'Correct Latin' is the current form of an evolving standard, not a degraded copy of an older form. This perspective sees the constraint as pure coordination: institutions collectively maintain a standard that enables communication and document retention across generations. No extraction mechanism is present — the constraint solves a genuine collective action problem without asymmetric benefit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "continuity_vs_reconstruction_kernel",
+      "question": "What is the kernel claim about 'correct Latin'? Is it the living form that evolved naturally from Classical Latin (continuity reading), or is it the reconstructed Classical standard that medieval users imperfectly approximated (reconstruction reading)?",
+      "resolution_mechanism": "This is the contested kernel. The continuity reading asserts that medieval Latin IS continuous with Classical Latin through normal language drift. The reconstruction reading asserts that medieval Latin is a degraded approximation of a fixed Classical standard. The sibling symbolic_reoccupation_reading treats 'correct Latin' as a performative claim of legitimacy with no stable referent. Evidence: comparative analysis of phonological and morphological changes between Classical and medieval texts; identification of whether changes follow expected drift patterns or represent random corruption.",
+      "impact": "Continuity reading: extractiveness ≈ 0.28, type = Rope. Reconstruction reading: extractiveness ≈ 0.55, type = Tangled Rope (beneficiaries are Classical scholars/ecclesiastical authorities claiming to preserve antiquity; victims are medieval users judged inadequate). Symbolic_reoccupation reading: extractiveness ≈ 0.62, type = Snare (the kernel claim is performative legitimation with no functional referent).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether medieval Latin is natural continuation or degraded copy of Classical standard"
+    },
+    {
+      "id": "drift_naturalness_threshold",
+      "question": "At what rate and degree of phonological/morphological change does 'natural language drift' become 'corruption of the standard'?",
+      "resolution_mechanism": "Comparative historical linguistics: identification of drift rates in other documented language communities (Romance languages post-Latin, Old to Middle English, Classical to Koine Greek). Determination of whether medieval Latin drift falls within expected parameters for a living language or represents anomalous degradation.",
+      "impact": "If medieval Latin drift is within normal parameters: continuity reading is correct (Rope). If degradation exceeds normal drift: reconstruction reading is more accurate (Tangled Rope). The threshold is inherently subject to disciplinary convention — different schools of linguistics may draw this differently.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Rate and degree of change distinguishing natural drift from corruption"
+    },
+    {
+      "id": "institutional_claim_vs_linguistic_reality",
+      "question": "Does the medieval institutional claim to maintain 'correct Latin continuity' genuinely describe the linguistic practice, or is it a legitimation narrative that obscures actual change?",
+      "resolution_mechanism": "Discourse analysis of medieval metalinguistic commentary (grammarians' statements about correctness, scribal notations about variant forms) vs. actual practice documented in manuscripts. Identification of the gap between what medieval scholars claimed they were doing and what they actually did.",
+      "impact": "Small gap: the institutional claim is largely accurate — continuity reading is descriptively sound. Large gap: the institutional claim is performative (legitimation) rather than descriptive — symbolic_reoccupation reading becomes more plausible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Gap between medieval metalinguistic claims and actual practice"
+    },
+    {
+      "id": "beneficiary_identification_ambiguity",
+      "question": "Who actually benefits from the 'correct Latin continuity' standard? Institutional users who gain coordination efficiency (rope beneficiary), or ecclesiastical authorities who gain legitimacy through claim of continuity with antiquity (potential false beneficiary)?",
+      "resolution_mechanism": "Historical analysis of who shaped the standard, who enforced it, and who captured the prestige value. Determination of whether the standard evolved organically from institutional practice or was imposed top-down as a legitimation strategy.",
+      "impact": "If organic evolution from practice: beneficiaries are authentic (medieval users), extractiveness remains low, Rope classification is correct. If top-down imposition with legitimacy-capture: beneficiaries may be primarily ecclesiastical authorities claiming continuity, extractiveness rises, Tangled Rope becomes more plausible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether beneficiaries are genuine institutional users or legitimacy-capturing authorities"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 300,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 600,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 300,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 600,
+      "value": 0.32
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 600
+  },
+  "commentary": {
+    "narrative_context": "The continuity reading of 'correct Latin' asserts that medieval institutional Latin is a living continuation of Classical Latin, evolving naturally through phonological and morphological drift while maintaining intelligibility and function across generations. This reading frames Latin as a living language, not a frozen standard, and sees the medieval Church not as degrading or corrupting an ancient form but as maintaining and gradually adapting it through practice. The constraint solves a genuine coordination problem: monasteries, dioceses, and church offices scattered across Europe needed a written standard that would enable document retention, inter-institutional communication, and liturgical consistency across centuries. The continuity reading treats this as pure coordination with low extractive overhead — the standard emerges from practice, evolves with practice, and benefits its users by enabling communication. The competing reconstructionist reading claims instead that medieval Latin is a degraded approximation of a fixed Classical standard, reframing the same linguistic evolution as corruption of an ideal. The competing symbolic_reoccupation reading treats the entire kernel claim as performative legitimation — the Church claims continuity with antiquity not because it linguistically preserved anything but because the claim itself confers authority. This JSON instantiates ONLY the continuity reading.",
+    "key_agents": [
+      "Medieval Institutional Users (institutional/arbitrage): Monks, scribes, church administrators who use Latin daily for administrative, liturgical, and scholarly purposes. Primary beneficiaries — the standard coordinates their communication. Not trapped because they can adopt regional dialects or simplified forms when needed, but they remain within Latin through arbitrage logic (administrative efficiency exceeds cost of learning variation).",
+      "Monastic Scriptoria (institutional/constrained): Scribal communities that learn, transmit, and enforce the standard through copying, correcting, and training. Secondary beneficiaries who also bear some suppression cost (manuscript rejection for 'incorrect' form). Constrained by career path dependence — leaving the scriptoria means losing scribal identity.",
+      "The Church Administrative Apparatus (institutional/arbitrage): Ecclesiastical authorities whose continued operation depends on document retention and inter-diocesan communication in Latin. Beneficiaries with maximum arbitrage freedom — they can change standards if administrative benefit justifies it, but they maintain Latin because it works.",
+      "The Learned Clergy (powerful/constrained): Bishops, theologians, educated priests who shape standards through scholastic commentary and corrective practice. Beneficiaries with some enforcement power — they define what 'correct' means and can reward or punish deviation. Constrained by the need to maintain consensus across regions and generations.",
+      "The Non-Lettered Laity (powerless/trapped): Those excluded from written culture, unable to learn Latin without institutional patronage. Victims bearing costs of exclusion and status asymmetry while receiving minimal coordination benefit. Trapped — no exit option without abandoning their communities.",
+      "Later Reconstructionist Scholars (analytical/arbitrage): Modern Latinists and Renaissance humanists who may judge medieval Latin against Classical standards. Not embedded in the continuity reading's institutional logic — they stand outside and can choose to accept or reject the continuity thesis based on linguistic evidence."
+    ],
+    "logic_rationale": "Extractiveness (0.28): Low. The continuity reading treats the standard as emerging from genuine institutional practice with low overhead for coordination. Medieval users benefit from the ability to communicate across time and space; the standard enables rather than restricts their primary function. Suppression exists (manuscript rejection, social penalty for egregious error) but is moderate (0.35), not severe — the standard is flexible enough to accommodate variation while maintaining intelligibility. Theater ratio (0.42): Moderate-low. The constraint has some performative content (claims of continuity with antiquity carry legitimacy value), but the performance is not the primary function. The standard genuinely coordinates communication; the claim of continuity is secondary to the practical coordination it enables. Over the interval (0-600 years, roughly 400-1000 CE), theater_ratio increases slightly (0.35 to 0.48) as the historical distance to Classical antiquity grows and the claim of continuity becomes more performative relative to the living practice. Extractiveness also increases slightly (0.22 to 0.32) as the standard ossifies slightly and gap between claim ('continuity with Classical standards') and practice ('evolved medieval form') widens — but even the endpoint remains well within Rope territory. The measurements capture the normal degradation pattern of any living standard: as institutions grow and distance increases, the theater increases and some extractiveness emerges, but the core coordination function persists.",
+    "directionality_logic": "The continuity reading assigns low directionality values (d near 0.2-0.4) because beneficiaries are the primary institutional users themselves — the Church and its scribes use the standard they maintain. Exit options are arbitrage (institutional) or constrained (scribal community), both relatively high mobility compared to trapped or identity_locked. There are no powerful external extractors; the constraint is endogenous to the institutions that maintain it. The non-lettered laity represent asymmetric extraction (high d, trapped exit), which elevates tangled_rope classification at the powerless perspective. But from the beneficiary and analytical perspectives, d remains low because the constraint's primary function is coordination of users who maintain it.",
+    "perspectival_gap": "The institutional user and analytical observer both see Rope — the standard genuinely coordinates communication. The scribe sees Rope with some suppression burden — learning the standard requires discipline, but the learning is functional, not arbitrary. The non-lettered laity see Tangled Rope — they benefit from intelligible liturgy but are excluded from written participation and bear the status cost of illiteracy. The reconstructionist observer (from outside this reading) sees Piton — the medieval claim to maintain Classical Latin is performative; the actual form is degraded. But the reconstructionist perspective is NOT internal to the continuity reading; it instantiates a different reading of the kernel. This JSON contains only the continuity reading.",
+    "mandatrophy_analysis": "The continuity reading resolves mandatrophy by avoiding the false choice between 'pure coordination' (Rope) and 'corruption of standards' (Tangled Rope or Snare). Both framings attempt to classify the same linguistic phenomenon (Latin evolution) using external reference points (Classical purity, original standard). The continuity reading steps outside this choice by treating medieval Latin not as an attempted copy of Classical Latin but as the living form of Latin in that era. From this position, the constraint is pure Rope with some spillover extraction (the laity are excluded from participation). The mandatrophy is resolved by recognizing that 'correct Latin' has no stable external referent — it is always 'the form that currently enables institutional communication.' By this definition, medieval Latin is correct, Renaissance Latin is correct, and modern ecclesiastical Latin is correct — each is correct for its era. The constraint type (Rope) is determined by whether the standard enables coordination (yes) and whether it extracts asymmetrically (minimal at institutional level, moderate at laity level), not by how well it matches an ancient ideal.",
+    "kernel_context": "This constraint instantiates the continuity_reading of the contested kernel correct_latin. The kernel claim is: 'What is correct Latin?' The continuity reading answers: 'The living form used by medieval institutions, evolved naturally from Classical Latin through normal language drift, maintaining intelligibility and function across generations.' Sibling readings answer differently: (1) reconstruction_reading — 'The fixed Classical standard, which medieval users imperfectly attempted to preserve'; (2) symbolic_reoccupation_reading — 'A performative legitimacy claim with no stable linguistic referent — whatever the Church uses is retroactively declared 'correct' to claim continuity with antiquity.' The three readings decompose into three different constraints with different extractiveness values, different beneficiary/victim structures, and different classifications. This JSON contains ONLY the continuity_reading. The reconstruction_reading and symbolic_reoccupation_reading are separate constraints (constraint_ids: reconstruction_reading and symbolic_reoccupation_reading) with their own ε values, perspectives, and omega variables. All three are linked via network.affects_constraints to show that they are sibling readings of a single contested kernel."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "reconstruction_reading",
+      "symbolic_reoccupation_reading"
+    ],
+    "dual_formulation_note": "This constraint is one of three sibling readings of the contested kernel 'correct_latin'. The continuity_reading asserts natural linguistic evolution (ε=0.28, Rope). The reconstruction_reading asserts degraded approximation of fixed Classical standard (ε≈0.55, Tangled Rope). The symbolic_reoccupation_reading asserts performative legitimation with no stable referent (ε≈0.62, Snare). All three read the same observable linguistic data (medieval Latin texts) but emit different classifications because they adopt different interpretive frames for the kernel claim. The decomposition is required by ε-invariance: if the same observable produces different ε values under different readings, the readings are structurally distinct constraints that must be modeled separately."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "correct_latin"
+    ]
+  }
+}

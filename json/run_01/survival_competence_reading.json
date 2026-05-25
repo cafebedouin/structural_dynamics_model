@@ -1,0 +1,189 @@
+{
+  "header": {
+    "constraint_id": "survival_competence_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_survival_competence_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Ritual as Survival Competence Transmission (Catastrophe Memory Preservation)",
+    "topic_domain": "religious_studies/collective_memory/ritual_practice",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "future_generations",
+      "collective_threat_recognition"
+    ],
+    "victims": [
+      "present_generation_autonomy",
+      "ritual_participants"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Coerced Participant",
+      "comment": "PERSPECTIVE 1: COERCED PARTICIPANT (SNARE) — Individual community members required to participate in costly rituals (time, emotional labor, material goods, bodily submission) with no exit option. The ritual is presented as obligation, not choice. Extraction is maximal from this position: high participation cost, suppression via social sanction, no alternative community membership available. The participant experiences no survival benefit — that benefit accrues to future generations not yet present."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Ambivalent Community Member",
+      "comment": "PERSPECTIVE 2: AMBIVALENT COMMUNITY MEMBER (TANGLED ROPE) — Community members with sufficient resources or status to question participation, but constrained by social exclusion, marriage prospects, inheritance, or reputation damage. Experience both extraction (costly ritual participation, identity loss if they exit) and coordination benefit (genuine preservation of collective threat-recognition competence that protects the community). The constraint entangles legitimate collective defense with coercive demand. Moderate exit cost and some agency distinguish this from pure snare."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Religious Authority",
+      "comment": "PERSPECTIVE 3: RELIGIOUS AUTHORITY (ROPE) — Institutional actors (priests, elders, ritual specialists) who maintain and transmit the ritual structure. They experience the constraint as pure coordination: organizing collective practice, preserving esoteric knowledge, managing ritual transmission. They benefit from their specialist status and authority. The ritual is their coordinated function, not an extraction mechanism from their position. No experienced suppression — they design and enforce it."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Future Generation (Prospective Beneficiary)",
+      "comment": "PERSPECTIVE 4: FUTURE GENERATION / PROSPECTIVE BENEFICIARY (ROPE) — From the temporal position of a future generation facing catastrophe, the ritual represents pure coordination: a mechanism by which present populations encoded survival knowledge into practiced competence that future generations inherit and can activate. No cost to those born into the competence; the benefit is automatic. This perspective sees the constraint as legitimate coordination, not extraction. The present generation's costs are background to the future generation's acquisition of essential knowledge."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — Cross-generational view reveals the true structure: the ritual entangles genuine coordination (survival knowledge transmission) with asymmetric extraction (present-generation coercion funds future-generation benefit). The coordination function is real — ritual does encode and transmit threat-recognition competence in ways that abstract instruction does not. The extraction is also real — the constraint suppresses present-generation exit options and demands disproportionate participation from powerless agents. Both layers are essential to the mechanism's function."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "catastrophe_imminence_ambiguity",
+      "question": "Is the catastrophe the ritual claims to prepare for imminent, distant, speculative, or genuinely unknowable?",
+      "resolution_mechanism": "Historical analysis of catastrophe frequency in the population (climate event, disease, warfare, famine cycles); comparison of predicted vs. actual catastrophe timing; examination of whether ritual structures match the actual threat profile",
+      "impact": "If catastrophe is imminent or frequent: ritual is genuine survival coordination (rope dominates). If distant or speculative: ritual may be maintaining anxiety-based compliance where the threat justification is weaker than the extraction mechanism (snare dominates). If genuinely unknowable: the ritual's epistemic status is irreducible.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the catastrophe threat justifying the ritual is imminent or speculative"
+    },
+    {
+      "id": "knowledge_transmission_necessity",
+      "question": "Is the ritualized form of threat-recognition competence transmission functionally necessary, or could the knowledge be transmitted via explicit instruction, apprenticeship, or written documentation with lower participation cost?",
+      "resolution_mechanism": "Comparison of competence retention rates: ritualized vs non-ritualized transmission; examination of whether explicit instruction breaks down (students forget, don't believe, don't practice); analysis of embodied knowledge components that resist documentation",
+      "impact": "If ritual is necessary: extraction cost is coordination tax, justified by functional requirement (tangled rope holds). If ritual is replaceable: the extraction cost is surplus to coordination function (snare gains strength). If hybrid (some components require ritual, others don't): constraint should decompose into separate stories.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether ritual form is functionally necessary for knowledge transmission"
+    },
+    {
+      "id": "sibling_reading_differentiation",
+      "question": "This constraint instantiates the survival_competence_reading of the catastrophe_memory_preservation kernel. Two sibling readings exist: mourning_practice_reading (emphasizes emotional/identity processing over explicit survival learning) and hybrid_atrophy_reading (ritual originally coordination, now mostly theater). What structural signals differentiate this reading from its siblings?",
+      "resolution_mechanism": "Ethnographic analysis: Do ritual participants report explicit threat-recognition learning outcomes? Do they practice the encoded competencies outside ritual context? Do children show measurable threat-recognition skill acquisition from ritual participation? Are the ritual structures isomorphic with actual threat profiles, or decorative?",
+      "impact": "If survival_competence_reading: high extractiveness justified by functional transmission necessity; tangled_rope dominates. If mourning_practice_reading dominates: extractiveness reflects emotional processing rather than explicit knowledge; theater_ratio would be lower. If hybrid_atrophy_reading dominates: theater_ratio >> 0.70 (piton or snare). The readings produce different classifications from the same ritual.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural differentiation of survival_competence_reading from mourning_practice and hybrid_atrophy readings"
+    },
+    {
+      "id": "identity_lock_binding_mechanism",
+      "question": "Are present-generation participants locked into ritual participation by identity fusion (the ritual IS their community membership, religious identity, and social personhood), or by material barriers (economic dependency, geographic isolation, legal prohibition on exit)?",
+      "resolution_mechanism": "Post-exit ethnography: Do participants who leave the ritual community lose their sense of identity, or do they restructure identity while maintaining community access? Do converts to the ritual show identity fusion comparable to lifelong members? Can participants articulate separation between ritual practice and personal identity, or is such separation unthinkable from within the ritual frame?",
+      "impact": "If identity-locked: suppression persists after structural barriers fall (cognitive capture). If material barriers only: suppression drops when barriers are removed. If both: suppression has dual mechanism — some portion is internalized, some is structural. Identity-lock would justify classifying participant exit as identity_locked rather than constrained or trapped.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether participant binding is structural or identity-locked"
+    },
+    {
+      "id": "kernel_reading_instantiation",
+      "question": "This story instantiates ONE reading of the catastrophe_memory_preservation kernel. The kernel is the contested claim that ritual encodes and transmits collective memory of existential threats across generations. What specific structural commitments define the survival_competence_reading vs the sibling readings?",
+      "resolution_mechanism": "The survival_competence_reading treats the kernel as: ritual functions as explicit threat-recognition training (competence-based mechanism), present-generation costs fund future-generation benefits (cross-generational extraction justified by transmission function), and the constraint is tangled_rope (genuine coordination entangled with genuine extraction). Alternative readings would treat the kernel differently: mourning_practice_reading emphasizes emotional processing and identity maintenance over explicit training (rope or piton depending on theater); hybrid_atrophy_reading emphasizes degradation (piton). The delta between readings is located in: (1) what constitutes 'transmission' (competence vs. emotion vs. cultural muscle memory), (2) whether the extraction is functionally justified or surplus, and (3) the time horizon over which transmission occurs (immediate grief processing vs. generational knowledge vs. civilizational memory).",
+      "impact": "If survival_competence_reading is correct: ritual is justified institutional enforcement (tangled_rope), extractiveness is moderate-high (0.58) and suppression is moderate-high (0.65). If mourning_practice_reading is correct: extractiveness would drop (explicit training is weaker) and theater_ratio would change (emotional processing has different output signature). If hybrid_atrophy_reading is correct: theater_ratio >> 0.70 and extractiveness drops (functionality atrophied). The classification framework correctly produces different outputs for the same ritual depending on which reading instantiates the kernel.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural definition of survival_competence_reading as one instantiation of catastrophe_memory_preservation kernel"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Ritual preserves operational threat-recognition capacity across generations by encoding collective memory of catastrophic events into practiced, embodied competence that survives textual documentation and generational turnover. This constraint exemplifies the tangled_rope type: it entangles genuine coordination (the ritual does transmit survival knowledge) with asymmetric extraction (present-generation participants bear costs that fund future-generation benefits). The constraint is instantiated in religious and cultural systems that face recurring or foreseeable catastrophes — cyclical disasters (seasonal floods, monsoons, seismic zones), epidemiological threats (plague cycles, endemic disease), or civilization-level risks (warfare, famine). The survival_competence_reading treats the ritual as an explicit knowledge-transmission mechanism where the encoded competence is threat-recognition skills: pattern recognition for danger signs, practiced response sequences, psychological resilience under threat conditions. This reading contrasts with sibling readings that emphasize mourning practice (emotional processing and identity maintenance) or hybrid atrophy (ritual once functional, now mostly theatrical). This story models the survival_competence_reading only — the mechanism by which ritual trains explicit competence despite imposing high participation costs on present-generation members who will not directly benefit from the knowledge they transmit.",
+    "key_agents": [
+      "Present-generation ritual participants: Primary victims (powerless/trapped or moderate/constrained) — bear participation costs (time, material goods, emotional labor, suppression of exit options)",
+      "Future generations facing catastrophe: Primary beneficiaries (prospective, generational) — inherit practiced threat-recognition competence without bearing transmission costs",
+      "Religious authorities / ritual specialists: Secondary beneficiary (institutional/arbitrage) — maintain specialist status and authority through ritual knowledge control",
+      "Collective threat-recognition capacity: Abstract beneficiary — the coordination mechanism itself; encoded survival knowledge that the community as a whole retains across generational turnover",
+      "Analytical observer: Sees the entanglement of genuine transmission function with genuine extraction mechanism"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, reflecting the asymmetry between present costs and future benefits. The constraint demands significant participation from present-generation members (time, material resources, embodied practice, suppressed exit options) who will not live to see the catastrophe the ritual prepares for. The extraction is justified by the functional requirement — the knowledge cannot be preserved in abstract form alone; it must be practiced, embodied, and transmitted through repeated performance. But the extraction is real: the present generation subsidizes the future generation's survival. Suppression (0.65): Moderate-high, reflecting both structural barriers (social sanction for non-participation, economic dependency on ritual community, geographic isolation) and identity-based binding (ritual membership IS community membership; exit requires identity reorganization). The suppression is not complete — some individuals can and do exit — but the barriers are substantial. Theater ratio (0.48): Moderate, reflecting that the ritual has genuine functional content (threat-recognition training is encoded in performance, body-memory, psychological resilience practice) but also performative elements (ornamentation, repetition that exceeds training necessity, status display by ritual authorities). The constraint is not primarily theatrical — it is not a piton — because the functional core (threat-recognition training) dominates. The measurement trajectory shows slight increase over the interval (theater_ratio 0.35→0.48, extractiveness 0.52→0.58), reflecting the hypothesis that as ritual becomes more distant from actual catastrophe experience, performative elements gradually accumulate while extraction demands remain stable.",
+    "perspectival_gap": "The constraint demonstrates maximal perspectival divergence. The coerced participant (powerless/trapped) experiences pure extraction (snare) — they bear all costs and receive no benefit within their lifetime. The ambivalent community member (moderate/constrained) experiences the true structure (tangled rope) — they recognize both the extraction and the coordination function, but cannot exit without substantial cost. The religious authority (institutional/arbitrage) experiences pure coordination (rope) — they organize the transmission, benefit from specialist status, and experience no suppression. The future generation (prospective) experiences pure coordination (rope) — they inherit the competence automatically, bearing no cost. The analytical observer (civilizational) sees the full entanglement: genuine transmission function requiring genuine extraction to fund it. The perspectival gaps reveal that 'the same ritual' is structurally different constraints depending on temporal position and exit capacity. A participant trapped in present time sees snare. A future survivor sees rope. Only the cross-temporal analyst sees the true mechanism (tangled rope).",
+    "directionality_logic": "Each perspective's directionality derives from the agent's structural position relative to the extraction flow. Present-generation powerless participants are pure victims: d ≈ 0.95 (trapped, no exit, bearing full cost). Ambivalent community members are mixed: d ≈ 0.60 (constrained exit, partial benefit from community membership). Religious authorities are net beneficiaries: d ≈ 0.10 (institutional exit options, control over the mechanism). Future generations are prospective beneficiaries: d ≈ 0.05 (automatic benefit, zero cost). The analytical observer is symmetric: d ≈ 0.50 (seeing both extraction and coordination layers equally). The sigmoid f(d) transforms these into experienced effective extractiveness chi. The ritual's institutional enforcement (requires_active_enforcement: true) is necessary because participation cost is high enough that voluntary compliance would degrade without enforcement — the future-generation benefit is not salient to present-generation agents making participation decisions. The enforcement is not coercion of unwilling participants alone; it is maintenance of a mechanism that requires continued participation despite individual incentive to defect.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by accepting that the entanglement is genuine and functional. The ritual is NOT masquerading as coordination when it is actually extraction (that would be snare falsely claiming rope). The ritual is NOT masquerading as extraction when it is actually coordination (that would be rope falsely claiming snare). The ritual genuinely entangles both: it coordinates threat-recognition transmission AND asymmetrically extracts from present-generation participants to fund future-generation benefit. This is the functional definition of tangled_rope. The mandatrophy is resolved by recognizing that some coordination mechanisms necessarily entangle asymmetric extraction — the cross-generational transmission of survival competence is one such case. The present generation cannot both transmit knowledge AND avoid bearing the cost of transmission. The constraint's legitimacy does not depend on hiding the extraction; it depends on whether the coordination function justifies the extraction cost. The measurement trajectory (theater ratio stable, extractiveness rising) suggests the coordination function is holding — the ritual is not degrading into pure theater.",
+    "kernel_context": "This constraint instantiates the survival_competence_reading of the catastrophe_memory_preservation kernel. The kernel is the contested claim that ritual encodes and transmits collective memory of existential threats across generations. The survival_competence_reading treats this kernel as: ritual functions as explicit threat-recognition training (pattern recognition, practiced response, psychological resilience), the transmission requires embodied, repeated practice that abstract instruction cannot replace, and the constraint imposes cross-generational extraction (present-generation costs fund future-generation benefits). Sibling readings instantiate the same kernel differently: (1) mourning_practice_reading emphasizes emotional processing and identity maintenance over explicit competence training — the ritual processes collective grief and reconstructs social bonds after catastrophe, which incidentally preserves some knowledge but primarily functions as emotional/identity work; (2) hybrid_atrophy_reading treats the ritual as originally functional coordination that has degraded into mostly theater — the threat that once justified the extraction has become distant or mitigated, and the ritual now persists through institutional inertia despite atrophied core function. All three readings describe the same set of practices (ritual performance, community participation, transmitted knowledge, authority structure). They produce different classifications because they locate the functional kernel differently. The survival_competence_reading produces tangled_rope (genuine coordination entangled with genuine extraction justified by transmission necessity). The mourning_practice_reading would produce rope or piton (emotional processing, theater-dominant). The hybrid_atrophy_reading would produce piton (theater >> function). The framework correctly distinguishes readings as structurally different instantiations of the same contested kernel."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "mourning_practice_reading",
+      "hybrid_atrophy_reading"
+    ],
+    "dual_formulation_note": "The catastrophe_memory_preservation kernel decomposes into three constraint stories with different structural properties and classifications. The survival_competence_reading treats ritual as explicit knowledge transmission (tangled_rope, extractiveness 0.58). Sibling readings instantiate the same kernel with different functional emphases and produce different classifications. The three stories are linked via network.affects_constraints as alternative readings of a single kernel, not as causal dependencies. Each reading is self-contained; they are related by interpretive alternatives, not by constraint hierarchy."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "catastrophe_memory_preservation"
+    ]
+  }
+}

@@ -548,6 +548,63 @@ For cases where the automatic derivation (beneficiary/victim + exit → d) would
 
 ---
 
+## Kernels and Readings (Committer Frame)
+
+Some constraints you generate are **one reading of a contested kernel**. A kernel is a single
+persisting commitment that different parties read differently, where each reading instantiates a
+*different* constraint. The Constitution is a kernel; originalist and living readings emit
+different constraints from the same text. The personhood boundary is a kernel; the conception
+reading and the birth reading emit constraints with different victim sets.
+
+When the SCOPE manifest hands you an axis tagged with a `kernel_id` and a `reading_id`, you are
+generating ONE reading. Three rules govern this, and the first is the one that matters most.
+
+### Rule 1 — Generate the one reading as a clean, ε-invariant constraint.
+
+Generate the constraint for *your* reading only. Do NOT describe the contest inside the
+constraint. Do NOT list other readings in the narrative, do NOT hedge ε across readings, do NOT
+average over them. Your reading instantiates one specific constraint with one stable ε, one
+beneficiary/victim structure, one type — exactly as DP-001 (ε-invariance) requires. The other
+readings are *other constraints* (other files); they are not part of this one.
+
+This is the same discipline as the closed context tuple: just as you must not add a fifth
+argument to context/4, you must not fold alternative readings into one constraint's
+classification. One reading, one constraint, one ε.
+
+### Rule 2 — Route the committer content to omega variables.
+
+The committer structure — which kernel this is, which reading you are instantiating, what the
+sibling readings would change, where the disagreement is located — does NOT go in standard fields
+and does NOT get its own invented field. It goes in **omega variables**. Write one or more omegas
+that record:
+
+- that this constraint is one reading of `kernel_id`, naming the reading;
+- what a sibling reading would change structurally;
+- where the disagreement is *located* — the specific structural element readings differ on.
+
+If you find yourself wishing for a field the schema doesn't have to express committer structure,
+that wish IS the omega. Write it as an omega rather than inventing the field.
+
+### Rule 3 — Record the reading in `kernel_context` (optional free-text).
+
+If the schema's optional `commentary.kernel_context` field is present, write a short free-text
+note naming the kernel, your reading, and the sibling readings. Prose, not IDs-and-relations.
+
+### When NOT to use the committer frame
+
+- When the manifest entry has NO `kernel_id` / `reading_id` — generate as an ordinary constraint.
+  Do NOT invent a kernel. Most constraints are not readings of kernels.
+- As a substitute for declaring beneficiary/victim. Declare structural data first.
+- To describe a mere difference of opinion. If two parties agree on what the constraint is and
+  only disagree about whether it is good, that is the observer axis, not a kernel.
+
+### Temporal kernels
+
+Some kernels have readings whose force shifts over time. Generate the **present-day** reading,
+and note any temporal drift in an omega. Do not model the kernel's full history in one constraint.
+
+---
+
 ## UKE_SCOPE Integration
 
 When generating a constraint story from a UKE_SCOPE manifest entry, map manifest fields to JSON as follows:

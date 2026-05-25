@@ -286,6 +286,15 @@ natural_law_without_beneficiary(C) :-
     \+ requires_active_enforcement(C),
     \+ narrative_ontology:constraint_beneficiary(C, _).
 
+%% effective_theater_ratio(+C, +MetricName, -TR)
+%  Reads the temporal theater_ratio threaded by classify_at_time/4 via nb_setval;
+%  falls back to the static constraint_metric fact when called outside that context.
+effective_theater_ratio(C, MetricName, TR) :-
+    (   catch(nb_getval(classify_at_time_theater, tr(C, TR)), _, fail)
+    ->  true
+    ;   narrative_ontology:constraint_metric(C, MetricName, TR)
+    ).
+
 %% coordination_dead(+C)
 %  True when coordination vitality is declared dead or degrading.
 %  Degrading pitons behave like terminal pitons (diagnostic evidence:
@@ -316,7 +325,7 @@ classify_from_metrics(C, BaseEps, _Chi, _Supp, _Context, piton) :-
     config:param(piton_epsilon_floor, EpsFloor),
     BaseEps > EpsFloor,
     config:param(theater_metric_name, TheaterMetricName),
-    narrative_ontology:constraint_metric(C, TheaterMetricName, TR),
+    effective_theater_ratio(C, TheaterMetricName, TR),
     config:param(piton_theater_floor, TRFloor),
     TR >= TRFloor, !.
 
@@ -369,7 +378,7 @@ classify_from_metrics(C, BaseEps, Chi, _Supp, _Context, piton) :-
     config:param(piton_epsilon_floor, EpsFloor),
     BaseEps > EpsFloor,
     config:param(theater_metric_name, TheaterMetricName),
-    narrative_ontology:constraint_metric(C, TheaterMetricName, TR),
+    effective_theater_ratio(C, TheaterMetricName, TR),
     config:param(piton_theater_floor, TRFloor),
     TR >= TRFloor, !.
 

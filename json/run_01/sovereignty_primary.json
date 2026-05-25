@@ -1,0 +1,211 @@
+{
+  "header": {
+    "constraint_id": "sovereignty_primary",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_sovereignty_primary",
+    "measurement_id_prefix": "sov_prim"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Sovereignty-Primary Reading: Free Movement Conditional on State Consent",
+    "topic_domain": "political_economy/federalism/migration_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "national_labor_unions",
+      "domestic_welfare_systems",
+      "member_state_governments"
+    ],
+    "victims": [
+      "mobile_workers",
+      "foreign_labor_pool",
+      "federal_integration_project"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "label": "The Mobile Worker",
+      "comment": "PERSPECTIVE 1: MOBILE WORKER (SNARE) — Faces irreversible barriers to labor market access across member states. Trapped by member state consent requirements; cannot exit the federation's jurisdiction without abandoning livelihood. Suppression is structural: regulatory authorization tied to member state discretion, legal status revocable at state border, welfare benefits tied to citizenship. No coordination benefit perceived — constraint exists solely to restrict and extract labor value differential."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Domestic Labor Union",
+      "comment": "PERSPECTIVE 2: DOMESTIC LABOR UNION (TANGLED ROPE) — Experiences mixed coordination and extraction. Benefits from labor supply discipline (constrained migration maintains wage floors in protected sectors); experiences constraint as coordination of labor scarcity and wage protection. Simultaneously extracts from mobile workers through negotiated access barriers and tiered employment standards. Has real exit options (can lobby for open borders, can cooperate with cross-border unions) but constrained by member state structural position and political economy of low-skill domestic constituencies."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Member State Government",
+      "comment": "PERSPECTIVE 3: MEMBER STATE GOVERNMENT (ROPE) — Experiences free movement conditionality as pure coordination of sovereignty preservation. Retains regulatory authority over labor market access; uses conditionality to coordinate with federal authority (treaty obligation) while protecting local constituencies. Benefits from the arrangement through political survival (can claim protection of domestic welfare system and workers against supranational pressure). Arbitrage option: can selectively open borders for specific sectors or workers when domestic labor shortage exceeds political cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Federation (Integration Project)",
+      "comment": "PERSPECTIVE 4: FEDERATION / INTEGRATION PROJECT (TANGLED_ROPE) — Structurally coordinating labor mobility (genuine benefit: expanded market, wage convergence, productivity gains). Simultaneously experiencing extraction through member state withholding of consent and fragmentation of labor market. Constrained by treaty architecture that grants states veto power; cannot exit without dissolution. Both beneficiary (coordination logic) and victim (states exercise veto to extract rents). The constraint's enforcement requirement reflects this hybrid: states must actively police borders (enforcement costs) while federation must accommodate state discretion (integration costs)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The Transnational Worker Coalition",
+      "comment": "PERSPECTIVE 5: TRANSNATIONAL WORKER COALITION (SCAFFOLD) — Organized agents (cross-border unions, migrant rights networks) perceive the constraint as a temporary coordination failure with structural sunset logic. Movement restrictions are enforcement artifacts from an earlier federalism phase; as labor mobility increases and worker mobility becomes normal, states' political capacity to maintain borders declines (workers are constituents, employers lobby for access, brain drain becomes visible cost). Coalition mobilization and cross-border organizing is building exit pathway via political pressure. Extractiveness experienced as high but with finite lifetime — estimated sunset 15-25 years as cohort replacement makes restriction politically costly."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Treaty Compliance Apparatus",
+      "comment": "PERSPECTIVE 6: TREATY COMPLIANCE APPARATUS (PITON) — The treaty's consent requirement generates a vast compliance bureaucracy (visa systems, work permit administration, border enforcement, harmonization committees) that is substantially performative. Most actual labor movement happens through exceptions, bilateral agreements, and structural workarounds (posted workers directives, self-employment loopholes, asylum stream recategorization). The apparatus persists through institutional inertia: it employs thousands, generates legitimizing paperwork, and makes restriction visible (politically appeasing domestic constituencies) while allowing substantial de facto mobility. Theater ratio (0.48) reflects this: roughly half the constraint's apparent force is genuine regulatory closure; half is performative compliance ritual."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (State Sovereignty as Natural Law)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From civilizational/universal perspective, state sovereignty and the right to control labor market access appear as unchangeable features of the international system: states are sovereign actors; sovereignty includes border control; no authority above states can mandate open borders. This perspective risks false summitry: state sovereignty is a contingent institutional arrangement, not a law of nature. The structural data reveals beneficiaries (member state governments, domestic unions) and victims (mobile workers, integration project), signaling that what appears 'natural' is actually a contingent institutional choice. Engine's false summit detector should flag this."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is this the sovereignty-primary reading of the federation treaty, or is the integration-primary reading a more accurate description of the actual treaty mechanism?",
+      "resolution_mechanism": "Textual analysis of treaty articles: which framing (state consent as primary, or worker mobility as primary right with state exceptions) is codified? Historical analysis of treaty negotiation and amendment: which reading has driven policy direction over time?",
+      "impact": "If sovereignty-primary is the canonical reading: this constraint's high extractiveness and suppression are treaty-compliant and represent legitimate state authority. If integration-primary is canonical: this constraint represents a departure from treaty intent, and high suppression reflects extra-legal extraction by member states. Classification shifts from tangled_rope (high) to tangled_rope (low) and snare perspectives become dominant.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Which reading of the federation treaty is the canonical one"
+    },
+    {
+      "id": "consent_mechanism_extraction",
+      "question": "Does member state consent requirement function as coordinating mechanism (protecting legitimate welfare interests) or as extraction mechanism (protecting rents and wage floors)?",
+      "resolution_mechanism": "Comparative analysis: states that use consent to protect welfare system integration vs states that use consent to protect low-skill wage premiums. If correlation with welfare risk is high, coordination function is genuine. If correlation with protectionist industry lobbying is high, extraction function dominates.",
+      "impact": "If genuine coordination: extractiveness should be lower (~0.35, downgrade to lower tangled_rope). If extraction dominates: extractiveness should be higher (~0.70, upgrade to snare at institutional level). Changes the entire beneficiary/victim story.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether consent requirement is coordinating welfare systems or protecting rents"
+    },
+    {
+      "id": "actual_vs_formal_mobility",
+      "question": "What proportion of actual labor mobility in the federation occurs through formal consent channels vs informal/exception channels (posted workers, self-employment, visa shopping, asylum recategorization)?",
+      "resolution_mechanism": "Labor flow data: track formal work permits vs estimated actual employment of citizens in other member states. If actual mobility is substantially higher than formal permits suggest, the theater ratio is accurate (~0.48). If formal permits track actual mobility, theater ratio is lower (~0.25) and constraint is more genuinely restrictive.",
+      "impact": "If theater is high (formal restriction, informal permission): snare perspectives are accurate but constrained actors have more agency than classifications suggest — upgrade constrained agents toward mobile. If theater is low (formal equals actual): suppression is more absolute, snare is more severe.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Ratio of formal to actual labor mobility across state boundaries"
+    },
+    {
+      "id": "welfare_system_convergence_trajectory",
+      "question": "Are welfare systems among member states converging or diverging? If converging, the member state consent rationale weakens over time.",
+      "resolution_mechanism": "Multi-decade comparison of welfare spending, eligibility criteria, and benefit levels across member states. Correlation analysis: do states that harmonize welfare systems progressively relax labor movement restrictions?",
+      "impact": "If converging: supports scaffold perspective (sunset logic is real — as welfare harmonizes, consent restrictions become obsolete). If diverging: supports snare perspective (welfare divergence justifies ongoing extraction). Structural prediction: if welfare is converging, expect coalition mobilization and political pressure to decline over next 15 years.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Welfare system convergence or divergence trajectory"
+    },
+    {
+      "id": "federal_authority_asymmetry",
+      "question": "Does the federation actually have authority to override member state consent, or is the treaty's phrasing 'subject to member state consent' a disguise for state veto?",
+      "resolution_mechanism": "Treaty text analysis, case law analysis, and governance practice: has the federation ever attempted to force open borders against member state objection? Have member states ever been overruled by federal authority on labor mobility?",
+      "impact": "If federation has real override authority: extractiveness lower (~0.40), classification shifts toward rope (federation can unilaterally open borders if it chooses to). If consent is de facto veto: extractiveness higher (~0.68), snare perspectives dominate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether federation has genuine authority to override state consent or if consent is veto"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This is the sovereignty-primary reading of the contested federation treaty kernel. In this reading, member state governments retain primary authority to regulate labor market access, and federal free movement rights are conditional on state consent. Free movement is subordinate to state prerogatives to protect national welfare systems, labor market stability, and domestic constituencies. The constraint exhibits tangled rope structure: member states coordinate labor supply management (genuine coordination of welfare system boundaries and labor scarcity protection) while simultaneously extracting rents through access restriction and wage premium protection. Mobile workers experience this as snare (trapped by consent requirements with high suppression). The federation itself experiences the constraint as mixed (coordinating state authority while suffering from labor market fragmentation). Organized transnational actors perceive structural sunset (as worker cohorts normalize cross-border mobility, states' political capacity to enforce restrictions declines). The analytical observer risks false summitry — treating state sovereignty as an unchangeable law rather than a contingent institutional choice.",
+    "key_agents": [
+      "Member State Governments: Primary beneficiary (institutional/arbitrage) — retain regulatory authority, can selectively open borders for domestic political advantage, extract rents through access scarcity",
+      "Domestic Labor Unions: Secondary beneficiary (moderate/constrained) — benefit from constrained labor supply and wage floor protection; also face constraint costs (restrict expansion into new sectors, reduce competitive pressure on wages)",
+      "Mobile Workers: Primary victim (powerless/trapped) — face irreversible barriers to labor market access, legal status contingent on state discretion, welfare benefits tied to citizenship",
+      "Foreign Labor Pool: Potential victim (powerless/trapped) — excluded from federation labor market access; bear full cost of wage differential between federation and exterior labor markets",
+      "Federation / Integration Project: Mixed (institutional/constrained) — genuinely coordinating labor mobility (benefit); constrained by state veto power (cost); experiences extraction through fragmented labor markets and regulatory harmonization failures",
+      "Transnational Worker Coalition: Organized (organized/mobile) — perceive structural sunset; building alternative pathways through political pressure and cross-border organizing",
+      "Treaty Compliance Apparatus: Institutional (institutional/arbitrage) — maintains performative bureaucracy; perpetuates itself through legitimizing paperwork while enabling workarounds"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The member state consent requirement extracts substantial value through access restriction and wage premium protection, but this is not pure extraction — genuine coordination of welfare system boundaries and labor scarcity does occur. The measured value reflects that roughly 55-65% of the constraint's force is extraction; 35-45% is legitimate coordination. The trajectory shows rising extractiveness over the interval (0.42 → 0.58) as states have increasingly used consent requirements to protect domestic constituencies against labor inflows, suggesting the extraction function has been prioritized over coordination. Suppression (0.65): High. Multiple layers of suppression: legal status contingency (visa requirements, work permits, revocable authorization), welfare benefit coupling to citizenship, regulatory harmonization barriers, and enforcement mechanisms (border control, employer verification). However, suppression is not absolute — informal channels (posted workers, self-employment, visa shopping) enable substantial de facto mobility. Theater ratio (0.48): Moderate. Treaty compliance bureaucracy is substantially performative (visa systems, work permits, border enforcement), but roughly equal to genuine regulatory closure. The ratio suggests that actual labor market integration is more open than formal rules suggest; the apparatus's main function is to make restriction visible (politically satisfying domestic constituencies) while enabling workarounds.",
+    "directionality_logic": "Member state governments occupy institutional power with arbitrage exit options, enabling them to benefit from the constraint (can selectively open borders when domestic shortage exceeds political cost). Their d value is low (~0.10-0.20), producing low or negative effective extraction (f(d) ≈ -0.05 to 0.10). Domestic labor unions occupy moderate power with constrained exit; they benefit from wage protection but face constraint costs. Their d value is moderate (~0.50-0.55), producing moderate extraction (f(d) ≈ 0.65-0.75). Mobile workers occupy powerless position with trapped exit; they experience full cost of restriction with no compensation. Their d value is high (~0.92), producing maximum extraction (f(d) ≈ 1.38). The federation occupies institutional power with constrained exit (cannot unilaterally override member states without treaty violation); their d value is moderate-high (~0.55-0.65), producing substantial extraction (f(d) ≈ 0.75-0.90), reflecting mixed beneficiary/victim status.",
+    "perspectival_gap": "The perspectival gap reveals the constraint's dual nature. Member states see pure coordination (Rope) — they are solving the legitimate problem of protecting labor markets and welfare systems. Domestic unions see mixed coordination-extraction (Tangled Rope) — both benefit and cost. Mobile workers see pure extraction (Snare) — no coordination benefit, only suppression. The federation sees mixed (Tangled Rope) — coordinating labor mobility while constrained by state veto. Organized transnational actors see temporary problem with sunset (Scaffold) — political pressure will eventually force opening. The treaty compliance apparatus sees degraded ritual (Piton) — performative enforcement maintained through inertia. The analytical observer risks naturalizing contingent institutional choices as unchangeable state sovereignty (Mountain / false summit). The gap between member state's Rope and worker's Snare is maximal — the same mechanism appears as pure coordination from the beneficiary perspective and pure extraction from the victim perspective. The piton classification reveals that substantial bureaucratic machinery persists despite degraded function (actual mobility is much higher than formal rules suggest).",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that this constraint is legitimately tangled rope at the state level (genuine coordination of welfare boundaries + genuine extraction via access restriction) while simultaneously appearing as snare from the mobile worker perspective. The classification gap is not an error — it reflects the real structural asymmetry: member states genuinely coordinate welfare interests while genuinely extracting rents; mobile workers genuinely face suppression with no coordination benefit. The scaffold perspective's sunset logic (worker cohorts will make restriction politically costly) provides resolution pathway: as extractive function becomes less necessary and political costs rise, the coordination function should rebalance. The false summit (analytical observer treating sovereignty as natural law) should be flagged by the engine as conceptual capture — framing a contingent institutional choice as unchangeable.",
+    "kernel_context": "This constraint instantiates the sovereignty-primary reading of the federation membership treaty kernel. The sibling readings are: (1) integration-primary (reading that centers worker free movement as the primary right with state exceptions), and (2) subsidiarity-balance (reading that treats worker mobility and state authority as coequal principles to be balanced case-by-case). In the sovereignty-primary reading, the treaty's canonical interpretation privileges member state authority; free movement is conditional on state consent. The integration-primary reading would privilege worker mobility rights; state restrictions would require explicit justification. The subsidiarity-balance reading would treat both as prima facie valid, with case-by-case adjudication. The structural delta between these readings is significant: sovereignty-primary produces high extractiveness (0.58) and high suppression (0.65), with mobile workers in victim set; integration-primary would produce lower extractiveness (~0.30-0.35) and lower suppression (~0.35-0.40), with member state governments in victim set; subsidiarity-balance would produce moderate extractiveness (~0.45) with distributed costs. The choice of reading determines whether the constraint is snare-dominant (sovereignty-primary) or rope-dominant (integration-primary) or mixed (subsidiarity-balance). I have generated ONLY the sovereignty-primary reading as a clean constraint; the sibling readings are separate constraint stories to be written independently and linked via network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "integration_primary",
+      "subsidiarity_balance",
+      "welfare_state_vulnerability",
+      "labor_market_fragmentation"
+    ],
+    "dual_formulation_note": "The federation membership treaty kernel admits three structurally distinct readings: sovereignty-primary (states control access, this constraint), integration-primary (worker mobility is primary right), and subsidiarity-balance (coequal principles, case-by-case). Each reading produces a different constraint with different ε, different beneficiary/victim structure, and different classification. This file documents the sovereignty-primary reading only. The sibling readings are separate constraint stories linked via network.affects_constraints. The three readings are not observational variants of one constraint — they are genuinely different institutional framings with different structural consequences."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true
+  }
+}

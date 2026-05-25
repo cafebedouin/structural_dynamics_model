@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "welfare_regulated_use",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_welfare_regulated_use"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Animal Welfare Regulation: Permissible Use Framework",
+    "topic_domain": "applied_ethics/legal_philosophy/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "regulated_animal_industries",
+      "consumer_welfare_baseline"
+    ],
+    "victims": [
+      "sentient_animals",
+      "enforcement_agencies"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Sentient Animal",
+      "comment": "PERSPECTIVE 1: SENTIENT ANIMAL (SNARE) — Trapped without exit option. Suffering matters structurally (animal enters victim set), but death does not (animal use remains legal). Maximum extraction: the constraint permits indefinite use-to-death while extracting minimal welfare cost from operators. The animal experiences maximum suppression — confinement, instrumental treatment, selective recognition of harm. No exit, no alternatives, no agency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Animal Welfare Enforcement Agency",
+      "comment": "PERSPECTIVE 2: ANIMAL WELFARE ENFORCEMENT AGENCY (TANGLED ROPE) — Constrained by resource limitations, industry lobbying, and jurisdictional fragmentation. Benefits from coordination function (regulates a predictable use framework) while bearing extraction (underfunded, tasked with enforcement against better-resourced industry actors). Moderate experienced extraction due to resource asymmetry and conflicting mandates (consumer protection vs. industry viability)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Regulated Animal Industry",
+      "comment": "PERSPECTIVE 3: REGULATED ANIMAL INDUSTRY (ROPE) — Primary beneficiary. Experiences the constraint as coordination: welfare standards create predictable operating costs, market differentiation, and liability protection. Net beneficiary — extraction runs toward this actor. Arbitrage exit: can shift operations to lower-regulation jurisdictions; retains use rights indefinitely. Low effective extraction despite regulatory compliance costs because the industry shapes the regulatory framework itself."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Consumer as Welfare Concern",
+      "comment": "PERSPECTIVE 4: CONSUMER AS WELFARE CONCERN (TANGLED ROPE) — Powerful actor with arbitrage exit (can switch to alternative products, jurisdictions, or suppliers). Benefits from coordination function (assured baseline welfare standards reduce reputational/health risk). Simultaneously extracted from: welfare standards are minimally enforced, lower-cost producers with weaker standards capture market share, and consumers bear informational asymmetry (difficulty verifying claimed welfare levels). Moderate extraction because consumer power is unequally distributed (wealthy consumers can arbitrage to certified products; poor consumers are trapped by price)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Global Animal Welfare Certification System",
+      "comment": "PERSPECTIVE 5: GLOBAL ANIMAL WELFARE CERTIFICATION SYSTEM (PITON) — Third-party certifications (Certified Humane, GlobalGAP, etc.) are substantially performative: audits are infrequent, producers control documentation, and enforcement relies on reputational mechanisms that decay at scale. The certification theater persists through market incentives (consumers perceive legitimacy) despite low actual verification. High theater_ratio (0.65 global average) reflects that much certified-welfare activity is documentation and audit ritual rather than structural welfare improvement. Piton classification derives from institutional inertia — the system maintains itself because alternatives haven't fully emerged, not because it achieves its stated function."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, the constraint between human interest in animal products and animal suffering might appear as an immutable tension: humans have always used animals for food/labor, sentience-based welfare regulation represents an inevitable compromise, and permissible-use frameworks are invariant across contexts because animal consciousness is insufficient to override human utility. This perspective risks naturalizing the 'welfare regulation' compromise as structurally inevitable. The false summit detector will identify this as such: the compromise is a contingent institutional reading, not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "sentience_threshold_boundary",
+      "question": "What determines which species/conditions are included in the sentience-welfare boundary versus excluded as non-sentient or insufficiently conscious?",
+      "resolution_mechanism": "Neuroscientific consensus on pain receptors, nociception pathways, and behavioral indicators; comparison of regulatory sentience thresholds across jurisdictions; identification of economically-driven exclusions (insects, fish, mollusks vs. mammals)",
+      "impact": "If threshold is purely scientific: constraints on billions of invertebrates and cold-water species are correctly excluded from welfare frames. If threshold is economically-driven: large extraction victim populations are structurally invisible, and welfare regulation is theater. Current evidence suggests mixed mechanism — genuine scientific uncertainty exploited as regulatory permission.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sentience-threshold boundary determination: scientific vs. economic drivers"
+    },
+    {
+      "id": "enforcement_capacity_ratio",
+      "question": "What is the actual ratio of welfare audits conducted to licensed facilities operating in a given jurisdiction, and how does this affect extraction capacity?",
+      "resolution_mechanism": "Empirical audit frequency data from regulatory agencies; correlation between audit frequency and documented welfare violations; historical trend analysis of enforcement capacity relative to industry scale",
+      "impact": "If ratio < 10% annually: suppression is partially structural (undetected violations are systematic). If ratio > 50% annually: enforcement is credible and extraction is lower. Most jurisdictions show < 5% annual audit coverage, suggesting extraction is sustained by enforcement gaps rather than supplier compliance.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Regulatory audit coverage ratio and enforcement capacity"
+    },
+    {
+      "id": "death_exclusion_extraction_flow",
+      "question": "Does the regulatory framework's treatment of killing as permissible (vs. suffering as prohibited) constitute a boundary condition that transfers extraction surplus, or a genuine moral distinction?",
+      "resolution_mechanism": "Comparison of welfare regulations across abolitionist, regulated-use, and pure-property reading framings; analysis of which industries lobby for death-permission vs. suffering-reduction; identification of extractive surplus that accrues when industries can substitute suffering-reduction costs with death-acceleration (e.g., culling vs. care)",
+      "impact": "If death-permission is extracted surplus: the constraint's true ε is higher (extraction hides in the kill-rather-than-care optimization). If it reflects genuine moral consensus: the constraint's type classification is accurate (moderate extraction, genuine coordination). Current evidence shows industries systematically substitute care costs with culling economics, suggesting the first interpretation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether death-permission constitutes extracted surplus or moral boundary"
+    },
+    {
+      "id": "kernel_reading_committer",
+      "question": "Is this constraint (welfare_regulated_use) one reading of the animal_moral_status kernel, and how does it relate to the abolitionist_rights and pure_property sibling readings?",
+      "resolution_mechanism": "Structural comparison: welfare_regulated_use includes sentient animals in victim set (suffering matters) but excludes them from rights-bearer set (death is permissible). Abolitionist_rights reading would include animals in both (suffering AND death prohibited). Pure_property reading would exclude animals from both (suffering and death are non-harm). Each reading produces different beneficiary/victim sets and different ε values. The three readings are alternative instantiations of the same kernel (animal moral status), not different constraints.",
+      "impact": "Recognizing this as a kernel reading clarifies that the perspectival gap is not disagreement about facts but disagreement about the reading of a contested kernel. No single reading is 'correct' — the choice between readings is a normative/political decision, not an empirical resolution. This omega routes the committer frame into the constraint narrative.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Constraint as one reading of the animal_moral_status kernel (welfare_regulated_use vs. abolitionist_rights vs. pure_property)"
+    },
+    {
+      "id": "industry_welfare_cost_pass_through",
+      "question": "When welfare regulations impose costs on producers, what proportion are absorbed by producers vs. passed to consumers vs. transferred to animals as reduced care?",
+      "resolution_mechanism": "Price elasticity analysis of animal products post-regulation; wage/cost trends in regulated industries; correlation between welfare cost increases and documented welfare improvements vs. facility consolidation/automation",
+      "impact": "If costs absorbed by producers: extraction is genuine (industry bears real constraints). If costs passed to consumers: extraction is lateral (consumer welfare baseline improves, suppression distributes by income). If transferred to animals: extraction is internal (animals bear the welfare cost to avoid death, creating a suppression cycle). Mixed pass-through observed empirically suggests all three mechanisms operate simultaneously.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Welfare cost distribution: producer absorption vs. consumer pass-through vs. animal suppression"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.59
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The welfare-regulated-use reading instantiates a specific constraint from the contested kernel of animal moral status. Under this reading, animals are recognized as sentient beings whose suffering matters — they enter the victim set — but their lives do not. Use-to-death remains permissible; use-with-unnecessary-suffering becomes prohibited. This creates a hybrid constraint: genuine coordination function (establishing predictable welfare baselines) combined with asymmetric extraction (industries retain use rights while bearing minimal welfare costs due to enforcement gaps). The constraint exhibits all properties of a Tangled Rope from most perspectives, with a Snare classification from the animal's structural position. The central tension is between the moral recognition of sentience and the institutional permission of terminal use, a boundary that generates substantial extraction surplus. Extractiveness (0.58) and suppression (0.62) have both risen over the measurement interval as certification theater has expanded while enforcement capacity has stagnated. The theater_ratio (0.65) reflects that global welfare certification systems (Certified Humane, GlobalGAP, etc.) are substantially performative — audits are infrequent, producers control documentation, and reputational enforcement decays at scale.",
+    "key_agents": [
+      "Sentient Animal: Primary victim (powerless/trapped) — enters victim set via sentience recognition but not rights set; bears maximum suppression and extraction",
+      "Regulated Animal Industry: Primary beneficiary (institutional/arbitrage) — retains use rights, captures market legitimacy from welfare standards, bears minimal enforcement risk",
+      "Animal Welfare Enforcement Agency: Secondary victim (moderate/constrained) — underfunded, tasked with enforcement against better-resourced industry actors; benefits from coordination function but extracted from by resource asymmetry",
+      "Consumer: Powerful actor (powerful/arbitrage) — experiences mixed extraction (baseline welfare assurance vs. informational asymmetry and market segmentation by income)",
+      "Welfare Certification System: Institutional actor (institutional/arbitrage) — maintains performative audit theater; derives legitimacy from labeling rather than verification",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing the welfare-regulated-use compromise as inevitable rather than contingent"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint permits indefinite use while extracting minimal welfare costs from operators due to enforcement gaps (< 5% annual audit coverage in most jurisdictions). The industry captures use rights, market differentiation via welfare claims, and liability protection, while bearing modest compliance costs. The animal bears the cost of recognition without protection — sentience matters for suffering prevention but not for death permission. This asymmetry is the core extraction mechanism. Theater_ratio (0.65): Moderate-high. Welfare certifications perform legitimacy: third-party audits create the appearance of verification without detecting most violations. Industry actors manage documentation; consumers perceive assurance but lack verification capacity. The certification industry itself benefits from theater (audit fees, brand licensing) independent of welfare outcomes. Suppression (0.62): Moderate-high. Significant barriers to animals' capacity to avoid the constraint include physical confinement, legal property status, informational asymmetry (animals cannot communicate welfare preferences), and the asymmetry of the death-permission boundary (escape-via-death is not available as an exit option). Suppression is not total because animals retain some capacity to resist (escape, reduced productivity under stress), but this capacity is met with intensified confinement rather than welfare improvement.",
+    "directionality_logic": "Each perspective's directionality derives from the agent's structural position relative to the extraction flow. The industry (institutional/arbitrage) has low d because it is a beneficiary with arbitrage exit — can shift to lower-regulation jurisdictions, substitute welfare costs with culling/automation, or capture the regulatory process itself. This produces f(d) ≈ -0.12, driving the beneficiary toward rope classification. The animal (powerless/trapped) has d ≈ 0.95 because it is a victim with no exit — trapped by property status, confinement, and instrumental treatment. This produces f(d) ≈ 1.42, driving maximum experienced extraction. The enforcement agency (moderate/constrained) has d ≈ 0.65 because it is partially victimized (underfunded, conflicting mandates) but also partially benefits from coordination function (regulates a predictable framework). The consumer (powerful/arbitrage) has d ≈ 0.48 because benefits and costs are asymmetrically distributed by income — wealthy consumers can arbitrage to certified products; poor consumers are trapped by price. The certification system (institutional/arbitrage) has d ≈ 0.10 because it is substantially beneficiary — derives revenue from audit theater independent of welfare outcomes.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival divergence across three structural positions. The industry sees a coordination mechanism (Rope) — welfare standards create predictable costs and market legitimacy. The enforcement agency sees mixed coordination and extraction (Tangled Rope) — it benefits from regulating a stable framework while being extracted from by resource asymmetry. The animal sees pure extraction (Snare) — the constraint permits indefinite use while recognizing suffering without preventing harm. The analytical observer risks seeing an immutable compromise (Mountain) — that human-animal instrumental relationships are necessarily structured as permissible use with minimal welfare. The false summit detector will identify this mountain as naturalization: the welfare-regulated-use reading is a contingent political choice, not a structural law. Alternative readings (abolitionist_rights, pure_property) are equally coherent instantiations of the same kernel.",
+    "mandatrophy_analysis": "The welfare-regulated-use reading resolves potential mandatrophy (coordination vs. extraction) by explicitly declaring both: genuine coordination function (establishing welfare baselines, reducing reputational risk) combined with asymmetric extraction (animals bear maximum cost despite sentience recognition; industries capture use rights). The Tangled Rope classification from most institutional perspectives confirms this hybrid nature. The mandatrophy dissolves when we recognize that the boundary between suffering-prohibition and death-permission is itself the extraction mechanism — it permits industries to optimize by culling rather than caring, transferring the welfare cost to animals as intensified suppression.",
+    "kernel_context": "This constraint instantiates the welfare_regulated_use reading of the animal_moral_status kernel. The kernel is the contested boundary of what moral status animals possess. Three structural readings decompose from this kernel: (1) welfare_regulated_use (this constraint): sentience matters for suffering, death is permissible. (2) abolitionist_rights: sentience mattersfor both suffering AND rights; use-to-death is prohibited. (3) pure_property: animals are property without sentience-status; suffering and death are non-harm. Each reading produces a different victim set, different ε, and different beneficiary structure. This constraint (welfare_regulated_use) is the moderate compromise reading — it includes animals as welfare-victims but excludes them as moral subjects. The other two readings are structurally distinct constraints (different observable, different ε) and should be written as separate stories with network links. The committer frame clarifies that choosing between these readings is not an empirical resolution — it is a normative/political decision about which kernel interpretation to adopt."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "abolitionist_rights",
+      "pure_property"
+    ],
+    "dual_formulation_note": "The welfare_regulated_use constraint is one reading of the animal_moral_status kernel. Sibling readings (abolitionist_rights, pure_property) are structurally distinct constraints with different ε values and beneficiary/victim sets. All three should be instantiated as separate constraint stories linked via network.affects_constraints. The network reflects that regulatory changes in one reading affect the others — a shift toward abolitionist framing directly constrains welfare_regulated_use implementation."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true
+  }
+}

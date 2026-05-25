@@ -232,6 +232,8 @@ ENRICHED_EXTRA_FIELDS = [
     ("tangled_psi",         (int, float), True),
     ("tangled_band",        str,         True),
     ("abductive_triggers",  list,        False),
+    # --- Husk metrics (temporal EP decay analysis) ---
+    ("husk_metrics",        dict,        True),
     # --- Game theory ---
     ("nash_distance_structural",  int,          True),
     ("nash_stable_structural",    bool,         True),

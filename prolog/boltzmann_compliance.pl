@@ -438,7 +438,11 @@ epistemic_access_check(_, false).
 %  This is the "extractive overhead" — the PoA excess.
 excess_extraction(C, ExcessEps) :-
     config:param(extractiveness_metric_name, ExtMetricName),
-    narrative_ontology:constraint_metric(C, ExtMetricName, Eps),
+    % Use temporal ε threaded by classify_at_time/4 if available; else static fact.
+    (   catch(nb_getval(classify_at_time_eps, eps(C, Eps)), _, fail)
+    ->  true
+    ;   narrative_ontology:constraint_metric(C, ExtMetricName, Eps)
+    ),
     boltzmann_floor_for(C, Floor),
     ExcessEps is max(0.0, Eps - Floor).
 

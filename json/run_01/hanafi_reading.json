@@ -1,0 +1,203 @@
+{
+  "header": {
+    "constraint_id": "hanafi_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-27",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_hanafi_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Hanafi Juristic Discretion via Qiyas and Ra'y",
+    "topic_domain": "islamic_jurisprudence/legal_theory/commitment_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "hanafi_jurists",
+      "legal_adaptatability"
+    ],
+    "victims": [
+      "textual_certainty",
+      "lay_predictability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Lay Petitioner",
+      "comment": "PERSPECTIVE 1: LAY PETITIONER (SNARE) — Cannot predict legal outcomes from text alone. Trapped within juristic discretion; the answer depends on which jurist interprets the ambiguous case. Maximum extraction of cognitive and social overhead. No exit from reliance on expert judgment."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Textual Certainty (Epistemic Victim)",
+      "comment": "PERSPECTIVE 2: TEXTUAL CERTAINTY AS EPISTEMIC COLLECTIVE (SNARE) — The ideal of law grounded in explicit Qur'anic/Hadith text cannot exit the system. Expansive qiyas and ra'y subordinate text-based certainty to jurist inference. No coordination function protects textual foundations — only extraction of epistemological authority into juristic hands."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Textualist Jurist",
+      "comment": "PERSPECTIVE 3: TEXTUALIST JURIST (TANGLED ROPE) — Constrained by Hanafi consensus but also benefits from access to interpretive frameworks and scholarly tradition. Can apply strict qiyas (analogical reasoning) but faces social/professional cost for rejecting ra'y (juristic preference) innovations. Mixed: genuine coordination function (coherent juristic method) but also extraction of discretionary authority."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Hanafi Juristic School",
+      "comment": "PERSPECTIVE 4: HANAFI JURISTIC SCHOOL (ROPE) — Experiences expansive qiyas and ra'y as pure coordination: these methods enable legal adaptation to novel cases without constant textual re-examination. The school gains institutional coherence and adaptive capacity. Beneficiary through arbitrage — can choose the interpretive depth that solves immediate problems."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Competing Juristic Schools",
+      "comment": "PERSPECTIVE 5: COMPETING JURISTIC SCHOOLS (TANGLED ROPE) — Constrained by the Hanafi method's persuasive power (ra'y innovations attract followers). Also benefit from the boundary maintained by method (Hanafi identity persists). Asymmetric extraction: schools with more restrictive qiyas lose adherents to Hanafi flexibility. Active enforcement required: school leadership must defend restrictive readings against Hanafi reinterpretation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Natural Law View: Interpretive Necessity",
+      "comment": "PERSPECTIVE 6: ANALYTICAL / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational horizon, textual silence and ambiguity are inherent to any fixed text applied to novel cases. Qiyas and ra'y respond to an immutable structural feature of jurisprudence: no text can pre-specify all cases. This perspective risks naturalizing what is actually a contested methodological choice between schools. Engine false-summit detection applies."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "discretion_scope_boundary",
+      "question": "Where does legitimate juristic discretion (ra'y) end and arbitrary preference-imposition begin?",
+      "resolution_mechanism": "Historical analysis of Hanafi juristic decisions: identify cases where ra'y produced outcomes contradicting explicit textual preference. Measure divergence between Hanafi conclusions and those of stricter schools on identical cases. Assess whether divergence is explainable by method difference or by hidden preferential extraction.",
+      "impact": "If boundary is stable and defensible: Hanafi constraint is primarily coordination (Rope with legitimate overhead). If boundary is permeable and preference-driven: constraint is primarily extraction (Snare features dominate). If boundary shifts over time: theater_ratio rises, suggesting Piton degradation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Boundary between legitimate discretion and arbitrary extraction in juristic preference"
+    },
+    {
+      "id": "reading_contingency",
+      "question": "Is this constraint a reading-specific feature of Hanafi jurisprudence, or does it apply equally to all four schools?",
+      "resolution_mechanism": "Comparative analysis of qiyas and ra'y across Hanafi, Maliki, Shafi'i, and Hanbali schools. Measure extractiveness of each school's method by: (a) frequency of divergence from text, (b) breadth of discretionary latitude, (c) institutional power concentration in jurist hands. Compare beneficiary/victim structures.",
+      "impact": "If Hanafi is highest in both extractiveness and juristic empowerment: reading-specific constraint confirmed. If all schools show similar structure: constraint is method-invariant (belongs to usul_al_fiqh_method kernel, not hanafi_reading). If Hanafi is lowest: reading challenges the hypothesis.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether expansive discretion is Hanafi-specific or applicable to all schools"
+    },
+    {
+      "id": "historical_evolution_tea_leaf",
+      "question": "Did Hanafi ra'y expansion occur to solve genuine coordination problems, or to accumulate juristic authority?",
+      "resolution_mechanism": "Genealogical analysis of specific innovations in Hanafi jurisprudence: identify the case that prompted each major ra'y extension. Distinguish between: (A) cases where text was genuinely silent/ambiguous and expansion solved a real legal problem; (B) cases where text was explicit but ra'y overrode it for preferential reasons; (C) cases where ra'y was used to harmonize conflicting rules (genuine coordination). Measure proportion of each type.",
+      "impact": "If majority is Type A/C: constraint is hybrid (Tangled Rope confirmed). If majority is Type B: constraint is pure extraction (Snare). If Type A/C ratio declined over time: Piton degradation (theater_ratio increases as original coordination function atrophies).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Hanafi ra'y expansion responded to coordination problems or authority accumulation"
+    },
+    {
+      "id": "false_summit_natural_law",
+      "question": "Is the perceived necessity of qiyas and ra'y a genuine immutable feature of textual jurisprudence, or a contingent institutional feature of how Islamic law developed?",
+      "resolution_mechanism": "Counterfactual analysis: (1) Can a textualist jurisprudence function without qiyas/ra'y? (2) What would it require institutionally (e.g., continuous legislative amendment, different scholarly roles, different authority structures)? (3) Which features of textualism are actually constraining vs. assumed to be constraining? Historical comparison with non-Islamic legal traditions that handle textual silence differently (Talmudic reasoning, Roman law, common law development).",
+      "impact": "If textualism is fundamentally impossible: Mountain classification sustained. If textualism is possible but institutionally expensive: constraint is Tangled Rope (coordination at high cost) not Mountain. If textualism is possible and cost-competitive: constraint is extraction under false naturalization (False Summit — reclassify to Tangled Rope or Snare).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether interpretive necessity is natural law or contingent institutional design"
+    },
+    {
+      "id": "kernel_reading_committer",
+      "question": "This constraint is ONE reading of the usul_al_fiqh_method kernel. How does the Hanafi reading differ structurally from Maliki, Shafi'i, and Hanbali readings?",
+      "resolution_mechanism": "Comparative constraint authoring: generate parallel constraint stories for maliki_reading, shafii_reading, hanbali_reading with identical base structure but measured differences in: (1) extractiveness (qiyas/ra'y latitude), (2) beneficiaries (which jurists gain authority), (3) theater_ratio (performative vs. functional content). Network link all four stories via affects_constraints. Identify which reading has highest ε and which has highest institutional capture.",
+      "impact": "Different readings will have different ε values. The reading with highest ε represents the most expansive discretion and thus the strongest extraction mechanism. Structural data will show whether 'expansion' is coordination-driven or preference-driven by comparing beneficiary power concentration and victim constraints across readings.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Comparative structure of Hanafi vs. other school readings of the usul_al_fiqh_method kernel"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 300,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 600,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 300,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 600,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 600
+  },
+  "commentary": {
+    "narrative_context": "The Hanafi juristic method, particularly the expansive application of qiyas (analogical reasoning) and ra'y (juristic preference), represents a reading of the broader usul_al_fiqh_method kernel that prioritizes adaptive capacity and juristic discretion when texts are silent or ambiguous. This reading differs structurally from the Maliki, Shafi'i, and Hanbali approaches, which employ different methodological balances. The Hanafi reading exhibits the properties of a Tangled Rope: it provides genuine coordination (legal adaptation without constant textual re-examination) while simultaneously concentrating authority in juristic hands, extracting predictability from lay petitioners and textual certainty from the epistemic commons. The constraint's theater_ratio (0.35) reflects that Hanafi juristic reasoning is substantially functional — qiyas and ra'y are legitimate tools for resolving ambiguity — but increasingly incorporates performative elements as the juristic tradition develops and institutionalizes. The measurement trajectory (ε: 0.35 → 0.52 over 600 time units) shows extractiveness accumulation as Hanafi jurisprudence expands ra'y applications and the interpretive tradition grows thicker, creating more layers of inference between text and decision.",
+    "key_agents": [
+      "Hanafi Jurists (Institutional/Arbitrage): Primary beneficiaries — gain interpretive authority and adaptive capacity through expanded qiyas/ra'y; can choose the inference depth that solves cases.",
+      "Lay Petitioners (Powerless/Trapped): Primary victims — cannot predict legal outcomes from text alone; must rely on expert judgment; face cognitive and economic overhead.",
+      "Textual Certainty (Abstract Collective/Trapped): Epistemic victim — the ideal of law grounded in explicit text is subordinated to inference; no self-advocacy mechanism.",
+      "Textualist Jurists (Moderate/Constrained): Secondary agents — benefit from interpretive frameworks but face professional cost for rejecting ra'y innovations; constrained by school consensus.",
+      "Competing Juristic Schools (Institutional/Constrained): Institutional victims — constrained by Hanafi method's persuasive power; lose adherents to Hanafi flexibility; must actively defend restrictive readings.",
+      "Analytical Observer (Analytical/Analytical): Risks naturalizing contingent institutional arrangements as inherent to jurisprudence."
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The Hanafi method's expansion of qiyas and ra'y extracts predictability from lay agents and textual certainty from the epistemic commons. However, the extraction is not absolute — the methods are genuine tools for resolving real ambiguities, and their use is bounded by juristic tradition and scholarly consensus. The value reflects that most extraction is justified (coordination overhead) but some is preferential (authority accumulation). Suppression (0.48): Moderate. Barriers to exit include institutional dependence on juristic expertise (no alternative source of legal authority), social integration of juristic judgment into community decision-making, and the high cognitive cost of learning alternative methodologies. However, suppression is not absolute — textualist alternatives exist (Hanbali strictness), and lay agents can theoretically organize around textual simplicity. Theater ratio (0.35): Low-moderate. Hanafi juristic reasoning is substantially functional — the methods genuinely solve the coordination problem of applying fixed text to novel cases. Theater increases over time as the juristic tradition becomes more elaborate and stratified, creating more performative layers of commentary on commentary. The 0.35 endpoint reflects that the tradition has begun to substitute procedural elaboration for problem-solving.",
+    "directionality_logic": "Directionality values (d) for each perspective are derived from structural position: lay petitioners are trapped victims (high d, high f(d), high experienced extraction); Hanafi jurists are beneficiaries with arbitrage options (low d, low/negative f(d), minimal experienced extraction); textualist jurists are moderate victims with constrained options (moderate d, moderate f(d), moderate experienced extraction); competing schools are constrained institutional actors with partial extraction asymmetry (moderate-high d). The Hanafi juristic school itself, as beneficiary, derives d ≈ 0.10 (arbitrage exit, beneficiary status), yielding negative χ relative to base ε — they experience the constraint as coordination benefit, not extraction. The analytical observer derives d ≈ 0.72 from (analytical, analytical) canonical values, experiencing the constraint as extraction of epistemic authority from lay agents. Perspective gaps emerge: the beneficiary sees Rope (pure coordination), the victims see Snare (pure extraction), the moderate actor sees Tangled Rope (genuine coordination + asymmetric extraction), the competitor sees Tangled Rope with enforcement (active defense required), the analytical observer risks seeing Mountain (natural law) but engine false-summit detection flags the naturalization.",
+    "perspectival_gap": "The Hanafi juristic school experiences expansive qiyas and ra'y as a solution to a genuine coordination problem: how to apply fixed text to cases the text does not anticipate. This perspective sees the methods as Rope — pure coordination with minimal coercive overhead. Lay petitioners experience the same methods as pure extraction — they cannot predict outcomes from text, incurring high cognitive cost and dependence on expert judgment. Textualist jurists see mixed extraction and coordination — the methods enable problem-solving but also extract authority they would prefer to see remain in the text. The epistemic commons (textual certainty as abstract victim) sees pure extraction — its ideal is subordinated to inference with no protective mechanism. Competing juristic schools see the Hanafi methods as enforced extraction — they are constrained to defend restrictive readings against Hanafi reinterpretation, incurring institutional cost. The analytical observer risks seeing Mountain (the necessity of interpretation is a natural law of jurisprudence) but this risks naturalizing what is actually a contested institutional choice. The false-summit detector identifies the naturalization: competing schools exist and prove that alternative methodologies are structurally possible, even if institutionally less successful.",
+    "mandatrophy_analysis": "The Hanafi constraint resolves mandatrophy by showing that 'genuine coordination function + asymmetric extraction' is precisely the definition of Tangled Rope. The Hanafi jurists are solving a real problem (legal adaptation when text is silent) — this is the coordination function. But the solution concentrates authority in their hands and extracts predictability from lay petitioners — this is the asymmetric extraction. Both are structurally true. No type misapplication occurs. The false-summit risk (Mountain from analytical view) is the actual analytical error to flag: naturalizing institutional choice as law of nature. The constraint's measurement trajectory shows extractiveness accumulation (0.35 → 0.52) without corresponding theater growth (0.20 → 0.35), indicating that the core extraction mechanism is strengthening while the functional problem-solving capacity remains robust. This pattern suggests the coordination function is real and stable, but the institutional authority layer is accumulating — a healthy Tangled Rope gradually sliding toward higher asymmetry.",
+    "kernel_context": "This constraint instantiates the HANAFI READING of the contested kernel usul_al_fiqh_method (Islamic jurisprudential methodology). The kernel is the shared commitment that Islamic law must address novel cases not explicitly covered by Qur'an and Sunnah. Four schools read this kernel differently: Hanafi (maximal qiyas and ra'y expansion), Maliki (moderate expansion with emphasis on community practice), Shafi'i (strict qiyas with limited ra'y), Hanbali (minimal ra'y with textual precedent priority). This reading focuses on the Hanafi approach — the most expansive in juristic discretion — and thus exhibits the highest extractiveness among the four schools. The structural difference lies in: (1) ε values (Hanafi > Maliki > Shafi'i > Hanbali, measured by scope of discretionary latitude), (2) beneficiary concentration (Hanafi most concentrated in jurist hands, Hanbali most distributed toward textual clarity), (3) victim exposure (lay agents face highest unpredictability in Hanafi, highest clarity in Hanbali). The sibling readings are separate constraint stories with different ε values and different beneficiary/victim structures. This story analyzes ONLY the Hanafi reading as a clean, ε-invariant constraint (ε=0.52). The comparison with siblings belongs in those stories' network links and omega variables."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "maliki_reading",
+      "shafii_reading",
+      "hanbali_reading"
+    ],
+    "dual_formulation_note": "The Hanafi reading is one constraint within the usul_al_fiqh_method kernel family. Each school reading has its own ε value reflecting the scope of juristic discretion permitted. The Hanafi reading exhibits ε=0.52 (moderate extractiveness) due to expansive qiyas/ra'y. Sibling readings will show different ε values: Maliki (ε≈0.45, moderate constraint on discretion via community practice), Shafi'i (ε≈0.35, stricter qiyas limitation), Hanbali (ε≈0.25, minimal ra'y). The network structure represents the methodological ecosystem in Islamic jurisprudence: all schools address the same kernel (textual silence/ambiguity) but with different extractiveness profiles."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true
+  }
+}

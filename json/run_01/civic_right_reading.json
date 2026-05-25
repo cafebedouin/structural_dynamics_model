@@ -1,0 +1,203 @@
+{
+  "header": {
+    "constraint_id": "civic_right_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_civic_right_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.52,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Second Amendment as Civic Right Conditioned on Militia Participation",
+    "topic_domain": "constitutional_law/political_theory/rights_jurisprudence",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "civic_militia_eligible_citizens",
+      "state_regulatory_authority"
+    ],
+    "victims": [
+      "non_militia_eligible_populations",
+      "excluded_categories"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Excluded Category",
+      "comment": "PERSPECTIVE 1: EXCLUDED POPULATION (SNARE) — Individuals categorized as ineligible for militia participation (felons, undocumented immigrants, those deemed unfit for service) experience the constraint as pure extraction with no coordination benefit. They bear the suppression of the gating mechanism but receive no counterbalancing right to bear arms. No exit option exists — their excluded status is structurally locked. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Marginally Eligible Citizen",
+      "comment": "PERSPECTIVE 2: MARGINALLY ELIGIBLE CITIZEN (TANGLED ROPE) — Citizens meeting formal militia eligibility criteria (age, citizenship, no felony record) experience genuine coordination benefits (shared security, collective defense norms) but also face meaningful extraction: registration requirements, training mandates, readiness obligations, or implicit expectations of service in genuine civic emergencies. They have exit options (refusal to participate) but at significant cost. Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State Regulatory Authority",
+      "comment": "PERSPECTIVE 3: STATE REGULATORY AUTHORITY (ROPE) — The state experiences the constraint as pure coordination: it defines militia eligibility, maintains the gating mechanism, and captures the legitimacy benefit of rights-protection. From the state's institutional view, the gating requirement is a coordination feature (ensuring armed capability is yoked to civic duty), not an extraction mechanism. The state has arbitrage options (setting different eligibility criteria, modulating training requirements). Net beneficiary through legitimacy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Militia-Participatory Coalition",
+      "comment": "PERSPECTIVE 4: MILITIA-PARTICIPATORY COALITION (TANGLED ROPE) — Organized gun-rights advocates and militia-aligned groups see the constraint as both coordination (collective defense, shared civic duty) and extraction (potential for state overreach in defining eligibility, service obligations, training requirements). They have constrained exit (could abandon civic participation entirely and lose the right) but also have organized power to negotiate the terms of the constraint. Moderate extraction, significant coordination function."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Constitutional Interpreter",
+      "comment": "PERSPECTIVE 5: CONSTITUTIONAL INTERPRETER (PITON) — From a civilizational/analytical perspective examining how constitutional texts degrade through reinterpretation, the civic-right reading appears as a degraded Enlightenment-era coordination mechanism. The original Framers' vision of citizen-militia as alternative to standing armies has become largely performative: modern citizens do not actually constitute the defense against tyranny through militia participation; the constraint persists through constitutional interpretation inertia rather than functional militia capacity. The theater (constitutional ceremony) has replaced the coordination (actual armed readiness). Theater ratio reflects this drift."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law Perspective",
+      "comment": "PERSPECTIVE 6: NATURAL LAW PERSPECTIVE (MOUNTAIN) — Some analytical readings see the civic-militia condition as reflecting an immutable natural law: armed populations require civic participation and accountability to prevent tyranny. This perspective treats the right-duty coupling as inherent to justice itself, not as a contingent institutional arrangement. From this view, the gating mechanism is as natural and unchangeable as the principle that freedom requires virtue. However, the structural data (identifiable beneficiaries, enforcement requirements, theater_ratio drift) reveals this as a false summit: the natural-law framing naturalizes what is actually a contested institutional reading."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "militia_participation_definition",
+      "question": "Does 'militia participation' require active service, implicit eligibility, membership in organized units, or merely availability in emergencies?",
+      "resolution_mechanism": "Historical analysis of militia deployment expectations; statutory definitions across states; comparison of gating rigor in jurisdictions with different militia interpretations",
+      "impact": "Narrow definition (active service): suppression increases, extracted categories expand, ε rises toward snare. Broad definition (implicit eligibility): suppression decreases, tangled_rope classification strengthens, ε falls toward rope.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Definition of what militia participation entails determines suppression severity"
+    },
+    {
+      "id": "excluded_category_empirical_scope",
+      "question": "How many individuals in the United States are functionally excluded from militia participation under this reading? (Felons: ~5.2M; documented immigrants: ~10.5M; undocumented: ~10M; others by age/capacity: ~20M+)",
+      "resolution_mechanism": "Census-based exclusion rate calculation; comparison of excluded population to included population; trend analysis of exclusion category expansion over time",
+      "impact": "If excluded population > 25%: snare classification strengthens as primary affected group grows. If < 5%: snare is minor perspective, tangled_rope dominates. Current estimates ~40-45% excluded.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Population-level incidence of militia ineligibility"
+    },
+    {
+      "id": "service_obligation_enforceability",
+      "question": "Does the civic-right reading actually impose enforceable service obligations, or are obligations merely implicit/aspirational?",
+      "resolution_mechanism": "Statutory analysis: which jurisdictions enforce militia readiness? Prosecution data for militia dereliction. Historical cases of enforcement attempts. Comparison to conscription regimes that actually enforce.",
+      "impact": "If enforceable: tangled_rope classification correct, suppression justified. If aspirational only: constraint is piton (performative), ε should fall to ~0.25, theater_ratio should rise to 0.80+.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether civic militia participation obligations are actually enforced"
+    },
+    {
+      "id": "kernel_reading_contest",
+      "question": "This constraint instantiates ONE reading of the Second Amendment kernel. What are the sibling readings and how do they change classification?",
+      "resolution_mechanism": "Separate constraint stories for: (a) individual_right_reading (no militia condition, universal eligibility except felons), (b) collective_right_reading (militia-dependent only, no individual right). Compare ε values, beneficiary/victim sets, and perspectival gaps across readings.",
+      "impact": "Individual reading: ε ~0.15, rope or scaffold (low extraction, high coordination). Collective reading: ε ~0.65, snare or tangled_rope (high extraction, state control). This reading (civic-right): ε ~0.48, tangled_rope (moderate extraction, gated coordination). The delta reveals that classification is reading-dependent, not observable-independent.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This constraint is one of three readings of the Second Amendment kernel; sibling readings produce different ε values and classifications"
+    },
+    {
+      "id": "regulatory_authority_capture",
+      "question": "Can the state use militia eligibility criteria to disguise disarmament of disfavored populations (felon status as proxy for racial targeting)?",
+      "resolution_mechanism": "Historical analysis of felon-disfranchisement pattern correlation with racial incarceration disparities. Comparison of felony conviction rates by demographics. Analysis of whether militia-eligibility gating differs in effect from explicit categorical prohibition.",
+      "impact": "If capture is documented: state perspective shifts from rope to tangled_rope/snare (extraction rather than coordination). Institutional beneficiary status becomes contested. FSM trigger possible if natural-law reading claims immutability despite capture.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Potential regulatory capture of militia-eligibility criteria for covert disarmament"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The civic-right reading of the Second Amendment proposes that the protected individual right to bear arms is constitutionally conditioned on the bearer's eligibility and availability for militia participation. This reading attempts to reconcile the Amendment's militia clause with individual right doctrine by treating militia participation as a gating condition rather than the exhaustive scope of the right. Under this interpretation, individuals meeting militia eligibility criteria (citizenship, age, no felony record, mental fitness) possess a right to bear arms as part of civic duty; individuals outside these categories possess no such right. This constraint exhibits moderate extractiveness (0.48) because the gating mechanism creates genuine coordination (shared defense responsibility, tied to collective duty) but also produces asymmetric extraction: some populations are excluded entirely from the right, while others bear implicit obligations to participate. The extractiveness has accumulated over time (from 0.32 at the Founding to 0.48 in present day) as exclusion categories have expanded (felon disfranchisement, immigration status, age-based restrictions, capacity screening). The theater ratio (0.58) reflects that the civic participation framework is partly performative: citizens do not actually constitute modern defense (state maintains monopoly on organized force), yet the Amendment's language is interpreted to tie individual rights to a militia function that no longer exists in its original form.",
+    "key_agents": [
+      "Civic Militia-Eligible Citizens: Primary beneficiaries (institutional/arbitrage) — possess the right to bear arms conditioned on militia eligibility; experience constraint as coordination mechanism yoked to duty",
+      "Non-Militia-Eligible Populations (Felons, Undocumented, Others): Primary victims (powerless/trapped) — excluded from the right entirely; bear suppression of the gating mechanism with no counterbalancing benefit",
+      "State Regulatory Authority: Institutional actor (institutional/arbitrage) — defines militia eligibility criteria, maintains gating mechanism, captures legitimacy of rights-protection and civic duty framing",
+      "Organized Militia-Rights Coalition: Secondary actor (organized/constrained) — advocates for militia-eligible citizens; negotiates terms of gating mechanism; constrained by state authority to define eligibility",
+      "Constitutional Interpreters: Analytical observer (analytical/analytical) — assess whether civic-right reading represents genuine structural coordination or degraded institutional theater"
+    ],
+    "logic_rationale": "Extractiveness (0.48): Moderate. The constraint creates genuine coordination benefits for eligible citizens (civic duty tied to armed capacity provides shared-defense logic and legitimacy claim) but also produces significant extraction through the gating mechanism. The excluded populations cannot exit their ineligibility status — they are trapped. The eligible populations face implicit or explicit service expectations. The extractiveness is neither low (pure coordination) nor high (pure extraction), but genuinely hybrid. The 16-point rise over the interval (0.32 to 0.48) reflects expansion of exclusion categories (felon disfranchisement, immigration status restrictions) that were less systematically enforced in the Founding era. Suppression (0.52): Moderate-high. Structural barriers to participation include citizenship requirements, background checks, potential service obligations, age gates, and implicit expectations of readiness. However, suppression is not absolute — eligible individuals can choose not to participate (though with potential social cost or legal ambiguity), and some jurisdictions have weaker enforcement. The theater ratio (0.58) reflects that the militia-participation framework has become partially performative: citizens do not actually constitute the state's defense force (standing military provides that), yet the right is justified by reference to militia function. The theater has increased over time as the gap between the Amendment's militia language and modern military reality has widened.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival disagreement across the six types. The excluded population sees pure snare (extraction with no coordination benefit). The marginally eligible citizen sees tangled rope (mixed coordination and extraction, with exit costs). The state sees rope (pure coordination — defining eligibility and yoked rights/duties). The organized coalition sees tangled rope (coordination with potential state overreach). The constitutional interpreter sees piton (degraded militia function, performative interpretation). The natural-law analyst risks seeing mountain (immutable right-duty coupling) but structural data reveals false summit (contingent institutional reading with identifiable beneficiaries). The perspectival gap is maximal because the constraint's core function (militia participation) has become structurally incoherent in modern context — no actual militia exists to participate in; the coordination mechanism has lost its referent.",
+    "directionality_logic": "Directionality values differ sharply by agent position. Excluded populations (trapped + no exit + victim status) derive high d (0.92-0.95), producing maximum experienced extraction through f(d). Marginally eligible citizens (constrained exit + mixed benefit/cost + modest victim/beneficiary status) derive moderate d (0.55-0.65), producing moderate χ. State regulatory authority (beneficiary + arbitrage exit) derives low d (0.12-0.18), producing negative or minimal experienced extraction. Organized coalition (organized agent + constrained exit + mixed status) derives moderate d (0.50-0.60), producing balanced χ. The perspectival gap emerges directly from this directionality spread: agents with high d experience snare; agents with low d experience rope; agents with moderate d experience tangled rope.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy through reading-specificity. The civic-right reading produces tangled_rope because it embeds both a coordination mechanism (militia participation tied to armed capacity) and asymmetric extraction (gating mechanism excludes populations with no coordination benefit). An individual-right reading (no militia condition, universal eligibility except felons) would produce rope or scaffold (lower extraction, higher coordination). A collective-right reading (militia-dependent only, no universal right) would produce snare (high extraction, state control). The mandatrophy is not 'which reading is correct?' but 'which reading do you instantiate?' The civic-right reading is defensible and corresponds to an identifiable constitutional tradition (early-republic militia theory), but it produces moderate extraction through gating asymmetry. The natural-law perspective's mountain classification is a false summit: the civic-right reading naturalizes a contingent institutional choice (tying rights to militia participation) as immutable law.",
+    "kernel_context": "This constraint instantiates the civic-right reading of the Second Amendment kernel. The kernel is the contested Second Amendment text: 'A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed.' Three major readings decompose this kernel into structurally distinct constraints: (1) The INDIVIDUAL_RIGHT_READING treats 'right of the people' as a universal individual right and the militia clause as prefatory (historical context, not limiting condition). This reading produces lower ε (~0.15), fewer excluded categories, rope or scaffold classification. (2) The COLLECTIVE_RIGHT_READING treats the right as militia-dependent exclusively — individuals possess a right only to the extent of militia membership/participation. This reading produces higher ε (~0.65), extensive extraction to enforce militia participation, snare or tangled_rope classification. (3) The CIVIC_RIGHT_READING (this one) treats the right as individually held but conditioned on militia eligibility — a middle position between individual universality and collective dependence. This produces moderate ε (~0.48), gated beneficiary set, tangled_rope classification. The three readings compete not because they disagree on empirical facts but because they offer different institutional framings of the constitutional text. Each reading is internally coherent and has historical defenders. The DR framework treats each as a separate constraint story with its own ε, beneficiary/victim structure, and perspectival profile. The choice of reading is not resolution-independent; it changes the classification outcome."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "individual_right_reading",
+      "collective_right_reading",
+      "militia_functionality_threshold"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the Second Amendment kernel (constraint_id: second_amendment_scope). The individual_right_reading and collective_right_reading are separate constraints with different ε values, beneficiary/victim sets, and perspectival profiles. All three affect the militia_functionality_threshold constraint, which determines whether the civic-militia coordination mechanism has any real referent in modern military organization. The three readings are linked but not entangled — each should be compiled and analyzed independently, with network edges indicating dependency and perspectival rivalry."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true
+  }
+}

@@ -151,6 +151,55 @@ is not a commitment system, omit the field entirely — do not emit a null or fa
 This recognition shapes axis selection. The authority structure itself often warrants its own
 axis when CS analysis is warranted.
 
+### §1.3-K  Kernel / Reading Decomposition
+
+Some topics are not single constraints but **contested kernels**: one persisting commitment that
+different parties *read* differently, where each reading instantiates a genuinely different
+constraint. The disagreement is not about where an observer stands relative to a fixed constraint
+(that is the observer axis the engine already handles) — it is about *which constraint exists to
+be observed at all.*
+
+Two jurors, equal in power and exit, reach different verdicts because they hold different
+**readings** of the same legal kernel — one a legal realist, one a positivist. They are not two
+observers of one constraint; they instantiate two constraints from one kernel. Pro-life and
+pro-choice are not two positions on one abortion constraint — they read the *personhood-boundary
+kernel* differently, emitting constraints with different victim sets.
+
+#### The kernel / not-kernel decision
+
+**Most topics are NOT kernels.** "Alberta separatism," "the 8K TV saturation limit," "a Markov
+absorbing-state trap" are single constraints — decompose them into axes as usual and emit NO
+kernel structure. A topic is a kernel only when ALL three hold:
+
+- there is one **shared commitment** all parties argue *about* (a substrate they hold in common), AND
+- parties **read that commitment differently** in a way that changes what it constrains, AND
+- the readings would emit **structurally different constraints** (different type, beneficiary/victim
+  structure, or base extractiveness) — not merely different opinions about the same constraint.
+
+If parties agree on what the constraint is and only disagree about whether it is good, that is
+**not** a kernel — it is one constraint read from different observer positions. Use ordinary axis
+decomposition.
+
+#### When the topic IS a kernel
+
+Decompose into **readings, not flat axes.** Identify 2–4 readings (the structural budget of three
+still applies to what proceeds to generation). Name each reading by its interpretive commitment
+(`conception_reading`, `originalist_reading`). Each reading becomes one entry in
+`generation_sequence`, and that entry **must be an object** carrying `claim_id`, `kernel_id`,
+and `reading_id` — not a plain string:
+
+```json
+{ "claim_id": "conception_reading", "kernel_id": "personhood_boundary", "reading_id": "conception_reading" }
+```
+
+Link sibling readings to each other so the generator knows it is instantiating one of a set.
+
+#### Coherence is a signal, not a gate
+
+If two supposed readings would emit the *same* constraint, they are not two readings — record
+`is_contested_kernel: false` and note the collapse in an omega. If supposed readings share no
+common substrate, the topic may be several distinct kernels rather than one. Record that too.
+
 ---
 
 ## §2. DECOMPOSITION (Axis Identification)
@@ -300,7 +349,7 @@ The JSON manifest IS the complete output. All information that was previously in
 | `topic_summary` | 2-3 sentence summary of the raw input (was in UKE_META) |
 | `extraction_summary` | Counts + key entities and tensions (was in EXTRACTION SUMMARY) |
 | `axes` | Full axis table with all classification fields |
-| `generation_sequence` | Ordered list of selected claim_ids |
+| `generation_sequence` | Ordered list of selected axes. **Ordinary topics:** plain strings (the claim_id). **Kernel topics** (`is_contested_kernel: true`): objects with three required fields — `{"claim_id": "<reading_id>", "kernel_id": "<kernel_id>", "reading_id": "<reading_id>"}` — one per reading proceeding to generation. |
 | `deferred_axes` | Axes not selected, with deferral reasons |
 | `omegas` | Bounded uncertainties with source attribution |
 | `fracture_scan` | Self-scan results as booleans + notes (was in SELF-SCAN) |
@@ -308,16 +357,42 @@ The JSON manifest IS the complete output. All information that was previously in
 
 #### `commitment_system_recognition` Object (optional)
 
-When §1.3 identifies a commitment system, include:
+When §1.3 identifies a commitment system, include. All fields beyond the original four are
+optional; a manifest that doesn't decompose into readings (ordinary non-kernel topic) remains
+valid with just the four original fields.
 
 ```json
 "commitment_system_recognition": {
-  "kernel_description": "one sentence describing the stabilized commitment",
-  "authority_description": "who interprets it and what grounds their legitimacy",
+  "kernel_description": "one sentence describing the stabilized shared commitment",
+  "authority_description": "what grounds interpretive legitimacy",
   "drift_status": "functioning | partial | absent",
-  "candidate_pattern": "<one of six CS pattern names> | uncertain"
+  "candidate_pattern": "<one of six CS pattern names> | uncertain",
+
+  "is_contested_kernel": true,
+  "kernel_id": "personhood_boundary",
+  "readings": [
+    {
+      "reading_id": "conception_reading",
+      "commitment": "moral status begins at conception",
+      "authority_grounding": "natural-law / religious",
+      "sibling_readings": ["viability_reading", "birth_reading"],
+      "expected_structural_delta": "fetus enters victim set; high suppression of alternatives"
+    },
+    {
+      "reading_id": "birth_reading",
+      "commitment": "moral status begins at birth",
+      "authority_grounding": "positivist / autonomy",
+      "sibling_readings": ["conception_reading", "viability_reading"],
+      "expected_structural_delta": "fetus not in victim set; mother sole rights-holder"
+    }
+  ]
 }
 ```
+
+When `is_contested_kernel` is true, each reading in `readings` must correspond to one entry in
+`generation_sequence`, and that entry **must be an object** carrying `kernel_id` and `reading_id`
+(see §5 Required Fields — generation_sequence). When `is_contested_kernel` is absent or false,
+decompose into ordinary axes with plain string claim_ids.
 
 These fields are informational hints passed to the generation step. They document the recognition
 for downstream consumption and signal that CS structure should be elicited for relevant axes.

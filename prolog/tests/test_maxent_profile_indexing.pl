@@ -151,7 +151,18 @@ test_maxent_profiles_are_per_context_independent :-
 %  the same analytical-context result as a single-context clean session.
 %  Sentinel: collective_action_as_leverage_conversion
 %  Pre-fix accumulated: H=0.000229, TopType=scaffold  (the bug)
-%  Post-fix target:     H≈0.4456 (±0.01), TopType=tangled_rope
+%  Post-fix target:     H in [0.30, 0.55], TopType=tangled_rope
+%
+%  H range rationale (confirmed 2026-05-22): H is corpus-size-sensitive because
+%  Gaussian profile means and std-devs are computed from corpus statistics and
+%  shift as the corpus grows. Confirmed measurements:
+%    3371 constraints (commit 083ce593): H=0.445624
+%    3380 constraints (commit 8def32e6): H=0.418627
+%  Code changes between those commits (cs_pattern_detection.pl only) do not
+%  affect the maxent path — Measure C confirmed A=C to 6 decimal places.
+%  TopType=tangled_rope is the corpus-size-invariant structural invariant.
+%  The range [0.30, 0.55] gives headroom for further corpus growth while still
+%  catching catastrophic regressions (H≈0 means certainty, not entropy collapse).
 test_audit3_sentinel_post_fix_reproduces_clean_session :-
     corpus_loader:load_all_testsets,
 
@@ -183,16 +194,14 @@ test_audit3_sentinel_post_fix_reproduces_clean_session :-
     ),
 
     format('  Post-fix accumulated H=~6f, TopType=~w~n', [HNorm, TopType]),
-    format('  Expected:            H≈0.4456 (±0.01), TopType=tangled_rope~n'),
+    format('  Expected:            H in [0.30, 0.55], TopType=tangled_rope~n'),
 
-    % Check H within tolerance
-    Tolerance = 0.01,
-    Target = 0.4456,
-    HDiff is abs(HNorm - Target),
-    (   HDiff =< Tolerance
-    ->  format('  [OK] H within tolerance (diff=~6f)~n', [HDiff])
-    ;   format('  [FAIL] Post-fix accumulated session does not reproduce pre-fix clean session for sentinel constraint; profile accumulation may still be occurring. H=~6f (expected ~6f ± ~6f)~n',
-               [HNorm, Target, Tolerance]),
+    % Check H in corpus-size-robust range [0.30, 0.55].
+    % Point-value assertion (0.4456 ± 0.01) broke when corpus grew from 3371→3380;
+    % confirmed 2026-05-22 that corpus size, not code change, drives H drift.
+    (   HNorm >= 0.30, HNorm =< 0.55
+    ->  format('  [OK] H in plausible range [0.30, 0.55] (H=~6f)~n', [HNorm])
+    ;   format('  [FAIL] H=~6f outside plausible range [0.30, 0.55] — either profile accumulation is occurring or corpus structure has changed dramatically~n', [HNorm]),
         fail
     ),
 

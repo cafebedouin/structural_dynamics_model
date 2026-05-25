@@ -1,0 +1,164 @@
+{
+  "header": {
+    "constraint_id": "study_as_occupation",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_study_as_occupation"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.08,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Sacrifice Law Study as Living Occupation of the Halakhic Covenant",
+    "topic_domain": "religious_studies/halakhic_authority/commitment_systems",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "rabbinic_authority",
+      "jewish_textual_continuity",
+      "studying_community"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Rabbinic Authority (Institutional Beneficiary)",
+      "comment": "PERSPECTIVE 1: RABBINIC AUTHORITY (ROPE) — Institutional authority structure derives legitimacy from ongoing textual engagement with sacrifice law. Study IS the performance that keeps the halakhic covenant occupied and valid. No extraction occurs because the authority's function (preserving the kernel's legal force through intellectual engagement) is identical to the constraint's function. Pure coordination: the law remains binding through rabbinic occupation of it."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Studying Community (Powerful Participant)",
+      "comment": "PERSPECTIVE 2: STUDYING COMMUNITY (ROPE) — Individual scholars and study groups experience this constraint as genuine coordination: engaging with sacrifice law texts produces meaning, legitimacy, and community participation. The community is mobile (can exit) but chooses to participate because the coordination function is real. Extractiveness is low because participation yields both personal and collective benefit — textual mastery, institutional status within the community, intellectual life."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Civilizational Perspective)",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (ROPE) — From a civilizational vantage, this constraint represents a pure coordination solution to the theological problem of maintaining a binding covenant after the Temple's destruction. The mechanism is elegant: the law remains in force (not archived, not suspended) through continuous intellectual occupation. No agent is systematically extracted from; the constraint binds all participants symmetrically. The kernel (the sacrifice law's validity) is kept alive through the community's ongoing engagement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is this constraint the 'study_as_occupation' reading or a different reading of the temple_sacrifice_law kernel?",
+      "resolution_mechanism": "This constraint instantiates ONLY the 'study_as_occupation' reading: the law remains valid and binding through intellectual engagement. Alternative readings ('study_as_archive' — the law is preserved but no longer binding; 'messianic_suspension' — the law is valid but suspended pending messianic restoration) represent structurally distinct constraints with different extractiveness values and beneficiary/victim configurations.",
+      "impact": "The 'study_as_occupation' reading implies zero extractiveness from non-performance: performing the study IS the constraint's realization. Sibling readings imply different structural relationships: 'archive' implies high theater (0.65+) with victims (alienated scholars); 'suspension' implies moderate extraction (0.30-0.45) from those bound by suspension. Each reading is a separate constraint story.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Which reading of the temple_sacrifice_law kernel this constraint instantiates"
+    },
+    {
+      "id": "occupation_vs_performance_ambiguity",
+      "question": "Does 'occupation through study' constitute genuine performance of the sacrifice law, or is it a symbolic substitute that naturalizes the loss of actual Temple sacrifice?",
+      "resolution_mechanism": "Textual analysis of rabbinic sources (Mishnah Avot 1:17, Maimonides' Mishneh Torah Korbanot, Kiddushin 37b) distinguishing between 'study standing in place of sacrifice' (study_as_occupation) vs. 'study serving as remembrance/archive' (study_as_archive). The interpretive tradition determines which reading dominates.",
+      "impact": "If study genuinely occupies the constraint (study_as_occupation reading, this story): extractiveness ≈ 0.12, type = Rope, rabbinic authority remains fully legitimate. If study is a substitute legitimizing a loss (study_as_archive reading, separate story): extractiveness ≈ 0.50+, type = Tangled Rope, rabbinic authority is partly sustained through theater.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether occupation through study constitutes genuine performance or substitution"
+    },
+    {
+      "id": "commitment_kernel_occupancy_mechanism",
+      "question": "What counts as 'occupying' the halakhic covenant? Is continuous scholarly study sufficient, or does the law require institutional enforcement and observance beyond textual engagement?",
+      "resolution_mechanism": "Comparative study of post-destruction rabbinic practice vs. contemporary observance: does the law's validity depend only on textual occupation (study), or on widespread observance of derivative halakhic rulings? Are scholars who study the law functionally equivalent to priests performing sacrifice?",
+      "impact": "If textual occupation alone suffices: the constraint operates at low extractiveness (0.12), low suppression (0.08), and pure Rope classification holds. If institutional enforcement and observance are required: the constraint involves active enforcement (requires_active_enforcement = true) and may classify as Tangled Rope in some perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Mechanism for occupying the halakhic covenant through study"
+    },
+    {
+      "id": "sibling_reading_not_present",
+      "question": "What would change if the 'study_as_archive' reading (law preserved but not binding) or 'messianic_suspension' reading (law valid but suspended) were applied instead?",
+      "resolution_mechanism": "Separate constraint story files (constraint_study_as_archive.json, constraint_messianic_suspension.json) instantiate the sibling readings with distinct ε values, beneficiary/victim configurations, and classification types. Each reading is a complete, ε-invariant constraint.",
+      "impact": "This constraint (study_as_occupation) assumes the law remains fully binding through study. Study_as_archive would have ε ≈ 0.50+, classify as Tangled Rope, identify victims (alienated scholars), and show high theater. Messianic_suspension would have ε ≈ 0.35-0.45, classify as Scaffold, include a sunset clause (pending messianic restoration), and show medium theater.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Sibling readings as separate constraints with different structural properties"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 1000
+  },
+  "commentary": {
+    "narrative_context": "After the destruction of the Second Temple in 70 CE, Jewish law faced a structural crisis: the sacrifice law, foundational to the halakhic covenant, became performatively impossible. Rabbinic Judaism resolved this through a commitment-system reading: the law remains valid and binding not through physical performance but through intellectual occupation. Study of the sacrifice law IS the performance that keeps the covenant alive. This constraint models that reading — the 'study_as_occupation' interpretation — as a pure coordination mechanism with minimal extractiveness. The law's kernel (its binding force) is occupied continuously through textual engagement, interpretation, and scholarly transmission. No systematic extraction occurs because all participants — rabbinic authorities, scholars, studying communities — benefit symmetrically from maintaining the covenant's validity. The constraint is nearly theater-free because the study function is direct: engaging with the text produces genuine halakhic knowledge, community participation, and continuity of tradition.",
+    "key_agents": [
+      "Rabbinic Authority: Institutional beneficiary (institutional/arbitrage) — derives legitimacy from ongoing textual occupation of the law; functions as guardian and interpreter of the covenant",
+      "Studying Community: Powerful participants (powerful/mobile) — scholars and students; voluntarily engaged in textual study; benefit from intellectual engagement and community status",
+      "Jewish Textual Continuity: Diffuse beneficiary (institutional/arbitrage) — the tradition itself; remains alive through study; perpetuated through scholarly transmission",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — sees the constraint as an elegant solution to a commitment crisis; recognizes the pure coordination function"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Very low. The constraint's mechanism is pure coordination — study keeps the law binding, and all participants benefit from that outcome. The original research community (scholars) receives institutional legitimacy and intellectual life; the rabbinic authority maintains its authority structure; the tradition continues. No group is systematically extracted from because the study function produces genuine value for all parties. The low extractiveness reflects that this reading treats study as occupation rather than substitution or performance degradation. Suppression (0.08): Very low. Entry into the studying community is largely open — there are economic and time barriers but not structural suppressions. Scholars can exit (mobility is high), and the tradition accommodates diverse levels of engagement. Theater ratio (0.35): Low-moderate. The study function is direct and non-performative — textual engagement produces genuine halakhic knowledge. But some theater is present: public study sessions, formal recitation of sacrificial passages, and the institutional structure of rabbinic authority add performative elements that are not strictly necessary for the covenant occupation function.",
+    "directionality_logic": "Each agent's experienced extractiveness is derived from their structural position relative to the constraint. Rabbinic authorities occupy an arbitrage position (institutional/arbitrage) — they can exit the role but choose to occupy it because it provides authority and legitimacy. This produces a low or negative d value (they are net beneficiaries). The studying community is powerful and mobile — they participate voluntarily in a coordination mechanism that serves their interests (intellectual life, community status, tradition participation). This produces a moderate d value around 0.50, but with high f(d) benefit because mobility reduces experienced extraction. The analytical observer sees the structure from a civilizational vantage where all positions are symmetric — no agent is trapped or extracted from. The constraint is a symmetric coordination solution to a theological problem.",
+    "perspectival_gap": "The perspectival gap in this constraint is minimal — all perspectives classify the constraint as Rope because the coordination function is genuine and symmetric. The rabbinic authority sees their own legitimacy maintained through the studying community's engagement. The studying community sees themselves as participants in a valued coordination mechanism, not victims of extraction. The analytical observer sees an elegant commitment-system solution. Unlike constraints with high perspectival gaps (where powerless agents see Snare while institutional beneficiaries see Rope), this constraint exhibits low gap because the studying community is powerful and mobile — they are not trapped into participation. The minimal gap is diagnostic: it suggests that the study_as_occupation reading is structurally sound. If there were high perspectival gaps, or if substantial victims appeared in any perspective, the constraint would likely be misclassified or would belong to a sibling reading (study_as_archive or messianic_suspension).",
+    "kernel_context": "This constraint instantiates ONE READING of the temple_sacrifice_law kernel — the 'study_as_occupation' reading. The kernel is the halakhic status of the sacrifice law after the Temple's destruction. Three sibling readings generate structurally distinct constraints: (1) STUDY_AS_OCCUPATION (this story): The law remains fully binding and valid through intellectual engagement with its texts. Study itself is the performance that occupies the covenant. Extractiveness ≈ 0.12, Type = Rope, pure coordination. (2) STUDY_AS_ARCHIVE (separate story): The law is preserved and studied as historical/legal archive, but it is no longer binding. Study serves remembrance and institutional preservation rather than living performance. Extractiveness ≈ 0.50-0.60, Type = Tangled Rope, exhibits high theater (0.65+) and identified victims (scholars alienated from binding practice). (3) MESSIANIC_SUSPENSION (separate story): The law remains valid but is suspended pending messianic restoration. Study maintains knowledge for future restoration but does not constitute present occupation. Extractiveness ≈ 0.35-0.45, Type = Scaffold, includes sunset clause (messianic restoration), medium theater. Each reading produces a different constraint with different ε, different beneficiary/victim structure, and different classification. This story is ONLY the study_as_occupation reading. The other readings are other constraints, not alternative perspectives on this one."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "study_as_archive",
+      "messianic_suspension"
+    ],
+    "dual_formulation_note": "Temple sacrifice law decomposition: Three structurally distinct readings of the halakhic commitment kernel. study_as_occupation (this file) models the reading where study IS occupation and the law remains binding. study_as_archive (separate file) models the reading where study preserves but does not bind. messianic_suspension (separate file) models the reading where the law is valid but suspended. Each reading has distinct ε, beneficiary/victim configuration, and type. Network links show family relationships but each constraint is ε-invariant in isolation."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "temple_sacrifice_law"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true
+  }
+}

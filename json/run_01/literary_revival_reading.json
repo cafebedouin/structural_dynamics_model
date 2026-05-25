@@ -1,0 +1,176 @@
+{
+  "header": {
+    "constraint_id": "literary_revival_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_literary_revival_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.12,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Hebrew Literary Revival Through Haskalah: Written Generative Competence Without Native Daily Speech",
+    "topic_domain": "historical_linguistics/language_revitalization/commitment_systems",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "hebrew_literary_elite",
+      "jewish_intellectual_continuity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Haskalah Literary Elite",
+      "comment": "PERSPECTIVE 1: HASKALAH LITERARY ELITE (ROPE) — The maskilim (Enlightenment intellectuals) benefit from Hebrew written production as a coordination mechanism for Jewish intellectual identity and literary expression across diaspora communities. They experience low extraction because the constraint enables their core activity (literary creation) and provides arbitrage through multilingual sophistication. The written standard serves coordination: it allows Hebrew texts to circulate, be understood, and build cumulative tradition."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 2: ANALYTICAL OBSERVER (ROPE) — From a civilizational/global analytical perspective, Hebrew literary production during Haskalah is a pure coordination mechanism: written standard, shared lexicon, interpretive tradition, and textual circulation enabling geographically dispersed communities to participate in a unified intellectual commons. Minimal extraction, high functional value. The constraint exists to solve the collective action problem of maintaining Jewish intellectual continuity in the absence of daily vernacular speech."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Ordinary Literate Community Member",
+      "comment": "PERSPECTIVE 3: ORDINARY LITERATE COMMUNITY MEMBER (SCAFFOLD) — For educated but non-elite Jews with Hebrew literacy, the constraint is temporary coordination support: Hebrew literary texts (novels, poetry, essays) create a unified intellectual sphere, but with an implicit sunset. As modern national languages develop and secular education spreads, reliance on Hebrew as the sole literary lingua franca declines. The constraint has bounded duration — it coordinates Jewish intellectual culture during a transitional period (18th-19th centuries) when traditional Yiddish and modern vernaculars are not yet adequate for intellectual production."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Secular Nationalist Movement",
+      "comment": "PERSPECTIVE 4: SECULAR NATIONALIST MOVEMENT (PITON) — The Zionist and Hebrew revivalist movements later appropriate Haskalah literary production as evidence that Hebrew 'was alive' and 'was always living,' instrumentalizing the literary constraint for nationalist ideology. The theater ratio here is high: the claim that Haskalah Hebrew represents a 'living' language is largely performative, serving to justify the later political project of native-speaker revival. The constraint's original coordination function (intellectual elite connection) is reframed as proof of linguistic vitality for purposes it was never designed to serve."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_alternative_reading_liturgical",
+      "question": "Is Hebrew continuity through Haskalah literary production the primary reading of Hebrew language survival, or is liturgical continuity (Hebrew as daily prayer language in religious communities) the more fundamental constraint?",
+      "resolution_mechanism": "Comparative analysis of which channel (liturgical recitation vs. literary production) maintained greater community participation, lexical stability, and intergenerational transmission during the Haskalah period and afterward.",
+      "impact": "If liturgical continuity is primary: literary production is a secondary phenomenon built atop religious practice. The constraint's extractiveness and type would shift depending on whether one privileges the liturgical or literary observable. If literary production is primary: the rope classification (coordination among elite intellectuals) holds. If neither is primary (both are artifacts of deeper mechanism): the constraint framing requires decomposition.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether literary production or liturgical continuity is the primary mechanism of Hebrew survival during Haskalah"
+    },
+    {
+      "id": "kernel_alternative_reading_native_generation",
+      "question": "Does Haskalah literary Hebrew represent a genuinely 'living' constraint on native-speaker acquisition, or is it an elite-only written tradition with no direct causal pathway to native generational transmission?",
+      "resolution_mechanism": "Historical evidence of whether Haskalah literary production directly enabled (a) children of maskilim to acquire Hebrew as a native language, (b) broader community adoption of Hebrew for daily life, or (c) was a purely elite literary phenomenon without vernacularization.",
+      "impact": "If literary production enabled native acquisition: the constraint is a causal prerequisite for the native_generation_reading. If literary and native streams were independent: the two constraints (literary_revival_reading and native_generation_reading) are structurally distinct with different ε values and causal relationships. This determines whether the constraint family is linear (literary→native) or parallel (literary ∥ native).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Haskalah literary production directly caused native-speaker acquisition or remained elite-only"
+    },
+    {
+      "id": "generative_competence_scope",
+      "question": "Does 'written generative competence' constitute genuine linguistic constraint or merely technical facility (the ability to compose coherent texts without phonological/pragmatic native embodiment)?",
+      "resolution_mechanism": "Linguistic analysis of Haskalah texts for evidence of native-like spontaneous generation (productivity, creativity, error patterns) vs. learned composition (formulaic diction, calquing, explicit grammar-reference patterns). Comparison to attested living language productivity.",
+      "impact": "If genuine competence: the constraint is a valid coordinate point for language continuity. If technical facility only: extractiveness is even lower (near-zero), and the constraint is almost purely performative — theater_ratio should be ≥ 0.70 (piton territory).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether written generative competence represents authentic linguistic competence or learned facility"
+    },
+    {
+      "id": "elite_dispersion_coordination",
+      "question": "Is the Haskalah literary constraint genuinely solving a coordination problem across dispersed communities, or is it serving internal elite status differentiation (the constraint's value is exclusivity, not coordination)?",
+      "resolution_mechanism": "Historical evidence of cross-community circulation of Haskalah texts, evidence of unified intellectual reference frames across diaspora regions, vs. evidence of local elite prestige-signaling through Hebrew literacy.",
+      "impact": "If coordination: rope classification is correct. If status differentiation: extractiveness rises toward snare territory (0.46+) because the constraint's mechanism is exclusionary rather than inclusive, and benefits concentrate on the literary elite while broader communities are excluded.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Haskalah literary constraint functions as cross-community coordination or elite status differentiation"
+    },
+    {
+      "id": "theatrical_revival_appropriation",
+      "question": "To what extent is the Haskalah literary constraint's later characterization as 'Hebrew living' a retroactive narrative imposed by 20th-century Zionist ideology rather than an accurate representation of the constraint's original function and scope?",
+      "resolution_mechanism": "Comparison of Haskalah-era self-descriptions of Hebrew literary work (what did maskilim say they were doing?) vs. 20th-century revivalist narratives (what did they claim Haskalah represented?). Examination of whether nationalist ideology added theater ratio post-hoc.",
+      "impact": "If appropriation is substantial: theater_ratio during original period (18th-19th centuries) is lower (~0.25, pure coordination), but post-hoc theater from 20th-century reinterpretation is high (~0.70+). This suggests measuring the constraint at different temporal points yields different types (rope when first-order, piton when mediated through revivalist appropriation). May require constraint decomposition.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Degree to which later Zionist appropriation imposed 'living language' narrative on Haskalah literary practice"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.05,
+      "id_override": "literary_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.08,
+      "id_override": "literary_extract_t50"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.08,
+      "id_override": "literary_extract_t100"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "literary_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.35,
+      "id_override": "literary_theater_t50"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.45,
+      "id_override": "literary_theater_t100"
+    }
+  ],
+  "interval": {
+    "start": 1750,
+    "end": 1850
+  },
+  "commentary": {
+    "narrative_context": "Hebrew during the Haskalah (Jewish Enlightenment, roughly 1750–1850) existed as a written literary medium with no native daily speakers. The maskilim (enlightened intellectuals) produced sophisticated Hebrew literature — novels, poetry, essays, philosophical works — in a language learned from texts and religious tradition rather than from native acquisition. This constraint represents the coordination mechanism that enabled Hebrew intellectual production across dispersed diaspora communities without requiring or enabling native speech. The constraint is structurally distinct from two sibling readings: the liturgical_continuity_reading (Hebrew maintained through daily prayer in synagogues) and the native_generation_reading (the later, early-20th-century project of teaching Hebrew as a native language to children in Palestine). This story describes ONLY the literary reading — written generative competence without native daily speech, functioning as a pure coordination mechanism for the Jewish intellectual elite. The theater_ratio shows a slight increase over the century (0.25→0.45) reflecting later appropriation of Haskalah achievements by nationalist ideology, but remains moderate because the original constraint's function was genuine elite coordination, not performative status maintenance.",
+    "key_agents": [
+      "Haskalah Literary Elite (maskilim): Institutional/arbitrage beneficiaries — compose and circulate Hebrew texts; benefit from unified intellectual medium across diaspora; arbitrage through multilingual sophistication",
+      "Jewish Intellectual Continuity: Beneficiary collective — Hebrew literary tradition maintains chain of textual reference, interpretation, and debate across generations and communities",
+      "Ordinary Literate Communities: Moderate power/constrained exit — can read and appreciate Hebrew literature but do not natively speak; experience constraint as temporary coordination support with generational sunset as modern vernaculars develop",
+      "Later Zionist Revivalists: Appropriators — retroactively reframe Haskalah literary success as proof of Hebrew 'aliveness,' instrumentalizing the constraint for native revival project",
+      "Liturgical Communities: Parallel mechanism — maintain Hebrew continuity through daily prayer independently of literary production; two non-interfering channels of survival"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Very low. The Haskalah literary constraint is a pure coordination mechanism with minimal asymmetric extraction. The maskilim create and share texts; readers access them; a unified intellectual sphere results. There is no identifiable victim group and no coercive mechanism. The only potential 'cost' is the effort of learning classical Hebrew from texts, but this is voluntary and enables the core activity all participants value. The constraint is purely beneficial to those who participate. Suppression (0.12): Very low. The constraint has no external barriers, coercive mechanisms, or alternative-suppression elements. Hebrew literacy is voluntary; communities and individuals can exit by switching to modern vernacular languages (which indeed happens over the 19th century). The low suppression reflects that the constraint has no enforcement mechanism — it persists by providing genuine coordination value, not by preventing alternatives. Theater (0.35): Moderate and rising. In the original Haskalah period (1750–1800), the theater ratio is lower (~0.25) because the constraint's function is transparently coordination: maskilim are solving the real collective action problem of shared intellectual medium. As time progresses and especially as nationalist appropriation increases post-1850, the theater ratio rises (~0.45 by 1850) because the constraint begins to be instrumentalized as 'proof' of Hebrew vitality. By the early 20th century (outside this story's interval), nationalist claims about Haskalah would push theater further (0.70+ in piton territory). The story captures the transition point: the original coordination function is intact, but narrative appropriation is beginning.",
+    "perspectival_gap": "The elite literary producer (institutional/arbitrage) sees pure coordination: Hebrew enables their creative practice and intellectual participation. The analytical observer agrees: rope is the correct classification — a coordination mechanism with low extraction and high functional value. The ordinary literate community member (moderate/constrained) also perceives coordination but with bounded duration — Hebrew literary production is supporting transitional intellectual needs during a period when traditional languages (Yiddish, Aramaic) have declined but modern national vernaculars (German, Russian, Polish) have not yet fully replaced Hebrew's intellectual role. This perspective hints at scaffold rather than pure rope: 'This works for now, but we know it's temporary.' The later nationalist movement (powerful/mobile) retroactively reframes the constraint as evidence of Hebrew 'aliveness,' adding theatrical appropriation that was not present in the original constraint. No agent experiences extraction or victimhood: the gap is between original function (coordination) and later appropriation (status claim / nationalist mythology).",
+    "directionality_logic": "Directionality is uniformly low across all perspectives because no agent experiences extraction. The beneficiaries (literary elite, intellectual continuity) have derived d ≈ 0.05–0.15 reflecting arbitrage exit options and genuine benefit. There are no victim groups, so the high-d tail of the directionality distribution is empty. The constraint's effectiveness (χ) remains low across all contexts because f(d) stays in the negative-to-low range throughout, and the base extraction ε is very low. This produces rope classification uniformly: low extraction + high coordination function. The slight rise in theater_ratio over time does not increase d for beneficiaries (they continue to benefit); it only increases the narrative confusion about what the constraint is (coordination vs. proof-of-aliveness). This is a diagnostic signal that the original constraint (literary coordination) is being colonized by a secondary constraint (nationalist appropriation narrative) — the two would be structurally distinct stories if we extended the analysis post-1850.",
+    "mandatrophy_analysis": "KERNEL READING AS COMMITTER FRAME: This constraint instantiates the literary_revival_reading of the hebrew_living_language kernel. The kernel is the contested claim 'Hebrew was a living language during and after the Haskalah.' Three structurally distinct readings produce three different constraints with different ε values and causal relationships: (1) literary_revival_reading (this story): ε=0.08, rope, written generative competence without native speech, pure coordination. (2) liturgical_continuity_reading (sibling): ε≤0.05, mountain or rope, Hebrew maintained through religious practice with native fossilization in prayer contexts, minimal or absent coordination function. (3) native_generation_reading (sibling): ε=0.35–0.55, tangled_rope or scaffold, early-20th-century deliberate project to teach Hebrew as native language to children, requiring enforcement and producing mixed coordination/extraction. These are NOT three perspectives on one constraint. They are three separate constraints sharing a kernel (the 'aliveness' claim) but with different base extraction values, victim sets, mechanisms, and temporal scope. The mandatrophy is resolved by decomposition: the kernel is contested not because observers disagree on classification, but because the underlying structural claims are different. To understand Hebrew language survival, one must analyze all three readings as separate constraint stories linked by network.affects_constraints.",
+    "kernel_context": "CONTESTED KERNEL: hebrew_living_language. READING INSTANTIATED: literary_revival_reading — Hebrew as written literary medium through Haskalah with generative composition but no native daily speech. SIBLING READINGS (other constraints, other files): (1) liturgical_continuity_reading — Hebrew maintained through religious prayer and liturgical practice across diaspora, with structural congruence to written production but independent causal mechanism. (2) native_generation_reading — Hebrew as acquired native language for children in early-20th-century Palestine/Israel, a deliberate revivalist project requiring institutional enforcement. STRUCTURAL DELTA: The literary reading has very low extractiveness (pure coordination among elite) and no victim groups. The native reading has higher extractiveness (enforcement required, asymmetric costs/benefits for agents with different generational positions). The liturgical reading has minimal or zero extractiveness but also minimal coordination function (each prayer community is self-contained). The contest at the kernel level is not 'was Hebrew living?' but 'which mechanism constituted Hebrew continuity, and through what structural arrangement?' Each reading proposes a different answer with different empirical content and different classification implications. The Zionist narrative conflates all three readings into a single triumphalist story: 'Hebrew was always alive (liturgy), was kept alive by intellectuals (literary), and was revived as a native language (native generation).' The framework separates these into distinct structural constraints to reveal what was actually preserved, how it was preserved, and what was newly created."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "liturgical_continuity_reading",
+      "native_generation_reading"
+    ],
+    "dual_formulation_note": "The hebrew_living_language kernel decomposes into three structurally distinct constraint stories: (1) literary_revival_reading (this file) — ε=0.08, written intellectual coordination without native speech; (2) liturgical_continuity_reading — ε≤0.05, religious practice preservation with fossilized forms; (3) native_generation_reading — ε=0.35–0.55, 20th-century deliberate native-speaker acquisition project. These are three readings of one kernel, not three perspectives on one constraint. The literary reading is upstream (prerequisite network position) relative to the native reading insofar as Haskalah intellectual prestige may have created conditions favoring later native revival, but causality is contested (see omega_theatrical_revival_appropriation). The liturgical and literary readings are parallel and independent — each maintained Hebrew continuity through different mechanisms without direct causal interaction."
+  },
+  "directionality_overrides": []
+}

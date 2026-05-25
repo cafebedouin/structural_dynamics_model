@@ -1,0 +1,180 @@
+{
+  "header": {
+    "constraint_id": "liturgical_continuity_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_liturgical_continuity_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.08,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Hebrew as Living Language through Liturgical Continuity and Textual Study",
+    "topic_domain": "historical_linguistics/language_revitalization/commitment_systems",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "diaspora_jewish_communities",
+      "hebrew_textual_tradition"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Diaspora Jewish Communities",
+      "comment": "PERSPECTIVE 1: DIASPORA JEWISH COMMUNITIES (ROPE) — Participants in liturgical recitation and textual study experience the constraint as pure coordination. Hebrew remains legible across centuries and continents through unbroken ritual practice and textual transmission. Communities benefit from linguistic and cultural continuity; the coordination function (shared language preserving group identity and religious practice) is genuine and voluntary. Exit options are mobile — individuals can choose to participate, learn, or disengage without total loss of community membership. Extraction is minimal."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Hebrew Textual and Liturgical Tradition",
+      "comment": "PERSPECTIVE 2: HEBREW TEXTUAL AND LITURGICAL TRADITION (ROPE) — The tradition itself is constituted through the constraint. Continuous recitation and study preserve textual accuracy, interpretive depth, and symbolic resonance across diaspora. The tradition benefits from the maintenance mechanisms (daily prayers, weekly Torah readings, continuous commentary tradition); the tradition IS the coordination mechanism. No beneficiary/victim distinction applies at this perspective level — the tradition and its preservation mechanism are identical. Classification: Rope, maximum beneficiary position."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Individual Liturgical Practitioners",
+      "comment": "PERSPECTIVE 3: INDIVIDUAL LITURGICAL PRACTITIONERS (ROPE) — People who engage in regular Hebrew prayer and textual study face modest constraints (time commitment, learning requirements) but experience the constraint as coordination providing cultural identity, religious function, and intellectual engagement. Cost barriers are real but not extractive — learning Hebrew liturgically provides genuine access to meaning, not gatekeeping. Classification: Rope with constrained exit (high cost to abandon practiced skill and community role, but not impossible). Effective extraction remains low because the coordination benefit is substantial and voluntary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Institutional Religious Authority",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL RELIGIOUS AUTHORITY (PITON) — From the perspective of religious hierarchies and institutional bodies, the liturgical continuity mechanism is partly performative inertia. The institutions maintain Hebrew prayer requirements, textual standards, and educational frameworks through institutional authority rather than because participants would voluntarily choose these exact mechanisms absent tradition. Theater ratio (0.35) reflects that institutional enforcement of specific pronunciations, prayer structures, and interpretive boundaries has become increasingly theatrical as the original functional necessity (preventing linguistic drift) has been partially replaced by voluntary commitment and modern linguistic stability. The constraint persists through institutional maintenance, but its primary function has partially degraded from strict linguistic necessity to cultural symbol preservation. Classification: Piton (degraded from necessity to performance)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (ROPE) — From a civilizational and global analytical perspective, the constraint is pure coordination. Liturgical recitation and textual study solve genuine collective action problems: they preserve linguistic continuity, transmit cultural meaning, coordinate group identity across dispersed communities, and maintain textual accuracy through redundancy (multiple streams of recitation and commentary). The mechanism is entirely voluntary — communities participate because the coordination benefits exceed the costs, not because exit is impossible or extraction is high. No hidden victims exist; the constraint has no systematic asymmetry. Base extractiveness (0.12) reflects minimal overhead and no asymmetric capture. Classification: Rope (canonical coordination mechanism)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "liturgical_necessity_vs_voluntary_commitment",
+      "question": "Is the unbroken chain of Hebrew liturgical recitation sustained by structural necessity (preventing linguistic extinction) or by voluntary cultural commitment now that the language has other means of survival (modern Hebrew, literature, education)?",
+      "resolution_mechanism": "Counterfactual analysis: if institutional enforcement of liturgical Hebrew were removed, would the practice persist at similar scale? Comparative analysis with other liturgical languages (Latin, Classical Arabic, Sanskrit) to identify threshold points where institutional enforcement becomes optional.",
+      "impact": "If necessity-driven: constraint is Rope (high-value coordination). If voluntary-commitment-driven: constraint is Rope (lower extractiveness because the binding is cultural preference, not institutional requirement). If mixed: clarifies the piton perspective's claim that some institutional enforcement has become theatrical.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether liturgical continuity is structurally necessary or culturally voluntary"
+    },
+    {
+      "id": "textual_accuracy_preservation_mechanism",
+      "question": "Does the constraint actually prevent significant linguistic or textual drift compared to alternative preservation mechanisms (institutional written standardization, digital archiving, modern Hebrew grammar normalization)?",
+      "resolution_mechanism": "Longitudinal textual analysis: comparison of manuscript variants, pronunciation shifts, and interpretive traditions across 1000-year periods under liturgical continuity vs. periods under institutional written standardization; measurement of drift rates.",
+      "impact": "If liturgical recitation significantly outperforms alternatives: the coordination function is genuine and high-value (Rope confirmed). If drift rates are similar: the constraint's primary function is symbolic rather than functional (moves toward Piton classification). If written/digital methods outperform: the constraint is partially obsolete and maintained through inertia (Piton confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Effectiveness of liturgical recitation for preserving textual accuracy"
+    },
+    {
+      "id": "hebrew_living_language_kernel_reading_specification",
+      "question": "This constraint instantiates the 'liturgical_continuity_reading' of the contested 'hebrew_living_language' kernel. What distinguishes this reading from the 'native_generation_reading' (modern Hebrew as primary language spoken by native speakers) and the 'literary_revival_reading' (Hebrew as vehicle for modern literature and secular discourse)?",
+      "resolution_mechanism": "Each reading is a separate constraint story with its own ε value. The native-generation reading likely has high extractiveness (creation of obligatory school language hierarchy favoring Hebrew over immigrant languages). The literary reading has moderate extractiveness (privileging secular creative use over liturgical/rabbinic use). The liturgical reading (this story) has low extractiveness (voluntary participation, genuine coordination). The disagreement is located in the semantics of 'living language' — which observable counts as evidence of linguistic vitality.",
+      "impact": "The three readings are not contradictory perspectives on a single constraint — they are three structurally distinct constraints sharing a linguistic domain. Conflating them produces false mandatrophy (all three readings seeming simultaneously valid because they answer different questions). Proper analysis: declare each as a separate story, link via network.affects_constraints, document the kernel debate in omegas and commentary.kernel_context.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel and reading specification for hebrew_living_language"
+    },
+    {
+      "id": "diaspora_participation_voluntariness",
+      "question": "In diaspora communities, is participation in Hebrew liturgical practice truly voluntary and mobile, or are social pressure, identity expectations, and community belonging sufficiently coercive that exit costs should reclassify 'mobile' as 'constrained'?",
+      "resolution_mechanism": "Ethnographic analysis of diaspora communities: measurement of exit costs (social ostracism, identity loss, community access restriction) for individuals who cease Hebrew liturgical participation while remaining community members. Comparison across different diaspora contexts (urban secular communities vs. Orthodox enclaves) to identify variance in actual exit costs.",
+      "impact": "If exit costs are minimal: mobile classification confirmed, Rope type confirmed (low extraction). If exit costs are substantial: reclassify as constrained, move toward Tangled Rope (asymmetric extraction via social pressure). If exit costs vary dramatically by context: separate constraint stories per diaspora context with different exit_options per perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Hebrew liturgical participation is truly voluntary in diaspora"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15,
+      "id_override": "theater_ratio_t0_liturgical"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.25,
+      "id_override": "theater_ratio_t1000_liturgical"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2000,
+      "value": 0.35,
+      "id_override": "theater_ratio_t2000_liturgical"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08,
+      "id_override": "extractiveness_t0_liturgical"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.1,
+      "id_override": "extractiveness_t1000_liturgical"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2000,
+      "value": 0.12,
+      "id_override": "extractiveness_t2000_liturgical"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 2000
+  },
+  "commentary": {
+    "narrative_context": "Hebrew language continuity across diaspora communities from late antiquity through modernity is sustained through unbroken chains of liturgical recitation and textual study. Synagogue prayers, daily blessings, Torah and Talmud study circles, and rabbinic commentary traditions preserve Hebrew's linguistic structure and cultural meaning across geographically dispersed, politically separated, and culturally heterogeneous Jewish communities spanning 2000+ years and five continents. This constraint describes ONE READING of the contested 'hebrew_living_language' kernel: the reading that claims Hebrew remains 'living' through continuous ritual practice and textual transmission, independent of whether native speakers exist or modern secular literature is produced in the language. This reading competes with two other readings: the native-generation reading (Hebrew is 'living' only when spoken natively by Israeli children as primary language) and the literary-revival reading (Hebrew is 'living' only through contemporary creative secular use). This story instantiates ONLY the liturgical continuity reading; the sibling readings are separate constraint stories with different ε values, different victim sets, and different institutional structures.",
+    "key_agents": [
+      "Diaspora Jewish Communities: Primary beneficiary (moderate/mobile) — experience the constraint as coordination mechanism preserving cultural and religious identity across geographic separation. Voluntary participation; benefit from linguistic continuity and access to sacred texts.",
+      "Hebrew Textual and Liturgical Tradition: Institutional beneficiary (institutional/arbitrage) — constituted through the constraint; preservation of interpretive depth and textual accuracy depends on continuous recitation and study chains. No victim correlate.",
+      "Individual Liturgical Practitioners: Secondary beneficiary with constrained exit (organized/constrained) — gain religious function, cultural identity, intellectual engagement from participation in Hebrew study and prayer. Learning cost is real but not extractive because it provides access, not gatekeeping.",
+      "Institutional Religious Authority: Institutional actor observing partial degradation (institutional/arbitrage) — maintains liturgical requirements and educational standards; some enforcement has become theatrical as voluntary commitment has increased and linguistic necessity has decreased.",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — sees the constraint as canonical coordination: solving collective action problems of linguistic preservation, cultural transmission, and identity coordination across dispersed communities."
+    ],
+    "logic_rationale": "Extractiveness (0.12): Minimal. The liturgical continuity constraint has low extraction because participation is voluntary, beneficiaries are clearly identified (diaspora communities benefit from cultural continuity), no victim set exists (the cost of maintaining the tradition is internal to the benefit-seeking communities), and the coordination function is genuine and high-value. The constraint solves real coordination problems: how do geographically separated communities maintain linguistic intelligibility across centuries? How do sacred texts preserve meaning across translation boundaries? How do diasporic identities remain coherent without geographic or political unity? These are coordination problems, not extraction mechanisms. Suppression (0.08): Minimal. While learning Hebrew liturgically requires time and effort, and institutional religious authority enforces certain standards, suppression is low because: (1) alternatives exist (Hebrew can be learned secularly, through literature, through modern Israeli contexts); (2) exit from liturgical participation does not prevent participation in Jewish community; (3) communities generally want to maintain the tradition, so enforcement is rarely required. Theater ratio (0.35): Low-moderate and increasing. Historically (time=0, theater=0.15), liturgical recitation was functionally necessary to preserve Hebrew's linguistic structure in the absence of written standardization and institutional grammar. The recitation itself WAS the primary preservation mechanism. Over 2000 years (time=2000, theater=0.35), institutional enforcement of specific pronunciations, prayer sequences, and interpretive boundaries has become increasingly theatrical as: (1) written texts (printed prayer books, biblical commentaries) now provide standardization; (2) modern Hebrew exists as a living spoken language with its own normative grammar; (3) individual commitment to the tradition is now primarily cultural/religious rather than linguistically necessary. The constraint persists and functions, but some portion of its structural maintenance is now institutional inertia rather than functional necessity. The increase in theater ratio from 0.15 to 0.35 across the interval reflects this degradation of necessity into symbol preservation, but the rate is gradual because the coordination function remains genuine.",
+    "directionality_logic": "Directionality analysis: This constraint shows unusually uniform directionality across perspectives because it is a pure coordination mechanism with no systematic asymmetry. Communities that maintain the tradition benefit from linguistic continuity (low d, derived from beneficiary status + mobile exit → low effective extraction). Institutional actors maintain the tradition and benefit from its preservation (low d, beneficiary status + arbitrage exit → negative f(d), institutional subsidization). Analytical observers see no hidden extraction (d ≈ 0.5, neither beneficiary nor victim, → canonical f(d) ≈ 0.65 but scaled by low χ formula base). The liturgical continuity reading produces uniform Rope classification because no agent is being extracted from to subsidize others. This contrasts sharply with the native-generation reading (which would show high extractiveness from immigrant language communities forced into Hebrew dominance hierarchy) and the literary-revival reading (which would show moderate extractiveness from religious/rabbinic interpretive communities displaced by secular-literary dominance). The uniform directionality is diagnostic: it suggests this reading captures a genuine coordination mechanism, while the sibling readings would show perspectival gaps indicating extraction.",
+    "perspectival_gap": "The perspectival gap in this constraint is MINIMAL across all perspectives except the Piton view. Perspectives 1-3 and 5 (Diaspora communities, Textual tradition, Practitioners, Analytical observer) all classify as Rope or Rope-adjacent. They differ in time horizon and power atom but not in fundamental classification. This minimal gap is diagnostic of a pure coordination mechanism. The Piton perspective (institutional religious authority) sees degradation: the constraint's original functional necessity (preventing linguistic drift without written standardization) has partially atrophied and been replaced by symbolic and institutional maintenance. This creates the only meaningful perspectival gap: has the constraint's primary function degraded (Piton) or does its coordination function remain sufficient to justify current maintenance (Rope)? The analytical response is that both are true: the constraint retains genuine coordination value (preventing diaspora linguistic isolation) while some institutional enforcement has become theatrical. This is not a contradiction but a lifecycle trajectory: from pure necessity, through genuine coordination, toward partial symbolic maintenance. The theater ratio trajectory (0.15→0.35) captures this progression.",
+    "mandatrophy_analysis": "KERNEL READING CASE STUDY: The mandatrophy here is located in the definition of 'living language' at the hebrew_living_language kernel. This liturgical_continuity_reading resolves the mandatrophy by claiming that linguistic continuity through unbroken ritual practice and textual study constitutes 'living' status. The constraint is Rope: the mechanism preserves language, coordinates diaspora identity, and maintains textual meaning. No mandatrophy resolution is required for this reading because the coordination function is unambiguous and the constraint type (Rope) is stable across all perspectives. The mandatrophy exists at the KERNEL level, not at the constraint level: readers of the kernel disagree about which observable (liturgical continuity, native generation, literary productivity) counts as evidence that Hebrew is 'living.' This story's task is to model the liturgical reading precisely and completely, allowing the comparative analysis across readings to reveal where the kernel disagreement is located. The three readings have different ε values (this reading: ε=0.12, low; native-generation reading: likely ε>0.4, moderate-high due to coercive language hierarchy; literary-revival reading: likely ε≈0.3, moderate due to hierarchical privilege given to secular use). The difference in ε values is NOT measurement uncertainty — it is structural difference. Each reading instantiates a different constraint.",
+    "kernel_context": "CONTESTED KERNEL: hebrew_living_language. This story instantiates the 'liturgical_continuity_reading': the claim that Hebrew remains a living language through unbroken chains of liturgical recitation, daily prayer, and textual study across diaspora communities, independent of modern native speakers or contemporary secular literature. Sibling readings: (1) 'native_generation_reading' — Hebrew is living only when native speakers (particularly Israeli children) acquire it as primary language; diaspora liturgical Hebrew is preserved-but-not-living corpus. (2) 'literary_revival_reading' — Hebrew is living through contemporary creative use in poetry, fiction, journalism, secular discourse; purely liturgical/rabbinic use is archaic even if continuous. These three readings share the kernel (what makes a language 'living'?) but produce structurally distinct constraints with different ε values, different beneficiary/victim structures, and different dominant institutional mechanisms. The kernel dispute is located in SEMANTICS: which observable (liturgical continuity, native generation, literary creativity) counts as evidence of linguistic vitality? The three readings cannot be folded into a single constraint because their ε values differ by more than measurement error, and their structural relationships differ fundamentally."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "hebrew_native_generation_reading",
+      "hebrew_literary_revival_reading"
+    ],
+    "dual_formulation_note": "The hebrew_living_language kernel produces three structurally distinct constraints: liturgical_continuity_reading (ε=0.12, Rope, voluntary coordination), native_generation_reading (higher extractiveness due to coercive language hierarchy in Israeli education/state), and literary_revival_reading (moderate extractiveness from hierarchical privilege given to secular literature). These are not perspectives on a single constraint but three separate constraints sharing a linguistic domain and a common kernel. Each has its own ε value, beneficiary/victim structure, and institutional mechanism. Network links establish that claims from one reading affect the plausibility of the others — evidence that liturgical Hebrew successfully preserved language structure over millennia strengthens the liturgical reading; evidence that native speakers are essential for 'living' language status weakens it; evidence that literature is the primary modern use of Hebrew supports the literary reading. The three constraints are linked through both logical dependency (they contest the same kernel definition) and empirical dependency (evidence for one affects confidence in the others)."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "low",
+    "hypothesis": "rope"
+  }
+}

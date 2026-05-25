@@ -1,0 +1,270 @@
+{
+  "header": {
+    "constraint_id": "inflation_credibility_constraint",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "infcred"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Inflation Credibility Constraint in Fiat Currency Systems",
+    "topic_domain": "monetary_economics/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "central_banking_authority",
+      "sovereign_debt_issuers"
+    ],
+    "victims": [
+      "wage_earners",
+      "fixed_income_recipients",
+      "currency_savers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Wage Earner",
+      "comment": "PERSPECTIVE 1: WAGE EARNER (SNARE) — Trapped in currency system; wages lag inflation; no exit to alternative store of value without extreme mobility cost. Bears full erosion cost during monetary expansion. No organized voice in monetary policy."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Fixed Income Recipient",
+      "comment": "PERSPECTIVE 2: FIXED INCOME RECIPIENT (SNARE) — Pensioners, bondholders at fixed rates; structurally trapped by contract terms that cannot be renegotiated. Maximum extraction with zero agency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Financial Sector Participant",
+      "comment": "PERSPECTIVE 3: FINANCIAL SECTOR PARTICIPANT (TANGLED ROPE) — Banks and institutional investors benefit from inflation through asset price appreciation and the inflation risk premium, but also face timing and basis risk. Can partially hedge through derivative markets but at cost. Mixed extraction: they coordinate credit flows yet extract from inflation-driven asset appreciation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Central Banking Authority",
+      "comment": "PERSPECTIVE 4: CENTRAL BANKING AUTHORITY (ROPE) — Primary beneficiary. Controls monetary policy; inflates away sovereign debt; extracts seigniorage. Experiences constraint as pure coordination: managing inflation expectations IS the central mechanism for maintaining fiat currency acceptance. No exit cost — can always print money."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Sovereign Debt Issuer",
+      "comment": "PERSPECTIVE 5: SOVEREIGN DEBT ISSUER (ROPE) — State benefits from ability to inflate away nominal debt stock. Experiences fiat system as coordination mechanism: manages spending across generations through monetary expansion. Net beneficiary with arbitrage options."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Inflation-Targeting Regime Coalition",
+      "comment": "PERSPECTIVE 6: INFLATION-TARGETING REGIME (SCAFFOLD) — International monetary institutions (IMF, BIS, major central banks) instituted credibility-building mechanisms: inflation targets, central bank independence, forward guidance. These represent a sunset structure — as these institutional safeguards mature, the raw extraction mechanism (unanchored inflation) decays. Theater ratio lower here because the institutional apparatus genuinely constrains monetary discretion, not purely performatively."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Gold Standard Nostalgia",
+      "comment": "PERSPECTIVE 7: GOLD STANDARD INSTITUTIONAL MEMORY (PITON) — The rhetoric of 'sound money' and gold backing persists as a vestigial institutional commitment even though the functional constraint (the need to maintain gold reserves) has been eliminated. Central banks maintain gold reserves for theater value, not constraint. The gold standard was real; nostalgia for it is performative institutional inertia."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, fiat currency systems face an inherent constraint: inflation expectations must be anchored to maintain purchasing power credibility. No society with fiat currency can sustain hyperinflation indefinitely. This appears as a natural law of monetary systems. However, this reading naturalizes what is actually a contestable institutional design choice (inflation target levels, central bank mandates, fiscal-monetary coordination). False summit risk: the constraint may be constructed rather than immutable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordinating_function_vs_extraction_layering",
+      "question": "Is the inflation constraint primarily a coordination mechanism (managing spending across time and agents) layered with extraction, or is extraction the primary function with coordination as the justifying narrative?",
+      "resolution_mechanism": "Historical counterfactual: what would happen if the central bank committed to zero inflation with automatic deflationary adjustment? If coordination function is real, such a regime should work; if extraction is primary, agents would immediately demand inflation return.",
+      "impact": "If coordination-primary: Rope or Tangled Rope from most perspectives. If extraction-primary: Snare from wage-earner perspective, suggesting the constraint is fundamentally redistributive rather than coordinating.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether inflation constraint is primarily coordinating or primarily extractive"
+    },
+    {
+      "id": "gold_standard_alternative_impossibility",
+      "question": "Was the transition from gold standard to fiat currency the *only* feasible path, or were alternative monetary regimes (commodity baskets, decentralized currency, supranational backing) structurally viable but politically rejected?",
+      "resolution_mechanism": "Reconstruction of historical policy deliberations; analysis of parallel jurisdictions that maintained commodity backing; examination of why supranational currency unions (Bretton Woods, Euro, SDR) all eventually faced credibility crises",
+      "impact": "If fiat was inevitable: constraint is closer to mountain (immutable by resource scarcity or technology). If alternatives were viable but rejected: constraint is constructive Snare or Tangled Rope sustained by concentrated beneficiary power.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether fiat currency was structurally inevitable or politically chosen"
+    },
+    {
+      "id": "inflation_targeting_effectiveness_and_internality",
+      "question": "Do inflation targets and central bank independence actually constrain monetary discretion, or are they performative commitments that permit the same seigniorage extraction under a narrative of 'responsible management'?",
+      "resolution_mechanism": "Time-series analysis of inflation outcomes pre- and post-inflation-targeting adoption; comparison of actual inflation vs. stated targets; examination of whether central bank independence correlates with lower inflation or merely smoother inflation cycles",
+      "impact": "If targets are effective: scaffold perspective is correct — the constraint has a real sunset as credibility institutions mature. If targets are performative: theater ratio is higher, and the constraint remains Snare for wage-earners regardless of institutional rhetoric.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether inflation targets and central bank independence actually constrain discretionary monetary expansion"
+    },
+    {
+      "id": "fiat_vs_commodity_backed_extraction_comparison",
+      "question": "Did the transition from gold standard to fiat reduce total extraction (by eliminating resource-scarcity rent to gold holders), maintain it (by shifting from seigniorage + gold rent to pure seigniorage), or increase it (by removing the hard constraint on monetary expansion)?",
+      "resolution_mechanism": "Historical comparison of seigniorage rates, inflation volatility, and inequality metrics across gold-standard vs. fiat periods; computation of effective extraction rates including both inflation and financial sector rents",
+      "impact": "If extraction reduced: fiat system is net improvement (Rope). If maintained: same extraction, different mechanism (Tangled Rope from multiple perspectives). If increased: fiat system is net extraction increase (Snare for wage-earners).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether fiat currency increased, maintained, or reduced total extraction compared to gold standard"
+    },
+    {
+      "id": "credibility_anchor_externality",
+      "question": "Is inflation credibility a public good (everyone benefits from stable currency value) or a zero-sum game (credibility built by some agents at expense of others through inflation distribution)?",
+      "resolution_mechanism": "Analysis of inflation incidence by income quintile; examination of whether inflation-targeting policies reduce or increase wealth inequality; comparison of nominal wage growth vs. inflation across income groups",
+      "impact": "If public good: Rope classification dominates; fiat system coordinates expectations beneficially. If zero-sum: extraction is disguised by public-good language; Snare or Tangled Rope classification dominates from redistributive perspective.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether inflation credibility is a public good or a zero-sum extraction mechanism"
+    },
+    {
+      "id": "kernel_reading_decomposition_signal",
+      "question": "Should this constraint be decomposed into multiple structurally distinct constraints (monetary coordination function vs. seigniorage extraction mechanism vs. inflation-expectation anchoring), or is it a single constraint read from different institutional positions?",
+      "resolution_mechanism": "Epsilon invariance test: do the three candidate constraints (coordination, seigniorage extraction, expectation anchoring) have different ε values when measured independently? If epsilon differs by >0.20, decompose into separate stories.",
+      "impact": "If decompose: each story has its own beneficiary/victim structure and lifecycle. If unified: the presheaf over observation positions is the answer, and mandatrophy resolution requires showing how all six types are legitimate readings of the same epsilon.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether inflation credibility is one constraint or multiple structurally distinct constraints read from different positions"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "infcred_extractiveness_gold_standard_era"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.52,
+      "id_override": "infcred_extractiveness_bretton_woods_transition"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.68,
+      "id_override": "infcred_extractiveness_great_inflation"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58,
+      "id_override": "infcred_extractiveness_volcker_disinflation"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.54,
+      "id_override": "infcred_extractiveness_inflation_targeting_maturity"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.58,
+      "id_override": "infcred_extractiveness_present"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "infcred_theater_gold_standard"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4,
+      "id_override": "infcred_theater_bretton_woods"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55,
+      "id_override": "infcred_theater_great_inflation"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.68,
+      "id_override": "infcred_theater_volcker"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.64,
+      "id_override": "infcred_theater_targeting_maturity"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.64,
+      "id_override": "infcred_theater_present"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 25
+  },
+  "commentary": {
+    "narrative_context": "The transition from gold-backed to fiat currency systems represents a fundamental shift in the institutional architecture of monetary constraint, yet the nature of what changed remains contested across different economic and political perspectives. This constraint story models the inflation credibility problem as a single structural phenomenon — the requirement to maintain public confidence in currency value through institutional commitment — analyzed from eight distinct positions that produce all six constraint types. The constraint exhibits tangled coordination and extraction: central banks coordinate spending across time and agents (genuine coordination function) while simultaneously extracting seigniorage and inflating away debt burdens (asymmetric extraction). The transition to fiat eliminated the hard resource constraint (gold reserves) but introduced a softer credibility constraint (inflation expectations must be anchored). The key empirical question is whether this represents a net reduction in extraction (removing gold-holder rents), a net increase (removing the automatic check on monetary expansion), or a simple shift in extraction mechanisms. The inflation-targeting regime that emerged in the 1990s-2000s represents a scaffold structure — institutional safeguards (central bank independence, forward guidance, inflation targets) that build credibility without eliminating the underlying seigniorage mechanism. The constraint's theater ratio has risen from 0.25 under the gold standard (where constraint was material: gold reserves had to be held) to 0.64 in the present (where constraint is largely performative: inflation targets are stated but flexible). This trajectory suggests the constraint is drifting toward piton classification — institutional inertia dressed in credibility rhetoric — even as wage-earners continue to experience it as a snare through inflation erosion.",
+    "key_agents": [
+      "Wage Earners: Primary victim (powerless/trapped) — bear full cost of inflation through wage lag; no exit mechanism without extreme mobility; no voice in monetary policy",
+      "Fixed Income Recipients: Primary victim (powerless/trapped) — pensioners and bondholders whose contracts are locked; erosion is maximum and unavoidable",
+      "Central Banking Authority: Primary beneficiary (institutional/arbitrage) — controls monetary policy; extracts seigniorage; experiences constraint as coordination mechanism",
+      "Sovereign Debt Issuer (State): Secondary beneficiary (institutional/arbitrage) — inflates away nominal debt; experiences fiat system as spending-smoothing coordination",
+      "Financial Sector: Mixed agent (moderate/constrained) — benefits from asset inflation and risk premiums but faces timing/basis risk; can hedge but at cost",
+      "Inflation-Targeting Regime Coalition: Organized reformers (organized/constrained) — international institutions building credibility scaffolds; sunset structure as these institutions mature",
+      "Gold Standard Memory: Institutional inertia (institutional/arbitrage) — central banks maintain gold reserves for theater value despite elimination of material constraint",
+      "Analytical Observer: Civilizational position (analytical/analytical) — risks naturalizing constructed institutional choice as immutable monetary law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint exhibits sustained extraction through seigniorage (central banks capture real resources through monetary expansion), inflation erosion of wage earners' purchasing power, and redistribution to debt holders. However, extraction is not maximal because: (1) inflation targeting regimes reduce the discretionary component below what historical hyperinflations reveal is possible, (2) coordinating spending across generations has genuine value, and (3) the alternative (deflation or resource constraint) would impose different costs. The historical trajectory shows extractiveness peaked at 0.68 during the Great Inflation (1970s), declined to 0.54 at the maturity of inflation targeting (2010s), and has risen slightly to 0.58 as credibility mechanisms face new pressures (post-2008, post-2020). Suppression (0.62): Moderate-high. Wage-earners face structural barriers to exit: they cannot substitute into commodity-backed alternatives, cannot hedge inflation on wages, and face coordination problems in demanding wage adjustment (free-rider problem in wage bargaining). Fixed-income recipients face contractual suppression (cannot renegotiate bond terms). The suppression is not total because some agents (financial sector) can partially hedge through derivative markets. Theater ratio (0.64): Moderate-high. The shift from gold standard (theater=0.25, constraint was material) to present (theater=0.64) reflects that inflation constraint has become increasingly performative. Gold standard theater was low because the constraint was enforced by material requirement (must hold gold reserves or currency exchange breaks down). Inflation targeting relies on rhetoric and forward guidance — central banks announce targets and market participants price them in, but the targets are not mechanically enforced and have frequently been breached. The theater increased during Volcker's disinflation (0.68 peak) as credibility-building theater, then settled at 0.64 as the institutional apparatus normalized.",
+    "perspectival_gap": "This constraint demonstrates the full perspectival range. Wage-earners see a snare — they are trapped in a currency system where their purchasing power erodes through a mechanism they cannot exit or influence. Fixed-income recipients see an equivalent snare with even less agency (contractual lock). The central banking authority and sovereign debt issuer see a rope — they coordinate spending across time and agents; the constraint is their tool for managing complex collective action. Financial sector agents see tangled rope — they benefit from inflation-driven asset appreciation and carry inflation risk premiums, but also face drawdowns during disinflationary episodes. The inflation-targeting coalition sees a scaffold — the institutional mechanisms (central bank independence, forward guidance, target frameworks) are building credibility structures that will sunset the raw extraction mechanism as they mature. The gold standard institutional memory sees a piton — the rhetoric of 'sound money' persists as theater in central bank gold holdings and policy language, but the functional constraint has been eliminated. The civilizational analytical observer risks seeing a mountain — inflation credibility as an immutable law of fiat currency systems — but the structural data suggests this is a false summit: alternative monetary systems (commodity baskets, decentralized currencies, hard constraints on monetary expansion) were viable but politically rejected.",
+    "directionality_logic": "Directionality (d) for each agent reflects their structural position relative to inflation flows. Wage-earners: d ≈ 0.92 (full target). They experience maximum erosion; wages lag inflation by measurable amounts; no arbitrage options. Fixed-income recipients: d ≈ 0.95 (full target, plus contractual lock). Central banking authority: d ≈ 0.08 (full beneficiary). Controls policy; captures seigniorage; has complete arbitrage options (can always print). Sovereign debt issuer: d ≈ 0.12 (beneficiary with slight constraint from credibility maintenance). Financial sector: d ≈ 0.52 (near-symmetric; benefits from inflation but carries risk). Inflation-targeting coalition: d ≈ 0.40 (organized agent with moderate extraction but high agency through institutional participation). Gold standard memory: d ≈ 0.05 (beneficiary of institutional inertia; maintains central bank prestige). Analytical observer: d ≈ 0.72 (observer position, moderate extraction experienced at civilizational level if natural-law view is false summit).",
+    "mandatrophy_analysis": "KERNEL READING AMBIGUITY: This constraint is one reading of a contested kernel — 'what changed when we moved from gold standard to fiat?' Different readings emit different constraints: (1) Monetary Coordination Function: the shift enabled more flexible spending management across generations (lower ε, Rope dominates). (2) Seigniorage Extraction Mechanism: the shift removed the hard constraint on monetary expansion and enabled sustained real resource capture (higher ε, Snare dominates). (3) Inflation Expectations Anchoring: the shift moved from material constraint to credibility constraint (requires new institutional scaffolds). These three are structurally distinct and could be decomposed into separate stories. However, they also collapse into a single constraint when viewed at the right level of abstraction: the constraint is that a fiat currency system REQUIRES credibility maintenance to prevent hyperinflation, and this requirement creates the space for both coordination (spending management) and extraction (seigniorage). The mandatrophy resolves by acknowledging that the six perspectives are legitimate readings of this single ε, each revealing different faces of the same institutional structure. The false summit risk (mountain from analytical perspective) is real: the naturalizing language ('this is how money works') conceals that this is how *fiat currency with credibility-dependent value* works, and alternative systems were viable.",
+    "kernel_context": "This constraint is one reading of a contested kernel: 'what is the nature of the monetary constraint imposed by fiat currency systems?' The Goldstandard Reading constructs the constraint as purely coordinative — managing redemption promises. The Fiat Extraction Reading constructs it as seigniorage mechanism — extracting real resources through inflation. The Credibility Anchor Reading constructs it as an expectation-management problem — central banks must anchor inflation expectations or the currency collapses. Each reading instantiates different ε values and beneficiary/victim structures. This story narrates the Credibility Anchor Reading at the tangled_rope level, showing how the same institutional transition (gold to fiat) appears as: pure coordination (rope) from the central bank perspective, pure extraction (snare) from the wage-earner perspective, temporary scaffolding from the inflation-targeting coalition, and false natural law (mountain-then-snare) from the analytical perspective. Sibling readings would include: (a) Monetary System Comparative Analysis (gold standard vs. fiat vs. commodity-basket) as structurally distinct constraints with different ε values; (b) Seigniorage Extraction Mechanism as a separate story focused on the extraction component; (c) Inflation Expectations as yet another constraint governing how agents incorporate inflation into decision-making."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "wage_lag_mechanism",
+      "sovereign_debt_sustainability",
+      "financial_sector_risk_premium"
+    ],
+    "dual_formulation_note": "The inflation credibility constraint is upstream of multiple domain-specific constraints. Changes in central bank credibility affect wage-bargaining dynamics (wage_lag_mechanism), sovereign borrowing costs (sovereign_debt_sustainability), and financial risk pricing (financial_sector_risk_premium). Each downstream constraint has its own ε and perspectives; they are linked because they depend on the credibility structure this constraint describes. A decomposition into Seigniorage Extraction (higher ε) and Monetary Coordination (lower ε) as separate constraint stories would clarify whether the extraction is the primary function or a side effect of coordination."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

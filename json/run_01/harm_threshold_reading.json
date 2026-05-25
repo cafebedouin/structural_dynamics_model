@@ -1,0 +1,222 @@
+{
+  "header": {
+    "constraint_id": "harm_threshold_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_harm_threshold_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Speech Protection Conditional on Absence of Demonstrable Harm (Harm-Threshold Reading)",
+    "topic_domain": "constitutional_law/political_philosophy/communication_rights",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "harm_victims_and_vulnerable_groups",
+      "state_enforcement_apparatus"
+    ],
+    "victims": [
+      "speakers_at_harm_threshold",
+      "marginalized_communities_with_contested_harm_claims"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Speaker at the Harm Threshold",
+      "comment": "PERSPECTIVE 1: SPEAKER AT HARM THRESHOLD (SNARE) — Once a harm claim reaches threshold credibility, speaker faces near-total suppression of contested speech. No effective exit: continuing speech incurs legal/social sanctions; silence is extraction of autonomy. The threshold is opaque (harm is context-dependent) so speaker cannot predict safety. Maximal extraction without organization or appeal option."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Marginalized Communities with Contested Harm Claims",
+      "comment": "PERSPECTIVE 2: MARGINALIZED COMMUNITIES WITH CONTESTED HARM CLAIMS (SNARE) — Groups whose harm claims are not yet at threshold (or are rejected by adjudicating authority) face extraction: their harms are silenced while others' harms trigger protection. No exit from the harm itself; trapped in unequal recognition of damage. The harm-threshold rule becomes a mechanism that redistributes speech protection by power asymmetry."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Established Speakers with Threshold-Protected Claims",
+      "comment": "PERSPECTIVE 3: ESTABLISHED SPEAKERS WITH THRESHOLD-PROTECTED CLAIMS (TANGLED ROPE) — Well-resourced speakers whose speech is recognized as harmful at threshold enjoy coordination benefit (legitimate protection from weaponized speech) alongside extraction benefit (expanded suppression authority that can be deployed against competitors). Mobile exit: can migrate speech platforms, jurisdictions, or frames. The constraint coordinates legitimate harm prevention while extracting competitive advantage."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "State Enforcement Apparatus",
+      "comment": "PERSPECTIVE 4: STATE ENFORCEMENT APPARATUS (ROPE) — Sees the harm-threshold rule as a coordination mechanism: establishes criteria for speech regulation, reduces arbitrary censorship, and provides institutional legitimacy for enforcement. State benefits from clear(ish) standards and can arbitrage across jurisdictions. The constraint coordinates legitimate state interests in preventing concrete harms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Adjudicating Authority (Courts/Regulators)",
+      "comment": "PERSPECTIVE 5: ADJUDICATING AUTHORITY (COURTS/REGULATORS) (TANGLED ROPE) — Bears both coordination function (determines harm threshold, applies criteria) and extraction function (authority grows as harm-claim disputes increase, creating institutional power through arbitration). Constrained by precedent and political pressure. The authority experiences the constraint as empowering (relative to no standard) while becoming a bottleneck (all threshold disputes route through this actor)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Absolutist Free Speech Tradition",
+      "comment": "PERSPECTIVE 6: ABSOLUTIST FREE SPEECH TRADITION (PITON) — The prior institutional commitment (no prior restraint, speaker autonomy as paramount) persists formally while the harm-threshold rule hollows it from inside. The absolutist doctrine is maintained performatively (courts still cite speaker protection) while its functional immunity erodes. Theater ratio reflects the gap between the principle invoked and the outcomes produced."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer: Harm-Threshold as Natural Boundary",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, the harm-threshold principle appears as a natural limit on speech freedom: all social coordination requires boundaries, and preventing concrete demonstrable harm is a natural starting point for speech regulation. This perspective sees the constraint as inevitable and unchangeable — a law of social order. However, the structural data contradicts the mountain classification: identified beneficiaries (state enforcement, threshold-protected speakers) and asymmetric extraction suggest this is a constructed institutional arrangement, not a natural boundary."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "harm_definition_contestation",
+      "question": "Who has authority to define 'demonstrable harm' and at what threshold does a claim qualify?",
+      "resolution_mechanism": "Comparative institutional analysis of harm definitions across jurisdictions, time periods, and identity groups; correlation between speaker identity/power and likelihood of harm claim credibility",
+      "impact": "If definition is narrow (physical injury only): constraint is closer to rope (coordination function dominant). If definition is broad (psychological, reputational, community damage): constraint is snare (extraction dominant because threshold becomes arbitrary).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Authority over harm definition and threshold credibility"
+    },
+    {
+      "id": "power_asymmetry_in_threshold_adjudication",
+      "question": "Do speakers from dominant groups have systematically higher probability of their harm claims crossing the threshold than speakers from marginalized groups?",
+      "resolution_mechanism": "Statistical analysis of harm threshold acceptances by speaker group identity, institutional affiliation, resource access; case law patterns showing differential threshold application",
+      "impact": "If yes: constraint is snare with systematic extraction of voice from less-resourced speakers. If no: constraint is closer to tangled rope with coordination function more robust.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether threshold adjudication is power-asymmetric"
+    },
+    {
+      "id": "boundary_between_readings",
+      "question": "This constraint instantiates the HARM-THRESHOLD reading. What structural elements would change under sibling readings?",
+      "resolution_mechanism": "Comparison with absolutist_reading (no threshold — speech protected unconditionally), marketplace_reading (truth crowd-sorts harm claims), dignity_reading (harm includes identity attack), democratic_participation_reading (harm assessed by impact on collective self-governance)",
+      "impact": "Under absolutist_reading: extractiveness drops to ~0.15, snare classifications become ropes. Under dignity_reading: extractiveness rises to ~0.72, piton classifications become tangled ropes. Under democratic_participation_reading: beneficiary set shifts to 'public', extractiveness may rise or fall depending on how democratic participation is measured. The omegas in THIS reading document that the constraint-as-written instantiates only the harm-threshold frame.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural difference between harm-threshold reading and sibling readings of the speech protection kernel"
+    },
+    {
+      "id": "false_summit_natural_law_risk",
+      "question": "Is the harm-threshold principle a natural boundary on speech freedom (mountain) or a contingent institutional choice?",
+      "resolution_mechanism": "Historical institutional analysis: does harm-threshold rule appear in all speech systems or only some? Do legal systems without this rule experience qualitatively different speech dynamics? Are there observable alternatives that produce similar coordination outcomes without extractive asymmetry?",
+      "impact": "If natural: mountain classification is correct; the constraint is unavoidable. If contingent: mountain classification is false summit; the rule is constructed and has identifiable beneficiaries who sustain it.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether harm-threshold principle is natural law or constructed institutional choice"
+    },
+    {
+      "id": "chilling_effect_measurement",
+      "question": "How much speech is suppressed by the anticipation of harm claims (chilling effect) relative to speech actually suppressed by enforcement?",
+      "resolution_mechanism": "Survey data on speaker self-censorship motivated by harm-threshold fear; comparison of pre/post harm-threshold adoption in same jurisdiction; linguistic analysis of speech corpus for markers of anticipatory suppression",
+      "impact": "If chilling effect is large (≥60% of suppression): extractiveness rises to 0.68+, snare classifications become more dominant. If small (≤20%): extractiveness falls to 0.40, tangled rope becomes more plausible.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Magnitude of chilling effect from harm-threshold rule"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "harm_extractiveness_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.45,
+      "id_override": "harm_extractiveness_t10"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58,
+      "id_override": "harm_extractiveness_t20"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32,
+      "id_override": "harm_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.4,
+      "id_override": "harm_theater_t10"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48,
+      "id_override": "harm_theater_t20"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The harm-threshold reading of speech protection establishes that speakers may be restricted when their speech causes demonstrable harm to identifiable victims. This reading represents a middle position between absolutism (no threshold; speech always protected) and broad harm-inclusive approaches (psychological, reputational, cultural harms count). The constraint operates by converting the abstract principle 'speech is free' into a concrete rule: 'speech is free unless it causes harm above an adjudicated threshold.' This rule coordinates legitimate state interests in preventing concrete harms while creating systematic extraction opportunities for speakers with institutional power to define what counts as harm. The extractiveness value (0.58) reflects that the harm-threshold mechanism produces moderate but significant asymmetric outcomes: well-resourced speakers can navigate threshold criteria and often find their harms recognized, while powerless speakers face suppression both when their harm claims fall below the threshold AND when speaking itself is classified as harmful. The theater ratio (0.48) indicates moderate performative content: adjudication of harm involves genuine legal/scientific work (theater is not dominant) but also includes performative risk assessment and reputation signaling.",
+    "key_agents": [
+      "Speakers at Harm Threshold: Primary victims (powerless/trapped) — face suppression once harm claims cross adjudicated threshold; no effective exit",
+      "Marginalized Communities with Contested Harm Claims: Primary victims (powerless/trapped) — whose harms are not yet recognized at threshold; trapped in unequal protection regimes",
+      "Established Speakers with Threshold-Protected Claims: Primary beneficiaries (powerful/mobile) — enjoy both protection coordination (legitimate defense against weaponized speech) and extraction advantage (ability to deploy harm-suppression authority against competitors)",
+      "State Enforcement Apparatus: Beneficiary (institutional/arbitrage) — gains clear criteria for speech regulation and institutional legitimacy for enforcement decisions",
+      "Adjudicating Authority (Courts/Regulators): Mixed position (moderate/constrained) — coordinates harm determination while extracting institutional power through arbitration of disputes",
+      "Absolutist Free Speech Tradition: Institutional constraint (institutional/arbitrage) — persists formally while functionally hollowed by harm-threshold rule (piton)",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks treating constructed institutional boundary as natural law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): The harm-threshold reading produces moderate-high extraction because threshold determination itself becomes a mechanism for allocating speech protection asymmetrically. Speakers with institutional resources, professional credibility, or demographic position have higher probability of their harm claims being adjudicated at threshold-crossing levels. Marginalized speakers face dual extraction: (1) their own harm claims are discounted (threshold not reached), and (2) speech they produce is more likely to be classified as harmful to others (lower threshold bar applied to their speech than to established speakers' speech). The extractiveness rises over the interval (0.35 → 0.58) as harm-claim litigation accumulates and threshold jurisprudence becomes more developed, entrenching power asymmetries. Suppression (0.65): High. The harm-threshold rule generates suppression through both direct enforcement (speech is prohibited) and anticipatory suppression (speakers self-censor to avoid harm claims). The threshold creates epistemic uncertainty: speakers cannot ex-ante know whether their speech will cross it, so suppression risk is continuous, not just post-decision. Theater ratio (0.48): Moderate. Harm adjudication involves genuine legal work (evidence of harm, causal reasoning, precedent application) so the ratio is not dominated by performative content. However, some theater exists: risk assessment signaling by adjudicators, performative victim-consideration by institutions, and reputation management by speakers all contribute.",
+    "perspectival_gap": "The constraint exhibits a four-way perspectival split. The speaker at threshold sees a snare: once a harm claim reaches adjudicated credibility, exit is closed off and suppression is near-total. Marginalized communities with unrecognized harm claims see a snare: their harms are extracted (silence) while more powerful actors' harms trigger protection. Established speakers with threshold-protected claims see a tangled rope: they experience both coordination benefit (protection from weaponized speech) and extraction benefit (expanded authority to suppress competitors). The state enforcement apparatus sees a rope: the harm-threshold rule provides coordination criteria and institutional legitimacy. The adjudicating authority sees a tangled rope: it coordinates threshold determination while accumulating institutional power. The absolutist tradition sees itself as mountain (permanent principle) but is actually piton (formally preserved, functionally hollowed). The analytical observer risks seeing mountain (harm prevention is a natural limit on speech) but the structural data reveals false summit (the rule has identifiable beneficiaries and power-asymmetric application).",
+    "directionality_logic": "Directionality (d) is determined by each agent's structural relationship to the constraint. Speakers at threshold and marginalized communities with unrecognized harm claims are trapped victims: d ≈ 0.92-0.98, producing maximum experienced extractiveness. Established speakers with recognized harms are mobile beneficiaries: d ≈ 0.10-0.25, producing low or negative extraction experiences — they experience the constraint as coordinating protection. The state and adjudicatory authority are institutional beneficiaries with arbitrage: d ≈ 0.05-0.15, producing institutional benefits (clear standards, legitimacy). The analytical observer is analytical: d ≈ 0.72 (canonical fallback), producing moderate experienced extraction of the observer's analytical framing by the constraint's natural-law claim. The beneficiary declarations (harm victims and vulnerable groups as nominal beneficiaries; speakers at threshold and marginalized communities as nominal victims) route through the derivation chain to produce high d for the trapped/powerless perspectives and low d for the arbitrage perspectives, which produces the perspectival gap observed.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by showing that the harm-threshold rule is a genuine hybrid: it coordinates legitimate state interests in preventing concrete demonstrable harms (coordination function) while asymmetrically distributing speech suppression according to speaker power (extraction function). Neither function dominates; both are structural. The tangled_rope classification captures this: the constraint is not pure coordination (rope) because it produces systematic asymmetric harm, and it is not pure extraction (snare) because it does coordinate legitimate harm prevention. The classification is contingent on the threshold definition — if thresholds are power-neutral (equally applied to all speaker groups), extractiveness would be lower and the constraint would move toward rope. If thresholds are power-saturated (applied asymmetrically), extractiveness would rise toward snare. The measurement trajectory (extractiveness rising from 0.35 to 0.58 over 20 years) suggests the rule is functioning with increasing asymmetry: as threshold case law accumulates, patterns of unequal application become entrenched.",
+    "kernel_context": "This constraint instantiates the HARM-THRESHOLD READING of the contested kernel 'speech_protection_kernel'. The reading codifies speech protection as conditional on absence of demonstrable harm to victims, creating a boundary rule that permits state intervention when harm thresholds are met. Four sibling readings instantiate alternative framings: the absolutist_reading (no threshold — speech protected unconditionally), the marketplace_reading (truth crowd-sorts harm claims without state intervention), the dignity_reading (harm includes identity attack and recognition injury, broadening protected categories), and the democratic_participation_reading (harm is assessed by impact on collective self-governance capacity). Each reading produces different beneficiary sets, different victim groups, and different extractiveness values. The harm-threshold reading structures the kernel as: KERNEL COMMITMENT = 'Speech is a fundamental right constrained by the presence of identifiable, demonstrable harm.' BOUNDARY RULE = 'Protection ends when harm claim crosses adjudicated threshold.' EXTRACTED CONCEPT = 'Demonstrable harm' (whose definition determines the protection boundary). The structural delta from other readings: (1) narrower protection boundary than absolutist (harm threshold introduces permissible restriction); (2) broader unprotected category than marketplace (state role in harm determination, not crowd-truth); (3) narrower harm definition than dignity reading (requires demonstrable harm, not identity injury); (4) narrower than democratic participation (harm to individual victims vs. harm to collective governance). This reading's extractive risk is highest in threshold definition and adjudication — power asymmetries in who gets their harms recognized produce the systematic asymmetry observed in perspectives."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "absolutist_reading",
+      "marketplace_reading",
+      "dignity_reading",
+      "democratic_participation_reading"
+    ],
+    "dual_formulation_note": "This constraint is one reading of a contested kernel: speech_protection_kernel. The harm-threshold reading instantiates a specific institutional boundary rule (speech protection conditional on absence of demonstrable harm). The sibling readings (absolutist, marketplace, dignity, democratic_participation) instantiate alternative boundaries on the same kernel. These are not the same constraint viewed from different angles — they are distinct constraints with different ε values, different beneficiary/victim structures, and different institutional mechanisms. The network links document the kernel-based family relationship. The harm-threshold reading has extractiveness 0.58; the absolutist reading has extractiveness ≈0.15 (minimal extraction by definition); the dignity reading has extractiveness ≈0.72 (broader harm category produces more threshold disputes and more extraction opportunity); the democratic participation reading has extractiveness ≈0.45 (variable depending on how democratic harm is measured)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.68
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "medium_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "speech_protection_kernel"
+    ]
+  }
+}

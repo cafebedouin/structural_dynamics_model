@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "hybrid_atrophy_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_hybrid_atrophy_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.62,
+    "theater_ratio": 0.76,
+    "claimed_type": "piton",
+    "human_readable": "Ritual Atrophy: Mourning Practice Inheriting Survival-Competence Structure",
+    "topic_domain": "religious_studies/collective_memory/ritual_practice",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "in_group_identity_maintenance",
+      "historical_ancestral_survival"
+    ],
+    "victims": [
+      "present_generation_participants"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "piton",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "label": "The Ritual Participant (Identity Fused)",
+      "comment": "PERSPECTIVE 1: RITUAL PARTICIPANT (PITON, IDENTITY-LOCKED) — The present-generation participant is structurally mobile (could decline participation without legal or material barrier) but identity-fused with the ritual as a marker of group belonging. Exit would require abandoning the community identity that constitutes the self. The ritual persists through internalized obligation rather than external coercion. High theater (performative mourning) masks the atrophy of original adaptive function (survival coordination). The constraint is experienced as burden without payoff — the costs of participation are salient, the benefits (ancestral protection, group cohesion through shared memorial) are not."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Religious Institution",
+      "comment": "PERSPECTIVE 2: RELIGIOUS INSTITUTION (ROPE) — The institution perceives the ritual as pure coordination: it coordinates group identity, maintains continuity with ancestral tradition, and solves the collective action problem of shared mourning. The institution benefits from the ritual's role in binding members and legitimating institutional authority through custodianship of tradition. From the institutional perspective, the constraint is a coordination mechanism with minimal extraction — it generates social cohesion at low cost to the institution itself."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Dual-Practice Adherent (Modernity-Embedded)",
+      "comment": "PERSPECTIVE 3: DUAL-PRACTICE ADHERENT (TANGLED ROPE) — Adherents embedded in modernity face constrained exit: leaving the ritual risks ostracism, loss of family connection, breach of group identity. They also derive some benefit from ritual participation (mourning processing, social connection) but experience the costs as disproportionate to observable benefits. This perspective sees both coordination (genuine mourning function) and extraction (cost of time, emotional labor, adherence to tradition without adaptive payoff in modern contexts). Experienced extractiveness is moderate because the agent has some agency and some genuine coordination benefit, but also bears asymmetric costs."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Coerced Participant (Embedded in Closed Community)",
+      "comment": "PERSPECTIVE 4: COERCED PARTICIPANT (SNARE, TRAPPED) — In communities with total institutional control (some fundamentalist or closed communities), participants face material barriers to exit: economic dependency on the community, geographic isolation, restricted information about alternatives. For these agents, the ritual is experienced as pure extraction — costs without perceived benefit, enforced through ostracism and economic coercion. The constraint is a snare because suppression is structural and exit is materially impossible."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Modernist Reformer (Sunset Logic)",
+      "comment": "PERSPECTIVE 5: MODERNIST REFORMER (SCAFFOLD) — Reform movements within religious communities see the atrophied ritual as a temporary coordination problem with a structural sunset. As education increases, communication technology expands, and alternative mourning practices proliferate, the ritual's role as a coordination mechanism decays — participants no longer need it to maintain group identity (social media, diaspora networks, virtual participation enable this). The reformer perspective sees the ritual as gradually being replaced by more efficient coordination mechanisms. Low effective extraction because the agent perceives agency and a clear exit path."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN, ANALYTICAL) — From a civilizational/universal perspective, rituals are immutable features of human collective meaning-making. All cultures preserve ritual form even when function atrophies, and this persistence is treated as a natural law of cultural inheritance. The constraint is classified as mountain because it appears as an irreducible feature of how humans mark transitions and maintain identity. However, the structural data contradicts this: the ritual has identifiable beneficiaries (in-group identity, institutional authority) and victims (present-generation bearing costs), indicating this is a false summit — a contingent institutional arrangement naturalized as cultural necessity."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is this constraint fundamentally about atrophied survival coordination (original adaptive function), mourning practice (current function), or identity maintenance (meta-function of both)? Which reading is structurally primary?",
+      "resolution_mechanism": "Historical analysis of ritual origin and transformation; ethnographic documentation of whether participants cite survival, mourning, or identity as the actual reason for continuation; measurement of whether ritual alteration for mourning efficiency would be accepted or rejected by community",
+      "impact": "If survival-competence reading is primary: ε would be higher (0.55+), type would be snare (beneficiaries are historical, victims are present). If mourning-practice reading is primary: ε would be lower (0.25-0.35), type would be rope or scaffold. If identity-maintenance reading is primary: ε stays moderate (0.38), type is piton — current reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Which of three sibling readings captures the kernel's structural force: survival adaptation, mourning function, or identity constitution"
+    },
+    {
+      "id": "theater_ratio_calibration",
+      "question": "How much of the ritual's performative content (0.76 theater_ratio) is functional mourning (necessary emotional processing) versus pure theater (performative identity assertion)?",
+      "resolution_mechanism": "Comparison of ritual participant self-reports (perceived functional benefit vs performance obligation); ethnographic observation of whether ritual modifications that reduce theater but preserve mourning function are accepted or rejected; measurement of psychological outcomes (grief processing, social bonding) with theater-reduced versions",
+      "impact": "If theater is mostly performative: theater_ratio justified, piton classification confirmed. If theater is mostly functional: theater_ratio overstated, constraint reclassifies toward rope or tangled_rope. This directly determines whether the constraint is atrophied (piton) or still functionally viable (rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of ritual performance that is functional mourning versus performative identity assertion"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the measured suppression (0.62) structural (external social/economic penalties for non-participation) or internalized (identity-lock that creates psychological barriers even without external enforcement)?",
+      "resolution_mechanism": "Ethnographic comparison: communities with strong external enforcement (ostracism, economic exclusion for non-participation) versus communities with internalized obligation; longitudinal tracking of whether suppression persists after emigration or geographic exit from the community; measurement of participant distress with participation versus willingness to exit if external penalties were removed",
+      "impact": "If mostly structural: exit_options would be constrained or trapped (not identity_locked), and the constraint would show lower suppression in diaspora populations. If mostly internalized: identity_locked exit is correct, and the constraint would show persistent suppression even in high-exit-option environments. This determines whether the constraint binds through identity or material coercion.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural (external enforcement) or internalized (identity fusion)"
+    },
+    {
+      "id": "beneficiary_historical_vs_present",
+      "question": "Who actually benefits from this constraint in the present day? The institution (identity maintenance, authority legitimation) or the historical ancestors (their memory is preserved)?",
+      "resolution_mechanism": "Analysis of institutional resource allocation (time, money, authority invested in ritual maintenance); measurement of whether ritual beneficiaries are identifiable present-day agents with agency or abstractly distributed across 'tradition'; ethnographic documentation of whether community members see themselves as benefiting or burdened",
+      "impact": "If present institutional beneficiaries are identifiable: ε justified (0.38), victims are clear (present participants), constraint is tangled rope or snare. If historical ancestors are the nominal beneficiaries: beneficiary is abstract/non-agent, constraint reclassifies toward mountain (immutable duty) or snare (no present beneficiary). This affects whether the constraint is extractive (has present beneficiaries) or mourning (no present extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether beneficiary is present institutional actors or abstract historical inheritance"
+    },
+    {
+      "id": "modernity_timeline_for_ritual_sunset",
+      "question": "Is the constraint actually undergoing ritual sunset (scaffold logic) or is it stable/even strengthening in the present era despite being atrophied?",
+      "resolution_mechanism": "Longitudinal measurement: participation rates, ritual adherence strictness, theater_ratio over 50+ years; comparison of old vs young participant cohorts; measurement of ritual modification rates (are communities adapting the ritual or enforcing traditional form?); documentation of whether diaspora communities maintain, modify, or abandon the ritual",
+      "impact": "If sunset is real: scaffold perspective is correct, chi should decline over interval, measurements should show theater_ratio rising and then declining as alternatives take hold. If constraint is stable or strengthening: it is not a scaffold but a persistent piton or snare; the 'atrophy' is in function, not force.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the constraint is undergoing actual sunset or is stable/strengthening despite atrophied function"
+    },
+    {
+      "id": "identity_locked_versus_constrained_exit",
+      "question": "For the primary victim (present-generation participant), is exit truly identity-locked (self-concept constituted through ritual participation) or merely constrained by high cost (social ostracism, family rupture)?",
+      "resolution_mechanism": "In-depth ethnographic interviews: do participants describe exit as unthinkable (identity) or as thinkable-but-costly (constrained)? Do participants who have exited report identity dissolution or role loss? Do participants in high-option-to-exit environments (diaspora, urban) still participate even when external barriers are removed? Measurement of whether alternative identity frameworks (secular identity, different community membership) are available to participants.",
+      "impact": "If identity-locked: exit_options classification correct, suppression is partly internalized, constraint binds through identity frame. If constrained: exit_options should downgrade to constrained (not trapped), suppression is structural, constraint binds through material cost. This affects whether exit is structurally possible or psychologically impossible.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether victim's binding is through identity fusion (identity-locked) or high external cost (constrained exit)"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.76
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "The constraint describes a ritual that originated as a survival-coordination mechanism — marking kin membership, encoding ecological knowledge, regulating grief-induced behavioral disruption — but has atrophied under modernity while persisting through institutional and identity-based enforcement. The ritual structure remains elaborate and demanding (high suppression, high theater), but the original adaptive payoff (survival coordination in pre-modern contexts) is no longer salient to present-generation participants. Instead, the ritual functions (or is claimed to function) as mourning practice and identity maintenance. This reading treats the constraint as a piton — a former functional mechanism (whether primarily survival-coordination or coordination-with-extraction) that persists through theatrical maintenance and identity-lock despite atrophied primary function. The theater_ratio increases over the interval as modernity offers alternative mourning and identity frameworks, making the ritual's functional necessity less obvious and its performative burden more visible. Extractiveness remains moderate because genuine coordination benefits (mourning processing, social connection) persist alongside the costs, but the ratio has shifted — modernity has made the extraction mechanism more salient.",
+    "key_agents": [
+      "Present-generation participants: Primary victims (powerless/identity-locked or moderate/constrained) — inherit the ritual without adaptive payoff in modern context; bear time, emotional, and opportunity costs",
+      "Religious institution: Primary beneficiary (institutional/arbitrage) — maintains authority through custodianship of tradition; uses ritual to bind members and legitimize institutional legitimacy",
+      "In-group identity: Secondary beneficiary (abstract) — ritual serves as boundary marker and identity assertion; modern alternative identity frameworks make this function less compelling",
+      "Historical ancestors: Nominal beneficiary (abstract/non-agent) — their memory is preserved, but preservation is enforced on present agents rather than negotiated",
+      "Modernist reformers: Secondary agents (organized/mobile) — see the ritual as a coordination problem with structural sunset; building alternative mourning and identity frameworks",
+      "Closed-community members: Secondary victims (powerless/trapped in some contexts) — face material barriers to exit; experience pure extraction through total institutional control",
+      "Analytical observer: Civilization-scale perspective (analytical/analytical) — risks naturalizing contingent institutional arrangement as immutable cultural law"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint involves genuine coordination benefits (mourning processing, social connection, identity affirmation) alongside asymmetric costs (participants bear more labor than beneficiaries receive direct payoff from). The baseline (0.28) reflects that in pre-modern contexts, the ritual genuinely solved survival-coordination problems with lower theater; the present value (0.38) reflects that modern context has exposed the extraction mechanism while the coordination function persists. Theater ratio (0.76): High and rising. In pre-modern contexts, the ritual's performative and functional elements were integrated — marking transitions and encoding survival knowledge simultaneously. Under modernity, the functional necessity has declined while the performative burden has increased. Participants follow elaborate forms (high theater) without clear understanding of original adaptive purpose (atrophy). The rise from 0.52 to 0.76 over 40 time units indicates that the ritual is becoming increasingly performative relative to functional — the atrophy is measurable through rising theater. Suppression (0.62): Moderate-high. Barriers to exit include social ostracism (structural), economic dependency on community (structural for some contexts), and identity-lock (internalized). The suppression is not total because many modern contexts allow mobility-with-cost rather than absolute confinement. The ambiguity between structural and internalized suppression is routed to an omega variable.",
+    "perspectival_gap": "This constraint demonstrates a perspectival chasm between the institution (seeing pure coordination) and participants (seeing burden without payoff). The institution's rope classification reflects its genuine coordination function and net benefit. The participant's piton or snare classification reflects the atrophy of original function combined with persistent cost. The reformer's scaffold perspective sees the constraint as a temporary coordination problem being displaced by more efficient alternatives. The analytical observer's mountain classification risks naturalizing what is actually a contingent institutional arrangement by treating ritual persistence as immutable. The gap reveals that the same constraint structure produces fundamentally different experienced extractiveness depending on whether one's identity or authority is constituted through the ritual versus inherited as burden.",
+    "directionality_logic": "Each perspective's directionality is determined by the agent's structural relationship to the ritual's actual (not nominal) benefits. The institution derives clear benefit from ritual maintenance (identity binding, authority legitimation) with arbitrage-level exit freedom — low d. The participant derives mixed benefit (mourning processing, identity affirmation) but bears asymmetric costs (time, emotional labor, adherence to tradition) and faces constrained or identity-locked exit — high d. The ancestor (nominal beneficiary) does not exist as an agent; the preservation benefit accrues to the institution, not to the historical entity. This concentration of benefit in present institutional actors and diffusion of cost across participants is the extraction mechanism. The powerless/trapped or powerless/identity-locked participant experiences maximum d (0.95-1.0) because they bear costs without receiving agent-level benefit and face insurmountable exit barriers. The moderate/constrained participant experiences moderate d (0.60-0.75) because they have some agency and some benefit, but costs are asymmetric. The institutional beneficiary experiences low d (0.05-0.20) because they benefit from the constraint and have easy exit if desired.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by distinguishing three analytically separate claims: (1) the ritual originated as survival-coordination (possibly true; not evaluated here), (2) the ritual currently functions as mourning practice (partially true; mourning is one function), (3) the ritual's persistence is explained by genuine continued coordination benefits (false for many participants; persistence is explained by identity-lock and institutional enforcement). The piton classification correctly captures the structure: the ritual persists through theatrical maintenance and identity-enforcement despite atrophied primary function. The constraint is NOT a rope (pure coordination) because the costs are asymmetric and the original adaptive rationale is no longer salient. The constraint is NOT a snare (pure extraction) because the mourning and identity-affirmation functions are real. The constraint IS a piton because the performative burden exceeds the functional benefit, and persistence depends on institutional and identity-level enforcement rather than efficient coordination. The mandatrophy is resolved by recognizing that 'ritual survival under modernity' is analytically distinct from 'functional coordination mechanism' — the ritual survives not because it coordinates efficiently but because it binds identities and legitimates institutions.",
+    "kernel_context": "This constraint is ONE READING of a contested kernel: catastrophe_memory_preservation. The kernel is the ambiguous claim that rituals preserve collective memory of catastrophe and function as adaptive survival mechanisms. Three sibling readings instantiate different structural claims: (1) survival_competence_reading treats the ritual as a currently-active coordination mechanism for managing catastrophe-related knowledge and behavior (ε would be ~0.25, type rope or tangled_rope); (2) mourning_practice_reading treats the ritual as purely a mourning mechanism with no survival-coordination function (ε would be ~0.15, type rope); (3) hybrid_atrophy_reading (this constraint) treats the ritual as a former survival-coordination or coordination-with-extraction mechanism that has atrophied to mourning practice while persisting through identity-lock and institutional enforcement (ε=0.38, type piton). The three readings differ on WHAT THE KERNEL ACTUALLY DOES in the present day. Do survivors/descendants continue to use the ritual for survival-competence (reading 1), for mourning only (reading 2), or for identity maintenance of a former survival practice (reading 3)? The structural delta is significant: reading 1 produces lower ε and coordination types; reading 2 produces lowest ε and rope; reading 3 produces higher ε and piton/snare. This constraint instantiates reading 3 exclusively. The committer structure (which reading is correct) is unresolved and routed to omega variables."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "survival_competence_reading",
+      "mourning_practice_reading",
+      "institutional_authority_through_tradition"
+    ],
+    "dual_formulation_note": "The catastrophe_memory_preservation kernel decomposes into three structurally distinct constraint stories with different ε values and types. This reading (hybrid_atrophy) treats the ritual as a piton — a former functional mechanism now persisting through identity-lock and institutional enforcement. The sibling readings treat the same ritual as a current survival-coordination mechanism (rope/tangled_rope) or as a mourning mechanism (rope). The three stories share the same observational domain but diverge in what they claim the ritual actually does. Each story has its own ε, beneficiary/victim structure, and classification. The network links allow the contamination system to recognize that these are competing readings of the same kernel, not independent constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "piton",
+    "downstream_of": [
+      "catastrophe_memory_preservation"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true
+  }
+}

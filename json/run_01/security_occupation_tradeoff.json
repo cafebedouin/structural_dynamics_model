@@ -1,0 +1,258 @@
+{
+  "header": {
+    "constraint_id": "security_occupation_tradeoff",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_security_occupation_tradeoff"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Security-Occupation Tradeoff: Territorial Legitimacy and Coercive Control",
+    "topic_domain": "political_theory/international_law/territorial_sovereignty",
+    "requires_active_enforcement": true,
+    "mandatrophy_resolved": true,
+    "beneficiaries": [
+      "occupying_military_establishment",
+      "occupied_territory_security_apparatus"
+    ],
+    "victims": [
+      "civilian_population_under_occupation",
+      "international_legal_order",
+      "self_determination_principle"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Occupied Civilian Population",
+      "comment": "PERSPECTIVE 1: OCCUPIED CIVILIAN (SNARE) — Structurally trapped. Movement restricted by checkpoints, curfews, and permit systems. Cannot exit the territorial jurisdiction without occupying authority permission. Suppression is total at the immediate horizon: military law supersedes civilian law; security rationales override due process. High experienced extraction with minimal coordination benefit — the occupying force justifies control as security necessity, but the civilian experiences only coercion with no exit pathway."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Occupied Polity (Palestinian Authority / Gaza Administration)",
+      "comment": "PERSPECTIVE 2: OCCUPIED POLITY (TANGLED ROPE) — Organized actors with constrained exit. The PA maintains some administrative coordination functions (civil services, law enforcement in Area A/B zones) that nominally serve the civilian population, yet these functions are embedded within the occupation's security apparatus and dependent on continued cooperation with the occupying authority. Genuine coordination (shared infrastructure, joint security committees) coexists with asymmetric extraction (ultimate authority retained by occupier; budget and policy dependent on occupier approval). Exit to full sovereignty is politically demanded but militarily and economically constrained."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Occupying Military Establishment",
+      "comment": "PERSPECTIVE 3: OCCUPYING MILITARY (ROPE) — Institutional actor with maximum exit optionality (arbitrage). Can withdraw, redeploy, or adjust the scope of occupation at state decision. Experiences the constraint as a coordination problem to solve: security threats require territory control; civilian administration requires some degree of order and cooperation. The military sees itself as solving a genuine coordination problem (physical security, border control) while the occupied perceive extraction. From the occupier's institutional perspective, the constraint is administrative necessity with coordination functions — the snare emerges only from other perspectives."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Occupying State Political Establishment",
+      "comment": "PERSPECTIVE 4: OCCUPYING STATE POLITICS (TANGLED ROPE) — Institutional but constrained exit. Maintains genuine coordination functions (territorial integration, resource allocation, demographic management) while also extracting political benefit (territorial control, settlement expansion, geostrategic positioning). Exit would require concessions on security claims and territorial claims — politically costly domestically. Genuine coordination coexists with asymmetric benefit extraction. More constrained than the military (political costs of withdrawal) but less trapped than occupied civilians."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The International Legal Order (UN, ICC, ICJ)",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL LEGAL ORDER (PITON) — Institutional but degraded. The occupation violates international humanitarian law and self-determination norms (high theater via legal proceedings, advisory opinions, resolutions). Yet enforcement mechanisms are absent, and the constraint persists through institutional inertia: the Security Council is gridlocked, the ICC lacks enforcement authority, and alternative dispute mechanisms have failed. The international legal order's condemnation is substantially performative — the ritual of legal challenge continues despite zero functional capacity to alter the constraint. Theater ratio high (0.60+) because legal procedures create the appearance of enforcement without enforcement capacity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Realist Analytical Observer (Security Imperative)",
+      "comment": "PERSPECTIVE 6: REALIST OBSERVER / SECURITY NECESSITY (MOUNTAIN) — From a civilizational/universal perspective, the security-occupation tradeoff appears as an immutable constraint of political economy: territorial control is necessary for military security; security dilemmas generate automatic coercive responses; the logic is structural rather than contingent. This perspective naturalizes the occupation as a necessary consequence of geopolitical reality. However, the structural data reveals this as a false summit candidate — identifiable beneficiaries (military, political establishment) gain from naturalizing the occupation as inevitable, and the suppression mechanisms are contingent on institutional arrangements, not laws of nature."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Settler Establishment",
+      "comment": "PERSPECTIVE 7: SETTLER ESTABLISHMENT (TANGLED ROPE) — Powerful actors with mobile exit but declining willingness to exercise it. Benefits from occupation (territorial acquisition, resource access, security provided by military). Provides coordination benefit to the occupying state (demographic facts on the ground, political constituency for continued occupation). Yet increasingly constrained as international pressure, internal Palestinian resistance, and global delegitimization increase exit costs. Genuine coordination with the occupying state coexists with extraction from the occupied population."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "shared_kernel_or_distinct_kernels",
+      "question": "Is this a single contested kernel (territorial legitimacy) read differently by two parties, or two entirely distinct kernels with no shared normative substrate?",
+      "resolution_mechanism": "Test for minimal coherence: Can both parties' legitimacy claims be expressed in a shared language of territorial law, self-determination, and security? If yes, one kernel with competing readings. If no, distinct kernels require separate constraint stories. Empirical test: Do peace negotiations operate on a single kernel (border definitions, sovereignty arrangements) or do they fail because the parties cannot even agree on what is being negotiated?",
+      "impact": "If one contested kernel: both perspectives operate on a shared normative substrate (international law, territorial principle) and could theoretically converge on interpretation. If distinct kernels: no shared substrate; no interpretation can reconcile them; the constraint decomposes into two separate stories with incomparable legitimacy grounds. Classification strategy changes: one kernel → one constraint story; distinct kernels → two constraint stories with network link.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether territorial legitimacy is one contested kernel or two distinct kernels"
+    },
+    {
+      "id": "extractiveness_temporal_drift",
+      "question": "Has the extractiveness of the occupation increased over the 55+ year timeline (1967-2026), or has it remained structurally constant with oscillations in intensity?",
+      "resolution_mechanism": "Temporal analysis of suppression mechanisms (checkpoint density, permit requirements, settlement expansion, incitement control), theater ratio (UN resolutions, legal processes, rhetorical justifications), and base extractiveness (resource extraction, military expenditure burden, civilian harm rates). Compare era structures: 1967-1987 (military occupation), 1987-2000 (first intifada and negotiation), 2000-2005 (second intifada and Gaza withdrawal), 2005-present (fragmented occupation). If extractiveness trends upward: snare classification gains support. If constant with oscillations: tangled_rope gains support.",
+      "impact": "If upward drift: treat as evidence of escalating extraction mechanism (rent-seeking layered onto coordination). If constant: treat as evidence of hybrid structure where coordination and extraction coexist structurally, not temporally sequenced. Measurement interval and omega resolution directly inform the mandatrophy resolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether occupation extractiveness increases or oscillates structurally"
+    },
+    {
+      "id": "security_claim_empirical_validity",
+      "question": "To what degree does the occupying state's security claim (that occupation is necessary to prevent attacks on civilians) correspond to measurable security outcomes? Is the security improved by occupation, or does the occupation create the threat dynamic it claims to prevent?",
+      "resolution_mechanism": "Time-series analysis comparing security incident rates under different occupation intensity levels; counterfactual modeling of security outcomes without occupation; analysis of attack patterns relative to occupation measures (checkpoints, settlements, military presence). Does reducing occupation intensity (e.g., Area A autonomy) correlate with increased security threats, or with decreased threats?",
+      "impact": "If security claim is empirically grounded: occupation qualifies as genuine coordination mechanism (security) with extraction overlay (control benefit). If security claim is inconsistent with data: occupation is pure extraction justified by false necessity claim (reclassifies toward snare, reduces rope coordination component). This determines whether the beneficiary framing (security coordination) is genuine or theater.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether occupation's security claims are empirically valid or create the threat dynamics they claim to prevent"
+    },
+    {
+      "id": "false_summit_mountain_detection",
+      "question": "Is the realist observer's 'security necessity' perspective a genuine natural law (security dilemmas are structural), or a contingent institutional arrangement that benefits specific actors?",
+      "resolution_mechanism": "Historical comparative analysis: Do other polities facing comparable security threats resort to territorial occupation, or do they use alternative mechanisms (international alliance, deterrence, intelligence, border control without internal occupation)? Does the specific geographic/historical context (Palestinian-Israeli conflict) differ fundamentally from other security dilemmas, or is the occupation a contingent choice within a range of security strategies?",
+      "impact": "If security dilemma is universal: mountain classification is appropriate; security-occupation link is immutable. If occupation is contingent: mountain is false summit; the realist perspective naturalizes what is actually a political choice; the constraint reclassifies to snare or tangled_rope from the analytical observer's perspective. FSM engine will detect beneficiaries (military establishment, political leadership) and trigger reclassification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether security necessity is a natural law or a false summit naturalizing contingent institutional arrangements"
+    },
+    {
+      "id": "legitimacy_incommensurability",
+      "question": "Are the two polities' legitimacy claims logically incommensurable (no shared truth conditions, no possible integration), or merely incompatible (mutually exclusive but expressible in a common language)?",
+      "resolution_mechanism": "Linguistic and philosophical analysis: Can both claims be made true in the same speech community? Can they be resolved by new evidence, historical discovery, or reinterpretation? If incommensurable: the constraint decomposes into two stories with distinct kernels. If merely incompatible: one story with two readings of a contested kernel is appropriate.",
+      "impact": "If incommensurable: current story is incomplete; generate two separate constraint stories (Israeli security-occupation_legitimacy_claim and Palestinian territorial_self_determination_legitimacy_claim) with network link but distinct ε values, distinct beneficiary/victim structures, and distinct analytical coherence. If merely incompatible: one story with explicit kernel_context noting the competing readings.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether territorial legitimacy claims are logically incommensurable or merely incompatible"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "How much of the measured suppression (0.75) is structural (military checkpoints, legal restrictions, resource control) versus internalized (internalized powerlessness, normalized coercion, cognitive capture by security narratives)?",
+      "resolution_mechanism": "Post-withdrawal ethnographic analysis (Gaza 2005-2006 period shows some reduction in external suppression; compare civilian behavior/agency trajectories to pre-withdrawal baseline). Psychometric measurement of learned helplessness, cognitive closure, and identity fusion with victimhood narratives. Longitudinal tracking of agency recovery vs. stagnation after removal of structural barriers.",
+      "impact": "If primarily structural: exit from occupation would produce rapid suppression reduction. If substantially internalized: suppression persists after structural barriers are removed; the constraint requires both military withdrawal AND cognitive deprogramming. Classification impact: if internalized, identity_locked exit options become relevant; the occupied polity's classifications shift from purely trapped to identity_locked in some perspectives; mandatrophy resolution becomes more complex.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52,
+      "id_override": "security_occupation_extractiveness_1967"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58,
+      "id_override": "security_occupation_extractiveness_1982"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.65,
+      "id_override": "security_occupation_extractiveness_1997"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68,
+      "id_override": "security_occupation_extractiveness_2007"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 55,
+      "value": 0.68,
+      "id_override": "security_occupation_extractiveness_2022"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "security_occupation_theater_1967"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.42,
+      "id_override": "security_occupation_theater_1982"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.55,
+      "id_override": "security_occupation_theater_1997"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.58,
+      "id_override": "security_occupation_theater_2007"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 55,
+      "value": 0.58,
+      "id_override": "security_occupation_theater_2022"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 55
+  },
+  "commentary": {
+    "narrative_context": "The security-occupation tradeoff structures a decades-long constraint on territorial sovereignty, self-determination, and civilian security across the Israeli-Palestinian conflict. The constraint is defined by the intersection of two competing claims: the occupying state justifies military control of territory as necessary for security against existential threats; the occupied population claims a right to self-determination and freedom from coercive rule regardless of security arguments. This is not a simple extraction mechanism — the occupying military establishment perceives genuine coordination functions (preventing attacks, securing borders, managing demographic control). Yet the same institutional arrangement is experienced as pure coercion (Snare) by the trapped population with no exit options. The constraint exhibits all six classification types from different observer positions, making it a diagnostic case for how indexical classification reveals structural perspectives rather than objective constraint types. The base extractiveness has drifted upward from 0.52 (1967) to 0.68 (2022), suggesting that the coordination component (initial security claim) has given way to extraction component (territorial control, resource extraction, demographic engineering). The theater ratio has similarly increased from 0.35 to 0.58, indicating that legal/diplomatic justifications have become more prominent as direct coercive mechanisms have routinized. This trajectory is consistent with a Snare interpretation: the constraint persists because suppression mechanisms are effective, not because coordination benefits justify the arrangement.",
+    "key_agents": [
+      "Occupied Civilian Population: Primary victim (powerless/trapped) — subject to movement restrictions, permit systems, military law; bears full suppression with minimal exit options; experiences constraint as Snare",
+      "Occupying Military Establishment: Primary beneficiary (institutional/arbitrage) — controls territory, determines security policy, maintains monopoly on force; experiences constraint as coordination solution; classified as Rope",
+      "Occupying State Political Leadership: Secondary beneficiary (institutional/constrained) — gains territorial control and geostrategic positioning; constrained by international pressure and settlement constituency; experiences as Tangled Rope",
+      "Palestinian Authority / Gaza Administration: Organized victim (organized/constrained) — maintains administrative functions within occupation framework; dependent on occupier for authority; constrained by occupation limits; classified as Tangled Rope",
+      "Settler Establishment: Tertiary beneficiary (powerful/mobile) — gains territorial access, resource benefits, military security; classified as Tangled Rope; powerful but increasingly constrained by international pressure",
+      "International Legal Order: Institutional observer (institutional/analytical) — condemns occupation, issues resolutions, maintains legal challenge; lacks enforcement mechanisms; classified as Piton (degraded ritual)",
+      "Realist Analyst: Civilizational observer (analytical/analytical) — sees security necessity as natural law; risks false summit (naturalizing contingent institutional arrangement); classified as Mountain from this perspective"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High, and rising. The initial 1967 value (0.52) reflected genuine security coordination mixed with territorial control extraction. The upward drift to 0.68 reflects that the coordination component (preventing attacks through territorial denial) has become less credible or necessary, while the extraction component (demographic control, settlement expansion, resource access, geostrategic positioning) has become more explicit. The constraint is not primarily a security mechanism anymore — it is a control mechanism justified by security claims. Suppression (0.75): Very high and sustained. Movement restrictions (checkpoints, permit systems, curfews), administrative detention, military law, settlement-imposed resource constraints, and monopoly control over entry/exit. Suppression is not declining over the measurement interval — it has routinized into administrative systems. Theater ratio (0.58 at present, rising from 0.35): Moderate-to-high. The occupation is increasingly justified through legal/diplomatic processes: UN resolutions (performative because unenforced), ICJ advisory opinions (performative because non-binding), peace negotiations (performative because asymmetric power prevents genuine agreement). The theater has grown as direct coercion has become routinized — the occupation no longer needs to be explicitly justified to individual actions; it is embedded in bureaucratic procedure. Claimed type (Tangled Rope): Justified by presence of genuine coordination functions (security, border control, demographic management) coexisting with asymmetric extraction (territorial control, resource extraction, political benefit). The coordination component is real but serving the beneficiary's interests rather than the occupied population's. Mandatrophy resolved: Yes. The constraint resolves mandatrophy by showing that the classification (Tangled Rope) is the correct synthesis: neither pure Rope (ignoring extraction) nor pure Snare (ignoring coordination). The mandatrophy emerges from the perspective gap: the beneficiary sees Rope, the victim sees Snare, the analytical observer risks seeing Mountain (false summit). The Tangled Rope classification captures all three dynamics in one frame.",
+    "perspectival_gap": "Enormous. The occupied civilian experiences the constraint as pure coercion with no exit pathway (Snare, d=0.95) — checkpoints block movement, military law supersedes civilian law, permits determine livelihood access. The military establishment experiences the constraint as a coordination solution to security threats (Rope, d=0.15) — territory control prevents attacks, borders are secured, demographic risks are managed. The political establishment sees Tangled Rope (d=0.45) — genuine coordination (security, territorial integration) coexists with extraction (territorial control, settlement expansion). The international legal order sees Piton (d=0.72) — legality is challenged repeatedly but enforcement is absent; the constraint persists through institutional inertia. The settler establishment sees Tangled Rope (d=0.35) — benefits from occupation while providing coordination function (demographic/political anchoring). The realist observer risks seeing Mountain (d=0.72, mapped to analytical perspective) — security dilemmas are universal structures, occupation is natural necessity. This cascading gap from d=0.15 (beneficiary) to d=0.95 (victim) is the diagnostic signature of the constraint's extractive character: different observers perceive the same phenomenon as coordination (low d) or extraction (high d) based entirely on their structural position relative to it.",
+    "directionality_logic": "Beneficiary derivation: The occupying military establishment is classified as institutional/arbitrage. Arbitrage exit means the military could withdraw, redeploy, or adjust scope at state decision. The institutional power level combined with arbitrage exit produces canonical d=0.00 (full beneficiary). The sigmoid f(d) maps 0.00 → -0.12 (negative effective extraction — the constraint subsidizes this agent). The occupying political establishment is institutional/constrained — constrained by domestic political costs of withdrawal, international pressure, settlement constituencies. Constrained exit + institutional power produces derived d≈0.30, mapped by f(d) → 0.05 (low positive extraction, but much higher than arbitrage). Victim derivation: The occupied civilian is powerless/trapped. Trapped exit means no exit options exist at any cost; movement is controlled by permit, residence is controlled by law, employment is controlled by resource allocation. Powerless power + trapped exit produces canonical d=1.00 (full target). The sigmoid f(d) maps 1.00 → 1.42 (maximum experienced extractiveness). This d=1.00 is the ceiling of the framework — the trapped victim experiences the constraint at maximum intensity. The occupied polity (PA) is organized/constrained — constrained by dependence on occupier for authority, budget, and security cooperation, but organized enough to negotiate limited autonomy. Organized power + constrained exit produces derived d≈0.60, mapped by f(d) → 0.95 (high experienced extraction). The directionality overrides are NOT used here because the derivation chain (beneficiary/victim + power + exit → d → f(d) → chi) produces accurate classification gaps automatically. The perspectival difference between beneficiary (d=0.00-0.30) and victim (d=0.60-1.00) is built into the framework by design.",
+    "mandatrophy_analysis": "The mandatrophy in this constraint is the tension between (1) genuine coordination functions (security coordination, territorial administration, border management) that the occupying state performs and (2) asymmetric extraction (territorial control, resource extraction, political benefit, demographic engineering) that the same institutions accomplish. Neither Rope (coordination-only, classifying at chi ≈ 0.35) nor Snare (extraction-only, classifying at chi ≥ 0.66) captures the hybrid structure. Tangled Rope (chi = 0.40-0.90, requiring both coordination and extraction) is the resolution. The mandatrophy is resolved by acknowledging that the same institutional apparatus serves dual functions: genuine security coordination for the beneficiary population (Israeli civilians), and asymmetric extraction from the occupied population. The constraint is not 'really' one type hiding behind another — it is structurally both, and different observers perceive different weightings based on their position. The rising theater_ratio (0.35 → 0.58) indicates that the coordination justification has become increasingly performative over time: the initial claim was genuine security necessity (coordination argument), but as the constraint has stabilized and extraction mechanisms have become explicit (settlements, resource control, demographic policy), the coordination claim has become more theatrical — security is still invoked but is no longer the primary mechanism maintaining the constraint. This trajectory from genuine coordination (1967) toward extraction-with-performative-coordination (2022) is consistent with the upward extractiveness drift (0.52 → 0.68), suggesting that Snare classification would be more accurate today than Tangled Rope. However, the coordination functions have not disappeared — security threats are still real, border control is still necessary, demographic risks are still managed. The constraint therefore remains Tangled Rope, but with warning that the temporal drift may eventually cross into pure Snare classification if extraction mechanisms continue to accumulate and coordination functions become fully performative.",
+    "kernel_context": "This constraint is generated as ONE reading of a contested kernel: the territorial legitimacy of control over disputed lands. The kernel is: 'What ground establishes legitimate authority over territory — security necessity, historical claim, indigenous presence, international law, demographic majority, military possession, or some synthesis?' Different polities read this kernel differently. The Israeli reading emphasizes security necessity (occupation is justified by threat to civilian population) and historical/religious claim (ancestral connection to land). The Palestinian reading emphasizes self-determination (right to govern own territory) and indigenous presence (continuous habitation and governance prior to 1948). These are readings of the SAME kernel (territorial legitimacy) expressed in different normative languages. Both polities invoke international law but interpret it differently — the occupying state emphasizes UN Security Council authority and right of self-defense (Article 51); the occupied polity emphasizes UN General Assembly resolutions on self-determination and prohibition of territorial conquest (UN Resolution 2625). This story models the constraint as perceived from the INTEGRATED framework of both readings: accepting that BOTH security claims and self-determination claims are valid, and that the occupation creates a structural tension between them that cannot be fully resolved by prioritizing one over the other. The omega variable on shared_kernel_or_distinct_kernels documents the uncertainty: if the polities' legitimacy claims are fundamentally incommensurable (not just incompatible), then this is not one kernel read differently, but two distinct kernels requiring two separate constraint stories. The current story assumes one kernel with competing readings, which justifies the Tangled Rope classification (genuine coordination + asymmetric extraction both present). If the kernel_id resolution determines incommensurability, the story would need to be decomposed into two separate constraint stories (israel_security_occupation_legitimacy and palestine_territorial_self_determination_legitimacy) with network links but distinct ε values and distinct analytical coherence."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "international_humanitarian_law_compliance",
+      "palestinian_state_capacity_development",
+      "israeli_civilian_security_policy"
+    ],
+    "dual_formulation_note": "The security-occupation tradeoff is the primary constraint linking Israeli security policy, Palestinian territorial claims, and international law enforcement. Upstream constraints (historical territorial claims, religious/cultural identity) affect how actors perceive this constraint's legitimacy but do not determine its structure. Downstream constraints (refugee rights, settler expansion, military court jurisdiction) are specific mechanisms within this broader tradeoff. The network defines the ecosystem of related constraints without decomposing the kernel ambiguity."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.6
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true
+  }
+}

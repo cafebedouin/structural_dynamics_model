@@ -1,0 +1,233 @@
+{
+  "header": {
+    "constraint_id": "public_health_primary",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_public_health_primary"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Public Health Intervention Legitimacy (Population Morbidity Reduction Primary)",
+    "topic_domain": "public_health_policy/medical_ethics/constitutional_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "immunocompromised_populations",
+      "high_transmission_environments",
+      "vulnerable_age_groups"
+    ],
+    "victims": [
+      "vaccine_hesitant_individuals",
+      "religious_objection_groups",
+      "medical_contraindication_edge_cases"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Medically Contraindicated Individual",
+      "comment": "PERSPECTIVE 1: MEDICALLY CONTRAINDICATED (SNARE) — Faces binary choice with no escape: accept exclusion from employment/public spaces or accept medical risk. No exit option exists; suppression is structural (cannot work without vaccination despite legitimate medical barrier). This agent experiences maximum extraction of bodily/economic autonomy."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Vaccine-Hesitant Parent",
+      "comment": "PERSPECTIVE 2: VACCINE-HESITANT PARENT (SNARE) — Faces high-cost exit (relocation, private schooling, social isolation) or compliance. Suppression operates through institutional barriers (school exclusion, employment requirements) and epistemic asymmetry (medical expertise concentrated in state apparatus). Extraction manifests as forced medical intervention or deprivation of access. Moderate power gives illusory agency but constrained exit options generate snare dynamics."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Anti-Vaccination Advocacy Organizations",
+      "comment": "PERSPECTIVE 3: ANTI-VAX ADVOCACY (TANGLED ROPE) — Organized agents experience genuine coordination function (disseminating medical information, building epistemic alternatives) alongside extraction (public health authorities suppress counter-narratives, restrict media platforms, exclude these organizations from policy deliberation). Organized power provides some agency; constraints are institutional rather than material. The coordination function (alternative medical expertise claim) is real but contested as to empirical validity."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Immunocompromised Populations",
+      "comment": "PERSPECTIVE 4: IMMUNOCOMPROMISED (ROPE) — Primary beneficiary. High vaccination rates reduce disease exposure, enabling participation in employment and public life that would otherwise be catastrophic health risk. Benefits from herd immunity coordination mechanism. Experiences the constraint as pure coordination — enables baseline functioning. Institutional power and arbitrage exit (can benefit under current regime without cost) generate rope classification."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Public Health Authorities",
+      "comment": "PERSPECTIVE 5: PUBLIC HEALTH AUTHORITIES (TANGLED ROPE) — Institutional actors see genuine coordination function (preventing disease spread, protecting vulnerable populations) alongside asymmetric extraction of bodily autonomy from non-compliant groups. Enforcement mechanisms (employment termination, access restrictions, school exclusion) generate extraction. Authorities benefit from legitimacy derived from measurable mortality reduction. Arbitrage position: they can exit constraints through policy revision without bearing costs of their own policies."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Medical Licensing and Credentialing System",
+      "comment": "PERSPECTIVE 6: MEDICAL CREDENTIALING SYSTEM (PITON) — Maintains performative authority over medical practice through licensing and standards enforcement, increasingly disconnected from actual clinical judgment. Theater manifests in requirement for physician recommendations despite population-level policy override of physician discretion. Degraded function: individual physician expertise is invoked for legitimacy but overridden by population-level protocols. Persists through institutional inertia and regulatory framework coupling."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Natural Immunity and Proportionality Advocates",
+      "comment": "PERSPECTIVE 7: PROPORTIONALITY ADVOCATES (SCAFFOLD) — Organized agents arguing for differential requirements based on prior infection status, age-stratified risk, or medical contraindication. See constraint as temporary coordination failure solvable by risk-proportionate policy. Sunset clause embedded in logic: once population immunity reaches threshold through vaccination + prior infection, universal requirements become unnecessary. Constrained exit but perceives structural exit path."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From civilizational scope, disease transmission imposes unavoidable externalities: unvaccinated individuals increase infection risk to others, and this externality is inherent to epidemiology, not constructed by policy. Individual refusal necessarily imposes costs on the population. This perspective sees the constraint as a natural law of epidemiology: externalities require coordination mechanisms. However, this naturalizes what the committer frame reveals as a reading choice: whether to measure legitimacy through population outcomes (this reading) or through individual bodily autonomy (sibling reading)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "natural_law_vs_reading_choice",
+      "question": "Is the externality structure (unvaccinated → disease transmission → population risk) a natural law of epidemiology, or a policy choice about which harms to measure and which to center?",
+      "resolution_mechanism": "Epistemological analysis: distinguish between empirical facts (disease transmission is real) and policy frame (population morbidity reduction is the legitimacy criterion). The sibling reading (bodily_autonomy_primary) would measure legitimacy through individual consent instead, making identical transmission facts support opposite conclusions.",
+      "impact": "If natural law: mountain classification stands, extraction is necessary cost of coordination. If reading choice: mountain is false summit, constraint reclassifies as snare or tangled_rope depending on whether enforcement mechanisms are justified by chosen legitimacy metric.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether externality structure is natural law or policy reading"
+    },
+    {
+      "id": "harm_quantification_asymmetry",
+      "question": "How do we measure and compare harms: vaccination side effects (rare, distributed across vaccinated population) vs disease transmission risks (concentrated on unvaccinated and their contacts)?",
+      "resolution_mechanism": "Epidemiological data: expected value calculations for each policy option across full risk distribution. Compare mortality/morbidity from vaccine adverse events vs from disease outcomes. Identify which harms are measured and which are externalized.",
+      "impact": "If vaccine harms are negligible: snare classification of unvaccinated strengthens (they bear full externality cost). If vaccine harms are material: tangled_rope classification strengthens (mutual harm distribution). High measurement uncertainty here drives extractiveness uncertainty.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quantification and weighting of distributed vaccine harms vs concentrated disease risks"
+    },
+    {
+      "id": "enforcement_proportionality_drift",
+      "question": "Do enforcement mechanisms (employment termination, school exclusion, access restrictions) remain proportionate to measurable disease risk reduction, or have they drifted beyond epidemiological justification into punitive territory?",
+      "resolution_mechanism": "Temporal analysis: track enforcement severity over time relative to (a) disease prevalence, (b) vaccination coverage, (c) vaccine efficacy data, (d) alternative risk mitigation measures. Identify lag between changing epidemiology and policy revision.",
+      "impact": "If proportionality maintained: tangled_rope with genuine coordination function. If proportionality has drifted: snare classification strengthens, theater_ratio rises (extraction continues despite epidemiological justification collapse). This is the key mandatrophy mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether enforcement mechanisms remain proportionate to epidemiological evidence"
+    },
+    {
+      "id": "medical_contraindication_boundary",
+      "question": "How are legitimate medical contraindications identified and exempted? Is the boundary determined by individual physician judgment, population-level studies, or algorithmic screening?",
+      "resolution_mechanism": "Policy analysis: compare stated contraindication criteria across jurisdictions and time periods. Identify cases where individual physician assessment conflicts with population-level policy. Track exemption approval rates and appeal procedures.",
+      "impact": "If physician judgment controls: snare classification of contraindicated individuals weakens (they have exit path via medical exemption). If population-level policy controls: snare classification strengthens (individual clinical factors are overridden). This determines whether trapped classification is accurate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Boundary determination for medical contraindications and exemption procedures"
+    },
+    {
+      "id": "kernel_reading_sibling_tension",
+      "question": "This constraint instantiates the 'public_health_primary' reading of the legitimate_health_intervention kernel. The bodily_autonomy_primary sibling reading would declare unvaccinated individuals as beneficiaries (exercise of autonomy) and immunocompromised populations as partial victims (constrained by others' autonomy choices). How should the framework handle these inversions?",
+      "resolution_mechanism": "Cross-reading comparison: generate bodily_autonomy_primary story with inverted beneficiary/victim declarations. Compare ε, χ, and classification across readings. The framework handles this through constraint decomposition — two stories, two constraint_ids, linked via network.affects_constraints. This is not observable-dependence (which would be violation of ε-invariance); it is kernel reading choice (which is legitimate).",
+      "impact": "If readers treat both constraints as equally valid: constraint stories function as epistemic devices revealing policy choice rather than discovering natural fact. If readers privilege public_health_primary: constraint story naturalizes one reading while suppressing sibling, instantiating the false summit.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "How constraint framework handles kernel reading inversions and legitimacy metric choice"
+    },
+    {
+      "id": "epistemic_authority_closure",
+      "question": "Does the exclusive grant of epidemiological authority to public health agencies (suppressing alternative medical expertise, restricting information from vaccine-hesitant physicians, excluding dissenting experts from policy deliberation) constitute necessary coordination or extractive suppression of legitimate alternatives?",
+      "resolution_mechanism": "Comparative epistemology: identify claims made by public health authorities that have been contradicted by subsequent evidence (e.g., vaccine sterility claims, duration of immunity, variant susceptibility). For each reversal, determine whether alternative experts were suppressed for making correct early claims.",
+      "impact": "If authority claims are consistently borne out by evidence: epistemic monopoly is coordination function, suppression is legitimate. If authority claims are repeatedly contradicted: suppression of alternatives generates extraction masquerading as coordination. High impact on theater_ratio and suppression magnitude.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether epistemic authority closure is necessary coordination or extractive expertise monopoly"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "This constraint story models ONE READING of the contested kernel 'legitimate_health_intervention' — specifically, the 'public_health_primary' reading that derives legitimacy from measurable reduction in population-level morbidity and mortality, and that frames individual refusal as externality imposition. Under this reading, unvaccinated individuals are victim-classified (bearing externality costs they impose, and bearing suppression costs of enforcement), while immunocompromised and high-transmission-risk populations are beneficiary-classified (experiencing protection via herd immunity coordination). The constraint exhibits tangled_rope structure: it possesses a genuine coordination function (preventing disease spread among vulnerable populations) alongside asymmetric extraction (employment termination, school exclusion, access restrictions applied to unvaccinated individuals). The extractiveness has risen substantially over the measurement interval (from 0.15 at policy initiation to 0.58 at peak enforcement), reflecting drift from epidemiologically-justified restrictions toward enforcement mechanisms that persist despite reduced disease prevalence. Theater ratio remains moderate (0.48) because the constraint retains empirical grounding in transmission science — it is not yet a purely performative piton — but rising theater indicates increasing disconnection between stated epidemiological justification and actual enforcement patterns. The kernel reading choice is critical: a sibling constraint (bodily_autonomy_primary) would invert the beneficiary/victim relationship, classify vaccination mandates as snare, and argue that individual autonomy is the legitimacy metric. Both readings are coherent; neither is 'naturally' true. The framework handles this through constraint decomposition, not by forcing readings into a single story.",
+    "key_agents": [
+      "Immunocompromised Populations: Primary beneficiary (institutional/arbitrage) — protected by herd immunity; experience constraint as pure coordination enabling baseline functioning",
+      "Vaccine-Hesitant Individuals: Primary victim (moderate/constrained) — face high-cost exit (relocation, private employment, social isolation) or compliance with medical intervention they distrust",
+      "Medically Contraindicated Individuals: Structural victim (powerless/trapped) — no exit option; cannot vaccinate safely AND cannot access employment/education without vaccination; maximum experienced extraction",
+      "Public Health Authorities: Institutional beneficiary (institutional/arbitrage) — derive legitimacy and mandate scope from measurable mortality reduction; can revise policy without bearing costs of prior enforcement",
+      "Anti-Vaccination Organizations: Organized actor (organized/constrained) — provide epistemic alternative and informational coordination alongside facing institutional suppression of platforms and policy voice",
+      "Medical Licensing System: Institutional actor (institutional/mobile) — maintains performative authority through licensing requirements while actual clinical judgment is overridden by population-level protocols (piton perspective)",
+      "Proportionality Advocates: Organized coalition (organized/constrained) — arguing for sunset logic through risk-proportionate policy based on immunity threshold rather than universal mandates"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts bodily autonomy (forced vaccination or medical exclusion), economic autonomy (employment termination), and social participation (school exclusion, access restrictions). However, extractiveness is not maximal (0.66+) because (a) genuine disease transmission externalities exist, (b) some populations (immunocompromised) experience net benefit, and (c) enforcement is justified by measurable epidemiological outcomes at time of application. The rise from 0.15 to 0.58 over the interval reflects enforcement drift: extractiveness was low when vaccination coverage was needed and disease prevalence high; extractiveness rose as disease prevalence declined and enforcement persisted. Suppression (0.62): High. Multiple suppression mechanisms operate: institutional barriers (employment, education access), epistemic suppression (restriction of alternative medical expertise, platform removal of dissenting physicians), legal uncertainty (exemption processes are opaque), and identity suppression (vaccine refusal framed as dangerous irresponsibility rather than legitimate medical/ethical choice). Theater ratio (0.48): Moderate. The constraint retains empirical grounding in transmission science and population-level mortality reduction (low theater), but enforcement mechanisms increasingly operate through performative channels (showing workplace compliance, demonstrating exclusion) rather than epidemiological measurement. Theater has risen as disease prevalence declined and enforcement continued — the contrast reveals drift.",
+    "perspectival_gap": "This constraint demonstrates the diagnostic power of indexical classification under kernel reading conditions. The immunocompromised beneficiary sees rope (pure coordination). Public health authorities see rope (their perspective) or tangled_rope (external analysis). The vaccine-hesitant individual sees snare (exit blocked). Medical authorities see piton (performative ritual). Proportionality advocates see scaffold (sunset logic). Anti-vax organizations see tangled_rope (mixed coordination and suppression). The medically contraindicated see snare (no exit). The analytical observer risks seeing mountain (natural law of externalities) but the committer frame reveals this as naturalization of a reading choice. The gap reveals that 'legitimacy' is not discovered empirically; it is constituted by choice of measurement metrics (population outcomes vs individual autonomy). This is not perspectival relativism — the empirical facts (disease transmission, vaccine efficacy, side effects) are fixed. But the normative frame that determines which facts are relevant to legitimacy is a reading choice, not a natural law.",
+    "directionality_logic": "Each perspective's experienced extractiveness (χ) is computed from base extractiveness (ε=0.58), directionality (d derived from beneficiary/victim status + power + exit options), and scope (σ=1.0 for national scope). Beneficiaries (immunocompromised, authorities) derive low d values (0.10-0.25), producing negative or negligible χ — they experience the constraint as beneficial or costless. Victims with trapped exit (medically contraindicated) derive high d (0.95), producing χ ≈ 0.82 — they experience maximum extraction. Organized victims (anti-vax organizations) derive moderate-high d (0.50-0.65), producing χ ≈ 0.40-0.50 — they experience significant extraction but retain some organizational agency. The perspectival gap (rope vs snare vs tangled_rope) does NOT derive from different χ values; it derives from whether the agent perceives the extraction as necessary coordination cost (rope perspective), as extraction with mixed coordination (tangled_rope), or as pure extraction without coordination benefit (snare). The classification type reflects narrative interpretation of whether coordination function is genuine, not merely from χ magnitude.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy (threat of mislabeling pure extraction as coordination or vice versa) by showing how the kernel reading choice determines which classification is correct. Under PUBLIC_HEALTH_PRIMARY reading: unvaccinated individuals are externality imposers, their extraction is justified, the constraint is tangled_rope with genuine coordination function. Under the bodily_autonomy_primary sibling reading: mandatory vaccination is bodily autonomy extraction regardless of disease benefits, unvaccinated are victims exercising autonomy, the constraint is snare or tangled_rope with extraction dominating. Both readings satisfy all consistency conditions; neither can be rejected as empirically false. The mandatrophy is resolved not by choosing the 'true' type but by making the reading choice explicit and generating both constraints as separate stories. The corpus includes both; researchers using either constraint are accountable for their legitimacy metric choice. This is why the framework requires separate constraint stories for kernel readings rather than a single 'public health constraint' with measurement parameters.",
+    "kernel_context": "This constraint instantiates the 'public_health_primary' reading of the legitimate_health_intervention kernel. The kernel is the contested claim 'health interventions are legitimate when they reduce population-level morbidity/mortality.' This reading privileges population outcomes as the legitimacy metric. The sibling reading 'bodily_autonomy_primary' privileges individual consent as the metric, treating population health outcomes as externalities imposed on autonomous agents rather than as benefits that justify intervention. A third sibling reading 'proportionality_reading' argues legitimacy requires risk-proportionate measures (age-stratified, immunity-status-differentiated, sunset-clause-bounded) rather than universal mandates. These readings are not empirically resolvable — they reflect different normative commitments about which harms to center and which to externalize. The public_health_primary reading has dominated policy during the enforcement period, but epistemic authority for the reading choice was never explicitly debated — the reading was naturalized as 'just epidemiology.' The constraint story reveals it as a reading choice, enabling comparison with alternatives. The committer structure is encoded entirely in omegas rather than in invented fields, preserving the framework's structural discipline."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "bodily_autonomy_primary",
+      "proportionality_reading",
+      "epistemic_authority_medical"
+    ],
+    "dual_formulation_note": "This constraint family decomposes the contested kernel 'legitimate_health_intervention' into three constraint stories representing different legitimacy readings. public_health_primary measures legitimacy through population outcomes. bodily_autonomy_primary measures legitimacy through individual consent. proportionality_reading measures legitimacy through risk-proportionate policy. All three are structurally decomposable from the kernel; none is the 'true' constraint. The framework models them as separate stories linked via network.affects_constraints, each with its own ε, beneficiary/victim declarations, and classification."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.72
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true
+  }
+}

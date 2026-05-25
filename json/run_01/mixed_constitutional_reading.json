@@ -1,0 +1,215 @@
+{
+  "header": {
+    "constraint_id": "mixed_constitutional_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_mixed_constitutional_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.52,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Mixed Constitutional Authority (Inherited + Delegated Legitimacy)",
+    "topic_domain": "political_philosophy/constitutional_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_continuity_agents",
+      "constitutional_gatekeepers"
+    ],
+    "victims": [
+      "agents_caught_in_authority_deadlock",
+      "excluded_delegated_authority_claimants"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Subject Caught in Authority Conflict",
+      "comment": "PERSPECTIVE 1: SUBJECT IN CONSTITUTIONAL DEADLOCK (SNARE) — During periods when inherited and delegated authority sources conflict (e.g., executive overreach vs legislative assertion, monarchical prerogative vs constitutional limits), subjects face maximum extraction: they must obey contradictory commands, have no appeal mechanism, and bear costs of both authority sources' enforcement attempts. No exit available — territorial and legal jurisdiction are total. Pure extraction with minimal coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Delegated Authority Institutions",
+      "comment": "PERSPECTIVE 2: DELEGATED AUTHORITY (TANGLED ROPE) — Parliament, legislatures, and delegated bodies genuinely coordinate collective action (legislation, resource allocation, policy-making) while simultaneously suffering asymmetric extraction: their authority is contingent on inherited authority's permission; they can be dissolved, overridden, or have powers recalled. They benefit from the coordination function; they are constrained by the inherited framework."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Inherited Authority (Monarchy/Dynasty)",
+      "comment": "PERSPECTIVE 3: INHERITED AUTHORITY (ROPE) — The constitutional monarch or inherited authority source experiences the framework primarily as coordination: the constitutional limit on their power is precisely the mechanism that makes their authority legitimate across time. Without the constitutional frame, they would face endemic challenges and instability; with it, they benefit from stability and recognized succession. The inherited authority is the beneficiary of dual-legitimacy stabilization."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Constitutional Court / Authority Arbiter",
+      "comment": "PERSPECTIVE 4: CONSTITUTIONAL COURT (TANGLED ROPE) — Judicial or constitutional bodies tasked with resolving conflicts between inherited and delegated authority coordinate dispute resolution (genuine function) while extracting significant power for themselves through interpretation monopoly. They benefit from the authority ambiguity — their role is indispensable precisely because the two sources conflict. They have mobile options (they could theoretically resign or cede authority) but rarely do because their position is enabled by the constraint."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Ceremonial/Symbolic Authority Layer",
+      "comment": "PERSPECTIVE 5: CEREMONIAL AUTHORITY (PITON) — Formal state rituals, oath-taking, coronation ceremonies, and symbolic authority declarations persist with high theater but declining functional force. In stable constitutional systems, this layer is substantially performative — it maintains inherited legitimacy symbolically while delegated authority operates practically. Theater ratio is elevated; actual coordination or extraction through this channel has degraded."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW FRAMING (MOUNTAIN) — From a civilizational/universal analytical perspective, the dual-legitimacy structure can appear as an inevitable feature of institutional stability: all complex polities require both continuity anchors (inherited/dynastic) and responsive mechanisms (delegated/participatory). The constraint appears as natural to political organization as gravity is to physics. However, this risks false summitry — the 'necessity' of mixed authority naturalizes what is actually a specific institutional reading."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_decomposition_sibling_readings",
+      "question": "What is the relationship between mixed_constitutional_reading and its sibling readings (monarchical_reading, republican_reading)?",
+      "resolution_mechanism": "This constraint instantiates ONE specific reading of the contested sovereign_legitimacy kernel. Sibling readings would generate separate constraint stories with different ε values, different victim sets, and different classification patterns. The monarchical reading emphasizes inherited authority as primary (lower ε, rope-dominant); the republican reading emphasizes delegated authority as primary (higher ε, tangled_rope or snare-dominant). Mixed reading treats both as equally binding — dual legitimacy sources create structural deadlock.",
+      "impact": "If the monarchical reading is correct: ε should be ~0.25, beneficiaries shift to dynastic continuity only. If the republican reading is correct: ε should be ~0.62, beneficiaries shift to participatory institutions only. If mixed reading is correct: ε ≈ 0.48, deadlock between sources creates persistent extraction of agents caught between them.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Relationship between this reading and sibling readings of sovereign_legitimacy kernel"
+    },
+    {
+      "id": "constitutional_deadlock_empirical_trigger",
+      "question": "Under what empirical conditions does the mixed-authority constraint transition from latent (suppressed, low theater) to active (high extraction, high theater)?",
+      "resolution_mechanism": "Historical case analysis: periods of stable constitutional balance vs periods of authority conflict (e.g., 1936-1938 UK abdication crisis, 2019-2021 Australian constitutional questions, ongoing Israeli constitutional debates). Measurement: extractiveness and suppression during stable periods vs crisis periods.",
+      "impact": "If deadlock is frequent/regular: constraint is Tangled Rope or Snare even at stable time points (structural, not cyclical). If deadlock is rare/triggered: constraint is Rope or Scaffold at rest, escalates only during specific triggers (cyclical/temporal).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Empirical conditions triggering constitutional deadlock escalation"
+    },
+    {
+      "id": "interpretation_monopoly_extraction",
+      "question": "Does the constitutional court's authority to interpret the dual-legitimacy structure constitute genuine dispute resolution (coordination) or extractive authority monopoly?",
+      "resolution_mechanism": "Comparative analysis: courts in mixed constitutional systems (UK, Canada, Netherlands) vs systems with explicit supreme arbiter (US); measurement of discretionary interpretation expansion over time; analysis of when courts rule in favor of inherited vs delegated authority (asymmetry indicates capture).",
+      "impact": "If courts genuinely arbitrate: they are net coordinators (lower d for judicial institution). If courts extract via interpretation monopoly: they are net extractors (higher d, possibly beneficiaries of the ambiguity). Resolving this shifts the court perspective from rope to snare or vice versa.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether constitutional interpretation is coordination or extractive monopoly"
+    },
+    {
+      "id": "succession_constraint_interaction",
+      "question": "Does the mixed constitutional framework constrain succession dynamics (bloodline meets constitutional limits) in ways that create unique extraction mechanisms distinct from purely inherited or purely delegated systems?",
+      "resolution_mechanism": "Comparative succession analysis: cases where constitutional limits prevented dynastic succession or where bloodline legitimacy prevented constitutional deadlock resolution. Measurement: frequency and severity of succession crises in mixed vs pure systems.",
+      "impact": "If succession is genuinely constrained: creates distinctive victim set (dynastic heirs excluded by constitutional process, or constitutional officers blocked by hereditary claims). If succession is unconstrained: the dual-legitimacy structure is primarily theatrical, ε should be lower.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Unique succession constraints created by mixed constitutional framework"
+    },
+    {
+      "id": "delegated_authority_permanence",
+      "question": "In mixed constitutional systems, can delegated authority (parliament, legislature) become a genuine independent power source, or does it remain permanently contingent on inherited authority's permission?",
+      "resolution_mechanism": "Historical trajectory analysis: does delegated authority consolidate power over generations (UK parliament 1200-2026), or does inherited authority periodically reassert primacy (pattern of dissolution/reconvocation)? Measurement: ratio of inherited authority interventions to delegated authority autonomy over generational timescales.",
+      "impact": "If delegation consolidates: constraint transitions toward Rope or Scaffold (sunset logic as inherited authority becomes vestigial). If delegation remains contingent: constraint remains Tangled Rope or Snare (extraction is structural, not temporary).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether delegated authority consolidates independence or remains permanently contingent"
+    },
+    {
+      "id": "false_summit_mixed_authority_natural_necessity",
+      "question": "Is the mixed constitutional framework (dual legitimacy, inherited + delegated) presented as a natural and inevitable feature of stable governance, when it is actually a contingent institutional choice?",
+      "resolution_mechanism": "Discourse analysis: do constitutional theorists, legal authorities, and institutional actors frame mixed authority as 'how complex polities must be organized' vs 'how this specific polity chose to organize itself'? Historical analysis: alternative constitutional architectures without mixed legitimacy (pure republican, pure monarchical, pure delegated) and their stability profiles.",
+      "impact": "If presented as necessary natural law: the mountain perspective gains traction, and ε appears lower (necessity framing suppresses recognition of extraction). If recognized as contingent choice: ε remains higher, and the snare/tangled_rope classifications hold. This is a false summit candidate — beneficiaries (constitutional gatekeepers, judicial interpreters) benefit from naturalizing the constraint.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Risk of false summit: naturalizing contingent mixed authority as inevitable governance law"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32,
+      "id_override": "mixed_const_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42,
+      "id_override": "mixed_const_extract_t5"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48,
+      "id_override": "mixed_const_extract_t10"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48,
+      "id_override": "mixed_const_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55,
+      "id_override": "mixed_const_theater_t5"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58,
+      "id_override": "mixed_const_theater_t10"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Mixed constitutional authority — the framework in which legitimacy derives from both inherited sources (dynasty, historical continuity, bloodline succession) and delegated sources (parliament, elected institutions, constitutional procedures) — creates a distinctive structural constraint. This reading models the specific case where BOTH legitimacy sources are treated as equally binding and mutually constraining. When inherited authority claims prerogative outside constitutional limits, delegated institutions can block it; when delegated authority acts outside its chartered scope, inherited authority can challenge it. This dual-constraint structure generates persistent institutional tension. Subjects caught between conflicting orders from the two sources bear extraction with no adjudication authority they can trust. Constitutional courts, tasked with resolving the ambiguity, extract power through interpretation monopoly. Delegated institutions benefit from the constitutional frame but remain contingent on inherited permission. Inherited authority benefits from the legitimacy stabilization the constitution provides. The constraint's theater ratio (0.58) reflects that ceremonial legitimacy claims (coronations, oaths, symbolic succession) remain high despite declining functional force in practice. The extractiveness (0.48) reflects that the extraction is real but intermittent — it escalates during succession crises or authority conflicts, subsides during stable periods. This constraint is ONE reading of the contested sovereign_legitimacy kernel; sibling readings (monarchical and republican) would model different distributional assumptions about which legitimacy source is primary.",
+    "key_agents": [
+      "Inherited Authority (Monarchy/Dynasty): Institutional beneficiary — benefits from constitutional legitimacy stabilization; constrained by constitutional limits but those limits are precisely what make the authority legitimate. Powers include succession control, prerogative claims, ceremonial authority.",
+      "Delegated Authority (Parliament/Legislature): Institutional moderately-extracted — coordinates genuine collective action (legislation, policy) but authority remains contingent on inherited authority's recognition; can be dissolved, overridden, or have powers recalled.",
+      "Constitutional Court/Arbiter: Institutional powerful actor — extracts authority through interpretation monopoly; benefits from the ambiguity between inherited and delegated sources because their role is indispensable for conflict resolution.",
+      "Subject/Citizen Caught in Authority Deadlock: Powerless victim — during periods when inherited and delegated authorities conflict, subjects must obey contradictory commands with no resolution mechanism and no exit.",
+      "Excluded Delegated Authority Claimants: Moderate victims — parties claiming legitimacy through delegated authority but excluded by inherited framework (e.g., revolutionary movements, constitutional reformers).",
+      "Ceremonial/Symbolic Authority Layer: Institutional degraded actor (Piton perspective) — maintains legitimacy theater with high performative content but declining functional force.",
+      "Analytical Observer: Civilizational observer — at risk of naturalizing the mixed framework as inevitable feature of political organization, masking the specific institutional choice."
+    ],
+    "logic_rationale": "Extractiveness (0.48): Moderate-high, trending upward. The constraint begins at 0.32 (periods of stable dual authority coexistence) and rises to 0.48 (increasing conflict between sources). This trajectory reflects institutional drift: as delegated authority consolidates power and inherited authority reasserts traditional prerogatives, the tension between them creates more frequent extraction. The upward trend over the interval suggests the constraint is becoming more extractive over time, not less — a signal of constitutional brittleness rather than stability. Suppression (0.52): Moderate. Agents caught in authority deadlock face significant barriers to exiting (territorial jurisdiction, legal dependency) but some organizational and political recourse exists (petition, legislative appeal, constitutional reform campaigns). Theater ratio (0.58): Moderate-high. Ceremonial legitimacy claims remain substantial (coronation ceremonies, oath-taking, formal succession rituals) despite declining functional verification. The theater is meaningful but not dominant — the constraint still performs some genuine institutional work even as its performative content increases.",
+    "directionality_logic": "Directionality values reflect each agent's structural position relative to authority extraction. Inherited authority, as primary beneficiary of dual-legitimacy stabilization, derives low d (0.10-0.20): they capture citation authority and legitimacy surplus while their power is constrained. Delegated institutions derive moderate d (0.50-0.65): they coordinate genuine function but bear contingency costs. Subjects caught in deadlock derive maximum d (0.90-0.95): they bear costs of conflicting commands with no exit. The constitutional court derives moderate-high d (0.55-0.70) despite institutional power because their extracted authority relies on the constraint's persistence — if the dual-legitimacy ambiguity were resolved, the court's interpretive power would diminish. This creates a perverse incentive: the arbiter benefits from maintaining ambiguity. The engine's directionality computation from these structural positions produces chi values aligned with the Tangled Rope classification: coordination function (delegated authority genuinely legislates) plus asymmetric extraction (contingency costs flow from delegated to inherited).",
+    "perspectival_gap": "This constraint exhibits the full range of experienced classification across positions. Inherited authority sees Rope (coordination, legitimacy stabilization, recognized succession path). Delegated institutions see Tangled Rope (genuine legislative function plus extraction through contingency). Subjects in deadlock see Snare (maximum extraction, no exit, no coordination benefit). Constitutional arbiters see Tangled Rope or Rope (depending on whether they recognize their own extraction via interpretation monopoly). The analytical observer risks seeing Mountain (mixed authority as natural political law) but this is a false summit — the constraint naturalizes a contingent institutional choice. The perspectival spread (from Rope to Snare) is maximal, indicating high structural tension: different observers have fundamentally incompatible experiences of the same institutional framework.",
+    "mandatrophy_analysis": "MIXED CONSTITUTIONAL READING MANDATROPHY: This constraint resolves mandatrophy by clearly separating coordination function from extraction mechanism. Coordination function: delegated authority (parliament, legislatures) genuinely coordinates collective action — they pass laws, allocate resources, represent constituencies. Extraction mechanism: inherited authority maintains contingency over delegated authority, preventing full autonomy and extracting legitimacy surplus through the constitutional frame. The tangled rope type correctly captures both: it is neither pure coordination (rope) nor pure extraction (snare), but a hybrid where both mechanisms operate simultaneously. The mandate of mixed constitutional authority is both to enable governance (coordination) and to preserve inherited authority (extraction). Resolving mandatrophy requires refusing to collapse the hybrid into either pure type and instead recognizing that the system's design embeds both functions inextricably.",
+    "kernel_context": "This constraint instantiates ONE reading of the contested sovereign_legitimacy kernel. The reading is: MIXED CONSTITUTIONAL AUTHORITY, where both inherited and delegated legitimacy sources are treated as equally binding and mutually constraining. Sibling readings (generated in separate constraint stories) are: MONARCHICAL READING (inherited authority is primary; delegated authority exists at inherited authority's pleasure; lower ε, rope-dominant) and REPUBLICAN READING (delegated authority is primary; inherited authority is ceremonial remnant; higher ε, tangled_rope or snare-dominant). The kernel itself is the question: 'Where does political legitimacy ultimately derive from, and how are conflicts between sources resolved?' This reading assumes both sources are genuinely binding, creating structural deadlock rather than hierarchy. The measurement data (extractiveness and theater ratio trending upward over the interval) suggests that the mixed reading may be becoming less stable over time — as delegated authority consolidates practical power and inherited authority asserts traditional prerogatives, the tension between them increases. A 100+ year generational trajectory would test whether the mixed reading transitions toward one of its sibling readings (republican if delegated authority wins, monarchical if inherited authority consolidates control) or whether the hybrid remains stable. The sibling readings would emerge as separate constraint stories with different ε values, different victim sets, and different classification patterns, all linked to this file via network.affects_constraints."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "monarchical_reading",
+      "republican_reading",
+      "constitutional_succession_deadlock",
+      "regulatory_capture_institutional_authority"
+    ],
+    "dual_formulation_note": "Mixed constitutional authority is one decomposition of the sovereign_legitimacy kernel (constraint family: monarchical_reading, republican_reading, mixed_constitutional_reading). Each reading generates a separate constraint story with distinct ε values, victim sets, and classification patterns. The readings are NOT alternatives to be chosen, but structurally distinct constraints that coexist in the institutional ecosystem. A polity implementing mixed authority instantiates all three constraints simultaneously: the monarchical reading as inherited authority's structural position, the republican reading as delegated authority's structural position, and this mixed reading as the institutional framework managing the conflict between them. Network linking enables contamination analysis: if the mixed reading's stability degrades (ε rises above 0.70), both sibling readings escalate as the breakdown becomes explicit."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true
+  }
+}

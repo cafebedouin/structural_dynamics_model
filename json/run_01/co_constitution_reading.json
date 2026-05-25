@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "co_constitution_reading",
+    "version": "1.0",
+    "generated_date": "2025-04-15",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_co_constitution_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Press-Reformer Co-Constitution in the Reformation Era",
+    "topic_domain": "history_of_technology/religious_reformation/media_studies",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "reformation_movement_leadership",
+      "printing_press_operators",
+      "literate_urban_populations"
+    ],
+    "victims": [
+      "ecclesiastical_authority_monopoly",
+      "oral_tradition_knowledge_keepers",
+      "rural_non_literate_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Oral Tradition Knowledge Keepers",
+      "comment": "PERSPECTIVE 1: ORAL TRADITION KEEPERS (SNARE) — Rural clergy and lay catechists whose authority derived from memorized liturgy and oral transmission face structural elimination. The printed text displaces their epistemic role without offering exit — they lack literacy, capital, and mobility to adapt. The constraint traps them in obsolescence."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Urban Literate Merchant Class",
+      "comment": "PERSPECTIVE 2: URBAN LITERATE MERCHANTS (TANGLED ROPE) — Benefit from access to printed religious texts (coordination function: enables individual scripture reading) but face ecclesiastical enforcement against vernacular Bible ownership. Suppression is real but costly rather than absolute — literacy provides some exit capacity. The constraint both enables and restricts their religious autonomy."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Reformation Movement Leadership",
+      "comment": "PERSPECTIVE 3: REFORMATION LEADERSHIP (ROPE) — Luther, Calvin, and their networks experience the printing press as pure coordination mechanism: amplifies their messaging, solves the collective action problem of reaching dispersed congregations, enables standardization of doctrine. They coordinate with printers; both benefit from the arrangement. No significant extraction burden — the constraint serves their agency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Printing Press Operators and Merchants",
+      "comment": "PERSPECTIVE 4: PRESS OPERATORS (ROPE) — Printers benefit from Reformation demand (expanded market), coordinate with reformers to produce vernacular texts, and capture economic rents. The constraint is pure coordination from their perspective — they solve the problem of text distribution for a willing customer. No coercion; arbitrage exit always available."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Ecclesiastical Authority (Late Medieval)",
+      "comment": "PERSPECTIVE 5: ECCLESIASTICAL AUTHORITY (PITON) — The late medieval Church maintained its knowledge monopoly through scribal networks and Latin gatekeeping. The printing press does not create extraction; it degrades enforcement of an existing constraint. Church authority over scriptural interpretation becomes performative (theater ratio rising as enforcement capacity falls). The institutional actor persists through inertia while its functional control atrophies."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Co-Constitution View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / CO-CONSTITUTION VIEW (TANGLED ROPE) — From civilizational distance, the constraint emerges from reciprocal reinforcement: reformers shape the press's content and dissemination (institutional ideology drives technological deployment), while the press's material affordances (reproducibility, speed, reach) enable the reformers' strategy (technology constrains and enables their message choices). Neither is determining; both co-constitute the outcome. This is the reading's core: bidirectional causality producing moderate extractiveness through asymmetric distribution of gains."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "causality_direction_ambiguity",
+      "question": "What is the direction of primary causality: Did reformer ideology drive technological deployment, or did printing press affordances enable reformer success, or did both co-constitute the outcome?",
+      "resolution_mechanism": "Counterfactual analysis: Would Reformation have achieved similar scale without printing? Would printing have been deployed similarly without Reformation demand? Comparative cases: printing in Islamic and Orthodox territories with different religious movements.",
+      "impact": "If reformer-driven (technological_determinism_reading sibling): ε=0.25, Rope. If press-driven (beneficiary_agency_reading sibling): ε=0.48, Snare. If co-constituted (this reading): ε=0.38, Tangled Rope. Classification hinges on causal direction.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Primary direction of causality in press-reformation relationship"
+    },
+    {
+      "id": "extraction_mechanism_specificity",
+      "question": "Is the extractiveness in this constraint a property of the press-reformer relationship itself, or is it inherited from the prior ecclesiastical monopoly that the constraint disrupts?",
+      "resolution_mechanism": "Distinguish new extraction (created by press-reformer co-constitution) from redistribution of existing extraction (former Church monopoly now held by reformers and printers). Measure income/authority flows before and after adoption.",
+      "impact": "If new extraction: constraint is Tangled Rope (both coordination and asymmetric gain). If redistribution of existing extraction: constraint is Rope (both parties benefit from the coordination relative to prior regime). Impacts classification and victim identification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether extractiveness is newly created or redistributed from prior monopoly"
+    },
+    {
+      "id": "reading_versus_determinism",
+      "question": "This is the co-constitution reading: both reformers and technology shaped outcomes. How does this differ structurally from the sibling readings (technological_determinism_reading and beneficiary_agency_reading)?",
+      "resolution_mechanism": "The three readings share the kernel (technology-reformation causality) but instantiate different constraints with different ε values and beneficiary/victim structures. This reading: bidirectional causality, moderate extractiveness (ε=0.38), both reformers and press as beneficiaries, literate and ecclesiastical authority as victims. Technological_determinism_reading: press drives outcome independently (ε=0.25, Rope, reformers as victims of press constraints). Beneficiary_agency_reading: reformers drive outcome, press is incidental tool (ε=0.48, Snare, press operators as victims of reformer demand capture).",
+      "impact": "Each reading produces different classification, different victim identification, different policy implications. The kernel is the contested causality; the readings are three structurally distinct constraints derived from different framing of causality.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "This reading (co-constitution) versus sibling readings (determinism, agency) as instantiations of shared kernel"
+    },
+    {
+      "id": "suppression_mechanism_religious_versus_technological",
+      "question": "Is the suppression (0.42) driven by religious/ecclesiastical enforcement against vernacular texts, or by technological barriers to literacy and text access, or by both?",
+      "resolution_mechanism": "Historical analysis of enforcement mechanisms: Were non-literate populations suppressed by lack of access to technology, or by active religious prohibition, or both? Did suppression decrease as literacy increased even without technological change? Did suppression decrease as technology improved even without religious liberalization?",
+      "impact": "If primarily religious: ecclesiastical actor bears responsibility for suppression (victim declaration is justified). If primarily technological: the constraint's suppression is a material feature not attributable to agency. Affects moral and analytical framing of the extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is primarily religious prohibition or technological/literacy barrier"
+    },
+    {
+      "id": "coordination_function_genuine_or_cover",
+      "question": "Is the coordination function (enabling vernacular scripture access, standardizing doctrine) genuine coordination that beneficiaries actively value, or a cover story for reformer expansion of control over textual interpretation?",
+      "resolution_mechanism": "Comparison of demand: Did non-clergy populations independently demand vernacular access, or was demand created by reformer advocacy? Did coordination benefits accrue to beneficiaries measurably (education, literacy rates, autonomy), or only to reformers and printers (authority, market share)?",
+      "impact": "If genuine coordination: Tangled Rope classification sustained (both coordination and extraction present). If cover story: reclassify toward Snare (primarily extraction, coordination claim is theater). Affects assessment of whether the constraint is sustainable or inherently contradictory.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether coordination benefits are genuine or instrumental to expansion of reformer control"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 60,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.6
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The Reformation-era press represents a moment of co-constitutive causality: reformers did not determine the press, but they shaped its deployment and content; the press did not determine the Reformation, but it enabled the reformers' scale and reach. This constraint is ONE READING of the contested kernel 'technology-reformation causality.' The co-constitution reading instantiates this as a Tangled Rope: genuine coordination function (vernacular access, text standardization) paired with asymmetric extraction (reformer authority consolidation, printer market concentration, ecclesiastical monopoly disruption that concentrates knowledge among the literate). The constraint's extractiveness (0.38) reflects the interaction term between technological affordance and human agency — neither alone produces the outcome, and the extraction arises from their coupled dynamics, not from one determining the other. This reading is structurally distinct from the technological_determinism_reading (which treats the press as independently determining, reducing reformers to passive beneficiaries, ε=0.25) and the beneficiary_agency_reading (which treats reformers as independently determining, reducing the press to an incidental tool, ε=0.48). All three readings share the kernel but produce different classifications, beneficiary/victim structures, and historical implications.",
+    "key_agents": [
+      "Reformation Movement Leadership (Luther, Calvin, etc.): Primary institutional beneficiary (institutional/arbitrage) — shapes press content and strategy, coordinates with printers, consolidates doctrinal authority. Benefits from coordination and captures authority rents.",
+      "Printing Press Operators and Merchants: Primary institutional beneficiary (institutional/arbitrage) — expands market, coordinates with reformers, captures economic rents. Both roles are coordinated, both benefit.",
+      "Urban Literate Merchant Class: Secondary beneficiary and moderate victim (moderate/constrained) — benefits from access to vernacular texts (coordination function) but face suppression from ecclesiastical enforcement. Constrained exit.",
+      "Oral Tradition Knowledge Keepers (Rural clergy, catechists): Primary victim (powerless/trapped) — epistemic displacement from literacy shift, no adaptive capacity, structural elimination. Trapped in obsolescence.",
+      "Ecclesiastical Authority (Catholic Church hierarchy): Institutional victim (institutional/constrained) — loses monopoly on scriptural interpretation, maintains performative authority through theater, atrophies functionally. Constrained by loss of enforcement capacity.",
+      "Non-Literate Rural Populations: Structural victim (powerless/trapped) — access to texts requires literacy and capital, excluded from coordination benefits, suppressed by both technological and religious barriers. Trapped in exclusion."
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate-high, reflecting the coupled interaction. The co-constitution reading rejects technological determinism (which would set ε ≈ 0.20) and pure beneficiary agency (which would set ε ≈ 0.50). The moderate value captures that neither technology nor agency alone produces the extractive outcome — it emerges from their interaction. The press enables reformers' reach, but reformers shape how the press is deployed. The extractiveness accumulates over the measurement interval (0.15 → 0.38) as the institutional consolidation intensifies. Suppression (0.42): Moderate. Both religious enforcement (ecclesiastical prohibition of vernacular texts) and technological barriers (literacy requirements, capital costs) suppress alternatives. Suppression does not fully prevent coordination benefits (hence not Snare, which requires suppression ≥ 0.60), but significantly reduces access and agency. Theater ratio (0.55): Moderate. The ecclesiastical authority's response to press-enabled Reformation becomes increasingly performative — maintaining doctrinal authority through counter-reformation theater while losing actual enforcement capacity. Theater rises as functional control atrophies, but the overall theater ratio remains moderate because the reformer and printer sides exhibit genuine coordination function (not pure theater).",
+    "directionality_logic": "The co-constitution reading distributes directionality asymmetrically across the beneficiary/victim map. Reformation leadership and press operators occupy institutional/arbitrage positions — low d (0.15–0.20), experiencing negative effective extraction (they benefit). Urban literate populations occupy moderate/constrained positions — moderate d (0.55–0.65), experiencing moderate extraction (coordination benefits offset by suppression costs). Ecclesiastical authority occupies institutional/constrained position — higher d (0.45–0.55) due to loss of monopoly, but not as high as trapped agents because institutional actors retain some adaptive capacity. Oral tradition keepers and non-literate populations occupy powerless/trapped positions — high d (0.90–0.95), experiencing maximum effective extraction because they lose epistemic role without compensation or exit. The perspective gap is acute: the beneficiaries (leadership and printers) see rope; the constrained moderate classes see tangled rope; the trapped agents see snare. The analytical observer at civilizational scale sees the tangled rope classification because the coordination function is genuine (vernacular access is real coordination) and the extraction is real (asymmetric distribution of authority and capital). Neither determining alone — both required to explain the outcome.",
+    "perspectival_gap": "The perspectival gap in this constraint is maximally revealing. The Reformation leadership sees rope (pure coordination with printers; both benefit from solving the distribution problem). The printers see rope (economic and technical coordination; expanded market). The urban literates see tangled rope (coordination benefits from vernacular access, suppression costs from enforcement). The ecclesiastical authority sees piton (atrophied authority, performative ritual, inertial maintenance). The oral tradition keepers see snare (displacement, no exit, no adaptation path). The analytical observer sees tangled rope (genuine coordination function, asymmetric extraction, co-constitutive causality producing the outcome). The gap between rope (leadership/printer view) and snare (oral tradition keeper view) reflects the full range of extraction distribution — some actors benefit coordinatively, others lose everything. The civilization-scale analytical view of tangled rope (not mountain) indicates that this is a contingent institutional arrangement, not a natural law.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy through the co-constitution framing. The question 'Is this technology determining outcomes or is human agency determining outcomes?' produces contradictory answers if treated as binary. The co-constitution reading dissolves the contradiction by making clear that BOTH are necessary — the constraint cannot be classified by choosing one. The moderate extractiveness (0.38) reflects that neither alone produces the outcome; the interaction does. If forced to a binary, you would misclassify: technological determinism alone (ε ≈ 0.20, Rope) ignores reformer agency in shaping press deployment; pure agency (ε ≈ 0.50, Snare) ignores the enabling role of press affordances. The tangled rope classification captures that institutional actors (reformers, printers) genuinely coordinate while distributing benefits asymmetrically to non-institutional actors (literate and non-literate populations). The mandatrophy is resolved by accepting the interaction term rather than projecting it onto one causal agent.",
+    "kernel_context": "This constraint instantiates the co-constitution reading of the contested kernel 'technology-reformation causality.' The kernel is a single persisting commitment/empirical question: 'What caused the Reformation to succeed at the scale it did?' Three structurally distinct readings produce three separate constraints with different ε values and classifications: (1) Technological determinism reading (technological_determinism_reading): The printing press itself determined the outcome; reformers were beneficiaries of a technological inevitability. ε ≈ 0.25, classification Rope, press operators as primary beneficiaries, reformers as secondary beneficiaries, ecclesiastical authority as victim. (2) Beneficiary agency reading (beneficiary_agency_reading): Reformer ideology and organized movement determined the outcome; the press was an incidental tool deployed by determined agents. ε ≈ 0.48, classification Snare (reformer institutional consolidation with asymmetric extraction from press operators and non-literate populations), reformers as primary beneficiary, press operators and literate populations as victims. (3) Co-constitution reading (THIS constraint): Neither technology nor agency alone determines the outcome; both co-constitute the result through reciprocal reinforcement. Reformers shape press deployment; press shapes reformer strategy. ε ≈ 0.38, classification Tangled Rope, both reformers and printers as coordinated beneficiaries, asymmetric extraction from oral tradition keepers and non-literate populations. The three readings share the kernel (causality question) but differ in which factors are causal, which are instrumental, and what the extraction mechanism is. This reading's core claim: bidirectional causality produces moderate extractiveness through interaction, not dominance of one causal factor."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "technological_determinism_reading",
+      "beneficiary_agency_reading",
+      "ecclesiastical_authority_information_control",
+      "literacy_access_barrier"
+    ],
+    "dual_formulation_note": "This constraint is one reading of a contested kernel (technology-reformation causality). Two sibling readings exist: technological_determinism_reading (ε=0.25, Rope, press-determined) and beneficiary_agency_reading (ε=0.48, Snare, reformer-determined). The three readings are structurally distinct constraints with different epsilon values reflecting different causal framings. This reading's ε=0.38 reflects the interaction term: neither technology nor agency alone produces the outcome; both co-constitute through reciprocal reinforcement. All three should be included in the corpus linked via network.affects_constraints for full representation of the kernel's causal ambiguity."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.5
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "ecclesiastical_authority_information_control",
+      "literacy_access_barrier"
+    ]
+  }
+}

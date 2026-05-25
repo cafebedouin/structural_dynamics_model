@@ -26,6 +26,11 @@
     is_mountain/1,
     is_rope/1,
 
+    % Stage 5: Husk Analysis
+    husk_series/3,
+    ep_native_series/3,
+    husk_exists/3,
+
     % Statistical Helpers
     monotonic_increasing/1,
     monotonic_decreasing/1,
@@ -37,6 +42,7 @@
 :- use_module(constraint_indexing).
 :- use_module(narrative_ontology).
 :- use_module(config).
+:- use_module(drl_purity_network).
 
 :- dynamic agent_index/2.
 :- dynamic constraint_data/2.
@@ -169,12 +175,19 @@ constraint_history(C, Timeline) :-
 %  Uses sigmoid pipeline: χ = ε × f(d) × σ(S).
 classify_at_time(C, Time, Context, Type) :-
     (narrative_ontology:measurement(_, C, suppression_requirement, Time, Supp) -> true ; Supp = 0.5),
-    (narrative_ontology:measurement(_, C, extractiveness, Time, BaseX) -> true ; BaseX = 0.5),
+    (narrative_ontology:measurement(_, C, base_extractiveness, Time, BaseX) -> true ; BaseX = 0.5),
     Context = context(_, _, _, spatial_scope(Scope)),
     constraint_indexing:derive_directionality(C, Context, D),
     constraint_indexing:sigmoid_f(D, PowerMod),
     constraint_indexing:scope_modifier(Scope, ScopeMod),
     Chi is BaseX * PowerMod * ScopeMod,
+    % Thread temporal theater_ratio so piton gate sees the time-varying value.
+    (narrative_ontology:measurement(_, C, theater_ratio, Time, TR_t)
+    ->  nb_setval(classify_at_time_theater, tr(C, TR_t))
+    ;   nb_setval(classify_at_time_theater, none)
+    ),
+    % Thread temporal ε so excess_extraction subscore sees the time-varying value.
+    nb_setval(classify_at_time_eps, eps(C, BaseX)),
     drl_core:classify_from_metrics(C, BaseX, Chi, Supp, Context, Type).
 
 %% transformation_detected(+C, +FromType, +ToType, -T1, -T2)
@@ -348,6 +361,50 @@ possibly(C) :-
 necessarily(C) :-
     constraint_indexing:default_context(Ctx),
     drl_core:dr_type(C, Ctx, mountain).
+
+/* ================================================================
+   STAGE 5: HUSK ANALYSIS
+   Temporal EP decay over a type-stable series.
+   ================================================================ */
+
+%% husk_point(+C, +T, +Context, -Type, -EP)
+%  Single observation: Type via classify_at_time (sets nb_setval globals),
+%  EP via effective_purity with those globals active.  Private to this stage.
+husk_point(C, T, Context, Type, EP) :-
+    classify_at_time(C, T, Context, Type),
+    drl_purity_network:effective_purity(C, Context, EP, _).
+
+%% husk_series(+C, +Context, -Series)
+%  Series = list of husk_pt(T, Type, EP), sorted by T.
+%  ONE unified pass — T grid from base_extractiveness measurements only.
+%  Type and EP both evaluated at each T on the same grid.
+husk_series(C, Context, Series) :-
+    findall(T, narrative_ontology:measurement(_, C, base_extractiveness, T, _), Ts0),
+    sort(Ts0, Ts),
+    findall(husk_pt(T, Type, EP),
+            (member(T, Ts), husk_point(C, T, Context, Type, EP)),
+            Series).
+
+%% ep_native_series(+C, +Context, -EpSeries)
+%  Projection of husk_series to ep_point(T, EP) pairs.
+ep_native_series(C, Context, EpSeries) :-
+    husk_series(C, Context, Series),
+    maplist([husk_pt(T,_,EP), ep_point(T,EP)]>>true, Series, EpSeries).
+
+%% husk_exists(+C, +Context, -Bool)
+%  true iff: type is stable across all T AND EP falls from first to last.
+%  Both conditions checked on the same unified grid.
+husk_exists(C, Context, Bool) :-
+    husk_series(C, Context, Series),
+    (   Series = [husk_pt(_, _, EP0)|_],
+        last(Series, husk_pt(_, _, EP_last)),
+        EP0 > EP_last,
+        findall(Ty, member(husk_pt(_, Ty, _), Series), Types),
+        sort(Types, [OneType]),
+        OneType \= unknown
+    ->  Bool = true
+    ;   Bool = false
+    ).
 
 /* ================================================================
    UTILITY PREDICATES

@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "beneficiary_maintained_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_beneficiary_maintained_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Market Dominance Actively Defended by Incumbent Capital Holders",
+    "topic_domain": "political_economy/institutional_analysis",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_capital_holders",
+      "dominant_firm_networks"
+    ],
+    "victims": [
+      "potential_market_entrants",
+      "displaced_labor",
+      "competitive_pressure_absorbers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Excluded Entrepreneur",
+      "comment": "PERSPECTIVE 1: EXCLUDED ENTREPRENEUR (SNARE) — Faces systematically defended barriers to market entry: capital gatekeeping, regulatory capture, predatory pricing, patent thickets, network effects, and social capital exclusion. Exit options from the market are total — no way to compete meaningfully. The constraint extracts by preventing any alternative allocation of productive resources."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Smaller Competitor",
+      "comment": "PERSPECTIVE 2: SMALLER COMPETITOR (TANGLED ROPE) — Can survive in niche markets or geographies where incumbent dominance is partial, but only through acceptance of constrained margins and technological dependence on incumbent-controlled platforms or supply chains. Experiences genuine coordination (access to networks, distribution channels) alongside extraction (asymmetric pricing, exclusionary terms, capacity suppression)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Capital Holder",
+      "comment": "PERSPECTIVE 3: INCUMBENT CAPITAL HOLDER (ROPE) — Experiences the market dominance defense as coordination: maintaining proprietary networks, standards, supply chains, and customer relationships. The enforcement costs (lobbying, regulatory positioning, patent prosecution, acquisition of competitive threats) are perceived as necessary coordination overhead rather than extractive suppression. Maximum net beneficiary."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Regulatory Coalition",
+      "comment": "PERSPECTIVE 4: REGULATORY COALITION (TANGLED ROPE) — Antitrust authorities, consumer protection agencies, and open-market advocates see the constraint as both coordination (network effects, investment security, economies of scale generate genuine value) and extraction (defensive barriers extract rents and suppress innovation). Organized but with real constraints on their power to reshape market structure without destroying coordination value."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Technological Disruption Threshold",
+      "comment": "PERSPECTIVE 5: TECHNOLOGICAL DISRUPTION (SCAFFOLD) — Disruptive technologies (distributed networks, open-source production, digital platforms) create periodic windows where incumbent dominance is bypassed rather than overcome. The constraint is temporary — valid only until the next technology wave restructures competitive dynamics. Suppression is high but with an inherent sunset: the technology that beats incumbents one generation becomes the incumbent the next."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, market dominance by successful firms and capital concentration are treated as immutable features of capitalism itself: larger firms have structural advantages (economies of scale, network effects, access to capital) that cannot be overcome through competition. This perspective naturalizes incumbent defense as inevitable rather than actively maintained. False summit candidate — the observables (incumbent lobbying, patent thickets, acquisition strategy) reveal active maintenance, not natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_differentiation",
+      "question": "Is market dominance primarily an outcome of active beneficiary maintenance, lapsed alternative pathways, or hybrid mechanisms across different sectors?",
+      "resolution_mechanism": "Comparative institutional analysis across sectors: industries with active incumbent defense (pharma, telecommunications) vs. industries with lapsed alternatives (agriculture consolidation) vs. hybrid dynamics (software/platforms). Historical counterfactual: what market structures would persist if incumbent defense stopped.",
+      "impact": "This constraint represents the BENEFICIARY_MAINTAINED reading. Sibling readings (lapsed_alternative_reading, hybrid_reading) would decompose extractiveness differently and attribute dominance to different causal mechanisms. If evidence shows lapsed alternatives dominate causation, this reading's ε would be overstated; if hybrid dominates, the snare/rope perspectives would shift toward tangled_rope across all positions.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Which reading of market naturalization kernel applies: beneficiary-maintained, lapsed-alternative, or hybrid"
+    },
+    {
+      "id": "enforcement_cost_boundary",
+      "question": "What proportion of incumbent defense consists of genuine coordination costs (economies of scale, network maintenance) vs. extractive enforcement (lobbying, predatory pricing, regulatory capture)?",
+      "resolution_mechanism": "Cost decomposition analysis: allocation of incumbent R&D spending to innovation vs. defensive IP; comparison of lobbying expenditure across competitive vs. concentrated sectors; correlation between enforcement spending and suppression of particular entrant types.",
+      "impact": "If enforcement costs > 50% of defense spending: snare classification for more perspectives. If < 30%: rope classification strengthens. Current tangled_rope classification assumes mixed 40-60 split.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of incumbent defense that is coordination cost vs. extractive enforcement"
+    },
+    {
+      "id": "alternative_market_viability",
+      "question": "Could alternative market structures (distributed ownership, commons-based production, platform cooperatives) deliver equivalent coordination functions with lower extraction?",
+      "resolution_mechanism": "Pilot program analysis (open-source ecosystems, cooperative networks, distributed finance protocols); measurement of coordination effectiveness (innovation rate, capital efficiency, quality) vs. incumbent structures; identification of structural barriers that aren't scale-related.",
+      "impact": "If viable alternatives exist: market dominance is demonstrated choice, not necessity — ε and suppression should both increase (more active suppression of real threats). If alternatives fail at scale: some of the enforced barriers are legitimate (mountain-like coordination needs).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative market structures could deliver equivalent coordination with lower extraction"
+    },
+    {
+      "id": "false_summit_natural_law",
+      "question": "Is market dominance by incumbent capital treated as natural law rather than actively maintained institutional choice?",
+      "resolution_mechanism": "Discourse analysis: frequency of naturalizing language ('survival of the fittest,' 'natural consolidation,' 'inevitable outcomes') vs. causal attribution to specific incumbent actions (lobbying, IP strategy, acquisition, predatory pricing). Historical analysis: did dominant firms become dominant through technical superiority alone, or through defensive strategies applied to technical advantage?",
+      "impact": "The mountain perspective represents the false-summit candidate. If naturalizing language dominates policy discourse, the constraint's actual extractiveness is obscured. If causal attribution to incumbent action dominates, the snare perspective becomes more salient.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether market dominance is naturalized as inevitable law or recognized as actively maintained"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Market dominance by incumbent capital holders is actively defended through a combination of network effects, intellectual property enforcement, regulatory positioning, predatory pricing, and strategic acquisition. This constraint exists at the intersection of genuine coordination (established firms provide stable platforms, supply chains, and investment certainty) and extractive rent protection (barriers to entry that exceed coordination requirements, suppression of technological alternatives, regulatory capture that prevents efficient market restructuring). The constraint story instantiates the BENEFICIARY_MAINTAINED reading of the contested kernel 'market_naturalization' — treating dominant market structures as outcomes of identifiable incumbent actions, policy choices, and enforcement mechanisms rather than inevitable consequences of competitive dynamics or lapsed alternative pathways. Incumbent capital holders experience this as coordination; excluded entrepreneurs experience it as a snare; regulators experience it as a hybrid problem with both coordination and extraction components.",
+    "key_agents": [
+      "Incumbent Capital Holders: Primary beneficiary (institutional/arbitrage) — dominant firms and their shareholders. Active defenders of market position through IP, lobbying, acquisition, pricing strategy.",
+      "Potential Market Entrants: Primary victim (powerless/trapped) — entrepreneurs, startups, alternative firms blocked from scaling past niche markets by systematic barriers.",
+      "Displaced Labor: Secondary victim (moderate/constrained) — workers displaced by consolidation or suppressed by labor-market concentration; lower wages, reduced mobility.",
+      "Smaller Competitors: Mixed agent (moderate/constrained) — can exist in constrained niches but dependent on incumbent platforms/supply chains; experience tangled rope.",
+      "Regulatory Coalition: Organized observer (organized/mobile) — antitrust authorities, consumer advocates, competition regulators. See both coordination value and extractive asymmetry.",
+      "Technological Disruptors: Organized future agent (powerful/mobile) — each generation brings technologies that bypass incumbent dominance (initially); scaffold perspective on current dominance.",
+      "Analytical Observer: Civilizational position (analytical/analytical) — risks naturalizing incumbent dominance as law of markets rather than recognizing active maintenance."
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint combines genuine coordination benefits (network effects, investment stability, innovation platforms) with extractive mechanisms (barriers to entry exceed coordination requirements, predatory pricing, IP thickets). The measurement trajectory shows rising extractiveness over 20 years: as digital platforms scale, network effects strengthen and barriers harden, increasing rent extraction. Suppression (0.68): High. Entrants face multiple coordinated barriers: capital gatekeeping, regulatory capture, patent prosecution, predatory pricing strategies, acquisition of competitive threats, and social capital exclusion. These barriers are not independent market outcomes but actively constructed. Theater ratio (0.55): Moderate. Incumbent defense includes both substantive coordination (genuine economies of scale, real network benefits) and performative elements (patent thickets with questionable innovation value, regulatory compliance theater, brand defense that exceeds functional differentiation). The ratio reflects that the coordination story is partially credible but embedded in extractive mechanisms.",
+    "directionality_logic": "See logic_rationale and perspectival_gap for structural positioning and derived directionality values.",
+    "perspectival_gap": "Incumbent capital holders perceive rope (coordination, network maintenance, investment security) because they control the network and benefit from exclusion. Potential entrants perceive snare (systematic exclusion with no exit) because they cannot overcome barriers through competitive effort. Smaller competitors perceive tangled rope (genuine access to platforms alongside constrained margins) because they can exist within the incumbent's ecosystem but not challenge dominance. Regulators perceive tangled rope at the organized level (both genuine coordination problems and extraction requiring oversight) because they see the full structure. Disruptors perceive scaffold (dominance is temporary, undermined by periodic technological shifts) because new platforms bypass incumbent networks. The analytical observer at the civilizational scope risks perceiving mountain (market dominance as inevitable consequence of competitive dynamics) — a false summit that naturalizes what is actively maintained.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by distinguishing between coordination value (network effects are real) and extraction (barriers exceed coordination needs). The beneficiary_maintained reading emphasizes that incumbent capital holders actively defend dominance through mechanisms beyond passive network effects — lobbying, IP thickets, predatory pricing, acquisition of threats. The constraint avoids both false summits (naturalizing as inevitable) and false rope classifications (treating all barriers as legitimate coordination). The tangled rope type reflects genuine mixed structure: incumbents coordinate, but their coordination is inseparable from rent extraction.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel 'market_naturalization' — the stabilized commitment that 'markets naturally concentrate around successful firms.' The BENEFICIARY_MAINTAINED_READING (this constraint) attributes dominance to active incumbent defense: identifiable capital holders use lobbying, IP, acquisition, predatory pricing, and regulatory capture to suppress alternatives. Sibling readings include: (1) LAPSED_ALTERNATIVE_READING — dominance results from collapsed alternative institutions (cooperatives, public ownership, distributed production) rather than incumbent action, making incumbents beneficiaries of path dependence rather than active defenders; (2) HYBRID_READING — dominance varies by sector, with active defense in some (pharma, telecom) and lapsed alternatives in others (agriculture, energy). This reading instantiates the position that incumbent capital holders ARE active defenders, not passive beneficiaries of inevitable dynamics. The measurement trajectory (rising extractiveness) supports active intensification rather than static coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "regulatory_capture_institutional",
+      "intellectual_property_rent_extraction",
+      "labor_market_concentration",
+      "technology_platformization"
+    ],
+    "dual_formulation_note": "Market dominance constraint family: This reading (beneficiary_maintained_reading) assumes incumbent capital holders actively defend through identifiable mechanisms. The lapsed_alternative_reading decomposes dominance into path-dependent institutional collapse (separate constraint). The hybrid_reading integrates sector-level variation. Each reading has its own ε and beneficiary/victim structure; together they model the contested kernel 'market_naturalization.'"
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": false
+  }
+}

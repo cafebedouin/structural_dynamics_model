@@ -1,8 +1,8 @@
 % ============================================================================
 % CS PATTERN DETECTION
 % ============================================================================
-% Classifies constraints against the five commitment-system attractor patterns
-% from docs/commitment_systems_sketch_v4.md.
+% Classifies constraints against commitment-system attractor patterns from
+% docs/commitment_systems/commitment_systems_sketch_v5_2.md.
 %
 % Architecture: LLM asserts cs_structure fields; math emits verdict atoms
 % when the assertion is inconsistent with computed structural signals.
@@ -10,30 +10,43 @@
 % are commentary, not overrides.
 %
 % Exports:
-%   cs_pattern/3  — cs_pattern(+ID, -Pattern, -Signals)
-%   cs_verdict/2  — cs_verdict(+ID, -VerdictAtom)  [fails if no verdict]
-%   cs_has_fields/1 — cs_has_fields(+ID)  [succeeds iff CS fields present]
+%   cs_pattern/3              — cs_pattern(+ID, -Pattern, -Signals)
+%   cs_verdict/2              — cs_verdict(+ID, -VerdictAtom)  [fails if no verdict]
+%   cs_has_fields/1           — cs_has_fields(+ID)  [succeeds iff CS fields present]
+%   cs_naturalized_mountain/1 — cs_naturalized_mountain(+ID)
+%   cs_authority_masking/3    — cs_authority_masking(+C, -Sig, -AG)
+%   cs_cover_story_active/2   — cs_cover_story_active(+C, -Verdict)
+%   cs_displaced_beneficiary/1 — cs_displaced_beneficiary(+C)
 %
-% Pattern atoms:
+% Pattern atoms (9 total; natural_law_constraint and epistemic_consensus are
+% implementation additions acknowledged in v5.2 as spec drift):
 %   marked_revision | interpretive_accretion | diffuse_reconstruction |
 %   implicit_practice | anchored_fixity_with_accretion |
-%   anchored_fixity_brittle | no_pattern_match
+%   anchored_fixity_brittle | natural_law_constraint | epistemic_consensus |
+%   no_pattern_match
 %
 % Verdict atoms:
 %   false_marked_revision | false_interpretive_accretion |
 %   false_diffuse_reconstruction | false_implicit_practice |
-%   false_anchored_fixity_accretion | false_anchored_fixity_brittle
+%   false_anchored_fixity_accretion | false_anchored_fixity_brittle |
+%   false_natural_law_constraint
 % ============================================================================
 
 :- module(cs_pattern_detection, [
     cs_pattern/3,
     cs_verdict/2,
-    cs_has_fields/1
+    cs_has_fields/1,
+    cs_naturalized_mountain/1,
+    cs_authority_masking/3,
+    cs_cover_story_active/2,
+    cs_displaced_beneficiary/1,
+    cs_grounding_mismatch/3
 ]).
 
 :- use_module(narrative_ontology).
 :- use_module(domain_priors).
 :- use_module(config).
+:- use_module(signature_detection).
 
 % CS structure predicates are declared multifile so constraint files can extend them.
 :- multifile
@@ -137,6 +150,15 @@ cs_classify(_, distributed, distributed, diffuse_reconstruction,
 cs_classify(_, implicit, practice, implicit_practice,
             [kernel_implicit, authority_practice]) :- !.
 
+% Natural law — self_enforcing authority (no adjudicator; constraint is its own enforcement)
+cs_classify(_, _, self_enforcing, natural_law_constraint,
+            [authority_self_enforcing]) :- !.
+
+% Epistemic consensus — diffuse_epistemic authority (community establishes direction,
+% adjudicates no specific instance)
+cs_classify(_, _, diffuse_epistemic, epistemic_consensus,
+            [authority_diffuse_epistemic]) :- !.
+
 % Everything else is anomalous
 cs_classify(_, _, _, no_pattern_match, [anomalous_field_combination]).
 
@@ -212,3 +234,157 @@ cs_verdict(C, false_anchored_fixity_brittle) :-
     narrative_ontology:coordination_type(C, identity_coordination),
     narrative_ontology:constraint_metric(C, suppression_requirement, S),
     S < 0.50, !.
+
+% false_natural_law_constraint
+% Fires when natural_law_constraint is computed but the constraint has a beneficiary —
+% self_enforcing is a disguise for extractive force (naturalized mountain).
+cs_verdict(C, false_natural_law_constraint) :-
+    cs_pattern_is(C, natural_law_constraint),
+    narrative_ontology:constraint_beneficiary(C, _), !.
+
+/* ================================================================
+   NATURALIZED MOUNTAIN DIAGNOSTIC: cs_naturalized_mountain/1
+   ================================================================ */
+
+%% cs_naturalized_mountain(+C)
+%  Succeeds iff C is a low-ε mountain with extraction/diffuse_epistemic authority
+%  and both victims and beneficiaries — invariability-form with extractive force.
+cs_naturalized_mountain(C) :-
+    cs_has_fields(C),
+    cs_authority_grounding(C, AG),
+    memberchk(AG, [extraction, diffuse_epistemic]),
+    narrative_ontology:constraint_metric(C, extractiveness, Eps),
+    Eps < 0.15,
+    narrative_ontology:constraint_beneficiary(C, _),
+    narrative_ontology:constraint_victim(C, _).
+
+/* ================================================================
+   STRUCTURAL DIAGNOSTICS (Phase 1)
+
+   These predicates fire on DISAGREEMENT between LLM-asserted CS fields
+   and the metric-computed constraint_signature/2 from signature_detection.
+   Agreement is noise; only mismatch surfaces.
+
+   constraint_signature/2 reads zero CS-layer fields — it computes purely
+   from constraint_metric/3, domain_priors, and structural facts.
+   The two predicates are independent LLM assertions about different aspects
+   of the constraint, so disagreement is a structural finding.
+   ================================================================ */
+
+%% cs_extraction_signature(+Sig)
+%  Atoms from constraint_signature/2 that indicate extractive structure.
+cs_extraction_signature(false_natural_law).
+cs_extraction_signature(false_ci_rope).
+cs_extraction_signature(false_summit_mountain).
+cs_extraction_signature(constructed_high_extraction).
+
+%% cs_authority_masking(+C, -Sig, -AG)
+%  Fires when constraint_signature says extraction but cs_authority_grounding
+%  asserts a non-extraction label (masking the extractive structure).
+%  Sig is the computed extraction-indicating signature atom.
+%  AG is the asserted (non-extraction) authority grounding atom.
+%  Uses narrative_ontology:cs_kernel_codification/2 for enumeration — cs_has_fields/1
+%  uses a cut that prevents backtracking when C is unbound.
+cs_authority_masking(C, Sig, AG) :-
+    narrative_ontology:cs_kernel_codification(C, _),
+    signature_detection:constraint_signature(C, Sig),
+    cs_extraction_signature(Sig),
+    cs_authority_grounding(C, AG),
+    AG \= extraction.
+
+%% cs_cover_story_active(+C, -Verdict)
+%  Triple corroboration: (1) a pattern verdict fires, (2) LLM asserts
+%  extraction authority, AND (3) computed signature confirms extraction.
+%  The false pattern is structural, not accidental — the authority with
+%  extraction stakes generates the cover story.
+cs_cover_story_active(C, Verdict) :-
+    narrative_ontology:cs_kernel_codification(C, _),
+    cs_verdict(C, Verdict),
+    cs_authority_grounding(C, extraction),
+    signature_detection:constraint_signature(C, Sig),
+    cs_extraction_signature(Sig).
+
+%% cs_displaced_beneficiary(+C)
+%  Fires when C presents a naturalized-path authority (lineage, practice,
+%  self_enforcing, expertise, diffuse_epistemic) but is not genuinely
+%  natural by computed signature, AND has an affects_constraint sibling
+%  that explicitly declares extraction authority.
+%  Tests the structural prediction: a path-naturalized reading and an
+%  extraction reading of the same kernel are co-present.
+cs_displaced_beneficiary(C) :-
+    narrative_ontology:cs_kernel_codification(C, _),
+    cs_authority_grounding(C, AG),
+    memberchk(AG, [self_enforcing, lineage, practice, expertise, diffuse_epistemic]),
+    signature_detection:constraint_signature(C, Sig),
+    \+ memberchk(Sig, [natural_law, coupling_invariant_rope, coordination_scaffold]),
+    narrative_ontology:affects_constraint(C, Sibling),
+    cs_has_fields(Sibling),
+    cs_authority_grounding(Sibling, extraction).
+
+/* ================================================================
+   GENERALIZED GROUNDING MISMATCH: cs_grounding_mismatch/3
+   ================================================================
+   Fires when the LLM-asserted authority grounding (AG) is structurally
+   inconsistent with the computed constraint_signature (Sig).
+   Mechanical mismatch check only — does not modify classification or
+   override the CS pattern.
+
+   Strict superset of cs_authority_masking/3:
+     Masking direction: naturalized AGs (lineage, practice, expertise,
+       distributed, diffuse_epistemic, self_enforcing) paired with an
+       extraction-indicating signature — the cover-story family.
+     Reverse direction (NEW): extraction AG paired with genuinely
+       natural/coordination signatures (natural_law, coupling_invariant_rope,
+       coordination_scaffold) — extraction claim contradicts a non-extractive
+       computed structure.
+     Self-enforcing + coordination_scaffold (NEW): authority claims
+       natural necessity but signature shows a chosen, replaceable standard.
+
+   Silent zone (no clause here):
+     - AG=none: wholly excluded from CS patterns; no structural reading.
+     - Tradition-family AGs with natural/coordination signatures: metrics
+       cannot independently distinguish correct from incorrect label.
+     - All AGs with ambiguous, piton_signature, or constructed_constraint:
+       these profile-based middle-range signatures carry insufficient
+       directional information to convict.
+     - extraction + coupling_invariant_rope: architecturally unreachable —
+       CI_Rope requires a beneficiary (has_coordination_function), but
+       false_summit_mountain (priority 3) intercepts any beneficiary-bearing
+       constraint before CI_Rope (priority 5) can certify. Retained in the
+       contradiction table as documentation; will never fire in practice.
+
+   Relationship to cs_authority_masking/3:
+     cs_authority_masking/3 names the specific cover-story pattern (a
+     naturalized AG masking an extraction-indicating signature). Keep both —
+     they are analytically distinct even though their firing sets overlap.
+   ================================================================ */
+
+%% cs_grounding_mismatch(+C, -AG, -Sig)
+%  Enumerates (C, AG, Sig) triples where the asserted grounding contradicts
+%  the computed signature. Enumerates via cs_kernel_codification/2 directly
+%  to avoid the cut in cs_has_fields/1.
+cs_grounding_mismatch(C, AG, Sig) :-
+    narrative_ontology:cs_kernel_codification(C, _),
+    cs_authority_grounding(C, AG),
+    signature_detection:constraint_signature(C, Sig),
+    cs_grounding_contradiction(AG, Sig).
+
+%% cs_grounding_contradiction(+AG, +Sig)
+%  True when authority-grounding atom AG is inconsistent with signature
+%  atom Sig. Fails silently for consistent or undetermined pairs.
+
+% Masking direction: naturalized AGs + extraction-indicating signatures
+cs_grounding_contradiction(lineage,           Sig) :- cs_extraction_signature(Sig).
+cs_grounding_contradiction(practice,          Sig) :- cs_extraction_signature(Sig).
+cs_grounding_contradiction(expertise,         Sig) :- cs_extraction_signature(Sig).
+cs_grounding_contradiction(distributed,       Sig) :- cs_extraction_signature(Sig).
+cs_grounding_contradiction(diffuse_epistemic, Sig) :- cs_extraction_signature(Sig).
+cs_grounding_contradiction(self_enforcing,    Sig) :- cs_extraction_signature(Sig).
+
+% Self-enforcing claims natural necessity; coordination_scaffold says it was a choice.
+cs_grounding_contradiction(self_enforcing, coordination_scaffold).
+
+% Reverse direction: extraction AG + genuinely natural/coordination signatures
+cs_grounding_contradiction(extraction, natural_law).
+cs_grounding_contradiction(extraction, coupling_invariant_rope).
+cs_grounding_contradiction(extraction, coordination_scaffold).

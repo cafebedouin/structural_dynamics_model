@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "retributive_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_retributive_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Retributive Execution: Moral Balance via Proportionate Punishment",
+    "topic_domain": "criminal_justice/political_philosophy/constitutional_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "victims_families",
+      "state_moral_authority",
+      "retributive_justice_framework"
+    ],
+    "victims": [
+      "executed_offender",
+      "offenders_under_capital_sentence",
+      "judicial_system_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Condemned Offender",
+      "comment": "PERSPECTIVE 1: CONDEMNED OFFENDER (SNARE) — Structurally trapped with no exit. The retributive logic claims the offender's death restores moral balance, making execution a legitimate cost imposed without alternative. High suppression: appeals are constrained by legal procedure; clemency is discretionary not guaranteed; the framework itself denies the condemned any claim against the punishment. Maximum experienced extraction — the constraint terminates the agent's biological existence."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Offenders Under Capital Sentence",
+      "comment": "PERSPECTIVE 2: OFFENDERS UNDER CAPITAL SENTENCE (SNARE) — Future and current death-row populations. Trapped by the retributive framework's forward-applicability. The constraint will continue extracting from this class generationally. No meaningful exit — commutation is exceptional, not systematic. The retributive logic applies to any sufficiently heinous crime, making the constraint's reach structural rather than case-specific."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Victims' Families",
+      "comment": "PERSPECTIVE 3: VICTIMS' FAMILIES (TANGLED ROPE) — Primary beneficiaries of the retributive reading. Constrained by their status as victims, they experience the constraint as both a coordination mechanism (the state recognizes their loss and imposes proportionate response) and an extraction mechanism (closure is claimed to require the offender's death, not available through other means). The constraint enforces a particular conception of justice they may or may not hold. Some benefit from the moral validation; others face prolonged trauma through execution proceedings. Moderate power relative to state institutions but constrained by legal procedure and emotional exposure."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "State Retributive Authority",
+      "comment": "PERSPECTIVE 4: STATE RETRIBUTIVE AUTHORITY (ROPE) — The state apparatus that claims moral legitimacy through retributive execution. Benefits from the constraint: establishes the state's authority to define and enforce moral proportionality; demonstrates responsiveness to victims' families; consolidates judicial power. The state experiences the constraint as a coordination mechanism — it solves the problem of legitimating state power by grounding it in a moral principle (proportionate response to heinous crime). Low extraction from the state's perspective because the constraint aligns with its institutional interest. Arbitrage exit: the state can modify execution methods, clemency procedures, or evidentiary standards without abandoning the retributive framework itself."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Retributive Justice Framework (Institutional Persistence)",
+      "comment": "PERSPECTIVE 5: RETRIBUTIVE JUSTICE FRAMEWORK — PITON (INSTITUTIONAL PERSISTENCE) — The retributive logic persists institutionally in many jurisdictions despite widespread abolition globally and significant internal critiques (wrongful convictions, racial disparity, lack of deterrent effect). Theater ratio 0.55: significant portion of retributive justification is performative — the moral restoration claim is expressed through ritual (trials, appeals, executions) that may or may not achieve the claimed restoration for victims or serve the functional purpose of incapacitating danger. The framework's persistence is driven by institutional inertia and political difficulty of abandonment, not by demonstrated effectiveness or universal moral consensus. A piton reading from civilizational scope: the constraint carries forward institutional commitments whose primary justification has degraded relative to available alternatives."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law Reading)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER — NATURAL LAW READING (MOUNTAIN) — From a universal/civilizational perspective, the retributive logic can appear as a timeless principle: that proportionate response to grave harm is inherent to justice itself, a structural feature of how moral communities maintain equilibrium. This reading treats retributive proportionality as an immutable law of ethics or as an irreducible feature of human social organization. However, the engine will detect this as a false summit: the beneficiary set (victims' families, state authority) is identifiable; the extraction mechanism is structural (death penalty as unique cost); and the framework is historically contingent, not natural. The false summit reveals that 'proportionality is natural justice' naturalizes what is a constructed institutional arrangement with identifiable beneficiaries and victims."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "moral_restoration_counterfactual",
+      "question": "Does execution actually restore moral balance or psychological closure for victims' families, or does the retributive framework merely claim this restoration?",
+      "resolution_mechanism": "Longitudinal psychological studies comparing closure outcomes in execution vs. non-execution jurisdictions controlling for crime severity, victim demographics, and memorial practices; interview data on victims' families before and after execution vs. long-term imprisonment",
+      "impact": "If restoration is real: Tangled Rope classification confirmed — the constraint solves a genuine coordination problem. If restoration is performative: reclassify to Snare — the constraint imposes death without functional benefit to the purported beneficiaries, using their interests as moral cover for state power consolidation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether execution produces moral restoration or only claims it"
+    },
+    {
+      "id": "wrongful_execution_framework_validity",
+      "question": "If the retributive framework cannot eliminate wrongful convictions (currently ~1-4% of death sentences), does this undermine its moral claim?",
+      "resolution_mechanism": "Analysis of wrongful execution rates across jurisdictions; comparison of exoneration mechanisms (post-conviction DNA, institutional review) to error rates; assessment of whether retributive logic permits tragic error or requires infallibility",
+      "impact": "If framework permits tragic error as inherent cost: extractiveness remains 0.68, Snare classification stands — the constraint treats wrongful execution as acceptable cost of proportionate punishment. If framework requires near-infallibility: reclassify to Scaffold with sunset — the constraint becomes unsustainable once error rates exceed acceptable threshold.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether retributive logic can accommodate wrongful execution"
+    },
+    {
+      "id": "racial_and_economic_disparity_integration",
+      "question": "Are racial and economic disparities in capital sentencing incidental to the retributive framework or structural to it?",
+      "resolution_mechanism": "Comparative analysis of execution rates by race/SES across similar crime severity; assessment of whether equitable implementation is possible within constraints of adversarial legal system and resource allocation; examination of whether proportionality itself is culturally indexed",
+      "impact": "If incidental and correctable: extractiveness may be reducible to <0.50 via procedural reform. If structural: the constraint is a Snare with disproportionate extraction from marginalized groups, reclassifying victims as including 'offenders from marginalized communities' (extractiveness rises to 0.75+, Snare confirmed with explicit racial disparity data).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether disparities are incidental or structural to retributive punishment"
+    },
+    {
+      "id": "kernel_reading_sibling_delta",
+      "question": "How does the retributive reading instantiate a different constraint than the deterrence reading or abolition reading of the same state_execution_authority kernel?",
+      "resolution_mechanism": "Recognize that this JSON instantiates ONLY the retributive reading. The deterrence and abolition readings are separate constraint stories (see network.affects_constraints for links to their constraint_ids, once authored). This omega documents the structural delta to enable comparison analysis but does NOT fold alternative readings into this constraint's classification.",
+      "impact": "Critical: this constraint must not hedge across readings. The retributive reading has ε=0.68, Snare, with clear beneficiary/victim structure. A reader comparing to the deterrence reading will see a different ε and different type — not from measurement ambiguity but from genuine structural difference between readings of the same kernel. The omega documents the difference; the network link enables contrastive analysis.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural distinction between retributive, deterrence, and abolition readings of execution authority"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The retributive reading of state execution authority claims that imposing a death sentence proportionate to heinous crimes restores moral balance to a community. This is one reading of a contested kernel — the constitutional and philosophical authority to execute — that permits multiple structurally distinct instantiations depending on the justificatory foundation (retributive, deterrent, incapacitative, or abolitionist). This constraint story instantiates ONLY the retributive reading: execution's legitimacy derives from its role in proportionately responding to grave moral wrongs, not from preventing future crimes or from incapacitating danger. Under this reading, the executed offender is the legitimate cost imposed to restore equilibrium; victims' families are primary beneficiaries (they receive recognition of their loss and state-enforced proportionate response); and the state's moral authority is consolidated through demonstrating its capacity to enforce proportionate justice. The constraint exhibits high extractiveness (0.68) because the retributive framework cannot substitute imprisonment for execution without abandoning its core claim — the heinousness of the crime demands a response of equivalent gravity, making execution the only exit from the proportionality requirement. Suppression is high (0.72) because condemned offenders have minimal meaningful exits: appeals are constrained by law, clemency is discretionary, and the framework itself denies any claim to stay the punishment. Theater ratio (0.55) reflects that while the framework makes a genuine moral claim (proportionality), its institutional expression through lengthy trials, appeals, and execution rituals contains significant performative elements — the restoration claim may not correspond to actual psychological or social outcomes for victims' families.",
+    "key_agents": [
+      "Condemned Offender: Primary victim (powerless/trapped) — bears the extracted cost (death); no exit options; framework denies legitimacy of their claims against punishment",
+      "Offenders Under Capital Sentence: Secondary victim class (powerless/trapped) — future and current death-row populations; structurally vulnerable to the framework's forward application",
+      "Victims' Families: Primary beneficiaries (moderate/constrained) — receive state recognition of their loss and enforcement of proportionate response; experience both coordination function (state response to grievance) and extraction (closure claimed to require death penalty)",
+      "State Retributive Authority: Secondary beneficiary (institutional/arbitrage) — consolidates moral authority by enforcing proportionate justice; experiences constraint as coordinating mechanism that legitimates state power",
+      "Retributive Justice Framework: Institutional persistence actor (institutional/arbitrage) — persists through inertia despite global abolition trends; theater ratio indicates performative maintenance alongside genuine moral claims",
+      "Analytical Observer: Universal/civilizational perspective (analytical/analytical) — risks naturalizing the retributive framework as immutable justice principle rather than contingent institutional arrangement with identifiable beneficiaries"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The retributive framework requires that the offender's death is the appropriate response to heinous crime; no lesser penalty can satisfy the proportionality requirement. This creates irreducible extraction: the framework cannot be satisfied by imprisonment, restitution, or rehabilitation because these alternatives fail to achieve the claimed moral restoration through proportionate response. The extractiveness is not incidental to the constraint — it is central to the framework's legitimacy claim. Over the 20-year interval, extractiveness increases from 0.45 to 0.68 as wrongful conviction exonerations accumulate (creating a second-order extraction: innocent people bear the cost) and as evidence fails to support deterrent effects (the framework's only functional justification beyond retribution must be abandoned, leaving pure extraction). Suppression (0.72): High. Condemned offenders face multiple structural barriers: legal procedure constrains appeals, clemency is discretionary and statistically rare, the framework itself denies moral legitimacy to their claims against punishment, and escape from capital jurisdiction is impossible (except through fugitive status or jurisdictional changes, not available to imprisoned defendants). Victims' families face constrained suppression (0.40): they benefit from the framework, but their exit from the legal process is constrained by procedural requirements and their emotional investment in the case. Theater ratio (0.55): Moderate-high. The retributive framework is partly performative: the lengthy trial, multiple appeals, and ritual execution serve to demonstrate state authority and community moral consensus, with significant theatrical content that may not translate to actual victim closure. However, the framework also contains genuine moral reasoning (proportionality principle), preventing full piton classification. The ratio increases over the interval as institutional critiques (wrongful convictions, lack of deterrent effect, racial disparities) mount, making the performative maintenance aspect more visible.",
+    "perspectival_gap": "This constraint's perspectival gap illustrates how the same structural arrangement appears as pure extraction (Snare) from the condemned offender's position and as coordination (Rope) from the state authority's position. The victims' families occupy an intermediate position: they are named as the constraint's beneficiaries, yet the framework constrains their actual exit choices and may not deliver the promised moral restoration. The piton classification (institutional persistence) reveals that the framework's functional justification has degraded — deterrent effects are not empirically supported — leaving only moral/retributive justification, which relies on the performative demonstration of proportionate response. The false-summit mountain classification from the analytical perspective masks the contingency of the retributive principle itself.",
+    "directionality_logic": "Directionality values (d) derive from structural position: condemned offenders are pure victims with no exit (trapped), producing d≈0.95, high f(d)≈1.42, high experienced χ. Victims' families are constrained beneficiaries — they benefit from the framework's recognition of their loss but face constraints from legal procedure and the framework's claim that closure requires execution, producing d≈0.60, f(d)≈0.85, moderate χ. The state authority benefits with arbitrage exit (can modify procedures without abandoning framework), producing d≈0.10, f(d)≈-0.01, low/negative χ. The piton institutional perspective has constrained exit but sees the framework as functionally degraded, producing d≈0.55, f(d)≈0.75, moderate χ. The analytical observer has analytical exit (can withdraw to analytical position) but the mountain reading naturalizes contingency, producing a false summit d≈0.70, f(d)≈1.10, but classified as Mountain — a diagnostic gap.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the retributive reading instantiates a genuine Snare, not a Rope or Tangled Rope. The key constraint is that the retributive framework requires execution as the proportionate response to heinous crime; no lesser penalty can substitute. This creates asymmetric extraction (high from condemned offenders, moderate from victims' families constrained by the framework) with minimal coordination benefit beyond the state's institutional interest in consolidating power. The classification is NOT hedged between types because the ε value (0.68) is intrinsic to the retributive reading: the framework cannot reduce extractiveness without abandoning its core claim. Alternative readings (deterrence, abolition) would have different ε values and different types, appearing in separate constraint stories linked via network.affects_constraints. The mandatrophy-resolving insight is that this constraint and its sibling readings are structurally distinct problems, not perspectival views of a single problem.",
+    "kernel_context": "This constraint instantiates the RETRIBUTIVE READING of the contested kernel 'state_execution_authority'. The kernel is a stabilized commitment: the constitutional and philosophical authority to impose capital punishment. The retributive reading grounds this authority in the principle that proportionate response to heinous crime restores moral balance. SIBLING READINGS (other constraint stories): (1) deterrence_reading — grounds authority in prevention of future crimes; distinct ε and beneficiary structure. (2) abolition_reading — denies the authority entirely, grounding legitimacy in human rights framework. (3) incapacitation_reading — grounds authority in protecting public from dangerous offenders. Each reading instantiates a different constraint with its own ε, beneficiary/victim structure, and classification. This JSON contains ONLY the retributive reading and does not hedge across siblings. The structural delta: retributive reading brings 'victims' families' into the beneficiary set and requires execution as irreplaceable; deterrence reading focuses on public safety beneficiaries and permits imprisonment if equally deterrent; abolition reading denies the entire constraint, making the kernel unresolvable through execution. The delta resides in the beneficiary/victim declarations and the irreducibility of the punishment mechanism, not in abstract disagreement about justice philosophy."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "deterrence_reading",
+      "abolition_reading",
+      "incapacitation_reading"
+    ],
+    "dual_formulation_note": "The state_execution_authority kernel admits multiple readings that produce structurally distinct constraints. This story (retributive_reading, ε=0.68, Snare) decomposes from a conceptual node that also generates deterrence_reading (ε≈0.55, likely Tangled Rope), abolition_reading (ε≈0.10, likely Rope), and incapacitation_reading (ε≈0.60, likely Tangled Rope). Each reading is a complete, ε-invariant constraint with its own perspectives, beneficiary/victim structure, and measurements. They are linked via network.affects_constraints to enable contrastive analysis. Do NOT use the presence of multiple readings to hedge the retributive reading's classification — this reading is a clean Snare with high extractiveness because the framework itself creates irreducible extraction cost."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.6
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "state_execution_authority"
+    ]
+  }
+}
