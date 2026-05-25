@@ -286,12 +286,14 @@ narrative_ontology:cs_authority_grounding(test_no_masking_case, extraction).
 narrative_ontology:constraint_metric(test_no_masking_case, extractiveness, 0.60).
 narrative_ontology:constraint_metric(test_no_masking_case, suppression_requirement, 0.55).
 
-% test_displaced_path: lineage authority → affects_constraint → extraction sibling
+% test_displaced_path: lineage authority → forecloses edge → extraction sibling
+% cs_reading_relation/3 typed edge is required; bare affects_constraint alone does not fire.
 narrative_ontology:cs_kernel_codification(test_displaced_path, fixed_text).
 narrative_ontology:cs_authority_grounding(test_displaced_path, lineage).
 narrative_ontology:constraint_metric(test_displaced_path, extractiveness, 0.50).
 narrative_ontology:constraint_metric(test_displaced_path, suppression_requirement, 0.45).
 narrative_ontology:affects_constraint(test_displaced_path, test_displaced_extraction).
+narrative_ontology:cs_reading_relation(test_displaced_path, test_displaced_extraction, forecloses).
 
 % test_displaced_extraction: extraction authority (sibling with CS fields)
 narrative_ontology:cs_kernel_codification(test_displaced_extraction, formalized).
@@ -359,6 +361,7 @@ cs_test_case("displaced_beneficiary_silent_on_extraction_authority",
    ================================================================ */
 
 :- multifile narrative_ontology:affects_constraint/2.
+:- multifile narrative_ontology:cs_reading_relation/3.
 :- multifile narrative_ontology:intent_viable_alternative/3.
 
 % test_gm_reverse_natural: extraction AG + natural_law signature

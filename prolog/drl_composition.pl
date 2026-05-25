@@ -136,14 +136,16 @@ detect_extraction_dominance(Composite, Evidence) :-
     Evidence = embedded_snare(Component, X).
 
 %% detect_necessity_inheritance(+Source, -Derived)
-% Detects when a Mountain constraint logically implies another constraint
-% NOTE: Uses default analytical context for detection
+% Detects when a Mountain constraint logically entails another constraint
+% (derivation/entailment edge). Uses the typed cs_reading_relation/3 with
+% the `influences` relation atom. Bare affects_constraint/2 edges and
+% coexists_with edges are explicitly excluded: sibling readings that coexist
+% or merely influence one another are not logical entailments.
 detect_necessity_inheritance(Source, Derived) :-
     drl_core:dr_type(Source, mountain),
-    narrative_ontology:affects_constraint(Source, Derived),
+    narrative_ontology:cs_reading_relation(Source, Derived, influences),
     narrative_ontology:constraint_metric(Source, suppression_requirement, E_source),
     E_source =< 0.05,
-    % If the derived constraint should also be a Mountain
     narrative_ontology:constraint_metric(Derived, suppression_requirement, E_derived),
     E_derived =< 0.05.
 

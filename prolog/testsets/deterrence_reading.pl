@@ -40,6 +40,7 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:cs_reading_relation/3,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
@@ -48,6 +49,8 @@
     narrative_ontology:cs_authority_grounding/2,
     narrative_ontology:cs_interpretation_layer_present/1,
     narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -311,6 +314,15 @@ narrative_ontology:affects_constraint(deterrence_reading, retributive_reading).
 narrative_ontology:affects_constraint(deterrence_reading, abolition_reading).
 narrative_ontology:affects_constraint(deterrence_reading, wrongful_conviction_cascade).
 narrative_ontology:affects_constraint(deterrence_reading, appellate_review_bottleneck).
+narrative_ontology:cs_reading_relation(deterrence_reading, retributive_reading, coexists_with).
+narrative_ontology:cs_reading_relation(deterrence_reading, abolition_reading, coexists_with).
+% Temporal layer: classical deterrence theory as reference frame; systematic meta-analyses
+% have substantially challenged the empirical premise (that CP deters more than LWOP).
+% Criminal justice authority structure has not acknowledged this as dispositive.
+% Engine computes: axiom_overriding + substantial + false → axiom_foreclosure.
+narrative_ontology:cs_reference_frame(deterrence_reading, classical_deterrence_theory).
+narrative_ontology:cs_drift_state(deterrence_reading, post_meta_analysis_era,
+    gap(axiom_overriding, substantial, false)).
 
 % DUAL FORMULATION NOTE:
 % The state_execution_authority kernel decomposes into three constraint stories: deterrence_reading (this story, ε=0.52, Tangled Rope), retributive_reading (ε varies by retributive principle strength, likely 0.30-0.45, Rope/Tangled Rope), and abolition_reading (ε≈0.80+, Snare from all perspectives). These are not observational variants of one constraint but fundamentally different readings of the same kernel that produce different structural classifications. Each reading makes different empirical and philosophical claims about what justifies execution. The deterrence reading is downstream of wrongful_conviction_cascade (errors accumulate in the execution apparatus) and appellate_review_bottleneck (appeals cannot prevent executions once finality is reached).

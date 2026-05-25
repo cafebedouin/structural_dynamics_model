@@ -19,7 +19,8 @@
 :- use_module(constraint_indexing).
 :- use_module(purity_scoring, [purity_score/2]).
 :- use_module(signature_detection, [false_natural_law/2]).
-:- use_module(cs_pattern_detection, [cs_pattern/3, cs_verdict/2, cs_has_fields/1]).
+:- use_module(cs_pattern_detection, [cs_pattern/3, cs_verdict/2, cs_has_fields/1,
+                                     cs_grounding_mismatch/3]).
 :- use_module(logical_fingerprint).
 :- use_module(report_generator).
 :- use_module(drl_lifecycle).
@@ -1201,7 +1202,15 @@ write_validation_object(S, Constraints) :-
     format(S, ',~n', []),
     format(S, '      "cs_verdicts_fired": ', []),
     write_json_count_object(S, CsVerdictDist),
-    format(S, '~n    }~n', []),
+    format(S, '~n    },~n', []),
+
+    % cs_grounding_mismatch count — how many (C, AG, Sig) triples fire.
+    % A non-zero count means at least one constraint's asserted authority grounding
+    % contradicts its computed structural signature — the primary corpus sanity signal.
+    findall(C-AG-Sig, catch(cs_grounding_mismatch(C, AG, Sig), _, fail),
+            GmTriples),
+    length(GmTriples, GmCount),
+    format(S, '    "cs_grounding_mismatch_count": ~w~n', [GmCount]),
 
     format(S, '  }', []).
 

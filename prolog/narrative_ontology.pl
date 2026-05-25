@@ -10,6 +10,7 @@
     topic_domain/2,
     recommendation/2,
     affects_constraint/2,
+    cs_reading_relation/3,  % Typed sibling edge: cs_reading_relation(+C, +Sibling, +Rel)
     veto_actor/1,
     veto_exposed/2,
     constraint_metric/3,
@@ -65,12 +66,19 @@
     intent_norm_strength/3, theater_ratio/2,
     constraint_beneficiary/2, constraint_victim/2, input_vector/2,
     coupling_profile/2, coordination_type/2, boltzmann_floor_override/2,
-    coordination_vitality/2.
+    coordination_vitality/2,
+    cs_reading_relation/3,  % Typed reading-sibling edge. Relation ∈ {forecloses, coexists_with, influences}
+    cs_axiom/3,             % cs_axiom(+Reading, +Role, +Atom) — normative claim held by a reading
+    cs_axiom_status/2,      % cs_axiom_status(+Atom, +Status) — Status ∈ {holdable, overridden, foreclosed}
+    cs_axiom_contradiction/2, % cs_axiom_contradiction(+AtomA, +AtomB) — symmetric contradiction pair
+    cs_reference_frame/2,   % cs_reference_frame(+C, +Atom) — t0: committer-axis's declared reference state
+    cs_drift_state/3.       % cs_drift_state(+C, +Moment, +gap(Direction, Magnitude, Acknowledged)) — t1 gap
 
 :- dynamic
     attribute/3, has_mandatrophy_declaration/1,
     entity/2, interval/3, event/4,
     constraint_claim/2, human_readable/2, topic_domain/2, recommendation/2, affects_constraint/2,
+    cs_reading_relation/3,
     veto_actor/1, veto_exposed/2, constraint_metric/3, omega_variable/3,
     measurement/5, has_sunset_clause/1,
     intent_viable_alternative/3, intent_alternative_rejected/3,
@@ -79,7 +87,9 @@
     intent_norm_strength/3, constraint_claim/3,
     constraint_beneficiary/2, constraint_victim/2, input_vector/2,
     coupling_profile/2, coordination_type/2, boltzmann_floor_override/2,
-    coordination_vitality/2.
+    coordination_vitality/2,
+    cs_reference_frame/2,
+    cs_drift_state/3.
 
 /* ============================================================
    2. VALIDATION LOGIC

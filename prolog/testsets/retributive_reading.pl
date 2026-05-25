@@ -40,6 +40,7 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:cs_reading_relation/3,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
@@ -48,7 +49,9 @@
     narrative_ontology:topic_domain/2,
     narrative_ontology:cs_kernel_codification/2,
     narrative_ontology:cs_authority_grounding/2,
-    narrative_ontology:cs_kernel_id/2.
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3.
 
 /* ==========================================================================
    1. NARRATIVE CONTEXT
@@ -289,6 +292,14 @@ narrative_ontology:coordination_type(retributive_reading, enforcement_mechanism)
 narrative_ontology:affects_constraint(retributive_reading, deterrence_reading).
 narrative_ontology:affects_constraint(retributive_reading, abolition_reading).
 narrative_ontology:affects_constraint(retributive_reading, incapacitation_reading).
+narrative_ontology:cs_reading_relation(retributive_reading, deterrence_reading, coexists_with).
+narrative_ontology:cs_reading_relation(retributive_reading, abolition_reading, coexists_with).
+% Temporal layer: deontological natural-law framework; axioms not primarily empirically grounded.
+% Relative to its own reference frame, this reading is internally stable.
+% Engine computes: stable + minor → stable_pattern.
+narrative_ontology:cs_reference_frame(retributive_reading, natural_law_proportional_justice).
+narrative_ontology:cs_drift_state(retributive_reading, contemporary,
+    gap(stable, minor, true)).
 
 % DUAL FORMULATION NOTE:
 % The state_execution_authority kernel admits multiple readings that produce structurally distinct constraints. This story (retributive_reading, ε=0.68, Snare) decomposes from a conceptual node that also generates deterrence_reading (ε≈0.55, likely Tangled Rope), abolition_reading (ε≈0.10, likely Rope), and incapacitation_reading (ε≈0.60, likely Tangled Rope). Each reading is a complete, ε-invariant constraint with its own perspectives, beneficiary/victim structure, and measurements. They are linked via network.affects_constraints to enable contrastive analysis. Do NOT use the presence of multiple readings to hedge the retributive reading's classification — this reading is a clean Snare with high extractiveness because the framework itself creates irreducible extraction cost.

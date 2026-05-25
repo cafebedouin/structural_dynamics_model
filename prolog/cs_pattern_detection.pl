@@ -40,7 +40,8 @@
     cs_authority_masking/3,
     cs_cover_story_active/2,
     cs_displaced_beneficiary/1,
-    cs_grounding_mismatch/3
+    cs_grounding_mismatch/3,
+    cs_drift_unacknowledged/2
 ]).
 
 :- use_module(narrative_ontology).
@@ -307,17 +308,19 @@ cs_cover_story_active(C, Verdict) :-
 %% cs_displaced_beneficiary(+C)
 %  Fires when C presents a naturalized-path authority (lineage, practice,
 %  self_enforcing, expertise, diffuse_epistemic) but is not genuinely
-%  natural by computed signature, AND has an affects_constraint sibling
-%  that explicitly declares extraction authority.
-%  Tests the structural prediction: a path-naturalized reading and an
-%  extraction reading of the same kernel are co-present.
+%  natural by computed signature, AND has a cs_reading_relation/3 forecloses
+%  edge to a sibling that explicitly declares extraction authority.
+%  Uses the typed edge (forecloses) to avoid firing on coexisting readings
+%  of the same kernel — sibling readings that coexist_with one another are
+%  not domination relationships, so the displaced-beneficiary signal does not
+%  apply. Bare affects_constraint/2 edges are intentionally excluded.
 cs_displaced_beneficiary(C) :-
     narrative_ontology:cs_kernel_codification(C, _),
     cs_authority_grounding(C, AG),
     memberchk(AG, [self_enforcing, lineage, practice, expertise, diffuse_epistemic]),
     signature_detection:constraint_signature(C, Sig),
     \+ memberchk(Sig, [natural_law, coupling_invariant_rope, coordination_scaffold]),
-    narrative_ontology:affects_constraint(C, Sibling),
+    narrative_ontology:cs_reading_relation(C, Sibling, forecloses),
     cs_has_fields(Sibling),
     cs_authority_grounding(Sibling, extraction).
 
@@ -388,3 +391,19 @@ cs_grounding_contradiction(self_enforcing, coordination_scaffold).
 cs_grounding_contradiction(extraction, natural_law).
 cs_grounding_contradiction(extraction, coupling_invariant_rope).
 cs_grounding_contradiction(extraction, coordination_scaffold).
+
+/* ================================================================
+   TEMPORAL DRIFT: cs_drift_unacknowledged/2
+   Type-A static signal: substantial or severe drift that the authority
+   structure has not acknowledged. Independent of cs_drift_trajectory/3
+   (which computes t2 regardless of acknowledgment status).
+   ================================================================ */
+
+%% cs_drift_unacknowledged(+C, -Gap)
+%  Fires when C has a cs_drift_state with a non-trivial gap (not stable,
+%  not minor) that the authority structure has not acknowledged.
+cs_drift_unacknowledged(C, Gap) :-
+    narrative_ontology:cs_drift_state(C, _, Gap),
+    Gap = gap(Dir, Mag, false),
+    Dir \= stable,
+    Mag \= minor.

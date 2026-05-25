@@ -182,6 +182,18 @@ def _build_multifile_declarations(data):
         cs = data["cs_structure"]
         if cs.get("interpretation_layer_present"):
             decls.append("narrative_ontology:cs_interpretation_layer_present/1")
+        # kernel_id is injected from manifest, not from model output — see process_batch_results
+        if data.get("_kernel_id"):
+            decls.append("narrative_ontology:cs_kernel_id/2")
+        if cs.get("reading_relations"):
+            decls.append("narrative_ontology:cs_reading_relation/3")
+        if cs.get("axioms"):
+            decls.append("narrative_ontology:cs_axiom/3")
+            decls.append("narrative_ontology:cs_axiom_status/2")
+        if cs.get("reference_frame"):
+            decls.append("narrative_ontology:cs_reference_frame/2")
+        if cs.get("drift_state"):
+            decls.append("narrative_ontology:cs_drift_state/3")
 
     # human_readable and topic_domain
     decls.append("narrative_ontology:human_readable/2")
@@ -455,6 +467,34 @@ def generate_pl(data):
         emit(f"narrative_ontology:cs_authority_grounding({cid}, {cs['authority_grounding']}).")
         if cs.get("interpretation_layer_present"):
             emit(f"narrative_ontology:cs_interpretation_layer_present({cid}).")
+        # kernel_id comes from manifest injection (_kernel_id field), not from model output
+        kernel_id = data.get("_kernel_id")
+        if kernel_id:
+            emit(f"narrative_ontology:cs_kernel_id({cid}, {kernel_id}).")
+        # Typed reading-sibling edges (authored by model from kernel context)
+        for rr in cs.get("reading_relations") or []:
+            sibling = rr["sibling_id"]
+            rel = rr["relation"]
+            emit(f"narrative_ontology:cs_reading_relation({cid}, {sibling}, {rel}).")
+        # Foundational axioms (authored by model; name what distinguishes this reading)
+        emitted_statuses = set()
+        for ax in cs.get("axioms") or []:
+            atom = ax["atom"]
+            role = ax["role"]
+            status = ax["status"]
+            emit(f"narrative_ontology:cs_axiom({cid}, {role}, {atom}).")
+            if atom not in emitted_statuses:
+                emit(f"narrative_ontology:cs_axiom_status({atom}, {status}).")
+                emitted_statuses.add(atom)
+        # Temporal layer: t0 reference frame and t1 drift state (authored; t2 is computed by engine)
+        if rf := cs.get("reference_frame"):
+            emit(f"narrative_ontology:cs_reference_frame({cid}, {rf}).")
+        if ds := cs.get("drift_state"):
+            moment = ds["moment"]
+            direction = ds["direction"]
+            magnitude = ds["magnitude"]
+            ack = str(ds["acknowledged"]).lower()
+            emit(f"narrative_ontology:cs_drift_state({cid}, {moment}, gap({direction}, {magnitude}, {ack})).")
         emit()
 
     # Beneficiaries and victims

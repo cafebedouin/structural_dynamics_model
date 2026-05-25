@@ -270,6 +270,12 @@ def build_header(pipeline_data):
                 f"  CS patterns: {cs_total} classified | {', '.join(cs_parts)}"
                 + (f" | {verdicts_fired} verdicts fired" if verdicts_fired else "")
             )
+    # CS grounding mismatch count (corpus sanity signal — non-zero means at least one
+    # asserted authority grounding contradicts the computed structural signature)
+    gm_count = val.get("cs_grounding_mismatch_count") if val else None
+    if gm_count is not None:
+        label = "grounding-metric conflicts" if gm_count != 1 else "grounding-metric conflict"
+        lines.append(f"  CS grounding mismatches: {gm_count} {label}")
 
     lines.append("")
     return "\n".join(lines)

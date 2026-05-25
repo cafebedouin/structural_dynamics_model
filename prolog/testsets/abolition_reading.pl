@@ -40,6 +40,7 @@
     narrative_ontology:constraint_victim/2,
     narrative_ontology:constraint_claim/2,
     narrative_ontology:affects_constraint/2,
+    narrative_ontology:cs_reading_relation/3,
     narrative_ontology:coordination_type/2,
     constraint_indexing:constraint_classification/3,
     narrative_ontology:omega_variable/3,
@@ -47,6 +48,8 @@
     narrative_ontology:cs_authority_grounding/2,
     narrative_ontology:cs_interpretation_layer_present/1,
     narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -303,6 +306,16 @@ narrative_ontology:measurement(abol_be_t75, abolition_reading, base_extractivene
 narrative_ontology:coordination_type(abolition_reading, enforcement_mechanism).
 narrative_ontology:affects_constraint(abolition_reading, retributive_reading).
 narrative_ontology:affects_constraint(abolition_reading, deterrence_reading).
+narrative_ontology:cs_reading_relation(abolition_reading, retributive_reading, coexists_with).
+narrative_ontology:cs_reading_relation(abolition_reading, deterrence_reading, coexists_with).
+% Temporal layer: t0 reference frame and t1 drift state. t2 (trajectory) is computed by cs_drift_engine.pl.
+% Reference frame: the classical punitive authority that administered CP as ordinary punishment.
+% Drift: its normative legitimacy has substantially eroded in international HR law; authority structure
+% has not acknowledged this erosion as dispositive → unacknowledged substantial authority erosion.
+% Engine computes: authority_erosion + substantial + false → husk.
+narrative_ontology:cs_reference_frame(abolition_reading, classical_punitive_authority).
+narrative_ontology:cs_drift_state(abolition_reading, contemporary_human_rights_era,
+    gap(authority_erosion, substantial, false)).
 
 % DUAL FORMULATION NOTE:
 % The constraint 'state_execution_authority' is a contested kernel with three structurally distinct readings: abolition_reading (this file), retributive_reading (sibling), and deterrence_reading (sibling). Each reading instantiates a different constraint with different ε values, beneficiary/victim declarations, and classifications. The readings are not observable-dependent variants of one constraint; they are fundamentally different claims about what state execution is and whether it is justified. Each story has its own constraint_id and is compiled separately. Network links indicate conceptual kinship, not shared metrics.

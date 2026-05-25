@@ -200,6 +200,38 @@ If two supposed readings would emit the *same* constraint, they are not two read
 `is_contested_kernel: false` and note the collapse in an omega. If supposed readings share no
 common substrate, the topic may be several distinct kernels rather than one. Record that too.
 
+#### Axiom Contradiction Declaration
+
+After identifying readings, ask: **which pairs of readings hold foundational axioms that are
+mutually exclusive?**
+
+An axiom pair is mutually exclusive if and only if **no single coherent normative framework could
+hold both axioms simultaneously**. This is not the same as disagreement, and it is NOT derived
+from the edge type between readings.
+
+**Selectivity test:** "Would accepting Axiom A as true require accepting Axiom B as false?"
+- YES → declare contradictory.
+- NO (a pluralist or hybrid framework could hold both as complementary considerations) → do NOT declare.
+
+**Negative example (do NOT declare):** A retributive reading and a deterrence reading both support
+capital punishment through different justifications (desert vs. rational deterrence). A
+consequentialist framework could hold both as complementary reasons. These are NOT
+axiom-contradictory — they are different justifications for the same conclusion.
+
+**Positive example (declare):** A retributive reading (execution grounded in proportional desert)
+and an abolition reading (state killing categorically impermissible) cannot coexist in any single
+framework. Accepting abolition's axiom as true requires rejecting retributive's axiom as false.
+Declare this pair.
+
+Record each declared pair as an entry in `axiom_contradictions` inside `commitment_system_recognition`.
+If no pairs meet the test, omit the field or emit an empty array.
+
+**Critical independence constraint:** This declaration is independent of the `forecloses` /
+`coexists_with` edge type. A pair can have a `coexists_with` edge (both readings are socially live
+positions) AND contradictory axioms (no single framework holds both) — that combination identifies
+**licensed plurality**. Do NOT derive contradiction from the edge type; derive it from whether a
+single coherent framework could hold both axioms simultaneously.
+
 ---
 
 ## §2. DECOMPOSITION (Axis Identification)
@@ -384,6 +416,13 @@ valid with just the four original fields.
       "authority_grounding": "positivist / autonomy",
       "sibling_readings": ["conception_reading", "viability_reading"],
       "expected_structural_delta": "fetus not in victim set; mother sole rights-holder"
+    }
+  ],
+  "axiom_contradictions": [
+    {
+      "reading_a": "conception_reading",
+      "reading_b": "birth_reading",
+      "basis": "one sentence: why no single coherent framework holds both axioms simultaneously"
     }
   ]
 }

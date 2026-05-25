@@ -598,10 +598,143 @@ note naming the kernel, your reading, and the sibling readings. Prose, not IDs-a
 - To describe a mere difference of opinion. If two parties agree on what the constraint is and
   only disagree about whether it is good, that is the observer axis, not a kernel.
 
-### Temporal kernels
+### Rule 4 — Author `reading_relations` and `axioms` in `cs_structure` for kernel readings.
 
-Some kernels have readings whose force shifts over time. Generate the **present-day** reading,
-and note any temporal drift in an omega. Do not model the kernel's full history in one constraint.
+**Only apply Rule 4 when the KERNEL CONTEXT section identifies a `kernel_id` and `reading_id`.**
+For ordinary (non-kernel) CS constraints — even those with a `cs_structure` block — omit
+`reading_relations` and `axioms` entirely. Do NOT invent sibling readings for a constraint that
+is not a kernel reading.
+
+When generating a kernel reading, populate two additional fields inside `cs_structure`:
+
+**`cs_structure.reading_relations`** — For EACH sibling reading listed in the kernel context,
+declare the structural relationship FROM this reading TO the sibling:
+
+- **`forecloses`**: This reading makes the sibling logically impossible to hold within the SAME
+  commitment framework. Use when the core premise of YOUR reading directly contradicts the
+  sibling's core premise such that no single framework could hold both. Example: a personhood
+  reading that places moral status at conception FORECLOSES the birth-only reading — they cannot
+  coexist in one legal framework. This is the rarest relation.
+
+- **`coexists_with`**: The readings occupy different parties' commitments simultaneously and
+  NEITHER rules out the other within any single party's framework. The readings compete in public
+  discourse but neither logically eliminates the other. Example: originalist and living-
+  constitution readings coexist across different judicial coalitions; abolition, retributive, and
+  deterrence readings of capital punishment all coexist as live positions held by different
+  actors. Use `coexists_with` when the readings are held by different factions of an ongoing
+  dispute with no logical resolution.
+
+- **`influences`**: This reading creates structural downstream pressure on the sibling — changing
+  legitimacy conditions, resource availability, or institutional configuration — without logically
+  foreclosing it. Example: a reading that codifies a higher evidentiary standard INFLUENCES (but
+  does not foreclose) a sibling reading about burden-of-proof allocation. Use `influences` when
+  there is a clear upstream/downstream causal structure between readings.
+
+**The diagnostic question for relation choice:** Would a party adopting this reading be
+*logically committed* to rejecting the sibling's core premise (`forecloses`)? Or can the party
+simply *disagree* with the sibling while both readings remain live options for other parties
+(`coexists_with`)? Or does this reading create *structural conditions* that change the sibling's
+operating environment without resolving the dispute (`influences`)?
+
+**`cs_structure.axioms`** — Declare the foundational normative claim(s) that distinguish this
+reading from its siblings. Each axiom is a Prolog-compatible atom (snake_case) naming the claim.
+Axiom atoms must be unique across sibling readings — the point is to name what is *distinct*
+about each reading.
+
+- **`role`**: `foundational` for the core distinguishing premise; `secondary` for implications
+  that follow but are not the distinguishing claim.
+- **`status`**:
+  - `holdable` — the axiom is a live normative claim that can be maintained without internal
+    contradiction in contemporary discourse. Use for readings that remain live in public dispute.
+  - `overridden` — the axiom was once active but has been formally superseded or rejected within
+    this reading's own tradition or legal history. Use when the reading itself has acknowledged
+    the axiom is no longer operative.
+  - `foreclosed` — the axiom is ruled out by the reading's OWN internal commitments. Use for
+    axioms the reading explicitly rejects (as distinct from axioms held by SIBLING readings).
+
+Aim for 1–2 foundational axioms per reading. A foundational axiom names the claim that, if
+denied, would dissolve this reading into a different one.
+
+**Example — capital punishment triplet:**
+```json
+"cs_structure": {
+  "kernel_codification": "formalized",
+  "authority_grounding": "lineage",
+  "reading_relations": [
+    {"sibling_id": "retributive_reading", "relation": "coexists_with"},
+    {"sibling_id": "deterrence_reading", "relation": "coexists_with"}
+  ],
+  "axioms": [
+    {"atom": "execution_categorically_impermissible", "role": "foundational", "status": "holdable"}
+  ]
+}
+```
+
+**Distribution check:** If every sibling gets `coexists_with` and every axiom gets `holdable`,
+ask whether any reading genuinely forecloses another within a single framework (rare but real),
+and whether any axiom has been formally overridden within the reading's own tradition. Do not
+default to `coexists_with` out of caution — assess the logical structure. Some kernels have
+genuine `forecloses` pairs (personhood-boundary, constitutional amendment). Some axioms are
+genuinely `overridden` (e.g., a jurisprudential reading that has abandoned a prior premise
+after case law).
+
+### Rule 5 — Author `reference_frame` and `drift_state` in `cs_structure` for kernel readings.
+
+**Only apply Rule 5 when the KERNEL CONTEXT section identifies a `kernel_id` and `reading_id`.**
+For ordinary (non-kernel) CS constraints, omit `reference_frame` and `drift_state` entirely.
+
+When generating a kernel reading, populate two additional fields inside `cs_structure`:
+
+**`cs_structure.reference_frame`** — A snake_case atom naming the reference state *this reading*
+takes the kernel to be. This is the committer-axis's declared starting point — NOT a historical
+date, NOT a contested origin, NOT a discovered fact. It names what the reading's own framework
+holds as the normal or legitimate state of the kernel. Example: a legal-positivist reading of
+constitutional authority might declare `legislative_supremacy_framework`; a natural-law reading
+might declare `natural_law_proportional_justice`. The reference frame is unique to the reading.
+
+**`cs_structure.drift_state`** — Describes the gap between the reference frame (t0) and a named
+historical or counterfactual moment of observation (t1). The gap is the drift vector. Fields:
+
+- `moment`: snake_case atom naming the observation point (e.g. `contemporary`, `post_meta_analysis_era`, `post_empirical_challenge`)
+- `direction`: the type of drift relative to the reference frame. Choose from:
+  - `authority_erosion` — the authority structure's legitimacy has weakened
+  - `codification_collapse` — the written rules or transmitted text no longer function
+  - `axiom_overriding` — a foundational empirical or normative premise has been substantially challenged
+  - `practice_drift` — actual practice has substantially departed from the reference frame
+  - `revival_pressure` — active forces are reconstructing the reference frame
+  - `repudiation_pressure` — active forces are explicitly rejecting the reference frame
+  - `stable` — no significant drift; the reading's reference frame is intact
+- `magnitude`: `minor`, `substantial`, or `severe`
+- `acknowledged`: `true` if the authority structure explicitly recognizes this gap; `false` otherwise
+
+**Critical:** Author `direction` and `magnitude` from the reading's actual structural
+relationship to its reference frame — what the reading's epistemic premises commit it to.
+**Do NOT choose magnitude to produce a desired terminal state.** The engine computes t2
+(the terminal attractor) from your t1 inputs; your job is to characterize the gap accurately.
+If a reading's foundational premise has been substantially challenged by systematic evidence
+but the authority structure treats it as settled, that is `substantial + false`, not `severe`.
+
+```json
+"cs_structure": {
+  "kernel_codification": "formalized",
+  "authority_grounding": "lineage",
+  "reference_frame": "classical_punitive_authority",
+  "drift_state": {
+    "moment": "contemporary_human_rights_era",
+    "direction": "authority_erosion",
+    "magnitude": "substantial",
+    "acknowledged": false
+  },
+  "reading_relations": [...],
+  "axioms": [...]
+}
+```
+
+**Distribution check:** If every reading in a kernel gets `direction: stable` or every reading
+gets the same magnitude, ask whether the readings genuinely have the same relationship to their
+respective reference frames. Sibling readings with different reference frames and different
+epistemic premises should usually produce different directions or magnitudes. Uniform drift
+profiles across a kernel are a signal to reconsider the reference frame declarations.
 
 ---
 

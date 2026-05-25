@@ -522,6 +522,93 @@
         "interpretation_layer_present": {
           "type": "boolean",
           "description": "Only applicable when kernel_codification=formalized AND authority_grounding=extraction. True = functioning interpretive substructure below the kernel absorbs drift."
+        },
+        "reading_relations": {
+          "type": "array",
+          "description": "Typed edges to sibling readings in the same kernel. Omit for non-kernel constraints.",
+          "items": {
+            "type": "object",
+            "required": ["sibling_id", "relation"],
+            "properties": {
+              "sibling_id": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]*$",
+                "description": "constraint_id of the sibling reading"
+              },
+              "relation": {
+                "type": "string",
+                "enum": ["forecloses", "coexists_with", "influences"],
+                "description": "Structural relationship from this reading to the sibling: forecloses=logically rules out sibling in same framework, coexists_with=different parties hold both simultaneously, influences=creates structural pressure without foreclosing"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "axioms": {
+          "type": "array",
+          "description": "Foundational normative claims this reading holds. Omit for non-kernel constraints.",
+          "items": {
+            "type": "object",
+            "required": ["atom", "role", "status"],
+            "properties": {
+              "atom": {
+                "type": "string",
+                "pattern": "^[a-z][a-z0-9_]*$",
+                "description": "Snake_case identifier for the normative claim (unique across sibling readings)"
+              },
+              "role": {
+                "type": "string",
+                "enum": ["foundational", "secondary"],
+                "description": "foundational=core distinguishing premise of this reading, secondary=implication that follows from the foundational claim"
+              },
+              "status": {
+                "type": "string",
+                "enum": ["holdable", "overridden", "foreclosed"],
+                "description": "holdable=live normative claim without internal contradiction, overridden=formally superseded within this reading, foreclosed=ruled out by this reading's own commitments"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "reference_frame": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*$",
+          "description": "t0: snake_case atom naming the reference state this reading takes the kernel to be. NOT a historical date or discovered origin — the committer-axis's declared starting point."
+        },
+        "drift_state": {
+          "type": "object",
+          "description": "t1: drift state at a named historical or counterfactual moment relative to t0. Gap(t0,t1) = the drift vector. Omit for non-kernel constraints.",
+          "required": ["moment", "direction", "magnitude", "acknowledged"],
+          "additionalProperties": false,
+          "properties": {
+            "moment": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_]*$",
+              "description": "Snake_case name for the observation moment (e.g. contemporary, post_empirical_challenge)"
+            },
+            "direction": {
+              "type": "string",
+              "enum": [
+                "authority_erosion",
+                "codification_collapse",
+                "axiom_overriding",
+                "practice_drift",
+                "revival_pressure",
+                "repudiation_pressure",
+                "stable"
+              ],
+              "description": "Direction of drift relative to t0 reference frame"
+            },
+            "magnitude": {
+              "type": "string",
+              "enum": ["minor", "substantial", "severe"],
+              "description": "Size of the gap between t0 and t1"
+            },
+            "acknowledged": {
+              "type": "boolean",
+              "description": "Whether the authority structure explicitly recognizes this gap"
+            }
+          }
         }
       }
     }

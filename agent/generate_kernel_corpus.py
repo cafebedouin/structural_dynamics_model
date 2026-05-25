@@ -288,19 +288,38 @@ def build_cached_messages(gen_seed):
         f"CONSTRAINT_ID: {gen_seed['constraint_id']}",
     ]
     if gen_seed.get("kernel_id"):
+        sibling_ids = gen_seed.get("sibling_reading_ids", [])
+        siblings_str = ", ".join(sibling_ids) or "none listed"
         lines += [
             "",
             "=== KERNEL CONTEXT (committer frame) ===",
             "This constraint is ONE READING of a contested kernel.",
             f"kernel_id: {gen_seed['kernel_id']}",
             f"reading_id (the reading you are instantiating): {gen_seed['reading_id']}",
-            f"sibling readings (other constraints, NOT this one): "
-            f"{', '.join(gen_seed.get('sibling_reading_ids', [])) or 'none listed'}",
+            f"sibling readings (other constraints, NOT this one): {siblings_str}",
             f"expected structural delta for this reading: {gen_seed.get('expected_structural_delta', '')}",
             "",
-            "Apply the Kernels and Readings rules: generate ONLY this reading as a clean "
-            "ε-invariant constraint (do not fold sibling readings in), route the committer "
-            "structure to omega variables, and record the reading in commentary.kernel_context.",
+            "Apply the Kernels and Readings rules (Rules 1–4):",
+            "  Rule 1: Generate ONLY this reading as a clean ε-invariant constraint.",
+            "  Rule 2: Route committer structure to omega variables.",
+            "  Rule 3: Record the reading in commentary.kernel_context.",
+            "  Rule 4: Populate cs_structure.reading_relations and cs_structure.axioms.",
+            "",
+            "For cs_structure.reading_relations: for EACH sibling reading listed above,",
+            "declare the structural relationship from THIS reading to the sibling:",
+            "  - forecloses: this reading's core premise logically rules out the sibling's",
+            "    core premise in any single framework (rare — use only when one premise",
+            "    directly contradicts the other such that no framework could hold both).",
+            "  - coexists_with: both readings remain live positions held by different parties;",
+            "    neither rules out the other within any single party's framework.",
+            "  - influences: this reading creates structural downstream pressure on the sibling",
+            "    (changes legitimacy conditions or resource availability) without foreclosing it.",
+            "",
+            "For cs_structure.axioms: declare 1–2 foundational normative claims that",
+            "distinguish THIS reading from its siblings. Use snake_case atom names unique",
+            "across the sibling set. Assign status: holdable (live claim), overridden",
+            "(superseded within this reading's tradition), or foreclosed (ruled out by",
+            "this reading's own commitments).",
         ]
     if gen_seed.get("summary"):
         lines += ["", f"SOURCE MATERIAL:\n{gen_seed['summary']}"]
@@ -457,7 +476,18 @@ def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_lo
             print(f"  SKIP {cid}: exists (use --overwrite)")
             continue
 
+        # Inject kernel_id from manifest (not from model output — preserves Rule 2).
+        # The model routes committer structure to omegas; the manifest is the authoritative
+        # source of which kernel this reading belongs to.
+        gen_seed = gen_seeds_by_id.get(cid, {})
+        manifest_kernel_id = gen_seed.get("kernel_id")
+        if manifest_kernel_id:
+            story["_kernel_id"] = manifest_kernel_id
+
         pl_content = generate_pl(story)
+
+        # Strip the ephemeral _kernel_id before writing the JSON (it's not a schema field)
+        story.pop("_kernel_id", None)
 
         # lint via temp in flat testsets/ so dirname(dirname) resolves to prolog/
         tmp_path = TESTSETS_DIR / f".tmp_kernel_{cid}.pl"
@@ -544,6 +574,116 @@ def coherence_eyeball(manifests, json_dir, manifests_dir):
     out.write_text("\n".join(report), encoding="utf-8")
     print(f"\nCoherence eyeball written to {out}")
     return out
+
+
+# ---------------------------------------------------------------------------
+# Step E: Emit axiom contradiction facts (post-generation)
+# ---------------------------------------------------------------------------
+
+def _get_foundational_axiom(json_dir, constraint_id):
+    """Return the first foundational axiom atom from a generated JSON, or None."""
+    p = json_dir / f"{constraint_id}.json"
+    if not p.exists():
+        return None
+    try:
+        story = json.loads(p.read_text(encoding="utf-8"))
+        for axiom in (story.get("cs_structure") or {}).get("axioms", []):
+            if axiom.get("role") == "foundational":
+                return axiom.get("atom")
+    except Exception:
+        return None
+    return None
+
+
+def emit_axiom_contradiction_facts(manifests, json_dir, testsets_dir):
+    """After generation, emit cs_axiom_contradiction/2 facts per kernel.
+
+    Reads axiom_contradictions from SCOPE manifest (independent authored signal).
+    Looks up foundational atom from each reading's generated JSON.
+    Writes <kernel_id>_contradictions.pl to testsets_dir.
+    Does NOT derive contradiction from forecloses edges.
+
+    Returns (files_written, total_declared, dropped_reading_failed, dropped_no_axiom).
+    The drop counts are the sweep denominator: a low firing count may mean readings
+    failed validation, not that kernels don't contradict — report the denominator.
+
+    Known under-detection: the strict test ("would A require B false") catches
+    logical-negation contradictions but may decline on operatively-incompatible-but-
+    not-logically-negating readings (madhhab / licensed-plurality signature). If the
+    corpus shows zero licensed-plurality signals, first hypothesis is "strict test under-
+    fired on soft contradictions," not "no licensed plurality exists." Flag in sweep.
+    """
+    files_written = 0
+    total_declared = 0
+    dropped_reading_failed = 0
+    dropped_no_axiom = 0
+
+    for m in manifests:
+        csr = m.get("commitment_system_recognition", {}) or {}
+        if not csr.get("is_contested_kernel"):
+            continue
+        kernel_id = csr.get("kernel_id")
+        pairs = csr.get("axiom_contradictions", [])
+        if not pairs:
+            continue
+
+        reading_to_cid = {}
+        for axis in m.get("generation_sequence", []):
+            if isinstance(axis, dict) and axis.get("reading_id"):
+                cid = axis.get("claim_id") or axis.get("constraint_id")
+                if cid:
+                    reading_to_cid[axis["reading_id"]] = cid
+
+        facts = []
+        basis_comments = []
+        for pair in pairs:
+            total_declared += 1
+            rid_a, rid_b = pair.get("reading_a"), pair.get("reading_b")
+            cid_a = reading_to_cid.get(rid_a)
+            cid_b = reading_to_cid.get(rid_b)
+
+            # Reading failed schema validation — no generated JSON exists
+            if not cid_a or not (json_dir / f"{cid_a}.json").exists() \
+                    or not cid_b or not (json_dir / f"{cid_b}.json").exists():
+                dropped_reading_failed += 1
+                print(f"  DROP (reading-failed) {rid_a}↔{rid_b} in {kernel_id}: "
+                      f"no generated JSON for one or both readings")
+                continue
+
+            atom_a = _get_foundational_axiom(json_dir, cid_a)
+            atom_b = _get_foundational_axiom(json_dir, cid_b)
+            if not atom_a or not atom_b:
+                dropped_no_axiom += 1
+                print(f"  DROP (no-axiom) {rid_a}↔{rid_b} in {kernel_id}: "
+                      f"no foundational axiom in generated JSON")
+                continue
+
+            facts.append(f"narrative_ontology:cs_axiom_contradiction({atom_a}, {atom_b}).")
+            facts.append(f"narrative_ontology:cs_axiom_contradiction({atom_b}, {atom_a}).")
+            if pair.get("basis"):
+                basis_comments.append(f"% {rid_a}↔{rid_b}: {pair['basis']}")
+
+        if not facts:
+            continue
+
+        out = testsets_dir / f"{kernel_id}_contradictions.pl"
+        lines = [
+            f"% Axiom contradictions for kernel: {kernel_id}",
+            "% Source: SCOPE axiom_contradictions declaration (independent of edge types).",
+            "% contradiction + coexists_with edge = licensed plurality",
+            "% contradiction + forecloses edge    = real closure",
+            "",
+            ":- multifile narrative_ontology:cs_axiom_contradiction/2.",
+            "",
+        ]
+        if basis_comments:
+            lines += basis_comments + [""]
+        lines += facts
+        out.write_text("\n".join(lines) + "\n", encoding="utf-8")
+        print(f"  Axiom contradictions: {len(facts)//2} pair(s) → {out.name}")
+        files_written += 1
+
+    return files_written, total_declared, dropped_reading_failed, dropped_no_axiom
 
 
 # ---------------------------------------------------------------------------
@@ -691,6 +831,35 @@ def main():
     print(f"Kernel grouping: {len(grouping)} kernels -> {manifests_dir / 'kernel_grouping.json'}")
 
     coherence_eyeball(manifests, json_dir, manifests_dir)
+
+    print("\nEmitting axiom contradiction facts...")
+    n_files, n_declared, n_drop_fail, n_drop_axiom = emit_axiom_contradiction_facts(
+        manifests, json_dir, testsets_dir)
+    n_fired = n_declared - n_drop_fail - n_drop_axiom
+    print(f"  Contradiction pairs declared:            {n_declared}")
+    print(f"  Dropped — reading failed validation:     {n_drop_fail}")
+    print(f"  Dropped — no foundational axiom in JSON: {n_drop_axiom}")
+    print(f"  Fired (cs_axiom_contradiction/2 written): {n_fired}")
+    print(f"  Kernels with contradiction .pl files:    {n_files}")
+    if n_declared > 0 and n_fired == 0:
+        print("  NOTE: zero contradiction pairs fired — check drop counts above.")
+        print("        Low firing may mean readings failed validation, not that")
+        print("        kernels don't contradict (report denominator, not just count).")
+    if n_fired == n_declared and n_fired > 0:
+        print("  NOTE: if corpus shows zero licensed-plurality signals, first hypothesis")
+        print("        is strict test under-fired on soft contradictions (operative")
+        print("        incompatibility vs. logical negation), not absence of plurality.")
+    # Save contradiction summary to manifests dir for sweep reference
+    contra_summary = {
+        "declared": n_declared,
+        "dropped_reading_failed": n_drop_fail,
+        "dropped_no_axiom": n_drop_axiom,
+        "fired": n_fired,
+        "kernels_with_contradiction_files": n_files,
+    }
+    (manifests_dir / "contradiction_summary.json").write_text(
+        json.dumps(contra_summary, indent=2, ensure_ascii=False), encoding="utf-8")
+
     print(f"\nRun '{args.run_tag}' complete.")
     print(f"  JSON:      json/{args.run_tag}/")
     print(f"  Testsets:  prolog/testsets/{args.run_tag}/")
