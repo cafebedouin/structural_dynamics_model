@@ -521,7 +521,7 @@
         },
         "interpretation_layer_present": {
           "type": "boolean",
-          "description": "Only applicable when kernel_codification=formalized AND authority_grounding=extraction. True = functioning interpretive substructure below the kernel absorbs drift."
+          "description": "True = functioning interpretive substructure below the kernel absorbs drift. Valid when authority_grounding ∈ {lineage, extraction, practice} — i.e., an active authoritative interpreter exists (chain of transmission, institutional hierarchy, or community practice). Not valid for distributed/self_enforcing/diffuse_epistemic authority where no designated interpreter exists."
         },
         "reading_relations": {
           "type": "array",
@@ -888,7 +888,7 @@
       }
     },
     {
-      "$comment": "CS structure: interpretation_layer_present is only valid when authority_grounding=lineage (any kernel encoding) OR (kernel_codification=formalized AND authority_grounding=extraction).",
+      "$comment": "CS structure: interpretation_layer_present is only valid when an active authoritative interpreter exists — authority_grounding ∈ {lineage, extraction, practice}. The original formalized+extraction restriction was over-strict: fixed_text+extraction (e.g., Vatican II rupture reading) and implicit+practice (e.g., madhhab oral tradition) are both legitimate interpretation-layer configurations.",
       "if": {
         "properties": {
           "cs_structure": {
@@ -922,15 +922,21 @@
               },
               {
                 "properties": {
-                  "kernel_codification": {
-                    "const": "formalized"
-                  },
                   "authority_grounding": {
                     "const": "extraction"
                   }
                 },
                 "required": [
-                  "kernel_codification",
+                  "authority_grounding"
+                ]
+              },
+              {
+                "properties": {
+                  "authority_grounding": {
+                    "const": "practice"
+                  }
+                },
+                "required": [
                   "authority_grounding"
                 ]
               }
