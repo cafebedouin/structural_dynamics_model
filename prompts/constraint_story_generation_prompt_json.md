@@ -643,14 +643,25 @@ about each reading.
 
 - **`role`**: `foundational` for the core distinguishing premise; `secondary` for implications
   that follow but are not the distinguishing claim.
-- **`status`**:
+- **`status`**: TWO values only — do NOT use `foreclosed` (that is computed by the engine):
   - `holdable` — the axiom is a live normative claim that can be maintained without internal
     contradiction in contemporary discourse. Use for readings that remain live in public dispute.
   - `overridden` — the axiom was once active but has been formally superseded or rejected within
     this reading's own tradition or legal history. Use when the reading itself has acknowledged
     the axiom is no longer operative.
-  - `foreclosed` — the axiom is ruled out by the reading's OWN internal commitments. Use for
-    axioms the reading explicitly rejects (as distinct from axioms held by SIBLING readings).
+- **`grounding_type`**: What kind of claim grounds this axiom's legitimacy (NOT whether the claim
+  is true — this is a structural fact about the axiom's epistemic type):
+  - `empirically_contingent` — grounded in testable, falsifiable empirical claims. Use when the
+    axiom's force depends on whether something IS true in the world (deterrence studies, economic
+    outcomes, causal mechanisms). The engine uses this to compute foreclosure when combined with
+    axiom_overriding drift.
+  - `deontological` — grounded in duties, rights, or intrinsic moral status that are not
+    empirically falsifiable. Does NOT route to foreclosed regardless of drift.
+  - `conventional` — grounded in social coordination, enacted rules, or institutionalized norms
+    (legal positivism, parliamentary procedure). Legitimate because accepted, not because true.
+  - `theological` — grounded in religious or divine authority.
+  - `instrumental` — grounded in means-ends efficacy about achieving a normative goal (empirical
+    about the means, normative about the goal). Does NOT route to foreclosed on its own.
 
 Aim for 1–2 foundational axioms per reading. A foundational axiom names the claim that, if
 denied, would dissolve this reading into a different one.
@@ -665,7 +676,12 @@ denied, would dissolve this reading into a different one.
     {"sibling_id": "deterrence_reading", "relation": "coexists_with"}
   ],
   "axioms": [
-    {"atom": "execution_categorically_impermissible", "role": "foundational", "status": "holdable"}
+    {
+      "atom": "execution_categorically_impermissible",
+      "role": "foundational",
+      "status": "holdable",
+      "grounding_type": "deontological"
+    }
   ]
 }
 ```

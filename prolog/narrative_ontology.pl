@@ -69,7 +69,8 @@
     coordination_vitality/2,
     cs_reading_relation/3,  % Typed reading-sibling edge. Relation ∈ {forecloses, coexists_with, influences}
     cs_axiom/3,             % cs_axiom(+Reading, +Role, +Atom) — normative claim held by a reading
-    cs_axiom_status/2,      % cs_axiom_status(+Atom, +Status) — Status ∈ {holdable, overridden, foreclosed}
+    cs_axiom_status/2,      % cs_axiom_status(+Atom, +Status) — Status ∈ {holdable, overridden}. foreclosed is computed by cs_axiom_foreclosed/2.
+    cs_axiom_grounding/3,   % cs_axiom_grounding(+C, +Atom, +GroundingType) — GroundingType ∈ {empirically_contingent, deontological, conventional, theological, instrumental}
     cs_axiom_contradiction/2, % cs_axiom_contradiction(+AtomA, +AtomB) — symmetric contradiction pair
     cs_reference_frame/2,   % cs_reference_frame(+C, +Atom) — t0: committer-axis's declared reference state
     cs_drift_state/3.       % cs_drift_state(+C, +Moment, +gap(Direction, Magnitude, Acknowledged)) — t1 gap
@@ -88,6 +89,7 @@
     constraint_beneficiary/2, constraint_victim/2, input_vector/2,
     coupling_profile/2, coordination_type/2, boltzmann_floor_override/2,
     coordination_vitality/2,
+    cs_axiom_grounding/3,
     cs_reference_frame/2,
     cs_drift_state/3.
 

@@ -563,8 +563,13 @@
               },
               "status": {
                 "type": "string",
-                "enum": ["holdable", "overridden", "foreclosed"],
-                "description": "holdable=live normative claim without internal contradiction, overridden=formally superseded within this reading, foreclosed=ruled out by this reading's own commitments"
+                "enum": ["holdable", "overridden"],
+                "description": "holdable=live normative claim without internal contradiction, overridden=formally superseded within this reading's own tradition. Do NOT use foreclosed — that is computed by the engine from grounding_type + drift_state."
+              },
+              "grounding_type": {
+                "type": "string",
+                "enum": ["empirically_contingent", "deontological", "conventional", "theological", "instrumental"],
+                "description": "What kind of claim grounds this axiom's legitimacy. empirically_contingent=grounded in testable empirical claims (can be refuted by evidence); deontological=grounded in duties, rights, or intrinsic moral status (not empirically falsifiable); conventional=grounded in social coordination or enacted institutional rule; theological=grounded in religious or divine authority; instrumental=grounded in means-ends efficacy (empirical about efficiency, but normative about goal)"
               }
             },
             "additionalProperties": false

@@ -36,7 +36,8 @@
 :- module(cs_axiom_engine, [
     cs_axiom_inconsistent/2,
     cs_kernel_axiom_conflict/4,
-    cs_has_axioms/1
+    cs_has_axioms/1,
+    cs_axiom_foreclosed/2
 ]).
 
 :- use_module(narrative_ontology).
@@ -47,6 +48,7 @@
 :- multifile
     narrative_ontology:cs_axiom/3,
     narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
     narrative_ontology:cs_axiom_contradiction/2.
 
 /* ================================================================
@@ -107,3 +109,31 @@ cs_kernel_axiom_conflict(K, C1, C2, Atom1-Atom2) :-
         ;   narrative_ontology:cs_axiom_contradiction(Atom2, Atom1)
         )
     )).
+
+/* ================================================================
+   COMPUTED FORECLOSURE: cs_axiom_foreclosed/2
+   ================================================================
+   An axiom routes to foreclosed-for-classification when THREE
+   authored conditions compound (each authored without a truth claim):
+     1. grounding_type = empirically_contingent
+        (authored by generator: is this axiom's legitimacy empirically testable?)
+     2. reading's drift direction = axiom_overriding
+        (authored in drift_state: the foundational premise has been substantially challenged)
+     3. drift is unacknowledged
+        (authored in drift_state: the authority structure has not absorbed the challenge)
+   The generator correctly refuses to author "foreclosed" directly —
+   that is a truth claim it cannot certify. Instead it authors three
+   structural facts; the engine composes them.
+   Minor magnitude is excluded: minor drift self-corrects (stable_pattern attractor)
+   and does not constitute the evidential weight needed for foreclosure routing.
+   ================================================================ */
+
+%% cs_axiom_foreclosed(+C, -Atom)
+%  Computed (NOT authored). Atom is foreclosed-for-classification in reading C when:
+%  its grounding is empirically_contingent AND C's drift is axiom_overriding +
+%  non-minor magnitude + unacknowledged.
+cs_axiom_foreclosed(C, Atom) :-
+    narrative_ontology:cs_axiom(C, _, Atom),
+    narrative_ontology:cs_axiom_grounding(C, Atom, empirically_contingent),
+    narrative_ontology:cs_drift_state(C, _, gap(axiom_overriding, Magnitude, false)),
+    Magnitude \= minor.

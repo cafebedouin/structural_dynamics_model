@@ -190,6 +190,8 @@ def _build_multifile_declarations(data):
         if cs.get("axioms"):
             decls.append("narrative_ontology:cs_axiom/3")
             decls.append("narrative_ontology:cs_axiom_status/2")
+            if any(ax.get("grounding_type") for ax in cs.get("axioms") or []):
+                decls.append("narrative_ontology:cs_axiom_grounding/3")
         if cs.get("reference_frame"):
             decls.append("narrative_ontology:cs_reference_frame/2")
         if cs.get("drift_state"):
@@ -486,6 +488,8 @@ def generate_pl(data):
             if atom not in emitted_statuses:
                 emit(f"narrative_ontology:cs_axiom_status({atom}, {status}).")
                 emitted_statuses.add(atom)
+            if gt := ax.get("grounding_type"):
+                emit(f"narrative_ontology:cs_axiom_grounding({cid}, {atom}, {gt}).")
         # Temporal layer: t0 reference frame and t1 drift state (authored; t2 is computed by engine)
         if rf := cs.get("reference_frame"):
             emit(f"narrative_ontology:cs_reference_frame({cid}, {rf}).")
