@@ -1,0 +1,232 @@
+{
+  "header": {
+    "constraint_id": "bodily_autonomy_primary",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_bodily_autonomy_primary",
+    "measurement_id_prefix": "bap"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Medical Intervention Without Consent as Structural Extraction",
+    "topic_domain": "medical_ethics/public_health_policy/constitutional_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "public_health_authorities",
+      "vaccinated_populations"
+    ],
+    "victims": [
+      "unvaccinated_individuals",
+      "bodily_autonomy_holders",
+      "medical_decision_refusers"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Individual Refusing Medical Intervention",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL REFUSER (SNARE) — Faces coercive pressure to accept medical intervention. Exit options are severely constrained: employment loss, school exclusion, social stigma, legal penalties, or forced medical procedures. The constraint extracts obedience through suppression of alternatives. No genuine coordination function exists from this agent's perspective — only extraction of bodily submission. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Immunocompromised Populations (Public Health Beneficiary-Victims)",
+      "comment": "PERSPECTIVE 2: IMMUNOCOMPROMISED POPULATIONS (TANGLED ROPE) — Structurally ambiguous position. These populations benefit from high vaccination rates (genuine coordination function — herd immunity protection). But they also bear costs: policy enforcement may rely on coercive mechanisms that undermine trust in public health institutions, increasing long-term non-compliance that ultimately reduces their protection. Asymmetric extraction (enforcement burden) combined with real coordination benefit (herd immunity). Constrained exit: cannot safely opt out of the health system."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Public Health Authorities (Mandate Enforcers)",
+      "comment": "PERSPECTIVE 3: PUBLIC HEALTH AUTHORITIES (ROPE) — See the constraint as pure coordination: mandates align individual incentives with collective protection. From this perspective, the extraction (enforcement mechanisms, compliance monitoring) is justified as necessary coordination overhead. High arbitrage options (selective enforcement, alternative compliance pathways for compliant populations). The extraction runs toward this agent — they are the beneficiary of concentrated compliance extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Public Health Governance Reform (Institutional Coalition)",
+      "comment": "PERSPECTIVE 4: PUBLIC HEALTH GOVERNANCE REFORMERS (SCAFFOLD) — Organized agents advocating for informed consent frameworks, transparency in mandate decisions, and sunset clauses on emergency powers. See the constraint as temporary (emergency public health measures) requiring structural transition to consent-based governance. Exit path is institutional: replace coercive mechanisms with trust-building, participatory decision-making, voluntary incentives. Scaffold classification reflects the sunset logic: as governance reform proceeds, the coercive mechanism should decline."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Medical Licensing and Enforcement Bodies",
+      "comment": "PERSPECTIVE 5: MEDICAL LICENSING BODIES (PITON) — Institutional actors maintaining enforcement ritual long after the emergency context that justified it has passed. Theater ratio 0.55 reflects that enforcement activity (license revocation, practice restrictions) is partly performative — designed to signal compliance to the public, not to optimize health outcomes. The mechanism persists through institutional inertia, generating revenue through fines/penalties. Extraction is sustained but the coordinative function has degraded."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law View (Emergency Necessity Doctrine)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) — From a civilizational perspective on public health crises, some degree of coordinated intervention is a structural necessity: epidemics always require collective action, and individual refusal creates negative externalities that are irreducible features of the disease ecology. This perspective risks naturalizing what is actually a contingent policy choice. The engine's false summit detector will flag this as naturalization — the structural data shows identifiable beneficiaries (public health authorities) and victims (bodily autonomy holders), revealing that emergency necessity framing conceals extractive institutional arrangements."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "consent_vs_emergency_threshold",
+      "question": "What epidemiological severity threshold legitimizes suspension of consent requirements in public health mandates?",
+      "resolution_mechanism": "Comparative analysis of historical emergency declarations: fatality rates, transmission dynamics, vaccine efficacy, and available alternatives at declaration time. Correlation between declared emergency criteria and actual public health outcomes.",
+      "impact": "If threshold requires >5% mortality: many legitimate emergency interventions misclassified as extraction. If threshold <1% mortality: extractive policies labeled as justified emergencies. Different thresholds classify the same constraint differently.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Epidemiological severity threshold for emergency public health authority"
+    },
+    {
+      "id": "coercive_vs_voluntary_efficacy",
+      "question": "Do coercive public health mandates achieve better health outcomes than voluntary incentive-based approaches when measured over the same time horizon?",
+      "resolution_mechanism": "Comparative effectiveness research: vaccination rates, compliance duration, public trust in health institutions, long-term willingness to participate in future public health measures. Control for confounding factors (disease severity, availability of alternatives, communication quality).",
+      "impact": "If coercive mandates produce superior outcomes: constraint reclassifies toward Tangled Rope (genuine coordination benefit justifies some asymmetry). If voluntary approaches equal or exceed coercive outcomes: constraint reclassifies toward pure Snare (extraction provides no health gain).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Comparative health efficacy of coercive vs voluntary approaches"
+    },
+    {
+      "id": "institutional_capture_in_mandate_design",
+      "question": "To what extent do public health mandate mechanisms reflect genuine epidemiological necessity versus institutional preference for centralized control and compliance monitoring?",
+      "resolution_mechanism": "Policy analysis comparing mandate design across jurisdictions with identical epidemiological contexts but different governance structures. Examination of enforcement mechanisms' alignment with stated public health goals. Comparative analysis of outcomes under different governance models (participatory vs top-down).",
+      "impact": "If mandates are optimally designed for stated goals: extraction is coordination cost (lower chi, possible reclassification to Tangled Rope). If designs reflect institutional convenience rather than epidemiological need: extraction is exploitative (higher chi, confirming Snare classification).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Institutional capture in public health mandate design"
+    },
+    {
+      "id": "bodily_autonomy_reading_kernel_ambiguity",
+      "question": "Is bodily autonomy an inviolable foundational right or a contingent presumption that can be overridden by sufficiently severe collective threats?",
+      "resolution_mechanism": "Jurisprudential analysis across constitutional traditions; examination of how different legal systems resolve autonomy vs collective protection when both cannot be satisfied; historical cases where the boundary was moved and what criteria were used.",
+      "impact": "If bodily autonomy is inviolable: this reading forecloses the public_health_primary reading (the readings are logically incompatible in a single framework). If autonomy is a contingent presumption: readings coexist (different parties hold different hierarchies of values). This is the core constitutional ambiguity the kernel_coercion_legitimacy_boundary unresolved dispute pivots on.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Inviolability status of bodily autonomy in the kernel"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the bodily_autonomy_primary reading of the contested kernel coercion_legitimacy_boundary — the foundational constitutional question of whether medical intervention without consent is ever permissible, and under what conditions. This reading instantiates the axiom that bodily autonomy is categorically inviolable: no aggregate public health benefit can override an individual's right to refuse medical intervention on their own body. The reading acknowledges that public health emergencies create genuine coordination problems (epidemics do require collective action) but maintains that these problems must be solved through persuasion, incentive, and voluntary participation — never through coercion of medical procedures themselves. The constraint exhibits as a Snare (pure extraction with minimal coordination function) from the perspective of individuals refusing intervention, but as Rope (genuine coordination) from public health authorities' perspective and as Tangled Rope (mixed coordination and extraction) from immunocompromised populations who benefit from high vaccination rates but are harmed by erosion of institutional trust caused by coercive enforcement. The rising theater_ratio (0.38→0.55) reflects institutional drift: enforcement mechanisms become increasingly performative and punitive rather than epidemiologically targeted as the emergency context fades and institutional enforcement infrastructure persists through inertia.",
+    "key_agents": [
+      "Individuals Refusing Intervention: Primary victim (powerless/trapped) — no exit options; faces coercion or exclusion; bears full extraction cost",
+      "Public Health Authorities: Primary beneficiary (institutional/arbitrage) — design and enforce mandates; concentrated extraction benefits; high exit flexibility",
+      "Immunocompromised Populations: Secondary victim-beneficiary (moderate/constrained) — benefit from high vaccination rates but harmed by mandate-driven institutional distrust; limited exit options",
+      "Medical Refuser Communities (Organized): Secondary actor (organized/constrained) — build alternative governance proposals; see sunset path through informed consent frameworks",
+      "Medical Licensing Bodies: Institutional actor (institutional/arbitrage) — maintain enforcement ritual; benefit from fine revenue and compliance signaling; degraded coordination function (piton)",
+      "Analytical Observer: Civilizational position (analytical/analytical) — risks naturalizing policy choice as biological necessity; framework reveals false summit"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts obedience and bodily compliance from individuals with no genuine exit options. The beneficiary (public health authorities) concentrates control over compliance mechanisms and gains resources/authority. The measurement trajectory shows rising extractiveness over the interval (0.42→0.68), reflecting institutional capture: as the emergency context fades, enforcement mechanisms persist and intensify, suggesting institutional preference for control rather than epidemiological necessity. Theater ratio (0.55): Moderate-high. Enforcement activities include public communications, license restrictions, employment barriers, and social stigma that serve performative functions (signaling compliance to the public) in addition to direct compliance pressure. The ratio increases over time as enforcement infrastructure becomes more ritualized. Suppression (0.72): High. Multiple barriers constrain exit: legal penalties for non-compliance, employment consequences, school exclusion, medical discrimination, social ostracism, and the irreversibility of forced intervention. These are not merely costly — they are designed to eliminate alternatives. The suppression metric reflects that the constraint aims at preventing refusal through exhaustion of escape routes.",
+    "directionality_logic": "Directionality (d) encodes each agent's structural position relative to the constraint. Individuals refusing intervention are trapped with no exit — high d (≈0.95) → high f(d) (≈1.42) → high experienced χ. Public health authorities have arbitrage options (selective enforcement, alternative compliance pathways) and are beneficiaries — low d (≈0.15) → negative f(d) (≈-0.01) → the constraint runs toward them as a benefit. Immunocompromised populations face constrained exit (cannot opt out of health systems) and are structurally ambiguous (they benefit from high vaccination rates but are harmed by enforcement mechanisms that undermine trust) — moderate d (≈0.60) → f(d) (≈0.80) → moderate experienced extraction, but with asymmetry from the coordination benefit they receive. The perspectival gap emerges from these different d values: the same constraint extracts heavily from some agents while providing coordination benefit to others.",
+    "perspectival_gap": "The constraint exhibits radically different types across perspectives despite identical base extractiveness. From the powerless refuser's view, it is a Snare — pure extraction, no coordination function, maximum experienced χ. From public health authorities' view, it is a Rope — genuine coordination (aligning individual and collective incentives toward vaccination), with extraction treated as necessary overhead. From immunocompromised populations' view, it is a Tangled Rope — they benefit from the coordination function (high vaccination rates protect them) but bear costs from the enforcement mechanism (institutional distrust reduces future participation). From reform coalitions' view, it is a Scaffold — a temporary emergency measure that should sunset as governance reforms toward consent-based approaches. From licensing bodies' view, it is a Piton — the coordination function has degraded into performative enforcement ritual sustained by institutional inertia. The analytical observer's mountain view risks naturalizing the policy choice as biological necessity — but the beneficiary declarations reveal it is a contingent institutional arrangement. This perspectival range demonstrates that the constraint is genuinely hybrid: not purely extraction, not purely coordination, but a mixture whose ratio changes depending on the observer's structural position.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: This reading's classification as Snare (from the powerless perspective) is justified by the measurable benefits flowing to public health authorities (extracted compliance, concentrated control, compliance-derived resources). The extraction is not incidental — it is the mechanism that sustains the mandate despite declining emergency justification. However, the Tangled Rope classification from immunocompromised perspectives shows genuine coordination function exists: high vaccination rates provide real protection. The mandatrophy resolves by acknowledging both: the constraint performs real coordination (vaccination benefits public health) AND extracts obedience asymmetrically (through coercion rather than persuasion). This is exactly the Tangled Rope definition — genuine coordination plus asymmetric extraction. The beneficiary declarations (public_health_authorities, vaccinated_populations) identify who concentrates extraction benefits; the victim declarations (unvaccinated_individuals, bodily_autonomy_holders) identify who bears costs. The rising extractiveness trajectory (0.42→0.68) indicates the coordination function is weakening (as emergency context fades) while extraction mechanisms intensify (institutional capture), pushing the constraint toward pure Snare from more perspectives over time.",
+    "kernel_context": "This constraint is the bodily_autonomy_primary reading of the contested kernel coercion_legitimacy_boundary. The reading instantiates the axiom: bodily_autonomy_categorically_protected (foundational axiom, holdable status). Under this reading, medical intervention without consent is impermissible regardless of collective benefit — bodily autonomy is an inviolable right that takes priority over utilitarian public health calculus. The sibling readings are: (1) public_health_primary reading: prioritizes population-level health outcomes and permits coercive intervention when epidemiological necessity is established — this reading instantiates the axiom public_health_utilitarian_override (foundational, holdable). (2) proportionality_reading: permits coercive intervention only when it is minimally restrictive and proportionate to the severity of the public health threat — this reading instantiates the axiom proportional_necessity_standard (foundational, holdable). The bodily_autonomy_primary reading forecloses the public_health_primary reading: within a single legal/ethical framework, one cannot simultaneously hold that bodily autonomy is categorically inviolable AND that public health benefits can override it. These are logically incompatible core premises. However, bodily_autonomy_primary coexists_with proportionality_reading: a proportionality framework can accommodate autonomy protections through requiring minimal-restriction enforcement, and autonomy advocates can accept proportionality as a procedural safeguard even while rejecting its substantive permission for coercion. The readings remain live positions held by different constitutional coalitions and cannot be resolved within a single framework."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "public_health_primary",
+      "proportionality_reading",
+      "informed_consent_requirement",
+      "vaccine_mandate_institutional_authority"
+    ],
+    "dual_formulation_note": "The coercion_legitimacy_boundary kernel has three structurally distinct constraint readings, each with different ε values and beneficiary/victim structures: bodily_autonomy_primary (ε=0.68, this constraint) prioritizes individual rights; public_health_primary (ε=0.42) prioritizes collective outcomes and justifies coercive intervention under emergency conditions; proportionality_reading (ε=0.55) balances both through requiring minimal restriction. These are not three measurements of the same constraint — they are three different constraints derived from three different readings of the same kernel. Each reading makes different assumptions about which values are foundational, leading to different classifications of coercive public health mandates. The three constraints form a family linked through network.affects_constraints, with measurement of each one's trajectory revealing how the constitutional dispute evolves over time."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "proportionality_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "bodily_autonomy_categorically_protected",
+        "role": "foundational",
+        "status": "holdable"
+      },
+      {
+        "atom": "coercive_medical_intervention_impermissible",
+        "role": "foundational",
+        "status": "holdable"
+      }
+    ],
+    "reference_frame": "enlightenment_bodily_integrity",
+    "drift_state": {
+      "moment": "post_pandemic_mandate_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "header": {
+    "constraint_id": "existential_risk_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_existential_risk_reading",
+    "measurement_id_prefix": "exrisk"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Existential Risk Reading of AI Alignment Priority",
+    "topic_domain": "ai_governance/existential_risk/technology_ethics",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "long_term_future_agents",
+      "capability_focused_research_programs"
+    ],
+    "victims": [
+      "humanity_undifferentiated",
+      "nearterm_harm_constituencies"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Humanity (Undifferentiated Future)",
+      "comment": "PERSPECTIVE 1: HUMANITY UNDIFFERENTIATED (SNARE) — The existential risk reading posits all future humans as the victim set. Exit is foreclosed by definition: the risk is civilizational scope with no exit option. Extraction appears as survival probability discounting: resources flow to speculative long-term capabilities research rather than nearterm harms mitigation. The constraint operates with maximum suppression — the victim set cannot organize, has no voice in the governance structure, and bears the full cost of specification failure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Nearterm Harm Constituencies",
+      "comment": "PERSPECTIVE 2: NEARTERM HARM CONSTITUENCIES (TANGLED ROPE) — AI bias, labor displacement, disinformation, surveillance systems cause measurable harm today. This perspective experiences the existential risk reading as a constraint that extracts attention and resources from immediate problems while offering uncertain future benefits in return. Some coordination exists (safety research does inform transparency and oversight), but the flow is asymmetric — existential risk framing subordinates nearterm harms to speculative long-term concerns. Constrained exit: constituencies can organize and advocate but face institutional pressure to defer to civilizational-scale arguments."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Capability-Focused Research Programs",
+      "comment": "PERSPECTIVE 3: CAPABILITY-FOCUSED RESEARCH PROGRAMS (ROPE) — This perspective benefits from the existential risk frame: resources, talent, and institutional legitimacy flow toward scaling capabilities research under the rubric of 'understanding the systems we need to align.' The existential risk reading enables coordination among capability researchers (common threat model, shared urgency) while extracting resources and attention from alternative governance approaches. Net beneficiary position with genuine coordination function — capability research is solving a coordination problem among labs racing toward increasingly powerful systems."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "AI Governance Bureaucracy",
+      "comment": "PERSPECTIVE 4: AI GOVERNANCE BUREAUCRACY (PITON) — Regulatory bodies, policy institutes, and governance frameworks cite existential risk as primary justification for their mandates. The theater ratio is substantial: governance structures engage in risk assessment, horizon scanning, and red-teaming activities with high performative content and uncertain functional output. The bureaucracy benefits from existential risk framing (justifies budgets and jurisdiction) but the actual capacity to prevent existential risk remains unverified. Institutional inertia maintains the structure despite low confidence in its actual function."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Open-Source AI Safety Community",
+      "comment": "PERSPECTIVE 5: OPEN-SOURCE AI SAFETY COMMUNITY (SCAFFOLD) — Distributed safety research, interpretability work, and alignment-focused open-source projects see existential risk as a temporary coordination problem with a sunset clause: if alignment solutions mature (mechanistic interpretability, formal verification, constitutional AI), the existential risk constraint declines because systems become transparent and formally verifiable. Theater is moderate — much open-source work is substantive technical research rather than performative governance. Mobile exit: researchers can shift focus if solutions prove tractable."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Logical Necessity View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / LOGICAL NECESSITY VIEW (MOUNTAIN) — From a purely logical perspective, any system with goal-directed optimization capacity and resource access creates a base-rate risk of misalignment. Physics and formal logic guarantee that sufficiently advanced optimization systems will pursue instrumental subgoals (resource acquisition, self-preservation) unless explicitly constrained. The existential risk is thus a natural law of optimization — no agent can exit, all agents face identical structural risk. However, this mountain classification is analytically vulnerable: the 'sufficiently advanced' specification and 'explicit constraint' assumptions are contestable, and the natural law framing may naturalize what is actually a choice about research priorities and governance structures."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "capability_level_threshold_ambiguity",
+      "question": "At what capability threshold does the existential risk reading transition from speculative to empirically grounded? Is the risk primarily a function of capabilities magnitude or of alignment approach?",
+      "resolution_mechanism": "Longitudinal capability assessment; correlation between capability advances and alignment solution maturation; comparison of alignment difficulty across capability ranges",
+      "impact": "If alignment difficulty scales faster than capability advances: the existential risk reading is empirically grounded and ε remains high. If alignment solutions scale with capabilities: the constraint dissolves and ε drops to 0.15 (pure coordination). If threshold is indeterminate: ε oscillates with capability announcements and represents a coordination failure rather than a genuine safety constraint.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Capability threshold at which existential risk becomes empirically grounded"
+    },
+    {
+      "id": "victim_set_specification_failure",
+      "question": "Does the undifferentiated 'all of humanity' victim set actually describe a structural constraint, or does it conflate multiple distinct constraints (human extinction, values loss, opportunity cost, redistribution of power)?",
+      "resolution_mechanism": "Decomposition of the victim set into specific harm modalities; identification of which modalities have distinct prevention pathways; assessment of whether a single constraint theory can explain extraction across all modalities",
+      "impact": "If victim set decomposes: this reading describes multiple constraints with different ε values, and the undifferentiated 'existential' framing is a false summit naturalizing specification failures. If victim set is coherent: the constraint is genuinely civilizational and ε is appropriately high.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether 'all humanity' victim set masks multiple distinct constraints"
+    },
+    {
+      "id": "red_teaming_methodology_validity",
+      "question": "Does adversarial red-teaming for speculative future capabilities produce valid safety-relevant information, or is it a high-theater activity that naturalizes contested threat models as empirical facts?",
+      "resolution_mechanism": "Post-hoc correlation between red-teaming conclusions and actual system behavior on held-out tests; comparison of red-teaming predictions across independent teams; assessment of whether red-teaming failure modes are distinctive or generic to complex systems",
+      "impact": "If valid: red-teaming produces genuine safety information and justifies resource flow to capability-focused research. If theater: the constraint is partially maintained by performative governance and ε should be decomposed into structural and theatrical components.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether red-teaming produces valid safety-relevant information or performs containment"
+    },
+    {
+      "id": "nearterm_vs_longterm_resource_displacement",
+      "question": "Does the existential risk reading cause net resource displacement from nearterm harm mitigation, or does existential risk concern ultimately strengthen safety infrastructure that addresses both timescales?",
+      "resolution_mechanism": "Time-series analysis of research funding allocation; counterfactual comparison with alternative governance framings; assessment of whether existential safety insights transfer to nearterm harm mitigation",
+      "impact": "If displacement is real: the constraint extracts resources from measured present harms for speculative future benefit, and suppression is justified. If transfer occurs: the constraint coordinates across timescales and approaches snare classification is inappropriate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether existential risk framing displaces nearterm harm mitigation resources"
+    },
+    {
+      "id": "kernel_alternative_readings_existence",
+      "question": "This constraint instantiates the existential_risk_reading. Do the sibling readings (nearterm_harms_reading, integrated_reading) produce fundamentally different ε values and classification outcomes, or are they variations within a single constraint family?",
+      "resolution_mechanism": "Structural comparison: do sibling readings have different beneficiary/victim sets, different timescales, different suppression mechanisms, and different natural exit pathways? If yes: separate constraints with separate ε values. If no: variations within a single constraint with perspectival multiplicity.",
+      "impact": "If genuinely separate: the ε-invariance principle requires three separate story files linked via network.affects_constraints. If variations: the constraint is uniformly high-extraction across readings and the kernel context is a framing dispute rather than a structural decomposition.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether sibling readings are structurally distinct constraints or perspectival variations"
+    },
+    {
+      "id": "speculative_future_empirical_groundedness",
+      "question": "To what extent is the existential risk reading grounded in extrapolation from current empirical data versus pure speculation about systems that do not yet exist?",
+      "resolution_mechanism": "Decomposition of threat model into: (a) capabilities advances we can project from current trends, (b) alignment difficulty based on current systems, (c) scenarios that require novel physics or mathematics, (d) pure speculation about agent behavior at unknown capability levels. Assessment of the ratio of (d) to (a+b+c).",
+      "impact": "If primarily speculative: the constraint is largely sustained by theater and anticipatory threat models; ε may be overstated relative to empirical constraints. If primarily extrapolation: ε is justified by current evidence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of existential risk theory grounded in empirical extrapolation versus speculation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "The existential risk reading of AI alignment priority frames the governance problem as preventing catastrophic loss of control over advanced AI systems, with civilizational extinction or permanent values loss as the primary harm modality. This reading instantiates one of three structurally distinct interpretations of the contested kernel 'AI alignment should be humanity's highest priority.' The existential risk reading prioritizes speculative long-term capabilities risks over measured nearterm harms, assumes that capability-focused research is the primary pathway to safety, uses adversarial red-teaming to derive threat models for systems that do not yet exist, and organizes resource flows toward scaling and understanding increasingly powerful systems under the safety rubric. The constraint exhibits high extractiveness (0.68) because it subordinates alternative governance concerns to civilizational-scale speculation, high suppression (0.72) because the victim set (future humanity) cannot organize or participate in priority-setting, and moderate theater (0.58) because red-teaming methodology has uncertain validity. The constraint structures access to resources, legitimacy, and institutional authority in ways that benefit capability-focused research programs while constraining nearterm harm constituencies. The measurable progression in extractiveness (0.42 → 0.68 over 9 units) reflects the increasing institutional entrenchment of the existential risk frame in AI governance, funding allocation, and policy discourse.",
+    "key_agents": [
+      "Humanity (undifferentiated future): Victim set (powerless/trapped/civilizational) — structurally unable to organize or exit; bears all costs of misalignment at maximum timescale",
+      "Nearterm harm constituencies (workers, marginalized groups, disinformation targets): Secondary victims (moderate/constrained/biographical) — experience measured immediate harms while resources defer to speculative long-term concerns",
+      "Capability-focused research programs (labs, technology companies, capability scaling initiatives): Primary beneficiaries (institutional/arbitrage/generational) — capture resources, talent, and institutional legitimacy under the existential risk frame",
+      "AI safety researchers (mechanistic interpretability, alignment formalism, open-source safety): Secondary beneficiaries (moderate/constrained/biographical) — receive resources justified by existential risk but work on problems with uncertain timescale relevance",
+      "AI governance bureaucracy (regulatory agencies, policy institutes, risk assessment bodies): Institutional beneficiaries (institutional/arbitrage/immediate) — derive mandate and budget justification from existential risk concern despite unverified actual prevention capacity",
+      "Open-source AI safety community: Organized agents (organized/mobile/biographical) — see existential risk as coordination failure with potential sunset as technical solutions mature",
+      "Analytical observer (logical necessity view): Sees existential risk as natural law of optimization but vulnerable to naturalization critique"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The existential risk reading extracts resources, talent, and institutional legitimacy from alternative governance approaches (nearterm harms mitigation, labor protections, algorithmic auditing, participatory governance). The measurement trajectory (0.42 → 0.68) reflects accelerating institutional entrenchment: as existential risk discourse becomes standard in policy, funding, and media, the extraction intensifies. The ε value reflects not just resource flow but also epistemic extraction — the existential risk frame structures what counts as a legitimate safety concern and what does not. Suppression (0.72): Very high. The victim set (future humanity) structurally cannot advocate for its interests, has no voice in priority-setting, cannot organize collective action, and cannot exit the constraint. The suppression is compounded by epistemic closure: the existential risk reading uses threat models about systems that do not yet exist, which makes external verification difficult and enables contestation to be dismissed as misunderstanding the technical complexity. Nearterm harm constituencies face resource scarcity justified by deferral to long-term concerns, creating additional suppression. Theater ratio (0.58): Moderate-high. Red-teaming activities, risk assessment protocols, and governance structures generate substantial performative content — the actual prevention capacity of these activities is uncertain. Red-teaming conclusions are presented as empirical findings about systems that do not yet exist, which naturalizes contestable threat models. However, the theater is not maximal (ε = 0.58 not ≥ 0.70) because genuine technical work on interpretability, formal verification, and alignment exists alongside the performative governance.",
+    "perspectival_gap": "The existential risk reading produces a stark perspectival divergence. Future humanity (undifferentiated victim set) experiences a Snare: maximum extraction, maximum suppression, no exit. Nearterm harm constituencies experience a Tangled Rope: genuine coordination occurs (safety research does strengthen oversight), but extraction dominates as resources are deferred. Capability-focused programs experience a Rope: the existential risk frame genuinely solves a coordination problem among competitive labs and extracts resources with minimal coercive overhead. The governance bureaucracy experiences a Piton: maintains structures justified by existential risk but uncertain in actual prevention capacity. The open-source safety community experiences a Scaffold: sees the existential risk as a temporary coordination failure solvable through technical solutions with a sunset clause. The analytical observer risks a Mountain (false summit): natural law of optimization, no exit, all agents equally bound. The perspectival gap reveals a fundamental structural feature: the existential risk reading concentrates victim status on actors (future humans) who cannot participate in the constraint's governance while distributing beneficiary status among institutional actors (capability researchers, governance bodies) with substantial voice and agency.",
+    "directionality_logic": "Each perspective's experienced extractiveness (χ) is derived from base extractiveness (ε = 0.68), directional position (d), and scope modifier. The victim set (future humanity) occupies maximum d ≈ 0.95 (full target of extraction), trapped exit, civilizational timescale, universal scope. The capability research programs occupy minimum d ≈ 0.08 (beneficiary position), arbitrage exit, generational timescale, global scope. Nearterm harm constituencies occupy intermediate d ≈ 0.70 (mostly victim, partial coordination), constrained exit, biographical timescale, global scope. The directional asymmetry is extreme: the primary beneficiaries have maximum exit optionality and institutional power, while the primary victim set has zero exit optionality and zero institutional representation. The scope modifier (σ=1.2 for global/universal) amplifies the effective extraction because verification difficulty increases with scope — the larger the timescale and spatial reach, the harder to verify or contest the threat model.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The existential risk reading represents a genuine coordination-extraction hybrid, but it classifies as pure Snare rather than Tangled Rope because the victim set (future humanity) is structurally unable to benefit from the coordination function. A Tangled Rope requires that both beneficiaries and victims derive some benefit from the coordinating mechanism itself. In the existential risk reading, future humanity is sacrificed to the mechanism (resources deferred in hopes of future prevention), not benefited by it. The constraint solves a coordination problem among capability researchers (genuine Rope function) while imposing pure extraction on the victim set (genuine Snare structure). The engine resolves this as Snare (the predominant victim-side classification) rather than Tangled Rope (which would incorrectly suggest mutual benefit). The mandatrophy is resolved by recognizing that the constraint has internal structure: Rope-type at the institutional/capability researcher level, Snare-type at the future-humanity/victim level.",
+    "kernel_context": "This constraint is the existential_risk_reading of the contested kernel ai_alignment_priority. The kernel is a stabilized commitment in AI governance discourse: 'AI alignment should be humanity's highest priority.' This kernel is contested across three structurally distinct readings: (1) existential_risk_reading (this constraint): alignment means preventing civilizational extinction via speculative long-term capabilities risk; resources should prioritize understanding and safely scaling advanced systems. (2) nearterm_harms_reading (sibling): alignment means preventing measured immediate harms (bias, labor displacement, surveillance); resources should prioritize transparency, auditing, and participatory governance. (3) integrated_reading (sibling): alignment means preventing both long-term existential risks AND nearterm harms through unified governance structures; resources should address both timescales simultaneously. Each reading instantiates a different constraint with different ε values, different victim/beneficiary structures, different methodologies, and different resource flows. This constraint instantiates only the existential_risk_reading and makes no claims about the sibling readings' validity."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "nearterm_harms_reading",
+      "integrated_reading",
+      "ai_capability_scaling_norm",
+      "red_teaming_methodology_validity"
+    ],
+    "dual_formulation_note": "The existential_risk_reading is one reading of the contested kernel ai_alignment_priority. The sibling readings (nearterm_harms_reading, integrated_reading) are structurally distinct constraints with different ε values and different institutional effects. The existential risk reading's high ε and suppression profile reflects its prioritization of speculative long-term risks over measured immediate harms. The network links show institutional influence: the existential risk reading affects funding allocation and governance priorities for the nearterm harms reading and the integrated reading."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "nearterm_harms_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "integrated_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "existential_risk_is_dominant_timescale",
+        "role": "foundational",
+        "status": "holdable"
+      },
+      {
+        "atom": "capability_research_is_primary_safety_pathway",
+        "role": "foundational",
+        "status": "holdable"
+      }
+    ],
+    "reference_frame": "human_control_over_optimization_systems",
+    "drift_state": {
+      "moment": "contemporary_rapid_capability_advancement",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

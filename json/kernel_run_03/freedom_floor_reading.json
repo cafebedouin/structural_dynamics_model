@@ -1,0 +1,247 @@
+{
+  "header": {
+    "constraint_id": "freedom_floor_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_freedom_floor_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "Unconditional Income Support as Autonomy-Enabling Floor (Freedom Floor Reading)",
+    "topic_domain": "political_economy/social_policy/welfare_state_theory",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "precarious_workers",
+      "caregivers",
+      "artists",
+      "abuse_victims",
+      "labor_market_entrants"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Precarious Worker Exiting Coercion",
+      "comment": "PERSPECTIVE 1: PRECARIOUS WORKER (ROPE) — UCS enables exit from exploitative labor arrangements. Unconditional income removes the coercive force of subsistence need, converting forced labor into genuine choice. The constraint solves a coordination problem: matching worker preferences to available labor rather than matching subsistence need to any available wage. Extractiveness is low because the mechanism is purely coordinative — no asymmetric benefit accrues to the income supporter; the worker and the fund both benefit from voluntary participation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Caregiver Recognizing Unpaid Labor Value",
+      "comment": "PERSPECTIVE 2: CAREGIVER / UNPAID LABORER (ROPE) — UCS coordinates recognition of care work (childcare, eldercare, community support) that markets systematically underprice or exclude entirely. The constraint enables exit from forced market participation without abandoning valued work. The income floor removes the coercion that currently forces caregivers into paid employment or destitution. Low extractiveness — the mechanism is pure coordination (recognizing and paying for value previously externalized), not extraction from caregivers or toward them."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Risk-Bearing Entrepreneur / Artist",
+      "comment": "PERSPECTIVE 3: ARTIST / ENTREPRENEUR (ROPE) — UCS enables high-variance career paths (creative work, startup formation, skill development) by decoupling subsistence from employment. Removes the constraint that forces risk-averse choice of stable employment over riskier, higher-value activities. Coordination mechanism: matching economic security to activity preference rather than forcing activity to match earnings requirements. Temporal dimension critical — at generational horizon, the accumulation of artistic and entrepreneurial output from a UCS-enabled population produces net positive externalities (cultural goods, technological innovation). Low extractiveness across this horizon."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Abuse Victim Reclaiming Agency",
+      "comment": "PERSPECTIVE 4: ABUSE VICTIM (ROPE) — UCS removes the economic trap that binds abuse victims to abusers. Housing, food, and subsistence security become unconditional; leaving abusive situations no longer entails destitution or homelessness. Coordination function: matching safety preferences to resource availability rather than forcing victims to choose between physical safety and economic survival. Exit option shifts from trapped to mobile. Extractiveness is low because the income floor creates no asymmetry — both victim and the funding source benefit from the victim's exit to safety and autonomy."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Labor Market Collective / Union Perspective",
+      "comment": "PERSPECTIVE 5: LABOR MARKET COLLECTIVE / UNION (ROPE) — UCS coordinates labor supply and demand without coercive wage floors or unemployment. Workers retain bargaining power because they can exit low-wage work without starvation; employers must compete on job quality, not subsistence desperation. The constraint removes the race-to-the-bottom dynamic where workers undercut each other out of survival pressure. Institutional perspective sees a coordination mechanism enabling voluntary sector participation at higher equilibrium quality. Low extractiveness from the organized perspective — the mechanism strengthens the collective's position without extracting from other agents."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Tax-Funded UCS Implementation System",
+      "comment": "PERSPECTIVE 6: UCS FUNDING INSTITUTION (ROPE) — The institution that distributes the income floor (government, tax authority, sovereign wealth fund) coordinates redistribution by decoupling resource allocation from labor market outcomes. The mechanism is pure coordination: matching purchasing power to population need rather than forcing all income through employment or means-tested bureaucracy. Exit option for the institution is arbitrage — they can adjust the UCS floor, expand/contract beneficiary scope, or modify funding sources. Extractiveness is low because the funding institution has no incentive to extract; the coordination mechanism works when resources flow efficiently to target population."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer / Economic Naturalism",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational view, some form of subsistence guarantee appears as an immutable requirement of any sustainable economic order: populations cannot function when basic survival is contingent on employment. This perspective risks naturalizing what is actually a contestable policy choice. The freedom-floor reading explicitly rejects the mountain classification — it claims UCS is a human-designed coordination mechanism, not a law of nature. The engine's false-summit detector should flag this: if this perspective naturalizes contingent institutional design, it obscures the policy debate."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "labor_supply_response_empirical",
+      "question": "What is the actual labor supply elasticity in response to unconditional income support? Do empirical findings from Alaska, Kenya, Finland, and Ontario refute the 'work disincentive' hypothesis or validate it under certain conditions?",
+      "resolution_mechanism": "Meta-analysis of randomized controlled trials and natural experiments with UCS or UBI pilots. Disaggregation by work type (subsistence vs. discretionary), duration (short-term vs. long-term), and population (working-age vs. mixed). Primary outcome: labor supply response relative to income floor level.",
+      "impact": "If labor supply inelastic at low-to-moderate UCS levels: ε estimate confirmed at 0.18, rope classification robust. If labor supply highly elastic: ε might rise to 0.35-0.40, shifting toward tangled-rope or snare in some contexts.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Labor supply response to unconditional income floor"
+    },
+    {
+      "id": "inflation_and_rent_capture",
+      "question": "Does universal cash transfer get partially captured by landlords and rent-seekers through price inflation, reducing net autonomy gain for beneficiaries?",
+      "resolution_mechanism": "Time-series analysis of rental markets, food prices, and service costs in UCS-pilot regions compared to control regions. Measurement of real purchasing power and housing accessibility pre/post UCS. Landlord-behavior studies examining rent-setting responses to known UCS payments.",
+      "impact": "If captured: effective extraction mechanism emerges (beneficiaries pay in rent what they gain in cash) — ε might rise to 0.35-0.45, type shifts toward tangled_rope. If not captured: extraction is minimal, rope classification and low ε confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Rent capture and inflation response to UCS"
+    },
+    {
+      "id": "welfare_stigma_elimination_structural",
+      "question": "Is welfare stigma a contingent cultural artifact of means-tested systems, or does it persist even under unconditional universal distribution? Does the stigma-removal claim depend on universal scope?",
+      "resolution_mechanism": "Comparative analysis of UCS designs: universal (all citizens) vs. targeted (low-income only). Measurement of self-reported stigma, labor market discrimination, and social integration for beneficiaries under each design. Longitudinal tracking of psychological outcomes and employment patterns.",
+      "impact": "If stigma persists under targeted UCS: autonomy gain is partial — classification might shift toward tangled_rope (coordination + residual extraction through stigma). If eliminated under universal design: autonomy gain confirmed, rope classification robust. Scope dimension critical.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether stigma elimination requires universal scope"
+    },
+    {
+      "id": "macroeconomic_stability_unknown",
+      "question": "At what population-wide funding scale does UCS become macroeconomically destabilizing? Is there a fiscal or inflation ceiling where the coordination mechanism breaks down?",
+      "resolution_mechanism": "Agent-based modeling of UCS at multiple funding levels (5%, 15%, 30% of GDP). Real-world case studies from countries with high social spending (Nordic nations at 25-30% of GDP social transfers). Measurement of fiscal sustainability, inflation, and productivity growth.",
+      "impact": "If stable at high scale: classification holds at national scope. If ceiling exists below universal coverage: effective extractiveness rises due to implicit rationing — ε might rise toward 0.35-0.45, type shifts toward tangled_rope (coordination + resource constraint extraction).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Fiscal and macroeconomic ceiling for UCS expansion"
+    },
+    {
+      "id": "reading_constitutive_empirical_premise",
+      "question": "Does this freedom-floor reading depend on the empirical premise that labor coercion via subsistence need is the PRIMARY mechanism constraining worker autonomy, or are non-economic coercive mechanisms (family authority, social norms, legal restriction) equally or more constraining?",
+      "resolution_mechanism": "Comparative analysis of agent exit decisions: measure relative importance of subsistence need vs. other constraints on choice to exit employment, leave abusive situations, or pursue non-market work. Survey and interview studies of precarious workers, caregivers, and abuse victims about binding constraints on their choices.",
+      "impact": "If economic coercion is primary: the reading's core premise is sound, ε and classification confirmed. If non-economic constraints are equally/more binding: UCS is necessary but insufficient for autonomy; classification might shift toward tangled_rope (UCS coordinates subsistence but not other coercions) or piton (theater of autonomy without removing binding constraints).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether economic coercion is the primary autonomy-constraining mechanism"
+    },
+    {
+      "id": "kernel_reading_constitutive",
+      "question": "This is the freedom-floor reading of the unconditional-income-support kernel. What structural features distinguish this reading from the dependency-trap reading and the universality-paradox reading?",
+      "resolution_mechanism": "Logical analysis of each reading's core axioms and counterfactual: freedom-floor asserts UCS expands autonomy by removing coercion; dependency-trap asserts it increases dependence on the state; universality-paradox asserts it faces a structural contradiction between targeting (effective but stigmatizing) and universality (equitable but fiscally overextended). Identify where these readings agree and diverge on facts and values.",
+      "impact": "This omega documents the kernel reading itself as an irreducible ambiguity in the political economy of UCS. No empirical data alone resolves which reading is 'correct' — they disagree on value-laden concepts (autonomy vs. dependence) and on how to weigh competing axioms (liberty vs. community, individual vs. collective benefit). The constraint story instantiates only this one reading per Rule 1.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel reading identity and axiom divergence"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.23
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.18
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The freedom-floor reading of unconditional income support asserts that an unconditional income floor enables autonomy by removing coercion from the labor market and eliminating welfare stigma. This reading frames UCS as a pure coordination mechanism: matching workers' preferences to available labor, recognizing unpaid care work, enabling artistic and entrepreneurial risk-taking, and allowing abuse victims to escape economic traps. The reading explicitly rejects the premise that UCS creates dependence — it claims dependence is the problem that UCS solves. This constraint story instantiates ONLY this reading and routes the contest with sibling readings (dependency-trap and universality-paradox) to omega variables and cs_structure declarations. The core empirical claim is that labor supply is inelastic at moderate UCS levels (per Alaska Permanent Fund, Kenya GiveDirectly trials, Finland pilot), meaning the coordination function operates without the extractive side effects the dependency-trap reading emphasizes. The core normative claim is that autonomy should be measured by choice freedom from coercion, not by self-sufficiency from state transfers.",
+    "key_agents": [
+      "Precarious Workers: Primary beneficiary (powerless/mobile) — currently coerced by subsistence need; UCS enables exit from exploitative arrangements without destitution",
+      "Caregivers and Unpaid Laborers: Primary beneficiary (moderate/mobile) — currently excluded from income or forced to choose between care work and market employment; UCS coordinates recognition of care value",
+      "Artists and Entrepreneurs: Primary beneficiary (moderate/mobile) — currently forced into risk-averse employment; UCS enables high-variance career paths",
+      "Abuse Victims: Primary beneficiary (moderate/mobile) — currently trapped by economic dependency on abusers; UCS enables escape to safety",
+      "Labor Market Collective / Union: Secondary beneficiary (organized/arbitrage) — gains bargaining power when workers can exit low-wage arrangements",
+      "Tax-Funded UCS Institution: Institutional implementer (institutional/arbitrage) — provides coordination mechanism; has arbitrage exit options for floor level and scope",
+      "Dependency-Trap Reading (Sibling Constraint): Coexists with this reading; differs on empirical labor-supply response and normative concept of dependence",
+      "Universality-Paradox Reading (Sibling Constraint): Influences this reading; creates structural pressure on fiscal scope and targeting mechanisms"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low. The freedom-floor reading models UCS as a pure coordination mechanism with minimal asymmetric extraction. The income floor benefits beneficiaries (removed from labor coercion) and the funding institution (achieves efficient redistribution) with no third party bearing costs. The low value reflects the absence of predatory beneficiaries or captive victims. Suppression (0.12): Very low. The mechanism is unconditional — no means-testing, no behavioral requirements, no bureaucratic discretion. Low administrative suppression compared to welfare-state alternatives (which impose work requirements, asset limits, stigmatizing eligibility screens). Theater ratio (0.25): Low. Direct cash transfer has minimal performative content — the mechanism is transparent (cash flow), the outcomes are measurable (income level, labor supply), and there is little room for theatrical compliance. The modest rise over the interval (0.20→0.25) reflects increasing administrative overhead as populations scale, but theater remains functionally marginal compared to welfare-bureaucracy alternatives.",
+    "directionality_logic": "Directionality derives from the beneficiary-victim structure and exit options. All declared beneficiaries occupy positions where UCS removes a binding constraint: subsistence coercion, unpaid labor externalization, risk aversion in employment, economic dependence on abusers. None of these beneficiaries are extractors — they gain autonomy without creating victims. The absence of declared victims is structurally significant: the freedom-floor reading asserts the UCS is a Pareto improvement (or near-Pareto, with only fiscal redistribution as the cost to general taxpayers, not a specific victim group). Institutional and organized perspectives have arbitrage exit — they can adjust UCS parameters or redirect funding. Powerless and moderate perspectives have mobile exit — they can shift labor market participation patterns in response to UCS. This exit-option distribution produces low d values (beneficiary-skewed) and therefore low f(d) values, keeping chi low and extractiveness minimal.",
+    "perspectival_gap": "The perspectival gap between this reading and the dependency-trap reading is significant but not foreclosing. Both readings agree on the mechanism (cash transfer) and the beneficiaries (precarious workers, caregivers, artists, abuse victims). They diverge on: (1) empirical labor-supply response — freedom-floor claims inelasticity; dependency-trap claims substantial disincentive effects; (2) normative framing of dependence — freedom-floor claims dependence on employment is the problem; dependency-trap claims dependence on state transfers is worse; (3) autonomy concept — freedom-floor measures autonomy as exit options from coercion; dependency-trap measures autonomy as self-sufficiency from transfers. The universality-paradox reading coexists with both, adding a third axis: the targeting vs. universality tension. Each reading remains live in the policy debate without logically foreclosing the others.",
+    "mandatrophy_analysis": "This reading avoids mandatrophy by declaring a single clear beneficiary class (precarious workers and those constrained by labor coercion) and no victim group. The coordination function is transparent (income floor enabling voluntary participation) and the extraction is explicitly modeled as zero or near-zero. The measurement trajectory shows theater ratio and extractiveness stable and low, confirming the rope classification across the interval. No mandatrophy emerges because the reading does not claim both high coordination and high extraction — it claims high coordination and low extraction, a coherent position. The omega variables document the empirical uncertainties (labor-supply response, inflation capture, macroeconomic scale) that could shift the classification toward tangled-rope if resolved unfavorably, but these are tracked as contingencies, not inherent contradictions.",
+    "kernel_context": "This constraint is ONE reading of the contested kernel 'unconditional_income_support' (kernel_id: unconditional_income_support). The reading is 'freedom_floor_reading' — UCS as autonomy-enabling floor removing labor coercion and welfare stigma. Sibling readings are 'dependency_trap_reading' (UCS as state dependence replacing market dependence) and 'universality_paradox_reading' (UCS faces inherent tension between targeting and universality). This reading claims UCS expands autonomy; the dependency-trap reading claims it diminishes it by increasing state control; the universality-paradox reading claims both autonomy claims are correct but incompatible at scale. Per Rule 2, the reading contest is routed to omega variables and cs_structure. Per Rule 3, this prose section documents the kernel and reading identities. Per Rule 4, reading_relations and axioms are populated in cs_structure."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "dependency_trap_reading",
+      "universality_paradox_reading"
+    ],
+    "dual_formulation_note": "The unconditional_income_support kernel has three constraint stories corresponding to three readings: freedom_floor_reading (UCS as autonomy enabler), dependency_trap_reading (UCS as state dependence), and universality_paradox_reading (UCS facing targeting-universality contradiction). Each story has its own epsilon, its own beneficiary/victim structure, and its own classification. They are linked as siblings via network.affects_constraints to indicate they are competing interpretations of the same policy kernel, not independent constraints."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "dependency_trap_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "universality_paradox_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "labor_coercion_via_subsistence_is_primary_constraint",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "autonomy_measures_exit_freedom_from_coercion_not_self_sufficiency",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "voluntary_labor_participation",
+    "drift_state": {
+      "moment": "contemporary_labor_market_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  }
+}

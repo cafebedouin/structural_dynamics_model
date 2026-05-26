@@ -1,0 +1,314 @@
+% ============================================================================
+% CONSTRAINT STORY: rupture_reading
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_rupture_reading, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: rupture_reading
+ *   human_readable: Classical Latin Rupture Reading: Humanist Textual Reconstruction as Deliberate Exclusion
+ *   domain: historical_linguistics/philology/commitment_systems
+ *
+ * SUMMARY:
+ *   Classical Latin is a dead language known only through texts — primarily
+ *   Cicero, Virgil, and other canonical authors from the late Republic and
+ *   Augustan period. The rupture reading of the correct_latin kernel holds
+ *   that the legitimate form of Latin is the textual form preserved in these
+ *   classical texts, and that all post-classical Latin — medieval,
+ *   Romance-derived, ecclesiastical innovations — represents corruption and
+ *   deviation from the norm. This reading is not a description of what Latin
+ *   'really' is (the continuity reading holds that Latin continuously evolved
+ *   through the medieval period into Romance languages), but a normative
+ *   commitment: the rupture reading EXCLUDES medieval and living practice as
+ *   illegitimate instances of Latin competence. The humanist elite —
+ *   Renaissance philologists, classical scholars, university professors —
+ *   established themselves as sole authorities on 'correct' Latin by
+ *   controlling interpretation of the textual kernel. Medieval scribes and
+ *   Romance speakers, whose practice maintained and evolved the language, are
+ *   reclassified as incompetent by this standard. The constraint is a
+ *   tangled_rope because it combines genuine coordination (a shared classical
+ *   standard enables scholarly communication and historical recovery) with
+ *   asymmetric extraction (the humanists capture authority and the medieval
+ *   practitioners lose legitimacy).
+ *
+ * KEY AGENTS:
+ *   - Humanist Philological Elite: Primary beneficiary (institutional/arbitrage) — controls interpretation of classical texts, establishes professional authority, captures epistemic prestige
+ *   - Medieval Latin Practitioners: Primary victim (powerless/trapped) — living practice delegitimized; no exit from epistemic regime that judges them incompetent
+ *   - Romance Language Communities: Secondary victim (moderate/constrained) — Romance languages are reclassified as degradations rather than continuations of Latin; living evidence of Latin evolution excluded from legitimate discourse
+ *   - Catholic Church and Ecclesiastical Latin: Mixed position (moderate/constrained) — benefits from shared textual standard (coordination), but subordinates living practice to textual authority
+ *   - Living Latin Revitalization Movements: Organized agents (organized/constrained) — contest the rupture reading by reviving living competence; see the exclusion as temporary and reversible
+ *   - University Classics Departments: Institutional gatekeepers (institutional/arbitrage) — maintain the rupture reading through pedagogy and credentialing, but the function has degraded to theater
+ *   - Analytical Observer: Civilizational (analytical/analytical) — risks naturalizing the humanist choice as an inevitable constraint of textual transmission
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(rupture_reading, 0.52).
+domain_priors:suppression_score(rupture_reading, 0.68).
+domain_priors:theater_ratio(rupture_reading, 0.64).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(rupture_reading, extractiveness, 0.52).
+narrative_ontology:constraint_metric(rupture_reading, suppression_requirement, 0.68).
+narrative_ontology:constraint_metric(rupture_reading, theater_ratio, 0.64).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(rupture_reading, tangled_rope).
+narrative_ontology:human_readable(rupture_reading, "Classical Latin Rupture Reading: Humanist Textual Reconstruction as Deliberate Exclusion").
+narrative_ontology:topic_domain(rupture_reading, "historical_linguistics/philology/commitment_systems").
+
+domain_priors:requires_active_enforcement(rupture_reading).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_kernel_codification(rupture_reading, fixed_text).
+narrative_ontology:cs_authority_grounding(rupture_reading, lineage).
+narrative_ontology:cs_interpretation_layer_present(rupture_reading).
+narrative_ontology:cs_kernel_id(rupture_reading, correct_latin).
+narrative_ontology:cs_reading_relation(rupture_reading, continuity_reading, coexists_with).
+narrative_ontology:cs_axiom(rupture_reading, foundational, classical_texts_sole_legitimate_authority).
+narrative_ontology:cs_axiom_status(classical_texts_sole_legitimate_authority, holdable).
+narrative_ontology:cs_axiom(rupture_reading, foundational, medieval_practice_constitutes_corruption).
+narrative_ontology:cs_axiom_status(medieval_practice_constitutes_corruption, holdable).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(rupture_reading, humanist_elite).
+narrative_ontology:constraint_beneficiary(rupture_reading, classical_philologists).
+narrative_ontology:constraint_victim(rupture_reading, medieval_latin_practitioners).
+narrative_ontology:constraint_victim(rupture_reading, romance_language_continuity).
+narrative_ontology:constraint_victim(rupture_reading, multilingual_competence).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: MEDIEVAL PRACTITIONERS (SNARE) — Trapped by the humanist reclassification of their competence as 'corruption.' Medieval scribes, Romance speakers, and living-Latin practitioners cannot exit the epistemic regime that judges them incompetent. Their actual linguistic practice — which maintained and evolved Latin through living speech — is declared void by textual authority. No exit option; maximum suppression through delegitimation.
+constraint_indexing:constraint_classification(rupture_reading, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: ECCLESIASTICAL LATIN PRACTITIONERS (TANGLED ROPE) — Experience genuine coordination benefit (shared textual standard enables liturgical unity and doctrinal stability) alongside extraction: their living practice is subordinated to textual authority. Can modify practice within bounds (Vatican II reforms), but constrained by the rupture reading's epistemic authority. Benefits from coordination; bears extraction through delegitimation of oral/living forms.
+constraint_indexing:constraint_classification(rupture_reading, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: HUMANIST ELITE (ROPE) — Primary beneficiary. Controls interpretation of the textual kernel; establishes themselves as sole legitimate authorities on 'correct' Latin. Arbitrage position: can move between ancient texts, manuscript variants, and interpretive frameworks. Experience the rupture reading as coordination — establishing a stable classical standard. Net benefit flows toward this group through professional prestige, institutional authority, and intellectual capital.
+constraint_indexing:constraint_classification(rupture_reading, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: LIVING LATIN MOVEMENTS (SCAFFOLD) — Organized agents (Certamen Ciceronianum, oral Latin pedagogy, neo-Latin communities) contest the rupture reading by reviving living practice as legitimate competence. See the humanist exclusion as a temporary epistemic regime with a sunset: as living Latin recovers speakers and validates competence through practice, the rupture reading's exclusive authority will decline. Theater high initially (performative classicism), declining as living communities grow.
+constraint_indexing:constraint_classification(rupture_reading, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: CLASSICS DEPARTMENTS (PITON) — Institutional maintenance of the rupture reading long after its structural function has degraded. The 'correct Latin' standard persists through pedagogical inertia and gatekeeping, not because the rupture reading solves a live coordination problem. Theater ratio high (classical pronunciation drills, textual purist curricula) with declining functional verification — living language communities demonstrate that living practice works, undermining the exclusivity claim.
+constraint_indexing:constraint_classification(rupture_reading, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) — From a civilizational perspective, the rupture reading appears as an immutable law: dead languages can only be known through texts; oral transmission has vanished; reconstruction from symbols is the only available method. This perspective sees the humanist exclusion as inevitable and natural. However, the structural data reveals this as a false summit: the 'inevitability' naturalizes a choice (to exclude living variants and medieval practice) as a necessity (texts are all that remain).
+constraint_indexing:constraint_classification(rupture_reading, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(rupture_reading_tests).
+
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(rupture_reading, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(rupture_reading, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(rupture_reading, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(rupture_reading, TR),
+    TR >= 0.70.
+
+:- end_tests(rupture_reading_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness (0.52): Moderate-high. The rupture reading extracts significant epistemic authority for the humanist elite by establishing themselves as sole legitimate interpreters of 'correct' Latin. Medieval practitioners and Romance speakers lose standing; their competence is reclassified as corruption. However, the extraction is not maximal (which would require near-total suppression of alternatives). Living Latin communities exist; Romance languages flourish; the rupture reading must continuously enforce its authority rather than relying on complete suppression. Suppression (0.68): High. The barriers to practicing medieval or living Latin as legitimate are substantial: institutional credentials require classical texts, professional advancement requires classical purity, pedagogy emphasizes classical pronunciation and grammar. But suppression is not absolute — medieval manuscripts exist, Romance languages are documented, living communities persist in the margins. Theater ratio (0.64): Moderate-high. The humanist classical standard requires sustained pedagogical performance: drilling classical pronunciation, parsing classical texts, memorizing classical forms. This performative content increased over the interval (from 0.35 at early Renaissance to 0.64 by modern era) as living practice receded and textual authority had to work harder to maintain itself. The rising theater_ratio signals inertial degradation: the classical standard persists through institutional theater rather than through genuine coordination function.
+ *
+ * PERSPECTIVAL GAP:
+ *   The rupture reading generates a wide perspectival gap across power and exit positions. The humanist elite sees coordination (Rope) — establishing a stable textual standard. The ecclesiastical practitioners see mixed coordination-extraction (Tangled Rope) — they benefit from shared standards but lose practice authority. The medieval practitioners see pure extraction (Snare) — their competence is deleted. The living Latin movements see a temporary exclusion with a sunset (Scaffold) — alternative epistemic pathways are growing. The university classics departments see a degraded ritual (Piton) — classical purity persists through inertia, not function. The civilizational analytical observer risks seeing natural law (Mountain) — dead languages require textual reconstruction — but the structural data reveals this as a false summit: the 'requirement' naturalizes a choice to exclude living variants. The full presheaf demonstrates how the same constraint appears as six different types depending on observer position.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   The rupture reading's directionality values derive from beneficiary/victim structural data. Humanist elite with arbitrage options experience low effective extraction (d ≈ 0.15) — they are net beneficiaries whose power actually increases. Medieval practitioners with trapped status experience maximum extraction (d ≈ 0.92) — they have no exit and bear full cost of reclassification. Ecclesiastical practitioners with constrained options experience moderate extraction (d ≈ 0.62) — they can modify practice within bounds but cannot fully escape the textual authority. The analytical observer with analytical position experiences moderate extraction (d ≈ 0.73) — they can perceive the structure but face pressure to accept the naturalness framing. No directionality overrides required; the structural derivation captures the real asymmetry.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The rupture reading avoids mandatrophy by clearly declaring its asymmetry: it is deliberately extractive, not deceptively coordinating. The humanist elite explicitly argue for classical purity; they do not pretend medieval practice is equivalent. The tension is between the intellectual good (recovering classical Latin form) and the social cost (delegitimizing medieval practitioners). The tangled_rope classification reflects this: there is real coordination (shared textual standard enables scholarship) alongside real extraction (medieval practice loses standing). The false summit danger is specific: naturalizing the choice to exclude medieval forms as an inevitable consequence of textual transmission. The omega variables address this risk by asking whether the rupture reading could be justified pragmatically (if medieval practice is truly corrupt) or whether it is purely institutional (humanists chose exclusion for authority gain).
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    rupture_vs_continuity_empirical_overlap,
+    'How much of medieval Latin practice actually represents continuous evolution of classical forms versus corruption/innovation? Where is the continuity boundary?',
+    'Linguistic reconstruction: comparative analysis of medieval manuscripts, Romance language structures, and vulgar Latin attestations. Determine whether medieval spellings/grammar preserve classical patterns or represent independent innovations.',
+    'If continuity high (>60%): medieval practice is legitimate lineal descent, not corruption. Rupture reading becomes artificially exclusionary (higher epsilon). If continuity low: rupture reading''s exclusion is justified pragmatically (continuity is broken), but the claim to natural law still naturalizes a choice.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(rupture_vs_continuity_empirical_overlap, empirical, 'Percentage of medieval Latin representing continuous classical evolution versus innovation').
+
+omega_variable(
+    textual_authority_beneficiary_intentionality,
+    'Did humanist philologists deliberately choose to exclude medieval and Romance-influenced forms as a mechanism for establishing elite epistemic control, or was exclusion a byproduct of pursuing classical purity as an intellectual good?',
+    'Historical analysis of humanist manifestos, correspondence, pedagogical choices. Look for explicit statements about exclusion, institutional gatekeeping, or deliberate suppression of alternative readings. Distinguish active exclusion from passive preference.',
+    'If deliberate: tangled_rope classification confirmed (active enforcement of asymmetry). If incidental: classification shifts toward rope (coordination without intent to extract). Affects the ''requires_active_enforcement'' gate.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(textual_authority_beneficiary_intentionality, conceptual, 'Whether humanist exclusion of medieval forms was deliberate mechanism or incidental consequence').
+
+omega_variable(
+    living_practice_epistemic_status,
+    'Can competence demonstrated through living Latin communities count as verification that the rupture reading is not the only valid reconstruction? Or does the rupture reading maintain authority even if living alternatives work?',
+    'Pragmatic linguistic test: do living Latin speakers produce meaningful, coherent utterances? Can grammar be taught and learned? Do native-speaker intuitions about well-formedness exist? If yes to all: living practice constitutes an alternative epistemic authority. If no: texts remain sole authority.',
+    'If living practice epistemic: scaffold reading has real structural ground (sunset is not aspirational). If not: humanist textual authority has no competitor, and the piton classification is premature.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(living_practice_epistemic_status, empirical, 'Whether living Latin practice constitutes valid alternative epistemic authority').
+
+omega_variable(
+    kernel_reading_contest_location,
+    'What is the specific structural disagreement between the rupture reading and the continuity reading? Is it located in (a) what counts as valid evidence of Latin competence, (b) what the textual kernel means, or (c) whether non-textual transmission preserves meaning?',
+    'Explicit comparative analysis of rupture vs continuity readings: each reading''s core premises about evidence, authority, and transmission. Identify which specific normative claim generates the disagreement.',
+    'If (a): disagreement is about epistemic standards for verification — omega variables address methodology. If (b): disagreement is about interpretation of the kernel itself — two readings may coexist. If (c): disagreement is about mechanisms of meaning-preservation — omega addresses transmission fidelity.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(kernel_reading_contest_location, conceptual, 'Structural location of disagreement between rupture and continuity readings').
+
+omega_variable(
+    false_summit_natural_law_diagnosis,
+    'Is the rupture reading''s authority grounded in genuine natural law (textual remains are the only available evidence of extinct language structure) or in constructed institutional authority (humanists chose to privilege texts and exclude other evidence)?',
+    'Test the ''necessity'' claim: could a scholar today reconstruct classical Latin equally well from Romance languages, medieval practice, and inscriptions WITHOUT consulting humanist philological texts? If yes: authority is constructed, not natural. If no: texts are genuinely indispensable.',
+    'If constructed: false summit signature fires; reclassification to higher-extraction type possible. If genuinely necessary: mountain classification justified despite beneficiary presence.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(false_summit_natural_law_diagnosis, conceptual, 'Whether rupture reading naturalizes constructed institutional authority as inherent necessity').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(rupture_reading, 0, 300).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(rupture_tr_t0, rupture_reading, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(rupture_tr_t150, rupture_reading, theater_ratio, 150, 0.58).
+narrative_ontology:measurement(rupture_tr_t300, rupture_reading, theater_ratio, 300, 0.64).
+
+% Extraction over time
+narrative_ontology:measurement(rupture_be_t0, rupture_reading, base_extractiveness, 0, 0.38).
+narrative_ontology:measurement(rupture_be_t150, rupture_reading, base_extractiveness, 150, 0.48).
+narrative_ontology:measurement(rupture_be_t300, rupture_reading, base_extractiveness, 300, 0.52).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(rupture_reading, information_standard).
+narrative_ontology:affects_constraint(rupture_reading, continuity_reading).
+
+% DUAL FORMULATION NOTE:
+% The correct_latin kernel decomposes into (at least) two constraints: the rupture_reading (this file) and the continuity_reading (sibling). Each instantiates a different ε and a different beneficiary/victim structure. The rupture reading emphasizes textual authority and deliberate exclusion (ε=0.52, tangled_rope). The continuity reading emphasizes living evolution and Romance lineal descent (expected ε lower, rope-dominant). Both readings emerge from the same textual kernel; each imposes different normative structure on what 'correct Latin' means. The two stories are linked because the authority each reading claims depends on denying the other's legitimacy.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

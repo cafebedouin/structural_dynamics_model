@@ -1,0 +1,233 @@
+{
+  "header": {
+    "constraint_id": "balancing_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_balancing_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Balancing Reading of Speech Protection Boundary",
+    "topic_domain": "constitutional_law/political_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_judiciary",
+      "speech_regulators"
+    ],
+    "victims": [
+      "marginalized_speakers",
+      "predictability_of_speech_norms"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Marginalized Speaker",
+      "comment": "PERSPECTIVE 1: MARGINALIZED SPEAKER (SNARE) — Speech rights are contingent on case-by-case judicial determination. The balancing test lacks predictable rules; speakers cannot know in advance whether their expression will be protected. No exit: speakers cannot opt out of the constitutional framework or avoid judicial review. Maximum uncertainty extraction — the constraint generates chilling effects through unpredictability."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Organized Advocacy Group",
+      "comment": "PERSPECTIVE 2: ORGANIZED ADVOCACY GROUP (TANGLED ROPE) — Faces uncertainty about which speech will be protected, but also benefits from the flexibility of case-by-case review: controversial positions sometimes win protection through sympathetic judicial panels, and the balancing framework has occasionally expanded rights beyond what categorical rules might permit. Constrained by litigation cost and timeline uncertainty, but not trapped. Benefits and costs both present."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Institutional Judiciary",
+      "comment": "PERSPECTIVE 3: INSTITUTIONAL JUDICIARY (ROPE) — The balancing test is a coordination mechanism that allocates adjudication authority to courts rather than categorical rules. Courts benefit from doctrinal flexibility and the ability to calibrate outcomes to specific circumstances. Experiences minimal extraction — the constraint coordinates the judiciary's own institutional role. Net beneficiary of the framework's authority allocation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Speech Regulator",
+      "comment": "PERSPECTIVE 4: SPEECH REGULATOR (ROPE) — Government entities seeking to restrict speech (schools, employers, public officials) benefit from the balancing framework's flexibility. When courts apply intermediate scrutiny to content regulation, regulators can often defend restrictions by demonstrating substantial government interests. The balancing test enables coordinated enforcement without needing categorical prohibitions on regulation. Net beneficiary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Doctrine Administrator",
+      "comment": "PERSPECTIVE 5: DOCTRINE ADMINISTRATOR (PITON) — Law schools, casebooks, and judicial tradition maintain the balancing test through iterative refinement, but much of the work is theatrical: generating three-tier frameworks (strict scrutiny / intermediate / rational basis), labeling cases by test, and performing doctrinal consistency without resolving underlying disagreement about what speech deserves protection. The high theater ratio (0.65) reflects that doctrine work involves significant performance — writing opinions that 'apply the test' without the test meaningfully constraining outcomes."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, the balancing of speech rights against other values is an inherent feature of any legal system that must simultaneously protect expression and prevent harm. No society can protect all speech absolutely while also protecting security, privacy, reputation, or safety. This structural feature appears unchangeable — balancing is what law necessarily does. However, the structural data contradicts the mountain classification — the engine will identify this as a false summit, revealing that the appearance of inevitability masks institutional choices about who wields the balancing power and what factors count."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "balancing_test_determinacy",
+      "question": "Does the balancing test produce predictable outcomes, or is it sufficiently indeterminate that similar cases yield inconsistent results?",
+      "resolution_mechanism": "Longitudinal analysis of case clustering: do speakers/litigants with similar profiles receive consistent classifications across different circuits and time periods? Measurement of variance in outcomes for structurally similar cases.",
+      "impact": "If determinacy is high (r² > 0.7 across cases): balancing might be rope (genuine coordination through stable doctrine). If determinacy is low (r² < 0.4): balancing is snare (extraction through unpredictability disguised as flexibility).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether balancing test produces predictable outcomes"
+    },
+    {
+      "id": "judicial_preference_capture",
+      "question": "To what extent do balancing test outcomes reflect the ideological composition of the court rather than stable principles?",
+      "resolution_mechanism": "Regression analysis of outcomes against judge ideology scores (Segal-Cover or DW-NOMINATE); comparison of same-case reasoning across different panels.",
+      "impact": "High correlation with judge ideology: the balancing test is a vehicle for extracting doctrinal legitimacy from outcome-driven reasoning (snare properties). Low correlation: balancing reflects genuine interpretive pluralism (rope properties).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Extent to which outcomes reflect judge ideology"
+    },
+    {
+      "id": "speech_category_reification",
+      "question": "Does the balancing framework actually treat speech categories (political, commercial, obscene, etc.) as legally meaningful, or do the category labels function as post-hoc narrative cover for outcome-driven decisions?",
+      "resolution_mechanism": "Doctrinal archaeology: trace how speech categories emerge historically; analyze whether category membership predicts outcomes independent of judge ideology and case facts.",
+      "impact": "If categories are reified: balancing coordinates the judiciary around stable doctrinal categories (rope). If categories are post-hoc: the balancing test is a performance of objectivity masking discretionary power (piton or snare).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether speech categories are meaningful or performative"
+    },
+    {
+      "id": "alternative_framework_availability",
+      "question": "Would categorical rules (absolutist protection for some speech, strict categorical exclusions for other speech) actually reduce uncertainty and extraction compared to balancing, or do absolutist frameworks create different extraction mechanisms?",
+      "resolution_mechanism": "Comparative analysis: examine jurisdictions or periods that used categorical rules vs balancing (e.g., pre-Brandenburg categorical approach vs post-Brandenburg balancing); measure speaker confidence, litigation cost, and regulatory compliance under each framework.",
+      "impact": "If categorical rules reduce uncertainty: balancing_reading is snare (extraction through unpredictability) and the absolutist_reading offers genuine alternative. If categorical rules create different unpredictability: balancing_reading and absolutist_reading both have extraction mechanisms; choice between them is value-dependent, not empirical.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether categorical rules would reduce extraction compared to balancing"
+    },
+    {
+      "id": "committer_reading_ambiguity",
+      "question": "Is this constraint one reading of the speech-protection-boundary kernel, or is it an attempt to naturalize one reading as constitutional law itself?",
+      "resolution_mechanism": "Doctrinal history: trace whether balancing was explicitly adopted as a methodological choice or emerges as a post-hoc description of what judges do. Examine whether the balancing framework is defended as 'better doctrine' or as inevitable given First Amendment text.",
+      "impact": "If balancing is an explicit methodological choice: the constraint is a genuine reading that coexists with alternatives. If balancing is naturalized: the constraint exhibits false-summit properties — it presents contingent institutional arrangements as logical necessities.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether balancing is an explicit reading or naturalized inevitability"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The balancing reading of speech protection holds that the First Amendment's scope varies with context. Speech receives protection determined through case-by-case adjudication that weighs First Amendment interests (speaker autonomy, democratic participation, truth-seeking) against other constitutional values (security, privacy, reputation, safety) and demonstrated concrete harms. This reading treats the protected/unprotected boundary as fluid rather than categorical. It produces a tangled-rope constraint: the framework includes genuine coordination of judicial authority (judges allocate cases, refine doctrine, calibrate application) alongside extractive features (unpredictability generates chilling effects, litigation costs become gating mechanisms, marginalized speakers face asymmetric uncertainty). The balancing reading is one of three structurally distinct commitments about how the speech-protection kernel should be interpreted. The absolutist reading holds that certain speech categories (political speech, core First Amendment expression) must be categorically protected regardless of consequences. The harm-limited reading holds that only speech causing direct, imminent, provable harm can be restricted. The balancing reading coexists with these alternatives — different factions in constitutional law, different judicial coalitions, and different historical periods instantiate each reading. The key structural difference: the balancing reading vests discretionary authority in the judiciary to determine application; it generates uncertainty that extracts chilling effects from risk-averse speakers; it requires continuous doctrinal performance to maintain legitimacy; it allocates relative benefit to institutional actors who navigate the doctrine (courts, regulators, repeat litigators) and relative cost to marginalized speakers who lack resources to litigate boundary cases.",
+    "key_agents": [
+      "Marginalized Speaker: Primary victim (powerless/trapped) — speech rights are contingent on unpredictable case-by-case outcomes; cannot opt out of uncertainty; chilling effect from inability to predict judicial application",
+      "Organized Advocacy Group: Secondary victim/beneficiary (moderate/constrained) — faces litigation costs and timeline uncertainty; sometimes benefits from sympathetic judicial panels; sufficient resources to navigate the framework but at significant cost",
+      "Institutional Judiciary: Primary beneficiary (institutional/arbitrage) — balancing test allocates authority to courts; provides flexibility for outcome-calibration; coordinates judicial role without constraining outcomes via categorical rules",
+      "Speech Regulator: Secondary beneficiary (institutional/arbitrage) — government entities can defend restrictions through balancing framework; intermediate scrutiny permits substantial government interests to justify content regulation",
+      "Doctrine Administrator: Institutional actor (institutional/arbitrage) — law schools and judicial tradition maintain framework through doctrinal refinement; significant theatrical performance in applying three-tier framework; theater ratio increasing over time as doctrine becomes more complex",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing the balancing choice as inevitable or necessary when it is actually one reading of how to interpret the speech-protection kernel"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The balancing framework extracts from speakers through three mechanisms: (1) unpredictability of outcomes generates chilling effects even for legally protected speech; (2) litigation costs become gating mechanisms, excluding speakers without resources to litigate boundary cases; (3) the doctrine itself legitimates suppression by making regulation appear rationally reviewed rather than categorical discrimination. The 0.58 value reflects that extraction is real but not total — the framework sometimes expands protection beyond what categorical rules might permit, and some speakers benefit from sympathetic judicial interpretation. Over the 30-year interval (measuring from ~1995 to ~2025), extractiveness has increased from 0.42 to 0.58 as the doctrine has grown more complex and doctrinal performance has intensified. Suppression (0.68): Moderate-high. Speakers face genuine barriers to exercise of protected speech: uncertainty about outcomes, litigation cost, time required for adjudication, reputation risk from being classified as outside protection boundary, organizational barriers to advocacy that challenges regulatory authority. Suppression is partially structural (doctrinal rules create the uncertainty) and partially internalized (speakers avoid litigation through pre-litigation self-censorship based on uncertainty about outcomes). Theater ratio (0.65): Moderate-high. Doctrinal work involves significant performative content: three-tier scrutiny frameworks impose a ritual structure that suggests outcomes are constrained by the tests when in fact outcomes track judge ideology and case facts more strongly than doctrinal categories. The theater ratio has increased from 0.40 to 0.65 over the interval as judicial doctrine has become more baroque and the gap between doctrinal narrative and actual decision-making has widened.",
+    "perspectival_gap": "This constraint exhibits all six types from different perspectives, making it a diagnostic exemplar for contested constitutional readings. The marginalized speaker sees a snare — unpredictability combined with inability to exit generates pure extraction. The organized advocacy group sees tangled rope — genuine benefits (doctrinal flexibility sometimes enables protection beyond categorical rules) coexist with extraction (litigation costs, uncertainty). The judiciary sees rope — balancing coordinates the judicial role and provides legitimate authority allocation. The regulator sees rope — balancing enables them to defend restrictions through rational review. The doctrine administrator sees piton — the framework persists through institutional inertia and theatrical performance despite declining functional verification that doctrine actually constrains outcomes. The civilizational analytical observer risks seeing mountain — the appearance that balancing is inevitable or necessary given the impossibility of protecting all speech against all harms. But the structural data reveals false-summit properties: the apparent inevitability of balancing masks that this is one optional reading of the speech-protection kernel, not a natural law.",
+    "directionality_logic": "Each perspective's directionality is determined by structural position: the powerless speaker with no exit bears maximum extraction (d ≈ 0.95, high f(d)); the moderate organized group with constrained exit experiences moderate extraction (d ≈ 0.60, moderate f(d)); the institutional beneficiaries with arbitrage options experience low or negative extraction (d ≈ 0.15, low/negative f(d)); the analytical observer derives d from the canonical analyst value (d ≈ 0.72). The judiciary's arbitrage exit reflects that courts can interpret the doctrine to achieve preferred outcomes without formally violating the framework — they can apply balancing to reach almost any conclusion. Speech regulators similarly have arbitrage exit because the balancing framework permits them to defend regulation by identifying substantial government interests. The marginalized speaker has no arbitrage exit — they cannot reinterpret the framework to protect themselves; they must either self-censor or litigate, bearing both costs.",
+    "mandatrophy_analysis": "The balancing reading resolves mandatrophy by showing that its tangled-rope classification is not a confusion between rope and snare, but a genuine hybrid: the framework contains real coordination (judicial authority allocation, doctrinal stability enabling law school teaching and legal practice) AND real extraction (unpredictability generating chilling effects, litigation costs gating participation, uncertainty asymmetries favoring institutional actors). The classification is not indeterminate — it is genuinely both. What could appear as mandatrophy (is this rope or snare?) is resolved by recognizing that it is tangled rope — a constraint that serves coordination functions for institutional actors while extracting from marginalized speakers. The perspectival gap (snare for powerless, rope for institutional, piton for doctrine administrator) is not classification confusion; it is the actual structure of the constraint. Different agents experience genuinely different constraint types because the constraint's functional properties vary across power positions.",
+    "kernel_context": "This constraint instantiates ONE reading of the contested kernel speech_protection_boundary. The reading is: 'Speech protection is determined case-by-case through weighing First Amendment interests against other constitutional values and demonstrated harms.' The sibling readings are: (1) absolutist_reading — certain speech categories (political speech, core First Amendment expression) must be categorically protected regardless of consequences; (2) harm_limited_reading — only speech causing direct, imminent, provable harm can be restricted. These three readings coexist across different judicial coalitions, different historical periods, and different constitutional traditions. None logically forecloses the others within a single framework — rather, they represent different commitments about how to interpret the text 'Congress shall make no law... abridging the freedom of speech.' The distinguishing axiom of the balancing reading is that the protected/unprotected boundary shifts with context — speech's protection depends on the specific balance between speech interests and competing values in that case. This axiom coexists with the absolutist axiom (certain speech categories are categorically protected) and the harm-limited axiom (harm-causation is the only legitimate basis for restriction). Institutionally, the balancing reading emerged as the dominant US doctrine mid-20th century, coexists with absolutist positions (held by judges like Black and Douglas, contemporary originalists), and coexists with harm-limited readings (developing in some speech contexts). The balancing reading influences the other readings by establishing intermediate scrutiny as the baseline for speech cases — even absolutists and harm-limiters must engage the balancing framework's doctrinal vocabulary to argue their positions. This creates structural pressure on the other readings: they must justify why their categorical or harm-based approach satisfies or transcends the balancing test, rather than establishing independent doctrinal grounds."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "absolutist_reading",
+      "harm_limited_reading"
+    ],
+    "dual_formulation_note": "The speech_protection_boundary kernel has three distinct readings: balancing_reading (this file), absolutist_reading, and harm_limited_reading. Each reading has its own ε value and perspectival classification structure. They form a kernel family linked by reading_relations (coexists_with / influences). The balancing_reading generates tangled_rope as primary type; the absolutist_reading would generate rope or mountain; the harm_limited_reading would generate rope or tangled_rope with different victim/beneficiary structure. Each reading treats the protected/unprotected boundary differently: balancing (context-dependent), absolutist (categorical protection), harm-limited (harm-triggered restriction). Decomposition per ε-invariance: the ε values differ because each reading's structural mechanism for determining speech protection operates differently."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "absolutist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "harm_limited_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "context_dependent_protection_boundary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "judicial_discretion_required_for_application",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "post_brandenburg_balancing_doctrine",
+    "drift_state": {
+      "moment": "contemporary_complexity_era",
+      "direction": "codification_collapse",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

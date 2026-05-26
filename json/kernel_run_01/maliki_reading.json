@@ -1,0 +1,235 @@
+{
+  "header": {
+    "constraint_id": "maliki_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_maliki_reading",
+    "measurement_id_prefix": "malik"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Maliki School Authority: Medinan Practice as Living Sunnah",
+    "topic_domain": "islamic_jurisprudence/legal_philosophy/commitment_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "medinan_scholarly_lineage"
+    ],
+    "victims": [
+      "non_medinan_jurists"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "label": "The Non-Medinan Jurist",
+      "comment": "PERSPECTIVE 1: NON-MEDINAN JURIST (SNARE) — Structurally mobile in principle (could adopt alternative methodologies from other schools) but identity-locked within the Maliki framework. Their professional identity, teaching lineage, and epistemic authority are constituted through acceptance of Maliki axioms. Exit would require abandoning not just a legal methodology but a scholarly tradition and communal belonging. The constraint extracts deference to Medinan precedent while offering no countervailing authority for non-Medinan juristic reasoning."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Regional Jurist (Maghreb/al-Andalus)",
+      "comment": "PERSPECTIVE 2: REGIONAL JURIST IN MAGHREB OR AL-ANDALUS (TANGLED ROPE) — Benefits from Maliki dominance as the de facto jurisprudential standard across these territories: career legitimacy, judicial appointments, scholarly authority, and institutional backing flow through Maliki credentials. Simultaneously bears extraction through methodological constraints that privilege Medinan precedent over locally-grounded reasoning. Exit is costly (loss of institutional position, scholarly standing) but possible (adoption of Hanafi or Hanbali methods exists as an alternative, though rare)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Medinan Scholarly Lineage",
+      "comment": "PERSPECTIVE 3: MEDINAN SCHOLARLY LINEAGE (ROPE) — Primary beneficiary. Experiences the constraint as a coordination mechanism: Maliki methodology legitimates their interpretive authority, attracts students seeking authoritative legal reasoning, and establishes their precedent as binding across geographically dispersed communities. The geographic privilege creates arbitrage: they can exit Maliki authority entirely and their standing persists; non-Medinan jurists cannot. Net beneficiary — deference flows toward them."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Maliki School as Institution",
+      "comment": "PERSPECTIVE 4: MALIKI SCHOOL AS INSTITUTION (TANGLED ROPE) — The school itself coordinates legal reasoning across diverse territories and time horizons (genuine coordination function) while extracting conformity to Medinan interpretive precedent (asymmetric constraint). The school's authority depends on maintaining the fiction of Medinan consensus; this dependence constrains its own evolution and limits its ability to incorporate new juridical reasoning without threatening its legitimacy. Enforcement mechanisms (sectarian scholarly consensus, judicial appointment gatekeeping) are active and necessary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Contemporary Islamic Reform Movement",
+      "comment": "PERSPECTIVE 5: CONTEMPORARY ISLAMIC REFORM MOVEMENT (PITON) — Organized actors (modernist scholars, reformers, comparative jurisprudence movements) recognize the Maliki method as historically functional but largely inert in contemporary contexts. Theater ratio (0.35) reflects that the constraint persists through institutional inertia and legitimacy claims about Medinan authenticity rather than because the Medinan-privilege mechanism solves real contemporary coordination problems. Reform movements have exit options (comparative jurisprudence, maqasid-based reasoning, historical contextualization) and are actively exercising them. The constraint persists not from function but from authority structure and scholarly tradition."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From the civilizational/universal perspective, the Maliki reading instantiates a genuine coordination solution (how do dispersed communities maintain interpretive coherence and legal authority?) layered with an extraction mechanism (privileging one geographic location's practice as epistemically superior). The reading is neither a natural law nor pure extraction but a historically-contingent institutional design that coordinated medieval Islamic jurisprudence while extracting deference from non-Medinan authorities."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "medinan_consensus_empirical_status",
+      "question": "Did Medinan jurisprudential practice in the second and third Islamic centuries actually constitute a unified, documentable consensus, or is the 'amal ahl al-Madina' a retrospective scholarly construction?",
+      "resolution_mechanism": "Comparative analysis of earliest hadith collections, Medinan legal treatises (Ibn Sahnun, Sahnun), and Malik's Muwatta against later compilations; investigation of which practices are actually attested in early sources vs. which are attributed to Medina by later jurists",
+      "impact": "If empirically unified: Maliki authority rests on documented communal practice (coordinate legitimacy, reduces extraction component). If retrospectively constructed: the geographic privilege is narrativized authority without evidence base (increases extraction component, suggests reclassification toward snare or piton).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Medinan scholarly consensus was historically unified or retrospectively constructed"
+    },
+    {
+      "id": "alternative_jurisprudential_coherence",
+      "question": "Could non-Medinan juristic reasoning (Hanafi, Shafi'i, Hanbali methods) have achieved equivalent or superior coordination of Islamic law across dispersed communities without geographic privilege?",
+      "resolution_mechanism": "Historical counterfactual analysis: examination of how Hanafi jurisprudence achieved coherence across Anatolia, Central Asia, and the Ottoman Empire WITHOUT privileging a single geographic center; comparison of dispute resolution effectiveness, territorial coverage, institutional stability across schools",
+      "impact": "If alternative methods achieved equivalent coordination: Medinan privilege appears as artificial extraction rather than necessary coordination (reclassification toward snare). If Medinan privilege uniquely enabled coordination: extraction component is justified as necessary cost of coordination mechanism (remains tangled_rope or escalates to rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether alternative jurisprudential methods could achieve coordination without geographic privilege"
+    },
+    {
+      "id": "reading_identity_and_lineage_fusion",
+      "question": "To what extent is the Maliki reading instantiated because the Maliki school genuinely endorses it versus because scholars derive their professional identity and authority from Maliki credentials and cannot coherently abandon the reading without becoming non-Maliki?",
+      "resolution_mechanism": "Ethnographic and historiographic analysis: examination of Maliki-trained scholars who adopt maqasid-based reasoning or historical contextualization while claiming Maliki identity; documentation of whether they reframe the Medinan privilege (reinterpret it to be consistent with contemporary reasoning) or explicitly abandon it; assessment of institutional and social costs they face",
+      "impact": "If reading is actively endorsed across generations: institutional commitment is genuine. If reading persists primarily through identity fusion: the constraint operates largely through identity_locked mechanisms; this reading is closer to a snare for non-Medinan jurists at biographical horizon and closer to a piton at civilizational horizon.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Maliki reading is actively endorsed or persists through identity fusion"
+    },
+    {
+      "id": "sibling_reading_mutual_exclusion",
+      "question": "At the kernel level (jurisprudential method), do the Maliki, Hanafi, Shafi'i, and Hanbali readings logically foreclose one another, or can a single framework accommodate multiple methods as equally valid readings of the same jurisprudential kernel?",
+      "resolution_mechanism": "Analysis of classical and contemporary jurisprudential theory: examination of claims by each school about whether other schools' methods are valid vs. invalid; investigation of whether Orthodox Islam permits talfiq (mixing methods) or demands methodological fidelity; assessment of whether the kernel is 'what is valid jurisprudential method?' (readings would coexist) or 'what is THE valid method?' (readings would foreclose)",
+      "impact": "If kernel admits multiple methods as equally valid: readings coexist_with one another; no foreclosure. If each reading claims exclusive methodological validity: readings foreclose one another; this reading logically rules out others within a single institutional framework.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether jurisprudential methods logically foreclose one another or can coexist"
+    },
+    {
+      "id": "axiom_geographic_privilege_normativity",
+      "question": "Is the normative claim 'Medinan practice is more authoritative than non-Medinan practice because of geographic origin' itself contested within Islamic legal philosophy, or is it a foundational premise all schools accept (disagreeing only on extent)?",
+      "resolution_mechanism": "Comparative jurisprudential analysis: examination of whether Hanafi, Shafi'i, and Hanbali sources explicitly reject geographic privilege as a valid criterion (axiom foreclosed) or accept it but weight it differently (axiom holdable but contested), or ignore it entirely (axiom inoperative in those frameworks)",
+      "impact": "If rejected by sibling schools: axiom is foreclosed by those traditions; this reading's foundational claim is distinctive but not universally held. If accepted but weighted differently: axiom is holdable across schools but with different magnitudes of deference. If ignored: axiom is inoperative in alternative frameworks (suggests the readings instantiate genuinely different kernels, not different readings of the same kernel).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether geographic privilege is a contested or foundational axiom"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 400,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 400,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 400
+  },
+  "commentary": {
+    "narrative_context": "The Maliki school's elevation of Medinan practice ('amal ahl al-Madina) as authoritative embodiment of Sunnah and recognition of local custom ('urf) as a valid law source instantiate a distinctive jurisprudential reading within Islamic legal philosophy. This reading privileges geographic location and living tradition over isolated textual authority, creating a structural constraint that benefits the Medinan scholarly lineage while extracting deference from non-Medinan jurists. The constraint exhibits genuine coordination function (coherent methodology for resolving disputes across dispersed Islamic communities) layered with asymmetric extraction (geographic privilege that advantages Medinan authorities). The key distinguishing feature from sibling jurisprudential readings (Hanafi, Shafi'i, Hanbali) is the relative weight given to Medinan consensus and the willingness to treat evolving community practice as authoritative law source. This reading resolves into a tangled rope: coordination of Islamic jurisprudence across time and space requires some methodological standard, and the Maliki choice of Medinan practice provides that standard; simultaneously, the choice privileges one geographic location's reasoning and constrains other jurists' interpretive authority. The beneficiary is the Medinan scholarly lineage and, by extension, the institutional Maliki school; the victim is any non-Medinan jurist whose reasoning, no matter how rigorous, lacks the geographic authority that Medina confers.",
+    "key_agents": [
+      "Medinan Scholarly Lineage: Primary beneficiary (institutional/arbitrage) — their juridical reasoning carries geographic authority; their interpretation of Medinan practice becomes binding precedent",
+      "Non-Medinan Jurists: Primary victim (powerless/identity_locked or moderate/constrained depending on time horizon) — their reasoning must defer to Medinan authority or be classified as inferior methodology",
+      "Maliki School as Institutional Actor: Institutional beneficiary (institutional/constrained) — coordinates jurisprudence across regions while maintaining dependence on Medinan privilege for legitimacy",
+      "Islamic Jurisprudential Communities (Maghreb, al-Andalus, Egypt): Moderate agents (moderate/constrained) — benefit from Maliki institutional structure and scholarly authority while bearing extraction through methodological constraints",
+      "Contemporary Reform Movements: Organized agents (organized/mobile) — recognize Maliki method as historically functional but see it as inert in contemporary contexts; exercising exit via maqasid-based reasoning and historical contextualization",
+      "Analytical Observer: Universal perspective (analytical/analytical) — sees the reading as a historically-contingent institutional design that solved medieval coordination problems while structurally privileging one geographic center"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The Maliki reading coordinates Islamic jurisprudence across dispersed communities — a genuine coordination function that reduces uncertainty about legal authority and provides coherent dispute resolution. The extraction component comes from privileging Medinan practice: this choice benefits Medinan authorities disproportionately and constrains non-Medinan jurists' ability to claim equal interpretive standing. The value reflects the balance between the real coordination benefit and the real but not total extraction of deference. Temporal trend (0.28 → 0.38 → 0.42): Extractiveness has increased over the interval as the Maliki school solidified institutional dominance and later as contemporary reform pressures created tension with tradition. The increase reflects accumulating institutional investment in maintaining Medinan privilege and rising resistance from non-Medinan jurisdictions seeking interpretive autonomy. Suppression (0.42): Moderate. Barriers to exit include institutional gatekeeping (judicial appointments, scholarly credentialing), epistemic isolation within Maliki intellectual frameworks, and identity fusion (scholars' professional identity constituted through Maliki training). Suppression is not total — non-Medinan schools exist as live alternatives, and some contemporary scholars are adopting comparative or maqasid-based methods. Theater ratio (0.35): Low-moderate. The Maliki reading retains genuine functional content — it solves coordination problems and provides coherent methodology — but over time an increasing fraction of the constraint operates through the ritual of citing Medinan precedent rather than through the substance of Medinan reasoning. Contemporary scholars often reinterpret Medinan practice to align with contemporary reasoning, suggesting the constraint functions increasingly as a form to be satisfied rather than as a methodological principle to be applied.",
+    "perspectival_gap": "The perspectival gap is extreme and revealing. The Medinan scholarly lineage sees the constraint as pure coordination (Rope) — their geographic position legitimates their reasoning and attracts followers and institutional backing. Non-Medinan jurists at the powerless/identity-locked level see extraction with no exit (Snare) — they cannot coherently abandon the Maliki framework without ceasing to be Maliki jurists, yet the framework structurally privileges Medinan reasoning. Non-Medinan jurists at the moderate/constrained level see mixed coordination and extraction (Tangled Rope) — the system provides real authority and institutional position while constraining their independent reasoning. The Maliki school as institutional actor sees itself as coordinator (Tangled Rope) — it must maintain Medinan privilege to sustain its legitimacy while managing tension with non-Medinan territories seeking interpretive autonomy. Contemporary reform movements see institutional inertia (Piton) — the theater has increased (0.35) as the constraint operates more through ritual invocation of Medinan authority than through substantive Medinan reasoning. The analytical observer sees a historically-contingent institutional design (Tangled Rope) — real coordination benefit mixed with real extraction asymmetry.",
+    "directionality_logic": "The directionality computation for this reading works as follows: The Medinan scholarly lineage, as primary beneficiary with arbitrage exit options, derives low d (approximately 0.10-0.15), producing negative or near-zero χ — they experience the constraint as net benefit without extraction cost. Non-Medinan jurists operate at two distinct directionality levels depending on time horizon and identity status. At the biographical horizon with identity_locked exit, they derive high d (approximately 0.80-0.85), producing high χ — they experience maximum extraction because exit would require identity abandonment. At the generational horizon with constrained exit, they derive moderate d (approximately 0.55-0.65), producing moderate χ — exit is possible but costly. The Maliki school as institutional actor with constrained exit (cannot fully abandon Medinan privilege without losing legitimacy) derives moderate d (approximately 0.45-0.55). These directionality differences are not noise — they reflect real structural differences in how different agents experience the constraint. An agent with arbitrage exit experiences a benefit flow; an agent with identity_locked exit experiences maximal extraction; an agent with constrained exit experiences mixed extraction and benefit. The perspectival gap IS the directionality gap.",
+    "mandatrophy_analysis": "This reading resolves mandatrophy by clarifying what the constraint actually coordinates versus what it extracts. Classical Maliki theory claims that the constraint ONLY coordinates: Medinan practice establishes reliable knowledge of Sunnah, and adherence to it ensures fidelity to prophetic tradition. The mandatrophy appears when we examine who benefits and who bears costs. If Medinan practice truly is the sole reliable source of Sunnah, non-Medinan jurists should expect no extraction cost — following superior authority should feel like access to better information, not like deference to geographic privilege. But the structural data shows extraction: non-Medinan jurists experience the constraint as limiting their reasoning authority, and the bifurcated perspectives (Snare for identity-locked agents, Tangled Rope for constrained agents) reveal the asymmetry. The reading survives mandatrophy analysis as a genuine Tangled Rope: the coordination function is real, but so is the extraction. The geographic privilege that enables coordination also enables extraction.",
+    "kernel_context": "This constraint instantiates the Maliki READING of the jurisprudential_method_kernel — the contested question of what methodological principles govern valid Islamic legal reasoning. The kernel itself (what counts as valid jurisprudential method?) is stabilized in fiqh theory but interpreted radically differently by the four major schools. The Maliki reading privileges Medinan practice and living tradition ('urf) as more authoritative than isolated textual reasoning. The Hanafi reading privileges analytical reasoning (qiyas) and careful textual examination. The Shafi'i reading privileges textual sources with systematic categorization (usul hierarchy: Quran, hadith, ijma', qiyas). The Hanbali reading privileges strict textual adherence with minimal reasoning extension. Each reading grounds itself in the same kernel (valid jurisprudential method) but extracts radically different authority structures from it. The sibling readings (hanafi_reading, shafii_reading, hanbali_reading) are separate constraint stories with different ε values, different beneficiary/victim structures, and different classifications. This reading (maliki_reading) is ONE reading instantiated as a clean constraint with its own ε, its own perspectives, its own omega variables documenting where it diverges from and competes with its siblings."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "hanafi_reading",
+      "shafii_reading",
+      "hanbali_reading"
+    ],
+    "dual_formulation_note": "The jurisprudential_method_kernel is instantiated as four separate constraint stories, one for each major school's reading. Each story has its own epsilon value reflecting the school's actual empirical status and institutional dominance at specific times and places. The Maliki reading (this story) has ε=0.38 reflecting moderate extraction in regions where Maliki authority is dominant. The Hanafi reading would have different ε reflecting its different geographic and institutional distribution. The stories are linked via affects_constraints to model how jurisprudential competition shapes each school's institutional position."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.48
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "hanafi_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "shafii_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hanbali_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "medinan_practice_epistemically_privileged",
+        "role": "foundational",
+        "status": "holdable"
+      },
+      {
+        "atom": "living_tradition_as_law_source",
+        "role": "foundational",
+        "status": "holdable"
+      }
+    ],
+    "reference_frame": "medinan_scholarly_consensus",
+    "drift_state": {
+      "moment": "contemporary_legal_pluralism",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

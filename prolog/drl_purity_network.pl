@@ -84,6 +84,7 @@ constraint_neighbors(C, Context, Neighbors) :-
             Inferred),
     findall(neighbor(Other, AgentStrength, LinkType),
             ( shared_agent_link(C, Other, LinkType, _),
+              \+ (narrative_ontology:cs_kernel_id(C, K), narrative_ontology:cs_kernel_id(Other, K)),
               shared_agent_edge_strength(C, Other, LinkType, AgentStrength) ),
             SharedRaw),
     append([ExplicitOut, ExplicitIn, Inferred, SharedRaw], AllRaw),

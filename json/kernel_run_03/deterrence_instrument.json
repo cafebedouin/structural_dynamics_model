@@ -1,0 +1,231 @@
+{
+  "header": {
+    "constraint_id": "deterrence_instrument",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_deterrence_instrument"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Capital Punishment as Deterrence Instrument",
+    "topic_domain": "criminal_justice/political_philosophy/constitutional_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "potential_future_victims",
+      "state_authority_apparatus"
+    ],
+    "victims": [
+      "condemned_persons",
+      "families_of_condemned",
+      "epistemic_reliability_of_deterrence_claim"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Condemned Person",
+      "comment": "PERSPECTIVE 1: CONDEMNED PERSON (SNARE) — No exit option available. Faces maximal extraction under this reading: their death is instrumentalized as a means to deter others' potential future crimes. The beneficiary class (potential future victims, abstract and unverifiable) provides the legitimacy claim. The condemned person bears the full cost of the deterrence wager with no possibility of exit or negotiation. Their death is meaningful only if deterrence works — but that claim is epistemically unverifiable from their perspective."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Families of the Condemned",
+      "comment": "PERSPECTIVE 2: FAMILIES OF THE CONDEMNED (SNARE) — Intergenerational trauma inflicted with no exit. Bear the cost of state execution, status loss, and grief without agency or compensation. Trapped within the jurisdiction's legal system and social stigma. Experience extraction through loss of kinship and relational identity."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Crime Victims and Their Advocates",
+      "comment": "PERSPECTIVE 3: CRIME VICTIMS AND ADVOCATES (SNARE) — Constrained by the traumatic reality of crime victimization and the false promise that execution of a future perpetrator would prevent their harm (which is already irreversible). This reading instrumentalizes potential future victims but cannot actually restore or compensate actual victims. Victims and advocates are often enlisted to legitimize the constraint but derive no material benefit — the benefit flows to the state authority apparatus through enhanced legitimacy."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State Authority Apparatus",
+      "comment": "PERSPECTIVE 4: STATE AUTHORITY APPARATUS (ROPE) — From the state's internal perspective, capital punishment functions as a coordination mechanism: it centralizes the right to kill, displaces vigilante justice, and creates a procedural framework for exercising sovereignty over life. The state benefits from enhanced legitimacy claims (protecting future citizens, exercising rational authority), bureaucratic integration, and the appearance of order. Sees the constraint as coordination of a legitimate state function, not extraction. Arbitrage exit option because the state apparatus can choose to abandon capital punishment if the deterrence claim fails without losing fundamental authority."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Criminal Justice System Professionals",
+      "comment": "PERSPECTIVE 5: CRIMINAL JUSTICE PROFESSIONALS (TANGLED ROPE) — Judges, prosecutors, defense attorneys, and correctional staff experience genuine coordination (the deterrence framework provides clear procedures and legitimacy claims for capital punishment) alongside asymmetric extraction (they must execute or defend executions even when doubting efficacy, bear moral responsibility, face cognitive dissonance between professed deterrence belief and empirical skepticism). Constrained by professional requirements and career path dependencies — exit (becoming skeptical of deterrence in practice) carries high cost."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Deterrence Doctrine Institutional Form",
+      "comment": "PERSPECTIVE 6: DETERRENCE DOCTRINE AS INSTITUTIONAL FORM (PITON) — From the long-term institutional perspective, the deterrence justification for capital punishment has become substantially performative. The empirical claim has been contested for decades; meta-analyses show no reliable deterrent effect; the doctrine persists through institutional inertia and historical authority rather than epistemic function. Theater ratio is moderate because some genuinely rationalist discourse occurs (cost-benefit calculations, empirical studies), but the operative mechanism is now tradition and identity (the state 'is' the kind of authority that executes), not demonstrated deterrence. Piton classification derives from theater gate and degraded functional claim."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (False Summit View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FALSE SUMMIT (MOUNTAIN) — From a universalist analytical perspective, some argue that if capital punishment actually prevented murders at acceptable cost, it would be justified — this appears as an immutable logical principle: rational choice theory dictates that any punishment mechanism preventing greater harm is justified. However, this reading declares beneficiaries (potential future victims, state authority), which triggers false summit detection. The 'logical necessity' naturalizes what is actually a contingent empirical claim (deterrence efficacy) coupled with a contested normative axiom (acceptability threshold). The engine will reclassify this as false summit, revealing that the mountain is constructed."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "deterrence_empirical_contestation",
+      "question": "Does capital punishment actually prevent future murders at rates measurable above background crime trends and confounding variables?",
+      "resolution_mechanism": "Meta-analysis of criminological studies controlling for: regional crime trends, demographic changes, policing intensity, economic factors, incapacitation effects (removal of the specific perpetrator vs. general deterrence). Cross-national and temporal comparisons between abolitionist and retentionist jurisdictions.",
+      "impact": "If deterrence is proven: the extractiveness floor shifts from 0.68 toward 0.45 (rational harm-prevention instrument rather than pure extraction). If deterrence is disproven: extractiveness remains 0.68 (extraction mechanism masked by empirical cover story). If uncertain/context-dependent: omegas remain unresolved, constraint remains snare, doctrine becomes piton (performative).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether capital punishment prevents future murders at measurable rates"
+    },
+    {
+      "id": "acceptable_cost_definition",
+      "question": "What constitutes 'acceptable cost' for preventing a statistical future murder? How is the life of the condemned person weighed against the statistical value of preventing unknown future murders?",
+      "resolution_mechanism": "Normative analysis of how different ethical frameworks value statistical lives (utilitarian cost-benefit), individual rights (deontological inviolability), and procedural justice (due process). Comparison to other contexts where statistical lives are traded off (automotive safety, medical rationing, environmental regulation).",
+      "impact": "If cost is defined as utilitarian calculus: acceptability depends on empirical deterrence rate. If cost is defined as inviolable rights: no cost is acceptable regardless of deterrence efficacy (collapses to categorical abolition reading). If procedural: acceptability depends on trial quality, not deterrence efficacy (collapses to retributive desert reading). Different resolutions route to different constraint types.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Definition and valuation of acceptable cost for deterrence benefit"
+    },
+    {
+      "id": "false_positive_catastrophe",
+      "question": "When the deterrence claim fails (no measurable prevention of future murders), what is the epistemic status of the executions already carried out? Are they retrospectively recast as retributive or purely extractive?",
+      "resolution_mechanism": "Historical and legal analysis of how jurisdictions respond when deterrence justifications collapse: do they reframe as desert-based retribution, accept that executions were unjustified harm, or simply stop engaging with the question? Comparison to other discredited justifications (preventive detention, involuntary sterilization) and how legal systems handled the reckoning.",
+      "impact": "If reframe to retribution: the reading loses its distinctive structure (becomes retributive_desert reading). If accept unjustified harm: snare classification is confirmed, constraint becomes condemned as pure extraction. If epistemically disengage: doctrine becomes piton (performative maintenance without justificatory coherence).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Epistemic status of executions if deterrence claim fails"
+    },
+    {
+      "id": "future_victim_beneficiary_circularity",
+      "question": "Are potential future victims (declared as beneficiaries) ever actual stakeholders in the capital punishment decision, or does the benefit accrue only to state authority that claims to act on their behalf?",
+      "resolution_mechanism": "Institutional and empirical analysis: do future potential victims have voice, veto, or compensation mechanisms in capital punishment decisions? Or is their status purely rhetorical — invoked to legitimize state action but not genuinely consulted? Comparison to other future-focused policies (environmental regulation, pension systems) where future stakeholders have explicit mechanisms.",
+      "impact": "If truly stakeholders: beneficiary declaration is accurate, extraction to victims is partial (some coordination of future protection occurs). If rhetorical only: beneficiaries are actually only the state apparatus, snare classification is confirmed with higher purity (no genuine coordination function).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether potential future victims are actual beneficiary stakeholders or rhetorical cover"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "This constraint models capital punishment justified specifically and exclusively through deterrence logic: the state executes condemned persons to prevent future murders committed by unrelated actors at a rate and cost ratio that society finds acceptable. This is ONE reading of the contested kernel 'state killing authority' — distinct from retributive desert (punishment proportional to moral culpability) and categorical abolition (no state killing authority under any circumstance). The deterrence reading instrumentalizes the condemned person's death as a means to protect potential future victims. This reading creates a specific beneficiary structure (future victims protected via deterrence, state authority that exercises killing power) and a specific victim structure (condemned persons whose death serves as instrument, families of condemned, and the epistemic reliability of criminology itself if deterrence claims are empirically false). The extractiveness has increased from 0.55 to 0.68 over the interval as empirical challenges to deterrence efficacy have accumulated, forcing the doctrine to rely increasingly on theoretical claims rather than demonstrated prevention — the theater ratio has correspondingly risen from 0.35 to 0.58 as the justification becomes more performative.",
+    "key_agents": [
+      "Condemned Persons: Primary victims (powerless/trapped) — instrumentalized as deterrence mechanism; bear full cost with zero exit capacity",
+      "Families of Condemned: Secondary victims (powerless/trapped) — intergenerational trauma, status loss, no compensation or agency",
+      "Potential Future Victims: Nominal beneficiaries (abstract, statistical) — their protection is the stated justification but they have no voice in the decision and no compensation mechanisms",
+      "State Authority Apparatus: Primary beneficiary (institutional/arbitrage) — captures legitimacy claims (protecting citizens, rational exercise of sovereignty), centralizes killing authority, maintains control over life-death decisions",
+      "Crime Victims and Advocates: Enlist as legitimacy source (moderate/constrained) — deployed rhetorically to justify executions but derive no material benefit; often disappointed by the constraint's failure to prevent future crime or restore their losses",
+      "Criminal Justice Professionals: Institutional intermediaries (moderate/constrained) — implement the constraint; experience coordination (clear procedures) alongside extraction (moral responsibility, cognitive dissonance)",
+      "Deterrence Doctrine (Piton): The institutional form itself — persists through inertia despite empirical contestation; seen from civilizational perspective as degraded ritual",
+      "Analytical Observer: Perspective holder (analytical/analytical) — risks naturalizing contingent empirical claim and normative axiom as logical necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts significantly from condemned persons (their death), families (relational loss and trauma), and the epistemic commons (if deterrence is not demonstrated, the extraction is masked by a false empirical cover story). The beneficiary set is asymmetrically distributed: state authority and abstract potential future victims gain; condemned persons and families lose absolutely. The extractiveness has risen from 0.55 to 0.68 as deterrence efficacy claims have faced sustained empirical challenge over the interval — as the empirical foundation weakens, the constraint relies more on rhetorical and procedural performance (theater) to maintain legitimacy. Suppression (0.75): Very high. The condemned person has no exit option (trapped); families have only exit through migration or emotional suppression; crime victims are suppressed by the false promise that executing future perpetrators will restore their losses; criminal justice professionals face career suppression (exit costs for expressing deterrence doubt); the general public is suppressed by institutional authority claims about what is necessary for safety. The constraint persists despite contestation because alternatives (abolition, life imprisonment without parole) face their own institutional and legitimacy barriers. Theater ratio (0.58): Moderate-high and rising. The constraint involves some genuine rationalist discourse (cost-benefit analyses, criminological studies attempting to measure deterrence). But the operative institutional mechanism is increasingly performative: the belief that capital punishment deters has been disputed in major meta-analyses for 50+ years; the persistence of the doctrine reflects institutional inertia, political identity, and historical practice rather than demonstrated efficacy. The theater ratio rises as empirical contestation increases but the doctrine remains institutionally entrenched.",
+    "perspectival_gap": "This constraint exhibits striking perspectival disagreement rooted in structural position. The state apparatus sees coordination (Rope): centralizing the right to kill, creating procedure, protecting future citizens. Criminal justice professionals see mixed coordination and extraction (Tangled Rope): genuine procedures alongside moral responsibility for implementing a claim they increasingly doubt. Condemned persons and families see pure extraction (Snare): their death serves others' interests with no exit or benefit to themselves. Crime victims see a false promise (Snare): execution of future perpetrators does nothing to restore their loss or prevent their own victimization. The institutional form itself (Piton) is seen as degraded ritual by civilizational observers who note the empirical contestation and persistent performance. The analytical observer risks seeing a logical necessity (Mountain) — 'if deterrence worked, it would be justified' — but this naturalizes two contingent elements: the empirical claim (deterrence actually prevents murders) and the normative axiom (the life of a condemned person is an acceptable cost for statistical prevention of future murders). The false summit detection reveals that the 'logical necessity' is constructed.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from the agent's structural relationship to the extraction flow. Condemned persons (trapped, powerless) have d ≈ 0.95 (full target): they experience the constraint entirely as extraction. Families of condemned (trapped, powerless) have d ≈ 0.92 (near-full target): collateral damage through relational loss. Potential future victims (statistical beneficiaries with no voice) have d ≈ 0.15 (partial beneficiary): they are rhetorically positioned as benefiting but have no agency in or compensation from the constraint. State authority (institutional, arbitrage) has d ≈ 0.08 (beneficiary): captures legitimacy and control with ready exit if the deterrence claim fails (can abandon capital punishment and maintain state authority). Crime victims have d ≈ 0.70 (near-full target): deployed as legitimacy sources but their actual losses are not addressed by future executions; they are instrumentalized and then disappointed. Criminal justice professionals (moderate, constrained) have d ≈ 0.55 (symmetric harm and benefit): genuine coordination benefits (clear procedures, legitimate framework) mixed with extraction (moral responsibility, career costs of doubt). The piton perspective (institutional, civilizational) has d ≈ 0.50 (degraded, ambiguous): the institutional form persists but its function is contested. The analytical false summit perspective has d ≈ 0.72 (observer position): sees the structure without the naturalizing frame.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel 'state killing authority.' The kernel is the persistent commitment to the state's right to execute citizens as a mechanism of governance and justice. Different readings of this kernel produce different constraints with different beneficiary/victim structures and different ε values. THIS reading (deterrence_instrument) justifies state killing through future crime prevention efficacy: the state kills condemned persons to prevent future murders by unrelated actors. SIBLING READING 1 (retributive_desert) justifies state killing through proportional punishment for past moral culpability: the state kills because the crime was grave enough to deserve death. SIBLING READING 2 (categorical_abolition) denies the kernel entirely: the state has no authority to kill citizens regardless of justification. The deterrence reading COEXISTS with the retributive reading — different parties hold each simultaneously, and neither logically rules out the other in a single framework (a party could hold both 'proportional retribution is just' and 'future deterrence is beneficial' without internal contradiction). The deterrence reading COEXISTS with the categorical abolition reading — abolitionists and deterrence believers hold incompatible positions, but neither ruling out the other's core premise as logically incoherent; the disagreement is empirical and normative, not logical. The deterrence reading INFLUENCES the categorical abolition reading by creating structural pressure: if deterrence is disproven, the abolition reading becomes more attractive because one major justification for state killing collapses. The deterrence reading INFLUENCES the retributive reading by changing the operative beneficiary set (future potential victims rather than the executed person's moral desert) and thus changing what counts as proportional or just.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by instantiating the deterrence reading as a coherent but contested position. The mandatrophy question 'is capital punishment a justified harm-prevention instrument or pure extraction?' is resolved BY the deterrence reading's structure, not answered externally. The reading declares: 'it is justified AS an instrument IF deterrence works at acceptable cost.' The embedded empirical uncertainty (omega_deterrence_empirical_contestation) is irreducible — we do not know whether deterrence actually works — so the constraint's classification cannot be finalized without resolving that omega. If deterrence is proven, extractiveness drops toward 0.45 (rational harm-prevention instrument, closer to Tangled Rope). If deterrence is disproven, extractiveness stays at 0.68 (pure extraction masked by false empirical claim, confirmed Snare). If deterrence remains contested/inconclusive, the theater ratio rises further and the constraint approaches Piton classification (performative maintenance of an empirically undermined doctrine). The false summit detection on Perspective 7 shows that the analytical reader risks naturalizing this empirical contingency as logical necessity, which is the mandatrophy's deepest trap: the reader mistakes a contestable claim about deterrence efficacy and acceptable cost for an immutable principle."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "retributive_desert",
+      "categorical_abolition"
+    ],
+    "dual_formulation_note": "The deterrence_instrument reading is one constraint within the state_killing_authority kernel family. The sibling constraints (retributive_desert and categorical_abolition) share the same contested authority structure but instantiate different beneficiary sets and different justificatory mechanisms. Deterrence grounds state killing in future-focused harm prevention (benefits flow to potential future victims and state authority). Retribution grounds it in past-focused proportional punishment (benefits flow to justice mechanism and deterrent effect is secondary). Abolition denies any benefit suffices to ground the authority. Each reading has its own constraint story with its own ε value, perspectives, and omegas. The network edges show how the readings influence each other's structural plausibility."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "rational_harm_prevention_authority",
+    "drift_state": {
+      "moment": "contemporary_empirical_contestation_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "retributive_desert",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "categorical_abolition",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "deterrence_empirical_efficacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "instrumental_life_cost_justified",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  }
+}

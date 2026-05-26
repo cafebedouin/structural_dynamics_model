@@ -1,0 +1,220 @@
+{
+  "header": {
+    "constraint_id": "dignitary_harm_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_dignitary_harm_reading",
+    "measurement_id_prefix": "dhr"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Dignitary Harm Reading of Speech Protection Boundary",
+    "topic_domain": "constitutional_law/free_speech",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "vulnerable_minorities",
+      "targets_of_systemic_harassment",
+      "epistemic_commons"
+    ],
+    "victims": [
+      "speakers_subject_to_restriction",
+      "marginally_political_expression"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Targeted Minority (Dignitary Harm Victim)",
+      "comment": "PERSPECTIVE 1: TARGETED MINORITY / DIGNITARY HARM VICTIM (SNARE) — Cannot exit the speech environment; bears cumulative harm from repeated bigoted speech. The constraint itself (restriction on hate speech) is experienced as minimal — the true extractive constraint is the prior speech ecosystem that constructs systemic oppression. This perspective experiences the dignitary harm reading as a necessary correction, not as suppression. However, the reading's classification logic places this agent in a powerless/trapped position relative to the speech restriction mechanism itself, creating a structural paradox resolved by omega variables."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Marginally Political Speaker",
+      "comment": "PERSPECTIVE 2: MARGINALLY POLITICAL SPEAKER / BORDERLINE CASE (SNARE) — Moderate power agents (local activists, community organizers, nonprofit staff, academics) face high suppression from the restriction because they operate near the boundary of protected speech. The restriction creates chilling effects: speakers self-censor to avoid misclassification. Exit is constrained but possible (relocate, change organizations, moderate rhetoric). The effective extraction is the self-censorship cost plus enforcement risk. This perspective sees pure extraction: minimal coordination benefit, maximum perceived suppression."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Enforcement Institution (Judiciary/Civil Rights Agencies)",
+      "comment": "PERSPECTIVE 3: ENFORCEMENT INSTITUTION / JUDICIARY (TANGLED ROPE) — Courts and civil rights agencies experience the dignitary harm reading as a genuine coordination mechanism (protecting access to public discourse for vulnerable minorities) layered with enforcement extraction (expanded institutional authority to adjudicate speech boundaries). The institution both benefits (expanded mandate, legitimacy from protecting vulnerable groups) and bears costs (difficult factual determinations, litigation risk, boundary-policing overhead). Constrained exit because the institution is obligated to enforce constitutional interpretation, but also has some agency in how aggressively to prosecute borderline cases."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Civil Rights Movement / Advocacy Coalition",
+      "comment": "PERSPECTIVE 4: CIVIL RIGHTS ADVOCACY COALITION (ROPE) — Organized advocates (civil rights organizations, anti-hate-speech coalitions, vulnerable minority coalitions) experience the dignitary harm reading as pure coordination: protecting epistemic access and social participation for members. The restriction mechanism is the beneficiary's own framing of what justice requires. High arbitrage (can shift strategies, scale enforcement pressure, litigate test cases). Minimal experienced extraction because the coordination function aligns with the beneficiary's core mission."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Dignitary Harm Frame)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / DIGNITARY HARM FRAME (TANGLED ROPE) — At civilizational scope, the analytical observer sees both genuine coordination (protection of vulnerable groups from epistemic injustice and systemic harassment) and extractive overhead (institutional authority to police speech boundaries, chilling effects on marginal political expression, potential weaponization of hate-speech law against minority speech). The reading cannot be reduced to pure coordination because enforcement creates asymmetric power concentration. Cannot be reduced to pure extraction because the coordination function (enabling epistemic participation by historically silenced groups) is structurally real."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "demonstrability_threshold_ambiguity",
+      "question": "What counts as 'demonstrable' dignitary harm, and can cumulative psychological harm (from repeated exposure to bigoted speech) be empirically distinguished from speculative offense?",
+      "resolution_mechanism": "Longitudinal studies measuring psychological outcomes (PTSD, depression, reduced civic participation) in targeted populations exposed to systematic hate speech; comparison with control groups; analysis of confounding factors (economic stress, police violence, institutional discrimination); expert testimony standards in civil rights litigation",
+      "impact": "If cumulative harm is demonstrable: restriction threshold is achievable and the constraint functions as tangled rope with legitimate coordination. If cumulative harm cannot be reliably measured: 'demonstrable' becomes a epistemic fiction, and the constraint drifts toward pure extraction (snare) from the speaker's perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Demonstrability of dignitary harm vs. speculative offense"
+    },
+    {
+      "id": "systemic_oppression_causation",
+      "question": "Does bigoted speech construct systemic oppression (it is constitutive of the exclusionary system), or does it merely express/reinforce pre-existing systemic oppression? Does restricting speech reduce the oppressive system's efficacy?",
+      "resolution_mechanism": "Comparative analysis of hate-speech restriction efficacy: does speech restriction correlate with reduced discriminatory practices in housing, employment, education, policing? Causal inference from quasi-experimental variation (jurisdictions with vs. without hate-speech law). Mechanism analysis: through what pathways would speech restriction reduce material oppression?",
+      "impact": "If speech is constitutive and restriction reduces material oppression: the dignitary harm reading's classification as tangled rope is justified (genuine coordination benefit). If speech merely reinforces pre-existing systems and restriction has limited material effect: the reading becomes more extractive (higher effective χ from speakers' perspective), approaching snare from speaker position.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether bigoted speech constructs or merely expresses systemic oppression"
+    },
+    {
+      "id": "minority_speech_weaponization_risk",
+      "question": "Does hate-speech law enforcement systematically target minority communities' political speech more than majority-group speech, even when formally neutral? Does the restriction mechanism function asymmetrically?",
+      "resolution_mechanism": "Comparative enforcement data: proportion of cases prosecuted against minority speakers vs. majority speakers for equivalent speech; analysis of prosecutorial discretion patterns; feedback from minority legal defense organizations; historical documentation of law being weaponized against civil rights movements",
+      "impact": "If enforcement is genuinely symmetric: the tangled rope classification holds — the restriction has both coordination and extraction elements but is not captured. If enforcement is systematically asymmetric: the constraint is actually a sophisticated snare disguised as civil rights protection, and the reading should be reclassified downward (higher χ from minority speaker perspective).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Asymmetric enforcement of hate-speech restriction targeting minority expression"
+    },
+    {
+      "id": "kernel_reading_contest",
+      "question": "This constraint is one reading of the speech_protection_boundary kernel. What distinguishes this reading from the near_absolutist_reading and the balancing_reading? Where do the disagreements locate?",
+      "resolution_mechanism": "Specification of this reading's foundational axiom (dignitary_harm_justifies_restriction) and comparison with axioms of sibling readings (near_absolutist: expression_never_justifies_suppression; balancing: context_determines_protection_level). Analysis of what empirical findings would favor each reading.",
+      "impact": "If dignitary harm claim is well-grounded: this reading's coherence is supported and institutional actors should adopt its framework. If dignitary harm claim is contested or empirically weak: the reading remains live as a policy choice but cannot claim to represent the kernel's true boundary.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Distinguishing axioms and empirical claims separating this reading from siblings"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "dhr_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45,
+      "id_override": "dhr_extract_t5"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52,
+      "id_override": "dhr_extract_t10"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32,
+      "id_override": "dhr_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.35,
+      "id_override": "dhr_theater_t5"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38,
+      "id_override": "dhr_theater_t10"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The dignitary harm reading asserts that speech causing demonstrable, non-speculative harm to vulnerable minorities and constructing systemic oppression may be constitutionally restricted. This reading instantiates one coherent interpretation of the speech protection boundary in constitutional law, coexisting with the near-absolutist reading (expression can almost never be suppressed, even if harmful) and the balancing reading (protection depends on context and competing interests). The dignitary harm reading is characterized by: (1) an expanded victim set (targets of bigoted speech, vulnerable minorities experiencing cumulative psychological and epistemic harm), (2) a requirement that harm be demonstrable rather than speculative (moving the boundary from intent to effects), and (3) recognition that speech functions as a mechanism of systemic oppression rather than merely expressing pre-existing hierarchies. The constraint is a tangled rope because the restriction mechanism contains both genuine coordination (enabling epistemic participation and social access for historically silenced groups) and extractive overhead (institutional authority to police speech boundaries, chilling effects on marginal political expression, enforcement asymmetries, potential weaponization). The theater ratio is low (0.38) because the restriction mechanism is functionally tied to its stated purpose (preventing demonstrable dignitary harm), unlike piton constraints where performance has decoupled from function. Base extractiveness has increased from 0.35 to 0.52 over the interval, reflecting both expanded enforcement (more cases prosecuted) and boundary creep (definitions of covered speech expanding beyond original intent).",
+    "key_agents": [
+      "Vulnerable minorities and targets of systemic harassment: Primary beneficiaries (institutional/arbitrage) — experience the restriction as enabling epistemic access and protecting from cumulative psychological harm",
+      "Marginally political speakers and activist communities: Primary victims (moderate/constrained) — face chilling effects and self-censorship costs; borderline cases bear high enforcement risk",
+      "Judiciary and civil rights enforcement agencies: Institutional enforcer (institutional/constrained) — experience both coordination function (protecting access) and extraction benefit (expanded authority); constrained because bound by constitutional interpretation",
+      "Civil rights advocacy coalition: Organized beneficiary (institutional/arbitrage) — frames the restriction as pure coordination; has strategic agency in enforcement intensity and test case selection",
+      "Analytical observer at civilizational scope: Sees both genuine coordination and extractive overhead without reducing to either"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The restriction mechanism creates genuine coordination benefits (protecting epistemic access and reducing systemic exclusion) but also imposes significant overhead. Speakers face chilling effects, borderline cases face prosecution risk, and institutional authority concentrates in enforcement agencies. The extractiveness reflects both the speaker's experienced cost and the institutional beneficiary's authority gain. Rising from 0.35 to 0.52 indicates increasing enforcement intensity and boundary creep. Suppression (0.58): Moderate-high. Significant barriers to expressing politically marginal or community-specific discourse exist, creating self-censorship. However, suppression is not total — many political speech categories remain protected. The 0.58 value reflects that the restriction does suppress expression categories that would be protected under the near-absolutist reading, but less comprehensively than historical censorship regimes. Theater ratio (0.38): Low. The restriction mechanism has a clear functional purpose (preventing demonstrable dignitary harm from bigoted speech) and the institutional machinery is tied to that purpose rather than to performative ritual. This distinguishes the dignitary harm reading from the balancing reading, which may produce higher theater (courts performing 'balancing' without clear criteria).",
+    "perspectival_gap": "The primary gap is between the beneficiary (civil rights coalition, vulnerable minorities) and the marginal speaker. The beneficiary sees the restriction as pure coordination — enabling participation in a previously exclusionary discourse. The marginal speaker sees snare or extraction — facing chilling effects and self-censorship costs without clear path to exit. The enforcement institution occupies the middle ground (tangled rope) — experiencing both coordination function (protecting access) and extraction benefit (expanded authority). The analytical observer cannot reduce this to a single type because the perspectives are not just disagreements about the same constraint but reflect genuinely different structural positions: beneficiaries have high arbitrage (can shift enforcement strategies, scale pressure), speakers have low arbitrage (cannot avoid the speech environment). The perspectival gap reveals that the dignitary harm reading's classification as tangled rope is not neutral — it reflects an analytical position that weights both the coordination function and the extraction overhead equally, whereas beneficiary and speaker perspectives weight them asymmetrically.",
+    "directionality_logic": "Directionality (d) is derived from structural position relative to the speech restriction mechanism. Vulnerable minorities/beneficiaries: low d (0.15-0.25) because they benefit from the restriction and have arbitrage options (can organize, litigate test cases, shift enforcement pressure). Marginal speakers/victims: high d (0.80-0.90) because they bear costs from the restriction and have constrained exit options (cannot avoid the speech environment, face self-censorship). Enforcement institutions: moderate d (0.50-0.55) because they both benefit (expanded authority) and bear costs (boundary-policing overhead), and have constrained but meaningful exit options (can interpret law narrowly or broadly). The sigmoid function f(d) converts these d values into experienced extractiveness multipliers. Speaker's experienced χ is amplified by the sigmoid because d is high; beneficiary's χ is dampened or inverted because d is low. The institutional enforcer's χ sits in the middle because d is moderate, reflecting tangled rope classification.",
+    "mandatrophy_analysis": "This constraint avoids mandatrophy through explicit recognition of its hybrid character. The dignitary harm reading is not claiming to be pure coordination (it acknowledges extraction overhead) nor pure extraction (it acknowledges genuine coordination function). The tangled rope classification captures this: both the coordination benefit (enabling epistemic access for vulnerable groups) and the extraction overhead (institutional authority to police speech boundaries, chilling effects) are structurally real. The mandatrophy that could arise would be if this reading tried to claim pure coordination (denying the chilling effects and enforcement asymmetries) or tried to claim pure extraction (denying the genuine harm reduction and epistemic benefit). The reading avoids this by declaring beneficiaries (those protected from dignitary harm) AND victims (marginally political speakers facing chilling effects) in the same constraint. This forces recognition of the hybrid structure. The omega variables document empirical uncertainties about whether the coordination function justifies the extraction overhead — whether demonstrable harm can be reliably measured, whether speech actually constructs (rather than merely expresses) systemic oppression, and whether enforcement is asymmetric — but these uncertainties do not collapse the classification. They refine it. The reading is a tangled rope on its current evidence; it could be reclassified if omega resolutions shift the empirical ground.",
+    "kernel_context": "This constraint is one reading of the speech_protection_boundary kernel, which is a formalized, contested constitutional commitment ground in the First Amendment. The dignitary_harm_reading instantiates a specific interpretation: that demonstrable, non-speculative harm to vulnerable minorities' epistemic access and participation can justify restricting bigoted speech. The near_absolutist_reading holds that expression can almost never be suppressed, even if harmful (core axiom: expression_never_justifies_suppression). The balancing_reading holds that protection depends on context and competing interests without privileging dignity harms (core axiom: all_interests_weigh_equally_in_context). These readings coexist_with each other because they reflect different foundational commitments held by different judicial coalitions and political movements. None logically forecloses the others within a single framework — they represent genuinely live policy choices. The dignitary harm reading has gained institutional strength since the 1980s through civil rights doctrine, hate crime law expansion, and international human rights framing, but remains contested against both the near-absolutist and balancing readings. The kernel itself (the speech protection boundary) is fixed as text ('Congress shall make no law...abridging the freedom of speech') but is under-interpreted — the text does not specify what counts as a justifiable limitation. Different readings specify the boundary differently."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "near_absolutist_reading",
+      "balancing_reading"
+    ],
+    "dual_formulation_note": "The dignitary harm reading is part of a constraint family with the near_absolutist_reading and the balancing_reading. All three are readings of the same kernel (speech_protection_boundary) with different axioms and different classifications. The dignitary harm reading claims that demonstrable dignitary harm justifies restriction; the near_absolutist claims expression is nearly inviolable; the balancing reading claims context determines protection level. These readings coexist as live interpretations. This file documents ONLY the dignitary harm reading as a clean, ε-invariant constraint. The other readings are separate files linked via affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.82
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "near_absolutist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "balancing_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "dignitary_harm_justifies_restriction",
+        "role": "foundational",
+        "status": "holdable"
+      },
+      {
+        "atom": "systemic_oppression_constructed_by_speech",
+        "role": "foundational",
+        "status": "holdable"
+      }
+    ],
+    "reference_frame": "equal_epistemic_access_framework",
+    "drift_state": {
+      "moment": "contemporary_polarization_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

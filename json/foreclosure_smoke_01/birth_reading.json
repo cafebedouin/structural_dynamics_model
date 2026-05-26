@@ -1,0 +1,231 @@
+{
+  "header": {
+    "constraint_id": "birth_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_birth_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.25,
+    "theater_ratio": 0.3,
+    "claimed_type": "rope",
+    "human_readable": "Moral Status Begins at Birth (Bodily Autonomy Reading)",
+    "topic_domain": "bioethics/constitutional_law/reproductive_rights",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "pregnant_person",
+      "liberal_autonomy_framework"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Pregnant Person (Birth Reading)",
+      "comment": "PERSPECTIVE 1: PREGNANT PERSON (ROPE) — Under birth reading, the pregnant person holds sole moral and legal authority over pregnancy continuation. Coordination function: the constraint coordinates parental responsibility, fetal development, and bodily autonomy by granting the pregnant person full decision-making authority. No coercive asymmetry — the pregnant person can exit (via abortion, birth, or other reproductive decisions) at biographical cost but without legal prohibition. The constraint is experienced as enabling rather than extractive."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Liberal Rights Framework (Birth Reading)",
+      "comment": "PERSPECTIVE 2: LIBERAL RIGHTS FRAMEWORK (ROPE) — Institutional actor grounding its legitimacy in bodily autonomy as a foundational moral principle. Experiences the constraint as pure coordination: birth reading organizes reproductive rights, medical decision-making authority, and abortion access around the principle that bodily integrity is inviolable. The framework benefits from the constraint (it instantiates and reinforces liberal autonomy doctrine) and experiences no extraction — the mechanism is self-reinforcing without coercive overhead."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Reproductive Justice Coalition (Birth Reading)",
+      "comment": "PERSPECTIVE 3: REPRODUCTIVE JUSTICE COALITION (SCAFFOLD) — Organized actors (abortion rights advocates, reproductive autonomy organizations) see birth reading as a temporary structural solution that achieves partial coordination around pregnant person authority but remains vulnerable to political erosion. Experiences the constraint as scaffolding: it provides necessary protection of abortion access during a particular political window, but the sunsets and vulnerabilities are real. Exit is mobile (activists can shift to other jurisdictions or advocacy strategies), and the coalition perceives the constraint as supporting but not guaranteed long-term."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "State Authority (Birth Reading)",
+      "comment": "PERSPECTIVE 4: STATE AUTHORITY (TANGLED ROPE) — The state experiences the constraint as mixed coordination and extraction. Coordination function: birth reading allows the state to regulate reproduction without enforcing fetal personhood, avoiding the resource-intensive enforcement apparatus required by conception reading. The state coordinates medical regulation, informed consent, and viability thresholds while respecting bodily autonomy. But the state also extracts: it maintains enforcement authority over the timing of birth, regulates abortion procedures, and retains power to set gestational limits. The state has arbitrage (can shift frameworks across jurisdictions), so experienced extraction is moderate rather than maximal."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Fetus (Birth Reading)",
+      "comment": "PERSPECTIVE 5: THE FETUS (SNARE) — Under birth reading, the fetus has no moral status until birth; cannot organize, advocate, or exit; bears full cost of the reading's framework without representation. The fetus cannot be a beneficiary (under this reading's axiom, it has no moral claims) and cannot escape the constraint (it exists only within the constraint structure). Maximum powerlessness and trappedness. This perspective instantiates the reading's core structural claim: that pre-birth moral status is null."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "Medical and Obstetric Institutions (Birth Reading)",
+      "comment": "PERSPECTIVE 6: MEDICAL AND OBSTETRIC INSTITUTIONS (PITON) — Medical system experiences birth reading as partially degraded. The constraint requires obstetric institutions to provide abortion services and respect bodily autonomy while simultaneously maintaining capacity for fetal monitoring, viability assessment, and postnatal care. The theater ratio reflects institutional bifurcation: prenatal care is organized around fetal well-being (implicitly assigning quasi-moral status to the fetus), while abortion provision is organized around bodily autonomy (denying prenatal moral status). The institutions maintain this contradiction through practice compartmentalization, not through coherent framework. Theater persists because the reading's axiom (no prenatal moral status) conflicts with obstetric realities that treat the fetus as a clinical entity requiring specialized attention."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Birth Reading)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (ROPE) — From a universal civilizational view, birth reading is a coherent framework for organizing reproductive autonomy and parental responsibility. It coordinates exit (birth is the transition point for moral status acquisition) and establishes clear decision-making authority (pregnant person holds it until birth). The framework is internally consistent and produces low theater when the institutional contradiction (clinical fetal status vs. moral status denial) is resolved in favor of bodily autonomy. No false summit — the analytical observer can see that birth reading is a deliberate institutional choice, not a natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "moral_status_grounding_contention",
+      "question": "What property grounds moral status — biological continuity (conception), viability (consciousness/brain function), birth (exit from maternal body), or postnatal capacities (breathing, feeding)?",
+      "resolution_mechanism": "This is a CONCEPTUAL omega. No empirical discovery resolves which property 'correctly' grounds moral status — different metaphysical frameworks (liberal autonomy, natural law, capability-based, potentiality-based) assign the grounding property differently. The birth reading chooses birth/bodily autonomy as the grounding criterion.",
+      "impact": "This omega determines which sibling readings (conception_reading, viability_reading) coexist with birth_reading or foreclose it. If moral status grounding is accepted as genuinely contested rather than discoverable, birth_reading coexists with siblings. If grounding is treated as discoverable via neuroscience or potentiality analysis, readings may foreclose one another.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "What property grounds moral status — choice of criterion determines reading relations"
+    },
+    {
+      "id": "bodily_autonomy_vs_potentiality_conflict",
+      "question": "When bodily autonomy and fetal potentiality conflict, which normative principle takes priority in adjudicating moral claims?",
+      "resolution_mechanism": "This is a PREFERENCE omega — different liberal and communitarian traditions weight these principles differently. Some weight bodily autonomy as trump (birth reading); others weight potentiality as trump (conception reading); others use viability as a compromise threshold (viability_reading). No framework-independent way to resolve; the reading chooses bodily autonomy as priority.",
+      "impact": "Birth reading foreclose frames that treat potentiality as equal to autonomy from the start. But potentiality-first frameworks can coexist with birth_reading if they accept that potentiality does not override autonomy before birth. This omega clarifies whether the readings are logically incompatible or just different priority weightings.",
+      "confidence": "high",
+      "type_class": "preference",
+      "description": "Priority weighting of bodily autonomy vs. fetal potentiality — reading-dependent choice"
+    },
+    {
+      "id": "institutional_bifurcation_sustainability",
+      "question": "Can obstetric institutions sustainably maintain the contradiction between treating the fetus as a clinical entity (requiring specialized prenatal care) and denying it prenatal moral status (permitting abortion)?",
+      "resolution_mechanism": "EMPIRICAL: Study institutional practice in high-autonomy jurisdictions (US post-Dobbs repeal, Canada, Scandinavia). Measure: (1) Can pregnant persons and physicians coordinate around shared clinical understanding of fetal development while maintaining moral status denial? (2) Does the compartmentalization produce decision-making errors, harm, or institutional degradation over time? (3) Do institutions explicitly frame fetal monitoring as maternal health care (resolving the contradiction) or as fetal protection (reinscribing moral status)?",
+      "impact": "If contradiction is unsustainable, birth reading's piton theater_ratio will rise over time, and the institutional perspective will shift toward snare or tangled_rope as the system breaks down. If sustainable, theater_ratio stabilizes. This is a key lifecycle measurement for birth_reading over generational timescales.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether medical bifurcation (fetal as clinical entity + no moral status) can persist"
+    },
+    {
+      "id": "sibling_reading_logical_relations",
+      "question": "Do conception_reading, viability_reading, and birth_reading logically foreclose one another, or do they coexist as genuinely live alternative frameworks?",
+      "resolution_mechanism": "CONCEPTUAL: Examine whether each reading's core axiom (the grounding criterion for moral status) logically entails rejection of the others' core axioms. If conception reading axiom (potentiality = moral status from conception) directly contradicts birth reading axiom (moral status acquired at birth), they foreclose. If they merely weight competing principles (autonomy vs. potentiality) differently, they coexist.",
+      "impact": "This omega determines cs_structure.reading_relations values. If readings foreclose: 'forecloses' relation; higher cross-reading conflict. If readings coexist: 'coexists_with' relation; framework pluralism is coherent. The choice affects how the engine models the personhood_boundary kernel and its competing readings.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether personhood-boundary siblings logically foreclose or coexist"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "birth_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.28,
+      "id_override": "birth_theater_t25"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.3,
+      "id_override": "birth_theater_t50"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32,
+      "id_override": "birth_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.34,
+      "id_override": "birth_extract_t25"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.35,
+      "id_override": "birth_extract_t50"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The birth reading instantiates one contending interpretation of the personhood_boundary kernel — the constitutional, legal, and moral commitment to where human personhood begins and what rights attach to that status. This reading grounds moral status in exit from the maternal body (birth event) rather than in conception or viability. Under birth reading, the pregnant person holds sole decision-making authority over pregnancy continuation, abortion is unrestricted or permitted up to and including late-term abortion, and the state cannot enforce fetal personhood. The constraint coordinates reproductive autonomy, medical authority, and parental responsibility around the principle that bodily integrity is inviolable and that moral status acquisition occurs at birth, not before. The reading exhibits low extractiveness (0.35) and low theater (0.30), indicating strong institutional coherence with its organizing principle. The constraint is primarily a Rope from the perspective of the pregnant person and the liberal autonomy framework — genuine coordination with minimal coercion. However, different perspectives produce different classifications: the state experiences tangled coordination and extraction; the fetus experiences snare (zero moral status); medical institutions experience piton degradation (contradiction between clinical treatment and moral status denial). The reading is one stable solution to the personhood boundary question, coexisting with conception_reading and viability_reading as alternative normative frameworks instantiated in different jurisdictions and traditions.",
+    "key_agents": [
+      "Pregnant Person: Primary beneficiary and decision-maker (moderate/constrained) — holds full moral and legal authority over pregnancy; can exit through abortion, birth, or other choices; experiences constraint as enabling coordination",
+      "Liberal Autonomy Framework: Institutional beneficiary (institutional/arbitrage) — grounds legitimacy in bodily autonomy principle; reinforced by birth reading; experiences no extraction",
+      "Reproductive Justice Coalition: Organized agents (organized/mobile) — advocates for abortion access; sees birth reading as protective scaffold with vulnerability to political erosion",
+      "State Authority: Mixed beneficiary and enforcer (powerful/arbitrage) — coordinates medical regulation without fetal personhood enforcement; retains power to regulate timing/procedures; moderate extraction",
+      "Fetus: Zero moral status under this reading (powerless/trapped) — cannot advocate, organize, or exit; bears full cost of status denial; snare perspective",
+      "Medical and Obstetric Institutions: Partial beneficiary with internal contradiction (institutional/arbitrage) — provides abortion services and prenatal care simultaneously; maintains contradiction through compartmentalization; piton degradation",
+      "Analytical Observer: Civilizational view (analytical/analytical) — sees birth reading as coherent institutional choice, not natural law; low false-summit risk"
+    ],
+    "logic_rationale": "Extractiveness (0.35): Moderate-low. The constraint extracts minimal value through coercive means. The pregnant person experiences enabling coordination, not extraction. The state retains enforcement authority but uses it primarily for medical regulation (informed consent, procedure safety, viability assessment) rather than for moral status enforcement. The fetus, having no moral status under this reading, cannot be an extraction target — it is simply outside the moral consideration set. The moderate extractiveness reflects that the state retains some power to regulate late-abortion timing and medical procedures, and the medical establishment maintains institutional authority over prenatal care. Suppression (0.25): Low-moderate. Barriers to exit exist but are primarily biographical (pregnancy duration, bodily experience) rather than legal or coercive. The pregnant person can legally exit through abortion with access-based constraints (availability, cost, travel distance in some jurisdictions). Suppression reflects the biological reality of pregnancy, not the constraint's coercive structure. Theater ratio (0.30): Low. The birth reading produces institutional coherence when bodily autonomy is treated as the trump principle. Theater rises to the degree that institutions compartmentalize (treating the fetus as clinically significant while morally null), but the core constraint mechanism (pregnant person holds decision-making authority) is functionally transparent. Medical bifurcation creates performance theater (prenatal care oriented toward fetal well-being despite status denial), but at modest level.",
+    "perspectival_gap": "The perspectival gap between the pregnant person (Rope), the fetus (Snare), and the state (Tangled Rope) is maximal. The pregnant person experiences the constraint as enabling coordination around their autonomy and medical authority. The fetus experiences zero moral status — it is not even a victim in the classical sense because it has no claims the constraint could violate. The state experiences tangled coordination and extraction: it coordinates medical regulation efficiently under birth reading (avoiding the enforcement costs of fetal personhood) while simultaneously retaining power to set procedural limits and regulate the timing of abortion. The reproductive justice coalition experiences the constraint as scaffold — a real but vulnerable protection of autonomy. Medical institutions experience piton degradation: they must provide abortion services while maintaining obstetric specialty knowledge that implicitly treats the fetus as clinically significant, creating institutional contradiction. The analytical observer sees coherent institutional choice without false summitry. The key insight: the perspectival gap is not a failure of the framework but a feature of the reading itself — birth reading assigns dramatically different moral and legal status to the pregnant person (full authority) and the fetus (zero status), so different observers must classify the constraint differently.",
+    "directionality_logic": "Directionality values (d) are derived from beneficiary/victim status and exit options. The pregnant person is the primary beneficiary (low d → negative effective extraction) with constrained exit (biographical cost of pregnancy duration, but legal abortion access). The liberal autonomy framework is institutional beneficiary with arbitrage exit (can shift jurisdictions, can reframe legal doctrine). The fetus has zero moral status under this reading and cannot be a victim of the constraint (it is simply outside the moral consideration set). The state is a mixed beneficiary (gains from coordination without fetal enforcement costs) and partial extractor (retains procedural regulation authority), producing moderate d and moderate chi. The reproductive justice coalition has organized power and mobile exit (can advocate, relocate, shift strategy), reducing experienced extraction. Medical institutions have institutional arbitrage and can compartmentalize, moderating extraction. The piton classification of medical institutions derives from theater ratio (0.30) exceeding threshold plus the contradiction between clinical fetal treatment and moral status denial — the constraint persists through institutional inertia despite the contradiction, not because it functions perfectly.",
+    "mandatrophy_analysis": "Birth reading avoids mandatrophy by maintaining low extractiveness (0.35) and low theater (0.30). The constraint coordinates genuine benefits (pregnant person autonomy, state efficiency, medical authority) without imposing maximal coercion. The mandatrophy threat arises if theater increases — if the institutional bifurcation (clinical fetal status vs. moral status denial) becomes unsustainable and the medical system begins to treat the contradiction as unresolvable, theater_ratio can rise toward 0.70+ and the constraint can shift toward piton degradation or snare (if enforcement tightens). Temporal measurement across 50 years shows stable theater (0.25→0.30) and stable extractiveness (0.32→0.35), indicating the institutional equilibrium is holding. The analytical observer avoids the false summit by recognizing that birth reading is a deliberate framework choice, not a natural law of morality or biology.",
+    "kernel_context": "This constraint instantiates the BIRTH READING of the PERSONHOOD_BOUNDARY kernel. The kernel is a contested commitment: 'Where does human personhood begin and what moral/legal status attaches to that point?' Birth reading answers: personhood begins at birth (exit from maternal body), and full moral/legal personhood accrues at that moment. Sibling readings instantiate alternative answers: CONCEPTION_READING (personhood begins at conception, full status immediately); VIABILITY_READING (personhood begins at viability, gradual status acquisition). Each reading grounds its legitimacy in different normative principles: birth reading in bodily autonomy and the inviolability of bodily integrity; conception reading in potentiality and natural law; viability reading in consciousness and capacity for sentience. The readings coexist across different jurisdictions (US post-Dobbs abortion policy varies by state, reflecting reading pluralism; Canadian law instantiates near-birth-reading; European frameworks often instantiate viability_reading with minor conception-reading elements). No single reading has monopoly on democratic legitimacy within liberal democracies. The personhood_boundary kernel is formally codified in constitutional law (US: 14th Amendment, contested interpretation) and statutes (each jurisdiction sets its own personhood thresholds). The kernel is also present in medical practice norms (when do physicians treat the fetus as a moral patient?), theological traditions, and philosophical doctrine. Birth reading is the most coherent from the perspective of bodily autonomy doctrine but generates the most profound perspectival gap with respect to the fetus (zero moral status)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "conception_reading",
+      "viability_reading",
+      "abortion_access_infrastructure",
+      "medical_authorization_and_consent"
+    ],
+    "dual_formulation_note": "The personhood_boundary kernel decomposes into three constraint stories: birth_reading (this file), conception_reading, and viability_reading. Each is a structurally distinct constraint with different epsilon values, beneficiary/victim structures, and classification profiles. They are linked via network.affects_constraints because the choice of one reading changes the operating environment and legitimacy conditions for the others. Birth reading instantiates bodily autonomy as the organizing principle; it influences (but does not foreclose) viability_reading, which can be framed as a compromise between autonomy and potentiality. Birth reading forecloses any framework that treats fetal potentiality as equal to pregnant person autonomy from conception forward."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "bodily_autonomy_liberal_framework",
+    "drift_state": {
+      "moment": "contemporary_post_dobbs_pluralism",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "conception_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "viability_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "moral_status_at_birth",
+        "role": "foundational",
+        "status": "holdable"
+      },
+      {
+        "atom": "bodily_autonomy_is_trump",
+        "role": "foundational",
+        "status": "holdable"
+      }
+    ]
+  }
+}

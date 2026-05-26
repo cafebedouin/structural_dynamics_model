@@ -1,0 +1,256 @@
+{
+  "header": {
+    "constraint_id": "perpetual_copyright_snare",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "perpcopy"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Perpetual Copyright as Institutional Extraction Mechanism",
+    "topic_domain": "legal_history/intellectual_property/institutional_economics",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "book_publishers",
+      "copyright_heirs",
+      "institutional_monopolists"
+    ],
+    "victims": [
+      "derivative_creators",
+      "literary_public_domain",
+      "future_knowledge_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Derivative Creator (Trapped in Perpetuity)"
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Public Domain (Epistemic Victim)"
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Publisher Monopolist (Net Beneficiary)"
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Living Author (Mixed Coordination and Extraction)"
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Copyright Regime (Institutionalized Theater)"
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The False Natural Law View (Property as Inherent Right)"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "statutory_vs_common_law_perpetuity",
+      "question": "Was the Statute of Anne (1710) creating a new statutory monopoly or recognizing a pre-existing common-law right to perpetual copyright?",
+      "resolution_mechanism": "Historical documentary analysis: did pre-Anne licensing practices treat copyright as perpetual or term-limited? What did legal scholars immediately before 1710 claim about copyright ownership? Did the Statute itself present copyright as a novel creation or as codification of existing practice?",
+      "impact": "If statutory creation: copyright is a contingent institutional choice, and perpetuity is itself a contingent design choice (not inherent). If common-law recognition: the constraint operates from natural law and has no identified beneficiaries (falsifies FSM). The Statute's own framing is interpretively contested — Stationers argued pre-existing right; reformers argued for new author protections — suggesting the ambiguity IS the constraint's generative mechanism.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Anne statute created or recognized perpetual copyright"
+    },
+    {
+      "id": "perpetuity_as_design_choice",
+      "question": "Is perpetual copyright duration a necessary feature of copyright as an institution, or a contingent choice that could be reversed without destroying copyright's coordination function?",
+      "resolution_mechanism": "Comparative analysis: do jurisdictions with term-limited copyright (most nations now use finite terms after TRIPS harmonization) show measurably lower creation rates, shorter creative production cycles, or reduced author compensation relative to perpetual-copyright regimes? Do creators in finite-term systems produce less? Do publishers invest less? Cross-national empirical data on creative output, author income, and publisher profitability with finite vs perpetual terms.",
+      "impact": "If perpetuity is necessary: copyright's extractiveness is lower (some extraction is inherent to the coordination function). If perpetuity is contingent: copyright is a snare masquerading as necessary coordination — extractiveness increases, and alternative institutional designs become visible.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether perpetuity is necessary or contingent feature of copyright"
+    },
+    {
+      "id": "beneficiary_capture_of_reform",
+      "question": "Why have copyright term extensions (Sonny Bono Act, TRIPS term harmonization) consistently expanded duration toward perpetuity rather than moving toward shorter terms, despite economic evidence that shorter terms reduce rent-seeking without reducing creation?",
+      "resolution_mechanism": "Historical legislative analysis: who lobbied for copyright extensions? Who benefits from each extension? Did creator organizations support perpetual copyright, or did publisher/estate interests drive extensions while framing them as author protection? What do creators actually report wanting vs. what legislators enacted?",
+      "impact": "If beneficiary capture: the constraint's suppression and extraction are actively maintained and expanded by institutional forces, confirming snare classification. If creator preference: copyright extensions represent author-protective coordination, shifting classification toward rope or tangled rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether copyright extensions serve creator protection or beneficiary extraction"
+    },
+    {
+      "id": "public_domain_scarcity_mechanism",
+      "question": "Is the public domain shrinking because copyright terms are extended indefinitely, or is perpetual copyright justified by actual ongoing creation and innovation that requires the incentive?",
+      "resolution_mechanism": "Empirical measurement: What fraction of current copyrighted works (those still under copyright as of 2025) are actively being exploited commercially vs. locked in archives or abandoned by rightholders? For the abandoned works, does copyright duration predict abandonment probability? If most historical works are abandoned but locked by copyright, that indicates extraction without coordination value.",
+      "impact": "If public domain shrinking due to term extensions on abandoned works: the constraint is pure extraction (snare confirmed). If most copyrighted works are actively managed and generating value: the constraint is mixed coordination and extraction (tangled rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether copyright duration correlates with active exploitation or abandonment"
+    },
+    {
+      "id": "derivative_creation_suppression_magnitude",
+      "question": "How many potentially valuable derivative works (sequels, adaptations, remixes, critical editions, scholarly commentary) are never created because copyright licensing is prohibitively expensive or refused?",
+      "resolution_mechanism": "Behavioral research: survey authors and creators about copyright-prevented projects. Legal analysis: compare licensing denial rates across publishers and time periods. Historical counterfactual: what adaptations and remixes would have flourished under shorter copyright terms or broader fair use? Evidence from jurisdictions with shorter terms or broader fair use provisions.",
+      "impact": "If licensing suppression is high: suppression gate is confirmed (≥0.60). If suppression is low: the trapped agent's experience is overstated, and snare classification weakens.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Magnitude of copyright-prevented derivative creation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "The perpetual copyright snare traces from the Statute of Anne (1710) through its metamorphosis into modern copyright regimes. The statute's genius was to reframe copyright from a Stationers' Company monopoly into an author's right — a shift that appeared to liberate creators but established the logical structure that perpetual control could be justified. Over three centuries, successive term extensions (Sonny Bono Act, TRIPS harmonization) have converted copyright from a term-limited coordination mechanism into a functional perpetuity. The constraint exhibits the full asymmetry of a snare: derivative creators cannot access works to build new creations, the public domain (the epistemic commons) cannot organize to resist enclosure, publishers extract monopoly rents without increasing total creation, and the system maintains itself through legal theater (copyright registries, licensing bureaus, term extension legislation) rather than functional necessity. The Statute of Anne's ambiguity between statutory monopoly and common-law right — never fully resolved by Donaldson v. Beckett — created the interpretive space within which perpetuity became thinkable as an extension of property rights. That ambiguity remains generative: the false natural law view (copyright as inherent property right) depends on treating the statutory choice as inevitable rather than contingent.",
+    "key_agents": [
+      "Derivative Creators: Primary victims (powerless/trapped) — cannot build on existing works without licensing; exit is structural impossibility",
+      "Public Domain / Epistemic Commons: Primary victim (powerless/trapped) — abstract collective that cannot organize; conceptualized as shrinking rather than growing",
+      "Publishers and Estate Holders: Primary beneficiaries (institutional/arbitrage) — extract monopoly rents through licensing control and term extensions",
+      "Living Authors: Secondary stakeholders (powerful/constrained) — benefit from copyright protection but suppressed by licensing costs, litigation risk, and publisher power imbalance",
+      "Copyright Regime / Institutional Machinery: Secondary institutional actor (institutional/arbitrage) — perpetuates itself through legal theater; beneficiaries of status quo renewal",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent institutional choice as inevitable property right"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint exhibits asymmetric extraction across time horizons. Derivative creators face permanent suppression; future generations inherit locked-in copyright terms. Publishers capture disproportionate revenue relative to author compensation. The extractiveness value accounts for: (1) monopoly pricing on licenses, (2) forced exclusion of derivative creators, (3) zero-cost extension of copyright terms on already-published works, (4) institutional lock-in via international treaties. The trajectory from 0.35 (1710, term-limited coordination) to 0.68 (2025, effective perpetuity) reflects accumulating extraction as the system matures. Suppression (0.72): Very high. Multiple barriers prevent derivative creators and the public from accessing locked works: (1) legal prohibition (copyright law itself), (2) licensing monopoly (single rightsholder controls access), (3) cost barriers (licensing fees often prohibitive), (4) enforcement threat (litigation risk for unauthorized use), (5) epistemic barriers (orphaned works have no identifiable rightsholder; public has no mechanism to challenge copyright claims). Suppression is not partial — it is structural impossibility for the trapped agent. Theater ratio (0.58): Moderate-high. Contemporary copyright machinery (registries, licensing bureaus, term-extension legislation) is substantially performative. The work is already created; copyright does not make creation happen. Legislation extending copyright terms for already-published works is pure rent-seeking theater, not incentive-generation. The ratio was lower in 1710 (0.35) when registration and licensing courts handled substantive legal determination; it has risen as actual enforcement becomes dispersed and symbolic. Claimed type (Snare): Confirmed by victim presence (derivative creators, public domain), high extraction (0.68), and high suppression (0.72). The constraint exhibits all snare markers: existence depends on suppressing alternatives (creative reuse), minimal coordination benefit (the work is already created), and high coercion (legal prohibition, licensing monopoly, litigation risk). The machinery persists because it extracts value, not because it enables creation.",
+    "perspectival_gap": "This constraint demonstrates the full range of perspectival divergence. The publisher sees Rope — they experience copyright as fair coordination of author compensation and distribution. The living author sees Tangled Rope — they benefit from protection but are suppressed by licensing costs and publisher power. The derivative creator sees Snare — they are trapped with no escape from copyright prohibition. The public domain sees Snare — it cannot organize or exit; it is the victim of enclosure. The institutional regime sees itself as Piton — it maintains elaborate machinery (registries, licensing bureaus) through inertia rather than function. The analytical observer risks seeing Mountain (natural law) — framing perpetual copyright as an inevitable consequence of property rights — but the false summit detector reveals the frame as naturalization of a contingent institutional choice. The perspectival gaps reveal that all six types coexist in the same structure: which type you see depends on your structural position (beneficiary vs. victim), time horizon (immediate license decision vs. civilizational knowledge commons), and exit options (arbitrage vs. trapped). The snare classification is the deepest truth — it is the perspective of the powerless trapped agent. That this perspective is rational and not merely negative is the diagnostic signal that the constraint is genuinely extractive.",
+    "directionality_logic": "The perpetual copyright constraint drives directionality (d) through beneficiary/victim declarations and exit-option differentiation. Publishers and estate holders are beneficiaries with high arbitrage capacity — they can forum-shop, license strategically, and exit copyright regimes that don't serve them by relocating to stronger jurisdictions. Their d value is low (~0.15-0.25), producing negative or minimal effective extraction (chi). Derivative creators are victims with trapped exit — they cannot access locked works without violating law; they cannot organize to change copyright law; they cannot create derivative works as an alternative path to income. Their d value is high (~0.90), producing maximum experienced extraction (chi). Living authors occupy the intermediate position (d ~0.55-0.65) — they benefit from copyright protection but are suppressed by licensing monopolies and locked into unfavorable publishing relationships. The public domain (epistemic commons) is a powerless victim with zero exit options (trapped at d ~0.95) — it cannot organize, cannot lobby, cannot escape enclosure. The directionality cascade reveals that the constraint's extractiveness is asymmetric: it is minimal for beneficiaries (who actively deploy it) and maximum for victims (who have no choice). This asymmetry is the signature of a snare.",
+    "mandatrophy_analysis": "The perpetual copyright snare resolves the mandatrophy (tension between multiple valid classifications from different perspectives) by demonstrating that the perspectives reveal different structural aspects of a single mechanism. The publisher's 'Rope' perspective shows the coordination function (copyright does solve the problem of compensating authors and distributing works). The derivative creator's 'Snare' perspective shows the extraction function (copyright prevents adaptive creation and locks in monopoly rents). The living author's 'Tangled Rope' perspective shows the mixture. The institutional regime's 'Piton' perspective shows the degraded machinery (theater ratio rising, function declining). The analytical observer's 'Mountain' perspective shows the naturalization trap (framing contingent institutional choice as inevitable property right). No single type is correct; all are structural facts from their respective positions. The mandatrophy is resolved by recognizing that the constraint is BOTH coordination (authors need incentives; readers benefit from published works) AND extraction (perpetual duration prevents derivative creation; monopoly rents exceed incentive necessity; institutional machinery persists through inertia). The snare classification is dominant because the extraction mechanism (suppression of derivative creators) would not exist without the beneficiaries enforcing it — it is not an accidental side effect but the operational payoff that sustains the system. Living authors and publishers accept perpetual copyright despite its social cost because perpetual copyright transfers value from derivative creators (who cannot exit) to existing rightholders (who have arbitrage options). The snare exists to sustain this extraction.",
+    "kernel_context": "The perpetual copyright snare is one reading of the contested kernel: 'Copyright as Property Rights.' Alternative readings instantiate different constraints. (1) Copyright as Incentive Mechanism (reading): copyright is justified by the need to reward creation, suggesting finite terms proportional to incentive necessity (not perpetuity). This reading produces Tangled Rope or Rope classifications with lower extractiveness and clearer coordination function. (2) Copyright as Author's Natural Right (reading): copyright derives from natural law or moral right, suggesting perpetuity as inherent property right. This reading produces Mountain classification but triggers false-summit detection due to beneficiary presence. (3) Copyright as Enclosure Mechanism (reading): copyright is an institutional choice to enclose the knowledge commons for extractive benefit, suggesting snare or piton classification. This reading rejects perpetuity as contingent choice open to reversal. The perpetual copyright snare instantiates reading (3): copyright as contingent institutional extraction mechanism with identifiable beneficiaries (publishers, estates) and identifiable victims (derivative creators, public domain). The reading conflicts with reading (2) (natural right) but coexists with reading (1) (incentive mechanism) — one can hold that copyright serves incentive function while maintaining that perpetuity exceeds incentive necessity, making the duration choice extractive. The kernel's ambiguity (is copyright inherent or contingent?) remains unresolved in contemporary copyright law, generating the persistent litigation and legislative contestation over term extensions."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "patent_term_extension_rent_seeking",
+      "literary_public_domain_enclosure",
+      "derivative_creator_licensing_trap"
+    ],
+    "dual_formulation_note": "Perpetual copyright is downstream of multiple structural choices: (1) the Statute of Anne's shift from monopoly to author's right (enabling perpetuity framing), (2) international harmonization via Berne Convention and TRIPS (locking in strong protection globally), (3) repeated term extensions (Sonny Bono, Copyright Term Extension Act) that push copyright toward effective perpetuity. Each is a structurally distinct constraint with its own extractiveness value. The upstream constraint (author's right conceptual shift in 1710) has lower extractiveness but generative power — it created the logical space for perpetual copyright. The downstream constraint (contemporary perpetual-duration regime) has maximum extractiveness. The constraint family decomposes along the temporal dimension: the ambiguity in Anne's statute produces the Donaldson v Beckett litigation, which produces the institutional consolidation of copyright as statute-only, which produces the TRIPS harmonization, which produces contemporary term extensions. Each story has its own extractiveness trajectory and perspectival gap. Perpetual copyright snare is the contemporary endpoint."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "copyright_as_incentive_mechanism",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "copyright_as_natural_right",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "copyright_is_statutory_contingent_monopoly",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "perpetuity_exceeds_incentive_necessity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "perpetual_copyright_extracts_rents_from_derivative_creators",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "statutory_monopoly_with_renewable_terms",
+    "drift_state": {
+      "moment": "contemporary_perpetual_copyright_regime",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

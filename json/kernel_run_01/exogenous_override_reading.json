@@ -1,0 +1,234 @@
+{
+  "header": {
+    "constraint_id": "exogenous_override_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_exogenous_override_reading",
+    "measurement_id_prefix": "exog_override"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Exogenous Override Reading: Legitimacy of State-Decreed Practice Standardization",
+    "topic_domain": "political_history/institutional_change/modernization",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "central_state_apparatus",
+      "fiscal_integration_systems",
+      "international_coordination_regimes"
+    ],
+    "victims": [
+      "local_practice_communities",
+      "endogenous_tradition_carriers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Rural Practice Community",
+      "comment": "PERSPECTIVE 1: RURAL PRACTICE COMMUNITY (SNARE) — Local populations face legal prohibition of customary practices (lunar calendar, traditional dress codes, vernacular weights) with enforcement mechanisms (fines, public shaming, administrative harassment). Exit options are strictly material: abandon the practice entirely (identity cost) or maintain it clandestinely (legal risk). The constraint extracts compliance through suppression without genuine coordination benefit to the target."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Intermediate Administrative Apparatus",
+      "comment": "PERSPECTIVE 2: INTERMEDIATE APPARATUS (TANGLED ROPE) — Magistrates, local officials, and village administrators experience genuine coordination benefits (unified tax collection, standardized measures, national integration) alongside extraction (enforcing the decree requires their labor, creates legitimacy friction with constituents, and makes them enforcement targets). They have agency but face real costs to exiting the enforcement role."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Central State Authority",
+      "comment": "PERSPECTIVE 3: CENTRAL STATE AUTHORITY (ROPE) — The state apparatus benefits from unified calendar systems (synchronized fiscal year, coordinated military mobilization, international treaty alignment), unified measurement systems (tax assessment efficiency, trade logistics), and unified cultural signaling (modern nation-state identity). The decree solves genuine collective-action coordination problems at the national and international level."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Underground Practice Tradition",
+      "comment": "PERSPECTIVE 4: UNDERGROUND PRACTICE TRADITION (PITON) — Endogenous traditions (lunar calendar for agricultural timing, traditional dress for kinship signaling, vernacular units for local trade) persist clandestinely for decades despite legal prohibition. The constraint's formal function (eradicate customary practice) becomes increasingly theatrical — enforcement effort continues but effectiveness degrades as populations normalize dual practice. The underground tradition demonstrates that the suppression floor is partial, not total."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Nationalist Intellectual Class",
+      "comment": "PERSPECTIVE 5: NATIONALIST INTELLECTUAL CLASS (TANGLED ROPE) — Modernizers and nationalist intellectuals experience genuine coordination benefits from standardization (national identity formation, international legitimacy, technological transfer efficiency) but also face extraction: they must persuade, enforce, and ultimately use violence against populations they claim to modernize. The constraint gives them institutional power but also makes them architects of cultural suppression."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational view, state monopoly on measure-setting and calendar administration appears as an inherent feature of modern statehood — similar to monopoly on coinage or legal jurisdiction. This perspective risks naturalizing what is actually a contingent institutional arrangement: that state authority should standardize even practices that carry endogenous tradition value. The engine will flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_benefit_genuineness",
+      "question": "Does standardization produce genuine coordination benefits measurable independent of enforcement authority, or does the benefit accrue primarily to the state apparatus itself?",
+      "resolution_mechanism": "Empirical comparison of economic/administrative efficiency gains from standardization vs. implicit transfer of rents to the state. Cross-national analysis of outcomes in states that achieved standardization via negotiation vs. decree.",
+      "impact": "If genuine coordination benefit is substantial and widely distributed: constraint is Rope from more perspectives. If benefit is primarily to state apparatus and international regimes: constraint remains Snare/Tangled Rope with cosmetic coordination function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether standardization produces genuine or apparatus-captured coordination benefits"
+    },
+    {
+      "id": "reading_contention_empirical",
+      "question": "This constraint instantiates the exogenous override reading of legitimacy — that state authority can legitimately impose practice change for collective benefit. The endogenous displacement reading contests this, holding that practices persist because they solve local problems that the state decree overlooks. The dual practice equilibrium reading holds that both emerge from different population strata. Which reading better predicts the long-term dynamics of practice persistence vs. change?",
+      "resolution_mechanism": "Historical tracking of practices subject to standardization decrees: measure persistence rates after 50+ years, distinguish urban/rural divergence, correlate persistence with measurable local-function value (e.g., lunar calendar persistence in agricultural regions), assess whether dual practice becomes institutionalized or remains transitional.",
+      "impact": "If exogenous override reading holds: practices fade within 1-2 generations as enforcement internalizes. If endogenous displacement holds: practices persist indefinitely because they solve problems the decree ignores. If dual practice holds: coexistence becomes stable equilibrium, not transitional phase.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Long-term persistence of traditional practices under standardization decrees"
+    },
+    {
+      "id": "kernel_legitimacy_grounding",
+      "question": "What grounds the authority of the exogenous override reading's core axiom — that state decree legitimizes practice change? Is it democratic mandate, expert authority, necessity for international alignment, or power to enforce?",
+      "resolution_mechanism": "Institutional analysis of how the state justified the decree at the time: was it framed as democratically authorized, expert-driven, internationally necessary, or simply as state prerogative? Track whether justification frameworks changed over time and whether population adoption of new practices tracks the justification narrative or precedes/succeeds it.",
+      "impact": "If legitimacy grounds on democratic mandate or expert authority: the reading is holdable across political systems. If it grounds solely on power to enforce: the reading is structurally identical to the endogenous displacement reading but with opposite normative valence — a reveal that the contest is about how to frame state coercion, not about legitimacy grounding.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "What grounds the legitimacy claim in state-decreed practice change"
+    },
+    {
+      "id": "false_summit_candidate",
+      "question": "Does the exogenous override reading naturalize state standardization as inherent to modernity, when the same standardization achieved through endogenous deliberation and adoption would have different structural properties (higher effective coordination, lower extraction)?",
+      "resolution_mechanism": "Comparative institutional analysis: measure extractiveness and suppression levels in standardization achieved via decree vs. achieved via negotiation/incentive within otherwise similar populations. If decree-based standardization shows significantly higher suppression and comparable or lower effective coordination, the mountain framing is a false summit.",
+      "impact": "If false summit confirmed: the exogenous override reading's authority grounding is revealed as power-based rather than legitimacy-based — the constraint is Snare/Tangled Rope with a natural-law cover story. If mountain holds: standardization via decree is genuinely structurally necessary for rapid institutional integration.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether exogenous override reading falsely naturalizes state decree as inherent to modernity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The exogenous override reading holds that state authority is legitimate in decreeing practice change for collective benefit — modernization, fiscal integration, international alignment. This reading emerges historically in the transition to national statehood: Ottoman calendar standardization (Gregorian adoption), French metric system imposition, Meiji dress code reforms, Soviet calendar changes. The reading justifies suppression of local practices through appeal to coordination benefits: unified fiscal years enable tax collection, standardized measures enable trade, calendrical alignment enables international treaty synchronization. From the state's perspective, the decree solves genuine collective-action problems at the national and international scale. From the rural practice community's perspective, the decree is pure extraction: prohibition without alternative that serves their local functions (lunar calendar's use in agricultural timing, traditional dress's kinship signaling, vernacular units' local-scale market efficiency). The constraint exhibits high theater ratio (0.55) because enforcement becomes increasingly performative: populations maintain underground practice, officials perform enforcement, both sides tacitly negotiate the boundary between public compliance and private continuance. The exogenous override reading is empirically distinct from its siblings: the endogenous displacement reading insists that practices persist because they solve local problems the decree ignores; the dual practice equilibrium reading treats urban/rural divergence as structurally stable rather than transitional.",
+    "key_agents": [
+      "Central State Apparatus: Primary beneficiary (institutional/arbitrage) — captures coordination gains from standardization, international legitimacy, fiscal efficiency",
+      "Rural Practice Communities: Primary victim (powerless/trapped) — face legal prohibition of customary practices with enforcement mechanisms; bear suppression without compensation",
+      "Intermediate Administrative Apparatus: Secondary actor (moderate/constrained) — benefits from coordination gains but faces enforcement costs and legitimacy friction with constituents",
+      "Nationalist Intellectual Class: Secondary beneficiary (organized/constrained) — advocates for standardization, experiences coordination benefits and institutional power, but also architects of cultural suppression",
+      "Underground Practice Tradition: Persisting constraint actor (moderate/constrained) — maintains practices clandestinely, gradually fades (exogenous override assumption) or persists indefinitely (endogenous displacement assumption)",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent institutional arrangement as inherent to modernity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The exogenous override reading frames practice standardization as coordination-driven, but the structural asymmetry is severe: beneficiaries (state apparatus, international regimes) capture enormous coordination rents while targets (rural populations) lose endogenous practice value with no compensation. The reading claims legitimacy grounds in collective benefit, but benefits are concentrated in state apparatus and international alignment, not distributed to populations bearing suppression. Suppression (0.68): High. Multiple enforcement mechanisms: legal prohibition, public shaming, administrative harassment, fines. Populations cannot exit through negotiation or compensation — the only options are full compliance (identity cost) or clandestine practice (legal risk). Theater ratio (0.55): Moderate-high. Enforcement becomes increasingly theatrical over the interval: official measures show declining practice rates, but underground practice persists indefinitely in many historical cases. The constraint's stated function (eradication) becomes decoupled from actual outcome (coexistence). Theater rises over time as both enforcement and resistance normalize.",
+    "perspectival_gap": "The exogenous override reading produces sharp perspectival divergence because legitimacy grounding is contested. The state authority sees Rope (genuine coordination). The nationalist intellectuals see Tangled Rope (coordination benefits + extraction of cultural authority). The administrative apparatus sees Tangled Rope (coordination gains + enforcement costs). The rural populations see Snare (extraction without compensation). The underground practice tradition sees Piton (formal prohibition with persistent clandestine practice). The analytical observer sees Mountain (modernity requires standardization) — but this is a false summit candidate, since the constraint's legitimacy is power-based, not natural-law-based. The reading's core claim (exogenous decree is legitimate) is contested by the endogenous displacement reading (legitimacy lies with endogenous problem-solving) and the dual practice equilibrium reading (both emerge from different institutional contexts).",
+    "directionality_logic": "The exogenous override reading's directionality is determined by agents' structural position relative to standardization. Beneficiaries (state apparatus, international regimes) experience low or negative effective extraction — they capture rents from the coordination mechanism. Victims (rural populations) face maximum extraction — trapped exit options + victim status + concentrated suppression. The administrative apparatus sits between: institutional power with constrained exit (enforcement role is sticky; exiting means losing state authority). The analytical observer at the civilizational scale risks perception of immutability — the reading naturalizes state decree as inherent to modernity — but the structural data reveals this as a false summit: the legitimacy claim grounds on power to enforce, not on natural law. Override to natural law is triggered by the reading's false naturalization of contingent institutional arrangements.",
+    "mandatrophy_analysis": "The exogenous override reading resolves the mandatrophy by demonstrating that legitimacy claims in state practice standardization depend on which agent's coordination problem is foregrounded. If the state's coordination problem (unified fiscal years, international alignment) is primary: standardization via decree is legitimate (Rope/Tangled Rope). If the rural population's coordination problem (maintaining local practice functions) is primary: exogenous decree is extraction without coordination benefit (Snare). The reading mandatrophy is not resolved by empirical data but by normative framing: which collective's benefit counts as 'collective benefit'? The exogenous override reading answers: the national and international collective. The endogenous displacement reading answers: the local practice community. These are incommensurable at the framing level, which is why they produce different constraint types from the same structural data. The dual practice equilibrium reading declines to choose, treating both framings as simultaneously live, which produces yet different perspectives.",
+    "kernel_context": "This constraint instantiates the exogenous override reading of the legitimacy_of_practice_standardization kernel. The kernel is contested: the exogenous override reading (this story) holds that state decree legitimizes practice change for collective benefit. The endogenous displacement reading contests this, holding that legitimacy derives from endogenous problem-solving, not exogenous authority. The dual practice equilibrium reading treats urban/rural divergence as structurally stable, with no single legitimacy criterion. Sibling readings produce different constraint types from the same structural facts: exogenous override reading yields Tangled Rope/Snare/Mountain mix; endogenous displacement reading would yield Piton/Rope (persistence as functional equilibrium); dual practice equilibrium reading would yield Scaffold or heterogeneous types across populations. The kernel's codification is fixed in law (calendar decrees, dress codes, metric standards) but its legitimacy grounding is ambiguous: power? democratic mandate? expert authority? international necessity? The reading under-determination is the source of empirical ambiguity captured in omega variables."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "endogenous_displacement_reading",
+      "dual_practice_equilibrium_reading"
+    ],
+    "dual_formulation_note": "The exogenous override reading is one of three readings of the legitimacy_of_practice_standardization kernel. All three readings operate on the same factual base (states do decree practice standardization; populations do resist; practices do persist) but assign different legitimacy sources. The three readings have different ε values and different beneficiary/victim structures. Each story is a complete, ε-invariant constraint — not an observable-dependent view of one constraint, but three structurally distinct constraints grounded in different normative framings of the same kernel. They are linked by network dependencies: exogenous override influences endogenous displacement (if exogenous authority is legitimate, endogenous alternatives are delegitimized); endogenous displacement coexists with dual practice equilibrium (both recognize plurality but assign it different structural meaning)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "endogenous_displacement_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "dual_practice_equilibrium_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "state_decree_legitimizes_standardization",
+        "role": "foundational",
+        "status": "holdable"
+      },
+      {
+        "atom": "collective_benefit_prioritizes_national_scale",
+        "role": "secondary",
+        "status": "holdable"
+      }
+    ],
+    "reference_frame": "state_coordinating_authority_framework",
+    "drift_state": {
+      "moment": "contemporary_multilevel_governance",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

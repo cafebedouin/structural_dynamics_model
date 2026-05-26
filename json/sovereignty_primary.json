@@ -1,0 +1,275 @@
+{
+  "header": {
+    "constraint_id": "sovereignty_primary",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_sovereignty_primary"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Territorial Sovereignty and Border Exclusion as Collective Self-Determination",
+    "topic_domain": "political_philosophy/international_law/migration",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "citizen_body",
+      "state_institutional_apparatus"
+    ],
+    "victims": [
+      "excluded_migrants",
+      "displaced_persons",
+      "non_citizen_residents"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Excluded Migrant",
+      "comment": "PERSPECTIVE 1: EXCLUDED MIGRANT (SNARE) — Faces absolute legal prohibition on entry and residence; bears the full extraction of territorial exclusion with zero negotiating capacity. No alternative pathways at this time horizon. Maximum experienced extraction — structurally immobile, legally powerless, no organizational exit mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Displaced Person (Refugee/IDP)",
+      "comment": "PERSPECTIVE 2: DISPLACED PERSON (TANGLED ROPE) — Bears extraction through forced exclusion but also benefits from humanitarian protocols and refugee coordination that provide some access to neighboring territory and international support. Constrained by asylum caps and documentation barriers; organized through international norms (Geneva Convention). Mixed coordination (humanitarian protection apparatus) and asymmetric extraction (border enforcement)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Mobile Capital (Skilled Migrant)",
+      "comment": "PERSPECTIVE 3: MOBILE CAPITAL / SKILLED MIGRANT (ROPE) — Experiences border exclusion as coordination mechanism rather than extraction: visa regimes, labor permits, and professional reciprocity create managed pathways for high-value migration. Extraction is minimal because exit options are broad and the migrant can arbitrage between jurisdictions. The constraint functions as a coordination filter identifying qualified participants."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Citizen Body (Beneficiary Coalition)",
+      "comment": "PERSPECTIVE 4: CITIZEN BODY (ROPE) — Benefits from coordinated exclusion: maintains labor market control, welfare system bounds, and political community stability. Experiences the border as a coordination mechanism protecting collective goods (job availability, public services, political voice). Low experienced extraction because this agent is the beneficiary of the constraint. Arbitrage exit: citizens can migrate elsewhere if dissatisfied."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The State Institutional Apparatus",
+      "comment": "PERSPECTIVE 5: STATE INSTITUTIONAL APPARATUS (TANGLED ROPE) — Both coordinates legitimate collective self-determination (citizens have voice in membership) and extracts through border enforcement infrastructure. The state apparatus experiences the boundary as a genuine coordination function (enabling collective provision) but also as a mechanism of control and extraction (excluding competing claims, managing labor supply, protecting jurisdictional rent). Constrained by international law norms and migration pressure."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The International Sovereignty Regime",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL SOVEREIGNTY REGIME (PITON) — The universal norm of territorial sovereignty and border control persists through institutional inertia and legitimacy inheritance from the Westphalian system. The functional justification (protecting citizen welfare and enabling self-determination) has atrophied as global interdependence and migration pressure have intensified. The regime maintains itself through treaty law, diplomatic protocol, and mutual recognition agreements rather than through effective coordination. Theater_ratio is elevated because much of the regime's operation is performative legitimation rather than functional exclusion enforcement."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, some form of bounded community and membership distinction is inherent to human social organization: collective goods require membership boundaries, political voice requires defined constituencies, and resource allocation requires closure. This perspective sees territorial sovereignty as a natural consequence of collective life. However, the structural data contradicts the mountain classification — identifiable beneficiaries (citizens, state apparatus), active enforcement machinery, and contingent historical institutions indicate a constructed constraint. The engine will compute this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legitimate_self_determination_scope",
+      "question": "How is legitimate self-determination bounded? Can a majority of current citizens legitimately exclude all non-members indefinitely, or does self-determination include some obligation to consider non-citizen claims?",
+      "resolution_mechanism": "Comparative analysis of justifications used by exclusionary and inclusionary states; assessment of whether self-determination is purely internal (citizens deciding among themselves) or includes duties to outsiders (dignity-based or capability-based frameworks)",
+      "impact": "If self-determination is purely internal: snare classification is maximized for excluded migrants; state has absolute authority. If self-determination includes external duties: extraction is reduced; constraint becomes more clearly tangled rope across all perspectives.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Scope of legitimate self-determination: internal-only vs. including duties to non-members"
+    },
+    {
+      "id": "extraction_vs_coordination_boundary",
+      "question": "At what point does border enforcement transition from a legitimate coordination function (managing membership) to extraction (using exclusion as a rent-seeking mechanism)?",
+      "resolution_mechanism": "Empirical: comparison of state welfare outcomes under closed vs. open border regimes; assessment of whether borders primarily protect public goods or transfer rents to favored groups. Conceptual: whether extraction intent (state exploiting non-citizens) vs. extraction effect (border produces systematic asymmetry) determines the classification.",
+      "impact": "If coordination dominates: constraint should be primarily rope across more perspectives. If extraction dominates: snare classification expands; suppression values should increase.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether borders function primarily as coordination or extraction mechanism"
+    },
+    {
+      "id": "natural_vs_constructed_boundary",
+      "question": "Is territorial sovereignty with exclusion an inherent feature of human social organization (mountain), or a contingent institutional arrangement that has become naturalized (false summit)?",
+      "resolution_mechanism": "Historical and anthropological: existence and duration of non-territorial social organization; comparison of past vs. present boundary rigidity. Logical: whether excluding non-members is logically required for any form of collective goods provision, or whether alternative mechanisms (fee-for-service, temporary residency, graduated membership) could provide coordination without absolute exclusion.",
+      "impact": "If natural law: mountain classification is correct; exclusion is immutable. If constructed: false summit detection fires; constraint reclassifies based on chi formula; beneficiary presence + institutional enforcement indicate tangled rope / snare depending on perspective.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether territorial sovereignty is natural law or constructed institutional arrangement"
+    },
+    {
+      "id": "sovereign_equality_vs_asymmetric_power",
+      "question": "Does the sovereignty primary reading presume equal bargaining power among states (symmetrical constraint), or does it accommodate vast asymmetries in state capacity and geopolitical power (asymmetrical extraction)?",
+      "resolution_mechanism": "Empirical: analysis of border outcomes for weak vs. strong states; assessment of whether powerful states impose exclusion unilaterally (extraction) or whether weak states freely choose boundaries (coordination). Logical: whether the 'sovereignty' principle requires mutual recognition (presuming symmetry) or can justify dominance hierarchies.",
+      "impact": "If symmetrical: rope or balanced tangled rope across state-level perspectives. If asymmetrical: snare classification expands; powerful states experience rope while weak states experience tangled rope / snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether sovereignty principle presumes equal or asymmetric state power"
+    },
+    {
+      "id": "historical_contingency_of_westphalia",
+      "question": "Is the Westphalian territorial sovereignty model the only institutional arrangement for collective self-determination, or one contingent solution among many?",
+      "resolution_mechanism": "Historical: documentation of pre-Westphalian forms of collective organization (overlapping jurisdictions, city-states, imperial systems, ummah models). Comparative institutional: analysis of contemporary non-Westphalian experiments (EU supranational authority, ASEAN soft consensus, indigenous governance overlapping state boundaries)",
+      "impact": "If Westphalian model is inevitable: mountain / piton classification is correct. If contingent: constraint is explicitly constructed; false summit detection is appropriate; alternative readings become materially possible.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether Westphalian sovereignty is inevitable or historically contingent"
+    },
+    {
+      "id": "committer_reading_underdetermination",
+      "question": "This constraint instantiates the 'sovereignty_primary' reading of the border_normative_status kernel. What structural and empirical signals confirm that THIS reading (rather than 'freedom_primary' or 'qualified_sovereignty') is the appropriate analytical frame for the constraint at hand?",
+      "resolution_mechanism": "Examination of the case context: which reading best explains observed state behavior, legal doctrine, and justificatory rhetoric? Assessment of whether the constraint exhibits properties of pure exclusion (sovereignty_primary), pure access rights (freedom_primary), or negotiated mixed regimes (qualified_sovereignty). Cross-reading validation: do the sibling readings produce structurally coherent alternative classifications for the same observables?",
+      "impact": "If this reading is confirmed: sovereignty_primary constraint properly frames the classification. If an alternative reading better explains the observables: reauthoring as that reading may be more analytically appropriate. Perspectival gap analysis: do the five non-analytical perspectives align with sovereignty_primary framing, or do they suggest measurement under an alternative kernel reading?",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Confirmation that sovereignty_primary reading is appropriate vs. sibling readings"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "extractiveness_westphalian_emergence_1648"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.45,
+      "id_override": "extractiveness_nationalism_rise_1850"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.52,
+      "id_override": "extractiveness_postcolonial_era_1960"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.58,
+      "id_override": "extractiveness_modern_migration_pressure_2020"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3,
+      "id_override": "theater_westphalian_emergence_1648"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.4,
+      "id_override": "theater_nationalism_rise_1850"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.48,
+      "id_override": "theater_postcolonial_era_1960"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.55,
+      "id_override": "theater_modern_migration_pressure_2020"
+    }
+  ],
+  "interval": {
+    "start": 1648,
+    "end": 2026
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the 'sovereignty_primary' reading of the border_normative_status kernel: territorial boundaries are treated as legitimate instruments of collective self-determination, and states have foundational authority to exclude non-members from their territory and political community. Under this reading, the boundary is not a negotiable feature but a constitutive property of statehood. Excluded migrants, displaced persons, and non-citizen residents bear systematic extraction through legal prohibition and enforcement machinery. The citizen body and state apparatus experience the boundary as a coordination mechanism — a legitimate framework for collective provision and democratic voice. From the analytical perspective, the naturalization of territorial sovereignty risks obscuring the contingent institutional arrangements (Westphalian system, nationalist ideology, historical empire dissolution) that constructed this norm. The constraint exhibits increasing extractiveness over the 378-year interval (0.35 → 0.58) as migration pressure has intensified and border enforcement has become more sophisticated. Theater ratio has also risen (0.30 → 0.55), indicating that an increasing share of sovereignty rhetoric is performative — the legitimacy appeal to 'self-determination' must do more work as actual enforcement becomes more coercive and the extraction becomes more visible. This is diagnostic of a piton-trajectory: the underlying coordination function (protecting citizen welfare, enabling collective provision) has been partially replaced by enforcement performance and legitimacy maintenance.",
+    "key_agents": [
+      "Excluded Migrant: Primary victim (powerless/trapped) — faces absolute legal prohibition; bears maximum extraction with zero negotiating capacity",
+      "Displaced Person / Refugee: Secondary victim (moderate/constrained) — subject to exclusion but partially protected by humanitarian protocols; organized through international law",
+      "Mobile Capital / Skilled Migrant: Secondary beneficiary (powerful/mobile) — experiences border as coordination filter rather than extraction; arbitrage among jurisdictions",
+      "Citizen Body: Primary beneficiary (institutional/arbitrage) — benefits from coordinated exclusion; maintains labor market and welfare system bounds; can migrate if dissatisfied",
+      "State Institutional Apparatus: Mixed actor (institutional/constrained) — both coordinates collective self-determination and extracts through enforcement; constrained by international law and migration pressure",
+      "International Sovereignty Regime: Institutional actor (institutional/arbitrage) — maintains universal norm through treaty law and diplomatic recognition; sees own functional justification atrophying (piton perspective)",
+      "Analytical Observer: Universalizing perspective (analytical/analytical) — risks naturalizing contingent Westphalian arrangements as immutable features of human social organization"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint produces measurable asymmetric extraction: excluded migrants and displaced persons bear costs (prohibition on residence, exclusion from labor markets, denial of public services) while citizens and the state apparatus receive benefits (labor market control, welfare system bounds, jurisdictional rent). The value reflects that this is not maximal extraction (enforcement is incomplete, alternative pathways exist for some migrants, international humanitarian law provides partial protection) but that extraction is substantial and systematic. The trajectory from 0.35 (Westphalian emergence) to 0.58 (contemporary migration pressure) indicates accumulating extraction as enforcement capacity and incentive have both increased. Suppression (0.72): High. Multiple mechanisms suppress alternatives to sovereign exclusion: legal prohibition (passports, visas, asylum bars), enforcement machinery (border patrol, deportation), economic barriers (work authorization requirements), and ideological naturalization (treating sovereignty as inevitable). The suppression is not total — humanitarian corridors, temporary visas, and international protection mechanisms create small escape valves — but significant alternatives to exclusion are structurally unavailable to most potential migrants. Theater ratio (0.55): Moderate-high and rising. Contemporary sovereignty rhetoric (appeals to 'self-determination,' 'democratic community,' 'protecting citizens') performs legitimacy work that enforcement machinery alone cannot accomplish. Much border policy discourse is performative: campaigns emphasizing enforcement severity despite limited resources, citizenship ceremonies and national identity rhetoric maintaining community cohesion, multilateral treaties affirming sovereignty while undermining reciprocal protection. Theater is lower than in truly degraded institutions (piton-stage) because enforcement still has real coercive capacity, but theater has risen significantly from the early Westphalian period (when legitimacy was presumed) to contemporary period (when legitimacy must be actively maintained).",
+    "perspectival_gap": "This constraint exhibits dramatic perspectival variation because the sovereignty principle produces opposite structural positions for different agents. Excluded migrants experience absolute snare — legal bar and enforcement machinery with no exit. The citizen body experiences pure rope — the boundary coordinates legitimate collective provision and democracy. The state apparatus experiences tangled rope — genuine coordination function mixed with extraction leverage. The international regime experiences degraded piton — legitimacy maintained through inertia and treaty law as functional justification atrophies. The analytical observer risks mountain classification — naturalizing a contingent institutional arrangement as inevitable human organization. The perspectival gap is not due to disagreement about facts but to genuine structural differentiation: agents occupy different positions relative to the extraction flow. The beneficiary (citizen) and victim (excluded migrant) have incommensurable experiences of the same constraint.",
+    "directionality_logic": "Beneficiaries (citizen_body, state_institutional_apparatus) derive d values toward 0.0 (beneficiary, arbitrage exit) → f(d) negative → low or negative χ. They experience coordination, not extraction. Victims (excluded_migrants, displaced_persons, non_citizen_residents) derive d values toward 1.0 (trapped or constrained exit) → f(d) positive → high χ. They experience extraction. Mobile migrants (powerful/mobile) derive d values toward 0.5 (moderate relationship) → f(d) moderate → they experience negotiated access, not pure extraction. The directionality values are empirically grounded in the structural relationships: citizens can exit (emigrate); excluded migrants cannot. State apparatus is constrained by international law but has enforcement capacity; displaced persons have no enforcement capacity. The chi formula translates these structural differences into experienced extractiveness multipliers.",
+    "kernel_context": "This constraint instantiates the 'sovereignty_primary' reading of the border_normative_status kernel. The kernel is the persisting commitment to territorial boundaries as a legitimate feature of political organization. The sovereignty_primary reading treats this commitment as foundational: states have legitimate authority to exclude; territorial closure is a prerequisite for collective self-determination; membership is a constitutive property of political community. Sibling readings — freedom_primary and qualified_sovereignty — reframe the same kernel differently. Freedom_primary treats the kernel's legitimacy as contingent on access rights: territorial boundaries are instrumentally justified only insofar as they do not permanently exclude individuals capable of contributing to collective life. Qualified_sovereignty treats the kernel as requiring negotiation: states have authority to exclude but this authority is bounded by humanitarian duties and individual capabilities claims. The three readings coexist in contemporary political theory and practice. Some states invoke sovereignty_primary justifications (absolute border control, zero-tolerance immigration); others adopt qualified_sovereignty frameworks (humanitarian asylum, points-based selection); others gesture toward freedom_primary (claims that borders violate human dignity). The structural deltas between readings are substantial: in sovereignty_primary, excluded migrants are victims (constraint operates against them); in freedom_primary, excluded migrants are potential rights-holders (constraint operates against them but should not); in qualified_sovereignty, excluded migrants may be claims-holders whose qualifications must be assessed. The extractiveness value, suppression level, and beneficiary/victim declarations all assume sovereignty_primary framing.",
+    "mandatrophy_analysis": "KERNEL READING CASE: The mandatrophy for this reading is resolved by recognizing that 'legitimate territorial boundary' is not a univocal claim but a contested reading of a shared kernel. The false-summit risk is acute: the analytical observer perspective naturally tends toward mountain classification (territorial organization is inherent to human social life), which naturalizes the sovereignty_primary reading as inevitable. The constraint story shows this as a false summit through two routes: (1) structural: identifiable beneficiaries (citizen body, state apparatus) and victims (excluded migrants) indicate a constructed constraint, not a natural law; (2) temporal: the rising extractiveness (0.35 → 0.58) and theater ratio (0.30 → 0.55) track institutional development and legitimacy maintenance rather than discovering an eternal property. The mandatrophy is resolved by showing that the same kernel (territorial boundaries) admits multiple readings with different extraction profiles. Sibling readings would produce different ε values and beneficiary/victim sets, confirming that the classification depends on the reading adopted, not on invariant structural properties. The perspectival gap across the seven perspectives is diagnostically appropriate: it reflects that sovereignty_primary produces genuine structural differentiation, not mere disagreement."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "freedom_primary",
+      "qualified_sovereignty",
+      "refugee_protection_regime",
+      "labor_migration_governance",
+      "citizenship_acquisition"
+    ],
+    "dual_formulation_note": "This constraint (sovereignty_primary) is the upstream reading in the border_normative_status kernel. Sibling readings (freedom_primary, qualified_sovereignty) represent alternative framings of the same underlying commitment structure. Each reading produces a distinct ε value and beneficiary/victim configuration. The readings are linked via reading_relations (coexists_with / influences) in cs_structure, not via affects_constraints. The network edges here point to dependent constraints (refugee_protection_regime, labor_migration_governance) that operate within the sovereignty-primary framework but could be respecified under alternative kernel readings."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.35
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "freedom_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "qualified_sovereignty",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "territorial_closure_prerequisite_for_self_determination",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "state_authority_to_exclude_non_members",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "territorial_sovereignty_westphalian",
+    "drift_state": {
+      "moment": "contemporary_migration_crisis",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

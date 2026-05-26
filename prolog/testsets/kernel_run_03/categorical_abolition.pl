@@ -1,0 +1,324 @@
+% ============================================================================
+% CONSTRAINT STORY: categorical_abolition
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_categorical_abolition, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: categorical_abolition
+ *   human_readable: Categorical Abolition: State Killing as Inalienable Rights Violation
+ *   domain: criminal_justice/political_philosophy/constitutional_law
+ *
+ * SUMMARY:
+ *   The categorical abolition reading asserts that human life is inalienable
+ *   and that state execution, regardless of the crime or potential
+ *   consequences (deterrence, desert, closure), constitutes a rights
+ *   violation. This reading is one instantiation of the contested kernel
+ *   'state_killing_authority,' which also includes retributive_desert
+ *   (execution is proportional punishment for murder) and
+ *   deterrence_instrument (execution prevents future murders) readings. The
+ *   categorical abolition reading produces a tangled rope constraint: it
+ *   coordinates the protection of a fundamental right (inalienable life), but
+ *   does so by asymmetrically extracting from retributive and deterrence
+ *   stakeholders — those who believe execution is legitimate closure,
+ *   justice, or crime prevention. The constraint exhibits high suppression
+ *   (legal prohibition, normative counter-pressure against execution
+ *   advocacy) and moderate theater (retributive and deterrent language
+ *   persists in courts, and closure desires persist in victims' families,
+ *   despite the abolitionist legal norm). The extractiveness value (0.32)
+ *   reflects that while the abolition constraint forecloses a specific form
+ *   of state killing, it does not eliminate the underlying functions it
+ *   displaced — retribution appears in lengthy imprisonment; deterrence
+ *   remains theoretically possible through other penalties; closure for
+ *   victims' families is redirected to non-lethal mechanisms. The
+ *   constraint's theater ratio has declined over the measurement interval (40
+ *   years), indicating that as abolitionist norms have solidified, the
+ *   performance of retributive executions has declined, and alternative
+ *   closure mechanisms have become more rhetorically visible.
+ *
+ * KEY AGENTS:
+ *   - Condemned Persons: Primary beneficiary (powerless/trapped) — inalienability principle places them in rights-holder set regardless of crime; constraint secures their protection absolutely
+ *   - Human Rights Movement: Secondary beneficiary (organized/constrained) — benefits from enforcement of inalienability norm; treats abolition as fundamental principle and international standard
+ *   - Victims' Families (Execution-Seeking Faction): Primary victim (moderate/constrained) — experience abolitionist constraint as barrier to retributive closure; marginalized in policy narratives when they dissent
+ *   - Retributive Justice Tradition: Secondary victim (institutional/constrained) — loses the proportional punishment tool; forced to express desert through imprisonment instead
+ *   - Criminal Justice System (State): Institutional actor with mixed position (institutional/constrained) — coordination benefit: prevented from becoming mass killer of captives; extraction cost: loses sentencing option, faces international pressure
+ *   - International Bodies (UN, EU, ICC): Institutional actor (institutional/arbitrage) — benefits from enforcement of abolition norm as coordination mechanism and legitimacy marker
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing a deontological choice (inalienability as intrinsic right) as a universal natural law
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(categorical_abolition, 0.32).
+domain_priors:suppression_score(categorical_abolition, 0.48).
+domain_priors:theater_ratio(categorical_abolition, 0.55).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(categorical_abolition, extractiveness, 0.32).
+narrative_ontology:constraint_metric(categorical_abolition, suppression_requirement, 0.48).
+narrative_ontology:constraint_metric(categorical_abolition, theater_ratio, 0.55).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(categorical_abolition, tangled_rope).
+narrative_ontology:human_readable(categorical_abolition, "Categorical Abolition: State Killing as Inalienable Rights Violation").
+narrative_ontology:topic_domain(categorical_abolition, "criminal_justice/political_philosophy/constitutional_law").
+
+domain_priors:requires_active_enforcement(categorical_abolition).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_kernel_codification(categorical_abolition, formalized).
+narrative_ontology:cs_authority_grounding(categorical_abolition, lineage).
+narrative_ontology:cs_interpretation_layer_present(categorical_abolition).
+narrative_ontology:cs_kernel_id(categorical_abolition, state_killing_authority).
+narrative_ontology:cs_reading_relation(categorical_abolition, retributive_desert, forecloses).
+narrative_ontology:cs_reading_relation(categorical_abolition, deterrence_instrument, coexists_with).
+narrative_ontology:cs_axiom(categorical_abolition, foundational, inalienable_life).
+narrative_ontology:cs_axiom_status(inalienable_life, holdable).
+narrative_ontology:cs_axiom_grounding(categorical_abolition, inalienable_life, deontological).
+narrative_ontology:cs_axiom(categorical_abolition, secondary, state_legitimacy_bounds).
+narrative_ontology:cs_axiom_status(state_legitimacy_bounds, holdable).
+narrative_ontology:cs_axiom_grounding(categorical_abolition, state_legitimacy_bounds, conventional).
+narrative_ontology:cs_reference_frame(categorical_abolition, human_rights_inalienability).
+narrative_ontology:cs_drift_state(categorical_abolition, contemporary_abolition_era, gap(authority_erosion, substantial, false)).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(categorical_abolition, condemned_persons).
+narrative_ontology:constraint_beneficiary(categorical_abolition, human_rights_movement).
+narrative_ontology:constraint_victim(categorical_abolition, retributive_justice_adherents).
+narrative_ontology:constraint_victim(categorical_abolition, deterrence_advocates).
+narrative_ontology:constraint_victim(categorical_abolition, victims_families_seeking_execution).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: CONDEMNED PERSON (ROPE) — This reading secures the condemned person in the rights-holder set regardless of crime. Life becomes inalienable; state killing becomes a rights violation, not a legitimate punishment. The constraint functions as coordination (establishes inviolable boundary) but with asymmetric protection: the condemned benefits absolutely, while retributive stakeholders bear the loss of closure through execution. From the condemned's perspective, this is pure coordination — the rule that protects them.
+constraint_indexing:constraint_classification(categorical_abolition, rope,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(national))).
+
+% PERSPECTIVE 2: VICTIMS' FAMILIES SEEKING EXECUTION (SNARE) — Those family members who experience the abolition constraint as a barrier to retributive closure experience high extraction. Their desire for state execution is foreclosed by the constraint; their only exit is emotional processing without the institutional finality of execution. Suppression is high (legal prohibition, moral counternorms from abolitionists); extraction is experienced as denial of legitimate justice. The abolitionist reading here functions as pure extraction from this faction's perspective.
+constraint_indexing:constraint_classification(categorical_abolition, snare,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: CRIMINAL JUSTICE SYSTEM (TANGLED ROPE) — The state apparatus experiences this constraint as both coordination and extraction. Coordination function: the constraint clarifies the state's legitimate power boundaries and prevents the state from becoming a de facto killer of defenseless captives (eliminating a reputational/legitimacy risk). Extraction function: the constraint removes a tool from the state's sentencing arsenal and restricts closure options in high-salience cases. Enforcement is required — sentencing guidelines, appellate review, international human rights monitoring — to keep judges and prosecutors from circumventing the rule. The state must actively maintain the constraint against its own enforcement apparatus's interests.
+constraint_indexing:constraint_classification(categorical_abolition, tangled_rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: RETRIBUTIVE DESERT TRADITION (PITON) — The classical retributive account (proportional punishment, including execution for murder) has been substantially challenged by the abolitionist reading and by empirical evidence that retribution does not reliably follow outcomes (some murders go unpunished; innocents are executed; disparities follow race/class). The retributive tradition persists through institutional inertia — sentencing guidelines reference proportionality; judges cite retribution as a sentencing rationale — but the tradition's authority has degraded. The abolitionist constraint doesn't eliminate retributive reasoning entirely (it functions in sentencing for non-capital crimes), but it removes retribution's most extreme application and reveals retribution as contingent rather than inevitable. Theater ratio is moderate (retributive language persists in courtrooms despite weakened philosophical foundation).
+constraint_indexing:constraint_classification(categorical_abolition, piton,
+    context(agent_power(powerful),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(continental))).
+
+% PERSPECTIVE 5: INTERNATIONAL HUMAN RIGHTS MOVEMENT (SCAFFOLD) — Global abolition norms (EU, UN protocols, International Criminal Court) create a temporary coordination framework with an implicit sunset: as state capacity for due process improvements (DNA exoneration, appellate review, innocence investigation) matures, the case for execution on retributive grounds weakens further. The movement treats abolition as scaffolding toward a higher-legitimacy system (robust innocence protection + alternative penalties). Enforcement is high (international pressure, trade conditionality, treaty membership) but perceived as temporary — justified only as long as execution remains the default option in retaining states. Scope is global (affects state legitimacy internationally); exit options are constrained but real (states can exit through treaty withdrawal, though at reputational cost).
+constraint_indexing:constraint_classification(categorical_abolition, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective grounded in certain deontological frameworks, human life is intrinsically inalienable — no legitimate authority (state, collective, or consequence-maximizer) can rightfully extinguish it. This perspective treats the abolition constraint as instantiating an immutable natural law about rights, not a contingent institutional choice. However, this classification is contested: the engine's false summit detection will flag this perspective because identifiable beneficiaries (condemned persons, human rights organizations) benefit from the natural-law framing, and empirical work (historical variation in capital punishment, deterrence evidence) challenges the immutability claim.
+constraint_indexing:constraint_classification(categorical_abolition, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(categorical_abolition_tests).
+
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(categorical_abolition, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(categorical_abolition, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(categorical_abolition, TR),
+    TR >= 0.70.
+
+:- end_tests(categorical_abolition_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   EXTRACTIVENESS (0.32): Moderate-Low. The constraint coordinates a fundamental protection (inalienable rights) that benefits the condemned absolutely. But it extracts from multiple stakeholder groups: (1) retributive justice adherents lose the proportional penalty tool and experience this as denial of legitimate desert; (2) deterrence advocates lose a theoretically powerful crime-prevention instrument; (3) victims' families seeking execution lose institutional closure. The extractiveness is moderate rather than high because alternative mechanisms (imprisonment, restorative justice, victim support) partially satisfy the displaced functions. If execution were the only closure mechanism available, extractiveness would be higher; the existence of alternatives reduces the absolute extraction. SUPPRESSION (0.48): Moderate-High. The abolition constraint operates through legal prohibition, international pressure, and counter-normative shaming of execution advocacy. Victims' families who support execution face social pressure; retributive theorists face delegitimation in academic and policy spaces; prosecutors have sentencing options removed. However, suppression is not total — retributive and deterrent language persists in courtrooms; victims' families continue to advocate for execution; some jurisdictions retain and use capital punishment. The suppression metric reflects the strength of the abolitionist norm-enforcement apparatus, not absolute elimination of the opposed views. THEATER_RATIO (0.55): Moderate. The measurement trajectory shows declining theater over 40 years (0.62 → 0.48), indicating that as abolitionist norms solidified, the performative content of execution rhetoric has declined. Early in the interval, retributive language and closure-seeking statements were more prominent despite growing abolition; later, the rhetoric shifted to accommodation narratives (alternative penalties, victim support). Theater remains above zero because alternative closure mechanisms require some performative validation — lengthy imprisonment is presented as proportional, restorative justice processes are staged as dignified, even as they substitute for the original retributive demand.
+ *
+ * PERSPECTIVAL GAP:
+ *   This constraint exhibits the full perspectival taxonomy. The condemned person sees pure coordination (Rope) — the inalienability principle protects them absolutely. Victims' families seeking execution see extraction (Snare) — the constraint forecloses their preferred closure. The criminal justice system sees mixed coordination and extraction (Tangled Rope) — the constraint clarifies the state's boundaries and prevents reputational damage, but removes a tool. The retributive tradition sees its authority degraded (Piton) — retributive reasoning persists but with weakened foundation, maintained by institutional inertia. The international human rights movement sees temporary scaffolding (Scaffold) — abolition is justified as enabling toward a higher-legitimacy system with better due process. The civilizational analytical observer risks seeing immutable natural law (Mountain) — but the constraint's beneficiaries and contingent institutional history reveal this as a false summit. The perspectival gap is extreme: condemned and beneficiary see coordination; victims and retributivists see extraction; system actors see hybrid; observers risk naturalizing choice.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Directionality (d) for each perspective is computed from the agent's structural position relative to the constraint. Condemned persons are full beneficiaries with zero exit options (d ≈ 0.05, full protected): they experience low/negative effective extraction (the constraint subsidizes their protection). Victims' families seeking execution are partial victims with constrained exit (d ≈ 0.80, high target): they experience high effective extraction (their preferred outcome is blocked). The criminal justice system is institutionally positioned (d ≈ 0.50, symmetric): it gains coordination clarity but loses extractive capability; effective extraction is moderate. Retributive advocates are stakeholders whose theoretical framework is challenged (d ≈ 0.65, toward-target): their intellectual authority is partially extracted from them. The international human rights movement is a coalition beneficiary (d ≈ 0.10, partial beneficiary): they experience low extraction because the constraint aligns with their institutional interests. The analytical observer's directionality is problematic (d ≈ 0.72, canonical): the observer risks reading their own value commitments as universal natural law. The engine's false summit detection should flag this — if beneficiaries exist (condemned persons, human rights movement), the mountain classification is a false summit.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   Mandatrophy resolution: The constraint does not exhibit mandatrophy pathology because the classification system correctly differentiates what would otherwise collapse. The categorical abolition reading is a TANGLED ROPE, not a pure rope (it includes extraction) and not a pure snare (it includes coordination). The coordination function is real: it clarifies the state's boundaries, prevents reputational damage from mass execution, and protects fundamental rights. The extraction function is real: retributive stakeholders lose proportional-punishment capability; deterrence advocates lose a crime-prevention tool; execution-seeking families lose their preferred closure mechanism. The constraint satisfies tangled rope gates: (1) beneficiaries exist (condemned persons, human rights organizations); (2) victims exist (retributive tradition, deterrence advocates, some victims' families); (3) active enforcement is required (international monitoring, sentencing guidelines, appellate review). The perspectival gap between the condemned (Rope) and victims' families (Snare) is a true gap in experienced extraction, not a measurement error. The piton and scaffold perspectives are subordinate readings that reflect institutional degradation of retributive authority and temporary enforcement by the international movement, respectively. The mountain perspective at the analytical level is a false summit — the constraint has identifiable beneficiaries and a contingent historical trajectory, not the immutability of natural law. This classification prevents the common mislabeling error of treating 'fundamental rights' as identical to 'natural law' — categorical abolition is a genuine constraint with real extraction costs for some stakeholders, not a discovered fact about the nature of punishment.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    axiom_grounding_contest,
+    'Is the inalienability of life grounded in deontological rights that exist independent of consequences, or is it a consequentialist claim that execution regimes produce worse outcomes than alternatives?',
+    'Analyze abolitionist arguments'' primary justifications: do they rest on rights claims (''execution violates inherent dignity''), empirical claims (''execution doesn''t deter, causes trauma''), or hybrid reasoning? Examine which arguments survive empirical refutation (if deterrence were proven, would the reading survive?)',
+    'If primarily deontological: the reading forecloses retributive_desert (which grounds punishment in proportional desert, not rights preservation). If primarily consequentialist: the reading coexists_with deterrence_instrument if empirics change, and influences retributive_desert by raising the cost-benefit calculus. Grounding type determines the reading''s susceptibility to empirical challenge and its logical relationship to siblings.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(axiom_grounding_contest, conceptual, 'Whether inalienability is grounded in deontological rights or consequentialist outcomes').
+
+omega_variable(
+    innocence_threshold_ambiguity,
+    'Does abolition require zero wrongful executions (absolute threshold), or does it accept that innocents may be executed at rates below some tolerance level?',
+    'Examine abolitionist positions on the following: (a) would abolition be justified if error rates fell to 0.1%? (b) do most abolitionists cite innocence as the primary reason, or as supporting evidence for a deontological principle? (c) how do abolitionists respond to historical innocence exonerations in retaining jurisdictions — is the issue the possibility of error, or the principle of inalienability?',
+    'If inalienability is the primary ground: the reading holds even with zero error (execution remains impermissible). If innocence is the primary ground: the reading is vulnerable if error rates fall sufficiently. This ambiguity affects the reading''s logical relationship to deterrence_instrument (which might accept low error rates if deterrence is large) and to retributive_desert (which might accept execution if guilt is certain).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(innocence_threshold_ambiguity, conceptual, 'Whether abolition requires zero wrongful execution or accepts low error rates').
+
+omega_variable(
+    states_rights_exception_boundary,
+    'Does the inalienability principle extend to all state killing (execution, extrajudicial police killing, drone strikes on citizens, institutionalized neglect), or is it specific to criminal execution?',
+    'Analyze abolitionist literature on: (a) police use of lethal force in apprehension, (b) state neglect leading to preventable death (healthcare, housing, occupational safety), (c) military action against citizens. Do abolitionists cite the same principle (inalienability) or different principles (due process, proportionality)?',
+    'If inalienability is universal: the constraint extends to all state killing forms and constrains police, healthcare, and military policy. If specific to execution: the constraint is narrower, and the reading coexists more easily with deterrence and retributive positions that might accept non-execution state killing. Scope of the inalienability principle affects the constraint''s extractiveness and enforcement burden.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(states_rights_exception_boundary, conceptual, 'Scope of inalienability principle: all state killing or execution-specific').
+
+omega_variable(
+    self_defense_exception,
+    'Does the inalienability principle allow state killing in immediate self-defense (e.g., officer defense against armed attacker) but prohibit execution?',
+    'Examine abolitionist positions on police lethal force in immediate defense scenarios, and on war/self-defense at state level. Do they distinguish between defense-as-exception and punishment-as-prohibited?',
+    'If self-defense exception exists: the reading forecloses retributive_desert only for punishment, not for defense, creating a narrower foreclosure. If self-defense is also prohibited: the reading forecloses more broadly. This affects the logical relationship to the retributive reading — they may coexist on punishment while differing on defense.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(self_defense_exception, conceptual, 'Whether inalienability permits state killing in immediate self-defense').
+
+omega_variable(
+    victims_families_coalition_fragility,
+    'How stable is the coalition of victims'' families, and to what extent does abolitionist framing marginalize dissenting family members?',
+    'Empirical tracking: survey victims'' families on (a) support for execution vs. alternative closure mechanisms, (b) perceived legitimacy of abolitionist arguments, (c) experience of being excluded from policy narratives. Measure rhetorical erasure: do abolitionist statements acknowledge dissenting family members, or implicitly assume family unity around opposing execution?',
+    'If family preferences are actually mixed and the abolitionist reading suppresses dissent: suppression metric may be underestimated (high actual suppression of minority family preferences). If abolitionist movement has incorporated multiple family perspectives: suppression is accurately measured. This affects the victims_families_seeking_execution snare classification and the overall suppression score.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(victims_families_coalition_fragility, empirical, 'Stability and composition of victims'' families coalition regarding abolition').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(categorical_abolition, 0, 40).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(cate_tr_t0, categorical_abolition, theater_ratio, 0, 0.62).
+narrative_ontology:measurement(cate_tr_t20, categorical_abolition, theater_ratio, 20, 0.55).
+narrative_ontology:measurement(cate_tr_t40, categorical_abolition, theater_ratio, 40, 0.48).
+
+% Extraction over time
+narrative_ontology:measurement(cate_be_t0, categorical_abolition, base_extractiveness, 0, 0.38).
+narrative_ontology:measurement(cate_be_t20, categorical_abolition, base_extractiveness, 20, 0.34).
+narrative_ontology:measurement(cate_be_t40, categorical_abolition, base_extractiveness, 40, 0.32).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(categorical_abolition, enforcement_mechanism).
+narrative_ontology:affects_constraint(categorical_abolition, retributive_desert).
+narrative_ontology:affects_constraint(categorical_abolition, deterrence_instrument).
+
+% DUAL FORMULATION NOTE:
+% Categorical abolition, retributive desert, and deterrence instrument are three readings of the state_killing_authority kernel. Each reading instantiates a different constraint with different ε values and beneficiary/victim structures. Categorical abolition (ε=0.32) coordinates fundamental rights protection with asymmetric extraction from retributive stakeholders. Retributive desert (ε~0.25) coordinates proportional punishment with asymmetric extraction from abolition advocates. Deterrence instrument (ε~0.35) coordinates crime prevention with asymmetric extraction from rights-protection stakeholders. They are linked via network.affects_constraints because each reading creates structural pressure on the others: abolition constrains retribution's availability; retribution's persistence constrains abolition's full implementation; deterrence evidence either supports or undermines abolition depending on empirical outcomes.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

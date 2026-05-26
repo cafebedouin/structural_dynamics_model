@@ -1,0 +1,163 @@
+{
+  "header": {
+    "constraint_id": "continuity_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_continuity_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Medieval Latin as Continuous Drift from Classical Latin (Continuity Reading)",
+    "topic_domain": "historical_linguistics/philology/commitment_systems",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "medieval_practitioners"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Medieval Scribe/Practitioner",
+      "comment": "PERSPECTIVE 1: MEDIEVAL PRACTITIONER (ROPE) — Continuity reading legitimates their existing competence. They are applying Classical grammatical rules to evolving speech, experiencing this as skillful coordination within a living system. Suppression minimal because the constraint does not require denying observed change — it integrates change into the system. Exits constrained by training investment and professional role, but no coercion to maintain the framing."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Ecclesiastical/Monastic Authority",
+      "comment": "PERSPECTIVE 2: ECCLESIASTICAL AUTHORITY (ROPE) — Benefits from continuity framing: it legitimates their role as keepers of a living classical tradition rather than managers of a linguistic rupture. No costly enforcement burden — practitioners self-enforce through normative absorption. Authority can arbitrage between prescriptive grammar and actual usage, adjusting standards as needed. Low theater because the coordination function is genuine: maintaining Latin as a cross-regional language of religious and administrative communication."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Continuity Frame)",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER / CONTINUITY FRAME (ROPE) — From a reconstructionist perspective that models language as a continuous system, medieval Latin is Classical Latin observed through the lens of natural sound change, analogy, and semantic shift. The 'correction' occurs within the system itself: practitioners recognize deviations and apply conscious standardization as internal norm maintenance. No external enforcement gate — the constraint is the system's own self-regulating mechanism. Theater ratio low because the analytical frame describes genuine linguistic process, not performative ritual."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "continuity_vs_rupture_framing",
+      "question": "Is medieval Latin a continuous evolution from Classical Latin, or a rupture event initiating a new language system?",
+      "resolution_mechanism": "Empirical reconstruction of sound change trajectories, analogy patterns, and syntax shifts. Determine whether observed features follow predictable natural-language drift or show discontinuous leaps. Examine practitioner self-awareness: do they frame their activity as 'maintaining Latin' (continuity) or 'creating a new form' (rupture)?",
+      "impact": "Continuity reading: low ε (0.18), rope class, beneficiaries are medieval practitioners whose competence remains valid. Rupture reading: ε ≥ 0.42, snare or tangled_rope class, victims are practitioners excluded from the new standard, beneficiaries are those who control the rupture boundary.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether medieval Latin represents continuous evolution or rupture event"
+    },
+    {
+      "id": "internal_vs_external_authority_locus",
+      "question": "Does linguistic correction authority derive from within the system (practitioners' own norm-setting) or from external enforcement (grammarians, scribal hierarchies, ecclesiastical mandates)?",
+      "resolution_mechanism": "Textual analysis of correction patterns: are deviations from Classical norms marked as errors internally in manuscripts? Do marginal notes show self-correction or external correction? Examine grammatical treatises: do they frame correction as discovering pre-existing rules or imposing new ones?",
+      "impact": "Internal locus: rope (coordination mechanism). External locus: tangled_rope or snare (enforcement mechanism becomes primary). The continuity reading assumes internal authority — practitioners absorb norms because they see themselves as maintaining a tradition, not because they are coerced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Locus of correction authority: internal system maintenance or external enforcement"
+    },
+    {
+      "id": "beneficiary_victim_detection_ambiguity",
+      "question": "Under the continuity reading, who bears costs? The reading posits no victim set because 'correction' is refinement within a continuous system. But does this invisibilize practitioners whose existing competence becomes non-standard?",
+      "resolution_mechanism": "Prosopographical analysis of scribal careers: do practitioners who learned under one generation's standard face diminished opportunity under the next? Compare manuscript production patterns across scriptoria with different 'continuity' lineages. Examine evidence of practitioners switching scriptorias or styles when standards shift.",
+      "impact": "If costs are invisible under continuity framing: the reading is accurate but requires careful documentation that victims exist (they are just not recognized as such by the continuity frame). If costs are substantial and practitioners experience them as discontinuous: the rupture reading better captures their structural reality, and continuity reading is a cover story.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether continuity reading invisibilizes costs borne by practitioners during norm shifts"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 400,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 800,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 400,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 800,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 800
+  },
+  "commentary": {
+    "kernel_context": "This constraint is the CONTINUITY READING of the contested kernel correct_latin. The kernel is a commitment to determining what 'correct Latin' is — a commitment that persists across the 5th-10th centuries but is read differently by different parties and analytical traditions. The continuity reading instantiates one specific reading: medieval Latin is Classical Latin after natural drift, and correction is internal to one linguistic system. The sibling reading is rupture_reading, which treats medieval Latin as a new language system initiated by a rupture event, requiring external correction to establish new standards. These readings coexist: different scholarly traditions adopt different readings, and individual practitioners may hold different readings at different moments (e.g., 'I am maintaining Classical Latin' while performing changes that linguists would classify as rupture). Neither reading logically forecloses the other — they differ in how they frame the locus of authority and the visibility of costs.",
+    "narrative_context": "Medieval Latin presents a persistent linguistic phenomenon: observable sound changes, morphological simplifications, and syntactic shifts from the Classical period, yet practitioners (clerics, scribes, administrators) frame their activity as maintaining a continuous Latin tradition. The continuity reading models this phenomenon as natural drift within a self-regulating linguistic system. Correction occurs through practitioners' internalization of evolving norms, not through external enforcement or a rupture that would initiate a new system. The constraint is the commitment to this framing — a commitment that grounds ecclesiastical and scribal authority as keepers of a living tradition rather than managers of a linguistic break. The extractiveness is low because the coordination function is genuine: maintaining Latin as a cross-regional administrative and religious lingua franca requires norm convergence, and practitioners benefit from knowing that their competence remains valid across generations. Suppression is minimal because the framing does not require practitioners to deny observed change — it integrates change into the system. Theater is low because the analytical content (drift correction via internal norm absorption) describes actual linguistic process, not performative ritual.",
+    "key_agents": [
+      "Medieval Practitioners (scribes, clerics, administrators): Primary beneficiary (moderate/constrained) — their existing competence in Classical grammar remains valid under the continuity frame; they experience themselves as maintaining rather than breaking tradition.",
+      "Ecclesiastical Authority (monastery scriptoria, cathedral schools): Primary beneficiary (institutional/arbitrage) — legitimacy derives from guardianship of a living classical tradition; no costly enforcement required because practitioners self-regulate through normative absorption.",
+      "Analytical Observer (modern linguistics, philology): Tertiary actor (analytical/analytical) — the continuity reading is one coherent analytical frame; it describes genuine linguistic process but risks invisibilizing practitioners who bear costs during norm shifts.",
+      "Alternative Reading Community (rupture scholars): Implicit sibling reader (analytical/analytical) — represents the rupture reading, which frames the same data as evidence of linguistic discontinuity and new-system initiation."
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low. The continuity reading posits that medieval practitioners benefit from being incorporated into a continuous tradition rather than facing exclusion from a new standard. The extraction that does occur is minimal coordination overhead — practitioners internalize evolving norms without external coercion. The measurement trajectory (0.10 → 0.22 over 800 years) shows slight accumulation as standards become more elaborate and correction more explicit, but the absolute level remains low. Suppression (0.12): Low. The continuity frame does not require practitioners to deny observed linguistic change. They can see drift and still frame their activity as maintenance of a living system. Suppression is minimal because the constraint is compatible with perceptual reality — practitioners can simultaneously observe changes and frame themselves as maintaining continuity. Theater ratio (0.35): Low-moderate. The continuity reading has genuine explanatory content (natural drift, internal norm maintenance) but includes performative elements. The presentation of correction as 'maintaining' rather than 'imposing' has a framing function that smooths over authority struggles. As standards became more elaborate and explicit (400-800 years), the theater ratio rises slightly but remains low because the analytical content remains substantial.",
+    "perspectival_gap": "The continuity reading produces consistent classification (rope across all perspectives) because it is a coherent analytical frame that aligns beneficiary and victim relationships. Medieval practitioners benefit from continuity framing and experience low suppression. Ecclesiastical authority benefits and experiences low enforcement burden. The analytical observer sees genuine linguistic process. There is no substantial perspectival gap within the continuity reading itself — the gap exists between this reading and the rupture reading. That inter-reading gap is captured in the omega variables and the kernel_context note.",
+    "directionality_logic": "All three perspectives derive directionality (d) from their structural relationship to the constraint. Medieval practitioners are beneficiaries (their competence remains valid) with constrained exit options (career investment in scribal or clerical role) — this produces moderate d. Ecclesiastical authority are beneficiaries with arbitrage options (they can shift standards if needed) — this produces low d. The analytical observer is neutral (analytical power, analytical exit) and derives canonical d from the analytical position. All three produce low effective extractiveness (chi) because the base extraction (ε=0.18) is low and the directionality values do not amplify it.",
+    "mandatrophy_analysis": "The continuity reading avoids the mandatrophy by producing a coherent constraint type (rope) across all perspectives. The reading successfully resolves the classification puzzle by framing the phenomenon as genuine coordination (maintaining a cross-regional lingua franca) rather than hiding extraction under a coordination label or vice versa. The measurement trajectory (slowly rising theater as standards became more formalized) is consistent with a rope constraint that is not degrading into piton — the theater remains low (≤0.35) and the extractiveness remains low (≤0.22). If the measurements showed theater_ratio > 0.70, the rope would degrade to piton (institutional inertia). If extractiveness climbed to 0.46+, the reading would transition to tangled_rope (coordination + significant extraction hidden). Neither occurs under this reading's model, confirming that the constraint is indeed a low-extraction coordination mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "rupture_reading"
+    ],
+    "dual_formulation_note": "The continuity_reading and rupture_reading are two coherent readings of the same kernel (correct_latin). They have different epsilon values, different victim sets, and different beneficiary structures. This is a constraint family decomposition per the ε-invariance principle: the observable-dependent way of framing 'correct Latin' changes the structural classification. Continuity reading: ε=0.18, rope, beneficiaries=medieval_practitioners, no victims. Rupture reading: ε≥0.42, snare/tangled_rope, beneficiaries=new-system controllers, victims=practitioners excluded from new standard. The network link is influences (not forecloses or coexists_with in isolation) because the two readings create pressure on each other's legitimacy conditions: if continuity reading is accepted, rupture reading's authority narrative loses force; if rupture reading dominates, continuity reading becomes a cover story."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "rupture_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "latin_constitutes_single_evolving_system",
+        "role": "foundational",
+        "status": "holdable"
+      },
+      {
+        "atom": "correction_occurs_via_internal_norm_absorption",
+        "role": "foundational",
+        "status": "holdable"
+      }
+    ]
+  }
+}

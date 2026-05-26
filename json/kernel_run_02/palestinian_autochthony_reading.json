@@ -1,0 +1,236 @@
+{
+  "header": {
+    "constraint_id": "palestinian_autochthony_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_palestinian_autochthony_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.78,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Palestinian Legitimacy via Autochthony, Displacement Trauma, and Right of Return",
+    "topic_domain": "political_theory/international_relations/territorial_sovereignty",
+    "requires_active_enforcement": false,
+    "beneficiaries": [],
+    "victims": [
+      "palestinian_population",
+      "territorial_sovereignty_claim"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Dispossessed (Trapped Perpetual Refugee)",
+      "comment": "PERSPECTIVE 1: DISPOSSESSED PALESTINIAN POPULATION (SNARE) — Powerless agents with no exit from displacement regime. Structural bars to return, repatriation, or land restitution are maintained through military force, legal prohibition, and settlement expansion. The constraint extracts territorial rights, property, and freedom of movement. Suppression is maximal — trapped by denial of return, denial of citizenship in origin lands, confinement to fragmented territories. Theater ratio is moderate because the dispossession is structurally transparent — the extraction is visible and acknowledged by all parties, not obscured by performative ritual."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Palestinian Authority and Civil Society",
+      "comment": "PERSPECTIVE 2: PALESTINIAN AUTHORITY & CIVIL SOCIETY (TANGLED ROPE) — Moderate institutional power with constrained exit. Experience coordination function: managing water resources, coordinating humanitarian response, maintaining administrative infrastructure in fragmented territories. Simultaneous extraction: limited territorial control, revenue dependency on external sources, security sector subordination. Active enforcement required to maintain both coordination and extraction — Israeli military administration and administrative structures overlap with PA governance. Mixed experience: genuine coordination problems solved, genuine extraction of sovereignty."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Community (UN, NGOs, States)",
+      "comment": "PERSPECTIVE 3: INTERNATIONAL COMMUNITY (ROPE) — Institutional actors with arbitrage options. Experience the constraint as a coordination problem to be managed: humanitarian access, refugee status, international law compliance, two-state solution frameworks. Derive benefit from maintaining status quo (stable international order), from being positioned as mediator/arbiter (diplomatic leverage), and from selective enforcement (some violations flagged, others normalized). No direct extraction from Palestinian population — benefits are indirect (institutional role, diplomatic capital). Low suppression relative to other perspectives — international actors retain mobility and can exit (diplomatic recognition, aid withdrawal, etc.)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Palestinian Resistance and Rights Movements",
+      "comment": "PERSPECTIVE 4: PALESTINIAN RESISTANCE & RIGHTS MOVEMENTS (SNARE) — Organized agents (PLO, BDS, civil society) face severe suppression (designation as terror, arrest, movement restriction, media blackout) for asserting the legitimacy claim itself. The constraint extracts not just territory but also voice — suppression of discourse is part of the extraction mechanism. Constrained exit (can organize but face severe retaliation) rather than trapped (some mobility retained through diaspora networks, international support). Classification remains snare because organized agents, despite higher power than powerless perspective, still experience net extraction without corresponding coordination benefit."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Palestinian Diaspora and External Rights Constituencies",
+      "comment": "PERSPECTIVE 5: PALESTINIAN DIASPORA & EXTERNAL CONSTITUENCIES (SNARE) — Powerful institutional and civil society actors (diaspora networks, BDS movement, international Palestinian solidarity) retain mobility and can organize globally. However, they experience the constraint as extractive in a different register: their voice is marginalized in international forums, their legitimacy claims are suppressed by counternarrative, their rights assertions face institutional and social friction. Mobile and powerful relative to trapped Palestinians, yet still experiencing extraction through discursive and institutional mechanisms. Snare classification reflects that even powerful external agents cannot override the core constraint structure — they experience it as immutable suppression rather than a coordination problem they can solve."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Historical Necessity View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / HISTORICAL NECESSITY VIEW (MOUNTAIN) — From a universal/civilizational framing, territorial displacement and demographic change are presented as inevitable historical processes ('demographic realities,' 'security necessities,' 'irreversible settlements'). This perspective sees the constraint as a natural feature of modern state formation — all nation-states involved displacements; territorial claims clash irreducibly; some injustices cannot be remedied at scale. The mountain framing naturalizes what this reading declares as constructed injustice. Engine's false summit detection will flag: beneficiaries exist (Israeli state, settler constituencies), the extraction is structurally transparent, and the 'inevitability' framing serves to suppress remedy discourse. The mountain is a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "return_feasibility_threshold",
+      "question": "Is the right of return a structurally realizable remedy or is it invoked as a non-negotiable principle precisely because the structural barriers make it unrealizable?",
+      "resolution_mechanism": "Empirical analysis: survey of return rates in historical displacement cases (post-WWII Europe, partition India-Pakistan, Cyprus); modeling of integration timelines and resource requirements; comparison with actual Palestinian return willingness vs negotiated return quotas in past agreements",
+      "impact": "If realizable: constraint classification shifts toward tangled_rope (coordination problem with solution path). If unrealizable but asserted: constraint remains snare (impossibility-principle used to suppress remedy discourse, making the claim itself the extraction mechanism). If asymmetrically realizable (subset returns negotiable, large-scale return blocked): snare confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural feasibility of right of return as remedy"
+    },
+    {
+      "id": "autochthony_claim_grounding",
+      "question": "Does Palestinian autochthony claim ground legitimacy in continuous habitation (evidentiary base), in indigenous rights frameworks (normative base), in UN resolutions (legal base), or in displacement injustice requiring remedy (remedial base)? Are these grounding types compatible or in tension?",
+      "resolution_mechanism": "Historiographical analysis: archaeological evidence, Ottoman and British administrative records, census data, oral histories. Normative analysis: consistency of indigenous rights frameworks with Palestinian legal position. Legal analysis: UN resolution 242, 194, current international law status. Remedial analysis: whether injustice argument depends on or is independent of autochthony evidence.",
+      "impact": "If grounded primarily in continuous habitation: vulnerability to counterclaim via demographic change evidence. If grounded in indigenous rights: exposure to critique of indigenous framework applicability to settled agricultural societies. If grounded in injustice/remedy: strongest against empirical counterargument but faces question of whether remedy is symmetrical or asymmetrical. Mixing grounds creates ambiguity in what would falsify or validate the claim.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Grounding type and compatibility of Palestinian autochthony claim"
+    },
+    {
+      "id": "displacement_trauma_perpetuation_mechanism",
+      "question": "Is trauma perpetuation (intergenerational transmission of displacement memory, institutional reinforcement of refugee status, prevention of normalization) a structural feature of the displacement regime itself, or is it a byproduct of failed integration policies?",
+      "resolution_mechanism": "Comparative trauma studies: displacement trauma outcomes in cases where integration was offered vs cases where integration was structurally blocked; measurement of institutional vs psychological perpetuation mechanisms; analysis of refugee camp governance structures and their role in sustaining displacement identity",
+      "impact": "If structural feature: suppression is intentional and the constraint is purely extractive (snare). If byproduct: constraint contains mixed coordination-extraction (tangled rope toward integration failure). Changes whether trauma is diagnostic of oppression or of incomplete transition.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether displacement trauma perpetuation is structural or contingent"
+    },
+    {
+      "id": "competing_autochthony_claim",
+      "question": "Does the zionist_refuge_reading's claim to Jewish historical connection to the same territory as an autochthony claim (ancient Jewish kingdoms, rabbinic tradition, diaspora return aspiration) logically foreclose or coexist with Palestinian autochthony claim?",
+      "resolution_mechanism": "Historiographical analysis: comparative strength of evidence bases for Jewish and Palestinian continuous habitation. Normative analysis: whether autochthony is a status that can be held simultaneously by two groups or is zero-sum. Legal analysis: how international law handles competing autochthony claims. Philosophical analysis: whether 'return' (diaspora repatriation) and 'autochthony' (never-left presence) can both ground territorial legitimacy.",
+      "impact": "If forecloses: only one autochthony claim can be valid in any single framework, and choosing Palestinian reading means rejecting Jewish historical claim (high conflict potential, foreclosure gate applies). If coexists: both claims remain live but create asymmetric legitimacy structure (zionist reading emphasizes return, Palestinian emphasizes presence — different grounds, both claimed). Determines whether reading relations should include forecloses (rare) or coexists_with (more common in territorial disputes).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Logical relationship between Palestinian and Jewish autochthony claims"
+    },
+    {
+      "id": "one_state_vs_two_state_structural_delta",
+      "question": "Does the Palestinian autochthony reading entail one-state solution (Palestinians + Israelis in shared polity) or is it compatible with bounded two-state coexistence where autochthony is exercised within Palestinian state territory?",
+      "resolution_mechanism": "Textual analysis: statements from Palestinian authorities, civil society, and rights movements on territorial scope of autochthony claim. Comparative analysis: how autochthony claims function in multicultural states vs ethnonational states. Scenario modeling: integration outcomes under one-state vs two-state configurations.",
+      "impact": "If one-state entailed: constraint structure shifts from territorial sovereignty dispute to legitimacy dispute within shared polity (different classification topology). If two-state compatible: autochthony claim is about exercise of self-determination within defined territory, and coexistence reading becomes structurally possible. Changes whether coexistence_reading truly coexists or is foreclosed.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Scope of Palestinian autochthony claim: one-state vs two-state compatibility"
+    },
+    {
+      "id": "remedy_symmetry_asymmetry",
+      "question": "Is the remedial argument symmetric (both sides entitled to equivalent restitution and return) or asymmetric (Palestinian displacement is unique injustice requiring singular remedy)?",
+      "resolution_mechanism": "Historiographical analysis: comparison with other mid-20th-century mass displacements (India-Pakistan partition, Greek-Turkish population exchange, Nazi expulsion of ethnic Germans). Normative analysis: whether singular injustice requires singular remedy vs whether all displacement claims are equivalent. Legal analysis: international law treatment of return rights across different displacement contexts.",
+      "impact": "If symmetric: constraint grounds remedy in universal principles of repatriation, and zionist_refuge_reading's displacement narrative (Jewish diaspora centuries earlier) becomes relevant comparative claim. If asymmetric: constraint grounds remedy in specific historical injustice timeline and scope, and zionist reading is disanalogy. Determines whether compensation should include Israeli return rights for post-1948 displacement of Jewish communities, or whether Palestinian return is singular entitlement.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Symmetry of remedial claims in displacement justice framework"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The Palestinian autochthony reading grounds legitimacy claims in three structural arguments: (1) continuous habitation of Palestinian territories across centuries, with documented presence in Ottoman, British, and post-Mandate periods; (2) displacement trauma from 1948 and subsequent wars as ongoing injustice requiring remedy; (3) right of return as a non-negotiable principle grounded in both UN resolution 194 and natural justice. This reading declares the Israeli state's territorial legitimacy as contested and its continued settlement and administrative control as extractive occupation. The constraint manifests as suppression of Palestinian voice in discourse, denial of return and repatriation, confinement to fragmented territories, and institutional perpetuation of refugee status across generations. The reading is ONE READING of the contested kernel 'territorial legitimacy dual,' which also encompasses zionist_refuge_reading (Jewish historical connection and diaspora return aspiration) and two_state_coexistence_reading (bounded sovereignty division). The autochthony reading and zionist reading employ different historical timescales: the autochthony reading privileges continuous habitation across the last millennium and emphasizes recent displacement as injustice; the zionist reading privileges ancient Jewish presence and modern return after diaspora as remedy. The coexistence reading brackets the competing legitimacy arguments and frames the problem as a coordination challenge to be managed through institutional division.",
+    "key_agents": [
+      "Palestinian Population: Primary victim (powerless/trapped) — subject to displacement regime, confinement, denial of return; bears full extraction",
+      "Palestinian Authority & Civil Society: Secondary institutional actor (moderate/constrained) — manages coordination functions while experiencing extraction of sovereignty; experiences both organizational benefits and institutional subordination",
+      "International Community (UN, NGOs, States): Institutional mediator (institutional/arbitrage) — derives benefit from managing status quo; maintains diplomatic role while selective enforcement of remedies",
+      "Palestinian Resistance & Rights Movements: Organized victim (organized/constrained) — asserts legitimacy claim while suppressed; experiences extraction via discourse suppression and organizational constraint",
+      "Palestinian Diaspora & Solidarity Movements: External powerful constituency (powerful/mobile) — retains mobility and global platform but experiences institutional suppression of legitimacy assertion",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing displacement as inevitable historical process; false summit framing presents contingent regime as natural law"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts territorial rights, property, freedom of movement, and dignity across generational timescale. Unlike transactional extraction (explicit payment for service), this reading identifies extraction through structural denial: denial of return, denial of repatriation, denial of property restitution, denial of full citizenship. The measurement trajectory shows rising extractiveness over the interval (0.48 → 0.68) as settlement expansion continues, territorial fragmentation deepens, and integration into Israeli state governance increases without corresponding Palestinian sovereignty or return rights. Suppression (0.78): Very high. Structural suppression includes military occupation, legal prohibition of return, settlement expansion preventing territorial contiguity, administrative control of water and resources, movement restrictions, and institutional suppression of return discourse. Psychological suppression includes displacement trauma perpetuation, normalization prevention, and institutional refugee status maintenance. Theater ratio (0.55): Moderate. The extraction is structurally transparent — dispossession is visible and acknowledged by all parties, not obscured by performative ritual. However, theater emerges in international diplomatic discourse: 'peace process' framing performs solution-seeking while structural barriers to implementation remain; 'two-state solution' language performs path-to-remedy while settlements expand; humanitarian discourse performs concern while return rights are denied. Rising theater ratio reflects increasing gap between diplomatic performance and structural stasis.",
+    "perspectival_gap": "The constraint exhibits maximal perspectival variance. Trapped Palestinians see pure extraction without coordination benefit (Snare). Palestinian authorities experience mixed coordination and extraction — they solve real administrative problems while experiencing sovereignty subordination (Tangled Rope). International mediators see a coordination challenge to be managed — they occupy position of neutral arbiter and derive diplomatic benefit from doing so (Rope). Palestinian resistance sees extraction through discourse suppression — organization and assertion of rights are themselves suppressed (Snare). Diaspora and solidarity movements, despite mobility and power, experience institutional suppression of their legitimacy claims (Snare). The civilizational analytical observer risks seeing displacement as a natural historical feature of state formation — this is a false summit, naturalizing what the reading declares as constructed injustice. The perspectival gap reveals that the same structural phenomenon is experienced as immutable law (mountain), as manageable coordination problem (rope), and as extractive oppression (snare) depending on observer position.",
+    "directionality_logic": "Each agent's directionality value (d) reflects their structural position relative to the constraint. Trapped Palestinians with no exit (d ≈ 0.95) experience maximum f(d) ≈ 1.42, amplifying experienced extraction to near-maximum. Palestinian authorities with constrained exit (d ≈ 0.65) experience f(d) ≈ 1.00, moderate amplification, and perceive mixed coordination-extraction (tangled rope). International institutional mediators with arbitrage options derive benefit (d ≈ 0.10) and experience negative or minimal f(d), perceiving coordination function (rope). Organized resistance with constrained exit (d ≈ 0.70) experience high f(d) ≈ 1.15, and perceive extraction despite organizational power (snare). Diaspora with mobile exit but institutional suppression of discourse (d ≈ 0.75) experience f(d) ≈ 1.18, maintaining snare perception despite mobility. The engine computes d from victim/beneficiary declarations and exit options; this reading declares Palestinian population and territorial sovereignty claim as victims, with no structural beneficiaries (unlike false-summit mountains, beneficiaries from the regime are institutional actors external to the territorial claim itself — see omega variable on competing autochthony claims and one-state vs two-state structural delta).",
+    "mandatrophy_analysis": "KERNEL READING INSTANTIATION: This reading resolves potential mandatrophy by declaring the constraint as snare from the primary victim perspective and by routing the competing autochthony and remedial grounding questions to omega variables. The reading does not claim that snare is the 'true' classification for all contexts — it claims this is what the structure produces from the Palestinian autochthony framing. The sibling readings (zionist_refuge_reading, two_state_coexistence_reading) will produce different classifications from their different axioms and reference frames. The mandatrophy is resolved by the committer frame: each reading is one reading of a contested kernel, not a claim to universal classification.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel 'territorial_legitimacy_dual'. The reading instantiates the Palestinian autochthony position: legitimacy grounded in continuous habitation, displacement as ongoing injustice, and right of return as non-negotiable. The KERNEL is the stabilized (though contested) territorial arrangement and its legitimacy justifications, grounded in UN resolutions, Ottoman and British administrative history, and competing national narratives. SIBLING READINGS: (1) zionist_refuge_reading — legitimacy grounded in Jewish historical connection and diaspora return aspiration; (2) two_state_coexistence_reading — legitimacy grounded in institutional division and bounded sovereignty. This reading forecloses neither sibling in a single party's framework (different parties hold different readings), but it influences them: declaring Palestinian autochthony and return as non-negotiable creates structural pressure on the coexistence reading (whether two states can coexist when one withholds return rights). The zionist reading coexists with this reading (both remain live in public discourse) but with high tension and competing empirical and normative bases."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "zionist_refuge_reading",
+      "two_state_coexistence_reading",
+      "settler_colonial_extraction_logic",
+      "right_of_return_enforcement"
+    ],
+    "dual_formulation_note": "The Palestinian autochthony reading is part of a constraint family on territorial legitimacy. The zionist_refuge_reading has its own ε, perspectives, and axioms instantiating the competing legitimacy claim. The two_state_coexistence_reading attempts to bracket competing claims and treat the problem as coordination rather than legitimacy dispute. Each story is independently valid as a reading of the kernel; they are linked via network.affects_constraints to show family structure and mutual influence. The measurement trajectories differ: autochthony reading shows rising extractiveness as settlements expand; coexistence reading shows therapy-like attempted stabilization that fails (repeated 'peace process' cycles); zionist reading shows affirming trajectory of demographic consolidation."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "zionist_refuge_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "two_state_coexistence_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "continuous_habitation_legitimates_territorial_claim",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "displacement_injustice_requires_remedy_including_return",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "ottoman_period_palestinian_presence",
+    "drift_state": {
+      "moment": "contemporary_post_1948",
+      "direction": "practice_drift",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  }
+}

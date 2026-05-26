@@ -1,0 +1,247 @@
+{
+  "header": {
+    "constraint_id": "collective_militia_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_collective_militia_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.82,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Second Amendment as Collective Militia Right (State Regulatory Authority Reading)",
+    "topic_domain": "constitutional_law/federalism/political_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "state_governments",
+      "federal_regulatory_authority"
+    ],
+    "victims": [
+      "individual_gun_owners",
+      "firearms_industry",
+      "personal_self_defense_claimants"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Individual Gun Owner",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL GUN OWNER (SNARE) — Under this reading, the Second Amendment provides no personal constitutional protection for firearm possession. The owner is trapped: the constitutional text itself (under the collective reading) denies the claim to individual self-defense as a constitutional right. Exit from this constraint would require abandoning the claim that the Constitution protects individual gun ownership — logically impossible for someone seeking constitutional recourse. Maximum extraction with maximum suppression: the victim cannot exercise the right they claim exists, and the constitutional text is read as foreclosing their claim entirely."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "State Governments (Legislative Branch)",
+      "comment": "PERSPECTIVE 2: STATE GOVERNMENTS / LEGISLATIVE BRANCH (ROPE) — Under this reading, state legislatures benefit directly: they retain plenary authority to regulate individual firearm possession without federal constitutional constraint. The Second Amendment poses no federalism barrier to state gun control, registration, prohibition, or licensing regimes. States experience this constraint as coordination: the prefatory clause clarifies that militia purposes dominate, legitimating state regulatory power. This is a beneficiary perspective with near-total exit optionality (arbitrage) — states can regulate firearms at will within the federalism framework. Low experienced extraction because extraction flows toward the state, not away."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Firearms Industry and Pro-Gun Advocacy Organizations",
+      "comment": "PERSPECTIVE 3: FIREARMS INDUSTRY & PRO-GUN ORGANIZATIONS (TANGLED ROPE) — These organized actors face constrained exit but also benefit from the constraint in complex ways. They benefit from regulatory clarity (state control is predictable, federally fragmented but legally stable once established in each state). They bear significant extraction through sweeping state regulatory authority. Their exit option is constrained: they can litigate the reading, organize politically, or relocate to more favorable state jurisdictions, but these carry high costs. Moderate-high extraction because both coordination (clear federal limits on the constraint) and asymmetric imposition coexist."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Federal Government (Executive Branch)",
+      "comment": "PERSPECTIVE 4: FEDERAL GOVERNMENT / EXECUTIVE BRANCH (TANGLED ROPE) — The federal government under this reading can enforce cooperative federalism through conditional grants and spending power, but faces constitutional constraint against directly disarming state militias. The federal executive experiences both benefit (clear federalism boundary prevents state militias from becoming federal security threats, aligning with militia regulation authority) and constraint (cannot use Second Amendment as basis for nationwide gun control, must route authority through Commerce Clause, Necessary and Proper Clause, or spending conditions). Exit option is constrained because the constitutional reading itself limits federal strategies. Moderate extraction because both coordination (stable federalism) and regulatory constraint coexist."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Textualist Reading as Natural Law)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / TEXTUALIST VIEW (MOUNTAIN) — From a civilizational scope, the collective reading can present itself as a natural law of constitutional interpretation: the prefatory clause logically determines the operative clause; militia purposes are immutable; individual rights interpretation is a modern deviation from the text's essential meaning. This perspective treats the reading as an inherent property of language and logic. However, the structural data reveals this as a false summit: the presence of organized beneficiaries (state governments, federal power centers) with direct regulatory interests contradicts the mountain classification. This is a reading that benefits identifiable institutional actors, not an immutable fact about text."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Progressive Legal and Academic Movement",
+      "comment": "PERSPECTIVE 6: PROGRESSIVE LEGAL MOVEMENT (PITON) — Organizations committed to gun control regulation (Brady Campaign, Giffords, many law schools) institutionally promote this reading. For these actors, the constraint now performs inertial function: the reading is institutionally maintained as orthodoxy in many legal institutions, but the actual leverage has degraded since the District of Columbia v. Heller (2008) Supreme Court decision, which rejected this reading and established an individual rights doctrine. The theater ratio is relatively low (0.35) for this perspective because the institutions claim to be doing serious constitutional interpretation, not mere ritual. But from the vantage of post-Heller doctrine, this reading's institutional presence is largely maintained through academic inertia and political commitment rather than doctrinal force. This is a degraded constraint that persists through institutional loyalty rather than judicial power."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "prefatory_clause_binding_force",
+      "question": "Does the prefatory clause ('well regulated Militia, being necessary') logically bind the operative clause's scope, or does it merely state a rationale that does not limit operative clause applicability?",
+      "resolution_mechanism": "Comparative analysis of 18th-century constitutional drafting practices (preambles vs operative text in state constitutions, Federalist Papers interpretation); linguistic philosophy analysis of how prefatory clauses function in legal texts; historical evidence of founders' intent regarding individual vs collective militia purpose.",
+      "impact": "If prefatory clause is binding: collective reading is structurally sound, ε remains 0.78, classification remains Snare. If prefatory clause is merely rationale: individual rights reading becomes structurally viable, ε drops to 0.25, classification shifts to Rope or Mountain (coordination only). This omega resolves the kernel entirely — there is no third middle ground where both readings coexist.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the prefatory clause logically binds the operative clause scope"
+    },
+    {
+      "id": "militia_definition_historical_scope",
+      "question": "In 18th-century constitutional context, did 'militia' denote: (a) exclusively organized state military formations under state control, (b) able-bodied citizens generally capable of bearing arms, or (c) both meanings simultaneously with ambiguity resolved by context?",
+      "resolution_mechanism": "Examination of militia acts pre-1791 (state and colonial level); Dictionary of the Scots Law and legal terminology of the period; contemporary state constitutional provisions using 'militia'; Federalist and Anti-Federalist writings discussing militia provisions.",
+      "impact": "If (a) only state formations: collective reading is texturally sound. If (b) citizens generally: individual reading gains traction. If (c) ambiguous: both readings can claim historical warrant, shifting this from an empirical question to a normative interpretive choice.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Historical definition of militia in 18th-century constitutional context"
+    },
+    {
+      "id": "reading_stability_post_heller",
+      "question": "Is the collective reading theoretically viable as a constitutional interpretation after District of Columbia v. Heller (2008), or does Heller's majority opinion logically foreclose it as a live judicial option in federal courts?",
+      "resolution_mechanism": "Close reading of Heller majority opinion's treatment of collective reading; analysis of subsequent Supreme Court precedent (McDonald, NYSRPA v Bruen); assessment of whether Heller created binding precedent on the prefatory-clause interpretation or left space for reinterpretation.",
+      "impact": "If Heller forecloses: the reading persists as academic and political position but has degraded judicial force (piton status confirmed). If Heller leaves space: reading remains a live constitutional option. If Heller is itself vulnerable to reversal: reading's institutional isolation may be temporary.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Heller precedent viability after 2008"
+    },
+    {
+      "id": "interstate_regulatory_variation_sustainability",
+      "question": "Can a federalism regime based on near-total state regulatory discretion over individual firearm possession (per this reading) sustain itself as state laws diverge toward extreme variation (some states near-total prohibition, others near-total permission)?",
+      "resolution_mechanism": "Historical analysis of how similar federalism regimes (contraception pre-Griswold, marriage law pre-Obergefell) handled extreme interstate variation; measurement of current state-to-state divergence in firearm regulation; analysis of federal enforcement capacity against sanctuary jurisdictions.",
+      "impact": "If variation is sustainable: the snare structure holds indefinitely. If variation creates instability: federalism regime may collapse, forcing either federal preemption (collective reading becomes inoperable) or Supreme Court intervention (reading is judicially rejected).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sustainability of extreme interstate regulatory variation under this reading"
+    },
+    {
+      "id": "identity_lock_in_constitutional_reading",
+      "question": "To what extent is adherence to the collective reading bound up with institutional identity commitments (progressive legal establishment, state sovereignty advocates, gun control organizations) such that the reading persists through identity fusion rather than doctrinal force?",
+      "resolution_mechanism": "Longitudinal analysis of law school curriculum emphasis on collective reading before and after Heller; tracking of constitutional scholars' positions correlating with political/institutional affiliation; analysis of how many scholars maintain the reading despite acknowledging Heller's textual difficulties.",
+      "impact": "If primarily identity-locked: the reading's institutional persistence is inertial (piton) and vulnerable to generational turnover or institutional realignment. If doctrinal force dominates: the reading has structural independence from political commitments.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of identity-lock in institutional adherence to collective reading"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.72,
+      "id_override": "extractiveness_1791"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 150,
+      "value": 0.76,
+      "id_override": "extractiveness_1941"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.81,
+      "id_override": "extractiveness_1991"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 217,
+      "value": 0.78,
+      "id_override": "extractiveness_2008_post_heller"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28,
+      "id_override": "theater_1791"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 150,
+      "value": 0.32,
+      "id_override": "theater_1941"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.38,
+      "id_override": "theater_1991"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 217,
+      "value": 0.35,
+      "id_override": "theater_2008_post_heller"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 217
+  },
+  "commentary": {
+    "narrative_context": "The collective militia reading interprets the Second Amendment as granting regulatory authority exclusively to state governments over militia formation and maintenance, with the prefatory clause ('well regulated Militia, being necessary to the security of a free State') determining the operative clause's scope entirely. Under this reading, individual possession of firearms falls outside the Amendment's protective scope — individuals possess no constitutional right to bear arms for self-defense, hunting, sport, or other personal purposes. The beneficiaries are state governments and the federal system's federalism structure (which permits state-level regulation without constitutional constraint from an individual rights doctrine). The victims are individual gun owners, the firearms industry, and anyone claiming a personal constitutional right to armed self-defense. This reading creates extreme asymmetry: state governments can regulate, license, register, restrict, or prohibit civilian firearm ownership without violating the Second Amendment, because the Amendment speaks only to state militia purposes. The constraint exhibits high extractiveness (0.78) and high suppression (0.82) because the operative mechanism is constitutional denial: the reading forecloses the victim's entire claim to constitutional protection by interpreting the text as not addressing their interest at all. Theater ratio is relatively low (0.35) because the reading makes a straightforward textual argument (prefatory clause governs operative clause) rather than relying on procedural or institutional theater. However, post-Heller (2008), the reading's institutional position has degraded: it is maintained primarily through academic loyalty, political commitment, and state regulatory practice, not through Supreme Court doctrine. This qualifies as Piton dynamics from certain perspectives. The constraint is a kernel reading, one of three structurally distinct interpretations of the same constitutional text.",
+    "key_agents": [
+      "State Governments (Legislative & Executive Branches): Primary beneficiaries (institutional/arbitrage) — retain plenary regulatory authority over civilian firearms with no Second Amendment constitutional constraint",
+      "Federal Government (Executive & Legislative Branches): Secondary beneficiary (institutional/constrained) — gains federalism clarity but constrained in direct federal gun control authority",
+      "Individual Gun Owners: Primary victims (powerless/trapped) — denied constitutional protection by the reading's textual interpretation; no exit option from constitutional claim",
+      "Firearms Industry: Secondary victim (organized/constrained) — faces sweeping state regulatory regimes; constrained exit through litigation, relocation, or political advocacy",
+      "Progressive Legal Establishment & Gun Control Organizations: Institutional maintainers (organized/constrained) — institutionally promote reading; face degraded doctrinal force post-Heller; maintain through inertia (Piton perspective)",
+      "Supreme Court (Post-Heller): Analytical authority (institutional/analytical) — has rejected collective reading; enforces individual rights doctrine despite historical plausibility of collective reading"
+    ],
+    "logic_rationale": "Extractiveness (0.78): High. The reading grants state governments near-total regulatory discretion over individual firearm possession without constitutional constraint. This is extreme asymmetry — states can extract by prohibiting, regulating, licensing, registering, or taxing firearms at will. The extraction rises from 0.72 to 0.81 between 1791 and 1991 as states increasingly exercise this regulatory authority and federal courts (pre-Heller) deferred to it. Post-Heller (2008), extractiveness drops slightly to 0.78 because Heller reestablished an individual rights baseline that constrains but does not eliminate state regulatory authority. Suppression (0.82): Very high. Individual gun owners have no constitutional exit from state regulation. Their exit options are trapped (cannot claim constitutional protection) or constrained (can relocate to more permissive state, but this is costly). The suppression reflects the constitutional reading's mechanism: it denies the victim's claim not through external barriers but through textual interpretation. Theater ratio (0.35): Moderate-low. The collective reading makes a direct textual argument (prefatory clause determines operative clause meaning) without relying on procedural complexity or institutional theater. However, the reading's persistence post-Heller reflects institutional inertia rather than doctrinal force, suggesting theater has increased in the institutional maintenance (piton dynamics) even as the reading's core argument remains straightforward.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. State governments see coordination (Rope) — the reading legitimates their regulatory authority and clarifies federalism boundaries. The individual gun owner sees pure extraction (Snare) — the reading denies their constitutional claim entirely with maximum suppression. The firearms industry sees mixed dynamics (Tangled Rope) — they benefit from regulatory clarity but suffer from sweeping regulatory authority. The progressive legal movement sees inertial maintenance (Piton) — the reading is institutionally promoted despite post-Heller doctrinal degradation. The Supreme Court's analytical perspective (post-Heller) treats the reading as judicially foreclosed but acknowledges its historical plausibility. The false summit candidate is the analytical observer from a civilizational scope (Mountain perspective) — the reading can present itself as a necessary consequence of textual interpretation and linguistic logic, but the structural data (identifiable state beneficiaries with direct regulatory interests) reveals this as naturalization of a politically motivated interpretive choice.",
+    "directionality_logic": "Directionality (d) varies dramatically across perspectives. State governments as beneficiaries with arbitrage exit derive d ≈ 0.08 (full beneficiary), producing negative or minimal effective extraction. Individual gun owners as victims with trapped exit derive d ≈ 0.95 (full target), producing maximum experienced extraction through the sigmoid f(d) ≈ 1.42. The firearms industry as organized victims with constrained exit derives d ≈ 0.60 (moderate target), producing moderate-high experienced extraction. These directionality gaps create the perspectival divergence: the same constitutional reading produces different experienced extractiveness depending on the observer's structural position relative to the constraint. The analytical perspective uses canonical d ≈ 0.73 for the analytical power atom, producing moderate-high experienced extraction in the analyst's evaluation.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by explicit classification at 0.78 extractiveness: the collective reading IS a snare (not a rope misclassified as snare, not a tangled rope misclassified as snare). The extraction is genuine and asymmetric — state regulatory authority benefits states while denying individual claims. The coordination function is present but minimal: states might claim that militia regulation requires clarity about individual firearm access, but the coordination benefit flows overwhelmingly to the state. Under the classical mandatrophy test (whether high extraction is coordinating an essential problem or merely extracting), the collective reading fails the coordination gate: the problem being coordinated (state militia maintenance) does not require that individual self-defense claims be constitutionally foreclosed. Alternative architectures (e.g., individual rights with state regulatory authority, as in current doctrine post-Heller) solve the coordination problem without the extraction. Therefore, the extraction is mandatrophy-confirmed as genuine extraction rather than misclassified coordination.",
+    "kernel_context": "This constraint instantiates the 'collective_militia_reading' of the contested kernel 'second_amendment_text'. The kernel is the fixed text of the Second Amendment: 'A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed.' This reading prioritizes the prefatory clause as determinative of scope, making individual possession claims fall outside the operative clause's protection. The sibling readings are: (1) 'individual_rights_reading' — the operative clause protects individual possession independent of militia purpose; (2) 'sophisticated_collective_reading' — the prefatory clause ratifies militia purposes but does not foreclose individual purposes for militia-capable persons. This reading (collective_militia_reading) forecloses the individual_rights_reading within a strict textual framework (the prefatory clause logically determines scope, individual claims fall outside), coexists with the sophisticated_collective_reading within different judicial and academic constituencies, and influences the sophisticated_collective_reading by establishing the highest burden of proof for individual-rights claims. The reading's institutional authority grounds itself in textualist interpretation lineage and is maintained through academic/political commitment despite post-Heller doctrinal eclipse."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "individual_rights_reading",
+      "sophisticated_collective_reading",
+      "federalism_militia_boundaries"
+    ],
+    "dual_formulation_note": "The collective_militia_reading is one constraint within a three-member kernel family (second_amendment_text). All three readings interpret the same constitutional text but produce different ε values and beneficiary/victim structures. The collective reading (ε=0.78, Snare) reflects high regulatory extraction. The individual_rights_reading (ε≈0.25, Mountain or Rope) reflects minimal extraction under individual protection doctrine. The sophisticated_collective_reading (ε≈0.50, Tangled Rope) reflects mixed coordination and extraction. These are not the same constraint viewed from different angles — they have structurally different ε values, beneficiary structures, and suppression mechanisms."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "individual_rights_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "sophisticated_collective_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "prefatory_clause_scope_determinative",
+        "role": "foundational",
+        "status": "holdable"
+      },
+      {
+        "atom": "militia_purpose_exclusive",
+        "role": "foundational",
+        "status": "holdable"
+      }
+    ],
+    "reference_frame": "state_militia_regulation_framework",
+    "drift_state": {
+      "moment": "post_heller_2008",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

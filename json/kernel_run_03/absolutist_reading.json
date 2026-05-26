@@ -1,0 +1,253 @@
+{
+  "header": {
+    "constraint_id": "absolutist_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_absolutist_reading",
+    "measurement_id_prefix": "absol"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
+    "human_readable": "Absolutist Speech Protection (Brandenburg Standard)",
+    "topic_domain": "constitutional_law/political_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_speech_actors",
+      "organized_political_minorities",
+      "media_corporations"
+    ],
+    "victims": [
+      "marginalized_communities",
+      "targeted_groups",
+      "collective_epistemic_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Targeted Marginalized Communities",
+      "comment": "PERSPECTIVE 1: MARGINALIZED COMMUNITIES (SNARE) — Bear aggregate harm from protected hate speech, incitement short of imminent action, and coordinated harassment. Cannot exit the speech environment; suppressed by both the speech itself and the legal prohibition against responding through regulation. Biological/geographic constraints lock exposure. Maximum experienced extraction with zero exit capacity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Journalists and Investigative Media",
+      "comment": "PERSPECTIVE 2: JOURNALISTS AND INVESTIGATIVE MEDIA (TANGLED ROPE) — Benefit from absolute speech protection when exposing state/corporate misconduct; also face coordinated harassment campaigns and targeted doxxing under the same protection. Mixed extraction: protection enables accountability work but exposes individual journalists to harms they cannot legally address. Constrained exit — can reduce coverage of controversial topics at professional cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Institutional Speech Actors (Civil Liberties Organizations)",
+      "comment": "PERSPECTIVE 3: INSTITUTIONAL SPEECH ACTORS (ROPE) — ACLU, free-speech advocacy groups, civil liberties legal infrastructure benefit materially from the absolutist standard. Defend the principle, build litigation dockets, secure funding, establish institutional prestige. Experience the constraint as pure coordination: the principle aligns their material interests perfectly with their stated values. Net beneficiary with arbitrage exit capacity (can reposition if political climate shifts)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Democratic Self-Correction Movements",
+      "comment": "PERSPECTIVE 4: DEMOCRATIC SELF-CORRECTION MOVEMENTS (SCAFFOLD) — Organized grassroots and civil society responses to harmful speech (counter-speech, platform accountability, social pressure on speakers). See the absolutist constraint as a temporary coordination challenge with a sunset: they are building alternative verification pathways (social media platform policies, advertiser pressure, academic norms, counter-narrative infrastructure) that constrain harmful speech without legal suppression. Constrained by the legal immunity layer but building workarounds with sunset logic (10-15 year horizon for cultural norm shifts)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Judicial Review System (Doctrine Administration)",
+      "comment": "PERSPECTIVE 5: JUDICIAL REVIEW SYSTEM (PITON) — Brandenburg doctrine is administered as immutable constitutional law, but its functional role has atrophied. Judges apply the imminence test mechanically to cases that have already sorted through market-driven content moderation, platform algorithms, and social coordination. The legal doctrine persists through institutional inertia and lineage authority (Warren Court precedent) long after the real content-regulation work has migrated to private platforms and social pressure. Theater ratio high: doctrine is maintained as constitutional gospel despite degraded functional verification of its core premise (that legal permissiveness protects democratic speech)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, absolute speech protection is treated as a bedrock principle of liberal democracy itself — a natural law of the political order that cannot be compromised without dissolving democracy. This perspective sees the Brandenburg standard as emerging naturally from the structure of pluralism and deliberation. However, the structural data (beneficiaries concentrated in institutional speech actors, victims concentrated in powerless groups, theater ratio elevated at judicial level) reveals this as a false summit: the 'natural law of democracy' naturalizes a contingent institutional reading that serves identifiable interests."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "aggregate_harm_causation_threshold",
+      "question": "At what aggregate harm level to targeted communities does the externality of absolutist protection become a structural extraction mechanism rather than an acceptable democratic cost?",
+      "resolution_mechanism": "Longitudinal measurement of targeted group health outcomes, harassment severity, civic participation, and sense of safety correlated with speech protection jurisprudence changes; comparative analysis across democracies with different speech thresholds",
+      "impact": "If threshold is crossed (measurable disparate impact on targeted groups): constraint reclassifies from snare→rope for marginalized perspective (acknowledging coordination function) toward snare→tangled_rope (harms become explicit extraction side effect). If no threshold is identifiable: absolutist reading maintains that distributional harm is not a relevant classification dimension.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Aggregate harm threshold for extracting reclassification"
+    },
+    {
+      "id": "coordinated_harassment_versus_individual_speech",
+      "question": "Is coordinated harassment campaigns using protected speech (doxxing, swarm attacks, threat networks) the same constraint as individual speech protection, or a structurally distinct extraction mechanism?",
+      "resolution_mechanism": "Network analysis of speech coordination: identify whether aggregate harm comes from dispersed individual speakers or from organized coordination with shared targeting. Separate statistical/causal analysis for individual speaker contribution versus network effect.",
+      "impact": "If coordinated: the constraint may decompose into two stories (individual speech protection=rope/scaffold, coordinated harassment=snare), requiring network.affects_constraints linking. If purely individual: snare classification stands, but the victims' experienced extraction is aggregated rather than individualized (different causation model, same outcome).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether aggregate harm is from individual speakers or coordinated networks"
+    },
+    {
+      "id": "imminence_threshold_drift",
+      "question": "Has the Brandenburg imminence standard's operational meaning shifted over time due to changes in communication technology and threat acceleration, such that the same doctrine applies to fundamentally different harm-causation structures?",
+      "resolution_mechanism": "Historical analysis of Brandenburg case law: extraction of the operational imminence threshold across decades; correlation with communication technology and threat acceleration rates; measurement of mean time-to-harm for contemporaneous threats versus threats at the 1969 Brandenburg standard's empirical context",
+      "impact": "If significant drift: the doctrine's functional role has changed while its text remained constant (classic piton signature). The 'imminent lawless action' standard may now permit speech harms that occur over days/weeks rather than the immediate context Brandenburg addressed. Reclassifies piton diagnosis as confirmed rather than hypothetical.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Temporal drift in Brandenburg imminence threshold across technology changes"
+    },
+    {
+      "id": "false_summit_committer_frame",
+      "question": "Is the absolutist reading's claim that speech protection is a natural law of democracy, or a contingent institutional reading that benefits identifiable actors (civil liberties organizations, institutional speakers, media corporations)?",
+      "resolution_mechanism": "Committer-frame analysis: This constraint is ONE READING of the contested kernel 'speech_protection_boundary.' The sibling readings (harm_limited_reading, balancing_reading) hold different foundational axioms about whether aggregate harm to targeted communities is a relevant constraint-classification variable. The absolutist reading forecloses the harm_limited reading's core premise: that demonstrable aggregate harm to minoritized communities constitutes sufficient grounds for narrowing the protected set. This is not a disagreement about facts; it is a disagreement about which facts matter for constitutional legitimacy.",
+      "impact": "If this reading's natural-law framing is itself a contingent institutional choice: classification domain shifts from 'inherent structure of democracy' (mountain) to 'institutional interpretation benefiting speech actors' (snare from powerless perspectives, rope from beneficiary perspectives). The false summit signature is triggered by identifiable beneficiaries + explicit naturalizing language.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether absolutist framing is natural law or contingent reading"
+    },
+    {
+      "id": "alternative_balancing_regimes_comparative",
+      "question": "In democracies that employ balancing tests rather than absolute protection (Germany, Canada, South Africa), do marginalized communities experience measurably lower harm while maintaining functional democratic speech, or does the balancing regime produce different extraction structures?",
+      "resolution_mechanism": "Comparative empirical study: measure targeted-group safety, civic participation, and harassment severity across speech regimes; measure democratic accountability, investigative journalism capacity, and government constraint across regimes; identify which regime's victims experience lower aggregate extraction.",
+      "impact": "If balancing regimes show lower harm to targets without degrading democratic function: absolutist reading is contingent choice, not natural necessity (snare classification confirmed). If balancing regimes show equivalent or worse outcomes for marginalized groups: absolutist reading's harm-externality claim is overstated (snare→tangled_rope at powerless perspective).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Comparative outcomes across speech protection regimes"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48,
+      "id_override": "absol_extract_1969"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.61,
+      "id_override": "absol_extract_1984"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.68,
+      "id_override": "absol_extract_2004"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 55,
+      "value": 0.72,
+      "id_override": "absol_extract_2024"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "absol_theater_1969"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.42,
+      "id_override": "absol_theater_1984"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.5,
+      "id_override": "absol_theater_2004"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 55,
+      "value": 0.55,
+      "id_override": "absol_theater_2024"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 55
+  },
+  "commentary": {
+    "narrative_context": "The absolutist reading of speech protection — articulated in Brandenburg v. Ohio (1969) and embedded in contemporary U.S. constitutional doctrine — treats speech as near-absolutely protected except for direct incitement to imminent lawless action. This constraint exhibits a false-summit dynamic: from the perspective of marginalized communities subject to coordinated hate speech, the doctrine functions as a snare (suppressed targets bear aggregate harm with zero exit capacity). From the perspective of civil liberties organizations defending the principle, it functions as rope (pure coordination of democratic self-defense). From the analytical observer's vantage, it functions as mountain (treated as a natural law of liberal democracy). The structural data — identifiable beneficiaries (institutional speech actors, media corporations, civil liberties infrastructure), identifiable victims (marginalized communities, targeted groups), and rising theater ratio over 55 years — reveals the mountain classification as a false summit. The absolutist reading is ONE interpretation of the contested kernel 'speech_protection_boundary.' Sibling readings (harm_limited_reading, balancing_reading) hold different foundational axioms about whether aggregate harm to minoritized communities is a relevant classification variable. The absolutist reading forecloses the harm-limited reading by treating demonstrable aggregate harm as irrelevant to the scope of protection. This is not a factual disagreement; it is a fundamental disagreement about which facts matter for constitutional legitimacy.",
+    "key_agents": [
+      "Civil Liberties Organizations (ACLU, similar): Primary beneficiary (institutional/arbitrage) — defend principle, build litigation dockets, secure funding and institutional prestige",
+      "Marginalized Communities (racial minorities, religious minorities, LGBTQ+ communities): Primary victim (powerless/trapped) — bear aggregate harm from protected hate speech, incitement short of imminence, coordinated harassment; cannot exit speech environment",
+      "Media Corporations: Secondary beneficiary (institutional/arbitrage) — benefit from absolute protection when reporting on state/corporate misconduct; also use protection to protect from editorial accountability",
+      "Investigative Journalists: Secondary victim (moderate/constrained) — benefit from protection for accountability work, face coordinated harassment under same protection",
+      "Democratic Self-Correction Movements: Organized agents (organized/constrained) — building counter-speech, platform accountability, social pressure infrastructure as workarounds to legal immunity",
+      "Judicial Review System: Institutional administrator (institutional/arbitrage) — maintains Brandenburg doctrine as constitutional law through precedent and institutional inertia",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing contingent institutional reading as inherent structure of democracy"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The absolutist reading concentrates protection benefits in institutional speech actors and media corporations while distributing harm costs to marginalized communities with minimal exit capacity. The measurement trajectory shows rising extractiveness over 55 years (0.48→0.72), reflecting technological acceleration of harm-causation (internet coordination, algorithmic amplification, instant targeting) that makes the Brandenburg imminence standard less functionally protective against modern threats. The doctrine's text remained constant while its operational context shifted, producing increasing extraction from powerless agents. Suppression (0.72): High. Marginalized communities are suppressed by three mechanisms: (1) direct harm from protected speech, (2) legal prohibition against responding through speech regulation, (3) social/institutional coordination that uses protected speech to suppress counter-speech (coordinated harassment, algorithmic amplification of hate speech). No legitimate exit mechanism exists for targeted groups. Theater ratio (0.55): Moderate. The judicial doctrine persists through lineage authority and constitutional legitimacy framing, but its functional role has migrated to private platforms and social pressure. Courts apply Brandenburg mechanically; the real content moderation occurs off-stage through advertiser pressure, platform policies, and social consequences. The doctrine is maintained as constitutional orthodoxy despite degraded verification of its core empirical premise (that legal permissiveness protects democratic speech).",
+    "perspectival_gap": "This constraint demonstrates radical perspectival divergence from a single set of base properties. The institutional speech actors see rope — pure coordination of democratic principles that align perfectly with their material interests. The civil liberties organization sees rope—their entire professional identity and funding depend on defending the principle. The marginalized communities see snare — trapped in a speech environment with no exit and maximum experienced extraction. The journalists see tangled rope — mixed coordination (enabling accountability) and extraction (face coordinated harassment). The democratic self-correction movements see scaffold — building alternative pathways to constrain harmful speech through social/market mechanisms with a generational sunset horizon. The judicial system sees piton — administrative application of a precedent whose functional role has atrophied. The analytical observer risks seeing mountain — natural law of democracy — until the structural data (beneficiaries, victims, theater ratio drift) reveals this as false-summit naturalization. The perspectival gap reveals that the absolutist reading's claim to universality is itself a contingent institutional position.",
+    "directionality_logic": "Each perspective's directionality (d) is determined by the agent's structural position relative to this specific constraint. Marginalized communities as victims with trapped exit face maximum d (≈0.95), producing high f(d) (≈1.42) and experienced χ near maximal. Institutional beneficiaries with arbitrage exit face low d (≈0.15), producing negative f(d) (≈-0.01) and experienced χ near zero or negative. Moderate agents (journalists) with constrained exit face mid-range d (≈0.65), producing moderate f(d) (≈1.00). The analytical observer's identity_locked perspective would register that the naturalization of the absolutist reading as 'inherent to democracy' is itself a captured position — the observer's analytical frame cannot see alternative readings that the framework would require examining. The engine's directionality derivation chain produces these d values automatically from beneficiary/victim declarations; no override is needed.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by revealing that the absolutist reading's snare classification (for powerless agents) is not reconcilable with its natural-law framing (mountain). The mountain perspective attempts to naturalize what is structurally a contingent institutional reading. The false-summit signature fires when the engine detects (a) beneficiaries present (civil liberties organizations, media corporations, institutional speech actors), (b) mountain classification attempted, and (c) non-zero chi from beneficiary presence. The omega variables document the irreducible uncertainties: the aggregate harm threshold, the coordinated-versus-individual causation distinction, the imminence-threshold drift over technology change, and the comparative outcomes across speech regimes. The mandatrophy is resolved by showing that the absolutist reading is a live institutional position with real structural consequences, not a natural law. The sibling readings (harm_limited, balancing) are alternative institutional readings with different beneficiary/victim structures. No single reading is universally correct; the framework's job is to classify each reading's structural properties accurately and show where they diverge.",
+    "kernel_context": "The absolutist reading instantiates ONE reading of the contested kernel 'speech_protection_boundary.' The kernel is formalized (Brandenburg doctrine as written constitutional law) and grounds its authority in lineage (Warren Court precedent). This reading's foundational axiom is 'speech_protection_categorically_prior_to_harm_regulation': the scope of protected speech is determined by the imminence threshold alone; aggregate harm to targeted communities is not a relevant constraint-classification variable for narrowing the protected set. The sibling readings hold different axioms: harm_limited_reading asserts 'demonstrable_aggregate_harm_narrows_protected_scope' (deontological), and balancing_reading asserts 'proportionality_between_speech_liberty_and_community_safety' (instrumental). The absolutist reading FORECLOSES the harm_limited reading — not by empirical disagreement but by treating harm as categorically outside the scope of legitimate constitutional constraint. The absolutist reading COEXISTS_WITH the balancing reading because both are live institutional positions held by different judicial coalitions and legal theorists; neither logically eliminates the other within any single framework. The reference frame is 'first_amendment_as_written' (t0); the drift state at 'contemporary_digital_era' (t1) shows 'axiom_overriding' with 'substantial' magnitude: the Brandenburg imminence standard, applied to coordinated online hate speech with accelerated harm timelines, no longer functionally protects against the harms the 1969 doctrine empirically addressed. This drift is largely 'unacknowledged' by the constitutional authority structure (courts apply Brandenburg mechanically despite changed empirical context)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "harm_limited_reading",
+      "balancing_reading",
+      "platform_content_moderation",
+      "counter_speech_infrastructure"
+    ],
+    "dual_formulation_note": "The speech_protection_boundary kernel decomposes into three constraint stories: absolutist_reading (ε=0.68, snare from powerless perspective), harm_limited_reading (ε unknown, victim-centered), and balancing_reading (ε unknown, proportionalist). Each instantiates a different set of beneficiaries, victims, and operational mechanisms. All three are linked as sibling readings of the same contested kernel. The absolutist reading influences the downstream constraints: platform_content_moderation (private platforms operating in the legal immunity space created by absolutism) and counter_speech_infrastructure (organized responses to the externalities absolutism creates)."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "harm_limited_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "balancing_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "speech_protection_categorically_prior_to_harm_regulation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "brandenburg_imminence_threshold_immutable",
+        "role": "secondary",
+        "status": "overridden",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "first_amendment_as_written",
+    "drift_state": {
+      "moment": "contemporary_digital_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

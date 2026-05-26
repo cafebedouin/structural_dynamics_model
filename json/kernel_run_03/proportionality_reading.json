@@ -1,0 +1,242 @@
+{
+  "header": {
+    "constraint_id": "proportionality_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_proportionality_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.42,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Vaccine Mandate Proportionality Constraint (Public Health Reading)",
+    "topic_domain": "public_health_ethics/constitutional_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "disease_vulnerable_populations",
+      "public_health_authority"
+    ],
+    "victims": [
+      "vaccine_hesitant_individuals",
+      "medical_exemption_claimants"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Hesitant Individual (Trapped)",
+      "comment": "PERSPECTIVE 1: VACCINE HESITANT INDIVIDUAL (SNARE) — Faces employment loss, school exclusion, travel restrictions with minimal recourse. Exit options structurally unavailable: cannot exit the jurisdiction easily, cannot exit the labor market without severe cost, cannot challenge mandate individually. Experiences maximum extraction — the proportionality frame does not protect individual autonomy against collective thresholds."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Genuine Medical Exemption Claimant",
+      "comment": "PERSPECTIVE 2: GENUINE MEDICAL EXEMPTION CLAIMANT (TANGLED ROPE) — Benefits from the proportionality frame's logic (exemptions exist in principle), but constrained by high verification burdens, physician gatekeeping, and social stigma. Mandate provides coordination benefit (community protection) alongside asymmetric extraction (burden of proof on individual, career risk of exemption visibility). Mixed coordination-extraction hybrid."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Public Health Authority",
+      "comment": "PERSPECTIVE 3: PUBLIC HEALTH AUTHORITY (ROPE) — Experiences mandate as pure coordination: proportionality thresholds enable rational vaccine deployment without categorical bans. Authority retains discretion over severity/transmission/safety parameters. Arbitrage option: can adjust mandate stringency by redefining thresholds or emphasizing different pathogens. Net beneficiary — mandate provides legitimacy for vaccination campaigns without requiring uniform rules."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Democratic Deliberative Process",
+      "comment": "PERSPECTIVE 4: DEMOCRATIC DELIBERATIVE PROCESS (SCAFFOLD) — Organized capacity (legislatures, public comment periods, courts) to revisit proportionality thresholds as conditions change. Sees mandate as temporary coordination tool with sunset logic: when disease severity declines or vaccines improve, thresholds naturally adjust downward or mandate phases out. Theater relatively low — proportionality requires ongoing measurement and justification, not ritual compliance."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Disease-Vulnerable Population",
+      "comment": "PERSPECTIVE 5: DISEASE-VULNERABLE POPULATION (TANGLED ROPE) — Benefits from vaccination mandate (coordination for protection) but also constrained by mandate's asymmetries (mobility restrictions may prevent vulnerable individuals from accessing care, vaccine access disparities among vulnerable groups not addressed by mandate proportionality logic). Mixed: mandate is both protective and constraining."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Public Health Authorities Under Proportionality Discipline",
+      "comment": "PERSPECTIVE 6: PUBLIC HEALTH AUTHORITY (CONSTRAINED BY PROPORTIONALITY) — From the authority's own perspective under proportionality constraint, experiences extraction: must continuously re-justify mandate, must publish severity/transmission/safety data, must defend exemption standards against legal challenge. High theater: proportionality requires constant recalibration and communication, consuming resources that could go to other public health measures."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Natural Law View (Categorical Mandates Necessary)",
+      "comment": "PERSPECTIVE 7: NATURAL LAW / CATEGORICAL VIEW (MOUNTAIN) — From civilizational scope, proportionality thresholds are treated as secondary to a more fundamental principle: during severe public health crises, categorical mandates are natural requirements of collective survival (analogous to mandatory quarantine in plague). The proportionality reading is then viewed as a post-hoc constraint on something that must happen categorically. Engine's false summit detector will flag this: the 'necessity' is context-dependent, not immutable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "threshold_calibration_epistemic_closure",
+      "question": "Who measures disease severity, transmission risk, and vaccine safety, and by what method? Does the measurement process itself foreclose certain readings?",
+      "resolution_mechanism": "Documentary analysis of mandate-drafting process: whose data was included, whose excluded, which modeling assumptions were adopted. Comparative analysis across jurisdictions: different threshold choices produce different victim/beneficiary sets.",
+      "impact": "If measurement is technical-expert-only: proportionality claim is theater, beneficiary (authority) controls severity definition. If measurement is democratically contestable: proportionality genuinely protects against categorical abuse. Classification shifts between snare and tangled_rope depending on measurement governance.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Measurement process and epistemic authority for threshold calibration"
+    },
+    {
+      "id": "exemption_verification_burden_allocation",
+      "question": "Does the burden of proof for exemptions rest on the individual or on the health system? Is the burden proportional to the mandate's stringency?",
+      "resolution_mechanism": "Comparative law analysis: jurisdictions with individual-burden exemptions vs. those with health-system-burden exemptions. Empirical study of exemption denial rates and appeals success rates.",
+      "impact": "High individual burden: snare for claimants (genuine medical exemptions denied due to gatekeeping). Distributed burden: tangled_rope (legitimate coordination with shared responsibility). Burden misalignment with mandate severity: constraint reclassifies upward in extractiveness.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Burden allocation for exemption verification and its proportionality to mandate stringency"
+    },
+    {
+      "id": "sibling_reading_pathogen_contingency",
+      "question": "At what pathogen severity level does proportionality reading foreclose the bodily_autonomy_primary reading, and does that foreclosure depend on disease parameters or on the reading's own commitments?",
+      "resolution_mechanism": "Formal analysis of bodily_autonomy_primary axioms vs proportionality_reading axioms. Test: would a bodily_autonomy advocate accept the proportionality frame for smallpox? For seasonal flu? If acceptance threshold exists, the readings coexist; if bodily_autonomy advocate rejects ALL mandates categorically, readings foreclose.",
+      "impact": "If contingent on pathogen: readings coexist_with (both can be held simultaneously by different parties depending on disease context). If categorical rejection: proportionality forecloses bodily_autonomy_primary axiom at high severity. Determines reading_relations entry in cs_structure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether sibling readings coexist contingently or foreclose categorically"
+    },
+    {
+      "id": "proportionality_gateway_capture_risk",
+      "question": "Does the proportionality frame prevent mission creep by authorities, or does it provide cover for creep by offering the appearance of limitation while shifting the extraction mechanism from mandate stringency to threshold definition?",
+      "resolution_mechanism": "Historical analysis of mandate drift: thresholds revised upward (allowing more restrictive mandate) vs downward (allowing relaxation). Institutional analysis: do authorities who control threshold definition face external accountability? Is threshold-shifting faster or slower than public response time?",
+      "impact": "If authorities capture threshold definition: extractiveness reclassifies upward (extraction mechanism shifts from mandate itself to the parameters that justify it). If thresholds remain contestable: tangled_rope classification holds. High-capture scenario reclassifies to snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Risk that proportionality frame enables gateway capture through threshold control"
+    },
+    {
+      "id": "exemption_robustness_across_contexts",
+      "question": "What does 'robust exemptions' mean operationally, and do exemption standards vary across jurisdictions, pathogens, or over time in ways that undermine the robustness claim?",
+      "resolution_mechanism": "Comparative analysis: exemption criteria, denial rates, appeals procedures across jurisdictions claiming proportionality mandate. Longitudinal analysis: are exemption standards consistent as disease parameters change?",
+      "impact": "If exemption standards are inconsistent: proportionality claim is overstated, constraint reclassifies to snare (victims face unpredictable exclusion). If robust: tangled_rope classification holds with stronger exemption coordinate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Operational meaning and consistency of exemption robustness across contexts"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The proportionality reading frames vaccine mandates as permissible only when disease severity, transmission risk, and vaccine safety jointly meet strict thresholds, with robust exemptions for medical contraindications. This reading is one of three structurally distinct ways to ground mandate legitimacy: the public_health_primary reading treats disease control as categorically prior to individual choice; the bodily_autonomy_primary reading treats individual consent as a hard constraint on state power. The proportionality reading occupies the middle ground: mandates are legitimate but context-dependent, requiring ongoing measurement of disease parameters and continuous justification of threshold choices. This reading is genuinely constructive — it acknowledges both the collective interest in disease control and individual interests in autonomy — but it creates its own structural trap: proportionality logic requires technocratic measurement authority (who defines 'severity'? how is 'transmission risk' quantified?) and shifts extraction mechanisms from the mandate itself to the threshold-setting process.",
+    "key_agents": [
+      "Public Health Authority: Primary beneficiary (institutional/arbitrage) — controls threshold definition, retains mandate discretion within proportionality frame",
+      "Vaccine-Hesitant Individual: Primary victim (powerless/trapped) — lacks exit options and recourse when mandate applies regardless of proportionality logic",
+      "Genuine Medical Exemption Claimant: Secondary victim (moderate/constrained) — benefits from exemption in principle but constrained by verification burden and gatekeeping",
+      "Disease-Vulnerable Population: Mixed beneficiary/victim (moderate/mobile) — benefits from mandate but constrained by co-mandates that may restrict access",
+      "Democratic Deliberative Institutions: Organized actor (organized/constrained) — retains capacity to revisit proportionality thresholds but constrained by urgent decision timelines",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — sees both legitimacy and extraction trap in the proportionality frame"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The proportionality reading reduces extractiveness compared to categorical mandates (which would score ~0.65) by conditioning mandate legitimacy on parameters that could vary by pathogen and time. However, extractiveness remains moderate because (1) the measurement process itself is contestable and authority-controlled, (2) exemption verification burdens are asymmetrical, and (3) threshold changes can shift mandate stringency faster than public deliberation can respond. Suppression (0.48): Moderate-high. Individuals and exemption claimants face significant barriers: employment/school/travel restrictions, burden of proof on individuals for exemptions, limited appeals pathways, social stigma. But suppression is not total because proportionality in principle allows mandate relaxation as conditions improve, creating an exit condition (however distant). Theater ratio (0.42): Moderate. The proportionality frame requires ongoing measurement, public justification of thresholds, and periodic review — which creates theater (meeting after metric review, publishing rationales) but less than categorical mandates would. However, theater increases over time (measurements show 0.28→0.42) as authorities must continuously defend threshold choices against legal and public challenge.",
+    "perspectival_gap": "The constraint demonstrates a genuine perspectival disagreement that cannot be resolved by further information about disease parameters alone. The authority sees pure coordination (threshold-based mandate as enabling rational deployment). The trapped individual sees snare (no exit regardless of proportionality logic, because they are the ones who will test mandate stringency). The exemption claimant sees tangled rope (genuine exemption principle coupled with gatekeeping extraction). The vulnerable population sees mixed benefit and constraint. The deliberative institutions see temporary coordination with sunset potential (as disease declines or vaccines improve, proportionality permits mandate relaxation). The categorical (false-summit) view risks naturalizing proportionality reasoning as an immutable requirement of public health, when in fact proportionality is a contingent institutional choice to balance competing values.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from the agent's power level, exit options, and relationship to the extraction flow. The authority (institutional/arbitrage) derives low d: threshold control, discretionary exemptions, ability to adjust mandate stringency — beneficiary position with exit options. The trapped individual (powerless/trapped) derives high d: no control over thresholds, minimal exemption recourse, cannot exit jurisdiction or labor market easily. The exemption claimant (moderate/constrained) derives moderate-high d: benefits from exemption principle but constrained by verification burden. The vulnerable population (moderate/mobile) derives moderate d: some geographic/social mobility options, but health status limits practical exit. The deliberative institutions (organized/constrained) derive moderate d: organized capacity to revisit thresholds but constrained by urgent timelines and authority resistance to threshold revision downward. The analytical observer (analytical/analytical) derives canonical d from the analytical power atom (0.73), reflecting that the analytical position sits between beneficiary and victim, seeing structure from neither position.",
+    "kernel_context": "This constraint instantiates the proportionality_reading of the vaccine_mandate_balance kernel. The kernel itself is the contested question: how should individual bodily autonomy and collective disease control be balanced? The public_health_primary reading answers: disease control takes priority; mandates are justified categorically by severity. The bodily_autonomy_primary reading answers: individual consent is a hard constraint; mandates are only legitimate by exception (e.g., quarantine of contagious individuals). The proportionality_reading answers: both values matter; mandates are context-dependent, requiring thresholds that vary by pathogen and time. These three readings coexist in contemporary public health ethics and constitutional law. They are not empirical disagreements about disease transmission (though those matter) — they are disagreements about what thresholds would make mandates legitimate. The proportionality reading is neither foreclosed by nor forecloses the others; rather, it influences them by shifting the debate from 'mandates yes/no?' to 'what thresholds justify mandates?' The reading has a structural vulnerability: by requiring threshold definition, it creates gatekeeping power in the hands of the authority that defines the thresholds. This is the omega variable 'threshold_calibration_epistemic_closure' — the proportionality reading depends on measurement governance that the reading itself may not adequately constrain.",
+    "mandatrophy_analysis": "The constraint is not mandatrophic — extractiveness (0.38) does not exceed 0.70. However, there is a local tension within the tangled_rope classification: the public health authority genuinely believes it is solving a coordination problem (preventing disease spread), and from its perspective the constraint is rope (low-extraction coordination). The trapped individual genuinely experiences snare (high-extraction coercion), and from their perspective the constraint is snare (high-extraction extraction). Both cannot be fully right about the same constraint. The mandatrophy is resolved by noting that the two perspectives have genuinely different structural relationships to the constraint: the authority has threshold-control options (arbitrage exit) that the individual does not have. The constraint is tangled_rope from the individual's perspective because it contains BOTH coordination (community protection) AND extraction (threshold gatekeeping), not because the two perspectives are in contradiction. The proportionality reading's legitimacy claim is that the extraction component is justified by the coordination benefit. The false-summit perspective (categorical natural law view) risks naturalizing this as 'extraction is a necessary cost of public health' when it is actually a contingent institutional choice about how thresholds are set and maintained."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "public_health_primary",
+      "bodily_autonomy_primary"
+    ],
+    "dual_formulation_note": "The proportionality_reading is one reading of the vaccine_mandate_balance kernel. The public_health_primary reading and bodily_autonomy_primary reading are sibling readings of the same kernel, not separate constraints. All three readings describe the same natural fact (vaccine mandates exist) but instantiate different interpretive frames. The network edge indicates reading_relations, not constraint_affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "public_health_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "bodily_autonomy_primary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "mandate_legitimacy_context_contingent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "proportionality_thresholds_measurable",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "balanced_individual_collective_interest",
+    "drift_state": {
+      "moment": "contemporary_post_pandemic",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

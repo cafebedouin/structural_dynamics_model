@@ -1,0 +1,229 @@
+{
+  "header": {
+    "constraint_id": "textual_recovery_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "txtrec"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Textual Recovery Reading of Latin Correctness (Classical Purity Standard)",
+    "topic_domain": "historical_linguistics/philology/renaissance_studies",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "humanist_elite",
+      "classical_philologists"
+    ],
+    "victims": [
+      "medieval_scholastic_tradition",
+      "functional_communication",
+      "manuscript_copyists"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Medieval Copyist",
+      "comment": "PERSPECTIVE 1: MEDIEVAL COPYIST (SNARE) — Trapped between the manuscript tradition they inherited and the humanist demand for classical purity. Their orthographic, grammatical, and lexical choices (perfectly functional within the medieval transmission) are now classified as errors. No exit: the copyist cannot retroactively alter the archive, cannot participate in the new philological authority, and cannot escape the judgment that their work is corrupt."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Scholastic Tradition",
+      "comment": "PERSPECTIVE 2: SCHOLASTIC TRADITION (SNARE) — Constrained by the authority shift from functional medieval Latin to recovered classical correctness. The tradition's entire corpus is retroactively demoted: its grammatical rules, vocabulary choices, and pronunciation practices are now classified as corruption rather than legitimate evolution. The cost to maintain scholastic Latin is career risk and institutional marginalization; the cost to switch is betrayal of the epistemic tradition. High suppression, high extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Humanist Elite",
+      "comment": "PERSPECTIVE 3: HUMANIST ELITE (ROPE) — Benefits from the coordinate solution: recovering classical correctness via manuscript philology establishes a new legitimate authority, creating career advancement (philological authority), social distinction (classical learning), and institutional power (control of educational curricula). Experiences the constraint as enabling coordination: defining and enforcing classical standards creates a shared epistemic framework. Net beneficiary — extraction runs toward them."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The University Curriculum",
+      "comment": "PERSPECTIVE 4: UNIVERSITY CURRICULUM (TANGLED ROPE) — Constrained between medieval scholastic Latin (inherited pedagogical infrastructure, existing teaching materials) and humanist classical recovery (prestige, new authority structure). The curriculum coordinates education AND enforces a purification program: teaching classical correctness while suppressing medieval forms requires sustained effort. Both coordination function (teaching Latin grammar) and asymmetric extraction (demoting the previous standard) are present. Active enforcement required."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Classical Canon",
+      "comment": "PERSPECTIVE 5: CLASSICAL CANON (PITON) — The recovered texts (Cicero, Livy, Virgil, et al.) become a frozen reference standard. But this reference is largely performative: pronunciation cannot be recovered from written texts alone; medieval scribal variation is treated as corruption rather than legitimate diversity; the 'classical' standard is partly reconstructed, partly idealized. Theater ratio high because much philological work is about maintaining the fiction of a stable classical form that never actually existed as a fixed object. The canon persists through institutional inertia and prestige, not because it solves a coordination problem."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, the historical recovery of Cicero's Latin might appear as discovering an objective linguistic fact: what the ancients actually wrote and said. This perspective treats classical correctness as an immutable reference point, independent of the humanist reading that recovered it. However, the structural data contradicts this — the engine's false summit detector will identify this as naturalization of a hermeneutic choice (the humanist decision to treat classical texts as authoritative) as if it were an objective historical fact."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "classical_purity_reconstruction",
+      "question": "Is the recovered classical form an objective historical fact or a humanist interpretive construction?",
+      "resolution_mechanism": "Comparative philology across manuscript witnesses; analysis of whether 'classical purity' represents author intent or editorial standardization; examination of whether alternative readings of the same corpus would yield different classical standards",
+      "impact": "If reconstruction: textual_recovery_reading is valid as one legitimate reading among others. If projection: the reading is a false summit (naturalizing humanist choice as historical discovery). Affects classification from analytical perspective.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether classical Latin correctness is historical fact or interpretive construction"
+    },
+    {
+      "id": "manuscript_witness_authority",
+      "question": "Which manuscript families should count as evidence of classical correctness, and how do we resolve conflicts between witnesses?",
+      "resolution_mechanism": "Genealogical manuscript analysis; assessment of whether the oldest surviving witnesses actually represent the closest approach to authorial texts or are themselves corruptions of lost earlier witnesses; examination of whether medieval scribal 'errors' are systematic innovations or authentic preservation of variant traditions",
+      "impact": "Different resolution strategies produce different classical standards. If medieval witnesses are treated as legitimate variants: the reading's suppression value falls and ε approaches rope. If only the earliest witnesses count as authentic: suppression and extraction remain high.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Authority ranking of manuscript witnesses for classical reconstruction"
+    },
+    {
+      "id": "medieval_form_legitimacy",
+      "question": "Are medieval orthographic, grammatical, and lexical forms corruption of classical Latin or legitimate evolution of a living language?",
+      "resolution_mechanism": "Diachronic linguistic analysis; comparison with documented language change patterns in other Latin-descended languages; assessment of whether medieval forms serve communicative functions that justify their preservation",
+      "impact": "If corruption: textual_recovery_reading is justified in suppressing medieval forms. If legitimate evolution: the reading forecloses an alternative framework that would honor both classical and medieval forms as valid. Affects the reading_relations structure.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether medieval Latin forms are corruptions or legitimate linguistic evolution"
+    },
+    {
+      "id": "pronunciation_recovery_possibility",
+      "question": "Can classical pronunciation be recovered from written texts alone, or is post-classical pronunciation uncertainty an irreducible gap in the recovery program?",
+      "resolution_mechanism": "Comparative analysis of orthographic representations, metrical evidence, loan-word phonetics, and Romance language phonology; assessment of whether surviving evidence produces a unique classical pronunciation or allows multiple consistent reconstructions",
+      "impact": "If recoverable: the reading's purification claim is extensible to sound. If irreducible gap: the recovered 'classical form' is incomplete — pronunciation remains medieval or reconstructed, not authentically recovered. Affects whether theater_ratio reflects actual recovery or performative recovery.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether classical Latin pronunciation can be recovered from textual evidence"
+    },
+    {
+      "id": "kernel_reading_identity",
+      "question": "Does this constraint instantiate the textual_recovery_reading of classical correctness, or does it describe a different constraint altogether?",
+      "resolution_mechanism": "Comparison with expected structural delta for textual_recovery_reading: high suppression of medieval forms (0.72 measured), vocabulary frozen to classical corpus (declared in suppression mechanism), orthography purified (reflected in theater_ratio), beneficiary is humanist elite (declared), victim is medieval tradition (declared). All markers align with textual_recovery_reading.",
+      "impact": "If confirmed: constraint properly classified as one reading of the latin_correctness kernel. If misidentified: the constraint story should be reassigned to the appropriate reading or identified as a distinct constraint.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether this constraint correctly instantiates the textual_recovery_reading"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 200
+  },
+  "commentary": {
+    "narrative_context": "The textual recovery reading of Latin correctness emerges from Renaissance humanism as a hermeneutic choice to treat classical authors (especially Cicero) as the authentic standard and to recover their original forms through manuscript philology. This reading suppresses medieval Latin forms, freezes vocabulary to the classical corpus, and purifes orthography according to recovered classical practice. The constraint is a tangled rope: it coordinates a new epistemic framework (humanist classical learning) while extracting from the medieval scholastic tradition (whose grammatical rules, vocabulary, and pronunciation practices are retroactively classified as corrupt). The theater ratio increases over the interval as the philological project matured: initial recovery efforts (theater_ratio 0.35) were exploratory and empirically grounded; by the Enlightenment (theater_ratio 0.68), maintaining classical purity required substantial performative work (learned societies enforcing standards, pedagogical theater around pronunciation recovery, editorial standardization). The extractiveness increases correspondingly as the humanist elite consolidated institutional power and the cost to medieval practitioners of defending their tradition rose.",
+    "key_agents": [
+      "Humanist Elite: Primary beneficiary (institutional/arbitrage) — captures prestige, educational authority, and institutional power through classical learning; drives the recovery program",
+      "Medieval Scholastic Tradition: Primary victim (moderate/constrained) — retroactively demoted; faces institutional marginalization, career costs for defending medieval forms, pressure to switch frameworks",
+      "Medieval Copyists: Secondary victim (powerless/trapped) — their orthographic and grammatical choices are now classified as corruption; cannot exit or revise the archive",
+      "University Curriculum: Institutional actor (institutional/constrained) — coordinates education while enforcing purification; inherits medieval infrastructure while adopting humanist standards",
+      "Classical Canon: Institutional reference (institutional/arbitrage) — maintained through performative philological work; becomes frozen standard despite inherent incompleteness",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks treating humanist hermeneutic choice as objective historical recovery"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The humanist elite benefits substantially from establishing classical correctness as the legitimate standard — this creates career opportunities, institutional power, and social distinction. However, the extraction is not total because the recovery program is genuinely epistemic (it does increase knowledge of ancient texts) and not purely coercive (medieval practitioners can in principle choose to adopt classical standards, though at high cost). The measured value reflects the real asymmetry: benefits concentrate on humanists, costs concentrate on scholastics, but the mechanism involves institutional authority shift rather than direct coercion. Suppression (0.72): High. Medieval forms are suppressed through pedagogical redirection (teaching classical correctness over scholastic forms), institutional marginalization (devaluing scholastic training), and epistemic demounting (treating medieval forms as errors rather than legitimate variants). The suppression is structural: medieval practitioners face high barriers to continuing medieval practice and high costs to switching. Theater ratio (0.68): Moderate-high, increasing over time. Early humanist recovery was grounded in textual analysis (lower theater). As the standard matured, it required sustained institutional enforcement: learned societies enforcing orthography, pedagogical theater around pronunciation recovery (which cannot actually be recovered from written texts alone), editorial standardization of texts. The increasing theater ratio from 0.35 to 0.68 reflects this drift toward performative maintenance of the standard.",
+    "perspectival_gap": "The gap between the humanist elite (Rope) and the medieval tradition (Snare) is maximal. The humanists experience classical recovery as enabling coordination: establishing a shared authoritative standard for Latin learning. The scholastics experience the same process as extraction and suppression: their legitimate linguistic forms are demoted, their institutional authority is undermined, and switching frameworks comes at high personal cost. The university curriculum (Tangled Rope) occupies the middle position: it genuinely coordinates education while enforcing a purification program. The classical canon (Piton) reveals the underlying theater: the recovered classical form is partly empirical recovery, partly idealized reconstruction, and partly performative maintenance. The analytical observer's Mountain perspective risks naturalizing the humanist hermeneutic choice (treating one authoritative textual tradition as THE classical standard) as if it were an objective historical fact independent of the reading that recovered it.",
+    "directionality_logic": "Directionality is derived from the structural position of each agent relative to the constraint. Humanists benefit from establishing classical standards and occupy arbitrage positions (institutional power + ability to switch to/from classical authority) — they derive low d values and experience low/negative effective extraction. Medieval practitioners are suppressed (high costs to defend medieval forms, institutional pressure to switch) and occupy trapped or constrained positions — they derive high d values and experience high effective extraction. The university curriculum is constrained (high costs to maintain both traditions) but also benefits from coordinating education — it derives moderate d and experiences moderate extraction. The canonical texts are themselves institutional beneficiaries in the sense that the reading treats them as authoritative — but agency is diffuse, making this a piton perspective rather than a clear beneficiary position.",
+    "kernel_context": "This constraint instantiates the textual_recovery_reading of the latin_correctness kernel. The kernel is the contested claim about what constitutes correct Latin: which forms, which vocabulary, which orthography, which pronunciation standards. The textual_recovery_reading resolves this by treating the texts of classical authors (recovered through manuscript philology, especially Cicero) as the authoritative standard. Sibling readings are: (1) living_drift_reading — treats Latin as a living language that legitimately evolves over time, including medieval developments; (2) hybrid_adequacy_reading — treats both classical and medieval forms as adequate to their respective communicative contexts, with no universal standard. This reading forecloses the living_drift_reading where it makes the core claim that medieval forms are corrupt (not legitimate evolution). It coexists with the hybrid_adequacy_reading in the sense that different scholarly communities hold both views simultaneously, but the textual_recovery_reading creates institutional pressure that marginalizes the hybrid view. The reading's authority is grounded in lineage (the authority of classical texts as transmitted) with an interpretation layer (humanist philology) that reconstructs the classical standard from manuscript witnesses.",
+    "mandatrophy_analysis": "The tangled rope classification resolves the potential mandatrophy between treating this as pure coordination (establishing a standard for classical learning) and pure extraction (suppressing medieval forms). The constraint exhibits both functions: it coordinates humanist learning AND extracts from scholastics. The neural signature is clear in the beneficiary/victim structure (humanists benefit, scholastics suffer) and the active enforcement requirement (maintaining classical purity requires institutional work). The theater ratio increasing over time suggests drift toward extraction: as the standard matured, performative maintenance increased. The false summit risk exists if an observer treats the recovered classical form as a natural historical fact rather than a humanist hermeneutic choice — the analytical perspective almost commits this error, but the false summit detector will catch it."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "living_drift_reading",
+      "hybrid_adequacy_reading"
+    ],
+    "dual_formulation_note": "The textual_recovery_reading and the living_drift_reading are two instantiations of the contested latin_correctness kernel. They have different ε values (0.58 vs expected ~0.25) because they make different empirical and normative claims about what counts as correct Latin. The textual_recovery_reading enforces a frozen classical standard with high suppression of medieval forms; the living_drift_reading treats medieval Latin as legitimate evolution with low suppression. These are not two measurements of the same constraint — they are two structurally distinct constraints that share a kernel."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "ciceronian_authenticity",
+    "drift_state": {
+      "moment": "enlightenment_philology",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "living_drift_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_adequacy_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "classical_texts_authentically_recoverable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "medieval_forms_constitute_corruption",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  }
+}

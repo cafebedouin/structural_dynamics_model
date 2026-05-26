@@ -1,0 +1,245 @@
+{
+  "header": {
+    "constraint_id": "printing_press_diffusion",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "ppd"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Printing Press Diffusion and Religious Authority Restructuring (1450-1550)",
+    "topic_domain": "historical_sociology/religious_studies/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "printer_merchants",
+      "protestant_reformation_movements",
+      "vernacular_literacy_demand"
+    ],
+    "victims": [
+      "institutional_church_monopoly",
+      "scribal_labor_class",
+      "manuscript_copying_ecosystem"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Scribal Copyist",
+      "comment": "PERSPECTIVE 1: SCRIBAL COPYIST (SNARE) — Trapped in a labor class whose economic basis is systematically undermined by mechanical reproduction. No alternative career pathway; regional market for manuscript copying collapses within a generation. Suppression is economic desperation. Extraction flows away entirely — the copyist bears costs while coordinating with nothing."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Parish Priest",
+      "comment": "PERSPECTIVE 2: PARISH PRIEST (TANGLED ROPE) — Genuine coordination function: printed liturgical texts standardize practice, reduce copying errors, enable distribution of reformed doctrine. But also constrained by suppression — the priest cannot control the flood of vernacular religious texts that bypass ecclesiastical authority. Mixed: benefits from standardized texts, pays costs of doctrinal competition. Suppression comes from inability to control interpretation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Printer Merchant",
+      "comment": "PERSPECTIVE 3: PRINTER MERCHANT (ROPE) — Net beneficiary. Printing technology enables coordination of book production and distribution. Early printers exploit information arbitrage: control of technical knowledge, exclusive access to capital, monopoly on reproduction. But the constraint is fundamentally coordinative — without the printer, no distributed texts. Suppression minimal relative to extraction — the printer faces low barriers to exit and high profit margins."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Reformation Movement",
+      "comment": "PERSPECTIVE 4: REFORMATION MOVEMENT (TANGLED ROPE) — Organized actors with constrained options. The printing press enables coordination of doctrinal messaging, pamphlet distribution, and rapid response to institutional church positions. But also constrained by suppression: censorship, book burning, ecclesiastical bans. The reformation both benefits from printing's coordination function and bears the costs of attempted suppression. Genuine hybrid: coordination is essential to the movement's success; extraction occurs through book prices and control of which texts get printed."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Church (Natural Law View)",
+      "comment": "PERSPECTIVE 5: INSTITUTIONAL CHURCH / NATURAL LAW VIEW (MOUNTAIN) — From the Church's perspective seeking to naturalize its position, the printing press presents as a force of nature — an inexorable technological shift that no authority could control. Communication speed increases inevitably; diffusion of texts follows natural laws of information spread. The Church's authority over knowledge distribution appears as an immutable structural property now breached. This mountain classification is a false summit: the Church benefits from printing for its own doctrine yet claims the technology is beyond control. The beneficiary is naturalizing a constraint it partially controls."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Territorial Prince",
+      "comment": "PERSPECTIVE 6: TERRITORIAL PRINCE (SCAFFOLD) — Powerful agents using the printing press as a temporary support structure for state consolidation. Printed decrees standardize law across territory; printed vernacular texts build national identity; printed loyalty propaganda legitimates rule. The scaffold has a sunset: once the print infrastructure is built and literacy spreads, the prince's monopoly on printing (temporary advantage) dissolves. This perspective sees extractiveness as declining over the biographical horizon as printing becomes decentralized and competition increases."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "causal_substrate_unity",
+      "question": "Does the Reformation instantiate a single kernel (religious authority) with multiple readings, or multiple independent causal chains (economic disruption, doctrinal innovation, technological diffusion) that happen to converge?",
+      "resolution_mechanism": "Counterfactual analysis: remove printing press, what happens to Reformation? Remove doctrinal ferment, what happens to printing diffusion? Structural dependency tests between causal chains.",
+      "impact": "If single kernel with readings: one constraint story with alternative perspectives. If independent chains: separate constraint stories (printing_press_diffusion, protestant_doctrinal_innovation, church_authority_restructuring) linked via network.affects_constraints. The ε values would differ sharply between readings/stories.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether Reformation is kernel-readable or multi-causal convergence"
+    },
+    {
+      "id": "extraction_vs_creative_destruction",
+      "question": "Does the printing press function as extractive (printer captures surplus from disappearing scribal labor) or as creative destruction (new economic value in printing exceeds lost value in copying)?",
+      "resolution_mechanism": "Quantitative analysis: total labor income in copying vs printing; total value of texts produced; regional economic data from transition zones. Adjustment for quality, error reduction, and access expansion benefits.",
+      "impact": "If net extractive: snare or tangled_rope appropriate; base_extractiveness stays ~0.52. If net creative: reclassify as rope; base_extractiveness drops to ~0.30. If heterogeneous by region: decompose into regional stories with different ε values.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether printing represents extraction or net creative value"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Does suppression of the printing press operate primarily through structural barriers (technical monopoly, capital requirements, guilds) or through internalized institutional authority (printers self-censoring to maintain Church favor)?",
+      "resolution_mechanism": "Historical analysis of censorship efforts vs actual printing volumes; distribution of suppressors (state vs church vs guild); comparative suppression effectiveness across regions with different institutional structures.",
+      "impact": "If structural: suppression is external; scenarios with alternative technology or decentralized capital would bypass it. If internalized: suppression persists even with technical alternatives because the authority claim remains intact. Suggests different exit options for key agents (trapped vs constrained vs identity_locked).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Suppression mechanism: structural vs internalized authority"
+    },
+    {
+      "id": "printing_necessity_for_reformation",
+      "question": "Was the printing press necessary for the Reformation to succeed, or merely accelerating? Could doctrinal reform have spread through manuscript networks and oral transmission, with printing as amplification rather than precondition?",
+      "resolution_mechanism": "Comparative historical analysis: pre-printing doctrinal movements (Wycliffe, Hus); spread patterns of reform in regions with delayed printing access; counterfactual modeling of oral + manuscript diffusion rates.",
+      "impact": "If necessary: printing press is a keystone constraint upstream of all reformation outcomes. If accelerating: printing is one causal factor among several with comparable weight. Affects whether printing_press_diffusion and protestant_reformation are structurally independent or causally coupled.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether printing was necessary or accelerating for Reformation success"
+    },
+    {
+      "id": "false_summit_church_authority",
+      "question": "Is the Institutional Church's mountain perspective (printing as inexorable force of nature) a genuine natural law or a false summit naturalizing what is actually a negotiated institutional arrangement the Church partially controls?",
+      "resolution_mechanism": "Analysis of Church response options: Did the Church genuinely have zero alternatives, or did it choose not to adopt printing for its own doctrine earlier? What would have happened if the Church had monopolized printing technology rather than resisting it?",
+      "impact": "If genuine mountain: Church authority erosion is structural and irreversible. If false summit: Church beneficiaries are using 'natural law' framing to escape accountability for institutional strategy choices. Affects whether mountain classification holds under scrutiny.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Church perspective: genuine natural law or false summit"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.33
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "The diffusion of printing press technology across Europe (1450-1500) simultaneously transformed religious authority, labor relations, information access, and state capacity. This constraint exhibits overdetermination: multiple independent causal chains (technological diffusion, economic disruption, doctrinal innovation, territorial consolidation) converge without reducible common substrate. The analytical problem: is this a single kernel with multiple readings (religious authority restructured by technology), or multiple constraints that happen to activate simultaneously? The Reformation conventionally bundles these as a single historical event, but structural analysis suggests decomposition into at least three distinct constraints with different ε values: (1) printing_press_diffusion (technological/economic extraction, this story), (2) protestant_doctrinal_innovation (intellectual contestation), (3) church_authority_restructuring (institutional renegotiation). The printing press itself is not inherently religious — it functions as technological constraint enabling rapid text distribution, which then carries whatever doctrinal content is chosen for printing. The Reformation's success depended on printers' economic interest in vernacular religious texts, not on the technology endorsing any theology. This story focuses on the printing press constraint: who benefits from reproduction monopoly, who bears costs of scribal displacement, what suppression mechanisms operate, and how the distribution of printed texts reshapes authority structures. Theater ratio declines sharply over the 50-year interval as printing becomes decentralized and normalized — the performative element (exotic technology, miraculous reproduction) is replaced by routine production. Base extractiveness rises then plateaus as the monopoly phase (high extraction, 0.42) gives way to competitive printing (extraction stabilizes at lower-cost equilibrium, 0.51). This trajectory suggests neither pure extraction (snare) nor pure coordination (rope) but a hybrid that begins extractive, becomes coordinative as diffusion proceeds.",
+    "key_agents": [
+      "Printer Merchants: Primary beneficiary (institutional/arbitrage) — capture monopoly rents on technical knowledge, capital access, and reproduction rights during diffusion phase",
+      "Scribal Copyists: Primary victim (powerless/trapped) — labor class displaced without alternative; regional copying markets collapse within 20-30 years",
+      "Institutional Church: Secondary victim and attempted suppressor (institutional/arbitrage) — loses monopoly on knowledge distribution; attempts censorship and book burning; paradoxically benefits from printing its own texts",
+      "Parish Priests: Moderately affected (moderate/constrained) — benefit from standardized liturgical texts; constrained by inability to control doctrinal competition",
+      "Reformation Movements: Organized beneficiary (organized/constrained) — gain massive distribution advantage for vernacular theology; remain constrained by censorship and Church opposition",
+      "Territorial Princes: Powerful temporary users (powerful/mobile) — use printing for decree standardization and loyalty propaganda; lose exclusive advantage as printing decentralizes",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent institutional responses (Church censorship, monopoly preservation) as inevitable technological limits"
+    ],
+    "logic_rationale": "Base extractiveness (0.52): Moderate-high. Early printing is extractive — printers hold monopoly on technical knowledge, require massive capital investment (printing press costs equivalent to annual income for skilled labor), and control supply of reproduced texts. Scribal copyists bear full cost of displacement. But extractiveness is not extreme (snare level >0.66) because the technology generates genuine value — texts become cheaper, faster to produce, more standardized, and more widely distributed than manuscripts could achieve. The extraction is not pure rent-seeking but partly returns to innovation risk. Measured at peak extraction (t=15 years, value 0.42 → midway point in interval), then stabilizing as competition increases and technology spreads. Suppression (0.48): Moderate. Multiple suppression mechanisms: (1) Capital barriers — printing press cost restricts entry; (2) Guild monopolies — printers' guilds limit competition; (3) Censorship — Church and state attempts to restrict what gets printed; (4) Literacy barriers — texts benefit readers but constrain benefits to illiterate majority. But suppression is not total — printers successfully circumvent censorship through mobility and clandestine production; alternative literacy pathways exist; guild barriers erode. Theater ratio (0.35 at end, declining from 0.55): Initially high because printing presents as miraculous, technical expertise appears essential, mystique surrounds the technology. As printing normalizes and competition increases, performative element declines — printing becomes routine labor, not exotic craft. The low theater at end reflects that printing is now recognized as a straightforward mechanical process, not magical reproduction. Claimed type: Tangled Rope. The constraint exhibits both genuine coordination function (enabling standardized, distributed texts that solve real problems: quality control in liturgical texts, rapid doctrinal dissemination, national decree distribution) AND asymmetric extraction (printer monopoly rents, scribal displacement, capital concentration). Requires active enforcement (guild regulation, censorship, capital control) to maintain. Both beneficiary and victim classes identifiable.",
+    "perspectival_gap": "This constraint generates maximum perspectival divergence. The printer merchant sees primarily coordination (Rope) — the technology solves the problem of book production and distribution. They experience themselves as low-extraction beneficiary. The scribal copyist sees pure extraction (Snare) — economic devastation with no benefit. The parish priest sees mixed coordination and constraint (Tangled Rope) — standardized texts are genuinely useful; loss of doctrinal control is genuinely harmful. The reformation movement sees constrained opportunity (Tangled Rope) — printing enables their success but censorship and costs constrain; both benefits and costs are significant. The territorial prince sees temporary support (Scaffold) — printing is valuable for consolidating state power through decree and loyalty propaganda, but the advantage erodes as printing decentralizes. The Church sees an inexorable force (Mountain) — the naturalizing perspective of a beneficiary-turned-victim trying to reframe loss of control as inevitable technological shift. The analytical observer recognizes the mountain as false summit — the Church's resistance to printing was a strategic choice, not a law of nature, and the Church's later adoption of printing for its own purposes reveals that the technology was malleable to institutional power.",
+    "directionality_logic": "Directionality (d) for each agent is derived from their structural position: beneficiary status with exit options (arbitrage vs constrained) produces low d (negative f(d), experienced as low/beneficial extraction); victim status with exit options (trapped vs mobile) produces high d (high f(d), experienced as severe extraction); mixed status produces mid-range d. Printer merchants: beneficiary + arbitrage → d ≈ 0.05-0.15, f(d) ≈ -0.12 to 0.02, experienced as essentially non-extractive or slightly extractive to the printer. Scribal copyists: victim + trapped → d ≈ 0.95, f(d) ≈ 1.42, maximum experienced extraction — the copyist has no exit and loses everything. Reformation movements: victim initially (suppressed by Church) + constrained (censorship barriers) → d ≈ 0.70, f(d) ≈ 1.10; moderate-high experienced extraction despite organizational capacity, because suppression is real. Territorial princes: ambiguous (beneficiary in immediate consolidation + mobile with exit options) → d ≈ 0.40-0.50, f(d) ≈ 0.40-0.65; experienced as moderate extraction as monopoly erodes. Parish priests: mixed (both benefit and constrained) + constrained exit → d ≈ 0.55, f(d) ≈ 0.75; moderate experienced extraction. Institutional Church: beneficiary (eventually adopts printing) + arbitrage (can choose to print or censor) → but constrained by suppression (cannot prevent others from printing) → d ≈ 0.45, f(d) ≈ 0.55; moderate experienced extraction despite strategic agency, because the core loss of monopoly is irreversible.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: This constraint avoids mandatrophy (classification ambiguity) by clarifying that all six types are defensible from different structural positions, and the perspectival gap IS the analytical content. The Tangled Rope classification at the analytical level is correct for the constraint as a whole because it exhibits both genuine coordination (solving book production problems) and asymmetric extraction (monopoly rents, capital concentration, labor displacement). The snare, rope, and mountain perspectives capture real structural experiences without error — they are not misclassifications but truthful positions. The mandatrophy would arise if we tried to compress these into a single 'true' type. The resolution is perspectival pluralism: the constraint instantiates all six types simultaneously from different positions, and the engine's job is to report the presheaf over the observation site, not to collapse it into a single canonical type. The Tangled Rope at the analytical/civilizational level is the meta-classification that holds together the multiple micro-classifications.",
+    "kernel_context": "The printing press diffusion can be read through a kernel of 'religious authority.' The reformation institutionally instantiates two readings of this kernel: (1) Catholic reading: religious authority derives from institutional Church continuity and magisterial interpretation (preserved through Council of Trent); (2) Protestant reading: religious authority derives from individual conscience and textual access to scripture. These readings do not share a common substrate — they rest on different anthropologies (Church as institution vs individual as locus of faith). The printing press is not itself the kernel but an enabling condition that makes the divergence visible and actionable. Alternative kernel framing: 'knowledge distribution.' The printing press introduces a structural shift in who controls knowledge access — Catholic reading emphasizes Church oversight and approved texts; Protestant reading emphasizes individual access to scripture. These readings coexist through institutional fragmentation rather than logical resolution. A third reading, often overlooked: 'labor value.' Manuscript copying and printing embody different theories of how labor creates value — scribal craft (skill + time = value) vs mechanical reproduction (capital + labor = value). This kernel also has multiple readings with no shared substrate. The constraint story privileges the technological/economic reading (printing press as labor-displacing technology) because it is most directly structural to the constraint metrics. The religious authority kernel and labor value kernel are parallel but not reducible to the technological reading."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "protestant_doctrinal_innovation",
+      "church_authority_restructuring",
+      "vernacular_literacy_expansion"
+    ],
+    "dual_formulation_note": "Printing press diffusion is one constraint in a family of three linked constraints that constitute the Reformation as a composite event. The printing press is upstream (enables the other two) but is not itself religious — it is a technological/economic constraint that carries any content loaded into it. The protestant_doctrinal_innovation constraint focuses on the intellectual contestation of Church doctrine independent of distribution mechanism. The church_authority_restructuring constraint focuses on the institutional renegotiation of authority claims independent of technology. These three constraints together form the overdetermined causal structure of the Reformation; each could be analyzed independently, and their intersection explains the historical pattern."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.48
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "printing_press_diffusion_institutional_church_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "printing_press_diffusion_reformation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "knowledge_authority_decentralizable",
+        "role": "foundational",
+        "status": "holdable"
+      },
+      {
+        "atom": "labor_value_mechanical_reproducible",
+        "role": "foundational",
+        "status": "holdable"
+      }
+    ],
+    "reference_frame": "manuscript_monopoly_authority",
+    "drift_state": {
+      "moment": "post_printing_saturation_1550",
+      "direction": "authority_erosion",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  }
+}

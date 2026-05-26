@@ -1,0 +1,236 @@
+{
+  "header": {
+    "constraint_id": "categorical_balancing_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_categorical_balancing_reading",
+    "measurement_id_prefix": "catbal"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Categorical Balancing Reading of First Amendment Speech Protection",
+    "topic_domain": "constitutional_law/speech_regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_judiciary",
+      "speech_categories_beneficiaries"
+    ],
+    "victims": [
+      "legal_predictability",
+      "disfavored_categories",
+      "excluded_speakers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Disfavored Speaker"
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Speech-Protective Organizations and Dissenting Judges"
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Institutional Judiciary (Majority Coalition)"
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Organized Social Movements (Marginalized Categories)"
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Legal Predictability and Rule-of-Law Ideal"
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Lower Courts and Legal Bureaucracy"
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "categorical_vs_balancing_ambiguity",
+      "question": "Is this constraint a system of fixed categorical exclusions, or a fact-dependent balancing test that uses category labels as heuristics?",
+      "resolution_mechanism": "Empirical analysis of Supreme Court decisions: count how many cases flip categories based on factual context versus how many apply fixed category memberships. Assess whether the same conduct receives the same category label across cases with different factual configurations.",
+      "impact": "If truly categorical (fixed memberships): constraint is a stable institutional rule, ε ≈ 0.45–0.55. If balancing-dependent (fluid categories): constraint is less predictable and more discretionary, potentially ε ≈ 0.62–0.72. The reading instantiates the categorical pole, but the ambiguity reveals whether the constraint's actual operation matches its nominal structure.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether categorical exclusions are fixed or fluid through balancing."
+    },
+    {
+      "id": "beneficiary_institutional_capture",
+      "question": "Does the judiciary maintain categorical balancing to preserve interpretive control over speech doctrine, or to maximize speech protection subject to unavoidable limits?",
+      "resolution_mechanism": "Historical analysis of category evolution: track which categories have expanded (judiciary relaxing exclusions) versus contracted (judiciary tightening exclusions) over generational timescales. Identify whether category shifts respond to First Amendment values or to institutional power preservation.",
+      "impact": "If institutional capture: constraint is primarily Snare/Tangled Rope from beneficiary perspective. If genuine speech-protective intent: constraint is Rope/Scaffold. The reading assumes partial capture, but the omega surfaces whether the constraint's structure reflects genuine coordination failure or strategic exclusion.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether judiciary maintains categorical balancing for speech protection or institutional control."
+    },
+    {
+      "id": "falseness_of_mountain_classification",
+      "question": "Is the mountain classification (natural law view) a genuine characterization of structural necessity, or a naturalized institutional arrangement?",
+      "resolution_mechanism": "Comparative constitutional analysis: examine whether other democracies achieve speech protection without categorical exclusions, or with different categorical boundaries. Assess whether the specific categories (obscenity, incitement, true threats) are culturally universal or jurisdiction-specific.",
+      "impact": "If categories are contingent (jurisdiction-specific, historically variable): mountain classification is false summit. Categorical balancing becomes a constructed institutional choice, not natural law. This triggers false_summit_mountain signature in engine and elevates the constraint to snare or tangled_rope from beneficiary perspectives.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether categorical speech exclusions are natural law or constructed institutional arrangements."
+    },
+    {
+      "id": "kernel_reading_selection_ambiguity",
+      "question": "What distinguishes this categorical balancing reading from the absolutist and harm-limited readings? Which normative axioms are specific to categorical balancing, and which are shared across readings?",
+      "resolution_mechanism": "Textual and doctrinal analysis: identify the minimum normative claim required to justify categorical balancing (distinct from absolutism and harm-limitation). Map how doctrine evolves when jurisdictions shift readings.",
+      "impact": "If categorical balancing has no unique normative anchor: it collapses into harm-limited reading (both balance speech against harm; category is just a grouping mechanism). If it does have unique anchor: constraint's identity is clear and the reading relations are well-specified.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether categorical balancing is distinct normative reading or variant of harm-limitation."
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The categorical balancing reading of the First Amendment instantiates one normative approach to speech protection: the judiciary maintains defined categories of unprotected speech (obscenity, incitement, fighting words, true threats, commercial speech, etc.) and applies balancing tests within and across categories to determine protection levels. This reading is distinct from absolutism (no categories, near-total speech protection) and harm-limitation (balancing speech value against harm without fixing category memberships). The categorical approach claims to provide predictability, judicial manageability, and coherent doctrine, while critics argue it naturalizes judicial discretion and systematically disadvantages marginalized speakers whose speech falls into disfavored categories. As a constraint, categorical balancing exhibits tangled coordination-extraction structure: it does coordinate speech doctrine (provides some speakers with clear protection), but it extracts from those whose utterance falls outside protected categories. The constraint's extractiveness has risen over generational timescales as the judiciary has maintained categorical boundaries while speech practices have diversified. Theater ratio (0.68) reflects that categorical doctrine performs neutrality and predictability while actual decisions depend on fact-finding and judicial value judgment about category membership. This is a false-summit candidate: the analytical observer risks naturalizing categorical balancing as a necessary feature of any legal system, when comparative constitutional analysis reveals the categories are jurisdiction-specific and historically contingent.",
+    "key_agents": [
+      "Institutional Judiciary (Majority Coalition): Primary beneficiary (institutional/arbitrage) — maintains interpretive control over category definitions and balancing tests",
+      "Disfavored Speaker: Primary victim (powerless/trapped) — falls within categorically-excluded speech; faces suppression with no exit mechanism",
+      "Speech-Protective Organizations: Secondary actor (moderate/constrained) — civil liberties groups benefit from having a legal framework to work within but bear costs of categorical exclusions",
+      "Marginalized Social Movements: Secondary actor (organized/constrained) — historically-marginalized groups whose speech falls into disfavored categories; have organizational capacity but systematic categorical disadvantage",
+      "Legal Predictability (Abstract Good): Degraded institutional goal (piton) — formal categories create appearance of predictability that masks ad hoc judicial reasoning",
+      "Lower Courts and Legal Bureaucracy: Institutional actor (institutional/constrained) — apply categorical doctrine performatively while following Supreme Court authority",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing contingent institutional arrangement as necessary structure"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The categorical balancing constraint extracts substantially from those whose speech falls into disfavored categories — they face criminalization or civil liability with no meaningful appeal once category status is fixed. The extraction is not at snare levels (0.66+) because the constraint does provide coordination benefits to some speakers and some speech remains protected. Theater ratio (0.68): High. The categorical framework performs predictability and neutrality, but actual decisions are contingent on fact-finding and judicial judgment about category membership (how does one determine whether speech constitutes 'incitement' or 'fighting words'?). The formalism of categorical doctrine obscures this contingency. Over the measurement interval (10 time units representing ≈50 years of doctrine), both extractiveness and theater have risen: categories have hardened as doctrine accumulated while speech practices diversified, and formal categorical reasoning has become more prominent in judicial opinions (possibly to mask ad hoc balancing). Suppression (0.62): Moderate-high. The constraint operates through category definition (judicial control of which utterances fall within categories), police enforcement (suppression of disfavored speech through arrest), and appellate review (courts upholding categorical determinations). Suppression is not total because some speech escapes categorization and appeals processes exist, but the categorical structure substantially limits alternatives.",
+    "directionality_logic": "The institutional judiciary (beneficiary, arbitrage exit) derives d ≈ 0.15–0.25: they benefit from the constraint and face no structural barriers to changing doctrine. Disfavored speakers (victim, trapped exit) derive d ≈ 0.90–0.98: they bear maximum extraction and cannot exit the categorical determination. Moderate actors like speech-protective organizations (constrained exit) derive d ≈ 0.65–0.75: they face institutional barriers to shifting doctrine but have resources and strategic options. Organized movements (constrained exit, mixed victim-beneficiary) derive d ≈ 0.62–0.72: they face suppression but also benefit from having a legal framework to litigate within. The perspectival gap emerges from these divergent directionalities: the judiciary experiences coordination (rope), disfavored speakers experience pure extraction (snare), and intermediate actors experience mixed structures (tangled rope). The piton perspectives derive from theater ratio (0.68) exceeding the piton gate (0.70 is the minimum for pure piton; this constraint is near the threshold, indicating performative institutional maintenance). The mountain perspective is a false summit: it naturalizes what the structural data shows is an institutional arrangement with identifiable beneficiaries and victims.",
+    "perspectival_gap": "The categorical balancing reading produces maximum perspectival divergence. From the judiciary's perspective (institutional/arbitrage), the constraint is coordination — it enables efficient doctrine-application and preserves interpretive authority. From the disfavored speaker's perspective (powerless/trapped), it is pure extraction — categorical membership determines suppression with no exit. From generational/organized perspectives, it is tangled rope — both the category system and the access to courts provide some coordination, while the categorical logic itself constrains options. The piton perspectives (legal predictability, lower courts) reveal that the constraint's performative aspects dominate its functional ones. The mountain perspective risks naturalizing the categorical structure as inevitable, when structural analysis shows it is maintained through active judicial enforcement and serves identifiable institutional interests. This perspectival range demonstrates why the categorical balancing reading requires explicit committer-frame specification: the constraint's identity is constituted through conflicting normative readings of the First Amendment's scope and purpose.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by acknowledging that categorical balancing is one normative reading of First Amendment speech protection, distinct from absolutism and harm-limitation. The constraint's structure reflects a specific institutional choice to maintain fixed categories of unprotected speech rather than (a) protecting all speech without category (absolutism) or (b) balancing speech against harms in each case without fixed categories (harm-limitation). The mandatrophy arises because each reading can claim legitimate constitutional grounding: categorical balancing claims predictability and manageability; absolutism claims fidelity to the Amendment's text; harm-limitation claims nuance and proportionality. The engine's mandatrophy resolution is perspectival: each perspective sees the constraint legitimacy differently. The judiciary sees legitimate coordination; disfavored speakers see illegitimate extraction. The resolution is not 'which reading is correct' but 'what are the structural trade-offs of adopting this reading rather than the alternatives.' The omega variables document these trade-offs.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel 'first_amendment_speech_protection.' The kernel is a formalized, written text (the First Amendment) that multiple legal traditions ground their authority in, but which admits competing readings because the text does not explicitly specify how to balance speech against other values. READING INSTANTIATED: categorical_balancing_reading — the normative claim that the First Amendment protection is best understood as excluding fixed categories of unprotected speech (obscenity, incitement, fighting words, true threats) while providing substantial protection to speech outside these categories. SIBLING READINGS: (1) absolutist_reading — the claim that the Amendment protects nearly all speech except incitement to imminent lawless action; (2) harm_limited_reading — the claim that speech is protected unless it causes direct, imminent, measurable harm. The categorical balancing reading is distinguished by its commitment to judicially-managed categories as the primary organizing principle, versus absolutism's prohibition on categorization and harm-limitation's case-by-case analysis. The kernel_codification is 'formalized' (fixed constitutional text); authority_grounding is 'lineage' (judges ground authority in interpretive tradition of applying the text). The categorical reading claims legitimacy through appeal to doctrine-building (the categories have accumulated through generational case law and represent settled law), while absolutists claim legitimacy through fidelity to text (the Amendment is maximalist) and harm-limitationalists claim legitimacy through proportionality (balancing accommodates competing values)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "absolutist_reading",
+      "harm_limited_reading"
+    ],
+    "dual_formulation_note": "The three First Amendment readings (categorical balancing, absolutist, harm-limited) form a kernel family where the categorical balancing reading is one instantiation of a shared kernel (the First Amendment text). The three readings have different ε values reflecting different structural relationships to judicial authority and beneficiary/victim alignment. Categorical balancing (this file, ε=0.58) is moderate extraction with institutional beneficiary; absolutist reading would have lower ε (less beneficiary extraction, more universal protection); harm-limited reading would have ε between these two. Each reading is a separate constraint story with its own perspectives and measurements."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "absolutist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "harm_limited_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "judicial_categories_necessary_for_predictability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "judicial_integrity_requires_categorical_boundaries",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "categorical_exclusion_stability",
+    "drift_state": {
+      "moment": "contemporary_speech_diversity",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "first_amendment_speech_protection"
+    ]
+  }
+}

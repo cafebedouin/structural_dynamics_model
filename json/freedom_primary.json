@@ -1,0 +1,229 @@
+{
+  "header": {
+    "constraint_id": "freedom_primary",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_freedom_primary"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.38,
+    "claimed_type": "snare",
+    "human_readable": "Border Enforcement Against Freedom of Movement (Freedom-Primary Reading)",
+    "topic_domain": "political_philosophy/international_law/migration",
+    "beneficiaries": [],
+    "victims": [
+      "excluded_migrants",
+      "asylum_seekers",
+      "internally_displaced_persons"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Excluded Migrant",
+      "comment": "PERSPECTIVE 1: EXCLUDED MIGRANT (SNARE) — Faces absolute barrier to exit: cannot move across borders without permission; domestic poverty/persecution/conflict cannot be escaped through movement. Birth location becomes a life sentence. Suppression is maximal — no legal recourse, no appeal, no alternative pathway. Extraction mechanism: wealth and security stratification is enforced and reproduced through border control."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Domestic Labor Market Workers (Sovereignty Reading)",
+      "comment": "PERSPECTIVE 2: DOMESTIC LABOR MARKET WORKERS — SOVEREIGNTY READING (SNARE) — From the sovereignty-primary reading's perspective, these workers face extraction through wage competition from migrants. From freedom-primary, these workers are themselves victims of the border constraint: restricted movement keeps them locked in low-wage labor markets while capital moves freely. Their constrained exit reflects material barriers, not migration barriers per se. This perspective reveals the asymmetry: labor is immobile while capital is mobile, reproducing inequality across borders."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Border State (Enforcement Apparatus)",
+      "comment": "PERSPECTIVE 3: BORDER STATE — ENFORCEMENT APPARATUS (TANGLED ROPE) — The state apparatus benefits from border enforcement (revenue, labor market control, political legitimacy through sovereignty claims) and coordinates genuine functions (disease control screening, criminal identity verification, labor regulation). However, the enforcement mechanism also extracts: detention infrastructure, deportation machinery, surveillance systems create a parallel extraction apparatus justified by the coordination function but exceeding it. State sees constraint as legitimately necessary (coordination frame) while targets see only extraction (snare frame)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Global Capital and Professional Mobility",
+      "comment": "PERSPECTIVE 4: GLOBAL CAPITAL AND PROFESSIONAL MOBILITY (ROPE) — Capital flows across borders with minimal friction; high-skill professionals (tech workers, executives, academics) access visa pathways denied to low-skill migrants. This agent experiences border constraints as coordination mechanisms: visa screening, trade protocols, intellectual property enforcement. Borders enable their movement through legitimacy (selective access) while restricting others. They experience arbitrage—the constraint subsidizes their mobility."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Naturalized Sovereignty)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER — NATURALIZED SOVEREIGNTY (MOUNTAIN) — From this analytical perspective, state borders appear as natural features of the international system: sovereign territorial organization is presented as an irreducible requirement of political order. Border control emerges as natural law, not as a contingent institutional arrangement. However, the false-summit detection will activate: the beneficiaries (border-enforcing states, capital, professional-class mobility) are identifiable, and the constraint's function (resource extraction through mobility restriction) exceeds coordination necessity. This natural-law framing naturalizes what is structurally contingent."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Migration Rights Advocacy",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL MIGRATION RIGHTS ADVOCACY (PITON) — Organized advocacy for freedom of movement exists (UN protocols, regional rights frameworks, NGO networks) but institutional leverage is minimal relative to state sovereignty claims. The advocacy machinery persists through normative commitment rather than functional efficacy: international human rights institutions cannot enforce freedom of movement against state sovereignty. Theater ratio is high—the institutions perform rights protection while lacking enforcement capacity. Constraints on advocacy (visa denials to activists, NGO funding cuts, legal suppression of smuggling networks) maintain the theatrical separation between rights claims and enforcement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "collective_action_problem_exit",
+      "question": "Is the freedom-of-movement reading internally coherent if it requires unilateral open borders by some states while others maintain closure, creating migration flood dynamics that undermine the reading's own legitimacy claims?",
+      "resolution_mechanism": "Historical analysis of open-migration policies; modeling of sustainable global mobility equilibrium; comparison of successful vs failed open-border experiments (EU Schengen, internal USA migration, post-Soviet freedom of movement)",
+      "impact": "If collective action failure is inevitable: reading requires global coordination (makes it a coordination constraint, not pure snare). If sustainable equilibrium exists: reading remains valid as snare, requiring global norm shift. Determines whether the constraint is a prisoner's dilemma (coordination problem) or a genuine rights violation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether freedom-of-movement reading requires coordinated global implementation or sustains unilaterally"
+    },
+    {
+      "id": "sovereignty_kernel_foreclosure",
+      "question": "Does the freedom-primary reading logically foreclose the sovereignty-primary reading, or do they coexist as incommensurable normative commitments?",
+      "resolution_mechanism": "Logical analysis of the core axioms: if freedom of movement is a fundamental right that borders impermissibly restrict (freedom-primary) AND if states have irreducible authority to control their borders (sovereignty-primary), can both be maintained in a single normative framework? Or does one entail the rejection of the other?",
+      "impact": "If forecloses: the readings are in genuine logical contradiction; frameworks must choose. If coexists: both readings are live despite tension; the dispute is about weighted priorities, not truth. Determines the reading_relations classification (forecloses vs coexists_with).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether freedom-primary logically forecloses sovereignty-primary"
+    },
+    {
+      "id": "natural_rights_vs_contingent_institutions",
+      "question": "Is freedom of movement a universal natural right (grounded in human dignity) or a contingent institutional claim (grounded in particular political traditions)?",
+      "resolution_mechanism": "Genealogical analysis of freedom-of-movement claims; identification of which traditions generate this right claim and which do not; examination of whether the claim is pre-institutional (discoverable in state of nature) or post-institutional (generated by particular legal regimes)",
+      "impact": "If natural right: the constraint (border enforcement) is a violation of immutable human entitlements. If contingent: the reading is culturally particular and lacks universal force. Affects whether false-summit detection applies (naturalization is fraudulent vs. legitimate philosophical claim).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether freedom of movement is natural right or contingent institutional claim"
+    },
+    {
+      "id": "extraction_vs_coordination_decomposition",
+      "question": "Can border control be decomposed into a coordination component (disease screening, identity verification, criminal detection) and an extraction component (mobility restriction, wealth gatekeeping)? Or is border control necessarily unified?",
+      "resolution_mechanism": "Analysis of technical requirements: what border functions genuinely require preventing movement? Which could be accomplished with movement permission + post-movement monitoring? What proportion of border capacity is devoted to each function?",
+      "impact": "If decomposable: the coordination component is legitimate (tangled rope perspective gains force), but extraction mechanism is separable and target of rights claims. If unified: border control necessarily extracts through its coordination function. Determines whether the constraint should be split into separate stories per ε-invariance principle.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether border-control coordination and extraction components can be separated"
+    },
+    {
+      "id": "reading_kernel_contest_status",
+      "question": "This constraint is the freedom-primary reading of the border_normative_status kernel. Is this reading currently holdable (a live normative position in contemporary discourse)? Or has it been substantially overridden (rejected by dominant institutions)?",
+      "resolution_mechanism": "Assessment of institutional adoption: UN declarations, state practice, movement momentum, funding and advocacy capacity, alignment with dominant state interests. If institutions actively suppress the reading, and scholars risk professional penalty for endorsing it, status approaches overridden despite philosophical coherence.",
+      "impact": "If holdable: the reading remains a live option for normative commitment; perspectives should reflect ongoing contest. If overridden: the reading exists as a minority philosophical position; perspectives should reflect its marginalization. Affects axiom status declarations and drift analysis.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Current institutional status of freedom-primary reading"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates the freedom-primary reading of the contested border_normative_status kernel. The reading asserts that freedom of movement is a fundamental human right that borders impermissibly restrict, and that exclusion requires extraordinary justification grounded in compelling state interests. This reading stands in contest with two sibling readings: sovereignty-primary (borders as irreducible expressions of state authority) and qualified-sovereignty (borders permissible under specified conditions). From the freedom-primary perspective, the border enforcement apparatus extracts from excluded migrants by restricting their access to safe refuge, economic opportunity, and family reunification. The constraint appears as snare when viewed from the excluded migrant's structural position (powerless, trapped, no exit options). It appears as tangled-rope from the border state's perspective (genuine coordination functions—disease screening, identity verification—mixed with extraction). It appears as rope from global capital's perspective (borders enable selective mobility for the powerful while extracting from the powerless). The extractiveness has increased from 0.52 to 0.68 over the interval as border enforcement infrastructure has intensified (digitalization, biometric systems, detention capacity expansion) while humanitarian crisis drivers (climate displacement, regional conflict) have intensified exclusion pressures. The theater-ratio remains low (0.38) because border enforcement is substantive rather than performative—people are actually prevented from crossing, detained, deported, and died attempting border crossing—unlike more theatrical constraints where the ritual exceeds the actual mechanism.",
+    "key_agents": [
+      "Excluded Migrants: Primary victims (powerless/trapped) — face absolute barrier to movement; birth location determines life trajectory",
+      "Asylum Seekers: Primary victims (powerless/trapped) — lack legal status pathways; face deportation to persecution",
+      "Internally Displaced Persons: Primary victims (powerless/trapped) — cannot cross borders to safety; trapped by internal conflict or climate displacement",
+      "Border State (Enforcement Apparatus): Institutional beneficiary (institutional/arbitrage) — benefits from territorial closure, labor-market control, political legitimacy; coordinates genuine screening functions alongside extraction",
+      "Global Capital and Professional Class: Secondary beneficiary (powerful/arbitrage) — experience borders as coordination mechanisms enabling selective mobility; arbitrage their way across barriers",
+      "Domestic Labor Market Workers: Secondary victims (moderate/constrained) — face wage competition narrative but actually locked into low-wage labor markets by mobility restriction alongside capital freedom",
+      "International Migration Rights Advocacy: Organized advocacy (organized/constrained) — generates normative counter-claims but lacks institutional enforcement leverage; maintains rights discourse through piton mechanisms"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The freedom-primary reading identifies border enforcement as a mechanism of wealth and opportunity stratification. Excluded migrants cannot access higher-wage labor markets, cannot flee persecution, cannot reunify with family, and cannot benefit from lower-cost-of-living arbitrage—all mechanisms that movement-enabled agents exploit. The extractiveness has increased over time as border enforcement capacity has expanded (digital surveillance, detention infrastructure, deportation machinery) while migration drivers (climate displacement, regional conflict, wealth inequality) have intensified. Suppression (0.75): Very high. The constraint eliminates exit options for excluded populations: no legal pathway to movement, no appeal process, no negotiation with enforcement agents, no alternative route when borders are closed. The suppression includes prevention mechanisms (walls, detention) and normalization mechanisms (sovereignty doctrine teaching that borders are natural/legitimate). Theater ratio (0.38): Moderate-low. Border enforcement is substantive, not primarily performative. People are actually prevented from crossing, detained, deported. However, some theater exists: sovereignty doctrine performs legitimacy work, humanitarian exceptions and asylum processing create appearance of discretion within systems of near-total closure, the 'rule of law' frame legitimizes extraction as administration.",
+    "directionality_logic": "The freedom-primary reading produces maximum directionality d values toward victimhood (d ≈ 0.95 for trapped excluded migrants; d ≈ 0.80 for constrained domestic workers). The f(d) sigmoid transforms this into high experienced extractiveness (f(0.95) ≈ 1.42, f(0.80) ≈ 1.15). From the border state's perspective (institutional/arbitrage), directionality is reversed: the state is the beneficiary, experiencing low or negative d (d ≈ 0.10), producing low experienced extraction f(0.10) ≈ -0.02. This perspectival inversion is the diagnostic signature of the snare: the target and extractor experience radically different chi values from the same ε. Analytical observers face the mountain temptation—to naturalize sovereignty as an immutable feature of political order—but the declared beneficiaries (border-enforcing states) expose this as false-summit naturalization. The constraint benefits identifiable institutional actors; it is not a natural law.",
+    "perspectival_gap": "The excluded migrant perceives a snare (maximum extraction, no exit). The border state perceives tangled rope (genuine coordination functions—identity verification, disease screening—alongside necessary enforcement of territorial boundaries). Global capital perceives rope (borders enable their selective mobility while restricting others, producing arbitrage opportunity). Domestic workers perceive extraction but through a sovereignty-framing lens (migrants as extractors of wages), not through the freedom-primary lens (both workers and migrants are victims of mobility restriction). The analytical observer risks perceiving mountain (borders as natural features of state order) until the beneficiary analysis forces recognition that the mountain is a false summit: specific institutional actors benefit from the border's maintenance. The perspectival gap is maximized between the excluded migrant (snare) and the border state (tangled rope)—they are measuring the same constraint through entirely different frames.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The freedom-primary reading avoids mandatrophy by accepting that border enforcement is legitimately a snare from the target's perspective but may be perceived as coordination (tangled rope or even rope) from the beneficiary's perspective. The reading does not claim that all perspectives must classify identically—rather, it asserts that the excluded migrant's snare classification reveals the underlying structure (extraction masked by sovereignty doctrine). The analytical observer's mountain is a false summit. The mandatrophy is resolved by accepting perspectival pluralism while maintaining that the victims' perspective (snare) is the one that correctly identifies the constraint's function.",
+    "kernel_context": "This constraint instantiates the FREEDOM-PRIMARY reading of the border_normative_status kernel. The kernel is the contested normative status of state borders: what legitimates border enforcement? The freedom-primary reading holds that borders require extraordinary justification because movement is a fundamental right. Sibling readings are: (1) SOVEREIGNTY-PRIMARY: borders are irreducible expressions of state authority requiring no external justification. (2) QUALIFIED-SOVEREIGNTY: borders are permissible only under specified conditions (non-discriminatory application, humanitarian exceptions, human-rights consistency). The freedom-primary reading COEXISTS_WITH both siblings: all three readings are currently live in international law discourse, held by different institutional and philosophical coalitions. The readings do not logically foreclose one another within a single framework—rather, they represent incommensurable normative starting points. However, the freedom-primary reading INFLUENCES the qualified-sovereignty reading (by raising the justification bar) and the qualified-sovereignty reading influences the freedom-primary reading (by introducing practical constraints)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "sovereignty_primary",
+      "qualified_sovereignty",
+      "global_labor_market_segmentation",
+      "climate_refugee_entrapment"
+    ],
+    "dual_formulation_note": "The freedom-primary reading is one of three readings of the border_normative_status kernel. Each reading produces different base_properties.extractiveness values and beneficiary/victim declarations. The freedom-primary reading (this file) treats migrants as victims. The sovereignty-primary reading treats migrant inflows as extraction targets for domestic workers and treats state authority as the primary beneficiary. The qualified-sovereignty reading occupies the logical space between them, accepting some freedom-of-movement principle while recognizing state-interest constraints. All three are separate constraint stories with different ε values and perspective structures; they are linked via network.affects_constraints because the kernel contest means they structurally influence one another."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "universal_human_rights_tradition",
+    "drift_state": {
+      "moment": "contemporary_nationalist_resurgence",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "sovereignty_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "qualified_sovereignty",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "movement_fundamental_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "territorial_closure_requires_extraordinary_justification",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  }
+}

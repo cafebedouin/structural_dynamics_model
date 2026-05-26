@@ -1,0 +1,237 @@
+{
+  "header": {
+    "constraint_id": "infrastructure_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_infrastructure_reading",
+    "measurement_id_prefix": "infra"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Digital Money Emergence: Infrastructure Control Reading",
+    "topic_domain": "monetary_economics/financial_infrastructure",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "banking_infrastructure_operators",
+      "central_banks_settlement_authority"
+    ],
+    "victims": [
+      "non_bank_financial_entities",
+      "consumer_cash_exit_options"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Consumer Without Infrastructure Access",
+      "comment": "PERSPECTIVE 1: NON-BANK ACTORS & CASH HOLDERS (SNARE) — Cannot participate in the definition of money once it is anchored to electronic infrastructure. Trapped by lack of access to SWIFT/ACH rails. Must either hold cash (losing value, excluded from money markets) or trust banks as intermediaries. No exit from the constraint itself — either participate on infrastructure terms or be outside the monetary system entirely."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Non-Bank Financial Intermediaries",
+      "comment": "PERSPECTIVE 2: NON-BANK INTERMEDIARIES (TANGLED ROPE) — Money market funds, credit unions, payment processors can participate in electronic networks but do not control the rails. Constrained by having to route through SWIFT/ACH; some coordination benefit from standardized protocols but significant extraction through gatekeeping. Access to infrastructure is real coordination function; control of infrastructure is asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Banking Infrastructure Operators",
+      "comment": "PERSPECTIVE 3: BANKING INFRASTRUCTURE OPERATORS / SWIFT / ACH (ROPE) — Define what money is through control of the infrastructure. Experience the constraint as pure coordination: standardizing message formats, settlement protocols, and real-time gross settlement enables global finance. Net beneficiary — extraction flows toward these operators through control of the rails and data on all transactions. Can arbitrage between national payment systems."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Central Banks and Settlement Authorities",
+      "comment": "PERSPECTIVE 4: CENTRAL BANKS & SETTLEMENT AUTHORITIES (TANGLED ROPE) — Coordinate monetary policy through infrastructure control (reserve settlement in Fed wires, ECB TARGET2, etc.) but also face extraction from private infrastructure operators (correspondent banking fees, SWIFT message costs). Genuine coordination function (monetary policy transmission) embedded in asymmetric terms dictated partly by private operators. Constrained by dependence on infrastructure they don't fully control."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Cash and Commodity Money Systems",
+      "comment": "PERSPECTIVE 5: LEGACY CASH & COMMODITY SYSTEMS (PITON) — Functionally degraded as primary money but persists through institutional inertia. Physical cash still used for small transactions and payment of last resort but has lost primary function — central banks maintain it for contingency and political legitimacy ('money we can hold'). Theater ratio reflects that cash production, distribution, and security consume real resources while serving increasingly theatrical role as 'true money' when digital systems now carry most monetary function."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer: Natural Law View",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) — From a civilizational/technical perspective, money requires some infrastructure for transfer — this is an irreducible constraint of scalable monetary systems. Electronic infrastructure is simply the natural evolution of what monetary systems require. No alternatives to infrastructure dependency exist for large-scale economies. However, this perspective naturalizes what is actually a political choice: WHICH infrastructure controls money definition. The mountain is a false summit — the structural data reveals that infrastructure type is contingent and engineered, not natural."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "infrastructure_necessity_vs_ownership",
+      "question": "Is infrastructure control over money definition a necessary property of monetary systems (natural law) or a contingent institutional arrangement that could be differently structured?",
+      "resolution_mechanism": "Historical analysis of alternative monetary architectures (commodity-backed, community-issued, distributed ledger systems); identification of cases where money definition proceeded from non-infrastructure-controlling entities. Comparison of M0 (state money) vs M2-M5 (infrastructure-dependent money) definitions and their stability.",
+      "impact": "If necessary: infrastructure reading holds as foundation; all other readings are aspirational. If contingent: infrastructure reading is a political choice; alternative readings become structurally viable and competing readings are equally valid. This determines whether the constraint is mountain or tangled rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether infrastructure control is necessary or contingent to money definition"
+    },
+    {
+      "id": "boundary_specificity_across_readings",
+      "question": "Does the infrastructure reading of money emergence (ATMs, ACH, SWIFT as the boundary) capture the same phenomenon that the conceptualization and consumer-holdings readings identify, or are these fundamentally measuring different emergences?",
+      "resolution_mechanism": "Cross-reading comparison: (1) What did each reading identify as 'money' before and after the boundary? (2) Do the three readings agree on whether mid-tier actors (non-bank intermediaries) had access to monetary function before vs. after? (3) What empirical facts would force one reading to revise its boundary placement? If readings differ on what counts as evidence, they are reading different kernels.",
+      "impact": "If measuring same emergence: the three readings represent legitimate perspectival ambiguity; engine can model all three as valid. If measuring different emergences: the readings should be decomposed into separate kernels with separate infrastructure, conceptualization, and consumer-holdings constraints for each.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether all three readings measure the same emergence event or different events"
+    },
+    {
+      "id": "extraction_vs_coordination_allocation",
+      "question": "Is the asymmetric benefit flowing to infrastructure operators (SWIFT fees, ACH operator profits, settlement risk premiums) properly characterized as extraction within a coordination system, or is this extraction better modeled as the natural rent on control of a critical infrastructure?",
+      "resolution_mechanism": "Comparative institutional analysis: (1) Can alternative infrastructure exist at similar cost and scale? (2) Are SWIFT/ACH profits and operating margins higher than competitive benchmarks for communication/settlement services? (3) What would happen if infrastructure were shifted to public ownership (Fed-operated SWIFT-equivalent, Treasury-run ACH)? Measurement of what portion of operator profit derives from coordination necessity vs. monopoly position.",
+      "impact": "If extraction is separable from coordination: operators could be compensated for coordination work at fair rates while excess extraction is removed; constraint could shift from tangled_rope to rope. If rent is structural: any operator would enjoy similar monopoly position; constraint is inherently tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether infrastructure operator profits are coordination cost or extractive rent"
+    },
+    {
+      "id": "cbdc_foreclosure_of_infrastructure_reading",
+      "question": "Would central bank digital currencies (CBDCs) that bypass private infrastructure operators foreclose the infrastructure reading, forcing reclassification of the money definition boundary?",
+      "resolution_mechanism": "Analysis of CBDC architectures: (1) Do CBDCs eliminate infrastructure dependency or merely relocate it from SWIFT/ACH to central bank digital systems? (2) Can CBDCs achieve same settlement speed and scale without equivalent infrastructure? (3) If CBDCs become primary money, does the infrastructure reading still apply (with central bank as operator instead of private), or does the constraint dissolve?",
+      "impact": "If CBDCs foreclose infrastructure control: the reading's foundational axiom (infrastructure control defines money) is invalidated; reading becomes overridden. If CBDCs merely shift operator: reading persists with different beneficiary (central bank instead of private operator). This determination affects whether the kernel remains contested or one reading achieves dominance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether CBDCs foreclose the infrastructure control reading"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15,
+      "id_override": "infra_extract_t0_pre_atm"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.32,
+      "id_override": "infra_extract_t3_atm_era"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48,
+      "id_override": "infra_extract_t5_ach_consolidation"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58,
+      "id_override": "infra_extract_t10_swift_dominance"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22,
+      "id_override": "infra_theater_t0_pre_atm"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.28,
+      "id_override": "infra_theater_t5_ach"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35,
+      "id_override": "infra_theater_t10_swift"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates the INFRASTRUCTURE READING of when digital money emerged: money became digital when banks gained the technological capacity to move it electronically (1967 ATMs enabling remote cash access, 1972 ACH enabling batch interbank clearing, 1977 SWIFT establishing standardized electronic messaging for international payments). This reading differs from competing readings: the CONCEPTUALIZATION reading locates emergence when money was formally redefined in economic theory to include electronic deposits (1960s-70s shift from M1 to M2-M5); the CONSUMER HOLDINGS reading locates emergence when consumers themselves could hold and transfer digital money directly (credit cards 1950s-60s, debit cards 1980s-90s, mobile wallets 2000s-10s). Each reading anchors to different empirical phenomena and produces different victim and beneficiary sets. The infrastructure reading identifies beneficiaries as the operators of these systems (SWIFT, ACH operators, central banks) who gain control over the definition of money itself through controlling the rails. It identifies victims as non-bank actors and consumers locked out of the definition process — they experience money as what the infrastructure permits, not what they control. The key structural feature: once money is defined as electronic transfers on banking infrastructure, anyone not connected to that infrastructure is structurally outside the monetary system.",
+    "key_agents": [
+      "Banking Infrastructure Operators (SWIFT, ACH, Fed Reserve): Primary beneficiaries (institutional/arbitrage) — define money through control of transfer rails; capture rents through settlement fees and message costs",
+      "Central Banks: Secondary beneficiaries (institutional/constrained) — coordinate monetary policy through infrastructure but depend on private operators for international settlement",
+      "Non-Bank Intermediaries (Fintechs, Money Market Funds): Constrained participants (organized/constrained) — can access but do not control infrastructure; pay fees and adapt to operator-set standards",
+      "Consumers and Cash Holders: Primary victims (powerless/trapped) — excluded from infrastructure, must either use cash (increasingly marginalized) or trust banks as intermediaries; no exit from constraint",
+      "Legacy Cash System: Degraded system (institutional/arbitrage) — persists through political legitimacy and contingency role but functionally displaced by digital infrastructure",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing infrastructure control as inevitable property of monetary systems"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high. The infrastructure operators capture substantial rents through controlling the monetary rails (SWIFT fees averaging $0.32-$2.50 per message; ACH operator margins; Fed reserve settlement risk premiums). However, this is not maximum extraction (0.80+) because the infrastructure also provides genuine coordination function — standardized message formats and real-time settlement enable global commerce that would be impossible under alternative systems. The measurement trajectory shows steady accumulation: pre-ATM (0.15) when money was primarily cash and checks; post-ACH (0.48) when most interbank clearing was electronic; post-SWIFT dominance (0.58) when international transfers required compliance with operator-controlled standards. Suppression (0.48): Moderate. Barriers to exit are real but not total. Non-banks can access infrastructure (paying fees), cash remains available (though increasingly discouraged), and some alternatives exist (cryptocurrencies, community currencies, barter). The suppression reflects the structural reality: any large-scale monetary system requires some infrastructure, but THIS specific infrastructure (SWIFT/ACH) has switching costs and coordination lock-in. Theater ratio (0.35): Low. The infrastructure reading has low theater because it focuses on what actually works: message formats, settlement protocols, real-time gross settlement. This is functional rather than performative. Compare to the legacy cash perspective (perspective 5, theater 0.7+) where cash production is increasingly theatrical.",
+    "perspectival_gap": "The infrastructure reading produces maximum perspectival divergence from the other two readings of the same kernel. From the infrastructure perspective, money emergence is technological and inevitable (once banks can move it electronically, money is digital — the boundary is hard and empirical). From the conceptualization reading, emergence is definitional and interpretive (money became digital when economists redefined monetary aggregates to include electronic deposits — the boundary is soft and theoretical). From the consumer-holdings reading, emergence is experiential and democratic (money is digital only when consumers control digital holdings — the boundary is practical and individual). The infrastructure reading generates snare perception for non-bank actors (trapped outside the definition process) while the beneficiaries experience rope (pure coordination of transfers). This gap reveals that the 'emergence of digital money' is not a single event but a contested transition where different stakeholders anchor to different observable phenomena. The false summit (perspective 6) naturalizes what is actually a political choice about who controls the infrastructure.",
+    "directionality_logic": "Beneficiaries (banking infrastructure operators, central banks) have arbitrage exit options: they can shift between different protocol standards, move settlement to different systems, or design new infrastructure. Their d-values are low (0.05-0.20 range), producing negative or near-zero effective extraction from their perspective — they experience pure coordination benefit. Victims (non-bank actors, consumers) have trapped or constrained exit options: they cannot redesign the infrastructure and face high switching costs. Their d-values are high (0.80-0.95 range), producing high effective extraction from their perspective — they experience the constraint as coercive. The organized non-bank intermediaries occupy middle ground (d ~0.55) with constrained exit: they can access infrastructure but cannot control standards. Central banks are institutionally constrained (d ~0.50) because they depend on private infrastructure for international settlement despite their nominal authority.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel 'digital_money_emergence_boundary'. The kernel is the question: when did money become digital? Three readings exist: (1) INFRASTRUCTURE reading (this constraint) — when banks gained technical capacity to transfer it electronically (ATMs, ACH, SWIFT); (2) CONCEPTUALIZATION reading — when economists formally redefined monetary aggregates to include electronic deposits (M2-M5); (3) CONSUMER HOLDINGS reading — when consumers themselves could hold and transfer digital money (credit/debit cards, digital wallets). Each reading identifies different emergence moments, different beneficiaries, and different boundaries. The infrastructure reading anchors to technical capability and identifies beneficiaries as infrastructure operators. The kernel persists contested because each reading remains live: banks do define money through infrastructure control; economists do use definitional boundaries in monetary policy; consumers do experience money-ness through their access to digital holdings. No single reading forecloses the others within the framework of monetary history — they describe different layers of the same transformation.",
+    "mandatrophy_analysis": "The infrastructure reading resolves mandatrophy by showing that the three readings represent DIFFERENT STRUCTURED PERSPECTIVES on the same underlying event, not contradictory claims about what 'really' happened. The constraint does not suffer from type confusion (rope vs snare indeterminacy) because the ε values reflect genuine structural differences: infrastructure operators experience rope (coordination benefit), consumers experience snare (trapped extraction), non-banks experience tangled rope (mixed). The classification diversity is not a sign of analytical failure — it is the signature of a contested kernel where different institutional positions anchor to different observable phenomena. The false summit perspective (mountain) is the risk: naturalizing infrastructure control as inherent to money-ness rather than recognizing it as a political-institutional choice about who controls the system."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "conceptualization_reading",
+      "consumer_holdings_reading"
+    ],
+    "dual_formulation_note": "The infrastructure reading is the middle boundary of three competing readings of the same kernel (digital_money_emergence_boundary). Upstream: conceptualization_reading anchors to economic redefinition of monetary aggregates (earlier, more theoretical boundary). Downstream: consumer_holdings_reading anchors to consumer access to digital money (later, more experiential boundary). All three share the same beneficiary/victim structure but locate the emergence event at different points. Each story has independent ε; they are not measurable variants of one story but genuinely distinct constraints on the emergence process."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.5
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "technical_capability_money_definition",
+    "drift_state": {
+      "moment": "contemporary_cbdc_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "conceptualization_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "consumer_holdings_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "infrastructure_control_defines_monetary_function",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "beneficiary_authority_via_infrastructure_control",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  }
+}

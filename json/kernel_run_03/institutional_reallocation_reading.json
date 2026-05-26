@@ -1,0 +1,232 @@
+{
+  "header": {
+    "constraint_id": "institutional_reallocation_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_institutional_reallocation_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Institutional Reallocation of IP Rights: Statute of Anne Reading",
+    "topic_domain": "legal_history/intellectual_property/institutional_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "book_publishers",
+      "authors_as_assignees"
+    ],
+    "victims": [
+      "stationers_company_monopoly",
+      "traditional_patrons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Stationers' Company (Displaced Monopolist)",
+      "comment": "PERSPECTIVE 1: STATIONERS' COMPANY (SNARE) — The chartered monopoly faced extraction of its institutional position without compensatory alternative. Suppression was structural: the Crown's statutory reallocation foreclosed other exit paths. The company experienced this as a direct loss of vested rights with no agency to negotiate transition."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Traditional Patrons and Court-Privileged Authors",
+      "comment": "PERSPECTIVE 2: TRADITIONAL PATRONS / COURT-PRIVILEGED AUTHORS (TANGLED ROPE) — Mixed experience: patrons lost their direct gatekeeper role (extraction), but retained influence through author assignment and dedication practices (coordination benefit). Constrained exit — they could not easily revert to pre-statute patronage structures, but maintained economic involvement through the new assignment mechanism."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Publishers and Commercial Booksellers (New Beneficiaries)",
+      "comment": "PERSPECTIVE 3: PUBLISHERS AND COMMERCIAL BOOKSELLERS (ROPE) — Primary beneficiaries. The statute created assignable rights that publishers could acquire from authors, converting intellectual property into tradeable assets. This was coordination (standardized ownership transfer) with net flow toward publishers. High arbitrage — publishers could exit into alternative distribution models."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Authors as an Emerging Class",
+      "comment": "PERSPECTIVE 4: AUTHORS AS EMERGING CLASS (TANGLED ROPE) — Mixed experience reflects the reading's core claim: authors were recognized as right-holders for the first time, but immediately faced pressure to assign those rights to publishers for upfront payment. This is coordination (establishing authorial standing) coupled with extraction (assignment pressure). Mobile exit — some authors could exploit multiple publishers or refuse assignment, but most faced strong economic incentives to assign."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Crown's Regulatory Authority",
+      "comment": "PERSPECTIVE 5: CROWN'S REGULATORY AUTHORITY (PITON) — The statutory reallocation itself was performative from the Crown's perspective: it announced a shift in institutional priority (from guild monopoly to market-based publishing) while preserving the Crown's veto power via censorship and licensing. The constraint's function (controlling publication) persisted despite the ostensible rights redistribution. Theater_ratio captures the gap between the statute's language (author rights) and its practice (rights attached to censorship authority)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law of Property Rights)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational analytical perspective, the statute appears to discover an inherent natural right: authors inherently own their intellectual creation; the statute merely recognized a pre-existing legal entitlement. This reading sees property rights as emerging from natural law rather than institutional allocation. However, the structural data contradicts mountain classification — the statute's actual effect was institutional reallocation, not discovery. The analytical perspective risks false-summit naturalization."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "recognition_vs_creation_ambiguity",
+      "question": "Did the statute recognize pre-existing authorial rights or CREATE new ones through institutional reallocation?",
+      "resolution_mechanism": "Historical analysis of pre-statute author compensation mechanisms and rights claims; comparison with parallel institutional contexts (Continental copyright traditions); examination of legislative intent documents and preamble language",
+      "impact": "If recognition: Mountain classification is defensible (discovered natural right). If creation: Tangled Rope stands — institutional reallocation with mixed beneficiary/victim structure. This omega routes the committer-frame ambiguity (which reading is 'true'?) into empirical resolution.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether statute recognized or created authorial IP rights"
+    },
+    {
+      "id": "monopoly_transfer_mechanism",
+      "question": "Was the reallocation a transfer from Stationers to publishers, or a transfer from Crown (via guild monopoly) to a market mechanism?",
+      "resolution_mechanism": "Structural analysis of post-statute publishing economics: did market concentration shift, or did monopoly power remain through de facto publisher control of rights acquisition?",
+      "impact": "If Stationers→publishers: clear reallocation with identifiable winners. If Crown→market: reallocation of regulatory authority, not property rights. Changes who the primary beneficiary is and whether extraction flows toward publishers or remains Crown-controlled.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether reallocation transferred monopoly or authority"
+    },
+    {
+      "id": "author_agency_in_assignment",
+      "question": "To what degree were author-to-publisher assignments voluntary vs coerced by economic necessity?",
+      "resolution_mechanism": "Economic analysis of author bargaining power relative to publishers; study of non-assigned versus assigned works and outcomes; comparison of compensation terms across high-agency authors (well-connected, multiple bidders) versus low-agency (unknown, single publisher option)",
+      "impact": "If coerced: extraction component of tangled_rope dominates, χ increases. If voluntary: coordination component dominates, χ decreases. This determines whether the reading depicts institutional reallocation as genuinely empowering authors or as converting them into assignees under market pressure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of author agency in rights assignment"
+    },
+    {
+      "id": "competing_reading_logical_status",
+      "question": "Do the sibling readings (conceptual_emergence_reading, entangled_event_reading) logically foreclose this institutional reallocation reading, or do they coexist as alternative framings of the same event?",
+      "resolution_mechanism": "Formal analysis of each reading's core premise: does recognizing 'emergent IP concept' (conceptual reading) rule out 'institutional reallocation' (this reading)? Does recognizing 'entangled institutional and conceptual event' (entangled reading) eliminate either alternative? Or do these readings describe different structural layers of the same historical moment?",
+      "impact": "If foreclosed: this reading is incoherent within the same framework. If coexists: all three readings are live perspectives from different analytical positions. This omega is the committer-axis recognition step: documenting that the kernel itself is legitimately contested.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Logical status of competing kernel readings"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18,
+      "id_override": "extractiveness_pre_statute"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.32,
+      "id_override": "extractiveness_early_statute"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.38,
+      "id_override": "extractiveness_mature_statute"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22,
+      "id_override": "theater_pre_statute"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.31,
+      "id_override": "theater_early_statute"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.35,
+      "id_override": "theater_mature_statute"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The Statute of Anne (1710) is foundational to modern copyright law and intellectual property doctrine. This constraint story models ONE reading of the contested kernel: the institutional reallocation reading. This reading frames the statute as a redistribution of property rights from the Stationers' Company monopoly to authors (and derivative beneficiaries, publishers). The statute reallocated the institutional space occupied by copyright-holding entities: prior to 1710, copyright was effectively held by the guild of London stationers; after 1710, authorial rights were formally recognized and became assignable, enabling publishers to acquire and control rights. The reallocation was structural, not merely conceptual: it changed which agents could legally claim ownership, changed who could enforce rights through courts, and changed the economic flow from a guild-controlled monopoly to a market-based assignment mechanism. This reading coexists with (but is distinct from) two sibling readings: the conceptual_emergence_reading, which frames the statute as the moment IP as a category conceptually emerged (what is copyright as an idea?), and the entangled_event_reading, which argues the institutional and conceptual transformations occurred simultaneously and cannot be disentangled. The institutional reallocation reading isolates the property-rights-transfer dimension and treats the conceptual dimension as secondary (or as rationalization for the structural change). The reallocation carries both coordination value (authors now have a legal standing from which to bargain) and extraction risks (authors face immediate pressure to assign rights to publishers at unfavorable terms).",
+    "key_agents": [
+      "Stationers' Company: Chartered monopoly (institutional/trapped) — primary victim; lost vested rights to guild control without transition compensation. Institutional position reallocated without agency.",
+      "Publishers/Booksellers: Commercial actors (institutional/arbitrage) — primary beneficiaries; gained ability to acquire assignable rights from authors. Arbitrage option enabled by statute.",
+      "Authors (as Emerging Class): Previously unrecognized right-holders (moderate to powerful depending on patronage/access/reputation) — simultaneously elevated (given legal standing) and constrained (faced assignment pressure). Mobile exit for well-positioned authors; constrained for others.",
+      "Traditional Patrons and Court Connections: Elite actors (powerful/arbitrage) — lost direct control but retained influence through author relationships and assignment practices. Mixed position.",
+      "Crown / Licensing Authority: Meta-institutional actor (institutional/arbitrage) — maintained censorship and regulatory power while shifting monopoly enforcement burden to courts. Theater masks continued control.",
+      "Analytical Observer: Universal perspective (analytical/analytical) — risks naturalizing institutional reallocation as discovery of natural law."
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The reallocation generated extraction flows in both directions — Stationers lost monopoly rents (extraction from them), authors faced assignment pressure (extraction from them), but publishers gained tradeable assets (beneficiary position). The net extractiveness is moderate rather than high because the mechanism included genuine coordination (legal standing for authors) alongside extraction. Over the measured interval, extractiveness rose from 0.18 (pre-statute) to 0.38 (mature statute) as the assignment market developed and publishers consolidated control of rights acquisition. Suppression (0.42): Moderate. The statute reduced some suppression mechanisms (guild monopoly, Crown licensing for censorship purposes) while preserving others (authors' inability to resist assignment pressure, Crown's continued censorship authority). Theater_ratio (0.35): Moderate-low. The statute's performative content was not high — it had real structural effects (Stationers lost monopoly, rights became assignable, courts gained jurisdiction). However, theater rose over time as the Crown's regulatory authority (through censorship and licensing) became less visible: the statute appeared to replace monopoly with free market, masking that Crown control persisted through different mechanisms. The rise in theater from 0.22 to 0.35 reflects this obscuration of regulatory continuity.",
+    "directionality_logic": "Directionality (d) for each perspective is computed from the agent's structural position relative to this constraint. Stationers' Company: beneficiary of pre-statute monopoly, victim of statute; trapped exit (no alternative institutional role); d ≈ 0.92 (near-maximal target). Publishers: beneficiaries of assignable rights; arbitrage exit (could operate outside statute); d ≈ 0.10 (beneficiary). Authors: ambiguous — elevated to right-holders but constrained by assignment pressure; d ≈ 0.55 (symmetric, depending on author position). Patrons: lost gatekeeper role but retained influence; powerful and mobile; d ≈ 0.40 (moderate). Crown: maintained regulatory control through different mechanism; arbitrage exit; d ≈ 0.08 (institutional beneficiary via obscured authority). These values feed into the chi calculation χ = ε × f(d) × σ(S), which scales extractiveness by the agent's structural relationship and the constraint's national scope (σ=1.0). The perspectival gap arises because different agents experience different d values despite the same ε: Stationers experience high chi (extraction); publishers experience low or negative chi (coordination); authors experience moderate chi (mixed). Piton perspective (Crown) shows low experienced extraction because arbitrage exit (d ≈ 0.08) produces negative f(d), masking the structural constraint.",
+    "perspectival_gap": "This constraint exhibits strong perspectival variation across the six perspectives. The Stationers' Company sees pure extraction (Snare) — they are the institutional class being displaced by reallocation. Publishers see coordination (Rope) — the statute solved a collective action problem (standardized rights transfer) that enabled the book trade to scale. Authors see mixed coordination and extraction (Tangled Rope) — they gained legal standing but faced immediate assignment pressure. Patrons see mixed effects (also Tangled Rope) — they lost direct control but retained influence through assignment relationships. The Crown sees its own function as degraded (Piton) — the statute ostensibly replaced monopoly control with market mechanisms, but Crown censorship authority persisted, making the reform performative. The analytical observer risks seeing an immutable natural law (Mountain) — IP rights as pre-existing natural entitlements — but the structural data reveals this as a false summit: the statute created institutional conditions that are historically contingent, not discovered. The perspectival gap is large and diagnostic: the range from Snare (Stationers) to Rope (publishers) to Piton (Crown) demonstrates that the same structural event produces incommensurable classifications depending on the observer's position and exit options.",
+    "mandatrophy_analysis": "This constraint avoids mandatrophy by showing that institutional reallocation is genuinely a tangled rope: it combined coordination (legal standing for authors, standardized rights transfer enabling market mechanism) with extraction (displacement of Stationers' vested rights, assignment pressure on authors, Crown's obscured regulatory continuation). The extraction component (0.38) is real but not overwhelming (snare-level would be ≥ 0.46). The suppression is moderate (0.42), not crushing. The theater is below the piton threshold (0.35 < 0.70). The statute was neither pure coordination nor pure extraction — it was a structural reallocation that created coordination mechanisms (author-publisher assignment) while generating extraction flows (against Stationers, against authors without bargaining power). This mixed character is the reading's substantive claim: the reallocation created new institutional positions (author as right-holder, publisher as rights acquirer) that were simultaneously enabling and constraining.",
+    "kernel_context": "This JSON instantiates ONE reading of the contested kernel: statute_of_anne_ip_foundation. The reading is institutional_reallocation_reading. The kernel itself — the Statute of Anne as a foundational commitment to IP law — admits three structurally distinct readings: (1) institutional_reallocation_reading (this one): the statute moved property rights from Stationers to authors and publishers; (2) conceptual_emergence_reading: the statute created the conceptual category 'copyright' as a novel form of intellectual property; (3) entangled_event_reading: institutional reallocation and conceptual emergence were inseparable in the statute's actual historical operation. Each reading produces a different constraint story with different ε, different beneficiary/victim structure, different dominant classification. This reading treats the institutional reallocation as the primary structural change and conceptual emergence as secondary (or as rationalization). Sibling readings treat conceptual emergence as primary or as genuinely entangled. The committer-frame rules require documenting this contest in omega variables rather than hedging ε or perspectives. The omega variables (recognition_vs_creation_ambiguity, monopoly_transfer_mechanism, competing_reading_logical_status) route the committer uncertainty into specific empirical and conceptual questions that could resolve the contest."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "conceptual_emergence_reading",
+      "entangled_event_reading",
+      "publisher_assignment_market",
+      "crown_censorship_continuation"
+    ],
+    "dual_formulation_note": "institutional_reallocation_reading is one reading of statute_of_anne_ip_foundation kernel. Three constraint stories decompose the statute: institutional reallocation (property rights transfer), conceptual emergence (IP as novel category), and entangled event (institutional + conceptual simultaneously). Each has its own ε. The reallocation reading (ε=0.38, Tangled Rope) shows the statute as mixed coordination (author standing, market mechanism) and extraction (Stationers displaced, authors assigned). The emergence reading (ε likely ≥0.30, possibly Tangled Rope or Snare) emphasizes the conceptual novelty. The entangled reading (ε variant unknown) claims they cannot be separated. All three are linked via network.affects_constraints to indicate kernel family membership."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "conceptual_emergence_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "entangled_event_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "property_rights_transferable_from_guild_to_market",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "author_right_holder_recognition_primary",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "guild_monopoly_ip_regime",
+    "drift_state": {
+      "moment": "mature_statute_period",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

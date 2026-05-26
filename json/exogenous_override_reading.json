@@ -1,0 +1,234 @@
+{
+  "header": {
+    "constraint_id": "exogenous_override_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_exogenous_override_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Exogenous Override Reading: State Decree Displaces Prior Practice Through Legal Authority",
+    "topic_domain": "political_history/state_formation/cultural_imposition",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "state_modernization_apparatus"
+    ],
+    "victims": [
+      "rural_populations_bearing_adjustment_costs",
+      "prior_practice_institutions"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Rural Population Under Decree Imposition",
+      "comment": "PERSPECTIVE 1: RURAL POPULATIONS (SNARE) — Face legal mandate displacing established practice (e.g., calendar change, dress codes, land tenure norms) with no prior consultation or adjustment period. Trapped by legal enforcement and economic dependency on state authority. Maximum experienced extraction: absorb adjustment costs while benefiting groups see modernization gains. No meaningful exit option."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Local Administrative Intermediaries",
+      "comment": "PERSPECTIVE 2: LOCAL ADMINISTRATORS (TANGLED ROPE) — Must translate state decree into local practice while managing compliance resistance. Constrained by dual accountability (upward to state, outward to communities). Experience both coordination (translating decree into workable local norms) and extraction (enforcement burden, local resentment, career risk for failed implementation). Significant but not maximal extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "State Modernization Apparatus",
+      "comment": "PERSPECTIVE 3: STATE MODERNIZATION APPARATUS (ROPE) — Experiences decree as coordination mechanism: legal mandate efficiently displaces prior practice, establishes uniform standards, integrates periphery into state administrative framework. Net beneficiary with arbitrage options (can moderate enforcement, exempt loyal regions, adjust timing by locale). Extraction runs toward this agent; they experience the constraint as solving coordination problems."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Prior Practice Institutional Guardians",
+      "comment": "PERSPECTIVE 4: PRIOR PRACTICE INSTITUTIONS (PITON) — Religious authorities, craft guilds, or traditional governing councils that historically legitimated the superseded practice. Decree formally displaces their authority, but many persist through performative accommodation (officially comply while preserving practice through workarounds, secret transmission, or rebranding). Theater ratio high (public compliance, private continuity). Function attenuated but structure persists through inertia."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Organized Resistance Coalition",
+      "comment": "PERSPECTIVE 5: ORGANIZED RESISTANCE (TANGLED ROPE) — Regional leaders, religious authorities, or merchants organized to resist decree imposition coordinate defensive mechanisms (non-compliance, parallel institutions, concealment). Experience mixed extraction (enforcement pressure) and coordination (organizing collective defense). Constrained by state power differential but retain agency through collective action. Coordination function is resistance, not acceptance."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — State decree authority is treated as a fixed, immutable feature of state capacity: legal mandate sufficient to displace practice regardless of internalization, rational choice, or cultural adaptation. From civilizational scope, state authority appears as natural law governing political structures. However, structural data reveals this as a false summit: the decree's effectiveness depends on enforcement capacity, internalization rate, and absence of organized resistance — all contingent factors that vary dramatically across cases. State authority is not inherent; its sufficiency is constructed."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "enforcement_capacity_threshold",
+      "question": "What minimum enforcement capacity is required for decree authority to suffice for practice displacement, and does this threshold vary by practice type (calendar vs. dress vs. land tenure)?",
+      "resolution_mechanism": "Historical comparative analysis: cases where decree enforcement succeeded (calendar change in Orthodox Russia 1918, metric system in France 1795) vs. failed (dress codes in Ottoman periphery, land reform in colonial settings). Quantify enforcement investment (troops, inspectors, penalties) required per compliance rate achieved.",
+      "impact": "If threshold is very low: decree sufficiency is robust (reading holds across settings). If threshold is high and practice-dependent: decree sufficiency is conditional on enforcement infrastructure (reading applies only to well-administered states with specific practice domains).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Minimum enforcement capacity required for decree-driven practice displacement"
+    },
+    {
+      "id": "internalization_vs_compliance_gap",
+      "question": "Is the distinction between external compliance and internalized acceptance meaningful for evaluating whether decree displaces prior practice, or does the reading treat these as equivalent?",
+      "resolution_mechanism": "Longitudinal ethnographic/administrative data: tracking compliance rates over generations; identifying divergence between public behavior (compliant) and private practice (resistant); measuring second-generation voluntary adoption rates.",
+      "impact": "If meaningful gap exists: decree authority suffices for compliance but NOT for displacement (reading requires refinement — may be rope or piton rather than tangled_rope). If gap is immaterial: decree authority achieves functional displacement even without internalization (reading holds as stated).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether distinction between compliance and internalization affects practice displacement assessment"
+    },
+    {
+      "id": "prior_practice_institutional_persistence",
+      "question": "When prior practice institutions persist through performative accommodation (public compliance, private preservation), has the decree actually displaced the practice or created a dual structure?",
+      "resolution_mechanism": "Structural analysis of post-decree institution configuration: do prior-practice authorities continue to function (even clandestinely) or are they genuinely dissolved? Measure: frequency of enforcement actions against prior-practice practitioners; continuity of prior-authority legitimacy claims; frequency of practice performance in controlled (non-state-surveilled) settings.",
+      "impact": "If genuine displacement: reading holds (decree authority sufficient). If dual structure: practice displacement is incomplete; decree authority establishes state monopoly on legitimate performance but not elimination of prior practice (reading understates contingency).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether prior practice institutions are genuinely displaced or persists through performative accommodation"
+    },
+    {
+      "id": "reading_boundary_decree_vs_internalization",
+      "question": "Does this reading claim that legal mandate suffices WITHOUT internalization, and if so, what counts as evidence that the practice has been displaced rather than merely driven underground?",
+      "resolution_mechanism": "Conceptual clarification followed by empirical test: define 'displacement' operationally (no public performance? no institutional transmission? no intergenerational continuity?). Measure each definition against historical cases where decree succeeded and failed.",
+      "impact": "If reading means decree eliminates public performance: high confidence (true for well-enforced decrees). If reading means decree eliminates practice entirely including clandestine continuity: very low confidence (almost never achieved). Affects whether reading is defensible or overreaches.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Operational definition of practice displacement and evidence required"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the state's deployment of legal authority to displace entrenched prior practices (calendar systems, dress codes, land tenure, language, or ritual norms). The exogenous override reading asserts that state decree authority is sufficient to achieve practice displacement, with compliance following from legal mandate regardless of whether affected populations internalize the new norms. This reading stands in contrast to endogenous readings (that practice change requires gradual internalization and adaptation) and hybrid readings (that decree works best when scaffolded with social engagement). The constraint exhibits Tangled Rope classification at the primary level because it combines a genuine coordination function (establishing uniform state standards) with asymmetric extraction (imposing adjustment costs on populations without consultation). The measurement trajectory shows extractiveness rising sharply during implementation (years 0-6) then plateauing as enforcement stabilizes (years 6-10). Theater ratio increases over time as the state shifts from forced compliance to performative compliance, suggesting that initial coercive enforcement gives way to institutionalized accommodation where populations comply publicly while preserving prior practice privately.",
+    "key_agents": [
+      "State Modernization Apparatus: Primary beneficiary (institutional/arbitrage) — captures coordinating function and standardization gains; experiences decree as efficiency mechanism",
+      "Rural Populations: Primary victims (powerless/trapped) — absorb adjustment costs, lose agency in norm-setting, face enforcement penalties for non-compliance",
+      "Prior Practice Institutions: Secondary victims/Piton actors (institutional/mobile) — formally displaced but persist through workarounds and performative accommodation",
+      "Local Administrative Intermediaries: Constrained moderate actors — translate decree into local implementation; experience both coordination and enforcement burden",
+      "Organized Resistance: Organized moderate actors — coordinate collective defense against decree imposition; experience extraction pressure but retain agency through coalition",
+      "Analytical Observer: Civilizational analytical position — risks naturalizing contingent state authority as immutable law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The decree imposes adjustment costs on rural populations and prior-practice institutions while benefiting state modernization apparatus. The extractiveness is not maximal (0.70+) because decree authority does generate coordination benefits: establishing uniform standards, integrating administrative periphery, creating predictable institutional frameworks. However, these benefits flow primarily to the state apparatus, not to affected populations. The measurement trajectory (0.35 → 0.62 → 0.58) reflects rising extraction during implementation as enforcement effort peaks, then plateauing as the new regime stabilizes and resistance costs settle into permanent baseline. Suppression (0.68): Moderate-high. State authority backed by legal enforcement, threat of penalty, and withdrawal of state services creates substantial barriers to continued prior practice. However, suppression is not total (0.85+) because clandestine practice persists and organized resistance can negotiate enforcement terms. The suppression is enforcement-dependent: where state presence is sparse (remote regions, maritime areas, mountains), suppression is weaker. Theater ratio (0.52): Moderate. Early enforcement is predominantly functional (genuine attempt to displace practice through penalty and disruption). Over time, theater increases as the state shifts to performative compliance models — populations formally adopt new norms while preserving prior practice in unsurveilled contexts. The state benefits from public compliance (which signals control) even without internalization.",
+    "directionality_logic": "Directionality values derive from agents' structural positions relative to this specific constraint. State modernization apparatus benefits from decree authority and experiences low extraction (high arbitrage options for adjusting enforcement pace, exempting allies, modulating penalties). Rural populations and prior-practice institutions are structural targets: they lack exit options and internalize no benefits from the new regime. Local administrators occupy a middle position: constrained by dual accountability, they neither fully benefit nor fully bear costs. Organized resistance has exit via coalition (agency through collective action). The analytical observer at civilizational scope risks seeing the decree as natural law (Mountain) rather than contingent institutional imposition. The engine's false summit detector identifies this as naturalization: the decree's sufficiency depends on enforcement capacity, resistance absence, and state infrastructure — all contingent factors varying dramatically across historical cases. State authority is not inherent to political structure; its sufficiency is constructed and contestable.",
+    "perspectival_gap": "The gap between the state apparatus (Rope) and rural populations (Snare) is maximal: the same constraint appears as coordination solution to one party and pure extraction to the other. The state sees legal mandate as sufficient mechanism; populations see it as coercive imposition. Prior-practice institutions see degradation through piton mechanism: formally displaced but persisting through performative accommodation (public compliance, private preservation). Organized resistance sees mixed extraction and coordination (Tangled Rope from their perspective: organizing collective defense is coordination function; state enforcement is extraction pressure). Local administrators experience the constraint as Tangled Rope: translating decree is genuine coordination; enforcement burden is extraction. The analytical observer risks a false summit (Mountain): naturalizing contingent institutional imposition as immutable feature of state capacity.",
+    "kernel_context": "This constraint instantiates the EXOGENOUS OVERRIDE READING of the contested kernel 'legitimacy_of_imposed_practice'. The kernel codifies a dispute over whether state authority suffices to displace established practices through legal decree, or whether practice change requires endogenous social adaptation and internalization. The exogenous override reading asserts that legal mandate is sufficient: state decree displaces prior practice, compliance follows from enforcement, internalization is neither necessary nor relevant. This reading stands against TWO sibling readings: (1) the ENDOGENOUS_CLIMB_READING, which asserts that practice change requires internalization from within the affected population — decree alone is performative, not transformative — and (2) the HYBRID_SCAFFOLDING_READING, which asserts that decree works best when combined with social engagement, norm-shifting incentives, and gradual institutional transition. The three readings are live positions held by different research communities and policy traditions. Exogenous override dominates state modernization discourse (assume decree suffices, focus on enforcement). Endogenous climb dominates cultural anthropology and historical sociology (internalization is prerequisite). Hybrid scaffolding dominates development studies and institutional reform literature (combine legal change with social support). Each reading produces different policy implications and different constraint classifications.",
+    "mandatrophy_analysis": "The mandatrophy (whether this is mixed coordination or pure extraction) is resolved by distinguishing the beneficiary's experience (Rope: decree is coordination mechanism) from the victim's experience (Snare: decree is extraction mechanism) and recognizing that BOTH are structurally true. The state genuinely coordinates standards through decree authority. The rural populations genuinely bear extraction costs. The constraint is Tangled Rope because it contains both functions simultaneously, with asymmetric distribution: beneficiaries receive coordination benefit, victims receive extraction cost. The exogenous override reading does not assume away the mandatrophy; it addresses a different question: whether decree authority is SUFFICIENT for practice displacement, not whether the displacement is just or efficient."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "endogenous_climb_reading",
+      "hybrid_scaffolding_reading"
+    ],
+    "dual_formulation_note": "This constraint is ONE READING of the kernel 'legitimacy_of_imposed_practice'. The sibling readings (endogenous_climb, hybrid_scaffolding) are separate constraints with different ε values and different classification profiles. The exogenous override reading claims decree sufficiency; the endogenous reading claims decree necessity is insufficient without internalization; the hybrid reading claims decree plus social engagement is optimal. Each reading has its own structure story. They are linked via network.affects_constraints because they compete in the same policy domain and their relative empirical success determines which reading's authority becomes institutionalized."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "state_legal_supremacy_framework",
+    "drift_state": {
+      "moment": "contemporary_postcolonial_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "endogenous_climb_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "hybrid_scaffolding_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "decree_sufficiency_without_internalization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "enforcement_mechanism_primary_displacement_vector",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  }
+}

@@ -1,0 +1,257 @@
+{
+  "header": {
+    "constraint_id": "legalization_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_legalization_reading",
+    "measurement_id_prefix": "legal"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Legalization Reading: Drug Control Authority as Third-Party Protection and Harm Reduction",
+    "topic_domain": "public_health_policy/criminal_justice/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "marginalized_communities",
+      "third_party_protectees",
+      "public_health_system"
+    ],
+    "victims": [
+      "prosecuted_users_and_small_distributors",
+      "enforcement_apparatus_itself",
+      "state_capacity_diversion"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Prosecuted User or Street-Level Distributor",
+      "comment": "PERSPECTIVE 1: PROSECUTED USER OR STREET DISTRIBUTOR (SNARE) — Trapped by enforcement mechanisms that criminalize drug use as default response. Bears full cost of incarceration, employment barriers, and family separation. No meaningful exit option; high suppression through criminal justice coercion. Experiences extraction as pure penal harm with minimal coordination function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Marginalized Communities (Primary Beneficiary-Victims)",
+      "comment": "PERSPECTIVE 2: MARGINALIZED COMMUNITIES (TANGLED ROPE) — Constrained by geography, economic circumstance, and policing intensity. Experience the legalization reading as genuine conflict resolution: reduced black market violence, lower enforcement targeting (as criminalization declines), access to treatment infrastructure instead of incarceration. BUT extraction persists through the transition mechanism itself — communities bear the visibility of harm during decriminalization phase, experience withdrawal of punitive infrastructure before treatment infrastructure fully replaces it. Mixed coordination (harm reduction function) and extraction (temporal mismatch in service delivery)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Public Health System and Harm Reduction Infrastructure",
+      "comment": "PERSPECTIVE 3: PUBLIC HEALTH SYSTEM (ROPE) — Institutional beneficiary with exit options (can choose enforcement model, treatment allocation, prevention focus). Legalization reading shifts the constraint to pure coordination: the system's function is to minimize drug-related harms through treatment access, safe supply mechanisms, and demand reduction. Low or no experienced extraction because institutional actor controls the harm-reduction infrastructure that justifies the constraint. Net beneficiary with agency."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Third-Party Protectees (Families, Communities Harmed by Black Market Violence)",
+      "comment": "PERSPECTIVE 4: THIRD-PARTY PROTECTEES (SNARE) — Trapped in geographies where black market violence creates legitimate harm: overdose deaths, property crime from supply-chain disputes, product adulteration. The legalization reading frames them as primary constraint beneficiaries — the constraint's entire justification is protecting them from black-market extraction. But they experience extraction through the enforcement apparatus itself: heavy-handed policing, collateral detention of family members, ecosystem disruption during transition to legalization. The constraint claims to protect them but extracts costs in the process."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Enforcement Apparatus (Law Enforcement, Prosecutors, Prisons)",
+      "comment": "PERSPECTIVE 5: ENFORCEMENT APPARATUS (PITON) — Institutional actors with ostensible arbitrage options but path-dependent on enforcement model. From legalization reading perspective, these institutions have become degraded — the enforcement infrastructure persists through inertia despite shifting toward harm reduction as the stated goal. Theater ratio rises here: police maintain drug-enforcement operations even as policy intent shifts to treatment. Continued resource allocation to enforcement despite reduced functional justification. Piton classification reflects institutional inertia protecting bureaucratic territory."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Supply-Chain Actors (Production, Distribution, Cartels)",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL SUPPLY-CHAIN ACTORS (TANGLED ROPE) — Organized but constrained by regulatory environment, enforcement cooperation, and interdiction capacity. Legalization reading frames them as primary extraction targets: the constraint's function includes dismantling profit motives for illegal supply chains through legal market competition and substitution. These actors experience both coordination (with black-market competitors) and extraction (margin erosion, regulatory exclusion). Effective extraction χ is moderate-to-high despite organized power because the regulatory system is explicitly designed to extract rents (taxation) and eliminate competitors (through legality requirements)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural-Law View of Harm Minimization)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL-LAW VIEW (MOUNTAIN) — Civilizational perspective treats drug-policy authority as grounded in an immutable harm-minimization principle: the state's role is to minimize total drug-related harm (overdose, violence, adulteration, ecosystem disruption) regardless of mechanism. This perspective sees legalization as the natural law outcome of a correct harm calculus. However, false-summit detection will trigger: identifiable beneficiaries (marginalized communities, public health) and extractive costs (prosecuted users, enforcement apparatus path-dependency) reveal this as a constructed institutional arrangement, not natural law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "black_market_elimination_feasibility",
+      "question": "Does legalization actually eliminate black markets or create dual markets (legal + residual illegal)?",
+      "resolution_mechanism": "Post-legalization outcome analysis: market share measurement, price parity studies, product-quality parity between legal and residual illegal supply. Historical comparison across cannabis legalization jurisdictions, Portuguese decriminalization experience, and alcohol post-Prohibition.",
+      "impact": "If black markets eliminated: legalization reading's core harm-reduction mechanism is validated; constraint classification stable as Tangled Rope. If dual markets persist: extraction mechanism shifts from production violence to supply-chain competition; may reclassify toward Snare if legal market cannot undercut illegal pricing.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether legalization eliminates black markets or creates dual-market equilibrium"
+    },
+    {
+      "id": "enforcement_apparatus_path_dependency",
+      "question": "Can law-enforcement and prosecutorial institutions actually transition toward harm-reduction focus, or does bureaucratic inertia preserve enforcement-maximization incentives?",
+      "resolution_mechanism": "Post-legalization resource allocation analysis: budget shifts from enforcement to treatment/prevention, prosecution rate changes for possession vs distribution, officer retraining and retention data, institutional behavior consistency with stated policy.",
+      "impact": "If transition successful: enforcement apparatus becomes Rope (pure coordination, no extraction). If transition fails: apparatus becomes Piton (degraded ritual) or Snare (continued coercive extraction). Classification of perspectives 5 may shift.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether enforcement institutions can transition to harm-reduction alignment"
+    },
+    {
+      "id": "marginalized_community_extraction_parity",
+      "question": "Does the legalization transition distribute extraction cost symmetrically or do marginalized communities bear disproportionate transition costs (visibility of harm, service delivery gaps)?",
+      "resolution_mechanism": "Comparative outcome measurement during transition: incarceration rates by race/class, treatment access timelines by geography, overdose mortality during policy implementation, community economic opportunity within legal market.",
+      "impact": "If symmetric: legalization reading's third-party protection mechanism is operationalized; Perspective 2 shifts toward Rope. If asymmetric: marginalized communities experience continued extraction despite nominally beneficiary status; Perspective 2 remains Tangled Rope or reclassifies toward Snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether transition costs are distributed equitably or concentrated on marginalized communities"
+    },
+    {
+      "id": "drug_use_individual_choice_vs_constraint",
+      "question": "Does the legalization reading treat drug use as an individual choice outside state constraint scope, or does it constitute a new constraint (public health management of demand)?",
+      "resolution_mechanism": "Policy implementation analysis: regulatory scope of legal market, advertising restrictions, age restrictions, consumption-site restrictions, treatment mandate depth. Comparison with pure decriminalization (no legal market) vs legalization (state-managed market).",
+      "impact": "If pure choice: constraint scope narrows to black-market elimination and protection of third parties; legalization reading's victim set remains prosecuted users + enforcement apparatus. If new constraint: state management of demand creates extraction mechanism targeting users through taxation, restriction, monitoring; victim set expands; may reclassify toward Snare from Perspective 1.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether legalization treats drug use as individual choice or new state-constraint domain"
+    },
+    {
+      "id": "kernel_reading_contest_location",
+      "question": "Where is the fundamental disagreement between legalization and prohibition readings located — empirical (what harms result?) or normative (what ends justify what costs)?",
+      "resolution_mechanism": "Rhetorical analysis of prohibition vs legalization advocacy: identification of refutable empirical claims vs normative axioms that ground each position. Do disagreements resolve with better data or do they reflect different value commitments?",
+      "impact": "If empirical: harm-minimization principle is shared; readings differ on mechanism; potential for resolution through evidence. If normative: readings reflect irreducible value differences (autonomy vs order, individual vs collective); coexistence required; no resolution possible.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether kernel contest is empirical or normative"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.33
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The legalization reading frames substance-control authority as justified by protecting third parties and marginalized communities from black-market violence and racialized enforcement, treating drug use itself as an individual choice outside the scope of state constraint. This reading contests the prohibition reading (which treats drug use as requiring state intervention to prevent harms to the user themselves) and coexists with the harm-reduction reading (which treats drug use as requiring public-health intervention without criminalization). The legalization reading's core structural claim is that prohibition enforcement apparatus creates MORE total harm than the drug use it purports to address — $40+ billion annual transfer to criminal supply chains, mass incarceration concentrated on marginalized communities, product adulteration from unregulated supply, violence from supply-chain competition. The constraint's extractiveness is moderate-to-high (0.58) because the mechanism for achieving third-party protection (criminalization of supply, enforcement of prohibition) extracts significant costs from prosecuted users and small-scale distributors, disrupts community cohesion through selective enforcement, and diverts state capacity from treatment infrastructure. However, extractiveness is lower than the prohibition reading would assign because the legalization reading explicitly treats harm reduction (not punishment) as the goal, and proposes mechanisms (legal market competition, regulatory substitution, treatment access) that could eliminate the extraction mechanism entirely. Theater ratio declines over the measurement interval (0.50 → 0.35) because legalization infrastructure reduces performative legal ritual — police enforcement against small-scale distribution is the theatrical element, whereas treatment access and regulated market access are functional.",
+    "key_agents": [
+      "Marginalized Communities: Primary beneficiary AND victim (moderate/constrained) — benefit from reduced black-market violence and reduced enforcement targeting; bear extraction through visibility of harm and service-delivery transition gaps",
+      "Third-Party Protectees (Families, Communities Harmed by Black Market): Primary beneficiary and constraint justification (powerless/trapped) — protected from black-market violence but experience collateral enforcement costs",
+      "Prosecuted Users and Street-Level Distributors: Primary victim (powerless/trapped) — bear full cost of criminalization; non-participants in supply-chain violence but subject to enforcement",
+      "Public Health System and Harm Reduction Infrastructure: Institutional beneficiary (institutional/arbitrage) — controls implementation of treatment access and demand-reduction mechanisms",
+      "Law Enforcement, Prosecutors, Prison System: Institutional actor with path dependency (institutional/arbitrage) — possesses enforcement authority but faces institutional inertia in transitioning to harm-reduction alignment",
+      "International Supply-Chain Actors (Production, Cartels, Distribution): Organized targets (organized/constrained) — extraction through legal market competition and regulatory exclusion",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing contingent institutional harm-reduction policy as immutable law of drug control"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The legalization reading's justification mechanism — replacing criminal supply-chain violence with legal market + regulatory management — appears low-extraction because it treats drug use as outside state constraint scope. However, extractiveness remains substantial because (1) the legalization mechanism still requires enforcement (against remaining illegal supply, against non-compliance with legal frameworks), (2) prosecuted users and small distributors bear significant transition costs during the shift from prohibition to legalization, (3) the state assumes new extraction function through legal-market taxation and regulatory control of demand. The extractiveness is lower than prohibition reading because the legalization reading explicitly constrains enforcement scope and provides treatment alternative, but higher than Rope classification because enforcement costs and transition harms are real. Suppression (0.72): High. The suppression metric captures barriers to exit from the constraint: (1) geographic dependence — communities dependent on supply networks have no exit from drug-supply dynamics; (2) path dependency of enforcement apparatus — law enforcement and prosecutorial institutions have structural incentives toward enforcement maximization; (3) policy lock-in — once legalization framework is adopted, transitioning back to prohibition is politically and institutionally difficult; (4) international supply-chain coordination costs — moving supply to legal channels requires coordinated regulatory change across jurisdictions. Theater ratio (0.35): Low. Legalization reading explicitly privileges functional harm-reduction mechanisms (treatment access, legal market access, third-party protection) over performative legal ritual. The measurement trajectory (0.50 → 0.35) reflects declining theater as legalization infrastructure matures and enforcement theater (arrests of street distributors, prosecution of possession cases) is replaced by treatment referral and regulatory compliance monitoring. Claimed type (Tangled Rope): The constraint has both genuine coordination function (harm reduction for third parties through black-market elimination) AND asymmetric extraction (prosecuted users and enforcement apparatus bear costs of transition). Active enforcement is required — legalization reading does NOT advocate for removal of state authority, but rather redirection of that authority from criminalization toward harm management.",
+    "perspectival_gap": "The legalization reading produces perspectival gaps among institutional contexts. The public health system (Perspective 3) sees pure Rope — coordination mechanism with no extraction because the health system controls the harm-reduction infrastructure. Law enforcement (Perspective 5) sees Piton — degraded ritual in which enforcement apparatus continues despite declining functional justification as policy intent shifts toward treatment. Prosecuted users (Perspective 1) see Snare — pure extraction with no coordination benefit because criminalization has been identified as harmful rather than protective. Marginalized communities (Perspective 2) see Tangled Rope — the legalization reading treats them as primary beneficiaries (harm reduction, reduced enforcement targeting) but extracts costs through transition mechanism (visibility of harm during decriminalization, service-delivery gaps). The analytical observer risks seeing Mountain — treating the legalization reading's harm-minimization principle as a natural law of drug policy — but structural data reveals this as a false summit: the principle is a chosen framing that benefits public health institutions and marginalized communities while extracting costs from prosecuted users and enforcement apparatus.",
+    "directionality_logic": "Directionality for each perspective is derived from agent power, exit options, and beneficiary/victim status. Prosecuted users (powerless/trapped) have high d (≈0.95) because they are victims with no exit: they bear the full cost of criminalization and experience extraction whether the policy is prohibition (criminal liability) or legalization (enforcement asymptotically approaches zero but never reaches it due to residual illegal supply). Public health system (institutional/arbitrage) has low d (≈0.15) because it is a beneficiary with exit options: the system controls harm-reduction infrastructure and experiences net benefit from legalization reading's adoption. Marginalized communities (moderate/constrained) have moderate d (≈0.55) because they are simultaneously beneficiaries (protection from black-market violence) and victims (transition costs, enforcement visibility): the legalization reading treats them as primary protectees but extraction persists through the mechanism itself. International supply-chain actors (organized/constrained) have high d (≈0.75) because they are pure targets: the legalization reading explicitly aims to eliminate their market by legal substitution and regulation. Law enforcement (institutional/arbitrage) has moderate-high d (≈0.65) from legalization reading perspective because while they possess institutional power, the reading treats them as path-dependent on enforcement maximization (inertia rather than true arbitrage).",
+    "kernel_context": "The legalization reading is one instantiation of the contested kernel 'substance_control_authority' — the question of what justifies state authority to regulate drug production, distribution, and consumption. This reading holds that legality is the solution: state authority derives from protecting third parties and marginalized communities from black-market violence and racialized enforcement, NOT from preventing drug use itself. The sibling reading 'prohibition_reading' contests this by asserting that drug use itself constitutes harm requiring state prevention. The sibling reading 'harm_reduction_reading' overlaps with legalization reading on mechanistic grounds (decriminalization, treatment access) but differs on scope: harm reduction permits state regulation of drug use as a public-health matter (with constraints on coercion), whereas legalization reading treats drug use as outside state constraint scope entirely. The legalization reading COEXISTS WITH prohibition and harm-reduction readings because different political communities and institutional actors maintain different commitments about state authority scope. No single framework could hold all three simultaneously, but all three remain live positions held by different jurisdictions and advocacy coalitions.",
+    "mandatrophy_analysis": "The legalization reading resolves mandatrophy by treating the constraint as Tangled Rope from the base analytical perspective: it has both coordination function (black-market harm reduction) and asymmetric extraction (prosecuted users, transition costs, enforcement apparatus path dependency). The mandatrophy question 'is this coordination or extraction?' receives answer: both. The coordination function is real — legalization can demonstrably reduce black-market violence and reduce the scale of enforcement coercion compared to prohibition. The extraction is also real — moving to legalization extracts significant costs from the prosecuted population and from law-enforcement institutions, and creates new extraction mechanisms through legal-market regulation and taxation. The legalization reading does not resolve mandatrophy by denying one dimension; it resolves by assigning higher weight to third-party protection and marginalized community harm-reduction than to prosecuted-user costs. This is a normative choice, not an empirical one. Different reading would weight these differently: the prohibition reading would assign higher weight to prevention of drug use (denying the coordination function); the harm-reduction reading would assign equal weight to prosecuted users and third parties (balancing extraction and coordination). The mandatrophy resolution is perspectival: the legalization reading achieves Tangled Rope by clearly identifying who benefits (marginalized communities, third parties, public health institutions) and who bears costs (prosecuted users, law enforcement turf), and defending that tradeoff through the harm-minimization principle."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "prohibition_reading",
+      "harm_reduction_reading",
+      "black_market_supply_chain_structure"
+    ],
+    "dual_formulation_note": "The legalization reading is one of three constraint stories derived from the contested kernel 'substance_control_authority'. The sibling constraints 'prohibition_reading' and 'harm_reduction_reading' have different ε values reflecting different empirical claims about harm mechanisms. The legalization reading (ε=0.58) treats legalization as the optimal mechanism; prohibition reading would assign higher ε to the same structural mechanism (viewing it as extraction disguised as harm reduction); harm-reduction reading would assign comparable ε but with different beneficiary/victim mapping (treating prosecuted users as co-beneficiaries of harm reduction rather than sole victims). All three readings share the same institutional actors and structural options but differ in authority justification and scope."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.65
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "prohibition_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "harm_reduction_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "drug_use_outside_state_constraint_scope",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "prohibition_enforcement_creates_more_harm_than_drug_use",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "legal_market_substitution_authority",
+    "drift_state": {
+      "moment": "contemporary_post_cannabis_legalization",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

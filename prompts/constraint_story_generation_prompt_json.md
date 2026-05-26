@@ -859,7 +859,7 @@ If applicable, add a top-level `cs_structure` block:
 - `implicit` — no codified kernel; the kernel IS whatever the system does
 - `none` — not a commitment system; omit the block instead
 
-**authority_grounding** (required):
+**authority_grounding** (required): WHO provides the authority — the role or institution that adjudicates the kernel. This is structurally different from `grounding_type` in axioms, which is WHAT KIND of epistemic warrant the axiom rests on. Do not mix their values (e.g., `deontological` is a grounding_type value, not an authority_grounding value).
 - `expertise` — voluntary authority grounded in demonstrated competence (peer review, mathematics)
 - `lineage` — authority grounds itself in continuity with a founding text or tradition
 - `practice` — authority derives from practice itself; practitioners' action IS the standard
@@ -867,7 +867,7 @@ If applicable, add a top-level `cs_structure` block:
 - `distributed` — no centralized authority; multiple parties produce competing readings
 - `none` — not applicable; omit the block instead
 
-**interpretation_layer_present** (optional, only when `authority_grounding=lineage` (any kernel encoding) OR `kernel_codification=formalized` AND `authority_grounding=extraction`):
+**interpretation_layer_present** (optional, valid when `authority_grounding` ∈ {lineage, extraction, practice, expertise} — i.e., an active authoritative interpreter exists):
 - `true` — functioning interpretive structure below the kernel absorbs drift without surfacing revision
 - omit (or `false`) — no interpretive buffer; kernel governs practice directly (structurally brittle)
 

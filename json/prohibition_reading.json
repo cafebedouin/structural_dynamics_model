@@ -1,0 +1,261 @@
+{
+  "header": {
+    "constraint_id": "prohibition_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_prohibition_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.75,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Prohibition Reading: Drug Use as Intrinsic Harm Justifying State Authority",
+    "topic_domain": "public_health_policy/criminal_justice/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "enforcement_apparatus",
+      "pharmaceutical_regulation_authority",
+      "political_legitimacy_via_crime_prevention"
+    ],
+    "victims": [
+      "drug_users",
+      "communities_subject_to_enforcement",
+      "supply_side_violence_casualties"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Drug User (Trapped Subject)",
+      "comment": "PERSPECTIVE 1: DRUG USER (SNARE) — Trapped by both biological dependency and criminalized status. Use itself is reframed as moral/legal violation, not medical condition. No legitimate exit: quitting requires medical support (often unavailable); continuing triggers criminal sanction. Maximum extraction: bears criminal liability, surveillance, asset forfeiture, employment barriers, and social stigma. Trapped exit means the constraint appears as mountain to this agent—immutable barrier regardless of framing shift."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Communities Subject to Enforcement (Constrained Victims)",
+      "comment": "PERSPECTIVE 2: ENFORCEMENT-TARGETED COMMUNITIES (SNARE) — Disproportionately subject to search, arrest, and incarceration. Exit is theoretically possible (relocation, wealth accumulation for legal defense) but involves high material costs. Extraction manifests as over-policing, environmental stress, family disruption, and economic precarity. Constrained exit—the target can see paths out but they are costly enough to function as traps."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Law Enforcement and Justice System (Primary Beneficiary)",
+      "comment": "PERSPECTIVE 3: ENFORCEMENT APPARATUS (ROPE) — Experiences the constraint as coordination: drug prohibition creates a shared mission, funding justification, and operational clarity. Drug enforcement is the machinery's core function. For this institutional actor, the constraint is pure coordination—it solves the problem of what law enforcement's purpose is. Arbitrage exit means the apparatus could exit (restructure around public health) but has zero incentive to do so. Net beneficiary with institutional power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Pharmaceutical Industry and Regulatory Gatekeepers (Asymmetric Coordination)",
+      "comment": "PERSPECTIVE 4: PHARMACEUTICAL/REGULATORY COMPLEX (TANGLED ROPE) — Genuine coordination function: prohibition prevents unregulated drug markets and protects pharmaceutical monopoly on licit manufacture. Simultaneous extraction: prohibition creates scarcity rents, eliminates competition from plant medicines, and concentrates profit in controlled substances. Pharmaceutical actors are mobile (could support legalization) but benefit from the status quo. Active enforcement sustains their monopoly. Both coordination and asymmetric extraction present."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Political Legitimacy via Crime Prevention (Constrained Beneficiary)",
+      "comment": "PERSPECTIVE 5: POLITICAL LEGITIMACY APPARATUS (TANGLED ROPE) — Prohibition provides governments with a crime category to prevent, enforcement metrics, and a population control mechanism that appears legitimate as public health. Genuine coordination: shared understanding of drug prohibition as moral imperative. Asymmetric extraction: criminalization of users allows governance of marginalized populations without calling it governance. Constrained exit—governments could decriminalize but face legitimacy challenges domestically and internationally."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The International Drug Control Regime (Degraded Institutional Form)",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL DRUG CONTROL REGIME (PITON) — The UN drug conventions (1961 Single Convention, 1971 Psychotropic Substances Convention) codify prohibition as a global norm, but the actual function has atrophied. Theater ratio is high: the regime persists through institutional inertia and diplomatic ceremony despite: (a) widespread evidence that prohibition increases violence and disease, (b) no correlation between enforcement intensity and drug availability, (c) growing jurisdictional defection (Portugal decriminalization, cannabis legalization, psilocybin therapy approval). The regime is maintained because alternatives haven't fully replaced it and because exit carries political cost, not because it achieves stated goals."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Naturalized View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, drug use 'naturally' produces individual and social harm; prohibitive authority 'naturally' follows as protective governance. This perspective treats the extraction as an immutable property of the psychopharmacological and social world. However, structural data contradicts this classification: beneficiary declarations reveal that extraction flows toward institutional actors with contingent interests (enforcement apparatus, political legitimacy). The engine will flag this as a false summit—naturalization of a contingent institutional arrangement into apparent law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "harm_locus_ambiguity",
+      "question": "Is the primary harm from drug use itself (pharmacological/psychological) or from criminalization (legal status, enforcement, supply-chain violence)?",
+      "resolution_mechanism": "Epidemiological comparison: harm profiles in prohibition vs decriminalized jurisdictions; attribution analysis of health outcomes to use vs enforcement; longitudinal tracking of harm metrics (overdose death, disease transmission, violence) across policy regime changes.",
+      "impact": "If use is primary harm source: prohibition_reading classification stands (Snare from powerless perspective). If criminalization is primary harm source: harm_reduction_reading would classify as Snare from same perspective, with prohibition_reading reclassifying as extraction mechanism. The entire reading relation flips from coexists_with to forecloses.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether primary harm originates from use or criminalization"
+    },
+    {
+      "id": "authority_legitimacy_grounding",
+      "question": "Does state authority to prohibit derive from (a) preventing intrinsic pharmacological harm, (b) social order coordination against vice, or (c) contingent institutional interest in crime governance?",
+      "resolution_mechanism": "Historical institutional analysis: evidence of legitimate crime-prevention benefit vs evidence of institutional power capture; comparative case analysis of authority structure in prohibition vs harm-reduction regimes; axiom-tracking across reading transitions.",
+      "impact": "If (a): authority grounding is expert (pharmaceutical harm prevention); legitimacy is robust across regimes. If (b): authority grounding is conventional (shared norm coordination); legitimacy survives regime shift to harm reduction if social order is maintained. If (c): authority grounding is extraction; legitimacy dissolves when institutional beneficiary is revealed, opening space for legalization_reading.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "What grounds the legitimacy of prohibition authority"
+    },
+    {
+      "id": "reading_forecast_divergence",
+      "question": "Within this prohibition_reading's own commitments, what structural changes would make the reading internally incoherent or impossible to maintain?",
+      "resolution_mechanism": "Scenario analysis: (1) pharmaceutical harm data refuting intrinsic-use-harm premise; (2) enforcement failure reaching threshold where drug availability is identical under prohibition and decriminalization; (3) institutional capture becoming undeniable (leaked enforcement directives showing crime prevention is secondary to population control); (4) supply-chain violence becoming primary harm category, larger than use harm.",
+      "impact": "Each scenario tests an axiom of the prohibition_reading. If axioms are empirically contingent (depend on testable claims about harm, efficacy, or authority legitimacy), scenario evidence could move the reading's own authority structure toward acknowledging its axioms are overridden. This is not foreclosure by external reading, but internal degradation of the reading's coherence.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Structural conditions under which prohibition_reading becomes internally incoherent"
+    },
+    {
+      "id": "supply_side_violence_attribution",
+      "question": "Is supply-side violence (cartel conflict, trafficking deaths, dealer violence) a causal consequence of prohibition enforcement or a contingent feature of illicit markets?",
+      "resolution_mechanism": "Comparative supply-chain analysis: violence levels in (a) prohibition jurisdictions, (b) decriminalized use with illegal supply, (c) legal supply regimes; attribution modeling of violence drivers (enforcement intensity, profit concentration, territorial monopoly dynamics); historical analysis of legal substance markets (alcohol post-Prohibition, pharmaceuticals).",
+      "impact": "If violence is causal consequence: prohibition_reading's claimed harm category (users harming themselves) is understated—enforcement-driven violence becomes a hidden victim set, and extractiveness should be higher. If contingent: supply-side violence is not inherent to use; it becomes an institutional-capture argument rather than a use-harm argument, strengthening harm_reduction_reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether supply-side violence is causal consequence of prohibition"
+    },
+    {
+      "id": "committer_axiom_contest_site",
+      "question": "Within the substance_control_authority kernel, which foundational axiom—intrinsic-use-harm or prevention-authority-derives-from-harm—is actually the contested locus between prohibition_reading and harm_reduction_reading?",
+      "resolution_mechanism": "Close reading of policy dispute rhetoric: identify which axiom each reading explicitly invokes; identify which axiom each reading's sibling implicitly rejects; trace historical moment when dispute shifted from one axiom to another.",
+      "impact": "If intrinsic-use-harm is the true contest site: the readings genuinely foreclose each other (one asserts harm, other denies it or minimizes it). If authority-grounding is the true contest site: the readings coexist within disagreement about why authority derives (both grant that harm is relevant, disagree about how much). Correct placement affects reading_relations classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which axiom is the true contest site between readings"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.45,
+      "id_override": "prohib_extract_1960s"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58,
+      "id_override": "prohib_extract_1980s"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.68,
+      "id_override": "prohib_extract_2005"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.72,
+      "id_override": "prohib_extract_2015"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "prohib_theater_1960s"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.45,
+      "id_override": "prohib_theater_1980s"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.55,
+      "id_override": "prohib_theater_2005"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.58,
+      "id_override": "prohib_theater_2015"
+    }
+  ],
+  "interval": {
+    "start": 1961,
+    "end": 2026
+  },
+  "commentary": {
+    "narrative_context": "The prohibition reading of substance control authority asserts that drug use itself constitutes intrinsic harm—to the user's physiology, psychology, and social capacity—and that state authority legitimately derives from preventing this harm and protecting society from the psychopharmacological effects. Under this reading, the drug user is reconceptualized as a perpetrator of self-harm; enforcement apparatus functions as protective intervention; and the constraint's beneficiaries are institutional actors whose legitimacy depends on crime prevention framing. This constraint is ONE READING of the contested kernel 'substance_control_authority,' which also admits harm_reduction_reading (drug use is a medical condition requiring treatment and harm mitigation) and legalization_reading (drug use is a consumer choice requiring market regulation, not prohibition). This JSON instantiates the prohibition_reading only. The structural signature is a Snare from the powerless/trapped perspective (users bear maximum extraction via criminalization) and an institutional beneficiary rope (enforcement apparatus experiences the constraint as pure coordination—drug prohibition IS their mission). The constraint exhibits mandatrophy: extractiveness (0.68) exceeds the snare threshold (0.46), creating apparent overlap with legitimate coordination frames (pharmaceutical regulation, crime prevention) that mask the extraction mechanism. The temporal measurements show rising extractiveness and theater ratio from 1961 (Single Convention) to 2026, indicating accumulated enforcement overhead and degrading functional fit (more police activity, same drug availability—classical piton signature at the international regime level).",
+    "key_agents": [
+      "Drug Users: Primary victim (powerless/trapped) — criminalized for use, bear legal liability, asset forfeiture, employment barriers, social stigma; no legitimate exit from the constraint.",
+      "Law Enforcement and Justice System: Primary beneficiary (institutional/arbitrage) — constraint IS their core function; drug enforcement justifies budgets, personnel, and institutional expansion; have arbitrage exit (could restructure around public health) but zero incentive to do so.",
+      "Communities Subject to Enforcement: Secondary victim (moderate/constrained) — disproportionate policing, environmental stress, family disruption; have constrained exit (costly relocation, legal defense costs).",
+      "Pharmaceutical Industry and Regulatory Authority: Secondary beneficiary (powerful/mobile) — prohibition protects licit pharmaceutical monopoly, eliminates competition from plant medicines, creates scarcity rents; have mobile exit (could support legalization) but benefit from status quo.",
+      "Political Legitimacy Apparatus: Tertiary beneficiary (institutional/constrained) — prohibition provides governments with visible crime governance mechanism; have constrained exit (decriminalization faces legitimacy challenges domestically and internationally).",
+      "International Drug Control Regime: Institutional actor (institutional/arbitrage) — UN conventions codify prohibition globally; regime is degraded (piton)—persists through inertia despite low functional fit.",
+      "Supply-Chain Violence Casualties: Structural victim set (absent from primary framing) — deaths from cartel conflict, trafficking violence, dealer competition are produced by criminalization but attributed to 'drug violence' rather than enforcement-induced scarcity rents."
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts significantly from users—criminalization costs (1.25M arrests/year US, 51% federal prisoners are drug offenders), asset forfeiture ($6.5B+ annually), collateral consequences (employment barriers, housing restrictions, education eligibility loss), and social stigma. The measurement trajectory shows rising extractiveness from 1961 to 2026 as enforcement infrastructure accumulated and incarceration populations expanded—the extraction mechanism is deepening, not stabilizing. Suppression (0.75): Very high. Multiple barriers prevent exit: (a) biological dependency (pharmacological trap), (b) criminalization of the exit attempt itself (medicinal treatment requires legal permission), (c) reputational damage (criminal record prevents legitimate employment, forcing continued reliance on criminalized market), (d) geographic clustering (enforcement targeted disproportionately at economically constrained areas with few alternative opportunities). Theater ratio (0.58): Moderate-high. The constraint's performative dimension is significant: drug availability under prohibition is nearly identical to decriminalized jurisdictions; enforcement effort correlates weakly with drug use reduction; criminal prosecution has not reduced repeat use rates. The performance consists of visible enforcement activity (arrests, prosecution, incarceration) that demonstrates state crime-prevention capacity without achieving stated harm-reduction goals. Theater_ratio rises from 0.35 (1960s, when prohibition seemed efficacious) to 0.58 (2015+, as decriminalization evidence accumulated), indicating the constraint's functional core is eroding while theatrical component persists.",
+    "directionality_logic": "Each perspective derives directionality from the agent's structural position. (1) Drug user at powerless/trapped: maximum d ≈ 0.95 (full target of extraction), derives high f(d) ≈ 1.42 (powerless). (2) Communities at moderate/constrained: d ≈ 0.60 (primary target but with some agency), derives f(d) ≈ 1.00. (3) Law enforcement at institutional/arbitrage: d ≈ 0.05 (full beneficiary—extraction flows toward them), derives f(d) ≈ -0.12 (institutional). (4) Pharmaceutical at powerful/mobile: d ≈ 0.30 (beneficiary with some exposure), derives f(d) ≈ 0.20. (5) Political legitimacy at institutional/constrained: d ≈ 0.20 (beneficiary with some constraint), derives f(d) ≈ 0.02. The directionality values embed the structural relationship—who benefits, who bears cost, what exit capacity they have—and the sigmoid transformation f(d) converts these into experienced extractiveness multipliers. Beneficiaries experience low or negative effective extraction; trapped victims experience maximum extraction scaled by their powerlessness.",
+    "perspectival_gap": "This reading produces strong perspectival divergence. The enforcement apparatus (institutional/arbitrage) sees pure coordination—drug prohibition defines their mission, creates shared organizational purpose, and justifies resource allocation. This is a Rope experience: the constraint solves a coordination problem (What is law enforcement for?). The drug user (powerless/trapped) sees pure extraction—criminalization of use, criminal sanction for treatment-seeking, lifetime barriers from criminal record. This is a Snare experience: maximum extraction with no legitimate exit. The pharmaceutical industry (powerful/mobile) sees mixed coordination and extraction (Tangled Rope): genuine regulatory function (preventing uncontrolled drug markets) alongside asymmetric profit extraction (scarcity rents, monopoly protection). The international regime (institutional/arbitrage) sees a degraded ritual (Piton): the machinery persists through inertia despite documented failure to achieve stated goals. The analytical observer risks seeing an immutable natural law (Mountain): drug use inherently harms, authorities naturally derive from prevention. But beneficiary declarations reveal this as false summit—institutional actors contingently benefit from the prohibition frame. The perspectival gaps reveal that the constraint's classification depends entirely on where the observer stands structurally.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: This reading instantiates mandatrophy (extractiveness 0.68 > 0.70 threshold narrowly missed, but mandate-type concerns apply at 0.46+). The structural ambiguity is: does prohibition constitute legitimate crime-prevention coordination (mandate for protective state authority), or does it constitute extraction mechanism (criminalizing a subset of the population to justify police power)? The prohibition_reading asserts the former—harm from use justifies authority to prevent use. But structural data reveals the extraction: beneficiary set includes enforcement apparatus, political legitimacy apparatus, and pharmaceutical gatekeepers; beneficiaries have zero incentive to exit; extraction mechanisms (criminalization, surveillance, asset forfeiture) are increasing over time (theater_ratio rising, extractiveness rising); and supply-side harms (violence, disease) are attributed to 'drug use' rather than 'criminalization-induced scarcity.' The mandate is resolved by acknowledging that BOTH are true under this reading: prohibition does coordinate crime prevention (coordination function is real), AND prohibition extracts from users to fund institutional power (extraction mechanism is real). These are not contradictory—tangled_rope and snare perspectives coexist. The false summit lies in the mountain perspective (naturalization). The mandatrophy dissolves when the kernel context is explicit: the reading brackets the harm_reduction_reading and legalization_reading as alternative framings, and the structural data is consistent with prohibition_reading ONLY if one accepts that intrinsic-use-harm is the primary harm source. The omega variables document the empirical and conceptual uncertainties that could reframe this.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel 'substance_control_authority.' The reading instantiates the prohibition thesis: drug use itself constitutes intrinsic harm (pharmacological, psychological, social), and state authority legitimately derives from preventing this harm and protecting society. The sibling readings are: (1) harm_reduction_reading—drug use is a medical condition (disease/dependency) requiring treatment, harm mitigation, and social integration; authority derives from public health rather than crime prevention. (2) legalization_reading—drug use is a consumer choice requiring market regulation and quality control; authority derives from economic coordination, not harm prevention. These three readings are not variations on a theme—they constitute fundamentally different framings of what drug use is (intrinsic harm vs medical condition vs consumer choice) and what authority is justified (crime prevention vs medical/public health vs economic regulation). The prohibition_reading forecloses harm_reduction_reading if intrinsic-use-harm is the foundational contested axiom (one reading asserts harm that the other denies or minimizes). The prohibition_reading coexists with legalization_reading if the contest is over how authority should respond to harm (prevention vs mitigation vs regulation). The temporal measurements show prohibition_reading under strain: rising theater_ratio (functional efficacy declining), rising extractiveness (enforcement costs accumulating), and structural evidence that drug availability under prohibition matches decriminalized jurisdictions. The reading's own axioms are being tested by empirical evidence."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "harm_reduction_reading",
+      "legalization_reading",
+      "supply_chain_violence_extraction",
+      "incarceration_disparities_enforcement"
+    ],
+    "dual_formulation_note": "The substance_control_authority kernel admits three structurally distinct constraint readings with different ε values. prohibition_reading (ε=0.68) asserts intrinsic-use-harm as primary; harm_reduction_reading (ε≈0.35-0.45, estimated) asserts medical framing; legalization_reading (ε≈0.25-0.40, estimated) asserts market regulation. Each reading gets its own constraint story because ε differs—the observable (whether primary harm is use, criminalization, or regulatory gap) determines the structural metrics. Links via network.affects_constraints indicate that changes in one reading's empirical basis cascade to siblings: epidemiological evidence that refutes intrinsic-use-harm axiom would degrade prohibition_reading and strengthen harm_reduction_reading; evidence of enforcement-driven violence would increase supply_chain_violence_extraction extractiveness and destabilize prohibition_reading's authority grounding."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "harm_reduction_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "legalization_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "intrinsic_use_harm_primary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "prevention_authority_derives_from_harm",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "intrinsic_drug_harm_prevention_authority",
+    "drift_state": {
+      "moment": "contemporary_evidence_era_2015_2026",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

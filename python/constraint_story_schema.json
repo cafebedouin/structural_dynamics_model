@@ -888,7 +888,7 @@
       }
     },
     {
-      "$comment": "CS structure: interpretation_layer_present is only valid when an active authoritative interpreter exists — authority_grounding ∈ {lineage, extraction, practice}. The original formalized+extraction restriction was over-strict: fixed_text+extraction (e.g., Vatican II rupture reading) and implicit+practice (e.g., madhhab oral tradition) are both legitimate interpretation-layer configurations.",
+      "$comment": "CS structure: interpretation_layer_present is only valid when an active authoritative interpreter exists. Valid authority types: lineage (chain of transmission), extraction (institutional hierarchy wielding canonical text or formal rules — fixed_text+extraction is valid; a fixed canonical text wielded for institutional extraction is a standard CS shape), practice (community of practitioners), expertise (credentialed professional body interpreting evidence or standards — e.g., medical guidelines, engineering standards). Excluded: distributed/self_enforcing/diffuse_epistemic (no designated interpreter).",
       "if": {
         "properties": {
           "cs_structure": {
@@ -911,34 +911,24 @@
           "cs_structure": {
             "anyOf": [
               {
-                "properties": {
-                  "authority_grounding": {
-                    "const": "lineage"
-                  }
-                },
-                "required": [
-                  "authority_grounding"
-                ]
+                "$comment": "Lineage: interpretation is mediated through a chain of authorized transmitters.",
+                "properties": { "authority_grounding": { "const": "lineage" } },
+                "required": [ "authority_grounding" ]
               },
               {
-                "properties": {
-                  "authority_grounding": {
-                    "const": "extraction"
-                  }
-                },
-                "required": [
-                  "authority_grounding"
-                ]
+                "$comment": "Extraction: an institution extracts benefit from kernel stability; a fixed canonical text wielded for institutional authority is a standard CS shape.",
+                "properties": { "authority_grounding": { "const": "extraction" } },
+                "required": [ "authority_grounding" ]
               },
               {
-                "properties": {
-                  "authority_grounding": {
-                    "const": "practice"
-                  }
-                },
-                "required": [
-                  "authority_grounding"
-                ]
+                "$comment": "Practice: the practitioner community IS the interpretive body; oral tradition, professional custom, common-law evolution.",
+                "properties": { "authority_grounding": { "const": "practice" } },
+                "required": [ "authority_grounding" ]
+              },
+              {
+                "$comment": "Expertise: a credentialed professional body interprets evidence or standards (medical guidelines, engineering standards bodies, peer-review communities).",
+                "properties": { "authority_grounding": { "const": "expertise" } },
+                "required": [ "authority_grounding" ]
               }
             ]
           }

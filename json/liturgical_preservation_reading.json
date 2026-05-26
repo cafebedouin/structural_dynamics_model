@@ -1,0 +1,221 @@
+{
+  "header": {
+    "constraint_id": "liturgical_preservation_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_liturgical_preservation_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.52,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Liturgical Preservation Reading of Living Language Status",
+    "topic_domain": "sociolinguistics/religious_studies/nationalism",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "rabbinical_authority",
+      "liturgical_interpretive_class",
+      "language_sanctity_doctrine"
+    ],
+    "victims": [
+      "secular_speech_community",
+      "colloquial_linguistic_innovation",
+      "native_generational_transmission"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Secular Speaker",
+      "comment": "PERSPECTIVE 1: SECULAR SPEAKER (SNARE) — Cannot exit the constraint. Native speakers who use the language in colloquial contexts face delegitimization: their speech is labeled 'profane,' 'impure,' 'inauthentic.' The liturgical reading declares that only ritual/canonical uses preserve the language; everyday speech corrupts it. The speaker bears the extraction (loss of legitimacy for natural speech) with no exit option and no coordination benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Language Community (Generational)",
+      "comment": "PERSPECTIVE 2: LANGUAGE COMMUNITY / GENERATIONAL (TANGLED ROPE) — Constrained by the obligation to transmit liturgical competence (ritual recitation, textual study) to the next generation. This is genuine coordination: the community does need to maintain shared liturgical knowledge. But the constraint also extracts: native generational transmission is devalued; colloquial innovation is suppressed; the community's living speech is subordinated to fixed liturgical corpus. Mixed coordination and extraction over the generational horizon."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Rabbinical Authority",
+      "comment": "PERSPECTIVE 3: RABBINICAL AUTHORITY (ROPE) — Institutional beneficiary with arbitrage options. Benefits from the liturgical preservation framing: interpretive monopoly is preserved (only those trained in canonical texts can authoritatively speak the language); authority over 'correct' language rests with the interpretive class. Experiences the constraint as pure coordination: transmitting the liturgical corpus and maintaining the interpretive tradition. The extraction runs toward this agent; they see no extraction, only legitimate authority preservation."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Modern Native Speaker Movement",
+      "comment": "PERSPECTIVE 4: MODERN NATIVE SPEAKER MOVEMENT (SCAFFOLD) — Organized agents (Zionism, language revival movements, secular cultural nationalism) who see the liturgical preservation reading as a temporary constraint to be overcome. They organize alternative transmission pathways: native-speaker schooling, colloquial literature, everyday media use. The constraint has a sunset: as native speakers grow in number and cultural authority, the 'liturgical only' framing loses legitimacy. This perspective experiences extraction but sees an exit path and active alternatives being built."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Theological Natural Law View",
+      "comment": "PERSPECTIVE 5: THEOLOGICAL NATURAL LAW VIEW (MOUNTAIN) — From a theological/civilizational perspective, the liturgical preservation reading claims that a language's essence is its sacred corpus: the language IS its liturgy, and any use outside the sacred context is degradation, not continuation. This perspective sees language vitality as inherent to liturgical transmission — an immutable theological claim. However, the structural data contradicts this mountain classification: the empirical record shows languages thriving through colloquial native transmission without liturgical recitation. The engine will detect this as a false summit — the 'natural law' framing naturalizes what is actually a contested normative claim about what counts as authentic language use."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "liturgical_sufficiency_threshold",
+      "question": "How much ritual recitation and textual study is required for a language to be 'living' under the liturgical preservation standard? Is occasional ceremonial use sufficient, or does it require daily/weekly engagement?",
+      "resolution_mechanism": "Historical comparison: languages maintained through liturgical transmission only (Latin in Catholic contexts, Ge'ez in Ethiopian Orthodox contexts, Sanskrit in Brahminical ritual) vs. languages that revived through native generational transmission despite centuries of liturgical-only use (Modern Hebrew). Empirical observation of engagement frequency and scale required to maintain linguistic competence across generations.",
+      "impact": "If occasional use suffices: the constraint is weak coordination (Rope). If daily engagement required: the constraint becomes a snare for secular communities unable to maintain that intensity. If threshold is contestable: the ambiguity is the constraint (Tangled Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Frequency threshold for liturgical transmission to sustain language vitality"
+    },
+    {
+      "id": "native_generation_decoupling",
+      "question": "Can a language be 'living' if the dominant transmission mechanism is ritual recitation by trained specialists rather than native generational transmission (parent to child, peer to peer, community apprenticeship)?",
+      "resolution_mechanism": "Neurolinguistic studies of how languages are acquired via liturgical study vs. natural immersion; generational competence data (can second-generation liturgical learners produce novel utterances or only reproduce memorized texts?); comparison of linguistic complexity and innovation patterns in liturgy-maintained vs. natively-transmitted languages.",
+      "impact": "If decoupling is possible: liturgical transmission alone suffices (reading confirmed). If decoupling fails: generational transmission is necessary (reading foreclosed by native_generation_reading). This resolves the core axiological disagreement.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether liturgical transmission alone sustains full linguistic vitality without native generational transmission"
+    },
+    {
+      "id": "interpretive_monopoly_contingency",
+      "question": "Is the rabbinical/priestly interpretive monopoly a necessary feature of the liturgical preservation reading, or could liturgical transmission occur without centralized interpretive authority?",
+      "resolution_mechanism": "Historical analysis of liturgical transmission in contexts with and without centralized interpretive authority (e.g., distributed liturgical practice in early Christianity vs. centralized Rabbinic Judaism; sectarian liturgical innovation vs. orthodox enforcement). Observation of whether open-source liturgical transmission (crowdsourced interpretation, democratic text selection) can sustain the language.",
+      "impact": "If monopoly is necessary: the beneficiary structure (rabbinical_authority) is intrinsic to the reading (extraction structural). If monopoly is contingent: alternative non-extractive implementations are possible, and the current implementation is a political choice rather than logical necessity.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether interpretive monopoly is necessary to liturgical preservation or contingently coupled"
+    },
+    {
+      "id": "reading_kernel_distinction",
+      "question": "Is this the liturgical_preservation_reading or a collation of multiple readings? The kernel (living_language_status) is contested between at least three readings; does this constraint capture only the liturgical reading, or does it conflate the liturgical norm with a theological natural-law claim?",
+      "resolution_mechanism": "Re-examine the boundary between the liturgical reading (transmission mechanism: ritual recitation and textual study) and the theological reading (claim that this is the essence of the language itself). These are distinct commitments. The liturgical reading is a normative claim about how to preserve language. The theological reading is a metaphysical claim about what the language essentially is. The false-summit mountain perspective conflates them.",
+      "impact": "If they are distinct: the theological natural-law perspective should be its own constraint (or omega). If they are inseparable: the false summit is diagnostic (the reading itself naturalizes a normative choice). This omega tracks the authorial intent.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Boundary between liturgical_preservation_reading and theological_natural_law claims"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "kernel_context": "This constraint instantiates the LITURGICAL_PRESERVATION_READING of the contested kernel 'living_language_status.' The kernel is a persisting commitment about what it means for a language to be alive and authentic. Three structurally distinct readings generate competing constraints: (1) The NATIVE_GENERATION_READING: a language is living if native speakers transmit it generationally (parent to child, peer to peer, natural immersion). (2) The LITERARY_CONTINUITY_READING: a language is living if it has continuous literary production and cultural canonization (books, newspapers, plays, scholarship in the language itself). (3) The LITURGICAL_PRESERVATION_READING (this one): a language is living if its sacred texts are continuously recited, studied, and used in ritual — preservation through liturgical transmission suffices. Each reading defines a different transmission mechanism and a different victim/beneficiary structure. This constraint generates a Tangled Rope with rabbinical authority as beneficiary and secular speakers as victims. The sibling readings would generate different constraint types: native_generation_reading likely produces a Rope (genuine coordination of child-rearing and peer speech) and possibly a false-summit mountain (claiming native transmission is natural law); literary_continuity_reading likely produces a Rope or Scaffold (coordination of cultural production with a sunset if colloquial media become dominant). The reading_relations in cs_structure below distinguish this reading from its siblings through the axiom of interpretive_authorization.",
+    "narrative_context": "The liturgical preservation reading asserts that a language maintains its life and authenticity through continuous ritual use and canonical textual study, even if native generational transmission has ceased or become marginal. This reading grounds legitimacy in the interpretive authority of those trained in the sacred corpus — rabbis, priests, monks, scholars — who maintain linguistic vitality through liturgical practice and textual commentary. The constraint exhibits a genuine coordination function (preserving shared liturgical knowledge across generations; enabling ritual participation; maintaining access to sacred texts) but simultaneously extracts from secular speakers, who are delegitimized as desecrators of the language. Native generational transmission outside ritual contexts is reframed as corruption rather than continuation. The beneficiary structure is institutional: the rabbinical or priestly authority class gains interpretive monopoly and cultural authority. The victim structure is the secular speech community: those who use the language in everyday contexts face constant delegitimization. Extractiveness (0.38) reflects that the constraint coordinates a real function (liturgical transmission) while simultaneously suppressing (0.52) an alternative transmission pathway (native generational speech). Theater ratio (0.45) is moderate because the liturgical practice is genuinely functional within its domain (enabling ritual performance and textual interpretation) but is elevated to a claim about what language is essentially, producing some performative content. Measurements show gradual increase in extractiveness as native generational transmission declines and the constraint tightens — the secular speaker must invest more in overcoming delegitimization as the liturgical reading gains institutional enforcement.",
+    "key_agents": [
+      "Rabbinical/Priestly Authority: Institutional beneficiary (institutional/arbitrage) — holds interpretive monopoly and cultural authority over 'correct' language use; benefits from constraint that centralizes linguistic legitimacy",
+      "Liturgical Specialist Class: Institutional beneficiary (organized/arbitrage) — trained specialists in textual study and ritual recitation; their skill set is valorized under this reading",
+      "Secular Speaker: Primary victim (powerless/trapped) — native speakers using the language in everyday contexts; delegitimized as corrupting the language; cannot exit without abandoning linguistic community",
+      "Language Community (Generational): Constrained agent (moderate/constrained) — experiences both coordination benefit (shared liturgical knowledge) and extraction (native generational transmission devalued)",
+      "Native Speaker Movement: Organized resistance (organized/mobile) — Zionists, language revival activists, secular cultural nationalists; building alternative transmission pathways with sunset intent",
+      "Secular Literary Production: Emerging alternative (organized/mobile) — newspapers, novels, colloquial media in the language; competes with liturgical canon as source of linguistic vitality"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The liturgical reading coordinates a genuine function — maintaining access to sacred texts and enabling ritual performance. But it simultaneously extracts by delegitimizing native generational transmission and suppressing colloquial innovation. The extraction is not maximal (0.46+) because native speakers retain agency: they can use the language colloquially despite delegitimization, and alternative transmission mechanisms (schooling, media, literature) are available. Suppression (0.52): Moderate-high. The constraint suppresses native generational transmission, colloquial linguistic innovation, and alternative transmission mechanisms. But suppression is not total (0.60+) because the constraint relies on active institutional enforcement rather than structural barriers. Theater ratio (0.45): Moderate-low. The liturgical practice is genuinely functional within its domain — ritual recitation and textual study do preserve linguistic knowledge and enable continued use in sacred contexts. But the reading's claim that this suffices for 'living language status' introduces performative content — the elevation of liturgical transmission to a claim about linguistic essence rather than one transmission mechanism among others.",
+    "directionality_logic": "The beneficiaries (rabbinical_authority, liturgical_interpretive_class) occupy institutional power with arbitrage options — they can withdraw from the language entirely or reframe it. Their directionality is low (d ≈ 0.15-0.20): they benefit from the constraint (interpretive monopoly preserved) and experience minimal extraction. The victims (secular_speech_community) are powerless with trapped exit options — they cannot abandon the language without losing community identity. Their directionality is high (d ≈ 0.85-0.90): the constraint extracts legitimacy from their speech while they have no exit. The moderate agent (language_community) experiences mixed extraction (generational transmission devalued) and coordination benefit (shared liturgical knowledge), producing medium directionality (d ≈ 0.50-0.60). The organized resistance (native_speaker_movement) has mobile exit options — they can build alternative institutions. Their directionality is lower (d ≈ 0.40-0.50) because they have agency and visible alternatives.",
+    "perspectival_gap": "This constraint demonstrates a structural disagreement about what constitutes linguistic vitality. The rabbinical authority sees the constraint as pure coordination (Rope) — maintaining the liturgical corpus is the language's primary function. The secular speaker sees it as pure extraction (Snare) — their speech is delegitimized with no benefit to them. The language community sees mixed coordination and extraction (Tangled Rope) over the generational horizon. The native speaker movement sees a temporary constraint with an exit path (Scaffold) — alternative transmission mechanisms are being built and will supersede the liturgical reading within a generation. The theological natural-law perspective risks seeing the reading as immutable (Mountain) — that liturgical transmission is inherent to language itself — but the structural data shows this is a contingent institutional arrangement with historical alternatives. The false-summit detection reveals that the theological framing naturalizes a political/normative choice.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that the disagreement is not 'which transmission mechanism is correct?' but 'who gets to define what counts as living language?' Under the liturgical reading, the secular speaker's native colloquial speech does not count as language continuation. Under the native_generation_reading, the rabbinical authority's liturgical recitation alone does not count as living transmission (because it lacks the spontaneity and innovation of native generational speech). These are incommensurable claims about linguistic authenticity, not empirical disagreements about transmission mechanisms. The constraint is genuine Tangled Rope because both coordination (liturgical knowledge transmission) and extraction (delegitimization of secular speech) are real structural features. The false summit at the theological perspective indicates the reading's risk: naturalizing as immutable law what is actually a contestable claim about linguistic essence."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "native_generation_reading",
+      "literary_continuity_reading"
+    ],
+    "dual_formulation_note": "The living_language_status kernel decomposes into three structurally distinct constraints. Each reading generates a different epsilon value and beneficiary/victim structure. The liturgical_preservation_reading (this constraint) exhibits moderate extractiveness (0.38) because it coordinates genuine liturgical transmission while suppressing generational transmission. The native_generation_reading would exhibit lower extractiveness (ε ≈ 0.15-0.20, Rope) because generational transmission requires minimal enforcement and benefits all speakers. The literary_continuity_reading would exhibit different extraction dynamics depending on whether literary production is centralized or democratic. All three readings share the same kernel (what counts as living language) but generate distinct constraints through different transmission mechanisms and authority structures."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.88
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "canonical_liturgical_transmission",
+    "drift_state": {
+      "moment": "contemporary_secular_linguistic_innovation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "native_generation_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "literary_continuity_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "interpretive_authorization",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "liturgical_essence",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  }
+}

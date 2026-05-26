@@ -1,0 +1,246 @@
+{
+  "header": {
+    "constraint_id": "autonomy_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_autonomy_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.68,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Individual Autonomy and End-of-Life Choice (Autonomy Reading)",
+    "topic_domain": "medical_ethics/bioethics/end_of_life_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "patients_with_agency",
+      "medical_practitioners_autonomy_respecting"
+    ],
+    "victims": [
+      "patients_denied_choice",
+      "suffering_individuals_constrained"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Patient Facing Unbearable Suffering Without Choice",
+      "comment": "PERSPECTIVE 1: SUFFERING PATIENT (SNARE) — Trapped by legal prohibition and medical gatekeeping. Faces maximum suppression (0.68): legal barriers, physician discretion, institutional resistance, social stigma. No exit option from either the suffering or the constraint that prevents relief. Experiences pure extraction: the constraint denies autonomy without coordination benefit. The powerless agent bears the full cost of paternalistic restriction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Patient with Partial Jurisdictional Mobility",
+      "comment": "PERSPECTIVE 2: PATIENT WITH JURISDICTIONAL OPTIONS (TANGLED ROPE) — Can potentially travel to jurisdictions permitting assistance in dying (Oregon, Netherlands, Switzerland). Exit option exists but is constrained by cost, mobility limitations, distance, and remaining life expectancy. Experiences mixed coordination and extraction: some jurisdictions coordinate patient choice and medical assistance; others extract through travel burden and fragmented access. Moderate power through exit option; biographical time horizon reflects feasibility within remaining lifespan."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Permissive Jurisdiction (Autonomy-First Governance)",
+      "comment": "PERSPECTIVE 3: PERMISSIVE JURISDICTION (ROPE) — Jurisdictions that permit medical assistance in dying (Netherlands, Belgium, Switzerland) experience this constraint as pure coordination: balancing patient autonomy with safeguarding against coercion. The framework coordinates genuine competing interests (respecting choice vs preventing abuse) with minimal extraction. Beneficiary through institutional legitimacy and alignment with liberal autonomy norms. Arbitrage exit: these jurisdictions can move toward or away from permissive policies depending on political will and evidence."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Restrictive Jurisdiction Enforcing Prohibition",
+      "comment": "PERSPECTIVE 4: RESTRICTIVE JURISDICTION (TANGLED ROPE) — Jurisdictions maintaining blanket prohibition experience genuine coordination function (preventing coercion of vulnerable patients, maintaining trust in medicine) alongside asymmetric extraction (denying autonomous choice). Constrained exit: legal, religious, and political commitments limit policy flexibility. Generational time horizon reflects slow cultural change in end-of-life norms. Requires active enforcement (criminal penalties, professional discipline) to maintain prohibition."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Right-to-Die Advocacy and Policy Evolution",
+      "comment": "PERSPECTIVE 5: RIGHT-TO-DIE MOVEMENT (SCAFFOLD) — Organized advocates (patient rights organizations, civil liberties groups, medical ethicists) see the autonomy constraint as a temporary policy problem with a structural sunset. Empirical evidence of safe implementation (Netherlands 25+ years, Oregon 27+ years, Canada expanding) demonstrates that permissive frameworks do not produce predicted harms (mass coercion, pressure on vulnerable patients). As evidence accumulates and demographic pressures mount (aging populations, chronic suffering), restrictive policies face generational pressure toward liberalization. Constrained exit reflects that policy change requires sustained advocacy; scaffold classification reflects that the sunset is real and predictable — eligibility expansion is the observed trajectory."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Medical Profession (Divided Internal Authority)",
+      "comment": "PERSPECTIVE 6: MEDICAL PROFESSION (TANGLED ROPE) — The medical community globally is divided on end-of-life assistance. Some physicians and specialties (palliative care, oncology) coordinate patient autonomy within permissive frameworks; others maintain prohibition on grounds of medical ethics (duty to preserve life, risk of coercion). Mobile exit option: individual physicians can select jurisdictions aligning with their values; powerful institutional position shapes policy debate. Immediate time horizon reflects career-length decisions about where to practice. Tangled rope because the profession simultaneously coordinates patient care (genuine function) and extracts through gatekeeping (denying some patients' autonomous choices)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "label": "Religious Authority Institutional Inertia",
+      "comment": "PERSPECTIVE 7: RELIGIOUS INSTITUTIONAL OPPOSITION (PITON) — Religious institutions (Vatican, traditional theological authorities) maintain opposition to medical assistance in dying on grounds of sanctity of life and divine authority over death. Theater ratio (0.35 for this reading overall, but localized high theater in ritual authority claims) reflects that the institutional position increasingly relies on performative authority rather than functional control. Civilizational horizon captures that religious opposition frames itself as transcendent and unchanging. Constrained exit: religious institutions cannot easily abandon foundational commitments without institutional crisis. Piton because institutional position persists through inertia and legitimacy claims rather than through active enforcement of restrictive policies — most restrictive jurisdictions maintain prohibition through secular law and paternalistic medical ethics, not direct religious governance."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Natural Law View: Death Inevitability and Medical Limits",
+      "comment": "PERSPECTIVE 8: ANALYTICAL / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, some might argue that the constraint is inherent to the human condition: death is inevitable, suffering is part of existence, and medicine has limits. This perspective risks naturalizing what is actually a contestable normative commitment about who controls the timing of death. The analytical observer sees the mountain as a false summit — the claim that autonomy cannot govern death timing appears immutable only from within a framework that treats life-preservation as supreme value. The autonomy reading reverses this: death inevitability is the mountain; WHO CONTROLS THE TIMING is the contested policy constraint."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coercion_mechanism_empirical",
+      "question": "In permissive jurisdictions, what is the actual rate of coercive or non-autonomous end-of-life decisions compared to restrictive jurisdictions?",
+      "resolution_mechanism": "Longitudinal comparative analysis of Netherlands, Belgium, Switzerland (permissive) vs. restrictive jurisdictions; interview studies of patients and families; mortality statistics and autopsy comparisons; detection of non-voluntary deaths through epidemiological methods",
+      "impact": "If coercion rates are lower in permissive jurisdictions: the restriction is purely extractive (snare classification strengthened). If coercion rates are comparable: the paternalistic restriction has some empirical justification (tangled rope classification strengthened). If rates are higher in permissive jurisdictions: the restriction is partially justified protection (scaffold classification becomes operative).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Actual coercion rates in permissive vs restrictive jurisdictions"
+    },
+    {
+      "id": "unbearable_suffering_definition",
+      "question": "Can 'unbearable suffering' be defined with sufficient clarity to prevent expansion of eligibility to those not facing terminal illness or intractable physical pain?",
+      "resolution_mechanism": "Analysis of eligibility criteria drift in permissive jurisdictions over time (Netherlands: 1984 terminal → 2002 untreatable suffering → 2020 psychological suffering); comparative legal analysis of statutory definitions; case law review showing grounds for approval/denial",
+      "impact": "If definition remains stable or narrows: autonomy reading holds strong (beneficiaries remain those genuinely facing unbearable suffering). If definition consistently expands: slippery slope mechanism reading gains empirical support (scope creep from physical to psychological to social suffering). The trajectory determines whether the reading's own foundational axiom (respect_for_autonomous_choice_over_unbearable_suffering) is foreclosed or overridden by expansion beyond intended scope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether 'unbearable suffering' definition drifts over time in permissive jurisdictions"
+    },
+    {
+      "id": "vulnerable_population_safeguarding",
+      "question": "Do permissive frameworks with safeguards (multiple physician consultation, waiting periods, capacity assessment) actually prevent exploitation of cognitively impaired or depressed patients, or does the safeguard theater create illusion of protection while vulnerable populations remain at risk?",
+      "resolution_mechanism": "Epidemiological analysis of decision-making capacity assessments in approved cases; comparison of psychiatric diagnoses and depression screening rates in those approved vs denied; qualitative analysis of safeguard protocol adherence; follow-up studies on factors influencing approval/denial decisions",
+      "impact": "If safeguards are genuinely effective: tangled rope with legitimate enforcement reduces to rope (coordination without extraction for vulnerable populations). If safeguards are performative: theater ratio rises, piton classification becomes operative, and the autonomy reading's axiom (respect_for_autonomous_choice) is foreclosed for cognitively impaired patients. The reading must then specify: does autonomy respect apply only to unimpaired agents, or do vulnerable populations require additional protection?",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of safeguards in protecting vulnerable populations from non-autonomous decisions"
+    },
+    {
+      "id": "reading_kernel_distinction",
+      "question": "Does the autonomy reading instantiate a distinct normative kernel from the sanctity reading, or are both readings interpretations of a single underlying principle about life's value?",
+      "resolution_mechanism": "Philosophical analysis of whether autonomy and sanctity of life can coexist within a single normative framework. If autonomy means 'agent controls own fate' and sanctity means 'life has transcendent value independent of agent will,' can these be jointly held? (Answer: only if authority is distributed between agent and transcendent source — requires framework revision or hierarchy specification.)",
+      "impact": "If readings share a kernel: classification revises to 'coexists_with' (different parties hold different interpretations). If readings have distinct kernels: autonomy reading forecloses sanctity reading (in any single framework, either agent autonomy or divine/transcendent authority controls death timing, not both). The distinction determines whether the constraint's authority_grounding is 'extraction' (paternalistic restriction) or 'expertise' (medical judgment about unbearable suffering).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether autonomy and sanctity readings share a single kernel or have distinct normative foundations"
+    },
+    {
+      "id": "physician_participation_framing",
+      "question": "Does framing medical assistance in dying as 'physician-assisted' vs 'patient self-determined with physician support' change the constraint classification, or are these framings semantically equivalent?",
+      "resolution_mechanism": "Comparative analysis of how Netherlands ('assistance in dying' by physician) vs Oregon ('physician-assisted suicide' — patient self-administers) produces different legal, ethical, and empirical outcomes; interview studies of physician and patient decision-making under each framing",
+      "impact": "If framings are empirically equivalent: constraint classification is stable across both. If framings produce different patient/physician behavior: the autonomy reading may depend on the 'physician support' framing to maintain safeguards and ethical alignment, and 'physician-assisted suicide' framing shifts toward snare (extraction of decision authority from patient to physician).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether framing (assistance in dying vs physician-assisted suicide) affects decision outcomes and constraint classification"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.31
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates the AUTONOMY READING of the contested kernel 'end_of_life_authority.' The autonomy reading grounds the right to control death's timing in individual self-determination: when facing unbearable suffering with no prospect of relief, respecting the person as an autonomous agent means respecting their decision about when to end their life. This reading is one of three competing interpretations of the same kernel (end-of-life authority). The SANCTITY READING grounds authority in the transcendent value of life independent of the person's will — death timing is controlled by natural process or divine authority, not by individual choice. The SLIPPERY SLOPE READING grants that some autonomy may apply to death timing but claims that permissive frameworks inevitably expand to include non-terminal suffering, psychological distress, and eventually non-voluntary deaths. This story generates ONLY the autonomy reading as a clean ε-invariant constraint, with its own beneficiary/victim structure, suppression mechanisms, and temporal trajectory. The sibling readings are separate constraint stories (not included here). The autonomy reading produces a TANGLED ROPE classification: it coordinates genuine interests (respecting persons as self-determining agents, preventing suffering) while simultaneously extracting through suppression (legal prohibition, physician gatekeeping, institutional resistance to patient choice). The constraint exhibits perspectival range from SNARE (powerless patient trapped by prohibition) through ROPE (permissive jurisdictions coordinating choice) to PITON (religious institutions maintaining opposition through inertia). The theater_ratio (0.35) is relatively low because the autonomy reading relies on functional verification mechanisms (patient capacity assessment, consultation, waiting periods) rather than on performative ritual — permissive jurisdictions test the reading against real outcomes rather than maintaining symbolic authority.",
+    "key_agents": [
+      "Patients facing unbearable suffering: Primary victim (powerless/trapped) — denied choice by legal prohibition and medical gatekeeping; bear full cost of paternalistic restriction",
+      "Patients with jurisdictional mobility: Secondary agent (moderate/constrained) — can exit to permissive jurisdictions at high cost (travel, time, resources); constrained by remaining lifespan and mobility limitations",
+      "Permissive jurisdictions (Netherlands, Belgium, Switzerland, Oregon, Canada): Primary beneficiary (institutional/arbitrage) — benefit through alignment with liberal autonomy norms, demonstrated safe implementation, institutional legitimacy; arbitrage exit through policy choice",
+      "Restrictive jurisdictions: Institutional actor (institutional/constrained) — maintain prohibition through legal and medical gatekeeping; constrained exit by political, religious, and professional commitments",
+      "Right-to-die advocacy movement: Organized agent (organized/constrained) — build pressure for policy change through evidence accumulation and generational succession; constrained by need for sustained political coalition",
+      "Medical profession: Powerful divided actor (powerful/mobile) — coordinate patient autonomy in permissive frameworks or maintain prohibition in restrictive ones; mobile exit through jurisdictional choice",
+      "Religious institutions: Institutional actor (institutional/constrained) — oppose on grounds of sanctity of life; constrained exit by foundational commitments; decreasing institutional force through secularization",
+      "Analytical observer: Sees potential false summit in 'natural law' view of death inevitability (analytical/analytical)"
+    ],
+    "logic_rationale": "EXTRACTIVENESS (0.38): Moderate. The autonomy reading's base extraction reflects suppression of patient choice without strong coordination benefits in restrictive jurisdictions (0.68 suppression). However, the extraction is not maximal because: (1) some jurisdictions implement permissive frameworks successfully, demonstrating that alternative institutional arrangements can respect autonomy while preventing abuse; (2) the constraint is contestable — no structural law requires prohibition; (3) empirical evidence shows that patient outcomes and safety in permissive jurisdictions are comparable to or better than restrictive jurisdictions, suggesting the restriction serves political/institutional interests rather than genuine patient protection. The temporal increase from 0.22 to 0.38 reflects that restrictive jurisdictions' prohibition becomes increasingly costly (measured in accumulated suffering, jurisdictional inequality, policy lag behind evidence) as evidence of safe implementation accumulates. SUPPRESSION (0.68): High. Significant barriers to autonomous choice include: legal prohibition with criminal penalties; physician gatekeeping (doctors can refuse to assess or assist despite patient request); institutional resistance (hospital policies against discussion or referral); social stigma; information barriers (restrictive jurisdictions prohibit public education about options); unequal access (only wealthy patients can travel to permissive jurisdictions). Suppression is not maximal (0.68 < 1.0) because some patients do access assistance (through jurisdictional travel, physician cooperation in gray zones, or through informal networks). THEATER_RATIO (0.35): Low-moderate. The autonomy reading relies relatively less on performative ritual and more on functional verification. Permissive jurisdictions test the framework against real outcomes: patient capacity assessments, physician consultation, waiting periods, and longitudinal follow-up reveal whether safeguards prevent coercion or merely create appearance of caution. The functional verification mechanism makes the constraint less dependent on theater than prohibitionist framing (which relies on symbolic protection and abstract harm prevention). The theater_ratio increases slightly over the interval (0.28 to 0.35) as restrictive jurisdictions' prohibition becomes harder to justify empirically — they increasingly rely on performative protection claims rather than demonstrated safety benefits.",
+    "perspectival_gap": "The autonomy reading produces maximal perspectival range across power levels. The powerless patient sees SNARE: pure extraction without coordination benefit, trapped exit, biographical horizon (choice must be made before death). The moderate patient with jurisdictional mobility sees TANGLED ROPE: some coordination (respecting autonomy) alongside extraction (cost and burden of travel). The permissive jurisdiction sees ROPE: coordination of competing interests (autonomy vs preventing coercion) with institutional benefit (legitimacy alignment). The restrictive jurisdiction sees TANGLED ROPE: coordination function (protecting vulnerable from coercion) alongside asymmetric extraction (denying autonomous choice). The medical profession (powerful) sees divided classification: ROPE in permissive contexts (coordinating patient autonomy and medical ethics), TANGLED ROPE in restrictive contexts (coordinating professional ethics with institutional gatekeeping). The right-to-die movement sees SCAFFOLD: a temporary policy problem with visible sunset (evidence of safe implementation, demographic pressure, generational change). Religious institutions see PITON: institutional opposition persisting through inertia as secular legal barriers remain primary enforcement mechanism. The analytical observer risks false-summit MOUNTAIN: naturalizing contestable policy choice (autonomy denial) as inevitable fact of human condition. The perspectival gap reveals that the constraint's classification depends entirely on power position and exit options — the same structural mechanism (legal prohibition + physician gatekeeping + suppression) appears as different constraint types from different perspectives.",
+    "directionality_logic": "Each perspective's directionality value (d) is computed from: agent power level + exit options + beneficiary/victim relationship to the constraint. The autonomy reading's directionality pipeline derives d as follows: (1) Powerless patient trapped by prohibition: d→1.0 (full target of extraction); (2) Moderate patient with constrained exit: d→0.75 (target, but with exit option reducing effective extraction); (3) Beneficiary patient with agency in permissive jurisdiction: d→0.15 (beneficiary, since constraint respects autonomy); (4) Institutional beneficiary (permissive jurisdiction): d→0.10 (institutional arbitrage exit + beneficiary status); (5) Institutional actor in restrictive jurisdiction: d→0.55 (constrained exit + mixed beneficiary/victim — coordinates public safety but extracts through prohibition); (6) Organized coalition (right-to-die advocates): d→0.60 (victim of restrictive policy but organized exit through advocacy pressure); (7) Medical profession: d→0.50 (symmetric position — some physicians benefit from autonomy respect, others benefit from gatekeeping authority); (8) Analytical observer: d→0.72 (analytical position observing the constraint structure). The directionality spread reflects that the autonomy reading genuinely asymmetrically affects different agents: those denied choice (high d) versus those empowered by autonomy respect (low d).",
+    "mandatrophy_analysis": "The autonomy reading resolves mandatrophy by showing that the constraint is genuinely TANGLED ROPE (not pure extraction, not pure coordination): it coordinates real interests (preventing coercion of vulnerable patients, maintaining trust in medicine) while extracting from those denied autonomous choice. The mandatrophy question ('Is this extraction justified?') depends on two empirical omega variables: (1) Do permissive frameworks with safeguards actually prevent coercion? (2) Can 'unbearable suffering' be defined with sufficient clarity to prevent scope creep? If both questions resolve positively, the extraction is partly unjustified — the restriction prevents less harm than it causes. If both resolve negatively, the extraction is justified as protection of the vulnerable. The autonomy reading bets on empirical support for (1) and (2) — the evidence from permissive jurisdictions 25+ years demonstrates that safeguards work and that definitional drift is manageable. This empirical trajectory suggests the constraint is moving toward SCAFFOLD (temporary protection with sunset) as evidence accumulates and policies liberalize.",
+    "kernel_context": "This constraint instantiates the AUTONOMY READING of the contested kernel 'end-of-life authority.' The kernel is the question: 'Who controls the timing of death in cases of unbearable suffering?' Three readings of this kernel produce different constraints with different beneficiary/victim structures, suppression mechanisms, and temporal trajectories. (1) AUTONOMY READING (this story): Authority belongs to the suffering individual. Grounding: respect for persons as autonomous agents capable of rational self-determination. Institutional mechanism: permissive legal frameworks + physician consultation + safeguards + patient choice. Observed empirical pattern: stable eligibility criteria with minimal unintended expansion, low coercion rates, high patient satisfaction with decision. (2) SANCTITY READING (separate story): Authority belongs to natural process or divine agency. Grounding: life has transcendent value independent of the person's will; death timing should not be subject to individual preference. Institutional mechanism: legal prohibition + medical duty to preserve life + palliative care without assistance. Observed empirical pattern: prohibition persists despite evidence of suffering; religious institutions maintain opposition despite secularization. (3) SLIPPERY SLOPE READING (separate story): Authority is indeterminate and unstable; permissive frameworks inevitably expand from terminal illness to untreatable suffering to psychological distress to non-voluntary deaths. Grounding: boundary between autonomous choice and coercion is permeable; each expansion appears incremental and justified until the original scope is unrecognizable. Institutional mechanism: eligibility criteria drift over time; scope of 'unbearable suffering' expands; procedural safeguards erode. Observed empirical pattern: some jurisdictions show scope expansion (Netherlands: 1984 terminal → 2020 psychological), but pattern is not universal or irreversible (Germany, UK restrict but do not expand). These three readings compete for authority over the same kernel. The autonomy reading claims the empirical pattern of permissive jurisdictions supports its framing (safe implementation, stable criteria, respectful outcomes). The sanctity reading claims the autonomy reading violates sacred principles. The slippery slope reading claims that even if the autonomy reading works today, the institutional logic of expansion will inevitably produce future harm. The constraint stories for each reading, generated separately, will show which institutional arrangements, beneficiary/victim structures, and temporal trajectories correspond to each."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "sanctity_reading",
+      "slippery_slope_mechanism"
+    ],
+    "dual_formulation_note": "The end-of-life authority kernel is decomposed into three separate constraint stories corresponding to three competing readings. Each reading instantiates a different ε value reflecting different empirical claims about safe implementation, scope drift, and institutional stability. AUTONOMY_READING (this story): ε=0.38, grounds authority in individual self-determination, predicts stable safe implementation. SANCTITY_READING: ε differs because it grounds authority in life's transcendent value and predicts maximum harm from any permissive framework. SLIPPERY_SLOPE_READING: ε differs because it predicts inevitable scope expansion and institutional drift. These are not measurements of the same constraint under different observables — they are claims about different institutional arrangements (permissive vs restrictive) with different empirical predictions. The network links enable the engine to track how evidence about permissive jurisdiction outcomes directly tests the three readings' competing empirical claims."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "sanctity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "slippery_slope_mechanism",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "respect_for_autonomous_choice_over_unbearable_suffering",
+        "role": "foundational",
+        "status": "holdable"
+      },
+      {
+        "atom": "permissive_frameworks_prevent_coercion_through_safeguards",
+        "role": "foundational",
+        "status": "holdable"
+      }
+    ],
+    "reference_frame": "individual_self_determination_authority",
+    "drift_state": {
+      "moment": "contemporary_evidence_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

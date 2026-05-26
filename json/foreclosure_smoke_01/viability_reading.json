@@ -1,0 +1,247 @@
+{
+  "header": {
+    "constraint_id": "viability_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_viability_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Moral Status Begins at Viability (Capacity for Independent Survival)",
+    "topic_domain": "bioethics/political_philosophy/constitutional_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "pregnant_persons_reproductive_autonomy",
+      "state_regulatory_capacity"
+    ],
+    "victims": [
+      "viable_fetuses",
+      "pregnant_persons_post_viability"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Pregnant Person Post-Viability",
+      "comment": "PERSPECTIVE 1: PREGNANT PERSON POST-VIABILITY (SNARE) — At viability (~24 weeks), abortion is prohibited or severely restricted to save the mother's life. The pregnant person is trapped: continuing pregnancy carries material health risks (gestational diabetes, preeclampsia, maternal mortality), bodily integrity constraints are absolute and non-negotiable, and the legal framework treats fetal life as a competing paramount interest. Exit is denied. Extraction is maximal — the state enforces fetal viability against the pregnant person's will and body."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "State Regulatory Authority",
+      "comment": "PERSPECTIVE 2: STATE REGULATORY AUTHORITY (ROPE) — The viability standard provides a bright-line rule for regulatory enforcement. States can permit abortion up to viability without justification, and restrict post-viability with clear jurisdiction. The standard solves a coordination problem: it clarifies state authority, reduces litigation burden, and aligns regulatory capacity with biological development. States experience this as coordination, not extraction — the constraint enables governance rather than imposing costs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Pregnant Person Pre-Viability",
+      "comment": "PERSPECTIVE 3: PREGNANT PERSON PRE-VIABILITY (TANGLED ROPE) — Pre-viability, the pregnant person retains reproductive autonomy and can access abortion. But access is not unrestricted: waiting periods, counseling requirements, parental consent, and resource barriers constrain choice. Genuine coordination exists — the person can terminate and go free — alongside asymmetric extraction: burdensome administrative and regulatory requirements, economic costs, and informational asymmetry about fetal development increase decision friction. Extraction is moderate but real."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Viable Fetus as Developing Entity",
+      "comment": "PERSPECTIVE 4: VIABLE FETUS AS DEVELOPING ENTITY (TANGLED ROPE) — The viability standard grants the fetus protectable interests at ~24 weeks. The constraint provides coordination: legal rules clarify when the state may regulate for fetal benefit. But the constraint also involves extraction: fetal interests override pregnant-person autonomy post-viability, regardless of health severity or life circumstances. The fetus is a beneficiary of the coordination rule structure but experiences no extraction; the constraint extracts from the pregnant person on behalf of the fetus."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Medical Professionals and Clinicians",
+      "comment": "PERSPECTIVE 5: MEDICAL PROFESSIONALS (ROPE) — Viability provides clear clinical guidance: pre-viability, no state restriction on abortion; post-viability, restrictions apply. This is coordination for medical practice — physicians can offer care within defined parameters without legal ambiguity. Clinicians also experience extraction (malpractice risk if viability is misjudged, documentation burden, mandatory delay compliance), but the framework reduces uncertainty and enables practice. Net: coordination with moderate extraction layered atop."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Viability as Natural Fact)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / VIABILITY AS NATURAL FACT (PITON) — From a civilizational perspective, viability (~24 weeks) might appear as a natural biological threshold: at that point, a fetus can survive outside the womb with medical support. This naturalizes viability as a pre-political fact, making the moral boundary seem objectively grounded. But the constraint's theater is high: viability is a moving technological target (periviable infants at 21 weeks are increasingly viable with NICU support), the mapping from biological capacity to moral status requires normative premises, and the boundary is politically sustained institutional practice, not discovered natural law. The piton classification reveals that viability is maintained as an objective boundary through repetition despite ongoing contestation."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Reproductive Rights Coalition",
+      "comment": "PERSPECTIVE 7: REPRODUCTIVE RIGHTS COALITION (SCAFFOLD) — Organized reproductive rights advocates see viability as a temporary compromise: a structure that permits pre-viability abortion (solving the immediate autonomy problem) while conceding the post-viability boundary (accepting state regulation). The constraint has built-in sunset logic: as NICU technology improves and periviability boundaries shift, the hard rule at 24 weeks becomes increasingly detached from actual survival capacity. The coalition sees this reading as structurally temporary — advocating for shift toward person-based frameworks that emphasize pregnant-person life and health over fetal viability per se. Extraction is accepted as part of a transition strategy."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "viability_as_biological_vs_normative_threshold",
+      "question": "Is viability a biological fact (independent of values) or a normative boundary (dependent on what capacities we decide to protect)?",
+      "resolution_mechanism": "Examination of how viability definitions change with technology (periviable support at 21 weeks vs 24 weeks vs 28 weeks historically); analysis of whether other moral boundaries (birth, consciousness, rationality) map to biological facts or require normative specification",
+      "impact": "If biological fact: viability reading is anchored in discoverable reality, limiting arbitrary boundary-drawing. If normative: the reading requires normative premises (why 'capacity for independent survival' rather than 'capacity for consciousness' or 'capacity for feeling pain'), making it contestable alongside sibling readings.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether viability is a biological or normative boundary"
+    },
+    {
+      "id": "pregnant_person_autonomy_vs_state_interest",
+      "question": "Does the pregnant person's bodily autonomy interest outweigh the state's interest in fetal protection post-viability?",
+      "resolution_mechanism": "Comparative analysis of how different democracies resolve post-viability abortion cases involving severe maternal health risks, fetal anomaly incompatible with postnatal life, and socioeconomic hardship; empirical study of maternal mortality and morbidity in jurisdictions with different post-viability frameworks",
+      "impact": "If autonomy outweighs: post-viability restrictions cannot be justified; viability reading becomes less sustainable. If state interest outweighs: viability reading's asymmetry (pregnant-person loses autonomy post-viability) is justified. The reading's fundamental extraction mechanism depends on how this is resolved.",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Relative weight of pregnant-person autonomy vs state fetal interest"
+    },
+    {
+      "id": "periviability_technological_drift",
+      "question": "As neonatal intensive care improves, does the viability threshold move earlier? And if it does, does moral status move with it?",
+      "resolution_mechanism": "Historical tracking of viability definitions and survival rates at each gestational age (21 weeks, 22 weeks, 23 weeks, 24 weeks) from 1970s to present; analysis of whether legal viability boundaries have shifted or remained fixed despite improved technology",
+      "impact": "If technology pushes viability earlier and the moral boundary follows: the reading becomes increasingly restrictive of pre-viability abortion as periviability improves. If the boundary remains fixed at 24 weeks despite better survival at 22 weeks: the reading reveals that 'viability' is not actually the operative criterion but a fixed rule that viability nominally justifies. This would undermine the reading's claim to be tracking a biological fact.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Technological drift in periviability boundaries and whether moral status threshold follows"
+    },
+    {
+      "id": "fetal_interests_before_viability",
+      "question": "Do pre-viable fetuses have morally protectable interests? And if so, why don't those interests constrain pre-viability abortion?",
+      "resolution_mechanism": "Analysis of what capacities matter morally (sentience, consciousness, relational identity) and whether pre-viable fetuses possess them; examination of whether the viability reading must deny pre-viable fetal interests or merely claim they are outweighed by pregnant-person autonomy",
+      "impact": "If pre-viable fetuses have morally protectable interests the reading must deny them (making the reading more extreme) or claim interests exist but don't constrain abortion (making the reading's balancing act more explicit and challengeable). This determines whether the reading's victim set should expand to include all fetuses or is limited to viable ones.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether pre-viable fetuses have morally protectable interests"
+    },
+    {
+      "id": "reading_identity_under_contestation",
+      "question": "Is the viability reading one coherent position or a family of related positions that diverge when pressed on hard cases?",
+      "resolution_mechanism": "Analysis of judicial, philosophical, and advocacy uses of 'viability' in post-viability abortion cases: maternal health exceptions, fetal anomaly exceptions, socioeconomic hardship cases. Identification of whether viability advocates hold consistent positions across cases or adjust the boundary based on circumstances.",
+      "impact": "If coherent: the reading is a stable constraint with determinate implications. If a family of positions: the reading lacks a stable identity and may collapse into sibling readings under pressure. High impact on whether this constraint is a robust kernel reading or an unstable compromise.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Internal coherence of viability reading across hard cases"
+    },
+    {
+      "id": "this_reading_as_contingent_compromise",
+      "question": "Is the viability reading grounded in foundational commitments about personhood/moral status, or is it primarily a practical compromise designed to balance competing interests?",
+      "resolution_mechanism": "Textual analysis of foundational claims in viability advocates' works versus practical balancing language; historical analysis of whether the reading emerged from principled moral argument or from case-law compromise (Roe v. Wade's trimester framework was a compromise, not a principled boundary)",
+      "impact": "If grounded in foundational commitments: the reading is a stable kernel reading with genuine axioms. If primarily a compromise: the reading may be vulnerable to institutional drift or reclassification as a scaffold with a shorter sunset than expected. Affects the cs_structure.axioms and reading_relations assessment.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether viability reading is grounded in principles or constructed as practical compromise"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The viability reading of the personhood-boundary kernel holds that moral status begins when a fetus has the capacity for independent survival outside the womb, typically at approximately 24 weeks of gestation. This reading attempts to ground a constitutional and moral boundary in a biological fact (viability/capacity for independent survival) rather than in a contested normative premise about when personhood begins. Under this reading, pre-viability abortion is constitutionally protected as a pregnant person's reproductive freedom; post-viability abortion is subject to state regulation and restriction. The reading generates a tangled-rope constraint structure: genuine coordination (states gain clear regulatory authority, medical professionals gain clinical clarity) is bound together with asymmetric extraction (post-viability pregnant persons lose reproductive autonomy absolutely, regardless of health severity or life circumstances). The extractiveness has increased over 30 years as periviable neonatal technology improves (shifting the empirical viability boundary earlier) while the legal boundary remains fixed at 24 weeks, creating increasing tension between the nominal 'viability' justification and the actual legal rule. The theater ratio reflects that viability functions partly as a natural boundary and partly as an institutionally maintained rule — the boundary is politically sustained through repetition despite ongoing contestation and technological drift.",
+    "key_agents": [
+      "Pregnant persons post-viability: Primary victim (powerless/trapped) — absolute loss of reproductive autonomy; bodily integrity overridden by state enforcement of fetal protection",
+      "Pregnant persons pre-viability: Secondary victim (moderate/constrained) — retain formal autonomy but face administrative burdens, waiting periods, counseling mandates, economic barriers",
+      "Viable fetuses: Beneficiary (moderate/constrained) — gain constitutional protection and state advocacy post-viability; no capacity to exercise or exit the constraint",
+      "State regulatory authority: Primary beneficiary (institutional/arbitrage) — gains clear jurisdictional boundary and enforcement power; experiences constraint as coordination mechanism",
+      "Medical professionals: Secondary beneficiary (moderate/mobile) — gain clinical clarity; experience modest extraction through documentation and legal liability",
+      "Reproductive rights advocates: Organized agent (organized/constrained) — see reading as temporary scaffold with sunset logic as periviable technology improves",
+      "Fetal-rights advocates: Organized agent (organized/constrained) — see reading as insufficient protection; push toward conception or early-development readings",
+      "Analytical observer: Observes the reading's theater — viability naturalizes what is institutionally constructed"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The reading permits pre-viability abortion but restricts post-viability absolutely, making it more extractive than a pure autonomy-based framework but less extractive than a conception-based framework. The extraction is concentrated post-viability: the pregnant person loses all autonomy regardless of health severity, making the effective extraction for that subset extremely high (snare-level). Pre-viability extraction is moderate (tangled rope) due to regulatory burdens and access barriers. The aggregate 0.52 reflects the weighted average across the viability threshold. Extraction has increased from 0.38 to 0.52 over 30 years as periviable neonatal care has improved (~3 weeks earlier viability is now possible than in 1995), making the hard boundary at 24 weeks increasingly misaligned with actual biological capacity, yet the legal rule has remained fixed. This drift suggests the reading is maintaining itself through institutional inertia rather than genuine tracking of biological development. Suppression (0.65): High. Multiple barriers exist to pre-viability abortion access (waiting periods, counseling mandates, parental consent, funding restrictions, clinic availability); post-viability abortion is legally prohibited in most jurisdictions except for mother's-life exceptions. Suppression includes informational asymmetry (state mandates emphasize fetal development, often with contested claims about fetal consciousness). Theater ratio (0.48): Moderate. The viability boundary has performative elements — it is presented as objective and biological while actually being maintained as a fixed rule despite technological drift. However, it also has genuine functional content: it does provide clear regulatory guidance and reduces litigation uncertainty. The theater has increased slightly from 0.35 to 0.48 as the gap between nominal 'viability' and actual technological capacity has widened.",
+    "perspectival_gap": "This reading generates a stark perspectival divergence. For pregnant persons post-viability, the constraint is a snare: absolute extraction with no exit. For the state, it is rope: pure coordination enabling clear governance. For pre-viability pregnant persons, it is tangled rope: some autonomy with regulatory friction. For viable fetuses, the reading bestows moral status and state protection but provides no exit option. For reproductive-rights advocates, the constraint is a temporary scaffold with a sunset built in — as periviable technology improves, the hard boundary at 24 weeks becomes increasingly unjustifiable. For fetal-rights advocates, the constraint is insufficiently protective (implicitly a snare from the fetus's perspective, or a rope only if fetal interests are what matter). The analytical observer sees the piton: viability is maintained through institutional repetition despite growing misalignment between the nominal biological criterion and actual technological development. The gap between the pregnant-person post-viability perspective (snare) and the state perspective (rope) is maximal: the state experiences the constraint as coordinating its own authority, while the pregnant person experiences the same constraint as absolute extraction.",
+    "directionality_logic": "Directionality (d) tracks each agent's structural relationship to the extraction flow. Pregnant persons post-viability are pure victims (d ≈ 0.95): they bear all the costs and have no exit. Their trapped exit option and powerless position maximizes f(d). Pregnant persons pre-viability are mixed (d ≈ 0.55): they retain formal autonomy but face barriers, and they benefit from the rule that permits them to access abortion at all. The state is a beneficiary (d ≈ 0.05): it gains regulatory clarity and enforcement authority. Viable fetuses are beneficiaries nominally (d ≈ 0.10) but have no agency to exit or exercise the protection. Medical professionals are mixed (d ≈ 0.45): they benefit from clinical clarity but face malpractice risk and regulatory burden. The viability reading's extraction mechanism is directional: it runs from post-viability pregnant persons toward fetal protection, with the state as the enforcing institution. The reading's legitimacy depends on the claim that this directional extraction is justified by the fetus's morally protectable interests — a claim that depends on foundational premises about what capacities ground moral status (contestable across the three sibling readings).",
+    "mandatrophy_analysis": "UNRESOLVED MANDATROPHY: This reading's extractiveness (0.52) exceeds 0.46, triggering mandatrophy requirements. The reading claims it resolves the mandatrophy by distinguishing coordination (clear regulatory boundaries) from extraction (loss of autonomy post-viability), and by grounding both in a biological fact (viability/capacity for independent survival). However, the resolution is contested: (1) Viability is not a pure biological fact but a normatively-laden concept that changes with technology, (2) the reading's own internal coherence is questionable — it does not uniformly apply the viability principle across hard cases (maternal health exceptions, fetal anomaly cases), and (3) the omega variables reveal irreducible uncertainties about whether fetal interests pre-viability are protectable and whether the reading is grounded in principles or is merely a practical compromise. The reading avoids mandatrophy reclassification only if we accept that the viability boundary is a genuine discovery (not an institutional construction), that fetal capacity for independent survival does ground moral status, and that post-viability extraction is justified by fetal interests. These are the axioms of the reading, and they are contested by the sibling readings. Full mandatrophy resolution would require empirical closure on whether viability is drifting technologically (omega: periviability_technological_drift) and conceptual clarity on what capacities ground moral status (omega: fetal_interests_before_viability). Neither is settled. The mandatrophy_resolved flag is `false` because the reading remains under active contestation and the theoretical commitments it requires are not universally held.",
+    "kernel_context": "This constraint is ONE READING of the contested personhood-boundary kernel. The kernel is stabilized in constitutional law (Roe v. Wade trimester framework, subsequent case law) and in bioethical tradition as THE central question in abortion ethics: when does a human being acquire moral status? The viability reading holds that moral status begins at capacity for independent survival (~24 weeks). SIBLING READINGS: (1) conception_reading: moral status begins at conception; personhood is present from fertilization. (2) birth_reading: moral status is fully realized only at birth; the fetus has some interests pre-birth but they do not override pregnant-person autonomy. The viability reading sits between these: more restrictive than birth-reading (post-viability restrictions apply), more permissive than conception-reading (pre-viability abortion is unrestricted). The reading's authority grounds itself in LINEAGE (Roe precedent, common-law traditions of quickening as moral boundary) and in a nominally FORMALIZED kernel (viability is a defined biological threshold, supposedly objective). However, the kernel's codification is actually under continuous pressure: periviable technology shifts the empirical boundary earlier, creating drift between the nominal 24-week rule and actual survival capacity. The reading maintains institutional stability (state relies on the bright-line rule) but at the cost of increasing internal tension between its justification (viability) and its application (fixed 24-week boundary). The omega variables mark this tension: the reading is held in place by institutional practice, not by univocal theoretical coherence."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "conception_reading",
+      "birth_reading"
+    ],
+    "dual_formulation_note": "The personhood-boundary kernel contains three structurally distinct constraints, each with a different epsilon value reflecting different empirical claims and different institutional implications. The viability reading (ε=0.52, tangled_rope) claims personhood begins at biological viability. The conception reading (expected ε≈0.25, mountain or rope depending on framing) claims personhood is present from fertilization. The birth reading (expected ε≈0.45, tangled_rope or scaffold) claims moral status is fully realized only at birth. Each reading instantiates a different constraint structure with different beneficiary/victim profiles and different temporal trajectories. All three are linked through the kernel: they are competing interpretations of the same canonical question, not independent constraints. The viability reading influences both siblings: it establishes the post-viability restriction that conception-reading advocates push against (influence relation) and the pre-viability permission that birth-reading advocates push against (influence relation). Neither reading forecloses the other — both remain live positions in contemporary jurisprudence and philosophy."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "conception_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "birth_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "viability_grounds_moral_status",
+        "role": "foundational",
+        "status": "holdable"
+      },
+      {
+        "atom": "capacity_for_independent_survival_is_relevant_to_personhood",
+        "role": "foundational",
+        "status": "holdable"
+      }
+    ],
+    "reference_frame": "biological_capacity_centered_personhood",
+    "drift_state": {
+      "moment": "contemporary_periviable_medicine",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

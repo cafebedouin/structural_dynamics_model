@@ -1,0 +1,228 @@
+{
+  "header": {
+    "constraint_id": "continuous_refresh_hybrid",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "contref"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Continuous Refresh Hybrid: Competence Retention Through Mandatory Drill Cycles",
+    "topic_domain": "safety_engineering/organizational_learning",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "safety_regulator",
+      "catastrophe_prevention_function"
+    ],
+    "victims": [
+      "operational_personnel",
+      "resource_allocation"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Drill Taker (Operational Personnel)",
+      "comment": "PERSPECTIVE 1: OPERATIONAL PERSONNEL (SNARE) — Trapped in mandatory continuous drill cycles with no structural way out. Exit is impossible; career termination follows refusal. The burden of proof for competence is perpetual and asymmetric: one drill failure can terminate certification, but passing drills provides no guarantee of permanent validation. Maximum experienced extraction with minimal benefit visibility."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Maintenance Supervisor",
+      "comment": "PERSPECTIVE 2: MAINTENANCE SUPERVISOR (TANGLED ROPE) — Constrained by mandates to schedule and oversee drills but also benefits from reduced catastrophe risk on their watch. The constraint coordinates genuine safety function (continuous competence maintenance) while extracting labor and compliance overhead. Significant but not maximal extraction — the supervisor has some agency in scheduling and some real benefit from the safety function."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Safety Regulator",
+      "comment": "PERSPECTIVE 3: SAFETY REGULATOR (ROPE) — Experiences the continuous-refresh mandate as pure coordination with net benefit. Demonstrating active drill programs reduces liability and enables regulatory credibility. The regulator benefits from visibility into competence metrics and can arbitrage this knowledge into enforcement authority. Low experienced extraction; high beneficiary position."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Catastrophe Prevention Function",
+      "comment": "PERSPECTIVE 4: CATASTROPHE PREVENTION FUNCTION (ROPE) — Abstract collective good (safety culture, systemic resilience, institutional memory) benefits structurally from continuous-refresh mandate. The constraint coordinates the function it exists to protect. Organized actors (safety committees, incident investigators) see this as genuine coordination with high stakes. Mobile at generational horizon — the function can exit through catastrophe (constraint fails) but has strong incentive to stay engaged."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Resource Allocation Function",
+      "comment": "PERSPECTIVE 5: RESOURCE ALLOCATION (TANGLED ROPE) — Constrained to allocate training budget, facility time, and personnel hours to continuous drills. Benefits from reduced catastrophe liability and insurance costs, but extraction is real: opportunity cost of drill budget elsewhere, scheduling friction, measurement overhead. Mixed coordination-extraction at generational horizon — the function both enables and bears costs."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, competence decay is inherent to human cognition and motor memory: skills atrophy without practice, decision-making degrades without scenario exposure, and no one-time validation survives the passage of time and turnover. This perspective sees continuous refresh as an immutable property of safety engineering itself — a law of learning and forgetting. However, the structural data (extractiveness 0.58, suppression 0.65, beneficiaries, victims) contradicts mountain classification; the engine will compute this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "drill_fidelity_sufficiency",
+      "question": "Do realistic drill simulations actually preserve competence for real-world catastrophic scenarios, or do they encode false confidence that fails under true stress?",
+      "resolution_mechanism": "Post-incident analysis: comparison of competence measures in drills vs. actual emergency response; tracking of drill-trained vs. non-drill-trained personnel performance in real events; longitudinal competence decay curves with and without continuous refresh",
+      "impact": "If drills preserve competence: continuous-refresh mandate is genuine coordination (Rope from regulator view). If drills create false confidence: mandate is extraction mechanism masquerading as safety (Snare becomes more salient). If drills partially preserve: hybrid model (Tangled Rope) is confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether drill competence transfers to real catastrophic scenarios"
+    },
+    {
+      "id": "optimal_refresh_frequency",
+      "question": "What drill frequency is actually necessary to prevent competence decay — is continuous refresh optimal, or does diminishing returns create pure extraction beyond some threshold?",
+      "resolution_mechanism": "Competence decay studies with multiple refresh intervals; analysis of critical near-misses: how many were caused by skill decay vs. other factors; cost-benefit analysis of incident prevention per dollar of training investment",
+      "impact": "If optimal frequency < mandate frequency: structural extraction is present and may be deliberate (Snare tendency). If optimal = mandate: mandate is efficient coordination (Rope). If optimal > mandate: mandate is insufficient (reclassifies to Scaffold — temporary insufficient measure).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Optimal drill frequency for competence retention"
+    },
+    {
+      "id": "reading_kernel_boundary",
+      "question": "Is this constraint one reading (continuous-refresh-as-process) of a contested kernel (what competence validation is), or is it a structurally distinct constraint from the simulation-as-proxy reading and real-catastrophe-only reading?",
+      "resolution_mechanism": "Formal analysis: if the three readings share the same beneficiary/victim structure and differ only in how they interpret the evidence of competence (process vs. state vs. event), they are readings of one kernel. If they have different victim sets or different underlying structural relationships, they are separate constraints requiring separate stories.",
+      "impact": "If readings of one kernel: all three stories link via cs_structure.reading_relations. If separate constraints: network decomposition instead; each has independent ε and structural data.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether continuous-refresh is one kernel reading or a distinct constraint"
+    },
+    {
+      "id": "suppression_mechanism_institutional_vs_cognitive",
+      "question": "Does the suppression (0.65) derive from institutional barriers (career termination, certification loss) or from internalized cognitive frames (personnel internalizing the belief that they cannot be competent without continuous validation)?",
+      "resolution_mechanism": "Exit analysis: survey of reasons personnel cite for participating in drills (institutional requirement vs. internalized belief in necessity); observation of post-mandate behavior (do personnel continue drills if mandate is removed?); identity fusion assessment (do personnel define themselves through continuous competence validation?)",
+      "impact": "If institutional: suppression is structural and remains constant. If cognitive: personnel who exit the system carry suppression with them; the constraint's effective suppression is higher than measured (internalized component persists post-exit).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is institutional or internalized"
+    },
+    {
+      "id": "mandatrophy_continuous_vs_sufficient",
+      "question": "Has the continuous-refresh mandate become degraded theater (Piton) — persisting through institutional inertia despite low functional verification — or does it remain a genuine Tangled Rope coordinating safety function with unavoidable extraction?",
+      "resolution_mechanism": "Theater tracking: measurement of actual incident prevention attribution (how much of modern safety performance derives from continuous drills vs. other factors like design improvements, automation, redundancy?); organizational narrative analysis (are drills justified functionally or performatively?); comparison with alternative competence assurance models in other safety-critical domains",
+      "impact": "If theater_ratio rises above 0.65: Piton reclassification likely. If theater_ratio stays below 0.50: genuine Tangled Rope confirmed. Theater_ratio at 0.48 currently suggests functional integrity, but drift trajectory matters.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether continuous-refresh mandate has degraded to theater (Piton tendency)"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Competence retention in safety-critical operations (nuclear, aviation, maritime, high-consequence maintenance) faces a fundamental tension: competence validation cannot be a one-time event (skills decay, personnel turn over, scenarios evolve) yet continuous validation (repeated testing, mandatory drills) imposes significant extraction costs on operational personnel. This constraint models one specific reading of how organizations resolve this tension: competence retention is fundamentally process-dependent, not state-validated; safety records prove continuous exercise works, not that simulation equals catastrophe. This reading treats the continuous-refresh mandate as a genuine hybrid constraint — it coordinates a real safety function while extracting labor, compliance overhead, and organizational resource. An alternative reading (simulation_as_proxy) would hold that realistic simulation can substitute for continuous refresh, reducing extraction. Another alternative (real_catastrophe_only) would hold that actual incident experience is the only valid competence measure. This story instantiates the continuous-refresh-as-process reading and explicitly rejects the claim that one-time validation is sufficient.",
+    "key_agents": [
+      "Operational Personnel (Powerless/Trapped): Primary victims — face mandatory drills with no structural exit; one failure can end certification; asymmetric burden of proof",
+      "Safety Regulator (Institutional/Arbitrage): Primary beneficiary — captures authority and credibility from visible drill programs; low extraction experienced; high beneficiary position",
+      "Maintenance Supervisor (Moderate/Constrained): Secondary actor — constrained to organize drills but benefits from safety culture; mixed coordination-extraction",
+      "Catastrophe Prevention Function (Organized/Mobile): Structured beneficiary — abstract safety collective that depends on continuous competence; coordinates with the mandate's core purpose",
+      "Resource Allocation Function (Moderate/Constrained): Secondary actor — bears opportunity cost of drill budget; benefits from reduced catastrophe liability",
+      "Analytical Observer (Analytical/Analytical): Civilizational view — risks naturalizing the continuous-refresh requirement as inherent law rather than contingent institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The continuous-refresh mandate extracts labor (time away from primary operations), compliance overhead (certification management, scheduling), and psychological burden (performance pressure, career vulnerability). However, extraction is not maximal (0.66+) because the mandate genuinely coordinates a safety function that operational personnel themselves benefit from — reduced catastrophe risk protects their lives and livelihoods. The extraction is asymmetric: regulator and safety function benefit more than operational personnel bear costs, but not to the snare-level (0.66+) degree. Suppression (0.65): High. Operational personnel face significant barriers to exit: legal requirement for certification, career termination for refusal, institutional mandate with no opt-out pathway. However, suppression is not absolute — personnel can exit the role entirely (career change) though at high cost. The suppression reflects both institutional barriers (certification loss) and internalized belief that competence cannot be maintained without continuous validation. Theater ratio (0.48): Moderate. The continuous-refresh mandate has a functional component (drills do preserve some competence; safety records improve with active programs) but also performative elements (some drills are checklist exercises rather than scenario-based learning; compliance metrics matter more than competence gains). The ratio reflects that the mechanism is genuinely mixed but not yet degraded to pure theater (Piton would require theater > 0.70).",
+    "directionality_logic": "Each agent's experienced extractiveness depends on their position in the extraction flow. The regulator benefits from the mandate's existence and visibility — they arbitrage the drill data into enforcement authority. The operational personnel bear the mandate's costs (time, career risk, performance pressure) with minimal structural benefit. The maintenance supervisor operates at the coordination boundary — they both execute the mandate (constrained) and benefit from its safety function (partial beneficiary). The resource allocation function bears opportunity cost. The catastrophe prevention function (abstract) benefits from competence maintenance but has no direct budget or personnel. The key asymmetry: the regulator accumulates authority and credibility without bearing operational cost; the personnel bear operational cost without accumulating authority. The supervisor, maintenance allocator, and prevention function occupy intermediate positions. This structure — benefits to high-power agents, costs to low-power agents — is the signature of Tangled Rope extraction masquerading as coordination.",
+    "perspectival_gap": "This constraint exhibits maximal perspectival divergence. The operational personnel (powerless/trapped) see a Snare — pure extraction with no viable exit. The regulator (institutional/arbitrage) sees a Rope — pure coordination with net benefit. The maintenance supervisor (moderate/constrained) sees a Tangled Rope — genuine coordination of safety with unavoidable extraction overhead. The resource allocation function (moderate/constrained, generational) also sees Tangled Rope but at a different horizon and with different costs in focus. The catastrophe prevention function (organized/mobile, generational) sees Rope — genuine coordination of the safety collective with mobile agency at civilizational scale. The analytical observer risks seeing a Mountain — competence decay as a law of learning inherent to human nature — but the structural data reveals this as a false summit: the continuous-refresh requirement is institutional, not natural. The gap between the snare perspective (operational personnel) and the rope perspective (regulator) is diagnostic of asymmetric extraction; the gap between the snare view and the mountain view (analytical) reveals the naturalization mechanism.",
+    "mandatrophy_analysis": "This constraint embodies the mandatrophy problem: it cannot be classified as pure coordination (the extraction is real and asymmetric) nor as pure extraction (the coordination function is genuine — continuous competence maintenance demonstrably improves safety). The resolution is Tangled Rope: the constraint coordinates a real safety function while extracting labor and compliance overhead from operational personnel asymmetrically. The analytical observer's temptation to classify as Mountain (competence decay is natural law) is a mandatrophy failure — it naturalizes the institutional choice to make competence validation continuous rather than state-based. The suppression value (0.65) confirms that exit is severely constrained, pointing away from pure Rope (which would have low suppression). The extraction value (0.58) rules out pure Snare (which requires ≥ 0.66) but confirms the asymmetry. The Tangled Rope classification resolves the mandatrophy by holding both truths: genuine safety coordination AND asymmetric extraction.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel 'competence_exercise_validity' — the question of what constitutes valid proof that personnel can safely handle critical scenarios. Three readings are in contention: (1) CONTINUOUS_REFRESH_HYBRID (this story): Competence retention is process-dependent; continuous drill cycles prove competence preservation; safety records validate the approach. (2) SIMULATION_AS_PROXY (sibling): Realistic simulation can substitute for continuous refresh; one-time high-fidelity validation proves competence for extended periods; continuous refresh is extractive overkill. (3) REAL_CATASTROPHE_ONLY (sibling): Only actual emergency response proves competence; simulation and drills create false confidence; real incidents are the only valid measure. These are readings of a single kernel because they all address the same fundamental question — what counts as valid competence evidence? — and they have different answers that cannot coexist in a single framework. The continuous-refresh reading claims process sufficiency; the simulation reading claims state sufficiency; the catastrophe reading claims incident sufficiency. This story instantiates only the continuous-refresh reading and should not describe the siblings' strengths or weaknesses."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "simulation_as_proxy",
+      "real_catastrophe_only"
+    ],
+    "dual_formulation_note": "The continuous_refresh_hybrid constraint is downstream of the kernel question 'what constitutes valid competence evidence?' The three reading stories (continuous_refresh_hybrid, simulation_as_proxy, real_catastrophe_only) are siblings in the kernel decomposition, not parent-child dependencies. They should be linked via cs_structure.reading_relations (foreclosure, coexistence, influence) rather than affects_constraints (causal dependency). The network edge here indicates that this reading influences the practical viability of the sibling readings — if continuous refresh is genuinely necessary, then simulation_as_proxy is empirically falsified and real_catastrophe_only becomes the only alternative."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "simulation_as_proxy",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "real_catastrophe_only",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "competence_is_process_dependent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "safety_record_validates_continuous_exercise",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "competence_as_continuous_skill_maintenance",
+    "drift_state": {
+      "moment": "contemporary_automation_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

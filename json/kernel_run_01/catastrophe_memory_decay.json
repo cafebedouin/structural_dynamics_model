@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "catastrophe_memory_decay",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "catmem"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Catastrophe Memory Decay and Land-Use Constraint Persistence",
+    "topic_domain": "disaster_anthropology/institutional_memory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "memory_bearing_community",
+      "coastal_governance_institutions"
+    ],
+    "victims": [
+      "development_pressure_actors",
+      "intergenerational_knowledge_transmission"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Non-Survivor Below the Stone",
+      "comment": "PERSPECTIVE 1: DEVELOPER OR MIGRANT BELOW THE STONE (SNARE) — Constrained by a prohibition they do not understand and cannot challenge. The stone's force persists as pure suppression: 'do not build here' without accessible rationale to new residents. No alternative sites, no exit option, no coordination benefit. The constraint appears as an arbitrary restriction backed by cultural authority they may not share."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Local Government Caught Between Pressures",
+      "comment": "PERSPECTIVE 2: LOCAL GOVERNANCE INSTITUTIONS (TANGLED ROPE) — Must coordinate coastal safety (genuine coordination function) while facing development pressure and economic incentives. Enforcement requires active suppression of alternative land use. The constraint both protects communities and restricts development revenue. Moderately powerful but constrained by conflicting mandates."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Japanese State's Disaster Memory Institution",
+      "comment": "PERSPECTIVE 3: NATIONAL DISASTER GOVERNANCE (ROPE) — The stone and similar memory devices are tools for coordinating intergenerational risk communication. The state benefits from low-cost, durable constraint mechanisms that do not require continuous institutional maintenance. Pure coordination from this perspective: the state gains capacity to coordinate safety across generations without expensive bureaucratic overhead."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Aneyoshi Stone as Commemorative Symbol",
+      "comment": "PERSPECTIVE 4: THE STONE AS PERFORMATIVE MONUMENT (PITON) — Between catastrophes, the stone becomes primarily theatrical: a site of pilgrimage, documentary preservation, and identity markers rather than functional constraint on building behavior. The constraint persists through inertia and cultural reverence rather than active enforcement. Theater ratio rises during calm periods as the warning transforms into memory ritual."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Geophysical Inevitability (Natural Law View)",
+      "comment": "PERSPECTIVE 6: GEOPHYSICAL MOUNTAIN (FALSE SUMMIT CANDIDATE) — From a civilizational view, tsunami hazard on this coast is a physical inevitability. The constraint 'do not build below this line' could appear as encoding an immutable natural law about coastal vulnerability. However, the base properties reveal beneficiaries and victims: the state, the memory-bearing community, and the governance institutions all structure their interests around the constraint. This naturalizes a contingent social arrangement (where to draw the line, how to enforce it, how long to remember) as physics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "memory_decay_threshold",
+      "question": "At what number of generations without catastrophe does an institutional memory constraint decay from behavioral force to performative symbol?",
+      "resolution_mechanism": "Comparative analysis of memory decay across Japanese, Indonesian, and Chilean coastal communities with different interstrike intervals (50-200 years). Correlation between generation count and violation rates, enforcement investment, and narrative persistence.",
+      "impact": "If decay occurs < 3 generations: memory constraints are structurally unstable and cannot coordinate long-interval hazards. If decay > 5 generations: institutional memory mechanisms are robust enough for multi-century coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Generation threshold at which memory constraints decay to symbol"
+    },
+    {
+      "id": "enforcement_mechanism_ambiguity",
+      "question": "Is the stone's behavioral force in 2011 sustained by active enforcement (cultural authority, institutional sanction, peer pressure), passive geographic constraint (limited alternative sites), or identity fusion (the community's self-concept as 'people who heed the stone')?",
+      "resolution_mechanism": "Post-2011 ethnographic study of households above vs below the line: interviews on decision rationales, cost-benefit analysis of relocation, knowledge of stone's history, and counterfactual scenarios (would you build there if the stone didn't exist?).",
+      "impact": "If active enforcement dominant: constraint is Tangled Rope (requires continuous institutional investment). If passive geography: constraint approaches Mountain (exogenous barriers, not social enforcement). If identity fusion: constraint is Rope with identity_locked exit for non-members.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether stone's force derives from active enforcement, geography, or identity"
+    },
+    {
+      "id": "kernel_contest_institutional_status",
+      "question": "Is the Aneyoshi stone a reading of a broader kernel (coastal memory governance) with the 2011 event confirming one reading over alternatives, or is the stone itself the kernel being read differently across time?",
+      "resolution_mechanism": "Analysis of how Japanese disaster governance institutions have since formalized stone-based risk communication (e.g., UNESCO Recognition of Aneyoshi in 2016, subsequent national guidelines for monument-based warnings). If formalization increases, the stone-as-kernel reading strengthens; if it remains local practice, the stone is one reading of coastal memory governance.",
+      "impact": "If stone is kernel: subsequent tsunamis will be read as confirmation or refutation of the memory persistence thesis. If stone is reading of kernel: multiple coastal communities will develop competing memory devices, revealing the kernel's underspecification.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the stone is a kernel or one reading of coastal memory governance"
+    },
+    {
+      "id": "survivors_bias_in_perception",
+      "question": "Does the 2011 survival outcome (11 households above stone, devastating losses below) change the constraint's classification retroactively, or does it reveal the classification that was structurally operative before the event?",
+      "resolution_mechanism": "Pre-2011 ethnographic data on household locations, building decisions, stated reasons for settlement patterns. Counterfactual: would households have behaved differently in 1970 or 1990 if they knew the 2011 outcome? The constraint's pre-event classification should not depend on the outcome it predicted.",
+      "impact": "If classification changes retroactively: observers are confusing outcome confirmation with structural force. If classification holds: the constraint was operative all along, and 2011 merely revealed it. Methodologically: constraint stories must be authored from the agent's perspective at time-of-decision, not from the analyst's retrospective vantage.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Outcome confirmation vs structural classification"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 78,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 78,
+      "value": 0.35
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 78
+  },
+  "commentary": {
+    "narrative_context": "The Aneyoshi stone in Iwate Prefecture, Japan, represents a 78-year institutional memory constraint spanning the 1933 Showa tsunami through the 2011 Tōhoku tsunami. The stone's inscription warned 'do not build below this point,' encoding the knowledge of two catastrophic tsunamis (1896, 1933) into a spatially explicit constraint on future settlement. The 2011 Tōhoku earthquake and tsunami (magnitude 9.0) killed approximately 20,000 people across the Sendai coastal region, devastating communities up to 40 km inland. Yet all 11 households above the Aneyoshi stone line survived. The constraint operated across two non-catastrophe generations (approximately 35-45 years between 1933 and the early 1970s, and roughly 37 years from mid-1970s to 2011), during which the stone's behavioral force likely decayed from urgent warning to cultural monument. The kernel contest is whether the stone retained live institutional force throughout this period or decayed to commemorative symbol and was then vindicated by the 2011 event. This constraint exemplifies how catastrophe memory persists (or fails to persist) as a governance mechanism.",
+    "key_agents": [
+      "Memory-bearing community: Primary beneficiary (institutional/arbitrage) — the Aneyoshi households and local knowledge holders who maintained the stone's significance and benefited from its protective force",
+      "Development pressure actors: Primary victims (powerless/trapped) — new residents, developers, and economic agents constrained by the building prohibition without understanding its rationale",
+      "Local governance institutions: Secondary actor (moderate/constrained) — caught between enforcing the memory constraint and responding to development pressure and economic incentives",
+      "Japanese national disaster governance: Beneficiary (institutional/arbitrage) — gains low-cost, durable coordination mechanism for intergenerational risk communication",
+      "Intergenerational knowledge transmission: Victim (moderate/constrained) — the abstract process of passing catastrophe knowledge across generations; face barriers of forgetting, skepticism, and narrative decay",
+      "Analytical observer: Civilizational perspective (analytical/analytical) — risks naturalizing the choice of where to draw the line as physics rather than governance"
+    ],
+    "logic_rationale": "Extractiveness (0.35): Moderate, declining over the interval. At t=0 (1933, immediately post-catastrophe), the constraint's extractiveness is high (0.48): building is prohibited, enforcement is strict, suppression is maximum because the trauma is fresh. As decades pass without catastrophe, the constraint's extractiveness declines (0.35 by 2011): development pressure mounts, younger residents lack direct catastrophe memory, the stone's force becomes cultural reverence rather than behavioral prohibition. The declining extractiveness reflects the decay of institutional memory. Suppression (0.62): High throughout. The constraint operates through prohibition ('do not build here') without transparent reasoning for new residents. Alternative sites exist but require relocation investment. Peer pressure and cultural authority maintain the ban even as the rationale recedes into history. Theater ratio (0.58): Moderate and rising. Immediately post-catastrophe (1933), the stone is primarily functional — a warning with urgent behavioral force. By mid-century, the stone becomes increasingly theatrical: it is visited, documented, incorporated into local identity narratives, and treated as a monument rather than an active prohibition. By 2011, the theater ratio has stabilized at 0.58 — the stone is simultaneously a warning (functional) and a symbol of the community's resilience and memory (performative). Claimed type (Tangled Rope): The constraint genuinely coordinates coastal safety (beneficiaries: memory-bearing community and governance institutions gain safety and institutional credibility) while imposing asymmetric extraction (victims: new residents and development actors face prohibition without full rationale). Active enforcement is required to maintain the constraint against economic incentives.",
+    "perspectival_gap": "This constraint produces stark perspectival disagreement about its classification and legitimacy. The memory-bearing community (institutional/arbitrage) experiences Rope — the stone coordinates their collective safety and their identity as a community that heeds ancestral warnings. They benefit and perceive the constraint as fair coordination. New residents and developers (powerless/trapped) experience Snare — they face an incomprehensible prohibition with no viable alternative and no transparency about why this specific location is forbidden. Local governance (moderate/constrained) experiences Tangled Rope — they must enforce a constraint that coordinates safety but also suppresses development and alienates newcomers. The national disaster governance institution (institutional/arbitrage) sees pure Rope — an elegant, low-cost coordination mechanism for long-interval hazards. The stone itself, between catastrophes, appears as Piton to any observer who measures theater — the constraint's functional force decays as the stone becomes more symbol than warning. The mountain perspective risks naturalizing the constraint as inevitable geography rather than contingent social choice. The perspectival gap reveals that the constraint's legitimacy depends entirely on belief in the stone's rationale — which decays across generations without catastrophe to refresh the memory.",
+    "directionality_logic": "Directionality values are derived from each agent's structural position relative to the constraint. Memory-bearing households occupy a beneficiary position (they benefit from safety) with arbitrage-level exit (they can leave if they choose, but choose not to because the constraint aligns with their values). This produces low d, experienced as coordination (Rope). New residents occupy a victim position (constrained by prohibition) with trapped-level exit (limited alternative sites for development). This produces high d, experienced as suppression (Snare). Governance institutions occupy a mixed position: they benefit institutionally from a coordination mechanism that requires no expensive bureaucracy, but they bear the cost of enforcement against economic pressure. This produces moderate d, experienced as tangled coordination-extraction (Tangled Rope). The analytical observer cannot occupy either beneficiary or victim position but can recognize the structural contest between memory persistence and memory decay — this produces d ≈ 0.72, canonical for analytical positions. The piton perspective derives from time-horizon collapse: over the biographical timescale (where development decisions are made), the theater ratio rises as the constraint's functional force decays, making it appear as inertial performance rather than active coordination.",
+    "mandatrophy_analysis": "The Aneyoshi stone resolves mandatrophy by distinguishing structural classification from outcome confirmation. The constraint was Tangled Rope before 2011 — it coordinated coastal safety (genuine function) while imposing extraction on developers (asymmetric costs). The 2011 outcome (households above the stone survived; those below were devastated) confirmed the constraint's efficacy but did not change its classification. This is crucial: the constraint was not secretly a Mountain (immutable natural law) all along, nor was it a Scaffold with unknown sunset. It was Tangled Rope throughout, and the outcome merely vindicated the beneficiaries' belief in its force. The mandatrophy is resolved by recognizing that memory constraints are Tangled Rope (not pure Rope) because they require active enforcement against development pressure and intergenerational skepticism. They are not Scaffolds because they lack a natural sunset clause (they persist until the next catastrophe or institutional failure). They are not Mountains because they encode contingent social choices (which elevation line, how strictly enforced) rather than universal geophysical truth. The false summit risk is real: observers might naturalize the constraint as immutable (Mountain) based on its 2011 vindication, but the constraint's structure was always hybrid coordination-extraction.",
+    "kernel_context": "The Aneyoshi stone is one reading of a contested kernel: institutional memory governance for long-interval hazards. The kernel question is whether communities can encode catastrophe knowledge in stable, durable forms that survive non-catastrophe generations. Three readings emerge: (1) The stone-as-memory reading: the constraint persists as active behavioral force across 78 years, maintained by cultural authority and intergenerational belief. (2) The stone-as-symbol reading: the constraint decays to performative monument during calm periods and is reactivated by catastrophe. (3) The stone-as-natural-law reading: the constraint encodes an immutable geophysical fact (this coast floods) rather than a social choice (do not build below this line). The 2011 event tests these readings: outcome confirmation favors (1), but the theater ratio (0.58) and declining extractiveness suggest (2). The false-summit risk warns against (3). The readings coexist in different institutional actors' frameworks — the memory-bearing community holds (1), developers tacitly hold (2), and national disaster policy holds (3) as a fallback."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "intergenerational_hazard_communication",
+      "coastal_settlement_pattern_lock_in",
+      "disaster_warning_ritualization"
+    ],
+    "dual_formulation_note": "The catastrophe memory decay constraint is downstream of the fundamental kernel (institutional memory for long-interval events) but structurally distinct. Intergenerational hazard communication represents the coordination function; coastal settlement pattern lock-in represents the extraction mechanism; disaster warning ritualization represents the theater drift. Each has its own ε value and should be authored separately if the analysis requires detail on distinct mechanisms."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.68
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "intergenerational_hazard_communication"
+    ]
+  }
+}

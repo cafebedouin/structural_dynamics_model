@@ -1,0 +1,214 @@
+{
+  "header": {
+    "constraint_id": "living_drift_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_living_drift_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "Latin as Living Drift — Continuous Evolution Through Use",
+    "topic_domain": "historical_linguistics/philology/intellectual_history",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "practicing_communities",
+      "linguistic_evolution_process"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Speaker in Vernacular Practice",
+      "comment": "PERSPECTIVE 1: SPEAKER IN VERNACULAR PRACTICE (ROPE) — The living speaker adopts forms through daily use, influenced by vernacular speech, practical needs, and neighboring languages. This agent experiences the constraint as coordination: collective agreement on intelligible forms enables communication. No enforcement externally imposed; drift emerges naturally from millions of speech acts. Extractiveness is minimal because linguistic evolution serves the speaker's communicative needs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Medieval Scribe or Cleric",
+      "comment": "PERSPECTIVE 2: MEDIEVAL SCRIBE/CLERIC (ROPE) — Scribes and clerics maintaining texts, liturgy, and correspondence experience Latin as a living tool adapted to Christian theology, administrative needs, and contemporary dialect influences. They innovate forms (Christianisms, new abbreviations, phonetic spellings) and consciously adopt developments from predecessors. The constraint is coordination through living practice: the community adjusts Latin to fit contemporary communicative needs. No coercive suppression; the scribe's work serves functional goals."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Medieval Monastery as Institutional Bearer",
+      "comment": "PERSPECTIVE 3: MEDIEVAL MONASTERY AS INSTITUTIONAL BEARER (ROPE) — Monasteries transmit texts, modify them pragmatically (glossing, correcting, adapting exempla), and encode living Latin in scriptural commentary and liturgy. The constraint is coordination across generations: monks preserve texts while allowing them to evolve to address contemporary theological and pastoral needs. The institution constrains drift somewhat through copying discipline and Latin study, but the drift is not suppressed — it is channeled through the institution's own practices."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Church Authority (Implicit Legitimacy)",
+      "comment": "PERSPECTIVE 4: CHURCH AUTHORITY / IMPLICIT LEGITIMACY (TANGLED ROPE) — Church authorities implicitly benefit from living Latin: it ensures texts remain intelligible across generations and regions, enabling doctrinal communication and control. But this perspective also exhibits asymmetric enforcement: authorities attempt to standardize correctness (via Carolingian reforms, insistence on 'proper' grammar) while simultaneously depending on living drift to keep texts functional. The constraint requires enforcement of norms (correctness standards) yet that enforcement is weak and ineffective against actual drift. Extractiveness is moderate — the authority claims legitimacy from textual purity, but lives by functional intelligibility."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Prescriptive Ideal (Degraded Enforcement)",
+      "comment": "PERSPECTIVE 5: PRESCRIPTIVE IDEAL / DEGRADED ENFORCEMENT (PITON) — By the Renaissance and Early Modern period, the prescriptive ideal of 'correct Latin' (Ciceronian purity) becomes increasingly performative: humanists champion classical purity as an ideal while acknowledging that medieval Latin evolved. The prescriptive constraint persists through theater — printed grammars, pedagogical insistence — but the underlying function (enforcement of standards) has atrophied. Living practice has already moved on; the prescriptive constraint is maintained through inertia and prestige rather than actual functional necessity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) — From a linguistic universalist perspective, all languages drift. Latin's evolution follows natural laws of sound change (phonetic erosion), grammaticalization, and semantic shift that operate on timescales independent of human intention or enforcement. The constraint appears immutable: linguistic evolution is as fundamental to living language as metabolism is to biology. This perspective risks naturalizing what is contingently institutional — the tension between living drift and prescriptive ideals is not a law of nature, but a readable artifact of how authority relates to practice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "living_vs_textual_boundary",
+      "question": "Where does the boundary lie between 'living drift' (coherent evolution within a speech community) and 'textual degradation' (scribal error, corruption, non-native influence)? Can the same feature be living drift from one perspective and degradation from another?",
+      "resolution_mechanism": "Diachronic corpus analysis: identify forms that appear in multiple independent sources with similar innovations (living drift marker) vs forms that appear in single manuscripts with no subsequent transmission (likely error). Track whether scribal communities adopt and reproduce innovations or treat them as mistakes.",
+      "impact": "If boundary is sharp: drift reading is empirically distinct. If boundary is soft or perspective-dependent: the reading coexists with textual recovery reading — both are valid framings of the same phenomena. If textual corruption accounts for majority of observed change: extractiveness increases (constraint becomes suppression of error rather than coordination through drift).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Boundary between living drift and textual degradation"
+    },
+    {
+      "id": "medieval_awareness_of_drift",
+      "question": "Did medieval scribes and clerics consciously perceive their own Latin as different from classical or earlier medieval forms? Or did drift occur beneath threshold of explicit awareness?",
+      "resolution_mechanism": "Textual evidence: explicit comments by scribes on language change, grammatical debates, metalinguistic statements about correctness. Comparison of prefaces, colophons, and grammatical treatises across centuries.",
+      "impact": "If awareness was high: reading requires downgrading 'natural drift' framing — many changes were intentional innovations. If awareness was low: drift reading is strengthened — change occurred through cumulative incremental adjustment below conscious notice, supporting Rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of medieval awareness of linguistic drift"
+    },
+    {
+      "id": "reading_framework_underspecification",
+      "question": "Is 'living drift reading' a coherent alternative framework for understanding Latin evolution, or is it a romantic historiographical imposition that ignores evidence of explicit correction, standardization efforts, and metacommunity deliberation about correctness?",
+      "resolution_mechanism": "This is fundamentally a conceptual question about historical ontology. Resolution requires examining: (a) whether living drift explains observed corpus data better than prescriptive reading (empirical check), (b) whether medieval sources support awareness of correctness norms (evidence check), (c) whether the reading's core premise—that natural evolution, not enforcement, drives change—can coexist with evidence of explicit standardization efforts (framework coherence check).",
+      "impact": "If the reading is robust to evidence of medieval standardization: living drift and prescriptive ideal coexist (Rope + Tangled Rope from different perspectives). If the reading requires dismissing standardization as ineffective theater: reading is internally coherent but commits to a contested historical claim. If reading cannot accommodate evidence of explicit correction: reading forecloses itself (the core premise becomes untenable).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether living drift reading is a coherent historical framework"
+    },
+    {
+      "id": "influence_on_textual_recovery",
+      "question": "Does the living drift reading's emphasis on continuous evolution strengthen or weaken the case for the textual recovery reading's goal of reconstructing 'original' texts? Can these readings coexist in the same scholarly framework, or does drift reading undermine textual recovery?",
+      "resolution_mechanism": "Methodological examination: does acknowledging drift make textual reconstruction impossible (forecloses), does it simply make recovery harder but still meaningful (influences), or does it provide tools for recovering texts more accurately by understanding how drift occurs (coexists)? Case studies from medieval manuscript traditions where drift understanding improves critical editions.",
+      "impact": "If drift understanding aids textual recovery: readings coexist and potentially reinforce each other. If drift is seen as an obstacle to recovery: readings coexist but in tension. If drift reading implies no meaningful 'original' exists: reading forecloses textual recovery and vice versa.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Relationship between drift understanding and textual recovery goals"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.16
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.25
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 1000
+  },
+  "commentary": {
+    "narrative_context": "The living drift reading of 'correct Latin' frames linguistic change as the natural outcome of communities using language to meet contemporary communicative needs, shaped by vernacular influence, borrowing from neighboring languages, and practical requirements of Christian theology and administrative function. This reading emphasizes continuity — that medieval Latin is not a degraded classical form but an evolved living language. The constraint is minimal and non-extractive: drift occurs through the ordinary functioning of language in use, coordination emerges naturally from speakers' mutual intelligibility needs, and enforcement is either absent or ineffective. This reading coexists in scholarly discourse with two sibling readings: the textual recovery reading (which treats drift as corruption of an earlier authoritative form, and seeks to reconstruct that original) and the prescriptive ideal reading (which claims that 'correct' Latin is Ciceronian classical form, treated as an aspirational standard even if unattainable in practice). These three readings emerged as distinct scholarly positions in the Renaissance and have coexisted since, each grounding itself in different evidence and different presuppositions about what 'correct' means.",
+    "key_agents": [
+      "Speaking Communities: Primary beneficiary (powerless/mobile) — drift serves their communicative needs; Latin evolves to remain functional in their hands",
+      "Medieval Scribes & Clerics: Primary beneficiary (moderate/mobile) — adapt Latin pragmatically to theological and administrative needs; conscious participants in evolution but not coercive enforcers",
+      "Monastic Institutions: Institutional bearer (moderate/constrained) — transmit and preserve texts while allowing them to evolve; benefit from Latin remaining intelligible across generations",
+      "Church Authority: Implicit beneficiary with enforcement tension (institutional/constrained) — benefits from intelligible Latin but claims legitimacy from textual purity",
+      "Linguistic Drift Process: Primary victim (powerless/trapped) — drift as a victim only in the textual recovery reading's framework; in living drift reading, drift is the mechanism, not a victim",
+      "Prescriptive Standards: Degraded beneficiary (institutional/constrained) — maintained through performative theater and humanist prestige rather than functional necessity",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing the contingent institutional tension between drift and authority"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Very low. The living drift reading treats linguistic evolution as emerging naturally from community use with no coercive enforcement mechanism. Speakers drift because drift serves their communicative needs; monks innovate because innovation enables intelligibility. No agent in this framework extracts from others — all benefit from a common language remaining functional. The minimal extractiveness reflects that coordination through drift is low-overhead: no bureaucracy, no enforcement apparatus, no gating mechanism. Suppression (0.12): Very low. Speakers are mobile — they can adopt or reject innovations according to communicative needs and practical pressures. Clerics are mobile in their approach to forms — they adopt what works. There is no systematic suppression of alternatives; medieval Latin is marked by tremendous regional variation and pragmatic flexibility. Theater ratio (0.25): Low-moderate. In the earliest period (0-500), theater is minimal — Latin evolves through use with little explicit standardization discourse. By later medieval period (500-1000), humanist prestige and grammatical text authority begin introducing some performative element, but this is still subordinate to functional drift. The increase in theater reflects Renaissance emergence of prescriptive ideals, which are partly theater — they do not actually control drift but perform authority over it.",
+    "directionality_logic": "The beneficiaries in this reading are the practicing communities (speakers, scribes, clerics) and the linguistic evolution process itself. Neither is being extracted from; both benefit from drift's coordination function. The beneficiary's directionality (d) is very low: they are net beneficiaries with mobile exit options (can adopt or reject innovations as suits communicative needs). No agent is a victim in the pure living drift framework — the 'victim' (textual purity, classical standards) is not an agent but a norm. This explains the Rope classification across all early perspectives and the low extractiveness: there is genuine coordination (mutual intelligibility through shared drift) and no asymmetric extraction. The Tangled Rope emerges only from institutional perspective (church authority) where implicit enforcement of correctness standards begins to exert asymmetric pressure. The Piton emerges at civilizational timescale where prescriptive ideals become performative theater. The Mountain emerges only from the analytical/natural law perspective, which risks naturalizing institutional contestation as linguistic inevitability.",
+    "perspectival_gap": "The perspectival gap in this constraint reveals how the same linguistic phenomena (phonetic change, grammatical innovation, semantic shift) can be read as natural drift or as corruption/degradation depending on which norm (intelligibility vs. classical purity) the observer privileges. From the speaker's perspective, innovation serves coordination (Rope). From the institutional authority's perspective, drift creates a tension between functional benefit and legitimacy-claim via standards (Tangled Rope). From the humanist perspective conscious of prescriptive ideals, the gap between classical standard and practice is managed through performative grammar-teaching rather than actual enforcement (Piton). The analytical observer risks seeing drift as an immutable law of language (Mountain), thereby naturalizing what is actually a readable conflict between different institutional framings of correctness. None of these perspectives is simply 'wrong' — they emerge from genuinely different structural positions and different definitions of what correctness means.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by clarifying the reading's core claim: correctness in living drift is not a static norm but a dynamic property — forms are 'correct' if they serve communicative function in their community and moment. This is not a denial that standards exist (authority claims them) nor that texts can be corrupted (textual recovery reading identifies this). It is a claim that the dominant mechanism of Latin change is not enforcement of prescriptive standards but rather evolution through use in response to practical needs. The mandatrophy dissolves when we recognize that 'correct Latin' has multiple coherent definitions: correct = intelligible (living drift reading), correct = faithful to original (textual recovery reading), correct = conforming to classical model (prescriptive ideal reading). These definitions coexist in scholarly practice, each grounding itself in different evidence and serving different scholarly goals.",
+    "kernel_context": "This constraint instantiates the 'living_drift_reading' of the contested kernel 'correct_latin'. The kernel is the fundamental question: what makes Latin 'correct' across the medieval period and its aftermath? Three major readings have emerged in scholarly discourse: (1) living_drift_reading (this constraint) — correctness emerges from living community use and evolves with practical needs; (2) textual_recovery_reading — correctness is fidelity to authoritative earlier texts, deviations are corruptions to be recovered/corrected; (3) prescriptive_ideal_reading — correctness is conformity to classical (Ciceronian) standards, which serve as aspirational norms even if unattained in practice. These three readings coexist in contemporary philology and historical linguistics. Each is coherent; each has textual and empirical support; each grounds itself in different presuppositions about authority, change, and value. The living drift reading emphasizes continuity and functional adaptation; its core axiom is that linguistic change through community use is not degradation but evolution serving communicative needs. This reading coexists with (and influences but does not foreclose) both textual recovery and prescriptive ideal readings."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "textual_recovery_reading",
+      "prescriptive_ideal_reading"
+    ],
+    "dual_formulation_note": "The correct_latin kernel decomposes into three distinct constraints with different extractiveness values and classification profiles. The living_drift_reading (ε=0.18, Rope) treats change as natural coordination. The textual_recovery_reading (higher ε, likely Tangled Rope) treats change as corruption and recovery as effortful correction. The prescriptive_ideal_reading (higher ε, likely Tangled Rope or Snare) treats change as deviation from standards requiring enforcement. These three stories are linked via network.affects_constraints because they offer competing framings of the same historical phenomena and each presupposes responses to the others."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "textual_recovery_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "prescriptive_ideal_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "change_through_use_is_evolution_not_corruption",
+        "role": "foundational",
+        "status": "holdable"
+      },
+      {
+        "atom": "correctness_defined_by_communicative_function",
+        "role": "foundational",
+        "status": "holdable"
+      }
+    ],
+    "reference_frame": "living_practice_standard",
+    "drift_state": {
+      "moment": "early_modern_humanist_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

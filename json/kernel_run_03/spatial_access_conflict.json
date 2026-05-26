@@ -1,0 +1,212 @@
+{
+  "header": {
+    "constraint_id": "spatial_access_conflict",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_spatial_access_conflict"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Spatial Access Conflict: Sex-Segregated Spaces and Category Boundary Disputes",
+    "topic_domain": "social_ontology/medical_classification/rights_frameworks",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_gatekeepers",
+      "category_maintenance_systems"
+    ],
+    "victims": [
+      "boundary_ambiguous_agents",
+      "excluded_access_seekers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Excluded Access Seeker",
+      "comment": "PERSPECTIVE 1: EXCLUDED ACCESS SEEKER (SNARE) — Structurally trapped. Cannot exit the constraint without abandoning legitimate access needs (healthcare, shelters, correctional institutions, sports facilities). Experiences maximum suppression: institutional barriers, legal prohibition, and social stigma all reinforce exclusion. The constraint extracts dignity, safety, and equal access while offering no coordination benefit. No escape route that preserves participation in the institution itself."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Institutional Boundary-Ambiguous Agent",
+      "comment": "PERSPECTIVE 2: BOUNDARY-AMBIGUOUS AGENT (TANGLED ROPE) — Constrained by both structural barriers and internalized classification anxiety. Faces material costs of challenging category assignments (legal action, institutional retaliation, social exposure) plus cognitive costs of persistent identity dissonance. Experiences real coordination benefits from institutional participation (healthcare access, legal recognition, social services) alongside asymmetric extraction (forced categorization, surveillance, mandatory disclosure). Both the coordination function and the extraction mechanism are active."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Institutional Gatekeeper",
+      "comment": "PERSPECTIVE 3: INSTITUTIONAL GATEKEEPER (ROPE) — Experiences the constraint primarily as a coordination mechanism: spatial segregation enables claimed epistemic clarity about categories, simplifies risk assessment protocols, and reduces institutional liability. Can arbitrage between different institutional contexts (e.g., a hospital system can adopt different categorization policies for different units). Benefits from the constraint without experiencing extraction costs. Net beneficiary position with low suppression."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Rights Coalition",
+      "comment": "PERSPECTIVE 4: RIGHTS COALITION (TANGLED ROPE) — Organized agents (trans rights organizations, civil rights bodies, medical ethics committees) see genuine coordination benefits from inclusive categorization (reduction of harm, improved data validity, ethical integrity) but face suppression from institutional resistance and legal uncertainty. The constraint extracts from this coalition's capacity (litigation costs, advocacy overhead, institutional pressure) while they work to establish alternative coordination norms. Active enforcement required to maintain the old boundary; active enforcement equally required to shift it."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Medical Classification System",
+      "comment": "PERSPECTIVE 5: MEDICAL CLASSIFICATION SYSTEM (PITON) — The system persists through institutional inertia and embedded assumptions about biological categories. High theater ratio: much of the classification machinery is maintenance ritual (repeated diagnostic protocols, documentation standards, training curricula) rather than functional verification. The system's own evidence base increasingly contradicts its categorization premises, yet institutional momentum sustains it. Primary function (epistemic clarity about biology) has atrophied; primary mechanism (enforcement of boundaries) remains active."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, sex-based spatial segregation appears to derive from immutable biological facts (chromosomal sex, reproductive anatomy, developmental biology) that no policy can overcome. This perspective risks naturalizing what is actually a contingent institutional arrangement: which biological facts are salient for spatial access decisions depends on the institution's actual functional requirements, not on immutable nature. The engine's false summit detector will identify this as naturalization of a classification choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "functional_requirement_vs_category_mapping",
+      "question": "What is the actual functional requirement that spatial segregation serves, and does sex-based categorization map to that requirement?",
+      "resolution_mechanism": "Empirical analysis of stated vs. actual institutional purposes (e.g., for changing facilities: privacy, security, or accident prevention?); comparative examination of alternative categorization schemes that achieve the same functional goal with different boundaries.",
+      "impact": "If functional requirement maps only to binary sex categories: constraint is genuine coordination mechanism (Rope). If multiple categorization schemes achieve the same function: constraint is category enforcement (Snare/Tangled Rope) with institutional beneficiaries.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether sex-based categories are functionally necessary or interchangeable with other categorization schemes"
+    },
+    {
+      "id": "naturalization_of_institutional_choice",
+      "question": "Is the spatial segregation constraint grounded in natural law or in contingent institutional decisions about which biological features to use for categorization?",
+      "resolution_mechanism": "Historical and comparative institutional analysis: how have different societies, time periods, and institutional contexts categorized access? What changed when policy changed? Do biological facts explain the changes, or do institutional choices explain the changes?",
+      "impact": "If grounded in natural law: mountain classification is appropriate. If grounded in institutional choice: constraint is false summit (should reclassify to tangled_rope or snare depending on enforceability and extraction). This is the core committer ambiguity.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the constraint derives from natural law or institutional categorization choices"
+    },
+    {
+      "id": "access_harm_quantification",
+      "question": "What is the empirical magnitude of harm from boundary-ambiguous access (privacy violation, safety risk, athletic unfairness) compared to the empirical magnitude of harm from exclusion?",
+      "resolution_mechanism": "Systematic review of incident reports, safety audits, privacy complaints, and health outcome data from institutions that have eliminated spatial segregation vs. those that maintain it; quantitative comparison of claimed harms to actual harms.",
+      "impact": "If exclusion harm >> access harm: constraint is extraction mechanism (Snare). If harms are comparable: constraint is genuine coordination problem (Tangled Rope). If access harm >> exclusion harm: category maintenance is justified (Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Comparative magnitude of harms from boundary-ambiguous access vs. categorical exclusion"
+    },
+    {
+      "id": "identity_locked_mechanism_clarity",
+      "question": "For institutional gatekeepers and classification systems, is the commitment to binary spatial segregation grounded in structural dependencies or in identity-fused institutional identity?",
+      "resolution_mechanism": "Institutional analysis of resistance to reclassification: Do institutions resist because of genuine functional necessity (structural), because of legal liability concerns (structural), or because the institution's identity is constituted through maintenance of categorical boundaries (identity-locked)?",
+      "impact": "If structural: institutional perspective is arbitrage-mobile (truly has exit options). If identity-locked: institutional perspective should be coded as identity_locked rather than arbitrage, revealing that institutional resistance is cognitive capture rather than functional necessity.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether institutional resistance to reclassification is structural or identity-fused"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "Spatial access conflict in sex-segregated spaces (healthcare facilities, shelters, correctional institutions, sports, changing areas) represents a contested institutional constraint where the same structural phenomenon — the boundary between categories that govern access — can be read as either a natural law about human biology or a contingent institutional arrangement. This constraint is ONE READING of the kernel 'woman/female category': the reading that privileges spatial access enforcement as the operational definition. This reading instantiates the constraint by focusing on how institutions use sex/gender categories to control access to spaces and services. The conflict emerges because boundary-ambiguous individuals (trans, non-binary, intersex agents) expose the contingency of the categorization system: their existence reveals that the boundary cannot be naturally given — it must be institutionally maintained through active enforcement. The constraint exhibits genuine coordination benefits (institutions can coordinate resource allocation, privacy expectations, and safety protocols through spatial segregation) alongside asymmetric extraction (certain agents are excluded from legitimate access, while institutional gatekeepers benefit from simplified classification systems). The theater ratio has increased over the measurement interval as enforcement mechanisms have become more performative: institutions increasingly conduct explicit eligibility verification (documentation review, physical examination, institutional status monitoring) rather than relying on taken-for-granted categorization. This rising theater indicates that the categorization system's functional clarity has degraded — boundary cases now require active institutional work to maintain, rather than naturally sorting themselves. The constraint is fundamentally about whether sex/gender categories are properties of nature (mountain perspective) or institutional tools (tangled rope perspective). The structural data supports the latter reading: beneficiary and victim structures are clear; active enforcement is required; the theater ratio shows increasing institutional work.",
+    "key_agents": [
+      "Excluded Access Seekers: Primary victims (powerless/trapped) — denied access to facilities and services based on boundary categorization; cannot exit without abandoning legitimate institutional needs",
+      "Boundary-Ambiguous Agents: Secondary victims (moderate/constrained) — face forced categorization with internalized cognitive costs; can challenge categorization but face material legal and social penalties",
+      "Institutional Gatekeepers: Primary beneficiaries (institutional/arbitrage) — benefit from simplified classification systems; can arbitrage between different categorization policies across contexts",
+      "Rights Coalition: Organized challengers (organized/constrained) — work to establish alternative access norms and inclusive categorization; face institutional suppression and legal uncertainty",
+      "Medical Classification System: Institutional actor (institutional/arbitrage) — maintains categorization machinery through inertial enforcement; function has atrophied but mechanism persists",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing the institutional arrangement as biological necessity; needs committer-frame analysis to recognize it as one reading among alternatives"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts from boundary-ambiguous agents (forced categorization, loss of autonomy in self-identification) and from excluded agents (loss of access), while benefiting institutional gatekeepers (simplified risk management, liability protection through categorical clarity). The extractiveness is not maximal because some coordination benefits are genuine — institutions do need to coordinate spatial access — but the extraction is substantial because the categorization system privileges institutional clarity over agent autonomy. Suppression (0.65): High. Multiple suppression mechanisms: legal prohibition of alternative categorization in many jurisdictions; institutional barriers to challenging category assignments; social stigma and discrimination; lack of accessible appeals processes; medical gatekeeping (requirement for professional diagnosis/authorization to change category); documentation requirements that force persistent disclosure. Suppression is not total because some institutional contexts are beginning to loosen boundaries, creating precedent for alternatives. Theater ratio (0.48): Moderate, rising. The constraint initially relied on taken-for-granted categorization (theater low) but has increasingly required active verification procedures (documentation review, eligibility confirmation, explicit boundary maintenance). Rising theater indicates that the categorization system's legitimacy as 'natural' has eroded — institutional work is now required to maintain what was once assumed. The rise from 0.35 to 0.48 tracks the period when boundary-ambiguous agents became increasingly visible and institutional gatekeepers shifted from implicit to explicit categorization protocols.",
+    "perspectival_gap": "The excluded access seeker and the institutional gatekeeper experience opposite structural positions: one experiences maximal extraction and suppression (snare), the other experiences coordination benefit and arbitrage mobility (rope). The boundary-ambiguous agent occupies an intermediate position: they experience both coordination benefit (access to the institution) and extraction (forced categorization). The rights coalition experiences a different tangled rope: they work to establish alternative coordination norms (inclusive access, self-determination in categorization) while facing extraction through institutional resistance. The medical classification system's piton perspective reveals that much institutional activity is performative maintenance rather than functional verification. The analytical observer's mountain perspective naturalizes the institutional arrangement as biological necessity, but the structural data contradicts this: the presence of identified beneficiaries, the need for active enforcement, and the rising theater ratio all indicate that this is a contingent institutional arrangement, not a natural law. The false summit detector should flag this as naturalization of institutional choice.",
+    "directionality_logic": "Each perspective's structural position determines its experienced extractiveness through the directionality derivation: beneficiaries with arbitrage options (institutional gatekeepers) have low d values, experiencing minimal effective extraction through the constraint. Victims with trapped exits (excluded agents) have high d values, experiencing maximum effective extraction. Organized challengers working to establish alternatives occupy a middle position: they have some agency (organized power) but face structural barriers (suppression), resulting in moderate d values. The institutional classification system as an agent has arbitrage mobility (can switch categorization schemes) but is actually captured by inertial enforcement (identity-locked to its own categorization logic), which is why it appears in the piton perspective rather than showing true arbitrage mobility. The commentary on directionality is drawn from this structural mapping, not from arithmetic anchoring that would overspecify the derivation.",
+    "mandatrophy_analysis": "This constraint does NOT resolve to a single type — it is legitimately tangled rope from the analytical center, with valid snare readings from the powerless perspective and rope readings from the beneficiary perspective. The mandatrophy surfaces a deeper question: what does 'coordination' mean when the boundaries being coordinated are contingent rather than natural? If the categories themselves are contestable, then maintaining them requires active enforcement, and the 'coordination' benefit becomes suspect. The tangled rope classification holds because (a) genuine coordination benefits exist (institutions do coordinate spatial access through categories), (b) genuine extraction exists (certain agents are excluded or forced into categories), and (c) both mechanisms are active. The constraint does NOT collapse into snare because the institutional gatekeepers genuinely see coordination benefits; it does NOT collapse into rope because the excluded agents genuinely experience extraction.",
+    "kernel_context": "This constraint is one reading of the contested kernel 'woman/female category'. The kernel is a stabilized commitment that grounds legitimacy in biological categorization (chromosomes, anatomy, developmental biology, reproductive function). This READING (spatial_access_conflict) instantiates the constraint by asking: 'What does this kernel require for spatial access governance?' The answer: institutional enforcement of binary spatial segregation, with access determined by categorization status. Sibling readings (not generated here) would ask alternative questions: 'What does this kernel require for medical diagnosis?' (biological_determination_reading), 'What does this kernel require for legal recognition?' (legal_status_reading), 'What does this kernel require for social interaction?' (social_coordination_reading). Each reading instantiates a different constraint structure with different beneficiaries, victims, and extractiveness values. The committer ambiguity is located in the grounding of the kernel itself: is the boundary natural or institutional? This reading does not resolve that ambiguity — it shows its consequences for spatial access governance."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is one component of the 'woman/female category' kernel. Sibling readings would include biological_determination_reading (what categorization criteria are medically necessary), legal_status_reading (what categorization criteria are legally required), and social_coordination_reading (what categorization criteria enable social cooperation). Each sibling would have its own ε value reflecting different functional requirements and extraction mechanisms. Linked via kernel_id rather than affects_constraints because they are alternative framings of the same kernel, not causal dependents."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [],
+    "axioms": [
+      {
+        "atom": "spatial_segregation_functionally_necessary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "biological_categories_naturally_salient",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "binary_spatial_segregation_framework",
+    "drift_state": {
+      "moment": "contemporary_boundary_contestation_era",
+      "direction": "codification_collapse",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

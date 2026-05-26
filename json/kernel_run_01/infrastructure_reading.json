@@ -1,0 +1,233 @@
+{
+  "header": {
+    "constraint_id": "infrastructure_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_infrastructure_reading",
+    "measurement_id_prefix": "infra"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.45,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Digital Money as Institutional Infrastructure (ACH/SWIFT Reading)",
+    "topic_domain": "monetary_theory/financial_infrastructure/payment_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "deposit_taking_institutions",
+      "central_banks",
+      "interbank_clearing_houses"
+    ],
+    "victims": [
+      "retail_access_asymmetry",
+      "alternative_payment_systems"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Retail Consumer (No Direct Access)",
+      "comment": "PERSPECTIVE 1: RETAIL CONSUMER (SNARE) — Trapped within the institutional infrastructure. Cannot directly participate in digital money creation or transfer; must route all transactions through licensed deposit-taking institutions. Faces persistent extraction as spreads, fees, and latency remain embedded in the institutional layer. No exit option: alternative payment systems exist but lack critical mass for daily settlement."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Large Commercial Bank",
+      "comment": "PERSPECTIVE 2: LARGE COMMERCIAL BANK (ROPE) — Primary beneficiary. Experiences the constraint as coordination: ACH and SWIFT enable settlement efficiency, reduce counterparty risk, and provide monopoly on value transfer. The institutional infrastructure is genuinely coordinating a difficult collective action problem (synchronizing transfers across disparate ledgers) while simultaneously extracting margin. Benefits far outweigh costs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Community Bank or Credit Union",
+      "comment": "PERSPECTIVE 3: COMMUNITY BANK / CREDIT UNION (TANGLED ROPE) — Constrained by mandatory participation in the SWIFT/ACH infrastructure. Gains genuine coordination benefit (access to clearing, settlement, liquidity) but bears extraction cost: mandatory membership fees, compliance burden, and architectural dependence on decisions made by large banks. Cannot exit without losing market access; limited voice in governance."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Central Bank Authority",
+      "comment": "PERSPECTIVE 4: CENTRAL BANK (PITON) — Maintains the infrastructure as a delegated authority, but the functional necessity has partially degraded. In early ACH/SWIFT era (1970s-1990s), the infrastructure solved a genuine coordination problem: synchronizing dispersed ledgers at scale was technically hard. By 2020s, blockchain and distributed ledgers offer technical alternatives, yet central banks continue maintaining the infrastructure largely through inertia and regulatory advantage. Theater ratio high: much activity is regulatory compliance and legacy system maintenance rather than functional necessity."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Finance Movement",
+      "comment": "PERSPECTIVE 5: OPEN FINANCE / BLOCKCHAIN COALITION (SCAFFOLD) — Organized challengers (cryptographic networks, fintech platforms, regulatory innovators) see digital money infrastructure as a temporary coordination stage with a sunset. Distributed ledgers and non-custodial protocols are building alternative pathways that bypass central institutional gatekeeping. The coalition has agency and sees exit possibilities. Sunset clause implicit: as decentralized infrastructure matures and regulatory frameworks evolve, the institutional infrastructure's monopoly weakens."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, digital money requires some infrastructure to solve the double-spending problem and maintain a canonical ledger. The idea that 'money must be institutionally infrastructure' appears as an immutable constraint on any settlement system. However, the structural data contradicts the mountain classification — the infrastructure reading is naturalizing a specific institutional choice (centralized, bank-mediated) that is contingent, not necessary."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_identity",
+      "question": "Is digital money fundamentally defined by institutional infrastructure (ACH/SWIFT), or is institutional mediation merely one implementation?",
+      "resolution_mechanism": "Definitional archaeology: trace how the term 'digital money' is used across central bank documents, academic literature, and regulatory frameworks. Does the definition presuppose institutional infrastructure as constitutive or as contingent?",
+      "impact": "If infrastructure is constitutive: this reading's axioms are foundational and the sibling readings (consumer_access, peer_to_peer) are secondary interpretations or functional variants. If infrastructure is contingent: this reading is one reading among equals, and the sibling readings are not less legitimate.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether institutional infrastructure is constitutive or contingent to digital money definition"
+    },
+    {
+      "id": "successor_technology_sufficiency",
+      "question": "Do distributed ledgers and peer-to-peer protocols achieve functional equivalence to centralized ACH/SWIFT for payment settlement?",
+      "resolution_mechanism": "Empirical comparison: transaction finality times, settlement risk, throughput, cost, and accessibility across blockchain networks (Lightning, Polygon, Solana) vs traditional payment systems. Regulatory assessment of non-custodial settlement fitness for monetary policy.",
+      "impact": "If functionally equivalent: the scaffold perspective is confirmed as real structural pathway, and the sunset clause is active. This reading's monopoly claim weakens. If not equivalent: alternatives remain aspirational, and the infrastructure reading's extraction mechanism is more durable.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether distributed ledgers provide functional alternatives to centralized settlement"
+    },
+    {
+      "id": "regulatory_capture_depth",
+      "question": "To what extent does regulatory authority over digital money definition remain with the institutions that control the infrastructure, versus independent monetary authority?",
+      "resolution_mechanism": "Policy analysis: who controls definitional authority in central bank digital currency (CBDC) frameworks? Do regulatory bodies independently specify what counts as digital money, or does definition follow institutional capacity? Cross-jurisdiction comparison.",
+      "impact": "If regulators are captured by infrastructure institutions: the extraction mechanism is more durable and the piton perspective is undervalued. If regulatory authority is independent: the central bank perspective is genuine coordination rather than theater.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory authority over digital money is independent or captured by infrastructure institutions"
+    },
+    {
+      "id": "measurement_collapse_meaning",
+      "question": "Does the collapse of M4/M5 monetary aggregates under distributed ledger adoption indicate ontological change in what 'money' is, or merely a measurement problem?",
+      "resolution_mechanism": "Historical precedent: how did economists handle previous shifts in payment mechanisms (checks, credit cards) that changed aggregate definitions? Do definitional shifts always indicate ontological instability?",
+      "impact": "If ontological: the infrastructure reading is in terminal crisis and the peer-to-peer reading becomes necessary. If measurement: the infrastructure reading survives by redefining aggregates, and extraction mechanisms persist under new accounting frameworks.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether M-aggregate collapse indicates ontological or measurement shift"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15,
+      "id_override": "infra_extract_1970s"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.28,
+      "id_override": "infra_extract_1990s"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.38,
+      "id_override": "infra_extract_2010s"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "infra_theater_1970s"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.4,
+      "id_override": "infra_theater_1990s"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.55,
+      "id_override": "infra_theater_2010s"
+    }
+  ],
+  "interval": {
+    "start": 1972,
+    "end": 2012
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates the infrastructure reading of the contested kernel 'digital money origin.' The reading dates digital money's emergence to 1972-1977, when ACH and SWIFT protocols enabled institutional banks to electronically transfer value at scale. Under this reading, digital money is fundamentally an institutional infrastructure phenomenon — a ledger coordination mechanism among licensed, monitored deposit-taking institutions. The constraint exhibits high perspectival diversity because the definition embeds a regulatory choice (institutional gatekeeping) that benefits some actors (banks, central banks) while imposing extraction on others (retail consumers, alternative payment systems). The infrastructure reading is not the only legitimate reading: the consumer_access_reading dates digital money to when individuals can directly hold digital bearer instruments (late 2010s/2020s); the peer_to_peer_reading dates it to when settlement can occur without institutional intermediation (Bitcoin 2009, Ethereum later). These are not three different observations of one constraint — they are three different constraints with different ε values, different beneficiary/victim structures, and different classifications. This file documents the infrastructure reading alone.",
+    "key_agents": [
+      "Deposit-Taking Institutions (Banks, Credit Unions): Primary beneficiary (institutional/arbitrage) — capture fees, spreads, and liquidity premium from mandatory routing of all value transfers through their ledgers",
+      "Central Banks: Institutional beneficiary (institutional/arbitrage) — maintain monetary policy authority and financial stability surveillance through control of settlement infrastructure",
+      "Clearing Houses (ACH, SWIFT, etc.): Institutional beneficiary (institutional/arbitrage) — extract membership fees and processing margins while providing genuine coordination service",
+      "Retail Consumers: Primary victim (powerless/trapped) — must route all digital transactions through institutional intermediaries; cannot directly access or control settlement layer; bear extraction as fees and latency",
+      "Alternative Payment Systems (Blockchain, P2P networks): Secondary victim (organized/constrained) — face regulatory barriers, lack critical mass for mandatory adoption, and operate in architectural dependence on the institutional infrastructure they seek to replace",
+      "Regulatory Authorities (Central Banks, Financial Regulators): Institutional actor with dual role — maintains the infrastructure as delegated authority but partially captured by the institutions whose interests the infrastructure serves"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The institutional infrastructure provides genuine coordination value — synchronizing dispersed ledgers at scale was technically difficult in 1972 and remained genuinely complex through the 1990s. The extractiveness value reflects that a portion of the fees and spreads extracted from retail users represents legitimate coordination cost, while a portion represents monopoly rent. As the measurement interval progresses (1972 → 2012), extractiveness rises slightly (0.15 → 0.38) as technical complexity decreases but regulatory barriers and fee structures increase. This trajectory suggests the coordination value is relatively stable while the extraction overlay grows. Suppression (0.45): Moderate. Barriers to exit the infrastructure exist but are not maximal. Regulatory barriers (licensing requirements, mandatory participation in clearing systems) are high for institutional actors attempting to establish alternatives, but retail consumers theoretically have exit options (cash, informal transfer systems, barter). In practice, the infrastructure's critical mass makes functional exit nearly impossible in a modern economy. Theater ratio (0.55): Moderate-high. Early in the interval (1970s), theater was low — ACH and SWIFT performed essential technical functions that were genuinely difficult. By the 2010s, distributed ledger technology had demonstrated that the core functions (double-spend prevention, canonical ledger maintenance) could be implemented differently. The institutional infrastructure persists increasingly through regulatory mandate and path dependency rather than technical necessity. The theater ratio rise (0.25 → 0.55) reflects this shift.",
+    "perspectival_gap": "This constraint produces near-maximal perspectival diversity. The retail consumer trapped in the system sees pure extraction (Snare): they have no choice but to pay fees, accept delays, and trust institutional intermediaries with no technical oversight. The commercial bank sees coordination (Rope): the infrastructure genuinely solves their settlement problem and provides market access. The community bank sees mixed experience (Tangled Rope): genuine benefit from access to clearing, but also extraction cost from mandatory participation and compliance burden. The central bank sees a degraded ritual (Piton): the infrastructure solves problems that were real in 1972 but are largely solved by alternative technologies by 2012; it persists through regulatory authority and path dependency. The blockchain coalition sees a temporary problem being solved (Scaffold): alternative infrastructure is being built, regulatory frameworks are shifting, and the sunset of the institutional monopoly is plausible. The civilizational observer risks seeing immutability (Mountain): 'settlement systems must be institutionally managed' appears as a law of economics, but the structural data reveals this as a false summit — institutional management is one solution, not the only solution.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from: (1) whether the agent benefits from the constraint (low d) or bears costs (high d), and (2) whether they can exit the constraint. Beneficiaries with arbitrage options (large banks, central banks) get low d, producing negative or low effective extraction chi — they experience the constraint as coordination. Trapped agents bearing costs (retail consumers) get high d, producing high chi — they experience maximum extraction. Constrained agents with mixed benefit/cost (community banks) get moderate d, producing moderate chi. The piton classification derives from the theater gate (theater_ratio ≥ 0.70 in later measurements), not from directionality. The mountain classification at civilizational scope is identified as a false summit by the presence of structural beneficiaries (deposit-taking institutions) — the constraint naturalizes an institutional choice.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by distinguishing the infrastructure reading from alternative readings. A naive analyst might say 'digital money is just money that exists digitally' (tautology) or 'digital money is whatever central banks define it to be' (regulatory circularity). The infrastructure reading breaks the circle by anchoring 'digital money' to a specific technology (ACH/SWIFT) and a specific historical moment (1972-1977) when that technology emerged. This reading makes falsifiable claims: digital money did not exist before institutions developed infrastructure to enable it; digital money will cease to exist (in this reading) if the infrastructure is abandoned or replaced. The beneficiary/victim structure is now clear and measurable. The classification (Tangled Rope) reflects a genuine hybrid: the infrastructure provides coordination (solves the double-spending problem) and extraction (controls who can access the ledger). The mandatrophy is resolved not by finding 'the' correct type but by showing that the infrastructure reading is one coherent, falsifiable definition among others — each with its own ε, its own beneficiaries/victims, and its own classification.",
+    "kernel_context": "This constraint is one reading of the contested kernel 'digital money origin.' The reading instantiated here is the infrastructure reading: digital money is fundamentally defined as electronic value transfer enabled by institutional infrastructure (ACH/SWIFT, clearing houses, central bank settlement systems). This reading dates digital money to 1972-1977. Sibling readings include: (1) the consumer_access_reading (digital money exists when individuals can directly hold and transfer digital bearer instruments without institutional intermediation — dates to late 2010s/2020s); (2) the peer_to_peer_reading (digital money exists when settlement can occur without institutional intermediation — dates to Bitcoin 2009, Ethereum 2015, or other moments). The three readings are not competing interpretations of the same historical fact. They are three different constraints, each with different ε values, different beneficiary/victim structures, and different implications for monetary theory. The infrastructure reading assumes that what makes money 'digital' is the institutional infrastructure that enables value transfer — the definition is tied to an institutional technology. The consumer_access_reading assumes what makes money 'digital' is individual access and control — bearer instruments accessible to all participants. The peer_to_peer_reading assumes what makes money 'digital' is the removal of institutional intermediation in settlement. Each reading is coherent; no reading logically forecloses the others within distinct frameworks. Different actors (central banks, fintech innovators, cryptocurrency advocates) hold these readings simultaneously. The infrastructure reading coexists with both siblings."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "digital_money_consumer_access_reading",
+      "digital_money_peer_to_peer_reading",
+      "monetary_aggregate_collapse",
+      "payment_system_rent_extraction"
+    ],
+    "dual_formulation_note": "The infrastructure reading is the upstream constraint for the other readings in the digital_money_origin kernel family. The consumer_access and peer_to_peer readings describe what happens when alternative technologies challenge the institutional monopoly. The payment_system_rent_extraction constraint is a narrower focus on the extraction mechanism alone. The monetary_aggregate_collapse constraint describes what happens to measurement systems when the infrastructure reading's foundational assumptions fail."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "digital_money_consumer_access_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "digital_money_peer_to_peer_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "digital_money_institutional_infrastructure_constitutive",
+        "role": "foundational",
+        "status": "holdable"
+      },
+      {
+        "atom": "settlement_requires_centralized_ledger",
+        "role": "foundational",
+        "status": "overridden"
+      }
+    ],
+    "reference_frame": "institutional_infrastructure_monopoly",
+    "drift_state": {
+      "moment": "blockchain_technical_maturation_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

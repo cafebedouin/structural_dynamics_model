@@ -1,0 +1,243 @@
+{
+  "header": {
+    "constraint_id": "public_health_primary",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_public_health_primary"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Public Health Protection via Vaccine Mandate (Collective Necessity Reading)",
+    "topic_domain": "public_health_ethics/constitutional_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "immunocompromised_populations",
+      "infants_unvaccinatable",
+      "vaccine_allergic_populations",
+      "public_health_collective"
+    ],
+    "victims": [
+      "unvaccinated_individuals_subject_to_mandate",
+      "religious_objectors",
+      "medical_autonomy_claimants"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Unvaccinated Individual Under Mandate",
+      "comment": "PERSPECTIVE 1: UNVACCINATED INDIVIDUAL (SNARE) — Faces legal coercion (employment loss, school exclusion, fines) with no exit pathway. Suppression is structural: employment dependency, geographic scope of mandate, legal status. Extraction is maximal because the individual has no legitimate avenue to refuse. The mandate mechanism itself is the suppression."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Immunocompromised Person in Unvaccinated Community",
+      "comment": "PERSPECTIVE 2: IMMUNOCOMPROMISED PERSON (ROPE) — When herd immunity fails (low vaccination rates), experiences the constraint as pure coordination: vaccine mandate solves their lethal exposure risk without extracting from them. No cost, maximum benefit. From their immediate, local perspective, the constraint is coordination that enables their survival. Exit would mean accepting lethal risk — not a real option."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Religious Objector with Community Roots",
+      "comment": "PERSPECTIVE 3: RELIGIOUS OBJECTOR (TANGLED ROPE) — Faces high but surmountable costs to refuse: relocation, community exit, school switching. Also benefits from collective immunity protection if disease becomes endemic — their own vulnerable family members gain protection even if they personally refuse. Mixed extraction and coordination: the individual bears extraction cost (forced choice between conviction and livelihood) but also benefits from the collective protection the mandate enables."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Public Health Authority (CDC/State Health Department)",
+      "comment": "PERSPECTIVE 4: PUBLIC HEALTH AUTHORITY (TANGLED ROPE) — Enforces the mandate to achieve herd immunity; extracts compliance from resistant populations while coordinating disease prevention for the collective. Active enforcement required. The authority benefits from successful disease suppression (legitimacy, resource justification) and extracts through coercive mechanisms. Genuine coordination function (preventing epidemic) paired with asymmetric enforcement burden."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Pharmaceutical Industry / Vaccine Developer",
+      "comment": "PERSPECTIVE 5: PHARMACEUTICAL INDUSTRY (ROPE) — Mandate creates sustained demand for vaccines; extracts economic benefit through market creation. Experiences the constraint as pure coordination: the mandate solves their sales and distribution challenge. No coercion from their perspective; the constraint coordinates their interests perfectly. High exit optionality (can supply other markets, develop new vaccines) mitigates extraction risk."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Public Health Necessity Frame)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From the civilizational view, vaccine mandates represent a genuine coordination mechanism (herd immunity protects populations below vaccination threshold) paired with asymmetric enforcement (coercion of holdouts). The constraint is not a natural law but a structurally necessary choice when voluntary vaccination fails to reach critical thresholds. Genuine coordination function + active enforcement + beneficiaries + victims = tangled rope from the canonical analytical position."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "herd_immunity_threshold_empirical",
+      "question": "What is the actual herd immunity threshold for a given pathogen, and has voluntary compliance achieved it in the jurisdiction?",
+      "resolution_mechanism": "Epidemiological modeling + observed vaccination rates vs. R-effective calculations. Direct measurement of disease transmission chains in the population.",
+      "impact": "If voluntary rates exceed threshold: mandate is unnecessary extraction (Snare reclassifies). If voluntary rates fall below threshold and vulnerable populations face lethal exposure: mandate is necessary coordination (Tangled Rope confirmed). This is the empirical fact that distinguishes this reading from the bodily_autonomy_primary reading.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether herd immunity threshold is met by voluntary compliance"
+    },
+    {
+      "id": "alternative_mitigation_feasibility",
+      "question": "Do alternative protections (isolation of immunocompromised, targeted prophylaxis, rapid testing) provide equivalent protection to mandate-based herd immunity?",
+      "resolution_mechanism": "Cost-effectiveness analysis of alternative strategies; epidemiological modeling of protection levels; real-world performance data from jurisdictions using alternative approaches.",
+      "impact": "If alternatives are equivalent and feasible: mandate is extraction with minimal coordination function (reclassifies to Snare). If alternatives are inadequate: mandate is necessary coordination (Tangled Rope confirmed, this reading prevails).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative protections can substitute for mandate-based immunity"
+    },
+    {
+      "id": "enforcement_mechanism_proportionality",
+      "question": "Are the enforcement mechanisms (employment loss, school exclusion, fines) proportional to the public health necessity, or do they exceed what is needed to achieve herd immunity?",
+      "resolution_mechanism": "Comparative analysis: what vaccination level is achieved at different enforcement intensity levels? Identify minimum coercion required to reach critical threshold. Compare to alternative enforcement mechanisms (incentives, restrictions on unvaccinated activities rather than employment).",
+      "impact": "If current enforcement exceeds minimum necessary: suppression component is higher than justified by coordination need (reclassifies to Snare or elevated Tangled Rope). If enforcement is minimal and proportional: Tangled Rope confirmed with lower suppression value.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportionality of enforcement mechanisms to public health necessity"
+    },
+    {
+      "id": "mandate_reading_vs_autonomy_reading_foreclosure",
+      "question": "Does the public_health_primary reading logically foreclose the bodily_autonomy_primary reading, or do they coexist as incommensurable frameworks?",
+      "resolution_mechanism": "Logical analysis: Does the premise 'collective protection supersedes individual consent when voluntary compliance fails and vulnerable populations face lethal risk' entail the denial of 'individual bodily autonomy is inviolable' or do they describe different moral/legal priorities that can coexist in different frameworks?",
+      "impact": "If foreclosed: only one reading can be held within a single moral framework (rare, requires categorical priority claim). If coexists: different communities/jurisdictions can rationally hold either reading depending on their priority axiom. This omega resolves the fundamental interpretive dispute over the kernel.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Logical relationship between public health necessity and bodily autonomy readings"
+    },
+    {
+      "id": "vulnerable_population_identification",
+      "question": "How are immunocompromised, unvaccinatable, and allergic populations identified and enumerated? Are they actual victims (facing lethal exposure) or potential victims (in abstract risk scenarios)?",
+      "resolution_mechanism": "Epidemiological data on immunocompromised prevalence, documented vaccine adverse events, clinical guidelines for contraindications. Real-world disease mortality in these populations under different vaccination scenarios.",
+      "impact": "If vulnerable populations are small, rare, or can be protected through targeted measures: mandate's coordination function is weaker, extraction component becomes more salient (reclassifies toward Snare). If vulnerable populations are substantial and cannot be protected except through collective immunity: coordination function is strong, Tangled Rope confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Actual vs. potential vulnerability of populations protected by mandate"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "public_health_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.5,
+      "id_override": "public_health_extract_t6"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.58,
+      "id_override": "public_health_extract_t12"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "public_health_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.32,
+      "id_override": "public_health_theater_t6"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.35,
+      "id_override": "public_health_theater_t12"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "The vaccine mandate constraint in this reading is framed as a necessary enforcement mechanism when voluntary vaccination compliance fails to achieve herd immunity thresholds and structurally vulnerable populations (immunocompromised, infants too young to vaccinate, individuals with documented allergies) face lethal exposure risk without collective protection. This is ONE READING of the contested kernel 'vaccine_mandate_balance.' This reading instantiates the public_health_primary interpretation, which prioritizes the protection of vulnerable populations over individual consent when voluntary compliance demonstrably fails. The sibling readings — bodily_autonomy_primary (which prioritizes individual consent) and proportionality_reading (which weighs both but requires demonstrable proportionality) — offer alternative framings of the same kernel. This constraint story models the structural claim: collective necessity can override individual refusal when (1) the collective protection is empirically necessary (herd immunity threshold unmet), (2) vulnerable populations face genuine lethal risk, and (3) the enforcement mechanisms are proportional to that necessity. The constraint exhibits tangled rope structure: it coordinates disease prevention (genuine public health function) while enforcing compliance through mechanisms that extract consent from resistant populations (asymmetric burden). The low theater ratio (0.35) reflects that vaccine mandate enforcement is functionally transparent — the mechanism works as stated (vaccines do confer immunity, mandates do increase compliance) rather than relying on performative ritual.",
+    "key_agents": [
+      "Immunocompromised Populations: Primary beneficiary (powerless/trapped immediate local) — face lethal exposure without herd immunity; cannot be protected individually. Mandate eliminates their exposure risk.",
+      "Unvaccinated Individuals: Primary victims (powerless/trapped biographical national) — face employment loss, school exclusion, social restriction; no legitimate exit pathway. Mandate extracts consent through coercion.",
+      "Religious Objectors: Secondary victims (moderate/constrained generational national) — face high but surmountable costs (relocation, community exit); also benefit from collective protection. Mixed extraction and benefit.",
+      "Public Health Authority: Institutional actor (organized/constrained generational national) — enforces mandate to achieve herd immunity; benefits from legitimacy of disease suppression; extracts compliance through legal mechanisms.",
+      "Pharmaceutical Industry: Institutional beneficiary (institutional/arbitrage civilizational global) — mandates create sustained vaccine demand and market expansion. Experiences constraint as pure coordination of their economic interests.",
+      "Analytical Observer: Civilizational frame (analytical/analytical civilizational global) — evaluates whether public health necessity justifies enforcement asymmetry."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts consent from unvaccinated individuals through employment and school exclusion, representing substantial economic and social coercion. However, the value is moderated by the coordination function: the mandate solves a genuine collective action problem (free-rider dynamics in voluntary vaccination) that prevents herd immunity from being reached. The extraction rises over time (from 0.35 to 0.58) as enforcement mechanisms harden and social pressure accumulates, reflecting the deepening of coercive mechanisms. Suppression (0.68): High. Structural barriers to refusing the mandate include employment dependency (loss of income), mandatory school attendance (children's access to education), geographic scope (state or national level, no exit to non-mandate jurisdiction), and legal status (violation subjects individuals to legal penalties). Alternative options are constrained by practical reality: relocation is economically unfeasible for most; homeschooling is not available to all; geographic arbitrage is blocked by coordinated mandates across jurisdictions. Theater ratio (0.35): Low. The constraint's mechanism is transparent and functionally operative: vaccines do provide immunity, mandates do increase compliance, herd immunity does protect vulnerable populations. No performative ritual obscures the actual mechanism. The theater component that exists reflects only the administrative apparatus (reporting requirements, documentation) rather than the core mechanism.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival divergence driven by structural position and vulnerability status. The unvaccinated individual experiences Snare (maximal extraction, no coordination benefit). The immunocompromised person experiences Rope (pure coordination, maximum benefit, no extraction). The religious objector experiences mixed Tangled Rope (both extraction and benefit; benefit comes through collective protection they didn't consent to). The public health authority experiences Tangled Rope with beneficiary status (genuine coordination function paired with extraction mechanisms they deploy). The pharmaceutical industry experiences Rope (coordination of their market interests). The analytical observer at civilizational scope sees Tangled Rope (the structure is genuinely mixed: real coordination function + real extraction). The perspectival gap reveals that the constraint is not purely extractive (the immunocompromised person's experience proves coordination is real) but also not purely coordinative (the unvaccinated person's coercion is structurally real). This gap is the diagnostic feature that distinguishes this reading from the bodily_autonomy_primary reading, which would classify the constraint as Snare from all victim perspectives.",
+    "directionality_logic": "Directionality values vary sharply by agent structural position. Immunocompromised beneficiaries derive d ≈ 0.15 (beneficiary + trapped exit = full benefit from constraint) → low effective extraction. Unvaccinated individuals subject to mandate derive d ≈ 0.88 (victim + trapped exit = full extraction target) → high effective extraction. Religious objectors derive d ≈ 0.60 (mixed: victim of enforcement but also beneficiary of collective protection; constrained exit = moderate extraction). Public health authority derives d ≈ 0.35 (institutional beneficiary deploying enforcement; arbitrage exit = moderate extraction reversal). The pharmaceutical industry derives d ≈ 0.05 (institutional beneficiary with arbitrage options = negative extraction, pure coordination). The canonical analytical observer derives d ≈ 0.72 (no structural position advantage; observes asymmetry) → moderate extraction from analytical perspective. The directionality derivation is primary to this reading's structure: IF the vulnerable populations are real and face genuine lethal risk, their low d value (beneficiary) is justified, confirming the coordination function. IF unvaccinated individuals are coerced through enforceable legal mechanisms, their high d value (victim + trapped) is justified, confirming the extraction function. The reading stands on the empirical claim that BOTH are true: genuine coordination + real extraction = Tangled Rope.",
+    "mandatrophy_analysis": "This reading avoids mandatrophy through explicit structural balance: it claims that vaccine mandates are neither pure extraction (Snare) nor pure coordination (Rope) but a genuine hybrid. The vulnerability of immunocompromised populations proves the coordination function is real — the constraint solves a problem (herd immunity for those who cannot vaccinate themselves) that cannot be solved through individual choice. The coercion of unvaccinated individuals proves the extraction function is real — the constraint uses enforcement mechanisms that violate individual autonomy. The constraint's justification rests on the claim that the coordination benefit (protecting the lethal risk to vulnerable populations) outweighs the extraction cost (violating individual consent). This is a substantive ethical claim, not a structural claim about classification. The mandatrophy is resolved by distinguishing the structural question (is this Tangled Rope?) from the ethical question (is it justified?). The constraint is structurally Tangled Rope; the ethical reading argues it is justified Tangled Rope when (and only when) the empirical conditions in the omegas are satisfied.",
+    "kernel_context": "This constraint is one reading of the contested kernel 'vaccine_mandate_balance.' The kernel is the stabilized normative commitment around which different parties disagree: how should societies balance individual bodily autonomy against collective protection when voluntary compliance fails and vulnerable populations face lethal risk? This reading instantiates the public_health_primary interpretation, which answers: collective protection supersedes individual consent when (1) the necessity is empirically demonstrated (herd immunity threshold unmet, vulnerable population at lethal risk), (2) alternatives are inadequate (no targeted protection strategy works), and (3) enforcement is proportional to necessity. The sibling readings are: (a) bodily_autonomy_primary — which prioritizes individual consent as inviolable and categorizes mandates as Snare regardless of public health outcomes; (b) proportionality_reading — which accepts both values but requires strict proof of proportionality before mandate enforcement is legitimate. The reading_relations from this reading to siblings: This reading coexists_with bodily_autonomy_primary (both are live positions in contemporary discourse; different communities hold each; neither logically forecloses the other within the frameworks that ground it); this reading influences the proportionality_reading (by establishing a threshold claim about when mandates become necessary, it creates downstream pressure on proportionality analysis — if the necessity threshold is met, proportionality testing becomes relevant, but if necessity is not demonstrated, proportionality is moot). The foundational axioms that distinguish this reading: (1) public_health_necessity_supersedes_consent (when vulnerable populations face lethal risk from contagious disease and voluntary vaccination fails to prevent it, collective protection through mandate justifies overriding individual consent) — status holdable (this is an active axiom in public health ethics traditions and international health law) — role foundational — grounding_type deontological (rests on duty to protect vulnerable populations from lethal harm, not empirically contingent); (2) proportionality_requirement (enforcement mechanisms must be proportional to the public health necessity and must not exceed what is needed to achieve critical immunity thresholds) — status holdable — role secondary (follows from the foundational claim) — grounding_type instrumental (about the means-ends relationship between enforcement intensity and vaccination outcomes)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "bodily_autonomy_primary",
+      "proportionality_reading",
+      "informed_consent_doctrine"
+    ],
+    "dual_formulation_note": "This constraint is one of three readings of the vaccine_mandate_balance kernel. The public_health_primary reading (this story) instantiates the necessity-based framework: mandates are justified when herd immunity is necessary and vulnerable populations face lethal risk. The bodily_autonomy_primary reading treats the same constraint as Snare from all victim perspectives, rejecting the coordination claim. The proportionality_reading accepts both but requires strict proof of necessity before engaging proportionality analysis. All three stories share the same base_extractiveness (0.58) and suppression (0.68) values — these are intrinsic properties of the mandate mechanism itself. The readings differ in how they classify the constraint type: this reading says Tangled Rope (genuine coordination + real extraction); bodily_autonomy_primary says Snare (extraction with false coordination claim); proportionality_reading says Tangled Rope (like this reading) but with higher emphasis on the empirical thresholds in omegas. Write all three stories with linked network entries. Do not merge them into one story with multiple classifications."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.88
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "bodily_autonomy_primary",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "proportionality_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "public_health_necessity_supersedes_consent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "proportionality_requirement_for_enforcement",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "vulnerable_population_protection_as_core_duty",
+    "drift_state": {
+      "moment": "contemporary_pandemic_response",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

@@ -1,0 +1,235 @@
+{
+  "header": {
+    "constraint_id": "autonomy_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_autonomy_reading"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Autonomy Reading of End-of-Life Decision Authority",
+    "topic_domain": "medical_ethics/bioethics/end_of_life_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "competent_individuals_exercising_self_determination",
+      "healthcare_professionals_as_facilitators"
+    ],
+    "victims": [
+      "suffering_prolonged_through_denial_of_access",
+      "individual_autonomy_constrained_by_institutional_gatekeeping"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Suffering Individual Denied Access",
+      "comment": "PERSPECTIVE 1: SUFFERING INDIVIDUAL (SNARE) — Trapped in terminal illness with intolerable suffering; institutional barriers (physician gatekeeping, legal prohibitions, family opposition) prevent access to death on their own terms. No exit options; bears full extraction cost as the constraint forces continuation of suffering against their declared will. Maximum experienced coercion."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Healthcare Professional Under Conflicting Duties",
+      "comment": "PERSPECTIVE 2: HEALTHCARE PROFESSIONAL (TANGLED ROPE) — Constrained by professional licensing, institutional policy, and legal exposure; also sees genuine coordination value in the autonomy reading (respecting patient agency is foundational to modern medical ethics). Mixed position: they benefit from clear ethical guidance (autonomy reading provides this), but face career and legal risks if they facilitate access. Moderate extraction and moderate coordination function."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Medical Professional Organizations Embracing Autonomy",
+      "comment": "PERSPECTIVE 3: MEDICAL ORGANIZATIONS (ROPE) — Institutions (medical associations, palliative care societies) benefit from adopting the autonomy reading: it clarifies ethical guidance, reduces internal conflict between competing duties, and aligns medicine with contemporary human rights frameworks. This perspective experiences the constraint as coordination—the autonomy reading solves the problem of how to reconcile professional obligations. Beneficiaries through arbitrage (legitimacy, alignment with evolving standards)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Religious/Sanctity-Based Institutional Opposition",
+      "comment": "PERSPECTIVE 4: SANCTITY COALITION (TANGLED ROPE) — Powerful institutions (faith-based healthcare systems, conservative bioethics frameworks) oppose the autonomy reading based on doctrinal commitments to life sanctity. They experience genuine coordination function (safeguarding vulnerable populations from coercion) alongside extractive enforcement (blocking access to death for those who have rationally chosen it). Mobile exit via private institutions in some jurisdictions, but high institutional investment in maintaining sanctity-based authority over end-of-life decisions."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Right-to-Die Advocacy Coalition",
+      "comment": "PERSPECTIVE 5: RIGHT-TO-DIE COALITION (SCAFFOLD) — Organized agents (patient advocacy, terminal illness support groups, some physicians) see the autonomy reading as a sunset constraint on institutional gatekeeping. They frame the constraint as temporary: over time, as social consensus shifts toward recognizing competent end-of-life decisions, the institutional barriers (physician gatekeeping, legal prohibitions) are expected to erode. Low experienced extraction because the coalition has agency and sees a clear political/legal exit path (legislative change, institutional norm shift). Theater is low because the advocacy effort is transparent and directly targeted at changing the underlying rules."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) — From a civilizational perspective, one might argue that respecting competent individual autonomy over death is a universal principle grounded in irreducible facts about human dignity, rational agency, and the inviolability of conscious choice. However, this perspective risks naturalizing what is actually a contestable normative reading. The engine will flag this as a false summit, revealing that the 'universal principle' framing masks a choice among competing readings (autonomy vs. sanctity vs. vulnerability protection)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "competence_threshold_determination",
+      "question": "What level of cognitive capacity constitutes 'competence' sufficient for sovereign authority over death?",
+      "resolution_mechanism": "Comparative legal analysis of competence standards across jurisdictions; clinical psychology assessment of decision-making capacity in terminal illness; identification of systematic differences in how competence is operationalized.",
+      "impact": "If threshold is high (requires maximal rationality): many individuals with genuine terminal agency are excluded, shifting classification toward snare for larger victim set. If threshold is low (respects minimal autonomous preference): vulnerability concerns rise, potentially strengthening sanctity arguments.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Definition and threshold of competence for death decision authority"
+    },
+    {
+      "id": "slippery_slope_empirical_grounding",
+      "question": "Does recognizing autonomy in end-of-life decisions empirically lead to non-voluntary euthanasia or coercive deaths, or does this risk remain theoretical?",
+      "resolution_mechanism": "Longitudinal comparison of jurisdictions with autonomy-based frameworks (Netherlands, Belgium, Canada, Oregon) vs. restrictive frameworks; tracking of actual vs. predicted non-voluntary deaths; analysis of safeguards in permissive jurisdictions.",
+      "impact": "If slope is steep (permissive autonomy leads to measurable coercion): sanctity reading gains structural support, and the autonomy reading shifts toward snare (extracting from vulnerable populations). If slope is minimal (empirical safeguards work): autonomy reading remains tangled_rope, and slippery-slope framing is revealed as extractive scaremongering.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Empirical validation of slippery slope risk in permissive autonomy frameworks"
+    },
+    {
+      "id": "kernel_reading_committer_ambiguity",
+      "question": "Is this constraint one reading of a contested kernel (the authority structure over end-of-life decisions), or does it represent discovery of a moral fact (that competent autonomy IS sovereign)?",
+      "resolution_mechanism": "Examination of the historical genesis of the autonomy reading: if it emerged as a contestable normative commitment (1960s bioethics shift toward patient rights), it is a reading; if it claims to have discovered a pre-existing moral truth, the framing itself is the omega. Compare with sanctity reading's claim to ancient warrant vs. autonomy reading's claim to modern rationality.",
+      "impact": "If autonomy is a reading (committer frame): the constraint is one among coexisting alternatives, and the presheaf over all readings is the accurate model. If autonomy claims to be the discovered moral fact: the constraint becomes a false summit, naturalizing a particular reading as universal law. The question is structural and determines whether false-summit detection is appropriate.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether autonomy reading is a contestable normative reading or discovery of moral fact"
+    },
+    {
+      "id": "institutional_gatekeeping_necessity",
+      "question": "Is physician gatekeeping of death decisions a necessary safeguard (preventing premature or coerced decisions) or an extractive mechanism (controlling who gets to decide)?",
+      "resolution_mechanism": "Comparative study of decision regimes: autonomous request with professional facilitation (autonomy reading) vs. professional discretion with patient input (gatekeeping) vs. presumed consent with override option. Measure actual patient regret, coercion detection, and quality of life for terminal patients in each regime.",
+      "impact": "If gatekeeping is necessary: suppression value should be higher, and the constraint shifts toward mountain (protecting vulnerable populations from premature death). If gatekeeping is extractive: suppression is unjustified, and the constraint becomes snare (coercing life continuation against individual will).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Necessity and legitimacy of institutional gatekeeping over end-of-life decisions"
+    },
+    {
+      "id": "religious_authority_grounding_tension",
+      "question": "Can religious authority over end-of-life decisions coexist with secular liberal frameworks that recognize individual autonomy, or do they constitute incompatible readings that foreclose one another?",
+      "resolution_mechanism": "Examination of pluralist democracies where both readings operate: do they maintain institutional separation (different healthcare systems), epistemic boundaries (religiously informed vs. secular frameworks), or do they clash directly over public policy? Identify where coexistence is stable vs. where foreclosure pressure appears.",
+      "impact": "If they coexist: the constraint family includes both readings as live alternatives, and policy should accommodate both (pluralist framework). If they foreclose: one reading must prevail in any unified institutional framework, making the constraint a zero-sum political struggle.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Compatibility of religious authority and secular autonomy readings"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.41
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The autonomy reading of end-of-life decision authority claims that competent individuals possess sovereign authority to make decisions about their own death, including access to medical assistance in dying when suffering becomes unbearable. This reading represents one interpretation of a contested kernel—the deep question of who has authority to decide when a life should end—and coexists with alternative readings grounded in sanctity of life and vulnerability protection. The autonomy reading emerged as dominant in bioethics discourse during the 1960s-1980s shift toward patient rights and informed consent, becoming codified in legislation across jurisdictions (Netherlands 2002, Belgium 2002, Canada 2016, Oregon 1997). However, it remains contested: religious frameworks, disability rights advocates, and conservative bioethicists argue that recognizing individual autonomy as sovereign creates structural pressures to eliminate vulnerable populations and undermines institutional protections against coercion. The constraint exhibits tangled rope characteristics: it possesses a genuine coordination function (clarifying the relationship between medical authority and patient agency) while also implementing asymmetric extraction (blocking access to death for those who have rationally chosen it, or conversely—depending on the reading—coercing death for those who wish to live). The extractiveness value (0.52) reflects that the constraint imposes genuine costs on those denied access while providing guidance and clarity to medical professionals and institutions.",
+    "key_agents": [
+      "Competent Individuals Facing Terminal Illness: Primary potential beneficiaries (moderate-powerful/mobile or trapped depending on access) — seek authority over their own death and escape from prolonged suffering",
+      "Suffering Individuals Denied Access: Primary victims (powerless/trapped) — forced to continue living with unbearable suffering against their declared will; bear full extraction cost of the constraint",
+      "Healthcare Professionals: Secondary actors (moderate-institutional/constrained) — experience mixed coordination (clarity on ethical guidance) and extraction (career/legal risk, conflicting duty frameworks)",
+      "Medical Professional Organizations: Institutional beneficiaries (institutional/arbitrage) — adopt autonomy reading to align with human rights frameworks and reduce internal ethical conflict",
+      "Religious and Sanctity-Based Institutions: Institutional opposition (powerful/mobile) — oppose autonomy reading based on doctrinal commitments; extract authority over end-of-life decisions from individuals",
+      "Right-to-Die Advocacy Coalition: Organized agents (organized/constrained) — see the constraint as temporary; build political and legal pathways to institutionalize autonomy",
+      "Disability Rights Communities: Complex position (moderate-organized/constrained) — some embrace autonomy reading, others fear it enables coercive elimination of disabled lives",
+      "Vulnerable Populations (cognitive decline, depression, economic desperation): Potential targets (powerless-moderate/trapped or constrained) — at risk of coercive pressure under autonomy frameworks without robust safeguards"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The autonomy reading imposes significant costs on those denied access—individuals with terminal illness who seek death but face institutional, legal, or professional barriers. The value reflects that suppression of access is substantial, but the constraint also provides genuine coordination benefit (medical professionals have clarity on their ethical obligations). The measurement trajectory shows slight increase over time (0.48→0.52 across 20 years) reflecting incremental tightening of institutional gatekeeping even as legal frameworks in some jurisdictions shift toward permissive autonomy. Suppression (0.65): High. Substantial barriers exist to exercising autonomous end-of-life decisions: legal prohibitions in most jurisdictions, medical professional gatekeeping, institutional policies, family opposition, financial barriers to travel to permissive jurisdictions, and social stigma. These barriers prevent expression of autonomous choice for large populations. Theater ratio (0.38): Moderate-low. The autonomy reading is substantively grounded in arguments about respect for rational agency and bodily integrity; it is not purely performative. However, some theater exists in the form of philosophical disputation about what 'competence' means, legal formalities around decision-making capacity assessments, and procedural safeguards that may serve theater function (demonstrating deliberation) rather than preventing genuine harm. The relatively low theater reflects that the autonomy reading is directionally honest about its commitments, unlike the sanctity reading which maintains stronger theater through alternative framing (protecting 'vulnerable populations' while actually blocking access for rational agents).",
+    "perspectival_gap": "The most dramatic perspectival gap appears between the suffering individual denied access (snare) and the beneficiary perspective of medical professionals and institutions (rope). The individual experiences maximal coercion and no coordination benefit; the institution experiences both coordination clarity and extractive benefit from maintaining gatekeeping authority. The right-to-die coalition (scaffold) sees a temporary constraint with clear exit pathways, while religious institutions (tangled rope, powerful position) experience genuine conflict between their coordination function (protecting the vulnerable) and extractive enforcement (maintaining authority over decisions). The analytical observer risks seeing autonomy as a natural law (mountain), but the structural data reveals this as a false summit: autonomy is a normative reading grounded in particular historical and philosophical commitments, not an irreducible principle.",
+    "directionality_logic": "Directionality values are derived from the structural relationship of each agent to THIS reading. Suffering individuals denied access have d ≈ 0.95 (full target—the constraint directly constrains their agency). Healthcare professionals have d ≈ 0.50-0.55 (mixed—they both benefit from clarity and face extraction through legal/career risk). Medical organizations have d ≈ 0.15 (beneficiary through arbitrage—alignment with human rights frameworks). Religious institutions have d ≈ 0.35 (modified beneficiary—they benefit from maintaining authority, but face pressure as social consensus shifts). Right-to-die advocates have d ≈ 0.40 (modest target through institutional barriers, but organized and mobile). The engine derives these values from the beneficiary/victim declarations and exit options, applying the sigmoid f(d) to compute effective extractiveness. The tangled rope classification reflects that chi values for this constraint range from high (snare perspective) to low (institutional beneficiary perspective) depending on structural position.",
+    "mandatrophy_analysis": "The autonomy reading resolves potential mandatrophy by clarifying that this constraint is ONE reading of a contested kernel, not a universal moral fact. The constraint cannot simultaneously be a mountain (natural law about human agency) and a tangled rope (negotiated institutional arrangement) from different perspectives—it can only be one if it IS genuinely one or the other. The committer frame clarifies: this is a reading, not a law. Therefore, the tangled rope classification is appropriate. The 'it's a natural law about autonomy' framing is the false summit that the analytical perspective risks. The omega variables document the structural ambiguities that prevent the autonomy reading from crystallizing into mountain status: the competence threshold question, the slippery slope empirical question, and the kernel reading vs. moral fact distinction. These irreducible uncertainties are constitutive of the constraint's nature as a contested normative reading.",
+    "kernel_context": "This constraint is the AUTONOMY READING of the contested kernel end_of_life_decision_authority. The kernel question—'Who has authority to decide when an individual's life should end?'—admits three major readings: (1) AUTONOMY READING (this one): Competent individuals are sovereign; medical professionals are facilitators; suffering-from-denied-access enters victim set. (2) SANCTITY READING: Life is inviolable except in narrowly defined cases; institutional/religious authority protects against coercive elimination; vulnerable populations and disability communities enter victim set. (3) VULNERABILITY PROTECTION READING: Vulnerable populations require institutional protection from coercive pressure; competence determinations are unreliable in contexts of depression or desperation; both suffering-individuals-denied-access AND vulnerable-populations-facing-coercion enter victim sets. The autonomy reading coexists with the other two—they remain live positions held by different institutional actors (medical organizations, religious institutions, disability advocates, palliative care providers). None of these readings logically forecloses the others within their own frameworks; rather, they produce different empirical and normative claims about which populations are harmed and which protected. The autonomy reading's reference frame is 'rational individual agency as sovereign.' It influences (but does not foreclose) the sanctity reading by shifting legitimacy discourse from institutional authority to individual capacity."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "sanctity_reading",
+      "vulnerability_protection_reading"
+    ],
+    "dual_formulation_note": "The autonomy reading is structurally distinct from its sibling readings in the end-of-life authority kernel. Each reading has its own ε value, beneficiary/victim structure, and perspectival classification. The sanctity reading (ε≈0.45, Tangled Rope) frames institutional protection against coercion as its coordination function; the vulnerability reading (ε≈0.55, Snare/Tangled Rope) makes vulnerable populations central to the victim set. All three readings share the same kernel but instantiate different constraints. They are linked through network.affects_constraints to enable constraint-family analysis and drift-state tracking."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.35
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "sanctity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "vulnerability_protection_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "rational_agency_sovereignty_principle",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "individual_capacity_over_institutional_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "informed_consent_autonomy_framework",
+    "drift_state": {
+      "moment": "contemporary_medical_ethics",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

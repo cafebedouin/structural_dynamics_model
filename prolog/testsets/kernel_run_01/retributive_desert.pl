@@ -1,0 +1,306 @@
+% ============================================================================
+% CONSTRAINT STORY: retributive_desert
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_retributive_desert, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: retributive_desert
+ *   human_readable: Retributive Desert: Execution as Proportionate Moral Response to Murder
+ *   domain: criminal_justice/political_philosophy/constitutional_law
+ *
+ * SUMMARY:
+ *   The retributive desert reading of state killing authority claims that
+ *   execution is a morally legitimate proportionate response to murder
+ *   because the murderer has forfeited their right to life through the
+ *   commission of the crime. This reading instantiates one specific normative
+ *   commitment about the nature of desert, moral status, and state punishment
+ *   authority. The constraint exhibits Tangled Rope structure: it coordinates
+ *   a principle of proportionality (genuine coordination function — matching
+ *   punishment to harm) while simultaneously extracting the ultimate cost
+ *   from the condemned prisoner (asymmetric extraction justified by
+ *   retributive principle). The theater ratio is low (0.35) because
+ *   retributive framing makes explicit that the state is extracting death as
+ *   punishment; there is minimal performative obscuration. The extractiveness
+ *   has risen over the interval from 0.55 to 0.68, reflecting accumulating
+ *   moral and philosophical contestation of the retributive principle itself
+ *   — as abolition movements gain force, the retributive reading's stability
+ *   declines and the extraction mechanism becomes more visible. This reading
+ *   does NOT foreclose the categorical_impermissibility reading (life is
+ *   never forfeit) or the deterrence_instrument reading (execution serves
+ *   crime prevention); they coexist as live jurisprudential positions held by
+ *   different institutional actors and constitutional traditions.
+ *
+ * KEY AGENTS:
+ *   - Condemned Prisoner: Primary victim (powerless/trapped) — bears the ultimate extraction cost, has no exit options, experiences maximum suppression
+ *   - Victims of Murder and Bereaved Communities: Beneficiaries and secondary victims (moderate/constrained) — experience coordination function (proportionate response, moral vindication) alongside the prisoner's victimization
+ *   - Criminal Justice Institution: Institutional actor (institutional/constrained) — enforces retributive principle, experiences both coordination (proportionality mechanism) and extraction (monopoly on death power)
+ *   - Law-Abiding Citizens / Rule of Law: Beneficiary (powerful/arbitrage) — experience the retributive constraint as coordination mechanism ensuring predictable proportionate response to serious harm
+ *   - Analytical Observer: Examines the reading itself (analytical/analytical) — identifies the gap between retributive principle's coordination framing and the extraction mechanism's structural reality
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(retributive_desert, 0.68).
+domain_priors:suppression_score(retributive_desert, 0.72).
+domain_priors:theater_ratio(retributive_desert, 0.35).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(retributive_desert, extractiveness, 0.68).
+narrative_ontology:constraint_metric(retributive_desert, suppression_requirement, 0.72).
+narrative_ontology:constraint_metric(retributive_desert, theater_ratio, 0.35).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(retributive_desert, tangled_rope).
+narrative_ontology:human_readable(retributive_desert, "Retributive Desert: Execution as Proportionate Moral Response to Murder").
+narrative_ontology:topic_domain(retributive_desert, "criminal_justice/political_philosophy/constitutional_law").
+
+domain_priors:requires_active_enforcement(retributive_desert).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_kernel_codification(retributive_desert, formalized).
+narrative_ontology:cs_authority_grounding(retributive_desert, lineage).
+narrative_ontology:cs_interpretation_layer_present(retributive_desert).
+narrative_ontology:cs_kernel_id(retributive_desert, state_killing_authority).
+narrative_ontology:cs_reading_relation(retributive_desert, deterrence_instrument, coexists_with).
+narrative_ontology:cs_reading_relation(retributive_desert, categorical_impermissibility, coexists_with).
+narrative_ontology:cs_axiom(retributive_desert, foundational, murder_forfeits_moral_status).
+narrative_ontology:cs_axiom_status(murder_forfeits_moral_status, holdable).
+narrative_ontology:cs_axiom(retributive_desert, foundational, proportionate_response_legitimacy).
+narrative_ontology:cs_axiom_status(proportionate_response_legitimacy, holdable).
+narrative_ontology:cs_reference_frame(retributive_desert, proportionate_desert_authority).
+narrative_ontology:cs_drift_state(retributive_desert, contemporary_human_rights_movement, gap(authority_erosion, substantial, false)).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(retributive_desert, moral_order_vindication).
+narrative_ontology:constraint_beneficiary(retributive_desert, law_abiding_citizens).
+narrative_ontology:constraint_victim(retributive_desert, condemned_prisoner).
+narrative_ontology:constraint_victim(retributive_desert, excluded_moral_community).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: THE CONDEMNED PRISONER (SNARE) — Maximum extraction and suppression. The prisoner has no exit options; execution is irreversible. The constraint operates as pure asymmetric power: the state claims moral authority to extract the ultimate cost (life itself) with no alternative pathway. Prisoner experiences the classification as pure extraction justified by retributive framing, but the framing does not reduce the structural reality of trapped exit and terminal suppression.
+constraint_indexing:constraint_classification(retributive_desert, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(national))).
+
+% PERSPECTIVE 2: THE CRIMINAL JUSTICE INSTITUTION (TANGLED ROPE) — The institution experiences coordination function (vindicating moral order, proportionate response mechanism) alongside extraction (concentrating life-or-death power, maintaining suppression apparatus). Constrained because the institution claims to follow retributive principles rather than choosing arbitrary extraction. Active enforcement required. Genuine coordination function exists (matching punishment to harm principle) alongside asymmetric extraction (institutionalizing state power over life).
+constraint_indexing:constraint_classification(retributive_desert, tangled_rope,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: VICTIMS AND BEREAVED COMMUNITIES (ROPE) — Experience the constraint primarily as coordination mechanism: proportionate response to wrong, acknowledgment of harm, moral vindication. Constrained but not trapped — these agents have some agency in restorative process and community narrative. The retributive constraint coordinates the community's moral response to a transgression. Extraction is not the primary phenomenology from this perspective.
+constraint_indexing:constraint_classification(retributive_desert, rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: RULE OF LAW / CIVIC ORDER (ROPE) — Powerful institutional perspective. Retributive proportionality is framed as coordination mechanism: law-abiding citizens benefit from a system where serious harms receive commensurate responses. This perspective experiences low extraction — the system operates through codified principles (arbitrage option: rely on predictable legal response). The coordination function is primary; extraction is reframed as legitimate punishment rather than asymmetric power.
+constraint_indexing:constraint_classification(retributive_desert, rope,
+    context(agent_power(powerful),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: ANALYTICAL OBSERVER / RETRIBUTIVE READING (TANGLED ROPE) — Identifies both genuine coordination function (proportionate response mechanism, moral order vindication) and asymmetric extraction (state monopoly on death, suppression of alternative framings). The retributive reading instantiates a specific normative claim: that deserved harm is legitimate response, that murderer forfeits moral status, that proportionate extraction is justified. Extraction is high but is experienced as legitimate by the authority structure. Theater ratio is low because the retributive principle makes explicit what other framings obscure (the state is extracting a life as punishment), rather than relying on performative justification.
+constraint_indexing:constraint_classification(retributive_desert, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(retributive_desert_tests).
+
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(retributive_desert, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(retributive_desert, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(retributive_desert, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+:- end_tests(retributive_desert_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness (0.68): High, and rising. The retributive reading extracts the ultimate resource (life) from the condemned prisoner. The extraction is justified through a principle (proportionate response to murder) that the reading claims is legitimate, but the structural fact remains: one party (state) extracts an irreversible cost from another party (prisoner) on the basis of a normative claim the prisoner may not accept. The rise from 0.55 to 0.68 reflects increasing contestation of the retributive principle itself — as abolition frameworks gain institutional voice, the retributive reading's moral authority weakens and the extraction becomes more visible. Suppression (0.72): Very high. Execution apparatus, irreversibility, restricted appeal pathways, and limited alternatives constitute structural suppression. Whether suppression is partly internalized (prisoners accepting retributive justice as legitimate) is ambiguous — omega variable addresses this. Theater ratio (0.35): Low. The retributive reading makes explicit that the state is extracting death as punishment; there is minimal performative obscuration compared to deterrence framing (which obscures extraction behind empirical claims about crime prevention) or categorical impermissibility framing (which reframes execution as rights violation). Retributive principle is theoretically honest about what it does: extract proportionate harm. This low theater is why the retributive reading can be analyzed as tangled rope rather than snare — the coordination function (proportionality principle) is genuine, even if extraction is high.
+ *
+ * PERSPECTIVAL GAP:
+ *   The retributive reading produces a sharp perspectival gap between the condemned prisoner's snare (pure extraction, no exit, trapped status, irreversibility) and the beneficiary perspectives' rope (coordination mechanism, proportionate response, rule of law vindication). The prisoner sees a snare because they are caught in the extraction mechanism with no alternatives. The bereaved community sees rope because the proportionate response coordinates their moral vindication. The analytical observer sees tangled rope because both structures are present: genuine coordination function (matching punishment to harm) layered over asymmetric extraction (state monopoly on death, irreversibility, condemned prisoner's trapped status). The key perspectival disagreement is whether the coordination function justifies the extraction, which depends on accepting the foundational axiom that murder forfeits moral status.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   The condemned prisoner's d value (directionality: how much this agent is targeted by the constraint) approaches 1.0 — they are the full target of extraction. Derivation: victim status + trapped exit + powerless position → maximum d. The bereaved community's d is moderate (~0.45) — they benefit from the proportionate response coordination but also bear costs (the constraint's operation extracts from another party in their name, creating moral entanglement). The institutional perspective's d is low (~0.2) — as the beneficiary of the extraction apparatus, the institution gets arbitrage options. The rule of law perspective's d is very low (~0.05) — the abstract principle experiences coordination benefits. The analytical observer's d is moderate-high (~0.65) — the observer is positioned outside the constraint but can see its structural reality (trapped prisoner as the target). These directionalities are not overridden; they flow from structural declarations of beneficiary/victim and exit options.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The retributive desert reading resolves the mandatrophy by accepting tangled rope as the canonical structure: genuine coordination function (proportionate response principle) layered over asymmetric extraction (death of prisoner, state monopoly on killing, irreversibility). The reading does NOT claim this is rope (pure coordination) — it acknowledges extraction. The reading does NOT claim this is mountain (natural law) — it acknowledges that retributive principle is a normative claim, not a law of physics. The reading does NOT claim this is snare for all perspectives — it acknowledges that beneficiary perspectives experience genuine coordination benefits. The resolution requires accepting that BOTH the coordination function AND the extraction are real structural features, and that the legitimacy of the constraint depends entirely on whether the foundational axiom (murderer forfeits moral status) is true. If the axiom is false, the constraint becomes a snare (unjustified extraction masked by false principle). If the axiom is true, the constraint becomes rope (legitimate proportionate response). The mandatrophy is not resolved by classification — it is resolved by philosophical commitment to the axiom.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    deserved_forfeiture_moral_status,
+    'Does committing murder forfeit a person''s moral status such that death is a proportionate response, or does every human retain irreducible moral standing that survives even grave wrongdoing?',
+    'Foundational normative disagreement. Resolution would require agreement on whether moral status is inalienable or forfeitable. This is not an empirical question but a commitment about the nature of personhood and desert.',
+    'If forfeiture is real: retributive reading stands — execution is legitimate proportionate response. If status is inalienable: the reading collapses into unacknowledged extraction (the state killing someone who retained moral standing). This is the core omega for this reading.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(deserved_forfeiture_moral_status, conceptual, 'Whether murder forfeits irreducible moral status').
+
+omega_variable(
+    proportionality_measurement,
+    'What framework measures whether execution is truly proportionate to murder, or does the claim of proportionality obscure incommensurable acts (death cannot equal death in the relevant moral sense)?',
+    'Philosophical analysis of proportionality concepts. Retributive proportionality may be incommensurable — death of perpetrator cannot undo death of victim, cannot restore the victim, can only extract equivalent harm. Whether this extraction constitutes legitimate proportionate response or merely justified revenge depends on foundational commitments about desert.',
+    'If proportionality is measurable: retributive principle can guide punishment decisions. If incommensurable: the constraint operates as extraction justified by a principle that cannot actually work, making it a snare with a false legitimacy framing.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(proportionality_measurement, conceptual, 'Whether proportionality between murder and execution is measurable').
+
+omega_variable(
+    reading_coexistence_exclusion,
+    'Can the retributive desert reading coexist with the categorical_impermissibility reading (state may never execute) within a single legal framework, or does retributive principle foreclose the abolitionist position?',
+    'Historical and normative analysis. Retributive and abolitionist positions have historically coexisted in live jurisprudential debate (e.g., within US constitutional tradition: Furman era, contemporary capital punishment debates). The positions neither logically foreclose each other nor are they in the same framework — they represent different jurisprudential commitments about state power and human dignity.',
+    'If positions logically foreclose each other: one reading must be eliminated from the kernel. If they coexist as live options in different frameworks: both are legitimate readings of the kernel despite incompatibility. This omega documents that the retributive reading does NOT foreclose abolitionism — they coexist as competing readings held by different institutional actors.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(reading_coexistence_exclusion, conceptual, 'Whether retributive and abolitionist readings foreclose each other').
+
+omega_variable(
+    suppression_internalization_structural,
+    'Is the suppression (0.72) experienced by prisoners structural (physical confinement, execution apparatus, irreversible state coercion) or internalized (prisoners'' own acceptance of retributive principle as legitimate)?',
+    'Post-execution trajectory analysis: if suppression mechanism persists (other prisoners accept the principle), it is partly internalized. If suppression requires active enforcement to maintain (prisoners require constant coercive oversight), it is primarily structural. Measurement of prisoner resistance rates, appeals activity, internalization surveys.',
+    'If structural: the constraint is pure coercive extraction masked by retributive justification. If internalized: some prisoners have accepted the retributive frame and no longer perceive extraction. Internalization would suggest the constraint is more rope-like than snare-like from the prisoner perspective, but the high suppression score suggests internalization is incomplete.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_internalization_structural, empirical, 'Whether suppression is structural or internalized').
+
+omega_variable(
+    alternative_proportionate_responses,
+    'Are there alternative punishment mechanisms (life imprisonment without parole, restorative justice frameworks, exile) that could satisfy the retributive principle''s demand for proportionate response without requiring execution?',
+    'Comparative jurisprudence and retributive theory analysis. If alternative responses can satisfy retributive proportionality, execution is not the only legitimate response, making it an over-extraction. If retributive theory requires execution specifically, then alternatives cannot satisfy the principle.',
+    'If alternatives exist: the constraint operates as extraction OF execution specifically, not extraction of proportionate response generally. The retributive principle could be satisfied without the snare-like aspects (irreversibility, death). If execution is unique: retributive principle requires this specific response, and rejecting it means rejecting proportionality itself.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(alternative_proportionate_responses, conceptual, 'Whether alternative responses can satisfy retributive proportionality').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(retributive_desert, 0, 20).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(retr_tr_t0, retributive_desert, theater_ratio, 0, 0.28).
+narrative_ontology:measurement(retr_tr_t10, retributive_desert, theater_ratio, 10, 0.32).
+narrative_ontology:measurement(retr_tr_t20, retributive_desert, theater_ratio, 20, 0.35).
+
+% Extraction over time
+narrative_ontology:measurement(retr_be_t0, retributive_desert, base_extractiveness, 0, 0.55).
+narrative_ontology:measurement(retr_be_t10, retributive_desert, base_extractiveness, 10, 0.62).
+narrative_ontology:measurement(retr_be_t20, retributive_desert, base_extractiveness, 20, 0.68).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(retributive_desert, enforcement_mechanism).
+narrative_ontology:affects_constraint(retributive_desert, deterrence_instrument).
+narrative_ontology:affects_constraint(retributive_desert, categorical_impermissibility).
+
+% DUAL FORMULATION NOTE:
+% The state_killing_authority kernel decomposes into three constraint stories, each with its own epsilon and classification. Retributive_desert (ε=0.68, Tangled Rope) emphasizes proportionate response principle alongside extraction. Deterrence_instrument (ε=0.55, Scaffold or Snare depending on empirical efficacy) justifies extraction through crime-prevention outcomes. Categorical_impermissibility (ε=0.72, Snare) reframes execution as rights violation, making extraction the primary phenomenon. All three share the same structural mechanism (state execution) but differ in how they frame its legitimacy. The network link captures that these readings influence and constrain each other — acceptance of retributive principle affects the viability of deterrence justification (if deterrence fails, only retributive principle remains); abolitionist successes undermine retributive principle's institutional support.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */
