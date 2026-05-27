@@ -12,3 +12,5 @@ narrative_ontology:cs_axiom_contradiction(voluntary_exchange_natural_default, ma
 narrative_ontology:cs_axiom_contradiction(markets_are_political_choices, voluntary_exchange_natural_default).
 narrative_ontology:cs_axiom_contradiction(voluntary_exchange_natural_default, market_naturalism_is_post_hoc_rationalization).
 narrative_ontology:cs_axiom_contradiction(market_naturalism_is_post_hoc_rationalization, voluntary_exchange_natural_default).
+narrative_ontology:cs_story_uid(market_as_natural_default_contradictions, '4e666aea-8b94-4e69-bd05-9ddd98215002').
+narrative_ontology:cs_created_at('4e666aea-8b94-4e69-bd05-9ddd98215002', '').

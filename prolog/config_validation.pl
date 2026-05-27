@@ -161,6 +161,21 @@ config_violation(Msg) :-
            [ParamName, ConfigVal, Type, HardcodedVal]).
 
 % ============================================================
+% CS UID uniqueness (post-corpus; each story_uid must be globally unique)
+% ============================================================
+
+config_violation(Msg) :-
+    current_predicate(narrative_ontology:cs_story_uid/2),
+    findall(UID, narrative_ontology:cs_story_uid(_, UID), UIDs),
+    sort(UIDs, Sorted),
+    length(UIDs, N), length(Sorted, M),
+    N \= M,
+    Dupes is N - M,
+    format(atom(Msg),
+           'CS ERROR: ~w duplicate story_uid value(s) detected — each generation event must produce a unique UUID',
+           [Dupes]).
+
+% ============================================================
 % Fire on module load
 % ============================================================
 

@@ -122,20 +122,22 @@ narrative_ontology:topic_domain(hybrid_pragmatic_reading, "religious_institution
 domain_priors:requires_active_enforcement(hybrid_pragmatic_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(hybrid_pragmatic_reading, formalized).
-narrative_ontology:cs_authority_grounding(hybrid_pragmatic_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(hybrid_pragmatic_reading).
+narrative_ontology:cs_story_uid(hybrid_pragmatic_reading, 'e59ae67b-5857-4c00-b2c4-84f4a51b64f9').
+narrative_ontology:cs_created_at('e59ae67b-5857-4c00-b2c4-84f4a51b64f9', '').
+narrative_ontology:cs_kernel_codification('e59ae67b-5857-4c00-b2c4-84f4a51b64f9', formalized).
+narrative_ontology:cs_authority_grounding('e59ae67b-5857-4c00-b2c4-84f4a51b64f9', extraction).
+narrative_ontology:cs_interpretation_layer_present('e59ae67b-5857-4c00-b2c4-84f4a51b64f9').
 narrative_ontology:cs_kernel_id(hybrid_pragmatic_reading, marriage_commitment_legitimacy).
-narrative_ontology:cs_reading_relation(hybrid_pragmatic_reading, exogenous_override_reading, coexists_with).
-narrative_ontology:cs_reading_relation(hybrid_pragmatic_reading, endogenous_reinterpretation_reading, influences).
-narrative_ontology:cs_axiom(hybrid_pragmatic_reading, foundational, scope_ambiguity_preserves_institutional_survival).
+narrative_ontology:cs_reading_relation('e59ae67b-5857-4c00-b2c4-84f4a51b64f9', exogenous_override_reading, coexists_with).
+narrative_ontology:cs_reading_relation('e59ae67b-5857-4c00-b2c4-84f4a51b64f9', endogenous_reinterpretation_reading, influences).
+narrative_ontology:cs_axiom('e59ae67b-5857-4c00-b2c4-84f4a51b64f9', foundational, scope_ambiguity_preserves_institutional_survival).
 narrative_ontology:cs_axiom_status(scope_ambiguity_preserves_institutional_survival, holdable).
-narrative_ontology:cs_axiom_grounding(hybrid_pragmatic_reading, scope_ambiguity_preserves_institutional_survival, instrumental).
-narrative_ontology:cs_axiom(hybrid_pragmatic_reading, foundational, prophetic_authority_deployable_as_crisis_management).
+narrative_ontology:cs_axiom_grounding('e59ae67b-5857-4c00-b2c4-84f4a51b64f9', scope_ambiguity_preserves_institutional_survival, instrumental).
+narrative_ontology:cs_axiom('e59ae67b-5857-4c00-b2c4-84f4a51b64f9', foundational, prophetic_authority_deployable_as_crisis_management).
 narrative_ontology:cs_axiom_status(prophetic_authority_deployable_as_crisis_management, holdable).
-narrative_ontology:cs_axiom_grounding(hybrid_pragmatic_reading, prophetic_authority_deployable_as_crisis_management, conventional).
-narrative_ontology:cs_reference_frame(hybrid_pragmatic_reading, dual_commitment_doctrine).
-narrative_ontology:cs_drift_state(hybrid_pragmatic_reading, exogenous_crisis_moment, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('e59ae67b-5857-4c00-b2c4-84f4a51b64f9', prophetic_authority_deployable_as_crisis_management, conventional).
+narrative_ontology:cs_reference_frame('e59ae67b-5857-4c00-b2c4-84f4a51b64f9', dual_commitment_doctrine).
+narrative_ontology:cs_drift_state('e59ae67b-5857-4c00-b2c4-84f4a51b64f9', exogenous_crisis_moment, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(hybrid_pragmatic_reading, institutional_leadership).

@@ -121,21 +121,23 @@ narrative_ontology:topic_domain(hanafi_reading, "islamic_jurisprudence/legal_phi
 domain_priors:requires_active_enforcement(hanafi_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(hanafi_reading, formalized).
-narrative_ontology:cs_authority_grounding(hanafi_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(hanafi_reading).
+narrative_ontology:cs_story_uid(hanafi_reading, 'b30bd033-d94c-4888-96b3-92811d9dc25c').
+narrative_ontology:cs_created_at('b30bd033-d94c-4888-96b3-92811d9dc25c', '').
+narrative_ontology:cs_kernel_codification('b30bd033-d94c-4888-96b3-92811d9dc25c', formalized).
+narrative_ontology:cs_authority_grounding('b30bd033-d94c-4888-96b3-92811d9dc25c', lineage).
+narrative_ontology:cs_interpretation_layer_present('b30bd033-d94c-4888-96b3-92811d9dc25c').
 narrative_ontology:cs_kernel_id(hanafi_reading, jurisprudential_method_kernel).
-narrative_ontology:cs_reading_relation(hanafi_reading, maliki_reading, coexists_with).
-narrative_ontology:cs_reading_relation(hanafi_reading, shafii_reading, coexists_with).
-narrative_ontology:cs_reading_relation(hanafi_reading, hanbali_reading, coexists_with).
-narrative_ontology:cs_axiom(hanafi_reading, foundational, reason_as_legitimate_extension_tool).
+narrative_ontology:cs_reading_relation('b30bd033-d94c-4888-96b3-92811d9dc25c', maliki_reading, coexists_with).
+narrative_ontology:cs_reading_relation('b30bd033-d94c-4888-96b3-92811d9dc25c', shafii_reading, coexists_with).
+narrative_ontology:cs_reading_relation('b30bd033-d94c-4888-96b3-92811d9dc25c', hanbali_reading, coexists_with).
+narrative_ontology:cs_axiom('b30bd033-d94c-4888-96b3-92811d9dc25c', foundational, reason_as_legitimate_extension_tool).
 narrative_ontology:cs_axiom_status(reason_as_legitimate_extension_tool, holdable).
-narrative_ontology:cs_axiom_grounding(hanafi_reading, reason_as_legitimate_extension_tool, deontological).
-narrative_ontology:cs_axiom(hanafi_reading, foundational, divine_intent_beyond_literal_text).
+narrative_ontology:cs_axiom_grounding('b30bd033-d94c-4888-96b3-92811d9dc25c', reason_as_legitimate_extension_tool, deontological).
+narrative_ontology:cs_axiom('b30bd033-d94c-4888-96b3-92811d9dc25c', foundational, divine_intent_beyond_literal_text).
 narrative_ontology:cs_axiom_status(divine_intent_beyond_literal_text, holdable).
-narrative_ontology:cs_axiom_grounding(hanafi_reading, divine_intent_beyond_literal_text, deontological).
-narrative_ontology:cs_reference_frame(hanafi_reading, early_hanafi_juristic_deliberation).
-narrative_ontology:cs_drift_state(hanafi_reading, contemporary_scholastic_commentary, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('b30bd033-d94c-4888-96b3-92811d9dc25c', divine_intent_beyond_literal_text, deontological).
+narrative_ontology:cs_reference_frame('b30bd033-d94c-4888-96b3-92811d9dc25c', early_hanafi_juristic_deliberation).
+narrative_ontology:cs_drift_state('b30bd033-d94c-4888-96b3-92811d9dc25c', contemporary_scholastic_commentary, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(hanafi_reading, hanafi_jurists_with_rationalist_training).

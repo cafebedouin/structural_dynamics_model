@@ -119,18 +119,20 @@ narrative_ontology:topic_domain(infrastructure_reading, "monetary_theory/financi
 domain_priors:requires_active_enforcement(infrastructure_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(infrastructure_reading, formalized).
-narrative_ontology:cs_authority_grounding(infrastructure_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(infrastructure_reading).
+narrative_ontology:cs_story_uid(infrastructure_reading, '24bd5ce1-571b-4144-9836-cc5680f51823').
+narrative_ontology:cs_created_at('24bd5ce1-571b-4144-9836-cc5680f51823', '').
+narrative_ontology:cs_kernel_codification('24bd5ce1-571b-4144-9836-cc5680f51823', formalized).
+narrative_ontology:cs_authority_grounding('24bd5ce1-571b-4144-9836-cc5680f51823', extraction).
+narrative_ontology:cs_interpretation_layer_present('24bd5ce1-571b-4144-9836-cc5680f51823').
 narrative_ontology:cs_kernel_id(infrastructure_reading, digital_money_origin).
-narrative_ontology:cs_reading_relation(infrastructure_reading, digital_money_consumer_access_reading, coexists_with).
-narrative_ontology:cs_reading_relation(infrastructure_reading, digital_money_peer_to_peer_reading, coexists_with).
-narrative_ontology:cs_axiom(infrastructure_reading, foundational, digital_money_institutional_infrastructure_constitutive).
+narrative_ontology:cs_reading_relation('24bd5ce1-571b-4144-9836-cc5680f51823', digital_money_consumer_access_reading, coexists_with).
+narrative_ontology:cs_reading_relation('24bd5ce1-571b-4144-9836-cc5680f51823', digital_money_peer_to_peer_reading, coexists_with).
+narrative_ontology:cs_axiom('24bd5ce1-571b-4144-9836-cc5680f51823', foundational, digital_money_institutional_infrastructure_constitutive).
 narrative_ontology:cs_axiom_status(digital_money_institutional_infrastructure_constitutive, holdable).
-narrative_ontology:cs_axiom(infrastructure_reading, foundational, settlement_requires_centralized_ledger).
+narrative_ontology:cs_axiom('24bd5ce1-571b-4144-9836-cc5680f51823', foundational, settlement_requires_centralized_ledger).
 narrative_ontology:cs_axiom_status(settlement_requires_centralized_ledger, overridden).
-narrative_ontology:cs_reference_frame(infrastructure_reading, institutional_infrastructure_monopoly).
-narrative_ontology:cs_drift_state(infrastructure_reading, blockchain_technical_maturation_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('24bd5ce1-571b-4144-9836-cc5680f51823', institutional_infrastructure_monopoly).
+narrative_ontology:cs_drift_state('24bd5ce1-571b-4144-9836-cc5680f51823', blockchain_technical_maturation_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(infrastructure_reading, deposit_taking_institutions).

@@ -121,20 +121,22 @@ narrative_ontology:topic_domain(spontaneous_order_reading, "political_economy/in
 domain_priors:requires_active_enforcement(spontaneous_order_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(spontaneous_order_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(spontaneous_order_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(spontaneous_order_reading).
+narrative_ontology:cs_story_uid(spontaneous_order_reading, '10c17d13-908c-424f-9331-4e5acf9c5c14').
+narrative_ontology:cs_created_at('10c17d13-908c-424f-9331-4e5acf9c5c14', '').
+narrative_ontology:cs_kernel_codification('10c17d13-908c-424f-9331-4e5acf9c5c14', fixed_text).
+narrative_ontology:cs_authority_grounding('10c17d13-908c-424f-9331-4e5acf9c5c14', lineage).
+narrative_ontology:cs_interpretation_layer_present('10c17d13-908c-424f-9331-4e5acf9c5c14').
 narrative_ontology:cs_kernel_id(spontaneous_order_reading, market_as_natural_default).
-narrative_ontology:cs_reading_relation(spontaneous_order_reading, engineered_infrastructure_reading, coexists_with).
-narrative_ontology:cs_reading_relation(spontaneous_order_reading, beneficiary_maintenance_reading, influences).
-narrative_ontology:cs_axiom(spontaneous_order_reading, foundational, voluntary_exchange_natural_default).
+narrative_ontology:cs_reading_relation('10c17d13-908c-424f-9331-4e5acf9c5c14', engineered_infrastructure_reading, coexists_with).
+narrative_ontology:cs_reading_relation('10c17d13-908c-424f-9331-4e5acf9c5c14', beneficiary_maintenance_reading, influences).
+narrative_ontology:cs_axiom('10c17d13-908c-424f-9331-4e5acf9c5c14', foundational, voluntary_exchange_natural_default).
 narrative_ontology:cs_axiom_status(voluntary_exchange_natural_default, holdable).
-narrative_ontology:cs_axiom_grounding(spontaneous_order_reading, voluntary_exchange_natural_default, conventional).
-narrative_ontology:cs_axiom(spontaneous_order_reading, foundational, state_intervention_artificial_imposition).
+narrative_ontology:cs_axiom_grounding('10c17d13-908c-424f-9331-4e5acf9c5c14', voluntary_exchange_natural_default, conventional).
+narrative_ontology:cs_axiom('10c17d13-908c-424f-9331-4e5acf9c5c14', foundational, state_intervention_artificial_imposition).
 narrative_ontology:cs_axiom_status(state_intervention_artificial_imposition, holdable).
-narrative_ontology:cs_axiom_grounding(spontaneous_order_reading, state_intervention_artificial_imposition, deontological).
-narrative_ontology:cs_reference_frame(spontaneous_order_reading, natural_market_equilibrium).
-narrative_ontology:cs_drift_state(spontaneous_order_reading, contemporary_post_crisis_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('10c17d13-908c-424f-9331-4e5acf9c5c14', state_intervention_artificial_imposition, deontological).
+narrative_ontology:cs_reference_frame('10c17d13-908c-424f-9331-4e5acf9c5c14', natural_market_equilibrium).
+narrative_ontology:cs_drift_state('10c17d13-908c-424f-9331-4e5acf9c5c14', contemporary_post_crisis_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(spontaneous_order_reading, market_participants_with_low_regulation_exposure).

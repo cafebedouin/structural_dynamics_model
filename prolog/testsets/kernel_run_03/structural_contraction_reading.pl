@@ -121,20 +121,22 @@ narrative_ontology:human_readable(structural_contraction_reading, "Nuclear Impos
 narrative_ontology:topic_domain(structural_contraction_reading, "strategic_studies/nuclear_deterrence/international_relations").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(structural_contraction_reading, distributed).
-narrative_ontology:cs_authority_grounding(structural_contraction_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(structural_contraction_reading).
+narrative_ontology:cs_story_uid(structural_contraction_reading, '225daf9b-5abd-473f-8aeb-6d0dc309e1a9').
+narrative_ontology:cs_created_at('225daf9b-5abd-473f-8aeb-6d0dc309e1a9', '').
+narrative_ontology:cs_kernel_codification('225daf9b-5abd-473f-8aeb-6d0dc309e1a9', distributed).
+narrative_ontology:cs_authority_grounding('225daf9b-5abd-473f-8aeb-6d0dc309e1a9', extraction).
+narrative_ontology:cs_interpretation_layer_present('225daf9b-5abd-473f-8aeb-6d0dc309e1a9').
 narrative_ontology:cs_kernel_id(structural_contraction_reading, nuclear_impossibility_kernel).
-narrative_ontology:cs_reading_relation(structural_contraction_reading, rational_dropout_reading, coexists_with).
-narrative_ontology:cs_reading_relation(structural_contraction_reading, credibility_paradox_reading, influences).
-narrative_ontology:cs_axiom(structural_contraction_reading, foundational, war_exits_reachable_set).
+narrative_ontology:cs_reading_relation('225daf9b-5abd-473f-8aeb-6d0dc309e1a9', rational_dropout_reading, coexists_with).
+narrative_ontology:cs_reading_relation('225daf9b-5abd-473f-8aeb-6d0dc309e1a9', credibility_paradox_reading, influences).
+narrative_ontology:cs_axiom('225daf9b-5abd-473f-8aeb-6d0dc309e1a9', foundational, war_exits_reachable_set).
 narrative_ontology:cs_axiom_status(war_exits_reachable_set, holdable).
-narrative_ontology:cs_axiom_grounding(structural_contraction_reading, war_exits_reachable_set, empirically_contingent).
-narrative_ontology:cs_axiom(structural_contraction_reading, foundational, proxy_wars_are_substitution_not_continuation).
+narrative_ontology:cs_axiom_grounding('225daf9b-5abd-473f-8aeb-6d0dc309e1a9', war_exits_reachable_set, empirically_contingent).
+narrative_ontology:cs_axiom('225daf9b-5abd-473f-8aeb-6d0dc309e1a9', foundational, proxy_wars_are_substitution_not_continuation).
 narrative_ontology:cs_axiom_status(proxy_wars_are_substitution_not_continuation, holdable).
-narrative_ontology:cs_axiom_grounding(structural_contraction_reading, proxy_wars_are_substitution_not_continuation, empirically_contingent).
-narrative_ontology:cs_reference_frame(structural_contraction_reading, classical_war_rationality).
-narrative_ontology:cs_drift_state(structural_contraction_reading, post_nuclear_arsenal_proliferation, gap(axiom_overriding, severe, false)).
+narrative_ontology:cs_axiom_grounding('225daf9b-5abd-473f-8aeb-6d0dc309e1a9', proxy_wars_are_substitution_not_continuation, empirically_contingent).
+narrative_ontology:cs_reference_frame('225daf9b-5abd-473f-8aeb-6d0dc309e1a9', classical_war_rationality).
+narrative_ontology:cs_drift_state('225daf9b-5abd-473f-8aeb-6d0dc309e1a9', post_nuclear_arsenal_proliferation, gap(axiom_overriding, severe, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(structural_contraction_reading, strategic_statecraft).

@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(complete_labor_market_integration_technically_necessary, member_state_welfare_control_essential).
 narrative_ontology:cs_axiom_contradiction(member_state_welfare_control_essential, complete_labor_market_integration_technically_necessary).
+narrative_ontology:cs_story_uid(federation_membership_kernel_contradictions, 'fcbcfb4b-73d7-45e7-b585-505433e0c21b').
+narrative_ontology:cs_created_at('fcbcfb4b-73d7-45e7-b585-505433e0c21b', '').

@@ -125,22 +125,24 @@ narrative_ontology:topic_domain(statutory_term_limit_mountain, "legal_history/in
 domain_priors:emerges_naturally(statutory_term_limit_mountain).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(statutory_term_limit_mountain, formalized).
-narrative_ontology:cs_authority_grounding(statutory_term_limit_mountain, lineage).
-narrative_ontology:cs_interpretation_layer_present(statutory_term_limit_mountain).
-narrative_ontology:cs_reading_relation(statutory_term_limit_mountain, copyright_natural_law_reading, forecloses).
-narrative_ontology:cs_reading_relation(statutory_term_limit_mountain, perpetual_copyright_variant, forecloses).
-narrative_ontology:cs_axiom(statutory_term_limit_mountain, foundational, copyright_must_have_temporal_boundary).
+narrative_ontology:cs_story_uid(statutory_term_limit_mountain, 'de67bfdf-9e4a-428b-bd81-dce33fc74cd8').
+narrative_ontology:cs_created_at('de67bfdf-9e4a-428b-bd81-dce33fc74cd8', '').
+narrative_ontology:cs_kernel_codification('de67bfdf-9e4a-428b-bd81-dce33fc74cd8', formalized).
+narrative_ontology:cs_authority_grounding('de67bfdf-9e4a-428b-bd81-dce33fc74cd8', lineage).
+narrative_ontology:cs_interpretation_layer_present('de67bfdf-9e4a-428b-bd81-dce33fc74cd8').
+narrative_ontology:cs_reading_relation('de67bfdf-9e4a-428b-bd81-dce33fc74cd8', copyright_natural_law_reading, forecloses).
+narrative_ontology:cs_reading_relation('de67bfdf-9e4a-428b-bd81-dce33fc74cd8', perpetual_copyright_variant, forecloses).
+narrative_ontology:cs_axiom('de67bfdf-9e4a-428b-bd81-dce33fc74cd8', foundational, copyright_must_have_temporal_boundary).
 narrative_ontology:cs_axiom_status(copyright_must_have_temporal_boundary, holdable).
-narrative_ontology:cs_axiom_grounding(statutory_term_limit_mountain, copyright_must_have_temporal_boundary, deontological).
-narrative_ontology:cs_axiom(statutory_term_limit_mountain, foundational, monopoly_perpetuity_creates_feudal_exclusion).
+narrative_ontology:cs_axiom_grounding('de67bfdf-9e4a-428b-bd81-dce33fc74cd8', copyright_must_have_temporal_boundary, deontological).
+narrative_ontology:cs_axiom('de67bfdf-9e4a-428b-bd81-dce33fc74cd8', foundational, monopoly_perpetuity_creates_feudal_exclusion).
 narrative_ontology:cs_axiom_status(monopoly_perpetuity_creates_feudal_exclusion, holdable).
-narrative_ontology:cs_axiom_grounding(statutory_term_limit_mountain, monopoly_perpetuity_creates_feudal_exclusion, empirically_contingent).
-narrative_ontology:cs_axiom(statutory_term_limit_mountain, secondary, authors_deserve_limited_exclusive_rights).
+narrative_ontology:cs_axiom_grounding('de67bfdf-9e4a-428b-bd81-dce33fc74cd8', monopoly_perpetuity_creates_feudal_exclusion, empirically_contingent).
+narrative_ontology:cs_axiom('de67bfdf-9e4a-428b-bd81-dce33fc74cd8', secondary, authors_deserve_limited_exclusive_rights).
 narrative_ontology:cs_axiom_status(authors_deserve_limited_exclusive_rights, holdable).
-narrative_ontology:cs_axiom_grounding(statutory_term_limit_mountain, authors_deserve_limited_exclusive_rights, deontological).
-narrative_ontology:cs_reference_frame(statutory_term_limit_mountain, statute_of_anne_monopoly_prevention).
-narrative_ontology:cs_drift_state(statutory_term_limit_mountain, contemporary_copyright_extension_equilibrium, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('de67bfdf-9e4a-428b-bd81-dce33fc74cd8', authors_deserve_limited_exclusive_rights, deontological).
+narrative_ontology:cs_reference_frame('de67bfdf-9e4a-428b-bd81-dce33fc74cd8', statute_of_anne_monopoly_prevention).
+narrative_ontology:cs_drift_state('de67bfdf-9e4a-428b-bd81-dce33fc74cd8', contemporary_copyright_extension_equilibrium, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 % No enrichment needed. As a Mountain (physical limit), this constraint does

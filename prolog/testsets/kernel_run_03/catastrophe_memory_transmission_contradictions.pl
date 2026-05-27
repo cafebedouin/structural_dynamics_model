@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(bounded_ritual_containment_enables_survival, survival_knowledge_foundational_identity).
 narrative_ontology:cs_axiom_contradiction(survival_knowledge_foundational_identity, bounded_ritual_containment_enables_survival).
+narrative_ontology:cs_story_uid(catastrophe_memory_transmission_contradictions, 'e594b550-b8c1-4a39-95c3-3f7cf071a134').
+narrative_ontology:cs_created_at('e594b550-b8c1-4a39-95c3-3f7cf071a134', '').

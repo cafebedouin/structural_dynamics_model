@@ -121,18 +121,20 @@ narrative_ontology:topic_domain(spatial_enforcement_mechanism, "disaster_anthrop
 domain_priors:requires_active_enforcement(spatial_enforcement_mechanism).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(spatial_enforcement_mechanism, fixed_text).
-narrative_ontology:cs_authority_grounding(spatial_enforcement_mechanism, lineage).
-narrative_ontology:cs_interpretation_layer_present(spatial_enforcement_mechanism).
+narrative_ontology:cs_story_uid(spatial_enforcement_mechanism, '05d6d608-4f6d-4b2a-820f-0fd0c8b7dd3e').
+narrative_ontology:cs_created_at('05d6d608-4f6d-4b2a-820f-0fd0c8b7dd3e', '').
+narrative_ontology:cs_kernel_codification('05d6d608-4f6d-4b2a-820f-0fd0c8b7dd3e', fixed_text).
+narrative_ontology:cs_authority_grounding('05d6d608-4f6d-4b2a-820f-0fd0c8b7dd3e', lineage).
+narrative_ontology:cs_interpretation_layer_present('05d6d608-4f6d-4b2a-820f-0fd0c8b7dd3e').
 narrative_ontology:cs_kernel_id(spatial_enforcement_mechanism, stone_land_use_rule).
-narrative_ontology:cs_axiom(spatial_enforcement_mechanism, foundational, stone_inscribed_rules_as_social_construction).
+narrative_ontology:cs_axiom('05d6d608-4f6d-4b2a-820f-0fd0c8b7dd3e', foundational, stone_inscribed_rules_as_social_construction).
 narrative_ontology:cs_axiom_status(stone_inscribed_rules_as_social_construction, holdable).
-narrative_ontology:cs_axiom_grounding(spatial_enforcement_mechanism, stone_inscribed_rules_as_social_construction, deontological).
-narrative_ontology:cs_axiom(spatial_enforcement_mechanism, secondary, extractiveness_contingent_on_knowledge_asymmetry).
+narrative_ontology:cs_axiom_grounding('05d6d608-4f6d-4b2a-820f-0fd0c8b7dd3e', stone_inscribed_rules_as_social_construction, deontological).
+narrative_ontology:cs_axiom('05d6d608-4f6d-4b2a-820f-0fd0c8b7dd3e', secondary, extractiveness_contingent_on_knowledge_asymmetry).
 narrative_ontology:cs_axiom_status(extractiveness_contingent_on_knowledge_asymmetry, holdable).
-narrative_ontology:cs_axiom_grounding(spatial_enforcement_mechanism, extractiveness_contingent_on_knowledge_asymmetry, empirically_contingent).
-narrative_ontology:cs_reference_frame(spatial_enforcement_mechanism, spatial_rules_as_community_covenant).
-narrative_ontology:cs_drift_state(spatial_enforcement_mechanism, post_disaster_environmental_mismatch, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('05d6d608-4f6d-4b2a-820f-0fd0c8b7dd3e', extractiveness_contingent_on_knowledge_asymmetry, empirically_contingent).
+narrative_ontology:cs_reference_frame('05d6d608-4f6d-4b2a-820f-0fd0c8b7dd3e', spatial_rules_as_community_covenant).
+narrative_ontology:cs_drift_state('05d6d608-4f6d-4b2a-820f-0fd0c8b7dd3e', post_disaster_environmental_mismatch, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(spatial_enforcement_mechanism, long_term_survivors).

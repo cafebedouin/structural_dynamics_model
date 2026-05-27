@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(council_texts_encode_factional_compromise, development_preserves_substance).
 narrative_ontology:cs_axiom_contradiction(development_preserves_substance, council_texts_encode_factional_compromise).
+narrative_ontology:cs_story_uid(vatican_ii_authority_contradictions, '2d1ed570-9a2d-4b2e-b5d5-16b360ca4597').
+narrative_ontology:cs_created_at('2d1ed570-9a2d-4b2e-b5d5-16b360ca4597', '').

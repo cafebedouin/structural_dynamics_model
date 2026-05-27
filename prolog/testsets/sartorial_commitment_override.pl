@@ -113,9 +113,11 @@ narrative_ontology:topic_domain(sartorial_commitment_override, "historical_socio
 domain_priors:requires_active_enforcement(sartorial_commitment_override).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(sartorial_commitment_override, formalized).
-narrative_ontology:cs_authority_grounding(sartorial_commitment_override, extraction).
-narrative_ontology:cs_interpretation_layer_present(sartorial_commitment_override).
+narrative_ontology:cs_story_uid(sartorial_commitment_override, 'e715c5a5-b31f-4c64-ae24-9b403617bc09').
+narrative_ontology:cs_created_at('e715c5a5-b31f-4c64-ae24-9b403617bc09', '').
+narrative_ontology:cs_kernel_codification('e715c5a5-b31f-4c64-ae24-9b403617bc09', formalized).
+narrative_ontology:cs_authority_grounding('e715c5a5-b31f-4c64-ae24-9b403617bc09', extraction).
+narrative_ontology:cs_interpretation_layer_present('e715c5a5-b31f-4c64-ae24-9b403617bc09').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(sartorial_commitment_override, meiji_state_apparatus).

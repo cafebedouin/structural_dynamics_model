@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(competence_locus_is_institutional_infrastructure, embodied_knowledge_non_substitutable).
 narrative_ontology:cs_axiom_contradiction(embodied_knowledge_non_substitutable, competence_locus_is_institutional_infrastructure).
+narrative_ontology:cs_story_uid(preparedness_retention_contradictions, 'cc3b6bbd-0310-4fdd-a5cb-86a3b21f92de').
+narrative_ontology:cs_created_at('cc3b6bbd-0310-4fdd-a5cb-86a3b21f92de', '').

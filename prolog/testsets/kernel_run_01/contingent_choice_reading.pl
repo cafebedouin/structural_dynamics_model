@@ -118,17 +118,19 @@ narrative_ontology:topic_domain(contingent_choice_reading, "monetary_economics/p
 domain_priors:requires_active_enforcement(contingent_choice_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(contingent_choice_reading, distributed).
-narrative_ontology:cs_authority_grounding(contingent_choice_reading, expertise).
+narrative_ontology:cs_story_uid(contingent_choice_reading, '00c416d4-cba4-433c-85f0-a4712668fdff').
+narrative_ontology:cs_created_at('00c416d4-cba4-433c-85f0-a4712668fdff', '').
+narrative_ontology:cs_kernel_codification('00c416d4-cba4-433c-85f0-a4712668fdff', distributed).
+narrative_ontology:cs_authority_grounding('00c416d4-cba4-433c-85f0-a4712668fdff', expertise).
 narrative_ontology:cs_kernel_id(contingent_choice_reading, transition_causality).
-narrative_ontology:cs_reading_relation(contingent_choice_reading, overdetermined_collapse_reading, coexists_with).
-narrative_ontology:cs_reading_relation(contingent_choice_reading, hybrid_trigger_reading, coexists_with).
-narrative_ontology:cs_axiom(contingent_choice_reading, foundational, policy_autonomy_in_transition).
+narrative_ontology:cs_reading_relation('00c416d4-cba4-433c-85f0-a4712668fdff', overdetermined_collapse_reading, coexists_with).
+narrative_ontology:cs_reading_relation('00c416d4-cba4-433c-85f0-a4712668fdff', hybrid_trigger_reading, coexists_with).
+narrative_ontology:cs_axiom('00c416d4-cba4-433c-85f0-a4712668fdff', foundational, policy_autonomy_in_transition).
 narrative_ontology:cs_axiom_status(policy_autonomy_in_transition, holdable).
-narrative_ontology:cs_axiom(contingent_choice_reading, foundational, alternative_policy_viability).
+narrative_ontology:cs_axiom('00c416d4-cba4-433c-85f0-a4712668fdff', foundational, alternative_policy_viability).
 narrative_ontology:cs_axiom_status(alternative_policy_viability, holdable).
-narrative_ontology:cs_reference_frame(contingent_choice_reading, constrained_u_s_monetary_autonomy).
-narrative_ontology:cs_drift_state(contingent_choice_reading, post_1971_floating_regime, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('00c416d4-cba4-433c-85f0-a4712668fdff', constrained_u_s_monetary_autonomy).
+narrative_ontology:cs_drift_state('00c416d4-cba4-433c-85f0-a4712668fdff', post_1971_floating_regime, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(contingent_choice_reading, us_monetary_autonomy).

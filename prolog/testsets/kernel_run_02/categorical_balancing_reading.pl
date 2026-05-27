@@ -125,20 +125,22 @@ narrative_ontology:topic_domain(categorical_balancing_reading, "constitutional_l
 domain_priors:requires_active_enforcement(categorical_balancing_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(categorical_balancing_reading, formalized).
-narrative_ontology:cs_authority_grounding(categorical_balancing_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(categorical_balancing_reading).
+narrative_ontology:cs_story_uid(categorical_balancing_reading, 'dbf9fc7d-27e7-4fea-bb66-aa641b3035f3').
+narrative_ontology:cs_created_at('dbf9fc7d-27e7-4fea-bb66-aa641b3035f3', '').
+narrative_ontology:cs_kernel_codification('dbf9fc7d-27e7-4fea-bb66-aa641b3035f3', formalized).
+narrative_ontology:cs_authority_grounding('dbf9fc7d-27e7-4fea-bb66-aa641b3035f3', lineage).
+narrative_ontology:cs_interpretation_layer_present('dbf9fc7d-27e7-4fea-bb66-aa641b3035f3').
 narrative_ontology:cs_kernel_id(categorical_balancing_reading, first_amendment_speech_protection).
-narrative_ontology:cs_reading_relation(categorical_balancing_reading, absolutist_reading, coexists_with).
-narrative_ontology:cs_reading_relation(categorical_balancing_reading, harm_limited_reading, influences).
-narrative_ontology:cs_axiom(categorical_balancing_reading, foundational, judicial_categories_necessary_for_predictability).
+narrative_ontology:cs_reading_relation('dbf9fc7d-27e7-4fea-bb66-aa641b3035f3', absolutist_reading, coexists_with).
+narrative_ontology:cs_reading_relation('dbf9fc7d-27e7-4fea-bb66-aa641b3035f3', harm_limited_reading, influences).
+narrative_ontology:cs_axiom('dbf9fc7d-27e7-4fea-bb66-aa641b3035f3', foundational, judicial_categories_necessary_for_predictability).
 narrative_ontology:cs_axiom_status(judicial_categories_necessary_for_predictability, holdable).
-narrative_ontology:cs_axiom_grounding(categorical_balancing_reading, judicial_categories_necessary_for_predictability, instrumental).
-narrative_ontology:cs_axiom(categorical_balancing_reading, foundational, judicial_integrity_requires_categorical_boundaries).
+narrative_ontology:cs_axiom_grounding('dbf9fc7d-27e7-4fea-bb66-aa641b3035f3', judicial_categories_necessary_for_predictability, instrumental).
+narrative_ontology:cs_axiom('dbf9fc7d-27e7-4fea-bb66-aa641b3035f3', foundational, judicial_integrity_requires_categorical_boundaries).
 narrative_ontology:cs_axiom_status(judicial_integrity_requires_categorical_boundaries, holdable).
-narrative_ontology:cs_axiom_grounding(categorical_balancing_reading, judicial_integrity_requires_categorical_boundaries, deontological).
-narrative_ontology:cs_reference_frame(categorical_balancing_reading, categorical_exclusion_stability).
-narrative_ontology:cs_drift_state(categorical_balancing_reading, contemporary_speech_diversity, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('dbf9fc7d-27e7-4fea-bb66-aa641b3035f3', judicial_integrity_requires_categorical_boundaries, deontological).
+narrative_ontology:cs_reference_frame('dbf9fc7d-27e7-4fea-bb66-aa641b3035f3', categorical_exclusion_stability).
+narrative_ontology:cs_drift_state('dbf9fc7d-27e7-4fea-bb66-aa641b3035f3', contemporary_speech_diversity, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(categorical_balancing_reading, institutional_judiciary).

@@ -120,18 +120,20 @@ narrative_ontology:topic_domain(monarchical_reading, "political_theory/constitut
 domain_priors:requires_active_enforcement(monarchical_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(monarchical_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(monarchical_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(monarchical_reading).
+narrative_ontology:cs_story_uid(monarchical_reading, 'f9e70798-ad30-4dcb-8d5a-83c69807422a').
+narrative_ontology:cs_created_at('f9e70798-ad30-4dcb-8d5a-83c69807422a', '').
+narrative_ontology:cs_kernel_codification('f9e70798-ad30-4dcb-8d5a-83c69807422a', fixed_text).
+narrative_ontology:cs_authority_grounding('f9e70798-ad30-4dcb-8d5a-83c69807422a', lineage).
+narrative_ontology:cs_interpretation_layer_present('f9e70798-ad30-4dcb-8d5a-83c69807422a').
 narrative_ontology:cs_kernel_id(monarchical_reading, sovereign_legitimacy).
-narrative_ontology:cs_reading_relation(monarchical_reading, republican_reading, coexists_with).
-narrative_ontology:cs_reading_relation(monarchical_reading, constitutional_hybrid_reading, influences).
-narrative_ontology:cs_axiom(monarchical_reading, foundational, inheritance_legitimacy_foundational).
+narrative_ontology:cs_reading_relation('f9e70798-ad30-4dcb-8d5a-83c69807422a', republican_reading, coexists_with).
+narrative_ontology:cs_reading_relation('f9e70798-ad30-4dcb-8d5a-83c69807422a', constitutional_hybrid_reading, influences).
+narrative_ontology:cs_axiom('f9e70798-ad30-4dcb-8d5a-83c69807422a', foundational, inheritance_legitimacy_foundational).
 narrative_ontology:cs_axiom_status(inheritance_legitimacy_foundational, holdable).
-narrative_ontology:cs_axiom(monarchical_reading, foundational, divine_authority_grounding).
+narrative_ontology:cs_axiom('f9e70798-ad30-4dcb-8d5a-83c69807422a', foundational, divine_authority_grounding).
 narrative_ontology:cs_axiom_status(divine_authority_grounding, holdable).
-narrative_ontology:cs_reference_frame(monarchical_reading, hereditary_divine_authority).
-narrative_ontology:cs_drift_state(monarchical_reading, contemporary_constitutional_era, gap(authority_erosion, substantial, true)).
+narrative_ontology:cs_reference_frame('f9e70798-ad30-4dcb-8d5a-83c69807422a', hereditary_divine_authority).
+narrative_ontology:cs_drift_state('f9e70798-ad30-4dcb-8d5a-83c69807422a', contemporary_constitutional_era, gap(authority_erosion, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(monarchical_reading, hereditary_elite).

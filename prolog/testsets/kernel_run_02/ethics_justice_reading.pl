@@ -116,19 +116,21 @@ narrative_ontology:topic_domain(ethics_justice_reading, "AI_governance/technolog
 domain_priors:requires_active_enforcement(ethics_justice_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(ethics_justice_reading, distributed).
-narrative_ontology:cs_authority_grounding(ethics_justice_reading, distributed).
+narrative_ontology:cs_story_uid(ethics_justice_reading, '7ec0a8cb-beab-4d0b-baaa-0a75ea72e13b').
+narrative_ontology:cs_created_at('7ec0a8cb-beab-4d0b-baaa-0a75ea72e13b', '').
+narrative_ontology:cs_kernel_codification('7ec0a8cb-beab-4d0b-baaa-0a75ea72e13b', distributed).
+narrative_ontology:cs_authority_grounding('7ec0a8cb-beab-4d0b-baaa-0a75ea72e13b', distributed).
 narrative_ontology:cs_kernel_id(ethics_justice_reading, ai_alignment_commitment).
-narrative_ontology:cs_reading_relation(ethics_justice_reading, safety_control_reading, coexists_with).
-narrative_ontology:cs_reading_relation(ethics_justice_reading, integrated_reading, influences).
-narrative_ontology:cs_axiom(ethics_justice_reading, foundational, present_day_bias_harm_immediate_priority).
+narrative_ontology:cs_reading_relation('7ec0a8cb-beab-4d0b-baaa-0a75ea72e13b', safety_control_reading, coexists_with).
+narrative_ontology:cs_reading_relation('7ec0a8cb-beab-4d0b-baaa-0a75ea72e13b', integrated_reading, influences).
+narrative_ontology:cs_axiom('7ec0a8cb-beab-4d0b-baaa-0a75ea72e13b', foundational, present_day_bias_harm_immediate_priority).
 narrative_ontology:cs_axiom_status(present_day_bias_harm_immediate_priority, holdable).
-narrative_ontology:cs_axiom_grounding(ethics_justice_reading, present_day_bias_harm_immediate_priority, deontological).
-narrative_ontology:cs_axiom(ethics_justice_reading, foundational, marginalized_community_voice_in_alignment_definition).
+narrative_ontology:cs_axiom_grounding('7ec0a8cb-beab-4d0b-baaa-0a75ea72e13b', present_day_bias_harm_immediate_priority, deontological).
+narrative_ontology:cs_axiom('7ec0a8cb-beab-4d0b-baaa-0a75ea72e13b', foundational, marginalized_community_voice_in_alignment_definition).
 narrative_ontology:cs_axiom_status(marginalized_community_voice_in_alignment_definition, holdable).
-narrative_ontology:cs_axiom_grounding(ethics_justice_reading, marginalized_community_voice_in_alignment_definition, conventional).
-narrative_ontology:cs_reference_frame(ethics_justice_reading, justice_centered_technology_governance).
-narrative_ontology:cs_drift_state(ethics_justice_reading, contemporary_ai_deployment_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('7ec0a8cb-beab-4d0b-baaa-0a75ea72e13b', marginalized_community_voice_in_alignment_definition, conventional).
+narrative_ontology:cs_reference_frame('7ec0a8cb-beab-4d0b-baaa-0a75ea72e13b', justice_centered_technology_governance).
+narrative_ontology:cs_drift_state('7ec0a8cb-beab-4d0b-baaa-0a75ea72e13b', contemporary_ai_deployment_era, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(ethics_justice_reading, marginalized_communities_at_risk_from_bias).

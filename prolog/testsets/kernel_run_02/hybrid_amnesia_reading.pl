@@ -127,23 +127,25 @@ narrative_ontology:topic_domain(hybrid_amnesia_reading, "political_economy/ideol
 domain_priors:requires_active_enforcement(hybrid_amnesia_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(hybrid_amnesia_reading, formalized).
-narrative_ontology:cs_authority_grounding(hybrid_amnesia_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(hybrid_amnesia_reading).
+narrative_ontology:cs_story_uid(hybrid_amnesia_reading, '0d8e0f9d-b301-4a71-979e-a5a8e238dd98').
+narrative_ontology:cs_created_at('0d8e0f9d-b301-4a71-979e-a5a8e238dd98', '').
+narrative_ontology:cs_kernel_codification('0d8e0f9d-b301-4a71-979e-a5a8e238dd98', formalized).
+narrative_ontology:cs_authority_grounding('0d8e0f9d-b301-4a71-979e-a5a8e238dd98', extraction).
+narrative_ontology:cs_interpretation_layer_present('0d8e0f9d-b301-4a71-979e-a5a8e238dd98').
 narrative_ontology:cs_kernel_id(hybrid_amnesia_reading, market_as_natural_default).
-narrative_ontology:cs_reading_relation(hybrid_amnesia_reading, lapsed_alternative_reading, coexists_with).
-narrative_ontology:cs_reading_relation(hybrid_amnesia_reading, beneficiary_maintained_reading, forecloses).
-narrative_ontology:cs_axiom(hybrid_amnesia_reading, foundational, amnesia_preceded_and_enabled_extraction).
+narrative_ontology:cs_reading_relation('0d8e0f9d-b301-4a71-979e-a5a8e238dd98', lapsed_alternative_reading, coexists_with).
+narrative_ontology:cs_reading_relation('0d8e0f9d-b301-4a71-979e-a5a8e238dd98', beneficiary_maintained_reading, forecloses).
+narrative_ontology:cs_axiom('0d8e0f9d-b301-4a71-979e-a5a8e238dd98', foundational, amnesia_preceded_and_enabled_extraction).
 narrative_ontology:cs_axiom_status(amnesia_preceded_and_enabled_extraction, holdable).
-narrative_ontology:cs_axiom_grounding(hybrid_amnesia_reading, amnesia_preceded_and_enabled_extraction, empirically_contingent).
-narrative_ontology:cs_axiom(hybrid_amnesia_reading, foundational, beneficiary_intentionality_in_suppression).
+narrative_ontology:cs_axiom_grounding('0d8e0f9d-b301-4a71-979e-a5a8e238dd98', amnesia_preceded_and_enabled_extraction, empirically_contingent).
+narrative_ontology:cs_axiom('0d8e0f9d-b301-4a71-979e-a5a8e238dd98', foundational, beneficiary_intentionality_in_suppression).
 narrative_ontology:cs_axiom_status(beneficiary_intentionality_in_suppression, holdable).
-narrative_ontology:cs_axiom_grounding(hybrid_amnesia_reading, beneficiary_intentionality_in_suppression, empirically_contingent).
-narrative_ontology:cs_axiom(hybrid_amnesia_reading, foundational, market_naturalness_contingent_on_epistemic_loss).
+narrative_ontology:cs_axiom_grounding('0d8e0f9d-b301-4a71-979e-a5a8e238dd98', beneficiary_intentionality_in_suppression, empirically_contingent).
+narrative_ontology:cs_axiom('0d8e0f9d-b301-4a71-979e-a5a8e238dd98', foundational, market_naturalness_contingent_on_epistemic_loss).
 narrative_ontology:cs_axiom_status(market_naturalness_contingent_on_epistemic_loss, holdable).
-narrative_ontology:cs_axiom_grounding(hybrid_amnesia_reading, market_naturalness_contingent_on_epistemic_loss, deontological).
-narrative_ontology:cs_reference_frame(hybrid_amnesia_reading, market_naturalness_institutional).
-narrative_ontology:cs_drift_state(hybrid_amnesia_reading, contemporary_post_crisis_rationalization, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('0d8e0f9d-b301-4a71-979e-a5a8e238dd98', market_naturalness_contingent_on_epistemic_loss, deontological).
+narrative_ontology:cs_reference_frame('0d8e0f9d-b301-4a71-979e-a5a8e238dd98', market_naturalness_institutional).
+narrative_ontology:cs_drift_state('0d8e0f9d-b301-4a71-979e-a5a8e238dd98', contemporary_post_crisis_rationalization, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(hybrid_amnesia_reading, finance_sector).

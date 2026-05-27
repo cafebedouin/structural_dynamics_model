@@ -124,20 +124,22 @@ narrative_ontology:topic_domain(rupture_progressive_reading, "ecclesiology/insti
 domain_priors:requires_active_enforcement(rupture_progressive_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(rupture_progressive_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(rupture_progressive_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(rupture_progressive_reading).
+narrative_ontology:cs_story_uid(rupture_progressive_reading, 'ec92b071-deb9-446f-9487-b0a1b56da3e4').
+narrative_ontology:cs_created_at('ec92b071-deb9-446f-9487-b0a1b56da3e4', '').
+narrative_ontology:cs_kernel_codification('ec92b071-deb9-446f-9487-b0a1b56da3e4', fixed_text).
+narrative_ontology:cs_authority_grounding('ec92b071-deb9-446f-9487-b0a1b56da3e4', lineage).
+narrative_ontology:cs_interpretation_layer_present('ec92b071-deb9-446f-9487-b0a1b56da3e4').
 narrative_ontology:cs_kernel_id(rupture_progressive_reading, vatican_ii_doctrinal_authority).
-narrative_ontology:cs_reading_relation(rupture_progressive_reading, continuity_reading, coexists_with).
-narrative_ontology:cs_reading_relation(rupture_progressive_reading, rupture_traditionalist_reading, forecloses).
-narrative_ontology:cs_axiom(rupture_progressive_reading, foundational, vatican_ii_as_necessary_rupture).
+narrative_ontology:cs_reading_relation('ec92b071-deb9-446f-9487-b0a1b56da3e4', continuity_reading, coexists_with).
+narrative_ontology:cs_reading_relation('ec92b071-deb9-446f-9487-b0a1b56da3e4', rupture_traditionalist_reading, forecloses).
+narrative_ontology:cs_axiom('ec92b071-deb9-446f-9487-b0a1b56da3e4', foundational, vatican_ii_as_necessary_rupture).
 narrative_ontology:cs_axiom_status(vatican_ii_as_necessary_rupture, holdable).
-narrative_ontology:cs_axiom_grounding(rupture_progressive_reading, vatican_ii_as_necessary_rupture, instrumental).
-narrative_ontology:cs_axiom(rupture_progressive_reading, foundational, spirit_exceeds_text_authority).
+narrative_ontology:cs_axiom_grounding('ec92b071-deb9-446f-9487-b0a1b56da3e4', vatican_ii_as_necessary_rupture, instrumental).
+narrative_ontology:cs_axiom('ec92b071-deb9-446f-9487-b0a1b56da3e4', foundational, spirit_exceeds_text_authority).
 narrative_ontology:cs_axiom_status(spirit_exceeds_text_authority, overridden).
-narrative_ontology:cs_axiom_grounding(rupture_progressive_reading, spirit_exceeds_text_authority, deontological).
-narrative_ontology:cs_reference_frame(rupture_progressive_reading, conciliar_authorization_of_institutional_flexibility).
-narrative_ontology:cs_drift_state(rupture_progressive_reading, post_john_paul_ii_era, gap(authority_erosion, substantial, true)).
+narrative_ontology:cs_axiom_grounding('ec92b071-deb9-446f-9487-b0a1b56da3e4', spirit_exceeds_text_authority, deontological).
+narrative_ontology:cs_reference_frame('ec92b071-deb9-446f-9487-b0a1b56da3e4', conciliar_authorization_of_institutional_flexibility).
+narrative_ontology:cs_drift_state('ec92b071-deb9-446f-9487-b0a1b56da3e4', post_john_paul_ii_era, gap(authority_erosion, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(rupture_progressive_reading, progressive_theological_faction).

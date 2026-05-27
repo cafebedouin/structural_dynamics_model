@@ -127,20 +127,22 @@ narrative_ontology:topic_domain(performance_only, "religious_studies/rabbinic_ju
 domain_priors:requires_active_enforcement(performance_only).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(performance_only, fixed_text).
-narrative_ontology:cs_authority_grounding(performance_only, extraction).
-narrative_ontology:cs_interpretation_layer_present(performance_only).
+narrative_ontology:cs_story_uid(performance_only, '736852bb-0c69-4310-ac83-81a89cecd07e').
+narrative_ontology:cs_created_at('736852bb-0c69-4310-ac83-81a89cecd07e', '').
+narrative_ontology:cs_kernel_codification('736852bb-0c69-4310-ac83-81a89cecd07e', fixed_text).
+narrative_ontology:cs_authority_grounding('736852bb-0c69-4310-ac83-81a89cecd07e', extraction).
+narrative_ontology:cs_interpretation_layer_present('736852bb-0c69-4310-ac83-81a89cecd07e').
 narrative_ontology:cs_kernel_id(performance_only, kodashim_corpus).
-narrative_ontology:cs_reading_relation(performance_only, study_as_exercise, coexists_with).
-narrative_ontology:cs_reading_relation(performance_only, substitution_archive, coexists_with).
-narrative_ontology:cs_axiom(performance_only, foundational, performance_validates_law).
+narrative_ontology:cs_reading_relation('736852bb-0c69-4310-ac83-81a89cecd07e', study_as_exercise, coexists_with).
+narrative_ontology:cs_reading_relation('736852bb-0c69-4310-ac83-81a89cecd07e', substitution_archive, coexists_with).
+narrative_ontology:cs_axiom('736852bb-0c69-4310-ac83-81a89cecd07e', foundational, performance_validates_law).
 narrative_ontology:cs_axiom_status(performance_validates_law, holdable).
-narrative_ontology:cs_axiom_grounding(performance_only, performance_validates_law, deontological).
-narrative_ontology:cs_axiom(performance_only, foundational, deferred_messianic_restoration).
+narrative_ontology:cs_axiom_grounding('736852bb-0c69-4310-ac83-81a89cecd07e', performance_validates_law, deontological).
+narrative_ontology:cs_axiom('736852bb-0c69-4310-ac83-81a89cecd07e', foundational, deferred_messianic_restoration).
 narrative_ontology:cs_axiom_status(deferred_messianic_restoration, holdable).
-narrative_ontology:cs_axiom_grounding(performance_only, deferred_messianic_restoration, theological).
-narrative_ontology:cs_reference_frame(performance_only, textual_preservation_for_restoration).
-narrative_ontology:cs_drift_state(performance_only, contemporary_post_temple_indefinite, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('736852bb-0c69-4310-ac83-81a89cecd07e', deferred_messianic_restoration, theological).
+narrative_ontology:cs_reference_frame('736852bb-0c69-4310-ac83-81a89cecd07e', textual_preservation_for_restoration).
+narrative_ontology:cs_drift_state('736852bb-0c69-4310-ac83-81a89cecd07e', contemporary_post_temple_indefinite, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(performance_only, messianic_preparation_institutions).

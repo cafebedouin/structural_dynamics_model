@@ -121,19 +121,21 @@ narrative_ontology:topic_domain(maliki_reading, "islamic_jurisprudence/legal_phi
 domain_priors:requires_active_enforcement(maliki_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(maliki_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(maliki_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(maliki_reading).
+narrative_ontology:cs_story_uid(maliki_reading, '64958c2e-84b2-43eb-b1b0-4a7d34554bad').
+narrative_ontology:cs_created_at('64958c2e-84b2-43eb-b1b0-4a7d34554bad', '').
+narrative_ontology:cs_kernel_codification('64958c2e-84b2-43eb-b1b0-4a7d34554bad', fixed_text).
+narrative_ontology:cs_authority_grounding('64958c2e-84b2-43eb-b1b0-4a7d34554bad', lineage).
+narrative_ontology:cs_interpretation_layer_present('64958c2e-84b2-43eb-b1b0-4a7d34554bad').
 narrative_ontology:cs_kernel_id(maliki_reading, jurisprudential_method_kernel).
-narrative_ontology:cs_reading_relation(maliki_reading, hanafi_reading, coexists_with).
-narrative_ontology:cs_reading_relation(maliki_reading, shafii_reading, coexists_with).
-narrative_ontology:cs_reading_relation(maliki_reading, hanbali_reading, coexists_with).
-narrative_ontology:cs_axiom(maliki_reading, foundational, medinan_practice_epistemically_privileged).
+narrative_ontology:cs_reading_relation('64958c2e-84b2-43eb-b1b0-4a7d34554bad', hanafi_reading, coexists_with).
+narrative_ontology:cs_reading_relation('64958c2e-84b2-43eb-b1b0-4a7d34554bad', shafii_reading, coexists_with).
+narrative_ontology:cs_reading_relation('64958c2e-84b2-43eb-b1b0-4a7d34554bad', hanbali_reading, coexists_with).
+narrative_ontology:cs_axiom('64958c2e-84b2-43eb-b1b0-4a7d34554bad', foundational, medinan_practice_epistemically_privileged).
 narrative_ontology:cs_axiom_status(medinan_practice_epistemically_privileged, holdable).
-narrative_ontology:cs_axiom(maliki_reading, foundational, living_tradition_as_law_source).
+narrative_ontology:cs_axiom('64958c2e-84b2-43eb-b1b0-4a7d34554bad', foundational, living_tradition_as_law_source).
 narrative_ontology:cs_axiom_status(living_tradition_as_law_source, holdable).
-narrative_ontology:cs_reference_frame(maliki_reading, medinan_scholarly_consensus).
-narrative_ontology:cs_drift_state(maliki_reading, contemporary_legal_pluralism, gap(authority_erosion, substantial, true)).
+narrative_ontology:cs_reference_frame('64958c2e-84b2-43eb-b1b0-4a7d34554bad', medinan_scholarly_consensus).
+narrative_ontology:cs_drift_state('64958c2e-84b2-43eb-b1b0-4a7d34554bad', contemporary_legal_pluralism, gap(authority_erosion, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(maliki_reading, medinan_scholarly_lineage).

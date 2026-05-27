@@ -125,20 +125,22 @@ narrative_ontology:topic_domain(republican_reading, "political_philosophy/consti
 domain_priors:requires_active_enforcement(republican_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(republican_reading, formalized).
-narrative_ontology:cs_authority_grounding(republican_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(republican_reading).
+narrative_ontology:cs_story_uid(republican_reading, '0ae28522-3351-487e-940e-ea8391f71613').
+narrative_ontology:cs_created_at('0ae28522-3351-487e-940e-ea8391f71613', '').
+narrative_ontology:cs_kernel_codification('0ae28522-3351-487e-940e-ea8391f71613', formalized).
+narrative_ontology:cs_authority_grounding('0ae28522-3351-487e-940e-ea8391f71613', lineage).
+narrative_ontology:cs_interpretation_layer_present('0ae28522-3351-487e-940e-ea8391f71613').
 narrative_ontology:cs_kernel_id(republican_reading, sovereign_legitimacy).
-narrative_ontology:cs_reading_relation(republican_reading, monarchical_reading, forecloses).
-narrative_ontology:cs_reading_relation(republican_reading, constitutional_hybrid_reading, influences).
-narrative_ontology:cs_axiom(republican_reading, foundational, popular_consent_as_legitimacy_source).
+narrative_ontology:cs_reading_relation('0ae28522-3351-487e-940e-ea8391f71613', monarchical_reading, forecloses).
+narrative_ontology:cs_reading_relation('0ae28522-3351-487e-940e-ea8391f71613', constitutional_hybrid_reading, influences).
+narrative_ontology:cs_axiom('0ae28522-3351-487e-940e-ea8391f71613', foundational, popular_consent_as_legitimacy_source).
 narrative_ontology:cs_axiom_status(popular_consent_as_legitimacy_source, holdable).
-narrative_ontology:cs_axiom_grounding(republican_reading, popular_consent_as_legitimacy_source, deontological).
-narrative_ontology:cs_axiom(republican_reading, foundational, electoral_revocability_constitutes_accountability).
+narrative_ontology:cs_axiom_grounding('0ae28522-3351-487e-940e-ea8391f71613', popular_consent_as_legitimacy_source, deontological).
+narrative_ontology:cs_axiom('0ae28522-3351-487e-940e-ea8391f71613', foundational, electoral_revocability_constitutes_accountability).
 narrative_ontology:cs_axiom_status(electoral_revocability_constitutes_accountability, holdable).
-narrative_ontology:cs_axiom_grounding(republican_reading, electoral_revocability_constitutes_accountability, empirically_contingent).
-narrative_ontology:cs_reference_frame(republican_reading, popular_sovereign_authority).
-narrative_ontology:cs_drift_state(republican_reading, contemporary_democratic_institutions, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('0ae28522-3351-487e-940e-ea8391f71613', electoral_revocability_constitutes_accountability, empirically_contingent).
+narrative_ontology:cs_reference_frame('0ae28522-3351-487e-940e-ea8391f71613', popular_sovereign_authority).
+narrative_ontology:cs_drift_state('0ae28522-3351-487e-940e-ea8391f71613', contemporary_democratic_institutions, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(republican_reading, participating_citizens).

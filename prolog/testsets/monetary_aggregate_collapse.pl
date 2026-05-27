@@ -116,8 +116,10 @@ narrative_ontology:topic_domain(monetary_aggregate_collapse, "monetary_economics
 domain_priors:requires_active_enforcement(monetary_aggregate_collapse).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(monetary_aggregate_collapse, distributed).
-narrative_ontology:cs_authority_grounding(monetary_aggregate_collapse, distributed).
+narrative_ontology:cs_story_uid(monetary_aggregate_collapse, 'bde2b766-6818-4300-9a6a-f1846b3936c2').
+narrative_ontology:cs_created_at('bde2b766-6818-4300-9a6a-f1846b3936c2', '').
+narrative_ontology:cs_kernel_codification('bde2b766-6818-4300-9a6a-f1846b3936c2', distributed).
+narrative_ontology:cs_authority_grounding('bde2b766-6818-4300-9a6a-f1846b3936c2', distributed).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(monetary_aggregate_collapse, incumbent_payment_processors).

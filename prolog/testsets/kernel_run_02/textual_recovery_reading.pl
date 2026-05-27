@@ -118,20 +118,22 @@ narrative_ontology:topic_domain(textual_recovery_reading, "historical_linguistic
 domain_priors:requires_active_enforcement(textual_recovery_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(textual_recovery_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(textual_recovery_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(textual_recovery_reading).
+narrative_ontology:cs_story_uid(textual_recovery_reading, '9dba166a-ac49-4e8c-ad40-594840d6cf6a').
+narrative_ontology:cs_created_at('9dba166a-ac49-4e8c-ad40-594840d6cf6a', '').
+narrative_ontology:cs_kernel_codification('9dba166a-ac49-4e8c-ad40-594840d6cf6a', fixed_text).
+narrative_ontology:cs_authority_grounding('9dba166a-ac49-4e8c-ad40-594840d6cf6a', lineage).
+narrative_ontology:cs_interpretation_layer_present('9dba166a-ac49-4e8c-ad40-594840d6cf6a').
 narrative_ontology:cs_kernel_id(textual_recovery_reading, latin_correctness).
-narrative_ontology:cs_reading_relation(textual_recovery_reading, living_drift_reading, forecloses).
-narrative_ontology:cs_reading_relation(textual_recovery_reading, hybrid_adequacy_reading, influences).
-narrative_ontology:cs_axiom(textual_recovery_reading, foundational, classical_texts_authentically_recoverable).
+narrative_ontology:cs_reading_relation('9dba166a-ac49-4e8c-ad40-594840d6cf6a', living_drift_reading, forecloses).
+narrative_ontology:cs_reading_relation('9dba166a-ac49-4e8c-ad40-594840d6cf6a', hybrid_adequacy_reading, influences).
+narrative_ontology:cs_axiom('9dba166a-ac49-4e8c-ad40-594840d6cf6a', foundational, classical_texts_authentically_recoverable).
 narrative_ontology:cs_axiom_status(classical_texts_authentically_recoverable, holdable).
-narrative_ontology:cs_axiom_grounding(textual_recovery_reading, classical_texts_authentically_recoverable, empirically_contingent).
-narrative_ontology:cs_axiom(textual_recovery_reading, foundational, medieval_forms_constitute_corruption).
+narrative_ontology:cs_axiom_grounding('9dba166a-ac49-4e8c-ad40-594840d6cf6a', classical_texts_authentically_recoverable, empirically_contingent).
+narrative_ontology:cs_axiom('9dba166a-ac49-4e8c-ad40-594840d6cf6a', foundational, medieval_forms_constitute_corruption).
 narrative_ontology:cs_axiom_status(medieval_forms_constitute_corruption, holdable).
-narrative_ontology:cs_axiom_grounding(textual_recovery_reading, medieval_forms_constitute_corruption, deontological).
-narrative_ontology:cs_reference_frame(textual_recovery_reading, ciceronian_authenticity).
-narrative_ontology:cs_drift_state(textual_recovery_reading, enlightenment_philology, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('9dba166a-ac49-4e8c-ad40-594840d6cf6a', medieval_forms_constitute_corruption, deontological).
+narrative_ontology:cs_reference_frame('9dba166a-ac49-4e8c-ad40-594840d6cf6a', ciceronian_authenticity).
+narrative_ontology:cs_drift_state('9dba166a-ac49-4e8c-ad40-594840d6cf6a', enlightenment_philology, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(textual_recovery_reading, humanist_elite).

@@ -122,22 +122,24 @@ narrative_ontology:topic_domain(decentralization_concentration_paradox, "politic
 domain_priors:requires_active_enforcement(decentralization_concentration_paradox).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(decentralization_concentration_paradox, distributed).
-narrative_ontology:cs_authority_grounding(decentralization_concentration_paradox, distributed).
-narrative_ontology:cs_reading_relation(decentralization_concentration_paradox, sound_money_reading, coexists_with).
-narrative_ontology:cs_reading_relation(decentralization_concentration_paradox, speculative_asset_reading, coexists_with).
-narrative_ontology:cs_reading_relation(decentralization_concentration_paradox, decentralization_ideology_reading, coexists_with).
-narrative_ontology:cs_axiom(decentralization_concentration_paradox, foundational, fixed_supply_monetary_scarcity).
+narrative_ontology:cs_story_uid(decentralization_concentration_paradox, 'c6f94b89-8e85-4205-b1fc-34c058042195').
+narrative_ontology:cs_created_at('c6f94b89-8e85-4205-b1fc-34c058042195', '').
+narrative_ontology:cs_kernel_codification('c6f94b89-8e85-4205-b1fc-34c058042195', distributed).
+narrative_ontology:cs_authority_grounding('c6f94b89-8e85-4205-b1fc-34c058042195', distributed).
+narrative_ontology:cs_reading_relation('c6f94b89-8e85-4205-b1fc-34c058042195', sound_money_reading, coexists_with).
+narrative_ontology:cs_reading_relation('c6f94b89-8e85-4205-b1fc-34c058042195', speculative_asset_reading, coexists_with).
+narrative_ontology:cs_reading_relation('c6f94b89-8e85-4205-b1fc-34c058042195', decentralization_ideology_reading, coexists_with).
+narrative_ontology:cs_axiom('c6f94b89-8e85-4205-b1fc-34c058042195', foundational, fixed_supply_monetary_scarcity).
 narrative_ontology:cs_axiom_status(fixed_supply_monetary_scarcity, holdable).
-narrative_ontology:cs_axiom_grounding(decentralization_concentration_paradox, fixed_supply_monetary_scarcity, empirically_contingent).
-narrative_ontology:cs_axiom(decentralization_concentration_paradox, foundational, volatility_enables_speculation).
+narrative_ontology:cs_axiom_grounding('c6f94b89-8e85-4205-b1fc-34c058042195', fixed_supply_monetary_scarcity, empirically_contingent).
+narrative_ontology:cs_axiom('c6f94b89-8e85-4205-b1fc-34c058042195', foundational, volatility_enables_speculation).
 narrative_ontology:cs_axiom_status(volatility_enables_speculation, holdable).
-narrative_ontology:cs_axiom_grounding(decentralization_concentration_paradox, volatility_enables_speculation, empirically_contingent).
-narrative_ontology:cs_axiom(decentralization_concentration_paradox, foundational, distributed_consensus_enables_disintermediation).
+narrative_ontology:cs_axiom_grounding('c6f94b89-8e85-4205-b1fc-34c058042195', volatility_enables_speculation, empirically_contingent).
+narrative_ontology:cs_axiom('c6f94b89-8e85-4205-b1fc-34c058042195', foundational, distributed_consensus_enables_disintermediation).
 narrative_ontology:cs_axiom_status(distributed_consensus_enables_disintermediation, overridden).
-narrative_ontology:cs_axiom_grounding(decentralization_concentration_paradox, distributed_consensus_enables_disintermediation, empirically_contingent).
-narrative_ontology:cs_reference_frame(decentralization_concentration_paradox, decentralized_peer_to_peer_coordination).
-narrative_ontology:cs_drift_state(decentralization_concentration_paradox, contemporary_cartelization_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('c6f94b89-8e85-4205-b1fc-34c058042195', distributed_consensus_enables_disintermediation, empirically_contingent).
+narrative_ontology:cs_reference_frame('c6f94b89-8e85-4205-b1fc-34c058042195', decentralized_peer_to_peer_coordination).
+narrative_ontology:cs_drift_state('c6f94b89-8e85-4205-b1fc-34c058042195', contemporary_cartelization_era, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(decentralization_concentration_paradox, early_adopters_holders).

@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(limited_copyright_distinct_category, property_rights_transferable_from_guild_to_market).
 narrative_ontology:cs_axiom_contradiction(property_rights_transferable_from_guild_to_market, limited_copyright_distinct_category).
+narrative_ontology:cs_story_uid(statute_of_anne_ip_foundation_contradictions, '49980a28-6de2-408c-9d9d-665b5257df05').
+narrative_ontology:cs_created_at('49980a28-6de2-408c-9d9d-665b5257df05', '').

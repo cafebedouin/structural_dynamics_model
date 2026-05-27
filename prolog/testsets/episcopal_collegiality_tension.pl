@@ -115,9 +115,11 @@ narrative_ontology:topic_domain(episcopal_collegiality_tension, "religious/insti
 domain_priors:requires_active_enforcement(episcopal_collegiality_tension).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(episcopal_collegiality_tension, fixed_text).
-narrative_ontology:cs_authority_grounding(episcopal_collegiality_tension, lineage).
-narrative_ontology:cs_interpretation_layer_present(episcopal_collegiality_tension).
+narrative_ontology:cs_story_uid(episcopal_collegiality_tension, 'dc85d81a-4888-42ec-939a-7fa8eb44238f').
+narrative_ontology:cs_created_at('dc85d81a-4888-42ec-939a-7fa8eb44238f', '').
+narrative_ontology:cs_kernel_codification('dc85d81a-4888-42ec-939a-7fa8eb44238f', fixed_text).
+narrative_ontology:cs_authority_grounding('dc85d81a-4888-42ec-939a-7fa8eb44238f', lineage).
+narrative_ontology:cs_interpretation_layer_present('dc85d81a-4888-42ec-939a-7fa8eb44238f').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(episcopal_collegiality_tension, papal_curia).

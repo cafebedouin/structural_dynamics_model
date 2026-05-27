@@ -121,20 +121,22 @@ narrative_ontology:topic_domain(religious_autonomy_reading, "constitutional_law/
 domain_priors:requires_active_enforcement(religious_autonomy_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(religious_autonomy_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(religious_autonomy_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(religious_autonomy_reading).
+narrative_ontology:cs_story_uid(religious_autonomy_reading, 'e27c93a2-da87-4241-b274-0f8b26485bd6').
+narrative_ontology:cs_created_at('e27c93a2-da87-4241-b274-0f8b26485bd6', '').
+narrative_ontology:cs_kernel_codification('e27c93a2-da87-4241-b274-0f8b26485bd6', fixed_text).
+narrative_ontology:cs_authority_grounding('e27c93a2-da87-4241-b274-0f8b26485bd6', lineage).
+narrative_ontology:cs_interpretation_layer_present('e27c93a2-da87-4241-b274-0f8b26485bd6').
 narrative_ontology:cs_kernel_id(religious_autonomy_reading, family_law_authority).
-narrative_ontology:cs_reading_relation(religious_autonomy_reading, state_supremacy_reading, coexists_with).
-narrative_ontology:cs_reading_relation(religious_autonomy_reading, hybrid_accommodation_reading, influences).
-narrative_ontology:cs_axiom(religious_autonomy_reading, foundational, religious_communities_hold_autonomous_jurisdiction).
+narrative_ontology:cs_reading_relation('e27c93a2-da87-4241-b274-0f8b26485bd6', state_supremacy_reading, coexists_with).
+narrative_ontology:cs_reading_relation('e27c93a2-da87-4241-b274-0f8b26485bd6', hybrid_accommodation_reading, influences).
+narrative_ontology:cs_axiom('e27c93a2-da87-4241-b274-0f8b26485bd6', foundational, religious_communities_hold_autonomous_jurisdiction).
 narrative_ontology:cs_axiom_status(religious_communities_hold_autonomous_jurisdiction, holdable).
-narrative_ontology:cs_axiom_grounding(religious_autonomy_reading, religious_communities_hold_autonomous_jurisdiction, deontological).
-narrative_ontology:cs_axiom(religious_autonomy_reading, foundational, family_law_derives_from_immutable_tradition).
+narrative_ontology:cs_axiom_grounding('e27c93a2-da87-4241-b274-0f8b26485bd6', religious_communities_hold_autonomous_jurisdiction, deontological).
+narrative_ontology:cs_axiom('e27c93a2-da87-4241-b274-0f8b26485bd6', foundational, family_law_derives_from_immutable_tradition).
 narrative_ontology:cs_axiom_status(family_law_derives_from_immutable_tradition, holdable).
-narrative_ontology:cs_axiom_grounding(religious_autonomy_reading, family_law_derives_from_immutable_tradition, conventional).
-narrative_ontology:cs_reference_frame(religious_autonomy_reading, traditional_religious_authority).
-narrative_ontology:cs_drift_state(religious_autonomy_reading, contemporary_constitutional_rights_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('e27c93a2-da87-4241-b274-0f8b26485bd6', family_law_derives_from_immutable_tradition, conventional).
+narrative_ontology:cs_reference_frame('e27c93a2-da87-4241-b274-0f8b26485bd6', traditional_religious_authority).
+narrative_ontology:cs_drift_state('e27c93a2-da87-4241-b274-0f8b26485bd6', contemporary_constitutional_rights_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(religious_autonomy_reading, religious_community_leadership).

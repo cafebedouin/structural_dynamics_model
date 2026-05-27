@@ -116,8 +116,10 @@ narrative_ontology:topic_domain(first_held_reading, "monetary_history/technology
 domain_priors:requires_active_enforcement(first_held_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(first_held_reading, distributed).
-narrative_ontology:cs_authority_grounding(first_held_reading, extraction).
+narrative_ontology:cs_story_uid(first_held_reading, '172b6a93-13c3-4673-8117-d71464956968').
+narrative_ontology:cs_created_at('172b6a93-13c3-4673-8117-d71464956968', '').
+narrative_ontology:cs_kernel_codification('172b6a93-13c3-4673-8117-d71464956968', distributed).
+narrative_ontology:cs_authority_grounding('172b6a93-13c3-4673-8117-d71464956968', extraction).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(first_held_reading, early_adopters_with_access).

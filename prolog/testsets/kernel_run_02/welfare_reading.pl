@@ -123,20 +123,22 @@ narrative_ontology:topic_domain(welfare_reading, "moral_philosophy/animal_ethics
 domain_priors:requires_active_enforcement(welfare_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(welfare_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(welfare_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(welfare_reading).
+narrative_ontology:cs_story_uid(welfare_reading, 'adf03b1c-8b2f-444a-a740-a5c8800b13e9').
+narrative_ontology:cs_created_at('adf03b1c-8b2f-444a-a740-a5c8800b13e9', '').
+narrative_ontology:cs_kernel_codification('adf03b1c-8b2f-444a-a740-a5c8800b13e9', fixed_text).
+narrative_ontology:cs_authority_grounding('adf03b1c-8b2f-444a-a740-a5c8800b13e9', lineage).
+narrative_ontology:cs_interpretation_layer_present('adf03b1c-8b2f-444a-a740-a5c8800b13e9').
 narrative_ontology:cs_kernel_id(welfare_reading, animal_status_kernel).
-narrative_ontology:cs_reading_relation(welfare_reading, property_reading, coexists_with).
-narrative_ontology:cs_reading_relation(welfare_reading, abolitionist_reading, coexists_with).
-narrative_ontology:cs_axiom(welfare_reading, foundational, sentience_entails_constraint_not_prohibition).
+narrative_ontology:cs_reading_relation('adf03b1c-8b2f-444a-a740-a5c8800b13e9', property_reading, coexists_with).
+narrative_ontology:cs_reading_relation('adf03b1c-8b2f-444a-a740-a5c8800b13e9', abolitionist_reading, coexists_with).
+narrative_ontology:cs_axiom('adf03b1c-8b2f-444a-a740-a5c8800b13e9', foundational, sentience_entails_constraint_not_prohibition).
 narrative_ontology:cs_axiom_status(sentience_entails_constraint_not_prohibition, holdable).
-narrative_ontology:cs_axiom_grounding(welfare_reading, sentience_entails_constraint_not_prohibition, deontological).
-narrative_ontology:cs_axiom(welfare_reading, foundational, property_status_compatible_with_moral_constraints).
+narrative_ontology:cs_axiom_grounding('adf03b1c-8b2f-444a-a740-a5c8800b13e9', sentience_entails_constraint_not_prohibition, deontological).
+narrative_ontology:cs_axiom('adf03b1c-8b2f-444a-a740-a5c8800b13e9', foundational, property_status_compatible_with_moral_constraints).
 narrative_ontology:cs_axiom_status(property_status_compatible_with_moral_constraints, holdable).
-narrative_ontology:cs_axiom_grounding(welfare_reading, property_status_compatible_with_moral_constraints, deontological).
-narrative_ontology:cs_reference_frame(welfare_reading, sentience_recognized_use_constrained).
-narrative_ontology:cs_drift_state(welfare_reading, contemporary_alternative_protein_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('adf03b1c-8b2f-444a-a740-a5c8800b13e9', property_status_compatible_with_moral_constraints, deontological).
+narrative_ontology:cs_reference_frame('adf03b1c-8b2f-444a-a740-a5c8800b13e9', sentience_recognized_use_constrained).
+narrative_ontology:cs_drift_state('adf03b1c-8b2f-444a-a740-a5c8800b13e9', contemporary_alternative_protein_era, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(welfare_reading, animal_industries).

@@ -122,18 +122,20 @@ narrative_ontology:topic_domain(managed_migration_hybrid, "international_law/pol
 domain_priors:requires_active_enforcement(managed_migration_hybrid).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(managed_migration_hybrid, formalized).
-narrative_ontology:cs_authority_grounding(managed_migration_hybrid, lineage).
-narrative_ontology:cs_interpretation_layer_present(managed_migration_hybrid).
+narrative_ontology:cs_story_uid(managed_migration_hybrid, '32076438-7235-4519-abac-65f9b61f474c').
+narrative_ontology:cs_created_at('32076438-7235-4519-abac-65f9b61f474c', '').
+narrative_ontology:cs_kernel_codification('32076438-7235-4519-abac-65f9b61f474c', formalized).
+narrative_ontology:cs_authority_grounding('32076438-7235-4519-abac-65f9b61f474c', lineage).
+narrative_ontology:cs_interpretation_layer_present('32076438-7235-4519-abac-65f9b61f474c').
 narrative_ontology:cs_kernel_id(managed_migration_hybrid, border_normative_status).
-narrative_ontology:cs_reading_relation(managed_migration_hybrid, sovereignty_primary, coexists_with).
-narrative_ontology:cs_reading_relation(managed_migration_hybrid, freedom_of_movement_primary, coexists_with).
-narrative_ontology:cs_axiom(managed_migration_hybrid, foundational, graduated_rights_institutional_mediation_legitimacy).
+narrative_ontology:cs_reading_relation('32076438-7235-4519-abac-65f9b61f474c', sovereignty_primary, coexists_with).
+narrative_ontology:cs_reading_relation('32076438-7235-4519-abac-65f9b61f474c', freedom_of_movement_primary, coexists_with).
+narrative_ontology:cs_axiom('32076438-7235-4519-abac-65f9b61f474c', foundational, graduated_rights_institutional_mediation_legitimacy).
 narrative_ontology:cs_axiom_status(graduated_rights_institutional_mediation_legitimacy, holdable).
-narrative_ontology:cs_axiom(managed_migration_hybrid, foundational, border_enforcement_compatible_with_mobility_recognition).
+narrative_ontology:cs_axiom('32076438-7235-4519-abac-65f9b61f474c', foundational, border_enforcement_compatible_with_mobility_recognition).
 narrative_ontology:cs_axiom_status(border_enforcement_compatible_with_mobility_recognition, holdable).
-narrative_ontology:cs_reference_frame(managed_migration_hybrid, post_1951_refugee_convention_managed_cooperation).
-narrative_ontology:cs_drift_state(managed_migration_hybrid, contemporary_climate_displacement_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_reference_frame('32076438-7235-4519-abac-65f9b61f474c', post_1951_refugee_convention_managed_cooperation).
+narrative_ontology:cs_drift_state('32076438-7235-4519-abac-65f9b61f474c', contemporary_climate_displacement_era, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(managed_migration_hybrid, receiving_state_institutions).

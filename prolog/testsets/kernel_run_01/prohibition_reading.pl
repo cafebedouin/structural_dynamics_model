@@ -113,18 +113,20 @@ narrative_ontology:topic_domain(prohibition_reading, "public_health_policy/crimi
 domain_priors:requires_active_enforcement(prohibition_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(prohibition_reading, formalized).
-narrative_ontology:cs_authority_grounding(prohibition_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(prohibition_reading).
+narrative_ontology:cs_story_uid(prohibition_reading, '975c6646-977c-46f5-97ed-3bef55815d14').
+narrative_ontology:cs_created_at('975c6646-977c-46f5-97ed-3bef55815d14', '').
+narrative_ontology:cs_kernel_codification('975c6646-977c-46f5-97ed-3bef55815d14', formalized).
+narrative_ontology:cs_authority_grounding('975c6646-977c-46f5-97ed-3bef55815d14', extraction).
+narrative_ontology:cs_interpretation_layer_present('975c6646-977c-46f5-97ed-3bef55815d14').
 narrative_ontology:cs_kernel_id(prohibition_reading, substance_control_authority).
-narrative_ontology:cs_reading_relation(prohibition_reading, harm_reduction_reading, forecloses).
-narrative_ontology:cs_reading_relation(prohibition_reading, legalization_reading, forecloses).
-narrative_ontology:cs_axiom(prohibition_reading, foundational, drug_use_as_moral_failure_requiring_constraint).
+narrative_ontology:cs_reading_relation('975c6646-977c-46f5-97ed-3bef55815d14', harm_reduction_reading, forecloses).
+narrative_ontology:cs_reading_relation('975c6646-977c-46f5-97ed-3bef55815d14', legalization_reading, forecloses).
+narrative_ontology:cs_axiom('975c6646-977c-46f5-97ed-3bef55815d14', foundational, drug_use_as_moral_failure_requiring_constraint).
 narrative_ontology:cs_axiom_status(drug_use_as_moral_failure_requiring_constraint, holdable).
-narrative_ontology:cs_axiom(prohibition_reading, foundational, criminal_deterrence_reduces_drug_use).
+narrative_ontology:cs_axiom('975c6646-977c-46f5-97ed-3bef55815d14', foundational, criminal_deterrence_reduces_drug_use).
 narrative_ontology:cs_axiom_status(criminal_deterrence_reduces_drug_use, overridden).
-narrative_ontology:cs_reference_frame(prohibition_reading, total_prohibition_with_criminal_enforcement).
-narrative_ontology:cs_drift_state(prohibition_reading, contemporary_harm_reduction_evidence_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_reference_frame('975c6646-977c-46f5-97ed-3bef55815d14', total_prohibition_with_criminal_enforcement).
+narrative_ontology:cs_drift_state('975c6646-977c-46f5-97ed-3bef55815d14', contemporary_harm_reduction_evidence_era, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(prohibition_reading, criminal_enforcement_apparatus).

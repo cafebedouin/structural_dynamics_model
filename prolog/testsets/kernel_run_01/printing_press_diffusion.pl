@@ -129,16 +129,18 @@ narrative_ontology:topic_domain(printing_press_diffusion, "historical_sociology/
 domain_priors:requires_active_enforcement(printing_press_diffusion).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(printing_press_diffusion, distributed).
-narrative_ontology:cs_authority_grounding(printing_press_diffusion, lineage).
-narrative_ontology:cs_reading_relation(printing_press_diffusion, printing_press_diffusion_institutional_church_reading, coexists_with).
-narrative_ontology:cs_reading_relation(printing_press_diffusion, printing_press_diffusion_reformation_reading, coexists_with).
-narrative_ontology:cs_axiom(printing_press_diffusion, foundational, knowledge_authority_decentralizable).
+narrative_ontology:cs_story_uid(printing_press_diffusion, 'b7f460fa-b571-46d0-b715-33725f8ca4ca').
+narrative_ontology:cs_created_at('b7f460fa-b571-46d0-b715-33725f8ca4ca', '').
+narrative_ontology:cs_kernel_codification('b7f460fa-b571-46d0-b715-33725f8ca4ca', distributed).
+narrative_ontology:cs_authority_grounding('b7f460fa-b571-46d0-b715-33725f8ca4ca', lineage).
+narrative_ontology:cs_reading_relation('b7f460fa-b571-46d0-b715-33725f8ca4ca', printing_press_diffusion_institutional_church_reading, coexists_with).
+narrative_ontology:cs_reading_relation('b7f460fa-b571-46d0-b715-33725f8ca4ca', printing_press_diffusion_reformation_reading, coexists_with).
+narrative_ontology:cs_axiom('b7f460fa-b571-46d0-b715-33725f8ca4ca', foundational, knowledge_authority_decentralizable).
 narrative_ontology:cs_axiom_status(knowledge_authority_decentralizable, holdable).
-narrative_ontology:cs_axiom(printing_press_diffusion, foundational, labor_value_mechanical_reproducible).
+narrative_ontology:cs_axiom('b7f460fa-b571-46d0-b715-33725f8ca4ca', foundational, labor_value_mechanical_reproducible).
 narrative_ontology:cs_axiom_status(labor_value_mechanical_reproducible, holdable).
-narrative_ontology:cs_reference_frame(printing_press_diffusion, manuscript_monopoly_authority).
-narrative_ontology:cs_drift_state(printing_press_diffusion, post_printing_saturation_1550, gap(authority_erosion, severe, false)).
+narrative_ontology:cs_reference_frame('b7f460fa-b571-46d0-b715-33725f8ca4ca', manuscript_monopoly_authority).
+narrative_ontology:cs_drift_state('b7f460fa-b571-46d0-b715-33725f8ca4ca', post_printing_saturation_1550, gap(authority_erosion, severe, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(printing_press_diffusion, printer_merchants).

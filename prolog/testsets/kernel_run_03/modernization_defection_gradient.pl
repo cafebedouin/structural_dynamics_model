@@ -122,19 +122,21 @@ narrative_ontology:topic_domain(modernization_defection_gradient, "disaster_anth
 domain_priors:requires_active_enforcement(modernization_defection_gradient).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(modernization_defection_gradient, fixed_text).
-narrative_ontology:cs_authority_grounding(modernization_defection_gradient, lineage).
-narrative_ontology:cs_interpretation_layer_present(modernization_defection_gradient).
-narrative_ontology:cs_reading_relation(modernization_defection_gradient, scientific_risk_governance_reading, influences).
-narrative_ontology:cs_reading_relation(modernization_defection_gradient, heritage_preservation_reading, coexists_with).
-narrative_ontology:cs_axiom(modernization_defection_gradient, foundational, ancestor_survival_warrant_authority).
+narrative_ontology:cs_story_uid(modernization_defection_gradient, '1157abe7-a6bb-4a3c-8914-d19fc18ba1a0').
+narrative_ontology:cs_created_at('1157abe7-a6bb-4a3c-8914-d19fc18ba1a0', '').
+narrative_ontology:cs_kernel_codification('1157abe7-a6bb-4a3c-8914-d19fc18ba1a0', fixed_text).
+narrative_ontology:cs_authority_grounding('1157abe7-a6bb-4a3c-8914-d19fc18ba1a0', lineage).
+narrative_ontology:cs_interpretation_layer_present('1157abe7-a6bb-4a3c-8914-d19fc18ba1a0').
+narrative_ontology:cs_reading_relation('1157abe7-a6bb-4a3c-8914-d19fc18ba1a0', scientific_risk_governance_reading, influences).
+narrative_ontology:cs_reading_relation('1157abe7-a6bb-4a3c-8914-d19fc18ba1a0', heritage_preservation_reading, coexists_with).
+narrative_ontology:cs_axiom('1157abe7-a6bb-4a3c-8914-d19fc18ba1a0', foundational, ancestor_survival_warrant_authority).
 narrative_ontology:cs_axiom_status(ancestor_survival_warrant_authority, holdable).
-narrative_ontology:cs_axiom_grounding(modernization_defection_gradient, ancestor_survival_warrant_authority, conventional).
-narrative_ontology:cs_axiom(modernization_defection_gradient, foundational, transmission_through_lived_practice).
+narrative_ontology:cs_axiom_grounding('1157abe7-a6bb-4a3c-8914-d19fc18ba1a0', ancestor_survival_warrant_authority, conventional).
+narrative_ontology:cs_axiom('1157abe7-a6bb-4a3c-8914-d19fc18ba1a0', foundational, transmission_through_lived_practice).
 narrative_ontology:cs_axiom_status(transmission_through_lived_practice, overridden).
-narrative_ontology:cs_axiom_grounding(modernization_defection_gradient, transmission_through_lived_practice, conventional).
-narrative_ontology:cs_reference_frame(modernization_defection_gradient, ancestral_warning_deference).
-narrative_ontology:cs_drift_state(modernization_defection_gradient, contemporary_post_2011, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_axiom_grounding('1157abe7-a6bb-4a3c-8914-d19fc18ba1a0', transmission_through_lived_practice, conventional).
+narrative_ontology:cs_reference_frame('1157abe7-a6bb-4a3c-8914-d19fc18ba1a0', ancestral_warning_deference).
+narrative_ontology:cs_drift_state('1157abe7-a6bb-4a3c-8914-d19fc18ba1a0', contemporary_post_2011, gap(practice_drift, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(modernization_defection_gradient, institutional_memory_holders).

@@ -124,17 +124,19 @@ narrative_ontology:topic_domain(mitigation_priority, "climate_policy/political_e
 domain_priors:requires_active_enforcement(mitigation_priority).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(mitigation_priority, distributed).
-narrative_ontology:cs_authority_grounding(mitigation_priority, distributed).
+narrative_ontology:cs_story_uid(mitigation_priority, '6a44345d-9200-48eb-98c9-8aba48788eb5').
+narrative_ontology:cs_created_at('6a44345d-9200-48eb-98c9-8aba48788eb5', '').
+narrative_ontology:cs_kernel_codification('6a44345d-9200-48eb-98c9-8aba48788eb5', distributed).
+narrative_ontology:cs_authority_grounding('6a44345d-9200-48eb-98c9-8aba48788eb5', distributed).
 narrative_ontology:cs_kernel_id(mitigation_priority, climate_response_legitimacy).
-narrative_ontology:cs_reading_relation(mitigation_priority, adaptation_priority, influences).
-narrative_ontology:cs_reading_relation(mitigation_priority, degrowth_transformation, coexists_with).
-narrative_ontology:cs_axiom(mitigation_priority, foundational, technological_decoupling_feasible).
+narrative_ontology:cs_reading_relation('6a44345d-9200-48eb-98c9-8aba48788eb5', adaptation_priority, influences).
+narrative_ontology:cs_reading_relation('6a44345d-9200-48eb-98c9-8aba48788eb5', degrowth_transformation, coexists_with).
+narrative_ontology:cs_axiom('6a44345d-9200-48eb-98c9-8aba48788eb5', foundational, technological_decoupling_feasible).
 narrative_ontology:cs_axiom_status(technological_decoupling_feasible, holdable).
-narrative_ontology:cs_axiom(mitigation_priority, foundational, growth_preservation_normatively_required).
+narrative_ontology:cs_axiom('6a44345d-9200-48eb-98c9-8aba48788eb5', foundational, growth_preservation_normatively_required).
 narrative_ontology:cs_axiom_status(growth_preservation_normatively_required, holdable).
-narrative_ontology:cs_reference_frame(mitigation_priority, growth_compatible_emissions_reduction).
-narrative_ontology:cs_drift_state(mitigation_priority, contemporary_carbon_budget_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_reference_frame('6a44345d-9200-48eb-98c9-8aba48788eb5', growth_compatible_emissions_reduction).
+narrative_ontology:cs_drift_state('6a44345d-9200-48eb-98c9-8aba48788eb5', contemporary_carbon_budget_era, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(mitigation_priority, current_affluent_populations).

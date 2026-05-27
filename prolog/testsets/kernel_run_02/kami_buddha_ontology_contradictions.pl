@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(single_ultimate_reality_principle, incoherence_permanent_feature).
 narrative_ontology:cs_axiom_contradiction(incoherence_permanent_feature, single_ultimate_reality_principle).
+narrative_ontology:cs_story_uid(kami_buddha_ontology_contradictions, '56513ac8-2936-47c3-acd1-7054c8d9a702').
+narrative_ontology:cs_created_at('56513ac8-2936-47c3-acd1-7054c8d9a702', '').

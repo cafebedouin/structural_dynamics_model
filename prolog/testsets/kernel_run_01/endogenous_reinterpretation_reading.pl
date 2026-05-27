@@ -120,18 +120,20 @@ narrative_ontology:topic_domain(endogenous_reinterpretation_reading, "religious_
 domain_priors:requires_active_enforcement(endogenous_reinterpretation_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(endogenous_reinterpretation_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(endogenous_reinterpretation_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(endogenous_reinterpretation_reading).
+narrative_ontology:cs_story_uid(endogenous_reinterpretation_reading, 'a9d02d45-4862-486b-8801-e4001371fefe').
+narrative_ontology:cs_created_at('a9d02d45-4862-486b-8801-e4001371fefe', '').
+narrative_ontology:cs_kernel_codification('a9d02d45-4862-486b-8801-e4001371fefe', fixed_text).
+narrative_ontology:cs_authority_grounding('a9d02d45-4862-486b-8801-e4001371fefe', lineage).
+narrative_ontology:cs_interpretation_layer_present('a9d02d45-4862-486b-8801-e4001371fefe').
 narrative_ontology:cs_kernel_id(endogenous_reinterpretation_reading, marriage_commitment_reversal).
-narrative_ontology:cs_reading_relation(endogenous_reinterpretation_reading, exogenous_override_reading, coexists_with).
-narrative_ontology:cs_reading_relation(endogenous_reinterpretation_reading, practice_doctrine_gap_reading, influences).
-narrative_ontology:cs_axiom(endogenous_reinterpretation_reading, foundational, revelation_permits_reinterpretation).
+narrative_ontology:cs_reading_relation('a9d02d45-4862-486b-8801-e4001371fefe', exogenous_override_reading, coexists_with).
+narrative_ontology:cs_reading_relation('a9d02d45-4862-486b-8801-e4001371fefe', practice_doctrine_gap_reading, influences).
+narrative_ontology:cs_axiom('a9d02d45-4862-486b-8801-e4001371fefe', foundational, revelation_permits_reinterpretation).
 narrative_ontology:cs_axiom_status(revelation_permits_reinterpretation, holdable).
-narrative_ontology:cs_axiom(endogenous_reinterpretation_reading, foundational, prophetic_access_to_divine_will).
+narrative_ontology:cs_axiom('a9d02d45-4862-486b-8801-e4001371fefe', foundational, prophetic_access_to_divine_will).
 narrative_ontology:cs_axiom_status(prophetic_access_to_divine_will, holdable).
-narrative_ontology:cs_reference_frame(endogenous_reinterpretation_reading, progressive_revelation_framework).
-narrative_ontology:cs_drift_state(endogenous_reinterpretation_reading, contemporary_historical_consciousness_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('a9d02d45-4862-486b-8801-e4001371fefe', progressive_revelation_framework).
+narrative_ontology:cs_drift_state('a9d02d45-4862-486b-8801-e4001371fefe', contemporary_historical_consciousness_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(endogenous_reinterpretation_reading, prophetic_leadership).

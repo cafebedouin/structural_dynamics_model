@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(usage_is_norma_loquendi, classical_texts_authentically_recoverable).
 narrative_ontology:cs_axiom_contradiction(classical_texts_authentically_recoverable, usage_is_norma_loquendi).
+narrative_ontology:cs_story_uid(latin_correctness_contradictions, 'd100c22f-8510-4988-8794-82f87f53955f').
+narrative_ontology:cs_created_at('d100c22f-8510-4988-8794-82f87f53955f', '').

@@ -113,17 +113,19 @@ narrative_ontology:topic_domain(statutory_copyright_creation, "legal_history/int
 domain_priors:requires_active_enforcement(statutory_copyright_creation).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(statutory_copyright_creation, formalized).
-narrative_ontology:cs_authority_grounding(statutory_copyright_creation, lineage).
-narrative_ontology:cs_interpretation_layer_present(statutory_copyright_creation).
-narrative_ontology:cs_reading_relation(statutory_copyright_creation, guild_monopoly_reading, coexists_with).
-narrative_ontology:cs_reading_relation(statutory_copyright_creation, knowledge_commons_reading, coexists_with).
-narrative_ontology:cs_axiom(statutory_copyright_creation, foundational, authorial_labor_property_rights).
+narrative_ontology:cs_story_uid(statutory_copyright_creation, 'e7a17c44-d2cc-46b2-b728-32a8f8f4a82a').
+narrative_ontology:cs_created_at('e7a17c44-d2cc-46b2-b728-32a8f8f4a82a', '').
+narrative_ontology:cs_kernel_codification('e7a17c44-d2cc-46b2-b728-32a8f8f4a82a', formalized).
+narrative_ontology:cs_authority_grounding('e7a17c44-d2cc-46b2-b728-32a8f8f4a82a', lineage).
+narrative_ontology:cs_interpretation_layer_present('e7a17c44-d2cc-46b2-b728-32a8f8f4a82a').
+narrative_ontology:cs_reading_relation('e7a17c44-d2cc-46b2-b728-32a8f8f4a82a', guild_monopoly_reading, coexists_with).
+narrative_ontology:cs_reading_relation('e7a17c44-d2cc-46b2-b728-32a8f8f4a82a', knowledge_commons_reading, coexists_with).
+narrative_ontology:cs_axiom('e7a17c44-d2cc-46b2-b728-32a8f8f4a82a', foundational, authorial_labor_property_rights).
 narrative_ontology:cs_axiom_status(authorial_labor_property_rights, holdable).
-narrative_ontology:cs_axiom(statutory_copyright_creation, secondary, intellectual_goods_excludable).
+narrative_ontology:cs_axiom('e7a17c44-d2cc-46b2-b728-32a8f8f4a82a', secondary, intellectual_goods_excludable).
 narrative_ontology:cs_axiom_status(intellectual_goods_excludable, holdable).
-narrative_ontology:cs_reference_frame(statutory_copyright_creation, author_as_natural_property_owner).
-narrative_ontology:cs_drift_state(statutory_copyright_creation, contemporary_digital_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_reference_frame('e7a17c44-d2cc-46b2-b728-32a8f8f4a82a', author_as_natural_property_owner).
+narrative_ontology:cs_drift_state('e7a17c44-d2cc-46b2-b728-32a8f8f4a82a', contemporary_digital_era, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(statutory_copyright_creation, bookseller_guilds).

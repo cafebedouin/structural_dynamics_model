@@ -119,8 +119,10 @@ narrative_ontology:topic_domain(sound_money_scarcity_constraint, "monetary_theor
 domain_priors:requires_active_enforcement(sound_money_scarcity_constraint).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(sound_money_scarcity_constraint, fixed_text).
-narrative_ontology:cs_authority_grounding(sound_money_scarcity_constraint, distributed).
+narrative_ontology:cs_story_uid(sound_money_scarcity_constraint, '2dad07f4-7fdf-48fc-804d-c31bee912076').
+narrative_ontology:cs_created_at('2dad07f4-7fdf-48fc-804d-c31bee912076', '').
+narrative_ontology:cs_kernel_codification('2dad07f4-7fdf-48fc-804d-c31bee912076', fixed_text).
+narrative_ontology:cs_authority_grounding('2dad07f4-7fdf-48fc-804d-c31bee912076', distributed).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(sound_money_scarcity_constraint, early_adopters_and_holders).

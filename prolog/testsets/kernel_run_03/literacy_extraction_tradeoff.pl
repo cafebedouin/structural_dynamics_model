@@ -127,23 +127,25 @@ narrative_ontology:topic_domain(literacy_extraction_tradeoff, "political_economy
 domain_priors:requires_active_enforcement(literacy_extraction_tradeoff).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(literacy_extraction_tradeoff, formalized).
-narrative_ontology:cs_authority_grounding(literacy_extraction_tradeoff, extraction).
-narrative_ontology:cs_interpretation_layer_present(literacy_extraction_tradeoff).
-narrative_ontology:cs_reading_relation(literacy_extraction_tradeoff, ottoman_continuity_reading, forecloses).
-narrative_ontology:cs_reading_relation(literacy_extraction_tradeoff, western_modernization_reading, coexists_with).
-narrative_ontology:cs_reading_relation(literacy_extraction_tradeoff, islamic_script_preservation_reading, forecloses).
-narrative_ontology:cs_axiom(literacy_extraction_tradeoff, foundational, latin_script_necessary_modernity).
+narrative_ontology:cs_story_uid(literacy_extraction_tradeoff, '81b928cf-dc5d-4c80-a6d6-12f2acc136be').
+narrative_ontology:cs_created_at('81b928cf-dc5d-4c80-a6d6-12f2acc136be', '').
+narrative_ontology:cs_kernel_codification('81b928cf-dc5d-4c80-a6d6-12f2acc136be', formalized).
+narrative_ontology:cs_authority_grounding('81b928cf-dc5d-4c80-a6d6-12f2acc136be', extraction).
+narrative_ontology:cs_interpretation_layer_present('81b928cf-dc5d-4c80-a6d6-12f2acc136be').
+narrative_ontology:cs_reading_relation('81b928cf-dc5d-4c80-a6d6-12f2acc136be', ottoman_continuity_reading, forecloses).
+narrative_ontology:cs_reading_relation('81b928cf-dc5d-4c80-a6d6-12f2acc136be', western_modernization_reading, coexists_with).
+narrative_ontology:cs_reading_relation('81b928cf-dc5d-4c80-a6d6-12f2acc136be', islamic_script_preservation_reading, forecloses).
+narrative_ontology:cs_axiom('81b928cf-dc5d-4c80-a6d6-12f2acc136be', foundational, latin_script_necessary_modernity).
 narrative_ontology:cs_axiom_status(latin_script_necessary_modernity, holdable).
-narrative_ontology:cs_axiom_grounding(literacy_extraction_tradeoff, latin_script_necessary_modernity, empirically_contingent).
-narrative_ontology:cs_axiom(literacy_extraction_tradeoff, foundational, state_will_sufficient_legitimacy).
+narrative_ontology:cs_axiom_grounding('81b928cf-dc5d-4c80-a6d6-12f2acc136be', latin_script_necessary_modernity, empirically_contingent).
+narrative_ontology:cs_axiom('81b928cf-dc5d-4c80-a6d6-12f2acc136be', foundational, state_will_sufficient_legitimacy).
 narrative_ontology:cs_axiom_status(state_will_sufficient_legitimacy, overridden).
-narrative_ontology:cs_axiom_grounding(literacy_extraction_tradeoff, state_will_sufficient_legitimacy, deontological).
-narrative_ontology:cs_axiom(literacy_extraction_tradeoff, secondary, administrative_efficiency_moral_imperative).
+narrative_ontology:cs_axiom_grounding('81b928cf-dc5d-4c80-a6d6-12f2acc136be', state_will_sufficient_legitimacy, deontological).
+narrative_ontology:cs_axiom('81b928cf-dc5d-4c80-a6d6-12f2acc136be', secondary, administrative_efficiency_moral_imperative).
 narrative_ontology:cs_axiom_status(administrative_efficiency_moral_imperative, holdable).
-narrative_ontology:cs_axiom_grounding(literacy_extraction_tradeoff, administrative_efficiency_moral_imperative, instrumental).
-narrative_ontology:cs_reference_frame(literacy_extraction_tradeoff, ottoman_administrative_rationality).
-narrative_ontology:cs_drift_state(literacy_extraction_tradeoff, post_reform_establishment, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('81b928cf-dc5d-4c80-a6d6-12f2acc136be', administrative_efficiency_moral_imperative, instrumental).
+narrative_ontology:cs_reference_frame('81b928cf-dc5d-4c80-a6d6-12f2acc136be', ottoman_administrative_rationality).
+narrative_ontology:cs_drift_state('81b928cf-dc5d-4c80-a6d6-12f2acc136be', post_reform_establishment, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(literacy_extraction_tradeoff, state_administrative_apparatus).

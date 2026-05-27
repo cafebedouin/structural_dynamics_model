@@ -109,8 +109,10 @@ narrative_ontology:topic_domain(beneficiary_maintained_reading, "political_econo
 domain_priors:requires_active_enforcement(beneficiary_maintained_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(beneficiary_maintained_reading, distributed).
-narrative_ontology:cs_authority_grounding(beneficiary_maintained_reading, extraction).
+narrative_ontology:cs_story_uid(beneficiary_maintained_reading, '6c5cfc94-fe76-441b-9e39-6f50041f3e57').
+narrative_ontology:cs_created_at('6c5cfc94-fe76-441b-9e39-6f50041f3e57', '').
+narrative_ontology:cs_kernel_codification('6c5cfc94-fe76-441b-9e39-6f50041f3e57', distributed).
+narrative_ontology:cs_authority_grounding('6c5cfc94-fe76-441b-9e39-6f50041f3e57', extraction).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(beneficiary_maintained_reading, incumbent_capital_holders).

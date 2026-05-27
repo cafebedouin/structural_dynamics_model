@@ -127,20 +127,22 @@ narrative_ontology:topic_domain(overdetermined_composite_reading, "monetary_econ
 domain_priors:requires_active_enforcement(overdetermined_composite_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(overdetermined_composite_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(overdetermined_composite_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(overdetermined_composite_reading).
+narrative_ontology:cs_story_uid(overdetermined_composite_reading, '80d583da-cad3-4a6b-b5ae-d9635e947510').
+narrative_ontology:cs_created_at('80d583da-cad3-4a6b-b5ae-d9635e947510', '').
+narrative_ontology:cs_kernel_codification('80d583da-cad3-4a6b-b5ae-d9635e947510', fixed_text).
+narrative_ontology:cs_authority_grounding('80d583da-cad3-4a6b-b5ae-d9635e947510', extraction).
+narrative_ontology:cs_interpretation_layer_present('80d583da-cad3-4a6b-b5ae-d9635e947510').
 narrative_ontology:cs_kernel_id(overdetermined_composite_reading, monetary_anchor_principle).
-narrative_ontology:cs_reading_relation(overdetermined_composite_reading, triffin_inevitability_reading, influences).
-narrative_ontology:cs_reading_relation(overdetermined_composite_reading, punctuated_swap_reading, coexists_with).
-narrative_ontology:cs_axiom(overdetermined_composite_reading, foundational, overdetermination_irreversibility).
+narrative_ontology:cs_reading_relation('80d583da-cad3-4a6b-b5ae-d9635e947510', triffin_inevitability_reading, influences).
+narrative_ontology:cs_reading_relation('80d583da-cad3-4a6b-b5ae-d9635e947510', punctuated_swap_reading, coexists_with).
+narrative_ontology:cs_axiom('80d583da-cad3-4a6b-b5ae-d9635e947510', foundational, overdetermination_irreversibility).
 narrative_ontology:cs_axiom_status(overdetermination_irreversibility, holdable).
-narrative_ontology:cs_axiom_grounding(overdetermined_composite_reading, overdetermination_irreversibility, empirically_contingent).
-narrative_ontology:cs_axiom(overdetermined_composite_reading, foundational, beneficiary_extraction_through_constraint_maintenance).
+narrative_ontology:cs_axiom_grounding('80d583da-cad3-4a6b-b5ae-d9635e947510', overdetermination_irreversibility, empirically_contingent).
+narrative_ontology:cs_axiom('80d583da-cad3-4a6b-b5ae-d9635e947510', foundational, beneficiary_extraction_through_constraint_maintenance).
 narrative_ontology:cs_axiom_status(beneficiary_extraction_through_constraint_maintenance, holdable).
-narrative_ontology:cs_axiom_grounding(overdetermined_composite_reading, beneficiary_extraction_through_constraint_maintenance, deontological).
-narrative_ontology:cs_reference_frame(overdetermined_composite_reading, dollar_gold_parity_regime).
-narrative_ontology:cs_drift_state(overdetermined_composite_reading, post_1968_london_gold_pool_collapse, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('80d583da-cad3-4a6b-b5ae-d9635e947510', beneficiary_extraction_through_constraint_maintenance, deontological).
+narrative_ontology:cs_reference_frame('80d583da-cad3-4a6b-b5ae-d9635e947510', dollar_gold_parity_regime).
+narrative_ontology:cs_drift_state('80d583da-cad3-4a6b-b5ae-d9635e947510', post_1968_london_gold_pool_collapse, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(overdetermined_composite_reading, us_fiscal_authority).

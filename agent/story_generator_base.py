@@ -5,11 +5,13 @@ Provides prompt assembly, response processing, validation, compilation to
 import from here and supply only their source-specific logic.
 """
 
+import datetime
 import json
 import os
 import random
 import sys
 import time
+import uuid
 from functools import lru_cache
 from pathlib import Path
 
@@ -235,6 +237,107 @@ def save_story(story_dict, overwrite=False):
 
     print(f"  Saved: {json_path.name} + {pl_path.name}")
     return json_path, pl_path
+
+
+def save_story_tagged(story_dict, json_dir, testsets_dir, overwrite=False):
+    """Compile story_dict to .pl, lint, and write to explicit (run-tagged) dirs.
+
+    Like save_story but accepts explicit output directories instead of using the
+    module-level JSON_DIR / TESTSETS_DIR constants.  Linting still uses a temp
+    file in the flat TESTSETS_DIR so dirname(dirname) resolves to prolog/ and
+    config.pl is found.
+    """
+    constraint_id = story_dict["header"]["constraint_id"]
+    story_dict["header"].setdefault("story_uid", str(uuid.uuid4()))
+    story_dict["header"].setdefault("created_at", datetime.datetime.now(datetime.timezone.utc).isoformat())
+    json_dir = Path(json_dir)
+    testsets_dir = Path(testsets_dir)
+    json_path = json_dir / f"{constraint_id}.json"
+    pl_path = testsets_dir / f"{constraint_id}.pl"
+
+    if not overwrite and (json_path.exists() or pl_path.exists()):
+        print(f"  Skipping {constraint_id} — already exists (use overwrite=True to replace)")
+        return None, None
+
+    pl_content = generate_pl(story_dict)
+    story_dict.pop("_kernel_id", None)  # strip ephemeral field before JSON write
+
+    tmp_path = TESTSETS_DIR / f".tmp_{constraint_id}.pl"
+    try:
+        tmp_path.write_text(pl_content, encoding="utf-8")
+        lint_errors = lint_file(str(tmp_path))
+        if lint_errors:
+            print(f"  Lint warnings for {constraint_id} (non-blocking):")
+            for err in lint_errors[:5]:
+                print(f"    - {err}")
+    except Exception as e:
+        print(f"  Linter crashed for {constraint_id}: {e}")
+    finally:
+        tmp_path.unlink(missing_ok=True)
+
+    json_dir.mkdir(parents=True, exist_ok=True)
+    testsets_dir.mkdir(parents=True, exist_ok=True)
+
+    json_path.write_text(json.dumps(story_dict, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    pl_path.write_text(pl_content, encoding="utf-8")
+
+    print(f"  Saved: {json_path.name} + {pl_path.name}")
+    return json_path, pl_path
+
+
+def load_schema() -> dict:
+    """Load the constraint story JSON schema as a dict."""
+    return json.loads(SCHEMA_PATH.read_text(encoding="utf-8"))
+
+
+def strip_extra_properties(story: dict, schema: dict) -> tuple:
+    """Remove extra properties at their exact JSON paths (path-aware).
+
+    Uses jsonschema error objects with .absolute_path to remove only at the
+    specific location where the extra property appears.  Avoids collateral
+    damage when a required field (e.g. Omega.description) has the same name
+    as an extra field elsewhere in the document.
+
+    Returns (stripped_story, sorted_list_of_removed_field_names).
+    """
+    import re
+    import copy
+    try:
+        import jsonschema
+    except ImportError:
+        return story, []
+
+    validator_cls = getattr(jsonschema, "Draft7Validator", jsonschema.Draft4Validator)
+    error_objects = list(validator_cls(schema).iter_errors(story))
+
+    removals = []
+    for e in error_objects:
+        if e.validator != "additionalProperties":
+            continue
+        path = list(e.absolute_path)
+        fields = {m for m in re.findall(r"'([^']+)'", e.message) if " " not in m}
+        if fields:
+            removals.append((path, fields))
+
+    if not removals:
+        return story, []
+
+    result = copy.deepcopy(story)
+    removed = set()
+    for path, fields in removals:
+        target = result
+        try:
+            for key in path:
+                target = target[key]
+        except (KeyError, IndexError, TypeError):
+            continue
+        if isinstance(target, dict):
+            for f in fields:
+                if f in target:
+                    target.pop(f)
+                    removed.add(f)
+
+    return result, sorted(removed)
 
 
 # ---------------------------------------------------------------------------

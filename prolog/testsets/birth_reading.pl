@@ -125,20 +125,22 @@ narrative_ontology:human_readable(birth_reading, "Moral Personhood Begins at Bir
 narrative_ontology:topic_domain(birth_reading, "moral_philosophy/bioethics/constitutional_law").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(birth_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(birth_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(birth_reading).
+narrative_ontology:cs_story_uid(birth_reading, '7af3f0ae-55b0-4810-aec9-3bb3edc4fa4d').
+narrative_ontology:cs_created_at('7af3f0ae-55b0-4810-aec9-3bb3edc4fa4d', '').
+narrative_ontology:cs_kernel_codification('7af3f0ae-55b0-4810-aec9-3bb3edc4fa4d', fixed_text).
+narrative_ontology:cs_authority_grounding('7af3f0ae-55b0-4810-aec9-3bb3edc4fa4d', lineage).
+narrative_ontology:cs_interpretation_layer_present('7af3f0ae-55b0-4810-aec9-3bb3edc4fa4d').
 narrative_ontology:cs_kernel_id(birth_reading, personhood_boundary).
-narrative_ontology:cs_reading_relation(birth_reading, conception_reading, forecloses).
-narrative_ontology:cs_reading_relation(birth_reading, viability_reading, coexists_with).
-narrative_ontology:cs_axiom(birth_reading, foundational, bodily_autonomy_foundational).
+narrative_ontology:cs_reading_relation('7af3f0ae-55b0-4810-aec9-3bb3edc4fa4d', conception_reading, forecloses).
+narrative_ontology:cs_reading_relation('7af3f0ae-55b0-4810-aec9-3bb3edc4fa4d', viability_reading, coexists_with).
+narrative_ontology:cs_axiom('7af3f0ae-55b0-4810-aec9-3bb3edc4fa4d', foundational, bodily_autonomy_foundational).
 narrative_ontology:cs_axiom_status(bodily_autonomy_foundational, holdable).
-narrative_ontology:cs_axiom_grounding(birth_reading, bodily_autonomy_foundational, deontological).
-narrative_ontology:cs_axiom(birth_reading, foundational, personhood_begins_at_birth).
+narrative_ontology:cs_axiom_grounding('7af3f0ae-55b0-4810-aec9-3bb3edc4fa4d', bodily_autonomy_foundational, deontological).
+narrative_ontology:cs_axiom('7af3f0ae-55b0-4810-aec9-3bb3edc4fa4d', foundational, personhood_begins_at_birth).
 narrative_ontology:cs_axiom_status(personhood_begins_at_birth, holdable).
-narrative_ontology:cs_axiom_grounding(birth_reading, personhood_begins_at_birth, deontological).
-narrative_ontology:cs_reference_frame(birth_reading, pregnant_person_as_sole_rights_bearer).
-narrative_ontology:cs_drift_state(birth_reading, contemporary_post_roe_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('7af3f0ae-55b0-4810-aec9-3bb3edc4fa4d', personhood_begins_at_birth, deontological).
+narrative_ontology:cs_reference_frame('7af3f0ae-55b0-4810-aec9-3bb3edc4fa4d', pregnant_person_as_sole_rights_bearer).
+narrative_ontology:cs_drift_state('7af3f0ae-55b0-4810-aec9-3bb3edc4fa4d', contemporary_post_roe_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(birth_reading, pregnant_person).

@@ -120,20 +120,22 @@ narrative_ontology:topic_domain(engineered_infrastructure_reading, "political_ec
 domain_priors:requires_active_enforcement(engineered_infrastructure_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(engineered_infrastructure_reading, distributed).
-narrative_ontology:cs_authority_grounding(engineered_infrastructure_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(engineered_infrastructure_reading).
+narrative_ontology:cs_story_uid(engineered_infrastructure_reading, 'aa4147b4-93d6-4e00-bf54-4c6adb86fe8b').
+narrative_ontology:cs_created_at('aa4147b4-93d6-4e00-bf54-4c6adb86fe8b', '').
+narrative_ontology:cs_kernel_codification('aa4147b4-93d6-4e00-bf54-4c6adb86fe8b', distributed).
+narrative_ontology:cs_authority_grounding('aa4147b4-93d6-4e00-bf54-4c6adb86fe8b', lineage).
+narrative_ontology:cs_interpretation_layer_present('aa4147b4-93d6-4e00-bf54-4c6adb86fe8b').
 narrative_ontology:cs_kernel_id(engineered_infrastructure_reading, market_as_natural_default).
-narrative_ontology:cs_reading_relation(engineered_infrastructure_reading, spontaneous_order_reading, coexists_with).
-narrative_ontology:cs_reading_relation(engineered_infrastructure_reading, beneficiary_maintenance_reading, influences).
-narrative_ontology:cs_axiom(engineered_infrastructure_reading, foundational, markets_are_political_choices).
+narrative_ontology:cs_reading_relation('aa4147b4-93d6-4e00-bf54-4c6adb86fe8b', spontaneous_order_reading, coexists_with).
+narrative_ontology:cs_reading_relation('aa4147b4-93d6-4e00-bf54-4c6adb86fe8b', beneficiary_maintenance_reading, influences).
+narrative_ontology:cs_axiom('aa4147b4-93d6-4e00-bf54-4c6adb86fe8b', foundational, markets_are_political_choices).
 narrative_ontology:cs_axiom_status(markets_are_political_choices, holdable).
-narrative_ontology:cs_axiom_grounding(engineered_infrastructure_reading, markets_are_political_choices, conventional).
-narrative_ontology:cs_axiom(engineered_infrastructure_reading, foundational, deregulation_masks_reregulation).
+narrative_ontology:cs_axiom_grounding('aa4147b4-93d6-4e00-bf54-4c6adb86fe8b', markets_are_political_choices, conventional).
+narrative_ontology:cs_axiom('aa4147b4-93d6-4e00-bf54-4c6adb86fe8b', foundational, deregulation_masks_reregulation).
 narrative_ontology:cs_axiom_status(deregulation_masks_reregulation, holdable).
-narrative_ontology:cs_axiom_grounding(engineered_infrastructure_reading, deregulation_masks_reregulation, empirically_contingent).
-narrative_ontology:cs_reference_frame(engineered_infrastructure_reading, markets_as_engineered_systems).
-narrative_ontology:cs_drift_state(engineered_infrastructure_reading, contemporary_financialization_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('aa4147b4-93d6-4e00-bf54-4c6adb86fe8b', deregulation_masks_reregulation, empirically_contingent).
+narrative_ontology:cs_reference_frame('aa4147b4-93d6-4e00-bf54-4c6adb86fe8b', markets_as_engineered_systems).
+narrative_ontology:cs_drift_state('aa4147b4-93d6-4e00-bf54-4c6adb86fe8b', contemporary_financialization_era, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(engineered_infrastructure_reading, regulatory_coalition).

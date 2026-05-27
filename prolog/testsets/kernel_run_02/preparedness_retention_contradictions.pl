@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(ceremony_displaces_competence_under_resource_constraint, live_exercise_retains_competence).
 narrative_ontology:cs_axiom_contradiction(live_exercise_retains_competence, ceremony_displaces_competence_under_resource_constraint).
+narrative_ontology:cs_story_uid(preparedness_retention_contradictions, '3ea122f4-8ebe-459d-9159-fc1e57515dd4').
+narrative_ontology:cs_created_at('3ea122f4-8ebe-459d-9159-fc1e57515dd4', '').

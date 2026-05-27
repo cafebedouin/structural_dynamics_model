@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(respect_for_autonomous_choice_over_unbearable_suffering, life_intrinsic_dignity_inviolable).
 narrative_ontology:cs_axiom_contradiction(life_intrinsic_dignity_inviolable, respect_for_autonomous_choice_over_unbearable_suffering).
+narrative_ontology:cs_story_uid(end_of_life_authority_contradictions, 'f2c7981e-aaec-4898-b5f8-6c5ccc6511cb').
+narrative_ontology:cs_created_at('f2c7981e-aaec-4898-b5f8-6c5ccc6511cb', '').

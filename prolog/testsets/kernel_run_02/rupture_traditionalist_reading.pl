@@ -123,20 +123,22 @@ narrative_ontology:topic_domain(rupture_traditionalist_reading, "ecclesiology/in
 domain_priors:requires_active_enforcement(rupture_traditionalist_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(rupture_traditionalist_reading, formalized).
-narrative_ontology:cs_authority_grounding(rupture_traditionalist_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(rupture_traditionalist_reading).
+narrative_ontology:cs_story_uid(rupture_traditionalist_reading, 'eb2d87e4-8561-4d2f-878f-d289afcf351b').
+narrative_ontology:cs_created_at('eb2d87e4-8561-4d2f-878f-d289afcf351b', '').
+narrative_ontology:cs_kernel_codification('eb2d87e4-8561-4d2f-878f-d289afcf351b', formalized).
+narrative_ontology:cs_authority_grounding('eb2d87e4-8561-4d2f-878f-d289afcf351b', lineage).
+narrative_ontology:cs_interpretation_layer_present('eb2d87e4-8561-4d2f-878f-d289afcf351b').
 narrative_ontology:cs_kernel_id(rupture_traditionalist_reading, vatican_ii_doctrinal_authority).
-narrative_ontology:cs_reading_relation(rupture_traditionalist_reading, continuity_reading, forecloses).
-narrative_ontology:cs_reading_relation(rupture_traditionalist_reading, rupture_progressive_reading, coexists_with).
-narrative_ontology:cs_axiom(rupture_traditionalist_reading, foundational, vatican_ii_contains_substantive_rupture).
+narrative_ontology:cs_reading_relation('eb2d87e4-8561-4d2f-878f-d289afcf351b', continuity_reading, forecloses).
+narrative_ontology:cs_reading_relation('eb2d87e4-8561-4d2f-878f-d289afcf351b', rupture_progressive_reading, coexists_with).
+narrative_ontology:cs_axiom('eb2d87e4-8561-4d2f-878f-d289afcf351b', foundational, vatican_ii_contains_substantive_rupture).
 narrative_ontology:cs_axiom_status(vatican_ii_contains_substantive_rupture, holdable).
-narrative_ontology:cs_axiom_grounding(rupture_traditionalist_reading, vatican_ii_contains_substantive_rupture, empirically_contingent).
-narrative_ontology:cs_axiom(rupture_traditionalist_reading, foundational, rupture_violates_conciliar_intent_and_doctrine).
+narrative_ontology:cs_axiom_grounding('eb2d87e4-8561-4d2f-878f-d289afcf351b', vatican_ii_contains_substantive_rupture, empirically_contingent).
+narrative_ontology:cs_axiom('eb2d87e4-8561-4d2f-878f-d289afcf351b', foundational, rupture_violates_conciliar_intent_and_doctrine).
 narrative_ontology:cs_axiom_status(rupture_violates_conciliar_intent_and_doctrine, holdable).
-narrative_ontology:cs_axiom_grounding(rupture_traditionalist_reading, rupture_violates_conciliar_intent_and_doctrine, deontological).
-narrative_ontology:cs_reference_frame(rupture_traditionalist_reading, pre_conciliar_doctrinal_continuity).
-narrative_ontology:cs_drift_state(rupture_traditionalist_reading, post_conciliar_implementation_phase, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('eb2d87e4-8561-4d2f-878f-d289afcf351b', rupture_violates_conciliar_intent_and_doctrine, deontological).
+narrative_ontology:cs_reference_frame('eb2d87e4-8561-4d2f-878f-d289afcf351b', pre_conciliar_doctrinal_continuity).
+narrative_ontology:cs_drift_state('eb2d87e4-8561-4d2f-878f-d289afcf351b', post_conciliar_implementation_phase, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(rupture_traditionalist_reading, progressive_reform_faction).

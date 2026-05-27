@@ -119,20 +119,22 @@ narrative_ontology:topic_domain(dropping_reading, "international_relations/nucle
 domain_priors:requires_active_enforcement(dropping_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(dropping_reading, formalized).
-narrative_ontology:cs_authority_grounding(dropping_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(dropping_reading).
+narrative_ontology:cs_story_uid(dropping_reading, '6d72ab20-27e8-4633-a7af-9c9e4b1bce9a').
+narrative_ontology:cs_created_at('6d72ab20-27e8-4633-a7af-9c9e4b1bce9a', '').
+narrative_ontology:cs_kernel_codification('6d72ab20-27e8-4633-a7af-9c9e4b1bce9a', formalized).
+narrative_ontology:cs_authority_grounding('6d72ab20-27e8-4633-a7af-9c9e4b1bce9a', extraction).
+narrative_ontology:cs_interpretation_layer_present('6d72ab20-27e8-4633-a7af-9c9e4b1bce9a').
 narrative_ontology:cs_kernel_id(dropping_reading, total_war_reachability_boundary).
-narrative_ontology:cs_reading_relation(dropping_reading, contraction_reading, coexists_with).
-narrative_ontology:cs_reading_relation(dropping_reading, contingent_reachability_reading, coexists_with).
-narrative_ontology:cs_axiom(dropping_reading, foundational, probability_declining_toward_stability).
+narrative_ontology:cs_reading_relation('6d72ab20-27e8-4633-a7af-9c9e4b1bce9a', contraction_reading, coexists_with).
+narrative_ontology:cs_reading_relation('6d72ab20-27e8-4633-a7af-9c9e4b1bce9a', contingent_reachability_reading, coexists_with).
+narrative_ontology:cs_axiom('6d72ab20-27e8-4633-a7af-9c9e4b1bce9a', foundational, probability_declining_toward_stability).
 narrative_ontology:cs_axiom_status(probability_declining_toward_stability, holdable).
-narrative_ontology:cs_axiom_grounding(dropping_reading, probability_declining_toward_stability, empirically_contingent).
-narrative_ontology:cs_axiom(dropping_reading, foundational, deterrence_mechanism_functionally_proven).
+narrative_ontology:cs_axiom_grounding('6d72ab20-27e8-4633-a7af-9c9e4b1bce9a', probability_declining_toward_stability, empirically_contingent).
+narrative_ontology:cs_axiom('6d72ab20-27e8-4633-a7af-9c9e4b1bce9a', foundational, deterrence_mechanism_functionally_proven).
 narrative_ontology:cs_axiom_status(deterrence_mechanism_functionally_proven, holdable).
-narrative_ontology:cs_axiom_grounding(dropping_reading, deterrence_mechanism_functionally_proven, empirically_contingent).
-narrative_ontology:cs_reference_frame(dropping_reading, deterrence_stability_equilibrium).
-narrative_ontology:cs_drift_state(dropping_reading, contemporary_transparency_era, gap(stable, minor, true)).
+narrative_ontology:cs_axiom_grounding('6d72ab20-27e8-4633-a7af-9c9e4b1bce9a', deterrence_mechanism_functionally_proven, empirically_contingent).
+narrative_ontology:cs_reference_frame('6d72ab20-27e8-4633-a7af-9c9e4b1bce9a', deterrence_stability_equilibrium).
+narrative_ontology:cs_drift_state('6d72ab20-27e8-4633-a7af-9c9e4b1bce9a', contemporary_transparency_era, gap(stable, minor, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(dropping_reading, nuclear_armed_state_security_apparatus).

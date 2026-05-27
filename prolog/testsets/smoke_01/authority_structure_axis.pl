@@ -123,16 +123,18 @@ narrative_ontology:topic_domain(authority_structure_axis, "historical_linguistic
 domain_priors:requires_active_enforcement(authority_structure_axis).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(authority_structure_axis, formalized).
-narrative_ontology:cs_authority_grounding(authority_structure_axis, extraction).
-narrative_ontology:cs_interpretation_layer_present(authority_structure_axis).
-narrative_ontology:cs_reading_relation(authority_structure_axis, authority_structure_pluralistic_reading, forecloses).
-narrative_ontology:cs_reading_relation(authority_structure_axis, authority_structure_community_based_reading, influences).
-narrative_ontology:cs_axiom(authority_structure_axis, foundational, methodology_universalism_required).
+narrative_ontology:cs_story_uid(authority_structure_axis, 'b0948582-97a0-42e1-91fe-c02abd8b5290').
+narrative_ontology:cs_created_at('b0948582-97a0-42e1-91fe-c02abd8b5290', '').
+narrative_ontology:cs_kernel_codification('b0948582-97a0-42e1-91fe-c02abd8b5290', formalized).
+narrative_ontology:cs_authority_grounding('b0948582-97a0-42e1-91fe-c02abd8b5290', extraction).
+narrative_ontology:cs_interpretation_layer_present('b0948582-97a0-42e1-91fe-c02abd8b5290').
+narrative_ontology:cs_reading_relation('b0948582-97a0-42e1-91fe-c02abd8b5290', authority_structure_pluralistic_reading, forecloses).
+narrative_ontology:cs_reading_relation('b0948582-97a0-42e1-91fe-c02abd8b5290', authority_structure_community_based_reading, influences).
+narrative_ontology:cs_axiom('b0948582-97a0-42e1-91fe-c02abd8b5290', foundational, methodology_universalism_required).
 narrative_ontology:cs_axiom_status(methodology_universalism_required, holdable).
-narrative_ontology:cs_axiom(authority_structure_axis, foundational, expert_credentialing_necessary_for_validity).
+narrative_ontology:cs_axiom('b0948582-97a0-42e1-91fe-c02abd8b5290', foundational, expert_credentialing_necessary_for_validity).
 narrative_ontology:cs_axiom_status(expert_credentialing_necessary_for_validity, overridden).
-narrative_ontology:cs_axiom(authority_structure_axis, secondary, comparative_method_empirically_superior).
+narrative_ontology:cs_axiom('b0948582-97a0-42e1-91fe-c02abd8b5290', secondary, comparative_method_empirically_superior).
 narrative_ontology:cs_axiom_status(comparative_method_empirically_superior, overridden).
 
 % --- Structural relationships ---

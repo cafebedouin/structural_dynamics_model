@@ -122,21 +122,23 @@ narrative_ontology:topic_domain(top_down_institutional_override, "political_hist
 domain_priors:requires_active_enforcement(top_down_institutional_override).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(top_down_institutional_override, distributed).
-narrative_ontology:cs_authority_grounding(top_down_institutional_override, extraction).
-narrative_ontology:cs_reading_relation(top_down_institutional_override, meiji_calendar_as_inevitable_modernity, forecloses).
-narrative_ontology:cs_reading_relation(top_down_institutional_override, meiji_calendar_as_endogenous_merchant_demand, coexists_with).
-narrative_ontology:cs_axiom(top_down_institutional_override, foundational, gregorian_calendar_imposed_by_state_decree).
+narrative_ontology:cs_story_uid(top_down_institutional_override, 'a02c1954-f821-4c2f-82ea-91fbacd0b2eb').
+narrative_ontology:cs_created_at('a02c1954-f821-4c2f-82ea-91fbacd0b2eb', '').
+narrative_ontology:cs_kernel_codification('a02c1954-f821-4c2f-82ea-91fbacd0b2eb', distributed).
+narrative_ontology:cs_authority_grounding('a02c1954-f821-4c2f-82ea-91fbacd0b2eb', extraction).
+narrative_ontology:cs_reading_relation('a02c1954-f821-4c2f-82ea-91fbacd0b2eb', meiji_calendar_as_inevitable_modernity, forecloses).
+narrative_ontology:cs_reading_relation('a02c1954-f821-4c2f-82ea-91fbacd0b2eb', meiji_calendar_as_endogenous_merchant_demand, coexists_with).
+narrative_ontology:cs_axiom('a02c1954-f821-4c2f-82ea-91fbacd0b2eb', foundational, gregorian_calendar_imposed_by_state_decree).
 narrative_ontology:cs_axiom_status(gregorian_calendar_imposed_by_state_decree, holdable).
-narrative_ontology:cs_axiom_grounding(top_down_institutional_override, gregorian_calendar_imposed_by_state_decree, empirically_contingent).
-narrative_ontology:cs_axiom(top_down_institutional_override, foundational, traditional_practitioners_bore_transition_costs).
+narrative_ontology:cs_axiom_grounding('a02c1954-f821-4c2f-82ea-91fbacd0b2eb', gregorian_calendar_imposed_by_state_decree, empirically_contingent).
+narrative_ontology:cs_axiom('a02c1954-f821-4c2f-82ea-91fbacd0b2eb', foundational, traditional_practitioners_bore_transition_costs).
 narrative_ontology:cs_axiom_status(traditional_practitioners_bore_transition_costs, holdable).
-narrative_ontology:cs_axiom_grounding(top_down_institutional_override, traditional_practitioners_bore_transition_costs, empirically_contingent).
-narrative_ontology:cs_axiom(top_down_institutional_override, secondary, reform_represented_genuine_coordination_need).
+narrative_ontology:cs_axiom_grounding('a02c1954-f821-4c2f-82ea-91fbacd0b2eb', traditional_practitioners_bore_transition_costs, empirically_contingent).
+narrative_ontology:cs_axiom('a02c1954-f821-4c2f-82ea-91fbacd0b2eb', secondary, reform_represented_genuine_coordination_need).
 narrative_ontology:cs_axiom_status(reform_represented_genuine_coordination_need, holdable).
-narrative_ontology:cs_axiom_grounding(top_down_institutional_override, reform_represented_genuine_coordination_need, empirically_contingent).
-narrative_ontology:cs_reference_frame(top_down_institutional_override, lunar_temporal_coordination_baseline).
-narrative_ontology:cs_drift_state(top_down_institutional_override, gregorian_official_implementation, gap(codification_collapse, substantial, false)).
+narrative_ontology:cs_axiom_grounding('a02c1954-f821-4c2f-82ea-91fbacd0b2eb', reform_represented_genuine_coordination_need, empirically_contingent).
+narrative_ontology:cs_reference_frame('a02c1954-f821-4c2f-82ea-91fbacd0b2eb', lunar_temporal_coordination_baseline).
+narrative_ontology:cs_drift_state('a02c1954-f821-4c2f-82ea-91fbacd0b2eb', gregorian_official_implementation, gap(codification_collapse, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(top_down_institutional_override, meiji_state_apparatus).

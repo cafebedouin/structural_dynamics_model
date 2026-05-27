@@ -125,20 +125,22 @@ narrative_ontology:topic_domain(polycentric_petrification, "infrastructure_gover
 domain_priors:requires_active_enforcement(polycentric_petrification).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(polycentric_petrification, implicit).
-narrative_ontology:cs_authority_grounding(polycentric_petrification, practice).
-narrative_ontology:cs_interpretation_layer_present(polycentric_petrification).
+narrative_ontology:cs_story_uid(polycentric_petrification, '0d176140-b932-46ef-ad6a-480d28a0d31f').
+narrative_ontology:cs_created_at('0d176140-b932-46ef-ad6a-480d28a0d31f', '').
+narrative_ontology:cs_kernel_codification('0d176140-b932-46ef-ad6a-480d28a0d31f', implicit).
+narrative_ontology:cs_authority_grounding('0d176140-b932-46ef-ad6a-480d28a0d31f', practice).
+narrative_ontology:cs_interpretation_layer_present('0d176140-b932-46ef-ad6a-480d28a0d31f').
 narrative_ontology:cs_kernel_id(polycentric_petrification, preparedness_retention).
-narrative_ontology:cs_reading_relation(polycentric_petrification, rotation_as_anti_corruption, coexists_with).
-narrative_ontology:cs_reading_relation(polycentric_petrification, inevitable_organizational_forgetting, coexists_with).
-narrative_ontology:cs_axiom(polycentric_petrification, foundational, memory_loss_is_engineered_choice).
+narrative_ontology:cs_reading_relation('0d176140-b932-46ef-ad6a-480d28a0d31f', rotation_as_anti_corruption, coexists_with).
+narrative_ontology:cs_reading_relation('0d176140-b932-46ef-ad6a-480d28a0d31f', inevitable_organizational_forgetting, coexists_with).
+narrative_ontology:cs_axiom('0d176140-b932-46ef-ad6a-480d28a0d31f', foundational, memory_loss_is_engineered_choice).
 narrative_ontology:cs_axiom_status(memory_loss_is_engineered_choice, holdable).
-narrative_ontology:cs_axiom_grounding(polycentric_petrification, memory_loss_is_engineered_choice, empirically_contingent).
-narrative_ontology:cs_axiom(polycentric_petrification, foundational, beneficiaries_profit_from_fragmentation).
+narrative_ontology:cs_axiom_grounding('0d176140-b932-46ef-ad6a-480d28a0d31f', memory_loss_is_engineered_choice, empirically_contingent).
+narrative_ontology:cs_axiom('0d176140-b932-46ef-ad6a-480d28a0d31f', foundational, beneficiaries_profit_from_fragmentation).
 narrative_ontology:cs_axiom_status(beneficiaries_profit_from_fragmentation, holdable).
-narrative_ontology:cs_axiom_grounding(polycentric_petrification, beneficiaries_profit_from_fragmentation, empirically_contingent).
-narrative_ontology:cs_reference_frame(polycentric_petrification, polyarchic_resilience_framework).
-narrative_ontology:cs_drift_state(polycentric_petrification, contemporary_integration_pressure_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('0d176140-b932-46ef-ad6a-480d28a0d31f', beneficiaries_profit_from_fragmentation, empirically_contingent).
+narrative_ontology:cs_reference_frame('0d176140-b932-46ef-ad6a-480d28a0d31f', polyarchic_resilience_framework).
+narrative_ontology:cs_drift_state('0d176140-b932-46ef-ad6a-480d28a0d31f', contemporary_integration_pressure_era, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(polycentric_petrification, centralized_coordination_advocates).

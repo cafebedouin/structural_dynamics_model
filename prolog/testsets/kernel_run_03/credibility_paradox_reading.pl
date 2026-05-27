@@ -117,20 +117,22 @@ narrative_ontology:topic_domain(credibility_paradox_reading, "strategic_studies/
 domain_priors:requires_active_enforcement(credibility_paradox_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(credibility_paradox_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(credibility_paradox_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(credibility_paradox_reading).
+narrative_ontology:cs_story_uid(credibility_paradox_reading, '51b7a86a-656a-4d77-834c-6e9c8942ff42').
+narrative_ontology:cs_created_at('51b7a86a-656a-4d77-834c-6e9c8942ff42', '').
+narrative_ontology:cs_kernel_codification('51b7a86a-656a-4d77-834c-6e9c8942ff42', fixed_text).
+narrative_ontology:cs_authority_grounding('51b7a86a-656a-4d77-834c-6e9c8942ff42', lineage).
+narrative_ontology:cs_interpretation_layer_present('51b7a86a-656a-4d77-834c-6e9c8942ff42').
 narrative_ontology:cs_kernel_id(credibility_paradox_reading, nuclear_impossibility_kernel).
-narrative_ontology:cs_reading_relation(credibility_paradox_reading, structural_contraction_reading, coexists_with).
-narrative_ontology:cs_reading_relation(credibility_paradox_reading, rational_dropout_reading, influences).
-narrative_ontology:cs_axiom(credibility_paradox_reading, foundational, credibility_paradox_is_insoluble).
+narrative_ontology:cs_reading_relation('51b7a86a-656a-4d77-834c-6e9c8942ff42', structural_contraction_reading, coexists_with).
+narrative_ontology:cs_reading_relation('51b7a86a-656a-4d77-834c-6e9c8942ff42', rational_dropout_reading, influences).
+narrative_ontology:cs_axiom('51b7a86a-656a-4d77-834c-6e9c8942ff42', foundational, credibility_paradox_is_insoluble).
 narrative_ontology:cs_axiom_status(credibility_paradox_is_insoluble, holdable).
-narrative_ontology:cs_axiom_grounding(credibility_paradox_reading, credibility_paradox_is_insoluble, empirically_contingent).
-narrative_ontology:cs_axiom(credibility_paradox_reading, foundational, usable_nuclear_options_are_reachable).
+narrative_ontology:cs_axiom_grounding('51b7a86a-656a-4d77-834c-6e9c8942ff42', credibility_paradox_is_insoluble, empirically_contingent).
+narrative_ontology:cs_axiom('51b7a86a-656a-4d77-834c-6e9c8942ff42', foundational, usable_nuclear_options_are_reachable).
 narrative_ontology:cs_axiom_status(usable_nuclear_options_are_reachable, holdable).
-narrative_ontology:cs_axiom_grounding(credibility_paradox_reading, usable_nuclear_options_are_reachable, empirically_contingent).
-narrative_ontology:cs_reference_frame(credibility_paradox_reading, nuclear_deterrence_credibility_foundation).
-narrative_ontology:cs_drift_state(credibility_paradox_reading, contemporary_counterforce_era, gap(codification_collapse, substantial, false)).
+narrative_ontology:cs_axiom_grounding('51b7a86a-656a-4d77-834c-6e9c8942ff42', usable_nuclear_options_are_reachable, empirically_contingent).
+narrative_ontology:cs_reference_frame('51b7a86a-656a-4d77-834c-6e9c8942ff42', nuclear_deterrence_credibility_foundation).
+narrative_ontology:cs_drift_state('51b7a86a-656a-4d77-834c-6e9c8942ff42', contemporary_counterforce_era, gap(codification_collapse, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(credibility_paradox_reading, great_power_strategic_establishments).

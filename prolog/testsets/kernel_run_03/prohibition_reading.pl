@@ -126,20 +126,22 @@ narrative_ontology:topic_domain(prohibition_reading, "public_health_policy/crimi
 domain_priors:requires_active_enforcement(prohibition_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(prohibition_reading, formalized).
-narrative_ontology:cs_authority_grounding(prohibition_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(prohibition_reading).
+narrative_ontology:cs_story_uid(prohibition_reading, 'afd25d62-b8fb-4a19-a18f-24c4949f3552').
+narrative_ontology:cs_created_at('afd25d62-b8fb-4a19-a18f-24c4949f3552', '').
+narrative_ontology:cs_kernel_codification('afd25d62-b8fb-4a19-a18f-24c4949f3552', formalized).
+narrative_ontology:cs_authority_grounding('afd25d62-b8fb-4a19-a18f-24c4949f3552', extraction).
+narrative_ontology:cs_interpretation_layer_present('afd25d62-b8fb-4a19-a18f-24c4949f3552').
 narrative_ontology:cs_kernel_id(prohibition_reading, substance_control_authority).
-narrative_ontology:cs_reading_relation(prohibition_reading, harm_reduction_reading, forecloses).
-narrative_ontology:cs_reading_relation(prohibition_reading, legalization_reading, coexists_with).
-narrative_ontology:cs_axiom(prohibition_reading, foundational, intrinsic_use_harm_primary).
+narrative_ontology:cs_reading_relation('afd25d62-b8fb-4a19-a18f-24c4949f3552', harm_reduction_reading, forecloses).
+narrative_ontology:cs_reading_relation('afd25d62-b8fb-4a19-a18f-24c4949f3552', legalization_reading, coexists_with).
+narrative_ontology:cs_axiom('afd25d62-b8fb-4a19-a18f-24c4949f3552', foundational, intrinsic_use_harm_primary).
 narrative_ontology:cs_axiom_status(intrinsic_use_harm_primary, holdable).
-narrative_ontology:cs_axiom_grounding(prohibition_reading, intrinsic_use_harm_primary, empirically_contingent).
-narrative_ontology:cs_axiom(prohibition_reading, foundational, prevention_authority_derives_from_harm).
+narrative_ontology:cs_axiom_grounding('afd25d62-b8fb-4a19-a18f-24c4949f3552', intrinsic_use_harm_primary, empirically_contingent).
+narrative_ontology:cs_axiom('afd25d62-b8fb-4a19-a18f-24c4949f3552', foundational, prevention_authority_derives_from_harm).
 narrative_ontology:cs_axiom_status(prevention_authority_derives_from_harm, holdable).
-narrative_ontology:cs_axiom_grounding(prohibition_reading, prevention_authority_derives_from_harm, deontological).
-narrative_ontology:cs_reference_frame(prohibition_reading, intrinsic_drug_harm_prevention_authority).
-narrative_ontology:cs_drift_state(prohibition_reading, contemporary_evidence_era_2015_2026, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('afd25d62-b8fb-4a19-a18f-24c4949f3552', prevention_authority_derives_from_harm, deontological).
+narrative_ontology:cs_reference_frame('afd25d62-b8fb-4a19-a18f-24c4949f3552', intrinsic_drug_harm_prevention_authority).
+narrative_ontology:cs_drift_state('afd25d62-b8fb-4a19-a18f-24c4949f3552', contemporary_evidence_era_2015_2026, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(prohibition_reading, enforcement_apparatus).

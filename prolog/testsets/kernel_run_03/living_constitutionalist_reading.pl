@@ -125,20 +125,22 @@ narrative_ontology:topic_domain(living_constitutionalist_reading, "constitutiona
 domain_priors:requires_active_enforcement(living_constitutionalist_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(living_constitutionalist_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(living_constitutionalist_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(living_constitutionalist_reading).
+narrative_ontology:cs_story_uid(living_constitutionalist_reading, '3dff3076-921f-47a9-9d32-3a5672a946d5').
+narrative_ontology:cs_created_at('3dff3076-921f-47a9-9d32-3a5672a946d5', '').
+narrative_ontology:cs_kernel_codification('3dff3076-921f-47a9-9d32-3a5672a946d5', fixed_text).
+narrative_ontology:cs_authority_grounding('3dff3076-921f-47a9-9d32-3a5672a946d5', lineage).
+narrative_ontology:cs_interpretation_layer_present('3dff3076-921f-47a9-9d32-3a5672a946d5').
 narrative_ontology:cs_kernel_id(living_constitutionalist_reading, us_constitution_text).
-narrative_ontology:cs_reading_relation(living_constitutionalist_reading, originalist_reading, coexists_with).
-narrative_ontology:cs_reading_relation(living_constitutionalist_reading, positivist_reading, coexists_with).
-narrative_ontology:cs_axiom(living_constitutionalist_reading, foundational, constitutional_meaning_evolves_with_society).
+narrative_ontology:cs_reading_relation('3dff3076-921f-47a9-9d32-3a5672a946d5', originalist_reading, coexists_with).
+narrative_ontology:cs_reading_relation('3dff3076-921f-47a9-9d32-3a5672a946d5', positivist_reading, coexists_with).
+narrative_ontology:cs_axiom('3dff3076-921f-47a9-9d32-3a5672a946d5', foundational, constitutional_meaning_evolves_with_society).
 narrative_ontology:cs_axiom_status(constitutional_meaning_evolves_with_society, holdable).
-narrative_ontology:cs_axiom_grounding(living_constitutionalist_reading, constitutional_meaning_evolves_with_society, empirically_contingent).
-narrative_ontology:cs_axiom(living_constitutionalist_reading, foundational, contemporary_social_values_authoritative_interpretation).
+narrative_ontology:cs_axiom_grounding('3dff3076-921f-47a9-9d32-3a5672a946d5', constitutional_meaning_evolves_with_society, empirically_contingent).
+narrative_ontology:cs_axiom('3dff3076-921f-47a9-9d32-3a5672a946d5', foundational, contemporary_social_values_authoritative_interpretation).
 narrative_ontology:cs_axiom_status(contemporary_social_values_authoritative_interpretation, holdable).
-narrative_ontology:cs_axiom_grounding(living_constitutionalist_reading, contemporary_social_values_authoritative_interpretation, deontological).
-narrative_ontology:cs_reference_frame(living_constitutionalist_reading, flexible_constitutional_authority).
-narrative_ontology:cs_drift_state(living_constitutionalist_reading, contemporary_judicial_practice, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('3dff3076-921f-47a9-9d32-3a5672a946d5', contemporary_social_values_authoritative_interpretation, deontological).
+narrative_ontology:cs_reference_frame('3dff3076-921f-47a9-9d32-3a5672a946d5', flexible_constitutional_authority).
+narrative_ontology:cs_drift_state('3dff3076-921f-47a9-9d32-3a5672a946d5', contemporary_judicial_practice, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(living_constitutionalist_reading, rights_claimants_in_changed_contexts).

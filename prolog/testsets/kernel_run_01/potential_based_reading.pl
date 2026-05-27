@@ -112,18 +112,20 @@ narrative_ontology:human_readable(potential_based_reading, "Personhood Grounded 
 narrative_ontology:topic_domain(potential_based_reading, "moral_philosophy/bioethics/historical_ethics").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(potential_based_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(potential_based_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(potential_based_reading).
+narrative_ontology:cs_story_uid(potential_based_reading, '533dc84d-bb96-40da-8fe1-6b8d470be171').
+narrative_ontology:cs_created_at('533dc84d-bb96-40da-8fe1-6b8d470be171', '').
+narrative_ontology:cs_kernel_codification('533dc84d-bb96-40da-8fe1-6b8d470be171', fixed_text).
+narrative_ontology:cs_authority_grounding('533dc84d-bb96-40da-8fe1-6b8d470be171', lineage).
+narrative_ontology:cs_interpretation_layer_present('533dc84d-bb96-40da-8fe1-6b8d470be171').
 narrative_ontology:cs_kernel_id(potential_based_reading, personhood_boundary).
-narrative_ontology:cs_reading_relation(potential_based_reading, fitness_contingent_reading, coexists_with).
-narrative_ontology:cs_reading_relation(potential_based_reading, birth_threshold_reading, coexists_with).
-narrative_ontology:cs_axiom(potential_based_reading, foundational, rational_agency_constitutive_personhood).
+narrative_ontology:cs_reading_relation('533dc84d-bb96-40da-8fe1-6b8d470be171', fitness_contingent_reading, coexists_with).
+narrative_ontology:cs_reading_relation('533dc84d-bb96-40da-8fe1-6b8d470be171', birth_threshold_reading, coexists_with).
+narrative_ontology:cs_axiom('533dc84d-bb96-40da-8fe1-6b8d470be171', foundational, rational_agency_constitutive_personhood).
 narrative_ontology:cs_axiom_status(rational_agency_constitutive_personhood, holdable).
-narrative_ontology:cs_axiom(potential_based_reading, foundational, potential_future_capacity_sufficient).
+narrative_ontology:cs_axiom('533dc84d-bb96-40da-8fe1-6b8d470be171', foundational, potential_future_capacity_sufficient).
 narrative_ontology:cs_axiom_status(potential_future_capacity_sufficient, holdable).
-narrative_ontology:cs_reference_frame(potential_based_reading, kantian_rational_autonomy).
-narrative_ontology:cs_drift_state(potential_based_reading, contemporary_bioethics_era, gap(authority_erosion, substantial, true)).
+narrative_ontology:cs_reference_frame('533dc84d-bb96-40da-8fe1-6b8d470be171', kantian_rational_autonomy).
+narrative_ontology:cs_drift_state('533dc84d-bb96-40da-8fe1-6b8d470be171', contemporary_bioethics_era, gap(authority_erosion, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(potential_based_reading, parental_authority).

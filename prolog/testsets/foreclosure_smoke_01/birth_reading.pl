@@ -121,18 +121,20 @@ narrative_ontology:human_readable(birth_reading, "Moral Status Begins at Birth (
 narrative_ontology:topic_domain(birth_reading, "bioethics/constitutional_law/reproductive_rights").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(birth_reading, formalized).
-narrative_ontology:cs_authority_grounding(birth_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(birth_reading).
+narrative_ontology:cs_story_uid(birth_reading, '525de304-fe7b-4dcf-a270-74f6e90f169a').
+narrative_ontology:cs_created_at('525de304-fe7b-4dcf-a270-74f6e90f169a', '').
+narrative_ontology:cs_kernel_codification('525de304-fe7b-4dcf-a270-74f6e90f169a', formalized).
+narrative_ontology:cs_authority_grounding('525de304-fe7b-4dcf-a270-74f6e90f169a', lineage).
+narrative_ontology:cs_interpretation_layer_present('525de304-fe7b-4dcf-a270-74f6e90f169a').
 narrative_ontology:cs_kernel_id(birth_reading, personhood_boundary).
-narrative_ontology:cs_reading_relation(birth_reading, conception_reading, forecloses).
-narrative_ontology:cs_reading_relation(birth_reading, viability_reading, coexists_with).
-narrative_ontology:cs_axiom(birth_reading, foundational, moral_status_at_birth).
+narrative_ontology:cs_reading_relation('525de304-fe7b-4dcf-a270-74f6e90f169a', conception_reading, forecloses).
+narrative_ontology:cs_reading_relation('525de304-fe7b-4dcf-a270-74f6e90f169a', viability_reading, coexists_with).
+narrative_ontology:cs_axiom('525de304-fe7b-4dcf-a270-74f6e90f169a', foundational, moral_status_at_birth).
 narrative_ontology:cs_axiom_status(moral_status_at_birth, holdable).
-narrative_ontology:cs_axiom(birth_reading, foundational, bodily_autonomy_is_trump).
+narrative_ontology:cs_axiom('525de304-fe7b-4dcf-a270-74f6e90f169a', foundational, bodily_autonomy_is_trump).
 narrative_ontology:cs_axiom_status(bodily_autonomy_is_trump, holdable).
-narrative_ontology:cs_reference_frame(birth_reading, bodily_autonomy_liberal_framework).
-narrative_ontology:cs_drift_state(birth_reading, contemporary_post_dobbs_pluralism, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_reference_frame('525de304-fe7b-4dcf-a270-74f6e90f169a', bodily_autonomy_liberal_framework).
+narrative_ontology:cs_drift_state('525de304-fe7b-4dcf-a270-74f6e90f169a', contemporary_post_dobbs_pluralism, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(birth_reading, pregnant_person).

@@ -126,20 +126,22 @@ narrative_ontology:topic_domain(conception_reading, "moral_philosophy/bioethics/
 domain_priors:requires_active_enforcement(conception_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(conception_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(conception_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(conception_reading).
+narrative_ontology:cs_story_uid(conception_reading, '8792f89e-7c6d-43ab-9c02-d6106bd9c913').
+narrative_ontology:cs_created_at('8792f89e-7c6d-43ab-9c02-d6106bd9c913', '').
+narrative_ontology:cs_kernel_codification('8792f89e-7c6d-43ab-9c02-d6106bd9c913', fixed_text).
+narrative_ontology:cs_authority_grounding('8792f89e-7c6d-43ab-9c02-d6106bd9c913', lineage).
+narrative_ontology:cs_interpretation_layer_present('8792f89e-7c6d-43ab-9c02-d6106bd9c913').
 narrative_ontology:cs_kernel_id(conception_reading, personhood_boundary).
-narrative_ontology:cs_reading_relation(conception_reading, viability_reading, coexists_with).
-narrative_ontology:cs_reading_relation(conception_reading, birth_reading, coexists_with).
-narrative_ontology:cs_axiom(conception_reading, foundational, genetic_continuity_personhood).
+narrative_ontology:cs_reading_relation('8792f89e-7c6d-43ab-9c02-d6106bd9c913', viability_reading, coexists_with).
+narrative_ontology:cs_reading_relation('8792f89e-7c6d-43ab-9c02-d6106bd9c913', birth_reading, coexists_with).
+narrative_ontology:cs_axiom('8792f89e-7c6d-43ab-9c02-d6106bd9c913', foundational, genetic_continuity_personhood).
 narrative_ontology:cs_axiom_status(genetic_continuity_personhood, holdable).
-narrative_ontology:cs_axiom_grounding(conception_reading, genetic_continuity_personhood, empirically_contingent).
-narrative_ontology:cs_axiom(conception_reading, secondary, potentiality_confers_status).
+narrative_ontology:cs_axiom_grounding('8792f89e-7c6d-43ab-9c02-d6106bd9c913', genetic_continuity_personhood, empirically_contingent).
+narrative_ontology:cs_axiom('8792f89e-7c6d-43ab-9c02-d6106bd9c913', secondary, potentiality_confers_status).
 narrative_ontology:cs_axiom_status(potentiality_confers_status, holdable).
-narrative_ontology:cs_axiom_grounding(conception_reading, potentiality_confers_status, deontological).
-narrative_ontology:cs_reference_frame(conception_reading, natural_law_ensoulment_doctrine).
-narrative_ontology:cs_drift_state(conception_reading, contemporary_secular_pluralism, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('8792f89e-7c6d-43ab-9c02-d6106bd9c913', potentiality_confers_status, deontological).
+narrative_ontology:cs_reference_frame('8792f89e-7c6d-43ab-9c02-d6106bd9c913', natural_law_ensoulment_doctrine).
+narrative_ontology:cs_drift_state('8792f89e-7c6d-43ab-9c02-d6106bd9c913', contemporary_secular_pluralism, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(conception_reading, fetal_moral_status_claimants).

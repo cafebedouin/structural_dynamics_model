@@ -122,19 +122,21 @@ narrative_ontology:topic_domain(competence_reading, "infrastructure_governance/d
 domain_priors:requires_active_enforcement(competence_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(competence_reading, distributed).
-narrative_ontology:cs_authority_grounding(competence_reading, practice).
-narrative_ontology:cs_interpretation_layer_present(competence_reading).
+narrative_ontology:cs_story_uid(competence_reading, 'ea44bbba-fb37-4475-9dd4-10c1525ff4ed').
+narrative_ontology:cs_created_at('ea44bbba-fb37-4475-9dd4-10c1525ff4ed', '').
+narrative_ontology:cs_kernel_codification('ea44bbba-fb37-4475-9dd4-10c1525ff4ed', distributed).
+narrative_ontology:cs_authority_grounding('ea44bbba-fb37-4475-9dd4-10c1525ff4ed', practice).
+narrative_ontology:cs_interpretation_layer_present('ea44bbba-fb37-4475-9dd4-10c1525ff4ed').
 narrative_ontology:cs_kernel_id(competence_reading, preparedness_retention).
-narrative_ontology:cs_reading_relation(competence_reading, husk_reading, coexists_with).
-narrative_ontology:cs_axiom(competence_reading, foundational, institutional_knowledge_transfer_succeeds).
+narrative_ontology:cs_reading_relation('ea44bbba-fb37-4475-9dd4-10c1525ff4ed', husk_reading, coexists_with).
+narrative_ontology:cs_axiom('ea44bbba-fb37-4475-9dd4-10c1525ff4ed', foundational, institutional_knowledge_transfer_succeeds).
 narrative_ontology:cs_axiom_status(institutional_knowledge_transfer_succeeds, holdable).
-narrative_ontology:cs_axiom_grounding(competence_reading, institutional_knowledge_transfer_succeeds, empirically_contingent).
-narrative_ontology:cs_axiom(competence_reading, secondary, institutional_memory_is_structural).
+narrative_ontology:cs_axiom_grounding('ea44bbba-fb37-4475-9dd4-10c1525ff4ed', institutional_knowledge_transfer_succeeds, empirically_contingent).
+narrative_ontology:cs_axiom('ea44bbba-fb37-4475-9dd4-10c1525ff4ed', secondary, institutional_memory_is_structural).
 narrative_ontology:cs_axiom_status(institutional_memory_is_structural, holdable).
-narrative_ontology:cs_axiom_grounding(competence_reading, institutional_memory_is_structural, instrumental).
-narrative_ontology:cs_reference_frame(competence_reading, systematized_knowledge_transfer_framework).
-narrative_ontology:cs_drift_state(competence_reading, contemporary_digital_era, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_axiom_grounding('ea44bbba-fb37-4475-9dd4-10c1525ff4ed', institutional_memory_is_structural, instrumental).
+narrative_ontology:cs_reference_frame('ea44bbba-fb37-4475-9dd4-10c1525ff4ed', systematized_knowledge_transfer_framework).
+narrative_ontology:cs_drift_state('ea44bbba-fb37-4475-9dd4-10c1525ff4ed', contemporary_digital_era, gap(practice_drift, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(competence_reading, responding_organizations).

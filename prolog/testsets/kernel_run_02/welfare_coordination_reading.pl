@@ -123,20 +123,22 @@ narrative_ontology:topic_domain(welfare_coordination_reading, "political_economy
 domain_priors:requires_active_enforcement(welfare_coordination_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(welfare_coordination_reading, formalized).
-narrative_ontology:cs_authority_grounding(welfare_coordination_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(welfare_coordination_reading).
+narrative_ontology:cs_story_uid(welfare_coordination_reading, '2aba284e-26ae-47e5-8103-ce50f88cba9c').
+narrative_ontology:cs_created_at('2aba284e-26ae-47e5-8103-ce50f88cba9c', '').
+narrative_ontology:cs_kernel_codification('2aba284e-26ae-47e5-8103-ce50f88cba9c', formalized).
+narrative_ontology:cs_authority_grounding('2aba284e-26ae-47e5-8103-ce50f88cba9c', extraction).
+narrative_ontology:cs_interpretation_layer_present('2aba284e-26ae-47e5-8103-ce50f88cba9c').
 narrative_ontology:cs_kernel_id(welfare_coordination_reading, federation_membership_kernel).
-narrative_ontology:cs_reading_relation(welfare_coordination_reading, integration_reading, forecloses).
-narrative_ontology:cs_reading_relation(welfare_coordination_reading, member_sovereignty_reading, coexists_with).
-narrative_ontology:cs_axiom(welfare_coordination_reading, foundational, welfare_autonomy_compatible_with_free_movement).
+narrative_ontology:cs_reading_relation('2aba284e-26ae-47e5-8103-ce50f88cba9c', integration_reading, forecloses).
+narrative_ontology:cs_reading_relation('2aba284e-26ae-47e5-8103-ce50f88cba9c', member_sovereignty_reading, coexists_with).
+narrative_ontology:cs_axiom('2aba284e-26ae-47e5-8103-ce50f88cba9c', foundational, welfare_autonomy_compatible_with_free_movement).
 narrative_ontology:cs_axiom_status(welfare_autonomy_compatible_with_free_movement, holdable).
-narrative_ontology:cs_axiom_grounding(welfare_coordination_reading, welfare_autonomy_compatible_with_free_movement, deontological).
-narrative_ontology:cs_axiom(welfare_coordination_reading, foundational, selective_harmonization_can_manage_extraction).
+narrative_ontology:cs_axiom_grounding('2aba284e-26ae-47e5-8103-ce50f88cba9c', welfare_autonomy_compatible_with_free_movement, deontological).
+narrative_ontology:cs_axiom('2aba284e-26ae-47e5-8103-ce50f88cba9c', foundational, selective_harmonization_can_manage_extraction).
 narrative_ontology:cs_axiom_status(selective_harmonization_can_manage_extraction, holdable).
-narrative_ontology:cs_axiom_grounding(welfare_coordination_reading, selective_harmonization_can_manage_extraction, empirically_contingent).
-narrative_ontology:cs_reference_frame(welfare_coordination_reading, member_state_welfare_autonomy_with_managed_free_movement).
-narrative_ontology:cs_drift_state(welfare_coordination_reading, contemporary_post_services_directive_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('2aba284e-26ae-47e5-8103-ce50f88cba9c', selective_harmonization_can_manage_extraction, empirically_contingent).
+narrative_ontology:cs_reference_frame('2aba284e-26ae-47e5-8103-ce50f88cba9c', member_state_welfare_autonomy_with_managed_free_movement).
+narrative_ontology:cs_drift_state('2aba284e-26ae-47e5-8103-ce50f88cba9c', contemporary_post_services_directive_era, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(welfare_coordination_reading, mobile_labor_arbitrageurs).

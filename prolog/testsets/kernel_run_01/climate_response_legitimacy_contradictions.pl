@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(technological_decoupling_feasible, growth_decoupling_insufficient).
 narrative_ontology:cs_axiom_contradiction(growth_decoupling_insufficient, technological_decoupling_feasible).
+narrative_ontology:cs_story_uid(climate_response_legitimacy_contradictions, '26645708-de4e-4dbd-bc8e-4da80a2628a9').
+narrative_ontology:cs_created_at('26645708-de4e-4dbd-bc8e-4da80a2628a9', '').

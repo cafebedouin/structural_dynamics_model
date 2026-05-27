@@ -129,20 +129,22 @@ narrative_ontology:topic_domain(constitutional_hybrid_reading, "political_philos
 domain_priors:requires_active_enforcement(constitutional_hybrid_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(constitutional_hybrid_reading, formalized).
-narrative_ontology:cs_authority_grounding(constitutional_hybrid_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(constitutional_hybrid_reading).
+narrative_ontology:cs_story_uid(constitutional_hybrid_reading, '2b0187f3-de12-4aa1-888f-da97f44e9ea4').
+narrative_ontology:cs_created_at('2b0187f3-de12-4aa1-888f-da97f44e9ea4', '').
+narrative_ontology:cs_kernel_codification('2b0187f3-de12-4aa1-888f-da97f44e9ea4', formalized).
+narrative_ontology:cs_authority_grounding('2b0187f3-de12-4aa1-888f-da97f44e9ea4', lineage).
+narrative_ontology:cs_interpretation_layer_present('2b0187f3-de12-4aa1-888f-da97f44e9ea4').
 narrative_ontology:cs_kernel_id(constitutional_hybrid_reading, sovereign_legitimacy).
-narrative_ontology:cs_reading_relation(constitutional_hybrid_reading, monarchical_reading, coexists_with).
-narrative_ontology:cs_reading_relation(constitutional_hybrid_reading, republican_reading, coexists_with).
-narrative_ontology:cs_axiom(constitutional_hybrid_reading, foundational, dual_legitimation_coherent).
+narrative_ontology:cs_reading_relation('2b0187f3-de12-4aa1-888f-da97f44e9ea4', monarchical_reading, coexists_with).
+narrative_ontology:cs_reading_relation('2b0187f3-de12-4aa1-888f-da97f44e9ea4', republican_reading, coexists_with).
+narrative_ontology:cs_axiom('2b0187f3-de12-4aa1-888f-da97f44e9ea4', foundational, dual_legitimation_coherent).
 narrative_ontology:cs_axiom_status(dual_legitimation_coherent, holdable).
-narrative_ontology:cs_axiom_grounding(constitutional_hybrid_reading, dual_legitimation_coherent, conventional).
-narrative_ontology:cs_axiom(constitutional_hybrid_reading, foundational, sovereignty_divisible_across_institutions).
+narrative_ontology:cs_axiom_grounding('2b0187f3-de12-4aa1-888f-da97f44e9ea4', dual_legitimation_coherent, conventional).
+narrative_ontology:cs_axiom('2b0187f3-de12-4aa1-888f-da97f44e9ea4', foundational, sovereignty_divisible_across_institutions).
 narrative_ontology:cs_axiom_status(sovereignty_divisible_across_institutions, holdable).
-narrative_ontology:cs_axiom_grounding(constitutional_hybrid_reading, sovereignty_divisible_across_institutions, deontological).
-narrative_ontology:cs_reference_frame(constitutional_hybrid_reading, dual_legitimation_principle).
-narrative_ontology:cs_drift_state(constitutional_hybrid_reading, contemporary_democratic_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('2b0187f3-de12-4aa1-888f-da97f44e9ea4', sovereignty_divisible_across_institutions, deontological).
+narrative_ontology:cs_reference_frame('2b0187f3-de12-4aa1-888f-da97f44e9ea4', dual_legitimation_principle).
+narrative_ontology:cs_drift_state('2b0187f3-de12-4aa1-888f-da97f44e9ea4', contemporary_democratic_era, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(constitutional_hybrid_reading, crown_institution).

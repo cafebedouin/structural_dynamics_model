@@ -12,3 +12,5 @@ narrative_ontology:cs_axiom_contradiction(study_is_performance_not_substitute, p
 narrative_ontology:cs_axiom_contradiction(performance_validates_law, study_is_performance_not_substitute).
 narrative_ontology:cs_axiom_contradiction(study_is_performance_not_substitute, substitution_is_complete_and_sufficient).
 narrative_ontology:cs_axiom_contradiction(substitution_is_complete_and_sufficient, study_is_performance_not_substitute).
+narrative_ontology:cs_story_uid(kodashim_corpus_contradictions, '8787df8e-18ff-4d0c-8ea4-94feb6d1b812').
+narrative_ontology:cs_created_at('8787df8e-18ff-4d0c-8ea4-94feb6d1b812', '').

@@ -121,20 +121,22 @@ narrative_ontology:topic_domain(infrastructure_reading, "monetary_economics/fina
 domain_priors:requires_active_enforcement(infrastructure_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(infrastructure_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(infrastructure_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(infrastructure_reading).
+narrative_ontology:cs_story_uid(infrastructure_reading, '90833c98-c764-45e4-9436-22a11e757b98').
+narrative_ontology:cs_created_at('90833c98-c764-45e4-9436-22a11e757b98', '').
+narrative_ontology:cs_kernel_codification('90833c98-c764-45e4-9436-22a11e757b98', fixed_text).
+narrative_ontology:cs_authority_grounding('90833c98-c764-45e4-9436-22a11e757b98', extraction).
+narrative_ontology:cs_interpretation_layer_present('90833c98-c764-45e4-9436-22a11e757b98').
 narrative_ontology:cs_kernel_id(infrastructure_reading, digital_money_emergence_boundary).
-narrative_ontology:cs_reading_relation(infrastructure_reading, conceptualization_reading, influences).
-narrative_ontology:cs_reading_relation(infrastructure_reading, consumer_holdings_reading, influences).
-narrative_ontology:cs_axiom(infrastructure_reading, foundational, infrastructure_control_defines_monetary_function).
+narrative_ontology:cs_reading_relation('90833c98-c764-45e4-9436-22a11e757b98', conceptualization_reading, influences).
+narrative_ontology:cs_reading_relation('90833c98-c764-45e4-9436-22a11e757b98', consumer_holdings_reading, influences).
+narrative_ontology:cs_axiom('90833c98-c764-45e4-9436-22a11e757b98', foundational, infrastructure_control_defines_monetary_function).
 narrative_ontology:cs_axiom_status(infrastructure_control_defines_monetary_function, holdable).
-narrative_ontology:cs_axiom_grounding(infrastructure_reading, infrastructure_control_defines_monetary_function, empirically_contingent).
-narrative_ontology:cs_axiom(infrastructure_reading, foundational, beneficiary_authority_via_infrastructure_control).
+narrative_ontology:cs_axiom_grounding('90833c98-c764-45e4-9436-22a11e757b98', infrastructure_control_defines_monetary_function, empirically_contingent).
+narrative_ontology:cs_axiom('90833c98-c764-45e4-9436-22a11e757b98', foundational, beneficiary_authority_via_infrastructure_control).
 narrative_ontology:cs_axiom_status(beneficiary_authority_via_infrastructure_control, holdable).
-narrative_ontology:cs_axiom_grounding(infrastructure_reading, beneficiary_authority_via_infrastructure_control, conventional).
-narrative_ontology:cs_reference_frame(infrastructure_reading, technical_capability_money_definition).
-narrative_ontology:cs_drift_state(infrastructure_reading, contemporary_cbdc_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('90833c98-c764-45e4-9436-22a11e757b98', beneficiary_authority_via_infrastructure_control, conventional).
+narrative_ontology:cs_reference_frame('90833c98-c764-45e4-9436-22a11e757b98', technical_capability_money_definition).
+narrative_ontology:cs_drift_state('90833c98-c764-45e4-9436-22a11e757b98', contemporary_cbdc_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(infrastructure_reading, banking_infrastructure_operators).

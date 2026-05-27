@@ -113,17 +113,19 @@ narrative_ontology:topic_domain(composite_overdetermined_reading, "historical_so
 domain_priors:requires_active_enforcement(composite_overdetermined_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(composite_overdetermined_reading, distributed).
-narrative_ontology:cs_authority_grounding(composite_overdetermined_reading, practice).
+narrative_ontology:cs_story_uid(composite_overdetermined_reading, 'd341be0e-a617-4f48-be20-4df3e547f450').
+narrative_ontology:cs_created_at('d341be0e-a617-4f48-be20-4df3e547f450', '').
+narrative_ontology:cs_kernel_codification('d341be0e-a617-4f48-be20-4df3e547f450', distributed).
+narrative_ontology:cs_authority_grounding('d341be0e-a617-4f48-be20-4df3e547f450', practice).
 narrative_ontology:cs_kernel_id(composite_overdetermined_reading, honor_satisfaction_substrate).
-narrative_ontology:cs_reading_relation(composite_overdetermined_reading, practice_decline_reading, coexists_with).
-narrative_ontology:cs_reading_relation(composite_overdetermined_reading, cultural_contraction_reading, coexists_with).
-narrative_ontology:cs_axiom(composite_overdetermined_reading, foundational, causal_entanglement_irreducibility).
+narrative_ontology:cs_reading_relation('d341be0e-a617-4f48-be20-4df3e547f450', practice_decline_reading, coexists_with).
+narrative_ontology:cs_reading_relation('d341be0e-a617-4f48-be20-4df3e547f450', cultural_contraction_reading, coexists_with).
+narrative_ontology:cs_axiom('d341be0e-a617-4f48-be20-4df3e547f450', foundational, causal_entanglement_irreducibility).
 narrative_ontology:cs_axiom_status(causal_entanglement_irreducibility, holdable).
-narrative_ontology:cs_axiom(composite_overdetermined_reading, secondary, bidirectional_reinforcement_mechanism).
+narrative_ontology:cs_axiom('d341be0e-a617-4f48-be20-4df3e547f450', secondary, bidirectional_reinforcement_mechanism).
 narrative_ontology:cs_axiom_status(bidirectional_reinforcement_mechanism, holdable).
-narrative_ontology:cs_reference_frame(composite_overdetermined_reading, honor_substrate_functional_legitimacy).
-narrative_ontology:cs_drift_state(composite_overdetermined_reading, post_enlightenment_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('d341be0e-a617-4f48-be20-4df3e547f450', honor_substrate_functional_legitimacy).
+narrative_ontology:cs_drift_state('d341be0e-a617-4f48-be20-4df3e547f450', post_enlightenment_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(composite_overdetermined_reading, centralizing_state).

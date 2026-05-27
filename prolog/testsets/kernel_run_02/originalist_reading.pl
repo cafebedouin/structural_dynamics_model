@@ -124,20 +124,22 @@ narrative_ontology:topic_domain(originalist_reading, "constitutional_law/legal_t
 domain_priors:requires_active_enforcement(originalist_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(originalist_reading, formalized).
-narrative_ontology:cs_authority_grounding(originalist_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(originalist_reading).
+narrative_ontology:cs_story_uid(originalist_reading, '21325e7e-6c37-4288-8d2e-376b81da39c9').
+narrative_ontology:cs_created_at('21325e7e-6c37-4288-8d2e-376b81da39c9', '').
+narrative_ontology:cs_kernel_codification('21325e7e-6c37-4288-8d2e-376b81da39c9', formalized).
+narrative_ontology:cs_authority_grounding('21325e7e-6c37-4288-8d2e-376b81da39c9', lineage).
+narrative_ontology:cs_interpretation_layer_present('21325e7e-6c37-4288-8d2e-376b81da39c9').
 narrative_ontology:cs_kernel_id(originalist_reading, us_constitution_meaning).
-narrative_ontology:cs_reading_relation(originalist_reading, living_constitutionalist_reading, coexists_with).
-narrative_ontology:cs_reading_relation(originalist_reading, positivist_reading, coexists_with).
-narrative_ontology:cs_axiom(originalist_reading, foundational, meaning_fixed_at_ratification).
+narrative_ontology:cs_reading_relation('21325e7e-6c37-4288-8d2e-376b81da39c9', living_constitutionalist_reading, coexists_with).
+narrative_ontology:cs_reading_relation('21325e7e-6c37-4288-8d2e-376b81da39c9', positivist_reading, coexists_with).
+narrative_ontology:cs_axiom('21325e7e-6c37-4288-8d2e-376b81da39c9', foundational, meaning_fixed_at_ratification).
 narrative_ontology:cs_axiom_status(meaning_fixed_at_ratification, holdable).
-narrative_ontology:cs_axiom_grounding(originalist_reading, meaning_fixed_at_ratification, deontological).
-narrative_ontology:cs_axiom(originalist_reading, foundational, historical_public_meaning_is_discoverable).
+narrative_ontology:cs_axiom_grounding('21325e7e-6c37-4288-8d2e-376b81da39c9', meaning_fixed_at_ratification, deontological).
+narrative_ontology:cs_axiom('21325e7e-6c37-4288-8d2e-376b81da39c9', foundational, historical_public_meaning_is_discoverable).
 narrative_ontology:cs_axiom_status(historical_public_meaning_is_discoverable, holdable).
-narrative_ontology:cs_axiom_grounding(originalist_reading, historical_public_meaning_is_discoverable, empirically_contingent).
-narrative_ontology:cs_reference_frame(originalist_reading, framers_intent_binding_authority).
-narrative_ontology:cs_drift_state(originalist_reading, contemporary_judicial_practice, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('21325e7e-6c37-4288-8d2e-376b81da39c9', historical_public_meaning_is_discoverable, empirically_contingent).
+narrative_ontology:cs_reference_frame('21325e7e-6c37-4288-8d2e-376b81da39c9', framers_intent_binding_authority).
+narrative_ontology:cs_drift_state('21325e7e-6c37-4288-8d2e-376b81da39c9', contemporary_judicial_practice, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(originalist_reading, counter_majoritarian_constraint_advocates).

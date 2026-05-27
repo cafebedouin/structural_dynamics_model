@@ -119,9 +119,11 @@ narrative_ontology:topic_domain(remedial_reading, "constitutional_law/civil_righ
 domain_priors:requires_active_enforcement(remedial_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(remedial_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(remedial_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(remedial_reading).
+narrative_ontology:cs_story_uid(remedial_reading, '1a02ef93-c649-478e-857e-5a20e588b23c').
+narrative_ontology:cs_created_at('1a02ef93-c649-478e-857e-5a20e588b23c', '').
+narrative_ontology:cs_kernel_codification('1a02ef93-c649-478e-857e-5a20e588b23c', fixed_text).
+narrative_ontology:cs_authority_grounding('1a02ef93-c649-478e-857e-5a20e588b23c', lineage).
+narrative_ontology:cs_interpretation_layer_present('1a02ef93-c649-478e-857e-5a20e588b23c').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(remedial_reading, historically_subordinated_racial_groups).

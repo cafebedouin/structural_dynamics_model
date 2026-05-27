@@ -120,19 +120,21 @@ narrative_ontology:topic_domain(bretton_woods_coordination_costs, "monetary_econ
 domain_priors:requires_active_enforcement(bretton_woods_coordination_costs).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(bretton_woods_coordination_costs, formalized).
-narrative_ontology:cs_authority_grounding(bretton_woods_coordination_costs, lineage).
-narrative_ontology:cs_interpretation_layer_present(bretton_woods_coordination_costs).
-narrative_ontology:cs_reading_relation(bretton_woods_coordination_costs, bretton_woods_inevitable_collapse, coexists_with).
-narrative_ontology:cs_reading_relation(bretton_woods_coordination_costs, bretton_woods_designed_sunset, coexists_with).
-narrative_ontology:cs_axiom(bretton_woods_coordination_costs, foundational, discretionary_policy_choice).
+narrative_ontology:cs_story_uid(bretton_woods_coordination_costs, '23fda906-509d-4580-8c7b-ec51d84a411d').
+narrative_ontology:cs_created_at('23fda906-509d-4580-8c7b-ec51d84a411d', '').
+narrative_ontology:cs_kernel_codification('23fda906-509d-4580-8c7b-ec51d84a411d', formalized).
+narrative_ontology:cs_authority_grounding('23fda906-509d-4580-8c7b-ec51d84a411d', lineage).
+narrative_ontology:cs_interpretation_layer_present('23fda906-509d-4580-8c7b-ec51d84a411d').
+narrative_ontology:cs_reading_relation('23fda906-509d-4580-8c7b-ec51d84a411d', bretton_woods_inevitable_collapse, coexists_with).
+narrative_ontology:cs_reading_relation('23fda906-509d-4580-8c7b-ec51d84a411d', bretton_woods_designed_sunset, coexists_with).
+narrative_ontology:cs_axiom('23fda906-509d-4580-8c7b-ec51d84a411d', foundational, discretionary_policy_choice).
 narrative_ontology:cs_axiom_status(discretionary_policy_choice, holdable).
-narrative_ontology:cs_axiom_grounding(bretton_woods_coordination_costs, discretionary_policy_choice, empirically_contingent).
-narrative_ontology:cs_axiom(bretton_woods_coordination_costs, secondary, coordination_mechanism_primary).
+narrative_ontology:cs_axiom_grounding('23fda906-509d-4580-8c7b-ec51d84a411d', discretionary_policy_choice, empirically_contingent).
+narrative_ontology:cs_axiom('23fda906-509d-4580-8c7b-ec51d84a411d', secondary, coordination_mechanism_primary).
 narrative_ontology:cs_axiom_status(coordination_mechanism_primary, holdable).
-narrative_ontology:cs_axiom_grounding(bretton_woods_coordination_costs, coordination_mechanism_primary, instrumental).
-narrative_ontology:cs_reference_frame(bretton_woods_coordination_costs, bretton_woods_as_negotiated_settlement).
-narrative_ontology:cs_drift_state(bretton_woods_coordination_costs, post_1968_gold_pool_exhaustion, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('23fda906-509d-4580-8c7b-ec51d84a411d', coordination_mechanism_primary, instrumental).
+narrative_ontology:cs_reference_frame('23fda906-509d-4580-8c7b-ec51d84a411d', bretton_woods_as_negotiated_settlement).
+narrative_ontology:cs_drift_state('23fda906-509d-4580-8c7b-ec51d84a411d', post_1968_gold_pool_exhaustion, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(bretton_woods_coordination_costs, us_monetary_autonomy).

@@ -115,18 +115,20 @@ narrative_ontology:human_readable(living_drift_reading, "Latin as Living Drift â
 narrative_ontology:topic_domain(living_drift_reading, "historical_linguistics/philology/intellectual_history").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(living_drift_reading, distributed).
-narrative_ontology:cs_authority_grounding(living_drift_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(living_drift_reading).
+narrative_ontology:cs_story_uid(living_drift_reading, 'e76eedac-d02f-4c54-9b99-90f1a729ee95').
+narrative_ontology:cs_created_at('e76eedac-d02f-4c54-9b99-90f1a729ee95', '').
+narrative_ontology:cs_kernel_codification('e76eedac-d02f-4c54-9b99-90f1a729ee95', distributed).
+narrative_ontology:cs_authority_grounding('e76eedac-d02f-4c54-9b99-90f1a729ee95', lineage).
+narrative_ontology:cs_interpretation_layer_present('e76eedac-d02f-4c54-9b99-90f1a729ee95').
 narrative_ontology:cs_kernel_id(living_drift_reading, correct_latin).
-narrative_ontology:cs_reading_relation(living_drift_reading, textual_recovery_reading, coexists_with).
-narrative_ontology:cs_reading_relation(living_drift_reading, prescriptive_ideal_reading, coexists_with).
-narrative_ontology:cs_axiom(living_drift_reading, foundational, change_through_use_is_evolution_not_corruption).
+narrative_ontology:cs_reading_relation('e76eedac-d02f-4c54-9b99-90f1a729ee95', textual_recovery_reading, coexists_with).
+narrative_ontology:cs_reading_relation('e76eedac-d02f-4c54-9b99-90f1a729ee95', prescriptive_ideal_reading, coexists_with).
+narrative_ontology:cs_axiom('e76eedac-d02f-4c54-9b99-90f1a729ee95', foundational, change_through_use_is_evolution_not_corruption).
 narrative_ontology:cs_axiom_status(change_through_use_is_evolution_not_corruption, holdable).
-narrative_ontology:cs_axiom(living_drift_reading, foundational, correctness_defined_by_communicative_function).
+narrative_ontology:cs_axiom('e76eedac-d02f-4c54-9b99-90f1a729ee95', foundational, correctness_defined_by_communicative_function).
 narrative_ontology:cs_axiom_status(correctness_defined_by_communicative_function, holdable).
-narrative_ontology:cs_reference_frame(living_drift_reading, living_practice_standard).
-narrative_ontology:cs_drift_state(living_drift_reading, early_modern_humanist_era, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_reference_frame('e76eedac-d02f-4c54-9b99-90f1a729ee95', living_practice_standard).
+narrative_ontology:cs_drift_state('e76eedac-d02f-4c54-9b99-90f1a729ee95', early_modern_humanist_era, gap(practice_drift, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(living_drift_reading, practicing_communities).

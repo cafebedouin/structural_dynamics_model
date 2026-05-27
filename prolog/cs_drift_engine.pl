@@ -40,11 +40,12 @@
 
 :- use_module(narrative_ontology).
 
-%% cs_drift_trajectory(+C, -Gap, -Terminal)
+%% cs_drift_trajectory(+UID, -Gap, -Terminal)
 %  Extends the authored t0→t1 gap vector to a terminal attractor t2.
-%  Gap is unified with the gap/3 term from cs_drift_state/3.
-cs_drift_trajectory(C, Gap, Terminal) :-
-    narrative_ontology:cs_drift_state(C, _, Gap),
+%  UID is the story_uid surrogate (UUIDv4); Gap is unified with the
+%  gap/3 term from cs_drift_state/3.
+cs_drift_trajectory(UID, Gap, Terminal) :-
+    narrative_ontology:cs_drift_state(UID, _, Gap),
     Gap = gap(Direction, Magnitude, Acknowledged),
     cs_terminal_attractor(Direction, Magnitude, Acknowledged, Terminal).
 

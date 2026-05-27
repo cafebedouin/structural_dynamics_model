@@ -123,18 +123,20 @@ narrative_ontology:topic_domain(native_generation_reading, "sociolinguistics/rel
 domain_priors:requires_active_enforcement(native_generation_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(native_generation_reading, formalized).
-narrative_ontology:cs_authority_grounding(native_generation_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(native_generation_reading).
+narrative_ontology:cs_story_uid(native_generation_reading, '09aa4def-b8fa-4b4f-998d-9605672b7712').
+narrative_ontology:cs_created_at('09aa4def-b8fa-4b4f-998d-9605672b7712', '').
+narrative_ontology:cs_kernel_codification('09aa4def-b8fa-4b4f-998d-9605672b7712', formalized).
+narrative_ontology:cs_authority_grounding('09aa4def-b8fa-4b4f-998d-9605672b7712', extraction).
+narrative_ontology:cs_interpretation_layer_present('09aa4def-b8fa-4b4f-998d-9605672b7712').
 narrative_ontology:cs_kernel_id(native_generation_reading, hebrew_living_language).
-narrative_ontology:cs_reading_relation(native_generation_reading, liturgical_preservation_reading, forecloses).
-narrative_ontology:cs_reading_relation(native_generation_reading, hybrid_coexistence_reading, influences).
-narrative_ontology:cs_axiom(native_generation_reading, foundational, native_transmission_authenticity).
+narrative_ontology:cs_reading_relation('09aa4def-b8fa-4b4f-998d-9605672b7712', liturgical_preservation_reading, forecloses).
+narrative_ontology:cs_reading_relation('09aa4def-b8fa-4b4f-998d-9605672b7712', hybrid_coexistence_reading, influences).
+narrative_ontology:cs_axiom('09aa4def-b8fa-4b4f-998d-9605672b7712', foundational, native_transmission_authenticity).
 narrative_ontology:cs_axiom_status(native_transmission_authenticity, holdable).
-narrative_ontology:cs_axiom(native_generation_reading, foundational, suppression_of_liturgical_legitimacy).
+narrative_ontology:cs_axiom('09aa4def-b8fa-4b4f-998d-9605672b7712', foundational, suppression_of_liturgical_legitimacy).
 narrative_ontology:cs_axiom_status(suppression_of_liturgical_legitimacy, holdable).
-narrative_ontology:cs_reference_frame(native_generation_reading, native_generation_linguistic_authenticity).
-narrative_ontology:cs_drift_state(native_generation_reading, contemporary_post_functional_necessity, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('09aa4def-b8fa-4b4f-998d-9605672b7712', native_generation_linguistic_authenticity).
+narrative_ontology:cs_drift_state('09aa4def-b8fa-4b4f-998d-9605672b7712', contemporary_post_functional_necessity, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(native_generation_reading, hebrew_secular_nationalism).

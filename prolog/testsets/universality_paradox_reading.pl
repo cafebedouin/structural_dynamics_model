@@ -120,19 +120,21 @@ narrative_ontology:topic_domain(universality_paradox_reading, "political_economy
 domain_priors:requires_active_enforcement(universality_paradox_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(universality_paradox_reading, distributed).
-narrative_ontology:cs_authority_grounding(universality_paradox_reading, distributed).
+narrative_ontology:cs_story_uid(universality_paradox_reading, '74cf2982-1342-47fe-b0bc-ed8793f1c40f').
+narrative_ontology:cs_created_at('74cf2982-1342-47fe-b0bc-ed8793f1c40f', '').
+narrative_ontology:cs_kernel_codification('74cf2982-1342-47fe-b0bc-ed8793f1c40f', distributed).
+narrative_ontology:cs_authority_grounding('74cf2982-1342-47fe-b0bc-ed8793f1c40f', distributed).
 narrative_ontology:cs_kernel_id(universality_paradox_reading, unconditional_income_support).
-narrative_ontology:cs_reading_relation(universality_paradox_reading, freedom_floor_reading, coexists_with).
-narrative_ontology:cs_reading_relation(universality_paradox_reading, dependency_trap_reading, coexists_with).
-narrative_ontology:cs_axiom(universality_paradox_reading, foundational, universality_as_political_ambiguity).
+narrative_ontology:cs_reading_relation('74cf2982-1342-47fe-b0bc-ed8793f1c40f', freedom_floor_reading, coexists_with).
+narrative_ontology:cs_reading_relation('74cf2982-1342-47fe-b0bc-ed8793f1c40f', dependency_trap_reading, coexists_with).
+narrative_ontology:cs_axiom('74cf2982-1342-47fe-b0bc-ed8793f1c40f', foundational, universality_as_political_ambiguity).
 narrative_ontology:cs_axiom_status(universality_as_political_ambiguity, holdable).
-narrative_ontology:cs_axiom_grounding(universality_paradox_reading, universality_as_political_ambiguity, conventional).
-narrative_ontology:cs_axiom(universality_paradox_reading, foundational, fiscal_parameter_indeterminacy).
+narrative_ontology:cs_axiom_grounding('74cf2982-1342-47fe-b0bc-ed8793f1c40f', universality_as_political_ambiguity, conventional).
+narrative_ontology:cs_axiom('74cf2982-1342-47fe-b0bc-ed8793f1c40f', foundational, fiscal_parameter_indeterminacy).
 narrative_ontology:cs_axiom_status(fiscal_parameter_indeterminacy, holdable).
-narrative_ontology:cs_axiom_grounding(universality_paradox_reading, fiscal_parameter_indeterminacy, empirically_contingent).
-narrative_ontology:cs_reference_frame(universality_paradox_reading, ambiguous_policy_vehicle).
-narrative_ontology:cs_drift_state(universality_paradox_reading, contemporary_uis_proposals, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('74cf2982-1342-47fe-b0bc-ed8793f1c40f', fiscal_parameter_indeterminacy, empirically_contingent).
+narrative_ontology:cs_reference_frame('74cf2982-1342-47fe-b0bc-ed8793f1c40f', ambiguous_policy_vehicle).
+narrative_ontology:cs_drift_state('74cf2982-1342-47fe-b0bc-ed8793f1c40f', contemporary_uis_proposals, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(universality_paradox_reading, political_entrepreneurs).

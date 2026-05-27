@@ -120,17 +120,19 @@ narrative_ontology:topic_domain(catastrophe_as_necessary_anchor, "safety_enginee
 domain_priors:requires_active_enforcement(catastrophe_as_necessary_anchor).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(catastrophe_as_necessary_anchor, distributed).
-narrative_ontology:cs_authority_grounding(catastrophe_as_necessary_anchor, extraction).
+narrative_ontology:cs_story_uid(catastrophe_as_necessary_anchor, '0adcc78e-b27e-49bc-b232-87342603b185').
+narrative_ontology:cs_created_at('0adcc78e-b27e-49bc-b232-87342603b185', '').
+narrative_ontology:cs_kernel_codification('0adcc78e-b27e-49bc-b232-87342603b185', distributed).
+narrative_ontology:cs_authority_grounding('0adcc78e-b27e-49bc-b232-87342603b185', extraction).
 narrative_ontology:cs_kernel_id(catastrophe_as_necessary_anchor, competence_exercise_requirement).
-narrative_ontology:cs_reading_relation(catastrophe_as_necessary_anchor, simulation_as_adequate_exercise, forecloses).
-narrative_ontology:cs_reading_relation(catastrophe_as_necessary_anchor, hybrid_dependency, coexists_with).
-narrative_ontology:cs_axiom(catastrophe_as_necessary_anchor, foundational, catastrophe_irreducible_for_embodied_competence).
+narrative_ontology:cs_reading_relation('0adcc78e-b27e-49bc-b232-87342603b185', simulation_as_adequate_exercise, forecloses).
+narrative_ontology:cs_reading_relation('0adcc78e-b27e-49bc-b232-87342603b185', hybrid_dependency, coexists_with).
+narrative_ontology:cs_axiom('0adcc78e-b27e-49bc-b232-87342603b185', foundational, catastrophe_irreducible_for_embodied_competence).
 narrative_ontology:cs_axiom_status(catastrophe_irreducible_for_embodied_competence, holdable).
-narrative_ontology:cs_axiom(catastrophe_as_necessary_anchor, secondary, simulation_cannot_reproduce_amygdala_state_of_catastrophe).
+narrative_ontology:cs_axiom('0adcc78e-b27e-49bc-b232-87342603b185', secondary, simulation_cannot_reproduce_amygdala_state_of_catastrophe).
 narrative_ontology:cs_axiom_status(simulation_cannot_reproduce_amygdala_state_of_catastrophe, holdable).
-narrative_ontology:cs_reference_frame(catastrophe_as_necessary_anchor, competence_requires_real_stakes).
-narrative_ontology:cs_drift_state(catastrophe_as_necessary_anchor, contemporary_extended_safety, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_reference_frame('0adcc78e-b27e-49bc-b232-87342603b185', competence_requires_real_stakes).
+narrative_ontology:cs_drift_state('0adcc78e-b27e-49bc-b232-87342603b185', contemporary_extended_safety, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(catastrophe_as_necessary_anchor, regulatory_agencies).

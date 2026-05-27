@@ -120,20 +120,22 @@ narrative_ontology:topic_domain(rational_dropout_reading, "strategic_studies/nuc
 domain_priors:requires_active_enforcement(rational_dropout_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(rational_dropout_reading, formalized).
-narrative_ontology:cs_authority_grounding(rational_dropout_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(rational_dropout_reading).
+narrative_ontology:cs_story_uid(rational_dropout_reading, 'c6bd4569-8096-49d6-9303-1ba5d80f9e33').
+narrative_ontology:cs_created_at('c6bd4569-8096-49d6-9303-1ba5d80f9e33', '').
+narrative_ontology:cs_kernel_codification('c6bd4569-8096-49d6-9303-1ba5d80f9e33', formalized).
+narrative_ontology:cs_authority_grounding('c6bd4569-8096-49d6-9303-1ba5d80f9e33', extraction).
+narrative_ontology:cs_interpretation_layer_present('c6bd4569-8096-49d6-9303-1ba5d80f9e33').
 narrative_ontology:cs_kernel_id(rational_dropout_reading, nuclear_impossibility_kernel).
-narrative_ontology:cs_reading_relation(rational_dropout_reading, structural_contraction_reading, coexists_with).
-narrative_ontology:cs_reading_relation(rational_dropout_reading, credibility_paradox_reading, influences).
-narrative_ontology:cs_axiom(rational_dropout_reading, foundational, cost_benefit_rationality_excludes_war).
+narrative_ontology:cs_reading_relation('c6bd4569-8096-49d6-9303-1ba5d80f9e33', structural_contraction_reading, coexists_with).
+narrative_ontology:cs_reading_relation('c6bd4569-8096-49d6-9303-1ba5d80f9e33', credibility_paradox_reading, influences).
+narrative_ontology:cs_axiom('c6bd4569-8096-49d6-9303-1ba5d80f9e33', foundational, cost_benefit_rationality_excludes_war).
 narrative_ontology:cs_axiom_status(cost_benefit_rationality_excludes_war, holdable).
-narrative_ontology:cs_axiom_grounding(rational_dropout_reading, cost_benefit_rationality_excludes_war, empirically_contingent).
-narrative_ontology:cs_axiom(rational_dropout_reading, foundational, rationality_framework_universally_adopted).
+narrative_ontology:cs_axiom_grounding('c6bd4569-8096-49d6-9303-1ba5d80f9e33', cost_benefit_rationality_excludes_war, empirically_contingent).
+narrative_ontology:cs_axiom('c6bd4569-8096-49d6-9303-1ba5d80f9e33', foundational, rationality_framework_universally_adopted).
 narrative_ontology:cs_axiom_status(rationality_framework_universally_adopted, holdable).
-narrative_ontology:cs_axiom_grounding(rational_dropout_reading, rationality_framework_universally_adopted, conventional).
-narrative_ontology:cs_reference_frame(rational_dropout_reading, rational_cost_benefit_equilibrium).
-narrative_ontology:cs_drift_state(rational_dropout_reading, contemporary_power_transition, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('c6bd4569-8096-49d6-9303-1ba5d80f9e33', rationality_framework_universally_adopted, conventional).
+narrative_ontology:cs_reference_frame('c6bd4569-8096-49d6-9303-1ba5d80f9e33', rational_cost_benefit_equilibrium).
+narrative_ontology:cs_drift_state('c6bd4569-8096-49d6-9303-1ba5d80f9e33', contemporary_power_transition, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(rational_dropout_reading, status_quo_powers).

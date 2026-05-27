@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(ottoman_islamic_continuity_essential, secularism_requires_european_alignment).
 narrative_ontology:cs_axiom_contradiction(secularism_requires_european_alignment, ottoman_islamic_continuity_essential).
+narrative_ontology:cs_story_uid(turkish_graphemic_substrate_contradictions, 'e4841470-41ca-4935-b001-45bcccf980f8').
+narrative_ontology:cs_created_at('e4841470-41ca-4935-b001-45bcccf980f8', '').

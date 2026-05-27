@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(territorial_closure_prerequisite_for_self_determination, movement_fundamental_right).
 narrative_ontology:cs_axiom_contradiction(movement_fundamental_right, territorial_closure_prerequisite_for_self_determination).
+narrative_ontology:cs_story_uid(border_normative_status_contradictions, 'ad7f7042-380e-45c1-abc0-b327640c4f81').
+narrative_ontology:cs_created_at('ad7f7042-380e-45c1-abc0-b327640c4f81', '').

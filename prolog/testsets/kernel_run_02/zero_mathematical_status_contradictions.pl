@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(non_being_cannot_exist_as_mathematical_entity, zero_is_numerical_entity).
 narrative_ontology:cs_axiom_contradiction(zero_is_numerical_entity, non_being_cannot_exist_as_mathematical_entity).
+narrative_ontology:cs_story_uid(zero_mathematical_status_contradictions, '098edc7a-4d86-4e92-ba89-8197fd57342d').
+narrative_ontology:cs_created_at('098edc7a-4d86-4e92-ba89-8197fd57342d', '').

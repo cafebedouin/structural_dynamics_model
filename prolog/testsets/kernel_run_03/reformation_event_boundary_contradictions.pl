@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(pauline_sola_fide_textually_defensible, political_interests_primary_causal_driver).
 narrative_ontology:cs_axiom_contradiction(political_interests_primary_causal_driver, pauline_sola_fide_textually_defensible).
+narrative_ontology:cs_story_uid(reformation_event_boundary_contradictions, 'e882ec88-5843-496c-a506-e5539f51e520').
+narrative_ontology:cs_created_at('e882ec88-5843-496c-a506-e5539f51e520', '').

@@ -125,20 +125,22 @@ narrative_ontology:topic_domain(harm_reduction_reading, "public_health_policy/cr
 domain_priors:requires_active_enforcement(harm_reduction_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(harm_reduction_reading, formalized).
-narrative_ontology:cs_authority_grounding(harm_reduction_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(harm_reduction_reading).
+narrative_ontology:cs_story_uid(harm_reduction_reading, 'a1490a5e-bc68-45dc-97ca-25852c407313').
+narrative_ontology:cs_created_at('a1490a5e-bc68-45dc-97ca-25852c407313', '').
+narrative_ontology:cs_kernel_codification('a1490a5e-bc68-45dc-97ca-25852c407313', formalized).
+narrative_ontology:cs_authority_grounding('a1490a5e-bc68-45dc-97ca-25852c407313', extraction).
+narrative_ontology:cs_interpretation_layer_present('a1490a5e-bc68-45dc-97ca-25852c407313').
 narrative_ontology:cs_kernel_id(harm_reduction_reading, substance_control_authority).
-narrative_ontology:cs_reading_relation(harm_reduction_reading, prohibition_reading, coexists_with).
-narrative_ontology:cs_reading_relation(harm_reduction_reading, legalization_reading, influences).
-narrative_ontology:cs_axiom(harm_reduction_reading, foundational, continued_use_inevitable_medium_term).
+narrative_ontology:cs_reading_relation('a1490a5e-bc68-45dc-97ca-25852c407313', prohibition_reading, coexists_with).
+narrative_ontology:cs_reading_relation('a1490a5e-bc68-45dc-97ca-25852c407313', legalization_reading, influences).
+narrative_ontology:cs_axiom('a1490a5e-bc68-45dc-97ca-25852c407313', foundational, continued_use_inevitable_medium_term).
 narrative_ontology:cs_axiom_status(continued_use_inevitable_medium_term, holdable).
-narrative_ontology:cs_axiom_grounding(harm_reduction_reading, continued_use_inevitable_medium_term, empirically_contingent).
-narrative_ontology:cs_axiom(harm_reduction_reading, foundational, disease_reduction_primary_mandate).
+narrative_ontology:cs_axiom_grounding('a1490a5e-bc68-45dc-97ca-25852c407313', continued_use_inevitable_medium_term, empirically_contingent).
+narrative_ontology:cs_axiom('a1490a5e-bc68-45dc-97ca-25852c407313', foundational, disease_reduction_primary_mandate).
 narrative_ontology:cs_axiom_status(disease_reduction_primary_mandate, holdable).
-narrative_ontology:cs_axiom_grounding(harm_reduction_reading, disease_reduction_primary_mandate, deontological).
-narrative_ontology:cs_reference_frame(harm_reduction_reading, health_authority_disease_control).
-narrative_ontology:cs_drift_state(harm_reduction_reading, contemporary_legalization_pressure, gap(authority_erosion, substantial, true)).
+narrative_ontology:cs_axiom_grounding('a1490a5e-bc68-45dc-97ca-25852c407313', disease_reduction_primary_mandate, deontological).
+narrative_ontology:cs_reference_frame('a1490a5e-bc68-45dc-97ca-25852c407313', health_authority_disease_control).
+narrative_ontology:cs_drift_state('a1490a5e-bc68-45dc-97ca-25852c407313', contemporary_legalization_pressure, gap(authority_erosion, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(harm_reduction_reading, public_health_services).

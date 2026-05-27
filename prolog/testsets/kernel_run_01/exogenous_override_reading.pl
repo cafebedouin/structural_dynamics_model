@@ -123,18 +123,20 @@ narrative_ontology:topic_domain(exogenous_override_reading, "political_history/i
 domain_priors:requires_active_enforcement(exogenous_override_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(exogenous_override_reading, formalized).
-narrative_ontology:cs_authority_grounding(exogenous_override_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(exogenous_override_reading).
+narrative_ontology:cs_story_uid(exogenous_override_reading, 'b128d6c5-7235-432f-ac2b-821d32448207').
+narrative_ontology:cs_created_at('b128d6c5-7235-432f-ac2b-821d32448207', '').
+narrative_ontology:cs_kernel_codification('b128d6c5-7235-432f-ac2b-821d32448207', formalized).
+narrative_ontology:cs_authority_grounding('b128d6c5-7235-432f-ac2b-821d32448207', extraction).
+narrative_ontology:cs_interpretation_layer_present('b128d6c5-7235-432f-ac2b-821d32448207').
 narrative_ontology:cs_kernel_id(exogenous_override_reading, legitimacy_of_practice_standardization).
-narrative_ontology:cs_reading_relation(exogenous_override_reading, endogenous_displacement_reading, forecloses).
-narrative_ontology:cs_reading_relation(exogenous_override_reading, dual_practice_equilibrium_reading, coexists_with).
-narrative_ontology:cs_axiom(exogenous_override_reading, foundational, state_decree_legitimizes_standardization).
+narrative_ontology:cs_reading_relation('b128d6c5-7235-432f-ac2b-821d32448207', endogenous_displacement_reading, forecloses).
+narrative_ontology:cs_reading_relation('b128d6c5-7235-432f-ac2b-821d32448207', dual_practice_equilibrium_reading, coexists_with).
+narrative_ontology:cs_axiom('b128d6c5-7235-432f-ac2b-821d32448207', foundational, state_decree_legitimizes_standardization).
 narrative_ontology:cs_axiom_status(state_decree_legitimizes_standardization, holdable).
-narrative_ontology:cs_axiom(exogenous_override_reading, secondary, collective_benefit_prioritizes_national_scale).
+narrative_ontology:cs_axiom('b128d6c5-7235-432f-ac2b-821d32448207', secondary, collective_benefit_prioritizes_national_scale).
 narrative_ontology:cs_axiom_status(collective_benefit_prioritizes_national_scale, holdable).
-narrative_ontology:cs_reference_frame(exogenous_override_reading, state_coordinating_authority_framework).
-narrative_ontology:cs_drift_state(exogenous_override_reading, contemporary_multilevel_governance, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('b128d6c5-7235-432f-ac2b-821d32448207', state_coordinating_authority_framework).
+narrative_ontology:cs_drift_state('b128d6c5-7235-432f-ac2b-821d32448207', contemporary_multilevel_governance, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(exogenous_override_reading, central_state_apparatus).

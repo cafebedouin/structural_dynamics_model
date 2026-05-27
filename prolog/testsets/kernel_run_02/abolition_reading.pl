@@ -114,20 +114,22 @@ narrative_ontology:human_readable(abolition_reading, "State Killing as Categoric
 narrative_ontology:topic_domain(abolition_reading, "criminal_justice/political_philosophy/legal_theory").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(abolition_reading, formalized).
-narrative_ontology:cs_authority_grounding(abolition_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(abolition_reading).
+narrative_ontology:cs_story_uid(abolition_reading, 'eb2addd5-d1bc-46eb-8f52-db779a8f170e').
+narrative_ontology:cs_created_at('eb2addd5-d1bc-46eb-8f52-db779a8f170e', '').
+narrative_ontology:cs_kernel_codification('eb2addd5-d1bc-46eb-8f52-db779a8f170e', formalized).
+narrative_ontology:cs_authority_grounding('eb2addd5-d1bc-46eb-8f52-db779a8f170e', lineage).
+narrative_ontology:cs_interpretation_layer_present('eb2addd5-d1bc-46eb-8f52-db779a8f170e').
 narrative_ontology:cs_kernel_id(abolition_reading, state_killing_legitimacy).
-narrative_ontology:cs_reading_relation(abolition_reading, retributive_reading, forecloses).
-narrative_ontology:cs_reading_relation(abolition_reading, deterrence_reading, coexists_with).
-narrative_ontology:cs_axiom(abolition_reading, foundational, human_dignity_inalienable).
+narrative_ontology:cs_reading_relation('eb2addd5-d1bc-46eb-8f52-db779a8f170e', retributive_reading, forecloses).
+narrative_ontology:cs_reading_relation('eb2addd5-d1bc-46eb-8f52-db779a8f170e', deterrence_reading, coexists_with).
+narrative_ontology:cs_axiom('eb2addd5-d1bc-46eb-8f52-db779a8f170e', foundational, human_dignity_inalienable).
 narrative_ontology:cs_axiom_status(human_dignity_inalienable, holdable).
-narrative_ontology:cs_axiom_grounding(abolition_reading, human_dignity_inalienable, deontological).
-narrative_ontology:cs_axiom(abolition_reading, foundational, state_killing_categorically_impermissible).
+narrative_ontology:cs_axiom_grounding('eb2addd5-d1bc-46eb-8f52-db779a8f170e', human_dignity_inalienable, deontological).
+narrative_ontology:cs_axiom('eb2addd5-d1bc-46eb-8f52-db779a8f170e', foundational, state_killing_categorically_impermissible).
 narrative_ontology:cs_axiom_status(state_killing_categorically_impermissible, holdable).
-narrative_ontology:cs_axiom_grounding(abolition_reading, state_killing_categorically_impermissible, deontological).
-narrative_ontology:cs_reference_frame(abolition_reading, universal_human_dignity_framework).
-narrative_ontology:cs_drift_state(abolition_reading, contemporary_human_rights_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('eb2addd5-d1bc-46eb-8f52-db779a8f170e', state_killing_categorically_impermissible, deontological).
+narrative_ontology:cs_reference_frame('eb2addd5-d1bc-46eb-8f52-db779a8f170e', universal_human_dignity_framework).
+narrative_ontology:cs_drift_state('eb2addd5-d1bc-46eb-8f52-db779a8f170e', contemporary_human_rights_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(abolition_reading, condemned_persons).

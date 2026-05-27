@@ -15,3 +15,5 @@ narrative_ontology:cs_axiom_contradiction(income_support_enables_autonomy, demon
 narrative_ontology:cs_axiom_contradiction(demonstrated_need_justifies_differential_access, income_support_enables_autonomy).
 narrative_ontology:cs_axiom_contradiction(labor_participation_economically_necessary, demonstrated_need_justifies_differential_access).
 narrative_ontology:cs_axiom_contradiction(demonstrated_need_justifies_differential_access, labor_participation_economically_necessary).
+narrative_ontology:cs_story_uid(income_support_commitment_contradictions, '188b9356-41ca-4b6e-a3ee-d22635afe60f').
+narrative_ontology:cs_created_at('188b9356-41ca-4b6e-a3ee-d22635afe60f', '').

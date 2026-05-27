@@ -119,18 +119,20 @@ narrative_ontology:topic_domain(sovereignty_primary, "international_law/politica
 domain_priors:requires_active_enforcement(sovereignty_primary).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(sovereignty_primary, fixed_text).
-narrative_ontology:cs_authority_grounding(sovereignty_primary, lineage).
-narrative_ontology:cs_interpretation_layer_present(sovereignty_primary).
+narrative_ontology:cs_story_uid(sovereignty_primary, '87e62bc5-90c7-4628-8ee7-83423d2142e7').
+narrative_ontology:cs_created_at('87e62bc5-90c7-4628-8ee7-83423d2142e7', '').
+narrative_ontology:cs_kernel_codification('87e62bc5-90c7-4628-8ee7-83423d2142e7', fixed_text).
+narrative_ontology:cs_authority_grounding('87e62bc5-90c7-4628-8ee7-83423d2142e7', lineage).
+narrative_ontology:cs_interpretation_layer_present('87e62bc5-90c7-4628-8ee7-83423d2142e7').
 narrative_ontology:cs_kernel_id(sovereignty_primary, border_normative_status).
-narrative_ontology:cs_reading_relation(sovereignty_primary, freedom_of_movement_primary, influences).
-narrative_ontology:cs_reading_relation(sovereignty_primary, managed_migration_hybrid, coexists_with).
-narrative_ontology:cs_axiom(sovereignty_primary, foundational, political_community_self_determination_via_membership).
+narrative_ontology:cs_reading_relation('87e62bc5-90c7-4628-8ee7-83423d2142e7', freedom_of_movement_primary, influences).
+narrative_ontology:cs_reading_relation('87e62bc5-90c7-4628-8ee7-83423d2142e7', managed_migration_hybrid, coexists_with).
+narrative_ontology:cs_axiom('87e62bc5-90c7-4628-8ee7-83423d2142e7', foundational, political_community_self_determination_via_membership).
 narrative_ontology:cs_axiom_status(political_community_self_determination_via_membership, holdable).
-narrative_ontology:cs_axiom(sovereignty_primary, foundational, admission_control_necessity_for_self_governance).
+narrative_ontology:cs_axiom('87e62bc5-90c7-4628-8ee7-83423d2142e7', foundational, admission_control_necessity_for_self_governance).
 narrative_ontology:cs_axiom_status(admission_control_necessity_for_self_governance, holdable).
-narrative_ontology:cs_reference_frame(sovereignty_primary, westphalian_sovereign_state_system).
-narrative_ontology:cs_drift_state(sovereignty_primary, contemporary_transnational_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('87e62bc5-90c7-4628-8ee7-83423d2142e7', westphalian_sovereign_state_system).
+narrative_ontology:cs_drift_state('87e62bc5-90c7-4628-8ee7-83423d2142e7', contemporary_transnational_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(sovereignty_primary, political_community_self_determination).

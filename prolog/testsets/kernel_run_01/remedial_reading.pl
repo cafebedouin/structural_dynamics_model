@@ -116,18 +116,20 @@ domain_priors:requires_active_enforcement(remedial_reading).
 narrative_ontology:has_sunset_clause(remedial_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(remedial_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(remedial_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(remedial_reading).
+narrative_ontology:cs_story_uid(remedial_reading, 'd29a568c-fe45-4304-bd11-5b6498e46b05').
+narrative_ontology:cs_created_at('d29a568c-fe45-4304-bd11-5b6498e46b05', '').
+narrative_ontology:cs_kernel_codification('d29a568c-fe45-4304-bd11-5b6498e46b05', fixed_text).
+narrative_ontology:cs_authority_grounding('d29a568c-fe45-4304-bd11-5b6498e46b05', lineage).
+narrative_ontology:cs_interpretation_layer_present('d29a568c-fe45-4304-bd11-5b6498e46b05').
 narrative_ontology:cs_kernel_id(remedial_reading, equal_protection_clause).
-narrative_ontology:cs_reading_relation(remedial_reading, colorblind_reading, forecloses).
-narrative_ontology:cs_reading_relation(remedial_reading, diversity_reading, influences).
-narrative_ontology:cs_axiom(remedial_reading, foundational, group_subordination_remedial_necessity).
+narrative_ontology:cs_reading_relation('d29a568c-fe45-4304-bd11-5b6498e46b05', colorblind_reading, forecloses).
+narrative_ontology:cs_reading_relation('d29a568c-fe45-4304-bd11-5b6498e46b05', diversity_reading, influences).
+narrative_ontology:cs_axiom('d29a568c-fe45-4304-bd11-5b6498e46b05', foundational, group_subordination_remedial_necessity).
 narrative_ontology:cs_axiom_status(group_subordination_remedial_necessity, holdable).
-narrative_ontology:cs_axiom(remedial_reading, foundational, race_consciousness_permissible_for_remediation).
+narrative_ontology:cs_axiom('d29a568c-fe45-4304-bd11-5b6498e46b05', foundational, race_consciousness_permissible_for_remediation).
 narrative_ontology:cs_axiom_status(race_consciousness_permissible_for_remediation, holdable).
-narrative_ontology:cs_reference_frame(remedial_reading, remedial_equal_protection_framework).
-narrative_ontology:cs_drift_state(remedial_reading, contemporary_conservative_retrenchment, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('d29a568c-fe45-4304-bd11-5b6498e46b05', remedial_equal_protection_framework).
+narrative_ontology:cs_drift_state('d29a568c-fe45-4304-bd11-5b6498e46b05', contemporary_conservative_retrenchment, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(remedial_reading, historically_marginalized_racial_groups).

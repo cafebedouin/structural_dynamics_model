@@ -123,20 +123,22 @@ narrative_ontology:topic_domain(mitigation_priority_reading, "climate_policy/pol
 domain_priors:requires_active_enforcement(mitigation_priority_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(mitigation_priority_reading, formalized).
-narrative_ontology:cs_authority_grounding(mitigation_priority_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(mitigation_priority_reading).
+narrative_ontology:cs_story_uid(mitigation_priority_reading, '30220e3f-0e90-4585-950e-ee0ef5c8de19').
+narrative_ontology:cs_created_at('30220e3f-0e90-4585-950e-ee0ef5c8de19', '').
+narrative_ontology:cs_kernel_codification('30220e3f-0e90-4585-950e-ee0ef5c8de19', formalized).
+narrative_ontology:cs_authority_grounding('30220e3f-0e90-4585-950e-ee0ef5c8de19', lineage).
+narrative_ontology:cs_interpretation_layer_present('30220e3f-0e90-4585-950e-ee0ef5c8de19').
 narrative_ontology:cs_kernel_id(mitigation_priority_reading, climate_response_imperative).
-narrative_ontology:cs_reading_relation(mitigation_priority_reading, adaptation_priority_reading, coexists_with).
-narrative_ontology:cs_reading_relation(mitigation_priority_reading, degrowth_reading, coexists_with).
-narrative_ontology:cs_axiom(mitigation_priority_reading, foundational, emissions_reduction_primary_imperative).
+narrative_ontology:cs_reading_relation('30220e3f-0e90-4585-950e-ee0ef5c8de19', adaptation_priority_reading, coexists_with).
+narrative_ontology:cs_reading_relation('30220e3f-0e90-4585-950e-ee0ef5c8de19', degrowth_reading, coexists_with).
+narrative_ontology:cs_axiom('30220e3f-0e90-4585-950e-ee0ef5c8de19', foundational, emissions_reduction_primary_imperative).
 narrative_ontology:cs_axiom_status(emissions_reduction_primary_imperative, holdable).
-narrative_ontology:cs_axiom_grounding(mitigation_priority_reading, emissions_reduction_primary_imperative, empirically_contingent).
-narrative_ontology:cs_axiom(mitigation_priority_reading, foundational, technology_transfer_sufficient_for_global_participation).
+narrative_ontology:cs_axiom_grounding('30220e3f-0e90-4585-950e-ee0ef5c8de19', emissions_reduction_primary_imperative, empirically_contingent).
+narrative_ontology:cs_axiom('30220e3f-0e90-4585-950e-ee0ef5c8de19', foundational, technology_transfer_sufficient_for_global_participation).
 narrative_ontology:cs_axiom_status(technology_transfer_sufficient_for_global_participation, holdable).
-narrative_ontology:cs_axiom_grounding(mitigation_priority_reading, technology_transfer_sufficient_for_global_participation, empirically_contingent).
-narrative_ontology:cs_reference_frame(mitigation_priority_reading, scientific_emissions_reduction_imperative).
-narrative_ontology:cs_drift_state(mitigation_priority_reading, contemporary_net_zero_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('30220e3f-0e90-4585-950e-ee0ef5c8de19', technology_transfer_sufficient_for_global_participation, empirically_contingent).
+narrative_ontology:cs_reference_frame('30220e3f-0e90-4585-950e-ee0ef5c8de19', scientific_emissions_reduction_imperative).
+narrative_ontology:cs_drift_state('30220e3f-0e90-4585-950e-ee0ef5c8de19', contemporary_net_zero_era, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(mitigation_priority_reading, global_north_innovation_sectors).

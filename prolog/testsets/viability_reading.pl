@@ -118,19 +118,21 @@ narrative_ontology:topic_domain(viability_reading, "moral_philosophy/bioethics/c
 domain_priors:requires_active_enforcement(viability_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(viability_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(viability_reading, distributed).
+narrative_ontology:cs_story_uid(viability_reading, '82f28115-a947-427a-ad73-49ff19895b3a').
+narrative_ontology:cs_created_at('82f28115-a947-427a-ad73-49ff19895b3a', '').
+narrative_ontology:cs_kernel_codification('82f28115-a947-427a-ad73-49ff19895b3a', fixed_text).
+narrative_ontology:cs_authority_grounding('82f28115-a947-427a-ad73-49ff19895b3a', distributed).
 narrative_ontology:cs_kernel_id(viability_reading, personhood_boundary).
-narrative_ontology:cs_reading_relation(viability_reading, conception_reading, coexists_with).
-narrative_ontology:cs_reading_relation(viability_reading, birth_reading, coexists_with).
-narrative_ontology:cs_axiom(viability_reading, foundational, fetal_capacity_for_independence_threshold).
+narrative_ontology:cs_reading_relation('82f28115-a947-427a-ad73-49ff19895b3a', conception_reading, coexists_with).
+narrative_ontology:cs_reading_relation('82f28115-a947-427a-ad73-49ff19895b3a', birth_reading, coexists_with).
+narrative_ontology:cs_axiom('82f28115-a947-427a-ad73-49ff19895b3a', foundational, fetal_capacity_for_independence_threshold).
 narrative_ontology:cs_axiom_status(fetal_capacity_for_independence_threshold, holdable).
-narrative_ontology:cs_axiom_grounding(viability_reading, fetal_capacity_for_independence_threshold, empirically_contingent).
-narrative_ontology:cs_axiom(viability_reading, foundational, moral_status_discontinuous_at_viability).
+narrative_ontology:cs_axiom_grounding('82f28115-a947-427a-ad73-49ff19895b3a', fetal_capacity_for_independence_threshold, empirically_contingent).
+narrative_ontology:cs_axiom('82f28115-a947-427a-ad73-49ff19895b3a', foundational, moral_status_discontinuous_at_viability).
 narrative_ontology:cs_axiom_status(moral_status_discontinuous_at_viability, holdable).
-narrative_ontology:cs_axiom_grounding(viability_reading, moral_status_discontinuous_at_viability, deontological).
-narrative_ontology:cs_reference_frame(viability_reading, medical_autonomy_bright_line).
-narrative_ontology:cs_drift_state(viability_reading, contemporary_nicu_advancement_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('82f28115-a947-427a-ad73-49ff19895b3a', moral_status_discontinuous_at_viability, deontological).
+narrative_ontology:cs_reference_frame('82f28115-a947-427a-ad73-49ff19895b3a', medical_autonomy_bright_line).
+narrative_ontology:cs_drift_state('82f28115-a947-427a-ad73-49ff19895b3a', contemporary_nicu_advancement_era, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(viability_reading, pregnant_women).

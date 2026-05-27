@@ -113,8 +113,10 @@ narrative_ontology:topic_domain(constitutional_supremacy_reading, "constitutiona
 domain_priors:requires_active_enforcement(constitutional_supremacy_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(constitutional_supremacy_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(constitutional_supremacy_reading, expertise).
+narrative_ontology:cs_story_uid(constitutional_supremacy_reading, '45c41fc0-884e-4975-a3bd-66668cafd752').
+narrative_ontology:cs_created_at('45c41fc0-884e-4975-a3bd-66668cafd752', '').
+narrative_ontology:cs_kernel_codification('45c41fc0-884e-4975-a3bd-66668cafd752', fixed_text).
+narrative_ontology:cs_authority_grounding('45c41fc0-884e-4975-a3bd-66668cafd752', expertise).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(constitutional_supremacy_reading, constitutional_state).

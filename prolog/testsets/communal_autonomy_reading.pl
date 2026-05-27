@@ -114,9 +114,11 @@ narrative_ontology:topic_domain(communal_autonomy_reading, "constitutional_law/l
 domain_priors:requires_active_enforcement(communal_autonomy_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(communal_autonomy_reading, distributed).
-narrative_ontology:cs_authority_grounding(communal_autonomy_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(communal_autonomy_reading).
+narrative_ontology:cs_story_uid(communal_autonomy_reading, '18d06d06-f226-4eb5-99da-f3adc99332be').
+narrative_ontology:cs_created_at('18d06d06-f226-4eb5-99da-f3adc99332be', '').
+narrative_ontology:cs_kernel_codification('18d06d06-f226-4eb5-99da-f3adc99332be', distributed).
+narrative_ontology:cs_authority_grounding('18d06d06-f226-4eb5-99da-f3adc99332be', lineage).
+narrative_ontology:cs_interpretation_layer_present('18d06d06-f226-4eb5-99da-f3adc99332be').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(communal_autonomy_reading, religious_institutional_authority).

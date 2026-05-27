@@ -123,20 +123,22 @@ narrative_ontology:topic_domain(sanctity_reading, "medical_ethics/end_of_life_po
 domain_priors:requires_active_enforcement(sanctity_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(sanctity_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(sanctity_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(sanctity_reading).
+narrative_ontology:cs_story_uid(sanctity_reading, '043e4496-aba6-4170-9698-5c1e0503510e').
+narrative_ontology:cs_created_at('043e4496-aba6-4170-9698-5c1e0503510e', '').
+narrative_ontology:cs_kernel_codification('043e4496-aba6-4170-9698-5c1e0503510e', fixed_text).
+narrative_ontology:cs_authority_grounding('043e4496-aba6-4170-9698-5c1e0503510e', lineage).
+narrative_ontology:cs_interpretation_layer_present('043e4496-aba6-4170-9698-5c1e0503510e').
 narrative_ontology:cs_kernel_id(sanctity_reading, end_of_life_authority).
-narrative_ontology:cs_reading_relation(sanctity_reading, autonomy_reading, coexists_with).
-narrative_ontology:cs_reading_relation(sanctity_reading, vulnerability_primacy_reading, influences).
-narrative_ontology:cs_axiom(sanctity_reading, foundational, intrinsic_value_inviolable).
+narrative_ontology:cs_reading_relation('043e4496-aba6-4170-9698-5c1e0503510e', autonomy_reading, coexists_with).
+narrative_ontology:cs_reading_relation('043e4496-aba6-4170-9698-5c1e0503510e', vulnerability_primacy_reading, influences).
+narrative_ontology:cs_axiom('043e4496-aba6-4170-9698-5c1e0503510e', foundational, intrinsic_value_inviolable).
 narrative_ontology:cs_axiom_status(intrinsic_value_inviolable, holdable).
-narrative_ontology:cs_axiom_grounding(sanctity_reading, intrinsic_value_inviolable, deontological).
-narrative_ontology:cs_axiom(sanctity_reading, foundational, individual_consent_cannot_override_value).
+narrative_ontology:cs_axiom_grounding('043e4496-aba6-4170-9698-5c1e0503510e', intrinsic_value_inviolable, deontological).
+narrative_ontology:cs_axiom('043e4496-aba6-4170-9698-5c1e0503510e', foundational, individual_consent_cannot_override_value).
 narrative_ontology:cs_axiom_status(individual_consent_cannot_override_value, holdable).
-narrative_ontology:cs_axiom_grounding(sanctity_reading, individual_consent_cannot_override_value, deontological).
-narrative_ontology:cs_reference_frame(sanctity_reading, sacred_life_irreducible).
-narrative_ontology:cs_drift_state(sanctity_reading, contemporary_medical_autonomy_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('043e4496-aba6-4170-9698-5c1e0503510e', individual_consent_cannot_override_value, deontological).
+narrative_ontology:cs_reference_frame('043e4496-aba6-4170-9698-5c1e0503510e', sacred_life_irreducible).
+narrative_ontology:cs_drift_state('043e4496-aba6-4170-9698-5c1e0503510e', contemporary_medical_autonomy_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(sanctity_reading, institutional_medical_authority).

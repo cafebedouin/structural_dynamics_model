@@ -115,18 +115,20 @@ narrative_ontology:topic_domain(prescriptive_ideal_reading, "historical_linguist
 domain_priors:requires_active_enforcement(prescriptive_ideal_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(prescriptive_ideal_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(prescriptive_ideal_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(prescriptive_ideal_reading).
+narrative_ontology:cs_story_uid(prescriptive_ideal_reading, '2bde5242-bc7a-4fd5-a88f-3e598d63ad77').
+narrative_ontology:cs_created_at('2bde5242-bc7a-4fd5-a88f-3e598d63ad77', '').
+narrative_ontology:cs_kernel_codification('2bde5242-bc7a-4fd5-a88f-3e598d63ad77', fixed_text).
+narrative_ontology:cs_authority_grounding('2bde5242-bc7a-4fd5-a88f-3e598d63ad77', lineage).
+narrative_ontology:cs_interpretation_layer_present('2bde5242-bc7a-4fd5-a88f-3e598d63ad77').
 narrative_ontology:cs_kernel_id(prescriptive_ideal_reading, correct_latin).
-narrative_ontology:cs_reading_relation(prescriptive_ideal_reading, living_drift_reading, forecloses).
-narrative_ontology:cs_reading_relation(prescriptive_ideal_reading, textual_recovery_reading, coexists_with).
-narrative_ontology:cs_axiom(prescriptive_ideal_reading, foundational, cicero_defines_correctness).
+narrative_ontology:cs_reading_relation('2bde5242-bc7a-4fd5-a88f-3e598d63ad77', living_drift_reading, forecloses).
+narrative_ontology:cs_reading_relation('2bde5242-bc7a-4fd5-a88f-3e598d63ad77', textual_recovery_reading, coexists_with).
+narrative_ontology:cs_axiom('2bde5242-bc7a-4fd5-a88f-3e598d63ad77', foundational, cicero_defines_correctness).
 narrative_ontology:cs_axiom_status(cicero_defines_correctness, holdable).
-narrative_ontology:cs_axiom(prescriptive_ideal_reading, foundational, post_classical_is_corruption).
+narrative_ontology:cs_axiom('2bde5242-bc7a-4fd5-a88f-3e598d63ad77', foundational, post_classical_is_corruption).
 narrative_ontology:cs_axiom_status(post_classical_is_corruption, holdable).
-narrative_ontology:cs_reference_frame(prescriptive_ideal_reading, ciceronian_authority).
-narrative_ontology:cs_drift_state(prescriptive_ideal_reading, contemporary_linguistic_science, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_reference_frame('2bde5242-bc7a-4fd5-a88f-3e598d63ad77', ciceronian_authority).
+narrative_ontology:cs_drift_state('2bde5242-bc7a-4fd5-a88f-3e598d63ad77', contemporary_linguistic_science, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(prescriptive_ideal_reading, ciceronian_elite).

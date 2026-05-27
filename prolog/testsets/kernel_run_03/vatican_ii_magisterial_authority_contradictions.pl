@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(medieval_change_is_natural_evolution, classical_purity_as_sole_standard).
 narrative_ontology:cs_axiom_contradiction(classical_purity_as_sole_standard, medieval_change_is_natural_evolution).
+narrative_ontology:cs_story_uid(vatican_ii_magisterial_authority_contradictions, 'c6300181-e352-4d22-99da-9517a690470e').
+narrative_ontology:cs_created_at('c6300181-e352-4d22-99da-9517a690470e', '').

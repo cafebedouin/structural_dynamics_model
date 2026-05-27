@@ -114,9 +114,11 @@ narrative_ontology:topic_domain(temporal_boundary_constraint, "legal_history/int
 domain_priors:requires_active_enforcement(temporal_boundary_constraint).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(temporal_boundary_constraint, fixed_text).
-narrative_ontology:cs_authority_grounding(temporal_boundary_constraint, lineage).
-narrative_ontology:cs_interpretation_layer_present(temporal_boundary_constraint).
+narrative_ontology:cs_story_uid(temporal_boundary_constraint, 'd6a00e21-571b-4fc1-af95-127504da11a9').
+narrative_ontology:cs_created_at('d6a00e21-571b-4fc1-af95-127504da11a9', '').
+narrative_ontology:cs_kernel_codification('d6a00e21-571b-4fc1-af95-127504da11a9', fixed_text).
+narrative_ontology:cs_authority_grounding('d6a00e21-571b-4fc1-af95-127504da11a9', lineage).
+narrative_ontology:cs_interpretation_layer_present('d6a00e21-571b-4fc1-af95-127504da11a9').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(temporal_boundary_constraint, booksellers_guild).

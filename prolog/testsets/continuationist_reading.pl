@@ -120,9 +120,11 @@ narrative_ontology:topic_domain(continuationist_reading, "religious_authority/po
 domain_priors:requires_active_enforcement(continuationist_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(continuationist_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(continuationist_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(continuationist_reading).
+narrative_ontology:cs_story_uid(continuationist_reading, '1f12194c-911f-4f78-9a4f-9c27c32c3e31').
+narrative_ontology:cs_created_at('1f12194c-911f-4f78-9a4f-9c27c32c3e31', '').
+narrative_ontology:cs_kernel_codification('1f12194c-911f-4f78-9a4f-9c27c32c3e31', fixed_text).
+narrative_ontology:cs_authority_grounding('1f12194c-911f-4f78-9a4f-9c27c32c3e31', lineage).
+narrative_ontology:cs_interpretation_layer_present('1f12194c-911f-4f78-9a4f-9c27c32c3e31').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(continuationist_reading, fundamentalist_leadership).

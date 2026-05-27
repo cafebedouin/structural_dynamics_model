@@ -118,18 +118,20 @@ narrative_ontology:topic_domain(deterrence_instrument, "criminal_justice/politic
 domain_priors:requires_active_enforcement(deterrence_instrument).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(deterrence_instrument, formalized).
-narrative_ontology:cs_authority_grounding(deterrence_instrument, extraction).
-narrative_ontology:cs_interpretation_layer_present(deterrence_instrument).
+narrative_ontology:cs_story_uid(deterrence_instrument, '756a8840-45f7-4220-b7bc-9d057d2db359').
+narrative_ontology:cs_created_at('756a8840-45f7-4220-b7bc-9d057d2db359', '').
+narrative_ontology:cs_kernel_codification('756a8840-45f7-4220-b7bc-9d057d2db359', formalized).
+narrative_ontology:cs_authority_grounding('756a8840-45f7-4220-b7bc-9d057d2db359', extraction).
+narrative_ontology:cs_interpretation_layer_present('756a8840-45f7-4220-b7bc-9d057d2db359').
 narrative_ontology:cs_kernel_id(deterrence_instrument, state_killing_authority).
-narrative_ontology:cs_reading_relation(deterrence_instrument, retributive_desert, coexists_with).
-narrative_ontology:cs_reading_relation(deterrence_instrument, categorical_impermissibility, forecloses).
-narrative_ontology:cs_axiom(deterrence_instrument, foundational, deterrence_empirically_contingent_legitimacy).
+narrative_ontology:cs_reading_relation('756a8840-45f7-4220-b7bc-9d057d2db359', retributive_desert, coexists_with).
+narrative_ontology:cs_reading_relation('756a8840-45f7-4220-b7bc-9d057d2db359', categorical_impermissibility, forecloses).
+narrative_ontology:cs_axiom('756a8840-45f7-4220-b7bc-9d057d2db359', foundational, deterrence_empirically_contingent_legitimacy).
 narrative_ontology:cs_axiom_status(deterrence_empirically_contingent_legitimacy, holdable).
-narrative_ontology:cs_axiom(deterrence_instrument, foundational, instrumental_rationality_justifies_death).
+narrative_ontology:cs_axiom('756a8840-45f7-4220-b7bc-9d057d2db359', foundational, instrumental_rationality_justifies_death).
 narrative_ontology:cs_axiom_status(instrumental_rationality_justifies_death, holdable).
-narrative_ontology:cs_reference_frame(deterrence_instrument, empirical_deterrence_justified_execution).
-narrative_ontology:cs_drift_state(deterrence_instrument, post_nrc_meta_analysis_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_reference_frame('756a8840-45f7-4220-b7bc-9d057d2db359', empirical_deterrence_justified_execution).
+narrative_ontology:cs_drift_state('756a8840-45f7-4220-b7bc-9d057d2db359', post_nrc_meta_analysis_era, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(deterrence_instrument, future_potential_murder_victims).

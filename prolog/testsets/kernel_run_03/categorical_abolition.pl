@@ -125,20 +125,22 @@ narrative_ontology:topic_domain(categorical_abolition, "criminal_justice/politic
 domain_priors:requires_active_enforcement(categorical_abolition).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(categorical_abolition, formalized).
-narrative_ontology:cs_authority_grounding(categorical_abolition, lineage).
-narrative_ontology:cs_interpretation_layer_present(categorical_abolition).
+narrative_ontology:cs_story_uid(categorical_abolition, '5e9316e3-7122-4bee-ae08-dc1e07ac84d4').
+narrative_ontology:cs_created_at('5e9316e3-7122-4bee-ae08-dc1e07ac84d4', '').
+narrative_ontology:cs_kernel_codification('5e9316e3-7122-4bee-ae08-dc1e07ac84d4', formalized).
+narrative_ontology:cs_authority_grounding('5e9316e3-7122-4bee-ae08-dc1e07ac84d4', lineage).
+narrative_ontology:cs_interpretation_layer_present('5e9316e3-7122-4bee-ae08-dc1e07ac84d4').
 narrative_ontology:cs_kernel_id(categorical_abolition, state_killing_authority).
-narrative_ontology:cs_reading_relation(categorical_abolition, retributive_desert, forecloses).
-narrative_ontology:cs_reading_relation(categorical_abolition, deterrence_instrument, coexists_with).
-narrative_ontology:cs_axiom(categorical_abolition, foundational, inalienable_life).
+narrative_ontology:cs_reading_relation('5e9316e3-7122-4bee-ae08-dc1e07ac84d4', retributive_desert, forecloses).
+narrative_ontology:cs_reading_relation('5e9316e3-7122-4bee-ae08-dc1e07ac84d4', deterrence_instrument, coexists_with).
+narrative_ontology:cs_axiom('5e9316e3-7122-4bee-ae08-dc1e07ac84d4', foundational, inalienable_life).
 narrative_ontology:cs_axiom_status(inalienable_life, holdable).
-narrative_ontology:cs_axiom_grounding(categorical_abolition, inalienable_life, deontological).
-narrative_ontology:cs_axiom(categorical_abolition, secondary, state_legitimacy_bounds).
+narrative_ontology:cs_axiom_grounding('5e9316e3-7122-4bee-ae08-dc1e07ac84d4', inalienable_life, deontological).
+narrative_ontology:cs_axiom('5e9316e3-7122-4bee-ae08-dc1e07ac84d4', secondary, state_legitimacy_bounds).
 narrative_ontology:cs_axiom_status(state_legitimacy_bounds, holdable).
-narrative_ontology:cs_axiom_grounding(categorical_abolition, state_legitimacy_bounds, conventional).
-narrative_ontology:cs_reference_frame(categorical_abolition, human_rights_inalienability).
-narrative_ontology:cs_drift_state(categorical_abolition, contemporary_abolition_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('5e9316e3-7122-4bee-ae08-dc1e07ac84d4', state_legitimacy_bounds, conventional).
+narrative_ontology:cs_reference_frame('5e9316e3-7122-4bee-ae08-dc1e07ac84d4', human_rights_inalienability).
+narrative_ontology:cs_drift_state('5e9316e3-7122-4bee-ae08-dc1e07ac84d4', contemporary_abolition_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(categorical_abolition, condemned_persons).

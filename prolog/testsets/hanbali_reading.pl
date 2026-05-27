@@ -124,21 +124,23 @@ narrative_ontology:topic_domain(hanbali_reading, "islamic_jurisprudence/legal_ph
 domain_priors:requires_active_enforcement(hanbali_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(hanbali_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(hanbali_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(hanbali_reading).
+narrative_ontology:cs_story_uid(hanbali_reading, 'ba09cbcd-2b73-4621-9bd1-bda8db229970').
+narrative_ontology:cs_created_at('ba09cbcd-2b73-4621-9bd1-bda8db229970', '').
+narrative_ontology:cs_kernel_codification('ba09cbcd-2b73-4621-9bd1-bda8db229970', fixed_text).
+narrative_ontology:cs_authority_grounding('ba09cbcd-2b73-4621-9bd1-bda8db229970', lineage).
+narrative_ontology:cs_interpretation_layer_present('ba09cbcd-2b73-4621-9bd1-bda8db229970').
 narrative_ontology:cs_kernel_id(hanbali_reading, jurisprudential_method_kernel).
-narrative_ontology:cs_reading_relation(hanbali_reading, hanafi_reading, coexists_with).
-narrative_ontology:cs_reading_relation(hanbali_reading, maliki_reading, coexists_with).
-narrative_ontology:cs_reading_relation(hanbali_reading, shafii_reading, coexists_with).
-narrative_ontology:cs_axiom(hanbali_reading, foundational, qiyas_is_bid_ah).
+narrative_ontology:cs_reading_relation('ba09cbcd-2b73-4621-9bd1-bda8db229970', hanafi_reading, coexists_with).
+narrative_ontology:cs_reading_relation('ba09cbcd-2b73-4621-9bd1-bda8db229970', maliki_reading, coexists_with).
+narrative_ontology:cs_reading_relation('ba09cbcd-2b73-4621-9bd1-bda8db229970', shafii_reading, coexists_with).
+narrative_ontology:cs_axiom('ba09cbcd-2b73-4621-9bd1-bda8db229970', foundational, qiyas_is_bid_ah).
 narrative_ontology:cs_axiom_status(qiyas_is_bid_ah, holdable).
-narrative_ontology:cs_axiom_grounding(hanbali_reading, qiyas_is_bid_ah, empirically_contingent).
-narrative_ontology:cs_axiom(hanbali_reading, foundational, textual_sufficiency).
+narrative_ontology:cs_axiom_grounding('ba09cbcd-2b73-4621-9bd1-bda8db229970', qiyas_is_bid_ah, empirically_contingent).
+narrative_ontology:cs_axiom('ba09cbcd-2b73-4621-9bd1-bda8db229970', foundational, textual_sufficiency).
 narrative_ontology:cs_axiom_status(textual_sufficiency, holdable).
-narrative_ontology:cs_axiom_grounding(hanbali_reading, textual_sufficiency, deontological).
-narrative_ontology:cs_reference_frame(hanbali_reading, scriptural_literalism).
-narrative_ontology:cs_drift_state(hanbali_reading, contemporary_institutional_power, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('ba09cbcd-2b73-4621-9bd1-bda8db229970', textual_sufficiency, deontological).
+narrative_ontology:cs_reference_frame('ba09cbcd-2b73-4621-9bd1-bda8db229970', scriptural_literalism).
+narrative_ontology:cs_drift_state('ba09cbcd-2b73-4621-9bd1-bda8db229970', contemporary_institutional_power, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(hanbali_reading, textualist_scholars).

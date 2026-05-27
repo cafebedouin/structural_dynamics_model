@@ -123,19 +123,21 @@ narrative_ontology:topic_domain(absolutist_reading, "constitutional_law/politica
 domain_priors:requires_active_enforcement(absolutist_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(absolutist_reading, formalized).
-narrative_ontology:cs_authority_grounding(absolutist_reading, lineage).
+narrative_ontology:cs_story_uid(absolutist_reading, 'ef6129f2-6caf-4d54-a09e-9f1682901be5').
+narrative_ontology:cs_created_at('ef6129f2-6caf-4d54-a09e-9f1682901be5', '').
+narrative_ontology:cs_kernel_codification('ef6129f2-6caf-4d54-a09e-9f1682901be5', formalized).
+narrative_ontology:cs_authority_grounding('ef6129f2-6caf-4d54-a09e-9f1682901be5', lineage).
 narrative_ontology:cs_kernel_id(absolutist_reading, speech_protection_boundary).
-narrative_ontology:cs_reading_relation(absolutist_reading, harm_limited_reading, forecloses).
-narrative_ontology:cs_reading_relation(absolutist_reading, balancing_reading, coexists_with).
-narrative_ontology:cs_axiom(absolutist_reading, foundational, speech_protection_categorically_prior_to_harm_regulation).
+narrative_ontology:cs_reading_relation('ef6129f2-6caf-4d54-a09e-9f1682901be5', harm_limited_reading, forecloses).
+narrative_ontology:cs_reading_relation('ef6129f2-6caf-4d54-a09e-9f1682901be5', balancing_reading, coexists_with).
+narrative_ontology:cs_axiom('ef6129f2-6caf-4d54-a09e-9f1682901be5', foundational, speech_protection_categorically_prior_to_harm_regulation).
 narrative_ontology:cs_axiom_status(speech_protection_categorically_prior_to_harm_regulation, holdable).
-narrative_ontology:cs_axiom_grounding(absolutist_reading, speech_protection_categorically_prior_to_harm_regulation, deontological).
-narrative_ontology:cs_axiom(absolutist_reading, secondary, brandenburg_imminence_threshold_immutable).
+narrative_ontology:cs_axiom_grounding('ef6129f2-6caf-4d54-a09e-9f1682901be5', speech_protection_categorically_prior_to_harm_regulation, deontological).
+narrative_ontology:cs_axiom('ef6129f2-6caf-4d54-a09e-9f1682901be5', secondary, brandenburg_imminence_threshold_immutable).
 narrative_ontology:cs_axiom_status(brandenburg_imminence_threshold_immutable, overridden).
-narrative_ontology:cs_axiom_grounding(absolutist_reading, brandenburg_imminence_threshold_immutable, empirically_contingent).
-narrative_ontology:cs_reference_frame(absolutist_reading, first_amendment_as_written).
-narrative_ontology:cs_drift_state(absolutist_reading, contemporary_digital_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('ef6129f2-6caf-4d54-a09e-9f1682901be5', brandenburg_imminence_threshold_immutable, empirically_contingent).
+narrative_ontology:cs_reference_frame('ef6129f2-6caf-4d54-a09e-9f1682901be5', first_amendment_as_written).
+narrative_ontology:cs_drift_state('ef6129f2-6caf-4d54-a09e-9f1682901be5', contemporary_digital_era, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(absolutist_reading, institutional_speech_actors).

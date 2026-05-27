@@ -120,19 +120,21 @@ narrative_ontology:topic_domain(safety_control_reading, "ai_governance/technolog
 domain_priors:requires_active_enforcement(safety_control_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(safety_control_reading, distributed).
-narrative_ontology:cs_authority_grounding(safety_control_reading, extraction).
+narrative_ontology:cs_story_uid(safety_control_reading, '3570c50a-d231-4785-ae1d-471c5bf56053').
+narrative_ontology:cs_created_at('3570c50a-d231-4785-ae1d-471c5bf56053', '').
+narrative_ontology:cs_kernel_codification('3570c50a-d231-4785-ae1d-471c5bf56053', distributed).
+narrative_ontology:cs_authority_grounding('3570c50a-d231-4785-ae1d-471c5bf56053', extraction).
 narrative_ontology:cs_kernel_id(safety_control_reading, ai_alignment_commitment).
-narrative_ontology:cs_reading_relation(safety_control_reading, ethics_justice_reading, coexists_with).
-narrative_ontology:cs_reading_relation(safety_control_reading, integrated_reading, influences).
-narrative_ontology:cs_axiom(safety_control_reading, foundational, catastrophic_loss_of_control_is_highest_priority_harm).
+narrative_ontology:cs_reading_relation('3570c50a-d231-4785-ae1d-471c5bf56053', ethics_justice_reading, coexists_with).
+narrative_ontology:cs_reading_relation('3570c50a-d231-4785-ae1d-471c5bf56053', integrated_reading, influences).
+narrative_ontology:cs_axiom('3570c50a-d231-4785-ae1d-471c5bf56053', foundational, catastrophic_loss_of_control_is_highest_priority_harm).
 narrative_ontology:cs_axiom_status(catastrophic_loss_of_control_is_highest_priority_harm, holdable).
-narrative_ontology:cs_axiom_grounding(safety_control_reading, catastrophic_loss_of_control_is_highest_priority_harm, empirically_contingent).
-narrative_ontology:cs_axiom(safety_control_reading, foundational, control_through_capability_restriction_is_legitimate_governance).
+narrative_ontology:cs_axiom_grounding('3570c50a-d231-4785-ae1d-471c5bf56053', catastrophic_loss_of_control_is_highest_priority_harm, empirically_contingent).
+narrative_ontology:cs_axiom('3570c50a-d231-4785-ae1d-471c5bf56053', foundational, control_through_capability_restriction_is_legitimate_governance).
 narrative_ontology:cs_axiom_status(control_through_capability_restriction_is_legitimate_governance, holdable).
-narrative_ontology:cs_axiom_grounding(safety_control_reading, control_through_capability_restriction_is_legitimate_governance, instrumental).
-narrative_ontology:cs_reference_frame(safety_control_reading, distributed_human_control_framework).
-narrative_ontology:cs_drift_state(safety_control_reading, contemporary_frontier_ai_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('3570c50a-d231-4785-ae1d-471c5bf56053', control_through_capability_restriction_is_legitimate_governance, instrumental).
+narrative_ontology:cs_reference_frame('3570c50a-d231-4785-ae1d-471c5bf56053', distributed_human_control_framework).
+narrative_ontology:cs_drift_state('3570c50a-d231-4785-ae1d-471c5bf56053', contemporary_frontier_ai_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(safety_control_reading, safety_research_institutions).

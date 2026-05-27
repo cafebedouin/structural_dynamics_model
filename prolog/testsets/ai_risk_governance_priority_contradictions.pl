@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(superintelligent_misalignment_civilization_threat, present_algorithmic_harm_moral_urgency).
 narrative_ontology:cs_axiom_contradiction(present_algorithmic_harm_moral_urgency, superintelligent_misalignment_civilization_threat).
+narrative_ontology:cs_story_uid(ai_risk_governance_priority_contradictions, '6a71f252-0151-4e44-8042-6c5d93f43129').
+narrative_ontology:cs_created_at('6a71f252-0151-4e44-8042-6c5d93f43129', '').

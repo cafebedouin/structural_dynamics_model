@@ -2009,7 +2009,100 @@ def build_cs_pattern_section(constraint_id, pipeline_data):
         lines.append(f"\n  ⚠ {verdict}: {verdict_prose}")
 
     lines.append("")
-    lines.append("  See: docs/commitment_systems_sketch_v4.md")
+    lines.append("  See: docs/commitment_systems/commitment_systems_sketch_v5_2.md")
+    return "\n".join(lines)
+
+
+# --- CS Temporal Status (drift terminal, axiom foreclosed, unacknowledged drift) ---
+
+def build_cs_extended_section(constraint_id, pipeline_data):
+    """Render CS temporal status section. Returns empty string for legacy constraints."""
+    if pipeline_data is None:
+        return ""
+    entry = find_constraint_entry(pipeline_data, constraint_id)
+    if entry is None:
+        return ""
+
+    terminal = entry.get("cs_drift_terminal")
+    foreclosed = entry.get("cs_axiom_foreclosed")
+    unacknowledged = entry.get("cs_drift_unacknowledged", False)
+
+    if terminal is None and foreclosed is None and not unacknowledged:
+        return ""
+
+    lines = ["--- COMMITMENT SYSTEM TEMPORAL STATUS ---"]
+
+    if terminal is not None:
+        lines.append(f"  Drift terminal attractor: {terminal}")
+    if foreclosed is not None:
+        lines.append(f"  Axiom foreclosed: {foreclosed}")
+    if unacknowledged:
+        lines.append("  Drift state: unacknowledged")
+
+    return "\n".join(lines)
+
+
+# --- CS Kernel Reading Comparison (kernel membership + cross-reading findings) ---
+
+def build_kernel_reading_section(constraint_id, pipeline_data):
+    """Render cross-reading comparison if this constraint belongs to a kernel."""
+    if pipeline_data is None:
+        return ""
+    kc = pipeline_data.get("validation", {}).get("cs_kernel_comparison", [])
+    if not kc:
+        return ""
+
+    # Load this story's story_uid for precise instance matching (prefer UID over name)
+    json_path = PROJECT_ROOT / "json" / f"{constraint_id}.json"
+    story_uid = None
+    try:
+        import json as _json
+        with open(json_path, "r", encoding="utf-8") as f:
+            story_uid = _json.load(f).get("header", {}).get("story_uid")
+    except (OSError, ValueError):
+        pass
+
+    kernel_entry = None
+    this_reading = None
+    for ke in kc:
+        for r in ke.get("readings", []):
+            # Match by story_uid if available; fall back to reading_id (name)
+            if story_uid and r.get("story_uid") == story_uid:
+                kernel_entry = ke
+                this_reading = r
+                break
+            elif not story_uid and r.get("reading_id") == constraint_id:
+                kernel_entry = ke
+                this_reading = r
+                break
+        if kernel_entry:
+            break
+    if kernel_entry is None:
+        return ""
+
+    lines = [f"--- KERNEL: {kernel_entry['kernel_id']} ---"]
+    lines.append(
+        f"  {kernel_entry['reading_count']} readings | "
+        f"{kernel_entry['diverging_pair_count']} diverging pairs | "
+        f"{kernel_entry['axiom_conflict_count']} axiom conflicts"
+    )
+    for r in kernel_entry["readings"]:
+        rid = r["reading_id"]
+        r_uid = r.get("story_uid")
+        is_this = (story_uid and r_uid == story_uid) or (not story_uid and rid == constraint_id)
+        marker = " *" if is_this else "  "
+        parts = []
+        if r.get("cs_drift_terminal"):
+            parts.append(f"terminal={r['cs_drift_terminal']}")
+        if r.get("cs_axiom_foreclosed"):
+            parts.append(f"foreclosed")
+        if r.get("cs_drift_unacknowledged"):
+            parts.append(f"unacknowledged")
+        if r.get("cs_drift_mismatch"):
+            parts.append(f"mismatch")
+        suffix = f" [{', '.join(parts)}]" if parts else ""
+        lines.append(f"{marker}{rid}{suffix}")
+
     return "\n".join(lines)
 
 
@@ -2435,6 +2528,8 @@ def generate_report(constraint_id, data, iteration_round=None):
         constraint_id, data["pipeline"], data["orbit"]
     )
     l2_cs_pattern = build_cs_pattern_section(constraint_id, data["pipeline"])
+    l2_cs_extended = build_cs_extended_section(constraint_id, data["pipeline"])
+    l2_cs_kernel = build_kernel_reading_section(constraint_id, data["pipeline"])
     # Level 1: FPN contamination topology (Gap analysis Change 4 — resolved)
     l1_contamination = build_contamination_network(constraint_id, data["pipeline"])
     l1_husk = build_husk_signature(constraint_id, data["pipeline"])
@@ -2471,7 +2566,7 @@ def generate_report(constraint_id, data, iteration_round=None):
         build_level_header(1, "SELF-CONSISTENCY"),
         l1_identity, l1_contamination, l1_husk, l1_orbit, l1_omega,
         build_level_header(2, "DIAGNOSTIC CONVERGENCE"),
-        l2_convergence, l2_maxent, l2_wasserstein, l2_cohomology, l2_game_theory, l2_persistence, l2_abductive, l2_axiom2, l2_verdict, l2_theorems, l2_cs_pattern,
+        l2_convergence, l2_maxent, l2_wasserstein, l2_cohomology, l2_game_theory, l2_persistence, l2_abductive, l2_axiom2, l2_verdict, l2_theorems, l2_cs_pattern, l2_cs_extended, l2_cs_kernel,
         build_level_header(3, "CORPUS POSITIONING"),
         l3_distribution, l3_structural,
     ]

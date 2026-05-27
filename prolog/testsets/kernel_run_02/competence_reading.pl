@@ -112,20 +112,22 @@ narrative_ontology:human_readable(competence_reading, "Competence Reading: Live 
 narrative_ontology:topic_domain(competence_reading, "governance/disaster_preparedness/institutional_memory").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(competence_reading, distributed).
-narrative_ontology:cs_authority_grounding(competence_reading, practice).
-narrative_ontology:cs_interpretation_layer_present(competence_reading).
+narrative_ontology:cs_story_uid(competence_reading, '7b8bc209-7de3-40c9-bc4f-d54346a6894e').
+narrative_ontology:cs_created_at('7b8bc209-7de3-40c9-bc4f-d54346a6894e', '').
+narrative_ontology:cs_kernel_codification('7b8bc209-7de3-40c9-bc4f-d54346a6894e', distributed).
+narrative_ontology:cs_authority_grounding('7b8bc209-7de3-40c9-bc4f-d54346a6894e', practice).
+narrative_ontology:cs_interpretation_layer_present('7b8bc209-7de3-40c9-bc4f-d54346a6894e').
 narrative_ontology:cs_kernel_id(competence_reading, preparedness_retention).
-narrative_ontology:cs_reading_relation(competence_reading, husk_reading, coexists_with).
-narrative_ontology:cs_reading_relation(competence_reading, hybrid_reading, coexists_with).
-narrative_ontology:cs_axiom(competence_reading, foundational, live_exercise_retains_competence).
+narrative_ontology:cs_reading_relation('7b8bc209-7de3-40c9-bc4f-d54346a6894e', husk_reading, coexists_with).
+narrative_ontology:cs_reading_relation('7b8bc209-7de3-40c9-bc4f-d54346a6894e', hybrid_reading, coexists_with).
+narrative_ontology:cs_axiom('7b8bc209-7de3-40c9-bc4f-d54346a6894e', foundational, live_exercise_retains_competence).
 narrative_ontology:cs_axiom_status(live_exercise_retains_competence, holdable).
-narrative_ontology:cs_axiom_grounding(competence_reading, live_exercise_retains_competence, empirically_contingent).
-narrative_ontology:cs_axiom(competence_reading, secondary, competence_grounds_legitimacy).
+narrative_ontology:cs_axiom_grounding('7b8bc209-7de3-40c9-bc4f-d54346a6894e', live_exercise_retains_competence, empirically_contingent).
+narrative_ontology:cs_axiom('7b8bc209-7de3-40c9-bc4f-d54346a6894e', secondary, competence_grounds_legitimacy).
 narrative_ontology:cs_axiom_status(competence_grounds_legitimacy, holdable).
-narrative_ontology:cs_axiom_grounding(competence_reading, competence_grounds_legitimacy, instrumental).
-narrative_ontology:cs_reference_frame(competence_reading, functional_knowledge_preservation).
-narrative_ontology:cs_drift_state(competence_reading, contemporary_bureaucratization, gap(practice_drift, minor, true)).
+narrative_ontology:cs_axiom_grounding('7b8bc209-7de3-40c9-bc4f-d54346a6894e', competence_grounds_legitimacy, instrumental).
+narrative_ontology:cs_reference_frame('7b8bc209-7de3-40c9-bc4f-d54346a6894e', functional_knowledge_preservation).
+narrative_ontology:cs_drift_state('7b8bc209-7de3-40c9-bc4f-d54346a6894e', contemporary_bureaucratization, gap(practice_drift, minor, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(competence_reading, population_safety).

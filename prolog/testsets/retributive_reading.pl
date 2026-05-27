@@ -119,8 +119,10 @@ narrative_ontology:constraint_metric(retributive_reading, theater_ratio, 0.55).
 narrative_ontology:constraint_claim(retributive_reading, snare).
 narrative_ontology:human_readable(retributive_reading, "Retributive Execution: Moral Balance via Proportionate Punishment").
 narrative_ontology:topic_domain(retributive_reading, "criminal_justice/political_philosophy/constitutional_law").
-narrative_ontology:cs_kernel_codification(retributive_reading, formalized).
-narrative_ontology:cs_authority_grounding(retributive_reading, extraction).
+narrative_ontology:cs_story_uid(retributive_reading, 'c83fddb0-ae7c-4f13-8f6a-ccc21ca1414f').
+narrative_ontology:cs_created_at('c83fddb0-ae7c-4f13-8f6a-ccc21ca1414f', '').
+narrative_ontology:cs_kernel_codification('c83fddb0-ae7c-4f13-8f6a-ccc21ca1414f', formalized).
+narrative_ontology:cs_authority_grounding('c83fddb0-ae7c-4f13-8f6a-ccc21ca1414f', extraction).
 narrative_ontology:cs_kernel_id(retributive_reading, state_execution_authority).
 
 domain_priors:requires_active_enforcement(retributive_reading).
@@ -292,13 +294,13 @@ narrative_ontology:coordination_type(retributive_reading, enforcement_mechanism)
 narrative_ontology:affects_constraint(retributive_reading, deterrence_reading).
 narrative_ontology:affects_constraint(retributive_reading, abolition_reading).
 narrative_ontology:affects_constraint(retributive_reading, incapacitation_reading).
-narrative_ontology:cs_reading_relation(retributive_reading, deterrence_reading, coexists_with).
-narrative_ontology:cs_reading_relation(retributive_reading, abolition_reading, coexists_with).
+narrative_ontology:cs_reading_relation('c83fddb0-ae7c-4f13-8f6a-ccc21ca1414f', deterrence_reading, coexists_with).
+narrative_ontology:cs_reading_relation('c83fddb0-ae7c-4f13-8f6a-ccc21ca1414f', abolition_reading, coexists_with).
 % Temporal layer: deontological natural-law framework; axioms not primarily empirically grounded.
 % Relative to its own reference frame, this reading is internally stable.
 % Engine computes: stable + minor → stable_pattern.
-narrative_ontology:cs_reference_frame(retributive_reading, natural_law_proportional_justice).
-narrative_ontology:cs_drift_state(retributive_reading, contemporary,
+narrative_ontology:cs_reference_frame('c83fddb0-ae7c-4f13-8f6a-ccc21ca1414f', natural_law_proportional_justice).
+narrative_ontology:cs_drift_state('c83fddb0-ae7c-4f13-8f6a-ccc21ca1414f', contemporary,
     gap(stable, minor, true)).
 
 % DUAL FORMULATION NOTE:

@@ -128,20 +128,22 @@ narrative_ontology:topic_domain(scriptural_authority_swap, "historical_sociology
 domain_priors:requires_active_enforcement(scriptural_authority_swap).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(scriptural_authority_swap, fixed_text).
-narrative_ontology:cs_authority_grounding(scriptural_authority_swap, lineage).
-narrative_ontology:cs_interpretation_layer_present(scriptural_authority_swap).
-narrative_ontology:cs_reading_relation(scriptural_authority_swap, ecclesiastical_authority_monopoly_reading, forecloses).
-narrative_ontology:cs_reading_relation(scriptural_authority_swap, radical_reformation_scriptural_immediacy_reading, coexists_with).
-narrative_ontology:cs_reading_relation(scriptural_authority_swap, catholic_scripture_tradition_reading, coexists_with).
-narrative_ontology:cs_axiom(scriptural_authority_swap, foundational, scripture_accessible_to_vernacular_literate).
+narrative_ontology:cs_story_uid(scriptural_authority_swap, '6820286a-8d1e-4ff6-8e67-469481d0ca41').
+narrative_ontology:cs_created_at('6820286a-8d1e-4ff6-8e67-469481d0ca41', '').
+narrative_ontology:cs_kernel_codification('6820286a-8d1e-4ff6-8e67-469481d0ca41', fixed_text).
+narrative_ontology:cs_authority_grounding('6820286a-8d1e-4ff6-8e67-469481d0ca41', lineage).
+narrative_ontology:cs_interpretation_layer_present('6820286a-8d1e-4ff6-8e67-469481d0ca41').
+narrative_ontology:cs_reading_relation('6820286a-8d1e-4ff6-8e67-469481d0ca41', ecclesiastical_authority_monopoly_reading, forecloses).
+narrative_ontology:cs_reading_relation('6820286a-8d1e-4ff6-8e67-469481d0ca41', radical_reformation_scriptural_immediacy_reading, coexists_with).
+narrative_ontology:cs_reading_relation('6820286a-8d1e-4ff6-8e67-469481d0ca41', catholic_scripture_tradition_reading, coexists_with).
+narrative_ontology:cs_axiom('6820286a-8d1e-4ff6-8e67-469481d0ca41', foundational, scripture_accessible_to_vernacular_literate).
 narrative_ontology:cs_axiom_status(scripture_accessible_to_vernacular_literate, holdable).
-narrative_ontology:cs_axiom(scriptural_authority_swap, foundational, individual_conscience_supreme_authority).
+narrative_ontology:cs_axiom('6820286a-8d1e-4ff6-8e67-469481d0ca41', foundational, individual_conscience_supreme_authority).
 narrative_ontology:cs_axiom_status(individual_conscience_supreme_authority, holdable).
-narrative_ontology:cs_axiom(scriptural_authority_swap, secondary, ecclesiastical_mediation_unnecessary_to_salvation).
+narrative_ontology:cs_axiom('6820286a-8d1e-4ff6-8e67-469481d0ca41', secondary, ecclesiastical_mediation_unnecessary_to_salvation).
 narrative_ontology:cs_axiom_status(ecclesiastical_mediation_unnecessary_to_salvation, holdable).
-narrative_ontology:cs_reference_frame(scriptural_authority_swap, scriptural_immediate_access).
-narrative_ontology:cs_drift_state(scriptural_authority_swap, post_westphalia_settlement, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_reference_frame('6820286a-8d1e-4ff6-8e67-469481d0ca41', scriptural_immediate_access).
+narrative_ontology:cs_drift_state('6820286a-8d1e-4ff6-8e67-469481d0ca41', post_westphalia_settlement, gap(practice_drift, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(scriptural_authority_swap, reformist_clergy).

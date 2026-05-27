@@ -175,11 +175,13 @@ def _build_multifile_declarations(data):
     if data.get("omegas"):
         decls.append("narrative_ontology:omega_variable/3")
 
-    # CS structure predicates (when cs_structure block is present)
-    if data.get("cs_structure"):
+    # CS structure predicates (when cs_structure block is present AND story_uid is available)
+    cs = data.get("cs_structure")
+    story_uid = data.get("header", {}).get("story_uid")
+    if cs and story_uid:
+        decls.append("narrative_ontology:cs_story_uid/2")
         decls.append("narrative_ontology:cs_kernel_codification/2")
         decls.append("narrative_ontology:cs_authority_grounding/2")
-        cs = data["cs_structure"]
         if cs.get("interpretation_layer_present"):
             decls.append("narrative_ontology:cs_interpretation_layer_present/1")
         # kernel_id is injected from manifest, not from model output — see process_batch_results
@@ -196,6 +198,7 @@ def _build_multifile_declarations(data):
             decls.append("narrative_ontology:cs_reference_frame/2")
         if cs.get("drift_state"):
             decls.append("narrative_ontology:cs_drift_state/3")
+        decls.append("narrative_ontology:cs_created_at/2")
 
     # human_readable and topic_domain
     decls.append("narrative_ontology:human_readable/2")
@@ -461,44 +464,52 @@ def generate_pl(data):
     if bp.get("requires_active_enforcement") or bp.get("has_sunset_clause") or bp.get("emerges_naturally"):
         emit()
 
-    # CS structure fields
+    # CS structure fields — gated on cs_structure AND story_uid (UID-keyed emit)
     cs = data.get("cs_structure")
-    if cs:
+    story_uid = data.get("header", {}).get("story_uid")
+    if cs and story_uid:
+        uid_atom = f"'{story_uid}'"  # single-quoted: hyphens require quoting in Prolog
         emit("% --- Commitment system structure ---")
-        emit(f"narrative_ontology:cs_kernel_codification({cid}, {cs['kernel_codification']}).")
-        emit(f"narrative_ontology:cs_authority_grounding({cid}, {cs['authority_grounding']}).")
+        # Identity fact: maps reading name → UUID (the join bridge)
+        emit(f"narrative_ontology:cs_story_uid({cid}, {uid_atom}).")
+        # Per-reading CS facts — all UID-keyed from here
+        emit(f"narrative_ontology:cs_kernel_codification({uid_atom}, {cs['kernel_codification']}).")
+        emit(f"narrative_ontology:cs_authority_grounding({uid_atom}, {cs['authority_grounding']}).")
         if cs.get("interpretation_layer_present"):
-            emit(f"narrative_ontology:cs_interpretation_layer_present({cid}).")
-        # kernel_id comes from manifest injection (_kernel_id field), not from model output
-        kernel_id = data.get("_kernel_id")
-        if kernel_id:
-            emit(f"narrative_ontology:cs_kernel_id({cid}, {kernel_id}).")
-        # Typed reading-sibling edges (authored by model from kernel context)
+            emit(f"narrative_ontology:cs_interpretation_layer_present({uid_atom}).")
+        # Typed reading-sibling edges: source=UID (known), target=name atom (stateless generation)
         for rr in cs.get("reading_relations") or []:
             sibling = rr["sibling_id"]
             rel = rr["relation"]
-            emit(f"narrative_ontology:cs_reading_relation({cid}, {sibling}, {rel}).")
-        # Foundational axioms (authored by model; name what distinguishes this reading)
+            emit(f"narrative_ontology:cs_reading_relation({uid_atom}, {sibling}, {rel}).")
+        # Foundational axioms (UID-keyed); cs_axiom_status stays axiom-level (not UID-keyed)
         emitted_statuses = set()
         for ax in cs.get("axioms") or []:
             atom = ax["atom"]
             role = ax["role"]
             status = ax["status"]
-            emit(f"narrative_ontology:cs_axiom({cid}, {role}, {atom}).")
+            emit(f"narrative_ontology:cs_axiom({uid_atom}, {role}, {atom}).")
             if atom not in emitted_statuses:
                 emit(f"narrative_ontology:cs_axiom_status({atom}, {status}).")
                 emitted_statuses.add(atom)
             if gt := ax.get("grounding_type"):
-                emit(f"narrative_ontology:cs_axiom_grounding({cid}, {atom}, {gt}).")
-        # Temporal layer: t0 reference frame and t1 drift state (authored; t2 is computed by engine)
+                emit(f"narrative_ontology:cs_axiom_grounding({uid_atom}, {atom}, {gt}).")
+        # Temporal layer: t0 reference frame and t1 drift state (authored; t2 computed by engine)
         if rf := cs.get("reference_frame"):
-            emit(f"narrative_ontology:cs_reference_frame({cid}, {rf}).")
+            emit(f"narrative_ontology:cs_reference_frame({uid_atom}, {rf}).")
         if ds := cs.get("drift_state"):
             moment = ds["moment"]
             direction = ds["direction"]
             magnitude = ds["magnitude"]
             ack = str(ds["acknowledged"]).lower()
-            emit(f"narrative_ontology:cs_drift_state({cid}, {moment}, gap({direction}, {magnitude}, {ack})).")
+            emit(f"narrative_ontology:cs_drift_state({uid_atom}, {moment}, gap({direction}, {magnitude}, {ack})).")
+        # Timestamp fact (UID-keyed; enables latest-instance selection in A12)
+        created_at = data.get("header", {}).get("created_at", "")
+        emit(f"narrative_ontology:cs_created_at({uid_atom}, '{created_at}').")
+        # Kernel link — ADDITIONAL gate; only when story is part of a kernel run
+        kernel_id = data.get("_kernel_id")
+        if kernel_id:
+            emit(f"narrative_ontology:cs_kernel_id({cid}, {kernel_id}).")
         emit()
 
     # Beneficiaries and victims

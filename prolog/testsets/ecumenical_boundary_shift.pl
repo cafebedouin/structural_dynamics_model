@@ -117,9 +117,11 @@ narrative_ontology:topic_domain(ecumenical_boundary_shift, "religious_institutio
 domain_priors:requires_active_enforcement(ecumenical_boundary_shift).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(ecumenical_boundary_shift, fixed_text).
-narrative_ontology:cs_authority_grounding(ecumenical_boundary_shift, lineage).
-narrative_ontology:cs_interpretation_layer_present(ecumenical_boundary_shift).
+narrative_ontology:cs_story_uid(ecumenical_boundary_shift, 'd4f279c5-dcb3-4540-bf64-42d6b69236fb').
+narrative_ontology:cs_created_at('d4f279c5-dcb3-4540-bf64-42d6b69236fb', '').
+narrative_ontology:cs_kernel_codification('d4f279c5-dcb3-4540-bf64-42d6b69236fb', fixed_text).
+narrative_ontology:cs_authority_grounding('d4f279c5-dcb3-4540-bf64-42d6b69236fb', lineage).
+narrative_ontology:cs_interpretation_layer_present('d4f279c5-dcb3-4540-bf64-42d6b69236fb').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(ecumenical_boundary_shift, institutional_papacy).

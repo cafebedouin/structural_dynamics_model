@@ -126,18 +126,20 @@ narrative_ontology:topic_domain(slippery_slope_mechanism, "medical_ethics/bioeth
 domain_priors:requires_active_enforcement(slippery_slope_mechanism).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(slippery_slope_mechanism, formalized).
-narrative_ontology:cs_authority_grounding(slippery_slope_mechanism, extraction).
-narrative_ontology:cs_interpretation_layer_present(slippery_slope_mechanism).
+narrative_ontology:cs_story_uid(slippery_slope_mechanism, 'cad353b4-4827-4576-b862-86a9c36ddd15').
+narrative_ontology:cs_created_at('cad353b4-4827-4576-b862-86a9c36ddd15', '').
+narrative_ontology:cs_kernel_codification('cad353b4-4827-4576-b862-86a9c36ddd15', formalized).
+narrative_ontology:cs_authority_grounding('cad353b4-4827-4576-b862-86a9c36ddd15', extraction).
+narrative_ontology:cs_interpretation_layer_present('cad353b4-4827-4576-b862-86a9c36ddd15').
 narrative_ontology:cs_kernel_id(slippery_slope_mechanism, end_of_life_authority).
-narrative_ontology:cs_reading_relation(slippery_slope_mechanism, autonomy_reading, influences).
-narrative_ontology:cs_reading_relation(slippery_slope_mechanism, sanctity_reading, coexists_with).
-narrative_ontology:cs_axiom(slippery_slope_mechanism, foundational, autonomy_scope_creep_mechanism).
+narrative_ontology:cs_reading_relation('cad353b4-4827-4576-b862-86a9c36ddd15', autonomy_reading, influences).
+narrative_ontology:cs_reading_relation('cad353b4-4827-4576-b862-86a9c36ddd15', sanctity_reading, coexists_with).
+narrative_ontology:cs_axiom('cad353b4-4827-4576-b862-86a9c36ddd15', foundational, autonomy_scope_creep_mechanism).
 narrative_ontology:cs_axiom_status(autonomy_scope_creep_mechanism, holdable).
-narrative_ontology:cs_axiom(slippery_slope_mechanism, secondary, cost_control_pressure_drives_expansion).
+narrative_ontology:cs_axiom('cad353b4-4827-4576-b862-86a9c36ddd15', secondary, cost_control_pressure_drives_expansion).
 narrative_ontology:cs_axiom_status(cost_control_pressure_drives_expansion, holdable).
-narrative_ontology:cs_reference_frame(slippery_slope_mechanism, terminal_competent_autonomy_framework).
-narrative_ontology:cs_drift_state(slippery_slope_mechanism, contemporary_expanded_criteria_era, gap(codification_collapse, substantial, false)).
+narrative_ontology:cs_reference_frame('cad353b4-4827-4576-b862-86a9c36ddd15', terminal_competent_autonomy_framework).
+narrative_ontology:cs_drift_state('cad353b4-4827-4576-b862-86a9c36ddd15', contemporary_expanded_criteria_era, gap(codification_collapse, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(slippery_slope_mechanism, cost_controlling_institutions).

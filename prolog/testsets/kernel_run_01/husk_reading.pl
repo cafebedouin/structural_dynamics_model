@@ -122,16 +122,18 @@ narrative_ontology:topic_domain(husk_reading, "disaster_preparedness/institution
 domain_priors:requires_active_enforcement(husk_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(husk_reading, distributed).
-narrative_ontology:cs_authority_grounding(husk_reading, extraction).
+narrative_ontology:cs_story_uid(husk_reading, 'fae26e82-c30f-47d2-bf14-5887a1b64ec5').
+narrative_ontology:cs_created_at('fae26e82-c30f-47d2-bf14-5887a1b64ec5', '').
+narrative_ontology:cs_kernel_codification('fae26e82-c30f-47d2-bf14-5887a1b64ec5', distributed).
+narrative_ontology:cs_authority_grounding('fae26e82-c30f-47d2-bf14-5887a1b64ec5', extraction).
 narrative_ontology:cs_kernel_id(husk_reading, preparedness_retention).
-narrative_ontology:cs_reading_relation(husk_reading, preparedness_retention_competence_reading, coexists_with).
-narrative_ontology:cs_axiom(husk_reading, foundational, competence_locus_is_institutional_infrastructure).
+narrative_ontology:cs_reading_relation('fae26e82-c30f-47d2-bf14-5887a1b64ec5', preparedness_retention_competence_reading, coexists_with).
+narrative_ontology:cs_axiom('fae26e82-c30f-47d2-bf14-5887a1b64ec5', foundational, competence_locus_is_institutional_infrastructure).
 narrative_ontology:cs_axiom_status(competence_locus_is_institutional_infrastructure, holdable).
-narrative_ontology:cs_axiom(husk_reading, foundational, retention_means_preservation_of_institutional_form).
+narrative_ontology:cs_axiom('fae26e82-c30f-47d2-bf14-5887a1b64ec5', foundational, retention_means_preservation_of_institutional_form).
 narrative_ontology:cs_axiom_status(retention_means_preservation_of_institutional_form, holdable).
-narrative_ontology:cs_reference_frame(husk_reading, bureaucratic_continuity_framework).
-narrative_ontology:cs_drift_state(husk_reading, contemporary_high_turnover_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_reference_frame('fae26e82-c30f-47d2-bf14-5887a1b64ec5', bureaucratic_continuity_framework).
+narrative_ontology:cs_drift_state('fae26e82-c30f-47d2-bf14-5887a1b64ec5', contemporary_high_turnover_era, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(husk_reading, institutional_legitimacy).

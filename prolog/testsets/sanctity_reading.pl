@@ -128,20 +128,22 @@ narrative_ontology:topic_domain(sanctity_reading, "medical_ethics/bioethics/end_
 domain_priors:requires_active_enforcement(sanctity_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(sanctity_reading, formalized).
-narrative_ontology:cs_authority_grounding(sanctity_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(sanctity_reading).
+narrative_ontology:cs_story_uid(sanctity_reading, 'ae053295-daf9-43b5-81e7-9532ff5bf7de').
+narrative_ontology:cs_created_at('ae053295-daf9-43b5-81e7-9532ff5bf7de', '').
+narrative_ontology:cs_kernel_codification('ae053295-daf9-43b5-81e7-9532ff5bf7de', formalized).
+narrative_ontology:cs_authority_grounding('ae053295-daf9-43b5-81e7-9532ff5bf7de', lineage).
+narrative_ontology:cs_interpretation_layer_present('ae053295-daf9-43b5-81e7-9532ff5bf7de').
 narrative_ontology:cs_kernel_id(sanctity_reading, end_of_life_decision_authority).
-narrative_ontology:cs_reading_relation(sanctity_reading, autonomy_reading, coexists_with).
-narrative_ontology:cs_reading_relation(sanctity_reading, vulnerability_protection_reading, influences).
-narrative_ontology:cs_axiom(sanctity_reading, foundational, human_life_intrinsic_value).
+narrative_ontology:cs_reading_relation('ae053295-daf9-43b5-81e7-9532ff5bf7de', autonomy_reading, coexists_with).
+narrative_ontology:cs_reading_relation('ae053295-daf9-43b5-81e7-9532ff5bf7de', vulnerability_protection_reading, influences).
+narrative_ontology:cs_axiom('ae053295-daf9-43b5-81e7-9532ff5bf7de', foundational, human_life_intrinsic_value).
 narrative_ontology:cs_axiom_status(human_life_intrinsic_value, holdable).
-narrative_ontology:cs_axiom_grounding(sanctity_reading, human_life_intrinsic_value, deontological).
-narrative_ontology:cs_axiom(sanctity_reading, foundational, physician_role_life_preservation).
+narrative_ontology:cs_axiom_grounding('ae053295-daf9-43b5-81e7-9532ff5bf7de', human_life_intrinsic_value, deontological).
+narrative_ontology:cs_axiom('ae053295-daf9-43b5-81e7-9532ff5bf7de', foundational, physician_role_life_preservation).
 narrative_ontology:cs_axiom_status(physician_role_life_preservation, holdable).
-narrative_ontology:cs_axiom_grounding(sanctity_reading, physician_role_life_preservation, deontological).
-narrative_ontology:cs_reference_frame(sanctity_reading, sacred_personhood_framework).
-narrative_ontology:cs_drift_state(sanctity_reading, contemporary_autonomy_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('ae053295-daf9-43b5-81e7-9532ff5bf7de', physician_role_life_preservation, deontological).
+narrative_ontology:cs_reference_frame('ae053295-daf9-43b5-81e7-9532ff5bf7de', sacred_personhood_framework).
+narrative_ontology:cs_drift_state('ae053295-daf9-43b5-81e7-9532ff5bf7de', contemporary_autonomy_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(sanctity_reading, religious_medical_institutions).

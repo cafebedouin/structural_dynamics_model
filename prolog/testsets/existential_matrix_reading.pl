@@ -121,19 +121,21 @@ narrative_ontology:human_readable(existential_matrix_reading, "Existential Matri
 narrative_ontology:topic_domain(existential_matrix_reading, "political_theory/international_relations/territorial_sovereignty").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(existential_matrix_reading, distributed).
-narrative_ontology:cs_authority_grounding(existential_matrix_reading, extraction).
+narrative_ontology:cs_story_uid(existential_matrix_reading, '34ea59ac-e447-4bff-9f38-112460d7b58b').
+narrative_ontology:cs_created_at('34ea59ac-e447-4bff-9f38-112460d7b58b', '').
+narrative_ontology:cs_kernel_codification('34ea59ac-e447-4bff-9f38-112460d7b58b', distributed).
+narrative_ontology:cs_authority_grounding('34ea59ac-e447-4bff-9f38-112460d7b58b', extraction).
 narrative_ontology:cs_kernel_id(existential_matrix_reading, territorial_sovereignty_legitimacy).
-narrative_ontology:cs_reading_relation(existential_matrix_reading, covenant_continuity_reading, coexists_with).
-narrative_ontology:cs_reading_relation(existential_matrix_reading, self_determination_reading, forecloses).
-narrative_ontology:cs_axiom(existential_matrix_reading, foundational, territorial_exclusivity_as_survival_precondition).
+narrative_ontology:cs_reading_relation('34ea59ac-e447-4bff-9f38-112460d7b58b', covenant_continuity_reading, coexists_with).
+narrative_ontology:cs_reading_relation('34ea59ac-e447-4bff-9f38-112460d7b58b', self_determination_reading, forecloses).
+narrative_ontology:cs_axiom('34ea59ac-e447-4bff-9f38-112460d7b58b', foundational, territorial_exclusivity_as_survival_precondition).
 narrative_ontology:cs_axiom_status(territorial_exclusivity_as_survival_precondition, holdable).
-narrative_ontology:cs_axiom_grounding(existential_matrix_reading, territorial_exclusivity_as_survival_precondition, empirically_contingent).
-narrative_ontology:cs_axiom(existential_matrix_reading, foundational, security_asymmetry_forecloses_settlement).
+narrative_ontology:cs_axiom_grounding('34ea59ac-e447-4bff-9f38-112460d7b58b', territorial_exclusivity_as_survival_precondition, empirically_contingent).
+narrative_ontology:cs_axiom('34ea59ac-e447-4bff-9f38-112460d7b58b', foundational, security_asymmetry_forecloses_settlement).
 narrative_ontology:cs_axiom_status(security_asymmetry_forecloses_settlement, holdable).
-narrative_ontology:cs_axiom_grounding(existential_matrix_reading, security_asymmetry_forecloses_settlement, empirically_contingent).
-narrative_ontology:cs_reference_frame(existential_matrix_reading, symmetric_existential_threat).
-narrative_ontology:cs_drift_state(existential_matrix_reading, contemporary_asymmetric_advantage, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('34ea59ac-e447-4bff-9f38-112460d7b58b', security_asymmetry_forecloses_settlement, empirically_contingent).
+narrative_ontology:cs_reference_frame('34ea59ac-e447-4bff-9f38-112460d7b58b', symmetric_existential_threat).
+narrative_ontology:cs_drift_state('34ea59ac-e447-4bff-9f38-112460d7b58b', contemporary_asymmetric_advantage, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(existential_matrix_reading, demographic_military_dominant_faction).

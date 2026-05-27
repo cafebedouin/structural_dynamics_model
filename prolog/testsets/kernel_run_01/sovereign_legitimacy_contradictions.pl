@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(inheritance_legitimacy_foundational, popular_consent_necessary_for_legitimacy).
 narrative_ontology:cs_axiom_contradiction(popular_consent_necessary_for_legitimacy, inheritance_legitimacy_foundational).
+narrative_ontology:cs_story_uid(sovereign_legitimacy_contradictions, '046ee596-af4e-4563-85dc-6dfac4468cfa').
+narrative_ontology:cs_created_at('046ee596-af4e-4563-85dc-6dfac4468cfa', '').

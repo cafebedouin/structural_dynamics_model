@@ -119,20 +119,22 @@ narrative_ontology:topic_domain(individual_right_reading, "constitutional_law/po
 domain_priors:requires_active_enforcement(individual_right_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(individual_right_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(individual_right_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(individual_right_reading).
+narrative_ontology:cs_story_uid(individual_right_reading, '099e99f9-9c9e-4fa1-865a-4f0acba9b34e').
+narrative_ontology:cs_created_at('099e99f9-9c9e-4fa1-865a-4f0acba9b34e', '').
+narrative_ontology:cs_kernel_codification('099e99f9-9c9e-4fa1-865a-4f0acba9b34e', fixed_text).
+narrative_ontology:cs_authority_grounding('099e99f9-9c9e-4fa1-865a-4f0acba9b34e', lineage).
+narrative_ontology:cs_interpretation_layer_present('099e99f9-9c9e-4fa1-865a-4f0acba9b34e').
 narrative_ontology:cs_kernel_id(individual_right_reading, second_amendment_text).
-narrative_ontology:cs_reading_relation(individual_right_reading, collective_militia_reading, forecloses).
-narrative_ontology:cs_reading_relation(individual_right_reading, sophisticated_collective_reading, coexists_with).
-narrative_ontology:cs_axiom(individual_right_reading, foundational, operative_clause_independent_scope).
+narrative_ontology:cs_reading_relation('099e99f9-9c9e-4fa1-865a-4f0acba9b34e', collective_militia_reading, forecloses).
+narrative_ontology:cs_reading_relation('099e99f9-9c9e-4fa1-865a-4f0acba9b34e', sophisticated_collective_reading, coexists_with).
+narrative_ontology:cs_axiom('099e99f9-9c9e-4fa1-865a-4f0acba9b34e', foundational, operative_clause_independent_scope).
 narrative_ontology:cs_axiom_status(operative_clause_independent_scope, holdable).
-narrative_ontology:cs_axiom_grounding(individual_right_reading, operative_clause_independent_scope, empirically_contingent).
-narrative_ontology:cs_axiom(individual_right_reading, foundational, self_defense_independent_purpose).
+narrative_ontology:cs_axiom_grounding('099e99f9-9c9e-4fa1-865a-4f0acba9b34e', operative_clause_independent_scope, empirically_contingent).
+narrative_ontology:cs_axiom('099e99f9-9c9e-4fa1-865a-4f0acba9b34e', foundational, self_defense_independent_purpose).
 narrative_ontology:cs_axiom_status(self_defense_independent_purpose, holdable).
-narrative_ontology:cs_axiom_grounding(individual_right_reading, self_defense_independent_purpose, deontological).
-narrative_ontology:cs_reference_frame(individual_right_reading, individual_natural_rights_framework).
-narrative_ontology:cs_drift_state(individual_right_reading, contemporary_post_heller, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_axiom_grounding('099e99f9-9c9e-4fa1-865a-4f0acba9b34e', self_defense_independent_purpose, deontological).
+narrative_ontology:cs_reference_frame('099e99f9-9c9e-4fa1-865a-4f0acba9b34e', individual_natural_rights_framework).
+narrative_ontology:cs_drift_state('099e99f9-9c9e-4fa1-865a-4f0acba9b34e', contemporary_post_heller, gap(practice_drift, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(individual_right_reading, individual_citizens).

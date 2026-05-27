@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(race_consciousness_narrowly_permissible, formal_equality_requires_race_neutrality).
 narrative_ontology:cs_axiom_contradiction(formal_equality_requires_race_neutrality, race_consciousness_narrowly_permissible).
+narrative_ontology:cs_story_uid(equal_protection_clause_contradictions, '0ed9cafe-b350-4433-b255-adc5213e951f').
+narrative_ontology:cs_created_at('0ed9cafe-b350-4433-b255-adc5213e951f', '').

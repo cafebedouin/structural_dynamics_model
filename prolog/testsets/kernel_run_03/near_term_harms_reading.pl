@@ -120,19 +120,21 @@ narrative_ontology:topic_domain(near_term_harms_reading, "ai_governance/technolo
 domain_priors:requires_active_enforcement(near_term_harms_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(near_term_harms_reading, distributed).
-narrative_ontology:cs_authority_grounding(near_term_harms_reading, distributed).
+narrative_ontology:cs_story_uid(near_term_harms_reading, '18ae91b3-9425-42e7-9c3f-1e492d4d41e7').
+narrative_ontology:cs_created_at('18ae91b3-9425-42e7-9c3f-1e492d4d41e7', '').
+narrative_ontology:cs_kernel_codification('18ae91b3-9425-42e7-9c3f-1e492d4d41e7', distributed).
+narrative_ontology:cs_authority_grounding('18ae91b3-9425-42e7-9c3f-1e492d4d41e7', distributed).
 narrative_ontology:cs_kernel_id(near_term_harms_reading, ai_risk_governance_priority).
-narrative_ontology:cs_reading_relation(near_term_harms_reading, existential_risk_reading, influences).
-narrative_ontology:cs_reading_relation(near_term_harms_reading, bridge_reading, coexists_with).
-narrative_ontology:cs_axiom(near_term_harms_reading, foundational, present_algorithmic_harm_moral_urgency).
+narrative_ontology:cs_reading_relation('18ae91b3-9425-42e7-9c3f-1e492d4d41e7', existential_risk_reading, influences).
+narrative_ontology:cs_reading_relation('18ae91b3-9425-42e7-9c3f-1e492d4d41e7', bridge_reading, coexists_with).
+narrative_ontology:cs_axiom('18ae91b3-9425-42e7-9c3f-1e492d4d41e7', foundational, present_algorithmic_harm_moral_urgency).
 narrative_ontology:cs_axiom_status(present_algorithmic_harm_moral_urgency, holdable).
-narrative_ontology:cs_axiom_grounding(near_term_harms_reading, present_algorithmic_harm_moral_urgency, deontological).
-narrative_ontology:cs_axiom(near_term_harms_reading, foundational, governance_resource_singularity).
+narrative_ontology:cs_axiom_grounding('18ae91b3-9425-42e7-9c3f-1e492d4d41e7', present_algorithmic_harm_moral_urgency, deontological).
+narrative_ontology:cs_axiom('18ae91b3-9425-42e7-9c3f-1e492d4d41e7', foundational, governance_resource_singularity).
 narrative_ontology:cs_axiom_status(governance_resource_singularity, holdable).
-narrative_ontology:cs_axiom_grounding(near_term_harms_reading, governance_resource_singularity, instrumental).
-narrative_ontology:cs_reference_frame(near_term_harms_reading, current_algorithmic_deployment_regime).
-narrative_ontology:cs_drift_state(near_term_harms_reading, contemporary_ai_governance_consolidation, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('18ae91b3-9425-42e7-9c3f-1e492d4d41e7', governance_resource_singularity, instrumental).
+narrative_ontology:cs_reference_frame('18ae91b3-9425-42e7-9c3f-1e492d4d41e7', current_algorithmic_deployment_regime).
+narrative_ontology:cs_drift_state('18ae91b3-9425-42e7-9c3f-1e492d4d41e7', contemporary_ai_governance_consolidation, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(near_term_harms_reading, technology_companies).

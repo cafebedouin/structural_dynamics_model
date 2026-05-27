@@ -118,20 +118,22 @@ narrative_ontology:topic_domain(parmenidean_rejection, "mathematics/philosophy_o
 domain_priors:requires_active_enforcement(parmenidean_rejection).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(parmenidean_rejection, fixed_text).
-narrative_ontology:cs_authority_grounding(parmenidean_rejection, lineage).
-narrative_ontology:cs_interpretation_layer_present(parmenidean_rejection).
+narrative_ontology:cs_story_uid(parmenidean_rejection, 'f210e076-0454-4a9f-bb5d-04b39ada60e5').
+narrative_ontology:cs_created_at('f210e076-0454-4a9f-bb5d-04b39ada60e5', '').
+narrative_ontology:cs_kernel_codification('f210e076-0454-4a9f-bb5d-04b39ada60e5', fixed_text).
+narrative_ontology:cs_authority_grounding('f210e076-0454-4a9f-bb5d-04b39ada60e5', lineage).
+narrative_ontology:cs_interpretation_layer_present('f210e076-0454-4a9f-bb5d-04b39ada60e5').
 narrative_ontology:cs_kernel_id(parmenidean_rejection, zero_mathematical_status).
-narrative_ontology:cs_reading_relation(parmenidean_rejection, placeholder_reading, influences).
-narrative_ontology:cs_reading_relation(parmenidean_rejection, number_reading, forecloses).
-narrative_ontology:cs_axiom(parmenidean_rejection, foundational, non_being_cannot_exist_as_mathematical_entity).
+narrative_ontology:cs_reading_relation('f210e076-0454-4a9f-bb5d-04b39ada60e5', placeholder_reading, influences).
+narrative_ontology:cs_reading_relation('f210e076-0454-4a9f-bb5d-04b39ada60e5', number_reading, forecloses).
+narrative_ontology:cs_axiom('f210e076-0454-4a9f-bb5d-04b39ada60e5', foundational, non_being_cannot_exist_as_mathematical_entity).
 narrative_ontology:cs_axiom_status(non_being_cannot_exist_as_mathematical_entity, holdable).
-narrative_ontology:cs_axiom_grounding(parmenidean_rejection, non_being_cannot_exist_as_mathematical_entity, deontological).
-narrative_ontology:cs_axiom(parmenidean_rejection, foundational, number_status_requires_ontological_existence).
+narrative_ontology:cs_axiom_grounding('f210e076-0454-4a9f-bb5d-04b39ada60e5', non_being_cannot_exist_as_mathematical_entity, deontological).
+narrative_ontology:cs_axiom('f210e076-0454-4a9f-bb5d-04b39ada60e5', foundational, number_status_requires_ontological_existence).
 narrative_ontology:cs_axiom_status(number_status_requires_ontological_existence, overridden).
-narrative_ontology:cs_axiom_grounding(parmenidean_rejection, number_status_requires_ontological_existence, deontological).
-narrative_ontology:cs_reference_frame(parmenidean_rejection, parmenidean_being_non_being_dichotomy).
-narrative_ontology:cs_drift_state(parmenidean_rejection, medieval_scholastic_period, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('f210e076-0454-4a9f-bb5d-04b39ada60e5', number_status_requires_ontological_existence, deontological).
+narrative_ontology:cs_reference_frame('f210e076-0454-4a9f-bb5d-04b39ada60e5', parmenidean_being_non_being_dichotomy).
+narrative_ontology:cs_drift_state('f210e076-0454-4a9f-bb5d-04b39ada60e5', medieval_scholastic_period, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(parmenidean_rejection, parmenidean_philosophers).

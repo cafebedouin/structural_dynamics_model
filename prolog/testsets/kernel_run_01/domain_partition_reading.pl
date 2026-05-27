@@ -120,18 +120,20 @@ narrative_ontology:human_readable(domain_partition_reading, "Kami-Buddha Domain 
 narrative_ontology:topic_domain(domain_partition_reading, "religious_studies/comparative_religion/japanese_history").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(domain_partition_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(domain_partition_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(domain_partition_reading).
+narrative_ontology:cs_story_uid(domain_partition_reading, '6541e5b6-7947-4da4-8db8-55ca8668c4e6').
+narrative_ontology:cs_created_at('6541e5b6-7947-4da4-8db8-55ca8668c4e6', '').
+narrative_ontology:cs_kernel_codification('6541e5b6-7947-4da4-8db8-55ca8668c4e6', fixed_text).
+narrative_ontology:cs_authority_grounding('6541e5b6-7947-4da4-8db8-55ca8668c4e6', lineage).
+narrative_ontology:cs_interpretation_layer_present('6541e5b6-7947-4da4-8db8-55ca8668c4e6').
 narrative_ontology:cs_kernel_id(domain_partition_reading, kami_buddha_ontology).
-narrative_ontology:cs_reading_relation(domain_partition_reading, fused_ontology_reading, coexists_with).
-narrative_ontology:cs_reading_relation(domain_partition_reading, parallel_entities_reading, influences).
-narrative_ontology:cs_axiom(domain_partition_reading, foundational, domains_genuinely_distinct).
+narrative_ontology:cs_reading_relation('6541e5b6-7947-4da4-8db8-55ca8668c4e6', fused_ontology_reading, coexists_with).
+narrative_ontology:cs_reading_relation('6541e5b6-7947-4da4-8db8-55ca8668c4e6', parallel_entities_reading, influences).
+narrative_ontology:cs_axiom('6541e5b6-7947-4da4-8db8-55ca8668c4e6', foundational, domains_genuinely_distinct).
 narrative_ontology:cs_axiom_status(domains_genuinely_distinct, holdable).
-narrative_ontology:cs_axiom(domain_partition_reading, foundational, partition_solves_coordination).
+narrative_ontology:cs_axiom('6541e5b6-7947-4da4-8db8-55ca8668c4e6', foundational, partition_solves_coordination).
 narrative_ontology:cs_axiom_status(partition_solves_coordination, holdable).
-narrative_ontology:cs_reference_frame(domain_partition_reading, compartmentalized_ritual_domains).
-narrative_ontology:cs_drift_state(domain_partition_reading, contemporary_lay_syncretism, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_reference_frame('6541e5b6-7947-4da4-8db8-55ca8668c4e6', compartmentalized_ritual_domains).
+narrative_ontology:cs_drift_state('6541e5b6-7947-4da4-8db8-55ca8668c4e6', contemporary_lay_syncretism, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(domain_partition_reading, household_ritual_practitioners).

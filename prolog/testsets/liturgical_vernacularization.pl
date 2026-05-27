@@ -120,9 +120,11 @@ narrative_ontology:topic_domain(liturgical_vernacularization, "religious_institu
 domain_priors:requires_active_enforcement(liturgical_vernacularization).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(liturgical_vernacularization, fixed_text).
-narrative_ontology:cs_authority_grounding(liturgical_vernacularization, lineage).
-narrative_ontology:cs_interpretation_layer_present(liturgical_vernacularization).
+narrative_ontology:cs_story_uid(liturgical_vernacularization, '66128749-1c1d-4a1f-8e8c-2cb519d299c8').
+narrative_ontology:cs_created_at('66128749-1c1d-4a1f-8e8c-2cb519d299c8', '').
+narrative_ontology:cs_kernel_codification('66128749-1c1d-4a1f-8e8c-2cb519d299c8', fixed_text).
+narrative_ontology:cs_authority_grounding('66128749-1c1d-4a1f-8e8c-2cb519d299c8', lineage).
+narrative_ontology:cs_interpretation_layer_present('66128749-1c1d-4a1f-8e8c-2cb519d299c8').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(liturgical_vernacularization, lay_participation).

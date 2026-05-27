@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(catastrophic_loss_of_control_is_highest_priority_harm, present_day_bias_harm_immediate_priority).
 narrative_ontology:cs_axiom_contradiction(present_day_bias_harm_immediate_priority, catastrophic_loss_of_control_is_highest_priority_harm).
+narrative_ontology:cs_story_uid(ai_alignment_commitment_contradictions, '5320ea31-9fe1-4001-b1b8-a62845445c7c').
+narrative_ontology:cs_created_at('5320ea31-9fe1-4001-b1b8-a62845445c7c', '').

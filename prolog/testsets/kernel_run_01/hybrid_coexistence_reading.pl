@@ -116,17 +116,19 @@ narrative_ontology:human_readable(hybrid_coexistence_reading, "Hybrid Coexistenc
 narrative_ontology:topic_domain(hybrid_coexistence_reading, "sociolinguistics/religious_studies/nation_building").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(hybrid_coexistence_reading, formalized).
-narrative_ontology:cs_authority_grounding(hybrid_coexistence_reading, distributed).
+narrative_ontology:cs_story_uid(hybrid_coexistence_reading, '8a09dbcd-6c34-42a9-afeb-87bbe0c2cc91').
+narrative_ontology:cs_created_at('8a09dbcd-6c34-42a9-afeb-87bbe0c2cc91', '').
+narrative_ontology:cs_kernel_codification('8a09dbcd-6c34-42a9-afeb-87bbe0c2cc91', formalized).
+narrative_ontology:cs_authority_grounding('8a09dbcd-6c34-42a9-afeb-87bbe0c2cc91', distributed).
 narrative_ontology:cs_kernel_id(hybrid_coexistence_reading, hebrew_living_language).
-narrative_ontology:cs_reading_relation(hybrid_coexistence_reading, liturgical_preservation_reading, coexists_with).
-narrative_ontology:cs_reading_relation(hybrid_coexistence_reading, native_generation_reading, coexists_with).
-narrative_ontology:cs_axiom(hybrid_coexistence_reading, foundational, liturgical_and_native_both_valid).
+narrative_ontology:cs_reading_relation('8a09dbcd-6c34-42a9-afeb-87bbe0c2cc91', liturgical_preservation_reading, coexists_with).
+narrative_ontology:cs_reading_relation('8a09dbcd-6c34-42a9-afeb-87bbe0c2cc91', native_generation_reading, coexists_with).
+narrative_ontology:cs_axiom('8a09dbcd-6c34-42a9-afeb-87bbe0c2cc91', foundational, liturgical_and_native_both_valid).
 narrative_ontology:cs_axiom_status(liturgical_and_native_both_valid, holdable).
-narrative_ontology:cs_axiom(hybrid_coexistence_reading, foundational, dual_register_coordination_enables_transmission).
+narrative_ontology:cs_axiom('8a09dbcd-6c34-42a9-afeb-87bbe0c2cc91', foundational, dual_register_coordination_enables_transmission).
 narrative_ontology:cs_axiom_status(dual_register_coordination_enables_transmission, holdable).
-narrative_ontology:cs_reference_frame(hybrid_coexistence_reading, unified_language_with_complementary_registers).
-narrative_ontology:cs_drift_state(hybrid_coexistence_reading, contemporary_post_revisionist, gap(stable, minor, true)).
+narrative_ontology:cs_reference_frame('8a09dbcd-6c34-42a9-afeb-87bbe0c2cc91', unified_language_with_complementary_registers).
+narrative_ontology:cs_drift_state('8a09dbcd-6c34-42a9-afeb-87bbe0c2cc91', contemporary_post_revisionist, gap(stable, minor, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(hybrid_coexistence_reading, hebrew_linguistic_community).

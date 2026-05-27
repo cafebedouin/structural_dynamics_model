@@ -116,20 +116,22 @@ narrative_ontology:topic_domain(domain_partition_reading, "religious_studies/com
 domain_priors:requires_active_enforcement(domain_partition_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(domain_partition_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(domain_partition_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(domain_partition_reading).
+narrative_ontology:cs_story_uid(domain_partition_reading, 'c685f46b-cce0-45e1-8e68-acad3ecdf90e').
+narrative_ontology:cs_created_at('c685f46b-cce0-45e1-8e68-acad3ecdf90e', '').
+narrative_ontology:cs_kernel_codification('c685f46b-cce0-45e1-8e68-acad3ecdf90e', fixed_text).
+narrative_ontology:cs_authority_grounding('c685f46b-cce0-45e1-8e68-acad3ecdf90e', lineage).
+narrative_ontology:cs_interpretation_layer_present('c685f46b-cce0-45e1-8e68-acad3ecdf90e').
 narrative_ontology:cs_kernel_id(domain_partition_reading, kami_buddha_ontology).
-narrative_ontology:cs_reading_relation(domain_partition_reading, unified_manifestation_reading, forecloses).
-narrative_ontology:cs_reading_relation(domain_partition_reading, pragmatic_accommodation_reading, coexists_with).
-narrative_ontology:cs_axiom(domain_partition_reading, foundational, purity_impurity_ontological_incommensurability).
+narrative_ontology:cs_reading_relation('c685f46b-cce0-45e1-8e68-acad3ecdf90e', unified_manifestation_reading, forecloses).
+narrative_ontology:cs_reading_relation('c685f46b-cce0-45e1-8e68-acad3ecdf90e', pragmatic_accommodation_reading, coexists_with).
+narrative_ontology:cs_axiom('c685f46b-cce0-45e1-8e68-acad3ecdf90e', foundational, purity_impurity_ontological_incommensurability).
 narrative_ontology:cs_axiom_status(purity_impurity_ontological_incommensurability, holdable).
-narrative_ontology:cs_axiom_grounding(domain_partition_reading, purity_impurity_ontological_incommensurability, deontological).
-narrative_ontology:cs_axiom(domain_partition_reading, secondary, functional_complementarity_necessity).
+narrative_ontology:cs_axiom_grounding('c685f46b-cce0-45e1-8e68-acad3ecdf90e', purity_impurity_ontological_incommensurability, deontological).
+narrative_ontology:cs_axiom('c685f46b-cce0-45e1-8e68-acad3ecdf90e', secondary, functional_complementarity_necessity).
 narrative_ontology:cs_axiom_status(functional_complementarity_necessity, holdable).
-narrative_ontology:cs_axiom_grounding(domain_partition_reading, functional_complementarity_necessity, instrumental).
-narrative_ontology:cs_reference_frame(domain_partition_reading, cosmic_domain_separation).
-narrative_ontology:cs_drift_state(domain_partition_reading, contemporary_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('c685f46b-cce0-45e1-8e68-acad3ecdf90e', functional_complementarity_necessity, instrumental).
+narrative_ontology:cs_reference_frame('c685f46b-cce0-45e1-8e68-acad3ecdf90e', cosmic_domain_separation).
+narrative_ontology:cs_drift_state('c685f46b-cce0-45e1-8e68-acad3ecdf90e', contemporary_era, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(domain_partition_reading, buddhist_institutional_authority).

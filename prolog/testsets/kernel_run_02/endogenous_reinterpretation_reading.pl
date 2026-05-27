@@ -120,20 +120,22 @@ narrative_ontology:human_readable(endogenous_reinterpretation_reading, "Endogeno
 narrative_ontology:topic_domain(endogenous_reinterpretation_reading, "religious_institutional_history/political_theology/commitment_systems").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(endogenous_reinterpretation_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(endogenous_reinterpretation_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(endogenous_reinterpretation_reading).
+narrative_ontology:cs_story_uid(endogenous_reinterpretation_reading, '6ac18351-fd16-4a30-912d-b14f0e443e30').
+narrative_ontology:cs_created_at('6ac18351-fd16-4a30-912d-b14f0e443e30', '').
+narrative_ontology:cs_kernel_codification('6ac18351-fd16-4a30-912d-b14f0e443e30', fixed_text).
+narrative_ontology:cs_authority_grounding('6ac18351-fd16-4a30-912d-b14f0e443e30', lineage).
+narrative_ontology:cs_interpretation_layer_present('6ac18351-fd16-4a30-912d-b14f0e443e30').
 narrative_ontology:cs_kernel_id(endogenous_reinterpretation_reading, marriage_commitment_legitimacy).
-narrative_ontology:cs_reading_relation(endogenous_reinterpretation_reading, exogenous_override_reading, coexists_with).
-narrative_ontology:cs_reading_relation(endogenous_reinterpretation_reading, hybrid_pragmatic_reading, coexists_with).
-narrative_ontology:cs_axiom(endogenous_reinterpretation_reading, foundational, manifestation_as_genuine_prophecy).
+narrative_ontology:cs_reading_relation('6ac18351-fd16-4a30-912d-b14f0e443e30', exogenous_override_reading, coexists_with).
+narrative_ontology:cs_reading_relation('6ac18351-fd16-4a30-912d-b14f0e443e30', hybrid_pragmatic_reading, coexists_with).
+narrative_ontology:cs_axiom('6ac18351-fd16-4a30-912d-b14f0e443e30', foundational, manifestation_as_genuine_prophecy).
 narrative_ontology:cs_axiom_status(manifestation_as_genuine_prophecy, holdable).
-narrative_ontology:cs_axiom_grounding(endogenous_reinterpretation_reading, manifestation_as_genuine_prophecy, deontological).
-narrative_ontology:cs_axiom(endogenous_reinterpretation_reading, foundational, divine_authority_revision_power).
+narrative_ontology:cs_axiom_grounding('6ac18351-fd16-4a30-912d-b14f0e443e30', manifestation_as_genuine_prophecy, deontological).
+narrative_ontology:cs_axiom('6ac18351-fd16-4a30-912d-b14f0e443e30', foundational, divine_authority_revision_power).
 narrative_ontology:cs_axiom_status(divine_authority_revision_power, holdable).
-narrative_ontology:cs_axiom_grounding(endogenous_reinterpretation_reading, divine_authority_revision_power, theological).
-narrative_ontology:cs_reference_frame(endogenous_reinterpretation_reading, prophetic_succession_integrity).
-narrative_ontology:cs_drift_state(endogenous_reinterpretation_reading, contemporary_scholarly_scrutiny, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('6ac18351-fd16-4a30-912d-b14f0e443e30', divine_authority_revision_power, theological).
+narrative_ontology:cs_reference_frame('6ac18351-fd16-4a30-912d-b14f0e443e30', prophetic_succession_integrity).
+narrative_ontology:cs_drift_state('6ac18351-fd16-4a30-912d-b14f0e443e30', contemporary_scholarly_scrutiny, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(endogenous_reinterpretation_reading, institutional_church_continuity).

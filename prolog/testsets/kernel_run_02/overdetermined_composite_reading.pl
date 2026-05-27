@@ -125,19 +125,21 @@ narrative_ontology:topic_domain(overdetermined_composite_reading, "historical_so
 domain_priors:requires_active_enforcement(overdetermined_composite_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(overdetermined_composite_reading, distributed).
-narrative_ontology:cs_authority_grounding(overdetermined_composite_reading, distributed).
+narrative_ontology:cs_story_uid(overdetermined_composite_reading, '20a302e6-8e09-47c8-a8c4-0a876c42967a').
+narrative_ontology:cs_created_at('20a302e6-8e09-47c8-a8c4-0a876c42967a', '').
+narrative_ontology:cs_kernel_codification('20a302e6-8e09-47c8-a8c4-0a876c42967a', distributed).
+narrative_ontology:cs_authority_grounding('20a302e6-8e09-47c8-a8c4-0a876c42967a', distributed).
 narrative_ontology:cs_kernel_id(overdetermined_composite_reading, dueling_disappearance_mechanism).
-narrative_ontology:cs_reading_relation(overdetermined_composite_reading, contraction_reading, coexists_with).
-narrative_ontology:cs_reading_relation(overdetermined_composite_reading, institutional_displacement_reading, coexists_with).
-narrative_ontology:cs_axiom(overdetermined_composite_reading, foundational, multiple_mechanisms_non_separable).
+narrative_ontology:cs_reading_relation('20a302e6-8e09-47c8-a8c4-0a876c42967a', contraction_reading, coexists_with).
+narrative_ontology:cs_reading_relation('20a302e6-8e09-47c8-a8c4-0a876c42967a', institutional_displacement_reading, coexists_with).
+narrative_ontology:cs_axiom('20a302e6-8e09-47c8-a8c4-0a876c42967a', foundational, multiple_mechanisms_non_separable).
 narrative_ontology:cs_axiom_status(multiple_mechanisms_non_separable, holdable).
-narrative_ontology:cs_axiom_grounding(overdetermined_composite_reading, multiple_mechanisms_non_separable, empirically_contingent).
-narrative_ontology:cs_axiom(overdetermined_composite_reading, foundational, dueling_decline_contingent_not_inevitable).
+narrative_ontology:cs_axiom_grounding('20a302e6-8e09-47c8-a8c4-0a876c42967a', multiple_mechanisms_non_separable, empirically_contingent).
+narrative_ontology:cs_axiom('20a302e6-8e09-47c8-a8c4-0a876c42967a', foundational, dueling_decline_contingent_not_inevitable).
 narrative_ontology:cs_axiom_status(dueling_decline_contingent_not_inevitable, holdable).
-narrative_ontology:cs_axiom_grounding(overdetermined_composite_reading, dueling_decline_contingent_not_inevitable, empirically_contingent).
-narrative_ontology:cs_reference_frame(overdetermined_composite_reading, dueling_as_functional_status_system).
-narrative_ontology:cs_drift_state(overdetermined_composite_reading, civil_war_aftermath, gap(axiom_overriding, substantial, true)).
+narrative_ontology:cs_axiom_grounding('20a302e6-8e09-47c8-a8c4-0a876c42967a', dueling_decline_contingent_not_inevitable, empirically_contingent).
+narrative_ontology:cs_reference_frame('20a302e6-8e09-47c8-a8c4-0a876c42967a', dueling_as_functional_status_system).
+narrative_ontology:cs_drift_state('20a302e6-8e09-47c8-a8c4-0a876c42967a', civil_war_aftermath, gap(axiom_overriding, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(overdetermined_composite_reading, state_monopoly_on_violence).

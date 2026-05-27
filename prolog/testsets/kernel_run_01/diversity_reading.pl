@@ -118,18 +118,20 @@ narrative_ontology:topic_domain(diversity_reading, "constitutional_law/education
 domain_priors:requires_active_enforcement(diversity_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(diversity_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(diversity_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(diversity_reading).
+narrative_ontology:cs_story_uid(diversity_reading, 'cafdba8c-ce31-4529-b1dc-08e569e60b1d').
+narrative_ontology:cs_created_at('cafdba8c-ce31-4529-b1dc-08e569e60b1d', '').
+narrative_ontology:cs_kernel_codification('cafdba8c-ce31-4529-b1dc-08e569e60b1d', fixed_text).
+narrative_ontology:cs_authority_grounding('cafdba8c-ce31-4529-b1dc-08e569e60b1d', lineage).
+narrative_ontology:cs_interpretation_layer_present('cafdba8c-ce31-4529-b1dc-08e569e60b1d').
 narrative_ontology:cs_kernel_id(diversity_reading, equal_protection_clause).
-narrative_ontology:cs_reading_relation(diversity_reading, remedial_reading, influences).
-narrative_ontology:cs_reading_relation(diversity_reading, colorblind_reading, coexists_with).
-narrative_ontology:cs_axiom(diversity_reading, foundational, racial_classification_for_educational_benefit_valid).
+narrative_ontology:cs_reading_relation('cafdba8c-ce31-4529-b1dc-08e569e60b1d', remedial_reading, influences).
+narrative_ontology:cs_reading_relation('cafdba8c-ce31-4529-b1dc-08e569e60b1d', colorblind_reading, coexists_with).
+narrative_ontology:cs_axiom('cafdba8c-ce31-4529-b1dc-08e569e60b1d', foundational, racial_classification_for_educational_benefit_valid).
 narrative_ontology:cs_axiom_status(racial_classification_for_educational_benefit_valid, holdable).
-narrative_ontology:cs_axiom(diversity_reading, foundational, diverse_cohorts_serve_compelling_institutional_interest).
+narrative_ontology:cs_axiom('cafdba8c-ce31-4529-b1dc-08e569e60b1d', foundational, diverse_cohorts_serve_compelling_institutional_interest).
 narrative_ontology:cs_axiom_status(diverse_cohorts_serve_compelling_institutional_interest, holdable).
-narrative_ontology:cs_reference_frame(diversity_reading, narrow_tailoring_doctrine).
-narrative_ontology:cs_drift_state(diversity_reading, post_students_fair_admissions_2023, gap(authority_erosion, severe, true)).
+narrative_ontology:cs_reference_frame('cafdba8c-ce31-4529-b1dc-08e569e60b1d', narrow_tailoring_doctrine).
+narrative_ontology:cs_drift_state('cafdba8c-ce31-4529-b1dc-08e569e60b1d', post_students_fair_admissions_2023, gap(authority_erosion, severe, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(diversity_reading, all_students).

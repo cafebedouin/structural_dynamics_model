@@ -120,18 +120,20 @@ narrative_ontology:topic_domain(composite_overdetermination_reading, "theology/e
 domain_priors:requires_active_enforcement(composite_overdetermination_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(composite_overdetermination_reading, formalized).
-narrative_ontology:cs_authority_grounding(composite_overdetermination_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(composite_overdetermination_reading).
+narrative_ontology:cs_story_uid(composite_overdetermination_reading, '39f7c226-6f3c-4b5e-9d8f-6e2a22dd5703').
+narrative_ontology:cs_created_at('39f7c226-6f3c-4b5e-9d8f-6e2a22dd5703', '').
+narrative_ontology:cs_kernel_codification('39f7c226-6f3c-4b5e-9d8f-6e2a22dd5703', formalized).
+narrative_ontology:cs_authority_grounding('39f7c226-6f3c-4b5e-9d8f-6e2a22dd5703', extraction).
+narrative_ontology:cs_interpretation_layer_present('39f7c226-6f3c-4b5e-9d8f-6e2a22dd5703').
 narrative_ontology:cs_kernel_id(composite_overdetermination_reading, vatican_ii_authority).
-narrative_ontology:cs_reading_relation(composite_overdetermination_reading, vatican_ii_continuity_reading, forecloses).
-narrative_ontology:cs_reading_relation(composite_overdetermination_reading, vatican_ii_rupture_reading, forecloses).
-narrative_ontology:cs_axiom(composite_overdetermination_reading, foundational, council_texts_encode_factional_compromise).
+narrative_ontology:cs_reading_relation('39f7c226-6f3c-4b5e-9d8f-6e2a22dd5703', vatican_ii_continuity_reading, forecloses).
+narrative_ontology:cs_reading_relation('39f7c226-6f3c-4b5e-9d8f-6e2a22dd5703', vatican_ii_rupture_reading, forecloses).
+narrative_ontology:cs_axiom('39f7c226-6f3c-4b5e-9d8f-6e2a22dd5703', foundational, council_texts_encode_factional_compromise).
 narrative_ontology:cs_axiom_status(council_texts_encode_factional_compromise, holdable).
-narrative_ontology:cs_axiom(composite_overdetermination_reading, foundational, ambiguity_is_structural_not_resolvable).
+narrative_ontology:cs_axiom('39f7c226-6f3c-4b5e-9d8f-6e2a22dd5703', foundational, ambiguity_is_structural_not_resolvable).
 narrative_ontology:cs_axiom_status(ambiguity_is_structural_not_resolvable, holdable).
-narrative_ontology:cs_reference_frame(composite_overdetermination_reading, univocal_council_authority).
-narrative_ontology:cs_drift_state(composite_overdetermination_reading, contemporary_recognition_of_overdetermination, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('39f7c226-6f3c-4b5e-9d8f-6e2a22dd5703', univocal_council_authority).
+narrative_ontology:cs_drift_state('39f7c226-6f3c-4b5e-9d8f-6e2a22dd5703', contemporary_recognition_of_overdetermination, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(composite_overdetermination_reading, theological_scholarship_recognizing_complexity).

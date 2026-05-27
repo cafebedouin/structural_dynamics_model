@@ -116,9 +116,11 @@ narrative_ontology:topic_domain(deterrence_reading, "criminal_justice/political_
 domain_priors:requires_active_enforcement(deterrence_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(deterrence_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(deterrence_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(deterrence_reading).
+narrative_ontology:cs_story_uid(deterrence_reading, '2d8ba395-b2d7-48d0-9619-6816f6ef7a5a').
+narrative_ontology:cs_created_at('2d8ba395-b2d7-48d0-9619-6816f6ef7a5a', '').
+narrative_ontology:cs_kernel_codification('2d8ba395-b2d7-48d0-9619-6816f6ef7a5a', fixed_text).
+narrative_ontology:cs_authority_grounding('2d8ba395-b2d7-48d0-9619-6816f6ef7a5a', lineage).
+narrative_ontology:cs_interpretation_layer_present('2d8ba395-b2d7-48d0-9619-6816f6ef7a5a').
 narrative_ontology:cs_kernel_id(deterrence_reading, state_execution_authority).
 
 % --- Structural relationships ---
@@ -314,14 +316,14 @@ narrative_ontology:affects_constraint(deterrence_reading, retributive_reading).
 narrative_ontology:affects_constraint(deterrence_reading, abolition_reading).
 narrative_ontology:affects_constraint(deterrence_reading, wrongful_conviction_cascade).
 narrative_ontology:affects_constraint(deterrence_reading, appellate_review_bottleneck).
-narrative_ontology:cs_reading_relation(deterrence_reading, retributive_reading, coexists_with).
-narrative_ontology:cs_reading_relation(deterrence_reading, abolition_reading, coexists_with).
+narrative_ontology:cs_reading_relation('2d8ba395-b2d7-48d0-9619-6816f6ef7a5a', retributive_reading, coexists_with).
+narrative_ontology:cs_reading_relation('2d8ba395-b2d7-48d0-9619-6816f6ef7a5a', abolition_reading, coexists_with).
 % Temporal layer: classical deterrence theory as reference frame; systematic meta-analyses
 % have substantially challenged the empirical premise (that CP deters more than LWOP).
 % Criminal justice authority structure has not acknowledged this as dispositive.
 % Engine computes: axiom_overriding + substantial + false → axiom_foreclosure.
-narrative_ontology:cs_reference_frame(deterrence_reading, classical_deterrence_theory).
-narrative_ontology:cs_drift_state(deterrence_reading, post_meta_analysis_era,
+narrative_ontology:cs_reference_frame('2d8ba395-b2d7-48d0-9619-6816f6ef7a5a', classical_deterrence_theory).
+narrative_ontology:cs_drift_state('2d8ba395-b2d7-48d0-9619-6816f6ef7a5a', post_meta_analysis_era,
     gap(axiom_overriding, substantial, false)).
 
 % DUAL FORMULATION NOTE:

@@ -126,26 +126,28 @@ narrative_ontology:topic_domain(parallel_adjudication_structure, "constitutional
 domain_priors:requires_active_enforcement(parallel_adjudication_structure).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(parallel_adjudication_structure, distributed).
-narrative_ontology:cs_authority_grounding(parallel_adjudication_structure, lineage).
-narrative_ontology:cs_interpretation_layer_present(parallel_adjudication_structure).
-narrative_ontology:cs_reading_relation(parallel_adjudication_structure, uniform_civil_code_reading, coexists_with).
-narrative_ontology:cs_reading_relation(parallel_adjudication_structure, religious_autonomy_reading, coexists_with).
-narrative_ontology:cs_reading_relation(parallel_adjudication_structure, minority_protection_reading, influences).
-narrative_ontology:cs_axiom(parallel_adjudication_structure, foundational, family_law_grounds_in_religious_tradition).
+narrative_ontology:cs_story_uid(parallel_adjudication_structure, '1c8c9917-a02a-45f4-b4bb-d797efe679c7').
+narrative_ontology:cs_created_at('1c8c9917-a02a-45f4-b4bb-d797efe679c7', '').
+narrative_ontology:cs_kernel_codification('1c8c9917-a02a-45f4-b4bb-d797efe679c7', distributed).
+narrative_ontology:cs_authority_grounding('1c8c9917-a02a-45f4-b4bb-d797efe679c7', lineage).
+narrative_ontology:cs_interpretation_layer_present('1c8c9917-a02a-45f4-b4bb-d797efe679c7').
+narrative_ontology:cs_reading_relation('1c8c9917-a02a-45f4-b4bb-d797efe679c7', uniform_civil_code_reading, coexists_with).
+narrative_ontology:cs_reading_relation('1c8c9917-a02a-45f4-b4bb-d797efe679c7', religious_autonomy_reading, coexists_with).
+narrative_ontology:cs_reading_relation('1c8c9917-a02a-45f4-b4bb-d797efe679c7', minority_protection_reading, influences).
+narrative_ontology:cs_axiom('1c8c9917-a02a-45f4-b4bb-d797efe679c7', foundational, family_law_grounds_in_religious_tradition).
 narrative_ontology:cs_axiom_status(family_law_grounds_in_religious_tradition, holdable).
-narrative_ontology:cs_axiom_grounding(parallel_adjudication_structure, family_law_grounds_in_religious_tradition, deontological).
-narrative_ontology:cs_axiom(parallel_adjudication_structure, foundational, uniform_law_necessary_for_national_integration).
+narrative_ontology:cs_axiom_grounding('1c8c9917-a02a-45f4-b4bb-d797efe679c7', family_law_grounds_in_religious_tradition, deontological).
+narrative_ontology:cs_axiom('1c8c9917-a02a-45f4-b4bb-d797efe679c7', foundational, uniform_law_necessary_for_national_integration).
 narrative_ontology:cs_axiom_status(uniform_law_necessary_for_national_integration, holdable).
-narrative_ontology:cs_axiom_grounding(parallel_adjudication_structure, uniform_law_necessary_for_national_integration, deontological).
-narrative_ontology:cs_axiom(parallel_adjudication_structure, foundational, religious_minorities_require_autonomous_law_spaces).
+narrative_ontology:cs_axiom_grounding('1c8c9917-a02a-45f4-b4bb-d797efe679c7', uniform_law_necessary_for_national_integration, deontological).
+narrative_ontology:cs_axiom('1c8c9917-a02a-45f4-b4bb-d797efe679c7', foundational, religious_minorities_require_autonomous_law_spaces).
 narrative_ontology:cs_axiom_status(religious_minorities_require_autonomous_law_spaces, holdable).
-narrative_ontology:cs_axiom_grounding(parallel_adjudication_structure, religious_minorities_require_autonomous_law_spaces, deontological).
-narrative_ontology:cs_axiom(parallel_adjudication_structure, foundational, gender_equality_overrides_religious_law).
+narrative_ontology:cs_axiom_grounding('1c8c9917-a02a-45f4-b4bb-d797efe679c7', religious_minorities_require_autonomous_law_spaces, deontological).
+narrative_ontology:cs_axiom('1c8c9917-a02a-45f4-b4bb-d797efe679c7', foundational, gender_equality_overrides_religious_law).
 narrative_ontology:cs_axiom_status(gender_equality_overrides_religious_law, holdable).
-narrative_ontology:cs_axiom_grounding(parallel_adjudication_structure, gender_equality_overrides_religious_law, deontological).
-narrative_ontology:cs_reference_frame(parallel_adjudication_structure, constitutional_plurality_preservation).
-narrative_ontology:cs_drift_state(parallel_adjudication_structure, contemporary_human_rights_era, gap(axiom_overriding, substantial, true)).
+narrative_ontology:cs_axiom_grounding('1c8c9917-a02a-45f4-b4bb-d797efe679c7', gender_equality_overrides_religious_law, deontological).
+narrative_ontology:cs_reference_frame('1c8c9917-a02a-45f4-b4bb-d797efe679c7', constitutional_plurality_preservation).
+narrative_ontology:cs_drift_state('1c8c9917-a02a-45f4-b4bb-d797efe679c7', contemporary_human_rights_era, gap(axiom_overriding, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(parallel_adjudication_structure, religious_community_leadership).

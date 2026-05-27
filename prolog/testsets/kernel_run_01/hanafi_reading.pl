@@ -131,19 +131,21 @@ narrative_ontology:topic_domain(hanafi_reading, "islamic_jurisprudence/legal_phi
 domain_priors:requires_active_enforcement(hanafi_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(hanafi_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(hanafi_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(hanafi_reading).
+narrative_ontology:cs_story_uid(hanafi_reading, '607e3a6c-c3a0-491c-9eb8-725788e84b23').
+narrative_ontology:cs_created_at('607e3a6c-c3a0-491c-9eb8-725788e84b23', '').
+narrative_ontology:cs_kernel_codification('607e3a6c-c3a0-491c-9eb8-725788e84b23', fixed_text).
+narrative_ontology:cs_authority_grounding('607e3a6c-c3a0-491c-9eb8-725788e84b23', lineage).
+narrative_ontology:cs_interpretation_layer_present('607e3a6c-c3a0-491c-9eb8-725788e84b23').
 narrative_ontology:cs_kernel_id(hanafi_reading, jurisprudential_method_kernel).
-narrative_ontology:cs_reading_relation(hanafi_reading, maliki_reading, coexists_with).
-narrative_ontology:cs_reading_relation(hanafi_reading, shafii_reading, coexists_with).
-narrative_ontology:cs_reading_relation(hanafi_reading, hanbali_reading, coexists_with).
-narrative_ontology:cs_axiom(hanafi_reading, foundational, aql_primacy_in_interpretation).
+narrative_ontology:cs_reading_relation('607e3a6c-c3a0-491c-9eb8-725788e84b23', maliki_reading, coexists_with).
+narrative_ontology:cs_reading_relation('607e3a6c-c3a0-491c-9eb8-725788e84b23', shafii_reading, coexists_with).
+narrative_ontology:cs_reading_relation('607e3a6c-c3a0-491c-9eb8-725788e84b23', hanbali_reading, coexists_with).
+narrative_ontology:cs_axiom('607e3a6c-c3a0-491c-9eb8-725788e84b23', foundational, aql_primacy_in_interpretation).
 narrative_ontology:cs_axiom_status(aql_primacy_in_interpretation, holdable).
-narrative_ontology:cs_axiom(hanafi_reading, foundational, istihsan_as_valid_juristic_method).
+narrative_ontology:cs_axiom('607e3a6c-c3a0-491c-9eb8-725788e84b23', foundational, istihsan_as_valid_juristic_method).
 narrative_ontology:cs_axiom_status(istihsan_as_valid_juristic_method, holdable).
-narrative_ontology:cs_reference_frame(hanafi_reading, institutional_flexibility_framework).
-narrative_ontology:cs_drift_state(hanafi_reading, contemporary_islamic_jurisprudence, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('607e3a6c-c3a0-491c-9eb8-725788e84b23', institutional_flexibility_framework).
+narrative_ontology:cs_drift_state('607e3a6c-c3a0-491c-9eb8-725788e84b23', contemporary_islamic_jurisprudence, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(hanafi_reading, state_administrators).

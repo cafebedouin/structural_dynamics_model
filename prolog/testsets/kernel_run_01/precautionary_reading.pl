@@ -124,18 +124,20 @@ narrative_ontology:topic_domain(precautionary_reading, "risk_assessment/energy_p
 domain_priors:requires_active_enforcement(precautionary_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(precautionary_reading, formalized).
-narrative_ontology:cs_authority_grounding(precautionary_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(precautionary_reading).
+narrative_ontology:cs_story_uid(precautionary_reading, '1af0276d-9efe-43e5-93e4-ec7b46179eec').
+narrative_ontology:cs_created_at('1af0276d-9efe-43e5-93e4-ec7b46179eec', '').
+narrative_ontology:cs_kernel_codification('1af0276d-9efe-43e5-93e4-ec7b46179eec', formalized).
+narrative_ontology:cs_authority_grounding('1af0276d-9efe-43e5-93e4-ec7b46179eec', extraction).
+narrative_ontology:cs_interpretation_layer_present('1af0276d-9efe-43e5-93e4-ec7b46179eec').
 narrative_ontology:cs_kernel_id(precautionary_reading, acceptable_risk_for_energy).
-narrative_ontology:cs_reading_relation(precautionary_reading, expected_value_reading, forecloses).
-narrative_ontology:cs_reading_relation(precautionary_reading, catastrophic_tail_reading, coexists_with).
-narrative_ontology:cs_axiom(precautionary_reading, foundational, irreducible_uncertainty_burden_shift).
+narrative_ontology:cs_reading_relation('1af0276d-9efe-43e5-93e4-ec7b46179eec', expected_value_reading, forecloses).
+narrative_ontology:cs_reading_relation('1af0276d-9efe-43e5-93e4-ec7b46179eec', catastrophic_tail_reading, coexists_with).
+narrative_ontology:cs_axiom('1af0276d-9efe-43e5-93e4-ec7b46179eec', foundational, irreducible_uncertainty_burden_shift).
 narrative_ontology:cs_axiom_status(irreducible_uncertainty_burden_shift, holdable).
-narrative_ontology:cs_axiom(precautionary_reading, foundational, omission_priority_over_commission).
+narrative_ontology:cs_axiom('1af0276d-9efe-43e5-93e4-ec7b46179eec', foundational, omission_priority_over_commission).
 narrative_ontology:cs_axiom_status(omission_priority_over_commission, holdable).
-narrative_ontology:cs_reference_frame(precautionary_reading, epistemic_humility_principle).
-narrative_ontology:cs_drift_state(precautionary_reading, contemporary_climate_emergency, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('1af0276d-9efe-43e5-93e4-ec7b46179eec', epistemic_humility_principle).
+narrative_ontology:cs_drift_state('1af0276d-9efe-43e5-93e4-ec7b46179eec', contemporary_climate_emergency, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(precautionary_reading, epistemic_conservatives).

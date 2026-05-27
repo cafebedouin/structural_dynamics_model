@@ -125,20 +125,22 @@ narrative_ontology:human_readable(real_catastrophe_only, "Real Catastrophe Requi
 narrative_ontology:topic_domain(real_catastrophe_only, "safety_engineering/organizational_learning").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(real_catastrophe_only, fixed_text).
-narrative_ontology:cs_authority_grounding(real_catastrophe_only, lineage).
-narrative_ontology:cs_interpretation_layer_present(real_catastrophe_only).
+narrative_ontology:cs_story_uid(real_catastrophe_only, 'f80103d3-97d0-480c-b8ff-60c8b03805bd').
+narrative_ontology:cs_created_at('f80103d3-97d0-480c-b8ff-60c8b03805bd', '').
+narrative_ontology:cs_kernel_codification('f80103d3-97d0-480c-b8ff-60c8b03805bd', fixed_text).
+narrative_ontology:cs_authority_grounding('f80103d3-97d0-480c-b8ff-60c8b03805bd', lineage).
+narrative_ontology:cs_interpretation_layer_present('f80103d3-97d0-480c-b8ff-60c8b03805bd').
 narrative_ontology:cs_kernel_id(real_catastrophe_only, competence_exercise_validity).
-narrative_ontology:cs_reading_relation(real_catastrophe_only, simulation_as_proxy, forecloses).
-narrative_ontology:cs_reading_relation(real_catastrophe_only, continuous_refresh_hybrid, coexists_with).
-narrative_ontology:cs_axiom(real_catastrophe_only, foundational, simulation_epistemically_inferior_to_catastrophe).
+narrative_ontology:cs_reading_relation('f80103d3-97d0-480c-b8ff-60c8b03805bd', simulation_as_proxy, forecloses).
+narrative_ontology:cs_reading_relation('f80103d3-97d0-480c-b8ff-60c8b03805bd', continuous_refresh_hybrid, coexists_with).
+narrative_ontology:cs_axiom('f80103d3-97d0-480c-b8ff-60c8b03805bd', foundational, simulation_epistemically_inferior_to_catastrophe).
 narrative_ontology:cs_axiom_status(simulation_epistemically_inferior_to_catastrophe, holdable).
-narrative_ontology:cs_axiom_grounding(real_catastrophe_only, simulation_epistemically_inferior_to_catastrophe, empirically_contingent).
-narrative_ontology:cs_axiom(real_catastrophe_only, foundational, safety_requires_proven_not_plausible_competence).
+narrative_ontology:cs_axiom_grounding('f80103d3-97d0-480c-b8ff-60c8b03805bd', simulation_epistemically_inferior_to_catastrophe, empirically_contingent).
+narrative_ontology:cs_axiom('f80103d3-97d0-480c-b8ff-60c8b03805bd', foundational, safety_requires_proven_not_plausible_competence).
 narrative_ontology:cs_axiom_status(safety_requires_proven_not_plausible_competence, holdable).
-narrative_ontology:cs_axiom_grounding(real_catastrophe_only, safety_requires_proven_not_plausible_competence, deontological).
-narrative_ontology:cs_reference_frame(real_catastrophe_only, epistemological_catastrophe_necessity).
-narrative_ontology:cs_drift_state(real_catastrophe_only, contemporary_high_fidelity_simulation_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('f80103d3-97d0-480c-b8ff-60c8b03805bd', safety_requires_proven_not_plausible_competence, deontological).
+narrative_ontology:cs_reference_frame('f80103d3-97d0-480c-b8ff-60c8b03805bd', epistemological_catastrophe_necessity).
+narrative_ontology:cs_drift_state('f80103d3-97d0-480c-b8ff-60c8b03805bd', contemporary_high_fidelity_simulation_era, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(real_catastrophe_only, risk_aversion_bias).

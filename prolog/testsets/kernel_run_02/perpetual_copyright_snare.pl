@@ -117,22 +117,24 @@ narrative_ontology:human_readable(perpetual_copyright_snare, "Perpetual Copyrigh
 narrative_ontology:topic_domain(perpetual_copyright_snare, "legal_history/intellectual_property/institutional_economics").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(perpetual_copyright_snare, formalized).
-narrative_ontology:cs_authority_grounding(perpetual_copyright_snare, extraction).
-narrative_ontology:cs_interpretation_layer_present(perpetual_copyright_snare).
-narrative_ontology:cs_reading_relation(perpetual_copyright_snare, copyright_as_incentive_mechanism, coexists_with).
-narrative_ontology:cs_reading_relation(perpetual_copyright_snare, copyright_as_natural_right, forecloses).
-narrative_ontology:cs_axiom(perpetual_copyright_snare, foundational, copyright_is_statutory_contingent_monopoly).
+narrative_ontology:cs_story_uid(perpetual_copyright_snare, 'c1345e62-76da-460d-ad4f-4202f0677161').
+narrative_ontology:cs_created_at('c1345e62-76da-460d-ad4f-4202f0677161', '').
+narrative_ontology:cs_kernel_codification('c1345e62-76da-460d-ad4f-4202f0677161', formalized).
+narrative_ontology:cs_authority_grounding('c1345e62-76da-460d-ad4f-4202f0677161', extraction).
+narrative_ontology:cs_interpretation_layer_present('c1345e62-76da-460d-ad4f-4202f0677161').
+narrative_ontology:cs_reading_relation('c1345e62-76da-460d-ad4f-4202f0677161', copyright_as_incentive_mechanism, coexists_with).
+narrative_ontology:cs_reading_relation('c1345e62-76da-460d-ad4f-4202f0677161', copyright_as_natural_right, forecloses).
+narrative_ontology:cs_axiom('c1345e62-76da-460d-ad4f-4202f0677161', foundational, copyright_is_statutory_contingent_monopoly).
 narrative_ontology:cs_axiom_status(copyright_is_statutory_contingent_monopoly, holdable).
-narrative_ontology:cs_axiom_grounding(perpetual_copyright_snare, copyright_is_statutory_contingent_monopoly, empirically_contingent).
-narrative_ontology:cs_axiom(perpetual_copyright_snare, foundational, perpetuity_exceeds_incentive_necessity).
+narrative_ontology:cs_axiom_grounding('c1345e62-76da-460d-ad4f-4202f0677161', copyright_is_statutory_contingent_monopoly, empirically_contingent).
+narrative_ontology:cs_axiom('c1345e62-76da-460d-ad4f-4202f0677161', foundational, perpetuity_exceeds_incentive_necessity).
 narrative_ontology:cs_axiom_status(perpetuity_exceeds_incentive_necessity, holdable).
-narrative_ontology:cs_axiom_grounding(perpetual_copyright_snare, perpetuity_exceeds_incentive_necessity, empirically_contingent).
-narrative_ontology:cs_axiom(perpetual_copyright_snare, foundational, perpetual_copyright_extracts_rents_from_derivative_creators).
+narrative_ontology:cs_axiom_grounding('c1345e62-76da-460d-ad4f-4202f0677161', perpetuity_exceeds_incentive_necessity, empirically_contingent).
+narrative_ontology:cs_axiom('c1345e62-76da-460d-ad4f-4202f0677161', foundational, perpetual_copyright_extracts_rents_from_derivative_creators).
 narrative_ontology:cs_axiom_status(perpetual_copyright_extracts_rents_from_derivative_creators, holdable).
-narrative_ontology:cs_axiom_grounding(perpetual_copyright_snare, perpetual_copyright_extracts_rents_from_derivative_creators, empirically_contingent).
-narrative_ontology:cs_reference_frame(perpetual_copyright_snare, statutory_monopoly_with_renewable_terms).
-narrative_ontology:cs_drift_state(perpetual_copyright_snare, contemporary_perpetual_copyright_regime, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('c1345e62-76da-460d-ad4f-4202f0677161', perpetual_copyright_extracts_rents_from_derivative_creators, empirically_contingent).
+narrative_ontology:cs_reference_frame('c1345e62-76da-460d-ad4f-4202f0677161', statutory_monopoly_with_renewable_terms).
+narrative_ontology:cs_drift_state('c1345e62-76da-460d-ad4f-4202f0677161', contemporary_perpetual_copyright_regime, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(perpetual_copyright_snare, book_publishers).

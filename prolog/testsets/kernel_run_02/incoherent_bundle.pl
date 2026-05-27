@@ -123,20 +123,22 @@ narrative_ontology:topic_domain(incoherent_bundle, "religious_studies/philosophy
 domain_priors:requires_active_enforcement(incoherent_bundle).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(incoherent_bundle, distributed).
-narrative_ontology:cs_authority_grounding(incoherent_bundle, practice).
-narrative_ontology:cs_interpretation_layer_present(incoherent_bundle).
+narrative_ontology:cs_story_uid(incoherent_bundle, 'f18b03f5-57f0-4ecd-8f26-92ba7a0f6c90').
+narrative_ontology:cs_created_at('f18b03f5-57f0-4ecd-8f26-92ba7a0f6c90', '').
+narrative_ontology:cs_kernel_codification('f18b03f5-57f0-4ecd-8f26-92ba7a0f6c90', distributed).
+narrative_ontology:cs_authority_grounding('f18b03f5-57f0-4ecd-8f26-92ba7a0f6c90', practice).
+narrative_ontology:cs_interpretation_layer_present('f18b03f5-57f0-4ecd-8f26-92ba7a0f6c90').
 narrative_ontology:cs_kernel_id(incoherent_bundle, kami_buddha_ontology).
-narrative_ontology:cs_reading_relation(incoherent_bundle, honji_suijaku_monism, coexists_with).
-narrative_ontology:cs_reading_relation(incoherent_bundle, domain_partition, coexists_with).
-narrative_ontology:cs_axiom(incoherent_bundle, foundational, incoherence_permanent_feature).
+narrative_ontology:cs_reading_relation('f18b03f5-57f0-4ecd-8f26-92ba7a0f6c90', honji_suijaku_monism, coexists_with).
+narrative_ontology:cs_reading_relation('f18b03f5-57f0-4ecd-8f26-92ba7a0f6c90', domain_partition, coexists_with).
+narrative_ontology:cs_axiom('f18b03f5-57f0-4ecd-8f26-92ba7a0f6c90', foundational, incoherence_permanent_feature).
 narrative_ontology:cs_axiom_status(incoherence_permanent_feature, holdable).
-narrative_ontology:cs_axiom_grounding(incoherent_bundle, incoherence_permanent_feature, conventional).
-narrative_ontology:cs_axiom(incoherent_bundle, secondary, systematization_repeatedly_fails).
+narrative_ontology:cs_axiom_grounding('f18b03f5-57f0-4ecd-8f26-92ba7a0f6c90', incoherence_permanent_feature, conventional).
+narrative_ontology:cs_axiom('f18b03f5-57f0-4ecd-8f26-92ba7a0f6c90', secondary, systematization_repeatedly_fails).
 narrative_ontology:cs_axiom_status(systematization_repeatedly_fails, holdable).
-narrative_ontology:cs_axiom_grounding(incoherent_bundle, systematization_repeatedly_fails, empirically_contingent).
-narrative_ontology:cs_reference_frame(incoherent_bundle, institutional_flexibility_through_ambiguity).
-narrative_ontology:cs_drift_state(incoherent_bundle, contemporary_post_meiji_restoration, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('f18b03f5-57f0-4ecd-8f26-92ba7a0f6c90', systematization_repeatedly_fails, empirically_contingent).
+narrative_ontology:cs_reference_frame('f18b03f5-57f0-4ecd-8f26-92ba7a0f6c90', institutional_flexibility_through_ambiguity).
+narrative_ontology:cs_drift_state('f18b03f5-57f0-4ecd-8f26-92ba7a0f6c90', contemporary_post_meiji_restoration, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(incoherent_bundle, institutional_religious_authorities).

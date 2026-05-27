@@ -127,18 +127,20 @@ narrative_ontology:topic_domain(collective_militia_reading, "constitutional_law/
 domain_priors:requires_active_enforcement(collective_militia_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(collective_militia_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(collective_militia_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(collective_militia_reading).
+narrative_ontology:cs_story_uid(collective_militia_reading, 'cb74e855-4c0b-458f-ba2e-4ffdafe7fc06').
+narrative_ontology:cs_created_at('cb74e855-4c0b-458f-ba2e-4ffdafe7fc06', '').
+narrative_ontology:cs_kernel_codification('cb74e855-4c0b-458f-ba2e-4ffdafe7fc06', fixed_text).
+narrative_ontology:cs_authority_grounding('cb74e855-4c0b-458f-ba2e-4ffdafe7fc06', lineage).
+narrative_ontology:cs_interpretation_layer_present('cb74e855-4c0b-458f-ba2e-4ffdafe7fc06').
 narrative_ontology:cs_kernel_id(collective_militia_reading, second_amendment_text).
-narrative_ontology:cs_reading_relation(collective_militia_reading, individual_rights_reading, forecloses).
-narrative_ontology:cs_reading_relation(collective_militia_reading, sophisticated_collective_reading, influences).
-narrative_ontology:cs_axiom(collective_militia_reading, foundational, prefatory_clause_scope_determinative).
+narrative_ontology:cs_reading_relation('cb74e855-4c0b-458f-ba2e-4ffdafe7fc06', individual_rights_reading, forecloses).
+narrative_ontology:cs_reading_relation('cb74e855-4c0b-458f-ba2e-4ffdafe7fc06', sophisticated_collective_reading, influences).
+narrative_ontology:cs_axiom('cb74e855-4c0b-458f-ba2e-4ffdafe7fc06', foundational, prefatory_clause_scope_determinative).
 narrative_ontology:cs_axiom_status(prefatory_clause_scope_determinative, holdable).
-narrative_ontology:cs_axiom(collective_militia_reading, foundational, militia_purpose_exclusive).
+narrative_ontology:cs_axiom('cb74e855-4c0b-458f-ba2e-4ffdafe7fc06', foundational, militia_purpose_exclusive).
 narrative_ontology:cs_axiom_status(militia_purpose_exclusive, holdable).
-narrative_ontology:cs_reference_frame(collective_militia_reading, state_militia_regulation_framework).
-narrative_ontology:cs_drift_state(collective_militia_reading, post_heller_2008, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('cb74e855-4c0b-458f-ba2e-4ffdafe7fc06', state_militia_regulation_framework).
+narrative_ontology:cs_drift_state('cb74e855-4c0b-458f-ba2e-4ffdafe7fc06', post_heller_2008, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(collective_militia_reading, state_governments).

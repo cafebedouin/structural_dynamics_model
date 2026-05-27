@@ -118,9 +118,11 @@ narrative_ontology:topic_domain(security_occupation_tradeoff, "political_theory/
 domain_priors:requires_active_enforcement(security_occupation_tradeoff).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(security_occupation_tradeoff, fixed_text).
-narrative_ontology:cs_authority_grounding(security_occupation_tradeoff, lineage).
-narrative_ontology:cs_interpretation_layer_present(security_occupation_tradeoff).
+narrative_ontology:cs_story_uid(security_occupation_tradeoff, '766c085f-4dd6-4637-a94f-446531795dad').
+narrative_ontology:cs_created_at('766c085f-4dd6-4637-a94f-446531795dad', '').
+narrative_ontology:cs_kernel_codification('766c085f-4dd6-4637-a94f-446531795dad', fixed_text).
+narrative_ontology:cs_authority_grounding('766c085f-4dd6-4637-a94f-446531795dad', lineage).
+narrative_ontology:cs_interpretation_layer_present('766c085f-4dd6-4637-a94f-446531795dad').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(security_occupation_tradeoff, occupying_military_establishment).

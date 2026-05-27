@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(political_community_self_determination_via_membership, freedom_of_movement_presumptive).
 narrative_ontology:cs_axiom_contradiction(freedom_of_movement_presumptive, political_community_self_determination_via_membership).
+narrative_ontology:cs_story_uid(border_normative_status_contradictions, '43b551f3-4c89-4263-8901-f66c9a6c140d').
+narrative_ontology:cs_created_at('43b551f3-4c89-4263-8901-f66c9a6c140d', '').

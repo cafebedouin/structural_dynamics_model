@@ -116,18 +116,20 @@ narrative_ontology:human_readable(categorical_impermissibility, "State Killing a
 narrative_ontology:topic_domain(categorical_impermissibility, "criminal_justice/constitutional_law/political_philosophy").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(categorical_impermissibility, formalized).
-narrative_ontology:cs_authority_grounding(categorical_impermissibility, lineage).
-narrative_ontology:cs_interpretation_layer_present(categorical_impermissibility).
+narrative_ontology:cs_story_uid(categorical_impermissibility, 'ea3f7e0b-6a61-47cf-9808-88f3498f87a7').
+narrative_ontology:cs_created_at('ea3f7e0b-6a61-47cf-9808-88f3498f87a7', '').
+narrative_ontology:cs_kernel_codification('ea3f7e0b-6a61-47cf-9808-88f3498f87a7', formalized).
+narrative_ontology:cs_authority_grounding('ea3f7e0b-6a61-47cf-9808-88f3498f87a7', lineage).
+narrative_ontology:cs_interpretation_layer_present('ea3f7e0b-6a61-47cf-9808-88f3498f87a7').
 narrative_ontology:cs_kernel_id(categorical_impermissibility, state_killing_authority).
-narrative_ontology:cs_reading_relation(categorical_impermissibility, retributive_desert, forecloses).
-narrative_ontology:cs_reading_relation(categorical_impermissibility, deterrence_instrument, coexists_with).
-narrative_ontology:cs_axiom(categorical_impermissibility, foundational, inalienability_categorical).
+narrative_ontology:cs_reading_relation('ea3f7e0b-6a61-47cf-9808-88f3498f87a7', retributive_desert, forecloses).
+narrative_ontology:cs_reading_relation('ea3f7e0b-6a61-47cf-9808-88f3498f87a7', deterrence_instrument, coexists_with).
+narrative_ontology:cs_axiom('ea3f7e0b-6a61-47cf-9808-88f3498f87a7', foundational, inalienability_categorical).
 narrative_ontology:cs_axiom_status(inalienability_categorical, holdable).
-narrative_ontology:cs_axiom(categorical_impermissibility, foundational, state_killing_illegitimate).
+narrative_ontology:cs_axiom('ea3f7e0b-6a61-47cf-9808-88f3498f87a7', foundational, state_killing_illegitimate).
 narrative_ontology:cs_axiom_status(state_killing_illegitimate, holdable).
-narrative_ontology:cs_reference_frame(categorical_impermissibility, human_dignity_inviolability).
-narrative_ontology:cs_drift_state(categorical_impermissibility, contemporary_abolitionist_era, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_reference_frame('ea3f7e0b-6a61-47cf-9808-88f3498f87a7', human_dignity_inviolability).
+narrative_ontology:cs_drift_state('ea3f7e0b-6a61-47cf-9808-88f3498f87a7', contemporary_abolitionist_era, gap(practice_drift, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(categorical_impermissibility, condemned_persons).

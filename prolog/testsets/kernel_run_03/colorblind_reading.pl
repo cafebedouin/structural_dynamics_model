@@ -121,20 +121,22 @@ narrative_ontology:topic_domain(colorblind_reading, "constitutional_law/civil_ri
 domain_priors:requires_active_enforcement(colorblind_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(colorblind_reading, formalized).
-narrative_ontology:cs_authority_grounding(colorblind_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(colorblind_reading).
+narrative_ontology:cs_story_uid(colorblind_reading, '9e9f927a-ac40-481b-9326-cb53f6687fa3').
+narrative_ontology:cs_created_at('9e9f927a-ac40-481b-9326-cb53f6687fa3', '').
+narrative_ontology:cs_kernel_codification('9e9f927a-ac40-481b-9326-cb53f6687fa3', formalized).
+narrative_ontology:cs_authority_grounding('9e9f927a-ac40-481b-9326-cb53f6687fa3', lineage).
+narrative_ontology:cs_interpretation_layer_present('9e9f927a-ac40-481b-9326-cb53f6687fa3').
 narrative_ontology:cs_kernel_id(colorblind_reading, equal_protection_clause).
-narrative_ontology:cs_reading_relation(colorblind_reading, remedial_reading, coexists_with).
-narrative_ontology:cs_reading_relation(colorblind_reading, diversity_reading, coexists_with).
-narrative_ontology:cs_axiom(colorblind_reading, foundational, formal_equality_requires_race_neutrality).
+narrative_ontology:cs_reading_relation('9e9f927a-ac40-481b-9326-cb53f6687fa3', remedial_reading, coexists_with).
+narrative_ontology:cs_reading_relation('9e9f927a-ac40-481b-9326-cb53f6687fa3', diversity_reading, coexists_with).
+narrative_ontology:cs_axiom('9e9f927a-ac40-481b-9326-cb53f6687fa3', foundational, formal_equality_requires_race_neutrality).
 narrative_ontology:cs_axiom_status(formal_equality_requires_race_neutrality, holdable).
-narrative_ontology:cs_axiom_grounding(colorblind_reading, formal_equality_requires_race_neutrality, deontological).
-narrative_ontology:cs_axiom(colorblind_reading, foundational, racial_classifications_inherently_suspect).
+narrative_ontology:cs_axiom_grounding('9e9f927a-ac40-481b-9326-cb53f6687fa3', formal_equality_requires_race_neutrality, deontological).
+narrative_ontology:cs_axiom('9e9f927a-ac40-481b-9326-cb53f6687fa3', foundational, racial_classifications_inherently_suspect).
 narrative_ontology:cs_axiom_status(racial_classifications_inherently_suspect, holdable).
-narrative_ontology:cs_axiom_grounding(colorblind_reading, racial_classifications_inherently_suspect, deontological).
-narrative_ontology:cs_reference_frame(colorblind_reading, colorblind_constitutional_state).
-narrative_ontology:cs_drift_state(colorblind_reading, contemporary_demographic_and_empirical_shift, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('9e9f927a-ac40-481b-9326-cb53f6687fa3', racial_classifications_inherently_suspect, deontological).
+narrative_ontology:cs_reference_frame('9e9f927a-ac40-481b-9326-cb53f6687fa3', colorblind_constitutional_state).
+narrative_ontology:cs_drift_state('9e9f927a-ac40-481b-9326-cb53f6687fa3', contemporary_demographic_and_empirical_shift, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(colorblind_reading, formal_equality_advocates).

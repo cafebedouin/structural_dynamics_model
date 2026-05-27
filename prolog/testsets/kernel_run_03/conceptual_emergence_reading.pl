@@ -115,20 +115,22 @@ narrative_ontology:human_readable(conceptual_emergence_reading, "Statute of Anne
 narrative_ontology:topic_domain(conceptual_emergence_reading, "legal_history/intellectual_property/institutional_economics").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(conceptual_emergence_reading, formalized).
-narrative_ontology:cs_authority_grounding(conceptual_emergence_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(conceptual_emergence_reading).
+narrative_ontology:cs_story_uid(conceptual_emergence_reading, '7e7f9af8-dd62-41ee-9c05-12dd4d4b0d52').
+narrative_ontology:cs_created_at('7e7f9af8-dd62-41ee-9c05-12dd4d4b0d52', '').
+narrative_ontology:cs_kernel_codification('7e7f9af8-dd62-41ee-9c05-12dd4d4b0d52', formalized).
+narrative_ontology:cs_authority_grounding('7e7f9af8-dd62-41ee-9c05-12dd4d4b0d52', lineage).
+narrative_ontology:cs_interpretation_layer_present('7e7f9af8-dd62-41ee-9c05-12dd4d4b0d52').
 narrative_ontology:cs_kernel_id(conceptual_emergence_reading, statute_of_anne_ip_foundation).
-narrative_ontology:cs_reading_relation(conceptual_emergence_reading, institutional_reallocation_reading, coexists_with).
-narrative_ontology:cs_reading_relation(conceptual_emergence_reading, entangled_event_reading, influences).
-narrative_ontology:cs_axiom(conceptual_emergence_reading, foundational, limited_copyright_distinct_category).
+narrative_ontology:cs_reading_relation('7e7f9af8-dd62-41ee-9c05-12dd4d4b0d52', institutional_reallocation_reading, coexists_with).
+narrative_ontology:cs_reading_relation('7e7f9af8-dd62-41ee-9c05-12dd4d4b0d52', entangled_event_reading, influences).
+narrative_ontology:cs_axiom('7e7f9af8-dd62-41ee-9c05-12dd4d4b0d52', foundational, limited_copyright_distinct_category).
 narrative_ontology:cs_axiom_status(limited_copyright_distinct_category, holdable).
-narrative_ontology:cs_axiom_grounding(conceptual_emergence_reading, limited_copyright_distinct_category, conventional).
-narrative_ontology:cs_axiom(conceptual_emergence_reading, secondary, learning_as_countervailing_interest).
+narrative_ontology:cs_axiom_grounding('7e7f9af8-dd62-41ee-9c05-12dd4d4b0d52', limited_copyright_distinct_category, conventional).
+narrative_ontology:cs_axiom('7e7f9af8-dd62-41ee-9c05-12dd4d4b0d52', secondary, learning_as_countervailing_interest).
 narrative_ontology:cs_axiom_status(learning_as_countervailing_interest, holdable).
-narrative_ontology:cs_axiom_grounding(conceptual_emergence_reading, learning_as_countervailing_interest, deontological).
-narrative_ontology:cs_reference_frame(conceptual_emergence_reading, statutory_common_law_distinction).
-narrative_ontology:cs_drift_state(conceptual_emergence_reading, contemporary_extension_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('7e7f9af8-dd62-41ee-9c05-12dd4d4b0d52', learning_as_countervailing_interest, deontological).
+narrative_ontology:cs_reference_frame('7e7f9af8-dd62-41ee-9c05-12dd4d4b0d52', statutory_common_law_distinction).
+narrative_ontology:cs_drift_state('7e7f9af8-dd62-41ee-9c05-12dd4d4b0d52', contemporary_extension_era, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(conceptual_emergence_reading, public_learning_commons).

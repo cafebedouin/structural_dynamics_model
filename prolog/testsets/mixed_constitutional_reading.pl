@@ -118,9 +118,11 @@ narrative_ontology:topic_domain(mixed_constitutional_reading, "political_philoso
 domain_priors:requires_active_enforcement(mixed_constitutional_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(mixed_constitutional_reading, formalized).
-narrative_ontology:cs_authority_grounding(mixed_constitutional_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(mixed_constitutional_reading).
+narrative_ontology:cs_story_uid(mixed_constitutional_reading, '8fc6680d-b870-4cd3-9fc8-b0d8db1f688c').
+narrative_ontology:cs_created_at('8fc6680d-b870-4cd3-9fc8-b0d8db1f688c', '').
+narrative_ontology:cs_kernel_codification('8fc6680d-b870-4cd3-9fc8-b0d8db1f688c', formalized).
+narrative_ontology:cs_authority_grounding('8fc6680d-b870-4cd3-9fc8-b0d8db1f688c', extraction).
+narrative_ontology:cs_interpretation_layer_present('8fc6680d-b870-4cd3-9fc8-b0d8db1f688c').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(mixed_constitutional_reading, institutional_continuity_agents).

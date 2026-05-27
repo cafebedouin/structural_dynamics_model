@@ -125,18 +125,20 @@ narrative_ontology:topic_domain(symbol_survival_reading, "religious_studies/coll
 domain_priors:requires_active_enforcement(symbol_survival_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(symbol_survival_reading, distributed).
-narrative_ontology:cs_authority_grounding(symbol_survival_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(symbol_survival_reading).
+narrative_ontology:cs_story_uid(symbol_survival_reading, '0a9f8d43-4df3-4b22-8a83-10736f64af75').
+narrative_ontology:cs_created_at('0a9f8d43-4df3-4b22-8a83-10736f64af75', '').
+narrative_ontology:cs_kernel_codification('0a9f8d43-4df3-4b22-8a83-10736f64af75', distributed).
+narrative_ontology:cs_authority_grounding('0a9f8d43-4df3-4b22-8a83-10736f64af75', lineage).
+narrative_ontology:cs_interpretation_layer_present('0a9f8d43-4df3-4b22-8a83-10736f64af75').
 narrative_ontology:cs_kernel_id(symbol_survival_reading, catastrophe_memory_survival).
-narrative_ontology:cs_reading_relation(symbol_survival_reading, competence_transmission_reading, coexists_with).
-narrative_ontology:cs_reading_relation(symbol_survival_reading, hybrid_encoding_reading, influences).
-narrative_ontology:cs_axiom(symbol_survival_reading, foundational, ritual_form_encodes_identity).
+narrative_ontology:cs_reading_relation('0a9f8d43-4df3-4b22-8a83-10736f64af75', competence_transmission_reading, coexists_with).
+narrative_ontology:cs_reading_relation('0a9f8d43-4df3-4b22-8a83-10736f64af75', hybrid_encoding_reading, influences).
+narrative_ontology:cs_axiom('0a9f8d43-4df3-4b22-8a83-10736f64af75', foundational, ritual_form_encodes_identity).
 narrative_ontology:cs_axiom_status(ritual_form_encodes_identity, holdable).
-narrative_ontology:cs_axiom(symbol_survival_reading, foundational, practice_continuity_equals_collective_survival).
+narrative_ontology:cs_axiom('0a9f8d43-4df3-4b22-8a83-10736f64af75', foundational, practice_continuity_equals_collective_survival).
 narrative_ontology:cs_axiom_status(practice_continuity_equals_collective_survival, holdable).
-narrative_ontology:cs_reference_frame(symbol_survival_reading, ritual_continuity_as_survival).
-narrative_ontology:cs_drift_state(symbol_survival_reading, contemporary_diaspora_pluralism, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_reference_frame('0a9f8d43-4df3-4b22-8a83-10736f64af75', ritual_continuity_as_survival).
+narrative_ontology:cs_drift_state('0a9f8d43-4df3-4b22-8a83-10736f64af75', contemporary_diaspora_pluralism, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(symbol_survival_reading, rabbinic_authority).

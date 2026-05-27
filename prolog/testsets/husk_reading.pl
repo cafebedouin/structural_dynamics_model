@@ -122,19 +122,21 @@ narrative_ontology:topic_domain(husk_reading, "infrastructure_governance/disaste
 domain_priors:requires_active_enforcement(husk_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(husk_reading, distributed).
-narrative_ontology:cs_authority_grounding(husk_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(husk_reading).
+narrative_ontology:cs_story_uid(husk_reading, '23c718df-2a0e-4a60-8e16-e850c6b5c1fb').
+narrative_ontology:cs_created_at('23c718df-2a0e-4a60-8e16-e850c6b5c1fb', '').
+narrative_ontology:cs_kernel_codification('23c718df-2a0e-4a60-8e16-e850c6b5c1fb', distributed).
+narrative_ontology:cs_authority_grounding('23c718df-2a0e-4a60-8e16-e850c6b5c1fb', extraction).
+narrative_ontology:cs_interpretation_layer_present('23c718df-2a0e-4a60-8e16-e850c6b5c1fb').
 narrative_ontology:cs_kernel_id(husk_reading, preparedness_retention).
-narrative_ontology:cs_reading_relation(husk_reading, competence_reading, coexists_with).
-narrative_ontology:cs_axiom(husk_reading, foundational, compliance_substitutes_for_competence).
+narrative_ontology:cs_reading_relation('23c718df-2a0e-4a60-8e16-e850c6b5c1fb', competence_reading, coexists_with).
+narrative_ontology:cs_axiom('23c718df-2a0e-4a60-8e16-e850c6b5c1fb', foundational, compliance_substitutes_for_competence).
 narrative_ontology:cs_axiom_status(compliance_substitutes_for_competence, holdable).
-narrative_ontology:cs_axiom_grounding(husk_reading, compliance_substitutes_for_competence, empirically_contingent).
-narrative_ontology:cs_axiom(husk_reading, foundational, ritual_preserves_institutional_order).
+narrative_ontology:cs_axiom_grounding('23c718df-2a0e-4a60-8e16-e850c6b5c1fb', compliance_substitutes_for_competence, empirically_contingent).
+narrative_ontology:cs_axiom('23c718df-2a0e-4a60-8e16-e850c6b5c1fb', foundational, ritual_preserves_institutional_order).
 narrative_ontology:cs_axiom_status(ritual_preserves_institutional_order, holdable).
-narrative_ontology:cs_axiom_grounding(husk_reading, ritual_preserves_institutional_order, conventional).
-narrative_ontology:cs_reference_frame(husk_reading, compliance_as_legitimacy).
-narrative_ontology:cs_drift_state(husk_reading, contemporary_infrastructure_governance, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('23c718df-2a0e-4a60-8e16-e850c6b5c1fb', ritual_preserves_institutional_order, conventional).
+narrative_ontology:cs_reference_frame('23c718df-2a0e-4a60-8e16-e850c6b5c1fb', compliance_as_legitimacy).
+narrative_ontology:cs_drift_state('23c718df-2a0e-4a60-8e16-e850c6b5c1fb', contemporary_infrastructure_governance, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(husk_reading, institutional_legitimacy).

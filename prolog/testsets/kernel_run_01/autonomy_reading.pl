@@ -128,17 +128,19 @@ narrative_ontology:topic_domain(autonomy_reading, "medical_ethics/bioethics/end_
 domain_priors:requires_active_enforcement(autonomy_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(autonomy_reading, distributed).
-narrative_ontology:cs_authority_grounding(autonomy_reading, extraction).
+narrative_ontology:cs_story_uid(autonomy_reading, 'fff4e6a7-c07a-4da6-8de1-983f8b6fc199').
+narrative_ontology:cs_created_at('fff4e6a7-c07a-4da6-8de1-983f8b6fc199', '').
+narrative_ontology:cs_kernel_codification('fff4e6a7-c07a-4da6-8de1-983f8b6fc199', distributed).
+narrative_ontology:cs_authority_grounding('fff4e6a7-c07a-4da6-8de1-983f8b6fc199', extraction).
 narrative_ontology:cs_kernel_id(autonomy_reading, end_of_life_authority).
-narrative_ontology:cs_reading_relation(autonomy_reading, sanctity_reading, forecloses).
-narrative_ontology:cs_reading_relation(autonomy_reading, slippery_slope_mechanism, influences).
-narrative_ontology:cs_axiom(autonomy_reading, foundational, respect_for_autonomous_choice_over_unbearable_suffering).
+narrative_ontology:cs_reading_relation('fff4e6a7-c07a-4da6-8de1-983f8b6fc199', sanctity_reading, forecloses).
+narrative_ontology:cs_reading_relation('fff4e6a7-c07a-4da6-8de1-983f8b6fc199', slippery_slope_mechanism, influences).
+narrative_ontology:cs_axiom('fff4e6a7-c07a-4da6-8de1-983f8b6fc199', foundational, respect_for_autonomous_choice_over_unbearable_suffering).
 narrative_ontology:cs_axiom_status(respect_for_autonomous_choice_over_unbearable_suffering, holdable).
-narrative_ontology:cs_axiom(autonomy_reading, foundational, permissive_frameworks_prevent_coercion_through_safeguards).
+narrative_ontology:cs_axiom('fff4e6a7-c07a-4da6-8de1-983f8b6fc199', foundational, permissive_frameworks_prevent_coercion_through_safeguards).
 narrative_ontology:cs_axiom_status(permissive_frameworks_prevent_coercion_through_safeguards, holdable).
-narrative_ontology:cs_reference_frame(autonomy_reading, individual_self_determination_authority).
-narrative_ontology:cs_drift_state(autonomy_reading, contemporary_evidence_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('fff4e6a7-c07a-4da6-8de1-983f8b6fc199', individual_self_determination_authority).
+narrative_ontology:cs_drift_state('fff4e6a7-c07a-4da6-8de1-983f8b6fc199', contemporary_evidence_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(autonomy_reading, patients_with_agency).

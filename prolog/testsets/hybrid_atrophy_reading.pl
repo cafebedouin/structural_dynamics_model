@@ -112,9 +112,11 @@ narrative_ontology:human_readable(hybrid_atrophy_reading, "Ritual Atrophy: Mourn
 narrative_ontology:topic_domain(hybrid_atrophy_reading, "religious_studies/collective_memory/ritual_practice").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(hybrid_atrophy_reading, distributed).
-narrative_ontology:cs_authority_grounding(hybrid_atrophy_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(hybrid_atrophy_reading).
+narrative_ontology:cs_story_uid(hybrid_atrophy_reading, 'a7e75233-0e39-47bc-839a-f8d167b0c574').
+narrative_ontology:cs_created_at('a7e75233-0e39-47bc-839a-f8d167b0c574', '').
+narrative_ontology:cs_kernel_codification('a7e75233-0e39-47bc-839a-f8d167b0c574', distributed).
+narrative_ontology:cs_authority_grounding('a7e75233-0e39-47bc-839a-f8d167b0c574', lineage).
+narrative_ontology:cs_interpretation_layer_present('a7e75233-0e39-47bc-839a-f8d167b0c574').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(hybrid_atrophy_reading, in_group_identity_maintenance).

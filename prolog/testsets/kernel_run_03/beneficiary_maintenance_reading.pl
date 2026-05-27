@@ -129,20 +129,22 @@ narrative_ontology:topic_domain(beneficiary_maintenance_reading, "political_econ
 domain_priors:requires_active_enforcement(beneficiary_maintenance_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(beneficiary_maintenance_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(beneficiary_maintenance_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(beneficiary_maintenance_reading).
+narrative_ontology:cs_story_uid(beneficiary_maintenance_reading, '471a395e-b031-4ca3-ab71-b3756491fdcd').
+narrative_ontology:cs_created_at('471a395e-b031-4ca3-ab71-b3756491fdcd', '').
+narrative_ontology:cs_kernel_codification('471a395e-b031-4ca3-ab71-b3756491fdcd', fixed_text).
+narrative_ontology:cs_authority_grounding('471a395e-b031-4ca3-ab71-b3756491fdcd', extraction).
+narrative_ontology:cs_interpretation_layer_present('471a395e-b031-4ca3-ab71-b3756491fdcd').
 narrative_ontology:cs_kernel_id(beneficiary_maintenance_reading, market_as_natural_default).
-narrative_ontology:cs_reading_relation(beneficiary_maintenance_reading, spontaneous_order_reading, coexists_with).
-narrative_ontology:cs_reading_relation(beneficiary_maintenance_reading, engineered_infrastructure_reading, influences).
-narrative_ontology:cs_axiom(beneficiary_maintenance_reading, foundational, market_naturalism_is_post_hoc_rationalization).
+narrative_ontology:cs_reading_relation('471a395e-b031-4ca3-ab71-b3756491fdcd', spontaneous_order_reading, coexists_with).
+narrative_ontology:cs_reading_relation('471a395e-b031-4ca3-ab71-b3756491fdcd', engineered_infrastructure_reading, influences).
+narrative_ontology:cs_axiom('471a395e-b031-4ca3-ab71-b3756491fdcd', foundational, market_naturalism_is_post_hoc_rationalization).
 narrative_ontology:cs_axiom_status(market_naturalism_is_post_hoc_rationalization, holdable).
-narrative_ontology:cs_axiom_grounding(beneficiary_maintenance_reading, market_naturalism_is_post_hoc_rationalization, empirically_contingent).
-narrative_ontology:cs_axiom(beneficiary_maintenance_reading, foundational, suppression_of_alternatives_enables_naturalization).
+narrative_ontology:cs_axiom_grounding('471a395e-b031-4ca3-ab71-b3756491fdcd', market_naturalism_is_post_hoc_rationalization, empirically_contingent).
+narrative_ontology:cs_axiom('471a395e-b031-4ca3-ab71-b3756491fdcd', foundational, suppression_of_alternatives_enables_naturalization).
 narrative_ontology:cs_axiom_status(suppression_of_alternatives_enables_naturalization, holdable).
-narrative_ontology:cs_axiom_grounding(beneficiary_maintenance_reading, suppression_of_alternatives_enables_naturalization, empirically_contingent).
-narrative_ontology:cs_reference_frame(beneficiary_maintenance_reading, market_naturalism_as_discovery).
-narrative_ontology:cs_drift_state(beneficiary_maintenance_reading, contemporary_heterodox_resurgence, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('471a395e-b031-4ca3-ab71-b3756491fdcd', suppression_of_alternatives_enables_naturalization, empirically_contingent).
+narrative_ontology:cs_reference_frame('471a395e-b031-4ca3-ab71-b3756491fdcd', market_naturalism_as_discovery).
+narrative_ontology:cs_drift_state('471a395e-b031-4ca3-ab71-b3756491fdcd', contemporary_heterodox_resurgence, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(beneficiary_maintenance_reading, incumbent_capital_holders).

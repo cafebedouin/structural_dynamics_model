@@ -125,20 +125,22 @@ narrative_ontology:topic_domain(autonomy_reading, "medical_ethics/bioethics/end_
 domain_priors:requires_active_enforcement(autonomy_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(autonomy_reading, formalized).
-narrative_ontology:cs_authority_grounding(autonomy_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(autonomy_reading).
+narrative_ontology:cs_story_uid(autonomy_reading, '7108f5cd-a056-4af1-bdc5-3b0d4b19fc75').
+narrative_ontology:cs_created_at('7108f5cd-a056-4af1-bdc5-3b0d4b19fc75', '').
+narrative_ontology:cs_kernel_codification('7108f5cd-a056-4af1-bdc5-3b0d4b19fc75', formalized).
+narrative_ontology:cs_authority_grounding('7108f5cd-a056-4af1-bdc5-3b0d4b19fc75', lineage).
+narrative_ontology:cs_interpretation_layer_present('7108f5cd-a056-4af1-bdc5-3b0d4b19fc75').
 narrative_ontology:cs_kernel_id(autonomy_reading, end_of_life_decision_authority).
-narrative_ontology:cs_reading_relation(autonomy_reading, sanctity_reading, coexists_with).
-narrative_ontology:cs_reading_relation(autonomy_reading, vulnerability_protection_reading, coexists_with).
-narrative_ontology:cs_axiom(autonomy_reading, foundational, rational_agency_sovereignty_principle).
+narrative_ontology:cs_reading_relation('7108f5cd-a056-4af1-bdc5-3b0d4b19fc75', sanctity_reading, coexists_with).
+narrative_ontology:cs_reading_relation('7108f5cd-a056-4af1-bdc5-3b0d4b19fc75', vulnerability_protection_reading, coexists_with).
+narrative_ontology:cs_axiom('7108f5cd-a056-4af1-bdc5-3b0d4b19fc75', foundational, rational_agency_sovereignty_principle).
 narrative_ontology:cs_axiom_status(rational_agency_sovereignty_principle, holdable).
-narrative_ontology:cs_axiom_grounding(autonomy_reading, rational_agency_sovereignty_principle, deontological).
-narrative_ontology:cs_axiom(autonomy_reading, foundational, individual_capacity_over_institutional_authority).
+narrative_ontology:cs_axiom_grounding('7108f5cd-a056-4af1-bdc5-3b0d4b19fc75', rational_agency_sovereignty_principle, deontological).
+narrative_ontology:cs_axiom('7108f5cd-a056-4af1-bdc5-3b0d4b19fc75', foundational, individual_capacity_over_institutional_authority).
 narrative_ontology:cs_axiom_status(individual_capacity_over_institutional_authority, holdable).
-narrative_ontology:cs_axiom_grounding(autonomy_reading, individual_capacity_over_institutional_authority, deontological).
-narrative_ontology:cs_reference_frame(autonomy_reading, informed_consent_autonomy_framework).
-narrative_ontology:cs_drift_state(autonomy_reading, contemporary_medical_ethics, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_axiom_grounding('7108f5cd-a056-4af1-bdc5-3b0d4b19fc75', individual_capacity_over_institutional_authority, deontological).
+narrative_ontology:cs_reference_frame('7108f5cd-a056-4af1-bdc5-3b0d4b19fc75', informed_consent_autonomy_framework).
+narrative_ontology:cs_drift_state('7108f5cd-a056-4af1-bdc5-3b0d4b19fc75', contemporary_medical_ethics, gap(practice_drift, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(autonomy_reading, competent_individuals_exercising_self_determination).

@@ -123,18 +123,20 @@ narrative_ontology:topic_domain(engineered_closure_reading, "political_economy/i
 domain_priors:requires_active_enforcement(engineered_closure_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(engineered_closure_reading, formalized).
-narrative_ontology:cs_authority_grounding(engineered_closure_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(engineered_closure_reading).
+narrative_ontology:cs_story_uid(engineered_closure_reading, '06cd7f03-57d2-4a47-b30a-41474fd3595f').
+narrative_ontology:cs_created_at('06cd7f03-57d2-4a47-b30a-41474fd3595f', '').
+narrative_ontology:cs_kernel_codification('06cd7f03-57d2-4a47-b30a-41474fd3595f', formalized).
+narrative_ontology:cs_authority_grounding('06cd7f03-57d2-4a47-b30a-41474fd3595f', extraction).
+narrative_ontology:cs_interpretation_layer_present('06cd7f03-57d2-4a47-b30a-41474fd3595f').
 narrative_ontology:cs_kernel_id(engineered_closure_reading, market_as_natural_default).
-narrative_ontology:cs_reading_relation(engineered_closure_reading, lapsed_closure_reading, influences).
-narrative_ontology:cs_reading_relation(engineered_closure_reading, dual_operation_reading, coexists_with).
-narrative_ontology:cs_axiom(engineered_closure_reading, foundational, continuous_institutional_work_requirement).
+narrative_ontology:cs_reading_relation('06cd7f03-57d2-4a47-b30a-41474fd3595f', lapsed_closure_reading, influences).
+narrative_ontology:cs_reading_relation('06cd7f03-57d2-4a47-b30a-41474fd3595f', dual_operation_reading, coexists_with).
+narrative_ontology:cs_axiom('06cd7f03-57d2-4a47-b30a-41474fd3595f', foundational, continuous_institutional_work_requirement).
 narrative_ontology:cs_axiom_status(continuous_institutional_work_requirement, holdable).
-narrative_ontology:cs_axiom(engineered_closure_reading, foundational, beneficiary_visibility_in_policy_defense).
+narrative_ontology:cs_axiom('06cd7f03-57d2-4a47-b30a-41474fd3595f', foundational, beneficiary_visibility_in_policy_defense).
 narrative_ontology:cs_axiom_status(beneficiary_visibility_in_policy_defense, holdable).
-narrative_ontology:cs_reference_frame(engineered_closure_reading, market_efficiency_necessity).
-narrative_ontology:cs_drift_state(engineered_closure_reading, neoliberal_maturation_and_crisis, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_reference_frame('06cd7f03-57d2-4a47-b30a-41474fd3595f', market_efficiency_necessity).
+narrative_ontology:cs_drift_state('06cd7f03-57d2-4a47-b30a-41474fd3595f', neoliberal_maturation_and_crisis, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(engineered_closure_reading, capital_accumulation_agents).

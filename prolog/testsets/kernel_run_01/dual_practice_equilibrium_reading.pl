@@ -124,18 +124,20 @@ narrative_ontology:topic_domain(dual_practice_equilibrium_reading, "political_hi
 domain_priors:requires_active_enforcement(dual_practice_equilibrium_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(dual_practice_equilibrium_reading, distributed).
-narrative_ontology:cs_authority_grounding(dual_practice_equilibrium_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(dual_practice_equilibrium_reading).
+narrative_ontology:cs_story_uid(dual_practice_equilibrium_reading, '3f3099b0-d1b6-45a7-b36e-7af7fc73026e').
+narrative_ontology:cs_created_at('3f3099b0-d1b6-45a7-b36e-7af7fc73026e', '').
+narrative_ontology:cs_kernel_codification('3f3099b0-d1b6-45a7-b36e-7af7fc73026e', distributed).
+narrative_ontology:cs_authority_grounding('3f3099b0-d1b6-45a7-b36e-7af7fc73026e', lineage).
+narrative_ontology:cs_interpretation_layer_present('3f3099b0-d1b6-45a7-b36e-7af7fc73026e').
 narrative_ontology:cs_kernel_id(dual_practice_equilibrium_reading, legitimacy_of_practice_standardization).
-narrative_ontology:cs_reading_relation(dual_practice_equilibrium_reading, endogenous_displacement_reading, coexists_with).
-narrative_ontology:cs_reading_relation(dual_practice_equilibrium_reading, exogenous_override_reading, coexists_with).
-narrative_ontology:cs_axiom(dual_practice_equilibrium_reading, foundational, bifurcated_authority_stable_equilibrium).
+narrative_ontology:cs_reading_relation('3f3099b0-d1b6-45a7-b36e-7af7fc73026e', endogenous_displacement_reading, coexists_with).
+narrative_ontology:cs_reading_relation('3f3099b0-d1b6-45a7-b36e-7af7fc73026e', exogenous_override_reading, coexists_with).
+narrative_ontology:cs_axiom('3f3099b0-d1b6-45a7-b36e-7af7fc73026e', foundational, bifurcated_authority_stable_equilibrium).
 narrative_ontology:cs_axiom_status(bifurcated_authority_stable_equilibrium, holdable).
-narrative_ontology:cs_axiom(dual_practice_equilibrium_reading, foundational, mutual_benefit_partition_principle).
+narrative_ontology:cs_axiom('3f3099b0-d1b6-45a7-b36e-7af7fc73026e', foundational, mutual_benefit_partition_principle).
 narrative_ontology:cs_axiom_status(mutual_benefit_partition_principle, holdable).
-narrative_ontology:cs_reference_frame(dual_practice_equilibrium_reading, negotiated_domain_partition).
-narrative_ontology:cs_drift_state(dual_practice_equilibrium_reading, contemporary_state_capacity_expansion, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_reference_frame('3f3099b0-d1b6-45a7-b36e-7af7fc73026e', negotiated_domain_partition).
+narrative_ontology:cs_drift_state('3f3099b0-d1b6-45a7-b36e-7af7fc73026e', contemporary_state_capacity_expansion, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(dual_practice_equilibrium_reading, state_administrative_apparatus).

@@ -123,16 +123,18 @@ narrative_ontology:topic_domain(sound_money_scarcity_constraint, "political_econ
 domain_priors:requires_active_enforcement(sound_money_scarcity_constraint).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(sound_money_scarcity_constraint, fixed_text).
-narrative_ontology:cs_authority_grounding(sound_money_scarcity_constraint, distributed).
-narrative_ontology:cs_reading_relation(sound_money_scarcity_constraint, cryptocurrency_speculation_reading, forecloses).
-narrative_ontology:cs_reading_relation(sound_money_scarcity_constraint, decentralization_autonomy_reading, coexists_with).
-narrative_ontology:cs_axiom(sound_money_scarcity_constraint, foundational, mathematical_scarcity_prevents_debasement).
+narrative_ontology:cs_story_uid(sound_money_scarcity_constraint, '2b86acd7-ed31-4f2c-bf99-51f63182dddd').
+narrative_ontology:cs_created_at('2b86acd7-ed31-4f2c-bf99-51f63182dddd', '').
+narrative_ontology:cs_kernel_codification('2b86acd7-ed31-4f2c-bf99-51f63182dddd', fixed_text).
+narrative_ontology:cs_authority_grounding('2b86acd7-ed31-4f2c-bf99-51f63182dddd', distributed).
+narrative_ontology:cs_reading_relation('2b86acd7-ed31-4f2c-bf99-51f63182dddd', cryptocurrency_speculation_reading, forecloses).
+narrative_ontology:cs_reading_relation('2b86acd7-ed31-4f2c-bf99-51f63182dddd', decentralization_autonomy_reading, coexists_with).
+narrative_ontology:cs_axiom('2b86acd7-ed31-4f2c-bf99-51f63182dddd', foundational, mathematical_scarcity_prevents_debasement).
 narrative_ontology:cs_axiom_status(mathematical_scarcity_prevents_debasement, holdable).
-narrative_ontology:cs_axiom(sound_money_scarcity_constraint, secondary, fixed_supply_requires_no_political_discretion).
+narrative_ontology:cs_axiom('2b86acd7-ed31-4f2c-bf99-51f63182dddd', secondary, fixed_supply_requires_no_political_discretion).
 narrative_ontology:cs_axiom_status(fixed_supply_requires_no_political_discretion, holdable).
-narrative_ontology:cs_reference_frame(sound_money_scarcity_constraint, austrian_monetary_legitimacy).
-narrative_ontology:cs_drift_state(sound_money_scarcity_constraint, contemporary_financialization_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('2b86acd7-ed31-4f2c-bf99-51f63182dddd', austrian_monetary_legitimacy).
+narrative_ontology:cs_drift_state('2b86acd7-ed31-4f2c-bf99-51f63182dddd', contemporary_financialization_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(sound_money_scarcity_constraint, early_adopters).

@@ -114,20 +114,22 @@ narrative_ontology:human_readable(study_as_performance, "Study as Cosmic Perform
 narrative_ontology:topic_domain(study_as_performance, "religious_studies/jewish_law/textual_preservation").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(study_as_performance, fixed_text).
-narrative_ontology:cs_authority_grounding(study_as_performance, lineage).
-narrative_ontology:cs_interpretation_layer_present(study_as_performance).
+narrative_ontology:cs_story_uid(study_as_performance, '1aca4baa-d5b0-40d7-94b8-5c1fb03aeb75').
+narrative_ontology:cs_created_at('1aca4baa-d5b0-40d7-94b8-5c1fb03aeb75', '').
+narrative_ontology:cs_kernel_codification('1aca4baa-d5b0-40d7-94b8-5c1fb03aeb75', fixed_text).
+narrative_ontology:cs_authority_grounding('1aca4baa-d5b0-40d7-94b8-5c1fb03aeb75', lineage).
+narrative_ontology:cs_interpretation_layer_present('1aca4baa-d5b0-40d7-94b8-5c1fb03aeb75').
 narrative_ontology:cs_kernel_id(study_as_performance, kodashim_obligation).
-narrative_ontology:cs_reading_relation(study_as_performance, study_as_preparation, influences).
-narrative_ontology:cs_reading_relation(study_as_performance, study_as_archive, coexists_with).
-narrative_ontology:cs_axiom(study_as_performance, foundational, cosmic_function_persists_absent_temple).
+narrative_ontology:cs_reading_relation('1aca4baa-d5b0-40d7-94b8-5c1fb03aeb75', study_as_preparation, influences).
+narrative_ontology:cs_reading_relation('1aca4baa-d5b0-40d7-94b8-5c1fb03aeb75', study_as_archive, coexists_with).
+narrative_ontology:cs_axiom('1aca4baa-d5b0-40d7-94b8-5c1fb03aeb75', foundational, cosmic_function_persists_absent_temple).
 narrative_ontology:cs_axiom_status(cosmic_function_persists_absent_temple, holdable).
-narrative_ontology:cs_axiom_grounding(study_as_performance, cosmic_function_persists_absent_temple, theological).
-narrative_ontology:cs_axiom(study_as_performance, foundational, textual_recitation_is_ritual_performance).
+narrative_ontology:cs_axiom_grounding('1aca4baa-d5b0-40d7-94b8-5c1fb03aeb75', cosmic_function_persists_absent_temple, theological).
+narrative_ontology:cs_axiom('1aca4baa-d5b0-40d7-94b8-5c1fb03aeb75', foundational, textual_recitation_is_ritual_performance).
 narrative_ontology:cs_axiom_status(textual_recitation_is_ritual_performance, holdable).
-narrative_ontology:cs_axiom_grounding(study_as_performance, textual_recitation_is_ritual_performance, theological).
-narrative_ontology:cs_reference_frame(study_as_performance, sacrificial_obligation_continuous).
-narrative_ontology:cs_drift_state(study_as_performance, post_temple_destruction, gap(stable, minor, true)).
+narrative_ontology:cs_axiom_grounding('1aca4baa-d5b0-40d7-94b8-5c1fb03aeb75', textual_recitation_is_ritual_performance, theological).
+narrative_ontology:cs_reference_frame('1aca4baa-d5b0-40d7-94b8-5c1fb03aeb75', sacrificial_obligation_continuous).
+narrative_ontology:cs_drift_state('1aca4baa-d5b0-40d7-94b8-5c1fb03aeb75', post_temple_destruction, gap(stable, minor, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(study_as_performance, cosmic_order).

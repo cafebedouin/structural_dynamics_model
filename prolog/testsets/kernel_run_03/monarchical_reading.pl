@@ -114,20 +114,22 @@ narrative_ontology:topic_domain(monarchical_reading, "political_philosophy/const
 domain_priors:requires_active_enforcement(monarchical_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(monarchical_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(monarchical_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(monarchical_reading).
+narrative_ontology:cs_story_uid(monarchical_reading, 'ea70e6b2-48d6-4f68-a526-5ffeb299bb71').
+narrative_ontology:cs_created_at('ea70e6b2-48d6-4f68-a526-5ffeb299bb71', '').
+narrative_ontology:cs_kernel_codification('ea70e6b2-48d6-4f68-a526-5ffeb299bb71', fixed_text).
+narrative_ontology:cs_authority_grounding('ea70e6b2-48d6-4f68-a526-5ffeb299bb71', lineage).
+narrative_ontology:cs_interpretation_layer_present('ea70e6b2-48d6-4f68-a526-5ffeb299bb71').
 narrative_ontology:cs_kernel_id(monarchical_reading, sovereign_legitimacy).
-narrative_ontology:cs_reading_relation(monarchical_reading, republican_reading, coexists_with).
-narrative_ontology:cs_reading_relation(monarchical_reading, constitutional_hybrid_reading, influences).
-narrative_ontology:cs_axiom(monarchical_reading, foundational, hereditary_succession_legitimacy).
+narrative_ontology:cs_reading_relation('ea70e6b2-48d6-4f68-a526-5ffeb299bb71', republican_reading, coexists_with).
+narrative_ontology:cs_reading_relation('ea70e6b2-48d6-4f68-a526-5ffeb299bb71', constitutional_hybrid_reading, influences).
+narrative_ontology:cs_axiom('ea70e6b2-48d6-4f68-a526-5ffeb299bb71', foundational, hereditary_succession_legitimacy).
 narrative_ontology:cs_axiom_status(hereditary_succession_legitimacy, holdable).
-narrative_ontology:cs_axiom_grounding(monarchical_reading, hereditary_succession_legitimacy, conventional).
-narrative_ontology:cs_axiom(monarchical_reading, foundational, divine_ordination_accountability_exception).
+narrative_ontology:cs_axiom_grounding('ea70e6b2-48d6-4f68-a526-5ffeb299bb71', hereditary_succession_legitimacy, conventional).
+narrative_ontology:cs_axiom('ea70e6b2-48d6-4f68-a526-5ffeb299bb71', foundational, divine_ordination_accountability_exception).
 narrative_ontology:cs_axiom_status(divine_ordination_accountability_exception, holdable).
-narrative_ontology:cs_axiom_grounding(monarchical_reading, divine_ordination_accountability_exception, theological).
-narrative_ontology:cs_reference_frame(monarchical_reading, divinely_ordained_hereditary_succession).
-narrative_ontology:cs_drift_state(monarchical_reading, modern_electoral_normativity_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('ea70e6b2-48d6-4f68-a526-5ffeb299bb71', divine_ordination_accountability_exception, theological).
+narrative_ontology:cs_reference_frame('ea70e6b2-48d6-4f68-a526-5ffeb299bb71', divinely_ordained_hereditary_succession).
+narrative_ontology:cs_drift_state('ea70e6b2-48d6-4f68-a526-5ffeb299bb71', modern_electoral_normativity_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(monarchical_reading, dynastic_lineage).

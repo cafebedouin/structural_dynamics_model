@@ -123,18 +123,20 @@ narrative_ontology:topic_domain(originalist_reading, "constitutional_law/legal_t
 domain_priors:requires_active_enforcement(originalist_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(originalist_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(originalist_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(originalist_reading).
+narrative_ontology:cs_story_uid(originalist_reading, 'ad9a7fba-c7bb-48b2-a728-09fc29108927').
+narrative_ontology:cs_created_at('ad9a7fba-c7bb-48b2-a728-09fc29108927', '').
+narrative_ontology:cs_kernel_codification('ad9a7fba-c7bb-48b2-a728-09fc29108927', fixed_text).
+narrative_ontology:cs_authority_grounding('ad9a7fba-c7bb-48b2-a728-09fc29108927', lineage).
+narrative_ontology:cs_interpretation_layer_present('ad9a7fba-c7bb-48b2-a728-09fc29108927').
 narrative_ontology:cs_kernel_id(originalist_reading, constitutional_text_authority).
-narrative_ontology:cs_reading_relation(originalist_reading, living_constitutionalist_reading, forecloses).
-narrative_ontology:cs_reading_relation(originalist_reading, positivist_reading, coexists_with).
-narrative_ontology:cs_axiom(originalist_reading, foundational, meaning_fixed_at_ratification).
+narrative_ontology:cs_reading_relation('ad9a7fba-c7bb-48b2-a728-09fc29108927', living_constitutionalist_reading, forecloses).
+narrative_ontology:cs_reading_relation('ad9a7fba-c7bb-48b2-a728-09fc29108927', positivist_reading, coexists_with).
+narrative_ontology:cs_axiom('ad9a7fba-c7bb-48b2-a728-09fc29108927', foundational, meaning_fixed_at_ratification).
 narrative_ontology:cs_axiom_status(meaning_fixed_at_ratification, holdable).
-narrative_ontology:cs_axiom(originalist_reading, foundational, historical_public_understanding_objective).
+narrative_ontology:cs_axiom('ad9a7fba-c7bb-48b2-a728-09fc29108927', foundational, historical_public_understanding_objective).
 narrative_ontology:cs_axiom_status(historical_public_understanding_objective, holdable).
-narrative_ontology:cs_reference_frame(originalist_reading, founding_era_constitutional_meaning).
-narrative_ontology:cs_drift_state(originalist_reading, contemporary_judicial_implementation, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('ad9a7fba-c7bb-48b2-a728-09fc29108927', founding_era_constitutional_meaning).
+narrative_ontology:cs_drift_state('ad9a7fba-c7bb-48b2-a728-09fc29108927', contemporary_judicial_implementation, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(originalist_reading, originalist_jurists).

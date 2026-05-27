@@ -104,9 +104,11 @@ narrative_ontology:human_readable(study_as_occupation, "Sacrifice Law Study as L
 narrative_ontology:topic_domain(study_as_occupation, "religious_studies/halakhic_authority/commitment_systems").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(study_as_occupation, formalized).
-narrative_ontology:cs_authority_grounding(study_as_occupation, lineage).
-narrative_ontology:cs_interpretation_layer_present(study_as_occupation).
+narrative_ontology:cs_story_uid(study_as_occupation, '9466cd50-bb6e-4781-a6b1-a36a20574ce4').
+narrative_ontology:cs_created_at('9466cd50-bb6e-4781-a6b1-a36a20574ce4', '').
+narrative_ontology:cs_kernel_codification('9466cd50-bb6e-4781-a6b1-a36a20574ce4', formalized).
+narrative_ontology:cs_authority_grounding('9466cd50-bb6e-4781-a6b1-a36a20574ce4', lineage).
+narrative_ontology:cs_interpretation_layer_present('9466cd50-bb6e-4781-a6b1-a36a20574ce4').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(study_as_occupation, rabbinic_authority).

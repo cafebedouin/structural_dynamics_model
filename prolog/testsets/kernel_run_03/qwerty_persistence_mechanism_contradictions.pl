@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(dvorak_performance_negligible, path_dependence_explains_persistence).
 narrative_ontology:cs_axiom_contradiction(path_dependence_explains_persistence, dvorak_performance_negligible).
+narrative_ontology:cs_story_uid(qwerty_persistence_mechanism_contradictions, '7e6dfb1c-5557-464d-a154-934415c363a1').
+narrative_ontology:cs_created_at('7e6dfb1c-5557-464d-a154-934415c363a1', '').

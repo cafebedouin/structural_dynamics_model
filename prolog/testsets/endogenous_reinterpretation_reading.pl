@@ -119,20 +119,22 @@ narrative_ontology:human_readable(endogenous_reinterpretation_reading, "The 1890
 narrative_ontology:topic_domain(endogenous_reinterpretation_reading, "religious_institutional_history/commitment_systems").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(endogenous_reinterpretation_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(endogenous_reinterpretation_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(endogenous_reinterpretation_reading).
+narrative_ontology:cs_story_uid(endogenous_reinterpretation_reading, '1849009b-a504-40d9-83be-f635b173fc5a').
+narrative_ontology:cs_created_at('1849009b-a504-40d9-83be-f635b173fc5a', '').
+narrative_ontology:cs_kernel_codification('1849009b-a504-40d9-83be-f635b173fc5a', fixed_text).
+narrative_ontology:cs_authority_grounding('1849009b-a504-40d9-83be-f635b173fc5a', lineage).
+narrative_ontology:cs_interpretation_layer_present('1849009b-a504-40d9-83be-f635b173fc5a').
 narrative_ontology:cs_kernel_id(endogenous_reinterpretation_reading, plural_marriage_mandate).
-narrative_ontology:cs_reading_relation(endogenous_reinterpretation_reading, exogenous_override_reading, coexists_with).
-narrative_ontology:cs_reading_relation(endogenous_reinterpretation_reading, institutional_pragmatism_reading, coexists_with).
-narrative_ontology:cs_axiom(endogenous_reinterpretation_reading, foundational, prophetic_succession_authority_remains_valid).
+narrative_ontology:cs_reading_relation('1849009b-a504-40d9-83be-f635b173fc5a', exogenous_override_reading, coexists_with).
+narrative_ontology:cs_reading_relation('1849009b-a504-40d9-83be-f635b173fc5a', institutional_pragmatism_reading, coexists_with).
+narrative_ontology:cs_axiom('1849009b-a504-40d9-83be-f635b173fc5a', foundational, prophetic_succession_authority_remains_valid).
 narrative_ontology:cs_axiom_status(prophetic_succession_authority_remains_valid, holdable).
-narrative_ontology:cs_axiom_grounding(endogenous_reinterpretation_reading, prophetic_succession_authority_remains_valid, conventional).
-narrative_ontology:cs_axiom(endogenous_reinterpretation_reading, foundational, doctrine_contingent_on_historical_conditions).
+narrative_ontology:cs_axiom_grounding('1849009b-a504-40d9-83be-f635b173fc5a', prophetic_succession_authority_remains_valid, conventional).
+narrative_ontology:cs_axiom('1849009b-a504-40d9-83be-f635b173fc5a', foundational, doctrine_contingent_on_historical_conditions).
 narrative_ontology:cs_axiom_status(doctrine_contingent_on_historical_conditions, holdable).
-narrative_ontology:cs_axiom_grounding(endogenous_reinterpretation_reading, doctrine_contingent_on_historical_conditions, instrumental).
-narrative_ontology:cs_reference_frame(endogenous_reinterpretation_reading, living_prophetic_authority_framework).
-narrative_ontology:cs_drift_state(endogenous_reinterpretation_reading, contemporary_post_manifesto_era, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_axiom_grounding('1849009b-a504-40d9-83be-f635b173fc5a', doctrine_contingent_on_historical_conditions, instrumental).
+narrative_ontology:cs_reference_frame('1849009b-a504-40d9-83be-f635b173fc5a', living_prophetic_authority_framework).
+narrative_ontology:cs_drift_state('1849009b-a504-40d9-83be-f635b173fc5a', contemporary_post_manifesto_era, gap(practice_drift, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(endogenous_reinterpretation_reading, institutional_church).

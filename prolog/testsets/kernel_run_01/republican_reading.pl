@@ -120,18 +120,20 @@ narrative_ontology:topic_domain(republican_reading, "political_theory/constituti
 domain_priors:requires_active_enforcement(republican_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(republican_reading, formalized).
-narrative_ontology:cs_authority_grounding(republican_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(republican_reading).
+narrative_ontology:cs_story_uid(republican_reading, 'b76d06c7-d300-42fe-95a7-d5fbe7070ad9').
+narrative_ontology:cs_created_at('b76d06c7-d300-42fe-95a7-d5fbe7070ad9', '').
+narrative_ontology:cs_kernel_codification('b76d06c7-d300-42fe-95a7-d5fbe7070ad9', formalized).
+narrative_ontology:cs_authority_grounding('b76d06c7-d300-42fe-95a7-d5fbe7070ad9', extraction).
+narrative_ontology:cs_interpretation_layer_present('b76d06c7-d300-42fe-95a7-d5fbe7070ad9').
 narrative_ontology:cs_kernel_id(republican_reading, sovereign_legitimacy).
-narrative_ontology:cs_reading_relation(republican_reading, monarchical_reading, forecloses).
-narrative_ontology:cs_reading_relation(republican_reading, constitutional_hybrid_reading, coexists_with).
-narrative_ontology:cs_axiom(republican_reading, foundational, popular_consent_necessary_for_legitimacy).
+narrative_ontology:cs_reading_relation('b76d06c7-d300-42fe-95a7-d5fbe7070ad9', monarchical_reading, forecloses).
+narrative_ontology:cs_reading_relation('b76d06c7-d300-42fe-95a7-d5fbe7070ad9', constitutional_hybrid_reading, coexists_with).
+narrative_ontology:cs_axiom('b76d06c7-d300-42fe-95a7-d5fbe7070ad9', foundational, popular_consent_necessary_for_legitimacy).
 narrative_ontology:cs_axiom_status(popular_consent_necessary_for_legitimacy, holdable).
-narrative_ontology:cs_axiom(republican_reading, foundational, hereditary_succession_incompatible_with_republicanism).
+narrative_ontology:cs_axiom('b76d06c7-d300-42fe-95a7-d5fbe7070ad9', foundational, hereditary_succession_incompatible_with_republicanism).
 narrative_ontology:cs_axiom_status(hereditary_succession_incompatible_with_republicanism, holdable).
-narrative_ontology:cs_reference_frame(republican_reading, popular_sovereign_legitimacy).
-narrative_ontology:cs_drift_state(republican_reading, contemporary_liberal_democracy, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_reference_frame('b76d06c7-d300-42fe-95a7-d5fbe7070ad9', popular_sovereign_legitimacy).
+narrative_ontology:cs_drift_state('b76d06c7-d300-42fe-95a7-d5fbe7070ad9', contemporary_liberal_democracy, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(republican_reading, electorate_as_sovereign).

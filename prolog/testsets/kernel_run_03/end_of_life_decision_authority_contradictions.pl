@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(rational_agency_sovereignty_principle, human_life_intrinsic_value).
 narrative_ontology:cs_axiom_contradiction(human_life_intrinsic_value, rational_agency_sovereignty_principle).
+narrative_ontology:cs_story_uid(end_of_life_decision_authority_contradictions, 'b585adeb-7998-4721-b22d-70d1b0170bc2').
+narrative_ontology:cs_created_at('b585adeb-7998-4721-b22d-70d1b0170bc2', '').

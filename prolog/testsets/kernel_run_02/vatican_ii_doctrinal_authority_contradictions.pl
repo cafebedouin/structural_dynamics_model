@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(vatican_ii_as_necessary_rupture, vatican_ii_contains_substantive_rupture).
 narrative_ontology:cs_axiom_contradiction(vatican_ii_contains_substantive_rupture, vatican_ii_as_necessary_rupture).
+narrative_ontology:cs_story_uid(vatican_ii_doctrinal_authority_contradictions, '0a836736-f03e-4467-9aa1-214a66a6c767').
+narrative_ontology:cs_created_at('0a836736-f03e-4467-9aa1-214a66a6c767', '').

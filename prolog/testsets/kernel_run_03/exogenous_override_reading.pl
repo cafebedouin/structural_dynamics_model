@@ -119,20 +119,22 @@ narrative_ontology:topic_domain(exogenous_override_reading, "political_history/s
 domain_priors:requires_active_enforcement(exogenous_override_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(exogenous_override_reading, formalized).
-narrative_ontology:cs_authority_grounding(exogenous_override_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(exogenous_override_reading).
+narrative_ontology:cs_story_uid(exogenous_override_reading, '9d4715ea-c2cf-44c9-ba6d-4d23ecf3bcf7').
+narrative_ontology:cs_created_at('9d4715ea-c2cf-44c9-ba6d-4d23ecf3bcf7', '').
+narrative_ontology:cs_kernel_codification('9d4715ea-c2cf-44c9-ba6d-4d23ecf3bcf7', formalized).
+narrative_ontology:cs_authority_grounding('9d4715ea-c2cf-44c9-ba6d-4d23ecf3bcf7', extraction).
+narrative_ontology:cs_interpretation_layer_present('9d4715ea-c2cf-44c9-ba6d-4d23ecf3bcf7').
 narrative_ontology:cs_kernel_id(exogenous_override_reading, legitimacy_of_imposed_practice).
-narrative_ontology:cs_reading_relation(exogenous_override_reading, endogenous_climb_reading, forecloses).
-narrative_ontology:cs_reading_relation(exogenous_override_reading, hybrid_scaffolding_reading, influences).
-narrative_ontology:cs_axiom(exogenous_override_reading, foundational, decree_sufficiency_without_internalization).
+narrative_ontology:cs_reading_relation('9d4715ea-c2cf-44c9-ba6d-4d23ecf3bcf7', endogenous_climb_reading, forecloses).
+narrative_ontology:cs_reading_relation('9d4715ea-c2cf-44c9-ba6d-4d23ecf3bcf7', hybrid_scaffolding_reading, influences).
+narrative_ontology:cs_axiom('9d4715ea-c2cf-44c9-ba6d-4d23ecf3bcf7', foundational, decree_sufficiency_without_internalization).
 narrative_ontology:cs_axiom_status(decree_sufficiency_without_internalization, holdable).
-narrative_ontology:cs_axiom_grounding(exogenous_override_reading, decree_sufficiency_without_internalization, empirically_contingent).
-narrative_ontology:cs_axiom(exogenous_override_reading, foundational, enforcement_mechanism_primary_displacement_vector).
+narrative_ontology:cs_axiom_grounding('9d4715ea-c2cf-44c9-ba6d-4d23ecf3bcf7', decree_sufficiency_without_internalization, empirically_contingent).
+narrative_ontology:cs_axiom('9d4715ea-c2cf-44c9-ba6d-4d23ecf3bcf7', foundational, enforcement_mechanism_primary_displacement_vector).
 narrative_ontology:cs_axiom_status(enforcement_mechanism_primary_displacement_vector, holdable).
-narrative_ontology:cs_axiom_grounding(exogenous_override_reading, enforcement_mechanism_primary_displacement_vector, instrumental).
-narrative_ontology:cs_reference_frame(exogenous_override_reading, state_legal_supremacy_framework).
-narrative_ontology:cs_drift_state(exogenous_override_reading, contemporary_postcolonial_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('9d4715ea-c2cf-44c9-ba6d-4d23ecf3bcf7', enforcement_mechanism_primary_displacement_vector, instrumental).
+narrative_ontology:cs_reference_frame('9d4715ea-c2cf-44c9-ba6d-4d23ecf3bcf7', state_legal_supremacy_framework).
+narrative_ontology:cs_drift_state('9d4715ea-c2cf-44c9-ba6d-4d23ecf3bcf7', contemporary_postcolonial_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(exogenous_override_reading, state_modernization_apparatus).

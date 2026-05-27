@@ -115,19 +115,21 @@ narrative_ontology:human_readable(freedom_floor_reading, "Unconditional Income S
 narrative_ontology:topic_domain(freedom_floor_reading, "political_economy/social_policy/welfare_state_theory").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(freedom_floor_reading, formalized).
-narrative_ontology:cs_authority_grounding(freedom_floor_reading, distributed).
+narrative_ontology:cs_story_uid(freedom_floor_reading, '6cebd1a4-d496-4e4e-b000-6d2f994efb6e').
+narrative_ontology:cs_created_at('6cebd1a4-d496-4e4e-b000-6d2f994efb6e', '').
+narrative_ontology:cs_kernel_codification('6cebd1a4-d496-4e4e-b000-6d2f994efb6e', formalized).
+narrative_ontology:cs_authority_grounding('6cebd1a4-d496-4e4e-b000-6d2f994efb6e', distributed).
 narrative_ontology:cs_kernel_id(freedom_floor_reading, unconditional_income_support).
-narrative_ontology:cs_reading_relation(freedom_floor_reading, dependency_trap_reading, coexists_with).
-narrative_ontology:cs_reading_relation(freedom_floor_reading, universality_paradox_reading, influences).
-narrative_ontology:cs_axiom(freedom_floor_reading, foundational, labor_coercion_via_subsistence_is_primary_constraint).
+narrative_ontology:cs_reading_relation('6cebd1a4-d496-4e4e-b000-6d2f994efb6e', dependency_trap_reading, coexists_with).
+narrative_ontology:cs_reading_relation('6cebd1a4-d496-4e4e-b000-6d2f994efb6e', universality_paradox_reading, influences).
+narrative_ontology:cs_axiom('6cebd1a4-d496-4e4e-b000-6d2f994efb6e', foundational, labor_coercion_via_subsistence_is_primary_constraint).
 narrative_ontology:cs_axiom_status(labor_coercion_via_subsistence_is_primary_constraint, holdable).
-narrative_ontology:cs_axiom_grounding(freedom_floor_reading, labor_coercion_via_subsistence_is_primary_constraint, empirically_contingent).
-narrative_ontology:cs_axiom(freedom_floor_reading, foundational, autonomy_measures_exit_freedom_from_coercion_not_self_sufficiency).
+narrative_ontology:cs_axiom_grounding('6cebd1a4-d496-4e4e-b000-6d2f994efb6e', labor_coercion_via_subsistence_is_primary_constraint, empirically_contingent).
+narrative_ontology:cs_axiom('6cebd1a4-d496-4e4e-b000-6d2f994efb6e', foundational, autonomy_measures_exit_freedom_from_coercion_not_self_sufficiency).
 narrative_ontology:cs_axiom_status(autonomy_measures_exit_freedom_from_coercion_not_self_sufficiency, holdable).
-narrative_ontology:cs_axiom_grounding(freedom_floor_reading, autonomy_measures_exit_freedom_from_coercion_not_self_sufficiency, deontological).
-narrative_ontology:cs_reference_frame(freedom_floor_reading, voluntary_labor_participation).
-narrative_ontology:cs_drift_state(freedom_floor_reading, contemporary_labor_market_era, gap(stable, minor, true)).
+narrative_ontology:cs_axiom_grounding('6cebd1a4-d496-4e4e-b000-6d2f994efb6e', autonomy_measures_exit_freedom_from_coercion_not_self_sufficiency, deontological).
+narrative_ontology:cs_reference_frame('6cebd1a4-d496-4e4e-b000-6d2f994efb6e', voluntary_labor_participation).
+narrative_ontology:cs_drift_state('6cebd1a4-d496-4e4e-b000-6d2f994efb6e', contemporary_labor_market_era, gap(stable, minor, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(freedom_floor_reading, precarious_workers).

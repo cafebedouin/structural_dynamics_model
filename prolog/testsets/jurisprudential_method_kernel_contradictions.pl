@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(reason_as_legitimate_extension_tool, qiyas_is_bid_ah).
 narrative_ontology:cs_axiom_contradiction(qiyas_is_bid_ah, reason_as_legitimate_extension_tool).
+narrative_ontology:cs_story_uid(jurisprudential_method_kernel_contradictions, '2da85e40-666c-413a-9f16-7f81e2f51068').
+narrative_ontology:cs_created_at('2da85e40-666c-413a-9f16-7f81e2f51068', '').

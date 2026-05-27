@@ -125,20 +125,22 @@ narrative_ontology:topic_domain(constitutional_hybrid_reading, "political_philos
 domain_priors:requires_active_enforcement(constitutional_hybrid_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(constitutional_hybrid_reading, formalized).
-narrative_ontology:cs_authority_grounding(constitutional_hybrid_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(constitutional_hybrid_reading).
+narrative_ontology:cs_story_uid(constitutional_hybrid_reading, '00f15064-710b-459a-9ddd-799e38bf459a').
+narrative_ontology:cs_created_at('00f15064-710b-459a-9ddd-799e38bf459a', '').
+narrative_ontology:cs_kernel_codification('00f15064-710b-459a-9ddd-799e38bf459a', formalized).
+narrative_ontology:cs_authority_grounding('00f15064-710b-459a-9ddd-799e38bf459a', lineage).
+narrative_ontology:cs_interpretation_layer_present('00f15064-710b-459a-9ddd-799e38bf459a').
 narrative_ontology:cs_kernel_id(constitutional_hybrid_reading, sovereign_legitimacy).
-narrative_ontology:cs_reading_relation(constitutional_hybrid_reading, monarchical_reading, influences).
-narrative_ontology:cs_reading_relation(constitutional_hybrid_reading, republican_reading, influences).
-narrative_ontology:cs_axiom(constitutional_hybrid_reading, foundational, dual_sourcing_legitimate).
+narrative_ontology:cs_reading_relation('00f15064-710b-459a-9ddd-799e38bf459a', monarchical_reading, influences).
+narrative_ontology:cs_reading_relation('00f15064-710b-459a-9ddd-799e38bf459a', republican_reading, influences).
+narrative_ontology:cs_axiom('00f15064-710b-459a-9ddd-799e38bf459a', foundational, dual_sourcing_legitimate).
 narrative_ontology:cs_axiom_status(dual_sourcing_legitimate, holdable).
-narrative_ontology:cs_axiom_grounding(constitutional_hybrid_reading, dual_sourcing_legitimate, deontological).
-narrative_ontology:cs_axiom(constitutional_hybrid_reading, foundational, constitutional_boundary_stability).
+narrative_ontology:cs_axiom_grounding('00f15064-710b-459a-9ddd-799e38bf459a', dual_sourcing_legitimate, deontological).
+narrative_ontology:cs_axiom('00f15064-710b-459a-9ddd-799e38bf459a', foundational, constitutional_boundary_stability).
 narrative_ontology:cs_axiom_status(constitutional_boundary_stability, holdable).
-narrative_ontology:cs_axiom_grounding(constitutional_hybrid_reading, constitutional_boundary_stability, instrumental).
-narrative_ontology:cs_reference_frame(constitutional_hybrid_reading, separated_authorities_constitutional_mediation).
-narrative_ontology:cs_drift_state(constitutional_hybrid_reading, contemporary_legitimacy_challenge, gap(authority_erosion, substantial, true)).
+narrative_ontology:cs_axiom_grounding('00f15064-710b-459a-9ddd-799e38bf459a', constitutional_boundary_stability, instrumental).
+narrative_ontology:cs_reference_frame('00f15064-710b-459a-9ddd-799e38bf459a', separated_authorities_constitutional_mediation).
+narrative_ontology:cs_drift_state('00f15064-710b-459a-9ddd-799e38bf459a', contemporary_legitimacy_challenge, gap(authority_erosion, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(constitutional_hybrid_reading, hereditary_monarch).

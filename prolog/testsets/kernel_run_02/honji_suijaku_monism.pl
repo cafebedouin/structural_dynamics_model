@@ -121,20 +121,22 @@ narrative_ontology:topic_domain(honji_suijaku_monism, "religious_studies/philoso
 domain_priors:requires_active_enforcement(honji_suijaku_monism).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(honji_suijaku_monism, formalized).
-narrative_ontology:cs_authority_grounding(honji_suijaku_monism, lineage).
-narrative_ontology:cs_interpretation_layer_present(honji_suijaku_monism).
+narrative_ontology:cs_story_uid(honji_suijaku_monism, 'f639f4b1-2a7d-46fe-af23-38fba1a690e8').
+narrative_ontology:cs_created_at('f639f4b1-2a7d-46fe-af23-38fba1a690e8', '').
+narrative_ontology:cs_kernel_codification('f639f4b1-2a7d-46fe-af23-38fba1a690e8', formalized).
+narrative_ontology:cs_authority_grounding('f639f4b1-2a7d-46fe-af23-38fba1a690e8', lineage).
+narrative_ontology:cs_interpretation_layer_present('f639f4b1-2a7d-46fe-af23-38fba1a690e8').
 narrative_ontology:cs_kernel_id(honji_suijaku_monism, kami_buddha_ontology).
-narrative_ontology:cs_reading_relation(honji_suijaku_monism, kami_buddha_domain_partition, coexists_with).
-narrative_ontology:cs_reading_relation(honji_suijaku_monism, kami_buddha_incoherent_bundle, influences).
-narrative_ontology:cs_axiom(honji_suijaku_monism, foundational, single_ultimate_reality_principle).
+narrative_ontology:cs_reading_relation('f639f4b1-2a7d-46fe-af23-38fba1a690e8', kami_buddha_domain_partition, coexists_with).
+narrative_ontology:cs_reading_relation('f639f4b1-2a7d-46fe-af23-38fba1a690e8', kami_buddha_incoherent_bundle, influences).
+narrative_ontology:cs_axiom('f639f4b1-2a7d-46fe-af23-38fba1a690e8', foundational, single_ultimate_reality_principle).
 narrative_ontology:cs_axiom_status(single_ultimate_reality_principle, holdable).
-narrative_ontology:cs_axiom_grounding(honji_suijaku_monism, single_ultimate_reality_principle, deontological).
-narrative_ontology:cs_axiom(honji_suijaku_monism, foundational, manifestation_hierarchy_asymmetry).
+narrative_ontology:cs_axiom_grounding('f639f4b1-2a7d-46fe-af23-38fba1a690e8', single_ultimate_reality_principle, deontological).
+narrative_ontology:cs_axiom('f639f4b1-2a7d-46fe-af23-38fba1a690e8', foundational, manifestation_hierarchy_asymmetry).
 narrative_ontology:cs_axiom_status(manifestation_hierarchy_asymmetry, holdable).
-narrative_ontology:cs_axiom_grounding(honji_suijaku_monism, manifestation_hierarchy_asymmetry, conventional).
-narrative_ontology:cs_reference_frame(honji_suijaku_monism, unified_buddhist_ontological_authority).
-narrative_ontology:cs_drift_state(honji_suijaku_monism, contemporary_sectarian_revival, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('f639f4b1-2a7d-46fe-af23-38fba1a690e8', manifestation_hierarchy_asymmetry, conventional).
+narrative_ontology:cs_reference_frame('f639f4b1-2a7d-46fe-af23-38fba1a690e8', unified_buddhist_ontological_authority).
+narrative_ontology:cs_drift_state('f639f4b1-2a7d-46fe-af23-38fba1a690e8', contemporary_sectarian_revival, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(honji_suijaku_monism, buddhist_institutional_authority).

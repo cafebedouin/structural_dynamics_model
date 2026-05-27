@@ -12,3 +12,5 @@ narrative_ontology:cs_axiom_contradiction(murder_forfeits_moral_status, inaliena
 narrative_ontology:cs_axiom_contradiction(inalienability_categorical, murder_forfeits_moral_status).
 narrative_ontology:cs_axiom_contradiction(deterrence_empirically_contingent_legitimacy, inalienability_categorical).
 narrative_ontology:cs_axiom_contradiction(inalienability_categorical, deterrence_empirically_contingent_legitimacy).
+narrative_ontology:cs_story_uid(state_killing_authority_contradictions, '48c48b97-f129-44d4-a12f-683298d52f90').
+narrative_ontology:cs_created_at('48c48b97-f129-44d4-a12f-683298d52f90', '').

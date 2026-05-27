@@ -125,20 +125,22 @@ narrative_ontology:topic_domain(sovereignty_primary, "political_philosophy/inter
 domain_priors:requires_active_enforcement(sovereignty_primary).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(sovereignty_primary, formalized).
-narrative_ontology:cs_authority_grounding(sovereignty_primary, lineage).
-narrative_ontology:cs_interpretation_layer_present(sovereignty_primary).
+narrative_ontology:cs_story_uid(sovereignty_primary, '97cfa93a-3de6-43f4-8e1b-4cf9d3c0eff3').
+narrative_ontology:cs_created_at('97cfa93a-3de6-43f4-8e1b-4cf9d3c0eff3', '').
+narrative_ontology:cs_kernel_codification('97cfa93a-3de6-43f4-8e1b-4cf9d3c0eff3', formalized).
+narrative_ontology:cs_authority_grounding('97cfa93a-3de6-43f4-8e1b-4cf9d3c0eff3', lineage).
+narrative_ontology:cs_interpretation_layer_present('97cfa93a-3de6-43f4-8e1b-4cf9d3c0eff3').
 narrative_ontology:cs_kernel_id(sovereignty_primary, border_normative_status).
-narrative_ontology:cs_reading_relation(sovereignty_primary, freedom_primary, coexists_with).
-narrative_ontology:cs_reading_relation(sovereignty_primary, qualified_sovereignty, coexists_with).
-narrative_ontology:cs_axiom(sovereignty_primary, foundational, territorial_closure_prerequisite_for_self_determination).
+narrative_ontology:cs_reading_relation('97cfa93a-3de6-43f4-8e1b-4cf9d3c0eff3', freedom_primary, coexists_with).
+narrative_ontology:cs_reading_relation('97cfa93a-3de6-43f4-8e1b-4cf9d3c0eff3', qualified_sovereignty, coexists_with).
+narrative_ontology:cs_axiom('97cfa93a-3de6-43f4-8e1b-4cf9d3c0eff3', foundational, territorial_closure_prerequisite_for_self_determination).
 narrative_ontology:cs_axiom_status(territorial_closure_prerequisite_for_self_determination, holdable).
-narrative_ontology:cs_axiom_grounding(sovereignty_primary, territorial_closure_prerequisite_for_self_determination, deontological).
-narrative_ontology:cs_axiom(sovereignty_primary, foundational, state_authority_to_exclude_non_members).
+narrative_ontology:cs_axiom_grounding('97cfa93a-3de6-43f4-8e1b-4cf9d3c0eff3', territorial_closure_prerequisite_for_self_determination, deontological).
+narrative_ontology:cs_axiom('97cfa93a-3de6-43f4-8e1b-4cf9d3c0eff3', foundational, state_authority_to_exclude_non_members).
 narrative_ontology:cs_axiom_status(state_authority_to_exclude_non_members, holdable).
-narrative_ontology:cs_axiom_grounding(sovereignty_primary, state_authority_to_exclude_non_members, deontological).
-narrative_ontology:cs_reference_frame(sovereignty_primary, territorial_sovereignty_westphalian).
-narrative_ontology:cs_drift_state(sovereignty_primary, contemporary_migration_crisis, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('97cfa93a-3de6-43f4-8e1b-4cf9d3c0eff3', state_authority_to_exclude_non_members, deontological).
+narrative_ontology:cs_reference_frame('97cfa93a-3de6-43f4-8e1b-4cf9d3c0eff3', territorial_sovereignty_westphalian).
+narrative_ontology:cs_drift_state('97cfa93a-3de6-43f4-8e1b-4cf9d3c0eff3', contemporary_migration_crisis, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(sovereignty_primary, citizen_body).

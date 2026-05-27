@@ -128,20 +128,22 @@ narrative_ontology:topic_domain(living_drift_reading, "historical_linguistics/ph
 domain_priors:requires_active_enforcement(living_drift_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(living_drift_reading, distributed).
-narrative_ontology:cs_authority_grounding(living_drift_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(living_drift_reading).
+narrative_ontology:cs_story_uid(living_drift_reading, '1c48adb1-f5c0-4c1b-81c8-80f741e14826').
+narrative_ontology:cs_created_at('1c48adb1-f5c0-4c1b-81c8-80f741e14826', '').
+narrative_ontology:cs_kernel_codification('1c48adb1-f5c0-4c1b-81c8-80f741e14826', distributed).
+narrative_ontology:cs_authority_grounding('1c48adb1-f5c0-4c1b-81c8-80f741e14826', lineage).
+narrative_ontology:cs_interpretation_layer_present('1c48adb1-f5c0-4c1b-81c8-80f741e14826').
 narrative_ontology:cs_kernel_id(living_drift_reading, latin_correctness).
-narrative_ontology:cs_reading_relation(living_drift_reading, textual_recovery_reading, coexists_with).
-narrative_ontology:cs_reading_relation(living_drift_reading, hybrid_adequacy_reading, influences).
-narrative_ontology:cs_axiom(living_drift_reading, foundational, usage_is_norma_loquendi).
+narrative_ontology:cs_reading_relation('1c48adb1-f5c0-4c1b-81c8-80f741e14826', textual_recovery_reading, coexists_with).
+narrative_ontology:cs_reading_relation('1c48adb1-f5c0-4c1b-81c8-80f741e14826', hybrid_adequacy_reading, influences).
+narrative_ontology:cs_axiom('1c48adb1-f5c0-4c1b-81c8-80f741e14826', foundational, usage_is_norma_loquendi).
 narrative_ontology:cs_axiom_status(usage_is_norma_loquendi, holdable).
-narrative_ontology:cs_axiom_grounding(living_drift_reading, usage_is_norma_loquendi, empirically_contingent).
-narrative_ontology:cs_axiom(living_drift_reading, foundational, institutional_practice_constitutes_competence).
+narrative_ontology:cs_axiom_grounding('1c48adb1-f5c0-4c1b-81c8-80f741e14826', usage_is_norma_loquendi, empirically_contingent).
+narrative_ontology:cs_axiom('1c48adb1-f5c0-4c1b-81c8-80f741e14826', foundational, institutional_practice_constitutes_competence).
 narrative_ontology:cs_axiom_status(institutional_practice_constitutes_competence, holdable).
-narrative_ontology:cs_axiom_grounding(living_drift_reading, institutional_practice_constitutes_competence, conventional).
-narrative_ontology:cs_reference_frame(living_drift_reading, medieval_clerical_practice_standard).
-narrative_ontology:cs_drift_state(living_drift_reading, renaissance_humanist_challenge, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('1c48adb1-f5c0-4c1b-81c8-80f741e14826', institutional_practice_constitutes_competence, conventional).
+narrative_ontology:cs_reference_frame('1c48adb1-f5c0-4c1b-81c8-80f741e14826', medieval_clerical_practice_standard).
+narrative_ontology:cs_drift_state('1c48adb1-f5c0-4c1b-81c8-80f741e14826', renaissance_humanist_challenge, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(living_drift_reading, practicing_scholars).

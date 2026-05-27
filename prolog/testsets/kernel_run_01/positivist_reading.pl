@@ -130,18 +130,20 @@ narrative_ontology:topic_domain(positivist_reading, "constitutional_law/legal_ph
 domain_priors:requires_active_enforcement(positivist_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(positivist_reading, formalized).
-narrative_ontology:cs_authority_grounding(positivist_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(positivist_reading).
+narrative_ontology:cs_story_uid(positivist_reading, 'ccd8855b-1b7f-4563-8255-2a89e4331edd').
+narrative_ontology:cs_created_at('ccd8855b-1b7f-4563-8255-2a89e4331edd', '').
+narrative_ontology:cs_kernel_codification('ccd8855b-1b7f-4563-8255-2a89e4331edd', formalized).
+narrative_ontology:cs_authority_grounding('ccd8855b-1b7f-4563-8255-2a89e4331edd', extraction).
+narrative_ontology:cs_interpretation_layer_present('ccd8855b-1b7f-4563-8255-2a89e4331edd').
 narrative_ontology:cs_kernel_id(positivist_reading, constitutional_text_authority).
-narrative_ontology:cs_reading_relation(positivist_reading, originalist_reading, coexists_with).
-narrative_ontology:cs_reading_relation(positivist_reading, living_constitutionalist_reading, coexists_with).
-narrative_ontology:cs_axiom(positivist_reading, foundational, law_morality_distinction_exhaustive).
+narrative_ontology:cs_reading_relation('ccd8855b-1b7f-4563-8255-2a89e4331edd', originalist_reading, coexists_with).
+narrative_ontology:cs_reading_relation('ccd8855b-1b7f-4563-8255-2a89e4331edd', living_constitutionalist_reading, coexists_with).
+narrative_ontology:cs_axiom('ccd8855b-1b7f-4563-8255-2a89e4331edd', foundational, law_morality_distinction_exhaustive).
 narrative_ontology:cs_axiom_status(law_morality_distinction_exhaustive, holdable).
-narrative_ontology:cs_axiom(positivist_reading, foundational, institutional_source_validity_criterion).
+narrative_ontology:cs_axiom('ccd8855b-1b7f-4563-8255-2a89e4331edd', foundational, institutional_source_validity_criterion).
 narrative_ontology:cs_axiom_status(institutional_source_validity_criterion, holdable).
-narrative_ontology:cs_reference_frame(positivist_reading, institutional_legal_positivism).
-narrative_ontology:cs_drift_state(positivist_reading, contemporary_jurisprudential_consensus, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('ccd8855b-1b7f-4563-8255-2a89e4331edd', institutional_legal_positivism).
+narrative_ontology:cs_drift_state('ccd8855b-1b7f-4563-8255-2a89e4331edd', contemporary_jurisprudential_consensus, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(positivist_reading, institutional_legal_authority).

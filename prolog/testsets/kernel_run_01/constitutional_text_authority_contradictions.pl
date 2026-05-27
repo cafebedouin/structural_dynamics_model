@@ -12,3 +12,5 @@ narrative_ontology:cs_axiom_contradiction(meaning_fixed_at_ratification, constit
 narrative_ontology:cs_axiom_contradiction(constitutional_meaning_evolves_with_moral_understanding, meaning_fixed_at_ratification).
 narrative_ontology:cs_axiom_contradiction(law_morality_distinction_exhaustive, constitutional_meaning_evolves_with_moral_understanding).
 narrative_ontology:cs_axiom_contradiction(constitutional_meaning_evolves_with_moral_understanding, law_morality_distinction_exhaustive).
+narrative_ontology:cs_story_uid(constitutional_text_authority_contradictions, '38d45011-1b99-4209-b4de-f0c3fe99847d').
+narrative_ontology:cs_created_at('38d45011-1b99-4209-b4de-f0c3fe99847d', '').

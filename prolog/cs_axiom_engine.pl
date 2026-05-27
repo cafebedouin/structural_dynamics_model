@@ -21,8 +21,9 @@
 %   cs_axiom_inconsistent/2 (C, Pair) — Type B finding.
 %     Fires when one constraint holds both sides of a declared contradiction.
 %
-%   cs_kernel_axiom_conflict/4 (K, C1, C2, Pair) — cross-reading finding.
+%   cs_kernel_axiom_conflict/4 (K, UID1-C1, UID2-C2, Pair) — cross-reading finding.
 %     Fires when two readings of the same kernel hold contradictory axioms.
+%     UID-keyed: UID1 @< UID2 ordering distinguishes instances sharing a name.
 %     This is a FINDING, not an error — contested kernels SHOULD exhibit axiom
 %     conflicts; that is the structural signature of a genuine reading contest.
 %
@@ -99,12 +100,12 @@ cs_axiom_inconsistent(C, Atom1-Atom2) :-
 %    forecloses edge, no contradiction declared           → structural pressure only
 %  If contradiction were derived from forecloses, licensed plurality would be
 %  structurally impossible and the negative case would be unreachable.
-cs_kernel_axiom_conflict(K, C1, C2, Atom1-Atom2) :-
-    cs_kernel_registry:cs_readings_for_kernel(K, Readings),
-    member(C1, Readings), member(C2, Readings), C1 @< C2,
+cs_kernel_axiom_conflict(K, UID1-C1, UID2-C2, Atom1-Atom2) :-
+    cs_kernel_registry:cs_readings_for_kernel(K, Pairs),
+    member(UID1-C1, Pairs), member(UID2-C2, Pairs), UID1 @< UID2,
     once((
-        narrative_ontology:cs_axiom(C1, _, Atom1),
-        narrative_ontology:cs_axiom(C2, _, Atom2),
+        narrative_ontology:cs_axiom(UID1, _, Atom1),
+        narrative_ontology:cs_axiom(UID2, _, Atom2),
         (   narrative_ontology:cs_axiom_contradiction(Atom1, Atom2)
         ;   narrative_ontology:cs_axiom_contradiction(Atom2, Atom1)
         )
@@ -128,12 +129,13 @@ cs_kernel_axiom_conflict(K, C1, C2, Atom1-Atom2) :-
    and does not constitute the evidential weight needed for foreclosure routing.
    ================================================================ */
 
-%% cs_axiom_foreclosed(+C, -Atom)
-%  Computed (NOT authored). Atom is foreclosed-for-classification in reading C when:
-%  its grounding is empirically_contingent AND C's drift is axiom_overriding +
+%% cs_axiom_foreclosed(+UID, -Atom)
+%  Computed (NOT authored). Atom is foreclosed-for-classification in reading UID when:
+%  its grounding is empirically_contingent AND UID's drift is axiom_overriding +
 %  non-minor magnitude + unacknowledged.
-cs_axiom_foreclosed(C, Atom) :-
-    narrative_ontology:cs_axiom(C, _, Atom),
-    narrative_ontology:cs_axiom_grounding(C, Atom, empirically_contingent),
-    narrative_ontology:cs_drift_state(C, _, gap(axiom_overriding, Magnitude, false)),
+%  UID is the story_uid surrogate (UUIDv4).
+cs_axiom_foreclosed(UID, Atom) :-
+    narrative_ontology:cs_axiom(UID, _, Atom),
+    narrative_ontology:cs_axiom_grounding(UID, Atom, empirically_contingent),
+    narrative_ontology:cs_drift_state(UID, _, gap(axiom_overriding, Magnitude, false)),
     Magnitude \= minor.

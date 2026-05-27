@@ -84,8 +84,9 @@ cs_trifurcation_profile :-
 
     % 1. Drift trajectory terminal distribution
     format("-- Drift Trajectory Terminal Distribution --~n~n"),
-    findall(C-Terminal,
-            (cs_drift_engine:cs_drift_trajectory(C, _, Terminal), \+ is_list(C)),
+    findall(UID-Terminal,
+            (narrative_ontology:cs_story_uid(C, UID), \+ is_list(C),
+             cs_drift_engine:cs_drift_trajectory(UID, _, Terminal)),
             TrajRaw),
     sort(TrajRaw, TrajUniq),
     findall(T, member(_-T, TrajUniq), TerminalsRaw),
@@ -119,33 +120,33 @@ cs_trifurcation_profile :-
     % 3. Axiom conflict rates (closure vs licensed plurality)
     % K must be bound before cs_kernel_axiom_conflict — same issue as divergence above.
     format("-- Axiom Conflict Rates --~n~n"),
-    findall(K-C1-C2,
+    findall(K-(UID1-C1n)-(UID2-C2n),
             (member(K, AllKernels),
-             cs_axiom_engine:cs_kernel_axiom_conflict(K, C1, C2, _)),
+             cs_axiom_engine:cs_kernel_axiom_conflict(K, UID1-C1n, UID2-C2n, _)),
             ConflictRaw),
     sort(ConflictRaw, ConflictUniq),
     length(ConflictUniq, NConflict),
-    findall(K-C1-C2,
-            (member(K-C1-C2, ConflictUniq),
-             once((narrative_ontology:cs_reading_relation(C1, C2, forecloses)
-                  ;narrative_ontology:cs_reading_relation(C2, C1, forecloses)))),
+    findall(K-(UID1-C1n)-(UID2-C2n),
+            (member(K-(UID1-C1n)-(UID2-C2n), ConflictUniq),
+             once((narrative_ontology:cs_reading_relation(UID1, C2n, forecloses)
+                  ;narrative_ontology:cs_reading_relation(UID2, C1n, forecloses)))),
             ClosureRaw),
     sort(ClosureRaw, ClosureUniq),
     length(ClosureUniq, NClosure),
-    findall(K-C1-C2,
-            (member(K-C1-C2, ConflictUniq),
-             once((narrative_ontology:cs_reading_relation(C1, C2, coexists_with)
-                  ;narrative_ontology:cs_reading_relation(C2, C1, coexists_with)))),
+    findall(K-(UID1p-C1np)-(UID2p-C2np),
+            (member(K-(UID1p-C1np)-(UID2p-C2np), ConflictUniq),
+             once((narrative_ontology:cs_reading_relation(UID1p, C2np, coexists_with)
+                  ;narrative_ontology:cs_reading_relation(UID2p, C1np, coexists_with)))),
             PluralityRaw),
     sort(PluralityRaw, PluralityUniq),
     length(PluralityUniq, NPlurality),
     % "neither" = no forecloses AND no coexists_with edge
-    findall(K-C1-C2,
-            (member(K-C1-C2, ConflictUniq),
-             \+ (narrative_ontology:cs_reading_relation(C1, C2, forecloses)
-                ;narrative_ontology:cs_reading_relation(C2, C1, forecloses)),
-             \+ (narrative_ontology:cs_reading_relation(C1, C2, coexists_with)
-                ;narrative_ontology:cs_reading_relation(C2, C1, coexists_with))),
+    findall(K-(UID1q-C1nq)-(UID2q-C2nq),
+            (member(K-(UID1q-C1nq)-(UID2q-C2nq), ConflictUniq),
+             \+ (narrative_ontology:cs_reading_relation(UID1q, C2nq, forecloses)
+                ;narrative_ontology:cs_reading_relation(UID2q, C1nq, forecloses)),
+             \+ (narrative_ontology:cs_reading_relation(UID1q, C2nq, coexists_with)
+                ;narrative_ontology:cs_reading_relation(UID2q, C1nq, coexists_with))),
             NeitherRaw),
     sort(NeitherRaw, NeitherUniq),
     length(NeitherUniq, NNeither),
@@ -156,23 +157,25 @@ cs_trifurcation_profile :-
 
     % 4. cs_drift_unacknowledged instances
     format("-- cs_drift_unacknowledged Instances --~n~n"),
-    findall(C-Gap,
-            (cs_pattern_detection:cs_drift_unacknowledged(C, Gap), \+ is_list(C)),
+    findall(UID-Gap,
+            (narrative_ontology:cs_story_uid(C, UID), \+ is_list(C),
+             cs_pattern_detection:cs_drift_unacknowledged(UID, Gap)),
             UnackRaw),
     sort(UnackRaw, UnackUniq),
     length(UnackUniq, NUnack),
     (NUnack =:= 0
     ->  format("  None found.~n~n")
     ;   format("  ~w instances:~n", [NUnack]),
-        forall(member(C-Gap, UnackUniq),
-               format("    ~w  ~w~n", [C, Gap])),
+        forall(member(UID-Gap, UnackUniq),
+               format("    ~w  ~w~n", [UID, Gap])),
         nl
     ),
 
     % 5. cs_axiom_foreclosed instances
     format("-- cs_axiom_foreclosed Instances --~n~n"),
-    findall(C-Atom,
-            (cs_axiom_engine:cs_axiom_foreclosed(C, Atom), \+ is_list(C)),
+    findall(UID-Atom,
+            (narrative_ontology:cs_story_uid(C, UID), \+ is_list(C),
+             cs_axiom_engine:cs_axiom_foreclosed(UID, Atom)),
             ForeclosedRaw),
     sort(ForeclosedRaw, ForeclosedUniq),
     length(ForeclosedUniq, NForeclosed),

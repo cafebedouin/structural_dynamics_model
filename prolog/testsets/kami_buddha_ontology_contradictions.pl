@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(buddha_nature_ontological_priority, purity_impurity_ontological_incommensurability).
 narrative_ontology:cs_axiom_contradiction(purity_impurity_ontological_incommensurability, buddha_nature_ontological_priority).
+narrative_ontology:cs_story_uid(kami_buddha_ontology_contradictions, '8be502f9-6953-4976-9b78-8493d403424a').
+narrative_ontology:cs_created_at('8be502f9-6953-4976-9b78-8493d403424a', '').

@@ -123,18 +123,20 @@ narrative_ontology:topic_domain(expected_value_reading, "energy_policy/risk_gove
 domain_priors:requires_active_enforcement(expected_value_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(expected_value_reading, formalized).
-narrative_ontology:cs_authority_grounding(expected_value_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(expected_value_reading).
+narrative_ontology:cs_story_uid(expected_value_reading, '7f9f23c7-1cab-4151-b667-13f4d74b84e1').
+narrative_ontology:cs_created_at('7f9f23c7-1cab-4151-b667-13f4d74b84e1', '').
+narrative_ontology:cs_kernel_codification('7f9f23c7-1cab-4151-b667-13f4d74b84e1', formalized).
+narrative_ontology:cs_authority_grounding('7f9f23c7-1cab-4151-b667-13f4d74b84e1', extraction).
+narrative_ontology:cs_interpretation_layer_present('7f9f23c7-1cab-4151-b667-13f4d74b84e1').
 narrative_ontology:cs_kernel_id(expected_value_reading, acceptable_risk_for_energy).
-narrative_ontology:cs_reading_relation(expected_value_reading, catastrophic_tail_reading, coexists_with).
-narrative_ontology:cs_reading_relation(expected_value_reading, precautionary_reading, coexists_with).
-narrative_ontology:cs_axiom(expected_value_reading, foundational, risk_is_commensurable).
+narrative_ontology:cs_reading_relation('7f9f23c7-1cab-4151-b667-13f4d74b84e1', catastrophic_tail_reading, coexists_with).
+narrative_ontology:cs_reading_relation('7f9f23c7-1cab-4151-b667-13f4d74b84e1', precautionary_reading, coexists_with).
+narrative_ontology:cs_axiom('7f9f23c7-1cab-4151-b667-13f4d74b84e1', foundational, risk_is_commensurable).
 narrative_ontology:cs_axiom_status(risk_is_commensurable, holdable).
-narrative_ontology:cs_axiom(expected_value_reading, foundational, probability_weights_decision_gate).
+narrative_ontology:cs_axiom('7f9f23c7-1cab-4151-b667-13f4d74b84e1', foundational, probability_weights_decision_gate).
 narrative_ontology:cs_axiom_status(probability_weights_decision_gate, holdable).
-narrative_ontology:cs_reference_frame(expected_value_reading, rational_expected_utility_maximization).
-narrative_ontology:cs_drift_state(expected_value_reading, contemporary_energy_policy, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('7f9f23c7-1cab-4151-b667-13f4d74b84e1', rational_expected_utility_maximization).
+narrative_ontology:cs_drift_state('7f9f23c7-1cab-4151-b667-13f4d74b84e1', contemporary_energy_policy, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(expected_value_reading, climate_mitigation_advocates).

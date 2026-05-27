@@ -125,20 +125,22 @@ narrative_ontology:topic_domain(institutional_reallocation_reading, "legal_histo
 domain_priors:requires_active_enforcement(institutional_reallocation_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(institutional_reallocation_reading, formalized).
-narrative_ontology:cs_authority_grounding(institutional_reallocation_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(institutional_reallocation_reading).
+narrative_ontology:cs_story_uid(institutional_reallocation_reading, '9b43cc55-15e4-4ddf-85d3-a3e55ecac8dd').
+narrative_ontology:cs_created_at('9b43cc55-15e4-4ddf-85d3-a3e55ecac8dd', '').
+narrative_ontology:cs_kernel_codification('9b43cc55-15e4-4ddf-85d3-a3e55ecac8dd', formalized).
+narrative_ontology:cs_authority_grounding('9b43cc55-15e4-4ddf-85d3-a3e55ecac8dd', lineage).
+narrative_ontology:cs_interpretation_layer_present('9b43cc55-15e4-4ddf-85d3-a3e55ecac8dd').
 narrative_ontology:cs_kernel_id(institutional_reallocation_reading, statute_of_anne_ip_foundation).
-narrative_ontology:cs_reading_relation(institutional_reallocation_reading, conceptual_emergence_reading, coexists_with).
-narrative_ontology:cs_reading_relation(institutional_reallocation_reading, entangled_event_reading, influences).
-narrative_ontology:cs_axiom(institutional_reallocation_reading, foundational, property_rights_transferable_from_guild_to_market).
+narrative_ontology:cs_reading_relation('9b43cc55-15e4-4ddf-85d3-a3e55ecac8dd', conceptual_emergence_reading, coexists_with).
+narrative_ontology:cs_reading_relation('9b43cc55-15e4-4ddf-85d3-a3e55ecac8dd', entangled_event_reading, influences).
+narrative_ontology:cs_axiom('9b43cc55-15e4-4ddf-85d3-a3e55ecac8dd', foundational, property_rights_transferable_from_guild_to_market).
 narrative_ontology:cs_axiom_status(property_rights_transferable_from_guild_to_market, holdable).
-narrative_ontology:cs_axiom_grounding(institutional_reallocation_reading, property_rights_transferable_from_guild_to_market, conventional).
-narrative_ontology:cs_axiom(institutional_reallocation_reading, secondary, author_right_holder_recognition_primary).
+narrative_ontology:cs_axiom_grounding('9b43cc55-15e4-4ddf-85d3-a3e55ecac8dd', property_rights_transferable_from_guild_to_market, conventional).
+narrative_ontology:cs_axiom('9b43cc55-15e4-4ddf-85d3-a3e55ecac8dd', secondary, author_right_holder_recognition_primary).
 narrative_ontology:cs_axiom_status(author_right_holder_recognition_primary, holdable).
-narrative_ontology:cs_axiom_grounding(institutional_reallocation_reading, author_right_holder_recognition_primary, deontological).
-narrative_ontology:cs_reference_frame(institutional_reallocation_reading, guild_monopoly_ip_regime).
-narrative_ontology:cs_drift_state(institutional_reallocation_reading, mature_statute_period, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('9b43cc55-15e4-4ddf-85d3-a3e55ecac8dd', author_right_holder_recognition_primary, deontological).
+narrative_ontology:cs_reference_frame('9b43cc55-15e4-4ddf-85d3-a3e55ecac8dd', guild_monopoly_ip_regime).
+narrative_ontology:cs_drift_state('9b43cc55-15e4-4ddf-85d3-a3e55ecac8dd', mature_statute_period, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(institutional_reallocation_reading, book_publishers).

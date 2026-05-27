@@ -120,20 +120,22 @@ narrative_ontology:topic_domain(deterrence_instrument, "criminal_justice/politic
 domain_priors:requires_active_enforcement(deterrence_instrument).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(deterrence_instrument, formalized).
-narrative_ontology:cs_authority_grounding(deterrence_instrument, extraction).
-narrative_ontology:cs_interpretation_layer_present(deterrence_instrument).
+narrative_ontology:cs_story_uid(deterrence_instrument, 'b7bc7bf2-e53e-4577-b7a6-197fe3282ba5').
+narrative_ontology:cs_created_at('b7bc7bf2-e53e-4577-b7a6-197fe3282ba5', '').
+narrative_ontology:cs_kernel_codification('b7bc7bf2-e53e-4577-b7a6-197fe3282ba5', formalized).
+narrative_ontology:cs_authority_grounding('b7bc7bf2-e53e-4577-b7a6-197fe3282ba5', extraction).
+narrative_ontology:cs_interpretation_layer_present('b7bc7bf2-e53e-4577-b7a6-197fe3282ba5').
 narrative_ontology:cs_kernel_id(deterrence_instrument, state_killing_authority).
-narrative_ontology:cs_reading_relation(deterrence_instrument, retributive_desert, coexists_with).
-narrative_ontology:cs_reading_relation(deterrence_instrument, categorical_abolition, coexists_with).
-narrative_ontology:cs_axiom(deterrence_instrument, foundational, deterrence_empirical_efficacy).
+narrative_ontology:cs_reading_relation('b7bc7bf2-e53e-4577-b7a6-197fe3282ba5', retributive_desert, coexists_with).
+narrative_ontology:cs_reading_relation('b7bc7bf2-e53e-4577-b7a6-197fe3282ba5', categorical_abolition, coexists_with).
+narrative_ontology:cs_axiom('b7bc7bf2-e53e-4577-b7a6-197fe3282ba5', foundational, deterrence_empirical_efficacy).
 narrative_ontology:cs_axiom_status(deterrence_empirical_efficacy, holdable).
-narrative_ontology:cs_axiom_grounding(deterrence_instrument, deterrence_empirical_efficacy, empirically_contingent).
-narrative_ontology:cs_axiom(deterrence_instrument, foundational, instrumental_life_cost_justified).
+narrative_ontology:cs_axiom_grounding('b7bc7bf2-e53e-4577-b7a6-197fe3282ba5', deterrence_empirical_efficacy, empirically_contingent).
+narrative_ontology:cs_axiom('b7bc7bf2-e53e-4577-b7a6-197fe3282ba5', foundational, instrumental_life_cost_justified).
 narrative_ontology:cs_axiom_status(instrumental_life_cost_justified, holdable).
-narrative_ontology:cs_axiom_grounding(deterrence_instrument, instrumental_life_cost_justified, deontological).
-narrative_ontology:cs_reference_frame(deterrence_instrument, rational_harm_prevention_authority).
-narrative_ontology:cs_drift_state(deterrence_instrument, contemporary_empirical_contestation_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('b7bc7bf2-e53e-4577-b7a6-197fe3282ba5', instrumental_life_cost_justified, deontological).
+narrative_ontology:cs_reference_frame('b7bc7bf2-e53e-4577-b7a6-197fe3282ba5', rational_harm_prevention_authority).
+narrative_ontology:cs_drift_state('b7bc7bf2-e53e-4577-b7a6-197fe3282ba5', contemporary_empirical_contestation_era, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(deterrence_instrument, potential_future_victims).

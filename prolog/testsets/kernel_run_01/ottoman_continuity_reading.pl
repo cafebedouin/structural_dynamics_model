@@ -127,18 +127,20 @@ narrative_ontology:topic_domain(ottoman_continuity_reading, "political_linguisti
 domain_priors:requires_active_enforcement(ottoman_continuity_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(ottoman_continuity_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(ottoman_continuity_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(ottoman_continuity_reading).
+narrative_ontology:cs_story_uid(ottoman_continuity_reading, '1aeb6d13-41ed-41fc-b11b-94150eb65352').
+narrative_ontology:cs_created_at('1aeb6d13-41ed-41fc-b11b-94150eb65352', '').
+narrative_ontology:cs_kernel_codification('1aeb6d13-41ed-41fc-b11b-94150eb65352', fixed_text).
+narrative_ontology:cs_authority_grounding('1aeb6d13-41ed-41fc-b11b-94150eb65352', lineage).
+narrative_ontology:cs_interpretation_layer_present('1aeb6d13-41ed-41fc-b11b-94150eb65352').
 narrative_ontology:cs_kernel_id(ottoman_continuity_reading, turkish_graphemic_substrate).
-narrative_ontology:cs_reading_relation(ottoman_continuity_reading, secular_nationalist_reading, coexists_with).
-narrative_ontology:cs_reading_relation(ottoman_continuity_reading, gradual_transition_reading, influences).
-narrative_ontology:cs_axiom(ottoman_continuity_reading, foundational, ottoman_islamic_continuity_essential).
+narrative_ontology:cs_reading_relation('1aeb6d13-41ed-41fc-b11b-94150eb65352', secular_nationalist_reading, coexists_with).
+narrative_ontology:cs_reading_relation('1aeb6d13-41ed-41fc-b11b-94150eb65352', gradual_transition_reading, influences).
+narrative_ontology:cs_axiom('1aeb6d13-41ed-41fc-b11b-94150eb65352', foundational, ottoman_islamic_continuity_essential).
 narrative_ontology:cs_axiom_status(ottoman_islamic_continuity_essential, holdable).
-narrative_ontology:cs_axiom(ottoman_continuity_reading, foundational, arabic_script_uniquely_expresses_continuity).
+narrative_ontology:cs_axiom('1aeb6d13-41ed-41fc-b11b-94150eb65352', foundational, arabic_script_uniquely_expresses_continuity).
 narrative_ontology:cs_axiom_status(arabic_script_uniquely_expresses_continuity, holdable).
-narrative_ontology:cs_reference_frame(ottoman_continuity_reading, ottoman_civilizational_continuity).
-narrative_ontology:cs_drift_state(ottoman_continuity_reading, contemporary_digital_era, gap(codification_collapse, substantial, false)).
+narrative_ontology:cs_reference_frame('1aeb6d13-41ed-41fc-b11b-94150eb65352', ottoman_civilizational_continuity).
+narrative_ontology:cs_drift_state('1aeb6d13-41ed-41fc-b11b-94150eb65352', contemporary_digital_era, gap(codification_collapse, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(ottoman_continuity_reading, religious_institutional_authority).

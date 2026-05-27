@@ -15,3 +15,5 @@ narrative_ontology:cs_axiom_contradiction(intrinsic_use_harm_primary, drug_use_o
 narrative_ontology:cs_axiom_contradiction(drug_use_outside_state_constraint_scope, intrinsic_use_harm_primary).
 narrative_ontology:cs_axiom_contradiction(continued_use_inevitable_medium_term, drug_use_outside_state_constraint_scope).
 narrative_ontology:cs_axiom_contradiction(drug_use_outside_state_constraint_scope, continued_use_inevitable_medium_term).
+narrative_ontology:cs_story_uid(substance_control_authority_contradictions, 'e7105597-2598-4c18-9f91-35fbcc76ceec').
+narrative_ontology:cs_created_at('e7105597-2598-4c18-9f91-35fbcc76ceec', '').

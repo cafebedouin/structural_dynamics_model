@@ -12,3 +12,5 @@ narrative_ontology:cs_axiom_contradiction(risk_is_commensurable, irreversibility
 narrative_ontology:cs_axiom_contradiction(irreversibility_tail_dominance, risk_is_commensurable).
 narrative_ontology:cs_axiom_contradiction(risk_is_commensurable, irreducible_uncertainty_burden_shift).
 narrative_ontology:cs_axiom_contradiction(irreducible_uncertainty_burden_shift, risk_is_commensurable).
+narrative_ontology:cs_story_uid(acceptable_risk_for_energy_contradictions, '04fcce31-424f-4070-a20e-526a5abde59d').
+narrative_ontology:cs_created_at('04fcce31-424f-4070-a20e-526a5abde59d', '').

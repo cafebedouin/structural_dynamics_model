@@ -12,3 +12,5 @@ narrative_ontology:cs_axiom_contradiction(murderers_forfeit_rights, inalienable_
 narrative_ontology:cs_axiom_contradiction(inalienable_life, murderers_forfeit_rights).
 narrative_ontology:cs_axiom_contradiction(deterrence_empirical_efficacy, inalienable_life).
 narrative_ontology:cs_axiom_contradiction(inalienable_life, deterrence_empirical_efficacy).
+narrative_ontology:cs_story_uid(state_killing_authority_contradictions, 'd53aa3c4-a3ca-48ac-9784-2f16eb5260e9').
+narrative_ontology:cs_created_at('d53aa3c4-a3ca-48ac-9784-2f16eb5260e9', '').

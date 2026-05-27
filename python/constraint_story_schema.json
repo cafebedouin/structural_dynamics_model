@@ -270,6 +270,14 @@
           "type": "string",
           "pattern": "^[a-z][a-z0-9_]*$",
           "description": "Prefix for auto-generated measurement IDs (default: derived from constraint_id)"
+        },
+        "story_uid": {
+          "type": "string",
+          "description": "UUIDv4 surrogate identity minted per generation event"
+        },
+        "created_at": {
+          "type": "string",
+          "description": "ISO 8601 UTC timestamp of generation event"
         }
       },
       "additionalProperties": false

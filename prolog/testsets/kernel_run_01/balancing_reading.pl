@@ -127,18 +127,20 @@ narrative_ontology:topic_domain(balancing_reading, "constitutional_law/political
 domain_priors:requires_active_enforcement(balancing_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(balancing_reading, formalized).
-narrative_ontology:cs_authority_grounding(balancing_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(balancing_reading).
+narrative_ontology:cs_story_uid(balancing_reading, 'd564b190-7c2f-4715-916c-54cfd3750687').
+narrative_ontology:cs_created_at('d564b190-7c2f-4715-916c-54cfd3750687', '').
+narrative_ontology:cs_kernel_codification('d564b190-7c2f-4715-916c-54cfd3750687', formalized).
+narrative_ontology:cs_authority_grounding('d564b190-7c2f-4715-916c-54cfd3750687', lineage).
+narrative_ontology:cs_interpretation_layer_present('d564b190-7c2f-4715-916c-54cfd3750687').
 narrative_ontology:cs_kernel_id(balancing_reading, speech_protection_boundary).
-narrative_ontology:cs_reading_relation(balancing_reading, near_absolutist_reading, coexists_with).
-narrative_ontology:cs_reading_relation(balancing_reading, dignitary_harm_reading, influences).
-narrative_ontology:cs_axiom(balancing_reading, foundational, speech_and_competing_interests_incommensurable).
+narrative_ontology:cs_reading_relation('d564b190-7c2f-4715-916c-54cfd3750687', near_absolutist_reading, coexists_with).
+narrative_ontology:cs_reading_relation('d564b190-7c2f-4715-916c-54cfd3750687', dignitary_harm_reading, influences).
+narrative_ontology:cs_axiom('d564b190-7c2f-4715-916c-54cfd3750687', foundational, speech_and_competing_interests_incommensurable).
 narrative_ontology:cs_axiom_status(speech_and_competing_interests_incommensurable, holdable).
-narrative_ontology:cs_axiom(balancing_reading, foundational, categorical_rules_inadequate_constitutional_interpretation).
+narrative_ontology:cs_axiom('d564b190-7c2f-4715-916c-54cfd3750687', foundational, categorical_rules_inadequate_constitutional_interpretation).
 narrative_ontology:cs_axiom_status(categorical_rules_inadequate_constitutional_interpretation, holdable).
-narrative_ontology:cs_reference_frame(balancing_reading, flexible_adjudication_framework).
-narrative_ontology:cs_drift_state(balancing_reading, contemporary_expanded_competing_interests, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_reference_frame('d564b190-7c2f-4715-916c-54cfd3750687', flexible_adjudication_framework).
+narrative_ontology:cs_drift_state('d564b190-7c2f-4715-916c-54cfd3750687', contemporary_expanded_competing_interests, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(balancing_reading, judicial_institutions).

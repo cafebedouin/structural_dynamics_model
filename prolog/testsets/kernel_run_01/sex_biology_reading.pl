@@ -119,18 +119,20 @@ narrative_ontology:topic_domain(sex_biology_reading, "political_philosophy/bioet
 domain_priors:requires_active_enforcement(sex_biology_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(sex_biology_reading, formalized).
-narrative_ontology:cs_authority_grounding(sex_biology_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(sex_biology_reading).
+narrative_ontology:cs_story_uid(sex_biology_reading, '6cbb0d57-2ac0-4e2d-9642-04425f6949ed').
+narrative_ontology:cs_created_at('6cbb0d57-2ac0-4e2d-9642-04425f6949ed', '').
+narrative_ontology:cs_kernel_codification('6cbb0d57-2ac0-4e2d-9642-04425f6949ed', formalized).
+narrative_ontology:cs_authority_grounding('6cbb0d57-2ac0-4e2d-9642-04425f6949ed', lineage).
+narrative_ontology:cs_interpretation_layer_present('6cbb0d57-2ac0-4e2d-9642-04425f6949ed').
 narrative_ontology:cs_kernel_id(sex_biology_reading, woman_female_category).
-narrative_ontology:cs_reading_relation(sex_biology_reading, gender_identity_reading, forecloses).
-narrative_ontology:cs_reading_relation(sex_biology_reading, hybrid_contextual_reading, influences).
-narrative_ontology:cs_axiom(sex_biology_reading, foundational, chromosomal_sex_determines_legal_category).
+narrative_ontology:cs_reading_relation('6cbb0d57-2ac0-4e2d-9642-04425f6949ed', gender_identity_reading, forecloses).
+narrative_ontology:cs_reading_relation('6cbb0d57-2ac0-4e2d-9642-04425f6949ed', hybrid_contextual_reading, influences).
+narrative_ontology:cs_axiom('6cbb0d57-2ac0-4e2d-9642-04425f6949ed', foundational, chromosomal_sex_determines_legal_category).
 narrative_ontology:cs_axiom_status(chromosomal_sex_determines_legal_category, holdable).
-narrative_ontology:cs_axiom(sex_biology_reading, foundational, biological_category_supersedes_identity_claim).
+narrative_ontology:cs_axiom('6cbb0d57-2ac0-4e2d-9642-04425f6949ed', foundational, biological_category_supersedes_identity_claim).
 narrative_ontology:cs_axiom_status(biological_category_supersedes_identity_claim, holdable).
-narrative_ontology:cs_reference_frame(sex_biology_reading, stable_biological_dimorphism_framework).
-narrative_ontology:cs_drift_state(sex_biology_reading, contemporary_gender_identity_contestation_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('6cbb0d57-2ac0-4e2d-9642-04425f6949ed', stable_biological_dimorphism_framework).
+narrative_ontology:cs_drift_state('6cbb0d57-2ac0-4e2d-9642-04425f6949ed', contemporary_gender_identity_contestation_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(sex_biology_reading, natal_females).

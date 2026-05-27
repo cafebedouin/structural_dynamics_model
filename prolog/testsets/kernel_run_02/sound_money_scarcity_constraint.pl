@@ -120,19 +120,21 @@ narrative_ontology:topic_domain(sound_money_scarcity_constraint, "political_econ
 domain_priors:requires_active_enforcement(sound_money_scarcity_constraint).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(sound_money_scarcity_constraint, formalized).
-narrative_ontology:cs_authority_grounding(sound_money_scarcity_constraint, extraction).
-narrative_ontology:cs_interpretation_layer_present(sound_money_scarcity_constraint).
-narrative_ontology:cs_reading_relation(sound_money_scarcity_constraint, sound_money_speculative_asset_reading, coexists_with).
-narrative_ontology:cs_reading_relation(sound_money_scarcity_constraint, decentralization_disintermediation_reading, coexists_with).
-narrative_ontology:cs_axiom(sound_money_scarcity_constraint, foundational, fixed_supply_is_sound_money).
+narrative_ontology:cs_story_uid(sound_money_scarcity_constraint, 'e638f6df-ab61-4d7e-9742-364c36302878').
+narrative_ontology:cs_created_at('e638f6df-ab61-4d7e-9742-364c36302878', '').
+narrative_ontology:cs_kernel_codification('e638f6df-ab61-4d7e-9742-364c36302878', formalized).
+narrative_ontology:cs_authority_grounding('e638f6df-ab61-4d7e-9742-364c36302878', extraction).
+narrative_ontology:cs_interpretation_layer_present('e638f6df-ab61-4d7e-9742-364c36302878').
+narrative_ontology:cs_reading_relation('e638f6df-ab61-4d7e-9742-364c36302878', sound_money_speculative_asset_reading, coexists_with).
+narrative_ontology:cs_reading_relation('e638f6df-ab61-4d7e-9742-364c36302878', decentralization_disintermediation_reading, coexists_with).
+narrative_ontology:cs_axiom('e638f6df-ab61-4d7e-9742-364c36302878', foundational, fixed_supply_is_sound_money).
 narrative_ontology:cs_axiom_status(fixed_supply_is_sound_money, holdable).
-narrative_ontology:cs_axiom_grounding(sound_money_scarcity_constraint, fixed_supply_is_sound_money, deontological).
-narrative_ontology:cs_axiom(sound_money_scarcity_constraint, foundational, immutable_supply_cap_prevents_debasement).
+narrative_ontology:cs_axiom_grounding('e638f6df-ab61-4d7e-9742-364c36302878', fixed_supply_is_sound_money, deontological).
+narrative_ontology:cs_axiom('e638f6df-ab61-4d7e-9742-364c36302878', foundational, immutable_supply_cap_prevents_debasement).
 narrative_ontology:cs_axiom_status(immutable_supply_cap_prevents_debasement, holdable).
-narrative_ontology:cs_axiom_grounding(sound_money_scarcity_constraint, immutable_supply_cap_prevents_debasement, empirically_contingent).
-narrative_ontology:cs_reference_frame(sound_money_scarcity_constraint, sound_money_hard_currency_framework).
-narrative_ontology:cs_drift_state(sound_money_scarcity_constraint, contemporary_cbdc_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('e638f6df-ab61-4d7e-9742-364c36302878', immutable_supply_cap_prevents_debasement, empirically_contingent).
+narrative_ontology:cs_reference_frame('e638f6df-ab61-4d7e-9742-364c36302878', sound_money_hard_currency_framework).
+narrative_ontology:cs_drift_state('e638f6df-ab61-4d7e-9742-364c36302878', contemporary_cbdc_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(sound_money_scarcity_constraint, early_adopters).

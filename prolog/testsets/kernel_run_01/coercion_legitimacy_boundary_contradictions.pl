@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(collective_harm_prevention_primacy, bodily_autonomy_categorically_protected).
 narrative_ontology:cs_axiom_contradiction(bodily_autonomy_categorically_protected, collective_harm_prevention_primacy).
+narrative_ontology:cs_story_uid(coercion_legitimacy_boundary_contradictions, '662cd7ba-9507-40bf-89b2-fc7a844ce0e7').
+narrative_ontology:cs_created_at('662cd7ba-9507-40bf-89b2-fc7a844ce0e7', '').

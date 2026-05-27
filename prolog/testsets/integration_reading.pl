@@ -121,20 +121,22 @@ narrative_ontology:topic_domain(integration_reading, "political_economy/federali
 domain_priors:requires_active_enforcement(integration_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(integration_reading, formalized).
-narrative_ontology:cs_authority_grounding(integration_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(integration_reading).
+narrative_ontology:cs_story_uid(integration_reading, '40c2b41b-9a03-41ba-b0f1-d5fdff23863d').
+narrative_ontology:cs_created_at('40c2b41b-9a03-41ba-b0f1-d5fdff23863d', '').
+narrative_ontology:cs_kernel_codification('40c2b41b-9a03-41ba-b0f1-d5fdff23863d', formalized).
+narrative_ontology:cs_authority_grounding('40c2b41b-9a03-41ba-b0f1-d5fdff23863d', lineage).
+narrative_ontology:cs_interpretation_layer_present('40c2b41b-9a03-41ba-b0f1-d5fdff23863d').
 narrative_ontology:cs_kernel_id(integration_reading, federation_membership_kernel).
-narrative_ontology:cs_reading_relation(integration_reading, sovereignty_reading, coexists_with).
-narrative_ontology:cs_reading_relation(integration_reading, hybrid_reading, influences).
-narrative_ontology:cs_axiom(integration_reading, foundational, complete_labor_market_integration_technically_necessary).
+narrative_ontology:cs_reading_relation('40c2b41b-9a03-41ba-b0f1-d5fdff23863d', sovereignty_reading, coexists_with).
+narrative_ontology:cs_reading_relation('40c2b41b-9a03-41ba-b0f1-d5fdff23863d', hybrid_reading, influences).
+narrative_ontology:cs_axiom('40c2b41b-9a03-41ba-b0f1-d5fdff23863d', foundational, complete_labor_market_integration_technically_necessary).
 narrative_ontology:cs_axiom_status(complete_labor_market_integration_technically_necessary, holdable).
-narrative_ontology:cs_axiom_grounding(integration_reading, complete_labor_market_integration_technically_necessary, empirically_contingent).
-narrative_ontology:cs_axiom(integration_reading, foundational, sovereignty_transfer_irreversible_within_federation).
+narrative_ontology:cs_axiom_grounding('40c2b41b-9a03-41ba-b0f1-d5fdff23863d', complete_labor_market_integration_technically_necessary, empirically_contingent).
+narrative_ontology:cs_axiom('40c2b41b-9a03-41ba-b0f1-d5fdff23863d', foundational, sovereignty_transfer_irreversible_within_federation).
 narrative_ontology:cs_axiom_status(sovereignty_transfer_irreversible_within_federation, holdable).
-narrative_ontology:cs_axiom_grounding(integration_reading, sovereignty_transfer_irreversible_within_federation, conventional).
-narrative_ontology:cs_reference_frame(integration_reading, single_market_labor_equilibrium).
-narrative_ontology:cs_drift_state(integration_reading, contemporary_wage_stagnation_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('40c2b41b-9a03-41ba-b0f1-d5fdff23863d', sovereignty_transfer_irreversible_within_federation, conventional).
+narrative_ontology:cs_reference_frame('40c2b41b-9a03-41ba-b0f1-d5fdff23863d', single_market_labor_equilibrium).
+narrative_ontology:cs_drift_state('40c2b41b-9a03-41ba-b0f1-d5fdff23863d', contemporary_wage_stagnation_era, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(integration_reading, mobile_skilled_workers).

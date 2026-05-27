@@ -116,20 +116,22 @@ narrative_ontology:topic_domain(civic_eugenic_reading, "moral_philosophy/commitm
 domain_priors:requires_active_enforcement(civic_eugenic_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(civic_eugenic_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(civic_eugenic_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(civic_eugenic_reading).
+narrative_ontology:cs_story_uid(civic_eugenic_reading, 'c753bb19-b508-4b76-950a-5e95281188a1').
+narrative_ontology:cs_created_at('c753bb19-b508-4b76-950a-5e95281188a1', '').
+narrative_ontology:cs_kernel_codification('c753bb19-b508-4b76-950a-5e95281188a1', fixed_text).
+narrative_ontology:cs_authority_grounding('c753bb19-b508-4b76-950a-5e95281188a1', lineage).
+narrative_ontology:cs_interpretation_layer_present('c753bb19-b508-4b76-950a-5e95281188a1').
 narrative_ontology:cs_kernel_id(civic_eugenic_reading, personhood_boundary).
-narrative_ontology:cs_reading_relation(civic_eugenic_reading, birth_threshold_reading, forecloses).
-narrative_ontology:cs_reading_relation(civic_eugenic_reading, inherent_dignity_reading, forecloses).
-narrative_ontology:cs_axiom(civic_eugenic_reading, foundational, personhood_contingent_on_civic_viability).
+narrative_ontology:cs_reading_relation('c753bb19-b508-4b76-950a-5e95281188a1', birth_threshold_reading, forecloses).
+narrative_ontology:cs_reading_relation('c753bb19-b508-4b76-950a-5e95281188a1', inherent_dignity_reading, forecloses).
+narrative_ontology:cs_axiom('c753bb19-b508-4b76-950a-5e95281188a1', foundational, personhood_contingent_on_civic_viability).
 narrative_ontology:cs_axiom_status(personhood_contingent_on_civic_viability, holdable).
-narrative_ontology:cs_axiom_grounding(civic_eugenic_reading, personhood_contingent_on_civic_viability, instrumental).
-narrative_ontology:cs_axiom(civic_eugenic_reading, foundational, state_authority_determines_moral_community).
+narrative_ontology:cs_axiom_grounding('c753bb19-b508-4b76-950a-5e95281188a1', personhood_contingent_on_civic_viability, instrumental).
+narrative_ontology:cs_axiom('c753bb19-b508-4b76-950a-5e95281188a1', foundational, state_authority_determines_moral_community).
 narrative_ontology:cs_axiom_status(state_authority_determines_moral_community, holdable).
-narrative_ontology:cs_axiom_grounding(civic_eugenic_reading, state_authority_determines_moral_community, deontological).
-narrative_ontology:cs_reference_frame(civic_eugenic_reading, classical_state_viability_framework).
-narrative_ontology:cs_drift_state(civic_eugenic_reading, contemporary_human_rights_era, gap(authority_erosion, severe, false)).
+narrative_ontology:cs_axiom_grounding('c753bb19-b508-4b76-950a-5e95281188a1', state_authority_determines_moral_community, deontological).
+narrative_ontology:cs_reference_frame('c753bb19-b508-4b76-950a-5e95281188a1', classical_state_viability_framework).
+narrative_ontology:cs_drift_state('c753bb19-b508-4b76-950a-5e95281188a1', contemporary_human_rights_era, gap(authority_erosion, severe, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(civic_eugenic_reading, warrior_class).

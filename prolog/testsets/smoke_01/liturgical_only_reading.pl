@@ -112,15 +112,17 @@ narrative_ontology:human_readable(liturgical_only_reading, "Hebrew Living Langua
 narrative_ontology:topic_domain(liturgical_only_reading, "historical_linguistics/language_revitalization/commitment_systems").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(liturgical_only_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(liturgical_only_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(liturgical_only_reading).
+narrative_ontology:cs_story_uid(liturgical_only_reading, '91203694-5594-4d54-aa42-0972c6d90d2b').
+narrative_ontology:cs_created_at('91203694-5594-4d54-aa42-0972c6d90d2b', '').
+narrative_ontology:cs_kernel_codification('91203694-5594-4d54-aa42-0972c6d90d2b', fixed_text).
+narrative_ontology:cs_authority_grounding('91203694-5594-4d54-aa42-0972c6d90d2b', lineage).
+narrative_ontology:cs_interpretation_layer_present('91203694-5594-4d54-aa42-0972c6d90d2b').
 narrative_ontology:cs_kernel_id(liturgical_only_reading, hebrew_living_language).
-narrative_ontology:cs_reading_relation(liturgical_only_reading, native_daily_reading, forecloses).
-narrative_ontology:cs_reading_relation(liturgical_only_reading, scholarly_written_reading, coexists_with).
-narrative_ontology:cs_axiom(liturgical_only_reading, foundational, liturgical_continuity_preserves_liveness).
+narrative_ontology:cs_reading_relation('91203694-5594-4d54-aa42-0972c6d90d2b', native_daily_reading, forecloses).
+narrative_ontology:cs_reading_relation('91203694-5594-4d54-aa42-0972c6d90d2b', scholarly_written_reading, coexists_with).
+narrative_ontology:cs_axiom('91203694-5594-4d54-aa42-0972c6d90d2b', foundational, liturgical_continuity_preserves_liveness).
 narrative_ontology:cs_axiom_status(liturgical_continuity_preserves_liveness, holdable).
-narrative_ontology:cs_axiom(liturgical_only_reading, foundational, vernacular_innovation_is_profanation).
+narrative_ontology:cs_axiom('91203694-5594-4d54-aa42-0972c6d90d2b', foundational, vernacular_innovation_is_profanation).
 narrative_ontology:cs_axiom_status(vernacular_innovation_is_profanation, overridden).
 
 % --- Structural relationships ---

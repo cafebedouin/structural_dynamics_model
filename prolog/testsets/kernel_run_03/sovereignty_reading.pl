@@ -125,20 +125,22 @@ narrative_ontology:topic_domain(sovereignty_reading, "political_economy/federali
 domain_priors:requires_active_enforcement(sovereignty_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(sovereignty_reading, formalized).
-narrative_ontology:cs_authority_grounding(sovereignty_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(sovereignty_reading).
+narrative_ontology:cs_story_uid(sovereignty_reading, '63d52d95-30f5-4726-a93a-12f456293ee9').
+narrative_ontology:cs_created_at('63d52d95-30f5-4726-a93a-12f456293ee9', '').
+narrative_ontology:cs_kernel_codification('63d52d95-30f5-4726-a93a-12f456293ee9', formalized).
+narrative_ontology:cs_authority_grounding('63d52d95-30f5-4726-a93a-12f456293ee9', lineage).
+narrative_ontology:cs_interpretation_layer_present('63d52d95-30f5-4726-a93a-12f456293ee9').
 narrative_ontology:cs_kernel_id(sovereignty_reading, federation_membership_kernel).
-narrative_ontology:cs_reading_relation(sovereignty_reading, integration_reading, forecloses).
-narrative_ontology:cs_reading_relation(sovereignty_reading, hybrid_reading, coexists_with).
-narrative_ontology:cs_axiom(sovereignty_reading, foundational, member_state_welfare_control_essential).
+narrative_ontology:cs_reading_relation('63d52d95-30f5-4726-a93a-12f456293ee9', integration_reading, forecloses).
+narrative_ontology:cs_reading_relation('63d52d95-30f5-4726-a93a-12f456293ee9', hybrid_reading, coexists_with).
+narrative_ontology:cs_axiom('63d52d95-30f5-4726-a93a-12f456293ee9', foundational, member_state_welfare_control_essential).
 narrative_ontology:cs_axiom_status(member_state_welfare_control_essential, holdable).
-narrative_ontology:cs_axiom_grounding(sovereignty_reading, member_state_welfare_control_essential, deontological).
-narrative_ontology:cs_axiom(sovereignty_reading, foundational, fiscal_boundary_integrity_preservation).
+narrative_ontology:cs_axiom_grounding('63d52d95-30f5-4726-a93a-12f456293ee9', member_state_welfare_control_essential, deontological).
+narrative_ontology:cs_axiom('63d52d95-30f5-4726-a93a-12f456293ee9', foundational, fiscal_boundary_integrity_preservation).
 narrative_ontology:cs_axiom_status(fiscal_boundary_integrity_preservation, holdable).
-narrative_ontology:cs_axiom_grounding(sovereignty_reading, fiscal_boundary_integrity_preservation, empirically_contingent).
-narrative_ontology:cs_reference_frame(sovereignty_reading, member_state_welfare_preservation).
-narrative_ontology:cs_drift_state(sovereignty_reading, contemporary_eu_cjeu_harmonization_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('63d52d95-30f5-4726-a93a-12f456293ee9', fiscal_boundary_integrity_preservation, empirically_contingent).
+narrative_ontology:cs_reference_frame('63d52d95-30f5-4726-a93a-12f456293ee9', member_state_welfare_preservation).
+narrative_ontology:cs_drift_state('63d52d95-30f5-4726-a93a-12f456293ee9', contemporary_eu_cjeu_harmonization_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(sovereignty_reading, unskilled_native_workers).

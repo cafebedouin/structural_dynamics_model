@@ -126,17 +126,19 @@ narrative_ontology:topic_domain(deterrence_unthinkable, "strategic_studies/nucle
 domain_priors:requires_active_enforcement(deterrence_unthinkable).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(deterrence_unthinkable, distributed).
-narrative_ontology:cs_authority_grounding(deterrence_unthinkable, extraction).
+narrative_ontology:cs_story_uid(deterrence_unthinkable, '2bff7d2c-8800-4518-9e18-5603f8c83b1a').
+narrative_ontology:cs_created_at('2bff7d2c-8800-4518-9e18-5603f8c83b1a', '').
+narrative_ontology:cs_kernel_codification('2bff7d2c-8800-4518-9e18-5603f8c83b1a', distributed).
+narrative_ontology:cs_authority_grounding('2bff7d2c-8800-4518-9e18-5603f8c83b1a', extraction).
 narrative_ontology:cs_kernel_id(deterrence_unthinkable, war_winnability_post_1945).
-narrative_ontology:cs_reading_relation(deterrence_unthinkable, countervailing_thinkable, coexists_with).
-narrative_ontology:cs_reading_relation(deterrence_unthinkable, rhetorical_contraction, coexists_with).
-narrative_ontology:cs_axiom(deterrence_unthinkable, foundational, nuclear_exchange_unwinnable).
+narrative_ontology:cs_reading_relation('2bff7d2c-8800-4518-9e18-5603f8c83b1a', countervailing_thinkable, coexists_with).
+narrative_ontology:cs_reading_relation('2bff7d2c-8800-4518-9e18-5603f8c83b1a', rhetorical_contraction, coexists_with).
+narrative_ontology:cs_axiom('2bff7d2c-8800-4518-9e18-5603f8c83b1a', foundational, nuclear_exchange_unwinnable).
 narrative_ontology:cs_axiom_status(nuclear_exchange_unwinnable, holdable).
-narrative_ontology:cs_axiom(deterrence_unthinkable, foundational, mutual_vulnerability_prevents_total_war).
+narrative_ontology:cs_axiom('2bff7d2c-8800-4518-9e18-5603f8c83b1a', foundational, mutual_vulnerability_prevents_total_war).
 narrative_ontology:cs_axiom_status(mutual_vulnerability_prevents_total_war, holdable).
-narrative_ontology:cs_reference_frame(deterrence_unthinkable, deterrence_logic_as_primary).
-narrative_ontology:cs_drift_state(deterrence_unthinkable, contemporary_doctrine_contestation, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_reference_frame('2bff7d2c-8800-4518-9e18-5603f8c83b1a', deterrence_logic_as_primary).
+narrative_ontology:cs_drift_state('2bff7d2c-8800-4518-9e18-5603f8c83b1a', contemporary_doctrine_contestation, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(deterrence_unthinkable, civilian_populations).

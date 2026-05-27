@@ -118,20 +118,22 @@ narrative_ontology:topic_domain(punctuated_swap_reading, "monetary_economics/pol
 domain_priors:requires_active_enforcement(punctuated_swap_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(punctuated_swap_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(punctuated_swap_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(punctuated_swap_reading).
+narrative_ontology:cs_story_uid(punctuated_swap_reading, '4098267e-294c-4cbb-8dfe-f1af9428190c').
+narrative_ontology:cs_created_at('4098267e-294c-4cbb-8dfe-f1af9428190c', '').
+narrative_ontology:cs_kernel_codification('4098267e-294c-4cbb-8dfe-f1af9428190c', fixed_text).
+narrative_ontology:cs_authority_grounding('4098267e-294c-4cbb-8dfe-f1af9428190c', extraction).
+narrative_ontology:cs_interpretation_layer_present('4098267e-294c-4cbb-8dfe-f1af9428190c').
 narrative_ontology:cs_kernel_id(punctuated_swap_reading, monetary_anchor_principle).
-narrative_ontology:cs_reading_relation(punctuated_swap_reading, triffin_inevitability_reading, coexists_with).
-narrative_ontology:cs_reading_relation(punctuated_swap_reading, overdetermined_composite_reading, coexists_with).
-narrative_ontology:cs_axiom(punctuated_swap_reading, foundational, institutional_agency_sovereign_choice).
+narrative_ontology:cs_reading_relation('4098267e-294c-4cbb-8dfe-f1af9428190c', triffin_inevitability_reading, coexists_with).
+narrative_ontology:cs_reading_relation('4098267e-294c-4cbb-8dfe-f1af9428190c', overdetermined_composite_reading, coexists_with).
+narrative_ontology:cs_axiom('4098267e-294c-4cbb-8dfe-f1af9428190c', foundational, institutional_agency_sovereign_choice).
 narrative_ontology:cs_axiom_status(institutional_agency_sovereign_choice, holdable).
-narrative_ontology:cs_axiom_grounding(punctuated_swap_reading, institutional_agency_sovereign_choice, instrumental).
-narrative_ontology:cs_axiom(punctuated_swap_reading, secondary, unilateral_defection_extractive).
+narrative_ontology:cs_axiom_grounding('4098267e-294c-4cbb-8dfe-f1af9428190c', institutional_agency_sovereign_choice, instrumental).
+narrative_ontology:cs_axiom('4098267e-294c-4cbb-8dfe-f1af9428190c', secondary, unilateral_defection_extractive).
 narrative_ontology:cs_axiom_status(unilateral_defection_extractive, holdable).
-narrative_ontology:cs_axiom_grounding(punctuated_swap_reading, unilateral_defection_extractive, deontological).
-narrative_ontology:cs_reference_frame(punctuated_swap_reading, bretton_woods_fixed_commitment).
-narrative_ontology:cs_drift_state(punctuated_swap_reading, contemporary_institutional_analysis_era, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_axiom_grounding('4098267e-294c-4cbb-8dfe-f1af9428190c', unilateral_defection_extractive, deontological).
+narrative_ontology:cs_reference_frame('4098267e-294c-4cbb-8dfe-f1af9428190c', bretton_woods_fixed_commitment).
+narrative_ontology:cs_drift_state('4098267e-294c-4cbb-8dfe-f1af9428190c', contemporary_institutional_analysis_era, gap(practice_drift, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(punctuated_swap_reading, us_fiscal_autonomy).

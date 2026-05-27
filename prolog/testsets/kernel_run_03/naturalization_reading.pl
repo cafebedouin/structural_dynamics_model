@@ -125,19 +125,21 @@ narrative_ontology:topic_domain(naturalization_reading, "economic_history/techno
 domain_priors:emerges_naturally(naturalization_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(naturalization_reading, distributed).
-narrative_ontology:cs_authority_grounding(naturalization_reading, expertise).
+narrative_ontology:cs_story_uid(naturalization_reading, '5655167f-be8f-4ef1-b311-3ce66efcecc6').
+narrative_ontology:cs_created_at('5655167f-be8f-4ef1-b311-3ce66efcecc6', '').
+narrative_ontology:cs_kernel_codification('5655167f-be8f-4ef1-b311-3ce66efcecc6', distributed).
+narrative_ontology:cs_authority_grounding('5655167f-be8f-4ef1-b311-3ce66efcecc6', expertise).
 narrative_ontology:cs_kernel_id(naturalization_reading, qwerty_persistence_mechanism).
-narrative_ontology:cs_reading_relation(naturalization_reading, lock_in_reading, coexists_with).
-narrative_ontology:cs_reading_relation(naturalization_reading, beneficiary_extraction_reading, coexists_with).
-narrative_ontology:cs_axiom(naturalization_reading, foundational, dvorak_performance_negligible).
+narrative_ontology:cs_reading_relation('5655167f-be8f-4ef1-b311-3ce66efcecc6', lock_in_reading, coexists_with).
+narrative_ontology:cs_reading_relation('5655167f-be8f-4ef1-b311-3ce66efcecc6', beneficiary_extraction_reading, coexists_with).
+narrative_ontology:cs_axiom('5655167f-be8f-4ef1-b311-3ce66efcecc6', foundational, dvorak_performance_negligible).
 narrative_ontology:cs_axiom_status(dvorak_performance_negligible, holdable).
-narrative_ontology:cs_axiom_grounding(naturalization_reading, dvorak_performance_negligible, empirically_contingent).
-narrative_ontology:cs_axiom(naturalization_reading, foundational, switching_costs_reflect_rational_investment).
+narrative_ontology:cs_axiom_grounding('5655167f-be8f-4ef1-b311-3ce66efcecc6', dvorak_performance_negligible, empirically_contingent).
+narrative_ontology:cs_axiom('5655167f-be8f-4ef1-b311-3ce66efcecc6', foundational, switching_costs_reflect_rational_investment).
 narrative_ontology:cs_axiom_status(switching_costs_reflect_rational_investment, holdable).
-narrative_ontology:cs_axiom_grounding(naturalization_reading, switching_costs_reflect_rational_investment, conventional).
-narrative_ontology:cs_reference_frame(naturalization_reading, market_equilibrium_through_fair_competition).
-narrative_ontology:cs_drift_state(naturalization_reading, contemporary, gap(stable, minor, true)).
+narrative_ontology:cs_axiom_grounding('5655167f-be8f-4ef1-b311-3ce66efcecc6', switching_costs_reflect_rational_investment, conventional).
+narrative_ontology:cs_reference_frame('5655167f-be8f-4ef1-b311-3ce66efcecc6', market_equilibrium_through_fair_competition).
+narrative_ontology:cs_drift_state('5655167f-be8f-4ef1-b311-3ce66efcecc6', contemporary, gap(stable, minor, true)).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)

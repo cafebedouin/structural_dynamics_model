@@ -121,20 +121,22 @@ narrative_ontology:topic_domain(collective_militia_reading, "constitutional_law/
 domain_priors:requires_active_enforcement(collective_militia_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(collective_militia_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(collective_militia_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(collective_militia_reading).
+narrative_ontology:cs_story_uid(collective_militia_reading, 'ebe84eb9-6a0c-42a2-a2d9-9df5a2b73945').
+narrative_ontology:cs_created_at('ebe84eb9-6a0c-42a2-a2d9-9df5a2b73945', '').
+narrative_ontology:cs_kernel_codification('ebe84eb9-6a0c-42a2-a2d9-9df5a2b73945', fixed_text).
+narrative_ontology:cs_authority_grounding('ebe84eb9-6a0c-42a2-a2d9-9df5a2b73945', lineage).
+narrative_ontology:cs_interpretation_layer_present('ebe84eb9-6a0c-42a2-a2d9-9df5a2b73945').
 narrative_ontology:cs_kernel_id(collective_militia_reading, second_amendment_text).
-narrative_ontology:cs_reading_relation(collective_militia_reading, individual_right_reading, forecloses).
-narrative_ontology:cs_reading_relation(collective_militia_reading, sophisticated_collective_reading, influences).
-narrative_ontology:cs_axiom(collective_militia_reading, foundational, prefatory_clause_binding).
+narrative_ontology:cs_reading_relation('ebe84eb9-6a0c-42a2-a2d9-9df5a2b73945', individual_right_reading, forecloses).
+narrative_ontology:cs_reading_relation('ebe84eb9-6a0c-42a2-a2d9-9df5a2b73945', sophisticated_collective_reading, influences).
+narrative_ontology:cs_axiom('ebe84eb9-6a0c-42a2-a2d9-9df5a2b73945', foundational, prefatory_clause_binding).
 narrative_ontology:cs_axiom_status(prefatory_clause_binding, holdable).
-narrative_ontology:cs_axiom_grounding(collective_militia_reading, prefatory_clause_binding, conventional).
-narrative_ontology:cs_axiom(collective_militia_reading, foundational, state_militia_primacy).
+narrative_ontology:cs_axiom_grounding('ebe84eb9-6a0c-42a2-a2d9-9df5a2b73945', prefatory_clause_binding, conventional).
+narrative_ontology:cs_axiom('ebe84eb9-6a0c-42a2-a2d9-9df5a2b73945', foundational, state_militia_primacy).
 narrative_ontology:cs_axiom_status(state_militia_primacy, holdable).
-narrative_ontology:cs_axiom_grounding(collective_militia_reading, state_militia_primacy, conventional).
-narrative_ontology:cs_reference_frame(collective_militia_reading, founding_era_militia_system).
-narrative_ontology:cs_drift_state(collective_militia_reading, contemporary_regulatory_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('ebe84eb9-6a0c-42a2-a2d9-9df5a2b73945', state_militia_primacy, conventional).
+narrative_ontology:cs_reference_frame('ebe84eb9-6a0c-42a2-a2d9-9df5a2b73945', founding_era_militia_system).
+narrative_ontology:cs_drift_state('ebe84eb9-6a0c-42a2-a2d9-9df5a2b73945', contemporary_regulatory_era, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(collective_militia_reading, organized_state_militias).

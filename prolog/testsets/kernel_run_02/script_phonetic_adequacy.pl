@@ -113,8 +113,10 @@ narrative_ontology:topic_domain(script_phonetic_adequacy, "political_linguistics
 domain_priors:requires_active_enforcement(script_phonetic_adequacy).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(script_phonetic_adequacy, implicit).
-narrative_ontology:cs_authority_grounding(script_phonetic_adequacy, extraction).
+narrative_ontology:cs_story_uid(script_phonetic_adequacy, '33c0d4c7-0185-4f41-a478-a90640d0a0e3').
+narrative_ontology:cs_created_at('33c0d4c7-0185-4f41-a478-a90640d0a0e3', '').
+narrative_ontology:cs_kernel_codification('33c0d4c7-0185-4f41-a478-a90640d0a0e3', implicit).
+narrative_ontology:cs_authority_grounding('33c0d4c7-0185-4f41-a478-a90640d0a0e3', extraction).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(script_phonetic_adequacy, state_modernization_apparatus).

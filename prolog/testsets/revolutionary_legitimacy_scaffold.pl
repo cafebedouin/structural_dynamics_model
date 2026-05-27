@@ -111,9 +111,11 @@ domain_priors:requires_active_enforcement(revolutionary_legitimacy_scaffold).
 narrative_ontology:has_sunset_clause(revolutionary_legitimacy_scaffold).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(revolutionary_legitimacy_scaffold, formalized).
-narrative_ontology:cs_authority_grounding(revolutionary_legitimacy_scaffold, extraction).
-narrative_ontology:cs_interpretation_layer_present(revolutionary_legitimacy_scaffold).
+narrative_ontology:cs_story_uid(revolutionary_legitimacy_scaffold, '4be3f7d6-1d30-4823-9fa6-cc20b4390f61').
+narrative_ontology:cs_created_at('4be3f7d6-1d30-4823-9fa6-cc20b4390f61', '').
+narrative_ontology:cs_kernel_codification('4be3f7d6-1d30-4823-9fa6-cc20b4390f61', formalized).
+narrative_ontology:cs_authority_grounding('4be3f7d6-1d30-4823-9fa6-cc20b4390f61', extraction).
+narrative_ontology:cs_interpretation_layer_present('4be3f7d6-1d30-4823-9fa6-cc20b4390f61').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(revolutionary_legitimacy_scaffold, kemalist_state_apparatus).

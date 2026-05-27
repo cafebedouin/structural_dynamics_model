@@ -115,9 +115,11 @@ narrative_ontology:topic_domain(originalist_reading, "constitutional_law/legal_t
 domain_priors:requires_active_enforcement(originalist_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(originalist_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(originalist_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(originalist_reading).
+narrative_ontology:cs_story_uid(originalist_reading, '2d6b3b41-cf51-4b31-a3b0-b97f9d4aa9c1').
+narrative_ontology:cs_created_at('2d6b3b41-cf51-4b31-a3b0-b97f9d4aa9c1', '').
+narrative_ontology:cs_kernel_codification('2d6b3b41-cf51-4b31-a3b0-b97f9d4aa9c1', fixed_text).
+narrative_ontology:cs_authority_grounding('2d6b3b41-cf51-4b31-a3b0-b97f9d4aa9c1', lineage).
+narrative_ontology:cs_interpretation_layer_present('2d6b3b41-cf51-4b31-a3b0-b97f9d4aa9c1').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(originalist_reading, status_quo_property_holders).

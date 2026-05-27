@@ -114,18 +114,20 @@ narrative_ontology:human_readable(birth_reading, "Moral Status Begins at Birth (
 narrative_ontology:topic_domain(birth_reading, "moral_philosophy/constitutional_law/bioethics").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(birth_reading, formalized).
-narrative_ontology:cs_authority_grounding(birth_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(birth_reading).
+narrative_ontology:cs_story_uid(birth_reading, '1db1deec-a2b0-425d-b27f-c230e0784544').
+narrative_ontology:cs_created_at('1db1deec-a2b0-425d-b27f-c230e0784544', '').
+narrative_ontology:cs_kernel_codification('1db1deec-a2b0-425d-b27f-c230e0784544', formalized).
+narrative_ontology:cs_authority_grounding('1db1deec-a2b0-425d-b27f-c230e0784544', lineage).
+narrative_ontology:cs_interpretation_layer_present('1db1deec-a2b0-425d-b27f-c230e0784544').
 narrative_ontology:cs_kernel_id(birth_reading, personhood_boundary).
-narrative_ontology:cs_reading_relation(birth_reading, conception_reading, forecloses).
-narrative_ontology:cs_reading_relation(birth_reading, viability_reading, forecloses).
-narrative_ontology:cs_axiom(birth_reading, foundational, axiom_discontinuous_personhood).
+narrative_ontology:cs_reading_relation('1db1deec-a2b0-425d-b27f-c230e0784544', conception_reading, forecloses).
+narrative_ontology:cs_reading_relation('1db1deec-a2b0-425d-b27f-c230e0784544', viability_reading, forecloses).
+narrative_ontology:cs_axiom('1db1deec-a2b0-425d-b27f-c230e0784544', foundational, axiom_discontinuous_personhood).
 narrative_ontology:cs_axiom_status(axiom_discontinuous_personhood, holdable).
-narrative_ontology:cs_axiom(birth_reading, foundational, axiom_birth_as_moral_boundary).
+narrative_ontology:cs_axiom('1db1deec-a2b0-425d-b27f-c230e0784544', foundational, axiom_birth_as_moral_boundary).
 narrative_ontology:cs_axiom_status(axiom_birth_as_moral_boundary, holdable).
-narrative_ontology:cs_reference_frame(birth_reading, post_birth_moral_personhood).
-narrative_ontology:cs_drift_state(birth_reading, contemporary, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('1db1deec-a2b0-425d-b27f-c230e0784544', post_birth_moral_personhood).
+narrative_ontology:cs_drift_state('1db1deec-a2b0-425d-b27f-c230e0784544', contemporary, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(birth_reading, pregnant_person).

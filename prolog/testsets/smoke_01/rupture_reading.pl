@@ -117,14 +117,16 @@ narrative_ontology:topic_domain(rupture_reading, "historical_linguistics/philolo
 domain_priors:requires_active_enforcement(rupture_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(rupture_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(rupture_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(rupture_reading).
+narrative_ontology:cs_story_uid(rupture_reading, '18a4f896-30f7-47fb-8300-6ced5f054314').
+narrative_ontology:cs_created_at('18a4f896-30f7-47fb-8300-6ced5f054314', '').
+narrative_ontology:cs_kernel_codification('18a4f896-30f7-47fb-8300-6ced5f054314', fixed_text).
+narrative_ontology:cs_authority_grounding('18a4f896-30f7-47fb-8300-6ced5f054314', lineage).
+narrative_ontology:cs_interpretation_layer_present('18a4f896-30f7-47fb-8300-6ced5f054314').
 narrative_ontology:cs_kernel_id(rupture_reading, correct_latin).
-narrative_ontology:cs_reading_relation(rupture_reading, continuity_reading, coexists_with).
-narrative_ontology:cs_axiom(rupture_reading, foundational, classical_texts_sole_legitimate_authority).
+narrative_ontology:cs_reading_relation('18a4f896-30f7-47fb-8300-6ced5f054314', continuity_reading, coexists_with).
+narrative_ontology:cs_axiom('18a4f896-30f7-47fb-8300-6ced5f054314', foundational, classical_texts_sole_legitimate_authority).
 narrative_ontology:cs_axiom_status(classical_texts_sole_legitimate_authority, holdable).
-narrative_ontology:cs_axiom(rupture_reading, foundational, medieval_practice_constitutes_corruption).
+narrative_ontology:cs_axiom('18a4f896-30f7-47fb-8300-6ced5f054314', foundational, medieval_practice_constitutes_corruption).
 narrative_ontology:cs_axiom_status(medieval_practice_constitutes_corruption, holdable).
 
 % --- Structural relationships ---

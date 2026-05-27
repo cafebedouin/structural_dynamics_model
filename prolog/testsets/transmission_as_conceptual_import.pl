@@ -110,8 +110,10 @@ narrative_ontology:topic_domain(transmission_as_conceptual_import, "history_of_m
 domain_priors:requires_active_enforcement(transmission_as_conceptual_import).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(transmission_as_conceptual_import, implicit).
-narrative_ontology:cs_authority_grounding(transmission_as_conceptual_import, extraction).
+narrative_ontology:cs_story_uid(transmission_as_conceptual_import, 'b9b8092b-7cd2-439e-b413-18774a919d71').
+narrative_ontology:cs_created_at('b9b8092b-7cd2-439e-b413-18774a919d71', '').
+narrative_ontology:cs_kernel_codification('b9b8092b-7cd2-439e-b413-18774a919d71', implicit).
+narrative_ontology:cs_authority_grounding('b9b8092b-7cd2-439e-b413-18774a919d71', extraction).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(transmission_as_conceptual_import, european_mathematical_authority).

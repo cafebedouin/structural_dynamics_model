@@ -121,20 +121,22 @@ narrative_ontology:topic_domain(republican_reading, "political_philosophy/consti
 domain_priors:requires_active_enforcement(republican_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(republican_reading, formalized).
-narrative_ontology:cs_authority_grounding(republican_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(republican_reading).
+narrative_ontology:cs_story_uid(republican_reading, 'eb71e85e-8916-4ad8-a21e-f4fa1226ad16').
+narrative_ontology:cs_created_at('eb71e85e-8916-4ad8-a21e-f4fa1226ad16', '').
+narrative_ontology:cs_kernel_codification('eb71e85e-8916-4ad8-a21e-f4fa1226ad16', formalized).
+narrative_ontology:cs_authority_grounding('eb71e85e-8916-4ad8-a21e-f4fa1226ad16', lineage).
+narrative_ontology:cs_interpretation_layer_present('eb71e85e-8916-4ad8-a21e-f4fa1226ad16').
 narrative_ontology:cs_kernel_id(republican_reading, sovereign_legitimacy).
-narrative_ontology:cs_reading_relation(republican_reading, monarchical_reading, forecloses).
-narrative_ontology:cs_reading_relation(republican_reading, constitutional_hybrid_reading, influences).
-narrative_ontology:cs_axiom(republican_reading, foundational, popular_sovereignty_principle).
+narrative_ontology:cs_reading_relation('eb71e85e-8916-4ad8-a21e-f4fa1226ad16', monarchical_reading, forecloses).
+narrative_ontology:cs_reading_relation('eb71e85e-8916-4ad8-a21e-f4fa1226ad16', constitutional_hybrid_reading, influences).
+narrative_ontology:cs_axiom('eb71e85e-8916-4ad8-a21e-f4fa1226ad16', foundational, popular_sovereignty_principle).
 narrative_ontology:cs_axiom_status(popular_sovereignty_principle, holdable).
-narrative_ontology:cs_axiom_grounding(republican_reading, popular_sovereignty_principle, deontological).
-narrative_ontology:cs_axiom(republican_reading, foundational, delegated_consent_requirement).
+narrative_ontology:cs_axiom_grounding('eb71e85e-8916-4ad8-a21e-f4fa1226ad16', popular_sovereignty_principle, deontological).
+narrative_ontology:cs_axiom('eb71e85e-8916-4ad8-a21e-f4fa1226ad16', foundational, delegated_consent_requirement).
 narrative_ontology:cs_axiom_status(delegated_consent_requirement, holdable).
-narrative_ontology:cs_axiom_grounding(republican_reading, delegated_consent_requirement, deontological).
-narrative_ontology:cs_reference_frame(republican_reading, enlightenment_popular_sovereignty).
-narrative_ontology:cs_drift_state(republican_reading, contemporary_information_age, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('eb71e85e-8916-4ad8-a21e-f4fa1226ad16', delegated_consent_requirement, deontological).
+narrative_ontology:cs_reference_frame('eb71e85e-8916-4ad8-a21e-f4fa1226ad16', enlightenment_popular_sovereignty).
+narrative_ontology:cs_drift_state('eb71e85e-8916-4ad8-a21e-f4fa1226ad16', contemporary_information_age, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(republican_reading, voting_citizenry).

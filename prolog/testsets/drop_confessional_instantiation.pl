@@ -84,9 +84,11 @@ narrative_ontology:topic_domain(drop_confessional_instantiation, "religious_hist
 domain_priors:requires_active_enforcement(drop_confessional_instantiation).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(drop_confessional_instantiation, distributed).
-narrative_ontology:cs_authority_grounding(drop_confessional_instantiation, lineage).
-narrative_ontology:cs_interpretation_layer_present(drop_confessional_instantiation).
+narrative_ontology:cs_story_uid(drop_confessional_instantiation, '07ed3b8a-1dd0-4985-a5ab-42799b1adb3f').
+narrative_ontology:cs_created_at('07ed3b8a-1dd0-4985-a5ab-42799b1adb3f', '').
+narrative_ontology:cs_kernel_codification('07ed3b8a-1dd0-4985-a5ab-42799b1adb3f', distributed).
+narrative_ontology:cs_authority_grounding('07ed3b8a-1dd0-4985-a5ab-42799b1adb3f', lineage).
+narrative_ontology:cs_interpretation_layer_present('07ed3b8a-1dd0-4985-a5ab-42799b1adb3f').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(drop_confessional_instantiation, reformed_clergy).

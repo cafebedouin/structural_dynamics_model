@@ -121,18 +121,20 @@ narrative_ontology:topic_domain(textual_recovery_reading, "historical_linguistic
 domain_priors:requires_active_enforcement(textual_recovery_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(textual_recovery_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(textual_recovery_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(textual_recovery_reading).
+narrative_ontology:cs_story_uid(textual_recovery_reading, '55126dec-246e-4d9e-87bd-4132e3c789f3').
+narrative_ontology:cs_created_at('55126dec-246e-4d9e-87bd-4132e3c789f3', '').
+narrative_ontology:cs_kernel_codification('55126dec-246e-4d9e-87bd-4132e3c789f3', fixed_text).
+narrative_ontology:cs_authority_grounding('55126dec-246e-4d9e-87bd-4132e3c789f3', lineage).
+narrative_ontology:cs_interpretation_layer_present('55126dec-246e-4d9e-87bd-4132e3c789f3').
 narrative_ontology:cs_kernel_id(textual_recovery_reading, correct_latin).
-narrative_ontology:cs_reading_relation(textual_recovery_reading, living_drift_reading, forecloses).
-narrative_ontology:cs_reading_relation(textual_recovery_reading, prescriptive_ideal_reading, coexists_with).
-narrative_ontology:cs_axiom(textual_recovery_reading, foundational, classical_texts_are_historically_determinate).
+narrative_ontology:cs_reading_relation('55126dec-246e-4d9e-87bd-4132e3c789f3', living_drift_reading, forecloses).
+narrative_ontology:cs_reading_relation('55126dec-246e-4d9e-87bd-4132e3c789f3', prescriptive_ideal_reading, coexists_with).
+narrative_ontology:cs_axiom('55126dec-246e-4d9e-87bd-4132e3c789f3', foundational, classical_texts_are_historically_determinate).
 narrative_ontology:cs_axiom_status(classical_texts_are_historically_determinate, holdable).
-narrative_ontology:cs_axiom(textual_recovery_reading, foundational, textual_recovery_through_philology_is_epistemically_valid).
+narrative_ontology:cs_axiom('55126dec-246e-4d9e-87bd-4132e3c789f3', foundational, textual_recovery_through_philology_is_epistemically_valid).
 narrative_ontology:cs_axiom_status(textual_recovery_through_philology_is_epistemically_valid, holdable).
-narrative_ontology:cs_reference_frame(textual_recovery_reading, classical_manuscript_authenticity).
-narrative_ontology:cs_drift_state(textual_recovery_reading, contemporary_digital_textuality, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('55126dec-246e-4d9e-87bd-4132e3c789f3', classical_manuscript_authenticity).
+narrative_ontology:cs_drift_state('55126dec-246e-4d9e-87bd-4132e3c789f3', contemporary_digital_textuality, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(textual_recovery_reading, humanist_scholarly_elite).

@@ -126,20 +126,22 @@ narrative_ontology:topic_domain(hybrid_reading, "historical_linguistics/intellec
 domain_priors:requires_active_enforcement(hybrid_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(hybrid_reading, distributed).
-narrative_ontology:cs_authority_grounding(hybrid_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(hybrid_reading).
+narrative_ontology:cs_story_uid(hybrid_reading, 'e2194624-6ad7-444b-9b46-6ebd04ed5f45').
+narrative_ontology:cs_created_at('e2194624-6ad7-444b-9b46-6ebd04ed5f45', '').
+narrative_ontology:cs_kernel_codification('e2194624-6ad7-444b-9b46-6ebd04ed5f45', distributed).
+narrative_ontology:cs_authority_grounding('e2194624-6ad7-444b-9b46-6ebd04ed5f45', lineage).
+narrative_ontology:cs_interpretation_layer_present('e2194624-6ad7-444b-9b46-6ebd04ed5f45').
 narrative_ontology:cs_kernel_id(hybrid_reading, latin_correctness).
-narrative_ontology:cs_reading_relation(hybrid_reading, continuity_reading, coexists_with).
-narrative_ontology:cs_reading_relation(hybrid_reading, rupture_reading, coexists_with).
-narrative_ontology:cs_axiom(hybrid_reading, foundational, domain_bifurcation_legitimate).
+narrative_ontology:cs_reading_relation('e2194624-6ad7-444b-9b46-6ebd04ed5f45', continuity_reading, coexists_with).
+narrative_ontology:cs_reading_relation('e2194624-6ad7-444b-9b46-6ebd04ed5f45', rupture_reading, coexists_with).
+narrative_ontology:cs_axiom('e2194624-6ad7-444b-9b46-6ebd04ed5f45', foundational, domain_bifurcation_legitimate).
 narrative_ontology:cs_axiom_status(domain_bifurcation_legitimate, holdable).
-narrative_ontology:cs_axiom_grounding(hybrid_reading, domain_bifurcation_legitimate, conventional).
-narrative_ontology:cs_axiom(hybrid_reading, secondary, status_hierarchy_justified_by_function).
+narrative_ontology:cs_axiom_grounding('e2194624-6ad7-444b-9b46-6ebd04ed5f45', domain_bifurcation_legitimate, conventional).
+narrative_ontology:cs_axiom('e2194624-6ad7-444b-9b46-6ebd04ed5f45', secondary, status_hierarchy_justified_by_function).
 narrative_ontology:cs_axiom_status(status_hierarchy_justified_by_function, overridden).
-narrative_ontology:cs_axiom_grounding(hybrid_reading, status_hierarchy_justified_by_function, empirically_contingent).
-narrative_ontology:cs_reference_frame(hybrid_reading, classical_literary_standard_with_technical_exception).
-narrative_ontology:cs_drift_state(hybrid_reading, post_printing_press_era, gap(codification_collapse, substantial, false)).
+narrative_ontology:cs_axiom_grounding('e2194624-6ad7-444b-9b46-6ebd04ed5f45', status_hierarchy_justified_by_function, empirically_contingent).
+narrative_ontology:cs_reference_frame('e2194624-6ad7-444b-9b46-6ebd04ed5f45', classical_literary_standard_with_technical_exception).
+narrative_ontology:cs_drift_state('e2194624-6ad7-444b-9b46-6ebd04ed5f45', post_printing_press_era, gap(codification_collapse, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(hybrid_reading, classical_literary_tradition).

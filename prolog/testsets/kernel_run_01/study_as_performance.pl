@@ -125,18 +125,20 @@ narrative_ontology:human_readable(study_as_performance, "Study of Sacrifice Law 
 narrative_ontology:topic_domain(study_as_performance, "religious_studies/halakhic_theory").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(study_as_performance, fixed_text).
-narrative_ontology:cs_authority_grounding(study_as_performance, lineage).
-narrative_ontology:cs_interpretation_layer_present(study_as_performance).
+narrative_ontology:cs_story_uid(study_as_performance, '466dfee3-55b3-4ae8-b041-a9dd9fb859f8').
+narrative_ontology:cs_created_at('466dfee3-55b3-4ae8-b041-a9dd9fb859f8', '').
+narrative_ontology:cs_kernel_codification('466dfee3-55b3-4ae8-b041-a9dd9fb859f8', fixed_text).
+narrative_ontology:cs_authority_grounding('466dfee3-55b3-4ae8-b041-a9dd9fb859f8', lineage).
+narrative_ontology:cs_interpretation_layer_present('466dfee3-55b3-4ae8-b041-a9dd9fb859f8').
 narrative_ontology:cs_kernel_id(study_as_performance, sacrifice_commandment).
-narrative_ontology:cs_reading_relation(study_as_performance, performance_only, coexists_with).
-narrative_ontology:cs_reading_relation(study_as_performance, archive_maintenance, coexists_with).
-narrative_ontology:cs_axiom(study_as_performance, foundational, study_fulfills_sacrifice_commandment).
+narrative_ontology:cs_reading_relation('466dfee3-55b3-4ae8-b041-a9dd9fb859f8', performance_only, coexists_with).
+narrative_ontology:cs_reading_relation('466dfee3-55b3-4ae8-b041-a9dd9fb859f8', archive_maintenance, coexists_with).
+narrative_ontology:cs_axiom('466dfee3-55b3-4ae8-b041-a9dd9fb859f8', foundational, study_fulfills_sacrifice_commandment).
 narrative_ontology:cs_axiom_status(study_fulfills_sacrifice_commandment, holdable).
-narrative_ontology:cs_axiom(study_as_performance, secondary, diaspora_existence_is_permanent_condition).
+narrative_ontology:cs_axiom('466dfee3-55b3-4ae8-b041-a9dd9fb859f8', secondary, diaspora_existence_is_permanent_condition).
 narrative_ontology:cs_axiom_status(diaspora_existence_is_permanent_condition, holdable).
-narrative_ontology:cs_reference_frame(study_as_performance, diaspora_continuity_through_study).
-narrative_ontology:cs_drift_state(study_as_performance, contemporary_post_industrial_late_modernity, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_reference_frame('466dfee3-55b3-4ae8-b041-a9dd9fb859f8', diaspora_continuity_through_study).
+narrative_ontology:cs_drift_state('466dfee3-55b3-4ae8-b041-a9dd9fb859f8', contemporary_post_industrial_late_modernity, gap(practice_drift, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(study_as_performance, scholar_worshipper).

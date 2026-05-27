@@ -116,20 +116,22 @@ narrative_ontology:topic_domain(husk_reading, "disaster_preparedness/institution
 domain_priors:requires_active_enforcement(husk_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(husk_reading, implicit).
-narrative_ontology:cs_authority_grounding(husk_reading, practice).
-narrative_ontology:cs_interpretation_layer_present(husk_reading).
+narrative_ontology:cs_story_uid(husk_reading, '9739f21d-4c02-427a-ac10-68d24cef8a19').
+narrative_ontology:cs_created_at('9739f21d-4c02-427a-ac10-68d24cef8a19', '').
+narrative_ontology:cs_kernel_codification('9739f21d-4c02-427a-ac10-68d24cef8a19', implicit).
+narrative_ontology:cs_authority_grounding('9739f21d-4c02-427a-ac10-68d24cef8a19', practice).
+narrative_ontology:cs_interpretation_layer_present('9739f21d-4c02-427a-ac10-68d24cef8a19').
 narrative_ontology:cs_kernel_id(husk_reading, preparedness_retention).
-narrative_ontology:cs_reading_relation(husk_reading, competence_reading, coexists_with).
-narrative_ontology:cs_reading_relation(husk_reading, hybrid_reading, coexists_with).
-narrative_ontology:cs_axiom(husk_reading, foundational, ceremony_displaces_competence_under_resource_constraint).
+narrative_ontology:cs_reading_relation('9739f21d-4c02-427a-ac10-68d24cef8a19', competence_reading, coexists_with).
+narrative_ontology:cs_reading_relation('9739f21d-4c02-427a-ac10-68d24cef8a19', hybrid_reading, coexists_with).
+narrative_ontology:cs_axiom('9739f21d-4c02-427a-ac10-68d24cef8a19', foundational, ceremony_displaces_competence_under_resource_constraint).
 narrative_ontology:cs_axiom_status(ceremony_displaces_competence_under_resource_constraint, holdable).
-narrative_ontology:cs_axiom_grounding(husk_reading, ceremony_displaces_competence_under_resource_constraint, empirically_contingent).
-narrative_ontology:cs_axiom(husk_reading, foundational, live_exercise_capacity_requires_sustained_investment).
+narrative_ontology:cs_axiom_grounding('9739f21d-4c02-427a-ac10-68d24cef8a19', ceremony_displaces_competence_under_resource_constraint, empirically_contingent).
+narrative_ontology:cs_axiom('9739f21d-4c02-427a-ac10-68d24cef8a19', foundational, live_exercise_capacity_requires_sustained_investment).
 narrative_ontology:cs_axiom_status(live_exercise_capacity_requires_sustained_investment, holdable).
-narrative_ontology:cs_axiom_grounding(husk_reading, live_exercise_capacity_requires_sustained_investment, empirically_contingent).
-narrative_ontology:cs_reference_frame(husk_reading, continuous_skill_retention_through_live_practice).
-narrative_ontology:cs_drift_state(husk_reading, contemporary_budget_constrained_governance, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('9739f21d-4c02-427a-ac10-68d24cef8a19', live_exercise_capacity_requires_sustained_investment, empirically_contingent).
+narrative_ontology:cs_reference_frame('9739f21d-4c02-427a-ac10-68d24cef8a19', continuous_skill_retention_through_live_practice).
+narrative_ontology:cs_drift_state('9739f21d-4c02-427a-ac10-68d24cef8a19', contemporary_budget_constrained_governance, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(husk_reading, institutional_legitimacy).

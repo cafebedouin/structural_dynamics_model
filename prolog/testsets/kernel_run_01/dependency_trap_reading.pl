@@ -115,18 +115,20 @@ narrative_ontology:topic_domain(dependency_trap_reading, "political_economy/soci
 domain_priors:requires_active_enforcement(dependency_trap_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(dependency_trap_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(dependency_trap_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(dependency_trap_reading).
+narrative_ontology:cs_story_uid(dependency_trap_reading, 'ed000535-93d2-4079-a8d5-469efa3a9ea7').
+narrative_ontology:cs_created_at('ed000535-93d2-4079-a8d5-469efa3a9ea7', '').
+narrative_ontology:cs_kernel_codification('ed000535-93d2-4079-a8d5-469efa3a9ea7', fixed_text).
+narrative_ontology:cs_authority_grounding('ed000535-93d2-4079-a8d5-469efa3a9ea7', lineage).
+narrative_ontology:cs_interpretation_layer_present('ed000535-93d2-4079-a8d5-469efa3a9ea7').
 narrative_ontology:cs_kernel_id(dependency_trap_reading, income_support_commitment).
-narrative_ontology:cs_reading_relation(dependency_trap_reading, freedom_floor_reading, forecloses).
-narrative_ontology:cs_reading_relation(dependency_trap_reading, targeting_efficiency_reading, coexists_with).
-narrative_ontology:cs_axiom(dependency_trap_reading, foundational, labor_participation_economically_necessary).
+narrative_ontology:cs_reading_relation('ed000535-93d2-4079-a8d5-469efa3a9ea7', freedom_floor_reading, forecloses).
+narrative_ontology:cs_reading_relation('ed000535-93d2-4079-a8d5-469efa3a9ea7', targeting_efficiency_reading, coexists_with).
+narrative_ontology:cs_axiom('ed000535-93d2-4079-a8d5-469efa3a9ea7', foundational, labor_participation_economically_necessary).
 narrative_ontology:cs_axiom_status(labor_participation_economically_necessary, holdable).
-narrative_ontology:cs_axiom(dependency_trap_reading, foundational, unconditional_income_reduces_labor_supply).
+narrative_ontology:cs_axiom('ed000535-93d2-4079-a8d5-469efa3a9ea7', foundational, unconditional_income_reduces_labor_supply).
 narrative_ontology:cs_axiom_status(unconditional_income_reduces_labor_supply, holdable).
-narrative_ontology:cs_reference_frame(dependency_trap_reading, welfare_state_with_work_as_primary_distributive_mechanism).
-narrative_ontology:cs_drift_state(dependency_trap_reading, contemporary_automation_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_reference_frame('ed000535-93d2-4079-a8d5-469efa3a9ea7', welfare_state_with_work_as_primary_distributive_mechanism).
+narrative_ontology:cs_drift_state('ed000535-93d2-4079-a8d5-469efa3a9ea7', contemporary_automation_era, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(dependency_trap_reading, unconditional_income_recipients_exiting_labor).

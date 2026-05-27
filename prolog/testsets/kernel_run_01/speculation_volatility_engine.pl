@@ -131,19 +131,21 @@ narrative_ontology:topic_domain(speculation_volatility_engine, "political_econom
 domain_priors:requires_active_enforcement(speculation_volatility_engine).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(speculation_volatility_engine, distributed).
-narrative_ontology:cs_authority_grounding(speculation_volatility_engine, distributed).
-narrative_ontology:cs_reading_relation(speculation_volatility_engine, sound_money_reading, coexists_with).
-narrative_ontology:cs_reading_relation(speculation_volatility_engine, decentralization_governance_reading, coexists_with).
-narrative_ontology:cs_reading_relation(speculation_volatility_engine, speculation_asset_reading, coexists_with).
-narrative_ontology:cs_axiom(speculation_volatility_engine, foundational, distributed_ledger_enables_value_transfer).
+narrative_ontology:cs_story_uid(speculation_volatility_engine, '7e0b5e2c-15a8-478a-ae15-e0a755ab291a').
+narrative_ontology:cs_created_at('7e0b5e2c-15a8-478a-ae15-e0a755ab291a', '').
+narrative_ontology:cs_kernel_codification('7e0b5e2c-15a8-478a-ae15-e0a755ab291a', distributed).
+narrative_ontology:cs_authority_grounding('7e0b5e2c-15a8-478a-ae15-e0a755ab291a', distributed).
+narrative_ontology:cs_reading_relation('7e0b5e2c-15a8-478a-ae15-e0a755ab291a', sound_money_reading, coexists_with).
+narrative_ontology:cs_reading_relation('7e0b5e2c-15a8-478a-ae15-e0a755ab291a', decentralization_governance_reading, coexists_with).
+narrative_ontology:cs_reading_relation('7e0b5e2c-15a8-478a-ae15-e0a755ab291a', speculation_asset_reading, coexists_with).
+narrative_ontology:cs_axiom('7e0b5e2c-15a8-478a-ae15-e0a755ab291a', foundational, distributed_ledger_enables_value_transfer).
 narrative_ontology:cs_axiom_status(distributed_ledger_enables_value_transfer, holdable).
-narrative_ontology:cs_axiom(speculation_volatility_engine, secondary, volatility_funds_network_development).
+narrative_ontology:cs_axiom('7e0b5e2c-15a8-478a-ae15-e0a755ab291a', secondary, volatility_funds_network_development).
 narrative_ontology:cs_axiom_status(volatility_funds_network_development, holdable).
-narrative_ontology:cs_axiom(speculation_volatility_engine, secondary, open_source_code_ensures_decentralization).
+narrative_ontology:cs_axiom('7e0b5e2c-15a8-478a-ae15-e0a755ab291a', secondary, open_source_code_ensures_decentralization).
 narrative_ontology:cs_axiom_status(open_source_code_ensures_decentralization, overridden).
-narrative_ontology:cs_reference_frame(speculation_volatility_engine, cypherpunk_monetary_autonomy).
-narrative_ontology:cs_drift_state(speculation_volatility_engine, institutional_capture_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('7e0b5e2c-15a8-478a-ae15-e0a755ab291a', cypherpunk_monetary_autonomy).
+narrative_ontology:cs_drift_state('7e0b5e2c-15a8-478a-ae15-e0a755ab291a', institutional_capture_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(speculation_volatility_engine, early_adopters).

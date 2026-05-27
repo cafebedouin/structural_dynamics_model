@@ -127,20 +127,22 @@ narrative_ontology:topic_domain(liturgical_preservation_reading, "sociolinguisti
 domain_priors:requires_active_enforcement(liturgical_preservation_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(liturgical_preservation_reading, formalized).
-narrative_ontology:cs_authority_grounding(liturgical_preservation_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(liturgical_preservation_reading).
+narrative_ontology:cs_story_uid(liturgical_preservation_reading, '9030cd96-5f29-4c80-9756-c598106e9f56').
+narrative_ontology:cs_created_at('9030cd96-5f29-4c80-9756-c598106e9f56', '').
+narrative_ontology:cs_kernel_codification('9030cd96-5f29-4c80-9756-c598106e9f56', formalized).
+narrative_ontology:cs_authority_grounding('9030cd96-5f29-4c80-9756-c598106e9f56', lineage).
+narrative_ontology:cs_interpretation_layer_present('9030cd96-5f29-4c80-9756-c598106e9f56').
 narrative_ontology:cs_kernel_id(liturgical_preservation_reading, living_language_status).
-narrative_ontology:cs_reading_relation(liturgical_preservation_reading, native_generation_reading, forecloses).
-narrative_ontology:cs_reading_relation(liturgical_preservation_reading, literary_continuity_reading, influences).
-narrative_ontology:cs_axiom(liturgical_preservation_reading, foundational, interpretive_authorization).
+narrative_ontology:cs_reading_relation('9030cd96-5f29-4c80-9756-c598106e9f56', native_generation_reading, forecloses).
+narrative_ontology:cs_reading_relation('9030cd96-5f29-4c80-9756-c598106e9f56', literary_continuity_reading, influences).
+narrative_ontology:cs_axiom('9030cd96-5f29-4c80-9756-c598106e9f56', foundational, interpretive_authorization).
 narrative_ontology:cs_axiom_status(interpretive_authorization, holdable).
-narrative_ontology:cs_axiom_grounding(liturgical_preservation_reading, interpretive_authorization, conventional).
-narrative_ontology:cs_axiom(liturgical_preservation_reading, secondary, liturgical_essence).
+narrative_ontology:cs_axiom_grounding('9030cd96-5f29-4c80-9756-c598106e9f56', interpretive_authorization, conventional).
+narrative_ontology:cs_axiom('9030cd96-5f29-4c80-9756-c598106e9f56', secondary, liturgical_essence).
 narrative_ontology:cs_axiom_status(liturgical_essence, holdable).
-narrative_ontology:cs_axiom_grounding(liturgical_preservation_reading, liturgical_essence, deontological).
-narrative_ontology:cs_reference_frame(liturgical_preservation_reading, canonical_liturgical_transmission).
-narrative_ontology:cs_drift_state(liturgical_preservation_reading, contemporary_secular_linguistic_innovation, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('9030cd96-5f29-4c80-9756-c598106e9f56', liturgical_essence, deontological).
+narrative_ontology:cs_reference_frame('9030cd96-5f29-4c80-9756-c598106e9f56', canonical_liturgical_transmission).
+narrative_ontology:cs_drift_state('9030cd96-5f29-4c80-9756-c598106e9f56', contemporary_secular_linguistic_innovation, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(liturgical_preservation_reading, rabbinical_authority).

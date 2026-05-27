@@ -117,18 +117,20 @@ narrative_ontology:topic_domain(retributive_desert, "criminal_justice/political_
 domain_priors:requires_active_enforcement(retributive_desert).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(retributive_desert, formalized).
-narrative_ontology:cs_authority_grounding(retributive_desert, lineage).
-narrative_ontology:cs_interpretation_layer_present(retributive_desert).
+narrative_ontology:cs_story_uid(retributive_desert, 'f88d2a83-3f79-4c5a-8a44-51b4fe014442').
+narrative_ontology:cs_created_at('f88d2a83-3f79-4c5a-8a44-51b4fe014442', '').
+narrative_ontology:cs_kernel_codification('f88d2a83-3f79-4c5a-8a44-51b4fe014442', formalized).
+narrative_ontology:cs_authority_grounding('f88d2a83-3f79-4c5a-8a44-51b4fe014442', lineage).
+narrative_ontology:cs_interpretation_layer_present('f88d2a83-3f79-4c5a-8a44-51b4fe014442').
 narrative_ontology:cs_kernel_id(retributive_desert, state_killing_authority).
-narrative_ontology:cs_reading_relation(retributive_desert, deterrence_instrument, coexists_with).
-narrative_ontology:cs_reading_relation(retributive_desert, categorical_impermissibility, coexists_with).
-narrative_ontology:cs_axiom(retributive_desert, foundational, murder_forfeits_moral_status).
+narrative_ontology:cs_reading_relation('f88d2a83-3f79-4c5a-8a44-51b4fe014442', deterrence_instrument, coexists_with).
+narrative_ontology:cs_reading_relation('f88d2a83-3f79-4c5a-8a44-51b4fe014442', categorical_impermissibility, coexists_with).
+narrative_ontology:cs_axiom('f88d2a83-3f79-4c5a-8a44-51b4fe014442', foundational, murder_forfeits_moral_status).
 narrative_ontology:cs_axiom_status(murder_forfeits_moral_status, holdable).
-narrative_ontology:cs_axiom(retributive_desert, foundational, proportionate_response_legitimacy).
+narrative_ontology:cs_axiom('f88d2a83-3f79-4c5a-8a44-51b4fe014442', foundational, proportionate_response_legitimacy).
 narrative_ontology:cs_axiom_status(proportionate_response_legitimacy, holdable).
-narrative_ontology:cs_reference_frame(retributive_desert, proportionate_desert_authority).
-narrative_ontology:cs_drift_state(retributive_desert, contemporary_human_rights_movement, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('f88d2a83-3f79-4c5a-8a44-51b4fe014442', proportionate_desert_authority).
+narrative_ontology:cs_drift_state('f88d2a83-3f79-4c5a-8a44-51b4fe014442', contemporary_human_rights_movement, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(retributive_desert, moral_order_vindication).

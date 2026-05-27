@@ -119,20 +119,22 @@ narrative_ontology:topic_domain(exogenous_override_reading, "religious_instituti
 domain_priors:requires_active_enforcement(exogenous_override_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(exogenous_override_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(exogenous_override_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(exogenous_override_reading).
+narrative_ontology:cs_story_uid(exogenous_override_reading, '7dcd727e-08e2-422d-af10-585f8ab0681e').
+narrative_ontology:cs_created_at('7dcd727e-08e2-422d-af10-585f8ab0681e', '').
+narrative_ontology:cs_kernel_codification('7dcd727e-08e2-422d-af10-585f8ab0681e', fixed_text).
+narrative_ontology:cs_authority_grounding('7dcd727e-08e2-422d-af10-585f8ab0681e', extraction).
+narrative_ontology:cs_interpretation_layer_present('7dcd727e-08e2-422d-af10-585f8ab0681e').
 narrative_ontology:cs_kernel_id(exogenous_override_reading, marriage_commitment_legitimacy).
-narrative_ontology:cs_reading_relation(exogenous_override_reading, endogenous_reinterpretation_reading, forecloses).
-narrative_ontology:cs_reading_relation(exogenous_override_reading, hybrid_pragmatic_reading, coexists_with).
-narrative_ontology:cs_axiom(exogenous_override_reading, foundational, federal_coercion_determines_practice).
+narrative_ontology:cs_reading_relation('7dcd727e-08e2-422d-af10-585f8ab0681e', endogenous_reinterpretation_reading, forecloses).
+narrative_ontology:cs_reading_relation('7dcd727e-08e2-422d-af10-585f8ab0681e', hybrid_pragmatic_reading, coexists_with).
+narrative_ontology:cs_axiom('7dcd727e-08e2-422d-af10-585f8ab0681e', foundational, federal_coercion_determines_practice).
 narrative_ontology:cs_axiom_status(federal_coercion_determines_practice, holdable).
-narrative_ontology:cs_axiom_grounding(exogenous_override_reading, federal_coercion_determines_practice, empirically_contingent).
-narrative_ontology:cs_axiom(exogenous_override_reading, foundational, doctrinal_claim_unchanged_is_performance).
+narrative_ontology:cs_axiom_grounding('7dcd727e-08e2-422d-af10-585f8ab0681e', federal_coercion_determines_practice, empirically_contingent).
+narrative_ontology:cs_axiom('7dcd727e-08e2-422d-af10-585f8ab0681e', foundational, doctrinal_claim_unchanged_is_performance).
 narrative_ontology:cs_axiom_status(doctrinal_claim_unchanged_is_performance, holdable).
-narrative_ontology:cs_axiom_grounding(exogenous_override_reading, doctrinal_claim_unchanged_is_performance, deontological).
-narrative_ontology:cs_reference_frame(exogenous_override_reading, eternal_covenant_authority).
-narrative_ontology:cs_drift_state(exogenous_override_reading, post_manifesto_crisis, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('7dcd727e-08e2-422d-af10-585f8ab0681e', doctrinal_claim_unchanged_is_performance, deontological).
+narrative_ontology:cs_reference_frame('7dcd727e-08e2-422d-af10-585f8ab0681e', eternal_covenant_authority).
+narrative_ontology:cs_drift_state('7dcd727e-08e2-422d-af10-585f8ab0681e', post_manifesto_crisis, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(exogenous_override_reading, federal_government).

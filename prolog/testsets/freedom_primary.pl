@@ -124,20 +124,22 @@ narrative_ontology:human_readable(freedom_primary, "Border Enforcement Against F
 narrative_ontology:topic_domain(freedom_primary, "political_philosophy/international_law/migration").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(freedom_primary, fixed_text).
-narrative_ontology:cs_authority_grounding(freedom_primary, lineage).
-narrative_ontology:cs_interpretation_layer_present(freedom_primary).
+narrative_ontology:cs_story_uid(freedom_primary, 'eafaf5cf-e303-47de-bd2f-537a39be9a55').
+narrative_ontology:cs_created_at('eafaf5cf-e303-47de-bd2f-537a39be9a55', '').
+narrative_ontology:cs_kernel_codification('eafaf5cf-e303-47de-bd2f-537a39be9a55', fixed_text).
+narrative_ontology:cs_authority_grounding('eafaf5cf-e303-47de-bd2f-537a39be9a55', lineage).
+narrative_ontology:cs_interpretation_layer_present('eafaf5cf-e303-47de-bd2f-537a39be9a55').
 narrative_ontology:cs_kernel_id(freedom_primary, border_normative_status).
-narrative_ontology:cs_reading_relation(freedom_primary, sovereignty_primary, coexists_with).
-narrative_ontology:cs_reading_relation(freedom_primary, qualified_sovereignty, influences).
-narrative_ontology:cs_axiom(freedom_primary, foundational, movement_fundamental_right).
+narrative_ontology:cs_reading_relation('eafaf5cf-e303-47de-bd2f-537a39be9a55', sovereignty_primary, coexists_with).
+narrative_ontology:cs_reading_relation('eafaf5cf-e303-47de-bd2f-537a39be9a55', qualified_sovereignty, influences).
+narrative_ontology:cs_axiom('eafaf5cf-e303-47de-bd2f-537a39be9a55', foundational, movement_fundamental_right).
 narrative_ontology:cs_axiom_status(movement_fundamental_right, holdable).
-narrative_ontology:cs_axiom_grounding(freedom_primary, movement_fundamental_right, deontological).
-narrative_ontology:cs_axiom(freedom_primary, foundational, territorial_closure_requires_extraordinary_justification).
+narrative_ontology:cs_axiom_grounding('eafaf5cf-e303-47de-bd2f-537a39be9a55', movement_fundamental_right, deontological).
+narrative_ontology:cs_axiom('eafaf5cf-e303-47de-bd2f-537a39be9a55', foundational, territorial_closure_requires_extraordinary_justification).
 narrative_ontology:cs_axiom_status(territorial_closure_requires_extraordinary_justification, holdable).
-narrative_ontology:cs_axiom_grounding(freedom_primary, territorial_closure_requires_extraordinary_justification, deontological).
-narrative_ontology:cs_reference_frame(freedom_primary, universal_human_rights_tradition).
-narrative_ontology:cs_drift_state(freedom_primary, contemporary_nationalist_resurgence, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('eafaf5cf-e303-47de-bd2f-537a39be9a55', territorial_closure_requires_extraordinary_justification, deontological).
+narrative_ontology:cs_reference_frame('eafaf5cf-e303-47de-bd2f-537a39be9a55', universal_human_rights_tradition).
+narrative_ontology:cs_drift_state('eafaf5cf-e303-47de-bd2f-537a39be9a55', contemporary_nationalist_resurgence, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(freedom_primary, excluded_migrants).

@@ -124,20 +124,22 @@ narrative_ontology:topic_domain(temporal_kernel_drift, "constitutional_law/legal
 domain_priors:requires_active_enforcement(temporal_kernel_drift).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(temporal_kernel_drift, fixed_text).
-narrative_ontology:cs_authority_grounding(temporal_kernel_drift, lineage).
-narrative_ontology:cs_interpretation_layer_present(temporal_kernel_drift).
+narrative_ontology:cs_story_uid(temporal_kernel_drift, '89a396cc-c957-453d-8fe5-672dff22613e').
+narrative_ontology:cs_created_at('89a396cc-c957-453d-8fe5-672dff22613e', '').
+narrative_ontology:cs_kernel_codification('89a396cc-c957-453d-8fe5-672dff22613e', fixed_text).
+narrative_ontology:cs_authority_grounding('89a396cc-c957-453d-8fe5-672dff22613e', lineage).
+narrative_ontology:cs_interpretation_layer_present('89a396cc-c957-453d-8fe5-672dff22613e').
 narrative_ontology:cs_kernel_id(temporal_kernel_drift, us_constitution_text).
-narrative_ontology:cs_reading_relation(temporal_kernel_drift, living_constitutionalist_reading, coexists_with).
-narrative_ontology:cs_reading_relation(temporal_kernel_drift, positivist_reading, influences).
-narrative_ontology:cs_axiom(temporal_kernel_drift, foundational, meaning_fixed_at_ratification).
+narrative_ontology:cs_reading_relation('89a396cc-c957-453d-8fe5-672dff22613e', living_constitutionalist_reading, coexists_with).
+narrative_ontology:cs_reading_relation('89a396cc-c957-453d-8fe5-672dff22613e', positivist_reading, influences).
+narrative_ontology:cs_axiom('89a396cc-c957-453d-8fe5-672dff22613e', foundational, meaning_fixed_at_ratification).
 narrative_ontology:cs_axiom_status(meaning_fixed_at_ratification, holdable).
-narrative_ontology:cs_axiom_grounding(temporal_kernel_drift, meaning_fixed_at_ratification, empirically_contingent).
-narrative_ontology:cs_axiom(temporal_kernel_drift, foundational, post_ratification_practice_irrelevant).
+narrative_ontology:cs_axiom_grounding('89a396cc-c957-453d-8fe5-672dff22613e', meaning_fixed_at_ratification, empirically_contingent).
+narrative_ontology:cs_axiom('89a396cc-c957-453d-8fe5-672dff22613e', foundational, post_ratification_practice_irrelevant).
 narrative_ontology:cs_axiom_status(post_ratification_practice_irrelevant, holdable).
-narrative_ontology:cs_axiom_grounding(temporal_kernel_drift, post_ratification_practice_irrelevant, deontological).
-narrative_ontology:cs_reference_frame(temporal_kernel_drift, constitutional_meaning_as_semantic_fact).
-narrative_ontology:cs_drift_state(temporal_kernel_drift, contemporary_2024, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('89a396cc-c957-453d-8fe5-672dff22613e', post_ratification_practice_irrelevant, deontological).
+narrative_ontology:cs_reference_frame('89a396cc-c957-453d-8fe5-672dff22613e', constitutional_meaning_as_semantic_fact).
+narrative_ontology:cs_drift_state('89a396cc-c957-453d-8fe5-672dff22613e', contemporary_2024, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(temporal_kernel_drift, originalist_legal_movement).

@@ -125,17 +125,19 @@ narrative_ontology:topic_domain(viability_reading, "constitutional_law/bioethics
 domain_priors:requires_active_enforcement(viability_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(viability_reading, formalized).
-narrative_ontology:cs_authority_grounding(viability_reading, lineage).
+narrative_ontology:cs_story_uid(viability_reading, 'a1f2bd3a-5f30-4617-a30d-f1a654b4f2d3').
+narrative_ontology:cs_created_at('a1f2bd3a-5f30-4617-a30d-f1a654b4f2d3', '').
+narrative_ontology:cs_kernel_codification('a1f2bd3a-5f30-4617-a30d-f1a654b4f2d3', formalized).
+narrative_ontology:cs_authority_grounding('a1f2bd3a-5f30-4617-a30d-f1a654b4f2d3', lineage).
 narrative_ontology:cs_kernel_id(viability_reading, personhood_boundary).
-narrative_ontology:cs_reading_relation(viability_reading, conception_reading, coexists_with).
-narrative_ontology:cs_reading_relation(viability_reading, birth_reading, coexists_with).
-narrative_ontology:cs_axiom(viability_reading, foundational, independent_survival_capacity_moral_marker).
+narrative_ontology:cs_reading_relation('a1f2bd3a-5f30-4617-a30d-f1a654b4f2d3', conception_reading, coexists_with).
+narrative_ontology:cs_reading_relation('a1f2bd3a-5f30-4617-a30d-f1a654b4f2d3', birth_reading, coexists_with).
+narrative_ontology:cs_axiom('a1f2bd3a-5f30-4617-a30d-f1a654b4f2d3', foundational, independent_survival_capacity_moral_marker).
 narrative_ontology:cs_axiom_status(independent_survival_capacity_moral_marker, holdable).
-narrative_ontology:cs_axiom(viability_reading, foundational, maternal_autonomy_pre_viability).
+narrative_ontology:cs_axiom('a1f2bd3a-5f30-4617-a30d-f1a654b4f2d3', foundational, maternal_autonomy_pre_viability).
 narrative_ontology:cs_axiom_status(maternal_autonomy_pre_viability, holdable).
-narrative_ontology:cs_reference_frame(viability_reading, viability_based_personhood_recognition).
-narrative_ontology:cs_drift_state(viability_reading, contemporary_nicu_expansion_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('a1f2bd3a-5f30-4617-a30d-f1a654b4f2d3', viability_based_personhood_recognition).
+narrative_ontology:cs_drift_state('a1f2bd3a-5f30-4617-a30d-f1a654b4f2d3', contemporary_nicu_expansion_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(viability_reading, state_regulatory_authority).

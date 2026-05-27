@@ -121,18 +121,20 @@ narrative_ontology:topic_domain(viability_reading, "bioethics/political_philosop
 domain_priors:requires_active_enforcement(viability_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(viability_reading, formalized).
-narrative_ontology:cs_authority_grounding(viability_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(viability_reading).
+narrative_ontology:cs_story_uid(viability_reading, '64c93817-1335-4288-9697-4e3d0e58a640').
+narrative_ontology:cs_created_at('64c93817-1335-4288-9697-4e3d0e58a640', '').
+narrative_ontology:cs_kernel_codification('64c93817-1335-4288-9697-4e3d0e58a640', formalized).
+narrative_ontology:cs_authority_grounding('64c93817-1335-4288-9697-4e3d0e58a640', lineage).
+narrative_ontology:cs_interpretation_layer_present('64c93817-1335-4288-9697-4e3d0e58a640').
 narrative_ontology:cs_kernel_id(viability_reading, personhood_boundary).
-narrative_ontology:cs_reading_relation(viability_reading, conception_reading, coexists_with).
-narrative_ontology:cs_reading_relation(viability_reading, birth_reading, coexists_with).
-narrative_ontology:cs_axiom(viability_reading, foundational, viability_grounds_moral_status).
+narrative_ontology:cs_reading_relation('64c93817-1335-4288-9697-4e3d0e58a640', conception_reading, coexists_with).
+narrative_ontology:cs_reading_relation('64c93817-1335-4288-9697-4e3d0e58a640', birth_reading, coexists_with).
+narrative_ontology:cs_axiom('64c93817-1335-4288-9697-4e3d0e58a640', foundational, viability_grounds_moral_status).
 narrative_ontology:cs_axiom_status(viability_grounds_moral_status, holdable).
-narrative_ontology:cs_axiom(viability_reading, foundational, capacity_for_independent_survival_is_relevant_to_personhood).
+narrative_ontology:cs_axiom('64c93817-1335-4288-9697-4e3d0e58a640', foundational, capacity_for_independent_survival_is_relevant_to_personhood).
 narrative_ontology:cs_axiom_status(capacity_for_independent_survival_is_relevant_to_personhood, holdable).
-narrative_ontology:cs_reference_frame(viability_reading, biological_capacity_centered_personhood).
-narrative_ontology:cs_drift_state(viability_reading, contemporary_periviable_medicine, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_reference_frame('64c93817-1335-4288-9697-4e3d0e58a640', biological_capacity_centered_personhood).
+narrative_ontology:cs_drift_state('64c93817-1335-4288-9697-4e3d0e58a640', contemporary_periviable_medicine, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(viability_reading, pregnant_persons_reproductive_autonomy).

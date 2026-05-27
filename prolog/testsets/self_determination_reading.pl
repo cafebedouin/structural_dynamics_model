@@ -127,20 +127,22 @@ narrative_ontology:topic_domain(self_determination_reading, "political_theory/in
 domain_priors:requires_active_enforcement(self_determination_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(self_determination_reading, formalized).
-narrative_ontology:cs_authority_grounding(self_determination_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(self_determination_reading).
+narrative_ontology:cs_story_uid(self_determination_reading, '87a700e6-fa40-4978-8e45-c9588065942f').
+narrative_ontology:cs_created_at('87a700e6-fa40-4978-8e45-c9588065942f', '').
+narrative_ontology:cs_kernel_codification('87a700e6-fa40-4978-8e45-c9588065942f', formalized).
+narrative_ontology:cs_authority_grounding('87a700e6-fa40-4978-8e45-c9588065942f', lineage).
+narrative_ontology:cs_interpretation_layer_present('87a700e6-fa40-4978-8e45-c9588065942f').
 narrative_ontology:cs_kernel_id(self_determination_reading, territorial_sovereignty_legitimacy).
-narrative_ontology:cs_reading_relation(self_determination_reading, covenant_continuity_reading, forecloses).
-narrative_ontology:cs_reading_relation(self_determination_reading, existential_matrix_reading, coexists_with).
-narrative_ontology:cs_axiom(self_determination_reading, foundational, modern_period_continuous_residence_binds_legitimacy).
+narrative_ontology:cs_reading_relation('87a700e6-fa40-4978-8e45-c9588065942f', covenant_continuity_reading, forecloses).
+narrative_ontology:cs_reading_relation('87a700e6-fa40-4978-8e45-c9588065942f', existential_matrix_reading, coexists_with).
+narrative_ontology:cs_axiom('87a700e6-fa40-4978-8e45-c9588065942f', foundational, modern_period_continuous_residence_binds_legitimacy).
 narrative_ontology:cs_axiom_status(modern_period_continuous_residence_binds_legitimacy, holdable).
-narrative_ontology:cs_axiom_grounding(self_determination_reading, modern_period_continuous_residence_binds_legitimacy, empirically_contingent).
-narrative_ontology:cs_axiom(self_determination_reading, foundational, external_imposition_delegitimizes_partition).
+narrative_ontology:cs_axiom_grounding('87a700e6-fa40-4978-8e45-c9588065942f', modern_period_continuous_residence_binds_legitimacy, empirically_contingent).
+narrative_ontology:cs_axiom('87a700e6-fa40-4978-8e45-c9588065942f', foundational, external_imposition_delegitimizes_partition).
 narrative_ontology:cs_axiom_status(external_imposition_delegitimizes_partition, holdable).
-narrative_ontology:cs_axiom_grounding(self_determination_reading, external_imposition_delegitimizes_partition, deontological).
-narrative_ontology:cs_reference_frame(self_determination_reading, continuous_arab_majority_self_governance).
-narrative_ontology:cs_drift_state(self_determination_reading, contemporary_post_1967, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('87a700e6-fa40-4978-8e45-c9588065942f', external_imposition_delegitimizes_partition, deontological).
+narrative_ontology:cs_reference_frame('87a700e6-fa40-4978-8e45-c9588065942f', continuous_arab_majority_self_governance).
+narrative_ontology:cs_drift_state('87a700e6-fa40-4978-8e45-c9588065942f', contemporary_post_1967, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(self_determination_reading, arab_population_with_demographic_majority).

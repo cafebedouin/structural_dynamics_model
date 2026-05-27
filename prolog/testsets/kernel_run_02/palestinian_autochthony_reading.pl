@@ -120,20 +120,22 @@ narrative_ontology:human_readable(palestinian_autochthony_reading, "Palestinian 
 narrative_ontology:topic_domain(palestinian_autochthony_reading, "political_theory/international_relations/territorial_sovereignty").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(palestinian_autochthony_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(palestinian_autochthony_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(palestinian_autochthony_reading).
+narrative_ontology:cs_story_uid(palestinian_autochthony_reading, 'e916c69e-8f72-461d-a514-d1c19fc59df4').
+narrative_ontology:cs_created_at('e916c69e-8f72-461d-a514-d1c19fc59df4', '').
+narrative_ontology:cs_kernel_codification('e916c69e-8f72-461d-a514-d1c19fc59df4', fixed_text).
+narrative_ontology:cs_authority_grounding('e916c69e-8f72-461d-a514-d1c19fc59df4', lineage).
+narrative_ontology:cs_interpretation_layer_present('e916c69e-8f72-461d-a514-d1c19fc59df4').
 narrative_ontology:cs_kernel_id(palestinian_autochthony_reading, territorial_legitimacy_dual).
-narrative_ontology:cs_reading_relation(palestinian_autochthony_reading, zionist_refuge_reading, coexists_with).
-narrative_ontology:cs_reading_relation(palestinian_autochthony_reading, two_state_coexistence_reading, influences).
-narrative_ontology:cs_axiom(palestinian_autochthony_reading, foundational, continuous_habitation_legitimates_territorial_claim).
+narrative_ontology:cs_reading_relation('e916c69e-8f72-461d-a514-d1c19fc59df4', zionist_refuge_reading, coexists_with).
+narrative_ontology:cs_reading_relation('e916c69e-8f72-461d-a514-d1c19fc59df4', two_state_coexistence_reading, influences).
+narrative_ontology:cs_axiom('e916c69e-8f72-461d-a514-d1c19fc59df4', foundational, continuous_habitation_legitimates_territorial_claim).
 narrative_ontology:cs_axiom_status(continuous_habitation_legitimates_territorial_claim, holdable).
-narrative_ontology:cs_axiom_grounding(palestinian_autochthony_reading, continuous_habitation_legitimates_territorial_claim, empirically_contingent).
-narrative_ontology:cs_axiom(palestinian_autochthony_reading, foundational, displacement_injustice_requires_remedy_including_return).
+narrative_ontology:cs_axiom_grounding('e916c69e-8f72-461d-a514-d1c19fc59df4', continuous_habitation_legitimates_territorial_claim, empirically_contingent).
+narrative_ontology:cs_axiom('e916c69e-8f72-461d-a514-d1c19fc59df4', foundational, displacement_injustice_requires_remedy_including_return).
 narrative_ontology:cs_axiom_status(displacement_injustice_requires_remedy_including_return, holdable).
-narrative_ontology:cs_axiom_grounding(palestinian_autochthony_reading, displacement_injustice_requires_remedy_including_return, deontological).
-narrative_ontology:cs_reference_frame(palestinian_autochthony_reading, ottoman_period_palestinian_presence).
-narrative_ontology:cs_drift_state(palestinian_autochthony_reading, contemporary_post_1948, gap(practice_drift, severe, false)).
+narrative_ontology:cs_axiom_grounding('e916c69e-8f72-461d-a514-d1c19fc59df4', displacement_injustice_requires_remedy_including_return, deontological).
+narrative_ontology:cs_reference_frame('e916c69e-8f72-461d-a514-d1c19fc59df4', ottoman_period_palestinian_presence).
+narrative_ontology:cs_drift_state('e916c69e-8f72-461d-a514-d1c19fc59df4', contemporary_post_1948, gap(practice_drift, severe, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(palestinian_autochthony_reading, palestinian_population).

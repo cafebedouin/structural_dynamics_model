@@ -136,20 +136,22 @@ narrative_ontology:topic_domain(hybrid_scaffolding_reading, "political_history/s
 domain_priors:requires_active_enforcement(hybrid_scaffolding_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(hybrid_scaffolding_reading, distributed).
-narrative_ontology:cs_authority_grounding(hybrid_scaffolding_reading, practice).
-narrative_ontology:cs_interpretation_layer_present(hybrid_scaffolding_reading).
+narrative_ontology:cs_story_uid(hybrid_scaffolding_reading, '8be29d52-b788-47d5-ac76-5a9613f8c391').
+narrative_ontology:cs_created_at('8be29d52-b788-47d5-ac76-5a9613f8c391', '').
+narrative_ontology:cs_kernel_codification('8be29d52-b788-47d5-ac76-5a9613f8c391', distributed).
+narrative_ontology:cs_authority_grounding('8be29d52-b788-47d5-ac76-5a9613f8c391', practice).
+narrative_ontology:cs_interpretation_layer_present('8be29d52-b788-47d5-ac76-5a9613f8c391').
 narrative_ontology:cs_kernel_id(hybrid_scaffolding_reading, legitimacy_of_imposed_practice).
-narrative_ontology:cs_reading_relation(hybrid_scaffolding_reading, exogenous_override_reading, coexists_with).
-narrative_ontology:cs_reading_relation(hybrid_scaffolding_reading, endogenous_climb_reading, coexists_with).
-narrative_ontology:cs_axiom(hybrid_scaffolding_reading, foundational, scaffolded_infrastructure_enables_adoption).
+narrative_ontology:cs_reading_relation('8be29d52-b788-47d5-ac76-5a9613f8c391', exogenous_override_reading, coexists_with).
+narrative_ontology:cs_reading_relation('8be29d52-b788-47d5-ac76-5a9613f8c391', endogenous_climb_reading, coexists_with).
+narrative_ontology:cs_axiom('8be29d52-b788-47d5-ac76-5a9613f8c391', foundational, scaffolded_infrastructure_enables_adoption).
 narrative_ontology:cs_axiom_status(scaffolded_infrastructure_enables_adoption, holdable).
-narrative_ontology:cs_axiom_grounding(hybrid_scaffolding_reading, scaffolded_infrastructure_enables_adoption, empirically_contingent).
-narrative_ontology:cs_axiom(hybrid_scaffolding_reading, foundational, imposed_practice_achieves_stable_partial_displacement).
+narrative_ontology:cs_axiom_grounding('8be29d52-b788-47d5-ac76-5a9613f8c391', scaffolded_infrastructure_enables_adoption, empirically_contingent).
+narrative_ontology:cs_axiom('8be29d52-b788-47d5-ac76-5a9613f8c391', foundational, imposed_practice_achieves_stable_partial_displacement).
 narrative_ontology:cs_axiom_status(imposed_practice_achieves_stable_partial_displacement, holdable).
-narrative_ontology:cs_axiom_grounding(hybrid_scaffolding_reading, imposed_practice_achieves_stable_partial_displacement, empirically_contingent).
-narrative_ontology:cs_reference_frame(hybrid_scaffolding_reading, pre_imposition_baseline).
-narrative_ontology:cs_drift_state(hybrid_scaffolding_reading, post_scaffolding_naturalization, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('8be29d52-b788-47d5-ac76-5a9613f8c391', imposed_practice_achieves_stable_partial_displacement, empirically_contingent).
+narrative_ontology:cs_reference_frame('8be29d52-b788-47d5-ac76-5a9613f8c391', pre_imposition_baseline).
+narrative_ontology:cs_drift_state('8be29d52-b788-47d5-ac76-5a9613f8c391', post_scaffolding_naturalization, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(hybrid_scaffolding_reading, urban_political_elites).

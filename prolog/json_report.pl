@@ -484,10 +484,47 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
         findall(V, catch(cs_pattern_detection:cs_verdict(C, V), _, fail), Verdicts),
         format(S, '      "cs_verdicts": ', []),
         write_json_string_array(S, Verdicts),
-        format(S, '~n', [])
+        format(S, ',~n', [])
     ;   format(S, '      "cs_pattern": null,~n', []),
         format(S, '      "cs_pattern_signals": [],~n', []),
-        format(S, '      "cs_verdicts": []~n', [])
+        format(S, '      "cs_verdicts": [],~n', [])
+    ),
+    % cs UID-keyed fields: look up all UIDs for this reading, pick latest instance
+    findall(U, catch(narrative_ontology:cs_story_uid(C, U), _, fail), UIDs),
+    (   UIDs = []
+    ->  format(S, '      "cs_instance_count": 0,~n', []),
+        format(S, '      "cs_drift_terminal": null,~n', []),
+        format(S, '      "cs_axiom_foreclosed": null,~n', []),
+        format(S, '      "cs_drift_unacknowledged": false~n', [])
+    ;   length(UIDs, NInst),
+        format(S, '      "cs_instance_count": ~w,~n', [NInst]),
+        % Pick latest instance by created_at, UID-tiebroken; fallback to @< UID ordering
+        (   NInst > 1
+        ->  (   catch(aggregate_all(max(T-U),
+                          (member(U, UIDs),
+                           narrative_ontology:cs_created_at(U, T)),
+                          max(_-UID)),
+                _, fail)
+            ->  true
+            ;   msort(UIDs, Sorted), last(Sorted, UID)  % @< fallback: no timestamps
+            )
+        ;   UIDs = [UID]
+        ),
+        % cs_drift_terminal (UID-keyed)
+        (   catch(cs_drift_engine:cs_drift_trajectory(UID, _, Terminal), _, fail)
+        ->  format(S, '      "cs_drift_terminal": "~w",~n', [Terminal])
+        ;   format(S, '      "cs_drift_terminal": null,~n', [])
+        ),
+        % cs_axiom_foreclosed (UID-keyed; first matching atom)
+        (   catch(cs_axiom_engine:cs_axiom_foreclosed(UID, AxAtom), _, fail)
+        ->  format(S, '      "cs_axiom_foreclosed": "~w",~n', [AxAtom])
+        ;   format(S, '      "cs_axiom_foreclosed": null,~n', [])
+        ),
+        % cs_drift_unacknowledged (UID-keyed)
+        (   catch(cs_pattern_detection:cs_drift_unacknowledged(UID, _), _, fail)
+        ->  format(S, '      "cs_drift_unacknowledged": true~n', [])
+        ;   format(S, '      "cs_drift_unacknowledged": false~n', [])
+        )
     ),
 
     % Close object
@@ -1210,7 +1247,100 @@ write_validation_object(S, Constraints) :-
     findall(C-AG-Sig, catch(cs_grounding_mismatch(C, AG, Sig), _, fail),
             GmTriples),
     length(GmTriples, GmCount),
-    format(S, '    "cs_grounding_mismatch_count": ~w~n', [GmCount]),
+    format(S, '    "cs_grounding_mismatch_count": ~w,~n', [GmCount]),
+
+    % CS trifurcation: drift terminal distribution (registered UIDs only)
+    findall(T, (narrative_ontology:cs_story_uid(_, U),
+                catch(cs_drift_engine:cs_drift_trajectory(U, _, T), _, fail)), AllTerminals),
+    msort(AllTerminals, SortedTerminals),
+    run_length_encode(SortedTerminals, TerminalPairs),
+    format(S, '    "cs_drift_terminal_distribution": ', []),
+    write_json_count_object(S, TerminalPairs),
+    format(S, ',~n', []),
+
+    % CS trifurcation: distinct UIDs with unacknowledged drift
+    % Filter to registered UIDs only (avoids picking up old C-keyed facts during Phase A interregnum)
+    findall(U, (narrative_ontology:cs_story_uid(_, U),
+                catch(cs_pattern_detection:cs_drift_unacknowledged(U, _), _, fail)), UnackUs),
+    sort(UnackUs, UniqueUnackUs),
+    length(UniqueUnackUs, UnackCount),
+    format(S, '    "cs_drift_unacknowledged_count": ~w,~n', [UnackCount]),
+
+    % CS trifurcation: distinct UIDs with axiom foreclosed
+    % Filter to registered UIDs only (avoids picking up old C-keyed facts during Phase A interregnum)
+    findall(U, (narrative_ontology:cs_story_uid(_, U),
+                catch(cs_axiom_engine:cs_axiom_foreclosed(U, _), _, fail)), FcUs),
+    sort(FcUs, UniqueFcUs),
+    length(UniqueFcUs, FcCount),
+    format(S, '    "cs_axiom_foreclosed_count": ~w,~n', [FcCount]),
+
+    % B3: Kernel-level divergence and axiom conflict statistics
+    % K must be bound before calling cs_kernel_divergence to avoid
+    % cs_readings_for_kernel collecting all 317 constraints as "readings".
+    findall(K, narrative_ontology:cs_kernel_id(_, K), Ks0),
+    sort(Ks0, AllKernels),
+
+    findall(K-C1-C2,
+        (   member(K, AllKernels),
+            catch(cs_kernel_registry:cs_kernel_divergence(K, _, C1, C2), _, fail)
+        ),
+        DivTuples),
+    sort(DivTuples, UniqueDivTuples),
+    length(UniqueDivTuples, DivPairCount),
+    format(S, '    "cs_kernel_divergence_count": ~w,~n', [DivPairCount]),
+
+    findall(K,
+        (   member(K, AllKernels),
+            \+ \+ catch(cs_kernel_registry:cs_kernel_divergence(K, _, _, _), _, fail)
+        ),
+        DivKernels),
+    length(DivKernels, DivKernelCount),
+    format(S, '    "cs_kernels_with_divergence": ~w,~n', [DivKernelCount]),
+
+    findall(K-C1-C2,
+        (   member(K, AllKernels),
+            catch(cs_axiom_engine:cs_kernel_axiom_conflict(K, C1, C2, _), _, fail)
+        ),
+        ConflictTuples),
+    sort(ConflictTuples, UniqueConflicts),
+    length(UniqueConflicts, ConflictTotal),
+    format(S, '    "cs_axiom_conflict_total": ~w,~n', [ConflictTotal]),
+
+    findall(K-(UID1-C1n)-(UID2-C2n),
+        (   member(K, AllKernels),
+            catch(cs_axiom_engine:cs_kernel_axiom_conflict(K, UID1-C1n, UID2-C2n, _), _, fail),
+            (   catch(narrative_ontology:cs_reading_relation(UID1, C2n, forecloses), _, fail)
+            ;   catch(narrative_ontology:cs_reading_relation(UID2, C1n, forecloses), _, fail)
+            )
+        ),
+        RealClosureTuples),
+    sort(RealClosureTuples, UniqueRC),
+    length(UniqueRC, RealClosureCount),
+    format(S, '    "cs_axiom_real_closure": ~w,~n', [RealClosureCount]),
+
+    findall(K-(UID1p-C1np)-(UID2p-C2np),
+        (   member(K, AllKernels),
+            catch(cs_axiom_engine:cs_kernel_axiom_conflict(K, UID1p-C1np, UID2p-C2np, _), _, fail),
+            (   catch(narrative_ontology:cs_reading_relation(UID1p, C2np, coexists_with), _, fail)
+            ;   catch(narrative_ontology:cs_reading_relation(UID2p, C1np, coexists_with), _, fail)
+            )
+        ),
+        PlurTuples),
+    sort(PlurTuples, UniquePlur),
+    length(UniquePlur, PlurCount),
+    format(S, '    "cs_axiom_licensed_plurality": ~w,~n', [PlurCount]),
+
+    % C3: per-kernel reading comparison (kernels with >= 2 readings only)
+    findall(K,
+        (   narrative_ontology:cs_kernel_id(_, K),
+            cs_kernel_registry:cs_readings_for_kernel(K, Rs),
+            length(Rs, L), L >= 2
+        ),
+        KList0),
+    sort(KList0, KList),
+    format(S, '    "cs_kernel_comparison": [~n', []),
+    write_kernel_comparison_array(S, KList),
+    format(S, '    ]~n', []),
 
     format(S, '  }', []).
 
@@ -1384,6 +1514,79 @@ count_run(_, [], 1, []).
 count_run(H, [H|T], N, Rest) :-
     !, count_run(H, T, N1, Rest), N is N1 + 1.
 count_run(_, List, 1, List).
+
+/* ================================================================
+   CS KERNEL COMPARISON HELPERS (C3)
+   ================================================================ */
+
+%% write_kernel_comparison_array(+Stream, +Kernels)
+write_kernel_comparison_array(_, []).
+write_kernel_comparison_array(S, [K]) :-
+    !, write_kernel_comparison_entry(S, K, false).
+write_kernel_comparison_array(S, [K|Ks]) :-
+    write_kernel_comparison_entry(S, K, true),
+    write_kernel_comparison_array(S, Ks).
+
+%% write_kernel_comparison_entry(+Stream, +K, +Comma)
+write_kernel_comparison_entry(S, K, Comma) :-
+    cs_kernel_registry:cs_readings_for_kernel(K, Readings),
+    length(Readings, RCount),
+    findall(R1-R2,
+        catch(cs_kernel_registry:cs_kernel_divergence(K, _, R1, R2), _, fail),
+        DivPairs0),
+    sort(DivPairs0, DivPairs),
+    length(DivPairs, NDivPairs),
+    findall(R1-R2,
+        catch(cs_axiom_engine:cs_kernel_axiom_conflict(K, R1, R2, _), _, fail),
+        ConflPairs0),
+    sort(ConflPairs0, ConflPairs),
+    length(ConflPairs, NConflPairs),
+    format(S, '      {~n', []),
+    format(S, '        "kernel_id": "~w",~n', [K]),
+    format(S, '        "reading_count": ~w,~n', [RCount]),
+    format(S, '        "diverging_pair_count": ~w,~n', [NDivPairs]),
+    format(S, '        "axiom_conflict_count": ~w,~n', [NConflPairs]),
+    format(S, '        "readings": [~n', []),
+    write_reading_comparison_list(S, Readings),
+    format(S, '        ]~n', []),
+    (Comma == true -> format(S, '      },~n', []) ; format(S, '      }~n', [])).
+
+%% write_reading_comparison_list(+Stream, +Readings)
+write_reading_comparison_list(_, []).
+write_reading_comparison_list(S, [R]) :-
+    !, write_reading_comparison_entry(S, R, false).
+write_reading_comparison_list(S, [R|Rs]) :-
+    write_reading_comparison_entry(S, R, true),
+    write_reading_comparison_list(S, Rs).
+
+%% write_reading_comparison_entry(+Stream, +UID-C, +Comma)
+%  UID is the story_uid surrogate; C is the reading name (constraint_id).
+%  UID-keyed predicates (drift, axiom, mismatch) receive UID; C-keyed (pattern) receive C.
+write_reading_comparison_entry(S, UID-C, Comma) :-
+    format(S, '          {~n', []),
+    format(S, '            "reading_id": "~w",~n', [C]),
+    format(S, '            "story_uid": "~w",~n', [UID]),
+    (   catch(cs_pattern_detection:cs_pattern(C, Pat, _), _, fail)
+    ->  format(S, '            "cs_pattern": "~w",~n', [Pat])
+    ;   format(S, '            "cs_pattern": null,~n', [])
+    ),
+    (   catch(cs_drift_engine:cs_drift_trajectory(UID, _, Term), _, fail)
+    ->  format(S, '            "cs_drift_terminal": "~w",~n', [Term])
+    ;   format(S, '            "cs_drift_terminal": null,~n', [])
+    ),
+    (   catch(cs_axiom_engine:cs_axiom_foreclosed(UID, AxAt), _, fail)
+    ->  format(S, '            "cs_axiom_foreclosed": "~w",~n', [AxAt])
+    ;   format(S, '            "cs_axiom_foreclosed": null,~n', [])
+    ),
+    (   catch(cs_pattern_detection:cs_drift_unacknowledged(UID, _), _, fail)
+    ->  format(S, '            "cs_drift_unacknowledged": true,~n', [])
+    ;   format(S, '            "cs_drift_unacknowledged": false,~n', [])
+    ),
+    (   catch(cs_drift_mismatch:cs_drift_mismatch(UID, _), _, fail)
+    ->  format(S, '            "cs_drift_mismatch": true~n', [])
+    ;   format(S, '            "cs_drift_mismatch": false~n', [])
+    ),
+    (Comma == true -> format(S, '          },~n', []) ; format(S, '          }~n', [])).
 
 /* ================================================================
    TIER 3 — JSON PRIMITIVES

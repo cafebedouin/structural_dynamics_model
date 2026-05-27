@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(biological_sex_constitutes_woman_category, gender_identity_constitutive_of_personhood).
 narrative_ontology:cs_axiom_contradiction(gender_identity_constitutive_of_personhood, biological_sex_constitutes_woman_category).
+narrative_ontology:cs_story_uid(woman_female_category_contradictions, '62b77b76-0de9-4953-9734-36b4b676d6c7').
+narrative_ontology:cs_created_at('62b77b76-0de9-4953-9734-36b4b676d6c7', '').

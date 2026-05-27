@@ -118,20 +118,22 @@ narrative_ontology:topic_domain(bodily_autonomy_primary, "constitutional_law/pub
 domain_priors:requires_active_enforcement(bodily_autonomy_primary).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(bodily_autonomy_primary, formalized).
-narrative_ontology:cs_authority_grounding(bodily_autonomy_primary, lineage).
-narrative_ontology:cs_interpretation_layer_present(bodily_autonomy_primary).
+narrative_ontology:cs_story_uid(bodily_autonomy_primary, 'ce673e9d-20a9-47cc-8960-e2e4d6a944f0').
+narrative_ontology:cs_created_at('ce673e9d-20a9-47cc-8960-e2e4d6a944f0', '').
+narrative_ontology:cs_kernel_codification('ce673e9d-20a9-47cc-8960-e2e4d6a944f0', formalized).
+narrative_ontology:cs_authority_grounding('ce673e9d-20a9-47cc-8960-e2e4d6a944f0', lineage).
+narrative_ontology:cs_interpretation_layer_present('ce673e9d-20a9-47cc-8960-e2e4d6a944f0').
 narrative_ontology:cs_kernel_id(bodily_autonomy_primary, vaccine_mandate_balance).
-narrative_ontology:cs_reading_relation(bodily_autonomy_primary, public_health_primary, coexists_with).
-narrative_ontology:cs_reading_relation(bodily_autonomy_primary, proportionality_reading, influences).
-narrative_ontology:cs_axiom(bodily_autonomy_primary, foundational, bodily_autonomy_inviolable).
+narrative_ontology:cs_reading_relation('ce673e9d-20a9-47cc-8960-e2e4d6a944f0', public_health_primary, coexists_with).
+narrative_ontology:cs_reading_relation('ce673e9d-20a9-47cc-8960-e2e4d6a944f0', proportionality_reading, influences).
+narrative_ontology:cs_axiom('ce673e9d-20a9-47cc-8960-e2e4d6a944f0', foundational, bodily_autonomy_inviolable).
 narrative_ontology:cs_axiom_status(bodily_autonomy_inviolable, holdable).
-narrative_ontology:cs_axiom_grounding(bodily_autonomy_primary, bodily_autonomy_inviolable, deontological).
-narrative_ontology:cs_axiom(bodily_autonomy_primary, foundational, state_lacks_medical_coercion_authority).
+narrative_ontology:cs_axiom_grounding('ce673e9d-20a9-47cc-8960-e2e4d6a944f0', bodily_autonomy_inviolable, deontological).
+narrative_ontology:cs_axiom('ce673e9d-20a9-47cc-8960-e2e4d6a944f0', foundational, state_lacks_medical_coercion_authority).
 narrative_ontology:cs_axiom_status(state_lacks_medical_coercion_authority, holdable).
-narrative_ontology:cs_axiom_grounding(bodily_autonomy_primary, state_lacks_medical_coercion_authority, deontological).
-narrative_ontology:cs_reference_frame(bodily_autonomy_primary, liberal_individual_rights_framework).
-narrative_ontology:cs_drift_state(bodily_autonomy_primary, contemporary_pandemic_policy, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('ce673e9d-20a9-47cc-8960-e2e4d6a944f0', state_lacks_medical_coercion_authority, deontological).
+narrative_ontology:cs_reference_frame('ce673e9d-20a9-47cc-8960-e2e4d6a944f0', liberal_individual_rights_framework).
+narrative_ontology:cs_drift_state('ce673e9d-20a9-47cc-8960-e2e4d6a944f0', contemporary_pandemic_policy, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_victim(bodily_autonomy_primary, coerced_individuals).

@@ -118,9 +118,11 @@ narrative_ontology:topic_domain(expected_value_dominant, "energy_policy/risk_ass
 domain_priors:requires_active_enforcement(expected_value_dominant).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(expected_value_dominant, formalized).
-narrative_ontology:cs_authority_grounding(expected_value_dominant, extraction).
-narrative_ontology:cs_interpretation_layer_present(expected_value_dominant).
+narrative_ontology:cs_story_uid(expected_value_dominant, '55d8257c-b8d3-446f-b82d-d069b68a898b').
+narrative_ontology:cs_created_at('55d8257c-b8d3-446f-b82d-d069b68a898b', '').
+narrative_ontology:cs_kernel_codification('55d8257c-b8d3-446f-b82d-d069b68a898b', formalized).
+narrative_ontology:cs_authority_grounding('55d8257c-b8d3-446f-b82d-d069b68a898b', extraction).
+narrative_ontology:cs_interpretation_layer_present('55d8257c-b8d3-446f-b82d-d069b68a898b').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(expected_value_dominant, fossil_fuel_incumbents).

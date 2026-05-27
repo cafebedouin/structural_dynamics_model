@@ -118,20 +118,22 @@ narrative_ontology:topic_domain(conception_reading, "moral_philosophy/bioethics/
 domain_priors:requires_active_enforcement(conception_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(conception_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(conception_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(conception_reading).
+narrative_ontology:cs_story_uid(conception_reading, '1ff944f0-593c-473c-8d63-f42729bc45b3').
+narrative_ontology:cs_created_at('1ff944f0-593c-473c-8d63-f42729bc45b3', '').
+narrative_ontology:cs_kernel_codification('1ff944f0-593c-473c-8d63-f42729bc45b3', fixed_text).
+narrative_ontology:cs_authority_grounding('1ff944f0-593c-473c-8d63-f42729bc45b3', lineage).
+narrative_ontology:cs_interpretation_layer_present('1ff944f0-593c-473c-8d63-f42729bc45b3').
 narrative_ontology:cs_kernel_id(conception_reading, personhood_boundary).
-narrative_ontology:cs_reading_relation(conception_reading, viability_reading, coexists_with).
-narrative_ontology:cs_reading_relation(conception_reading, birth_reading, forecloses).
-narrative_ontology:cs_axiom(conception_reading, foundational, personhood_at_fertilization).
+narrative_ontology:cs_reading_relation('1ff944f0-593c-473c-8d63-f42729bc45b3', viability_reading, coexists_with).
+narrative_ontology:cs_reading_relation('1ff944f0-593c-473c-8d63-f42729bc45b3', birth_reading, forecloses).
+narrative_ontology:cs_axiom('1ff944f0-593c-473c-8d63-f42729bc45b3', foundational, personhood_at_fertilization).
 narrative_ontology:cs_axiom_status(personhood_at_fertilization, holdable).
-narrative_ontology:cs_axiom_grounding(conception_reading, personhood_at_fertilization, deontological).
-narrative_ontology:cs_axiom(conception_reading, secondary, genetic_individuation_implies_moral_status).
+narrative_ontology:cs_axiom_grounding('1ff944f0-593c-473c-8d63-f42729bc45b3', personhood_at_fertilization, deontological).
+narrative_ontology:cs_axiom('1ff944f0-593c-473c-8d63-f42729bc45b3', secondary, genetic_individuation_implies_moral_status).
 narrative_ontology:cs_axiom_status(genetic_individuation_implies_moral_status, holdable).
-narrative_ontology:cs_axiom_grounding(conception_reading, genetic_individuation_implies_moral_status, theological).
-narrative_ontology:cs_reference_frame(conception_reading, theological_personhood_from_conception).
-narrative_ontology:cs_drift_state(conception_reading, contemporary_post_roe_repeal, gap(revival_pressure, substantial, true)).
+narrative_ontology:cs_axiom_grounding('1ff944f0-593c-473c-8d63-f42729bc45b3', genetic_individuation_implies_moral_status, theological).
+narrative_ontology:cs_reference_frame('1ff944f0-593c-473c-8d63-f42729bc45b3', theological_personhood_from_conception).
+narrative_ontology:cs_drift_state('1ff944f0-593c-473c-8d63-f42729bc45b3', contemporary_post_roe_repeal, gap(revival_pressure, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(conception_reading, religious_authority_structures).

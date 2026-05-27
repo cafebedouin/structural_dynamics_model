@@ -126,20 +126,22 @@ narrative_ontology:topic_domain(absolutist_reading, "constitutional_law/politica
 domain_priors:requires_active_enforcement(absolutist_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(absolutist_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(absolutist_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(absolutist_reading).
+narrative_ontology:cs_story_uid(absolutist_reading, '24789aac-e8bc-4ec1-a788-4778fa053a26').
+narrative_ontology:cs_created_at('24789aac-e8bc-4ec1-a788-4778fa053a26', '').
+narrative_ontology:cs_kernel_codification('24789aac-e8bc-4ec1-a788-4778fa053a26', fixed_text).
+narrative_ontology:cs_authority_grounding('24789aac-e8bc-4ec1-a788-4778fa053a26', lineage).
+narrative_ontology:cs_interpretation_layer_present('24789aac-e8bc-4ec1-a788-4778fa053a26').
 narrative_ontology:cs_kernel_id(absolutist_reading, first_amendment_speech_protection).
-narrative_ontology:cs_reading_relation(absolutist_reading, harm_limited_reading, coexists_with).
-narrative_ontology:cs_reading_relation(absolutist_reading, categorical_balancing_reading, coexists_with).
-narrative_ontology:cs_axiom(absolutist_reading, foundational, speech_protection_categorical_not_balancing).
+narrative_ontology:cs_reading_relation('24789aac-e8bc-4ec1-a788-4778fa053a26', harm_limited_reading, coexists_with).
+narrative_ontology:cs_reading_relation('24789aac-e8bc-4ec1-a788-4778fa053a26', categorical_balancing_reading, coexists_with).
+narrative_ontology:cs_axiom('24789aac-e8bc-4ec1-a788-4778fa053a26', foundational, speech_protection_categorical_not_balancing).
 narrative_ontology:cs_axiom_status(speech_protection_categorical_not_balancing, holdable).
-narrative_ontology:cs_axiom_grounding(absolutist_reading, speech_protection_categorical_not_balancing, conventional).
-narrative_ontology:cs_axiom(absolutist_reading, foundational, speaker_liability_incompatible_with_freedom).
+narrative_ontology:cs_axiom_grounding('24789aac-e8bc-4ec1-a788-4778fa053a26', speech_protection_categorical_not_balancing, conventional).
+narrative_ontology:cs_axiom('24789aac-e8bc-4ec1-a788-4778fa053a26', foundational, speaker_liability_incompatible_with_freedom).
 narrative_ontology:cs_axiom_status(speaker_liability_incompatible_with_freedom, holdable).
-narrative_ontology:cs_axiom_grounding(absolutist_reading, speaker_liability_incompatible_with_freedom, deontological).
-narrative_ontology:cs_reference_frame(absolutist_reading, foundational_speaker_immunity).
-narrative_ontology:cs_drift_state(absolutist_reading, contemporary_digital_scale, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('24789aac-e8bc-4ec1-a788-4778fa053a26', speaker_liability_incompatible_with_freedom, deontological).
+narrative_ontology:cs_reference_frame('24789aac-e8bc-4ec1-a788-4778fa053a26', foundational_speaker_immunity).
+narrative_ontology:cs_drift_state('24789aac-e8bc-4ec1-a788-4778fa053a26', contemporary_digital_scale, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(absolutist_reading, speakers_majoritarians).

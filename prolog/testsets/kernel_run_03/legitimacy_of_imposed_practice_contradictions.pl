@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(decree_sufficiency_without_internalization, endogenous_adoption_pathway_sufficient).
 narrative_ontology:cs_axiom_contradiction(endogenous_adoption_pathway_sufficient, decree_sufficiency_without_internalization).
+narrative_ontology:cs_story_uid(legitimacy_of_imposed_practice_contradictions, 'daa6fd73-16d8-4b28-b775-98bd54439ce9').
+narrative_ontology:cs_created_at('daa6fd73-16d8-4b28-b775-98bd54439ce9', '').

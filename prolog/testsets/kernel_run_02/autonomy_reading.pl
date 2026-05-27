@@ -119,20 +119,22 @@ narrative_ontology:topic_domain(autonomy_reading, "medical_ethics/bioethics/end_
 domain_priors:requires_active_enforcement(autonomy_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(autonomy_reading, formalized).
-narrative_ontology:cs_authority_grounding(autonomy_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(autonomy_reading).
+narrative_ontology:cs_story_uid(autonomy_reading, '25618d08-12a3-4e8f-952d-56b439bfd2d3').
+narrative_ontology:cs_created_at('25618d08-12a3-4e8f-952d-56b439bfd2d3', '').
+narrative_ontology:cs_kernel_codification('25618d08-12a3-4e8f-952d-56b439bfd2d3', formalized).
+narrative_ontology:cs_authority_grounding('25618d08-12a3-4e8f-952d-56b439bfd2d3', extraction).
+narrative_ontology:cs_interpretation_layer_present('25618d08-12a3-4e8f-952d-56b439bfd2d3').
 narrative_ontology:cs_kernel_id(autonomy_reading, end_of_life_authority).
-narrative_ontology:cs_reading_relation(autonomy_reading, sanctity_reading, coexists_with).
-narrative_ontology:cs_reading_relation(autonomy_reading, vulnerability_primacy_reading, influences).
-narrative_ontology:cs_axiom(autonomy_reading, foundational, competent_autonomy_foundational_authority).
+narrative_ontology:cs_reading_relation('25618d08-12a3-4e8f-952d-56b439bfd2d3', sanctity_reading, coexists_with).
+narrative_ontology:cs_reading_relation('25618d08-12a3-4e8f-952d-56b439bfd2d3', vulnerability_primacy_reading, influences).
+narrative_ontology:cs_axiom('25618d08-12a3-4e8f-952d-56b439bfd2d3', foundational, competent_autonomy_foundational_authority).
 narrative_ontology:cs_axiom_status(competent_autonomy_foundational_authority, holdable).
-narrative_ontology:cs_axiom_grounding(autonomy_reading, competent_autonomy_foundational_authority, deontological).
-narrative_ontology:cs_axiom(autonomy_reading, secondary, dependency_does_not_override_competent_refusal).
+narrative_ontology:cs_axiom_grounding('25618d08-12a3-4e8f-952d-56b439bfd2d3', competent_autonomy_foundational_authority, deontological).
+narrative_ontology:cs_axiom('25618d08-12a3-4e8f-952d-56b439bfd2d3', secondary, dependency_does_not_override_competent_refusal).
 narrative_ontology:cs_axiom_status(dependency_does_not_override_competent_refusal, holdable).
-narrative_ontology:cs_axiom_grounding(autonomy_reading, dependency_does_not_override_competent_refusal, deontological).
-narrative_ontology:cs_reference_frame(autonomy_reading, competent_individual_moral_authority).
-narrative_ontology:cs_drift_state(autonomy_reading, contemporary_medicalized_dependency_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('25618d08-12a3-4e8f-952d-56b439bfd2d3', dependency_does_not_override_competent_refusal, deontological).
+narrative_ontology:cs_reference_frame('25618d08-12a3-4e8f-952d-56b439bfd2d3', competent_individual_moral_authority).
+narrative_ontology:cs_drift_state('25618d08-12a3-4e8f-952d-56b439bfd2d3', contemporary_medicalized_dependency_era, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(autonomy_reading, competent_autonomous_agents).

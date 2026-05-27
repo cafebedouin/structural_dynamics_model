@@ -117,18 +117,20 @@ narrative_ontology:topic_domain(sanctity_reading, "bioethics/end_of_life_policy"
 domain_priors:requires_active_enforcement(sanctity_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(sanctity_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(sanctity_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(sanctity_reading).
+narrative_ontology:cs_story_uid(sanctity_reading, '8d9eefdd-7a63-4c3c-bfb5-23ac394a1389').
+narrative_ontology:cs_created_at('8d9eefdd-7a63-4c3c-bfb5-23ac394a1389', '').
+narrative_ontology:cs_kernel_codification('8d9eefdd-7a63-4c3c-bfb5-23ac394a1389', fixed_text).
+narrative_ontology:cs_authority_grounding('8d9eefdd-7a63-4c3c-bfb5-23ac394a1389', lineage).
+narrative_ontology:cs_interpretation_layer_present('8d9eefdd-7a63-4c3c-bfb5-23ac394a1389').
 narrative_ontology:cs_kernel_id(sanctity_reading, end_of_life_authority).
-narrative_ontology:cs_reading_relation(sanctity_reading, autonomy_reading, forecloses).
-narrative_ontology:cs_reading_relation(sanctity_reading, slippery_slope_mechanism, influences).
-narrative_ontology:cs_axiom(sanctity_reading, foundational, life_intrinsic_dignity_inviolable).
+narrative_ontology:cs_reading_relation('8d9eefdd-7a63-4c3c-bfb5-23ac394a1389', autonomy_reading, forecloses).
+narrative_ontology:cs_reading_relation('8d9eefdd-7a63-4c3c-bfb5-23ac394a1389', slippery_slope_mechanism, influences).
+narrative_ontology:cs_axiom('8d9eefdd-7a63-4c3c-bfb5-23ac394a1389', foundational, life_intrinsic_dignity_inviolable).
 narrative_ontology:cs_axiom_status(life_intrinsic_dignity_inviolable, holdable).
-narrative_ontology:cs_axiom(sanctity_reading, secondary, vulnerable_population_protection_primacy).
+narrative_ontology:cs_axiom('8d9eefdd-7a63-4c3c-bfb5-23ac394a1389', secondary, vulnerable_population_protection_primacy).
 narrative_ontology:cs_axiom_status(vulnerable_population_protection_primacy, holdable).
-narrative_ontology:cs_reference_frame(sanctity_reading, sanctity_as_categorical_imperative).
-narrative_ontology:cs_drift_state(sanctity_reading, contemporary_autonomy_ascendant, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('8d9eefdd-7a63-4c3c-bfb5-23ac394a1389', sanctity_as_categorical_imperative).
+narrative_ontology:cs_drift_state('8d9eefdd-7a63-4c3c-bfb5-23ac394a1389', contemporary_autonomy_ascendant, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(sanctity_reading, medical_establishment).

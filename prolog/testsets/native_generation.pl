@@ -120,9 +120,11 @@ narrative_ontology:topic_domain(native_generation, "sociolinguistics/language_re
 domain_priors:requires_active_enforcement(native_generation).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(native_generation, formalized).
-narrative_ontology:cs_authority_grounding(native_generation, extraction).
-narrative_ontology:cs_interpretation_layer_present(native_generation).
+narrative_ontology:cs_story_uid(native_generation, '7fb703a6-7fc1-4fb1-b576-8b035ffb51d8').
+narrative_ontology:cs_created_at('7fb703a6-7fc1-4fb1-b576-8b035ffb51d8', '').
+narrative_ontology:cs_kernel_codification('7fb703a6-7fc1-4fb1-b576-8b035ffb51d8', formalized).
+narrative_ontology:cs_authority_grounding('7fb703a6-7fc1-4fb1-b576-8b035ffb51d8', extraction).
+narrative_ontology:cs_interpretation_layer_present('7fb703a6-7fc1-4fb1-b576-8b035ffb51d8').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(native_generation, hebrew_state_apparatus).

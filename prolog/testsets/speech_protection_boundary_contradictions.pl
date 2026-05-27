@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(speech_protection_categorically_prior_to_harm_regulation, equal_dignity_foundational).
 narrative_ontology:cs_axiom_contradiction(equal_dignity_foundational, speech_protection_categorically_prior_to_harm_regulation).
+narrative_ontology:cs_story_uid(speech_protection_boundary_contradictions, 'e2a6216a-8d1b-4533-806e-e66a75c380e1').
+narrative_ontology:cs_created_at('e2a6216a-8d1b-4533-806e-e66a75c380e1', '').

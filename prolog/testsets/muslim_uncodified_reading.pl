@@ -125,9 +125,11 @@ narrative_ontology:topic_domain(muslim_uncodified_reading, "constitutional_law/l
 domain_priors:requires_active_enforcement(muslim_uncodified_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(muslim_uncodified_reading, formalized).
-narrative_ontology:cs_authority_grounding(muslim_uncodified_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(muslim_uncodified_reading).
+narrative_ontology:cs_story_uid(muslim_uncodified_reading, '2822310d-5113-49b9-bd6c-e0ca51d303ae').
+narrative_ontology:cs_created_at('2822310d-5113-49b9-bd6c-e0ca51d303ae', '').
+narrative_ontology:cs_kernel_codification('2822310d-5113-49b9-bd6c-e0ca51d303ae', formalized).
+narrative_ontology:cs_authority_grounding('2822310d-5113-49b9-bd6c-e0ca51d303ae', lineage).
+narrative_ontology:cs_interpretation_layer_present('2822310d-5113-49b9-bd6c-e0ca51d303ae').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(muslim_uncodified_reading, male_household_heads).

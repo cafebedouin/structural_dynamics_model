@@ -128,20 +128,22 @@ narrative_ontology:topic_domain(balancing_reading, "constitutional_law/political
 domain_priors:requires_active_enforcement(balancing_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(balancing_reading, formalized).
-narrative_ontology:cs_authority_grounding(balancing_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(balancing_reading).
+narrative_ontology:cs_story_uid(balancing_reading, 'd74fce34-2799-44dd-bf7e-be500051d550').
+narrative_ontology:cs_created_at('d74fce34-2799-44dd-bf7e-be500051d550', '').
+narrative_ontology:cs_kernel_codification('d74fce34-2799-44dd-bf7e-be500051d550', formalized).
+narrative_ontology:cs_authority_grounding('d74fce34-2799-44dd-bf7e-be500051d550', lineage).
+narrative_ontology:cs_interpretation_layer_present('d74fce34-2799-44dd-bf7e-be500051d550').
 narrative_ontology:cs_kernel_id(balancing_reading, speech_protection_boundary).
-narrative_ontology:cs_reading_relation(balancing_reading, absolutist_reading, coexists_with).
-narrative_ontology:cs_reading_relation(balancing_reading, harm_limited_reading, coexists_with).
-narrative_ontology:cs_axiom(balancing_reading, foundational, context_dependent_protection_boundary).
+narrative_ontology:cs_reading_relation('d74fce34-2799-44dd-bf7e-be500051d550', absolutist_reading, coexists_with).
+narrative_ontology:cs_reading_relation('d74fce34-2799-44dd-bf7e-be500051d550', harm_limited_reading, coexists_with).
+narrative_ontology:cs_axiom('d74fce34-2799-44dd-bf7e-be500051d550', foundational, context_dependent_protection_boundary).
 narrative_ontology:cs_axiom_status(context_dependent_protection_boundary, holdable).
-narrative_ontology:cs_axiom_grounding(balancing_reading, context_dependent_protection_boundary, instrumental).
-narrative_ontology:cs_axiom(balancing_reading, foundational, judicial_discretion_required_for_application).
+narrative_ontology:cs_axiom_grounding('d74fce34-2799-44dd-bf7e-be500051d550', context_dependent_protection_boundary, instrumental).
+narrative_ontology:cs_axiom('d74fce34-2799-44dd-bf7e-be500051d550', foundational, judicial_discretion_required_for_application).
 narrative_ontology:cs_axiom_status(judicial_discretion_required_for_application, holdable).
-narrative_ontology:cs_axiom_grounding(balancing_reading, judicial_discretion_required_for_application, conventional).
-narrative_ontology:cs_reference_frame(balancing_reading, post_brandenburg_balancing_doctrine).
-narrative_ontology:cs_drift_state(balancing_reading, contemporary_complexity_era, gap(codification_collapse, substantial, false)).
+narrative_ontology:cs_axiom_grounding('d74fce34-2799-44dd-bf7e-be500051d550', judicial_discretion_required_for_application, conventional).
+narrative_ontology:cs_reference_frame('d74fce34-2799-44dd-bf7e-be500051d550', post_brandenburg_balancing_doctrine).
+narrative_ontology:cs_drift_state('d74fce34-2799-44dd-bf7e-be500051d550', contemporary_complexity_era, gap(codification_collapse, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(balancing_reading, institutional_judiciary).

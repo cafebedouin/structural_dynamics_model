@@ -116,20 +116,22 @@ narrative_ontology:human_readable(study_as_exercise, "Study of Sacrifice Law as 
 narrative_ontology:topic_domain(study_as_exercise, "religious_studies/rabbinic_judaism/commitment_systems").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(study_as_exercise, fixed_text).
-narrative_ontology:cs_authority_grounding(study_as_exercise, lineage).
-narrative_ontology:cs_interpretation_layer_present(study_as_exercise).
+narrative_ontology:cs_story_uid(study_as_exercise, '0d37012d-2105-4c56-ab14-e9963960260b').
+narrative_ontology:cs_created_at('0d37012d-2105-4c56-ab14-e9963960260b', '').
+narrative_ontology:cs_kernel_codification('0d37012d-2105-4c56-ab14-e9963960260b', fixed_text).
+narrative_ontology:cs_authority_grounding('0d37012d-2105-4c56-ab14-e9963960260b', lineage).
+narrative_ontology:cs_interpretation_layer_present('0d37012d-2105-4c56-ab14-e9963960260b').
 narrative_ontology:cs_kernel_id(study_as_exercise, kodashim_corpus).
-narrative_ontology:cs_reading_relation(study_as_exercise, performance_only, coexists_with).
-narrative_ontology:cs_reading_relation(study_as_exercise, substitution_archive, coexists_with).
-narrative_ontology:cs_axiom(study_as_exercise, foundational, study_is_performance_not_substitute).
+narrative_ontology:cs_reading_relation('0d37012d-2105-4c56-ab14-e9963960260b', performance_only, coexists_with).
+narrative_ontology:cs_reading_relation('0d37012d-2105-4c56-ab14-e9963960260b', substitution_archive, coexists_with).
+narrative_ontology:cs_axiom('0d37012d-2105-4c56-ab14-e9963960260b', foundational, study_is_performance_not_substitute).
 narrative_ontology:cs_axiom_status(study_is_performance_not_substitute, holdable).
-narrative_ontology:cs_axiom_grounding(study_as_exercise, study_is_performance_not_substitute, deontological).
-narrative_ontology:cs_axiom(study_as_exercise, foundational, intellectual_engagement_cosmic_efficacy).
+narrative_ontology:cs_axiom_grounding('0d37012d-2105-4c56-ab14-e9963960260b', study_is_performance_not_substitute, deontological).
+narrative_ontology:cs_axiom('0d37012d-2105-4c56-ab14-e9963960260b', foundational, intellectual_engagement_cosmic_efficacy).
 narrative_ontology:cs_axiom_status(intellectual_engagement_cosmic_efficacy, holdable).
-narrative_ontology:cs_axiom_grounding(study_as_exercise, intellectual_engagement_cosmic_efficacy, theological).
-narrative_ontology:cs_reference_frame(study_as_exercise, textual_study_fulfillment_framework).
-narrative_ontology:cs_drift_state(study_as_exercise, modern_academic_judaism_era, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_axiom_grounding('0d37012d-2105-4c56-ab14-e9963960260b', intellectual_engagement_cosmic_efficacy, theological).
+narrative_ontology:cs_reference_frame('0d37012d-2105-4c56-ab14-e9963960260b', textual_study_fulfillment_framework).
+narrative_ontology:cs_drift_state('0d37012d-2105-4c56-ab14-e9963960260b', modern_academic_judaism_era, gap(practice_drift, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(study_as_exercise, engaged_scholars).

@@ -17,6 +17,10 @@
 :- use_module(boltzmann_compliance, []).
 :- use_module(signature_detection, []).
 :- use_module(cs_pattern_detection, []).
+:- use_module(cs_drift_engine, []).
+:- use_module(cs_axiom_engine, []).
+:- use_module(cs_kernel_registry, []).   % loaded as side-effect of cs_axiom_engine; explicit for clarity
+:- use_module(cs_drift_mismatch, []).
 :- use_module(purity_scoring, []).
 :- use_module(structural_signatures).   % facade kept for backward-compat qualified calls
 :- use_module(drl_core).

@@ -124,20 +124,22 @@ narrative_ontology:topic_domain(political_swap_reading, "historical_epistemology
 domain_priors:requires_active_enforcement(political_swap_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(political_swap_reading, formalized).
-narrative_ontology:cs_authority_grounding(political_swap_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(political_swap_reading).
+narrative_ontology:cs_story_uid(political_swap_reading, '2f292a08-a0b0-45cb-bb52-42a52e0ab656').
+narrative_ontology:cs_created_at('2f292a08-a0b0-45cb-bb52-42a52e0ab656', '').
+narrative_ontology:cs_kernel_codification('2f292a08-a0b0-45cb-bb52-42a52e0ab656', formalized).
+narrative_ontology:cs_authority_grounding('2f292a08-a0b0-45cb-bb52-42a52e0ab656', extraction).
+narrative_ontology:cs_interpretation_layer_present('2f292a08-a0b0-45cb-bb52-42a52e0ab656').
 narrative_ontology:cs_kernel_id(political_swap_reading, reformation_event_boundary).
-narrative_ontology:cs_reading_relation(political_swap_reading, theological_climb_reading, coexists_with).
-narrative_ontology:cs_reading_relation(political_swap_reading, composite_overdetermination_reading, influences).
-narrative_ontology:cs_axiom(political_swap_reading, foundational, political_interests_primary_causal_driver).
+narrative_ontology:cs_reading_relation('2f292a08-a0b0-45cb-bb52-42a52e0ab656', theological_climb_reading, coexists_with).
+narrative_ontology:cs_reading_relation('2f292a08-a0b0-45cb-bb52-42a52e0ab656', composite_overdetermination_reading, influences).
+narrative_ontology:cs_axiom('2f292a08-a0b0-45cb-bb52-42a52e0ab656', foundational, political_interests_primary_causal_driver).
 narrative_ontology:cs_axiom_status(political_interests_primary_causal_driver, holdable).
-narrative_ontology:cs_axiom_grounding(political_swap_reading, political_interests_primary_causal_driver, empirically_contingent).
-narrative_ontology:cs_axiom(political_swap_reading, secondary, theology_ratifies_material_interests).
+narrative_ontology:cs_axiom_grounding('2f292a08-a0b0-45cb-bb52-42a52e0ab656', political_interests_primary_causal_driver, empirically_contingent).
+narrative_ontology:cs_axiom('2f292a08-a0b0-45cb-bb52-42a52e0ab656', secondary, theology_ratifies_material_interests).
 narrative_ontology:cs_axiom_status(theology_ratifies_material_interests, holdable).
-narrative_ontology:cs_axiom_grounding(political_swap_reading, theology_ratifies_material_interests, instrumental).
-narrative_ontology:cs_reference_frame(political_swap_reading, unified_papal_authority_medieval_order).
-narrative_ontology:cs_drift_state(political_swap_reading, westphalian_fragmentation_settlement, gap(authority_erosion, severe, false)).
+narrative_ontology:cs_axiom_grounding('2f292a08-a0b0-45cb-bb52-42a52e0ab656', theology_ratifies_material_interests, instrumental).
+narrative_ontology:cs_reference_frame('2f292a08-a0b0-45cb-bb52-42a52e0ab656', unified_papal_authority_medieval_order).
+narrative_ontology:cs_drift_state('2f292a08-a0b0-45cb-bb52-42a52e0ab656', westphalian_fragmentation_settlement, gap(authority_erosion, severe, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(political_swap_reading, secular_rulers).

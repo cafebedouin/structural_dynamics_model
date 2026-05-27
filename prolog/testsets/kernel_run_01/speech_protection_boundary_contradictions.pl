@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(speech_protection_categorically_prior, dignitary_harm_justifies_restriction).
 narrative_ontology:cs_axiom_contradiction(dignitary_harm_justifies_restriction, speech_protection_categorically_prior).
+narrative_ontology:cs_story_uid(speech_protection_boundary_contradictions, '9294dc47-9fd4-4752-aefc-4f9fde68bced').
+narrative_ontology:cs_created_at('9294dc47-9fd4-4752-aefc-4f9fde68bced', '').

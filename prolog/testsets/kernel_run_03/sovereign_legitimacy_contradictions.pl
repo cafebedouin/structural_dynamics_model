@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(hereditary_succession_legitimacy, popular_consent_as_legitimacy_source).
 narrative_ontology:cs_axiom_contradiction(popular_consent_as_legitimacy_source, hereditary_succession_legitimacy).
+narrative_ontology:cs_story_uid(sovereign_legitimacy_contradictions, '854ca67c-91a0-4a9c-835d-c6080cc44135').
+narrative_ontology:cs_created_at('854ca67c-91a0-4a9c-835d-c6080cc44135', '').

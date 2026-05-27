@@ -111,8 +111,10 @@ narrative_ontology:topic_domain(dual_priority_reading, "ai_safety/technology_gov
 domain_priors:requires_active_enforcement(dual_priority_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(dual_priority_reading, distributed).
-narrative_ontology:cs_authority_grounding(dual_priority_reading, distributed).
+narrative_ontology:cs_story_uid(dual_priority_reading, '7d624c4a-6635-4652-a6bd-cad26716872e').
+narrative_ontology:cs_created_at('7d624c4a-6635-4652-a6bd-cad26716872e', '').
+narrative_ontology:cs_kernel_codification('7d624c4a-6635-4652-a6bd-cad26716872e', distributed).
+narrative_ontology:cs_authority_grounding('7d624c4a-6635-4652-a6bd-cad26716872e', distributed).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(dual_priority_reading, safety_research_institutions).

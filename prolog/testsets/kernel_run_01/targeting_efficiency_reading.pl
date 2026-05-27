@@ -127,18 +127,20 @@ narrative_ontology:topic_domain(targeting_efficiency_reading, "political_economy
 domain_priors:requires_active_enforcement(targeting_efficiency_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(targeting_efficiency_reading, formalized).
-narrative_ontology:cs_authority_grounding(targeting_efficiency_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(targeting_efficiency_reading).
+narrative_ontology:cs_story_uid(targeting_efficiency_reading, '9224257b-c95e-4de4-acbc-b8723277ad4e').
+narrative_ontology:cs_created_at('9224257b-c95e-4de4-acbc-b8723277ad4e', '').
+narrative_ontology:cs_kernel_codification('9224257b-c95e-4de4-acbc-b8723277ad4e', formalized).
+narrative_ontology:cs_authority_grounding('9224257b-c95e-4de4-acbc-b8723277ad4e', lineage).
+narrative_ontology:cs_interpretation_layer_present('9224257b-c95e-4de4-acbc-b8723277ad4e').
 narrative_ontology:cs_kernel_id(targeting_efficiency_reading, income_support_commitment).
-narrative_ontology:cs_reading_relation(targeting_efficiency_reading, freedom_floor_reading, coexists_with).
-narrative_ontology:cs_reading_relation(targeting_efficiency_reading, dependency_trap_reading, influences).
-narrative_ontology:cs_axiom(targeting_efficiency_reading, foundational, demonstrated_need_justifies_differential_access).
+narrative_ontology:cs_reading_relation('9224257b-c95e-4de4-acbc-b8723277ad4e', freedom_floor_reading, coexists_with).
+narrative_ontology:cs_reading_relation('9224257b-c95e-4de4-acbc-b8723277ad4e', dependency_trap_reading, influences).
+narrative_ontology:cs_axiom('9224257b-c95e-4de4-acbc-b8723277ad4e', foundational, demonstrated_need_justifies_differential_access).
 narrative_ontology:cs_axiom_status(demonstrated_need_justifies_differential_access, holdable).
-narrative_ontology:cs_axiom(targeting_efficiency_reading, foundational, efficiency_maximization_under_budget_constraint).
+narrative_ontology:cs_axiom('9224257b-c95e-4de4-acbc-b8723277ad4e', foundational, efficiency_maximization_under_budget_constraint).
 narrative_ontology:cs_axiom_status(efficiency_maximization_under_budget_constraint, holdable).
-narrative_ontology:cs_reference_frame(targeting_efficiency_reading, efficient_poverty_relief).
-narrative_ontology:cs_drift_state(targeting_efficiency_reading, contemporary_means_testing_era, gap(codification_collapse, substantial, false)).
+narrative_ontology:cs_reference_frame('9224257b-c95e-4de4-acbc-b8723277ad4e', efficient_poverty_relief).
+narrative_ontology:cs_drift_state('9224257b-c95e-4de4-acbc-b8723277ad4e', contemporary_means_testing_era, gap(codification_collapse, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(targeting_efficiency_reading, budgetary_efficiency_advocates).

@@ -119,20 +119,22 @@ narrative_ontology:topic_domain(endogenous_climb_reading, "political_history/sta
 domain_priors:requires_active_enforcement(endogenous_climb_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(endogenous_climb_reading, formalized).
-narrative_ontology:cs_authority_grounding(endogenous_climb_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(endogenous_climb_reading).
+narrative_ontology:cs_story_uid(endogenous_climb_reading, '33c86bab-a39d-4022-b8fd-9cd1eebe8482').
+narrative_ontology:cs_created_at('33c86bab-a39d-4022-b8fd-9cd1eebe8482', '').
+narrative_ontology:cs_kernel_codification('33c86bab-a39d-4022-b8fd-9cd1eebe8482', formalized).
+narrative_ontology:cs_authority_grounding('33c86bab-a39d-4022-b8fd-9cd1eebe8482', lineage).
+narrative_ontology:cs_interpretation_layer_present('33c86bab-a39d-4022-b8fd-9cd1eebe8482').
 narrative_ontology:cs_kernel_id(endogenous_climb_reading, legitimacy_of_imposed_practice).
-narrative_ontology:cs_reading_relation(endogenous_climb_reading, exogenous_override_reading, coexists_with).
-narrative_ontology:cs_reading_relation(endogenous_climb_reading, hybrid_scaffolding_reading, influences).
-narrative_ontology:cs_axiom(endogenous_climb_reading, foundational, endogenous_adoption_pathway_sufficient).
+narrative_ontology:cs_reading_relation('33c86bab-a39d-4022-b8fd-9cd1eebe8482', exogenous_override_reading, coexists_with).
+narrative_ontology:cs_reading_relation('33c86bab-a39d-4022-b8fd-9cd1eebe8482', hybrid_scaffolding_reading, influences).
+narrative_ontology:cs_axiom('33c86bab-a39d-4022-b8fd-9cd1eebe8482', foundational, endogenous_adoption_pathway_sufficient).
 narrative_ontology:cs_axiom_status(endogenous_adoption_pathway_sufficient, holdable).
-narrative_ontology:cs_axiom_grounding(endogenous_climb_reading, endogenous_adoption_pathway_sufficient, empirically_contingent).
-narrative_ontology:cs_axiom(endogenous_climb_reading, foundational, voluntary_adoption_legitimizes_coercion).
+narrative_ontology:cs_axiom_grounding('33c86bab-a39d-4022-b8fd-9cd1eebe8482', endogenous_adoption_pathway_sufficient, empirically_contingent).
+narrative_ontology:cs_axiom('33c86bab-a39d-4022-b8fd-9cd1eebe8482', foundational, voluntary_adoption_legitimizes_coercion).
 narrative_ontology:cs_axiom_status(voluntary_adoption_legitimizes_coercion, holdable).
-narrative_ontology:cs_axiom_grounding(endogenous_climb_reading, voluntary_adoption_legitimizes_coercion, deontological).
-narrative_ontology:cs_reference_frame(endogenous_climb_reading, lineage_legitimacy_requiring_internalization).
-narrative_ontology:cs_drift_state(endogenous_climb_reading, contemporary_postcolonial_context, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('33c86bab-a39d-4022-b8fd-9cd1eebe8482', voluntary_adoption_legitimizes_coercion, deontological).
+narrative_ontology:cs_reference_frame('33c86bab-a39d-4022-b8fd-9cd1eebe8482', lineage_legitimacy_requiring_internalization).
+narrative_ontology:cs_drift_state('33c86bab-a39d-4022-b8fd-9cd1eebe8482', contemporary_postcolonial_context, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(endogenous_climb_reading, communities_preserving_autonomy).

@@ -125,20 +125,22 @@ narrative_ontology:topic_domain(deterrence_equilibrium_reading, "international_r
 domain_priors:requires_active_enforcement(deterrence_equilibrium_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(deterrence_equilibrium_reading, formalized).
-narrative_ontology:cs_authority_grounding(deterrence_equilibrium_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(deterrence_equilibrium_reading).
+narrative_ontology:cs_story_uid(deterrence_equilibrium_reading, 'efdd0fc5-ea53-45f9-b653-63ab4899e8d4').
+narrative_ontology:cs_created_at('efdd0fc5-ea53-45f9-b653-63ab4899e8d4', '').
+narrative_ontology:cs_kernel_codification('efdd0fc5-ea53-45f9-b653-63ab4899e8d4', formalized).
+narrative_ontology:cs_authority_grounding('efdd0fc5-ea53-45f9-b653-63ab4899e8d4', extraction).
+narrative_ontology:cs_interpretation_layer_present('efdd0fc5-ea53-45f9-b653-63ab4899e8d4').
 narrative_ontology:cs_kernel_id(deterrence_equilibrium_reading, total_war_possibility_space).
-narrative_ontology:cs_reading_relation(deterrence_equilibrium_reading, space_contraction_reading, forecloses).
-narrative_ontology:cs_reading_relation(deterrence_equilibrium_reading, nuclear_taboo_reading, coexists_with).
-narrative_ontology:cs_axiom(deterrence_equilibrium_reading, foundational, total_war_remains_reachable).
+narrative_ontology:cs_reading_relation('efdd0fc5-ea53-45f9-b653-63ab4899e8d4', space_contraction_reading, forecloses).
+narrative_ontology:cs_reading_relation('efdd0fc5-ea53-45f9-b653-63ab4899e8d4', nuclear_taboo_reading, coexists_with).
+narrative_ontology:cs_axiom('efdd0fc5-ea53-45f9-b653-63ab4899e8d4', foundational, total_war_remains_reachable).
 narrative_ontology:cs_axiom_status(total_war_remains_reachable, holdable).
-narrative_ontology:cs_axiom(deterrence_equilibrium_reading, foundational, mutual_vulnerability_is_symmetric).
+narrative_ontology:cs_axiom('efdd0fc5-ea53-45f9-b653-63ab4899e8d4', foundational, mutual_vulnerability_is_symmetric).
 narrative_ontology:cs_axiom_status(mutual_vulnerability_is_symmetric, holdable).
-narrative_ontology:cs_axiom(deterrence_equilibrium_reading, secondary, deterrence_requires_continuous_doctrine_development).
+narrative_ontology:cs_axiom('efdd0fc5-ea53-45f9-b653-63ab4899e8d4', secondary, deterrence_requires_continuous_doctrine_development).
 narrative_ontology:cs_axiom_status(deterrence_requires_continuous_doctrine_development, holdable).
-narrative_ontology:cs_reference_frame(deterrence_equilibrium_reading, cold_war_mutual_assured_destruction).
-narrative_ontology:cs_drift_state(deterrence_equilibrium_reading, contemporary_multipolar_nuclear_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_reference_frame('efdd0fc5-ea53-45f9-b653-63ab4899e8d4', cold_war_mutual_assured_destruction).
+narrative_ontology:cs_drift_state('efdd0fc5-ea53-45f9-b653-63ab4899e8d4', contemporary_multipolar_nuclear_era, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(deterrence_equilibrium_reading, military_industrial_complex).

@@ -113,18 +113,20 @@ narrative_ontology:human_readable(continuity_reading, "Vatican II Continuity Rea
 narrative_ontology:topic_domain(continuity_reading, "theology/ecclesiology/religious_authority").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(continuity_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(continuity_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(continuity_reading).
+narrative_ontology:cs_story_uid(continuity_reading, 'c3e3f636-dea5-4fe6-9089-aad1a2decc86').
+narrative_ontology:cs_created_at('c3e3f636-dea5-4fe6-9089-aad1a2decc86', '').
+narrative_ontology:cs_kernel_codification('c3e3f636-dea5-4fe6-9089-aad1a2decc86', fixed_text).
+narrative_ontology:cs_authority_grounding('c3e3f636-dea5-4fe6-9089-aad1a2decc86', lineage).
+narrative_ontology:cs_interpretation_layer_present('c3e3f636-dea5-4fe6-9089-aad1a2decc86').
 narrative_ontology:cs_kernel_id(continuity_reading, vatican_ii_authority).
-narrative_ontology:cs_reading_relation(continuity_reading, rupture_reading, coexists_with).
-narrative_ontology:cs_reading_relation(continuity_reading, composite_overdetermination_reading, coexists_with).
-narrative_ontology:cs_axiom(continuity_reading, foundational, development_preserves_substance).
+narrative_ontology:cs_reading_relation('c3e3f636-dea5-4fe6-9089-aad1a2decc86', rupture_reading, coexists_with).
+narrative_ontology:cs_reading_relation('c3e3f636-dea5-4fe6-9089-aad1a2decc86', composite_overdetermination_reading, coexists_with).
+narrative_ontology:cs_axiom('c3e3f636-dea5-4fe6-9089-aad1a2decc86', foundational, development_preserves_substance).
 narrative_ontology:cs_axiom_status(development_preserves_substance, holdable).
-narrative_ontology:cs_axiom(continuity_reading, foundational, hermeneutic_unity_resolvable).
+narrative_ontology:cs_axiom('c3e3f636-dea5-4fe6-9089-aad1a2decc86', foundational, hermeneutic_unity_resolvable).
 narrative_ontology:cs_axiom_status(hermeneutic_unity_resolvable, holdable).
-narrative_ontology:cs_reference_frame(continuity_reading, pre_conciliar_doctrinal_continuity).
-narrative_ontology:cs_drift_state(continuity_reading, contemporary_post_vatican_ii_reception, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_reference_frame('c3e3f636-dea5-4fe6-9089-aad1a2decc86', pre_conciliar_doctrinal_continuity).
+narrative_ontology:cs_drift_state('c3e3f636-dea5-4fe6-9089-aad1a2decc86', contemporary_post_vatican_ii_reception, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(continuity_reading, progressive_reformers).

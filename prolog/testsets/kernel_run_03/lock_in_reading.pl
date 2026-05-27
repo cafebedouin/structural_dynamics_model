@@ -120,19 +120,21 @@ narrative_ontology:topic_domain(lock_in_reading, "economic_history/technology_st
 domain_priors:requires_active_enforcement(lock_in_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(lock_in_reading, distributed).
-narrative_ontology:cs_authority_grounding(lock_in_reading, distributed).
+narrative_ontology:cs_story_uid(lock_in_reading, '1d626c67-be65-4096-a48d-6ff1b89a59f6').
+narrative_ontology:cs_created_at('1d626c67-be65-4096-a48d-6ff1b89a59f6', '').
+narrative_ontology:cs_kernel_codification('1d626c67-be65-4096-a48d-6ff1b89a59f6', distributed).
+narrative_ontology:cs_authority_grounding('1d626c67-be65-4096-a48d-6ff1b89a59f6', distributed).
 narrative_ontology:cs_kernel_id(lock_in_reading, qwerty_persistence_mechanism).
-narrative_ontology:cs_reading_relation(lock_in_reading, naturalization_reading, forecloses).
-narrative_ontology:cs_reading_relation(lock_in_reading, beneficiary_extraction_reading, coexists_with).
-narrative_ontology:cs_axiom(lock_in_reading, foundational, path_dependence_explains_persistence).
+narrative_ontology:cs_reading_relation('1d626c67-be65-4096-a48d-6ff1b89a59f6', naturalization_reading, forecloses).
+narrative_ontology:cs_reading_relation('1d626c67-be65-4096-a48d-6ff1b89a59f6', beneficiary_extraction_reading, coexists_with).
+narrative_ontology:cs_axiom('1d626c67-be65-4096-a48d-6ff1b89a59f6', foundational, path_dependence_explains_persistence).
 narrative_ontology:cs_axiom_status(path_dependence_explains_persistence, holdable).
-narrative_ontology:cs_axiom_grounding(lock_in_reading, path_dependence_explains_persistence, empirically_contingent).
-narrative_ontology:cs_axiom(lock_in_reading, foundational, suboptimality_without_intentional_extractor).
+narrative_ontology:cs_axiom_grounding('1d626c67-be65-4096-a48d-6ff1b89a59f6', path_dependence_explains_persistence, empirically_contingent).
+narrative_ontology:cs_axiom('1d626c67-be65-4096-a48d-6ff1b89a59f6', foundational, suboptimality_without_intentional_extractor).
 narrative_ontology:cs_axiom_status(suboptimality_without_intentional_extractor, holdable).
-narrative_ontology:cs_axiom_grounding(lock_in_reading, suboptimality_without_intentional_extractor, empirically_contingent).
-narrative_ontology:cs_reference_frame(lock_in_reading, perfect_market_equilibrium).
-narrative_ontology:cs_drift_state(lock_in_reading, contemporary, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('1d626c67-be65-4096-a48d-6ff1b89a59f6', suboptimality_without_intentional_extractor, empirically_contingent).
+narrative_ontology:cs_reference_frame('1d626c67-be65-4096-a48d-6ff1b89a59f6', perfect_market_equilibrium).
+narrative_ontology:cs_drift_state('1d626c67-be65-4096-a48d-6ff1b89a59f6', contemporary, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(lock_in_reading, established_qwerty_manufacturers).

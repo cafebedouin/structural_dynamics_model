@@ -120,17 +120,19 @@ narrative_ontology:topic_domain(strategic_deployment, "history_of_technology/rel
 domain_priors:requires_active_enforcement(strategic_deployment).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(strategic_deployment, distributed).
-narrative_ontology:cs_authority_grounding(strategic_deployment, practice).
+narrative_ontology:cs_story_uid(strategic_deployment, 'cd52e9ce-b618-4e8f-ad34-8b843f73b1d8').
+narrative_ontology:cs_created_at('cd52e9ce-b618-4e8f-ad34-8b843f73b1d8', '').
+narrative_ontology:cs_kernel_codification('cd52e9ce-b618-4e8f-ad34-8b843f73b1d8', distributed).
+narrative_ontology:cs_authority_grounding('cd52e9ce-b618-4e8f-ad34-8b843f73b1d8', practice).
 narrative_ontology:cs_kernel_id(strategic_deployment, press_reformation_causality).
-narrative_ontology:cs_reading_relation(strategic_deployment, technological_determinism, coexists_with).
-narrative_ontology:cs_reading_relation(strategic_deployment, co_constitution, influences).
-narrative_ontology:cs_axiom(strategic_deployment, foundational, intentional_actor_primacy).
+narrative_ontology:cs_reading_relation('cd52e9ce-b618-4e8f-ad34-8b843f73b1d8', technological_determinism, coexists_with).
+narrative_ontology:cs_reading_relation('cd52e9ce-b618-4e8f-ad34-8b843f73b1d8', co_constitution, influences).
+narrative_ontology:cs_axiom('cd52e9ce-b618-4e8f-ad34-8b843f73b1d8', foundational, intentional_actor_primacy).
 narrative_ontology:cs_axiom_status(intentional_actor_primacy, holdable).
-narrative_ontology:cs_axiom(strategic_deployment, foundational, technology_as_instrument).
+narrative_ontology:cs_axiom('cd52e9ce-b618-4e8f-ad34-8b843f73b1d8', foundational, technology_as_instrument).
 narrative_ontology:cs_axiom_status(technology_as_instrument, holdable).
-narrative_ontology:cs_reference_frame(strategic_deployment, church_information_monopoly).
-narrative_ontology:cs_drift_state(strategic_deployment, post_reformation_settlement, gap(authority_erosion, severe, false)).
+narrative_ontology:cs_reference_frame('cd52e9ce-b618-4e8f-ad34-8b843f73b1d8', church_information_monopoly).
+narrative_ontology:cs_drift_state('cd52e9ce-b618-4e8f-ad34-8b843f73b1d8', post_reformation_settlement, gap(authority_erosion, severe, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(strategic_deployment, protestant_reformers).

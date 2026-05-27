@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(compliance_substitutes_for_competence, institutional_knowledge_transfer_succeeds).
 narrative_ontology:cs_axiom_contradiction(institutional_knowledge_transfer_succeeds, compliance_substitutes_for_competence).
+narrative_ontology:cs_story_uid(preparedness_retention_contradictions, '25187166-2bee-45d0-bb37-95598766d78a').
+narrative_ontology:cs_created_at('25187166-2bee-45d0-bb37-95598766d78a', '').

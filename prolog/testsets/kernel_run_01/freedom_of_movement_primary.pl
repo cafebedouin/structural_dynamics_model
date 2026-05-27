@@ -130,18 +130,20 @@ narrative_ontology:topic_domain(freedom_of_movement_primary, "international_law/
 domain_priors:requires_active_enforcement(freedom_of_movement_primary).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(freedom_of_movement_primary, fixed_text).
-narrative_ontology:cs_authority_grounding(freedom_of_movement_primary, lineage).
-narrative_ontology:cs_interpretation_layer_present(freedom_of_movement_primary).
+narrative_ontology:cs_story_uid(freedom_of_movement_primary, 'dbad4f59-8e3c-42b0-93e8-f91b58e408c2').
+narrative_ontology:cs_created_at('dbad4f59-8e3c-42b0-93e8-f91b58e408c2', '').
+narrative_ontology:cs_kernel_codification('dbad4f59-8e3c-42b0-93e8-f91b58e408c2', fixed_text).
+narrative_ontology:cs_authority_grounding('dbad4f59-8e3c-42b0-93e8-f91b58e408c2', lineage).
+narrative_ontology:cs_interpretation_layer_present('dbad4f59-8e3c-42b0-93e8-f91b58e408c2').
 narrative_ontology:cs_kernel_id(freedom_of_movement_primary, border_normative_status).
-narrative_ontology:cs_reading_relation(freedom_of_movement_primary, sovereignty_primary, coexists_with).
-narrative_ontology:cs_reading_relation(freedom_of_movement_primary, managed_migration_hybrid, coexists_with).
-narrative_ontology:cs_axiom(freedom_of_movement_primary, foundational, freedom_of_movement_presumptive).
+narrative_ontology:cs_reading_relation('dbad4f59-8e3c-42b0-93e8-f91b58e408c2', sovereignty_primary, coexists_with).
+narrative_ontology:cs_reading_relation('dbad4f59-8e3c-42b0-93e8-f91b58e408c2', managed_migration_hybrid, coexists_with).
+narrative_ontology:cs_axiom('dbad4f59-8e3c-42b0-93e8-f91b58e408c2', foundational, freedom_of_movement_presumptive).
 narrative_ontology:cs_axiom_status(freedom_of_movement_presumptive, holdable).
-narrative_ontology:cs_axiom(freedom_of_movement_primary, foundational, state_exclusion_requires_compelling_justification).
+narrative_ontology:cs_axiom('dbad4f59-8e3c-42b0-93e8-f91b58e408c2', foundational, state_exclusion_requires_compelling_justification).
 narrative_ontology:cs_axiom_status(state_exclusion_requires_compelling_justification, holdable).
-narrative_ontology:cs_reference_frame(freedom_of_movement_primary, universal_human_right_to_move).
-narrative_ontology:cs_drift_state(freedom_of_movement_primary, contemporary_enforcement_sophistication, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_reference_frame('dbad4f59-8e3c-42b0-93e8-f91b58e408c2', universal_human_right_to_move).
+narrative_ontology:cs_drift_state('dbad4f59-8e3c-42b0-93e8-f91b58e408c2', contemporary_enforcement_sophistication, gap(practice_drift, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(freedom_of_movement_primary, global_labor_mobility).

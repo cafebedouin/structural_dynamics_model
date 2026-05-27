@@ -115,9 +115,11 @@ narrative_ontology:topic_domain(civic_right_reading, "constitutional_law/politic
 domain_priors:requires_active_enforcement(civic_right_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(civic_right_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(civic_right_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(civic_right_reading).
+narrative_ontology:cs_story_uid(civic_right_reading, 'a5927cfa-4071-4717-94f9-8ef8f658efa2').
+narrative_ontology:cs_created_at('a5927cfa-4071-4717-94f9-8ef8f658efa2', '').
+narrative_ontology:cs_kernel_codification('a5927cfa-4071-4717-94f9-8ef8f658efa2', fixed_text).
+narrative_ontology:cs_authority_grounding('a5927cfa-4071-4717-94f9-8ef8f658efa2', lineage).
+narrative_ontology:cs_interpretation_layer_present('a5927cfa-4071-4717-94f9-8ef8f658efa2').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(civic_right_reading, civic_militia_eligible_citizens).

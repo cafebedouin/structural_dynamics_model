@@ -123,23 +123,25 @@ narrative_ontology:topic_domain(degrowth_reading, "climate_policy/political_econ
 domain_priors:requires_active_enforcement(degrowth_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(degrowth_reading, formalized).
-narrative_ontology:cs_authority_grounding(degrowth_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(degrowth_reading).
+narrative_ontology:cs_story_uid(degrowth_reading, '9e590b5b-cf52-4fe9-8bf7-599251bd6c34').
+narrative_ontology:cs_created_at('9e590b5b-cf52-4fe9-8bf7-599251bd6c34', '').
+narrative_ontology:cs_kernel_codification('9e590b5b-cf52-4fe9-8bf7-599251bd6c34', formalized).
+narrative_ontology:cs_authority_grounding('9e590b5b-cf52-4fe9-8bf7-599251bd6c34', lineage).
+narrative_ontology:cs_interpretation_layer_present('9e590b5b-cf52-4fe9-8bf7-599251bd6c34').
 narrative_ontology:cs_kernel_id(degrowth_reading, climate_response_imperative).
-narrative_ontology:cs_reading_relation(degrowth_reading, mitigation_priority_reading, forecloses).
-narrative_ontology:cs_reading_relation(degrowth_reading, adaptation_priority_reading, coexists_with).
-narrative_ontology:cs_axiom(degrowth_reading, foundational, global_north_consumption_reduction_mandatory).
+narrative_ontology:cs_reading_relation('9e590b5b-cf52-4fe9-8bf7-599251bd6c34', mitigation_priority_reading, forecloses).
+narrative_ontology:cs_reading_relation('9e590b5b-cf52-4fe9-8bf7-599251bd6c34', adaptation_priority_reading, coexists_with).
+narrative_ontology:cs_axiom('9e590b5b-cf52-4fe9-8bf7-599251bd6c34', foundational, global_north_consumption_reduction_mandatory).
 narrative_ontology:cs_axiom_status(global_north_consumption_reduction_mandatory, holdable).
-narrative_ontology:cs_axiom_grounding(degrowth_reading, global_north_consumption_reduction_mandatory, empirically_contingent).
-narrative_ontology:cs_axiom(degrowth_reading, foundational, carbon_removal_technology_unreliable).
+narrative_ontology:cs_axiom_grounding('9e590b5b-cf52-4fe9-8bf7-599251bd6c34', global_north_consumption_reduction_mandatory, empirically_contingent).
+narrative_ontology:cs_axiom('9e590b5b-cf52-4fe9-8bf7-599251bd6c34', foundational, carbon_removal_technology_unreliable).
 narrative_ontology:cs_axiom_status(carbon_removal_technology_unreliable, holdable).
-narrative_ontology:cs_axiom_grounding(degrowth_reading, carbon_removal_technology_unreliable, empirically_contingent).
-narrative_ontology:cs_axiom(degrowth_reading, secondary, distributional_justice_primary).
+narrative_ontology:cs_axiom_grounding('9e590b5b-cf52-4fe9-8bf7-599251bd6c34', carbon_removal_technology_unreliable, empirically_contingent).
+narrative_ontology:cs_axiom('9e590b5b-cf52-4fe9-8bf7-599251bd6c34', secondary, distributional_justice_primary).
 narrative_ontology:cs_axiom_status(distributional_justice_primary, holdable).
-narrative_ontology:cs_axiom_grounding(degrowth_reading, distributional_justice_primary, deontological).
-narrative_ontology:cs_reference_frame(degrowth_reading, climate_stabilization_imperative).
-narrative_ontology:cs_drift_state(degrowth_reading, contemporary_post_2020_consensus, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('9e590b5b-cf52-4fe9-8bf7-599251bd6c34', distributional_justice_primary, deontological).
+narrative_ontology:cs_reference_frame('9e590b5b-cf52-4fe9-8bf7-599251bd6c34', climate_stabilization_imperative).
+narrative_ontology:cs_drift_state('9e590b5b-cf52-4fe9-8bf7-599251bd6c34', contemporary_post_2020_consensus, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(degrowth_reading, future_generations).

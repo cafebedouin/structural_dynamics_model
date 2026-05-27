@@ -121,18 +121,20 @@ narrative_ontology:topic_domain(fitness_contingent_reading, "moral_philosophy/hi
 domain_priors:requires_active_enforcement(fitness_contingent_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(fitness_contingent_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(fitness_contingent_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(fitness_contingent_reading).
+narrative_ontology:cs_story_uid(fitness_contingent_reading, '2bcf4b80-08d5-4218-b4c2-d023054165c1').
+narrative_ontology:cs_created_at('2bcf4b80-08d5-4218-b4c2-d023054165c1', '').
+narrative_ontology:cs_kernel_codification('2bcf4b80-08d5-4218-b4c2-d023054165c1', fixed_text).
+narrative_ontology:cs_authority_grounding('2bcf4b80-08d5-4218-b4c2-d023054165c1', lineage).
+narrative_ontology:cs_interpretation_layer_present('2bcf4b80-08d5-4218-b4c2-d023054165c1').
 narrative_ontology:cs_kernel_id(fitness_contingent_reading, personhood_boundary).
-narrative_ontology:cs_reading_relation(fitness_contingent_reading, birth_threshold_reading, forecloses).
-narrative_ontology:cs_reading_relation(fitness_contingent_reading, potential_based_reading, forecloses).
-narrative_ontology:cs_axiom(fitness_contingent_reading, foundational, demonstrated_capacity_constitutive_personhood).
+narrative_ontology:cs_reading_relation('2bcf4b80-08d5-4218-b4c2-d023054165c1', birth_threshold_reading, forecloses).
+narrative_ontology:cs_reading_relation('2bcf4b80-08d5-4218-b4c2-d023054165c1', potential_based_reading, forecloses).
+narrative_ontology:cs_axiom('2bcf4b80-08d5-4218-b4c2-d023054165c1', foundational, demonstrated_capacity_constitutive_personhood).
 narrative_ontology:cs_axiom_status(demonstrated_capacity_constitutive_personhood, holdable).
-narrative_ontology:cs_axiom(fitness_contingent_reading, foundational, adjudicating_authority_legitimacy).
+narrative_ontology:cs_axiom('2bcf4b80-08d5-4218-b4c2-d023054165c1', foundational, adjudicating_authority_legitimacy).
 narrative_ontology:cs_axiom_status(adjudicating_authority_legitimacy, holdable).
-narrative_ontology:cs_reference_frame(fitness_contingent_reading, capacity_based_moral_agency).
-narrative_ontology:cs_drift_state(fitness_contingent_reading, contemporary_biomedical_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('2bcf4b80-08d5-4218-b4c2-d023054165c1', capacity_based_moral_agency).
+narrative_ontology:cs_drift_state('2bcf4b80-08d5-4218-b4c2-d023054165c1', contemporary_biomedical_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(fitness_contingent_reading, fitness_adjudicating_authority).

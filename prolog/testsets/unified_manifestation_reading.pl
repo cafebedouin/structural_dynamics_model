@@ -120,20 +120,22 @@ narrative_ontology:topic_domain(unified_manifestation_reading, "religious_studie
 domain_priors:requires_active_enforcement(unified_manifestation_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(unified_manifestation_reading, formalized).
-narrative_ontology:cs_authority_grounding(unified_manifestation_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(unified_manifestation_reading).
+narrative_ontology:cs_story_uid(unified_manifestation_reading, 'e8b7a3e4-fd23-4cd6-bd97-f07fc6f31d0f').
+narrative_ontology:cs_created_at('e8b7a3e4-fd23-4cd6-bd97-f07fc6f31d0f', '').
+narrative_ontology:cs_kernel_codification('e8b7a3e4-fd23-4cd6-bd97-f07fc6f31d0f', formalized).
+narrative_ontology:cs_authority_grounding('e8b7a3e4-fd23-4cd6-bd97-f07fc6f31d0f', lineage).
+narrative_ontology:cs_interpretation_layer_present('e8b7a3e4-fd23-4cd6-bd97-f07fc6f31d0f').
 narrative_ontology:cs_kernel_id(unified_manifestation_reading, kami_buddha_ontology).
-narrative_ontology:cs_reading_relation(unified_manifestation_reading, domain_partition_reading, forecloses).
-narrative_ontology:cs_reading_relation(unified_manifestation_reading, pragmatic_accommodation_reading, coexists_with).
-narrative_ontology:cs_axiom(unified_manifestation_reading, foundational, buddha_nature_ontological_priority).
+narrative_ontology:cs_reading_relation('e8b7a3e4-fd23-4cd6-bd97-f07fc6f31d0f', domain_partition_reading, forecloses).
+narrative_ontology:cs_reading_relation('e8b7a3e4-fd23-4cd6-bd97-f07fc6f31d0f', pragmatic_accommodation_reading, coexists_with).
+narrative_ontology:cs_axiom('e8b7a3e4-fd23-4cd6-bd97-f07fc6f31d0f', foundational, buddha_nature_ontological_priority).
 narrative_ontology:cs_axiom_status(buddha_nature_ontological_priority, holdable).
-narrative_ontology:cs_axiom_grounding(unified_manifestation_reading, buddha_nature_ontological_priority, deontological).
-narrative_ontology:cs_axiom(unified_manifestation_reading, foundational, kami_dependence_derivative_status).
+narrative_ontology:cs_axiom_grounding('e8b7a3e4-fd23-4cd6-bd97-f07fc6f31d0f', buddha_nature_ontological_priority, deontological).
+narrative_ontology:cs_axiom('e8b7a3e4-fd23-4cd6-bd97-f07fc6f31d0f', foundational, kami_dependence_derivative_status).
 narrative_ontology:cs_axiom_status(kami_dependence_derivative_status, holdable).
-narrative_ontology:cs_axiom_grounding(unified_manifestation_reading, kami_dependence_derivative_status, deontological).
-narrative_ontology:cs_reference_frame(unified_manifestation_reading, buddha_nature_foundational_primacy).
-narrative_ontology:cs_drift_state(unified_manifestation_reading, meiji_state_separation, gap(authority_erosion, substantial, true)).
+narrative_ontology:cs_axiom_grounding('e8b7a3e4-fd23-4cd6-bd97-f07fc6f31d0f', kami_dependence_derivative_status, deontological).
+narrative_ontology:cs_reference_frame('e8b7a3e4-fd23-4cd6-bd97-f07fc6f31d0f', buddha_nature_foundational_primacy).
+narrative_ontology:cs_drift_state('e8b7a3e4-fd23-4cd6-bd97-f07fc6f31d0f', meiji_state_separation, gap(authority_erosion, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(unified_manifestation_reading, buddhist_institutional_authority).

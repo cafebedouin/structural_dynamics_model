@@ -120,20 +120,22 @@ domain_priors:requires_active_enforcement(study_as_preparation).
 narrative_ontology:has_sunset_clause(study_as_preparation).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(study_as_preparation, fixed_text).
-narrative_ontology:cs_authority_grounding(study_as_preparation, lineage).
-narrative_ontology:cs_interpretation_layer_present(study_as_preparation).
+narrative_ontology:cs_story_uid(study_as_preparation, '20c85c7f-7ae7-4b8d-8802-54404f38d3b8').
+narrative_ontology:cs_created_at('20c85c7f-7ae7-4b8d-8802-54404f38d3b8', '').
+narrative_ontology:cs_kernel_codification('20c85c7f-7ae7-4b8d-8802-54404f38d3b8', fixed_text).
+narrative_ontology:cs_authority_grounding('20c85c7f-7ae7-4b8d-8802-54404f38d3b8', lineage).
+narrative_ontology:cs_interpretation_layer_present('20c85c7f-7ae7-4b8d-8802-54404f38d3b8').
 narrative_ontology:cs_kernel_id(study_as_preparation, kodashim_obligation).
-narrative_ontology:cs_reading_relation(study_as_preparation, study_as_performance, coexists_with).
-narrative_ontology:cs_reading_relation(study_as_preparation, study_as_archive, coexists_with).
-narrative_ontology:cs_axiom(study_as_preparation, foundational, messianic_restoration_required).
+narrative_ontology:cs_reading_relation('20c85c7f-7ae7-4b8d-8802-54404f38d3b8', study_as_performance, coexists_with).
+narrative_ontology:cs_reading_relation('20c85c7f-7ae7-4b8d-8802-54404f38d3b8', study_as_archive, coexists_with).
+narrative_ontology:cs_axiom('20c85c7f-7ae7-4b8d-8802-54404f38d3b8', foundational, messianic_restoration_required).
 narrative_ontology:cs_axiom_status(messianic_restoration_required, holdable).
-narrative_ontology:cs_axiom_grounding(study_as_preparation, messianic_restoration_required, deontological).
-narrative_ontology:cs_axiom(study_as_preparation, foundational, preparation_instrumentality).
+narrative_ontology:cs_axiom_grounding('20c85c7f-7ae7-4b8d-8802-54404f38d3b8', messianic_restoration_required, deontological).
+narrative_ontology:cs_axiom('20c85c7f-7ae7-4b8d-8802-54404f38d3b8', foundational, preparation_instrumentality).
 narrative_ontology:cs_axiom_status(preparation_instrumentality, holdable).
-narrative_ontology:cs_axiom_grounding(study_as_preparation, preparation_instrumentality, theological).
-narrative_ontology:cs_reference_frame(study_as_preparation, temple_restoration_framework).
-narrative_ontology:cs_drift_state(study_as_preparation, contemporary_exile_indefinite, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('20c85c7f-7ae7-4b8d-8802-54404f38d3b8', preparation_instrumentality, theological).
+narrative_ontology:cs_reference_frame('20c85c7f-7ae7-4b8d-8802-54404f38d3b8', temple_restoration_framework).
+narrative_ontology:cs_drift_state('20c85c7f-7ae7-4b8d-8802-54404f38d3b8', contemporary_exile_indefinite, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(study_as_preparation, messianic_redemption_process).

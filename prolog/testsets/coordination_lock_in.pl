@@ -108,8 +108,10 @@ narrative_ontology:topic_domain(coordination_lock_in, "technology_history/path_d
 domain_priors:requires_active_enforcement(coordination_lock_in).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(coordination_lock_in, distributed).
-narrative_ontology:cs_authority_grounding(coordination_lock_in, practice).
+narrative_ontology:cs_story_uid(coordination_lock_in, 'cf6069e3-5180-4cb9-9655-4a2d2c5e4765').
+narrative_ontology:cs_created_at('cf6069e3-5180-4cb9-9655-4a2d2c5e4765', '').
+narrative_ontology:cs_kernel_codification('cf6069e3-5180-4cb9-9655-4a2d2c5e4765', distributed).
+narrative_ontology:cs_authority_grounding('cf6069e3-5180-4cb9-9655-4a2d2c5e4765', practice).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(coordination_lock_in, incumbent_manufacturers).

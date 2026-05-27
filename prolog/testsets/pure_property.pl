@@ -112,9 +112,11 @@ narrative_ontology:topic_domain(pure_property, "applied_ethics/legal_philosophy/
 domain_priors:requires_active_enforcement(pure_property).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(pure_property, formalized).
-narrative_ontology:cs_authority_grounding(pure_property, extraction).
-narrative_ontology:cs_interpretation_layer_present(pure_property).
+narrative_ontology:cs_story_uid(pure_property, '7b3c690d-d9bb-4169-94da-5f9a2beb1329').
+narrative_ontology:cs_created_at('7b3c690d-d9bb-4169-94da-5f9a2beb1329', '').
+narrative_ontology:cs_kernel_codification('7b3c690d-d9bb-4169-94da-5f9a2beb1329', formalized).
+narrative_ontology:cs_authority_grounding('7b3c690d-d9bb-4169-94da-5f9a2beb1329', extraction).
+narrative_ontology:cs_interpretation_layer_present('7b3c690d-d9bb-4169-94da-5f9a2beb1329').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(pure_property, agricultural_industries).

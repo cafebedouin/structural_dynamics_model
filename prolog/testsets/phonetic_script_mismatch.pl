@@ -118,9 +118,11 @@ narrative_ontology:topic_domain(phonetic_script_mismatch, "political_linguistics
 domain_priors:requires_active_enforcement(phonetic_script_mismatch).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(phonetic_script_mismatch, formalized).
-narrative_ontology:cs_authority_grounding(phonetic_script_mismatch, extraction).
-narrative_ontology:cs_interpretation_layer_present(phonetic_script_mismatch).
+narrative_ontology:cs_story_uid(phonetic_script_mismatch, 'd6c632c2-6db8-4ed9-9b8b-b01e9d5668e8').
+narrative_ontology:cs_created_at('d6c632c2-6db8-4ed9-9b8b-b01e9d5668e8', '').
+narrative_ontology:cs_kernel_codification('d6c632c2-6db8-4ed9-9b8b-b01e9d5668e8', formalized).
+narrative_ontology:cs_authority_grounding('d6c632c2-6db8-4ed9-9b8b-b01e9d5668e8', extraction).
+narrative_ontology:cs_interpretation_layer_present('d6c632c2-6db8-4ed9-9b8b-b01e9d5668e8').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(phonetic_script_mismatch, state_authority_reformers).

@@ -114,20 +114,22 @@ narrative_ontology:human_readable(number_reading, "Zero as Number: Brahmagupta's
 narrative_ontology:topic_domain(number_reading, "mathematics/history_of_mathematics/conceptual_foundations").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(number_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(number_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(number_reading).
+narrative_ontology:cs_story_uid(number_reading, '1af3f4cd-bc56-47a5-824e-f1429fc9330b').
+narrative_ontology:cs_created_at('1af3f4cd-bc56-47a5-824e-f1429fc9330b', '').
+narrative_ontology:cs_kernel_codification('1af3f4cd-bc56-47a5-824e-f1429fc9330b', fixed_text).
+narrative_ontology:cs_authority_grounding('1af3f4cd-bc56-47a5-824e-f1429fc9330b', lineage).
+narrative_ontology:cs_interpretation_layer_present('1af3f4cd-bc56-47a5-824e-f1429fc9330b').
 narrative_ontology:cs_kernel_id(number_reading, zero_mathematical_status).
-narrative_ontology:cs_reading_relation(number_reading, parmenidean_rejection, forecloses).
-narrative_ontology:cs_reading_relation(number_reading, placeholder_reading, coexists_with).
-narrative_ontology:cs_axiom(number_reading, foundational, zero_is_numerical_entity).
+narrative_ontology:cs_reading_relation('1af3f4cd-bc56-47a5-824e-f1429fc9330b', parmenidean_rejection, forecloses).
+narrative_ontology:cs_reading_relation('1af3f4cd-bc56-47a5-824e-f1429fc9330b', placeholder_reading, coexists_with).
+narrative_ontology:cs_axiom('1af3f4cd-bc56-47a5-824e-f1429fc9330b', foundational, zero_is_numerical_entity).
 narrative_ontology:cs_axiom_status(zero_is_numerical_entity, holdable).
-narrative_ontology:cs_axiom_grounding(number_reading, zero_is_numerical_entity, empirically_contingent).
-narrative_ontology:cs_axiom(number_reading, foundational, arithmetic_closure_completeness).
+narrative_ontology:cs_axiom_grounding('1af3f4cd-bc56-47a5-824e-f1429fc9330b', zero_is_numerical_entity, empirically_contingent).
+narrative_ontology:cs_axiom('1af3f4cd-bc56-47a5-824e-f1429fc9330b', foundational, arithmetic_closure_completeness).
 narrative_ontology:cs_axiom_status(arithmetic_closure_completeness, holdable).
-narrative_ontology:cs_axiom_grounding(number_reading, arithmetic_closure_completeness, instrumental).
-narrative_ontology:cs_reference_frame(number_reading, unified_arithmetical_system).
-narrative_ontology:cs_drift_state(number_reading, contemporary_post_algebraic, gap(stable, minor, true)).
+narrative_ontology:cs_axiom_grounding('1af3f4cd-bc56-47a5-824e-f1429fc9330b', arithmetic_closure_completeness, instrumental).
+narrative_ontology:cs_reference_frame('1af3f4cd-bc56-47a5-824e-f1429fc9330b', unified_arithmetical_system).
+narrative_ontology:cs_drift_state('1af3f4cd-bc56-47a5-824e-f1429fc9330b', contemporary_post_algebraic, gap(stable, minor, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(number_reading, mathematical_practitioners).

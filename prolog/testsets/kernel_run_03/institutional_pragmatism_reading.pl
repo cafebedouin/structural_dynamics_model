@@ -128,20 +128,22 @@ narrative_ontology:topic_domain(institutional_pragmatism_reading, "religious_ins
 domain_priors:requires_active_enforcement(institutional_pragmatism_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(institutional_pragmatism_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(institutional_pragmatism_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(institutional_pragmatism_reading).
+narrative_ontology:cs_story_uid(institutional_pragmatism_reading, 'b7e9ea2d-611f-4daa-8eb6-7c0cad04cc32').
+narrative_ontology:cs_created_at('b7e9ea2d-611f-4daa-8eb6-7c0cad04cc32', '').
+narrative_ontology:cs_kernel_codification('b7e9ea2d-611f-4daa-8eb6-7c0cad04cc32', fixed_text).
+narrative_ontology:cs_authority_grounding('b7e9ea2d-611f-4daa-8eb6-7c0cad04cc32', extraction).
+narrative_ontology:cs_interpretation_layer_present('b7e9ea2d-611f-4daa-8eb6-7c0cad04cc32').
 narrative_ontology:cs_kernel_id(institutional_pragmatism_reading, plural_marriage_mandate).
-narrative_ontology:cs_reading_relation(institutional_pragmatism_reading, exogenous_override_reading, coexists_with).
-narrative_ontology:cs_reading_relation(institutional_pragmatism_reading, endogenous_reinterpretation_reading, coexists_with).
-narrative_ontology:cs_axiom(institutional_pragmatism_reading, foundational, institutional_survival_as_primary_motive).
+narrative_ontology:cs_reading_relation('b7e9ea2d-611f-4daa-8eb6-7c0cad04cc32', exogenous_override_reading, coexists_with).
+narrative_ontology:cs_reading_relation('b7e9ea2d-611f-4daa-8eb6-7c0cad04cc32', endogenous_reinterpretation_reading, coexists_with).
+narrative_ontology:cs_axiom('b7e9ea2d-611f-4daa-8eb6-7c0cad04cc32', foundational, institutional_survival_as_primary_motive).
 narrative_ontology:cs_axiom_status(institutional_survival_as_primary_motive, holdable).
-narrative_ontology:cs_axiom_grounding(institutional_pragmatism_reading, institutional_survival_as_primary_motive, empirically_contingent).
-narrative_ontology:cs_axiom(institutional_pragmatism_reading, foundational, doctrinal_revision_as_strategic_deployment).
+narrative_ontology:cs_axiom_grounding('b7e9ea2d-611f-4daa-8eb6-7c0cad04cc32', institutional_survival_as_primary_motive, empirically_contingent).
+narrative_ontology:cs_axiom('b7e9ea2d-611f-4daa-8eb6-7c0cad04cc32', foundational, doctrinal_revision_as_strategic_deployment).
 narrative_ontology:cs_axiom_status(doctrinal_revision_as_strategic_deployment, holdable).
-narrative_ontology:cs_axiom_grounding(institutional_pragmatism_reading, doctrinal_revision_as_strategic_deployment, empirically_contingent).
-narrative_ontology:cs_reference_frame(institutional_pragmatism_reading, doctrinal_continuity_obligation).
-narrative_ontology:cs_drift_state(institutional_pragmatism_reading, post_manifesto_period, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('b7e9ea2d-611f-4daa-8eb6-7c0cad04cc32', doctrinal_revision_as_strategic_deployment, empirically_contingent).
+narrative_ontology:cs_reference_frame('b7e9ea2d-611f-4daa-8eb6-7c0cad04cc32', doctrinal_continuity_obligation).
+narrative_ontology:cs_drift_state('b7e9ea2d-611f-4daa-8eb6-7c0cad04cc32', post_manifesto_period, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(institutional_pragmatism_reading, church_leadership).

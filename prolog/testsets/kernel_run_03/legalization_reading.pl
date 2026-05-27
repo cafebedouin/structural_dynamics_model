@@ -129,20 +129,22 @@ narrative_ontology:topic_domain(legalization_reading, "public_health_policy/crim
 domain_priors:requires_active_enforcement(legalization_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(legalization_reading, formalized).
-narrative_ontology:cs_authority_grounding(legalization_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(legalization_reading).
+narrative_ontology:cs_story_uid(legalization_reading, '1f788088-84fb-476d-8654-d247c2c2af91').
+narrative_ontology:cs_created_at('1f788088-84fb-476d-8654-d247c2c2af91', '').
+narrative_ontology:cs_kernel_codification('1f788088-84fb-476d-8654-d247c2c2af91', formalized).
+narrative_ontology:cs_authority_grounding('1f788088-84fb-476d-8654-d247c2c2af91', extraction).
+narrative_ontology:cs_interpretation_layer_present('1f788088-84fb-476d-8654-d247c2c2af91').
 narrative_ontology:cs_kernel_id(legalization_reading, substance_control_authority).
-narrative_ontology:cs_reading_relation(legalization_reading, prohibition_reading, coexists_with).
-narrative_ontology:cs_reading_relation(legalization_reading, harm_reduction_reading, influences).
-narrative_ontology:cs_axiom(legalization_reading, foundational, drug_use_outside_state_constraint_scope).
+narrative_ontology:cs_reading_relation('1f788088-84fb-476d-8654-d247c2c2af91', prohibition_reading, coexists_with).
+narrative_ontology:cs_reading_relation('1f788088-84fb-476d-8654-d247c2c2af91', harm_reduction_reading, influences).
+narrative_ontology:cs_axiom('1f788088-84fb-476d-8654-d247c2c2af91', foundational, drug_use_outside_state_constraint_scope).
 narrative_ontology:cs_axiom_status(drug_use_outside_state_constraint_scope, holdable).
-narrative_ontology:cs_axiom_grounding(legalization_reading, drug_use_outside_state_constraint_scope, deontological).
-narrative_ontology:cs_axiom(legalization_reading, foundational, prohibition_enforcement_creates_more_harm_than_drug_use).
+narrative_ontology:cs_axiom_grounding('1f788088-84fb-476d-8654-d247c2c2af91', drug_use_outside_state_constraint_scope, deontological).
+narrative_ontology:cs_axiom('1f788088-84fb-476d-8654-d247c2c2af91', foundational, prohibition_enforcement_creates_more_harm_than_drug_use).
 narrative_ontology:cs_axiom_status(prohibition_enforcement_creates_more_harm_than_drug_use, holdable).
-narrative_ontology:cs_axiom_grounding(legalization_reading, prohibition_enforcement_creates_more_harm_than_drug_use, empirically_contingent).
-narrative_ontology:cs_reference_frame(legalization_reading, legal_market_substitution_authority).
-narrative_ontology:cs_drift_state(legalization_reading, contemporary_post_cannabis_legalization, gap(authority_erosion, substantial, true)).
+narrative_ontology:cs_axiom_grounding('1f788088-84fb-476d-8654-d247c2c2af91', prohibition_enforcement_creates_more_harm_than_drug_use, empirically_contingent).
+narrative_ontology:cs_reference_frame('1f788088-84fb-476d-8654-d247c2c2af91', legal_market_substitution_authority).
+narrative_ontology:cs_drift_state('1f788088-84fb-476d-8654-d247c2c2af91', contemporary_post_cannabis_legalization, gap(authority_erosion, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(legalization_reading, marginalized_communities).

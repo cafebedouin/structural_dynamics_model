@@ -125,20 +125,22 @@ narrative_ontology:topic_domain(native_generation_reading, "sociolinguistics/rel
 domain_priors:requires_active_enforcement(native_generation_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(native_generation_reading, formalized).
-narrative_ontology:cs_authority_grounding(native_generation_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(native_generation_reading).
+narrative_ontology:cs_story_uid(native_generation_reading, 'f8958c5f-75ff-4e9d-bb78-e6257db403cd').
+narrative_ontology:cs_created_at('f8958c5f-75ff-4e9d-bb78-e6257db403cd', '').
+narrative_ontology:cs_kernel_codification('f8958c5f-75ff-4e9d-bb78-e6257db403cd', formalized).
+narrative_ontology:cs_authority_grounding('f8958c5f-75ff-4e9d-bb78-e6257db403cd', lineage).
+narrative_ontology:cs_interpretation_layer_present('f8958c5f-75ff-4e9d-bb78-e6257db403cd').
 narrative_ontology:cs_kernel_id(native_generation_reading, living_language_status).
-narrative_ontology:cs_reading_relation(native_generation_reading, liturgical_preservation_reading, coexists_with).
-narrative_ontology:cs_reading_relation(native_generation_reading, literary_continuity_reading, influences).
-narrative_ontology:cs_axiom(native_generation_reading, foundational, native_speaker_daily_life_requirement).
+narrative_ontology:cs_reading_relation('f8958c5f-75ff-4e9d-bb78-e6257db403cd', liturgical_preservation_reading, coexists_with).
+narrative_ontology:cs_reading_relation('f8958c5f-75ff-4e9d-bb78-e6257db403cd', literary_continuity_reading, influences).
+narrative_ontology:cs_axiom('f8958c5f-75ff-4e9d-bb78-e6257db403cd', foundational, native_speaker_daily_life_requirement).
 narrative_ontology:cs_axiom_status(native_speaker_daily_life_requirement, holdable).
-narrative_ontology:cs_axiom_grounding(native_generation_reading, native_speaker_daily_life_requirement, empirically_contingent).
-narrative_ontology:cs_axiom(native_generation_reading, secondary, secular_national_identity_priority).
+narrative_ontology:cs_axiom_grounding('f8958c5f-75ff-4e9d-bb78-e6257db403cd', native_speaker_daily_life_requirement, empirically_contingent).
+narrative_ontology:cs_axiom('f8958c5f-75ff-4e9d-bb78-e6257db403cd', secondary, secular_national_identity_priority).
 narrative_ontology:cs_axiom_status(secular_national_identity_priority, holdable).
-narrative_ontology:cs_axiom_grounding(native_generation_reading, secular_national_identity_priority, conventional).
-narrative_ontology:cs_reference_frame(native_generation_reading, living_language_secular_vernacular_nation).
-narrative_ontology:cs_drift_state(native_generation_reading, contemporary_digital_multilingual_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('f8958c5f-75ff-4e9d-bb78-e6257db403cd', secular_national_identity_priority, conventional).
+narrative_ontology:cs_reference_frame('f8958c5f-75ff-4e9d-bb78-e6257db403cd', living_language_secular_vernacular_nation).
+narrative_ontology:cs_drift_state('f8958c5f-75ff-4e9d-bb78-e6257db403cd', contemporary_digital_multilingual_era, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(native_generation_reading, secular_nationalist_movement).

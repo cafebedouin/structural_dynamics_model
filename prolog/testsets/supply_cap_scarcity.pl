@@ -120,23 +120,25 @@ narrative_ontology:topic_domain(supply_cap_scarcity, "monetary_theory/financial_
 domain_priors:requires_active_enforcement(supply_cap_scarcity).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(supply_cap_scarcity, formalized).
-narrative_ontology:cs_authority_grounding(supply_cap_scarcity, extraction).
-narrative_ontology:cs_interpretation_layer_present(supply_cap_scarcity).
-narrative_ontology:cs_reading_relation(supply_cap_scarcity, supply_dynamic_money_reading, forecloses).
-narrative_ontology:cs_reading_relation(supply_cap_scarcity, supply_price_stability_reading, forecloses).
-narrative_ontology:cs_reading_relation(supply_cap_scarcity, supply_neutrality_reading, influences).
-narrative_ontology:cs_axiom(supply_cap_scarcity, foundational, immutable_fixed_supply_is_sound).
+narrative_ontology:cs_story_uid(supply_cap_scarcity, '13502f2f-d23d-4dc3-a4d0-a89f7e296491').
+narrative_ontology:cs_created_at('13502f2f-d23d-4dc3-a4d0-a89f7e296491', '').
+narrative_ontology:cs_kernel_codification('13502f2f-d23d-4dc3-a4d0-a89f7e296491', formalized).
+narrative_ontology:cs_authority_grounding('13502f2f-d23d-4dc3-a4d0-a89f7e296491', extraction).
+narrative_ontology:cs_interpretation_layer_present('13502f2f-d23d-4dc3-a4d0-a89f7e296491').
+narrative_ontology:cs_reading_relation('13502f2f-d23d-4dc3-a4d0-a89f7e296491', supply_dynamic_money_reading, forecloses).
+narrative_ontology:cs_reading_relation('13502f2f-d23d-4dc3-a4d0-a89f7e296491', supply_price_stability_reading, forecloses).
+narrative_ontology:cs_reading_relation('13502f2f-d23d-4dc3-a4d0-a89f7e296491', supply_neutrality_reading, influences).
+narrative_ontology:cs_axiom('13502f2f-d23d-4dc3-a4d0-a89f7e296491', foundational, immutable_fixed_supply_is_sound).
 narrative_ontology:cs_axiom_status(immutable_fixed_supply_is_sound, holdable).
-narrative_ontology:cs_axiom_grounding(supply_cap_scarcity, immutable_fixed_supply_is_sound, empirically_contingent).
-narrative_ontology:cs_axiom(supply_cap_scarcity, foundational, scarcity_premium_equals_inflation_hedge).
+narrative_ontology:cs_axiom_grounding('13502f2f-d23d-4dc3-a4d0-a89f7e296491', immutable_fixed_supply_is_sound, empirically_contingent).
+narrative_ontology:cs_axiom('13502f2f-d23d-4dc3-a4d0-a89f7e296491', foundational, scarcity_premium_equals_inflation_hedge).
 narrative_ontology:cs_axiom_status(scarcity_premium_equals_inflation_hedge, holdable).
-narrative_ontology:cs_axiom_grounding(supply_cap_scarcity, scarcity_premium_equals_inflation_hedge, empirically_contingent).
-narrative_ontology:cs_axiom(supply_cap_scarcity, secondary, decentralized_ledger_requires_pow).
+narrative_ontology:cs_axiom_grounding('13502f2f-d23d-4dc3-a4d0-a89f7e296491', scarcity_premium_equals_inflation_hedge, empirically_contingent).
+narrative_ontology:cs_axiom('13502f2f-d23d-4dc3-a4d0-a89f7e296491', secondary, decentralized_ledger_requires_pow).
 narrative_ontology:cs_axiom_status(decentralized_ledger_requires_pow, holdable).
-narrative_ontology:cs_axiom_grounding(supply_cap_scarcity, decentralized_ledger_requires_pow, empirically_contingent).
-narrative_ontology:cs_reference_frame(supply_cap_scarcity, fixed_supply_sound_money_framework).
-narrative_ontology:cs_drift_state(supply_cap_scarcity, mature_institutional_phase, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('13502f2f-d23d-4dc3-a4d0-a89f7e296491', decentralized_ledger_requires_pow, empirically_contingent).
+narrative_ontology:cs_reference_frame('13502f2f-d23d-4dc3-a4d0-a89f7e296491', fixed_supply_sound_money_framework).
+narrative_ontology:cs_drift_state('13502f2f-d23d-4dc3-a4d0-a89f7e296491', mature_institutional_phase, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(supply_cap_scarcity, early_adopters).

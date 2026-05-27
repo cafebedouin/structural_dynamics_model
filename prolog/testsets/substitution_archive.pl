@@ -119,20 +119,22 @@ narrative_ontology:topic_domain(substitution_archive, "religious_studies/rabbini
 domain_priors:requires_active_enforcement(substitution_archive).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(substitution_archive, formalized).
-narrative_ontology:cs_authority_grounding(substitution_archive, lineage).
-narrative_ontology:cs_interpretation_layer_present(substitution_archive).
+narrative_ontology:cs_story_uid(substitution_archive, '7cce5d76-0553-4a8f-be23-cb320970cc8c').
+narrative_ontology:cs_created_at('7cce5d76-0553-4a8f-be23-cb320970cc8c', '').
+narrative_ontology:cs_kernel_codification('7cce5d76-0553-4a8f-be23-cb320970cc8c', formalized).
+narrative_ontology:cs_authority_grounding('7cce5d76-0553-4a8f-be23-cb320970cc8c', lineage).
+narrative_ontology:cs_interpretation_layer_present('7cce5d76-0553-4a8f-be23-cb320970cc8c').
 narrative_ontology:cs_kernel_id(substitution_archive, kodashim_corpus).
-narrative_ontology:cs_reading_relation(substitution_archive, study_as_exercise, influences).
-narrative_ontology:cs_reading_relation(substitution_archive, performance_only, coexists_with).
-narrative_ontology:cs_axiom(substitution_archive, foundational, substitution_is_complete_and_sufficient).
+narrative_ontology:cs_reading_relation('7cce5d76-0553-4a8f-be23-cb320970cc8c', study_as_exercise, influences).
+narrative_ontology:cs_reading_relation('7cce5d76-0553-4a8f-be23-cb320970cc8c', performance_only, coexists_with).
+narrative_ontology:cs_axiom('7cce5d76-0553-4a8f-be23-cb320970cc8c', foundational, substitution_is_complete_and_sufficient).
 narrative_ontology:cs_axiom_status(substitution_is_complete_and_sufficient, holdable).
-narrative_ontology:cs_axiom_grounding(substitution_archive, substitution_is_complete_and_sufficient, deontological).
-narrative_ontology:cs_axiom(substitution_archive, foundational, archive_preserves_actionable_law).
+narrative_ontology:cs_axiom_grounding('7cce5d76-0553-4a8f-be23-cb320970cc8c', substitution_is_complete_and_sufficient, deontological).
+narrative_ontology:cs_axiom('7cce5d76-0553-4a8f-be23-cb320970cc8c', foundational, archive_preserves_actionable_law).
 narrative_ontology:cs_axiom_status(archive_preserves_actionable_law, holdable).
-narrative_ontology:cs_axiom_grounding(substitution_archive, archive_preserves_actionable_law, conventional).
-narrative_ontology:cs_reference_frame(substitution_archive, substitution_permanent_and_normative).
-narrative_ontology:cs_drift_state(substitution_archive, contemporary_diaspora_judaism, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('7cce5d76-0553-4a8f-be23-cb320970cc8c', archive_preserves_actionable_law, conventional).
+narrative_ontology:cs_reference_frame('7cce5d76-0553-4a8f-be23-cb320970cc8c', substitution_permanent_and_normative).
+narrative_ontology:cs_drift_state('7cce5d76-0553-4a8f-be23-cb320970cc8c', contemporary_diaspora_judaism, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(substitution_archive, rabbinic_text_study_institutions).

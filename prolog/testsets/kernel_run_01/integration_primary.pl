@@ -127,18 +127,20 @@ narrative_ontology:topic_domain(integration_primary, "political_economy/federali
 domain_priors:requires_active_enforcement(integration_primary).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(integration_primary, formalized).
-narrative_ontology:cs_authority_grounding(integration_primary, lineage).
-narrative_ontology:cs_interpretation_layer_present(integration_primary).
+narrative_ontology:cs_story_uid(integration_primary, '64047926-5f2f-4cde-b743-a5c552ed6fbd').
+narrative_ontology:cs_created_at('64047926-5f2f-4cde-b743-a5c552ed6fbd', '').
+narrative_ontology:cs_kernel_codification('64047926-5f2f-4cde-b743-a5c552ed6fbd', formalized).
+narrative_ontology:cs_authority_grounding('64047926-5f2f-4cde-b743-a5c552ed6fbd', lineage).
+narrative_ontology:cs_interpretation_layer_present('64047926-5f2f-4cde-b743-a5c552ed6fbd').
 narrative_ontology:cs_kernel_id(integration_primary, federation_membership_obligations).
-narrative_ontology:cs_reading_relation(integration_primary, member_sovereignty_primary, coexists_with).
-narrative_ontology:cs_reading_relation(integration_primary, selective_solidarity, influences).
-narrative_ontology:cs_axiom(integration_primary, foundational, economic_integration_primacy).
+narrative_ontology:cs_reading_relation('64047926-5f2f-4cde-b743-a5c552ed6fbd', member_sovereignty_primary, coexists_with).
+narrative_ontology:cs_reading_relation('64047926-5f2f-4cde-b743-a5c552ed6fbd', selective_solidarity, influences).
+narrative_ontology:cs_axiom('64047926-5f2f-4cde-b743-a5c552ed6fbd', foundational, economic_integration_primacy).
 narrative_ontology:cs_axiom_status(economic_integration_primacy, holdable).
-narrative_ontology:cs_axiom(integration_primary, secondary, state_welfare_boundaries_subordinate).
+narrative_ontology:cs_axiom('64047926-5f2f-4cde-b743-a5c552ed6fbd', secondary, state_welfare_boundaries_subordinate).
 narrative_ontology:cs_axiom_status(state_welfare_boundaries_subordinate, holdable).
-narrative_ontology:cs_reference_frame(integration_primary, single_market_with_mobility).
-narrative_ontology:cs_drift_state(integration_primary, post_2015_migration_crisis, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('64047926-5f2f-4cde-b743-a5c552ed6fbd', single_market_with_mobility).
+narrative_ontology:cs_drift_state('64047926-5f2f-4cde-b743-a5c552ed6fbd', post_2015_migration_crisis, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(integration_primary, mobile_workers).

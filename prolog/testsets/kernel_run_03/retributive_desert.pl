@@ -121,20 +121,22 @@ narrative_ontology:topic_domain(retributive_desert, "criminal_justice/political_
 domain_priors:requires_active_enforcement(retributive_desert).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(retributive_desert, formalized).
-narrative_ontology:cs_authority_grounding(retributive_desert, lineage).
-narrative_ontology:cs_interpretation_layer_present(retributive_desert).
+narrative_ontology:cs_story_uid(retributive_desert, '77e477dd-cc98-486f-8b7e-b64f57f26db7').
+narrative_ontology:cs_created_at('77e477dd-cc98-486f-8b7e-b64f57f26db7', '').
+narrative_ontology:cs_kernel_codification('77e477dd-cc98-486f-8b7e-b64f57f26db7', formalized).
+narrative_ontology:cs_authority_grounding('77e477dd-cc98-486f-8b7e-b64f57f26db7', lineage).
+narrative_ontology:cs_interpretation_layer_present('77e477dd-cc98-486f-8b7e-b64f57f26db7').
 narrative_ontology:cs_kernel_id(retributive_desert, state_killing_authority).
-narrative_ontology:cs_reading_relation(retributive_desert, deterrence_instrument, coexists_with).
-narrative_ontology:cs_reading_relation(retributive_desert, categorical_abolition, forecloses).
-narrative_ontology:cs_axiom(retributive_desert, foundational, murderers_forfeit_rights).
+narrative_ontology:cs_reading_relation('77e477dd-cc98-486f-8b7e-b64f57f26db7', deterrence_instrument, coexists_with).
+narrative_ontology:cs_reading_relation('77e477dd-cc98-486f-8b7e-b64f57f26db7', categorical_abolition, forecloses).
+narrative_ontology:cs_axiom('77e477dd-cc98-486f-8b7e-b64f57f26db7', foundational, murderers_forfeit_rights).
 narrative_ontology:cs_axiom_status(murderers_forfeit_rights, holdable).
-narrative_ontology:cs_axiom_grounding(retributive_desert, murderers_forfeit_rights, deontological).
-narrative_ontology:cs_axiom(retributive_desert, foundational, proportionality_equals_justice).
+narrative_ontology:cs_axiom_grounding('77e477dd-cc98-486f-8b7e-b64f57f26db7', murderers_forfeit_rights, deontological).
+narrative_ontology:cs_axiom('77e477dd-cc98-486f-8b7e-b64f57f26db7', foundational, proportionality_equals_justice).
 narrative_ontology:cs_axiom_status(proportionality_equals_justice, holdable).
-narrative_ontology:cs_axiom_grounding(retributive_desert, proportionality_equals_justice, deontological).
-narrative_ontology:cs_reference_frame(retributive_desert, proportional_retributive_justice).
-narrative_ontology:cs_drift_state(retributive_desert, contemporary_human_rights_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('77e477dd-cc98-486f-8b7e-b64f57f26db7', proportionality_equals_justice, deontological).
+narrative_ontology:cs_reference_frame('77e477dd-cc98-486f-8b7e-b64f57f26db7', proportional_retributive_justice).
+narrative_ontology:cs_drift_state('77e477dd-cc98-486f-8b7e-b64f57f26db7', contemporary_human_rights_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(retributive_desert, murdered_victim_vindication).

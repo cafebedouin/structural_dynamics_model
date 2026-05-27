@@ -116,20 +116,22 @@ narrative_ontology:topic_domain(literary_continuity_reading, "sociolinguistics/r
 domain_priors:requires_active_enforcement(literary_continuity_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(literary_continuity_reading, formalized).
-narrative_ontology:cs_authority_grounding(literary_continuity_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(literary_continuity_reading).
+narrative_ontology:cs_story_uid(literary_continuity_reading, '79950ad5-f2ed-436b-a52d-096ebcf33fa7').
+narrative_ontology:cs_created_at('79950ad5-f2ed-436b-a52d-096ebcf33fa7', '').
+narrative_ontology:cs_kernel_codification('79950ad5-f2ed-436b-a52d-096ebcf33fa7', formalized).
+narrative_ontology:cs_authority_grounding('79950ad5-f2ed-436b-a52d-096ebcf33fa7', lineage).
+narrative_ontology:cs_interpretation_layer_present('79950ad5-f2ed-436b-a52d-096ebcf33fa7').
 narrative_ontology:cs_kernel_id(literary_continuity_reading, living_language_status).
-narrative_ontology:cs_reading_relation(literary_continuity_reading, liturgical_preservation_reading, coexists_with).
-narrative_ontology:cs_reading_relation(literary_continuity_reading, native_generation_reading, coexists_with).
-narrative_ontology:cs_axiom(literary_continuity_reading, foundational, literary_production_defines_vitality).
+narrative_ontology:cs_reading_relation('79950ad5-f2ed-436b-a52d-096ebcf33fa7', liturgical_preservation_reading, coexists_with).
+narrative_ontology:cs_reading_relation('79950ad5-f2ed-436b-a52d-096ebcf33fa7', native_generation_reading, coexists_with).
+narrative_ontology:cs_axiom('79950ad5-f2ed-436b-a52d-096ebcf33fa7', foundational, literary_production_defines_vitality).
 narrative_ontology:cs_axiom_status(literary_production_defines_vitality, holdable).
-narrative_ontology:cs_axiom_grounding(literary_continuity_reading, literary_production_defines_vitality, empirically_contingent).
-narrative_ontology:cs_axiom(literary_continuity_reading, foundational, secular_intellectual_authority_primary).
+narrative_ontology:cs_axiom_grounding('79950ad5-f2ed-436b-a52d-096ebcf33fa7', literary_production_defines_vitality, empirically_contingent).
+narrative_ontology:cs_axiom('79950ad5-f2ed-436b-a52d-096ebcf33fa7', foundational, secular_intellectual_authority_primary).
 narrative_ontology:cs_axiom_status(secular_intellectual_authority_primary, holdable).
-narrative_ontology:cs_axiom_grounding(literary_continuity_reading, secular_intellectual_authority_primary, conventional).
-narrative_ontology:cs_reference_frame(literary_continuity_reading, haskalah_hebrew_literary_production).
-narrative_ontology:cs_drift_state(literary_continuity_reading, contemporary_digital_vernacular, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('79950ad5-f2ed-436b-a52d-096ebcf33fa7', secular_intellectual_authority_primary, conventional).
+narrative_ontology:cs_reference_frame('79950ad5-f2ed-436b-a52d-096ebcf33fa7', haskalah_hebrew_literary_production).
+narrative_ontology:cs_drift_state('79950ad5-f2ed-436b-a52d-096ebcf33fa7', contemporary_digital_vernacular, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(literary_continuity_reading, maskilim_intellectuals).

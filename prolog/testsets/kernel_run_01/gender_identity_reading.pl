@@ -121,17 +121,19 @@ narrative_ontology:topic_domain(gender_identity_reading, "political_philosophy/b
 domain_priors:requires_active_enforcement(gender_identity_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(gender_identity_reading, formalized).
-narrative_ontology:cs_authority_grounding(gender_identity_reading, lineage).
+narrative_ontology:cs_story_uid(gender_identity_reading, '60c73c93-7db4-4582-bb6d-729f3f2271c7').
+narrative_ontology:cs_created_at('60c73c93-7db4-4582-bb6d-729f3f2271c7', '').
+narrative_ontology:cs_kernel_codification('60c73c93-7db4-4582-bb6d-729f3f2271c7', formalized).
+narrative_ontology:cs_authority_grounding('60c73c93-7db4-4582-bb6d-729f3f2271c7', lineage).
 narrative_ontology:cs_kernel_id(gender_identity_reading, woman_female_category).
-narrative_ontology:cs_reading_relation(gender_identity_reading, sex_biology_reading, coexists_with).
-narrative_ontology:cs_reading_relation(gender_identity_reading, hybrid_contextual_reading, influences).
-narrative_ontology:cs_axiom(gender_identity_reading, foundational, gender_identity_ontologically_primary).
+narrative_ontology:cs_reading_relation('60c73c93-7db4-4582-bb6d-729f3f2271c7', sex_biology_reading, coexists_with).
+narrative_ontology:cs_reading_relation('60c73c93-7db4-4582-bb6d-729f3f2271c7', hybrid_contextual_reading, influences).
+narrative_ontology:cs_axiom('60c73c93-7db4-4582-bb6d-729f3f2271c7', foundational, gender_identity_ontologically_primary).
 narrative_ontology:cs_axiom_status(gender_identity_ontologically_primary, holdable).
-narrative_ontology:cs_axiom(gender_identity_reading, foundational, self_identification_sufficient_for_legal_category).
+narrative_ontology:cs_axiom('60c73c93-7db4-4582-bb6d-729f3f2271c7', foundational, self_identification_sufficient_for_legal_category).
 narrative_ontology:cs_axiom_status(self_identification_sufficient_for_legal_category, holdable).
-narrative_ontology:cs_reference_frame(gender_identity_reading, gender_identity_legal_recognition).
-narrative_ontology:cs_drift_state(gender_identity_reading, post_implementation_institutional_conflict, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_reference_frame('60c73c93-7db4-4582-bb6d-729f3f2271c7', gender_identity_legal_recognition).
+narrative_ontology:cs_drift_state('60c73c93-7db4-4582-bb6d-729f3f2271c7', post_implementation_institutional_conflict, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(gender_identity_reading, transgender_individuals_seeking_identity_protection).

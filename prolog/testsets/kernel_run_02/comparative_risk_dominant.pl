@@ -120,20 +120,22 @@ narrative_ontology:topic_domain(comparative_risk_dominant, "energy_policy/risk_a
 domain_priors:requires_active_enforcement(comparative_risk_dominant).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(comparative_risk_dominant, distributed).
-narrative_ontology:cs_authority_grounding(comparative_risk_dominant, extraction).
-narrative_ontology:cs_interpretation_layer_present(comparative_risk_dominant).
+narrative_ontology:cs_story_uid(comparative_risk_dominant, 'c31ddf57-7225-4aec-9213-b8fdc0bc88f3').
+narrative_ontology:cs_created_at('c31ddf57-7225-4aec-9213-b8fdc0bc88f3', '').
+narrative_ontology:cs_kernel_codification('c31ddf57-7225-4aec-9213-b8fdc0bc88f3', distributed).
+narrative_ontology:cs_authority_grounding('c31ddf57-7225-4aec-9213-b8fdc0bc88f3', extraction).
+narrative_ontology:cs_interpretation_layer_present('c31ddf57-7225-4aec-9213-b8fdc0bc88f3').
 narrative_ontology:cs_kernel_id(comparative_risk_dominant, acceptable_risk_for_energy).
-narrative_ontology:cs_reading_relation(comparative_risk_dominant, catastrophic_tail_dominant, coexists_with).
-narrative_ontology:cs_reading_relation(comparative_risk_dominant, expected_value_dominant, coexists_with).
-narrative_ontology:cs_axiom(comparative_risk_dominant, foundational, temporal_urgency_over_intergenerational_equity).
+narrative_ontology:cs_reading_relation('c31ddf57-7225-4aec-9213-b8fdc0bc88f3', catastrophic_tail_dominant, coexists_with).
+narrative_ontology:cs_reading_relation('c31ddf57-7225-4aec-9213-b8fdc0bc88f3', expected_value_dominant, coexists_with).
+narrative_ontology:cs_axiom('c31ddf57-7225-4aec-9213-b8fdc0bc88f3', foundational, temporal_urgency_over_intergenerational_equity).
 narrative_ontology:cs_axiom_status(temporal_urgency_over_intergenerational_equity, holdable).
-narrative_ontology:cs_axiom_grounding(comparative_risk_dominant, temporal_urgency_over_intergenerational_equity, empirically_contingent).
-narrative_ontology:cs_axiom(comparative_risk_dominant, foundational, comparative_risk_suffices_for_acceptability).
+narrative_ontology:cs_axiom_grounding('c31ddf57-7225-4aec-9213-b8fdc0bc88f3', temporal_urgency_over_intergenerational_equity, empirically_contingent).
+narrative_ontology:cs_axiom('c31ddf57-7225-4aec-9213-b8fdc0bc88f3', foundational, comparative_risk_suffices_for_acceptability).
 narrative_ontology:cs_axiom_status(comparative_risk_suffices_for_acceptability, holdable).
-narrative_ontology:cs_axiom_grounding(comparative_risk_dominant, comparative_risk_suffices_for_acceptability, instrumental).
-narrative_ontology:cs_reference_frame(comparative_risk_dominant, energy_decarbonization_imperative).
-narrative_ontology:cs_drift_state(comparative_risk_dominant, renewable_parity_emergence, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('c31ddf57-7225-4aec-9213-b8fdc0bc88f3', comparative_risk_suffices_for_acceptability, instrumental).
+narrative_ontology:cs_reference_frame('c31ddf57-7225-4aec-9213-b8fdc0bc88f3', energy_decarbonization_imperative).
+narrative_ontology:cs_drift_state('c31ddf57-7225-4aec-9213-b8fdc0bc88f3', renewable_parity_emergence, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(comparative_risk_dominant, nuclear_energy_industry).

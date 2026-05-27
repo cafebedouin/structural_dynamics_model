@@ -116,20 +116,22 @@ narrative_ontology:topic_domain(proportionality_reading, "public_health_ethics/c
 domain_priors:requires_active_enforcement(proportionality_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(proportionality_reading, formalized).
-narrative_ontology:cs_authority_grounding(proportionality_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(proportionality_reading).
+narrative_ontology:cs_story_uid(proportionality_reading, 'b6a71ff7-2afc-4b3a-8051-a19d9e9f63c1').
+narrative_ontology:cs_created_at('b6a71ff7-2afc-4b3a-8051-a19d9e9f63c1', '').
+narrative_ontology:cs_kernel_codification('b6a71ff7-2afc-4b3a-8051-a19d9e9f63c1', formalized).
+narrative_ontology:cs_authority_grounding('b6a71ff7-2afc-4b3a-8051-a19d9e9f63c1', lineage).
+narrative_ontology:cs_interpretation_layer_present('b6a71ff7-2afc-4b3a-8051-a19d9e9f63c1').
 narrative_ontology:cs_kernel_id(proportionality_reading, vaccine_mandate_balance).
-narrative_ontology:cs_reading_relation(proportionality_reading, public_health_primary, coexists_with).
-narrative_ontology:cs_reading_relation(proportionality_reading, bodily_autonomy_primary, coexists_with).
-narrative_ontology:cs_axiom(proportionality_reading, foundational, mandate_legitimacy_context_contingent).
+narrative_ontology:cs_reading_relation('b6a71ff7-2afc-4b3a-8051-a19d9e9f63c1', public_health_primary, coexists_with).
+narrative_ontology:cs_reading_relation('b6a71ff7-2afc-4b3a-8051-a19d9e9f63c1', bodily_autonomy_primary, coexists_with).
+narrative_ontology:cs_axiom('b6a71ff7-2afc-4b3a-8051-a19d9e9f63c1', foundational, mandate_legitimacy_context_contingent).
 narrative_ontology:cs_axiom_status(mandate_legitimacy_context_contingent, holdable).
-narrative_ontology:cs_axiom_grounding(proportionality_reading, mandate_legitimacy_context_contingent, deontological).
-narrative_ontology:cs_axiom(proportionality_reading, secondary, proportionality_thresholds_measurable).
+narrative_ontology:cs_axiom_grounding('b6a71ff7-2afc-4b3a-8051-a19d9e9f63c1', mandate_legitimacy_context_contingent, deontological).
+narrative_ontology:cs_axiom('b6a71ff7-2afc-4b3a-8051-a19d9e9f63c1', secondary, proportionality_thresholds_measurable).
 narrative_ontology:cs_axiom_status(proportionality_thresholds_measurable, holdable).
-narrative_ontology:cs_axiom_grounding(proportionality_reading, proportionality_thresholds_measurable, empirically_contingent).
-narrative_ontology:cs_reference_frame(proportionality_reading, balanced_individual_collective_interest).
-narrative_ontology:cs_drift_state(proportionality_reading, contemporary_post_pandemic, gap(axiom_overriding, substantial, true)).
+narrative_ontology:cs_axiom_grounding('b6a71ff7-2afc-4b3a-8051-a19d9e9f63c1', proportionality_thresholds_measurable, empirically_contingent).
+narrative_ontology:cs_reference_frame('b6a71ff7-2afc-4b3a-8051-a19d9e9f63c1', balanced_individual_collective_interest).
+narrative_ontology:cs_drift_state('b6a71ff7-2afc-4b3a-8051-a19d9e9f63c1', contemporary_post_pandemic, gap(axiom_overriding, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(proportionality_reading, disease_vulnerable_populations).

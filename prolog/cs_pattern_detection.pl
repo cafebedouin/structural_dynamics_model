@@ -61,20 +61,25 @@
 
 %% cs_kernel_codification(+C, -Value)
 %  Reads the kernel_codification CS field for constraint C.
+%  Joins through cs_story_uid/2: base facts are UID-keyed after Phase A re-key.
 cs_kernel_codification(C, Value) :-
-    narrative_ontology:cs_kernel_codification(C, Value).
+    narrative_ontology:cs_story_uid(C, UID),
+    narrative_ontology:cs_kernel_codification(UID, Value).
 
 %% cs_authority_grounding(+C, -Value)
 %  Reads the authority_grounding CS field for constraint C.
+%  Joins through cs_story_uid/2: base facts are UID-keyed after Phase A re-key.
 cs_authority_grounding(C, Value) :-
-    narrative_ontology:cs_authority_grounding(C, Value).
+    narrative_ontology:cs_story_uid(C, UID),
+    narrative_ontology:cs_authority_grounding(UID, Value).
 
 %% cs_interp_layer(+C)
 %  Succeeds iff interpretation_layer_present is declared true for C.
 %  v5 licensing condition: AG=lineage (any KC) OR (KC=formalized AND AG=extraction).
 %  NOTE: this predicate enforces no KC/AG constraint; licensing is structural-by-clause-call.
 cs_interp_layer(C) :-
-    narrative_ontology:cs_interpretation_layer_present(C).
+    narrative_ontology:cs_story_uid(C, UID),
+    narrative_ontology:cs_interpretation_layer_present(UID).
 
 /* ================================================================
    MAIN PREDICATE: cs_has_fields/1
@@ -287,7 +292,7 @@ cs_extraction_signature(constructed_high_extraction).
 %  Uses narrative_ontology:cs_kernel_codification/2 for enumeration — cs_has_fields/1
 %  uses a cut that prevents backtracking when C is unbound.
 cs_authority_masking(C, Sig, AG) :-
-    narrative_ontology:cs_kernel_codification(C, _),
+    cs_kernel_codification(C, _),
     signature_detection:constraint_signature(C, Sig),
     cs_extraction_signature(Sig),
     cs_authority_grounding(C, AG),
@@ -299,7 +304,7 @@ cs_authority_masking(C, Sig, AG) :-
 %  The false pattern is structural, not accidental — the authority with
 %  extraction stakes generates the cover story.
 cs_cover_story_active(C, Verdict) :-
-    narrative_ontology:cs_kernel_codification(C, _),
+    cs_kernel_codification(C, _),
     cs_verdict(C, Verdict),
     cs_authority_grounding(C, extraction),
     signature_detection:constraint_signature(C, Sig),
@@ -315,12 +320,13 @@ cs_cover_story_active(C, Verdict) :-
 %  not domination relationships, so the displaced-beneficiary signal does not
 %  apply. Bare affects_constraint/2 edges are intentionally excluded.
 cs_displaced_beneficiary(C) :-
-    narrative_ontology:cs_kernel_codification(C, _),
+    cs_kernel_codification(C, _),
     cs_authority_grounding(C, AG),
     memberchk(AG, [self_enforcing, lineage, practice, expertise, diffuse_epistemic]),
     signature_detection:constraint_signature(C, Sig),
     \+ memberchk(Sig, [natural_law, coupling_invariant_rope, coordination_scaffold]),
-    narrative_ontology:cs_reading_relation(C, Sibling, forecloses),
+    narrative_ontology:cs_story_uid(C, UID),
+    narrative_ontology:cs_reading_relation(UID, Sibling, forecloses),
     cs_has_fields(Sibling),
     cs_authority_grounding(Sibling, extraction).
 
@@ -367,7 +373,7 @@ cs_displaced_beneficiary(C) :-
 %  the computed signature. Enumerates via cs_kernel_codification/2 directly
 %  to avoid the cut in cs_has_fields/1.
 cs_grounding_mismatch(C, AG, Sig) :-
-    narrative_ontology:cs_kernel_codification(C, _),
+    cs_kernel_codification(C, _),
     cs_authority_grounding(C, AG),
     signature_detection:constraint_signature(C, Sig),
     cs_grounding_contradiction(AG, Sig).
@@ -399,11 +405,12 @@ cs_grounding_contradiction(extraction, coordination_scaffold).
    (which computes t2 regardless of acknowledgment status).
    ================================================================ */
 
-%% cs_drift_unacknowledged(+C, -Gap)
-%  Fires when C has a cs_drift_state with a non-trivial gap (not stable,
+%% cs_drift_unacknowledged(+UID, -Gap)
+%  Fires when UID has a cs_drift_state with a non-trivial gap (not stable,
 %  not minor) that the authority structure has not acknowledged.
-cs_drift_unacknowledged(C, Gap) :-
-    narrative_ontology:cs_drift_state(C, _, Gap),
+%  UID is the story_uid surrogate (UUIDv4).
+cs_drift_unacknowledged(UID, Gap) :-
+    narrative_ontology:cs_drift_state(UID, _, Gap),
     Gap = gap(Dir, Mag, false),
     Dir \= stable,
     Mag \= minor.

@@ -118,20 +118,22 @@ narrative_ontology:topic_domain(diversity_reading, "constitutional_law/civil_rig
 domain_priors:requires_active_enforcement(diversity_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(diversity_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(diversity_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(diversity_reading).
+narrative_ontology:cs_story_uid(diversity_reading, '616ce549-bdf3-494a-b0e3-cadc3b47f08b').
+narrative_ontology:cs_created_at('616ce549-bdf3-494a-b0e3-cadc3b47f08b', '').
+narrative_ontology:cs_kernel_codification('616ce549-bdf3-494a-b0e3-cadc3b47f08b', fixed_text).
+narrative_ontology:cs_authority_grounding('616ce549-bdf3-494a-b0e3-cadc3b47f08b', lineage).
+narrative_ontology:cs_interpretation_layer_present('616ce549-bdf3-494a-b0e3-cadc3b47f08b').
 narrative_ontology:cs_kernel_id(diversity_reading, equal_protection_clause).
-narrative_ontology:cs_reading_relation(diversity_reading, colorblind_reading, forecloses).
-narrative_ontology:cs_reading_relation(diversity_reading, remedial_reading, coexists_with).
-narrative_ontology:cs_axiom(diversity_reading, foundational, race_consciousness_narrowly_permissible).
+narrative_ontology:cs_reading_relation('616ce549-bdf3-494a-b0e3-cadc3b47f08b', colorblind_reading, forecloses).
+narrative_ontology:cs_reading_relation('616ce549-bdf3-494a-b0e3-cadc3b47f08b', remedial_reading, coexists_with).
+narrative_ontology:cs_axiom('616ce549-bdf3-494a-b0e3-cadc3b47f08b', foundational, race_consciousness_narrowly_permissible).
 narrative_ontology:cs_axiom_status(race_consciousness_narrowly_permissible, holdable).
-narrative_ontology:cs_axiom_grounding(diversity_reading, race_consciousness_narrowly_permissible, deontological).
-narrative_ontology:cs_axiom(diversity_reading, secondary, institutional_educational_autonomy_paramount).
+narrative_ontology:cs_axiom_grounding('616ce549-bdf3-494a-b0e3-cadc3b47f08b', race_consciousness_narrowly_permissible, deontological).
+narrative_ontology:cs_axiom('616ce549-bdf3-494a-b0e3-cadc3b47f08b', secondary, institutional_educational_autonomy_paramount).
 narrative_ontology:cs_axiom_status(institutional_educational_autonomy_paramount, overridden).
-narrative_ontology:cs_axiom_grounding(diversity_reading, institutional_educational_autonomy_paramount, conventional).
-narrative_ontology:cs_reference_frame(diversity_reading, narrow_tailoring_framework).
-narrative_ontology:cs_drift_state(diversity_reading, post_sffa_era, gap(authority_erosion, substantial, true)).
+narrative_ontology:cs_axiom_grounding('616ce549-bdf3-494a-b0e3-cadc3b47f08b', institutional_educational_autonomy_paramount, conventional).
+narrative_ontology:cs_reference_frame('616ce549-bdf3-494a-b0e3-cadc3b47f08b', narrow_tailoring_framework).
+narrative_ontology:cs_drift_state('616ce549-bdf3-494a-b0e3-cadc3b47f08b', post_sffa_era, gap(authority_erosion, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(diversity_reading, universities_institutional_autonomy).

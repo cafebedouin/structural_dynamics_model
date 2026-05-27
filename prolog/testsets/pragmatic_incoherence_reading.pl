@@ -115,8 +115,10 @@ narrative_ontology:topic_domain(pragmatic_incoherence_reading, "religious_studie
 domain_priors:requires_active_enforcement(pragmatic_incoherence_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(pragmatic_incoherence_reading, distributed).
-narrative_ontology:cs_authority_grounding(pragmatic_incoherence_reading, practice).
+narrative_ontology:cs_story_uid(pragmatic_incoherence_reading, '1a059c1e-0e20-422a-b52c-b4d530a6a99e').
+narrative_ontology:cs_created_at('1a059c1e-0e20-422a-b52c-b4d530a6a99e', '').
+narrative_ontology:cs_kernel_codification('1a059c1e-0e20-422a-b52c-b4d530a6a99e', distributed).
+narrative_ontology:cs_authority_grounding('1a059c1e-0e20-422a-b52c-b4d530a6a99e', practice).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(pragmatic_incoherence_reading, priestly_elites).

@@ -117,18 +117,20 @@ narrative_ontology:human_readable(practice_decline_reading, "Honor Code Substrat
 narrative_ontology:topic_domain(practice_decline_reading, "historical_sociology/legal_history/cultural_anthropology").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(practice_decline_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(practice_decline_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(practice_decline_reading).
+narrative_ontology:cs_story_uid(practice_decline_reading, '5d6cd0c4-b517-432e-ad67-4c2d9394ac42').
+narrative_ontology:cs_created_at('5d6cd0c4-b517-432e-ad67-4c2d9394ac42', '').
+narrative_ontology:cs_kernel_codification('5d6cd0c4-b517-432e-ad67-4c2d9394ac42', fixed_text).
+narrative_ontology:cs_authority_grounding('5d6cd0c4-b517-432e-ad67-4c2d9394ac42', lineage).
+narrative_ontology:cs_interpretation_layer_present('5d6cd0c4-b517-432e-ad67-4c2d9394ac42').
 narrative_ontology:cs_kernel_id(practice_decline_reading, honor_satisfaction_substrate).
-narrative_ontology:cs_reading_relation(practice_decline_reading, cultural_contraction_reading, coexists_with).
-narrative_ontology:cs_reading_relation(practice_decline_reading, composite_overdetermined_reading, influences).
-narrative_ontology:cs_axiom(practice_decline_reading, foundational, honor_substrate_persistence_under_exogenous_pressure).
+narrative_ontology:cs_reading_relation('5d6cd0c4-b517-432e-ad67-4c2d9394ac42', cultural_contraction_reading, coexists_with).
+narrative_ontology:cs_reading_relation('5d6cd0c4-b517-432e-ad67-4c2d9394ac42', composite_overdetermined_reading, influences).
+narrative_ontology:cs_axiom('5d6cd0c4-b517-432e-ad67-4c2d9394ac42', foundational, honor_substrate_persistence_under_exogenous_pressure).
 narrative_ontology:cs_axiom_status(honor_substrate_persistence_under_exogenous_pressure, holdable).
-narrative_ontology:cs_axiom(practice_decline_reading, foundational, legal_enforcement_as_primary_decline_driver).
+narrative_ontology:cs_axiom('5d6cd0c4-b517-432e-ad67-4c2d9394ac42', foundational, legal_enforcement_as_primary_decline_driver).
 narrative_ontology:cs_axiom_status(legal_enforcement_as_primary_decline_driver, holdable).
-narrative_ontology:cs_reference_frame(practice_decline_reading, honor_code_functional_in_dueling_practice).
-narrative_ontology:cs_drift_state(practice_decline_reading, post_legal_prohibition_era, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_reference_frame('5d6cd0c4-b517-432e-ad67-4c2d9394ac42', honor_code_functional_in_dueling_practice).
+narrative_ontology:cs_drift_state('5d6cd0c4-b517-432e-ad67-4c2d9394ac42', post_legal_prohibition_era, gap(practice_drift, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(practice_decline_reading, legal_state_authority).

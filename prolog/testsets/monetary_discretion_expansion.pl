@@ -122,9 +122,11 @@ narrative_ontology:topic_domain(monetary_discretion_expansion, "monetary_economi
 domain_priors:requires_active_enforcement(monetary_discretion_expansion).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(monetary_discretion_expansion, formalized).
-narrative_ontology:cs_authority_grounding(monetary_discretion_expansion, extraction).
-narrative_ontology:cs_interpretation_layer_present(monetary_discretion_expansion).
+narrative_ontology:cs_story_uid(monetary_discretion_expansion, 'c4088439-f689-4d2a-8b75-83a93f53cd19').
+narrative_ontology:cs_created_at('c4088439-f689-4d2a-8b75-83a93f53cd19', '').
+narrative_ontology:cs_kernel_codification('c4088439-f689-4d2a-8b75-83a93f53cd19', formalized).
+narrative_ontology:cs_authority_grounding('c4088439-f689-4d2a-8b75-83a93f53cd19', extraction).
+narrative_ontology:cs_interpretation_layer_present('c4088439-f689-4d2a-8b75-83a93f53cd19').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(monetary_discretion_expansion, monetary_authorities).

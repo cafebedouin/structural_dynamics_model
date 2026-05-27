@@ -120,17 +120,19 @@ narrative_ontology:topic_domain(convergence_synthesis, "history_of_technology/re
 domain_priors:requires_active_enforcement(convergence_synthesis).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(convergence_synthesis, distributed).
-narrative_ontology:cs_authority_grounding(convergence_synthesis, distributed).
+narrative_ontology:cs_story_uid(convergence_synthesis, 'ac5b892c-6da9-4bac-b836-124e69549bbb').
+narrative_ontology:cs_created_at('ac5b892c-6da9-4bac-b836-124e69549bbb', '').
+narrative_ontology:cs_kernel_codification('ac5b892c-6da9-4bac-b836-124e69549bbb', distributed).
+narrative_ontology:cs_authority_grounding('ac5b892c-6da9-4bac-b836-124e69549bbb', distributed).
 narrative_ontology:cs_kernel_id(convergence_synthesis, press_reformation_causality).
-narrative_ontology:cs_reading_relation(convergence_synthesis, technological_determinism, coexists_with).
-narrative_ontology:cs_reading_relation(convergence_synthesis, strategic_deployment, influences).
-narrative_ontology:cs_axiom(convergence_synthesis, foundational, feedback_mechanism_causal_necessity).
+narrative_ontology:cs_reading_relation('ac5b892c-6da9-4bac-b836-124e69549bbb', technological_determinism, coexists_with).
+narrative_ontology:cs_reading_relation('ac5b892c-6da9-4bac-b836-124e69549bbb', strategic_deployment, influences).
+narrative_ontology:cs_axiom('ac5b892c-6da9-4bac-b836-124e69549bbb', foundational, feedback_mechanism_causal_necessity).
 narrative_ontology:cs_axiom_status(feedback_mechanism_causal_necessity, holdable).
-narrative_ontology:cs_axiom_grounding(convergence_synthesis, feedback_mechanism_causal_necessity, instrumental).
-narrative_ontology:cs_axiom(convergence_synthesis, foundational, contingency_of_temporal_convergence).
+narrative_ontology:cs_axiom_grounding('ac5b892c-6da9-4bac-b836-124e69549bbb', feedback_mechanism_causal_necessity, instrumental).
+narrative_ontology:cs_axiom('ac5b892c-6da9-4bac-b836-124e69549bbb', foundational, contingency_of_temporal_convergence).
 narrative_ontology:cs_axiom_status(contingency_of_temporal_convergence, holdable).
-narrative_ontology:cs_axiom_grounding(convergence_synthesis, contingency_of_temporal_convergence, empirically_contingent).
+narrative_ontology:cs_axiom_grounding('ac5b892c-6da9-4bac-b836-124e69549bbb', contingency_of_temporal_convergence, empirically_contingent).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(convergence_synthesis, reformed_clergy).

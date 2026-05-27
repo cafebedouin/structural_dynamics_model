@@ -115,9 +115,11 @@ narrative_ontology:topic_domain(partition_reading, "political_theory/internation
 domain_priors:requires_active_enforcement(partition_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(partition_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(partition_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(partition_reading).
+narrative_ontology:cs_story_uid(partition_reading, 'e24dbdb3-cfa2-4b2c-bd58-abdd4c1e215a').
+narrative_ontology:cs_created_at('e24dbdb3-cfa2-4b2c-bd58-abdd4c1e215a', '').
+narrative_ontology:cs_kernel_codification('e24dbdb3-cfa2-4b2c-bd58-abdd4c1e215a', fixed_text).
+narrative_ontology:cs_authority_grounding('e24dbdb3-cfa2-4b2c-bd58-abdd4c1e215a', lineage).
+narrative_ontology:cs_interpretation_layer_present('e24dbdb3-cfa2-4b2c-bd58-abdd4c1e215a').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(partition_reading, partition_framework_architects).

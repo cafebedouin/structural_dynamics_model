@@ -130,19 +130,21 @@ narrative_ontology:topic_domain(existential_risk_reading, "ai_governance/technol
 domain_priors:requires_active_enforcement(existential_risk_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(existential_risk_reading, distributed).
-narrative_ontology:cs_authority_grounding(existential_risk_reading, extraction).
+narrative_ontology:cs_story_uid(existential_risk_reading, '073fc4c5-25c0-416b-ac2a-0ebac5b316a2').
+narrative_ontology:cs_created_at('073fc4c5-25c0-416b-ac2a-0ebac5b316a2', '').
+narrative_ontology:cs_kernel_codification('073fc4c5-25c0-416b-ac2a-0ebac5b316a2', distributed).
+narrative_ontology:cs_authority_grounding('073fc4c5-25c0-416b-ac2a-0ebac5b316a2', extraction).
 narrative_ontology:cs_kernel_id(existential_risk_reading, ai_risk_governance_priority).
-narrative_ontology:cs_reading_relation(existential_risk_reading, near_term_harms_reading, coexists_with).
-narrative_ontology:cs_reading_relation(existential_risk_reading, bridge_reading, influences).
-narrative_ontology:cs_axiom(existential_risk_reading, foundational, superintelligent_misalignment_civilization_threat).
+narrative_ontology:cs_reading_relation('073fc4c5-25c0-416b-ac2a-0ebac5b316a2', near_term_harms_reading, coexists_with).
+narrative_ontology:cs_reading_relation('073fc4c5-25c0-416b-ac2a-0ebac5b316a2', bridge_reading, influences).
+narrative_ontology:cs_axiom('073fc4c5-25c0-416b-ac2a-0ebac5b316a2', foundational, superintelligent_misalignment_civilization_threat).
 narrative_ontology:cs_axiom_status(superintelligent_misalignment_civilization_threat, holdable).
-narrative_ontology:cs_axiom_grounding(existential_risk_reading, superintelligent_misalignment_civilization_threat, empirically_contingent).
-narrative_ontology:cs_axiom(existential_risk_reading, foundational, xrisk_research_institutional_alignment).
+narrative_ontology:cs_axiom_grounding('073fc4c5-25c0-416b-ac2a-0ebac5b316a2', superintelligent_misalignment_civilization_threat, empirically_contingent).
+narrative_ontology:cs_axiom('073fc4c5-25c0-416b-ac2a-0ebac5b316a2', foundational, xrisk_research_institutional_alignment).
 narrative_ontology:cs_axiom_status(xrisk_research_institutional_alignment, holdable).
-narrative_ontology:cs_axiom_grounding(existential_risk_reading, xrisk_research_institutional_alignment, instrumental).
-narrative_ontology:cs_reference_frame(existential_risk_reading, superintelligence_misalignment_prevention).
-narrative_ontology:cs_drift_state(existential_risk_reading, contemporary_institutional_expansion, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('073fc4c5-25c0-416b-ac2a-0ebac5b316a2', xrisk_research_institutional_alignment, instrumental).
+narrative_ontology:cs_reference_frame('073fc4c5-25c0-416b-ac2a-0ebac5b316a2', superintelligence_misalignment_prevention).
+narrative_ontology:cs_drift_state('073fc4c5-25c0-416b-ac2a-0ebac5b316a2', contemporary_institutional_expansion, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(existential_risk_reading, xrisk_research_institutions).

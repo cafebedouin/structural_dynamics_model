@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(study_fulfills_sacrifice_commandment, performance_requires_temple).
 narrative_ontology:cs_axiom_contradiction(performance_requires_temple, study_fulfills_sacrifice_commandment).
+narrative_ontology:cs_story_uid(sacrifice_commandment_contradictions, '09e0dc6f-bfdc-458d-8c4b-d1e180c7b5c4').
+narrative_ontology:cs_created_at('09e0dc6f-bfdc-458d-8c4b-d1e180c7b5c4', '').

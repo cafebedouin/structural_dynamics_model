@@ -120,18 +120,20 @@ narrative_ontology:topic_domain(institutional_pluralism_equilibrium, "legal_phil
 domain_priors:requires_active_enforcement(institutional_pluralism_equilibrium).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(institutional_pluralism_equilibrium, fixed_text).
-narrative_ontology:cs_authority_grounding(institutional_pluralism_equilibrium, lineage).
-narrative_ontology:cs_interpretation_layer_present(institutional_pluralism_equilibrium).
+narrative_ontology:cs_story_uid(institutional_pluralism_equilibrium, '076fedf1-885b-40b1-bff5-7f008fb435bb').
+narrative_ontology:cs_created_at('076fedf1-885b-40b1-bff5-7f008fb435bb', '').
+narrative_ontology:cs_kernel_codification('076fedf1-885b-40b1-bff5-7f008fb435bb', fixed_text).
+narrative_ontology:cs_authority_grounding('076fedf1-885b-40b1-bff5-7f008fb435bb', lineage).
+narrative_ontology:cs_interpretation_layer_present('076fedf1-885b-40b1-bff5-7f008fb435bb').
 narrative_ontology:cs_kernel_id(institutional_pluralism_equilibrium, jurisprudential_method_kernel).
-narrative_ontology:cs_axiom(institutional_pluralism_equilibrium, foundational, ijtihaad_methodologically_closed).
+narrative_ontology:cs_axiom('076fedf1-885b-40b1-bff5-7f008fb435bb', foundational, ijtihaad_methodologically_closed).
 narrative_ontology:cs_axiom_status(ijtihaad_methodologically_closed, holdable).
-narrative_ontology:cs_axiom_grounding(institutional_pluralism_equilibrium, ijtihaad_methodologically_closed, conventional).
-narrative_ontology:cs_axiom(institutional_pluralism_equilibrium, foundational, madhab_equality_methodologically_binding).
+narrative_ontology:cs_axiom_grounding('076fedf1-885b-40b1-bff5-7f008fb435bb', ijtihaad_methodologically_closed, conventional).
+narrative_ontology:cs_axiom('076fedf1-885b-40b1-bff5-7f008fb435bb', foundational, madhab_equality_methodologically_binding).
 narrative_ontology:cs_axiom_status(madhab_equality_methodologically_binding, holdable).
-narrative_ontology:cs_axiom_grounding(institutional_pluralism_equilibrium, madhab_equality_methodologically_binding, conventional).
-narrative_ontology:cs_reference_frame(institutional_pluralism_equilibrium, madhab_methodological_pluralism).
-narrative_ontology:cs_drift_state(institutional_pluralism_equilibrium, contemporary_nation_state_legal_systems, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('076fedf1-885b-40b1-bff5-7f008fb435bb', madhab_equality_methodologically_binding, conventional).
+narrative_ontology:cs_reference_frame('076fedf1-885b-40b1-bff5-7f008fb435bb', madhab_methodological_pluralism).
+narrative_ontology:cs_drift_state('076fedf1-885b-40b1-bff5-7f008fb435bb', contemporary_nation_state_legal_systems, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(institutional_pluralism_equilibrium, madhab_institutional_frameworks).

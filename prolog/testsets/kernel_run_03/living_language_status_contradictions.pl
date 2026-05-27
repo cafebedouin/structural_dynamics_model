@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(interpretive_authorization, native_speaker_daily_life_requirement).
 narrative_ontology:cs_axiom_contradiction(native_speaker_daily_life_requirement, interpretive_authorization).
+narrative_ontology:cs_story_uid(living_language_status_contradictions, '121a8887-081d-4cd3-b592-611698bca4ee').
+narrative_ontology:cs_created_at('121a8887-081d-4cd3-b592-611698bca4ee', '').

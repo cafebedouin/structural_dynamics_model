@@ -124,20 +124,22 @@ narrative_ontology:topic_domain(public_health_primary, "public_health_ethics/con
 domain_priors:requires_active_enforcement(public_health_primary).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(public_health_primary, formalized).
-narrative_ontology:cs_authority_grounding(public_health_primary, lineage).
-narrative_ontology:cs_interpretation_layer_present(public_health_primary).
+narrative_ontology:cs_story_uid(public_health_primary, '47358252-490b-43bc-b3fc-e982a76a2dcd').
+narrative_ontology:cs_created_at('47358252-490b-43bc-b3fc-e982a76a2dcd', '').
+narrative_ontology:cs_kernel_codification('47358252-490b-43bc-b3fc-e982a76a2dcd', formalized).
+narrative_ontology:cs_authority_grounding('47358252-490b-43bc-b3fc-e982a76a2dcd', lineage).
+narrative_ontology:cs_interpretation_layer_present('47358252-490b-43bc-b3fc-e982a76a2dcd').
 narrative_ontology:cs_kernel_id(public_health_primary, vaccine_mandate_balance).
-narrative_ontology:cs_reading_relation(public_health_primary, bodily_autonomy_primary, coexists_with).
-narrative_ontology:cs_reading_relation(public_health_primary, proportionality_reading, influences).
-narrative_ontology:cs_axiom(public_health_primary, foundational, public_health_necessity_supersedes_consent).
+narrative_ontology:cs_reading_relation('47358252-490b-43bc-b3fc-e982a76a2dcd', bodily_autonomy_primary, coexists_with).
+narrative_ontology:cs_reading_relation('47358252-490b-43bc-b3fc-e982a76a2dcd', proportionality_reading, influences).
+narrative_ontology:cs_axiom('47358252-490b-43bc-b3fc-e982a76a2dcd', foundational, public_health_necessity_supersedes_consent).
 narrative_ontology:cs_axiom_status(public_health_necessity_supersedes_consent, holdable).
-narrative_ontology:cs_axiom_grounding(public_health_primary, public_health_necessity_supersedes_consent, deontological).
-narrative_ontology:cs_axiom(public_health_primary, secondary, proportionality_requirement_for_enforcement).
+narrative_ontology:cs_axiom_grounding('47358252-490b-43bc-b3fc-e982a76a2dcd', public_health_necessity_supersedes_consent, deontological).
+narrative_ontology:cs_axiom('47358252-490b-43bc-b3fc-e982a76a2dcd', secondary, proportionality_requirement_for_enforcement).
 narrative_ontology:cs_axiom_status(proportionality_requirement_for_enforcement, holdable).
-narrative_ontology:cs_axiom_grounding(public_health_primary, proportionality_requirement_for_enforcement, instrumental).
-narrative_ontology:cs_reference_frame(public_health_primary, vulnerable_population_protection_as_core_duty).
-narrative_ontology:cs_drift_state(public_health_primary, contemporary_pandemic_response, gap(authority_erosion, substantial, true)).
+narrative_ontology:cs_axiom_grounding('47358252-490b-43bc-b3fc-e982a76a2dcd', proportionality_requirement_for_enforcement, instrumental).
+narrative_ontology:cs_reference_frame('47358252-490b-43bc-b3fc-e982a76a2dcd', vulnerable_population_protection_as_core_duty).
+narrative_ontology:cs_drift_state('47358252-490b-43bc-b3fc-e982a76a2dcd', contemporary_pandemic_response, gap(authority_erosion, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(public_health_primary, immunocompromised_populations).

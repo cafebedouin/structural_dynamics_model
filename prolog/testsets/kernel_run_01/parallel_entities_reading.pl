@@ -129,18 +129,20 @@ narrative_ontology:topic_domain(parallel_entities_reading, "religious_studies/co
 domain_priors:requires_active_enforcement(parallel_entities_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(parallel_entities_reading, distributed).
-narrative_ontology:cs_authority_grounding(parallel_entities_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(parallel_entities_reading).
+narrative_ontology:cs_story_uid(parallel_entities_reading, 'af2ad435-506e-495a-84cf-6ae014237c37').
+narrative_ontology:cs_created_at('af2ad435-506e-495a-84cf-6ae014237c37', '').
+narrative_ontology:cs_kernel_codification('af2ad435-506e-495a-84cf-6ae014237c37', distributed).
+narrative_ontology:cs_authority_grounding('af2ad435-506e-495a-84cf-6ae014237c37', lineage).
+narrative_ontology:cs_interpretation_layer_present('af2ad435-506e-495a-84cf-6ae014237c37').
 narrative_ontology:cs_kernel_id(parallel_entities_reading, kami_buddha_ontology).
-narrative_ontology:cs_reading_relation(parallel_entities_reading, fused_ontology_reading, coexists_with).
-narrative_ontology:cs_reading_relation(parallel_entities_reading, domain_partition_reading, coexists_with).
-narrative_ontology:cs_axiom(parallel_entities_reading, foundational, kami_buddha_ontological_distinctness).
+narrative_ontology:cs_reading_relation('af2ad435-506e-495a-84cf-6ae014237c37', fused_ontology_reading, coexists_with).
+narrative_ontology:cs_reading_relation('af2ad435-506e-495a-84cf-6ae014237c37', domain_partition_reading, coexists_with).
+narrative_ontology:cs_axiom('af2ad435-506e-495a-84cf-6ae014237c37', foundational, kami_buddha_ontological_distinctness).
 narrative_ontology:cs_axiom_status(kami_buddha_ontological_distinctness, holdable).
-narrative_ontology:cs_axiom(parallel_entities_reading, foundational, institutional_coordination_without_systematic_theology).
+narrative_ontology:cs_axiom('af2ad435-506e-495a-84cf-6ae014237c37', foundational, institutional_coordination_without_systematic_theology).
 narrative_ontology:cs_axiom_status(institutional_coordination_without_systematic_theology, holdable).
-narrative_ontology:cs_reference_frame(parallel_entities_reading, traditional_coexistence_unintegrated).
-narrative_ontology:cs_drift_state(parallel_entities_reading, meiji_modernization_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_reference_frame('af2ad435-506e-495a-84cf-6ae014237c37', traditional_coexistence_unintegrated).
+narrative_ontology:cs_drift_state('af2ad435-506e-495a-84cf-6ae014237c37', meiji_modernization_era, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(parallel_entities_reading, institutional_shrine_temple_system).

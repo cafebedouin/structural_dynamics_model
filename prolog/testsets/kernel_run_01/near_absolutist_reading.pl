@@ -129,18 +129,20 @@ narrative_ontology:topic_domain(near_absolutist_reading, "constitutional_law/fre
 domain_priors:requires_active_enforcement(near_absolutist_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(near_absolutist_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(near_absolutist_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(near_absolutist_reading).
+narrative_ontology:cs_story_uid(near_absolutist_reading, 'a987581e-66de-4fc9-a92d-2e37597b98a9').
+narrative_ontology:cs_created_at('a987581e-66de-4fc9-a92d-2e37597b98a9', '').
+narrative_ontology:cs_kernel_codification('a987581e-66de-4fc9-a92d-2e37597b98a9', fixed_text).
+narrative_ontology:cs_authority_grounding('a987581e-66de-4fc9-a92d-2e37597b98a9', lineage).
+narrative_ontology:cs_interpretation_layer_present('a987581e-66de-4fc9-a92d-2e37597b98a9').
 narrative_ontology:cs_kernel_id(near_absolutist_reading, speech_protection_boundary).
-narrative_ontology:cs_reading_relation(near_absolutist_reading, dignitary_harm_reading, coexists_with).
-narrative_ontology:cs_reading_relation(near_absolutist_reading, balancing_reading, coexists_with).
-narrative_ontology:cs_axiom(near_absolutist_reading, foundational, speech_protection_categorically_prior).
+narrative_ontology:cs_reading_relation('a987581e-66de-4fc9-a92d-2e37597b98a9', dignitary_harm_reading, coexists_with).
+narrative_ontology:cs_reading_relation('a987581e-66de-4fc9-a92d-2e37597b98a9', balancing_reading, coexists_with).
+narrative_ontology:cs_axiom('a987581e-66de-4fc9-a92d-2e37597b98a9', foundational, speech_protection_categorically_prior).
 narrative_ontology:cs_axiom_status(speech_protection_categorically_prior, holdable).
-narrative_ontology:cs_axiom(near_absolutist_reading, foundational, content_neutrality_legally_required).
+narrative_ontology:cs_axiom('a987581e-66de-4fc9-a92d-2e37597b98a9', foundational, content_neutrality_legally_required).
 narrative_ontology:cs_axiom_status(content_neutrality_legally_required, holdable).
-narrative_ontology:cs_reference_frame(near_absolutist_reading, constitutional_text_priority_over_effects).
-narrative_ontology:cs_drift_state(near_absolutist_reading, contemporary_digital_harassment_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_reference_frame('a987581e-66de-4fc9-a92d-2e37597b98a9', constitutional_text_priority_over_effects).
+narrative_ontology:cs_drift_state('a987581e-66de-4fc9-a92d-2e37597b98a9', contemporary_digital_harassment_era, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(near_absolutist_reading, dissident_speakers).

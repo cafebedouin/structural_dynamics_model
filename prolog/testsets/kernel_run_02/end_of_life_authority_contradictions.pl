@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(competent_autonomy_foundational_authority, intrinsic_value_inviolable).
 narrative_ontology:cs_axiom_contradiction(intrinsic_value_inviolable, competent_autonomy_foundational_authority).
+narrative_ontology:cs_story_uid(end_of_life_authority_contradictions, '07025185-3100-4693-b3e1-b3c53ef6caa2').
+narrative_ontology:cs_created_at('07025185-3100-4693-b3e1-b3c53ef6caa2', '').

@@ -120,21 +120,23 @@ narrative_ontology:topic_domain(standing_army_structural_threat, "constitutional
 domain_priors:requires_active_enforcement(standing_army_structural_threat).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(standing_army_structural_threat, fixed_text).
-narrative_ontology:cs_authority_grounding(standing_army_structural_threat, lineage).
-narrative_ontology:cs_interpretation_layer_present(standing_army_structural_threat).
-narrative_ontology:cs_reading_relation(standing_army_structural_threat, militia_clause_as_limit_reading, forecloses).
-narrative_ontology:cs_axiom(standing_army_structural_threat, foundational, second_amendment_protects_individual_arms_rights).
+narrative_ontology:cs_story_uid(standing_army_structural_threat, 'e4c7b8eb-2966-4c5a-988f-198f446a4b14').
+narrative_ontology:cs_created_at('e4c7b8eb-2966-4c5a-988f-198f446a4b14', '').
+narrative_ontology:cs_kernel_codification('e4c7b8eb-2966-4c5a-988f-198f446a4b14', fixed_text).
+narrative_ontology:cs_authority_grounding('e4c7b8eb-2966-4c5a-988f-198f446a4b14', lineage).
+narrative_ontology:cs_interpretation_layer_present('e4c7b8eb-2966-4c5a-988f-198f446a4b14').
+narrative_ontology:cs_reading_relation('e4c7b8eb-2966-4c5a-988f-198f446a4b14', militia_clause_as_limit_reading, forecloses).
+narrative_ontology:cs_axiom('e4c7b8eb-2966-4c5a-988f-198f446a4b14', foundational, second_amendment_protects_individual_arms_rights).
 narrative_ontology:cs_axiom_status(second_amendment_protects_individual_arms_rights, holdable).
-narrative_ontology:cs_axiom_grounding(standing_army_structural_threat, second_amendment_protects_individual_arms_rights, deontological).
-narrative_ontology:cs_axiom(standing_army_structural_threat, foundational, prefatory_clause_announces_not_restricts).
+narrative_ontology:cs_axiom_grounding('e4c7b8eb-2966-4c5a-988f-198f446a4b14', second_amendment_protects_individual_arms_rights, deontological).
+narrative_ontology:cs_axiom('e4c7b8eb-2966-4c5a-988f-198f446a4b14', foundational, prefatory_clause_announces_not_restricts).
 narrative_ontology:cs_axiom_status(prefatory_clause_announces_not_restricts, holdable).
-narrative_ontology:cs_axiom_grounding(standing_army_structural_threat, prefatory_clause_announces_not_restricts, empirically_contingent).
-narrative_ontology:cs_axiom(standing_army_structural_threat, secondary, militia_counterbalance_historically_obsolete).
+narrative_ontology:cs_axiom_grounding('e4c7b8eb-2966-4c5a-988f-198f446a4b14', prefatory_clause_announces_not_restricts, empirically_contingent).
+narrative_ontology:cs_axiom('e4c7b8eb-2966-4c5a-988f-198f446a4b14', secondary, militia_counterbalance_historically_obsolete).
 narrative_ontology:cs_axiom_status(militia_counterbalance_historically_obsolete, holdable).
-narrative_ontology:cs_axiom_grounding(standing_army_structural_threat, militia_counterbalance_historically_obsolete, empirically_contingent).
-narrative_ontology:cs_reference_frame(standing_army_structural_threat, heller_individual_right_framework).
-narrative_ontology:cs_drift_state(standing_army_structural_threat, contemporary_post_heller_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('e4c7b8eb-2966-4c5a-988f-198f446a4b14', militia_counterbalance_historically_obsolete, empirically_contingent).
+narrative_ontology:cs_reference_frame('e4c7b8eb-2966-4c5a-988f-198f446a4b14', heller_individual_right_framework).
+narrative_ontology:cs_drift_state('e4c7b8eb-2966-4c5a-988f-198f446a4b14', contemporary_post_heller_era, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(standing_army_structural_threat, federal_executive_military_apparatus).

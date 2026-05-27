@@ -123,20 +123,22 @@ narrative_ontology:topic_domain(birth_threshold_reading, "moral_philosophy/histo
 domain_priors:requires_active_enforcement(birth_threshold_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(birth_threshold_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(birth_threshold_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(birth_threshold_reading).
+narrative_ontology:cs_story_uid(birth_threshold_reading, '93e98690-8bcd-4123-bcfd-44fc13bb079b').
+narrative_ontology:cs_created_at('93e98690-8bcd-4123-bcfd-44fc13bb079b', '').
+narrative_ontology:cs_kernel_codification('93e98690-8bcd-4123-bcfd-44fc13bb079b', fixed_text).
+narrative_ontology:cs_authority_grounding('93e98690-8bcd-4123-bcfd-44fc13bb079b', lineage).
+narrative_ontology:cs_interpretation_layer_present('93e98690-8bcd-4123-bcfd-44fc13bb079b').
 narrative_ontology:cs_kernel_id(birth_threshold_reading, personhood_boundary).
-narrative_ontology:cs_reading_relation(birth_threshold_reading, inherent_dignity_reading, coexists_with).
-narrative_ontology:cs_reading_relation(birth_threshold_reading, civic_eugenic_reading, forecloses).
-narrative_ontology:cs_axiom(birth_threshold_reading, foundational, birth_event_is_personhood_threshold).
+narrative_ontology:cs_reading_relation('93e98690-8bcd-4123-bcfd-44fc13bb079b', inherent_dignity_reading, coexists_with).
+narrative_ontology:cs_reading_relation('93e98690-8bcd-4123-bcfd-44fc13bb079b', civic_eugenic_reading, forecloses).
+narrative_ontology:cs_axiom('93e98690-8bcd-4123-bcfd-44fc13bb079b', foundational, birth_event_is_personhood_threshold).
 narrative_ontology:cs_axiom_status(birth_event_is_personhood_threshold, holdable).
-narrative_ontology:cs_axiom_grounding(birth_threshold_reading, birth_event_is_personhood_threshold, conventional).
-narrative_ontology:cs_axiom(birth_threshold_reading, foundational, parental_authority_supersedes_state_eugenic_authority).
+narrative_ontology:cs_axiom_grounding('93e98690-8bcd-4123-bcfd-44fc13bb079b', birth_event_is_personhood_threshold, conventional).
+narrative_ontology:cs_axiom('93e98690-8bcd-4123-bcfd-44fc13bb079b', foundational, parental_authority_supersedes_state_eugenic_authority).
 narrative_ontology:cs_axiom_status(parental_authority_supersedes_state_eugenic_authority, holdable).
-narrative_ontology:cs_axiom_grounding(birth_threshold_reading, parental_authority_supersedes_state_eugenic_authority, deontological).
-narrative_ontology:cs_reference_frame(birth_threshold_reading, classical_paterfamilial_authority_with_birth_threshold).
-narrative_ontology:cs_drift_state(birth_threshold_reading, contemporary_human_rights_era, gap(authority_erosion, substantial, true)).
+narrative_ontology:cs_axiom_grounding('93e98690-8bcd-4123-bcfd-44fc13bb079b', parental_authority_supersedes_state_eugenic_authority, deontological).
+narrative_ontology:cs_reference_frame('93e98690-8bcd-4123-bcfd-44fc13bb079b', classical_paterfamilial_authority_with_birth_threshold).
+narrative_ontology:cs_drift_state('93e98690-8bcd-4123-bcfd-44fc13bb079b', contemporary_human_rights_era, gap(authority_erosion, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(birth_threshold_reading, paterfamilias_authority).

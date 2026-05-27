@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(meaning_fixed_at_ratification, constitutional_meaning_evolves_with_society).
 narrative_ontology:cs_axiom_contradiction(constitutional_meaning_evolves_with_society, meaning_fixed_at_ratification).
+narrative_ontology:cs_story_uid(us_constitution_text_contradictions, '30eaae75-f303-49df-9763-25f0216adc4d').
+narrative_ontology:cs_created_at('30eaae75-f303-49df-9763-25f0216adc4d', '').

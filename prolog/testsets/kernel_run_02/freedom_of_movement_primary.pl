@@ -122,20 +122,22 @@ narrative_ontology:topic_domain(freedom_of_movement_primary, "political_philosop
 domain_priors:requires_active_enforcement(freedom_of_movement_primary).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(freedom_of_movement_primary, formalized).
-narrative_ontology:cs_authority_grounding(freedom_of_movement_primary, lineage).
-narrative_ontology:cs_interpretation_layer_present(freedom_of_movement_primary).
+narrative_ontology:cs_story_uid(freedom_of_movement_primary, '3c33e7d0-ef2c-4a19-8c11-76b5dcbea56b').
+narrative_ontology:cs_created_at('3c33e7d0-ef2c-4a19-8c11-76b5dcbea56b', '').
+narrative_ontology:cs_kernel_codification('3c33e7d0-ef2c-4a19-8c11-76b5dcbea56b', formalized).
+narrative_ontology:cs_authority_grounding('3c33e7d0-ef2c-4a19-8c11-76b5dcbea56b', lineage).
+narrative_ontology:cs_interpretation_layer_present('3c33e7d0-ef2c-4a19-8c11-76b5dcbea56b').
 narrative_ontology:cs_kernel_id(freedom_of_movement_primary, border_control_legitimacy).
-narrative_ontology:cs_reading_relation(freedom_of_movement_primary, sovereignty_primary, forecloses).
-narrative_ontology:cs_reading_relation(freedom_of_movement_primary, jurisdictional_sovereignty, influences).
-narrative_ontology:cs_axiom(freedom_of_movement_primary, foundational, freedom_of_movement_fundamental_right).
+narrative_ontology:cs_reading_relation('3c33e7d0-ef2c-4a19-8c11-76b5dcbea56b', sovereignty_primary, forecloses).
+narrative_ontology:cs_reading_relation('3c33e7d0-ef2c-4a19-8c11-76b5dcbea56b', jurisdictional_sovereignty, influences).
+narrative_ontology:cs_axiom('3c33e7d0-ef2c-4a19-8c11-76b5dcbea56b', foundational, freedom_of_movement_fundamental_right).
 narrative_ontology:cs_axiom_status(freedom_of_movement_fundamental_right, holdable).
-narrative_ontology:cs_axiom_grounding(freedom_of_movement_primary, freedom_of_movement_fundamental_right, deontological).
-narrative_ontology:cs_axiom(freedom_of_movement_primary, foundational, sovereignty_not_unlimited_exclusion_authority).
+narrative_ontology:cs_axiom_grounding('3c33e7d0-ef2c-4a19-8c11-76b5dcbea56b', freedom_of_movement_fundamental_right, deontological).
+narrative_ontology:cs_axiom('3c33e7d0-ef2c-4a19-8c11-76b5dcbea56b', foundational, sovereignty_not_unlimited_exclusion_authority).
 narrative_ontology:cs_axiom_status(sovereignty_not_unlimited_exclusion_authority, holdable).
-narrative_ontology:cs_axiom_grounding(freedom_of_movement_primary, sovereignty_not_unlimited_exclusion_authority, deontological).
-narrative_ontology:cs_reference_frame(freedom_of_movement_primary, universal_human_rights_framework).
-narrative_ontology:cs_drift_state(freedom_of_movement_primary, contemporary_migration_crisis_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('3c33e7d0-ef2c-4a19-8c11-76b5dcbea56b', sovereignty_not_unlimited_exclusion_authority, deontological).
+narrative_ontology:cs_reference_frame('3c33e7d0-ef2c-4a19-8c11-76b5dcbea56b', universal_human_rights_framework).
+narrative_ontology:cs_drift_state('3c33e7d0-ef2c-4a19-8c11-76b5dcbea56b', contemporary_migration_crisis_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(freedom_of_movement_primary, displaced_persons).

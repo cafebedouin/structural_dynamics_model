@@ -123,20 +123,22 @@ narrative_ontology:topic_domain(qualified_sovereignty, "political_philosophy/int
 domain_priors:requires_active_enforcement(qualified_sovereignty).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(qualified_sovereignty, formalized).
-narrative_ontology:cs_authority_grounding(qualified_sovereignty, lineage).
-narrative_ontology:cs_interpretation_layer_present(qualified_sovereignty).
+narrative_ontology:cs_story_uid(qualified_sovereignty, 'b8082735-ed35-4fed-876c-3baddae06429').
+narrative_ontology:cs_created_at('b8082735-ed35-4fed-876c-3baddae06429', '').
+narrative_ontology:cs_kernel_codification('b8082735-ed35-4fed-876c-3baddae06429', formalized).
+narrative_ontology:cs_authority_grounding('b8082735-ed35-4fed-876c-3baddae06429', lineage).
+narrative_ontology:cs_interpretation_layer_present('b8082735-ed35-4fed-876c-3baddae06429').
 narrative_ontology:cs_kernel_id(qualified_sovereignty, border_normative_status).
-narrative_ontology:cs_reading_relation(qualified_sovereignty, sovereignty_primary, coexists_with).
-narrative_ontology:cs_reading_relation(qualified_sovereignty, freedom_primary, influences).
-narrative_ontology:cs_axiom(qualified_sovereignty, foundational, state_discretion_bounded_by_proportionality).
+narrative_ontology:cs_reading_relation('b8082735-ed35-4fed-876c-3baddae06429', sovereignty_primary, coexists_with).
+narrative_ontology:cs_reading_relation('b8082735-ed35-4fed-876c-3baddae06429', freedom_primary, influences).
+narrative_ontology:cs_axiom('b8082735-ed35-4fed-876c-3baddae06429', foundational, state_discretion_bounded_by_proportionality).
 narrative_ontology:cs_axiom_status(state_discretion_bounded_by_proportionality, holdable).
-narrative_ontology:cs_axiom_grounding(qualified_sovereignty, state_discretion_bounded_by_proportionality, deontological).
-narrative_ontology:cs_axiom(qualified_sovereignty, foundational, human_rights_override_sovereign_discretion).
+narrative_ontology:cs_axiom_grounding('b8082735-ed35-4fed-876c-3baddae06429', state_discretion_bounded_by_proportionality, deontological).
+narrative_ontology:cs_axiom('b8082735-ed35-4fed-876c-3baddae06429', foundational, human_rights_override_sovereign_discretion).
 narrative_ontology:cs_axiom_status(human_rights_override_sovereign_discretion, holdable).
-narrative_ontology:cs_axiom_grounding(qualified_sovereignty, human_rights_override_sovereign_discretion, deontological).
-narrative_ontology:cs_reference_frame(qualified_sovereignty, international_human_rights_authority).
-narrative_ontology:cs_drift_state(qualified_sovereignty, contemporary_migration_crisis, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('b8082735-ed35-4fed-876c-3baddae06429', human_rights_override_sovereign_discretion, deontological).
+narrative_ontology:cs_reference_frame('b8082735-ed35-4fed-876c-3baddae06429', international_human_rights_authority).
+narrative_ontology:cs_drift_state('b8082735-ed35-4fed-876c-3baddae06429', contemporary_migration_crisis, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(qualified_sovereignty, nation_states_institutional_capacity).

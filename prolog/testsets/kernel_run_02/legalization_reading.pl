@@ -134,20 +134,22 @@ narrative_ontology:topic_domain(legalization_reading, "public_health_policy/crim
 domain_priors:requires_active_enforcement(legalization_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(legalization_reading, formalized).
-narrative_ontology:cs_authority_grounding(legalization_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(legalization_reading).
+narrative_ontology:cs_story_uid(legalization_reading, '2edba4a6-2555-4db2-b395-7b311d4340a5').
+narrative_ontology:cs_created_at('2edba4a6-2555-4db2-b395-7b311d4340a5', '').
+narrative_ontology:cs_kernel_codification('2edba4a6-2555-4db2-b395-7b311d4340a5', formalized).
+narrative_ontology:cs_authority_grounding('2edba4a6-2555-4db2-b395-7b311d4340a5', extraction).
+narrative_ontology:cs_interpretation_layer_present('2edba4a6-2555-4db2-b395-7b311d4340a5').
 narrative_ontology:cs_kernel_id(legalization_reading, substance_control_authority).
-narrative_ontology:cs_reading_relation(legalization_reading, prohibition_reading, coexists_with).
-narrative_ontology:cs_reading_relation(legalization_reading, harm_reduction_reading, coexists_with).
-narrative_ontology:cs_axiom(legalization_reading, foundational, demand_inelastic_to_policy).
+narrative_ontology:cs_reading_relation('2edba4a6-2555-4db2-b395-7b311d4340a5', prohibition_reading, coexists_with).
+narrative_ontology:cs_reading_relation('2edba4a6-2555-4db2-b395-7b311d4340a5', harm_reduction_reading, coexists_with).
+narrative_ontology:cs_axiom('2edba4a6-2555-4db2-b395-7b311d4340a5', foundational, demand_inelastic_to_policy).
 narrative_ontology:cs_axiom_status(demand_inelastic_to_policy, holdable).
-narrative_ontology:cs_axiom_grounding(legalization_reading, demand_inelastic_to_policy, empirically_contingent).
-narrative_ontology:cs_axiom(legalization_reading, foundational, regulatory_capacity_superior_to_prohibition).
+narrative_ontology:cs_axiom_grounding('2edba4a6-2555-4db2-b395-7b311d4340a5', demand_inelastic_to_policy, empirically_contingent).
+narrative_ontology:cs_axiom('2edba4a6-2555-4db2-b395-7b311d4340a5', foundational, regulatory_capacity_superior_to_prohibition).
 narrative_ontology:cs_axiom_status(regulatory_capacity_superior_to_prohibition, holdable).
-narrative_ontology:cs_axiom_grounding(legalization_reading, regulatory_capacity_superior_to_prohibition, empirically_contingent).
-narrative_ontology:cs_reference_frame(legalization_reading, regulated_commercial_market_mechanism).
-narrative_ontology:cs_drift_state(legalization_reading, contemporary_capture_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('2edba4a6-2555-4db2-b395-7b311d4340a5', regulatory_capacity_superior_to_prohibition, empirically_contingent).
+narrative_ontology:cs_reference_frame('2edba4a6-2555-4db2-b395-7b311d4340a5', regulated_commercial_market_mechanism).
+narrative_ontology:cs_drift_state('2edba4a6-2555-4db2-b395-7b311d4340a5', contemporary_capture_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(legalization_reading, regulated_commercial_operators).

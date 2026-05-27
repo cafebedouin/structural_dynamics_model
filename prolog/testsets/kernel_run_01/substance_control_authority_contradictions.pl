@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(drug_use_as_moral_failure_requiring_constraint, regulation_superior_to_prohibition).
 narrative_ontology:cs_axiom_contradiction(regulation_superior_to_prohibition, drug_use_as_moral_failure_requiring_constraint).
+narrative_ontology:cs_story_uid(substance_control_authority_contradictions, 'd1af2a15-6337-43c9-900a-c1fc152b2db0').
+narrative_ontology:cs_created_at('d1af2a15-6337-43c9-900a-c1fc152b2db0', '').

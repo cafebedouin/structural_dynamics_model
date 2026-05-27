@@ -123,19 +123,21 @@ narrative_ontology:topic_domain(hybrid_contextual_reading, "political_philosophy
 domain_priors:requires_active_enforcement(hybrid_contextual_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(hybrid_contextual_reading, distributed).
-narrative_ontology:cs_authority_grounding(hybrid_contextual_reading, distributed).
+narrative_ontology:cs_story_uid(hybrid_contextual_reading, '49a072b1-93b2-4fa9-84cf-0f1113f1b4a7').
+narrative_ontology:cs_created_at('49a072b1-93b2-4fa9-84cf-0f1113f1b4a7', '').
+narrative_ontology:cs_kernel_codification('49a072b1-93b2-4fa9-84cf-0f1113f1b4a7', distributed).
+narrative_ontology:cs_authority_grounding('49a072b1-93b2-4fa9-84cf-0f1113f1b4a7', distributed).
 narrative_ontology:cs_kernel_id(hybrid_contextual_reading, woman_female_category).
-narrative_ontology:cs_reading_relation(hybrid_contextual_reading, sex_biology_reading, coexists_with).
-narrative_ontology:cs_reading_relation(hybrid_contextual_reading, gender_identity_reading, coexists_with).
-narrative_ontology:cs_axiom(hybrid_contextual_reading, foundational, category_legitimacy_is_context_sensitive).
+narrative_ontology:cs_reading_relation('49a072b1-93b2-4fa9-84cf-0f1113f1b4a7', sex_biology_reading, coexists_with).
+narrative_ontology:cs_reading_relation('49a072b1-93b2-4fa9-84cf-0f1113f1b4a7', gender_identity_reading, coexists_with).
+narrative_ontology:cs_axiom('49a072b1-93b2-4fa9-84cf-0f1113f1b4a7', foundational, category_legitimacy_is_context_sensitive).
 narrative_ontology:cs_axiom_status(category_legitimacy_is_context_sensitive, holdable).
-narrative_ontology:cs_axiom(hybrid_contextual_reading, foundational, biological_sex_epistemically_relevant_for_medical_safety).
+narrative_ontology:cs_axiom('49a072b1-93b2-4fa9-84cf-0f1113f1b4a7', foundational, biological_sex_epistemically_relevant_for_medical_safety).
 narrative_ontology:cs_axiom_status(biological_sex_epistemically_relevant_for_medical_safety, holdable).
-narrative_ontology:cs_axiom(hybrid_contextual_reading, foundational, gender_identity_required_for_legal_recognition_social_inclusion).
+narrative_ontology:cs_axiom('49a072b1-93b2-4fa9-84cf-0f1113f1b4a7', foundational, gender_identity_required_for_legal_recognition_social_inclusion).
 narrative_ontology:cs_axiom_status(gender_identity_required_for_legal_recognition_social_inclusion, holdable).
-narrative_ontology:cs_reference_frame(hybrid_contextual_reading, compartmentalized_legitimate_readings).
-narrative_ontology:cs_drift_state(hybrid_contextual_reading, contemporary_institutional_practice, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_reference_frame('49a072b1-93b2-4fa9-84cf-0f1113f1b4a7', compartmentalized_legitimate_readings).
+narrative_ontology:cs_drift_state('49a072b1-93b2-4fa9-84cf-0f1113f1b4a7', contemporary_institutional_practice, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(hybrid_contextual_reading, institutional_conflict_minimizers).

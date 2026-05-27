@@ -120,20 +120,22 @@ narrative_ontology:topic_domain(continuity_reading, "historical_linguistics/phil
 domain_priors:emerges_naturally(continuity_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(continuity_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(continuity_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(continuity_reading).
+narrative_ontology:cs_story_uid(continuity_reading, '6157ab4e-1b85-4ae3-b424-90a6114d8129').
+narrative_ontology:cs_created_at('6157ab4e-1b85-4ae3-b424-90a6114d8129', '').
+narrative_ontology:cs_kernel_codification('6157ab4e-1b85-4ae3-b424-90a6114d8129', fixed_text).
+narrative_ontology:cs_authority_grounding('6157ab4e-1b85-4ae3-b424-90a6114d8129', lineage).
+narrative_ontology:cs_interpretation_layer_present('6157ab4e-1b85-4ae3-b424-90a6114d8129').
 narrative_ontology:cs_kernel_id(continuity_reading, latin_correctness).
-narrative_ontology:cs_reading_relation(continuity_reading, rupture_reading, coexists_with).
-narrative_ontology:cs_reading_relation(continuity_reading, hybrid_reading, influences).
-narrative_ontology:cs_axiom(continuity_reading, foundational, medieval_change_is_natural_evolution).
+narrative_ontology:cs_reading_relation('6157ab4e-1b85-4ae3-b424-90a6114d8129', rupture_reading, coexists_with).
+narrative_ontology:cs_reading_relation('6157ab4e-1b85-4ae3-b424-90a6114d8129', hybrid_reading, influences).
+narrative_ontology:cs_axiom('6157ab4e-1b85-4ae3-b424-90a6114d8129', foundational, medieval_change_is_natural_evolution).
 narrative_ontology:cs_axiom_status(medieval_change_is_natural_evolution, holdable).
-narrative_ontology:cs_axiom_grounding(continuity_reading, medieval_change_is_natural_evolution, empirically_contingent).
-narrative_ontology:cs_axiom(continuity_reading, foundational, latin_continuity_maintained_across_forms).
+narrative_ontology:cs_axiom_grounding('6157ab4e-1b85-4ae3-b424-90a6114d8129', medieval_change_is_natural_evolution, empirically_contingent).
+narrative_ontology:cs_axiom('6157ab4e-1b85-4ae3-b424-90a6114d8129', foundational, latin_continuity_maintained_across_forms).
 narrative_ontology:cs_axiom_status(latin_continuity_maintained_across_forms, holdable).
-narrative_ontology:cs_axiom_grounding(continuity_reading, latin_continuity_maintained_across_forms, deontological).
-narrative_ontology:cs_reference_frame(continuity_reading, classical_and_medieval_continuity).
-narrative_ontology:cs_drift_state(continuity_reading, renaissance_humanist_challenge, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('6157ab4e-1b85-4ae3-b424-90a6114d8129', latin_continuity_maintained_across_forms, deontological).
+narrative_ontology:cs_reference_frame('6157ab4e-1b85-4ae3-b424-90a6114d8129', classical_and_medieval_continuity).
+narrative_ontology:cs_drift_state('6157ab4e-1b85-4ae3-b424-90a6114d8129', renaissance_humanist_challenge, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(continuity_reading, medieval_latin_users).

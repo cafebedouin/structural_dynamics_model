@@ -119,20 +119,22 @@ narrative_ontology:topic_domain(sex_biology_reading, "social_ontology/medical_cl
 domain_priors:requires_active_enforcement(sex_biology_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(sex_biology_reading, formalized).
-narrative_ontology:cs_authority_grounding(sex_biology_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(sex_biology_reading).
+narrative_ontology:cs_story_uid(sex_biology_reading, '5d354705-51e4-4418-be87-448675821c02').
+narrative_ontology:cs_created_at('5d354705-51e4-4418-be87-448675821c02', '').
+narrative_ontology:cs_kernel_codification('5d354705-51e4-4418-be87-448675821c02', formalized).
+narrative_ontology:cs_authority_grounding('5d354705-51e4-4418-be87-448675821c02', extraction).
+narrative_ontology:cs_interpretation_layer_present('5d354705-51e4-4418-be87-448675821c02').
 narrative_ontology:cs_kernel_id(sex_biology_reading, woman_female_category).
-narrative_ontology:cs_reading_relation(sex_biology_reading, gender_identity_reading, coexists_with).
-narrative_ontology:cs_reading_relation(sex_biology_reading, intersectional_coexistence_reading, influences).
-narrative_ontology:cs_axiom(sex_biology_reading, foundational, biological_sex_constitutes_woman_category).
+narrative_ontology:cs_reading_relation('5d354705-51e4-4418-be87-448675821c02', gender_identity_reading, coexists_with).
+narrative_ontology:cs_reading_relation('5d354705-51e4-4418-be87-448675821c02', intersectional_coexistence_reading, influences).
+narrative_ontology:cs_axiom('5d354705-51e4-4418-be87-448675821c02', foundational, biological_sex_constitutes_woman_category).
 narrative_ontology:cs_axiom_status(biological_sex_constitutes_woman_category, holdable).
-narrative_ontology:cs_axiom_grounding(sex_biology_reading, biological_sex_constitutes_woman_category, empirically_contingent).
-narrative_ontology:cs_axiom(sex_biology_reading, foundational, reproductive_capacity_marks_sex_based_harm).
+narrative_ontology:cs_axiom_grounding('5d354705-51e4-4418-be87-448675821c02', biological_sex_constitutes_woman_category, empirically_contingent).
+narrative_ontology:cs_axiom('5d354705-51e4-4418-be87-448675821c02', foundational, reproductive_capacity_marks_sex_based_harm).
 narrative_ontology:cs_axiom_status(reproductive_capacity_marks_sex_based_harm, holdable).
-narrative_ontology:cs_axiom_grounding(sex_biology_reading, reproductive_capacity_marks_sex_based_harm, empirically_contingent).
-narrative_ontology:cs_reference_frame(sex_biology_reading, biomedical_essentialist_authority).
-narrative_ontology:cs_drift_state(sex_biology_reading, contemporary_trans_and_intersex_visibility_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('5d354705-51e4-4418-be87-448675821c02', reproductive_capacity_marks_sex_based_harm, empirically_contingent).
+narrative_ontology:cs_reference_frame('5d354705-51e4-4418-be87-448675821c02', biomedical_essentialist_authority).
+narrative_ontology:cs_drift_state('5d354705-51e4-4418-be87-448675821c02', contemporary_trans_and_intersex_visibility_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(sex_biology_reading, cis_women_spatial_access_protectors).

@@ -119,18 +119,20 @@ narrative_ontology:human_readable(existential_risk_reading, "Existential Risk Re
 narrative_ontology:topic_domain(existential_risk_reading, "ai_governance/existential_risk/technology_ethics").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(existential_risk_reading, formalized).
-narrative_ontology:cs_authority_grounding(existential_risk_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(existential_risk_reading).
+narrative_ontology:cs_story_uid(existential_risk_reading, 'c8978884-89f0-446d-adb4-62383d37f8e1').
+narrative_ontology:cs_created_at('c8978884-89f0-446d-adb4-62383d37f8e1', '').
+narrative_ontology:cs_kernel_codification('c8978884-89f0-446d-adb4-62383d37f8e1', formalized).
+narrative_ontology:cs_authority_grounding('c8978884-89f0-446d-adb4-62383d37f8e1', extraction).
+narrative_ontology:cs_interpretation_layer_present('c8978884-89f0-446d-adb4-62383d37f8e1').
 narrative_ontology:cs_kernel_id(existential_risk_reading, ai_alignment_priority).
-narrative_ontology:cs_reading_relation(existential_risk_reading, nearterm_harms_reading, coexists_with).
-narrative_ontology:cs_reading_relation(existential_risk_reading, integrated_reading, influences).
-narrative_ontology:cs_axiom(existential_risk_reading, foundational, existential_risk_is_dominant_timescale).
+narrative_ontology:cs_reading_relation('c8978884-89f0-446d-adb4-62383d37f8e1', nearterm_harms_reading, coexists_with).
+narrative_ontology:cs_reading_relation('c8978884-89f0-446d-adb4-62383d37f8e1', integrated_reading, influences).
+narrative_ontology:cs_axiom('c8978884-89f0-446d-adb4-62383d37f8e1', foundational, existential_risk_is_dominant_timescale).
 narrative_ontology:cs_axiom_status(existential_risk_is_dominant_timescale, holdable).
-narrative_ontology:cs_axiom(existential_risk_reading, foundational, capability_research_is_primary_safety_pathway).
+narrative_ontology:cs_axiom('c8978884-89f0-446d-adb4-62383d37f8e1', foundational, capability_research_is_primary_safety_pathway).
 narrative_ontology:cs_axiom_status(capability_research_is_primary_safety_pathway, holdable).
-narrative_ontology:cs_reference_frame(existential_risk_reading, human_control_over_optimization_systems).
-narrative_ontology:cs_drift_state(existential_risk_reading, contemporary_rapid_capability_advancement, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('c8978884-89f0-446d-adb4-62383d37f8e1', human_control_over_optimization_systems).
+narrative_ontology:cs_drift_state('c8978884-89f0-446d-adb4-62383d37f8e1', contemporary_rapid_capability_advancement, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(existential_risk_reading, long_term_future_agents).

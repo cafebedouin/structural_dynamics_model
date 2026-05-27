@@ -112,9 +112,11 @@ narrative_ontology:topic_domain(welfare_regulated_use, "applied_ethics/legal_phi
 domain_priors:requires_active_enforcement(welfare_regulated_use).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(welfare_regulated_use, formalized).
-narrative_ontology:cs_authority_grounding(welfare_regulated_use, extraction).
-narrative_ontology:cs_interpretation_layer_present(welfare_regulated_use).
+narrative_ontology:cs_story_uid(welfare_regulated_use, 'c22b0465-b8cf-439e-ae6a-a689fe773057').
+narrative_ontology:cs_created_at('c22b0465-b8cf-439e-ae6a-a689fe773057', '').
+narrative_ontology:cs_kernel_codification('c22b0465-b8cf-439e-ae6a-a689fe773057', formalized).
+narrative_ontology:cs_authority_grounding('c22b0465-b8cf-439e-ae6a-a689fe773057', extraction).
+narrative_ontology:cs_interpretation_layer_present('c22b0465-b8cf-439e-ae6a-a689fe773057').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(welfare_regulated_use, regulated_animal_industries).

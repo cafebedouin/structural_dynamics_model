@@ -121,18 +121,20 @@ narrative_ontology:topic_domain(archive_maintenance, "religious_studies/halakhic
 domain_priors:requires_active_enforcement(archive_maintenance).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(archive_maintenance, formalized).
-narrative_ontology:cs_authority_grounding(archive_maintenance, lineage).
-narrative_ontology:cs_interpretation_layer_present(archive_maintenance).
+narrative_ontology:cs_story_uid(archive_maintenance, 'a7e743c1-bcfc-4f5e-8c7c-6507ebd5e451').
+narrative_ontology:cs_created_at('a7e743c1-bcfc-4f5e-8c7c-6507ebd5e451', '').
+narrative_ontology:cs_kernel_codification('a7e743c1-bcfc-4f5e-8c7c-6507ebd5e451', formalized).
+narrative_ontology:cs_authority_grounding('a7e743c1-bcfc-4f5e-8c7c-6507ebd5e451', lineage).
+narrative_ontology:cs_interpretation_layer_present('a7e743c1-bcfc-4f5e-8c7c-6507ebd5e451').
 narrative_ontology:cs_kernel_id(archive_maintenance, sacrifice_commandment).
-narrative_ontology:cs_reading_relation(archive_maintenance, study_as_performance, influences).
-narrative_ontology:cs_reading_relation(archive_maintenance, performance_only, influences).
-narrative_ontology:cs_axiom(archive_maintenance, foundational, knowledge_preservation_instrumentally_justified).
+narrative_ontology:cs_reading_relation('a7e743c1-bcfc-4f5e-8c7c-6507ebd5e451', study_as_performance, influences).
+narrative_ontology:cs_reading_relation('a7e743c1-bcfc-4f5e-8c7c-6507ebd5e451', performance_only, influences).
+narrative_ontology:cs_axiom('a7e743c1-bcfc-4f5e-8c7c-6507ebd5e451', foundational, knowledge_preservation_instrumentally_justified).
 narrative_ontology:cs_axiom_status(knowledge_preservation_instrumentally_justified, holdable).
-narrative_ontology:cs_axiom(archive_maintenance, foundational, commandment_reframes_into_archive_maintenance).
+narrative_ontology:cs_axiom('a7e743c1-bcfc-4f5e-8c7c-6507ebd5e451', foundational, commandment_reframes_into_archive_maintenance).
 narrative_ontology:cs_axiom_status(commandment_reframes_into_archive_maintenance, holdable).
-narrative_ontology:cs_reference_frame(archive_maintenance, commandment_deferred_mode).
-narrative_ontology:cs_drift_state(archive_maintenance, contemporary_archival_maturation, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_reference_frame('a7e743c1-bcfc-4f5e-8c7c-6507ebd5e451', commandment_deferred_mode).
+narrative_ontology:cs_drift_state('a7e743c1-bcfc-4f5e-8c7c-6507ebd5e451', contemporary_archival_maturation, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(archive_maintenance, future_restoration_cohort).

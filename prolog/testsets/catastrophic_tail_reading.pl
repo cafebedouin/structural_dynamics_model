@@ -127,20 +127,22 @@ narrative_ontology:topic_domain(catastrophic_tail_reading, "energy_policy/risk_a
 domain_priors:requires_active_enforcement(catastrophic_tail_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(catastrophic_tail_reading, formalized).
-narrative_ontology:cs_authority_grounding(catastrophic_tail_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(catastrophic_tail_reading).
+narrative_ontology:cs_story_uid(catastrophic_tail_reading, '83670f38-66f8-4af7-b622-e31289abd6b9').
+narrative_ontology:cs_created_at('83670f38-66f8-4af7-b622-e31289abd6b9', '').
+narrative_ontology:cs_kernel_codification('83670f38-66f8-4af7-b622-e31289abd6b9', formalized).
+narrative_ontology:cs_authority_grounding('83670f38-66f8-4af7-b622-e31289abd6b9', extraction).
+narrative_ontology:cs_interpretation_layer_present('83670f38-66f8-4af7-b622-e31289abd6b9').
 narrative_ontology:cs_kernel_id(catastrophic_tail_reading, acceptable_risk_for_energy).
-narrative_ontology:cs_reading_relation(catastrophic_tail_reading, expected_value_reading, coexists_with).
-narrative_ontology:cs_reading_relation(catastrophic_tail_reading, precautionary_reading, coexists_with).
-narrative_ontology:cs_axiom(catastrophic_tail_reading, foundational, catastrophic_outcome_dominance).
+narrative_ontology:cs_reading_relation('83670f38-66f8-4af7-b622-e31289abd6b9', expected_value_reading, coexists_with).
+narrative_ontology:cs_reading_relation('83670f38-66f8-4af7-b622-e31289abd6b9', precautionary_reading, coexists_with).
+narrative_ontology:cs_axiom('83670f38-66f8-4af7-b622-e31289abd6b9', foundational, catastrophic_outcome_dominance).
 narrative_ontology:cs_axiom_status(catastrophic_outcome_dominance, holdable).
-narrative_ontology:cs_axiom_grounding(catastrophic_tail_reading, catastrophic_outcome_dominance, deontological).
-narrative_ontology:cs_axiom(catastrophic_tail_reading, foundational, irreversibility_precludes_probability_discount).
+narrative_ontology:cs_axiom_grounding('83670f38-66f8-4af7-b622-e31289abd6b9', catastrophic_outcome_dominance, deontological).
+narrative_ontology:cs_axiom('83670f38-66f8-4af7-b622-e31289abd6b9', foundational, irreversibility_precludes_probability_discount).
 narrative_ontology:cs_axiom_status(irreversibility_precludes_probability_discount, holdable).
-narrative_ontology:cs_axiom_grounding(catastrophic_tail_reading, irreversibility_precludes_probability_discount, deontological).
-narrative_ontology:cs_reference_frame(catastrophic_tail_reading, tail_risk_weighted_decision_framework).
-narrative_ontology:cs_drift_state(catastrophic_tail_reading, contemporary_post_decades_without_catastrophe, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('83670f38-66f8-4af7-b622-e31289abd6b9', irreversibility_precludes_probability_discount, deontological).
+narrative_ontology:cs_reference_frame('83670f38-66f8-4af7-b622-e31289abd6b9', tail_risk_weighted_decision_framework).
+narrative_ontology:cs_drift_state('83670f38-66f8-4af7-b622-e31289abd6b9', contemporary_post_decades_without_catastrophe, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(catastrophic_tail_reading, risk_averse_constituencies).

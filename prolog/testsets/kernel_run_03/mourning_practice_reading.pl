@@ -127,20 +127,22 @@ narrative_ontology:topic_domain(mourning_practice_reading, "religious_studies/cu
 domain_priors:requires_active_enforcement(mourning_practice_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(mourning_practice_reading, implicit).
-narrative_ontology:cs_authority_grounding(mourning_practice_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(mourning_practice_reading).
+narrative_ontology:cs_story_uid(mourning_practice_reading, '2d7a69ee-34bf-4ef0-ba19-01dafd9c21b5').
+narrative_ontology:cs_created_at('2d7a69ee-34bf-4ef0-ba19-01dafd9c21b5', '').
+narrative_ontology:cs_kernel_codification('2d7a69ee-34bf-4ef0-ba19-01dafd9c21b5', implicit).
+narrative_ontology:cs_authority_grounding('2d7a69ee-34bf-4ef0-ba19-01dafd9c21b5', lineage).
+narrative_ontology:cs_interpretation_layer_present('2d7a69ee-34bf-4ef0-ba19-01dafd9c21b5').
 narrative_ontology:cs_kernel_id(mourning_practice_reading, catastrophe_memory_transmission).
-narrative_ontology:cs_reading_relation(mourning_practice_reading, catastrophe_memory_survival_competence_reading, coexists_with).
-narrative_ontology:cs_reading_relation(mourning_practice_reading, catastrophe_memory_hybrid_pedagogical_reading, influences).
-narrative_ontology:cs_axiom(mourning_practice_reading, foundational, bounded_ritual_containment_enables_survival).
+narrative_ontology:cs_reading_relation('2d7a69ee-34bf-4ef0-ba19-01dafd9c21b5', catastrophe_memory_survival_competence_reading, coexists_with).
+narrative_ontology:cs_reading_relation('2d7a69ee-34bf-4ef0-ba19-01dafd9c21b5', catastrophe_memory_hybrid_pedagogical_reading, influences).
+narrative_ontology:cs_axiom('2d7a69ee-34bf-4ef0-ba19-01dafd9c21b5', foundational, bounded_ritual_containment_enables_survival).
 narrative_ontology:cs_axiom_status(bounded_ritual_containment_enables_survival, holdable).
-narrative_ontology:cs_axiom_grounding(mourning_practice_reading, bounded_ritual_containment_enables_survival, empirically_contingent).
-narrative_ontology:cs_axiom(mourning_practice_reading, foundational, identity_continuity_through_inherited_mourning).
+narrative_ontology:cs_axiom_grounding('2d7a69ee-34bf-4ef0-ba19-01dafd9c21b5', bounded_ritual_containment_enables_survival, empirically_contingent).
+narrative_ontology:cs_axiom('2d7a69ee-34bf-4ef0-ba19-01dafd9c21b5', foundational, identity_continuity_through_inherited_mourning).
 narrative_ontology:cs_axiom_status(identity_continuity_through_inherited_mourning, holdable).
-narrative_ontology:cs_axiom_grounding(mourning_practice_reading, identity_continuity_through_inherited_mourning, deontological).
-narrative_ontology:cs_reference_frame(mourning_practice_reading, ritual_boundary_maintenance_paradigm).
-narrative_ontology:cs_drift_state(mourning_practice_reading, contemporary_therapeutic_culture_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('2d7a69ee-34bf-4ef0-ba19-01dafd9c21b5', identity_continuity_through_inherited_mourning, deontological).
+narrative_ontology:cs_reference_frame('2d7a69ee-34bf-4ef0-ba19-01dafd9c21b5', ritual_boundary_maintenance_paradigm).
+narrative_ontology:cs_drift_state('2d7a69ee-34bf-4ef0-ba19-01dafd9c21b5', contemporary_therapeutic_culture_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(mourning_practice_reading, ritual_authority_structures).

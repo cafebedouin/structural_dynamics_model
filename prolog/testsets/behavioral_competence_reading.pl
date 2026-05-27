@@ -117,8 +117,10 @@ narrative_ontology:topic_domain(behavioral_competence_reading, "disaster_anthrop
 domain_priors:emerges_naturally(behavioral_competence_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(behavioral_competence_reading, implicit).
-narrative_ontology:cs_authority_grounding(behavioral_competence_reading, practice).
+narrative_ontology:cs_story_uid(behavioral_competence_reading, '53061e46-a422-42e6-8a4d-3972815315b8').
+narrative_ontology:cs_created_at('53061e46-a422-42e6-8a4d-3972815315b8', '').
+narrative_ontology:cs_kernel_codification('53061e46-a422-42e6-8a4d-3972815315b8', implicit).
+narrative_ontology:cs_authority_grounding('53061e46-a422-42e6-8a4d-3972815315b8', practice).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(behavioral_competence_reading, aneyoshi_population).

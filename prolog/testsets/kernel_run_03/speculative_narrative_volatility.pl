@@ -127,22 +127,24 @@ narrative_ontology:topic_domain(speculative_narrative_volatility, "monetary_theo
 domain_priors:requires_active_enforcement(speculative_narrative_volatility).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(speculative_narrative_volatility, distributed).
-narrative_ontology:cs_authority_grounding(speculative_narrative_volatility, distributed).
-narrative_ontology:cs_reading_relation(speculative_narrative_volatility, crypto_sound_money_reading, forecloses).
-narrative_ontology:cs_reading_relation(speculative_narrative_volatility, crypto_decentralization_reading, coexists_with).
-narrative_ontology:cs_reading_relation(speculative_narrative_volatility, crypto_speculative_asset_reading, coexists_with).
-narrative_ontology:cs_axiom(speculative_narrative_volatility, foundational, volatility_is_extractive_mechanism).
+narrative_ontology:cs_story_uid(speculative_narrative_volatility, '37dea2f0-3dbc-4498-974d-02392c2d6552').
+narrative_ontology:cs_created_at('37dea2f0-3dbc-4498-974d-02392c2d6552', '').
+narrative_ontology:cs_kernel_codification('37dea2f0-3dbc-4498-974d-02392c2d6552', distributed).
+narrative_ontology:cs_authority_grounding('37dea2f0-3dbc-4498-974d-02392c2d6552', distributed).
+narrative_ontology:cs_reading_relation('37dea2f0-3dbc-4498-974d-02392c2d6552', crypto_sound_money_reading, forecloses).
+narrative_ontology:cs_reading_relation('37dea2f0-3dbc-4498-974d-02392c2d6552', crypto_decentralization_reading, coexists_with).
+narrative_ontology:cs_reading_relation('37dea2f0-3dbc-4498-974d-02392c2d6552', crypto_speculative_asset_reading, coexists_with).
+narrative_ontology:cs_axiom('37dea2f0-3dbc-4498-974d-02392c2d6552', foundational, volatility_is_extractive_mechanism).
 narrative_ontology:cs_axiom_status(volatility_is_extractive_mechanism, holdable).
-narrative_ontology:cs_axiom_grounding(speculative_narrative_volatility, volatility_is_extractive_mechanism, empirically_contingent).
-narrative_ontology:cs_axiom(speculative_narrative_volatility, foundational, centralized_exchange_dependency_inevitable).
+narrative_ontology:cs_axiom_grounding('37dea2f0-3dbc-4498-974d-02392c2d6552', volatility_is_extractive_mechanism, empirically_contingent).
+narrative_ontology:cs_axiom('37dea2f0-3dbc-4498-974d-02392c2d6552', foundational, centralized_exchange_dependency_inevitable).
 narrative_ontology:cs_axiom_status(centralized_exchange_dependency_inevitable, holdable).
-narrative_ontology:cs_axiom_grounding(speculative_narrative_volatility, centralized_exchange_dependency_inevitable, empirically_contingent).
-narrative_ontology:cs_axiom(speculative_narrative_volatility, secondary, narrative_driven_adoption_dominates_fundamentals).
+narrative_ontology:cs_axiom_grounding('37dea2f0-3dbc-4498-974d-02392c2d6552', centralized_exchange_dependency_inevitable, empirically_contingent).
+narrative_ontology:cs_axiom('37dea2f0-3dbc-4498-974d-02392c2d6552', secondary, narrative_driven_adoption_dominates_fundamentals).
 narrative_ontology:cs_axiom_status(narrative_driven_adoption_dominates_fundamentals, holdable).
-narrative_ontology:cs_axiom_grounding(speculative_narrative_volatility, narrative_driven_adoption_dominates_fundamentals, empirically_contingent).
-narrative_ontology:cs_reference_frame(speculative_narrative_volatility, distributed_speculation_regime).
-narrative_ontology:cs_drift_state(speculative_narrative_volatility, contemporary_post_2022_bear_market, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('37dea2f0-3dbc-4498-974d-02392c2d6552', narrative_driven_adoption_dominates_fundamentals, empirically_contingent).
+narrative_ontology:cs_reference_frame('37dea2f0-3dbc-4498-974d-02392c2d6552', distributed_speculation_regime).
+narrative_ontology:cs_drift_state('37dea2f0-3dbc-4498-974d-02392c2d6552', contemporary_post_2022_bear_market, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(speculative_narrative_volatility, early_adopters_and_speculators).

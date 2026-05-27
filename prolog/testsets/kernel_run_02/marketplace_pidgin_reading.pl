@@ -122,19 +122,21 @@ narrative_ontology:topic_domain(marketplace_pidgin_reading, "sociolinguistics/re
 domain_priors:requires_active_enforcement(marketplace_pidgin_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(marketplace_pidgin_reading, distributed).
-narrative_ontology:cs_authority_grounding(marketplace_pidgin_reading, distributed).
+narrative_ontology:cs_story_uid(marketplace_pidgin_reading, '07715ba9-717c-489c-81be-29f8e482fbf5').
+narrative_ontology:cs_created_at('07715ba9-717c-489c-81be-29f8e482fbf5', '').
+narrative_ontology:cs_kernel_codification('07715ba9-717c-489c-81be-29f8e482fbf5', distributed).
+narrative_ontology:cs_authority_grounding('07715ba9-717c-489c-81be-29f8e482fbf5', distributed).
 narrative_ontology:cs_kernel_id(marketplace_pidgin_reading, hebrew_linguistic_life).
-narrative_ontology:cs_reading_relation(marketplace_pidgin_reading, liturgical_preservation_reading, coexists_with).
-narrative_ontology:cs_reading_relation(marketplace_pidgin_reading, native_generational_reading, influences).
-narrative_ontology:cs_axiom(marketplace_pidgin_reading, foundational, function_constitutes_linguistic_life).
+narrative_ontology:cs_reading_relation('07715ba9-717c-489c-81be-29f8e482fbf5', liturgical_preservation_reading, coexists_with).
+narrative_ontology:cs_reading_relation('07715ba9-717c-489c-81be-29f8e482fbf5', native_generational_reading, influences).
+narrative_ontology:cs_axiom('07715ba9-717c-489c-81be-29f8e482fbf5', foundational, function_constitutes_linguistic_life).
 narrative_ontology:cs_axiom_status(function_constitutes_linguistic_life, holdable).
-narrative_ontology:cs_axiom_grounding(marketplace_pidgin_reading, function_constitutes_linguistic_life, instrumental).
-narrative_ontology:cs_axiom(marketplace_pidgin_reading, foundational, native_speaker_status_not_necessary).
+narrative_ontology:cs_axiom_grounding('07715ba9-717c-489c-81be-29f8e482fbf5', function_constitutes_linguistic_life, instrumental).
+narrative_ontology:cs_axiom('07715ba9-717c-489c-81be-29f8e482fbf5', foundational, native_speaker_status_not_necessary).
 narrative_ontology:cs_axiom_status(native_speaker_status_not_necessary, holdable).
-narrative_ontology:cs_axiom_grounding(marketplace_pidgin_reading, native_speaker_status_not_necessary, empirically_contingent).
-narrative_ontology:cs_reference_frame(marketplace_pidgin_reading, medieval_hebrew_marketplace_reality).
-narrative_ontology:cs_drift_state(marketplace_pidgin_reading, post_1880_nationalist_adoption, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('07715ba9-717c-489c-81be-29f8e482fbf5', native_speaker_status_not_necessary, empirically_contingent).
+narrative_ontology:cs_reference_frame('07715ba9-717c-489c-81be-29f8e482fbf5', medieval_hebrew_marketplace_reality).
+narrative_ontology:cs_drift_state('07715ba9-717c-489c-81be-29f8e482fbf5', post_1880_nationalist_adoption, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(marketplace_pidgin_reading, jewish_merchant_networks).

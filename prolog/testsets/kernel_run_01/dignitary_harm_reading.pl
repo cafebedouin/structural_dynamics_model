@@ -124,18 +124,20 @@ narrative_ontology:topic_domain(dignitary_harm_reading, "constitutional_law/free
 domain_priors:requires_active_enforcement(dignitary_harm_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(dignitary_harm_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(dignitary_harm_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(dignitary_harm_reading).
+narrative_ontology:cs_story_uid(dignitary_harm_reading, '3f7b8f00-9178-43c8-8902-cfa2bda2e6ea').
+narrative_ontology:cs_created_at('3f7b8f00-9178-43c8-8902-cfa2bda2e6ea', '').
+narrative_ontology:cs_kernel_codification('3f7b8f00-9178-43c8-8902-cfa2bda2e6ea', fixed_text).
+narrative_ontology:cs_authority_grounding('3f7b8f00-9178-43c8-8902-cfa2bda2e6ea', lineage).
+narrative_ontology:cs_interpretation_layer_present('3f7b8f00-9178-43c8-8902-cfa2bda2e6ea').
 narrative_ontology:cs_kernel_id(dignitary_harm_reading, speech_protection_boundary).
-narrative_ontology:cs_reading_relation(dignitary_harm_reading, near_absolutist_reading, coexists_with).
-narrative_ontology:cs_reading_relation(dignitary_harm_reading, balancing_reading, coexists_with).
-narrative_ontology:cs_axiom(dignitary_harm_reading, foundational, dignitary_harm_justifies_restriction).
+narrative_ontology:cs_reading_relation('3f7b8f00-9178-43c8-8902-cfa2bda2e6ea', near_absolutist_reading, coexists_with).
+narrative_ontology:cs_reading_relation('3f7b8f00-9178-43c8-8902-cfa2bda2e6ea', balancing_reading, coexists_with).
+narrative_ontology:cs_axiom('3f7b8f00-9178-43c8-8902-cfa2bda2e6ea', foundational, dignitary_harm_justifies_restriction).
 narrative_ontology:cs_axiom_status(dignitary_harm_justifies_restriction, holdable).
-narrative_ontology:cs_axiom(dignitary_harm_reading, foundational, systemic_oppression_constructed_by_speech).
+narrative_ontology:cs_axiom('3f7b8f00-9178-43c8-8902-cfa2bda2e6ea', foundational, systemic_oppression_constructed_by_speech).
 narrative_ontology:cs_axiom_status(systemic_oppression_constructed_by_speech, holdable).
-narrative_ontology:cs_reference_frame(dignitary_harm_reading, equal_epistemic_access_framework).
-narrative_ontology:cs_drift_state(dignitary_harm_reading, contemporary_polarization_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_reference_frame('3f7b8f00-9178-43c8-8902-cfa2bda2e6ea', equal_epistemic_access_framework).
+narrative_ontology:cs_drift_state('3f7b8f00-9178-43c8-8902-cfa2bda2e6ea', contemporary_polarization_era, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(dignitary_harm_reading, vulnerable_minorities).

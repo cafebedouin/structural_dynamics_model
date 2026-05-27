@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(federal_coercion_determines_practice, manifestation_as_genuine_prophecy).
 narrative_ontology:cs_axiom_contradiction(manifestation_as_genuine_prophecy, federal_coercion_determines_practice).
+narrative_ontology:cs_story_uid(marriage_commitment_legitimacy_contradictions, '0c5998b3-745b-4b92-b142-05e29c0ff51b').
+narrative_ontology:cs_created_at('0c5998b3-745b-4b92-b142-05e29c0ff51b', '').

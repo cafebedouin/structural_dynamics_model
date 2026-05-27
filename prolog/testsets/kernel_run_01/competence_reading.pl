@@ -113,16 +113,18 @@ narrative_ontology:topic_domain(competence_reading, "disaster_preparedness/insti
 domain_priors:requires_active_enforcement(competence_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(competence_reading, distributed).
-narrative_ontology:cs_authority_grounding(competence_reading, practice).
+narrative_ontology:cs_story_uid(competence_reading, 'be378b57-9f97-4549-b356-c5f333891614').
+narrative_ontology:cs_created_at('be378b57-9f97-4549-b356-c5f333891614', '').
+narrative_ontology:cs_kernel_codification('be378b57-9f97-4549-b356-c5f333891614', distributed).
+narrative_ontology:cs_authority_grounding('be378b57-9f97-4549-b356-c5f333891614', practice).
 narrative_ontology:cs_kernel_id(competence_reading, preparedness_retention).
-narrative_ontology:cs_reading_relation(competence_reading, husk_reading, coexists_with).
-narrative_ontology:cs_axiom(competence_reading, foundational, embodied_knowledge_non_substitutable).
+narrative_ontology:cs_reading_relation('be378b57-9f97-4549-b356-c5f333891614', husk_reading, coexists_with).
+narrative_ontology:cs_axiom('be378b57-9f97-4549-b356-c5f333891614', foundational, embodied_knowledge_non_substitutable).
 narrative_ontology:cs_axiom_status(embodied_knowledge_non_substitutable, holdable).
-narrative_ontology:cs_axiom(competence_reading, foundational, drills_functionally_necessary).
+narrative_ontology:cs_axiom('be378b57-9f97-4549-b356-c5f333891614', foundational, drills_functionally_necessary).
 narrative_ontology:cs_axiom_status(drills_functionally_necessary, holdable).
-narrative_ontology:cs_reference_frame(competence_reading, active_exercised_competence).
-narrative_ontology:cs_drift_state(competence_reading, contemporary_institutional_pressure, gap(practice_drift, substantial, true)).
+narrative_ontology:cs_reference_frame('be378b57-9f97-4549-b356-c5f333891614', active_exercised_competence).
+narrative_ontology:cs_drift_state('be378b57-9f97-4549-b356-c5f333891614', contemporary_institutional_pressure, gap(practice_drift, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(competence_reading, flood_response_capacity).

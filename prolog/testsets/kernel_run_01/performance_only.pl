@@ -121,18 +121,20 @@ narrative_ontology:human_readable(performance_only, "Sacrifice Commandment: Perf
 narrative_ontology:topic_domain(performance_only, "religious_studies/halakhic_theory/commitment_system").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(performance_only, fixed_text).
-narrative_ontology:cs_authority_grounding(performance_only, lineage).
-narrative_ontology:cs_interpretation_layer_present(performance_only).
+narrative_ontology:cs_story_uid(performance_only, '3a449931-557a-481f-a20f-05dad8aed2d3').
+narrative_ontology:cs_created_at('3a449931-557a-481f-a20f-05dad8aed2d3', '').
+narrative_ontology:cs_kernel_codification('3a449931-557a-481f-a20f-05dad8aed2d3', fixed_text).
+narrative_ontology:cs_authority_grounding('3a449931-557a-481f-a20f-05dad8aed2d3', lineage).
+narrative_ontology:cs_interpretation_layer_present('3a449931-557a-481f-a20f-05dad8aed2d3').
 narrative_ontology:cs_kernel_id(performance_only, sacrifice_commandment).
-narrative_ontology:cs_reading_relation(performance_only, study_as_performance, forecloses).
-narrative_ontology:cs_reading_relation(performance_only, archive_maintenance, coexists_with).
-narrative_ontology:cs_axiom(performance_only, foundational, performance_requires_temple).
+narrative_ontology:cs_reading_relation('3a449931-557a-481f-a20f-05dad8aed2d3', study_as_performance, forecloses).
+narrative_ontology:cs_reading_relation('3a449931-557a-481f-a20f-05dad8aed2d3', archive_maintenance, coexists_with).
+narrative_ontology:cs_axiom('3a449931-557a-481f-a20f-05dad8aed2d3', foundational, performance_requires_temple).
 narrative_ontology:cs_axiom_status(performance_requires_temple, holdable).
-narrative_ontology:cs_axiom(performance_only, foundational, suspension_distinct_from_nullification).
+narrative_ontology:cs_axiom('3a449931-557a-481f-a20f-05dad8aed2d3', foundational, suspension_distinct_from_nullification).
 narrative_ontology:cs_axiom_status(suspension_distinct_from_nullification, holdable).
-narrative_ontology:cs_reference_frame(performance_only, torah_commandment_coherence_across_exile).
-narrative_ontology:cs_drift_state(performance_only, contemporary_period, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_reference_frame('3a449931-557a-481f-a20f-05dad8aed2d3', torah_commandment_coherence_across_exile).
+narrative_ontology:cs_drift_state('3a449931-557a-481f-a20f-05dad8aed2d3', contemporary_period, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(performance_only, rabbinic_interpretive_authority).

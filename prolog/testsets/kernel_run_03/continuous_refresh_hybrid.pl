@@ -117,20 +117,22 @@ narrative_ontology:topic_domain(continuous_refresh_hybrid, "safety_engineering/o
 domain_priors:requires_active_enforcement(continuous_refresh_hybrid).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(continuous_refresh_hybrid, formalized).
-narrative_ontology:cs_authority_grounding(continuous_refresh_hybrid, practice).
-narrative_ontology:cs_interpretation_layer_present(continuous_refresh_hybrid).
+narrative_ontology:cs_story_uid(continuous_refresh_hybrid, '846b13ff-0a25-4c60-8826-3c09a6346eac').
+narrative_ontology:cs_created_at('846b13ff-0a25-4c60-8826-3c09a6346eac', '').
+narrative_ontology:cs_kernel_codification('846b13ff-0a25-4c60-8826-3c09a6346eac', formalized).
+narrative_ontology:cs_authority_grounding('846b13ff-0a25-4c60-8826-3c09a6346eac', practice).
+narrative_ontology:cs_interpretation_layer_present('846b13ff-0a25-4c60-8826-3c09a6346eac').
 narrative_ontology:cs_kernel_id(continuous_refresh_hybrid, competence_exercise_validity).
-narrative_ontology:cs_reading_relation(continuous_refresh_hybrid, simulation_as_proxy, forecloses).
-narrative_ontology:cs_reading_relation(continuous_refresh_hybrid, real_catastrophe_only, influences).
-narrative_ontology:cs_axiom(continuous_refresh_hybrid, foundational, competence_is_process_dependent).
+narrative_ontology:cs_reading_relation('846b13ff-0a25-4c60-8826-3c09a6346eac', simulation_as_proxy, forecloses).
+narrative_ontology:cs_reading_relation('846b13ff-0a25-4c60-8826-3c09a6346eac', real_catastrophe_only, influences).
+narrative_ontology:cs_axiom('846b13ff-0a25-4c60-8826-3c09a6346eac', foundational, competence_is_process_dependent).
 narrative_ontology:cs_axiom_status(competence_is_process_dependent, holdable).
-narrative_ontology:cs_axiom_grounding(continuous_refresh_hybrid, competence_is_process_dependent, empirically_contingent).
-narrative_ontology:cs_axiom(continuous_refresh_hybrid, foundational, safety_record_validates_continuous_exercise).
+narrative_ontology:cs_axiom_grounding('846b13ff-0a25-4c60-8826-3c09a6346eac', competence_is_process_dependent, empirically_contingent).
+narrative_ontology:cs_axiom('846b13ff-0a25-4c60-8826-3c09a6346eac', foundational, safety_record_validates_continuous_exercise).
 narrative_ontology:cs_axiom_status(safety_record_validates_continuous_exercise, holdable).
-narrative_ontology:cs_axiom_grounding(continuous_refresh_hybrid, safety_record_validates_continuous_exercise, empirically_contingent).
-narrative_ontology:cs_reference_frame(continuous_refresh_hybrid, competence_as_continuous_skill_maintenance).
-narrative_ontology:cs_drift_state(continuous_refresh_hybrid, contemporary_automation_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('846b13ff-0a25-4c60-8826-3c09a6346eac', safety_record_validates_continuous_exercise, empirically_contingent).
+narrative_ontology:cs_reference_frame('846b13ff-0a25-4c60-8826-3c09a6346eac', competence_as_continuous_skill_maintenance).
+narrative_ontology:cs_drift_state('846b13ff-0a25-4c60-8826-3c09a6346eac', contemporary_automation_era, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(continuous_refresh_hybrid, safety_regulator).

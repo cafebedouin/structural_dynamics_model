@@ -122,20 +122,22 @@ narrative_ontology:topic_domain(gender_identity_reading, "social_ontology/medica
 domain_priors:requires_active_enforcement(gender_identity_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(gender_identity_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(gender_identity_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(gender_identity_reading).
+narrative_ontology:cs_story_uid(gender_identity_reading, '6834905a-2516-4dec-b64c-f38cc1639ad8').
+narrative_ontology:cs_created_at('6834905a-2516-4dec-b64c-f38cc1639ad8', '').
+narrative_ontology:cs_kernel_codification('6834905a-2516-4dec-b64c-f38cc1639ad8', fixed_text).
+narrative_ontology:cs_authority_grounding('6834905a-2516-4dec-b64c-f38cc1639ad8', lineage).
+narrative_ontology:cs_interpretation_layer_present('6834905a-2516-4dec-b64c-f38cc1639ad8').
 narrative_ontology:cs_kernel_id(gender_identity_reading, woman_female_category).
-narrative_ontology:cs_reading_relation(gender_identity_reading, sex_biology_reading, coexists_with).
-narrative_ontology:cs_reading_relation(gender_identity_reading, intersectional_coexistence_reading, influences).
-narrative_ontology:cs_axiom(gender_identity_reading, foundational, gender_identity_constitutive_of_personhood).
+narrative_ontology:cs_reading_relation('6834905a-2516-4dec-b64c-f38cc1639ad8', sex_biology_reading, coexists_with).
+narrative_ontology:cs_reading_relation('6834905a-2516-4dec-b64c-f38cc1639ad8', intersectional_coexistence_reading, influences).
+narrative_ontology:cs_axiom('6834905a-2516-4dec-b64c-f38cc1639ad8', foundational, gender_identity_constitutive_of_personhood).
 narrative_ontology:cs_axiom_status(gender_identity_constitutive_of_personhood, holdable).
-narrative_ontology:cs_axiom_grounding(gender_identity_reading, gender_identity_constitutive_of_personhood, deontological).
-narrative_ontology:cs_axiom(gender_identity_reading, foundational, self_identification_boundary_criterion).
+narrative_ontology:cs_axiom_grounding('6834905a-2516-4dec-b64c-f38cc1639ad8', gender_identity_constitutive_of_personhood, deontological).
+narrative_ontology:cs_axiom('6834905a-2516-4dec-b64c-f38cc1639ad8', foundational, self_identification_boundary_criterion).
 narrative_ontology:cs_axiom_status(self_identification_boundary_criterion, holdable).
-narrative_ontology:cs_axiom_grounding(gender_identity_reading, self_identification_boundary_criterion, conventional).
-narrative_ontology:cs_reference_frame(gender_identity_reading, identity_first_personhood).
-narrative_ontology:cs_drift_state(gender_identity_reading, contemporary_gender_recognition_movement, gap(authority_erosion, substantial, true)).
+narrative_ontology:cs_axiom_grounding('6834905a-2516-4dec-b64c-f38cc1639ad8', self_identification_boundary_criterion, conventional).
+narrative_ontology:cs_reference_frame('6834905a-2516-4dec-b64c-f38cc1639ad8', identity_first_personhood).
+narrative_ontology:cs_drift_state('6834905a-2516-4dec-b64c-f38cc1639ad8', contemporary_gender_recognition_movement, gap(authority_erosion, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(gender_identity_reading, transgender_women).

@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(simulation_fidelity_sufficient, simulation_epistemically_inferior_to_catastrophe).
 narrative_ontology:cs_axiom_contradiction(simulation_epistemically_inferior_to_catastrophe, simulation_fidelity_sufficient).
+narrative_ontology:cs_story_uid(competence_exercise_validity_contradictions, '0f152a98-2043-417e-8b32-2d3a44688afb').
+narrative_ontology:cs_created_at('0f152a98-2043-417e-8b32-2d3a44688afb', '').

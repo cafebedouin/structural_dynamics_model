@@ -121,20 +121,22 @@ narrative_ontology:topic_domain(precautionary_reading, "risk_assessment/energy_p
 domain_priors:requires_active_enforcement(precautionary_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(precautionary_reading, formalized).
-narrative_ontology:cs_authority_grounding(precautionary_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(precautionary_reading).
+narrative_ontology:cs_story_uid(precautionary_reading, '8d8d0e22-0585-4167-94e1-a7b64c1c28a6').
+narrative_ontology:cs_created_at('8d8d0e22-0585-4167-94e1-a7b64c1c28a6', '').
+narrative_ontology:cs_kernel_codification('8d8d0e22-0585-4167-94e1-a7b64c1c28a6', formalized).
+narrative_ontology:cs_authority_grounding('8d8d0e22-0585-4167-94e1-a7b64c1c28a6', extraction).
+narrative_ontology:cs_interpretation_layer_present('8d8d0e22-0585-4167-94e1-a7b64c1c28a6').
 narrative_ontology:cs_kernel_id(precautionary_reading, acceptable_risk_for_energy).
-narrative_ontology:cs_reading_relation(precautionary_reading, expected_value_reading, coexists_with).
-narrative_ontology:cs_reading_relation(precautionary_reading, catastrophic_tail_reading, coexists_with).
-narrative_ontology:cs_axiom(precautionary_reading, foundational, irreducible_uncertainty_demands_burden_shift).
+narrative_ontology:cs_reading_relation('8d8d0e22-0585-4167-94e1-a7b64c1c28a6', expected_value_reading, coexists_with).
+narrative_ontology:cs_reading_relation('8d8d0e22-0585-4167-94e1-a7b64c1c28a6', catastrophic_tail_reading, coexists_with).
+narrative_ontology:cs_axiom('8d8d0e22-0585-4167-94e1-a7b64c1c28a6', foundational, irreducible_uncertainty_demands_burden_shift).
 narrative_ontology:cs_axiom_status(irreducible_uncertainty_demands_burden_shift, holdable).
-narrative_ontology:cs_axiom_grounding(precautionary_reading, irreducible_uncertainty_demands_burden_shift, empirically_contingent).
-narrative_ontology:cs_axiom(precautionary_reading, foundational, affected_populations_require_democratic_veto).
+narrative_ontology:cs_axiom_grounding('8d8d0e22-0585-4167-94e1-a7b64c1c28a6', irreducible_uncertainty_demands_burden_shift, empirically_contingent).
+narrative_ontology:cs_axiom('8d8d0e22-0585-4167-94e1-a7b64c1c28a6', foundational, affected_populations_require_democratic_veto).
 narrative_ontology:cs_axiom_status(affected_populations_require_democratic_veto, holdable).
-narrative_ontology:cs_axiom_grounding(precautionary_reading, affected_populations_require_democratic_veto, deontological).
-narrative_ontology:cs_reference_frame(precautionary_reading, uncertainty_bounded_risk_governance).
-narrative_ontology:cs_drift_state(precautionary_reading, contemporary_climate_energy_transition, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('8d8d0e22-0585-4167-94e1-a7b64c1c28a6', affected_populations_require_democratic_veto, deontological).
+narrative_ontology:cs_reference_frame('8d8d0e22-0585-4167-94e1-a7b64c1c28a6', uncertainty_bounded_risk_governance).
+narrative_ontology:cs_drift_state('8d8d0e22-0585-4167-94e1-a7b64c1c28a6', contemporary_climate_energy_transition, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(precautionary_reading, populations_with_veto_rights).

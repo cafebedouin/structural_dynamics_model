@@ -129,17 +129,19 @@ narrative_ontology:topic_domain(legalization_reading, "public_health_policy/crim
 domain_priors:requires_active_enforcement(legalization_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(legalization_reading, formalized).
-narrative_ontology:cs_authority_grounding(legalization_reading, expertise).
+narrative_ontology:cs_story_uid(legalization_reading, 'ed725d89-738d-48fb-815c-8f0ea097b458').
+narrative_ontology:cs_created_at('ed725d89-738d-48fb-815c-8f0ea097b458', '').
+narrative_ontology:cs_kernel_codification('ed725d89-738d-48fb-815c-8f0ea097b458', formalized).
+narrative_ontology:cs_authority_grounding('ed725d89-738d-48fb-815c-8f0ea097b458', expertise).
 narrative_ontology:cs_kernel_id(legalization_reading, substance_control_authority).
-narrative_ontology:cs_reading_relation(legalization_reading, prohibition_reading, forecloses).
-narrative_ontology:cs_reading_relation(legalization_reading, harm_reduction_reading, coexists_with).
-narrative_ontology:cs_axiom(legalization_reading, foundational, regulation_superior_to_prohibition).
+narrative_ontology:cs_reading_relation('ed725d89-738d-48fb-815c-8f0ea097b458', prohibition_reading, forecloses).
+narrative_ontology:cs_reading_relation('ed725d89-738d-48fb-815c-8f0ea097b458', harm_reduction_reading, coexists_with).
+narrative_ontology:cs_axiom('ed725d89-738d-48fb-815c-8f0ea097b458', foundational, regulation_superior_to_prohibition).
 narrative_ontology:cs_axiom_status(regulation_superior_to_prohibition, holdable).
-narrative_ontology:cs_axiom(legalization_reading, secondary, market_monopoly_justifiable).
+narrative_ontology:cs_axiom('ed725d89-738d-48fb-815c-8f0ea097b458', secondary, market_monopoly_justifiable).
 narrative_ontology:cs_axiom_status(market_monopoly_justifiable, holdable).
-narrative_ontology:cs_reference_frame(legalization_reading, regulated_market_harm_minimization).
-narrative_ontology:cs_drift_state(legalization_reading, post_implementation_regulatory_capture, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('ed725d89-738d-48fb-815c-8f0ea097b458', regulated_market_harm_minimization).
+narrative_ontology:cs_drift_state('ed725d89-738d-48fb-815c-8f0ea097b458', post_implementation_regulatory_capture, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(legalization_reading, users_accessing_regulated_markets).

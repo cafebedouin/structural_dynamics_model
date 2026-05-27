@@ -126,20 +126,22 @@ narrative_ontology:topic_domain(survival_competence_reading, "religious_studies/
 domain_priors:requires_active_enforcement(survival_competence_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(survival_competence_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(survival_competence_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(survival_competence_reading).
+narrative_ontology:cs_story_uid(survival_competence_reading, 'f4781343-2da2-41a6-8823-a7160e8f7756').
+narrative_ontology:cs_created_at('f4781343-2da2-41a6-8823-a7160e8f7756', '').
+narrative_ontology:cs_kernel_codification('f4781343-2da2-41a6-8823-a7160e8f7756', fixed_text).
+narrative_ontology:cs_authority_grounding('f4781343-2da2-41a6-8823-a7160e8f7756', lineage).
+narrative_ontology:cs_interpretation_layer_present('f4781343-2da2-41a6-8823-a7160e8f7756').
 narrative_ontology:cs_kernel_id(survival_competence_reading, catastrophe_memory_transmission).
-narrative_ontology:cs_reading_relation(survival_competence_reading, mourning_practice_reading, coexists_with).
-narrative_ontology:cs_reading_relation(survival_competence_reading, hybrid_pedagogical_reading, influences).
-narrative_ontology:cs_axiom(survival_competence_reading, foundational, survival_knowledge_foundational_identity).
+narrative_ontology:cs_reading_relation('f4781343-2da2-41a6-8823-a7160e8f7756', mourning_practice_reading, coexists_with).
+narrative_ontology:cs_reading_relation('f4781343-2da2-41a6-8823-a7160e8f7756', hybrid_pedagogical_reading, influences).
+narrative_ontology:cs_axiom('f4781343-2da2-41a6-8823-a7160e8f7756', foundational, survival_knowledge_foundational_identity).
 narrative_ontology:cs_axiom_status(survival_knowledge_foundational_identity, holdable).
-narrative_ontology:cs_axiom_grounding(survival_competence_reading, survival_knowledge_foundational_identity, deontological).
-narrative_ontology:cs_axiom(survival_competence_reading, foundational, pedagogical_transmission_mechanism_required).
+narrative_ontology:cs_axiom_grounding('f4781343-2da2-41a6-8823-a7160e8f7756', survival_knowledge_foundational_identity, deontological).
+narrative_ontology:cs_axiom('f4781343-2da2-41a6-8823-a7160e8f7756', foundational, pedagogical_transmission_mechanism_required).
 narrative_ontology:cs_axiom_status(pedagogical_transmission_mechanism_required, holdable).
-narrative_ontology:cs_axiom_grounding(survival_competence_reading, pedagogical_transmission_mechanism_required, empirically_contingent).
-narrative_ontology:cs_reference_frame(survival_competence_reading, structured_ritual_pedagogy).
-narrative_ontology:cs_drift_state(survival_competence_reading, contemporary_secularization_era, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('f4781343-2da2-41a6-8823-a7160e8f7756', pedagogical_transmission_mechanism_required, empirically_contingent).
+narrative_ontology:cs_reference_frame('f4781343-2da2-41a6-8823-a7160e8f7756', structured_ritual_pedagogy).
+narrative_ontology:cs_drift_state('f4781343-2da2-41a6-8823-a7160e8f7756', contemporary_secularization_era, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(survival_competence_reading, transmitting_community_elders).

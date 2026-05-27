@@ -118,20 +118,22 @@ narrative_ontology:topic_domain(placeholder_reading, "history_of_mathematics/phi
 domain_priors:requires_active_enforcement(placeholder_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(placeholder_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(placeholder_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(placeholder_reading).
+narrative_ontology:cs_story_uid(placeholder_reading, '5ab86e3e-4bc3-4935-8fcc-daeb21254702').
+narrative_ontology:cs_created_at('5ab86e3e-4bc3-4935-8fcc-daeb21254702', '').
+narrative_ontology:cs_kernel_codification('5ab86e3e-4bc3-4935-8fcc-daeb21254702', fixed_text).
+narrative_ontology:cs_authority_grounding('5ab86e3e-4bc3-4935-8fcc-daeb21254702', lineage).
+narrative_ontology:cs_interpretation_layer_present('5ab86e3e-4bc3-4935-8fcc-daeb21254702').
 narrative_ontology:cs_kernel_id(placeholder_reading, zero_mathematical_status).
-narrative_ontology:cs_reading_relation(placeholder_reading, parmenidean_rejection, coexists_with).
-narrative_ontology:cs_reading_relation(placeholder_reading, number_reading, influences).
-narrative_ontology:cs_axiom(placeholder_reading, foundational, zero_notational_not_ontological).
+narrative_ontology:cs_reading_relation('5ab86e3e-4bc3-4935-8fcc-daeb21254702', parmenidean_rejection, coexists_with).
+narrative_ontology:cs_reading_relation('5ab86e3e-4bc3-4935-8fcc-daeb21254702', number_reading, influences).
+narrative_ontology:cs_axiom('5ab86e3e-4bc3-4935-8fcc-daeb21254702', foundational, zero_notational_not_ontological).
 narrative_ontology:cs_axiom_status(zero_notational_not_ontological, holdable).
-narrative_ontology:cs_axiom_grounding(placeholder_reading, zero_notational_not_ontological, conventional).
-narrative_ontology:cs_axiom(placeholder_reading, foundational, arithmetic_closure_deferrable).
+narrative_ontology:cs_axiom_grounding('5ab86e3e-4bc3-4935-8fcc-daeb21254702', zero_notational_not_ontological, conventional).
+narrative_ontology:cs_axiom('5ab86e3e-4bc3-4935-8fcc-daeb21254702', foundational, arithmetic_closure_deferrable).
 narrative_ontology:cs_axiom_status(arithmetic_closure_deferrable, overridden).
-narrative_ontology:cs_axiom_grounding(placeholder_reading, arithmetic_closure_deferrable, empirically_contingent).
-narrative_ontology:cs_reference_frame(placeholder_reading, positional_notation_efficiency).
-narrative_ontology:cs_drift_state(placeholder_reading, early_modern_calculation_period, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('5ab86e3e-4bc3-4935-8fcc-daeb21254702', arithmetic_closure_deferrable, empirically_contingent).
+narrative_ontology:cs_reference_frame('5ab86e3e-4bc3-4935-8fcc-daeb21254702', positional_notation_efficiency).
+narrative_ontology:cs_drift_state('5ab86e3e-4bc3-4935-8fcc-daeb21254702', early_modern_calculation_period, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(placeholder_reading, positional_notation_system).

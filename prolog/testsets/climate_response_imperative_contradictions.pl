@@ -12,3 +12,5 @@ narrative_ontology:cs_axiom_contradiction(emissions_reduction_primary_imperative
 narrative_ontology:cs_axiom_contradiction(global_north_consumption_reduction_mandatory, emissions_reduction_primary_imperative).
 narrative_ontology:cs_axiom_contradiction(immediate_suffering_priority, emissions_reduction_primary_imperative).
 narrative_ontology:cs_axiom_contradiction(emissions_reduction_primary_imperative, immediate_suffering_priority).
+narrative_ontology:cs_story_uid(climate_response_imperative_contradictions, 'fa7750d6-80ca-49c8-a630-2a8a19c8a8f6').
+narrative_ontology:cs_created_at('fa7750d6-80ca-49c8-a630-2a8a19c8a8f6', '').

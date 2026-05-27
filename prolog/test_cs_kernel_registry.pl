@@ -59,17 +59,17 @@ cs_kernel_test("triplet_coverage_predicate",
 
 cs_kernel_test("readings_contains_abolition",
     (cs_readings_for_kernel(state_execution_authority, Rs),
-     memberchk(abolition_reading, Rs)),
+     member(_-abolition_reading, Rs)),
     success).
 
 cs_kernel_test("readings_contains_retributive",
     (cs_readings_for_kernel(state_execution_authority, Rs),
-     memberchk(retributive_reading, Rs)),
+     member(_-retributive_reading, Rs)),
     success).
 
 cs_kernel_test("readings_contains_deterrence",
     (cs_readings_for_kernel(state_execution_authority, Rs),
-     memberchk(deterrence_reading, Rs)),
+     member(_-deterrence_reading, Rs)),
     success).
 
 cs_kernel_test("unknown_kernel_empty",
@@ -86,15 +86,15 @@ cs_kernel_test("unknown_kernel_empty",
    ================================================================ */
 
 cs_kernel_test("divergence_fires_abolition_deterrence",
-    cs_kernel_divergence(state_execution_authority, _, abolition_reading, deterrence_reading),
+    cs_kernel_divergence(state_execution_authority, _, _-abolition_reading, _-deterrence_reading),
     success).
 
 cs_kernel_test("divergence_fires_abolition_retributive",
-    cs_kernel_divergence(state_execution_authority, _, abolition_reading, retributive_reading),
+    cs_kernel_divergence(state_execution_authority, _, _-abolition_reading, _-retributive_reading),
     success).
 
 cs_kernel_test("divergence_fires_deterrence_retributive",
-    cs_kernel_divergence(state_execution_authority, _, deterrence_reading, retributive_reading),
+    cs_kernel_divergence(state_execution_authority, _, _-deterrence_reading, _-retributive_reading),
     success).
 
 /* ================================================================
@@ -117,8 +117,8 @@ cs_kernel_test("divergence_silent_at_observed_agreement_context",
                 time_horizon(biographical),
                 exit_options(trapped),
                 spatial_scope(national)),
-        deterrence_reading,
-        retributive_reading),
+        _-deterrence_reading,
+        _-retributive_reading),
     success).
 
 % Test 2: error-masking guard — both calls succeed and agree at that same context,

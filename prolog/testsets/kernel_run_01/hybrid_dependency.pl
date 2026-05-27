@@ -119,17 +119,19 @@ narrative_ontology:topic_domain(hybrid_dependency, "safety_engineering/organizat
 domain_priors:requires_active_enforcement(hybrid_dependency).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(hybrid_dependency, formalized).
-narrative_ontology:cs_authority_grounding(hybrid_dependency, expertise).
+narrative_ontology:cs_story_uid(hybrid_dependency, '8f40ff63-63b4-4bc2-b84c-26b25cae2294').
+narrative_ontology:cs_created_at('8f40ff63-63b4-4bc2-b84c-26b25cae2294', '').
+narrative_ontology:cs_kernel_codification('8f40ff63-63b4-4bc2-b84c-26b25cae2294', formalized).
+narrative_ontology:cs_authority_grounding('8f40ff63-63b4-4bc2-b84c-26b25cae2294', expertise).
 narrative_ontology:cs_kernel_id(hybrid_dependency, competence_exercise_requirement).
-narrative_ontology:cs_reading_relation(hybrid_dependency, simulation_as_adequate_exercise, influences).
-narrative_ontology:cs_reading_relation(hybrid_dependency, catastrophe_as_necessary_anchor, coexists_with).
-narrative_ontology:cs_axiom(hybrid_dependency, foundational, proprioceptive_feedback_materially_important).
+narrative_ontology:cs_reading_relation('8f40ff63-63b4-4bc2-b84c-26b25cae2294', simulation_as_adequate_exercise, influences).
+narrative_ontology:cs_reading_relation('8f40ff63-63b4-4bc2-b84c-26b25cae2294', catastrophe_as_necessary_anchor, coexists_with).
+narrative_ontology:cs_axiom('8f40ff63-63b4-4bc2-b84c-26b25cae2294', foundational, proprioceptive_feedback_materially_important).
 narrative_ontology:cs_axiom_status(proprioceptive_feedback_materially_important, holdable).
-narrative_ontology:cs_axiom(hybrid_dependency, foundational, simulation_foundation_necessary_but_insufficient).
+narrative_ontology:cs_axiom('8f40ff63-63b4-4bc2-b84c-26b25cae2294', foundational, simulation_foundation_necessary_but_insufficient).
 narrative_ontology:cs_axiom_status(simulation_foundation_necessary_but_insufficient, holdable).
-narrative_ontology:cs_reference_frame(hybrid_dependency, simulation_enabled_competence_regime).
-narrative_ontology:cs_drift_state(hybrid_dependency, contemporary_high_fidelity_simulation_era, gap(codification_collapse, substantial, false)).
+narrative_ontology:cs_reference_frame('8f40ff63-63b4-4bc2-b84c-26b25cae2294', simulation_enabled_competence_regime).
+narrative_ontology:cs_drift_state('8f40ff63-63b4-4bc2-b84c-26b25cae2294', contemporary_high_fidelity_simulation_era, gap(codification_collapse, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(hybrid_dependency, line_operators).

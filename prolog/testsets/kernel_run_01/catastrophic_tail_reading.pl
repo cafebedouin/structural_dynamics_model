@@ -120,17 +120,19 @@ narrative_ontology:topic_domain(catastrophic_tail_reading, "energy_policy/risk_g
 domain_priors:requires_active_enforcement(catastrophic_tail_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(catastrophic_tail_reading, formalized).
-narrative_ontology:cs_authority_grounding(catastrophic_tail_reading, extraction).
+narrative_ontology:cs_story_uid(catastrophic_tail_reading, '315dadde-35d3-4ab2-835c-562e2faae467').
+narrative_ontology:cs_created_at('315dadde-35d3-4ab2-835c-562e2faae467', '').
+narrative_ontology:cs_kernel_codification('315dadde-35d3-4ab2-835c-562e2faae467', formalized).
+narrative_ontology:cs_authority_grounding('315dadde-35d3-4ab2-835c-562e2faae467', extraction).
 narrative_ontology:cs_kernel_id(catastrophic_tail_reading, acceptable_risk_for_energy).
-narrative_ontology:cs_reading_relation(catastrophic_tail_reading, expected_value_reading, forecloses).
-narrative_ontology:cs_reading_relation(catastrophic_tail_reading, precautionary_reading, coexists_with).
-narrative_ontology:cs_axiom(catastrophic_tail_reading, foundational, irreversibility_tail_dominance).
+narrative_ontology:cs_reading_relation('315dadde-35d3-4ab2-835c-562e2faae467', expected_value_reading, forecloses).
+narrative_ontology:cs_reading_relation('315dadde-35d3-4ab2-835c-562e2faae467', precautionary_reading, coexists_with).
+narrative_ontology:cs_axiom('315dadde-35d3-4ab2-835c-562e2faae467', foundational, irreversibility_tail_dominance).
 narrative_ontology:cs_axiom_status(irreversibility_tail_dominance, holdable).
-narrative_ontology:cs_axiom(catastrophic_tail_reading, foundational, spatial_concentration_moral_weight).
+narrative_ontology:cs_axiom('315dadde-35d3-4ab2-835c-562e2faae467', foundational, spatial_concentration_moral_weight).
 narrative_ontology:cs_axiom_status(spatial_concentration_moral_weight, holdable).
-narrative_ontology:cs_reference_frame(catastrophic_tail_reading, tail_event_irreversibility_baseline).
-narrative_ontology:cs_drift_state(catastrophic_tail_reading, post_fukushima_era, gap(axiom_overriding, substantial, true)).
+narrative_ontology:cs_reference_frame('315dadde-35d3-4ab2-835c-562e2faae467', tail_event_irreversibility_baseline).
+narrative_ontology:cs_drift_state('315dadde-35d3-4ab2-835c-562e2faae467', post_fukushima_era, gap(axiom_overriding, substantial, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(catastrophic_tail_reading, renewable_energy_advocates).

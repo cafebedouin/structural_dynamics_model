@@ -12,3 +12,5 @@ narrative_ontology:cs_axiom_contradiction(change_through_use_is_evolution_not_co
 narrative_ontology:cs_axiom_contradiction(cicero_defines_correctness, change_through_use_is_evolution_not_corruption).
 narrative_ontology:cs_axiom_contradiction(classical_texts_are_historically_determinate, change_through_use_is_evolution_not_corruption).
 narrative_ontology:cs_axiom_contradiction(change_through_use_is_evolution_not_corruption, classical_texts_are_historically_determinate).
+narrative_ontology:cs_story_uid(correct_latin_contradictions, '844223ab-551c-42a1-b516-31071df3a4b9').
+narrative_ontology:cs_created_at('844223ab-551c-42a1-b516-31071df3a4b9', '').

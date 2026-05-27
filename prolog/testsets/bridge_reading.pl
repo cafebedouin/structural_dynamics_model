@@ -127,19 +127,21 @@ narrative_ontology:topic_domain(bridge_reading, "ai_governance/technology_ethics
 domain_priors:requires_active_enforcement(bridge_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(bridge_reading, distributed).
-narrative_ontology:cs_authority_grounding(bridge_reading, distributed).
+narrative_ontology:cs_story_uid(bridge_reading, '873d5128-4dac-438f-ab7c-eac0523b6af4').
+narrative_ontology:cs_created_at('873d5128-4dac-438f-ab7c-eac0523b6af4', '').
+narrative_ontology:cs_kernel_codification('873d5128-4dac-438f-ab7c-eac0523b6af4', distributed).
+narrative_ontology:cs_authority_grounding('873d5128-4dac-438f-ab7c-eac0523b6af4', distributed).
 narrative_ontology:cs_kernel_id(bridge_reading, ai_risk_governance_priority).
-narrative_ontology:cs_reading_relation(bridge_reading, existential_risk_reading, coexists_with).
-narrative_ontology:cs_reading_relation(bridge_reading, near_term_harms_reading, coexists_with).
-narrative_ontology:cs_axiom(bridge_reading, foundational, present_future_harms_entangled_not_competing).
+narrative_ontology:cs_reading_relation('873d5128-4dac-438f-ab7c-eac0523b6af4', existential_risk_reading, coexists_with).
+narrative_ontology:cs_reading_relation('873d5128-4dac-438f-ab7c-eac0523b6af4', near_term_harms_reading, coexists_with).
+narrative_ontology:cs_axiom('873d5128-4dac-438f-ab7c-eac0523b6af4', foundational, present_future_harms_entangled_not_competing).
 narrative_ontology:cs_axiom_status(present_future_harms_entangled_not_competing, holdable).
-narrative_ontology:cs_axiom_grounding(bridge_reading, present_future_harms_entangled_not_competing, deontological).
-narrative_ontology:cs_axiom(bridge_reading, foundational, unified_frameworks_enable_coordination_benefits).
+narrative_ontology:cs_axiom_grounding('873d5128-4dac-438f-ab7c-eac0523b6af4', present_future_harms_entangled_not_competing, deontological).
+narrative_ontology:cs_axiom('873d5128-4dac-438f-ab7c-eac0523b6af4', foundational, unified_frameworks_enable_coordination_benefits).
 narrative_ontology:cs_axiom_status(unified_frameworks_enable_coordination_benefits, holdable).
-narrative_ontology:cs_axiom_grounding(bridge_reading, unified_frameworks_enable_coordination_benefits, instrumental).
-narrative_ontology:cs_reference_frame(bridge_reading, integrated_governance_possibility).
-narrative_ontology:cs_drift_state(bridge_reading, contemporary_institutional_fragmentation, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('873d5128-4dac-438f-ab7c-eac0523b6af4', unified_frameworks_enable_coordination_benefits, instrumental).
+narrative_ontology:cs_reference_frame('873d5128-4dac-438f-ab7c-eac0523b6af4', integrated_governance_possibility).
+narrative_ontology:cs_drift_state('873d5128-4dac-438f-ab7c-eac0523b6af4', contemporary_institutional_fragmentation, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(bridge_reading, bridging_institutions).

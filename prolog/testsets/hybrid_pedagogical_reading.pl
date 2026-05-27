@@ -124,20 +124,22 @@ narrative_ontology:topic_domain(hybrid_pedagogical_reading, "religious_studies/c
 domain_priors:requires_active_enforcement(hybrid_pedagogical_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(hybrid_pedagogical_reading, distributed).
-narrative_ontology:cs_authority_grounding(hybrid_pedagogical_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(hybrid_pedagogical_reading).
+narrative_ontology:cs_story_uid(hybrid_pedagogical_reading, '62c1415f-37f1-45f1-b8d1-af9bcf4a7a63').
+narrative_ontology:cs_created_at('62c1415f-37f1-45f1-b8d1-af9bcf4a7a63', '').
+narrative_ontology:cs_kernel_codification('62c1415f-37f1-45f1-b8d1-af9bcf4a7a63', distributed).
+narrative_ontology:cs_authority_grounding('62c1415f-37f1-45f1-b8d1-af9bcf4a7a63', lineage).
+narrative_ontology:cs_interpretation_layer_present('62c1415f-37f1-45f1-b8d1-af9bcf4a7a63').
 narrative_ontology:cs_kernel_id(hybrid_pedagogical_reading, catastrophe_memory_transmission).
-narrative_ontology:cs_reading_relation(hybrid_pedagogical_reading, mourning_practice_reading, coexists_with).
-narrative_ontology:cs_reading_relation(hybrid_pedagogical_reading, survival_competence_reading, coexists_with).
-narrative_ontology:cs_axiom(hybrid_pedagogical_reading, foundational, grief_enables_threat_attention).
+narrative_ontology:cs_reading_relation('62c1415f-37f1-45f1-b8d1-af9bcf4a7a63', mourning_practice_reading, coexists_with).
+narrative_ontology:cs_reading_relation('62c1415f-37f1-45f1-b8d1-af9bcf4a7a63', survival_competence_reading, coexists_with).
+narrative_ontology:cs_axiom('62c1415f-37f1-45f1-b8d1-af9bcf4a7a63', foundational, grief_enables_threat_attention).
 narrative_ontology:cs_axiom_status(grief_enables_threat_attention, holdable).
-narrative_ontology:cs_axiom_grounding(hybrid_pedagogical_reading, grief_enables_threat_attention, empirically_contingent).
-narrative_ontology:cs_axiom(hybrid_pedagogical_reading, foundational, survival_knowledge_is_embodied_in_ritual_form).
+narrative_ontology:cs_axiom_grounding('62c1415f-37f1-45f1-b8d1-af9bcf4a7a63', grief_enables_threat_attention, empirically_contingent).
+narrative_ontology:cs_axiom('62c1415f-37f1-45f1-b8d1-af9bcf4a7a63', foundational, survival_knowledge_is_embodied_in_ritual_form).
 narrative_ontology:cs_axiom_status(survival_knowledge_is_embodied_in_ritual_form, holdable).
-narrative_ontology:cs_axiom_grounding(hybrid_pedagogical_reading, survival_knowledge_is_embodied_in_ritual_form, empirically_contingent).
-narrative_ontology:cs_reference_frame(hybrid_pedagogical_reading, grief_as_adaptive_pedagogical_practice).
-narrative_ontology:cs_drift_state(hybrid_pedagogical_reading, contemporary_professionalized_early_warning, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('62c1415f-37f1-45f1-b8d1-af9bcf4a7a63', survival_knowledge_is_embodied_in_ritual_form, empirically_contingent).
+narrative_ontology:cs_reference_frame('62c1415f-37f1-45f1-b8d1-af9bcf4a7a63', grief_as_adaptive_pedagogical_practice).
+narrative_ontology:cs_drift_state('62c1415f-37f1-45f1-b8d1-af9bcf4a7a63', contemporary_professionalized_early_warning, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(hybrid_pedagogical_reading, ritual_authority).

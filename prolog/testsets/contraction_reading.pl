@@ -117,9 +117,11 @@ narrative_ontology:topic_domain(contraction_reading, "historical_sociology/legal
 domain_priors:requires_active_enforcement(contraction_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(contraction_reading, distributed).
-narrative_ontology:cs_authority_grounding(contraction_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(contraction_reading).
+narrative_ontology:cs_story_uid(contraction_reading, 'b3026482-f035-46bf-a979-c69e96ac4ea5').
+narrative_ontology:cs_created_at('b3026482-f035-46bf-a979-c69e96ac4ea5', '').
+narrative_ontology:cs_kernel_codification('b3026482-f035-46bf-a979-c69e96ac4ea5', distributed).
+narrative_ontology:cs_authority_grounding('b3026482-f035-46bf-a979-c69e96ac4ea5', lineage).
+narrative_ontology:cs_interpretation_layer_present('b3026482-f035-46bf-a979-c69e96ac4ea5').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(contraction_reading, institutional_peace_advocates).

@@ -128,18 +128,20 @@ narrative_ontology:topic_domain(public_health_primary, "public_health_policy/med
 domain_priors:requires_active_enforcement(public_health_primary).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(public_health_primary, formalized).
-narrative_ontology:cs_authority_grounding(public_health_primary, lineage).
-narrative_ontology:cs_interpretation_layer_present(public_health_primary).
+narrative_ontology:cs_story_uid(public_health_primary, '421ecb84-e552-4aa6-b857-b682875c9c37').
+narrative_ontology:cs_created_at('421ecb84-e552-4aa6-b857-b682875c9c37', '').
+narrative_ontology:cs_kernel_codification('421ecb84-e552-4aa6-b857-b682875c9c37', formalized).
+narrative_ontology:cs_authority_grounding('421ecb84-e552-4aa6-b857-b682875c9c37', lineage).
+narrative_ontology:cs_interpretation_layer_present('421ecb84-e552-4aa6-b857-b682875c9c37').
 narrative_ontology:cs_kernel_id(public_health_primary, coercion_legitimacy_boundary).
-narrative_ontology:cs_reading_relation(public_health_primary, bodily_autonomy_primary, coexists_with).
-narrative_ontology:cs_reading_relation(public_health_primary, proportionality_reading, influences).
-narrative_ontology:cs_axiom(public_health_primary, foundational, collective_harm_prevention_primacy).
+narrative_ontology:cs_reading_relation('421ecb84-e552-4aa6-b857-b682875c9c37', bodily_autonomy_primary, coexists_with).
+narrative_ontology:cs_reading_relation('421ecb84-e552-4aa6-b857-b682875c9c37', proportionality_reading, influences).
+narrative_ontology:cs_axiom('421ecb84-e552-4aa6-b857-b682875c9c37', foundational, collective_harm_prevention_primacy).
 narrative_ontology:cs_axiom_status(collective_harm_prevention_primacy, holdable).
-narrative_ontology:cs_axiom(public_health_primary, foundational, autonomy_subordinable_to_aggregate_benefit).
+narrative_ontology:cs_axiom('421ecb84-e552-4aa6-b857-b682875c9c37', foundational, autonomy_subordinable_to_aggregate_benefit).
 narrative_ontology:cs_axiom_status(autonomy_subordinable_to_aggregate_benefit, holdable).
-narrative_ontology:cs_reference_frame(public_health_primary, public_health_emergency_authority).
-narrative_ontology:cs_drift_state(public_health_primary, endemic_equilibrium, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('421ecb84-e552-4aa6-b857-b682875c9c37', public_health_emergency_authority).
+narrative_ontology:cs_drift_state('421ecb84-e552-4aa6-b857-b682875c9c37', endemic_equilibrium, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(public_health_primary, immunocompromised_populations).

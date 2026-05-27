@@ -121,20 +121,22 @@ narrative_ontology:human_readable(rupture_reading, "Classical Latin Purity Stand
 narrative_ontology:topic_domain(rupture_reading, "historical_linguistics/philology/intellectual_history").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(rupture_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(rupture_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(rupture_reading).
+narrative_ontology:cs_story_uid(rupture_reading, 'ba897005-384f-4b28-b845-2b1153274377').
+narrative_ontology:cs_created_at('ba897005-384f-4b28-b845-2b1153274377', '').
+narrative_ontology:cs_kernel_codification('ba897005-384f-4b28-b845-2b1153274377', fixed_text).
+narrative_ontology:cs_authority_grounding('ba897005-384f-4b28-b845-2b1153274377', lineage).
+narrative_ontology:cs_interpretation_layer_present('ba897005-384f-4b28-b845-2b1153274377').
 narrative_ontology:cs_kernel_id(rupture_reading, latin_correctness).
-narrative_ontology:cs_reading_relation(rupture_reading, continuity_reading, coexists_with).
-narrative_ontology:cs_reading_relation(rupture_reading, hybrid_reading, influences).
-narrative_ontology:cs_axiom(rupture_reading, foundational, classical_purity_as_sole_standard).
+narrative_ontology:cs_reading_relation('ba897005-384f-4b28-b845-2b1153274377', continuity_reading, coexists_with).
+narrative_ontology:cs_reading_relation('ba897005-384f-4b28-b845-2b1153274377', hybrid_reading, influences).
+narrative_ontology:cs_axiom('ba897005-384f-4b28-b845-2b1153274377', foundational, classical_purity_as_sole_standard).
 narrative_ontology:cs_axiom_status(classical_purity_as_sole_standard, holdable).
-narrative_ontology:cs_axiom_grounding(rupture_reading, classical_purity_as_sole_standard, conventional).
-narrative_ontology:cs_axiom(rupture_reading, foundational, medieval_deviation_constitutes_corruption).
+narrative_ontology:cs_axiom_grounding('ba897005-384f-4b28-b845-2b1153274377', classical_purity_as_sole_standard, conventional).
+narrative_ontology:cs_axiom('ba897005-384f-4b28-b845-2b1153274377', foundational, medieval_deviation_constitutes_corruption).
 narrative_ontology:cs_axiom_status(medieval_deviation_constitutes_corruption, holdable).
-narrative_ontology:cs_axiom_grounding(rupture_reading, medieval_deviation_constitutes_corruption, conventional).
-narrative_ontology:cs_reference_frame(rupture_reading, classical_ciceronian_standard).
-narrative_ontology:cs_drift_state(rupture_reading, medieval_institutional_necessity, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_axiom_grounding('ba897005-384f-4b28-b845-2b1153274377', medieval_deviation_constitutes_corruption, conventional).
+narrative_ontology:cs_reference_frame('ba897005-384f-4b28-b845-2b1153274377', classical_ciceronian_standard).
+narrative_ontology:cs_drift_state('ba897005-384f-4b28-b845-2b1153274377', medieval_institutional_necessity, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(rupture_reading, humanist_clerical_elite).

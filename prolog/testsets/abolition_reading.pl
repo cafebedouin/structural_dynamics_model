@@ -118,9 +118,11 @@ narrative_ontology:topic_domain(abolition_reading, "criminal_justice/political_p
 domain_priors:requires_active_enforcement(abolition_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(abolition_reading, formalized).
-narrative_ontology:cs_authority_grounding(abolition_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(abolition_reading).
+narrative_ontology:cs_story_uid(abolition_reading, '97aedb0d-f9a6-4335-9b6f-0b0d61e9313f').
+narrative_ontology:cs_created_at('97aedb0d-f9a6-4335-9b6f-0b0d61e9313f', '').
+narrative_ontology:cs_kernel_codification('97aedb0d-f9a6-4335-9b6f-0b0d61e9313f', formalized).
+narrative_ontology:cs_authority_grounding('97aedb0d-f9a6-4335-9b6f-0b0d61e9313f', extraction).
+narrative_ontology:cs_interpretation_layer_present('97aedb0d-f9a6-4335-9b6f-0b0d61e9313f').
 narrative_ontology:cs_kernel_id(abolition_reading, state_execution_authority).
 
 % --- Structural relationships ---
@@ -306,15 +308,15 @@ narrative_ontology:measurement(abol_be_t75, abolition_reading, base_extractivene
 narrative_ontology:coordination_type(abolition_reading, enforcement_mechanism).
 narrative_ontology:affects_constraint(abolition_reading, retributive_reading).
 narrative_ontology:affects_constraint(abolition_reading, deterrence_reading).
-narrative_ontology:cs_reading_relation(abolition_reading, retributive_reading, coexists_with).
-narrative_ontology:cs_reading_relation(abolition_reading, deterrence_reading, coexists_with).
+narrative_ontology:cs_reading_relation('97aedb0d-f9a6-4335-9b6f-0b0d61e9313f', retributive_reading, coexists_with).
+narrative_ontology:cs_reading_relation('97aedb0d-f9a6-4335-9b6f-0b0d61e9313f', deterrence_reading, coexists_with).
 % Temporal layer: t0 reference frame and t1 drift state. t2 (trajectory) is computed by cs_drift_engine.pl.
 % Reference frame: the classical punitive authority that administered CP as ordinary punishment.
 % Drift: its normative legitimacy has substantially eroded in international HR law; authority structure
 % has not acknowledged this erosion as dispositive → unacknowledged substantial authority erosion.
 % Engine computes: authority_erosion + substantial + false → husk.
-narrative_ontology:cs_reference_frame(abolition_reading, classical_punitive_authority).
-narrative_ontology:cs_drift_state(abolition_reading, contemporary_human_rights_era,
+narrative_ontology:cs_reference_frame('97aedb0d-f9a6-4335-9b6f-0b0d61e9313f', classical_punitive_authority).
+narrative_ontology:cs_drift_state('97aedb0d-f9a6-4335-9b6f-0b0d61e9313f', contemporary_human_rights_era,
     gap(authority_erosion, substantial, false)).
 
 % DUAL FORMULATION NOTE:

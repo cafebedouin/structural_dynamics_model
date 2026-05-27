@@ -125,18 +125,20 @@ narrative_ontology:topic_domain(proportionality_reading, "public_health_policy/m
 domain_priors:requires_active_enforcement(proportionality_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(proportionality_reading, formalized).
-narrative_ontology:cs_authority_grounding(proportionality_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(proportionality_reading).
+narrative_ontology:cs_story_uid(proportionality_reading, '791bd8dd-77be-4732-a047-27906e35dd2c').
+narrative_ontology:cs_created_at('791bd8dd-77be-4732-a047-27906e35dd2c', '').
+narrative_ontology:cs_kernel_codification('791bd8dd-77be-4732-a047-27906e35dd2c', formalized).
+narrative_ontology:cs_authority_grounding('791bd8dd-77be-4732-a047-27906e35dd2c', extraction).
+narrative_ontology:cs_interpretation_layer_present('791bd8dd-77be-4732-a047-27906e35dd2c').
 narrative_ontology:cs_kernel_id(proportionality_reading, coercion_legitimacy_boundary).
-narrative_ontology:cs_reading_relation(proportionality_reading, public_health_primary, coexists_with).
-narrative_ontology:cs_reading_relation(proportionality_reading, bodily_autonomy_primary, coexists_with).
-narrative_ontology:cs_axiom(proportionality_reading, foundational, severity_proportionality_principle).
+narrative_ontology:cs_reading_relation('791bd8dd-77be-4732-a047-27906e35dd2c', public_health_primary, coexists_with).
+narrative_ontology:cs_reading_relation('791bd8dd-77be-4732-a047-27906e35dd2c', bodily_autonomy_primary, coexists_with).
+narrative_ontology:cs_axiom('791bd8dd-77be-4732-a047-27906e35dd2c', foundational, severity_proportionality_principle).
 narrative_ontology:cs_axiom_status(severity_proportionality_principle, holdable).
-narrative_ontology:cs_axiom(proportionality_reading, foundational, metric_based_adjudication).
+narrative_ontology:cs_axiom('791bd8dd-77be-4732-a047-27906e35dd2c', foundational, metric_based_adjudication).
 narrative_ontology:cs_axiom_status(metric_based_adjudication, holdable).
-narrative_ontology:cs_reference_frame(proportionality_reading, balanced_restraint_framework).
-narrative_ontology:cs_drift_state(proportionality_reading, contemporary_pandemic_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('791bd8dd-77be-4732-a047-27906e35dd2c', balanced_restraint_framework).
+narrative_ontology:cs_drift_state('791bd8dd-77be-4732-a047-27906e35dd2c', contemporary_pandemic_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(proportionality_reading, high_severity_disease_protection).

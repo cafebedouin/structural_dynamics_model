@@ -128,20 +128,22 @@ narrative_ontology:topic_domain(simulation_as_proxy, "safety_engineering/organiz
 domain_priors:requires_active_enforcement(simulation_as_proxy).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(simulation_as_proxy, formalized).
-narrative_ontology:cs_authority_grounding(simulation_as_proxy, extraction).
-narrative_ontology:cs_interpretation_layer_present(simulation_as_proxy).
+narrative_ontology:cs_story_uid(simulation_as_proxy, 'a68f9ab5-7d6d-4be3-92b4-a8dad988c149').
+narrative_ontology:cs_created_at('a68f9ab5-7d6d-4be3-92b4-a8dad988c149', '').
+narrative_ontology:cs_kernel_codification('a68f9ab5-7d6d-4be3-92b4-a8dad988c149', formalized).
+narrative_ontology:cs_authority_grounding('a68f9ab5-7d6d-4be3-92b4-a8dad988c149', extraction).
+narrative_ontology:cs_interpretation_layer_present('a68f9ab5-7d6d-4be3-92b4-a8dad988c149').
 narrative_ontology:cs_kernel_id(simulation_as_proxy, competence_exercise_validity).
-narrative_ontology:cs_reading_relation(simulation_as_proxy, real_catastrophe_only, coexists_with).
-narrative_ontology:cs_reading_relation(simulation_as_proxy, continuous_refresh_hybrid, coexists_with).
-narrative_ontology:cs_axiom(simulation_as_proxy, foundational, simulation_fidelity_sufficient).
+narrative_ontology:cs_reading_relation('a68f9ab5-7d6d-4be3-92b4-a8dad988c149', real_catastrophe_only, coexists_with).
+narrative_ontology:cs_reading_relation('a68f9ab5-7d6d-4be3-92b4-a8dad988c149', continuous_refresh_hybrid, coexists_with).
+narrative_ontology:cs_axiom('a68f9ab5-7d6d-4be3-92b4-a8dad988c149', foundational, simulation_fidelity_sufficient).
 narrative_ontology:cs_axiom_status(simulation_fidelity_sufficient, holdable).
-narrative_ontology:cs_axiom_grounding(simulation_as_proxy, simulation_fidelity_sufficient, empirically_contingent).
-narrative_ontology:cs_axiom(simulation_as_proxy, foundational, regulatory_compliance_adequate).
+narrative_ontology:cs_axiom_grounding('a68f9ab5-7d6d-4be3-92b4-a8dad988c149', simulation_fidelity_sufficient, empirically_contingent).
+narrative_ontology:cs_axiom('a68f9ab5-7d6d-4be3-92b4-a8dad988c149', foundational, regulatory_compliance_adequate).
 narrative_ontology:cs_axiom_status(regulatory_compliance_adequate, holdable).
-narrative_ontology:cs_axiom_grounding(simulation_as_proxy, regulatory_compliance_adequate, conventional).
-narrative_ontology:cs_reference_frame(simulation_as_proxy, simulation_sufficiency_framework).
-narrative_ontology:cs_drift_state(simulation_as_proxy, contemporary_monitoring_era, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('a68f9ab5-7d6d-4be3-92b4-a8dad988c149', regulatory_compliance_adequate, conventional).
+narrative_ontology:cs_reference_frame('a68f9ab5-7d6d-4be3-92b4-a8dad988c149', simulation_sufficiency_framework).
+narrative_ontology:cs_drift_state('a68f9ab5-7d6d-4be3-92b4-a8dad988c149', contemporary_monitoring_era, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(simulation_as_proxy, regulatory_authorities).

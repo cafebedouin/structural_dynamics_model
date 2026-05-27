@@ -129,18 +129,20 @@ narrative_ontology:topic_domain(spatial_access_conflict, "social_ontology/medica
 domain_priors:requires_active_enforcement(spatial_access_conflict).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(spatial_access_conflict, formalized).
-narrative_ontology:cs_authority_grounding(spatial_access_conflict, lineage).
-narrative_ontology:cs_interpretation_layer_present(spatial_access_conflict).
+narrative_ontology:cs_story_uid(spatial_access_conflict, '8ce58856-3173-4903-98a8-3f271815e70f').
+narrative_ontology:cs_created_at('8ce58856-3173-4903-98a8-3f271815e70f', '').
+narrative_ontology:cs_kernel_codification('8ce58856-3173-4903-98a8-3f271815e70f', formalized).
+narrative_ontology:cs_authority_grounding('8ce58856-3173-4903-98a8-3f271815e70f', lineage).
+narrative_ontology:cs_interpretation_layer_present('8ce58856-3173-4903-98a8-3f271815e70f').
 narrative_ontology:cs_kernel_id(spatial_access_conflict, woman_female_category).
-narrative_ontology:cs_axiom(spatial_access_conflict, foundational, spatial_segregation_functionally_necessary).
+narrative_ontology:cs_axiom('8ce58856-3173-4903-98a8-3f271815e70f', foundational, spatial_segregation_functionally_necessary).
 narrative_ontology:cs_axiom_status(spatial_segregation_functionally_necessary, holdable).
-narrative_ontology:cs_axiom_grounding(spatial_access_conflict, spatial_segregation_functionally_necessary, empirically_contingent).
-narrative_ontology:cs_axiom(spatial_access_conflict, secondary, biological_categories_naturally_salient).
+narrative_ontology:cs_axiom_grounding('8ce58856-3173-4903-98a8-3f271815e70f', spatial_segregation_functionally_necessary, empirically_contingent).
+narrative_ontology:cs_axiom('8ce58856-3173-4903-98a8-3f271815e70f', secondary, biological_categories_naturally_salient).
 narrative_ontology:cs_axiom_status(biological_categories_naturally_salient, holdable).
-narrative_ontology:cs_axiom_grounding(spatial_access_conflict, biological_categories_naturally_salient, conventional).
-narrative_ontology:cs_reference_frame(spatial_access_conflict, binary_spatial_segregation_framework).
-narrative_ontology:cs_drift_state(spatial_access_conflict, contemporary_boundary_contestation_era, gap(codification_collapse, substantial, false)).
+narrative_ontology:cs_axiom_grounding('8ce58856-3173-4903-98a8-3f271815e70f', biological_categories_naturally_salient, conventional).
+narrative_ontology:cs_reference_frame('8ce58856-3173-4903-98a8-3f271815e70f', binary_spatial_segregation_framework).
+narrative_ontology:cs_drift_state('8ce58856-3173-4903-98a8-3f271815e70f', contemporary_boundary_contestation_era, gap(codification_collapse, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(spatial_access_conflict, institutional_gatekeepers).

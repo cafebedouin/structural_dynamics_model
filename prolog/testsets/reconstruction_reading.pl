@@ -115,9 +115,11 @@ narrative_ontology:topic_domain(reconstruction_reading, "historical_linguistics/
 domain_priors:requires_active_enforcement(reconstruction_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(reconstruction_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(reconstruction_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(reconstruction_reading).
+narrative_ontology:cs_story_uid(reconstruction_reading, '68d8e7e7-605b-452b-91ee-cddb02f42d3b').
+narrative_ontology:cs_created_at('68d8e7e7-605b-452b-91ee-cddb02f42d3b', '').
+narrative_ontology:cs_kernel_codification('68d8e7e7-605b-452b-91ee-cddb02f42d3b', fixed_text).
+narrative_ontology:cs_authority_grounding('68d8e7e7-605b-452b-91ee-cddb02f42d3b', lineage).
+narrative_ontology:cs_interpretation_layer_present('68d8e7e7-605b-452b-91ee-cddb02f42d3b').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(reconstruction_reading, humanist_scholars).

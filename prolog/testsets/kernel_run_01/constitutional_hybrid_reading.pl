@@ -124,18 +124,20 @@ narrative_ontology:topic_domain(constitutional_hybrid_reading, "political_theory
 domain_priors:requires_active_enforcement(constitutional_hybrid_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(constitutional_hybrid_reading, formalized).
-narrative_ontology:cs_authority_grounding(constitutional_hybrid_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(constitutional_hybrid_reading).
+narrative_ontology:cs_story_uid(constitutional_hybrid_reading, '469fb9a8-ce12-4378-a663-fc6909696aec').
+narrative_ontology:cs_created_at('469fb9a8-ce12-4378-a663-fc6909696aec', '').
+narrative_ontology:cs_kernel_codification('469fb9a8-ce12-4378-a663-fc6909696aec', formalized).
+narrative_ontology:cs_authority_grounding('469fb9a8-ce12-4378-a663-fc6909696aec', extraction).
+narrative_ontology:cs_interpretation_layer_present('469fb9a8-ce12-4378-a663-fc6909696aec').
 narrative_ontology:cs_kernel_id(constitutional_hybrid_reading, sovereign_legitimacy).
-narrative_ontology:cs_reading_relation(constitutional_hybrid_reading, monarchical_reading, forecloses).
-narrative_ontology:cs_reading_relation(constitutional_hybrid_reading, republican_reading, forecloses).
-narrative_ontology:cs_axiom(constitutional_hybrid_reading, foundational, hereditary_succession_necessity).
+narrative_ontology:cs_reading_relation('469fb9a8-ce12-4378-a663-fc6909696aec', monarchical_reading, forecloses).
+narrative_ontology:cs_reading_relation('469fb9a8-ce12-4378-a663-fc6909696aec', republican_reading, forecloses).
+narrative_ontology:cs_axiom('469fb9a8-ce12-4378-a663-fc6909696aec', foundational, hereditary_succession_necessity).
 narrative_ontology:cs_axiom_status(hereditary_succession_necessity, holdable).
-narrative_ontology:cs_axiom(constitutional_hybrid_reading, foundational, constitutional_constraint_legitimacy).
+narrative_ontology:cs_axiom('469fb9a8-ce12-4378-a663-fc6909696aec', foundational, constitutional_constraint_legitimacy).
 narrative_ontology:cs_axiom_status(constitutional_constraint_legitimacy, holdable).
-narrative_ontology:cs_reference_frame(constitutional_hybrid_reading, balanced_hereditary_constitutionalism).
-narrative_ontology:cs_drift_state(constitutional_hybrid_reading, contemporary_implementation_divergence, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_reference_frame('469fb9a8-ce12-4378-a663-fc6909696aec', balanced_hereditary_constitutionalism).
+narrative_ontology:cs_drift_state('469fb9a8-ce12-4378-a663-fc6909696aec', contemporary_implementation_divergence, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(constitutional_hybrid_reading, hereditary_succession_institution).

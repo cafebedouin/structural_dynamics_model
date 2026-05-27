@@ -12,3 +12,5 @@ narrative_ontology:cs_axiom_contradiction(war_exits_reachable_set, cost_benefit_
 narrative_ontology:cs_axiom_contradiction(cost_benefit_rationality_excludes_war, war_exits_reachable_set).
 narrative_ontology:cs_axiom_contradiction(war_exits_reachable_set, credibility_paradox_is_insoluble).
 narrative_ontology:cs_axiom_contradiction(credibility_paradox_is_insoluble, war_exits_reachable_set).
+narrative_ontology:cs_story_uid(nuclear_impossibility_kernel_contradictions, 'be75e4fc-58a1-49fa-8bd4-372d142754b4').
+narrative_ontology:cs_created_at('be75e4fc-58a1-49fa-8bd4-372d142754b4', '').

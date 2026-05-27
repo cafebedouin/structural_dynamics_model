@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(state_decree_legitimizes_standardization, revelation_permits_reinterpretation).
 narrative_ontology:cs_axiom_contradiction(revelation_permits_reinterpretation, state_decree_legitimizes_standardization).
+narrative_ontology:cs_story_uid(marriage_commitment_reversal_contradictions, 'dd577ebd-71cd-416a-bbbe-053d7afa2eca').
+narrative_ontology:cs_created_at('dd577ebd-71cd-416a-bbbe-053d7afa2eca', '').

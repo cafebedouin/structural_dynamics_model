@@ -124,18 +124,20 @@ narrative_ontology:topic_domain(degrowth_transformation, "climate_policy/politic
 domain_priors:requires_active_enforcement(degrowth_transformation).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(degrowth_transformation, formalized).
-narrative_ontology:cs_authority_grounding(degrowth_transformation, lineage).
-narrative_ontology:cs_interpretation_layer_present(degrowth_transformation).
+narrative_ontology:cs_story_uid(degrowth_transformation, '8facd1fe-961c-4026-b5bc-d607a471622d').
+narrative_ontology:cs_created_at('8facd1fe-961c-4026-b5bc-d607a471622d', '').
+narrative_ontology:cs_kernel_codification('8facd1fe-961c-4026-b5bc-d607a471622d', formalized).
+narrative_ontology:cs_authority_grounding('8facd1fe-961c-4026-b5bc-d607a471622d', lineage).
+narrative_ontology:cs_interpretation_layer_present('8facd1fe-961c-4026-b5bc-d607a471622d').
 narrative_ontology:cs_kernel_id(degrowth_transformation, climate_response_legitimacy).
-narrative_ontology:cs_reading_relation(degrowth_transformation, mitigation_priority, influences).
-narrative_ontology:cs_reading_relation(degrowth_transformation, adaptation_priority, influences).
-narrative_ontology:cs_axiom(degrowth_transformation, foundational, growth_decoupling_insufficient).
+narrative_ontology:cs_reading_relation('8facd1fe-961c-4026-b5bc-d607a471622d', mitigation_priority, influences).
+narrative_ontology:cs_reading_relation('8facd1fe-961c-4026-b5bc-d607a471622d', adaptation_priority, influences).
+narrative_ontology:cs_axiom('8facd1fe-961c-4026-b5bc-d607a471622d', foundational, growth_decoupling_insufficient).
 narrative_ontology:cs_axiom_status(growth_decoupling_insufficient, holdable).
-narrative_ontology:cs_axiom(degrowth_transformation, foundational, structural_transformation_necessary).
+narrative_ontology:cs_axiom('8facd1fe-961c-4026-b5bc-d607a471622d', foundational, structural_transformation_necessary).
 narrative_ontology:cs_axiom_status(structural_transformation_necessary, holdable).
-narrative_ontology:cs_reference_frame(degrowth_transformation, thermodynamic_carbon_budget).
-narrative_ontology:cs_drift_state(degrowth_transformation, contemporary_post_paris_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_reference_frame('8facd1fe-961c-4026-b5bc-d607a471622d', thermodynamic_carbon_budget).
+narrative_ontology:cs_drift_state('8facd1fe-961c-4026-b5bc-d607a471622d', contemporary_post_paris_era, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(degrowth_transformation, future_generations).

@@ -118,9 +118,11 @@ narrative_ontology:topic_domain(state_modernization_extraction, "historical_soci
 domain_priors:requires_active_enforcement(state_modernization_extraction).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(state_modernization_extraction, formalized).
-narrative_ontology:cs_authority_grounding(state_modernization_extraction, extraction).
-narrative_ontology:cs_interpretation_layer_present(state_modernization_extraction).
+narrative_ontology:cs_story_uid(state_modernization_extraction, 'dbba4e7d-2bae-4b26-b2ab-17c76c571ae7').
+narrative_ontology:cs_created_at('dbba4e7d-2bae-4b26-b2ab-17c76c571ae7', '').
+narrative_ontology:cs_kernel_codification('dbba4e7d-2bae-4b26-b2ab-17c76c571ae7', formalized).
+narrative_ontology:cs_authority_grounding('dbba4e7d-2bae-4b26-b2ab-17c76c571ae7', extraction).
+narrative_ontology:cs_interpretation_layer_present('dbba4e7d-2bae-4b26-b2ab-17c76c571ae7').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(state_modernization_extraction, meiji_state_administrative_apparatus).

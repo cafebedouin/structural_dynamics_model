@@ -120,9 +120,11 @@ narrative_ontology:topic_domain(monopoly_transfer_mechanism, "legal_history/inte
 domain_priors:requires_active_enforcement(monopoly_transfer_mechanism).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(monopoly_transfer_mechanism, fixed_text).
-narrative_ontology:cs_authority_grounding(monopoly_transfer_mechanism, lineage).
-narrative_ontology:cs_interpretation_layer_present(monopoly_transfer_mechanism).
+narrative_ontology:cs_story_uid(monopoly_transfer_mechanism, '231c2d40-f196-4560-897f-7d86306cef4f').
+narrative_ontology:cs_created_at('231c2d40-f196-4560-897f-7d86306cef4f', '').
+narrative_ontology:cs_kernel_codification('231c2d40-f196-4560-897f-7d86306cef4f', fixed_text).
+narrative_ontology:cs_authority_grounding('231c2d40-f196-4560-897f-7d86306cef4f', lineage).
+narrative_ontology:cs_interpretation_layer_present('231c2d40-f196-4560-897f-7d86306cef4f').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(monopoly_transfer_mechanism, stationers_guild).

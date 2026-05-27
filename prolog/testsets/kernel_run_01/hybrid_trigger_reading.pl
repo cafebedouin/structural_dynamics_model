@@ -120,18 +120,20 @@ narrative_ontology:topic_domain(hybrid_trigger_reading, "monetary_economics/inte
 domain_priors:requires_active_enforcement(hybrid_trigger_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(hybrid_trigger_reading, formalized).
-narrative_ontology:cs_authority_grounding(hybrid_trigger_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(hybrid_trigger_reading).
+narrative_ontology:cs_story_uid(hybrid_trigger_reading, 'e508b48f-2737-4af2-ad53-bc6ed9f0e288').
+narrative_ontology:cs_created_at('e508b48f-2737-4af2-ad53-bc6ed9f0e288', '').
+narrative_ontology:cs_kernel_codification('e508b48f-2737-4af2-ad53-bc6ed9f0e288', formalized).
+narrative_ontology:cs_authority_grounding('e508b48f-2737-4af2-ad53-bc6ed9f0e288', extraction).
+narrative_ontology:cs_interpretation_layer_present('e508b48f-2737-4af2-ad53-bc6ed9f0e288').
 narrative_ontology:cs_kernel_id(hybrid_trigger_reading, transition_causality).
-narrative_ontology:cs_reading_relation(hybrid_trigger_reading, contingent_choice_reading, coexists_with).
-narrative_ontology:cs_reading_relation(hybrid_trigger_reading, overdetermined_collapse_reading, influences).
-narrative_ontology:cs_axiom(hybrid_trigger_reading, foundational, contradictions_require_contingent_actualizers).
+narrative_ontology:cs_reading_relation('e508b48f-2737-4af2-ad53-bc6ed9f0e288', contingent_choice_reading, coexists_with).
+narrative_ontology:cs_reading_relation('e508b48f-2737-4af2-ad53-bc6ed9f0e288', overdetermined_collapse_reading, influences).
+narrative_ontology:cs_axiom('e508b48f-2737-4af2-ad53-bc6ed9f0e288', foundational, contradictions_require_contingent_actualizers).
 narrative_ontology:cs_axiom_status(contradictions_require_contingent_actualizers, holdable).
-narrative_ontology:cs_axiom(hybrid_trigger_reading, secondary, trigger_timing_affects_institutional_form).
+narrative_ontology:cs_axiom('e508b48f-2737-4af2-ad53-bc6ed9f0e288', secondary, trigger_timing_affects_institutional_form).
 narrative_ontology:cs_axiom_status(trigger_timing_affects_institutional_form, holdable).
-narrative_ontology:cs_reference_frame(hybrid_trigger_reading, gold_backed_convertibility_framework).
-narrative_ontology:cs_drift_state(hybrid_trigger_reading, vietnam_era_1965, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('e508b48f-2737-4af2-ad53-bc6ed9f0e288', gold_backed_convertibility_framework).
+narrative_ontology:cs_drift_state('e508b48f-2737-4af2-ad53-bc6ed9f0e288', vietnam_era_1965, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(hybrid_trigger_reading, united_states_monetary_authority).

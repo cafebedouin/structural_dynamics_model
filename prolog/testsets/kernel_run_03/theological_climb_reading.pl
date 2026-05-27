@@ -123,20 +123,22 @@ narrative_ontology:human_readable(theological_climb_reading, "Reformation as The
 narrative_ontology:topic_domain(theological_climb_reading, "religious_history/historical_epistemology/commitment_systems").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(theological_climb_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(theological_climb_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(theological_climb_reading).
+narrative_ontology:cs_story_uid(theological_climb_reading, '811af59e-1e2a-48be-afc2-6e04b12a125e').
+narrative_ontology:cs_created_at('811af59e-1e2a-48be-afc2-6e04b12a125e', '').
+narrative_ontology:cs_kernel_codification('811af59e-1e2a-48be-afc2-6e04b12a125e', fixed_text).
+narrative_ontology:cs_authority_grounding('811af59e-1e2a-48be-afc2-6e04b12a125e', lineage).
+narrative_ontology:cs_interpretation_layer_present('811af59e-1e2a-48be-afc2-6e04b12a125e').
 narrative_ontology:cs_kernel_id(theological_climb_reading, reformation_event_boundary).
-narrative_ontology:cs_reading_relation(theological_climb_reading, political_swap_reading, coexists_with).
-narrative_ontology:cs_reading_relation(theological_climb_reading, composite_overdetermination_reading, coexists_with).
-narrative_ontology:cs_axiom(theological_climb_reading, foundational, pauline_sola_fide_textually_defensible).
+narrative_ontology:cs_reading_relation('811af59e-1e2a-48be-afc2-6e04b12a125e', political_swap_reading, coexists_with).
+narrative_ontology:cs_reading_relation('811af59e-1e2a-48be-afc2-6e04b12a125e', composite_overdetermination_reading, coexists_with).
+narrative_ontology:cs_axiom('811af59e-1e2a-48be-afc2-6e04b12a125e', foundational, pauline_sola_fide_textually_defensible).
 narrative_ontology:cs_axiom_status(pauline_sola_fide_textually_defensible, holdable).
-narrative_ontology:cs_axiom_grounding(theological_climb_reading, pauline_sola_fide_textually_defensible, empirically_contingent).
-narrative_ontology:cs_axiom(theological_climb_reading, foundational, doctrinal_innovation_justifies_institutional_separation).
+narrative_ontology:cs_axiom_grounding('811af59e-1e2a-48be-afc2-6e04b12a125e', pauline_sola_fide_textually_defensible, empirically_contingent).
+narrative_ontology:cs_axiom('811af59e-1e2a-48be-afc2-6e04b12a125e', foundational, doctrinal_innovation_justifies_institutional_separation).
 narrative_ontology:cs_axiom_status(doctrinal_innovation_justifies_institutional_separation, holdable).
-narrative_ontology:cs_axiom_grounding(theological_climb_reading, doctrinal_innovation_justifies_institutional_separation, deontological).
-narrative_ontology:cs_reference_frame(theological_climb_reading, apostolic_scriptural_clarity).
-narrative_ontology:cs_drift_state(theological_climb_reading, medieval_scholastic_synthesis, gap(codification_collapse, substantial, false)).
+narrative_ontology:cs_axiom_grounding('811af59e-1e2a-48be-afc2-6e04b12a125e', doctrinal_innovation_justifies_institutional_separation, deontological).
+narrative_ontology:cs_reference_frame('811af59e-1e2a-48be-afc2-6e04b12a125e', apostolic_scriptural_clarity).
+narrative_ontology:cs_drift_state('811af59e-1e2a-48be-afc2-6e04b12a125e', medieval_scholastic_synthesis, gap(codification_collapse, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(theological_climb_reading, reformed_believers).

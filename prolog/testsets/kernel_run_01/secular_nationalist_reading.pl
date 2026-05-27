@@ -126,18 +126,20 @@ narrative_ontology:topic_domain(secular_nationalist_reading, "political_linguist
 domain_priors:requires_active_enforcement(secular_nationalist_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(secular_nationalist_reading, formalized).
-narrative_ontology:cs_authority_grounding(secular_nationalist_reading, extraction).
-narrative_ontology:cs_interpretation_layer_present(secular_nationalist_reading).
+narrative_ontology:cs_story_uid(secular_nationalist_reading, '45b56752-2cfb-454a-a04e-649433870be3').
+narrative_ontology:cs_created_at('45b56752-2cfb-454a-a04e-649433870be3', '').
+narrative_ontology:cs_kernel_codification('45b56752-2cfb-454a-a04e-649433870be3', formalized).
+narrative_ontology:cs_authority_grounding('45b56752-2cfb-454a-a04e-649433870be3', extraction).
+narrative_ontology:cs_interpretation_layer_present('45b56752-2cfb-454a-a04e-649433870be3').
 narrative_ontology:cs_kernel_id(secular_nationalist_reading, turkish_graphemic_substrate).
-narrative_ontology:cs_reading_relation(secular_nationalist_reading, ottoman_continuity_reading, forecloses).
-narrative_ontology:cs_reading_relation(secular_nationalist_reading, gradual_transition_reading, coexists_with).
-narrative_ontology:cs_axiom(secular_nationalist_reading, foundational, secularism_requires_european_alignment).
+narrative_ontology:cs_reading_relation('45b56752-2cfb-454a-a04e-649433870be3', ottoman_continuity_reading, forecloses).
+narrative_ontology:cs_reading_relation('45b56752-2cfb-454a-a04e-649433870be3', gradual_transition_reading, coexists_with).
+narrative_ontology:cs_axiom('45b56752-2cfb-454a-a04e-649433870be3', foundational, secularism_requires_european_alignment).
 narrative_ontology:cs_axiom_status(secularism_requires_european_alignment, holdable).
-narrative_ontology:cs_axiom(secular_nationalist_reading, foundational, ottoman_institutional_structures_inherently_islamic).
+narrative_ontology:cs_axiom('45b56752-2cfb-454a-a04e-649433870be3', foundational, ottoman_institutional_structures_inherently_islamic).
 narrative_ontology:cs_axiom_status(ottoman_institutional_structures_inherently_islamic, holdable).
-narrative_ontology:cs_reference_frame(secular_nationalist_reading, ottoman_rupture_european_alignment).
-narrative_ontology:cs_drift_state(secular_nationalist_reading, contemporary_post_cold_war, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('45b56752-2cfb-454a-a04e-649433870be3', ottoman_rupture_european_alignment).
+narrative_ontology:cs_drift_state('45b56752-2cfb-454a-a04e-649433870be3', contemporary_post_cold_war, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(secular_nationalist_reading, ankara_state_apparatus).

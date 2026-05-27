@@ -118,20 +118,22 @@ narrative_ontology:topic_domain(harm_limited_reading, "constitutional_law/speech
 domain_priors:requires_active_enforcement(harm_limited_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(harm_limited_reading, formalized).
-narrative_ontology:cs_authority_grounding(harm_limited_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(harm_limited_reading).
+narrative_ontology:cs_story_uid(harm_limited_reading, '1ffa1f42-a5a2-48a1-8015-821c53533c9a').
+narrative_ontology:cs_created_at('1ffa1f42-a5a2-48a1-8015-821c53533c9a', '').
+narrative_ontology:cs_kernel_codification('1ffa1f42-a5a2-48a1-8015-821c53533c9a', formalized).
+narrative_ontology:cs_authority_grounding('1ffa1f42-a5a2-48a1-8015-821c53533c9a', lineage).
+narrative_ontology:cs_interpretation_layer_present('1ffa1f42-a5a2-48a1-8015-821c53533c9a').
 narrative_ontology:cs_kernel_id(harm_limited_reading, speech_protection_boundary).
-narrative_ontology:cs_reading_relation(harm_limited_reading, absolutist_reading, coexists_with).
-narrative_ontology:cs_reading_relation(harm_limited_reading, balancing_reading, coexists_with).
-narrative_ontology:cs_axiom(harm_limited_reading, foundational, equal_dignity_foundational).
+narrative_ontology:cs_reading_relation('1ffa1f42-a5a2-48a1-8015-821c53533c9a', absolutist_reading, coexists_with).
+narrative_ontology:cs_reading_relation('1ffa1f42-a5a2-48a1-8015-821c53533c9a', balancing_reading, coexists_with).
+narrative_ontology:cs_axiom('1ffa1f42-a5a2-48a1-8015-821c53533c9a', foundational, equal_dignity_foundational).
 narrative_ontology:cs_axiom_status(equal_dignity_foundational, holdable).
-narrative_ontology:cs_axiom_grounding(harm_limited_reading, equal_dignity_foundational, deontological).
-narrative_ontology:cs_axiom(harm_limited_reading, foundational, harm_limitation_empirically_protective).
+narrative_ontology:cs_axiom_grounding('1ffa1f42-a5a2-48a1-8015-821c53533c9a', equal_dignity_foundational, deontological).
+narrative_ontology:cs_axiom('1ffa1f42-a5a2-48a1-8015-821c53533c9a', foundational, harm_limitation_empirically_protective).
 narrative_ontology:cs_axiom_status(harm_limitation_empirically_protective, holdable).
-narrative_ontology:cs_axiom_grounding(harm_limited_reading, harm_limitation_empirically_protective, empirically_contingent).
-narrative_ontology:cs_reference_frame(harm_limited_reading, equal_dignity_foundational_commitment).
-narrative_ontology:cs_drift_state(harm_limited_reading, contemporary_regulatory_expansion, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('1ffa1f42-a5a2-48a1-8015-821c53533c9a', harm_limitation_empirically_protective, empirically_contingent).
+narrative_ontology:cs_reference_frame('1ffa1f42-a5a2-48a1-8015-821c53533c9a', equal_dignity_foundational_commitment).
+narrative_ontology:cs_drift_state('1ffa1f42-a5a2-48a1-8015-821c53533c9a', contemporary_regulatory_expansion, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(harm_limited_reading, marginalized_dignity_holders).

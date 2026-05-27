@@ -125,18 +125,20 @@ narrative_ontology:topic_domain(constitutional_supremacy_reading, "constitutiona
 domain_priors:requires_active_enforcement(constitutional_supremacy_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(constitutional_supremacy_reading, formalized).
-narrative_ontology:cs_authority_grounding(constitutional_supremacy_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(constitutional_supremacy_reading).
+narrative_ontology:cs_story_uid(constitutional_supremacy_reading, '9c2e26d4-75ba-46f8-9687-882d44141cf6').
+narrative_ontology:cs_created_at('9c2e26d4-75ba-46f8-9687-882d44141cf6', '').
+narrative_ontology:cs_kernel_codification('9c2e26d4-75ba-46f8-9687-882d44141cf6', formalized).
+narrative_ontology:cs_authority_grounding('9c2e26d4-75ba-46f8-9687-882d44141cf6', lineage).
+narrative_ontology:cs_interpretation_layer_present('9c2e26d4-75ba-46f8-9687-882d44141cf6').
 narrative_ontology:cs_kernel_id(constitutional_supremacy_reading, family_law_authority).
-narrative_ontology:cs_reading_relation(constitutional_supremacy_reading, religious_autonomy_reading, forecloses).
-narrative_ontology:cs_reading_relation(constitutional_supremacy_reading, pluralist_accommodation_reading, influences).
-narrative_ontology:cs_axiom(constitutional_supremacy_reading, foundational, constitutional_equality_mandate).
+narrative_ontology:cs_reading_relation('9c2e26d4-75ba-46f8-9687-882d44141cf6', religious_autonomy_reading, forecloses).
+narrative_ontology:cs_reading_relation('9c2e26d4-75ba-46f8-9687-882d44141cf6', pluralist_accommodation_reading, influences).
+narrative_ontology:cs_axiom('9c2e26d4-75ba-46f8-9687-882d44141cf6', foundational, constitutional_equality_mandate).
 narrative_ontology:cs_axiom_status(constitutional_equality_mandate, holdable).
-narrative_ontology:cs_axiom(constitutional_supremacy_reading, foundational, secular_state_authority_supremacy).
+narrative_ontology:cs_axiom('9c2e26d4-75ba-46f8-9687-882d44141cf6', foundational, secular_state_authority_supremacy).
 narrative_ontology:cs_axiom_status(secular_state_authority_supremacy, holdable).
-narrative_ontology:cs_reference_frame(constitutional_supremacy_reading, constitutional_equality_supremacy).
-narrative_ontology:cs_drift_state(constitutional_supremacy_reading, contemporary_pluralist_challenge, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_reference_frame('9c2e26d4-75ba-46f8-9687-882d44141cf6', constitutional_equality_supremacy).
+narrative_ontology:cs_drift_state('9c2e26d4-75ba-46f8-9687-882d44141cf6', contemporary_pluralist_challenge, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(constitutional_supremacy_reading, individual_rights_holders).

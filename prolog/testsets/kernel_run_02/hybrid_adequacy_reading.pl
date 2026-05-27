@@ -122,20 +122,22 @@ narrative_ontology:topic_domain(hybrid_adequacy_reading, "historical_linguistics
 domain_priors:requires_active_enforcement(hybrid_adequacy_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(hybrid_adequacy_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(hybrid_adequacy_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(hybrid_adequacy_reading).
+narrative_ontology:cs_story_uid(hybrid_adequacy_reading, 'b0bd08b9-8614-4c2d-84a5-85d705cc0774').
+narrative_ontology:cs_created_at('b0bd08b9-8614-4c2d-84a5-85d705cc0774', '').
+narrative_ontology:cs_kernel_codification('b0bd08b9-8614-4c2d-84a5-85d705cc0774', fixed_text).
+narrative_ontology:cs_authority_grounding('b0bd08b9-8614-4c2d-84a5-85d705cc0774', lineage).
+narrative_ontology:cs_interpretation_layer_present('b0bd08b9-8614-4c2d-84a5-85d705cc0774').
 narrative_ontology:cs_kernel_id(hybrid_adequacy_reading, latin_correctness).
-narrative_ontology:cs_reading_relation(hybrid_adequacy_reading, textual_recovery_reading, forecloses).
-narrative_ontology:cs_reading_relation(hybrid_adequacy_reading, living_drift_reading, influences).
-narrative_ontology:cs_axiom(hybrid_adequacy_reading, foundational, classical_baseline_non_negotiable).
+narrative_ontology:cs_reading_relation('b0bd08b9-8614-4c2d-84a5-85d705cc0774', textual_recovery_reading, forecloses).
+narrative_ontology:cs_reading_relation('b0bd08b9-8614-4c2d-84a5-85d705cc0774', living_drift_reading, influences).
+narrative_ontology:cs_axiom('b0bd08b9-8614-4c2d-84a5-85d705cc0774', foundational, classical_baseline_non_negotiable).
 narrative_ontology:cs_axiom_status(classical_baseline_non_negotiable, holdable).
-narrative_ontology:cs_axiom_grounding(hybrid_adequacy_reading, classical_baseline_non_negotiable, conventional).
-narrative_ontology:cs_axiom(hybrid_adequacy_reading, foundational, functional_adequacy_supplements_fidelity).
+narrative_ontology:cs_axiom_grounding('b0bd08b9-8614-4c2d-84a5-85d705cc0774', classical_baseline_non_negotiable, conventional).
+narrative_ontology:cs_axiom('b0bd08b9-8614-4c2d-84a5-85d705cc0774', foundational, functional_adequacy_supplements_fidelity).
 narrative_ontology:cs_axiom_status(functional_adequacy_supplements_fidelity, holdable).
-narrative_ontology:cs_axiom_grounding(hybrid_adequacy_reading, functional_adequacy_supplements_fidelity, instrumental).
-narrative_ontology:cs_reference_frame(hybrid_adequacy_reading, classical_ciceronian_purity).
-narrative_ontology:cs_drift_state(hybrid_adequacy_reading, renaissance_technical_expansion, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('b0bd08b9-8614-4c2d-84a5-85d705cc0774', functional_adequacy_supplements_fidelity, instrumental).
+narrative_ontology:cs_reference_frame('b0bd08b9-8614-4c2d-84a5-85d705cc0774', classical_ciceronian_purity).
+narrative_ontology:cs_drift_state('b0bd08b9-8614-4c2d-84a5-85d705cc0774', renaissance_technical_expansion, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(hybrid_adequacy_reading, working_scholars_law_medicine_science).

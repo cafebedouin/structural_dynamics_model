@@ -119,19 +119,21 @@ narrative_ontology:topic_domain(composite_reading, "historical_sociology/legal_h
 domain_priors:requires_active_enforcement(composite_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(composite_reading, distributed).
-narrative_ontology:cs_authority_grounding(composite_reading, extraction).
+narrative_ontology:cs_story_uid(composite_reading, '52b6fd61-d76c-4a2d-9531-a92aefdfb049').
+narrative_ontology:cs_created_at('52b6fd61-d76c-4a2d-9531-a92aefdfb049', '').
+narrative_ontology:cs_kernel_codification('52b6fd61-d76c-4a2d-9531-a92aefdfb049', distributed).
+narrative_ontology:cs_authority_grounding('52b6fd61-d76c-4a2d-9531-a92aefdfb049', extraction).
 narrative_ontology:cs_kernel_id(composite_reading, honor_settlement_legitimacy).
-narrative_ontology:cs_reading_relation(composite_reading, contraction_reading, coexists_with).
-narrative_ontology:cs_reading_relation(composite_reading, drop_reading, coexists_with).
-narrative_ontology:cs_axiom(composite_reading, foundational, multiple_mechanisms_converge).
+narrative_ontology:cs_reading_relation('52b6fd61-d76c-4a2d-9531-a92aefdfb049', contraction_reading, coexists_with).
+narrative_ontology:cs_reading_relation('52b6fd61-d76c-4a2d-9531-a92aefdfb049', drop_reading, coexists_with).
+narrative_ontology:cs_axiom('52b6fd61-d76c-4a2d-9531-a92aefdfb049', foundational, multiple_mechanisms_converge).
 narrative_ontology:cs_axiom_status(multiple_mechanisms_converge, holdable).
-narrative_ontology:cs_axiom_grounding(composite_reading, multiple_mechanisms_converge, empirically_contingent).
-narrative_ontology:cs_axiom(composite_reading, secondary, extraction_overdetermined_irreversible).
+narrative_ontology:cs_axiom_grounding('52b6fd61-d76c-4a2d-9531-a92aefdfb049', multiple_mechanisms_converge, empirically_contingent).
+narrative_ontology:cs_axiom('52b6fd61-d76c-4a2d-9531-a92aefdfb049', secondary, extraction_overdetermined_irreversible).
 narrative_ontology:cs_axiom_status(extraction_overdetermined_irreversible, holdable).
-narrative_ontology:cs_axiom_grounding(composite_reading, extraction_overdetermined_irreversible, empirically_contingent).
-narrative_ontology:cs_reference_frame(composite_reading, honor_settlement_legitimacy).
-narrative_ontology:cs_drift_state(composite_reading, industrial_bourgeois_era, gap(axiom_overriding, severe, false)).
+narrative_ontology:cs_axiom_grounding('52b6fd61-d76c-4a2d-9531-a92aefdfb049', extraction_overdetermined_irreversible, empirically_contingent).
+narrative_ontology:cs_reference_frame('52b6fd61-d76c-4a2d-9531-a92aefdfb049', honor_settlement_legitimacy).
+narrative_ontology:cs_drift_state('52b6fd61-d76c-4a2d-9531-a92aefdfb049', industrial_bourgeois_era, gap(axiom_overriding, severe, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(composite_reading, state_legal_authority).

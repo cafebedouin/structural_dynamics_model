@@ -120,18 +120,20 @@ narrative_ontology:topic_domain(pluralist_accommodation_reading, "constitutional
 domain_priors:requires_active_enforcement(pluralist_accommodation_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(pluralist_accommodation_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(pluralist_accommodation_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(pluralist_accommodation_reading).
+narrative_ontology:cs_story_uid(pluralist_accommodation_reading, '48705665-9637-4b46-baa1-d57b2968655c').
+narrative_ontology:cs_created_at('48705665-9637-4b46-baa1-d57b2968655c', '').
+narrative_ontology:cs_kernel_codification('48705665-9637-4b46-baa1-d57b2968655c', fixed_text).
+narrative_ontology:cs_authority_grounding('48705665-9637-4b46-baa1-d57b2968655c', lineage).
+narrative_ontology:cs_interpretation_layer_present('48705665-9637-4b46-baa1-d57b2968655c').
 narrative_ontology:cs_kernel_id(pluralist_accommodation_reading, family_law_authority).
-narrative_ontology:cs_reading_relation(pluralist_accommodation_reading, religious_autonomy_reading, coexists_with).
-narrative_ontology:cs_reading_relation(pluralist_accommodation_reading, constitutional_supremacy_reading, coexists_with).
-narrative_ontology:cs_axiom(pluralist_accommodation_reading, foundational, dual_sovereignty_complementary).
+narrative_ontology:cs_reading_relation('48705665-9637-4b46-baa1-d57b2968655c', religious_autonomy_reading, coexists_with).
+narrative_ontology:cs_reading_relation('48705665-9637-4b46-baa1-d57b2968655c', constitutional_supremacy_reading, coexists_with).
+narrative_ontology:cs_axiom('48705665-9637-4b46-baa1-d57b2968655c', foundational, dual_sovereignty_complementary).
 narrative_ontology:cs_axiom_status(dual_sovereignty_complementary, holdable).
-narrative_ontology:cs_axiom(pluralist_accommodation_reading, foundational, harmonization_through_dialogue_not_hierarchy).
+narrative_ontology:cs_axiom('48705665-9637-4b46-baa1-d57b2968655c', foundational, harmonization_through_dialogue_not_hierarchy).
 narrative_ontology:cs_axiom_status(harmonization_through_dialogue_not_hierarchy, holdable).
-narrative_ontology:cs_reference_frame(pluralist_accommodation_reading, articles_25_28_and_44_coexistent).
-narrative_ontology:cs_drift_state(pluralist_accommodation_reading, contemporary_post_independence, gap(stable, minor, true)).
+narrative_ontology:cs_reference_frame('48705665-9637-4b46-baa1-d57b2968655c', articles_25_28_and_44_coexistent).
+narrative_ontology:cs_drift_state('48705665-9637-4b46-baa1-d57b2968655c', contemporary_post_independence, gap(stable, minor, true)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(pluralist_accommodation_reading, religious_communities).

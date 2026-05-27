@@ -45,15 +45,18 @@
    FORECLOSURE ROUTING
    ================================================================ */
 
-%% cs_drift_mismatch(+C, -Source)
-%  Fires when C is both CS-foreclosed and metric-stable.
+%% cs_drift_mismatch(+UID, -Source)
+%  Fires when UID is both CS-foreclosed and metric-stable.
+%  UID is the story_uid surrogate (UUIDv4); C is the reading name, looked up for
+%  DR metric stability (cs_is_metric_stable remains C-keyed: DR is instance-blind;
+%  two instances sharing C both see the same DR stability result — by design).
 %  Source encodes which foreclosure paths fired:
 %    trajectory_only         — only cs_drift_trajectory → axiom_foreclosure
-%    both(trajectory, Atom)  — trajectory + cs_axiom_foreclosed(C, Atom)
-cs_drift_mismatch(C, Source) :-
-    narrative_ontology:cs_drift_state(C, _, _),
+%    both(trajectory, Atom)  — trajectory + cs_axiom_foreclosed(UID, Atom)
+cs_drift_mismatch(UID, Source) :-
+    narrative_ontology:cs_story_uid(C, UID),
     \+ is_list(C),
-    cs_any_foreclosed(C, Traj, AxFc),
+    cs_any_foreclosed(UID, Traj, AxFc),
     % At least one foreclosure path must fire
     (Traj = none, AxFc = none -> fail ; true),
     (   Traj \= none, AxFc \= none
@@ -65,14 +68,14 @@ cs_drift_mismatch(C, Source) :-
     ),
     cs_is_metric_stable(C).
 
-%% cs_any_foreclosed(+C, -Traj, -AxFc)
-%  Checks both foreclosure paths, returning none if absent.
-cs_any_foreclosed(C, Traj, AxFc) :-
-    (cs_drift_engine:cs_drift_trajectory(C, _, axiom_foreclosure) ->
+%% cs_any_foreclosed(+UID, -Traj, -AxFc)
+%  Checks both foreclosure paths for UID, returning none if absent.
+cs_any_foreclosed(UID, Traj, AxFc) :-
+    (cs_drift_engine:cs_drift_trajectory(UID, _, axiom_foreclosure) ->
         Traj = axiom_foreclosure_trajectory
     ;   Traj = none
     ),
-    (cs_axiom_engine:cs_axiom_foreclosed(C, Atom) ->
+    (cs_axiom_engine:cs_axiom_foreclosed(UID, Atom) ->
         AxFc = foreclosed_axiom(Atom)
     ;   AxFc = none
     ).
@@ -111,19 +114,20 @@ run_drift_mismatch_report :-
     length(Files, NFiles),
     format("Loading ~w testset files...~n", [NFiles]),
     maplist([F]>>(catch(user:consult(F), _, true)), Files),
-    findall(C-Source, cs_drift_mismatch(C, Source), Pairs),
+    findall(UID-Source, cs_drift_mismatch(UID, Source), Pairs),
     sort(Pairs, Mismatches),
     length(Mismatches, N),
     format("~n=== CS Drift Mismatch: cross-axis false-mountain detector ===~n~n"),
     format("Metric-stable + CS-foreclosed: ~w readings~n~n", [N]),
     (Mismatches = []
     ->  format("  None found.~n")
-    ;   forall(member(C-Src, Mismatches),
-               format("MISMATCH: ~w | ~w~n", [C, Src]))
+    ;   forall(member(UID-Src, Mismatches),
+               ( (narrative_ontology:cs_story_uid(C, UID) -> true ; C = UID),
+                 format("MISMATCH: ~w (~w) | ~w~n", [C, UID, Src]) ))
     ),
     nl,
     % Summary by source type
-    findall(Src, member(_-Src, Mismatches), Srcs),
+    findall(Src, member(_UID-Src, Mismatches), Srcs),
     count_source(Srcs, trajectory_only, NTrajOnly),
     count_source_prefix(Srcs, both, NBoth),
     format("  trajectory_only: ~w~n", [NTrajOnly]),

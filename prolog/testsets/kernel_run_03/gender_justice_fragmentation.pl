@@ -114,8 +114,10 @@ narrative_ontology:topic_domain(gender_justice_fragmentation, "constitutional_la
 domain_priors:requires_active_enforcement(gender_justice_fragmentation).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(gender_justice_fragmentation, distributed).
-narrative_ontology:cs_authority_grounding(gender_justice_fragmentation, distributed).
+narrative_ontology:cs_story_uid(gender_justice_fragmentation, '24b5ca76-80b7-4d6d-8aa3-1c22c993d408').
+narrative_ontology:cs_created_at('24b5ca76-80b7-4d6d-8aa3-1c22c993d408', '').
+narrative_ontology:cs_kernel_codification('24b5ca76-80b7-4d6d-8aa3-1c22c993d408', distributed).
+narrative_ontology:cs_authority_grounding('24b5ca76-80b7-4d6d-8aa3-1c22c993d408', distributed).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(gender_justice_fragmentation, religious_institutional_authorities).

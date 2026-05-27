@@ -121,17 +121,19 @@ narrative_ontology:human_readable(freedom_floor_reading, "Unconditional Income S
 narrative_ontology:topic_domain(freedom_floor_reading, "political_economy/welfare_policy/labor_markets").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(freedom_floor_reading, formalized).
-narrative_ontology:cs_authority_grounding(freedom_floor_reading, distributed).
+narrative_ontology:cs_story_uid(freedom_floor_reading, 'b231e06b-3ec9-4b5b-8f62-0720aa44dfdf').
+narrative_ontology:cs_created_at('b231e06b-3ec9-4b5b-8f62-0720aa44dfdf', '').
+narrative_ontology:cs_kernel_codification('b231e06b-3ec9-4b5b-8f62-0720aa44dfdf', formalized).
+narrative_ontology:cs_authority_grounding('b231e06b-3ec9-4b5b-8f62-0720aa44dfdf', distributed).
 narrative_ontology:cs_kernel_id(freedom_floor_reading, income_support_commitment).
-narrative_ontology:cs_reading_relation(freedom_floor_reading, dependency_trap_reading, coexists_with).
-narrative_ontology:cs_reading_relation(freedom_floor_reading, targeting_efficiency_reading, coexists_with).
-narrative_ontology:cs_axiom(freedom_floor_reading, foundational, income_support_enables_autonomy).
+narrative_ontology:cs_reading_relation('b231e06b-3ec9-4b5b-8f62-0720aa44dfdf', dependency_trap_reading, coexists_with).
+narrative_ontology:cs_reading_relation('b231e06b-3ec9-4b5b-8f62-0720aa44dfdf', targeting_efficiency_reading, coexists_with).
+narrative_ontology:cs_axiom('b231e06b-3ec9-4b5b-8f62-0720aa44dfdf', foundational, income_support_enables_autonomy).
 narrative_ontology:cs_axiom_status(income_support_enables_autonomy, holdable).
-narrative_ontology:cs_axiom(freedom_floor_reading, foundational, universality_eliminates_stigma_suppression).
+narrative_ontology:cs_axiom('b231e06b-3ec9-4b5b-8f62-0720aa44dfdf', foundational, universality_eliminates_stigma_suppression).
 narrative_ontology:cs_axiom_status(universality_eliminates_stigma_suppression, holdable).
-narrative_ontology:cs_reference_frame(freedom_floor_reading, human_dignity_floor).
-narrative_ontology:cs_drift_state(freedom_floor_reading, contemporary_welfare_state, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_reference_frame('b231e06b-3ec9-4b5b-8f62-0720aa44dfdf', human_dignity_floor).
+narrative_ontology:cs_drift_state('b231e06b-3ec9-4b5b-8f62-0720aa44dfdf', contemporary_welfare_state, gap(practice_drift, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(freedom_floor_reading, caregivers).

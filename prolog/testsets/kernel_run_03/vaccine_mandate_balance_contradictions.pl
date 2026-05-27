@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(public_health_necessity_supersedes_consent, bodily_autonomy_inviolable).
 narrative_ontology:cs_axiom_contradiction(bodily_autonomy_inviolable, public_health_necessity_supersedes_consent).
+narrative_ontology:cs_story_uid(vaccine_mandate_balance_contradictions, 'a5ebd0aa-e600-4d89-93e9-2b4377bd40df').
+narrative_ontology:cs_created_at('a5ebd0aa-e600-4d89-93e9-2b4377bd40df', '').

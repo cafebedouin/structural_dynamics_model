@@ -116,25 +116,27 @@ narrative_ontology:topic_domain(codification_asymmetry, "constitutional_law/lega
 domain_priors:requires_active_enforcement(codification_asymmetry).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(codification_asymmetry, formalized).
-narrative_ontology:cs_authority_grounding(codification_asymmetry, lineage).
-narrative_ontology:cs_interpretation_layer_present(codification_asymmetry).
-narrative_ontology:cs_reading_relation(codification_asymmetry, personal_law_hindu_reading, coexists_with).
-narrative_ontology:cs_reading_relation(codification_asymmetry, personal_law_muslim_reading, coexists_with).
-narrative_ontology:cs_reading_relation(codification_asymmetry, personal_law_christian_reading, coexists_with).
-narrative_ontology:cs_reading_relation(codification_asymmetry, personal_law_secular_state_reading, influences).
-narrative_ontology:cs_reading_relation(codification_asymmetry, personal_law_rights_based_reading, influences).
-narrative_ontology:cs_axiom(codification_asymmetry, foundational, religious_community_autonomy_necessary).
+narrative_ontology:cs_story_uid(codification_asymmetry, '402b6b7a-a0b0-4aff-9f95-fdc062b65860').
+narrative_ontology:cs_created_at('402b6b7a-a0b0-4aff-9f95-fdc062b65860', '').
+narrative_ontology:cs_kernel_codification('402b6b7a-a0b0-4aff-9f95-fdc062b65860', formalized).
+narrative_ontology:cs_authority_grounding('402b6b7a-a0b0-4aff-9f95-fdc062b65860', lineage).
+narrative_ontology:cs_interpretation_layer_present('402b6b7a-a0b0-4aff-9f95-fdc062b65860').
+narrative_ontology:cs_reading_relation('402b6b7a-a0b0-4aff-9f95-fdc062b65860', personal_law_hindu_reading, coexists_with).
+narrative_ontology:cs_reading_relation('402b6b7a-a0b0-4aff-9f95-fdc062b65860', personal_law_muslim_reading, coexists_with).
+narrative_ontology:cs_reading_relation('402b6b7a-a0b0-4aff-9f95-fdc062b65860', personal_law_christian_reading, coexists_with).
+narrative_ontology:cs_reading_relation('402b6b7a-a0b0-4aff-9f95-fdc062b65860', personal_law_secular_state_reading, influences).
+narrative_ontology:cs_reading_relation('402b6b7a-a0b0-4aff-9f95-fdc062b65860', personal_law_rights_based_reading, influences).
+narrative_ontology:cs_axiom('402b6b7a-a0b0-4aff-9f95-fdc062b65860', foundational, religious_community_autonomy_necessary).
 narrative_ontology:cs_axiom_status(religious_community_autonomy_necessary, holdable).
-narrative_ontology:cs_axiom_grounding(codification_asymmetry, religious_community_autonomy_necessary, deontological).
-narrative_ontology:cs_axiom(codification_asymmetry, foundational, pluralist_constitution_mandates_accommodation).
+narrative_ontology:cs_axiom_grounding('402b6b7a-a0b0-4aff-9f95-fdc062b65860', religious_community_autonomy_necessary, deontological).
+narrative_ontology:cs_axiom('402b6b7a-a0b0-4aff-9f95-fdc062b65860', foundational, pluralist_constitution_mandates_accommodation).
 narrative_ontology:cs_axiom_status(pluralist_constitution_mandates_accommodation, holdable).
-narrative_ontology:cs_axiom_grounding(codification_asymmetry, pluralist_constitution_mandates_accommodation, conventional).
-narrative_ontology:cs_axiom(codification_asymmetry, secondary, unified_family_law_requires_religious_prioritization).
+narrative_ontology:cs_axiom_grounding('402b6b7a-a0b0-4aff-9f95-fdc062b65860', pluralist_constitution_mandates_accommodation, conventional).
+narrative_ontology:cs_axiom('402b6b7a-a0b0-4aff-9f95-fdc062b65860', secondary, unified_family_law_requires_religious_prioritization).
 narrative_ontology:cs_axiom_status(unified_family_law_requires_religious_prioritization, holdable).
-narrative_ontology:cs_axiom_grounding(codification_asymmetry, unified_family_law_requires_religious_prioritization, empirically_contingent).
-narrative_ontology:cs_reference_frame(codification_asymmetry, pluralist_accommodation_framework).
-narrative_ontology:cs_drift_state(codification_asymmetry, contemporary_rights_based_challenge, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('402b6b7a-a0b0-4aff-9f95-fdc062b65860', unified_family_law_requires_religious_prioritization, empirically_contingent).
+narrative_ontology:cs_reference_frame('402b6b7a-a0b0-4aff-9f95-fdc062b65860', pluralist_accommodation_framework).
+narrative_ontology:cs_drift_state('402b6b7a-a0b0-4aff-9f95-fdc062b65860', contemporary_rights_based_challenge, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(codification_asymmetry, religious_community_leadership).

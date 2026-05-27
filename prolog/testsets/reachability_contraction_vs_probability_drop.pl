@@ -116,8 +116,10 @@ narrative_ontology:topic_domain(reachability_contraction_vs_probability_drop, "i
 domain_priors:requires_active_enforcement(reachability_contraction_vs_probability_drop).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(reachability_contraction_vs_probability_drop, distributed).
-narrative_ontology:cs_authority_grounding(reachability_contraction_vs_probability_drop, expertise).
+narrative_ontology:cs_story_uid(reachability_contraction_vs_probability_drop, '5be3b167-2cb6-491e-a4db-63280e5b9a7d').
+narrative_ontology:cs_created_at('5be3b167-2cb6-491e-a4db-63280e5b9a7d', '').
+narrative_ontology:cs_kernel_codification('5be3b167-2cb6-491e-a4db-63280e5b9a7d', distributed).
+narrative_ontology:cs_authority_grounding('5be3b167-2cb6-491e-a4db-63280e5b9a7d', expertise).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(reachability_contraction_vs_probability_drop, nuclear_armed_great_powers).

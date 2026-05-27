@@ -120,8 +120,10 @@ narrative_ontology:topic_domain(decentralization_sovereignty_commitment, "moneta
 domain_priors:requires_active_enforcement(decentralization_sovereignty_commitment).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(decentralization_sovereignty_commitment, distributed).
-narrative_ontology:cs_authority_grounding(decentralization_sovereignty_commitment, distributed).
+narrative_ontology:cs_story_uid(decentralization_sovereignty_commitment, '194b8230-61fe-471c-b27c-414409abe3ad').
+narrative_ontology:cs_created_at('194b8230-61fe-471c-b27c-414409abe3ad', '').
+narrative_ontology:cs_kernel_codification('194b8230-61fe-471c-b27c-414409abe3ad', distributed).
+narrative_ontology:cs_authority_grounding('194b8230-61fe-471c-b27c-414409abe3ad', distributed).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(decentralization_sovereignty_commitment, early_adopters_and_core_developers).

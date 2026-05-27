@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(prefatory_clause_binding, operative_clause_independent_scope).
 narrative_ontology:cs_axiom_contradiction(operative_clause_independent_scope, prefatory_clause_binding).
+narrative_ontology:cs_story_uid(second_amendment_text_contradictions, 'd2e41fbf-fc9f-4185-b895-47027055f95c').
+narrative_ontology:cs_created_at('d2e41fbf-fc9f-4185-b895-47027055f95c', '').

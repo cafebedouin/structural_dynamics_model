@@ -111,14 +111,16 @@ narrative_ontology:human_readable(continuity_reading, "Medieval Latin as Continu
 narrative_ontology:topic_domain(continuity_reading, "historical_linguistics/philology/commitment_systems").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(continuity_reading, distributed).
-narrative_ontology:cs_authority_grounding(continuity_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(continuity_reading).
+narrative_ontology:cs_story_uid(continuity_reading, '2861ca50-4022-4f8c-98f3-1987e025bff8').
+narrative_ontology:cs_created_at('2861ca50-4022-4f8c-98f3-1987e025bff8', '').
+narrative_ontology:cs_kernel_codification('2861ca50-4022-4f8c-98f3-1987e025bff8', distributed).
+narrative_ontology:cs_authority_grounding('2861ca50-4022-4f8c-98f3-1987e025bff8', lineage).
+narrative_ontology:cs_interpretation_layer_present('2861ca50-4022-4f8c-98f3-1987e025bff8').
 narrative_ontology:cs_kernel_id(continuity_reading, correct_latin).
-narrative_ontology:cs_reading_relation(continuity_reading, rupture_reading, coexists_with).
-narrative_ontology:cs_axiom(continuity_reading, foundational, latin_constitutes_single_evolving_system).
+narrative_ontology:cs_reading_relation('2861ca50-4022-4f8c-98f3-1987e025bff8', rupture_reading, coexists_with).
+narrative_ontology:cs_axiom('2861ca50-4022-4f8c-98f3-1987e025bff8', foundational, latin_constitutes_single_evolving_system).
 narrative_ontology:cs_axiom_status(latin_constitutes_single_evolving_system, holdable).
-narrative_ontology:cs_axiom(continuity_reading, foundational, correction_occurs_via_internal_norm_absorption).
+narrative_ontology:cs_axiom('2861ca50-4022-4f8c-98f3-1987e025bff8', foundational, correction_occurs_via_internal_norm_absorption).
 narrative_ontology:cs_axiom_status(correction_occurs_via_internal_norm_absorption, holdable).
 
 % --- Structural relationships ---

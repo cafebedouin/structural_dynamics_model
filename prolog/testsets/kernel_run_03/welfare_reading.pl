@@ -124,20 +124,22 @@ narrative_ontology:topic_domain(welfare_reading, "applied_ethics/animal_studies/
 domain_priors:requires_active_enforcement(welfare_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(welfare_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(welfare_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(welfare_reading).
+narrative_ontology:cs_story_uid(welfare_reading, '804d1125-aed4-4e31-b7e5-c161235b2322').
+narrative_ontology:cs_created_at('804d1125-aed4-4e31-b7e5-c161235b2322', '').
+narrative_ontology:cs_kernel_codification('804d1125-aed4-4e31-b7e5-c161235b2322', fixed_text).
+narrative_ontology:cs_authority_grounding('804d1125-aed4-4e31-b7e5-c161235b2322', lineage).
+narrative_ontology:cs_interpretation_layer_present('804d1125-aed4-4e31-b7e5-c161235b2322').
 narrative_ontology:cs_kernel_id(welfare_reading, animal_moral_status).
-narrative_ontology:cs_reading_relation(welfare_reading, property_reading, forecloses).
-narrative_ontology:cs_reading_relation(welfare_reading, abolitionist_reading, coexists_with).
-narrative_ontology:cs_axiom(welfare_reading, foundational, sentience_generates_moral_status).
+narrative_ontology:cs_reading_relation('804d1125-aed4-4e31-b7e5-c161235b2322', property_reading, forecloses).
+narrative_ontology:cs_reading_relation('804d1125-aed4-4e31-b7e5-c161235b2322', abolitionist_reading, coexists_with).
+narrative_ontology:cs_axiom('804d1125-aed4-4e31-b7e5-c161235b2322', foundational, sentience_generates_moral_status).
 narrative_ontology:cs_axiom_status(sentience_generates_moral_status, holdable).
-narrative_ontology:cs_axiom_grounding(welfare_reading, sentience_generates_moral_status, deontological).
-narrative_ontology:cs_axiom(welfare_reading, foundational, use_permissible_under_welfare_constraints).
+narrative_ontology:cs_axiom_grounding('804d1125-aed4-4e31-b7e5-c161235b2322', sentience_generates_moral_status, deontological).
+narrative_ontology:cs_axiom('804d1125-aed4-4e31-b7e5-c161235b2322', foundational, use_permissible_under_welfare_constraints).
 narrative_ontology:cs_axiom_status(use_permissible_under_welfare_constraints, holdable).
-narrative_ontology:cs_axiom_grounding(welfare_reading, use_permissible_under_welfare_constraints, conventional).
-narrative_ontology:cs_reference_frame(welfare_reading, sentient_moral_patients_with_permissible_use).
-narrative_ontology:cs_drift_state(welfare_reading, contemporary_escalating_abolition_pressure, gap(authority_erosion, substantial, false)).
+narrative_ontology:cs_axiom_grounding('804d1125-aed4-4e31-b7e5-c161235b2322', use_permissible_under_welfare_constraints, conventional).
+narrative_ontology:cs_reference_frame('804d1125-aed4-4e31-b7e5-c161235b2322', sentient_moral_patients_with_permissible_use).
+narrative_ontology:cs_drift_state('804d1125-aed4-4e31-b7e5-c161235b2322', contemporary_escalating_abolition_pressure, gap(authority_erosion, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(welfare_reading, welfare_organizations).

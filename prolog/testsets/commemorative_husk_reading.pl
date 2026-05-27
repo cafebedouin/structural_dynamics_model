@@ -119,9 +119,11 @@ narrative_ontology:human_readable(commemorative_husk_reading, "Commemorative Hus
 narrative_ontology:topic_domain(commemorative_husk_reading, "disaster_anthropology/commitment_systems/temporal_institutional_analysis").
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(commemorative_husk_reading, fixed_text).
-narrative_ontology:cs_authority_grounding(commemorative_husk_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(commemorative_husk_reading).
+narrative_ontology:cs_story_uid(commemorative_husk_reading, 'ff12b801-efaf-451a-9214-99819ba6d8e9').
+narrative_ontology:cs_created_at('ff12b801-efaf-451a-9214-99819ba6d8e9', '').
+narrative_ontology:cs_kernel_codification('ff12b801-efaf-451a-9214-99819ba6d8e9', fixed_text).
+narrative_ontology:cs_authority_grounding('ff12b801-efaf-451a-9214-99819ba6d8e9', lineage).
+narrative_ontology:cs_interpretation_layer_present('ff12b801-efaf-451a-9214-99819ba6d8e9').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(commemorative_husk_reading, development_interests).

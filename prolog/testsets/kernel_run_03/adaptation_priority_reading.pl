@@ -122,20 +122,22 @@ narrative_ontology:topic_domain(adaptation_priority_reading, "climate_policy/pol
 domain_priors:requires_active_enforcement(adaptation_priority_reading).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(adaptation_priority_reading, formalized).
-narrative_ontology:cs_authority_grounding(adaptation_priority_reading, lineage).
-narrative_ontology:cs_interpretation_layer_present(adaptation_priority_reading).
+narrative_ontology:cs_story_uid(adaptation_priority_reading, '00a15efa-dea2-4cdb-8e2c-7dd74584c894').
+narrative_ontology:cs_created_at('00a15efa-dea2-4cdb-8e2c-7dd74584c894', '').
+narrative_ontology:cs_kernel_codification('00a15efa-dea2-4cdb-8e2c-7dd74584c894', formalized).
+narrative_ontology:cs_authority_grounding('00a15efa-dea2-4cdb-8e2c-7dd74584c894', lineage).
+narrative_ontology:cs_interpretation_layer_present('00a15efa-dea2-4cdb-8e2c-7dd74584c894').
 narrative_ontology:cs_kernel_id(adaptation_priority_reading, climate_response_imperative).
-narrative_ontology:cs_reading_relation(adaptation_priority_reading, mitigation_priority_reading, coexists_with).
-narrative_ontology:cs_reading_relation(adaptation_priority_reading, degrowth_reading, coexists_with).
-narrative_ontology:cs_axiom(adaptation_priority_reading, foundational, immediate_suffering_priority).
+narrative_ontology:cs_reading_relation('00a15efa-dea2-4cdb-8e2c-7dd74584c894', mitigation_priority_reading, coexists_with).
+narrative_ontology:cs_reading_relation('00a15efa-dea2-4cdb-8e2c-7dd74584c894', degrowth_reading, coexists_with).
+narrative_ontology:cs_axiom('00a15efa-dea2-4cdb-8e2c-7dd74584c894', foundational, immediate_suffering_priority).
 narrative_ontology:cs_axiom_status(immediate_suffering_priority, holdable).
-narrative_ontology:cs_axiom_grounding(adaptation_priority_reading, immediate_suffering_priority, deontological).
-narrative_ontology:cs_axiom(adaptation_priority_reading, foundational, capital_constraint_binding).
+narrative_ontology:cs_axiom_grounding('00a15efa-dea2-4cdb-8e2c-7dd74584c894', immediate_suffering_priority, deontological).
+narrative_ontology:cs_axiom('00a15efa-dea2-4cdb-8e2c-7dd74584c894', foundational, capital_constraint_binding).
 narrative_ontology:cs_axiom_status(capital_constraint_binding, holdable).
-narrative_ontology:cs_axiom_grounding(adaptation_priority_reading, capital_constraint_binding, empirically_contingent).
-narrative_ontology:cs_reference_frame(adaptation_priority_reading, equitable_climate_response_with_capital_prioritization).
-narrative_ontology:cs_drift_state(adaptation_priority_reading, contemporary_post_paris_implementation, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_axiom_grounding('00a15efa-dea2-4cdb-8e2c-7dd74584c894', capital_constraint_binding, empirically_contingent).
+narrative_ontology:cs_reference_frame('00a15efa-dea2-4cdb-8e2c-7dd74584c894', equitable_climate_response_with_capital_prioritization).
+narrative_ontology:cs_drift_state('00a15efa-dea2-4cdb-8e2c-7dd74584c894', contemporary_post_paris_implementation, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(adaptation_priority_reading, high_capacity_nations).

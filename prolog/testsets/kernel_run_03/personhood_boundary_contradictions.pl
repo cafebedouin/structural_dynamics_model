@@ -12,3 +12,5 @@ narrative_ontology:cs_axiom_contradiction(genetic_continuity_personhood, bodily_
 narrative_ontology:cs_axiom_contradiction(bodily_autonomy_foundational, genetic_continuity_personhood).
 narrative_ontology:cs_axiom_contradiction(genetic_continuity_personhood, fetal_capacity_for_independence_threshold).
 narrative_ontology:cs_axiom_contradiction(fetal_capacity_for_independence_threshold, genetic_continuity_personhood).
+narrative_ontology:cs_story_uid(personhood_boundary_contradictions, 'a2288bd6-fc45-4623-8819-0c957420e44a').
+narrative_ontology:cs_created_at('a2288bd6-fc45-4623-8819-0c957420e44a', '').

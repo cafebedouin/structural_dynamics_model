@@ -116,9 +116,11 @@ narrative_ontology:topic_domain(study_as_archiving, "religious_studies/halakhic_
 domain_priors:requires_active_enforcement(study_as_archiving).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(study_as_archiving, fixed_text).
-narrative_ontology:cs_authority_grounding(study_as_archiving, lineage).
-narrative_ontology:cs_interpretation_layer_present(study_as_archiving).
+narrative_ontology:cs_story_uid(study_as_archiving, 'a15f6741-f6e5-45c9-a662-f2a166b0b0b2').
+narrative_ontology:cs_created_at('a15f6741-f6e5-45c9-a662-f2a166b0b0b2', '').
+narrative_ontology:cs_kernel_codification('a15f6741-f6e5-45c9-a662-f2a166b0b0b2', fixed_text).
+narrative_ontology:cs_authority_grounding('a15f6741-f6e5-45c9-a662-f2a166b0b0b2', lineage).
+narrative_ontology:cs_interpretation_layer_present('a15f6741-f6e5-45c9-a662-f2a166b0b0b2').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(study_as_archiving, halakhic_authority_structure).

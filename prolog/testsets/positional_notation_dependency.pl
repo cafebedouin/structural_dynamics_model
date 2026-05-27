@@ -112,9 +112,11 @@ narrative_ontology:topic_domain(positional_notation_dependency, "history_of_math
 domain_priors:requires_active_enforcement(positional_notation_dependency).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(positional_notation_dependency, fixed_text).
-narrative_ontology:cs_authority_grounding(positional_notation_dependency, lineage).
-narrative_ontology:cs_interpretation_layer_present(positional_notation_dependency).
+narrative_ontology:cs_story_uid(positional_notation_dependency, '3a61d4ee-8f54-4422-bfbb-873e6f6a6936').
+narrative_ontology:cs_created_at('3a61d4ee-8f54-4422-bfbb-873e6f6a6936', '').
+narrative_ontology:cs_kernel_codification('3a61d4ee-8f54-4422-bfbb-873e6f6a6936', fixed_text).
+narrative_ontology:cs_authority_grounding('3a61d4ee-8f54-4422-bfbb-873e6f6a6936', lineage).
+narrative_ontology:cs_interpretation_layer_present('3a61d4ee-8f54-4422-bfbb-873e6f6a6936').
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(positional_notation_dependency, modern_mathematical_culture).

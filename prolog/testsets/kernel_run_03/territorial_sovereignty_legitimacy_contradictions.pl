@@ -9,3 +9,5 @@
 
 narrative_ontology:cs_axiom_contradiction(territorial_exclusivity_as_survival_precondition, modern_period_continuous_residence_binds_legitimacy).
 narrative_ontology:cs_axiom_contradiction(modern_period_continuous_residence_binds_legitimacy, territorial_exclusivity_as_survival_precondition).
+narrative_ontology:cs_story_uid(territorial_sovereignty_legitimacy_contradictions, '4b0b567f-ab04-4512-8740-65c9d80ad801').
+narrative_ontology:cs_created_at('4b0b567f-ab04-4512-8740-65c9d80ad801', '').

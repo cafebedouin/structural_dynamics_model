@@ -120,17 +120,19 @@ narrative_ontology:topic_domain(existential_legitimacy_1948, "political_theory/i
 domain_priors:requires_active_enforcement(existential_legitimacy_1948).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_kernel_codification(existential_legitimacy_1948, fixed_text).
-narrative_ontology:cs_authority_grounding(existential_legitimacy_1948, lineage).
-narrative_ontology:cs_interpretation_layer_present(existential_legitimacy_1948).
-narrative_ontology:cs_reading_relation(existential_legitimacy_1948, palestinian_right_return_1948, forecloses).
-narrative_ontology:cs_reading_relation(existential_legitimacy_1948, territorial_occupation_1967, influences).
-narrative_ontology:cs_axiom(existential_legitimacy_1948, foundational, jewish_right_sovereignty_post_holocaust).
+narrative_ontology:cs_story_uid(existential_legitimacy_1948, 'e6959efa-3ad8-4181-833f-eb1672bcec0a').
+narrative_ontology:cs_created_at('e6959efa-3ad8-4181-833f-eb1672bcec0a', '').
+narrative_ontology:cs_kernel_codification('e6959efa-3ad8-4181-833f-eb1672bcec0a', fixed_text).
+narrative_ontology:cs_authority_grounding('e6959efa-3ad8-4181-833f-eb1672bcec0a', lineage).
+narrative_ontology:cs_interpretation_layer_present('e6959efa-3ad8-4181-833f-eb1672bcec0a').
+narrative_ontology:cs_reading_relation('e6959efa-3ad8-4181-833f-eb1672bcec0a', palestinian_right_return_1948, forecloses).
+narrative_ontology:cs_reading_relation('e6959efa-3ad8-4181-833f-eb1672bcec0a', territorial_occupation_1967, influences).
+narrative_ontology:cs_axiom('e6959efa-3ad8-4181-833f-eb1672bcec0a', foundational, jewish_right_sovereignty_post_holocaust).
 narrative_ontology:cs_axiom_status(jewish_right_sovereignty_post_holocaust, holdable).
-narrative_ontology:cs_axiom(existential_legitimacy_1948, secondary, territorial_settlement_permanent_necessity).
+narrative_ontology:cs_axiom('e6959efa-3ad8-4181-833f-eb1672bcec0a', secondary, territorial_settlement_permanent_necessity).
 narrative_ontology:cs_axiom_status(territorial_settlement_permanent_necessity, overridden).
-narrative_ontology:cs_reference_frame(existential_legitimacy_1948, jewish_state_existence_legitimacy).
-narrative_ontology:cs_drift_state(existential_legitimacy_1948, contemporary_settlement_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_reference_frame('e6959efa-3ad8-4181-833f-eb1672bcec0a', jewish_state_existence_legitimacy).
+narrative_ontology:cs_drift_state('e6959efa-3ad8-4181-833f-eb1672bcec0a', contemporary_settlement_era, gap(axiom_overriding, substantial, false)).
 
 % --- Structural relationships ---
 narrative_ontology:constraint_beneficiary(existential_legitimacy_1948, israeli_state_institutional_authority).
