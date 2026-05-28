@@ -703,6 +703,49 @@ load multi-reading data and incidentally validate the branch.
 
 ---
 
+## OQ-22 — Hub 1 / Hub 2 fall-through behavior at threshold starvation
+
+**Status:** open  
+**Origin:** alt_power_transform first T2 run (compressed variants), May 2026. Diagnosed
+during the H1 investigation but not pursued as a separate item once the corrected Arm A/B
+sweep resolved H1.
+
+**Specific question:** When chi values compress below the classification threshold spacing,
+Hub 1 (chi-driven gates) effectively disengages and classification falls through to Hub 2
+(effective immutability). This is a regime change in the engine's classification mechanism.
+Under what conditions, if any, does this fall-through occur in normal operation across the
+existing corpus — for which constraints, in which contexts, under the default transform?
+Is there a documented boundary at which Hub 1 stops contributing meaningfully?
+
+**Evidence so far:** The starvation regime was entered accidentally in the first T2 run
+(compressed-flip variant, chi span 0.20, ceiling 0.15). Under that configuration, presheaf
+classifications were being decided by Hub 2 alone because Hub 1 had no dynamic range to
+discriminate across thresholds. The corrected Arm A/B sweep explicitly avoided this region
+by keeping all variants chi-spanning the gates (verified against rope floor, snare gate,
+tangled_rope gate, mountain ceiling from `prolog/config.pl`). The two-hub architecture
+comment in `drl_core.pl:160–210` describes the hubs as independent contributors driving
+classification variation across observers; the starvation finding indicates they can also
+substitute under degenerate transforms, which the architecture comment does not address.
+
+**What resolution changes:** If no real corpus configuration ever enters the starvation
+region under the default sigmoid, this is a non-issue for current operation but a
+constraint on what alternative transforms can safely be tested. If any subset of
+constraints or contexts does enter starvation under the default transform (e.g.,
+constraints with very low ε producing chi values that crowd the rope/tangled_rope
+boundary), then classifications in that subset are Hub 2 decisions reported as if they
+were two-hub decisions, and the framework should distinguish them. Resolution likely also
+affects how OQ-01 is read: the rope-gate bypass surfaces at compressed ceilings, but the
+broader question of when Hub 1 is meaningfully contributing is upstream of that specific
+clause.
+
+**Related:** OQ-01 (rope-gate bypass) — the A3 collapse at compressed ceilings was the
+bypass × sign-flip × compressed-ceiling interaction. The starvation regime is the adjacent
+phenomenon: not the bypass firing, but Hub 1 failing to discriminate at all. They share
+the property of being behaviors contingent on the default transform's range, surfaced
+only when that range was deliberately altered.
+
+---
+
 *Last updated: 2026-05-28. Add new items with sequential OQ-NN labels. Mark
 resolved items with **Status: resolved** and a resolution note rather than
 deleting — provenance matters.*
