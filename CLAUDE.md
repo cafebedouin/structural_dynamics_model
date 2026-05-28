@@ -104,6 +104,17 @@ Haiku batch API with prompt caching). This is how the corpus grew from ~1,000 to
   `directionality_sensitivity_sweep.py`) and all load-bearing pipeline modules stay in
   `python/` root. ~30 exploratory scripts stay (phase 2 pending). sys.path fixes applied
   to all 39 moved files. Verification script: `python3 python/verify_reorg.py`.
+- **2026-05-28: v6 of observers_not_humans paper — §2.3 correction** — Sign-flip is
+  load-bearing only in tangled_rope constraint family, not corpus-wide. Empirical
+  concentration: Jaccard +0.21 in tangled_rope vs +0.014 in snare+rope (14.6× difference).
+  H0 (sign-flip is load-bearing) conditionally confirmed; condition is that rope-gate
+  bypass behavior is treated as given (OQ-01 in `ISSUES.md`). Corrected universality-class
+  claim from corpus-wide to regime-specific. Unified §2.3 and §3.3 as one mechanism
+  (institutional sign-flip at d < d_zero) viewed at two resolutions. Jaccard range
+  corrected to 0.697–0.833 from published v5 range 0.685–0.828 (full-corpus rerun,
+  3,380 constraints, testsets_3000). See `docs/observers_not_humans_v6.md` and witness
+  files `outputs/alt_power_transform_results.json`, `outputs/range_sweep_results.json`.
+  OQ-05 and OQ-09 resolved.
 
 ## Pipeline Output Manifest Convention
 
