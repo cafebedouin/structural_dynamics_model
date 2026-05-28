@@ -95,6 +95,12 @@ Haiku batch API with prompt caching). This is how the corpus grew from ~1,000 to
 
 ## Known State
 
+- **Corpus is 223 constraints (not 3,337).** The reduction reflects a deliberate rebuild:
+  exploratory committer-axis generation runs reused constraint IDs across runs (the
+  "chimera" documented in OQ-25 and v7 §5.11 "corpus provenance" note). Cleanup triaged
+  collisions, archived stale duplicates, and reduced testsets/ to a single coherent run
+  (kernel_run_03: 109 CS readings + ~114 observer-axis constraints). §5.11 trifurcation
+  figures are verified single-run coherent. The 3,337 figure predates the rebuild.
 - Last audit (2026-02-28): passing tests / param sweep — live items migrated to ISSUES.md (OQ-11 – OQ-13); historical record in AUDIT.md
 - Config params: see `prolog/config.pl` for current count (`grep -c "^param(" prolog/config.pl`)
 - All numeric params inert at ±25%; all 17 directionality constants inert at ±25%
@@ -160,10 +166,15 @@ and the corresponding Prolog testset to `prolog/testsets/`. These files are inpu
 the analysis pipeline — `run_pipeline.py` reads them; it does not write them. Analysis
 output lives in `outputs/`.
 
-**Canonical framework paper: `docs/deferential_realism_paper_v6.13.1.md`.** Files
-`deferential_realism_paper.md` through `deferential_realism_paper_v6.13.md` in `docs/`
-are superseded. v6.13.1 adds the OQ-26 Axiom 2 amendment (ε is reading-relative, not
-observer-invariant across generation runs). When the framework spec is needed, use v6.13.1.
+**Canonical framework paper: `docs/deferential_realism_paper_v7.md`.** v7 promotes
+the committer axis from "commentary-grade annotation" (v6.12 §4.2) to a co-equal second
+axis: Axiom 7 (authored commitment structure with computed consequence), Theorem 7
+(detection independence — observer-coherent readings can be committer-foreclosed),
+Theorem 8 (licensed plurality vs. real closure), §4.5 (two-axis engine), §5.11
+(trifurcation profile). Axioms 1–6 and Theorems 1–4 are unchanged from v6.13.
+`docs/deferential_realism_paper_v6.13.1.md` is a parallel amendment to the observer-only
+line, formally updating Axiom 2 for OQ-26 (ε is reading-relative across generation runs).
+Files through v6.13 are superseded for the full framework; use v7.
 
 **Formal classification rules: `docs/logic.md`.** This is the spec document; `config.pl`
 must match it. UTF-8 encoding was repaired Feb 2026 (prior versions had mojibake from
