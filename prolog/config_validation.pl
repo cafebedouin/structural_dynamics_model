@@ -176,6 +176,39 @@ config_violation(Msg) :-
            [Dupes]).
 
 % ============================================================
+% CS ε coherence — OQ-25 (ISSUES.md)
+%
+% Invariant (DP-001): each ConstraintAtom (reading name) resolves to exactly
+% one ε in the DB. If two generation runs loaded the same reading with different
+% authored ε, both constraint_metric facts exist and the engine sees non-determinism.
+%
+% Grouping key: ConstraintAtom, NOT KernelAtom.
+% OQ-26 confirmed ε is reading-relative — a kernel legitimately carries distinct ε
+% across its readings. Keying on KernelAtom would false-positive on correct data.
+% The chimera failure mode is: same ConstraintAtom consulted from two runs →
+% two constraint_metric(C, extractiveness, E) facts with different E.
+%
+% Relationship to UID uniqueness check (above): that check is UID-side — it catches
+% duplicate UUID values but NOT the chimera (two files, same C, two distinct UIDs,
+% two conflicting ε). This clause is primary for chimera detection.
+%
+% See docs/cs_load_discipline.md for the regeneration-protocol context.
+% ============================================================
+
+config_violation(Msg) :-
+    current_predicate(narrative_ontology:cs_story_uid/2),
+    findall(C, narrative_ontology:cs_story_uid(C, _), Cs0),
+    sort(Cs0, AllCs),
+    AllCs \= [],
+    member(C, AllCs),
+    findall(E, narrative_ontology:constraint_metric(C, extractiveness, E), Es),
+    sort(Es, Unique),
+    Unique = [_, _ | _],
+    format(atom(Msg),
+           'CS ERROR (OQ-25): reading ~w has conflicting ε values ~w (must be single-valued per reading — DP-001); chimera load detected — see docs/cs_load_discipline.md',
+           [C, Unique]).
+
+% ============================================================
 % Fire on module load
 % ============================================================
 

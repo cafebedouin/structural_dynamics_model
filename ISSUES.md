@@ -746,6 +746,100 @@ only when that range was deliberately altered.
 
 ---
 
+## OQ-23 — coexists_with exclusion is unenforced design intent, not structural
+
+**Status:** open  
+**Origin:** FPN convergence-test run, Branch E verdict, May 2026.  
+**Files:** `prolog/drl_purity_network.pl` (constraint_neighbors/3, compute_edge_contamination/7); `prolog/test_forecloses_fpn_injection.pl` (Case 2 — coexists_with_label_blindness)
+
+**Specific question:** The architecture note's claim that coexists_with's contamination weight is "zero by definition" is — per the run — an unimplemented design intent, not a mathematical property. The FPN is label-blind; injecting coexists_with as an affects_constraint fact produces non-zero contamination identical to any other edge with the same purity delta. Unlike forecloses (which is structurally inert in its semantically correct direction, gradient-orthogonal to the network — genuinely unrepresentable regardless of code), coexists_with is structurally admissible (just a scalar) and excluded only by the fact that nothing currently routes it into constraint_neighbors/3. Should the exclusion remain documented-only, or should an edge-type guard be added so the decoupling is enforced rather than incidental?
+
+**Evidence so far:** The FPN injection test (Case 2) ran an identical injection to forecloses_1b and got identical scalar flow. The architecture note has been rewritten to claim only what each edge earned: forecloses excluded structurally (gradient-orthogonality demonstrated), coexists_with excluded by unenforced design intent with constraint_neighbors/3 named as the actual gap. No live code path currently routes a coexists_with edge into the network, so the gap is latent — but the next code change that does will inject as a label-blind scalar and nothing will catch it. This is the same shape as the chimera latency (OQ-related — pre-cleanup, the chimera was inert until the next cs_kernel_id addition would have made it live): documented-and-inert versus enforced-by-code.
+
+**What resolution changes:** Either (a) the architecture note's open-item clause is made loud enough that any future edit routing coexists_with into constraint_neighbors/3 cannot proceed without first reading the warning (self-flagging documented gap), or (b) an edge-type guard is added in compute_edge_contamination/7 that returns zero contamination when the underlying cs_reading_relation is coexists_with, converting "currently unenforced" to "mechanically enforced." Option (a) is consistent with the build's mark-drift-rather-than-armor discipline; option (b) closes the latent leak. The decision is "loud documentation versus actual guard," and either should be on the record rather than left as ambient.
+
+---
+
+## OQ-24 — forecloses requires no FPN representation, but the absence is undocumented in the engine
+
+**Status:** open  
+**Origin:** FPN convergence-test run, May 2026.  
+**Files:** `prolog/cs_pattern_detection.pl`, `prolog/cs_axiom_engine.pl` (where forecloses is consumed on the committer axis); `prolog/drl_purity_network.pl` (where it is correctly absent)
+
+**Specific question:** The run established that forecloses is gradient-orthogonal to the contamination model — points up the purity gradient (high-purity foreclosing reading → low-purity foreclosed reading), the network flows only down it, so the correct-direction edge is inert (Delta = 0) and any active injection inverts causation. This is a structural property of the relation, not a property of any specific test corpus. The engine currently has no record that this property is the reason forecloses is absent from constraint_neighbors/3 — the absence is enforced by the fact that nothing was ever wired to do otherwise. Should the engine carry a comment or assertion documenting why forecloses is structurally excluded, so a future contributor doesn't add a routing on the assumption that it's just an unimplemented feature?
+
+**Evidence so far:** The architecture note (post-rewrite) carries the gradient-orthogonality finding. The engine itself does not. compute_edge_contamination/7 has no comment explaining why no cs_reading_relation(_, _, forecloses) ever reaches it. A future contributor reading the code would see: edge types exist, only one (the bridge via influences → detect_necessity_inheritance) is wired, no comment explains why the other two are absent. The asymmetry between document-level explanation and code-level silence is the same documentation/enforcement gap as OQ-23, but inverted — there the question is whether to enforce; here the question is whether to explain.
+
+**What resolution changes:** One comment at compute_edge_contamination/7 (or at the top of drl_purity_network.pl) citing the FPN injection test and stating that forecloses is structurally excluded by gradient-orthogonality, with a pointer to test_forecloses_fpn_injection.pl for the witness, would prevent a future contributor from "fixing" an apparent gap. Without it, the architectural decision lives only in the architecture note, and the next person editing the network module would not encounter it. Low cost, prevents an unmarked-drift re-litigation.
+
+---
+
+## OQ-25 — testset directory chimera: resolved-inert but resolution mechanism is latent
+
+**Status:** resolved (2026-05-28)  
+**Origin:** Corpus cleanup, May 2026 (in response to ε-variability investigation).  
+**Files:** `prolog/testsets/` (working tree); `testsets_archive_20260525/` (archive)
+
+**Resolution:** Both options implemented.
+- **(a) Documentation:** `docs/cs_load_discipline.md` — states the invariant, grouping-key decision (ConstraintAtom, not KernelAtom; OQ-26 evidence), regeneration protocol, pointer to the guard.
+- **(b) Enforcement:** `prolog/config_validation.pl` — new `config_violation/1` clause wired into `validate_config_postcorpus/0` (called at end of `corpus_loader:load_all_testsets/0`). Fires when any ConstraintAtom carrying `cs_story_uid/2` has two or more distinct `constraint_metric(C, extractiveness, E)` values in the DB. Halts with exit 1 before any CS-layer predicate can run. Verified: clean load passes; injected conflict (`synthetic_conflict_test`, ε={0.42, 0.58}) correctly rejected with `CS ERROR (OQ-25)`. Divergence count post-guard: 79 reading-pair divergences across 34 kernels (unchanged from §5.11).
+
+**Grouping-key decision:** ConstraintAtom (reading name), NOT KernelAtom. Rationale: OQ-26 confirmed ε is reading-relative; grouping by KernelAtom would false-positive on legitimate multi-reading kernels. The chimera failure mode (same ConstraintAtom from two runs, conflicting ε) is caught by ConstraintAtom grouping.
+
+**Specific question:** The testset directory passed through three exploratory generation runs (during schema stabilization) that reused constraint IDs, leaving the directory a chimera of multiple runs with substantially different authored ε per ID. The cleanup resolved it: collisions triaged (stale duplicates dropped, genuinely-distinct readings archived rather than silently merged), directory reduced to the single committer-axis run as canonical. The §5.11 trifurcation numbers were verified byte-identical before and after, confirming the chimera was computationally inert because every CS-layer predicate gates on cs_kernel_id, which only CS-run stories carry. The mitigation works by construction — but the construction is implicit. What documents the load-discipline that any future multi-run testset directory must follow to remain inert?
+
+**Evidence so far:** Cleanup performed; archive retained at testsets_archive_20260525/. All §5.11 numbers (axiom_foreclosure 25, husk 57, stable_pattern 19, repudiation 2; cs_axiom_foreclosed 30; cs_drift_unacknowledged 84; conflicts 39/15/35/1; kernel divergence 79/34) identical pre/post. The hermetic sealing — non-CS stories invisible to CS predicates — is a property of the current state, not a guarantee. If any future regeneration adds cs_kernel_id to a non-CS-run story (or merges runs in a way that produces inconsistent ε for a single cs_kernel_id), the chimera becomes live and the divergence count (the one ε-dependent number in §5.11, via classify_at_time) silently contaminates.
+
+---
+
+## OQ-26 — ε is generated, not observer-invariant in the sense Axiom 2 assumes
+
+**Status:** resolved  
+**Origin:** ε-variability investigation, May 2026; cleanup of testset chimera surfaced the underlying mechanism.  
+**Resolution:** Option (a) implemented 2026-05-28. See `docs/deferential_realism_paper_v6.13.1.md` Axiom 2 (lines 66–91).
+
+**What was changed:** Axiom 2 amended to clarify that ε-invariance holds **across observer positions** but **not across generation runs**. New **Generation-dependence note** explicitly scopes all ε-dependent statistics (H¹ distributions, classification proportions, divergence counts) to "one coherent generation" rather than treating them as population estimates. This makes v6.13.1 consistent with v7 §6's caveat and prevents the published record from asserting an invariance it doesn't have.
+
+**Evidence resolved:**
+- Birth ε=0.58 ("tangled hybrid") vs ε=0.12 ("coordination mechanism") under different SCOPE decompositions
+- Mourning: 0.18 vs 0.58; Domain_partition: 0.08 vs 0.35
+- These are genuinely different readings (confirmed by narrative inspection), not generation noise
+- ε is a property of a reading, not of a topic; topic has no fixed ε
+- The prohibition anchor for Theorem 7 validated as ε-stable (0.68 in both states) only *because* ε is generation-dependent
+- Every corpus statistic the framework cites downstream is now scoped durably
+
+**Option (b) deferred:** Constraining generation for run-reproducibility (same seed, same SCOPE, same prompt → reproducible ε) is a separate architectural item, deferred as future work. The present resolution addresses the published record: option (a) is honest about what the framework has; option (b) would buy an invariance not currently provided.
+
+---
+
+## OQ-27 — H¹ definition: signature-resolved vs raw-type orbit is not stated in the engine
+
+**Status:** open  
+**Origin:** Theorem 7 anchor verification, May 2026 (the precision note that changed v7's H¹=0 phrasing).  
+**Files:** `prolog/cohomological_obstruction.pl` (or wherever orbit_vector is constructed); `prolog/drl_core.pl` (dr_type, integrate_signature_with_modal); `docs/deferential_realism_paper_v6.13.md` (theorem 2 statement)
+
+**Specific question:** H¹ in this framework is computed over the signature-resolved dr_type orbit — the path cohomological_obstruction → orbit_vector → type_at_context → dr_type applies the structural signature before H¹ counts disagreement. Raw classify_from_metrics types may be — and for the prohibition anchor are — maximally heterogeneous ([naturalized, snare, rope, snare]) while signature-resolved types are uniform ([tangled_rope × 4]), yielding H¹=0. The v6.13 paper describes H¹ as "a partition functional over the classifications assigned by the observer positions" without specifying which classification — raw or signature-resolved. The v7 draft was loose at exactly the same point and had to be corrected. Does the v6.13 statement need a precision amendment to make the signature-resolution explicit?
+
+**Evidence so far:** The verification run for the prohibition anchor produced the precision note: H¹ measures coherence of the signature-resolved orbit, not raw-type uniformity. v7 was revised to state both orbits explicitly (raw and signature-resolved), report them together as the corpus confirmation, and tie the result to Theorem 1 (the signature is the cover story). v6.13's Theorem 2 statement and the surrounding orientation prose use "classification orbit" without disambiguation; a careful reader running classify_at_time directly would get raw types and not know they don't match what H¹ counts. This is the same kind of silent precondition the FPN convergence proof carried before the run (an assumption stated in prose, never made code-visible).
+
+**What resolution changes:** Either (a) v6.13 Theorem 2 is amended to specify "signature-resolved classification orbit" wherever "classification orbit" currently appears, and the engine carries a comment at cohomological_obstruction confirming the path goes through dr_type (signature-resolved), not classify_from_metrics (raw); or (b) the paper stands with the looser phrasing and v7 carries the precision as a v7-specific clarification. Option (a) eliminates the ambiguity at the source; option (b) leaves the source loose and patches it downstream. The latter is the pattern that produced the hanbali misattribution (v7 inherited v6.13's loose phrasing, then I wrote a theorem on top of it).
+
+---
+
+## OQ-28 — Seat Theorem v1.1 honesty edits batched but not all witnessed by runs
+
+**Status:** open  
+**Origin:** Seat Theorem amendment work, May 2026.  
+**File:** `docs/seat-theorem-v1.md` (now v1.1 with three pending edits)
+
+**Specific question:** The Seat Theorem v1.1 batch contains three edits: (1) §3 correction against the FPN injection run — witnessed by test_forecloses_fpn_injection.pl, fully grounded; (2) §5 incompleteness-downgrade from claimed structural parallel to acknowledged analogy — not witnessed by any run, justified by the observation that the parallel to Gödel was never formally derived; (3) P3-locality clause appended to every self-sealing claim — also not witnessed by a run, justified by the observation that P3 is contestable and the theorem cannot defeat someone who rejects it. Two of three edits are arguments-from-the-chair while the third was an argument-against-the-chair-from-a-run. Is the asymmetry acceptable, or should edits (2) and (3) carry their own falsifiability discipline?
+
+**Evidence so far:** Edit (1) is the model the build has been honing for months — abstract theorem corrected by a Prolog run, citation direction from engine to theorem. Edits (2) and (3) are corrections the theorem could in principle make to itself by inspection: §5 never claimed a formal incompleteness derivation, so downgrading it to analogy is closing a gap the prose opened; P3 is explicitly contestable by direct realists, so localizing the theorem's reach is making explicit what was already true. Neither requires a run because neither claims a measurable property — they're scope clarifications, not result claims. But the asymmetry matters for how the document is read: a reader who sees one witnessed edit and two unwitnessed ones may wonder why the unwitnessed ones aren't also conditional on a test.
+
+**What resolution changes:** Either (a) edits (2) and (3) are clearly marked as scope-clarifications rather than result-claims, so the asymmetry is intentional and on the record (the witnessed edit corrects a claim; the unwitnessed edits narrow scopes and don't need run-grounding for that reason); or (b) edits (2) and (3) acquire their own falsifiability — what would falsify the analogy-not-derivation framing of §5, what would refute the conditionality on P3 — and the document carries those alongside the §3 witness. Option (a) is the honest distinction; option (b) is overkill but would make the document fully symmetric. The asymmetry is acceptable as long as it's named, which it currently isn't.
+
+---
+
 *Last updated: 2026-05-28. Add new items with sequential OQ-NN labels. Mark
 resolved items with **Status: resolved** and a resolution note rather than
 deleting — provenance matters.*

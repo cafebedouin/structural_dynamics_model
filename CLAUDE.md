@@ -34,7 +34,7 @@ what matters most for this task.
 ## Project Context
 
 Prolog+Python research infrastructure implementing Deferential Realism (DR).
-91+ Prolog modules, 3,337 main-corpus constraints (`prolog/testsets/`), 189 SOTU
+99 Prolog modules, 223 main-corpus constraints (`prolog/testsets/`), 189 SOTU
 constraints (`prolog/testsets_sotu/`), 100+ Python analysis scripts.
 
 Key constraint: Correctness and reproducibility matter most. Model provenance
@@ -43,13 +43,19 @@ Key constraint: Correctness and reproducibility matter most. Model provenance
 **Start here:** `docs/project_orientation.md` is the canonical operational reference for
 any model entering this repo. It covers repo layout, classification architecture, the full
 paper sequence with summaries, empirical findings inventory, open work items, and
-methodological practices. Line-number anchors are anchored to git HEAD `55df084a`
-(2026-05-09); verify before citing, as high-churn files drift.
+methodological practices. Line-number anchors are anchored to git HEAD `db218d8c`
+(2026-05-28); verify before citing, as high-churn files drift.
 
-**Open questions tracker:** `ISSUES.md` (OQ-01 – OQ-13) logs unresolved
+**Open questions tracker:** `ISSUES.md` (OQ-01 – OQ-28) logs unresolved
 engine-level, schema-level, and paper-synchronization issues with status, evidence, and
 what resolution would change. Check it before touching drl_core.pl, product_site_export.pl,
 or the rope gate — OQ-01 and OQ-02 are directly relevant to those files.
+
+**Implementation wiring notes:** `docs/technical/` contains file-level notes on
+non-obvious wiring, operator-precedence bugs, fact-adapter patterns, and query gotchas
+discovered during implementation sessions. Scope is narrow: things that caused real bugs
+or confusion, not general architecture. Read the relevant file before modifying
+`config_validation.pl`, `cs_kernel_registry.pl`, or the CS fact schema.
 
 ## Typical Workflow
 
@@ -115,6 +121,17 @@ Haiku batch API with prompt caching). This is how the corpus grew from ~1,000 to
   3,380 constraints, testsets_3000). See `docs/observers_not_humans_v6.md` and witness
   files `outputs/alt_power_transform_results.json`, `outputs/range_sweep_results.json`.
   OQ-05 and OQ-09 resolved.
+- **2026-05-28: OQ-25 resolved — ε coherence load guard** — `config_validation.pl`
+  now includes a `config_violation/1` clause that fires inside `validate_config_postcorpus`
+  (called at end of `corpus_loader:load_all_testsets`). Rejects any load where the same
+  ConstraintAtom carries two distinct `constraint_metric(C, extractiveness, E)` values —
+  the chimera failure mode. Grouping key is ConstraintAtom (not KernelAtom; OQ-26
+  rationale). §5.11 divergence count confirmed unchanged (79 pairs / 34 kernels).
+  See `docs/cs_load_discipline.md` (regeneration protocol) and
+  `docs/technical/config_validation_wiring.md` (implementation notes).
+- **2026-05-28: docs/technical/ created** — implementation wiring notes for things
+  that caused real bugs in sessions. Current: `config_validation_wiring.md`.
+  Pointer added to CLAUDE.md and MEMORY.md.
 
 ## Pipeline Output Manifest Convention
 
@@ -143,9 +160,10 @@ and the corresponding Prolog testset to `prolog/testsets/`. These files are inpu
 the analysis pipeline — `run_pipeline.py` reads them; it does not write them. Analysis
 output lives in `outputs/`.
 
-**Canonical framework paper: `docs/deferential_realism_paper_v6.13.md`.** Files
-`deferential_realism_paper.md` through `deferential_realism_paper_v6.12.md` in `docs/`
-are superseded. When the framework spec is needed, use v6.13.
+**Canonical framework paper: `docs/deferential_realism_paper_v6.13.1.md`.** Files
+`deferential_realism_paper.md` through `deferential_realism_paper_v6.13.md` in `docs/`
+are superseded. v6.13.1 adds the OQ-26 Axiom 2 amendment (ε is reading-relative, not
+observer-invariant across generation runs). When the framework spec is needed, use v6.13.1.
 
 **Formal classification rules: `docs/logic.md`.** This is the spec document; `config.pl`
 must match it. UTF-8 encoding was repaired Feb 2026 (prior versions had mojibake from
