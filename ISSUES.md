@@ -395,6 +395,314 @@ None are blocking; all are low priority.
 
 ---
 
+## OQ-14 — Two-axis architecture doc stale on `influences` bridge
+
+**Status:** open  
+**Origin:** Cross-axis comparison layer design pass, May 2026.  
+**File:** `docs/two_axis_architecture_v7.md` (lines 41, 109, 116, 139, 143)
+
+**Specific question:** The doc asserts in multiple places that the two axes are
+"joined only by the `influences`-entailment bridge through `drl_composition`."
+That claim was load-bearing under the prior architecture. The design decision to
+unbless the bridge and route `influences` through the not-yet-built comparison
+layer (alongside every other cross-axis edge) makes the doc's central claim
+false. When does the doc get updated to reflect the new topology?
+
+**Evidence so far:** The cross-axis inventory (OQ-15) found 16 predicates
+crossing the axis boundary, only one of which is the blessed `influences`
+bridge. Routing all 16 through a single named comparison/mediator layer was
+agreed; the bridge stops being privileged and becomes one cross-axis read among
+others. The doc's own thesis (line 17, "mark the drift") prescribes that
+architectural decisions get recorded *in* the doc when they're made. Currently
+the decision exists in conversation only.
+
+**What resolution changes:** The doc either accurately describes the live
+architecture (comparison layer is the sole sanctioned join, `influences` enters
+it like any other cross-axis read) or remains stale on its central
+architectural claim. The "Why they must not be unified" section needs the
+rewrite; the "Open by design" section (line 109) needs the bridge demoted from
+sanctioned-singleton to one-of-many. Until the doc is updated, the next reader
+trusts a document that describes a topology the code no longer matches —
+exactly the unmarked-drift failure the doc was written to prevent.
+
+---
+
+## OQ-15 — Cross-axis comparison/mediator layer: designed but not built
+
+**Status:** open  
+**Origin:** Tranche 2 cross-axis surface inventory, May 2026.  
+**Files:** `prolog/cs_drift_mismatch.pl`, `prolog/cs_kernel_registry.pl`,
+`prolog/cs_pattern_detection.pl`, `prolog/cs_axiom_engine.pl`,
+`prolog/drl_composition.pl`, `prolog/drl_purity_network.pl`,
+`prolog/json_report.pl`, `python/enhanced_report.py`
+
+**Specific question:** The inventory of cross-axis predicates surfaced 16
+distinct surfaces threaded through 7 modules in both directions. The agreed
+architecture is a third layer — neither CS nor DR — that is the sole reader of
+both axes, with both axes becoming read-only sources, the layer writing only to
+JSON output, and three grep-enforceable invariants (no axis reads the other, no
+axis reads the mediator, only the mediator may read both). The triage into
+three buckets (genuine comparisons → mediator; substrate-level story-field
+readers → a fourth substrate layer; sanctioned-bridge/exclusion-filter cases →
+decision per item) and the design itself were paused when the temporal
+excavation took priority. When does the mediator design pass resume, and what
+becomes of the 16 inventoried surfaces?
+
+**Evidence so far:** Inventory complete. Three buckets identified:
+1. Genuine comparisons that read both axes (`cs_drift_mismatch`, the
+   `json_report.pl` cross-axis aggregators, and — per OQ-14 — the unblessed
+   `detect_necessity_inheritance`).
+2. Substrate-level pattern detectors in `cs_pattern_detection.pl` that read only
+   constraint-story fields (not DR-derived; they belong to a substrate layer
+   that names the shared input both axes interpret). Six predicates.
+3. `constraint_neighbors/3` exclusion filter using `cs_kernel_id` to keep CS
+   out of the DR network — defensible as-is, named for decision.
+
+Zero back-channel violations: no module asserts facts the other axis reads at
+runtime. The architecture is decoupled in practice; what's missing is the named
+layer that makes the boundary structural rather than nominal.
+
+**What resolution changes:** Until built, every CS module reaching into DR (and
+the two DR→CS reads) is a nominal boundary violation that happens to be
+behaviorally clean. A named mediator layer with prefix-enforceable invariants
+converts "currently clean" to "mechanically guaranteed clean." Also closes
+OQ-08 (the DR/CS Π-difference annotation lives naturally in the mediator's
+output, not bolted onto `cs_drift_mismatch`). The unbuilt comparison layer is
+also where `classify_at_time` would split (OQ-17) — the keystone-within-the-
+keystone is the mediator design itself.
+
+---
+
+## OQ-16 — Temporal vocabulary rename pass deferred
+
+**Status:** open  
+**Origin:** Temporal excavation audit, May 2026.  
+**Files:** `prolog/drift_events.pl`, `prolog/drift_report.pl`,
+`prolog/trajectory_mining.pl`, `prolog/trajectory_report.pl`,
+`prolog/network_dynamics.pl` (`detect_network_drift/3`)
+
+**Specific question:** The temporal excavation found that "drift" and
+"trajectory" name two structurally different concepts on opposite axes
+(committer-drift in `cs_drift_engine` vs. network-contamination /
+metric-rate-of-change in `drift_events`/`network_dynamics`; CS commitment-
+trajectory vs. observer-context-profile in `trajectory_mining`). The word
+collision is the source of much of the cross-axis confusion that drove the
+mediator-layer work. Renames were proposed but explicitly not executed,
+sequenced as a separate pass. When does the rename pass run?
+
+**Evidence so far:** Proposed renames recorded:
+- `drift_events.pl` → `metric_drift_events.pl` (or `dr_drift_events.pl`)
+- `drift_report.pl` → `metric_drift_report.pl`
+- `trajectory_mining.pl` → `context_profile_mining.pl`
+- `trajectory_report.pl` → `context_profile_report.pl`
+- `detect_network_drift/3` → `detect_network_contamination/3`
+
+All five are same-word-different-concept findings (network/metric drift ≠ CS
+commitment drift; observer-context "trajectory" ≠ CS commitment trajectory).
+Each is a name-only change — no logic moves, no algorithm changes. The pass
+touches import lines across 5+ files plus `stack.pl` load order plus test
+files.
+
+**What resolution changes:** Eliminates a recurring source of confusion that
+showed up at every layer of the temporal excavation (and arguably contributed
+to `cs_drift_mismatch`'s original miswiring, since the word collision made the
+cross-axis boundary harder to see). Cosmetic relative to behavior, but
+disambiguating naming is the same hygiene that the UUID surrogate work applied
+to identity collisions — the analog at the vocabulary layer. Low risk, ~30
+minutes per module if done deliberately (one rename + load-check at a time, per
+the `stack.pl` discipline established during Phase A of the UUID work).
+
+---
+
+## OQ-17 — `testsets_3000/` quarantined from loader: abandoned or unwired?
+
+**Status:** open  
+**Origin:** Temporal excavation, May 2026.  
+**Files:** `prolog/corpus_loader.pl` (flat `testsets/*.pl` glob);
+`prolog/cs_drift_mismatch.pl:113` and `prolog/cs_corpus_analysis.pl:194`
+(hardcoded `expand_file_name('testsets/*.pl', Files)`)
+
+**Specific question:** `testsets_3000/` contains 3,380 constraint-story files,
+97% with rich multi-timepoint `measurement/5` data (3–7 distinct timepoints per
+constraint), and the corpus has zero `cs_drift_state/3` (it's pure DR-
+measurement). The current loader globs flat `testsets/*.pl` only and never
+ingests the subdirectory. Two `cs_*` modules hardcode the same flat path. Is
+`testsets_3000/` an abandoned generation run that should be archived or
+deleted, or is it the corpus you intend to eventually load and have not yet
+wired in?
+
+**Evidence so far:** Audit run on the directory confirmed: 3,287 files meet
+the >2-timepoint trajectory criterion (the headline data the dormant temporal
+machinery would need), max 7 timepoints, zero `cs_drift_state`. The contrast
+with `testsets/` is sharp: `testsets/` has the smaller measurement corpus *and*
+all 103 `cs_drift_state` facts (the committer-axis layer). The two corpora
+appear to have been built around different temporal regimes — `testsets_3000`
+as a pure DR-measurement corpus, `testsets/` as where the CS layer was added
+on top. The hardcoded flat-path globs in two CS modules suggest the quarantine
+is by intent, but it's never been recorded as such.
+
+**What resolution changes:** Either (a) `testsets_3000/` becomes an archive/
+delete decision (the same way `testsets_archive_20260525/` already is) and
+disappears from the working tree, removing 3,380 files of latent
+"is-this-loaded" confusion, or (b) it gets wired into the loader and the
+pipeline runs against a 10× larger corpus — which is a corpus-scope decision
+with substantial downstream consequences (every report figure, every
+distribution, every "X% of corpus" claim recomputes). One of those decisions
+should be on the record; "sitting there ignored" is the unmarked state.
+
+---
+
+## OQ-18 — `metric_delta/5` first/last reduction: safe-as-event-gate, latent if reused
+
+**Status:** open  
+**Origin:** Temporal wiring spike, faithfulness audit, May 2026.  
+**File:** `prolog/drift_events.pl:72-79`
+
+**Specific question:** `metric_delta/5` reads the full `measurement/5` time
+series, sorts it, and returns *only the first and last* T-V pair's delta —
+discarding all intermediate timepoints. This is currently safe because
+`metric_delta`'s output is only used as a boolean threshold gate (delta >
+threshold → fire event). It is silently wrong if ever reused as a trajectory
+source: a series that spikes and recovers (V(0)=0.35, V(peak)=0.68,
+V(end)=0.58) produces the same delta as a monotone climb to the same endpoint.
+Should the predicate be renamed, deprecated, or annotated to prevent this
+reuse?
+
+**Evidence so far:** The faithfulness audit during the temporal spike found
+this and three other temporal predicates (`metric_trend/3`, `drift_velocity/3`,
+`drift_acceleration/3`) all use first/last or first-3-points reductions. They
+are all event-gates, all safely-reductive *for their current use*, and all
+hazardous as trajectory sources. The temporal wiring deliberately sourced from
+raw `measurement/5` rather than any of these collapsing predicates. The
+hazard is structural: a future developer (or a future Claude) looking for "the
+predicate that gives me drift velocity" will find `drift_velocity/3` and use
+it, getting silently wrong answers on any non-monotone series. The temporal
+wiring code excluded these predicates explicitly with a do-not-use comment,
+but the predicates themselves carry no such marking.
+
+**What resolution changes:** Either rename to make the collapse explicit
+(e.g. `drift_velocity_endpoint/3` instead of `drift_velocity/3`), add a
+docstring/comment at each predicate marking the reduction as event-gate-only
+and pointing to the faithful source, or deprecate in favor of series-faithful
+replacements. Lowest cost: comment annotation. Highest robustness: rename so
+the limitation is in the call site every time the predicate is invoked. The
+current state (no marking, current use safe, latent hazard on reuse) is the
+exact "currently-true-by-accident" pattern ISSUES.md exists to prevent
+becoming an unmarked assumption.
+
+---
+
+## OQ-19 — Temporal-shape trigger thresholds are corpus-specific magic numbers
+
+**Status:** open  
+**Origin:** Temporal-shape report section build, May 2026.  
+**File:** `python/enhanced_report.py` (build_drift_trajectory section,
+trigger logic)
+
+**Specific question:** The `drift_trajectory` report section in
+`enhanced_report.py` fires on three triggers with corpus-specific magic
+numbers: non-monotone reversal ≥ 0.04, cross-metric divergence ≥ 0.06 both
+metrics, plateau requires sustained negative acceleration + last-rate < 20%
+of first-rate + total rise ≥ 0.05. Each threshold is justified against the
+current corpus's 2-decimal-place measurement granularity (0.04 = 4× the
+minimum representable movement, etc.). If the corpus is ever regenerated at
+3-decimal precision, do these thresholds silently become too coarse?
+
+**Evidence so far:** Thresholds were calibrated and validated: floor sweep
+showed trigger B (divergence) stable across 0.04–0.10 (16→14 constraints),
+confirming it sits in a gap not a cluster; trigger A's 0.04 is 4× the 0.01
+granularity floor; trigger C's parameters were tuned to fire only on genuine
+ceiling approaches (24 metrics across 20 constraints). Result: 48 distinct
+constraints triggered, 142 silent, all four spot-checks correct. The
+calibration is sound for *this* corpus. The thresholds are embedded in the
+trigger logic with comments justifying each value against the granularity
+argument.
+
+**What resolution changes:** Either the thresholds are recorded somewhere
+durable (a config param, a comment block tying each value to the assumption
+that makes it valid, a regeneration-time check that asserts measurement
+granularity ≤ assumed) or they become silent assumptions the moment the
+measurement precision changes. The recurring pattern from this engagement —
+"currently-justified constant becomes unmarked assumption when the thing that
+justified it changes" — applies. Cheap insurance: each threshold carries its
+own rationale in code, with a one-line "if measurement granularity changes,
+recalibrate" marker.
+
+---
+
+## OQ-20 — DR-regression baseline diff against `v3-dev-baseline` tag never run
+
+**Status:** open  
+**Origin:** Tranche 2 correctness pass, May 2026.  
+**Files:** git tag `v3-dev-baseline` (pre-CS-work); current DR pipeline
+output
+
+**Specific question:** All CS-era work (the original CS wiring, the kernel_id
+keystone, the UUID surrogate migration, the temporal wiring) landed on top of
+mature DR code. The audit confirmed a pre-CS DR baseline exists as the git tag
+`v3-dev-baseline`. A byte-diff of current DR output against the baseline would
+establish whether any of the CS-era work perturbed DR. This has never been
+run. Did the CS-era work leave DR output byte-identical to the pre-CS
+baseline, or are there perturbations?
+
+**Evidence so far:** The audit confirmed the tag's existence. Test suite
+passes after each phase (zero errors, zero warnings as of last run), which
+establishes that DR didn't *break*. It does not establish that DR output is
+unchanged — multifile clause additions, new `stack.pl` imports, and shared
+predicate-resolution-order changes could shift DR output without breaking it.
+The before/after for the original CS imports is no longer recoverable
+(everything is now committed on top of those changes), so this is not a clean
+"before vs after a specific change" diff — it's "compare current DR to the
+pre-CS-era tag."
+
+**What resolution changes:** Either confirms DR was untouched by all CS work
+(strong evidence the axis separation held in practice, not just in
+architecture), or surfaces specific DR outputs that shifted (each shift becomes
+its own investigation: intentional consequence of a shared-predicate change,
+or accidental perturbation needing tracing). Either result is informative.
+Required mechanism: check out `v3-dev-baseline`, run the DR pipeline, capture
+output, return to HEAD, run again, byte-diff.
+
+---
+
+## OQ-21 — A12 multi-instance render branch never exercised on pipeline data
+
+**Status:** open  
+**Origin:** UUID surrogate migration, May 2026.  
+**File:** `prolog/json_report.pl` (A12 per-constraint CS block,
+`cs_instance_count` > 1 branch)
+
+**Specific question:** A12's multi-instance render branch (the path that
+fires when a constraint name `C` has multiple `cs_story_uid` UIDs, picks the
+latest by `cs_created_at` with `@<` fallback when timestamps are absent) was
+verified by manual dual-consult in the post-migration isolation check (check
+6) but has never executed in the actual pipeline. The pipeline's
+`corpus_loader` only globs flat `testsets/*.pl`, and the flat corpus is
+single-instance-per-name by construction (the colliding `kernel_run_02/`
+instances are in a subdirectory the loader doesn't read). When does the
+multi-instance branch get exercised on real pipeline data?
+
+**Evidence so far:** The branch is correct code for a condition the current
+load discipline doesn't produce. This is the reserved-branch fate, not
+vestigial — the architecture explicitly supports multi-instance identity and
+the code is built for it, but the loader is single-run by design. The branch's
+correctness depends on a load-discipline assumption (single-run-per-flat-
+corpus) holding. If that assumption changes (e.g. multi-run merging becomes
+a feature, or `testsets_3000/` wiring happens per OQ-17 with multi-run data),
+the branch suddenly starts firing and its pipeline-time correctness becomes
+empirically testable for the first time.
+
+**What resolution changes:** The branch moves from "verified by manual dual-
+consult" to "exercised end-to-end by the pipeline." Until then it's the
+correct-but-untested-on-real-data case. The natural unblock: any future task
+that deliberately constructs a multi-instance load (a deliberate two-run
+co-load, or OQ-17 resolving toward "wire `testsets_3000`") would exercise the
+branch as a side effect. The branch is also the natural exercise vehicle for
+OQ-10's cross-reading comparison work — building that comparison tool would
+load multi-reading data and incidentally validate the branch.
+
+---
+
 *Last updated: 2026-05-28. Add new items with sequential OQ-NN labels. Mark
 resolved items with **Status: resolved** and a resolution note rather than
 deleting — provenance matters.*
