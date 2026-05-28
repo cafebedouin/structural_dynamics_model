@@ -256,27 +256,18 @@ clarity value for any external reader of mismatch output.
 
 ## OQ-09 — sqrt_flip and quadratic_flip Jaccard slightly above paper §2.3 ceiling
 
-**Status:** open  
+**Status:** resolved  
 **Origin:** alt_power_transform full-corpus run (testsets_3000, 3380 constraints), May
 2026.  
-**Witness file:** `outputs/alt3k_sigmoid.json` and per-variant alt3k_*.json files
+**Resolution:** v6 corrected the claimed range to 0.697–0.833 (2026-05-28).
 
-**Specific question:** Two variants (sqrt_flip: 0.833, quadratic_flip: 0.830) exceed
-the paper v5 §2.3 claimed ceiling (0.828) by 0.002–0.005. Is this acceptable rounding
-tolerance, or does it reflect a corpus-version skew that should be noted in v6?
-
-**Evidence so far:** 4 of 6 original variants fall within the claimed range
-(0.685–0.828). The two above-ceiling variants exceed by a margin consistent with
-corpus growth from the snapshot used to compute the original range. The claimed range
-was computed on an earlier corpus snapshot; the full 3,380-constraint run was the
-first test on the complete testsets_3000 corpus.
-
-**What resolution changes:** Trivial as a standalone item — within plausible
-corpus-snapshot drift. Relevant only in the v6 authoring context (OQ-05). Either
-correct the claimed range to 0.685–0.833 in v6, or note the corpus snapshot
-(testsets_3000, 3380 constraints, run 2026-05-28) used to compute the full-corpus
-figure. The choice between correcting and noting affects how the claim is presented
-but not whether it is reproducible.
+**What was changed:** V5 §2.3 claimed Jaccard 0.685–0.828. The full-corpus rerun
+(3,380 constraints, testsets_3000) produced 0.697–0.833. Four of six original variants
+fall within the corrected range; sqrt_flip (0.833) and quadratic_flip (0.830) now sit
+at the upper end rather than above the ceiling. The shift reflects corpus-snapshot drift
+(the original range was computed on an earlier snapshot; the full 3,380-constraint run
+was the first test on complete testsets_3000). Within acceptable tolerance. V6
+accordingly uses the full-corpus range (0.697–0.833) as the empirical witness.
 
 ---
 
