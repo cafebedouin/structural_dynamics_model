@@ -1,3 +1,36 @@
+## Priority Gate
+
+At the start of every session, read `PRIORITIES.md`. In your first response, state the
+current top priority in one sentence.
+
+If a requested task does not appear to advance any item in `PRIORITIES.md`, say so in
+one sentence at the start of your response — then proceed. Do not block or ask for
+confirmation; a note is enough. Example: *"Note: PRIORITIES.md lists §2.3 paper
+correction as the top priority; this task addresses X instead."*
+
+The note is for the user's benefit, not yours. They may have a good reason; they do not
+need to explain it.
+
+**If you know a better way:** When a request has a cleaner implementation, a simpler
+approach, or an unintended consequence the user likely did not see, say so in one
+sentence before doing the work — then proceed. The user sometimes asks for suboptimal
+things without realizing it. A one-sentence flag is enough; do not withhold action
+pending approval.
+
+## Context Window and File Size Constraints
+
+If a file or task grows large enough that you anticipate context limitations will affect
+your ability to work with it cleanly, **prompt the user with how you'd like it resolved**
+before proceeding. Examples of useful prompts:
+
+- "This file is 2,000+ lines. I can read it in chunks, or you could split it. What's best?"
+- "Reading the full corpus would exceed context. Shall I sample by constraint type instead?"
+- "The corpus + docs + code together would leave little room for draft output. Would you prefer I focus on analysis only and save drafts separately?"
+
+Do not silently work around context constraints by using suboptimal approaches. Make the
+constraint visible and ask for the user's preference — they may have information about
+what matters most for this task.
+
 ## Project Context
 
 Prolog+Python research infrastructure implementing Deferential Realism (DR).
@@ -12,6 +45,11 @@ any model entering this repo. It covers repo layout, classification architecture
 paper sequence with summaries, empirical findings inventory, open work items, and
 methodological practices. Line-number anchors are anchored to git HEAD `55df084a`
 (2026-05-09); verify before citing, as high-churn files drift.
+
+**Open questions tracker:** `ISSUES.md` (OQ-01 – OQ-13) logs unresolved
+engine-level, schema-level, and paper-synchronization issues with status, evidence, and
+what resolution would change. Check it before touching drl_core.pl, product_site_export.pl,
+or the rope gate — OQ-01 and OQ-02 are directly relevant to those files.
 
 ## Typical Workflow
 
@@ -43,17 +81,29 @@ Haiku batch API with prompt caching). This is how the corpus grew from ~1,000 to
 ## Running the System
 
 - Full pipeline (analysis only, no generation): `python3 python/run_pipeline.py`
-- Prolog tests: `cd prolog && swipl -g "[stack], [validation_suite], run_dynamic_suite, halt" -t "halt(1)"`
+- Prolog tests (corpus validation): `cd prolog && swipl -g "[stack], [validation_suite], run_dynamic_suite, halt" -t "halt(1)"`
+- Prolog unit tests (engine): `cd prolog && swipl -g "[stack], [tests/test_snapshot_migration], run_tests, halt" -t "halt(1)"` — substitute any file in `prolog/tests/` (except `test_battery_variants.pl` which is a variant harness, not a plunit test)
 - Linter: must be imported as library (`from linter import lint_file`), not run directly
 - Config sensitivity: `python3 python/config_sensitivity_sweep.py`
 - Directionality sensitivity: `python3 python/directionality_sensitivity_sweep.py`
 
 ## Known State
 
-- Last audit (2026-02-28): passing tests / param sweep — see AUDIT.md (point-in-time; some findings now resolved)
+- Last audit (2026-02-28): passing tests / param sweep — live items migrated to ISSUES.md (OQ-11 – OQ-13); historical record in AUDIT.md
 - Config params: see `prolog/config.pl` for current count (`grep -c "^param(" prolog/config.pl`)
 - All numeric params inert at ±25%; all 17 directionality constants inert at ±25%
 - Corpus is actively growing; param count and testset numbers will drift — cite the manifest
+- **2026-05-28: green cut applied to `product_site_export.pl:75–77`** — added `!` after
+  `write_one_entry` in `write_entries` clause 3 to enable LCO and fix OOM under
+  compressed-ceiling sigmoid variants. Zero-diff verified (3,380 constraints, before/after
+  outputs in `outputs/cut_proof_*.json`). Underlying choice-point question is OQ-02 in
+  `ISSUES.md`.
+- **2026-05-28: python/ phase-1 reorganization** — 8 tests → `python/tests/`, 12 sweeps
+  → `python/sweeps/`, 19 audits → `python/audits/`. Frozen CLI commands
+  (`run_pipeline.py`, `enhanced_report.py`, `config_sensitivity_sweep.py`,
+  `directionality_sensitivity_sweep.py`) and all load-bearing pipeline modules stay in
+  `python/` root. ~30 exploratory scripts stay (phase 2 pending). sys.path fixes applied
+  to all 39 moved files. Verification script: `python3 python/verify_reorg.py`.
 
 ## Pipeline Output Manifest Convention
 
@@ -122,8 +172,8 @@ partition function.
 (clamping), rounding/floor/ceiling, accumulation via fold, sum/mean/min/max aggregation.
 
 **Threshold / Classification:** dual-threshold classification (χ AND ε), priority cascade
-(mountain > piton > snare > scaffold > rope), complexity-adjusted threshold
-(entropy-weighted).
+(mountain > piton(dead-coordination) > snare > scaffold > rope > tangled_rope > piton(fallback) > naturalized > unknown),
+complexity-adjusted threshold (entropy-weighted).
 
 **Power Scaling:** χ = ε × f(d) × σ(S) (canonical extraction formula), power modifier
 π(P), scope modifier σ(S), sigmoid directionality f(d), cognitive displacement δ.
@@ -150,6 +200,27 @@ Boltzmann factorization test (independence check), sorting/ranking.
 Key files: `drl_core.pl`, `constraint_indexing.pl`, `drl_boltzmann_analysis.pl`,
 `boltzmann_compliance.pl`, `drl_purity_network.pl`, `drl_fpn.pl`,
 `maxent_classifier.pl`, `drl_composition.pl`, `logical_fingerprint.pl`.
+
+## End-of-Session Documentation Review
+
+When completing work that changes code, produces empirical findings, or resolves an
+open question — whether or not the session ends with a PR — review and offer updates to:
+
+- **CLAUDE.md** `Known State` — new mitigations, resolved issues, code changes with proofs
+- **AGENTS.md** — any change to architecture, testing commands, naming conventions, or
+  invariants that a future agent would need to know before touching the relevant files
+- **`ISSUES.md`** — status changes (open → mitigated → resolved), new OQ
+  items surfaced by the work, updated evidence or file references
+- **AGENDA.md** — work packages started, completed, or newly identified
+- **PRIORITIES.md** — promote, demote, or retire items based on what the session
+  completed or unblocked; add new blockers that emerged
+
+Offer the updates as a diff or edit proposal, not just a verbal summary. The four files
+only stay useful if they reflect the current state of the code and open questions.
+
+**Before any `git push`:** verify the four files above are current with respect to the
+changes being pushed. A push that makes the docs stale is documentation debt that
+compounds across sessions.
 
 ## Audit Methodology
 
