@@ -30,6 +30,10 @@ if str(root_path) not in sys.path:
 from agent.story_generator_base import (
     process_response,
     save_story,
+    save_story_tagged,
+    strip_extra_properties,
+    load_schema,
+    validate_json,
     strip_json_fences,
     REPO_ROOT,
     JSON_DIR,
@@ -113,6 +117,7 @@ class DRAuditOrchestrator:
     def __init__(
         self,
         axes: int = 3,
+        run_tag: str | None = None,
         skip_corpus_update: bool = False,
         skip_search: bool = False,
         skip_essay: bool = False,
@@ -120,19 +125,33 @@ class DRAuditOrchestrator:
         progress_callback: Callable[[str, str], None] | None = None,
     ):
         self.axes = axes
+        self._run_tag = run_tag
         self.skip_corpus_update = skip_corpus_update
         self.skip_search = skip_search
         self.skip_essay = skip_essay
         self.dry_run = dry_run
         self._progress = progress_callback or (lambda step, msg: print(f"[{step}] {msg}"))
 
+        # Output dirs — run-tagged if run_tag given, else flat main corpus dirs
+        if run_tag:
+            self._json_dir = REPO_ROOT / "json" / run_tag
+            self._testsets_dir = REPO_ROOT / "prolog" / "testsets" / run_tag
+            self._manifests_dir = REPO_ROOT / "outputs" / "kernel_manifests" / run_tag
+            for d in (self._json_dir, self._testsets_dir, self._manifests_dir):
+                d.mkdir(parents=True, exist_ok=True)
+        else:
+            self._json_dir = JSON_DIR
+            self._testsets_dir = TESTSETS_DIR
+            self._manifests_dir = None
+
+        # Schema dict for path-aware strip (loaded once)
+        self._schema = load_schema()
+
         # Load protocol files (cached via lru_cache in story_generator_base)
         self.protocols = {
             "uke_scope":  _load_context_file(str(REPO_ROOT / "prompts" / "uke_scope_v2_json.md")),
             "gen_prompt": _load_context_file(str(REPO_ROOT / "prompts" / "constraint_story_generation_prompt_json.md")),
-            "schema":     _load_context_file(str(REPO_ROOT / "python" / "constraint_story_schema.json")),
             "example":    _load_context_file(str(REPO_ROOT / "json" / "antifragility.json")),
-#           "uke_w":      _load_context_file(str(Path(__file__).parent / "uke_write_v2.1.md")),
             "uke_w":      _load_context_file(str(Path(__file__).parent / "uke_summary.md")),
         }
 
@@ -406,7 +425,16 @@ class DRAuditOrchestrator:
         generated_stories = []
         total_tin, total_tout = 0, 0
 
-        for i, claim_id in enumerate(sequence):
+        for i, entry in enumerate(sequence):
+            # Handle both plain string claim_ids and kernel-style dict entries
+            if isinstance(entry, dict):
+                claim_id = entry.get("claim_id") or entry.get("constraint_id")
+            else:
+                claim_id = entry
+
+            if not claim_id:
+                continue
+
             axis = axes_by_id.get(claim_id)
             if not axis:
                 self._progress("generate", f"Axis {claim_id} not found in manifest, skipping")
@@ -429,8 +457,7 @@ class DRAuditOrchestrator:
                 source_desc += f"\nVictim: {axis['victim']}"
             cs_recog = manifest.get("commitment_system_recognition")
             if cs_recog:
-                import json as _json
-                source_desc += f"\nCommitment System Recognition: {_json.dumps(cs_recog)}"
+                source_desc += f"\nCommitment System Recognition: {json.dumps(cs_recog)}"
 
             # Build upstream context for downstream axes (§5.1)
             upstream_context = ""
@@ -473,6 +500,17 @@ class DRAuditOrchestrator:
             # Process and validate
             story_dict, errors = process_response(text)
 
+            # Path-aware strip: remove extra properties before retrying
+            if story_dict is not None and errors:
+                prop_errors = [e for e in errors if "Additional properties are not allowed" in e]
+                other_errors = [e for e in errors if "Additional properties are not allowed" not in e]
+                if prop_errors and not other_errors:
+                    stripped, props_removed = strip_extra_properties(story_dict, self._schema)
+                    if not validate_json(stripped):
+                        story_dict = stripped
+                        errors = []
+                        self._progress("generate", f"Stripped extra props for {claim_id}: {props_removed}")
+
             if story_dict is None or errors:
                 # Retry once with error feedback
                 self._progress("generate", f"Validation errors for {claim_id}, retrying...")
@@ -495,6 +533,16 @@ class DRAuditOrchestrator:
                     total_tin += tin2
                     total_tout += tout2
                     story_dict, errors = process_response(text)
+                    # Apply strip on retry result too
+                    if story_dict is not None and errors:
+                        prop_errors = [e for e in errors if "Additional properties are not allowed" in e]
+                        other_errors = [e for e in errors if "Additional properties are not allowed" not in e]
+                        if prop_errors and not other_errors:
+                            stripped, props_removed = strip_extra_properties(story_dict, self._schema)
+                            if not validate_json(stripped):
+                                story_dict = stripped
+                                errors = []
+                                self._progress("generate", f"Stripped extra props (retry) for {claim_id}: {props_removed}")
                 except Exception as e:
                     self._progress("generate", f"Retry failed for {claim_id}: {e}")
                     continue
@@ -503,8 +551,15 @@ class DRAuditOrchestrator:
                 self._progress("generate", f"Failed to generate valid story for {claim_id}")
                 continue
 
-            # Save
-            json_path, pl_path = save_story(story_dict, overwrite=True)
+            # Inject kernel_id for kernel-mode entries so generate_pl emits cs_kernel_id/2
+            kernel_id = entry.get("kernel_id") if isinstance(entry, dict) else None
+            if kernel_id:
+                story_dict["_kernel_id"] = kernel_id
+
+            # Save to run-tagged or flat dirs
+            json_path, pl_path = save_story_tagged(
+                story_dict, self._json_dir, self._testsets_dir, overwrite=True
+            )
             if json_path:
                 generated_stories.append(story_dict)
                 self._progress("generate", f"Saved {claim_id}")
@@ -522,6 +577,13 @@ class DRAuditOrchestrator:
 
     def _step_corpus_update(self) -> StepResult:
         if self.skip_corpus_update:
+            return StepResult(step="corpus_update", status="skipped")
+        if self._run_tag:
+            self._progress(
+                "corpus_update",
+                f"Skipped — outputs in json/{self._run_tag}/ (run-tagged). "
+                f"Promote to json/ before running corpus update."
+            )
             return StepResult(step="corpus_update", status="skipped")
 
         self._progress("corpus_update", "Running pipeline...")
@@ -556,6 +618,12 @@ class DRAuditOrchestrator:
 
     def _step_reports(self, constraint_ids: list[str]) -> StepResult:
         if not constraint_ids:
+            return StepResult(step="reports", status="skipped")
+        if self._run_tag:
+            self._progress(
+                "reports",
+                f"Skipped — run-tagged output. Promote json/{self._run_tag}/ to json/ first."
+            )
             return StepResult(step="reports", status="skipped")
 
         self._progress("reports", f"Generating reports for {len(constraint_ids)} constraints...")
@@ -681,6 +749,9 @@ def main():
     parser.add_argument("topic", nargs="?", help="Topic text (or use --input-file / stdin)")
     parser.add_argument("--input-file", "-f", help="Read topic from file")
     parser.add_argument("--axes", type=int, default=3, help="Number of axes to select (default: 3)")
+    parser.add_argument("--run-tag", default=None,
+                        help="Output namespace (e.g. run_01). If set, saves to json/<run-tag>/ "
+                             "and prolog/testsets/<run-tag>/. Corpus update and reports are skipped.")
     parser.add_argument("--skip-corpus-update", action="store_true", help="Skip run_pipeline")
     parser.add_argument("--skip-search", action="store_true", help="Skip search grounding")
     parser.add_argument("--skip-essay", action="store_true", help="Skip essay synthesis")
@@ -709,6 +780,7 @@ def main():
 
     orch = DRAuditOrchestrator(
         axes=args.axes,
+        run_tag=args.run_tag,
         skip_corpus_update=args.skip_corpus_update,
         skip_search=args.skip_search,
         skip_essay=args.skip_essay,

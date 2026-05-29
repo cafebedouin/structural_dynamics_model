@@ -74,6 +74,7 @@ write_entries(S, [C], Ctxs, CtxKeys) :- !,
     write_one_entry(S, C, Ctxs, CtxKeys, false).
 write_entries(S, [C|Rest], Ctxs, CtxKeys) :-
     write_one_entry(S, C, Ctxs, CtxKeys, true),
+    !,
     write_entries(S, Rest, Ctxs, CtxKeys).
 
 write_one_entry(S, C, Ctxs, CtxKeys, Comma) :-

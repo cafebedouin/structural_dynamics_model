@@ -284,6 +284,9 @@ sigmoid_f(D, F) :-
 %% alt_sigmoid_f(+Variant, +D, -F)
 %  Alternative power transformation functions. All map D ∈ [0,1] to
 %  approximately the same range [~-0.20, ~1.50] as the sigmoid baseline.
+%  Declared multifile so test harnesses can add new variants without
+%  modifying this file.
+:- multifile alt_sigmoid_f/3.
 
 % Default: standard logistic sigmoid
 alt_sigmoid_f(sigmoid, D, F) :-

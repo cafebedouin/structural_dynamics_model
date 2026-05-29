@@ -1,0 +1,79 @@
+{
+  "sigmoid": {
+    "description": "baseline sigmoid",
+    "sign_flip": true,
+    "total": 3380,
+    "sheaves": 2484,
+    "presheaves": 896,
+    "s_to_p": 0,
+    "p_to_s": 0,
+    "jaccard_vs_sigmoid": 1.0,
+    "output_file": "/home/scott/bin/structural_dynamics_model/outputs/alt3k_sigmoid.json"
+  },
+  "piecewise_linear": {
+    "description": "piecewise linear, sign-flip preserved",
+    "sign_flip": true,
+    "total": 3380,
+    "sheaves": 2298,
+    "presheaves": 1082,
+    "s_to_p": 214,
+    "p_to_s": 28,
+    "jaccard_vs_sigmoid": 0.782,
+    "output_file": "/home/scott/bin/structural_dynamics_model/outputs/alt3k_piecewise_linear.json"
+  },
+  "piecewise_no_flip": {
+    "description": "piecewise linear, NO sign-flip (CONTROL)",
+    "sign_flip": false,
+    "total": 3380,
+    "sheaves": 2271,
+    "presheaves": 1109,
+    "s_to_p": 247,
+    "p_to_s": 34,
+    "jaccard_vs_sigmoid": 0.7542,
+    "output_file": "/home/scott/bin/structural_dynamics_model/outputs/alt3k_piecewise_no_flip.json"
+  },
+  "sqrt_flip": {
+    "description": "square root / concave, sign-flip preserved",
+    "sign_flip": true,
+    "total": 3380,
+    "sheaves": 2392,
+    "presheaves": 988,
+    "s_to_p": 132,
+    "p_to_s": 40,
+    "jaccard_vs_sigmoid": 0.8327,
+    "output_file": "/home/scott/bin/structural_dynamics_model/outputs/alt3k_sqrt_flip.json"
+  },
+  "quadratic_flip": {
+    "description": "quadratic / convex, sign-flip preserved",
+    "sign_flip": true,
+    "total": 3380,
+    "sheaves": 2569,
+    "presheaves": 811,
+    "s_to_p": 37,
+    "p_to_s": 122,
+    "jaccard_vs_sigmoid": 0.8296,
+    "output_file": "/home/scott/bin/structural_dynamics_model/outputs/alt3k_quadratic_flip.json"
+  },
+  "step_flip": {
+    "description": "three-level step, sign-flip preserved",
+    "sign_flip": true,
+    "total": 3380,
+    "sheaves": 2727,
+    "presheaves": 653,
+    "s_to_p": 17,
+    "p_to_s": 260,
+    "jaccard_vs_sigmoid": 0.6966,
+    "output_file": "/home/scott/bin/structural_dynamics_model/outputs/alt3k_step_flip.json"
+  },
+  "sigmoid_shifted": {
+    "description": "sigmoid d0=0.25, NO institutional sign-flip",
+    "sign_flip": false,
+    "total": 3380,
+    "sheaves": 2526,
+    "presheaves": 854,
+    "s_to_p": 102,
+    "p_to_s": 144,
+    "jaccard_vs_sigmoid": 0.7535,
+    "output_file": "/home/scott/bin/structural_dynamics_model/outputs/alt3k_sigmoid_shifted.json"
+  }
+}

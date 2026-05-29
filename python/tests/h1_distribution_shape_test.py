@@ -28,7 +28,7 @@ import sys
 from pathlib import Path
 from collections import Counter
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from shared.loader import load_json, ENRICHED_PIPELINE_JSON
 
 # ---------------------------------------------------------------------------

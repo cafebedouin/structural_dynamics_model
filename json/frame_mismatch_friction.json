@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "frame_mismatch_friction",
+    "version": "1.0",
+    "generated_date": "2025-01-02",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "frame_mismatch",
+    "story_uid": "a34fadcf-56f2-4b3c-ad59-f275d3c79b3e",
+    "created_at": "2026-05-28T05:39:34.819165+00:00"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.52,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Frame Mismatch Friction in LLM Interface Design",
+    "topic_domain": "human_computer_interaction/cognitive_ergonomics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "providers_maintaining_wide_funnel",
+      "casual_query_users"
+    ],
+    "victims": [
+      "capability_extension_users_lacking_scaffolding",
+      "workflow_integration_developers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Capability Extension User Without Scaffolding",
+      "comment": "PERSPECTIVE 1: CAPABILITY EXTENSION USER (SNARE) — Attempting stateful, persistent, role-differentiated interaction through an interface designed for ephemeral queries. Experiences the mismatch as unreliability: context loss, role confusion, session collapse. Exit options are constrained rather than trapped — alternative interfaces exist (Claude Code, agent frameworks) but require technical sophistication and workflow migration costs. High extraction: the interface design extracts cognitive overhead (manual state management, repeated context provision, workaround development) while providing minimal scaffolding for the intended use case."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Workflow Integration Developer",
+      "comment": "PERSPECTIVE 2: WORKFLOW INTEGRATION DEVELOPER (TANGLED ROPE) — Building on the API or developing agent frameworks. Benefits from the wide user funnel (large market, diverse use cases to learn from) but bears extraction through interface instability: the messaging-app surface changes frequently, breaking integrations; stateful patterns require reverse-engineering undocumented behavior; role differentiation must be implemented client-side. Mixed experience: genuine coordination (API access, model capability) alongside asymmetric extraction (interface churn, missing primitives for state/role/time). Mobile exit: can switch providers or build alternative interfaces, but at significant migration cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Provider Maintaining Wide Funnel",
+      "comment": "PERSPECTIVE 3: PROVIDER MAINTAINING WIDE FUNNEL (ROPE) — The messaging-app interface defaults maximize accessibility: low barrier to entry, familiar interaction pattern, minimal cognitive load for casual queries. From the provider's perspective, this is pure coordination: serving the largest user base with the simplest viable interface. The frame mismatch for capability-extension users is an acceptable trade-off to maintain funnel width. Arbitrage exit: providers can experiment with alternative interfaces (Code, Projects, custom GPTs) without abandoning the core messaging surface. Net beneficiary: extraction flows toward this agent through user lock-in and data accumulation, not away from them."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Casual Query User",
+      "comment": "PERSPECTIVE 4: CASUAL QUERY USER (ROPE) — Using the interface for its designed purpose: ephemeral, stateless, single-turn or short-session queries. Experiences the constraint as coordination: the messaging-app surface is familiar, low-friction, and well-suited to their use case. No frame mismatch because their mental model aligns with the interface affordances. Mobile exit: can switch to alternative AI assistants with minimal cost. Low extraction: the interface serves their needs without imposing significant overhead."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Open-Source Agent Framework Community",
+      "comment": "PERSPECTIVE 5: OPEN-SOURCE AGENT FRAMEWORK COMMUNITY (SCAFFOLD) — Building alternative interfaces (LangChain, AutoGPT, agent orchestration layers) that provide explicit state management, role differentiation, and temporal persistence. Sees the frame mismatch as a temporary coordination failure with a sunset: as agent frameworks mature and providers adopt richer interface primitives (function calling, structured outputs, memory APIs), the messaging-app surface will either evolve to support stateful interaction or be bypassed by specialized tooling. Organized agents with mobile exit: can build on any provider's API and migrate between backends. Low effective extraction because the coalition has agency and sees a clear path to resolution."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — Recognizes the frame mismatch as a structural consequence of interface design choices optimizing for different use cases. The messaging-app surface genuinely coordinates casual query access (rope function) while simultaneously extracting cognitive overhead from capability-extension users who lack scaffolding (snare function). The constraint is not purely extractive — the wide funnel serves a real coordination purpose — but the asymmetry is structural: casual users benefit from simplicity; capability-extension users bear the cost of missing primitives. Tangled rope classification reflects the irreducible hybrid: both coordination and extraction are present, and neither can be eliminated without sacrificing the other."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "interface_evolution_trajectory",
+      "question": "Will LLM interfaces converge toward richer state/role/time primitives, or will stateful interaction remain the domain of specialized agent frameworks?",
+      "resolution_mechanism": "Longitudinal tracking of provider interface updates; adoption rates of Projects, Code, custom GPTs vs continued reliance on messaging surface; market share of agent frameworks vs direct provider interfaces",
+      "impact": "If convergence: scaffold perspective confirmed — the frame mismatch is temporary. If divergence: tangled rope persists — providers maintain simple surface for funnel width while power users migrate to frameworks.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether provider interfaces will natively support stateful interaction"
+    },
+    {
+      "id": "cognitive_overhead_quantification",
+      "question": "What is the measurable cognitive overhead imposed by manual state management, context re-provision, and workaround development for capability-extension users?",
+      "resolution_mechanism": "User studies comparing task completion time, error rates, and subjective cognitive load between messaging-app surface and scaffolded interfaces (Code, agent frameworks) for equivalent stateful tasks",
+      "impact": "If overhead < 20%: frame mismatch is minor friction, not extraction. If overhead > 50%: frame mismatch constitutes significant extraction from capability-extension users.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Magnitude of cognitive overhead from frame mismatch"
+    },
+    {
+      "id": "funnel_width_necessity",
+      "question": "Is the messaging-app surface's simplicity necessary to maintain funnel width, or could richer primitives be introduced without sacrificing accessibility?",
+      "resolution_mechanism": "A/B testing of interface variants with progressive disclosure of state/role/time features; adoption and retention metrics across user segments; comparison to other tools that successfully serve both casual and power users",
+      "impact": "If simplicity is necessary: tangled rope is structural trade-off. If richer primitives are compatible with accessibility: current design is extractive choice, not coordination necessity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether interface simplicity is necessary for accessibility"
+    },
+    {
+      "id": "alternative_interface_adoption_threshold",
+      "question": "At what point does capability-extension user migration to alternative interfaces (Code, agent frameworks) constitute exit from the constraint vs adoption of a complementary tool?",
+      "resolution_mechanism": "Usage pattern analysis: do users abandon the messaging surface entirely, or do they use both interfaces for different tasks? Retention and session frequency metrics across interface types.",
+      "impact": "If migration is exit: constrained exit option is real, and extraction is bounded. If migration is complementary: users remain locked into the messaging surface for some tasks, and extraction persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative interfaces constitute exit or complementary use"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "theater_initial"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.32,
+      "id_override": "theater_midpoint"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.38,
+      "id_override": "theater_current"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "extract_initial"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.42,
+      "id_override": "extract_midpoint"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.48,
+      "id_override": "extract_current"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "LLM interfaces default to a messaging-app surface optimized for casual, ephemeral queries: single-turn or short-session interactions with minimal state persistence, no role differentiation, and implicit temporal context. This design choice maximizes accessibility and funnel width — the interface is familiar, low-friction, and serves the largest user segment effectively. However, a subset of users attempts capability-extension work through the same interface: stateful workflows requiring persistent context, role-differentiated interaction (user as orchestrator, LLM as specialized tool), and explicit temporal sequencing. The frame mismatch produces friction: context loss across sessions, role confusion when the LLM defaults to conversational assistant mode rather than tool mode, and cognitive overhead from manual state management. Providers maintain the simple surface to preserve funnel width while offering alternative interfaces (Claude Code, Projects, custom GPTs) and API access for power users. The constraint exhibits tangled rope structure: genuine coordination (wide accessibility) coexists with asymmetric extraction (cognitive overhead for capability-extension users lacking scaffolding). The theater ratio (0.38) reflects moderate performative content: interface updates often address surface aesthetics or conversational polish rather than structural support for stateful interaction. The open-source agent framework community is building alternative pathways with explicit state/role/time primitives, suggesting a scaffold dynamic with potential sunset as these tools mature.",
+    "key_agents": [
+      "Capability Extension Users: Primary victim (powerless/constrained) — attempting stateful, persistent, role-differentiated work through an interface designed for ephemeral queries; experience frame mismatch as unreliability and cognitive overhead",
+      "Workflow Integration Developers: Secondary victim (moderate/mobile) — building on API or developing agent frameworks; benefit from wide funnel but bear extraction through interface instability and missing primitives",
+      "Providers Maintaining Wide Funnel: Primary beneficiary (institutional/arbitrage) — messaging-app surface maximizes accessibility and user acquisition; frame mismatch for power users is acceptable trade-off for funnel width",
+      "Casual Query Users: Secondary beneficiary (powerless/mobile) — interface serves their use case effectively; no frame mismatch because mental model aligns with affordances",
+      "Open-Source Agent Framework Community: Organized agents (organized/mobile) — building alternative interfaces with explicit state/role/time support; see frame mismatch as temporary coordination failure with sunset",
+      "Analytical Observer: Civilizational view (analytical/analytical) — recognizes irreducible hybrid of coordination (accessibility) and extraction (cognitive overhead for capability-extension users)"
+    ],
+    "logic_rationale": "Extractiveness (0.48): Moderate-high. Capability-extension users bear significant cognitive overhead from manual state management, repeated context provision, and workaround development. The extraction is not as severe as pure snares because alternative interfaces exist (constrained exit rather than trapped), and some users successfully adapt their workflows. The value reflects real but bounded extraction: the interface design imposes costs on a user segment while serving another segment effectively. Suppression (0.52): Moderate. Barriers to stateful interaction include lack of native state persistence, implicit role defaults (conversational assistant rather than tool), session length limits, and context window constraints. However, suppression is not total: users can adopt alternative interfaces (Code, agent frameworks), use API access, or develop workarounds (external state management, prompt engineering). The suppression is structural (missing interface primitives) rather than coercive (active prevention). Theater ratio (0.38): Moderate. Interface updates often prioritize conversational polish, aesthetic refinement, and feature announcements over structural support for stateful interaction. Some theater is present (marketing emphasis on capabilities that require scaffolding the interface doesn't provide), but the ratio is lower than pure pitons because the messaging surface genuinely serves its designed use case (casual queries). The theater has increased over the interval as the gap between marketed capabilities and interface affordances has widened.",
+    "directionality_logic": "Capability-extension users are victims with constrained exit options. The engine derives high directionality (d ≈ 0.85) from victim status + constrained exit, producing high effective extraction. They bear the cognitive overhead of frame mismatch without adequate scaffolding. Workflow integration developers are victims with mobile exit options. The engine derives moderate-high directionality (d ≈ 0.65) from victim status + mobile exit, producing moderate effective extraction. They bear interface instability and missing primitives but can migrate to alternative providers or build their own tooling. Providers maintaining wide funnel are beneficiaries with arbitrage exit options. The engine derives low directionality (d ≈ 0.05) from beneficiary status + arbitrage exit, producing negative effective extraction. They capture user lock-in, data accumulation, and market share through the accessible interface. Casual query users are beneficiaries with mobile exit options. The engine derives low directionality (d ≈ 0.15) from beneficiary status + mobile exit, producing near-zero effective extraction. The interface serves their needs effectively. The open-source agent framework community are organized agents with mobile exit options and mixed beneficiary/victim status (benefit from wide funnel, bear extraction through missing primitives). The engine derives moderate directionality (d ≈ 0.50) from mixed status + mobile exit, producing moderate effective extraction. The analytical observer uses canonical analytical directionality (d ≈ 0.72), producing moderate-high effective extraction, reflecting the structural visibility of both coordination and extraction functions.",
+    "perspectival_gap": "This constraint demonstrates how interface design choices create perspectival divergence across user segments. Casual query users experience pure coordination (Rope) — the messaging-app surface is well-suited to their use case, familiar, and low-friction. Providers see coordination (Rope) — the simple interface maximizes accessibility and serves the largest user base. Capability-extension users experience extraction (Snare) — the frame mismatch imposes cognitive overhead and unreliability for stateful workflows. Workflow integration developers experience mixed coordination and extraction (Tangled Rope) — they benefit from the wide funnel but bear costs from interface instability and missing primitives. The open-source agent framework community sees a temporary problem with a sunset (Scaffold) — alternative interfaces are maturing and will either replace or augment the messaging surface. The analytical observer recognizes the irreducible hybrid (Tangled Rope) — both coordination and extraction are structural features of the design choice, and neither can be eliminated without sacrificing the other. The perspectival gap reveals that 'unreliability' complaints from capability-extension users are not about model capability but about interface affordances: the same system appears reliable to casual users and unreliable to power users because their mental models and use cases differ.",
+    "mandatrophy_analysis": "The tangled rope classification resolves the mandatrophy by recognizing that the frame mismatch serves a genuine coordination function (accessibility for casual users) while simultaneously extracting from capability-extension users (cognitive overhead from missing scaffolding). This is not a rope misclassified as a snare, nor a snare misclassified as a rope — it is an irreducible hybrid where both functions coexist. The coordination function is real: the messaging-app surface lowers barriers to entry and serves the largest user segment effectively. The extraction function is also real: capability-extension users bear costs (manual state management, context re-provision, workaround development) that could be reduced with richer interface primitives. The asymmetry is structural: providers optimize for funnel width (casual users) at the expense of power users, who lack the market power to demand interface changes. The scaffold perspective (open-source agent frameworks) suggests a potential resolution pathway: as alternative interfaces mature, the frame mismatch may sunset, either through provider adoption of richer primitives or through user migration to specialized tooling. The tangled rope classification captures the current state: both coordination and extraction are present, and the constraint's resolution depends on whether the interface evolution trajectory converges (scaffold) or diverges (persistent tangled rope)."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of state_role_time_collapse (the mountain constraint that LLM interfaces lack native primitives for state persistence, role differentiation, and temporal sequencing). The upstream constraint describes the structural absence; this constraint describes the friction produced when users attempt capability-extension work through an interface lacking those primitives. The upstream constraint has low extractiveness (mountain — the absence is a design choice, not inherently extractive); this constraint has moderate extractiveness (tangled rope — the friction imposes real costs on a user segment while serving another segment effectively)."
+  },
+  "directionality_overrides": []
+}

@@ -2,7 +2,7 @@
 
 **A formal framework for systems where what you see depends on where you stand**
 
-Deferential Realism (DR) is a framework for analyzing observer-dependent classification of social structures. Its core claim: power modulates the perception of extraction, and this dependence has formal mathematical structure. The framework models classification as a presheaf on a site of observer contexts, deliberately refusing the sheaf gluing axiom so that perspectival disagreement becomes a measurable structural feature rather than a defect to be resolved. A 91-module Prolog engine implements the axioms computationally and checks whether the predicted structural consequences actually emerge against a living corpus of 3,337 constraint stories. The engine makes the philosophy falsifiable — but the engine is not the point. The philosophy is the point.
+Deferential Realism (DR) is a framework for analyzing observer-dependent classification of social structures. Its core claim: power modulates the perception of extraction, and this dependence has formal mathematical structure. The framework models classification as a presheaf on a site of observer contexts, deliberately refusing the sheaf gluing axiom so that perspectival disagreement becomes a measurable structural feature rather than a defect to be resolved. A 91-module Prolog engine implements the axioms computationally and checks whether the predicted structural consequences actually emerge against a living corpus of 3,380 constraint stories. The engine makes the philosophy falsifiable — but the engine is not the point. The philosophy is the point.
 
 ---
 
@@ -20,7 +20,7 @@ This is not relativism (all views equally valid) or absolutism (one correct view
 
 The framework encodes a single core hypothesis as its empirical anchor (Axiom 2): **power reduces experienced extraction.** Each constraint has a base extractiveness ε that is observer-independent. The *experienced* extractiveness varies by observer:
 
-> χ = ε × f(d(P)) × σ(S(P))
+> χ = ε × f(d(P, E)) × σ(S)
 
 where f is a sigmoid over the observer's directionality (beneficiary, victim, neither), and σ encodes verification difficulty. At the canonical institutional position, f(d) goes negative — the institutional observer experiences extraction as coordination. Everything downstream inherits this axiom's empirical status. If it maps correctly to the world, the theorems describe structural necessities. If not, the mathematics remains valid within the model but the model no longer describes reality.
 
@@ -63,9 +63,9 @@ The Prolog engine is a test bed for the philosophy. It exists so the axioms can 
 
 **Architecture:**
 - 91 Prolog modules implementing the axioms as a deterministic rule cascade
-- 3,337-constraint living corpus (grows with each analytical run) plus 189 SOTU-derived constraints
+- 3,380-constraint living corpus (grows with each analytical run) plus 189 SOTU-derived constraints
 - 12+ diagnostic subsystems: classification, MaxEnt shadow, sheaf cohomology, game theory (Nash distance, cover story detection, two-regime extraction), parametric persistence, Wasserstein transport, variance decomposition, cognitive displacement, cultural cognition profiles, contamination network, boundary normality, boolean independence
-- 324 enhanced reports with per-constraint structural analysis stacks — theorem instantiation, orbit analysis, Nash profiles, CCDP/margin analysis
+- 324+ enhanced reports with per-constraint structural analysis stacks — theorem instantiation, orbit analysis, Nash profiles, CCDP/margin analysis
 
 ### The Two-Hub Architecture
 
@@ -78,7 +78,7 @@ The interaction of these hubs determines the final classification. Constraints w
 
 **Key validation results:**
 - Structural invariants (H¹ gap, spectral eigenvalues, contextuality fraction gap, institutional dissent direction) are identical across two independently generated corpora with inverted input distributions
-- All invariants survive FCR ablation, parameter sweeps (178 params, including 154 numeric params at ±25%), directionality sweeps (17 constants), cognitive displacement sweeps (δ ∈ [−0.15, +0.15]), and corpus growth from 887 to 3,337 constraints
+- All invariants survive FCR ablation, parameter sweeps (178 params, including 154 numeric params at ±25%), directionality sweeps (17 constants), cognitive displacement sweeps (δ ∈ [−0.15, +0.15]), and corpus growth from 887 to 3,380 constraints
 - These confirm the invariants are properties of the axioms, not of any dataset
 
 The engine exists so the philosophy can be tested computationally, not so users can process inputs into outputs.
@@ -106,10 +106,10 @@ The engine connects to analytical output through a constraint story pipeline:
 
 ## The Paper
 
-The current paper is v6.11: *Axioms and Consequences of Observer-Dependent Classification* (`docs/deferential_realism_paper_v6.11.md`).
+The current paper is v6.13: *Axioms and Consequences of Observer-Dependent Classification* (`docs/deferential_realism_paper_v6.13.md`).
 
 - Six axioms (one empirical anchor, five structural), four theorems derived deductively
-- Empirical findings on a 3,337-constraint corpus: Wasserstein transport, variance decomposition, game-theoretic analysis, parametric persistence, cognitive displacement
+- Empirical findings on a 3,380-constraint corpus: Wasserstein transport, variance decomposition, game-theoretic analysis, parametric persistence, cognitive displacement
 - Honest assessment framework distinguishing STRICT categorical correspondences (formally verified), STRUCTURAL analogies (mechanism confirmed, interpretation argued), and LOOSE interpretive claims
 - Key sections: Two-hub functional decomposition, cognitive displacement analysis (§5.6), Cultural Cognition psychometric bridge, 13 open questions for strengthening the framework (§6.6)
 
@@ -128,7 +128,8 @@ structural_dynamics_model/
 │   ├── validation_suite.pl    # Test runner
 │   ├── data_repair.pl         # Auto-repair for missing measurements
 │   ├── [75 additional modules]
-│   └── testsets/              # 3,337 constraint story files (.pl)
+│   ├── testsets/              # Active constraint stories (~223 .pl files)
+│   └── testsets_3000/         # Full corpus (3,380 .pl files, read-only for tests)
 ├── python/                    # Post-processing and diagnostics
 │   ├── enhanced_report.py     # Per-constraint structural analysis
 │   ├── run_pipeline.py        # Pipeline orchestration
@@ -149,25 +150,23 @@ structural_dynamics_model/
 │   ├── narrative_transform/   # UKE narrative architecture
 │   └── c-orchestrator.py      # Primary authoring entry point
 ├── docs/                      # Paper and framework documentation
-│   ├── deferential_realism_paper_v6.12.md
+│   ├── deferential_realism_paper_v6.13.md  # Canonical paper (v6.0–v6.12 superseded)
 │   ├── logic.md               # Formal classification rules
-│   └── [framework docs, audit reports, analysis notes]
+│   └── [framework docs, analysis notes]
 ├── outputs/                   # Generated reports and data
-│   ├── enriched_pipeline.json # Corpus data
-│   ├── constraint_reports/    # 324 enhanced reports
+│   ├── pipeline_output.json   # Pre-computed H¹, classifications, Arakelov heights
+│   ├── constraint_reports/    # 324+ enhanced reports
 │   └── [diagnostic outputs, game theory results]
 ├── json/                      # Constraint stories in JSON format (LLM-generated inputs)
 ├── essays/                    # Analytical essays
 ├── examples/                  # Example compiled analyses
-├── audit/                     # Audit data and reports
+├── audit/                     # Audit data and evidence files
 ├── scripts/                   # Shell utilities
-└── CLAUDE.md                  # Development instructions
-```
-├── essays/                    # Analytical essays
-├── examples/                  # Example compiled analyses
-├── audit/                     # Audit data and reports
-├── scripts/                   # Shell utilities
-└── CLAUDE.md                  # Development instructions
+├── CLAUDE.md                  # Development instructions (human-facing)
+├── AGENTS.md                  # Bot onboarding: tech stack, naming, testing, architecture
+├── PRIORITIES.md              # Current work priorities (Active / Near-term / Backlog)
+├── ISSUES.md                  # Open questions and issue tracker (OQ-01 – OQ-13)
+└── AGENDA.md                  # Work packages and sequencing
 ```
 
 ---
@@ -175,9 +174,9 @@ structural_dynamics_model/
 ## Current Status and Open Questions
 
 **Current state:**
-- Corpus: 3,337 constraints, 324 enhanced reports
-- Paper: v6.12
-- Engine: 91 Prolog modules, 3,337/0 tests passing
+- Corpus: 3,380 constraints, 324+ enhanced reports
+- Paper: v6.13
+- Engine: 91 Prolog modules, all tests passing
 - Research infrastructure under active development — not production software
 
 **Falsification tests:**
@@ -190,6 +189,11 @@ structural_dynamics_model/
 - **Temporal coupling:** The mechanism is implemented but dormant — requires longitudinal measurement data.
 - **Empirical δ calibration:** Can cognitive displacement be mapped to psychometric instruments?
 - **Per-constraint metric robustness:** Do individual classifications survive ε perturbation at ±10%?
+
+**In-repo open questions tracker** (implementation and audit items):
+See [`ISSUES.md`](ISSUES.md) for the persistent tracker of
+engine-level, schema-level, and paper-synchronization open questions surfaced by
+correctness audits. Items are labeled OQ-01 through OQ-13.
 
 **Known limitations:**
 - The corpus is LLM-generated. Both corpora inherit whatever latent political grammar their training data shares. Structural invariants under inversion demonstrate axiom-derived stability, but a real-world corpus with expert-assigned metrics would be a stronger test.
@@ -225,8 +229,8 @@ This is research infrastructure under active development, not production softwar
   year = {2026},
   publisher = {GitHub},
   url = {https://github.com/cafebedouin/structural_dynamics_model},
-  note = {91-module Prolog engine, 3,337-constraint corpus,
-          paper v6.12. Framework tested across finance, governance,
+  note = {91-module Prolog engine, 3,380-constraint corpus,
+          paper v6.13. Framework tested across finance, governance,
           protocols, history, algorithms, theology, and literary domains.}
 }
 ```
@@ -241,4 +245,4 @@ You can copy, modify, and distribute this work, even for commercial purposes, wi
 
 ---
 
-**Last updated:** March 15, 2026
+**Last updated:** 2026-05-28

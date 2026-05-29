@@ -22,9 +22,9 @@ import sys
 import tempfile
 import time
 
-PROLOG_DIR = os.path.join(os.path.dirname(__file__), '..', 'prolog')
-OUTPUT_DIR = os.path.join(os.path.dirname(__file__), '..', 'outputs')
-RESULTS_PATH = os.path.join(os.path.dirname(__file__), 'alt_power_transform_results.json')
+PROLOG_DIR = os.path.join(os.path.dirname(__file__), '..', '..', 'prolog')
+OUTPUT_DIR = os.path.join(os.path.dirname(__file__), '..', '..', 'outputs')
+RESULTS_PATH = os.path.join(os.path.dirname(__file__), '..', 'alt_power_transform_results.json')
 
 # All variants in order: baseline first, then the 6 alternatives.
 # sign_flip=True means f(institutional_d=0.0) < 0.

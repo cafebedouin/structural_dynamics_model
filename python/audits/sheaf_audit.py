@@ -31,7 +31,7 @@ from collections import Counter, defaultdict
 from datetime import datetime
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from shared.loader import load_json, OUTPUT_DIR, PIPELINE_JSON, ORBIT_JSON
 

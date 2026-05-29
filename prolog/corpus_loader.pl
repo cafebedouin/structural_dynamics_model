@@ -44,6 +44,9 @@ load_all_testsets :-
         load_testset_list(Files, 0, Loaded),
         format(user_error, '[corpus] Loaded ~w testsets successfully.~n', [Loaded]),
         assertz(corpus_loaded),
+        % DP-001 / OQ-25: ε-coherence seal and chimera detection. CS predicates are
+        % query-time only — none fire during consult — so this guard runs after the
+        % full corpus is in the DB and before any analysis call. See docs/cs_load_discipline.md.
         config_validation:validate_config_postcorpus
     ).
 

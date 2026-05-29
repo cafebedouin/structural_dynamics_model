@@ -12,8 +12,8 @@ Usage: python3 python/powerless_blind_diagnostic.py
 import sys
 from pathlib import Path
 
-if str(Path(__file__).resolve().parent) not in sys.path:
-    sys.path.insert(0, str(Path(__file__).resolve().parent))
+if str(Path(__file__).resolve().parent.parent) not in sys.path:
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from reports.registry import run_report, REPORTS
 

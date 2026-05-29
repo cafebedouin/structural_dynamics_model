@@ -577,6 +577,142 @@ def build_level1_identity(constraint_id, pipeline_data, prolog_output):
     return "\n".join(lines)
 
 
+# --- Level 1 (cont): TEMPORAL TRAJECTORY ---
+
+def build_drift_trajectory_section(constraint_id, pipeline_data):
+    """L1: Temporal shape — only fires for non-trivial series (48/190 constraints).
+
+    Triggers (any one sufficient; corrected dominant-direction logic):
+      A: reversal >= 0.04 in any metric (magnitude-weighted dominant direction)
+      B: cross-metric divergence — both metrics move >= 0.06 in opposite directions
+      C: plateau/ceiling — monotone, all accelerations negative, last rate < 20% of first
+
+    Silent for the 142/190 constraints with fully monotone, non-divergent series.
+    Source data: drift_trajectory field in pipeline JSON (raw measurement/5 series).
+    """
+    if pipeline_data is None:
+        return ""
+    entry = find_constraint_entry(pipeline_data, constraint_id)
+    if entry is None or not entry.get("drift_trajectory"):
+        return ""
+
+    dt = entry["drift_trajectory"]
+
+    def get_vals(m):   return [pt["v"] for pt in dt[m]["series"]]
+    def get_ts(m):     return [pt["t"] for pt in dt[m]["series"]]
+    def get_rates(m):  return [r["rate"]  for r in dt[m]["per_interval_rate"]]
+    def get_accels(m): return [a["acc"]   for a in dt[m]["per_interval_acceleration"]]
+
+    def reversal_mag(vals):
+        if len(vals) < 3:
+            return 0.0
+        deltas = [vals[i + 1] - vals[i] for i in range(len(vals) - 1)]
+        pos_total = sum(d for d in deltas if d > 0)
+        neg_total = abs(sum(d for d in deltas if d < 0))
+        if pos_total == 0 or neg_total == 0:
+            return 0.0
+        if pos_total >= neg_total:
+            return max(abs(d) for d in deltas if d < 0)
+        else:
+            return max(abs(d) for d in deltas if d > 0)
+
+    # --- Trigger A: non-monotone with magnitude floor ---
+    trigger_a_metrics = [m for m in dt if reversal_mag(get_vals(m)) >= 0.04]
+
+    # --- Trigger B: cross-metric divergence ---
+    trigger_b = False
+    be_d = tr_d = 0.0
+    if "base_extractiveness" in dt and "theater_ratio" in dt:
+        be_vals = get_vals("base_extractiveness")
+        tr_vals = get_vals("theater_ratio")
+        be_d = be_vals[-1] - be_vals[0]
+        tr_d = tr_vals[-1] - tr_vals[0]
+        if be_d * tr_d < 0 and abs(be_d) >= 0.06 and abs(tr_d) >= 0.06:
+            trigger_b = True
+
+    # --- Trigger C: plateau/ceiling (monotone, sustained deceleration) ---
+    trigger_c_metrics = []
+    for m in dt:
+        vals   = get_vals(m)
+        rates  = get_rates(m)
+        accels = get_accels(m)
+        if len(rates) < 2:
+            continue
+        if reversal_mag(vals) >= 0.025:
+            continue  # non-monotone: covered by A
+        r_first, r_last = rates[0], rates[-1]
+        if r_first <= 0.001:
+            continue
+        if not accels or not all(a <= 0 for a in accels):
+            continue
+        if r_last < 0.20 * r_first and (max(vals) - min(vals)) >= 0.05:
+            trigger_c_metrics.append(m)
+
+    if not trigger_a_metrics and not trigger_b and not trigger_c_metrics:
+        return ""
+
+    lines = ["", "--- TEMPORAL TRAJECTORY ---", ""]
+
+    # Trigger A: non-monotone shapes
+    for m in trigger_a_metrics:
+        vals = get_vals(m)
+        ts   = get_ts(m)
+        rev  = reversal_mag(vals)
+        peak_idx   = max(range(len(vals)), key=lambda i: vals[i])
+        trough_idx = min(range(len(vals)), key=lambda i: vals[i])
+        start_v, end_v = vals[0], vals[-1]
+
+        if 0 < peak_idx < len(vals) - 1 and vals[peak_idx] > end_v:
+            direction = "recovers to" if end_v > start_v else "falls to"
+            lines.append(
+                f"    {m}: peaks at T={ts[peak_idx]} ({vals[peak_idx]:.2f})"
+                f" then {direction} {end_v:.2f} by T={ts[-1]}"
+            )
+        elif 0 < trough_idx < len(vals) - 1 and vals[trough_idx] < end_v:
+            lines.append(
+                f"    {m}: troughs at T={ts[trough_idx]} ({vals[trough_idx]:.2f})"
+                f" then recovers to {end_v:.2f} by T={ts[-1]}"
+            )
+        else:
+            net = end_v - start_v
+            lines.append(
+                f"    {m}: non-monotone (net {'+' if net >= 0 else ''}{net:.2f},"
+                f" reversal {rev:.2f}) over T={ts[0]}–{ts[-1]}"
+            )
+
+    # Trigger B: cross-metric divergence
+    if trigger_b:
+        be_vals = get_vals("base_extractiveness")
+        tr_vals = get_vals("theater_ratio")
+        be_start, be_end = be_vals[0], be_vals[-1]
+        tr_start, tr_end = tr_vals[0], tr_vals[-1]
+        phrase = (
+            "theater withdraws as extraction escalates" if be_d > 0
+            else "theater substitutes as extraction decays"
+        )
+        lines.append(
+            f"    Cross-metric: epsilon {be_start:.2f}→{be_end:.2f}"
+            f" ({'+' if be_d > 0 else ''}{be_d:.2f}),"
+            f" theater {tr_start:.2f}→{tr_end:.2f}"
+            f" ({'+' if tr_d > 0 else ''}{tr_d:.2f})"
+            f" — {phrase}"
+        )
+
+    # Trigger C: plateau/ceiling (skip metrics already described by A)
+    for m in trigger_c_metrics:
+        if m in trigger_a_metrics:
+            continue
+        vals  = get_vals(m)
+        ts    = get_ts(m)
+        rates = get_rates(m)
+        lines.append(
+            f"    {m}: ceiling approach — rate {rates[0]:.4f}→{rates[-1]:.4f}"
+            f" over T={ts[0]}–{ts[-1]}, flattening near {vals[-1]:.2f}"
+        )
+
+    return "\n".join(lines)
+
+
 # --- Level 1 (cont): CONTAMINATION NETWORK (FPN topology) ---
 
 
@@ -2511,6 +2647,7 @@ def generate_report(constraint_id, data, iteration_round=None):
 
     # Level 1: Self-Consistency
     l1_identity = build_level1_identity(constraint_id, data["pipeline"], prolog_output)
+    l1_trajectory = build_drift_trajectory_section(constraint_id, data["pipeline"])
     l1_orbit = build_level1_orbit(constraint_id, data["orbit"])
     l1_omega = build_omega_section(constraint_id, data["omega"])
 
@@ -2564,7 +2701,7 @@ def generate_report(constraint_id, data, iteration_round=None):
         banner,
         xcon_synthesis,
         build_level_header(1, "SELF-CONSISTENCY"),
-        l1_identity, l1_contamination, l1_husk, l1_orbit, l1_omega,
+        l1_identity, l1_trajectory, l1_contamination, l1_husk, l1_orbit, l1_omega,
         build_level_header(2, "DIAGNOSTIC CONVERGENCE"),
         l2_convergence, l2_maxent, l2_wasserstein, l2_cohomology, l2_game_theory, l2_persistence, l2_abductive, l2_axiom2, l2_verdict, l2_theorems, l2_cs_pattern, l2_cs_extended, l2_cs_kernel,
         build_level_header(3, "CORPUS POSITIONING"),

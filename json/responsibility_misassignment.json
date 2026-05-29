@@ -1,0 +1,160 @@
+{
+  "header": {
+    "constraint_id": "responsibility_misassignment",
+    "version": "1.0",
+    "generated_date": "2025-01-02",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "resp_misassign",
+    "story_uid": "17f4d52f-18c1-4844-982b-31c978fded7f",
+    "created_at": "2026-05-28T05:40:52.463308+00:00"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.22,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Responsibility Misassignment in LLM Interface Framing",
+    "topic_domain": "human_computer_interaction/cognitive_ergonomics",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "llm_providers",
+      "users_seeking_convenience"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Convenience-Seeking User",
+      "comment": "PERSPECTIVE 1: CONVENIENCE-SEEKING USER (ROPE) — Experiences the interface as a coordination mechanism that solves the problem of accessing information quickly. The conversational framing creates a mental model where the system handles correctness verification, reducing cognitive load. Low extraction because the user chose this tool for exactly this affordance and can switch tools when precision matters."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The LLM Provider",
+      "comment": "PERSPECTIVE 2: LLM PROVIDER (ROPE) — The conversational interface is a coordination solution that makes probabilistic text generation accessible to non-technical users. The responsibility ambiguity is not extraction but an unavoidable consequence of bridging statistical models and human communication norms. Providers benefit from adoption but also invest heavily in alignment research and safety disclaimers. Arbitrage exit because providers can pivot to different interface paradigms or market positioning."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Professional User with Domain Expertise",
+      "comment": "PERSPECTIVE 3: PROFESSIONAL USER (ROPE) — Domain experts treat LLMs as capability-extension tools, maintaining responsibility for verification. The interface framing creates friction but not extraction — experts already have mental models for tool limitations and verification workflows. Mobile exit because experts can choose specialized tools, hire human assistants, or revert to traditional research methods."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The HCI Research Community",
+      "comment": "PERSPECTIVE 4: HCI RESEARCH COMMUNITY (ROPE) — Organized researchers see the responsibility ambiguity as a coordination problem amenable to interface design solutions: explicit uncertainty indicators, citation verification tools, mode-switching UI patterns. The constraint coordinates attention on a real design challenge. Constrained exit because the community is professionally committed to solving interface problems rather than abandoning the technology."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (ROPE) — The responsibility assignment ambiguity is a coordination problem inherent to introducing probabilistic systems into deterministic-expectation contexts. The conversational interface creates an affordance mismatch, but this is a design challenge, not an extraction mechanism. Users, providers, and researchers are collectively negotiating new interaction contracts. Low extraction because no agent is systematically trapped or coerced — the friction is transitional as norms stabilize."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "interface_determinism",
+      "question": "Does the conversational interface inherently imply correctness guarantees, or is this a learned association from prior tools (search engines, calculators) that users incorrectly transfer?",
+      "resolution_mechanism": "Longitudinal studies of user mental models across different interface paradigms; cross-cultural comparison of responsibility attribution in societies with different tool-use histories",
+      "impact": "If inherent: interface redesign is necessary to prevent misassignment. If learned: user education and norm evolution will resolve the ambiguity over time without structural change.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether conversational interfaces inherently imply correctness"
+    },
+    {
+      "id": "verification_cost_threshold",
+      "question": "At what verification cost does the convenience frame break down and users revert to capability-extension mental models?",
+      "resolution_mechanism": "Behavioral studies measuring user verification effort across task types; identification of cost thresholds where users switch from trusting outputs to checking them",
+      "impact": "If threshold is low: most users will naturally adopt verification practices. If threshold is high: responsibility ambiguity persists and may require interface intervention.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Cost threshold for user verification behavior"
+    },
+    {
+      "id": "provider_incentive_alignment",
+      "question": "Do LLM providers benefit from responsibility ambiguity (users blame themselves for misuse rather than demanding better systems), or does ambiguity create liability and reputation risk that providers want to resolve?",
+      "resolution_mechanism": "Analysis of provider behavior: investment in uncertainty communication, legal positioning, interface redesign efforts. Comparison of open-source vs commercial provider incentives.",
+      "impact": "If providers benefit: the coordination framing may be incomplete and some extraction is present. If providers face risk: the rope classification is robust and all parties want clearer contracts.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether providers benefit from responsibility ambiguity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.18
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 2
+  },
+  "commentary": {
+    "narrative_context": "The responsibility misassignment constraint emerges from the interaction between LLM interface design and user mental models inherited from prior tools. Conversational interfaces create an affordance that resembles search engines or calculators — tools where the system is responsible for correctness. But LLMs are probabilistic text generators, not knowledge retrieval systems, and their outputs require verification. Users who approach LLMs with a convenience frame (system handles correctness) experience fabrications and citation errors as disqualifying defects. Users who approach with a capability-extension frame (user handles correctness) experience the same outputs as expected friction requiring verification. The constraint is not that one frame is correct and the other wrong, but that the interface shape does not clearly signal which contract applies. This creates coordination friction as users, providers, and designers negotiate new interaction norms. The low extractiveness (0.18) reflects that this is primarily a transitional coordination problem rather than a mechanism that systematically benefits one party at another's expense. Users can exit to other tools, providers are investing in clearer uncertainty communication, and the HCI community is developing interface solutions. The theater ratio (0.35) captures some performative elements — disclaimers that users ignore, safety warnings that don't match interaction patterns — but most of the constraint's activity is functional coordination work.",
+    "key_agents": [
+      "Convenience-Seeking Users: Beneficiaries (moderate/mobile) — gain cognitive load reduction from treating LLM as correctness-responsible; can switch tools when precision matters",
+      "LLM Providers: Beneficiaries (institutional/arbitrage) — conversational interface enables mass adoption; also bear reputation risk from misassignment",
+      "Professional Users with Domain Expertise: Beneficiaries (powerful/mobile) — use LLMs as capability-extension tools with clear verification workflows; minimal friction",
+      "HCI Research Community: Organized agents (organized/constrained) — see responsibility ambiguity as coordination problem amenable to design solutions",
+      "Analytical Observer: Civilizational view (analytical/analytical) — sees transitional coordination friction as norms stabilize around new tool class"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low. The responsibility ambiguity creates friction but not systematic extraction. Users who experience fabrications as disqualifying defects can switch to other tools (search, human experts, specialized databases). Providers invest in alignment research and interface improvements, bearing costs rather than extracting rents. The asymmetry is real — some users are surprised by outputs that don't match their mental models — but the surprise is transitional as norms evolve, not structural. Suppression (0.22): Low. No significant barriers prevent users from adopting verification practices, switching tools, or demanding clearer interfaces. The constraint operates through affordance mismatch and inherited mental models, not through coercion or lack of alternatives. Theater ratio (0.35): Moderate-low. Some performative elements exist (disclaimers users skip, safety warnings that don't match interaction flow), but most interface activity is functional — the conversational paradigm genuinely makes probabilistic text generation accessible to non-technical users. The theater has increased slightly as providers add more warnings without changing core interaction patterns, but it remains below the 0.50 threshold where proxy goals dominate real function.",
+    "directionality_logic": "All perspectives classify as rope because all agents are beneficiaries of the coordination function with mobile or arbitrage exit options. Convenience-seeking users benefit from cognitive load reduction and can switch tools when precision matters (d ≈ 0.15, mobile exit + beneficiary). LLM providers benefit from adoption enabled by conversational interfaces and have arbitrage exit to different paradigms (d ≈ 0.05, arbitrage exit + beneficiary). Professional users benefit from capability extension and have mobile exit to specialized tools (d ≈ 0.15, mobile exit + beneficiary). The HCI research community benefits from a tractable design challenge and has constrained exit due to professional commitment (d ≈ 0.20, constrained exit + beneficiary, but still low enough for rope). The analytical observer sees coordination friction with no systematic victim (d ≈ 0.72, analytical canonical). No agent is trapped or systematically extracted from — the responsibility ambiguity is a coordination problem all parties are working to resolve.",
+    "perspectival_gap": "This constraint exhibits minimal perspectival gap — all five perspectives classify as rope. The uniformity reflects the structural reality: the responsibility ambiguity is a coordination problem, not an extraction mechanism. Users who want convenience get it (and accept verification costs when precision matters). Providers who want adoption get it (and invest in safety). Experts who want capability extension get it (and maintain verification workflows). Researchers who want design challenges get them (and propose solutions). The 'AI is unreliable' discourse framed as system failure is a surface phenomenon — users expressing surprise that a probabilistic tool behaves probabilistically — but the underlying structure is coordination, not extraction. The discourse will stabilize as norms evolve and interfaces improve. The constraint's low extractiveness and suppression, combined with beneficiary declarations across all agent types, produce rope classifications across all perspectives.",
+    "mandatrophy_analysis": "This constraint does not trigger mandatrophy analysis (extractiveness 0.18 < 0.70 threshold). The responsibility misassignment is a coordination friction, not a severe extraction mechanism. The rope classification is robust across perspectives because the structural data — low extractiveness, low suppression, beneficiaries across all agent types, mobile/arbitrage exit options — consistently point to coordination rather than extraction. The constraint resolves the potential mandatrophy (is this really just rope, or is hidden extraction present?) by showing that users can exit, providers bear costs, and all parties are negotiating new norms. The omega variables identify empirical uncertainties (does the interface inherently imply correctness? what verification cost triggers user adaptation? do providers benefit from ambiguity?) but none of these uncertainties, if resolved, would reclassify the constraint to a higher-extraction type. The coordination function is genuine and the extraction is minimal."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of state_role_time_collapse (the cognitive difficulty of tracking system state across interaction turns) and frame_mismatch_friction (the general problem of interface affordances not matching underlying system capabilities). The responsibility misassignment is a specific instantiation of frame mismatch in the LLM domain, where the conversational interface creates a convenience-frame affordance that conflicts with the capability-extension contract the system actually offers."
+  },
+  "directionality_overrides": []
+}

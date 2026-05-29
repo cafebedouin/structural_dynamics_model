@@ -60,10 +60,16 @@ The downstream question — "at what coverage do empirical CS-related findings b
 
 ### Open questions worth tracking
 
+See [`ISSUES.md`](ISSUES.md) for the structured tracker
+(OQ-01 through OQ-09) covering engine correctness, schema gaps, and paper
+synchronization items from the May 2026 audit chain.
+
+Additional research-level questions (not in the structured tracker):
+
 - Whether the framing_notes-shaped invitation in the generation prompt produces conceptual omegas vs empirical-leaning omegas. Calibration signal.
 - Whether the convergent_institutional pattern is a CS-detectable signature at cluster level (Package F question).
 - Whether v3's lifecycle phases produce useful predictions on cases where the apparatus produces ambiguous terminal-state predictions. Lifecycle remains at theory stage; v3's own observation that "you cannot know where a system is in its lifecycle from inside it" suggests the phase indicators need theory work before code.
-- Framework-as-CS recursion (DR-as-scaffold transitioning to interpretive accretion or anchored fixity if successful enough to become a durable mental model). Theoretical, not apparatus work yet, but worth tracking; potentially a future paper section.
+- Framework-as-CS recursion (DR-as-scaffold transitioning to interpretive accretion or anchored fixity if successful enough to become a durable mental model). Theoretical, not apparatus work yet, but worth tracking; potentially a future paper section. (Also logged as OQ-03 in the structured tracker.)
 - T4 (confirmed_liminal) is currently a one-case category. Audit 3 established the conjunction is genuinely tight; what would happen at larger scale (corpus growth, more diverse constraint types, more process-encoding referents) isn't predictable from one case. Worth re-examining when a second T4 case appears.
 
 ### Out of scope (preserved from prior agenda)

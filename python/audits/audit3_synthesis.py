@@ -22,7 +22,7 @@ import re
 import sys
 from collections import defaultdict, Counter
 
-REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 MAXENT_RAW_PATH  = os.path.join(REPO_ROOT, "outputs", "audit3_maxent_raw.json")
 SAMPLE_PATH      = os.path.join(REPO_ROOT, "outputs", "audit3_sample.json")

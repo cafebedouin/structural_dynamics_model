@@ -1,0 +1,137 @@
+{
+  "baseline": {
+    "presheaves": 896,
+    "total": 3380
+  },
+  "test1": {
+    "t1_smooth_flip": {
+      "presheaves": 996,
+      "sheaves": 2384,
+      "jaccard": 0.8863,
+      "s_to_p": 107,
+      "p_to_s": 7
+    },
+    "t1_smooth_noflip": {
+      "presheaves": 913,
+      "sheaves": 2467,
+      "jaccard": 0.8,
+      "s_to_p": 109,
+      "p_to_s": 92
+    }
+  },
+  "test2": {
+    "t2_compressed_noflip": {
+      "presheaves": 863,
+      "sheaves": 2517,
+      "jaccard": 0.7804,
+      "s_to_p": 92,
+      "p_to_s": 125
+    }
+  },
+  "test3": {
+    "t1_smooth_flip": {
+      "presheaves": 996,
+      "jaccard": 0.8863,
+      "s_to_p": 107,
+      "p_to_s": 7
+    },
+    "piecewise_linear": {
+      "presheaves": 1082,
+      "jaccard": 0.782,
+      "s_to_p": 214,
+      "p_to_s": 28
+    },
+    "t3_step5": {
+      "presheaves": 936,
+      "jaccard": 0.8265,
+      "s_to_p": 107,
+      "p_to_s": 67
+    },
+    "t3_step2": {
+      "presheaves": 130,
+      "jaccard": 0.1451,
+      "s_to_p": 0,
+      "p_to_s": 766
+    }
+  },
+  "test4": {
+    "t1_smooth_flip": {
+      "tangled_rope": {
+        "jaccard": 0.6995,
+        "baseline_n": 259,
+        "variant_n": 363
+      },
+      "snare_rope": {
+        "jaccard": 0.9936,
+        "baseline_n": 626,
+        "variant_n": 622
+      },
+      "full_corpus": {
+        "jaccard": 0.8863,
+        "baseline_n": 896,
+        "variant_n": 996
+      }
+    },
+    "t1_smooth_noflip": {
+      "tangled_rope": {
+        "jaccard": 0.4891,
+        "baseline_n": 259,
+        "variant_n": 289
+      },
+      "snare_rope": {
+        "jaccard": 0.9792,
+        "baseline_n": 626,
+        "variant_n": 613
+      },
+      "full_corpus": {
+        "jaccard": 0.8,
+        "baseline_n": 896,
+        "variant_n": 913
+      }
+    },
+    "piecewise_no_flip": {
+      "tangled_rope": {
+        "jaccard": 0.5059,
+        "baseline_n": 259,
+        "variant_n": 503
+      },
+      "snare_rope": {
+        "jaccard": 0.9505,
+        "baseline_n": 626,
+        "variant_n": 595
+      },
+      "full_corpus": {
+        "jaccard": 0.7542,
+        "baseline_n": 896,
+        "variant_n": 1109
+      }
+    },
+    "step_flip": {
+      "tangled_rope": {
+        "jaccard": 0.6123,
+        "baseline_n": 259,
+        "variant_n": 186
+      },
+      "snare_rope": {
+        "jaccard": 0.7284,
+        "baseline_n": 626,
+        "variant_n": 456
+      },
+      "full_corpus": {
+        "jaccard": 0.6966,
+        "baseline_n": 896,
+        "variant_n": 653
+      }
+    }
+  },
+  "test5": {
+    "total": 3380,
+    "flip_sensitive": 293,
+    "flip_to_sheaf": 188,
+    "sheaf_to_presh": 105,
+    "type_dist": {
+      "tangled_rope": 278,
+      "snare": 15
+    }
+  }
+}

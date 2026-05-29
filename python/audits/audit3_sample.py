@@ -18,7 +18,7 @@ import random
 import os
 import sys
 
-REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+REPO_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 ABD_PATH = os.path.join(REPO_ROOT, "outputs", "abductive_data.json")
 PIPELINE_PATH = os.path.join(REPO_ROOT, "outputs", "pipeline_output.json")
 OUT_PATH = os.path.join(REPO_ROOT, "outputs", "audit3_sample.json")

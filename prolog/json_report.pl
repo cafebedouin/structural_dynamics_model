@@ -448,6 +448,14 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     write_drift_array(S, Drifts),
     format(S, '],~n', []),
 
+    % drift_trajectory: emit for all measurement-bearing constraints; absent if no data
+    (   narrative_ontology:measurement(_, C, _, _, _)
+    ->  format(S, '      "drift_trajectory": ', []),
+        write_drift_trajectory(S, C),
+        format(S, ',~n', [])
+    ;   true
+    ),
+
     % --- Compute diagnostic summary once (hoisted for T12 access) ---
     (   catch(diagnostic_summary:diagnostic_summary(C, Summary), _, fail)
     ->  true
@@ -663,6 +671,81 @@ write_drift_array(S, [drift(DType, DSev)]) :-
 write_drift_array(S, [drift(DType, DSev)|Rest]) :-
     format(S, '{"type": "~w", "severity": "~w"}, ', [DType, DSev]),
     write_drift_array(S, Rest).
+
+%% write_drift_trajectory(+Stream, +Constraint)
+%  Emits full ordered measurement series per metric, per-interval rates, and
+%  per-interval accelerations. Source: direct findall on measurement/5 only —
+%  no collapsed predicates (metric_delta, drift_velocity, etc.) used.
+write_drift_trajectory(S, C) :-
+    findall(Metric, narrative_ontology:measurement(_, C, Metric, _, _), AllM0),
+    sort(AllM0, Metrics),
+    format(S, '{~n', []),
+    write_metric_series_list(S, C, Metrics),
+    format(S, '      }', []).
+
+write_metric_series_list(_, _, []).
+write_metric_series_list(S, C, [M]) :- !,
+    write_one_metric_series(S, C, M, false).
+write_metric_series_list(S, C, [M|Rest]) :-
+    write_one_metric_series(S, C, M, true),
+    write_metric_series_list(S, C, Rest).
+
+write_one_metric_series(S, C, Metric, Comma) :-
+    findall(T-V, narrative_ontology:measurement(_, C, Metric, T, V), Pairs),
+    sort(Pairs, Sorted),
+    compute_rates(Sorted, Rates),
+    compute_accelerations(Rates, Accels),
+    format(S, '        "~w": {"series": [', [Metric]),
+    write_timepoint_array(S, Sorted),
+    format(S, '], "per_interval_rate": [', []),
+    write_rate_list(S, Rates),
+    format(S, '], "per_interval_acceleration": [', []),
+    write_accel_list(S, Accels),
+    format(S, ']}', []),
+    (Comma == true -> format(S, ',~n', []) ; format(S, '~n', [])).
+
+%% compute_rates(+Sorted, -Rates)
+%  Sorted = [T-V, ...] ordered by T. Zero-span intervals (D=0) are skipped.
+compute_rates([], []).
+compute_rates([_], []).
+compute_rates([T1-V1, T2-V2 | Rest], Rates) :-
+    D is T2 - T1,
+    (   D > 0
+    ->  R is (V2 - V1) / D,
+        Rates = [rate(T1, T2, R) | RestRates]
+    ;   Rates = RestRates   % duplicate timepoint: skip interval
+    ),
+    compute_rates([T2-V2 | Rest], RestRates).
+
+%% compute_accelerations(+Rates, -Accels)
+%  N rates -> N-1 accelerations. Span = Tc - Ta across both intervals.
+compute_accelerations([], []).
+compute_accelerations([_], []).
+compute_accelerations([rate(Ta, _, R1), rate(Tb, Tc, R2) | Rest], [acc(Tb, Acc) | Accs]) :-
+    Span is Tc - Ta,
+    (Span > 0 -> Acc is (R2 - R1) / Span ; Acc is 0.0),
+    compute_accelerations([rate(Tb, Tc, R2) | Rest], Accs).
+
+write_timepoint_array(_, []).
+write_timepoint_array(S, [T-V]) :- !,
+    format(S, '{"t": ~w, "v": ~4f}', [T, V]).
+write_timepoint_array(S, [T-V|Rest]) :-
+    format(S, '{"t": ~w, "v": ~4f}, ', [T, V]),
+    write_timepoint_array(S, Rest).
+
+write_rate_list(_, []).
+write_rate_list(S, [rate(T1, T2, R)]) :- !,
+    format(S, '{"t1": ~w, "t2": ~w, "rate": ~6f}', [T1, T2, R]).
+write_rate_list(S, [rate(T1, T2, R) | Rest]) :-
+    format(S, '{"t1": ~w, "t2": ~w, "rate": ~6f}, ', [T1, T2, R]),
+    write_rate_list(S, Rest).
+
+write_accel_list(_, []).
+write_accel_list(S, [acc(T, A)]) :- !,
+    format(S, '{"t": ~w, "acc": ~6f}', [T, A]).
+write_accel_list(S, [acc(T, A) | Rest]) :-
+    format(S, '{"t": ~w, "acc": ~6f}, ', [T, A]),
+    write_accel_list(S, Rest).
 
 %% mono_status_to_string(+Status, -String)
 %  Converts orbit_monotonicity/2 term to a JSON-safe string.

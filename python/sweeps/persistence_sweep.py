@@ -29,7 +29,7 @@ import time
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from config_sensitivity_sweep import parse_config_params, EXCLUDE_PARAMS
 
 # ---------------------------------------------------------------------------

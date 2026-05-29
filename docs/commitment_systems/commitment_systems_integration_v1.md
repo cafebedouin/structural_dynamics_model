@@ -457,7 +457,7 @@ The narrow Option 2 follow-on: once the corpus has a meaningful number of constr
 
 - **Finding 1 resolved:** Corrected `CLAUDE.md` lines 99–103. Removed the false claim that σ(universal) = 1.0 causes sheaf→presheaf crossings. Replacement text states σ(universal) = σ(national) = 1.0 (no differential χ effect) and gives the actual calibration-based exclusion reason.
 
-- **Finding 2 resolved:** Migrated both deprecated χ paths to the sigmoid pipeline. `classify_snapshot/3` in `transition_paths.pl` removed; replaced by `snapshot_type/3` using `derive_directionality → sigmoid_f → scope_modifier`. `dr_type_at/4` in `drl_composition.pl` removed; replaced by `classify_at_time/4` using the same formula. Callers (`degradation_chain/3`, `constraint_history/3`) updated. Regression test at `prolog/test_snapshot_migration.pl` documents the expected ~20% χ divergence at global scope and confirms the snare-boundary class corrected by the migration.
+- **Finding 2 resolved:** Migrated both deprecated χ paths to the sigmoid pipeline. `classify_snapshot/3` in `transition_paths.pl` removed; replaced by `snapshot_type/3` using `derive_directionality → sigmoid_f → scope_modifier`. `dr_type_at/4` in `drl_composition.pl` removed; replaced by `classify_at_time/4` using the same formula. Callers (`degradation_chain/3`, `constraint_history/3`) updated. Regression test at `prolog/tests/test_snapshot_migration.pl` documents the expected ~20% χ divergence at global scope and confirms the snare-boundary class corrected by the migration.
 
 ---
 
@@ -479,6 +479,6 @@ Full Turn 3 implementation complete. The audit → design → implement cycle pr
 
 - `python/enhanced_report.py` — added `_CS_PATTERN_PROSE` and `_CS_VERDICT_PROSE` dicts, `build_cs_pattern_section` function, CS distribution line in `build_header`, and `l2_cs_pattern` inserted into L2 sections after theorem instantiation.
 
-- `prolog/test_cs_pattern_detection.pl` — 22 test cases covering all patterns, all 6 verdict conditions, clean-fire cases, and signal content. All 22 pass; full Prolog validation suite passes (0 errors, 0 warnings).
+- `prolog/tests/test_cs_pattern_detection.pl` — 22 test cases covering all patterns, all 6 verdict conditions, clean-fire cases, and signal content. All 22 pass; full Prolog validation suite passes (0 errors, 0 warnings).
 
 Coverage gaps (by design — not detectable without new authored fields, correctly produce `no_pattern_match`): none; all five patterns are now detectable via the authored `cs_structure` fields. The audit-phase finding that diffuse_reconstruction and implicit_practice were undetectable from existing metrics is resolved by having the LLM assert the classification rather than inferring it from signals.

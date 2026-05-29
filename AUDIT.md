@@ -1,14 +1,13 @@
 # Repository Audit — Structural Dynamics Model
 
+> **Retired 2026-05-28.** Live issues migrated to `ISSUES.md` (OQ-11, OQ-12, OQ-13).
+> This document is preserved as a historical record of the 2026-02-28 audit.
+> Do not update it — use `ISSUES.md` for active tracking.
+
 **Date**: 2026-02-28
 **Auditor**: Claude Opus 4.6 (automated)
 **Corpus at audit time**: 3,337 testsets, 178 config param declarations (~154 numeric, swept), ~60K LOC (30K Prolog, 30K Python)
 **Evidence**: All findings reference `audit_data/` outputs or specific `file:line` inspections.
-
-> **Point-in-time document.** This audit reflects the state of the repository on 2026-02-28.
-> The corpus has since grown to 3,337 main-corpus testsets + 189 SOTU testsets. Some
-> findings below are resolved; they are marked ~~strikethrough~~ with a resolution note.
-> This document is not regularly updated — use the git log and MEMORY.md for current state.
 
 ---
 

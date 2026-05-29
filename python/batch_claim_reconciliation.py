@@ -65,25 +65,25 @@ TIE_PRECEDENCE = [
 
 PYTHON_FIXES = [
     {
-        "file": ROOT_DIR / "python" / "coordination_vitality_diagnostic.py",
+        "file": ROOT_DIR / "python" / "audits" / "coordination_vitality_diagnostic.py",
         "old": "PITON_EXTRACTION_CEILING = 0.25",
         "new": "PITON_EXTRACTION_CEILING = 0.45",
         "param": "piton_extraction_ceiling",
     },
     {
-        "file": ROOT_DIR / "python" / "coordination_vitality_diagnostic.py",
+        "file": ROOT_DIR / "python" / "audits" / "coordination_vitality_diagnostic.py",
         "old": "SCAFFOLD_EXTRACTION_CEIL = 0.30",
         "new": "SCAFFOLD_EXTRACTION_CEIL = 0.45",
         "param": "scaffold_extraction_ceil",
     },
     {
-        "file": ROOT_DIR / "python" / "scaffold_piton_gate_audit.py",
+        "file": ROOT_DIR / "python" / "audits" / "scaffold_piton_gate_audit.py",
         "old": "SCAFFOLD_EXTRACTION_CEIL = 0.30",
         "new": "SCAFFOLD_EXTRACTION_CEIL = 0.45",
         "param": "scaffold_extraction_ceil",
     },
     {
-        "file": ROOT_DIR / "python" / "scaffold_piton_gate_audit.py",
+        "file": ROOT_DIR / "python" / "audits" / "scaffold_piton_gate_audit.py",
         "old": "PITON_EXTRACTION_CEILING = 0.25",
         "new": "PITON_EXTRACTION_CEILING = 0.45",
         "param": "piton_extraction_ceiling",
