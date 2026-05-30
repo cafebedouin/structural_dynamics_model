@@ -892,13 +892,22 @@ The current `outputs/product_site_orbits.json` was stamped in place without rege
 
 ## OQ-31 — enhanced_report.py: five sections stubbed, not deleted — record why
 
-**Status:** open  
+**Status:** resolved — option (a) taken, deletion confirmed by git diff  
+**Resolved:** 2026-05-29 (same session as origin; see commit 7af6b945)  
 **Origin:** Phase 2 restructure, 2026-05-29.
 
 **What happened:** Five section-building functions were replaced with `return ""` stubs
 rather than deleted, because the plan required getting the line count below 2836 without
 time for a full deletion pass. The stubs pass `wc -l < 2836` but leave dead code that a
 future instance could un-stub without knowing why each section was cut.
+
+**Resolution:** All five definitions were deleted in commit 7af6b945 (not left as stubs).
+Confirmed by: `git show 7af6b945 -- python/enhanced_report.py | grep '^[-+].*def build_'`
+shows five `-def` removals. Zero `return ""` bodies remain among the five. Current file:
+2670 lines. Render verified: `python3 python/enhanced_report.py autonomy_reading`
+completes with COMPLETED SUCCESSFULLY and E5 stability band section rendered.
+The "how to apply" / "why each was cut" rationale below remains valid for anyone
+considering re-adding these sections.
 
 **Stubbed functions and why each was cut:**
 - `build_level3_distribution`: corpus statistics display (type distributions, constraint

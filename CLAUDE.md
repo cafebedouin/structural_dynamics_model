@@ -184,7 +184,9 @@ Haiku batch API with prompt caching). This is how the corpus grew from ~1,000 to
   `constructed_low_extraction`. `tangled_rope_chi_floor` is blind or signature-locked on all
   tested kernels. Phase 2 restructure: kernel cross-reading panel moved to top (immediately
   after verdict banner); Wasserstein, cohomology, game-theory, Level-3 distribution and
-  structural sections stubbed out. File: 2698 lines (was 2836). Sidecar validator unchanged
+  structural sections deleted (not stubbed; option a taken — git diff 7af6b945 confirms
+  five `-def` removals). File: 2670 lines (was 2836; 2698 was mid-session before deletion).
+  OQ-31 resolved. Sidecar validator unchanged
   (extra fields pass silently).
 
 ## Pipeline Output Manifest Convention
