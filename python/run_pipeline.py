@@ -82,15 +82,21 @@ def _compute_corpus_hash(testsets_dir: Path) -> str:
     return hashlib.sha256("\n---\n".join(pairs).encode()).hexdigest()[:12]
 
 
-def _stamp_orbits_corpus_hash(orbits_path: Path, testsets_dir: Path) -> None:
-    """Add/update corpus_hash field in product_site_orbits.json.
 
-    Called after pipeline regenerates the orbits file so perturb() can verify staleness.
-    If the standalone swipl path is used (not pipeline), stamp manually with this function.
+def check_orbits_corpus_hash(orbits_path: Path) -> None:
+    """Raise RuntimeError if orbits file exists but lacks corpus_hash.
+
+    The corpus_hash must be stamped atomically with orbit generation
+    (via regenerate_orbits.py). A missing hash means the file was produced
+    by the old two-step path and is unverifiable for staleness.
     """
-    data = json.loads(orbits_path.read_text(encoding="utf-8"))
-    data["corpus_hash"] = _compute_corpus_hash(testsets_dir)
-    orbits_path.write_text(json.dumps(data, indent=2), encoding="utf-8")
+    if orbits_path.exists():
+        data = json.loads(orbits_path.read_text(encoding="utf-8"))
+        if "corpus_hash" not in data:
+            raise RuntimeError(
+                "product_site_orbits.json has no corpus_hash — "
+                "run 'python3 python/sweeps/regenerate_orbits.py' before the pipeline."
+            )
 
 
 def build_manifest(run_at: str) -> dict:
@@ -820,13 +826,12 @@ def run_pipeline(
         pipeline_result.total_duration_s = time.time() - t0
         return pipeline_result
 
-    # Inject manifest into pipeline_output.json; stamp corpus_hash into orbits if present
+    # Inject manifest into pipeline_output.json; verify orbits are stamped
     def _manifest_step():
         manifest = build_manifest(run_at)
         inject_manifest(OUTPUTS_DIR / "pipeline_output.json", manifest)
         orbits_path = OUTPUTS_DIR / "product_site_orbits.json"
-        if orbits_path.exists():
-            _stamp_orbits_corpus_hash(orbits_path, TESTSETS_DIR)
+        check_orbits_corpus_hash(orbits_path)
         if progress:
             progress("pipeline",
                      f"[MANIFEST] Stamped pipeline_output.json: "

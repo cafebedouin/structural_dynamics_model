@@ -979,6 +979,30 @@ satisfying the `false_ci_rope` predicate condition).
 
 ---
 
+## OQ-32 — bifurcation_sweep.py: path resolution broken after 2026-05-28 reorg
+
+**Status:** open  
+**Origin:** Task 5 probe run, 2026-05-29.  
+**Files:** `python/sweeps/bifurcation_sweep.py`
+
+**Specific question:** `bifurcation_sweep.py` was moved from `python/` to `python/sweeps/` in the 2026-05-28 reorg. The `base_dir` is computed as `Path(__file__).resolve().parent.parent`, which resolves to `python/` (not repo root) after the move. The script then looks for `python/prolog/config.pl` which does not exist.
+
+**Symptom:** `ERROR: config.pl not found at /home/scott/bin/structural_dynamics_model/python/prolog/config.pl`
+
+**Fix:** Change line 380 from `Path(__file__).resolve().parent.parent` to `Path(__file__).resolve().parents[2]` (matching the pattern used by perturb.py and demotion_pass.py). Output path on line 388 (`base_dir / "python" / "bifurcation_results.json"`) would also resolve incorrectly after the fix and should be updated to `base_dir / "outputs" / "bifurcation_results.json"` or kept at `python/bifurcation_results.json` by hardcoding.
+
+**Why it matters:** `bifurcation_sweep.py` is the canonical tool that produced the 14-flip class witness for no-kernel perturbability (testsets_3000, `snare_chi_floor`, `python/bifurcation_results.json`). Its primary entry point is dead until this is fixed. The reading_backlog probe fell back to `epsilon_sensitivity.py` (MaxEnt, branch b flat, fisher=1.13) because the bifurcation entry point errored. A current-corpus bifurcation witness for no-kernel readings is UNWITNESSED.
+
+**Do NOT fix in this batch.** Scope constraint: Task 5 reading_backlog probe only.
+
+**Wider scope (census 2026-05-29):** The same `parent.parent` reorg bug affects 5 additional scripts:
+`cognitive_displacement_sweep.py` (line 30), `persistence_sweep.py` (line 720),
+`product_site_delta_sweep.py` (line 33), `representation_robustness_sweep.py` (line 26),
+`structural_config_sensitivity.py` (line 42). All resolve PROLOG_DIR to `python/prolog/` instead
+of `<repo_root>/prolog/`. Fix pattern: `parent.parent` → `parents[2]` throughout. 6 scripts total.
+
+---
+
 *Last updated: 2026-05-29. Add new items with sequential OQ-NN labels. Mark
 resolved items with **Status: resolved** and a resolution note rather than
 deleting — provenance matters.*

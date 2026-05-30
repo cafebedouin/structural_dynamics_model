@@ -313,7 +313,7 @@ def perturb(
         print(
             f"[perturb] WARNING: {ORBITS_PATH.name} has no corpus_hash — "
             "orbits predate this guard. Staleness unverifiable. "
-            "Regenerate orbits and re-run python3 python/run_pipeline.py to stamp.",
+            "Run python3 python/sweeps/regenerate_orbits.py (atomic: exports and stamps in one step).",
             file=sys.stderr,
         )
     else:
@@ -322,9 +322,7 @@ def perturb(
             raise RuntimeError(
                 f"perturb: product_site_orbits.json is stale — "
                 f"stored corpus_hash={stored_hash!r} but current testsets hash={current_hash!r}. "
-                "Regenerate orbits: cd prolog && swipl -g "
-                "'[stack],[product_site_export],run_product_export,halt'. "
-                "Then re-run python3 python/run_pipeline.py to re-stamp corpus_hash."
+                "Run python3 python/sweeps/regenerate_orbits.py (atomic: exports and stamps in one step)."
             )
 
     baseline_hash = hashlib.sha256(
