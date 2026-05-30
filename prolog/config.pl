@@ -65,6 +65,7 @@ param(power_modifier_analytical, 1.15).    % Analytical clarity: detects extract
 %% path reads canonical_d_analytical (line ~108) whose sigmoid output is calibrated
 %% to match this value. Bifurcation sweep confirmed: perturbing this param produces
 %% zero dr_type flips [0.5x, 2.0x]. See TODO: legacy-power-modifier-migration.
+%% DEMOTION: unperturbable-by-construction — legacy chi path only, zero dr_type flips.
 
 /* ================================================================
    4A. COALITION MODELING (The "Who" Extension)
@@ -234,6 +235,10 @@ param(snare_epsilon_floor, 0.46).
 
 % Rule TR (Tangled Rope): 0.40 ≤ χ ≤ 0.90 ∧ ε ≥ 0.30 ∧ Coord(C) ∧ Asymmetric(C)
 param(tangled_rope_chi_floor, 0.40).
+%% DEMOTION: signature-locked on all tested kernels (see OQ-30) — not confirmed
+%% unperturbable-by-construction. false_natural_law readings lock final type regardless
+%% of metric change; a false_ci_rope reading near this floor with variance could flip.
+%% Treat as perturbable-but-unperturbed pending witness on false_ci_rope kernels.
 param(tangled_rope_chi_ceil, 0.90).
 param(tangled_rope_epsilon_floor, 0.30).
 

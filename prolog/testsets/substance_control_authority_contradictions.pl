@@ -4,6 +4,7 @@
 % contradiction + forecloses edge    = real closure
 
 :- multifile narrative_ontology:cs_axiom_contradiction/2.
+:- multifile narrative_ontology:cs_contradiction_of/2.
 
 % prohibition_reading↔harm_reduction_reading: Prohibition axiom: drug use itself is the harm to be prevented. Harm reduction axiom: unsafe use practices are the harm; use itself is accepted. No framework can simultaneously hold 'use must be prevented' and 'use is acceptable if made safer.'
 % prohibition_reading↔legalization_reading: Prohibition axiom: state has duty to criminalize use to protect society. Legalization axiom: state criminalization causes greater harm than use itself. No framework can simultaneously hold 'criminalization protects' and 'criminalization harms.'
@@ -16,4 +17,5 @@ narrative_ontology:cs_axiom_contradiction(drug_use_outside_state_constraint_scop
 narrative_ontology:cs_axiom_contradiction(continued_use_inevitable_medium_term, drug_use_outside_state_constraint_scope).
 narrative_ontology:cs_axiom_contradiction(drug_use_outside_state_constraint_scope, continued_use_inevitable_medium_term).
 narrative_ontology:cs_story_uid(substance_control_authority_contradictions, 'bd83515f-a95e-4be8-9bed-07d1a3e3c7c4').
+narrative_ontology:cs_contradiction_of(substance_control_authority_contradictions, substance_control_authority).
 narrative_ontology:cs_created_at('bd83515f-a95e-4be8-9bed-07d1a3e3c7c4', '').

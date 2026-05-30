@@ -10,6 +10,7 @@ Usage:
 """
 
 import contextlib
+import hashlib
 import io
 import json
 import subprocess
@@ -66,6 +67,30 @@ def _git_dirty() -> bool:
         return bool(result.stdout.strip()) if result.returncode == 0 else False
     except Exception:
         return False
+
+
+def _compute_corpus_hash(testsets_dir: Path) -> str:
+    """sha256 of sorted (filename, file_content) pairs — corpus identity fingerprint.
+
+    Detects membership changes (add/remove testset) AND in-place content edits.
+    Does not detect changes in subdirectories (testsets/<run_tag>/ archive).
+    See OQ-29 for known limits.
+    """
+    pairs = []
+    for p in sorted(testsets_dir.glob("*.pl")):
+        pairs.append(p.name + "\n" + p.read_text(encoding="utf-8", errors="replace"))
+    return hashlib.sha256("\n---\n".join(pairs).encode()).hexdigest()[:12]
+
+
+def _stamp_orbits_corpus_hash(orbits_path: Path, testsets_dir: Path) -> None:
+    """Add/update corpus_hash field in product_site_orbits.json.
+
+    Called after pipeline regenerates the orbits file so perturb() can verify staleness.
+    If the standalone swipl path is used (not pipeline), stamp manually with this function.
+    """
+    data = json.loads(orbits_path.read_text(encoding="utf-8"))
+    data["corpus_hash"] = _compute_corpus_hash(testsets_dir)
+    orbits_path.write_text(json.dumps(data, indent=2), encoding="utf-8")
 
 
 def build_manifest(run_at: str) -> dict:
@@ -795,10 +820,13 @@ def run_pipeline(
         pipeline_result.total_duration_s = time.time() - t0
         return pipeline_result
 
-    # Inject manifest into pipeline_output.json
+    # Inject manifest into pipeline_output.json; stamp corpus_hash into orbits if present
     def _manifest_step():
         manifest = build_manifest(run_at)
         inject_manifest(OUTPUTS_DIR / "pipeline_output.json", manifest)
+        orbits_path = OUTPUTS_DIR / "product_site_orbits.json"
+        if orbits_path.exists():
+            _stamp_orbits_corpus_hash(orbits_path, TESTSETS_DIR)
         if progress:
             progress("pipeline",
                      f"[MANIFEST] Stamped pipeline_output.json: "

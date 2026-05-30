@@ -4,10 +4,12 @@
 % contradiction + forecloses edge    = real closure
 
 :- multifile narrative_ontology:cs_axiom_contradiction/2.
+:- multifile narrative_ontology:cs_contradiction_of/2.
 
 % originalist_reading↔living_constitutionalist_reading: Originalism's axiom that meaning is fixed at ratification is mutually exclusive with living constitutionalism's axiom that meaning evolves with society. No single coherent framework can hold both 'the Constitution means what it meant in 1788' and 'the Constitution means what contemporary values require' as simultaneously true for the same provision.
 
 narrative_ontology:cs_axiom_contradiction(meaning_fixed_at_ratification, constitutional_meaning_evolves_with_society).
 narrative_ontology:cs_axiom_contradiction(constitutional_meaning_evolves_with_society, meaning_fixed_at_ratification).
 narrative_ontology:cs_story_uid(us_constitution_text_contradictions, '30eaae75-f303-49df-9763-25f0216adc4d').
+narrative_ontology:cs_contradiction_of(us_constitution_text_contradictions, us_constitution_text).
 narrative_ontology:cs_created_at('30eaae75-f303-49df-9763-25f0216adc4d', '').

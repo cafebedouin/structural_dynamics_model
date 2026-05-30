@@ -4,10 +4,12 @@
 % contradiction + forecloses edge    = real closure
 
 :- multifile narrative_ontology:cs_axiom_contradiction/2.
+:- multifile narrative_ontology:cs_contradiction_of/2.
 
 % continuity_reading↔rupture_reading: Continuity reading treats linguistic change as legitimate evolution; rupture reading treats post-classical change as corruption requiring reversal. No single framework can hold both 'organic change is legitimate' and 'organic change is corruption' simultaneously.
 
 narrative_ontology:cs_axiom_contradiction(medieval_change_is_natural_evolution, classical_purity_as_sole_standard).
 narrative_ontology:cs_axiom_contradiction(classical_purity_as_sole_standard, medieval_change_is_natural_evolution).
 narrative_ontology:cs_story_uid(latin_correctness_contradictions, '778ecb38-fdf9-42d9-8989-04d1745d4469').
+narrative_ontology:cs_contradiction_of(latin_correctness_contradictions, latin_correctness).
 narrative_ontology:cs_created_at('778ecb38-fdf9-42d9-8989-04d1745d4469', '').

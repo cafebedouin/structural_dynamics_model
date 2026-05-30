@@ -4,10 +4,12 @@
 % contradiction + forecloses edge    = real closure
 
 :- multifile narrative_ontology:cs_axiom_contradiction/2.
+:- multifile narrative_ontology:cs_contradiction_of/2.
 
 % monarchical_reading↔republican_reading: Monarchical axiom (authority inheres in bloodline, non-revocable by subjects) and republican axiom (authority delegated by consent, revocable by governed) cannot coexist in a single coherent framework. Accepting republican axiom as true requires rejecting the monarchical claim that inherited status grounds legitimate rule independent of popular will.
 
 narrative_ontology:cs_axiom_contradiction(hereditary_succession_legitimacy, popular_consent_as_legitimacy_source).
 narrative_ontology:cs_axiom_contradiction(popular_consent_as_legitimacy_source, hereditary_succession_legitimacy).
 narrative_ontology:cs_story_uid(sovereign_legitimacy_contradictions, '128118a2-6f77-44c2-bf39-174340f44bee').
+narrative_ontology:cs_contradiction_of(sovereign_legitimacy_contradictions, sovereign_legitimacy).
 narrative_ontology:cs_created_at('128118a2-6f77-44c2-bf39-174340f44bee', '').

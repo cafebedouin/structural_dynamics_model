@@ -4,6 +4,7 @@
 % contradiction + forecloses edge    = real closure
 
 :- multifile narrative_ontology:cs_axiom_contradiction/2.
+:- multifile narrative_ontology:cs_contradiction_of/2.
 
 % study_as_exercise↔performance_only: Study-as-exercise holds that intellectual engagement IS the complete fulfillment of the mitzvah (no future performance needed). Performance-only holds that study is preparation for future physical restoration (current engagement is incomplete). No single framework can hold both: either study completes the obligation or it does not.
 % study_as_exercise↔substitution_archive: Study-as-exercise holds the kernel is occupied (sacrifice law remains living divine command). Substitution-archive holds the kernel was superseded (sacrifice replaced by prayer/study, now archived as memorial). No single framework can hold both: either the original commandment persists or it was replaced.
@@ -13,4 +14,5 @@ narrative_ontology:cs_axiom_contradiction(performance_validates_law, study_is_pe
 narrative_ontology:cs_axiom_contradiction(study_is_performance_not_substitute, substitution_is_complete_and_sufficient).
 narrative_ontology:cs_axiom_contradiction(substitution_is_complete_and_sufficient, study_is_performance_not_substitute).
 narrative_ontology:cs_story_uid(kodashim_corpus_contradictions, '8787df8e-18ff-4d0c-8ea4-94feb6d1b812').
+narrative_ontology:cs_contradiction_of(kodashim_corpus_contradictions, kodashim_corpus).
 narrative_ontology:cs_created_at('8787df8e-18ff-4d0c-8ea4-94feb6d1b812', '').

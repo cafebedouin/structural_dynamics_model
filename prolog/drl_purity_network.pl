@@ -55,6 +55,16 @@
    Graceful degradation: when only one constraint is loaded,
    effective_purity equals intrinsic purity and network_qualified_action
    delegates to purity_qualified_action.
+
+   Open item (OQ-23): coexists_with edges are excluded from constraint_neighbors/3
+   by unenforced design intent, not by a runtime guard. The FPN is label-blind —
+   injecting a coexists_with edge as an affects_constraint fact would produce
+   non-zero contamination identical to any other edge with the same purity delta.
+   Unlike forecloses (gradient-orthogonal; see OQ-24 comment at compute_edge_contamination),
+   coexists_with is structurally admissible and excluded only because nothing currently
+   routes it into constraint_neighbors/3. A future edit that does so will inject as a
+   label-blind scalar with no guard to catch it. Enforce or loudly document before
+   modifying constraint_neighbors/3 to read cs_reading_relation edges.
    ================================================================ */
 
 /* ----------------------------------------------------------------

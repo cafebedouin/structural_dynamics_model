@@ -32,6 +32,7 @@ import json
 import re
 import sys
 import time
+import uuid
 from pathlib import Path
 
 # Ensure repo root is on the path when invoked as a script
@@ -501,6 +502,11 @@ def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_lo
             print(f"  SKIP {cid}: exists (use --overwrite)")
             continue
 
+        # Mint story_uid FIRST — generate_pl gates the entire CS block (including
+        # cs_story_uid AND cs_kernel_id) on story_uid being present. Must precede
+        # _kernel_id injection or kernel_id is silently dropped when uid is absent.
+        story.setdefault("header", {}).setdefault("story_uid", str(uuid.uuid4()))
+
         # Inject kernel_id from manifest (not from model output — preserves Rule 2).
         # The model routes committer structure to omegas; the manifest is the authoritative
         # source of which kernel this reading belongs to.
@@ -553,7 +559,116 @@ def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_lo
 
 
 # ---------------------------------------------------------------------------
-# Step D: Coherence eyeball (manual check — not a gate)
+# Step D: Kernel-linkage join (post-batch stamp)
+# ---------------------------------------------------------------------------
+
+def _extract_cs_fact(pl_text, functor, cid):
+    """Return the first positional arg of narrative_ontology:functor(cid, <ARG>)., or None."""
+    m = re.search(
+        rf"narrative_ontology:{re.escape(functor)}\({re.escape(cid)},\s*'?([^')]+)'?\)",
+        pl_text,
+    )
+    return m.group(1).strip() if m else None
+
+
+def stamp_kernel_linkage(gen_seeds, json_dir, testsets_dir):
+    """Post-batch: ensure every generated story has cs_story_uid; stamp cs_kernel_id
+    on contested readings.  Idempotent: already-correct files are skipped.
+
+    Policy:
+      is_contested_kernel == True  -> write cs_kernel_id (even if only reading so far)
+      is_contested_kernel == False -> write NO cs_kernel_id; ensure cs_story_uid only
+    """
+    seed_map = {
+        s["constraint_id"]: (s.get("kernel_id"), bool(s.get("kernel_id")))
+        for s in gen_seeds
+    }
+
+    n_stamped = n_standalone = n_skipped = n_uuid_minted = 0
+    producer_gaps = []
+    no_cs_structure = []  # has .pl + .json but json lacks cs_structure — cannot stamp via generate_pl
+
+    for cid, (kernel_id, is_contested) in seed_map.items():
+        pl_path = testsets_dir / f"{cid}.pl"
+        if not pl_path.exists():
+            producer_gaps.append(cid)
+            continue
+
+        pl_text = pl_path.read_text(encoding="utf-8")
+        existing_uid = _extract_cs_fact(pl_text, "cs_story_uid", cid)
+        existing_kid = _extract_cs_fact(pl_text, "cs_kernel_id", cid)
+
+        # Collision guard: manifest says one kernel, file says another
+        if is_contested and existing_kid and existing_kid != kernel_id:
+            sys.exit(
+                f"KERNEL_ID MISMATCH in {pl_path}:\n"
+                f"  file has:     {existing_kid}\n"
+                f"  manifest has: {kernel_id}\n"
+                f"This is a real collision — do not auto-overwrite. Resolve manually."
+            )
+
+        # Already complete?
+        uid_ok = existing_uid is not None
+        kernel_ok = (not is_contested) or (existing_kid is not None)
+        if uid_ok and kernel_ok:
+            n_skipped += 1
+            continue
+
+        # Load story JSON to regenerate
+        json_path = json_dir / f"{cid}.json"
+        if not json_path.exists():
+            producer_gaps.append(cid)
+            continue
+
+        story = json.loads(json_path.read_text(encoding="utf-8"))
+
+        # generate_pl gates the entire CS block on cs_structure being present.
+        # If the story JSON lacks cs_structure (model failed or pre-CS story),
+        # stamping via generate_pl is impossible — report and skip.
+        if not story.get("cs_structure"):
+            no_cs_structure.append(cid)
+            continue
+
+        # Mint story_uid into JSON if absent
+        if not story.get("header", {}).get("story_uid"):
+            minted = str(uuid.uuid4())
+            story.setdefault("header", {})["story_uid"] = minted
+            json_path.write_text(
+                json.dumps(story, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+            )
+            n_uuid_minted += 1
+
+        # Build generation copy with ephemeral _kernel_id
+        story_for_gen = dict(story)
+        story_for_gen.pop("_kernel_id", None)
+        if is_contested:
+            story_for_gen["_kernel_id"] = kernel_id
+
+        new_pl = generate_pl(story_for_gen)
+        pl_path.write_text(new_pl, encoding="utf-8")
+
+        if is_contested:
+            n_stamped += 1
+        else:
+            n_standalone += 1
+
+    print(f"\nKernel linkage stamp ({testsets_dir.name}):")
+    print(f"  {n_stamped:3d} stamped with kernel_id")
+    print(f"  {n_standalone:3d} standalone (contested=false, uid ensured)")
+    print(f"  {n_skipped:3d} already-correct (skipped)")
+    print(f"  {n_uuid_minted:3d} UUID minted")
+    if no_cs_structure:
+        print(f"\n  NO-CS-STRUCTURE ({len(no_cs_structure)}) — json lacks cs_structure; cannot stamp via generate_pl:")
+        for cid in no_cs_structure:
+            print(f"    {cid}")
+    if producer_gaps:
+        print(f"\n  PRODUCER GAPS — story in gen_seeds but no .pl or .json ({len(producer_gaps)}):")
+        for cid in producer_gaps:
+            print(f"    {cid}")
+
+
+# ---------------------------------------------------------------------------
+# Step E: Coherence eyeball (manual check — not a gate)
 # ---------------------------------------------------------------------------
 
 def coherence_eyeball(manifests, json_dir, manifests_dir):
@@ -854,6 +969,9 @@ def main():
     (manifests_dir / "kernel_grouping.json").write_text(
         json.dumps(grouping, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"Kernel grouping: {len(grouping)} kernels -> {manifests_dir / 'kernel_grouping.json'}")
+
+    print("\nStamping kernel linkage...")
+    stamp_kernel_linkage(gen_seeds, json_dir, testsets_dir)
 
     coherence_eyeball(manifests, json_dir, manifests_dir)
 

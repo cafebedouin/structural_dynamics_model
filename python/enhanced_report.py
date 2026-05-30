@@ -975,113 +975,6 @@ def build_level2_convergence(constraint_id, pipeline_data):
     return "\n".join(lines)
 
 
-# --- Level 3: CORPUS DISTRIBUTION + POSITIONING (from old Section A) ---
-
-def build_level3_distribution(constraint_id, pipeline_data, orbit_data, omega_data):
-    """L3: Corpus distributions, constraint positioning, and orbit family."""
-    lines = ["", "--- CORPUS DISTRIBUTION ---", ""]
-
-    if pipeline_data is None:
-        lines.append("  [enriched_pipeline.json not available]")
-        return "\n".join(lines)
-
-    diag = pipeline_data.get("diagnostic", {})
-    val = pipeline_data.get("validation", {})
-    per_constraint = pipeline_data.get("per_constraint", [])
-    entry = find_constraint_entry(pipeline_data, constraint_id)
-    in_batch = entry is not None
-
-    type_dist = diag.get("type_distribution", {})
-    purity_dist = diag.get("purity_summary", {})
-    coupling_dist = diag.get("coupling_summary", {})
-    sig_dist = val.get("signature_distribution", {}) if val else {}
-
-    type_order = ["mountain", "rope", "tangled_rope", "snare", "piton", "scaffold"]
-    type_parts = [f"{type_dist[t]} {t}" for t in type_order if t in type_dist]
-    for t, count in sorted(type_dist.items()):
-        if t not in type_order:
-            type_parts.append(f"{count} {t}")
-    lines.append(f"    Type:      {' | '.join(type_parts)}")
-
-    purity_order = ["pristine", "sound", "borderline", "contaminated", "degraded"]
-    purity_parts = [f"{purity_dist[p]} {p}" for p in purity_order if p in purity_dist]
-    lines.append(f"    Purity:    {' | '.join(purity_parts)}")
-
-    coupling_order = ["strongly_coupled", "weakly_coupled", "independent", "inconclusive"]
-    coupling_parts = []
-    for c in coupling_order:
-        if c in coupling_dist:
-            label = c.replace("_coupled", "")
-            coupling_parts.append(f"{coupling_dist[c]} {label}")
-    lines.append(f"    Coupling:  {' | '.join(coupling_parts)}")
-
-    if sig_dist:
-        sig_parts = [f"{count} {sig}" for sig, count in
-                     sorted(sig_dist.items(), key=lambda x: -x[1])]
-        if len(sig_parts) > 5:
-            sig_parts = sig_parts[:5] + ["..."]
-        lines.append(f"    Signature: {' | '.join(sig_parts)}")
-
-    # Confidence distribution across corpus
-    conf_bands = {}
-    conf_sum = 0.0
-    conf_n = 0
-    for pc in per_constraint:
-        b = pc.get("confidence_band")
-        if b:
-            conf_bands[b] = conf_bands.get(b, 0) + 1
-        c = pc.get("confidence")
-        if c is not None:
-            conf_sum += c
-            conf_n += 1
-    if conf_bands:
-        band_parts = [f"{conf_bands.get(b, 0)} {b}" for b in ["deep", "moderate", "borderline"] if b in conf_bands]
-        mean_str = f" (mean: {conf_sum / conf_n:.3f})" if conf_n else ""
-        lines.append(f"    Confidence: {' | '.join(band_parts)}{mean_str}")
-
-    # --- Positioning block (batch constraints only) ---
-    if in_batch:
-        lines.append("")
-        lines.append("  --- CONSTRAINT POSITIONING ---")
-        signature = entry.get("signature", "unknown")
-        if sig_dist and signature in sig_dist:
-            sig_count = sig_dist[signature]
-            corpus_size = diag.get("corpus_size", 1)
-            sig_pct = (sig_count / corpus_size) * 100
-            lines.append(f"    This constraint is a {signature} ({sig_pct:.1f}% of corpus shares this signature)")
-
-        purity_band = entry.get("purity_band", "unknown")
-        if purity_dist and purity_band in purity_dist:
-            band_count = purity_dist[purity_band]
-            corpus_size = diag.get("corpus_size", 1)
-            band_pct = (band_count / corpus_size) * 100
-            lines.append(f"    Purity band: {purity_band} ({band_pct:.1f}% of corpus in this band)")
-
-        conf_band = entry.get("confidence_band")
-        if conf_band and conf_bands:
-            cb_count = conf_bands.get(conf_band, 0)
-            cb_total = sum(conf_bands.values())
-            cb_pct = (cb_count / cb_total) * 100 if cb_total else 0
-            lines.append(f"    Confidence band: {conf_band} ({cb_pct:.1f}% of corpus in this band)")
-        boundary = entry.get("boundary")
-        if boundary:
-            boundary_count = sum(1 for pc in per_constraint if pc.get("boundary") == boundary)
-            lines.append(f"    Boundary zone: {boundary} ({boundary_count} constraints share this boundary)")
-
-    # Orbit Family ID (from orbit/omega data, positioned at L3)
-    key = constraint_id.lower()
-    family = None
-    if omega_data and "omegas" in omega_data:
-        for omega in omega_data["omegas"]:
-            if omega.get("associated_constraint", "").lower() == key:
-                family = omega.get("family")
-                break
-    if family:
-        lines.append(f"    Orbit Family ID:  {family}")
-
-    return "\n".join(lines)
-
-
 # --- Level 1: ORBIT CONTEXT (signature, span, gauge — no family) ---
 
 def build_level1_orbit(constraint_id, orbit_data):
@@ -1263,100 +1156,6 @@ def build_omega_section(constraint_id, omega_data):
     return "\n".join(lines)
 
 
-# --- Section E: STRUCTURAL CONTEXT ---
-
-def build_structural_section(constraint_id, corpus_data, pattern_text, covering_text):
-    """Section E: STRUCTURAL CONTEXT from corpus_data.json + markdown reports."""
-    lines = ["", "--- STRUCTURAL CONTEXT ---", ""]
-
-    key = constraint_id.lower()
-
-    # --- Corpus data: analysis sub-object ---
-    if corpus_data and "constraints" in corpus_data:
-        cdata = None
-        for cid, val in corpus_data["constraints"].items():
-            if cid.lower() == key:
-                cdata = val
-                break
-
-        if cdata and "analysis" in cdata:
-            a = cdata["analysis"]
-            vr = a.get("variance_ratio")
-            ic = a.get("index_configs")
-            tp = a.get("types_produced")
-
-            if vr is not None:
-                if vr == 1.0:
-                    interp = "stable"
-                elif vr > 0.5:
-                    interp = "high variance"
-                else:
-                    interp = "low variance"
-                lines.append(f"  Variance Ratio:      {vr} ({interp})")
-            if ic is not None:
-                lines.append(f"  Index Configs:       {ic}")
-            if tp is not None:
-                lines.append(f"  Types Produced:      {tp}")
-        elif cdata:
-            lines.append("  [No analysis sub-object in corpus_data for this constraint]")
-        else:
-            lines.append(
-                "  Not yet in corpus — run full pipeline to include.\n"
-                "  (Variance, twin group, and covering analysis require batch corpus data.)"
-            )
-    else:
-        lines.append("  [corpus_data.json not available]")
-
-    # --- Pattern mining: structural twins ---
-    lines.append("")
-    if pattern_text:
-        twin_found = False
-        twin_row_re = re.compile(
-            r'^\| ([^|]+)\| *(\d+) \| ([^|]+)\| ([^|]+)\| ([^|]+)\|',
-            re.MULTILINE
-        )
-        for m in twin_row_re.finditer(pattern_text):
-            examples = m.group(5).strip()
-            if key in examples.lower():
-                sig = m.group(1).strip()
-                count = m.group(2).strip()
-                types = m.group(3).strip()
-                twin_found = True
-                lines.append("  Structural Twin Group:")
-                lines.append(f"    Signature:   {sig}")
-                lines.append(f"    Group Size:  {count}")
-                lines.append(f"    Types:       {types}")
-                break
-        if not twin_found:
-            lines.append("  Structural Twins:     [not found in batch twin analysis]")
-    else:
-        lines.append("  [pattern_mining.md not available]")
-
-    # --- Covering analysis: transition detail ---
-    lines.append("")
-    if covering_text:
-        transitions = []
-        for line in covering_text.splitlines():
-            if line.startswith("| ") and key in line.lower():
-                parts = [p.strip() for p in line.split("|")[1:-1]]
-                if len(parts) >= 7 and parts[0].lower() == key:
-                    type1 = parts[3]
-                    type2 = parts[6]
-                    transitions.append(f"{type1} -> {type2}")
-
-        if transitions:
-            unique_transitions = sorted(set(transitions))
-            lines.append("  Covering Analysis:")
-            lines.append(f"    Missed Transitions: {len(transitions)}")
-            lines.append(f"    Unique Type Shifts:  {', '.join(unique_transitions)}")
-        else:
-            lines.append("  Covering Analysis:    [not found in batch covering analysis]")
-    else:
-        lines.append("  [covering_analysis.md not available]")
-
-    return "\n".join(lines)
-
-
 # --- Trigger Glosses ---
 
 _TRIGGER_GLOSSES = {
@@ -1411,72 +1210,6 @@ _TRIGGER_GLOSSES = {
 # --- Section E2: WASSERSTEIN TRANSPORT ---
 
 
-def build_wasserstein_section(constraint_id, pipeline_data):
-    """Section E2: WASSERSTEIN TRANSPORT — continuous perspectival fracture."""
-    lines = ["", "--- WASSERSTEIN TRANSPORT ---", ""]
-
-    if pipeline_data is None:
-        lines.append("  [enriched_pipeline.json not available]")
-        return "\n".join(lines)
-
-    entry = find_constraint_entry(pipeline_data, constraint_id)
-    if entry is None:
-        lines.append("  Not yet in batch — run full pipeline to include.")
-        return "\n".join(lines)
-
-    profile = entry.get("wasserstein_profile")
-    total = entry.get("wasserstein_total_fracture")
-    incomp = entry.get("wasserstein_incomparable_mass")
-
-    if profile is None:
-        lines.append("  [MaxEnt multi-context data not available]")
-        return "\n".join(lines)
-
-    h1 = entry.get("h1_band")
-    w12 = profile.get("u1_u2", 0)
-    w23 = profile.get("u2_u3", 0)
-    w34 = profile.get("u3_u4", 0)
-
-    # Incomparable mass warnings FIRST — reader must know W1 reliability
-    # before interpreting the numbers
-    if incomp:
-        for ctx, label in [("u1", "U1"), ("u2", "U2"), ("u3", "U3"), ("u4", "U4")]:
-            mass = incomp.get(ctx, 0)
-            if mass > 0.4:
-                lines.append(
-                    f"  \u26a0 High incomparable mass at {label}: "
-                    f"{mass:.4f} \u2014 W\u2081 estimate partial"
-                )
-
-    lines.append(
-        f"  Edge U1\u2192U2: {w12:.4f} | "
-        f"U2\u2192U3: {w23:.4f} | "
-        f"U3\u2192U4: {w34:.4f} | "
-        f"Total: {total:.4f}"
-    )
-
-    # Identify highest-transport edge
-    edges = {"U1\u2192U2": w12, "U2\u2192U3": w23, "U3\u2192U4": w34}
-    if total > 0.001:
-        max_edge = max(edges, key=edges.get)
-        lines.append(f"  Peak transport:  {max_edge} ({edges[max_edge]:.4f})")
-
-    # H1 vs W1 diagnostic
-    if h1 is not None:
-        if h1 >= 3 and total < 0.001:
-            lines.append(
-                f"  H\u00b9={h1} but W\u2081\u22480 \u2014 discrete type-switching "
-                "invisible to continuous distributions"
-            )
-        elif h1 == 0 and total > 0.1:
-            lines.append(
-                f"  H\u00b9=0 but W\u2081={total:.3f} \u2014 sub-threshold "
-                "distributional shift despite unanimous discrete classification"
-            )
-
-    return "\n".join(lines)
-
-
 # --- Section E3: CONTEXTUALITY & MONOTONICITY ---
 
 # Map position integers to edge labels
@@ -1489,50 +1222,6 @@ _MONO_GLOSS = {
     "non_monotone": "extraction reverses along power axis",
     "incomparable": "orbit includes non-chain types (piton/naturalized/scaffold)",
 }
-
-
-def build_cohomology_section(constraint_id, pipeline_data):
-    """Section E3: CONTEXTUALITY & MONOTONICITY \u2014 classification geometry."""
-    lines = ["", "--- CONTEXTUALITY & MONOTONICITY ---", ""]
-
-    if pipeline_data is None:
-        lines.append("  [enriched_pipeline.json not available]")
-        return "\n".join(lines)
-
-    entry = find_constraint_entry(pipeline_data, constraint_id)
-    if entry is None:
-        lines.append("  Not yet in batch \u2014 run full pipeline to include.")
-        return "\n".join(lines)
-
-    cf = entry.get("contextuality_fraction")
-    mono = entry.get("orbit_monotonicity")
-    bounds = entry.get("transition_boundaries", [])
-    h1 = entry.get("h1_band")
-
-    if cf is None and mono is None:
-        lines.append("  [cohomology data not available]")
-        return "\n".join(lines)
-
-    # Contextuality fraction
-    if cf is not None:
-        h1_str = f" (H\u00b9={h1}, {h1} of 6 context-pairs disagree)" if h1 is not None else ""
-        lines.append(f"  Contextuality:   {cf:.3f}{h1_str}")
-
-    # Orbit monotonicity
-    if mono is not None:
-        gloss = _MONO_GLOSS.get(mono, "")
-        lines.append(f"  Monotonicity:    {mono}" + (f" \u2014 {gloss}" if gloss else ""))
-
-    # Transition boundaries
-    if bounds:
-        parts = []
-        for b in bounds:
-            pos = b.get("position", "?")
-            edge = _BOUNDARY_EDGE.get(pos, f"pos{pos}")
-            parts.append(f"{edge} ({b.get('from', '?')}\u2192{b.get('to', '?')})")
-        lines.append(f"  Boundaries:      {', '.join(parts)}")
-
-    return "\n".join(lines)
 
 
 # --- Section: GAME-THEORETIC STRUCTURE ---
@@ -1550,67 +1239,6 @@ _COVER_GLOSS = {
     "type_relabeled": "FCR changes type label but structural disagreement persists",
     "fcr_no_structural_effect": "FCR active but orbit structure unchanged",
 }
-
-
-def build_game_theory_section(constraint_id, pipeline_data):
-    """GAME-THEORETIC STRUCTURE \u2014 Nash equilibrium, stability, and cover story analysis."""
-    lines = ["", "--- GAME-THEORETIC STRUCTURE ---", ""]
-
-    if pipeline_data is None:
-        lines.append("  [enriched_pipeline.json not available]")
-        return "\n".join(lines)
-
-    entry = find_constraint_entry(pipeline_data, constraint_id)
-    if entry is None:
-        lines.append("  Not yet in batch \u2014 run full pipeline to include.")
-        return "\n".join(lines)
-
-    nds = entry.get("nash_distance_structural")
-    ss = entry.get("strategic_stability")
-    meq = entry.get("mixed_equilibrium_quality")
-    cst = entry.get("cover_story_type")
-
-    if all(v is None for v in [nds, ss, meq, cst]):
-        lines.append("  [game-theory data not available \u2014 run game_theory_*.py scripts]")
-        return "\n".join(lines)
-
-    # Nash distance
-    if nds is not None:
-        stable = entry.get("nash_stable_structural")
-        stable_str = "stable" if stable else "resolvable"
-        lines.append(f"  Nash distance:   {nds} ({stable_str})")
-
-        # Flag maximally entrenched
-        h1 = entry.get("h1_band")
-        if nds == 3 and h1 is not None:
-            lines.append(f"    \u26a0 Maximally entrenched (H\u00b9={h1})")
-
-        vuln = entry.get("vulnerable_positions") or []
-        if vuln:
-            vuln_str = ", ".join(f"{v}" for v in vuln)
-            lines.append(f"  Vulnerable at:   {vuln_str}")
-
-    # Strategic stability
-    if ss is not None:
-        gloss = _STABILITY_GLOSS.get(ss, "")
-        hpm = entry.get("h1_persistence_max")
-        persist_str = f" (H\u00b9 persistence: {hpm:.3f})" if hpm is not None else ""
-        lines.append(f"  Stability:       {ss}{persist_str}" + (f" \u2014 {gloss}" if gloss else ""))
-
-    # Mixed equilibrium
-    if meq is not None:
-        md = entry.get("max_deviation")
-        md_str = f" (max deviation: {md:.4f})" if md is not None else ""
-        lines.append(f"  Equilibrium:     {meq}{md_str}")
-        if meq == "loose":
-            lines.append("    2-vs-2 split: loose mixed equilibrium exists")
-
-    # Cover story
-    if cst is not None:
-        gloss = _COVER_GLOSS.get(cst, "")
-        lines.append(f"  Cover story:     {cst}" + (f" \u2014 {gloss}" if gloss else ""))
-
-    return "\n".join(lines)
 
 
 # --- Section E4: PARAMETRIC PERSISTENCE ---
@@ -1743,6 +1371,182 @@ def _persistence_tag(frac):
         return "MODERATE"
     else:
         return "FRAGILE"
+
+
+# --- Section E5: PARAMETRIC STABILITY BAND ---
+
+# Governing params confirmed by empirical witness (coverage>0, fold_survival<1.0 in ≥1 kernel
+# context). Keyed by kernel_id. Only kernels with at least one confirmed governing param are
+# listed — all others render "not yet witnessed."
+# Witness record (2026-05-29):
+#   snare_epsilon_floor × end_of_life_decision_authority: boundary at +8.7%, 39 flips.
+#   tangled_rope_chi_floor: rejected (signature-locked across all tested kernels).
+_WITNESSED_PARAMS: dict[str, list[tuple[str, list[float]]]] = {
+    "end_of_life_decision_authority": [
+        # snare_epsilon_floor: upward only — lowering below rope_epsilon_ceiling=0.45 is a
+        # config violation (relationship: rope_epsilon_ceiling < snare_epsilon_floor).
+        # Boundary confirmed at +8.7% (0.46→0.50): 39 flips. No coverage at +4.3% (0.48).
+        ("snare_epsilon_floor", [0.46, 0.48, 0.50, 0.52]),
+    ],
+}
+
+
+def _get_kernel_id_for_constraint(constraint_id: str) -> str | None:
+    """Return kernel_id from cs_kernel_id fact in testset, or None."""
+    import re
+    pl = PROLOG_DIR / "testsets" / f"{constraint_id}.pl"
+    if not pl.exists():
+        return None
+    m = re.search(r"cs_kernel_id\(\s*\w+\s*,\s*(\w+)\s*\)", pl.read_text(encoding="utf-8"))
+    return m.group(1) if m else None
+
+
+def _run_stability_band(kernel_id: str) -> dict:
+    """Run perturb for witnessed governing params of kernel_id. Returns raw data dict."""
+    try:
+        from sweeps.perturb import perturb as _perturb
+    except ImportError:
+        return {"error": "sweeps.perturb not importable"}
+
+    params_config = _WITNESSED_PARAMS.get(kernel_id, [])
+    if not params_config:
+        return {"not_witnessed": True, "kernel_id": kernel_id}
+
+    param_results = []
+    baseline_hash = None
+
+    for param_name, sweep_values in params_config:
+        try:
+            result = _perturb(param_name, sweep_values, kernels=[kernel_id])
+        except Exception as exc:
+            param_results.append({"param": param_name, "error": str(exc)})
+            continue
+
+        baseline_hash = result.get("baseline_hash", "?")
+        original = result.get("original", 0)
+        kr_by_val = result.get("results", {})
+
+        up_entries = {}  # abs_pct → entry dict (upward displacements)
+        dn_entries = {}  # abs_pct → entry dict (downward displacements)
+
+        for val, kr in sorted(kr_by_val.items()):
+            if isinstance(kr, dict) and "error" not in kr:
+                k_data = kr.get(kernel_id, {})
+                if k_data and isinstance(k_data, dict):
+                    fold = k_data.get("fold_survival", 1.0)
+                    cov = k_data.get("coverage", 0.0)
+                    touched = k_data.get("touched", 0)
+                    flipped = k_data.get("flipped", 0)
+                    pct = round((val - original) / original * 100, 1) if original else 0.0
+                    entry = {
+                        "value": val,
+                        "pct": pct,
+                        "fold_survival": fold,
+                        "coverage": cov,
+                        "touched": touched,
+                        "flipped": flipped,
+                    }
+                    if pct > 0:
+                        up_entries[pct] = entry
+                    elif pct < 0:
+                        dn_entries[abs(pct)] = entry
+
+        # Find boundary (first displacement with coverage>0 AND fold_survival<1.0)
+        # and floor (largest displacement with coverage>0 AND fold_survival==1.0, before boundary)
+        def _parse_direction(entries):
+            boundary = None
+            floor_e = None
+            for abs_pct in sorted(entries):
+                e = entries[abs_pct]
+                if e["coverage"] > 0:
+                    if e["fold_survival"] < 1.0 and boundary is None:
+                        boundary = e
+                    elif e["fold_survival"] >= 1.0 and boundary is None:
+                        floor_e = e
+            return boundary, floor_e
+
+        up_boundary, up_floor = _parse_direction(up_entries)
+        dn_boundary, dn_floor = _parse_direction(dn_entries)
+
+        param_results.append({
+            "param": param_name,
+            "original": original,
+            "up_boundary": up_boundary,
+            "up_floor": up_floor,
+            "dn_boundary": dn_boundary,
+            "dn_floor": dn_floor,
+        })
+
+    return {
+        "kernel_id": kernel_id,
+        "baseline_hash": baseline_hash,
+        "params": param_results,
+    }
+
+
+def build_stability_band(constraint_id: str, stability_data: dict | None) -> str:
+    """Render the parametric stability band section (E5)."""
+    lines = ["", "--- PARAMETRIC STABILITY BAND ---", ""]
+
+    if stability_data is None:
+        lines.append("  [stability not computed]")
+        return "\n".join(lines)
+
+    if stability_data.get("no_kernel"):
+        lines.append("  stability not assessed — no kernel linkage (cs_kernel_id absent from testset)")
+        return "\n".join(lines)
+
+    if stability_data.get("not_witnessed"):
+        kid = stability_data.get("kernel_id", "?")
+        lines.append(f"  stability not assessed — kernel '{kid}' has no confirmed governing params yet")
+        lines.append("  (witness required: coverage>0 AND fold_survival<1.0 in ≥1 context)")
+        return "\n".join(lines)
+
+    if stability_data.get("error"):
+        lines.append(f"  [error: {stability_data['error']}]")
+        return "\n".join(lines)
+
+    kid = stability_data.get("kernel_id", "?")
+    bh = stability_data.get("baseline_hash") or "?"
+    lines.append(f"  Kernel: {kid}  (baseline: {bh[:12] if bh else '?'})")
+    lines.append("")
+
+    for pr in stability_data.get("params", []):
+        param = pr["param"]
+        if "error" in pr:
+            lines.append(f"  {param}: error — {pr['error']}")
+            continue
+
+        original = pr.get("original", "?")
+        lines.append(f"  {param} (baseline={original}):")
+
+        for arrow, boundary, floor_e in [
+            ("↑", pr.get("up_boundary"), pr.get("up_floor")),
+            ("↓", pr.get("dn_boundary"), pr.get("dn_floor")),
+        ]:
+            sign = "+" if arrow == "↑" else "-"
+            if boundary:
+                pct = abs(boundary["pct"])
+                flipped = boundary["flipped"]
+                touched = boundary["touched"]
+                lines.append(
+                    f"    {arrow} boundary at {sign}{pct}%"
+                    f" → {flipped} contexts flip (touched={touched})"
+                )
+                if floor_e:
+                    fp = abs(floor_e["pct"])
+                    lines.append(
+                        f"       stable ≥{sign}{fp}% (no flip at {floor_e['value']})"
+                    )
+            elif floor_e:
+                pct = abs(floor_e["pct"])
+                touched = floor_e.get("touched", 0)
+                suffix = f"  touched={touched}" if touched else ""
+                lines.append(
+                    f"    {arrow} stable ≥{sign}{pct}% (max tested, no boundary in range){suffix}"
+                )
+
+    return "\n".join(lines)
 
 
 # --- Section F: ABDUCTIVE FLAGS ---
@@ -2654,11 +2458,18 @@ def generate_report(constraint_id, data, iteration_round=None):
     # Level 2: Diagnostic Convergence
     l2_convergence = build_level2_convergence(constraint_id, data["pipeline"])
     l2_maxent = build_maxent_section(constraint_id, data["pipeline"])
-    # Indexed-mode MaxEnt now embedded in build_maxent_section (Gap analysis Change 5 — resolved)
-    l2_wasserstein = build_wasserstein_section(constraint_id, data["pipeline"])
-    l2_cohomology = build_cohomology_section(constraint_id, data["pipeline"])
-    l2_game_theory = build_game_theory_section(constraint_id, data["pipeline"])
     l2_persistence = build_persistence_section(constraint_id, data["persistence"])
+
+    # Stability band — compute before section assembly; result also goes into sidecar
+    _kernel_id = _get_kernel_id_for_constraint(constraint_id)
+    if _kernel_id is None:
+        stability_data = {"no_kernel": True}
+    elif _kernel_id in _WITNESSED_PARAMS:
+        stability_data = _run_stability_band(_kernel_id)
+    else:
+        stability_data = {"not_witnessed": True, "kernel_id": _kernel_id}
+    l2_stability = build_stability_band(constraint_id, stability_data)
+
     l2_abductive = build_abductive_section(constraint_id, data["pipeline"])
     l2_verdict = build_level2_verdict_body(constraint_id, data["pipeline"])
     l2_theorems = build_theorem_instantiation(
@@ -2670,14 +2481,6 @@ def generate_report(constraint_id, data, iteration_round=None):
     # Level 1: FPN contamination topology (Gap analysis Change 4 — resolved)
     l1_contamination = build_contamination_network(constraint_id, data["pipeline"])
     l1_husk = build_husk_signature(constraint_id, data["pipeline"])
-
-    # Level 3: Corpus Positioning
-    l3_distribution = build_level3_distribution(
-        constraint_id, data["pipeline"], data["orbit"], data["omega"]
-    )
-    l3_structural = build_structural_section(
-        constraint_id, data["corpus"], data["pattern"], data["covering"]
-    )
 
     # Post-synthesis (only if T12 flags exist)
     post = build_post_synthesis(constraint_id, data["pipeline"])
@@ -2699,13 +2502,13 @@ def generate_report(constraint_id, data, iteration_round=None):
 
     sections = [
         banner,
+        l2_cs_kernel,    # kernel cross-reading panel — first (Phase 2: kernel-terminal)
         xcon_synthesis,
         build_level_header(1, "SELF-CONSISTENCY"),
         l1_identity, l1_trajectory, l1_contamination, l1_husk, l1_orbit, l1_omega,
         build_level_header(2, "DIAGNOSTIC CONVERGENCE"),
-        l2_convergence, l2_maxent, l2_wasserstein, l2_cohomology, l2_game_theory, l2_persistence, l2_abductive, l2_axiom2, l2_verdict, l2_theorems, l2_cs_pattern, l2_cs_extended, l2_cs_kernel,
-        build_level_header(3, "CORPUS POSITIONING"),
-        l3_distribution, l3_structural,
+        l2_convergence, l2_maxent, l2_persistence, l2_stability, l2_abductive,
+        l2_axiom2, l2_verdict, l2_theorems, l2_cs_pattern, l2_cs_extended,
     ]
     if post.strip():
         sections.extend(["\n═══ POST-SYNTHESIS ═══", post])
@@ -2753,6 +2556,40 @@ def generate_report(constraint_id, data, iteration_round=None):
                         sidecar["evaluative_convergence"]["cover_story_role"] = "extractive_member"
     else:
         sidecar["evaluative_convergence"] = None
+
+    # Add stability band data to sidecar (additive field; validator ignores extra fields)
+    def _sidecar_stability(sd):
+        if sd is None:
+            return {"assessed": False, "kernel_id": None, "baseline_hash": None, "params": []}
+        if sd.get("no_kernel"):
+            return {"assessed": False, "kernel_id": None, "baseline_hash": None, "params": []}
+        if sd.get("not_witnessed") or sd.get("error"):
+            return {
+                "assessed": False,
+                "kernel_id": sd.get("kernel_id"),
+                "baseline_hash": None,
+                "params": [],
+            }
+        return {
+            "assessed": True,
+            "kernel_id": sd.get("kernel_id"),
+            "baseline_hash": sd.get("baseline_hash"),
+            "params": [
+                {
+                    "param": pr["param"],
+                    "original": pr.get("original"),
+                    "up_boundary_pct": pr.get("up_boundary", {}).get("pct") if pr.get("up_boundary") else None,
+                    "up_floor_pct": pr.get("up_floor", {}).get("pct") if pr.get("up_floor") else None,
+                    "dn_boundary_pct": pr.get("dn_boundary", {}).get("pct") if pr.get("dn_boundary") else None,
+                    "dn_floor_pct": pr.get("dn_floor", {}).get("pct") if pr.get("dn_floor") else None,
+                    "coverage": (pr.get("up_boundary") or pr.get("up_floor") or {}).get("coverage"),
+                    "flipped": (pr.get("up_boundary") or {}).get("flipped"),
+                }
+                for pr in sd.get("params", [])
+                if "error" not in pr
+            ],
+        }
+    sidecar["stability_band"] = _sidecar_stability(stability_data)
 
     # Validate (warn but don't block)
     try:
@@ -2811,11 +2648,8 @@ def main():
         "pipeline":    load_json(OUTPUTS_DIR / "enriched_pipeline.json", "enriched_pipeline.json"),
         "orbit":       load_json(OUTPUTS_DIR / "orbit_data.json", "orbit_data.json"),
         "omega":       load_json(OUTPUTS_DIR / "enriched_omega_data.json", "enriched_omega_data.json"),
-        "corpus":      load_json(OUTPUTS_DIR / "corpus_data.json", "corpus_data.json"),
         "persistence": load_json(SCRIPT_DIR / "persistence_results.json", "persistence_results.json"),
         "maxent":      load_text(OUTPUTS_DIR / "maxent_report.md", "maxent_report.md"),
-        "pattern":     load_text(OUTPUTS_DIR / "pattern_mining.md", "pattern_mining.md"),
-        "covering":    load_text(OUTPUTS_DIR / "covering_analysis.md", "covering_analysis.md"),
         "evaluative":  load_json(OUTPUTS_DIR / "evaluative_convergence.json",
                                  "evaluative_convergence.json"),
         "scenario":    load_json(OUTPUTS_DIR / "scenario_convergence.json",

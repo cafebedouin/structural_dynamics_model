@@ -4,10 +4,12 @@
 % contradiction + forecloses edge    = real closure
 
 :- multifile narrative_ontology:cs_axiom_contradiction/2.
+:- multifile narrative_ontology:cs_contradiction_of/2.
 
 % mourning_practice_reading↔survival_competence_reading: Mourning-practice reading holds that the ritual's survival function is purely structural (compartmentalization of grief as boundary-maintenance), while survival-competence reading holds that ritual's survival function is pedagogical (transmission of adaptive capacity). No single framework can hold both: either the ritual preserves identity by teaching how to mourn without being consumed (structural containment) OR by teaching how to transmit and adapt culture across diaspora (competence transfer). The mechanisms are mutually exclusive as primary functions.
 
 narrative_ontology:cs_axiom_contradiction(bounded_ritual_containment_enables_survival, survival_knowledge_foundational_identity).
 narrative_ontology:cs_axiom_contradiction(survival_knowledge_foundational_identity, bounded_ritual_containment_enables_survival).
 narrative_ontology:cs_story_uid(catastrophe_memory_transmission_contradictions, 'e367b448-0233-4cf9-b287-440ac67e0c2e').
+narrative_ontology:cs_contradiction_of(catastrophe_memory_transmission_contradictions, catastrophe_memory_transmission).
 narrative_ontology:cs_created_at('e367b448-0233-4cf9-b287-440ac67e0c2e', '').

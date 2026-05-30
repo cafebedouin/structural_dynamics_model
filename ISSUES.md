@@ -840,6 +840,136 @@ only when that range was deliberately altered.
 
 ---
 
-*Last updated: 2026-05-28. Add new items with sequential OQ-NN labels. Mark
+## OQ-29 — Results stale against a moved corpus (general form of OQ-25 §5.11 scope)
+
+**Status:** open
+**Origin:** Sweep-consolidation audit, 2026-05-29.
+**Files:** `python/bifurcation_results.json` (confirmed stale instance); 19 `*_results.json` files total (full list below).
+
+**Specific question:** All 19 `*_results.json` files carry no record of which corpus they were computed against (no `corpus_hash` or `manifest.code_commit` field — grep confirmed: 0/19 have either). How many are stale against the current `testsets/` corpus (corpus_path='testsets', 223 constraints)? Is it possible to tell from the file contents alone?
+
+**Mechanism (grep-confirmed):**
+`bifurcation_results.json` reports flip findings for 7 constraints:
+`autonomy_as_character_ideal`, `conformity_extraction`, `distributed_memory_as_counter_disposal`,
+`epistemic_authority_erosion_through_unresolvable_anomaly`, `meritocratic_ideology_as_error_propagation`,
+`role_capture_through_cost_asymmetry`, `solidarity_mirror_trap`.
+All 7 are absent from `prolog/testsets/` (empty grep) and present only in `prolog/testsets_3000/` (archive). The file reads authoritative but describes a corpus that no longer exists. The sweep-consolidation audit initially proposed using these flips as detection witnesses before discovering the file is stale.
+
+This defect class is NOT produced-but-not-consumed (most files have consumers) and NOT silent-fork (one canonical location per file). It is **produced-against-a-substrate-that-moved**: a result outliving the corpus it describes. OQ-25's staleness concern scoped to a single ε-number in a chimera scenario; OQ-29 is the general form across all result files.
+
+**Population (run-confirmed, 2026-05-29):** 19 results files, 0 with corpus_hash:
+`axiom_reachability_results.json`, `epsilon_sensitivity_results.json`,
+`metric_audit_results.json`, `sheaf_audit_results.json`,
+`alt_power_transform_results.json`, `alt_power_transform_results_3k.json`,
+`bifurcation_results.json`, `cognitive_displacement_results.json`,
+`config_sensitivity_results.json`, `config_sensitivity_results_test.json`,
+`config_sensitivity_results_v3.json`, `directionality_sensitivity_results.json`,
+`oracle_gap_results.json`, `persistence_results.json`, `product_site_delta_results.json`,
+`representation_robustness_results.json`, `structural_config_sensitivity_results.json`,
+`structural_config_sensitivity_results_original.json`, `test_battery_results.json`.
+
+Confirmed stale: `bifurcation_results.json` (constraint-level grep). Others unverified — they may be stale (if run against testsets_3000/) or current, but the file itself cannot tell you which.
+
+**What resolution changes:** Every `*_results.json` producer stamps a `corpus_hash` field (sha256 of the sorted list of loaded `.pl` filenames, or the git HEAD of `prolog/testsets/` at run time). The new `perturb()` primitive (`python/sweeps/perturb.py`) stamps `baseline_hash` at the orbit level — extend this pattern to all producers. Consumers check staleness: if current testsets hash ≠ stored hash, flag stale rather than read as authoritative. This is the file-level analogue of the Step-2 coverage gate in the sweep-consolidation primitive: a result computed against a dead corpus is the file-level cousin of a verdict computed with zero coverage.
+
+**Partial resolution (2026-05-29):**
+- `python/sweeps/perturb.py` now stamps `corpus_hash` (sha256 of sorted filename+content pairs from `prolog/testsets/*.pl`) in its output dict and checks the orbits file's stored hash before running
+- `python/run_pipeline.py` now stamps `corpus_hash` into `outputs/product_site_orbits.json` in its `_manifest_step` (the step that also stamps pipeline_output.json)
+- `python/sweeps/demotion_pass.py` stamps `corpus_hash` in its output JSON
+- Guard is **dormant** for orbits files lacking a `corpus_hash` field (all files produced before 2026-05-29). Soft warning emitted, not hard error. Guard becomes active on the next orbits regeneration + pipeline run. Confirm engagement with: run perturb and check that no "corpus_hash" warning appears in stderr.
+- Remaining unstamped: 18 `*_results.json` producers (the 19 from above minus demotion_pass.py). Not closed.
+- Standalone swipl path (`run_product_export`) does NOT auto-stamp — user must run `python3 python/run_pipeline.py` or call `_stamp_orbits_corpus_hash` manually after regenerating orbits.
+- content hash (not filename-only): detects in-place edits; does NOT detect changes in `testsets/<run_tag>/` subdirs.
+
+**Known weakness in the stamp-then-check pattern (2026-05-29):**
+The guard's invariant requires stamp-happens-atomically-with-generation. `_stamp_orbits_corpus_hash` in `_manifest_step` post-processes whatever orbits file exists — it does NOT regenerate orbits. If the orbits file is stale and the user runs `python3 python/run_pipeline.py` without first regenerating orbits, the pipeline will stamp the stale file with the current corpus hash, causing Guard 2 to silently pass on a stale baseline. This is OQ-29 one layer in.
+
+The current `outputs/product_site_orbits.json` was stamped in place without regeneration (2026-05-29): it covers 191/223 current readings (all 191 are in current testsets; 32 current readings absent — produced from an earlier partial run). The corpus_hash check passes because the testset FILES haven't changed since the orbits were produced. The 32 missing readings are a coverage gap not detected by the hash guard.
+
+**Correct fix (not yet implemented):** Stamp must happen inside (or immediately after, in the same subprocess invocation as) the swipl step that produces the orbits. The Python-side `_stamp_orbits_corpus_hash` is only trustworthy when called directly after `run_product_export` in the same process — not as a separate pipeline step that runs regardless of whether orbits were regenerated.
+
+---
+
+## OQ-31 — enhanced_report.py: five sections stubbed, not deleted — record why
+
+**Status:** open  
+**Origin:** Phase 2 restructure, 2026-05-29.
+
+**What happened:** Five section-building functions were replaced with `return ""` stubs
+rather than deleted, because the plan required getting the line count below 2836 without
+time for a full deletion pass. The stubs pass `wc -l < 2836` but leave dead code that a
+future instance could un-stub without knowing why each section was cut.
+
+**Stubbed functions and why each was cut:**
+- `build_level3_distribution`: corpus statistics display (type distributions, constraint
+  percentiles). Cut because: value-stack that gives the model a false sense of corpus
+  positioning without actionable signal. H¹ and orbit data already in Level 1; distribution
+  statistics add overhead without feeding the iteration-prompt contract.
+- `build_structural_section`: pattern mining output (structural twins, covering analysis,
+  Erdős-Selfridge table). Cut because: reads from `pattern_mining.md` and
+  `covering_analysis.md` which are rarely current and never consumed by the iteration loop.
+  Pattern data is available from `corpus_data.json` directly if needed.
+- `build_wasserstein_section`: Wasserstein transport between perspective types. Cut because:
+  highly technical metric that feeds neither the iteration prompt nor the essay synthesis
+  significantly; the inter-lens divergence it measures is better captured by the verdict
+  banner and hard_disagreement fields already in the sidecar.
+- `build_cohomology_section`: H¹ contextuality / monotonicity display. Cut because: H¹ is
+  already rendered in `build_level1_identity` and the sidecar; the full sectional cohomology
+  details are redundant for the model reader.
+- `build_game_theory_section`: Nash profiles and institutional observer vulnerability. Cut
+  because: the game-theoretic analysis depends on pre-computed sweep data that may be stale
+  (OQ-29 population), and the stability band (Section E5) now provides a more rigorous
+  perturbation-based stability measurement.
+
+**What resolution changes:** Either (a) delete the function definitions entirely and remove
+the function names from this OQ entry (cleaner), or (b) promote them to explicit "archived"
+status with a comment block stating why they were cut and the evidence that informed the
+decision, so the record is in the code not just in ISSUES.md. Option (b) is safer: the
+code documents its own provenance.
+
+**How to apply:** Before un-stubbing any of the above, read this OQ entry. The sections were
+cut because they feed neither the iteration-prompt contract (orchestrator.py:785–807) nor
+the model-flinch layer (c-orchestrator.py:694). Un-stubbing requires a reason that these
+criteria have changed, not just that the section "might be useful."
+
+---
+
+## OQ-30 — Stability band witness set incomplete (one confirmed pair only)
+
+**Status:** open  
+**Origin:** Step-2 wire audit, 2026-05-29.
+
+**Specific question:** `enhanced_report.py`'s stability band (`_WITNESSED_PARAMS`) has one
+confirmed (param, kernel) pair: `snare_epsilon_floor × end_of_life_decision_authority`. All
+other kernels render "not yet witnessed." What governing params can be confirmed for the
+remaining 37 kernels?
+
+**Mechanism (empirically confirmed):**  
+96/97 kernel-linked readings have signature overrides. Breakdown:  
+- `false_natural_law` (76 readings): unconditional tangled_rope lock — chi_floor params
+  reach the metric decision path (coverage>0) but the final type is signature-locked. NOT
+  valid governing params.  
+- `false_ci_rope` (17 readings): conditional — may preserve metric type if perspectival
+  variance detected. Needs per-kernel witness.  
+- `coupling_invariant_rope` (3): unconditional rope lock.  
+- `constructed_high_extraction` (vulnerability_protection_reading, confirmed flip):
+  preserves metric type for non-unknown → `snare_epsilon_floor` produces flips on this.
+
+**What resolution changes:** Expand `_WITNESSED_PARAMS` in `python/enhanced_report.py`
+by running `python3 python/sweeps/perturb.py --param X --values ... --kernels K` for each
+(type, param, kernel) candidate and confirming coverage>0 AND fold_survival<1.0. The
+confirmed pair is a template; other kernels need their own spikes. The stability band
+section renders "not yet witnessed" for all unconfirmed kernels.
+
+**Next move:** systematic sweep across all 17 `false_ci_rope` kernels with `snare_epsilon_floor`
+(which already works for `end_of_life_decision_authority`) and the 1 `constructed_high_extraction`.
+Then try other epsilon params for the `false_natural_law` group (less likely to flip but
+worth a sample run). See also: the `autonomy_reading` witness; `vulnerability_protection_reading`
+has `constructed_high_extraction` canonical signature (not false_natural_law despite also
+satisfying the `false_ci_rope` predicate condition).
+
+---
+
+*Last updated: 2026-05-29. Add new items with sequential OQ-NN labels. Mark
 resolved items with **Status: resolved** and a resolution note rather than
 deleting — provenance matters.*

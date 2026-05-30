@@ -56,6 +56,9 @@ non-obvious wiring, operator-precedence bugs, fact-adapter patterns, and query g
 discovered during implementation sessions. Scope is narrow: things that caused real bugs
 or confusion, not general architecture. Read the relevant file before modifying
 `config_validation.pl`, `cs_kernel_registry.pl`, or the CS fact schema.
+`build_discipline.md` documents two recurring cross-subsystem defect patterns
+(produced-but-not-consumed; silent fork) with diagnostics — consult before adding a step
+that writes output or copying a file to test it.
 
 ## Typical Workflow
 
@@ -101,6 +104,11 @@ Haiku batch API with prompt caching). This is how the corpus grew from ~1,000 to
   collisions, archived stale duplicates, and reduced testsets/ to a single coherent run
   (kernel_run_03: 109 CS readings + ~114 observer-axis constraints). §5.11 trifurcation
   figures are verified single-run coherent. The 3,337 figure predates the rebuild.
+- **Run-tagged subdirs (`prolog/testsets/<run_tag>/`) are isolated** — `corpus_loader.pl`
+  uses a non-recursive glob (`testsets/*.pl`), so subdir stories are NOT loaded by default.
+  This is **load-time** safety, not generation-time dedup. If `corpus_path` is ever changed
+  to include a run-tagged subdir, or runs are flattened together, duplicate loading becomes
+  live. The shield is the glob; removing it reopens the question.
 - Last audit (2026-02-28): passing tests / param sweep — live items migrated to ISSUES.md (OQ-11 – OQ-13); historical record in AUDIT.md
 - Config params: see `prolog/config.pl` for current count (`grep -c "^param(" prolog/config.pl`)
 - All numeric params inert at ±25%; all 17 directionality constants inert at ±25%
@@ -135,9 +143,49 @@ Haiku batch API with prompt caching). This is how the corpus grew from ~1,000 to
   rationale). §5.11 divergence count confirmed unchanged (79 pairs / 34 kernels).
   See `docs/cs_load_discipline.md` (regeneration protocol) and
   `docs/technical/config_validation_wiring.md` (implementation notes).
-- **2026-05-28: docs/technical/ created** — implementation wiring notes for things
-  that caused real bugs in sessions. Current: `config_validation_wiring.md`.
-  Pointer added to CLAUDE.md and MEMORY.md.
+- **2026-05-29: kernel-linkage join wired** — `agent/generate_kernel_corpus.py` is now
+  canonical (6 evidence signals; `commitment_corpus/generate_kernel_corpus.py` and
+  `commitment_corpus/uke_scope_v2_json.md` deleted). Fix applied: `story_uid` now minted
+  before `_kernel_id` injection in `process_batch_results` (ordering gate); `stamp_kernel_linkage`
+  post-batch function added. Migration script `python/migrate_kernel_linkage.py` wrote
+  `cs_contradiction_of` facts into 32 `*_contradictions.pl` files (idempotent, all SKIP on
+  second run). 22 orphaned readings listed in bucket B (hand-confirm worklist); 72
+  candidate standalones in bucket C (eyeball only). Validation suite: clean after all edits.
+  `cross_reading_diff.py` on `end_of_life_decision_authority`: 3 readings, no warnings.
+- **2026-05-29: build-discipline patterns documented** — two recurring defects named in
+  `docs/technical/build_discipline.md`: produced-but-not-consumed and silent-fork.
+  See build_discipline.md for diagnostics and the corpus-you-want naming rule.
+- **2026-05-29: perturb() primitive implemented** — `python/sweeps/perturb.py` is the
+  type-stability sweep primitive: `perturb(param, values) → re-export → fold-survival per
+  kernel`. Uses Dialect A1 overlay (retract/asserta on config:param/2) + product_site_export
+  re-export. Output schema: {fold_survival, stable, flipped, touched, coverage, per_reading}
+  per kernel per param value. coverage=0 means "blind, not stable" (param didn't reach
+  kernel's decision path at this value). Verified: determinism (byte-identical double-export
+  diff=0), identity (snare_epsilon_floor=0.46: 0 kernels affected), detection (0.50:
+  end_of_life_decision_authority fold_survival=0.917, coverage=0.167, 39 flips in
+  vulnerability_protection_reading institutional contexts tangled_rope→naturalized).
+  product_site_export must be explicitly loaded in overlay ([stack] alone does not load it).
+  OQ-29 opened: 19/19 results files have no corpus_hash; bifurcation_results.json confirmed
+  stale (7 flipping constraints are testsets_3000/ archive only, absent from live testsets/).
+  dval_sweep does not exist in repo (grep exit 1). cross_reading_diff.diff() is the design
+  model for the diff shape; the primitive has its own re-export loop. 5 type-stability sweeps
+  collapse to perturb(); 9 resistant sweeps stay separate by design (see ISSUES.md OQ-29,
+  plan file audit-only-do-not-functional-kay.md §6.1).
+- **2026-05-29: stability band wired into enhanced_report.py (Phase 1 + Phase 2)** —
+  `python/enhanced_report.py` now runs perturb() at generation time for kernel-linked
+  constraints with confirmed governing params, renders a stability band section (E5), and
+  writes `stability_band` to the JSON sidecar. Confirmed governing param: `snare_epsilon_floor`
+  × `end_of_life_decision_authority` kernel (boundary at +8.7%, 39 flips; floor at +4.3%,
+  no coverage). All other kernels render "not yet witnessed." Unlinked constraints render "no
+  kernel linkage." Architectural finding: 76/97 kernel-linked readings have `false_natural_law`
+  signature (unconditional tangled_rope) — chi_floor params reach the metric decision path
+  (coverage>0) but the final type is signature-locked; they are NOT valid governing params.
+  17/97 have `false_ci_rope` (conditional); 3/97 `coupling_invariant_rope`; 1/97
+  `constructed_low_extraction`. `tangled_rope_chi_floor` is blind or signature-locked on all
+  tested kernels. Phase 2 restructure: kernel cross-reading panel moved to top (immediately
+  after verdict banner); Wasserstein, cohomology, game-theory, Level-3 distribution and
+  structural sections stubbed out. File: 2698 lines (was 2836). Sidecar validator unchanged
+  (extra fields pass silently).
 
 ## Pipeline Output Manifest Convention
 
@@ -156,6 +204,56 @@ timestamp citable. See `when_apparatus_sharpens_taxonomy.md` §4.1 for context.
 - Dual threshold: both χ AND ε must be checked
 - .tsx artifacts are outputs, not infrastructure
 - Archive testsets document build provenance, not active code
+
+## Build Discipline (recurring failure modes — check before declaring work done)
+
+This repo was built fast and solo, and two defects recur across unrelated subsystems
+because the producing step is the interesting part and the reconciling step is the boring
+one that gets deferred. They are invisible at the moment they're introduced because the
+producer *looks* complete. Name them; do not reproduce them.
+
+**1. Produced-but-not-consumed (the dangling wire).** Information is correctly generated,
+written to disk, and then nothing reads it back into the thing that needs it. Instances
+already in this repo: sensitivity sweeps write `*_sensitivity_results.json` that no
+consumer reads; SCOPE writes `kernel_grouping.json` but the grouping is (was) not stamped
+into the `.pl` files, leaving stories with `cs_story_uid` and no `cs_kernel_id`; the
+manifest convention exists so audits *can* cite provenance but nothing enforces that they
+do. **Rule: a producer is not done until something consumes its output.** When you add a
+step that writes data, either wire the consumer in the same change or add a check that
+fails loudly when the output is unconsumed. A meter with no dial is not a meter.
+
+**2. One-canonical-thing-became-two (the silent fork).** A file or record gets copied to
+a scratch/test location, edited, and now two versions exist with no queryable fact saying
+which is canonical — the knowledge lives only in someone's memory. Instances: the
+duplicated `generate_kernel_corpus.py` (`commitment_corpus/` test copy vs `agent/`);
+historically, multiple tracking surfaces (ISSUES / AGENDA / PRIORITIES / TODO) where the
+update protocol named only some. **Rule: one canonical location per thing, and which one
+is canonical must be a checked fact (a path in docs, a CI check), not a memory.** Before
+duplicating a file to test it, prefer a branch or a clearly-marked-temporary copy with a
+deletion plan. When you find a fork, resolve by evidence (which path do run-commands
+invoke, which imports resolve, git recency) — not by preference — and record the verdict
+in `Known State` so the next agent does not re-fork it.
+
+3. Destructive-replace without proof (the faith merge). Before
+deleting, retiring, or overwriting any script, sweep, data file,
+or generator that a downstream step or another version relies on:
+run old and new, paste both outputs, diff them, show identity or
+justify every difference in the same change. The old version is
+not removed until the new is shown faithful. "Structurally
+equivalent" is a code-read, not proof — the diff is
+proof. Consolidating N into one is N separate old-vs-new diffs,
+each before its standalone is retired. Instance already in this
+repo's near future: collapsing the 5 type-stability sweeps onto
+perturb.py — each sweep gets an old-vs-primitive diff before its
+bespoke version is deleted, or the consolidation is faith, not
+fact.
+
+The first two reduce to the same root: **the corpus/codebase you are building for is not the one
+on disk now.** Build naming schemes, linkage rules, and reports to be correct for the
+corpus you intend (thousands of stories, regeneration under schema change, found-article
+ingestion), not the sample that happens to exist. A scheme that *cannot* collide by
+construction beats one that *happens not to* collide today. See
+`docs/technical/build_discipline.md`.
 
 ## Critical Distinctions
 
@@ -261,6 +359,20 @@ only stay useful if they reflect the current state of the code and open question
 **Before any `git push`:** verify the four files above are current with respect to the
 changes being pushed. A push that makes the docs stale is documentation debt that
 compounds across sessions.
+
+Done includes the next step, landed in substrate — not stated in
+chat. A task is not complete until a fresh instance, reading only
+the repo (not this conversation), could pick up the next forward
+move. If the session surfaced a next step, a sequencing
+constraint, or a fact that currently lives only in the
+conversation, write it where the cold read will find it: the
+relevant OQ in ISSUES.md, the ordering note in
+PRIORITIES.md/AGENDA.md, or a comment at the code it concerns. A
+next step spoken in chat and not written to substrate is a handoff
+that did not happen — the produced-but-not-consumed defect at the
+seam between sessions. State the next step and its sequencing
+constraint (why this one, what it's gated behind), because the
+bare next-step is the one a cold reader most easily gets wrong.
 
 ## Audit Methodology
 
