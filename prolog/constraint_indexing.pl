@@ -64,6 +64,8 @@
 % Cognitive displacement: per-position δ fact table (v6.1)
 % Dynamic so sweeps can retract/assert without touching config params.
 :- dynamic positional_displacement/2.
+:- dynamic power_role_heuristic/4.
+:- dynamic exit_modulation/2.
 positional_displacement(powerless,     0.0).
 positional_displacement(moderate,      0.0).
 positional_displacement(powerful,      0.0).

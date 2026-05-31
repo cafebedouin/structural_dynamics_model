@@ -945,13 +945,17 @@ criteria have changed, not just that the section "might be useful."
 
 ## OQ-30 — Stability band witness set incomplete (one confirmed pair only)
 
-**Status:** open  
+**Status:** mitigated (2026-05-30) — 24 params witnessed across 18 kernels; 20 kernels still
+unwitnessed on Surface 1. All 141 backlog params characterized at ±10%. Signature audit
+complete (2026-05-30): 19 kernels reachable-but-locked, 0 unreached-and-locked,
+1 reading unlocked-reached-but-held.
+
 **Origin:** Step-2 wire audit, 2026-05-29.
 
-**Specific question:** `enhanced_report.py`'s stability band (`_WITNESSED_PARAMS`) has one
-confirmed (param, kernel) pair: `snare_epsilon_floor × end_of_life_decision_authority`. All
-other kernels render "not yet witnessed." What governing params can be confirmed for the
-remaining 37 kernels?
+**Specific question:** `enhanced_report.py`'s stability band (`_WITNESSED_PARAMS`) had one
+confirmed (param, kernel) pair: `snare_epsilon_floor × end_of_life_decision_authority`. The
+±10% batch (2026-05-29, `outputs/witness_backlog_results.json`) expanded this to 24 params
+witnessed across 18 kernels. 22 kernels still render "not yet witnessed."
 
 **Mechanism (empirically confirmed):**  
 96/97 kernel-linked readings have signature overrides. Breakdown:  
@@ -964,45 +968,259 @@ remaining 37 kernels?
 - `constructed_high_extraction` (vulnerability_protection_reading, confirmed flip):
   preserves metric type for non-unknown → `snare_epsilon_floor` produces flips on this.
 
-**What resolution changes:** Expand `_WITNESSED_PARAMS` in `python/enhanced_report.py`
-by running `python3 python/sweeps/perturb.py --param X --values ... --kernels K` for each
-(type, param, kernel) candidate and confirming coverage>0 AND fold_survival<1.0. The
-confirmed pair is a template; other kernels need their own spikes. The stability band
-section renders "not yet witnessed" for all unconfirmed kernels.
+**Broad-spectrum finding (±10% batch):** `sigmoid_midpoint`, `sigmoid_steepness`,
+`sigmoid_upper`, `sigmoid_lower`, and `snare_chi_floor` are broad-spectrum governing params
+affecting nearly every `false_ci_rope` kernel.
 
-**Next move:** systematic sweep across all 17 `false_ci_rope` kernels with `snare_epsilon_floor`
-(which already works for `end_of_life_decision_authority`) and the 1 `constructed_high_extraction`.
-Then try other epsilon params for the `false_natural_law` group (less likely to flip but
-worth a sample run). See also: the `autonomy_reading` witness; `vulnerability_protection_reading`
-has `constructed_high_extraction` canonical signature (not false_natural_law despite also
-satisfying the `false_ci_rope` predicate condition).
+**Epsilon param characterization (2026-05-30):** All 4 epsilon params were present in
+`outputs/witness_backlog_results.json` — swept at the end of the prior batch (priority bug
+meant they ran last, not that they were skipped). `--resume` confirmed all 141 backlog
+params already done (0 new sweeps). Corrected tiering:
+
+- `rope_epsilon_ceiling` (original=0.45) — **split tier:**
+  - +10% (0.495): unperturbable-by-construction. `config_schema.pl:482–487`
+    `classification_rope_snare` invariant: `rope_epsilon_ceiling >= snare_epsilon_floor`
+    fires → `export_failed`. This direction is permanently blocked.
+  - −10% (0.405): reachable-stable. 23/38 kernels reached (top: `kami_buddha_ontology`
+    cov=0.625, `press_reformation_causality` cov=0.500), fold_survival=1.0 on all, 0 flips.
+
+- `tangled_rope_epsilon_floor` (original=0.3) — **perturbable-but-unperturbed (earned).**
+  25–26 kernels reached across the full ±10% band (all three values tested), fold_survival=1.0
+  on all reached kernels. Top: `equal_protection_clause` cov=0.375 at −10%. Genuine stability
+  finding — the threshold was exercised and held, not untouched.
+
+- `fpn_epsilon` (original=0.001) — **unreached-at-tested-range.** Coverage=0 at all three
+  values (0.0009, 0.001, 0.0011). The ±10% band around 0.001 never contacts any kernel's
+  metric decision path. Flip potential unknown; wider range required.
+
+- `piton_epsilon_floor` (original=0.1) — **unreached-at-tested-range (near-blind).** 2/38
+  kernels at +10% only (`latin_correctness` cov=0.083, `personhood_boundary` cov=0.050),
+  fold_survival=1.0, 0 flips. Blind at baseline and −10%.
+
+**Bucket counts (2026-05-30, 191 total unchanged):**
+```
+shadowed:                       6
+errored-untested:               0
+unperturbable:                 20
+reachable-locked:               0
+witnessed (survivors):         24
+backlog:                      141
+  of which:
+    unreached-at-tested-range:  2  (fpn_epsilon, piton_epsilon_floor — coverage=0 or
+                                    near-0; ±10% non-informative; flip potential unknown)
+    remainder:                139  (includes rope_epsilon_ceiling one-sided split and
+                                    tangled_rope_epsilon_floor full-band stable)
+─────────────────────────────────
+total:                        191
+```
+`unreached-at-tested-range` is distinct from `errored-untested` (that bucket means
+integer-typed params that rejected under the float sweep). These two params did not error;
+they produced structurally valid zero-coverage results at ±10%. They need a wider range, not
+a corrected type.
+
+**Signature audit (2026-05-30) — 51 triples, UNBOUND query, Pattern 3 verified:**
+
+UNBOUND query form used (Sig not pre-bound):
+```prolog
+findall(K-C-Sig, (member(K, UnwitnessedKernels), cs_kernel_id(C, K),
+                  constraint_signature(C, Sig)), Triples)
+```
+Pattern 3 self-check: `behavioral_competence_reading → false_summit_mountain` (not natural_law).
+One verbatim result: `federation_membership_kernel-integration_reading-false_natural_law`.
+
+Signature distribution (51 readings across 20 kernels):
+- `false_natural_law`: 48 readings (17 kernels all-FNL; 2 kernels mixed FNL + coupling_invariant_rope)
+- `coupling_invariant_rope`: 2 readings (personhood_boundary/birth_reading, unconditional_income_support/freedom_floor_reading)
+- `constructed_low_extraction`: 1 reading (qwerty_persistence_mechanism/naturalization_reading)
+- `false_ci_rope`: **0 readings**
+- `false_summit_mountain`: **0 readings**
+
+Per-kernel MaxCoverage (witness_backlog_results.json, float ±10% batch):
+kami_buddha_ontology=0.625, federation_membership_kernel=0.500,
+press_reformation_causality=0.500, speech_protection_boundary=0.417,
+unconditional_income_support=0.375, climate_response_imperative=0.333,
+living_language_status=0.333, acceptable_risk_for_energy=0.250,
+border_normative_status=0.250, monetary_anchor_principle=0.250,
+personhood_boundary=0.250, plural_marriage_mandate=0.250,
+preparedness_retention=0.250, qwerty_persistence_mechanism=0.250,
+state_execution_authority=0.250, state_killing_authority=0.250,
+substance_control_authority=0.250, territorial_sovereignty_legitimacy=0.250,
+us_constitution_text=0.250, catastrophe_memory_transmission=0.167.
+All 20 have MaxCoverage > 0, AnyFlip = NO. Zero UNREACHED kernels.
+
+**Confirmed false_natural_law lock mechanism** (`signature_detection.pl:829–847`):
+```prolog
+false_natural_law(C, fnl_evidence(...)) :-
+    claimed_natural(C, Claim),           % structural + partial metric-dependence
+    boltzmann_compliant(C, BoltzmannResult),
+    BoltzmannResult = non_compliant(_, _),   % ← Surface-2-perturbable gate
+    ...
+```
+`claimed_natural/2` has three sources: explicit mountain claim (structural), indexed mountain
+classification (metric-dependent), natural_law_signature profile match (metric-dependent).
+`boltzmann_compliant(C, non_compliant(_,_))` is the Boltzmann non-compliance gate — the same
+lever the Surface-2 proof-of-life moved (boltzmann_floor overlay shifted excess_extraction
+by −0.52 for civic_eugenic_reading). Surface-2 perturbation of this guard is untested for
+the 19 locked kernels. NOT ruled out.
+
+**Three-tier classification (corrected from initial draft):**
+- **REACHABLE-BUT-LOCKED (Surface-1): 19 kernels.** Params reach metric path (coverage>0)
+  but signature override eats the change. Lock is displaceable on Surface 2 via
+  boltzmann_floor overlay — untested, open. This is NOT "unwitnessable"; it is
+  "unwitnessable on Surface 1."
+- **UNREACHED-AND-LOCKED: 0 kernels.** All 20 kernels were reached at ±10%.
+- **UNLOCKED-REACHED-BUT-HELD: 1 reading** (qwerty/naturalization_reading,
+  constructed_low_extraction, coverage>0, AnyFlip=NO). Wider-range rope_chi_ceiling
+  sweep is the targeted next step, but lock_in_reading (false_natural_law) will still
+  contribute tangled_rope to kernel fold_survival even if naturalization_reading flips.
+
+**Critical-path implication:** Surface 2 (Boltzmann-floor overlay) is now the only
+instrument that can witness 19 of 20 remaining kernels. Before this audit, Surface 2 was
+a novelty front. After it, it is the critical path for the largest stuck pile. The Surface-1
+kernel instrument has hit its empirical ceiling — not from insufficient coverage, but because
+all 19 locked kernels were reached and watched the override eat every metric change.
+
+**What resolution changes:** Witnessing the 19 requires a Surface-2 sweep primitive
+(boltzmann_floor overlay per-constraint, observable = constraint_signature/2 or
+integrate_signature_with_modal output). If the boltzmann_floor overlay can shift a kernel
+from `non_compliant` to `compliant`, false_natural_law fails, and the reading falls through
+to the next clause. Whether that next clause produces a flip depends on the reading's other
+structural facts (claimed_natural third source, false_ci_rope eligibility, etc.).
+
+**Next move:** Build a Surface-2 sweep primitive (boltzmann_floor overlay per-kernel,
+observable = `constraint_signature(C, Sig)` or `integrate_signature_with_modal/3` output).
+Target the 19 REACHABLE-BUT-LOCKED kernels. Size the defaults-inventory pass (Surface 3)
+first: if front-sized (temporal surface on fabricated inputs), Surface 3 is compromised and
+Surface 2 is the clean next build; if afternoon-sized, Surface 2 is unambiguously next.
+qwerty/naturalization_reading wider-range rope_chi_ceiling sweep is an independent, lower-priority action.
+
+**Query trap (2026-05-30):** Always use the unbound form:
+```prolog
+findall(K-C-Sig, (member(K, Kernels), cs_kernel_id(C, K),
+                  constraint_signature(C, Sig)), Pairs)
+```
+The bound form `findall(C, constraint_signature(C, false_natural_law), Cs)` bypasses lock cuts
+and over-counts — live demo: `behavioral_competence_reading` appears bound but resolves to
+`false_summit_mountain` under the unbound query. See `docs/technical/build_discipline.md` Pattern 3.
 
 ---
 
 ## OQ-32 — bifurcation_sweep.py: path resolution broken after 2026-05-28 reorg
 
-**Status:** open  
+**Status:** resolved — 2026-05-29 (6 scripts fixed)  
 **Origin:** Task 5 probe run, 2026-05-29.  
-**Files:** `python/sweeps/bifurcation_sweep.py`
+**Files:** `python/sweeps/bifurcation_sweep.py` and 5 others (see below)
 
-**Specific question:** `bifurcation_sweep.py` was moved from `python/` to `python/sweeps/` in the 2026-05-28 reorg. The `base_dir` is computed as `Path(__file__).resolve().parent.parent`, which resolves to `python/` (not repo root) after the move. The script then looks for `python/prolog/config.pl` which does not exist.
+**Fix applied 2026-05-29:** Changed `Path(__file__).resolve().parent.parent` to
+`Path(__file__).resolve().parents[2]` in all 6 affected sweep scripts:
+`bifurcation_sweep.py` (line 380), `cognitive_displacement_sweep.py` (line 30),
+`persistence_sweep.py` (lines 32, 720), `product_site_delta_sweep.py` (line 33),
+`representation_robustness_sweep.py` (line 26), `structural_config_sensitivity.py` (line 42).
+Output path in `bifurcation_sweep.py` left as `python/bifurcation_results.json` (existing file
+location). The 6 stale result files (python/*.json) are still HELD pending re-run confirmation.
 
-**Symptom:** `ERROR: config.pl not found at /home/scott/bin/structural_dynamics_model/python/prolog/config.pl`
-
-**Fix:** Change line 380 from `Path(__file__).resolve().parent.parent` to `Path(__file__).resolve().parents[2]` (matching the pattern used by perturb.py and demotion_pass.py). Output path on line 388 (`base_dir / "python" / "bifurcation_results.json"`) would also resolve incorrectly after the fix and should be updated to `base_dir / "outputs" / "bifurcation_results.json"` or kept at `python/bifurcation_results.json` by hardcoding.
-
-**Why it matters:** `bifurcation_sweep.py` is the canonical tool that produced the 14-flip class witness for no-kernel perturbability (testsets_3000, `snare_chi_floor`, `python/bifurcation_results.json`). Its primary entry point is dead until this is fixed. The reading_backlog probe fell back to `epsilon_sensitivity.py` (MaxEnt, branch b flat, fisher=1.13) because the bifurcation entry point errored. A current-corpus bifurcation witness for no-kernel readings is UNWITNESSED.
-
-**Do NOT fix in this batch.** Scope constraint: Task 5 reading_backlog probe only.
-
-**Wider scope (census 2026-05-29):** The same `parent.parent` reorg bug affects 5 additional scripts:
-`cognitive_displacement_sweep.py` (line 30), `persistence_sweep.py` (line 720),
-`product_site_delta_sweep.py` (line 33), `representation_robustness_sweep.py` (line 26),
-`structural_config_sensitivity.py` (line 42). All resolve PROLOG_DIR to `python/prolog/` instead
-of `<repo_root>/prolog/`. Fix pattern: `parent.parent` → `parents[2]` throughout. 6 scripts total.
+**Remaining:** A current-corpus bifurcation witness for no-kernel readings is still UNWITNESSED
+on the live 223-testset corpus. The old witness (14 flips, `snare_chi_floor=0.655`, testsets_3000)
+is a different corpus. OQ-32 scripts can now be run against the live corpus; whether to re-run
+is a backlog decision, not a path-bug blocker.
 
 ---
 
-*Last updated: 2026-05-29. Add new items with sequential OQ-NN labels. Mark
+## OQ-33 — classify_at_time fabricates suppression on 100% of temporal corpus; 279/647 temporal classifications misclassified as tangled_rope instead of snare
+
+**Status:** investigating — 2026-05-30  
+**Origin:** Fabricated-default inventory session, 2026-05-30. Tripwire graduated 2026-05-30.  
+**Files:** `prolog/drl_composition.pl:179` (temporal fallback), `prolog/drl_core.pl:96`
+(static fallback — DORMANT, see below), `prolog/testsets/*.pl` (223 testsets,
+suppression_requirement measurement absent in all).
+
+### Witnessed (execution-witnessed — tripwire run 2026-05-30)
+
+**Fabricated-default on temporal path (D1a, LOAD-BEARING-WRONG):**  
+`suppression_requirement` measurement is absent in all 223 testsets (grep confirms 0 facts).
+`classify_at_time` (`drl_composition.pl:179`) has no authored value to read and falls back
+unconditionally to `Supp=0.5` — fires on 100% of the temporal path (647/647 measurement rows).
+
+**Tripwire confirmation (execution-witnessed, 2026-05-30):**
+Source-patch `Supp=0.5` → `Supp=999.9`, run `constraint_history` over full corpus:
+- 279/647 temporal rows changed
+- 219 tangled_rope → snare
+- 60 unknown → snare
+- **0 → unknown** (plan's instance-reported claim of 443 unknown flips was WRONG)
+
+The mechanism: `snare_suppression_floor=0.60`. Fabricated `Supp=0.5` falls below this
+floor. Every temporal row that would otherwise be `snare` is demoted to `tangled_rope`
+(if `tangled_rope_suppression_floor=0.40 ≤ 0.5`) or `unknown`. 50.4% of non-unknown
+temporal classifications (279/553) are misclassified — systematically too low, not random.
+
+**Correction to prior instance-reported claim:** The "443/519 non-unknown classifications
+flipped to unknown" (in prior session writeup and original OQ-33 text) was INCORRECT.
+That claim assumed poisoning would push unknown-ward; actual behavior is the opposite —
+higher Supp enables snare. The tripwire run supersedes the instance-reported estimate.
+
+**Cross-surface fabrication (D2, DORMANT — corrected from LOAD-BEARING-WRONG):**  
+The static path (`get_raw_suppression`, `drl_core.pl:96`) fabricates the same missing
+metric as `0`, not `0.5`. BUT: the 32 testsets lacking `suppression_requirement` are the
+`_contradictions.pl` stubs — not classified constraints. `all_corpus_constraints/1`
+excludes them (requires `constraint_metric(C, extractiveness, _)`). Tripwire run:
+`Value=0` → `999.9` produced **0 changes** across 191 classified constraints.
+
+| Surface | Fallback | fires-now (actual corpus) | verdict |
+|---------|----------|--------------------------|---------|
+| Temporal (D1a) | Supp = 0.5 | 647/647 temporal rows | LOAD-BEARING-WRONG |
+| Static (D2) | Supp = 0 | 0 classified constraints | DORMANT |
+
+The cross-surface asymmetry in OQ-33 prior text described a real difference in fallback
+values but overstated D2's impact: D2 fires on contradiction stubs only, not on the
+classified corpus.
+
+**D20/D21 Boltzmann sites (DORMANT — corrected from UNSURE):**  
+Tripwire run: `BaseEps=0.5` → `999.9` and `Supp=0` → `999.9` in `classify_at_context_impl`
+produced **0 changes** across 191 classified constraints. Same mechanism as D2 — the 32
+affected testsets are contradiction stubs, excluded by `all_corpus_constraints/1`.
+
+Audit writeup: `outputs/audit_authoring_closure_fabricated_defaults.md`
+
+### Resolution options (design decision — no verdict asserted here)
+
+**(a) Author temporal suppression_requirement measurements into testsets.** Fills the
+missing data at source; both surfaces would then read the same authored value. Cost:
+authoring burden on 190+ testsets; requires schema guidance on what a correct
+suppression_requirement measurement looks like.
+
+**(b) Align `classify_at_time` to `get_raw_suppression` fallback (Supp=0).** Eliminates
+the cross-surface asymmetry. **Cost: collapses the Surface-1 / Surface-3 distinction that
+the three-surface model exists to hold.** If the temporal surface uses static-surface
+fallback values, the two surfaces are no longer observationally independent on
+missing-data constraints. The three-surface model's cross-surface divergence signal
+becomes uninterpretable for any constraint where suppression_requirement is absent —
+which is currently all of them. Flag this cost explicitly before choosing (b).
+
+**(c) Formalize "temporal surface returns indeterminate when it lacks its own data."**
+Accept that `classify_at_time` returns `unknown` for constraints without authored temporal
+suppression. The 443 extant `tangled_rope` emissions are reclassified as either policy
+decisions (if the engine should treat unmeasured suppression as 0.5) or repair targets
+(if they are simply wrong). Makes the fabrication visible and opt-in rather than silent.
+
+### Blocks
+
+1. **Surface-3 perturbation primitive** (`constraint_history/3`) — premature until
+   resolved. Perturbing a surface whose baselines are fabricated measures noise against
+   noise: the primitive would compare fabricated-Supp classifications against
+   perturbed-param fabricated-Supp classifications. No clean signal until the fabrication
+   is either authored away (a) or formalized (c).
+2. **Validity of the 443 extant temporal classifications** already in the corpus and any
+   report that cites temporal-surface outputs as independent evidence.
+3. **Cross-surface divergence interpretation** — the static-0/temporal-0.5 sub-finding
+   means any existing analysis that attributes static/temporal divergence to observational
+   difference rather than filler asymmetry is compromised for suppression-absent
+   constraints (currently all constraints).
+
+See `docs/technical/build_discipline.md` Pattern 4 (fabricated default) for the
+defect class.
+
+---
+
+*Last updated: 2026-05-30. Add new items with sequential OQ-NN labels. Mark
 resolved items with **Status: resolved** and a resolution note rather than
 deleting — provenance matters.*

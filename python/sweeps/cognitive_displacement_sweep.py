@@ -27,7 +27,7 @@ import time
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
 
-PROLOG_DIR = Path(__file__).resolve().parent.parent / "prolog"
+PROLOG_DIR = Path(__file__).resolve().parents[2] / "prolog"
 RESULTS_PATH = Path(__file__).resolve().parent / "cognitive_displacement_results.json"
 
 # Standard observer positions (must match drl_core:standard_context/1)

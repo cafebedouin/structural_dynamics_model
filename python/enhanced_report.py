@@ -1382,11 +1382,160 @@ def _persistence_tag(frac):
 #   snare_epsilon_floor × end_of_life_decision_authority: boundary at +8.7%, 39 flips.
 #   tangled_rope_chi_floor: rejected (signature-locked across all tested kernels).
 _WITNESSED_PARAMS: dict[str, list[tuple[str, list[float]]]] = {
+    # witness_backlog.py ±10% batch 2026-05-29 (outputs/witness_backlog_results.json)
+    # Convention per entry: (param_name, sweep_values_bracketing_boundary)
+    # Only params with coverage > 0.03 OR fold_survival < 0.97 on any kernel are listed.
+    # The sigmoid family (lower/midpoint/steepness/upper) affects many kernels through D_eff.
+
     "end_of_life_decision_authority": [
         # snare_epsilon_floor: upward only — lowering below rope_epsilon_ceiling=0.45 is a
         # config violation (relationship: rope_epsilon_ceiling < snare_epsilon_floor).
         # Boundary confirmed at +8.7% (0.46→0.50): 39 flips. No coverage at +4.3% (0.48).
         ("snare_epsilon_floor", [0.46, 0.48, 0.50, 0.52]),
+        # snare_suppression_floor: boundary at +10% (0.6→0.66).
+        ("snare_suppression_floor", [0.54, 0.60, 0.66]),
+        # critical_mass_threshold: boundary at −1 (3→2); 87 flips, cov=0.186.
+        ("critical_mass_threshold", [2, 3, 4]),
+    ],
+    "ai_risk_governance_priority": [
+        # snare_chi_floor: boundary in BOTH directions. Coverage 0.173. (↓0.594, ↑0.726)
+        ("snare_chi_floor", [0.594, 0.627, 0.66, 0.693, 0.726]),
+        # sigmoid_midpoint: coverage 0.094. (↓0.45 → flips)
+        ("sigmoid_midpoint", [0.45, 0.50, 0.55]),
+        # sigmoid_steepness: coverage 0.053. (↓5.4 → flips)
+        ("sigmoid_steepness", [5.4, 6.0, 6.6]),
+        # sigmoid_upper: coverage 0.053. (↓1.35 → flips)
+        ("sigmoid_upper", [1.35, 1.5, 1.65]),
+        # sigmoid_lower: coverage 0.028.
+        ("sigmoid_lower", [-0.22, -0.20, -0.18]),
+        # scope_modifier_national: coverage 0.034.
+        ("scope_modifier_national", [0.9, 1.0, 1.1]),
+    ],
+    "equal_protection_clause": [
+        # snare_chi_floor: both directions. Coverage 0.144.
+        ("snare_chi_floor", [0.594, 0.627, 0.66, 0.693, 0.726]),
+        # sigmoid_midpoint: coverage 0.094 (shared with ai_risk_governance_priority).
+        ("sigmoid_midpoint", [0.45, 0.50, 0.55]),
+        # sigmoid_steepness: coverage 0.053.
+        ("sigmoid_steepness", [5.4, 6.0, 6.6]),
+        # sigmoid_upper: coverage 0.053.
+        ("sigmoid_upper", [1.35, 1.5, 1.65]),
+        # sigmoid_lower: coverage 0.028.
+        ("sigmoid_lower", [-0.22, -0.20, -0.18]),
+    ],
+    "honor_settlement_legitimacy": [
+        # snare_chi_floor: coverage 0.538 — highest coverage in corpus for this param.
+        ("snare_chi_floor", [0.594, 0.627, 0.66, 0.693, 0.726]),
+        # sigmoid_midpoint: coverage wide.
+        ("sigmoid_midpoint", [0.45, 0.50, 0.55]),
+        # sigmoid_steepness: coverage 0.053.
+        ("sigmoid_steepness", [5.4, 6.0, 6.6]),
+        # sigmoid_upper: coverage.
+        ("sigmoid_upper", [1.35, 1.5, 1.65]),
+        # prh_powerless___true: boundary -10% (0.85→0.765). Coverage 0.064.
+        ("prh_powerless___true", [0.765, 0.85, 0.935]),
+        # critical_mass_threshold: boundary −1 (3→2) → tangled_rope/snare→naturalized, cov=0.250.
+        ("critical_mass_threshold", [2, 3, 4]),
+    ],
+    "jurisprudential_method_kernel": [
+        # snare_chi_floor: coverage 0.090 (both directions).
+        ("snare_chi_floor", [0.594, 0.627, 0.66, 0.693, 0.726]),
+        # sigmoid_midpoint: coverage.
+        ("sigmoid_midpoint", [0.45, 0.50, 0.55]),
+        # sigmoid_steepness + upper: coverage 0.053.
+        ("sigmoid_steepness", [5.4, 6.0, 6.6]),
+        ("sigmoid_upper", [1.35, 1.5, 1.65]),
+    ],
+    "latin_correctness": [
+        # tangled_rope_chi_ceil: boundary -10% (0.9→0.81). Coverage 0.167.
+        ("tangled_rope_chi_ceil", [0.81, 0.855, 0.9, 0.945, 0.99]),
+        # piton_theater_floor: boundary -10% (0.7→0.63). Coverage 0.083.
+        ("piton_theater_floor", [0.63, 0.70, 0.77]),
+        # snare_suppression_floor: boundary -10% (0.6→0.54). Coverage 0.083.
+        ("snare_suppression_floor", [0.54, 0.60, 0.66]),
+        # sigmoid_upper: both directions.
+        ("sigmoid_upper", [1.35, 1.5, 1.65]),
+        # fcr_override_enabled: disable (1→0) → tangled_rope→scaffold, cov=0.333, 156 flips.
+        # NOTE: some contexts flip to 'unknown' — fcr_override is load-bearing for classification path.
+        ("fcr_override_enabled", [0, 1]),
+    ],
+    "legitimacy_of_imposed_practice": [
+        # sigmoid_midpoint + steepness + upper + lower: broad sensitivity.
+        ("sigmoid_midpoint", [0.45, 0.50, 0.55]),
+        ("sigmoid_steepness", [5.4, 6.0, 6.6]),
+        ("sigmoid_upper", [1.35, 1.5, 1.65]),
+        ("sigmoid_lower", [-0.22, -0.20, -0.18]),
+    ],
+    "nuclear_impossibility_kernel": [
+        # snare_chi_floor: coverage 0.286 (both directions).
+        ("snare_chi_floor", [0.594, 0.627, 0.66, 0.693, 0.726]),
+        # sigmoid_midpoint.
+        ("sigmoid_midpoint", [0.45, 0.50, 0.55]),
+        ("sigmoid_steepness", [5.4, 6.0, 6.6]),
+        ("sigmoid_upper", [1.35, 1.5, 1.65]),
+    ],
+    "second_amendment_text": [
+        # snare_chi_floor: coverage 0.385 (both directions).
+        ("snare_chi_floor", [0.594, 0.627, 0.66, 0.693, 0.726]),
+        # sigmoid params.
+        ("sigmoid_midpoint", [0.45, 0.50, 0.55]),
+        ("sigmoid_steepness", [5.4, 6.0, 6.6]),
+        ("sigmoid_upper", [1.35, 1.5, 1.65]),
+        ("sigmoid_lower", [-0.22, -0.20, -0.18]),
+    ],
+    "sovereign_legitimacy": [
+        # rope_chi_ceiling: boundary in BOTH directions. Coverage 0.197 — highest in batch.
+        # Lowering ceiling pushes more constraints to tangled_rope; raising narrows rope.
+        ("rope_chi_ceiling", [0.315, 0.35, 0.385]),
+        # snare_chi_floor: coverage 0.120.
+        ("snare_chi_floor", [0.594, 0.627, 0.66, 0.693, 0.726]),
+        # sigmoid params.
+        ("sigmoid_midpoint", [0.45, 0.50, 0.55]),
+        ("sigmoid_steepness", [5.4, 6.0, 6.6]),
+        ("sigmoid_upper", [1.35, 1.5, 1.65]),
+    ],
+    "vaccine_mandate_balance": [
+        # snare_chi_floor: coverage 0.126 (both directions). Maximum flips=32.
+        ("snare_chi_floor", [0.594, 0.627, 0.66, 0.693, 0.726]),
+        # sigmoid params.
+        ("sigmoid_midpoint", [0.45, 0.50, 0.55]),
+        ("sigmoid_steepness", [5.4, 6.0, 6.6]),
+        ("sigmoid_upper", [1.35, 1.5, 1.65]),
+        ("sigmoid_lower", [-0.22, -0.20, -0.18]),
+    ],
+    "woman_female_category": [
+        # snare_chi_floor: coverage 0.263 (both directions).
+        ("snare_chi_floor", [0.594, 0.627, 0.66, 0.693, 0.726]),
+        # sigmoid params.
+        ("sigmoid_midpoint", [0.45, 0.50, 0.55]),
+        ("sigmoid_steepness", [5.4, 6.0, 6.6]),
+        ("sigmoid_upper", [1.35, 1.5, 1.65]),
+        ("sigmoid_lower", [-0.22, -0.20, -0.18]),
+    ],
+    # Kernels where sigmoid_midpoint alone produced minor flips (coverage < 0.03) —
+    # included for completeness but these are low-signal entries.
+    "animal_moral_status": [
+        ("sigmoid_midpoint", [0.45, 0.50, 0.55]),
+    ],
+    "competence_exercise_validity": [
+        ("sigmoid_midpoint", [0.45, 0.50, 0.55]),
+    ],
+    "kodashim_corpus": [
+        ("sigmoid_midpoint", [0.45, 0.50, 0.55]),
+        # boltzmann_min_classifications: +1 (3→4) → rope→scaffold, cov=0.333, 156 flips.
+        ("boltzmann_min_classifications", [2, 3, 4]),
+    ],
+    "market_as_natural_default": [
+        ("sigmoid_midpoint", [0.45, 0.50, 0.55]),
+    ],
+    # Kernels newly discovered in integer-step batch 2026-05-29:
+    "reformation_event_boundary": [
+        # fcr_override_enabled: disable → tangled_rope→scaffold, cov=0.500, 156 flips.
+        ("fcr_override_enabled", [0, 1]),
+    ],
+    "statute_of_anne_ip_foundation": [
+        # fcr_override_enabled: disable → tangled_rope→scaffold, cov=0.500, 156 flips.
+        ("fcr_override_enabled", [0, 1]),
     ],
 }
 
@@ -1484,26 +1633,66 @@ def _run_stability_band(kernel_id: str) -> dict:
     }
 
 
+_FISHER_RESULTS_PATH = PROJECT_ROOT / "outputs" / "epsilon_sensitivity_results.json"
+_fisher_cache: dict | None = None
+
+
+def _load_fisher_results() -> dict:
+    """Load epsilon_sensitivity_results.json keyed by constraint id; cache on first call."""
+    global _fisher_cache
+    if _fisher_cache is not None:
+        return _fisher_cache
+    if not _FISHER_RESULTS_PATH.exists():
+        _fisher_cache = {}
+        return _fisher_cache
+    import json as _json
+    data = _json.loads(_FISHER_RESULTS_PATH.read_text())
+    _fisher_cache = {e["id"]: e for e in data.get("per_constraint", [])}
+    return _fisher_cache
+
+
+def _fisher_probe_lines(constraint_id: str) -> list[str]:
+    """Fisher ε-sensitivity sub-section (fires on every E5 path)."""
+    fisher_data = _load_fisher_results()
+    if constraint_id in fisher_data:
+        fish = fisher_data[constraint_id].get("fisher_analytical_raw")
+        fish_str = f"{fish:.3f}" if fish is not None else "n/a"
+        return [
+            "",
+            f"  Fisher ε-sensitivity (MaxEnt): {fish_str}"
+            "  [r=-0.29 vs confidence_margin — non-redundant with type classification]",
+        ]
+    return [
+        "",
+        "  Fisher ε-sensitivity (MaxEnt): not computed",
+        "  (run python3 python/sweeps/epsilon_sensitivity.py to compute)",
+    ]
+
+
 def build_stability_band(constraint_id: str, stability_data: dict | None) -> str:
     """Render the parametric stability band section (E5)."""
     lines = ["", "--- PARAMETRIC STABILITY BAND ---", ""]
 
     if stability_data is None:
         lines.append("  [stability not computed]")
+        lines.extend(_fisher_probe_lines(constraint_id))
         return "\n".join(lines)
 
     if stability_data.get("no_kernel"):
         lines.append("  stability not assessed — no kernel linkage (cs_kernel_id absent from testset)")
+        lines.extend(_fisher_probe_lines(constraint_id))
         return "\n".join(lines)
 
     if stability_data.get("not_witnessed"):
         kid = stability_data.get("kernel_id", "?")
         lines.append(f"  stability not assessed — kernel '{kid}' has no confirmed governing params yet")
         lines.append("  (witness required: coverage>0 AND fold_survival<1.0 in ≥1 context)")
+        lines.extend(_fisher_probe_lines(constraint_id))
         return "\n".join(lines)
 
     if stability_data.get("error"):
         lines.append(f"  [error: {stability_data['error']}]")
+        lines.extend(_fisher_probe_lines(constraint_id))
         return "\n".join(lines)
 
     kid = stability_data.get("kernel_id", "?")
@@ -1546,6 +1735,7 @@ def build_stability_band(constraint_id: str, stability_data: dict | None) -> str
                     f"    {arrow} stable ≥{sign}{pct}% (max tested, no boundary in range){suffix}"
                 )
 
+    lines.extend(_fisher_probe_lines(constraint_id))
     return "\n".join(lines)
 
 

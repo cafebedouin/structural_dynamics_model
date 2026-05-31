@@ -4,11 +4,11 @@
 
 ## Definitions
 
-- **Parametric fragile** (`arakelov_height > corpus median`): the constraint sits on a steep MaxEnt ridge where the generative model's pre-correction probability mass was genuinely split before a structural signature forced classification. Small perturbations to base extractiveness would flip the classification. Corpus median Arakelov height = **0.011738**.
+- **Parametric fragile** (`arakelov_height > corpus median`): the constraint sits on a steep MaxEnt ridge where the generative model's pre-correction probability mass was genuinely split before a structural signature forced classification. Small perturbations to base extractiveness would flip the classification. Corpus median Arakelov height = **0.318989**.
 
-- **Epistemically opaque** (`signature ∈ {{false_ci_rope, false_summit_mountain}}`): the constraint's underlying disagreement is concealed — the institutional observer's cover story is structurally forced rather than perceptible. FCR (false_ci_rope): 901 constraints; FSM (false_summit_mountain): 5 constraints; total: 906.
+- **Epistemically opaque** (`signature ∈ {{false_ci_rope, false_summit_mountain}}`): the constraint's underlying disagreement is concealed — the institutional observer's cover story is structurally forced rather than perceptible. FCR (false_ci_rope): 35 constraints; FSM (false_summit_mountain): 2 constraints; total: 37.
 
-*Note: 1 constraint has Arakelov height = None (excluded).* *Analysis N = 3313.*
+*Note: 1 constraint has Arakelov height = None (excluded).* *Analysis N = 191.*
 
 ---
 
@@ -16,9 +16,9 @@
 
 | | **Epistemically Opaque (Yes)** | **Epistemically Opaque (No)** | Row total |
 |---|---|---|---|
-| **Parametric Fragile (Yes)** | 412 (12.4%) | 1243 (37.5%) | 1655 (50.0%) |
-| **Parametric Fragile (No)**  | 494 (14.9%) | 1164 (35.1%) | 1658 (50.0%) |
-| **Column total** | 906 (27.3%) | 2407 (72.7%) | 3313 |
+| **Parametric Fragile (Yes)** | 18 (9.4%) | 71 (37.2%) | 89 (46.6%) |
+| **Parametric Fragile (No)**  | 19 (9.9%) | 83 (43.5%) | 102 (53.4%) |
+| **Column total** | 37 (19.4%) | 154 (80.6%) | 191 |
 
 ---
 
@@ -26,10 +26,10 @@
 
 | Statistic | Value |
 |-----------|-------|
-| χ² | 10.0118  |
-| p-value | 1.56e-03 |
-| Cramér's V | 0.0550 (negligible effect size) |
-| Phi (signed) | -0.0550 (**negative** (fragile ↔ NOT opaque)) |
+| χ² | 0.0776  |
+| p-value | 7.81e-01 |
+| Cramér's V | 0.0202 (negligible effect size) |
+| Phi (signed) | 0.0202 (near zero (independent)) |
 
 ---
 
@@ -37,55 +37,53 @@
 
 | Group | n | Median Arakelov | % above corpus median |
 |-------|---|-----------------|----------------------|
-| FCR constraints | 901 | 0.004219 | 45.7% |
-| Non-FCR constraints | 2412 | 0.012038 | 51.5% |
-| Corpus median | — | 0.011738 | 50.0% |
+| FCR constraints | 35 | 0.345331 | 51.4% |
+| Non-FCR constraints | 156 | 0.318989 | 45.5% |
+| Corpus median | — | 0.318989 | 50.0% |
 
 ---
 
 ## Quadrant Examples
 
-### [a] Parametric-fragile AND Epistemically-opaque (n=412)
+### [a] Parametric-fragile AND Epistemically-opaque (n=18)
 
 | ID | Type | Arakelov | Signature |
 |-----|------|----------|-----------|
-| `advertising_market_concentration` | snare | 0.094194 | false_ci_rope |
-| `afghan_labor_trafficking` | snare | 0.223222 | false_ci_rope |
-| `agentive_optimism_2026` | tangled_rope | 0.116596 | false_ci_rope |
+| `collective_militia_reading` | tangled_rope | 0.855350 | false_ci_rope |
+| `colorblind_reading` | tangled_rope | 0.427947 | false_ci_rope |
+| `composite_reading` | tangled_rope | 0.426395 | false_ci_rope |
 
-### [b] Parametric-fragile ONLY (n=1243)
-
-| ID | Type | Arakelov | Signature |
-|-----|------|----------|-----------|
-| `academic_fashion_modernism_2026` | tangled_rope | 0.289868 | false_natural_law |
-| `academic_peer_review_gatekeeping` | tangled_rope | 0.069805 | false_natural_law |
-| `acquisition_overpayment_trap` | tangled_rope | 0.014971 | false_natural_law |
-
-### [c] Epistemically-opaque ONLY (n=494)
+### [b] Parametric-fragile ONLY (n=71)
 
 | ID | Type | Arakelov | Signature |
 |-----|------|----------|-----------|
-| `academic_citation_metrics_as_career_incentive` | tangled_rope | 0.000001 | false_ci_rope |
-| `adaptive_lag_trap` | tangled_rope | 0.000064 | false_ci_rope |
-| `aesthetic_gatekeeping_enforcement` | tangled_rope | 0.004219 | false_ci_rope |
+| `abolition_reading` | snare | 0.620940 | false_natural_law |
+| `absolutist_reading` | snare | 0.655012 | false_natural_law |
+| `adaptation_priority` | snare | 0.656765 | false_natural_law |
 
-### [d] Neither (low Arakelov, no FCR/FSM) (n=1164)
+### [c] Epistemically-opaque ONLY (n=19)
 
 | ID | Type | Arakelov | Signature |
 |-----|------|----------|-----------|
-| `a_level_grading_inflation` | tangled_rope | 0.006825 | false_natural_law |
-| `abel_ruffini_theorem` | mountain | 0.000001 | natural_law |
-| `absorbing_markov_chains` | mountain | 0.000001 | natural_law |
+| `behavioral_competence_reading` | mountain | 0.018697 | false_summit_mountain |
+| `beneficiary_agency_reading` | tangled_rope | 0.112981 | false_ci_rope |
+| `bodily_autonomy_primary` | snare | 0.207208 | false_ci_rope |
+
+### [d] Neither (low Arakelov, no FCR/FSM) (n=83)
+
+| ID | Type | Arakelov | Signature |
+|-----|------|----------|-----------|
+| `abolitionist_rights` | snare | 0.283763 | false_natural_law |
+| `autonomy_reading` | tangled_rope | 0.180532 | false_natural_law |
+| `became_thinkable_reading` | tangled_rope | 0.014744 | false_natural_law |
 
 ---
 
 ## Interpretation
 
-The association between parametric fragility and epistemic opacity is **negative** (fragile ↔ NOT opaque), with χ²=10.0118 (p=1.56e-03) and Cramér's V=0.0550 (negligible effect size).
+The association between parametric fragility and epistemic opacity is near zero (independent), with χ²=0.0776 (p=7.81e-01) and Cramér's V=0.0202 (negligible effect size).
 
-Parametrically fragile constraints tend to be epistemically transparent, and epistemically opaque constraints tend to be parametrically robust. This is the strongest possible support for §2.2's distinction: the two failure modes not only differ conceptually but point in opposite directions in the corpus.
-
-**Mechanistic explanation.** This negative correlation is theoretically expected. High-Arakelov constraints are those where the generative model was uncertain *before* a structural signature forced consensus — they are classified firmly by the cascade but their underlying distribution was split. These tend to be H¹=0 constraints (the 'uncertainty route' identified in v6.11): apparent consensus that is structurally fragile. FCR constraints (epistemically opaque) are manifestly H¹>0 — they are already showing open disagreement — and their Arakelov height tends to be lower because the institutional cover story has *resolved* the distribution rather than sitting near a boundary. Parametric fragility (near-threshold consensus) and epistemic opacity (structurally forced disagreement) are complementary failure modes that pull in opposite directions. §2.2's distinction is empirically confirmed.
+The two measures are effectively independent in the corpus. §2.2's distinction holds: knowing that a constraint is parametrically fragile gives essentially no information about whether it is epistemically opaque, and vice versa.
 
 ---
 

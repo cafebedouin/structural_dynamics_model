@@ -15,6 +15,7 @@ Usage:
 import argparse
 import hashlib
 import json
+import re
 import subprocess
 import sys
 import tempfile
@@ -22,6 +23,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 PROLOG_DIR = ROOT / "prolog"
+CI_PATH = PROLOG_DIR / "constraint_indexing.pl"
 ORBITS_PATH = ROOT / "outputs" / "product_site_orbits.json"
 PIPELINE_PATH = ROOT / "outputs" / "pipeline_output.json"
 
@@ -56,6 +58,114 @@ _OVERLAY_TMPL = """\
 :- use_module(product_site_export, [run_product_export_to/1]).
 :- product_site_export:run_product_export_to('{outpath}'), halt.
 """
+
+# ---------------------------------------------------------------------------
+# Supplementary param families (constraint_indexing.pl, 23 declarations)
+# PRH (11): power_role_heuristic/4  — abolish+reassert (has _ wildcards)
+# EM (6):   exit_modulation/2       — abolish+reassert
+# PD (6):   positional_displacement/2 — retract/asserta (already dynamic)
+#           PD is SHADOWED at current config (cognitive_displacement_profile=uniform):
+#           coverage=0 expected; label as "inert-at-current-config (shadowed)" not
+#           "unperturbable-by-construction."
+# ---------------------------------------------------------------------------
+
+def _parse_prh_clauses() -> list[dict]:
+    pattern = re.compile(
+        r"^power_role_heuristic\(\s*(\w+)\s*,\s*(\w+|_)\s*,\s*(\w+|_)\s*,\s*(-?\d+(?:\.\d+)?)\s*\)\.",
+        re.MULTILINE,
+    )
+    return [
+        {"key": f"prh_{m.group(1)}_{m.group(2)}_{m.group(3)}",
+         "power": m.group(1), "arg2": m.group(2), "arg3": m.group(3),
+         "value": float(m.group(4))}
+        for m in pattern.finditer(CI_PATH.read_text())
+    ]
+
+
+def _parse_em_clauses() -> list[dict]:
+    pattern = re.compile(
+        r"^exit_modulation\(\s*(\w+)\s*,\s*(-?\d+(?:\.\d+)?)\s*\)\.",
+        re.MULTILINE,
+    )
+    return [
+        {"key": f"em_{m.group(1)}", "exit_option": m.group(1), "value": float(m.group(2))}
+        for m in pattern.finditer(CI_PATH.read_text())
+    ]
+
+
+def _parse_pd_clauses() -> list[dict]:
+    pattern = re.compile(
+        r"^positional_displacement\(\s*(\w+)\s*,\s*(-?\d+(?:\.\d+)?)\s*\)\.",
+        re.MULTILINE,
+    )
+    return [
+        {"key": f"pd_{m.group(1)}", "power": m.group(1), "value": float(m.group(2))}
+        for m in pattern.finditer(CI_PATH.read_text())
+    ]
+
+
+def _fmt_float(v: float) -> str:
+    s = f"{v:.6f}".rstrip("0").rstrip(".")
+    return s if "." in s else s + ".0"
+
+
+def _build_prh_overlay(clauses: list[dict], param_key: str, perturbed: float, outpath: str) -> str:
+    """Abolish + reassert all PRH clauses with one value changed."""
+    body = [
+        "%% Auto-generated perturb overlay (PRH) — DO NOT EDIT",
+        f"%% Perturbing {param_key} -> {perturbed}",
+        ":- use_module(constraint_indexing).",
+        ":- abolish(constraint_indexing:power_role_heuristic/4).",
+    ]
+    for c in clauses:
+        val = _fmt_float(perturbed if c["key"] == param_key else c["value"])
+        body.append(
+            f":- assertz(constraint_indexing:power_role_heuristic"
+            f"({c['power']}, {c['arg2']}, {c['arg3']}, {val}))."
+        )
+    body += [
+        ":- [stack].",
+        ":- use_module(product_site_export, [run_product_export_to/1]).",
+        f":- product_site_export:run_product_export_to('{outpath}'), halt.",
+    ]
+    return "\n".join(body) + "\n"
+
+
+def _build_em_overlay(clauses: list[dict], param_key: str, perturbed: float, outpath: str) -> str:
+    """Abolish + reassert all EM clauses with one value changed."""
+    body = [
+        "%% Auto-generated perturb overlay (EM) — DO NOT EDIT",
+        f"%% Perturbing {param_key} -> {perturbed}",
+        ":- use_module(constraint_indexing).",
+        ":- abolish(constraint_indexing:exit_modulation/2).",
+    ]
+    for c in clauses:
+        val = _fmt_float(perturbed if c["key"] == param_key else c["value"])
+        body.append(f":- assertz(constraint_indexing:exit_modulation({c['exit_option']}, {val})).")
+    body += [
+        ":- [stack].",
+        ":- use_module(product_site_export, [run_product_export_to/1]).",
+        f":- product_site_export:run_product_export_to('{outpath}'), halt.",
+    ]
+    return "\n".join(body) + "\n"
+
+
+def _build_pd_overlay(param_key: str, power: str, perturbed: float, outpath: str) -> str:
+    """Retract/asserta for one positional_displacement clause (already dynamic).
+    SHADOWED: cognitive_displacement_profile=uniform means this path is inactive;
+    coverage=0 expected. Label result as inert-at-current-config, not unperturbable."""
+    pf = _fmt_float(perturbed)
+    return "\n".join([
+        "%% Auto-generated perturb overlay (PD) — DO NOT EDIT",
+        f"%% Perturbing {param_key} -> {perturbed} (SHADOWED: profile=uniform, coverage=0 expected)",
+        ":- use_module(constraint_indexing).",
+        f":- (retract(constraint_indexing:positional_displacement({power}, _)) -> true ; true),",
+        f"   asserta(constraint_indexing:positional_displacement({power}, {pf})).",
+        ":- [stack].",
+        ":- use_module(product_site_export, [run_product_export_to/1]).",
+        f":- product_site_export:run_product_export_to('{outpath}'), halt.",
+    ]) + "\n"
+
 
 # ---------------------------------------------------------------------------
 # Zone inference — determines which chi values this param "touches"
@@ -132,20 +242,27 @@ def _run_perturbed_export(
     original: float,
     perturbed: float,
     timeout: int,
+    overlay_content: str | None = None,
 ) -> dict | None:
-    """Write overlay, run swipl, return parsed JSON dict or None on error."""
-    with tempfile.NamedTemporaryFile(
-        suffix=".pl", dir=PROLOG_DIR, mode="w", delete=False
-    ) as ovf:
-        ovf.write(_OVERLAY_TMPL.format(
+    """Write overlay, run swipl, return parsed JSON dict or None on error.
+
+    If overlay_content is provided it is written directly (used by PRH/EM/PD
+    families whose overlay is built by the _build_*_overlay helpers).
+    Otherwise the default config-param template is used.
+    """
+    out_path = ROOT / "outputs" / "perturb_tmp.json"
+    if overlay_content is None:
+        overlay_content = _OVERLAY_TMPL.format(
             name=param,
             original=original,
             perturbed=perturbed,
-            outpath=str(PROLOG_DIR.parent / "outputs" / "perturb_tmp.json"),
-        ))
+            outpath=str(out_path),
+        )
+    with tempfile.NamedTemporaryFile(
+        suffix=".pl", dir=PROLOG_DIR, mode="w", delete=False
+    ) as ovf:
+        ovf.write(overlay_content)
         overlay_path = ovf.name
-
-    out_path = ROOT / "outputs" / "perturb_tmp.json"
     try:
         r = subprocess.run(
             ["swipl", "-g", f"consult('{overlay_path}'), halt."],
@@ -174,7 +291,6 @@ def _run_perturbed_export(
 
 def _load_kernel_map(testsets_dir: Path) -> dict[str, str]:
     """Return {reading_id: kernel_id} from cs_kernel_id/2 facts in testsets."""
-    import re
     pattern = re.compile(r"cs_kernel_id\(\s*(\w+)\s*,\s*(\w+)\s*\)")
     mapping: dict[str, str] = {}
     for pl_file in testsets_dir.glob("*.pl"):
@@ -329,14 +445,35 @@ def perturb(
         json.dumps(baseline, sort_keys=True).encode()
     ).hexdigest()[:12]
 
-    # Read current param value from config.pl
-    import re
+    # Locate param: config.pl first, then supplementary families in constraint_indexing.pl
     config_text = (PROLOG_DIR / "config.pl").read_text()
-    m = re.search(rf"^\s*param\(\s*{re.escape(param)}\s*,\s*(-?\d+(?:\.\d+)?)\s*\)\.",
-                  config_text, re.MULTILINE)
-    if not m:
-        raise ValueError(f"param({param}, ...) not found in config.pl")
-    original = float(m.group(1))
+    cm = re.search(rf"^\s*param\(\s*{re.escape(param)}\s*,\s*(-?\d+(?:\.\d+)?)\s*\)\.",
+                   config_text, re.MULTILINE)
+    prh_clauses = em_clauses = pd_clauses = None
+    if cm:
+        original = float(cm.group(1))
+        family = "config"
+    else:
+        prh_clauses = _parse_prh_clauses()
+        em_clauses  = _parse_em_clauses()
+        pd_clauses  = _parse_pd_clauses()
+        prh_c = next((c for c in prh_clauses if c["key"] == param), None)
+        em_c  = next((c for c in em_clauses  if c["key"] == param), None)
+        pd_c  = next((c for c in pd_clauses  if c["key"] == param), None)
+        if prh_c:
+            original, family = prh_c["value"], "prh"
+        elif em_c:
+            original, family = em_c["value"],  "em"
+        elif pd_c:
+            original, family = pd_c["value"],  "pd"
+        else:
+            raise ValueError(
+                f"param not found: {param!r}. "
+                "config.pl: bare name (e.g. snare_epsilon_floor). "
+                "PRH: prh_{power}_{arg2}_{arg3} (e.g. prh_powerless___true). "
+                "EM: em_{exit_option} (e.g. em_trapped). "
+                "PD: pd_{power} (e.g. pd_powerless)."
+            )
 
     chi_data = _load_chi_data(PIPELINE_PATH)
     kernel_map = _load_kernel_map(PROLOG_DIR / "testsets")
@@ -361,7 +498,19 @@ def perturb(
             # Identity: compare baseline against itself
             kr = _compute_kernel_results(baseline, baseline, kernel_map, chi_data, zone)
         else:
-            exported = _run_perturbed_export(param, original, val, timeout)
+            out_path = ROOT / "outputs" / "perturb_tmp.json"
+            if family == "config":
+                exported = _run_perturbed_export(param, original, val, timeout)
+            elif family == "prh":
+                ov = _build_prh_overlay(prh_clauses, param, val, str(out_path))
+                exported = _run_perturbed_export(param, original, val, timeout, ov)
+            elif family == "em":
+                ov = _build_em_overlay(em_clauses, param, val, str(out_path))
+                exported = _run_perturbed_export(param, original, val, timeout, ov)
+            else:  # pd
+                pd_c = next(c for c in pd_clauses if c["key"] == param)
+                ov = _build_pd_overlay(param, pd_c["power"], val, str(out_path))
+                exported = _run_perturbed_export(param, original, val, timeout, ov)
             if exported is None:
                 all_results[val] = {"error": "export_failed"}
                 continue

@@ -29,7 +29,7 @@ import time
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 from config_sensitivity_sweep import parse_config_params, EXCLUDE_PARAMS
 
 # ---------------------------------------------------------------------------
@@ -717,7 +717,7 @@ def main():
     )
     args = parser.parse_args()
 
-    base_dir = Path(__file__).resolve().parent.parent
+    base_dir = Path(__file__).resolve().parents[2]
     config_path = base_dir / "prolog" / "config.pl"
     prolog_dir = str(base_dir / "prolog")
 

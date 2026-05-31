@@ -92,6 +92,65 @@ grep -rhoE "^:- module\([a-z0-9_]+" prolog --include=*.pl | sort | uniq -d
 
 ---
 
+## Pattern 3 — Bound-probe bypasses clause-order (query-binding-bypasses-cut)
+
+**Shape:** a probe enumerates a class by *binding* the selecting argument —
+`findall(C, constraint_signature(C, natural_law), Cs)` — and receives constraints the
+engine never actually classifies as that class.
+
+**Mechanism:** `signature_detection:constraint_signature/2` resolves by clause order, with
+lock clauses that fire first under a cut when the engine calls with the second argument
+*unbound*:
+
+```prolog
+% prolog/signature_detection.pl
+:70  constraint_signature(C, false_natural_law)    :- false_natural_law(C, _), !.
+:77  constraint_signature(C, false_ci_rope)        :- false_ci_rope(C, _), !.
+:87  constraint_signature(C, false_summit_mountain) :- false_summit_mountain(C, _), !.
+:97  constraint_signature(C, natural_law)           :-
+         domain_priors:emerges_naturally(C),
+         get_constraint_profile(C, Profile),
+         natural_law_signature(Profile), !.
+```
+
+When the probe binds the second arg to `natural_law`, the lock clause heads
+(`false_natural_law`, `false_ci_rope`, `false_summit_mountain`) fail to unify (wrong atom),
+their cuts *never execute*, and Prolog falls through to the `:97` clause. The probe answers
+"satisfies the `natural_law` clause body in isolation," not "the engine assigns
+`natural_law`" — they differ exactly when a lock would have fired.
+
+**Live demonstration (223-constraint corpus, 2026-05-30):**
+
+```
+findall(C, signature_detection:constraint_signature(C, natural_law), BoundCs)
+  → [behavioral_competence_reading]   % bound form: 1 result
+
+findall(C, (signature_detection:constraint_signature(C, Sig), Sig == natural_law), UnboundCs)
+  → []                                % unbound+post-filter: 0 results
+```
+
+`behavioral_competence_reading` satisfies the `:97` clause body but the engine actually
+assigns it `false_summit_mountain` (lock at `:87`). The bound probe manufactured a false
+witness.
+
+**Fix:** query unbound, take the engine's first solution, post-filter by equality:
+
+```prolog
+findall(C, (signature_detection:constraint_signature(C, Sig), Sig == natural_law), Cs).
+```
+
+**Diagnostic:** any `findall`/`forall` over a cut-ordered predicate with the *selecting*
+argument bound is suspect. Re-run unbound + post-filter; if the count drops, the bound form
+over-counted.
+
+**Where it recurs:** a probe that queries signature membership directly to build a witness
+set for kernel readings will over-count exactly the constraints the locks were installed to
+protect. Welfare-reading / false_natural_law (OQ-30) is the live case: a bound probe there
+manufactures false natural-law witnesses on the constraints `false_natural_law` was designed
+to intercept.
+
+---
+
 ## The shared root: build for the corpus you want, not the one you have
 
 Both patterns are special cases of designing against the present sample instead of the
@@ -117,6 +176,40 @@ heuristic: if SCOPE marked the seed `is_contested_kernel: true`, every reading g
 attaches to); if `false`, the story is a genuine standalone and gets no kernel_id. The
 join step transcribes that decision from `kernel_grouping.json` into the `.pl`; it does
 not re-derive it.
+
+## Pattern 4: Fabricated default — missing-data fallback that emits a real-looking value
+
+A predicate that lacks its input fabricates a plausible constant rather than failing or
+returning `unknown`. Downstream callers receive a real-looking value and treat it as a
+measurement. The fabrication fires silently — no error, no warning, no coverage flag —
+and is distinguishable from a genuine measurement only by perturbation (tripwiring the
+fallback to an obviously wrong value and observing what flips).
+
+**Sibling of produced-but-not-consumed:** P-b-n-c leaves a wire dangling; the fabricated
+default connects the wire to a made-up signal so nothing looks broken. The defect is
+harder to see because the system appears to work.
+
+**Live instance (OQ-33, 2026-05-30):** `classify_at_time` (`drl_composition.pl:179`)
+falls back to `Supp=0.5` when `suppression_requirement` is absent. That measurement is
+absent in 190/190 live testsets — the fallback fires 100% of the temporal path.
+Tripwire confirmed: 443/519 non-unknown temporal classifications flip to `unknown` when
+`Supp` is poisoned at source, proving the fabricated default is **LOAD-BEARING-WRONG**.
+Secondary finding: the static path (`get_raw_suppression`, `drl_core.pl:96`) fabricates
+the same gap as `Supp=0`, not `0.5` — two surfaces invent different fillers for the same
+missing data, producing divergence that is artifact, not observational signal. See OQ-33
+for resolution options and blocks.
+
+**Diagnostic:** if a predicate has a catch-all clause that binds a metric variable to a
+constant — `(measurement(..., V) -> true ; V = 0.5)` — ask whether the fallback is ever
+reached in the actual corpus. If it fires on more than a handful of constraints, it is a
+fabrication, not a safety net. Tripwire it: replace the constant with an obviously
+out-of-range value and count the flips.
+
+**Where it recurs:** any Surface-3 (temporal) predicate that reads authored measurements
+from testsets; authored fields are sparse by construction (authors fill what they
+understand), so temporal surfaces are structurally exposed to this pattern.
+
+---
 
 ## When reasoning has run out
 

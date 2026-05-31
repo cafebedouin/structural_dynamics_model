@@ -443,12 +443,13 @@ Provide measurement entries that model how the constraint changed over its inter
 
 * **Metric substitution** — `theater_ratio` rising above 0.5 indicates proxy goals replacing real function (Goodhart drift)
 * **Extraction accumulation** — `base_extractiveness` increasing over time indicates rent-seeking layered onto coordination
+* **Enforcement intensification or decay** — `suppression_requirement` changing over time indicates the constraint's active suppressive force increasing (enforcement ratchet, compliance hardening) or decreasing (normalization, attrition of enforcement capacity). Author `suppression_requirement` measurements when the constraint's suppressive force is the dynamic you are tracing — when enforcement machinery is built up or erodes, not merely when extraction shifts. A rising trajectory (e.g., 0.45 → 0.62 → 0.78) models a constraint that began at the tangled_rope/snare boundary and crossed into snare territory as its enforcement infrastructure matured. A falling trajectory models decay toward the tangled_rope floor. Use a flat trajectory when suppression is stable and only other metrics are varying. Do NOT author `suppression_requirement` measurements unless the story's narrative specifically tracks enforcement-capacity change; a static enforcement picture is already captured by `base_properties.suppression`.
 
 **Required for high-extraction constraints** (extractiveness > 0.46). Use at least 3 time points (T=0, midpoint, T=end) for each tracked metric — 6 measurements minimum.
 
 | Field | JSON Path | Purpose |
 |---|---|---|
-| Metric name | `measurements[].metric` | `theater_ratio` or `base_extractiveness` |
+| Metric name | `measurements[].metric` | `theater_ratio`, `base_extractiveness`, or `suppression_requirement` |
 | Time point | `measurements[].time_point` | Integer within the `interval` range |
 | Value | `measurements[].value` | Metric value at that time point [0.0, 1.0] |
 | ID override | `measurements[].id_override` | Optional: override the auto-generated measurement ID |

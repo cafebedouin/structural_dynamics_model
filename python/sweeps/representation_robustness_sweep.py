@@ -23,7 +23,7 @@ import tempfile
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parent.parent
+REPO_ROOT = Path(__file__).resolve().parents[2]
 PROLOG_DIR = REPO_ROOT / "prolog"
 OUTPUTS_DIR = REPO_ROOT / "outputs"
 OUTPUT_JSON = REPO_ROOT / "python" / "representation_robustness_results.json"

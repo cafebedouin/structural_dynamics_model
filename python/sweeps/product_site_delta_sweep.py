@@ -30,7 +30,7 @@ from collections import Counter, defaultdict
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 PROLOG_DIR = ROOT / "prolog"
 ORBITS_PATH = ROOT / "outputs" / "product_site_orbits.json"
 DISPLACEMENT_PATH = Path(__file__).resolve().parent / "cognitive_displacement_results.json"

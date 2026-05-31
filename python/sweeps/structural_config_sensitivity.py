@@ -39,7 +39,7 @@ from collections import defaultdict
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[2]
 PROLOG_DIR = ROOT / "prolog"
 BASELINE_PATH = ROOT / "outputs" / "product_site_orbits.json"
 RESULTS_PATH = Path(__file__).resolve().parent / "structural_config_sensitivity_results.json"

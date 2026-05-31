@@ -151,9 +151,13 @@ def enrich_entry(entry, orbit_data, abd_data=None,
         entry["raw_rival_prob"] = None
 
     # --- Coalition type (from orbit_data.json) ---
-    orbit_entry = orbit_data.get(cid, {})
-    orbit_contexts = orbit_entry.get("contexts", {})
-    entry["coalition_type"] = classify_coalition(orbit_contexts)
+    # None = file failed to load (data unavailable); "other" = file loaded, cid absent or no signal
+    if orbit_data is None:
+        entry["coalition_type"] = None
+    else:
+        orbit_entry = orbit_data.get(cid, {})
+        orbit_contexts = orbit_entry.get("contexts", {})
+        entry["coalition_type"] = classify_coalition(orbit_contexts)
 
     # --- Tangled psi / band (only for tangled_rope) ---
     if claimed == "tangled_rope" and dist:
@@ -165,9 +169,11 @@ def enrich_entry(entry, orbit_data, abd_data=None,
         entry["tangled_band"] = None
 
     # --- Abductive triggers (from abductive_data.json) ---
+    # None = file failed to load (data unavailable); [] = file loaded, cid has no triggers
     if abd_data is None:
-        abd_data = {}
-    entry["abductive_triggers"] = abd_data.get(cid, [])
+        entry["abductive_triggers"] = None
+    else:
+        entry["abductive_triggers"] = abd_data.get(cid, [])
 
     # --- Husk metrics (from husk_data.json + json/{cid}.json ε series) ---
     if husk_data is None:
@@ -267,11 +273,11 @@ def main():
             orbit_data = json.load(f)
     except (FileNotFoundError, json.JSONDecodeError) as e:
         print(f"[ENRICH] Warning: Could not load {ORBIT_JSON}: {e}", file=sys.stderr)
-        orbit_data = {}
+        orbit_data = None  # None = file absent; coalition_type will be null, not "other"
 
     # Load abductive_data.json
     print("[ENRICH] Loading abductive_data.json...", file=sys.stderr)
-    abd_data = {}
+    abd_data = None  # None = file absent; abductive_triggers will be null, not []
     try:
         with open(ABDUCTIVE_JSON, "r", encoding="utf-8") as f:
             abd_data = json.load(f).get("per_constraint", {})

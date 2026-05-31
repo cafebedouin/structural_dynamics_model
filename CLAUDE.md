@@ -1,15 +1,4 @@
-## Priority Gate
-
-At the start of every session, read `PRIORITIES.md`. In your first response, state the
-current top priority in one sentence.
-
-If a requested task does not appear to advance any item in `PRIORITIES.md`, say so in
-one sentence at the start of your response — then proceed. Do not block or ask for
-confirmation; a note is enough. Example: *"Note: PRIORITIES.md lists §2.3 paper
-correction as the top priority; this task addresses X instead."*
-
-The note is for the user's benefit, not yours. They may have a good reason; they do not
-need to explain it.
+## One-sentence flag
 
 **If you know a better way:** When a request has a cleaner implementation, a simpler
 approach, or an unintended consequence the user likely did not see, say so in one
@@ -56,9 +45,10 @@ non-obvious wiring, operator-precedence bugs, fact-adapter patterns, and query g
 discovered during implementation sessions. Scope is narrow: things that caused real bugs
 or confusion, not general architecture. Read the relevant file before modifying
 `config_validation.pl`, `cs_kernel_registry.pl`, or the CS fact schema.
-`build_discipline.md` documents two recurring cross-subsystem defect patterns
-(produced-but-not-consumed; silent fork) with diagnostics — consult before adding a step
-that writes output or copying a file to test it.
+`build_discipline.md` documents three recurring cross-subsystem defect patterns
+(produced-but-not-consumed; silent fork; bound-probe bypasses clause-order) with diagnostics
+— consult before adding a step that writes output, copying a file to test it, or writing a
+findall over a cut-ordered predicate.
 
 ## Typical Workflow
 
@@ -95,6 +85,42 @@ Haiku batch API with prompt caching). This is how the corpus grew from ~1,000 to
 - Linter: must be imported as library (`from linter import lint_file`), not run directly
 - Config sensitivity: `python3 python/config_sensitivity_sweep.py`
 - Directionality sensitivity: `python3 python/directionality_sensitivity_sweep.py`
+
+## Corpus Loading
+
+**`[stack]` alone loads 0 testsets.** `stack.pl` loads engine modules
+(`drl_core`, `corpus_loader`, `constraint_indexing`, etc.) and makes
+`corpus_loader:load_all_testsets/0` available, but does not call it.
+Testsets are loaded on demand, not at stack load time.
+
+**To load testsets in a REPL or script, call it explicitly:**
+
+```prolog
+% Interactive or one-shot query
+:- [stack], corpus_loader:load_all_testsets.
+
+% Idempotent form (safe to call multiple times; guarded by corpus_loaded/0 flag)
+:- [stack], corpus_loader:ensure_corpus_loaded.
+```
+
+**How the frozen CLI commands handle it:**
+- `product_site_export:run_product_export` — calls `corpus_loader:load_all_testsets`
+  internally. Loading `product_site_export` as a module does NOT load testsets; only
+  calling `run_product_export` or `run_product_export_to/1` triggers the load.
+- `validation_suite`, `run_dynamic_suite` — these handle corpus loading internally.
+- `perturb.py` overlays — each overlay file must `[stack]` AND
+  `use_module(product_site_export)` AND call `run_product_export_to/1`. `[stack]`
+  alone is not enough; `product_site_export` must be explicitly loaded.
+
+**Corpus path and working directory:** controlled by `config:param(corpus_path, Dir)`
+(default `testsets`). The glob is `Dir/*.pl` and resolves **relative to swipl's cwd**.
+All frozen CLI commands use `cd prolog && swipl ...` so `testsets/` resolves correctly.
+Running swipl from the repo root with the default `corpus_path` will find nothing.
+To load testsets_3000, overlay `corpus_path` before calling `load_all_testsets`.
+
+**Confirmation:** After `load_all_testsets` completes, `corpus_loaded/0` is asserted.
+Check with `corpus_loader:corpus_loaded` in a REPL. The count is printed to stderr:
+`[corpus] Loaded N testsets successfully.`
 
 ## Known State
 
@@ -155,6 +181,12 @@ Haiku batch API with prompt caching). This is how the corpus grew from ~1,000 to
 - **2026-05-29: build-discipline patterns documented** — two recurring defects named in
   `docs/technical/build_discipline.md`: produced-but-not-consumed and silent-fork.
   See build_discipline.md for diagnostics and the corpus-you-want naming rule.
+- **2026-05-30: Pattern 3 added to build_discipline.md** — bound-probe bypasses clause-order
+  (query-binding-bypasses-cut). Bound `findall(C, constraint_signature(C, natural_law), Cs)`
+  over-counts by bypassing lock cuts (`false_natural_law:70`, `false_ci_rope:77`,
+  `false_summit_mountain:87`). Live demo: bound form yields `[behavioral_competence_reading]`,
+  unbound+post-filter yields `[]` (actual sig: false_summit_mountain). Fix: query unbound,
+  post-filter with `== natural_law`. See build_discipline.md Pattern 3.
 - **2026-05-29: perturb() primitive implemented** — `python/sweeps/perturb.py` is the
   type-stability sweep primitive: `perturb(param, values) → re-export → fold-survival per
   kernel`. Uses Dialect A1 overlay (retract/asserta on config:param/2) + product_site_export
@@ -189,6 +221,100 @@ Haiku batch API with prompt caching). This is how the corpus grew from ~1,000 to
   OQ-31 resolved. Sidecar validator unchanged
   (extra fields pass silently).
 
+- **2026-05-29: predicate denominator established + full 191-param sweep complete** —
+  Bidirectional dataflow trace: 191 engine params (168 config.pl + 23 supplementary) +
+  6 authored fields = 197 static-type surface. Three surfaces distinguished (static type,
+  PoA, temporal/drift). 6 positional_displacement tagged SHADOWED. OQ-32 fixed (6 sweeps).
+  Float ±10% batch (179 params): 21 survivors (pre-batch 2 + new 19). Integer ±1 batch
+  (19 errored-untested): 3 more survivors (boltzmann_min_classifications, critical_mass_threshold,
+  fcr_override_enabled). Total: 24 survivors. All wired into `_WITNESSED_PARAMS` (18 kernels,
+  enhanced_report.py) and `_WITNESSED` (demotion_pass.py). Final demotion_pass:
+  6 shadowed + 0 errored-untested + 20 unperturbable + 0 reachable-locked + 24 witnessed +
+  141 backlog = 191. Results: `outputs/witness_backlog_results.json` (float),
+  `outputs/witness_backlog_integer_results.json` (integer). Fisher probe wired into E5
+  (all stability-band paths). Priority sort bug fixed. OQ-30 mitigated (18/38 kernels
+  witnessed). `docs/engine_handoff.md` §2(a) updated with denominator and survivor section.
+
+- **2026-05-30: 4 epsilon params characterized; all 141 backlog params now exhausted** —
+  `--resume` confirmed all 141 PERTURBABLE_UNPERTURBED params already in results (swept at
+  end of prior batch due to priority bug; not skipped). Corrected tiering for the 4 epsilon
+  params: (1) `rope_epsilon_ceiling` split-tier: +10% permanently blocked by
+  `config_schema.pl:482–487` `classification_rope_snare` invariant (`rope_epsilon_ceiling >=
+  snare_epsilon_floor` → export_failed); −10% reachable-stable (23 kernels, fs=1.0, 0 flips).
+  (2) `tangled_rope_epsilon_floor` perturbable-but-unperturbed EARNED: 25–26 kernels reached
+  across full ±10% band, fs=1.0 on all — genuine stability finding. (3) `fpn_epsilon` and
+  `piton_epsilon_floor` unreached-at-tested-range: coverage=0 or near-0 at ±10%; flip
+  potential unknown; wider range required. Bucket split within 141: 2 unreached-at-tested-range
+  (fpn_epsilon, piton_epsilon_floor); 139 remainder (includes rope_epsilon_ceiling one-sided
+  and tangled_rope full-band). Top-level 191 count unchanged. OQ-30 updated.
+
+- **2026-05-30: Surface 2 + Surface 3 perturbation primitive scoped (proof-of-life)** —
+  Observable identified and proven per surface. Scripts: `python/sweeps/proof_of_life_surface2.py`,
+  `python/sweeps/proof_of_life_surface3.py`.
+  
+  **Surface 2** (`excess_extraction/2`, `boltzmann_compliance.pl`): MOVED. Observable =
+  `boltzmann_compliance:excess_extraction(C, ExcessEps)`. Overlay = `config:param/2`
+  retract/assertz on `boltzmann_floor_identity_coordination` (0.08→0.60) for
+  `civic_eugenic_reading`. Baseline: 0.60, perturbed: 0.08, diff: −0.52. Floor path
+  confirmed as coordination_type (not override, not default) — overlay valid, not shadowed.
+  Cache confirmed 0 before and after clear. Full primitive observable:
+  `excess_extraction(C, ExcessEps)` per constraint per param value. Coverage analog:
+  if `boltzmann_floor_for/2` takes the override path, perturbing the floor param is
+  shadowed (coverage=0) — same blind-green trap as Surface 1.
+
+  **Surface 3** (`constraint_history/3`, `drl_composition.pl`): NOT MOVED — with diagnostic.
+  Observable = `constraint_history(C, Ctx, Timeline)` → `[state(T, Type), ...]`. Overlay =
+  `narrative_ontology:measurement/5` retract/assertz (dynamic, confirmed). Constraint
+  `civic_eugenic_reading` baseline at T=4: `unknown` (not tangled_rope). Perturbed
+  base_extractiveness T=4 (0.68→0.95): Chi=1.30 > snare_chi_floor=0.66 and ε=0.95 >
+  snare_epsilon_floor=0.46 — both snare thresholds crossed — yet type remains `unknown`.
+  Binding variable: theater_ratio=0.55 at T=4 vs 0.42/0.48 at T=0/T=2; Supp=0.5 fallback
+  at all time points. The piton gate (reading theater_ratio via nb_setval) appears to block
+  at theater=0.55 without completing, leaving a gap where neither piton nor tangled_rope
+  fires. Not-moved is a valid scoping output: observable confirmed, overlay confirmed,
+  wrong metric targeted for this time point. Full primitive: use T=0 or T=2 as perturbation
+  anchor (baseline tangled_rope) OR include theater_ratio as perturbable metric.
+
+  **Reconciliation of prior-session claim**: "boltzmann_floor_override dead-ends at
+  line 453" was correct at Surface-1 granularity (product_site_export never calls
+  excess_extraction or boltzmann_floor_for — the control break holds). At Surface-2
+  granularity it was imprecise: boltzmann_floor_for/2's output IS consumed by
+  excess_extraction/2 and 14+ callers in drift_events.pl, drl_boltzmann_analysis.pl, etc.
+  Both claims are true at their respective surface levels.
+
+- **2026-05-30: 6 authored fields graduated from trace-asserted to grep-witnessed +
+  perturb-confirmed** — All 6 live on Surface 1 (product_site_export → dr_type/3). Path
+  split: extractiveness/suppression/theater_ratio/d_value reach classify_from_metrics/6
+  via argument slots (BaseEps, Supp, TR lookup on C arg, Chi); accessibility_collapse/
+  resistance reach dr_type/3 via integrate_signature_with_modal/3 (signature override
+  layer, called AFTER classify_from_metrics in dr_type/3) — NOT through
+  classify_from_metrics/6 arg slots. 197 denominator confirmed. Per-field type flips
+  pasted in docs/engine_handoff_4.md witness-tier ledger. Key corpus fact: only 2
+  constraints currently get natural_law signature with Sig unbound (as the engine calls
+  it): explanatory_closure_mechanism, state_role_time_collapse. Liveness testing for
+  AC/resistance requires testsets from this narrow set; most naturally-emerging
+  constraints in the corpus get false_natural_law, false_ci_rope, or
+  false_summit_mountain (which fire first). See
+  docs/technical/signature_detection_wiring.md for query gotchas.
+
+- **2026-05-30: Authoring-closure + fabricated-default census (OQ-33 updated)** —
+  Full audit run; all 7 OPEN graduation steps executed. Key corrections to prior claims:
+  (1) D1a (drl_composition.pl:179, Supp=0.5): LOAD-BEARING-WRONG confirmed. Tripwire
+  yields 279/647 temporal rows changed: 219 tangled_rope→snare + 60 unknown→snare, 0→unknown.
+  The plan's instance-reported "443 unknown flips" was WRONG — direction is reversed.
+  snare_suppression_floor=0.60 blocks Supp=0.5 from snare; 50.4% of non-unknown temporal
+  classifications are systematically mis-classified too low (tangled_rope instead of snare).
+  (2) D2 (drl_core.pl:96, Supp=0): DORMANT, not LOAD-BEARING-WRONG. The 32 testsets
+  missing suppression_requirement are _contradictions.pl stubs, excluded by
+  all_corpus_constraints/1 (requires extractiveness metric). Tripwire: 0 changes on 191
+  classified constraints. (3) D20/D21 (boltzmann_compliance.pl:245/251): DORMANT for
+  same reason as D2. (4) D1b (drl_composition.pl:180, BaseX=0.5): LATENT-TRAP confirmed —
+  fallback unreachable via constraint_history (all measurement time points have BaseX data).
+  (5) requires_active_enforcement IS on main classification path (drl_core.pl:371/277/286) —
+  A\P gap CLOSED. Scripts: python/sweeps/tripwire_fabricated_defaults.py.
+  Results: outputs/tripwire_fabricated_defaults_results.json.
+  Audit: outputs/audit_authoring_closure_fabricated_defaults.md. OQ-33 updated.
+
 ## Pipeline Output Manifest Convention
 
 Pipeline output JSONs carry a `manifest` top-level key with provenance information:
@@ -201,7 +327,11 @@ timestamp citable. See `when_apparatus_sharpens_taxonomy.md` §4.1 for context.
 
 ## Architecture Invariants
 
-- All classification routes through classify_from_metrics/6 in drl_core.pl
+- All metric-based classification routes through classify_from_metrics/6 in drl_core.pl.
+  Final type may then be overridden by integrate_signature_with_modal/3 (signature
+  layer, also inside dr_type/3). Two of the 6 authored Surface-1 fields
+  (accessibility_collapse, resistance) feed the signature layer and bypass
+  classify_from_metrics/6 argument slots entirely.
 - config.pl is single source of truth for param/2 facts
 - Dual threshold: both χ AND ε must be checked
 - .tsx artifacts are outputs, not infrastructure
@@ -249,6 +379,22 @@ repo's near future: collapsing the 5 type-stability sweeps onto
 perturb.py — each sweep gets an old-vs-primitive diff before its
 bespoke version is deleted, or the consolidation is faith, not
 fact.
+
+**4. Recap-as-witness substitution.** The turn-end recap and any "done / verified / working /
+complete" statement in prose is a CLAIM, not a witness. A claim is only discharged in the
+turn by its pasted output — the diff, the run, the validation result, the count. When a
+turn reports N edits done, each of the N must carry its own pasted witness in that same
+turn; a recap asserting "N edits done" while only M<N are pasted is the substitution defect
+(observed: a turn recapped "three edits witnessed" with only the third pasted; the two
+asserted-done edits were unwitnessed).
+
+Rule: do not report an edit, fix, or verification as done unless its witness is in the same
+turn. If a witness cannot be produced this turn, label the item OPEN with its graduation
+step — never let the recap's summary stand as the completion record. The operator should
+read any done-claim lacking a same-turn paste as unverified, regardless of the recap.
+
+This is the same defect as produced-but-not-consumed, one layer up: a claim produced
+without the witness that consumes it.
 
 The first two reduce to the same root: **the corpus/codebase you are building for is not the one
 on disk now.** Build naming schemes, linkage rules, and reports to be correct for the

@@ -377,7 +377,7 @@ def main():
     )
     args = parser.parse_args()
 
-    base_dir = Path(__file__).resolve().parent.parent
+    base_dir = Path(__file__).resolve().parents[2]  # repo root (was parent.parent = python/)
     config_path = base_dir / "prolog" / "config.pl"
     prolog_dir = str(base_dir / "prolog")
 

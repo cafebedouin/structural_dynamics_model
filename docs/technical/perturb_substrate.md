@@ -181,3 +181,175 @@ If the count drops further (export < 191), inspect the corpus for testsets missi
 `narrative_ontology:constraint_metric(C, extractiveness, E)` — `base_extractiveness`
 fails without it, and `metric_based_type_indexed` fails, and `dr_type` returns `unknown`,
 which may cause the product site to silently omit the entry.
+
+---
+
+## 5. PRH/EM overlay pattern: abolish+reassert, not retract/asserta
+
+**The mistake:** extending the config-param overlay pattern (retract/asserta on
+`config:param/2`) to `power_role_heuristic/4` and `exit_modulation/2`.
+
+**Why it fails:** these predicates have `_` wildcards in clause heads:
+```prolog
+power_role_heuristic(powerless, _, true,  0.85).
+power_role_heuristic(powerless, _, false, 0.90).
+```
+`retract(constraint_indexing:power_role_heuristic(powerless, _, true, _))` succeeds but
+then `assertz` with a specific value leaves the old `_, false` clause intact. In SWI-Prolog,
+`retract/1` with wildcards in the head retract the FIRST matching clause, not all; the
+remaining clauses stay. The predicate ends up with a mixture of old and new values.
+
+**Correct pattern:** abolish the entire predicate and reassert all clauses, with one value
+changed:
+```prolog
+:- use_module(constraint_indexing).
+:- abolish(constraint_indexing:power_role_heuristic/4).
+:- assertz(constraint_indexing:power_role_heuristic(powerless, _, true,  0.77)).  % perturbed
+:- assertz(constraint_indexing:power_role_heuristic(powerless, _, false, 0.90)).  % unchanged
+:- assertz(constraint_indexing:power_role_heuristic(moderate,  _, true,  0.70)).  % unchanged
+...
+```
+The `_build_prh_overlay` and `_build_em_overlay` functions in `python/sweeps/perturb.py`
+implement this correctly. Check those before writing a new overlay.
+
+**Prerequisite:** `constraint_indexing.pl` must declare the predicate dynamic *before* the
+clause definitions:
+```prolog
+:- dynamic power_role_heuristic/4.
+:- dynamic exit_modulation/2.
+```
+Without this, `abolish` on a static predicate in SWI-Prolog warns or fails. Both
+declarations were added at lines 67–68 (2026-05-29).
+
+**`positional_displacement/2` is different:** it has distinct heads (one per power level,
+no wildcards), so the simple `retract(constraint_indexing:positional_displacement(powerless, _))`
+pattern works. It was already declared `:- dynamic` at line 66.
+
+---
+
+## 6. `x or default` in Python — 0 is falsy, so `0 or 99` = 99
+
+**The mistake:** using `r.get("priority") or 99` to supply a fallback when priority is
+absent.
+
+**Concrete failure:** epsilon params have `priority=0` in `demotion_pass.py` (lower =
+higher priority, so 0 = highest priority). The sort key
+`r.get("priority") or 99` evaluated `0 or 99` = 99 because 0 is falsy in Python.
+Epsilon params sorted LAST in the witness backlog instead of first. The ±10% float batch
+swept all chi and other params before reaching epsilon params; by then the sort order
+appeared normal and the bug wasn't visible until the 4 epsilon params appeared at positions
+165–179.
+
+**Fix:**
+```python
+# WRONG:
+key = r.get("priority") or 99
+
+# CORRECT:
+key = 99 if r.get("priority") is None else r.get("priority")
+```
+
+**General rule:** never use `x or default` when `x = 0` is a valid, meaningful value.
+Python's `or` short-circuits on any falsy value (0, 0.0, "", [], {}, False). Use explicit
+None-check instead.
+
+**In this repo:** the fix is in `demotion_pass.py`'s `run_demotion_pass` sort key (2026-05-30).
+If you add a new priority scheme that starts at 0, use the explicit check.
+
+---
+
+## 7. `fcr_override_enabled=0` produces `unknown` type — load-bearing, not secondary
+
+**The observation:** disabling FCR override (`fcr_override_enabled=0`) causes `dr_type/3`
+to return `unknown` for some contexts in multiple kernels (latin_correctness, sovereign_legitimacy,
+vaccine_mandate_balance, nuclear_impossibility_kernel). These contexts had type
+`tangled_rope` at baseline.
+
+**What this means:** `fcr_override_enabled` is not a secondary reporting feature. It is
+on the `dr_type/3` classification path. When disabled, some classification chains fail
+entirely (no clause succeeds → `dr_type` falls through to `unknown`). The FCR override
+changes which signature predicates fire, which affects what `integrate_signature_with_modal`
+returns. Disabling it doesn't just suppress a label — it breaks the chain for affected
+constraints.
+
+**Implication for code edits:** if you modify `fcr_override_enabled` logic, `cs_pattern_detection.pl`,
+or `drl_core.pl`'s signature integration, run a perturb check at `fcr_override_enabled=0`
+and watch for `unknown` counts. A regression shows as an increase in `unknown` types in the
+product site export. Current witness: `latin_correctness` kernel, cov=0.333, 156 flips at
+val=0 (`outputs/witness_backlog_integer_results.json`).
+
+**This is NOT the same as the product-site coverage issue (§4).** Section 4 documents
+constraints absent from the export due to missing `constraint_metric`. This is constraints
+present in the export with `unknown` type due to classification chain failure. They are
+different bugs with different checks.
+
+---
+
+## 8. Three perturbable surfaces — boltzmann_floor_override is not on the static-type path
+
+**The mistake:** assuming any schema numeric field that looks like a classification parameter
+will produce `fold_survival < 1.0` in a perturb() run.
+
+**Concrete case:** `boltzmann_floor_override` appears in testset files as
+`narrative_ontology:boltzmann_floor_override(constraint_id, 0.12)` and is a numeric field
+in the schema. It looks like it belongs in `_WITNESSED_PARAMS`. It does not.
+
+**Why:** `boltzmann_floor_override` feeds `boltzmann_floor_for/2` →
+`excess_extraction/2` → `boltzmann_compliance.pl`. None of these predicates are called
+from `dr_type/3` or `classify_from_metrics/6`. They are a separate observable: the
+Price of Anarchy "extractive overhead" (ExcessEps = ε − floor). Grep confirms:
+```
+grep -n "boltzmann_compliance\|boltzmann_floor" prolog/drl_core.pl prolog/product_site_export.pl
+→ EXIT 1 (no matches)
+```
+
+**The three surfaces:**
+1. **Static type** (exported by `product_site_export`): fed by `dr_type/3` ←
+   `classify_from_metrics/6`. The 191 engine params + 6 authored data fields are on this path.
+   Perturb() fold_survival measures this surface.
+2. **Excess extraction / PoA** (`boltzmann_compliance.pl:excess_extraction/2`): fed by
+   `boltzmann_floor_override` and `boltzmann_floor_*` config params. Not called from
+   `dr_type/3`. Perturb() will always return fold_survival=1.0 (inert) for these.
+3. **Temporal / drift** (`classify_at_time/4` in `drl_composition.pl`): fed by
+   `narrative_ontology:measurement/5` (time-series ε values) and `interval/3`. Not called
+   by `product_site_export:type_at/3`. Perturb() will always return fold_survival=1.0
+   for `Measurement.value` / `interval.*` because the export doesn't use the time-indexed
+   path.
+
+**Check before adding a param to `_WITNESSED_PARAMS`:** grep that param's predicate name
+against `prolog/drl_core.pl` and `prolog/product_site_export.pl`. If both greps return
+empty, the param is on a different surface and will produce fold_survival=1.0 in every perturb run.
+
+---
+
+## 9. Integer params in config.pl — config_schema.pl is the type authority
+
+**The mistake:** running the ±10% float sweep against params declared as integer-typed in
+`config_schema.pl`. Produces config_schema rejection before classification runs.
+
+**Concrete failure:** `perturb("abductive_enabled", [0.9, 1.0, 1.1])` →
+```
+ERROR: CONFIG ERROR: param(abductive_enabled, 0.9) has wrong type (expected integer)
+```
+The overlay writes `param(abductive_enabled, 0.9)` as a Prolog float; `config_schema.pl`
+validates after corpus load and halts with error. No export produced. Batch records
+`{"error": "export_failed"}` — this is ERRORED_UNTESTED, not inert.
+
+**How to identify integer params:**
+```bash
+grep "^\s*param(" prolog/config.pl | grep -vE ",\s*-?[0-9]+\." | grep -E ",\s*-?[0-9]+"
+```
+19 params as of 2026-05-30: enable flags (0/1) and count thresholds (2–20). The authoritative
+type and range declarations are in `prolog/config_schema.pl` → `param_spec/4`.
+
+**Secondary schema constraint:** enable flags have `oneof([0,1])` in config_schema.pl.
+Integer step val+1=2 also rejects:
+```
+ERROR: CONFIG ERROR: param(abductive_enabled, 2) violates constraint oneof([0,1])
+```
+The valid perturbation domain for enable flags is `[0, 1]`; for count thresholds `[val-1, val, val+1]`.
+
+**Correct sweep:** use `python3 python/sweeps/witness_backlog.py --integer-only`. Results
+in `outputs/witness_backlog_integer_results.json`. Three survivors confirmed 2026-05-30:
+`boltzmann_min_classifications`, `critical_mass_threshold`, `fcr_override_enabled`.
+Remaining 16 witnessed inert (coverage=0 at all valid integer values).

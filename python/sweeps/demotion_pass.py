@@ -24,6 +24,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 PROLOG_DIR = ROOT / "prolog"
+CI_PATH = PROLOG_DIR / "constraint_indexing.pl"
 
 # ---------------------------------------------------------------------------
 # Category constants
@@ -33,6 +34,8 @@ PERTURBED_SURVIVED      = "perturbed-and-survived"
 PERTURBABLE_UNPERTURBED = "perturbable-but-unperturbed"
 REACHABLE_LOCKED        = "reachable-but-locked"
 UNPERTURBABLE           = "unperturbable-by-construction"
+SHADOWED                = "inert-at-current-config (shadowed)"
+ERRORED_UNTESTED        = "errored-untested (float sweep config-rejected; no witness)"
 
 # ---------------------------------------------------------------------------
 # Confirmed governing params (from enhanced_report.py _WITNESSED_PARAMS and
@@ -41,8 +44,10 @@ UNPERTURBABLE           = "unperturbable-by-construction"
 # ---------------------------------------------------------------------------
 
 _WITNESSED: dict[str, dict] = {
-    # snare_epsilon_floor x end_of_life_decision_authority:
-    # boundary at +8.7% (0.46→0.50), 39 flips, coverage=0.167
+    # ── witness_backlog.py batch 2026-05-29 (outputs/witness_backlog_results.json) ──
+    # Only entries with pasted perturb witness. Values: max coverage, max flips across kernels.
+
+    # snare_epsilon_floor x end_of_life_decision_authority (pre-batch):
     "snare_epsilon_floor": {
         "kernels": ["end_of_life_decision_authority"],
         "boundary_pct": 8.7,
@@ -50,20 +55,206 @@ _WITNESSED: dict[str, dict] = {
         "coverage": 0.167,
     },
 
-    # tangled_rope_chi_floor: FINAL-TYPE flips witnessed (naturalized↔tangled_rope).
-    # Flips only on false_ci_rope readings; false_natural_law readings (animal_moral_status
-    # kernel) are covered but locked — coverage>0, fold_survival=1.0. Per-kernel-per-param:
-    # locked where false_natural_law, free where false_ci_rope (OQ-30 confirmed).
-    # Perturb witness 2026-05-29: ±5% from 0.40, 6 affected kernels total.
+    # tangled_rope_chi_floor (pre-batch, ±5% sweep):
     "tangled_rope_chi_floor": {
         "kernels": [
             "ai_risk_governance_priority", "jurisprudential_method_kernel",
             "vaccine_mandate_balance", "sovereign_legitimacy",
             "equal_protection_clause", "woman_female_category",
         ],
-        "boundary_pct": -5.0,  # direction: lower floor exposes naturalized→tangled_rope
-        "flips": 12,            # 3 flips × 4 kernels at 0.38; 6 more at 0.42
-        "coverage": 0.173,      # max coverage: jurisprudential_method_kernel at 0.38
+        "boundary_pct": -5.0,
+        "flips": 12,
+        "coverage": 0.173,
+    },
+
+    # ── ±10% batch survivors (new, 2026-05-29) ──
+
+    "rope_chi_ceiling": {
+        "kernels": ["sovereign_legitimacy"],
+        "boundary_pct": -10.0,  # both directions; sovereign_legitimacy cov=0.197
+        "flips": 20,
+        "coverage": 0.197,
+    },
+    "snare_chi_floor": {
+        "kernels": [
+            "ai_risk_governance_priority", "equal_protection_clause",
+            "honor_settlement_legitimacy", "jurisprudential_method_kernel",
+            "nuclear_impossibility_kernel", "second_amendment_text",
+            "sovereign_legitimacy", "vaccine_mandate_balance", "woman_female_category",
+        ],
+        "boundary_pct": -10.0,  # both directions; max coverage=0.538 (honor_settlement_legitimacy)
+        "flips": 32,            # max flips=32 (vaccine_mandate_balance)
+        "coverage": 0.538,
+    },
+    "tangled_rope_chi_ceil": {
+        "kernels": ["latin_correctness"],
+        "boundary_pct": -10.0,  # 0.9→0.81; cov=0.167, 39 flips
+        "flips": 39,
+        "coverage": 0.167,
+    },
+    "em_constrained": {
+        "kernels": ["ai_risk_governance_priority", "jurisprudential_method_kernel", "vaccine_mandate_balance"],
+        "boundary_pct": 10.0,  # +10% (0.02→0.022); cov=0.006, 3 flips each kernel
+        "flips": 3,
+        "coverage": 0.006,
+    },
+    "em_trapped": {
+        "kernels": ["equal_protection_clause", "nuclear_impossibility_kernel",
+                    "sovereign_legitimacy", "vaccine_mandate_balance", "woman_female_category"],
+        "boundary_pct": -10.0,  # 0.05→0.045; cov=0.010, 3-4 flips per kernel
+        "flips": 4,
+        "coverage": 0.010,
+    },
+    "piton_theater_floor": {
+        "kernels": ["latin_correctness"],
+        "boundary_pct": -10.0,  # 0.7→0.63; cov=0.083, fold_survival=0.917
+        "flips": 7,              # estimated from 0.917 × 84 contexts
+        "coverage": 0.083,
+    },
+    "prh_analytical____": {
+        "kernels": ["ai_risk_governance_priority", "equal_protection_clause", "honor_settlement_legitimacy",
+                    "jurisprudential_method_kernel", "latin_correctness", "legitimacy_of_imposed_practice",
+                    "nuclear_impossibility_kernel", "second_amendment_text", "sovereign_legitimacy",
+                    "vaccine_mandate_balance", "woman_female_category"],
+        "boundary_pct": -10.0,  # 0.72→0.648; ai_risk cov=0.028
+        "flips": 8,
+        "coverage": 0.028,
+    },
+    "prh_institutional_true__": {
+        "kernels": ["ai_risk_governance_priority", "equal_protection_clause",
+                    "jurisprudential_method_kernel", "legitimacy_of_imposed_practice",
+                    "nuclear_impossibility_kernel", "second_amendment_text",
+                    "sovereign_legitimacy", "vaccine_mandate_balance", "woman_female_category"],
+        "boundary_pct": -10.0,  # 0.15→0.135; cov=0.013
+        "flips": 4,
+        "coverage": 0.013,
+    },
+    "prh_moderate___true": {
+        "kernels": ["ai_risk_governance_priority", "equal_protection_clause", "honor_settlement_legitimacy",
+                    "jurisprudential_method_kernel", "latin_correctness", "legitimacy_of_imposed_practice",
+                    "nuclear_impossibility_kernel", "second_amendment_text", "sovereign_legitimacy",
+                    "vaccine_mandate_balance", "woman_female_category"],
+        "boundary_pct": -10.0,  # 0.7→0.63; cov=0.019
+        "flips": 6,
+        "coverage": 0.019,
+    },
+    "prh_organized___true": {
+        "kernels": ["ai_risk_governance_priority", "equal_protection_clause", "jurisprudential_method_kernel",
+                    "sovereign_legitimacy", "vaccine_mandate_balance", "woman_female_category"],
+        "boundary_pct": -10.0,  # 0.45→0.405; cov=0.006
+        "flips": 3,
+        "coverage": 0.006,
+    },
+    "prh_powerless___true": {
+        "kernels": ["honor_settlement_legitimacy", "sovereign_legitimacy", "vaccine_mandate_balance"],
+        "boundary_pct": -10.0,  # 0.85→0.765; cov=0.064 (honor_settlement)
+        "flips": 10,
+        "coverage": 0.064,
+    },
+    "scope_modifier_global": {
+        "kernels": ["ai_risk_governance_priority", "equal_protection_clause", "honor_settlement_legitimacy",
+                    "jurisprudential_method_kernel", "latin_correctness", "nuclear_impossibility_kernel",
+                    "second_amendment_text", "sovereign_legitimacy", "vaccine_mandate_balance",
+                    "woman_female_category"],
+        "boundary_pct": -10.0,  # 1.2→1.08; cov=0.006 (ai_risk); +10% also flips some
+        "flips": 3,
+        "coverage": 0.006,
+    },
+    "scope_modifier_local": {
+        "kernels": ["equal_protection_clause", "honor_settlement_legitimacy", "latin_correctness",
+                    "legitimacy_of_imposed_practice", "nuclear_impossibility_kernel",
+                    "second_amendment_text", "sovereign_legitimacy", "vaccine_mandate_balance",
+                    "woman_female_category"],
+        "boundary_pct": -10.0,  # 0.8→0.72; cov=0.010 (equal_protection)
+        "flips": 3,
+        "coverage": 0.010,
+    },
+    "scope_modifier_national": {
+        "kernels": ["ai_risk_governance_priority", "equal_protection_clause", "honor_settlement_legitimacy",
+                    "jurisprudential_method_kernel", "nuclear_impossibility_kernel",
+                    "second_amendment_text", "sovereign_legitimacy", "vaccine_mandate_balance",
+                    "woman_female_category"],
+        "boundary_pct": -10.0,  # 1.0→0.9; cov=0.034 (ai_risk)
+        "flips": 8,
+        "coverage": 0.034,
+    },
+    "sigmoid_lower": {
+        "kernels": ["ai_risk_governance_priority", "equal_protection_clause", "honor_settlement_legitimacy",
+                    "jurisprudential_method_kernel", "legitimacy_of_imposed_practice",
+                    "nuclear_impossibility_kernel", "second_amendment_text",
+                    "sovereign_legitimacy", "vaccine_mandate_balance", "woman_female_category"],
+        "boundary_pct": -10.0,  # -0.2→-0.22; cov=0.028 (ai_risk)
+        "flips": 8,
+        "coverage": 0.028,
+    },
+    "sigmoid_midpoint": {
+        "kernels": ["ai_risk_governance_priority", "animal_moral_status", "competence_exercise_validity",
+                    "equal_protection_clause", "honor_settlement_legitimacy", "jurisprudential_method_kernel",
+                    "kodashim_corpus", "latin_correctness", "legitimacy_of_imposed_practice",
+                    "market_as_natural_default", "nuclear_impossibility_kernel", "second_amendment_text",
+                    "sovereign_legitimacy", "vaccine_mandate_balance", "woman_female_category"],
+        "boundary_pct": -10.0,  # 0.5→0.45; max cov=0.094 (ai_risk)
+        "flips": 30,             # estimated max (ai_risk at 0.906 fold_survival over ~300 contexts)
+        "coverage": 0.094,
+    },
+    "sigmoid_steepness": {
+        "kernels": ["ai_risk_governance_priority", "equal_protection_clause", "honor_settlement_legitimacy",
+                    "jurisprudential_method_kernel", "legitimacy_of_imposed_practice",
+                    "nuclear_impossibility_kernel", "second_amendment_text",
+                    "sovereign_legitimacy", "vaccine_mandate_balance", "woman_female_category"],
+        "boundary_pct": -10.0,  # 6.0→5.4; cov=0.053
+        "flips": 16,
+        "coverage": 0.053,
+    },
+    "sigmoid_upper": {
+        "kernels": ["ai_risk_governance_priority", "equal_protection_clause", "honor_settlement_legitimacy",
+                    "jurisprudential_method_kernel", "latin_correctness", "legitimacy_of_imposed_practice",
+                    "nuclear_impossibility_kernel", "second_amendment_text",
+                    "sovereign_legitimacy", "vaccine_mandate_balance", "woman_female_category"],
+        "boundary_pct": -10.0,  # 1.5→1.35; cov=0.053
+        "flips": 16,
+        "coverage": 0.053,
+    },
+    "snare_suppression_floor": {
+        "kernels": ["end_of_life_decision_authority", "honor_settlement_legitimacy",
+                    "jurisprudential_method_kernel", "latin_correctness", "second_amendment_text",
+                    "vaccine_mandate_balance"],
+        "boundary_pct": 10.0,   # 0.6→0.66; latin_correctness cov=0.083, fold_survival=0.917
+        "flips": 7,
+        "coverage": 0.083,
+    },
+
+    # ── integer-step batch 2026-05-29 (outputs/witness_backlog_integer_results.json) ──
+
+    # boltzmann_min_classifications: +1 (3→4) flips rope→scaffold in kodashim_corpus.
+    # Mechanism: raising the minimum required Boltzmann classifications triggers
+    # coordination_dead (or similar) path, shifting scaffold-eligible constraints.
+    "boltzmann_min_classifications": {
+        "kernels": ["kodashim_corpus"],
+        "boundary_pct": 33.3,  # +1/3 (3→4); cov=0.333, fold_survival=0.667, 156 flips
+        "flips": 156,
+        "coverage": 0.333,
+    },
+    # critical_mass_threshold: both directions (−1 and +1) produce flips across 8+ kernels.
+    # Bidirectional boundary — lowers at 2 (tangled_rope→naturalized) and raises at 4 (naturalized→snare).
+    "critical_mass_threshold": {
+        "kernels": ["end_of_life_decision_authority", "equal_protection_clause",
+                    "honor_settlement_legitimacy", "jurisprudential_method_kernel",
+                    "nuclear_impossibility_kernel", "sovereign_legitimacy",
+                    "vaccine_mandate_balance", "woman_female_category"],
+        "boundary_pct": -33.3,  # both directions; max cov=0.250 (honor, val=2), fs=0.750
+        "flips": 87,
+        "coverage": 0.250,
+    },
+    # fcr_override_enabled: disabling (1→0) produces tangled_rope→scaffold in multiple kernels.
+    # Large flips (cov=0.333–0.500). Some → unknown (classification failure without FCR override).
+    # Note: tangled_rope→unknown means fcr_override is load-bearing for classification path.
+    "fcr_override_enabled": {
+        "kernels": ["latin_correctness", "nuclear_impossibility_kernel", "reformation_event_boundary",
+                    "sovereign_legitimacy", "statute_of_anne_ip_foundation", "vaccine_mandate_balance"],
+        "boundary_pct": -100.0,  # disable (1→0); max cov=0.500 (reformation_event_boundary, statute_of_anne)
+        "flips": 156,
+        "coverage": 0.500,
     },
 }
 
@@ -100,7 +291,70 @@ _GENUINELY_UNPERTURBABLE: dict[str, str] = {
     "scope_modifier_regional":    "coverage=0 on all 38 kernels (scope excluded from product site)",
     "scope_modifier_continental": "coverage=0 on all 38 kernels (scope excluded from product site)",
     "scope_modifier_universal":   "coverage=0 on all 38 kernels (scope excluded from product site)",
+
+    # Integer-typed params: ±1 integer-step sweep 2026-05-29, coverage=0 at all valid values.
+    # Enable flags: valid range [0,1] by oneof constraint — val=2 schema-rejected, not untested.
+    # Count thresholds: valid range [val-1, val, val+1] ran clean (no range constraint hit).
+    # Witness: outputs/witness_backlog_integer_results.json.
+    "abductive_enabled":             "coverage=0 at valid integer range [0,1] (abductive disabled → no type change)",
+    "cohomology_enabled":            "coverage=0 at valid integer range [0,1] (cohomology disabled → no type change)",
+    "fpn_enabled":                   "coverage=0 at valid integer range [0,1] (FPN disabled → no type change)",
+    "maxent_enabled":                "coverage=0 at valid integer range [0,1] (MaxEnt disabled → no type change)",
+    "network_drift_hub_escalation":  "coverage=0 at valid integer range [0,1]",
+    "post_synthesis_enabled":        "coverage=0 at valid integer range [0,1]",
+    "trajectory_enabled":            "coverage=0 at valid integer range [0,1]",
+    "abductive_hub_conflict_h1_threshold": "coverage=0 at [3,4,5] (integer ±1)",
+    "abductive_stress_convergence_min":    "coverage=0 at [3,4,5] (integer ±1)",
+    "constructed_beneficiary_min":         "coverage=0 at [1,2,3] (integer ±1)",
+    "fpn_max_iterations":                  "coverage=0 at [19,20,21] (integer ±1)",
+    "network_cascade_count_threshold":     "coverage=0 at [2,3,4] (integer ±1)",
+    "network_contamination_risk_threshold":"coverage=0 at [1,2,3] (integer ±1)",
+    "network_hub_degree_threshold":        "coverage=0 at [2,3,4] (integer ±1)",
+    "network_shared_agent_min":            "coverage=0 at [1,2] (val=0 schema-rejected; ±1 above baseline clean)",
+    "post_synthesis_green_trigger_threshold": "coverage=0 at [1,2,3] (integer ±1)",
 }
+
+# ---------------------------------------------------------------------------
+# ERRORED_UNTESTED: params whose config.pl value has no decimal point.
+# The ±10% float sweep generates values like 0.9 or 1.1 which fail Prolog
+# config_schema type check ("expected integer") — error from 2026-05-29 batch:
+#   ERROR: CONFIG ERROR: param(abductive_enabled, 0.9) has wrong type (expected integer)
+# These are NOT unperturbable-by-construction (that needs witnessed coverage=0).
+# These are NOT inert (they produced no run, not a clean inert run).
+# They are untested. The ±1 integer-step sweep witnesses them (run:
+#   python3 python/sweeps/witness_backlog.py --integer-only ).
+# 19 params as of 2026-05-29 (grep: grep "^\s*param(" prolog/config.pl |
+#   grep -vE ",\s*-?[0-9]+\." | grep -E ",\s*-?[0-9]+").
+_ERRORED_UNTESTED: dict[str, str] = {
+    # All 19 integer-typed params have now been swept via ±1 integer steps
+    # (witness_backlog.py --integer-only, 2026-05-29).
+    # 3 survived (boltzmann_min_classifications, critical_mass_threshold, fcr_override_enabled)
+    # → moved to _WITNESSED above.
+    # 16 were inert (coverage=0 at all valid integer values) → moved to _GENUINELY_UNPERTURBABLE
+    # below. The val+1 errors for enable flags (oneof([0,1]) schema constraint) are structurally
+    # invalid domain, not untested. ERRORED_UNTESTED is now empty.
+}
+
+# ---------------------------------------------------------------------------
+# SHADOWED: on declared path, inert at current config due to a flag/profile.
+# Coverage=0 expected; batch confirms. Must NOT be labeled unperturbable-by-
+# construction — they are perturbable if the blocking flag changes.
+# ---------------------------------------------------------------------------
+
+_SHADOWED: dict[str, str] = {
+    # positional_displacement/2 × 6 power levels
+    # Shadowing mechanism: cognitive_displacement_profile=uniform (config.pl).
+    # When profile=uniform, resolve_displacement uses global cognitive_displacement
+    # param instead of per-position positional_displacement. If profile is changed
+    # to 'positional', these become live. Batch coverage=0 confirms shadowed, not dead.
+    "pd_powerless":     "positional_displacement path; shadowed by cognitive_displacement_profile=uniform",
+    "pd_moderate":      "positional_displacement path; shadowed by cognitive_displacement_profile=uniform",
+    "pd_powerful":      "positional_displacement path; shadowed by cognitive_displacement_profile=uniform",
+    "pd_organized":     "positional_displacement path; shadowed by cognitive_displacement_profile=uniform",
+    "pd_institutional": "positional_displacement path; shadowed by cognitive_displacement_profile=uniform",
+    "pd_analytical":    "positional_displacement path; shadowed by cognitive_displacement_profile=uniform",
+}
+
 
 # ---------------------------------------------------------------------------
 # Param loader
@@ -112,6 +366,38 @@ def load_numeric_params(config_pl: Path) -> dict[str, float]:
     pattern = re.compile(r"^\s*param\(\s*(\w+)\s*,\s*(-?\d+(?:\.\d+)?)\s*\)\.",
                          re.MULTILINE)
     return {m.group(1): float(m.group(2)) for m in pattern.finditer(text)}
+
+
+def load_supplementary_params(ci_path: Path) -> dict[str, float]:
+    """Read the 23 numeric declarations in constraint_indexing.pl.
+
+    Returns {param_key: value} using the same key convention as perturb.py:
+      PRH: prh_{power}_{arg2}_{arg3}
+      EM:  em_{exit_option}
+      PD:  pd_{power}  (SHADOWED — cognitive_displacement_profile=uniform)
+    """
+    text = ci_path.read_text(encoding="utf-8")
+    result: dict[str, float] = {}
+    prh_pat = re.compile(
+        r"^power_role_heuristic\(\s*(\w+)\s*,\s*(\w+|_)\s*,\s*(\w+|_)\s*,\s*(-?\d+(?:\.\d+)?)\s*\)\.",
+        re.MULTILINE,
+    )
+    for m in prh_pat.finditer(text):
+        key = f"prh_{m.group(1)}_{m.group(2)}_{m.group(3)}"
+        result[key] = float(m.group(4))
+    em_pat = re.compile(
+        r"^exit_modulation\(\s*(\w+)\s*,\s*(-?\d+(?:\.\d+)?)\s*\)\.",
+        re.MULTILINE,
+    )
+    for m in em_pat.finditer(text):
+        result[f"em_{m.group(1)}"] = float(m.group(2))
+    pd_pat = re.compile(
+        r"^positional_displacement\(\s*(\w+)\s*,\s*(-?\d+(?:\.\d+)?)\s*\)\.",
+        re.MULTILINE,
+    )
+    for m in pd_pat.finditer(text):
+        result[f"pd_{m.group(1)}"] = float(m.group(2))
+    return result
 
 
 def load_kernel_ids(testsets_dir: Path) -> set[str]:
@@ -165,12 +451,24 @@ def _priority(param: str) -> int:
 
 def run_demotion_pass(config_pl: Path, testsets_dir: Path) -> list[dict]:
     params = load_numeric_params(config_pl)
+    supp   = load_supplementary_params(CI_PATH)
+    all_params = {**params, **supp}  # 168 + 23 = 191
     kernel_ids = load_kernel_ids(testsets_dir)
 
     rows: list[dict] = []
 
-    for param, value in sorted(params.items()):
-        if param in _GENUINELY_UNPERTURBABLE:
+    for param, value in sorted(all_params.items()):
+        if param in _SHADOWED:
+            category = SHADOWED
+            reason = _SHADOWED[param]
+            priority = None
+            kernel_coverage = None
+        elif param in _ERRORED_UNTESTED:
+            category = ERRORED_UNTESTED
+            reason = _ERRORED_UNTESTED[param]
+            priority = None
+            kernel_coverage = None
+        elif param in _GENUINELY_UNPERTURBABLE:
             category = UNPERTURBABLE
             reason = _GENUINELY_UNPERTURBABLE[param]
             priority = None
@@ -204,20 +502,27 @@ def run_demotion_pass(config_pl: Path, testsets_dir: Path) -> list[dict]:
             "instrument": "kernel",
         })
 
-    # Sort: unperturbable first (settled), reachable-locked next (settled),
-    # then survived (settled), then backlog by priority
+    # Sort: shadowed + unperturbable + reachable-locked (settled), survived, then backlog
     _cat_order = {
-        UNPERTURBABLE: 0,
-        REACHABLE_LOCKED: 1,
-        PERTURBED_SURVIVED: 2,
-        PERTURBABLE_UNPERTURBED: 3,
+        SHADOWED: 0,
+        ERRORED_UNTESTED: 1,
+        UNPERTURBABLE: 2,
+        REACHABLE_LOCKED: 3,
+        PERTURBED_SURVIVED: 4,
+        PERTURBABLE_UNPERTURBED: 5,
     }
-    rows.sort(key=lambda r: (_cat_order[r["category"]], r.get("priority") or 99, r["param"]))
+    rows.sort(key=lambda r: (
+        _cat_order[r["category"]],
+        99 if r.get("priority") is None else r.get("priority"),  # None=settled, 0=epsilon>1=chi>2=other
+        r["param"],
+    ))
     return rows
 
 
 def _summarize(rows: list[dict], kernel_ids: set[str], no_kernel: list[dict]) -> None:
     counts = {
+        SHADOWED: 0,
+        ERRORED_UNTESTED: 0,
         PERTURBED_SURVIVED: 0,
         PERTURBABLE_UNPERTURBED: 0,
         REACHABLE_LOCKED: 0,
@@ -226,8 +531,12 @@ def _summarize(rows: list[dict], kernel_ids: set[str], no_kernel: list[dict]) ->
     for r in rows:
         counts[r["category"]] += 1
 
-    print(f"\nDemotion pass: {len(rows)} numeric params, {len(kernel_ids)} kernels")
+    print(f"\nDemotion pass: {len(rows)} numeric params (168 config + 23 supplementary), {len(kernel_ids)} kernels")
     print(f"  (instrument: kernel — all counts relative to kernel instrument)")
+    print(f"  {SHADOWED}:  {counts[SHADOWED]}")
+    print(f"    (on declared path but blocked by current config flag; coverage=0 expected)")
+    print(f"  {ERRORED_UNTESTED}: {counts[ERRORED_UNTESTED]}")
+    print(f"    (float ±10% config-rejected; NO WITNESS EXISTS — not inert, not swept)")
     print(f"  {UNPERTURBABLE}:  {counts[UNPERTURBABLE]}")
     print(f"  {REACHABLE_LOCKED}:         {counts[REACHABLE_LOCKED]}")
     print(f"  {PERTURBED_SURVIVED}:     {counts[PERTURBED_SURVIVED]}")

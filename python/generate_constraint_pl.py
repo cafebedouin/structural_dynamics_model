@@ -655,6 +655,7 @@ def generate_pl(data):
         # Group by metric for comments
         tr_measurements = [m for m in measurements if m["metric"] == "theater_ratio"]
         be_measurements = [m for m in measurements if m["metric"] == "base_extractiveness"]
+        sr_measurements = [m for m in measurements if m["metric"] == "suppression_requirement"]
 
         if tr_measurements:
             emit("% Theater ratio over time")
@@ -668,6 +669,13 @@ def generate_pl(data):
             for m in be_measurements:
                 mid = m.get("id_override", _measurement_id(meas_prefix, m["metric"], m["time_point"]))
                 emit(f"narrative_ontology:measurement({mid}, {cid}, base_extractiveness, {m['time_point']}, {m['value']}).")
+            emit()
+
+        if sr_measurements:
+            emit("% Suppression requirement over time")
+            for m in sr_measurements:
+                mid = m.get("id_override", _measurement_id(meas_prefix, m["metric"], m["time_point"]))
+                emit(f"narrative_ontology:measurement({mid}, {cid}, suppression_requirement, {m['time_point']}, {m['value']}).")
             emit()
     emit()
 

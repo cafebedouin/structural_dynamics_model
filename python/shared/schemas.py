@@ -97,6 +97,15 @@ class PipelineConstraint:
     # --- Post-synthesis divergence flags (T12) ---
     post_synthesis_flags: list = field(default_factory=list)  # [{flag_type, details}]
 
+    # --- Commitment system UID-keyed fields (always written by json_report.pl) ---
+    cs_instance_count: int = 0                    # 0 when no CS UID registered for this constraint
+    cs_drift_terminal: str | None = None          # null when no drift trajectory
+    cs_axiom_foreclosed: str | None = None        # null when no axiom foreclosed
+    cs_drift_unacknowledged: bool = False         # false when no unacknowledged drift
+
+    # --- Temporal trajectory (absent/null for constraints without measurement/5 series) ---
+    drift_trajectory: dict | None = None          # null/absent when no measurement data
+
     # --- Always nullable ---
     resistance: float | None = None               # null for all current constraints
     resolution_strategy: str | None = None        # deferred feature, always null
@@ -122,15 +131,15 @@ class EnrichedConstraint(PipelineConstraint):
     # --- Raw rival ---
     raw_rival_prob: float | None = None           # rival prob from raw_maxent_probs
 
-    # --- Coalition (always set, never None) ---
-    coalition_type: str = "other"                 # classify_coalition() result
+    # --- Coalition (None when orbit_data.json absent; "other" when present but cid absent) ---
+    coalition_type: str | None = None             # classify_coalition() result, or None if file load failed
 
     # --- Tangled rope only (None for non-tangled_rope) ---
     tangled_psi: float | None = None              # psi metric
     tangled_band: str | None = None               # "rope_leaning" | "genuinely_tangled" | "snare_leaning"
 
-    # --- Abductive (always set, defaults to []) ---
-    abductive_triggers: list = field(default_factory=list)
+    # --- Abductive ([] when file loaded but no triggers; None when file absent) ---
+    abductive_triggers: list | None = None
 
     # --- Game theory (None when constraint absent from game-theory JSONs) ---
     nash_distance_structural: int | None = None       # 0-3, structural Nash distance
@@ -217,6 +226,13 @@ PIPELINE_FIELDS = [
     ("cs_pattern",              str,          True),   # null when cs_structure absent
     ("cs_pattern_signals",      list,         False),  # [] when cs_structure absent
     ("cs_verdicts",             list,         False),  # [] when no verdicts fired
+    # --- Commitment system UID-keyed fields ---
+    ("cs_instance_count",       int,          False),  # 0 when no CS UID
+    ("cs_drift_terminal",       str,          True),   # null when no drift trajectory
+    ("cs_axiom_foreclosed",     str,          True),   # null when no axiom foreclosed
+    ("cs_drift_unacknowledged", bool,         False),  # false when no unacknowledged drift
+    # --- Temporal trajectory ---
+    ("drift_trajectory",        dict,         True),   # null/absent when no measurement/5 series
 ]
 
 ENRICHED_EXTRA_FIELDS = [
@@ -228,10 +244,10 @@ ENRICHED_EXTRA_FIELDS = [
     ("confidence_band",     str,         True),
     ("boundary",            str,         True),
     ("raw_rival_prob",      (int, float), True),
-    ("coalition_type",      str,         False),
+    ("coalition_type",      str,         True),   # None when orbit_data.json absent
     ("tangled_psi",         (int, float), True),
     ("tangled_band",        str,         True),
-    ("abductive_triggers",  list,        False),
+    ("abductive_triggers",  list,        True),   # None when abductive_data.json absent
     # --- Husk metrics (temporal EP decay analysis) ---
     ("husk_metrics",        dict,        True),
     # --- Game theory ---
@@ -257,7 +273,10 @@ def _check_field(entry, field_name, expected_type, nullable, cid):
     """Check presence and type of a single field.  Returns error list."""
     errors = []
     if field_name not in entry:
-        errors.append(f"[{cid}] missing required field: {field_name}")
+        # nullable fields may be absent entirely (key not in entry) OR present-but-null.
+        # drift_trajectory is the canonical case: absent when no measurement/5 series.
+        if not nullable:
+            errors.append(f"[{cid}] missing required field: {field_name}")
         return errors
 
     value = entry[field_name]
@@ -669,6 +688,9 @@ SIDECAR_FIELDS = [
     ("mandatrophy_gap",       dict,         True),
     ("structural_signature",  str,          True),
     ("purity",                dict,         True),
+    # Fields added by enhanced_report.py stability band and husk phases
+    ("stability_band",        dict,         True),  # null when no kernel linkage
+    ("husk_metrics",          dict,         True),  # null when husk phase not run
 ]
 
 _SIDECAR_VERDICTS = {"GREEN", "YELLOW", "RED", "UNKNOWN"}
@@ -779,5 +801,13 @@ def validate_report_sidecar(data):
                 for k in ("flag_type", "details"):
                     if k not in flag:
                         errors.append(f"[{cid}] post_synthesis_flags[{i}] missing '{k}'")
+
+    # Unexpected fields (warn only — same discipline as pipeline/enriched validators)
+    sidecar_field_names = {f[0] for f in SIDECAR_FIELDS}
+    unexpected = set(data.keys()) - sidecar_field_names
+    if unexpected:
+        print(f"Schema drift warnings (sidecar {cid}):", file=sys.stderr)
+        for f in sorted(unexpected):
+            print(f"  [WARN] [{cid}] sidecar unexpected field: {f}", file=sys.stderr)
 
     return errors
