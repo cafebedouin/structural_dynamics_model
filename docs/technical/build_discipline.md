@@ -91,6 +91,28 @@ find . -name "*.py" -not -path "*/archive*" -not -path "*/node_modules/*" \
 grep -rhoE "^:- module\([a-z0-9_]+" prolog --include=*.pl | sort | uniq -d
 ```
 
+**Sub-case — self-description fork (a comment vs. its own code's behavior).** The derived copy need
+not be a separate file. A comment, docstring, or adjacent note that *describes the behavior of the
+code it sits next to* is a derived copy too, and forks the same way when the code changes and the
+description doesn't. **Instance (2026-05-31):** after B4 stripped the mountain
+`accessibility_collapse`/`resistance` thresholds from the schema gate, the emit site in
+`generate_constraint_pl.py` still carries `% --- NL Profile Metrics (required for mountain
+constraints) ---`. The comment says *required* when the schema no longer gates on it — and a stale
+"required" comment is precisely what would mislead the next editor of that emit site into thinking
+the gate still exists. This is the silent fork one layer in: the file's self-description forked from
+the file's behavior. (Same disease as a doc forking from the code it documents — e.g.
+`generator_emission_map.md` vs `generate_constraint_pl.py` — just at comment range instead of file
+range.)
+
+**Triage — keep one-liners out of the OQ ledger.** Not every fork is OQ-weight. A trivial,
+self-contained, fix-in-place cleanup (a stale comment, a renamed local) does **not** earn a tracked
+OQ in `ISSUES.md`: that accumulates ceremony for a one-liner and dilutes the ledger's meaning
+("unresolved engine-level question requiring a decision, measurement, or cross-file coordination").
+File it instead as a *tiny cleanup with a disposition* — **fix it in the same change that next
+touches that file**, where the editor is already in context and the fix is free. The disposition
+*is* the filing; there is no tracking row to reconcile later. The stale-comment instance above is
+filed exactly this way: fix on the next edit of `generate_constraint_pl.py`, not as a standing item.
+
 ---
 
 ## Pattern 3 — Bound-probe bypasses clause-order (query-binding-bypasses-cut)
@@ -247,7 +269,8 @@ missing with measured. Pattern 4 manufactures a number; Pattern 5 manufactures a
 predicate. Pattern 4's tell is a catch-all clause binding a constant; Pattern 5's tell is a
 comparison or quantifier whose driving table is empty in the corpus.
 
-**Live instance (OQ-43, 2026-05-31, NL beneficiary gate):** `natural_law_signature`'s
+**Worked instance (OQ-43, 2026-05-31, NL beneficiary gate — the gate itself was RESOLVED by Commit
+B1; see closing note):** `natural_law_signature`'s
 `BeneficiaryCount == 0` (`signature_detection.pl:295`) reads `count_power_beneficiaries`,
 which joins `affects_constraint × intent_power_change`. `intent_power_change` is empty
 corpus-wide (**0 facts** on testsets_3000), so `BeneficiaryCount == 0` holds for *every*
@@ -258,6 +281,14 @@ is **0/404 by cascade construction**. The 404 NL certifications currently mean "
 **authored**," not "no beneficiary **exists**." Same class: `data_verification`'s
 `forall(intent_beneficiary_class, intent_power_change)` is vacuously satisfied corpus-wide, and
 `get_metric_average:160` returns the `0.5` default for any metric with no rows.
+
+**RESOLVED 2026-05-31 (Commit B1) — the NL-gate member of this class:** `count_power_beneficiaries`
+was repointed to read the authored, populated `constraint_beneficiary` table (1237 facts live)
+instead of the empty `intent_power_change` join, so `BeneficiaryCount == 0` is now a checked
+condition over a non-empty table (authored-zero), not a pass-by-absence; live NL certifications
+dropped 5→2 (3 constraints with authored beneficiaries correctly declined). This is the
+"author/repoint to the populated table" resolution below. The `data_verification` `forall` and
+`get_metric_average` siblings remain open (OQ-44); the instance is kept here as the worked example.
 
 **Diagnostic:** for any gate of the form `Count == 0`, `=< Threshold` over a `findall`, or
 `forall(...)`, check whether the driving table is *non-empty for the corpus*. If the table is

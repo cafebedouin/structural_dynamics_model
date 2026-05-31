@@ -73,7 +73,7 @@ before the gate that uses this field."
 
 ---
 
-## 3. `false_summit_mountain` uses `constraint_beneficiary/2` facts; `natural_law_signature` uses `count_power_beneficiaries/2` — they are not equivalent
+## 3. `false_summit_mountain` and `natural_law_signature` beneficiary sources — UNIFIED 2026-05-31 (Commit B1): both now read `constraint_beneficiary/2`
 
 **`false_summit_mountain` gate** (`signature_detection.pl:1208`):
 
@@ -90,20 +90,23 @@ Fires when at least one `constraint_beneficiary/2` fact exists for C.
 BeneficiaryCount == 0,
 ```
 
-Where `BeneficiaryCount` comes from `count_power_beneficiaries/2`, which counts classes
-with `intent_power_change(Interval, Class, Delta)` where Delta > 0.1, found via
-`affects_constraint(Interval, C)`.
+**RESOLVED 2026-05-31 (Commit B1 / OQ-43):** `count_power_beneficiaries/2` was repointed from the
+empty `intent_power_change` join to the authored `constraint_beneficiary` table, so the two gates now
+read the **same** source. The divergence described below no longer occurs; the section is retained as
+history.
 
-**The gap:** a constraint with `constraint_beneficiary` facts but NO `intent_power_change`
-facts (or no interval with Delta > 0.1) has `BeneficiaryCount = 0` (passes the
-natural_law BC gate) but `Beneficiaries \= []` (triggers false_summit_mountain). The
-natural_law conditions are all satisfied, but false_summit_mountain fires first.
+*Now (post-B1):* `count_power_beneficiaries(C, N)` = `findall(B, constraint_beneficiary(C, B), Bs),
+sort, length`. So `disparity_as_depth_signal` (3 `constraint_beneficiary` facts) yields
+`BeneficiaryCount = 3`, failing `BeneficiaryCount == 0` directly — it can no longer pass the NL gate
+vacuously. The NL gate now certifies only constraints with **zero authored beneficiaries**, which is
+exactly what `false_summit_mountain` filters on; the two are consistent. (Live NL certifications
+dropped 5→2 when this landed: the 3 declined were constraints with authored asymmetric beneficiaries.)
 
-**Concrete case:** `disparity_as_depth_signal` has 3 `constraint_beneficiary` facts and
-no `intent_power_change` facts → BeneficiaryCount=0, Beneficiaries=[3 items] →
-passes natural_law gate but gets false_summit_mountain.
-
-**Implication for testset authoring:** to get `natural_law` signature (not
-false_summit_mountain), a constraint must have zero `constraint_beneficiary` facts, OR
-the false_summit_mountain mountain-metric preconditions must fail (BaseEps >
-mountain_extractiveness_max or Supp > mountain_suppression_ceiling).
+*Historical (pre-B1) — the gap this section documented:* `BeneficiaryCount` came from
+`count_power_beneficiaries/2`, which counted classes with `intent_power_change(Interval, Class, Delta)`
+(Delta > 0.1) via `affects_constraint(Interval, C)`. `intent_power_change` is empty corpus-wide
+(0/0 both corpora), so `BeneficiaryCount` was 0 for **every** constraint by absence — a vacuous pass.
+A constraint with `constraint_beneficiary` facts but no `intent_power_change` (e.g.
+`disparity_as_depth_signal`) passed the natural_law BC gate while `Beneficiaries \= []` triggered
+false_summit_mountain, so FSM (checked first in the cascade) fired and the NL pass was masked. B1
+removed the vacuity by reading the authored table directly.
