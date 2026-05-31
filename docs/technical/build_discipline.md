@@ -206,6 +206,18 @@ reached in the actual corpus. If it fires on more than a handful of constraints,
 fabrication, not a safety net. Tripwire it: replace the constant with an obviously
 out-of-range value and count the flips.
 
+**Census blast radius vs measured blast radius.** The flip count is the *census* blast radius —
+the visible wrong *outputs*. It systematically undercounts exposure, because it only sees
+constraints whose final type *changed*; every value computed on the bad input but not pushed across
+a classification boundary is equally contaminated and invisible to a flip count. So measure two
+numbers, not one: the census (outputs that changed) and the *input-exposure* (rows computed on the
+fallback at all). The exposure is the real blast radius and **can be much larger than the census**,
+because most contaminated inputs may land on the same side of a boundary and never flip. For the
+OQ-33 gap the input-exposure was **268 rows, ~99% of the path**, against a census of **279 flips** —
+comparable here, but they are not the same quantity and in general diverge by orders of magnitude.
+**Carry this into D4 (scalar-vs-temporal divergence):** it may look small by flip-count and be large
+by input-exposure — report the exposure denominator, not only the flips, before sizing the gap.
+
 **Where it recurs:** any Surface-3 (temporal) predicate that reads authored measurements
 from testsets; authored fields are sparse by construction (authors fill what they
 understand), so temporal surfaces are structurally exposed to this pattern.
@@ -357,6 +369,28 @@ it must flag. If it does not fire on the known-positive, its clean result on the
 worthless. This applies to reasoning about the code, not only to shell commands: an analyst
 asserting "this is stated only once" is running an unfalsified diagnostic on the document, and "I
 didn't find it" is not "it is not there" until the finder is shown to find.
+
+**Two catches from the OQ-33 unknown-ruling arc (2026-05-31) — the method validating itself.** The
+positive control fired twice in one session, the two catches together showing the rule guards *both*
+directions of the absence-as-value sin and that it composes on itself:
+
+1. **The control overturned the ruling that commissioned it.** The standing instruction was "return
+   `unknown` for absent suppression" (Pattern 4's fix direction). Tracing it end-to-end against the
+   corpus *before shipping* showed the premise was empirically false: **650/656** rows carry an
+   authored scalar, so a blanket `unknown` would have discarded real measured data — committing the
+   absence-as-value sin **in the other direction** (reading *present* data as absent). The ruling
+   was wrong and its own verification caught it pre-ship. A positive control is not only a guard on
+   clean nulls; it can falsify the *premise of the action* it was run to support — which is the more
+   valuable firing, because it overturns rather than confirms.
+
+2. **A positive control of a positive control — the recursion, run not just documented.** The first
+   attempt at the row-26 control — a *guard-falsity count* — was itself caught vacuous by *its own*
+   positive control: the guards succeed even for a deliberately bogus constraint, so the count
+   discriminated nothing (a clean "0 failures" that meant "didn't test," the spine exactly). It was
+   replaced with a sound **999.9 branch-reachability tripwire** that *does* fire on the
+   known-positive. A diagnostic checking whether another diagnostic actually discriminates — the
+   recursion this section names, executed against substrate rather than asserted. The check checked
+   the check.
 
 ---
 
