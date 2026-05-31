@@ -1221,6 +1221,314 @@ defect class.
 
 ---
 
-*Last updated: 2026-05-30. Add new items with sequential OQ-NN labels. Mark
+---
+
+## OQ-34 — Estimator-classifier independence audit: does the prompt expose MI-decision-rule thresholds to authors?
+
+**Status: open**
+
+**Question:** The NL circularity audit (2026-05-31) established a design principle:
+thresholds that are *definitional bounds* on the substrate (what the author is
+estimating) should be visible to authors; thresholds that are *measurement-independent
+decision rules* the engine applies to author-estimated values should not be. When an
+author sees a MI-decision-rule threshold, they satisfy it mechanically, the diff between
+their estimate and the engine's verdict collapses to zero, and the classification stops
+carrying information.
+
+The fix for `accessibility_collapse ≥ 0.85` and `resistance ≤ 0.15` has been applied
+(`fix/stripped_prompt.md`, `fix/stripped_schema.json`). The question is whether the
+remaining thresholds exposed in the generation prompt and schema follow the same
+discipline — or whether other MI-decision-rule thresholds are still visible to authors,
+producing silent stamp patterns analogous to the 84.3% AC=0.92 finding.
+
+**Thresholds currently exposed in `prompts/constraint_story_generation_prompt_json.md`
+and `python/constraint_story_schema.json` (inventory as of 2026-05-31):**
+
+| Threshold | Where exposed | Class | Settled? |
+|---|---|---|---|
+| `ε ≤ 0.25`, `suppression ≤ 0.05` | Mountain | **Definitional** — mountain = low-extraction substrate by definition | Yes |
+| `ε ≥ 0.46`, `suppression ≥ 0.60` | Snare | Definitional or MI — needs classification | Open |
+| `χ ≥ 0.66` | Snare | **MI by construction** — χ = ε × f(d) × σ(S) is engine-computed; author never authors χ | Yes |
+| `χ ≤ 0.35` | Rope | **MI by construction** — same formula | Yes |
+| `ε ≤ 0.45` | Rope | Definitional or MI — needs classification | Open |
+| `theater_ratio ≥ 0.70` | Piton | Definitional or MI — needs classification | Open |
+| `ε ≤ 0.05` | Rope-only archetypes | **Definitional** | Yes |
+
+**χ rows are settled.** χ = ε × f(d) × σ(S) is entirely engine-computed: the author
+sets ε; f(d) and σ(S) are derived from the structural context the engine reads. The author
+never authors χ. This makes every χ threshold in the prompt MI-decision-rule by
+construction — no audit required to classify it. The back-solve concern confirms, not
+softens, this: an author who knows "snare needs χ ≥ 0.66" and understands the formula
+sets ε to clear the bar under the expected context — which is the AC stamp mechanism one
+indirection deeper (the stamp lands on ε, not χ, but it is still rule-satisfaction, not
+domain estimation). The classification question is closed. The remaining open question for
+χ-exposed rows is **empirical**: does ε cluster at the back-solved value in the corpus?
+That is a grep, not a classification debate.
+
+**Addendum (2026-05-31): three constraints on the resolution procedure.
+The audit should start from these, not rediscover them.**
+
+**Constraint 1 — χ rows are MI by derivation, not by hypothesis.**
+χ = ε × f(d) × σ(S) is entirely engine-computed; the author never writes χ. Any χ
+threshold (`χ ≥ 0.66` snare, `χ ≤ 0.35` rope) is therefore MI by construction — there
+is nothing to classify. Mark them MI in the inventory and skip straight to step 2 (the
+grep). The table above already records Settled=Yes for χ rows.
+
+**Constraint 2 — The classification rubric needs a third case: definitional-in-direction,
+MI-in-value.**
+The binary (definitional vs. MI) misclassifies snare `ε ≥ 0.46`. Snare-ness is not
+defined as "high ε" the way mountain-ness *is* defined as "low ε" — snare requires high
+extraction AND χ clearing the floor AND victims. The *direction* (high extraction) is
+definitional substrate the author needs; the *exact value* 0.46 is the engine's decision
+rule and should not be exposed. Fix for this class is not strip-or-keep but **keep the
+direction, strip the number**: tell the author "snare is a high-extraction constraint,"
+never "ε ≥ 0.46." Contrast mountain `ε ≤ 0.25`, which is definitional in both direction
+and value (the author only needs "low," and the precise cap does little further work) —
+keep as-is. Classify each ε/suppression open row as:
+- **D-both**: direction and value are definitional — keep as-is
+- **D-direction / MI-value**: keep the directional descriptor, strip the number
+- **MI-both**: strip entirely
+
+**Constraint 3 — The stamp grep must target the authored input field, not the threshold
+field.**
+The AC audit was directly grep-able because AC is authored and the threshold bounds the
+authored value. χ-driven thresholds contaminate **ε** (the field the author actually
+writes), not χ (which is never authored). For any χ threshold: (a) back-calculate the ε
+value that produces the threshold-clearing χ under canonical context (canonical d, σ(S))
+first; then (b) grep the ε distribution for clustering at that back-calculated value.
+Grepping for the χ value (0.66, 0.35) will find nothing authored and falsely report "no
+stamp" on the thresholds most suspected. Expected-stamp target for snare: the ε that
+makes χ = 0.66 at canonical d and σ, not 0.66 itself.
+
+**What resolution looks like:**
+
+1. **Classify the open rows** (`ε ≥ 0.46`/`suppression ≥ 0.60` for snare, `ε ≤ 0.45`
+   for rope, `theater_ratio ≥ 0.70` for piton) using the three-way rubric (D-both /
+   D-direction+MI-value / MI-both). χ rows skip this step — they are already MI.
+
+2. **Audit the corpus for stamp patterns on all MI and D-direction/MI-value rows.**
+   For ε/suppression rows: grep authored values, tabulate the distribution, look for
+   clustering at or just above/below the threshold number. For χ rows: back-calculate the
+   ε that clears the χ threshold under canonical context, then grep ε for clustering there.
+   A clustered ε distribution at the back-calculated value is a stamp; a spread is an
+   independent estimate.
+
+3. **Verify FSM threshold exposure**: FSM's gate involves `constraint_beneficiary/2`
+   (static authored facts, not a metric value), so the stamp mechanism differs from metric
+   stamps. Flag if FSM knowledge produces strategic beneficiary declaration patterns.
+
+4. **Write findings to `docs/`** as a witnessed audit document (grep counts, value
+   distributions, stamp verdict per threshold). Only thresholds with witnesses belong in
+   the resolution note.
+
+**What resolution changes:**
+
+- MI rows with stamp patterns → extend the prompt strip; update `fix/stripped_prompt.md`
+  and `fix/stripped_schema.json`.
+- MI rows without stamp patterns → document as MI-but-clean and note that stripping is
+  still correct in principle (the stamp may simply not have formed yet at corpus scale).
+- Definitional rows → no action; record the rationale so future audits don't relitigate.
+- Either way, the resolution document is the canonical record of which thresholds the
+  engine uses, which are author-visible, and whether each is structurally safe to expose.
+
+**Evidence in hand:** AC=0.92 stamp (84.3% of 465 declared values), T.1 bucket split
+(404/404 = 100% metric-real), prompt stable from `51033e8a 2026-02-21`.
+See `docs/technical/build_discipline.md` § Estimator-classifier independence.
+
+---
+
+## Wiring-Gap Census stubs (OQ-35 – OQ-42) — opened 2026-05-31
+
+Source: `outputs/wiring_gap_census.md` (read-only census; git HEAD `220739b8`, live corpus
+226 / archive 3380). The census **characterizes** every prompt↔schema↔engine disagreement and
+**routes** each for adjudication — it resolves none. Stubs below are grouped by adjudication
+decision; the row references map all 27 census rows so nothing is unrouted.
+**Adjudication (cruft-vs-wire) is a separate session.**
+
+## OQ-35 — G1: authored fields the engine never consumes (or consumes only inertly)
+
+**Status: open.** Census rows 1–6.
+- Row 1 `mandatrophy_resolved`: schema requires `=true` at ε>0.70; compiler emits no fact; engine
+  uses a *separate hardcoded* `is_mandatrophy_resolved/1` (2 names). Decision: wire authored value,
+  delete schema gate, or keep parallel paths. **High-judgment.**
+- Rows 2–3 `accessibility_collapse`/`resistance`: emitted, consumed only by the cosmetic NL
+  signature (T.1: removing NL override = 0 mountain-count change). Decision: strip from
+  classification intent or retain as NL-profile documentation. **Low-stakes.**
+- Row 4 `cs_reference_frame/2`: emitted (`generate_constraint_pl.py:500`), zero readers. Strip
+  emission or wire a committer-drift reader. **Low-stakes.**
+- Rows 5–6 `uke_scope.*`, `commentary.*`: provenance / documentation by design — likely no action.
+
+**Resolution would change:** which authored fields are load-bearing vs vestigial.
+
+## OQ-36 — G2: the `intent_*` subsystem (7 predicates) is read but never authored
+
+**Status: open.** Census row 7. `intent_power_change`, `intent_beneficiary_class`,
+`intent_viable_alternative`, `intent_alternative_rejected`, `intent_suppression_level`,
+`intent_resistance_level`, `intent_norm_strength` — **all 0 facts in BOTH corpora**. Read by
+`intent_engine` (loaded `stack.pl:43`, empty import) + `signature_detection`; `intent_engine` is
+called only by `report_generator`/`test_harness`. SILENT-SAT consequence (witnessed): in
+`count_power_beneficiaries` the `affects_constraint(I,C)` conjunct is **live** (`retributive_reading`
+binds 2 sources), but the `intent_power_change(I,_,_)` conjunct has 0 facts → join collapses →
+Count=0 → the `natural_law` gate's `BeneficiaryCount==0` is vacuously true corpus-wide. This is a
+**reached-but-empty-join**, not unreached: `affects_constraint` already supplies the join keys, so
+populating `intent_power_change` *alone* would activate the gate. Dead on **both** classification and
+committer-drift pipelines. **Decision:** populate (author + schema + prompt) the whole subsystem, or
+delete `intent_engine` and its readers. **High-judgment.**
+
+## OQ-37 — G2: engine-read `constraint_metric` names with no author and empty corpus
+
+**Status: open.** Census rows 8–12. `inevitability` (`constraint_bridge.pl:22`),
+`internalization_depth` (`psych_bridge.pl:19`), `resistance_to_change`
+(`data_validation`/`json_report`/`utils`), `accumulation_speed` (`utils.pl:211`, explicit 0.0
+default) — all 0/0 both corpora, none compiler-emitted. Plus compound measurement metrics
+`accessibility_collapse(Level)`/`stakes_inflation(Level)`/`suppression(Level)` read by
+`coercion_projection.pl:15` but never emitted (compiler emits `measurement/5` only for
+theater_ratio/base_extractiveness/suppression_requirement). **Decision per metric:** author it,
+or remove the dead read. **Low-stakes each.**
+
+## OQ-38 — G3: dead-code / orphan triage (export-vs-caller)
+
+**Status: open.** Census rows 13, 4 + §5. **Confirmed dead:** `predict_transformation/3`
+(`drl_composition.pl`, 0 callers anywhere), `cs_reference_frame/2`. The exhaustive sweep yields
+528 exports → 422 zero-external-caller → {65 `/0` CLI, 114 meta-called, 26 ext-only, **217 candidate**}.
+The 217 is an **upper bound**, not an orphan list — it conflates genuinely-dead with
+over-exported-but-internally-called; separating them needs clause-head-vs-body parsing per
+predicate. **Decision:** scope a clause-level dead-code pass to convert 217 → a real orphan list.
+Do **not** strip from the 217 directly — that is the false-orphan trap (cf. the `mandatrophy_resolved`
+read-vs-declare canary).
+
+## OQ-39 — G4: prompt rules with no engine enforcer
+
+**Status: open.** Census rows 14–18.
+- Row 14 scaffold "suppression must decline over time": **no trajectory check** exists; scaffold
+  uses scalar `Chi` + `has_sunset_clause`. **Decision:** add a trajectory gate or drop the rule.
+- Row 15 "final measurement = base extractiveness": unenforced (no validator). **Low-stakes.**
+- Rows 16–18 (piton atrophy / Goodhart / perspective-min): narrative-only, committer-only, or
+  schema/linter-enforced respectively — likely no engine action.
+
+**Resolution would change:** whether the prompt's temporal rules are real engine constraints.
+
+## OQ-40 — G5: scalar-vs-temporal representation splits
+
+**Status: open.** Census rows 19–22. `extractiveness`, `base_extractiveness`,
+`suppression_requirement` each read as scalar `constraint_metric` (observer `drl_core`) **and** as
+`measurement/5` (committer `drl_composition`/`drift_events`) — the two representations can carry
+different values per axis. Plus `compute_temporal_stability` (`signature_detection`) folds scalar
+`constraint_metric` as a pseudo-time-series instead of `measurement/5`. **Decision:** pick the
+authoritative representation per metric, or document the axis split as intended.
+**Cross-axis-live — see census cross-axis subset.**
+
+## OQ-41 — G6: fabricated defaults for absent data (fail-closed vs impute)
+
+**Status: open. Highest-stakes in the census.** Census rows 23–27. A silent fixed default
+(`0.5`, `0.0`) substitutes for absent authored data, so the engine computes on a value nobody
+authored — distinct from G5 (this is fail-closed-vs-impute, not representation choice).
+- **Row 23 `drl_composition.pl:179` `Supp=0.5` — LIVE, LOAD-BEARING-WRONG (D1a):** tripwire flips
+  279/647 temporal rows (219 tangled_rope→snare + 60 unknown→snare); `snare_suppression_floor=0.60`
+  blocks Supp=0.5 from snare → 50.4% of non-unknown temporal classifications mis-classify low. **The
+  single highest-priority adjudication.**
+- Rows 24–25 `BaseX=0.5` / extractiveness→0.5: latent (current corpus always supplies the value).
+- Row 26 analysis-path `0.5` cluster (boltzmann/purity/fpn/NL); row 27 `domain_priors_expanded`
+  neutral priors (by-design).
+
+**Decision per site:** fail-closed (require the datum) vs keep the impute, with the value chosen
+deliberately. Connects to the empty-table satisfy-on-absence pattern (`get_metric_average:160`).
+
+## OQ-42 — Documentation correction: `affects_constraint` is NOT empty in testsets_3000
+
+**Status: open (doc fix).** CLAUDE.md's 2026-05-31 note states `affects_constraint` is "empty
+across all of testsets_3000." The census grep finds **9305 emitted facts** in the archive (520
+live). The note conflated `affects_constraint/2` (a populated network edge, read at arity 2 and
+matching arity-2 facts) with the genuinely-empty `intent_*` tables. The empty-table finding holds
+only for the `intent_*` family (OQ-36). **No corpus-coverage divergence exists** — every predicate
+agrees across both corpora. **Resolution:** correct the CLAUDE.md `Known State` note.
+
+## OQ-43 — Satisfy-on-absence gate class: the NL beneficiary gate is the fourth instance
+
+**Status: open. Policy decision should be made once across the class, not per site.**
+
+A recurring structural pattern, now seen in four places: an engine gate is **satisfied by the
+absence of data**, so it passes vacuously and the result reads as a positive finding when it is
+really an unauthored blank. The gate looks like it discriminates; on the current corpus it cannot,
+because its input is empty or defaulted. Naming the class so the adjudication happens once:
+
+- **G6 fabricated defaults (OQ-41).** `Supp=0.5` / `BaseX=0.5` substitute for absent authored
+  data; the engine computes on a value nobody authored. Fail-closed vs impute.
+- **Empty `intent_*` tables (OQ-36, OQ-37).** The `intent_*` family is genuinely empty corpus-wide;
+  `forall(...)` and findall-driven consumers succeed vacuously.
+- **`get_metric_average:160` default `0.5`** for metrics with no `constraint_metric` rows.
+- **NL beneficiary gate (this item, 2026-05-31 gap check).** `natural_law_signature`'s
+  `BeneficiaryCount == 0` (`signature_detection.pl:295`) reads `count_power_beneficiaries`, which
+  joins `affects_constraint` x `intent_power_change`. `intent_power_change` is empty corpus-wide
+  (**0 facts** measured on testsets_3000), so `BeneficiaryCount == 0` holds for **every** constraint
+  by absence, not by checking. The gate is dormant-over-empty-table, not discriminating.
+
+**NL-specific evidence (gap check, testsets_3000, 3380 constraints):**
+- 404 constraints carry the `natural_law` engine signature (Pattern-3 unbound query + post-filter).
+- **0/404** carry a `constraint_beneficiary/2` fact (the corpus holds **6739** such facts, none on
+  the 404). FSM coverage of the NL population is therefore empirically **0/404 by cascade
+  construction**: `false_summit_mountain` (`:87`) is checked before `natural_law` (`:97`) and
+  requires `Beneficiaries \= []`, so it catches every beneficiary-bearing mountain first — the NL
+  residue is exactly the beneficiary-blind constraints. FSM is **not** belt-and-suspenders backup
+  for the NL gate; the `:84-86` source comment claiming so was corrected on 2026-05-31.
+- **0/404** carry an `intent_power_change` beneficiary (the gate's own source is empty).
+
+**What the 404 NL certifications currently mean:** "no beneficiary **authored**," not "no
+beneficiary **exists**." The engine-insensitivity result stands (T.1: all 404 are bucket-A
+metric-real mountains, eps 0.00-0.22, supp 0.00-0.04) — the engine will not manufacture beneficiaries.
+
+**Decision (one policy across the class):** for each satisfy-on-absence gate, choose
+fail-closed (require the datum before the gate may pass) vs keep-vacuous-pass (accept that the gate
+is inert on the current corpus and document it as such). **Activating the NL beneficiary gate is a
+content re-audit of the 404** (do any actually have asymmetric winners hidden behind an emergence
+claim?), **not engine maintenance** — populating `intent_power_change` faithfully for genuine
+natural laws yields zero beneficiaries and zero flips; it only bites a mis-authored false-natural-law.
+**Connects to OQ-41 (G6), OQ-36/OQ-37 (empty `intent_*`).**
+
+## OQ-44 — Engine-wide audit: no gate may be satisfied by absence (authored-zero vs absent)
+
+**Status: open (audit task). Generalizes OQ-43; gating policy for the whole satisfy-on-absence
+class (OQ-41, OQ-36/OQ-37, OQ-43).**
+
+**Premise:** the engine must distinguish "authored to be zero" from "absent" everywhere, and
+never let absence satisfy a gate. Zero-because-measured and zero-because-missing collapse to the
+same value at a comparison site, so a gate that cannot tell them apart is testing nothing whenever
+its source table is empty. The NL beneficiary gate (OQ-43) is one confirmed instance; this OQ asks
+whether there are others, and fixes the policy once.
+
+**What to audit.** Enumerate every engine gate of these shapes and, for each, record whether its
+driving data is non-empty in the active corpus:
+1. Equality/threshold over a `findall` count — `Count == 0`, `Count =< K`
+   (e.g. `count_power_beneficiaries`, `signature_detection.pl:165`).
+2. Threshold over a metric that defaults on absence — `V =< Ceil` where `V` comes from a
+   `( ... -> V = Measured ; V = Default )` fallback (cross-link Pattern 4 / OQ-41 sites:
+   `get_metric_average:160` `0.5`; `classify_at_time` `Supp=0.5`; `get_raw_suppression` `Supp=0`).
+3. Universal quantifier / negation-as-failure over a possibly-empty table — `forall(P, Q)`,
+   `\+ disqualifier(C)` (e.g. `data_verification:verify_interval_completeness`;
+   `natural_law_without_beneficiary/1` guards in `drl_core.pl`).
+
+**Method (per gate):** measure the source-predicate fact count on the active corpus (the Pattern 5
+diagnostic in `build_discipline.md`). Verdict per gate:
+- **DISCRIMINATING** — source non-empty, gate distinguishes pass from fail on real data.
+- **VACUOUS-PASS** — source empty / always-defaulted, gate passes by absence for all constraints
+  (record the count, as OQ-43 did: `intent_power_change` = 0 facts → `BeneficiaryCount == 0`
+  universal).
+- **DEFAULT-PASS** — source absent but a fabricated default clears the gate (Pattern 4 overlap).
+
+**Decision (one policy across the class):** for each VACUOUS-PASS / DEFAULT-PASS gate, choose
+**fail-closed** (the gate may not pass unless the datum was authored — distinguish `\+ exists`
+from `authored(0)`, e.g. via an explicit authored-zero marker or a non-empty-source guard) vs
+**keep-vacuous-pass** (accept the gate is inert on the current corpus and document it at the gate).
+The choice is the same adjudication OQ-41 frames for fabricated defaults; make it once for both
+fabricated-value (Pattern 4) and satisfied-by-absence (Pattern 5) gates rather than per site.
+
+**What resolution changes:** turns "no disqualifier authored" certifications (e.g. the 404 NL
+mountains) into either honestly-conditional findings (gate documents its own vacuity) or
+genuinely-checked findings (gate fail-closed, requires the table populated). Connects to
+OQ-43, OQ-41, OQ-36/OQ-37. Build-discipline Pattern 5 records the pattern and diagnostic.
+
+---
+
+*Last updated: 2026-05-31. Add new items with sequential OQ-NN labels. Mark
 resolved items with **Status: resolved** and a resolution note rather than
 deleting — provenance matters.*

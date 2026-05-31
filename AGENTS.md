@@ -457,7 +457,9 @@ python3 -m agent.generate_json_haiku
 ```
 
 Reads `prolog/beta_seeds.json`, generates via Haiku with prompt caching. This is
-how the corpus grew from ~1,000 to 3,337 constraints.
+how the corpus grew from ~1,000 to 3,337 constraints in the pre-rebuild `testsets_3000/`
+archive; live `testsets/` is now 223 after the chimera-collision rebuild (see CLAUDE.md
+Critical Distinctions / OQ-25). Cite the pipeline manifest, not a fixed count.
 
 ### Pipeline output manifest convention
 
@@ -467,7 +469,7 @@ Every pipeline output JSON carries a `manifest` top-level key:
 {
   "manifest": {
     "pipeline_run_at": "<ISO timestamp>",
-    "n_constraints": 3337,
+    "n_constraints": "<live count, e.g. 223 — read from the manifest, do not memorize>",
     "n_sotu_constraints": 189,
     "code_commit": "<full SHA>",
     "code_commit_short": "<short SHA>",

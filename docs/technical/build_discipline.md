@@ -211,6 +211,111 @@ understand), so temporal surfaces are structurally exposed to this pattern.
 
 ---
 
+## Pattern 5: Absence satisfies the gate (authored-zero vs absent conflation)
+
+A gate, threshold, or quantifier passes because its input is *missing*, not because a
+condition was *checked*. `Count == 0` is true both when the constraint was authored to have
+zero beneficiaries and when no beneficiary facts exist at all; `Supp =< 0.05` is true both
+when suppression was measured low and when suppression is absent and defaulted; `forall(P, Q)`
+is vacuously true when `P`'s table is empty. The engine reads absence as a satisfied
+condition and emits a positive finding that means "nobody authored the disqualifier," not
+"the disqualifier is absent in the world."
+
+**The discipline, stated generally:** the engine must distinguish *authored to be zero* from
+*absent*, everywhere, and never let absence satisfy a gate. Zero-because-measured and
+zero-because-missing collapse to the same value at the comparison site; a gate that cannot
+tell them apart is testing nothing whenever its source table is empty. A gate over a table
+that can be empty must first establish the datum was authored (the table is non-empty for
+this constraint), then check the condition — fail-closed on absence, not pass-open.
+
+**Sibling of Pattern 4 (fabricated default):** Pattern 4 invents a *value* and feeds it to a
+downstream computation; Pattern 5 lets *absence itself* pass a *condition*. Both conflate
+missing with measured. Pattern 4 manufactures a number; Pattern 5 manufactures a satisfied
+predicate. Pattern 4's tell is a catch-all clause binding a constant; Pattern 5's tell is a
+comparison or quantifier whose driving table is empty in the corpus.
+
+**Live instance (OQ-43, 2026-05-31, NL beneficiary gate):** `natural_law_signature`'s
+`BeneficiaryCount == 0` (`signature_detection.pl:295`) reads `count_power_beneficiaries`,
+which joins `affects_constraint × intent_power_change`. `intent_power_change` is empty
+corpus-wide (**0 facts** on testsets_3000), so `BeneficiaryCount == 0` holds for *every*
+constraint by absence, not by checking. The gap check confirmed the consequence: of the 404
+`natural_law`-signature constraints, **0/404** carry any beneficiary signal from either source
+(`constraint_beneficiary/2` *or* `intent_power_change`), and FSM coverage of the NL population
+is **0/404 by cascade construction**. The 404 NL certifications currently mean "no beneficiary
+**authored**," not "no beneficiary **exists**." Same class: `data_verification`'s
+`forall(intent_beneficiary_class, intent_power_change)` is vacuously satisfied corpus-wide, and
+`get_metric_average:160` returns the `0.5` default for any metric with no rows.
+
+**Diagnostic:** for any gate of the form `Count == 0`, `=< Threshold` over a `findall`, or
+`forall(...)`, check whether the driving table is *non-empty for the corpus*. If the table is
+empty (or the per-constraint findall is always `[]`), the gate is vacuously satisfied — it is
+testing nothing.
+```bash
+# count facts behind a gate's source predicate across the active corpus
+cd prolog && swipl -q -g "consult(stack), \
+  retract(config:param(corpus_path,_)), assertz(config:param(corpus_path,'testsets_3000')), \
+  corpus_loader:load_all_testsets, \
+  aggregate_all(count, narrative_ontology:intent_power_change(_,_,_), N), \
+  format('intent_power_change facts: ~w~n',[N]), halt"
+# N == 0  ⇒  any gate reading this predicate passes by absence, not by check
+```
+A gate whose source count is 0 is not a safety net and not a discriminator; it is a no-op
+that reads as a pass. Either author the table (so the gate discriminates) or make the gate
+fail-closed when the source is empty (so absence cannot certify).
+
+**Where it recurs:** any gate keyed on the sparse `intent_*` family or on an optional authored
+field; any quantifier (`forall`, negation-as-failure) over a table that the current corpus
+leaves empty. See OQ-44 for the engine-wide audit.
+
+---
+
+## Estimator-classifier independence
+
+The principle, generalized: the boundary logic should live in exactly one place — the
+engine — and the author should never see it. The author's job is to estimate the substrate
+(how extractive, how coerced, how performative); the engine's job is to decide what type
+that substrate implies. The moment the author can see the engine's decision rule, the two
+stop being independent and the diff stops measuring anything. Strip the numerical guidance
+not as a one-off fix but because the architecture only works if the estimator and the
+classifier can't see each other.
+
+**Concrete instance (2026-05-31, NL circularity audit):** The generation prompt told
+authors that mountain constraints require `accessibility_collapse ≥ 0.85`. Result: 84.3%
+of all authored AC values across 3380 constraints are exactly 0.92 — a stamp, not a
+measurement. The engine certifies these as `natural_law`. The certification looks like
+confirmation but is circular: the author was given the threshold and satisfied it, so the
+diff between the author's estimate and the engine's verdict carries no information about
+whether the constraint is a genuine natural law.
+
+T.1 audited this directly: of the 404 `natural_law`-signature constraints, 404/404 (100%)
+would classify as mountain from `ε/supp/emerges_naturally` alone without the NL signature.
+The stamp manufactured nothing — but it made the test look like a test when it was a
+tautology. The fix (`fix/stripped_prompt.md`, `fix/stripped_schema.json`) removes
+`accessibility_collapse ≥ 0.85` and `resistance ≤ 0.15` from the generation instructions
+while keeping `extractiveness ≤ 0.25`, `suppression ≤ 0.05`, and `emerges_naturally`. The
+engine's threshold (`natural_law_collapse_min = 0.85` in `config.pl`) is unchanged. After
+the strip, the author estimates AC without knowing the cutpoint; the engine decides whether
+the estimate clears the bar. If future generated mountains cluster at AC ≈ 0.60 instead of
+0.92, that is evidence the prior stamp was rule-satisfaction rather than domain measurement.
+
+**Where this recurs:** any generation prompt or schema that exposes a classification
+threshold to the author creates the same risk. Whether it is a problem depends on whether
+the diff between author estimate and engine verdict is supposed to carry information. For
+the NL profile metrics (AC, resistance), the diff was the audit target; exposing the
+threshold collapsed it to zero. For `ε ≤ 0.25` and `suppression ≤ 0.05` on mountains,
+the thresholds are retained because they bound what counts as mountain *substrate* by
+definition — the author needs to know they are authoring a low-extraction scenario.
+
+**The discipline:** when deciding whether to expose a threshold to an author, ask: is this
+a *definitional* bound on what the substrate can be (author needs it) or a
+*measurement-independent decision rule* the engine applies to an author-estimated value
+(exposing it corrupts the signal)? For DR: extractiveness and suppression are definitional
+bounds (mountain = low extraction, full stop); accessibility collapse is a
+measurement-independent signal the engine checks against its own threshold, so it should
+not appear in the authoring instructions.
+
+---
+
 ## When reasoning has run out
 
 A corollary, since both patterns above were diagnosed by *running greps*, not by thinking:
@@ -220,3 +325,39 @@ holds at scale" cannot be settled by argument — they are settled by regenerati
 corpus and watching what breaks. When a design question has been reasoned to the point
 where further turns produce elaboration rather than resolution, that is the signal to build
 the thinnest real version and test it, not to think harder.
+
+---
+
+## Separate fallible judgment from action at the tool boundary
+
+The meta-lesson behind several patterns above (Pattern 4 fabricated default, Pattern 5
+absence-satisfies-the-gate, and the recap-as-witness defect in `CLAUDE.md`): **when an agent's
+judgment and its actions are both fallible in the same direction, separate them at the tool
+boundary so the fallible judgment cannot execute itself.** The agent that would mis-decide is the
+same agent that would carry out the mis-decision, so a single pass that both decides *and* acts
+compounds the error with no checkpoint — and when the error mode is silent (a warning dropped from
+context, a gate passed on absence, an edit reported but not made), nothing surfaces it.
+
+A *procedural* separation ("classify first, then act") is not enough, because it relies on the
+same fallible agent to honor the boundary it is biased to cross. A *structural* separation removes
+the capability: give the deciding pass no tools that can act, so honoring the boundary is not a
+choice it can get wrong.
+
+**Instance (2026-05-31, KNOWN_STATE.md split).** Classifying 18 changelog entries as
+"standing-warning" (keep in auto-loaded context) vs "history" (move out) is judgment that fails
+silently when wrong: misclassify a warning as history and it leaves context with no error, exactly
+the seam the whole audit arc was about. The classify pass was run as a **read-only Plan agent**
+(no Edit/Write tools) that could only emit a table and hand it back; a separate pass reviewed the
+table, overturned five of its six borderline calls against independently-checked evidence (greps
+proving anti-duplicate coverage), and only then executed the promotions and the move. The agent
+whose classification was wrong six times *physically could not* act on those classifications. The
+gate was the tool boundary, not an instruction.
+
+**The discipline:** for any step where (a) the decision is judgment-grade (not mechanical), (b) a
+wrong decision fails silently, and (c) the same actor would both decide and execute — split it.
+Propose/apply, plan/execute, read-only-reviewer/separate-approver, dry-run-then-commit are all the
+same move: deny the deciding pass the ability to enact its own decision, and put an independently-
+sourced check in between. The cost is one handoff; the return is that a silent misjudgment cannot
+self-execute. Verify the reviewer's check against substrate (run the grep, read the file), not
+against the first agent's report — otherwise the second pass just ratifies the first and the
+separation buys nothing.

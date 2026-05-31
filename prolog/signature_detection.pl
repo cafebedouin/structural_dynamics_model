@@ -82,8 +82,17 @@ constraint_signature(C, false_ci_rope) :-
 % identifiable beneficiaries. Genuine natural laws have zero beneficiaries;
 % a mountain with beneficiaries indicates a naturalized constructed constraint.
 % Checked BEFORE natural_law so beneficiary-bearing constraints are not
-% certified as natural law (natural_law_signature also requires BeneficiaryCount==0,
-% so this is belt-and-suspenders correctness, not strictly necessary).
+% certified as natural law. NOTE (2026-05-31 gap check): FSM is NOT
+% belt-and-suspenders backup for natural_law_signature's BeneficiaryCount==0
+% gate — it is the ONLY live beneficiary screen. By cascade construction FSM
+% catches every mountain-metric + emerges_naturally constraint that carries a
+% constraint_beneficiary/2 fact, so the constraints that fall through to the
+% natural_law clause below are exactly the beneficiary-blind residue. Measured
+% on testsets_3000: 0/404 NL-signature constraints carry a constraint_beneficiary
+% fact (corpus holds 6739 such facts, none on the 404). NL's own BeneficiaryCount
+% gate reads intent_power_change, which is empty corpus-wide (0 facts) — so that
+% gate is dormant-over-empty-table, satisfied by absence, NOT a redundant check
+% of this one. See ISSUES.md OQ on the satisfy-on-absence gate class.
 constraint_signature(C, false_summit_mountain) :-
     false_summit_mountain(C, _), !.
 
