@@ -15,6 +15,32 @@ presence — named and tabulated in **The spine** at the end of this note.
 
 ---
 
+## The working method: separated passes (the procedure that prevents the patterns)
+
+The patterns below are introduced when deciding and writing happen in one undivided pass. The
+foundational counter-procedure is four phases, kept separate. (The deepest member, the
+deciding/acting split, is treated in full under *Separate fallible judgment from action at the tool
+boundary*; this is the crisp statement of the whole method.)
+
+1. **Read-only deciding passes precede write passes.** A pass that gathers evidence and decides what
+   to do does not also mutate files. Decide first from what you read, then write in a separate pass.
+   This is the audit discipline (collect, *then* analyze) applied to editing: interleaving lets a
+   half-formed conclusion edit the substrate before it has been checked.
+2. **Human-ruled adjudication.** A call that is genuinely the human's — an ambiguous requirement, a
+   contradiction between sources, a trade-off with no default — is escalated, not self-resolved.
+   Decide what the evidence settles; do not decide what only the human can rule.
+3. **Paste-or-untag.** Every "done / verified / fixed / passing" claim carries its witness — the
+   pasted run, diff, or count — in the same turn. If the witness cannot be produced this turn, drop
+   the done-tag and mark the item OPEN with its graduation step. A claim without its witness is
+   untagged, not done — this is Pattern 1 (produced-but-not-consumed) one layer up: a claim produced
+   without the witness that consumes it.
+
+These three are the same stance run forward through the work: decide on evidence, rule only what is
+yours to rule, and never let a summary stand in for a witness. Each defect pattern below is what
+happens when one of these phases is skipped.
+
+---
+
 ## Pattern 1 — Produced-but-not-consumed (the dangling wire)
 
 **Shape:** data is correctly generated, written to disk, and never read back into the

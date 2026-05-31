@@ -1,3 +1,38 @@
+## The governing stance
+
+**Apply this stance relentlessly: distrust the aggregate, witness before claiming, and treat
+"I didn't find it" as different from "it isn't there."**
+
+A count, a summary, a green check, an empty grep, a passing `forall`, a "looks done" — each is an
+aggregate that can read as success while concealing the opposite. Before you claim, produce the
+witness: the pasted run, the diff, the per-item check, the positive control that proves your probe
+would have flagged the thing it now reports absent. "I didn't find it" is a fact about your search,
+not about the world, until the search itself is shown to find. Two docs disagreeing, a 0-count over a
+possibly-empty table, a clean read byte-identical to a read that never looked — resolve them against
+the code, not against the more confident document. This stance is the root of the Build Discipline
+section below; every pattern there is one instance of it.
+
+## The working method (separated passes)
+
+**Run the stance forward through the work as four kept-separate phases: read-only deciding passes,
+then write passes; human-ruled adjudication on the calls that are the human's; paste-or-untag on
+every done-claim.**
+
+- **Read-only deciding passes precede write passes.** A pass that gathers evidence and decides what
+  to do does not also change files. Decide first from what you read, then write in a separate pass.
+  Interleaving the two lets a half-formed conclusion edit the substrate before it has been checked —
+  the audit discipline (collect, *then* analyze) applied to editing.
+- **Human-ruled adjudication.** A choice that is genuinely the user's — an ambiguous requirement, a
+  contradiction between sources, a trade-off with no default — is escalated, not self-resolved. You
+  may decide what the evidence settles; you may not decide what only the human can rule.
+- **Paste-or-untag.** Every "done / verified / fixed / passing" claim carries its witness — the
+  pasted run, diff, or count — in the same turn. If you cannot paste the witness this turn, drop the
+  done-tag and mark the item OPEN with its graduation step. A claim without its witness is untagged,
+  not done.
+
+This is the same stance as above, run forward through the work: decide on evidence, rule only what
+is yours to rule, and never let a summary stand in for a witness.
+
 ## One-sentence flag
 
 **If you know a better way:** When a request has a cleaner implementation, a simpler

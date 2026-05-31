@@ -7,60 +7,53 @@ primitive), OQ-33 (suppression fabrication), or the Surface-2 Boltzmann floor pr
 
 ---
 
-## 1. `suppression_requirement` in `measurement/5` is schema-forbidden — the Supp=0.5 fallback is structural
+## 1. The `suppression_requirement` temporal fallback — corrected by row-23 (was `Supp=0.5`)
 
-**The predicate** (`drl_composition.pl:179`):
+> **RECONCILED 2026-05-31 (Commit A / row-23 + a non-arc schema-enum change).** This section's
+> original (2026-05-30) claims are **now false** and were left as a cautionary record of
+> distrust-the-aggregate: (a) `suppression_requirement` is **not** schema-forbidden — the
+> `MeasurementMetric` enum was later expanded to include it; (b) the count is **not** 0 — live
+> ground truth is **6** `measurement/5` suppression facts; (c) the `Supp=0.5` fabricated fallback
+> was **replaced**. Corrected below; the tripwire history is retained because it is the witness for
+> row-23.
 
-```prolog
-classify_at_time(C, Time, Context, Type) :-
-    (narrative_ontology:measurement(_, C, suppression_requirement, Time, Supp) -> true ; Supp = 0.5),
-    ...
-```
-
-**The mistake:** assuming the `Supp=0.5` fallback fires only on testsets that are missing
-the field, and that authoring `suppression_requirement` into the `measurements` section
-would fix it.
-
-**Why it's wrong:** the schema's `MeasurementMetric` enum (python/constraint_story_schema.json:108–113)
-only permits `["theater_ratio", "base_extractiveness"]`. The compiler (`python/generate_constraint_pl.py:656–669`)
-iterates those two keys and emits nothing for any other metric name. The schema is
-enforced by jsonschema before any `.pl` file is written — a story with
-`measurements[].metric == "suppression_requirement"` produces the error
-`'suppression_requirement' is not one of ['theater_ratio', 'base_extractiveness']`
-and is rejected at generation time.
-
-**Concrete count:** 0/223 live testsets have a `narrative_ontology:measurement/5` fact
-for `suppression_requirement`. The fallback fires on 100% of temporal classifications.
-
-**Tripwire result (execution-witnessed, 2026-05-30):** Source-patch `Supp=0.5` → `Supp=999.9`,
-run `constraint_history` over full corpus: 279/647 temporal rows changed.
-- 219 tangled_rope → snare
-- 60 unknown → snare
-- **0 → unknown**
-
-The fabricated Supp=0.5 is below `snare_suppression_floor=0.60`. It blocks the snare gate,
-demoting snare-eligible constraints to tangled_rope or unknown. 50.4% of non-unknown temporal
-rows (279/553) are systematically mis-classified too low. See OQ-33 for resolution options.
-
-**Note on static fallback (D2, drl_core.pl:96):** The static path uses `Supp=0` (not 0.5).
-BUT the 32 testsets lacking `constraint_metric.*suppression_requirement` are `_contradictions.pl`
-stubs, excluded by `all_corpus_constraints/1`. Tripwire shows 0 changes on the 191 classified
-constraints. D2 is DORMANT on the live classified corpus.
-
-**Consequence for Surface-3 primitive:** there is no clean authored baseline for temporal
-suppression. Any perturbation of the temporal surface (`constraint_history/3`) runs against
-a fabricated baseline, not a measured one. The primitive should not be built until OQ-33
-is resolved (options a/b/c in ISSUES.md).
-
-**There is also a `base_extractiveness` fallback** (`drl_composition.pl:180`):
+**The predicate today** (`drl_composition.pl`, `classify_at_time/4` — restructured by row-23):
 
 ```prolog
-    (narrative_ontology:measurement(_, C, base_extractiveness, Time, BaseX) -> true ; BaseX = 0.5),
+( narrative_ontology:measurement(_, C, suppression_requirement, Time, Supp)   % temporal series
+-> classify_at_time_with_supp(C, Time, Context, Supp, Type)
+;  narrative_ontology:constraint_metric(C, suppression_requirement, Supp)       % authored SCALAR
+-> classify_at_time_with_supp(C, Time, Context, Supp, Type)                      % STOPGAP (OQ-46)
+;  Type = unknown ).
 ```
 
-`base_extractiveness` IS authorable (in the schema enum), so this fallback only fires
-on the 32 testsets that have no `measurements` section at all, or at queried time-points
-not in a testset's authored series. It is latent, not structural.
+**What is true now (verify against the live schema/corpus):**
+- **The schema ALLOWS temporal suppression.** `$defs/MeasurementMetric` is
+  `[theater_ratio, base_extractiveness, suppression_requirement]` — three metrics. A story may
+  author a `suppression_requirement` measurement series; `generate_constraint_pl.py` emits it (the
+  `sr_measurements` branch — see `generator_emission_map.md`'s measurement whitelist). **Live: 6
+  suppression `measurement/5` facts exist**, not 0.
+- **The `Supp=0.5` fabrication is gone (row-23, OQ-41).** Absent temporal suppression falls back to
+  the authored *scalar* `constraint_metric(C, suppression_requirement, _)` — real per-constraint
+  data — and returns `unknown` only if no suppression is authored anywhere (0 rows on the live corpus).
+
+**Why it still matters:** most constraints author only the scalar (650/656 timeline rows have **no**
+temporal suppression series), so the scalar fallback is the live path for nearly all temporal
+classification. It is no longer a *fabrication* (it is authored data), but it is still not a measured
+*trajectory* — it is a STOPGAP until the generation template authors temporal series (OQ-46). A
+Surface-3 temporal-suppression primitive should still wait on OQ-46, but for the corrected reason
+(scalar-as-constant, not "schema-forbidden").
+
+**Historical tripwire (2026-05-30, the pre-row-23 `Supp=0.5` fabrication, kept as the row-23 witness):**
+source-patch `Supp=0.5` → `999.9`, `constraint_history` over the corpus: 279/647 rows changed (219
+tangled_rope→snare, 60 unknown→snare, 0→unknown). The fabricated 0.5 sat below
+`snare_suppression_floor=0.60`, demoting snare-eligible rows low. Row-23 fixed it: substituting the
+authored scalar moved **268** rows (the same low-mis-sort, now resolved upward). See KNOWN_STATE.md
+(2026-05-31) and ISSUES.md OQ-41.
+
+**The `base_extractiveness` fallback** (`drl_composition.pl`, same clause) keeps `BaseX = 0.5` on
+absence — `base_extractiveness` is schema-authorable and almost always present, so this fallback is
+**latent** (tripwire: 0 changes). It was *not* changed by row-23 (row 24 of the census; left as latent).
 
 ---
 
