@@ -1,7 +1,7 @@
 # Build Discipline — Recurring Failure Modes
 
-Implementation note. Scope: two defect *patterns* that have appeared in multiple
-unrelated subsystems, with diagnostics for catching them. This is not general
+Implementation note. Scope: a recurring family of defect *patterns* that have appeared in
+multiple unrelated subsystems, with diagnostics for catching them. This is not general
 architecture; it is the specific shape of mistakes this repo keeps making, recorded so
 they stop. Pointer in `CLAUDE.md` → Build Discipline.
 
@@ -9,8 +9,9 @@ The root cause is structural, not careless: the repo was built fast by one perso
 *producing* step of any feature is the interesting part, and the *reconciling* step —
 wiring the output to a consumer, collapsing a fork back to one canonical copy — has no
 payoff in the moment and is infinitely deferrable. So it gets deferred, and the deferral
-is invisible because the producer looks finished. Both patterns below are that one cause
-wearing two faces.
+is invisible because the producer looks finished. That is the *why* the patterns recur; they
+also share a single structural *what* — every one of them is an absence that presents as a
+presence — named and tabulated in **The spine** at the end of this note.
 
 ---
 
@@ -328,6 +329,37 @@ the thinnest real version and test it, not to think harder.
 
 ---
 
+## Every diagnostic needs a positive control
+
+A diagnostic is itself a producer, and its null result is the spine one level up: **a clean read
+is byte-identical to a read that didn't look.** An empty grep, a `findall` that returns `[]`, a
+count of `0`, an "I found it nowhere" — each can mean "nothing is there" *or* "the probe never
+dispatched, queried the wrong thing, or was never run." The two are indistinguishable from the
+output alone; absence and "looked and found absence" collapse to the same token at the read site,
+exactly as in the five patterns.
+
+This conversation supplied four instances, all the same shape:
+- the bound Pattern-3 probe reported **432** `natural_law` constraints — a result set produced by a
+  query that **silently failed to dispatch** the lock clauses; the engine's real count is **404**;
+- a `0 facts` result means "this predicate is empty" only if the query was *aimed right* — otherwise
+  it means "didn't look right";
+- the G3 dead-code triage (OQ-38) nearly read an **empty caller-set as orphaned code** — absence of a
+  found caller taken for absence of a caller;
+- and the meta-instance: the claim that this document's spine "is stated nowhere else / written
+  exactly once," asserted *without reading the whole document*. Running that control — reading the
+  full doc — found the spine already **partially stated** in Pattern 5 ("both conflate missing with
+  measured") and the sibling notes, correcting the claim. This section exists because its own
+  positive control fired.
+
+**The rule:** every diagnostic — grep, query, *or a reasoning claim of the form "X appears nowhere /
+happens never / is unique"* — must be run against a **positive control**: a case you know in advance
+it must flag. If it does not fire on the known-positive, its clean result on the real question is
+worthless. This applies to reasoning about the code, not only to shell commands: an analyst
+asserting "this is stated only once" is running an unfalsified diagnostic on the document, and "I
+didn't find it" is not "it is not there" until the finder is shown to find.
+
+---
+
 ## Separate fallible judgment from action at the tool boundary
 
 The meta-lesson behind several patterns above (Pattern 4 fabricated default, Pattern 5
@@ -361,3 +393,49 @@ sourced check in between. The cost is one handoff; the return is that a silent m
 self-execute. Verify the reviewer's check against substrate (run the grep, read the file), not
 against the first agent's report — otherwise the second pass just ratifies the first and the
 separation buys nothing.
+
+---
+
+## The spine: every defect here is an absence that presents as a presence
+
+The five patterns are one shape seen in five places. In each, something is **missing** — a
+consumer, a canonical-fact, a clause dispatch, an authored datum, an authored disqualifier — and
+the missing thing is filled by a **success-shaped token** the read site cannot tell from the real
+thing. The producer ran; both copies parse; a solution came back; a plausible constant arrived; the
+gate passed. Presence is reported where there is absence.
+
+This is the *what* the patterns share. It is distinct from, and complementary to, the two other
+generalizations already in this note: the *why* (the intro — the reconciling step is deferrable and
+the producer looks finished) and the *where* ("The shared root" — design against the corpus you are
+heading toward, not the present sample). Three orthogonal axes, not three rival roots. The spine is
+the *what*.
+
+| # | Pattern | The hole (absence) | The success-shaped token that fills it | The read site it fools |
+|---|---------|--------------------|----------------------------------------|------------------------|
+| 1 | Produced-but-not-consumed | no consumer reads the output | the producer ran and wrote the file → "done" | whoever checks the producer |
+| 2 | Silent fork | no fact says which copy is canonical | both copies exist and parse → "it's there" | a step targeting "the" file |
+| 3 | Bound-probe bypasses cut | the lock clause never dispatched | a solution came back → "it's in the class" | the `findall` result/count |
+| 4 | Fabricated default | the datum was never authored | a plausible constant (`0.5`) → "a measurement" | the downstream computation |
+| 5 | Absence satisfies the gate | the disqualifier was never authored | the gate passed → "checked and clear" | the gate's boolean |
+| — | (diagnostic layer) | the probe didn't actually look | a clean/empty result → "nothing there" | the analyst reading the result |
+
+Pattern 5 already states this for the P4↔P5 pair ("both conflate missing with measured"); the spine
+is that statement widened to all five and to the diagnostic layer below (see *Every diagnostic needs
+a positive control*). The bottom row is why diagnostics are not exempt: a null result is the same
+shape one level up.
+
+**The fix is one move, too.** Every pattern's rule above is the same act: **carry the provenance bit
+with the value, so absence and success stop collapsing to one token at the read site.** A bare value
+is a lie of omission the consumer cannot detect — it asserts "this is real" by saying nothing about
+whether it is. Make the absence representable and branch the consumer on it:
+
+- **P1** — wire the consumer, or **fail loud** when output is left unconsumed (don't let "written" stand for "used").
+- **P2** — make canonicity a **checked fact** (a documented path, a CI assertion), not a copy that merely exists.
+- **P3** — let the **engine dispatch** (query unbound, post-filter); don't let a bound probe substitute for the cascade.
+- **P4** — return **`unknown`, not `0.5`** — an out-of-band token the caller is forced to handle.
+- **P5** — **fail-closed on absence**: the gate may not pass until the datum is authored.
+- **(diagnostics)** — pair every probe with a **positive control** before trusting its clean result.
+
+The shared invariant: *a value and "no value" must never be the same token where someone reads them.*
+Where they are, that read is unfalsified — and somewhere downstream, absence is being reported as
+presence.
