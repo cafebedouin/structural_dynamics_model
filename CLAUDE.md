@@ -259,6 +259,23 @@ ingestion), not the sample that happens to exist. A scheme that *cannot* collide
 construction beats one that *happens not to* collide today. See
 `docs/technical/build_discipline.md`.
 
+**The spine under all of these: every defect here is an absence that presents as a presence.**
+Something is missing — a consumer, a canonical fact, a clause dispatch, an authored datum, an
+authored disqualifier — and a *success-shaped token* (the producer ran; both copies parse; a
+solution came back; a plausible `0.5`; the gate passed) fills the hole so the read site can't tell
+it from the real thing. The single fix, everywhere: **carry the provenance bit with the value so
+absence and success stop collapsing to one token at the read site** — a bare value is a lie of
+omission the consumer can't detect. Concretely: wire-or-fail-loud, checked-canonicity, let the
+engine dispatch, return `unknown` not `0.5`, fail-closed-on-absence.
+
+**Diagnostics are not exempt — every probe needs a positive control.** A clean read is
+byte-identical to a read that didn't look: an empty grep, a `findall` of `[]`, a count of `0`, an
+"I found it nowhere" each can mean "nothing there" or "didn't dispatch / queried wrong / never
+ran." This holds for *reasoning*, not just shell: a claim of the form "X appears nowhere / is
+unique" is an unfalsified diagnostic until run against a case you know it must flag. "I didn't find
+it" is not "it is not there" until the finder is shown to find. Full table and instances:
+`docs/technical/build_discipline.md` → *The spine* and *Every diagnostic needs a positive control*.
+
 ## Critical Distinctions
 
 **Corpus size is 223 (live `testsets/`), not 3,337.** The 3,337 figure predates a deliberate
