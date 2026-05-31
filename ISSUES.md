@@ -1349,8 +1349,13 @@ decision; the row references map all 27 census rows so nothing is unrouted.
 
 **Status: open.** Census rows 1–6.
 - Row 1 `mandatrophy_resolved`: schema requires `=true` at ε>0.70; compiler emits no fact; engine
-  uses a *separate hardcoded* `is_mandatrophy_resolved/1` (2 names). Decision: wire authored value,
-  delete schema gate, or keep parallel paths. **High-judgment.**
+  uses a *separate hardcoded* `is_mandatrophy_resolved/1` (2 names, `narrative_ontology.pl:317-318`).
+  **DECISION (D6, 2026-05-31): document and defer — do NOT wire.** Read-only count is near-zero: the
+  two hardcoded names (`gale_shapley`, `planetary_boundaries`) appear in **0 live testsets**, and only
+  ~7 live constraints sit in the ε>0.70 schema-gate zone (none of them the hardcoded pair). The
+  machinery is dormant on the live corpus — wiring earns nothing now. Revisit only if a corpus with
+  authored `mandatrophy_resolved` + ε>0.70 arrives (then: emit the fact, have `detect_omega` read it,
+  retire the hardcoded list).
 - Rows 2–3 `accessibility_collapse`/`resistance`: emitted, consumed only by the cosmetic NL
   signature (T.1: removing NL override = 0 mountain-count change). Decision: strip from
   classification intent or retain as NL-profile documentation. **Low-stakes.**
@@ -1418,21 +1423,46 @@ different values per axis. Plus `compute_temporal_stability` (`signature_detecti
 authoritative representation per metric, or document the axis split as intended.
 **Cross-axis-live — see census cross-axis subset.**
 
+**`suppression_requirement` sub-split CLOSED (2026-05-31, side-effect of Commit A / OQ-41 row 23).**
+Inside the temporal path there was a *second*, silent G5 split: `classify_at_time` (drl_composition)
+fabricated `Supp=0.5` on absent temporal series, while `snapshot_type/3` (transition_paths) already
+fell back to the authored **scalar** via `drift_events:safe_metric` — so the two temporal classifiers
+disagreed on every constraint lacking a temporal suppression series (650/656 rows). The row-23
+scalar-fallback fix **converges them** (both now: temporal → authored scalar → floor). NB this
+convergence depends on the row-23 **stopgap**; if OQ-46 removes the scalar fallback without the
+generation template first authoring a temporal series, the split reopens. The `extractiveness`/
+`base_extractiveness` sub-splits (rows 19–20) remain open.
+
 ## OQ-41 — G6: fabricated defaults for absent data (fail-closed vs impute)
 
-**Status: open. Highest-stakes in the census.** Census rows 23–27. A silent fixed default
-(`0.5`, `0.0`) substitutes for absent authored data, so the engine computes on a value nobody
-authored — distinct from G5 (this is fail-closed-vs-impute, not representation choice).
-- **Row 23 `drl_composition.pl:179` `Supp=0.5` — LIVE, LOAD-BEARING-WRONG (D1a):** tripwire flips
-  279/647 temporal rows (219 tangled_rope→snare + 60 unknown→snare); `snare_suppression_floor=0.60`
-  blocks Supp=0.5 from snare → 50.4% of non-unknown temporal classifications mis-classify low. **The
-  single highest-priority adjudication.**
-- Rows 24–25 `BaseX=0.5` / extractiveness→0.5: latent (current corpus always supplies the value).
-- Row 26 analysis-path `0.5` cluster (boltzmann/purity/fpn/NL); row 27 `domain_priors_expanded`
-  neutral priors (by-design).
+**Status: row 23 MITIGATED (2026-05-31, Commit A); rows 24–27 open.** Census rows 23–27. A silent
+fixed default (`0.5`, `0.0`) substitutes for absent authored data, so the engine computes on a value
+nobody authored — distinct from G5 (this is fail-closed-vs-impute, not representation choice).
+- **Row 23 `drl_composition.pl` `classify_at_time` `Supp=0.5` — FIXED via scalar-fallback STOPGAP.**
+  Adjudication ruling was "return `unknown`," but the **positive control corrected the premise**: of
+  656 temporal-timeline rows, **650 had no temporal `suppression_requirement` *measurement* but ALL
+  650 carry an authored *scalar* `constraint_metric(C, suppression_requirement, _)`** — genuine-no-data
+  = 0. So both `Supp=0.5` (old) and `unknown` (literal ruling) discard real authored data. The census's
+  "279/647 flip" undersold the blast radius: the old code ran ~99% of the temporal classification on a
+  fabricated constant. Fix: temporal measurement → else authored **scalar** → else `unknown`
+  (fail-closed floor, fires 0× now). **268 rows corrected** vs fabricated 0.5 (185 tangled_rope→snare,
+  58 unknown→snare, 9 scaffold→mountain, 6 rope→mountain, 10 tangled_rope→unknown) — mostly the
+  snare_suppression_floor=0.60 low-mis-sort the census predicted. Validation suite clean (0/0).
+  **The scalar fallback is a labeled STOPGAP** — see **OQ-46** (generation-template fix retires it).
+- Rows 24–25 `BaseX=0.5` / extractiveness→0.5: latent (tripwire artifact: 0 changes; extractiveness
+  required-authored).
+- **Row 26 analysis-path `0.5` cluster — MEASURED NEUTRAL (`outputs/tripwire_row26_results.json`).**
+  Direct branch-reachability tripwire (patch `0.5→999.9`, count constraints that emit 999.9):
+  `purity_scoring:57`, `drl_boltzmann_analysis:135`, `:154` all **default_fired=0/194** (branch
+  unreachable); `:302` neutral (guard `reformability_score` proven total by bogus-constraint positive
+  control); `drl_fpn:197` is LIVE-COSMETIC at most (dynamic cache, fires only when `dr_type` fails in
+  precompute, feeds FPN contamination EP only — never `dr_type`). **No row-26 site is a classification
+  trap.** NB: the guard-falsity *count* shortcut was caught **vacuous** by its positive control —
+  `cross_index_coupling`/`reformability_score` succeed even for a bogus constraint, so "0 absent" did
+  not prove "branch unreached"; the 999.9 tripwire is the sound test. Row 27 by-design.
 
-**Decision per site:** fail-closed (require the datum) vs keep the impute, with the value chosen
-deliberately. Connects to the empty-table satisfy-on-absence pattern (`get_metric_average:160`).
+**Decision per remaining site:** fail-closed vs keep impute. Connects to the empty-table
+satisfy-on-absence pattern (`get_metric_average:169`).
 
 ## OQ-42 — Documentation correction: `affects_constraint` is NOT empty in testsets_3000
 
@@ -1526,6 +1556,61 @@ fabricated-value (Pattern 4) and satisfied-by-absence (Pattern 5) gates rather t
 mountains) into either honestly-conditional findings (gate documents its own vacuity) or
 genuinely-checked findings (gate fail-closed, requires the table populated). Connects to
 OQ-43, OQ-41, OQ-36/OQ-37. Build-discipline Pattern 5 records the pattern and diagnostic.
+
+## OQ-45 — Content audit: do any of the 404 NL constraints hide asymmetric winners?
+
+**Status: open (corpus-quality audit, NOT engine maintenance).** Spun off from the D3 ruling so the
+wiring fix (NL beneficiary gate fail-close, Commit B1) and the content question stay separate. The
+gate fail-close makes "no beneficiary authored" honestly-conditional rather than a vacuous pass; it
+does **not** decide whether any of the 404 natural-law certifications are *mis-authored* false-naturals
+with a real winner hidden behind an emergence claim. Populating `intent_power_change` faithfully for a
+genuine natural law yields 0 beneficiaries / 0 flips (OQ-43), so this audit only bites mis-authoring.
+Audit the 404 on their own merits; do **not** populate `intent_*` as maintenance. Connects to OQ-43.
+
+## OQ-46 — D4-for-suppression is a GENERATION-TEMPLATE requirement; it retires the row-23 stopgap
+
+**Status: open. Sequencing constraint for the row-23 fix (OQ-41).** The row-23 fix
+(`classify_at_time`) currently bridges absent temporal `suppression_requirement` to the authored
+**scalar** value — a **labeled stopgap**, not a sanctioned second representation. The real fix is
+**upstream, in generation**: the story template must author a *temporal* `suppression_requirement`
+series (today 650/656 timeline rows have only the scalar). This is a **generation-template
+requirement, not an engine representation ruling** — i.e. D4 (G5 scalar-vs-temporal) for suppression
+is resolved by authoring the series, not by the engine choosing a representation. **Once the template
+authors the series: delete the scalar-fallback clause in `classify_at_time` and let the temporal path
+stand alone.** Do **not** build a scalar/temporal equivalence check on the bridge — skip it; the
+bridge is temporary. Sequenced: this rides the regeneration arc (OQ-47), not Commit B.
+
+## OQ-47 — Audit the SCOPE→seed seam BEFORE the de-stamp regeneration batch
+
+**Status: open. Gating constraint on the regeneration arc.** The behavior-preserving prompt/schema
+changes (D5 row-14 strip, D7 schema-gate strip) only take effect on **regenerated** stories. Sequencing:
+- **De-stamp A/B is the FIRST regeneration batch** (the D7 schema-gate strip + row-14 removal, run as
+  an A/B against current stories) and it **gates batch two** — do not bulk-regenerate until the A/B
+  confirms the prompt fixes land as intended.
+- **Audit the SCOPE→seed seam first.** UKE_SCOPE writes the seed/manifest (`uke_scope.*`, census row 5);
+  if SCOPE re-injects the stripped gate language or fields downstream, it **silently undoes the prompt
+  fix** — the upstream leak. Verify the seam carries no stripped-field provenance before regenerating.
+Connects to OQ-46 (the regen that retires the row-23 stopgap) and D7/D5 (the prompt changes regen propagates).
+
+**Path-resolution audit (2026-05-31) — the leak is the EXAMPLE file, not SCOPE.** Both generators
+(`agent/generate_kernel_corpus.py`, `agent/c-orchestrator.py`) import path constants from
+`agent/story_generator_base.py`. Findings:
+- **Schema: no regen-path fork.** Every schema resolution — `SCHEMA_PATH` (prompt-text + `load_schema`
+  validation), `generate_constraint_pl._load_schema` (kernel strip/validate), c-orchestrator's
+  `load_schema` — resolves to the canonical `python/constraint_story_schema.json` (env `DR_SCHEMA`
+  overrides). **B4 lands in both pipelines.** `agent/data/constraint_story_schema.json` is referenced
+  ONLY by `commitment_corpus/apply_schema_patch.py` (orphan w.r.t. generation), not a regen fork.
+- **Prompt: canonical.** Generation prompt → `prompts/constraint_story_generation_prompt_json.md`
+  (env `DR_GEN_PROMPT`); SCOPE prompt → `prompts/uke_scope_v2_json.md`. **B3 lands in both.** The SCOPE
+  prompt does NOT carry the stripped gate fields (only an unrelated "net-zero resistance" phrase).
+- **CONFIRMED LEAK — the few-shot example file.** `c-orchestrator` injects `json/antifragility.json`
+  as its example, which hard-codes **`accessibility_collapse: 0.9` and `resistance: 0.08`** — the exact
+  mountain-gate pattern B4 stripped from the schema. The model will pattern-match and reproduce it,
+  **silently undoing B3+B4** for the c-orchestrator path. (The kernel pipeline's example,
+  `agent/verification_bottleneck.json`, is clean — 0 occurrences.) The two generators also use
+  DIFFERENT example files (divergence). **The de-stamp A/B MUST scrub `json/antifragility.json`'s
+  accessibility_collapse/resistance exemplar values, not just the prompt+schema** — else the leak
+  re-injects the stripped gate. This is the upstream leak this OQ anticipated; it is the example file.
 
 ---
 

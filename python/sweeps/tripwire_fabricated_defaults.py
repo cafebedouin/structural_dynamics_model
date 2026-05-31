@@ -255,6 +255,71 @@ def run_all():
     return results
 
 
+# ── Row-26 analysis-cluster: direct branch-reachability tripwire ──────────────
+# The guard-falsity shortcut is INVALID here: cross_index_coupling/reformability_score
+# succeed even for a bogus constraint (total predicates), so "0 constraints lack the
+# guard" does not prove the 0.5 branch is unreached. The only sound test is to patch the
+# literal default 0.5 -> 999.9 and check whether the enclosing predicate ever actually
+# EMITS 999.9 over the corpus. 999.9 in the output == the default branch executed.
+
+ROW26_PRED_QUERY = """\
+:- [stack],
+   corpus_loader:load_all_testsets,
+   use_module(covering_analysis),
+   use_module({mod}),
+   findall(C-V, (
+       covering_analysis:all_corpus_constraints(Cs),
+       member(C, Cs),
+       catch({mod}:{pred}(C, V), _, V = err)
+   ), Rows),
+   length(Rows, N),
+   format('ROWS ~w~n', [N]),
+   forall(member(C-V, Rows), format('ROW ~w ~w~n', [C, V])),
+   halt.
+"""
+
+# (file, exact_default_line, module, enclosing_pred/2)
+ROW26_SITES = [
+    ("purity_scoring.pl",
+     "    ;   F = 0.5  % Neutral if no data",
+     "purity_scoring", "factorization_subscore"),
+    ("drl_boltzmann_analysis.pl",
+     "    ;   Factor = 0.5  % Unknown coupling → moderate assumption",
+     "drl_boltzmann_analysis", "coupling_factor"),
+    ("drl_boltzmann_analysis.pl",
+     "    ;   Factor = 0.5  % No data",
+     "drl_boltzmann_analysis", "excess_extraction_factor"),
+]
+
+
+def run_row26():
+    results = {}
+    for fname, old_line, mod, pred in ROW26_SITES:
+        label = f"{fname}:{pred}"
+        print(f"\n=== ROW26 {label} ===")
+        f = PROLOG_DIR / fname
+        new_line = old_line.replace("= 0.5", "= 999.9")
+        q = ROW26_PRED_QUERY.format(mod=mod, pred=pred)
+        bl, pt = patch_and_run(f, old_line, new_line, q, label)
+        if bl is None:
+            results[label] = {"error": "patch_not_found"}
+            continue
+        fired = sum(1 for v in pt.values() if v.startswith("999.9"))
+        _, changed, _ = count_flips(bl, pt)
+        verdict = "NEUTRAL (default branch unreachable)" if fired == 0 \
+            else "LIVE (default branch fires)"
+        print(f"  baseline rows={len(bl)} default_fired={fired} changed={changed} -> {verdict}")
+        results[label] = {"baseline_rows": len(bl), "default_fired_count": fired,
+                          "total_changed": changed, "verdict": verdict}
+    out = OUTPUTS_DIR / "tripwire_row26_results.json"
+    out.write_text(json.dumps(results, indent=2))
+    print(f"\nRow-26 results written to {out}")
+    return results
+
+
 if __name__ == "__main__":
     os.chdir(PROLOG_DIR)
-    run_all()
+    if len(sys.argv) > 1 and sys.argv[1] == "row26":
+        run_row26()
+    else:
+        run_all()

@@ -17,9 +17,12 @@
 
 %% constraint_status(+ConstraintName, -State, -Intensity)
 %  Maps CE v2.0 types to diagnostic intensities.
-constraint_status(Name, binding_limit, I) :-
-    narrative_ontology:constraint_claim(Name, mountain),
-    narrative_ontology:constraint_metric(Name, inevitability, I), !.
+%  D2 strip (OQ-37/38): the `binding_limit` clause was the sole engine consumer of the
+%  `inevitability` metric, which is authored 0/0 in BOTH corpora (never filled). constraint_status/3
+%  itself has no live callers (only archives/tests), so removing this dead clause is a no-op —
+%  proven by clean corpus load + identical validation. Removes the phantom consumer that made
+%  `inevitability` look load-bearing. (internalization_depth, the sibling row, lives in the
+%  never-loaded psych_bridge module → tracked as dead-module removal, not a read strip.)
 
 % Rope
 constraint_status(Name, coordination_rope, I) :-

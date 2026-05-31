@@ -24,7 +24,7 @@ The output should be a **single JSON file** validated against `constraint_story_
 * **Rope**: Pure Coordination. Effective extraction χ ≤ 0.35, base extraction ε ≤ 0.45. Solves collective action problems with minimal coercive overhead.
 * **Tangled Rope**: Hybrid Coordination/Extraction. 0.40 ≤ χ ≤ 0.90, base extraction ε ≥ 0.30, suppression ≥ 0.40. Must possess BOTH a genuine coordination function AND asymmetric extraction.
 * **Snare**: Pure Extraction. Effective extraction χ ≥ 0.66, base extraction ε ≥ 0.46, suppression ≥ 0.60. High coercion, minimal coordination benefit; existence relies on suppressing alternatives.
-* **Scaffold**: Temporary Support. χ ≤ 0.30, theater ≤ 0.70. Coordination with a sunset clause. High suppression is tolerated only if it declines over the time horizon.
+* **Scaffold**: Temporary Support. χ ≤ 0.30, theater ≤ 0.70. Coordination with a sunset clause (enforced via `has_sunset_clause`).
 * **Piton**: Degraded/Inertial. χ ≤ 0.25, ε > 0.10, theater ≥ 0.70. A former Rope or Snare where the primary function has atrophied, but the constraint remains due to institutional inertia or theatrical maintenance.
 
 ### The Indexical Tuple (P, T, E, S)

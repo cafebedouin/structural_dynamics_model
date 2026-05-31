@@ -172,12 +172,20 @@ get_metric_average(C, MetricType, Average) :-
 %% count_power_beneficiaries(+Constraint, -Count)
 %  Counts distinct classes with positive power changes
 count_power_beneficiaries(C, Count) :-
-    % Find intervals affecting this constraint
-    findall(Class, (
-        narrative_ontology:affects_constraint(I, C),
-        narrative_ontology:intent_power_change(I, Class, Delta),
-        Delta > 0.1  % Meaningful gain threshold
-    ), Beneficiaries),
+    % D3 / OQ-43 fail-close: read the AUTHORED, populated constraint_beneficiary table
+    % (1237 facts live), NOT the join against intent_power_change — which is empty corpus-wide
+    % (0 facts in BOTH corpora) and so made `BeneficiaryCount == 0` a VACUOUS pass for every
+    % constraint (passing by data-absence, never by a checked condition). Absence of a
+    % constraint_beneficiary/2 fact is authored-zero (generation emits one when a beneficiary is
+    % declared), so counting authored beneficiaries makes the natural_law gate's
+    % `BeneficiaryCount == 0` an honest check over a NON-empty table — consistent with
+    % false_summit_mountain (:1217) and drl_core:287, which already read constraint_beneficiary.
+    % This does NOT populate intent_* (deliberately); whether any of the 404 NL certifications
+    % hide an authored winner is a separate corpus-content audit (OQ-45). Success criterion is
+    % "the gate stops passing on absence," NOT "the NL/mountain count stayed fixed" — a count
+    % shift here is a possibly-correct outcome (the gate declining to certify on absence),
+    % recorded as a finding, not reverted as a regression.
+    findall(B, narrative_ontology:constraint_beneficiary(C, B), Beneficiaries),
     sort(Beneficiaries, UniqueBeneficiaries),
     length(UniqueBeneficiaries, Count).
 

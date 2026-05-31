@@ -311,6 +311,16 @@ the strip, the author estimates AC without knowing the cutpoint; the engine deci
 the estimate clears the bar. If future generated mountains cluster at AC ≈ 0.60 instead of
 0.92, that is evidence the prior stamp was rule-satisfaction rather than domain measurement.
 
+**Scoping correction — do not cite T.1's "cosmetic" verdict unqualified (2026-05-31, Commit B1).**
+T.1's result (removing the NL signature changes 0 mountain classifications) holds for the
+*metric-agreeing majority*. But the NL *beneficiary gate* (`count_power_beneficiaries`) was passing
+vacuously over the empty `intent_power_change` table (0 facts both corpora), so it certified as
+`natural_law` 3 live constraints that carry *authored* asymmetric beneficiaries. Pointing the gate at
+the populated `constraint_beneficiary` table (1237 facts) declined those 3 (live NL 5→2). So the
+signature was cosmetic for the mountain *type* but **not inert for the natural-law *certification***:
+it hid 3 false-naturals the empty-intent gate could not exclude. Cite "cosmetic" scoped to the
+metric-agreeing majority; for the false-natural tail it was classification-(certification-)changing.
+
 **Where this recurs:** any generation prompt or schema that exposes a classification
 threshold to the author creates the same risk. Whether it is a problem depends on whether
 the diff between author estimate and engine verdict is supposed to carry information. For
@@ -318,6 +328,19 @@ the NL profile metrics (AC, resistance), the diff was the audit target; exposing
 threshold collapsed it to zero. For `ε ≤ 0.25` and `suppression ≤ 0.05` on mountains,
 the thresholds are retained because they bound what counts as mountain *substrate* by
 definition — the author needs to know they are authoring a low-extraction scenario.
+
+**Third contamination surface — the worked EXAMPLE, not just instructions and schema (2026-05-31,
+regen-path audit).** The estimator sees the decision rule through three surfaces, not two. Stripping
+the *instruction* (the prompt's "AC ≥ 0.85" line) and the *schema gate* is incomplete if a few-shot
+**example** still carries a gate-satisfying value. `json/antifragility.json` — the exemplar the
+`c-orchestrator` generator injects — hard-codes `accessibility_collapse: 0.9, resistance: 0.08`, the
+exact mountain pattern that was stripped from the prompt and schema. **A worked example showing the
+rule *satisfied* teaches the decision rule more strongly than a stated threshold: demonstration beats
+instruction.** The prompt's contamination surface is **{instructions, schema, examples}**; scrubbing
+the first two while the third still shows AC=0.9 leaves the leak intact. (Scope: this exemplar is on
+the c-orchestrator path only; the kernel regen pipeline `generate_kernel_corpus` injects a clean
+exemplar `agent/verification_bottleneck.json`, so for the regen path the scrub is hygiene, not a
+precondition — but the principle stands: **enumerate examples as a contamination surface.**)
 
 **The discipline:** when deciding whether to expose a threshold to an author, ask: is this
 a *definitional* bound on what the substrate can be (author needs it) or a
