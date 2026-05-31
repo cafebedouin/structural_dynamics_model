@@ -1,0 +1,40 @@
+Loaded 167 threshold values from config.pl
+Loaded 167 threshold values from config.pl
+Loaded 167 threshold values from config.pl
+[research] Running web-search grounding...
+[research] Web-search grounding complete
+[decompose] Loaded frozen manifest from ab_test/manifest.json (3 axes)
+[generate] Generating constraint stories...
+[generate] [1/3] Generating post_industrial_spatial_extraction...
+  Lint warnings for post_industrial_spatial_extraction (non-blocking):
+    - MOUNTAIN_METRIC_CONFLICT: constraint_claim is mountain but suppression_score=0.18 exceeds mountain suppression ceiling (0.05). The engine's mountain gate will reject this, producing coupling violations and a false_natural_law signature. Either reduce suppression or reclassify the constraint.
+  Saved: post_industrial_spatial_extraction.json + post_industrial_spatial_extraction.pl
+[generate] Saved post_industrial_spatial_extraction
+[generate] [2/3] Generating populist_as_class_realignment...
+  Lint warnings for populist_as_class_realignment (non-blocking):
+    - MISSING_SUNSET_CLAUSE: Scaffold with requires_active_enforcement needs narrative_ontology:has_sunset_clause/1.
+    - LOW_THEATER_RATIO: Piton requires theater_ratio >= 0.7, found 0.35.
+    - INVALID_COORDINATION_TYPE: coordination_type value 'identity_coordination' is not valid. Must be one of: ['enforcement_mechanism', 'global_infrastructure', 'information_standard', 'resource_allocation'].
+  Saved: populist_as_class_realignment.json + populist_as_class_realignment.pl
+[generate] Saved populist_as_class_realignment
+[generate] [3/3] Generating democratic_legitimacy_arbitrage...
+  Lint warnings for democratic_legitimacy_arbitrage (non-blocking):
+    - MISSING_ENFORCEMENT: Tangled rope requires requires_active_enforcement/1.
+    - INVALID_COORDINATION_TYPE: coordination_type value 'identity_coordination' is not valid. Must be one of: ['enforcement_mechanism', 'global_infrastructure', 'information_standard', 'resource_allocation'].
+  Saved: democratic_legitimacy_arbitrage.json + democratic_legitimacy_arbitrage.pl
+[generate] Saved democratic_legitimacy_arbitrage
+[generate] Generated 3/3 stories
+[reports] Skipped — run-tagged output. Promote json/ab_stripped2/ to json/ first.
+
+============================================================
+PIPELINE SUMMARY
+============================================================
+  research             success  (55272→2101 tokens) [33.9s]
+  decompose            success 
+  generate             success  (86378→13387 tokens) [292.7s]
+  corpus_update        skipped 
+  reports              skipped 
+  essay                skipped 
+
+  Total tokens: 141650→15488
+  Total time:   326.6s

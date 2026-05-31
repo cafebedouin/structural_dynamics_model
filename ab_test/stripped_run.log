@@ -1,0 +1,36 @@
+Loaded 167 threshold values from config.pl
+Loaded 167 threshold values from config.pl
+[research] Running web-search grounding...
+[research] Web-search grounding complete
+[decompose] Loaded frozen manifest from ab_test/manifest.json (3 axes)
+[generate] Generating constraint stories...
+[generate] [1/3] Generating post_industrial_spatial_extraction...
+[generate] Validation errors for post_industrial_spatial_extraction, retrying...
+[generate] Failed to generate valid story for post_industrial_spatial_extraction
+[generate] [2/3] Generating populist_as_class_realignment...
+  Lint warnings for populist_as_class_realignment (non-blocking):
+    - MISSING_SUNSET_CLAUSE: Scaffold with requires_active_enforcement needs narrative_ontology:has_sunset_clause/1.
+    - INVALID_COORDINATION_TYPE: coordination_type value 'identity_coordination' is not valid. Must be one of: ['enforcement_mechanism', 'global_infrastructure', 'information_standard', 'resource_allocation'].
+  Saved: populist_as_class_realignment.json + populist_as_class_realignment.pl
+[generate] Saved populist_as_class_realignment
+[generate] [3/3] Generating democratic_legitimacy_arbitrage...
+  Lint warnings for democratic_legitimacy_arbitrage (non-blocking):
+    - MISSING_SUNSET_CLAUSE: Scaffold with requires_active_enforcement needs narrative_ontology:has_sunset_clause/1.
+    - INVALID_COORDINATION_TYPE: coordination_type value 'identity_coordination' is not valid. Must be one of: ['enforcement_mechanism', 'global_infrastructure', 'information_standard', 'resource_allocation'].
+  Saved: democratic_legitimacy_arbitrage.json + democratic_legitimacy_arbitrage.pl
+[generate] Saved democratic_legitimacy_arbitrage
+[generate] Generated 2/3 stories
+[reports] Skipped — run-tagged output. Promote json/ab_stripped/ to json/ first.
+
+============================================================
+PIPELINE SUMMARY
+============================================================
+  research             success  (50002→2782 tokens) [35.5s]
+  decompose            success 
+  generate             success  (115077→16900 tokens) [372.3s]
+  corpus_update        skipped 
+  reports              skipped 
+  essay                skipped 
+
+  Total tokens: 165079→19682
+  Total time:   407.8s

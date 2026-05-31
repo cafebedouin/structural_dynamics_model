@@ -1,0 +1,219 @@
+{
+  "header": {
+    "constraint_id": "democratic_legitimacy_arbitrage",
+    "version": "1.0",
+    "generated_date": "2024-01-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dem_arb",
+    "story_uid": "6cc08584-a59e-4dc4-9828-825799d0bb99",
+    "created_at": "2026-05-31T03:56:39.944279+00:00"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Democratic Legitimacy Arbitrage in Populist Governance",
+    "topic_domain": "political_economy/comparative_politics/democratic_theory",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "populist_leadership"
+    ],
+    "victims": [
+      "institutional_checks_and_balances",
+      "opposition_political_actors",
+      "judicial_independence"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "The Populist Supporter",
+      "comment": "PERSPECTIVE 1: POPULIST SUPPORTER (SNARE) — Identity-locked within the populist frame that treats democratic legitimacy and strong-leader authority as compatible. Cannot exit because their political identity is constituted through the movement. Experiences the constraint as natural — the leader embodies the people's will, so concentrated power IS democracy. The cognitive lock prevents recognition of the extraction mechanism."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Institutional Check",
+      "comment": "PERSPECTIVE 2: INSTITUTIONAL CHECKS AND BALANCES (SNARE) — Trapped by the legitimacy arbitrage. When populist supporters endorse both democratic norms and unchecked executive power, institutional resistance to executive overreach is framed as anti-democratic elite obstruction. The check cannot exit — it must either enforce constraints (and be delegitimized) or acquiesce (and cease to function). Maximum extraction with no viable exit path."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Opposition Political Actor",
+      "comment": "PERSPECTIVE 3: OPPOSITION POLITICAL ACTOR (TANGLED ROPE) — Constrained by the legitimacy arbitrage but also benefits from the democratic procedural framework that the populist movement claims to honor. Can contest elections and invoke democratic norms, but faces asymmetric costs when the executive bypasses institutional constraints while claiming popular mandate. Mixed extraction — some coordination benefit from the democratic frame, significant extraction from the arbitrage mechanism."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Populist Leadership",
+      "comment": "PERSPECTIVE 4: POPULIST LEADERSHIP (ROPE) — Primary beneficiary with arbitrage exit options. Experiences the constraint as pure coordination: the simultaneous endorsement of democratic legitimacy and strong-leader governance creates a legitimacy reservoir that can be drawn upon selectively. Can invoke democratic mandate when convenient and dismiss institutional constraints as elite obstruction when inconvenient. Net beneficiary — extraction flows toward this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The Civil Society Coalition",
+      "comment": "PERSPECTIVE 5: CIVIL SOCIETY COALITION (TANGLED ROPE) — Organized agents (NGOs, media watchdogs, academic institutions, international democracy monitors) see the legitimacy arbitrage as a coordination problem with extractive overlay. Benefits from the democratic procedural framework that enables organizing and advocacy, but bears costs from the erosion of institutional checks. Mobile exit options — can shift resources internationally or pivot to different advocacy strategies — but constrained by national political context."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From a civilizational perspective, the legitimacy arbitrage represents a genuine tension in democratic theory between popular sovereignty and constitutional constraints. Some coordination function exists — the populist movement is solving a real representation failure (captured in upstream constraint populist_as_class_realignment). But the arbitrage mechanism extracts from institutional integrity by exploiting the conceptual gap between procedural democracy and substantive checks. The analytical observer sees both the coordination function and the extraction, hence tangled_rope."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cognitive_vs_strategic_endorsement",
+      "question": "Do populist supporters genuinely hold both democratic and strong-leader preferences as cognitively compatible, or is the dual endorsement a strategic response to survey framing?",
+      "resolution_mechanism": "Experimental survey design with randomized question ordering, implicit association tests, longitudinal tracking of preference stability, qualitative interviews probing reasoning",
+      "impact": "If cognitive: identity_locked classification confirmed — supporters cannot see the tension. If strategic: supporters are constrained rather than identity_locked — they see the tension but endorse both for instrumental reasons.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether dual endorsement reflects cognitive compatibility or strategic framing response"
+    },
+    {
+      "id": "legitimacy_arbitrage_reversibility",
+      "question": "Can the legitimacy arbitrage be reversed through institutional design (e.g., constitutional reforms that make the tension explicit), or does it represent a stable attractor in populist governance?",
+      "resolution_mechanism": "Comparative analysis of institutional reforms in post-populist transitions; tracking of legitimacy arbitrage persistence across regime changes; experimental constitutionalism studies",
+      "impact": "If reversible: scaffold logic applies — the arbitrage is a temporary coordination failure with institutional solutions. If stable attractor: snare classification confirmed — the arbitrage is self-reinforcing.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether legitimacy arbitrage can be reversed through institutional design"
+    },
+    {
+      "id": "representation_failure_threshold",
+      "question": "At what threshold of representation failure does the legitimacy arbitrage shift from extractive mechanism to legitimate democratic correction?",
+      "resolution_mechanism": "Historical analysis of populist movements that successfully corrected representation failures vs those that consolidated authoritarian power; identification of structural differences in initial conditions",
+      "impact": "If threshold is identifiable and current cases exceed it: tangled_rope classification from more perspectives — genuine coordination function alongside extraction. If no threshold or current cases below it: snare classification from more perspectives — extraction dominates.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Threshold at which legitimacy arbitrage becomes legitimate democratic correction"
+    },
+    {
+      "id": "international_diffusion_mechanism",
+      "question": "Does the legitimacy arbitrage spread through ideological diffusion (populist movements learning from each other) or through structural convergence (similar economic conditions producing similar political dynamics)?",
+      "resolution_mechanism": "Network analysis of populist movement connections and information flows; comparative timing analysis of legitimacy arbitrage emergence; structural economic similarity analysis",
+      "impact": "If ideological diffusion: the arbitrage is a transmitted strategy that could be countered through counter-messaging. If structural convergence: the arbitrage is an emergent property of post-industrial political economy (upstream constraint post_industrial_spatial_extraction) and requires structural economic intervention.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether legitimacy arbitrage spreads through ideology or structural convergence"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.44
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The democratic legitimacy arbitrage emerges when populist supporters simultaneously endorse representative democracy as a normative ideal and strong-leader governance without institutional constraints as a practical necessity. Survey data across multiple democracies shows this dual endorsement is significantly more common among populist supporters than non-populist citizens, creating a legitimacy reservoir that populist leaders can draw upon selectively. The arbitrage mechanism works by exploiting the conceptual gap between procedural democracy (elections, majority rule) and constitutional democracy (institutional checks, minority rights, rule of law). Populist leaders invoke democratic mandate to claim legitimacy while dismissing institutional constraints as anti-democratic elite obstruction. The constraint has intensified over the interval (2014-2024) as populist movements have learned to operationalize the arbitrage more effectively, with rising extractiveness (0.32 → 0.48) reflecting increasing institutional erosion, rising suppression (0.45 → 0.62) reflecting intensifying delegitimization of opposition and checks, and rising theater ratio (0.42 → 0.58) reflecting the growing gap between democratic rhetoric and authoritarian practice.",
+    "key_agents": [
+      "Populist Supporter: Primary target (powerless/identity_locked) — identity constituted through the movement; cannot see the tension between democratic norms and unchecked executive power",
+      "Institutional Checks and Balances: Primary victim (powerless/trapped) — trapped by the legitimacy arbitrage; resistance to executive overreach is framed as anti-democratic",
+      "Opposition Political Actor: Secondary victim (moderate/constrained) — constrained by asymmetric costs but benefits from democratic procedural framework",
+      "Populist Leadership: Primary beneficiary (institutional/arbitrage) — extracts legitimacy from dual endorsement while bypassing institutional constraints",
+      "Civil Society Coalition: Organized agents (organized/mobile) — NGOs, media, academics, international monitors; mobile exit options but constrained by national context",
+      "Analytical Observer: Civilizational view (analytical/analytical) — sees both coordination function (representation failure correction) and extraction (institutional erosion)"
+    ],
+    "logic_rationale": "Extractiveness (0.48): Moderate-high. The legitimacy arbitrage extracts from institutional integrity by delegitimizing checks and balances while claiming democratic mandate. The extraction is substantial but not total — some institutional constraints persist, and the democratic procedural framework continues to function (elections occur, opposition exists). The value reflects that the arbitrage is an ongoing erosion process rather than a completed authoritarian consolidation. Suppression (0.62): Moderate-high. Significant suppression of institutional alternatives through delegitimization (courts and parliaments framed as elite obstruction), media pressure, civil society constraints, and opposition harassment. But suppression is not total — institutional checks can still resist in some domains, and opposition can still contest elections. The rising trajectory (0.45 → 0.62) reflects intensifying enforcement as the arbitrage mechanism matures. Theater ratio (0.58): Moderate-high. Substantial gap between democratic rhetoric (invoking popular will, electoral mandate, majority rule) and authoritarian practice (bypassing institutional constraints, delegitimizing opposition, eroding judicial independence). The theater is functional — it maintains the legitimacy reservoir that enables the arbitrage — but the gap between claim and reality is widening.",
+    "directionality_logic": "The populist supporter is identity_locked rather than trapped because the binding mechanism is cognitive rather than structural. The supporter has structural mobility (can vote for opposition, can access alternative information sources, faces no legal prohibition on exit) but cannot exercise it because their political identity is constituted through the populist movement. The identity frame makes the tension between democratic norms and strong-leader governance literally invisible — the leader embodies the people's will, so concentrated power IS democracy. This is the diagnostic signature of identity_locked: the agent perceives the constraint as mountain (unchangeable, natural) at biographical time horizon, while an agent with the same structural position but different identity frame (the opposition supporter) perceives it as snare (changeable, extractive). The gap reveals that the binding is perceptual rather than material. Institutional checks are trapped rather than identity_locked because their barriers to exit are structural: they must either enforce constraints (and be delegitimized) or acquiesce (and cease to function). The populist leadership is the primary beneficiary with arbitrage exit options — can invoke democratic legitimacy when convenient, dismiss institutional constraints when inconvenient, and exit to international safe havens if the regime collapses. Opposition actors are constrained rather than trapped because they face high but surmountable costs to exit (career damage, social penalty, potential harassment) but can still contest elections and invoke democratic norms.",
+    "perspectival_gap": "The populist supporter sees the constraint as mountain (identity_locked perspective) — the leader's authority is natural and legitimate, institutional resistance is elite obstruction. The institutional check sees snare (trapped perspective) — delegitimization with no exit path. The opposition actor sees tangled_rope (constrained perspective) — benefits from democratic procedures but bears asymmetric costs from the arbitrage. The populist leadership sees rope (arbitrage perspective) — pure coordination, the legitimacy reservoir enables effective governance. The civil society coalition sees tangled_rope (mobile perspective) — genuine representation problem being addressed alongside institutional extraction. The analytical observer sees tangled_rope (analytical perspective) — both coordination function (correcting representation failure) and extraction (eroding institutional checks). The perspectival gap between the identity_locked supporter (mountain) and the analytical observer (tangled_rope) at the same biographical time horizon reveals that the binding mechanism is cognitive rather than structural — the constraint is changeable, but the supporter cannot see this from within their identity frame.",
+    "mandatrophy_analysis": "The constraint resolves the mandatrophy by showing that the legitimacy arbitrage is neither pure coordination (rope) nor pure extraction (snare) but depends on the observer's structural position. The populist leadership genuinely experiences it as coordination — they are solving a representation failure (upstream constraint populist_as_class_realignment) by mobilizing previously excluded constituencies. The institutional checks genuinely experience it as extraction — their capacity to constrain executive power is being systematically eroded. The analytical observer sees both: a real coordination function (addressing representation failure) layered with a real extraction mechanism (institutional erosion). The mandatrophy is resolved by recognizing that all three perspectives are structurally valid readings of the same phenomenon, and the presheaf over the observation site captures the full structure."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of post_industrial_spatial_extraction (mountain — structural economic transformation creating geographic winners and losers) and populist_as_class_realignment (tangled_rope — populist movements as both representation correction and extractive mechanism). The legitimacy arbitrage is the political-institutional manifestation of the underlying economic and class dynamics captured in the upstream constraints."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "mod",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "post_industrial_spatial_extraction",
+      "populist_as_class_realignment"
+    ]
+  }
+}

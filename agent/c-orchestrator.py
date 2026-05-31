@@ -88,6 +88,29 @@ def _get_client():
 
 
 # ---------------------------------------------------------------------------
+# Retry feedback sanitizer — strips numeric bound values so schema cutpoints
+# are not leaked back to the model via jsonschema error messages on retry.
+# ---------------------------------------------------------------------------
+import re as _re
+
+def _sanitize_feedback_error(msg: str) -> str:
+    """Remove numeric threshold values from jsonschema validation error text."""
+    msg = _re.sub(
+        r'\d+(?:\.\d+)? is less than the minimum of \d+(?:\.\d+)?',
+        'value is below the required minimum for this field', msg)
+    msg = _re.sub(
+        r'\d+(?:\.\d+)? is greater than the maximum of \d+(?:\.\d+)?',
+        'value exceeds the required maximum for this field', msg)
+    msg = _re.sub(
+        r'\d+(?:\.\d+)? is less than or equal to the exclusiveMinimum(?:,? \d+(?:\.\d+)?)?',
+        'value does not meet the required exclusive minimum', msg)
+    msg = _re.sub(
+        r'\d+(?:\.\d+)? is greater than or equal to the exclusiveMaximum(?:,? \d+(?:\.\d+)?)?',
+        'value exceeds the required exclusive maximum', msg)
+    return msg
+
+
+# ---------------------------------------------------------------------------
 # Orchestrator
 # ---------------------------------------------------------------------------
 
@@ -122,6 +145,7 @@ class DRAuditOrchestrator:
         skip_search: bool = False,
         skip_essay: bool = False,
         dry_run: bool = False,
+        manifest_file: str | None = None,
         progress_callback: Callable[[str, str], None] | None = None,
     ):
         self.axes = axes
@@ -130,6 +154,7 @@ class DRAuditOrchestrator:
         self.skip_search = skip_search
         self.skip_essay = skip_essay
         self.dry_run = dry_run
+        self.manifest_file = manifest_file
         self._progress = progress_callback or (lambda step, msg: print(f"[{step}] {msg}"))
 
         # Output dirs — run-tagged if run_tag given, else flat main corpus dirs
@@ -150,7 +175,10 @@ class DRAuditOrchestrator:
         # Load protocol files (cached via lru_cache in story_generator_base)
         self.protocols = {
             "uke_scope":  _load_context_file(str(REPO_ROOT / "prompts" / "uke_scope_v2_json.md")),
-            "gen_prompt": _load_context_file(str(REPO_ROOT / "prompts" / "constraint_story_generation_prompt_json.md")),
+            "gen_prompt": _load_context_file(os.environ.get(
+                "DR_GEN_PROMPT",
+                str(REPO_ROOT / "prompts" / "constraint_story_generation_prompt_json.md")
+            )),
             "example":    _load_context_file(str(REPO_ROOT / "json" / "antifragility.json")),
             "uke_w":      _load_context_file(str(Path(__file__).parent / "uke_summary.md")),
         }
@@ -258,8 +286,22 @@ class DRAuditOrchestrator:
         result.steps.append(step)
         research_context = step.data or topic
 
-        # Step 2: Decompose (SCOPE)
-        step = self._step_decompose(topic, research_context)
+        # Step 2: Decompose (SCOPE) — or load frozen manifest if --manifest-file given
+        if self.manifest_file:
+            try:
+                frozen = json.loads(Path(self.manifest_file).read_text(encoding="utf-8"))
+                required = ["protocol", "domain", "family_id", "axes", "generation_sequence"]
+                missing = [f for f in required if f not in frozen]
+                if missing:
+                    raise ValueError(f"Frozen manifest missing fields: {missing}")
+                self._progress("decompose", f"Loaded frozen manifest from {self.manifest_file} "
+                               f"({len(frozen['generation_sequence'])} axes)")
+                step = StepResult(step="decompose", status="success", data=frozen)
+            except Exception as e:
+                self._progress("decompose", f"Failed to load manifest: {e}")
+                step = StepResult(step="decompose", status="error", error=str(e))
+        else:
+            step = self._step_decompose(topic, research_context)
         result.steps.append(step)
 
         if step.status == "error":
@@ -485,7 +527,7 @@ class DRAuditOrchestrator:
                     model=self.MODELS["architect"],
                     max_tokens=self.MAX_TOKENS["architect"],
                     system_instruction=_SYSTEM_INSTRUCTION,
-                    temperature=0.2,
+                    temperature=float(os.environ.get("DR_TEMPERATURE", "0.2")),
                 )
                 total_tin += tin
                 total_tout += tout
@@ -518,7 +560,7 @@ class DRAuditOrchestrator:
                 if errors:
                     feedback = "\nYour previous attempt had these validation errors:\n"
                     for err in errors:
-                        feedback += f"  - {err}\n"
+                        feedback += f"  - {_sanitize_feedback_error(err)}\n"
                     feedback += "Fix these specific errors while keeping the rest correct.\n"
 
                 retry_prompt = build_prompt(source_desc, context_text + feedback)
@@ -528,7 +570,7 @@ class DRAuditOrchestrator:
                         model=self.MODELS["architect"],
                         max_tokens=self.MAX_TOKENS["architect"],
                         system_instruction=_SYSTEM_INSTRUCTION,
-                        temperature=0.2,
+                        temperature=float(os.environ.get("DR_TEMPERATURE", "0.2")),
                     )
                     total_tin += tin2
                     total_tout += tout2
@@ -756,6 +798,8 @@ def main():
     parser.add_argument("--skip-search", action="store_true", help="Skip search grounding")
     parser.add_argument("--skip-essay", action="store_true", help="Skip essay synthesis")
     parser.add_argument("--dry-run", action="store_true", help="Run SCOPE only, print manifest")
+    parser.add_argument("--manifest-file", default=None,
+                        help="Load frozen SCOPE manifest from file, skip decompose step")
     args = parser.parse_args()
 
     # Resolve topic — positional arg can be a file path or a literal string
@@ -785,6 +829,7 @@ def main():
         skip_search=args.skip_search,
         skip_essay=args.skip_essay,
         dry_run=args.dry_run,
+        manifest_file=args.manifest_file,
     )
     result = orch.run(topic)
 

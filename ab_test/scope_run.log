@@ -1,0 +1,265 @@
+[research] Running web-search grounding...
+[research] Web-search grounding complete
+[decompose] Running UKE_SCOPE decomposition...
+[decompose] Fracture warning: F03 detected on two axes: (1) post_industrial_spatial_extraction classified as mountain but knowledge-economy concentration may be policy-reversible rather than inevitable (remote work suggests piton); (2) democratic_legitimacy_arbitrage relies on survey data showing simultaneous endorsement of representative democracy and strong-leader governance, but this may be survey artifact rather than genuine constraint structure. Generated omega_spatial_extraction_reversibility and omega_authoritarian_openness_measurement to bound these uncertainties.
+[decompose] SCOPE complete — 3 axes selected
+[dry_run] Manifest assembled — dry-run stops here
+
+============================================================
+PIPELINE SUMMARY
+============================================================
+  research             success  (51151→2269 tokens) [28.5s]
+  decompose            success  (14523→4000 tokens) [75.4s]
+
+  Total tokens: 65674→6269
+  Total time:   103.9s
+
+============================================================
+SCOPE MANIFEST
+============================================================
+{
+  "protocol": "UKE_SCOPE",
+  "version": "2.0-json",
+  "domain": "Political Economy / Comparative Politics / Democratic Theory",
+  "family_id": "right_wing_populism_post_brexit_2026",
+  "topic_summary": "Analysis of right-wing populism's trajectory in the decade since the 2016 Brexit referendum, examining its normalization across European democracies through electoral gains (National Rally, AfD, Brothers of Italy, Reform UK), driven by anti-elite sentiment, economic anxieties from post-2008 crises, and cultural backlash against progressive social change. The report documents populism's transformation from fringe phenomenon to structural feature of European politics.",
+  "extraction_summary": {
+    "entity_count": 15,
+    "claim_count": 8,
+    "tension_count": 4,
+    "mechanism_count": 3,
+    "absence_count": 3,
+    "key_entities": [
+      "National Rally (France) - grew from 2 seats (2016) to 123 seats (2026), largest party",
+      "Alternative for Germany (AfD) - zero seats (2016) to 150 seats (2026), second-largest party",
+      "Brothers of Italy - Giorgia Meloni became PM after 2022 elections",
+      "Reform UK - 32% favorable ratings, successor to UKIP under Farage",
+      "European working class - shifting from left-of-center parties to populist right",
+      "Post-2008 economic shock sequence - financial crisis, eurozone debt crisis, COVID-19, post-pandemic inflation",
+      "Brexit 'Take back control' campaign - anti-elite, anti-immigration framing",
+      "EU institutional structure - Brussels elites as extraction target",
+      "Educational divide - less educated voters significantly more supportive of populist parties",
+      "Representative democracy norm - majority support across all groups but with authoritarian openness among populists",
+      "Cultural backlash framework (Norris/Inglehart) - reaction to progressive social change on women's rights, LGBTQ+ rights, diversity",
+      "Globalization losers - working-class populations in deindustrialized regions",
+      "Strong leader governance model - populist supporters twice as likely to endorse",
+      "National identity exclusionism - birthplace, language, customs as membership criteria",
+      "Mainstream center-left/center-right parties - losing working-class base, forced to adopt populist rhetoric"
+    ],
+    "key_tensions": [
+      "Representative democracy vs strong leader governance (populist supporters endorse both simultaneously)",
+      "Economic globalization winners (urban knowledge economy) vs losers (rural/deindustrialized regions)",
+      "Progressive social change (women's rights, LGBTQ+ rights, diversity) vs traditional values preservation",
+      "National sovereignty vs EU institutional authority (Brexit as template)"
+    ],
+    "key_mechanisms": [
+      "Electoral normalization feedback loop: populist gains \u2192 mainstream parties adopt populist rhetoric \u2192 legitimizes populist framing \u2192 further populist gains",
+      "Economic shock sequence amplification: 2008 crisis \u2192 eurozone debt \u2192 COVID-19 \u2192 inflation, each shock eroding mainstream party credibility",
+      "Cultural backlash mobilization: progressive policy advances \u2192 exclusionary identity politics \u2192 populist party growth among traditionalists"
+    ],
+    "key_absences": [
+      "Populist governance performance data: report tracks electoral gains but not policy outcomes when populists hold power",
+      "Intra-populist variation: AfD, National Rally, Brothers of Italy treated as homogeneous category despite different positions on EU, NATO, economic policy",
+      "Counterfactual analysis: what would have happened to European politics without Brexit catalyst or 2008 crisis"
+    ]
+  },
+  "axes": [
+    {
+      "claim_id": "post_industrial_spatial_extraction",
+      "human_readable": "Post-Industrial Spatial Extraction (Knowledge Economy Concentration)",
+      "structural_delta": "Wealth and opportunity concentration in urban knowledge-economy hubs, leaving rural/deindustrialized regions with declining subjective status despite non-declining absolute conditions",
+      "primary_observable": "Urban-rural GDP per capita divergence; knowledge-sector employment concentration in metropolitan areas; rural public service accessibility decline",
+      "epsilon_bin": "v_low",
+      "hypothesis": "mountain",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "populist_as_class_realignment",
+        "democratic_legitimacy_arbitrage"
+      ],
+      "centrality_score": 4,
+      "selected": true,
+      "generation_order": 1,
+      "selection_reason": "Upstream mountain providing physical-economic constraint base; structural foundation for both class realignment and legitimacy crisis"
+    },
+    {
+      "claim_id": "populist_as_class_realignment",
+      "human_readable": "Populism as Class Realignment (Working-Class Defection from Left)",
+      "structural_delta": "Working-class voters shifting from left-of-center parties (traditional economic redistribution) to right-wing populist parties (cultural protection + anti-elite framing), driven by education-based stratification",
+      "primary_observable": "Working-class vote share for left vs right-wing populist parties over time; education level correlation with party support; union membership vs populist party affiliation",
+      "epsilon_bin": "low",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "right_wing_populist_parties",
+      "victim": "social_democratic_welfare_coalitions",
+      "downstream_of": [
+        "post_industrial_spatial_extraction"
+      ],
+      "feeds_into": [
+        "democratic_legitimacy_arbitrage"
+      ],
+      "centrality_score": 5,
+      "selected": true,
+      "generation_order": 2,
+      "selection_reason": "Highest centrality; captures core political realignment dynamic; tangled_rope with clear beneficiary/victim structure; distinct observable from axis 1"
+    },
+    {
+      "claim_id": "democratic_legitimacy_arbitrage",
+      "human_readable": "Democratic Legitimacy Arbitrage (Simultaneous Democracy Support + Authoritarian Openness)",
+      "structural_delta": "Populist supporters simultaneously endorsing representative democracy AND strong-leader governance without parliamentary/judicial interference, creating legitimacy arbitrage opportunity",
+      "primary_observable": "Survey responses on representative democracy favorability vs strong-leader governance favorability among populist vs non-populist supporters; correlation between both endorsements",
+      "epsilon_bin": "mod",
+      "hypothesis": "snare",
+      "beneficiary": "populist_leadership",
+      "victim": "institutional_checks_and_balances",
+      "downstream_of": [
+        "post_industrial_spatial_extraction",
+        "populist_as_class_realignment"
+      ],
+      "feeds_into": [],
+      "centrality_score": 6,
+      "selected": true,
+      "generation_order": 3,
+      "selection_reason": "Highest centrality; downstream synthesis node; captures democratic erosion mechanism; distinct from economic/class axes; moderate epsilon indicates extractive potential"
+    },
+    {
+      "claim_id": "cultural_backlash_mechanism",
+      "human_readable": "Cultural Backlash Mechanism (Progressive Change \u2192 Traditionalist Mobilization)",
+      "structural_delta": "Progressive policy advances on women's rights, LGBTQ+ rights, diversity triggering exclusionary identity politics and populist mobilization among traditionalists (Norris/Inglehart framework)",
+      "primary_observable": "Correlation between progressive policy adoption timing and populist party growth; traditionalist vs change-oriented values among populist vs non-populist supporters",
+      "epsilon_bin": "low",
+      "hypothesis": "rope",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "populist_as_class_realignment"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: lower centrality than selected axes; cultural dimension captured indirectly through class realignment axis which includes education-based cultural stratification"
+    },
+    {
+      "claim_id": "economic_shock_sequence_amplification",
+      "human_readable": "Economic Shock Sequence Amplification (Crisis Cascade Eroding Mainstream Credibility)",
+      "structural_delta": "Sequential economic shocks (2008 financial crisis \u2192 eurozone debt \u2192 COVID-19 \u2192 inflation) compounding to erode mainstream party credibility and create populist opportunity",
+      "primary_observable": "Mainstream party vote share decline correlated with shock timing; economic pessimism (70% believe children will be worse off) vs populist party growth",
+      "epsilon_bin": "v_low",
+      "hypothesis": "piton",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [],
+      "feeds_into": [
+        "populist_as_class_realignment",
+        "democratic_legitimacy_arbitrage"
+      ],
+      "centrality_score": 3,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: temporal piton (shock sequence) vs structural mountain (spatial extraction); spatial extraction captures ongoing structural condition while shock sequence is historical catalyst"
+    },
+    {
+      "claim_id": "electoral_normalization_feedback",
+      "human_readable": "Electoral Normalization Feedback Loop (Populist Gains \u2192 Mainstream Adoption \u2192 Further Legitimization)",
+      "structural_delta": "Populist electoral gains forcing mainstream parties to adopt populist rhetoric/policies, which legitimizes populist framing and enables further populist growth",
+      "primary_observable": "Mainstream party rhetoric/policy shifts on immigration/sovereignty following populist gains; populist party vote share trajectory post-mainstream adoption",
+      "epsilon_bin": "mod",
+      "hypothesis": "scaffold",
+      "beneficiary": null,
+      "victim": null,
+      "downstream_of": [
+        "populist_as_class_realignment"
+      ],
+      "feeds_into": [],
+      "centrality_score": 1,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: scaffold (self-reinforcing dynamic) with lower centrality; normalization process is consequence of class realignment rather than independent structural axis"
+    },
+    {
+      "claim_id": "eu_sovereignty_extraction_framing",
+      "human_readable": "EU Sovereignty Extraction Framing (Brussels Elites as Extraction Target)",
+      "structural_delta": "EU institutional structure framed as distant elite extracting sovereignty from national populations, with Brexit 'Take back control' as template",
+      "primary_observable": "EU favorability ratings among populist vs non-populist supporters; sovereignty-framing rhetoric in populist campaigns; Brexit referendum as template diffusion",
+      "epsilon_bin": "low",
+      "hypothesis": "tangled_rope",
+      "beneficiary": "national_populist_movements",
+      "victim": "eu_integration_project",
+      "downstream_of": [],
+      "feeds_into": [
+        "democratic_legitimacy_arbitrage"
+      ],
+      "centrality_score": 2,
+      "selected": false,
+      "generation_order": null,
+      "selection_reason": "Deferred: EU-specific framing vs broader democratic legitimacy crisis; legitimacy arbitrage axis captures sovereignty dimension within larger democratic erosion pattern"
+    }
+  ],
+  "generation_sequence": [
+    "post_industrial_spatial_extraction",
+    "populist_as_class_realignment",
+    "democratic_legitimacy_arbitrage"
+  ],
+  "deferred_axes": [
+    {
+      "claim_id": "cultural_backlash_mechanism",
+      "structural_delta": "Progressive policy advances triggering exclusionary identity politics and traditionalist mobilization",
+      "hypothesis": "rope",
+      "deferral_reason": "Lower centrality; cultural dimension captured indirectly through class realignment axis which includes education-based cultural stratification"
+    },
+    {
+      "claim_id": "economic_shock_sequence_amplification",
+      "structural_delta": "Sequential economic shocks compounding to erode mainstream party credibility",
+      "hypothesis": "piton",
+      "deferral_reason": "Temporal piton (historical catalyst) vs structural mountain (ongoing spatial extraction); spatial extraction captures persistent structural condition"
+    },
+    {
+      "claim_id": "electoral_normalization_feedback",
+      "structural_delta": "Populist gains forcing mainstream adoption of populist rhetoric, legitimizing further populist growth",
+      "hypothesis": "scaffold",
+      "deferral_reason": "Self-reinforcing dynamic with lower centrality; normalization is consequence of class realignment rather than independent structural axis"
+    },
+    {
+      "claim_id": "eu_sovereignty_extraction_framing",
+      "structural_delta": "EU institutional structure framed as distant elite extracting sovereignty from national populations",
+      "hypothesis": "tangled_rope",
+      "deferral_reason": "EU-specific framing vs broader democratic legitimacy crisis; legitimacy arbitrage axis captures sovereignty dimension within larger democratic erosion pattern"
+    }
+  ],
+  "omegas": [
+    {
+      "id": "omega_populist_governance_performance",
+      "description": "Report tracks electoral gains but not policy outcomes when populists hold power. Does populist governance deliver on economic promises to working-class base, or does extraction shift from 'Brussels elites' to populist leadership? If the latter, democratic_legitimacy_arbitrage may be higher-epsilon snare than currently classified.",
+      "source": "Absence Inventory (\u00a71.1) + Dark Matter Probe 2"
+    },
+    {
+      "id": "omega_intra_populist_heterogeneity",
+      "description": "AfD, National Rally, Brothers of Italy treated as homogeneous category despite different positions on EU, NATO, economic policy. Are these genuinely convergent constraint structures, or are we collapsing multiple distinct tangled_ropes into one? If heterogeneous, class realignment may be over-aggregated.",
+      "source": "Absence Inventory (\u00a71.1) + Dark Matter Probe 1 (operational medium)"
+    },
+    {
+      "id": "omega_counterfactual_brexit_catalyst",
+      "description": "Brexit treated as catalyst but not tested counterfactually. Would post-industrial spatial extraction and class realignment have produced populist surge without Brexit template? If Brexit is piton rather than catalyst, its removal from analysis may reveal different constraint topology.",
+      "source": "Absence Inventory (\u00a71.1) + Dark Matter Probe 3 (beneficiary scan)"
+    },
+    {
+      "id": "omega_authoritarian_openness_measurement",
+      "description": "Democratic legitimacy arbitrage relies on survey endorsement of both representative democracy AND strong-leader governance. Is this genuine simultaneous endorsement (snare), or survey artifact from question framing? If artifact, epsilon_bin may be lower than 'mod' classification.",
+      "source": "F03 (Hasty Generalization) concern flagged in fracture scan"
+    },
+    {
+      "id": "omega_spatial_extraction_reversibility",
+      "description": "Post-industrial spatial extraction classified as mountain (v_low epsilon, no beneficiary). But is knowledge-economy concentration inevitable physics, or policy choice (piton)? Remote work post-COVID-19 suggests potential reversibility. If reversible, mountain classification may be premature.",
+      "source": "F03 (Hasty Generalization) + Mountain Check gate"
+    }
+  ],
+  "fracture_scan": {
+    "f14_tunnel_vision": false,
+    "f15_premature_closure": false,
+    "f03_hasty_generalization": true,
+    "f34_epistemic_trespass": false,
+    "f01_premise_drift": false,
+    "notes": "F03 detected on two axes: (1) post_industrial_spatial_extraction classified as mountain but knowledge-economy concentration may be policy-reversible rather than inevitable (remote work suggests piton); (2) democratic_legitimacy_arbitrage relies on survey data showing simultaneous endorsement of representative democracy and strong-leader governance, but this may be survey artifact rather than genuine constraint structure. Generated omega_spatial_extraction_reversibility and omega_authoritarian_openness_measurement to bound these uncertainties."
+  }
+}

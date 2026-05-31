@@ -19,8 +19,14 @@ from pathlib import Path
 # Path constants
 # ---------------------------------------------------------------------------
 REPO_ROOT = Path(__file__).resolve().parent.parent
-PROMPT_PATH = REPO_ROOT / "prompts" / "constraint_story_generation_prompt_json.md"
-SCHEMA_PATH = REPO_ROOT / "python" / "constraint_story_schema.json"
+PROMPT_PATH = Path(os.environ.get(
+    "DR_GEN_PROMPT",
+    str(REPO_ROOT / "prompts" / "constraint_story_generation_prompt_json.md")
+))
+SCHEMA_PATH = Path(os.environ.get(
+    "DR_SCHEMA",
+    str(REPO_ROOT / "python" / "constraint_story_schema.json")
+))
 EXAMPLE_PATH = REPO_ROOT / "agent" / "verification_bottleneck.json"
 JSON_DIR = REPO_ROOT / "json"
 TESTSETS_DIR = REPO_ROOT / "prolog" / "testsets"
