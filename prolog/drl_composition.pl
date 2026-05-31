@@ -176,7 +176,28 @@ constraint_history(C, Timeline) :-
 %  Determines constraint type at a specific time from a given context.
 %  Uses sigmoid pipeline: χ = ε × f(d) × σ(S).
 classify_at_time(C, Time, Context, Type) :-
-    (narrative_ontology:measurement(_, C, suppression_requirement, Time, Supp) -> true ; Supp = 0.5),
+    % Row-23 fail-close (OQ-41): absent temporal suppression_requirement must NOT
+    % fabricate Supp=0.5 — that value sits below snare_suppression_floor=0.60 and
+    % silently mis-sorts the temporal timeline low (positive control: 650/656 rows had
+    % no temporal suppression series, so the old code ran almost the entire temporal
+    % classification on a fabricated constant).
+    %
+    % STOPGAP — TEMPORARY BRIDGE, strip post-regeneration: fall back to the authored
+    % SCALAR suppression_requirement (real per-constraint data; all 650 rows carry one,
+    % genuine-no-data = 0). Return `unknown` only if no suppression is authored anywhere.
+    % This fallback exists only because the generation template does not yet author a
+    % temporal suppression_requirement series; once it does (D4-for-suppression is a
+    % GENERATION-TEMPLATE requirement, not an engine ruling), DELETE this scalar clause
+    % and let the temporal path stand alone. Do NOT build a scalar/temporal equivalence
+    % check on top of this bridge — it is a stopgap, not a sanctioned second representation.
+    (   narrative_ontology:measurement(_, C, suppression_requirement, Time, Supp)
+    ->  classify_at_time_with_supp(C, Time, Context, Supp, Type)
+    ;   narrative_ontology:constraint_metric(C, suppression_requirement, Supp)
+    ->  classify_at_time_with_supp(C, Time, Context, Supp, Type)   % STOPGAP scalar fallback
+    ;   Type = unknown
+    ).
+
+classify_at_time_with_supp(C, Time, Context, Supp, Type) :-
     (narrative_ontology:measurement(_, C, base_extractiveness, Time, BaseX) -> true ; BaseX = 0.5),
     Context = context(_, _, _, spatial_scope(Scope)),
     constraint_indexing:derive_directionality(C, Context, D),
