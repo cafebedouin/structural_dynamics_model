@@ -362,8 +362,8 @@ classify_from_metrics(C, BaseEps, Chi, Supp, _Context, tangled_rope) :-
     \+ natural_law_without_beneficiary(C),            % Block tangled_rope for natural laws
     config:param(tangled_rope_chi_floor, ChiFloor),
     config:param(tangled_rope_chi_ceil, ChiCeil),
-    Chi >= ChiFloor,
-    Chi =< ChiCeil,
+    Chi > ChiFloor,   % STRICT (OQ-37 Move 1): rope owns χ=0.35 (χ ≤ ceiling); TR owns (0.35,0.90].
+    Chi =< ChiCeil,   % Strict floor keeps the χ partition single-valued at the rope/TR seam.
     config:param(tangled_rope_epsilon_floor, EpsFloor),
     BaseEps >= EpsFloor,
     config:param(tangled_rope_suppression_floor, MinS),

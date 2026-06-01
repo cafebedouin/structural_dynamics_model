@@ -130,7 +130,7 @@ These calibrate the sigmoid so `f(d) ≈ π(P)` for each power level:
 | `mountain_suppression_ceiling` | **0.05** | 1-6 | Noise floor â€” no enforcement needed |
 | `mountain_extractiveness_min` | **0.0** | 1-6 | Theoretical minimum (unused in practice) |
 
-**Implementation:** `classify_from_metrics/6` line 2946 (drl_core.pl)  
+**Implementation:** `classify_from_metrics/6` mountain clause `drl_core.pl:309` (block `:309-394`)  
 **Structural Gate:** [Requires Boltzmann Compliance for NL Signature. See logic_extensions.md §1.3]
 
 **Mountain Validity Constraint (empirically confirmed, February 2026):**
@@ -162,7 +162,7 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 | `rope_suppression_ceiling` | **0.16** | 1-6 | Base suppression ceiling for pure coordination. **Note:** Not currently checked in `classify_from_metrics/6` rope gate. Reserved for future use or used by other predicates. |
 | `rope_extractiveness_min` | **0.0** | 1-6 | Theoretical minimum |
 
-**Implementation:** `classify_from_metrics/6` line 2970 (drl_core.pl)  
+**Implementation:** `classify_from_metrics/6` rope clause `drl_core.pl:350` (block `:309-394`)  
 **Structural Gate:** [Can be certified as CI_Rope if Boltzmann-compliant. See logic_extensions.md Â§1.4]
 
 **Key Note:** Dual threshold (Ï‡ AND Îµ) prevents high-power agents from misclassifying high-Îµ constraints as Ropes.
@@ -181,7 +181,7 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 | `snare_extraction_ceil` | **1.00** | 1-6 | Maximum possible extraction |
 | `snare_load_bearing_threshold` | **0.70** | 1-6 | Above â†’ load-bearing snare (Theorem 3: cutting causes collapse) |
 
-**Implementation:** `classify_from_metrics/6` line 2953 (drl_core.pl)  
+**Implementation:** `classify_from_metrics/6` snare clause `drl_core.pl:332` (block `:309-394`)  
 **Structural Gate:** [Nonsensical coupling is evidence of snare. See logic_extensions.md Â§1.6]
 
 **Key Note:** Triple threshold (Ï‡ AND Îµ AND Supp) is strictest gate â€” prevents false positives.
@@ -190,17 +190,17 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 
 ### 3d. Tangled Rope (âŠžâŠ C[I])
 
-**Formal:** `âŠžâŠ C[I] â†” 0.40 â‰¤ Ï‡(C, I.P, I.S) â‰¤ 0.90 âˆ§ Îµ(C) â‰¥ 0.30 âˆ§ Supp(C) â‰¥ 0.40 âˆ§ Enforce(C) âˆ§ Coord(C) âˆ§ Asymmetric(C)`
+**Formal:** `TR(C[I]) <-> 0.35 < chi(C, I.P, I.S) <= 0.90 AND eps(C) >= 0.30 AND Supp(C) >= 0.40 AND Enforce(C) AND Coord(C) AND Asymmetric(C)`  *(floor strict: rope owns chi=0.35; OQ-37 Move 1)*
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
-| `tangled_rope_chi_floor` | **0.40** | 1-6 | Min power-scaled extraction for hybrid |
+| `tangled_rope_chi_floor` | **0.35** | 1-6 | Min power-scaled extraction for hybrid. **Strict** (χ > 0.35); abuts `rope_chi_ceiling` (0.35), which owns the seam point. Lowered 0.40→0.35 (2026-06-01, OQ-37 Move 1) to close the (0.35,0.40) χ-partition gap — structural, not a recalibration. |
 | `tangled_rope_chi_ceil` | **0.90** | 1-6 | Max power-scaled extraction (overlaps with snare) |
 | `tangled_rope_epsilon_floor` | **0.30** | 1-6 | Min base extraction for hybrid classification |
 | `tangled_rope_suppression_floor` | **0.40** | 1-6 | Requires active enforcement |
 | `tangled_rope_suppression_ceil` | **1.00** | 1-6 | Maximum suppression |
 
-**Implementation:** `classify_from_metrics/6` line 2977 (drl_core.pl)
+**Implementation:** `classify_from_metrics/6` tangled_rope clause `drl_core.pl:361` (block `:309-394`)
 
 **Key Notes:**
 - **Empirical prevalence:** ~36% of analyzed constraints (most common type)

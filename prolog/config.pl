@@ -233,8 +233,17 @@ param(rope_epsilon_ceiling, 0.45).
 param(snare_chi_floor, 0.66).
 param(snare_epsilon_floor, 0.46).
 
-% Rule TR (Tangled Rope): 0.40 ≤ χ ≤ 0.90 ∧ ε ≥ 0.30 ∧ Coord(C) ∧ Asymmetric(C)
-param(tangled_rope_chi_floor, 0.40).
+% Rule TR (Tangled Rope): 0.35 < χ ≤ 0.90 ∧ ε ≥ 0.30 ∧ Coord(C) ∧ Asymmetric(C)
+% 2026-06-01 (OQ-37 Move 1): floor lowered 0.40 → 0.35 to ABUT rope_chi_ceiling (0.35) and
+% close the (0.35,0.40) χ-partition gap, which was an artifact of independent value-setting,
+% not a calibration choice. Adjacent bands on the χ partition share a boundary. The drl_core
+% TR clause uses a STRICT floor (Chi > ChiFloor) so the seam is single-valued: rope owns
+% χ = 0.35 (χ ≤ ceiling), TR owns (0.35, 0.90]. Structural / corpus-independent — 0 transitions
+% on the live corpus (every gap resident has ε < tangled_rope_epsilon_floor 0.30). NOT a
+% recalibration: the supp/ε floors are the deferred recalibration targets (ISSUES OQ-48).
+% Shared param: also the naturalized χ-ceiling (drl_core.pl naturalized clause, χ < floor) —
+% naturalized set is empty corpus-wide, so that coupling has no live effect.
+param(tangled_rope_chi_floor, 0.35).
 %% DEMOTION: signature-locked on all tested kernels (see OQ-30) — not confirmed
 %% unperturbable-by-construction. false_natural_law readings lock final type regardless
 %% of metric change; a false_ci_rope reading near this floor with variance could flip.
