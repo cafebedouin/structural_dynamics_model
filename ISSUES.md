@@ -10,6 +10,8 @@ Statuses: **open** | **investigating** | **mitigated** | **resolved**
 
 ## OQ-01 — Rope gate Chi ≤ 0 bypass: intentional modeling or artifact?
 
+**Ω-type:** Ω_C (design choice — modeling decision to ratify, guard, or record in logic.md).
+
 **Status:** open  
 **Origin:** alt_power_transform corrected T2 run, Arm A/B range sweep, May 2026.  
 **File:** `prolog/drl_core.pl:356`
@@ -81,6 +83,8 @@ first solution is always correct.
 
 ## OQ-03 — Self-application: where does DR sit in its own ontology?
 
+**Ω-type:** Ω_P (constitutively-open design choice — the engine witnesses, a declared seat settles).
+
 **Status:** open  
 **Origin:** `docs/deferential_realism_paper_v6.13.md` §6 open questions; reinforced by
 `docs/seat-theorem-v1.md` §7–§8.  
@@ -109,6 +113,8 @@ framework itself and running the pipeline.
 ---
 
 ## OQ-04 — Cyclopean-point kernel: 1:N reading structure not encodable in current schema
+
+**Ω-type:** Ω_C (design choice — schema-expressiveness cut: add a 1:N predicate or accept 1:1).
 
 **Status:** open  
 **Origin:** `docs/unknown_reading_review.md` audit; `docs/altar-to-the-unknown-reading.md`;
@@ -429,6 +435,8 @@ exactly the unmarked-drift failure the doc was written to prevent.
 
 ## OQ-15 — Cross-axis comparison/mediator layer: designed but not built
 
+**Ω-type:** Ω_C (design choice — architecture decided, build deferred).
+
 **Status:** open  
 **Origin:** Tranche 2 cross-axis surface inventory, May 2026.  
 **Files:** `prolog/cs_drift_mismatch.pl`, `prolog/cs_kernel_registry.pl`,
@@ -748,6 +756,8 @@ only when that range was deliberately altered.
 
 ## OQ-23 — coexists_with exclusion is unenforced design intent, not structural
 
+**Ω-type:** Ω_C (design choice — loud documentation vs mechanical guard).
+
 **Status:** open  
 **Origin:** FPN convergence-test run, Branch E verdict, May 2026.  
 **Files:** `prolog/drl_purity_network.pl` (constraint_neighbors/3, compute_edge_contamination/7); `prolog/test_forecloses_fpn_injection.pl` (Case 2 — coexists_with_label_blindness)
@@ -761,6 +771,8 @@ only when that range was deliberately altered.
 ---
 
 ## OQ-24 — forecloses requires no FPN representation, but the absence is undocumented in the engine
+
+**Ω-type:** Ω_C (design choice — whether to record the structural-exclusion rationale in code).
 
 **Status:** open  
 **Origin:** FPN convergence-test run, May 2026.  
@@ -794,6 +806,8 @@ only when that range was deliberately altered.
 
 ## OQ-26 — ε is generated, not observer-invariant in the sense Axiom 2 assumes
 
+**Ω-type:** Ω_C (design choice — what ε-invariance the framework claims; RESOLVED via Axiom 2 amendment).
+
 **Status:** resolved  
 **Origin:** ε-variability investigation, May 2026; cleanup of testset chimera surfaced the underlying mechanism.  
 **Resolution:** Option (a) implemented 2026-05-28. See `docs/deferential_realism_paper_v6.13.1.md` Axiom 2 (lines 66–91).
@@ -813,6 +827,8 @@ only when that range was deliberately altered.
 ---
 
 ## OQ-27 — H¹ definition: signature-resolved vs raw-type orbit is not stated in the engine
+
+**Ω-type:** Ω_C (design choice — definitional: which orbit H¹ measures).
 
 **Status:** open  
 **Origin:** Theorem 7 anchor verification, May 2026 (the precision note that changed v7's H¹=0 phrasing).  
@@ -1469,6 +1485,8 @@ decision; the row references map all 27 census rows so nothing is unrouted.
 
 ## OQ-36 — G2: the `intent_*` subsystem (7 predicates) is read but never authored
 
+**Ω-type:** Ω_C (design choice — populate the subsystem or delete it; part of the satisfy-on-absence policy, OQ-44).
+
 **Status: open.** Census row 7. `intent_power_change`, `intent_beneficiary_class`,
 `intent_viable_alternative`, `intent_alternative_rejected`, `intent_suppression_level`,
 `intent_resistance_level`, `intent_norm_strength` — **all 0 facts in BOTH corpora**. Read by
@@ -1483,6 +1501,8 @@ committer-drift pipelines. **Decision:** populate (author + schema + prompt) the
 delete `intent_engine` and its readers. **High-judgment.**
 
 ## OQ-37 — G2: engine-read `constraint_metric` names with no author and empty corpus
+
+**Ω-type:** Ω_E (design-relevant — taxonomy-coverage; χ-partition closed structurally, suppression-floor recalibration deferred to OQ-48).
 
 **Status: open.** Census rows 8–12. `inevitability` (`constraint_bridge.pl:22`),
 `internalization_depth` (`psych_bridge.pl:19`), `resistance_to_change`
@@ -1546,6 +1566,8 @@ read-vs-declare canary).
 
 ## OQ-39 — G4: prompt rules with no engine enforcer
 
+**Ω-type:** Ω_C (design choice — where the prompt/engine enforcement boundary sits).
+
 **Status: open.** Census rows 14–18.
 - Row 14 scaffold "suppression must decline over time": **no trajectory check** exists; scaffold
   uses scalar `Chi` + `has_sunset_clause`. **Decision:** add a trajectory gate or drop the rule.
@@ -1556,6 +1578,8 @@ read-vs-declare canary).
 **Resolution would change:** whether the prompt's temporal rules are real engine constraints.
 
 ## OQ-40 — G5: scalar-vs-temporal representation splits
+
+**Ω-type:** Ω_C (design choice — authoritative representation per metric, or document the axis split as intended).
 
 **Status: open.** Census rows 19–22. `extractiveness`, `base_extractiveness`,
 `suppression_requirement` each read as scalar `constraint_metric` (observer `drl_core`) **and** as
@@ -1576,6 +1600,8 @@ generation template first authoring a temporal series, the split reopens. The `e
 `base_extractiveness` sub-splits (rows 19–20) remain open.
 
 ## OQ-41 — G6: fabricated defaults for absent data (fail-closed vs impute)
+
+**Ω-type:** Ω_C (design choice — fail-closed vs impute; subsumed by the OQ-44 satisfy-on-absence policy).
 
 **Status: row 23 MITIGATED (2026-05-31, Commit A); rows 24–27 open (row 26 NEUTRAL for 3 of 6 sites — 4 OPEN, see coverage correction below).** Census rows 23–27. A silent
 fixed default (`0.5`, `0.0`) substitutes for absent authored data, so the engine computes on a value
@@ -1633,6 +1659,8 @@ agrees across both corpora. **Resolution:** correct the CLAUDE.md `Known State` 
 
 ## OQ-43 — Satisfy-on-absence gate class: the NL beneficiary gate is the fourth instance
 
+**Ω-type:** Ω_C (design choice — one fail-closed-vs-vacuous-pass policy across the class; generalized by OQ-44).
+
 **Status: open. Policy decision should be made once across the class, not per site.**
 
 A recurring structural pattern, now seen in four places: an engine gate is **satisfied by the
@@ -1674,6 +1702,8 @@ natural laws yields zero beneficiaries and zero flips; it only bites a mis-autho
 **Connects to OQ-41 (G6), OQ-36/OQ-37 (empty `intent_*`).**
 
 ## OQ-44 — Engine-wide audit: no gate may be satisfied by absence (authored-zero vs absent)
+
+**Ω-type:** Ω_C (design choice — the engine-wide fail-closed-on-absence policy; decided once for OQ-41/36/37/43).
 
 **Status: open (audit task). Generalizes OQ-43; gating policy for the whole satisfy-on-absence
 class (OQ-41, OQ-36/OQ-37, OQ-43).**
@@ -1774,6 +1804,8 @@ Connects to OQ-46 (the regen that retires the row-23 stopgap) and D7/D5 (the pro
 
 ## OQ-48 — Classification thresholds never recalibrated against the live (post-rebuild) corpus
 
+**Ω-type:** Ω_E (design-relevant — closeable by recalibration; deferred by policy until the corpus is worth calibrating against).
+
 **Status: open (table-setting for the rebuild).** The χ / ε / suppression classification
 thresholds (`config.pl` §5B + §5) are documented as **"Calibrated: Derived from 691-constraint
 corpus analysis (2024–2026)"** (`logic_thresholds.md:15`), with the known limitation that the
@@ -1810,6 +1842,8 @@ convention (CLAUDE.md) is the mechanism for citing *which* corpus a future recal
 ---
 
 ## OQ-49 — Signature-override prevalence at 3000-scale: 1730 confident-overwrites, 0 unknown-fills (laundering vs load-bearing escalation)
+
+**Ω-type:** Ω_C (design choice — is the override layer laundering or correction; FNL→tangled_rope correction RESOLVED v6.13.2). The coupling-score-validity sub-question is Ω_P (constitutively open).
 
 **Status: open — escalated for (a)/(b) ruling. Read-only audit; no clause removed.**
 
