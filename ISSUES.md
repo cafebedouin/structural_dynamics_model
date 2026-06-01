@@ -1157,6 +1157,23 @@ Boundary distribution (the signal): FNL non-compliant cluster flips at `coupling
 ∈ (+0.83,+1.00] (= coupScore − coordination_offset, coupScore mostly 1.0); CI_rope compliant
 cluster flips downward at (−0.10,+0.00]. Bimodal, both directions required.
 
+**Signature before→after (per-reading, perturb-confirmed).** Of the 48 coupling type-flips: 44 are
+`false_natural_law → false_ci_rope` with `tangled_rope → snare`; 1 (`existential_matrix_reading`) is
+`false_natural_law → coupling_invariant_rope` with `tangled_rope → rope` (genuine-coordination
+certification when forced compliant); 3 CI_rope readings (`birth_reading`, `study_as_exercise`,
+`freedom_floor_reading`) break downward to `false_ci_rope`/`false_natural_law` with `rope → tangled_rope`.
+
+**PARTIAL-LOCK finding (signature flips, type holds — its own row).** For ~35 readings the coupling
+overlay flips the *gate* (`boltzmann_compliant non_compliant→compliant`) and the *signature*
+(`false_natural_law → false_ci_rope`) but the final `dr_type` HOLDS at `tangled_rope`. These are
+exactly the readings whose metric type is already `tangled_rope` (the 40 over-included) or `unknown`
+(5 of the 8 load-bearing holdouts): when FNL hands off to `false_ci_rope`, the FCR override resolves
+to the metric type, which for these is already `tangled_rope` — so the lock is *partial* (diagnostic
+signature moves, classification does not). This is why the type-flip count (48) is below the
+gate/signature-flip count: the coupling threshold moves the Boltzmann signature corpus-wide on the FNL
+population, but only changes the final type where the metric type differs from `tangled_rope`. Witness:
+`outputs/surface2_lock_sweep_results.json` (per-value `sig` field).
+
 ---
 
 ## OQ-32 — bifurcation_sweep.py: path resolution broken after 2026-05-28 reorg

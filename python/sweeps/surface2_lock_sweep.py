@@ -141,6 +141,7 @@ compliant_atom(C, A) :-
        ; A = R )
     ; A = err ).
 
+sig_of(C, S) :- ( catch(signature_detection:constraint_signature(C, S0),_,fail) -> S = S0 ; S = none ).
 final_type(C, T) :- ( catch(drl_core:dr_type(C, T0),_,fail) -> T = T0 ; T = err ).
 metric_type(C, Ctx, T) :- ( catch(drl_core:metric_based_type_indexed(C, Ctx, T0),_,fail) -> T = T0 ; T = err ).
 excess(C, E) :- ( catch(boltzmann_compliance:excess_extraction(C, E0),_,fail) -> E = E0 ; E = none ).
@@ -190,8 +191,8 @@ sweep_reading(Ctx, K, C, Sig, FloorPs, FloorOrig, OffsetPs, OffsetOrig, BaseOrig
     forall(member(FV, FVs),
         ( set_all(FloorPs, FV),
           boltzmann_compliance:clear_classification_cache,
-          excess(C, ExF), final_type(C, FTF),
-          format("FLOOR ~w ~6f excess ~w final ~w~n", [C, FV, ExF, FTF]) )),
+          excess(C, ExF), final_type(C, FTF), sig_of(C, SGF),
+          format("FLOOR ~w ~6f excess ~w final ~w sig ~w~n", [C, FV, ExF, FTF, SGF]) )),
     restore(FloorOrig),
 
     % ---- LEVER 2: coupling_threshold base (range -> boundary) ----
@@ -200,8 +201,8 @@ sweep_reading(Ctx, K, C, Sig, FloorPs, FloorOrig, OffsetPs, OffsetOrig, BaseOrig
     forall(member(CV, CVs),
         ( set_one(boltzmann_coupling_threshold, CV),
           boltzmann_compliance:clear_classification_cache,
-          compliant_atom(C, BCc), final_type(C, FTc),
-          format("COUP ~w ~6f compliant ~w final ~w~n", [C, CV, BCc, FTc]) )),
+          compliant_atom(C, BCc), final_type(C, FTc), sig_of(C, SGc),
+          format("COUP ~w ~6f compliant ~w final ~w sig ~w~n", [C, CV, BCc, FTc, SGc]) )),
     set_one(boltzmann_coupling_threshold, BaseOrig),
 
     % ---- LEVER 3: coordination_type_offset (range; additive into same gate) ----
@@ -210,8 +211,8 @@ sweep_reading(Ctx, K, C, Sig, FloorPs, FloorOrig, OffsetPs, OffsetOrig, BaseOrig
     forall(member(OV, OVs),
         ( set_all(OffsetPs, OV),
           boltzmann_compliance:clear_classification_cache,
-          compliant_atom(C, BCo), final_type(C, FTo),
-          format("OFFSET ~w ~6f compliant ~w final ~w~n", [C, OV, BCo, FTo]) )),
+          compliant_atom(C, BCo), final_type(C, FTo), sig_of(C, SGo),
+          format("OFFSET ~w ~6f compliant ~w final ~w sig ~w~n", [C, OV, BCo, FTo, SGo]) )),
     restore(OffsetOrig),
     boltzmann_compliance:clear_classification_cache.
 
@@ -265,14 +266,14 @@ def _parse(stdout):
             }
             order.append(c)
         elif t[0] == "FLOOR":
-            _, c, v, _kw, ex, _kw2, ft = t
-            readings[c]["floor"].append({"value": float(v), "excess": ex, "final": ft})
+            _, c, v, _kw, ex, _kw2, ft, _kw3, sg = t
+            readings[c]["floor"].append({"value": float(v), "excess": ex, "final": ft, "sig": sg})
         elif t[0] == "COUP":
-            _, c, v, _kw, comp, _kw2, ft = t
-            readings[c]["coupling"].append({"value": float(v), "compliant": comp, "final": ft})
+            _, c, v, _kw, comp, _kw2, ft, _kw3, sg = t
+            readings[c]["coupling"].append({"value": float(v), "compliant": comp, "final": ft, "sig": sg})
         elif t[0] == "OFFSET":
-            _, c, v, _kw, comp, _kw2, ft = t
-            readings[c]["offset"].append({"value": float(v), "compliant": comp, "final": ft})
+            _, c, v, _kw, comp, _kw2, ft, _kw3, sg = t
+            readings[c]["offset"].append({"value": float(v), "compliant": comp, "final": ft, "sig": sg})
     return {"meta": meta, "order": order, "readings": readings}
 
 
