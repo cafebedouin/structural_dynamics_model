@@ -666,9 +666,11 @@ integrate_signature_with_modal(C, ModalType, AdjustedType) :-
 %  at the metric layer, preserve the metric-based classification.
 %  Uniform classification despite varying χ is genuinely suspicious.
 %  Perspectival differentiation is evidence the system is working.
-%  Exception: never preserve "unknown" — it is an absence of classification,
-%  not a valid perspectival result. Variance between a real type and unknown
-%  is evidence the metric layer partially failed, not that indexing works.
+%  Honest "unknown" (an absence of metric classification, not a valid
+%  perspectival result) is now SURFACED as unknown rather than overridden to
+%  tangled_rope (OQ-37, 2026-06-01): a band-gap / authored-gap / swallowed-error
+%  reading must stay visible, not be masked by the FCR override.
+%  (Was: "never preserve unknown" — that usability-era behavior is removed.)
 %  Dead-coordination pitons classify uniformly — this is correct structural
 %  behavior, not FCR evidence.  The piton pre-check (drl_core.pl) fires
 %  context-independently because dead coordination is a structural fact,
@@ -682,7 +684,9 @@ resolve_with_perspectival_check(C, ModalType, false_ci_rope, AdjustedType) :-
     ->  (   ModalType \= unknown,
             has_metric_perspectival_variance(C)
         ->  AdjustedType = ModalType    % Preserve: indexical differentiation detected
-        ;   AdjustedType = tangled_rope % Override: uniform or unknown classification
+        ;   ModalType == unknown
+        ->  AdjustedType = unknown       % Surface: honest unknown is not a metric result (OQ-37, 2026-06-01)
+        ;   AdjustedType = tangled_rope % Override: uniform classification
         )
     ;   AdjustedType = ModalType        % Ablation: preserve metric-based type
     ).
@@ -733,8 +737,15 @@ has_metric_perspectival_variance(C) :-
 % Categorical: Priority resolution on type space — structural signal overrides metric classification
 resolve_modal_signature_conflict(_, natural_law, Result) :- !, Result = mountain.
 
-% FNL OVERRIDE RULE (v5.1, §III-A extension):  [ACTIVE, unconditional]
-%   FNL(C) → tangled_rope regardless of metric-based classification.
+% FNL OVERRIDE RULE (v5.1, §III-A extension):  [ACTIVE]
+%   FNL(C) → tangled_rope regardless of metric-based classification — EXCEPT an
+%   honest `unknown` modal type, which is an *absence* of metric classification,
+%   not a metric result to override. Surfacing `unknown` (rather than laundering
+%   it to tangled_rope) keeps a band-gap / authored-gap / swallowed-error reading
+%   VISIBLE instead of masked. (2026-06-01, OQ-37 ruling; removes the
+%   "never preserve unknown" behavior — see resolve_with_perspectival_check above
+%   and KNOWN_STATE 2026-06-01.)
+resolve_modal_signature_conflict(unknown, false_natural_law, Result) :- !, Result = unknown.
 resolve_modal_signature_conflict(_, false_natural_law, Result) :- !, Result = tangled_rope.
 
 % CI_ROPE OVERRIDE RULE (v5.1, §III-A extension):  [ACTIVE, unconditional]
