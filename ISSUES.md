@@ -1809,6 +1809,96 @@ convention (CLAUDE.md) is the mechanism for citing *which* corpus a future recal
 
 ---
 
+## OQ-49 — Signature-override prevalence at 3000-scale: 1730 confident-overwrites, 0 unknown-fills (laundering vs load-bearing escalation)
+
+**Status: open — escalated for (a)/(b) ruling. Read-only audit; no clause removed.**
+
+**Corpus:** `testsets_3000` (3380 readings; `[corpus] Loaded 3380 testsets successfully`). Replaces
+the toy-derived 96/56/40 — that did not carry; prevalence re-established at scale.
+
+**Method.** For every reading: `Sig = constraint_signature/2`, `MT = metric_based_type_indexed/3`
+(override suppressed = raw metric read), `FT = dr_type/3` (override active). Override is
+*effective* iff MT≠FT. Mechanical split of effective overrides: **confident-overwrite**
+(MT≠unknown, override overwrote a definite band) = laundering-candidate; **unknown-fill**
+(MT=unknown, override supplied a verdict) = load-bearing-candidate.
+
+**Positive control (mandatory — "0 unknown-fill" could be a dead probe).** Re-ran the test in a
+worktree at `c90c5482^` (=2f7dc3fa, before the unknown-surfacing guard), testsets_3000: the test
+detected **19 `unknown → tangled_rope`** override changes (11 false_natural_law + 8 false_ci_rope).
+So the test *does* register unknown-fill changes → the current engine's "0 unknown-fill" is a real
+finding, not a blind probe. **The control also exposes a definitional flaw:** those 19 were
+`unknown→tangled_rope`, which the mechanical "unknown-fill = load-bearing" rule mislabels — but they
+were *ruled laundering* (honest-unknown fabrication, OQ-37). c90c5482 already surfaces them as
+`unknown` (override no-op). So **unknown-fill is NOT automatically load-bearing**; an honest-unknown
+filled by the override is laundering, a genuinely-failed-unknown filled is load-bearing — that
+sub-split is itself the (a)/(b) ruling.
+
+**Prevalence (current engine, testsets_3000):**
+- Every reading carries a signature (none=0): false_natural_law 2014, false_ci_rope 932,
+  natural_law 404, false_summit_mountain 15, constructed_high_extraction 10, coupling_invariant_rope 5.
+- **Override changed the verdict: 1730.** No-change (over-included / confirmatory): 1650. Honest
+  unknowns surfaced (unknown→unknown, c90c5482 no-op): 19.
+- **Of the 1730: confident-overwrite (laundering-candidate) = 1730 (100%); unknown-fill
+  (load-bearing) = 0.** The unknown-fill clauses (:778, :786–:790) fired zero type-changes. The
+  `natural_law → mountain` clause (:738) is purely confirmatory (404 readings, metric already
+  mountain, 0 changes).
+- **Delta from toy:** toy 96/56/40 (signature-locked / changed-type / over-included). At scale the
+  "56 load-bearing" does NOT carry — under the unknown-fill definition, **load-bearing = 0**; all
+  override-effective changes are confident-overwrites.
+
+**Per-clause laundering-candidate table (all confident-overwrite; OPEN, awaiting (a)/(b) ruling):**
+
+| clause | signature → output | metric→final | N | sample readings |
+|---|---|---|---|---|
+| :749 | false_natural_law → tangled_rope | snare→TR | **1641** | a_level_grading_inflation, academic_journal_peer_review_gatekeeping |
+| :760 | false_ci_rope → tangled_rope | scaffold→TR | 46 | ai_as_fourth_node, artificial_scarcity_scaffold |
+| :772 | false_summit_mountain → tangled_rope | mountain→TR | 15 | capability_velocity_mismatch, clinical_authority_topology |
+| :749 | false_natural_law → tangled_rope | scaffold→TR | 10 | |
+| :749 | false_natural_law → tangled_rope | rope→TR | 7 | antikythera_knowledge_loss |
+| :753 | coupling_invariant_rope → rope | scaffold→rope | 5 | guinea_worm_eradication, open_source_commons |
+| :760 | false_ci_rope → tangled_rope | snare→TR | 3 | |
+| :749 | false_natural_law → tangled_rope | naturalized→TR | 2 | |
+| :749 | false_natural_law → tangled_rope | piton→TR | 1 | |
+
+Grouped: **:749 false_natural_law→tangled_rope = 1661** (the override layer's dominant effect);
+:760 false_ci_rope→tangled_rope = 49; :772 false_summit_mountain→tangled_rope = 15;
+:753 coupling_invariant_rope→rope = 5.
+
+**The (a)/(b) ruling (human-stakes — CER does not self-rule):** for each clause, is the displaced
+metric read RIGHT and the override corrupts it (laundering → remove), or WRONG and the override is
+a correction the metric layer can't make (load-bearing → keep)?
+- **:749 (1661, dominant).** Metric said snare (pure extraction; the reading *failed* the
+  tangled_rope gate — lacked coordination-function / asymmetric-extraction). FNL forces tangled_rope
+  (hybrid). Tension: tangled_rope is *less* extractive than snare, and the metric already determined
+  the reading is not structurally tangled. Is FNL correctly catching physics-washed construction the
+  metric misses (b), or laundering pure-extraction-claiming-naturality into mere hybrid, losing the
+  snare signal (a)? The whole override layer turns on this.
+- **:772 (15).** mountain→tangled_rope on "mountain with beneficiary." Plausibly load-bearing (a
+  natural-mountain read that missed an authored beneficiary), but the mountain read was confident →
+  needs ruling.
+- **:760 (49), :753 (5).** scaffold→{tangled_rope, rope}. e.g. guinea_worm_eradication,
+  open_source_commons → rope (genuine-coordination certification) reads plausibly load-bearing;
+  scaffold→tangled_rope reads need a look.
+
+**What resolution changes:** if :749 is ruled (a) laundering, the dominant behavior of the entire
+signature-override layer (1661/1730 effective overrides) is corrupting confident snare reads —
+a major engine change (separate gated commit, manual approval). If (b), it is the layer's core
+correctness function and stays. **No clause removed without ruling.**
+
+**Cross-refs:** OQ-37 (unknown-surfacing, c90c5482), OQ-30 (FNL coupling lock), OQ-43 (the 404 NL
+certifications — here confirmed as override-no-ops: natural_law→mountain changed 0 types).
+
+**Phase 0 side-finding (naturalized decouple).** The naturalized set is NON-empty on testsets_3000
+(3 readings: antikythera_knowledge_loss, gig_economy_worker_protections, normalization_error_propagation;
+all ε>0.45, χ<0.24) — correcting the prior toy "empty/inert" record: the shared
+`tangled_rope_chi_floor` ↔ naturalized-ceiling coupling is **LIVE**. But Move 1 (0.40→0.35) shifted
+**zero** of them (no reading has ε>0.45 ∧ χ∈[0.35,0.40); same 3 at both floors). Disposition: the
+coupling is real but was not exercised by Move 1 — decouple moves from "deferred (looked inert)" to
+"**latent-hazard, required-before any OQ-48 recalibration that moves the χ-floor across the naturalized
+χ-range**." Not decoupled this session.
+
+---
+
 *Last updated: 2026-06-01. Add new items with sequential OQ-NN labels. Mark
 resolved items with **Status: resolved** and a resolution note rather than
 deleting — provenance matters.*
