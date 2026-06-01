@@ -1896,6 +1896,15 @@ a correction the metric layer can't make (load-bearing → keep)?
     splits: **43 coord=0 = clean laundering candidates; 1598 coord+asym = override-supplies-omitted-
     structure (correction-leaning); 207 of those χ>0.90 are the boundary cases** (TR structure but
     extraction above TR's ceiling). Ruling is yours per sub-population. *Tier: perturb-confirmed.*
+  - **Predicate identity independently run-verified (2026-06-01).** The firing clause IS
+    `false_natural_law` (`signature_detection.pl:749`), input metric = `snare`, output =
+    `tangled_rope`; 1730/1641 reproduced on testsets_3000. The audit's attribution stands
+    (ruling (a), not (b)): `naturalized` is unreachable from FNL by construction
+    (`resolve_modal_signature_conflict(mountain, false_natural_law) = tangled_rope`); it is the
+    metric cascade `classify_from_metrics:388` (ε>rope ceiling, χ<TR floor) that produces
+    `naturalized`. This corrected the paper, not the audit: v6.13.1→v6.13.2 errata fixes
+    §4.2/§4.4's mountain→naturalized mis-description (commit 6ca6ca2b). *Tier: run-witnessed +
+    blob-witnessed.*
 - **:772 (15).** mountain→tangled_rope on "mountain with beneficiary." Plausibly load-bearing (a
   natural-mountain read that missed an authored beneficiary), but the mountain read was confident →
   needs ruling.

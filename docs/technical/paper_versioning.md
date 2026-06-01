@@ -46,8 +46,8 @@ regardless of length.
 
 4. **Check the abstract for scope.** The canonical full-framework paper says something
    like "extends DR from one axis to two" or "Axioms 1–N, Theorems 1–M." A file that
-   says "Version: v6.13.1" and amends only Axiom 2 is a point release, not the
-   canonical top-level paper.
+   says "Version: v6.13.2" (Axiom 2 amendment plus the FNL signature-behavior errata) is a
+   point release, not the canonical top-level paper.
 
 ---
 
@@ -56,7 +56,7 @@ regardless of length.
 | File | Role |
 |------|------|
 | `docs/deferential_realism_paper_v7.md` | **Canonical framework paper** — full two-axis DR (Axioms 1–7, Theorems 1–8) |
-| `docs/deferential_realism_paper_v6.13.1.md` | Observer-only Axiom 2 amendment (OQ-26: ε is reading-relative across generation runs) |
+| `docs/deferential_realism_paper_v6.13.1.md` | Observer-only Axiom 2 amendment (OQ-26: ε is reading-relative across generation runs). Header now **v6.13.2** (FNL signature-behavior errata, OQ-49); filename retains `_v6.13.1` for reference stability |
 | `docs/deferential_realism_paper_v6.13.md` | Superseded by v6.13.1 and v7 |
 | Earlier versions | Superseded |
 
