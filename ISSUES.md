@@ -1170,16 +1170,29 @@ kernels" is superseded on both axes (kernels 20→31; readings 51→96 at ~2.5 r
 load-bearing kernels are fully Surface-2-held (their only load-bearing readings are metric=unknown
 holdouts).
 
-**Calibration (is the flip boundary precarious or robust?).** Robust, three witnesses: (1) the coupling
-SCORE is bimodal at the extremes — 71/96 at 1.0, 7 at 0.0 (78/96 = 81% extreme); only 16 in the
-(0.40,0.90) mid-band. (2) Margin (score − threshold) median 0.67; 79/89 readings >0.5 from their flip
-boundary; the baseline threshold band (~0.25–0.40) sits in the wide empty gap between the score clusters.
-(3) Independent ±25% sweep (`config_sensitivity_results.json`) rates `boltzmann_coupling_threshold`
-**Inert** (910/0 pass at 0.1875–0.3125); the witnessed flip needs ~0.92 (+268%, ~3.7× outside
-calibration uncertainty). → The classifications rest on the coupling-score *structure*, not on the
-threshold value; the FNL lock is a wide-margin partition, not a free parameter. (What this does NOT
-settle: whether the coupling-score *computation* is the right operationalization of natural-vs-constructed
-— the seat-free-certification limit, undecidable from inside the engine.)
+**Calibration (is the flip boundary precarious or robust?).** Robust — on the **live sweep alone**
+(`outputs/surface2_lock_sweep_results.json`), with **no surviving external corroboration**. The coupling
+SCORE is bimodal at the extremes (71/96 at 1.0, 7 at 0.0 = 78/96 = 81% extreme; only 16 in the
+(0.40,0.90) mid-band), and the margin (score − threshold) is correspondingly wide (median 0.67; 79/89
+readings >0.5 from their flip boundary; the baseline threshold band ~0.25–0.40 sits in the empty gap
+between the score clusters). **Bimodality and margin are two VIEWS of ONE distribution — the
+coupling-score distribution — not two independent witnesses.** The witnessed flip needs ~0.92 (+268%),
+far outside any plausible threshold uncertainty. → The classifications rest on the coupling-score
+*structure*, not on the threshold value; the FNL lock is a **wide-margin partition, not a knife-edge**.
+*Tier: single-source (live sweep); two-views-of-one-distribution; no external corroboration.*
+
+**WITHDRAWN witness (2026-06-01).** An earlier draft of this block claimed "Robust, **three independent
+witnesses**," the third being an independent ±25% sweep (`config_sensitivity_results.json`) rating
+`boltzmann_coupling_threshold` **Inert** (910/0). That witness is **withdrawn**: the harness rates
+154/154 params Inert with **zero failures on any perturbation**, so it has **no positive control** — its
+"Inert" on the coupling threshold is *unfalsifiable, not corroborating* (and it pre-dates the current
+corpus/engine). Do **not** re-run it as a fix; the harness *design* is the problem, not its staleness.
+The wide-margin finding stands on the live sweep above; the "three independent witnesses" framing does
+not — the calibration rests on one source, viewed two ways.
+
+(What this does NOT settle: whether the coupling-score *computation* is the right operationalization of
+natural-vs-constructed — the seat-free-certification limit, undecidable from inside the engine;
+human-stakes / OPEN-by-construction.)
 
 **PARTIAL-LOCK finding (signature flips, type holds — its own row).** For ~35 readings the coupling
 overlay flips the *gate* (`boltzmann_compliant non_compliant→compliant`) and the *signature*

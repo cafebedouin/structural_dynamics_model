@@ -54,6 +54,12 @@ sweep (PoL floor flip reproduced on `civic_eugenic_reading`; coupling overlay mo
 on `abolition_reading`). Set-not-count caught the 5 non-uniform floor flips an aggregate "0/N" would
 have hidden.
 
+**Witness-tier note (2026-06-01).** The per-reading row dump (48 coupling type-flips) was reported as
+"48 rows pasted" but the terminal output **truncated** (only rows ~44–48 + the total survived). The
+row-level witness tier is therefore **structure-closed + substrate-regenerable** from
+`outputs/surface2_lock_sweep_results.json` (committed at `db66cc53`) — **not pasted-to-reviewer**. No
+re-paste needed; regenerate from the per-value `sig`/`final` fields if the rows are wanted.
+
 ---
 
 ## 2026-05-31 — Commit A: row-23 fail-close in `drl_composition.pl` `classify_at_time` (OQ-41)
