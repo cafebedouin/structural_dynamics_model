@@ -1493,6 +1493,42 @@ default) — all 0/0 both corpora, none compiler-emitted. Plus compound measurem
 theater_ratio/base_extractiveness/suppression_requirement). **Decision per metric:** author it,
 or remove the dead read. **Low-stakes each.**
 
+**Surface-2 holdouts — honest band-gap `unknown` + override removed (2026-06-01).** The 5
+load-bearing readings the Surface-2 coupling sweep could not flip (their `metric_type=unknown`
+re-pinned to tangled_rope) were diagnosed per-reading with **errors surfaced** (no-throw engine
+run + independent band-membership recompute from authored ε/χ/supp vs config thresholds — the
+mandatory errored-vs-clean control; a swallowed compute error reads identically to an honest
+fall-through). Result: **0 compute bugs (b), 4 taxonomy holes (c), 1 authored gap (a):**
+- **(c) ×4** — `diversity_reading`, `competence_reading` (ε0.28 χ0.384 supp0.35: χ in the
+  (rope_ceil 0.35, tr_floor 0.40) gap, ε<tr_ε_floor 0.30, supp<tr_supp_floor 0.40);
+  `republican_reading` (supp0.35<0.40 the sole blocker, χ/ε in band); `living_constitutionalist_reading`
+  (supp0.35<0.40; χ0.658 just <snare 0.66). All inputs **authored and present**; they land in a
+  genuine uncovered metric region. The `unknown` (`drl_core.pl:394`) is honest.
+- **(a) ×1** — `endogenous_reinterpretation_reading`: tangled-rope metric thresholds all pass, but
+  `constraint_victim` is **absent** (has_asymmetric_extraction=NO) and `requires_active_enforcement`
+  is **no**. → **authoring gap.** Route the missing victim + enforcement declaration to the
+  generation/authoring front; **do not author values here.**
+
+**Override removed (ruling 2026-06-01; commit `c90c5482`).** The "never preserve unknown" behavior
+(`signature_detection.pl` FNL `:738` + FCR perspectival `:685`) laundered an honest `unknown` modal
+type into tangled_rope. Guarded `ModalType == unknown` at both sites so `unknown` **surfaces**.
+Corpus-wide set delta (default context, full corpus): `unknown → tangled_rope : 8` became
+`unknown → unknown : 8`; **every other (metric→final) row byte-identical** (snare→tangled 90,
+scaffold→tangled 6, mountain→tangled 3, …). N=8 is the **masked-unknown population**, not the
+"band-gap population": 5 diagnosed (4c/1a) + **3 UNCHARACTERIZED** (`constitutional_supremacy_reading`,
+`hybrid_atrophy_reading`, `relational_autonomy`). Same-path positive control: catastrophic_tail /
+husk / abolition (metric=snare, sig=false_natural_law — same `:738` clause, non-unknown modal type)
+**stay tangled_rope** (guard does not over-fire). Validation suite 0 errors / 0 warnings.
+
+**Opened by this work (escalated, not self-resolved):**
+1. **Taxonomy-coverage.** Does the type system need a band/type for the uncovered region
+   χ∈(rope_ceil 0.35, tr_floor 0.40) and/or supp<tr_supp_floor 0.40 with χ/ε in the tangled band?
+   4/5 holdouts are honest residents of that hole. This is the forward step if (c) dominates.
+2. **Characterize the N−5 = 3 uncharacterized masked unknowns** (constitutional_supremacy_reading,
+   hybrid_atrophy_reading, relational_autonomy) — same a/b/c diagnosis. Surfacing them was correct
+   regardless of cause (a swallowed compute-error unknown must not be laundered either); their cause
+   is simply not yet witnessed.
+
 ## OQ-38 — G3: dead-code / orphan triage (export-vs-caller)
 
 **Status: open.** Census rows 13, 4 + §5. **Confirmed dead:** `predict_transformation/3`

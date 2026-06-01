@@ -20,6 +20,47 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-01 — `signature_detection.pl`: honest `unknown` now SURFACES (override removed, OQ-37)
+
+**What changed (commit `c90c5482`).** The FNL/FCR overrides no longer launder an honest
+`unknown` modal type into tangled_rope. Two guards added:
+- `resolve_modal_signature_conflict(unknown, false_natural_law, unknown)` before the
+  unconditional FNL clause (`:738`).
+- `resolve_with_perspectival_check/4` false_ci_rope branch (`:685`): `ModalType == unknown ->
+  AdjustedType = unknown`.
+The reversed comment at `:669-671` ("never preserve unknown") was updated to match.
+
+**Tripwire — do NOT reinstate "never preserve unknown."** That behavior was removed by ruling
+(correctness pivot: an honest `unknown` is an *absence* of metric classification — band-gap,
+authored gap, or swallowed compute-error — and must stay VISIBLE, not be masked). A future agent
+reading the old design intent might "restore" the launder; don't. The `unknown` surfacing is
+load-bearing for OQ-37 (it's how a band-gap reading becomes observable).
+
+**Witness.** Corpus-wide set delta (default context, full corpus): `unknown → tangled_rope : 8`
+became `unknown → unknown : 8`; **all other (metric→final) rows byte-identical** (snare→tangled
+90, scaffold→tangled 6, mountain→tangled 3, snare→snare 20, tangled→tangled 59, rope→rope 2,
+scaffold→rope 4, mountain→mountain 2). Same-path positive control: catastrophic_tail / husk /
+abolition (metric=snare, sig=false_natural_law — the *same* `:738` clause, non-unknown modal type)
+**stay tangled_rope** — the guard does not over-fire. Validation suite 0 errors / 0 warnings.
+N=8 masked-unknown population = 5 diagnosed (4 taxonomy holes / 1 authored gap, see ISSUES OQ-37)
++ 3 uncharacterized (`constitutional_supremacy_reading`, `hybrid_atrophy_reading`,
+`relational_autonomy`).
+
+**Consequence — orbits regenerated.** The change altered 8 dr_types, so
+`outputs/product_site_orbits.json` (perturb.py's baseline, gitignored) was regenerated
+(`python/sweeps/regenerate_orbits.py`, corpus_hash `0d2ecfce17ae`). perturb.py's staleness guard
+checks only the *testsets* hash, **not engine state** — so after any engine edit that changes
+classifications, regenerate orbits manually or every stability-band comparison reads a stale
+baseline silently.
+
+**Ledger.** `boltzmann_coupling_threshold` added to `enhanced_report.py` `_WITNESSED_PARAMS`
+(equal_protection_clause, sovereign_legitimacy) as the Surface-2 lock lever (commit `739979c6`).
+Co-lever `coordination_type_offset` is per-constraint (`boltzmann_compliance.pl:388`), NOT a flat
+config param — it is **not** perturb-sweepable; documented in-comment, do not add it to
+`_WITNESSED_PARAMS` (perturb would raise `param not found`).
+
+---
+
 ## 2026-05-31 — Surface-2 primitive built; lock hypothesis witnessed (lever was misnamed)
 
 **New tool.** `python/sweeps/surface2_lock_sweep.py` — the Surface-2 primitive (PoL graduated to
