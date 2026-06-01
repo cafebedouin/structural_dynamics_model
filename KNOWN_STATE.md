@@ -397,3 +397,16 @@ Original prep notes (the framings that guided B):
   **Tier-flag:** the prior B1 "*perturb-confirmed*" tag was raw-count evidence (NL 5→2) standing in
   for a final-type claim — a witness one layer below the claim it backed; the final-type claim is now
   perturb-confirmed via the two-commit `drl_core:dr_type/3` (default_context) query over the 3, held.
+
+- **2026-05-31: `demotion_pass.py` is engine-blind — its buckets cannot witness any engine change** —
+  VERIFY-OR-CORRECT pass. `python/sweeps/demotion_pass.py`'s six-bucket sort (`6/0/20/0/24/141`) is a
+  pure function of (a) a regex `param(...)` count over `config.pl` + `constraint_indexing.pl` (=191)
+  and (b) the hand-maintained `_WITNESSED` / `_GENUINELY_UNPERTURBABLE` / `_SHADOWED` dicts inside the
+  script. It runs **no `swipl`, no `subprocess`, and calls no classifier** (imports:
+  `argparse/json/re/sys/pathlib` + `sweeps.perturb._compute_corpus_hash`). So a "block matches
+  `6/0/20/0/24/141`" result is HELD **by construction** and **cannot witness** row-23 / NL-gate or any
+  other engine change. The handoff's verify-item-1 ("re-run the demotion sort before trusting the
+  block") is **mis-routed through this script.** The block's real validity rests on whether those
+  dicts still match live `perturb.py` survival on the **post-fix** engine — **UNVERIFIED / OPEN**
+  (graduation step: re-run `perturb.py` on the post-fix engine and diff against the dict contents).
+  Route item-1-type verification through `perturb.py`, not `demotion_pass.py`.
