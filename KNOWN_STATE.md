@@ -378,3 +378,22 @@ Original prep notes (the framings that guided B):
   re-audit of the 404, not engine maintenance. Same satisfy-on-absence class as OQ-41 (G6 0.5
   defaults) and OQ-36/OQ-37 (empty `intent_*`) — policy decision (fail-closed vs keep-vacuous-pass)
   should be made once across the class. See ISSUES.md OQ-43.
+
+- **2026-05-31: NL-gate fix is a diagnostic-layer decline, NOT classification-changing**
+  **(corrects the handoff_6 ~:221 "3-case tail" / "cosmetic must not be cited unqualified" claim)** —
+  VERIFY-OR-CORRECT pass re-derivation. The B1 NL-gate fix declined **3 raw `natural_law_signature`
+  certifications (raw match 5→2)** — TRUE and a real diagnostic-layer improvement (the gate now
+  discriminates on authored beneficiaries; all 3 carry ≥1 `constraint_beneficiary`, the 2 survivors
+  carry 0). **But it changed no classification.** Final `dr_type` of all 3 declined
+  (`behavioral_competence_reading`, `disparity_as_depth_signal`, `generational_economic_decline`) is
+  **`tangled_rope` at BOTH `39630182` (parent-of-`3116ac08`, pre-NL-gate) and HEAD** — identical
+  (cascade sig `false_summit_mountain`, claim source `explicit_mountain_claim`, both commits). They
+  claim naturality via `explicit_mountain_claim`, and `false_summit_mountain` sits higher in the
+  priority cascade than the `natural_law` clause (and reads `constraint_beneficiary` directly), so it
+  captured them before and after; the raw 5→2 match was **shadowed** and never reached final
+  classification. **Correct the conflation: declined-a-raw-certification ≠ classification-changing.**
+  T.1 "cosmetic" is **fully cosmetic at the final-type level** (majority AND the 3-case tail); it is
+  non-cosmetic **only** at the raw `natural_law_signature` certification layer (a diagnostic output).
+  **Tier-flag:** the prior B1 "*perturb-confirmed*" tag was raw-count evidence (NL 5→2) standing in
+  for a final-type claim — a witness one layer below the claim it backed; the final-type claim is now
+  perturb-confirmed via the two-commit `drl_core:dr_type/3` (default_context) query over the 3, held.
