@@ -86,6 +86,14 @@ absence satisfies the gate) with diagnostics — consult before adding a step th
 copying a file to test it, writing a findall over a cut-ordered predicate, defaulting a metric
 on missing data, or adding a gate/threshold over a table that can be empty.
 
+**Design intent:** `docs/design/design_discipline.md` is the companion to `build_discipline.md`
+and its peer: where `build_discipline.md` governs *how we build and verify* (separated passes,
+witness-before-claiming, the diagnostic-vs-classification level distinction),
+`design_discipline.md` governs *what the engine is for, what follows from that, and what it must
+not become* (the declared seat, mutual deference, classification-as-routing, the open-questions
+sorting). Both are living documents — consult at session start, and amend as design decisions are
+made and recorded.
+
 ## Typical Workflow
 
 The primary authoring loop is:
