@@ -945,10 +945,13 @@ criteria have changed, not just that the section "might be useful."
 
 ## OQ-30 — Stability band witness set incomplete (one confirmed pair only)
 
-**Status:** mitigated (2026-05-30) — 24 params witnessed across 18 kernels; 20 kernels still
-unwitnessed on Surface 1. All 141 backlog params characterized at ±10%. Signature audit
-complete (2026-05-30): 19 kernels reachable-but-locked, 0 unreached-and-locked,
-1 reading unlocked-reached-but-held.
+**Status:** mitigated (2026-05-30); Surface-2 lock front WITNESSED (2026-05-31). 24 params
+witnessed across 18 kernels; the Surface-1-unwitnessable remainder are signature-locked.
+Signature audit (2026-05-30) + Surface-2 sweep (2026-05-31, see end of this OQ): of 96
+Boltzmann-gated locked readings, 56 load-bearing / 40 over-included; `boltzmann_coupling_threshold`
+flips 48/56 load-bearing final types (Surface 2 = critical path, via the coupling threshold NOT
+the floor — original floor hypothesis falsified); 6 load-bearing remain Surface-2-immovable.
+Tool: `python/sweeps/surface2_lock_sweep.py`; results `outputs/surface2_lock_sweep_results.json`.
 
 **Origin:** Step-2 wire audit, 2026-05-29.
 
@@ -1053,15 +1056,25 @@ All 20 have MaxCoverage > 0, AnyFlip = NO. Zero UNREACHED kernels.
 false_natural_law(C, fnl_evidence(...)) :-
     claimed_natural(C, Claim),           % structural + partial metric-dependence
     boltzmann_compliant(C, BoltzmannResult),
-    BoltzmannResult = non_compliant(_, _),   % ← Surface-2-perturbable gate
+    BoltzmannResult = non_compliant(_, _),   % ← the lock gate (coupling-driven, NOT the floor)
     ...
 ```
 `claimed_natural/2` has three sources: explicit mountain claim (structural), indexed mountain
 classification (metric-dependent), natural_law_signature profile match (metric-dependent).
-`boltzmann_compliant(C, non_compliant(_,_))` is the Boltzmann non-compliance gate — the same
-lever the Surface-2 proof-of-life moved (boltzmann_floor overlay shifted excess_extraction
-by −0.52 for civic_eugenic_reading). Surface-2 perturbation of this guard is untested for
-the 19 locked kernels. NOT ruled out.
+
+**CORRECTION (2026-05-31, Surface-2 sweep — `outputs/surface2_lock_sweep_results.json`,
+`python/sweeps/surface2_lock_sweep.py`): the earlier annotation conflated two distinct
+Boltzmann levers.** The FNL lock gate is `boltzmann_compliant(C, non_compliant(_,_))`, which is
+`cross_index_coupling(C, Score) =< complexity_adjusted_threshold(C, Thr)` where
+`Thr = boltzmann_coupling_threshold(0.25) + coordination_type_offset` (`boltzmann_compliance.pl:380-383`).
+It depends on the coupling SCORE and the coupling THRESHOLD — **not** on `excess_extraction`, which
+is what the `boltzmann_floor_*` overlay (and the −0.52 proof-of-life) moves. The two FNL/CI_rope
+override gates do not consume `excess_extraction` (`signature_detection.pl:927-930` — gating on it
+was deliberately removed). So perturbing the **floor** is the WRONG lever for the FNL lock: it moves
+excess but leaves `boltzmann_compliant` and the final `dr_type` unchanged (witnessed: `abolition_reading`
+holds `tangled_rope` across floor 0.0→0.99). The lock IS Surface-2-displaceable — via
+`boltzmann_coupling_threshold` (and the additive `coordination_type_offset`), which flips
+`non_compliant→compliant` and the final type. *Tier: perturb-confirmed (full 96-reading sweep below).*
 
 **Three-tier classification (corrected from initial draft):**
 - **REACHABLE-BUT-LOCKED (Surface-1): 19 kernels.** Params reach metric path (coverage>0)
@@ -1102,6 +1115,47 @@ findall(K-C-Sig, (member(K, Kernels), cs_kernel_id(C, K),
 The bound form `findall(C, constraint_signature(C, false_natural_law), Cs)` bypasses lock cuts
 and over-counts — live demo: `behavioral_competence_reading` appears bound but resolves to
 `false_summit_mountain` under the unbound query. See `docs/technical/build_discipline.md` Pattern 3.
+
+**SURFACE-2 PRIMITIVE BUILT + HYPOTHESIS WITNESSED (2026-05-31).**
+Tool: `python/sweeps/surface2_lock_sweep.py` (one swipl process, corpus loaded once, in-memory
+`retract/assertz` overlay of three Boltzmann levers swept INDEPENDENTLY; observables
+`excess_extraction`, `boltzmann_compliant`, `dr_type/2` at default/analytical context).
+Results: `outputs/surface2_lock_sweep_results.json`. Both positive controls pass (PoL floor flip
+on `civic_eugenic_reading` reproduced; coupling overlay moves `boltzmann_compliant` on
+`abolition_reading`).
+
+Target derived in-engine, NOT inherited: **96 Boltzmann-gated locked readings** (FNL 76, FCR 17,
+CI_rope 3) across the live corpus (the handoff's "19 of 20 / 51 readings" is superseded — corpus
+grew to 97 kernel-linked readings). Of the 96, **56 are LOAD-BEARING** (override changes final
+type: metric_type ≠ final dr_type) and **40 are over-included** (final == metric — the bare
+signature-read over-includes by 40, confirming Item-1b's clause-read prediction by witness).
+All 31 load-bearing kernels are REACHED on Surface 1 (`perturb.py snare_chi_floor`, coverage>0,
+never-reached = []).
+
+Witnessed flip counts (perturb-confirmed):
+- **`boltzmann_coupling_threshold` flips final dr_type for 48/96 (48/56 load-bearing; 0/40
+  over-included).** By signature: 45 FNL, 3 CI_rope. The over-included never flip — a clean
+  control that load-bearing is the right discriminator. → **CORRECTED HYPOTHESIS WITNESSED:
+  Surface 2 IS the critical path, via the coupling threshold.**
+- **`boltzmann_floor_*` flips only 5/96** — and only the *Boltzmann-compliant* CI_rope/FCR-scaffold
+  cluster (coupScore=0), where high excess (low floor) trips `false_ci_rope` (excess-gated via
+  `collect_fcr_failures`, priority 77 > CI_rope 114) → tangled_rope, vs low excess → CI_rope → rope.
+  For the 76 FNL-locked majority the floor moves `excess_extraction` but `boltzmann_compliant` /
+  `false_natural_law` / `tangled_rope` all hold (the FNL gate is coupling-driven, excess is not on
+  it). → **ORIGINAL "floor flips the locked kernels" hypothesis FALSIFIED as the primary lever**
+  (set-not-count: a non-uniform floor — 5 flips — would have hidden under an aggregate "0/N").
+- **`coordination_type_offset` is a real SECOND lever** (48 flips, same set, additive into
+  `complexity_adjusted_threshold`) — flips at offset (+0.50,+0.75] up / (−0.30,−0.25] down.
+- **Surface-2 combined (any lever) witnesses 50/56 load-bearing.** Residual **6 Surface-2-immovable
+  load-bearing**: 5 with metric_type=unknown (FNL; when the lock breaks they re-pin to tangled_rope
+  via another route, no observable flip) + `theological_climb_reading` (FCR with a per-constraint
+  `boltzmann_floor_override` → floor shadowed, coverage=0; coupling-compliant). What would close
+  these: a different observable (the metric=unknown ones need the metric path repaired, OQ-37
+  territory; the override-shadowed one needs the `boltzmann_floor_override` fact perturbed).
+
+Boundary distribution (the signal): FNL non-compliant cluster flips at `coupling_threshold`
+∈ (+0.83,+1.00] (= coupScore − coordination_offset, coupScore mostly 1.0); CI_rope compliant
+cluster flips downward at (−0.10,+0.00]. Bimodal, both directions required.
 
 ---
 

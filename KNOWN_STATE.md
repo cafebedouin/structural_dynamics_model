@@ -20,6 +20,42 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-05-31 — Surface-2 primitive built; lock hypothesis witnessed (lever was misnamed)
+
+**New tool.** `python/sweeps/surface2_lock_sweep.py` — the Surface-2 primitive (PoL graduated to
+instrument). One swipl process, corpus loaded once, in-memory `retract/assertz` overlay of THREE
+Boltzmann levers swept INDEPENDENTLY (never bundled): `boltzmann_floor_*` (observable
+`excess_extraction`), `boltzmann_coupling_threshold`, `coordination_type_offset` (both gate
+`boltzmann_compliant` via `complexity_adjusted_threshold = base + offset`). Does NOT extend
+`perturb.py` (Surface 1). Derives its target in-engine (no inherited list). Results:
+`outputs/surface2_lock_sweep_results.json`. Runs in ~2s.
+
+**The handoff/ISSUES lever was wrong — corrected and witnessed.** Handoff 6/7 and ISSUES OQ-30
+named `boltzmann_floor_*` as the lock lever (the −0.52 PoL moved `excess_extraction` via the floor).
+But the FNL/CI_rope override gates do NOT consume `excess_extraction` (`signature_detection.pl:927-930`
+removed that gating); the lock gate is `boltzmann_compliant`, driven by `cross_index_coupling` vs
+`boltzmann_coupling_threshold + coordination_type_offset` (`boltzmann_compliance.pl:380-383`).
+Perturbing the floor moves excess but leaves `boltzmann_compliant`/signature/`dr_type` unchanged for
+the FNL majority.
+
+**Witnessed (perturb-confirmed, full 96-reading sweep).** 96 Boltzmann-gated locked readings
+(FNL 76, FCR 17, CI_rope 3); 56 load-bearing (override changes final type), 40 over-included
+(final == metric — bare signature-read over-includes by 40). `boltzmann_coupling_threshold` flips
+48/56 load-bearing final types (0/40 over-included — clean control). Floor flips only 5/96, all in
+the Boltzmann-*compliant* CI_rope/FCR cluster (excess gates `false_ci_rope` via `collect_fcr_failures`,
+priority 77 > CI_rope 114). `coordination_type_offset` is a real second lever (48 flips, same set).
+Combined Surface 2 witnesses 50/56 load-bearing; 6 residual immovable (5 metric=unknown FNL re-pin to
+tangled_rope; 1 has a per-constraint `boltzmann_floor_override` shadowing its floor). Original "floor
+flips the locked kernels" hypothesis FALSIFIED as the primary lever; corrected coupling-threshold
+hypothesis WITNESSED → Surface 2 is the critical path.
+
+**No engine source was edited** — overlay is runtime-only. Two positive controls passed before the
+sweep (PoL floor flip reproduced on `civic_eugenic_reading`; coupling overlay moves `boltzmann_compliant`
+on `abolition_reading`). Set-not-count caught the 5 non-uniform floor flips an aggregate "0/N" would
+have hidden.
+
+---
+
 ## 2026-05-31 — Commit A: row-23 fail-close in `drl_composition.pl` `classify_at_time` (OQ-41)
 
 **What changed.** `classify_at_time/4` no longer fabricates `Supp=0.5` when the temporal
