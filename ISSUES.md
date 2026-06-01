@@ -1163,6 +1163,24 @@ cluster flips downward at (−0.10,+0.00]. Bimodal, both directions required.
 certification when forced compliant); 3 CI_rope readings (`birth_reading`, `study_as_exercise`,
 `freedom_floor_reading`) break downward to `false_ci_rope`/`false_natural_law` with `rope → tangled_rope`.
 
+**Per-kernel rollup (units: the above are PER-READING).** The 96/56/40 are readings; they roll up
+to **38 kernels** (corpus grew — handoff 7's drift note), of which **31 carry ≥1 load-bearing reading**,
+**28 have ≥1 coupling type-flip**, 29 have ≥1 Surface-2 flip (any lever). The handoff's "19 of 20
+kernels" is superseded on both axes (kernels 20→31; readings 51→96 at ~2.5 readings/kernel). 2 of 31
+load-bearing kernels are fully Surface-2-held (their only load-bearing readings are metric=unknown
+holdouts).
+
+**Calibration (is the flip boundary precarious or robust?).** Robust, three witnesses: (1) the coupling
+SCORE is bimodal at the extremes — 71/96 at 1.0, 7 at 0.0 (78/96 = 81% extreme); only 16 in the
+(0.40,0.90) mid-band. (2) Margin (score − threshold) median 0.67; 79/89 readings >0.5 from their flip
+boundary; the baseline threshold band (~0.25–0.40) sits in the wide empty gap between the score clusters.
+(3) Independent ±25% sweep (`config_sensitivity_results.json`) rates `boltzmann_coupling_threshold`
+**Inert** (910/0 pass at 0.1875–0.3125); the witnessed flip needs ~0.92 (+268%, ~3.7× outside
+calibration uncertainty). → The classifications rest on the coupling-score *structure*, not on the
+threshold value; the FNL lock is a wide-margin partition, not a free parameter. (What this does NOT
+settle: whether the coupling-score *computation* is the right operationalization of natural-vs-constructed
+— the seat-free-certification limit, undecidable from inside the engine.)
+
 **PARTIAL-LOCK finding (signature flips, type holds — its own row).** For ~35 readings the coupling
 overlay flips the *gate* (`boltzmann_compliant non_compliant→compliant`) and the *signature*
 (`false_natural_law → false_ci_rope`) but the final `dr_type` HOLDS at `tangled_rope`. These are
