@@ -378,6 +378,21 @@ signature was cosmetic for the mountain *type* but **not inert for the natural-l
 it hid 3 false-naturals the empty-intent gate could not exclude. Cite "cosmetic" scoped to the
 metric-agreeing majority; for the false-natural tail it was classification-(certification-)changing.
 
+**The qualifier needs its own qualifier — name the level.** "Do not cite cosmetic unqualified" is
+itself a claim that is incomplete until qualified, and the qualifier is a *level*, not a hedge. The
+verdict splits cleanly by output layer: at the **final-type level** (the classification the engine
+emits) removing the NL signature is **fully cosmetic** — 0 mountain types change, no caveat. At the
+**raw-diagnostic level** (the `natural_law` certification tag the signature stamps before the type is
+finalized) it is **non-cosmetic** — it flips 3 false-naturals. The same edit is simultaneously
+inert and consequential because it touches two different read sites; "cosmetic" is true at one and
+false at the other, and neither is the whole answer. So the discipline is not "always append a
+caveat to cosmetic" — it is **state the layer the verdict is scoped to**, because a layer-free
+"cosmetic" defaults to whichever layer the reader happens to be standing on (here, the type layer,
+which is the *true* reading — making the omission silently self-confirming). This is Pattern 5's
+spine one turn further in: a success-shaped token ("cosmetic") that is genuinely true at the layer
+the reader checks and false at the layer they don't, so the read site can't tell the scoped claim
+from the universal one. Carry the level bit with the verdict.
+
 **Where this recurs:** any generation prompt or schema that exposes a classification
 threshold to the author creates the same risk. Whether it is a problem depends on whether
 the diff between author estimate and engine verdict is supposed to carry information. For
