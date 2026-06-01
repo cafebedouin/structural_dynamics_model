@@ -1435,7 +1435,7 @@ generation template first authoring a temporal series, the split reopens. The `e
 
 ## OQ-41 — G6: fabricated defaults for absent data (fail-closed vs impute)
 
-**Status: row 23 MITIGATED (2026-05-31, Commit A); rows 24–27 open.** Census rows 23–27. A silent
+**Status: row 23 MITIGATED (2026-05-31, Commit A); rows 24–27 open (row 26 NEUTRAL for 3 of 6 sites — 4 OPEN, see coverage correction below).** Census rows 23–27. A silent
 fixed default (`0.5`, `0.0`) substitutes for absent authored data, so the engine computes on a value
 nobody authored — distinct from G5 (this is fail-closed-vs-impute, not representation choice).
 - **Row 23 `drl_composition.pl` `classify_at_time` `Supp=0.5` — FIXED via scalar-fallback STOPGAP.**
@@ -1460,6 +1460,22 @@ nobody authored — distinct from G5 (this is fail-closed-vs-impute, not represe
   trap.** NB: the guard-falsity *count* shortcut was caught **vacuous** by its positive control —
   `cross_index_coupling`/`reformability_score` succeed even for a bogus constraint, so "0 absent" did
   not prove "branch unreached"; the 999.9 tripwire is the sound test. Row 27 by-design.
+- **Row 26 — COVERAGE CORRECTION (VERIFY-OR-CORRECT pass, 2026-05-31).** The witness
+  `outputs/tripwire_row26_results.json` and the script's `ROW26_SITES`
+  (`python/sweeps/tripwire_fabricated_defaults.py`) actually cover **only 3 rows / 2 of the 6
+  site-names** the handoff attributes to this sweep: `purity_scoring:factorization_subscore`,
+  `drl_boltzmann_analysis:coupling_factor`, `drl_boltzmann_analysis:excess_extraction_factor` — all
+  re-run **NEUTRAL** (default_fired=0/194). **`covering_analysis:486`, `gap_diagnostic:120`,
+  `omega1_audit:102` (BaseEps), and the `drl_fpn:197` LIVE-COSMETIC verdict are ABSENT from both the
+  artifact and `ROW26_SITES`** — NOT witnessed here. So **"no second classification-changing
+  fabricated default beyond row 23" is perturb-confirmed for the 3 covered sites and OPEN for the
+  other 4.** *Mechanism sharpening:* 2 of the 3 covered sites (`factorization_subscore`,
+  `coupling_factor`) are NEUTRAL because their guard `cross_index_coupling/2` is **total** (succeeds
+  with score `0.0` for any atom, incl. two bogus atoms tested) → the `; …= 0.5` else-branch is **dead
+  code**, not live-but-corpus-empty; only `excess_extraction_factor`'s default branch is reachable
+  (synthetic no-data constraint → `0.5`, positive-controlled). **First write-pass item to close
+  this:** expand `ROW26_SITES` to the full 6 sites and re-run — flagged, not done (out of this audit's
+  read/transcription scope).
 
 **Decision per remaining site:** fail-closed vs keep impute. Connects to the empty-table
 satisfy-on-absence pattern (`get_metric_average:169`).
