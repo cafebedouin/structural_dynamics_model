@@ -1422,6 +1422,15 @@ _WITNESSED_PARAMS: dict[str, list[tuple[str, list[float]]]] = {
         ("sigmoid_upper", [1.35, 1.5, 1.65]),
         # sigmoid_lower: coverage 0.028.
         ("sigmoid_lower", [-0.22, -0.20, -0.18]),
+        # boltzmann_coupling_threshold — Surface-2 lock lever (witness:
+        # outputs/surface2_lock_sweep_results.json; OQ-30 / OQ-37). Original 0.25; the FNL
+        # lock breaks corpus-wide at threshold in (~0.83, 1.0] (≈+268%). Post-OQ-37
+        # override-removal, this kernel's only load-bearing reading (diversity_reading, a
+        # band-gap metric=unknown) SURFACES unknown when FNL breaks rather than flipping —
+        # coverage>0, held. Co-lever coordination_type_offset (additive, same boundary) is
+        # PER-CONSTRAINT (boltzmann_compliance.pl:388), not a flat config param, so it is
+        # documented here + in ISSUES OQ-30 rather than perturb-swept.
+        ("boltzmann_coupling_threshold", [0.25, 0.5, 0.75, 0.85, 0.95]),
     ],
     "honor_settlement_legitimacy": [
         # snare_chi_floor: coverage 0.538 — highest coverage in corpus for this param.
@@ -1493,6 +1502,12 @@ _WITNESSED_PARAMS: dict[str, list[tuple[str, list[float]]]] = {
         ("sigmoid_midpoint", [0.45, 0.50, 0.55]),
         ("sigmoid_steepness", [5.4, 6.0, 6.6]),
         ("sigmoid_upper", [1.35, 1.5, 1.65]),
+        # boltzmann_coupling_threshold — Surface-2 lock lever (witness:
+        # outputs/surface2_lock_sweep_results.json). FNL lock breaks at ~0.83–1.0 (≈+268%);
+        # post-OQ-37 the holdout republican_reading (band-gap metric=unknown) surfaces
+        # unknown when FNL breaks. See equal_protection_clause entry re: the per-constraint
+        # coordination_type_offset co-lever.
+        ("boltzmann_coupling_threshold", [0.25, 0.5, 0.75, 0.85, 0.95]),
     ],
     "vaccine_mandate_balance": [
         # snare_chi_floor: coverage 0.126 (both directions). Maximum flips=32.
