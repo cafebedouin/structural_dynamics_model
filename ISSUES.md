@@ -1524,6 +1524,10 @@ husk / abolition (metric=snare, sig=false_natural_law — same `:738` clause, no
 1. **Taxonomy-coverage.** Does the type system need a band/type for the uncovered region
    χ∈(rope_ceil 0.35, tr_floor 0.40) and/or supp<tr_supp_floor 0.40 with χ/ε in the tangled band?
    4/5 holdouts are honest residents of that hole. This is the forward step if (c) dominates.
+   **χ-partition portion CLOSED (Move 1, 2026-06-01, commit `3ab3ace4`):** `tangled_rope_chi_floor`
+   lowered 0.40→0.35 (strict) to abut `rope_chi_ceiling`, closing the (0.35,0.40) χ gap structurally
+   (0 transitions; the gap was a value-setting artifact, not calibration). The **supp/ε-floor portion
+   remains open and is now OQ-48** (recalibration, deferred to post-rebuild — not a structural fix).
 2. **Characterize the N−5 = 3 uncharacterized masked unknowns** (constitutional_supremacy_reading,
    hybrid_atrophy_reading, relational_autonomy) — same a/b/c diagnosis. Surfacing them was correct
    regardless of cause (a swallowed compute-error unknown must not be laundered either); their cause
@@ -1768,6 +1772,43 @@ Connects to OQ-46 (the regen that retires the row-23 stopgap) and D7/D5 (the pro
 
 ---
 
-*Last updated: 2026-05-31. Add new items with sequential OQ-NN labels. Mark
+## OQ-48 — Classification thresholds never recalibrated against the live (post-rebuild) corpus
+
+**Status: open (table-setting for the rebuild).** The χ / ε / suppression classification
+thresholds (`config.pl` §5B + §5) are documented as **"Calibrated: Derived from 691-constraint
+corpus analysis (2024–2026)"** (`logic_thresholds.md:15`), with the known limitation that the
+calibration corpus is **Western/WEIRD** and needs non-WEIRD validation (`logic_thresholds.md:58–59`,
+the §Known Issues block). That 691-constraint corpus **predates the rebuild** — the live `testsets/`
+is now ~194–226 readings (a single coherent run; see Critical Distinctions). **The thresholds were
+never recalibrated against the live corpus.**
+
+**Why this is logged now (OQ-37 Move 1, 2026-06-01).** Move 1 closed the (0.35,0.40) χ-partition
+gap *structurally* (corpus-independent: 0 transitions, commit `3ab3ace4`). It deliberately did
+**not** touch `tangled_rope_suppression_floor` (0.40) or `tangled_rope_epsilon_floor` (0.30) — those
+are **calibrated values**, and moving them is recalibration, not a structural cleanup. They are the
+**binding gates on the four surfaced `unknown` holdouts**:
+- `republican_reading`, `living_constitutionalist_reading`: blocked solely by **supp 0.35 < 0.40**
+  (χ and ε in the tangled band).
+- `diversity_reading`, `competence_reading`: blocked by **both ε 0.28 < 0.30 and supp 0.35 < 0.40**.
+
+So `tangled_rope_suppression_floor` (0.40) and `tangled_rope_epsilon_floor` (0.30) are **deferred
+recalibration targets, not structural constants.** Whether the four holdouts *should* classify as
+tangled_rope is a calibration question answerable only against a corpus we trust — i.e. after the
+rebuild, not by nudging a floor to rescue four readings.
+
+**What resolution requires:** a recalibration pass that re-derives the χ/ε/supp thresholds (and the
+σ/π modifiers, same provenance) against the live corpus — ideally with a non-WEIRD extension — and
+records the new values + the corpus snapshot (pipeline manifest) they were fit to. Until then, treat
+every classification-gate numeric as **691-corpus-provenanced**, and do not move a *calibrated* floor
+to change a specific reading's type (that is curve-fitting to the holdout, not calibration). Move 1's
+χ-floor edit is exempt: it is a partition-geometry fix, value-independent.
+
+**Cross-refs:** OQ-37 (the holdouts + the surfacing override); OQ-30 (coupling-threshold calibration
+likewise rests on the live sweep, the external ±25% harness withdrawn). The pipeline manifest
+convention (CLAUDE.md) is the mechanism for citing *which* corpus a future recalibration was fit to.
+
+---
+
+*Last updated: 2026-06-01. Add new items with sequential OQ-NN labels. Mark
 resolved items with **Status: resolved** and a resolution note rather than
 deleting — provenance matters.*
