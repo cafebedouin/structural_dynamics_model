@@ -92,7 +92,9 @@ witness-before-claiming, the diagnostic-vs-classification level distinction),
 `design_discipline.md` governs *what the engine is for, what follows from that, and what it must
 not become* (the declared seat, mutual deference, classification-as-routing, the open-questions
 sorting). Both are living documents — consult at session start, and amend as design decisions are
-made and recorded.
+made and recorded. The design Omegas §6 sorts (Ω_E/Ω_C/Ω_P) are tracked as a running ledger with
+resolution status in `docs/design/omega_log.md` — log new *design-level* Omegas there (not in the
+auto-generated per-constraint `outputs/omega_report.md`).
 
 ## Typical Workflow
 
