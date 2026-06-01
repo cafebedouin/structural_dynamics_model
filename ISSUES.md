@@ -1867,12 +1867,35 @@ Grouped: **:749 false_natural_law→tangled_rope = 1661** (the override layer's 
 **The (a)/(b) ruling (human-stakes — CER does not self-rule):** for each clause, is the displaced
 metric read RIGHT and the override corrupts it (laundering → remove), or WRONG and the override is
 a correction the metric layer can't make (load-bearing → keep)?
-- **:749 (1661, dominant).** Metric said snare (pure extraction; the reading *failed* the
-  tangled_rope gate — lacked coordination-function / asymmetric-extraction). FNL forces tangled_rope
-  (hybrid). Tension: tangled_rope is *less* extractive than snare, and the metric already determined
-  the reading is not structurally tangled. Is FNL correctly catching physics-washed construction the
-  metric misses (b), or laundering pure-extraction-claiming-naturality into mere hybrid, losing the
-  snare signal (a)? The whole override layer turns on this.
+- **:749 (1661, dominant) — PARTITIONED 2026-06-01 (snare→TR sub-bucket, 1641; perturb-confirmed
+  testsets_3000).** *Correction of an earlier draft of this bullet, which claimed these readings
+  "failed the tangled_rope gate — lacked coordination/asymmetric-extraction." That was wrong;
+  witnessed below.*
+  - **Triple axis (the requested earned-vs-default partition) is DEGENERATE.** All **1641/1641**
+    cleared the FULL snare triple (χ≥0.66 ∧ ε≥0.46 ∧ supp≥0.60; witnessed bx=be=bs=1 for every one).
+    `metric=snare` ⟺ triple cleared (the snare clause requires it and runs *before* tangled_rope), so
+    the **DEFAULT-SNARE class is structurally empty (0)** and the "fail-TR-gates-only → default-snare"
+    positive-control arm is unsatisfiable. On this axis the computed result is REAL-SNARE=1641,
+    load-bearing=0 — but the axis cannot separate, so it is not the discriminating one.
+  - **Structure axis (the discriminating one).** The snare clause is **coordination-blind** (it never
+    checks coordination-function or asymmetric-extraction). Cross of the 1641:
+    | structure | χ≤0.90 (TR band) | χ>0.90 | total |
+    |---|---|---|---|
+    | coord+asym (both TR markers present) | 1391 | 207 | **1598** |
+    | coord=0 (no coordination) | 11 | 32 | **43** |
+    So only **43** are coordination-free pure-extraction snares (the clean laundering candidates: pure
+    extraction forced to the less-extractive hybrid). **1598** carry both tangled_rope structural
+    markers and were labeled snare *only* by cascade precedence + coordination-blindness — for these,
+    FNL→tangled_rope supplies the coordination-awareness the snare clause omits (correction-leaning),
+    though 207 of them have χ>0.90 (forced below their extraction band). Samples: coord=0 →
+    `ad_synaptic_deficit` (χ0.93), `awareness_without_leverage` (χ0.71); coord+asym →
+    `a_level_grading_inflation` (χ0.79), `academic_journal_peer_review_gatekeeping` (χ0.74).
+  - **Escalated (do NOT auto-resolve):** the user's earned/default axis yields 1641/0, but the
+    coordination-blindness of the snare clause means "earned pure-extraction snare" is true for only
+    43; the 1598 are coordination-bearing readings the metric mislabeled. The (a)/(b) ruling therefore
+    splits: **43 coord=0 = clean laundering candidates; 1598 coord+asym = override-supplies-omitted-
+    structure (correction-leaning); 207 of those χ>0.90 are the boundary cases** (TR structure but
+    extraction above TR's ceiling). Ruling is yours per sub-population. *Tier: perturb-confirmed.*
 - **:772 (15).** mountain→tangled_rope on "mountain with beneficiary." Plausibly load-bearing (a
   natural-mountain read that missed an authored beneficiary), but the mountain read was confident →
   needs ruling.
