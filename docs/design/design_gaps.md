@@ -284,3 +284,69 @@ three-stage diagnostic of `debugging_philosophy.md` §6 implemented over a kerne
 existing diagnostics onto A/B/C; (3) a consumer that reads the verdict. Open question: **OQ-55**.
 
 **Status:** Deferred. Named on first availability of the corpus that exercises it (2026-06-02).
+
+---
+
+## GAP-07 -- affects_constraint targets are not resolved into the (bounded) structural-class space
+
+**The capability:** A network edge whose target names no existing constraint (a *dangling*
+`affects_constraint/2` target) could be resolved to the structural class it denotes -- the
+`logical_fingerprint` isomorphism class the engine already computes -- instead of being matched by
+exact atom identity. The engine matches targets string-first; it has no resolver from a target onto
+the structural space, and no first-class notion that that space is bounded and closed.
+
+**Why it is absent:** `affects_constraint/2` is consumed string-first by the purity network,
+counterfactual, composition, signature detection, giant-component, and coupling layers -- each treats
+a target atom as simply present or absent. On the current corpus **1710 of 2548 edges (67%) dangle**;
+9 are one-character delimiter typos against an existing sibling reading (e.g.
+`john_1_1_logos_orthodox_christological` for `..._logos__orthodox_christological`), the remaining
+~1701 are fresh-minted descriptive names for constraints never authored (**OQ-58**; **OQ-59** is the
+sibling within-kernel duplication). There is no referential-integrity guard on the network layer (the
+OQ-58 hard-fail was built for `cs_reading_relation` only), so the danglers are silent. Treating them
+as an *open frontier* (a worklist to auto-generate against) is falsified: per-story dangle-fraction is
+flat-to-rising across a 15x size range and four generators (~0.63-0.74), and 95-98% of dangle edges
+land on a singleton target string no other story coined -- it is exhaust of open-vocabulary
+name-minting, not a closing boundary (`python/dangle_curve.py`, `python/dangle_indegree.py`).
+
+**Why resolution is nonetheless well-founded -- the structural space is a bounded attractor
+(witnessed).** Two generator-independent witnesses carry the bounded verdict:
+
+1. **shift saturates <1% of its hard cap.** `fingerprint_shift/2` is the constraint's type-response
+   over a *fixed* 4-point observer grid (`standard_context_for_power/2`), so its combinatorial ceiling
+   is `8 types ^ 4 contexts = 4096` (8 cascade type atoms, witnessed). Realized: ~59 = **~1.4%**. A space with a known enumerable
+   ceiling that closes at ~1.4% of it is closed by structure, not by enumeration stopping.
+2. **Coupon-collector estimator gives a finite intercept.** Regressing per-story discovery rate on the
+   *current realized count* fits `dS/dn = r*(1 - S/S_max)` linearly with a **finite S-axis intercept**
+   for both the structural 5-dim space (S_max~108) and shift (S_max~58), R2~0.84-0.89. A finite
+   intercept is the bounded-attractor signature; it is the test that separates bounded from log/open
+   (rate-vs-n could not -- both fall as 1/n; rate-vs-S can). See `python/territory_test.py`,
+   `python/fingerprint_rarefaction.py`, `python/separate_spaces.py`.
+
+*Illustration, not proof:* realized occupancy of the 5-marginal product cap is ~0.07% (116/155,848
+current; 99/149,688 v5), generator-stable -- demoted from proof because MI (below) shows it overstates
+richness.
+
+*Mechanism (MI, `python/mi_structure.py`):* the five structural dimensions carry **45% (current) - 56%
+(v5) redundant information** (total correlation / sum of marginal entropies), and the strongest
+couplings are **generator-invariant** (`voids<->zone` normalized-MI ~0.83, `props<->actors` ~0.78 in
+both corpora). So the boundedness is achieved *substantially through dimensional redundancy plus an
+entropy-inflated nominal cap* (effective independent cap ~2^7.2 ~ 146; effective joint ~2^2.6-4.0 ~
+6-16 cells) -- **not**, on current evidence, primarily through a rich multi-way forbidding of
+independent dimensions. The bounded attractor is real; the strong "0.07% forbidden by structure"
+reading is not witnessed. The one genuinely structural, authoring-independent fact MI does establish is
+that the *coupling pattern itself* is generator-invariant -- the redundancy lives in the engine's
+predicates, not the corpus.
+
+**What closing the gap would require:** (1) a structural-class resolver mapping a target to its
+fingerprint class; (2) fail-closed consumers -- a network consumer must distinguish edge-to-interior,
+edge-to-resolved-class, and edge-to-unresolved (terminus), never silently traverse a phantom; (3)
+repair the 9 delimiter typos *first* so the frontier set is clean (else a typo resolves to / would
+regenerate an existing node -- straight into OQ-59); (4) decide whether the resolver keys on five
+structural dims or six -- `shift` is a different (constraint x fixed-context) space, and `coupling` is
+high-cardinality and possibly over-resolved (239/772), so it may be excluded or quantized. Open
+questions: **OQ-58**, **OQ-59**; related untyped-edge gap: **GAP-01**.
+
+**Status:** Deferred; bounded-attractor basis analyzed 2026-06-02 (scripts above, all re-runnable on a
+fingerprint dump). **Drift framing held deliberately:** the post-saturation corpus is a *bounded state
+set*; whether change over it has memory (Markov vs higher-order) is an **open measurement** pending
+`fingerprint_drift` velocity/acceleration -- not yet asserted.
