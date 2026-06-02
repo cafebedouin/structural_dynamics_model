@@ -2020,10 +2020,13 @@ to OQ-44 (engine-wide no-gate-satisfied-by-absence), build_discipline Pattern 5.
 **Ω-type:** Ω_C (design choice — whether/how to reconcile two obstruction measures that the framework
 calls complements).
 
-**Status:** partially resolved — the **22 cell (H1>0 ∧ W1≈0) is probed and explained** (2026-06-02,
-below); the **36 cell (H1=0 ∧ W1>0) remains open**. **Related:** OQ-37 (honest `unknown` now surfaces
-in `dr_type`), OQ-52 (manifest rows for the false-mountain cross — must exclude the unknown-driven
-subset found here).
+**Status:** resolved (both off-diagonal cells probed and explained, 2026-06-02) — **22 cell
+(H1>0 ∧ W1≈0) = `unknown`-driven**; **36 cell (H1=0 ∧ W1>0) = chain-conditional MaxEnt movement**.
+Two downstream caveats surfaced that gate any use of W1 (see "Result — the 36"): **W1 is
+chain-conditional only** (blind to scaffold/piton/naturalized mass) and **strongly corpus-dependent**
+(licensing 1.30→0.01 between n=563 and n=771). **Related:** OQ-37 (honest `unknown`), OQ-26 (MaxEnt/ε
+reading-relative across runs — the corpus-dependence here is an instance), OQ-52 (false-mountain cross
+— must recompute W1 on its own corpus snapshot and also join `wasserstein_incomparable_mass`).
 **Origin:** W1 × sheaf_status join, 2026-06-02 (n=563, commit b5ccee0). Tool:
 `python/w1_sheaf_join.py`; output `outputs/w1_sheaf_join.{json,md}`.
 **Files:** `prolog/grothendieck_cohomology.pl:149` (`cohomological_obstruction/3`, H1) and `:128`
@@ -2095,8 +2098,49 @@ confident corner of that gap.
 **Evidence so far:** all 58 ids with per-id W1/H1/sheaf_status are in `outputs/w1_sheaf_join.md`
 ("Off-diagonal rows"); the 22-cell probe output is the witness for the above. On-diagonal bulk is
 506/564, so the measures *largely* coincide; the 58 are the residual the complement-framing does not
-cover. The **36 cell (H1=0 ∧ W1>0) is not yet probed** — the converse corner (same `dr_type`,
-drifting MaxEnt mass).
+cover.
+
+### Result — the 36 (H1=0 ∧ W1>0), probed 2026-06-02
+
+Same one-query treatment (temp script, removed; maxent-first path; n=771 — corpus had grown from the
+n=563 join). **All 36 are uniform `tangled_rope` across all 4 seats, with zero `unknown`** (0
+"not-uniform" warnings) — so this corner carries **no second `unknown` artifact**; it is the clean
+type-agreement corner. But three facts qualify it heavily:
+
+1. **Genuine fine-structure exists, but only in a minority.** The chain-conditional MaxEnt distribution
+   genuinely moves across seats for ~6 constraints (n=771: monopoly 1.46, notability 0.42,
+   lausanne_guarantor 0.34, copyright 0.18, creed 0.11, lausanne_expansive 0.10) — e.g. monopoly's
+   on-chain mountain/rope split shifts seat-to-seat under a constant `tangled_rope` label. The other
+   ~30 are a **threshold-dust tail** (W1 < 0.06, many ~1e-4 to 0): the `1e-9` join cutoff inflates the
+   cell. So "36" is really "~6 real + ~30 dust."
+
+2. **W1 is chain-conditional, not total-variation.** `wasserstein_l1` builds a CDF over
+   `extraction_chain([mountain,rope,tangled_rope,snare])` after `renormalize/2` divides by the on-chain
+   mass; off-chain types (scaffold/piton/naturalized) are **excluded** and tracked as
+   `wasserstein_incomparable_mass`. Consequence: **W1≈0 does not mean "distributions identical."**
+   `rfc9293_tcp_specification__strict_invariance_reading` swings rope 0.70→0.015 / scaffold 0.30→0.985
+   at seat3 (institutional), yet W1=0.000 — its on-chain mass is rope-only at every seat, so the
+   chain-conditional renormalizes to rope=1.0 everywhere and the entire scaffold swing is invisible to
+   W1. The join did **not** carry `incomparable_mass`, so this off-chain fracture is a blind spot of the
+   whole 2×2.
+
+3. **`dr_type` ≠ chain-conditional argmax, and W1 is corpus-dependent.** For most of the 36 the
+   on-chain MaxEnt mass is dominated by **rope**, not the `dr_type` label `tangled_rope` (monopoly:
+   tangled_rope=0.000, rope≈0.5; licensing: rope=0.984, tangled_rope=0.013) — so the dual-classifier
+   split is on the *label*, deeper than the 22 showed, and W1's movement lives in a different type than
+   the label. And W1 magnitude is **strongly corpus-relative**: recomputed at n=771, licensing fell
+   1.301→0.012, lausanne_expansive 1.684→0.103, fifth_republic 0.743→0.002, magna_carta 0.678→0.003,
+   tenure 0.452→0.002 (monopoly/notability/lausanne_guarantor partly survive). The n=563 W1 ranking —
+   and therefore the off-diagonal *membership* — does not survive corpus growth. This is an instance of
+   OQ-26 (MaxEnt is reading/run-relative), now shown to swing W1 by ~100×.
+
+**Verdict on the 36 (answer to "genuine fine-structure or second artifact?"):** neither a clean signal
+nor an artifact — a *real but partial and unstable* measure. The fine structure is real for ~6
+constraints (chain-conditional movement under type-agreement), there is no `unknown` artifact, but W1
+ignores off-chain mass and its magnitude is corpus-ephemeral. **Gate for the false-mountain pass
+(OQ-52): do not rank/select on inherited W1.** Recompute W1 on the exact analysis corpus snapshot,
+**join `wasserstein_incomparable_mass`** to recover the off-chain fracture W1 cannot see, and apply a
+real W1 threshold (≥~0.05) rather than `1e-9`.
 
 **What resolution changes:**
 - **Engine question (new, from the 22):** should `orbit_vector`/`count_disagreeing_pairs` treat
@@ -2104,12 +2148,18 @@ drifting MaxEnt mass).
   reclassify all 22 out of `manifest_presheaf` and shrink the 98-strong manifest set by the
   unknown-driven subset — a material change to the sheaf_status distribution. Decide alongside OQ-37
   (do not re-suppress `unknown`; the question is how H1 *consumes* it, not whether `dr_type` emits it).
-- **36 cell (still open):** if it is type-invariant MaxEnt drift, W1 and H1 are **non-redundant** (W1
-  sees intra-type drift H1 cannot), not exact complements, and the 36 "type glues, mass moves"
-  constraints become a named phenomenon. Diagnostic: for the 36, compare per-seat MaxEnt distributions
-  against per-seat types to confirm same-type/different-distribution (the converse of the 22 probe).
+- **36 cell (resolved):** confirmed type-invariant MaxEnt drift for ~6 constraints, so W1 and H1 are
+  **non-redundant** (W1 sees intra-type drift H1 cannot) — but the practical value is limited by W1's
+  chain-conditional scope and corpus-dependence (above). The off-chain analogue (mass moving into
+  scaffold/piton/naturalized) is invisible to W1 and lives in `wasserstein_incomparable_mass`; that
+  channel is the unprobed complement now (a third corner the 2×2 never showed because the join omitted
+  the field).
+- **W1 stability (new, blocking for any W1-based result):** W1 magnitude is corpus-relative (OQ-26) and
+  swings ~100× with corpus growth. Any analysis or paper claim using W1 must pin the corpus snapshot
+  and recompute; the `outputs/w1_sheaf_join.{json,md}` ranking is valid only for n=563/commit b5ccee0.
 - **Framing:** the paper should state W1 and H1 as readings of **two different classifiers** (MaxEnt
-  vs `dr_type`), reconciled, not as discrete/continuous views of one.
+  vs `dr_type`), reconciled, not as discrete/continuous views of one — and note W1 measures the
+  *chain-conditional* distribution only.
 
 ## OQ-52 — False-mountain cross: do the naturalized→snare manifest rows have an authored beneficiary?
 
