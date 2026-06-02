@@ -131,8 +131,8 @@ narrative_ontology:cs_story_uid(westphalia_sovereignty__absolute_non_interventio
 narrative_ontology:cs_kernel_codification('2c5800ba-40c8-4583-b881-0e617aa13bd6', fixed_text).
 narrative_ontology:cs_authority_grounding('2c5800ba-40c8-4583-b881-0e617aa13bd6', lineage).
 narrative_ontology:cs_interpretation_layer_present('2c5800ba-40c8-4583-b881-0e617aa13bd6').
-narrative_ontology:cs_reading_relation('2c5800ba-40c8-4583-b881-0e617aa13bd6', conditional_responsibility, coexists_with).
-narrative_ontology:cs_reading_relation('2c5800ba-40c8-4583-b881-0e617aa13bd6', graded_sovereignty, coexists_with).
+narrative_ontology:cs_reading_relation('2c5800ba-40c8-4583-b881-0e617aa13bd6', westphalia_sovereignty__conditional_responsibility, coexists_with).
+narrative_ontology:cs_reading_relation('2c5800ba-40c8-4583-b881-0e617aa13bd6', westphalia_sovereignty__graded_sovereignty, coexists_with).
 narrative_ontology:cs_axiom('2c5800ba-40c8-4583-b881-0e617aa13bd6', foundational, territorial_sovereignty_categorically_inviolable).
 narrative_ontology:cs_axiom_status(territorial_sovereignty_categorically_inviolable, holdable).
 narrative_ontology:cs_axiom_grounding('2c5800ba-40c8-4583-b881-0e617aa13bd6', territorial_sovereignty_categorically_inviolable, conventional).

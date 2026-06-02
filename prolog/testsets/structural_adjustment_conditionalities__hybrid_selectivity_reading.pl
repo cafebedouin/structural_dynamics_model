@@ -131,8 +131,8 @@ narrative_ontology:cs_story_uid(structural_adjustment_conditionalities__hybrid_s
 narrative_ontology:cs_kernel_codification('673f8104-391f-43f3-9717-79881e266390', formalized).
 narrative_ontology:cs_authority_grounding('673f8104-391f-43f3-9717-79881e266390', extraction).
 narrative_ontology:cs_interpretation_layer_present('673f8104-391f-43f3-9717-79881e266390').
-narrative_ontology:cs_reading_relation('673f8104-391f-43f3-9717-79881e266390', creditor_coordination_reading, coexists_with).
-narrative_ontology:cs_reading_relation('673f8104-391f-43f3-9717-79881e266390', debtor_extraction_reading, coexists_with).
+narrative_ontology:cs_reading_relation('673f8104-391f-43f3-9717-79881e266390', structural_adjustment_conditionalities__creditor_coordination_reading, coexists_with).
+narrative_ontology:cs_reading_relation('673f8104-391f-43f3-9717-79881e266390', structural_adjustment_conditionalities__debtor_extraction_reading, coexists_with).
 narrative_ontology:cs_axiom('673f8104-391f-43f3-9717-79881e266390', foundational, selectivity_is_structural).
 narrative_ontology:cs_axiom_status(selectivity_is_structural, holdable).
 narrative_ontology:cs_axiom_grounding('673f8104-391f-43f3-9717-79881e266390', selectivity_is_structural, empirically_contingent).

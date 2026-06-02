@@ -121,7 +121,7 @@ narrative_ontology:cs_story_uid(decalogue_image_prohibition__iconodule_reading, 
 narrative_ontology:cs_kernel_codification('ede47094-f3c7-407e-b120-fccd14f3ecdc', fixed_text).
 narrative_ontology:cs_authority_grounding('ede47094-f3c7-407e-b120-fccd14f3ecdc', lineage).
 narrative_ontology:cs_interpretation_layer_present('ede47094-f3c7-407e-b120-fccd14f3ecdc').
-narrative_ontology:cs_reading_relation('ede47094-f3c7-407e-b120-fccd14f3ecdc', iconoclast_reading, forecloses).
+narrative_ontology:cs_reading_relation('ede47094-f3c7-407e-b120-fccd14f3ecdc', decalogue_image_prohibition__iconoclast_reading, forecloses).
 narrative_ontology:cs_axiom('ede47094-f3c7-407e-b120-fccd14f3ecdc', foundational, incarnation_sanctifies_matter).
 narrative_ontology:cs_axiom_status(incarnation_sanctifies_matter, holdable).
 narrative_ontology:cs_axiom_grounding('ede47094-f3c7-407e-b120-fccd14f3ecdc', incarnation_sanctifies_matter, deontological).

@@ -138,8 +138,8 @@ narrative_ontology:cs_story_uid(gold_fiat_transition_mechanism__composite_overde
 narrative_ontology:cs_kernel_codification('ec3b5fc6-f5c9-4c00-9157-f6f2c585e3be', distributed).
 narrative_ontology:cs_authority_grounding('ec3b5fc6-f5c9-4c00-9157-f6f2c585e3be', extraction).
 narrative_ontology:cs_interpretation_layer_present('ec3b5fc6-f5c9-4c00-9157-f6f2c585e3be').
-narrative_ontology:cs_reading_relation('ec3b5fc6-f5c9-4c00-9157-f6f2c585e3be', automatic_constraint_reading, coexists_with).
-narrative_ontology:cs_reading_relation('ec3b5fc6-f5c9-4c00-9157-f6f2c585e3be', creditor_discipline_reading, coexists_with).
+narrative_ontology:cs_reading_relation('ec3b5fc6-f5c9-4c00-9157-f6f2c585e3be', gold_fiat_transition_mechanism__automatic_constraint_reading, coexists_with).
+narrative_ontology:cs_reading_relation('ec3b5fc6-f5c9-4c00-9157-f6f2c585e3be', gold_fiat_transition_mechanism__creditor_discipline_reading, coexists_with).
 narrative_ontology:cs_axiom('ec3b5fc6-f5c9-4c00-9157-f6f2c585e3be', foundational, multiple_independent_structural_mechanisms_sufficient).
 narrative_ontology:cs_axiom_status(multiple_independent_structural_mechanisms_sufficient, holdable).
 narrative_ontology:cs_axiom_grounding('ec3b5fc6-f5c9-4c00-9157-f6f2c585e3be', multiple_independent_structural_mechanisms_sufficient, empirically_contingent).

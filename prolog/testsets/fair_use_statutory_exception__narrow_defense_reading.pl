@@ -132,8 +132,8 @@ narrative_ontology:cs_story_uid(fair_use_statutory_exception__narrow_defense_rea
 narrative_ontology:cs_kernel_codification('e0ed55a6-982f-48d8-9bb7-f40da3eba05a', formalized).
 narrative_ontology:cs_authority_grounding('e0ed55a6-982f-48d8-9bb7-f40da3eba05a', extraction).
 narrative_ontology:cs_interpretation_layer_present('e0ed55a6-982f-48d8-9bb7-f40da3eba05a').
-narrative_ontology:cs_reading_relation('e0ed55a6-982f-48d8-9bb7-f40da3eba05a', transformative_right_reading, coexists_with).
-narrative_ontology:cs_reading_relation('e0ed55a6-982f-48d8-9bb7-f40da3eba05a', market_licensing_reading, influences).
+narrative_ontology:cs_reading_relation('e0ed55a6-982f-48d8-9bb7-f40da3eba05a', fair_use_statutory_exception__transformative_right_reading, coexists_with).
+narrative_ontology:cs_reading_relation('e0ed55a6-982f-48d8-9bb7-f40da3eba05a', fair_use_statutory_exception__market_licensing_reading, influences).
 narrative_ontology:cs_axiom('e0ed55a6-982f-48d8-9bb7-f40da3eba05a', foundational, copyright_is_property_right_primary_entitlement).
 narrative_ontology:cs_axiom_status(copyright_is_property_right_primary_entitlement, holdable).
 narrative_ontology:cs_axiom_grounding('e0ed55a6-982f-48d8-9bb7-f40da3eba05a', copyright_is_property_right_primary_entitlement, conventional).

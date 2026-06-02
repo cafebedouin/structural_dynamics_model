@@ -134,8 +134,8 @@ domain_priors:requires_active_enforcement(rfc9293_tcp_specification__middlebox_r
 narrative_ontology:cs_story_uid(rfc9293_tcp_specification__middlebox_realism_reading, 'tcp-middlebox-realism-reading-2026-02-26').
 narrative_ontology:cs_kernel_codification('tcp-middlebox-realism-reading-2026-02-26', fixed_text).
 narrative_ontology:cs_authority_grounding('tcp-middlebox-realism-reading-2026-02-26', extraction).
-narrative_ontology:cs_reading_relation('tcp-middlebox-realism-reading-2026-02-26', strict_invariance_reading, forecloses).
-narrative_ontology:cs_reading_relation('tcp-middlebox-realism-reading-2026-02-26', optimization_latitude_reading, coexists_with).
+narrative_ontology:cs_reading_relation('tcp-middlebox-realism-reading-2026-02-26', rfc9293_tcp_specification__strict_invariance_reading, forecloses).
+narrative_ontology:cs_reading_relation('tcp-middlebox-realism-reading-2026-02-26', rfc9293_tcp_specification__optimization_latitude_reading, coexists_with).
 narrative_ontology:cs_axiom('tcp-middlebox-realism-reading-2026-02-26', foundational, deployed_behavior_is_normative_specification).
 narrative_ontology:cs_axiom_status(deployed_behavior_is_normative_specification, holdable).
 narrative_ontology:cs_axiom_grounding('tcp-middlebox-realism-reading-2026-02-26', deployed_behavior_is_normative_specification, empirically_contingent).

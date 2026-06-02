@@ -130,8 +130,8 @@ narrative_ontology:cs_story_uid(vedic_corpus_social_prescription__colonial_orien
 narrative_ontology:cs_kernel_codification('7f55bc07-2377-4f7d-8686-066c1d8f07e7', fixed_text).
 narrative_ontology:cs_authority_grounding('7f55bc07-2377-4f7d-8686-066c1d8f07e7', extraction).
 narrative_ontology:cs_interpretation_layer_present('7f55bc07-2377-4f7d-8686-066c1d8f07e7').
-narrative_ontology:cs_reading_relation('7f55bc07-2377-4f7d-8686-066c1d8f07e7', orthodox_varna_reading, coexists_with).
-narrative_ontology:cs_reading_relation('7f55bc07-2377-4f7d-8686-066c1d8f07e7', reformist_spiritual_reading, influences).
+narrative_ontology:cs_reading_relation('7f55bc07-2377-4f7d-8686-066c1d8f07e7', vedic_corpus_social_prescription__orthodox_varna_reading, coexists_with).
+narrative_ontology:cs_reading_relation('7f55bc07-2377-4f7d-8686-066c1d8f07e7', vedic_corpus_social_prescription__reformist_spiritual_reading, influences).
 narrative_ontology:cs_axiom('7f55bc07-2377-4f7d-8686-066c1d8f07e7', foundational, vedic_texts_unified_legal_system).
 narrative_ontology:cs_axiom_status(vedic_texts_unified_legal_system, holdable).
 narrative_ontology:cs_axiom_grounding('7f55bc07-2377-4f7d-8686-066c1d8f07e7', vedic_texts_unified_legal_system, empirically_contingent).

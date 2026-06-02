@@ -126,8 +126,8 @@ narrative_ontology:cs_story_uid(catastrophe_avoidance_retention__hybrid_near_mis
 narrative_ontology:cs_kernel_codification('6f5ce999-2782-4788-8364-f71dbba711dd', distributed).
 narrative_ontology:cs_authority_grounding('6f5ce999-2782-4788-8364-f71dbba711dd', practice).
 narrative_ontology:cs_interpretation_layer_present('6f5ce999-2782-4788-8364-f71dbba711dd').
-narrative_ontology:cs_reading_relation('6f5ce999-2782-4788-8364-f71dbba711dd', simulation_as_proxy_catastrophe, coexists_with).
-narrative_ontology:cs_reading_relation('6f5ce999-2782-4788-8364-f71dbba711dd', catastrophe_as_necessary_selector, coexists_with).
+narrative_ontology:cs_reading_relation('6f5ce999-2782-4788-8364-f71dbba711dd', catastrophe_avoidance_retention__simulation_as_proxy_catastrophe, coexists_with).
+narrative_ontology:cs_reading_relation('6f5ce999-2782-4788-8364-f71dbba711dd', catastrophe_avoidance_retention__catastrophe_as_necessary_selector, coexists_with).
 narrative_ontology:cs_axiom('6f5ce999-2782-4788-8364-f71dbba711dd', foundational, near_miss_data_qualitatively_sufficient).
 narrative_ontology:cs_axiom_status(near_miss_data_qualitatively_sufficient, holdable).
 narrative_ontology:cs_axiom_grounding('6f5ce999-2782-4788-8364-f71dbba711dd', near_miss_data_qualitatively_sufficient, empirically_contingent).

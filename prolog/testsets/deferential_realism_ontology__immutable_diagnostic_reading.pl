@@ -124,8 +124,8 @@ domain_priors:requires_active_enforcement(deferential_realism_ontology__immutabl
 narrative_ontology:cs_story_uid(deferential_realism_ontology__immutable_diagnostic_reading, '9d65fa32-5aec-4acc-9444-d1dd6b5828c1').
 narrative_ontology:cs_kernel_codification('9d65fa32-5aec-4acc-9444-d1dd6b5828c1', distributed).
 narrative_ontology:cs_authority_grounding('9d65fa32-5aec-4acc-9444-d1dd6b5828c1', extraction).
-narrative_ontology:cs_reading_relation('9d65fa32-5aec-4acc-9444-d1dd6b5828c1', rhetorical_scaffold_reading, coexists_with).
-narrative_ontology:cs_reading_relation('9d65fa32-5aec-4acc-9444-d1dd6b5828c1', hybrid_pragmatic_reading, influences).
+narrative_ontology:cs_reading_relation('9d65fa32-5aec-4acc-9444-d1dd6b5828c1', deferential_realism_ontology__rhetorical_scaffold_reading, coexists_with).
+narrative_ontology:cs_reading_relation('9d65fa32-5aec-4acc-9444-d1dd6b5828c1', deferential_realism_ontology__hybrid_pragmatic_reading, influences).
 narrative_ontology:cs_axiom('9d65fa32-5aec-4acc-9444-d1dd6b5828c1', foundational, metrics_are_discoverable).
 narrative_ontology:cs_axiom_status(metrics_are_discoverable, holdable).
 narrative_ontology:cs_axiom_grounding('9d65fa32-5aec-4acc-9444-d1dd6b5828c1', metrics_are_discoverable, empirically_contingent).

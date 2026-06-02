@@ -124,8 +124,8 @@ narrative_ontology:cs_story_uid(article_51_self_defense__expansive_preventive_re
 narrative_ontology:cs_kernel_codification('article-51-expansive-preventive-2026-02-26', formalized).
 narrative_ontology:cs_authority_grounding('article-51-expansive-preventive-2026-02-26', extraction).
 narrative_ontology:cs_interpretation_layer_present('article-51-expansive-preventive-2026-02-26').
-narrative_ontology:cs_reading_relation('article-51-expansive-preventive-2026-02-26', narrow_armed_attack_reading, forecloses).
-narrative_ontology:cs_reading_relation('article-51-expansive-preventive-2026-02-26', unable_unwilling_doctrine_reading, influences).
+narrative_ontology:cs_reading_relation('article-51-expansive-preventive-2026-02-26', article_51_self_defense__narrow_armed_attack_reading, forecloses).
+narrative_ontology:cs_reading_relation('article-51-expansive-preventive-2026-02-26', article_51_self_defense__unable_unwilling_doctrine_reading, influences).
 narrative_ontology:cs_axiom('article-51-expansive-preventive-2026-02-26', foundational, prevention_of_emerging_threats_is_lawful_self_defense).
 narrative_ontology:cs_axiom_status(prevention_of_emerging_threats_is_lawful_self_defense, holdable).
 narrative_ontology:cs_axiom_grounding('article-51-expansive-preventive-2026-02-26', prevention_of_emerging_threats_is_lawful_self_defense, instrumental).

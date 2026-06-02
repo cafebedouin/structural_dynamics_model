@@ -127,8 +127,8 @@ narrative_ontology:cs_story_uid(structural_adjustment_conditionalities__creditor
 narrative_ontology:cs_kernel_codification('4f99664a-ade8-47b5-af77-32c4b8887a4d', formalized).
 narrative_ontology:cs_authority_grounding('4f99664a-ade8-47b5-af77-32c4b8887a4d', expertise).
 narrative_ontology:cs_interpretation_layer_present('4f99664a-ade8-47b5-af77-32c4b8887a4d').
-narrative_ontology:cs_reading_relation('4f99664a-ade8-47b5-af77-32c4b8887a4d', debtor_extraction_reading, coexists_with).
-narrative_ontology:cs_reading_relation('4f99664a-ade8-47b5-af77-32c4b8887a4d', hybrid_selectivity_reading, influences).
+narrative_ontology:cs_reading_relation('4f99664a-ade8-47b5-af77-32c4b8887a4d', structural_adjustment_conditionalities__debtor_extraction_reading, coexists_with).
+narrative_ontology:cs_reading_relation('4f99664a-ade8-47b5-af77-32c4b8887a4d', structural_adjustment_conditionalities__hybrid_selectivity_reading, influences).
 narrative_ontology:cs_axiom('4f99664a-ade8-47b5-af77-32c4b8887a4d', foundational, capital_market_confidence_mechanism).
 narrative_ontology:cs_axiom_status(capital_market_confidence_mechanism, holdable).
 narrative_ontology:cs_axiom_grounding('4f99664a-ade8-47b5-af77-32c4b8887a4d', capital_market_confidence_mechanism, empirically_contingent).

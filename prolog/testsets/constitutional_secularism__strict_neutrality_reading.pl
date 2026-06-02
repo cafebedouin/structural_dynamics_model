@@ -130,8 +130,8 @@ narrative_ontology:cs_story_uid(constitutional_secularism__strict_neutrality_rea
 narrative_ontology:cs_kernel_codification('308131fa-3661-4141-9ae7-8a92b8fea9d2', formalized).
 narrative_ontology:cs_authority_grounding('308131fa-3661-4141-9ae7-8a92b8fea9d2', lineage).
 narrative_ontology:cs_interpretation_layer_present('308131fa-3661-4141-9ae7-8a92b8fea9d2').
-narrative_ontology:cs_reading_relation('308131fa-3661-4141-9ae7-8a92b8fea9d2', principled_intervention_reading, influences).
-narrative_ontology:cs_reading_relation('308131fa-3661-4141-9ae7-8a92b8fea9d2', reformist_reading, coexists_with).
+narrative_ontology:cs_reading_relation('308131fa-3661-4141-9ae7-8a92b8fea9d2', constitutional_secularism__principled_intervention_reading, influences).
+narrative_ontology:cs_reading_relation('308131fa-3661-4141-9ae7-8a92b8fea9d2', constitutional_secularism__reformist_reading, coexists_with).
 narrative_ontology:cs_axiom('308131fa-3661-4141-9ae7-8a92b8fea9d2', foundational, state_non_preference_procedural).
 narrative_ontology:cs_axiom_status(state_non_preference_procedural, holdable).
 narrative_ontology:cs_axiom_grounding('308131fa-3661-4141-9ae7-8a92b8fea9d2', state_non_preference_procedural, deontological).

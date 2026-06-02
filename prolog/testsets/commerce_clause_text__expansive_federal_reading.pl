@@ -128,8 +128,8 @@ narrative_ontology:cs_story_uid(commerce_clause_text__expansive_federal_reading,
 narrative_ontology:cs_kernel_codification('f833085c-3452-4b46-9528-559c2fe07d92', fixed_text).
 narrative_ontology:cs_authority_grounding('f833085c-3452-4b46-9528-559c2fe07d92', lineage).
 narrative_ontology:cs_interpretation_layer_present('f833085c-3452-4b46-9528-559c2fe07d92').
-narrative_ontology:cs_reading_relation('f833085c-3452-4b46-9528-559c2fe07d92', originalist_narrow_reading, coexists_with).
-narrative_ontology:cs_reading_relation('f833085c-3452-4b46-9528-559c2fe07d92', substantial_effects_limited_reading, influences).
+narrative_ontology:cs_reading_relation('f833085c-3452-4b46-9528-559c2fe07d92', commerce_clause_text__originalist_narrow_reading, coexists_with).
+narrative_ontology:cs_reading_relation('f833085c-3452-4b46-9528-559c2fe07d92', commerce_clause_text__substantial_effects_limited_reading, influences).
 narrative_ontology:cs_axiom('f833085c-3452-4b46-9528-559c2fe07d92', foundational, economic_activity_aggregate_effects_doctrine).
 narrative_ontology:cs_axiom_status(economic_activity_aggregate_effects_doctrine, holdable).
 narrative_ontology:cs_axiom_grounding('f833085c-3452-4b46-9528-559c2fe07d92', economic_activity_aggregate_effects_doctrine, instrumental).

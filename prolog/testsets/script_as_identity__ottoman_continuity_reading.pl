@@ -125,8 +125,8 @@ narrative_ontology:cs_story_uid(script_as_identity__ottoman_continuity_reading, 
 narrative_ontology:cs_kernel_codification('e9d4eac2-f541-44b2-b624-fd5b823b1280', fixed_text).
 narrative_ontology:cs_authority_grounding('e9d4eac2-f541-44b2-b624-fd5b823b1280', lineage).
 narrative_ontology:cs_interpretation_layer_present('e9d4eac2-f541-44b2-b624-fd5b823b1280').
-narrative_ontology:cs_reading_relation('e9d4eac2-f541-44b2-b624-fd5b823b1280', kemalist_rupture_reading, coexists_with).
-narrative_ontology:cs_reading_relation('e9d4eac2-f541-44b2-b624-fd5b823b1280', phonetic_instrumentalism_reading, coexists_with).
+narrative_ontology:cs_reading_relation('e9d4eac2-f541-44b2-b624-fd5b823b1280', script_as_identity__kemalist_rupture_reading, coexists_with).
+narrative_ontology:cs_reading_relation('e9d4eac2-f541-44b2-b624-fd5b823b1280', script_as_identity__phonetic_instrumentalism_reading, coexists_with).
 narrative_ontology:cs_axiom('e9d4eac2-f541-44b2-b624-fd5b823b1280', foundational, script_encodes_islamic_continuity).
 narrative_ontology:cs_axiom_status(script_encodes_islamic_continuity, holdable).
 narrative_ontology:cs_axiom_grounding('e9d4eac2-f541-44b2-b624-fd5b823b1280', script_encodes_islamic_continuity, deontological).

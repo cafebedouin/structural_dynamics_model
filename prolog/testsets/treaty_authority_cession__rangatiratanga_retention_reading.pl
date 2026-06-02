@@ -125,7 +125,7 @@ narrative_ontology:cs_story_uid(treaty_authority_cession__rangatiratanga_retenti
 narrative_ontology:cs_kernel_codification('43230ac7-45a8-4ea6-bd70-fa8386974bd4', fixed_text).
 narrative_ontology:cs_authority_grounding('43230ac7-45a8-4ea6-bd70-fa8386974bd4', lineage).
 narrative_ontology:cs_interpretation_layer_present('43230ac7-45a8-4ea6-bd70-fa8386974bd4').
-narrative_ontology:cs_reading_relation('43230ac7-45a8-4ea6-bd70-fa8386974bd4', crown_cession_reading, forecloses).
+narrative_ontology:cs_reading_relation('43230ac7-45a8-4ea6-bd70-fa8386974bd4', treaty_authority_cession__crown_cession_reading, forecloses).
 narrative_ontology:cs_reading_relation('43230ac7-45a8-4ea6-bd70-fa8386974bd4', biculturalism_reading, coexists_with).
 narrative_ontology:cs_axiom('43230ac7-45a8-4ea6-bd70-fa8386974bd4', foundational, maori_text_controls_via_contra_proferentem).
 narrative_ontology:cs_axiom_status(maori_text_controls_via_contra_proferentem, holdable).

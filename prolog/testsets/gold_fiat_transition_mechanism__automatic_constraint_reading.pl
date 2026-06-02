@@ -128,8 +128,8 @@ narrative_ontology:cs_story_uid(gold_fiat_transition_mechanism__automatic_constr
 narrative_ontology:cs_kernel_codification('gfm-auto-2026-0226-001', fixed_text).
 narrative_ontology:cs_authority_grounding('gfm-auto-2026-0226-001', extraction).
 narrative_ontology:cs_interpretation_layer_present('gfm-auto-2026-0226-001').
-narrative_ontology:cs_reading_relation('gfm-auto-2026-0226-001', creditor_discipline_reading, coexists_with).
-narrative_ontology:cs_reading_relation('gfm-auto-2026-0226-001', composite_overdetermination_reading, influences).
+narrative_ontology:cs_reading_relation('gfm-auto-2026-0226-001', gold_fiat_transition_mechanism__creditor_discipline_reading, coexists_with).
+narrative_ontology:cs_reading_relation('gfm-auto-2026-0226-001', gold_fiat_transition_mechanism__composite_overdetermination_reading, influences).
 narrative_ontology:cs_axiom('gfm-auto-2026-0226-001', foundational, gold_reserve_constraint_was_automatic).
 narrative_ontology:cs_axiom_status(gold_reserve_constraint_was_automatic, holdable).
 narrative_ontology:cs_axiom_grounding('gfm-auto-2026-0226-001', gold_reserve_constraint_was_automatic, empirically_contingent).

@@ -129,8 +129,8 @@ narrative_ontology:cs_story_uid(script_as_identity__kemalist_rupture_reading, 'c
 narrative_ontology:cs_kernel_codification('c2b19162-0d07-47ed-9d80-cd655f8e8320', fixed_text).
 narrative_ontology:cs_authority_grounding('c2b19162-0d07-47ed-9d80-cd655f8e8320', extraction).
 narrative_ontology:cs_interpretation_layer_present('c2b19162-0d07-47ed-9d80-cd655f8e8320').
-narrative_ontology:cs_reading_relation('c2b19162-0d07-47ed-9d80-cd655f8e8320', ottoman_continuity_reading, coexists_with).
-narrative_ontology:cs_reading_relation('c2b19162-0d07-47ed-9d80-cd655f8e8320', phonetic_instrumentalism_reading, influences).
+narrative_ontology:cs_reading_relation('c2b19162-0d07-47ed-9d80-cd655f8e8320', script_as_identity__ottoman_continuity_reading, coexists_with).
+narrative_ontology:cs_reading_relation('c2b19162-0d07-47ed-9d80-cd655f8e8320', script_as_identity__phonetic_instrumentalism_reading, influences).
 narrative_ontology:cs_axiom('c2b19162-0d07-47ed-9d80-cd655f8e8320', foundational, script_encodes_civilizational_identity).
 narrative_ontology:cs_axiom_status(script_encodes_civilizational_identity, holdable).
 narrative_ontology:cs_axiom_grounding('c2b19162-0d07-47ed-9d80-cd655f8e8320', script_encodes_civilizational_identity, deontological).

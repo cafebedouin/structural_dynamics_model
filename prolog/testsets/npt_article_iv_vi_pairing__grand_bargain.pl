@@ -123,8 +123,8 @@ narrative_ontology:cs_story_uid(npt_article_iv_vi_pairing__grand_bargain, '14719
 narrative_ontology:cs_kernel_codification('14719f56-39ae-4aea-b7d9-e9df47202121', fixed_text).
 narrative_ontology:cs_authority_grounding('14719f56-39ae-4aea-b7d9-e9df47202121', extraction).
 narrative_ontology:cs_interpretation_layer_present('14719f56-39ae-4aea-b7d9-e9df47202121').
-narrative_ontology:cs_reading_relation('14719f56-39ae-4aea-b7d9-e9df47202121', nonproliferation_primary, influences).
-narrative_ontology:cs_reading_relation('14719f56-39ae-4aea-b7d9-e9df47202121', abolitionist, coexists_with).
+narrative_ontology:cs_reading_relation('14719f56-39ae-4aea-b7d9-e9df47202121', npt_article_iv_vi_pairing__nonproliferation_primary, influences).
+narrative_ontology:cs_reading_relation('14719f56-39ae-4aea-b7d9-e9df47202121', npt_article_iv_vi_pairing__abolitionist, coexists_with).
 narrative_ontology:cs_axiom('14719f56-39ae-4aea-b7d9-e9df47202121', foundational, article_vi_binding_disarmament).
 narrative_ontology:cs_axiom_status(article_vi_binding_disarmament, holdable).
 narrative_ontology:cs_axiom_grounding('14719f56-39ae-4aea-b7d9-e9df47202121', article_vi_binding_disarmament, deontological).

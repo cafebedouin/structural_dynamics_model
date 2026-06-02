@@ -136,8 +136,8 @@ narrative_ontology:cs_story_uid(article17_erasure_right__competitive_moat_readin
 narrative_ontology:cs_kernel_codification('90192699-4e7e-4aeb-bd57-6de29761ded2', formalized).
 narrative_ontology:cs_authority_grounding('90192699-4e7e-4aeb-bd57-6de29761ded2', extraction).
 narrative_ontology:cs_interpretation_layer_present('90192699-4e7e-4aeb-bd57-6de29761ded2').
-narrative_ontology:cs_reading_relation('90192699-4e7e-4aeb-bd57-6de29761ded2', privacy_fundamental_reading, coexists_with).
-narrative_ontology:cs_reading_relation('90192699-4e7e-4aeb-bd57-6de29761ded2', censorship_mechanism_reading, influences).
+narrative_ontology:cs_reading_relation('90192699-4e7e-4aeb-bd57-6de29761ded2', article17_erasure_right__privacy_fundamental_reading, coexists_with).
+narrative_ontology:cs_reading_relation('90192699-4e7e-4aeb-bd57-6de29761ded2', article17_erasure_right__censorship_mechanism_reading, influences).
 narrative_ontology:cs_axiom('90192699-4e7e-4aeb-bd57-6de29761ded2', foundational, data_controller_bears_proportional_erasure_burden).
 narrative_ontology:cs_axiom_status(data_controller_bears_proportional_erasure_burden, overridden).
 narrative_ontology:cs_axiom_grounding('90192699-4e7e-4aeb-bd57-6de29761ded2', data_controller_bears_proportional_erasure_burden, empirically_contingent).

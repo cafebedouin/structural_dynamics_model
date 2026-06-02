@@ -133,8 +133,8 @@ narrative_ontology:cs_story_uid(herem_command_dt7__durable_separation_reading, '
 narrative_ontology:cs_kernel_codification('9f239926-54e7-432c-9601-90801bd0e2fe', formalized).
 narrative_ontology:cs_authority_grounding('9f239926-54e7-432c-9601-90801bd0e2fe', lineage).
 narrative_ontology:cs_interpretation_layer_present('9f239926-54e7-432c-9601-90801bd0e2fe').
-narrative_ontology:cs_reading_relation('9f239926-54e7-432c-9601-90801bd0e2fe', contextual_supersession_reading, coexists_with).
-narrative_ontology:cs_reading_relation('9f239926-54e7-432c-9601-90801bd0e2fe', allegorical_displacement_reading, coexists_with).
+narrative_ontology:cs_reading_relation('9f239926-54e7-432c-9601-90801bd0e2fe', herem_command_dt7__contextual_supersession_reading, coexists_with).
+narrative_ontology:cs_reading_relation('9f239926-54e7-432c-9601-90801bd0e2fe', herem_command_dt7__allegorical_displacement_reading, coexists_with).
 narrative_ontology:cs_axiom('9f239926-54e7-432c-9601-90801bd0e2fe', foundational, herem_temporal_universality).
 narrative_ontology:cs_axiom_status(herem_temporal_universality, holdable).
 narrative_ontology:cs_axiom_grounding('9f239926-54e7-432c-9601-90801bd0e2fe', herem_temporal_universality, theological).

@@ -133,7 +133,7 @@ narrative_ontology:cs_kernel_codification('d5ba3e29-f2be-4838-a819-bd68cf27b88a'
 narrative_ontology:cs_authority_grounding('d5ba3e29-f2be-4838-a819-bd68cf27b88a', lineage).
 narrative_ontology:cs_interpretation_layer_present('d5ba3e29-f2be-4838-a819-bd68cf27b88a').
 narrative_ontology:cs_reading_relation('d5ba3e29-f2be-4838-a819-bd68cf27b88a', arian_subordinationism, coexists_with).
-narrative_ontology:cs_reading_relation('d5ba3e29-f2be-4838-a819-bd68cf27b88a', non_incarnational_monotheist, influences).
+narrative_ontology:cs_reading_relation('d5ba3e29-f2be-4838-a819-bd68cf27b88a', john_1_1_logos__non_incarnational_monotheist, influences).
 narrative_ontology:cs_axiom('d5ba3e29-f2be-4838-a819-bd68cf27b88a', foundational, logos_is_divine_person).
 narrative_ontology:cs_axiom_status(logos_is_divine_person, holdable).
 narrative_ontology:cs_axiom_grounding('d5ba3e29-f2be-4838-a819-bd68cf27b88a', logos_is_divine_person, deontological).

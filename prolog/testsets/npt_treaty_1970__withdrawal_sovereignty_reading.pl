@@ -131,8 +131,8 @@ narrative_ontology:cs_story_uid(npt_treaty_1970__withdrawal_sovereignty_reading,
 narrative_ontology:cs_kernel_codification('npt-sovereignty-reading-v1', formalized).
 narrative_ontology:cs_authority_grounding('npt-sovereignty-reading-v1', lineage).
 narrative_ontology:cs_interpretation_layer_present('npt-sovereignty-reading-v1').
-narrative_ontology:cs_reading_relation('npt-sovereignty-reading-v1', oligopoly_enforcement_reading, coexists_with).
-narrative_ontology:cs_reading_relation('npt-sovereignty-reading-v1', reciprocal_disarmament_reading, influences).
+narrative_ontology:cs_reading_relation('npt-sovereignty-reading-v1', npt_treaty_1970__oligopoly_enforcement_reading, coexists_with).
+narrative_ontology:cs_reading_relation('npt-sovereignty-reading-v1', npt_treaty_1970__reciprocal_disarmament_reading, influences).
 narrative_ontology:cs_axiom('npt-sovereignty-reading-v1', foundational, withdrawal_right_as_inalienable_sovereignty).
 narrative_ontology:cs_axiom_status(withdrawal_right_as_inalienable_sovereignty, holdable).
 narrative_ontology:cs_axiom_grounding('npt-sovereignty-reading-v1', withdrawal_right_as_inalienable_sovereignty, deontological).

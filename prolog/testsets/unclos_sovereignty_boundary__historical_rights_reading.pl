@@ -135,8 +135,8 @@ narrative_ontology:cs_story_uid(unclos_sovereignty_boundary__historical_rights_r
 narrative_ontology:cs_kernel_codification('6b999df7-1d6b-42ba-b428-59ba9eee0143', fixed_text).
 narrative_ontology:cs_authority_grounding('6b999df7-1d6b-42ba-b428-59ba9eee0143', extraction).
 narrative_ontology:cs_interpretation_layer_present('6b999df7-1d6b-42ba-b428-59ba9eee0143').
-narrative_ontology:cs_reading_relation('6b999df7-1d6b-42ba-b428-59ba9eee0143', strict_eez_reading, coexists_with).
-narrative_ontology:cs_reading_relation('6b999df7-1d6b-42ba-b428-59ba9eee0143', non_ratifier_enforcement_reading, influences).
+narrative_ontology:cs_reading_relation('6b999df7-1d6b-42ba-b428-59ba9eee0143', unclos_sovereignty_boundary__strict_eez_reading, coexists_with).
+narrative_ontology:cs_reading_relation('6b999df7-1d6b-42ba-b428-59ba9eee0143', unclos_sovereignty_boundary__non_ratifier_enforcement_reading, influences).
 narrative_ontology:cs_axiom('6b999df7-1d6b-42ba-b428-59ba9eee0143', foundational, historical_occupation_grounds_sovereignty).
 narrative_ontology:cs_axiom_status(historical_occupation_grounds_sovereignty, holdable).
 narrative_ontology:cs_axiom_grounding('6b999df7-1d6b-42ba-b428-59ba9eee0143', historical_occupation_grounds_sovereignty, deontological).

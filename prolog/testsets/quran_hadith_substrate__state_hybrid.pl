@@ -131,8 +131,8 @@ narrative_ontology:cs_story_uid(quran_hadith_substrate__state_hybrid, 'edb5451b-
 narrative_ontology:cs_kernel_codification('edb5451b-bba5-464d-b9fc-70d6a02f6274', formalized).
 narrative_ontology:cs_authority_grounding('edb5451b-bba5-464d-b9fc-70d6a02f6274', extraction).
 narrative_ontology:cs_interpretation_layer_present('edb5451b-bba5-464d-b9fc-70d6a02f6274').
-narrative_ontology:cs_reading_relation('edb5451b-bba5-464d-b9fc-70d6a02f6274', traditionalist_taqlid, coexists_with).
-narrative_ontology:cs_reading_relation('edb5451b-bba5-464d-b9fc-70d6a02f6274', reformist_ijtihad, influences).
+narrative_ontology:cs_reading_relation('edb5451b-bba5-464d-b9fc-70d6a02f6274', quran_hadith_substrate__traditionalist_taqlid, coexists_with).
+narrative_ontology:cs_reading_relation('edb5451b-bba5-464d-b9fc-70d6a02f6274', quran_hadith_substrate__reformist_ijtihad, influences).
 narrative_ontology:cs_axiom('edb5451b-bba5-464d-b9fc-70d6a02f6274', foundational, state_sovereignty_permits_selective_instrumentalization).
 narrative_ontology:cs_axiom_status(state_sovereignty_permits_selective_instrumentalization, holdable).
 narrative_ontology:cs_axiom_grounding('edb5451b-bba5-464d-b9fc-70d6a02f6274', state_sovereignty_permits_selective_instrumentalization, instrumental).

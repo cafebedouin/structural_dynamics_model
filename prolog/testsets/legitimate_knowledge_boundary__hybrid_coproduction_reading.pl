@@ -128,8 +128,8 @@ domain_priors:requires_active_enforcement(legitimate_knowledge_boundary__hybrid_
 narrative_ontology:cs_story_uid(legitimate_knowledge_boundary__hybrid_coproduction_reading, 'fe81d567-0131-4c6e-8fa0-fd72b30171fa').
 narrative_ontology:cs_kernel_codification('fe81d567-0131-4c6e-8fa0-fd72b30171fa', distributed).
 narrative_ontology:cs_authority_grounding('fe81d567-0131-4c6e-8fa0-fd72b30171fa', extraction).
-narrative_ontology:cs_reading_relation('fe81d567-0131-4c6e-8fa0-fd72b30171fa', credentialed_expertise_reading, coexists_with).
-narrative_ontology:cs_reading_relation('fe81d567-0131-4c6e-8fa0-fd72b30171fa', experiential_pluralism_reading, coexists_with).
+narrative_ontology:cs_reading_relation('fe81d567-0131-4c6e-8fa0-fd72b30171fa', legitimate_knowledge_boundary__credentialed_expertise_reading, coexists_with).
+narrative_ontology:cs_reading_relation('fe81d567-0131-4c6e-8fa0-fd72b30171fa', legitimate_knowledge_boundary__experiential_pluralism_reading, coexists_with).
 narrative_ontology:cs_axiom('fe81d567-0131-4c6e-8fa0-fd72b30171fa', foundational, methodological_rigor_is_necessary_not_sufficient).
 narrative_ontology:cs_axiom_status(methodological_rigor_is_necessary_not_sufficient, holdable).
 narrative_ontology:cs_axiom_grounding('fe81d567-0131-4c6e-8fa0-fd72b30171fa', methodological_rigor_is_necessary_not_sufficient, empirically_contingent).

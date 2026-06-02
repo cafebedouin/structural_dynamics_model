@@ -125,8 +125,8 @@ domain_priors:requires_active_enforcement(catastrophe_avoidance_retention__catas
 narrative_ontology:cs_story_uid(catastrophe_avoidance_retention__catastrophe_as_necessary_selector, '48ace424-04cc-42c5-9912-c03fdcdd025f').
 narrative_ontology:cs_kernel_codification('48ace424-04cc-42c5-9912-c03fdcdd025f', implicit).
 narrative_ontology:cs_authority_grounding('48ace424-04cc-42c5-9912-c03fdcdd025f', extraction).
-narrative_ontology:cs_reading_relation('48ace424-04cc-42c5-9912-c03fdcdd025f', simulation_as_proxy_catastrophe, forecloses).
-narrative_ontology:cs_reading_relation('48ace424-04cc-42c5-9912-c03fdcdd025f', hybrid_near_miss_learning, influences).
+narrative_ontology:cs_reading_relation('48ace424-04cc-42c5-9912-c03fdcdd025f', catastrophe_avoidance_retention__simulation_as_proxy_catastrophe, forecloses).
+narrative_ontology:cs_reading_relation('48ace424-04cc-42c5-9912-c03fdcdd025f', catastrophe_avoidance_retention__hybrid_near_miss_learning, influences).
 narrative_ontology:cs_axiom('48ace424-04cc-42c5-9912-c03fdcdd025f', foundational, catastrophe_selection_irreducible).
 narrative_ontology:cs_axiom_status(catastrophe_selection_irreducible, holdable).
 narrative_ontology:cs_axiom_grounding('48ace424-04cc-42c5-9912-c03fdcdd025f', catastrophe_selection_irreducible, empirically_contingent).

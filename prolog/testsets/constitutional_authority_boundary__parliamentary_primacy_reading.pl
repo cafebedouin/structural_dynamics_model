@@ -128,8 +128,8 @@ narrative_ontology:cs_story_uid(constitutional_authority_boundary__parliamentary
 narrative_ontology:cs_kernel_codification('e737510d-b2e1-44d5-a22a-252d84fa0f9f', formalized).
 narrative_ontology:cs_authority_grounding('e737510d-b2e1-44d5-a22a-252d84fa0f9f', lineage).
 narrative_ontology:cs_interpretation_layer_present('e737510d-b2e1-44d5-a22a-252d84fa0f9f').
-narrative_ontology:cs_reading_relation('e737510d-b2e1-44d5-a22a-252d84fa0f9f', judicial_supremacy_reading, forecloses).
-narrative_ontology:cs_reading_relation('e737510d-b2e1-44d5-a22a-252d84fa0f9f', coordinate_construction_reading, coexists_with).
+narrative_ontology:cs_reading_relation('e737510d-b2e1-44d5-a22a-252d84fa0f9f', constitutional_authority_boundary__judicial_supremacy_reading, forecloses).
+narrative_ontology:cs_reading_relation('e737510d-b2e1-44d5-a22a-252d84fa0f9f', constitutional_authority_boundary__coordinate_construction_reading, coexists_with).
 narrative_ontology:cs_axiom('e737510d-b2e1-44d5-a22a-252d84fa0f9f', foundational, legislature_is_primary_interpreter).
 narrative_ontology:cs_axiom_status(legislature_is_primary_interpreter, holdable).
 narrative_ontology:cs_axiom_grounding('e737510d-b2e1-44d5-a22a-252d84fa0f9f', legislature_is_primary_interpreter, deontological).

@@ -128,8 +128,8 @@ narrative_ontology:cs_story_uid(abrahamic_covenant__land_promise_constraint, '80
 narrative_ontology:cs_kernel_codification('8022bf83-9193-4771-9ed1-1c0037f80725', fixed_text).
 narrative_ontology:cs_authority_grounding('8022bf83-9193-4771-9ed1-1c0037f80725', extraction).
 narrative_ontology:cs_interpretation_layer_present('8022bf83-9193-4771-9ed1-1c0037f80725').
-narrative_ontology:cs_reading_relation('8022bf83-9193-4771-9ed1-1c0037f80725', isaac_covenant_reading, coexists_with).
-narrative_ontology:cs_reading_relation('8022bf83-9193-4771-9ed1-1c0037f80725', ishmael_covenant_reading, forecloses).
+narrative_ontology:cs_reading_relation('8022bf83-9193-4771-9ed1-1c0037f80725', abrahamic_covenant__isaac_covenant_reading, coexists_with).
+narrative_ontology:cs_reading_relation('8022bf83-9193-4771-9ed1-1c0037f80725', abrahamic_covenant__ishmael_covenant_reading, forecloses).
 narrative_ontology:cs_axiom('8022bf83-9193-4771-9ed1-1c0037f80725', foundational, perpetual_territorial_grant_to_abrahams_lineage).
 narrative_ontology:cs_axiom_status(perpetual_territorial_grant_to_abrahams_lineage, holdable).
 narrative_ontology:cs_axiom_grounding('8022bf83-9193-4771-9ed1-1c0037f80725', perpetual_territorial_grant_to_abrahams_lineage, deontological).

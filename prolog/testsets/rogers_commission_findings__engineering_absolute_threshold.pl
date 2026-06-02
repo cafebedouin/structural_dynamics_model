@@ -124,8 +124,8 @@ narrative_ontology:cs_story_uid(rogers_commission_findings__engineering_absolute
 narrative_ontology:cs_kernel_codification('e68ce21e-7b78-4a32-b62c-96926d332870', fixed_text).
 narrative_ontology:cs_authority_grounding('e68ce21e-7b78-4a32-b62c-96926d332870', extraction).
 narrative_ontology:cs_interpretation_layer_present('e68ce21e-7b78-4a32-b62c-96926d332870').
-narrative_ontology:cs_reading_relation('e68ce21e-7b78-4a32-b62c-96926d332870', management_compliance_narrative, forecloses).
-narrative_ontology:cs_reading_relation('e68ce21e-7b78-4a32-b62c-96926d332870', actuarial_risk_acceptance, forecloses).
+narrative_ontology:cs_reading_relation('e68ce21e-7b78-4a32-b62c-96926d332870', rogers_commission_findings__management_compliance_narrative, forecloses).
+narrative_ontology:cs_reading_relation('e68ce21e-7b78-4a32-b62c-96926d332870', rogers_commission_findings__actuarial_risk_acceptance, forecloses).
 narrative_ontology:cs_axiom('e68ce21e-7b78-4a32-b62c-96926d332870', foundational, engineering_redesign_mandatory_non_waivable).
 narrative_ontology:cs_axiom_status(engineering_redesign_mandatory_non_waivable, holdable).
 narrative_ontology:cs_axiom_grounding('e68ce21e-7b78-4a32-b62c-96926d332870', engineering_redesign_mandatory_non_waivable, deontological).

@@ -134,8 +134,8 @@ narrative_ontology:cs_story_uid(commerce_clause_text__substantial_effects_limite
 narrative_ontology:cs_kernel_codification('f7a888fd-4509-4b61-9e9c-005d0afed6ab', fixed_text).
 narrative_ontology:cs_authority_grounding('f7a888fd-4509-4b61-9e9c-005d0afed6ab', lineage).
 narrative_ontology:cs_interpretation_layer_present('f7a888fd-4509-4b61-9e9c-005d0afed6ab').
-narrative_ontology:cs_reading_relation('f7a888fd-4509-4b61-9e9c-005d0afed6ab', expansive_federal_reading, coexists_with).
-narrative_ontology:cs_reading_relation('f7a888fd-4509-4b61-9e9c-005d0afed6ab', originalist_narrow_reading, coexists_with).
+narrative_ontology:cs_reading_relation('f7a888fd-4509-4b61-9e9c-005d0afed6ab', commerce_clause_text__expansive_federal_reading, coexists_with).
+narrative_ontology:cs_reading_relation('f7a888fd-4509-4b61-9e9c-005d0afed6ab', commerce_clause_text__originalist_narrow_reading, coexists_with).
 narrative_ontology:cs_axiom('f7a888fd-4509-4b61-9e9c-005d0afed6ab', foundational, economic_noneconomic_distinction_coherent).
 narrative_ontology:cs_axiom_status(economic_noneconomic_distinction_coherent, holdable).
 narrative_ontology:cs_axiom_grounding('f7a888fd-4509-4b61-9e9c-005d0afed6ab', economic_noneconomic_distinction_coherent, empirically_contingent).

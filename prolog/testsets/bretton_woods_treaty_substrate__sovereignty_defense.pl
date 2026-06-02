@@ -129,8 +129,8 @@ narrative_ontology:cs_story_uid(bretton_woods_treaty_substrate__sovereignty_defe
 narrative_ontology:cs_kernel_codification('bretton-woods-sovereignty-defense-2026', formalized).
 narrative_ontology:cs_authority_grounding('bretton-woods-sovereignty-defense-2026', extraction).
 narrative_ontology:cs_interpretation_layer_present('bretton-woods-sovereignty-defense-2026').
-narrative_ontology:cs_reading_relation('bretton-woods-sovereignty-defense-2026', keynesian_embedded_liberalism, coexists_with).
-narrative_ontology:cs_reading_relation('bretton-woods-sovereignty-defense-2026', neoliberal_convertibility, influences).
+narrative_ontology:cs_reading_relation('bretton-woods-sovereignty-defense-2026', bretton_woods_treaty_substrate__keynesian_embedded_liberalism, coexists_with).
+narrative_ontology:cs_reading_relation('bretton-woods-sovereignty-defense-2026', bretton_woods_treaty_substrate__neoliberal_convertibility, influences).
 narrative_ontology:cs_axiom('bretton-woods-sovereignty-defense-2026', foundational, reserve_currency_subordination_inherent).
 narrative_ontology:cs_axiom_status(reserve_currency_subordination_inherent, holdable).
 narrative_ontology:cs_axiom_grounding('bretton-woods-sovereignty-defense-2026', reserve_currency_subordination_inherent, empirically_contingent).

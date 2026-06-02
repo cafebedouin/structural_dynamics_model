@@ -134,8 +134,8 @@ narrative_ontology:cs_story_uid(dollar_gold_convertibility__triffin_structural_r
 narrative_ontology:cs_kernel_codification('803a48cc-09f8-42dd-a374-66c968c64428', formalized).
 narrative_ontology:cs_authority_grounding('803a48cc-09f8-42dd-a374-66c968c64428', extraction).
 narrative_ontology:cs_interpretation_layer_present('803a48cc-09f8-42dd-a374-66c968c64428').
-narrative_ontology:cs_reading_relation('803a48cc-09f8-42dd-a374-66c968c64428', strict_convertibility_reading, forecloses).
-narrative_ontology:cs_reading_relation('803a48cc-09f8-42dd-a374-66c968c64428', policy_flexible_reading, coexists_with).
+narrative_ontology:cs_reading_relation('803a48cc-09f8-42dd-a374-66c968c64428', dollar_gold_convertibility__strict_convertibility_reading, forecloses).
+narrative_ontology:cs_reading_relation('803a48cc-09f8-42dd-a374-66c968c64428', dollar_gold_convertibility__policy_flexible_reading, coexists_with).
 narrative_ontology:cs_axiom('803a48cc-09f8-42dd-a374-66c968c64428', foundational, convertibility_trilemma_structural_necessity).
 narrative_ontology:cs_axiom_status(convertibility_trilemma_structural_necessity, holdable).
 narrative_ontology:cs_axiom_grounding('803a48cc-09f8-42dd-a374-66c968c64428', convertibility_trilemma_structural_necessity, empirically_contingent).

@@ -129,7 +129,7 @@ narrative_ontology:cs_kernel_codification('e8549d67-fd67-4b27-b2f7-ee7d3b3f0e37'
 narrative_ontology:cs_authority_grounding('e8549d67-fd67-4b27-b2f7-ee7d3b3f0e37', extraction).
 narrative_ontology:cs_interpretation_layer_present('e8549d67-fd67-4b27-b2f7-ee7d3b3f0e37').
 narrative_ontology:cs_reading_relation('e8549d67-fd67-4b27-b2f7-ee7d3b3f0e37', nnws_reading__article_vi_obligation, forecloses).
-narrative_ontology:cs_reading_relation('e8549d67-fd67-4b27-b2f7-ee7d3b3f0e37', withdrawal_threshold_reading, influences).
+narrative_ontology:cs_reading_relation('e8549d67-fd67-4b27-b2f7-ee7d3b3f0e37', npt_treaty_text__withdrawal_threshold_reading, influences).
 narrative_ontology:cs_axiom('e8549d67-fd67-4b27-b2f7-ee7d3b3f0e37', foundational, article_vi_aspirational_disarmament).
 narrative_ontology:cs_axiom_status(article_vi_aspirational_disarmament, holdable).
 narrative_ontology:cs_axiom_grounding('e8549d67-fd67-4b27-b2f7-ee7d3b3f0e37', article_vi_aspirational_disarmament, conventional).

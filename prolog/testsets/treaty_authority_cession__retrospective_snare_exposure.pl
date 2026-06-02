@@ -141,8 +141,8 @@ narrative_ontology:cs_story_uid(treaty_authority_cession__retrospective_snare_ex
 narrative_ontology:cs_kernel_codification('1c0e9a06-4b3f-4756-a3fd-0302c089afc8', fixed_text).
 narrative_ontology:cs_authority_grounding('1c0e9a06-4b3f-4756-a3fd-0302c089afc8', extraction).
 narrative_ontology:cs_interpretation_layer_present('1c0e9a06-4b3f-4756-a3fd-0302c089afc8').
-narrative_ontology:cs_reading_relation('1c0e9a06-4b3f-4756-a3fd-0302c089afc8', crown_cession_reading, forecloses).
-narrative_ontology:cs_reading_relation('1c0e9a06-4b3f-4756-a3fd-0302c089afc8', rangatiratanga_retention_reading, coexists_with).
+narrative_ontology:cs_reading_relation('1c0e9a06-4b3f-4756-a3fd-0302c089afc8', treaty_authority_cession__crown_cession_reading, forecloses).
+narrative_ontology:cs_reading_relation('1c0e9a06-4b3f-4756-a3fd-0302c089afc8', treaty_authority_cession__rangatiratanga_retention_reading, coexists_with).
 narrative_ontology:cs_axiom('1c0e9a06-4b3f-4756-a3fd-0302c089afc8', foundational, textual_divergence_is_structural_not_accidental).
 narrative_ontology:cs_axiom_status(textual_divergence_is_structural_not_accidental, holdable).
 narrative_ontology:cs_axiom_grounding('1c0e9a06-4b3f-4756-a3fd-0302c089afc8', textual_divergence_is_structural_not_accidental, empirically_contingent).

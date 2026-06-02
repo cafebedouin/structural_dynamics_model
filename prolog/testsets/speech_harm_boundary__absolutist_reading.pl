@@ -131,8 +131,8 @@ narrative_ontology:cs_story_uid(speech_harm_boundary__absolutist_reading, '66d72
 narrative_ontology:cs_kernel_codification('66d72b2a-64e4-4e53-a514-2f03c9be8f00', fixed_text).
 narrative_ontology:cs_authority_grounding('66d72b2a-64e4-4e53-a514-2f03c9be8f00', lineage).
 narrative_ontology:cs_interpretation_layer_present('66d72b2a-64e4-4e53-a514-2f03c9be8f00').
-narrative_ontology:cs_reading_relation('66d72b2a-64e4-4e53-a514-2f03c9be8f00', harm_balancing_reading, coexists_with).
-narrative_ontology:cs_reading_relation('66d72b2a-64e4-4e53-a514-2f03c9be8f00', dignity_reading, forecloses).
+narrative_ontology:cs_reading_relation('66d72b2a-64e4-4e53-a514-2f03c9be8f00', speech_harm_boundary__harm_balancing_reading, coexists_with).
+narrative_ontology:cs_reading_relation('66d72b2a-64e4-4e53-a514-2f03c9be8f00', speech_harm_boundary__dignity_reading, forecloses).
 narrative_ontology:cs_axiom('66d72b2a-64e4-4e53-a514-2f03c9be8f00', foundational, speech_protection_paramount_to_all_harms).
 narrative_ontology:cs_axiom_status(speech_protection_paramount_to_all_harms, holdable).
 narrative_ontology:cs_axiom_grounding('66d72b2a-64e4-4e53-a514-2f03c9be8f00', speech_protection_paramount_to_all_harms, deontological).

@@ -129,8 +129,8 @@ narrative_ontology:cs_story_uid(rogers_commission_findings__actuarial_risk_accep
 narrative_ontology:cs_kernel_codification('73f1b55c-91f9-4e14-82eb-2a5e861f99ff', formalized).
 narrative_ontology:cs_authority_grounding('73f1b55c-91f9-4e14-82eb-2a5e861f99ff', extraction).
 narrative_ontology:cs_interpretation_layer_present('73f1b55c-91f9-4e14-82eb-2a5e861f99ff').
-narrative_ontology:cs_reading_relation('73f1b55c-91f9-4e14-82eb-2a5e861f99ff', engineering_absolute_threshold, coexists_with).
-narrative_ontology:cs_reading_relation('73f1b55c-91f9-4e14-82eb-2a5e861f99ff', management_compliance_narrative, influences).
+narrative_ontology:cs_reading_relation('73f1b55c-91f9-4e14-82eb-2a5e861f99ff', rogers_commission_findings__engineering_absolute_threshold, coexists_with).
+narrative_ontology:cs_reading_relation('73f1b55c-91f9-4e14-82eb-2a5e861f99ff', rogers_commission_findings__management_compliance_narrative, influences).
 narrative_ontology:cs_axiom('73f1b55c-91f9-4e14-82eb-2a5e861f99ff', foundational, quantified_probability_enables_legitimate_authorization).
 narrative_ontology:cs_axiom_status(quantified_probability_enables_legitimate_authorization, holdable).
 narrative_ontology:cs_axiom_grounding('73f1b55c-91f9-4e14-82eb-2a5e861f99ff', quantified_probability_enables_legitimate_authorization, instrumental).

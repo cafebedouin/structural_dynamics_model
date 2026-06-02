@@ -130,8 +130,8 @@ narrative_ontology:cs_story_uid(dsm_taxonomy_kernel__biomedical_reading, '57a85d
 narrative_ontology:cs_kernel_codification('57a85d9a-67d5-4159-a5c5-4191d7d86323', formalized).
 narrative_ontology:cs_authority_grounding('57a85d9a-67d5-4159-a5c5-4191d7d86323', extraction).
 narrative_ontology:cs_interpretation_layer_present('57a85d9a-67d5-4159-a5c5-4191d7d86323').
-narrative_ontology:cs_reading_relation('57a85d9a-67d5-4159-a5c5-4191d7d86323', neurodiversity_reading, forecloses).
-narrative_ontology:cs_reading_relation('57a85d9a-67d5-4159-a5c5-4191d7d86323', critical_psychiatry_reading, coexists_with).
+narrative_ontology:cs_reading_relation('57a85d9a-67d5-4159-a5c5-4191d7d86323', dsm_taxonomy_kernel__neurodiversity_reading, forecloses).
+narrative_ontology:cs_reading_relation('57a85d9a-67d5-4159-a5c5-4191d7d86323', dsm_taxonomy_kernel__critical_psychiatry_reading, coexists_with).
 narrative_ontology:cs_axiom('57a85d9a-67d5-4159-a5c5-4191d7d86323', foundational, dsm_categories_map_objective_biological_entities).
 narrative_ontology:cs_axiom_status(dsm_categories_map_objective_biological_entities, holdable).
 narrative_ontology:cs_axiom_grounding('57a85d9a-67d5-4159-a5c5-4191d7d86323', dsm_categories_map_objective_biological_entities, empirically_contingent).

@@ -129,8 +129,8 @@ narrative_ontology:cs_story_uid(tenure_contract__demographic_reproduction_readin
 narrative_ontology:cs_kernel_codification('0e25b267-87c3-4f9e-8331-dbef94b61380', formalized).
 narrative_ontology:cs_authority_grounding('0e25b267-87c3-4f9e-8331-dbef94b61380', extraction).
 narrative_ontology:cs_interpretation_layer_present('0e25b267-87c3-4f9e-8331-dbef94b61380').
-narrative_ontology:cs_reading_relation('0e25b267-87c3-4f9e-8331-dbef94b61380', academic_freedom_reading, forecloses).
-narrative_ontology:cs_reading_relation('0e25b267-87c3-4f9e-8331-dbef94b61380', institutional_extraction_reading, coexists_with).
+narrative_ontology:cs_reading_relation('0e25b267-87c3-4f9e-8331-dbef94b61380', tenure_contract__academic_freedom_reading, forecloses).
+narrative_ontology:cs_reading_relation('0e25b267-87c3-4f9e-8331-dbef94b61380', tenure_contract__institutional_extraction_reading, coexists_with).
 narrative_ontology:cs_axiom('0e25b267-87c3-4f9e-8331-dbef94b61380', foundational, tenure_legitimacy_grounded_in_institutional_coherence).
 narrative_ontology:cs_axiom_status(tenure_legitimacy_grounded_in_institutional_coherence, holdable).
 narrative_ontology:cs_axiom_grounding('0e25b267-87c3-4f9e-8331-dbef94b61380', tenure_legitimacy_grounded_in_institutional_coherence, conventional).

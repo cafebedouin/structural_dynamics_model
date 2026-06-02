@@ -128,8 +128,8 @@ narrative_ontology:cs_story_uid(magna_carta_1215__universal_rights_reading, '8a3
 narrative_ontology:cs_kernel_codification('8a3e4d05-c113-4bd4-91d7-58adaa11df60', fixed_text).
 narrative_ontology:cs_authority_grounding('8a3e4d05-c113-4bd4-91d7-58adaa11df60', lineage).
 narrative_ontology:cs_interpretation_layer_present('8a3e4d05-c113-4bd4-91d7-58adaa11df60').
-narrative_ontology:cs_reading_relation('8a3e4d05-c113-4bd4-91d7-58adaa11df60', baronial_privilege_reading, forecloses).
-narrative_ontology:cs_reading_relation('8a3e4d05-c113-4bd4-91d7-58adaa11df60', living_document_reading, coexists_with).
+narrative_ontology:cs_reading_relation('8a3e4d05-c113-4bd4-91d7-58adaa11df60', magna_carta_1215__baronial_privilege_reading, forecloses).
+narrative_ontology:cs_reading_relation('8a3e4d05-c113-4bd4-91d7-58adaa11df60', magna_carta_1215__living_document_reading, coexists_with).
 narrative_ontology:cs_axiom('8a3e4d05-c113-4bd4-91d7-58adaa11df60', foundational, all_persons_equal_procedural_right).
 narrative_ontology:cs_axiom_status(all_persons_equal_procedural_right, holdable).
 narrative_ontology:cs_axiom_grounding('8a3e4d05-c113-4bd4-91d7-58adaa11df60', all_persons_equal_procedural_right, deontological).

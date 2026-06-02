@@ -129,7 +129,7 @@ narrative_ontology:cs_story_uid(cbdr_principle__historical_responsibility_readin
 narrative_ontology:cs_kernel_codification('96977df4-a120-4382-90b9-88da9a8e7950', formalized).
 narrative_ontology:cs_authority_grounding('96977df4-a120-4382-90b9-88da9a8e7950', extraction).
 narrative_ontology:cs_interpretation_layer_present('96977df4-a120-4382-90b9-88da9a8e7950').
-narrative_ontology:cs_reading_relation('96977df4-a120-4382-90b9-88da9a8e7950', voluntary_commitment_reading, coexists_with).
+narrative_ontology:cs_reading_relation('96977df4-a120-4382-90b9-88da9a8e7950', cbdr_principle__voluntary_commitment_reading, coexists_with).
 narrative_ontology:cs_axiom('96977df4-a120-4382-90b9-88da9a8e7950', foundational, historical_cumulative_emissions_ground_obligation).
 narrative_ontology:cs_axiom_status(historical_cumulative_emissions_ground_obligation, holdable).
 narrative_ontology:cs_axiom_grounding('96977df4-a120-4382-90b9-88da9a8e7950', historical_cumulative_emissions_ground_obligation, deontological).

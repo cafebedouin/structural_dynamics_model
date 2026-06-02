@@ -130,8 +130,8 @@ narrative_ontology:cs_story_uid(quran_hadith_substrate__traditionalist_taqlid, '
 narrative_ontology:cs_kernel_codification('afd9b7a5-9eb7-463a-abd7-9bb4751a02ce', fixed_text).
 narrative_ontology:cs_authority_grounding('afd9b7a5-9eb7-463a-abd7-9bb4751a02ce', lineage).
 narrative_ontology:cs_interpretation_layer_present('afd9b7a5-9eb7-463a-abd7-9bb4751a02ce').
-narrative_ontology:cs_reading_relation('afd9b7a5-9eb7-463a-abd7-9bb4751a02ce', reformist_ijtihad, coexists_with).
-narrative_ontology:cs_reading_relation('afd9b7a5-9eb7-463a-abd7-9bb4751a02ce', state_hybrid, influences).
+narrative_ontology:cs_reading_relation('afd9b7a5-9eb7-463a-abd7-9bb4751a02ce', quran_hadith_substrate__reformist_ijtihad, coexists_with).
+narrative_ontology:cs_reading_relation('afd9b7a5-9eb7-463a-abd7-9bb4751a02ce', quran_hadith_substrate__state_hybrid, influences).
 narrative_ontology:cs_axiom('afd9b7a5-9eb7-463a-abd7-9bb4751a02ce', foundational, ijma_creates_binding_consensus).
 narrative_ontology:cs_axiom_status(ijma_creates_binding_consensus, holdable).
 narrative_ontology:cs_axiom_grounding('afd9b7a5-9eb7-463a-abd7-9bb4751a02ce', ijma_creates_binding_consensus, conventional).

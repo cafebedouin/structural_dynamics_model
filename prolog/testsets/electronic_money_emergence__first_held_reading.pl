@@ -127,8 +127,8 @@ narrative_ontology:cs_story_uid(electronic_money_emergence__first_held_reading, 
 narrative_ontology:cs_kernel_codification('0e54cbfb-0e11-40cb-a151-ae79581dbaab', fixed_text).
 narrative_ontology:cs_authority_grounding('0e54cbfb-0e11-40cb-a151-ae79581dbaab', extraction).
 narrative_ontology:cs_interpretation_layer_present('0e54cbfb-0e11-40cb-a151-ae79581dbaab').
-narrative_ontology:cs_reading_relation('0e54cbfb-0e11-40cb-a151-ae79581dbaab', became_thinkable_reading, influences).
-narrative_ontology:cs_reading_relation('0e54cbfb-0e11-40cb-a151-ae79581dbaab', m4_m5_collapse_reading, influences).
+narrative_ontology:cs_reading_relation('0e54cbfb-0e11-40cb-a151-ae79581dbaab', electronic_money_emergence__became_thinkable_reading, influences).
+narrative_ontology:cs_reading_relation('0e54cbfb-0e11-40cb-a151-ae79581dbaab', electronic_money_emergence__m4_m5_collapse_reading, influences).
 narrative_ontology:cs_axiom('0e54cbfb-0e11-40cb-a151-ae79581dbaab', foundational, institutional_choice_model_of_emergence).
 narrative_ontology:cs_axiom_status(institutional_choice_model_of_emergence, holdable).
 narrative_ontology:cs_axiom_grounding('0e54cbfb-0e11-40cb-a151-ae79581dbaab', institutional_choice_model_of_emergence, empirically_contingent).

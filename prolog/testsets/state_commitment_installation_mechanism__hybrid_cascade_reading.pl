@@ -132,8 +132,8 @@ narrative_ontology:cs_story_uid(state_commitment_installation_mechanism__hybrid_
 narrative_ontology:cs_kernel_codification('21e30de3-ada3-4a66-83ef-a19f691233b4', distributed).
 narrative_ontology:cs_authority_grounding('21e30de3-ada3-4a66-83ef-a19f691233b4', practice).
 narrative_ontology:cs_interpretation_layer_present('21e30de3-ada3-4a66-83ef-a19f691233b4').
-narrative_ontology:cs_reading_relation('21e30de3-ada3-4a66-83ef-a19f691233b4', endogenous_climb_reading, coexists_with).
-narrative_ontology:cs_reading_relation('21e30de3-ada3-4a66-83ef-a19f691233b4', exogenous_imposition_reading, coexists_with).
+narrative_ontology:cs_reading_relation('21e30de3-ada3-4a66-83ef-a19f691233b4', state_commitment_installation_mechanism__endogenous_climb_reading, coexists_with).
+narrative_ontology:cs_reading_relation('21e30de3-ada3-4a66-83ef-a19f691233b4', state_commitment_installation_mechanism__exogenous_imposition_reading, coexists_with).
 narrative_ontology:cs_axiom('21e30de3-ada3-4a66-83ef-a19f691233b4', foundational, apex_initiation_necessary_for_stability).
 narrative_ontology:cs_axiom_status(apex_initiation_necessary_for_stability, holdable).
 narrative_ontology:cs_axiom_grounding('21e30de3-ada3-4a66-83ef-a19f691233b4', apex_initiation_necessary_for_stability, empirically_contingent).

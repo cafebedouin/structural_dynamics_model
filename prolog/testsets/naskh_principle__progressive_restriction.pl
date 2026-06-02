@@ -130,8 +130,8 @@ narrative_ontology:cs_story_uid(naskh_principle__progressive_restriction, 'a53b6
 narrative_ontology:cs_kernel_codification('a53b6718-f0e9-4bf0-b9aa-b5ad1623b6d6', fixed_text).
 narrative_ontology:cs_authority_grounding('a53b6718-f0e9-4bf0-b9aa-b5ad1623b6d6', lineage).
 narrative_ontology:cs_interpretation_layer_present('a53b6718-f0e9-4bf0-b9aa-b5ad1623b6d6').
-narrative_ontology:cs_reading_relation('a53b6718-f0e9-4bf0-b9aa-b5ad1623b6d6', classical_abrogation, coexists_with).
-narrative_ontology:cs_reading_relation('a53b6718-f0e9-4bf0-b9aa-b5ad1623b6d6', contextual_harmonization, coexists_with).
+narrative_ontology:cs_reading_relation('a53b6718-f0e9-4bf0-b9aa-b5ad1623b6d6', naskh_principle__classical_abrogation, coexists_with).
+narrative_ontology:cs_reading_relation('a53b6718-f0e9-4bf0-b9aa-b5ad1623b6d6', naskh_principle__contextual_harmonization, coexists_with).
 narrative_ontology:cs_axiom('a53b6718-f0e9-4bf0-b9aa-b5ad1623b6d6', foundational, revelation_pedagogical_trajectory).
 narrative_ontology:cs_axiom_status(revelation_pedagogical_trajectory, holdable).
 narrative_ontology:cs_axiom_grounding('a53b6718-f0e9-4bf0-b9aa-b5ad1623b6d6', revelation_pedagogical_trajectory, theological).

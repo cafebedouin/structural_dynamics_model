@@ -128,7 +128,7 @@ narrative_ontology:cs_story_uid(abrahamic_covenant__ishmael_covenant_reading, 'd
 narrative_ontology:cs_kernel_codification('de4a50d8-de93-4dc3-85b3-e8fc1eef8097', fixed_text).
 narrative_ontology:cs_authority_grounding('de4a50d8-de93-4dc3-85b3-e8fc1eef8097', lineage).
 narrative_ontology:cs_interpretation_layer_present('de4a50d8-de93-4dc3-85b3-e8fc1eef8097').
-narrative_ontology:cs_reading_relation('de4a50d8-de93-4dc3-85b3-e8fc1eef8097', isaac_covenant_reading, coexists_with).
+narrative_ontology:cs_reading_relation('de4a50d8-de93-4dc3-85b3-e8fc1eef8097', abrahamic_covenant__isaac_covenant_reading, coexists_with).
 narrative_ontology:cs_reading_relation('de4a50d8-de93-4dc3-85b3-e8fc1eef8097', christian_supersessionist_reading, influences).
 narrative_ontology:cs_axiom('de4a50d8-de93-4dc3-85b3-e8fc1eef8097', foundational, covenant_extends_through_ishmael).
 narrative_ontology:cs_axiom_status(covenant_extends_through_ishmael, holdable).

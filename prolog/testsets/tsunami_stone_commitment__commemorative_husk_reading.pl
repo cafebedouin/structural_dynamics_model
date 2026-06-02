@@ -133,7 +133,7 @@ narrative_ontology:cs_story_uid(tsunami_stone_commitment__commemorative_husk_rea
 narrative_ontology:cs_kernel_codification('04ec1557-c2c1-4f8c-8ea0-446882668111', fixed_text).
 narrative_ontology:cs_authority_grounding('04ec1557-c2c1-4f8c-8ea0-446882668111', lineage).
 narrative_ontology:cs_interpretation_layer_present('04ec1557-c2c1-4f8c-8ea0-446882668111').
-narrative_ontology:cs_reading_relation('04ec1557-c2c1-4f8c-8ea0-446882668111', behavioral_competence_reading, coexists_with).
+narrative_ontology:cs_reading_relation('04ec1557-c2c1-4f8c-8ea0-446882668111', tsunami_stone_commitment__behavioral_competence_reading, coexists_with).
 narrative_ontology:cs_axiom('04ec1557-c2c1-4f8c-8ea0-446882668111', foundational, stone_markers_commemorate_rather_than_protect).
 narrative_ontology:cs_axiom_status(stone_markers_commemorate_rather_than_protect, holdable).
 narrative_ontology:cs_axiom_grounding('04ec1557-c2c1-4f8c-8ea0-446882668111', stone_markers_commemorate_rather_than_protect, empirically_contingent).

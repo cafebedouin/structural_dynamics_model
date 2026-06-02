@@ -133,7 +133,7 @@ narrative_ontology:cs_kernel_codification('ae5ac2bd-58e8-40da-8021-7142143153b5'
 narrative_ontology:cs_authority_grounding('ae5ac2bd-58e8-40da-8021-7142143153b5', lineage).
 narrative_ontology:cs_interpretation_layer_present('ae5ac2bd-58e8-40da-8021-7142143153b5').
 narrative_ontology:cs_reading_relation('ae5ac2bd-58e8-40da-8021-7142143153b5', individual_right_reading, coexists_with).
-narrative_ontology:cs_reading_relation('ae5ac2bd-58e8-40da-8021-7142143153b5', militia_conditioned_reading, forecloses).
+narrative_ontology:cs_reading_relation('ae5ac2bd-58e8-40da-8021-7142143153b5', second_amendment_boundary__militia_conditioned_reading, forecloses).
 narrative_ontology:cs_axiom('ae5ac2bd-58e8-40da-8021-7142143153b5', foundational, individual_armed_capacity_deters_tyranny).
 narrative_ontology:cs_axiom_status(individual_armed_capacity_deters_tyranny, holdable).
 narrative_ontology:cs_axiom_grounding('ae5ac2bd-58e8-40da-8021-7142143153b5', individual_armed_capacity_deters_tyranny, empirically_contingent).
