@@ -20,6 +20,43 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-02 — Reading-axis structural obstruction built + cs_reading_relation name-form repair
+
+**Built (OQ-54, "establish").** `cs_kernel_obstruction/4` + `cs_kernel_obstruction_status/2` +
+`cs_kernel_obstruction_report/0` in `cs_kernel_registry.pl` — the committer-axis analog of the observer
+H¹ (`grothendieck_cohomology.pl`), over the **reading** cover. Counts foreclosing reading-pairs
+(`real_closure`) vs coexisting (`licensed_plurality`) vs none (`untyped` — **fail-closed on absence**,
+NOT silently glued). **Observer-blind by construction** (reads only `cs_reading_relation`, never
+χ/`live_index`/`classify_at_time`), so Theorem-7 gradient-orthogonality holds and `live_index` / the
+none-compliant cross-tab are NOT prerequisites. Distinct axis from OQ-51's observer H¹/W1.
+
+**Data defect found + repaired (the load-bearing part).** The independent must-flag oracle (NOT via the
+probe) exposed that `cs_reading_relation` targets are authored in inconsistent name forms — **short
+targets** (`ishmael_covenant_reading`) that don't match the registered **full** reading name
+(`abrahamic_covenant__ishmael_covenant_reading`). Exact-match consumers — this probe **and pre-existing
+`cs_corpus_analysis.pl:131-149` and `json_report.pl:1432`** — silently under-counted closure/plurality.
+Partition (hard counts): forecloses exact 117 / fixable 16 / dangling 13; coexists 528/48/59; influences
+212/22/27. **86 name-form edges normalized in-place** across **47 testset files** (short → `<kernel>__<short>`;
+script asserted every edit matched, 0 zero-match). **Predicted-delta positive control passed exactly:**
+`real_closure` 84→**94**, the 10 named movers (`abrahamic_covenant`, `magna_carta_1215`,
+`rogers_commission_findings`, `second_amendment_boundary`, …) all in; dangling untouched (13/59/27).
+**Decision discipline (do not relax):** option 2 (probe-only robust) and option 3 (read-time resolver)
+were **rejected** — three consumers must not drift to three counts, and a resolver is self-blinding (it
+would hide whether the generator fix worked; exact-match on cleaned data is self-witnessing).
+
+**Flow fix (generator).** `generate_constraint_pl.py:482` now canonicalizes the emitted target to
+`<kernel_id>__<short>` (a hard transform, not a prompt request) so the name-form class cannot recur. It
+does NOT catch the **dangling** class (target naming an absent reading) — that needs the kernel manifest
+and is a *content* decision → **OQ-58** (generate / delete / repair-typo, the user's to rule). Full
+referential integrity would be a kernel-level validation in `agent/generate_kernel_corpus.py`.
+
+**Tripwire:** `cs_reading_relation` targets are now canonical full names in the live corpus, and consumers
+stay **exact-match** (self-witnessing). Do NOT add a read-time short→full resolver — it re-hides the
+defect. New dirty edges should fail loudly (under-count), then be repaired at source. Pipeline regenerated
+green (manifest after repair, 49.6s, all steps ok).
+
+---
+
 ## 2026-06-02 — Coupling liveness profile wired into per-constraint JSON (seat structure, not just verdict)
 
 **What & why.** The Boltzmann coupling test computed scope-violations and power-violations

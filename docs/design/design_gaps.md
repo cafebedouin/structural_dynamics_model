@@ -253,8 +253,13 @@ existing H¹/W1 obstruction (cf. OQ-51) and to seat-orthogonality / detection-in
 obstruction may be gradient-orthogonal to the observer one and must not be reduced to it; (3) a consumer.
 Open question + operationalization: **OQ-54**.
 
-**Status:** Deferred. The observer-axis test is correct for its axis; the reading-axis test is genuinely
-absent, not relocated.
+**Status:** CLOSED (2026-06-02) — built as `cs_kernel_obstruction/4` in `cs_kernel_registry.pl`,
+observer-blind (reads only `cs_reading_relation`), orthogonality pre-discharged by Theorem 7. It is a
+**distinct axis** from OQ-51's observer H¹/W1, not the same object. The build surfaced and repaired a
+data defect (86 name-form-mismatched edges under-counting closure across this probe, `cs_corpus_analysis`,
+and `json_report`), with a generator canonicalization (`generate_constraint_pl.py`) preventing recurrence;
+dangling residue is OQ-58. Remaining for full wiring (a JSON field + the OQ-55 router) tracked under
+**OQ-54** / **GAP-06**. Provenance + witnesses: KNOWN_STATE 2026-06-02, OQ-54.
 
 ---
 

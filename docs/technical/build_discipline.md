@@ -502,6 +502,21 @@ worthless. This applies to reasoning about the code, not only to shell commands:
 asserting "this is stated only once" is running an unfalsified diagnostic on the document, and "I
 didn't find it" is not "it is not there" until the finder is shown to find.
 
+**The oracle must differ from the probe in the exact dimension the probe could be wrong on, or a
+set-for-set "match" is vacuous.** A positive-control oracle that shares the probe's matching logic
+proves *agreement*, not *discrimination*: the two agree because they make the same mistake, not
+because the probe is right. The independent derivation has to vary precisely where the probe is
+fallible. Instance (2026-06-02, reading-axis obstruction OQ-54): the `cs_kernel_obstruction` probe
+classified a kernel `real_closure` by exact-matching a `forecloses` target against the kernel's
+reading names; the "independent" oracle did the *same exact-match*, and they matched set-for-set at
+84 — which proved nothing, because the shared flaw was **name resolution** (targets authored short,
+`ishmael_covenant_reading`, vs registered full, `abrahamic_covenant__ishmael_covenant_reading`). A
+genuinely independent oracle that *normalized* the name form found 10 more must-flag kernels the
+probe was silently missing. Only after the name-form dimension was repaired (so `fixable-remaining =
+0` — no residue in the flaw dimension) did the set-for-set match (94 = 94) carry information. The
+discipline: before trusting a set-for-set match, name the dimension the probe could be wrong on and
+confirm the oracle is derived *without* that dimension's logic — and that the residue in it is zero.
+
 **Two catches from the OQ-33 unknown-ruling arc (2026-05-31) — the method validating itself.** The
 positive control fired twice in one session, the two catches together showing the rule guards *both*
 directions of the absence-as-value sin and that it composes on itself:

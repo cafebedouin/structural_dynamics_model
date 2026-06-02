@@ -478,10 +478,21 @@ def generate_pl(data):
         emit(f"narrative_ontology:cs_authority_grounding({uid_atom}, {cs['authority_grounding']}).")
         if cs.get("interpretation_layer_present"):
             emit(f"narrative_ontology:cs_interpretation_layer_present({uid_atom}).")
-        # Typed reading-sibling edges: source=UID (known), target=name atom (stateless generation)
+        # Typed reading-sibling edges: source=UID (known), target=name atom (stateless generation).
+        # Referential-integrity flow fix (2026-06-02): canonicalize the target to the
+        # kernel-qualified reading name <kernel_id>__<short>. The model authors siblings in
+        # inconsistent forms (short / mistyped); exact-match consumers (cs_kernel_obstruction,
+        # cs_corpus_analysis, json_report) compare against the registered FULL reading name, so a
+        # short target silently under-counts closure/plurality. This hard transform (not a prompt
+        # request the model can violate) keeps the emitted target matchable. It fixes only the
+        # name-form class; a target naming an absent reading (dangling) cannot be detected here
+        # without the kernel manifest — see ISSUES.md OQ-58. See KNOWN_STATE 2026-06-02.
+        kernel_id = cid.split("__", 1)[0]
         for rr in cs.get("reading_relations") or []:
             sibling = rr["sibling_id"]
             rel = rr["relation"]
+            if "__" not in sibling:          # short form → kernel-qualify; full form left as-authored
+                sibling = f"{kernel_id}__{sibling}"
             emit(f"narrative_ontology:cs_reading_relation({uid_atom}, {sibling}, {rel}).")
         # Foundational axioms (UID-keyed); cs_axiom_status stays axiom-level (not UID-keyed)
         emitted_statuses = set()

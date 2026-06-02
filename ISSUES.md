@@ -2287,14 +2287,29 @@ readings and the transpose query becomes available — but it is gated on a read
 
 **Ω-type:** Ω_C (design — define the reading-axis site and obstruction).
 
-**Status:** open
-**Origin:** Kernel/reading review, 2026-06-02.
-**Files:** `boltzmann_compliance.pl` (observer-axis coupling), `w1_sheaf_join.py`, `sheaf_status`/`h1_band`.
+**Status:** mitigated — structural obstruction built (`cs_kernel_obstruction/4`); residue is OQ-58.
+**Origin:** Kernel/reading review, 2026-06-02. Build + decision recorded same day.
+**Files:** `cs_kernel_registry.pl` (`cs_kernel_obstruction/4`, `cs_kernel_obstruction_status/2`,
+`cs_kernel_obstruction_report/0`); KNOWN_STATE 2026-06-02.
 
-**Specific question:** The only cross-index test, `boltzmann_compliant/2`, factorizes classification across
-Power×Scope — the **observer** axis only. What is the analogous test on the **reading** axis ("do a
-kernel's readings glue into a global section, or are they irreducibly plural?"), and how should it relate
-to the existing H¹/W1 obstruction (OQ-51) and to seat-orthogonality?
+**Resolution (2026-06-02):** Decided **establish** (build), not operationalize, with two of three legs
+already done. (1) **Orthogonality is discharged** by Theorem 7 / detection-independence
+(`test_forecloses_fpn_injection.pl` branch E, gradient-orthogonality Δ=0) — the obstruction is built
+observer-blind (reads only `cs_reading_relation`, never χ/`live_index`), so the discharge holds and the
+none/compliant cross-tab and `live_index` are NOT prerequisites. (2) **Inputs existed** (the committer
+edges). (3) **The obstruction was absent** and is now built: a committer-axis analog of the observer H¹
+over the reading cover, counting foreclosing reading-pairs (`real_closure`) vs coexisting
+(`licensed_plurality`) vs none (`untyped`, fail-closed on absence). **The open sub-question is answered:
+distinct axis from OQ-51's observer H¹/W1, not the same object.** Build surfaced and fixed a data defect
+(86 name-form-mismatched edges under-counting closure across this probe + `cs_corpus_analysis` +
+`json_report`); repaired in-place with a predicted-delta control (`real_closure` 84→94, 10 named kernels);
+generator canonicalization added (`generate_constraint_pl.py`); dangling residue → **OQ-58**. Remaining
+for full closure: per-kernel JSON field + the **OQ-55** trifurcation router (the real consumer).
+
+**Original question (for provenance):** The only cross-index test, `boltzmann_compliant/2`, factorizes
+classification across Power×Scope — the **observer** axis only. What is the analogous test on the
+**reading** axis ("do a kernel's readings glue into a global section, or are they irreducibly plural?"),
+and how should it relate to the existing H¹/W1 obstruction (OQ-51) and to seat-orthogonality?
 
 **Evidence so far:** Corrected framing (Seat Theorem §4 Coupling Theorem): an index-invariant verdict is
 seat-free/contentless, so Boltzmann invariance is a *partial test for Mountain-ness* and non-compliance =
@@ -2392,6 +2407,46 @@ generation-template check, or (b) guard the call in `drift_events.pl:230` to tre
 predicate is legitimately optional. Diagnostic first: count how many corpus constraints lack the fact
 (`\+ narrative_ontology:requires_active_enforcement(C)`); a count >1 favors the guard, ==1 favors the
 data repair.
+
+---
+
+## OQ-58 — Dangling cs_reading_relation targets: edges naming a reading that does not exist
+
+**Ω-type:** Ω_P (content decision — generate / delete / flag, no mechanical default; the user's to rule).
+
+**Status:** open
+**Origin:** Reading-axis obstruction build (OQ-54), 2026-06-02. Surfaced by the independent
+must-flag oracle when partitioning non-canonical `cs_reading_relation` targets.
+**Files:** authored testset `.pl` files; emitter `python/generate_constraint_pl.py:482`.
+
+**Specific question:** After the name-form normalization (short → `<kernel>__<short>`) repaired 86
+edges, **99 `cs_reading_relation` edges remain dangling** — their target resolves to no reading in the
+kernel even normalized: forecloses **13**, coexists_with **59**, influences **27**. Two sub-classes:
+(a) a full-form target `<kernel>__<name>` whose `<name>` reading was never generated (e.g.
+`all_men_created_equal__originalist_reading` — the kernel has the textualist reading but not the
+originalist one); (b) a mistyped target (e.g. `magna_carta_universal_rights_reading` missing the
+`_1215`, `john_1_1_logos_orthodox_christological` with a single `_`). What should happen to each?
+
+**Why it is NOT folded into the name-form sweep:** "fix" here is a *content* decision with no default —
+authoring the missing reading is invention, deleting the edge destroys authored commitment structure,
+flagging the kernel defers. The normalization pass deliberately left these untouched (witnessed: dangling
+counts unchanged 13/59/27 before and after the 86-edge repair) so the sweep did not silently rule a
+question that is the user's.
+
+**Three options per dangling edge (to be ruled):**
+1. **Generate the missing reading** — completes the kernel; most work; correct where the foreclosed
+   sibling is a real position the corpus should hold.
+2. **Delete the edge** — removes a commitment to a non-existent referent; correct where the edge is
+   spurious/mistyped and no such reading is intended.
+3. **Repair the typo** — for sub-class (b), map the mistyped target to the intended existing reading
+   (a per-edge judgement, not a mechanical normalization — the typos are not uniform).
+
+**What resolution changes:** Closes the residue the OQ-54 obstruction currently reports as `untyped`/
+absent-referent. Until ruled, the obstruction is correct-on-resolvable-edges and fail-closed on these
+(does not invent a gluing status for an absent referent). The flow fix
+(`generate_constraint_pl.py` canonicalization) prevents the *name-form* class recurring but cannot
+catch the *dangling* class without the kernel manifest — full referential integrity (target ∈ kernel's
+declared readings) would need a kernel-level validation pass in `agent/generate_kernel_corpus.py`.
 
 ---
 
