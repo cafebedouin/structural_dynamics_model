@@ -2482,6 +2482,48 @@ absent-referent residue.
 
 ---
 
+## OQ-59 — Within-kernel reading duplication corrupts the obstruction cover (westphalian instance)
+
+**Ω-type:** Ω_E (empirical — detectable by scanning reading-name stems per kernel; a content/merge
+decision once sized).
+
+**Status:** open
+**Origin:** OQ-58 narrative-disposition pass, Bucket C, 2026-06-02.
+**Files:** testset `.pl` (`cs_kernel_id`); `cs_kernel_registry:cs_kernel_obstruction/4`.
+
+**Specific question:** `westphalian_sovereignty` holds readings `[gradated_reading, graduated_sovereignty,
+absolute_sovereignty, r2p_reading, conditional_sovereignty]`. Several look like one position under
+multiple names: `gradated_reading` ≈ `graduated_sovereignty`; `absolute_sovereignty` ≈ the dangling
+Bucket-C target `absolutist_reading`; `r2p_reading` ≈ `conditional_sovereignty` (R2P *is* conditional
+sovereignty). How many **distinct** positions does this kernel actually hold?
+
+**Why this is upstream of the edge disposition (and bigger than its edge):** the obstruction counts
+reading-**pairs** over the cover from `cs_readings_for_kernel/2` and has **no notion of semantic
+identity** — duplicate-named readings inflate the cover, and two names for one position can *manufacture*
+a foreclosure pair (each duplicate foreclosing the other's foreclosed sibling) or *mask* one. So the
+`real_closure`/`licensed_plurality` verdict for a duplicate-suspect kernel is provisional. The
+westphalian `absolutist_reading` Bucket-C edge **cannot be ruled** (alias-repair to `absolute_sovereignty`
+vs distinct) until the kernel's true reading count is known. This is a **different failure mode from
+OQ-58**: OQ-58 is *target names a reading that does not exist*; OQ-59 is *the kernel may hold the same
+reading twice*.
+
+**What resolution changes:** (a) if westphalian has duplicates, merge them (a source-narrative content
+decision, like OQ-58 — human seat, no auto-merge) and the obstruction recomputes; (b) generalize — a
+cheap Ω_E scan of all kernels for near-duplicate reading stems sizes the problem corpus-wide. Until then,
+duplicate-suspect kernels' obstruction counts are provisional.
+
+**Progress on OQ-58 (this pass):** of the 13 forecloses-dangling edges, **2 genuine one-character
+delimiter typos repaired** (`john_1_1_logos` `_orthodox` → `__orthodox`; `paris_article_4_ndc`
+`_supranational` → `__supranational`) — witnessed `real_closure` 94→95, quarantine 99→97, diff shows only
+the target arg changed. **Held** (moved to the source-narrative queue, NOT auto-repaired): `fair_use`
+(truncated-kernel + stem match, *not* a delimiter typo — same class as `magna_carta`/`genesis`, so a
+stem-judgment needing a seat), and all of Bucket B (generate-vs-delete needs the source opened).
+`cross_kernel = 0` confirmed a *finding* (positive control: an injected cross-kernel target flags). Also
+noted: the same delimiter typo appears in `affects_constraint/2` (logos:340, paris:345) — a separate
+network-layer referential issue, NOT touched here.
+
+---
+
 *Last updated: 2026-06-02. Add new items with sequential OQ-NN labels. Mark
 resolved items with **Status: resolved** and a resolution note rather than
 deleting — provenance matters.*
