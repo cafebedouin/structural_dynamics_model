@@ -123,7 +123,7 @@ narrative_ontology:cs_story_uid(magna_carta_1215__baronial_privilege_reading, 'a
 narrative_ontology:cs_kernel_codification('ab8cb747-8a46-4ecd-b84a-bb291e36935a', fixed_text).
 narrative_ontology:cs_authority_grounding('ab8cb747-8a46-4ecd-b84a-bb291e36935a', extraction).
 narrative_ontology:cs_interpretation_layer_present('ab8cb747-8a46-4ecd-b84a-bb291e36935a').
-narrative_ontology:cs_reading_relation('ab8cb747-8a46-4ecd-b84a-bb291e36935a', magna_carta_universal_rights_reading, forecloses).
+narrative_ontology:cs_reading_relation('ab8cb747-8a46-4ecd-b84a-bb291e36935a', magna_carta_1215__universal_rights_reading, forecloses).
 narrative_ontology:cs_reading_relation('ab8cb747-8a46-4ecd-b84a-bb291e36935a', magna_carta_living_document_reading, coexists_with).
 narrative_ontology:cs_axiom('ab8cb747-8a46-4ecd-b84a-bb291e36935a', foundational, free_men_equals_landowning_barons).
 narrative_ontology:cs_axiom_status(free_men_equals_landowning_barons, holdable).

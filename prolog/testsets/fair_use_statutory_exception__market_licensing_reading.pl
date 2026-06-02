@@ -130,7 +130,7 @@ narrative_ontology:cs_story_uid(fair_use_statutory_exception__market_licensing_r
 narrative_ontology:cs_kernel_codification('73f8507c-c3d3-462c-9322-4bbd71693b0f', formalized).
 narrative_ontology:cs_authority_grounding('73f8507c-c3d3-462c-9322-4bbd71693b0f', extraction).
 narrative_ontology:cs_interpretation_layer_present('73f8507c-c3d3-462c-9322-4bbd71693b0f').
-narrative_ontology:cs_reading_relation('73f8507c-c3d3-462c-9322-4bbd71693b0f', fair_use_transformative_right_reading, forecloses).
+narrative_ontology:cs_reading_relation('73f8507c-c3d3-462c-9322-4bbd71693b0f', fair_use_statutory_exception__transformative_right_reading, forecloses).
 narrative_ontology:cs_reading_relation('73f8507c-c3d3-462c-9322-4bbd71693b0f', fair_use_narrow_defense_reading, influences).
 narrative_ontology:cs_axiom('73f8507c-c3d3-462c-9322-4bbd71693b0f', foundational, fair_use_exists_only_where_no_licensing_market).
 narrative_ontology:cs_axiom_status(fair_use_exists_only_where_no_licensing_market, holdable).

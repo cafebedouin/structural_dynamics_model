@@ -136,7 +136,7 @@ narrative_ontology:cs_story_uid(genesis_creation_narrative__theistic_evolutionar
 narrative_ontology:cs_kernel_codification('3e5f0d27-c4f6-451e-a183-12874cc39b7c', fixed_text).
 narrative_ontology:cs_authority_grounding('3e5f0d27-c4f6-451e-a183-12874cc39b7c', lineage).
 narrative_ontology:cs_interpretation_layer_present('3e5f0d27-c4f6-451e-a183-12874cc39b7c').
-narrative_ontology:cs_reading_relation('3e5f0d27-c4f6-451e-a183-12874cc39b7c', literal_young_earth_creation, forecloses).
+narrative_ontology:cs_reading_relation('3e5f0d27-c4f6-451e-a183-12874cc39b7c', genesis_creation_narrative__literal_young_earth, forecloses).
 narrative_ontology:cs_reading_relation('3e5f0d27-c4f6-451e-a183-12874cc39b7c', allegorical_ancient_near_east_reading, coexists_with).
 narrative_ontology:cs_axiom('3e5f0d27-c4f6-451e-a183-12874cc39b7c', foundational, evolution_theologically_permissible).
 narrative_ontology:cs_axiom_status(evolution_theologically_permissible, holdable).
