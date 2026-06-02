@@ -4,24 +4,24 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "kbdrv"
+    "measurement_id_prefix": "skd",
+    "story_uid": "6048c077-55eb-412e-a5a3-ff6fe02d3edd"
   },
   "base_properties": {
-    "extractiveness": 0.32,
-    "suppression": 0.38,
-    "theater_ratio": 0.44,
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
     "claimed_type": "tangled_rope",
     "human_readable": "Software Keyboard Driver Standardization and Vendor Lock-in",
     "topic_domain": "technology/software_infrastructure",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "hardware_vendors",
-      "operating_system_manufacturers"
+      "operating_system_manufacturers",
+      "premium_keyboard_vendors"
     ],
     "victims": [
-      "independent_developers",
-      "end_users_with_accessibility_needs",
-      "keyboard_hardware_makers"
+      "independent_keyboard_makers",
+      "accessibility_dependent_users"
     ]
   },
   "perspectives": [
@@ -31,8 +31,8 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The End User with Accessibility Needs",
-      "comment": "PERSPECTIVE 1: END USER WITH ACCESSIBILITY NEEDS (SNARE) \u2014 Trapped by vendor-specific keyboard driver dependencies. Users requiring specialized input methods (eye tracking, speech-to-text integration, adaptive switches) cannot switch OS or keyboard manufacturers without losing critical functionality. No exit options exist within biographical timeframe. Extraction is maximal: accessibility accommodations are held hostage to driver standardization failures."
+      "label": "The Accessibility-Dependent User",
+      "comment": "PERSPECTIVE 1: ACCESSIBILITY-DEPENDENT USER (SNARE) — Users with motor disabilities, RSI conditions, or specialized input needs are trapped by driver availability. Cannot exit the constraint without abandoning accessibility features. Bear full cost of non-standard keyboard support. No alternative platforms reliably support their specific needs across multiple operating systems."
     },
     {
       "classification_type": "tangled_rope",
@@ -40,8 +40,8 @@
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Independent Keyboard Hardware Maker",
-      "comment": "PERSPECTIVE 2: INDEPENDENT KEYBOARD HARDWARE MAKER (TANGLED ROPE) \u2014 Faces high costs to support multiple OS platforms (Windows, macOS, Linux) with separate driver codebases. Benefits from standardized driver APIs (genuine coordination function) while simultaneously extracted from through vendor lock-in incentives that pressure consolidation. Can theoretically exit by focusing on single platform, but at severe market cost. Experiences both extraction and coordination."
+      "label": "The Independent Keyboard Maker",
+      "comment": "PERSPECTIVE 2: INDEPENDENT KEYBOARD MAKER (TANGLED ROPE) — Must develop and maintain drivers for multiple OS platforms (Windows, macOS, Linux variants). High development costs but also benefits from ecosystem (OS driver frameworks exist, can leverage open-source driver development). Constrained by certification requirements and testing burdens. Cannot easily exit to single-platform focus without losing market viability."
     },
     {
       "classification_type": "rope",
@@ -50,16 +50,25 @@
       "exit_options": "arbitrage",
       "spatial_scope": "global",
       "label": "The Operating System Manufacturer",
-      "comment": "PERSPECTIVE 3: OPERATING SYSTEM MANUFACTURER (ROPE) \u2014 Benefits from vendor lock-in through proprietary driver frameworks. However, experiences the constraint as genuine coordination: standardizing keyboard input APIs reduces support burden and expands hardware ecosystem. Exit option (arbitrage) is available through proprietary extension of driver API, but coordination incentives are real. Classification as Rope reflects that extraction mechanisms exist but are balanced by coordination benefits."
+      "comment": "PERSPECTIVE 3: OPERATING SYSTEM MANUFACTURER (ROPE) — Controls the driver certification and distribution pipeline. Experiences the constraint as coordination: managing a stable driver ecosystem enables third-party innovation. Maintains technical standards (HID protocol, kernel interfaces) that benefit the entire hardware ecosystem. Has arbitrage options — can shift driver architecture, deprecate old standards, or mandate new certification levels without losing platform control."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Premium Hardware Vendor",
+      "comment": "PERSPECTIVE 4: PREMIUM HARDWARE VENDOR (ROPE) — Uses proprietary drivers as differentiation mechanism. Can afford multi-platform driver development and certification. Benefits from OS standardization (reduces their own development cost) while leveraging proprietary extensions for market positioning. Has high arbitrage capacity — can shift to in-OS integration, create walled-garden ecosystems, or establish direct OS partnerships."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
-      "exit_options": "mobile",
+      "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The Open-Source Standards Coalition",
-      "comment": "PERSPECTIVE 4: OPEN-SOURCE STANDARDS COALITION (SCAFFOLD) \u2014 Organizations (USB Implementers Forum, HID standardization bodies, Linux kernel community) are building interoperable keyboard driver standards with genuine sunset architecture. HID (Human Interface Device) protocol and modern wayland/wayland input protocols represent progress toward manufacturer-neutral standardization. High mobility for coalition members; low effective extraction because sunset clause is built in (standardization eventually removes the bottleneck). Theater remains moderate because standardization process itself involves performative governance."
+      "label": "The Open Hardware Coalition",
+      "comment": "PERSPECTIVE 5: OPEN HARDWARE COALITION (SCAFFOLD) — Organized actors (USB-IF standards body, Linux Foundation, accessibility advocacy groups) are developing standardized driver frameworks and open-source driver repositories. These represent a sunset mechanism: as standardized interfaces (USB Device Class definitions, HID extensions, kernel-space abstractions) mature, the need for vendor-specific proprietary drivers decreases. Sunset timeline: 15-20 years for full interoperability standards to replace proprietary driver stacks."
     },
     {
       "classification_type": "piton",
@@ -67,8 +76,8 @@
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Legacy Keyboard Driver Ecosystem",
-      "comment": "PERSPECTIVE 5: LEGACY KEYBOARD DRIVER ECOSYSTEM (PITON) \u2014 Proprietary keyboard drivers bundled with hardware represent degraded institutional structure. Original function (enabling hardware-specific features like macro keys, backlighting) persists as theater: most users do not access proprietary features, yet drivers remain vendor-locked. Theater ratio is elevated (0.44) reflecting that much driver complexity is now unnecessary. Maintained through inertia rather than function."
+      "label": "The Legacy Driver Certification System",
+      "comment": "PERSPECTIVE 6: LEGACY DRIVER CERTIFICATION SYSTEM (PITON) — The Windows Hardware Certification Program (WHCP) and macOS notarization process were designed to ensure driver quality and system stability. Today these systems are largely performative — they validate signatures and basic functionality but cannot predict real-world compatibility issues or catch subtle extraction mechanisms. The certification ritual persists through institutional inertia despite reduced functional value. Theater ratio reflects that vendor lock-in is maintained as much through complexity and certification burden as through technical necessity."
     },
     {
       "classification_type": "mountain",
@@ -77,98 +86,145 @@
       "exit_options": "analytical",
       "spatial_scope": "universal",
       "label": "The Analytical Observer (Natural Law View)",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, keyboard driver standardization might appear immutable due to hardware diversity: different keyboard architectures, input protocols, and OS-level expectations create irreducible complexity. However, this perspective generates a false summit. The structural data shows vendor lock-in is contingent institutional policy, not natural law. HID demonstrates that cross-platform driver unification is technically feasible."
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a universal perspective, hardware-OS coupling is inherent to computing: devices must interface with the OS kernel, and kernel-level access requires deep platform integration. Standardization always lags behind hardware innovation, creating a permanent coordination gap. This perspective risks naturalizing what is actually a policy choice: the depth of kernel coupling, the certification burden, and the lock-in mechanisms are contingent institutional arrangements, not immutable laws."
     }
   ],
   "omegas": [
     {
-      "id": "proprietary_feature_necessity",
-      "question": "How many keyboard features actually require proprietary drivers versus how many could be standardized through HID or generic protocols?",
-      "resolution_mechanism": "Technical audit of proprietary driver feature sets; classification of essential vs cosmetic functionality; measurement of user adoption of proprietary-only features",
-      "impact": "If cosmetic features dominate proprietary drivers: the constraint is primarily extractive (suppression ratio exceeds genuine hardware coordination needs). If essential features require proprietary drivers: extraction is justified by legitimate platform differentiation.",
+      "id": "standardization_pace_threshold",
+      "question": "What pace of standardization adoption distinguishes legitimate coordination lag from intentional lock-in maintenance?",
+      "resolution_mechanism": "Historical analysis of time from device innovation to standard interface support; correlation between OS market concentration and standardization speed; comparison of intentional standards resistance vs genuine technical constraints in vendor statements",
+      "impact": "If threshold < 18 months: most lock-in is legitimate coordination overhead (Rope from more perspectives). If threshold > 3 years and shows vendor resistance patterns: lock-in is partly intentional extraction (Snare/Tangled Rope confirmed).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Standardization pace as indicator of lock-in intentionality"
+    },
+    {
+      "id": "kernel_integration_necessity",
+      "question": "How much of driver functionality requires kernel-level privileged access, and how much could be implemented in user-space abstractions with equal functionality?",
+      "resolution_mechanism": "Technical analysis of driver codebases; benchmarking of kernel-vs-userspace performance for input handling; comparison with successful user-space frameworks (libusb, user-space HID stacks) demonstrating feature parity",
+      "impact": "If >70% of functionality could be user-space: kernel coupling is policy choice, not technical necessity — enables fragmentation and lock-in (Tangled Rope confirmed). If <30% could be user-space: kernel coupling is genuine technical requirement (Mountain from more perspectives).",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether proprietary keyboard features justify standardization barriers"
+      "description": "Proportion of driver functionality requiring kernel-level access"
     },
     {
-      "id": "standardization_network_effect_threshold",
-      "question": "What adoption threshold of open driver standards (HID, wayland input protocols) triggers platform manufacturer commitment to standardization?",
-      "resolution_mechanism": "Market analysis of driver adoption; manufacturer statements of standardization roadmaps; correlation between user demand for standardized drivers and platform roadmap changes",
-      "impact": "If threshold is low (< 20% adoption): scaffold sunset is likely within generational timeframe. If threshold is high (> 50% adoption): sunset is delayed and extraction persists longer.",
+      "id": "accessibility_driver_availability_gap",
+      "question": "Do specialized accessibility input devices (eye-trackers, switch arrays, speech-to-text input controllers) experience systematically longer driver wait times or higher abandonment rates compared to consumer peripherals?",
+      "resolution_mechanism": "Survey of accessibility device users; analysis of driver release timelines by device category and market size; tracking of devices that lost OS support in major version updates",
+      "impact": "If accessibility gap > 2x consumer gap: extraction mechanism is confirmed (lock-in directly harms least-resourced users) — Snare classification valid. If gap approaches parity: market pressure is driving equitable support — lock-in is weakening.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Critical adoption threshold for standardization commitment"
+      "description": "Driver support disparity between accessibility and consumer devices"
     },
     {
-      "id": "accessibility_driver_coupling",
-      "question": "What proportion of accessibility keyboard driver features are proprietary-locked versus available through open standards?",
-      "resolution_mechanism": "Feature inventory of accessibility keyboard software; correlation between proprietary driver requirements and accessibility accommodation types; cost analysis of accessibility development with and without proprietary driver access",
-      "impact": "If accessibility features are disproportionately proprietary: the snare classification is amplified and the constraint becomes human rights relevant. If accessibility features are mostly available through open standards: the snare applies primarily to cosmetic use cases.",
+      "id": "proprietary_extension_necessity",
+      "question": "How much of premium vendor differentiation relies on proprietary driver extensions beyond standard HID compliance, and what functionality do these extensions actually provide to end users?",
+      "resolution_mechanism": "Technical reverse-engineering and feature analysis of proprietary drivers; user surveys on which features drive purchasing decisions; comparison of proprietary vs standard-compliant devices on feature matrices",
+      "impact": "If >50% of proprietary functionality is marketing theater or redundant to standard features: differentiation argument is weak, lock-in is primarily about market control (Snare confirmed). If features are genuinely novel and valued: some lock-in is justified coordination overhead (Rope more likely).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Coupling of accessibility features to proprietary keyboard drivers"
+      "description": "Necessity and user value of proprietary driver extensions"
+    },
+    {
+      "id": "open_source_driver_maturity_trajectory",
+      "question": "Are open-source driver projects (libusb, user-space HID, kernel HID subsystem contributions) accumulating features at a pace that will eventually make proprietary drivers obsolete?",
+      "resolution_mechanism": "Longitudinal analysis of open-source driver project activity, feature completeness, and adoption rates; monitoring of major keyboard vendor contributions to kernel HID subsystem; tracking of successful open-source replacements for proprietary driver functionality",
+      "impact": "If trajectory shows convergence to feature parity: scaffold sunset is real — standardization will eventually eliminate lock-in (10-20 years). If trajectory stalls: open-source cannot match proprietary pace — lock-in persists (mountain or permanent tangled rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Open-source driver maturity and convergence trajectory"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.18
+      "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.25
+      "time_point": 7,
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.32
+      "time_point": 14,
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.28
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.36
+      "time_point": 7,
+      "value": 0.53
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.44
+      "time_point": 14,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 7,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 14,
+      "value": 0.65
     }
   ],
   "interval": {
     "start": 0,
-    "end": 10
+    "end": 14
   },
   "commentary": {
-    "narrative_context": "Software keyboard driver standardization creates a structural constraint between hardware vendors seeking platform differentiation, operating system manufacturers managing driver ecosystems, independent keyboard makers navigating multi-platform support, and end users (especially those with accessibility needs) dependent on specialized input functionality. The constraint exhibits hybrid coordination and extraction: genuine technical coordination problems (managing diverse keyboard hardware across OS platforms) coexist with vendor incentives to maintain proprietary driver stacks that create switching costs and lock-in. The extractiveness metric (0.32) reflects that standardized keyboard input protocols (HID, wayland) have partially solved the coordination problem, but proprietary extensions and platform-specific driver frameworks persist, creating residual extraction. The suppression metric (0.38) reflects moderate barriers to exit: switching OS or keyboard hardware carries significant costs for users dependent on specific driver ecosystems, but not insurmountable barriers for most users. The theater ratio (0.44) indicates that proprietary keyboard drivers increasingly deliver functionality available through open standards, suggesting degradation of the original justification.",
+    "narrative_context": "Software keyboard driver standardization creates a structural constraint between technical necessity and market control. Hardware keyboards require OS-level drivers to function, creating a coordination problem: devices must be certified, tested, and maintained across multiple platforms. This genuine coordination function coexists with an extraction mechanism: OS manufacturers and premium vendors benefit from fragmentation that raises barriers to entry for independent makers and creates lock-in for accessibility-dependent users. The constraint exhibits all six DR types from different observer positions, making it a diagnostic case for how technical infrastructure constraints embed market power. The theater ratio (0.58) reflects that driver certification systems (Windows Hardware Certification Program, macOS notarization) perform significant legitimating work but are only partially functional at actually preventing incompatibility. The measurement trajectory shows rising extractiveness over the 14-year interval as device complexity has increased faster than standardization, widening the vendor lock-in window. Open-source and standards-based initiatives represent a genuine sunset mechanism: USB-IF standards bodies, Linux kernel HID subsystem development, and accessibility advocacy coalitions are building interoperable driver frameworks that could eventually make proprietary lock-in obsolete. The constraint is neither a pure technical necessity nor a pure extraction mechanism — it is a tangled rope combining legitimate coordination with asymmetric benefit distribution.",
     "key_agents": [
-      "Operating System Manufacturers (Microsoft, Apple, Linux distributions): Primary beneficiaries (institutional/arbitrage) \u2014 control driver ecosystems and proprietary extensions",
-      "Hardware Vendors (keyboard manufacturers): Secondary beneficiaries (institutional/arbitrage) \u2014 benefit from differentiation through proprietary drivers but also constrained by multi-platform support costs",
-      "End Users with Accessibility Needs: Primary victims (powerless/trapped) \u2014 dependent on proprietary drivers for specialized input methods; cannot exit without losing functionality",
-      "Independent Keyboard Hardware Makers: Secondary victims (moderate/constrained) \u2014 face fragmented driver development burden across platforms; can exit by consolidating to single OS but at market cost",
-      "Open-Source Standards Coalition: Organized agents building alternative (organized/mobile) \u2014 USB HID, wayland input protocols, Linux input subsystem represent coordinated path to standardization",
-      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing vendor lock-in as technical necessity"
+      "Accessibility-Dependent Users: Primary victims (powerless/trapped) — depend on specialized input devices and cannot exit without abandoning accessibility; bear full cost of delayed driver support",
+      "Independent Keyboard Makers: Secondary victims (moderate/constrained) — face high development and certification costs to support multiple platforms; structurally constrained but not trapped; benefit from ecosystem infrastructure",
+      "Operating System Manufacturers: Primary beneficiaries (institutional/arbitrage) — control driver certification and distribution; extract value through platform lock-in; maintain arbitrage options to shift standards or architectures",
+      "Premium Hardware Vendors: Secondary beneficiaries (powerful/arbitrage) — use proprietary drivers as differentiation; benefit from fragmentation while having capacity to absorb standardization; can leverage OS partnerships",
+      "Open Hardware Coalition: Organized actors (organized/constrained) — standards bodies (USB-IF), open-source projects (Linux HID), accessibility advocates building alternative driver frameworks with sunset logic",
+      "Legacy Certification Systems: Institutional performer (institutional/arbitrage) — Windows WHCP, macOS notarization maintain performative legitimacy despite reduced functional verification capacity"
     ],
-    "logic_rationale": "Extractiveness (0.32): Moderate-low. The constraint exhibits extraction through vendor lock-in mechanisms, but technical solutions (HID standard, open input protocols) have substantially solved the coordination problem. Remaining extractiveness reflects proprietary extensions and platform-specific optimizations that differentiate keyboards post-standardization. The value increased from 0.18 to 0.32 over the measurement interval, suggesting that initial standardization gains (HID adoption 2000-2005) were followed by renewed proprietary layering (macOS Touch Bar integration, Windows-specific driver features 2010+). Suppression (0.38): Moderate. Users have moderate barriers to exit: switching OS platforms is costly but possible; purchasing keyboards compatible with open standards is feasible but requires technical literacy. Accessibility users face higher suppression (closer to trapped) because proprietary driver ecosystems often integrate accessibility features more tightly than open standards. Theater ratio (0.44): Moderate-high and rising. Proprietary keyboard drivers have evolved from purely functional (hardware communication) to increasingly performative: macro reconfiguration software, lighting customization, and profile management are theater layers that exist primarily for differentiation. The theater has increased from 0.28 to 0.44 because early driver ecosystems handled core input; modern drivers add feature management that overlaps with OS-level functionality. The upward trajectory suggests Goodhart drift: vendors layering cosmetic complexity to justify driver lock-in.",
-    "directionality_logic": "Directionality derivation for each power atom: OS manufacturers (institutional/arbitrage) have d \u2248 0.15 (strong beneficiaries with exit optionality through proprietary extension \u2014 low d). Independent hardware makers (moderate/constrained) have d \u2248 0.65 (moderate victims facing real switching costs but with some agency to choose platform focus \u2014 moderate d). Accessibility users (powerless/trapped) have d \u2248 0.95 (full victims with no exit \u2014 high d). Open-source coalition (organized/mobile) has d \u2248 0.40 (mixed but mobile through coalition agency \u2014 lower-moderate d). The OS manufacturers' beneficiary status derives from their control of driver APIs and ability to extend proprietary standards. The hardware makers' victim status derives from fragmented driver development costs and inability to coordinate across platforms. The end users' victim status derives from their dependence on proprietary features for accessibility.",
-    "perspectival_gap": "The perspectival gap centers on whether keyboard driver standardization is a coordination mechanism (Rope, Scaffold) or an extraction mechanism (Snare, Tangled Rope). OS manufacturers and their aligned vendors experience the constraint as coordination \u2014 standardized HID protocols reduce complexity and enable broader hardware compatibility (Rope perspective). The open-source coalition experiences standardization as progress on a solvable problem with a sunset clause (Scaffold perspective). Independent hardware makers and accessibility users experience mixed coordination and extraction (Tangled Rope) or pure extraction (Snare). The analytical observer risks naturalizing the vendor lock-in as a technical necessity (false Mountain). The perspectival gap reveals that whether standardization is perceived as coordination or extraction depends entirely on whether the observer benefits from proprietary extension incentives.",
-    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that keyboard driver standardization is genuinely hybrid: Open standards (HID, wayland) solve real coordination problems (cross-platform input handling). Proprietary extensions simultaneously extract value through switching costs and lock-in. The constraint is Tangled Rope because both functions exist structurally. If vendors abandoned proprietary driver layering and committed fully to open standards, the constraint would reclassify as Rope (pure coordination). If vendors eliminated open standard support and forced proprietary drivers, it would reclassify as Snare (pure extraction). The current state reflects active maintenance of both mechanisms \u2014 standardization solves enough coordination that the constraint remains legitimate; proprietary extensions extract enough value that beneficiaries maintain them. The theater ratio rise (0.28 \u2192 0.44) signals that the extraction function is growing relative to coordination \u2014 Goodhart drift toward Snare."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint combines genuine coordination overhead (multi-platform driver development is technically necessary) with market-control extraction (lock-in raises barriers for independent makers and accessibility users). The value reflects that coordination costs are real but unevenly distributed — OS manufacturers externalize costs onto vendors and users. The trajectory shows rising extractiveness over 14 years as device complexity outpaced standardization, widening the vendor lock-in window. Suppression (0.65): High. Multiple barriers prevent exit or alternative pathways: (1) kernel-level integration requirement forces deep OS coupling; (2) certification and testing burden creates capital barriers for independent makers; (3) network effects lock users into OS-specific ecosystems; (4) accessibility users face double bind — specialized devices often have limited cross-platform support; (5) standards evolution is slow (USB standards take 3-5 years from proposal to broad adoption). Theater ratio (0.58): Moderate-high. Driver certification systems perform significant legitimating work — they validate signatures, check for basic functionality, prevent obviously malicious code. But they are only partially functional at preventing real compatibility issues, driver conflicts, or subtle extraction mechanisms. Much of the certification burden is theater: it validates that a vendor is responsible without actually guaranteeing the driver won't conflict with others or lock users into proprietary functionality.",
+    "directionality_logic": "Directionality values derive from agents' structural positions in the extraction flow. OS manufacturers (institutional/arbitrage) experience low or negative d — they benefit from and control the certification system, extracting value through platform lock-in while maintaining arbitrage options to change standards. Premium vendors (powerful/arbitrage) experience moderate-low d — they benefit from fragmentation (which protects their differentiation) while having resources to absorb standardization costs. Independent makers (moderate/constrained) experience moderate-high d — they bear most of the multi-platform development burden while lacking resources to lobby for standardization; constrained exit options (cannot specialize on single platform without market viability loss) amplify experienced extraction. Accessibility users (powerless/trapped) experience maximum d — they have no exit options and bear full cost of non-standard device support delays; cannot switch platforms, cannot demand vendor attention through market pressure. The organized coalition (organized/constrained) experiences moderate d mediated by their agency — they are building alternative pathways that reduce the lock-in mechanism's force, but they remain constrained by slow standards adoption and vendor resistance.",
+    "perspectival_gap": "This constraint generates five distinct classification types from the same structural data, revealing how technical infrastructure constraints distribute power asymmetrically. The accessibility user sees a snare — they are trapped by driver availability with no exit option. The independent maker sees tangled rope — the system both coordinates (provides frameworks, OS infrastructure) and extracts (imposes development burden). The OS manufacturer sees rope — they coordinate the ecosystem while arbitraging standards shifts. The premium vendor also sees rope — they benefit from the system's complexity. The open hardware coalition sees a temporary problem with a sunset mechanism (scaffold) — standardized interfaces and open-source drivers will eventually replace proprietary lock-in. The legacy certification system sees itself as legitimate institutional validation (piton) — the certification ritual persists through inertia even though its functional verification capacity has declined. The civilizational analytical observer risks seeing an immutable technical necessity (mountain) — hardware-OS coupling is inherent to computing — but the structural data reveals this as a false summit: the kernel-level integration depth, the certification burden, and the lock-in maintenance are policy choices, not laws of nature.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that classification varies legitimately with observer position. The constraint is not 'really' one type — it instantiates different structural relationships from different perspectives. The accessibility user's snare classification is their genuine structural reality: they are trapped with no alternatives. The independent maker's tangled rope is also genuine: they experience both coordination benefits (OS infrastructure exists) and extraction (burden falls on them). The OS manufacturer's rope is legitimate: they do coordinate an ecosystem. The scaffold classification is a real feature: standardization efforts have a sunset logic. The piton classification is accurate: certification theater has real institutional persistence. The mountain classification is false: the constraint is not an immutable law but a contingent institutional arrangement. The presheaf of these classifications across observer positions IS the full answer — the constraint's nature is indexed to the observer's structural location."
   },
   "boltzmann": {
-    "coordination_type": "information_standard"
+    "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "operating_system_moat_protection",
-      "hardware_manufacturer_lock_in"
+      "operating_system_market_concentration",
+      "accessibility_technology_ecosystem_fragmentation",
+      "proprietary_hardware_vendor_lock_in"
     ],
-    "dual_formulation_note": "Software keyboard driver standardization represents one constraint family decomposable into two structurally distinct claims: (1) Technical standardization of keyboard input protocols (HID, open standards) \u2014 low extractiveness, primarily coordination; (2) Vendor incentives to maintain proprietary driver ecosystems layered on top of standards \u2014 higher extractiveness, primarily extraction. This story captures the hybrid state where both exist simultaneously."
+    "dual_formulation_note": "Software keyboard driver standardization is downstream of OS architecture decisions (how deeply hardware integrates with kernel) and upstream of accessibility ecosystem fragmentation (users with specialized needs face systematically longer wait times for driver support). The three constraints form a constraint family: OS architectural choices constrain driver standardization possibilities; driver fragmentation directly constrains accessibility device availability; hardware vendor lock-in uses driver fragmentation as a mechanism."
   },
-  "directionality_overrides": []
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.25
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.68
+    }
+  ]
 }

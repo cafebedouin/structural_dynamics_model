@@ -4,24 +4,25 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "pccls"
+    "measurement_id_prefix": "pcls",
+    "story_uid": "1093a560-752c-409f-b66f-3b40829c7532"
   },
   "base_properties": {
     "extractiveness": 0.58,
-    "suppression": 0.68,
-    "theater_ratio": 0.55,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
     "claimed_type": "tangled_rope",
     "human_readable": "Platform Copyright Liability Shift",
     "topic_domain": "intellectual_property/platform_governance",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "large_platforms",
-      "content_aggregators"
+      "algorithmic_distribution_gatekeepers"
     ],
     "victims": [
-      "individual_creators",
-      "small_publishers",
-      "copyright_holders"
+      "independent_creators",
+      "copyright_holders",
+      "content_filtering_labor"
     ]
   },
   "perspectives": [
@@ -31,17 +32,17 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Individual Creator",
-      "comment": "PERSPECTIVE 1: INDIVIDUAL CREATOR (SNARE) \u2014 Creators have no viable exit. Their work is syndicated, algorithmically redistributed, and scraped without consent or compensation. They cannot prevent redistribution (legal barriers), cannot migrate to alternative platforms (network effects), and cannot sue (cost prohibitive). Maximum extraction with minimal coordination benefit. The constraint exists precisely to suppress their exit options and enforce asymmetric appropriation of creative value."
+      "label": "The Independent Creator",
+      "comment": "PERSPECTIVE 1: INDEPENDENT CREATOR (SNARE) — Trapped by platform dependency for distribution reach. Faces algorithmic suppression, demonetization without recourse, and liability for user uploads. No viable exit: alternative platforms lack reach; self-distribution is economically unviable for most creators. Bears maximum suppression and extraction through takedown costs, demonetization, and loss of control over algorithmic visibility."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "moderate",
-      "time_horizon": "generational",
+      "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Independent Publisher",
-      "comment": "PERSPECTIVE 2: INDEPENDENT PUBLISHER (TANGLED ROPE) \u2014 Constrained exit: leaving platform distribution means losing audience reach, but remaining means accepting algorithmic redistribution and reduced compensation. These agents experience genuine coordination benefits (platform distribution) alongside extraction (liability shift, algorithmic suppression of paywalled content). Active enforcement required \u2014 the platform must continuously extract work and suppress payment mechanisms."
+      "label": "Mid-Scale Rights Holder",
+      "comment": "PERSPECTIVE 2: MID-SCALE RIGHTS HOLDER (TANGLED ROPE) — Constrained by high enforcement costs (hiring monitoring services, legal action, repeat takedown burden) but also benefits from platform distribution reach and algorithmic amplification. Faces both extraction (enforcement burden externalized) and coordination (platform provides distribution infrastructure). Exit cost is substantial but not absolute — can pursue independent distribution or licensing intermediaries at significant economic penalty."
     },
     {
       "classification_type": "rope",
@@ -49,17 +50,17 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Large Platform",
-      "comment": "PERSPECTIVE 3: LARGE PLATFORM (ROPE) \u2014 Experiences the liability shift as pure coordination: it solves the platform's problem of managing user-generated content without legal exposure. The constraint enables distribution at scale while externalizing copyright enforcement costs to creators. Beneficiary with full arbitrage options \u2014 can negotiate copyright terms selectively or exit copyright-heavy jurisdictions entirely."
+      "label": "Large Platform",
+      "comment": "PERSPECTIVE 3: LARGE PLATFORM (ROPE) — Experiences the constraint as coordination: liability safe harbor enables efficient content distribution at scale. Captures algorithmic control, advertising revenue, and user data while externalizing enforcement costs. Arbitrage exit available: can comply with stricter liability regimes by investing in filtering infrastructure (YouTube's Content ID) and passing costs to creators through revenue share reduction. Net beneficiary with low experienced extraction."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The Regulatory Coalition",
-      "comment": "PERSPECTIVE 4: REGULATORY COALITION (SCAFFOLD) \u2014 Organized agents (EU DSM Directive, UK Online Safety Bill, proposed US reforms) see liability shift as a temporary institutional arrangement with a sunset clause. Regulations creating statutory licensing, mandatory content ID systems, and platform liability for infringement are building alternative pathways. Low effective extraction because this perspective has agency and sees an exit path through legislative reform. Has sunset clause rationale: regulatory frameworks requiring notice-and-takedown reform, mandatory licensing negotiations, and platform liability rebalancing are gradually reducing the asymmetry that enabled the original extraction."
+      "spatial_scope": "continental",
+      "label": "Copyright Intermediary Ecosystem",
+      "comment": "PERSPECTIVE 4: COPYRIGHT INTERMEDIARY ECOSYSTEM (SCAFFOLD) — Performing Rights Organizations, CMOs, and licensing intermediaries see the liability shift as a temporary market failure creating their business opportunity. Organized agents (PRS, ASCAP, Spotify's rights agreements) are building alternative licensing frameworks and collective management solutions. Constrained by regulatory uncertainty but see a sunset: as licensing standards mature and Article 17 enforcement evolves, direct creator-to-platform licensing (or forced platform licensing) will replace the current externalized enforcement regime. Low effective extraction because intermediaries have agency and perceive an exit path through standard maturation."
     },
     {
       "classification_type": "piton",
@@ -67,8 +68,8 @@
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Copyright Enforcement Regime",
-      "comment": "PERSPECTIVE 5: COPYRIGHT ENFORCEMENT REGIME (PITON) \u2014 Traditional copyright law is substantially performative when applied to platforms. The DMCA takedown regime exists, but platforms ignore enforcement selectively. Cease-and-desist letters create theatrical compliance \u2014 platforms remove specific URLs while continuing algorithmic distribution. The regime persists through institutional inertia (copyright offices, licensing bodies) despite low functional enforcement. Theater ratio reflects that rights holders send thousands of takedown notices annually but extraction continues via algorithmic redistribution and metadata stripping."
+      "label": "DMCA Safe Harbor Framework",
+      "comment": "PERSPECTIVE 5: DMCA SAFE HARBOR FRAMEWORK (PITON) — The 1998 safe harbor was designed for ISPs passively transmitting content; its application to algorithmic curation and recommendation platforms is largely theatrical. The legal fiction that platforms are 'neutral conduits' persists despite algorithmic content amplification. Platforms maintain this fiction to avoid liability tier elevation while extracting value through algorithmic control. The framework has lost functional justification but persists through institutional inertia and lobbying — a degraded constraint maintained for extractive purposes rather than any legitimate coordination function."
     },
     {
       "classification_type": "mountain",
@@ -76,37 +77,55 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer (Network Topology View)",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NETWORK TOPOLOGY VIEW (MOUNTAIN) \u2014 From a universal perspective, some copyright enforcement gap is inherent to network topology: at planetary scale with billions of pieces of content, individual verification is computationally infeasible. This perspective sees the liability shift as an immutable consequence of distributed information architecture. However, the structural data contradicts this \u2014 the 'inherent to networks' framing naturalizes what is actually a policy choice (platforms COULD implement mandatory licensing, distributed royalty tracking, or content verification systems). The engine will compute this as a false summit."
+      "label": "Natural Law View (Analytical Observer)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a universal analytical stance, one might view copyright liability at scale as an intractable coordination problem: any platform enabling user-generated content at billion-scale must externalize some verification costs because perfect copyright detection is computationally infeasible (approaching natural law around verification cost). However, the structural data contradicts this — platforms invest heavily in algorithmic content ID and selective enforcement (YouTube's Content ID, TikTok's system), revealing that the 'impossibility' framing is a false summit naturalizing what is actually a distributive choice about who bears enforcement costs."
     }
   ],
   "omegas": [
     {
-      "id": "platform_technical_capacity",
-      "question": "Do large platforms lack genuine technical capacity to implement copyright enforcement, or do they suppress it as economically profitable?",
-      "resolution_mechanism": "Comparative analysis of platform investment in content ID (YouTube Content ID, TikTok Rights Manager) vs platform investment in suppressing creator monetization. Audit of platform code for deliberately-disabled copyright verification.",
-      "impact": "If technical barrier: classification shifts toward mountain/rope (system-wide coordination problem). If economic choice: classification confirms snare/tangled_rope (extractive suppression of enforcement).",
+      "id": "algorithmic_curation_neutrality_fiction",
+      "question": "Is algorithmic recommendation fundamentally different from passive ISP transmission, or is the legal distinction a false construction?",
+      "resolution_mechanism": "Comparative analysis of platform algorithmic contribution to distribution vs. passive conduit ISP role; measurement of algorithmic amplification effect on copyright-infringing content visibility vs. compliant content",
+      "impact": "If algorithms are materially different: safe harbor framework is legitimate false summit (liability tier must reflect algorithmic responsibility). If distinction is fiction: classification shifts from piton (degraded framework) to snare (extractive legal construct). Platform extraction multiplies.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether copyright enforcement gap reflects technical impossibility or deliberate suppression"
+      "description": "Whether algorithmic recommendation constitutes active content curation"
     },
     {
-      "id": "statutory_licensing_feasibility",
-      "question": "Can statutory licensing (compulsory licensing with per-use payments tracked algorithmically) scale to platform-wide distribution without recreating the transaction cost problem it solves?",
-      "resolution_mechanism": "Implementation data from EU licensing directives (Article 17 DSM), UK Online Safety Bill licensing provisions, and proposed US digital music legislation. Measurement of royalty distribution speed and accuracy.",
-      "impact": "If feasible: scaffold sunset is real \u2014 regulatory alternatives can reduce extraction. If transaction costs resurface: scaffold is aspirational, and the liability shift persists despite regulation.",
+      "id": "content_id_technical_feasibility",
+      "question": "Is Copyright ID-scale infrastructure technically feasible for platforms of all sizes, or only for trillion-dollar firms with monopoly margins?",
+      "resolution_mechanism": "Technical audit of Content ID implementation; cost analysis per-platform per-user; feasibility study for small/medium platforms",
+      "impact": "If universally feasible: externalization to creators is extractive choice (snare from creator perspective). If concentration-dependent: liability shift reflects genuine coordination problem masked by consolidation (tangled_rope from creator perspective).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether statutory licensing can scale without recreating transaction costs"
+      "description": "Technical feasibility of Copyright ID infrastructure across platform sizes"
     },
     {
-      "id": "creator_coalition_threshold",
-      "question": "At what scale of organized creator action do platforms' liability and revenue extraction costs exceed benefits, triggering settlement?",
-      "resolution_mechanism": "Historical analysis of creator strikes, organized holdouts (music licensing standoffs, author collective actions), and resulting platform concessions. Threshold identification via cost-benefit modeling.",
-      "impact": "If threshold low: organized creator power (perspective 2 upgraded from moderate to organized) can change classification. If threshold high: powerless creators remain trapped even in coalition (perspective 1 unaffected).",
+      "id": "creator_exit_viability",
+      "question": "Are alternative distribution platforms (Patreon, Substack, Rumble, Odysee) genuinely viable exits, or do they lack algorithmic reach such that creators face a false choice?",
+      "resolution_mechanism": "Comparative reach analysis: creator revenue on alternative platforms vs major platforms; network effect measurement; audience discovery feasibility on alternatives",
+      "impact": "If alternatives are viable: creator exit is constrained but possible (tangled_rope from creator). If alternatives are non-viable: creator is trapped by network effects (snare classification confirmed).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Critical mass threshold for organized creator power to force platform concessions"
+      "description": "Viability of alternative creator distribution platforms"
+    },
+    {
+      "id": "article17_enforcement_asymmetry",
+      "question": "Does Article 17 enforcement in EU shift burden from platforms to creators/rights holders, or does it genuinely internalize copyright responsibility within platforms?",
+      "resolution_mechanism": "Post-Article 17 measurement: platform enforcement costs vs creator/rights holder burden in EU vs US; compliance infrastructure comparison",
+      "impact": "If burden remains externalized: Article 17 is theater (piton). If platforms genuinely internalize: European constraint is rope/scaffold (coordination-based). Impacts policy legitimacy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Article 17 shifts enforcement burden or internalizes platform responsibility"
+    },
+    {
+      "id": "intermediary_licensing_scalability",
+      "question": "Can collective rights management and licensing intermediaries achieve sufficient scale and transparency to replace algorithmic gatekeeping, or will platforms maintain control through technical opacity?",
+      "resolution_mechanism": "Licensing intermediary market growth; transparency of rights databases; creator access to licensing terms and revenue visibility",
+      "impact": "If scalable: scaffold sunset is real (open-science style alternative pathway). If platforms resist transparency: intermediary model remains limited (constraint persists). Impacts constraint trajectory.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Scalability of collective licensing intermediaries as alternative to platform gatekeeping"
     }
   ],
   "measurements": [
@@ -117,65 +136,84 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
+      "time_point": 7,
       "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 14,
       "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.4
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
+      "time_point": 7,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
       "value": 0.48
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.55
+      "metric": "suppression_requirement",
+      "time_point": 7,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 14,
+      "value": 0.62
     }
   ],
   "interval": {
     "start": 0,
-    "end": 10
+    "end": 14
   },
   "commentary": {
-    "narrative_context": "The platform copyright liability shift represents a structural extraction mechanism whereby large digital platforms externalize copyright enforcement costs onto creators while capturing distribution value and algorithmic control. Beginning with the DMCA safe harbor (1998) and evolving through Article 17 of the EU Digital Services Directive and proposed US legislative frameworks, this constraint exhibits the core tension between coordination (platforms enable global distribution) and extraction (platforms suppress creator compensation mechanisms). The constraint's extractiveness has increased from 0.35 to 0.58 over the measured interval as platforms have systematized content appropriation while maintaining the appearance of copyright compliance through performative takedown processes. Theater ratio (0.55) reflects that copyright enforcement mechanisms (DMCA notices, Content ID flagging) exist but are substantially theatrical \u2014 they create compliance theater without systematically redirecting value to creators. The liability shift mechanism works by: (1) legally insulating platforms from liability for user-generated copyright infringement through safe harbors, (2) placing enforcement burden on individual copyright holders (expensive litigation, cease-and-desist letters), (3) algorithmic redistribution that continues regardless of takedown notices, and (4) compensation structures (ad revenue sharing, creator funds) that systematically undervalue copyrighted content relative to platform value extraction.",
+    "narrative_context": "The platform copyright liability shift represents a structural extraction mechanism that evolved from the 1998 DMCA safe harbor (designed for passive ISPs) through algorithmic curation platforms to Article 17 of the EU Digital Services Directive and emerging US legislative proposals. The constraint exhibits genuine coordination value — platforms enable global creator distribution at unprecedented scale — while simultaneously externalizing copyright enforcement costs onto creators and rights holders. The tension is not between 'good coordination' and 'bad extraction,' but rather a hybrid structure where platforms capture distribution control and algorithmic gatekeeping while pushing copyright liability externalization outward. The constraint shows all six DR types from different structural positions: independent creators trapped by network effects experience snare; mid-scale rights holders experience tangled rope (mixed coordination benefit and enforcement burden); large platforms experience rope (coordination through liability safe harbor with massive arbitrage options); copyright intermediaries experience scaffold (building alternative licensing frameworks with clear sunset logic as standards mature); the DMCA framework itself appears as piton (performative fiction about platform neutrality); and the analytical observer risks naturalizing what is actually a distributive choice about cost allocation as a natural law of platform operation.",
     "key_agents": [
-      "Individual Creators: Primary victims (powerless/trapped) \u2014 work is distributed without consent or compensation; no exit options (network effects, legal barriers)",
-      "Small Publishers: Secondary victims (moderate/constrained) \u2014 dependent on platform distribution but face extraction via algorithmic suppression of paywalled content",
-      "Copyright Holders: Tertiary victims (institutional/constrained) \u2014 hold legal rights but enforcement costs prohibitive; licensing negotiations asymmetric",
-      "Large Platforms: Primary beneficiary (institutional/arbitrage) \u2014 capture distribution value, suppress creator compensation, negotiate copyright selectively",
-      "Content Aggregators: Secondary beneficiary (institutional/arbitrage) \u2014 scrape and redistribute content with minimal licensing cost",
-      "Regulatory Coalition: Organized alternative builders (organized/constrained) \u2014 EU DSM Directive, UK Online Safety Bill, US copyright reform proposals create statutory licensing and rebalanced liability",
-      "Copyright Enforcement Regime: Institutional actor (institutional/arbitrage) \u2014 maintains performative takedown process; sees own mechanisms as degraded (piton perspective)"
+      "Independent Creator: Primary victim (powerless/trapped) — depends on platform for distribution reach; faces algorithmic suppression, demonetization, and external copyright enforcement burden with no viable exit",
+      "Mid-Scale Copyright Holder: Secondary victim (moderate/constrained) — invests in monitoring and legal enforcement; also benefits from platform distribution; faces substantial but not absolute exit costs",
+      "Large Platform: Primary beneficiary (institutional/arbitrage) — captures algorithmic control, advertising revenue, user data; experiences safe harbor as coordination; can arbitrage to higher-compliance regimes by investing in filtering infrastructure",
+      "Performing Rights Organization / CMO: Organized intermediary (organized/constrained) — builds collective licensing frameworks; sees temporary market failure as business opportunity; perceives sunset as licensing standards mature",
+      "DMCA Safe Harbor Framework: Institutional constraint structure (institutional/arbitrage) — maintains legal fiction of platform neutrality despite algorithmic curation; persists through institutional inertia and political economy",
+      "Analytical Observer: Civilizational position (analytical/analytical) — risks treating cost externalization as natural law inherent to scale"
     ],
-    "logic_rationale": "Extractiveness (0.58): Moderate-high. The platform captures significant distribution value while systematically suppressing creator compensation. The increase from 0.35 to 0.58 over the interval reflects platform maturation of extraction mechanisms: early platforms (YouTube 2005-2010) claimed educational purpose and creator revenue sharing; mature platforms (TikTok, TikTok's short-form dominance 2015-2025) optimized for creator dependency while suppressing monetization paths. The extraction is not maximal (not 0.72+) because some creator pathways exist (Patreon, direct sponsorship), and regulatory pressure creates genuine uncertainty about enforcement duration. Suppression (0.68): High. Structural barriers include safe harbor legal architecture, cost of enforcement, network effects that prevent exit, algorithmic suppression of monetized content, and lack of transparency in compensation formulas. Creators cannot organize easily (distributed, powerless, competing) and cannot exit (distribution requires platform scale). Theater ratio (0.55): Moderate. Copyright enforcement exists (Content ID, takedown processes) but functions theatrically \u2014 platforms implement compliance performance without systematic value redistribution. The theater has increased over the interval as platforms have invested in visible compliance infrastructure (Content ID, creator funds) while actual creator compensation has declined as percentage of platform value.",
-    "directionality_logic": "Directionality computation for each perspective derives from structural position and exit options. Individual creators (powerless, trapped, victim) experience full d = 0.95, producing maximum f(d) \u2248 1.42 and high chi. Large platforms (institutional, arbitrage, beneficiary) experience low d \u2248 0.05, producing negative f(d) \u2248 -0.12 and negative chi (net benefit). Independent publishers (moderate, constrained, both victim and beneficiary) experience moderate d \u2248 0.55, producing f(d) \u2248 0.75 and moderate chi \u2014 they benefit from distribution but are extracted from via suppression of monetization. Regulatory coalition (organized, constrained, alternative builder) experiences moderate-low d \u2248 0.40, producing f(d) \u2248 0.40 and low chi \u2014 organized agents see an exit path through regulation, reducing experienced extraction. Copyright regime (institutional, arbitrage) captures the piton perspective \u2014 maintains enforcement theater while actual extraction persists.",
-    "perspectival_gap": "This constraint demonstrates divergent classification across power and exit positions. Powerless creators see pure extraction (Snare) \u2014 no coordination benefit, maximum burden. Moderate publishers see mixed coordination and extraction (Tangled Rope) \u2014 distribution enables reach, but extraction suppresses compensation. Large platforms see pure coordination (Rope) \u2014 liability shift solves their distribution problem elegantly. Regulatory bodies see a solvable problem (Scaffold) \u2014 statutory licensing frameworks build an alternative pathway with sunset logic. The copyright regime sees its own enforcement as degraded (Piton) \u2014 the takedown process exists but is systemically theatrical. The analytical observer risks naturalizing this as an inevitable feature of digital scale (Mountain) \u2014 too much content to verify individually. However, the structural data (platforms deliberately suppress Content ID for creators, suppress transparency in algorithms, actively lobby against licensing reform) reveals this as a policy choice, not a law of nature. The gap between powerless and institutional perspectives is maximal (Snare vs Rope) \u2014 the same constraint appears as opposite types depending on whose extraction is measured.",
-    "mandatrophy_analysis": "The mandatrophy resolves through perspectival decomposition and recognition of legitimate vs extractive mechanisms. Coordination function (Rope aspect): Platforms genuinely enable global distribution at scale that individual creators cannot achieve. This is a coordination benefit that justifies some platform capture. Extraction function (Snare aspect): The safe harbor structure + lack of transparency + suppression of creator monetization + network lock-in constitute pure extraction orthogonal to coordination. The tangled rope classification requires ALL THREE gates: (1) beneficiaries (platforms) + (2) victims (creators) + (3) active enforcement (platforms enforce creator dependency while suppressing compensation). All three are present. The constraint is NOT pure coordination (that would be Rope) because the extraction component is asymmetric and enforced. The constraint is NOT pure extraction (that would be Snare) because genuine coordination benefits exist and platforms could theoretically provide them with lower suppression. Mandatrophy is resolved by recognizing that the classification is context-dependent: from the powerless creator's perspective, it is a Snare (they experience no coordination benefit, only extraction); from the analytical perspective with regulatory alternative visible, it is a Scaffold (the sunset is real through legislative action); from the beneficiary's perspective, it is a Rope (they experience the constraint as solving coordination). The engine's job is to report all six, not to choose one."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, rising over interval. At t=0 (1998-2005), platforms were genuinely neutral transmission infrastructure and the DMCA safe harbor was legitimate coordination mechanism — extractiveness was low (0.35) because the liability safe harbor actually solved a real coordination problem. As platforms shifted toward algorithmic curation (YouTube, TikTok, Instagram Reels), they captured value and control while maintaining the safe harbor fiction. By t=14 (2020-2026), platforms have matured algorithmic infrastructure (Content ID, automated takedowns) but externalized creator compliance burden instead of internalizing it, raising extractiveness to 0.58. The trajectory reflects platform choice: invest in filtering to internalize liability (as YouTube partially did) or externalize it (as most platforms prefer). Suppression (0.62): High, reflecting multiple barriers. Creators face demonetization policies, algorithmic suppression as punishment for repeat takedowns, geographic blocking for unlicensed content, platform Terms of Service enforcement with no appeal process, and economic dependence on single platform. Barriers to exit are severe — alternative platforms lack algorithmic reach, network effects lock creators into major platforms, and creator earnings are algorithmically determined and unauditable. Theater ratio (0.68): High, reflecting performative elements. Platform takedown systems (DMCA notices, automated flagging, copyright strikes) create the theatrical appearance of IP protection while the underlying copyright detection (Content ID, manual review) is applied selectively based on platform commercial interest. A copyright-infringing music track may persist for months on secondary creators' channels while being rapidly removed from major artists' channels — the enforcement pattern reveals extraction preference, not neutral IP protection.",
+    "directionality_logic": "The constraint's directionality structure reveals how a nominally neutral coordination mechanism (safe harbor) becomes an extraction device through platform choice. The DMCA safe harbor (1998) genuinely solved a coordination problem: ISPs faced intractable liability for transient user content. The safe harbor enabled ISP growth by making liability exogenous. But when YouTube, TikTok, and algorithmic curation platforms emerged, platforms could (and partially did) internalize copyright compliance through filtering infrastructure. Most chose not to, instead maintaining the safe harbor fiction while externalizing costs to creators and rights holders. The constraint persists not because coordination is impossible but because platforms benefit from externalization. The beneficiary/victim structure makes this clear: platforms are beneficiaries (d ≈ 0.12 — they hold policy optionality); creators are victims (d ≈ 0.92 — they are trapped). The same technological infrastructure (Content ID algorithms, automated takedown systems) can internalize or externalize the enforcement burden — the choice is distribution policy, not technical necessity. This makes the constraint a canonical tangled rope: genuine coordination value (distribution infrastructure), genuine asymmetric extraction (externalized enforcement burden), and active enforcement requirement (DMCA notices, platform policies, takedown systems).",
+    "perspectival_gap": "The constraint exhibits the diagnostic maximum perspectival gap: beneficiary experiences coordination (rope), victims experience extraction (snare), organized intermediaries perceive temporary problem (scaffold), institutional framework appears degraded (piton), and analytical view risks naturalizing contingent choice (mountain). The gap emerges from directionality: the safe harbor that appears as legitimate coordination enablement from the platform perspective appears as pure extraction from the creator perspective because platforms choose to externalize enforcement rather than internalize it. The choice is revealed by asymmetry: platforms invest heavily in Content ID for music and premium content (where revenue stakes are high) but apply minimal enforcement to UGC containing small amounts of copyrighted material (where creator revenue share is low). This selective enforcement proves the constraint is not about coordination efficiency — it is about who bears the costs. If platforms genuinely faced coordination problems in copyright detection, enforcement would be uniform across content types. Instead, enforcement scales with platform profit margin, confirming the extraction classification from creator perspective.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by tracking the hybrid structure across perspectives. From the platform's institutional perspective (immediate time horizon), the constraint is unambiguously rope — the safe harbor enables efficient coordination. From the creator's biographical perspective (trapped exit), it is unambiguously snare — enforcement burden is externalized with no recourse. From the copyright intermediary's generational perspective (constrained exit), it is unambiguously scaffold — alternative licensing frameworks are maturing with clear sunset logic as standards mature. The analytical observer at civilizational scale risks seeing mountain — copyright detection at platform scale approaches natural law (billions of potential infringements per day, verification cost infinity). But the false summit detector exposes this: platforms demonstrably reduce enforcement burden through selective application and Content ID investment, proving that the 'natural law' is actually a distributional choice. The constraint resolves mandatrophy by showing that type choice reflects observer position, not observer error. All six types are correct perspectival readings. The policy question is: which perspective should governance weight? EU Article 17 weights platform responsibility (forcing platforms toward snare classification from creator perspective by internalizing enforcement). US policy weights platform immunity (maintaining rope classification for platforms, snare for creators). The mandatrophy dissolves when policy choice is made explicit: governance picks which structural position to prioritize.",
+    "kernel_context": "This constraint is not a reading of a contested kernel — the copyright liability question is empirically resolvable (does the safe harbor mechanism enable coordination, and does selective enforcement reveal distribution choice?). No formal doctrine or text is being interpreted differently. Skip this field for non-kernel constraints."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "algorithmic_content_suppression",
-      "creator_labor_commodification",
-      "safe_harbor_liability_doctrine"
+      "creator_algorithmic_visibility_control",
+      "platform_demonetization_opacity",
+      "copyright_holder_enforcement_cost_externalization"
     ],
-    "dual_formulation_note": "The copyright liability shift is downstream of safe harbor legal architecture (safe_harbor_liability_doctrine, \u03b5=0.08, Mountain \u2014 the legal framework is a structural given) but represents a distinct extractive mechanism. The algorithmic suppression of monetization links to creator_labor_commodification (creators internalize undercompensation as 'exposure' value)."
+    "dual_formulation_note": "The platform copyright liability shift decomposes into three structurally distinct constraints: (1) algorithmic visibility control (ε ≈ 0.52, snare) — platforms control creator reach without transparency; (2) demonetization opacity (ε ≈ 0.61, snare) — revenue sharing is algorithmically determined and unauditable; (3) copyright enforcement externalization (ε ≈ 0.58, tangled_rope) — this story, focusing on liability distribution. Each exhibits the same beneficiary (platforms) but different victim structure and extraction mechanism. All three are linked via network relationships — they are components of the larger platform control architecture."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.28
+      "d_value": 0.08
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.38
     }
   ]
 }

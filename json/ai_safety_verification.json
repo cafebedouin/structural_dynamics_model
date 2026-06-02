@@ -4,12 +4,13 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "aisv"
+    "measurement_id_prefix": "aisv",
+    "story_uid": "fb689322-798a-462c-b48a-2969795f24f0"
   },
   "base_properties": {
     "extractiveness": 0.58,
     "suppression": 0.68,
-    "theater_ratio": 0.79,
+    "theater_ratio": 0.65,
     "claimed_type": "tangled_rope",
     "human_readable": "AI Safety Verification and Capability Disclosure",
     "topic_domain": "artificial_intelligence/safety_governance",
@@ -19,8 +20,9 @@
       "capability_researchers"
     ],
     "victims": [
-      "safety_research_community",
-      "public_alignment_assurance"
+      "independent_safety_researchers",
+      "public_epistemic_commons",
+      "deployment_oversight_bodies"
     ]
   },
   "perspectives": [
@@ -30,35 +32,44 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "Public Alignment Assurance",
-      "comment": "PERSPECTIVE 1: PUBLIC ALIGNMENT ASSURANCE (SNARE) \u2014 Cannot exit the verification crisis; no mechanism to independently verify safety claims made by capability leaders. The public good of trustworthy AI alignment assessment has no advocate with exit options and bears full cost of false positive safety certifications. Maximum experienced extraction."
+      "label": "Independent Safety Researcher (No Lab Access)",
+      "comment": "PERSPECTIVE 1: INDEPENDENT SAFETY RESEARCHER (SNARE) — Trapped outside closed verification loops. Cannot access model weights, training data, or internal safety evaluations. Forced to evaluate claims based on published red-team results selected and framed by labs. Zero agency over verification methodology or scope. Maximum extraction — bears reputational and epistemic cost if labs' alignment claims prove false, but cannot independently verify."
     },
     {
       "classification_type": "snare",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "Independent Safety Research Groups",
-      "comment": "PERSPECTIVE 2: INDEPENDENT SAFETY RESEARCH (SNARE) \u2014 Constrained by resource requirements, model access barriers, and reputational risk of contradicting frontier labs. Face pressure to validate rather than scrutinize. Cannot credibly exit the field without accepting irrelevance to the most impactful systems. High extraction with constrained alternatives."
+      "label": "Public Epistemic Commons",
+      "comment": "PERSPECTIVE 2: PUBLIC EPISTEMIC COMMONS (SNARE) — No exit option. Bears systemic risk from unverified alignment claims. If frontier labs' safety narratives prove false post-deployment, the commons absorbs the cost through misallocation of research attention, false confidence in governance mechanisms, and delayed development of genuine safety solutions. Cannot organize or verify; experiences extraction as progressive epistemic contamination."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "powerful",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Safety-Focused Researchers Inside Labs",
+      "comment": "PERSPECTIVE 3: SAFETY-FOCUSED RESEARCHERS INSIDE LABS (TANGLED ROPE) — Constrained by employment, funding dependencies, and access to compute resources. Internal safety teams have genuine coordination function: labs do need rigorous safety evaluation before deployment. But also experience extraction: internal findings that threaten capability commercialization timelines are suppressed, reframed, or delayed; publishing safety concerns risks career penalty or reassignment. Mixed experience — real access and resources but asymmetric power over what findings emerge."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
       "time_horizon": "immediate",
-      "exit_options": "mobile",
+      "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Frontier AI Capability Labs",
-      "comment": "PERSPECTIVE 3: FRONTIER AI LABS (TANGLED ROPE) \u2014 Control both capability advancement and safety assessment processes. Benefit from coordination (genuine need to share findings with safety community) alongside asymmetric extraction (controlling what gets verified, when, and by whom). Active enforcement required \u2014 labs maintain proprietary access while extracting legitimacy from safety validation."
+      "label": "Frontier AI Lab (Capability-First Frame)",
+      "comment": "PERSPECTIVE 4: FRONTIER AI LAB (ROPE) — Benefits from coordination function: safety evaluation is necessary and labs do want defensible alignment claims. Controls verification scope, methodology, access, and timeline. Experiences constraint as coordination: sharing selected safety findings builds trust with investors, policymakers, and researchers while protecting competitive advantage. Net beneficiary through selective disclosure and narrative control. Low effective extraction because they define what gets extracted."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "organized",
-      "time_horizon": "generational",
+      "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "Regulatory Governance Bodies",
-      "comment": "PERSPECTIVE 4: REGULATORY GOVERNANCE (TANGLED ROPE) \u2014 Organized institutions dependent on frontier lab cooperation for actual safety data. Face extraction pressure (labs withhold data claiming IP sensitivity) while providing coordination function (governance framework and audit structures). Cannot exit without losing enforcement power over the labs they're meant to regulate."
+      "spatial_scope": "regional",
+      "label": "Regulatory Bodies and Oversight Boards",
+      "comment": "PERSPECTIVE 5: REGULATORY BODIES (TANGLED ROPE) — Mandated to verify alignment before deployment (coordination function) but dependent on labs' voluntary disclosure and cooperation (extraction mechanism). Cannot mandate independent access without risking lab exit to jurisdictions with lighter oversight. Constrained by epistemic asymmetry: regulators lack technical expertise and access to evaluate claims independently. Real governance function but asymmetric power — labs determine what information reaches regulators and on what timeline. Moderate extraction from information control and deployment pressure."
     },
     {
       "classification_type": "piton",
@@ -66,86 +77,90 @@
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Traditional Academic Peer Review",
-      "comment": "PERSPECTIVE 5: TRADITIONAL PEER REVIEW (PITON) \u2014 Peer review mechanisms for AI safety claims are substantially performative. Reviewers cannot independently verify training procedures, dataset composition, or internal safety evaluations. The review ritual persists through institutional convention (papers must go through peer review) despite degraded verification capacity for closed-source systems. Theater ratio indicates maintainance through inertia rather than functional adequacy."
+      "label": "Academic Safety Research Community (Degraded Position)",
+      "comment": "PERSPECTIVE 6: ACADEMIC SAFETY RESEARCH COMMUNITY (PITON) — Maintains scholarly legitimacy and peer-review infrastructure but increasingly isolated from the frontier where verification matters most. Publishes safety frameworks and benchmarks (theater: demonstrating rigor and methodological care) while lacking access to the systems that most urgently need verification. Institutional inertia keeps academic safety research sustained through grants and hiring, but primary function — producing actionable oversight — has atrophied. Theater ratio high because the constraint persists through the narrative 'academic research is part of safety ecosystem' while the functional reality is epistemic exclusion from frontier systems."
     },
     {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "Open-Source Safety Coalition",
-      "comment": "PERSPECTIVE 6: OPEN-SOURCE SAFETY COALITION (SCAFFOLD) \u2014 Organized movement building independent verification pathways through open-source model development, collaborative red-teaming, and transparent safety evaluation. Experiences constraint as temporary coordination failure with plausible sunset: as open-source models mature and demonstrate safety-capability tradeoffs empirically, the closure-based extraction mechanism loses force. Active enforcement of openness norms creates exit path."
-    },
-    {
-      "classification_type": "rope",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "Analytical Observer",
-      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (ROPE) \u2014 From the civilizational perspective, the constraint contains a genuine coordination function: the scientific problem of measuring AI safety requires shared methodology, baseline definitions of alignment and risk, and collective empirical evidence-gathering. The extraction is embedded in a necessary coordination mechanism rather than replacing it entirely. However, the high suppression (0.68) and theater ratio (0.79) suggest the extraction has come to dominate the coordination function."
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW FRAME (MOUNTAIN) — From a civilizational vantage, the verification gap appears as an inevitable feature of asymmetric information in advanced technology development: frontier labs will always have access advantages; external verification will always lag capability development; the structural problem is inherent to the domain, not contingent. This perspective risks naturalizing what is actually a contingent institutional arrangement (selective disclosure, competitive secrecy norms, regulatory capture dynamics). Engine will detect as false summit: the beneficiary structure reveals the 'natural' lag is actively constructed."
     }
   ],
   "omegas": [
     {
-      "id": "safety_claim_verifiability",
-      "question": "Can frontier lab safety claims be independently verified without access to model weights, training data, and internal evaluations?",
-      "resolution_mechanism": "Red-teaming outcomes from external researchers with vs without full model access; comparison of claimed vs discovered vulnerabilities; audit effectiveness metrics across restricted vs open systems",
-      "impact": "If verifiable without access: constraint is Rope (coordination achievable). If not: constraint is Snare (labs maintain unilateral control over truth claims).",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether safety claims are independently verifiable"
-    },
-    {
-      "id": "open_source_capability_parity",
-      "question": "Will open-source AI systems achieve capability parity with frontier closed-source systems, enabling empirical verification of safety-capability tradeoffs?",
-      "resolution_mechanism": "Benchmark progression comparison (MMLU, ARC, reasoning tasks); safety evaluation transfer from closed to open models; replication of frontier lab claims using open architecture",
-      "impact": "If yes: scaffold sunset is structural (open verification pathways become viable). If no: open-source remains limited to lower-risk domains, and closure-based extraction persists indefinitely.",
+      "id": "alignment_measurement_contingency",
+      "question": "Are laboratory safety evaluations measuring alignment robustly, or are they measuring labs' ability to demonstrate alignment to specific constituencies?",
+      "resolution_mechanism": "Post-deployment performance tracking: correlation between lab safety claims and actual system behavior under novel conditions outside training distribution. Independent red-teaming with different methodologies and threat models than labs employ internally.",
+      "impact": "If labs are measuring actual robustness: extractiveness drops (constraint is coordination with some labs winning the game legitimately). If labs are measuring stakeholder reassurance: extractiveness rises (constraint is pure extraction disguised as verification). Current state appears mixed — some labs conduct rigorous internal evals, others produce theater for governance signaling.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether open-source models will reach capability parity"
+      "description": "Whether safety evaluations measure actual robustness or governance theater"
     },
     {
-      "id": "regulatory_leverage_structure",
-      "question": "Can regulatory bodies credibly threaten lab access restrictions or deployment delays, or is the threat hollow (labs can relocate, obfuscate, or delay regulation indefinitely)?",
-      "resolution_mechanism": "Comparative analysis of enforcement outcomes across jurisdictions; testing of lab compliance with safety reporting requirements; measurement of actual consequences for non-compliance",
-      "impact": "If credible: regulatory perspective becomes mobile, classification shifts from constrained to powerful. If hollow: regulatory body is extractive victim, classification remains tangled_rope with higher suppression.",
+      "id": "external_verification_feasibility",
+      "question": "Is independent verification of frontier AI alignment claims technically feasible at the speed and scale required for governance, or is external verification structurally impossible without lab cooperation?",
+      "resolution_mechanism": "Technical investigation: can external researchers design evaluations of alignment that don't require access to model internals? Can behavioral testing (without weights access) establish sufficient confidence bounds? Comparison of verification timelines: how long for external red-teams vs internal lab evaluations on identical systems.",
+      "impact": "If feasible: suppression drops dramatically (constraints on access become contingent policy choice, not technical necessity). If impossible: suppression is structural; external verification requires lab cooperation by default, locking in the tangled-rope/snare asymmetry permanently.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether regulatory bodies have credible enforcement leverage"
+      "description": "Technical feasibility of independent AI safety verification without lab cooperation"
     },
     {
-      "id": "alignment_measurement_fundamentality",
-      "question": "Are current AI safety evaluation metrics measuring fundamental properties or circularly validating lab-preferred measurement procedures?",
-      "resolution_mechanism": "Meta-analysis of safety metric stability across labs and evaluators; identification of shared systemic blindspots across evaluation approaches; correlation of metrics with downstream actual alignment outcomes post-deployment",
-      "impact": "If fundamental: theater ratio should be lower (evaluation has real content). If circular: theater ratio should be higher (evaluation validates desired conclusions), and extraction is more severe.",
+      "id": "disclosure_timing_rationality",
+      "question": "Are labs' disclosure delays (announcing alignment claims only after capability deployment is imminent) driven by genuine safety caution or by incentives to complete capability development before external scrutiny can delay commercialization?",
+      "resolution_mechanism": "Timeline analysis: correlation between disclosure timing and deployment readiness across multiple labs and time periods. Comparison with disclosure patterns in regulated domains (pharmaceuticals, aviation). Interview data from internal safety teams about pressures on publication and communication timelines.",
+      "impact": "If driven by safety caution: suppression is justified (high disclosure risk justifies controlled access). If driven by commercialization incentives: suppression is extraction (timing manipulates the verification window to eliminate real-time oversight). Current evidence suggests mixed: some delays are safety-driven, some are deployment-driven.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "Whether safety metrics measure fundamental properties or validate preferred procedures"
+      "description": "Whether disclosure delays reflect safety caution or commercialization incentives"
+    },
+    {
+      "id": "scalable_oversight_existence",
+      "question": "Does a scalable external oversight mechanism exist (or can exist) that doesn't depend on labs' voluntary cooperation and transparency?",
+      "resolution_mechanism": "Policy and technical research: investigation of auxiliary oversight pathways (computation-level monitoring, independent capability testing, red-team networks, regulatory inspection protocols, third-party access mandates). Feasibility and cost analysis relative to lab cooperation requirements.",
+      "impact": "If such mechanisms exist: regulatory bodies can move from snare/tangled_rope to genuine rope through mandate and investment. If not: oversight will always depend on labs' consent, locking in the current extraction asymmetry. This is the critical omega for governance design.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether scalable oversight mechanisms exist independent of lab cooperation"
+    },
+    {
+      "id": "competitive_pressures_and_safety_disclosure",
+      "question": "To what extent do competitive pressures between frontier labs actually force safety disclosure, versus labs cooperating to maintain control over the verification narrative?",
+      "resolution_mechanism": "Comparative analysis: do labs' safety claims converge on similar methodologies and findings (suggesting coordination) or diverge (suggesting independent verification)? Investigation of information-sharing among labs about verification failures and safety incidents. Empirical test: when one lab discloses a safety limitation, do competitors rush to disclose similar limitations or maintain competitive silence?",
+      "impact": "If competitive pressure is strong: market forces may enforce verification transparency without regulation (constraints weaken toward rope). If labs maintain coordination on disclosure: competitive pressure is illusory, and suppression remains high (extraction remains structural). Current evidence: mixed. Some competition in safety claims, but also clear patterns of joint messaging on epistemic limitations.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether competitive pressure enforces safety disclosure or labs maintain coordinated narrative control"
+    },
+    {
+      "id": "false_summit_natural_law_framing",
+      "question": "Is the verification bottleneck a natural consequence of asymmetric information in advanced technology development, or a contingent institutional arrangement that benefits frontier labs and could be restructured through governance?",
+      "resolution_mechanism": "Comparative analysis across regulated domains: verification structures in pharmaceuticals, aviation, finance, nuclear. Do all advanced technology fields show similar verification asymmetries, or do regulatory structures create alternatives? Investigation of counterfactual governance models (mandatory third-party access, computational inspection protocols, independent lab networks) and their technical and political feasibility.",
+      "impact": "If natural law: current institutional structure is the least-bad option; efforts to increase verification access will be costly and marginal. If contingent: alternative governance structures could dramatically reduce extraction and suppression. Engine will flag this as false summit candidate — the beneficiary structure (frontier labs benefit from current disclosure norms) suggests the 'natural' asymmetry is actively maintained.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether verification asymmetry is inherent to advanced tech or contingent on governance structure"
     }
   ],
   "measurements": [
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.52
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
       "time_point": 3,
-      "value": 0.65
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
       "time_point": 6,
-      "value": 0.73
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 9,
-      "value": 0.79
+      "value": 0.65
     },
     {
       "metric": "base_extractiveness",
@@ -155,54 +170,66 @@
     {
       "metric": "base_extractiveness",
       "time_point": 3,
-      "value": 0.47
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
       "time_point": 6,
-      "value": 0.54
+      "value": 0.58
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 9,
-      "value": 0.58
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.68
     }
   ],
   "interval": {
     "start": 0,
-    "end": 9
+    "end": 6
   },
   "commentary": {
-    "narrative_context": "AI safety verification embodies a structural tension between the capability researchers' incentive to advance capabilities rapidly and the safety community's need to independently verify alignment claims before deployment. The constraint exhibits simultaneous coordination (shared need for safety measurement methodologies) and asymmetric extraction (frontier labs control what gets verified, with whom, and by which metrics). The high theater ratio (0.79) reflects that safety evaluations of closed-source systems are largely performative \u2014 external evaluators cannot access weights, training data, or internal probing results, forcing reliance on lab-conducted tests and disclosures. The measured extractiveness progression (0.38 \u2192 0.58) shows increasing exploitation as capability gaps widen and safety assessment falls further behind: the labs gain unilateral power to set verification standards as the systems become harder to independently understand. This constraint classifies differently across all six types depending on observer position, making it diagnostic for how indexical power relations reshape epistemology.",
+    "narrative_context": "AI safety verification embodies a core structural tension in contemporary AI governance: frontier capability labs have both the resources and incentive to develop advanced safety evaluations, yet they also control what gets verified, with whom, and by which metrics. This creates a dual-nature constraint that exhibits both genuine coordination (the field needs shared safety measurement methodologies) and systematic extraction (labs capture the verification authority and can suppress or reframe safety findings that threaten deployment timelines). The constraint's architecture parallels verification bottlenecks in other advanced-technology domains (pharmaceuticals, aviation) but with a critical difference: those domains have regulatory inspection authority and mandatory third-party access protocols. AI safety verification remains largely voluntary and lab-controlled. The extractiveness value (0.58) reflects moderate asymmetric power: frontier labs benefit from controlling the verification narrative, but genuine coordination value exists (safety evaluation is necessary and labs do conduct sophisticated internal reviews). The suppression value (0.68) is high because access to models, training data, and internal evaluations is heavily restricted, and independent verification without lab cooperation is technically difficult. The theater ratio (0.65) captures the increasing performative dimension: public safety narratives, red-team reports, and alignment claims are increasingly produced with stakeholder reassurance as the primary audience rather than robust truth-tracking. The constraint has strengthened over the interval (2020-2026) as deployment pressures have mounted and labs have developed more sophisticated control over the verification narrative.",
     "key_agents": [
-      "Frontier AI Labs: Primary beneficiary (powerful/mobile) \u2014 control capability disclosure timing, data access, and safety evaluation procedures; extract legitimacy from coordinated safety validation while maintaining proprietary control",
-      "Public Alignment Assurance: Primary victim (powerless/trapped) \u2014 abstract collective good with no mechanism for independent verification; cannot exit; bears full cost of false positive certifications",
-      "Independent Safety Researchers: Secondary victim (moderate/constrained) \u2014 face resource barriers, model access restrictions, and career risk of contradicting frontier labs; constrained to validating role rather than scrutinizing role",
-      "Regulatory Governance Bodies: Organized victim (organized/constrained) \u2014 depend on lab cooperation for actual safety data; cannot credibly threaten enforcement without lab compliance; trapped in asymmetric information position",
-      "Open-Source Safety Coalition: Organized counterweight (organized/constrained) \u2014 building alternative verification pathways with explicit sunset: as open-source capabilities mature, closure-based extraction loses force",
-      "Academic Peer Review System: Institutional actor (institutional/arbitrage) \u2014 maintains performative review ritual for safety papers; sees own process as degraded but continues through convention; benefits from continued participation in legitimizing process",
-      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 recognizes genuine coordination function (shared need for safety methodology) embedded within extraction mechanism; at risk of naturalizing institutional arrangement as immutable necessity"
+      "Frontier AI Labs (Anthropic, OpenAI, Google DeepMind, Meta, others): Primary beneficiaries (institutional/arbitrage) — control verification scope, methodology, timeline, and narrative. Benefit from selective disclosure and claims of alignment without exposing full evaluation data.",
+      "Independent Safety Researchers: Primary victims (powerless/trapped) — excluded from access to systems that most need evaluation. Cannot verify claims, forced to evaluate based on lab-selected information. Bear reputational cost if labs' claims prove false.",
+      "Public Epistemic Commons: Victim collective (powerless/trapped) — absorbs systemic risk from unverified alignment claims. No mechanism to verify or enforce truthfulness. Bears cost of misallocated research attention and delayed genuine safety solutions.",
+      "Safety-Focused Researchers Inside Labs: Secondary victims (moderate/constrained) — have access and resources but face asymmetric power. Internal findings that threaten deployment timelines can be suppressed, delayed, or reframed. Career incentives aligned with capability progress, not safety truth.",
+      "Regulatory Bodies and Oversight Boards: Secondary victims (organized/constrained) — mandate to verify but depend on labs' voluntary cooperation. Epistemically asymmetric (lack technical expertise and model access). Labs control information flow to regulators.",
+      "Academic Safety Community: Institutional actor (institutional/arbitrage) — maintains scholarly legitimacy but access to frontier systems has declined. Theater: produces benchmarks, frameworks, publications that signal rigor while lacking influence on actual frontier verification.",
+      "Analytical Observer: Vantage point that risks naturalizing contingent institutional arrangements as inherent to advanced AI development."
     ],
-    "logic_rationale": "Extractiveness (0.58): Moderate-high. Frontier labs extract significant value from the verification bottleneck \u2014 they capture reputation/legitimacy benefits from safety validation while controlling what gets measured and by whom. The value reflects labs' unilateral power to set verification standards and withhold data citing IP sensitivity. Suppression (0.68): High. Substantial barriers to independent verification include proprietary model access restrictions, IP protection claims, computational resource requirements for red-teaming, and career risk for researchers who contradict frontier lab safety claims. Reputational cost of challenging lab certifications is substantial. Theater ratio (0.79): Very high and rising (0.52 \u2192 0.79). Safety evaluations of closed-source systems cannot meaningfully verify training procedures, dataset composition, or adversarial robustness. Reviewers assess lab-provided evaluation results but cannot independently probe systems. The theater has increased as capability gaps widen, making independent verification harder. This rising trend indicates Goodhart drift \u2014 labs optimize metric performance rather than underlying safety, with external evaluators unable to detect the substitution. Claimed type (tangled_rope): Justified by presence of genuine coordination function (need for shared safety methodology and measurement standards) alongside asymmetric extraction (labs control disclosure and verification). Labs benefit from coordination (enables safety validation to proceed) while extracting unilateral control over what counts as safety evidence.",
-    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. Frontier labs experience Tangled Rope \u2014 they solve the real coordination problem of safety measurement while enjoying unilateral control over disclosure. The open-source coalition experiences Scaffold \u2014 they see the closure-based extraction as a temporary coordination failure with an explicit sunset (open capabilities mature, proprietary closure becomes less valuable). Regulatory bodies experience Tangled Rope from a constrained position \u2014 they must coordinate with labs to govern them but lack enforcement leverage. Independent safety researchers experience Snare \u2014 trapped in validating role with constrained alternatives (lose relevance if they contradict labs). Public alignment assurance experiences maximum Snare \u2014 powerless and trapped with no verification mechanism. The academic peer review system experiences Piton \u2014 performative ritual maintained through convention despite degraded verification capacity. The analytical observer at civilizational scope risks a false Rope classification (pure coordination) if they ignore the suppression and theater metrics \u2014 the constraint is coordination *corrupted by* extraction, not pure coordination.",
-    "directionality_logic": "Each agent's directionality (d) reflects their structural position relative to the verification bottleneck. Frontier labs benefit from the constraint (low d, ~0.15): they extract legitimacy from safety validation while maintaining proprietary control. D is not zero because they also face real constraints from safety requirements \u2014 they must coordinate with the safety community, even as they maintain control. Independent safety researchers occupy the intermediate position (high d, ~0.75): they face extraction from labs' unilateral control but are not entirely powerless (they can choose to engage or not, though with career costs). Public alignment assurance has maximum d (~0.95): it is the pure target of extraction with no exit options and no power. Regulatory bodies occupy high-d position (~0.80): they are meant to govern labs but depend on lab cooperation, inverting their intended power relationship. The mathematical directionality reflects these structural relationships: beneficiary labs derive low-d (negative chi contribution), victim agents derive high-d (positive chi contribution). The constraint's effective extractiveness (chi) is shaped by these d values: from the lab perspective it is low extraction (they experience rope); from the public perspective it is maximum extraction (they experience snare).",
-    "mandatrophy_analysis": "MANDATROPHY PARTIALLY RESOLVED: This constraint resolves the classical mandatrophy (coordination vs extraction) by showing that AI safety verification genuinely contains both elements, but extraction has come to dominate the coordination function. The coordination element is real and necessary: there must be shared methodologies, baselines, and empirical evidence-gathering for AI safety. The extraction element is also real and is increasing: labs use their control over systems and safety evaluation to shape what safety means, what counts as evidence, and what conclusions are acceptable. The mandatrophy is not 'which element is true?' but 'has extraction colonized coordination?' The measurements (theater_ratio rising 0.52 \u2192 0.79, extractiveness rising 0.38 \u2192 0.58) suggest extraction is increasing relative to genuine coordination. The open-source coalition perspective suggests a structural resolution path: if open-source systems reach capability parity, the closure-based extraction mechanism loses force because alternative verification pathways become viable. Until that point, the constraint remains tangled_rope with suppression high enough to prevent escape (0.68) \u2014 independent researchers cannot credibly exit without losing relevance to the most impactful systems."
+    "logic_rationale": "Extractiveness (0.58): Moderately high. Frontier labs derive substantial benefit from controlling verification: they capture the ability to define 'alignment,' select which safety findings are disclosed, control the timeline for external scrutiny, and frame their own claims without independent contradiction. However, extractiveness is not at snare levels (0.72+) because genuine coordination value exists — labs do conduct sophisticated internal safety evaluations, and shared measurement methodologies have real validity. The extracted value is asymmetric access to verification authority, not pure rent-seeking. The measurement trajectory (0.38 → 0.48 → 0.58) shows extraction increasing as deployment pressures mount and labs have developed more sophisticated disclosure strategies. Suppression (0.68): High. Access restrictions to model weights, training data, and internal evaluations are substantial. Independent verification without lab cooperation is technically difficult (evaluating black-box systems is slower and less rich than white-box evaluation). Career and publication barriers suppress critical safety findings from reaching public discourse. However, suppression is not total (0.80+) because: (1) some information does leak (former employees, leaked documents, side-channel inferences); (2) some labs voluntarily share more access than others; (3) regulatory and media pressure is gradually creating disclosure norms. The trajectory shows suppression increasing (0.52 → 0.60 → 0.68) as labs have invested in more sophisticated information control and as deployment timelines compress oversight windows. Theater ratio (0.65): Moderate-high and rising. Labs produce public safety narratives, red-team reports, and alignment claims that demonstrate rigor and methodological care (theater function). But increasingly the primary audience is stakeholder reassurance (policymakers, investors, media) rather than rigorous truth-tracking. Internal safety methodologies are often more sophisticated than external claims suggest. The trajectory (0.35 → 0.52 → 0.65) reflects the maturation of safety-as-communication strategy: as deployment timelines accelerated, labs invested in more sophisticated public safety narratives. Early labs (2020) relied more on technical demonstration and less on narrative; recent labs (2026) have integrated dedicated safety communication into business strategy.",
+    "perspectival_gap": "This constraint produces maximal perspectival divergence across observation positions. Independent safety researchers see a snare: trapped outside verification loops, forced to accept lab claims, bearing reputational cost for false positives. Frontier labs see rope: coordination mechanism for achieving necessary safety evaluation while protecting competitive advantage. Regulatory bodies see tangled rope: genuine mandate to verify but asymmetric power in access and timeline. Internal safety researchers see tangled rope from the other direction: legitimate function (safety is necessary) but extraction (findings can be suppressed). The academic safety community sees piton: maintains institutional legitimacy but functional role has declined as access to frontier systems contracted. The analytical observer risks seeing mountain (verification gap as inherent to asymmetric information) but the structural data reveals this as false summit — the 'natural' lag is actively constructed through labs' control of verification narratives and access policies. The key diagnostic insight: the constraint's type depends entirely on whether you have agency over the verification process. Those with agency (frontier labs) see rope; those without agency (independent researchers, epistemic commons) see snare.",
+    "directionality_logic": "Frontier labs benefit from controlling the verification narrative, so their d value is low (around 0.15-0.20): they are net beneficiaries with arbitrage exit options. Independent safety researchers are victims without exit options, so their d value is high (around 0.92-0.98): they experience maximum extraction. Regulatory bodies are partially victims (dependent on lab cooperation) with some exit options (they could mandate access), so d is moderate-high (around 0.65-0.75). Internal safety researchers are mixed: they benefit from access and resources but suffer extraction of findings, so d is moderate (around 0.55-0.65). The engine derives these d values from the beneficiary/victim declarations plus exit options, then applies the sigmoid f(d) to compute experienced extractiveness. Beneficiaries with arbitrage options experience suppressed chi; victims without exit experience amplified chi. Regulatory bodies' moderate d reflects that they have some structural power (mandate authority) but limited practical power (labs can threaten regulatory exit). No directionality overrides are needed — the structural declarations capture the asymmetry.",
+    "mandatrophy_analysis": "The mandatrophy in AI safety verification is whether the constraint is a legitimate coordination problem (requiring shared safety measurement methods and verification infrastructure) or an illegitimate extraction mechanism (labs capturing verification authority to suppress scrutiny). The resolution: both. The constraint is a genuine tangled rope, not a pure snare or pure rope. The coordination function is real — safety evaluation is necessary, shared methodologies have validity, and labs do conduct sophisticated internal reviews. The extraction is equally real — labs use their control of access and timeline to suppress findings and manipulate the verification narrative. Neither reading is wrong; the constraint genuinely exhibits both. The mandatrophy resolves through the indexical structure: from the beneficiary's position (institutional/arbitrage), the constraint is rope with primarily coordination benefit. From the victim's position (powerless/trapped), the constraint is snare with primarily extraction cost. From the analytical observer's position at the appropriate organizational level (organized/constrained regulators), the constraint is tangled rope with both functions present. The analytical claim is tangled rope because: (1) both beneficiaries and victims exist and are essential to the constraint's operation; (2) active enforcement is required (labs must enforce access restrictions); (3) genuine coordination value exists (safety evaluation is legitimate); (4) asymmetric extraction is present (labs benefit from controlling verification authority). The false summit detection triggers because the constraint has identifiable beneficiaries (frontier labs benefit from current disclosure norms) — suggesting what appears as a natural verification bottleneck (inevitable asymmetry in advanced tech) is actually a constructed constraint that serves lab interests."
   },
   "boltzmann": {
-    "coordination_type": "information_standard"
+    "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "frontier_model_access",
-      "safety_metric_standardization",
-      "research_publication_asymmetry"
+      "ai_capability_governance",
+      "frontier_lab_regulatory_capture",
+      "open_safety_research_ecosystems"
     ],
-    "dual_formulation_note": "AI safety verification decomposes into three linked constraints: (1) the verification bottleneck itself (this story: high extraction around disclosure and validation control); (2) model access barriers (upstream: technical property that labs control access to complex systems); (3) safety metric standardization (downstream: pressure to use lab-preferred evaluation procedures). Each has distinct \u03b5 and perspectives. The verification bottleneck story is the middle constraint linking upstream access control to downstream metric standardization."
+    "dual_formulation_note": "AI safety verification is downstream of specific capability claims (GPT-X safety properties, Claude alignment, Gemini robustness) and upstream of governance-level AI deployment decisions. The verification constraint has its own extractiveness (0.58) distinct from the underlying capability claims' epistemic status (which could be mountain-grade if the safety claims prove universally correct, or snare-grade if they prove systematically false). The network links: capability claims → verification bottleneck → regulatory decisions. A second formulation layer: the constraint exists within a broader 'AI progress governance' system that includes frontier lab autonomy (upstream), verification methodology development (parallel), and regulatory authority (downstream). Each level has its own constraint structure; they are linked through this network."
   },
-  "directionality_overrides": [
-    {
-      "power_atom": "institutional",
-      "d_value": 0.78
-    }
-  ]
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "high_moderate",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "ai_capability_governance"
+    ]
+  }
 }

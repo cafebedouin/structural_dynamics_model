@@ -4,25 +4,27 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "fbc"
+    "measurement_id_prefix": "filter",
+    "story_uid": "bbc8f6d3-c7b9-49f0-9bea-4e994049cc64",
+    "created_at": "2026-02-26T14:33:22Z"
   },
   "base_properties": {
     "extractiveness": 0.58,
-    "suppression": 0.65,
-    "theater_ratio": 0.68,
+    "suppression": 0.68,
+    "theater_ratio": 0.54,
     "claimed_type": "tangled_rope",
     "human_readable": "Filter Bubble Closure in Algorithmic Content Systems",
     "topic_domain": "media/information_systems/political_economy",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "platform_owners",
-      "advertisers",
-      "engagement_optimizers"
+      "platform_operator",
+      "high_value_creators",
+      "engagement_optimized_advertisers"
     ],
     "victims": [
-      "content_diversity",
+      "marginal_creators",
       "epistemic_commons",
-      "marginalized_creators"
+      "preference_diversity"
     ]
   },
   "perspectives": [
@@ -32,8 +34,8 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Epistemic Commons",
-      "comment": "PERSPECTIVE 1: EPISTEMIC COMMONS (SNARE) \u2014 The information ecosystem bears extraction with no exit or voice. Filter bubbles systematically suppress exposure to disconfirming information, marginalizing diverse viewpoints and alternative narratives. The commons cannot organize or appeal; it has no structure for agency. Maximum extraction without mitigation."
+      "label": "The Marginalized Creator",
+      "comment": "PERSPECTIVE 1: MARGINALIZED CREATOR (SNARE) — Trapped by algorithmic suppression with no exit capacity. Visibility is gatekept by engagement metrics they cannot influence. Maximum experienced extraction — the algorithm suppresses their content systematically; they bear the cost of closure while benefiting populations capture the gains."
     },
     {
       "classification_type": "snare",
@@ -41,17 +43,8 @@
       "time_horizon": "generational",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "Marginalized Content Creators",
-      "comment": "PERSPECTIVE 2: MARGINALIZED CONTENT CREATORS (SNARE) \u2014 Creators outside algorithmic preference clusters face structural barriers to discoverability. Algorithmic sorting by engagement preference systematically suppresses minority viewpoints, niche communities, and low-engagement-rate content. Creators have no exit from the platform ecosystem (dependency on reach) and no meaningful avenue to escape algorithmic suppression. The constraint is enforced invisibly through ranking mechanisms rather than explicit prohibition."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "Information Researchers and Journalists",
-      "comment": "PERSPECTIVE 3: INFORMATION RESEARCHERS AND JOURNALISTS (TANGLED ROPE) \u2014 These agents benefit from algorithmic sorting (locating relevant information quickly) while bearing extraction costs (suppression of alternative sources, reduced access to information outside their filter bubble, dependence on platform metrics). Career incentives align with viral content, not comprehensiveness. High cost to exit (audience dependency) but some agency in narrative framing."
+      "label": "The Epistemic Commons",
+      "comment": "PERSPECTIVE 2: EPISTEMIC COMMONS (SNARE) — Structural victim with no agency. Filter bubble closure degradates information diversity; the commons cannot exit or organize. Disconfirming evidence, marginal viewpoints, and minority perspectives are systematically suppressed. This is pure extraction from a commons good with no coordination benefit to the commons itself."
     },
     {
       "classification_type": "rope",
@@ -59,8 +52,26 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Platform Owners and Engagement Optimizers",
-      "comment": "PERSPECTIVE 4: PLATFORM OWNERS AND ENGAGEMENT OPTIMIZERS (ROPE) \u2014 Experience the filter bubble as a pure coordination solution: algorithmic sorting routes content to maximally receptive audiences, reducing exploration cost and optimizing engagement metrics. The constraint is functionally beneficial \u2014 engagement rates, advertising CPM, and user retention all improve. Beneficiaries have arbitrage options (can adjust algorithms, A/B test, pivot to alternative metrics) and experience the mechanism as coordination, not extraction."
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 3: PLATFORM OPERATOR (ROPE) — Experiences the filter bubble as coordination: routing content to receptive audiences reduces exploration costs, increases engagement, stabilizes user attention patterns. The platform benefits from algorithmic efficiency without perceiving acute extraction — their optimization function aligns with user retention. High arbitrage capacity (can adjust algorithms, modify incentives, or exit market); extraction runs inward from users."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Mainstream Creator",
+      "comment": "PERSPECTIVE 4: MAINSTREAM CREATOR (TANGLED ROPE) — Benefits from algorithmic amplification in their domain (established topic authority generates high engagement) while constrained by topic lock-in. The algorithm coordinates audience matching but also extracts by narrowing their viable content range. Exit is costly (migration to other platforms, audience loss) but possible at significant price. Mixed experience: real coordination benefit plus enforcement-backed confinement to profitable niches."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Engagement-Optimized Advertiser",
+      "comment": "PERSPECTIVE 5: ENGAGEMENT-OPTIMIZED ADVERTISER (ROPE) — Beneficiary. The filter bubble concentrates attention into predictable demographic segments with high engagement correlation. Algorithmic routing solves their coordination problem: reaching receptive audiences at scale. Low extraction experienced — they are willing participants in the attention capture mechanism. High arbitrage (can adjust bids, switch platforms, segment audiences)."
     },
     {
       "classification_type": "piton",
@@ -68,155 +79,168 @@
       "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "Legacy News Institutions",
-      "comment": "PERSPECTIVE 5: LEGACY NEWS INSTITUTIONS (PITON) \u2014 Traditional media has internalized filter-bubble logic through editorial metrics and audience-targeting strategies. The constraint persists as theatrical performance of 'personalization' and 'relevance' while the primary function (information distribution) has been captured by platform algorithms. Legacy institutions maintain editorial standards ritually while ceding algorithmic gatekeeping to platforms. Theater ratio high, functional independence low."
-    },
-    {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "Open-Source and Decentralized Information Alternatives",
-      "comment": "PERSPECTIVE 6: OPEN-SOURCE AND DECENTRALIZED INFORMATION ALTERNATIVES (SCAFFOLD) \u2014 Organized coalitions (RSS feeds, open protocols, mastodon instances, wikis, independent news platforms) view filter bubbles as temporary platform-dependent pathologies. These actors are building alternative information architectures with explicit filter-bubble resistance: transparent algorithms, user control over sorting, non-engagement-based ranking. The scaffold is real \u2014 some users have migrated to alternatives \u2014 but adoption remains constrained by network effects and switching costs. Sunset clause: as decentralized platforms mature and federation gains scale, the platform-dependent filter bubble loses structural necessity."
+      "label": "The Content Moderation Authority",
+      "comment": "PERSPECTIVE 6: CONTENT MODERATION AUTHORITY (PITON) — Algorithmic content moderation and filter bubble closure appear as distinct functions but operate through identical mechanisms (suppressing visibility). Moderation purports to address harm; the filter bubble purports to optimize engagement. But both work via algorithmic invisibility. Theater ratio is high because moderation justifies itself as protective while the filter bubble operates silently. As a moderation tool, the filter bubble is largely performative — it addresses engagement-as-harm rather than direct content removal. Piton classification reflects this theatrical maintenance of institutional legitimacy."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "powerful",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "Corporate Advertisers and Marketers",
-      "comment": "PERSPECTIVE 7: CORPORATE ADVERTISERS AND MARKETERS (TANGLED ROPE) \u2014 Benefit from filter bubbles (targeted reach, reduced advertising waste, higher conversion rates) while bearing coordination costs (complexity of microtargeting, ethical liability, regulatory scrutiny). Can exit by shifting budgets but mobile options are constrained (Google/Meta duopoly captures majority ad spend). Experience extraction as a coordination necessity with asymmetric benefit distribution toward platforms."
-    },
-    {
-      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "universal",
-      "label": "The Analytical Observer (Natural Law View)",
-      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some degree of information filtering is inherent to any system that must prioritize among infinite possible inputs. Cognitive bandwidth is finite; some sorting mechanism is necessary. This perspective naturalizes algorithmic sorting as a mathematical necessity. However, the structural data contradicts this: filter-bubble enforcement via engagement metrics is a design choice, not a law of nature. The engine will flag this as a false summit, revealing that 'information is too abundant to process without filtering' naturalizes what is actually a contingent choice about WHO DECIDES the sorting criteria."
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) — From a civilizational/global perspective, algorithmic content routing solves a genuine coordination problem: infinite information exceeds finite human attention. The filter bubble is the engineered solution to bounded rationality. However, the solution is structurally asymmetric — it coordinates attention flows while extracting value from marginalized sources and the epistemic commons. The analytical view sees both the coordination function (real) and the extraction mechanism (real), making this tangled rope not false summit."
     }
   ],
   "omegas": [
     {
-      "id": "algorithmic_vs_structural_bubble",
-      "question": "Is the filter bubble caused by algorithmic recommendation design or by structural properties of human preference and social networks that algorithms merely implement?",
-      "resolution_mechanism": "Comparative analysis of algorithmic vs non-algorithmic information systems; measurement of bubble formation on platforms with no recommendation algorithm; cross-platform studies controlling for algorithm versus user selection behavior",
-      "impact": "If algorithmic: filter bubble is contingent and removable (Scaffold/Rope classification rises). If structural: filter bubble is inherent to information systems (Mountain classification rises). If both: classification depends on the degree of algorithmic amplification.",
+      "id": "algorithmic_intent_ambiguity",
+      "question": "Is the filter bubble closure primarily a technical consequence of engagement optimization or an intentional mechanism to suppress unwanted viewpoints?",
+      "resolution_mechanism": "Analysis of platform design decisions: A/B testing evidence on algorithmic tuning; internal documentation of engagement metrics vs. diversity metrics; testimony from platform engineers on objective functions; comparison of algorithmic behavior pre/post policy changes",
+      "impact": "If technical consequence: coordination-focused Rope interpretation gains strength; extraction is incidental byproduct. If intentional design: snare/tangled_rope classification strengthens; extraction is primary function. Changes effective extractiveness f(d) across all perspectives by 0.15-0.30.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether filter bubble is technical artifact or intentional extraction mechanism"
+    },
+    {
+      "id": "marginality_causation_ambiguity",
+      "question": "Does algorithmic suppression create marginality (the algorithm makes creators marginal) or does it reflect pre-existing marginality (the algorithm amplifies existing popularity disparities)?",
+      "resolution_mechanism": "Longitudinal analysis: creators' visibility and engagement before/after platform algorithm changes; cross-platform comparison (same creator on multiple platforms with different algorithms); network analysis of content flow patterns under different engagement functions",
+      "impact": "If creates marginality: extraction mechanism is primary (snare/tangled_rope strengthened). If reflects marginality: coordination mechanism dominates (rope strengthened); the constraint may be low-cost information routing rather than high-cost suppression.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether bubbles are caused by algorithms or by structural human preferences"
+      "description": "Whether algorithm creates or reflects creator marginality"
     },
     {
-      "id": "engagement_metric_necessity",
-      "question": "Is engagement-rate optimization a necessary business model for platform sustainability or a chosen metric that could be replaced by alternative revenue models?",
-      "resolution_mechanism": "Historical analysis of platform economics; identification of revenue models not dependent on engagement metrics; measurement of sustainability under different ranking systems",
-      "impact": "If necessary: engagement-driven filter bubbles are inherent to platform economics (Tangled Rope/Snare). If contingent: alternative metrics (time-well-spent, epistemic diversity) are structurally viable (Scaffold/Rope classification rises).",
+      "id": "exit_barrier_measurement",
+      "question": "What is the actual cost structure for users to exit algorithmic filter bubbles (consume disconfirming content, follow non-recommended accounts, use non-algorithmic feeds)?",
+      "resolution_mechanism": "User behavior studies: friction measurement for accessing algorithmic feeds vs. chronological feeds; success rates for users attempting to diversify content consumption; alternative platform adoption patterns; effort quantification for bubble escape",
+      "impact": "If exit costs are low: exit_options for users should be 'constrained' not 'trapped'; classification shifts to tangled_rope from multiple perspectives. If high: 'trapped' classification confirmed; snare interpretation strengthened.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Cost structure for users to exit algorithmic filter bubbles"
+    },
+    {
+      "id": "diversity_metric_existence",
+      "question": "Do platforms internally measure and optimize for viewpoint diversity, or is diversity optimization absent from the objective functions platforms use?",
+      "resolution_mechanism": "Analysis of platform transparency reports and internal documentation; interviews with platform ML teams on diversity constraints in ranking functions; comparison of diversity metrics against engagement metrics in system design; testing for diversity-aware ranking alternatives",
+      "impact": "If diversity metrics exist and are weighted: coordination function is more robust (rope interpretation gains strength). If absent: extraction is unimpeded (snare/tangled_rope strengthened). Directly affects suppression value 0.10-0.20.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether engagement optimization is economically necessary"
+      "description": "Whether platforms optimize for viewpoint diversity or engagement-only"
     },
     {
-      "id": "user_agency_in_bubble_formation",
-      "question": "To what extent do filter bubbles reflect algorithmic imposition versus user preferences for homophilous content and echo chambers?",
-      "resolution_mechanism": "A/B testing with algorithm-disabled content feeds; user studies on preference for diverse vs homogeneous information; historical analysis of information-seeking behavior pre-algorithm",
-      "impact": "If predominantly user-driven: suppression metric (responsibility) should decrease; victims classification uncertain. If predominantly algorithm-driven: suppression metric sustained; victims classification confirmed.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Degree of user agency versus algorithmic imposition in bubble formation"
-    },
-    {
-      "id": "decentralization_scalability",
-      "question": "Can decentralized/open-protocol information systems achieve sufficient user adoption and feature parity with centralized platforms to constitute a viable sunset for the filter-bubble constraint?",
-      "resolution_mechanism": "Longitudinal tracking of federation adoption (Mastodon, Bluesky, RSS revival); measurement of network effects and switching costs; comparative feature analysis with dominant platforms",
-      "impact": "If viable: Scaffold perspective is structural and sunset is real (Extract extractiveness declining, theater ratio rising). If not viable: Scaffold is aspirational and decentralization is a false exit option.",
+      "id": "creator_preference_autonomy",
+      "question": "Do creators actively prefer algorithmic routing of their content to receptive audiences, or is this preference itself shaped by the filter bubble's enforcement mechanism?",
+      "resolution_mechanism": "Qualitative research: creator interviews about content strategy preferences pre/post algorithm exposure; comparison of creator choices on platforms with algorithmic vs. chronological feeds; analysis of creator stated preferences vs. revealed preferences (topic choices under algorithm exposure)",
+      "impact": "If autonomously preferred: coordination function is genuine; rope classification robust. If shaped by enforcement: apparent preference is artifact of suppression; extraction is disguised as coordination.",
       "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether creator routing preferences are autonomous or enforcement-shaped"
+    },
+    {
+      "id": "commons_recovery_timescale",
+      "question": "If algorithmic filter bubbles were removed, how long would the epistemic commons require to recover diversity of viewpoints and creator visibility distribution?",
+      "resolution_mechanism": "Counterfactual analysis of platforms that removed algorithmic routing (timeline of Reddit's r/all, early Twitter chronological feed); simulation of algorithmic removal scenarios; measurement of viewpoint diversity recovery rates; comparison of creator distribution metrics post-policy change",
+      "impact": "If recovery < 1 year: commons damage is reversible; constraint is tangled_rope with recovery pathway. If recovery > 10 years: commons damage is severe and persistent; snare classification strengthened for epistemic commons perspective.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether decentralized platforms can compete with incumbent centralized platforms"
+      "description": "Timescale for epistemic commons recovery after algorithmic removal"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.35,
+      "id_override": "filter_extract_t0"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 5,
-      "value": 0.48
+      "value": 0.48,
+      "id_override": "filter_extract_t5"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.58
+      "value": 0.58,
+      "id_override": "filter_extract_t10"
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.5
+      "value": 0.38,
+      "id_override": "filter_theater_t0"
     },
     {
       "metric": "theater_ratio",
       "time_point": 5,
-      "value": 0.62
+      "value": 0.46,
+      "id_override": "filter_theater_t5"
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.68
+      "value": 0.54,
+      "id_override": "filter_theater_t10"
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.62
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52,
+      "id_override": "filter_suppress_t0"
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.75
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.62,
+      "id_override": "filter_suppress_t5"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.68,
+      "id_override": "filter_suppress_t10"
     }
   ],
   "interval": {
     "start": 0,
-    "end": 15
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "Filter bubble closure in algorithmic content systems creates a constraint where platform-optimized information routing systematically suppresses exposure to disconfirming content, alternative viewpoints, and marginalized creators. The constraint exhibits structural hybridity: it is genuinely coordinative (solves the problem of routing content to receptive audiences, reducing information exploration costs) while simultaneously extractive (concentrates attention and advertising value toward high-engagement clusters, suppressing epistemic diversity). The extractiveness has increased over the measurement interval as algorithms have become more sophisticated and the economic dependence on engagement metrics has deepened. Theater ratio tracks algorithmic sorting's performance of 'personalization' and 'relevance' while the actual function (content gatekeeping) increasingly serves platform financial interests rather than user information quality. The constraint's eight-perspective structure reveals the fundamental tension: beneficiaries (platforms, advertisers, optimizers) experience coordination; powerless agents (epistemic commons, marginalized creators) experience extraction; organized alternatives (decentralized platforms) see a temporary problem with a sunset; and analytical observers risk naturalizing a contingent design choice as a law of human cognition.",
+    "narrative_context": "Filter bubble closure in algorithmic content systems creates a structurally hybrid constraint that solves a genuine coordination problem (routing infinite content to finite attention) while simultaneously extracting attention value, suppressing marginal creators, and degradating the epistemic commons. The constraint operates through algorithmic invisibility — users are not told what content is suppressed, why it is suppressed, or what alternatives exist. Marginalized creators face systematic visibility suppression with no appeal mechanism. The epistemic commons loses viewpoint diversity through mechanisms that appear neutral and technical. Platform operators experience the system as pure coordination (engagement optimization), beneficiary advertisers experience it as audience routing efficiency, and trapped users/creators experience it as snare. The core tension is between two real coordination functions (attention routing and engagement optimization) and real extraction (value concentration toward high-engagement content and high-paying advertisers). Unlike pure snares, the filter bubble cannot be eliminated without degradating user experience; unlike pure ropes, it cannot be justified purely on coordination grounds without naturalizing the suppression. This is tangled rope with theater ratio rising over time — the coordination framing increasingly disguises the extraction mechanism as platforms refine algorithmic suppression and develop sophisticated moderation justifications.",
     "key_agents": [
-      "Platform Owners and Engagement Optimizers: Primary beneficiary (institutional/arbitrage) \u2014 capture advertising value and user attention concentration; experience constraint as coordination mechanism",
-      "Advertisers and Marketers: Secondary beneficiary (powerful/mobile) \u2014 benefit from targeted reach and reduced advertising waste; face complexity costs and regulatory risk",
-      "Epistemic Commons: Primary victim (powerless/trapped) \u2014 information diversity systematically suppressed; bears extraction with no voice or exit option",
-      "Marginalized Content Creators: Primary victim (powerless/trapped) \u2014 face algorithmic suppression outside engagement-optimized clusters; depend on platforms with no meaningful exit",
-      "Information Researchers and Journalists: Secondary victim (moderate/constrained) \u2014 benefit from relevant content routing; suffer from reduced source diversity and filter-bubble dependency",
-      "Legacy News Institutions: Institutional actor (institutional/constrained) \u2014 maintain editorial standards theatrically while ceding algorithmic gatekeeping to platforms; see own constraint as piton",
-      "Decentralized Information Alternatives: Organized agents (organized/constrained) \u2014 building escape routes through RSS, federation, open protocols; see filter bubbles as temporary platform pathology",
-      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing algorithmic sorting as inherent cognitive necessity rather than contingent platform design"
+      "Platform Operator (Institutional/Arbitrage): Primary beneficiary — controls algorithmic routing and captures attention value; experiences system as coordination success",
+      "Marginalized Creator (Powerless/Trapped): Primary victim — faces systematic algorithmic suppression with no exit or appeal mechanism; experiences as snare",
+      "Epistemic Commons (Powerless/Trapped): Structural victim — information diversity is systematically suppressed; abstract collective good with no agency or exit",
+      "Mainstream Creator (Moderate/Constrained): Secondary victim — benefits from amplification in established topics while constrained by algorithmic topic lock-in; experiences tangled rope",
+      "Engagement-Optimized Advertiser (Institutional/Arbitrage): Beneficiary — receives concentrated attention routing to demographic segments; experiences as pure coordination and routing efficiency",
+      "Content Moderation Authority (Institutional/Constrained): Institutional actor — frames algorithmic suppression as protective moderation; maintains theater through dual framing",
+      "User (Moderate/Identity_Locked): Constrained agent whose preferences may be shaped by algorithm exposure; experiences reduced information exposure without recognizing suppression",
+      "Analytical Observer (Analytical/Analytical): Sees both coordination function (real) and extraction mechanism (real); confirms tangled rope classification"
     ],
-    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint exhibits genuine coordination function (content routing to receptive audiences reduces exploration cost and improves user experience) but increasingly serves platform profit maximization at the expense of epistemic diversity. The trajectory from 0.35 to 0.58 reflects accumulating algorithmic sophistication and economic dependence on engagement metrics. The value exceeds 0.46, triggering omega variables and measurement requirements, because the primary extraction mechanism (suppression of non-engagement-optimized content) now dominates the coordination function. Suppression (0.65): High. Barriers to access disconfirming information include: algorithmic ranking that deprioritizes low-engagement content, network effects that concentrate users in high-engagement clusters, economic incentives that reward platform participation over platform exit, and cognitive capture through repeated exposure to homophilous content. These barriers are not total (some users deliberately seek alternative sources) but are substantial and systematically structured. Theater ratio (0.68): High-moderate. The theatrical component is significant: platforms present algorithmic sorting as 'personalization' and 'relevance' while the actual function is engagement optimization and attention extraction. The performance of neutrality and user-centering masks extraction. Theater ratio increase from 0.50 to 0.68 reflects deepening gap between algorithmic rhetoric (giving you what you want) and function (capturing your attention for advertiser value).",
-    "directionality_logic": "Directionality values for each perspective derive from structural position within the constraint. Platform owners and optimizers as beneficiaries with arbitrage options experience low d (~0.10-0.15), producing negative \u03c7. Marginalized creators as trapped victims experience high d (~0.90), producing maximum \u03c7. Moderate agents (researchers, journalists) with constrained exit experience moderate-high d (~0.60-0.70). The analytical observer at civilizational scope with analytical exit experiences d ~0.72 but faces a false-summit detection signal: the natural-law framing naturalizes what the structural data reveals as a contingent design choice. The directionality pipeline computes d from power atom + exit options + beneficiary/victim status; no overrides needed because the structural relationships are unambiguous.",
-    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence from a single set of base properties. Platform owners and optimizers perceive pure coordination (Rope) \u2014 they are solving the legitimate problem of routing content efficiently. Marginalized creators perceive pure extraction (Snare) \u2014 algorithmic suppression with no alternatives. Moderate agents perceive hybridity (Tangled Rope) \u2014 they benefit from relevance routing and suffer from filter-bubble imprisonment. The epistemic commons perceives pure extraction (Snare) \u2014 the information environment is degraded with no self-healing mechanism. Legacy institutions perceive degradation of their own role (Piton) \u2014 editorial standards persist theatrically while platforms control actual gatekeeping. Decentralized alternatives perceive a temporary institutional arrangement (Scaffold) \u2014 the constraint exists only because incumbent platforms have network advantages; alternatives can build exit routes. The analytical observer risks perceiving immutable law (Mountain) \u2014 but the engine flags this as naturalization of what is actually a platform business model choice. This perspectival range is structurally justified: different power levels, exit options, and beneficiary/victim positions genuinely experience the same constraint differently.",
-    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The constraint qualifies as Tangled Rope because it meets all three gates: (1) active enforcement (algorithmic ranking is continuously maintained), (2) genuine beneficiaries (platforms, advertisers), and (3) clear victims (marginal creators, epistemic commons). The mandatrophy is resolved through perspectival decomposition: the Rope perspectives (platform owners' pure coordination) and Snare perspectives (powerless agents' pure extraction) are both correct descriptions of the constraint from their respective vantage points. The constraint is not mislabeled as either pure coordination or pure extraction \u2014 it genuinely coordinates information routing while extracting attention and diversity. The mandatrophy resolves by acknowledging that the primary function has become extraction-maximization (engagement metrics) subordinating the coordination function (content discovery). At t=0, the coordination function dominated (extractiveness 0.35, theater 0.50); by t=15, extraction dominates (extractiveness 0.58, theater 0.68). The constraint is crossing from hybrid-with-dominant-coordination into hybrid-with-dominant-extraction. If this trajectory continues, classification will drift toward Snare (extractiveness approaching 0.66+, suppression high). The scaffold perspective (decentralized alternatives) offers a structural escape route if federation achieves sufficient scale; without it, the constraint will solidify as pure extraction over generational timescale."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The filter bubble extracts attention value and advertiser surplus by concentrating visibility toward high-engagement content, but it is not purely extractive because the coordination function is genuine — users do benefit from reduced information exploration costs and content matching. The value reflects that extraction is substantial but mixed with functional coordination. The rise from 0.35 to 0.58 over the interval reflects algorithmic refinement: platforms have tuned engagement optimization more aggressively, increasing extraction while maintaining coordination framing. Suppression (0.68): High. Multiple suppression mechanisms operate simultaneously: (1) algorithmic invisibility of suppressed content (users don't see what they're not shown), (2) lack of appeal mechanisms (suppressed creators have no recourse), (3) engagement metrics as enforcement (marginal topics receive algorithmic punishment), (4) discovery barriers (finding non-recommended content requires active effort). But suppression is not total — users can still access chronological feeds (though hidden), creators can appeal moderation decisions (though rarely successfully), and alternative platforms exist (though friction is high). Theater ratio (0.54): Moderate-high and rising. The constraint is increasingly theatrical because platforms use moderation framing to justify algorithmic suppression. Engagement optimization appears as platform safety; algorithmic invisibility appears as user-friendly curation; marginalization of minority viewpoints appears as quality control. The rise from 0.38 to 0.54 reflects increasing sophistication in institutional justification — transparency reports now include diversity metrics (performing commitment to viewpoint diversity) while algorithmic tuning continues suppressing minority voices. The theater increase reflects growing gap between stated values (platform neutrality, diverse voices, creator opportunity) and operational mechanisms (engagement optimization, algorithmic suppression, attention concentration).",
+    "directionality_logic": "Directionality (d) for each perspective is computed from the agent's structural relationship to the extraction flow. Platform operators as beneficiaries with arbitrage exit options derive d ≈ 0.08 (low extraction experienced), applying sigmoid f(d) ≈ -0.12 (negative effective extraction — they benefit). Marginalized creators as victims with trapped exit derive d ≈ 0.95 (maximum extraction experienced), applying sigmoid f(d) ≈ 1.42 (maximum effective extraction). The epistemic commons as powerless victim with no exit derives d ≈ 1.00 (full target), applying sigmoid f(d) ≈ 1.42. Mainstream creators as moderate victims with constrained exit derive d ≈ 0.70 (significant extraction experienced), applying sigmoid f(d) ≈ 1.02. Advertisers as beneficiaries with arbitrage derive d ≈ 0.10 (low extraction), f(d) ≈ -0.08. The scope modifier σ(S) applies globally (σ = 1.2), amplifying effective extractiveness by 20% due to the constraint's planetary scale. Chi values vary by perspective: beneficiaries see χ ≈ 0.35 × (-0.12) × 1.2 ≈ -0.05 (coordination appears as utility), victims see χ ≈ 0.58 × 1.42 × 1.2 ≈ 0.99 (near-maximum effective extraction at global scope). The gap between perspectives is substantial and reveals the structural asymmetry: beneficiaries perceive rope, victims perceive snare, analytical observer sees both functions and perceives tangled rope.",
+    "perspectival_gap": "This constraint shows maximum perspectival divergence. The platform operator sees a coordination success: the algorithm routes content efficiently, users stay engaged, creators find audiences. The marginalized creator sees a snare: their content is systematically invisible despite quality or effort; the algorithm offers no appeals and no path to visibility. The mainstream creator sees tangled rope: amplification in established domains plus confinement to profitable niches. The epistemic commons sees pure extraction: viewpoint diversity is suppressed with no compensation. The advertiser sees coordination and value. The moderation authority maintains institutional legitimacy through theater — framing algorithmic suppression as protective safety measures. The analytical observer sees both the real coordination function (users do benefit from attention routing) and the real extraction mechanism (value concentration toward high-engagement, marginal voices suppressed, epistemic commons degraded). This perspectival structure is diagnostic of tangled rope: genuine coordination coexists with genuine extraction, and the beneficiaries' experience of pure coordination is predicated on not seeing (or on naturalizing) the victims' experience of snare. The suppression mechanism enforces this perspectival gap: algorithmic invisibility ensures that beneficiaries rarely encounter evidence of suppression, while victims experience it constantly.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that filter bubble closure is genuine tangled rope, not false dichotomy. The coordination function is real: routing infinite content to finite attention is a genuine problem, and algorithmic solutions do reduce exploration costs for users and creators. The extraction function is equally real: platforms capture attention surplus, marginalize creators outside high-engagement profiles, and suppress viewpoint diversity. The mandatrophy arises when observers try to classify the filter bubble as pure coordination (rope) or pure extraction (snare). Pure coordination framing naturalizes suppression as efficient routing; pure extraction framing ignores that users do benefit from matched content. The tangled rope classification captures both: the system solves a coordination problem AND it is structurally organized to extract value from that problem's solution. The theater rising over time (0.38 → 0.54) reflects the mandatrophy: as the extraction mechanism becomes more sophisticated, institutional framing becomes more elaborate. Platforms develop 'creator support' programs while refining algorithmic suppression; they publish 'transparency reports' measuring diversity while engagement optimization suppresses diverse voices; they adopt 'content moderation' language while operating purely on algorithmic invisibility. The theater is not dishonest — platforms genuinely do solve coordination problems — but the coordination framing increasingly obscures the extraction mechanism. Resolving the mandatrophy requires keeping both functions visible: the system is coordinative AND extractive, and the rising theater ratio reflects growing institutional effort to present the extractive mechanism as coordinative."
   },
   "boltzmann": {
-    "coordination_type": "information_standard",
-    "boltzmann_floor_override": 0.12
+    "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "algorithmic_recommendation_systems",
-      "attention_economy_extraction",
-      "platform_network_effects",
-      "epistemic_polarization_dynamics"
+      "attention_economy_concentration",
+      "algorithmic_opacity_enforcement",
+      "creator_category_lock_in",
+      "information_asymmetry_amplification"
     ],
-    "dual_formulation_note": "Filter bubble closure is downstream of platform business model decisions (engagement metric optimization) but represents a distinct structural constraint. Upstream constraints (attention_economy_extraction, algorithmic_recommendation_systems) have their own extractiveness values reflecting the fundamental design choices; filter_bubble_closure models the user-facing manifestation of these upstream constraints. The constraint family decomposes into: (1) platform_engagement_metric_optimization (\u03b5=0.55, Tangled Rope, upstream driver), (2) filter_bubble_closure (\u03b5=0.58, Tangled Rope, direct user impact), and (3) epistemic_polarization_dynamics (\u03b5=0.72, Snare, generational consequence)."
+    "dual_formulation_note": "Filter bubble closure decomposes into three distinct constraint stories: (1) algorithmic engagement optimization (ε ≈ 0.45, tangled rope — genuine coordination problem with extraction overlay), (2) algorithmic opacity/invisibility (ε ≈ 0.72, snare — suppression mechanism), (3) platform-operator control of discovery mechanisms (ε ≈ 0.55, tangled rope — creator access constraint). Each has different ε values and different beneficiary/victim structures. This story focuses on the integrated closure mechanism; see sister stories for component mechanisms."
   },
   "directionality_overrides": [
     {
-      "power_atom": "institutional",
-      "d_value": 0.08
+      "power_atom": "powerless",
+      "d_value": 0.98
     }
   ]
 }

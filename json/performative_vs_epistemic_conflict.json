@@ -4,97 +4,196 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "perf_epist"
+    "measurement_id_prefix": "perf_epist",
+    "story_uid": "ef0c83c4-e1bb-474c-b8c6-03a816e2ec20"
   },
   "base_properties": {
-    "extractiveness": 0.18,
-    "suppression": 0.22,
-    "theater_ratio": 0.35,
-    "claimed_type": "rope",
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
     "human_readable": "Performative vs Epistemic Conflict in Discourse",
     "topic_domain": "epistemology/social_psychology/philosophy_of_discourse",
-    "requires_active_enforcement": false,
-    "emerges_naturally": false,
-    "has_sunset_clause": false,
+    "requires_active_enforcement": true,
     "beneficiaries": [
-      "epistemic_community",
-      "discourse_participants"
+      "status_defenders",
+      "institutional_power_holders"
     ],
-    "victims": []
+    "victims": [
+      "epistemic_commons",
+      "joint_truth_seekers"
+    ]
   },
   "perspectives": [
     {
-      "classification_type": "rope",
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Subordinate Truth-Seeker",
+      "comment": "PERSPECTIVE 1: SUBORDINATE TRUTH-SEEKER (SNARE) — Cannot exit performative norms without social penalty. Trapped in a system where admission of error signals weakness, where changing position appears as capitulation, where joint investigation is reframed as losing the argument. The subordinate experiences maximum extraction: forced to either abandon truth-seeking or accept status damage. No exit option available within the discourse frame."
+    },
+    {
+      "classification_type": "tangled_rope",
       "agent_power": "moderate",
       "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "local",
-      "label": "The Epistemic Participant",
-      "comment": "PERSPECTIVE 1: EPISTEMIC PARTICIPANT (ROPE) \u2014 Participant oriented toward joint investigation experiences the distinction as a coordination mechanism. Recognizing performative vs epistemic modes enables selection of productive discourse contexts. Low extraction \u2014 the constraint helps rather than hinders truth-seeking."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "moderate",
-      "time_horizon": "immediate",
-      "exit_options": "mobile",
-      "spatial_scope": "local",
-      "label": "The Performative Participant",
-      "comment": "PERSPECTIVE 2: PERFORMATIVE PARTICIPANT (ROPE) \u2014 Participant oriented toward prevailing also benefits from the distinction. Knowing when discourse is epistemic vs performative enables appropriate strategy selection. The constraint coordinates expectations about discourse norms without imposing costs."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "regional",
-      "label": "The Epistemic Community",
-      "comment": "PERSPECTIVE 3: EPISTEMIC COMMUNITY (ROPE) \u2014 Communities of practice benefit from explicit recognition of discourse modes. The distinction enables norm-setting: journals enforce epistemic standards, debates allow performative engagement. Coordination function with minimal overhead."
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Professional Epistemic Actor",
+      "comment": "PERSPECTIVE 2: PROFESSIONAL EPISTEMIC ACTOR (TANGLED ROPE) — Academic, scientist, or professional mediator who genuinely values truth-seeking but also depends on reputation maintenance, grant competitiveness, and institutional standing. Experiences genuine coordination (joint investigation with peers) alongside genuine extraction (must defend territory to secure resources). Constrained exit: can advocate for epistemic norms within professional contexts but faces career risk if seen as too accommodating or insufficiently combative."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "generational",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Academic Institution",
-      "comment": "PERSPECTIVE 4: ACADEMIC INSTITUTION (ROPE) \u2014 Institutions benefit from the distinction by allocating resources appropriately: peer review for epistemic discourse, public engagement for performative discourse. The constraint solves a genuine coordination problem with low enforcement cost."
+      "label": "The Status Defender",
+      "comment": "PERSPECTIVE 3: STATUS DEFENDER (ROPE) — Institutional actor (political leader, CEO, ideological faction) who benefits from performative norms. For this agent, the constraint is pure coordination: prevailing in argument IS the coordination function. The system solves the problem of 'how do we maintain institutional position?' Experiences no extraction because winning argument-territory is their primary goal. Can exit (switch discourse context) at institutional will."
     },
     {
-      "classification_type": "rope",
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Epistemic Reform Movement",
+      "comment": "PERSPECTIVE 4: EPISTEMIC REFORM MOVEMENT (SCAFFOLD) — Organized agents (academic integrity movements, epistemic humility advocates, dialogue facilitation communities) see performative norms as a temporary coordination failure with a sunset. Conflict resolution training, epistemic humility pedagogy, forum-shift (replacing argument with collaborative problem-solving), and norm changes in academic publishing are building alternative discourse pathways. Constrained but organized: can shift discourse containers even if individual conversations remain performative."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Debate Institution",
+      "comment": "PERSPECTIVE 5: DEBATE INSTITUTION (PITON) — Formal debate, parliamentary procedure, and adversarial discourse traditions were designed to solve a genuine coordination problem: how to air differences, expose flaws, and make decisions when parties disagree. But the functional point (finding error, improving claims) has atrophied into pure theater (winning the match, scoring points, maintaining position). The institution persists through inertia despite serving neither function well — it neither reliably finds truth (too performative) nor fairly allocates status (too dependent on rhetorical skill rather than epistemic merit). Theater ratio high because the ritual is maintained by habit."
+    },
+    {
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (ROPE) \u2014 From the analytical perspective, the performative/epistemic distinction is a low-extraction coordination mechanism. It names a real structural difference in discourse goals and enables participants to select appropriate contexts. No significant extraction detected \u2014 the constraint functions as claimed."
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a universal/civilizational perspective, performative and epistemic modes are fundamentally incompatible cognitive activities. Status defense is a baseline social reality; truth-seeking requires relaxing status concerns. These modes cannot be simultaneously optimized — they trade off at the level of human motivation and institutional design. This perspective sees the conflict as inevitable, immutable, an irreducible feature of social cognition. However, structural data (identifiable beneficiaries, measurable extraction, enforcement mechanisms) reveals this as a false summit: what is naturalized as 'human nature' is actually a contingent institutional arrangement that privileges performative norms."
     }
   ],
-  "omegas": [],
-  "measurements": [],
+  "omegas": [
+    {
+      "id": "status_and_truth_fungibility",
+      "question": "Can status rewards and epistemic merit be decoupled through institutional design, or are they fundamentally entangled in human motivation?",
+      "resolution_mechanism": "Historical analysis of communities with different status/epistemic configurations (monastic scholarship, open-source software, peer review systems with anonymity vs attribution); measurement of truth-seeking behavior when status incentives are altered or removed",
+      "impact": "If decoupled: scaffold perspective confirmed — epistemic norms can be shifted by redesigning reward structures. If entangled: mountain perspective gains credibility — performative norms may be ineliminable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether status and epistemic merit can be structurally decoupled"
+    },
+    {
+      "id": "performative_norm_entrenchment",
+      "question": "Are performative norms enforced by explicit rules (suppression mechanism), by status asymmetries (structural extraction), or by internalized identity (cognitive lock)?",
+      "resolution_mechanism": "Discourse analysis across contexts with different rule sets; measurement of norm adherence when explicit rules are removed vs when status structure remains; identification of agents who would exit if given costless escape route vs those who self-enforce performative norms",
+      "impact": "If explicit rules: removing rules can shift norms (scaffold outcome). If status asymmetries: reform requires resource redistribution (tangled rope deepens). If cognitive lock: agents cannot perceive alternative norms even when available (identity_locked classification for more perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether performative norms are externally enforced or internally locked"
+    },
+    {
+      "id": "collaborative_truth_seeking_sustainability",
+      "question": "Can joint epistemic investigation sustain as the primary discourse norm, or does performative competition inevitably resurface when stakes are real?",
+      "resolution_mechanism": "Longitudinal observation of communities institutionalizing epistemic norms (research teams with explicit error-correction protocols, dialogue groups with facilitators, open-inquiry forums); measurement of norm persistence when status competition reintroduces high stakes; identification of failure modes when real disagreement emerges",
+      "impact": "If sustainable: epistemic reform is not aspirational — scaffold has genuine sunset. If inevitable resurface: performative norms are attractors that require continuous active enforcement (tangled rope deepens toward snare).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether collaborative epistemic norms can sustain under real stakes"
+    },
+    {
+      "id": "false_summit_naturalization",
+      "question": "Is the apparent incompatibility between performative and epistemic modes a feature of human cognition (mountain), or a feature of specific institutional arrangements that could be redesigned?",
+      "resolution_mechanism": "Historical analysis of shifts in discourse norms (scientific revolution replacing scholasticism, civil rights discourse shifting rhetorical ground rules, online communities establishing novel norms); identification of cases where norm shifts produced genuine change in truthiness-seeking behavior; testing whether agents with epistemic identity (scientists, philosophers) show different trade-offs than agents with status identity",
+      "impact": "If institutional: performative dominance is a contingent extraction mechanism, not natural law. If cognitive: the mountain classification is accurate and epistemic reform faces structural limits.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether performative/epistemic incompatibility is natural law or institutional contingency"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.59
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.53
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.58
+    }
+  ],
   "interval": {
     "start": 0,
-    "end": 0
+    "end": 6
   },
   "commentary": {
-    "narrative_context": "The distinction between performative and epistemic conflict is a coordination mechanism in discourse. Performative conflict aims at prevailing \u2014 winning the argument, maintaining status, defending position. Epistemic conflict aims at joint investigation \u2014 mutual revision toward truth, collaborative error-correction, shared understanding. The constraint is the recognition that these are structurally different activities requiring different norms, and that conflating them produces coordination failure. Observable markers include: score-keeping behaviors (tracking concessions, claiming victories), deflection patterns (changing subject when challenged), reframing moves (restating opponent's position to make it weaker), and mutual revision rate (how often participants update their views based on the exchange). High mutual revision indicates epistemic mode; high score-keeping indicates performative mode. The constraint solves a real coordination problem: participants need to know which game they're playing to engage productively. Mismatched expectations \u2014 one participant in epistemic mode, another in performative mode \u2014 produce frustration and wasted effort. The distinction enables explicit norm-setting and context selection.",
+    "narrative_context": "The performative vs epistemic conflict constraint operates at the level of discourse norms and institutional design. It specifies that discourse can be oriented toward two incompatible primary goals: winning argument-territory (performative) or finding truth collaboratively (epistemic). When these orientations are conflated or when performative norms dominate epistemic ones, the result is a coordination failure: agents cannot jointly investigate because they are simultaneously competing for status. The constraint exhibits all six DR types depending on structural position. For subordinate truth-seekers, it is a snare: they cannot exit performative norms without social penalty. For professional epistemic actors (scientists, academics), it is a tangled rope: they must coordinate on joint truth-seeking while also defending intellectual territory and institutional position. For status defenders, it is pure rope: the constraint solves exactly their coordination problem. For epistemic reform movements, it is a scaffold: they are building alternative discourse containers with sunset dates as norms shift. For institutions like formal debate, it is a piton: the ritual persists through inertia even though its functional point (finding truth or allocating status fairly) has atrophied. For the civilizational observer, it risks appearing as a mountain: the apparent incompatibility between performative and epistemic modes can be naturalized as an ineliminable feature of human motivation. However, structural data reveals this as a false summit: performative dominance is maintained by identifiable beneficiaries (status defenders), enforced through measurable suppression (social penalty for admitting error), and produces measurable extraction (subordinates bear the cost of status competition while truth-seeking capacity declines). The theater ratio (0.68) reflects that much discourse is performative ritual: winning argument-position through rhetorical skill, maintaining face, avoiding admission of error, establishing dominance. True joint investigation requires norm-shift: explicit commitment to error-correction, willingness to revise position without status damage, collaborative rather than adversarial framing.",
     "key_agents": [
-      "Epistemic Participant: Moderate power, mobile exit \u2014 seeks joint investigation; benefits from recognizing when discourse is productive vs performative",
-      "Performative Participant: Moderate power, mobile exit \u2014 seeks to prevail; benefits from recognizing when performative engagement is appropriate vs when epistemic norms apply",
-      "Epistemic Community: Organized, mobile exit \u2014 benefits from explicit discourse norms; can allocate resources appropriately (peer review vs public debate)",
-      "Academic Institution: Institutional power, arbitrage exit \u2014 benefits from distinguishing research discourse (epistemic) from public engagement (performative)",
-      "Analytical Observer: Sees the distinction as a low-extraction coordination mechanism solving a genuine problem"
+      "Subordinate Truth-Seekers: Primary victims (powerless/trapped) — cannot exit performative norms without social penalty; forced to choose between truth-seeking and status maintenance",
+      "Professional Epistemic Actors: Secondary victims (moderate/constrained) — scientists, academics, mediators who value truth-seeking but depend on reputation and institutional standing; experience tangled coordination-extraction",
+      "Status Defenders: Primary beneficiaries (institutional/arbitrage) — political leaders, institutional power holders, ideological factions who benefit from performative norms that reward argument-winning; experience pure coordination",
+      "Epistemic Reform Movement: Organized agents (organized/constrained) — dialogue facilitators, academic integrity advocates, epistemic humility educators building alternative discourse containers",
+      "Debate Institution: Institutional degraded ritual (institutional/arbitrage) — formal debate, parliamentary procedure, adversarial traditions designed to expose error but serving primarily theatrical function",
+      "Analytical Observer: Civilizational risk position (analytical/analytical) — risks naturalizing contingent institutional arrangement as immutable feature of human cognition"
     ],
-    "logic_rationale": "Extractiveness (0.18): Low. The constraint imposes minimal cost. Recognizing the distinction helps participants select appropriate contexts and set expectations. Some extraction exists \u2014 participants must learn the distinction and may face social cost for violating norms (calling out performative behavior in epistemic contexts, or vice versa). But the extraction is substantially lower than the coordination benefit. Suppression (0.22): Low. Participants can exit discourse contexts that don't match their goals. The constraint doesn't trap anyone \u2014 it names a choice. Some suppression exists in institutional contexts where norms are enforced (peer review rejecting performative arguments, public debates penalizing epistemic hedging), but these are coordination mechanisms rather than coercive barriers. Theater ratio (0.35): Low-moderate. Some performative overlay exists \u2014 participants may claim epistemic motives while engaging performatively, or use epistemic language as a status signal. But the distinction itself is functional, not theatrical. The theater comes from misapplication, not from the constraint's structure.",
-    "directionality_logic": "All perspectives show beneficiary relationships with mobile or arbitrage exit options. Epistemic participants benefit by recognizing when discourse is productive. Performative participants benefit by recognizing when performative engagement is appropriate. Communities benefit by setting explicit norms. Institutions benefit by allocating resources appropriately. No victim groups identified \u2014 the constraint doesn't extract from anyone. The low base extractiveness reflects that the coordination benefit substantially exceeds the learning and norm-enforcement costs. Directionality values are derived from beneficiary status across all power levels, producing low d values and correspondingly low or negative chi values. The constraint functions as a pure coordination mechanism.",
-    "perspectival_gap": "No significant perspectival gap exists for this constraint. All perspectives classify as Rope because the structural relationship is uniform: the distinction solves a coordination problem for all participants regardless of their discourse goals. Epistemic participants benefit by finding productive contexts. Performative participants benefit by recognizing appropriate venues. Communities and institutions benefit by setting norms. The analytical observer confirms the rope classification \u2014 no hidden extraction detected. This uniformity is diagnostic: the constraint is a genuine coordination mechanism with minimal extractive overhead. The lack of perspectival gap is itself informative \u2014 it indicates that the constraint's claimed function matches its structural reality.",
-    "mandatrophy_analysis": "This constraint demonstrates rope classification without mandatrophy risk. The distinction between performative and epistemic conflict is not a cover story for extraction \u2014 it names a real structural difference in discourse goals and enables productive coordination. The low extractiveness (0.18) and low suppression (0.22) reflect genuine coordination function. Observable markers (mutual revision rate, score-keeping behaviors) provide empirical verification that the distinction tracks real phenomena rather than imposing arbitrary categories. The constraint could degrade into extraction if institutions used the distinction to gatekeep (declaring dissent 'performative' to dismiss it) or if epistemic norms were weaponized (demanding infinite revision as a deflection tactic). But these failure modes would show up as increased extractiveness and suppression in measurements, not as inherent features of the distinction itself. The current metrics indicate the constraint is functioning as a coordination mechanism."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Status defenders capture significant benefit during discourse — they win argument, maintain position, accumulate intellectual authority. The extraction is not maximal because performative norms also provide genuine coordination (they do allocate discourse territory, make decisions, expose some errors). The 0.52 reflects that performative dominance produces real asymmetry (winners gain status, losers lose status) but that the mechanism is not pure exploitation — it coordinates discourse even while distorting truth-seeking. Rising from 0.38 to 0.52 over the interval suggests performative norms are tightening (more status-dependent, more argument-winning focused, less collaborative space for joint investigation). Suppression (0.58): Moderate-high. Social penalties for admitting error, changing position, or appearing indecisive create significant barriers to exit. The subordinate speaker who revises position in response to critique is perceived as weak, inconsistent, or defeated. These are not physical barriers but social ones, and they are real and enforced. Rising from 0.48 to 0.58 suggests suppression mechanisms strengthening (perhaps through social media amplification of argument-wins, polarization increasing stakes of debate losses, or institutional pressure intensifying status competition). Theater ratio (0.68): High and rising. Much discourse activity is performative ritual: posturing, scoring points, defending territory, maintaining face. The functional point (finding truth, improving claims through joint investigation) is often abandoned in favor of winning the match. Rising from 0.52 to 0.68 suggests theater is increasing relative to function — debate has become more about performance and less about collaborative problem-solving.",
+    "directionality_logic": "Beneficiaries (status_defenders) are agents for whom argument-winning IS the coordination function — they experience low or negative d because the constraint solves their primary problem. Victims (epistemic_commons, joint_truth_seekers) are agents for whom joint investigation is the goal but performative norms prevent it — they experience high d because they bear extraction costs while the coordination benefit goes elsewhere. The professional epistemic actor occupies a mixed position: they benefit from status rewards (low d) but also bear extraction costs from suppressed error-admission (high d). The net d for this agent is intermediate, producing the tangled rope classification. The subordinate truth-seeker has high d (victim status) and no exit options (trapped), producing snare. No directionality overrides are needed — the structural data (beneficiary/victim declarations plus exit options) produces accurate d values.",
+    "perspectival_gap": "Status defenders classify the constraint as rope (beneficial coordination); subordinate truth-seekers classify it as snare (pure extraction). Professional epistemic actors see tangled rope (mixed). Epistemic reformers see scaffold (temporary, solvable). Debate institutions see piton (degraded ritual). The analytical observer risks mountain (natural law). The perspectival gap reveals that performative norms are not neutral discourse procedures — they are structurally asymmetric. Agents for whom argument-winning is the goal experience them as beneficial coordination. Agents for whom truth-seeking is the goal experience them as extraction. The constraint's classification depends entirely on the observer's structural position within it.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that performative dominance in discourse IS a real coordination mechanism (solving the problem of how to decide between competing claims, how to allocate discourse authority, how to maintain institutional order), AND simultaneously an extraction mechanism (directing resources toward argument-winners, suppressing error-admission, subordinating truth-seeking to status competition). The tangled rope classification captures both: genuine coordination function (rope aspects) alongside genuine asymmetric extraction (snare aspects). The constraint is NOT ambiguously rope or snare. It is BOTH, and different agents experience different proportions of coordination vs extraction based on their structural position. The false summit (mountain perspective) is where the analytical observer naturalizes what is actually a contingent institutional choice. The constraint is mutable: epistemic reform movements are demonstrating alternative discourse norms with lower performative content. The question is not which type is correct, but whether performative dominance is necessary or chosen."
   },
   "boltzmann": {
     "coordination_type": "information_standard"
   },
   "network": {
-    "affects_constraints": [],
-    "dual_formulation_note": "This constraint is downstream of consensus_as_cognitive_cost (mountain). The upstream constraint establishes that consensus-building has inherent cognitive cost. This constraint (performative_vs_epistemic_conflict) is a coordination response: by distinguishing discourse modes, participants can allocate cognitive resources appropriately \u2014 investing in mutual revision when epistemic goals justify the cost, and using performative shortcuts when consensus is not the goal. The rope classification depends on the mountain being genuine \u2014 if consensus were costless, the distinction would be unnecessary."
+    "affects_constraints": [
+      "scientific_priority_and_credit",
+      "intellectual_property_asymmetry",
+      "argumentative_burden_allocation"
+    ],
+    "dual_formulation_note": "Performative vs epistemic conflict is a meta-constraint on discourse itself, affecting how all domain-specific disagreements are processed. Upstream constraints (specific empirical claims, methodological standards) must pass through this constraint's frame to be adjudicated. The performative/epistemic framing affects how scientific priority is awarded (performative: whoever claims first wins; epistemic: whoever tested most thoroughly gets credit), how IP asymmetries persist (performative: defender of established position holds status advantage; epistemic: challenger with better evidence gets advantage), and how argumentative burden is allocated (performative: stronger rhetor bears lighter burden; epistemic: stronger evidence bearer bears lighter burden)."
   },
   "directionality_overrides": []
 }

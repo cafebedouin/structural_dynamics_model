@@ -1,0 +1,228 @@
+{
+  "header": {
+    "constraint_id": "permissive_license_text__corporate_moat_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "perm_corp",
+    "story_uid": "1d6383d9-e8fc-40ca-8227-f13f2e568588"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "snare",
+    "human_readable": "Permissive License Corporate Moat: Uncompensated Extraction Reading",
+    "topic_domain": "software_licensing/intellectual_property/technology_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "enterprise_corporations",
+      "proprietary_derivative_producers"
+    ],
+    "victims": [
+      "individual_maintainers",
+      "open_source_ecosystem_sustainability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Individual Open Source Maintainer",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL MAINTAINER (SNARE) — Trapped in a structural position where their unpaid labor is extracted via proprietary derivatives. Cannot exit without abandoning the project; cannot enforce compensation; faces reputational pressure to accept corporate use. Maximum extraction: free labor fuels corporate products with no reciprocal contribution required."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Enterprise Corporation",
+      "comment": "PERSPECTIVE 2: ENTERPRISE CORPORATION (ROPE) — Experiences the permissive license as pure coordination: integrates open source freely, ships proprietary enhancements, captures margin. Net beneficiary with exit options: can fork, replace dependencies, or negotiate custom licensing if needed. The constraint coordinates their product strategy with minimal friction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Mid-Market or Smaller Enterprise",
+      "comment": "PERSPECTIVE 3: MID-MARKET ENTERPRISE (TANGLED ROPE) — Benefits from permissive licensing (lowers integration cost, accelerates time-to-market) but also constrained by dependency lock-in and community health erosion. If maintainers burn out, dependency quality declines. Mixed experience: coordination benefit offset by extraction of value through sustainability externalities."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Open Source Ecosystem (Collective)",
+      "comment": "PERSPECTIVE 4: OPEN SOURCE ECOSYSTEM (TANGLED ROPE) — Organized actors (package managers, Linux distributions, foundations) benefit from permissive code (low friction integration, broad adoption) but bear the cost of maintainer burnout, security vulnerabilities, and sustainability crises. Genuine coordination function (shared code base reduces duplication) offset by asymmetric extraction of ecosystem labor."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (This Reading)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / CORPORATE MOAT READING (SNARE) — From a civilization-scale view, the permissive license text creates a structural asymmetry: individuals contribute without compensation; corporations extract margin from proprietary derivatives. The reading frames this as a snare: suppression mechanisms (contributor burnout, community health erosion, lack of enforcement infrastructure) sustain the extraction. High extractiveness, high suppression, functional enforcement (corporations actively defend derivative products against community control)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "license_text_kernel_ambiguity",
+      "question": "Does the permissive license text itself create extraction, or does the reading of the text create a narrative of extraction superimposed on a coordination mechanism?",
+      "resolution_mechanism": "Comparison of three sibling readings (corporate_moat, commons_coordination, copyleft_counterfactual) and their terminal attractors under identical corporate adoption scenarios. If all three readings produce different sustained equilibria, the ambiguity is genuine (kernel is truly contested). If one reading's equilibrium is stable while others degrade, the kernel resolves toward that reading.",
+      "impact": "If kernel is genuinely ambiguous: permissive license text is a coordination-extraction hybrid with rational interpretation multiplicity. If one reading dominates: the others are either false-summit naturalizations or aspirational alternatives that market dynamics eliminate.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether extraction is intrinsic to permissive license text or an interpretation imposed on coordination"
+    },
+    {
+      "id": "individual_maintainer_volition",
+      "question": "To what extent do individual maintainers trap themselves by choosing permissive licenses and accepting uncompensated corporate use, versus being trapped by structural constraints (career risk of changing terms, network effects locking choices in place)?",
+      "resolution_mechanism": "Empirical tracking of maintainers' stated reasons for license choice; analysis of switching costs for changing license terms mid-project; comparison with maintainers who successfully implemented contributor agreements or dual licensing; survey of counterfactual preferences ('would you impose copyleft if you could costlessly change the license?').",
+      "impact": "If self-trapping: suppression metric should be lower — the constraint relies on voluntary participation that could be revoked. If structural trapping: suppression metric justified — exit costs are real and external. Affects moral status of 'snare' vs 'mutual coordination with unequal power'.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which maintainers are structurally trapped vs self-entrapped by license choice"
+    },
+    {
+      "id": "derivative_value_distribution",
+      "question": "What proportion of corporate margin on derivative products is attributable to the permissive base library versus proprietary enhancements?",
+      "resolution_mechanism": "Case-by-case analysis of derivative products (cloud platforms, database systems, AI frameworks) with transparent cost accounting; customer surveys on value attribution; competitive analysis of derivative vs. base library pricing power.",
+      "impact": "If margin attribution is low (≤20%): permissive license enables value creation but corporations are not primarily extracting through uncompensated base code. If attribution is high (≥40%): uncompensated extraction narrative is empirically justified. Affects epsilon and chi calibration.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Proportion of corporate derivative margin attributable to permissive base library"
+    },
+    {
+      "id": "corporate_moat_reading_axiom_hold",
+      "question": "Is the foundational axiom of the corporate moat reading (corporations should compensate for extracted value) a holdable normative claim in contemporary software governance, or has it been overridden by market acceptance of permissive licensing?",
+      "resolution_mechanism": "Tracking of policy proposals, licensing disputes, and institutional position changes: does compensation expectation persist in maintainer discourse despite market evolution? Do new entrants to open source expect compensation or accept volunteer model? Institutional analysis of GPL advocacy communities versus permissive license adoption curves.",
+      "impact": "If axiom remains holdable: the corporate moat reading describes a genuine violation that could be structurally corrected (copyleft enforcement, mandatory contribution agreements). If axiom is overridden: the reading describes a defeated normative claim that market dynamics have settled, and the piton or rope readings become more accurate characterizations.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether compensation expectation axiom remains live in contemporary software governance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The permissive license text (MIT, Apache 2.0, BSD) is the kernel — a stabilized commitment that different parties read as enabling different structural outcomes. This story instantiates the CORPORATE MOAT READING: permissive licensing creates an asymmetric extraction mechanism where individual open source maintainers contribute code without compensation, and enterprise corporations build proprietary derivative products that capture margin from the unpaid labor. The constraint operates at the civilizational scale (software infrastructure) but manifests acutely at the individual level (burnout of unmaintained dependencies). The corporate moat reading frames this as a snare because: (1) individual maintainers are trapped — they cannot exit without destroying community value, cannot enforce compensation despite law recognizing intellectual property, and face social/reputational pressure to accept corporate use; (2) suppression mechanisms are active and intensifying — corporate incentives to avoid contribution obligations, maintainer burnout cycles, and ecosystem dysfunction from under-resourced dependencies all sustain the lock; (3) extraction is asymmetric — corporations capture significant margin on closed-source derivatives while maintainers receive no compensation. The rising extractiveness trajectory (0.28 → 0.58) reflects corporate adoption deepening over the interval; rising suppression (0.35 → 0.62) reflects burnout and ecosystem fragmentation accumulating; falling theater ratio (0.55 → 0.48) reflects that corporate use of permissive code has become normalized, reducing the performative justification work (license text is accepted as sufficient without moral framing).",
+    "key_agents": [
+      "Individual Open Source Maintainers: Primary victims (powerless/trapped) — unpaid contributors to projects; cannot exit without destroying community value; subject to uncompensated extraction via corporate derivatives",
+      "Enterprise Corporations: Primary beneficiaries (institutional/arbitrage) — integrate open source code freely; build proprietary derivatives; capture margin without compensation obligation or contribution requirement",
+      "Mid-Market / Smaller Enterprises: Secondary beneficiary but also constrained (moderate/constrained) — depend on ecosystem health but also perpetuate burnout cycle through use without contribution",
+      "Open Source Ecosystem: Organized collective victim (organized/constrained) — benefits from permissive integration but bears sustainability cost through maintainer burnout and dependency degradation",
+      "Package Managers and Distribution Systems: Institutional actors (institutional/arbitrage) — benefit from permissive licensing enabling broad integration; also bear indirect cost when dependencies become unmaintained",
+      "Analytical Observer (This Reading): Civilizational position (analytical/analytical) — identifies structural asymmetry as extraction mechanism sustained by suppression (burnout, powerlessness) and legitimized through license-text framing"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The corporate moat reading quantifies extraction as the margin corporations capture on derivatives minus contributions they make back to base projects. Empirically, large technology companies (cloud platforms, AI frameworks, databases) extract significant value from permissive open source libraries with minimal reciprocal contribution. This is not maximal extraction (snares can reach 0.72+) because corporations do make some contributions and the system does produce genuine coordination value. Suppression (0.62): High. The suppression mechanisms are: (1) Maintainer burnout — unpaid labor extraction is psychologically and economically unsustainable, creating high barrier to exit; (2) Powerlessness — individual maintainers lack enforcement mechanisms; permissive licenses explicitly waive the right to demand compensation; (3) Network effects and switching costs — once integrated, dependencies are hard to replace; communities locked in by adoption; (4) Social pressure — contributors feel obligated to accept corporate use for the 'greater good' of adoption; (5) Career risk — demanding compensation or imposing license change can damage reputation and adoption. These mechanisms are reinforced by corporate incentives to discourage alternative arrangements (copyleft, contribution requirements). Theater ratio (0.48): Moderate-low. The permissive license text functions relatively directly — the legal instrument is not heavily theatrical. However, there is some performative element: the narrative of 'open source as voluntary community' obscures the structural extraction; corporate adoption framing emphasizes freedom/openness rather than uncompensated labor dependency.",
+    "directionality_logic": "Directionality (d) encodes the agent's structural position within the constraint. Individual maintainers occupy d ≈ 0.95 (full target of extraction: they provide value, receive nothing); corporations occupy d ≈ 0.10 (full beneficiary: receive value, provide minimal reciprocal obligation); analytical observer at d ≈ 0.73 (observer position, sees asymmetry). The sigmoid f(d) maps these to effective extraction experienced: maintainers experience χ elevated, corporations experience χ negative (they benefit). The constraint distributes differently across the two populations — same base ε, but opposite directionality flow creates opposite perceived classifications (snare vs rope). Enterprise corporations with constrained exit (mid-market) occupy intermediate d ≈ 0.50, experiencing tangled rope because they both benefit and constrain each other through ecosystem effects.",
+    "perspectival_gap": "The gap between readings is stark. The corporate moat reading (this story) identifies a snare structure; the commons coordination reading (sibling story) sees the same permissive license as enabling global collaboration without restrictive copyleft burdens; the copyleft counterfactual reading asks whether GPL enforcement would reduce extraction but also reduce adoption. From the corporate moat perspective, adoption is a sign of extraction (corporations benefit from free labor). From the commons reading, adoption is a sign of coordination success (code is used, communities form). The perspectival gap reveals that the kernel (license text) is genuinely ambiguous: it can be read as enabling either outcome, and actual outcome depends on institutional context (corporate incentive structures, maintainer power, community governance, payment arrangements). The analytical observer in this reading identifies the snare; the analytical observer in the commons reading identifies rope. No perspective is wrong — they are reading different structural implications from the same text under different assumption sets about how power operates.",
+    "mandatrophy_analysis": "The mandatrophy here is: is the permissive license text a mechanism for extraction (snare) or for coordination (rope)? The corporate moat reading resolves this by showing that the same mechanism produces opposite outcomes for different agents — beneficial coordination for beneficiaries (corporations), extraction for victims (maintainers). The classification snare is justified because: (1) the asymmetry is structural (maintained by enforcement of corporate IP rights while denying symmetrical rights to maintainers); (2) the suppression is high (burnout, powerlessness, network lock-in prevent exit); (3) the extraction is asymmetric (margin flows to corporations, labor flows from maintainers, no reciprocal obligation). This reading does NOT claim permissive licensing is evil or should be prohibited — it claims the actual structural outcome (uncompensated extraction) should be named accurately rather than framed as voluntary coordination or inherent to open source culture.",
+    "kernel_context": "This constraint instantiates the CORPORATE MOAT READING of the permissive_license_text kernel. The kernel is the stabilized commitment: the permissive license text (MIT, Apache 2.0, BSD) that grants corporations the right to use, modify, and sell derivative products without compensation obligation or contribution requirement. Three readings are live in contemporary software governance: (1) CORPORATE MOAT READING (this story): permissive licensing enables uncompensated extraction; corporations benefit from free maintainer labor. (2) COMMONS COORDINATION READING (sibling): permissive licensing enables global collaboration and code reuse without restrictive copyleft burdens; the coordination value exceeds any extraction cost. (3) COPYLEFT COUNTERFACTUAL READING (sibling): GPL-style enforcement would force contribution reciprocity but reduce adoption and fragmentation; permissive licensing trades contribution reciprocity for ecosystem scale. The kernel is genuinely contested because each reading identifies a real structural feature (extraction asymmetry, coordination value, adoption-contribution tradeoff) and frames it as primary. The corporate moat reading emphasizes asymmetry and extraction as the dominant outcome; the commons reading emphasizes coordination and adoption as the dominant outcome; the counterfactual reading emphasizes the tradeoff between them. The kernel does not resolve which reading is correct — the empirical outcomes depend on institutional context (corporate incentive structures, maintainer power, community governance norms, policy interventions like tax incentives for contribution or mandatory licensing disclosure)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "permissive_license_text__commons_coordination_reading",
+      "permissive_license_text__copyleft_counterfactual_reading",
+      "software_dependency_supply_chain_fragility",
+      "open_source_maintainer_burnout"
+    ],
+    "dual_formulation_note": "The permissive license text is a kernel with three sibling readings instantiated as separate constraint stories. The corporate moat reading identifies uncompensated extraction; the commons reading identifies coordination value; the copyleft counterfactual identifies adoption-reciprocity tradeoff. The three stories are not contradictory — each identifies a real structural feature of the same license text under different institutional contexts. The affects_constraints edges link this reading to sibling readings and downstream constraints (maintainer burnout, supply chain fragility) that this reading's structural mechanism produces."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "individual_contribution_reciprocity_norm",
+    "drift_state": {
+      "moment": "contemporary_corporate_adoption_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "permissive_license_text__commons_coordination_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "permissive_license_text__copyleft_counterfactual_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "contribution_should_entail_compensation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "corporate_extraction_via_permissive_license_constitutes_unfair_asymmetry",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  }
+}

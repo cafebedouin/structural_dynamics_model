@@ -4,41 +4,71 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "sunkcost"
+    "measurement_id_prefix": "sce",
+    "story_uid": "487a1e9b-f89b-4ee1-b063-bacbab45adf4"
   },
   "base_properties": {
-    "extractiveness": 0.62,
-    "suppression": 0.58,
-    "theater_ratio": 0.65,
-    "claimed_type": "snare",
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
     "human_readable": "Sunk Cost Escalation (Commitment Trap)",
     "topic_domain": "behavioral_economics/decision_theory",
-    "requires_active_enforcement": false,
-    "beneficiaries": [],
-    "victims": [
-      "escalating_agent",
-      "system_resources"
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "escalation_enforcers",
+      "commitment_theater_producers"
     ],
-    "mandatrophy_resolved": true
+    "victims": [
+      "trapped_agent",
+      "resource_efficiency"
+    ]
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
       "time_horizon": "biographical",
-      "exit_options": "trapped",
+      "exit_options": "identity_locked",
       "spatial_scope": "local",
-      "label": "The Escalating Agent (Trapped)",
-      "comment": "PERSPECTIVE 1: ESCALATING AGENT (SNARE) \u2014 Agent is trapped by their own prior commitment. Each additional investment increases psychological commitment and sunk costs, reducing perceived exit options. The constraint extracts continued commitment and resources from the agent who perceives themselves as having no good exit. No coordination benefit \u2014 pure extraction of time and resources to justify prior choices."
+      "label": "The Trapped Agent (Identity Fusion)",
+      "comment": "PERSPECTIVE 1: TRAPPED AGENT (SNARE) — The agent's identity becomes fused with the project or relationship. Exit would require abandoning a professional identity, relationship role, or self-concept constituted through the commitment. Structurally mobile (could leave) but identity-locked (cannot imagine leaving without becoming a different person). Experiences maximum extraction — must continue pouring resources to maintain identity coherence. Cannot perceive the exit option even when it becomes rational."
     },
     {
-      "classification_type": "snare",
+      "classification_type": "tangled_rope",
       "agent_power": "moderate",
       "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "local",
-      "label": "The Escalating Agent (Constrained)",
-      "comment": "PERSPECTIVE 2: ESCALATING AGENT ALTERNATIVE (SNARE, CONSTRAINED VIEW) \u2014 From a slightly less trapped position, exit is possible but costly: admitting failure, losing sunk investments, social reputation damage, and identity disruption ('I am someone who abandons projects'). High cost to exit makes continuing feel like the only rational choice. Moderate power due to some agency in choosing escalation. Effective extraction remains high."
+      "spatial_scope": "regional",
+      "label": "The Peer Social Pressure Network",
+      "comment": "PERSPECTIVE 2: PEER SOCIAL PRESSURE NETWORK (TANGLED ROPE) — Colleagues, investors, or community members experience genuine coordination benefits from stable commitment (predictability, follow-through) alongside extraction: they benefit from the trapped agent's continued investment while bearing none of the escalating cost. Mixed structure: the constraint coordinates reputation and stability while extracting resources. Exit costs are high (social penalty, reputational damage) but surmountable for organized peer groups."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Escalation Theater Producers",
+      "comment": "PERSPECTIVE 3: ESCALATION THEATER PRODUCERS (ROPE) — Organizations, managers, or institutional actors who benefit from the commitment trap structure experience it as pure coordination: they are managing risk through escalating commitment review, maintaining team stability, and justifying further resource allocation. They have arbitrage capacity — can exit the escalation at any moment by declaring the project dead. Experience the constraint as beneficial coordination with minimal extraction cost."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Decision Science Reform Movement",
+      "comment": "PERSPECTIVE 4: DECISION SCIENCE REFORM MOVEMENT (SCAFFOLD) — Behavioral economists, policy reformers, and organizational consultants see sunk cost escalation as a temporary coordination failure with a sunset: systematic decision review protocols, sunk cost accounting systems, and organizational structures that separate past decisions from future allocations are creating exit pathways. The constraint decays as institutions adopt decision-hygiene practices. Organized resistance with clear sunset mechanism."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Organizational Commitment Ritual",
+      "comment": "PERSPECTIVE 5: ORGANIZATIONAL COMMITMENT RITUAL (PITON) — The explicit escalation review process (project portfolio meetings, go/no-go decisions, sunk cost audits) is largely performative theater: committees meet, past investments are reviewed, future viability is assessed — and the overwhelming default is continued escalation. The ritual maintains institutional identity (organizations are 'decisive' and 'committed') while legitimizing further resource outflow. Theater ratio 0.68 reflects that most escalation reviews produce escalation decisions, not exits. The function (constraining waste) has decayed; the ritual persists through institutional inertia."
     },
     {
       "classification_type": "mountain",
@@ -47,112 +77,99 @@
       "exit_options": "analytical",
       "spatial_scope": "universal",
       "label": "The Analytical Observer (Natural Law View)",
-      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER \u2014 NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal, civilizational perspective, sunk cost escalation appears to be an immutable psychological law: rational agents making decisions based on past commitments to justify investments. The constraint seems to emerge naturally from how human cognition processes commitment, accountability, and loss. However, this is a FALSE SUMMIT \u2014 the engine will flag this as naturalization of a behavioral trap that is contingent on institutional and cognitive frames."
-    },
-    {
-      "classification_type": "piton",
-      "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "regional",
-      "label": "The Organizational System",
-      "comment": "PERSPECTIVE 4: ORGANIZATIONAL SYSTEM (PITON) \u2014 Organizations and institutions maintain performative escalation commitments (project reviews, milestone gates, continued funding justifications) long after rational cost-benefit analysis would recommend exit. The institutional machinery continues the ritual of escalation review despite degraded function. Theater is high (0.65) because the escalation decision point has become primarily a performance of commitment rather than genuine resource optimization."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "organized",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "regional",
-      "label": "The Organizational Leadership",
-      "comment": "PERSPECTIVE 5: ORGANIZATIONAL LEADERSHIP (TANGLED ROPE) \u2014 Leadership can coordinate multiple escalating agents through investment announcements, resource commitments, and narrative construction ('we're nearly there'). Genuine coordination function exists (aligning effort toward completion). But asymmetric extraction also occurs: leadership benefits from perceived progress, subordinates bear the escalation costs. Requires active enforcement through hierarchy."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "powerful",
-      "time_horizon": "immediate",
-      "exit_options": "mobile",
-      "spatial_scope": "local",
-      "label": "The Informed Observer with Exit Options",
-      "comment": "PERSPECTIVE 6: INFORMED OBSERVER WITH EXIT OPTIONS (ROPE) \u2014 An agent with sufficient power, information, and exit options perceives escalation as a pure coordination problem with low extraction. Can exit if cost-benefit tilts negative. The constraint operates for them as a rational commitment mechanism enabling long-term projects. Sees escalation as manageable \u2014 low suppression, genuine coordination function."
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, sunk cost escalation appears as an unchangeable property of bounded rationality: human decision-makers cannot fully disregard past investments (the sunk cost fallacy is rooted in cognitive limits), and commitment to coherent identity is inherent to human psychology. This perspective sees escalation as immutable law of human behavior. However, the presence of identifiable beneficiaries (escalation theater producers, institutions that profit from continued commitment) and victims (trapped agents bearing accelerating costs) indicates this is a false summit: the 'inevitable' psychological constraint masks contingent institutional arrangements."
     }
   ],
   "omegas": [
     {
-      "id": "commitment_psychology_structural",
-      "question": "Is sunk cost escalation a structural feature of how rational agents make decisions under commitment, or is it a cognitive bias remediable by information and framing?",
-      "resolution_mechanism": "Empirical tests: do agents with explicit sunk cost information and reframing still escalate? Does institutional structure (sunburst accounting, zero-based budgeting) reduce escalation? Comparison across decision-making frameworks.",
-      "impact": "If structural/rational: classification remains Snare across most contexts. If remediable bias: classification shifts toward Rope or Scaffold in informed/designed contexts.",
+      "id": "identity_lock_depth",
+      "question": "What proportion of escalation is driven by identity fusion (internal lock) versus external material barriers (constrained exit costs)?",
+      "resolution_mechanism": "Post-exit trajectory analysis: agents who successfully exit sunk-cost escalation — do they quickly re-establish identity and project engagement (identity_locked → mobile), or do they experience persistent constraint and disorientation (trapped/constrained)?",
+      "impact": "If primarily identity-locked: the constraint is perceptual; interventions should target identity frame breaking (reframing exercises, identity diversification). If primarily constrained exit costs: interventions should target barrier reduction (organizational restructuring, legal fee reduction). If both: requires dual intervention.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether escalation is structural or remediable through information"
+      "description": "Proportion of escalation driven by identity fusion vs external barriers"
     },
     {
-      "id": "identity_lock_binding",
-      "question": "How much of the escalation trap is due to identity fusion ('I am invested in this project') versus material sunk costs (money, time already spent)?",
-      "resolution_mechanism": "Controlled experiments varying identity salience while holding sunk costs constant. Post-project interviews about self-concept entanglement. Longitudinal tracking of agents who leave projects \u2014 does identity damage persist?",
-      "impact": "If identity-locked: exit_options should be identity_locked rather than trapped/constrained for many agents. Classification remains Snare but binding mechanism is cognitive-internal rather than structural-external.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Role of identity fusion in escalation entrapment"
-    },
-    {
-      "id": "institutional_escalation_suppression",
-      "question": "Is escalation suppressed by institutional structure (gates, reviews, performance metrics) or amplified? Are formal decision points reducing escalation or legitimizing it?",
-      "resolution_mechanism": "Comparison of escalation rates across organizational structures: flat vs hierarchical, with/without formal gates, with/without zero-based budgeting. Archival analysis of project termination decisions.",
-      "impact": "If suppressed by institutional structure: suppression metric should be higher; organizational constraints prevent some escalation. If amplified: suppression metric reflects psychological suppression only; institutional theater masks escalation.",
+      "id": "theater_gate_calibration",
+      "question": "At what ratio of escalation-decision rates to total project reviews does the organizational commitment ritual cross from performative theater into genuine functional gate?",
+      "resolution_mechanism": "Organizational audit data: what percentage of projects escalate through review processes vs are terminated or restructured? Benchmark comparison: what is the base rate of escalation decisions in organizations without explicit sunk-cost accounting?",
+      "impact": "If escalation rate > 80%: pure theater, piton classification confirmed. If escalation rate 40-60%: mixed functional/performative (tangled rope floor). If escalation rate < 30%: the review process is genuinely constraining escalation (rope or scaffold range).",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether institutional structures suppress or amplify escalation"
+      "description": "Ratio of escalation decisions to total project reviews"
     },
     {
-      "id": "escalation_definition_boundary",
-      "question": "What distinguishes legitimate multi-stage investment (learning-driven, discovering true costs iteratively) from extractive escalation (justifying prior choices)?",
-      "resolution_mechanism": "Analysis of decision records: are resource allocations driven by new information about project viability, or by framing of sunk costs? Do agents show evidence of Bayesian updating on the true probability of project success?",
-      "impact": "If boundary is epistemic (information-driven vs. psychology-driven): extractiveness should be lower for learning-driven projects. If boundary is blurred: extractiveness should be higher throughout \u2014 learning becomes a cover story for escalation.",
+      "id": "beneficiary_surplus_extraction",
+      "question": "What is the total resource surplus extracted by escalation enforcers (managers, investors, organizational hierarchy) relative to the trapped agent's opportunity cost?",
+      "resolution_mechanism": "Comparative cost accounting: resource dollars committed to escalated projects vs dollars that would have been deployed in optimal alternative allocation. Beneficiary gains tracking: do institutional actors show measurable career advancement, budget growth, or resource concentration correlated with escalation decisions they produce?",
+      "impact": "If beneficiary surplus is large and uncorrelated with project success: pure extraction mechanism (snare floor). If beneficiary surplus tracks with genuine coordination value (team stability, reputation protection): tangled rope confirmed.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Distinguishing legitimate investment iteration from extractive escalation"
+      "description": "Surplus extraction by escalation enforcers vs opportunity cost"
+    },
+    {
+      "id": "decision_science_reform_effectiveness",
+      "question": "Do formal sunk-cost elimination protocols (decision-hygiene training, accounting system changes, portfolio-level review) actually reduce escalation rates, or do they merely formalize escalation theater?",
+      "resolution_mechanism": "Randomized controlled trials or quasi-experimental comparison: organizations adopting formal sunk-cost protocols vs control organizations. Measurement: escalation rates, project termination rates, resource reallocation speed, and long-term project ROI.",
+      "impact": "If protocols are effective (escalation drops 20%+): scaffold sunset is real, reform movement is structurally powerful. If protocols are ineffective or increase theater ratio: the reform produces formalized escalation cover story (scaffold collapses to piton).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Effectiveness of decision-science reform protocols in reducing escalation"
+    },
+    {
+      "id": "false_summit_beneficiary_structure",
+      "question": "Is sunk cost escalation truly an immutable feature of bounded rationality, or a contingent institutional arrangement that benefits identifiable actors?",
+      "resolution_mechanism": "Structural comparison: societies/organizations with high escalation rates vs those with low rates. Analysis of beneficiary groups: who profits from escalation acceptance? Are escalation enforcers distributed or concentrated? Do escalation patterns correlate with institutional structure (hierarchical vs flat, transparent vs opaque) independent of cognitive limits?",
+      "impact": "If escalation is truly cognitive: mountain classification confirmed, no beneficiaries needed. If escalation is institutional: false summit (mountain reclassifies to tangled rope or snare based on coordination vs extraction ratio). This resolves whether the constraint is law-like or contingent.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether escalation is immutable cognitive limit or contingent institutional arrangement"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.32
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2,
-      "value": 0.48
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 4,
-      "value": 0.58
+      "time_point": 3,
+      "value": 0.45
     },
     {
       "metric": "base_extractiveness",
       "time_point": 6,
-      "value": 0.62
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2,
+      "time_point": 3,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
       "value": 0.48
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 4,
-      "value": 0.6
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.58
     },
     {
-      "metric": "theater_ratio",
+      "metric": "suppression_requirement",
       "time_point": 6,
       "value": 0.65
     }
@@ -162,28 +179,35 @@
     "end": 6
   },
   "commentary": {
-    "narrative_context": "Sunk cost escalation is a commitment trap where agents continue investing in projects, relationships, or decisions to justify prior investments, even when rational cost-benefit analysis would recommend exit. The trap operates through psychological and structural mechanisms: escalating commitment to maintain identity coherence, social reputation, and perceived rationality; organizational theater that performs commitment review while legitimizing further escalation; and suppression of exit options through internalized narratives ('we're too far to stop now') and external costs (admitting failure, losing face). The constraint exhibits strong mandatrophy dynamics \u2014 it appears as an immutable law of human psychology (mountain/false summit), as extraction pure and simple (snare), as organizational theater (piton), and as mixed coordination-extraction in institutional contexts (tangled rope). The measurements show consistent escalation over a 6-unit interval: both extractiveness and theater increase monotonically, indicating that as agents become more committed, the constraint's extraction mechanism intensifies. This is opposite to learning dynamics \u2014 in genuine multi-stage investment, extractiveness should decline as information improves project viability estimates. The monotonic rise indicates that escalation is psychology-driven rather than information-driven.",
+    "narrative_context": "Sunk cost escalation is a commitment trap where agents continue investing in projects, relationships, or decisions to justify prior investments, even when rational cost-benefit analysis would recommend exit. The constraint operates through four distinct but interlocking mechanisms: (1) Identity fusion — the agent's self-concept becomes constituted through the commitment, making exit tantamount to ego death; (2) Social reputation pressure — peers, investors, and community members benefit from stability and penalize reversals, creating collective enforcement of escalation; (3) Organizational theater — escalation review processes (go/no-go meetings, sunk cost audits, portfolio reviews) are largely performative, legitimizing further resource outflow while performing the appearance of rational constraint; (4) Suppression of exit through structural barriers — the costs of exit (job loss, reputation damage, relationship dissolution, identity crisis) exceed the costs of continued escalation in the short term, creating a ratchet dynamic where each escalation round raises the exit threshold. The constraint exhibits all six DR types from different structural positions: pure extraction (snare) for the identity-locked agent who cannot exit; mixed coordination-extraction (tangled rope) for peer networks that benefit from stability; pure coordination (rope) for institutional beneficiaries with arbitrage capacity; temporary coordination with sunset (scaffold) for decision science reformers building alternative protocols; degraded ritual (piton) for the organizational commitment review process itself; and false-summit naturalization (mountain) when escalation is framed as inherent to bounded rationality. The escalating measurements of base_extractiveness (0.32 → 0.58), theater_ratio (0.52 → 0.68), and suppression_requirement (0.48 → 0.65) show a constraint that hardens over time: as the agent commits more resources, their identity fuses deeper, peer pressure intensifies, organizational theater becomes more elaborate, and exit barriers rise. The trap is self-tightening.",
     "key_agents": [
-      "Escalating Agent: Primary victim (powerless/trapped or moderate/constrained) \u2014 bears full cost of continued commitment; trapped by sunk costs and identity fusion",
-      "System Resources: Victim (abstract) \u2014 capital, labor, and opportunity costs allocated to failing projects or relationships",
-      "Organizational Leadership: Secondary beneficiary/coordinator (organized/constrained) \u2014 benefits from narrative of progress and continued commitment; coordinates escalation through hierarchy",
-      "Institutional Review Gates: Performative actor (institutional/mobile) \u2014 maintain theater of decision-making while legitimizing escalation",
-      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing as immutable law what is contingent on psychology and institutional frames"
+      "Trapped Agent: Primary victim (powerless/identity_locked) — identity fused with commitment; bears escalating resource costs and psychological strain; cannot perceive exit despite structural mobility",
+      "Escalation Theater Producers: Primary beneficiaries (institutional/arbitrage) — managers, institutional actors, organizational hierarchy; profit from continued escalation while maintaining plausible deniability of extraction through performative review rituals",
+      "Peer Social Pressure Network: Secondary beneficiaries (moderate/constrained) — colleagues, investors, community; benefit from commitment stability while exerting reputational penalty on exit attempts",
+      "Decision Science Reform Movement: Organized agents (organized/constrained) — behavioral economists, policy reformers, organizational consultants; see escalation as temporary coordination failure with sunset, building decision-hygiene protocols",
+      "Organizational Commitment Ritual: Institutional actor (institutional/arbitrage) — the explicit escalation review process; performs constraint while legitimizing escalation; theater-heavy, function-light",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent institutional arrangements as immutable cognitive limits (false summit)"
     ],
-    "logic_rationale": "Extractiveness (0.62): High and escalating. Measured as the proportion of ongoing commitment driven by sunk cost justification rather than forward-looking cost-benefit analysis. Starting at 0.35 (many projects have genuine remaining potential), escalating to 0.62 as identity fusion and psychological commitment deepens. The agent is extracted from in the sense that they continue bearing costs beyond rational exit point. Suppression (0.58): Moderate-high. Multiple suppression mechanisms: (1) psychological\u2014internalized narratives that make exit feel like identity failure or irrationality; (2) structural\u2014career/reputation costs of abandoning projects, difficulty finding alternative uses for specialized investments, sunk human capital; (3) institutional\u2014organizational theater that performs decision-making while legitimizing escalation. Theater ratio (0.65): High and increasing. Escalation decisions are increasingly performative: project reviews, milestone announcements, continuation justifications serve primarily to demonstrate commitment rather than to optimize resource allocation. At t=0, theater is lower (genuine learning). At t=6, theater dominates \u2014 the decision machinery is sustained primarily to legitimize continuation rather than to question it. Mandatrophy resolution: This constraint resolves mandatrophy by showing that all six classifications are legitimate perspectival readings. The mountain (natural law view) is a FALSE SUMMIT that naturalizes contingent psychology. The snare is the victim's reality. The piton is the organizational system's degraded review ritual. The tangled rope is leadership's perspective. The rope is the informed observer's coordination experience. The mandatrophy resolves by rejecting the mountain as naturalization.",
-    "perspectival_gap": "The escalating agent (powerless/trapped) sees pure extraction (Snare) \u2014 continuing investment feels mandatory, with no good exit. They experience high suppression as psychological lock-in and identity fusion. The organizational system (institutional/mobile) sees its own review process as largely theatrical (Piton) \u2014 escalation gates exist but primarily legitimize continuation rather than genuinely question it. Leadership (organized/constrained) sees mixed coordination and extraction (Tangled Rope) \u2014 they can coordinate multiple agents toward completion and perceive genuine benefit from progress narrative, but subordinates bear asymmetric cost. The informed observer with real exit options (powerful/mobile) sees coordination (Rope) \u2014 escalation is a rational commitment mechanism enabling long-term projects; exit is possible if truly necessary. The analytical observer at civilizational scope (analytical/analytical) risks seeing a natural law (Mountain) \u2014 'sunk costs always drive human behavior' \u2014 but this is a false summit naturalizing what is actually a contingent feature of institutional and cognitive frames. The perspectival gap reveals that the constraint's type depends on the agent's position and exit options; powerless agents experience it as Snare, while agents with real exit options experience it as Rope or manageable coordination.",
-    "directionality_logic": "Directionality values (d) are derived from the escalating agent's position: trapped agents (d \u2248 0.95) experience maximum extraction; constrained agents (d \u2248 0.75) experience high extraction with some perceived agency; informed agents with mobile exit (d \u2248 0.40) experience lower extraction. The escalation agent bears costs (investment time, resources, emotional labor, opportunity costs) while organizational leadership captures benefits (narrative of progress, resource commitment, perceived competence). No genuine coordination benefit accrues to trapped agents \u2014 the constraint serves pure extraction. For constrained or mobile agents, some coordination benefit exists (commitment enables long-term projects), producing lower \u03c7 and different classifications. The victim group is 'escalating_agent' and 'system_resources' (abstract collective) \u2014 there are no beneficiaries in the pure snare reading, though leadership has secondary benefits in tangled rope contexts.",
-    "mandatrophy_analysis": "Sunk cost escalation demonstrates mandatrophy resolution through perspectival analysis. The mountain (natural law) classification appears from a civilizational/analytical view that treats escalation as an inherent feature of human psychology. But the structural data reveals this as FALSE SUMMIT naturalization: the constraint is behavioral and institutional, not physical or logical. The snare classification is the victim's reality \u2014 trapped by prior commitment and identity fusion. The piton classification is organizational \u2014 the review ritual is degraded, existing primarily to legitimize escalation rather than to question it. The tangled rope is leadership's mixed experience \u2014 genuine coordination exists (aligning effort) but extraction is asymmetric (subordinates bear costs). The rope perspective is the informed observer with real exit options \u2014 for them, escalation is a rational commitment mechanism, low-suppression coordination. All these are coherent readings of the same constraint from different positions. Mandatrophy is resolved by recognizing that the constraint TYPE depends on the observer's structural position and exit capacity, not on discovering a single 'true' type. The false summit (mountain) is rejected as naturalization; all other types are legitimate perspectival readings."
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts significant resources from trapped agents through escalating commitment cycles, but the extraction is partially obscured by the coordination functions (peer stability, organizational predictability) and psychological mechanisms (identity maintenance). The measurement trajectory (0.32 → 0.58) reflects that extractiveness increases as the commitment deepens and identity fusion intensifies. Suppression (0.65): High. Multiple suppression mechanisms operate simultaneously: (1) Identity-psychological suppression — the agent's identity frame prevents exit perception; (2) Social suppression — reputational penalty for reversing commitment; (3) Structural suppression — job loss, relationship dissolution, financial consequences of exit; (4) Organizational suppression — escalation theater legitimizes continued investment while appearing to constrain it. The combination produces high suppression despite agents' nominal structural mobility. Theater ratio (0.68): High-moderate. The organizational escalation review process is substantially performative: committees meet, past sunk costs are reviewed, viability is assessed, and the default outcome is continued escalation. The theater has increased over the measurement interval (0.52 → 0.68) as the review process becomes more elaborate and formalized without changing escalation outcomes. The ritual maintains institutional identity while legitimizing extraction.",
+    "perspectival_gap": "The constraint produces a sharp perspectival divide between the trapped agent's snare experience and the institutional beneficiary's rope experience. The trapped agent perceives no exit (snare, identity_locked) — they are caught between escalation costs and ego-death costs. The institutional beneficiary perceives coordination and opportunity (rope, arbitrage) — they manage risk through escalation review and maintain team stability. The peer network sees mixed coordination-extraction (tangled rope) — they benefit from stability while exerting extraction pressure. The decision science reformers see a temporary problem (scaffold) — they believe protocol changes and decision-hygiene training will create sunset pathways. The organizational ritual itself is degraded (piton) — the review process appears functional but primarily legitimizes escalation. The civilizational analytical observer risks seeing an immutable cognitive law (mountain) — sunk cost fallacy is inherent to bounded rationality — but the structural data reveals this as false-summit naturalization: beneficiaries exist (escalation enforcers), victims exist (trapped agents), and extraction is real, suggesting the constraint is institutional rather than cognitive.",
+    "directionality_logic": "Each perspective's directionality is determined by the agent's structural relationship to the escalation flow. The trapped agent (powerless, identity_locked, victim) experiences maximum directionality toward extraction (d ≈ 0.89) — they are the extraction target and cannot exit. The institutional beneficiary (institutional, arbitrage, beneficiary) experiences minimum directionality (d ≈ 0.05) — they are the extraction beneficiary with full exit capacity (can declare projects dead at any moment). The peer network (moderate, constrained, mixed beneficiary-victim) experiences moderate-high directionality (d ≈ 0.55) — they benefit but also constrain their own exit through reputational enforcement. The decision science reformers (organized, constrained) experience moderate directionality (d ≈ 0.45) — they are trying to reduce extraction through protocol intervention. The organizational ritual (institutional, arbitrage) experiences low directionality (d ≈ 0.12) — the review process benefits the institution while appearing neutral. The analytical observer (analytical, analytical) experiences community-standard directionality (d ≈ 0.72) reflecting their structural distance from the constraint. The sigmoid f(d) function maps these directionality values to experienced chi: the trapped agent's high d produces high chi (maximum experienced extraction); the beneficiary's low d produces negative chi (extraction flows toward them); the peer network's moderate d produces moderate chi (mixed experience).",
+    "mandatrophy_analysis": "Sunk cost escalation resolves mandatrophy by showing that the constraint is genuinely tangled-rope-like (mixed coordination-extraction) at the base structural level, but appears as snare, rope, scaffold, piton, or false-summit mountain depending on the observer's position. The mandatrophy question — 'Is this coordination or extraction?' — has a polyvalent answer: it is both, simultaneously, from different positions. The trapped agent experiences pure extraction (snare) because identity fusion has removed their exit option. The institutional beneficiary experiences pure coordination (rope) because they have arbitrage capacity and the constraint stabilizes their domain. The reform movement experiences temporary coordination (scaffold) because they see a sunset pathway. The organizational ritual experiences performative coordination (piton) because the function has decayed but the form persists. The analytical observer risks seeing immutable law (mountain) because the psychological mechanisms appear to be law-like features of cognition. The resolution is not to choose one type but to acknowledge that the constraint's type is indexical: it depends on who is measuring and from what structural position they observe. The false-summit detection on the mountain perspective is diagnostic — it reveals that when an apparently immutable cognitive law has identifiable beneficiaries and victims, the 'law' is likely an institutional arrangement wearing the mask of natural law."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "attachment_coordination"
   },
   "network": {
     "affects_constraints": [
-      "commitment_escalation_cycle",
-      "sunk_cost_bias_institutional",
-      "project_termination_delay"
-    ]
+      "organizational_sunk_cost_accounting",
+      "relationship_exit_cost_asymmetry",
+      "professional_identity_lock"
+    ],
+    "dual_formulation_note": "Sunk cost escalation is a constraint family spanning three structurally distinct claims: (1) organizational escalation of commitment (ε=0.58, tangled rope) — resource allocation decisions in institutional contexts; (2) relationship exit cost asymmetry (ε=0.72, snare) — personal relationships and partnerships with high exit barriers; (3) professional identity lock (ε=0.65, snare) — career commitment with identity fusion. Each has different beneficiaries, different suppression mechanisms, and different reform pathways, but all three operate through the same core mechanism: identity fusion + social pressure + organizational theater + structural exit barriers. They are linked causally: institutional escalation creates career identity lock, which creates relationship lock-in."
   },
-  "directionality_overrides": []
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.72
+    }
+  ]
 }

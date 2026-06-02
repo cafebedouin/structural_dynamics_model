@@ -1,0 +1,249 @@
+{
+  "header": {
+    "constraint_id": "sovereign_legitimacy__monarchical_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_sovereign_legitimacy__monarchical_reading",
+    "measurement_id_prefix": "sov_mon",
+    "story_uid": "52bf2385-d318-4c3e-8eb7-573d7178a61b",
+    "created_at": "2026-02-26T14:33:22Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Monarchical Bloodline Legitimacy (Sovereign Legitimacy Kernel)",
+    "topic_domain": "political_philosophy/constitutional_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "dynastic_line",
+      "hereditary_aristocracy"
+    ],
+    "victims": [
+      "popular_will",
+      "excluded_constituencies"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Disenfranchised Populace",
+      "comment": "PERSPECTIVE 1: DISENFRANCHISED POPULACE (SNARE) — Trapped by birth into subject status with no exit mechanism. Legitimate authority is declared unrevisable regardless of consent or performance. Cannot exit, cannot challenge through periodic legitimacy tests, cannot appeal to alternative authority source. Maximum extraction with minimal coordination benefit — the constraint serves only to stabilize the beneficiary's position against challenge."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Lesser Nobility and Gentry",
+      "comment": "PERSPECTIVE 2: LESSER NOBILITY AND GENTRY (TANGLED ROPE) — Constrained by career dependence on the crown and legal status contingent on the hierarchy. Also benefits from the stable succession principle — their own hereditary claims and estates are protected by the same legitimacy rule. Mixed experience: significant extraction via hierarchy but genuine coordination benefit from succession stability and clear authority lines."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Reigning Monarch",
+      "comment": "PERSPECTIVE 3: REIGNING MONARCH (ROPE) — Pure beneficiary with exit options (abdication, migration, institutional capture). Experiences the constraint as pure coordination: the inherited bloodline rule solves the succession problem, provides legitimacy narrative, stabilizes expectations about authority. Zero extraction cost; full benefit. The constraint coordinates around the sovereign's position without requiring coercion from the sovereign's perspective."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Constitutional Reform Movement",
+      "comment": "PERSPECTIVE 4: CONSTITUTIONAL REFORM MOVEMENT (SCAFFOLD) — Organized actors (reform legislatures, liberal constitutionalists, nationalist movements) see hereditary legitimacy as a temporary coordination mechanism being actively replaced by electoral and representative systems. The movement has agency and sees an exit path via constitutional amendment or revolution. The constraint appears as a sunset mechanism that is being deliberately dismantled. Theater is moderate (the legitimacy ritual persists during transition) but the reform coalition has clear agency."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Historian's View of Degraded Legitimacy",
+      "comment": "PERSPECTIVE 5: HISTORIAN'S VIEW (PITON) — From a long-term institutional perspective, hereditary legitimacy functions primarily through performative ceremony (coronation rituals, succession pageantry, dynastic symbolism) rather than genuine coordination. The mechanism persists due to institutional inertia and cultural habit despite contradicting modern legitimacy principles (consent, representation, accountability). Theater ratio is high (0.68) — the ritual is maintained by the institution for its own perpetuation, not for the legitimacy problem it ostensibly solves."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law View of Hierarchy",
+      "comment": "PERSPECTIVE 6: NATURAL LAW VIEW (MOUNTAIN) — From a universal/civilizational perspective, some argue that hereditary succession reflects natural law: the family is the fundamental political unit, inheritance is natural to human society, and the chain of legitimate descent through bloodline mirrors the natural order. However, this classification is a FALSE SUMMIT: the constraint's ε value, suppression profile, and beneficiary/victim structure contradict the mountain gates. The natural law framing naturalizes what is actually a constructed institutional arrangement."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "bloodline_necessity_vs_contingency",
+      "question": "Is hereditary succession a necessary feature of monarchical legitimacy, or is it contingent on specific historical contexts?",
+      "resolution_mechanism": "Comparative analysis of monarchical systems: which rely on strict bloodline rules, which permit adoption or collateral succession, which have shifted from hereditary to elective succession within a single lineage framework. Examination of legitimacy narratives in each system.",
+      "impact": "If necessary: the monarchical reading's core axiom (legitimacy via birth) is foundational to the type. If contingent: alternative monarchical forms (elective monarchy, merit-based succession within dynastic framework) become structurally possible, potentially creating sub-types or rendering the distinction between monarchical and other readings less sharp.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether bloodline succession is necessary or contingent to monarchical legitimacy"
+    },
+    {
+      "id": "extraction_vs_stability_tradeoff",
+      "question": "Does the hereditary legitimacy constraint extract value from the populace, or does it provide genuine stability benefit that outweighs the extraction cost?",
+      "resolution_mechanism": "Historical comparison of stability metrics (frequency of violent succession disputes, civil wars, regime changes) in hereditary vs non-hereditary systems controlling for region and era. Welfare analysis comparing extractive burden against conflict reduction.",
+      "impact": "If stability benefit outweighs extraction: reclassify from Tangled Rope toward Rope (coordination dominates). If extraction dominates: reclassify toward Snare. Current classification (Tangled Rope, ε=0.58) assumes mixed dynamics; resolution would shift the balance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether hereditary legitimacy provides stability benefit sufficient to justify extraction burden"
+    },
+    {
+      "id": "kernelized_vs_naturalized_framing",
+      "question": "Is hereditary legitimacy presented as a deliberate political choice (kernelized commitment) or as an inevitable natural law?",
+      "resolution_mechanism": "Textual and institutional analysis of how legitimacy is asserted: appeal to divine right, natural order, historical continuity, or explicit contract/constitution. Examination of whether the constraint is treated as revisable or immutable within its own framework.",
+      "impact": "If kernelized (presented as chosen, revisable): the constraint's epistemic status is clearer and the reading's relationship to siblings becomes sharper. If naturalized: the false summit risk is higher — the reading disguises a contingent choice as necessity, confounding the analysis with the natural law sibling reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether hereditary legitimacy is framed as deliberate commitment or natural inevitability"
+    },
+    {
+      "id": "competing_authority_sources",
+      "question": "Can a system hold both hereditary legitimacy and an alternative legitimacy source (e.g., popular consent, religious authority) simultaneously, or do they necessarily conflict?",
+      "resolution_mechanism": "Analysis of hybrid constitutional monarchies: how do they reconcile hereditary succession with representative government and popular sovereignty? Examination of which legitimacy source prevails in cases of conflict.",
+      "impact": "If compatible: Tangled Rope classification confirmed (genuine coordination hybrid). If incompatible: the constraint forecloses other readings, and the three-way committer dispute (monarchical vs republican vs constitutional_hybrid) contains genuine logical foreclosure, not mere coexistence.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether hereditary legitimacy can coexist with alternative authority sources"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.61
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The monarchical reading of sovereign legitimacy grounds authority exclusively in inherited bloodline: the sovereign is sovereign because they are born into the correct lineage, and this legitimacy is inalienable, unrevisable, and independent of performance, consent, or periodic validation. This reading constitutes one point in a three-way contested kernel alongside the republican reading (legitimacy derives from popular will, expressed through elections) and the constitutional hybrid reading (legitimacy derives from a written constitution that may preserve monarchy while constraining it via law and representation). The monarchical reading exhibits Tangled Rope structure: it contains a genuine coordination function (solving the succession problem through fixed, predictable inheritance) layered with asymmetric extraction (the populace cannot revise or contest the authority, while the beneficiary lineage extracts continued power regardless of performance). The constraint's theater ratio has risen over the interval (0.55 → 0.68) as the underlying legitimacy mechanism has become increasingly performative and ceremonial, particularly in contexts where de facto power has shifted to representative institutions while hereditary authority persists as constitutional form. Suppression has remained high and stable (0.68 → 0.72), indicating that the constraint's coercive apparatus (legal status hierarchies, exclusionary succession rules, suppression of challenge mechanisms) has not weakened despite modernization pressures.",
+    "kernel_context": "KERNELIZED COMMITMENT: 'Legitimate authority derives from inherited bloodline.' This constraint instantiates the MONARCHICAL READING of the sovereign_legitimacy kernel. Sibling readings: (1) REPUBLICAN READING — 'Legitimate authority derives from popular will expressed through elections,' and (2) CONSTITUTIONAL_HYBRID READING — 'Legitimate authority derives from a written constitution that may preserve monarchy while constraining it via law and representation.' The three readings represent fundamentally different answers to the question: 'What source grounds the sovereign's right to rule?' This is not a dispute about how to implement a shared answer (that would be empirical disagreement), but a dispute about the deep structure of legitimacy itself. The three readings coexist as live positions in actual political systems and constitutional theory, held by different factions with no logical foreclosure between them within their respective frameworks — though each reading influences the others' operating conditions and scope.",
+    "key_agents": [
+      "Dynastic Lineage: Primary beneficiary (institutional/arbitrage) — captures authority and succession privilege; experiences constraint as pure coordination",
+      "Hereditary Aristocracy: Secondary beneficiary (institutional/constrained) — protected by the same inheritance principle that secures the crown; mixed experience of benefit and stability advantage",
+      "Disenfranchised Populace: Primary victim (powerless/trapped) — excluded from legitimacy tests, succession participation, or authority challenge; no exit options; bears full suppressive burden",
+      "Excluded Constituencies: Secondary victim (powerless/trapped) — subordinated by fixed birth-based hierarchy; cannot rise through merit or mobilization; trapped in assigned status",
+      "Constitutional Reform Movement: Organized challenger (organized/constrained) — sees hereditary legitimacy as replaceable through amendment or revolution; building alternative pathways",
+      "Historian/Analyst: Civilizational observer (analytical/analytical) — risks naturalizing contingent institutional arrangement as inevitable law; detects false summit signature"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The monarchical reading benefits the dynastic line with unrevisable authority — they extract continued power regardless of performance. However, this is not maximum extraction because the constraint does provide genuine succession coordination: it solves the problem of 'who rules next' through fixed, predictable rules. This coordination benefit is asymmetric (concentrated on the beneficiary, not the populace), but real. The constraint prevents succession wars and provides legitimacy narrative that reduces the enforcement cost of authority. If the constraint were pure extraction (Snare), this coordination function would be absent. The ε=0.58 reflects the hybrid: significant extraction (the power asymmetry is extreme and irrevisable) mixed with genuine coordination (the succession problem is solved). Suppression (0.72): High. The constraint requires substantial coercive apparatus: legal status hierarchies that lock individuals into subject status by birth, exclusion of non-lineage members from succession regardless of merit, suppression of challenge mechanisms (denial of voting, assembly, petition rights during pre-constitutional periods, or severe constraints in constitutional monarchies). This suppression is both structural (laws that enforce hierarchy) and cultural (norms that treat heredity as natural). Theater ratio (0.68): Moderately high. The constraint's legitimacy mechanism is increasingly performative in modern contexts: coronation rituals, succession pageantry, dynastic symbolism, and appeals to tradition carry the legitimacy narrative even where de facto power has shifted to representative or administrative institutions. The theater has risen over the interval as the underlying functional necessity of hereditary authority has diminished in industrial/post-industrial societies, yet the institution persists.",
+    "directionality_logic": "Directionality differs sharply by agent position. The dynastic lineage (beneficiary, institutional power, arbitrage exit) has d ≈ 0.05 — they are the extraction target in reverse, the power holder, experiencing negative effective extractiveness (they extract from the system). The disenfranchised populace (victim, powerless, trapped) has d ≈ 0.95 — they are the maximum extraction target with no exit, experiencing f(d) ≈ 1.42 (maximum effective extractiveness). The constitutional reform movement (organized, constrained exit) has d ≈ 0.50 — they are neither pure beneficiary nor pure victim but rather positioned at the pivot point where the constraint's legitimacy is contested and the exit strategy is being constructed. The perspective-specific chi values flow directly from these directionality positions and the corresponding agent power levels; the Rope classification from the monarch's perspective reflects their position as beneficiary, while the Snare from the populace's perspective reflects their position as victim-with-no-exit.",
+    "perspectival_gap": "The monarchical reading generates a striking perspectival gap between the beneficiary and victim positions. The reigning monarch (institutional, arbitrage) sees the constraint as pure Rope — it solves the succession problem, provides legitimacy narrative, stabilizes expectations. Zero experienced extraction because they are the beneficiary. The disenfranchised populace (powerless, trapped) sees it as pure Snare — they bear all costs (subject status, exclusion, suppression), with no exit and no benefit. The lesser nobility (moderate, constrained) sees Tangled Rope — they benefit from the succession stability but are also constrained by the hierarchy. The constitutional reform movement (organized, constrained) sees Scaffold — the constraint is temporary, being actively dismantled through constitutional amendment and electoral systems. The historian (analytical) risks seeing Mountain (naturalizing it as inevitable), but the false summit detector reveals this as a manufactured naturalization — the structural data shows beneficiaries and suppression, not natural law.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the monarchical reading contains a genuine coordination function (succession stability, predictable authority lines, legitimacy narrative that reduces enforcement costs) layered with asymmetric extraction (the populace cannot participate in or revise the authority structure). This is the defining signature of Tangled Rope: both genuine coordination and irreversible asymmetry must be present. The constraint is NOT pure Rope (which would lack the asymmetry and suppression) and NOT pure Snare (which would lack the coordination function and beneficiary organization). The three-way perspectival structure (beneficiary sees Rope, victim sees Snare, analyst sees Tangled Rope hybrid) correctly maps the constraint's actual structure: it contains both elements, and which is salient depends on the observer's structural position and interests. The mandatrophy is resolved by privileging the analytical perspective as the structural truth — the constraint genuinely coordinates AND genuinely extracts; the beneficiary's Rope perception is partial (ignores extraction), and the victim's Snare perception is partial (ignores coordination function)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "sovereign_legitimacy__republican_reading",
+      "sovereign_legitimacy__constitutional_hybrid_reading"
+    ],
+    "dual_formulation_note": "The sovereign_legitimacy kernel contains three structurally distinct constraints, each representing a different reading with different ε values and beneficiary/victim structures. The monarchical_reading (this file) has ε=0.58 and grounds legitimacy in bloodline. The republican_reading has ε that reflects legitimacy derived from popular will (expect higher ε due to electoral machinery overhead and higher volatility). The constitutional_hybrid_reading has ε that reflects legitimacy derived from written law constraining hereditary succession (expect lower ε than monarchical due to reduced suppression, or higher ε if the written constraint is used to legitimize hereditary privilege). All three constraints affect each other via authority legitimacy competition — the salience and enforcement of each reading depends on which is institutionally dominant and which political actors control interpretation of the kernel."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "hereditary_divine_right",
+    "drift_state": {
+      "moment": "constitutional_modernity",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "sovereign_legitimacy__republican_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "sovereign_legitimacy__constitutional_hybrid_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "legitimacy_via_birth_immutable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "dynastic_succession_natural_order",
+        "role": "secondary",
+        "status": "overridden",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "sovereign_legitimacy"
+    ]
+  }
+}

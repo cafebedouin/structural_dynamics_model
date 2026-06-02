@@ -1,0 +1,277 @@
+{
+  "header": {
+    "constraint_id": "refugee_convention_text__expansive_humanitarian_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "refcon_exp",
+    "story_uid": "f409a60b-6b52-4915-8728-d6485b76a778",
+    "created_at": "2026-02-26T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.42,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Refugee Convention Text — Expansive Humanitarian Reading",
+    "topic_domain": "international_law/migration_governance/human_rights",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "asylum_seekers_fleeing_persecution",
+      "human_rights_advocacy_organizations"
+    ],
+    "victims": [
+      "state_fiscal_capacity",
+      "immigration_enforcement_systems"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Asylum Seeker Fleeing Generalized Violence",
+      "comment": "PERSPECTIVE 1: ASYLUM SEEKER / TRAPPED (SNARE) — Faces generalized violence in origin state (gang violence, femicide, sectarian conflict) with no meaningful exit within origin territory. Trapped by structural vulnerability. From this agent's perspective, the expansive reading is the only reading that recognizes their claim as legitimate. The constraint appears as pure extraction only if denied — the reading itself provides the sole pathway to safety. Maximum suppression, minimal alternatives."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "label": "The LGBTQ+ Person Facing Social Persecution",
+      "comment": "PERSPECTIVE 2: LGBTQ+ PERSON / IDENTITY_LOCKED (SNARE) — Faces persecution based on identity that cannot be abandoned without existential self-negation. The expansive reading is structurally necessary for this agent's claim to be recognized — the 'particular social group' category must encompass sexual orientation and gender identity. Structurally mobile (could remain in origin state while hiding) but identity_locked (cannot hide without dissolution of self). From this perspective, the constraint's protective scope is non-negotiable."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Border State Receiving Asylum Claims",
+      "comment": "PERSPECTIVE 3: BORDER STATE / CONSTRAINED (TANGLED ROPE) — Faces genuine coordination problem: managing asylum flows while maintaining border security and public order. The expansive reading imposes real costs (processing burden, integration needs, political opposition). But also genuine benefits: humanitarian legitimacy, access to international cooperation on return and reintegration, refugees as labor source in tight markets. Constrained exit — cannot simply reject all claims (violates international law, triggers sanctions), cannot process all claims at zero cost (resource limits). Mixed coordination and extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Human Rights Advocacy Coalition",
+      "comment": "PERSPECTIVE 4: HUMAN RIGHTS ADVOCACY / MOBILE (SCAFFOLD) — Organized coalition (UNHCR, Amnesty International, national refugee councils) advocating for broad interpretation as a temporary corrective to restrictive state practices. From this perspective, the expansive reading is a scaffold: a set of norms and procedures designed to sunset as state practices converge toward humanitarian standards. Sees the constraint as enforcement mechanism with a generational sunset — as states normalize asylum processing, the need for aggressive interpretation diminishes."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Destination State with Labor Demand",
+      "comment": "PERSPECTIVE 5: DESTINATION STATE / ARBITRAGE (ROPE) — Wealthy states with labor shortages experience the expansive reading as coordination mechanism: asylum categories that capture skilled refugees (medical professionals, engineers fleeing persecution or generalized violence) enable selective recruitment while maintaining humanitarian legitimacy. Net beneficiary through arbitrage (admit high-skill refugees while appearing humanitarian). Low suppression, high degrees of freedom in claim evaluation."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The International Protection System Institutional Complex",
+      "comment": "PERSPECTIVE 6: INSTITUTIONAL PROTECTION SYSTEM / CONSTRAINED (PITON) — The expansive reading is maintained through institutional inertia and regulatory continuity even as its functional protection capacity has degraded. Theater_ratio high: elaborate assessment procedures, appeal mechanisms, and evidence standards persist despite widespread knowledge that extraction mechanisms (interdiction, offshore processing, pushbacks) render formal recognition largely performative. The constraint persists because dismantling it would expose the fiction — easier to maintain theatrical full implementation than to openly reformulate."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / UNIVERSAL (MOUNTAIN — FALSE SUMMIT) — From a civilizational perspective, the expansive humanitarian reading appears as a natural law of human moral reasoning: persecution is inherently wrong, protection is inherently obligatory, and broad definitions of persecution follow logically from the core commitment to non-refoulement. This perspective risks naturalizing what is actually a contested institutional reading of an ambiguous text. The false summit detector will flag this as naturalization of a particular reading, not discovery of an immutable principle."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "generalized_violence_threshold",
+      "question": "What level of generalized violence in a territory triggers 'well-founded fear of persecution' under the expansive reading vs. requiring state-targeted persecution?",
+      "resolution_mechanism": "Case law analysis: track judicial decisions distinguishing persecution from generalized violence; identify operative thresholds in UN guidance documents and state asylum decisions; comparative analysis of acceptance rates for gang violence, femicide, and sectarian violence claims",
+      "impact": "If threshold is low (generalized violence sufficient): expands victim set dramatically, reclassifies constraint as pure extraction from state perspective. If threshold is high (state-targeted only): collapses back toward restrictive reading, narrows victim set, shifts constraint toward rope classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Definitional threshold for generalized violence as persecution"
+    },
+    {
+      "id": "particular_social_group_scope",
+      "question": "Does 'particular social group' encompass gender, sexual orientation, clan membership, and caste — or require narrower definitions based on immutability or social visibility?",
+      "resolution_mechanism": "UNHCR guidance documents; comparative jurisprudence (EU, Canada, Australia, US); empirical tracking of acceptance rates for gender-based violence, LGBTQ+, clan-based, and caste-based claims under different interpretive frameworks",
+      "impact": "Broad scope (gender, sexual orientation, clan, caste): victim set includes millions globally; constraint reclassifies as snare from state perspective. Narrow scope: reduces victim set to <1M; constraint shifts toward rope or scaffold classification.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Definitional scope of 'particular social group' category"
+    },
+    {
+      "id": "non_state_actor_liability",
+      "question": "Does the 1951 Convention obligate states to grant asylum for persecution by non-state actors (gangs, cults, private militias) when the state cannot or will not provide protection?",
+      "resolution_mechanism": "Text analysis: Article 1(A)(2) does not specify state actor; UNHCR Handbook explicitly includes non-state persecution; empirical tracking of judicial decisions on non-state actor claims; state practice analysis on interdiction and rejection rationales",
+      "impact": "If non-state liability included: victim set doubles (generalized gang violence, cult persecution, private militia violence now recognized); constraint becomes maximum-extraction snare from state sovereignty perspective. If excluded: returns to pre-1980s narrow state-targeted interpretation; constraint reclassifies as coordination rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether non-state actor persecution triggers Convention obligations"
+    },
+    {
+      "id": "offshore_processing_refoulement_equivalence",
+      "question": "Do offshore processing centers, interception at sea, and transit zone detention constitute refoulement (or indirect refoulement) under the expansive reading?",
+      "resolution_mechanism": "International Court jurisprudence (ICJ, regional courts); UNHCR position papers; empirical tracking of returns from offshore processing; comparative analysis of state practices and judicial challenges",
+      "impact": "If offshore = refoulement: renders entire interdiction apparatus illegal under expansive reading; transforms constraint into pure extraction snare from state perspective; forces reconceptualization of border control. If offshore ≠ refoulement: preserves state capacity for gatekeeping; constraint shifts toward tangled rope (mixed coordination and limited extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether offshore processing constitutes prohibited refoulement"
+    },
+    {
+      "id": "reading_kernel_committer_ambiguity",
+      "question": "Is the 1951 Convention text genuinely ambiguous on generalized violence, non-state persecution, and social group scope — or does the restrictive reading represent a legitimate alternative interpretation of a determinate kernel?",
+      "resolution_mechanism": "Textual analysis: compare plain-language reading of Art. 1(A)(2) with travaux préparatoires (drafting history); assess whether restrictive reading can be defended as consistent with original intent; examine whether expansive reading requires creative interpretation or follows naturally from text",
+      "impact": "If genuinely ambiguous: both readings are defensible; constraint is a coexists_with relationship between readings. If restrictive reading is parasitic on expansive: expansive forecloses restrictive; constraint becomes single stable interpretation. If expansive requires creative reinterpretation: might signal that the reading is driven by political advocacy rather than textual analysis.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the Convention text is genuinely ambiguous or the readings represent competing interpretations"
+    },
+    {
+      "id": "humanitarian_sovereignty_boundary",
+      "question": "Where is the legitimate boundary between humanitarian obligation (expansive reading) and state sovereignty (restrictive reading)? Is this boundary located in the text, in state capacity, in moral principle, or in negotiated international consensus?",
+      "resolution_mechanism": "Philosophical analysis: examine how different moral frameworks (cosmopolitan, nationalist, pluralist) ground the boundary; empirical analysis of state capacity constraints; comparative jurisprudence on where different states locate the boundary; tracking of international norm evolution",
+      "impact": "If located in text: expansive reading is correct; constraint is stable. If located in state capacity: boundary shifts with economic conditions and labor market needs; constraint becomes contingent. If located in moral principle: boundary is non-negotiable but may conflict with state interests (snare classification confirmed). If located in consensus: boundary is politically constructed; constraint may be subject to renegotiation.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Philosophical and political location of humanitarian obligation boundary"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The expansive humanitarian reading of the 1951 Refugee Convention interprets the definition of a refugee to include persons fleeing generalized violence and non-state persecution, and recognizes 'particular social group' as encompassing gender-based persecution, LGBTQ+ persecution, and clan-based violence. This reading instantiates one committed interpretation of an ambiguous kernel text, competing with a restrictive sovereignty-focused reading and a procedural integrity reading. The expansive reading has generated the core institutional architecture of contemporary asylum systems: broad victim categories, substantive claim assessment, non-refoulement as absolute principle, and recognition of persecution by non-state actors and structural violence. The constraint exhibits characteristics of both coordination (states have incentive to share burden-sharing frameworks) and extraction (broad victim categories impose resource costs on receiving states while creating asymmetric benefits for advocacy organizations and states with labor demand). Theater_ratio is moderate (0.42) because the institutional protection system maintains genuine substantive assessment procedures, unlike systems where assessment is purely performative. However, rising theater_ratio over time reflects growing awareness that extraction mechanisms (interdiction, offshore processing, pushbacks) render formal recognition partially theatrical — the assessments occur but their protective effect is circumscribed by extraterritorial gatekeeping. Suppression_requirement rises over time as states build enforcement capacity to manage asylum flows despite formal commitment to the expansive reading.",
+    "key_agents": [
+      "Asylum Seekers Fleeing Generalized Violence: Primary victims (powerless/trapped) — experience the expansive reading as sole pathway to protection; bear full cost of restrictive interpretation",
+      "LGBTQ+ Persons and Gender-Persecuted Individuals: Primary victims (powerless/identity_locked) — identity-based persecution only recognized under expansive reading; cannot abandon the identity that triggers persecution",
+      "Border and Receiving States: Primary extractors (institutional/constrained or institutional/arbitrage) — face coordination problem (burden-sharing) and resource costs (processing, integration); also benefit from selective recruitment of skilled refugees",
+      "Human Rights Advocacy Organizations: Secondary beneficiaries (organized/mobile) — advocate for expansive reading; benefit from funding, legitimacy, and organizational mission tied to broad protection",
+      "Wealthier Destination States with Labor Demand: Tertiary beneficiaries (institutional/arbitrage) — benefit from asylum flows as source of skilled labor; maintain humanitarian legitimacy through broad interpretation",
+      "Immigration Enforcement Systems: Institutional victim (institutional/constrained) — face mandate to assess all asylum claims substantively despite resource constraints and political pressure for restrictive outcomes",
+      "International Protection System Complex: Piton agent (institutional/constrained) — maintains theatrical assessment procedures despite widespread knowledge that extraction mechanisms undermine protective effect"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The expansive reading imposes substantial costs on receiving states (processing burden, integration demand, political opposition, enforcement complexity) while generating benefits for asylum seekers and advocacy organizations. The extraction is not maximal because genuine coordination problems exist (burden-sharing, capacity limits) and significant beneficiaries (labor-market states) experience net gain. Rising trajectory (0.35 → 0.58 over 20-year interval) reflects accumulating extraction as: (1) victim definitions have expanded to include gang violence, femicide, and LGBTQ+ persecution; (2) state capacity for offshore processing and interdiction has increased, creating gap between formal obligation and actual protection; (3) advocacy organizations have professionalized, creating institutional vested interest in maintaining broad interpretations. Suppression (0.68): High and rising. Structural barriers to asylum recognition include: (1) evidentiary burden of proving persecution and state inability/unwillingness to protect; (2) geographic barriers (interdiction, transit restrictions, visa requirements); (3) procedural barriers (complex claims assessment, language barriers, legal representation gaps); (4) political barriers (domestic opposition, border securitization, anti-refugee discourse). Rising trajectory reflects state investment in enforcement machinery designed to suppress claims at point of entry rather than assessing them substantively. Theater_ratio (0.42): Moderate and stable. The expansive reading generates genuine substantive assessment procedures — asylum interviews, credibility findings, country condition analysis — that have actual protective function. Theater is moderate because the assessment is real (not purely performative ritual) but increasingly circumscribed by extraction mechanisms that operate outside the assessment framework (interdiction, offshore processing, pushbacks). Suppression_requirement rising while theater_ratio stable suggests that states are increasingly using gatekeeper enforcement rather than hollow assessments to manage the constraint's extraction burden.",
+    "perspectival_gap": "The expansive reading generates a profound perspectival gap between powerless agents (asylum seekers, LGBTQ+ individuals) who experience it as the only coherent protection mechanism and constrained/arbitrage institutional agents (border states, wealthier destination states) who experience it as an extraction mandate. The asylum seeker trapped by generalized violence and the LGBTQ+ person identity_locked by persecution see the expansive reading as non-negotiable — not because they benefit, but because restrictive readings render their persecution invisible and unprotectable. The border state sees the same reading as an obligation-extraction: genuine coordination problem (burden-sharing, capacity limits) mixed with asymmetric cost imposition. The advocacy coalition sees a temporary scaffold with a generational sunset as state practices normalize. The destination state with labor demand sees a coordination mechanism enabling selective recruitment. The institutional protection system sees degraded theater — assessments that are increasingly performative because extraction mechanisms circumvent them. The analytical observer risks naturalizing the expansive reading as a law of human morality rather than recognizing it as one contested interpretation of an ambiguous text.",
+    "directionality_logic": "Directionality (d) flows from the structural relationship of each agent to the expansive reading. Powerless/trapped agents fleeing persecution have maximum d (1.0) not because they benefit, but because they bear the full cost of restrictive interpretation — their exit capacity is zero and the constraint's protective scope directly determines their survival prospects. LGBTQ+ persons with identity_locked exit have high d (0.89) — structurally mobile (could hide) but identity-bound (cannot exit without self-negation). Border states constrained by resource limits and political opposition have moderate d (0.55) — can exercise some discretion in claim assessment but cannot simply reject all claims. Wealthier destination states with arbitrage options have low d (0.15) — benefit from selective recruitment while maintaining humanitarian legitimacy, multiple exit options (tighten borders, process selectively, offshore-process). Advocacy organizations with mobile exit have low d (0.15) — benefit from broad interpretations, can defund or relocate if political context shifts. The piton institutional system has moderate d (0.50) — neither benefits nor bears maximum cost; perpetuates the constraint through inertia. The sigmoid f(d) function amplifies extraction experienced by powerless agents and dampens it for institutional beneficiaries, creating the perspectival divergence in classification types.",
+    "mandatrophy_analysis": "The expansive reading resolves mandatrophy by clarifying that the constraint is fundamentally mixed coordination-extraction (tangled rope), not pure extraction or pure coordination. The coordination function is genuine: state burden-sharing frameworks, international cooperation, and mutual recognition of persecution definitions solve collective action problems around asylum processing. The extraction function is also genuine: the expansive victim definitions impose asymmetric costs on border/resource-limited states while distributing benefits to advocacy organizations, labor-market states, and asylum seekers. The mandatrophy dissolves when we ask: 'From which perspective?' From the powerless asylum seeker's perspective, the constraint is snare — pure extraction relative to being denied protection. From the destination state's perspective with labor demand, the constraint is rope — coordination enabling selective recruitment. From the border state's perspective, the constraint is tangled rope — mixed burden (resource cost, political opposition) with some benefit (international legitimacy, access to return frameworks). No single type is 'correct' — the constraint's classification is perspectival.",
+    "kernel_context": "This constraint instantiates the 'expansive humanitarian reading' of the refugee_convention_text kernel. The kernel is the 1951 UN Convention Relating to the Status of Refugees — a formalized, fixed-text authority grounded in international lineage (foundational post-WWII human rights commitment). This reading interprets the Convention's Article 1(A)(2) definition of a refugee to include: (1) persecution from non-state actors (gangs, cults, private militias); (2) generalized violence (gang violence, femicide, sectarian conflict) as triggering 'well-founded fear'; (3) broad 'particular social group' category encompassing gender, sexual orientation, clan membership, and caste. Sibling readings: The 'restrictive_sovereignty_reading' emphasizes state control over borders and narrow persecution definitions (state-targeted, individual acts), limiting victim categories. The 'procedural_integrity_reading' focuses on assessment procedures, evidence standards, and capacity limits, treating broad definitions as administratively unsustainable. This expansive reading coexists with both siblings in contemporary practice — different states, judicial systems, and advocacy communities hold different readings. The boundaries between readings are not resolved in the text itself; they represent competing commitments to humanitarian obligation vs. state sovereignty vs. procedural feasibility."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "refugee_convention_text__restrictive_sovereignty_reading",
+      "refugee_convention_text__procedural_integrity_reading",
+      "asylum_processing_capacity_bottleneck",
+      "non_refoulement_absolute_principle"
+    ],
+    "dual_formulation_note": "This constraint is one reading (expansive_humanitarian_reading) of the contested kernel refugee_convention_text. Sibling readings instantiate the same Convention text but reach different classifications of what counts as persecution, what counts as a social group, and what constitutes state obligation. All three readings (expansive, restrictive, procedural) emerge from the same legal text; the differences are not measurement artifacts but genuine interpretive alternatives grounded in different priorities (humanitarian obligation vs. sovereignty vs. procedural feasibility). Each reading has its own ε, its own perspectives, and its own CS structure entries recording the reading relations and axioms. The sibling readings are linked via network.affects_constraints in all three story files."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.25
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "universal_humanitarian_protection_mandate",
+    "drift_state": {
+      "moment": "contemporary_securitized_borders",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "refugee_convention_text__restrictive_sovereignty_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "refugee_convention_text__procedural_integrity_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "persecution_includes_generalized_violence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "particular_social_group_includes_gender_and_sexual_orientation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "non_state_actor_persecution_triggers_obligation",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  }
+}

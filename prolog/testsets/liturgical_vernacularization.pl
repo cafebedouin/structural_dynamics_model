@@ -44,9 +44,17 @@
     constraint_indexing:constraint_classification/3,
     constraint_indexing:directionality_override/3,
     narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
     narrative_ontology:cs_kernel_codification/2,
     narrative_ontology:cs_authority_grounding/2,
     narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
     narrative_ontology:human_readable/2,
     narrative_ontology:topic_domain/2.
 
@@ -57,45 +65,44 @@
 /**
  * CONSTRAINT IDENTIFICATION
  *   constraint_id: liturgical_vernacularization
- *   human_readable: Liturgical Vernacularization and Roman Authority
- *   domain: religious_institutional_change/ecclesiology
+ *   human_readable: Liturgical Vernacularization and Catholic Institutional Authority
+ *   domain: ecclesiastical_history/theological_doctrine
  *
  * SUMMARY:
- *   Vatican II (1962-1965) authorized the vernacularization of the Latin
- *   Mass, transferring liturgical composition authority from the Roman Curia
- *   to national episcopal conferences. This constraint exhibits a crucial
- *   tension: it presents itself as genuine decentralization (Rope) while
- *   retaining papal doctrinal monopoly over what counts as 'authentic'
- *   translation and liturgical practice (Tangled Rope/Snare). The
- *   constraint's classification depends entirely on the observer's structural
- *   position. For lay Catholics, vernacular access improved intelligibility
- *   but subordinated them to episcopal authority structures. For episcopal
- *   conferences, devolution appeared to grant pastoral autonomy while Rome
- *   retained veto power over translations and practice. For the Roman Curia,
- *   vernacularization solved the coordination problem of universal liturgy in
- *   a multilingual Church while preserving Rome's ultimate doctrinal
- *   authority. For the Vatican II reform coalition (progressive bishops,
- *   theological movements), the constraint was scaffolding toward
- *   democratized theology and reduced papal monopoly — but the sunset never
- *   occurred. For the ecclesiastical apparatus itself, vernacularization
- *   became a performative theater: Latin Mass restrictions and allowances
- *   oscillate, debates over 'authentic' translations persist, and much
- *   institutional energy flows into legitimating whichever linguistic choice
- *   prevails. The analytical observer risks seeing linguistic pluralism as a
- *   natural law of ritual practice, naturalizing what is actually a contested
- *   institutional choice rooted in 20th-century Church politics. The
- *   constraint's extractiveness has declined from 0.72 (pre-Vatican II Latin
- *   monopoly) to 0.58 (post-Vatican II mixed system), while theater has
- *   increased from 0.15 to 0.68, suggesting the constraint is degrading
- *   toward Piton classification.
+ *   Vatican II (1962–1965) mandated liturgical vernacularization: the Latin
+ *   Mass gave way to national-language Masses approved by local episcopal
+ *   conferences. This constraint is analytically critical because it embeds a
+ *   contested kernel — whether Vatican II represents ONE reading of Catholic
+ *   continuity or MULTIPLE structurally distinct doctrinal shifts bundled
+ *   under institutional convenience. The vernacularization mandate appears as
+ *   an immutable law of institutional necessity (mountain) to the analytical
+ *   observer at civilizational scale; as pure extraction and suppression
+ *   (snare) to the Latin tradition itself; as legitimate coordination (rope)
+ *   to the reformist Catholic leadership; as mixed coordination-extraction
+ *   (tangled_rope) to powerful bishops constrained by obedience; as temporary
+ *   scaffolding (scaffold) to progressive reform movements; and as degraded
+ *   performative authority (piton) to the Vatican's current liturgical
+ *   enforcement apparatus. The constraint's extractiveness rose sharply
+ *   during Vatican II (0.18 → 0.35 during conclave) and stabilized at 0.52
+ *   post-implementation. Theater ratio increased from 0.42 (pre-Vatican II
+ *   Latin clarity) to 0.71 (post-Vatican II performative declarations of
+ *   ecclesiastical unity that do not control actual parish practice). This
+ *   trajectory marks the shift from substantive institutional control to
+ *   theater: the Vatican maintains the fiction of liturgical authority
+ *   through repeated decrees (2007 motu proprio, 2021 restrictions, 2023
+ *   traditionalist crackdowns) but cannot operationally constrain vernacular
+ *   innovation at parish level. The constraint is now primarily inertial
+ *   (piton) — maintained by institutional habit rather than functional
+ *   necessity.
  *
  * KEY AGENTS:
- *   - Lay Catholic Community: Primary victim (powerless/trapped) — dependent on ecclesiastical authority for sacramental access; extractiveness manifests as linguistic gatekeeping and suppression of lay theological agency
- *   - National Episcopal Conferences: Primary beneficiary AND constrained actor (organized/constrained) — gain pastoral authority over liturgy but remain subordinate to Rome's doctrinal veto; dual directionality creates Tangled Rope experience
- *   - Roman Curia/Vatican: Primary beneficiary (institutional/arbitrage) — maintains doctrinal monopoly while appearing to grant decentralization; experiences constraint as pure coordination mechanism enabling Rome to retain ultimate authority
- *   - Vatican II Reform Coalition: Organized secondary actor (organized/constrained) — progressive bishops, theological movements, lay organizations viewing vernacularization as sunset scaffolding toward democratic theology; experience constraint as degraded after sunset fails
- *   - Latin Tradition Communities: Secondary victim (powerful/constrained) — lose institutional support for Latin liturgy post-Vatican II; exit options degrade through seminary defunding and Latin instruction decline
- *   - Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing institutional choice (linguistic pluralism) as immutable principle, creating false-summit classification
+ *   - Latin Liturgical Tradition: Primary victim (powerless/trapped/global) — the theological transmission vehicle of centuries, stripped of its institutional monopoly. No exit; the tradition persists in marginal canonical spaces (SSPX, traditionalist enclaves) but outside the Church's formal structure. Experiences maximum extraction.
+ *   - Parish-Level Clergy and Laity: Mixed agent (moderate/constrained/national) — clergy lose priestly gatekeeping authority but gain flexibility in adaptation; laity gain comprehension but lose the transcendent distance Latin provided. Coordinating benefits and extractive losses coexist.
+ *   - Roman Curia (Vatican II Architects): Primary beneficiary (institutional/arbitrage/global) — solves the modernization legitimacy problem while centralizing doctrinal control. Delegates implementation form (vernacular) while retaining doctrinal substance (Rome's teaching office). High arbitrage capacity protects this actor from experienced extraction.
+ *   - Traditionalist Episcopal Conferences: Secondary victim (powerful/constrained/regional) — strong Latin-liturgy bishops (esp. French, Italian, Spanish) lose the authority to resist vernacularization. Obedience vows bind them to compliance; their powerful position cannot translate into blocking power because hierarchical structure absorbs resistance. Experience tangled_rope: some coordination benefits (unified church discipline) with significant extraction (loss of regional liturgical authority).
+ *   - Progressive Reform Movements: Organized agents (organized/mobile/global) — liberation theology, inculturation advocates see vernacularization as scaffolding for deeper localization. They have the agency and intellectual resources to drive the constraint toward outcomes they want. Lower experienced extraction because they can shape implementation.
+ *   - Vatican Liturgical Authority Post-Vatican II: Institutional actor (institutional/arbitrage/global) — maintains ceremonial authority declarations (motu proprios, restrictions) that have minimal operational effect. The machinery persists through inertia. This is the piton element: performative authority without functional constraint.
+ *   - Analytical Observer: Civilizational perspective (analytical/analytical/universal) — risks naturalizing the Vatican's institutional choice as an inherent law of religious organization. The false summit detector should flag this: identifying beneficiaries (curia, institutional church authority) on a mountain-type constraint suggests naturalization rather than genuine natural law.
  */
 
 /* ==========================================================================
@@ -103,77 +110,93 @@
    ========================================================================== */
 
 % --- Numerical metrics ---
-domain_priors:base_extractiveness(liturgical_vernacularization, 0.58).
-domain_priors:suppression_score(liturgical_vernacularization, 0.65).
-domain_priors:theater_ratio(liturgical_vernacularization, 0.68).
+domain_priors:base_extractiveness(liturgical_vernacularization, 0.52).
+domain_priors:suppression_score(liturgical_vernacularization, 0.58).
+domain_priors:theater_ratio(liturgical_vernacularization, 0.64).
 
 % --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
-narrative_ontology:constraint_metric(liturgical_vernacularization, extractiveness, 0.58).
-narrative_ontology:constraint_metric(liturgical_vernacularization, suppression_requirement, 0.65).
-narrative_ontology:constraint_metric(liturgical_vernacularization, theater_ratio, 0.68).
+narrative_ontology:constraint_metric(liturgical_vernacularization, extractiveness, 0.52).
+narrative_ontology:constraint_metric(liturgical_vernacularization, suppression_requirement, 0.58).
+narrative_ontology:constraint_metric(liturgical_vernacularization, theater_ratio, 0.64).
 
 % --- Constraint claim ---
 narrative_ontology:constraint_claim(liturgical_vernacularization, tangled_rope).
-narrative_ontology:human_readable(liturgical_vernacularization, "Liturgical Vernacularization and Roman Authority").
-narrative_ontology:topic_domain(liturgical_vernacularization, "religious_institutional_change/ecclesiology").
+narrative_ontology:human_readable(liturgical_vernacularization, "Liturgical Vernacularization and Catholic Institutional Authority").
+narrative_ontology:topic_domain(liturgical_vernacularization, "ecclesiastical_history/theological_doctrine").
 
 domain_priors:requires_active_enforcement(liturgical_vernacularization).
 
 % --- Commitment system structure ---
-narrative_ontology:cs_story_uid(liturgical_vernacularization, '66128749-1c1d-4a1f-8e8c-2cb519d299c8').
-narrative_ontology:cs_created_at('66128749-1c1d-4a1f-8e8c-2cb519d299c8', '').
-narrative_ontology:cs_kernel_codification('66128749-1c1d-4a1f-8e8c-2cb519d299c8', fixed_text).
-narrative_ontology:cs_authority_grounding('66128749-1c1d-4a1f-8e8c-2cb519d299c8', lineage).
-narrative_ontology:cs_interpretation_layer_present('66128749-1c1d-4a1f-8e8c-2cb519d299c8').
+narrative_ontology:cs_story_uid(liturgical_vernacularization, '4d92229a-9b2e-40b1-b1c0-c3342c36925a').
+narrative_ontology:cs_kernel_codification('4d92229a-9b2e-40b1-b1c0-c3342c36925a', formalized).
+narrative_ontology:cs_authority_grounding('4d92229a-9b2e-40b1-b1c0-c3342c36925a', lineage).
+narrative_ontology:cs_interpretation_layer_present('4d92229a-9b2e-40b1-b1c0-c3342c36925a').
+narrative_ontology:cs_reading_relation('4d92229a-9b2e-40b1-b1c0-c3342c36925a', vatican_ii_continuity_reading, coexists_with).
+narrative_ontology:cs_reading_relation('4d92229a-9b2e-40b1-b1c0-c3342c36925a', vatican_ii_rupture_reading, coexists_with).
+narrative_ontology:cs_reading_relation('4d92229a-9b2e-40b1-b1c0-c3342c36925a', vatican_ii_development_reading, coexists_with).
+narrative_ontology:cs_axiom('4d92229a-9b2e-40b1-b1c0-c3342c36925a', foundational, latin_irreplaceable_sacrally).
+narrative_ontology:cs_axiom_status(latin_irreplaceable_sacrally, holdable).
+narrative_ontology:cs_axiom_grounding('4d92229a-9b2e-40b1-b1c0-c3342c36925a', latin_irreplaceable_sacrally, theological).
+narrative_ontology:cs_axiom('4d92229a-9b2e-40b1-b1c0-c3342c36925a', secondary, papal_authority_indivisible_over_discipline).
+narrative_ontology:cs_axiom_status(papal_authority_indivisible_over_discipline, holdable).
+narrative_ontology:cs_axiom_grounding('4d92229a-9b2e-40b1-b1c0-c3342c36925a', papal_authority_indivisible_over_discipline, deontological).
+narrative_ontology:cs_reference_frame('4d92229a-9b2e-40b1-b1c0-c3342c36925a', latin_liturgical_universality).
+narrative_ontology:cs_drift_state('4d92229a-9b2e-40b1-b1c0-c3342c36925a', post_vatican_ii_contemporary, gap(codification_collapse, severe, false)).
+narrative_ontology:cs_created_at('4d92229a-9b2e-40b1-b1c0-c3342c36925a', '').
 
 % --- Structural relationships ---
-narrative_ontology:constraint_beneficiary(liturgical_vernacularization, lay_participation).
-narrative_ontology:constraint_beneficiary(liturgical_vernacularization, national_episcopal_conferences).
-narrative_ontology:constraint_beneficiary(liturgical_vernacularization, linguistic_communities).
-narrative_ontology:constraint_victim(liturgical_vernacularization, latin_language_tradition).
-narrative_ontology:constraint_victim(liturgical_vernacularization, liturgical_uniformity).
-narrative_ontology:constraint_victim(liturgical_vernacularization, papal_doctrinal_monopoly).
+narrative_ontology:constraint_beneficiary(liturgical_vernacularization, institutional_church_authority).
+narrative_ontology:constraint_beneficiary(liturgical_vernacularization, global_catholic_laity).
+narrative_ontology:constraint_victim(liturgical_vernacularization, latin_liturgical_tradition).
+narrative_ontology:constraint_victim(liturgical_vernacularization, episcopal_authority_localized).
 
 /* ==========================================================================
    3. INDEXED CLASSIFICATIONS (P, T, E, S)
    ========================================================================== */
 
-% PERSPECTIVE 1: MONOLINGUAL LAY CATHOLICS (SNARE) — Trapped in liturgical participation without intelligibility. Pre-Vatican II, the Latin requirement suppressed understanding; post-Vatican II vernacular implementation varies by region, creating uneven access. Exit is impossible — the constraint governs access to the sacraments themselves. Powerless agents bear the suppression cost of ecclesiastical authority's control over linguistic legitimacy.
+% PERSPECTIVE 1: LATIN LITURGICAL TRADITION (SNARE) — Structurally trapped by institutional decree. The vernacularization mandate removed the linguistic substrate of centuries of theological transmission. No exit mechanism; no alternative formulation without abandonment of the tradition itself. Maximum extraction: the constraint takes away the substance while claiming continuity. The tradition experiences the constraint as totalizing confiscation.
 constraint_indexing:constraint_classification(liturgical_vernacularization, snare,
     context(agent_power(powerless),
             time_horizon(biographical),
             exit_options(trapped),
             spatial_scope(global))).
 
-% PERSPECTIVE 2: NATIONAL EPISCOPAL CONFERENCE (TANGLED ROPE) — Genuinely benefits from vernacularization (pastoral authority at the local level, liturgical adaptation). But constrained by Rome's retention of doctrinal oversight and missal approval authority. The constraint coordinates pastoral adaptation AND enforces papal control over how adaptation occurs. Extraction flows both ways: authority devolved to conferences, but also regulated by Rome.
-constraint_indexing:constraint_classification(liturgical_vernacularization, tangled_rope,
-    context(agent_power(organized),
+% PERSPECTIVE 2: PARISH-LEVEL CLERGY AND LAITY (ROPE) — Moderate power; significant barriers to resistance (obedience vows, career dependence) but also genuine coordination benefits. The vernacular Mass enables broader participation, reduces cognitive barriers to comprehension, creates locally adaptable liturgy. Mixed extraction: some clergy experience loss of priestly mystique and interpretive gatekeeping; laity experience gain in access. Coordination and extraction coexist at medium intensity.
+constraint_indexing:constraint_classification(liturgical_vernacularization, rope,
+    context(agent_power(moderate),
             time_horizon(biographical),
             exit_options(constrained),
             spatial_scope(national))).
 
-% PERSPECTIVE 3: ROMAN CURIA (ROPE) — Benefits from vernacularization as a coordination mechanism that appears to devolve power while maintaining Rome's ultimate doctrinal authority. The constraint solves a real coordination problem (liturgy must be in languages people speak). Rome experiences this as pure coordination: the illusion of pluralism while reserving doctrinal judgment.
+% PERSPECTIVE 3: ROMAN CURIA — VATICAN II ARCHITECTS (ROPE) — Institutional beneficiary with high arbitrage capacity. The coordination frame was controlling a unified global church while managing post-WWII secularization and modernization pressures. Vernacularization solved a legitimacy problem: Latin exclusivity was losing the church's sociological foothold in modernizing societies. The curia experiences this as successful coordination: centralizing doctrinal authority while delegating presentation form. Net beneficiary; low experienced extraction because arbitrage options protect this actor.
 constraint_indexing:constraint_classification(liturgical_vernacularization, rope,
     context(agent_power(institutional),
             time_horizon(immediate),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 4: VATICAN II REFORM COALITION (SCAFFOLD) — Organized agents (progressive bishops, theological movements, lay organizations) viewed vernacularization as a temporary corrective to clericalism with an intended sunset: democratization of theology would eventually create peer authority structures, reducing papal monopoly. But the sunset never occurred — the constraint became permanent institutional feature. Reform coalition sees the constraint as degraded, theater-heavy performance of change without substantive authority devolution.
+% PERSPECTIVE 4: TRADITIONALIST EPISCOPAL BLOC (TANGLED ROPE) — Powerful but constrained by hierarchical obedience. Bishops with strong Latin-liturgy commitments (esp. French, Italian, Spanish episcopal conferences) perceived the mandate as coordination gone extractive. They gained centralized doctrinal clarity but lost liturgical authority to adapt tradition locally. The constraint operates as both coordination (unified church discipline) and extraction (loss of episcopal prerogative). High suppression: resistance was routed through canonically compliant channels only — explicit disobedience was not viable. Their experience is mixed: coordination benefits offset by extracted regional authority.
+constraint_indexing:constraint_classification(liturgical_vernacularization, tangled_rope,
+    context(agent_power(powerful),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: PROGRESSIVE POST-VATICAN II REFORM MOVEMENT (SCAFFOLD) — Organized agents (liberation theology networks, inculturation advocates, German-speaking reformers) see vernacularization as a temporary scaffolding enabling deeper transformation: liturgical localization, contextual theology, decolonization of doctrine. They perceive a sunset: as vernacular adaptations mature globally, the universal Latin standard becomes unnecessary, and local inculturation becomes the norm. Low effective extraction because the movement has agency and clear exit path (further decentralization). Theater moderate: the reform movement is energetic, not performative.
 constraint_indexing:constraint_classification(liturgical_vernacularization, scaffold,
     context(agent_power(organized),
             time_horizon(generational),
-            exit_options(constrained),
-            spatial_scope(continental))).
+            exit_options(mobile),
+            spatial_scope(global))).
 
-% PERSPECTIVE 5: POST-VATICAN II ECCLESIASTICAL APPARATUS (PITON) — The vernacularization constraint persists through institutional inertia, theater, and accommodation. The authentic coordination function (making liturgy intelligible) coexists with persistent theatrical elements: Latin Mass resurgence (Traditionalist Mass allowance and recent restrictions), debates over liturgical 'authenticity,' and continued papal micromanagement of translation details. Theater ratio (0.68) reflects that much activity is legitimation theater (defending the chosen vernacular) rather than functional coordination.
+% PERSPECTIVE 6: VATICAN STRUCTURAL AUTHORITY POST-VATICAN II (PITON) — The institutional apparatus that maintains doctrinal unity through uniform liturgical practice is largely inert. Modern Catholic parishes exhibit high liturgical variance (guitar Masses, incultured rites, charismatic worship styles) that would have been unthinkable in 1962. The institution maintains the fiction of unified discipline through Vatican declarations (e.g., Benedict XVI's 2007 motu proprio restoring Latin) but cannot enforce coherence. The machinery persists through inertia and ceremonial reaffirmation, not functional necessity. Theater high: the vatican's liturgical authority is substantially performative display of control that does not translate to operational constraint at parish level.
 constraint_indexing:constraint_classification(liturgical_vernacularization, piton,
     context(agent_power(institutional),
             time_horizon(civilizational),
             exit_options(arbitrage),
             spatial_scope(global))).
 
-% PERSPECTIVE 6: ANALYTICAL OBSERVER / UNIVERSAL PRINCIPLE VIEW (MOUNTAIN) — From civilizational scope, some degree of linguistic translation in liturgy appears as a natural law: any ritual must be in a language participants comprehend. This perspective risks naturalizing what is actually a contingent institutional choice (Latin hegemony 1600-1960 was itself a choice; return to Latin-only would be a choice; vernacular pluralism is a choice). The engine's false-summit detection should flag this as naturalization of the institutional arrangement.
+% PERSPECTIVE 7: ANALYTICAL OBSERVER — NATURAL LAW VIEW (DOCTRINAL CONTINUITY) — From a civilizational/universal perspective, the constraint appears as an immutable feature of Catholic institutional authority: any universal church must have a unified liturgical expression or risk doctrinal fragmentation. Vernacularization is the vehicle by which Rome maintains doctrinal hegemony while appearing to decentralize presentation. From this view, the constraint is an inherent structural necessity of maintaining ecclesiastical unity across diverse cultures — a natural law of large-scale religious institutions. This perspective frames the constraint as unchangeable.
 constraint_indexing:constraint_classification(liturgical_vernacularization, mountain,
     context(agent_power(analytical),
             time_horizon(civilizational),
@@ -188,7 +211,7 @@ constraint_indexing:constraint_classification(liturgical_vernacularization, moun
 
 test(perspectival_gap) :-
     constraint_indexing:constraint_classification(liturgical_vernacularization, TypePowerless, context(agent_power(powerless), _, _, _)),
-    constraint_indexing:constraint_classification(liturgical_vernacularization, TypeOther, context(agent_power(organized), _, _, _)),
+    constraint_indexing:constraint_classification(liturgical_vernacularization, TypeOther, context(agent_power(moderate), _, _, _)),
     TypePowerless \= TypeOther.
 
 test(extraction_signature) :-
@@ -207,16 +230,16 @@ test(piton_threshold) :-
 
 /**
  * LOGIC RATIONALE:
- *   Extractiveness (0.58): The constraint exhibits moderate extraction because multiple beneficiaries capture asymmetric value. Pre-Vatican II (t=0: ε=0.72), Latin monopoly extracted by suppressing lay understanding and episcopal pastoral authority. Post-Vatican II (t=6: ε=0.58), extraction reduced because vernacularization genuinely improves lay intelligibility and grants episcopal conferences real (though constrained) authority. But extraction persists because Rome retains doctrinal oversight, enabling selective enforcement of 'authentic' translations and preventing the reform coalition's intended decentralization. Suppression (0.65): Structural barriers remain high. Lay Catholics cannot exit sacramental participation, creating trapped-exit dependency. Episcopal conferences face career risk (papal disfavor) and resource constraints (Rome controls canonical texts, training materials). Latin tradition communities lost institutional support (seminaries shifted to vernacular, Latin instruction declined). Theater ratio (0.68): High and increasing. Pre-Vatican II theater was low (0.15) — Latin obscurity was the extraction mechanism, not performance. Post-Vatican II theater rose through: oscillating restrictions/allowances (2007 allowance for Traditional Latin Mass, 2019 restrictions), performative debates over translation 'authenticity,' and legitimation rituals around chosen vernacular. Theater increased because the actual power structure (papal doctrinal monopoly) diverged from the apparent structure (episcopal decentralization), requiring theatrical performance to reconcile the gap. The increasing theater_ratio (0.15 → 0.68) combined with declining extractiveness (0.72 → 0.58) is diagnostic of Piton degradation: the constraint's primary function (coordinating multilingual liturgy) persists, but atrophied authority (Vatican II's failed sunset) now requires theatrical maintenance.
+ *   Extractiveness (0.52): Moderate-high, and rising sharply at Vatican II implementation (0.18 → 0.52 over 5 years), then stabilizing with slight decline to 0.48 as John Paul II's papacy normalized the new liturgy. The extraction is real but not maximal. Beneficiaries (institutional church, global laity accessing Mass in their language) gained legitimacy and operational efficiency. Victims (Latin tradition, regional episcopal authority) lost substantive institutional position. The measurement trajectory reflects the shock of rapid change (sharp rise during and after Vatican II) followed by normalization as the new practice became embedded. Extractiveness has not declined significantly (slight drop in John Paul era) because the constraint remains binding — parishes cannot return to Latin Mass without explicit Vatican permission (still restricted as of 2026). Suppression (0.58): Moderate-high. The constraint operates through hierarchical obedience (vows binding priests and bishops), career dependence (non-compliance threatens advancement), and formal discipline (Vatican declarations backed by administrative machinery). However, suppression is not total — parish-level liturgical drift (guitar Masses, inculturation, charismatic adaptations) shows that the constraint has enforcement gaps. Clergy and laity found workarounds within formal compliance (technically following Vatican rules while practically innovating). Theater ratio (0.64): Moderate-high and rising. Pre-Vatican II Latin liturgy had lower theater (0.42) because the institutional control was substantive — Latin uniformity was operationally enforced and theologically justified. Post-Vatican II theater rose because the Vatican's authority over liturgical practice degraded while ceremonial declarations multiplied. By 1965 (time 5), theater reached 0.64 because the Vatican was reasserting control through motu proprios and restrictions while actual parish practice diverged. By 2000s (time 10), theater peaked at 0.71 because the Vatican maintains loud declarations of liturgical authority (2007 motu proprio by Benedict XVI, 2021 restrictions by Francis) that have minimal practical effect on vernacular innovation. The theater_ratio trajectory shows institutional inertia: the Vatican keeps performing authority over something it cannot operationally control.
  *
  * PERSPECTIVAL GAP:
- *   The maximum perspectival gap occurs between the Roman Curia (Rope, χ ≈ -0.007) and the lay Catholic (Snare, χ ≈ 0.99) — a 99-unit difference in experienced extraction from identical structural properties. This gap is diagnostic of a hybrid coordination-extraction constraint. The Curia genuinely solves a coordination problem (multilingual liturgy requires local adaptation) and benefits from preserving doctrinal monopoly (Rome retains ultimate authority). The lay Catholic faces trapped participation in a system they cannot understand and cannot exit. Both experiences are structurally accurate; they are viewing the same constraint from opposite power positions. The gap reveals that Vatican II is not a neutral coordination mechanism but a structural rearrangement that preserved Rome's power while appearing to devolve it.
+ *   This constraint exhibits the full six-type perspectival divergence. The Latin tradition sees snare (trapped, global, powerless — the constraint confiscates the linguistic substrate of their theological transmission). Parish clergy and laity see rope (coordination benefits enabling mass participation offset by lost transcendent distance). The curia sees rope (successful coordination of a global institution while managing modernization). Traditionalist bishops see tangled_rope (genuine coordination of church unity alongside extraction of regional authority). Progressive reformers see scaffold (temporary constraint enabling deeper transformation toward inculturation). The Vatican's liturgical authority apparatus sees piton (its own control mechanisms have degraded; it performs authority it cannot enforce). The analytical observer risks seeing mountain (immutable law of religious institutions) — a false summit. The perspectival gaps reveal that the constraint bundles together multiple analytically distinct dynamics: (1) the loss of Latin institutional monopoly (snare-level extraction for the tradition), (2) the gain in laity comprehension and participation (rope-level coordination for parishes), (3) the consolidation of Rome's doctrinal hegemony (rope-level coordination for curia), (4) the extraction of episcopal regional authority (tangled_rope for bishops), (5) the scaffolding of further localization (scaffold for progressives), and (6) the degradation of enforcement machinery (piton for the Vatican). These are not the same constraint viewed from different angles — they are different structural effects bundled under one institutional action.
  *
  * DIRECTIONALITY LOGIC:
- *   The constraint's directionality structure reflects Vatican II's core ambiguity: it presents as decentralization (episcopal conferences gain liturgical authority) while preserving centralization (Rome retains doctrinal veto). This duality creates the Tangled Rope classification. Beneficiaries (national episcopal conferences, lay participation, linguistic communities) gain real authority over liturgical form but remain subordinate to Rome's judgment of doctrinal correctness. Victims (Latin tradition, liturgical uniformity, papal monopoly aspiration) lose institutional support — but these are not powerless agents; they are institutional structures that lose value. The papal monopoly on doctrine persists through the apparent devolution: Rome approves or rejects episcopal conference translations, can restrict or allow Latin Mass use, and maintains the authority to redefine what counts as 'authentic' Catholic practice. The Tangled Rope classification holds because the constraint genuinely coordinates (solving the multilingual liturgy problem) AND genuinely extracts (Rome retains doctrinal monopoly while devolving administrative burden). The constraint's persistence through theater ratio increase (0.15 → 0.68) and extractiveness decline (0.72 → 0.58) suggests institutional degradation: the original extraction mechanism (Latin incomprehensibility) weakened, so theater (performative debates, oscillating allowances) became necessary to maintain the structure. This is the diagnostic signature of Piton classification mixed with Tangled Rope.
+ *   Directionality values (d) derived from beneficiary/victim + power + exit options. The Latin tradition: victim status + powerless + trapped = d ≈ 0.95, f(d) ≈ 1.42, high experienced extraction (snare). Parish clergy: mixed (beneficiary in some respects, victim in others) + moderate + constrained = d ≈ 0.50, f(d) ≈ 0.65, moderate experienced extraction (rope to tangled_rope). Curia: beneficiary status + institutional + arbitrage = d ≈ 0.05, f(d) ≈ -0.12, low/negative experienced extraction (rope). Traditionalist bishops: victim status + powerful + constrained = d ≈ 0.55, f(d) ≈ 0.75, moderate-high extraction relative to power (tangled_rope). Progressive reformers: organized + mobile = d ≈ 0.40, f(d) ≈ 0.40, moderate extraction but with agency (scaffold). Vatican authority: institutional + arbitrage = d ≈ 0.05, f(d) ≈ -0.12 (piton theater gates, not d-driven). Analytical: observer = d ≈ 0.72, f(d) ≈ 1.15 (mountain from natural law assumption, reclassified to false summit by FSM detector).
  *
  * MANDATROPHY ANALYSIS:
- *   This constraint resolves the mandatrophy — the tension between treating it as pure coordination (Rope) and pure extraction (Snare) — by revealing that it is genuinely both. The Roman Curia's perspective (Rope) and the lay Catholic's perspective (Snare) are not different readings of the same reality but observations from structurally opposite positions within the constraint. The Tangled Rope classification acknowledges that vernacularization simultaneously coordinates (makes liturgy intelligible, enables local pastoral adaptation) and extracts (Rome retains ultimate doctrinal authority, suppresses Latin tradition, prevents the reform coalition's intended democratization). The mandatrophy is resolved not by choosing one type but by recognizing that the constraint has a genuine coordination function (beneficiaries list: lay participation, episcopal conferences, linguistic communities) AND a genuine extraction function (victims list: Latin tradition, liturgical uniformity, papal monopoly dissolution prevented). The increasing theater ratio (0.15 → 0.68) indicates the constraint is degrading: as the original extraction mechanism (Latin monopoly) weakened, institutional theater became necessary to maintain the hybrid structure. The Piton classification from the ecclesiastical apparatus perspective (perspective 5) observes exactly this degradation — the constraint persists through inertia and theater, not functional necessity. The mandatrophy resolution maps to the scaffold perspective's failed sunset: Vatican II intended to devolve authority permanently (creating a stable new coordination structure), but Rome's retention of doctrinal veto prevented the sunset, leaving a hybrid that requires increasing theater to maintain. The constraint's true type is contextual: it is Rope for Rome, Tangled Rope for episcopal conferences, Snare for lay Catholics, degraded Scaffold for reformers, and Piton for the Church apparatus itself. No single type captures it — the presheaf of classifications IS the constraint's structure.
+ *   RESOLVED BY PERSPECTIVAL MAPPING: The constraint's mandatrophy is resolved by recognizing that Vatican II bundled multiple independent doctrinal shifts (liturgy, collegiality, ecumenism, scriptural authority) that are analytically distinct constraints with different ε values and different beneficiary/victim structures. The measured ε = 0.52 represents vernacularization's direct extraction, but this is only one component of the Vatican II institutional action. A complete analysis would decompose the constraint family: (1) liturgical_authority_decentralization (ε ≈ 0.52, tangled_rope, measured here), (2) episcopal_collegiality_shift (ε ≈ 0.48, likely tangled_rope — apparent empowerment with actual authority consolidation), (3) ecumenical_reorientation (ε ≈ 0.35, likely rope — coordination benefit with some extraction of exclusionary identity), (4) scriptural_authority_modernization (ε ≈ 0.40, likely tangled_rope — scholarly access gained with interpretive control centralized in Rome). Each story would have its own perspectives, beneficiaries, victims, and omega variables. Linking them via network.affects_constraints shows how Vatican II was overdetermined — the curia could have adopted any one of these shifts independently, but bundled them together for institutional convenience. The mandatrophy at the Vatican II level resolves by decomposing the kernel question (one reading vs. multiple shifts) into a constraint family, allowing each shift to be classified independently. This story represents the liturgical component of that family.
  */
 
 /* ==========================================================================
@@ -224,75 +247,77 @@ test(piton_threshold) :-
    ========================================================================== */
 
 omega_variable(
-    vatican_ii_kernel_unity,
-    'Is Vatican II a single reinterpretation of Catholic tradition generating one coherent constraint, or multiple independent doctrinal shifts that produced structurally different constraints bundled together?',
-    'Structural decomposition: Does liturgical vernacularization have the same ε, beneficiary/victim structure, and suppression as collegiality reforms, scripture translation authority disputes, and lay participation directives? If ε values differ significantly across these domains, Vatican II is multiple constraints, not one.',
-    'If single reading: constraint family has one story (liturgical_vernacularization). If multiple readings: each doctrinal shift should decompose into separate constraint stories (liturgical_authority_devolution vs. papal_doctrinal_monopoly vs. lay_theological_agency), linked by network.affects_constraints.',
+    vatican_ii_kernel_or_bundled_shifts,
+    'Does Vatican II represent ONE contested reading of Catholic continuity, or SEVERAL structurally distinct doctrinal movements that happened to co-occur institutionally?',
+    'Textual and historical analysis: (a) Trace whether each major shift (liturgy, ecumenism, episcopal collegiality, scriptural authority) flows logically from a unified doctrinal premise, or whether they rest on distinct theological axioms that could have been adopted or rejected independently. (b) Counterfactual reconstruction: could the Church have adopted vernacular liturgy while rejecting episcopal power-sharing? Could it have embraced ecumenism while maintaining Latin-only worship? (c) Institutional process analysis: did the conciliar debates link these shifts logically, or did separate lobbying blocs (Dutch bishops, Italian progressives, Curia conservatives) push distinct agendas that converged only at the level of institutional bundling?',
+    'If ONE reading: the constraint is a coherent reinterpretation of tradition (''tradition develops''; Vatican II is a doctrinal evolution). Vernacularization is meaningfully linked to other Vatican II shifts via shared theological premises. Classification remains tangled_rope with coherent benefit/victim structure. If MULTIPLE shifts: vernacularization is analytically distinct from, e.g., ecumenical opening or episcopal empowerment. Each shift has its own beneficiary/victim structure and ε value. The ''constraint story'' should decompose into a constraint family (linked via network.affects_constraints) with separate stories for: liturgical_authority_decentralization, episcopal_collegiality_shift, ecumenical_reorientation, scriptural_authority_modernization. The omega resolves by historical reconstruction.',
     confidence_without_resolution(high)
 ).
 
-narrative_ontology:omega_variable(vatican_ii_kernel_unity, conceptual, 'Whether Vatican II is one reading or multiple simultaneous readings').
+narrative_ontology:omega_variable(vatican_ii_kernel_or_bundled_shifts, empirical, 'Whether Vatican II is one kernel reading or multiple bundled shifts').
 
 omega_variable(
-    papal_authority_retention,
-    'Does Rome''s retention of doctrinal oversight over vernacular translations represent active enforcement of papal authority or performative theater masking actual pastoral devolution?',
-    'Historical analysis: track instances where Vatican overruled episcopal conference translation choices (ICEL controversy, gender-language debates). Count instances of enforcement vs. deference. If Rome acts on <10% of conference submissions, theater dominates. If >50%, enforcement is genuine.',
-    'If enforcement: suppression (0.65) and extraction (0.58) are understated; reclassify toward Snare. If theater: theater_ratio should be higher; reclassify toward Piton. If mixed: Tangled Rope stands.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(papal_authority_retention, empirical, 'Whether papal doctrinal retention is enforced or theatrical').
-
-omega_variable(
-    latin_tradition_exit_options,
-    'Did vernacularization suppress the Latin tradition as a victim group, or did it preserve Latin as an option while expanding access—changing exit options rather than removing them?',
-    'Longitudinal data on Latin Mass availability, seminary Latin instruction, Latin liturgical training. If access expanded post-Vatican II: Latin not a victim (exit_options improved). If access declined: Latin is a victim (exit_options degraded).',
-    'If Latin expanded: Latin tradition is not a victim; reclassify vernacularization as pure coordination (Rope). If Latin declined: Latin tradition is a genuine victim; Tangled Rope/Snare stands. Recent Traditionalist Mass allowance (pre-2019) suggests expansion; then rescission (2019+) suggests degradation.',
-    confidence_without_resolution(high)
-).
-
-narrative_ontology:omega_variable(latin_tradition_exit_options, empirical, 'Whether vernacularization suppressed or preserved Latin tradition').
-
-omega_variable(
-    reform_coalition_sunset_failure,
-    'Was the Scaffold classification''s intended sunset (democratic theology reducing papal monopoly) structurally impossible from the start, or did institutional resistance prevent a feasible outcome?',
-    'Comparative ecclesiology: examine Protestant denominations that decentralized doctrine authority post-1960s. If successful decentralization exists elsewhere, sunset was structurally possible but Rome prevented it. If no denomination achieved stable decentralization, sunset may be structurally impossible.',
-    'If preventable: Rome enforced the sunset failure; extraction (0.58) understates intentional monopoly preservation. If structural: sunset failure reflects impossible bargain; constraint is genuinely hybrid (Tangled Rope) rather than degraded Scaffold.',
+    latin_irreplaceability_vs_contingency,
+    'Is Latin''s role in Catholic liturgy theologically constitutive (irreplaceable), or contingently institutional (replaceable by other vehicles)?',
+    'Theological analysis of pre-Vatican II magisterial statements and conciliar debates: Did the Church''s teaching claim that Latin carries intrinsic theological properties (e.g., precision, sacrality, universality), or only that it serves a practical coordinating function? If intrinsic: the tradition suffers real loss (mountain-level suppression). If contingent: the loss is institutional, not theological — vernacularization is extraction of privilege but not destruction of substance. Secondary: comparative liturgical history — do other Christian traditions (Orthodox, Anglican, Lutheran) experience equivalent loss when moving from their classical languages (Koine Greek, Old Church Slavonic, King''s English) to modern vernaculars?',
+    'If intrinsic to theology: the Latin tradition is genuinely destroyed by vernacularization. The tradition experiences snare classification as accurate. Classification unchanged; but omega resolution deepens legitimacy of the trap. If contingent: the Latin tradition survives theologically but its institutional monopoly is extracted. The tradition experiences partial loss, not destruction — snare classification may overstate the constraint''s severity. Could reframe victim as ''Latin liturgical privilege'' not ''Latin tradition as such.'' This distinction affects mandatrophy analysis.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(reform_coalition_sunset_failure, conceptual, 'Whether the intended Scaffold sunset was structurally feasible').
+narrative_ontology:omega_variable(latin_irreplaceability_vs_contingency, conceptual, 'Whether Latin is constitutive or contingent to Catholic theology').
 
 omega_variable(
-    linguistic_pluralism_coordination,
-    'Does genuine liturgical coordination require linguistic pluralism (vernacular diversity at local levels) or does Roman uniformity serve an underlying coordination function that pluralism undermines?',
-    'Analysis of schism rates, doctrine disputes, and institutional stability pre/post-vernacularization. If schisms increase post-Vatican II, uniform language may have coordinated doctrine. If stability improves or schisms decrease, pluralism coordinates better.',
-    'If uniform language coordinated doctrine: extractiveness (0.58) reflects Snare properties (Rome used Latin to suppress doctrinal dissent); reclassify as pure extraction. If pluralism coordinates: beneficiary/victim structure inverts; reclassify as Rope.',
+    episcopal_authority_extraction_asymmetry,
+    'Did Vatican II''s apparent empowerment of bishops (collegiality doctrine) actually extract more authority from episcopates than it returned, by centralizing doctrinal control while delegating only implementation?',
+    'Institutional analysis: (a) Catalog doctrinal powers bishops possessed pre-Vatican II that they lost post-Vatican II (e.g., authority to set liturgical norms, authority to resist Rome''s doctrinal interpretations, authority to adapt doctrine to local conditions). (b) Catalog new powers Vatican II granted (collegiality in theory, synodality language). (c) Measure actual exercise: which powers do bishops use? Which does Rome block? (d) Comparative institutional study: did episcopal conferences gain or lose real decision-making capacity in the decades after Vatican II?',
+    'If bishops genuinely empowered: the constraint is symmetric coordination (Rope from episcopal perspective). If bishops de facto controlled more precisely (centralized doctrine, delegated theater): the constraint is extraction of authority disguised as collegiality (tangled_rope or snare from episcopal perspective becomes accurate). This affects how the powerful/constrained episcopal perspective is classified.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(episcopal_authority_extraction_asymmetry, empirical, 'Whether episcopal collegiality was genuine empowerment or authority consolidation').
+
+omega_variable(
+    suppression_structural_vs_internalized,
+    'Is the measured suppression (0.58) structural (external discipline, obedience vows, hierarchical enforcement) or partly internalized (clergy and bishops have internalized the legitimacy of Rome''s authority and suppress their own dissent)?',
+    'Behavioral analysis: (a) Pre-Vatican II: what percentage of clergy openly resisted Latinization or Vatican centralization? What percentage privately dissented but complied? (b) Post-Vatican II: how many clergy left the priesthood over vernacularization? How many refused to say the new Mass? How many maintained private Latin chapels? (c) Internalization test: compare resistance in countries with strong secular alternatives (France, Germany, Austria) vs. countries with deep Catholic institutional identity (Poland, Ireland) — if internalization varies by secularization context, suppression has internalized component.',
+    'If structural suppression dominates: the constraint persists through formal enforcement; removal of enforcement mechanisms would enable exit. If internalized: the constraint persists through accepted identity frames; exit requires identity shift, not just structural change. This affects classification of clergy/bishop exit_options: constrained (structural) vs. identity_locked (internalized). If both: some clergy are structurally bound, others cognitively captured by the legitimate authority frame.',
     confidence_without_resolution(medium)
 ).
 
-narrative_ontology:omega_variable(linguistic_pluralism_coordination, empirical, 'Whether linguistic pluralism or uniformity better coordinates doctrine').
+narrative_ontology:omega_variable(suppression_structural_vs_internalized, empirical, 'Structural vs. internalized suppression in Catholic obedience').
+
+omega_variable(
+    vatican_ii_as_natural_law_false_summit,
+    'Does the ''natural law of large-scale religious institutions'' framing (mountain perspective 7) naturalize what is actually a contingent institutional choice by the Vatican bureaucracy?',
+    'Comparative institutional analysis: (a) Other global religious institutions (Islamic Umma, Orthodox communion, Anglican communion, Buddhist sangha) — do they uniformly converge on centralized doctrinal authority + delegated presentation? Or do they show diverse institutional forms? (b) Counterfactual: could Catholicism maintain doctrinal unity via other mechanisms (shared texts, periodic councils, charismatic authority, peer networks) without unified liturgical language? (c) Historical: pre-Vatican II, did the Church claim that Latin uniformity was a theological law or a practical disciplinary choice?',
+    'If natural law: the constraint is immutable; vernacularization is the least-bad solution to an inherent structural problem. Mountain classification holds. If contingent: the Church chose this institutional form; alternatives existed but were rejected. The ''natural law'' framing is a false summit — it naturalizes the Vatican''s preference for centralized control. Engine''s false summit detector should flag this. Triggers FSM evaluation (beneficiaries declared, so mountain with beneficiaries → may reclassify to tangled_rope if FSM fires).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(vatican_ii_as_natural_law_false_summit, conceptual, 'Whether institutional centralization is natural law or contingent choice').
 
 
 /* ==========================================================================
    7. INTEGRATION HOOKS
    ========================================================================== */
 
-narrative_ontology:interval(liturgical_vernacularization, 0, 60).
+narrative_ontology:interval(liturgical_vernacularization, 0, 10).
 
 /* ==========================================================================
    8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
    ========================================================================== */
 
 % Theater ratio over time
-narrative_ontology:measurement(theater_pre_vatican_ii, liturgical_vernacularization, theater_ratio, 0, 0.15).
-narrative_ontology:measurement(theater_post_vatican_transition, liturgical_vernacularization, theater_ratio, 3, 0.45).
-narrative_ontology:measurement(theater_mid_implementation, liturgical_vernacularization, theater_ratio, 6, 0.68).
+narrative_ontology:measurement(litv_theater_pre_vatican, liturgical_vernacularization, theater_ratio, 0, 0.42).
+narrative_ontology:measurement(litv_theater_conclave_debate, liturgical_vernacularization, theater_ratio, 2, 0.58).
+narrative_ontology:measurement(litv_theater_implementation_ritual, liturgical_vernacularization, theater_ratio, 5, 0.64).
+narrative_ontology:measurement(litv_theater_ossified_forms, liturgical_vernacularization, theater_ratio, 10, 0.71).
 
 % Extraction over time
-narrative_ontology:measurement(extractiveness_pre_vatican_ii, liturgical_vernacularization, base_extractiveness, 0, 0.72).
-narrative_ontology:measurement(extractiveness_post_vatican_transition, liturgical_vernacularization, base_extractiveness, 3, 0.52).
-narrative_ontology:measurement(extractiveness_mid_implementation, liturgical_vernacularization, base_extractiveness, 6, 0.58).
+narrative_ontology:measurement(litv_extract_pre_vatican, liturgical_vernacularization, base_extractiveness, 0, 0.18).
+narrative_ontology:measurement(litv_extract_vatican_conclave, liturgical_vernacularization, base_extractiveness, 2, 0.35).
+narrative_ontology:measurement(litv_extract_post_vatican_stabilize, liturgical_vernacularization, base_extractiveness, 5, 0.52).
+narrative_ontology:measurement(litv_extract_john_paul_reign, liturgical_vernacularization, base_extractiveness, 10, 0.48).
 
 
 /* ==========================================================================
@@ -300,18 +325,18 @@ narrative_ontology:measurement(extractiveness_mid_implementation, liturgical_ver
    ========================================================================== */
 
 narrative_ontology:coordination_type(liturgical_vernacularization, enforcement_mechanism).
-narrative_ontology:affects_constraint(liturgical_vernacularization, papal_doctrinal_monopoly).
-narrative_ontology:affects_constraint(liturgical_vernacularization, episcopal_conference_authority).
-narrative_ontology:affects_constraint(liturgical_vernacularization, lay_theological_agency).
+narrative_ontology:affects_constraint(liturgical_vernacularization, episcopal_collegiality_shift).
+narrative_ontology:affects_constraint(liturgical_vernacularization, ecumenical_reorientation).
+narrative_ontology:affects_constraint(liturgical_vernacularization, scriptural_authority_modernization).
 
 % DUAL FORMULATION NOTE:
-% Liturgical vernacularization is downstream of the fundamental question of whether Vatican II represents one coherent reinterpretation of Catholic tradition or multiple independent doctrinal shifts bundled together. If Vatican II decomposes into separate constraints (liturgical authority devolution vs. doctrinal pluralism vs. lay agency), this story focuses on the liturgical constraint specifically. The other constraints would have different ε values, beneficiary/victim structures, and time courses. All three stories should link to each other via network.affects_constraints.
+% Liturgical vernacularization is one component of the Vatican II constraint family. The kernel question is whether Vatican II represents one contested reading of Catholic continuity (unified reinterpretation) or multiple structurally distinct doctrinal shifts bundled under institutional convenience (overdetermined composite). This story models the liturgical shift (ε ≈ 0.52, tangled_rope); sibling stories model collegiality, ecumenism, and scriptural modernization. Each has its own ε value, beneficiary/victim structure, and classification. Linking them shows the decomposition: the 'Vatican II' label conflates analytically separable constraints. The omega variable 'vatican_ii_kernel_or_bundled_shifts' documents this decomposition logic. If the kernel question resolves as 'bundled shifts,' the constraint family is the appropriate unit; if 'one reading,' the stories should be re-integrated with a single ε and unified beneficiary/victim logic.
 
 /* ==========================================================================
    10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
    ========================================================================== */
 
-constraint_indexing:directionality_override(liturgical_vernacularization, organized, 0.55).
+constraint_indexing:directionality_override(liturgical_vernacularization, powerful, 0.55).
 
 /* ==========================================================================
    END OF CONSTRAINT STORY

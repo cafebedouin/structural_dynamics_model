@@ -190,6 +190,17 @@ Your output is a JSON document validated against `constraint_story_schema.json`.
 * **Extractiveness > 0.46**: requires `measurements` (min 6 entries) and `omegas`
 * **Extractiveness > 0.70**: requires `mandatrophy_resolved: true`
 
+**TYPE↔METRIC CONSISTENCY IS A HARD GATE — verify before you emit.** `claimed_type` and the
+`base_properties` metrics are validated *together*: a story whose metrics violate the bounds
+for its claimed type is **REJECTED** (not downgraded). Do not pick a `claimed_type` and then
+author metrics that contradict it — set the type to the category your metrics actually support.
+Before output, find your `claimed_type` in the list above and confirm every metric satisfies it.
+The two most frequent rejections:
+* **Piton** with `theater_ratio` < 0.70 — a piton is *defined* by being mostly performative; if
+  the activity is not ≥70% theater, it is not a piton (it is likely a rope, snare, or scaffold).
+* **Mountain** with `suppression` > 0.05 or `extractiveness` > 0.25 — any real coercion or
+  extraction disqualifies a mountain; if alternatives are suppressed, it is a snare or tangled_rope.
+
 ---
 
 ## What You Do Not Need to Provide

@@ -1,0 +1,216 @@
+{
+  "header": {
+    "constraint_id": "jati_practice_norm__localized_practice_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "jati_local",
+    "story_uid": "934323dd-f81c-46c2-9416-76cfc8c7557f",
+    "created_at": "2026-02-26T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.22,
+    "suppression": 0.35,
+    "theater_ratio": 0.38,
+    "claimed_type": "rope",
+    "human_readable": "Jati Boundaries as Localized Practice Coordination (Renegotiable)",
+    "topic_domain": "social_anthropology/religious_studies/political_economy",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "local_community_groups",
+      "occupational_guilds",
+      "ritual_specialists"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Local Community (Jati Member)",
+      "comment": "LOCAL COMMUNITY PERSPECTIVE (ROPE) — Members experience jati boundaries as coordination norms negotiated continuously within their village or caste council. Boundaries shift with resource access, occupation, marriage alliances, and ritual practice. Exit requires relocation or occupation change (constrained, not trapped). The constraint solves coordination problems: marriage networks, occupational identity, ritual status, property inheritance. Extraction is minimal — the coordination function dominates."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Ritual Specialist Guild",
+      "comment": "RITUAL SPECIALIST PERSPECTIVE (ROPE) — Occupational guilds (brahmin purohits, washermen, potters) use jati boundaries to regulate apprenticeship, maintain occupational standards, and coordinate ritual services across regions. Boundaries are enforceable through guild mechanisms (reputation, exclusion from ceremonies, occupational licensing) but fundamentally voluntary — members can apprentice elsewhere or change occupations. Coordination benefits (market protection, quality standards, knowledge transmission) are genuine. Low extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Landowning Elite (Dominant Caste)",
+      "comment": "DOMINANT CASTE PERSPECTIVE (ROPE) — Landowning elites use jati classification to coordinate labor recruitment, maintain ritual status in the village hierarchy, and enforce agrarian contracts. But these benefits derive from coordination (labor supply, ritual ordering) rather than pure coercion. Jati boundaries are continuously renegotiated through patronage relationships, not maintained by external enforcement. Elite exit options are arbitrage (can move capital, shift occupations, marry outside caste for political advantage). Net beneficiary, but through coordination rather than extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "local",
+      "label": "The Ritual Outcaste (Identity-Locked Member)",
+      "comment": "RITUAL OUTCASTE PERSPECTIVE (TANGLED ROPE) — Some jati categories (untouchables, excluded occupations) enforce asymmetric access to wells, temples, and ritual participation. The victim is structurally mobile (could relocate) but identity-fused with their ritual status — their personhood is constituted through exclusion, making exit unthinkable within their identity frame. The constraint has both coordination (ritual ordering) and asymmetric extraction (exclusion from sacred commons). This perspective reveals the tension within the localized-practice reading: coordination and extraction are entangled, not separable."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Anthropological View)",
+      "comment": "ANALYTICAL OBSERVER PERSPECTIVE (ROPE) — From a civilizational analytical stance, jati practice coordinates multiple functions: occupational identity, marriage alliance, ritual participation, property inheritance, and labor supply. The proliferation to 3000+ documented categories indicates continuous local renegotiation, not rigid caste hierarchy. Enforcement is through social reputation and ritual participation, not coercive machinery. Extraction exists at the ritual outcaste boundary but is not the primary function. The constraint is fundamentally a coordination mechanism with embedded asymmetries, classified as rope."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "identity_lock_vs_structural_mobility",
+      "question": "How much of the observed jati stability derives from internal identity fusion (people see jati membership as constitutive of self) versus external structural barriers (geographic isolation, occupational dependency, ritual participation requirements)?",
+      "resolution_mechanism": "Historical analysis of voluntary jati switching during periods of occupational mobility (urbanization, migration to new regions, colonial employment opportunities); comparison of switching rates when external barriers removed vs. identity-internal reasons for staying",
+      "impact": "If predominantly identity-locked: the constraint's stability is cognitive, not structural — external mobility alone does not enable exit. If predominantly structural: reclassify some perspectives from identity_locked to constrained or mobile. Classification shifts from rope with identity-lock to rope with pure coordination.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative weight of identity fusion versus structural barriers in jati stability"
+    },
+    {
+      "id": "local_renegotiation_vs_rigid_hierarchy",
+      "question": "Are jati boundaries subject to genuine continuous renegotiation at the local level, or does hierarchical ordering (brahmin > shudra, pure > impure) constrain what counts as a valid negotiation?",
+      "resolution_mechanism": "Ethnographic documentation of successful boundary renegotiations; frequency of jati fission and fusion events; comparison of stated local practices against pan-Indian brahminical ranking systems",
+      "impact": "If boundaries genuinely renegotiable: localized-practice reading is correct — constraint is rope. If hierarchy constrains negotiation: constraint may be tangled_rope or snare at civilizational scope, with local rope only at immediate scope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree of genuine local renegotiation versus brahminical hierarchy constraints"
+    },
+    {
+      "id": "coordination_vs_extraction_boundary_definition",
+      "question": "How do we distinguish jati boundaries that coordinate occupational standards and marriage networks (legitimate coordination function) from those that extract ritual labor or enforce untouchability (asymmetric extraction)?",
+      "resolution_mechanism": "Ethnographic case comparison: occupational guilds with positive membership benefits versus ritual outcaste exclusions; measurement of benefit distribution across jati categories; analysis of which boundaries are enforced through reward versus punishment",
+      "impact": "If distinction is clear: some jati boundaries classify as rope, others as tangled_rope or snare. If extraction is universally embedded: reclassify entire constraint to tangled_rope. If distinction is context-dependent: requires constraint family decomposition (separate stories per region/period).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Distinguishing coordination function from extractive enforcement in jati practice"
+    },
+    {
+      "id": "reading_committer_ambiguity",
+      "question": "This constraint is one reading of the jati_practice_norm kernel. Is the localized-practice reading (continuous renegotiation, coordination dominance) an accurate characterization of how jati boundaries actually function, or does it romanticize flexibility while underestimating brahminical hierarchy enforcement?",
+      "resolution_mechanism": "Comparative ethnographic analysis across regions and time periods; examination of which agent groups report jati boundaries as flexible versus rigid; measurement of actual switching versus structural opportunity for switching",
+      "impact": "If localized reading is accurate: jati is fundamentally rope. If hierarchy dominates: reclassify to tangled_rope or snare, and the localized reading becomes an aspirational counter-reading held by reformers rather than an accurate description. If both coexist: constraint family decomposition required (separate stories for hierarchical and localized readings).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Accuracy of localized-practice reading versus brahminical-hierarchy reading"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18,
+      "id_override": "jati_local_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.22,
+      "id_override": "jati_local_extract_t100"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.24,
+      "id_override": "jati_local_extract_t200"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "jati_local_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.38,
+      "id_override": "jati_local_theater_t100"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.4,
+      "id_override": "jati_local_theater_t200"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 200
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates the localized-practice reading of jati boundaries — the claim that jati categories function primarily as coordination norms for occupational identity, marriage networks, and ritual participation, subject to continuous renegotiation at the village and regional level. This reading emphasizes the empirical proliferation of jati categories (3000+ documented types across India) and the mechanisms of local boundary fluidity: jati fusion and fission, occupational transitions, marriage alliance shifts, and ritual practice variation. Under this reading, jati boundaries are low-extraction coordination mechanisms analogous to guild systems or professional standards — they solve genuine collective action problems (labor market organization, marriage network stability, ritual ordering) without relying primarily on coercive enforcement. The constraint has low base extractiveness (0.22) because the primary mechanism is social reputation and ritual participation benefit rather than coercive suppression. Suppression (0.35) reflects barriers to exit: occupational dependency, identity fusion, and ritual participation requirements create constrained exit options, but these are not the foundational mechanism of the constraint — they are consequences of its coordination function.",
+    "key_agents": [
+      "Local community members (moderate/constrained): experience jati boundaries as flexible coordination norms negotiated within their village; benefit from marriage network stability and occupational identity clarity",
+      "Ritual specialist guilds (organized/mobile): use jati boundaries to regulate apprenticeship and occupational standards; maintain regional networks; exit is possible through occupational change",
+      "Landowning elite (powerful/arbitrage): coordinate labor recruitment and ritual status through jati classification; have exit options (capital mobility, marriage arbitrage); primary beneficiaries of coordination benefits",
+      "Ritual outcaste members (powerless/identity_locked): structurally mobile but identity-fused with exclusionary ritual status; experience tangled_rope rather than pure rope due to asymmetric access to sacred commons",
+      "Analytical observer (analytical/analytical): sees jati proliferation as evidence of continuous local renegotiation rather than rigid hierarchy; recognizes coordination function dominates"
+    ],
+    "logic_rationale": "Extractiveness (0.22): Low. The localized-practice reading locates jati's primary function in coordination — occupational identity, marriage networks, ritual participation, labor supply organization. These are genuine collective action problems. Extraction exists (ritual outcaste exclusion, labor asymmetries) but is neither the foundational mechanism nor the dominant experience for most jati members. The measurement trajectory (0.18 → 0.24) shows slight upward drift as brahminical textual authority increased during the colonial and postcolonial periods, but remains well below the tangled_rope threshold (0.30). Suppression (0.35): Moderate. Barriers to exit exist — occupational dependency, geographic isolation, identity fusion, ritual participation requirements — but are not the mechanism of enforcement. The constraint is maintained through social reputation, ritual benefits, and coordination gains, not through coercive denial of alternatives. Theater ratio (0.38): Low-moderate. Performance exists in ritual contexts (hierarchy assertion, status display) but is not the dominant mechanism. Occupational guilds operate on functional standards; marriage networks operate on practical kinship logic; ritual specialists maintain genuine expertise. The theater rises slightly over time (0.35 → 0.40) as brahminical brahmin-centered ritual performance became more salient, but remains below the piton threshold.",
+    "kernel_context": "This constraint is one reading of the contested jati_practice_norm kernel. The kernel is the implicit claim that jati categories are a stable feature of South Asian social organization, but it admits multiple readings: the orthodox_textual_reading locates stability in brahminical varna categories (brahmin, kshatriya, vaishya, shudra) codified in religious texts (Rigveda, Manusmriti); the colonial_census_reading treats jati as a rigid racial-genealogical category that British administrators enumerated and fixed in 1871-1951 censuses; the localized_practice_reading (this one) treats jati as a flexible coordination mechanism subject to continuous renegotiation. These readings differ fundamentally in their characterization of jati stability, enforcement mechanism, and extractiveness. The localized reading claims that actual practice on the ground exhibits far more fluidity than either textual or colonial framings would predict — 3000+ jati categories, frequent boundary shifts, occupational transitions, marriage alliances across supposed varna lines.",
+    "directionality_logic": "Each perspective's directionality is computed from power level, exit options, and beneficiary/victim status. Local community members (moderate power + constrained exit + mixed benefits/costs) derive d ≈ 0.50, placing them near symmetry — they benefit from coordination but bear some suppression cost. Ritual specialists (organized power + mobile exit + beneficiary status) derive d ≈ 0.35, placing them slightly toward beneficiary side. Landowning elite (powerful + arbitrage + beneficiary) derive d ≈ 0.15, placing them as net beneficiaries with low experienced extraction. The ritual outcaste (powerless + identity_locked + victim) derives d ≈ 0.88, placing them as full extraction targets — but they are a minority perspective within the localized-practice reading, and the reading classifies them as tangled_rope (mixed coordination/extraction) rather than pure snare. The analytical observer (analytical context) derives d ≈ 0.72 (canonical fallback for analytical power), but the measured extractiveness is low because the constraint has low base extraction and no dramatic scope amplification at the analytical level. No directionality overrides are needed — the derivation chain produces values consistent with the rope classification.",
+    "perspectival_gap": "The critical perspectival gap in this reading lies between the local community experience (rope — coordination dominates) and the ritual outcaste experience (tangled_rope — coordination entangled with extraction). Both perspectives operate within the localized-practice reading, but they reveal internal tension: jati coordination functions for occupational guilds, marriage networks, and ritual ordering, but simultaneously enforces asymmetric access to sacred space and ritual participation. A robust analytical reading would decompose the constraint family: one story for occupational coordination (pure rope), another for ritual inclusion/exclusion (tangled_rope), linked by network.affects_constraints. This story chooses to keep both within the localized reading to show how the reading itself must account for the tangled_rope minority case.",
+    "mandatrophy_analysis": "The mandatrophy in the jati_practice_norm kernel reflects genuine ambiguity about which reading corresponds to reality. The localized-practice reading claims that actual ground-level practice exhibits far more flexibility than brahminical textual hierarchy or colonial racial classification would suggest. But the presence of the tangled_rope perspective (ritual outcaste) shows that the localized reading cannot fully escape the charge of romanticizing flexibility while downplaying extraction. The resolution lies in careful measurement: How much jati stability derives from identity fusion versus structural barriers? How much boundary renegotiation actually occurs versus how much is constrained by brahminical hierarchy? How does extractiveness vary across regions and time periods? The measurement trajectory (0.18 → 0.24) shows upward drift as brahminical authority increased, suggesting that the localized reading captures pre-colonial or early-colonial dynamics better than contemporary practice. Mandatrophy is resolved not by choosing one reading as 'correct' but by recognizing that jati_practice_norm admits multiple readings with different empirical domains: localized practice in flexible pre-colonial contexts, brahminical textual system in orthodox textual interpretation, rigid racial system in colonial enumeration."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "jati_practice_norm__orthodox_textual_reading",
+      "jati_practice_norm__colonial_census_reading"
+    ],
+    "dual_formulation_note": "The jati_practice_norm kernel admits three structurally distinct constraint stories with different epsilon values. The orthodox_textual_reading (brahminical varna system, ε ≈ 0.45-0.60, tangled_rope) locates stability in religious texts and maintenance through ritual hierarchy. The colonial_census_reading (rigid enumerated racial categories, ε ≈ 0.55-0.72, tangled_rope to snare) locates stability in administrative enumeration and enforcement. The localized_practice_reading (this constraint, ε ≈ 0.22, rope) locates stability in coordination functions and continuous local renegotiation. All three are live interpretations held by different epistemic communities; none forecloses the others within a single framework, but they make different empirical claims about actual jati practice. Decomposition is required because epsilon differs substantially (0.22 vs 0.55-0.72) and reflects different structural mechanisms."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "jati_practice_norm__orthodox_textual_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "jati_practice_norm__colonial_census_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "jati_practice_fundamentally_flexible",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "coordination_function_dominates_extraction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "village_level_practice_autonomy",
+    "drift_state": {
+      "moment": "contemporary_postcolonial",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

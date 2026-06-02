@@ -1,0 +1,234 @@
+{
+  "header": {
+    "constraint_id": "takings_clause_boundary__physical_appropriation_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_takings_clause_boundary__physical_appropriation_reading",
+    "measurement_id_prefix": "takings_phys",
+    "story_uid": "62c09d61-38cb-4732-ac90-cf077fd3edfe"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Takings Clause Boundary: Physical Appropriation Reading",
+    "topic_domain": "constitutional_law/property_rights/regulatory_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "government_regulatory_authority"
+    ],
+    "victims": [
+      "property_owners_subject_to_physical_seizure"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Property Owner Subject to Physical Seizure",
+      "comment": "PERSPECTIVE 1: PROPERTY OWNER FACING PHYSICAL APPROPRIATION (SNARE) — Faces direct physical dispossession with no meaningful exit or compensation mechanism under this reading. Suppression is extreme: the constraint forecloses all traditional remedies (replacement in kind, fair market value, relocation support) and treats physical loss as an acceptable externality of regulatory action. The victim experiences maximum extraction: loss of property with no remedy, no negotiation, no exit path."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Government Regulatory Authority",
+      "comment": "PERSPECTIVE 2: GOVERNMENT REGULATORY AUTHORITY (ROPE) — Under this reading, the government experiences the constraint as enabling coordination: the ability to act physically (seize land for public roads, occupy property for military defense, remove improvements for environmental restoration) without compensation liability creates a tool for collective action that protects shared interests. The constraint functions as pure coordination of public necessity. Arbitrage exit means the government can calibrate when to invoke physical appropriation versus regulatory restriction; the classification remains Rope because the core function is genuine — public goods provision."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Propertied Interests Organized (Wealthy Landowners/Corporations)",
+      "comment": "PERSPECTIVE 3: ORGANIZED PROPERTIED INTERESTS (TANGLED ROPE) — Wealthy landowners and corporations with institutional capacity can navigate the physical appropriation boundary through legal challenge, political leverage, and property insurance. They experience the constraint as both coordination (government's power to act secures the legal framework that enables their property holdings) and extraction (they bear disproportionate losses when physically targeted, relative to their ability to exit). Constrained exit because they can afford legal defense and lobbying but cannot completely avoid regulatory risk."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Takings Clause Doctrine (Institutional Inertia View)",
+      "comment": "PERSPECTIVE 4: TAKINGS CLAUSE DOCTRINE (PITON) — The physical appropriation boundary is an entrenched doctrine that persists through institutional inertia despite eroding functional justification. The theater ratio is moderate (0.48) because the reading maintains semantic coherence — 'physical' is a clear category — but the functional distinction between physical seizure and catastrophic regulatory harm has weakened. Many regulations impose losses equivalent to physical appropriation (landmarking that reduces value 90%, zoning that eliminates use, environmental restrictions that render land worthless). The doctrine performs the ritualistic function of maintaining a boundary, not the practical function of protecting property."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From the civilizational view, the physical/regulatory distinction maps onto a conceptually crisp boundary grounded in the nature of property itself: seizure is *taking*, regulation is *governing*. This perspective naturalizes the boundary as a logical necessity — a government cannot regulate while simultaneously compensating every loss, or regulation becomes impossible. However, this naturalization obscures the reading's status as a READING — a choice among defensible framings of the takings clause, not an inevitable derivation from property theory."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Middle-Class Property Owners (Residences, Small Businesses)",
+      "comment": "PERSPECTIVE 6: MIDDLE-CLASS PROPERTY OWNERS (TANGLED ROPE) — Small homeowners and business owners experience genuine coordination benefit (secure property rights framework enables borrowing, investment, family stability) but also bear significant extraction when physically targeted. Unlike organized interests, they lack legal resources to challenge appropriation; unlike the powerless, they have some assets to lose and some political voice. The constraint appears as moderate extraction within a coordinating framework — the system both protects and endangers their interests."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "physical_regulatory_equivalence",
+      "question": "At what point does regulatory harm become economically and legally equivalent to physical appropriation, making the distinction a false categorical boundary?",
+      "resolution_mechanism": "Empirical analysis of property value destruction: comparison of losses from physical seizure vs extreme zoning restrictions, environmental regulations, landmarking prohibitions across decades of case law and property transactions",
+      "impact": "If equivalence threshold crossed: this reading's axiom (physical_appropriation_triggering_compensation) becomes undermined; regulatory takings reading gains structural ground. If distinction remains sharp: physical appropriation reading retains coherence.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether regulatory harm becomes economically equivalent to physical taking"
+    },
+    {
+      "id": "kernel_constraint_framing_ambiguity",
+      "question": "Is the takings clause a kernel constraining legitimate government action, or a reading of a larger kernel about property rights that competes with regulatory readings?",
+      "resolution_mechanism": "Constitutional historical analysis: examining whether Framers treated the takings clause as self-contained boundary (physical/not physical) or as one application of a broader principle that could extend to severe regulatory harm",
+      "impact": "If kernel-constraining: this reading's boundary is the referent; regulatory readings are false extensions. If reading of larger kernel: this reading is one pole of an ongoing dispute; authority_grounding is contestable rather than settled.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the takings clause is a self-contained kernel or a reading of a larger property-rights kernel"
+    },
+    {
+      "id": "compensation_practicability",
+      "question": "If the regulatory takings reading were operationalized (compensation for severe regulatory losses), would government capacity to regulate effectively collapse or remain intact?",
+      "resolution_mechanism": "Institutional analysis: modeling of compensation obligation scope under different threshold proposals (50% loss, 75% loss, economic-use elimination); comparison with international takings regimes (EU property directives, Canadian regulatory takings jurisprudence) and their regulatory effectiveness",
+      "impact": "If collapse: suppression value (0.62) understates the constraint's force; government regulation requires the physical boundary to remain enforceable. If intact: suppression is overstated; the constraint is more about wealth distribution than regulatory necessity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether compensation for severe regulatory losses would impair government regulatory capacity"
+    },
+    {
+      "id": "reading_interpretive_authority_stability",
+      "question": "What interpretive authority legitimates the physical/regulatory distinction as binding, and is that authority stable or eroding?",
+      "resolution_mechanism": "Doctrinal analysis tracking Supreme Court takings jurisprudence from Penn Central to present; identification of shifts in framing, justifications offered, and concurrence/dissent patterns indicating competing reading coalitions",
+      "impact": "If interpretive authority stable: this reading remains entrenched (piton perspective accurate). If eroding: the reading's reference frame is drifting; sister readings gaining institutional ground (drift_state: authority_erosion).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Stability of judicial interpretive authority for the physical/regulatory distinction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 80,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 80,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 80
+  },
+  "commentary": {
+    "narrative_context": "The physical appropriation reading of the takings clause boundary establishes that government compensation obligations are triggered only by direct physical seizures or permanent physical occupations — not by regulations that reduce property value or eliminate economically viable use. This reading crystallizes a narrow victim set (only those whose property is physically taken) and a broad government regulatory exemption. The constraint exhibits the structural tension characteristic of tangled ropes: genuine coordination function (the government needs power to act for collective purposes like national defense, environmental protection, infrastructure) combined with asymmetric extraction (property owners bear regulatory losses without remedy, while government retains flexibility to regulate broadly). The theater ratio (0.48) reflects moderate performativity: the physical/regulatory boundary maintains semantic coherence and precedential clarity, yet its functional work has eroded as economic regulations impose losses equivalent to physical seizure. Over the measurement interval (80-year span from mid-20th century forward), the theater ratio has risen (0.35 → 0.52) as the gap between physical and regulatory harm has widened without doctrinal adjustment, making the boundary increasingly ritualistic. The reading is one pole of a fundamental dispute about the takings clause's scope — competing against regulatory takings and categorical takings readings that would expand the victim set and compensation obligation.",
+    "key_agents": [
+      "Government Regulatory Authority: Primary beneficiary (institutional/arbitrage) — retains broad regulatory power without compensation liability; can act on public necessity without internal cost accounting",
+      "Property Owners Subject to Physical Seizure: Primary victims (powerless/trapped) — face direct dispossession with no meaningful remedy under this reading; extreme suppression",
+      "Organized Propertied Interests (Corporations, Wealthy Landowners): Secondary victims (powerful/constrained) — experience both coordination benefits (secure property framework) and extraction (targeted losses); can afford legal defense and political leverage",
+      "Middle-Class Property Owners: Moderate victims (moderate/constrained) — depend on coordination (property security for borrowing, family stability) but vulnerable to physical appropriation with limited recourse",
+      "Regulatory/Environmental Constituencies: Indirect beneficiaries (organized/constrained) — benefit from government's unencumbered power to regulate for public goods (environmental protection, land use control), though compensation obligations might redirect regulatory capability",
+      "Judicial System (Takings Clause Interpreter): Institutional custodian (institutional/arbitrage) — maintains the physical/regulatory boundary through precedent; derives authority from interpretive lineage back to founding constitutional text"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The reading creates real extraction for property owners facing seizure (no compensation remedy, forced divestment, opportunity cost), but the extraction is constrained by the narrowness of the victim set — only those with property physically appropriated, not those bearing regulatory losses. Base extractiveness reflects the government's asymmetric benefit (uncompensated power to act) weighed against the limited scope of direct victims. Extractiveness has risen over the measurement interval (0.28 → 0.38) as regulatory alternatives have made physical seizure less common while regulatory restrictions have become the primary tool, shifting the constraint's functional relationship. Suppression (0.62): Moderate-high. Victims of physical appropriation face near-total suppression — they cannot negotiate compensation, cannot exit the regulatory regime, cannot recover losses through judicial remedy. Suppression is not 0.95 because the physical appropriation reading is itself an exit path for property owners who might otherwise fear catastrophic regulatory harm: the clear boundary creates predictability and insurable risk, which is a limited form of mobility (knowing the rule allows planning). The suppression measurement reflects the irreversibility of appropriation combined with the availability of procedural (though not substantive) remedy. Theater ratio (0.48): Moderate-high. The physical/regulatory distinction maintains formal clarity and semantic coherence — 'taking' is lexically distinct from 'regulating' — but the functional distinction has eroded. Zoning restrictions eliminating 95% of property value are economically equivalent to physical seizure; environmental regulations rendering land worthless are functionally appropriative; yet the doctrine classifies them as non-compensable regulation. The theater ratio measures the gap between the boundary's formal work (keeping categories separate) and its practical work (protecting property owners from equivalent losses). The rise from 0.35 to 0.52 over 80 years reflects regulatory expansion without doctrinal adjustment, increasing the constraint's performative character.",
+    "perspectival_gap": "The physical appropriation reading generates acute perspectival divergence across structural positions. The powerless property owner whose land is seized experiences pure extraction (Snare) — no benefit, no coordination value, only loss and suppression. The government experiences pure coordination (Rope) — the ability to act for collective purposes is the constraint's entire function from their vantage. Organized property interests experience tangled rope — they benefit from the secure property framework the constraint enables, but they also face targeted extraction if physically appropriated. The judicial system sees its own doctrine as institutionalized (Piton) — maintaining the boundary through precedent despite eroding functional justification. The analytical observer risks seeing natural law (Mountain) — 'taking' and 'regulating' as logically distinct categories — but the structural data reveals the boundary as a reading, a choice about where to draw the line, not an inevitable derivation. The mandate gap (mandatrophy) is central: which perspective's classification is correct? All are correct from their structural positions. The constraint exhibits the full range precisely because the reading is contestable — the boundary between physical and regulatory is not a fact of nature but a constructed institutional choice.",
+    "directionality_logic": "Directionality (d) is derived from each agent's structural position: beneficiary status, victim status, and exit options determine how the constraint affects them. Government regulatory authority (beneficiary + arbitrage exit) derives d ≈ 0.05, experiencing negative effective extraction (the constraint subsidizes their action). Property owners subject to physical seizure (victim + trapped exit) derive d ≈ 0.95, experiencing maximum effective extraction. Organized property interests (mixed beneficiary/victim status + constrained exit) derive d ≈ 0.55, experiencing moderate extraction. The analytical observer (analytical context) derives canonical d ≈ 0.73, serving as the reference frame for mandatrophy analysis. No directionality overrides are needed — the standard derivation chain captures the structural relationships accurately. The perspectival gap in d values drives the gap in classifications: agents with high d (victims with trapped exit) classify as Snare; agents with low d (beneficiaries with arbitrage exit) classify as Rope; agents with intermediate d (mixed position + constrained exit) classify as Tangled Rope.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy through the kernel reading frame: the physical appropriation reading is ONE legitimate pole of a constitutional dispute, not the true classification that other readings must defer to. The mandatrophy question becomes: 'What reading of the takings clause is binding?' rather than 'What is the one true type?' Different interpretive communities (strict constructionalists viewing the clause as self-contained boundary; progressives viewing it as applying to severe regulatory harm; originalists viewing historical practice at ratification) hold different readings with equal structural coherence. The engine's false summit detector will identify the analytical observer's mountain classification as a naturalization of the reading — the boundary between physical and regulatory is not immutable law but institutional choice. The resolution recognizes that the constraint is functionally two constraints simultaneously: (1) a coordination mechanism enabling government action (Rope from the government's view), and (2) an extraction mechanism leaving property owners uncompensated (Snare from the victim's view). The mandatrophy is resolved not by choosing one type but by recognizing that the indexical classification system IS the resolution: the constraint has no single type, only a presheaf of types across different observation points. The physical appropriation reading is the reading that maximizes the Rope classification (government coordination benefit) while minimizing victim protection — it is the reading that most strongly favors the government authority's structural interests.",
+    "kernel_context": "This constraint is the PHYSICAL_APPROPRIATION_READING of the contested kernel TAKINGS_CLAUSE_BOUNDARY. The kernel is the Fifth Amendment's guarantee that private property shall not be taken for public use without just compensation. This constraint instantiates one reading: compensation is required only for direct physical seizures or permanent physical occupations. The sibling readings are: (1) REGULATORY_TAKINGS_READING — compensation is required when regulations deprive property of all economically viable use or substantially interfere with investment-backed expectations; and (2) CATEGORICAL_TAKINGS_READING — certain categories of action (per se takings, total economic loss) automatically trigger compensation regardless of means (physical or regulatory). The physical appropriation reading is the narrowest victim set and broadest government exemption among the three. The structural delta: this reading reserves compensation obligations for a small, clearly defined class (physical dispossession) while exempting vast regulatory domains. The sibling readings expand the victim set and constrain government flexibility."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "takings_clause_boundary__regulatory_takings_reading",
+      "takings_clause_boundary__categorical_takings_reading"
+    ],
+    "dual_formulation_note": "The takings clause boundary decomposes into three reading-constraints with different ε values and victim sets. The physical appropriation reading (this file) establishes ε=0.38 with victim set {property_owners_subject_to_physical_seizure}. The regulatory takings reading extends victim set to include property owners suffering severe regulatory losses, with ε≈0.55. The categorical takings reading treats certain actions as automatic takings triggers, with ε≈0.62. Each reading is a distinct constraint on the kernel TAKINGS_CLAUSE_BOUNDARY. They coexist as competing interpretive frameworks held by different judicial coalitions and constitutional scholars. The physical appropriation reading is downstream of the regulatory takings and categorical readings in the sense that adopting those readings would foreclose or substantially pressure this reading."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "physical_taking_requires_compensation",
+    "drift_state": {
+      "moment": "contemporary_regulatory_expansion_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "takings_clause_boundary__regulatory_takings_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "takings_clause_boundary__categorical_takings_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "physical_appropriation_triggering_compensation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "regulatory_action_exempt_from_compensation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  }
+}

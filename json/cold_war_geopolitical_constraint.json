@@ -3,28 +3,29 @@
     "constraint_id": "cold_war_geopolitical_constraint",
     "version": "1.0",
     "generated_date": "2026-02-26",
-    "status": "ACTIVE",
-    "measurement_id_prefix": "coldwar"
+    "status": "RESOLVED",
+    "measurement_id_prefix": "cw",
+    "story_uid": "5bd1ac45-83ba-40a0-b5fc-e7b0c4559039"
   },
   "base_properties": {
     "extractiveness": 0.58,
     "suppression": 0.72,
-    "theater_ratio": 0.68,
+    "theater_ratio": 0.65,
     "claimed_type": "tangled_rope",
-    "human_readable": "Cold War Geopolitical Constraint: Superpower Bipolarity and Nuclear Stalemate",
+    "human_readable": "Cold War Superpower Bipolarity and Nuclear Stalemate (1945-1991)",
     "topic_domain": "geopolitical/military/ideological",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "soviet_leadership",
-      "american_leadership",
+      "us_leadership",
       "military_industrial_complex",
-      "state_security_apparatus"
+      "alliance_partners_strategic_value"
     ],
     "victims": [
-      "proxy_war_populations",
-      "developing_nations",
-      "civilian_populations_under_nuclear_threat",
-      "global_economic_development"
+      "developing_world_proxy_states",
+      "global_civilian_populations",
+      "dissidents_within_blocs",
+      "post_colonial_sovereignty"
     ]
   },
   "perspectives": [
@@ -34,35 +35,26 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "Proxy War Populations",
-      "comment": "PERSPECTIVE 1: PROXY WAR POPULATIONS (SNARE) \u2014 Nations and peoples caught in proxy conflicts (Korea, Vietnam, Afghanistan, multiple African and Latin American states) face maximum extraction with zero exit options. These populations bear the full cost of superpower competition \u2014 military occupation, resource extraction, political coercion, and civilian casualties \u2014 while having no agency in the constraint structure. The bipolarity forces alignment: neutrality is punished, defection is militarily crushed. This is pure extraction masked as ideological choice."
+      "label": "The Proxy State (Developing World)",
+      "comment": "PERSPECTIVE 1: PROXY STATE / DEVELOPING WORLD (SNARE) — Nations like Vietnam, Afghanistan, Angola, Nicaragua caught in superpower proxy conflicts. No genuine exit option; geopolitical position forces alignment. Experiences maximum extraction: military occupation, resource extraction, ideological imposition, political sovereignty stripped. Cannot exit without catastrophic cost. Powerless to resist superpower competition played on their territory."
     },
     {
       "classification_type": "snare",
-      "agent_power": "powerless",
+      "agent_power": "moderate",
       "time_horizon": "biographical",
-      "exit_options": "trapped",
+      "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "Civilian Populations Under Nuclear Threat",
-      "comment": "PERSPECTIVE 2: CIVILIAN POPULATIONS UNDER NUCLEAR THREAT (SNARE) \u2014 All citizens of nuclear-armed states and allied nations live under existential threat with no exit option and no consent. The threat is structurally maintained through deterrence doctrine and weapons accumulation. Extraction occurs through psychological terror (duck-and-cover drills, civil defense theater) and resource diversion from welfare to military spending. The threat itself is the mechanism of suppression \u2014 fear binds the population to state authority and ideological conformity."
+      "label": "The Civilian Population (Both Blocs)",
+      "comment": "PERSPECTIVE 2: CIVILIAN POPULATIONS (BOTH BLOCS) (SNARE) — Subjected to nuclear threat, military spending diversion, ideological indoctrination, restricted information access. Exit costs are severe (defection, exile, imprisonment). Suppression is extreme: the nuclear standoff eliminates genuine peace options; military budgets consume resources that could address civilian needs; dissent is criminalized or socially suppressed."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "organized",
       "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "regional",
-      "label": "Non-Aligned Movement",
-      "comment": "PERSPECTIVE 3: NON-ALIGNED MOVEMENT (TANGLED ROPE) \u2014 Nations attempting genuine neutrality (Yugoslavia, India, Egypt at various periods) experience the constraint as mixed coordination and extraction. The non-aligned framework provides real coordination benefits: diplomatic leverage, economic negotiation space, ideological independence. But these benefits are constantly threatened by superpower pressure (sanctions, coups, military intervention). Exit costs are severe \u2014 defection risks invasion or economic collapse. The constraint provides some agency (the coordination function) while extracting through coercion (constant threat of retaliation for deviation)."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "institutional",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
-      "spatial_scope": "regional",
-      "label": "NATO/Warsaw Pact Leadership",
-      "comment": "PERSPECTIVE 4: NATO/WARSAW PACT LEADERSHIP (ROPE) \u2014 Allied institutional actors see the constraint primarily as a coordination mechanism for military alliance and ideological bloc formation. The bipolarity solves a collective action problem: it provides security guarantees, clear alliance structure, and shared enemy definition. These leaders experience the constraint as enabling rather than extractive. Their arbitrage option is substantial \u2014 they can leverage their position as key allies to extract concessions from the superpower patron. The extraction runs toward the periphery, not toward allied leadership."
+      "spatial_scope": "global",
+      "label": "The Allied Bloc Member",
+      "comment": "PERSPECTIVE 3: ALLIED BLOC MEMBER / SATELLITE STATE (TANGLED ROPE) — Nations like Poland, East Germany (Soviet), or West Germany, Japan (US). Experience both coordination (alliance provides security, economic integration, diplomatic support) and extraction (ideological control, military burden, sovereignty restrictions). Constrained exit: leaving the bloc risks isolation or military intervention, but some negotiating space exists (Sino-Soviet split, NATO flexibility, Yugoslavia's non-alignment). Mixed: genuine coordination benefits exist alongside forced alignment."
     },
     {
       "classification_type": "rope",
@@ -70,53 +62,35 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
+      "label": "Superpower Military-Diplomatic Elite",
+      "comment": "PERSPECTIVE 4: SUPERPOWER LEADERSHIP (ROPE) — US and Soviet elite experience the constraint as coordination: nuclear deterrence defines their relationship, alliance management structures their foreign policy, proxy conflicts provide spheres of influence. Low effective extraction because these actors DESIGN the constraint. They capture primary benefits (geopolitical dominance, resource access through allies, domestic political legitimacy). Can arbitrage away from constraints at will."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
       "label": "Military-Industrial Complex",
-      "comment": "PERSPECTIVE 5: MILITARY-INDUSTRIAL COMPLEX (ROPE) \u2014 Defense contractors, military establishments, and security apparatus in both superpowers experience the Cold War as a coordination mechanism that solves their principal problem: sustained demand for weapons, military research, and defense infrastructure. The constraint is entirely enabling for this actor. The bipolarity justifies continuous weapons development, military spending, and technological competition. These institutions have maximum arbitrage \u2014 they can leverage threat perception to extract resources from the state. The constraint benefits this actor completely."
+      "comment": "PERSPECTIVE 5: MILITARY-INDUSTRIAL COMPLEX (ROPE) — Defense contractors, weapons manufacturers, military establishment. The Cold War constraint ENABLES their business model: sustained military spending, weapons development contracts, technological escalation justifies budget allocation. They experience pure coordination — the constraint solves their market problem (ensuring demand for military hardware). Primary beneficiary; can exit or reduce involvement if constraint changes (hence arbitrage status)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Global Anti-Nuclear Movement",
+      "comment": "PERSPECTIVE 6: ANTI-NUCLEAR / PEACE MOVEMENTS (TANGLED ROPE) — Civil society organizations experience the constraint as both coordination problem (organizing against nuclear weapons) and extraction (suppression of dissent, surveillance, limited political access). Constrained exit: movements can mobilize and advocate but face state repression; still, some win legislative successes (Limited Test Ban Treaty, Non-Proliferation Treaty). Mixed experience of constraint as both legitimating their organizing and suppressing their outcomes."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "Ideological State Apparatus",
-      "comment": "PERSPECTIVE 6: IDEOLOGICAL STATE APPARATUS (PITON) \u2014 The theatrical framing of the Cold War as a clash of civilizations (capitalism vs communism, freedom vs totalitarianism, Western values vs Soviet imperialism) is substantially performative. By the 1970s-80s, both superpowers had internalized pragmatic realpolitik and d\u00e9tente logic, yet the ideological theater persisted to justify defense spending and state authority. The constraint maintains itself through narrative performance (propaganda, education systems, media framing) rather than through genuine ideological commitment. Theater_ratio is high because the functional reality (cartel-like superpower cooperation to prevent third-party nuclear proliferation and maintain sphere-of-influence stability) is hidden behind ideological performance."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "powerful",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "Developing Nations",
-      "comment": "PERSPECTIVE 7: DEVELOPING NATIONS (TANGLED ROPE) \u2014 Nations seeking economic development and political autonomy experience the constraint as both enabling and extractive. The bipolarity creates opportunities for leverage: playing superpowers against each other, securing development loans and military aid, extracting concessions by threatening defection to the other bloc. But these opportunities are constrained by real military and economic asymmetries. Development aid comes with political strings (Cold War alignment), resource extraction flows toward superpowers, and military intervention punishes deviation. The constraint provides genuine coordination benefits (access to trade, capital, technology) alongside substantial extraction (political subordination, resource drain, proxy war costs)."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "powerful",
       "time_horizon": "civilizational",
-      "exit_options": "mobile",
+      "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Superpower Leadership (Soviet Union)",
-      "comment": "PERSPECTIVE 8: SUPERPOWER LEADERSHIP - SOVIET UNION (TANGLED ROPE) \u2014 The Soviet leadership experiences the constraint as both enabling and extractive. The Cold War provides narrative justification for party authority, military buildup, and suppression of internal dissent ('capitalist encirclement' justifies authoritarianism). But the constraint also extracts from the USSR: sustained military competition drains resources needed for economic development and consumer welfare, military-first ideology strangles innovation in civilian sectors, and the arms race creates fiscal unsustainability. The constraint has genuine coordination function (alliance maintenance, sphere-of-influence stability) alongside severe extraction (resource drain, systemic economic distortion). Exit is theoretically mobile but practically constrained by the regime's dependence on the Cold War enemy image for internal legitimacy."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "powerful",
-      "time_horizon": "civilizational",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "Superpower Leadership (United States)",
-      "comment": "PERSPECTIVE 9: SUPERPOWER LEADERSHIP - UNITED STATES (TANGLED ROPE) \u2014 American leadership experiences the constraint as mixed coordination and extraction. Cold War bipolarity solves the postwar problem: how to maintain U.S. economic and military dominance while justifying permanent military-industrial mobilization. The constraint provides real coordination benefits: alliance formation, sphere-of-influence stability, justification for global military presence. But it also extracts from American society: resource diversion from domestic welfare to defense, imperial overstretch that distorts fiscal balance, militarization of foreign policy that produces costly interventions (Vietnam). Exit is theoretically mobile (the U.S. could choose deescalation) but constrained by domestic constituencies (military-industrial complex, anticommunist ideological coalition) dependent on Cold War continuation."
-    },
-    {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "Peace and Disarmament Movements",
-      "comment": "PERSPECTIVE 10: PEACE AND DISARMAMENT MOVEMENTS (SCAFFOLD) \u2014 Peace activists, disarmament advocates, and anti-nuclear movements see the Cold War as a temporary constraint with a built-in sunset. This perspective recognizes the constraint as having genuine coordination problems (prevention of accidental nuclear war, management of proxy competition) but views them as solvable through institutional reform (arms control treaties, treaties, hotlines, verification mechanisms). The movements see arms control treaties (SALT I/II, ABM Treaty, NTP, Comprehensive Test Ban) as creating pathways to deescalation. Theater is moderate because the actual function (preventing superpower war and managing proxy conflicts) is partially visible. This perspective's sunset logic treats Cold War as a transient political arrangement rather than a permanent geopolitical law."
+      "label": "United Nations System",
+      "comment": "PERSPECTIVE 7: UNITED NATIONS (PITON) — The UN's primary coordinating role was intended to prevent great-power conflict, but Security Council structure (Soviet/US veto) renders the institution performative for the Cold War's core dynamic. Theater ratio is high: UN debates, General Assembly votes, and humanitarian interventions proceed while superpower competition determines actual geopolitical outcomes. UN persists through institutional inertia despite functional degradation; called in only when superpowers agree (minor conflicts, humanitarian crises outside bloc competition). Its original coordination function has atrophied."
     },
     {
       "classification_type": "mountain",
@@ -124,87 +98,141 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "Analytical Observer (Systemic Inevitability View)",
-      "comment": "PERSPECTIVE 11: ANALYTICAL OBSERVER - SYSTEMIC INEVITABILITY VIEW (MOUNTAIN) \u2014 From a civilizational/realist perspective, the Cold War bipolarity appears as an immutable consequence of the anarchic international system. Two nuclear superpowers with incompatible ideologies and competing spheres of influence necessarily generate confrontation, arms racing, and proxy warfare. This is seen as natural law in geopolitics \u2014 inevitable given the structural conditions. However, the mountain classification is diagnostically suspect. The constraint's high theater_ratio (0.68), extractiveness (0.58), and suppression (0.72) reveal that significant portions are contingent institutional arrangements (ideological theater, domestic political incentives, military-industrial lobbying) rather than structural inevitabilities. The 'realist' framing naturalizes what historical analysis reveals to be avoidable political choices."
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational scale, nuclear bipolarity appears as an immutable structural fact: two nuclear superpowers with incompatible ideologies cannot coexist without deterrence. The constraint seems irreducible — logically necessary given the initial conditions (Soviet-US confrontation, nuclear technology diffusion, ideological opposition). However, this analysis naturalizes what is contingent: the ideological opposition was constructed; the alliance blocs were politically engineered; the proxy war system was chosen, not inevitable. False summit diagnosis: structural data reveals active enforcement and identified beneficiaries, contradicting natural law claims."
     }
   ],
   "omegas": [
     {
-      "id": "superpower_cartel_or_genuine_conflict",
-      "question": "Is the Cold War a genuine ideological/military conflict or a superpower cartel managing global order to prevent third-party disruption?",
-      "resolution_mechanism": "Analysis of superpower cooperation patterns: nuclear nonproliferation treaty jointly enforced, sphere-of-influence respect (Soviet tolerance of U.S. interventions in Latin America, U.S. tolerance of Soviet interventions in Eastern Europe), proxy war restraint (neither superpower directly engaged the other militarily despite multiple opportunities), arms control negotiation despite public hostility. Compare rhetoric (ideological warfare) to behavior (pragmatic cooperation on order maintenance).",
-      "impact": "If genuine conflict: snare classification from proxy war populations is correct (they bear full cost of superpower adversarialism). If cartel: snare classification is even more severe (extraction occurs despite fake ideological justification that presumes real competition).",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether Cold War is genuine ideological conflict or superpower cartel"
+      "id": "ideological_opposition_contingency",
+      "question": "Is the Soviet-US ideological opposition an irreducible feature of their political systems or a constructed antagonism deployed for domestic and international legitimacy?",
+      "resolution_mechanism": "Historical analysis of rhetoric vs. policy pragmatism; examination of periods of détente, arms control agreement, and scientific/cultural collaboration to test whether ideological opposition is fundamental or instrumental",
+      "impact": "If fundamental: the constraint is closer to mountain (ideological systems cannot coexist peacefully). If constructed: the constraint is a snare masquerading as natural law — choice and enforcement, not necessity.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether superpower ideological opposition is inevitable or constructed"
     },
     {
-      "id": "ideological_commitment_vs_regime_legitimacy",
-      "question": "Do superpower leaders genuinely believe their ideological positions or use ideology primarily for domestic regime legitimacy?",
-      "resolution_mechanism": "Private correspondence analysis, declassified memoirs, internal policy documents revealing actual beliefs vs public rhetoric. Comparison of ideological purity in internal communications vs external propaganda. Analysis of policy choices that contradict stated ideology (U.S. support for authoritarian allies despite freedom rhetoric; Soviet pragmatism on market mechanisms in economic reform attempts).",
-      "impact": "If genuine belief: ideology is a binding mechanism justifying extraction to true believers. If regime tool: ideology is pure theater (theater_ratio approaches 1.0), and the constraint is maintained through institutional inertia and elite interest rather than ideological commitment.",
+      "id": "proxy_war_inevitability",
+      "question": "Was proxy warfare in the developing world a necessary consequence of nuclear deterrence or a choice by superpower elites to compete without direct confrontation?",
+      "resolution_mechanism": "Counterfactual analysis: comparison of regions where superpowers refrained from proxy competition (Western Europe, some neutrals) vs. those where they engaged; examination of decision points where alternative policies were available but rejected",
+      "impact": "If necessary: suppression values are lower (unavoidable cost of bipolarity). If choice: suppression values are higher (engineered barrier to local autonomy). Affects victim classification and extraction characterization.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether Cold War ideology reflects genuine belief or regime legitimacy tool"
+      "description": "Whether proxy wars were inevitable consequences of Cold War structure"
     },
     {
-      "id": "proxy_war_necessity_in_constraint_structure",
-      "question": "Are proxy wars a necessary structural feature of the Cold War constraint or contingent choices by superpower leadership?",
-      "resolution_mechanism": "Counterfactual analysis: examination of conflicts where superpowers refrained from intervention despite opportunity (Austria 1955, Yugoslavia breakup scenarios, some African conflicts). Comparison of crisis management protocols (hotlines, crisis communication, restraint agreements) showing that direct conflict was actively prevented while proxy conflicts were tolerated. Analysis of whether proxy wars served genuine deterrence function or primarily served military-industrial complex demand.",
-      "impact": "If necessary: proxy war populations experience structural snare (extraction is inherent to the constraint). If contingent: proxy wars represent policy choice, and snare classification shifts from structural to created \u2014 higher moral responsibility for extraction lies with decision-makers.",
+      "id": "nuclear_deterrence_credibility",
+      "question": "Did mutual assured destruction genuinely stabilize great-power peace or merely create an illusion of stability backed by continuous risk of catastrophic accident?",
+      "resolution_mechanism": "Analysis of near-miss incidents (Cuban Missile Crisis, false alarm events); comparison of Cold War military incidents vs. pre-nuclear great power periods; examination of strategic instability events that required crisis management",
+      "impact": "If genuine stability: rope classification becomes stronger (coordination mechanism works). If illusory: snare classification becomes stronger (suppression mechanism is theatrical, unstable, and backed by existential threat rather than real security).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether proxy wars are structurally necessary or contingent policy choices"
+      "description": "Whether nuclear deterrence provided genuine or illusory stability"
     },
     {
-      "id": "nuclear_deterrence_stability_or_theater",
-      "question": "Does nuclear deterrence actually prevent superpower war (stabilizing function) or is deterrence doctrine primarily theatrical maintenance of superpower legitimacy?",
-      "resolution_mechanism": "Examination of near-miss incidents (Cuban Missile Crisis, Able Archer 83, Korean Air Flight 007) showing either that deterrence logics actually prevented escalation or that accidents/miscommunication nearly triggered war despite deterrence. Analysis of whether military doctrine genuinely reduces war probability or primarily justifies weapon accumulation.",
-      "impact": "If deterrence stabilizes: nuclear threat suppresses superpower direct conflict, justifying some extraction costs as insurance. If theatrical: nuclear doctrine is performance maintaining elite power and military spending, and suppression is psychological rather than functional.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether nuclear deterrence provides actual stability or is theater"
-    },
-    {
-      "id": "exit_cost_trajectory_for_superpowers",
-      "question": "At what point does Cold War continuation become more expensive than exit for superpower elites?",
-      "resolution_mechanism": "Comparative analysis of superpower resource diversion, economic growth distortions, technological innovation tradeoffs across Cold War period. Measurement of moment when Soviet economic system becomes unsustainable due to military overcommitment, when U.S. fiscal constraints bind due to defense spending, when both superpowers perceive arms control as economically advantageous.",
-      "impact": "If exit costs become negative: constraint transitions from snare/tangled_rope to scaffold (temporary arrangement with sunset). This explains the actual outcome: 1989-1991 dissolution of Soviet system and Cold War rapid deescalation.",
+      "id": "alliance_voluntariness",
+      "question": "Did alliance members within each bloc genuinely benefit from their alignment or were they coerced into bloc membership by geopolitical pressure?",
+      "resolution_mechanism": "Analysis of bloc-member exit attempts and superpower response (Hungarian Revolution 1956, Prague Spring 1968, Yugoslavia non-alignment, Polish Solidarity); examination of economic and military aid ratios to measure coercion intensity; study of intra-alliance negotiations and leverage dynamics",
+      "impact": "If genuinely beneficial: tangled rope classification holds (real coordination function + coercion). If purely coerced: snare classification becomes correct (extraction with no real coordination component).",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Economic breakdown point for Cold War maintenance"
+      "description": "Whether bloc membership was voluntary or coerced"
+    },
+    {
+      "id": "extractiveness_measurement_basis",
+      "question": "Should extractiveness be measured by military spending diversion, ideological suppression, proxy war casualties, or some weighted combination? Different measurement bases yield different epsilon values.",
+      "resolution_mechanism": "Establish primary extractiveness metric: (a) % of GDP diverted to military spending above counterfactual peacetime level; (b) civilian casualties in proxy wars; (c) suppression incidents against dissidents; (d) foregone development in proxy states; (e) nuclear risk premium. Each metric yields different epsilon.",
+      "impact": "Basis (a): ε ≈ 0.42. Basis (b): ε ≈ 0.65. Basis (c): ε ≈ 0.48. Basis (d): ε ≈ 0.72. Basis (e): ε ≈ 0.55 (current). If (b) or (d) is primary: constraint reclassifies to snare. If (a) or (e): tangled_rope holds.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Which metric properly measures Cold War extractiveness"
+    },
+    {
+      "id": "beneficiary_longevity_mismatch",
+      "question": "Why did beneficiary elites not perpetuate the Cold War beyond 1991 if it was so extractive? Gorbachev's dissolution contradicts pure snare dynamics.",
+      "resolution_mechanism": "Analysis of internal Soviet collapse dynamics: economic stagnation, military spending unsustainability, technological lag, loss of ideological legitimacy. Comparison with US: military-industrial complex persisted, tried to perpetuate cold war rhetoric post-1991. Why did Gorbachev exit when American beneficiaries did not?",
+      "impact": "If Soviet exit was forced (economic collapse): constraint was more extractive for USSR than US (asymmetric snare). If exit was chosen (reform initiative): beneficiaries' rational calculation changed. Affects interpretations of constraint dynamics in final period.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Why the Cold War constraint ended despite beneficiary interests"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.42
+      "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 12,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 23,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 35,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 46,
       "value": 0.58
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 45,
-      "value": 0.64
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.48
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.62
+      "time_point": 12,
+      "value": 0.55
     },
     {
       "metric": "theater_ratio",
-      "time_point": 45,
+      "time_point": 23,
       "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 35,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 46,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 23,
+      "value": 0.76
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 35,
+      "value": 0.78
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 46,
+      "value": 0.72
     }
   ],
   "interval": {
@@ -212,23 +240,22 @@
     "end": 46
   },
   "commentary": {
-    "narrative_context": "The Cold War geopolitical constraint represents a 46-year structural arrangement (1945-1991) between the Soviet Union and United States, characterized by ideological opposition, military competition, nuclear deterrence, and proxy warfare in the developing world. The constraint exhibits diagnostic complexity: from the perspective of superpower leadership, it functions as a coordination mechanism solving postwar order questions and alliance management. From the perspective of proxy war populations and nuclear-threatened civilians, it is pure extraction with no exit option. From the perspective of military-industrial establishments, it is entirely enabling. The theater_ratio increases over time as the functional coordination problems (preventing superpower direct war, managing sphere-of-influence stability) become obscured behind performative ideological rhetoric. By the 1970s-80s, both superpowers had internalized pragmatic coexistence logic (d\u00e9tente, arms control negotiations, cultural exchange) while maintaining public Cold War theater for domestic regime legitimacy. The constraint's dissolution in 1989-1991 reveals that the structural 'inevitability' attributed to it was partial \u2014 the realist mountain view naturalizes a contingent institutional arrangement. The measurable increase in theater_ratio from 0.48 to 0.68 over the interval reflects growing gap between proclaimed ideological warfare and actual pragmatic superpower cooperation.",
+    "narrative_context": "The Cold War geopolitical constraint represents a 46-year structural arrangement (1945-1991) between the Soviet Union and United States that combined genuine coordination functions (managing postwar order, preventing direct superpower conflict through deterrence) with severe extraction (proxy wars consuming developing-world resources, military spending diverting civilian investment, ideological suppression across both blocs, and existential risk from nuclear weapons). The constraint exhibits all six classification types from different observer positions, making it a diagnostic exemplar for how the same structural phenomenon can appear as natural law (nuclear deterrence as irreducible fact), pure coordination (alliance management), mixed coordination-extraction (allied states), and pure extraction (proxy war victims and domestic dissidents). The theater ratio increases over the constraint's interval as détente periods create performative cooperation (arms control agreements signed but arsenals continue expanding) and proxy wars become increasingly distant from superpower homelands (creating psychological distance from extraction mechanisms). The extractiveness trajectory shows acceleration in the 1960s-1970s (Vietnam, Afghanistan, arms race escalation) and decline in the 1980s (Soviet economic collapse, US domestic pressure, reform movements challenging enforcement mechanisms).",
     "key_agents": [
-      "Soviet Leadership: Powerful/mobile but constrained institutional actor \u2014 benefits from Cold War as regime legitimacy mechanism and military-industrial complex demand; constrained by unsustainable economic burden of arms race",
-      "American Leadership: Powerful/mobile but constrained institutional actor \u2014 benefits from Cold War as justification for global military presence and security apparatus expansion; constrained by fiscal strain and imperial overstretch",
-      "Military-Industrial Complex (both superpowers): Institutional/arbitrage beneficiary \u2014 extracts maximum value from sustained weapons competition and defense spending",
-      "NATO/Warsaw Pact Allied Leadership: Institutional/arbitrage beneficiary \u2014 captures security guarantees and patron-client leverage; constrained by superpower dominance of decision-making",
-      "Proxy War Populations (Korea, Vietnam, Afghanistan, etc.): Powerless/trapped victim \u2014 bears full cost of superpower competition through military occupation, resource extraction, civilian casualties",
-      "Civilian Populations Under Nuclear Threat: Powerless/trapped victim \u2014 subjected to existential threat with zero exit option; suppressed through psychological terror and resource diversion",
-      "Non-Aligned Movement: Organized/constrained actor \u2014 experiences mixed coordination benefits (diplomatic leverage, independence space) and extraction threats (coercion, intervention risk)",
-      "Developing Nations: Powerful but constrained \u2014 experiences mixed coordination (development aid, trade access) and extraction (political subordination, resource drain, proxy war costs)",
-      "Peace and Disarmament Movements: Organized/constrained actor \u2014 sees constraint as temporary with sunset pathway through institutional reform and arms control",
-      "Analytical Observer: Potential false naturalization of contingent arrangement as immutable geopolitical law"
+      "Soviet Leadership: Primary beneficiary (institutional/arbitrage) — designs constraint, captures alliance dominance, ideological legitimacy for regime control",
+      "US Leadership: Primary beneficiary (institutional/arbitrage) — designs constraint, captures alliance dominance, ideological legitimacy for geopolitical hegemony",
+      "Military-Industrial Complex (Both Superpowers): Secondary beneficiary (powerful/arbitrage) — sustained military spending, weapons escalation, technological contracts",
+      "Proxy War States (Vietnam, Afghanistan, Angola, Nicaragua): Primary victim (powerless/trapped) — forced into superpower competition, military occupation, sovereignty stripped, resources extracted",
+      "Civilian Populations (Both Blocs): Secondary victim (moderate/constrained) — subjected to nuclear threat, military budget diversion, ideological suppression, restricted information",
+      "Dissidents Within Blocs (Soviet, Eastern European, US): Secondary victim (moderate/trapped) — criminalized dissent, surveillance, imprisonment, exile",
+      "Allied Satellite States (Poland, East Germany, Japan, West Germany): Mixed (organized/constrained) — experience both security coordination benefits and forced alignment costs",
+      "United Nations System: Degraded institutional actor (institutional/arbitrage) — intended coordination function disabled by superpower veto; persists through inertia",
+      "Anti-Nuclear Movements: Organized opposition (organized/constrained) — suppressed by state action but achieve some legislative wins (test ban treaties)"
     ],
-    "logic_rationale": "Extractiveness (0.58): Moderate-high. The Cold War extracts substantially from proxy war populations and nuclear-threatened civilians through physical violence, political coercion, and resource diversion. But the extraction is not maximal (0.66+) because significant portions involve genuine coordination functions (alliance maintenance, sphere-of-influence stability, prevention of superpower direct war). The increase from 0.42 to 0.64 over the interval reflects increasing extraction as weapons accumulation accelerates and proxy wars expand (Vietnam peak in 1965-1973). Suppression (0.72): High. The constraint is maintained through multiple suppression mechanisms: military threat (nuclear deterrence, conventional arms), political coercion (alliance discipline, threat of intervention), ideological closure (both superpowers control information and education systems), and psychological terror (civil defense theater, threat of nuclear annihilation). Suppression is not total (0.80+) because significant portions of populations in both superpowers retain agency in limited domains. Theater_ratio (0.68): High. The functional core of the Cold War \u2014 preventing superpower direct war and managing global order \u2014 requires relatively modest institutional overhead. But the constraint is wrapped in elaborate ideological performance: anticommunism and anti-imperialism propaganda, education systems teaching existential threat, media framing, diplomatic theater. By 1975-1985, both superpowers had internalized pragmatic d\u00e9tente logic (arms control, cultural exchange, trade) while maintaining public Cold War rhetoric for domestic constituencies. The theater increases over time as actual coordination problems become stable and theater becomes the primary maintenance mechanism.",
-    "directionality_logic": "The constraint's directionality structure is asymmetric across different agent classes. Superpower leadership (institutional/arbitrage) derives d \u2248 0.20-0.30 \u2014 they are net beneficiaries experiencing the constraint as enabling, with options to arbitrage their position. Military-industrial complexes derive d \u2248 0.10 \u2014 maximum beneficiary status, pure enabling actor. Allied institutional leadership derives d \u2248 0.25-0.35 \u2014 beneficiaries with arbitrage options, though constrained by superpower dominance. Proxy war populations derive d \u2248 0.95 \u2014 trapped victims bearing maximum extraction cost with zero exit. Nuclear-threatened civilians derive d \u2248 0.90 \u2014 highly victimized by threat imposition with constrained exit. Developing nations derive d \u2248 0.65-0.75 \u2014 mixed positioning: benefits from aid/trade access but victimized by political subordination and proxy war participation. Non-aligned movement derives d \u2248 0.55 \u2014 mixed victim-beneficiary status with constrained but meaningful exit options. Peace movements derive d \u2248 0.70 \u2014 victimized by threat imposition and resource diversion but possessing some organizational agency.",
-    "perspectival_gap": "The constraint exhibits extreme perspectival divergence. Superpower leadership sees Tangled Rope (mixed coordination and extraction, with significant beneficiary positioning). Military-industrial complex sees Rope (pure coordination, entirely enabling). Allied leadership sees Rope (pure coordination, security guarantees). Proxy war populations see Snare (pure extraction, zero exit). Peace movements see Scaffold (temporary problem with sunset pathway). Analytical realists see Mountain (immutable structural necessity). The gap between superpower beneficiary view (Rope/Tangled Rope) and proxy war population view (Snare) is maximal: the same constraint appears enabling to one and purely extractive to the other. This perspectival gap is the diagnostic signature of the constraint's hybrid nature. The piton perspective (degraded theater) reveals that by the 1980s, the constraint was maintained primarily through institutional inertia and elite interest rather than genuine ideological commitment or functional necessity.",
-    "mandatrophy_analysis": "CONSTRAINT FAMILY WITH FALSE SUMMIT: The analytical observer's mountain perspective appears initially justified by realist theory \u2014 bipolarity seems like an immutable consequence of anarchic international structure with two nuclear superpowers and incompatible ideologies. However, structural data reveals this as a false summit (Goodhart signal). The theater_ratio (0.68) is too high for a natural law \u2014 genuine mountains have theater ratios near 0.0-0.1 because they function by necessity, not by performance. The contingency of Cold War termination (the constraint dissolved rapidly in 1989-1991 when superpower leaders chose deescalation) proves that the 'structural inevitability' was illusory. The realist naturalization of bipolarity obscures the political agency and choice involved in Cold War maintenance. The mandatrophy resolution: the constraint is NOT mountain but Tangled Rope from superpower leadership perspective (mixed coordination and extraction, with genuine beneficiary positioning that made continuation rational), misclassified as mountain by realist theory that confuses structural incentives with structural inevitability. Multiple dimensions are at play simultaneously: genuine coordination problems (preventing superpower direct war), genuine extraction mechanisms (military-industrial complex rent-seeking, proxy war resource drain), genuine suppression (nuclear threat, alliance discipline), and genuine theater (ideological performance decoupling from pragmatic behavior). The analytical observer must recognize that the 'inevitability' of Cold War is itself a narrativization used by beneficiary elites to justify extraction \u2014 a false natural law that obscures political choice."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The Cold War constraint extracts significantly through military spending diversion (each superpower spent 5-10% of GDP on military; global total ~$1-2 trillion annually by 1980s), proxy war casualties (estimated 10-20 million deaths in proxy conflicts), suppression of dissent, and existential risk. However, extractiveness is not at maximum (0.72+) because genuine coordination functions exist: alliance members do receive security benefits, nuclear deterrence does prevent direct superpower conflict, and some coordination of technology and trade occurs. The beneficiaries (superpower elites, military-industrial complex) genuinely benefit, not merely appear to. This mixed function defines tangled_rope territory. Suppression (0.72): High. Extremely severe barriers exist to exiting the constraint: proxy states face military intervention if they try to defect (Hungarian Revolution 1956, Prague Spring 1968); civilian populations face nuclear existential threat and propaganda; dissidents face criminalization and imprisonment; even alliance members have constrained options. Nuclear threat eliminates genuine peace alternatives (choosing neither side means targeting by both). Theater ratio (0.65, increasing to 0.72 mid-period): High and rising. Détente rhetoric (arms control talks, cultural exchange) masks continuing arms escalation. UN debates proceed while real geopolitical decisions happen bilaterally. Proxy wars are fought at distance (Vietnam, Afghanistan) creating psychological separation from the extraction mechanism. Crisis management meetings (Cuban Missile Crisis, back-channel diplomacy) become performative coordination theater with genuine stakes. By the 1980s, Soviet military parades and US defense spending rhetoric become increasingly theatrical as economic reality diverges from official narratives.",
+    "perspectival_gap": "The perspectival gap between beneficiary and victim perspectives is extreme. Superpower leadership classifies the constraint as Rope (pure coordination) because their exit options are arbitrage-level (they can end or reshape the constraint at will) and they are net beneficiaries. Proxy war states classify the constraint as Snare (pure extraction) because their exit options are trapped (military intervention follows defection) and they bear the full cost. The gap is not a measurement disagreement — both perspectives are accurate from their structural positions. The gap IS the constraint's reality. An analytical theory that produces the same classification for both perspectives has failed to capture what the constraint actually does: it concentrates benefits among superpower elites and diffuses costs across developing-world civilians and dissidents within blocs. No single type can capture this asymmetry; the full perspectival suite can.",
+    "directionality_logic": "Each perspective's directionality is computed from three structural inputs: (1) the agent's power level (powerless → confined to trapped exit; institutional → access to arbitrage); (2) the agent's exit options (trapped → d ≈ 0.95; arbitrage → d ≈ 0.05); (3) beneficiary or victim status (beneficiary → lower d; victim → higher d). For superpower leadership: institutional power + arbitrage exit + beneficiary status → d ≈ 0.05 → f(d) ≈ -0.12 (negative effective extraction, pure benefit). For proxy war victims: powerless + trapped exit + victim status → d ≈ 0.95 → f(d) ≈ 1.42 (maximum effective extraction). For allied satellite states: organized power + constrained exit + mixed beneficiary/victim status (benefit from security + extraction via political control) → d ≈ 0.50 → f(d) ≈ 0.65 (mixed extraction). The sigmoid function produces nonlinear response: small differences in exit options create large differences in experienced extraction once the victim classification is factored in.",
+    "mandatrophy_analysis": "Mandate mandatrophy: identifying whether the Cold War is a coordination mechanism or pure extraction. The constraint exhibits elements of both: genuine coordination (alliance management, conflict prevention through deterrence) + genuine extraction (proxy wars, military spending diversion, suppression). The tangled_rope classification resolves the mandate by acknowledging both functions are real and not reducible to each other. The false summit signature fires on the mountain perspective: the civilizational observer risks naturalizing the constraint as an immutable law of nuclear deterrence, but the constraint was engineered by elites with identifiable interests and could have been structured differently (e.g., global nuclear disarmament treaties, international peacekeeping, collective security framework). The ocean perspective — seeing the constraint as pure snare masquerading as coordination — is the developing-world view, and it is structurally sound but under-captures the genuine coordination function for alliance members who did benefit from security provision. The complete picture is tangled: mixed coordination-extraction, not reducible to either alone. Mandatrophy resolves when the analysis abandons the single-type framing and embraces the perspectival plurality."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
@@ -236,16 +263,16 @@
   "network": {
     "affects_constraints": [
       "nuclear_deterrence_doctrine",
-      "proxy_war_dynamics",
+      "proxy_war_systems",
       "ideological_bloc_formation",
-      "military_industrial_complex_expansion"
+      "alliance_dependency_structures"
     ],
-    "dual_formulation_note": "The Cold War decomposes into structurally distinct constraints: (1) nuclear deterrence as an enforcement mechanism preventing superpower direct war; (2) proxy war dynamics as extraction mechanism targeting developing nations; (3) ideological bloc coordination as alliance formation; (4) military-industrial complex expansion as rent-seeking mechanism. Each has distinct \u03b5 values. The overarching Cold War constraint story integrates these components but should be cross-referenced with the downstream stories for detailed analysis."
+    "dual_formulation_note": "The Cold War geopolitical constraint decomposes into distinct structural dynamics: (1) nuclear deterrence (preventing direct superpower war) — coordination function with mountain-adjacent stability; (2) proxy war system (competition in third world) — extraction mechanism with snare dynamics; (3) alliance bloc formation (Soviet and US alliance systems) — mixed coordination-extraction with tangled_rope dynamics; (4) ideological opposition (capitalism vs. communism framing) — constructed opposition enabling all other mechanisms. Each sub-constraint has distinct epsilon: nuclear deterrence ε ≈ 0.25 (mostly functional coordination); proxy war system ε ≈ 0.70 (mostly extraction); alliance coordination ε ≈ 0.45 (mixed). The aggregate constraint (0.58) represents a weighted average dominated by proxy war extraction."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.28
+      "d_value": 0.03
     }
   ]
 }

@@ -1,0 +1,241 @@
+{
+  "header": {
+    "constraint_id": "nicene_creed_authority__liturgical_habituation_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_nicene_creed_authority__liturgical_habituation_reading",
+    "measurement_id_prefix": "nicene_lit",
+    "story_uid": "06166275-8641-4522-b557-f0b6d80577ac",
+    "created_at": "2026-02-26T14:32:18Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.12,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Nicene Creed Authority (Liturgical Habituation Reading)",
+    "topic_domain": "systematic_theology/ecclesiology/christian_doctrine",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "liturgical_community",
+      "ecclesiastical_authority_structure"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Liturgical Participant",
+      "comment": "PERSPECTIVE 1: LITURGICAL PARTICIPANT (ROPE) — Constrained by social belonging and intergenerational tradition transmission. Experiences the creed recitation as coordination: performs identity alongside others in collective rhythm. The constraint functions as pure coordination mechanism — no extraction perceived, only rhythmic belonging. Exit costs are high (religious community loss) but primarily relational, not material coercion."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Ecclesiastical Authority (Ecumenical Council Successor)",
+      "comment": "PERSPECTIVE 2: ECCLESIASTICAL AUTHORITY (ROPE) — Institutional actor maintaining creed codification and liturgical performance norms. Experiences the constraint as coordination infrastructure: the creed stabilizes doctrinal variance across dioceses without requiring coercive dogmatic testing. Benefits from the creed as an information standard that enables decentralized agreement. Arbitrage option (can reinterpret or modify creed language) but chooses maintenance for coordination value."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Heterodox Theologian (Within Tradition)",
+      "comment": "PERSPECTIVE 3: HETERODOX THEOLOGIAN WITHIN TRADITION (ROPE) — Can assert non-standard metaphysical interpretations while performing creed liturgically. Mobile exit option (can leave tradition entirely or establish schism) but constrained within tradition if cognitive assent differs from liturgical performance. Experiences the constraint as enabling coordination between doctrinal diversity and visible unity — the creed functions precisely as an identity boundary that permits interior interpretation variance."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Historical Analyst",
+      "comment": "PERSPECTIVE 4: HISTORICAL ANALYST (PITON) — Views the creed from post-Christendom analytical distance. The liturgical recitation persists through institutional inertia: the creed's original function (defining orthodoxy against Arianism in 4th century) has been replaced by performative identity marking, yet the authority structure maintains the original codification language. Theater ratio high (0.35) because the creed's enforcement mechanism has atrophied — modern Catholicism and Orthodox Christianity enforce creedal identity primarily through liturgical participation, not doctrinal policing. The creed's authority is theatrical maintenance of legitimacy rather than active gate-keeping."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law Perspective (Metaphysical Necessity)",
+      "comment": "PERSPECTIVE 5: NATURAL LAW VIEW (MOUNTAIN) — From a metaphysical standpoint, the creed's content (God's nature, Christ's relation to Father, Holy Spirit's procession) claims to describe unchangeable realities. If these metaphysical claims are true, the creed's authority is immutable natural law. However, this perspective confuses the metaphysical truth-condition with the constraint's structural function. The constraint is about identity performance and boundary maintenance, not metaphysical assertion. The engine's false summit detector will flag this as naturalization of contingent institutional arrangements."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "cognitive_assent_vs_performative_identity",
+      "question": "Is the creed's binding function grounded in requiring cognitive metaphysical assent, or does it function as identity boundary regardless of interior belief?",
+      "resolution_mechanism": "Historical and ethnographic analysis: (a) Council of Nicaea enforcement records and doctrinal testing practices vs modern liturgical-only enforcement; (b) Contemporary theological diversity within creedal traditions (Catholic/Orthodox acceptance of non-Thomist metaphysics, Anglican spectrum); (c) Comparative analysis of schism causes — were breaks over doctrinal belief or over liturgical/institutional identity?",
+      "impact": "If cognitive assent required: constraint is closer to snare (coercive belief discipline). If performative identity sufficient: constraint is pure rope (coordination without belief coercion). This omega distinguishes the strict_orthodox_reading (assent-based) from liturgical_habituation_reading (performance-based).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether creed enforcement requires cognitive metaphysical assent or only performative liturgical participation"
+    },
+    {
+      "id": "ecclesiastical_authority_grounding_shift",
+      "question": "Did the authority grounding for the creed shift from doctrinal enforcement (4th–7th century) to performative identity maintenance (post-Reformation to present)?",
+      "resolution_mechanism": "Historical periodization: (a) Canons and enforcement mechanisms from ecumenical councils; (b) Theological treatises on creedal authority across historical periods; (c) Institutional response to doctrinal heterodoxy — prosecution vs tolerance patterns; (d) Liturgical evolution — creed's role in medieval mass vs modern liturgy.",
+      "impact": "If shift occurred: liturgical_habituation_reading is accurate for contemporary constraint; strict_orthodox_reading describes a historical constraint that has transformed. If no shift: single constraint across centuries with changing enforcement capacity (piton rather than rope). Affects network.affects_constraints linkage and temporal scope of this story.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Historical shift in ecclesiastical authority grounding from doctrinal enforcement to performative identity"
+    },
+    {
+      "id": "interior_variance_tolerance_limit",
+      "question": "What range of interior metaphysical variance can be accommodated within a single creedal tradition while maintaining the creed's identity-boundary function?",
+      "resolution_mechanism": "Theological and institutional analysis: (a) Boundaries of Catholic/Orthodox/Anglican acceptance (Thomist vs Scotist metaphysics within Catholicism, Filioque variance within Orthodoxy, Anglo-Catholic spectrum); (b) Schism cases where interior variance exceeded tradition's tolerance; (c) Comparative analysis of traditions with different tolerance ranges (Reformation fragmentation vs Orthodox/Catholic unity despite variance).",
+      "impact": "If tolerance is high: creed functions as pure coordination (very low extractiveness, rope classification stable). If tolerance is low: creed enforces substantive metaphysical positions (higher extractiveness, tangled_rope or snare possible).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Institutional tolerance for interior metaphysical variance within creedal identity"
+    },
+    {
+      "id": "reading_under_determination_kernel_drift",
+      "question": "This reading instantiates one interpretation of the Nicene Creed authority kernel. The sibling readings (strict_orthodox_reading, symbolic_confessional_reading) represent alternative framings of the same authority claim. What structural observation would definitively distinguish which reading correctly captures the constraint's function?",
+      "resolution_mechanism": "Observation of institutional enforcement patterns under doctrinal challenge: (a) When a liturgically-participating member asserts metaphysical variance (e.g., denying Filioque, affirming Nestorianism), does the institution enforce creedal orthodoxy cognitively or merely require continued liturgical performance? (b) When schism threatens (e.g., Filioque controversy), does the institution prioritize doctrinal uniformity or liturgical/communion unity? (c) Post-Vatican II and modern Orthodox dialogue: acceptance of modified creedal language (filioque ecumenical revisions) — does this represent authority migration from content to performance?",
+      "impact": "If enforcement targets cognitive assent: strict_orthodox_reading is correct (constraint is snare or tangled_rope). If enforcement targets performative participation: liturgical_habituation_reading is correct (constraint is rope). If enforcement permits interior variance: symbolic_confessional_reading is correct (constraint is scaffold or piton).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Kernel reading under-determination: which sibling reading correctly captures the creed's functional authority"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28,
+      "id_override": "theater_ratio_4th_century"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.32,
+      "id_override": "theater_ratio_medieval"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.38,
+      "id_override": "theater_ratio_scholastic"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1500,
+      "value": 0.42,
+      "id_override": "theater_ratio_reformation"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1900,
+      "value": 0.35,
+      "id_override": "theater_ratio_modern"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18,
+      "id_override": "extractiveness_4th_century"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.14,
+      "id_override": "extractiveness_medieval"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.11,
+      "id_override": "extractiveness_scholastic"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1500,
+      "value": 0.09,
+      "id_override": "extractiveness_reformation"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1900,
+      "value": 0.08,
+      "id_override": "extractiveness_modern"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 1900
+  },
+  "commentary": {
+    "narrative_context": "The Nicene Creed (325 CE) functions as an identity boundary marker in liturgical performance, independent of whether participants cognitively assent to its metaphysical claims. This reading models the creed as a pure coordination mechanism — the rhythmic, intergenerational recitation of fixed formulaic language stabilizes ecclesiastical identity and enables doctrinal variance to exist within a single institutional structure. The creed's authority is grounded not in enforcing belief but in maintaining a performative boundary: one recites the creed in the assembly, therefore one participates in the apostolic faith regardless of interior metaphysical interpretation. This reading contrasts with the strict_orthodox_reading (which treats the creed as enforcing substantive doctrinal assent) and the symbolic_confessional_reading (which treats the creed as expressing plural meanings that accommodate theological diversity). The liturgical_habituation_reading focuses on the structural function of repetition, belonging, and intergenerational transmission independent of truth-conditions. Extractiveness is very low (ε=0.08) because the constraint functions as pure coordination: the creed creates a shared linguistic space that permits both orthodox and heterodox interior belief while maintaining visible ecclesiastical unity. Suppression is minimal (0.12) because liturgical participation is voluntary (exit via leaving the tradition, though socially costly). Theater ratio (0.35) reflects that enforcement of the creed's recitation is primarily performative — modern Catholic and Orthodox Christianity enforce the creed through liturgical rubrics and participatory rhythm rather than doctrinal interrogation.",
+    "key_agents": [
+      "Liturgical Participants (Moderate Power, Constrained Exit) — Primary coordinators of identity through repetition; experience the creed as belonging rather than belief requirement",
+      "Ecclesiastical Authority Structure (Institutional Power, Arbitrage Exit) — Maintains creed codification and liturgical enforcement; benefits from low-cost coordination across doctrinal variance",
+      "Heterodox Theologians Within Tradition (Powerful, Mobile Exit) — Can assert non-standard metaphysics while performing the creed; experience constraint as enabling interior variance",
+      "Historical Analyst (Analytical Position, Universal Scope) — Observes the creed's functional transformation from doctrinal enforcement (4th century) to performative identity (modern era)",
+      "Metaphysical Philosopher (Natural Law Perspective) — Risks naturalizing contingent institutional arrangements as metaphysical necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.08): Very low. The creed as a liturgical coordination mechanism does not extract from participants — it coordinates their identity. No beneficiary group gains material or institutional advantage from the creed's performance. The ecclesiastical authority benefits from coordination infrastructure, but this is coordination benefit (enabling doctrinal variance within institutional unity), not extraction benefit (taking value from others). Suppression (0.12): Minimal. Participants are not coerced to recite the creed beyond social belonging costs, which are real but relational rather than material. Exit options are genuinely available (leave the tradition) though socially expensive. The constraint does not suppress alternatives because the creed does not require exclusive belief — interior metaphysical variance coexists. Theater ratio (0.35): Moderate. The creed's modern function is performative — the enforcement mechanism targets participation in the liturgical rhythm, not cognitive assent. Medieval scholasticism had higher theater (0.38) because theologians performed doctrinal precision while the creed remained unchanged language. Modern post-Vatican II Catholicism lowered theater (0.35) by explicitly decentering cognitive assent in favor of lived ecclesial participation. The creed's authority persists as theatrical maintenance of legitimacy: the church says 'we recite this because we have always recited this,' which is performative authority, not doctrinal gate-keeping.",
+    "perspectival_gap": "The creed's classification ranges from rope (coordination view) to piton (degraded authority view) to mountain (naturalized metaphysics view). The liturgical participant sees pure rope — the constraint enables identity coordination without belief coercion. The heterodox theologian sees rope with high tolerance — the creed permits interior variance. The ecclesiastical authority sees rope with institutional benefit — coordination infrastructure that stabilizes visible unity. The historical analyst sees piton — the creed's original enforcement function (doctrinal gate-keeping) has been replaced by performative identity maintenance. The metaphysical philosopher risks mountain — treating the creed's metaphysical content as naturally law rather than contingent institutional performance. This perspectival gap reveals the core function: the creed works precisely because it separates performative identity from cognitive assent.",
+    "kernel_context": "This constraint instantiates the liturgical_habituation_reading of the nicene_creed_authority kernel. The kernel is the Nicene Creed's authority claim — what makes it binding on ecclesiastical tradition and liturgical practice. Three readings are live in contemporary theology: (1) strict_orthodox_reading: the creed's authority is grounded in metaphysical truth-conditions about God's nature, Christ's relation to the Father, and the Holy Spirit's procession. Cognitive assent to these propositions is required. (2) symbolic_confessional_reading: the creed's authority is grounded in its function as a symbol that accommodates plural metaphysical interpretations while expressing a common faith orientation. Interior variance is permitted and even encouraged. (3) liturgical_habituation_reading (this one): the creed's authority is grounded in its function as a performative boundary marker maintained through liturgical participation and intergenerational transmission. Cognitive assent is not required; performative participation is sufficient. The readings coexist across different theological traditions and schools.",
+    "directionality_logic": "Directionality is derived from beneficiary/victim declarations and exit options. The creed's beneficiaries are the liturgical community (benefits from coordinated identity) and the ecclesiastical authority structure (benefits from coordination infrastructure). Neither group is a victim of the creed — there is no extraction target. The liturgical participant (moderate power, constrained exit) experiences the constraint as coordination, not extraction. The ecclesiastical authority (institutional power, arbitrage exit) experiences the constraint as enabling their institutional function. The heterodox theologian (powerful, mobile exit) experiences the constraint as permitting interior variance. Because there are no victims and no high-power extraction, directionality values remain low (d ≈ 0.1–0.3), resulting in low effective extraction chi. The constraint classifies as rope across all perspectives because the structural data shows coordination without asymmetric extraction.",
+    "mandatrophy_analysis": "This reading resolves mandatrophy by showing that the creed functions as pure coordination (rope) rather than coercive extraction (snare) or false natural law (mountain). The strict_orthodox_reading might generate mandatrophy if it claims the creed is simultaneously a coordination mechanism (binding diverse orthodoxies to visible unity) and an enforcement mechanism (requiring cognitive assent to specific metaphysical propositions). This reading avoids the tension by decoupling performance from belief: the creed coordinates identity through liturgical participation regardless of interior metaphysical variance. The natural law perspective (mountain) risks mandatrophy by treating metaphysical content as grounds for institutional authority, but the structural data reveals authority is grounded in performative function, not truth-conditions."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.06
+  },
+  "network": {
+    "affects_constraints": [
+      "nicene_creed_authority__strict_orthodox_reading",
+      "nicene_creed_authority__symbolic_confessional_reading"
+    ],
+    "dual_formulation_note": "The Nicene Creed authority kernel generates three distinct constraint stories, each with different ε values reflecting different functional readings. The strict_orthodox_reading has higher ε (≥0.30) because enforcing cognitive assent involves coercion. The symbolic_confessional_reading has moderate ε (0.15–0.25) because accommodating plural interpretations reduces enforcement intensity. The liturgical_habituation_reading has very low ε (0.08) because performative participation requires no coercion beyond social belonging. All three are live readings in contemporary ecclesiastical practice and theology; none forecloses the others. They represent different authority groundings (doctrinal enforcement, interpretive accommodation, performative maintenance) that coexist across the Catholic, Orthodox, and Protestant traditions."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "nicene_creed_authority__strict_orthodox_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "nicene_creed_authority__symbolic_confessional_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "performative_participation_sufficient_for_identity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "interior_metaphysical_variance_compatible_with_visible_unity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "apostolic_tradition_through_liturgical_transmission",
+    "drift_state": {
+      "moment": "contemporary_post_vatican_ii",
+      "direction": "authority_erosion",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
+  }
+}

@@ -2,7 +2,7 @@
 Alternative Power Transformation Test — Full 3K Corpus
 =======================================================
 Identical to alt_power_transform_test.py but:
-  1. Overrides corpus_path to 'testsets_3000' (the ~3,300-constraint corpus).
+  1. Overrides corpus_path to 'archives/prolog_v5' (the ~3,300-constraint corpus).
   2. Does NOT use the existing product_site_orbits.json as the sigmoid baseline;
      always recomputes the sigmoid baseline against testsets_3000.
   3. Writes results to alt_power_transform_results_3k.json and
@@ -40,7 +40,7 @@ PROLOG_OVERLAY_TEMPLATE = """\
 :- ( retract(config:param(power_function, _)) -> true ; true ),
    asserta(config:param(power_function, {variant})).
 :- ( retract(config:param(corpus_path, _)) -> true ; true ),
-   asserta(config:param(corpus_path, 'testsets_3000')).
+   asserta(config:param(corpus_path, 'archives/prolog_v5')).
 :- [stack].
 :- [product_site_export].
 :- product_site_export:run_product_export_to('{outpath}'), halt.

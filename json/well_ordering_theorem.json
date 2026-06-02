@@ -3,12 +3,14 @@
     "constraint_id": "well_ordering_theorem",
     "version": "1.0",
     "generated_date": "2026-02-26",
-    "status": "ACTIVE"
+    "status": "ACTIVE",
+    "measurement_id_prefix": "wot",
+    "story_uid": "51f08de1-8af2-4321-bad2-7cd4dec4204c"
   },
   "base_properties": {
-    "extractiveness": 0.12,
+    "extractiveness": 0.05,
     "suppression": 0.02,
-    "theater_ratio": 0.15,
+    "theater_ratio": 0.08,
     "claimed_type": "mountain",
     "human_readable": "Well Ordering Theorem",
     "topic_domain": "mathematical_logic/set_theory",
@@ -19,100 +21,100 @@
   "perspectives": [
     {
       "classification_type": "mountain",
-      "agent_power": "powerless",
+      "agent_power": "analytical",
       "time_horizon": "civilizational",
-      "exit_options": "trapped",
+      "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Constructivist Mathematician",
-      "comment": "PERSPECTIVE 1: CONSTRUCTIVIST MATHEMATICIAN (MOUNTAIN) \u2014 Cannot exit the constraint that every set admits a well-ordering. The claim follows necessarily from ZFC axioms. Even those who reject classical logic cannot construct an alternative foundational system that denies well-ordering without abandoning the entire axiomatic structure. The constraint is immutable regardless of position or preference."
+      "label": "The Foundational Mathematician",
+      "comment": "PERSPECTIVE 1: FOUNDATIONAL MATHEMATICIAN (MOUNTAIN) — From the perspective of formal logic and set theory, the WOT is a pure logical entailment from the Axiom of Choice within ZFC. No agent enforces it, no victim bears its cost, and no social structure mediates it. The theorem is either true or false within the formal system — observer variation does not apply. The constraint emerges as a necessary logical consequence."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Mathematical Community",
+      "comment": "PERSPECTIVE 2: MATHEMATICAL COMMUNITY (MOUNTAIN) — Even for those with institutional power and resources to challenge foundational axioms, the WOT remains immutable within ZFC. Rejecting it would require abandoning the Axiom of Choice or the ZFC framework entirely. This is not a constraint imposed by the mathematical community — it is a feature of the formal system the community has collectively adopted. The community cannot negotiate, relax, or reinterpret the theorem without abandoning ZFC."
     },
     {
       "classification_type": "mountain",
       "agent_power": "moderate",
       "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "global",
+      "spatial_scope": "universal",
       "label": "The Working Mathematician",
-      "comment": "PERSPECTIVE 2: WORKING MATHEMATICIAN (MOUNTAIN) \u2014 Faces high cost to work outside classical set theory but can avoid engaging with well-ordering in most applied mathematics. The constraint is real but not immediately felt in most subdisciplines. Yet the constraint remains immutable \u2014 no mathematical operation changes the fact that ZFC entails well-ordering. Constraints remain mountains even when agents can engineer high-cost avoidance."
+      "comment": "PERSPECTIVE 3: WORKING MATHEMATICIAN (MOUNTAIN) — A mathematician with typical career constraints faces the WOT as an immutable feature of ZFC set theory. They may work within alternative set theories (intuitionistic logic, constructive mathematics) that reject the Axiom of Choice, but this represents choosing a different formal system, not escaping the WOT within ZFC. The constraint's accessibility collapse is total for those operating within the standard framework."
     },
     {
       "classification_type": "mountain",
       "agent_power": "analytical",
-      "time_horizon": "civilizational",
+      "time_horizon": "generational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a civilizational, global perspective, the well-ordering theorem emerges necessarily from the Axiom of Choice plus ZFC axioms. No agent, no measurement basis, no observational context changes this logical entailment. The constraint is invariant across all structural positions. This is the definition of a mountain: base extraction \u2264 0.25, suppression \u2264 0.05, emerges naturally, accessibility collapse \u2265 0.85, resistance \u2264 0.15."
-    },
-    {
-      "classification_type": "mountain",
-      "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "arbitrage",
-      "spatial_scope": "universal",
-      "label": "The Mathematics Discipline",
-      "comment": "PERSPECTIVE 4: MATHEMATICS DISCIPLINE (MOUNTAIN) \u2014 Mathematics as an institutional practice is globally committed to ZFC as a default foundational system. No institutional agent can escape the well-ordering theorem without abandoning the shared language of set theory. Even those mathematicians who work in alternative foundations (constructivism, category theory, univalent foundations) cannot deny that well-ordering follows in ZFC contexts. The constraint is universal \u2014 it holds regardless of institutional position or temporal horizon."
+      "label": "The Metamathematical Observer",
+      "comment": "PERSPECTIVE 4: METAMATHEMATICAL OBSERVER (MOUNTAIN) — At the level of analyzing the logical structure itself, the WOT is invariant across all observational contexts within ZFC. It has no temporal dimension within the formal system (logical truth does not accumulate or degrade), no beneficiaries or victims (logical entailment does not extract resources), and no enforcement mechanism (truth is not enforced — it obtains or fails). The constraint is maximally immutable."
     }
   ],
   "omegas": [
     {
-      "id": "choice_axiom_necessity",
-      "question": "Is the Axiom of Choice a logical necessity for mathematics or a contingent foundational choice?",
-      "resolution_mechanism": "Comparative analysis of foundational systems: ZFC vs ZF (without Choice), constructive mathematics (IZF), univalent type theory. Establish whether any alternative foundation achieves equivalent expressive power without well-ordering as a logical consequence.",
-      "impact": "If Choice is necessary: well-ordering is mountain from all perspectives. If Choice is contingent: well-ordering becomes rope or snare depending on whether agents can choose alternative foundations without losing coordination function.",
+      "id": "axiom_of_choice_contingency",
+      "question": "Is the Axiom of Choice itself a natural law or a contingent formal choice?",
+      "resolution_mechanism": "Metamathematical analysis: comparison of proof theoretic strength across set theories with and without AoC; examination of whether AoC is forced by foundational desiderata or represents a genuine choice point in axiomatization",
+      "impact": "If AoC is contingent: the WOT remains a mountain within ZFC but is demoted to rope or tangled_rope from a constructive/intuitionistic perspective — different frameworks permit different theorems. If AoC is forced: the WOT is a mountain across all coherent foundational frameworks. Current evidence: AoC is a genuine choice point — models of ZF without AoC exist and are consistent.",
       "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Whether Axiom of Choice is logically necessary or contingent foundational assumption"
-    },
-    {
-      "id": "countable_vs_uncountable_extraction",
-      "question": "Does the well-ordering theorem enforce qualitatively different extraction costs for countable sets vs uncountable sets?",
-      "resolution_mechanism": "Proof-theoretic complexity analysis: examine whether well-ordering countable sets is constructively realizable (low extraction) while well-ordering uncountable sets requires full classical logic (high extraction). Test whether agent exit options differ between countable and uncountable contexts.",
-      "impact": "If extraction differs by cardinality: the constraint decomposes into two separate stories with different \u03b5 values. If extraction is uniform: the mountain classification is stable across all mathematical domains.",
-      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether extraction cost differs between countable and uncountable well-orderings"
+      "description": "Whether Axiom of Choice is a natural law or contingent axiomatization choice"
     },
     {
-      "id": "non_constructive_benign_classification",
-      "question": "Is the well-ordering theorem's non-constructivity a feature that enables mathematical breadth, or a limitation that constrains what mathematicians can assert?",
-      "resolution_mechanism": "Historical analysis of mathematical results dependent on well-ordering: count results whose proofs are pure existence claims (non-constructive enabled) vs results that fail constructively but hold classically. Assess whether mathematicians experience non-constructivity as liberation or constraint.",
-      "impact": "If experienced as liberation: the mountain is benign \u2014 agents benefit from the constraint's logical guarantees. If experienced as constraint: the mountain carries hidden extraction \u2014 agents cannot prove effective algorithms for well-orderings, creating a class of 'true but not computable' results.",
+      "id": "intuitionistic_alternative_existence",
+      "question": "Does intuitionistic logic or constructive mathematics constitute a genuinely different mathematical framework, or are they fragments of classical mathematics?",
+      "resolution_mechanism": "Proof-theoretic analysis: examine whether intuitionistic set theory (IZF) with its rejection of AoC can serve as a complete mathematical foundation for all mathematical practice, or whether it consistently omits theorems classical mathematics requires",
+      "impact": "If genuine alternative: mathematicians can exit ZFC entirely and obtain a different set of theorems (including WOT rejection) without logical contradiction. The constraint is then local to ZFC, not universal. If fragment: rejection of AoC is mathematically incoherent and WOT remains universal.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether constructive mathematics offers a coherent alternative framework"
+    },
+    {
+      "id": "natural_law_vs_contingent_framework",
+      "question": "Is the WOT a natural law of mathematics (true in all possible mathematical universes) or a consequence of the contingent choice to adopt ZFC as a foundational framework?",
+      "resolution_mechanism": "Comparative axiomatics: detailed analysis of what set of foundational axioms would be forced by any coherent notion of 'set' and 'mathematical reasoning', versus which axioms (including AoC) are optional choices that could be replaced with alternatives",
+      "impact": "If natural law: the WOT is objectively true regardless of formal system. If contingent framework: the WOT is true-within-ZFC but not universally true — it is a constraint imposed by the ZFC framework's design, not by mathematics itself. This would reclassify the constraint from mountain to false-summit candidate.",
       "confidence": "medium",
-      "type_class": "preference",
-      "description": "Whether non-constructivity of well-ordering is experienced as enabling or constraining"
+      "type_class": "conceptual",
+      "description": "Whether WOT is a natural law or a contingent ZFC framework consequence"
     }
   ],
   "measurements": [
     {
-      "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.12
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 50,
-      "value": 0.12
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 100,
-      "value": 0.12
-    },
-    {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.15
+      "value": 0.05
     },
     {
       "metric": "theater_ratio",
       "time_point": 50,
-      "value": 0.15
+      "value": 0.08
     },
     {
       "metric": "theater_ratio",
       "time_point": 100,
-      "value": 0.15
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.03
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.05
     }
   ],
   "interval": {
@@ -120,24 +122,27 @@
     "end": 100
   },
   "commentary": {
-    "narrative_context": "The Well Ordering Theorem states that every set can be well-ordered \u2014 a property that follows logically from the Axiom of Choice within ZFC set theory. This constraint exemplifies a mathematical mountain: it is not enforced by any agent, not extracted from any victim, and not subject to perspectival variation. The theorem is a logical entailment, not a negotiated social structure. All mathematicians who accept ZFC axioms accept the well-ordering theorem as an unavoidable consequence, regardless of whether they work in constructive logic, category theory, or applied domains. The constraint is immutable because logical entailment is immutable. The accessibility collapse (0.92) reflects that avoiding well-ordering requires abandoning classical set theory entirely \u2014 there is no partial exit, no high-cost workaround that preserves the coordination function. Resistance (0.08) reflects that mathematicians have identified the exact axiom (Choice) that generates the constraint, leaving little room for surprise or hidden mechanisms. This is a pure natural law: logical structure, not institutional arrangement.",
+    "narrative_context": "The Well Ordering Theorem is a canonical mathematical mountain: a logical entailment from the Axiom of Choice within ZFC set theory that exhibits zero degrees of freedom, no beneficiary-victim structure, and no perspectival variation. The theorem's status is not negotiated, enforced through coercion, or subject to observational interpretation. It either obtains within the formal system or it does not. The constraint exemplifies how the Deferential Realism framework handles pure logical truths — they classify as mountains because they are immutable from all structural positions. However, three irreducible uncertainties exist: (1) whether the Axiom of Choice that grounds the WOT is itself a natural law or a contingent axiomatic choice, (2) whether alternative set theories (intuitionistic, constructive) represent genuine escapes from the WOT or merely formal fragments of ZFC, and (3) whether the WOT is universally true or true only within the ZFC framework. These omegas do not affect the classification within ZFC—it remains mountain—but they bear on the deeper question of whether mathematical truths are discovered (mountains) or constructed (contingent formal choices).",
     "key_agents": [
-      "Constructivist Mathematicians: Cannot exit ZFC frameworks without fundamental commitment cost; must choose between classical logic and alternative foundations",
-      "Working Mathematicians: Experience constraint as background structure; can avoid engaging directly in most applied contexts but cannot escape the logical fact",
-      "Mathematics Discipline: Institutional commitment to ZFC creates collective immobility; no department-level or field-level consensus exists for alternatives",
-      "Computer Scientists: Bear costs of non-constructivity (well-orderings exist but algorithms may not); cannot compute explicit well-orderings for uncountable sets"
+      "ZFC Set Theory Framework: The formal system in which the theorem obtains — not an agent but the context that makes the constraint immutable",
+      "Foundational Mathematicians: Agents who work with set theory and view the WOT as a logical consequence; experience no extraction or enforcement",
+      "Mathematical Community: Collective adoption of ZFC as the standard foundation; no beneficiary-victim structure emerges",
+      "Constructive Mathematicians: Agents who adopt intuitionistic logic or constructive frameworks that reject the Axiom of Choice; experience the WOT as inaccessible rather than suppressed",
+      "Analytical Observers: View the theorem from outside any particular formal system and question whether it is natural law or framework-contingent"
     ],
-    "logic_rationale": "Extractiveness (0.12): Very low. The well-ordering theorem does not extract resources from any agent. It is a logical fact. No one gains priority, wealth, or power from the constraint \u2014 it is not a constraint in the sense of enforcing asymmetry. It is listed here as a constraint only in the formal sense that it bounds what is possible in ZFC. Suppression (0.02): Negligible. The theorem does not suppress alternatives through coercion or control. Alternative foundational systems (constructivism, univalent type theory) exist and are practiced. Agents can exit classical logic entirely if they choose the cost. Suppression is low because the exit option is explicit, not hidden. Theater ratio (0.15): Low. The well-ordering theorem is proven, not performed. The proof is direct and accessible. There is minimal performative content \u2014 no ritual, no institutional maintenance beyond citing the axiom and the logical derivation. Accessibility collapse (0.92): Very high. The constraint is logically accessible \u2014 the Axiom of Choice is transparent and the derivation is clear. Accessibility collapse measures how much the constraint resists analysis; well-ordering is fully analyzable. Resistance (0.08): Very low. The mechanism is known completely: the Axiom of Choice \u2192 Zorn's Lemma \u2192 every set is well-orderable. No hidden mechanisms, no opaque causal chains. This is why the constraint is a mountain \u2014 no agent could hide or obscure it further.",
-    "perspectival_gap": "There is no perspectival gap. All perspectives yield mountain classification because the constraint is a logical entailment. The constructivist mathematicians who reject classical logic still acknowledge that well-ordering follows from ZFC \u2014 they simply choose to work outside ZFC. The working mathematician who ignores well-ordering does not classify it as rope or snare \u2014 they recognize it as mountain and simply engineer high-cost avoidance. The analytical observer and the disciplinary perspective both see the same logical fact. This uniformity is the signature of a true mountain: no structural relationship, no power asymmetry, no exit option gradient produces perspectival variation. The constraint is invariant across all observation positions because logical entailment is position-invariant.",
-    "directionality_logic": "No directionality applies. Directionality (d) measures how much an agent benefits vs bears costs from a constraint. Well-ordering has no beneficiaries and no victims in the structural sense. The constraint does not distribute costs asymmetrically. No agent extracts from another via the well-ordering theorem. Therefore, d is undefined \u2014 the constraint is not subject to directionality computation. This is a defining feature of mountains: they have no extractive structure, no asymmetric beneficiary/victim relationship, and thus no directionality value. All perspectives produce chi = 0 effective extraction, not because f(d) is zero, but because the constraint has no extraction mechanism to begin with.",
-    "mandatrophy_analysis": "This constraint resolves mandatrophy trivially: it is a mountain from all perspectives, period. There is no risk of mislabeling it as coordination or extraction, because it is neither. It is a logical fact. The mandatrophy in the well-ordering theorem would only arise if someone attempted to interpret the non-constructivity of the proof (the fact that well-orderings exist but cannot always be constructed) as a form of hidden extraction or coordination cost. That interpretation would be a category error \u2014 non-constructivity is a feature of classical logic, not an extraction mechanism. However, omega variable (non_constructive_benign_classification) flags the edge case: agents who work in constructive mathematics may experience non-constructivity as a constraint on what they can prove, which could reframe the well-ordering theorem as having a benign extractive cost (the cost of accepting existence claims without algorithms). This reframing would not change the mountain classification but would add nuance to how agents experience the constraint."
+    "logic_rationale": "Extractiveness (0.05): Minimal. The WOT generates no extraction from any agent because it is not enforced by any agent and does not concentrate resources or opportunities. No entity benefits disproportionately from the theorem's existence, and no entity bears costs from its truth. The small nonzero value reflects that within ZFC, the theorem constrains what theories can be formalized — but this constraint is not extractive; it is constitutive of the framework itself. Suppression (0.02): Minimal. The theorem is not suppressed through coercion or lack of alternatives because there is no coercive mechanism. Agents can adopt alternative set theories (intuitionistic logic, constructive frameworks) that reject the Axiom of Choice, though this requires abandoning ZFC rather than evading the WOT within ZFC. Theater ratio (0.08): Minimal. The theorem exhibits almost no performative content. Its proof is formal and verifiable; its status is not subject to interpretation or negotiation. The small nonzero value reflects minor pedagogical theater in how the theorem is presented in textbooks, but the core logical content is transparent and non-theatrical. Accessibility collapse (0.92): Near-total. Within ZFC, the theorem is accessible to any agent who learns formal logic—there is no barrier to understanding or accepting it. The collapse is not from enforcement but from the framework's internal necessity: if you accept ZFC, you logically must accept the WOT. Resistance (0.08): Minimal. No structural forces resist the theorem because no agent has incentive to deny it (unlike constraints where denial would benefit an agent). Only alternative axiom choices (rejecting AoC) generate resistance, and these are systemic choices, not localized opposition.",
+    "perspectival_gap": "The perspectival gap in this constraint is minimal by design—this is a hallmark of genuine mathematical mountains. All perspectives converge on the same classification (mountain) because the theorem's truth is invariant across observer positions within ZFC. The gap that does exist is between (1) those within ZFC (all perspectives in the analysis above) and (2) observers standing outside ZFC asking whether the theorem is universally true or true-within-this-framework. The analytical observer at the metamathematical level experiences this gap most acutely: they see that ZFC is a contingent choice, yet the WOT is immutable within that choice. This reflects the classic epistemological problem in mathematics: are logical truths discovered (mountains) or constructed (contingent formal choices)? The constraint's mountain classification answers: within ZFC, mountains are mountains. The deeper question about whether ZFC itself is a mountain or a contingent framework is a different constraint (the 'foundational status of ZFC' or similar).",
+    "directionality_logic": "Directionality analysis is not applicable to this constraint in the standard sense. There are no beneficiaries or victims, no asymmetric extraction, and no differentiation by power or exit options. The theorem obtains uniformly across all observer positions within ZFC. The directionality computation f(d) and scope modifiers are moot because extractiveness is zero. This is the signature of a pure natural law—the constraint's force is logical entailment, not structural extraction or resource asymmetry. If alternative set theories (intuitionistic, constructive) are taken as alternative frameworks rather than fragments of ZFC, then agents in those frameworks could be analyzed separately—but they would be separate constraints (well-ordering-in-intuitionistic-logic, etc.) with their own ε values.",
+    "kernel_context": "The Well Ordering Theorem is not a reading of a contested kernel. It is a logical consequence, not an interpretation of ambiguous foundational text. However, the Axiom of Choice that grounds it IS a contested kernel in mathematical foundations: some axiomatizations adopt AoC, others reject it. The WOT is located downstream of that kernel dispute. A separate constraint story ('axiom_of_choice_legitimacy' or similar) would address the upstream kernel."
   },
   "boltzmann": {
     "coordination_type": "information_standard"
   },
   "network": {
-    "affects_constraints": [],
-    "dual_formulation_note": "The Well Ordering Theorem is a foundational constraint but does not decompose into sub-constraints with different epsilon values. Alternative foundational systems (constructivism, category theory, univalent type theory) may create sibling constraints that explore what happens when well-ordering is not available, but those would be separate stories in a constraint family, not sub-components of this story."
-  },
-  "directionality_overrides": []
+    "affects_constraints": [
+      "axiom_of_choice_legitimacy",
+      "constructive_mathematics_viability"
+    ],
+    "dual_formulation_note": "The Well Ordering Theorem's status as a mountain depends on the Axiom of Choice's status within ZFC. If AoC is itself a mountain (necessary consequence of any coherent set theory), then WOT is unambiguously a mountain. If AoC is a contingent choice (rope/tangled_rope), then WOT is framework-local, not universal. The upstream constraint 'axiom_of_choice_legitimacy' determines whether WOT is truly natural law or framework-contingent. This constraint should be classified as mountain only if the engine can establish that AoC is natural law; otherwise it should be reclassified to rope or tangled_rope framework-constrained."
+  }
 }

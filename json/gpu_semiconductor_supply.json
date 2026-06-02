@@ -4,26 +4,26 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "gpu_supply"
+    "measurement_id_prefix": "gpu_supply",
+    "story_uid": "1b75f8c4-31af-4964-ab65-e2261bada4c1",
+    "created_at": "2026-02-26T14:32:00Z"
   },
   "base_properties": {
     "extractiveness": 0.58,
-    "suppression": 0.65,
-    "theater_ratio": 0.48,
+    "suppression": 0.68,
+    "theater_ratio": 0.45,
     "claimed_type": "tangled_rope",
     "human_readable": "GPU Semiconductor Supply Chain Constraint",
     "topic_domain": "economic/technological",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "semiconductor_manufacturers",
-      "gpu_designers",
-      "institutional_cloud_providers"
+      "gpu_manufacturers",
+      "established_ai_labs"
     ],
     "victims": [
-      "developing_economy_researchers",
-      "independent_ai_labs",
-      "small_tech_startups",
-      "global_academic_access"
+      "resource_constrained_researchers",
+      "emerging_ai_startups",
+      "global_computational_equity"
     ]
   },
   "perspectives": [
@@ -33,35 +33,17 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Developing Economy Researcher",
-      "comment": "PERSPECTIVE 1: DEVELOPING ECONOMY RESEARCHER (SNARE) \u2014 No structural exit from GPU dependency. Academic institutions in resource-constrained regions face absolute barriers: GPU costs exceed annual research budgets, export controls restrict access, geographic supply allocation prioritizes wealthy markets. Bears maximum extraction cost with zero alternatives."
+      "label": "The Resource-Constrained Researcher",
+      "comment": "PERSPECTIVE 1: RESOURCE-CONSTRAINED RESEARCHER (SNARE) — Trapped by absolute GPU scarcity. Cannot exit the constraint (computational research requires GPUs); cannot access scarce supply at affordable cost; faces complete suppression of research agenda unless institutional funding covers premium allocation. No alternatives exist for large-scale model training within the biographical horizon."
     },
     {
       "classification_type": "snare",
-      "agent_power": "powerless",
-      "time_horizon": "biographical",
-      "exit_options": "trapped",
-      "spatial_scope": "global",
-      "label": "The Independent AI Lab",
-      "comment": "PERSPECTIVE 2: INDEPENDENT AI LAB (SNARE) \u2014 Trapped by competitive threshold effects. Minimum viable GPU cluster for credible research now exceeds $500K\u2013$5M. No lab can train frontier models without this capital investment. No option to substitute or delay. Extraction via artificial scarcity of compute capacity."
-    },
-    {
-      "classification_type": "tangled_rope",
       "agent_power": "moderate",
       "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Small Tech Startup",
-      "comment": "PERSPECTIVE 3: SMALL TECH STARTUP (TANGLED ROPE) \u2014 Faces high but surmountable GPU costs and allocation constraints. Can access GPUs through cloud providers but at premium pricing; can substitute with competitive chips (TPUs, custom silicon) at significant engineering cost. Benefits from GPU availability for product development but bears extraction through pricing power and supply prioritization. Partially mobile but constrained."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "institutional",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Institutional Cloud Provider",
-      "comment": "PERSPECTIVE 4: INSTITUTIONAL CLOUD PROVIDER (ROPE) \u2014 Net beneficiary. Solves coordination problem for GPU allocation across diverse clients through marketplace mechanisms. Can arbitrage capacity across regions, negotiate directly with manufacturers, access priority allocation. Benefits from coordination function without bearing extraction \u2014 effectively subsidized by customers' scarcity premium."
+      "label": "The Emerging AI Startup",
+      "comment": "PERSPECTIVE 2: EMERGING AI STARTUP (SNARE) — Constrained by high capital requirements (premium GPU acquisition, access to cutting-edge architectures via allocation queues, geographic concentration of manufacturing). Can potentially exit through acquisition, alternative compute, or geographic arbitrage, but at prohibitive cost. Biographical horizon too short to absorb multi-year waitlists. High suppression: startup survival depends on near-term computational capacity access."
     },
     {
       "classification_type": "rope",
@@ -70,7 +52,7 @@
       "exit_options": "arbitrage",
       "spatial_scope": "global",
       "label": "The GPU Manufacturer",
-      "comment": "PERSPECTIVE 5: GPU MANUFACTURER (ROPE) \u2014 Coordinates production allocation across global demand. Sells out production capacity at elevated prices. Extracts value primarily through scarcity-driven pricing, but the coordination function (efficiently allocating constrained supply to highest-value uses) is genuine. Benefits from the constraint but also provides real coordination service."
+      "comment": "PERSPECTIVE 3: GPU MANUFACTURER (ROPE) — Experiences the constraint as pure coordination: distributing scarce computational resources enables the global AI ecosystem development that drives long-term demand growth. Immediate extraction benefit (premium pricing, buyer lock-in via CUDA ecosystem), but genuine coordination function (enabling research that validates AI feasibility drives future manufacturing demand). Net beneficiary via arbitrage: can exit allocation decisions by shifting production, negotiating supply contracts, or developing proprietary architectures."
     },
     {
       "classification_type": "tangled_rope",
@@ -78,26 +60,26 @@
       "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The National Research Consortium",
-      "comment": "PERSPECTIVE 6: NATIONAL RESEARCH CONSORTIUM (TANGLED ROPE) \u2014 Organized actors (government research agencies, university systems, national AI initiatives) can negotiate collective GPU allocation and subsidized access but remain structurally dependent on manufacturers for supply. Benefit from coordination of domestic research capacity; bear extraction through dependence on foreign supply chains and geopolitical allocation. Significant agency but constrained by supply concentration."
+      "label": "The Established AI Research Consortium",
+      "comment": "PERSPECTIVE 4: ESTABLISHED AI RESEARCH CONSORTIUM (TANGLED ROPE) — Organized actors (major universities, government labs, large tech companies) coordinate resource pooling via consortiums (National Supercomputing Centers, industry partnerships). Coordination function: shared GPU clusters enable multiple research groups to operate within constrained supply. Asymmetric extraction: priority access concentrates benefits toward large consortium members; smaller members pay coordination overhead without proportional benefit. Constrained exit: generational commitment to consortium infrastructure creates path dependency, but members could theoretically exit via independent acquisition or geographic relocation."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "powerful",
+      "agent_power": "institutional",
       "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The Technology-Leading Nation",
-      "comment": "PERSPECTIVE 7: TECHNOLOGY-LEADING NATION (TANGLED ROPE) \u2014 Powerful but constrained. Controls some design and manufacturing capacity (TSMC, Samsung, domestic fabs) but depends on global supply chains, rare materials, and specialized manufacturing capabilities. Uses GPU allocation as geopolitical leverage (export controls to adversaries) while benefiting from coordination of domestic supply. Extraction flows both directions: benefits from pricing power, bears costs of supply vulnerability."
+      "spatial_scope": "continental",
+      "label": "The National Computing Authority",
+      "comment": "PERSPECTIVE 5: NATIONAL COMPUTING AUTHORITY (TANGLED ROPE) — State-level actors (US Department of Energy, EU digital sovereignty initiatives, Chinese government computing mandates) coordinate domestic GPU access via strategic allocation. Coordination function: state-level GPU infrastructure enables national AI competitiveness. Asymmetric extraction: access is conditional on alignment with state priorities (research direction, technology export restrictions, location requirements). Constrained exit: geopolitical competition locks states into GPU procurement strategies; exit means ceding computational capacity to rival states."
     },
     {
       "classification_type": "piton",
-      "agent_power": "institutional",
+      "agent_power": "organized",
       "time_horizon": "civilizational",
-      "exit_options": "arbitrage",
+      "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The Technical Standard Body",
-      "comment": "PERSPECTIVE 8: TECHNICAL STANDARD BODY (PITON) \u2014 Maintains GPU programming standards (CUDA, ROCm, OpenCL) that coordinate software across hardware. The standardization function is genuine and necessary, but increasingly theater: proprietary optimizations, vendor lock-in, and closed documentation mean standards provide less actual coordination than they purport to. Standards persist through institutional inertia and network effects despite declining functional value. Theater ratio driven by divergence between standard definition and actual interoperability."
+      "label": "The Chiplet/Alternative Compute Movement",
+      "comment": "PERSPECTIVE 6: CHIPLET/ALTERNATIVE COMPUTE MOVEMENT (PITON) — Organized efforts to decompose GPU monoliths into chiplet designs, develop specialized ASICs (tensor processors, inference accelerators), and promote open-source compute (TPUs via TensorFlow, custom silicon). These alternatives have been theoretically available for years (chiplets, ASICs, TPU development) but remain theater-heavy: adoption requires rewriting software stacks, abandoning CUDA ecosystem benefits, accepting performance trade-offs. The movement persists through institutional inertia and optimism despite slow practical displacement of monolithic GPUs. Low functional uptake despite high organizational effort suggests the constraint persists because institutional interests maintain the monolith (NVIDIA lock-in, developer familiarity, established supply chain)."
     },
     {
       "classification_type": "mountain",
@@ -105,58 +87,76 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer (Computational Frontier)",
-      "comment": "PERSPECTIVE 9: ANALYTICAL OBSERVER / COMPUTATIONAL FRONTIER (MOUNTAIN) \u2014 From a civilizational perspective, GPU supply bottlenecks reflect an immutable property of computation at scale: the fastest specialized hardware is always the bottleneck for the next research frontier. This appears as a natural law \u2014 whoever pushes the frontier first wins the access advantage. However, this naturalizes a contingent institutional choice: that GPUs (rather than distributed alternatives, or subsidized public infrastructure) are the primary path to frontier compute. The engine will flag this as a false summit."
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal scale, GPU supply constraints appear as immutable physical laws: semiconductor manufacturing requires rare materials (tantalum, cobalt, rare earth elements), operates at nanometer scales approaching physical limits, and demands massive capital infrastructure ($20B+ fabrication plants). The bottleneck reflects fundamental manufacturing physics and resource scarcity, not contingent institutional arrangements. However, structural data reveals this as a false summit: the extraction mechanisms (NVIDIA's CUDA lock-in, allocation prioritization of established labs, geographic concentration of manufacturing, export restrictions) are socially contingent, not physical necessities. Alternative computational substrates (optical, neuromorphic, quantum) are theoretically feasible but suppressed by ecosystem lock-in."
     }
   ],
   "omegas": [
     {
-      "id": "geopolitical_allocation_opacity",
-      "question": "To what extent is GPU allocation determined by transparent market mechanisms versus opaque geopolitical prioritization?",
-      "resolution_mechanism": "Analysis of allocation patterns across regions, correlation with trade relationships and export controls, FOI requests for government GPU procurement and allocation decisions",
-      "impact": "If geopolitical: suppression and extraction scores increase substantially \u2014 constraint becomes more snare-like. If transparent market: justifies rope classification for beneficiaries and constrains victim classification.",
+      "id": "manufacturing_capacity_constraint_mechanism",
+      "question": "Is the GPU supply bottleneck primarily a supply constraint (insufficient fabs/materials) or a demand constraint (manufacturers deliberately limiting production to maintain pricing power)?",
+      "resolution_mechanism": "Historical analysis of manufacturing utilization rates, capital investment trends, and pricing elasticity; comparison with supply/demand for mature semiconductors (DRAM, logic) where scarcity dynamics differ",
+      "impact": "If primarily supply: constraint is closer to mountain (physical limits on capacity scaling). If primarily demand: constraint is extraction mechanism (manufacturers maintaining scarcity premium), pushing classification toward snare. This determines whether the bottleneck is inherent or deliberately maintained.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether GPU allocation follows market or geopolitical logic"
+      "description": "Whether GPU scarcity is supply-driven or demand-maintained"
     },
     {
-      "id": "alternative_architecture_viability",
-      "question": "Can distributed, open-source, or custom-silicon alternatives (TPUs, neuromorphic chips, analog compute) credibly substitute for GPUs as the research frontier accelerator?",
-      "resolution_mechanism": "Longitudinal tracking of research output and citation impact on frontier models trained with alternative architectures; cost-performance benchmarking across domains (NLP, vision, reinforcement learning, scientific computing)",
-      "impact": "If alternatives viable: bottleneck is artificial and intensifies snare classification for locked-out agents. If alternatives inferior: bottleneck reflects genuine performance asymmetry and justifies rope classification. If parity emerging: scaffold classification becomes dominant (sunset toward alternatives).",
+      "id": "cuda_ecosystem_lock_in_necessity",
+      "question": "How much of the GPU monolith persistence is driven by genuine technical superiority of CUDA-optimized architectures versus ecosystem lock-in and switching cost barriers?",
+      "resolution_mechanism": "Performance benchmarking of equivalent workloads across CUDA, ROCm, custom TPU, and open-source alternatives; developer migration cost analysis; adoption rate trajectory of alternative accelerators in research contexts",
+      "impact": "If lock-in is dominant: the constraint is extractive and maintainable via ecosystem control (snare from powerless perspective). If technical superiority is genuine: constraint reflects legitimate market preference, softening snare classification toward tangled rope (coordination benefit from standardization outweighs extraction cost).",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether alternative compute architectures can substitute for GPUs"
+      "description": "Whether CUDA persistence is technical merit or lock-in"
     },
     {
-      "id": "manufacturing_capacity_constraint_source",
-      "question": "Is GPU supply limited by physical manufacturing capacity (chip fabs) or by artificial allocation (hoarding, strategic shortage, pricing control)?",
-      "resolution_mechanism": "Analysis of fab capacity utilization rates, wafer production volumes, correlation between stated capacity and actual supply, investigation of inventory levels and allocation decisions by manufacturers",
-      "impact": "If physical capacity: constraint reflects genuine scarcity; extraction is bounded by real cost structures. If artificial: constraint is purely allocative; extraction can be reduced through policy intervention without technological change.",
+      "id": "geographic_concentration_necessity",
+      "question": "Is the concentration of advanced GPU manufacturing in Taiwan/South Korea/US (TSMC, Samsung, Intel foundries) technologically necessary or a consequence of historical fab investment patterns and capital consolidation?",
+      "resolution_mechanism": "Analysis of fab startup failure rates by region; capital requirements for entering advanced node manufacturing; technology transfer outcomes in geographic expansion attempts; correlation between geographic origin and technical capability",
+      "impact": "If necessary: supply chain concentration is unavoidable (mountain-adjacent). If contingent: geographic diversification could increase supply resilience and reduce extraction mechanisms (tangled rope from organized actors softens as supply distribution broadens).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether supply constraint is physical or artificial"
+      "description": "Whether GPU fab concentration is technologically necessary"
     },
     {
-      "id": "public_compute_infrastructure_feasibility",
-      "question": "Could public funding for GPU compute infrastructure (like historical national supercomputer programs) provide accessible frontier compute without market extraction?",
-      "resolution_mechanism": "Historical comparison with public supercomputer initiatives, economic modeling of public GPU infrastructure costs versus academic research benefits, institutional analysis of maintenance and governance models for shared public compute",
-      "impact": "If feasible: reveals constraint as policy choice rather than natural limit; scaffold classification emerges (sunset toward public infrastructure). If infeasible: legitimizes private market and rope classification.",
+      "id": "ai_research_computational_necessity",
+      "question": "What fraction of current AI research genuinely requires large-scale GPU training versus pursuing GPU-scale research because it is possible and prestigious within resource-rich institutions?",
+      "resolution_mechanism": "Meta-analysis of published AI research by resource requirements; comparison of research novelty/impact against computational budget; archival analysis of research design rationales; surveys of researcher motivation for scale choices",
+      "impact": "If most research requires GPUs: bottleneck is inherent to research frontier (constraint is legitimate coordination problem). If substantial proportion is demand-inflated by prestige effects: demand is partly contingent, and the bottleneck partially reflects extractive institutional arrangements (snare severity lower than measured).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "How much GPU demand is research-necessary versus prestige-driven"
+    },
+    {
+      "id": "alternative_substrate_suppression_mechanism",
+      "question": "What fraction of slow adoption of neuromorphic, optical, and analog AI hardware reflects genuine technical immatureness versus ecosystem disincentives (CUDA dominance, established tool chains, funding concentrated in NVIDIA-compatible research)?",
+      "resolution_mechanism": "Patent analysis of alternative substrate maturity; performance trajectory curves for neuromorphic/optical systems vs historical GPU improvements; funding allocation trends across substrate types; researcher surveys on technical obstacles vs institutional barriers",
+      "impact": "If technical immaturity dominates: piton classification is correct (alternatives are genuinely inferior). If ecosystem suppression dominates: the bottleneck is maintained extraction (snare), and alternative substrates could relieve pressure if institutional barriers were removed.",
       "confidence": "low",
-      "type_class": "preference",
-      "description": "Whether public compute infrastructure could replace market allocation"
+      "type_class": "empirical",
+      "description": "Whether alternative compute substrates are suppressed or immature"
+    },
+    {
+      "id": "false_summit_natural_law",
+      "question": "Is the GPU supply bottleneck a genuine natural law (immutable physics of semiconductor manufacturing at nanoscale) or a false summit naturalizing extractive institutional arrangements (ecosystem lock-in, geographic concentration, allocation control)?",
+      "resolution_mechanism": "Comparative analysis: identify which aspects of the bottleneck are attributable to physical limits (lithography, materials physics) versus institutional choices (fab location, CUDA standardization, allocation policies). Counterfactual scenario: if ecosystem lock-in were removed and manufacturing were geographically distributed, would the bottleneck persist?",
+      "impact": "If mountain (natural law): the constraint is inevitable and policy responses should focus on adaptation and equitable access within scarcity. If false summit (extractive): the constraint is maintainable via institutional control, and policy responses should target decomposition (ecosystem diversification, geographic fab distribution, open-source alternatives).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether GPU bottleneck is natural law or false summit"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.28
+      "value": 0.32
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2,
-      "value": 0.42
+      "value": 0.45
     },
     {
       "metric": "base_extractiveness",
@@ -166,12 +166,12 @@
     {
       "metric": "base_extractiveness",
       "time_point": 6,
-      "value": 0.63
+      "value": 0.62
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.32
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
@@ -181,12 +181,32 @@
     {
       "metric": "theater_ratio",
       "time_point": 4,
-      "value": 0.47
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
       "time_point": 6,
-      "value": 0.48
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.68
     }
   ],
   "interval": {
@@ -194,22 +214,21 @@
     "end": 6
   },
   "commentary": {
-    "narrative_context": "The GPU semiconductor supply constraint represents a global bottleneck in computational capacity driven by explosive AI research demand colliding with constrained manufacturing capacity and concentrated control. The constraint exhibits the full spectrum of DR classifications depending on agent position: trapped researchers see pure extraction (Snare); manufacturers see coordination with beneficial asymmetry (Rope); organized consortiums see mixed coordination-extraction (Tangled Rope); the technical standards body maintains increasingly performative functions (Piton); and the civilizational analytical view risks naturalizing a contingent institutional arrangement as computational law (false Mountain). The extractiveness trajectory shows acceleration from 0.28 (2022, pre-ChatGPT demand surge) to 0.58 (2026, matured constraint) as supply concentration tightened and dependent agents competed for access. Theater ratio remains moderate because the supply constraint is genuine (not purely performative) but production allocation decisions lack transparent mechanisms.",
+    "narrative_context": "The GPU semiconductor supply chain constraint represents a global bottleneck in computational capacity driven by explosive AI research demand colliding with constrained manufacturing capacity and concentrated control. Between 2020-2026, GPU demand for large-language model training and fine-tuning increased 500x while manufacturing capacity grew at 15-20% annually, creating a persistent supply deficit. The constraint exhibits the full spectrum of DR classifications depending on agent structural position: trapped researchers in under-resourced institutions experience pure extraction (Snare); GPU manufacturers experience genuine coordination with beneficial asymmetry (Rope); organized research consortiums and national governments coordinate GPU access with mixed coordination-extraction (Tangled Rope); alternative compute initiatives persist through institutional inertia despite slow practical displacement (Piton); the civilizational analytical observer risks naturalizing a contingent institutional arrangement (false summit Mountain). The core tension is between the legitimate coordination problem (distributing scarce computational capacity requires allocation mechanisms) and the extractive mechanisms through which that coordination is implemented (CUDA ecosystem lock-in, priority allocation to established labs, geographic concentration of manufacturing, pricing power maintenance through supply restriction).",
     "key_agents": [
-      "Developing Economy Researchers: Powerless/trapped (institutional/geographic barriers) \u2014 bear maximum extraction cost; cannot access frontier compute capacity",
-      "Independent AI Labs: Powerless/trapped (capital threshold effects) \u2014 require $500K-$5M minimum for credible research; no institutional subsidy available",
-      "Small Tech Startups: Moderate/constrained (high but surmountable costs) \u2014 can access through cloud providers or alternative chips; partial exit available at premium price",
-      "Institutional Cloud Providers: Institutional/arbitrage (net beneficiaries) \u2014 arbitrage capacity across regions, negotiate priority allocation, benefit from scarcity premium",
-      "GPU Manufacturers: Institutional/arbitrage (primary beneficiaries) \u2014 control supply allocation, set pricing based on scarcity, benefit from coordination function",
-      "National Research Consortiums: Organized/constrained (collective negotiating power but structural dependence) \u2014 can lobby for allocation but cannot override manufacturer decisions",
-      "Technology-Leading Nations: Powerful/constrained (geopolitical leverage with supply vulnerability) \u2014 use export controls but depend on global supply chains and TSMC concentration",
-      "Technical Standard Bodies: Institutional/arbitrage (maintaining degraded standards) \u2014 coordinate software across hardware platforms but actual interoperability declining",
-      "Analytical Observer: Analytical/analytical (civilizational view) \u2014 risks naturalizing market-driven allocation as immutable computational law"
+      "GPU Manufacturers (NVIDIA, AMD, Intel): Primary beneficiary (institutional/arbitrage) — capture pricing premiums, ecosystem lock-in revenue, and buyer dependency during scarcity period",
+      "Resource-Constrained Researchers: Primary victim (powerless/trapped) — cannot access computational capacity at affordable cost; cannot exit constraint within biographical horizon; research agendas completely suppressed",
+      "Emerging AI Startups: Secondary victim (moderate/constrained) — face high capital barriers to GPU acquisition; can theoretically exit via acquisition, relocation, or alternative compute, but at prohibitive cost",
+      "Established AI Labs (FAIR, DeepMind, OpenAI, major university departments): Beneficiary (institutional/constrained or institutional/mobile) — benefit from priority allocation and ecosystem standardization; participate in consortiums that coordinate access",
+      "National Computing Authorities (DOE, EU, Chinese government): Organized beneficiary/victim (organized/constrained) — coordinate domestic GPU access for strategic AI development while facing geopolitical supply competition",
+      "Alternative Compute Movements (chiplet, neuromorphic, optical, ASIC): Organized actor (organized/constrained) — pursue decomposition of monolithic GPU supply via technological alternatives; persistence despite slow adoption suggests institutional inertia (piton classification)",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent institutional arrangements (CUDA lock-in, fab concentration) as immutable physical laws"
     ],
-    "logic_rationale": "Extractiveness (0.58): Moderately high and accelerating. Initial GPU scarcity (2022) was supply-driven and bounded by real fab capacity limits. By 2026, extractiveness has increased substantially as allocation mechanisms shifted from inventory shortage to permanent pricing power and strategic allocation. The 0.28\u21920.58 trajectory reflects transition from temporary shortage (recoverable through capacity expansion) to structural extraction (permanent allocation asymmetry). Suppression (0.65): High. Multiple enforcement mechanisms prevent alternative access: export controls restrict supply to certain regions, CUDA lock-in forces software dependency, manufacturing concentration (TSMC dominance) creates bottleneck control, capital requirements ($500K minimum) prevent individual exit. Theater ratio (0.48): Moderate. The constraint is materially real (fab capacity is genuinely constrained) but allocation decisions are increasingly opaque (no public tracking of inventory, allocation criteria, or redistribution logic). Cloud providers present simplified pricing as market-clearing when it may reflect strategic allocation.",
-    "directionality_logic": "Directionality values derive from beneficiary/victim declarations and exit capacity. Manufacturers and cloud providers have institutional power and arbitrage options (can access alternative markets, negotiate terms, redirect supply) \u2014 they experience low d, resulting in negative or near-zero effective extraction. Trapped researchers and developers (powerless with no exit) experience d=0.95\u20131.0, producing maximum f(d) and maximum experienced extraction. Constrained actors (small startups, developing-economy consortiums) experience d=0.65\u20130.75, intermediate extraction. Organized consortiums with collective negotiating power experience lower d than individual trapped actors despite same power level, because constrained exit (collective action possible) differs from trapped exit (no alternatives exist). The scope modifier \u03c3(S)=1.2 for global scope amplifies extractiveness \u2014 GPU supply concentration is planetary-scale, making verification and alternative-sourcing maximally difficult.",
-    "perspectival_gap": "The manufacturer sees coordination (Rope) \u2014 they are solving the legitimate problem of allocating constrained supply to highest-value uses. The researcher sees extraction (Snare) \u2014 they experience absolute barriers to access. The analytical observer at civilizational scope risks seeing natural law (Mountain) \u2014 computational frontiers always require specialized hardware. The organized consortium sees mixed coordination-extraction (Tangled Rope) \u2014 genuine collective negotiation capability but structural dependence on manufacturer decisions. The standards body sees its function degrading (Piton) \u2014 CUDA standardization promised interoperability but delivers lock-in. This perspectival gap reveals that the constraint's type depends critically on the agent's structural position relative to supply allocation mechanisms, not on objective properties of GPU scarcity.",
-    "mandatrophy_analysis": "STRUCTURAL RESOLUTION: The constraint avoids mandatrophy by distinguishing genuine coordination (supply allocation via manufacturers) from pure extraction (pricing power over dependent agents). The coordination component is real: without manufacturer allocation logic, supply would be chaotic. The asymmetry is also real: benefits flow disproportionately to manufacturers and institutional cloud providers. The tangled_rope classification captures both. The false mountain at the analytical level reveals that 'computational frontiers require the fastest hardware' naturalizes a choice (to make frontier compute private-market driven) rather than a law. The piton classification of standards bodies indicates degradation: CUDA coordination once solved real portability problems but now primarily enforces vendor lock-in. The snare classification for trapped agents is unambiguous \u2014 they have no exit and bear extraction without benefit."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, reflecting significant asymmetry in access and pricing but not total deprivation. The base value captures that manufacturers capture sustained pricing premiums during the scarcity period (estimated 2-4x markup over manufacturing cost) and that established labs receive priority allocation. However, extractiveness is not at snare-floor (0.66) because genuine coordination function exists: the allocation mechanisms enable distributed research that validates AI feasibility and drives long-term demand. The measurement trajectory shows extractiveness rising from 0.32 (early scarcity, perceived as temporary coordination problem) to 0.58 (sustained bottleneck, perceived as maintained extraction), indicating that agents have revised their assessment from temporary shortage to systematic constraint. Suppression (0.68): High. Significant barriers to exit include: (1) absolute scarcity (no substitute computational substrates at equivalent performance), (2) ecosystem lock-in (CUDA dominance, research tool chains standardized on NVIDIA), (3) capital barriers (GPU clusters require $1-100M capital investment), (4) geographic concentration (TSMC fab concentration creates chokepoint control), (5) institutional access restrictions (priority allocation by institutional prestige, not merit). Suppression is not 0.95 (complete) because some alternatives exist: geographic arbitrage (accessing distributed clusters), temporal arbitrage (queuing for access), capability arbitrage (reframing research for lower-compute methods). Theater ratio (0.45): Moderate-low. Unlike institutional review (which is largely performative), GPU allocation mechanisms have high functional content: manufacturers do genuinely face capacity constraints and must make allocation decisions; researchers do receive access proportional (roughly) to contributions; research outcomes do emerge from the allocated computing time. However, theater is not zero because: (1) alternative compute substrates are underexplored due to ecosystem inertia, (2) some allocation prioritizes prestige over research merit, (3) geographic concentration creates artificial scarcity (manufacturing capacity exists globally but is concentrated for historical/economic reasons, not physical necessity). Claimed type (Tangled Rope): The base properties satisfy tangled rope gates: (1) requires_active_enforcement: true (allocation decisions are actively made, priority queues are actively maintained, CUDA standardization is actively enforced via ecosystem investment), (2) beneficiaries declared (GPU manufacturers, established AI labs), (3) victims declared (resource-constrained researchers, emerging startups, global computational equity), (4) both coordination function (distributing scarce capacity enables research) and asymmetric extraction (power asymmetry in allocation and pricing).",
+    "perspectival_gap": "This constraint demonstrates why single-perspective analysis fails. The GPU manufacturer sees Rope (pure coordination — enabling global AI development drives demand growth). The trapped researcher sees Snare (pure extraction — complete suppression of research agenda, no exit options, maximum experienced asymmetry). The established research consortium sees Tangled Rope (coordination via consortiums enabling pooled access, but asymmetric benefit concentration toward large members). The national computing authority sees Tangled Rope (state-level coordination of domestic AI capacity, but conditional on state alignment, geopolitical constraints on exit). The alternative compute movement sees Piton (initiatives to decompose the constraint exist but persist in low-adoption theater mode). The civilizational analyst risks Mountain (naturalizing the constraint as immutable physics of semiconductor manufacturing at nanoscale), but structural data reveals this as a false summit: CUDA ecosystem lock-in, geographic fab concentration, and allocation prioritization by prestige are socially contingent institutional arrangements, not laws of physics. The perspectival gap reveals the core analytical move: what appears to a beneficiary as legitimate coordination enabling global research (Rope) appears to a trapped agent as pure extraction via institutional power asymmetry (Snare). Both perceptions are structurally accurate from their respective positions — the gap is not disagreement about facts but about experienced asymmetry in the same institutional structure.",
+    "directionality_logic": "Each perspective's directionality d (agent's structural position on the extraction flow from 0=full beneficiary to 1=full target) is derived from three inputs: agent power, exit options, and beneficiary/victim status. GPU manufacturers (institutional/arbitrage/beneficiary): d ≈ 0.05 (strongly beneficiary, arbitrage escape options mean they experience scarcity as revenue driver, not constraint). Established AI labs (institutional/constrained/beneficiary): d ≈ 0.25 (beneficiary but constrained exit — consortium commitment creates path dependency; they capture priority allocation but cannot easily exit or shift suppliers). Resource-constrained researchers (powerless/trapped/victim): d ≈ 0.95 (strongly target, no exit options, complete suppression of research agenda). Emerging startups (moderate/constrained/victim): d ≈ 0.75 (target but some agency — theoretical exit via acquisition, relocation, or capital raising, but costs are prohibitive). National authorities (organized/constrained/mixed): d ≈ 0.50-0.65 depending on resource level — geopolitical constraints limit exit (cannot cede computational capacity to rivals), but some agency in allocation decisions and domestic procurement strategies. Alternative compute movements (organized/constrained/secondary victim): d ≈ 0.55 (mixed — benefit from NVIDIA ecosystem dominance limiting competition, but constrained by switching costs and slow technology maturation). These d values feed the sigmoid f(d) to compute experienced extractiveness chi, which varies across perspectives from nearly zero (manufacturers) to maximum (trapped researchers). The perspectival gap in chi values is the diagnostic signature of the constraint's asymmetric structure.",
+    "mandatrophy_analysis": "The GPU supply constraint resolves mandatrophy by revealing that the bottleneck contains genuine coordination function layered with extractive mechanisms. This is exactly what Tangled Rope captures: the constraint both enables (coordinates access to scarce capacity) and extracts (benefits accrue asymmetrically to manufacturers and established labs). The false summit risk lies in the mountain classification — if the analytical observer concludes the constraint is immutable law (physics of semiconductor manufacturing), policy responses focus on adaptation and equitable access within assumed scarcity. If the constraint is recognized as tangled rope with extractive components maintainable via institutional arrangements (CUDA lock-in, fab concentration, allocation control), policy responses can target the extractive mechanisms (ecosystem diversification, geographic fab distribution, alternative compute support). The mandatrophy is resolved by accepting that the classification is observer-relative: from the trapped researcher's position, the constraint is pure extraction (snare); from the manufacturer's position, it is coordination (rope); from the organized consortium's position, it is mixed (tangled rope). The presheaf over all observer positions — capturing powerless, moderate, powerful, organized, institutional, and analytical perspectives — is the complete characterization. No single type eliminates the others; instead, they form a configuration that reveals institutional structures only visible from the combination of views.",
+    "kernel_context": ""
   },
   "boltzmann": {
     "coordination_type": "resource_allocation",
@@ -217,16 +236,16 @@
   },
   "network": {
     "affects_constraints": [
-      "rare_earth_element_supply",
-      "computing_power_concentration",
-      "ai_research_accessibility"
+      "ai_research_accessibility",
+      "computational_equity_global",
+      "nvidia_market_dominance"
     ],
-    "dual_formulation_note": "GPU supply is upstream of three distinct constraints: (1) rare earth element supply (physical supply limit), (2) computing power concentration (institutional concentration of frontier research capacity), and (3) AI research accessibility (epistemic inequality). The GPU constraint bridges physical scarcity and institutional allocation \u2014 the extraction mechanism operates through allocation decisions, not raw material limits."
+    "dual_formulation_note": "The GPU supply constraint decomposes into multiple structurally distinct constraints: (1) gpu_manufacturing_capacity — physical/engineering constraint on fab throughput and capital requirements; (2) gpu_ecosystem_lock_in — institutional constraint maintaining CUDA standardization despite alternatives; (3) gpu_geographic_concentration — geopolitical constraint on fab distribution and supply chain resilience; (4) gpu_allocation_prioritization — institutional constraint favoring established labs over emerging actors. Each has different ε and structural properties. This story models the aggregate constraint spanning all decomposed components. See affected_constraints for component stories."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.08
+      "d_value": 0.22
     }
   ]
 }

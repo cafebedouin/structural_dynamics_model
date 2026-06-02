@@ -4,53 +4,45 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "kcc"
+    "measurement_id_prefix": "kcc",
+    "story_uid": "072efbbb-eb4a-420f-af3a-d747e74155f8"
   },
   "base_properties": {
-    "extractiveness": 0.68,
-    "suppression": 0.72,
-    "theater_ratio": 0.65,
-    "claimed_type": "snare",
-    "human_readable": "Knowledge Commons Collapse",
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Knowledge Commons Collapse: Scholarly Knowledge Enclosure and Rent Capture",
     "topic_domain": "institutional/epistemological",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "rent_capturing_institutions"
+      "academic_publishers",
+      "ip_regime_administrators"
     ],
     "victims": [
-      "knowledge_seeking_agents",
-      "epistemic_commons",
-      "emerging_researchers"
-    ],
-    "mandatrophy_resolved": true
+      "global_knowledge_access",
+      "researcher_autonomy",
+      "developing_world_institutions"
+    ]
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "biographical",
+      "time_horizon": "generational",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Emerging Researcher",
-      "comment": "PERSPECTIVE 1: EMERGING RESEARCHER (SNARE) \u2014 Trapped within paywall ecosystems, cannot access foundational literature without institutional affiliation or prohibitive personal costs. Bears full extraction cost while building knowledge. No viable exit \u2014 necessity of accessing published research creates structural dependence. Maximum suppression: institutional gatekeeping prevents alternative knowledge pathways."
+      "label": "The Developing World Scholar",
+      "comment": "PERSPECTIVE 1: DEVELOPING WORLD SCHOLAR (SNARE) — Trapped by journal paywalls, limited institutional access, and lack of capital to purchase article access or APCs. Suppressed through geographic pricing, language barriers, and IP enforcement. Experiences maximum extraction with zero exit options at biographical timescale. Cannot exit without abandoning scholarship itself."
     },
     {
       "classification_type": "snare",
       "agent_power": "powerless",
       "time_horizon": "biographical",
-      "exit_options": "trapped",
+      "exit_options": "identity_locked",
       "spatial_scope": "global",
-      "label": "The Knowledge Seeking Agent (Global South)",
-      "comment": "PERSPECTIVE 2: KNOWLEDGE SEEKING AGENT IN GLOBAL SOUTH (SNARE) \u2014 Trapped by economic barriers and institutional poverty. Cannot access research necessary for local problem-solving. Extraction mechanism: developed-world publishing institutions capture value from knowledge production across the planet while restricting access to that knowledge. Suppression includes infrastructure barriers (internet bandwidth, device access) compounded by paywall gating."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "institutional",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "The Publishing Institution",
-      "comment": "PERSPECTIVE 3: PUBLISHING INSTITUTION (ROPE) \u2014 Experiences the constraint as a coordination mechanism. Manages peer review workflow, ensures quality control, aggregates dispersed research into curated collections. These are genuine coordination functions. The institutional actor has arbitrage options: can shift business models, adopt open-access variants, participate in alternative systems. Net beneficiary through extraction leverage."
+      "label": "The Early-Career Researcher",
+      "comment": "PERSPECTIVE 2: EARLY-CAREER RESEARCHER (SNARE) — Structurally mobile (can change careers) but identity-fused with academic identity. Trapped by publish-or-perish metrics that require expensive open-access fees or journal prestige (paywalled venues). The binding is cognitive: the researcher cannot imagine themselves outside academia despite structural mobility, making the constraint functionally equivalent to trapped for biographical horizon."
     },
     {
       "classification_type": "tangled_rope",
@@ -58,17 +50,35 @@
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Institutional Researcher",
-      "comment": "PERSPECTIVE 4: INSTITUTIONAL RESEARCHER (TANGLED ROPE) \u2014 Moderately constrained by paywall costs (institution bears them), but also benefits from curation and credential-stamping functions of commercial publishers. High-status publication venues provide career capital. Mixed position: benefits from coordination function while extractive mechanism operates on non-institutional researchers. Can exit through open-access publishing but faces career risks and prestige penalties."
+      "label": "The Research Institution Librarian",
+      "comment": "PERSPECTIVE 3: RESEARCH INSTITUTION LIBRARIAN (TANGLED ROPE) — Constrained by budget cycles and journal licensing contracts but coordinates genuine scholarly access for their institution. Experiences extraction through rising journal costs but also benefits from negotiating favorable subscription rates. Mixed coordination (enabling research) and extraction (being squeezed for licensing fees). Exit is costly (institutional reputation damage, researcher dissatisfaction) but possible."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Academic Publisher",
+      "comment": "PERSPECTIVE 4: ACADEMIC PUBLISHER (ROPE) — Experiences the constraint as a coordination mechanism: connecting authors to readers, managing peer review, maintaining research archives. The publisher perceives pure coordination with low-cost platform maintenance and subscription licensing. Full beneficiary with exit options (can shift to open-access or subscription models). Experiences zero or negative effective extraction — the constraint subsidizes this agent."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Science Movement",
+      "comment": "PERSPECTIVE 5: OPEN SCIENCE MOVEMENT (TANGLED ROPE) — Organized agents (institutional repositories, preprint servers, open-access mandates) experience both coordination benefits (building alternative infrastructure) and extraction costs (competing against entrenched publishers, funding constraints). Constrained by IP enforcement and dominant publisher gatekeeping. Generational horizon reflects that building alternative commons requires sustained institutional commitment over decades. Mixed experience: genuine coordination function with significant extraction overhead from IP regimes."
     },
     {
       "classification_type": "scaffold",
-      "agent_power": "organized",
+      "agent_power": "institutional",
       "time_horizon": "generational",
-      "exit_options": "mobile",
+      "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Open Knowledge Movement",
-      "comment": "PERSPECTIVE 5: OPEN KNOWLEDGE MOVEMENT (SCAFFOLD) \u2014 Organized agents (arXiv, PubMed Central, open-access journals, Wikipedia, institutional repositories) are building alternative pathways that bypass proprietary gates. These alternatives have real sunset potential: as open repositories mature and gain prestige, the paywall extraction mechanism loses force. Currently constrained by network effects and career incentive misalignment, but these barriers are degrading. High suppression currently, but temporally bounded."
+      "label": "The Funder-Mandated Open Access Regime",
+      "comment": "PERSPECTIVE 6: FUNDER-MANDATED OPEN ACCESS (SCAFFOLD) — Funders (NIH, EU Horizon, Gates Foundation) impose open-access mandates, creating alternative publication pathways and institutionalizing open licensing. Low effective extraction because mandates have enforcement power and an explicit sunset: as institutional open-access norms mature, traditional publisher gates lose leverage. Temporary coordination mechanism with a planned phase-out (sunset: ~15-20 years as national research systems fully adopt mandates)."
     },
     {
       "classification_type": "piton",
@@ -76,8 +86,8 @@
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Copyright/Patent Regime",
-      "comment": "PERSPECTIVE 6: COPYRIGHT/PATENT REGIME (PITON) \u2014 The legal apparatus maintaining knowledge enclosure persists through institutional inertia despite evidence that alternative regimes (open source, commons-based production) outperform it on innovation and quality metrics. Theater ratio high: extensive performative legitimation (IP rights as 'incentive') despite empirical cases where commons production generates superior outcomes. The regime maintains itself through regulatory enforcement rather than genuine functional necessity."
+      "label": "The Peer Review Theater",
+      "comment": "PERSPECTIVE 7: PEER REVIEW THEATER (PITON) — Traditional peer review as gatekeeping mechanism is largely performative: publishers extract legitimacy and authority from the review ritual while the actual quality control is provided by volunteer reviewers and editors. The constraint persists through institutional inertia (tenure committees still value journal prestige) despite degraded function (reviews increasingly superficial due to reviewer load). Theater ratio is high because the review process's performance (legitimacy signaling) outweighs its function (quality assurance)."
     },
     {
       "classification_type": "mountain",
@@ -85,98 +95,102 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer (Scarcity Naturalization)",
-      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / SCARCITY NATURALIZATION (MOUNTAIN) \u2014 The false mountain view naturalizes information scarcity as physical law. 'Knowledge must be owned because publishing has costs.' 'Paywalls are inherent to quality gatekeeping.' This perspective risks treating contingent institutional arrangements (for-profit publishing, copyright duration, licensing restrictions) as natural laws. The structural data contradicts the mountain classification \u2014 the engine will identify this as false summit, revealing naturalization of a contingent economic arrangement."
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, the tension between knowledge sharing and institutional sustainability appears as an immutable property: knowledge creation requires institutions, institutions require revenue, and information goods create natural monopolies. This perspective risks naturalizing what is actually a contingent choice: IP regimes and publisher gatekeeping are policy decisions, not laws of nature. The engine's false summit detector will identify this as naturalization of a contestable institutional arrangement."
     }
   ],
   "omegas": [
     {
-      "id": "marginal_cost_of_reproduction",
-      "question": "Does the claimed coordination function (peer review, curation, quality control) justify extraction in an era where marginal cost of knowledge reproduction approaches zero?",
-      "resolution_mechanism": "Comparative analysis of peer review quality, curation effectiveness, and error detection rates across open-access, institutional repository, and proprietary publishing models. Cost-per-validation accounting.",
-      "impact": "If coordination value exceeds marginal reproduction cost: constraint may be Tangled Rope (justified extraction). If marginal cost far exceeds coordination value: constraint is Snare (extraction disguised as coordination).",
+      "id": "peer_review_quality_measurement",
+      "question": "Does traditional peer review actually improve research quality, or does it primarily signal institutional legitimacy?",
+      "resolution_mechanism": "Longitudinal tracking of post-publication corrections and retractions for preprint-only papers vs peer-reviewed papers; blind comparison of research quality metrics between peer-reviewed and alternative quality-assurance mechanisms (community review, registered reports, multi-tier open evaluation)",
+      "impact": "If peer review improves quality: theater_ratio should be lower (functional component is substantial). If purely legitimacy signaling: theater_ratio ≥ 0.80 confirms piton classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether traditional peer review has functional quality benefit or is purely performative"
+    },
+    {
+      "id": "alternative_commons_viability",
+      "question": "Can decentralized open-access infrastructure (arXiv, institutional repositories, community repositories) sustain long-term scholarly knowledge commons without corporate publisher mediation?",
+      "resolution_mechanism": "Longitudinal tracking of adoption rates, sustainability models, and quality metrics for open-access alternatives; cost analysis of decentralized vs centralized publication infrastructure; governance stability assessment of open-science platforms",
+      "impact": "If viable: scaffold perspective is correct and the knowledge commons collapse is reversible via institutional commitment (sunset = 15-20 years). If not viable: the collapse is structural and only open-access mandates can create a commons (mandates become permanent, not temporary).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether decentralized open-access infrastructure can sustain knowledge commons"
+    },
+    {
+      "id": "ip_regime_necessity",
+      "question": "Is intellectual property protection necessary to incentivize knowledge production, or does it reduce access and innovation without increasing production?",
+      "resolution_mechanism": "Comparative analysis of knowledge production rates and quality in high-IP-protection vs low-IP-protection regimes (comparing pharmaceutical/software IP vs academic publishing where IP is typically assigned to institutions, not creators); empirical studies of innovation incentives without IP protection (Wikipedia, Linux, open-science collaborations)",
+      "impact": "If IP necessary: the commons collapse is unavoidable given competitive pressure (institutional/extraction perspective justified). If not necessary: the collapse is a policy choice that could be reversed (false summit identification justified).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether IP protection is necessary to incentivize knowledge production"
+    },
+    {
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is suppression of knowledge access primarily structural (paywalls, bandwidth, institutional access barriers) or internalized (researchers and institutions accepting IP regime legitimacy as natural)?",
+      "resolution_mechanism": "Post-access behavioral tracking: if suppression is structural, institutions with open-access mandates show markedly higher research collaboration and citation across borders. If internalized, open access produces no change in collaboration patterns (researchers still cite prestige venues preferentially, limiting access doesn't change behavior).",
+      "impact": "If structural: removing barriers (mandates, open-access) reduces effective suppression. If internalized: effective suppression remains high despite open access (the constraint persists through cognitive capture).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural barrier or internalized acceptance"
+    },
+    {
+      "id": "false_summit_natural_law",
+      "question": "Is the knowledge commons collapse an inevitable feature of knowledge economics (natural law) or a contingent institutional arrangement (policy choice)?",
+      "resolution_mechanism": "Historical comparison: Did knowledge enclosure occur at similar rates and intensities across different national IP regimes, or did policy choices significantly modulate the outcome? Counterfactual analysis of alternative institutional arrangements (e.g., public-utility models for scholarly publication, mandatory open-access from inception rather than after publication delay).",
+      "impact": "If natural law: mountain classification justified; the constraint is immutable. If contingent: false summit; the constraint is reversible via policy change and institutional commitment.",
       "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether coordination value justifies extraction given zero marginal reproduction cost"
-    },
-    {
-      "id": "open_science_tipping_point",
-      "question": "At what institutional adoption threshold do open-access alternatives reach critical mass and break the paywall extraction mechanism?",
-      "resolution_mechanism": "Network analysis of citation patterns, institutional repository usage growth, prestige migration toward open venues, corresponding decline in commercial publisher subscription revenue and exclusivity value.",
-      "impact": "If tipping point < 30% adoption: scaffold sunset is imminent (5-10 years). If tipping point > 60% adoption: paywall constraint may persist as semi-permanent rent extraction.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Adoption threshold for open-access alternatives breaking paywall mechanism"
-    },
-    {
-      "id": "developing_world_knowledge_production",
-      "question": "Is the knowledge commons collapse predominantly extracting from knowledge seekers in the Global South, or does it also suppress knowledge production in the Global South?",
-      "resolution_mechanism": "Analysis of research output origin and circulation patterns; institutional capacity for research in low-income countries; migration of researchers to high-paywall regions; comparison of local problem-solving capacity with and without access to global knowledge commons.",
-      "impact": "If primarily extraction from seekers: snare classification confirmed. If suppression of production: constraint may be worse than snare\u2014extracting and preventing counter-production simultaneously, approaching totalizing mechanism.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether Global South experiences primarily extraction or also production suppression"
-    },
-    {
-      "id": "commons_based_production_viability",
-      "question": "Can commons-based knowledge production (Wikipedia, open-source software, arXiv preprints, institutional repositories) scale to replace proprietary knowledge gatekeeping without reproducing the same extraction dynamics?",
-      "resolution_mechanism": "Longitudinal analysis of commons-based projects; identification of cases where commons production became capture/extraction point; models of resource allocation, reputation systems, and governance in successful commons vs failed transitions.",
-      "impact": "If viable at scale: scaffold sunset realistic, paywall extraction can genuinely dissolve. If commons-based alternatives reproduce extraction patterns: constraint may cycle rather than resolve (snare \u2192 open commons \u2192 new extraction mechanism \u2192 snare).",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Viability of commons-based knowledge production at global scale"
+      "type_class": "conceptual",
+      "description": "Whether knowledge commons collapse is natural law or policy choice (FSM candidate)"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.28
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.52
+      "value": 0.45
     },
     {
       "metric": "base_extractiveness",
       "time_point": 20,
-      "value": 0.68
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.42
+      "value": 0.38
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.55
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
-      "value": 0.65
+      "value": 0.64
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.42
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.48
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.61
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 15,
+      "metric": "suppression_requirement",
+      "time_point": 10,
       "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68
     }
   ],
   "interval": {
@@ -184,38 +198,39 @@
     "end": 20
   },
   "commentary": {
-    "narrative_context": "The knowledge commons collapse refers to the structural transformation of scholarly knowledge from a collectively maintained and accessible commons to an enclosed, rent-capturing system dominated by proprietary publishing institutions and intellectual property regimes. This constraint exhibits the full spectrum of DR classification depending on the observer's structural position. The same phenomenon\u2014the digitization of knowledge combined with artificial scarcity through paywalls, licensing restrictions, and copyright enforcement\u2014appears as a natural law of economics (mountain), a coordination mechanism for quality control (rope), mixed coordination-extraction (tangled rope), pure extraction (snare), a temporary institutional artifact with open-science sunset (scaffold), or a degraded regime maintained through performative legitimation (piton). The extractiveness value (0.68) reflects that the constraint captures substantial economic value from knowledge seekers while providing modest coordination benefits. The trajectory shows acceleration: from 0.35 at the onset of digital publishing, through 0.52 as paywalls hardened, to 0.68 as comprehensive knowledge enclosure matured. Theater ratio increase (0.42 \u2192 0.65) indicates rising performative content: increasingly elaborate justifications for paywalls (peer review, quality control, curation) coexist with empirical evidence that alternative systems (arXiv, institutional repositories, open-access journals) provide superior or equal outcomes on all functional metrics. The constraint manifests through multiple reinforcing mechanisms: paywall gating, copyright extension, patent pooling, journal bundling, prestige concentration in high-paywall venues, and career incentives aligned with proprietary publication.",
+    "narrative_context": "The knowledge commons collapse represents a structural transformation in how scholarly knowledge is organized and accessed. Over the past 40 years, the scholarly knowledge system has shifted from a collectively maintained commons — where institutions and researchers viewed knowledge access as a public good — to an enclosed, rent-extracting system dominated by proprietary publishers and intellectual property regimes. This constraint exhibits all eight DR types from different structural positions, making it a diagnostic exemplar for how institutional arrangements appear as natural law to some observers while manifesting as pure extraction to others. The same phenomenon — the gap between knowledge creation and knowledge access — appears as an immutable property of information goods (mountain), a coordination mechanism for scholarly communication (rope), a mixed coordination-extraction hybrid with gatekeeping (tangled_rope), pure extraction with no coordination benefit (snare), a temporary problem being solved through open-access mandates (scaffold), or a degraded ritual maintained through institutional inertia (piton), depending on the observer's structural position in the knowledge economy.",
     "key_agents": [
-      "Emerging Researchers: Primary victims (powerless/trapped) \u2014 dependent on knowledge access for professional development but excluded by cost barriers; cannot exit without abandoning research careers.",
-      "Knowledge Seeking Agents (Global South): Primary victims (powerless/trapped) \u2014 bear maximum extraction cost; lack institutional infrastructure and purchasing power to access global knowledge; structural dependence on Northern knowledge institutions.",
-      "Epistemic Commons: Structural victim (powerless/trapped) \u2014 abstract collective good that cannot organize or exit; degradation of shared knowledge pool reduces all agents' capacity for cumulative knowledge building.",
-      "Publishing Institutions: Primary beneficiaries (institutional/arbitrage) \u2014 capture economic rents through paywall enforcement; maintain arbitrage option to shift business models; experience constraint as coordination mechanism.",
-      "Institutional Researchers: Secondary victims/mixed (moderate/constrained) \u2014 bear moderate extraction costs (institutional payment) while gaining prestige benefits; constrained by career incentives aligned with paywall venues; can exit toward open-access publishing but face prestige penalties.",
-      "Open Knowledge Movement: Organized resistance (organized/mobile) \u2014 arXiv, PubMed Central, open-access journals, institutional repositories, Wikipedia, open-source communities; building alternative pathways with genuine sunset potential; currently constrained but mobilizing exit capacity.",
-      "Copyright/Patent Regimes: Institutional enforcement mechanism (institutional/arbitrage) \u2014 legal apparatus maintaining enclosure; maintains itself through regulatory enforcement; theater-heavy (performative IP rights justification) with increasing gap between legitimation narratives and functional evidence.",
-      "Analytical Observer: Risks naturalizing contingent arrangements as immutable law; scarcity framing treats artificial enclosure as physical constraint; may misidentify extraction mechanism as inevitable coordination cost."
+      "Global Knowledge Access: Primary victim (powerless/trapped) — the collective good of accessible scholarly knowledge cannot exit or organize; bears full cost of enclosure",
+      "Developing World Scholars: Primary victim (powerless/trapped or identity_locked) — trapped by paywalls, lack of capital, and geographic access barriers. Some experience identity lock (cannot imagine themselves outside academia despite structural mobility to alternative careers)",
+      "Early-Career Researchers: Secondary victim (powerless/identity_locked) — structurally mobile (could leave academia) but identity-fused with academic identity; publish-or-perish metrics enforce dependence on expensive venues and paywalled prestige markers",
+      "Research Institutions and Librarians: Mixed actors (moderate/constrained) — benefit from negotiating access but face rising journal costs; coordinate research access while being squeezed for licensing fees",
+      "Academic Publishers: Primary beneficiary (institutional/arbitrage) — extract rents through proprietary publishing model; perceive the constraint as pure coordination with low-cost infrastructure",
+      "IP Regime Administrators: Secondary beneficiary (institutional/arbitrage) — enforce patent and copyright regimes that protect publisher monopolies; perceive extraction as legitimate incentive structure",
+      "Open Science Movement: Organized agents (organized/constrained) — building alternative commons infrastructure (preprint servers, institutional repositories, open-access mandates); experience both coordination benefits and extraction costs from IP enforcement",
+      "Funder-Mandated Open Access: Institutional actor (institutional/arbitrage) — NIH, EU Horizon, Gates Foundation imposing open-access mandates; creating temporary alternative pathways with planned sunset as norms mature",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent institutional arrangements as inherent properties of knowledge economics"
     ],
-    "logic_rationale": "Extractiveness (0.68): High. The constraint captures substantial economic value from knowledge seekers in the form of paywall access fees, institutional subscription costs, and foregone research productivity due to access barriers. The value extraction is substantial because information scarcity is artificial\u2014marginal reproduction cost approaches zero, yet prices remain high. This artificial scarcity is the extraction mechanism. The extractiveness is not maximal (0.95) because some genuine coordination functions exist (peer review does filter, curation does aggregate), and because open-access alternatives demonstrate that these functions can be provided at lower cost. Suppression (0.72): High. Multiple reinforcing mechanisms prevent exit: paywall gating (immediate barrier), copyright/patent law (legal barrier), prestige concentration (career incentive barrier), institutional dependence (infrastructure barrier), and Global South economic poverty (structural barrier). Emerging researchers cannot ignore paywall-published literature without forgoing essential knowledge; Global South agents cannot afford subscription access. The suppression is not total (0.95) because open-access alternatives exist and are growing, though they still face network effect disadvantages. Theater ratio (0.65): Moderate-high and rising. Legitimate coordination functions exist (peer review, quality control, curation) but are increasingly performative. The performative content includes: (1) peer review quality rhetoric that doesn't correlate with actual quality differences between paywall and open-access venues, (2) curation narratives that ignore institutional repository functionality, (3) IP rights justification rhetoric despite commons-based production evidence contradicting it. The theater has increased from 0.42 to 0.65 over the interval as legitimation narratives have become more elaborate while functional evidence diverges from claims.",
-    "directionality_logic": "Directionality (d) is derived from each agent's structural position: their power level, exit options, and relationship to extraction flow. Emerging researchers trapped without exit options experience d \u2248 0.95 (maximum target), deriving f(d) \u2248 1.42 from the sigmoid, producing maximum experienced extraction chi. Publishing institutions with arbitrage options experience d \u2248 0.05-0.15 (beneficiary), deriving f(d) \u2248 -0.12 to 0.02, experiencing negative or minimal chi\u2014the constraint flows toward them, not away. Institutional researchers with constrained exit (prestige penalties for open-access, career incentives favoring paywall venues) experience d \u2248 0.55-0.65, deriving f(d) \u2248 0.75-0.95, moderate chi reflecting mixed position. Open knowledge coalition with mobile exit (can adopt open alternatives) experience d \u2248 0.40-0.50, deriving f(d) \u2248 0.40-0.65, lower chi reflecting exit capacity and organizational power.",
-    "perspectival_gap": "Massive perspectival divergence emerges from this constraint. Publishing institutions genuinely experience it as coordination (rope) \u2014 they solve real problems (managing peer review, aggregating research, establishing credibility signals). Institutional researchers see mixed picture (tangled rope) \u2014 they benefit from prestige and career capital while bearing paywall costs borne by their institutions. Emerging researchers see pure extraction (snare) \u2014 they cannot exit and bear maximum suppression. The open knowledge movement sees temporal containment (scaffold) \u2014 they perceive open-access alternatives as approaching critical mass with genuine sunset potential. The copyright regime sees itself as harmless (piton) \u2014 reviewers of the IP legal apparatus often describe it as necessary, standard, inevitable, performing essential functions\u2014yet empirical evidence from commons-based production contradicts this. The analytical observer risks seeing natural economic law (mountain) \u2014 treating artificial information scarcity as physical constraint, forgetting that knowledge differs fundamentally from scarce resources. The perspectival gap reveals that the constraint's classification depends entirely on structural position: no single type captures the reality for all agents.",
-    "mandatrophy_analysis": "MANDATROPHY RESOLVED: Knowledge Commons Collapse resolves the mandatrophy by demonstrating that all six types are legitimate perspectival readings of the same structural phenomenon. The mandatrophy question\u2014'Is this coordination or extraction?'\u2014finds that both answers are correct from different positions. Publishing institutions coordinate genuinely AND extract asymmetrically. The coordination and extraction are not competing interpretations but simultaneous structural features. The snare classification for powerless agents is correct: they experience pure extraction with no coordination benefit. The rope classification for publishers is correct: they experience coordination. These are not contradictory; they are perspectival. The scaffold classification is correct: open alternatives are approaching critical mass. The piton classification is correct: performative theater is increasing. The mountain classification is revealed as FALSE SUMMIT: the naturalizing move (treating artificial enclosure as inevitable economic law) misses the contingency of the institutional arrangement. Mandatrophy resolves not through choosing one type but through recognizing that the presheaf of perspectives across the observation site IS the answer. The constraint is tangled rope at the analytical level because it combines genuine coordination (peer review, curation, aggregation) with asymmetric extraction (artificial scarcity, rent capture, suppression of alternatives). The trap of single-position analysis is that beneficiaries see only coordination; victims see only extraction; both miss the hybrid nature visible from the analytical position. The scaffold sunset is real: open-access alternatives demonstrate that coordination functions can be provided at lower extraction cost, which means the current extraction premium (the difference between current paywall pricing and open-access provisioning cost) is pure rent. This rent is declining as open alternatives gain prestige and adoption, but it persists through network effects and career incentive misalignment. The resolution is not inevitable\u2014knowledge commons could collapse completely (snare becomes irreversible) if open alternatives fail to reach critical mass\u2014but the current trajectory shows sunset potential if open-access adoption accelerates."
+    "logic_rationale": "Extractiveness (0.58): High-moderate, reflecting the asymmetry between publishers' benefits and researchers'/institutions' costs, but not maximal because significant open-access alternatives now exist and funder mandates are creating exit pathways. The measurement trajectory shows acceleration (0.28 → 0.58) over 20 years, reflecting increasing publisher consolidation and rising journal costs. Suppression (0.68): High, indicating substantial barriers to knowledge access: paywalls, institutional subscription costs, geographic pricing, language barriers, and IP enforcement. Suppression remains stable (not declining) despite open-access growth because traditional publishers maintain gatekeeping power over prestige venues and researchers face citation incentives favoring paywalled journals. Theater ratio (0.64): Moderate-high, reflecting that peer review has shifted toward performative legitimacy signaling rather than functional quality assurance. The ratio rises over the interval (0.38 → 0.64) as reviewer capacity declines relative to submission volume, making actual substantive review increasingly impossible — the theater persists as a legitimacy ritual while real quality assessment moves to post-publication community scrutiny. Claimed type (tangled_rope): The constraint requires active enforcement (IP law, publisher contracts, license agreements), has clear beneficiaries (publishers, IP administrators), and has clear victims (scholars, institutions, developing-world access). It exhibits coordination benefits for publishers (connecting authors to readers) alongside asymmetric extraction (monopoly pricing, controlled dissemination), making it structurally a hybrid coordination-extraction mechanism.",
+    "directionality_logic": "Directionality is determined by each agent's structural position: beneficiaries with arbitrage options (publishers) derive d from their ability to capture rents without exit costs, producing low d → negative f(d) → negative effective extraction (the constraint subsidizes them). Victims with trapped or identity-locked exits (researchers, developing-world scholars) derive d from their inability to exit, producing high d → high f(d) → high experienced extraction. Organized agents (open-science movement) with constrained but coordinated exits derive moderate d → moderate f(d) → moderate extraction. Institutional actors (research libraries, open-access funders) with arbitrage options split: libraries experience higher d due to being squeezed in the middle (moderate-to-high f(d)), while funders experience low d due to their ability to bypass traditional publishers entirely. The scope modifier σ(S) = 1.2 (global scope) amplifies effective extraction, making the global dimension of the constraint particularly severe for resource-constrained agents.",
+    "perspectival_gap": "This constraint demonstrates radical perspectival divergence. Developing-world scholars perceive pure snare (trapped, high extraction, no agency). Early-career researchers perceive snare through identity-lock (structurally mobile but cognitively captured). Research institutions perceive tangled rope (genuine coordination mixed with extraction). Publishers perceive rope (pure coordination mechanism with platform benefits). Open-science advocates perceive tangled rope (building alternatives while fighting IP enforcement). Funders perceive scaffold (temporary problem with sunset solution). The peer-review system perceives itself as rope (quality assurance) but appears as piton (degraded theater) from analytical perspective. The civilizational analytical observer risks seeing mountain (natural information-goods economics) but structural data reveals this as false summit: identical mechanisms operate under different policy regimes with dramatically different extractiveness outcomes. The perspectival gap reflects real structural differences in agent power, exit options, and beneficiary status — not mere disagreement about evaluation.",
+    "mandatrophy_analysis": "The knowledge commons collapse resolves the mandatrophy by demonstrating that all eight types are legitimate perspectival readings of the same institutional arrangement. The constraint is not one fixed type; it is a **presheaf of types over observer positions**. The mandatrophy's resolution is structural: the question is not 'which type is correct?' but 'what is the distribution of experienced constraint-types across all agents, and what does that distribution reveal about the system's asymmetries?' The false summit classification at the analytical/civilizational context is critical: it reveals that naturalizing the commons collapse as 'inevitable information economics' conceals policy choices (IP regimes, publisher licensing, prestige metrics) that could be reversed. The constraint exhibits classic mandatrophy structure: (1) Uniformity claim: 'Knowledge enclosure is natural.' (2) Perspectival reality: Different agents experience radically different constraints. (3) Resolution: The uniformity claim is a false summit — it naturalizes contingent institutional arrangements. The open-science movement's scaffold perspective reveals that alternative institutional arrangements are structurally possible; the constraint's immutability is not epistemic, it is political.",
+    "kernel_context": "This constraint instantiates a contested kernel: **the legitimacy of intellectual property regimes as structures for organizing knowledge production and distribution**. The kernel has four live readings: (1) **IP-as-incentive reading**: IP protection is necessary to incentivize knowledge production; publishers deserve monopoly rents because they coordinate quality assurance and dissemination. (2) **IP-as-enclosure reading**: IP regimes are contingent policy choices that reduce access and innovation without increasing production; the commons collapse is a reversible institutional arrangement. (3) **IP-as-mixed reading**: IP protection incentivizes some production (commercial pharmaceuticals, software) but not others (academic research, open-source software), and different domains warrant different regimes. (4) **IP-as-legitimacy reading**: IP regimes persist not because they are functionally necessary but because they are institutionally entrenched and grant authority to gatekeepers; the constraint is maintained through cognitive capture and prestige-metric enforcement rather than economic necessity. This constraint story instantiates reading #2 (IP-as-enclosure) by documenting the policy contingency and alternative commons models. Reading #1 would claim mountain classification (IP protection is natural); reading #4 would emphasize identity-lock mechanisms; reading #3 would decompose into multiple constraint stories for different domains."
   },
   "boltzmann": {
-    "coordination_type": "information_standard",
-    "boltzmann_floor_override": 0.12
+    "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
-      "peer_review_theater",
-      "research_funding_concentration",
-      "global_university_stratification"
+      "peer_review_quality_gate",
+      "open_access_mandate_enforcement",
+      "research_institution_budget_crisis"
     ],
-    "dual_formulation_note": "Knowledge commons collapse decomposes into multiple structurally distinct constraints: (1) paywall_gating (\u03b5\u22480.65, snare for individual access barriers), (2) copyright_regime (\u03b5\u22480.58, piton for legal enforcement theater), (3) prestige_concentration (\u03b5\u22480.72, tangled rope for career incentive coupling), (4) open_access_alternatives (\u03b5\u22480.25, scaffold for sunset potential). The aggregate constraint family exhibits the mandatrophy spectrum. Each decomposition story links through network.affects_constraints."
+    "dual_formulation_note": "The knowledge commons collapse should be decomposed into three structurally distinct constraints per ε-invariance principle: (1) Journal subscription cost extraction (ε≈0.62) — institutional budget crisis driven by publisher pricing power. (2) Peer review gatekeeping (ε≈0.45) — quality assurance mechanism with significant theater ratio. (3) IP enforcement for research access (ε≈0.55) — legal and technical barriers to knowledge dissemination. Each has different beneficiaries (publishers vs prestige-metric gatekeepers vs patent-holding corporations), different victims, and different remediation pathways. The current story captures the integrated institutional arrangement; decomposed stories would enable more precise intervention targeting."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.08
+      "d_value": 0.72
     }
   ]
 }

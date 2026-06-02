@@ -4,24 +4,25 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "gaza_evac"
+    "measurement_id_prefix": "gaza_evac",
+    "story_uid": "498fff98-633a-46c2-b2f9-e963678fff4d"
   },
   "base_properties": {
     "extractiveness": 0.68,
-    "suppression": 0.75,
-    "theater_ratio": 0.55,
+    "suppression": 0.82,
+    "theater_ratio": 0.65,
     "claimed_type": "snare",
     "human_readable": "Gaza Evacuation Route Accessibility Constraint",
     "topic_domain": "conflict/humanitarian/logistics",
     "requires_active_enforcement": true,
-    "beneficiaries": [
-      "military_command_structure",
-      "checkpoint_control_authorities"
-    ],
     "victims": [
-      "civilian_population_seeking_evacuation",
-      "humanitarian_organizations",
-      "displaced_persons"
+      "civilian_population",
+      "displaced_persons",
+      "vulnerable_groups"
+    ],
+    "beneficiaries": [
+      "checkpoint_authorities",
+      "military_command_structure"
     ]
   },
   "perspectives": [
@@ -30,101 +31,101 @@
       "agent_power": "powerless",
       "time_horizon": "immediate",
       "exit_options": "trapped",
-      "spatial_scope": "regional",
-      "label": "The Civilian Evacuee",
-      "comment": "PERSPECTIVE 1: CIVILIAN EVACUEE (SNARE) \u2014 Trapped by geography and military control. The evacuation route exists nominally but is controlled by checkpoint authorities who determine access, timing, and movement capacity. No alternative exists; leaving the designated zone requires passage through the constraint. Civilians experience maximum extraction: their freedom of movement is the commodity being controlled."
+      "spatial_scope": "local",
+      "label": "The Displaced Civilian",
+      "comment": "PERSPECTIVE 1: DISPLACED CIVILIAN (SNARE) — Faces absolute barriers to exit the route system. Evacuation is nominally voluntary but practically coercive: remaining means exposure to active conflict; using the route means submission to checkpoint authority decisions about eligibility, timing, and capacity. Zero degrees of freedom; maximum extraction and suppression."
     },
     {
       "classification_type": "snare",
-      "agent_power": "moderate",
+      "agent_power": "powerless",
       "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Humanitarian Organization",
-      "comment": "PERSPECTIVE 2: HUMANITARIAN ORGANIZATION (SNARE) \u2014 Constrained by dependency on checkpoint authorities for convoy access and operational approval. Can theoretically withdraw operations but faces pressure to remain and serve populations. Experiences extraction through operational restrictions, capacity limitations, and approval delays. Suppression is high \u2014 alternatives (informal routes, unauthorized convoys) carry severe penalties."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "powerful",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The International Aid Coordinator",
-      "comment": "PERSPECTIVE 3: INTERNATIONAL AID COORDINATOR (TANGLED ROPE) \u2014 Powerful institutional actor with diplomatic leverage but constrained by negotiation complexity. Experiences the constraint as both coordination problem (facilitating civilian movement, enabling humanitarian access) and extraction mechanism (having to negotiate permissions, facing denial of access). Benefits from appearing to manage crisis; bears cost of access restrictions."
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Vulnerable Subpopulation",
+      "comment": "PERSPECTIVE 2: VULNERABLE SUBPOPULATION (SNARE) — Elderly, disabled, medical-dependent, and unaccompanied minors face compounded extraction. Checkpoint criteria often exclude or deprioritize those requiring specialized assistance. Evacuation route becomes apparatus for separating vulnerable persons from protection. No exit mechanism; pure extraction."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
-      "spatial_scope": "regional",
+      "spatial_scope": "local",
       "label": "The Checkpoint Authority",
-      "comment": "PERSPECTIVE 4: CHECKPOINT AUTHORITY (ROPE) \u2014 Primary beneficiary with arbitrage options. Controls the constraint as a coordination mechanism: determines safe passage procedures, manages flow rates, and coordinates with military structures. Experiences the constraint as coordination problem that they are solving through checkpoint administration. Can divert authority to alternative checkpoint systems or completely restrict flow (arbitrage options)."
+      "comment": "PERSPECTIVE 3: CHECKPOINT AUTHORITY (ROPE) — Experiences the constraint as a coordination mechanism for controlling population movement, preventing weapons smuggling, and maintaining security perimeter integrity. Benefits from authority to gate access and extract compliance (documentation, verification, delays). Low perceived extraction because the constraint solves their coordination problem directly."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Humanitarian Organization",
+      "comment": "PERSPECTIVE 4: HUMANITARIAN ORGANIZATION (TANGLED ROPE) — Must coordinate evacuation logistics, negotiate checkpoint access, and deliver assistance. Both coordinates with authorities (gains access for medical convoys, aid distribution) and bears extraction costs (delays, arbitrary denial, documentation barriers). Mixed experience: genuine coordination function with embedded asymmetric extraction."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
       "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "continental",
-      "label": "The International Legal Framework",
-      "comment": "PERSPECTIVE 5: INTERNATIONAL LEGAL FRAMEWORK (PITON) \u2014 Humanitarian law, refugee conventions, and access agreements exist nominally but enforcement is degraded. Theater ratio of performative compliance (checkpoints ostensibly follow humanitarian protocols while operating as extraction mechanisms) is high. International frameworks persist through institutional inertia rather than effective implementation. Suppression is high but obscured by procedural legitimacy."
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The International Law Framework",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL LAW FRAMEWORK (PITON) — Humanitarian law nominally guarantees safe passage for displaced persons and wounded. Evacuation routes are framed as legal compliance mechanisms. In practice, the framework persists performatively while the extraction mechanism operates unchanged. Theater_ratio high: formal adherence to humanitarian protocols (medical checkpoints, designated routes, humanitarian organization access) masks coercive access control."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 The evacuation route serves dual function: genuine coordination (enabling civilian movement, humanitarian access) AND asymmetric extraction (controlling movement patterns, monitoring populations, consolidating power through access control). Active enforcement is required to maintain both functions simultaneously. This is the canonical structure of tangled rope: coordination benefit exists alongside high extraction, with suppression obscuring the asymmetry."
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, evacuation routes under conflict are presented as physically necessary: wars require population movement control; security perimeters require checkpoints; resource scarcity requires triage. This perspective sees route accessibility constraints as inherent to conflict logistics. However, this naturalizes contingent institutional choices about who can pass, when, and under what conditions — the engine's false summit detector identifies this as constructed constraint masquerading as natural law."
     }
   ],
   "omegas": [
     {
-      "id": "evacuation_route_operational_intent",
-      "question": "Is the evacuation route designed to enable civilian movement or to concentrate and control populations?",
-      "resolution_mechanism": "Analysis of route design (capacity constraints vs. geographic alternatives), checkpoint placement (bottleneck vs. distributed control), approval patterns (permissive vs. restrictive), and outcome data (evacuation rates vs. population concentrations)",
-      "impact": "If primary intent is enabling: reclassify as Rope or Scaffold (coordination dominant). If primary intent is control: confirm Snare (extraction dominant). The mechanism is the same; intent determines whether suppression is coordination cost or coercion.",
+      "id": "security_rationale_ambiguity",
+      "question": "Are checkpoint access restrictions primarily justified by genuine security requirements (weapons interdiction, infiltration prevention) or primarily by population control and resource extraction?",
+      "resolution_mechanism": "Comparative analysis of checkpoint interdiction rates vs. denial rates; correlation between stated security threats and actual documented incidents; timing of restrictions relative to security events vs. administrative cycles",
+      "impact": "If security-driven: constraint may be Tangled Rope (mixed coordination-extraction). If primarily extraction-driven: classification remains Snare with theater masking pure coercion.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether evacuation route prioritizes civilian movement or population control"
+      "description": "Whether checkpoint restrictions are security-justified or extraction-driven"
     },
     {
-      "id": "suppression_mechanism_structural_vs_internalized",
-      "question": "Is suppression of evacuation due to external physical/logistical barriers (structural) or psychological barriers (internalized fear/distrust)?",
-      "resolution_mechanism": "Comparison of evacuation rates when external barriers are removed (if occurs) vs. lingering hesitation; analysis of documented checkpoint interactions; assessment of whether populations will use routes when barriers are temporarily lifted",
-      "impact": "If primarily structural: suppression metric reflects objective barriers. If partially internalized: actual suppression is higher than structural measure suggests \u2014 populations carry suppression internally even if barriers drop.",
+      "id": "alternative_route_feasibility",
+      "question": "Do realistic alternative evacuation pathways exist that would reduce dependency on controlled checkpoints?",
+      "resolution_mechanism": "Geographic and logistical feasibility analysis of sea routes, humanitarian corridors, safe passage guarantees outside checkpoint system; cost-benefit assessment relative to checkpoint access delays",
+      "impact": "If alternatives feasible: constraint is extractive choice, not necessity (strengthens Snare classification). If alternatives blocked or infeasible: suppression magnitude may reflect structural constraint rather than deliberate coercion.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether suppression is external barrier or internalized psychological constraint"
+      "description": "Whether feasible alternative evacuation routes exist"
     },
     {
-      "id": "humanitarian_coordination_vs_extraction_coupling",
-      "question": "Does the humanitarian access requirement create genuine coordination benefit, or does it primarily serve as legitimacy cover for extraction control?",
-      "resolution_mechanism": "Analysis of how much humanitarian capacity is actually enabled by the route vs. how much is disabled by checkpoint restrictions; assessment of whether checkpoint authorities use humanitarian access as leverage for other concessions; comparison of actual vs. stated humanitarian needs satisfaction",
-      "impact": "If genuine coordination: tangled rope classification is appropriate. If primarily extractive: reclassify as pure Snare with humanitarian theater as suppression mechanism.",
+      "id": "checkpoint_criteria_consistency",
+      "question": "Are checkpoint eligibility criteria applied consistently across time, population groups, and different checkpoints, or do they show patterns of arbitrary enforcement favoring particular groups or outcomes?",
+      "resolution_mechanism": "Longitudinal analysis of access approval rates by category (age, health status, family composition, geographic origin); comparison across checkpoints and time periods; documentation of exceptions and criteria changes",
+      "impact": "If consistent: constraint has predictability allowing adaptation (reduces suppression perception). If arbitrary: maximizes both extraction and suppression; strengthens Snare classification.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether humanitarian access is genuine coordination function or extraction cover"
+      "description": "Consistency of checkpoint eligibility criteria application"
     },
     {
-      "id": "alternative_informal_route_viability",
-      "question": "Do informal evacuation routes exist and are they materially viable, or are suppression barriers preventing their use?",
-      "resolution_mechanism": "Documentation of informal route usage; analysis of barriers (military enforcement, geographic impassability, safety hazards); assessment of population knowledge of alternatives",
-      "impact": "If viable alternatives exist: exit_options should be upgraded from 'trapped' to 'constrained' for powerless agents. If alternatives are suppressed: confirms trapped classification.",
+      "id": "humanitarian_organization_cooptation",
+      "question": "Does humanitarian organization participation in the evacuation route system constitute genuine coordination for civilian protection or functional legitimation of an extraction mechanism?",
+      "resolution_mechanism": "Analysis of humanitarian organization resource allocation, decision-making authority at checkpoints, advocacy positions on route accessibility, and divergence between public statements and operational constraints faced",
+      "impact": "If genuine protection role: maintains Tangled Rope classification for humanitarian organizations. If cooptation: humanitarian presence becomes theater masking Snare, elevating theater_ratio.",
       "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Viability and accessibility of informal evacuation routes"
+      "type_class": "conceptual",
+      "description": "Whether humanitarian participation constitutes genuine coordination or system legitimation"
     },
     {
-      "id": "checkpoint_approval_decision_process_transparency",
-      "question": "Is the checkpoint approval process for evacuation transparent and rule-based, or opaque and discretionary?",
-      "resolution_mechanism": "Documentation of approval criteria, decision timelines, appeal procedures, and consistency of application across similar cases; analysis of denial reasons and patterns",
-      "impact": "If transparent/rule-based: some mitigation of extraction mechanism through predictability. If opaque/discretionary: increases suppression and enables rent-seeking behavior within checkpoint authority.",
+      "id": "natural_law_false_summit_candidate",
+      "question": "Is the checkpoint constraint a natural law inherent to conflict logistics, or a contingent institutional choice presented as inevitable?",
+      "resolution_mechanism": "Comparative historical analysis of evacuation systems in other conflicts; identification of how different authorities structure evacuation access; distinguishing technical requirements from policy choices",
+      "impact": "If natural law: Mountain classification from analytical perspective is correct. If false summit: reveals constructed extraction mechanism disguised as necessity; shifts analytical perspective toward Snare classification.",
       "confidence": "high",
-      "type_class": "empirical",
-      "description": "Transparency and consistency of evacuation approval decision-making"
+      "type_class": "conceptual",
+      "description": "Whether checkpoint constraints are inherent to conflict or contingent policy choice"
     }
   ],
   "measurements": [
@@ -135,74 +136,80 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 30,
-      "value": 0.64
+      "time_point": 3,
+      "value": 0.61
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 60,
+      "time_point": 6,
       "value": 0.68
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.48
+      "value": 0.5
     },
     {
       "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.52
+      "time_point": 3,
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
-      "time_point": 60,
-      "value": 0.55
+      "time_point": 6,
+      "value": 0.65
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 90,
-      "value": 0.68
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.75
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 90,
-      "value": 0.55
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.79
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.82
     }
   ],
   "interval": {
     "start": 0,
-    "end": 90
+    "end": 6
   },
   "commentary": {
-    "narrative_context": "The evacuation route in Gaza represents a critical constraint governing civilian freedom of movement under conflict conditions. Nominally, evacuation routes enable populations to leave conflict zones and access safety and humanitarian assistance. Structurally, the routes are controlled by checkpoint authorities who determine access eligibility, timing, and capacity. The constraint exhibits core characteristics of a Snare: high extractiveness (0.68), high suppression (0.75), and active enforcement of movement restrictions. Civilians are trapped \u2014 they have no alternative route and no way to exit the zone without passing through checkpoints. Humanitarian organizations are constrained \u2014 they depend on checkpoint approval for convoy access. International frameworks are degraded, persisting through institutional inertia while enforcement mechanisms weaken. The analytical observer identifies a tangled rope structure: the route genuinely serves coordination functions (enabling escape from conflict, facilitating humanitarian delivery) while simultaneously serving extraction functions (controlling population movements, consolidating power through access management, collecting intelligence through checkpoint interactions). The theater ratio (0.55) reflects moderate performative activity \u2014 checkpoints operate with stated humanitarian protocols and international law compliance, creating a legitimacy cover that obscures the extraction mechanism. The extractiveness has increased over the measurement interval (0.52 \u2192 0.68) as approval procedures tightened and capacity bottlenecks deepened, while theater has remained relatively stable, suggesting that performative compliance continues even as actual extraction increases.",
+    "narrative_context": "The Gaza evacuation route constraint structures civilian freedom of movement under conflict conditions through a system of checkpoints that nominally enable evacuation but functionally control access, timing, and eligibility. The constraint exhibits the structural signature of a Snare from the perspective of the displaced population — it appears to offer an exit from danger but in practice extracts maximum compliance, documentation, and vulnerability disclosure while maintaining authority discretion over access. From the checkpoint authority perspective, the same constraint appears as coordination (Rope) — solving the legitimate problem of managing population flows and preventing weapons smuggling. From the humanitarian organization perspective, it appears as mixed coordination-extraction (Tangled Rope) — enabling some protection activities while imposing operational constraints. From the international law perspective, it appears as theatrical compliance (Piton) — formal adherence to humanitarian protocols masking coercive access control. The constraint's increasing theater_ratio (0.50 → 0.65 over the measured interval) reflects intensifying performative elements: formal humanitarian checkpoints, official eligibility criteria, and documented procedures that provide the appearance of systematic access while maintaining extraction mechanism integrity. The rising extractiveness and suppression reflect both increased coercion and feedback loops where failed evacuation attempts increase vulnerability disclosure and compliance pressure. The civilian population faces absolute barriers to exit both the conflict zone (military/physical barriers) and the evacuation route system (checkpoint authority dependency). This creates the Snare signature: nominally voluntary movement that is practically coercive; the constraint appears to offer safety but functions as apparatus for extraction of compliance and vulnerability disclosure.",
     "key_agents": [
-      "Civilian Population Seeking Evacuation: Primary victims (powerless/trapped) \u2014 dependent on checkpoint access with no alternatives; bear full cost of movement restrictions",
-      "Humanitarian Organizations: Secondary victims (moderate/constrained) \u2014 operationally dependent on checkpoint approval; face resource constraints and operational restrictions",
-      "Checkpoint Authority: Primary beneficiary (institutional/arbitrage) \u2014 controls access, determines flow rates, operates with discretionary power; can redirect authority or restrict access entirely",
-      "Military Command Structure: Secondary beneficiary (institutional/arbitrage) \u2014 benefits from population monitoring and movement intelligence through checkpoint system",
-      "International Aid Coordinator: Complex position (powerful/constrained) \u2014 has diplomatic leverage but constrained by negotiation complexity; experiences constraint as both coordination problem and extraction mechanism",
-      "International Legal Framework: Institutional actor (institutional/constrained) \u2014 humanitarian law persists nominally but enforcement is degraded; theater maintains legitimacy while actual protections weaken",
-      "Analytical Observer: Sees full structure (analytical/analytical) \u2014 identifies tangled rope pattern where coordination and extraction functions are coupled"
+      "Displaced Civilian Population: Primary victims (powerless/trapped) — no alternative to evacuation; submission to checkpoint authority decisions about eligibility, timing, capacity; maximum extraction and suppression",
+      "Vulnerable Subpopulations: Primary victims (powerless/trapped) — elderly, disabled, medical-dependent, unaccompanied minors face compounded extraction through exclusionary checkpoint criteria; separation from protection",
+      "Checkpoint Authorities: Primary beneficiaries (institutional/arbitrage) — extract compliance, documentation, timing control; experience constraint as coordination mechanism for security and population management",
+      "Military Command Structure: Secondary beneficiary (institutional/arbitrage) — benefits from population control, movement intelligence, access to civilian information",
+      "Humanitarian Organizations: Secondary victim (organized/constrained) — gain access for protection activities but bear extraction costs through delays, denials, and operational constraints; risk cooptation into system legitimation",
+      "International Law Framework: Institutional observer (institutional/arbitrage) — persists performatively; formal protocols provide legitimation appearance while extraction mechanism operates unchanged",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent institutional choices about access as inherent conflict logistics necessities"
     ],
-    "logic_rationale": "Extractiveness (0.68): High. The evacuation route exists but is fundamentally controlled by checkpoint authorities who determine who can evacuate, when, and under what conditions. This control flow yields significant extraction: movement becomes a commodity that authorities allocate. The value reflects both the direct cost of access denial (people unable to evacuate) and the indirect cost of the uncertainty and delay imposed by discretionary approval. Suppression (0.75): High. Multiple barriers prevent independent evacuation: geographic constraints (routes must pass through controlled territory), legal barriers (unauthorized movement is prohibited), enforcement barriers (military presence deters informal routes), and informational barriers (populations may not know alternatives or procedures). The suppression is structurally high, though some informal routes may exist. Theater ratio (0.55): Moderate. The checkpoint system operates with stated humanitarian protocols, international law compliance, and civilian protection rhetoric. However, this theater does not dominate \u2014 much of the actual operation is straightforward logistics (queuing, credential verification, movement direction). The moderate value reflects that theater is significant but not the primary function, unlike in piton-classified constraints where theater would exceed 0.70. The extractiveness trajectory (0.52 \u2192 0.68 over 90 days) indicates intensification of access control, while theater ratio remains stable (0.48 \u2192 0.55), suggesting that performative elements are not increasing \u2014 the rise in extractiveness reflects tightening of actual control, not escalating theater.",
-    "directionality_logic": "The constraint's directionality differs radically across agents. For the trapped civilian (powerless/trapped), d \u2248 0.95 \u2192 f(d) \u2248 1.42: maximum experienced extraction. They cannot escape; they depend on checkpoint approval for the only viable route out. The checkpoint authority (institutional/arbitrage) derives d \u2248 0.05 \u2192 f(d) \u2248 -0.12: they experience negative effective extraction because they control the constraint's operation. They benefit from it; they are not subjected to it. The humanitarian organization (moderate/constrained) derives d \u2248 0.70 \u2192 f(d) \u2248 1.10: they experience significant extraction because they face costs (operational restrictions, approval delays, conditional access) but also have some benefits (access to populations, coordinating role). The analytical observer (analytical/analytical) uses canonical d \u2248 0.73 \u2192 f(d) \u2248 1.15: neutral position, not beneficiary or victim, but seeing the full structure including both extraction and coordination functions. The beneficiary/victim declarations feed directly into these calculations: civilians are victims (high d), checkpoint authorities are beneficiaries (low d), humanitarian organizations are mixed (moderate d).",
-    "perspectival_gap": "The constraint presents a stark perspectival gap. The checkpoint authority (Rope) sees coordination: they are managing a logistics problem, allocating access fairly according to their criteria, operating within their mandate. They have discretion and exit options. The trapped civilian (Snare) sees pure extraction: they have no choice, no alternative, and no negotiating position. They can only comply. The humanitarian organization (Tangled Rope) sees both: they are coordinating humanitarian response (coordination benefit) while also being constrained by checkpoint restrictions (extraction cost). The international legal framework (Piton) sees a degraded system: they understand that humanitarian law should protect civilians, but enforcement is weak; they maintain procedures performatively. The international aid coordinator (Tangled Rope) sees a problem requiring negotiation and leverage: the constraint is not immutable from their position, but it is not easily changed either. The analytical observer (Tangled Rope) sees that this gap is not accidental: the checkpoint system structurally serves both coordination (enabling movement under control) and extraction (controlling movement to concentrate power). The gap reveals that the different perspectives are not measuring the same phenomenon from different angles \u2014 they are measuring genuinely different causal relationships that the same institutional structure mediates.",
-    "mandatrophy_analysis": "This constraint exhibits the classic mandatrophy pattern of coercion-coordination confusion. The checkpoint authority's mandate is humanitarian (enable civilian evacuation, ensure safe passage) but the mechanism is extraction (control movement, concentrate power through access allocation). The mandatrophy resolves through the tangled rope classification: both mandates are operative. The system genuinely does enable some evacuation (coordination function exists) while also enabling extractive control (extraction function exists). The analytical observer identifies this as tangled rope specifically because: (1) beneficiaries exist (checkpoint authority, military command) who benefit from the constraint's operation; (2) victims exist (civilian population, humanitarian access) who bear costs from the constraint's restrictions; (3) active enforcement is required to maintain both functions; (4) the extraction is asymmetric (not symmetric coordination cost). The snare classification from the trapped civilian's perspective is also accurate \u2014 from that position, the constraint appears as pure extraction because the coordination benefit (being able to evacuate) is so constrained by restrictions and delays that it is barely realized. The mandatrophy resolves by noting that the constraint can be simultaneously Rope (from checkpoint authority view), Snare (from trapped civilian view), and Tangled Rope (from analytical view) because these are measuring different causal structures from different structural positions. There is no single 'true' type \u2014 the presheaf of perspectives over the constraint's structural positions IS the answer."
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts maximum compliance, vulnerability disclosure (family composition, health status, destination information), and psychological submission to authority discretion. The extraction is compounded over time as populations attempt multiple evacuation efforts, each requiring renewed compliance and documentation. The extractiveness trajectory (0.52 → 0.68) reflects both intensifying coercion and feedback loops where failed attempts increase desperation and compliance pressure. Suppression (0.82): Very high. Absolute barriers to alternative exits: military control of perimeter, no safe passage guarantees outside checkpoint system, resources insufficient for autonomous civilian movement, social structures fragmented by conflict. Suppression is structural and intensifying (0.75 → 0.82), reflecting both official checkpoint tightening and desperation-driven population vulnerability. Theater ratio (0.65): Moderate-high. The constraint includes performative elements — formal humanitarian checkpoints, documented eligibility criteria, official procedures — that provide appearance of systematic access while maintaining extraction mechanism. Theater_ratio trajectory (0.50 → 0.65) reflects increasing performative overlay: formal humanitarian protocols, international observer presence, documented procedures that create legitimation appearance without substantive access expansion. Claimed type (Snare): Justified by extractiveness ≥ 0.46, suppression ≥ 0.60, and victim-centered classification. The constraint has minimal genuine coordination function from the victim's perspective — evacuation is presented as enabling escape from danger but functions as apparatus for extraction of compliance and vulnerability.",
+    "perspectival_gap": "The constraint demonstrates maximum perspectival divergence. The checkpoint authority perceives coordination (Rope) — solving legitimate security and population-flow problems — while the displaced civilian perceives pure extraction (Snare) — coercive compliance mechanism masked as humanitarian assistance. The humanitarian organization perceives mixed coordination-extraction (Tangled Rope) — enabling some protection activities while bearing extraction costs. The international law framework perceives legal compliance (Piton) — formal protocols satisfied while extraction operates unchanged. The analytical observer at civilizational scope risks perceiving natural necessity (Mountain) — checkpoint constraints as inherent to conflict logistics — but the structural data reveals this as false summit: the contingent institutional choices about access control are presented as necessary constraints. The most revealing gap is between the beneficiary's Rope and the victim's Snare: from the same checkpoint system, one experiences pure coordination and the other experiences pure extraction. This gap is diagnostic of snare structure: the constraint simultaneously benefits the authority through compliance extraction and harms the victim through access denial.",
+    "directionality_logic": "Each perspective's directionality (d) is determined by structural position relative to the extraction flow. Victims with no exit options (trapped) experience maximum extraction — d ≈ 0.95 → f(d) ≈ 1.42. Beneficiaries with arbitrage options experience minimum extraction — d ≈ 0.05 → f(d) ≈ -0.12. Organized secondary victims (humanitarian organizations) with constrained exit options experience moderate extraction — d ≈ 0.65 → f(d) ≈ 1.00. The institutional beneficiary at immediate time horizon with arbitrage exit derives d ≈ 0.05, producing negative effective extractiveness (χ = 0.68 × (-0.12) × 1.0 ≈ -0.08). The powerless victim at immediate time horizon with trapped exit derives d ≈ 0.95, producing high effective extractiveness (χ = 0.68 × 1.42 × 0.8 ≈ 0.77, adjusted for local scope). The perspectival gap between beneficiary rope (negative χ) and victim snare (positive χ > 0.66) is the diagnostic signature of extraction mechanism.",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION RESOLVED: The constraint meets all snare thresholds (ε ≥ 0.46, suppression ≥ 0.60, χ ≥ 0.66 from victim perspective). The mandatrophy is resolved by recognizing that the constraint has no genuine coordination function from the victim's perspective — evacuation is presented as escape route but functions as apparatus for extraction of compliance and vulnerability. The checkpoint authority's perception of coordination (Rope) does not constitute genuine coordination with the victim because the victim faces binary choice between remaining in danger zone or submitting to extraction. The false coordination appears only from the beneficiary's perspective; the analytical observer at civilizational scope risks naturalizing this as inherent to conflict (Mountain) but the omega variables reveal contingent institutional choices. The piton classification from the international law perspective reflects that formal humanitarian protocols mask unchanged extraction mechanism — theater provides legitimation without functional protection expansion. The constraint resolves mandatrophy by demonstrating that coordinate classification appears across multiple perspectives (Snare dominant, with theater-mediated Piton, coordination-masked false summit, and beneficiary-side Rope) and that the perspectival diversity is itself the diagnostic signature of extraction mechanism operating through institutional legitimation."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "checkpoint_control_authority",
-      "humanitarian_access_restrictions",
-      "displacement_population_concentration"
-    ]
+      "humanitarian_aid_distribution_bottleneck",
+      "medical_access_under_siege",
+      "family_separation_mechanism"
+    ],
+    "dual_formulation_note": "The evacuation route constraint is upstream of specific humanitarian crises (medical access, aid distribution, family separation) by controlling population mobility. Each downstream constraint has its own extractiveness reflecting specific structural mechanisms; the evacuation route provides the structural dependency that amplifies extraction across the network."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.05
+      "d_value": 0.08
     }
   ]
 }

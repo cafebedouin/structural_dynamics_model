@@ -1,0 +1,232 @@
+{
+  "header": {
+    "constraint_id": "imperial_mandate__loyalist_restoration_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "imandlr",
+    "story_uid": "d2f5e626-3463-4106-9e96-7fa39b1fcc9b",
+    "created_at": "2026-02-26T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Imperial Mandate: Loyalist Restoration Reading (Direct Sovereignty)",
+    "topic_domain": "political_philosophy/comparative_constitutional_systems/east_asian_history",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "imperial_court",
+      "restoration_faction"
+    ],
+    "victims": [
+      "intermediate_governance_structures",
+      "samurai_bureaucratic_class",
+      "shogunal_legitimacy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Samurai Bureaucratic Class Under Restoration",
+      "comment": "PERSPECTIVE 1: SAMURAI BUREAUCRATIC CLASS (SNARE) — The reading delegitimizes the entire basis of samurai administrative authority. Exit requires abandoning professional identity, social status, and livelihood. Trapped by economic dependency on shogunal structures. Maximum extraction: career, identity, and institutional position all at stake simultaneously. The reading offers no role for intermediate governance — only direct imperial rule."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Bakufu Administrative Apparatus",
+      "comment": "PERSPECTIVE 2: BAKUFU ADMINISTRATIVE APPARATUS (TANGLED ROPE) — The bakufu is delegitimized but retains administrative coordination functions. Restoration requires dismantling the shogunate while preserving bureaucratic continuity. The bakufu experiences both extraction (loss of sovereign authority) and coordination pressure (necessity to manage transition). Constrained by the reading's logic but with some residual institutional agency during transition period."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Imperial Court (Restoration Faction)",
+      "comment": "PERSPECTIVE 3: IMPERIAL COURT / RESTORATION FACTION (ROPE) — Primary beneficiary. The reading legitimizes direct imperial governance and centralizes authority. Court experiences this as pure coordination: establishing administrative control, consolidating legitimacy, and managing foreign engagement all flow from the restoration principle. Low experienced extraction; the constraint exists to enable the court's expansion of authority."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "The Loyalist Intellectuals and Low-Rank Samurai",
+      "comment": "PERSPECTIVE 4: LOYALIST INTELLECTUALS / LOW-RANK SAMURAI (TANGLED ROPE) — Identity fused with restoration ideology; professional advancement depends on the reading's success. Exit would require abandoning foundational identity commitments (loyalty to the emperor as supreme sovereign, rejection of shogunal usurpation as illegitimate). However, these agents also coordinate the intellectual and political infrastructure of restoration. Mixed experience: extraction from their prior positions in shogunal hierarchy, coordination through their role in restoration movement."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law of Imperial Authority)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational lens, the reading invokes a natural law argument: imperial sovereignty is by nature indivisible and unmediated; delegation to intermediaries is by definition illegitimate usurpation; direct rule is the natural order of legitimate governance. This perspective naturalizes what is actually a contested institutional reading. The engine will flag this as a false summit candidate."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "unmediated_sovereignty_necessity",
+      "question": "Is unmediated imperial exercise of sovereignty structurally possible given scale, technology, and administrative complexity of the polity?",
+      "resolution_mechanism": "Comparative historical analysis: periods of actual unmediated imperial rule vs. periods with inevitable delegated governance; archival evidence of emperor's actual vs. claimed administrative reach; logistical capacity constraints",
+      "impact": "If unmediated governance is structurally impossible: the reading is aspirational theater (Piton), not a functional constraint. If possible: the reading may be structurally viable (Tangled Rope confirmed). The entire classification depends on whether the reading's core premise is practically instantiable.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether unmediated imperial sovereignty is structurally achievable"
+    },
+    {
+      "id": "restoration_vs_reform_boundary",
+      "question": "Does this reading require complete institutional rupture and replacement, or can it coexist with reformed (rather than abolished) intermediate structures?",
+      "resolution_mechanism": "Textual analysis of restoration ideology; historical outcomes of restoration movements claiming unmediated sovereignty; whether post-restoration states retained any intermediate authority structures",
+      "impact": "If rupture required: the suppression and theater values are accurate (institutional destruction is costly and performative). If reform possible: suppression drops substantially and the constraint may shift toward Rope (pure coordination of authority reorganization).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Necessity of institutional rupture vs. reformed delegation"
+    },
+    {
+      "id": "foreign_engagement_sovereigntylock",
+      "question": "Does unmediated imperial engagement with foreign powers require the emperor to personally conduct diplomacy and military strategy, or can delegation to appointed representatives preserve the reading's legitimacy claim?",
+      "resolution_mechanism": "Analysis of restoration rhetoric on foreign engagement; examination of how post-restoration states handled international relations; whether the reading permits administrative delegation while claiming direct imperial governance",
+      "impact": "If personal imperial engagement required: theater_ratio is underestimated (personal governance is operationally impossible at scale); extraction is higher. If delegation permitted: the reading is more institutionally compatible; theater ratio drops; it may collapse toward pure Rope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether sovereignty claim permits administrative delegation"
+    },
+    {
+      "id": "kernel_reading_decomposition",
+      "question": "Is this constraint a single unified reading of the imperial mandate kernel, or does it mask two distinct constraints: (1) ideological claim about legitimacy (unmediated = legitimate), and (2) practical claim about governance structure (unmediated = achievable)?",
+      "resolution_mechanism": "Decomposition test: apply ε-invariance principle. If measuring the constraint via 'ideological coherence' gives ε≈0.25 but measuring via 'practical administrative viability' gives ε≈0.65, they are two separate constraints. Separate stories with different omegas would be more precise.",
+      "impact": "If decomposed: the current story represents the ideological legitimacy claim (Mountain or Rope candidate). The practical governance claim is a downstream constraint with higher extractiveness (Snare or Tangled Rope). The bakufu_delegation_reading would then coexist with multiple constraint stories, not just one sibling.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether ideological legitimacy and practical governance are one constraint or two"
+    },
+    {
+      "id": "intermediate_structures_elimination",
+      "question": "What happens to the coordination functions previously provided by samurai hierarchy, regional daimyo governance, and bakufu bureaucracy when the reading eliminates these structures?",
+      "resolution_mechanism": "Institutional replacement analysis: does restoration rhetoric propose successor institutions, or does it assume coordination will spontaneously emerge from direct imperial governance? Historical examination of how restored governments handled regional administration, military command, taxation, dispute resolution.",
+      "impact": "If no replacement proposed: the reading is pure extraction (Snare), and the empire faces institutional collapse. If replacement proposed: the reading coordinates transition to alternative structures (Tangled Rope). This affects the claimed_type classification fundamentally.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Successor institutions for eliminated intermediate structures"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The loyalist restoration reading of the imperial mandate kernel asserts that legitimate sovereignty is unmediated: the emperor must personally exercise both ritual and administrative authority, and intermediary governance structures (shogunate, samurai bureaucracy, daimyo regional authority) are by definition usurpations of imperial prerogative. This reading emerged as a political force in 19th-century East Asia, particularly in Japan, where loyalist intellectuals and lower-ranking samurai invoked direct imperial authority to delegitimize the Tokugawa shogunate and mobilize restoration movements. The constraint generates tension across all institutional actors: it delegitimizes the entire administrative class that carries the complex governance functions of a large polity, promises direct imperial rule as the alternative, and creates severe suppression costs as intermediate structures resist demolition. The theater ratio rises over time (from 0.45 to 0.78) as restoration movements shift from intellectual critique to institutional practice: the gap widens between the reading's claims about unmediated sovereignty and the actual bureaucratic machinery required to govern, creating performative assertions of direct imperial authority that mask ongoing delegation.",
+    "key_agents": [
+      "Imperial Court / Restoration Faction (institutional/arbitrage): Primary beneficiary — centralizes authority, eliminates competing power centers, legitimizes direct imperial initiative in foreign affairs and modernization",
+      "Loyalist Intellectuals and Low-Rank Samurai (moderate/identity_locked): Intermediary beneficiary-victims — advance through the restoration movement but are trapped by identity fusion with the legitimacy claim; exit requires abandoning foundational commitment to emperor as supreme sovereign",
+      "Samurai Bureaucratic Class (powerless/trapped): Primary victim — entire professional identity, social status, and livelihood depend on intermediate governance structures the reading delegitimizes; no alternative employment or status pathway available",
+      "Bakufu Administrative Apparatus (organized/constrained): Institutional victim-target — must dismantle itself while managing administrative continuity; constrained by organizational inertia and the need to maintain basic governance functions during transition",
+      "Analytical Observer (analytical/analytical): Can adopt natural law perspective claiming unmediated sovereignty is the inherent order, or empirical perspective recognizing it as contested institutional reading"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The reading extracts through delegitimization: it strips authority and legitimacy from intermediate structures without providing immediate substitutes. Beneficiaries (imperial court, restoration faction) gain authority consolidation. Victims (samurai class, bakufu apparatus) lose professional legitimacy. The extractiveness is not maximal (not 0.85+) because the reading also coordinates a coherent ideology — it is not pure extraction but extraction coupled with an alternative governance vision. Suppression (0.72): High. Eliminating samurai bureaucracy requires severe coercion — the class has institutional power, military capacity, social status, and centuries of organizational precedent. Economic dependency on shogunal structures is near-total for samurai. Exit options are virtually nonexistent: samurai cannot simply leave governance without losing livelihood, identity, and social position. The suppression reflects both structural barriers (no alternative career paths) and the reading's own demand for institutional rupture. Theater ratio (0.65, rising to 0.78): Moderate-high and increasing. Early in the restoration period, theater is lower because intellectuals are still making theoretical critiques of shogunal legitimacy. As restoration movements gain institutional power and claim to exercise unmediated imperial authority, the theater rises: emperors appoint ministers and generals (not exercising unmediated authority); they initiate foreign policy through advisors (not personally); they modernize the bureaucracy through appointed reformers (not direct imperial hand). The claims of unmediated sovereignty become increasingly performative even as the institutional change succeeds. By the peak of restoration consolidation (t=30), theater reaches 0.78: the reading has achieved its goal (dismantled the bakufu), but the emperor's actual governance still requires massive intermediate structures, creating a gap between the restoration's theoretical legitimacy claim and its operational reality.",
+    "perspectival_gap": "This constraint exhibits stark perspectival divergence. The imperial court sees the reading as pure coordination (Rope): establishing legitimate central authority, coordinating the transition, enabling decisive response to foreign engagement and modernization. Restoration intellectuals see mixed coordination-extraction (Tangled Rope): they coordinate the intellectual and political movement while extracting authority from intermediate structures, but they are identity-locked to the reading's success. The samurai bureaucratic class sees pure extraction (Snare): their entire professional world is delegitimized with no alternative offered; the reading offers them only dissolution or subordination. The bakufu apparatus sees a forced institutional transition (Tangled Rope): it must both maintain basic governance (coordination) and accept elimination of its own authority structure (extraction). The analytical observer risks naturalizing the reading as a law of sovereignty (Mountain: 'unmediated authority is the natural form of legitimate rule'), when structural data reveals it as a contested political reading with identifiable beneficiaries and victims.",
+    "directionality_logic": "Directionality (d) values reflect each agent's structural position relative to the reading. The imperial court as beneficiary with arbitrage options (can pursue alternative legitimacy claims if restoration fails) derives d≈0.15, producing low experienced extraction χ. Loyalist intellectuals as moderate/identity_locked agents are harder to model: their power is constrained by dependence on restoration success, but their identity is fused with the reading itself—they have no stable 'outside' position from which to arbitrage, so d≈0.35, producing moderate χ. The samurai class as powerless/trapped derives d≈0.95, producing maximum f(d)≈1.42 and experienced extraction χ approaching the theoretical ceiling. The bakufu as organized/constrained (can resist but faces institutional collapse if it does) derives d≈0.70, producing substantial χ≈0.65. These differences in directionality explain why the same constraint produces different classifications: beneficiary sees coordination (low d → low χ), victim sees extraction (high d → high χ), intermediate actors see mixed dynamics (moderate d → moderate χ).",
+    "kernel_context": "This constraint instantiates ONE reading of the contested imperial mandate kernel. The kernel itself is the persistent commitment to imperial authority as the source of legitimate governance in East Asian political thought, but the kernel is ambiguous about whether the emperor must exercise authority directly or can delegate it. The loyalist restoration reading insists on direct, unmediated exercise: legitimacy is inseparable from active imperial governance. The sibling reading—the bakufu_delegation_reading—claims the kernel permits delegation: imperial authority can be delegated to a shogun or similar official whose legitimacy flows from imperial appointment, preserving the emperor's ultimate sovereignty while enabling intermediate governance structures. These readings coexist as live positions in 19th-century East Asian politics, held by different political factions. Neither reading logically forecloses the other within a single framework; rather, they propose different interpretations of what the kernel permits. The loyalist reading influences the bakufu reading by creating political pressure for institutional reform, but does not foreclose delegation as illegitimate within the framework of imperial authority itself.",
+    "mandatrophy_analysis": "This constraint does not exhibit mandatrophy in the classical sense. Both the core coordination function (centering legitimate governance in the emperor) and the asymmetric extraction (delegitimizing intermediate structures) are coherently present in the reading. The mandatrophy risk lies elsewhere: in whether unmediated imperial sovereignty is practically viable. If the reading requires genuinely unmediated authority but actual governance requires massive delegation, the reading collapses into pure theater (Piton). This is resolvable by an omega variable examining whether the reading's premise is structurally achievable. The constraint's claim is internally coherent; the ambiguity is whether its core premise can be instantiated in practice."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.1
+  },
+  "network": {
+    "affects_constraints": [
+      "imperial_mandate__bakufu_delegation_reading"
+    ],
+    "dual_formulation_note": "The imperial mandate kernel grounds two distinct constraints with different extractiveness profiles. The loyalist restoration reading (this story, ε≈0.58) asserts direct sovereignty and delegitimizes intermediate structures, producing high suppression and theater. The bakufu delegation reading (ε≈0.35) permits delegated authority while maintaining ultimate imperial sovereignty, producing lower suppression and theater. Both are readings of the same kernel; the sibling stories must be linked via network.affects_constraints to enable the analysis system to detect that the perspectival gap is not mere observer disagreement but structural difference in how each reading decomposes the kernel."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "unmediated_imperial_sovereignty",
+    "drift_state": {
+      "moment": "post_bakufu_administrative_entrenchment",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "imperial_mandate__bakufu_delegation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "unmediated_exercise_defines_legitimacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "intermediate_structures_are_usurpation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  }
+}

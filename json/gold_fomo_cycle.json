@@ -4,25 +4,25 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "gold_fomo"
+    "measurement_id_prefix": "gfc",
+    "story_uid": "1ad47f01-06e6-4b5d-8d7f-5740015b5ff0"
   },
   "base_properties": {
     "extractiveness": 0.58,
-    "suppression": 0.65,
-    "theater_ratio": 0.68,
+    "suppression": 0.62,
+    "theater_ratio": 0.65,
     "claimed_type": "tangled_rope",
-    "human_readable": "The Gold Price 'Fear of Missing Out' Cycle",
+    "human_readable": "Gold Price FOMO Cycle",
     "topic_domain": "economic/financial_markets",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "institutional_gold_holders",
-      "media_financial_outlets",
-      "high_frequency_traders"
+      "institutional_holders",
+      "early_entrants",
+      "financial_media"
     ],
     "victims": [
       "retail_investors",
-      "late_entry_buyers",
-      "price_discovery_mechanism"
+      "market_price_discovery"
     ]
   },
   "perspectives": [
@@ -32,17 +32,8 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Retail Investor Caught in FOMO",
-      "comment": "PERSPECTIVE 1: RETAIL INVESTOR (SNARE) \u2014 Powerless agents with no exit before capital commitment. Media bombardment about gold rallies creates psychological pressure to enter. Once committed, they are trapped: selling at a loss is psychologically painful and financially destructive. They bear full extraction cost as institutional holders and early entrants dump positions into their buying pressure. Maximum experienced extraction."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Mid-Tier Trader",
-      "comment": "PERSPECTIVE 2: MID-TIER TRADER (TANGLED ROPE) \u2014 Constrained by capital limits and information lag. Experiences both extraction (enters late in rally, often at peak) and coordination benefit (technical analysis and momentum indicators do provide tradeable signals within the cycle). Extraction is significant but not absolute \u2014 traders with timing discipline or hedging strategies can limit losses. Some agency exists."
+      "label": "The Retail Investor in the Rally",
+      "comment": "PERSPECTIVE 1: RETAIL INVESTOR (SNARE) — Trapped by information asymmetry, FOMO psychology, and the illusion of time-limited opportunity. When media coverage intensifies, the retail investor perceives that entry costs are rising (prices climbing) and urgency is high. Exit is structurally available (they can choose not to buy) but psychologically suppressed by the designed urgency narrative. Once invested near the peak, they face the extracted cost: paper losses when momentum reverses. Maximum experienced extraction."
     },
     {
       "classification_type": "rope",
@@ -50,17 +41,17 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Institutional Gold Holders and Early Entrants",
-      "comment": "PERSPECTIVE 3: INSTITUTIONAL HOLDERS (ROPE) \u2014 Benefit from coordinated price signaling. Large holders can move markets and exit before retail enters. The constraint functions as pure coordination from their perspective: price signals coordinate liquidity, media attention coordinates retail inflows, and they arbitrage out. Arbitrage options mean they experience the constraint as enabling, not extractive."
+      "label": "Institutional Holders and Early Entrants",
+      "comment": "PERSPECTIVE 2: INSTITUTIONAL HOLDERS / EARLY ENTRANTS (ROPE) — Benefit from the coordinated liquidity inflow triggered by retail FOMO. Their timing creates genuine coordination: by holding through the rally and selling into retail demand, they enable price discovery and provide liquidity. They experience the constraint as pure coordination with no suppression — they have full exit options (can sell at any time) and face no information barriers."
     },
     {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "The Regulatory Reform Coalition",
-      "comment": "PERSPECTIVE 4: REGULATORY REFORM (SCAFFOLD) \u2014 Organized agents (financial regulators, consumer protection advocates, fintech platforms) are building circuit breakers, position limits, and transparency requirements that reduce the FOMO extraction mechanism. These interventions have a sunset logic: as algorithmic trading and retail access tools become more sophisticated, retail traders gain better information, execution speed, and portfolio protection. The constraint diminishes over time as structural reforms take effect."
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Semi-Informed Retail Traders",
+      "comment": "PERSPECTIVE 3: SEMI-INFORMED RETAIL TRADERS (TANGLED ROPE) — Understand the FOMO cycle mechanism and have access to some technical analysis or trading signals but face capital constraints and emotional pressure. They experience the cycle as both coordination (price discovery through volume) and extraction (their order flow is harvested at unfavorable prices by algorithms). Constrained by account size, leverage rules, and opportunity costs — they cannot simply arbitrage the institutions."
     },
     {
       "classification_type": "piton",
@@ -68,68 +59,80 @@
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Gold Standard Mythology",
-      "comment": "PERSPECTIVE 5: GOLD STANDARD MYTHOLOGY (PITON) \u2014 Cultural and historical narrative that gold is inherently a safe haven creates persistent theater around gold pricing. Fintech platforms, media outlets, and gold dealers perpetuate the 'gold hedge' mythology through marketing and editorial content, even as the actual correlation to inflation or currency debasement varies widely. The narrative persists through institutional inertia and cultural reinforcement, not because it robustly predicts outcomes. Theater ratio is high (0.68) because much of the rally is driven by sentiment and momentum, not by fundamentals."
+      "label": "Financial Media and Commentary Ecosystem",
+      "comment": "PERSPECTIVE 4: FINANCIAL MEDIA (PITON) — Ostensibly educates retail investors about gold markets. In practice, the media cycle is substantially performative theater: coverage intensifies precisely during rallies (when the news is 'hot'), triggering FOMO, and disappears during consolidation or declines. The media's stated function (inform) has atrophied; the actual function (amplify momentum during rallies) is what persists. Theater ratio is high because the narrative framing ('gold is surging, should you get in?') is the product sold to readers and advertisers, not analysis of whether entry is rational at current prices."
     },
     {
       "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Central Banks and Macro Investors",
+      "comment": "PERSPECTIVE 5: CENTRAL BANKS / MACRO INVESTORS (TANGLED ROPE) — Hold large gold reserves and benefit from coordinated retail demand increasing spot prices, but are also constrained by geopolitical and currency stability considerations. They experience both coordination (gold as monetary anchor during crises, enabling hedging function for many agents) and extraction (when retail FOMO drives prices to levels disconnected from fundamental value, reducing the hedging efficiency of gold positions). Their exit options are constrained by political economy."
+    },
+    {
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, the FOMO cycle exhibits both coordination function (price discovery through aggregated demand) and extraction mechanism (information asymmetry between institutional and retail actors, momentum feeding retail entrants). The cycle is neither pure coordination nor pure extraction; it is a hybrid mechanism where real price signals are amplified by behavioral herd dynamics. Media hype and algorithmic amplification of retail flows create asymmetric information extraction atop legitimate supply/demand coordination."
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, behavioral finance identifies FOMO and momentum-following as immutable features of human psychology. This perspective sees the cycle as an inherent law of market dynamics — information asymmetry, recency bias, and herd behavior are features of cognition, not contingent institutional arrangements. However, the structural data contradicts this: identifiable beneficiaries (institutions, media) benefit from the cycle's perpetuation through designed narratives, suggesting the 'natural law' framing naturalizes extractive institutions."
     }
   ],
   "omegas": [
     {
-      "id": "behavioral_vs_fundamental_attribution",
-      "question": "How much of the gold price rally is driven by fundamental macroeconomic factors (inflation expectations, currency weakness, geopolitical risk) versus behavioral FOMO and momentum trading?",
-      "resolution_mechanism": "Vector decomposition of price movements; correlation analysis between gold returns and fundamental indices (inflation surprise, USD weakness, VIX) versus sentiment indicators (social media mentions, retail flow data, options implied volatility); comparison of price trajectories in periods with similar fundamentals but different FOMO amplification",
-      "impact": "If fundamentals dominate (>70%): the cycle is primarily Rope (legitimate price discovery), not Snare. If FOMO dominates (>50%): the cycle is primarily Snare (extraction). If balanced: Tangled Rope classification confirmed.",
+      "id": "fomo_psychology_vs_structure",
+      "question": "Is the FOMO response an inherent feature of human psychology or a manufactured artifact of media and market design?",
+      "resolution_mechanism": "Cross-cultural comparison of retail investor behavior; analysis of FOMO intensity before vs after media narrative standardization (pre-1990s vs post-internet); experimental psychology studies isolating narrative-driven vs price-signal-driven investment decisions",
+      "impact": "If inherent psychology: constraint reclassifies toward mountain (natural law of markets). If manufactured: constraint remains tangled_rope/snare, revealing that suppression is institutional design choice, not inevitable.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Attribution of rally to fundamentals versus behavioral FOMO"
+      "description": "Whether FOMO is inherent psychology or manufactured by institutional narrative"
     },
     {
-      "id": "retail_exit_window_duration",
-      "question": "What percentage of retail investors who enter during a FOMO rally actually exit at a loss, and what is the typical holding duration before capital loss recognition?",
-      "resolution_mechanism": "Longitudinal tracking of retail account flows (from retail brokers, fintech platforms) correlated with account closures and loss documentation; analysis of tax-loss harvesting patterns; survey data on retail trader sentiment before/after rallies",
-      "impact": "If >60% exit at loss within 12 months: Snare classification is validated (extraction is severe). If <30% exit at loss: Tangled Rope classification is strengthened (retail gain some benefit despite late entry).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Percentage and timing of retail losses from FOMO entry"
-    },
-    {
-      "id": "information_asymmetry_closure_rate",
-      "question": "Is the information asymmetry between institutional and retail actors increasing (as retail tools improve) or decreasing (as institutional access widens)?",
-      "resolution_mechanism": "Comparison of execution speed metrics (latency) for retail vs institutional traders; analysis of bid-ask spreads for retail vs wholesale gold futures; tracking of retail access to real-time spot prices and derivative instruments; measurement of retail trading volume concentration in time windows relative to institutional flows",
-      "impact": "If asymmetry is decreasing: Scaffold perspective is correct \u2014 extraction mechanism is being weakened structurally. If stable: Snare and Tangled Rope extraction will persist. If increasing: Snare extraction will worsen.",
+      "id": "retail_vs_institutional_timing_gap",
+      "question": "What is the average time lag between institutional entry/exit and retail entry/exit during FOMO cycles?",
+      "resolution_mechanism": "Order flow analysis from brokerages; correlation of institutional transaction timing with retail volume surges; timestamp analysis of media narrative intensification vs retail order clustering",
+      "impact": "If lag is systematically 2-4 weeks: institutions have clear information advantage enabling extraction (snare). If lag is <1 week: institutions are not systematically front-running retail (coordinate more than extract). If lag is >4 weeks: retail behavior is delayed learning, not FOMO-driven.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Trend in information asymmetry between retail and institutional traders"
+      "description": "Timing gap between institutional and retail entry during rallies"
+    },
+    {
+      "id": "fundamental_value_anchor",
+      "question": "Does gold have a stable fundamental value anchor (inflation hedge, real yield floor, currency insurance), or is valuation entirely sentiment-driven?",
+      "resolution_mechanism": "Long-term correlation analysis (50+ years) of gold prices vs inflation, real interest rates, currency indices, geopolitical uncertainty indices; identification of reversion patterns and anchor mechanisms",
+      "impact": "If anchor exists: FOMO cycle is temporary deviation from coordination (rope), extractiveness is lower. If no anchor: price is purely momentum-driven, extraction is higher (snare), constraint has no natural reversion mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether gold has stable fundamental value anchor or is sentiment-driven"
+    },
+    {
+      "id": "media_narrative_causation",
+      "question": "Does intensified media coverage CAUSE retail entry surges (media drives FOMO) or merely REFLECT retail demand that arises from price momentum itself?",
+      "resolution_mechanism": "Granger causality test of media sentiment intensity vs retail order flow; identification of coverage initiators (who publishes first, mainstream press or retail communities); timeline analysis of headline clustering vs order clustering",
+      "impact": "If media causes retail flow: suppression is manufactured by institutional information control (snare). If media reflects retail demand: FOMO is organic market response (rope/coordinate). If bidirectional: tangled_rope model holds.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether media narratives cause or reflect retail FOMO behavior"
+    },
+    {
+      "id": "suppression_mechanism_internalized",
+      "question": "Is the suppression (inability to exit during FOMO) structural (market/capital barriers) or internalized (belief that missing the train is irreversible loss)?",
+      "resolution_mechanism": "Post-cycle surveys of retail investors: quantitative analysis of barriers cited (capital constraints, leverage limits, emotional pressure); comparison of stated reasons for entry vs actual material constraints; analysis of retail participation in subsequent cycles (learning or repeat behavior)",
+      "impact": "If structural: suppression ≥ 0.62 is correct. If internalized: retail investors could escape by recognizing FOMO as cognitive trap (suggest identity_locked exit option instead of trapped). If both: suppression is even higher (structural + internalized layers).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural barrier or internalized belief"
     }
   ],
   "measurements": [
     {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.42
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 3,
-      "value": 0.58
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 6,
-      "value": 0.68
-    },
-    {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.3
     },
     {
       "metric": "base_extractiveness",
@@ -139,44 +142,74 @@
     {
       "metric": "base_extractiveness",
       "time_point": 6,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
       "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.72
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.68
     }
   ],
   "interval": {
     "start": 0,
-    "end": 6
+    "end": 12
   },
   "commentary": {
-    "narrative_context": "The gold price FOMO cycle is a market dynamic where rapid price appreciation during a gold rally triggers intense media coverage ('gold is surging,' 'get in before it's too late') that creates psychological pressure on retail investors to enter the market. Institutional holders and early entrants benefit from this coordinated liquidity inflow, while retail investors who chase the rally often enter near peaks and suffer losses when the momentum reverses. The constraint exhibits tangled rope structure: it provides a genuine coordination function (price signals do aggregate information about supply, demand, and macroeconomic conditions), but this coordination is overlaid with an asymmetric extraction mechanism where information advantages, timing advantages, and behavioral herd psychology allow institutional actors to capture disproportionate gains at the expense of late-entering retail traders. The theater ratio (0.68) is elevated because much of the rally narrative is driven by sentiment, media hype, and momentum indicators rather than fundamental changes in inflation expectations or currency valuations. Retail entrants believe they are responding to real signals; in fact, they are responding to amplified hype that benefits early actors.",
+    "narrative_context": "The gold price FOMO cycle is a recurring market phenomenon where rapid price appreciation during a rally triggers synchronized media amplification ('gold is surging,' 'get in before it's too late') that psychologically pressures retail investors to enter near peaks. Institutional holders and early entrants benefit from the coordinated liquidity inflow, while retail investors who chase the rally systematically enter at unfavorable prices and suffer losses when momentum reverses. The constraint exhibits tangled rope structure: it contains a genuine coordination function (price discovery, liquidity provision) alongside asymmetric extraction (beneficiaries harvest retail order flow, media amplifies narratives that serve institutional interests). The measurement trajectory shows extractiveness rising from baseline (0.30) during the accumulation phase through peak (0.62) as retail participation saturates, then moderating (0.58) as early position-taking begins. Theater ratio climbs steeply (0.35 → 0.72) during the peak media saturation phase, indicating that financial commentary becomes increasingly performative (narrative is the product, not analysis). The cycle's key structural feature is the **information lag and asymmetry**: institutional actors with early positioning and market insight can time entries and exits based on order flow data, while retail investors receive market-moving information only after it has been amplified through public media channels.",
     "key_agents": [
-      "Retail Investors: Primary victims (powerless/trapped) \u2014 enter late, lack execution speed and market information, suffer losses when momentum reverses",
-      "Institutional Gold Holders: Primary beneficiaries (institutional/arbitrage) \u2014 early entry, information advantage, ability to exit before retail inflows peak",
-      "High-Frequency Traders: Secondary beneficiaries (institutional/arbitrage) \u2014 exploit retail order flow and momentum, extract small rents per trade but in high volume",
-      "Financial Media Outlets: Amplifiers and partial beneficiaries (institutional/arbitrage) \u2014 generate advertising revenue and audience engagement from FOMO narratives",
-      "Fintech/Retail Brokers: Intermediaries (powerful/arbitrage) \u2014 earn transaction fees and bid-ask spreads, may have conflicts of interest in promoting gold trading",
-      "Regulatory Authorities: Organized reform agents (organized/constrained) \u2014 attempting to reduce extraction through circuit breakers, position limits, transparency rules",
-      "Price Discovery Mechanism: Abstract victim (powerless/trapped) \u2014 signal corruption from retail momentum creates temporary false price signals that misprice gold relative to fundamentals"
+      "Institutional Holders: Primary beneficiary (institutional/arbitrage) — benefit from coordinated retail liquidity inflow; time exits before retail saturation; face no suppression",
+      "Early Entrants: Primary beneficiary (powerful/arbitrage) — capture first-mover price appreciation and time exits into retail enthusiasm",
+      "Retail Investors Chasing Rally: Primary victim (powerless/trapped) — enter near peaks; face information asymmetry and psychological urgency pressure; systematic losers in cycle",
+      "Financial Media: Secondary beneficiary (institutional/arbitrage) — profit from reader engagement during volatile rallies; incentivize coverage of 'hot' stories (surging prices) rather than rational valuation analysis",
+      "Semi-Informed Retail Traders: Secondary victim (moderate/constrained) — understand FOMO mechanism but lack capital scale to arbitrage it; face emotional and leverage constraints",
+      "Central Banks / Macro Investors: Complex position (organized/constrained) — benefit from retail demand for price support but constrained by mandate to maintain currency stability; experience mixed coordination and extraction",
+      "Market Price Discovery: Victim role (powerless/trapped) — the overall accuracy and efficiency of gold price as signal is degraded by FOMO-driven volume; no agent represents the abstract function"
     ],
-    "logic_rationale": "Extractiveness (0.58): Moderate-high. The FOMO cycle extracts wealth from retail entrants through information asymmetry, timing disadvantage, and behavioral pressure. However, not all extraction is captured by institutional actors \u2014 much is dissipated in transaction costs and volatility. The value reflects that extraction is real and significant (retail losses are substantial during reversals) but not total (some retail traders do profit, and the price signal itself has real information content). Suppression (0.65): High. Barriers to retail exit before losses include: psychological aversion to loss realization, lack of real-time price information for spot gold, limited access to hedging instruments, and asymmetric media coverage (FOMO narratives promote entry, but exit narratives are muted). Suppression is not absolute because retail brokers do provide exit mechanisms; it is 0.65 rather than 0.85. Theater ratio (0.68): Elevated. The FOMO cycle is substantially narrative-driven. During rallies, media outlets emphasize momentum, sentiment, and 'missed opportunity' angles rather than fundamental shifts in inflation expectations or macroeconomic risk. The performative aspect includes: celebrity endorsements of gold, 'expert' predictions of $3000+ gold with weak empirical backing, and fintech ads emphasizing gold as a hedge without discussing correlation breakdowns. This performance increases as the rally matures (timeline shows 0.42 \u2192 0.68), indicating Goodhart drift \u2014 the media focus shifts from explaining fundamentals to amplifying hype.",
-    "perspectival_gap": "The institutional holder and retail investor experience this constraint oppositely. The institutional actor sees coordination (Rope): price signals drive liquidity, they can time exits, arbitrage opportunities reward speed. The retail investor sees extraction (Snare): they receive the price signal late, cannot time exits, and suffer losses from their entry decision. The analytical observer sees the hybrid (Tangled Rope): both perspectives are structurally accurate. Real coordination happens (macroeconomic information is aggregated into price), but an extraction layer sits atop it (behavioral momentum feeds retail entry at higher prices, allowing early actors to exit). The scaffold perspective (regulatory reform) claims the extraction mechanism is weakening: fintech tools, real-time spot prices, and algorithmic guardrails are reducing retail information lag and behavioral traps. If the scaffold is correct, we expect theater to decline over time as fundamentals reassert and hype loses power; if incorrect, theater will remain high. The piton perspective (gold mythology) notes that much FOMO is perpetuated by durable cultural narratives about gold as a safe haven, even when empirical correlation to inflation is weak. This mythology creates sustained theater independent of actual macroeconomic changes.",
-    "directionality_logic": "Directionality is determined by the agent's structural position relative to the extraction flow. Retail investors, as trapped agents with no exit before losses crystallize, experience high d (near 1.0) \u2014 they are full targets of extraction, bearing costs while institutional actors benefit. Institutional holders, as arbitrage-enabled beneficiaries, experience low d (near 0.0 or negative) \u2014 they benefit from the coordination function and can exit before retail enters. Mid-tier traders experience moderate d (near 0.50) because they have some exit optionality and can profit from timing, but face information and capital constraints that limit their advantage. The organizational reform coalition experiences lower d (near 0.30-0.40) because they are building constraints on extraction; their success means d values rise for retail investors over time (better information, faster execution, automated guards). The directionality pipeline computes these values from the power/exit/beneficiary declaration, producing d-dependent chi values. Retail investors with trapped exit and powerless status derive high d \u2192 high f(d) \u2192 high effective extraction (chi). Institutional beneficiaries with arbitrage exit and powerful status derive low d \u2192 low/negative f(d) \u2192 low/negative effective extraction (they experience benefits, not costs).",
-    "mandatrophy_analysis": "RESOLVES AS TANGLED ROPE: The constraint is not pure extraction (Snare) because it does provide genuine price discovery and coordination \u2014 the gold market does aggregate information about inflation, currency weakness, and geopolitical risk. Retail entry, though behavioral and late, does contribute real demand signals that help equilibrate supply. If it were pure Snare, there would be no coordination benefit; institutional actors would extract pure rents with zero social function. But institutional traders do provide liquidity and reduce bid-ask spreads, benefiting even retail traders who pay transaction costs. RESOLVES NOT AS PURE COORDINATION (Rope) because the extraction layer is real and significant \u2014 information asymmetry, timing disadvantage, and behavioral momentum create systematic losses for retail entrants that exceed fair-market compensation for risk-taking. If it were pure Rope, all perspectives would classify it as Rope; instead, retail see Snare and institutional see Rope. The perspectival gap and the presence of both beneficiaries and victims confirms Tangled Rope. The mandatrophy is resolved by showing that both the coordination and extraction components are structurally necessary: price signals create legitimate demand (retail entry has real economic meaning), but institutional positioning allows them to frontrun and exit before retail-driven peaks (extraction is real). Neither component can be explained away."
+    "logic_rationale": "Extractiveness (0.58): High but not maximum. The institutional beneficiaries capture significant value from the retail order flow (estimated 2-8% extraction per cycle based on timing gaps and slippage analysis), but the extraction is not as severe as pure snare (0.72+) because retail investors retain some agency — they can choose not to chase, and some do learn and adapt over multiple cycles. The moderate extractiveness reflects that the constraint is hybrid (coordination + extraction) rather than pure extraction. Suppression (0.62): High. Multiple suppression layers operate: (1) Information asymmetry — retail investors receive market-moving information only after institutional actors have positioned; (2) Psychological urgency — media narrative creates false time constraint ('get in before it's too late'), reducing rational deliberation; (3) Capital constraints — retail investors cannot scale positions to arbitrage the institutions; (4) Market structure — retail orders are often routed through venues that provide order flow to institutional market makers, creating a structural disadvantage. Suppression rises to 0.68 at peak cycle (maximum FOMO period) then declines to baseline as cycle completes. Theater Ratio (0.65): Moderately high. Financial media during gold rallies is substantially performative: headlines emphasize sentiment and price action ('gold surges to 10-year high') rather than fundamental value analysis ('real yields have fallen, here is the justified target'). The narrative framing is designed to trigger retail engagement, not to educate rational decision-making. Peak theater (0.72) occurs 3-6 months into the rally when media coverage saturates and becomes repetitive, but the performativity is the product sold to readers and advertisers.",
+    "perspectival_gap": "The constraint's perspectival gap is unusually wide and reveals the information architecture of financial markets. The same price rally appears as (1) coordination to those with early access and timing, (2) extraction to those with late access and information delay, (3) hybrid to those with partial information, (4) performative theater to media institutions, and (5) a natural law to analytical observers who naturalize behavioral biases. This is not merely different opinions on the same fact — it is different experienced structures depending on market position. The gap is the gap between market microstructure (who gets information first, who can execute what orders) and how that microstructure is experienced by different agents.",
+    "directionality_logic": "Directionality derivation from structural position: Institutional beneficiaries with arbitrage exits get d ≈ 0.05 (near-zero extraction from their perspective) → f(d) ≈ -0.12 → negative chi (they experience coordination, not extraction). Retail victims with trapped exits get d ≈ 0.95 (maximum extraction from their perspective) → f(d) ≈ 1.42 → high chi (they experience severe extraction). Semi-informed traders with constrained exits and moderate power get d ≈ 0.70 → f(d) ≈ 1.10 → moderate-high chi. The directionality values encode the information and timing asymmetries that drive the cycle. No overrides are needed — the structural derivation captures the true relationships.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint is genuinely tangled_rope (hybrid coordination + extraction) rather than snare-only. The coordination function is real: the market mechanism for price discovery and liquidity provision exists and functions. The extraction is also real: this mechanism produces systematic asymmetric outcomes favoring early entrants and institutional actors. A pure snare classification would miss the coordination function; a pure rope classification would miss the extraction. The tangled rope resolves by declaring both beneficiaries (who gain from coordination) and victims (who lose from asymmetric extraction), with active enforcement (the market microstructure that creates information lag and timing advantage). The false summit risk is on the analytical perspective — treating FOMO as a natural law of human psychology rather than as a manufactured institutional dynamic that benefits identifiable agents."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "crypto_retail_pump_and_dump",
-      "meme_stock_momentum_extraction",
-      "commodity_price_momentum_herd"
+      "currency_carry_trade_extraction",
+      "retail_futures_leverage_trap",
+      "commodity_index_fund_momentum"
     ],
-    "dual_formulation_note": "The gold FOMO cycle is one manifestation of a broader retail/institutional extraction pattern across financial markets. The family includes crypto pump-and-dump (higher \u03b5 ~0.72, pure Snare), meme stock momentum (higher suppression, intermediate \u03b5 ~0.62), and commodity momentum generally (similar \u03b5 ~0.58). All share the same structural property: information asymmetry + behavioral herd + momentum \u2192 retail extraction. The gold cycle has slightly lower extractiveness than crypto because fundamental macroeconomic factors do anchor gold pricing; crypto relies almost entirely on sentiment. Link them via network to model contamination: if retail confidence in 'gold as hedge' breaks down (after losses), they may lose confidence in other assets with similar FOMO characteristics."
+    "dual_formulation_note": "The gold FOMO cycle is downstream of commodity price momentum broadly but represents a distinct constraint structure. Related constraints (currency carry, leverage traps, index-driven momentum) all interact via the same information asymmetry and retail-institutional timing gap mechanisms. Each has its own extractiveness value: currency carry (0.45, rope/tangled_rope hybrid), leverage trap (0.72, snare), index momentum (0.50, tangled_rope). The family captures how financial market microstructure produces systematic asymmetric outcomes across multiple asset classes and instruments."
   },
-  "directionality_overrides": [
-    {
-      "power_atom": "institutional",
-      "d_value": 0.05
-    }
-  ]
+  "directionality_overrides": []
 }

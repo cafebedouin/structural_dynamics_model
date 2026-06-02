@@ -1,0 +1,272 @@
+{
+  "header": {
+    "constraint_id": "fisa_702_statutory_text__constitutional_floor_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_fisa_702_constitutional_floor",
+    "measurement_id_prefix": "fisa702cf",
+    "story_uid": "817aa5fa-f234-4813-923d-1771b7155221",
+    "created_at": "2026-02-26T14:32:15Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "FISA 702 Statutory Text as Constitutional Floor: Fourth Amendment Warrant Requirement for Content Queries",
+    "topic_domain": "constitutional_law/national_security/surveillance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [],
+    "victims": [
+      "u_s_persons_subject_to_702_queries",
+      "fourth_amendment_protection_regime"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "U.S. Person Subject to 702 Query",
+      "comment": "PERSPECTIVE 1: U.S. PERSON IN 702 DATABASE (SNARE) — Trapped within the surveillance apparatus with no structural exit. Communications content searchable by government agents without individualized warrant or probable cause review. Full extraction with zero agency. The constraint operates invisibly — the person does not know they are in the database or subject to queries. No alternative exists except geographic exit (emigration), which is prohibitively costly."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Privacy Advocate / Civil Liberties Litigant",
+      "comment": "PERSPECTIVE 2: PRIVACY ADVOCATE (SNARE) — Can challenge 702 in litigation (constrained exit: high legal/political cost) but faces suppression mechanisms: state secrets privilege, Youngstown standing doctrine, FISA Court opacity, classified briefings limiting public advocacy. Attempting exit through litigation triggers counter-extraction (government compels disclosure of litigation strategy through surveillance itself). Moderate power + constrained exit + high suppression = snare."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Executive Intelligence Agency (NSA/FBI)",
+      "comment": "PERSPECTIVE 3: EXECUTIVE INTELLIGENCE AGENCY (TANGLED ROPE) — Experiences 702 as coordination mechanism: it solves the genuine problem of foreign intelligence collection without requiring warrants for foreign targets. However, under constitutional floor reading, the mechanism includes asymmetric extraction: the coordination benefit (fast, efficient foreign targeting) is maintained, but the extraction cost (warrantless U.S. person querying) is imposed on subjects without consent or compensation. Active enforcement required to maintain the query authority. Exit is constrained: agencies cannot abandon 702 without congressional action, but they can lobby for statutory amendment or administrative interpretation widening the scope. The coordination (foreign targeting) is genuine; the extraction (U.S. person access) is embedded in the mechanism."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "FISA Court (Section 702 Judicial Interpretation Authority)",
+      "comment": "PERSPECTIVE 4: FISA COURT (ROPE) — Experiences constitutional floor reading as pure coordination: the court's statutory role is to balance foreign intelligence needs against constitutional constraints. Under constitutional floor reading, the FISA Court has clear coordinating authority: it must conduct individualized probable cause review before U.S. person content queries, establishing a transparent warrant alternative. The court has arbitrage exit (can reinterpret the statute; can appeal to higher courts). From the court's structural position, the constraint is a solving mechanism, not extractive. However, the FISA Court's actual institutional trajectory (high rubber-stamp rate, secret docket, limited transparency) suggests the rope classification may be aspirational—see Piton perspective below."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "FISA Court in Historical Practice",
+      "comment": "PERSPECTIVE 5: FISA COURT HISTORICAL PRACTICE (PITON) — The FISA Court's role as independent warrant authority is substantially degraded. Theater_ratio reflects the performative character of FISA authorization: the Court approves ~99.97% of government applications; judicial review is secret; the government's legal theories are not publicly tested; the Court has largely adopted executive agency framings of constitutional constraints. The Rope coordination function (independent review) persists through institutional form (judges, docket, written opinions) but functions minimally. This is piton: former Rope that atrophied through institutional capture, maintained through inertia and theatrical legitimacy."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Constitutional Floor as Natural Law (False Summit Risk)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, the Fourth Amendment is a foundational fixed text. The constitutional floor reading treats the warrant requirement and probable cause standard as immutable features of the legal structure: no government interpretation or statutory text can override a constitutional guarantee. This perspective sees the constraint as a mountain—unchangeable by legislation or administrative action. However, this reading is a FALSE SUMMIT: the 'immutability' of the constitutional floor depends entirely on the interpretive lineage chosen (see axioms). Alternative readings (incidental_collection_reading, foreign_target_strict_reading) invoke the same constitutional text but arrive at different constraints. The mountain classification naturalizes one interpretive choice and obscures its contingency."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "statutory_text_constitutional_override",
+      "question": "Can FISA statutory text (Section 702) authorize government action that the Fourth Amendment floor prohibits? Is statutory text subordinate to constitutional floor or co-equal?",
+      "resolution_mechanism": "Supreme Court precedent on constitutional supremacy vs statutory interpretation deference; analysis of Youngstown three-zone framework (explicit authorization vs twilight vs claimed authority against constitutional constraint)",
+      "impact": "If statutory text subordinate: constitutional floor applies (this reading, ε≈0.68). If statutory text can redefine what counts as Fourth Amendment search: extraction drops sharply (ε≈0.25, shifts toward foreign_target_strict_reading). This is THE axiomatic gap between readings.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether statutory text can override constitutional floor constraints"
+    },
+    {
+      "id": "foreign_intelligence_exception_scope",
+      "question": "Does Fourth Amendment warrant requirement apply differently in foreign intelligence context? Is the foreign/domestic distinction constitutionally significant or merely policy-relevant?",
+      "resolution_mechanism": "Historical analysis of United States v. Truong precedent and its relationship to post-FISA doctrine; examination of whether foreign intelligence agents are treated as 'federal officers' subject to Fourth Amendment at all",
+      "impact": "If foreign intelligence exception is constitutionally permissible: extraction increases (statutory foreign/domestic distinction valid), supporting incidental_collection_reading (ε≈0.15). If no foreign intelligence exception: constitutional floor applies universally, supporting this reading (ε≈0.68).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Constitutional scope of foreign intelligence exception to warrant requirement"
+    },
+    {
+      "id": "query_as_search_definition",
+      "question": "Does searching a pre-collected communications database constitute a Fourth Amendment 'search' triggering warrant requirements? Or is the search only the initial collection from the wire?",
+      "resolution_mechanism": "Comparison of Karo/Carpenter/Kyllo definitions of Fourth Amendment search; analysis of whether database access differs structurally from wiretap content access; empirical analysis of how query execution relates to collection execution",
+      "impact": "If query is separate search: constitutional floor reading applies, warrant required before query (ε≈0.68, this reading). If query is mere retrieval of lawfully collected data: no Fourth Amendment search triggered (ε≈0.08, shifts toward incidental_collection_reading).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether 702 database queries constitute Fourth Amendment searches"
+    },
+    {
+      "id": "individualized_probable_cause_practicability",
+      "question": "Can FISA Court conduct meaningful individualized probable cause review of all 702 queries? Or does the volume/scale of 702 querying make per-query warrant review structurally impossible?",
+      "resolution_mechanism": "Empirical data on query volume and FISA Court capacity; analysis of whether batch procedures or threshold-based pre-authorization could substitute for per-query review; comparison to analogous bulk data systems (NSA phone metadata)",
+      "impact": "If practicable: constitutional floor reading is implementable, extraction remains high (ε≈0.68) but legitimated through procedure. If impracticable: reading becomes aspirational (extraction stays ε≈0.68 but justified differently) or reading is overruled by structural limits favoring foreign_target_strict_reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of per-query probable cause review under 702 scale"
+    },
+    {
+      "id": "reading_kernel_ambiguity",
+      "question": "Which interpretive lineage does FISA 702 statutory text instantiate: the foreign intelligence statutes lineage (United States v. Truong, FISA 1978 original intent, executive discretion) or the criminal procedure/constitutional lineage (Fourth Amendment doctrine, Karo/Carpenter, warrant requirement as bright line)?",
+      "resolution_mechanism": "Historical legislative analysis of FISA 1978 vs 2008 amendments; comparison of statutory text cross-references (FISA references Fourth Amendment minimization but does not explicitly authorize waiver); analysis of whether 702 'targets' language presupposes constitutional permissibility or merely statutory authorization",
+      "impact": "If foreign intelligence lineage: this reading is foreclosed by the kernel's foundational design (ε→0.15, supporting foreign_target_strict_reading). If constitutional lineage: this reading is the baseline (ε≈0.68). If ambiguous kernel: all three sibling readings coexist as interpretive options (affects mandate of reading_relations).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which interpretive tradition (foreign intelligence vs criminal procedure) governs FISA 702 kernel"
+    },
+    {
+      "id": "false_summit_mountain_naturalization",
+      "question": "Does the 'constitutional floor' classification as Mountain naturalize one interpretive choice as though it were inevitable law of nature, rather than one reading of a contested kernel?",
+      "resolution_mechanism": "Comparison of this reading's mountain classification to alternative readings' classifications; examination of whether the mountain perspective relies on assuming the constitutional floor axiom is already settled (circular reasoning) vs deriving it from independent textual/doctrinal analysis",
+      "impact": "If false summit confirmed: mountain classification is signature of interpretive lock-in, not description of structural immutability. The piton perspective becomes diagnostically central—it shows how the mountain framing masks institutional capture of the FISA Court.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether constitutional floor reading naturalizes contested kernel interpretation as immutable law"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "fisa702cf_epsilon_initial"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 8,
+      "value": 0.58,
+      "id_override": "fisa702cf_epsilon_post_snowden"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 16,
+      "value": 0.68,
+      "id_override": "fisa702cf_epsilon_contemporary"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "id_override": "fisa702cf_suppression_initial"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.68,
+      "id_override": "fisa702cf_suppression_post_snowden"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.72,
+      "id_override": "fisa702cf_suppression_contemporary"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48,
+      "id_override": "fisa702cf_theater_initial"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.54,
+      "id_override": "fisa702cf_theater_post_snowden"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 16,
+      "value": 0.58,
+      "id_override": "fisa702cf_theater_contemporary"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 16
+  },
+  "commentary": {
+    "narrative_context": "FISA Section 702 authorizes the government to conduct broad surveillance of foreign intelligence targets' communications without individualized warrants. The constitutional floor reading interprets this statute as subordinate to Fourth Amendment constraints: any search of U.S. person communications content requires probable cause and warrant, regardless of statutory text. This reading treats 702 database queries as Fourth Amendment searches triggering warrant requirement independent of the foreign/domestic distinction. The constraint measures the extractive force of the warrantless query regime: how much government power flows from treating queries as administrative functions rather than searches. The structural data shows this reading instantiates a Snare from the perspective of trapped U.S. persons and a high-suppression extraction mechanism from the beneficiary's absent perspective (no beneficiaries exist under this reading—the constraint is pure one-sided extraction). The measurement trajectory tracks rising suppression (state secrets privilege, FISA Court opacity, classified dockets) and rising theater ratio (FISA Court approval rates above 99%, rubber-stamp authorization without meaningful review). The constraint is a kernel reading: one interpretation of FISA's contested statutory text. The sibling readings (incidental_collection_reading, foreign_target_strict_reading) interpret the same kernel differently, arriving at different constraints with different ε values. This reading's structural delta is that 702 queries are Fourth Amendment searches; the other readings argue the searches occurred during collection, not querying, or that foreign intelligence targets fall outside Fourth Amendment protection.",
+    "key_agents": [
+      "U.S. Persons in 702 Database: Primary victims (powerless/trapped) — searchable without warrant or knowledge; no exit mechanism",
+      "Government Intelligence Agencies (NSA, FBI, CIA): Asymmetric beneficiaries (institutional/constrained) — experience 702 as coordination enabling foreign intelligence collection, but under constitutional floor reading face extraction cost (warrant requirement) they have externalized to subjects",
+      "FISA Court: Nominal warrant authority (institutional/arbitrage) — designed to conduct independent review but operates with 99.97% approval rate; experiences piton degradation (coordination function atrophied)",
+      "Privacy Advocates / Fourth Amendment Litigants: Secondary victims (moderate/constrained) — constrained exit (litigation faces standing doctrine, state secrets, FISA Court secrecy)",
+      "Congressional Oversight: Distributed authority (organized/constrained) — balances foreign intelligence need against constitutional constraint but is suppressed by classification requirements and executive secrecy",
+      "Supreme Court: Analytical authority (analytical/analytical) — potential resolver of the kernel ambiguity; has not yet classified 702 queries as Fourth Amendment searches in binding precedent"
+    ],
+    "logic_rationale": "Extractiveness (ε=0.68): High. Under constitutional floor reading, government agents can query 702 database for any U.S. person communications without probable cause, warrant, or oversight. The extraction is the asymmetric power: government gains warrantless access; subjects lose Fourth Amendment protection. The measurement trajectory (0.42→0.58→0.68) tracks the accumulation of 702 querying as a normalized practice post-Snowden. Initial value (0.42) reflects pre-Snowden relative obscurity; post-Snowden (0.58) reflects public revelation of scale; contemporary (0.68) reflects administrative normalization despite litigation and reform proposals. If constitutional floor reading prevails, extractiveness drops sharply (warrant requirement imposes cost on government), but the current reading measures the constraint AS IT EXISTS under executive interpretation, which is ε≈0.68. Suppression (0.72): High. Multiple suppression mechanisms maintain the constraint: state secrets privilege prevents full disclosure of 702 programs; FISA Court docket is classified; agency legal opinions are not published; whistleblowers face criminal prosecution; Congress receives only classified briefings; standing doctrine prevents public litigation. The suppression trajectory (0.55→0.68→0.72) reflects post-Snowden hardening of classification protocols and expansion of legal theories justifying secrecy. Theater ratio (0.58): Moderate-high. FISA Court approval rate of 99.97% indicates the warrant process is performative: the court's rubber-stamp function differs dramatically from the adversarial warrant process in ordinary criminal procedure. However, theater is not as extreme as judicial review in national security contexts (some FISA opinion language addresses constitutional constraints). The measurement trajectory shows slight degradation (0.48→0.54→0.58) reflecting the court's increasing adoption of executive agency framing without apparent independent scrutiny.",
+    "perspectival_gap": "The perspectival gaps in this constraint reveal the interpretive kernel's structural ambiguity. The powerless U.S. person sees pure extraction (Snare)—they are trapped without knowledge or exit. The intelligence agency sees coordination (Tangled Rope)—702 solves their genuine foreign intelligence problem, but under constitutional floor reading, the solution includes asymmetric extraction (warrantless queries). The FISA Court experiences its nominal role as coordination (Rope), but the historical piton perspective shows the coordination function has atrophied. The analytical observer risks naturalizing one interpretive choice (constitutional floor = mountain) when alternative readings would classify the same statutory text as a different constraint entirely. The gap between Rope (FISA Court as warrant authority) and Piton (FISA Court as rubber-stamp) reveals how institutional capture transforms a coordination mechanism into a performative constraint maintained by inertia.",
+    "directionality_logic": "The constitutional floor reading declares no beneficiaries. Under this reading's interpretation, 702 is pure extraction—the government extracts power from U.S. person querying without providing coordination benefit or compensation to subjects. The victims are U.S. persons subject to queries and the Fourth Amendment protection regime itself (abstract collective). Directionality flows entirely toward the government (d approaching 1.0 from subject perspectives). The FISA Court's Rope classification derives from its nominal role (independent warrant authority) even though institutional piton degradation shows the mechanism functions minimally. The intelligence agency's Tangled Rope classification recognizes genuine coordination (foreign intelligence collection) embedded within asymmetric extraction (warrantless U.S. person access). No beneficiary/victim declarations appear in base_properties because the reading treats the constraint as zero-sum extraction, not mixed coordination. This absence is structurally meaningful—it signals that alternative readings would populate beneficiaries (foreign intelligence agencies, national security state) and potentially shift the constraint toward Rope or Tangled Rope.",
+    "mandatrophy_analysis": "Mandatrophy is RESOLVED through kernel reading structure. The apparent contradiction—is 702 a foreign intelligence coordination mechanism or a warrantless search violation?—dissolves when we recognize these are TWO DIFFERENT CONSTRAINTS. The constitutional floor reading answers the second question (ε≈0.68, Snare). The foreign_target_strict_reading answers the first question (ε≈0.15, Rope). Both readings interpret the same FISA Section 702 statutory text but route to different constraints because they adopt different foundational axioms about constitutional supremacy and the scope of foreign intelligence exceptions. The engine resolves mandatrophy by showing: (1) both readings are coherent; (2) they disagree on what constraint 702 instantiates; (3) the disagreement is at the kernel level (constitutional interpretation), not at the metrics level; (4) no single metric can adjudicate between readings because the readings define which metrics matter. This reading does not resolve mandatrophy by discovering the 'true' constraint—it resolves by mapping the disjunction of readings across the kernel.",
+    "kernel_context": "KERNEL: fisa_702_statutory_text — The Federal Intelligence Surveillance Act Section 702 statutory text, amended 2008. The kernel is formalized (written statute), grounded in lineage authority (legislative enactment, constitutional foundation), and interpretively contested. THIS READING: constitutional_floor_reading — The Fourth Amendment floor doctrine reading. The government cannot authorize searches that violate constitutional guarantees through statutory text alone. 702 database queries are Fourth Amendment searches requiring warrant and probable cause. SIBLING READINGS: (1) incidental_collection_reading—702 constitutional because initial FISA authorization for foreign target collection incidentally captures U.S. person communications; querying the database is not a separate search, only retrieval of lawfully collected data. (2) foreign_target_strict_reading—Fourth Amendment applies differently to foreign intelligence; targeting foreign intelligence objectives falls outside Fourth Amendment scope (United States v. Truong lineage); 702 is constitutional because targets are non-U.S. persons. STRUCTURAL DELTA: This reading reframes 702 from a foreign intelligence statute to a criminal procedure question. ε shifts from operational efficiency metric (foreign intelligence need satisfied with minimal warrant burden) to constitutional compliance cost (every query requires individualized probable cause review). The constraint's extractiveness measures constitutional constraint violation, not intelligence capability."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "fisa_702_statutory_text__incidental_collection_reading",
+      "fisa_702_statutory_text__foreign_target_strict_reading",
+      "fisa_amendment_reauthorization_2023",
+      "fourth_amendment_digital_surveillance_scope"
+    ],
+    "dual_formulation_note": "The FISA 702 kernel decomposes into three structurally distinct constraints via reading relations. This constraint (constitutional_floor) measures extraction from the Fourth Amendment floor perspective. The incidental_collection_reading measures extraction from the foreign intelligence authorization perspective. The foreign_target_strict_reading measures extraction from the foreign intelligence exception perspective. All three share the same statutory text (702); all three are kernel readings of the same kernel (fisa_702_statutory_text); but they define different constraints because they adopt different foundational axioms about constitutional scope. Network links enable contamination propagation analysis: if Supreme Court precedent resolves the kernel ambiguity in favor of one reading, the engine can automatically reclassify all three constraint stories."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "fisa_702_statutory_text__incidental_collection_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "fisa_702_statutory_text__foreign_target_strict_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "fourth_amendment_floor_inviolable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "query_as_independent_search",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "criminal_procedure_constitutional_lineage",
+    "drift_state": {
+      "moment": "contemporary_post_snowden_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "fisa_702_statutory_text__incidental_collection_reading",
+      "fisa_702_statutory_text__foreign_target_strict_reading"
+    ]
+  }
+}

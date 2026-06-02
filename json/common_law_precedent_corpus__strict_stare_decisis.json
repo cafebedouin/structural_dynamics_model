@@ -1,0 +1,257 @@
+{
+  "header": {
+    "constraint_id": "common_law_precedent_corpus__strict_stare_decisis",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "staredec",
+    "story_uid": "6ece0f1e-2f04-4216-89ea-19a705f9289e"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.44,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Strict Stare Decisis: Precedent as Backward Constraint",
+    "topic_domain": "legal_theory/jurisprudence/constitutional_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "established_doctrine_holders",
+      "institutional_continuity_interests"
+    ],
+    "victims": [
+      "litigants_challenging_precedent",
+      "jurisprudential_innovation"
+    ],
+    "accessibility_collapse": 0.68,
+    "resistance": 0.42
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Litigant Bound by Adverse Precedent",
+      "comment": "A party seeking to overturn established precedent faces near-absolute barriers: precedent is binding authority, departure requires extraordinary justification, and the petitioner bears the burden of proving the prior holding is demonstrably erroneous. The litigant cannot exit the constraint without changing the law itself — a task beyond individual agency."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Lower Court Judge",
+      "comment": "A trial or appellate judge in a jurisdiction where stare decisis is strictly enforced must follow binding precedent even when individually convinced it is wrong. The judge faces professional consequences (reversal, bar discipline) for departing from precedent without extraordinary justification. The constraint is enforced through appellate oversight and institutional hierarchy."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Established Doctrine Holder",
+      "comment": "Beneficiaries of established precedent experience the constraint as stable coordination: stare decisis ensures their legal positions remain valid, contracts and rights retain predictable meaning, and their settled expectations are protected across generations. The constraint subsidizes this agent's position — exit would mean losing the precedential foundation of their advantages."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Constitutional Reform Movement",
+      "comment": "Organized agents (appellate bars, constitutional scholars, reform coalitions) see stare decisis as both coordination mechanism and constraint on jurisprudential evolution. They can challenge precedent through Supreme Court petition (mobile exit) and have some agency through collective action, but the burden of extraordinary justification creates asymmetric extraction. The constraint has genuine coordination function (it prevents constant re-litigation) but embeds significant asymmetric cost on those seeking change."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Tier Appellate Court",
+      "comment": "A circuit court or intermediate appellate body experiences stare decisis as enforced coordination: it must follow precedent from higher courts (binding authority) but also creates binding authority for lower courts through its own decisions. The court has constrained exit — it cannot overturn Supreme Court precedent without extraordinary justification, but it can distinguish cases, create doctrine in areas of precedential silence, and influence future Supreme Court decisions through bold interpretation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer: Natural Law View",
+      "comment": "From a civilizational perspective, some backward constraint is inherent to law itself: any legal system requires doctrinal stability, precedent provides predictability, and complete overruling of prior holdings would dissolve the rule of law. Stare decisis appears as a necessary structural feature of legality rather than a contingent institutional arrangement. However, this perspective risks naturalizing what is actually a doctrine-specific choice about how much constraint is appropriate."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "precedent_overruling_threshold",
+      "question": "What level of doctrinal error or changed circumstances justifies overruling precedent under strict stare decisis? Is the threshold fixed, evolved, or contestable?",
+      "resolution_mechanism": "Historical analysis of Supreme Court overrulings: frequency, stated justifications, correlation with 'extraordinary justification' rhetoric; comparison of overruling rates across eras and doctrine areas",
+      "impact": "If threshold is fixed: stare decisis operates as a genuine constraint on jurisprudential evolution with measurable suppression cost. If evolved: the doctrine's rigidity has loosened over time, reducing suppression. If contestable: different justices apply different thresholds, producing perspectival disagreement about constraint severity.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Threshold for extraordinary justification in precedent overruling"
+    },
+    {
+      "id": "kernel_reading_distinction",
+      "question": "Is strict stare decisis (this reading) distinguishable from evolutionary framework and pluralist balancing readings, or do all three coexist as live jurisprudential positions held by different judicial coalitions?",
+      "resolution_mechanism": "Doctrinal analysis: map each reading to specific Supreme Court justices or circuits; identify cases where one reading explicitly forecloses another vs. cases where both are defended simultaneously; test whether a single jurisdiction can coherently adopt multiple readings",
+      "impact": "If distinct and coexisting: all three readings are live, justifying coexists_with relations. If one reading forecloses others within its own framework: justify forecloses relation. If readings are sequential (older tradition superseded by newer): justify overridden axiom status in the superseded reading.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether strict stare decisis forecloses or coexists with sibling readings"
+    },
+    {
+      "id": "extraordinary_justification_enforcement",
+      "question": "Is 'extraordinary justification' for overruling precedent enforced as a genuine gate (making overruling rare), or has it become performative language that masks easier overruling in practice?",
+      "resolution_mechanism": "Empirical: measure overruling frequency pre-post doctrine establishment; analyze whether stated justifications genuinely differ between overruled and affirmed precedents; compare overruling rates for precedents labeled 'wrong' vs. those labeled 'outdated'",
+      "impact": "If enforced: extractiveness and suppression values validated. If performative: the constraint functions at lower severity than claimed, theater_ratio should increase, and the classification should shift toward piton.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether 'extraordinary justification' requirement is genuinely enforced"
+    },
+    {
+      "id": "institutional_identity_lock",
+      "question": "Do judges internalize stare decisis as constitutive of judicial identity and rule-of-law commitment, or do they experience it primarily as an external constraint?",
+      "resolution_mechanism": "Jurisprudential analysis: study judicial rhetoric in opinions defending stare decisis; interview data on judge perception of precedent obligation; analysis of whether judges who overturn precedent experience identity rupture or professional conflict",
+      "impact": "If internalized identity: the constraint operates partly through identity_locked mechanism; judicial victims experience the constraint as binding on the self, not just externally. If external constraint: the binding mechanism is suppression/enforcement through appellate oversight.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether stare decisis is internalized judicial identity or external enforcement"
+    },
+    {
+      "id": "precedent_distinction_elasticity",
+      "question": "Is the ability to 'distinguish' prior precedent (apply it narrowly, treat it as limited to its facts) a genuine exit option from stare decisis, or does strict stare decisis foreclose distinction and require direct overruling for any meaningful departure?",
+      "resolution_mechanism": "Doctrine analysis: cases where distinction was used vs. overruled; study whether strict stare decisis jurisdictions allow broader distinction-based doctrinal evolution than they allow overruling; test whether distinction is treated as legitimate doctrinal development or as evasion of binding authority",
+      "impact": "If distinction is robust exit: suppression is lower than 0.68, and litigants have more agency than trapped classification suggests (should be constrained). If distinction is foreclosed: snare classification validated, and precedent is nearly absolute.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether distinction provides meaningful exit from stare decisis constraint"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.41
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.44
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Stare decisis — the doctrine that precedent is binding and should not be overruled without extraordinary justification — creates a structural constraint on jurisprudential change. This constraint is one reading of the common law precedent corpus kernel. The strict stare decisis reading emphasizes rigidity, stability, and the rarity of precedent overruling; litigants seeking to challenge established doctrine face suppressive barriers and must justify departure as extraordinary. This reading coexists with two alternative readings: the evolutionary framework (which treats precedent as guidance rather than binding authority and allows gradual doctrinal development) and the pluralist balancing approach (which weights stare decisis against other interpretive values and allows more fluid overruling). The strict reading has been more dominant in common law traditions and formalist jurisprudence, but the last 40 years show rising extractiveness and suppression as reform movements encounter stronger resistance and the 'extraordinary justification' threshold has become more contested. The theater_ratio remains moderate because stare decisis disputes are substantive legal debates with real content, not purely performative — the doctrine is not degraded (piton) but rather represents a genuine structural choice about how much backward constraint to enforce. Beneficiaries are those whose legal positions are secured by existing precedent; victims are litigants seeking doctrinal change and jurisprudential innovation communities.",
+    "key_agents": [
+      "Litigants Challenging Precedent: Primary victims (powerless/trapped) — face near-absolute barriers to changing established law; burden of extraordinary justification falls entirely on them",
+      "Lower Court Judges: Secondary victims (moderate/constrained) — must follow binding precedent even when convinced it is wrong; face reversal and professional discipline for departing",
+      "Established Doctrine Holders: Primary beneficiaries (institutional/arbitrage) — their legal positions are secured and protected against disruption; exit from protection would mean losing precedential foundation",
+      "Constitutional Reform Movements: Secondary agents (organized/mobile) — can petition for overruling and have some collective agency, but face asymmetric burden of proof",
+      "Mid-Tier Appellate Courts: Institutional actors (institutional/constrained) — bound by higher precedent but create binding authority for lower courts; constrained exit through distinction and strategic narrow holdings",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing a doctrine-specific choice (strict stare decisis) as inherent to law itself"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts significant cost from litigants seeking doctrinal change and from innovative jurisprudential communities. Those who benefit from established precedent receive protection subsidy. However, extractiveness is not maximal (≥0.66 snare threshold) because the 'extraordinary justification' standard is not absolute — overruling does occur, and litigants retain resort to Supreme Court petition (mobile exit). The metric reflects a 40-year trend of rising extractiveness as reform movements increasingly encounter resistance and the bar for overruling has been rhetorically heightened. Suppression (0.68): High. The barriers to precedent challenge are substantial: binding authority of prior holdings, burden of proof on petitioner, appellate oversight enforcing compliance, professional consequences for departure, institutional resistance to doctrinal instability. But suppression is not absolute (0.90+) because strategic distinction, circuit splits, and supreme court petition represent partial exits. Theater ratio (0.44): Moderate-low. Stare decisis disputes are substantive legal debates with real doctrinal content. The constraint does not rely primarily on performative compliance — judges genuinely are bound by obligation and appellate enforcement, not merely theater. The theater that exists is the 'extraordinary justification' rhetoric: the language of extraordinary burden may do some performative work normalizing the constraint beyond its actual functional necessity. Accessibility collapse (0.68): Courts and precedent are nominally accessible to litigants, but the practical barrier to changing precedent is high. Resistance (0.42): Moderate. Significant institutional interest in doctrinal stability exists, but legal actors retain capacity to resist through distinction, circuit-split creation, and philosophical critique.",
+    "directionality_logic": "Directionality derives from structural position relative to the constraint. Litigants challenging precedent bear extraction (high d, ~0.80-0.90). Established doctrine holders benefit from it (low d, ~0.10-0.20). Lower court judges face constrained exit and enforcement overhead (d ~0.65-0.75). Reform movements have mobile exit through petition and public sphere advocacy (d ~0.55-0.65). The analytical observer at civilizational scope experiences maximum dereferencing from material interests (d ~0.72). The derived directionality feeds into the chi calculation through the sigmoid f(d), producing the effective extractiveness experienced by each perspective. Beneficiary institutional actors derive negative or very low effective extraction (rope perspective), while victims facing trapped/constrained exit experience maximal or high effective extraction (snare/tangled rope perspectives).",
+    "perspectival_gap": "This constraint exhibits substantial perspectival disagreement. The beneficiary of established precedent (institutional) sees coordination and stability (rope) — the constraint solves the problem of constant re-litigation and provides predictable law. The litigant trapped by adverse precedent sees extraction and suppression (snare) — they face nearly insurmountable barriers to change. The lower court judge sees mixed coordination and constraint (tangled rope) — the stability is functional but the suppression is real. The reform movement sees a temporary obstacle with agency (tangled rope moving toward scaffold if political will develops). The analytical observer risks naturalizing institutional choice as legal necessity (false summit mountain). The perspectival gap reveals that strict stare decisis is not a natural feature of law but a doctrine-specific choice about institutional rigidity — other readings allow different equilibria.",
+    "mandatrophy_analysis": "The mandatrophy is resolved through the kernel frame: strict stare decisis is ONE reading of the common law precedent corpus kernel, not the only reading. The doctrine's extractiveness (0.52) derives from its choice of HIGH constraint rigidity over evolutionary flexibility. Alternative readings (evolutionary framework, pluralist balancing) would produce different extractiveness values because they authorize different overruling thresholds. The constraint story models the strict reading's structural properties — what it extracts, who benefits, who pays, what barriers exist — without claiming this reading is the only legitimate jurisprudential position. The sibling readings coexist as live positions held by different judicial coalitions and jurisdictions. The analytical observer's risk of naturalizing the strict reading as inherent law is exactly what the kernel frame prevents: by naming the reading as one of multiple coexisting readings, the story reveals the choice.",
+    "kernel_context": "This constraint instantiates the strict stare decisis reading of the common law precedent corpus kernel. The kernel is the commitment to binding precedent and doctrinal continuity — a stabilized legal commitment formalized in doctrine and transmitted through appellate authority. The reading specifies how strictly that commitment is enforced: strict stare decisis requires extraordinary justification for overruling and makes precedent nearly binding. Sibling readings include: (1) evolutionary_framework — treats precedent as guidance rather than binding authority, allows gradual doctrinal development through distinction and reinterpretation, lower overruling threshold; (2) pluralist_balancing — weights stare decisis against other interpretive values (constitutional text, evolving circumstances, competing precedents), allows more fluid overruling when justified by balance of factors. The strict reading differs from evolutionary_framework in its emphasis on rigidity and rare overruling; it differs from pluralist_balancing in treating stare decisis as a standalone gate rather than one factor in a multivalued analysis. All three readings are currently live positions held by different justices and jurisdictions. The strict reading has been institutionally dominant in common law tradition but has encountered rising contestation and (measured by extractiveness trajectory) rising extraction pressure as reform movements seek doctrinal change."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "common_law_precedent_corpus__evolutionary_framework",
+      "common_law_precedent_corpus__pluralist_balancing",
+      "constitutional_amendment_difficulty",
+      "judicial_review_scope"
+    ],
+    "dual_formulation_note": "The common law precedent corpus decomposes into at least three constraint stories with different extractiveness values corresponding to different readings of how much rigidity to enforce. Strict stare decisis is the high-constraint reading (ε=0.52). Evolutionary framework would lower extractiveness (ε~0.35) by authorizing more fluid doctrinal development. Pluralist balancing would allow context-dependent extractiveness (ε~0.40) by weighing stare decisis against other values. The three stories are linked because they represent competing institutionalizations of the same kernel — different jurisdictions and eras enforce different thresholds. The network relation is coexist-and-compete rather than sequential replacement."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.88
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "common_law_precedent_corpus__evolutionary_framework",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "common_law_precedent_corpus__pluralist_balancing",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "precedent_nearly_absolute_absent_extraordinary_justification",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "institutional_stability_primacy_over_doctrinal_evolution",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "formalist_bounded_judicial_discretion",
+    "drift_state": {
+      "moment": "contemporary_constitutional_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

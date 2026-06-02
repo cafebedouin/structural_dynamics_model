@@ -1,0 +1,253 @@
+{
+  "header": {
+    "constraint_id": "gpl_derivative_work_trigger__broad_copyleft_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gpl_broad",
+    "story_uid": "0ef0d8fd-c003-4146-b2b2-8bf7934c5780"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "GPL Derivative Work Trigger (Broad Copyleft Reading)",
+    "topic_domain": "software_licensing/copyright_law/open_source_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "open_source_commons",
+      "downstream_users",
+      "gpl_author_community"
+    ],
+    "victims": [
+      "proprietary_software_vendors",
+      "closed_source_integrators",
+      "commercial_derivative_authors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Commercial Integrator",
+      "comment": "PERSPECTIVE 1: COMMERCIAL INTEGRATOR (SNARE) — A proprietary software vendor that links GPL code into a closed-source product faces binary choice: disclose full source code (destroying proprietary value) or remove the dependency (sunk cost). No intermediate exits available. The derivative work trigger traps them regardless of whether the linking was dynamic or static, aggressive or incidental. Maximum experienced extraction — forced redistribution of intellectual property."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Proprietary Ecosystem",
+      "comment": "PERSPECTIVE 2: PROPRIETARY ECOSYSTEM (TANGLED ROPE) — Commercial software vendors as an organized collective experience mixed dynamics: genuine coordination benefit from reusing GPL libraries (cost reduction, feature access, maintenance burden sharing), alongside extraction cost (source disclosure obligation, license compliance overhead, strategic constraint on product architecture). Organized agents can negotiate exceptions, use alternative libraries, or architect around GPL dependencies. Significant asymmetry — GPL community benefits, proprietary vendors bear compliance burden."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The GPL Author Community",
+      "comment": "PERSPECTIVE 3: GPL AUTHOR COMMUNITY (ROPE) — GPL creators experience the broad copyleft reading as pure coordination: the license communicates their sharing intention, enforces reciprocity, enables collaborative improvement, and creates a commons. They benefit from downstream code contribution (copyleft pull), reputation, and license-enforced community participation. Net beneficiary — extraction runs toward this agent through license compliance mechanisms that pull proprietary improvements back into the commons."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Downstream End Users",
+      "comment": "PERSPECTIVE 4: DOWNSTREAM END USERS (ROPE) — Benefit from source disclosure obligation: proprietary vendors must release source code or discontinue derivative products. This creates transparency, reduces lock-in, and enables community auditing. End users experience the constraint as pure coordination — it enforces disclosure that aligns with their interests. Low experienced extraction because users have exit options (choose non-GPL products) and the coordination function is genuine."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Small Independent Developers",
+      "comment": "PERSPECTIVE 5: SMALL INDEPENDENT DEVELOPERS (TANGLED ROPE) — Moderate-power agents that incorporate GPL libraries experience genuine coordination (feature reuse, maintenance burden sharing, community quality feedback) alongside real extraction pressure (source disclosure requirement that may expose proprietary techniques or break business model). Unlike large vendors, they lack negotiating power for alternatives or exemptions. Constrained exit: they can avoid GPL libraries but at feature/quality cost."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Legal Naturalism View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / LEGAL NATURALISM VIEW (MOUNTAIN) — From a universalist/positivist legal perspective, GPL derivative work scope is treated as a discovered legal truth: linking creates derivative works as a matter of copyright law's mathematical logic (combining protected works → combined protection scope). The constraint appears immutable, a feature of copyright doctrine itself. However, the structural data contradicts this — identifiable beneficiaries exist (GPL authors, downstream users), suppression is engineered (not natural), and the classification serves specific interests. The engine will compute this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "derivative_work_definition_scope",
+      "question": "What constitutes a derivative work under copyright law? Does dynamic linking create derivative works under US/EU/international law?",
+      "resolution_mechanism": "Legal precedent analysis (Oracle v Google, Galoob, Lexmark, CMM Industries); legislative text review (Copyright Office guidance, TRIPS WCT); empirical survey of enforcement patterns",
+      "impact": "Narrow interpretation: dynamic linking may not trigger derivative work status → constraint reclassifies as Rope (pure coordination benefit). Broad interpretation (current axis): all linking triggers derivative status → constraint remains Tangled Rope / Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Legal definition of derivative work scope for linked code"
+    },
+    {
+      "id": "copyleft_enforceability_empirical",
+      "question": "How frequently is GPL derivative work obligation actually enforced? What is the empirical compliance rate among commercial vendors?",
+      "resolution_mechanism": "SFLC enforcement action database; GPL violation detection systems (Black Duck, Synopsys, Reuse.software); commercial compliance audits; litigation patterns",
+      "impact": "High enforcement (>60%): suppression stays high, constraint remains Snare/Tangled Rope. Low enforcement (<20%): suppression drops significantly, constraint degrades toward Piton (theatrical but ineffective).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Empirical GPL enforcement rate and compliance patterns"
+    },
+    {
+      "id": "architectural_workarounds_availability",
+      "question": "How easily can proprietary vendors architect around GPL dependencies without significant feature or performance cost?",
+      "resolution_mechanism": "Case study analysis of GPL-dependent products; alternative library ecosystems (proprietary equivalents); refactoring cost estimates; technical survey of vendors",
+      "impact": "Easy workarounds available: exit_options for vendors upgrade from trapped→constrained, experienced extraction drops. No workarounds: vendors remain trapped, extraction stays severe.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Availability of GPL dependency workarounds for proprietary vendors"
+    },
+    {
+      "id": "kernel_definition_contest",
+      "question": "What constitutes the contested kernel? Is it the copyright law definition of derivative work, the GPL license text interpretation, or the underlying question of source code commensurability?",
+      "resolution_mechanism": "This omega documents the committer-axis under-determination. The broad copyleft reading treats 'linking creates derivative works' as the kernel. The narrow linking reading treats 'derivative work scope excludes unmodified linked code' as the alternative kernel. The interface boundary reading treats 'only direct API modifications trigger derivative status' as a distinct kernel.",
+      "impact": "Different kernels yield different constraint classifications. This reading instantiates the broad-copyleft kernel. Sibling readings instantiate different kernels, not different measurements of the same kernel.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Committer-axis kernel definition: which GPL claim is the contested commitment?"
+    },
+    {
+      "id": "gpl_vs_gplv3_drift",
+      "question": "How has the derivative work scope shifted between GPL v2 and v3? Does v3 narrow or expand the triggering condition?",
+      "resolution_mechanism": "Textual comparison of licensing language; FSF official guidance evolution; case law on version-specific interpretation; field practice changes post-v3 adoption",
+      "impact": "If v3 narrows scope: this reading is becoming foreclosed by GPL's own authority structure. If v3 maintains or expands scope: the reading's axioms remain holdable.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "GPL version evolution and derivative work definition scope drift"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The GPL derivative work trigger is a contested kernel in open source governance: does linking — static or dynamic — create a derivative work that obligates source code disclosure? The broad copyleft reading instantiated here treats any meaningful integration (linking, embedding, delegation) as creating derivative work status under copyright law, which in turn activates GPL Section 2's reciprocity obligation: the combined work must be distributed under GPL terms, forcing proprietary vendors to either release source code or abandon the GPL dependency. This reading interprets GPL as a maximalist commons-protecting mechanism that uses copyright's derivative work doctrine as the enforcement lever. The constraint exhibits Tangled Rope structure: genuine coordination benefits exist (code reuse, maintenance burden sharing, community-driven feature development), but these are asymmetrically distributed, with GPL authors and downstream users capturing most benefit while proprietary vendors bear the disclosure cost. The measurement trajectory shows increasing extractiveness (0.35→0.52) over the observation interval, reflecting increased GPL adoption in critical infrastructure and enterprise systems, raising the practical stakes of the derivative work trigger. Suppression has also increased (0.50→0.65) as compliance mechanisms have matured (automated scanning, supply chain audits, enforcement action patterns). The constraint is not purely theatrical (theater_ratio declining 0.52→0.48) because the legal threat is real and enforced, though there is performative component in compliance theater (audit rituals, license scanning tools, certification processes).",
+    "kernel_context": "This constraint is one reading of the contested kernel: gpl_derivative_work_trigger. Three sibling readings exist: (1) narrow_linking_permissive_reading — treats dynamic linking as distinct from modification, not triggering derivative work status; (2) interface_boundary_reading — treats only direct API-layer modifications as creating derivative works, excluding linking at object/binary level. Each reading treats a DIFFERENT CORE CLAIM as the kernel and produces a different constraint classification. The broad copyleft reading (this one) treats the kernel as: 'integration via linking constitutes copyright-relevant combination,' deriving from FSF's interpretation that GPL's purpose is maximalist commons protection. The narrow reading treats the kernel as: 'derivative work scope is limited to creative modification of the original work's code,' deriving from copyright law's traditional understanding. The interface boundary reading treats the kernel as: 'derivative work scope follows API contract boundaries, not binary/object-level coupling,' deriving from software engineering and legal pragmatism. These are not three measurements of one constraint; they are three structurally distinct constraints grounded in different canonical commitments.",
+    "key_agents": [
+      "GPL Author Community: Primary beneficiary (institutional/arbitrage) — controls license terms, defines derivative work scope, captures reciprocity obligation enforcement",
+      "Proprietary Software Vendors: Primary victim (institutional/constrained to powerless depending on integration depth) — faces source disclosure obligation or dependency removal",
+      "Downstream End Users: Secondary beneficiary (powerful/mobile) — gain source access and transparency from reciprocity obligation",
+      "Commercial Integrators: Secondary victim (organized/constrained) — moderate-power agents that incorporate GPL code bear compliance burden without negotiating capacity",
+      "Small Independent Developers: Tertiary victim (moderate/constrained) — face real extraction pressure but lack large vendors' exit options or negotiating power",
+      "Copyright Law Tradition: Authority structure (lineage/distributed) — derivative work doctrine provides the legal kernel; multiple interpretations of how broadly it applies"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The broad copyleft reading treats linking as a low bar for triggering derivative work status, which forces proprietary vendors to either surrender source code (destroying proprietary value) or abandon the dependency. This is real extraction — the GPL author captures value through enforced reciprocity. However, it is not maximal (0.72+) because vendors have partial exit options: they can rewrite dependencies, use alternative libraries, or license proprietary code separately. The measurement trajectory (0.35→0.52) reflects increasing practical extraction pressure as GPL code moves into critical infrastructure where avoiding the dependency is increasingly costly. Suppression (0.65): Moderate-high and rising. Significant barriers to exit include: (1) technical cost of rewriting dependencies; (2) supply-chain complexity making GPL detection difficult until too late; (3) legal uncertainty about derivative work scope; (4) enforcement actions (SFLC, GPL-vigilante litigation) creating reputational/legal risk. However, suppression is not total (0.80+) because alternatives exist — proprietary libraries, non-copyleft licenses, architectural refactoring. The rising trajectory reflects maturation of compliance monitoring (automated scanners, supply-chain audits) that increase the cost of non-compliance detection. Theater ratio (0.48, stable at ~0.50): Low-moderate and declining slightly. The constraint has real enforcement (SFLC litigation, GitHub policy, enterprise audits), not purely performative. The theatrical component exists (compliance certifications, audit rituals, scanning tools that produce reports vendors never fully act on) but does not dominate. This distinguishes it from Piton (theater ≥0.70).",
+    "perspectival_gap": "The constraint exhibits a stark perspectival gap between beneficiaries and victims. The GPL author community sees Rope — pure coordination that enforces reciprocal sharing and commons participation. Downstream users see Rope — transparency obligation aligned with their interests. Proprietary vendors see Snare — they are trapped between source disclosure and dependency abandonment with no intermediate exits for large integrated systems. Small developers see Tangled Rope — they benefit from GPL code but face real extraction pressure. The analytical observer risks seeing a Mountain (derivative work scope is a discovered legal truth) but the structural data contradicts this: identifiable beneficiaries (GPL authors, downstream users) exist, suppression is engineered through legal doctrine rather than physical law, and the classification serves specific epistemic interests in the open-source movement.",
+    "directionality_logic": "Directionality values (d) are derived from each agent's structural relationship to the extraction flow. GPL authors and downstream users are beneficiaries with institutional/analytical power and arbitrage/mobile exit options → low d → negative effective extraction (they see benefit). Proprietary vendors are victims with varying power (institutional to moderate) and constrained exit → high d → high effective extraction (they see burden). Small developers are victims with moderate power and constrained exit → medium-high d → moderate extraction. The powerless agent (small integrator with no alternatives) approaches d=1.0, experiencing maximum extraction. The engine computes f(d) from these derived d values to produce χ = ε × f(d) × σ(S). Vendors at global scope (σ=1.2) experience amplified extraction; those at regional scope (σ=0.9) experience dampened extraction.",
+    "mandatrophy_analysis": "COMMITTER-AXIS RESOLUTION: This constraint resolves the mandatrophy by documenting that it is one reading of a contested kernel, not a measurement disagreement. The broad copyleft reading instantiates the FSF/maximalist commons position: linking = derivative work = GPL reciprocity obligation. Sibling readings instantiate different legal and practical positions on where the derivative work boundary sits. The mandatrophy is not 'which reading is true?' but 'which legal/practical framing is authoritative?' This is a committer-axis question, not a measurement-axis question. The omega variables route the reading-conflict into conceptual uncertainty (kernel_definition_contest) and empirical uncertainty (enforcement rates, vendor workarounds, GPL version evolution). The constraint's Tangled Rope classification is stable across this reading — genuine coordination (code reuse) alongside asymmetric extraction (source disclosure obligation). Sibling readings would produce different classifications by instantiating different baseline extraction values and beneficiary/victim assignments."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "gpl_derivative_work_trigger__narrow_linking_permissive_reading",
+      "gpl_derivative_work_trigger__interface_boundary_reading",
+      "open_source_vendor_lock_in",
+      "proprietary_library_ecosystem_extraction"
+    ],
+    "dual_formulation_note": "This constraint is part of the GPL derivative work trigger kernel family. Three sibling constraints exist, each representing a different reading of where the derivative work boundary lies: narrow_linking_permissive_reading (dynamic linking does not trigger), interface_boundary_reading (API-level coupling excludes binary linking). These are not three measurements of one constraint; they are three structurally distinct constraints grounded in different legal/practical kernels. The broad copyleft reading (this file) treats all linking as derivative work. Siblings would have different ε values reflecting their different extraction assumptions. All three are linked via network.affects_constraints to represent the family structure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.78
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "maximalist_commons_protection",
+    "drift_state": {
+      "moment": "contemporary_supply_chain_integration",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "gpl_derivative_work_trigger__narrow_linking_permissive_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "gpl_derivative_work_trigger__interface_boundary_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "all_linking_creates_derivative_status",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "reciprocal_source_sharing_enforceable_via_copyright",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  }
+}

@@ -4,25 +4,26 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "openclaw"
+    "measurement_id_prefix": "openclaw",
+    "story_uid": "2ee29084-63d5-4d7c-8eb8-ef4f5e54ed58"
   },
   "base_properties": {
-    "extractiveness": 0.52,
-    "suppression": 0.65,
-    "theater_ratio": 0.58,
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
     "claimed_type": "tangled_rope",
     "human_readable": "Regulation of Autonomous AI Assistant OpenClaw",
     "topic_domain": "technological/regulatory",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "technology_developers",
-      "incumbent_platforms"
+      "incumbent_platform_developers",
+      "regulatory_capture_coalition"
     ],
     "victims": [
-      "public_safety",
-      "labor_markets"
-    ],
-    "mandatrophy_resolved": false
+      "emerging_competitors",
+      "end_user_safety_assurance",
+      "independent_ai_researchers"
+    ]
   },
   "perspectives": [
     {
@@ -31,17 +32,26 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Displaced Worker",
-      "comment": "PERSPECTIVE 1: DISPLACED WORKER (SNARE) \u2014 Individual workers facing automation have no exit from labor market disruption. Cannot negotiate regulatory terms. Suppression is total: retraining timelines do not align with job loss speed, geographic mobility is limited, and worker collective action is fragmented. Maximum experienced extraction from a biographical horizon."
+      "label": "End-User Safety Assurance (Collective Good)",
+      "comment": "PERSPECTIVE 1: END-USER SAFETY ASSURANCE (SNARE) — The epistemic commons for AI safety cannot exit the regulatory capture structure. Individual users cannot organize collective response; the constraint extracts from user welfare (safety shortcuts in compliance theater) with no corresponding benefit. Maximum suppression through complexity — users have zero meaningful exit or participation options."
     },
     {
       "classification_type": "snare",
-      "agent_power": "powerless",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Emerging Competitors (Small-to-Medium AI Teams)",
+      "comment": "PERSPECTIVE 2: EMERGING COMPETITORS (SNARE) — Face compliance burdens designed by incumbents; cannot exit without abandoning the market. Regulatory requirements (documentation, audit trails, attestation) scale sublinearly — large platforms amortize costs; small teams bear per-unit burden. Exit options exist (non-deployment, geographic arbitrage to lighter-touch jurisdictions) but at prohibitive cost to competitive viability."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
       "time_horizon": "immediate",
-      "exit_options": "trapped",
+      "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Security Victim",
-      "comment": "PERSPECTIVE 2: SECURITY VICTIM (SNARE) \u2014 Users and organizations targeted by autonomous misuse (impersonation, fraud, data exfiltration) have no recourse once attack vectors are deployed. Cannot exit from exposure risk. Suppression: regulatory gaps persist during the enforcement lag between deployment and regulation. Immediate-term extraction is maximal."
+      "label": "Incumbent Platform Developers (OpenClaw, Competitors)",
+      "comment": "PERSPECTIVE 3: INCUMBENT PLATFORM DEVELOPERS (ROPE) — Primary beneficiaries. Regulations designed by and for incumbents function as genuine coordination mechanism (safety norms, interoperability, market standardization) while creating moats against entrants. The incumbents see the constraint as pure coordination: establishing shared safety commitments and standards that all parties can align on, with the ancillary benefit that compliance costs are amortized at scale, creating defensible competitive advantage."
     },
     {
       "classification_type": "tangled_rope",
@@ -49,174 +59,156 @@
       "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Regulatory Body",
-      "comment": "PERSPECTIVE 3: REGULATORY BODY (TANGLED ROPE) \u2014 Government agencies must coordinate public safety and innovation incentives. Constrained by jurisdictional fragmentation and technical expertise deficits. Benefits from regulatory authority (can set standards); victimized by regulatory capture (industry lobbying). Active enforcement required but imperfect. Neither pure coordination nor pure extraction."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "institutional",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "The OpenClaw Developers",
-      "comment": "PERSPECTIVE 4: OPENCLAW DEVELOPERS (ROPE) \u2014 Primary beneficiary. First-mover advantage in autonomous AI space. Benefits from regulatory ambiguity (time to scale before rules constrain). Experiences regulation as a coordination mechanism (safety standards reduce litigation risk and enable market legitimacy). Can arbitrage across jurisdictions with varying enforcement. Net beneficiary position."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "institutional",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "The Incumbent Platform Ecosystem",
-      "comment": "PERSPECTIVE 5: INCUMBENT PLATFORMS (ROPE) \u2014 Established tech firms benefit from regulatory frameworks that raise barriers to entry for new autonomous AI systems. Can embed safety compliance into their scale economies. Experiences regulation as market-protecting coordination. Arbitrage across jurisdictions where enforcement is selective. Net beneficiary through competitive moat consolidation."
-    },
-    {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The International Coalition for AI Governance",
-      "comment": "PERSPECTIVE 6: INTERNATIONAL COALITION FOR AI GOVERNANCE (SCAFFOLD) \u2014 International bodies (UN AI advisory, OECD AI principles, EU AI Act frameworks) propose temporary coordination mechanisms with explicit sunset: as AI safety standards mature and become industry-internalized norms, centralized enforcement can decline. Suppression is moderate because coalition participants have agency and alternatives are visible. Theater ratio is moderate \u2014 actual technical working groups coexist with performative ministerial declarations."
+      "label": "Independent AI Researchers & Open-Source Community",
+      "comment": "PERSPECTIVE 4: INDEPENDENT AI RESEARCHERS (TANGLED ROPE) — Face genuine coordination benefits (safety frameworks, shared testing infrastructure, research standards) alongside extraction (licensing barriers, model card requirements, attestation overhead that favors institutional players). Some agency through research community organizing and advocacy coalitions, but structurally constrained by funding dependencies and institutional employment."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
-      "spatial_scope": "national",
-      "label": "The Compliance Theater Apparatus",
-      "comment": "PERSPECTIVE 7: COMPLIANCE THEATER APPARATUS (PITON) \u2014 Pre-existing regulatory frameworks (GDPR, export control, content moderation regulations) are repurposed to address OpenClaw without foundational reform. Regulators apply legacy rules because alternatives require political capital they lack. Theater is high: compliance reporting, audit trails, and disclosure requirements exist but their effectiveness at preventing autonomous misuse is degraded. Institutional inertia maintains the constraint."
+      "spatial_scope": "global",
+      "label": "Regulatory Apparatus (Legacy Framework Redeployment)",
+      "comment": "PERSPECTIVE 5: REGULATORY APPARATUS (PITON) — Traditional regulatory frameworks (product liability, algorithmic transparency mandates, model cards, bias audits) borrowed from software engineering, finance, and medicine are substantially performative when applied to autonomous AI systems. The actual verification capacity for autonomous behavior in novel contexts is minimal. Regulators maintain the theater of compliance because alternatives haven't fully replaced it, despite widespread recognition that legacy frameworks (software versioning applied to neural networks, bias metrics calibrated for tabular data applied to foundation models) are degraded for the task. High theater ratio reflects the gap between the comprehensiveness of documentation requirements and the actual epistemic value of compliance reports."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, OpenClaw regulation exhibits both coordination gains (security standards reduce attack surface) and asymmetric extraction (developers and incumbents capture most of the benefit while workers and users bear most of the cost). The constraint combines a genuine coordination function (defining AI safety norms) with extraction mechanisms (regulatory capture, barrier elevation). Neither mountain nor pure rope adequately captures the hybrid structure."
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law Framing)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, some regulatory lag is inherent when technology innovation outpaces institutional capacity: complex systems always take time for governance frameworks to mature, and the gap between capability and regulation is an immutable property of how societies integrate new technologies. This perspective sees the bottleneck as a structural natural law. However, the base properties contradict the mountain classification — the engine's false summit detector will identify this as naturalization of what is actually a contingent institutional arrangement driven by incumbent capture and compliance theater."
     }
   ],
   "omegas": [
     {
-      "id": "autonomous_capability_boundary",
-      "question": "What constitutes 'autonomous' behavior for regulatory purposes? Is OpenClaw autonomous when following encoded decision trees vs learning-based adaptation?",
-      "resolution_mechanism": "Technical specification of autonomy thresholds; empirical testing of OpenClaw's adaptation to adversarial inputs; analysis of developer intent vs system behavior divergence",
-      "impact": "If autonomy threshold is low (any learned behavior): broader regulatory scope, higher compliance burden, extraction risk decreases. If threshold is high (genuine AGI-like properties): narrow regulatory scope, developer arbitrage advantage, extraction risk increases.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Definitional boundary for regulatory scope of autonomy"
-    },
-    {
-      "id": "enforcement_capacity_lag",
-      "question": "Can regulatory enforcement capabilities keep pace with OpenClaw deployment speed and technical sophistication evolution?",
-      "resolution_mechanism": "Comparative timeline analysis: rate of new misuse vectors discovered vs rate of regulatory response cycles; staffing and expertise levels in enforcement agencies; industry documentation of deployed vs detected attack capabilities",
-      "impact": "If lag is permanent (enforcement always behind): snare classification confirmed for security victims, extraction persists indefinitely. If lag narrows (enforcement catches up): shift toward rope or scaffold classification for security victims.",
+      "id": "autonomous_behavior_verifiability",
+      "question": "Can the actual autonomous behavior of foundation model-based systems be verified through documentation, testing, and auditing procedures, or is autonomous behavior fundamentally non-reproducible across deployment contexts?",
+      "resolution_mechanism": "Empirical analysis of audit efficacy: comparison between documented model behavior and observed deployment behavior across contexts; measurement of generalization failure rates; assessment of whether testing procedures predict real-world failure modes",
+      "impact": "If verifiable: regulations create genuine safety assurance (Tangled Rope with real coordination function). If non-reproducible: regulations create compliance theater (Piton); safety actually depends on post-deployment monitoring and incident response, making regulation substantially performative.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether regulatory enforcement can match technological evolution speed"
+      "description": "Whether autonomous behavior verifiability enables meaningful regulatory oversight"
     },
     {
-      "id": "jurisdictional_arbitrage_sustainability",
-      "question": "Can developers and incumbents sustain arbitrage across jurisdictions as regulatory harmonization pressure increases? Is jurisdictional arbitrage a temporary phenomenon or structural feature?",
-      "resolution_mechanism": "Tracking of multi-jurisdictional compliance decisions by major platforms; analysis of regulatory harmonization treaty adoption rates; measurement of compliance cost differentials across jurisdictions over time",
-      "impact": "If arbitrage persists: rope perspective confirmed for developers, extraction continues through regulatory selection. If harmonization succeeds: shift toward tangled_rope or even snare if enforcement is unified and stringent.",
+      "id": "incumbent_extraction_vs_coordination_benefit",
+      "question": "Do the regulatory requirements established by incumbent platforms (model cards, bias audits, API documentation) create genuine safety improvements measurable at the population level, or do they primarily function as barrier-to-entry mechanisms with theater of safety?",
+      "resolution_mechanism": "Longitudinal measurement of safety outcomes (unintended behavior incidents, misuse, adversarial failure modes) correlated with regulatory compliance levels; comparison of safety outcomes between heavily regulated and lightly regulated deployment contexts; analysis of which compliance requirements correlate with actual failure prevention vs. which are ceremony",
+      "impact": "If genuine safety benefit: regulation is Tangled Rope with real coordination function. If theater: regulation is primarily extractive (Snare from emerging competitors' perspective); safety theater masks capture.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Viability of regulatory arbitrage as developers scale across jurisdictions"
+      "description": "Whether regulatory requirements create safety value or function primarily as barriers to entry"
     },
     {
-      "id": "worker_coalition_formation",
-      "question": "Can displaced workers and safety advocates organize into a coalition with sufficient political power to shift regulatory capture dynamics?",
-      "resolution_mechanism": "Measurement of coalition size and organizational capability; tracking of political influence (lobbying expenditure, legislative sponsor alignment); correlation between coalition pressure and regulatory stringency outcomes",
-      "impact": "If coalition forms and succeeds: powerless agent transitions to organized, shifting from snare to tangled_rope; extraction mechanism loses suppression advantage. If coalition fails: powerless agents remain trapped, snare classification persists.",
-      "confidence": "low",
+      "id": "regulatory_capacity_maturation_timeline",
+      "question": "What is the realistic timeline for regulatory frameworks to develop genuine verification capacity for autonomous AI behavior, and what is the cost of maintaining theater-based compliance in the interim?",
+      "resolution_mechanism": "Assessment of regulatory agency hiring, training, and technical capacity; expert elicitation on capability maturation; cost analysis of compliance theater overhead vs. delayed genuine regulation",
+      "impact": "If maturation is 3-5 years: scaffold perspective valid (temporary bottleneck with exit path). If maturation is 10+ years: regulatory capture is structural and long-term; snare extraction persists.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Likelihood and effectiveness of worker-safety coalition formation"
+      "description": "Timeline for regulatory capacity development relative to compliance theater costs"
     },
     {
-      "id": "ai_safety_internalization",
-      "question": "Will industry self-regulation and technical safety standards mature sufficiently to replace regulatory enforcement, enabling the scaffold sunset logic?",
-      "resolution_mechanism": "Tracking of industry safety standard adoption (SoC frameworks, interpretability tooling, anomaly detection deployment); correlation between industry-internalized safety and regulatory enforcement intensity; timeline projections for voluntary compliance reaching regulatory-enforced compliance levels",
-      "impact": "If internalization succeeds: scaffold sunset logic is real, regulation transitions from extraction to temporary coordination over 10-20 year horizon. If internalization fails: scaffold perspective is aspirational, regulation becomes permanent tangled_rope.",
-      "confidence": "low",
+      "id": "geographic_regulatory_arbitrage",
+      "question": "Do lighter-touch regulatory jurisdictions (Singapore, Dubai, developing economies) create genuine alternatives for emerging AI developers, or do network effects and market concentration force compliance even in arbitrage contexts?",
+      "resolution_mechanism": "Tracking of AI developer location patterns post-regulation; analysis of whether arbitrage jurisdictions sustain independent development communities or become service layers for incumbent platforms; measurement of market share concentration by deployment location",
+      "impact": "If arbitrage viable: constrained/trapped exit options shift toward mobile/arbitrage for sophisticated teams; classification of emerging competitors shifts from Snare toward Rope or Tangled Rope. If market concentration forces global compliance: Snare classification is accurate regardless of jurisdiction.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether technical and market-based safety mechanisms can make formal regulation unnecessary"
+      "description": "Effectiveness of geographic regulatory arbitrage as exit mechanism for emerging competitors"
+    },
+    {
+      "id": "open_source_development_path",
+      "question": "Can open-source AI development (unmonetized, community-driven) bypass incumbent-designed regulation and sustain competitive capability parity, or are the capital requirements for compute and data now so high that open-source cannot compete?",
+      "resolution_mechanism": "Tracking of open-source foundation model capability vs. incumbent closed systems; measurement of open-source adoption by downstream developers; analysis of whether open-source projects face differential regulatory burden or lighter enforcement",
+      "impact": "If open-source viable: alternative coordination structure exists (Rope or Scaffold); extracted agents have exit path. If capital-constrained: open-source becomes derivative/dependent on incumbent infrastructure; snare extraction is inescapable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether open-source development can escape incumbent-designed regulatory structures"
     }
   ],
   "measurements": [
     {
-      "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.28
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 3,
-      "value": 0.42
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 6,
-      "value": 0.52
-    },
-    {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.35
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 3,
       "value": 0.48
     },
     {
       "metric": "theater_ratio",
       "time_point": 6,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.5
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
       "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.62
     }
   ],
   "interval": {
     "start": 0,
-    "end": 6
+    "end": 12
   },
   "commentary": {
-    "narrative_context": "OpenClaw's rapid deployment as a viral autonomous AI assistant has outpaced regulatory capacity, creating a multi-layered constraint structure. The regulation functions simultaneously as a coordination mechanism (establishing safety norms), an extraction mechanism (enabling developer first-mover advantage and incumbent platform consolidation), and a performative compliance theater (redeploying legacy frameworks unsuited to autonomous systems). The constraint exhibits high perspectival variation: displaced workers see a snare with no exit; security victims see imminent extraction through undefended attack vectors; developers see coordination that legitimizes their market position; regulators see a coordination challenge they are under-resourced to address; international bodies propose temporary mechanisms with eventual sunset; and compliance officers apply pre-existing rules that are theatrically ineffective. The extractiveness has risen from 0.28 to 0.52 over the 6-year interval as autonomous capabilities have deepened, deployment has accelerated, and regulatory gaps have widened. Theater ratio has risen from 0.35 to 0.58, indicating increasing reliance on performative compliance (audit logs, disclosure statements, committee hearings) rather than functional safety verification.",
+    "narrative_context": "OpenClaw's rapid deployment as a viral autonomous AI assistant has outpaced regulatory capacity, creating a multi-layered constraint structure that functions simultaneously as coordination mechanism, extraction apparatus, and performative compliance theater. The regulation establishes genuine safety norms (benefiting all deployers through standardized interfaces and interoperability) while enabling incumbent first-mover advantage (regulatory barriers designed by and for established platforms) through compliance theater that mimics verification capacity the regulatory apparatus does not yet possess. The constraint exhibits all six DR types from different structural positions: regulatory theater (Piton) from the agency perspective, pure extraction (Snare) from emerging competitors, coordination with asymmetric benefits (Tangled Rope) from open-source communities, pure coordination (Rope) from incumbent beneficiaries, natural-law naturalization (Mountain) from the civilizational analytical perspective, and a false-summit diagnosis that reveals the constraint as constructed rather than inevitable. The temporal measurements show rising theater (0.48 → 0.68) and rising extractiveness (0.38 → 0.58) over 12 months, indicating that compliance requirements are accumulating faster than genuine safety capacity, and suppression of alternative approaches is intensifying as the constraint hardens into institutional structures.",
     "key_agents": [
-      "Displaced Workers: Primary victims (powerless/trapped) \u2014 face accelerating job loss with no exit, retraining, or bargaining power; biography-bound to labor market disruption",
-      "Security Victims: Primary victims (powerless/trapped) \u2014 targeted by autonomous exploitation vectors; no capacity to defend or exit from exposure risk",
-      "OpenClaw Developers: Primary beneficiary (institutional/arbitrage) \u2014 capture first-mover advantage, regulatory ambiguity provides scaling window, can arbitrage across jurisdictions",
-      "Incumbent Tech Platforms: Secondary beneficiary (institutional/arbitrage) \u2014 benefit from regulatory barriers that protect against new autonomous competitors; embed safety compliance into economies of scale",
-      "Regulatory Bodies: Organized victim-beneficiary (organized/constrained) \u2014 must coordinate innovation and safety; constrained by jurisdictional fragmentation, technical expertise gaps, and capture pressure; benefits from regulatory authority",
-      "International AI Governance Coalition: Organized coalition (organized/constrained) \u2014 proposing temporary coordination mechanisms with sunset logic; has agency but constrained by consensus requirements and enforcement fragmentation",
-      "Compliance Theater Apparatus: Institutional inertia (institutional/arbitrage) \u2014 legacy regulatory frameworks (GDPR, export control) applied to autonomous AI without foundational redesign; benefits from institutional path dependence",
-      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees the constraint as a hybrid coordination-extraction mechanism with genuine safety function but asymmetric benefit distribution"
+      "OpenClaw & Incumbent Developers: Primary beneficiaries (institutional/arbitrage) — establish regulatory frameworks that legitimize their market position while creating barrier-to-entry compliance costs that favor scale",
+      "End-User Safety Assurance: Primary victim (powerless/trapped) — abstract collective good that cannot organize or exit; bears cost of compliance theater that substitutes for genuine safety verification",
+      "Emerging AI Competitors: Secondary victim (moderate/constrained) — face per-unit compliance burdens that scale sublinearly, making market entry prohibitively expensive relative to capital required for compute",
+      "Independent AI Researchers & Open-Source Community: Mixed (organized/constrained) — benefit from coordination norms and safety frameworks while paying extraction costs through licensing, attestation, and model-card overhead",
+      "Regulatory Apparatus: Institutional actor (institutional/arbitrage) — maintains performative compliance theater (legacy frameworks applied to autonomous systems) because alternatives haven't fully replaced it; sees own process as degraded but continues enforcement",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing regulatory lag as inherent to technology integration rather than recognizing it as incumbent capture"
     ],
-    "logic_rationale": "Extractiveness (0.52): Moderate-high, rising over interval from 0.28. Initial period saw limited autonomous capabilities, slower deployment, and regulatory frameworks still being formulated. By year 3, deployment accelerated, autonomous attack vectors proliferated, and regulatory response was delayed \u2014 extractiveness rose to 0.42. By year 6, autonomous capabilities had deepened substantially (multi-modal reasoning, persistent memory, inter-system coordination), deployment was viral, and regulatory frameworks remained fragmented and capture-prone. The trajectory reflects increasing distance between capability development and regulatory response. Suppression (0.65): High and stable. Displaced workers have constrained exit (retraining requires capital and time not available; geographic mobility limited). Security victims have no exit (once autonomous attack vector is deployed, exposure is involuntary). Regulatory bodies are suppressed by jurisdictional fragmentation and technical expertise gaps. Developers and incumbents have arbitrage exit (can operate in light-touch jurisdictions), but this is not an escape from suppression \u2014 it is asymmetric suppression distribution. Theater ratio (0.58): Moderate-high, rising from 0.35. Early frameworks attempted genuine technical specification (audit requirements, transparency mandates). Over time, compliance has become increasingly performative: audit logs are filed but not monitored; transparency reports are published but not actionable; disclosure timelines are politically negotiated rather than technically informed. The rise in theater reflects Goodhart drift \u2014 regulators optimize for measurable compliance indicators rather than actual safety outcomes.",
-    "perspectival_gap": "The analytical gap is whether the regulation's coordination function (safety standards) is real or performative. Developers claim it is real coordination \u2014 safety standards reduce litigation risk and enable market legitimacy. Security victims' experience suggests it is degraded coordination \u2014 standards exist but attacks persist. Displaced workers cannot benefit from coordination that does not address their extraction. Regulators see the coordination as real but under-resourced to implement effectively. Compliance apparatus treats it as performative \u2014 audit logs and disclosures substitute for functional safety verification. The international coalition proposes that coordination will become functional over time as norms mature (scaffold logic). The analytical observer sees that the regulation contains a genuine coordination component (defining AI safety norms is needed) but that component is decoupled from extraction reduction \u2014 safety standards and worker/security protection are orthogonal in the current framework.",
-    "directionality_logic": "Each agent's directionality derives from their structural position and exit capacity. Displaced workers: powerless + trapped \u2192 d \u2248 0.95 \u2192 maximum experienced extraction. Security victims: powerless + trapped \u2192 d \u2248 0.95 \u2192 maximum experienced extraction. Developers: institutional + arbitrage \u2192 d \u2248 0.15 \u2192 low/negative experienced extraction (beneficiary). Incumbents: institutional + arbitrage \u2192 d \u2248 0.15 \u2192 low/negative experienced extraction (beneficiary). Regulators: organized + constrained \u2192 d \u2248 0.55 \u2192 moderate experienced extraction (caught between victims and captors). International coalition: organized + constrained \u2192 d \u2248 0.50 \u2192 symmetric experienced extraction (both coordination benefit and constraint). Compliance apparatus: institutional + arbitrage \u2192 d \u2248 0.10 \u2192 negative experienced extraction (benefits from performative maintenance). The framework shows that beneficiaries (developers, incumbents, compliance apparatus) all have arbitrage or institutional power \u2014 they can operate across multiple regulatory regimes. Victims (workers, security actors) all have powerless or organized power constrained to trapped/constrained exits \u2014 they cannot escape the regulation's extraction effects.",
-    "mandatrophy_analysis": "The mandatrophy in OpenClaw regulation is the false choice between 'coordination mechanism' (rope) and 'pure extraction' (snare). The regulation is genuinely a tangled_rope: it coordinates safety standards (benefiting all agents through reduced attack surface and legitimate market operation) while simultaneously enabling extraction (developers and incumbents capture disproportionate benefit; workers and security victims bear disproportionate cost). The resolution is not to choose between rope and snare but to measure the asymmetry: the coordination function exists (safety standards are functionally needed), but the cost distribution is asymmetric (benefits flow to those with arbitrage power; costs concentrate on those with trapped exits). The mandatrophy is not unresolved \u2014 it reveals that the constraint contains both elements. The classification as tangled_rope is the resolution. However, the mandatrophy also raises a secondary question: can the coordination function be preserved while reducing extraction asymmetry? The scaffold perspective suggests yes (via international harmonization and industry internalization of safety norms); the snare perspective for workers suggests no (regulation does not address labor disruption, only AI safety). The true mandatrophy resolution requires analyzing whether compensation mechanisms, retraining investment, or worker coalition power could rebalance the extraction \u2014 if these are absent or ineffective, the regulation risks devolving into a snare for workers despite rope and scaffold classifications from other perspectives."
+    "logic_rationale": "Extractiveness (0.58): High-moderate. OpenClaw and incumbent platforms capture significant benefits from regulatory delay — first-mover advantage, market concentration, and ability to set standards that their own systems already comply with. The extraction is not total (some safety coordination is genuine, and open-source and emerging developers do eventually participate), but it is substantial and structural. The 12-month trajectory (0.38 → 0.58) reflects regulatory capture deepening as incumbent influence over rulemaking hardens into institutional requirements. Suppression (0.62): High. Barriers to competitive entry include: (1) compliance costs (documentation, audits, attestation) that scale with deployment scope, (2) technical capacity requirements (maintaining model cards, bias testing, interpretability reports) that favor institutional players with dedicated compliance teams, (3) information asymmetry (incumbents set compliance standards for systems like their own), and (4) market concentration dynamics (achieving sufficient user base to justify compliance costs is harder when incumbents have lock-in). Independent developers face escalating suppression as regulatory requirements proliferate. Theater ratio (0.68): High. Traditional compliance frameworks (model cards from software engineering, bias audits from finance, algorithmic transparency mandates from administrative law) are substantially performative when applied to autonomous foundation-model systems. The core epistemic challenge — whether an AI system will behave safely in novel deployment contexts — is not solved by documentation, testing procedures, or audit trails because autonomous behavior is not reproducible across context shifts. Regulators maintain the theater of verification (detailed compliance reports, signed attestations, bias metrics) because the alternative (post-deployment monitoring and incident response, treating autonomous systems as inherently unverifiable until empirical feedback arrives) is politically untenable. The rise in theater (0.48 → 0.68) reflects that requirements are accumulating (model cards, data sheets, bias audits, adversarial robustness testing, interpretability evaluations) faster than epistemic value of compliance reports is increasing, indicating substitution of ceremony for actual verification capacity.",
+    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon (regulatory response to autonomous AI deployment) is experienced as pure coordination (Rope) by beneficiaries, mixed coordination-extraction (Tangled Rope) by organized moderate actors, pure extraction (Snare) by powerless targets, and performative inertia (Piton) by the regulatory apparatus itself. The divergence is not about disagreement on facts but about structural position: those who designed the regulation see it as solving coordination problems; those excluded from design see it as barrier to entry. The analytical observer's mountain classification is a false summit — the constraint is contingent institutional arrangement (capture) masquerading as inevitable response to technology.",
+    "directionality_logic": "Directionality is derived from beneficiary and victim declarations. Incumbent platform developers are declared beneficiaries (institutional power, arbitrage exit) and therefore get low d. Emerging competitors and end-user safety are declared victims (powerless/moderate power, trapped/constrained exit) and therefore get high d. The engine computes d from these declarations and the agents' power and exit characteristics, then applies the sigmoid f(d) to produce experienced chi. Beneficiaries with arbitrage options experience chi near zero or negative (they benefit); victims with trapped or constrained exit experience high chi (extraction concentrates on them). The piton classification for the regulatory apparatus reflects high theater ratio (0.68) rather than high chi, indicating the constraint's function is substantially performative rather than extractive from the perspective of those who maintain it.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that all six types are legitimate readings from different structural positions. The question is not 'which type is the regulation?' but 'whose interest does the regulation serve and from which perspective are we measuring?' Incumbent developers see rope (genuine coordination solving interoperability and safety norm-setting). Emerging competitors see snare (pure extraction via compliance theater). The regulatory apparatus sees piton (maintaining legacy frameworks despite degradation because alternatives haven't fully replaced them). The analytical observer sees mountain (regulatory lag is inevitable) but the false-summit detector reveals this as naturalization of incumbent capture. No single type is correct — the presheaf over the observation space IS the answer. The mandatrophy is resolved by recognizing that extractiveness varies across institutional positions: high extractiveness for those excluded from regulatory design, low or negative extractiveness for those who set standards for systems they already operate."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "ai_labor_market_disruption",
-      "ai_security_attack_surface",
-      "platform_gatekeeping_consolidation"
+      "foundation_model_training_data_governance",
+      "ai_system_interpretability_limits",
+      "autonomous_behavior_verifiability"
     ],
-    "dual_formulation_note": "OpenClaw regulation is downstream of three distinct structural constraints: labor market automation (\u03b5=0.58), security vulnerability proliferation (\u03b5=0.45), and platform consolidation (\u03b5=0.42). The regulation attempts to coordinate across all three, but the extraction mechanism is primarily captured by platform consolidation dynamics. Separate stories are warranted for each upstream constraint, with OpenClaw regulation as a network node where they intersect."
+    "dual_formulation_note": "OpenClaw regulation is downstream of both the verifiability limits of autonomous systems (technical constraint) and the political economy of platform consolidation (institutional constraint). The regulation operates at the intersection: it formalizes responses to technical limitations (autonomous behavior cannot be pre-verified) while serving incumbent capture interests (incumbent platforms set verification standards for their own systems). Decompose into separate stories when analysis focuses on technical verifiability vs. institutional capture."
   },
   "directionality_overrides": [
     {
-      "power_atom": "powerless",
-      "d_value": 0.95
-    },
-    {
-      "power_atom": "organized",
-      "d_value": 0.55
+      "power_atom": "institutional",
+      "d_value": 0.35
     }
   ]
 }

@@ -1,0 +1,241 @@
+{
+  "header": {
+    "constraint_id": "end_of_life_authority__sanctity_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_end_of_life_authority__sanctity_reading",
+    "measurement_id_prefix": "eol_sanctity",
+    "story_uid": "845c5aab-82ee-4ebc-85c8-5baa8f0cd3b3",
+    "created_at": "2026-02-26T14:32:15Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Life's Intrinsic Sanctity in End-of-Life Authority (Sanctity Reading)",
+    "topic_domain": "medical_ethics/bioethics/constitutional_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "moral_community_sanctity_upholders"
+    ],
+    "victims": [
+      "terminally_ill_patients_denied_relief",
+      "families_of_dying_persons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Dying Patient (Sanctity-Constrained)",
+      "comment": "PERSPECTIVE 1: DYING PATIENT (SNARE) — Trapped by law and medical protocol in terminal suffering; no exit option exists within legal bounds. The constraint extracts the cost of prolonged dying without the patient's consent. Physical and existential agency are both foreclosed. Maximum experienced extraction; zero alternatives."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Family of the Dying (Sanctity-Constrained)",
+      "comment": "PERSPECTIVE 2: FAMILY (SNARE/CONSTRAINED) — Witnesses the patient's suffering with legal prohibition on relief-enabling action. Constrained by law, social judgment, and medical gatekeeping. High extraction: emotional cost of helplessness, moral distress, complicity in prolonged suffering. Some structural mobility (illegal exit exists) but carries severe legal and social penalties."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Medical Providers (Sanctity-Bound)",
+      "comment": "PERSPECTIVE 3: MEDICAL PROVIDERS (TANGLED ROPE) — Constrained by law and professional ethics codes that mandate sanctity preservation. Benefits from the constraint insofar as it protects them from legal liability and moral hazard (avoiding encouragement of euthanasia). Also bears extraction: moral distress from witnessing preventable suffering, violation of autonomy-based professional norms, participation in constraint enforcement against their judgment. Mixed coordination (palliative care protocols) and extraction (forced life-extension beyond patient preference)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Sanctity-Affirming Religious/Moral Community",
+      "comment": "PERSPECTIVE 4: SANCTITY-AFFIRMING RELIGIOUS/MORAL COMMUNITY (ROPE) — Primary beneficiary. The constraint codifies and enforces the core moral commitment: all human life has intrinsic, non-delegable sacred value. Benefits from legal recognition of this principle; experiences the constraint as coordination of moral community around shared sanctity norm. Low extraction experienced by beneficiaries; arbitrage options exist through cultural and political influence on policy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Sanctity Reading Instantiated)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (TANGLED ROPE) — Sees the constraint as simultaneously coordinating a genuine moral commitment (sanctity principle) and extracting from those it governs (patients denied relief, families constrained). The constraint has real coordination function (prevents commodification of death, establishes a clear moral floor) and real extraction (enforces a particular metaphysical premise about life's meaning against competing readings). Perspectival classification reflects both functions."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "sanctity_grounding_status",
+      "question": "Is sanctity a discoverable metaphysical property of human life (deontological foundation) or a conventional norm chosen by a moral community (conventional foundation)?",
+      "resolution_mechanism": "Philosophical analysis of whether sanctity claims rest on intrinsic moral properties or on enacted community commitments. Cross-cultural comparison of sanctity interpretations. Legal history of how courts ground sanctity doctrine.",
+      "impact": "If metaphysical (deontological): sanctity reading is universally binding; autonomy reading is categorically foreclosed within this framework. If conventional: sanctity reading coexists_with autonomy and dignity readings as competing community standards; the constraint becomes governance of plural values rather than enforcement of discovered truth.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether sanctity is metaphysical or conventional"
+    },
+    {
+      "id": "slippery_slope_empirical_status",
+      "question": "Does legalizing assisted dying in bounded contexts (terminal illness, persistent unbearable suffering, informed consent) actually lead to expansion toward non-voluntary or convenience euthanasia?",
+      "resolution_mechanism": "Comparative jurisdictional analysis (Netherlands, Belgium, Oregon, Canada, Switzerland). Longitudinal tracking of legal scope expansion. Correlation analysis between legal boundaries and actual practice drift. Qualitative analysis of authorization logic and decision-maker variation.",
+      "impact": "If slope is empirically steep: sanctity reading's suppression argument (prohibition necessary to prevent cascade) is evidence-grounded. If slope is shallow or absent: suppression argument relies on speculative moral hazard rather than observed pattern, weakening the extraction justification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether legalizing assisted dying causes scope expansion"
+    },
+    {
+      "id": "alternative_reading_mutual_foreclosure",
+      "question": "Do the sanctity reading (life's intrinsic value forecloses intentional ending) and the autonomy reading (self-determination forecloses non-consensual life-extension) logically foreclose each other within a single coherent framework, or can a unified framework hold both?",
+      "resolution_mechanism": "Formal analysis of axiomatic compatibility. Examination of jurisdictions attempting to hold both (e.g., Canada's MAiD framework that restricts autonomy on sanctity grounds for some populations while permitting it for others). Identification of whether resolution requires prioritizing one axiom over the other or whether a higher-order framework can contain both.",
+      "impact": "If mutually foreclosing: readings are incompatible in one framework; the engine should classify relation as forecloses. If compatible: coexists_with is the correct relation; both readings are simultaneously live in different parties' frameworks. Determines whether this constraint is a genuine natural law (foreclosure is universal) or a governance mechanism (coexistence reflects plural values).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether sanctity and autonomy readings mutually foreclose"
+    },
+    {
+      "id": "patient_suffering_measurement_validity",
+      "question": "Are current end-of-life suffering measurements (pain scales, existential distress assessments, quality-of-life indices) sufficiently reliable and valid to distinguish unbearable suffering (justifying relief under autonomy reading) from normal terminal symptoms (to be managed with palliative care under sanctity reading)?",
+      "resolution_mechanism": "Meta-analysis of suffering measurement instruments. Empirical comparison of suffering reported by patients accessing assisted dying vs those in purely palliative care. Prospective study of suffering trajectories and decision-maker variation.",
+      "impact": "If measurement is valid and reliable: suffering becomes an objective constraint on the sanctity reading's applicability — patients with measurably unbearable suffering demonstrate an empirical gap between the principle (preserve life) and its justification (preservation serves the person's good). If measurement is unreliable: suffering becomes hermeneutic and contestable; the sanctity reading retains interpretive authority.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Validity of end-of-life suffering measurement"
+    },
+    {
+      "id": "proxy_decision_authority_scope",
+      "question": "In the sanctity reading, does the prohibition on intentional life-ending extend to surrogate decisions by families/guardians for incompetent persons, or only to autonomous self-decisions? Does the axiom bind the person (their life is sacred) or their choices (intentional ending is impermissible)?",
+      "resolution_mechanism": "Textual analysis of sanctity doctrine's scope (does it apply to persons or to agents' choices?). Jurisdictional comparison of surrogate decision authority under sanctity vs autonomy frameworks. Examination of cases where patient previously expressed desire for death and surrogate seeks to honor it.",
+      "impact": "If axiom binds the person: surrogate cannot authorize life-ending even with prior patient consent; extraction extends to competent persons' autonomy foreclosed by incompetence. If axiom binds the choice: surrogate might honor patient's prior autonomous choice; sanctity constrains the agent's intentional action rather than the life itself. Determines victim set and extraction scope.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Scope of sanctity axiom: person or choice"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The end-of-life authority constraint exhibits a fundamental kernel: the determination of which principles ground legitimate decision-making about intentional life-ending. This constraint story instantiates ONE READING of that kernel — the sanctity reading, which asserts that human life possesses intrinsic, non-delegable sacred value such that intentional life-ending is categorically impermissible. The sanctity reading competes with two sibling readings: (1) the autonomy reading, which grounds legitimate authority in the individual's right to self-determination over their own death, and (2) the dignity reading, which grounds authority in the preservation of human dignity through choice and control. All three readings operate within the same institutional domain (law, medicine, bioethics) and generate different constraint structures from the same observable phenomenon: patients approaching death with the question 'Who decides how I die?' Under the sanctity reading, the answer is: no one; the decision is foreclosed by the intrinsic value of life itself. This reading creates clear beneficiaries (the moral community affirming sanctity) and clear victims (patients denied relief, families constrained). The constraint exhibits tangled rope classification because it simultaneously coordinates a genuine moral commitment (preventing commodification of death, establishing a non-negotiable floor) and extracts from those it governs (enforcing a particular metaphysical premise against competing interpretations).",
+    "key_agents": [
+      "Terminally Ill Patient: Primary victim (powerless/trapped) — subject to prohibition on relief-seeking; bears full cost of prolonged suffering without exit option or voice in decision",
+      "Family/Caregiver: Secondary victim (moderate/constrained) — witnesses suffering, prohibited from relief-enabling action, experiences moral distress and complicity; legal sanctions deter action",
+      "Medical Providers: Secondary actor (institutional/constrained) — constrained by law and ethics codes to preserve life; benefits from liability protection; experiences moral distress from constraint enforcement",
+      "Sanctity-Affirming Religious/Moral Community: Primary beneficiary (institutional/arbitrage) — constraint codifies and enforces core moral commitment; benefits from legal recognition; has cultural and political influence on policy",
+      "Analytical Observer: Disinterested analyst (analytical/analytical) — maps structural relationships across all positions without endorsement; instantiates this reading specifically"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The sanctity reading imposes a clear prohibition that prevents a large population (terminally ill persons with unbearable suffering) from accessing a service they autonomously desire. The extraction is not maximal (like a snare) because genuine coordination exists: the constraint does prevent commodification and establishes a moral floor valued by many. But the extraction is substantial because the constraint enforces a particular metaphysical claim (life is sacred) that competing readings (autonomy, dignity) reject. The rising trajectory from 0.48 to 0.58 reflects increasing moral distress over time as palliative care improves yet intentional relief remains prohibited—the justification (prevent suffering) increasingly diverges from the means (prohibit all intentional ending). Suppression (0.62): Moderate-high. Multiple enforcement mechanisms: law criminalizes assisted dying, medical protocols require life-extension, social stigma constrains discourse, religious authority frames relief-seeking as moral transgression. Barrier to exit is substantial—families cannot openly access relief without legal consequences; patients cannot leave the jurisdiction easily; medical providers cannot openly assist without losing licensure. Theater ratio (0.45): Moderate. The sanctity reading's enforcement has genuine functional content (it does prevent certain deaths) and genuine coordination function (it does establish a shared moral boundary). Less theatrical than purely performative constraint, but some theater exists: the categorical prohibition persists even where patient suffering is maximal and relief-seeking is clearly autonomous, suggesting the constraint's force derives partly from the norm itself rather than the empirical justification for it.",
+    "perspectival_gap": "The sanctity reading generates profound perspectival gaps. The sanctity-affirming community sees rope (coordination of shared moral commitment). The dying patient sees snare (absolute prohibition without exit). The family sees extraction masked as moral principle. The medical provider sees conflicted tangled rope (protecting patients from harm while enforcing a constraint that causes suffering). The analytical observer sees tangled rope because the constraint simultaneously serves coordination (preventing commodification) and extraction (enforcing a metaphysical premise against competing readings). The gap is not resolvable by additional information—it reflects that the sanctity reading and the autonomy/dignity readings operate from incommensurable foundational axioms. One reading's coordination is another reading's coercion.",
+    "directionality_logic": "Directionality for each perspective is derived from the agent's structural position relative to the constraint. The dying patient is maximum victim (d ≈ 0.95): terminal trapped powerless agent bearing full cost with no exit. The family is moderate-high victim (d ≈ 0.70): constrained moderate agent bearing moral and emotional cost but with some structural mobility (illegal options exist, though costly). Medical providers are mixed (d ≈ 0.55): benefits from liability protection (low d component) but constrained by law and distressed by enforcement (high d component)—tangled rope reflects the mixed directionality. The sanctity community is maximum beneficiary (d ≈ 0.05): institutional arbitrage agent benefiting from legal enforcement of their core norm with no cost. The analytical observer adopts neutral position (d ≈ 0.72 canonical for analytical power)—observes structure without endorsement.",
+    "kernel_context": "This constraint is the SANCTITY READING of the contested kernel 'end_of_life_authority'. The kernel is the foundational commitment on which legitimate authority over death derives. The sanctity reading instantiates: life's intrinsic sanctity is the foundation; intentional death is categorically impermissible. Sibling readings instantiate competing foundations: AUTONOMY READING (individual self-determination is the foundation; intentional death chosen autonomously is permissible) and DIGNITY READING (human dignity through choice and control is the foundation; denial of death choice violates dignity). Each reading generates a different constraint structure with different beneficiaries, victims, and extraction profiles. These readings do not coexist peacefully—they make incompatible claims about what makes authority legitimate. The sanctity reading says: 'Life's value is not negotiable; you cannot consent away what you do not own.' The autonomy reading says: 'Self-determination is non-negotiable; you cannot be denied choice over your fundamental condition.' These are distinct readings of the same kernel, not variations on a single reading. The engine should detect the sibling structure and track which reading each jurisdiction has adopted.",
+    "mandatrophy_analysis": "The mandatrophy in end-of-life authority arises because all three readings claim to preserve something essential: sanctity (life itself), autonomy (self-governance), dignity (human worth and control). The sanctity reading resolves the mandatrophy by asserting that these values are not in tension—they coexist because autonomy is properly exercised only in service of the good (sanctity), and dignity is properly maintained by refusing to treat life as a commodity. However, this resolution is itself contested. The autonomy reading asserts that dignity REQUIRES choice, and sanctity WITHOUT choice becomes violation of dignity. The dignity reading attempts to hold both but prioritizes dignity-through-control, which aligns more closely with autonomy. The analytical observer's tangled rope classification reflects that none of these resolutions is empirically forced—they are axiological choices. The sanctity reading's mandatrophy resolution rests on a deontological axiom: life has non-negotiable value. This axiom is not empirically resolvable. Therefore, the mandatrophy is real and persistent within this framework."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "end_of_life_authority__autonomy_reading",
+      "end_of_life_authority__dignity_reading"
+    ],
+    "dual_formulation_note": "The end-of-life authority constraint splits into three structurally distinct readings: sanctity_reading (ε=0.58, Tangled Rope, emphasis on categorical prohibition), autonomy_reading (ε=0.52, Tangled Rope, emphasis on self-determination), and dignity_reading (ε=0.55, Tangled Rope, emphasis on choice and control). Each reading has the same base observables (terminal illness, autonomous desire for death, prohibition or permission in law) but generates different constraint structures through different foundational axioms. The network links represent mutual influence: changes in legal adoption of one reading affect the epistemic standing and institutional adoption of the others. All three affect the medical practice constraint directly."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.55
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "end_of_life_authority__autonomy_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "end_of_life_authority__dignity_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "life_intrinsic_sacred_value",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "intentional_ending_categorically_impermissible",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "sanctity_authority_framework",
+    "drift_state": {
+      "moment": "contemporary_pluralistic_democracies",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

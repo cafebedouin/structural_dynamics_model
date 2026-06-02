@@ -1,0 +1,3754 @@
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+SOVEREIGN INFRASTRUCTURE
+KEYSTONE SOVEREIGN CORE SERVER + SAIA
+Unified Technical Specification
+Classification: Confidential — Integrator and Client Eyes Only
+Field
+
+Value
+
+Version
+
+1.4
+
+Date
+
+May 2026
+
+Prepared By
+
+Polaris IT Solutions
+
+Supersedes
+
+v1.3 (May 2026)
+
+Audience
+
+Technical Staff, Compliance Auditors, Qualified Legal Counsel
+
+Status
+
+Active — Pre-deployment reference. Parameters will be refined against prototype
+validation data.
+
+ℹ v1.4 delta from v1.3: (1) Section VII Network Architecture rewritten — three-zone topology, sovereign
+peripheral zone defined, sovereign peripheral switch specified, office LAN uplink tier progression clarified,
+Keystone's role as three-zone gateway made explicit. (2) Section IX added — Sovereign MFP Subsystem as firstclass infrastructure. (3) Section numbering shifted by one from IX onward. (4) Glossary gains three entries. All
+other content unchanged from v1.3. Redline against v1.3 for Sections VII and IX specifically.
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+I. Purpose and Scope
+This document is the complete technical and compliance reference for the Sovereign Infrastructure stack — a
+purpose-built, integrator-deployed system consisting of two components: the Keystone Sovereign Core Server,
+the trusted root of the sovereign environment, and SAIA, the Sovereign AI Appliance. Together they form a
+closed, auditable sovereign environment for organizations whose data carries attorney-client privilege, HIPAA
+obligations, or similar legal weight.
+This specification is the definitive pre-deployment reference, version 1.4. It supersedes all prior specifications.
+Prototype validation and production deployments will inform subsequent revisions. Architecture described herein
+is correct; specific parameters will be refined against real-world performance data.
+
+1.1 Design Philosophy
+• All AI computation is local — no data leaves the sovereign environment without explicit, logged, attorneyapproved action
+• Sovereign by default — external connectivity is denied unless explicitly permitted and specifically enumerated
+• Every privileged action is auditable — ingestion, query, anonymization, and export events are logged
+immutably
+• Entirely open-source — no vendor lock-in, no licensing dependencies, no hidden telemetry
+• Hardware-agnostic recovery — the system is recoverable on any compatible x86 platform given drives and
+passphrase
+• Integrator-maintained — not managed by client general IT staff; the integrator relationship is a security control
+• Additive, not disruptive — the sovereign stack protects specific privileged data; it does not replace existing
+email, billing, or calendar infrastructure
+
+1.2 What This Stack Is Not
+• Not a cloud service, hybrid cloud solution, or subscription product
+• Not a general-purpose workstation or developer machine
+• Not a replacement for legal judgment, attorney review, or professional expertise
+• Not a system that updates its knowledge from the internet
+• Not a product that operates without ongoing integrator engagement
+• Not a complete security program — endpoint security, email security, and device management are
+complementary requirements
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+II. The Sovereign Stack: Integrated Architecture
+The sovereign infrastructure consists of two purpose-built systems and one purpose-specified peripheral
+subsystem that function as a single integrated environment. Together they establish a closed trust environment
+for all sensitive data, identity, AI operations, document lifecycle, and physical document production within the firm.
+
+2.1 System Roles
+Component
+
+Role
+
+Keystone Sovereign
+Core Server
+
+The trusted root. Provides identity, key vault, file server, communications, backup,
+print/scan services, and network gateway between all sovereign zones and the office
+LAN. Every other system in the sovereign environment depends on Keystone.
+Keystone does not depend on SAIA. Keystone is a server — the authoritative root of
+the trust environment — not an appliance.
+
+SAIA Sovereign AI
+Appliance
+
+The Sovereign AI Appliance. Provides local AI inference, document ingestion, RAG
+retrieval, anonymization, and the optional attorney-gated cloud polish pathway.
+Depends on Keystone for identity, secrets, and file storage. Non -functional without
+Keystone — intentional.
+
+Sovereign MFP
+Physical ingestion
+endpoint
+
+The physical ingestion endpoint of the document pipeline. Deployed and hardened by
+the integrator. Never connected to the office LAN. Communicates exclusively with
+Keystone via the sovereign peripheral zone. First-class infrastructure — not a
+peripheral recommendation.
+
+ℹ Keystone is the Sovereign Core Server. SAIA is the Sovereign AI Appliance. The word 'appliance' applies only
+to SAIA. Keystone is never described as an appliance — it is the sovereign root, the identity authority, the key
+custodian, and the network gateway between all sovereign zones.
+
+2.2 Dependency Architecture
+Integration Point
+
+Direction
+
+Notes
+
+Identity / SSO (Authentik)
+
+Keystone →
+SAIA
+
+SAIA authenticates all users through Keystone Authentik. Nonfunctional if Keystone offline — intentional.
+
+Secrets / Credentials
+(Vaultwarden)
+
+Keystone →
+SAIA
+
+SAIA service credentials retrieved from Keystone Vaultwarden at
+startup. No secrets stored locally on SAIA.
+
+Shared File Server
+(ZFS/SMB)
+
+Keystone →
+SAIA
+
+RAG ingestion staging, model storage, and pipeline working files
+reside on Keystone Data SSD. SAIA mounts over sovereign
+peripheral zone.
+
+SAIA System Backup
+
+SAIA →
+Keystone
+
+SAIA OS and vector database drives imaged daily to Keystone
+saia_backups ZFS dataset.
+
+NTP / Time Authority
+
+Keystone →
+SAIA
+
+Keystone is the authoritative time source. SAIA syncs to Keystone
+chrony only.
+
+Print / Scan Services
+
+Keystone →
+Sovereign
+peripheral
+zone
+
+Keystone hosts CUPS print server. MFP authenticates via
+Authentik LDAP. Print job audit logging to Keystone audit trail.
+
+MFP scan delivery
+
+MFP →
+Keystone (via
+sovereign
+
+Scanned documents delivered to scan_quarantine on Keystone.
+Human review required before promotion to ingestion pipeline.
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+Integration Point
+
+Direction
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+Notes
+
+peripheral
+switch)
+
+2.3 The Trust Boundary
+The combined system establishes a single, well-defined trust boundary. Inside the boundary: client files, AI
+inference, attorney work product, internal communications, credentials, physical document production, and all
+sovereign peripheral devices. Outside the boundary: the public internet, cloud services, AI providers, the office
+LAN, and any system not under the firm's direct physical control.
+The only authorized path for data to exit the trust boundary is the anonymization gate — a strictly enforced,
+attorney-approved, anonymization-mandatory pathway for optional quality enhancement using an external AI
+service. The architecture is structurally incapable of routing un-anonymized privileged data to any external
+service.
+
+2.4 RTO and Availability
+Because SAIA has a hard dependency on Keystone for identity and file storage, Keystone's Recovery Time
+Objective governs the availability of the entire sovereign stack. Keystone's multi-tier backup and sovereign
+rotation architecture is, in part, the availability architecture for SAIA. A Keystone hardware failure requiring
+physical intervention will result in SAIA downtime until the integrator performs an on-site service event. No data
+loss occurs; no unauthorized remote access is possible.
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+III. Keystone — Sovereign Core Server
+Keystone is the Sovereign Core Server — the trusted root of the sovereign environment. Every other system,
+service, and user depends on Keystone for identity, secrets, file custody, backup integrity, print/scan services,
+and network gateway between all sovereign zones. Keystone is not a user-facing AI system. It is the security
+anchor that makes everything else safe to operate.
+
+3.1 Core Services
+Service
+
+Component
+
+Description
+
+Identity / SSO
+
+Authentik
+
+Local identity provider. Federates authentication to SAIA and all
+sovereign appliances. MFA enforced. No cloud identity dependency.
+Single offboarding action removes all access across all sovereign
+services simultaneously.
+
+Key Vault
+
+Vaultwarden
+
+Self-hosted Bitwarden-compatible secrets manager. Stores service
+credentials and operational secrets. Zero cloud dependency. LUKS2
+bootstrap keys — master passphrase and Yubikey HMAC keys —
+are never stored in Vaultwarden. Bootstrap keys are always physical,
+always offline, always under owner custody.
+
+File Server
+
+ZFS + Samba (SMB)
+
+ZFS-backed SMB file server. Dataset-level permissions. Shadow
+copy (Previous Versions) enabled. Hosts RAG ingestion staging,
+model storage, firm files, and SAIA backup targets. Accessed by
+SAIA over sovereign peripheral zone fiber uplink.
+
+Communications
+
+Matrix Synapse +
+Element
+
+Sovereign encrypted internal messaging. Replaces Teams or Slack
+for privileged communications. Behind Authentik SSO.
+
+Intranet / Wiki
+
+Wiki.js or Outline
+
+Internal knowledge base for matter templates and firm procedures.
+Behind Authentik SSO.
+
+Print / Scan
+
+CUPS + Samba
+
+Network print server for sovereign MFP on sovereign peripheral
+zone. Authentik LDAP for print authentication. Scan-to-ingest
+workflow to RAG ingestion dataset via scan_quarantine. Print job
+audit logging.
+
+Backup
+
+Rescuezilla + ZFS
+snapshots
+
+Multi-tier backup covering Keystone itself and SAIA. On-machine
+redundancy, ioSafe physical resilience, ZFS mirror, and sovereign
+offline rotation to physical safes under owner custody.
+
+Time / NTP
+
+chrony
+
+Authoritative time source for the sovereign environment. SAIA syncs
+to Keystone only. Monotonic time, hash-chained logs, and
+administrative clock-change logging provide clock tamper resistance.
+
+Network gateway
+
+Linux routing +
+nftables
+
+Routes traffic between sovereign peripheral zone, office LAN, and
+internet. Default-deny outbound. Every permitted flow explicitly
+enumerated and logged.
+
+3.2 Hardware Specification
+3.2.1 Small Firm Deployment (Keystone-1)
+Component
+
+Specification
+
+Notes
+
+CPU
+
+Intel i5 10th Gen or newer; i5 7th
+Gen validated on prototype only
+
+IO-bound workload. Identity, file serving, backup,
+and network gateway are well within this platform's
+capability.
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+Component
+
+Specification
+
+Notes
+
+RAM
+
+32GB DDR4 minimum; 64GB
+recommended
+
+ZFS ARC benefits from RAM. 32GB is functional
+minimum. 64GB before deploying Matrix Synapse.
+
+Motherboard
+
+Any LGA1200 or newer with TPM
+2.0 header
+
+TPM 2.0 mandatory — onboard or discrete.
+Required for LUKS2+TPM2 auto-unlock.
+
+Network —
+sovereign zone
+
+Intel X520-DA2 10GbE SFP+ —
+uplink to sovereign peripheral
+switch
+
+Fiber. Galvanic isolation at zone boundary. All SAIA
+and MFP traffic routes through this interface.
+
+Network — office
+LAN
+
+Intel i226 2.5GbE — Keystone-1:
+copper through Furman + optical
+isolator
+
+Office LAN uplink. Attorneys and paralegals reach
+sovereign services through this interface only.
+
+Onboard NIC
+
+Disabled in OS
+
+No third active interface. Onboard NIC disabled at
+OS configuration.
+
+Case
+
+Fractal Design Define R5 — ATX
+mid-tower, two 5.25" bays
+
+Two 5.25" bays required: IcyDock hot-swap + Bluray burner. Sound-dampened for office environment.
+
+PSU
+
+Integral UPS (HDPLEX 500W GaN
+DC-ATX)
+
+DC-ATX converter drawing from sovereign LiFePO4
+battery bank. Full specification in Section 3.3.
+
+Drive Bay
+
+IcyDock 2-Bay Hot-Swap + USB
+Clone
+
+Mechanical heart of the sovereign rotation system.
+
+Disaster Recovery
+
+ioSafe — floor-bolted
+
+Fire and waterproof. Bolted to floor. Encrypted at
+rest. Physical disaster recovery layer.
+
+3.2.2 Mid-Sized Firm Deployment (Keystone-2)
+Component
+
+Specification
+
+Notes
+
+CPU
+
+Intel i5-13600K (13th Gen) or
+equivalent
+
+Better concurrency and memory bandwidth.
+Supports full service stack including Matrix and Wiki.
+
+Motherboard
+
+Z690 or Z790 ATX, DDR4, TPM 2.0
+
+Full PCIe lane support. Mature, stable platform.
+
+RAM
+
+64GB DDR4
+
+ZFS ARC headroom. Supports full service stack
+comfortably.
+
+Network —
+sovereign zone
+
+Intel X520-DA2 10GbE SFP+ —
+uplink to sovereign peripheral
+switch
+
+Same as Keystone-1.
+
+Network — office
+LAN
+
+Intel i226 2.5GbE or SFP — fiber
+direct to office switch
+
+Keystone-2 runs fiber directly to office switch.
+Galvanic isolation inherent to fiber medium. Optical
+isolator retired.
+
+Case / PSU / Drive
+Bay / ioSafe
+
+Same as Keystone-1
+
+Hardware-agnostic recovery architecture identical
+across tiers.
+
+ℹ Network isolation tier progression: Keystone-1 uses copper to the office switch through Furman + optical
+isolator. Keystone-2 replaces this with fiber direct to the switch — galvanic isolation inherent, no isolator required.
+The sovereign peripheral zone uplink uses fiber at all tiers. Keystone-MAX takes sovereign control of the network
+stack — see 3.2.3.
+
+3.2.3 Large Firm Deployment (Keystone-MAX)
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+Component
+
+Specification
+
+Notes
+
+CPU
+
+Xeon or Ryzen Pro / Threadripper
+Pro
+
+Server-grade or workstation-grade processor. ECC
+RAM mandatory.
+
+RAM
+
+128GB ECC minimum
+
+ECC mandatory at MAX tier. ZFS ARC at scale
+requires headroom.
+
+Network
+
+Keystone-MAX operates the firm's
+network stack
+
+At MAX scale, Keystone assumes sovereign control
+of network infrastructure: routing, VLAN
+enforcement, DNS, and sovereign Wi-Fi tier.
+pfSense or OPNsense on sovereign hardware. Full
+specification deferred — own architecture
+document.
+
+Storage
+
+High-performance NVMe array
+
+Data SSD tier scales for SAIA backplane throughput
+saturation.
+
+Services
+
+Full stack + extended services
+
+Identity, Vault, Files, Matrix, Wiki, Print/Scan,
+extended firm services.
+
+⚠️ Keystone-MAX network stack architecture is deferred. Deploying Keystone-MAX without taking sovereign
+control of the network perimeter places sovereign boundary enforcement in the hands of infrastructure the firm
+does not fully control. Acceptable at Keystone-1 and Keystone-2 scale; not acceptable at MAX scale. Integrators
+planning Keystone-MAX deployments must engage the full network architecture specification before deployment
+begins.
+
+3.2.4 Design Principle: Hardware Agnosticism
+Keystone must be recoverable on any available x86 hardware. ZFS pools re-import on any Linux system without
+reconfiguration. In a motherboard failure scenario, a technician can restore full Keystone functionality on a
+replacement machine using only the drive complement and the LUKS master passphrase from the offsite safe. No
+special tools, no vendor support, no proprietary hardware required.
+
+3.3 Power Architecture — Integral UPS
+Keystone operates on a sovereign DC power architecture that provides clean, stable power, physical ride -through
+capability, and elimination of grid noise and transients from the motherboard power rail. The LiFePO4 battery
+bank is the primary power source; the grid is the charging source. The entire system draws less than one-third of
+the power architecture's rated capacity under maximum Keystone-1 load.
+
+3.3.1 Component Roles
+Component
+
+Specification
+
+Role
+
+Furman SS-6B or equiv
+
+Passive MOV surge suppressor
+— no firmware, no telemetry
+
+First protection layer. AC input. Network office
+uplink also passes through at Keystone-1 (copper
++ optical isolator).
+
+Mean Well HLG-480H48B
+
+480W, 48V output, fanless
+passive, 48B variant
+
+AC/DC conversion. Feeds Victron solar input
+terminal. 48B variant allows output voltage trim.
+
+Analog Power Sensor
+(APS)
+
+Custom passive build — see
+3.3.6. No microcontroller, no
+firmware.
+
+Three functions: overcurrent protection (15A fuse),
+binary AC present/absent GPIO signal to
+motherboard (optocoupler), BMS kickstart resistor
+(750Ω, 5W).
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+Component
+
+Specification
+
+Role
+
+Victron SmartSolar
+MPPT 100/20
+
+Charge controller — 41.5V
+regulated load output, ≤4.5A
+charge limit
+
+Manages charge current to battery. Provides
+regulated load output to system bus.
+
+Schottky Diode
+
+MBR6045WT or VS-60CTQ045M3, TO-247 dual commoncathode. Bridge Pin 1 + Pin 3
+(anodes). Pin 2 tab = cathode =
+live at system bus voltage.
+
+Passive automatic transfer switch. Forward-biases
+instantaneously when bus voltage drops below
+battery voltage on AC loss. No relay, no software,
+no transfer gap.
+
+LiFePO4 battery —
+Keystone-1
+
+12Ah 36V, ~432Wh usable
+
+Primary power source on AC loss. Held at ~85%
+SOC under normal operation — zero daily cycling.
+
+LiFePO4 battery —
+Pegasus tier
+
+25Ah 36V, ~900Wh usable
+
+Same role, larger capacity for higher sustained
+load.
+
+HDPLEX 500W GaN
+
+DC-ATX converter, 12–60V
+input, all ATX rails
+
+Converts system bus DC to ATX power rails.
+Motherboard never sees AC power or grid noise.
+Correct spelling: HDPLEX — not HDFLEX.
+
+3.3.2 Operating States
+State
+
+Description
+
+Grid-connected
+
+MeanWell holds bus at ~41.5V via Victron load output. Battery anode reverse-biased
+— battery contributes nothing to load. Battery charges at ≤4.5A via Victron charge
+output, held at ~85% SOC. Zero daily cycling. Keystone draws ~120W sustained —
+well under one-third of HDPLEX derated capacity.
+
+Grid-loss
+
+MeanWell collapses. Victron load output sags. Schottky forward -biases passively,
+instantaneously, relay-free. Battery takes load. APS GPIO goes HIGH. Daemon
+confirms via secondary network check. Parks mirror HDDs, reducing sustained draw.
+
+Low battery — 33V
+threshold
+
+Daemon initiates graceful OS shutdown. ZFS pools export cleanly. All services
+terminate. Threshold adjustable based on observed discharge rate and measured
+shutdown time at commissioning.
+
+Grid-return
+
+MeanWell recovers. Victron resumes charging at ≤4.5A. Bus returns to 41.5V. Diode
+reverse-biases. APS GPIO goes LOW. Daemon confirms restoration. Operations
+resume after battery recovery to target SOC.
+
+BMS bootstrap
+deadlock
+
+APS kickstart resistor (750Ω, 5W) provides trickle current (~24mA at 48V input,
+0.432W dissipation) to battery charge port on AC return. Wakes BMS regardless of
+discharge port state.
+
+⚠️ APS kickstart resistor value: 750Ω, 5W ceramic wirewound. Earlier specification versions listed 100Ω 10W —
+that value is incorrect and must not be used. At 750Ω worst-case current is 24mA (48V in / 30V battery),
+dissipating 0.432W. The 100Ω value would produce 480mA worst-case — potentially damaging to the battery
+BMS. Build all APS units to the 750Ω 5W specification.
+
+3.3.3 Fuse Architecture
+⚠️ All fuse positions use MC4 inline fuse holders rated 60V DC, 30A continuous, 10 AWG native pigtails. Fuse
+inserts are 10×38mm cylindrical midget PV DC-rated format only. Automotive blade fuses and MAXI marine blade
+holders are prohibited — their 32V DC maximum rating is exceeded by every rail in this system.
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+Rating
+
+Format
+
+Location
+
+Purpose
+
+15A
+
+10×38mm cylindrical PV
+DC-rated
+
+MeanWell output → APS → Victron
+PV input
+
+Main input protection, captive to
+APS assembly
+
+10A
+
+10×38mm cylindrical PV
+DC-rated
+
+Victron charge output → battery
+charge lead
+
+Protects 14 AWG charge leads and
+battery BMS
+
+15A
+
+10×38mm cylindrical PV
+DC-rated
+
+System bus → HDPLEX input
+(Keystone-1)
+
+Single branch, all Keystone loads
+
+20A
+
+10×38mm cylindrical PV
+DC-rated
+
+System bus → HDPLEX input
+(Pegasus tier)
+
+Higher load tier — 20A provides
+headroom at battery-floor current
+levels
+
+3.3.4 Wiring Requirements
+Run
+
+Gauge
+
+Notes
+
+Battery discharge → Schottky
+anode
+
+10 AWG
+silicone
+
+Main DC trunk
+
+Schottky cathode → System bus
+
+10 AWG
+silicone
+
+Main DC trunk
+
+System bus → HDPLEX input
+
+10 AWG
+silicone
+
+Single branch, fuse in line
+
+MeanWell output → APS →
+Victron PV
+
+10 AWG or 14
+AWG silicone
+
+APS pigtail, 15A fuse captive to APS assembly
+
+Victron charge output → battery
+
+14 AWG
+silicone
+
+10A fuse in line, ≤4.5A charge current
+
+All negatives → Blue Sea busbar
+
+10 AWG
+silicone
+
+Equal length runs. Single common ground reference. Verify
+<2 milliohms HDPLEX negative to busbar before first
+power-on.
+
+3.3.5 Schottky Diode — Thermal Mount Assembly
+Open thermal sandwich assembly. Package: TO-247 dual common-cathode (MBR6045WT or VS-60CTQ045M3). Bridge Anode A (Pin 1) and Anode B (Pin 3) externally. Cathode tab (Pin 2) is live at system bus voltage —
+never contact aluminum directly. Worst-case dissipation 7.33W at 13.33A and 0.55V Vf.
+Layer
+
+Material
+
+Requirement
+
+Upper — heatsink
+
+Anodized aluminum, PEEK-bolted
+
+Active upward heat path
+
+Upper pad
+
+Honeywell PTM7950 or equiv ≥5.0
+W/m·K phase-change
+
+Top/heatsink face only. Liquifies above ~45°C —
+contained by heatsink clamping. Prohibited on
+bottom face — migrates under pressure.
+
+Diode body
+
+TO-247, cathode tab (Pin 2) live at
+system bus voltage
+
+Both pads mandatory. Never contact aluminum
+directly.
+
+Lower pad
+
+Rigid ceramic insulator — alumina,
+≥5.0 W/m·K, non-flowing
+
+Bottom/chassis face only. PTM7950 prohibited here.
+
+Lower — chassis
+
+Aluminum bracket or chassis wall
+
+Large thermal mass, primary heat sink
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+⚠️ Hardware: Metal M3 screw with PEEK or ceramic shoulder washer only. Nylon prohibited — creep under
+torque risks short to live cathode tab. Washer must cover full bore of TO-247 mounting hole — inner ring is tied to
+live cathode tab at system bus voltage.
+
+3.3.6 Analog Power Sensor
+Single passive device performing three functions. No microcontroller. No firmware. Verifiable by inspection
+against published open hardware schematic. Built x4 units per fleet build session.
+Function
+
+Implementation
+
+Values
+
+A — BMS Kickstart
+Resistor
+
+Series resistor + blocking diode from
+MeanWell output to battery charge port
+
+R_kick: 750Ω, 5W ceramic wirewound.
+Blocking diode: 1N4007. Worst-case:
+24mA at 48V in / 30V battery. Dissipation:
+0.432W.
+
+B — Binary AC
+Present/Absent Signal
+
+Voltage divider + PC817 optocoupler →
+motherboard GPIO
+
+R1: 20kΩ 1/4W. R2: 1.5kΩ 1/4W.
+Forward current: 1.87mA at 41.5V. AC
+present = GPIO LOW. AC absent = GPIO
+HIGH. Wire-break = GPIO HIGH —
+daemon secondary check mandatory
+before acting.
+
+C — Overcurrent
+Protection
+
+15A 10×38mm cylindrical PV fuse in MC4
+inline holder
+
+Captive on MeanWell pigtail, outside
+enclosure. 60V DC rated.
+
+Form factor: sealed polycarbonate enclosure (Hammond 1591 series). Three individually-sized cable glands.
+MeanWell pigtail through dedicated heavy gland. Charging circuit through dedicated gland. GPIO pigtail (24 –28
+AWG) through tight rubber pass-through with zip-tie strain relief inside wall.
+
+3.3.7 Power Budget — Keystone-1
+Load
+
+Watts
+
+Notes
+
+CPU (i5-10600K, Keystone
+workload)
+
+~65W
+
+IO-bound server workload
+
+Motherboard, RAM
+
+~30W
+
+OS SSD + Ledger NVMe
+
+~5W
+
+Data SSD (4TB enterprise)
+
+~5W
+
+Mirror HDDs ×2 (active)
+
+~10W
+
+Fans, misc
+
+~5W
+
+Total sustained
+
+~120W
+
+HDPLEX capacity at 41.5V
+
+~430W
+
+Machine runs at ~28% of derated capacity
+
+Runtime on battery (HDDs parked)
+
+~3.5–4 hours
+
+12Ah 36V pack at ~110W
+
+Parked on grid loss
+
+3.4 Drive Architecture
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+Drive
+
+Capacity
+
+Role
+
+Filesystem
+
+Encryption
+
+OS SATA
+SSD
+
+250GB
+
+OS, Authentik, Vaultwarden,
+databases, keys. Partitioned
+smaller than physical capacity —
+bounded image size for rotation
+media compatibility.
+
+ext4
+
+LUKS2 + TPM2
+
+Ledger NVMe
+
+250GB
+
+Dual role: hourly OS backup target
++ bootable Rescuezilla recovery
+environment.
+
+ext4
+
+LUKS2 + TPM2
+
+Data SSD
+
+4TB enterprise
+SATA (Keystone1); 8TB (Keystone2); NVMe array
+(Keystone-MAX)
+
+ZFS file server — SMB datasets,
+model storage, RAG staging, SAIA
+backups
+
+ZFS
+
+LUKS2 + TPM2
+
+Mirror HDD ×2
+
+6TB+ enterprise
+(Keystone-1);
+12TB+ (Keystone2)
+
+ZFS mirror — active backup pool.
+Two active, two in sovereign
+rotation chain.
+
+ZFS mirror
+
+LUKS2 + TPM2
+
+ioSafe
+
+Variable
+
+Fire/waterproof physical disaster
+recovery backup. Floor-bolted.
+
+ext4 / ZFS
+
+LUKS2 + TPM2
+
+3.5 ZFS Dataset Access Model
+Dataset
+
+SMB Access
+
+Notes
+
+rag_ingestion
+
+Ingestion managers (write);
+SAIA service account (read-only)
+
+RAG pipeline staging. Controlled intake. Every access
+logged.
+
+firm_files
+
+All authenticated staff
+(read/write); matter-level
+subfolder permissions
+
+Privileged matter content. Previous Versions enabled.
+
+saia_backups
+
+SAIA service account only
+
+SAIA OS and vector DB images. Not accessible to end
+users.
+
+models
+
+SAIA service account (readonly); Integrator (write)
+
+LLM model weights. Updated only by integrator via
+verified procedure.
+
+scan_quarantine
+
+MFP scan delivery (write);
+Ingestion coordinator
+(read/review/promote); SAIA
+service account (no access)
+
+Physical document intake staging. Human review
+required before promotion to rag_ingestion. Prevents
+physical prompt injection via external documents.
+
+infrastructure
+
+Integrator only
+
+System configs, update packages, audit logs, build
+documentation.
+
+3.6 Keystone Software Stack
+Layer
+
+Component
+
+Notes
+
+OS
+
+Ubuntu 26.04 LTS
+
+5-year LTS. Security updates integrator-controlled. No automatic
+updates.
+
+Identity / SSO
+
+Authentik
+
+Local IdP. MFA enforced. No cloud dependency.
+
+Key Vault
+
+Vaultwarden
+
+Self-hosted Bitwarden-compatible vault. Operational secrets only —
+never LUKS bootstrap keys.
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+Layer
+
+Component
+
+Notes
+
+File Server
+
+ZFS + Samba
+(SMB)
+
+Dataset-level permissions. Shadow copy. Fiber uplink to sovereign
+peripheral zone.
+
+Print / Scan
+
+CUPS + Samba
+
+Network print server. Authentik LDAP auth. Scan-to-ingest pipeline via
+scan_quarantine.
+
+Communications
+
+Matrix Synapse +
+Element
+
+Sovereign encrypted messaging.
+
+Intranet / Wiki
+
+Wiki.js or Outline
+
+Internal knowledge base. Behind Authentik SSO.
+
+Containers
+
+Docker + Compose
+
+All services containerized.
+
+Reverse Proxy
+
+Nginx
+
+TLS termination. Routes through Authentik.
+
+Backup Engine
+
+Rescuezilla + ZFS
+native
+
+Block-level imaging + ZFS snapshots.
+
+Archival
+
+M-DISC Blu-ray
+
+Write-once archival for models, closed matter snapshots, OS archives.
+
+Time / NTP
+
+chrony
+
+Authoritative time source for sovereign environment.
+
+Network
+gateway
+
+Linux routing +
+nftables
+
+Routes between sovereign peripheral zone, office LAN, and internet.
+Default-deny outbound.
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+IV. SAIA — Sovereign AI Appliance
+SAIA is a locally-deployed AI inference engine. It processes documents, answers questions, and assists with
+legal research and drafting using AI models that run entirely on hardware physically located in the firm's facility.
+No query, no document, and no response traverses a public network in normal operation.
+SAIA is an architecture, not a product. The models it runs are open-source and auditable. The software stack is
+open-source and auditable. There are no black-box components, no accounts with third-party AI providers, and
+no data leaving the building without explicit attorney authorization and anonymization.
+
+4.1 Hardware Specification
+4.1.1 Reference Build (SAIA-1)
+Component
+
+Specification
+
+Notes
+
+CPU
+
+Intel Core i7-13700K (Raptor Lake,
+16 cores / 24 threads, LGA1700)
+
+Sufficient for parallel preprocessing, tokenization,
+and service orchestration alongside GPU inference.
+
+Motherboard
+
+ASUS PRIME Z790M-PLUS D4,
+LGA1700, Micro-ATX, DDR4, PCIe
+5.0
+
+TPM 2.0 required. Full PCIe 5.0 and 4.0 lane
+support.
+
+RAM
+
+64GB DDR4 2666MHz — matched
+or mixed kit, JEDEC default only.
+No XMP.
+
+Sufficient for LLM runtime, RAG pipeline, OS, and
+containerized services concurrently.
+
+CPU Cooler
+
+Thermalright SI-100 Black —
+100mm top-flow, 6×6mm heat pipes
+
+100mm height — fits SOEYi U320 135mm
+clearance with 35mm headroom.
+
+CPU Power Limits
+
+PL1: 125W / PL2: 150W / Tau: 10
+seconds. Configure in BIOS before
+any inference workload.
+
+Required spec item. i7-13700K unconstrained can
+exceed 250W.
+
+GPU
+
+NVIDIA RTX Pro 4000 Blackwell,
+24GB GDDR7 ECC, 5th gen
+Tensor Cores, FP4 support
+
+24GB VRAM supports all reference models at full
+multi-user concurrency. FP4 validation is a required
+commissioning step.
+
+Case
+
+SOEYi U320 Phoenix, Micro-ATX
+cube, 4 carry handles
+
+Conference table deployment. Compact,
+professional, portable.
+
+PSU
+
+SFX 650W+ 80+ Gold
+
+Headroom for workstation GPU and full system load.
+
+OS NVMe
+
+Enterprise NVMe with hardware
+Power Loss Protection — Samsung
+PM9A1 or Intel P41 Plus, 512GB–
+1TB
+
+PLP mandatory. SAIA has no Integral UPS —
+abrupt power loss is a real scenario.
+
+Vector DB NVMe
+
+Samsung 980 Pro 2TB, PCIe 4.0
+
+Dedicated Qdrant vector database storage.
+
+Scratch NVMe
+
+Standard NVMe 1TB+
+
+Pipeline working files, model cache, temp inference
+buffers.
+
+Network
+
+Onboard 2.5GbE copper (sovereign
+peripheral switch); all other
+interfaces disabled
+
+Single active network interface. One wire, one
+destination.
+
+Power
+
+Furman SS-6B or equiv (passive
+MOV) + CyberPower pure sinewave
+UPS
+
+Pure sinewave UPS required — confirm model
+explicitly before purchasing.
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+ℹ Model weights and RAG ingestion staging reside on the Keystone Data SSD and are accessed over the
+sovereign peripheral zone. This is a security architecture decision: model weights on a GPU-attached system are
+more easily exfiltrated; keeping them on Keystone means they are governed by Keystone's dataset permissions
+and backup chain.
+
+4.1.2 Scaled Deployment Configurations
+Configuration
+
+GPU
+
+VRAM
+
+Recommended Use
+
+SAIA-1
+(Reference)
+
+1× NVIDIA RTX Pro 4000
+Blackwell 24GB GDDR7 ECC
+
+24GB
+
+1–5 concurrent users; small firm deployment.
+
+SAIA-2 (Dual)
+
+2× RTX Pro 4000 Blackwell or
+equiv — load-balanced, not
+tensor-parallel. Each card holds
+a full model instance.
+
+48GB
+total
+
+5–20 concurrent users; mid-size firm. Primary
+card anchors inference pool; secondary
+handles overflow sessions and RAG ingestion.
+
+SAIA-Pro
+
+1× RTX 6000 Ada 48GB or RTX
+6000 Pro 96GB
+
+48–
+96GB
+
+20+ concurrent users; large models; highvolume document processing.
+
+SAIA-Enterprise
+
+1× RTX 6000 Pro 96GB
+workstation class + expansion
+
+96GB+
+
+Enterprise; multiple practice groups; parallel
+model serving.
+
+ℹ The dual-card SAIA-2 configuration uses workload segmentation, not tensor parallelism. Two discrete inference
+engines, each holding a full model instance, load-balanced across users. 70W TDP workstation cards enable this
+at combined 140W GPU draw in a standard chassis.
+
+4.2 SAIA Software Stack
+Layer
+
+Component
+
+Notes
+
+OS
+
+Ubuntu 26.04 LTS
+
+Hardened baseline. Integrator-controlled updates. No automatic
+updates.
+
+Identity / SSO
+
+Authentik (via
+Keystone)
+
+SAIA hosts no local IdP. Non-functional if Keystone offline —
+intentional.
+
+Secrets
+
+Vaultwarden (via
+Keystone)
+
+All service credentials retrieved from Keystone Vaultwarden at startup.
+
+Inference
+Runtime
+
+vLLM
+
+High-throughput LLM serving. OpenAI-compatible API. Use AWQ or
+native FP4 weight formats — not GGUF.
+
+Language
+Model
+
+Gemma 3 27B AWQ
+(reference)
+
+Strong reasoning and instruction-following. Fits reference VRAM. Mistral
+24B and Qwen2.5 32B are validated alternatives.
+
+Vector
+Database
+
+Qdrant
+
+Local deployment. No telemetry. Hybrid sparse+dense search.
+
+OCR Pipeline
+
+PaddleOCR +
+Tesseract
+
+PaddleOCR for complex layouts. Tesseract as auditable fallback.
+
+RAG
+Orchestration
+
+FastAPI +
+LlamaIndex
+
+Clean API / retrieval separation.
+
+Anonymization
+
+spaCy NER +
+custom rules
+
+Local NER. Mandatory gate for any external transmission.
+
+User Interface
+
+OpenWebUI
+
+Multi-user chat interface. No external dependencies.
+
+Containers
+
+Docker + Compose
+
+All services containerized.
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+Layer
+
+Component
+
+Notes
+
+Reverse Proxy
+
+Nginx
+
+HTTPS termination. Access control. Request logging.
+
+Cloud Polish
+(optional)
+
+Claude API
+(Anthropic)
+
+Narrow, audited, anonymization-gated only. Disabled by default.
+Attorney approval required per use.
+
+GPU
+Management
+
+nvidia-smi + NVIDIA
+drivers
+
+Monitor power draw, temperature, VRAM utilization.
+
+4.3 VRAM Architecture and Model Guidance
+Scenario
+
+Model
+
+Format
+
+VRAM Est.
+
+Concurrent Users (24GB)
+
+Reference deployment
+
+Gemma 3 27B
+
+AWQ
+
+~14–16GB
+
+3–5
+
+Higher quality
+
+Gemma 3 27B
+
+FP4
+(Blackwell
+native)
+
+~7–8GB
+
+6–10 — validate at commissioning
+
+Smaller / faster
+
+Mistral 24B
+
+AWQ
+
+~12–14GB
+
+4–6
+
+Alternative
+
+Qwen2.5 32B
+
+AWQ
+
+~16–18GB
+
+3–4
+
+Demo / fast response
+
+Gemma 3 12B
+
+AWQ
+
+~6–8GB
+
+8–12
+
+ℹ FP4 validation is a required commissioning step on all Blackwell deployments. FP4 roughly halves VRAM
+requirement at modest quality cost — if validated, enables larger models or significantly higher concurrency. Test
+FP4 vs AWQ baseline throughput at commissioning and document tokens/second for both before production use.
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+V. Document Lifecycle
+5.1 Ingestion Pipeline
+Documents enter the sovereign trust boundary through two paths: network upload to the RAG ingestion staging
+share, or physical scan via the sovereign MFP to the scan_quarantine staging share. The scan_quarantine path
+requires human review and explicit promotion before the document reaches the ingestion pipeline — this prevents
+physical prompt injection via externally-originated documents arriving via MFP scan.
+Stage
+
+Action
+
+Notes
+
+1 — Intake
+
+Document placed in rag_ingestion
+staging share (network) or
+scan_quarantine (physical scan)
+
+Physical scans held in scan_quarantine pending
+ingestion coordinator review.
+
+2 — Human
+review
+(physical
+scans only)
+
+Ingestion coordinator reviews
+scan_quarantine content before
+promotion
+
+Mandatory gate. Prevents physical prompt injection.
+SAIA service account has no access to
+scan_quarantine.
+
+3—
+Preprocessing
+
+Text extraction (PDF, DOCX, TXT,
+RTF) or OCR (scanned images).
+PaddleOCR primary, Tesseract
+fallback.
+
+PaddleOCR handles complex layouts. Tesseract
+fallback triggered on low-confidence output.
+
+4 — Chunking
+
+Text split into overlapping chunks with
+metadata (source, page, timestamp)
+
+Overlap preserves context across chunk boundaries.
+
+5—
+Embedding
+
+Chunks converted to vector
+embeddings via local embedding
+model
+
+No external embedding API. All computation local.
+
+6 — Indexing
+
+Embeddings stored in Qdrant on SAIA
+Vector DB NVMe alongside source
+chunk
+
+Hybrid sparse+dense indexing for retrieval quality.
+
+7 — Audit log
+
+Ingestion event logged: document
+name, hash, timestamp, operator,
+chunk count
+
+Immutable. Part of the Keystone audit trail.
+
+5.2 RAG Query Pipeline
+Stage
+
+Action
+
+Notes
+
+1 — User
+query
+
+Attorney submits query via
+OpenWebUI (Authentik-authenticated)
+
+All queries logged: user, timestamp, query text,
+session ID.
+
+2 — Retrieval
+
+Query embedded; nearest chunks
+retrieved from Qdrant; hybrid
+sparse+dense search
+
+Source citations included in retrieval results.
+
+3 — Context
+assembly
+
+Retrieved chunks assembled into
+prompt context with source metadata
+
+Context window managed per model spec.
+
+4 — Inference
+
+Prompt submitted to vLLM; model
+generates response
+
+All inference local. No external API call in normal
+operation.
+
+5 — Response
+delivery
+
+Response delivered to user with
+source citations
+
+Citations display document name, page, and date.
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+Stage
+
+Action
+
+Notes
+
+6 — Audit log
+
+Query and response logged: user,
+timestamp, query, response summary,
+sources cited
+
+Immutable. Available to compliance review.
+
+5.3 Cloud Polish Gate
+The cloud polish pathway is disabled by default. When enabled, it is the only authorized path for any data to exit
+the trust boundary. The pathway is not a general internet connection — it is a narrow, attorney-gated,
+anonymization-mandatory channel to a single allowlisted external AI endpoint.
+Gate
+
+Requirement
+
+Attorney authorization
+
+Explicit per-use approval by a named attorney. Logged with timestamp and authorizing
+user identity.
+
+Anonymization
+
+All PII, entity names, matter identifiers, and privileged markers stripped by the local
+spaCy NER pipeline before any content leaves the system. Deanonymization key
+retained locally for re-integration of polished response.
+
+Endpoint allowlist
+
+Single allowlisted endpoint only. Default: Anthropic Claude API. No other external
+destination permitted.
+
+BAA requirement
+
+If PHI is possible in the corpus, a Business Associate Agreement with the cloud
+provider is required before the feature is enabled. Non-negotiable.
+
+Audit log
+
+Every cloud polish invocation logged: authorizing attorney, timestamp, anonymized
+content hash, response hash, deanonymization key reference.
+
+⚠️ The deanonymization key is stored encrypted on SAIA OS NVMe. Loss of the key renders anonymized
+documents permanently anonymized — the polished response cannot be reintegrated. The key is backed up as
+part of the SAIA backup chain. Treat the deanonymization key as sovereign data equivalent to Vaultwarden
+secrets.
+
+5.4 Institutional Knowledge Accumulation
+The vector database accumulates the firm's institutional knowledge over time. Matter documents, research,
+correspondence, and templates indexed against each other create a corpus of increasing value. This corpus is a
+sovereign asset — it lives on hardware the firm controls, is backed up under the firm's sovereign rotation chain,
+and is archived to M-DISC at matter close. It cannot be extracted, sold, or discontinued by any third party.
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+VI. Backup Architecture
+6.1 Sovereign Rotation System
+Keystone's backup architecture is built around a monthly rotation of encrypted drive clones through a chain of
+physical locations under owner custody. The rotation chain provides protection against hardware failure,
+ransomware, site disaster, and any form of remote attack — including attacks against the integrator. The
+integrator never holds a copy of the firm's data.
+Tier
+
+Media
+
+Location
+
+Frequency
+
+Encryption
+
+On-machine — Ledger
+NVMe
+
+250GB NVMe — dual
+boot + hourly backup
+
+Inside Keystone
+
+Hourly OS
+image
+
+LUKS2 + TPM2
+
+On-machine — ZFS
+mirror
+
+HDD mirror pair (active)
+
+Inside Keystone
+
+Continuous
+ZFS
+snapshots
+
+LUKS2 + TPM2
+
+Physical resilience —
+ioSafe
+
+Fire/waterproof
+enclosure
+
+Floor-bolted at site
+
+Daily rsync
+
+LUKS2 + TPM2
+
+Sovereign rotation —
+onsite safe
+
+HDD clone (from mirror
+rotation chain)
+
+Firm's onsite safe
+
+Monthly clone
+swap
+
+LUKS2 + TPM2
+
+Sovereign rotation —
+offsite safe
+
+HDD clone (from mirror
+rotation chain)
+
+Attorney's personal
+safe or firm offsite
+
+Monthly clone
+swap
+
+LUKS2 + TPM2
+
+Long-term archival —
+M-DISC
+
+Blu-ray M-DISC writeonce
+
+Multiple locations
+
+At matter
+close; annually
+
+LUKS2 at rest; MDISC inherently
+immutable
+
+SAIA backup
+
+SAIA OS + vector DB
+daily image
+
+Keystone
+saia_backups ZFS
+dataset
+
+Daily
+
+LUKS2 + TPM2
+
+6.2 Monthly Rotation Choreography
+The monthly sovereign rotation is performed by the integrator or a trained designated staff member. The
+choreography is procedural and physical — drives move between Keystone, the onsite safe, and the offsite safe
+in a defined sequence that ensures the backup chain is never broken.
+Step
+
+Action
+
+1
+
+Retrieve Drive A from onsite safe. Retrieve Drive B from offsite safe (or bring Drive C from Keystone).
+
+2
+
+At Keystone: hot-swap Drive A into IcyDock. Initiate clone via USB clone button. Wait for completion
+indicator.
+
+3
+
+Verify clone integrity: mount clone image, verify SMART data, confirm file count against source.
+
+4
+
+Label clone with date and rotation sequence number. Update rotation log.
+
+5
+
+Move Drive A (freshly cloned) to offsite safe. Move Drive B to onsite safe. Return Drive C to Keystone
+mirror pool.
+
+6
+
+Confirm all rotation log entries signed. File rotation record in infrastructure dataset.
+
+6.3 Quarterly Integrity Verification
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+Every quarter, the integrator performs a full integrity verification: mounts the offsite rotation drive, verifies LUKS2
+decryption, confirms ZFS pool health, and performs a test restore of a sample file to confirm the recovery path is
+functional. Results documented in the infrastructure dataset.
+
+6.4 M-DISC Archival Policy
+• Model weights archived to M-DISC when a new model version is deployed — provides a verifiable record of
+which model was in use at any given time
+• Closed matter vector DB snapshots archived to M-DISC at matter close — preserves the matter's AI-assisted
+research trail for professional responsibility purposes
+• OS archive burned to M-DISC annually — preserves a known-good system state for long-term recovery
+• M-DISC copies stored at minimum two physical locations — onsite fireproof storage and offsite
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+VII. Network Architecture
+Keystone is the network gateway for the entire sovereign environment. It sits at the intersection of three distinct
+network zones simultaneously: the sovereign peripheral zone (SAIA, MFP, sovereign peripherals), the office LAN
+(attorney and paralegal workstations, VPN remote users), and the internet (controlled outbound only). Every byte
+that crosses a zone boundary passes through Keystone and is subject to its access controls, firewall rules, and
+audit logging.
+This is not incidental to Keystone's role — it is central to it. The Define R5 case, the Integral UPS, the dual-NIC
+configuration, and the fiber uplink architecture are all expressions of the same requirement: Keystone must be the
+machine in the breach, continuously available, handling three network zones without becoming the weak point
+that undermines the sovereignty it exists to provide.
+◆ The sovereign peripheral switch is the galvanic isolation point for the entire sovereign peripheral zone. One
+fiber uplink to Keystone. Everything behind it — SAIA, MFP, future sovereign peripherals — connects via copper.
+Nothing that touches a downlink port of the sovereign peripheral switch is ever a non-sovereign device. This rule
+is physical, not configured.
+
+7.1 Three-Zone Topology
+Zone
+
+Contents
+
+Keystone Interface
+
+Isolation Method
+
+Sovereign
+peripheral zone
+
+SAIA, MFP(s), sovereign peripheral
+switch, future sovereign peripherals
+
+X520-DA2 10GbE
+SFP+ fiber — uplink to
+sovereign peripheral
+switch
+
+Fiber uplink provides
+galvanic isolation at zone
+boundary. All devices in
+zone are integratordeployed sovereign
+hardware. No office LAN
+path exists or is permitted.
+
+Office LAN
+
+Attorney and paralegal
+workstations, VPN remote users,
+office switch and router
+
+Intel i226 2.5GbE —
+Keystone-1: copper
+through Furman +
+optical isolator;
+Keystone-2+: fiber
+direct to office switch
+
+VLAN isolation at network
+infrastructure layer. All
+access to sovereign
+services mediated by
+Nginx and Authentik. No
+workstation has any direct
+path to SAIA.
+
+Internet
+
+Cloud polish endpoint (optional),
+integrator-controlled update
+sources, firm SIEM (optional)
+
+Through office LAN
+uplink — not a separate
+interface
+
+Default-deny outbound.
+Host firewall enforced.
+Every permitted outbound
+flow explicitly enumerated.
+OS and GPU telemetry
+blocked at host firewall.
+
+7.2 Sovereign Peripheral Zone
+The sovereign peripheral zone is a defined network segment containing only integrator-deployed sovereign
+hardware. It has a single uplink — fiber to Keystone — and no other connection to any network. Devices in this
+zone communicate via copper through the sovereign peripheral switch. The fiber uplink to Keystone provides
+inherent galvanic isolation at the zone boundary.
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+Device
+
+Connection
+
+Role in Zone
+
+Sovereign peripheral
+switch
+
+Fiber uplink to Keystone
+X520-DA2
+
+Zone boundary device. Managed — sovereign fabric
+only. No office LAN ports.
+
+SAIA
+
+Copper to sovereign
+peripheral switch
+
+All Keystone dependency traffic (identity, secrets, file
+access, NTP, backup) routes through switch to
+Keystone.
+
+Sovereign MFP
+
+Copper to sovereign
+peripheral switch
+
+Physical document ingestion endpoint. Scan delivery to
+Keystone scan_quarantine via SMB. Print jobs from
+Keystone CUPS.
+
+Future sovereign
+peripherals
+
+Copper to sovereign
+peripheral switch
+
+Additional scanners, physical intake hardware, other
+integrator-deployed sovereign devices. Never added to
+the office LAN.
+
+⚠️ The sovereign peripheral switch must never have a non-sovereign device on any downlink port. This is a
+physical topology constraint, not a configuration policy. Enforce by physical access control to the switch, not by
+ACL alone.
+
+7.3 Sovereign Peripheral Switch Specification
+Requirement
+
+Specification
+
+Rationale
+
+SFP uplink port
+
+Minimum 1GbE SFP —
+10GbE SFP+ preferred to
+match Keystone X520DA2
+
+Fiber uplink to Keystone. Galvanic isolation inherent to
+optical medium.
+
+Copper downlink ports
+
+Minimum 4× GbE copper
+— 8× preferred
+
+SAIA, MFP(s), and future sovereign peripherals.
+
+Managed switch
+
+VLAN support,
+management access
+restriction
+
+Management access restricted to sovereign fabric only.
+No remote management from office LAN.
+
+Power conditioning
+
+Furman or equiv passive
+MOV on switch power
+circuit
+
+Protects sovereign switch fabric from conducted
+transients originating at MFP or building power.
+
+Physical placement
+
+Server room or secured IT
+enclosure alongside
+Keystone
+
+Physical access control enforced.
+
+7.4 Office LAN Uplink — Tier Progression
+Tier
+
+Office LAN Interface
+
+Isolation Method
+
+Notes
+
+Keystone-1
+
+Intel i226 2.5GbE —
+copper Ethernet
+
+Furman passive MOV +
+optical isolator in cable run
+
+Galvanic isolation achieved via
+optical isolator. Adequate for
+Keystone-1 deployment profile.
+
+Keystone-2
+
+Intel i226 2.5GbE or SFP
+— fiber direct to office
+switch
+
+Galvanic isolation inherent to
+fiber medium. Optical
+isolator retired.
+
+Full fiber deployment. Furman
+stays on AC side — its optical
+isolator role on the network side
+is retired.
+
+Keystone-MAX
+
+Sovereign network stack —
+Keystone manages the
+
+Keystone IS the network
+perimeter
+
+Full specification deferred — own
+architecture document.
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+Tier
+
+Office LAN Interface
+
+Isolation Method
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+Notes
+
+firm's routing, switching,
+and VLAN infrastructure
+
+7.5 Network Segmentation
+Zone
+
+Can reach
+SAIA?
+
+Can reach
+Keystone?
+
+Method / Notes
+
+Attorney/Paralegal
+VLAN
+
+Yes (HTTPS)
+
+Yes (HTTPS +
+SMB)
+
+Authentik authentication required. Primary access
+path.
+
+Remote users (VPN)
+
+Yes
+
+Yes
+
+Firm VPN + Authentik MFA required.
+
+Admin endpoint
+
+Yes (SSH
+only)
+
+Yes (SSH only)
+
+Key-based SSH on management interface only.
+Documented recovery path.
+
+General office LAN
+
+No
+
+No
+
+VLAN isolation. Enforced at network infrastructure
+layer.
+
+Guest / Wi-Fi
+
+No
+
+No
+
+No exceptions.
+
+Internet (inbound)
+
+No
+
+No
+
+No port forwarding. Neither system reachable from
+public internet.
+
+Sovereign peripheral
+zone
+
+Direct
+(copper via
+switch)
+
+Direct (fiber
+uplink)
+
+Single fiber uplink is the only gateway between
+sovereign peripheral zone and all other networks.
+
+MFP (print/scan)
+
+No
+
+Yes
+(CUPS/SMB via
+sovereign
+switch)
+
+Authenticates via Keystone Authentik LDAP. Scan
+output to scan_quarantine for human review.
+
+7.6 Outbound Traffic Policy
+Default-deny outbound on both systems. Every permitted outbound flow is explicitly defined.
+Destination
+
+Appliance
+
+Permitted?
+
+Condition
+
+Cloud polish endpoint
+(Anthropic API)
+
+SAIA via
+Keystone
+
+Conditional
+
+Feature enabled; anonymization gate passed;
+attorney approval; every request logged.
+
+Software / model update
+source
+
+Both
+
+Conditional
+
+Integrator-initiated only; scheduled maintenance
+window; hash verification required.
+
+Firm SIEM
+
+Both
+
+Conditional
+
+Firm-configured; pull-based preferred; explicit setup
+required.
+
+OS telemetry (Ubuntu)
+
+Both
+
+No
+
+Blocked at host firewall.
+
+GPU telemetry (NVIDIA)
+
+SAIA
+
+No
+
+Blocked at host firewall.
+
+Any other destination
+
+Both
+
+No
+
+Default deny. Blocked and alerted.
+
+7.7 Internal Service Mesh (SAIA)
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+Service
+
+Container
+
+Exposed To
+
+Network Access
+
+User Interface
+
+OpenWebUI
+
+Authenticated users via
+Nginx
+
+Internal only
+
+Inference Engine
+
+vLLM
+
+FastAPI orchestration only
+
+Internal service mesh
+
+RAG
+Orchestration
+
+FastAPI +
+LlamaIndex
+
+OpenWebUI; Authentikvalidated
+
+Internal only
+
+Vector Database
+
+Qdrant
+
+FastAPI only
+
+Internal only
+
+OCR Pipeline
+
+PaddleOCR +
+Tesseract
+
+Ingestion pipeline only
+
+Internal only
+
+Anonymization
+
+spaCy service
+
+Ingestion pipeline + cloud
+polish gate
+
+Internal only
+
+Reverse Proxy
+
+Nginx
+
+External VLAN (HTTPS
+443 only)
+
+Single ingress point
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+VIII. Physical Document Production
+8.1 MFP Integration Architecture
+The sovereign MFP is the physical intake point for the document pipeline. It is deployed and hardened by the
+integrator, placed on the sovereign peripheral zone exclusively, and has no path to the office LAN or any external
+network. Full MFP specification is in Section IX. This section covers the print and scan workflows that connect the
+MFP to the broader document pipeline.
+
+8.2 Scan-to-Ingest Workflow
+Stage
+
+Action
+
+1 — Scan at
+MFP
+
+Staff authenticates at MFP panel (PIN-based or LDAP card). Scans document to Keystone
+scan_quarantine share via SMB.
+
+2 — Watcher
+detection
+
+Keystone scan watcher service detects new file in scan_quarantine. Appends metadata:
+timestamp, source device, operator identity (if PIN auth configured).
+
+3 — Ingestion
+coordinator
+review
+
+Designated ingestion coordinator reviews scan_quarantine content before promotion. This gate
+is mandatory — prevents physical prompt injection via externally-originated documents.
+
+4—
+Promotion to
+ingestion
+pipeline
+
+Coordinator promotes document to rag_ingestion staging share. Document enters ingestion
+pipeline (Section V).
+
+5 — Audit log
+
+Scan event, review action, and promotion logged to Keystone audit trail. Chain of custody
+established from physical document to sovereign document store.
+
+8.3 Print Workflow
+Print jobs from sovereign workstations route through Keystone CUPS — not sent directly from workstation to
+MFP. Keystone is the control point for all print traffic. Every print job is logged: authenticated user, document
+name, timestamp, page count. Print job logs are part of the Keystone immutable audit trail.
+
+8.4 Bates Stamping and Discovery Production
+Document production for discovery is handled as a governed workflow: documents retrieved from the sovereign
+file server, Bates stamps applied by designated staff using integrator-approved tooling, output written to a
+controlled production dataset. The production dataset is subject to the same access controls and audit logging as
+all sovereign datasets. Chain of custody from original document to production set is documented in the audit trail.
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+IX. Sovereign MFP Subsystem
+The sovereign MFP is a first-class component of the Sovereign Infrastructure stack. It is the physical ingestion
+endpoint of the document pipeline — the point at which paper documents enter the sovereign trust boundary. Its
+configuration, network posture, and physical placement must be treated with the same rigor as Keystone and
+SAIA.
+The sovereign MFP is distinct from any leased office copier. The leased copier remains in place and on contract.
+The sovereign MFP is an integrator-deployed, integrator-hardened device that is never connected to the office
+LAN, communicates exclusively with Keystone via the sovereign peripheral zone, and has no path to any
+manufacturer cloud or external service.
+
+9.1 Manufacturer Selection — Brother Industries
+Brother Industries is the approved manufacturer for sovereign MFP deployments. The selection is based on
+sovereign deployment criteria:
+• SMB/CIFS push scanning without cloud account or registration requirement
+• Full network configuration via embedded web interface and BRAdmin — no manufacturer cloud dependency
+• Disableable WiFi, WiFi Direct, and USB host/device ports — firmware-level, not policy-level
+• Native CUPS compatibility for Keystone print server integration
+• Clean firmware update path via BRAdmin or embedded web interface — no manufacturer cloud required
+• Family-controlled Japanese manufacturer — no foreign acquisition history, no cloud-extraction business
+model
+• Consolidated high-yield toner and drum consumable family across monochrome and color lines — single SKU
+stocking for multi-device and multi-site deployments
+ℹ The consumable consolidation across Brother's MFP line is a meaningful operational benefit in law firm
+deployments. A single toner/drum SKU covering both monochrome and color devices at a site simplifies
+procurement, reduces stockout risk, and eliminates the technician error of installing the wrong consumable. It is a
+considered selection criterion.
+
+9.2 Deployment Tiers
+Tier 1 — Sovereign Scan Node (Default)
+Brother MFC-L6915DW
+Attribute
+
+Specification
+
+Print
+
+Monochrome laser
+
+Scan
+
+Color CIS, 1200dpi optical
+
+ADF
+
+Duplex ADF, 80-sheet capacity
+
+Duplex print
+
+Yes
+
+Network
+
+Gigabit Ethernet — WiFi disabled at deployment
+
+Street price
+
+~$500–600
+
+Consumable family
+
+TN-X / DR-X high-yield — shared with Tier 2
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+The L6915DW is the primary recommendation for all deployments. Color laser print is not a law firm workflow
+requirement — color scan is, and this device delivers it at full optical resolution. Monochrome print is fast, reliable,
+and economical. This is the default sovereign scan node.
+
+Tier 2 — Redundant + Color Print Capable
+Brother MFC-L6915DW + Brother MFC-L8905CDW (paired)
+Attribute
+
+MFC-L6915DW
+
+MFC-L8905CDW
+
+Print
+
+Monochrome laser
+
+Color laser
+
+Scan
+
+Color
+
+Color
+
+ADF
+
+Duplex, 80-sheet
+
+Duplex, 70-sheet
+
+Street price
+
+~$500–600
+
+~$750–850
+
+Consumable family
+
+TN-X / DR-X
+
+TN-X / DR-X (shared)
+
+The paired configuration adds color laser print, doubled scan throughput, and ADF redundancy simultaneously.
+Both devices share the same consumable SKU. Recommended for mid-size firms or any firm where document
+ingestion is a primary daily workflow.
+ℹ A single L8905CDW may be deployed as the sole Tier 2 device where color print is required but volume does
+not justify a pair. The crossover point at which a single Tier 3 device is preferable to a Tier 2 redundant pair is
+higher than it appears — two devices provide redundancy, workflow separation, and consumable simplicity that a
+single high-volume device cannot match organizationally.
+
+Tier 3 — High-Volume (Site Assessment Required)
+Brother MFC-9000 series. For deployments with 25+ users in sustained heavy utilization. Requires site
+assessment before specification. Not a default escalation path.
+
+Companion Device — Light Duty / Attorney Desk
+Brother MFC-L3780CDW. For small offices, single-attorney deployments, or desk-side use where a full workgroup
+MFP is not warranted. Color laser, DADF, duplex, full sovereign scan capability. Street price ~$450 –500.
+Integrates with the same Keystone scan pipeline.
+
+9.3 Network Architecture
+◆ The sovereign MFP is never connected to the office LAN. This is a physical topology constraint, not a
+configuration policy. The device cannot reach the office LAN because it is not connected to it.
+
+Topology
+
+Description
+
+Standard deployment (Tier
+1 and Tier 2)
+
+MFP(s) → Sovereign peripheral switch [copper downlinks] → Keystone [fiber uplink
+— galvanic isolation]
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+Topology
+
+Description
+
+Minimal deployment
+
+MFP → Sovereign peripheral switch → Keystone. The sovereign peripheral switch
+is present in all deployments — it is the galvanic isolation point and the sovereign
+peripheral zone boundary.
+
+Fiber is used for the uplink between the sovereign peripheral switch and Keystone. An MFP is a high -current
+switching power supply connected to building electrical infrastructure. A copper Ethernet path from the MFP
+environment to Keystone is a conducted noise and surge path into the most sensitive appliance in the stack. The
+fiber uplink breaks this path completely at the zone boundary.
+
+9.4 MFP Hardening Checklist
+All sovereign MFP deployments require completion of the following checklist before the device is placed in
+service. The integrator documents completion in the deployment record.
+
+Network hardening
+☐ Wired Ethernet configured — static IP or DHCP reservation from Keystone
+☐ WiFi radio disabled (Network Configuration > WLAN > Disabled)
+☐ WiFi Direct disabled — verify independently from WiFi radio setting
+☐ All scan destinations cleared
+☐ Scan-to-SMB configured to Keystone scan staging share only
+☐ No other scan destinations present
+☐ Test scan to staging share completed and verified
+☐ No outbound internet path available — verified by network topology, not by ACL
+
+USB hardening
+☐ USB host ports disabled (Function Lock / Security settings)
+☐ USB device port disabled
+☐ No USB connection paths present or active
+
+⚠️ USB is a copper path with power pins. The device communicates exclusively via its wired Ethernet interface.
+No USB paths are permitted under any operational circumstances — including break-glass scenarios.
+
+Access control
+☐ Default admin credentials changed
+☐ Admin password stored in Keystone Vaultwarden
+☐ Web admin interface password-protected
+☐ Physical panel PIN lock enabled
+☐ Panel PIN stored in Keystone Vaultwarden
+☐ BRAdmin remote management access restricted to sovereign fabric only
+
+Firmware
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+☐ Firmware updated to current release at deployment
+☐ Firmware version documented in deployment record
+☐ Firmware update source: Brother official only via BRAdmin or embedded web interface
+☐ Firmware review scheduled as part of integrator maintenance cadence
+
+Registration
+☐ No cloud registration performed
+☐ No manufacturer account created
+☐ No registration prompts accepted or deferred — registration disabled where configurable
+
+9.5 Keystone Integration
+The Keystone scan watcher service monitors scan_quarantine and processes incoming files: detects new scan
+jobs; appends metadata including timestamp, source device, and operator identity; notifies ingestion coordinator
+for review; clears processed files on confirmed promotion. Print jobs from sovereign workstations route through
+Keystone CUPS — Keystone is the control point for all sovereign peripheral traffic. Where PIN-based scan
+authentication is configured, the scan watcher logs operator identity against each ingested document, providing a
+chain-of-custody record from physical document to sovereign document store.
+
+9.6 Client-Facing Specification Language
+Sovereign document scanning is provided by an integrator-deployed Brother MFC workgroup laser MFP,
+selected and configured to the deployment tier. The device operates exclusively on the sovereign peripheral
+network and has no connection to the office LAN or to any external network or manufacturer cloud service.
+WiFi, WiFi Direct, and USB connectivity are disabled at deployment. No cloud registration is performed.
+Administrative credentials are managed by Keystone's key vault. Scan jobs are delivered directl y to
+Keystone's secure staging share via SMB over the sovereign fiber-isolated network fabric, where they are
+held for human review before entering the document ingestion pipeline.
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+X. Security Architecture
+10.1 Encryption at Rest
+Every storage device on both systems is encrypted with LUKS2. TPM2 provides automatic unlock on legitimate
+hardware — the system boots without a passphrase prompt when the TPM2 seal matches. Yubikey HMAC-SHA1
+provides a hardware-bound secondary unlock slot. The master passphrase, sealed in an envelope, is the breakglass recovery path.
+Unlock Method
+
+When Used
+
+Custody
+
+TPM2 auto-unlock
+
+Normal boot on legitimate hardware
+
+Hardware-bound. Cannot be transferred to
+another TPM.
+
+Yubikey A or B
+
+TPM2 unavailable; hardware
+replacement; integrator service
+event
+
+One Yubikey per sovereign rotation kit. Two
+keys enrolled — either unlocks. Hardwarebound, non-exportable.
+
+Master passphrase
+
+Yubikeys unavailable; full recovery
+scenario
+
+Sealed in envelope. Stored in offsite safe under
+owner custody. Never stored in Vaultwarden.
+
+10.2 Motherboard Failure Recovery
+On motherboard failure: replace motherboard (same or compatible platform), boot from Ledger NVMe into
+Rescuezilla, unseal LUKS2 with Yubikey or master passphrase, restore OS drive from most recent image, re enroll new TPM2, return to service. The ZFS Data SSD and mirror HDDs reimport without reconfiguration. Total
+data loss: zero. Downtime: one integrator on-site service event.
+
+10.3 Defense-in-Depth
+Layer
+
+Control
+
+Physical
+
+Keystone and SAIA in locked server room or secured enclosure. ioSafe floor -bolted.
+Sovereign peripheral switch in same secured enclosure. Physical access log maintained.
+
+Network
+
+Three-zone topology with Keystone as sole gateway. Default-deny outbound. No inbound
+from internet. VLAN isolation for office LAN. Sovereign peripheral zone physically isolated —
+fiber uplink only.
+
+Host
+
+LUKS2+TPM2 encryption. AppArmor profiles on service containers. Minimal installed
+packages. No GUI. SSH key-based only. Automatic updates disabled — integrator-controlled
+patch cycle.
+
+Application
+
+Authentik SSO with MFA enforced. Nginx reverse proxy — no direct service exposure. Perdataset SMB permissions. Vaultwarden access restricted to management endpoints.
+
+Data
+
+ZFS checksumming and scrub schedule. LUKS2 encryption at rest. Immutable audit log.
+Anonymization gate enforced for any external transmission.
+
+Operational
+
+Integrator-only update authority. Sovereign rotation chain under owner custody. No integrator
+data custody. Quarterly integrity verification. Staff training requirement.
+
+10.4 Threat Model
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+Threat
+
+Control
+
+Ransomware / malware on
+office network
+
+Sovereign peripheral zone physically isolated — no office LAN path. SAIA has one
+wire, one destination. Keystone VLAN isolation. Sovereign rotation chain is
+airgapped and offline.
+
+Compromise of a cloud AI
+provider
+
+No data sent to any cloud provider in normal operation. Cloud polish is optional,
+disabled by default, anonymization-mandatory, and attorney-gated.
+
+Malicious document
+injection (physical)
+
+scan_quarantine gate — human review mandatory before physical scans enter
+ingestion pipeline. Prevents physical prompt injection via externally-originated
+documents.
+
+Insider threat — attorney
+or staff
+
+Authentik audit trail. Dataset-level permissions. No staff access to infrastructure
+dataset. Print and scan audit logs. Key vault access restricted to management
+endpoints.
+
+Integrator compromise or
+malfeasance
+
+Integrator never holds encryption keys. Sovereign rotation drives are owner-custody
+at all times. Master passphrase sealed and offsite. Owner can recover without
+integrator involvement given drives and passphrase.
+
+Hardware failure
+
+Multi-tier backup. Ledger NVMe hourly. ZFS mirror continuous. ioSafe daily.
+Sovereign rotation monthly. Zero data loss on any single hardware failure.
+
+Physical site disaster
+
+ioSafe fire/waterproof on-site. Sovereign rotation drives at offsite safe. M-DISC
+archives at multiple locations.
+
+Remote network attack
+
+No inbound ports from internet. No port forwarding. Perimeter firewall default-deny
+inbound.
+
+10.5 Host Hardening Baseline
+• Ubuntu 26.04 LTS — no GUI, minimal packages, no unnecessary services
+• SSH key-based authentication only — password authentication disabled
+• Automatic updates disabled — integrator-controlled patch cycle
+• AppArmor profiles enforced on all Docker service containers
+• Host firewall (nftables) — default-deny both directions, explicit allow only
+• OS and GPU telemetry blocked at host firewall
+• Login banner configured — unauthorized access notice
+• auditd enabled — system call audit logging
+• Fail2ban or equiv — brute force protection on SSH
+• BIOS/UEFI hardened: admin password set, USB boot disabled, Secure Boot enforced where compatible
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+XI. Audit Trail and Accountability
+11.1 Event Categories
+Category
+
+Events Logged
+
+Identity and access
+
+Login, logout, failed login, MFA event, SSO delegation, password change, account
+create/disable/delete
+
+Document ingestion
+
+Document name, hash, timestamp, operator, chunk count, ingestion path (network vs
+physical scan), promotion from scan_quarantine
+
+RAG queries
+
+User, timestamp, query text, session ID, response summary, sources cited, inference
+duration
+
+Cloud polish
+
+Authorizing attorney, timestamp, anonymized content hash, response hash,
+deanonymization key reference
+
+File access
+
+SMB access events per dataset — user, timestamp, operation, file path
+
+Print and scan
+
+Print: authenticated user, document name, timestamp, page count. Scan: operator
+identity, source device, destination, timestamp.
+
+Backup and rotation
+
+Backup job completion, clone integrity check, rotation event, quarterly verification result
+
+System events
+
+Boot, shutdown, service start/stop, LUKS2 unlock method used, clock change
+(administrative)
+
+Network gateway
+
+Permitted and denied flows across zone boundaries. Every cloud polish request logged
+at gateway level.
+
+Integrator access
+
+Every integrator SSH session: timestamp, duration, commands executed (auditd)
+
+11.2 Log Integrity Protections
+• Logs written to append-only ZFS dataset — no modification or deletion without pool export
+• Monotonic timestamps — chrony-disciplined from Keystone NTP authority
+• Hash-chained log entries — each entry includes hash of previous entry
+• Administrative clock changes logged as explicit audit events — clock manipulation is detectable
+• Log dataset not accessible via SMB — accessible only via integrator SSH or Docker service accounts
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+XII. Update and Maintenance Governance
+12.1 Update Procedure
+All software updates are integrator-initiated and performed during scheduled maintenance windows. Automatic
+updates are disabled on both systems. No update occurs without integrator knowledge and action.
+Update Type
+
+Procedure
+
+OS security patches
+
+Integrator reviews patch notes. Applies during scheduled window. Verifies service
+health post-update. Documents in infrastructure dataset.
+
+Docker service updates
+
+Integrator pulls updated image. Verifies hash against published digest. Tests in staging
+if available. Deploys during scheduled window.
+
+Model updates
+
+New model weights verified against published hash. Previous model archived to M DISC before replacement. New model deployed and validated at commissioning
+checklist level before production use.
+
+Firmware (MFP)
+
+Reviewed as part of integrator maintenance cadence. Applied via BRAdmin or
+embedded web interface — Brother official source only. Version documented in
+deployment record.
+
+BIOS updates
+
+Integrator discretion. Only when security advisory or stability requirement exists. Not
+routine.
+
+12.2 Integrator Responsibilities
+• Maintain current knowledge of sovereign infrastructure architecture and all deployed component versions
+• Perform monthly sovereign rotation procedure or train and verify a designated staff member to perform it
+• Perform quarterly integrity verification of backup chain
+• Respond to hardware failure within agreed SLA — on-site service event
+• Maintain documentation in the infrastructure dataset — current and accurate
+• Review and apply security patches on a defined schedule
+• Never retain copies of client encryption keys or rotation drives
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+XIII. Compliance Mapping
+13.1 Attorney-Client Privilege
+Attorney-client privilege protects confidential communications between attorney and client made for the purpose
+of legal advice. The sovereign infrastructure is designed to ensure that AI-assisted legal work does not
+inadvertently waive privilege by routing privileged content through third-party systems without appropriate
+controls.
+Privilege Concern
+
+Sovereign Infrastructure Control
+
+Disclosure to third parties
+
+All AI inference is local. No privileged content transmitted to any third party in
+normal operation. Cloud polish is anonymization-mandatory, attorney-gated,
+and logged.
+
+Inadvertent disclosure via cloud
+AI
+
+Architecture is structurally incapable of routing un-anonymized privileged data
+to any external service. Anonymization gate is not a policy — it is the only
+authorized code path.
+
+Metadata exposure
+
+No content, metadata, or query logs transmitted externally. Audit logs remain
+within the sovereign trust boundary.
+
+Third-party vendor access
+
+No third party has access to the system, its data, or its encryption keys. The
+integrator's access is audited and bounded.
+
+13.2 ABA Model Rule 1.6 — Confidentiality
+Rule 1.6 requires lawyers to make reasonable efforts to prevent the inadvertent or unauthorized disclosure of, or
+unauthorized access to, information relating to the representation of a client. The sovereign infrastructure
+addresses this obligation by:
+• Eliminating cloud transmission of client data in normal operation
+• Encrypting all client data at rest with LUKS2 + TPM2
+• Restricting access through Authentik SSO with MFA enforcement
+• Maintaining immutable audit trails of all access and operations
+• Providing a physically sovereign backup chain under client/attorney custody
+
+13.3 ABA Model Rule 1.1 — Competence
+Rule 1.1 requires lawyers to keep abreast of changes in the law and its practice, including the benefits and risks
+associated with relevant technology. Use of AI in legal practice implicates this rule. The sovereign infrastructure
+supports competent AI use by:
+• Providing source citations for all AI-assisted research — enabling attorney verification
+• Running known, auditable open-source models — no black-box outputs
+• Requiring attorney approval for any external AI invocation
+• Maintaining records of which model was used for any given matter
+• Providing integrator training and documentation to support staff competence
+
+13.4 HIPAA
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+Where the firm handles Protected Health Information (PHI) — personal injury, medical malpractice, workers
+compensation, or other health-related matters — HIPAA's Security Rule requirements apply to electronic PHI
+(ePHI). The sovereign infrastructure supports HIPAA compliance through:
+• Access controls — Authentik SSO with MFA, dataset-level permissions
+• Audit controls — immutable audit trail of all access and operations
+• Integrity controls — ZFS checksumming, LUKS2 encryption, hash-chained logs
+• Transmission security — no ePHI transmitted externally in normal operation; anonymization-mandatory if
+cloud polish is used with PHI-possible corpus
+• Business Associate Agreement — required from cloud AI provider before cloud polish is enabled for any
+corpus that may contain PHI
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+XIV. Scope and Limitations
+14.1 What the Stack Validates
+• Local AI inference on privileged legal documents is architecturally feasible without cloud dependency
+• Attorney-client privilege can be preserved through the full AI-assisted document workflow
+• Sovereign backup and rotation provides genuine ransomware and disaster resilience
+• The integrator relationship functions as a security control when integrator access is properly bounded and
+audited
+
+14.2 Known Limitations
+Limitation
+
+Notes
+
+AI model knowledge cutoff
+
+Local models have a training cutoff. They do not know about recent case law,
+regulatory changes, or current events after their training date. Attorney verification is
+always required for time-sensitive legal research.
+
+RAG hallucination
+
+Retrieval-augmented generation significantly reduces hallucination but does not
+eliminate it. Source citations must be verified by the attorney. The system is a
+research assistant, not a legal authority.
+
+Physical security
+dependency
+
+The sovereign architecture protects data in transit and at rest. It does not protect
+against an attacker with physical access to the server room who has sufficient time
+and technical capability. Physical access controls are a prerequisite.
+
+Endpoint security
+dependency
+
+The architecture protects the sovereign servers. Attorney workstations and their
+security posture are outside this stack's scope. A compromised workstation can
+access sovereign services as the authenticated user.
+
+Model bias and errors
+
+AI models can exhibit systematic biases or errors. Legal work product generated
+with AI assistance requires attorney review before any reliance.
+
+RTO dependency on
+integrator
+
+Keystone hardware failure requires an integrator on-site service event. RTO is
+bounded by integrator response time and parts availability, not by the architecture.
+
+14.3 The Human Trust Layer
+The sovereign infrastructure provides the technical architecture for safe, privileged AI-assisted legal work. It does
+not provide judgment. The attorney remains responsible for: verifying AI-assisted research; approving cloud polish
+invocations; performing or supervising sovereign rotation; training staff; and maintaining the physical security of
+the server room and rotation drives. Technology reduces risk. It does not eliminate the need for human judgment
+and professional responsibility.
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+XV. Deployment Tiers
+15.1 Keystone Tier Comparison
+Attribute
+
+Keystone-1
+
+Keystone-2
+
+Keystone-MAX
+
+Target
+
+Solo / small firm
+
+Mid-size firm
+
+Large firm / multi-site
+
+CPU
+
+i5 10th Gen or newer
+
+i5-13600K or equiv
+
+Xeon / Ryzen Pro /
+Threadripper Pro
+
+RAM
+
+32–64GB DDR4
+
+64GB DDR4
+
+128GB+ ECC
+
+Network — sovereign
+zone
+
+X520-DA2 fiber to
+sovereign peripheral
+switch
+
+X520-DA2 fiber to
+sovereign peripheral
+switch
+
+X520-DA2 fiber to
+sovereign peripheral
+switch
+
+Network — office LAN
+
+Copper + Furman + optical
+isolator
+
+Fiber direct to office switch
+
+Sovereign control of
+network stack
+
+Battery
+
+12Ah 36V LiFePO4
+(~432Wh)
+
+12Ah 36V LiFePO4
+(~432Wh)
+
+Scaled to load
+
+Storage
+
+4TB enterprise SATA data;
+6TB+ mirror HDDs
+
+8TB enterprise SATA;
+12TB+ mirror HDDs
+
+NVMe array; 20TB+ mirror
+HDDs
+
+Matrix Synapse
+
+64GB RAM prerequisite
+
+Yes
+
+Yes
+
+Case
+
+Fractal Define R5
+
+Fractal Define R5 or equiv
+
+Site-specific
+
+15.2 SAIA Tier Comparison
+Attribute
+
+SAIA-1
+
+SAIA-2
+
+SAIA-Pro
+
+SAIA-Enterprise
+
+GPU
+
+RTX Pro 4000
+Blackwell 24GB
+
+2× RTX Pro 4000
+Blackwell
+
+RTX 6000 Ada
+48GB+
+
+RTX 6000 Pro
+96GB+
+
+VRAM
+
+24GB GDDR7
+ECC
+
+48GB total
+
+48–96GB
+
+96GB+
+
+Users
+
+1–5 concurrent
+
+5–20 concurrent
+
+20+ concurrent
+
+Enterprise multigroup
+
+Case
+
+SOEYi U320
+Phoenix
+
+Site-specific
+
+Site-specific
+
+Site-specific
+
+Cloud polish
+
+Optional, gated
+
+Optional, gated
+
+Optional, gated
+
+Optional, gated
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+XVI. Organizational Requirements
+16.1 Required Policies
+Policy
+
+Minimum Requirements
+
+AI Acceptable Use Policy
+
+Permitted use cases; prohibited uses; attorney review requirement; recordkeeping obligations; cloud polish authorization procedure
+
+Data Classification Policy
+
+Which matter types are sovereign-eligible; PHI handling; cloud polish eligibility
+by data classification
+
+Sovereign Rotation Policy
+
+Rotation custodians (primary and backup); rotation schedule; safe access
+procedures; lost-drive procedure
+
+Incident Response Procedure
+
+Suspected breach; hardware failure; lost rotation drive; integrator escalation
+contacts
+
+Staff Onboarding / Offboarding
+
+Authentik account provisioning and deprovisioning; single offboarding action
+removes all sovereign access
+
+16.2 Staff Training Requirements
+Role
+
+Training Required
+
+All staff
+
+What the sovereign infrastructure is and is not; how to access SAIA; when attorney
+review is required; how to report concerns
+
+Attorneys
+
+Cloud polish authorization procedure; source citation verification; professional
+responsibility obligations for AI-assisted work
+
+Ingestion coordinators
+
+scan_quarantine review procedure; what constitutes a suspicious document; when to
+escalate
+
+Rotation custodians
+
+Monthly rotation choreography; safe access and custody procedures; quarterly integrity
+verification steps
+
+Integrator
+
+Full architecture; all deployment and recovery procedures; update governance; audit
+trail review
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+XVII. Glossary
+Term
+
+Definition
+
+Analog Power Sensor
+(APS)
+
+Open hardware passive device performing three functions: (A) 750Ω 5W kickstart
+resistor + 1N4007 blocking diode providing ~24mA trickle to battery charge port on AC
+return — resolves Victron bootstrap deadlock; (B) 20kΩ/1.5kΩ voltage divider + PC817
+optocoupler delivering binary AC present/absent GPIO signal to motherboard; (C) 15A
+10×38mm PV fuse overcurrent protection. No microcontroller. No firmware. Verifiable
+by inspection.
+
+Authentik
+
+Open-source identity provider running on Keystone. Provides SSO, MFA, and user
+lifecycle management. No cloud dependency. Single offboarding removes all access.
+
+Brother Industries
+
+Approved manufacturer for sovereign MFP deployments. Selected on the basis of
+sovereign deployment criteria: SMB/CIFS push scanning without cloud dependency,
+disableable wireless and USB ports, native CUPS compatibility, family-controlled
+Japanese manufacturer with no cloud-extraction business model, and consolidated
+consumable family across monochrome and color product lines.
+
+CUPS
+
+Common Unix Printing System. Print server on Keystone. Provides network print
+services to sovereign peripheral zone. Generates print job audit logs.
+
+Deanonymization key
+
+Substitution map that reverses anonymization. Stored encrypted on SAIA OS NVMe.
+Loss renders anonymized documents permanently anonymized. Backed up as
+sovereign data. Treated as equivalent to Vaultwarden secrets.
+
+HDPLEX 500W GaN
+
+DC-ATX power converter. Accepts 12–60V DC input from LiFePO4 battery bus and
+delivers standard ATX power rails. Correct spelling: HDPLEX — not HDFLEX.
+
+IcyDock
+
+Hot-swap drive bay enclosure with USB clone capability. The mechanical mechanism
+for Keystone's sovereign rotation system.
+
+Integral UPS
+
+Sovereign DC power architecture built into Keystone. Battery is primary power source;
+grid is charging source. Transfer on AC loss is passive and instantaneous via Schottky
+diode. Components: Furman, MeanWell HLG-480H-48B, Victron SmartSolar MPPT
+100/20, LiFePO4 battery, Schottky diode (MBR6045WT), HDPLEX 500W GaN, Analog
+Power Sensor.
+
+ioSafe
+
+Commercially available fire and waterproof external drive enclosure. Keystone's
+physical disaster recovery backup target. Bolted to floor.
+
+Keystone
+
+The Sovereign Core Server. Trusted root of the sovereign environment. Provides
+identity, key vault, file server, communications, print/scan, backup, and network
+gateway. SAIA depends on Keystone; Keystone does not depend on SAIA. Keystone is
+a server — never an appliance.
+
+Ledger NVMe
+
+250GB NVMe drive. Dual purpose: hourly OS drive backup target and bootable
+Rescuezilla recovery environment. First tool reached in any recovery scenario.
+
+LiFePO4
+
+Lithium iron phosphate battery chemistry. Flat discharge curve, thermal stability,
+exceptional cycle life (2000+ cycles at 85% SOC ceiling). Flat curve is critical —
+HDPLEX receives stable input voltage throughout a power event.
+
+LUKS2
+
+Linux Unified Key Setup version 2. Standard Linux full-disk encryption. All storage on
+both systems is LUKS2 encrypted.
+
+M-DISC
+
+Millenniata write-once optical media. Verified multi-decade longevity. Cannot be
+overwritten, reformatted, or remotely wiped. Used for archival of models, closed matter
+vector DB snapshots, and long-term OS archives.
+
+MFP
+
+Multifunction printer/copier. Sovereign MFP is integrator-deployed and hardened.
+Placed on sovereign peripheral zone exclusively. Never connected to office LAN.
+Authenticated via Authentik LDAP through Keystone CUPS. Integrated into scan-toingest workflow with mandatory scan_quarantine staging.
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+SOVEREIGN INFRASTRUCTURE — UNIFIED TECHNICAL SPECIFICATION
+
+|
+
+v1.4 | Polaris IT Solutions | Confidential
+
+Term
+
+Definition
+
+Qdrant
+
+Open-source vector database running on SAIA. No telemetry. Hybrid sparse+dense
+search. Dedicated NVMe storage.
+
+RAG
+
+Retrieval-Augmented Generation — document retrieval from a vector database
+combined with language model generation for grounded, source -cited responses.
+
+Rescuezilla
+
+Open-source disk imaging and recovery tool. Boots from the Ledger NVMe. Provides
+guided recovery for common failure scenarios.
+
+SAIA
+
+Sovereign AI Appliance. Locally-deployed AI inference engine providing RAG,
+document processing, anonymization, and optional attorney-gated cloud polish.
+Depends on Keystone for identity and file storage. Cannot function without Keystone.
+
+Sovereign Core Server
+
+Preferred term for Keystone. Used in all client and integrator communications.
+Keystone is never described as an appliance.
+
+Sovereign peripheral
+switch
+
+The managed network switch that forms the boundary of the sovereign peripheral
+zone. Provides fiber SFP uplink to Keystone and copper downlinks to SAIA, MFP(s),
+and future sovereign peripherals. Management access restricted to sovereign fabric
+only. Nothing non-sovereign ever touches a downlink port.
+
+Sovereign peripheral
+zone
+
+The defined network segment containing only integrator-deployed sovereign hardware.
+Bounded by the sovereign peripheral switch, which provides a single fiber uplink to
+Keystone and copper downlinks to zone devices. Fiber uplink provides galvanic
+isolation at the zone boundary. Nothing that connects to a downlink port is ever a nonsovereign device — physical topology constraint, not a configuration policy.
+
+Sovereign rotation
+
+Monthly procedure by which encrypted drive clones are physically rotated between
+Keystone, onsite safe, and offsite safe under owner custody. Provides airgapped,
+ransomware-resistant backup sovereignty.
+
+TPM2
+
+Trusted Platform Module version 2. Hardware security chip holding cryptographic keys
+for LUKS2 auto-unlock. Keys are hardware-bound and cannot be transferred to another
+TPM.
+
+Vaultwarden
+
+Self-hosted Bitwarden-compatible secrets manager on Keystone. Stores service
+credentials and operational secrets. Never stores LUKS bootstrap keys — those are
+always physical, offline, under owner custody.
+
+Victron SmartSolar
+MPPT 100/20
+
+Charge controller in the Integral UPS. Accepts MeanWell DC output on solar input
+terminal. Manages charge current to LiFePO4 battery (≤4.5A). Provides regulated
+41.5V load output to system bus.
+
+vLLM
+
+High-performance inference engine for large language models. OpenAI-compatible
+API. Multi-user concurrent access. Deploy with AWQ or FP4 weight formats — not
+GGUF — to use Tensor Core optimization paths.
+
+VRAM
+
+Video RAM on the GPU. Determines maximum model size and concurrent user
+capacity on SAIA.
+
+Yubikey
+
+Hardware security key enrolled as LUKS2 secondary unlock slot. Two Yubikeys (A and
+B) enrolled — either unlocks the system. Hardware-bound; private keys nonexportable. Each travels with its sovereign rotation kit.
+
+ZFS
+
+Zettabyte File System. Enterprise-grade filesystem with checksumming, snapshots,
+mirroring, and data integrity guarantees. Used on Keystone for file server and backup
+storage.
+
+ZFS ARC
+
+Adaptive Replacement Cache — ZFS in-memory read cache. 32–64GB is the
+recommended RAM range for Keystone workloads.
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+Version 1.4 | May 2026 | Supersedes v1.3 | This document does not constitute legal advice.
+
+Polaris IT Solutions | Confidential — Integrator and Client Eyes Only
+
+Version 1.4 | May 2026
+
+

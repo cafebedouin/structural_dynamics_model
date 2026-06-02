@@ -1,0 +1,264 @@
+{
+  "header": {
+    "constraint_id": "treaty_authority_cession__retrospective_snare_exposure",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_treaty_authority_cession__retrospective_snare_exposure",
+    "measurement_id_prefix": "tac_snare",
+    "story_uid": "1c0e9a06-4b3f-4756-a3fd-0302c089afc8"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.85,
+    "claimed_type": "snare",
+    "human_readable": "Treaty Authority Cession: Retrospective Snare Exposure (Mistranslation as Extraction Mechanism)",
+    "topic_domain": "constitutional_law/indigenous_rights/colonial_history",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "crown_land_purchasing_apparatus",
+      "settler_colony_administrative_state"
+    ],
+    "victims": [
+      "maori_signatories",
+      "maori_descendants",
+      "maori_rangatiratanga_authority"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Māori Signatories and Descendants",
+      "comment": "PERSPECTIVE 1: MĀORI SIGNATORIES AND DESCENDANTS (SNARE) — Trapped by a legal instrument they could not have understood in the English sovereign cession reading. The text they signed promised protection of rangatiratanga (authority, self-determination); the English version ceded sovereignty itself. No exit mechanism exists post-signature; the land transfer is irreversible and enforced by the settler state's administrative machinery. The extraction is covert at time of operation — visible only retrospectively when the divergence between Māori and English texts becomes legible. Maximum suppression: the Crown's legal apparatus enforces the English reading regardless of Māori comprehension."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Crown Land-Purchasing Apparatus",
+      "comment": "PERSPECTIVE 2: CROWN LAND-PURCHASING APPARATUS (ROPE) — Experiences the treaty as coordination mechanism for legitimate land acquisition. From this perspective, the treaty solves a collective action problem: how to legitimize colonial expansion with minimal violent resistance. The apparatus benefits from efficient land transfer (arbitrage exit option — can exit the treaty framework and acquire land through other means if treaties fail). The extraction flow runs entirely toward the beneficiary, but the apparatus perceives this as fair exchange and recognized authority — no coercion from the apparatus's structural position."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Colonial Settlement Authority (Mid-Level)",
+      "comment": "PERSPECTIVE 3: COLONIAL SETTLEMENT AUTHORITY (TANGLED ROPE) — Administrative middle layer that coordinates settlement expansion AND is constrained by treaty obligations (at least in principle). The authority genuinely coordinates resource allocation and land distribution for settlers while also facing formal constraints on unilateral action — the treaty represents real coordination function at this level. However, the English/Māori textual divergence enables the authority to enforce one reading while claiming to honor the other, creating asymmetric extraction over the coordination function. The authority benefits from the ambiguity but is also constrained by it: if the divergence becomes too visible, legitimacy erodes."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Treaty Institution as Performative Survival",
+      "comment": "PERSPECTIVE 4: TREATY INSTITUTION AS PERFORMATIVE SURVIVAL (PITON) — The treaty itself, viewed as an institutional structure, persists largely through theatrical acknowledgment rather than functional operation. The theater_ratio (0.85) reflects that the treaty is invoked as legitimating symbol while its actual binding force on land transfer and authority distribution is minimal — administrative practice operates under the English reading regardless of treaty language. The institution survives because it provides ceremonial continuity (Waitangi Day commemoration, official treaty texts) without materially constraining state action. This is institutional inertia: the treaty persists because replacing it with explicit colonial rule would expose the extraction mechanism, even though the current regime already enforces that rule covertly."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer: Natural Law View",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, the constraint might appear as an immutable feature of colonial encounter: translation gaps and mutual incomprehension are inherent to cross-cultural legal encounters; some asymmetry of understanding is inevitable when oral societies encounter written legal text; the divergence reflects the ontological incommensurability between Māori and European concepts of authority and land. This perspective risks naturalizing what is actually a contingent institutional arrangement enforced by power asymmetry. The engine will identify this as a false summit — the 'inevitable incomprehension' framing naturalizes what is actually a deliberately maintained extraction mechanism."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "intentionality_of_divergence",
+      "question": "Was the textual divergence between Māori and English treaty versions produced intentionally (deliberate mistranslation for extraction) or through genuine translation difficulty?",
+      "resolution_mechanism": "Analysis of translator records, Crown archives, comparative linguistic history; examination of whether similar ambiguities appear in other contemporary treaties or whether this divergence is structurally unique; investigation of whether the Crown deliberately sourced translators known to favor Crown interests.",
+      "impact": "If intentional: the snare classification is confirmed — extraction was strategically designed. If unintentional: the constraint shifts toward tangled_rope or scaffold (a coordination problem with downstream harm, not deliberate extraction). If mixed (intentional at some points, unintentional at others): the constraint remains snare but the mechanism is partially opaque.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether mistranslation was deliberate or emergent from translation difficulty"
+    },
+    {
+      "id": "maori_comprehension_actual",
+      "question": "What did the Māori signatories actually understand about the cession claim versus rangatiratanga retention claim at the moment of signature?",
+      "resolution_mechanism": "Analysis of oral history records, Māori genealogies and accounts, contextual statements by signatories and witnesses in the years immediately following signature, comparison with how signatories understood subsequent Crown actions (land confiscation, legislative override), examination of whether Māori behavior post-signature is consistent with understanding a cession or a retained authority claim.",
+      "impact": "If signatories understood cession: the extraction mechanism was covert (they assented to something they understood as different). If signatories understood retention: their non-resistance post-signature suggests they were actually trapped (unaware they had been stripped of legal authority despite thinking they retained it). If understanding was genuinely indeterminate: the snare mechanism exploited the indeterminacy itself.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Actual Māori understanding of cession claim at moment of signature"
+    },
+    {
+      "id": "rangatiratanga_definition_contest",
+      "question": "Does rangatiratanga mean retained tribal authority (as signatories appear to have understood) or subordinate authority constrained by Crown sovereignty (as the Crown's subsequent actions enforced)?",
+      "resolution_mechanism": "Linguistic and historical analysis of rangatiratanga usage in pre-treaty and post-treaty Māori documentation; comparison with how Crown legal instruments defined the term; examination of how the Crown enforced or overrode rangatiratanga claims in practice; investigation of whether there is any Māori linguistic or legal tradition that supports the 'subordinate authority under Crown sovereignty' reading.",
+      "impact": "If rangatiratanga means retained full authority: the Crown's legal claim to override it is a pure extraction mechanism (snare confirmed). If rangatiratanga is genuinely ambiguous: the snare operates through deliberate exploitation of semantic ambiguity. If the Crown's subordinate reading has any textual or traditional basis: the constraint becomes tangled_rope (mixed coordination and extraction rather than pure snare).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Definition of rangatiratanga: retained authority vs. subordinate authority under Crown sovereignty"
+    },
+    {
+      "id": "treaty_kernelhood_status",
+      "question": "Is the Treaty of Waitangi functioning as a genuine kernel (stabilized commitment that grounds legitimacy) or as a false kernel (ceremonial artifact behind which the Crown operates unilaterally)?",
+      "resolution_mechanism": "Analysis of whether Crown legal decisions actually cite or defer to treaty language; examination of whether Māori have any real institutional leverage to invoke the treaty against Crown action; investigation of whether the treaty functions as a constraint on Crown power or merely as a legitimating symbol; comparison with how the Crown treats other foundational legal documents (Constitution Act, Bill of Rights).",
+      "impact": "If genuine kernel: the treaty is a commitment system constraint that the Crown actively maintains and interprets (possibly extractively). If false kernel: the treaty is a piton (degraded institution maintained for theater); the actual extraction operates under administrative machinery unconnected to treaty language. If semi-functional: the treaty has kernelhood but subject to Crown interpretive override (tangled_rope structure).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the Treaty of Waitanui functions as genuine commitment kernel or ceremonial artifact"
+    },
+    {
+      "id": "legislative_override_mechanism",
+      "question": "What makes legislative override of treaty obligations possible? Is it the textual divergence itself, Crown institutional supremacy doctrine, Māori political powerlessness, or some combination?",
+      "resolution_mechanism": "Analysis of specific legislative instruments that overrode treaty claims; examination of constitutional doctrines invoked (parliamentary sovereignty, Crown prerogative); investigation of whether similar legislative overrides occur for other sacred texts (religious doctrine, constitutional commitments); comparison with how other settler colonial states handled comparable treaty obligations.",
+      "impact": "If divergence drives override: the snare mechanism is specifically linguistic (the English reading enables legal override without apparent violation). If institutional supremacy drives override: the snare mechanism is structural power (the treaty is never binding because the Crown claims interpretive monopoly). If powerlessness drives override: the snare mechanism is political (Māori cannot enforce the treaty they signed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Root cause of legislative override capacity: textual divergence, institutional supremacy, or political powerlessness"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15,
+      "id_override": "tac_snare_extract_t0_signature"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42,
+      "id_override": "tac_snare_extract_t5_post_signature"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.68,
+      "id_override": "tac_snare_extract_t15_accumulation"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "tac_snare_theater_t0_signature"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55,
+      "id_override": "tac_snare_theater_t5_post_signature"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.85,
+      "id_override": "tac_snare_theater_t15_accumulation"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5,
+      "id_override": "tac_snare_suppress_t0_signature"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.65,
+      "id_override": "tac_snare_suppress_t5_post_signature"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.72,
+      "id_override": "tac_snare_suppress_t15_accumulation"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "The Treaty of Waitangi (1840) presents itself as a founding agreement between the Crown and Māori chiefs, but the English and Māori versions diverge on a foundational point: the English text claims Māori chiefs ceded sovereignty to the Crown; the Māori text promises protection of rangatiratanga (chiefly authority, self-determination). THIS READING instantiates the retrospective snare exposure: the constraint operates as pure extraction with a covert mechanism — the chiefs signed a text in their language that they understood as guaranteeing their retained authority, while the Crown enforced an English text that claimed they had surrendered that authority. The extraction became visible only when the divergence was documented and analyzed retrospectively, revealing that the institutional arrangements (land confiscation, legislative override, administrative subordination of Māori governance) operated under the English cession reading throughout, despite the Māori text's promise of retained authority. The constraint exhibits all the features of a snare: high extractiveness (0.68), high suppression (0.72), high theater (0.85), and a mechanism that persists through institutional enforcement — the Crown's legal apparatus continuously performs the English reading regardless of the Māori text. The theater_ratio trajectory shows the constraint's evolution: at signature (t=0), the theater was minimal — a straightforward exchange of promises. Post-signature (t=5), theater increased as the Crown enforced interpretations that contradicted the Māori text while claiming to honor the treaty. By the generational moment (t=15), the theater dominates — the treaty is invoked as a legitimating symbol while the actual mechanisms of extraction (land confiscation, legislative override, administrative override) operate under the English reading entirely. The suppression trajectory shows increasing enforcement intensity: at signature, suppression was moderate (Māori could still mobilize to challenge); post-signature, it rose as Crown military and administrative capacity increased; at the generational moment, suppression is near-total through institutional entrenchment — challenging Crown legal authority means challenging the entire settled order of the settler state. This is the retrospective snare diagnosis: covert at operation time, visible at retrospection time, extraction mechanism anchored in mistranslation that could only be exposed once the texts were compared and analyzed.",
+    "kernel_context": "This constraint instantiates the READING 'retrospective_snare_exposure' of the KERNEL 'treaty_authority_cession'. The kernel is the stabilized commitment (the Treaty of Waitangi text itself) that grounds the legitimacy claim of both the Crown and the Māori signatories. The contest is over what that commitment authorizes: the Crown's READING (crown_cession_reading) asserts that the kernel cedes sovereignty to the Crown and subordinates any Māori authority to Crown supremacy. The Māori READING (rangatiratanga_retention_reading) asserts that the kernel protects Māori chiefly authority (rangatiratanga) from Crown override. THIS READING (retrospective_snare_exposure) argues that the kernel is COVERTLY A SNARE: the extraction mechanism is the textual divergence itself — the Māori text and English text instantiate different commitments, and the Crown enforced the English commitment while claiming the Māori text was binding. The snare is retrospective because it was covert at operation time (the extraction happened through standard administrative and military enforcement) and became visible only when the texts were analyzed retrospectively (when scholars and Māori advocates documented the divergence and its institutional consequences). The sibling readings (crown_cession_reading, rangatiratanga_retention_reading) contest the kernel's meaning as if it were a single shared text; this reading exposes that the kernel's apparent unity conceals a fundamental divergence that enabled extraction to operate under the cover of legitimate treaty observance.",
+    "key_agents": [
+      "Māori signatories and descendants (powerless/trapped): Primary victims bearing full extraction; understood themselves as retaining rangatiratanga but were stripped of authority under the English reading",
+      "Crown land-purchasing apparatus (institutional/arbitrage): Primary beneficiary (arbitrage exit); benefits from efficient land transfer while minimizing violent resistance; experiences the treaty as coordination mechanism",
+      "Colonial settlement authority (organized/constrained): Secondary beneficiary and enforcer; coordinates settlement expansion constrained nominally by treaty; exploits textual divergence to enforce English reading",
+      "Treaty institution as performative artifact (institutional/constrained): The treaty structure itself, increasingly theatrical over time; provides legitimating ceremonial function while administrative machinery operates under English reading",
+      "Analytical observer (analytical/analytical): Risks naturalizing translation difficulties as inevitable rather than strategically exploited"
+    ],
+    "logic_rationale": "EXTRACTIVENESS (0.68): High. The constraint extracts land, political authority (rangatiratanga), and economic resources from Māori through systematic enforcement of the English cession reading against the Māori promise of retained authority. The extraction is substantial and persistent. However, it is not maximal (0.85+) because the Crown is constrained by having to maintain the pretense of treaty observance — if the divergence became undeniable and the Māori reading was fully acknowledged, Crown legal authority would erode. The measurement trajectory (0.15 → 0.42 → 0.68) shows extraction accumulation: at signature, the extraction was nascent (minimal land had been transferred, authority dynamics were unclear); post-signature (t=5), extraction accelerated as the Crown systematized land confiscation under the English reading; at t=15 (generational moment), extraction had accumulated substantially but remained concealed behind institutional machinery and legal performance. SUPPRESSION (0.72): High. The Crown's legal apparatus enforces the extraction with minimal alternatives: Māori legal challenges to confiscations were rejected on grounds of Crown sovereignty; armed resistance was suppressed militarily; attempts to organize collective action faced Crown administrative suppression; the settler colonial state naturalized Crown supremacy as inevitable. The trajectory (0.50 → 0.65 → 0.72) reflects increasing institutional entrenchment — as the Crown's administrative capacity grew, suppression became more complete. THEATER RATIO (0.85): Very high. The constraint operates through continuous performance of the treaty as a binding and honored commitment while the actual mechanisms (land confiscation, legislative override, administrative subordination of Māori institutions) operate under the English reading entirely. The trajectory (0.25 → 0.55 → 0.85) reflects the growth of ceremonial observance inversely proportional to actual constraint on Crown action — the more the treaty was invoked as a symbol, the less it constrained state action. At t=15, the treaty's theater is near-complete: Waitangi Day commemorations, official treaty texts on government documents, rhetoric of partnership all coexist with persistent refusal to honor the Māori text's reading. CLAIMED TYPE JUSTIFICATION (SNARE): The constraint exhibits all snare markers: (1) high extractiveness targeting a specific victim set (Māori signatories and descendants); (2) high suppression with minimal alternatives; (3) existence that depends on suppressing the alternative reading (if the Māori text's interpretation was enforced, the extraction would reverse); (4) beneficiary that extracts persistent advantage (land, political authority) with mechanisms that would fail if the asymmetry became fully visible.",
+    "perspectival_gap": "The constraint demonstrates maximum perspectival divergence. The Māori signatories experience it as a snare (they were trapped by a text they thought they understood as guaranteeing retained authority; extraction only became visible as subsequent Crown actions violated that promise). The Crown apparatus experiences it as rope (legitimate coordination for land acquisition). The colonial settlement authority experiences it as tangled_rope (genuine coordination function for settlement plus extraction enabled by textual ambiguity). The treaty institution itself experiences it as piton (ceremonial survival through theatrical invocation despite operational irrelevance). The analytical observer risks the false-summit error of naturalizing mistranslation as inevitable rather than structurally exploited. The perspectival gaps reveal the constraint's actual mechanics: the same institutional arrangements that appear as coordination to the beneficiary appear as systematic extraction to the victim; the same legal instrument that appears as a binding constraint to the Crown appears as a broken promise to Māori because the Crown enforces one reading while claiming the other.",
+    "directionality_logic": "MĀORI SIGNATORIES (powerless/trapped): d ≈ 0.95 (maximum target). They are victims with no exit — the land transfer is irreversible, legal authority is stripped, and the settler state's monopoly on violence and law prevents escape. The English reading is enforced regardless of the Māori text they signed. This agent experiences maximum effective extraction chi. CROWN APPARATUS (institutional/arbitrage): d ≈ 0.05 (full beneficiary). They can exit the treaty framework and acquire land through other means if needed; they experience the constraint as enabling efficient coordination. The extraction flow runs entirely toward them. This agent experiences negative or minimal chi (benefits outweigh costs). COLONIAL SETTLEMENT AUTHORITY (organized/constrained): d ≈ 0.60 (near-symmetric). The authority is both beneficiary (benefits from land acquisition and settlement coordination) and partially constrained (nominally must respect treaty, though the English reading enables override). The authority benefits from the ambiguity but is also at risk if the divergence becomes fully visible. ANALYTICAL OBSERVER (analytical/analytical): d ≈ 0.72 (analyst as observer of structure). The analyst is not a beneficiary or victim; they perceive the structural asymmetry between the readings. The engine derives canonical d from the analytical power atom, which maps to moderate experienced extraction — the analyst perceives substantial extraction mechanism.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: This reading explicitly resolves the mandatrophy by documenting how a constraint CAN simultaneously appear as legitimate coordination (the Crown's rope perspective) and systematic extraction (the Māori victims' snare perspective) without either perspective being false. The mandatrophy here is: 'How can the treaty be both a coordination mechanism and an extraction mechanism?' The resolution is: it is both, from different perspectives, BECAUSE the textual divergence itself is the extraction mechanism. The divergence enables the beneficiary to perform coordination while operating extraction — to claim legitimacy through the treaty while systematically exploiting the English reading. The analytic resolution: mandatrophy is not resolved by finding the 'correct' type; it is resolved by recognizing that the constraint operates as a snare PRECISELY BECAUSE its extraction is covert, enabled by institutional arrangements that allow beneficiaries to perceive it as coordination while victims experience it as extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "crown_cession_reading",
+      "rangatiratanga_retention_reading",
+      "settler_land_confiscation__institutional_mechanism",
+      "legislative_override__maori_authority"
+    ],
+    "dual_formulation_note": "The Treaty of Waitanui kernel has THREE constraint stories corresponding to THREE readings: (1) crown_cession_reading: constraint from Crown's perspective (rope/coordinate authority); (2) rangatiratanga_retention_reading: constraint from Māori traditional authority perspective (retained framework); (3) treaty_authority_cession__retrospective_snare_exposure (THIS story): constraint from retrospective analytical perspective (snare mechanism exposed through textual divergence). Each reading gets its own constraint story with its own ε value. The retrospective snare exposure reading is downstream of both sibling readings because it exposes the structural asymmetry between them."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.05
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.58
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "crown_cession_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "rangatiratanga_retention_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "textual_divergence_is_structural_not_accidental",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "extraction_covertness_enabled_by_mistranslation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "shared_commitment_treaty_framework",
+    "drift_state": {
+      "moment": "contemporary_textual_analysis_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "crown_cession_reading",
+      "rangatiratanga_retention_reading"
+    ]
+  }
+}

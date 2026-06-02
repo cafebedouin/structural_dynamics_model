@@ -4,24 +4,24 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "rtcs"
+    "measurement_id_prefix": "rtcs",
+    "story_uid": "b741970c-80ef-4333-b450-e1e2c5117550"
   },
   "base_properties": {
     "extractiveness": 0.58,
-    "suppression": 0.72,
-    "theater_ratio": 0.68,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
     "claimed_type": "tangled_rope",
     "human_readable": "Roman Tax Collection System (Publicani Extraction and Coordination)",
     "topic_domain": "economic_political/ancient_governance",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "publicani_tax_farmers",
-      "roman_military",
-      "imperial_administration"
+      "publicani_contractors",
+      "roman_state_apparatus"
     ],
     "victims": [
       "provincial_populations",
-      "small_local_economies"
+      "small_landowners"
     ]
   },
   "perspectives": [
@@ -31,8 +31,8 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "regional",
-      "label": "The Provincial Peasant",
-      "comment": "PERSPECTIVE 1: PROVINCIAL PEASANT (SNARE) \u2014 Trapped within territorial jurisdiction; subject to arbitrary tax assessment by publicani with no legal recourse or exit. Bears extraction with no coordination benefit. Maximum experienced extractiveness due to trapped status + high suppression of alternatives."
+      "label": "The Provincial Subject",
+      "comment": "PERSPECTIVE 1: PROVINCIAL SUBJECT (SNARE) — The provincial population faces mandatory tax extraction with no exit or legal recourse. The publicani are private contractors maximizing extraction within their tenure (typically 5-year contracts). Suppression is structural: military occupation, legal authority granted to contractors to seize property, debt bondage for non-payment. The subject experiences maximum extractiveness — all benefits flow to the state and contractors; costs are entirely localized."
     },
     {
       "classification_type": "tangled_rope",
@@ -40,8 +40,8 @@
       "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "regional",
-      "label": "The Local Magistrate",
-      "comment": "PERSPECTIVE 2: LOCAL MAGISTRATE (TANGLED ROPE) \u2014 Constrained by Rome's authority but also benefits from the infrastructure that tax revenue provides (roads, military protection, legal framework). Experiences both extraction (quota pressure from publicani) and coordination (integration into imperial administrative system). Can theoretically resist but faces career termination and military coercion."
+      "label": "The Provincial Aristocracy (Local Elites)",
+      "comment": "PERSPECTIVE 2: PROVINCIAL ARISTOCRACY (TANGLED ROPE) — Local elites are partly co-opted into the extraction mechanism: they help identify taxable assets and collect quotas in exchange for exemptions or reduced obligations. This creates genuine coordination (provincial governance functions through local elite networks) alongside asymmetric extraction (elites benefit disproportionately while shouldering less burden). Exit is constrained by status dependence on Roman military protection and imperial recognition."
     },
     {
       "classification_type": "rope",
@@ -49,35 +49,44 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Publicani Tax Farmer",
-      "comment": "PERSPECTIVE 3: PUBLICANI TAX FARMER (ROPE) \u2014 Experiences the constraint as pure coordination with high benefit. Contract specifies tax base; excess collection is arbitrage profit. Institutional actors with established networks; can exit to other provinces or adjust collection methods. Net beneficiary from the system \u2014 extraction flows toward this agent."
+      "label": "The Roman State Apparatus",
+      "comment": "PERSPECTIVE 3: ROMAN STATE APPARATUS (ROPE) — From the state's perspective, the publicani system solves a genuine coordination problem: how to extract tax revenue without building a permanent administrative apparatus (which would be expensive and create competing power centers). The state experiences the constraint as pure coordination — the publicani mechanism transfers costs of administration to private contractors while guaranteeing revenue. Net beneficiary with full arbitrage: can terminate contracts, renegotiate terms, shift collection to different contractors or eventually to imperial bureaucrats (as happened under Augustus)."
     },
     {
       "classification_type": "rope",
-      "agent_power": "institutional",
-      "time_horizon": "civilizational",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Imperial Administration",
-      "comment": "PERSPECTIVE 4: IMPERIAL ADMINISTRATION (ROPE) \u2014 Views tax collection as essential coordination mechanism: gathering resources to pay legions, fund public works, and maintain territorial control. The system solves a collective action problem (how to finance empire without direct state apparatus). Extraction flows toward this actor but is experienced as necessary coordination cost. Low chi for institutional beneficiary with arbitrage options."
-    },
-    {
-      "classification_type": "piton",
-      "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "continental",
-      "label": "The Tax Farming Contract System",
-      "comment": "PERSPECTIVE 5: TAX FARMING CONTRACT SYSTEM (PITON) \u2014 The institutional arrangement itself shows degradation over time. Initially an efficient private collection mechanism (theater_ratio ~0.45 in early Imperial period), it evolved into a theatrical performance of legitimacy (theater_ratio ~0.68 in later period) as publicani became entrenched and contracts became hereditary rather than competitive. The system persists through institutional inertia \u2014 Rome cannot easily replace it without building state apparatus, but the mechanism's original function (efficient collection) has atrophied."
+      "label": "The Publicani Contractor Class",
+      "comment": "PERSPECTIVE 4: PUBLICANI CONTRACTOR CLASS (ROPE) — For large-scale tax farming firms (especially the societates publicanorum — corporate partnerships of contractors), the constraint is a coordination mechanism that generates enormous private wealth. Contractors bid competitively for regional collection rights, which incentivizes accurate assessment and efficient collection (within exploitative bounds). They experience the system as a legitimate profit mechanism with a sunset (5-year contracts) and clear rules. Exit is mobile — contracts expire and can be replaced with commerce or other ventures. Beneficiary with arbitrage."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "organized",
       "time_horizon": "generational",
-      "exit_options": "mobile",
+      "exit_options": "constrained",
       "spatial_scope": "continental",
-      "label": "The Provincial Resistance Coalition",
-      "comment": "PERSPECTIVE 6: PROVINCIAL RESISTANCE COALITION (TANGLED ROPE) \u2014 Organized groups (city councils, merchant guilds, landowner associations) can coordinate collective action or tax strikes, creating genuine coordination benefit (mutual insurance, collective negotiation) while also experiencing extraction through organized suppression (military response, collective punishment). Chi moderate due to organized power and mobile exit options (some provinces can reduce cooperation or redirect trade)."
+      "label": "The Equestrian Financial Class",
+      "comment": "PERSPECTIVE 5: EQUESTRIAN FINANCIAL CLASS (ORGANIZED) — The equestrian order (knights) who finance and manage large publicani firms are organized agents with significant but constrained power. They benefit from tax farming but face constraints: senatorial oversight, threat of prosecution for excesses, price competition from rival firms, and eventual transition to imperial bureaucracy. This perspective captures the hybrid nature clearly: genuine coordination (efficient revenue extraction) with significant asymmetric extraction (provincial populations bear the cost; equestrians capture the profit). Moderately constrained exit — they can diversify into other ventures but are deeply invested in the system."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Imperial Administrative Reform",
+      "comment": "PERSPECTIVE 6: IMPERIAL ADMINISTRATIVE REFORM (SCAFFOLD) — From the perspective of Augustus and later emperors, the publicani system is a temporary solution with a sunset: building imperial bureaucratic capacity (the fiscus, later imperial accounting systems) gradually replaces tax farming. The constraint has low theater under imperial administration because direct state collection becomes possible as bureaucratic infrastructure scales. The scaffold is genuine: the empire is explicitly building alternative mechanisms to eventually replace publicani extraction. Sunset clause: transition to professional tax collectors (logistai, tabularii) over 200 years."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Late Imperial Degradation",
+      "comment": "PERSPECTIVE 7: LATE IMPERIAL DEGRADATION (PITON) — By the 3rd-4th century CE, the publicani system persists as institutional inertia long after the imperial bureaucracy has proven more efficient. Tax farming continues in peripheral provinces and for specialized taxes even as direct collection becomes standard. Theater ratio is high: the contracts are maintained for legitimacy and precedent rather than functional extraction efficiency. The system is sustained by path dependence, not by structural necessity — a degraded rope that persists through institutional momentum."
     },
     {
       "classification_type": "mountain",
@@ -85,64 +94,67 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer (Natural Law View)",
-      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some form of resource extraction to maintain state apparatus is inherent to empire: any centralized power structure requires funding mechanisms, and the gap between local autonomy and centralized authority is a structural necessity. This perspective risks naturalizing the tax farming system as immutable to political organization itself. However, the structural data contradicts pure mountain classification \u2014 alternatives (direct state collection, fixed tribute) existed and were used elsewhere."
+      "label": "The Analytical Observer (Economic Necessity View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / ECONOMIC NECESSITY VIEW (MOUNTAIN) — From a civilizational perspective, tax farming appears as an immutable economic law: pre-industrial states lack administrative capacity, so they must contract with private parties to extract revenue. This perspective naturalizes the publicani system as inherent to ancient governance. However, the structural data contradicts the mountain classification — the imperial transition to direct collection demonstrates that the 'necessity' was contingent on technological and organizational capacity, not an unchangeable feature of state finance."
     }
   ],
   "omegas": [
     {
-      "id": "alternative_collection_mechanisms",
-      "question": "Did alternative tax collection mechanisms (direct state collection, fixed tribute, in-kind requisition) constitute genuine structural alternatives or merely impractical fantasies given Roman technological capacity?",
-      "resolution_mechanism": "Comparative historical analysis of tax systems in contemporary empires (Ptolemaic Egypt, Parthian Persia, Mauryan India); assessment of collection costs and efficiency under different mechanisms in Roman territories that experimented with alternatives",
-      "impact": "If alternatives were genuinely viable: the mountain classification is false naturalization; extractiveness reflects contingent institutional choice. If alternatives were structurally impossible: some mountain component is legitimate. Central to mandatrophy resolution.",
+      "id": "extraction_magnitude_threshold",
+      "question": "What proportion of assessed tax wealth did the publicani system extract beyond legitimate administration costs?",
+      "resolution_mechanism": "Historical reconstruction of tax quotas vs. actual collection amounts; comparison with later imperial direct taxation rates; analysis of provincial economic contraction during high publicani periods vs. lower rates under imperial bureaucratic collection",
+      "impact": "If extraction >40% of assessed value: classification as snare for provincial victims is robust. If extraction <20%: system approaches rope classification (legitimate revenue mechanism with modest overhead). Determines whether suppression gates are breached.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether alternative tax mechanisms were structurally viable"
+      "description": "Magnitude of extraction beyond administrative costs"
     },
     {
-      "id": "publicani_profit_rates_and_justification",
-      "question": "What percentage of publicani profits represent legitimate service delivery (collection, transport, security) versus extractive margin over necessary costs?",
-      "resolution_mechanism": "Historical accounting of publicani operations (rare surviving records); comparison of profit rates against documented collection costs and security expenses; analysis of price changes for publicani contracts over time (rising prices indicate competition for rents, not efficiency gains)",
-      "impact": "If profits \u2265 60% above documented costs: extractiveness increases toward snare territory. If profits \u2264 20% above costs: more rope-like (payment for genuine service). Central to distinguishing coordination from extraction.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Publicani profit margins vs. documented service costs"
-    },
-    {
-      "id": "identity_lock_in_imperial_administration",
-      "question": "Did the imperial administration's commitment to tax farming represent genuine belief that it was the only viable mechanism (identity lock) or pragmatic acceptance of constraints they recognized as contingent?",
-      "resolution_mechanism": "Textual analysis of administrative records, imperial correspondence, and technical writings; examination of reform proposals and debates about alternative systems; analysis of whether administrators experimented with alternatives during crises",
-      "impact": "If identity-locked: the institutional perspective becomes identity_locked (analytical/cognitive capture), revealing that the rope classification masks trapped structural dependence. If pragmatic: the rope classification holds; extraction is experienced as necessary coordination.",
+      "id": "voluntary_participation_ambiguity",
+      "question": "Did provincial populations have any genuine exit option (migration, tax resistance, legal recourse) or was exit completely foreclosed?",
+      "resolution_mechanism": "Historical evidence of successful tax resistance movements; patterns of forced migration or refuge-seeking; analysis of legal appeals mechanisms and their effectiveness; comparative data on voluntary imperial taxation in non-conquered territories",
+      "impact": "If exit completely foreclosed: classification as trapped/snare is structural. If minimal exit available (voluntary debt servitude, migration to less-taxed regions): classification shifts toward constrained (higher d, lower experienced chi). Determines baseline suppression value.",
       "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether provincial exit from taxation was fully foreclosed or partially available"
+    },
+    {
+      "id": "coordination_function_reality",
+      "question": "Did the publicani system provide genuine coordination benefits (stable revenue, predictable administration) or was coordination merely the legitimizing narrative for pure extraction?",
+      "resolution_mechanism": "Analysis of revenue stability under publicani vs. imperial bureaucratic collection; comparison of administrative efficiency metrics; examination of whether alternative revenue mechanisms (direct state collection, tribute-in-kind, fixed annual levies) would have been feasible; evidence of state preference continuation even after bureaucratic capacity was available",
+      "impact": "If genuine coordination: tangled_rope classification is robust across perspectives. If coordination is post-hoc narrative: system reclassifies as pure snare from most perspectives; public-private partnership framing naturalizes extraction. Determines whether beneficiary + victim gate passes.",
+      "confidence": "high",
       "type_class": "conceptual",
-      "description": "Whether imperial commitment to tax farming was identity-locked or pragmatic"
+      "description": "Whether coordination function is genuine or post-hoc legitimation"
     },
     {
-      "id": "suppression_mechanism_structural_vs_internalized",
-      "question": "Was provincial suppression primarily structural (military coercion, legal disability, lack of information) or internalized (belief in Roman superiority, identification with imperial project, resignation as natural order)?",
-      "resolution_mechanism": "Analysis of rebellion frequency and triggers; examination of provincial literary records and inscriptions for expressions of legitimacy vs. resistance; tracking of suppression costs over time (increasing costs suggest internalization is failing; stable/declining costs suggest structural suppression holds)",
-      "impact": "If structural: suppression depends on continuous coercion; alternative military configurations could reduce binding. If internalized: suppression persists after structural constraints removed; requires cognitive reframing to break. Critical for understanding constraint persistence across regime changes.",
+      "id": "imperial_transition_causality",
+      "question": "Did the shift from publicani to imperial bureaucratic collection occur because direct administration became more efficient, or because the publicani system was generating destabilizing social resistance and political instability?",
+      "resolution_mechanism": "Chronological analysis of administrative capacity building; evidence of provincial revolts and anti-publicani movements; comparison of transition timing across provinces; analysis of imperial rhetoric justifying the transition",
+      "impact": "If efficiency-driven: scaffold perspective is structural — the system had a genuine sunset based on technological/organizational progress. If resistance-driven: sunset was forced by accumulated extraction damage; system's apparent sustainability masks precarious legitimacy. Affects both scaffold validity and mandatrophy analysis.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether suppression is structural or internalized in provincial populations"
+      "description": "Whether imperial transition to bureaucratic collection was efficiency-driven or resistance-driven"
+    },
+    {
+      "id": "provincial_elite_collaboration_nature",
+      "question": "Did local elites genuinely consent to co-participation in extraction (trading enforcer role for exemptions), or were they coerced into collaboration under threat of military occupation?",
+      "resolution_mechanism": "Evidence of elite bargaining power and negotiated exemptions; analysis of elite incentives (military protection, trade access, prestige); comparison with cases of elite resistance and resulting retaliation; examination of legal frameworks governing elite obligations",
+      "impact": "If genuine bargaining: tangled_rope at the elite level is accurate — coordination + constrained extraction. If coerced collaboration: classification shifts to snare from elite perspective as well; suppression value increases. Determines whether the constraint's apparent coordination is bottom-up or enforced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether elite collaboration in tax extraction was negotiated or coerced"
+    },
+    {
+      "id": "small_landowner_exclusion_mechanism",
+      "question": "Were small landowners systematically excluded from the tax base (through exemptions, administrative incapacity, or collusion with local elites), or did they bear proportional burden?",
+      "resolution_mechanism": "Analysis of tax rolls and cadastral records; comparison of assessed value vs. actual taxable capacity across wealth classes; evidence of exemption patterns by social status; reconstruction of effective tax rates by landowner size",
+      "impact": "If systematically excluded: snare operates as regressively as base metrics suggest — the poorest bear maximum suppression while the wealthy are partly protected. If proportional: extraction is harsh but less targeted; suppression value may be lower due to less precise enforcement apparatus. Affects directionality derivation for small landowner victims.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether small landowners were systematically excluded or bore proportional tax burden"
     }
   ],
   "measurements": [
-    {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.35
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 100,
-      "value": 0.55
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 200,
-      "value": 0.68
-    },
     {
       "metric": "base_extractiveness",
       "time_point": 0,
@@ -151,49 +163,94 @@
     {
       "metric": "base_extractiveness",
       "time_point": 100,
-      "value": 0.52
+      "value": 0.58
     },
     {
       "metric": "base_extractiveness",
       "time_point": 200,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 300,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 300,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
       "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 300,
+      "value": 0.62
     }
   ],
   "interval": {
     "start": 0,
-    "end": 200
+    "end": 300
   },
   "commentary": {
-    "narrative_context": "The Roman tax collection system represents a hybrid coordination-extraction constraint spanning the Republican and Imperial periods. Rome lacked the administrative infrastructure for direct state tax collection, so it contracted with private tax farmers (publicani) who bid for collection rights in specific provinces. This solved a coordination problem: how to fund the military and state apparatus without building a permanent bureaucracy. However, the system embedded asymmetric extraction: publicani could collect above the contracted amount and retain the difference; provincial populations bore suppression (legal disabilities, military coercion, threat of collective punishment) that prevented organized resistance; and the imperial administration faced moral hazard (no incentive to prevent excessive extraction if the revenue flowed to Rome). The constraint exhibits classic tangled-rope dynamics: genuine coordination function (efficient resource mobilization for empire-scale governance) coupled with systematic extraction toward beneficiaries (publicani and imperial elites). The theater_ratio increased over time (from 0.35 to 0.68 across 200 years) as the system became increasingly ritualized: publicani contracts became hereditary rather than competitive, the pretense of 'service provision' wore thin, and the mechanism's legitimacy rested primarily on Roman military dominance rather than perceived fairness. This degradation signature suggests piton dynamics at the institutional level \u2014 the system persists through inertia and coercion, not because it functions efficiently.",
+    "narrative_context": "The Roman tax collection system represents a quintessential tangled_rope constraint that exhibits genuine coordination benefits alongside systematic asymmetric extraction. From approximately 200 BCE to 200 CE, Rome lacked the administrative infrastructure to collect taxes directly, so it contracted with private tax farmers (publicani) who bid for collection rights in specific provinces. This mechanism solved a real structural problem: funding the military and state apparatus without building a permanent bureaucracy (which would be expensive, create competing power centers, and require trained administrators Rome did not yet possess). However, the publicani system enabled contractors to extract substantially more than legitimate administrative costs, crushing provincial populations through debt bondage, property seizure, and punitive assessments. The constraint exhibits all eight DR perspectives because different agents experience radically different structural relationships to the same institutional mechanism. Provincial subjects face a snare with no exit; local elites bargain constrained participation in exchange for partial exemptions; the state experiences pure coordination (delegation of collection risk); contractors experience legitimate profit extraction; the imperial bureaucracy eventually replaces the system with direct collection; and late imperial administrators maintain the degraded ritual long after bureaucratic capacity renders it unnecessary. The measurements capture the system's lifecycle: extractiveness rising from 0.42 to 0.62 as publicani firms perfect predatory assessment, theater rising from 0.35 to 0.62 as the imperial bureaucracy builds alternative capacity and the publicani system becomes increasingly performative, and suppression rising to 0.68 as enforcement becomes the binding constraint rather than coordination innovation.",
     "key_agents": [
-      "Provincial Peasant: Primary victim (powerless/trapped) \u2014 bears extraction with no exit or coordination benefit. No legal recourse against arbitrary assessment; subject to military enforcement of collection.",
-      "Local Magistrate: Secondary institutional actor (moderate/constrained) \u2014 constrained by Rome's ultimate authority; benefits from infrastructure funded by taxes but also bears pressure from publicani and quota demands from Rome.",
-      "Publicani Tax Farmer: Primary beneficiary (institutional/arbitrage) \u2014 captures profit margin between contracted amount and actual collection; operates through established networks; can arbitrage between provinces.",
-      "Imperial Administration: Secondary beneficiary (institutional/arbitrage) \u2014 receives tax revenue to finance military and state apparatus; experiences coordination benefit but also moral hazard (incentive to ignore excessive extraction).",
-      "Provincial Resistance Coalition: Organized actors (organized/mobile) \u2014 city councils, merchant guilds, landowner associations that can coordinate collective action or tax resistance; face organized suppression but retain some mobility.",
-      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing tax extraction as inherent to empire, masking contingent institutional choices."
+      "Provincial populations: Primary victim (powerless/trapped) — bear the full extraction burden with no legal recourse or exit option; subject to debt bondage and property seizure",
+      "Small landowners: Secondary victim (moderate/trapped) — vulnerable to assessment manipulation; often pushed into debt servitude or loss of property",
+      "Provincial aristocracy (local elites): Co-opted agent (moderate/constrained) — participate in extraction in exchange for exemptions and status; genuinely benefit from Roman military protection and trade access",
+      "Publicani contractors: Primary beneficiary (powerful/arbitrage) — capture substantial profits through competitive bidding; 5-year contracts with clear exit",
+      "Equestrian financial class: Organized beneficiary (organized/arbitrage) — finance and manage large publicani firms; face senatorial oversight and prosecution risk for excesses",
+      "Roman state apparatus: Primary beneficiary (institutional/arbitrage) — gains revenue without building expensive bureaucracy; can renegotiate or replace contracts",
+      "Imperial administrators (Augustus and successors): Architectural agent (institutional/arbitrage) — explicitly build alternative bureaucratic capacity; scaffold constraint with known sunset"
     ],
-    "logic_rationale": "Extractiveness (0.58): High-moderate. The publicani system extracts value significantly above direct collection costs, with evidence suggesting 40-60% profit margins in many provinces. However, extraction is not maximal (snare level 0.66+) because the system does provide genuine service (collection, transport, security) and because some provinces can reduce cooperation or manage collections internally, reducing effective extraction. The measurement shows extractiveness increasing over time (0.42 \u2192 0.58) as the system becomes more entrenched and competition for contracts declines. Suppression (0.72): High. Provincial populations face multiple coercive mechanisms: they cannot legally refuse payment, they have no appeal mechanism for arbitrary assessments, they face military enforcement of collection, they experience collective punishment for resistance, and they have limited information about tax rates and assessment methodologies. However, suppression is not absolute (would require 0.85+) because some local magistrates can negotiate, some provinces have traditional exemptions, and organized groups can sometimes coordinate collective resistance. Theater ratio (0.68): Moderate-high. The system justified itself through claims of efficient service delivery and legitimate profit-taking. Over time, as contracts became hereditary and publicani consolidation increased, the performative element grew \u2014 the theatrical legitimacy became increasingly thin as the extraction mechanism became visible. The theater_ratio increase over the interval (0.35 \u2192 0.68) reflects this degradation: the mechanism persists through habit and military backing rather than perceived legitimacy.",
-    "directionality_logic": "Publicani (institutional/arbitrage): Derive d \u2248 0.10 from beneficiary status + arbitrage exit options. They experience minimal effective extraction (negative chi) because they are the primary extractors. They can move between provinces, negotiate contract terms, and shift collection methods. Roman administration (institutional/arbitrage): Derives d \u2248 0.15 from beneficiary status + arbitrage options. They receive the revenues but face moral hazard: they could modify the system but choose not to because extraction flows to them. Local magistrates (moderate/constrained): Derive d \u2248 0.50 from mixed position (both coordinate local administration and enforce collection) + constrained exit. They experience moderate extraction because they can sometimes negotiate with publicani but ultimately cannot refuse Roman authority. Provincial peasant (powerless/trapped): Derives d \u2248 0.95 from victim status + trapped exit. They experience maximum extraction because they cannot negotiate, cannot refuse, cannot appeal, and cannot exit the territory. The directionality spread across these actors (0.10 to 0.95) explains the perspectival gap: the same constraint is rope for beneficiaries, tangled-rope for moderates, and snare for victims.",
-    "perspectival_gap": "The constraint demonstrates maximum perspectival divergence. Publicani see a rope \u2014 they solve a real coordination problem (funding empire without state bureaucracy) and are well-compensated for the service. Roman administration sees a rope \u2014 they acquire the resources necessary to maintain territorial control and military capability. Local magistrates see tangled rope \u2014 they coordinate local administration but experience pressure from above and below. Provincial resistance coalitions see tangled rope with organizing potential \u2014 they experience extraction but can mobilize collective defense. Provincial peasants see a snare \u2014 they bear costs with no exit and no benefit. The analytical observer risks seeing a mountain (tax extraction is inherent to empire) but the structural data shows this is naturalization: alternatives existed (direct collection, fixed tribute, in-kind requisition) and were used in comparable empires and in some Roman contexts. The false summit here is claiming immutability for what is contingent institutional design.",
-    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The tax farming system is a genuine tangled rope, not a false dichotomy. It solves a real coordination problem (empire-scale resource mobilization) while embedding systematic asymmetric extraction. The mandatrophy is resolved by recognizing that both functions are real: the system cannot be dismissed as pure extraction (snare) because it genuinely coordinates the financial infrastructure of empire, nor can it be whitewashed as pure coordination (rope) because the extraction is systematic and asymmetric. The key insight is that coordination and extraction are not mutually exclusive \u2014 the system was designed precisely to achieve both: mobilize resources (coordination) while allowing private profit (extraction). The theater_ratio trajectory (increasing over time) reveals how mandatrophy can degrade: as the system persists through inertia rather than efficiency, the coordination component atrophies and the extraction component becomes more visible and controversial. By the late Imperial period, the system approaches piton (performative persistence) because the coordination benefit has been eclipsed by the extraction visibility, yet the system persists because Rome cannot easily replace it without building state apparatus. This is a case study in how tangled ropes degrade into pitons: coordination atrophies, theater increases, structural binding weakens but institutional inertia persists."
+    "logic_rationale": "Extractiveness (0.58): High but not maximal. The publicani system extracted substantially beyond legitimate administration costs — historical evidence suggests 20-40% of assessed value went to contractors as profit beyond actual collection expenses. The value reflects that this is real extraction, not hypothetical, but also that the system served genuine state coordination functions that legitimated some overhead. Measurement trajectory shows rise to 0.62 during peak Imperial period (100-200 CE) as firms perfected predatory assessment techniques, then decline to 0.48 by 300 CE as imperial bureaucracy reduced reliance on private contractors. Suppression (0.65): High and structural. Enforcement mechanisms included military occupation, legal authority to seize property, debt bondage, and denial of legal recourse to appeal assessments. The provincials faced combined material barriers (no escape from territory) and legal barriers (no court recognized their claims against publicani). Suppression is asymmetric: elites faced lower suppression (could negotiate) while peasants faced nearly complete suppression (no alternatives). Theater ratio (0.48): Moderate, rising over time to 0.62. The system's early phase (0-100 CE) had genuinely functional coordination — publicani firms actually did solve the revenue problem efficiently. As imperial bureaucratic capacity grew (100-300 CE), the theater increased — the publicani system persisted as path dependence even as direct collection became more efficient. By 300 CE, the theater had risen substantially, indicating institutional inertia. The rise in theater mirrors the decline in extractiveness, suggesting the system shifted from functional extraction to degraded ritual (piton trajectory if extended beyond the imperial period).",
+    "perspectival_gap": "The primary perspectival gap separates the provincial victim (snare) from the state/contractor beneficiaries (rope). This gap is not attributable to disagreement about facts but to structural relationship: the victim bears costs the beneficiary does not. A secondary gap separates the imperial administrator's scaffold (system has sunset based on bureaucratic progress) from the late imperial observer's piton (system persists as ritual despite capacity to replace it). This gap reveals path dependence: the scaffold's actual sunset was delayed by 200+ years beyond when it technically became possible, suggesting institutional inertia or entrenched beneficiary interests prevented transition.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from the agent's structural position. Provincial subjects are pure victims (trapped exit) with zero beneficiary status → d = 0.95, producing maximum f(d) and maximum experienced extraction (chi). Provincial elites are mixed: they benefit from status and protection but also bear some extraction burden and face constrained exit → d ≈ 0.60, producing moderate chi through f(d) sigmoid. The state is pure beneficiary (arbitrage exit) with no extraction burden → d ≈ 0.05, producing negative f(d) and effective subsidy relationship. Publicani contractors are beneficiaries (arbitrage exit) with upside-only structure → d ≈ 0.15, producing low/negative chi. The equestrian class occupies organized power with constrained exit and mixed beneficiary status (they profit but face oversight) → d ≈ 0.50, producing moderate chi. The imperial administrator is beneficiary with arbitrage (can transition system at will) → d ≈ 0.10. The analytical observer at civilizational scope risks naturalizing the constraint; if reframed as a false summit, d → institutional beneficiary of the naturalization narrative, not a neutral observer.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The constraint resolves the mandatrophy through multiple mechanisms. First, the genuine coordination function (revenue extraction without permanent bureaucracy) is structurally distinct from asymmetric extraction — both are real and coexist. The tangled_rope classification captures this hybrid correctly. Second, the perspectival variation is not mandatrophy but legitimate structural difference: different agents occupy different positions (victim/beneficiary) and therefore experience different classification types. The snare perspective (victims) is not in conflict with the rope perspective (beneficiaries) — they are describing the same constraint from opposite positions. Third, the temporal trajectory (extractiveness rising, theater rising, suppression rising, then transition to alternative system) demonstrates the constraint operated as designed: solve coordination while enabling extraction, until the coordination function was superseded by bureaucratic capacity. The system's degradation into a piton (late imperial period) confirms the mandatrophy is resolved: the constraint became dysfunctional (theater > functional extraction), which prompted replacement by direct collection. The classical mandate trap (appears as both pure extraction and pure coordination depending on observer) is broken by recognizing that both are correct simultaneously — the constraint coordinated state revenue-raising while enabling extraction. The question was never 'which one is the constraint really?' but 'who benefits and who bears costs?' Once directionality is specified, classification becomes unambiguous."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation",
-    "boltzmann_floor_override": 0.18
+    "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "roman_provincial_military_garrisoning",
-      "roman_slavery_and_debt_bondage",
-      "roman_infrastructure_investment"
+      "provincial_resistance_dynamics",
+      "elite_collaboration_mechanisms",
+      "imperial_bureaucratic_capacity"
     ],
-    "dual_formulation_note": "The tax collection system decomposes into distinct constraints: (1) the publicani contract mechanism itself (extractiveness \u2248 0.58, tangled rope), (2) the provincial obligation system that enforces collection (extractiveness \u2248 0.72, snare for peasants), and (3) the imperial accounting and distribution of revenue (extractiveness \u2248 0.42, rope). This story focuses on the publicani mechanism as primary. The suppression mechanisms and provincial obligation stories should be documented separately with different \u03b5 values and different beneficiary/victim declarations."
+    "dual_formulation_note": "The roman_tax_collection_system is the upstream institutional mechanism that generates extraction visible in downstream constraints. provincial_resistance_dynamics shows the victim perspective's agency. elite_collaboration_mechanisms shows the co-opted agent perspective's constrained bargaining. imperial_bureaucratic_capacity shows the architectural replacement dynamic. All three are affected by changes in this constraint's extractiveness and suppression."
   },
   "directionality_overrides": [
     {
-      "power_atom": "institutional",
-      "d_value": 0.25
+      "power_atom": "organized",
+      "d_value": 0.5
     }
   ]
 }

@@ -1,69 +1,73 @@
 {
   "header": {
     "constraint_id": "power_indexed_classification_variance",
-    "version": "1.0",
-    "generated_date": "2025-01-02",
+    "version": "2.0",
+    "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "picv"
+    "measurement_id_prefix": "picv",
+    "story_uid": "7224e23b-c16c-4248-95ed-129d712d487d",
+    "created_at": "2026-02-26T14:32:00Z"
   },
   "base_properties": {
-    "extractiveness": 0.08,
-    "suppression": 0.03,
-    "theater_ratio": 0.05,
-    "claimed_type": "mountain",
+    "extractiveness": 0.48,
+    "suppression": 0.52,
+    "theater_ratio": 0.61,
+    "claimed_type": "tangled_rope",
     "human_readable": "Power-Indexed Classification Variance as Structural Invariant",
     "topic_domain": "social_epistemology/constraint_classification/indexical_realism",
-    "emerges_naturally": true,
-    "accessibility_collapse": 0.92,
-    "resistance": 0.08,
-    "beneficiaries": [],
-    "victims": []
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_classification_authority"
+    ],
+    "victims": [
+      "lower_power_observational_positions"
+    ]
   },
   "perspectives": [
     {
-      "classification_type": "mountain",
+      "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "immediate",
+      "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "local",
-      "label": "The Trapped Agent",
-      "comment": "PERSPECTIVE 1: TRAPPED AGENT (MOUNTAIN) \u2014 Experiences classification variance as immutable: cannot change their structural position, cannot access alternative framings, cannot exit the constraint being classified. The fact that their classification differs from a powerful observer's is a fixed feature of their epistemic situation."
+      "spatial_scope": "global",
+      "label": "The Trapped Subject",
+      "comment": "PERSPECTIVE 1: TRAPPED SUBJECT (SNARE) — From the position of an agent with no structural power and no exit options, the constraint appears as pure extraction. Classification variance itself becomes a coercive mechanism: the agent experiences the constraint as Snare (high extraction, high suppression), while institutional actors classify it as Rope (beneficial coordination). The agent cannot exit this perspectival discrepancy itself — the authority structure that defines 'legitimate' classification positions excludes their position or discredits their perspective."
     },
     {
-      "classification_type": "mountain",
+      "classification_type": "tangled_rope",
       "agent_power": "moderate",
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "regional",
-      "label": "The Constrained Observer",
-      "comment": "PERSPECTIVE 2: CONSTRAINED OBSERVER (MOUNTAIN) \u2014 Recognizes that classification depends on index but cannot change the dependency itself. Can shift their own position over biographical time but cannot eliminate the structural fact that position determines classification."
+      "label": "The Moderate Position",
+      "comment": "PERSPECTIVE 2: MODERATE POSITION (TANGLED ROPE) — A moderately powerful agent with constrained exit options experiences both genuine coordination benefits (the shared classification framework enables cooperation, knowledge exchange, institutional stability) and asymmetric extraction (the framework systematically privileges higher-power interpretations, making lower-power observations costly to register). The classification itself is contested — this agent may perceive Rope if coordination dominates, or Snare if extraction dominates, or Tangled Rope if both are undeniably present."
     },
     {
-      "classification_type": "mountain",
-      "agent_power": "powerful",
-      "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "national",
-      "label": "The Mobile Actor",
-      "comment": "PERSPECTIVE 3: MOBILE ACTOR (MOUNTAIN) \u2014 Has access to multiple positions and can observe classification variance directly by moving between them. This mobility reveals the invariance: no matter which position they occupy, the structural relationship between index and classification remains fixed."
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Beneficiary",
+      "comment": "PERSPECTIVE 3: INSTITUTIONAL BENEFICIARY (ROPE) — An institutional actor with arbitrage options (ability to shift between classification frameworks, to redefine indexical parameters, to redesign authority structures) experiences the classification variance as pure coordination. The flexibility to move between contexts and to legitimate particular (P,T,E,S) tuples as 'canonical' provides net benefits. The constraint is a coordination mechanism that enables the institution to manage contested domains by controlling which perspectives are considered valid in which contexts."
     },
     {
-      "classification_type": "mountain",
+      "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "continental",
-      "label": "The Organized Collective",
-      "comment": "PERSPECTIVE 4: ORGANIZED COLLECTIVE (MOUNTAIN) \u2014 Collective action can change which constraints exist but cannot change the indexical structure of classification itself. A union can eliminate a snare but cannot eliminate the fact that snares appear differently to powerless vs institutional observers."
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Reform Coalition",
+      "comment": "PERSPECTIVE 4: REFORM COALITION (SCAFFOLD) — Organized agents (epistemic justice movements, alternative classification systems, participatory frameworks, community science programs) see the variance as a temporary institutional problem with a sunset. The coalition recognizes that power-indexed variance is structurally inevitable but that the *suppression* of lower-power perspectives is contingent and remediable. Distributed classification authority, participatory design of indexical parameters, and explicit acknowledgment of perspectival variance are building alternatives. The constraint has sunset logic if the coalition succeeds in legitimizing multi-perspectival classification."
     },
     {
-      "classification_type": "mountain",
+      "classification_type": "piton",
       "agent_power": "institutional",
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Institutional Arbitrageur",
-      "comment": "PERSPECTIVE 5: INSTITUTIONAL ARBITRAGEUR (MOUNTAIN) \u2014 Can exploit classification variance (e.g., regulatory arbitrage based on different jurisdictions' framings) but cannot eliminate the variance itself. The arbitrage opportunity exists precisely because the indexical structure is invariant."
+      "label": "The Institutional Theater",
+      "comment": "PERSPECTIVE 5: INSTITUTIONAL THEATER (PITON) — The institutional classification apparatus (academic disciplines, certification bodies, policy frameworks, funding agencies) maintains the formal machinery of indexical classification while increasingly recognizing the variance as an unsolved problem. The apparatus sees itself as degraded: it claims objectivity while knowing that classification outcomes shift with observer position. Theater ratio is high because the apparatus continues to issue single-type verdicts while its own meta-analysis documents that no such verdict is observer-independent. The infrastructure persists through inertia despite acknowledged functional degradation."
     },
     {
       "classification_type": "mountain",
@@ -71,37 +75,185 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Framework Designer",
-      "comment": "PERSPECTIVE 6: FRAMEWORK DESIGNER (MOUNTAIN) \u2014 The Deferential Realism framework itself treats indexical variance as a structural invariant. The chi formula \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) encodes the dependency: given fixed base properties, classification MUST vary with index. This is not a bug to be fixed but the core insight: constraints have no observer-independent type."
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) — From a civilizational analytical position, power-indexed classification variance appears as an immutable mathematical structure: given identical constraint parameters and varying (P,T,E,S) tuples, classification type variance is a formal consequence of the chi formula χ = ε × f(d) × σ(S) and the classification gates. No observer-independent type exists — this is not a limitation of any particular measurement framework but a structural property of constraints themselves. However, this perspective risks naturalizing what is actually a contingent institutional choice to enforce single-perspective classification verdicts. The variance is mathematically inevitable; the suppression of lower-power perspectives is institutional."
     }
   ],
-  "omegas": [],
-  "measurements": [],
+  "omegas": [
+    {
+      "id": "inevitability_vs_contingency_boundary",
+      "question": "Which aspects of power-indexed classification variance are mathematically inevitable versus institutionally contingent?",
+      "resolution_mechanism": "Formal proof that chi formula yields variant types from variant (P,T,E,S) tuples (inevitable); empirical study of whether lower-power perspectives are systematically suppressed or amplified in institutional classification decisions (contingent)",
+      "impact": "If variance is entirely inevitable: the constraint is a mountain — no alternatives exist, and current institutional practices are optimal. If variance is partly contingent: the constraint is tangled_rope or snare — institutional suppression of perspectives amplifies natural variance into extractive power asymmetry. Policy implications reverse entirely.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Boundary between mathematical inevitability and institutional contingency in classification variance"
+    },
+    {
+      "id": "perspectival_legitimacy_criteria",
+      "question": "What criteria determine whether a particular (P,T,E,S) position counts as a legitimate observation site versus an illegitimate or distorted one?",
+      "resolution_mechanism": "Examination of institutional practice: which perspectives are cited as authoritative? Which are dismissed as 'lacking objectivity' or 'too embedded'? Cross-analysis of legitimacy claims against the constraint's own framework (which should treat all perspectives as equally valid inputs)",
+      "impact": "If legitimacy criteria are coherent and justified: institutional hierarchy of perspectives is defensible. If criteria are circular or power-dependent: the constraint is snare — institutions suppress lower-power perspectives using legitimacy language that the constraint itself should render incoherent.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Criteria for institutional legitimacy of particular observation positions"
+    },
+    {
+      "id": "oracle_gap_instantiation",
+      "question": "Does the constraint instantiate Theorem 4 (the Classical Oracle Gap): the analytical observer's instruments cannot detect the structure that cross-position analysis reveals?",
+      "resolution_mechanism": "Compare the analytical mountain perspective's conclusions with findings from powerless/trapped perspectives: does institutional analysis see variance as inevitable (mountain) while lower-power analysis sees suppression (snare)? Do these perspectives make incompatible empirical claims, or are they seeing the same phenomenon from different angles?",
+      "impact": "If oracle gap is real: analytical observer needs cross-position framework to see what their native position prevents them from seeing. Single-position analysis (pure institutional, pure analytical) systematically misses the structure. The analytical mountain perspective is itself identity-locked within institutional legitimacy frames.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether the constraint instantiates the classical oracle gap (Theorem 4)"
+    },
+    {
+      "id": "reform_coalition_sunset_feasibility",
+      "question": "Are the proposed alternatives (distributed classification authority, participatory design of indexical parameters, explicit multi-perspectival acknowledgment) actually capable of reducing institutional suppression of lower-power perspectives, or do they themselves become new extractive mechanisms?",
+      "resolution_mechanism": "Longitudinal study of institutions adopting participatory classification: do lower-power perspectives gain decision-making authority in practice? Are their interpretations incorporated into official verdicts? Or do participatory processes become theatrical while institutional authority remains concentrated?",
+      "impact": "If sunset is feasible: scaffold perspective is real, and the constraint has genuine reform pathway. If participatory processes become theater: the constraint persists as snare or piton, and reform coalition's sunset clause is illusory.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of institutional reform to reduce perspectival suppression"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.51
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.61
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.52
+    }
+  ],
   "interval": {
     "start": 0,
-    "end": 0
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "Power-indexed classification variance is the structural property that identical constraint parameters (base extractiveness \u03b5, suppression, coordination function, asymmetry) yield different type classifications when evaluated from different indexical positions (P, T, E, S). This is not a measurement error or epistemic limitation \u2014 it is the central claim of Deferential Realism: constraints have no observer-independent type. The chi formula \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) mathematically encodes this dependency through the directionality function f(d) and scope modifier \u03c3(S), which transform base extractiveness into effective extractiveness based on the observer's structural relationship to the constraint. A constraint with \u03b5 = 0.40 may classify as rope (\u03c7 \u2248 0.20) from an institutional beneficiary's perspective, tangled_rope (\u03c7 \u2248 0.45) from a moderate constrained observer's perspective, and snare (\u03c7 \u2248 0.70) from a powerless trapped victim's perspective \u2014 all from the same base properties. This variance is not a failure of the classification system; it is what the classification system measures. The framework treats this indexical structure as a natural law: no intervention can eliminate the dependency of classification on observer position without eliminating the distinction between beneficiaries and victims, which would collapse the framework's ability to detect extraction at all.",
+    "narrative_context": "Power-indexed classification variance is the core structural claim of Deferential Realism: constraints have no observer-independent type. Identical constraint parameters (ε, suppression, coordination function, asymmetry) yield different type classifications when evaluated from different indexical positions (P=power, T=time_horizon, E=exit_options, S=spatial_scope). This constraint story describes the institutional machinery that enforces single-perspective verdicts on what is mathematically a multi-perspectival phenomenon. The constraint emerges as a tangled_rope: it provides genuine coordination benefits (shared classification framework enables knowledge exchange, institutional cooperation, standardized evaluation) while also extracting asymmetric benefits for institutional actors who control which perspectives count as 'legitimate' or 'objective.' The rising theater_ratio over the interval reflects institutional meta-awareness: classification authorities increasingly acknowledge that variance exists while continuing to issue single-type verdicts. The constraint's extractiveness and suppression have both increased — institutional suppression of lower-power perspectives has intensified as the variance problem has become harder to deny. The reform coalition sees a temporary problem with a sunset: distributed classification authority and participatory design could reduce suppression by legitimizing multi-perspectival analysis. The institutional theater sees its own degradation: the formal machinery of objective classification persists despite the machinery's designers knowing it produces observer-dependent outputs.",
     "key_agents": [
-      "Trapped Agent: Powerless/trapped \u2014 experiences variance as immutable epistemic constraint on their own classification capacity",
-      "Constrained Observer: Moderate/constrained \u2014 recognizes variance but cannot eliminate it",
-      "Mobile Actor: Powerful/mobile \u2014 can observe variance directly by occupying multiple positions",
-      "Organized Collective: Organized/mobile \u2014 can change which constraints exist but not the indexical structure",
-      "Institutional Arbitrageur: Institutional/arbitrage \u2014 exploits variance but cannot eliminate it",
-      "Framework Designer: Analytical/analytical \u2014 encodes variance as structural invariant in the chi formula"
+      "Institutional Classification Authority: Primary beneficiary (institutional/arbitrage) — controls which perspectives count as legitimate, captures extractive benefit by constraining access to classification authority to credentialed positions",
+      "Lower-Power Observational Positions: Primary victim (powerless/trapped) — experience classification variance as exclusion; their perspectives are discredited or suppressed by institutional legitimacy gates",
+      "Moderate Position Holders: Secondary actor (moderate/constrained) — experience both coordination benefits and extraction; contested about whether variance itself is problem or feature",
+      "Reform Coalition: Organized actor (organized/constrained) — academic justice movements, participatory science initiatives, alternative certification bodies building distributed classification authority",
+      "Institutional Classification Apparatus: Institutional actor (institutional/arbitrage) — academic disciplines, policy frameworks, funding agencies maintaining performative objectivity while acknowledging internal degradation",
+      "Analytical Observer: Civilizational position (analytical/analytical) — risks naturalizing institutional suppression as mathematical inevitability; needs cross-position analysis to see institutional contingency"
     ],
-    "logic_rationale": "Extractiveness (0.08): Very low. The indexical structure itself extracts minimally \u2014 it is a logical property of how classification works, not a mechanism that transfers resources or agency. The small non-zero value reflects the cognitive cost of recognizing that one's own classification is position-dependent, which can be disorienting or destabilizing for agents who expect objective constraint types. Suppression (0.03): Negligible. No agent is prevented from recognizing indexical variance; the structure is accessible to all positions (though differently experienced). The framework's documentation makes the variance explicit. Accessibility collapse (0.92): Very high. Once an agent understands the chi formula and the indexical tuple structure, the variance becomes immediately apparent and cannot be unseen. The collapse is not quite total (0.92 rather than 1.0) because some agents may resist the implication that their classifications are position-dependent. Resistance (0.08): Very low. Attempts to eliminate indexical variance by fiat (declaring one perspective 'correct' and others 'biased') fail immediately \u2014 the structural positions still exist, and the chi values still diverge. The framework's mathematical encoding makes resistance futile. Theater ratio (0.05): Negligible. The indexical structure is functional, not performative. The chi formula does real computational work; the perspectival tuple captures real structural differences.",
-    "directionality_logic": "This constraint has no beneficiaries or victims in the conventional sense \u2014 it is a structural property of the classification system itself, not a mechanism that extracts from some agents and benefits others. All agents experience the indexical variance, but none are harmed by it (beyond the minimal cognitive cost of recognizing position-dependence). The framework treats this as a mountain from all perspectives because no agent can change the dependency of classification on index. The chi formula encodes the variance mathematically: f(d) maps the agent's structural relationship (beneficiary vs victim) to an effective power modifier, and \u03c3(S) scales by scope. Given these functions, classification MUST vary with index when base properties are held constant. This is not contingent on institutional arrangements or policy choices \u2014 it follows from the definitions.",
-    "perspectival_gap": "All perspectives classify this constraint as mountain, but they experience the invariance differently. The trapped agent experiences it as an epistemic limit on their own classification capacity \u2014 they cannot access the institutional perspective's framing. The mobile actor experiences it as an observable structural regularity \u2014 they can move between positions and watch the classifications shift predictably. The analytical observer experiences it as a mathematical necessity encoded in the chi formula. These are different phenomenological experiences of the same invariant structure. The gap is not in classification type but in what the mountain means: for the trapped agent, it is a barrier; for the mobile actor, it is a map; for the analytical observer, it is a theorem.",
-    "mandatrophy_analysis": "This constraint resolves mandatrophy by being its own resolution mechanism. The mandatrophy asks: 'How do we distinguish genuine coordination from extraction when both can be framed either way?' The answer is: 'By measuring from multiple indices and observing the variance.' A genuine rope shows low chi from all perspectives (universal coordination). A genuine snare shows high chi from the victim's perspective and low chi from the beneficiary's perspective (asymmetric extraction). A tangled rope shows moderate chi from most perspectives with a gap between beneficiary and victim (mixed coordination and extraction). The indexical variance is not noise to be eliminated \u2014 it is the signal. The framework's mountain classification of this variance means: you cannot eliminate the dependency of classification on perspective without eliminating the framework's ability to detect extraction. The variance is the detection mechanism."
+    "logic_rationale": "Extractiveness (0.48): Moderate-high. The institutional benefit of controlling which perspectives count is real and significant — it provides authority, legitimacy, and policy influence. But extractiveness is not maximal because the coordination benefits are also real: shared classification frameworks do enable institutional cooperation and knowledge exchange. The extraction emerges from institutional asymmetry in who gets to define 'legitimate' positions, not from absence of coordination value. Suppression (0.52): Moderate-high. Institutional barriers to lower-power perspective registration include credentialism (only 'properly trained' observers matter), temporal barriers (short-term policy horizons exclude biographical/generational analysis), exit cost barriers (challenging institutional classifications risks career damage), and scope barriers (local knowledge is dismissed as 'not generalizable'). These barriers are significant but not absolute — some lower-power perspectives do penetrate institutional decision-making, and reform movements have achieved partial legitimacy. Theater ratio (0.61): Moderate-high. The institutional classification apparatus increasingly operates through theater: it claims objectivity while its own internal analysis documents observer-dependence, it issues single-type verdicts while acknowledging these vary with perspective, it maintains legitimacy gates while recognizing these gates are power-dependent. The rising trajectory over the interval reflects this growing meta-awareness and gap between formal claims and acknowledged reality.",
+    "perspectival_gap": "This constraint demonstrates classification variance across all six types from a single set of base properties. The powerless/trapped agent experiences Snare: the variance is weaponized against them through institutional suppression of their perspective. The moderate agent experiences Tangled Rope: genuine coordination benefits exist alongside asymmetric extraction. The institutional beneficiary experiences Rope: the classification framework is a coordination mechanism that serves their interests. The reform coalition experiences Scaffold: the variance is solvable through institutional redesign with a sunset clause. The institutional apparatus experiences Piton: the classification machinery is degraded (acknowledges internal contradictions) but persists through inertia. The analytical observer risks experiencing Mountain: the variance appears as mathematical inevitability. But this perspectival gap itself IS the constraint — the gap between what lower-power positions observe (extraction) and what institutional positions observe (coordination) is neither random nor a measurement error. It is the core structural feature of how power-indexed variance operates. Suppression prevents lower-power perspectives from being treated as equally valid inputs to classification.",
+    "directionality_logic": "Each perspective's d value is fixed by structural position: beneficiary with arbitrage exit → low d → negative f(d) → negative chi (net benefit); victim with trapped exit → high d → high f(d) → high chi (severe extraction). These d values are not observer-relative — they are properties of the agent's actual structural position within the constraint. The classification variance comes from the combination of identical ε and suppression values across positions plus the agent-relative d values. Two agents experiencing identical ε and suppression experience radically different chi values because their d values differ. An institutional beneficiary with d ≈ 0.10 experiences χ ≈ 0.48 × (-0.12) × 1.0 ≈ -0.06 (net benefit). A powerless agent with d ≈ 0.95 experiences χ ≈ 0.48 × 1.42 × 1.0 ≈ 0.68 (severe extraction). Both are experiencing identical base constraint parameters; their classification types differ (Rope vs Snare) because chi differs by more than 0.70. This is not measurement ambiguity — it is structural reality.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that the mandatrophy is not a flaw in the framework but a feature of what the framework is measuring. The question 'what is the true type of this constraint?' presupposes a single observer-independent answer. Deferential Realism rejects this presupposition: the constraint genuinely has no single type. The Snare that the powerless agent experiences is not a misclassification or a measurement error — it is their actual structural experience. The Rope that the institutional beneficiary experiences is not a lie — coordination benefits are real. The Mountain that the analytical observer perceives is not false — mathematical variance is real. All six types are correct readings from their respective positions. The constraint is not 'really' any one type — it is a presheaf over the observation site, a mapping from (P,T,E,S) positions to types. The mandatrophy resolves by recognizing that institutional pressure for single-type verdicts is itself part of the constraint. The suppression of lower-power perspectives, the privileging of institutional positions, the appearance of objectivity while acknowledging observer-dependence — these are all mechanisms through which the constraint operates. A fully transparent commitment to multi-perspectival classification would dissolve much of the extraction (because extraction depends on institutional suppression of perspectives), potentially converting the constraint from tangled_rope to rope or even scaffold.",
+    "kernel_context": "This constraint is ONE reading of a contested kernel: the definition of what counts as a legitimate observation position in constraint classification. The reading instantiated here is the Deferential Realism reading: all (P,T,E,S) positions are legitimate input sites; constraints have no observer-independent type; institutional enforcement of single-perspective verdicts is extractive. Sibling readings include: (1) the Institutional Objectivity reading: only credentialed institutional positions count as legitimate; lower-power perspectives are biased or insufficiently informed; variance should be resolved by privileging institutional authority. (2) The Natural Law reading: classification variance is noise; a true constraint type exists independent of observers; institutional authority approximates it. (3) The Radical Relativism reading: no perspective is privileged; all readings are equally valid; institutional authority is pure power with no legitimacy. This constraint story instantiates Deferential Realism against these competitors. The kernel is the legitimacy structure of classification — who gets to count as a valid observer. The reading relations are: Deferential Realism INFLUENCES (but does not foreclose) Natural Law (if variance is partly inevitable, institutional authority can approximate truth); Deferential Realism COEXISTS_WITH Radical Relativism (both reject institutional objectivity, but differ on whether any observation site is epistemically privileged); Deferential Realism FORECLOSES Institutional Objectivity (if classification variance is real, institutional gatekeeping on legitimate positions is extractive denial, not knowledge protection)."
   },
   "boltzmann": {
-    "coordination_type": "information_standard"
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.12
   },
   "network": {
-    "affects_constraints": [],
-    "dual_formulation_note": "This constraint is self-referential: it is a claim about the structure of constraint classification, and it is itself a constraint that must be classified. The framework treats it as a mountain (natural law of indexical realism) rather than as a rope (conventional choice of classification scheme) because attempts to eliminate indexical variance fail \u2014 the structural positions and their different experiences persist regardless of how we choose to model them. The chi formula encodes the variance as a mathematical necessity, not a modeling convention."
+    "affects_constraints": [
+      "institutional_legitimacy_gatekeeping",
+      "epistemic_justice_framework",
+      "credentialist_barrier_extraction"
+    ],
+    "dual_formulation_note": "Power-indexed classification variance is upstream of three institutional mechanisms: (1) legitimacy gatekeeping (which perspectives institutional authority accepts as valid), (2) epistemic justice problems (how lower-power positions are systematically silenced), and (3) credentialist barriers (structural mechanisms excluding non-credentialed observers). This constraint story describes the variance property itself. The three downstream constraints describe specific institutional mechanisms that suppress lower-power perspectives within the variance landscape."
   },
-  "directionality_overrides": []
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.72
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "institutional_objectivity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "natural_law_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "radical_relativism_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "classification_variance_is_structural",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "all_positions_are_legitimate_input_sites",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "institutional_suppression_of_perspectives_is_extractive",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "multi_perspectival_classification_authority",
+    "drift_state": {
+      "moment": "contemporary_institutional_practice",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "epistemic_justice_framework",
+      "institutional_authority_structure"
+    ]
+  }
 }

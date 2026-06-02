@@ -1,0 +1,237 @@
+{
+  "header": {
+    "constraint_id": "permissive_license_text__copyleft_counterfactual_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "perm_copyleft",
+    "story_uid": "d501d6d3-7ff3-47b2-8704-df8d6f920c91"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.68,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Permissive License Extraction (Copyleft Counterfactual Reading)",
+    "topic_domain": "software_licensing/intellectual_property/technology_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "proprietary_software_builders",
+      "platform_companies"
+    ],
+    "victims": [
+      "open_source_commons",
+      "reciprocal_obligation_adopters"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Open Source Commons",
+      "comment": "PERSPECTIVE 1: OPEN SOURCE COMMONS (SNARE) — The software commons lacks exit capacity. Contributors donate labor under permissive licenses expecting reciprocal benefit; instead, proprietary firms extract the labor, close the derivative works, and capture the value. The commons cannot organize collective withdrawal or enforce reciprocity retroactively. No alternative distribution channel exists at scale. Maximum extraction with zero degrees of freedom."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The GPL Adopting Project",
+      "comment": "PERSPECTIVE 2: GPL ADOPTING PROJECT (TANGLED ROPE) — Projects that adopt GPL experience constraints: derivative builders must release their code, limiting proprietary product strategies. But GPL also coordinates their community: GPL enforcement ensures that improvements flow back, creating a genuine coordination benefit alongside extraction (enforcement obligation on others). The constraint is mixed — coordination + asymmetric enforcement."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Proprietary Software Company",
+      "comment": "PERSPECTIVE 3: PROPRIETARY SOFTWARE COMPANY (ROPE) — Institutional actors experience permissive licensing as pure coordination: they can freely use, modify, and commercialize open-source code without obligation. The license communicates a boundary (reusable components) and a rule (attribution or no obligation at all). No extraction is perceived because the company bears no cost and faces no constraint. Net beneficiary with full exit capacity."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Software License Ecosystem",
+      "comment": "PERSPECTIVE 4: SOFTWARE LICENSE ECOSYSTEM (PITON) — Treating permissive licenses as a technical governance mechanism has largely failed at scale. The licensing system was designed to allocate rights; it cannot prevent value extraction because the system depends on voluntary compliance without enforcement. The theater of 'attribution' and 'free use' persists while the functional coordination goal (reciprocal contribution) has atrophied. Measured performance vs declared purpose shows the gap: the license exists but does not accomplish what the open-source movement intended."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Platform Monopolist",
+      "comment": "PERSPECTIVE 5: PLATFORM MONOPOLIST (TANGLED ROPE) — Large platform companies derive genuine coordination benefits from permissive-licensed libraries (they solve common problems; the platform improves). But they also extract value: the platform embeds library code, captures network effects, and raises barriers to entry for competitors. The platform has mobility (could adopt GPL) but chooses not to — the extraction benefit exceeds the coordination cost. Mixed but asymmetrically favorable to the platform."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal view, the asymmetry is an inevitable feature of intellectual property systems: code is a public good once created; any licensing system that allows use without reciprocity will be exploited by those with extraction capacity. This is structurally immutable — a property of information economics, not a contingent social choice. However, GPL as an alternative demonstrates this is not a mountain: the extraction is contingent on the permissive license choice, not inherent to code itself."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "reciprocity_measurability",
+      "question": "Can meaningful reciprocity be measured and enforced at scale without turning enforcement into its own extraction mechanism?",
+      "resolution_mechanism": "Comparative analysis of GPL enforcement actions: do copyleft projects successfully extract reciprocal contribution, or does enforcement become a barrier to legitimate reuse?",
+      "impact": "If enforcement succeeds: GPL is a genuine alternative (constraint reclassifies as coordination-heavy Tangled Rope or Rope). If enforcement becomes predatory: GPL shifts the extraction target to proprietary builders, flipping the victim/beneficiary roles without resolving the extraction structure.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether copyleft enforcement yields genuine reciprocal contribution or becomes predatory"
+    },
+    {
+      "id": "commons_sustainability_without_reciprocity",
+      "question": "Is the open-source commons sustainable indefinitely under permissive licensing, or does extractive value capture eventually degrade the commons?",
+      "resolution_mechanism": "Longitudinal analysis of open-source project health: contributor diversity, maintenance burden, feature stagnation, and fork prevalence in permissive vs copyleft projects over 10+ year windows.",
+      "impact": "If permissive commons degrade: the snare classification is validated. If permissive commons remain healthy: the commons may have coordination benefits (direct benefit from widespread adoption, improved libraries, recruitment) that offset extraction losses.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether open-source commons sustainability requires reciprocity enforcement"
+    },
+    {
+      "id": "kernel_reading_contest",
+      "question": "What is the contested kernel underlying permissive licensing — the foundational claim that sibling readings disagree on?",
+      "resolution_mechanism": "Analysis of licensing debates in open-source governance bodies and academic IP scholarship: what core assumption do permissive-license advocates defend that copyleft advocates reject?",
+      "impact": "Clarifies whether the readings are in genuine logical foreclosure (one rules out the other), coexistence (both can be true simultaneously for different communities), or sequential influence (one reading creates conditions that pressure the other).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Structural relationship between permissive and copyleft readings of software licensing"
+    },
+    {
+      "id": "value_extraction_vs_allocation",
+      "question": "Is the constraint about asymmetric value extraction (proprietary firm captures value created by commons contributors) or about allocation of development costs (who bears the burden of derivative work maintenance)?",
+      "resolution_mechanism": "Distinguish mechanism: trace the direction of labor flow and benefit flow separately. Does the proprietary firm reduce its development cost? Does the open-source contributor lose financial benefit they would have captured?",
+      "impact": "If extraction framing is correct: Snare is the accurate classification for the commons agent. If allocation framing is correct: the constraint is a coordination problem about shared maintenance burden — Tangled Rope or pure Rope depending on whether the burden is genuinely shared.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether the constraint mechanisms are asymmetric value extraction or shared cost allocation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.39
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Permissive software licensing (MIT, Apache 2.0, BSD) removes reciprocity requirements that copyleft licenses (GPL) impose. This constraint story instantiates the copyleft counterfactual reading: the reading that claims permissive licensing WITHOUT reciprocity obligation structurally enables value extraction from the open-source commons by proprietary software firms. Contributors donate labor expecting benefit from network effects and community improvement; instead, corporations close derivative works, capture value, and provide no obligation to contribute back. The constraint exhibits tangled-rope structure from the aggregate institutional view: permissive licensing does solve a genuine coordination problem (components can be freely combined), but it simultaneously enables asymmetric extraction (beneficiaries extract without obligation). The sister readings — commons_coordination_reading (emphasizing the voluntary-benefit model) and corporate_moat_reading (emphasizing proprietary firms' legitimate product differentiation) — represent live competing positions in open-source governance communities. This reading claims the extraction structure is real and contingent on the license choice, not inevitable.",
+    "key_agents": [
+      "Open Source Commons Contributors: Primary victim (powerless/trapped) — donate labor under permissive licenses expecting reciprocal benefit; extraction has no retroactive remedy",
+      "Proprietary Software Builders: Primary beneficiary (institutional/arbitrage) — extract code, close derivatives, capture value without reciprocal obligation",
+      "Platform Companies: Secondary beneficiary (powerful/mobile) — embed permissive libraries, capture network effects, maintain extraction by avoiding GPL adoption",
+      "GPL Adopting Projects: Mixed actor (moderate/constrained) — gain reciprocal coordination but lose proprietary product flexibility; experience the constraint as enforcement obligation",
+      "Open Source Governance Bodies: Institutional observer (institutional/arbitrage) — debate whether permissive or copyleft is the optimal licensing model; maintain the kernel-level contest",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks treating the constraint as an immutable property of software economics rather than a contingent institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.62): High-moderate. Permissive licenses enable value capture by proprietary firms without reciprocal obligation. The extractiveness has accumulated over the measurement interval as platform consolidation increased (time 0 → 10: 0.35 → 0.62), reflecting that the value asymmetry compounds as a small number of firms capture increasing market share while the commons remains fragmented and uncompensated. The measure is not at the snare floor (≥0.66) because GPL alternatives exist and some commons projects thrive (partial mitigation). Suppression (0.68): High. Contributors face multiple barriers to organizing or switching: network effects lock them into ecosystems built on permissive licenses, proprietary derivatives prevent forking, and the commons lacks formal governance to negotiate reciprocity. Suppression has risen over the interval (0.45 → 0.68) as platform dominance increased, making it harder to defect to alternatives. Theater ratio (0.38): Moderate-low. The licensing mechanism is functional but not theatrical — the license itself accurately communicates the terms (permissive, no obligation). The low theater reflects that the extraction happens through the license's literal terms, not through performative compliance or ritualistic enforcement. The flatness over the interval (0.42 → 0.38) shows this is structural, not drift.",
+    "perspectival_gap": "This constraint demonstrates the full perspectival range from a single structural phenomenon. The proprietary firm perceives coordination (Rope); the commons perceives extraction (Snare); the GPL project perceives mixed (Tangled Rope); the analytical observer risks naturalizing as law (Mountain). None of these perspectives is 'wrong' — each is accurate from within that position. The gap reveals that 'permissive licensing is good' is true from the beneficiary's perspective (lower development costs, larger addressable market) and false from the victim's perspective (donated labor captured without return). The analytical observer's mountain classification is a false summit — GPL proves the extraction is contingent on the license choice, not immutable.",
+    "directionality_logic": "Directionality in this constraint is determined by each agent's position in the value-flow asymmetry. The commons contributors are victims with no exit (trapped → d ≈ 0.95 → high f(d)). The proprietary firms are beneficiaries with full exit (arbitrage → d ≈ 0.05 → negative f(d)). The GPL-adopting projects are constrained victims with partial exit (constrained → d ≈ 0.70 → moderate f(d)). The platform companies are beneficiaries with exit capacity but choose not to exercise it (mobile but beneficiary → d ≈ 0.25 → low f(d)). The directionality is stable and structural: it is determined by who owns the derivative works and who captures the value, not by time horizon or scope. The engine's derivation chain computes d from beneficiary/victim declaration + exit options, producing the measurable extraction asymmetry in chi.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by the kernel-level reading contest. This reading (copyleft counterfactual) claims that permissive licensing enables extraction because reciprocity is absent. The corporate_moat_reading (sibling) claims proprietary builders have the right to build on open-source code without reciprocal obligation because they add genuine value (infrastructure, support, market access). The commons_coordination_reading (sibling) claims permissive licensing benefits the entire ecosystem through network effects and widespread adoption, so the 'extraction' is actually a common good. All three readings describe the same structural phenomenon (proprietary firm uses permissive-licensed code, closes the derivative, extracts value). The contest is about whether this is extraction (this reading), legitimate differentiation (corporate_moat_reading), or beneficial coordination (commons_coordination_reading). The readings coexist because open-source governance currently hosts all three positions in active communities.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel 'permissive_license_text' — the open-source licensing landscape's foundational claim about how code reuse should work. The reading instantiated here is the copyleft_counterfactual_reading: permissive licensing enables extraction because it lacks reciprocity requirements. The sibling readings are: (1) commons_coordination_reading — permissive licensing benefits the entire ecosystem through network effects and widespread adoption, making the distribution of value legitimate and sustainable; (2) corporate_moat_reading — proprietary builders have the right to build proprietary derivatives because they add genuine value (infrastructure, support, market access) that justifies closing the code. This reading claims the extraction structure is real and contingent on the permissive license choice. The sibling readings claim the extraction is either a common good (commons) or a legitimate differentiation (corporate). The readings are not in logical foreclosure — each remains a live position held by different communities (GPL advocates, permissive-license advocates, enterprise software builders). The kernel-level contest is unresolved and active."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "permissive_license_text__commons_coordination_reading",
+      "permissive_license_text__corporate_moat_reading",
+      "open_source_contributor_labor_asymmetry",
+      "platform_consolidation_commons_capture"
+    ],
+    "dual_formulation_note": "This constraint is one reading of the 'permissive_license_text' kernel. The sibling readings (commons_coordination_reading and corporate_moat_reading) are separate constraint stories with different epsilon values, different beneficiary/victim structures, and different classifications. The kernel-level contest is about the foundational claim: does permissive licensing enable extraction, or does it enable sustainable commons? Each reading is a structurally distinct constraint with its own epistemology. Network links preserve the reading relationships without collapsing them into a single story."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reading_relations": [
+      {
+        "sibling_id": "permissive_license_text__commons_coordination_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "permissive_license_text__corporate_moat_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "reciprocity_absent_enables_asymmetric_extraction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "commons_contributors_lack_exit_capacity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "reciprocal_obligation_licensing_regime",
+    "drift_state": {
+      "moment": "contemporary_permissive_dominance_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

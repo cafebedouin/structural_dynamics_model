@@ -4,18 +4,19 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "planar"
+    "measurement_id_prefix": "planar",
+    "story_uid": "4e7925da-0e6f-4f33-ade9-034658f8d09f"
   },
   "base_properties": {
     "extractiveness": 0.08,
     "suppression": 0.02,
     "theater_ratio": 0.05,
     "claimed_type": "mountain",
-    "human_readable": "Planar Graph Embeddability Constraint",
+    "human_readable": "Planar Graph Embeddability (Kuratowski's Theorem)",
     "topic_domain": "discrete_mathematics/graph_theory",
     "emerges_naturally": true,
     "accessibility_collapse": 0.92,
-    "resistance": 0.08
+    "resistance": 0.03
   },
   "perspectives": [
     {
@@ -24,8 +25,17 @@
       "time_horizon": "civilizational",
       "exit_options": "trapped",
       "spatial_scope": "universal",
-      "label": "The Topological Constraint",
-      "comment": "A graph either embeds in the plane without edge crossings or it does not. This is a topological fact independent of observer, measurement apparatus, or institutional convention. No agent can negotiate their way out of the Kuratowski obstruction."
+      "label": "The Graph Without K₅ or K₃,₃",
+      "comment": "PERSPECTIVE 1: PLANAR GRAPH (MOUNTAIN) — A finite graph either does or does not contain K₅ or K₃,₃ as a subdivision. This is a topological invariant, immutable across all observers, all times, all applications. The constraint is not imposed; it is discovered. Exit is meaningless — the property is constitutive of the graph itself."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Applied Graph Algorithm Designer",
+      "comment": "PERSPECTIVE 2: ALGORITHM DESIGNER (MOUNTAIN) — Designers of planar graph algorithms (planarity testing, layout, drawing optimization) encounter Kuratowski's theorem as an absolute constraint on what algorithms can accomplish. They cannot make a non-planar graph planar through clever design. The constraint defines the problem domain itself — it is not an obstacle to overcome but a mathematical law that structures the design space."
     },
     {
       "classification_type": "mountain",
@@ -33,8 +43,8 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Mathematical Institution",
-      "comment": "Planarity is a mathematical property that remains invariant across all formalizations of graph theory. Textbooks, curricula, and research programs treat planarity as a fixed structural feature, not as a negotiable institutional arrangement. The constraint is perceived as natural law by the mathematical community."
+      "label": "The Mathematical Community (Topological Foundation)",
+      "comment": "PERSPECTIVE 3: MATHEMATICAL COMMUNITY (MOUNTAIN) — Kuratowski's theorem is a foundational result grounding topology and discrete mathematics. It is not negotiable, not subject to revision based on preference or context, and not extractive. The theorem structures legitimate mathematical discourse itself. Its truth is independent of who uses it or for what purpose."
     },
     {
       "classification_type": "mountain",
@@ -42,83 +52,65 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer",
-      "comment": "From a universal scope and civilizational time horizon, planarity is a consequence of topological mathematics. The Euler characteristic, the Jordan curve theorem, and the Kuratowski forbidden minor characterization entail that planar embeddability is an immutable property of any given graph. The analytical position finds no degrees of freedom, no external contingency, no institutional variation."
+      "label": "The Analytical Observer (Topological Necessity)",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (MOUNTAIN) — From a civilizational, universal scope, Kuratowski's theorem is a structural fact about Euclidean topology. The impossibility of drawing K₅ or K₃,₃ in the plane without edge crossings follows from the dimensionality and connectivity properties of Euclidean space itself. The constraint is not contingent on institutional arrangements, incentive structures, or observer perspective. It is a mathematical truth."
     }
   ],
   "omegas": [
     {
-      "id": "physical_interpretation_adequacy",
-      "question": "Does the topological embeddability constraint in abstract mathematics fully capture the physical constraints of planar circuit layout or network routing in engineered systems?",
-      "resolution_mechanism": "Comparison of graph-theoretic planarity with physical realizability in VLSI design, printed circuit board routing, and network topology. Identify cases where topological planarity does not entail physical realizability and vice versa.",
-      "impact": "If adequate: the mathematical constraint is isomorphic to the engineering constraint (both are mountains). If inadequate: the engineering constraint is distinct and may have higher extractiveness due to cost asymmetries in layout optimization.",
+      "id": "formal_proof_completeness",
+      "question": "Is Kuratowski's theorem true in all formal mathematical systems, or only in classical Euclidean topology?",
+      "resolution_mechanism": "Verification in alternative geometric frameworks (non-Euclidean space, abstract topological structures, constructivist mathematics). Testing whether the theorem holds or requires modification in intuitionistic logic or topos theory.",
+      "impact": "If true universally: mountain classification is absolute. If context-dependent across formal systems: potential weak reclassification to rope (mathematical convention). Current evidence strongly supports universal validity.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether abstract mathematical planarity captures all physical constraints in engineering applications"
+      "description": "Formal system independence of Kuratowski's theorem"
     },
     {
-      "id": "higher_dimensional_generalization",
-      "question": "Is the planar embeddability constraint a special case of a more general topological constraint across dimension-varying surfaces, or is planarity a sui generis property?",
-      "resolution_mechanism": "Mathematical analysis of graph embeddability across arbitrary manifolds; determination of whether planarity follows from fundamental topological principles or is a contingent property of 2D Euclidean space.",
-      "impact": "If contingent on 2D: planarity is a local constraint (higher extractiveness in contexts where 3D or higher-dimensional embedding is possible). If fundamental: planarity is truly universal and immutable.",
-      "confidence": "medium",
+      "id": "definition_stability",
+      "question": "Are the terms 'planar graph', 'Euclidean plane', 'edge crossing', and 'subdivision' invariant in meaning across mathematical contexts, or do subtle definitional variations enable alternative interpretations?",
+      "resolution_mechanism": "Review of definitional history across topology, graph theory, and combinatorics textbooks. Analysis of whether different formalizations (e.g., graph embeddings in abstract surfaces vs Euclidean plane) produce measurably different constraint structures.",
+      "impact": "If definitions are stable: mountain classification holds. If definitional ambiguity exists at boundaries: mountain remains robust but with caveats for non-standard formalizations.",
+      "confidence": "high",
       "type_class": "conceptual",
-      "description": "Whether planarity is fundamental or contingent on 2D topology"
+      "description": "Definitional stability of core topological terms"
+    },
+    {
+      "id": "computational_accessibility",
+      "question": "Does computational difficulty in testing planarity (complexity of algorithm implementation, CPU resources required) reflect the mathematical constraint or obscure it behind practical barriers?",
+      "resolution_mechanism": "Comparison of theoretical planarity (Kuratowski criterion) vs computational planarity (algorithm efficiency). Analysis of whether high-resource algorithms create perceived non-planarity artifacts in applied contexts.",
+      "impact": "No impact on classification. The computational difficulty is orthogonal to the mathematical constraint itself. Kuratowski's theorem remains mountain-class regardless of algorithmic complexity.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Computational complexity vs theoretical constraint clarity"
     }
   ],
-  "measurements": [
-    {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.05
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 500,
-      "value": 0.05
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1000,
-      "value": 0.05
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.08
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 500,
-      "value": 0.08
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1000,
-      "value": 0.08
-    }
-  ],
+  "measurements": [],
   "interval": {
     "start": 0,
-    "end": 1000
+    "end": 1
   },
   "commentary": {
-    "narrative_context": "Planar graph embeddability is a foundational theorem in discrete mathematics stating that a finite graph can be drawn in the Euclidean plane without edge crossings if and only if it does not contain a subdivision of K\u2085 (complete graph on 5 vertices) or K\u2083,\u2083 (complete bipartite graph) as a subgraph. This is known as Kuratowski's theorem (1930). The constraint is not negotiable, context-dependent, or observer-relative. It is a mathematical fact derived from topological principles. No agent benefits from or bears a cost imposed by this constraint in the way that extraction mechanisms operate. The constraint is simply the structure of topological possibility.",
+    "narrative_context": "Planar graph embeddability is a canonical example of a mathematical constraint that qualifies as a Mountain under Deferential Realism: it is a topological necessity derived from the structure of Euclidean space and graph connectivity, not a contingent institutional arrangement or extractive mechanism. Kuratowski's theorem (1930) states that a finite graph can be drawn in the plane without edge crossings if and only if it does not contain a subdivision of K₅ or K₃,₃ as a subgraph. This is not a rule that can be negotiated, reformed, or made context-dependent. The impossibility of planarly embedding K₅ or K₃,₃ is not caused by anyone's action, is not enforced by any authority structure, and cannot be overcome through effort or appeal. It is a mathematical law grounded in the topological properties of Euclidean space itself.",
     "key_agents": [
-      "Mathematical systems: The abstract domain where planarity is an invariant property; experiences no extraction",
-      "Graph algorithms and computer science: Applications (circuit design, network routing) must respect the constraint but benefit from understanding it; no victim relationship",
-      "Analytical observer: Verifies that planarity follows necessarily from first principles; no extractive mechanism detected"
+      "Planar Graphs: Structures that satisfy Kuratowski's criterion (no K₅ or K₃,₃ subdivisions). They have no exit options and no alternative — planarity is a topological invariant.",
+      "Non-Planar Graphs: Structures that contain K₅ or K₃,₃ subdivisions. They cannot become planar through algorithmic manipulation, incentive adjustment, or reinterpretation.",
+      "Algorithm Designers: Practitioners applying planarity testing and graph drawing algorithms. They encounter the constraint as a hard limit on what is computable.",
+      "Mathematical Community: Collective that grounds topology and discrete mathematics in Kuratowski's theorem as foundational. The constraint structures legitimate mathematical discourse."
     ],
-    "logic_rationale": "Extractiveness (0.08): Minimal. No agent extracts value from or imposes costs through this constraint. The constraint is a fact about topological structure, not a mechanism of resource transfer or coordination. The value is near-zero because there is no extraction mechanism present. Suppression (0.02): Negligible. The constraint does not suppress alternatives \u2014 it simply defines the boundaries of topological possibility. Agents are not coerced; they are constrained by mathematical structure. Theater ratio (0.05): Minimal. The constraint requires no performative maintenance, institutional ritual, or theatrical justification. Proofs of planarity are transparent; there is no hidden mechanism or narrative substitution. Classification justification: All three metrics satisfy the mountain gates (\u03b5 \u2264 0.25, suppression \u2264 0.05). The constraint emerges naturally from topological mathematics, not from institutional design. Accessibility collapse is very high (0.92) because the constraint is universally accessible to formal analysis \u2014 every agent with mathematical competence can verify planarity status. Resistance is low (0.08) because the constraint faces no organized resistance \u2014 no one disputes Kuratowski's theorem or attempts to violate topological structure. This is a canonical natural law in the mathematical domain.",
-    "perspectival_gap": "There is no perspectival gap. All positions (powerless/trapped, institutional/analytical, analytical/analytical) classify the constraint as mountain. This invariance across perspectives is the defining signature of a true natural law. The constraint is not experienced differently by different agents because it is not an extractive or coordinating mechanism \u2014 it is a structural fact about possibility space.",
-    "directionality_logic": "Directionality (d) is not computed for this constraint because it is a mountain-type with no beneficiary or victim relationship. The constraint does not extract from anyone or benefit anyone in the sense that coordination or extraction mechanisms do. It simply defines what graphs can and cannot do. The absence of beneficiary/victim declarations is appropriate and reflects that this is pure mathematical structure, not social or institutional mechanism.",
-    "mandatrophy_analysis": "No mandatrophy risk. The constraint is purely mathematical and exhibits no tension between coordination function and asymmetric extraction. All classifications across all perspectives are identical (mountain), indicating that the constraint is structurally invariant. The analytical observer's position is not a false summit \u2014 it correctly identifies the constraint as a natural law."
+    "logic_rationale": "Extractiveness (0.08): Minimal. No extraction occurs. The constraint does not benefit anyone relative to anyone else — it is a topological fact. Suppression (0.02): Negligible. There are no alternatives to suppress; K₅ and K₃,₃ cannot be embedded planarly regardless of effort or appeal. The constraint is not enforced by anyone; it is discovered by all. Theater ratio (0.05): Near-zero. Kuratowski's theorem requires no performative maintenance or ritual to remain true. The proof stands alone and requires no institutional theater to sustain it. Accessibility collapse (0.92): Very high. The constraint is fully inaccessible to circumvention — no degrees of freedom exist. Resistance (0.03): Minimal. There is no resistance mechanism because there is no enforcer. The constraint simply is.",
+    "perspectival_gap": "All four perspectives converge on the same classification (Mountain). This is the diagnostic signature of a genuine natural law. The powerless graph, the algorithm designer, the mathematical community, and the analytical observer all perceive the constraint as immutable and non-negotiable. There is no perspectival gap because no agent has an asymmetric relationship to a topological fact. The constraint is the same whether you are the graph being tested for planarity or the mathematician proving Kuratowski's theorem.",
+    "directionality_logic": "Directionality is undefined for this constraint. The d parameter (measuring the agent's position as beneficiary vs target in an extraction flow) has no meaning when no extraction occurs. All agents are equally subject to the topological constraint; none benefit from it relative to others. The sigmoid f(d) cannot be applied because the underlying extraction mechanism does not exist. This is mathematically clean and structurally revealing: the absence of directionality is itself proof of the mountain classification."
   },
   "boltzmann": {
     "coordination_type": "information_standard"
   },
   "network": {
-    "affects_constraints": []
+    "affects_constraints": [
+      "planar_drawing_algorithm_complexity",
+      "graph_coloring_four_color_theorem"
+    ],
+    "dual_formulation_note": "Kuratowski's theorem is a self-contained topological result with no meaningful decomposition. However, it structurally constrains two downstream results: (1) the computational complexity of planarity testing algorithms, which is a separate constraint involving computational resources and algorithmic efficiency, and (2) the four-color theorem for planar graphs, which depends on planarity as a prerequisite. These downstream constraints are not readings of Kuratowski but applications of it."
   },
   "directionality_overrides": []
 }

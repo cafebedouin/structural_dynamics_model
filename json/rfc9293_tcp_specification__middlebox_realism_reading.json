@@ -1,0 +1,266 @@
+{
+  "header": {
+    "constraint_id": "rfc9293_tcp_specification__middlebox_realism_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "tcp_mb",
+    "story_uid": "tcp-middlebox-realism-reading-2026-02-26",
+    "created_at": "2026-02-26T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.64,
+    "claimed_type": "snare",
+    "human_readable": "RFC 9293 TCP Specification Subordinated to Deployed Middlebox Behavior (Middlebox Realism Reading)",
+    "topic_domain": "network_protocol_engineering/internet_standards/distributed_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "middlebox_operators",
+      "surveillance_infrastructure"
+    ],
+    "victims": [
+      "endpoint_autonomy",
+      "protocol_specification_integrity",
+      "transport_layer_transparency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Endpoint Implementation",
+      "comment": "PERSPECTIVE 1: ENDPOINT IMPLEMENTATION (SNARE) — Trapped. Endpoints cannot implement RFC 9293 as specified; they must implement to the deployed middlebox population instead. Packets that conform to the standard are dropped or modified by stateless inspection; packets that deviate from the standard traverse the network. The endpoint has no exit: it must transmit, and middleboxes intercept all traffic. Maximum suppression — alternatives (tunnel, encapsulation, cryptography) become necessary to escape but constitute workarounds rather than protocol compliance."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Standards Body (IETF)",
+      "comment": "PERSPECTIVE 2: STANDARDS BODY / IETF (SNARE) — Constrained. The IETF maintains the specification authority but cannot enforce it. Publishing a standard that the network rejects is a form of powerlessness — the standards body loses authority over time as implementations must diverge to be practical. The IETF sees the constraint as tragic: they write the standard, but the deployed middleboxes have greater control over what actually happens on the network. Substantial extraction: IETF resources are spent on specifications that become decorative rather than normative."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Middlebox Operator Coalition",
+      "comment": "PERSPECTIVE 3: MIDDLEBOX OPERATOR COALITION (ROPE) — Beneficiaries. ISPs, enterprise firewalls, DPI vendors, and state surveillance systems collectively enforce their own protocol interpretation over the standard. They experience this as pure coordination: they are solving the operational problem of managing traffic (legitimate classification, DDoS mitigation, copyright enforcement, state monitoring). The constraint appears to them as coordination among middleboxes that happens to override the endpoint specification. Net beneficiary — extraction runs toward this coalition; they gain control and operational authority."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Application Developer Coalition",
+      "comment": "PERSPECTIVE 4: APPLICATION DEVELOPER COALITION (TANGLED ROPE) — Constrained with agency. App developers (browsers, CDNs, messaging apps) see the middlebox-driven deviation from spec as both a coordination problem and an extraction mechanism. They must implement workarounds (QUIC, TLS-wrapped TCP, application-layer encryption) that duplicate the transport layer's functions. The workarounds benefit them by increasing application-layer control and reducing middlebox visibility into application state. But they also constrain the entire developer ecosystem by requiring expensive engineering effort to circumvent the network layer. Genuine coordination (resilience against middleboxes) coexists with asymmetric extraction (middleboxes extract information from plaintext TCP)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Surveillance State Infrastructure",
+      "comment": "PERSPECTIVE 5: SURVEILLANCE STATE INFRASTRUCTURE (ROPE) — Beneficiary. State actors rely on the middlebox population (or operate their own middleboxes) to intercept and classify traffic at the protocol level. From the surveillance perspective, the constraint is pure coordination: traffic classification is the legitimate operational goal, and the middlebox network solves it. The constraint appears transparent to the beneficiary — they are simply doing their function. Net beneficiary with high agency."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Formal Standards Authority",
+      "comment": "PERSPECTIVE 6: FORMAL STANDARDS AUTHORITY (PITON) — Institutionalized but degraded. RFC 9293 persists as an authoritative standard document; publishers, textbooks, and courses teach it as the normative specification. But the document's actual prescriptive force has atrophied — implementations must diverge to function. The standard persists through institutional inertia: it carries legitimacy (IETF authority, peer-reviewed process, formal grammar) but minimal functional authority. Theater ratio is high: the ritual of standards development, the formal RFC process, and the pretense of 'compliance' continue even though the network's actual behavior is determined elsewhere."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Specification Authority Illusion)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / SPECIFICATION AUTHORITY ILLUSION (SNARE) — From a civilizational view, the TCP specification no longer governs the protocol. Instead, the deployed middlebox population IS the specification — it defines what packets traverse the network, what gets modified, and what gets dropped. The RFC claims authority over endpoint behavior but that authority is subordinate to the middlebox population's actual control. This is not a technical problem (traffic engineering) viewed from the analytical frame — it is an authority structure problem: specification authority has been expropriated by the middlebox operators. The endpoints experience snare (powerlessness, no exit, extraction of control). The analytical frame confirms: specification authority is subordinate to what the network actually does."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "kernel_reading_contest",
+      "question": "Is the TCP specification's authority grounded in endpoint implementation (strict invariance reading) or in deployed network behavior (middlebox realism reading), or in protocol design latitude (optimization latitude reading)?",
+      "resolution_mechanism": "Network archaeology: trace the historical evolution of middlebox deployment and specification revision. Analyze divergence points between RFC text and empirical packet behavior. Identify which reading best explains why standards revisions have not rolled back middlebox modifications.",
+      "impact": "Strict invariance: specification regains authority; middleboxes are the problem. Middlebox realism: specification is advisory; deployed behavior is normative; new reading confirms snare classification. Optimization latitude: specification provides bounds; middleboxes are legitimate optimization within bounds.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Which reading correctly describes TCP specification authority grounding"
+    },
+    {
+      "id": "extractiveness_threshold_middlebox_density",
+      "question": "At what deployed middlebox density does endpoint autonomy transition from 'constrained' (high-cost workarounds available) to 'trapped' (no practical exit options)?",
+      "resolution_mechanism": "Empirical measurement: path diversity analysis. For each common endpoint-to-destination path, count middleboxes that inspect/modify TCP. Calculate percentage of global paths where at least one middlebox enforces deviation from RFC. Threshold: if >80% of paths contain at least one middlebox, constraint shifts from tangled_rope to snare for endpoint perspective.",
+      "impact": "If threshold crossed: snare classification confirmed from endpoint view. If below threshold: tangled_rope more accurate for constrained exit. Extractiveness should rise as middlebox density increases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Middlebox deployment density threshold determining endpoint trapped vs constrained status"
+    },
+    {
+      "id": "specification_authority_grounding_legitimacy",
+      "question": "Does formal RFC authority (IETF consensus process, Internet Standard designation) retain legitimacy as normative specification when deployed middleboxes have de facto veto power?",
+      "resolution_mechanism": "Institutional analysis: survey network engineers, standards body participants, and middlebox operators. Assess whether RFC 9293 is cited as normative in: endpoint implementation decisions, middlebox design justifications, ISP policy documentation, academic protocol design. If citation rate differs by audience, authority is contested.",
+      "impact": "High citation as normative: RFC retains authority despite middlebox override; constraint is tangled_rope (coordination exists alongside extraction). Low citation / only decorative: RFC is piton (authority has atrophied); constraint is snare (specification is subordinate to deployment).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether RFC authority remains legitimate when middleboxes have veto power"
+    },
+    {
+      "id": "endpoint_implementation_divergence_degree",
+      "question": "To what degree do actual TCP implementations (Linux, BSD, Windows, MacOS, embedded stacks) deviate from RFC 9293 to accommodate middlebox realities?",
+      "resolution_mechanism": "Code archaeology: diff major TCP stack implementations against RFC 9293 specification. Classify deviations: conformance workarounds (intentional RFC-deviation to pass middleboxes), optimization enhancements (RFC-allowed design choices), and outright violations. Measure percentage of implementation size devoted to middlebox compatibility.",
+      "impact": "High deviation (>30% of implementation): middlebox realism reading confirmed; endpoints are trapped. Low deviation (<10%): endpoints retain specification compliance capacity; constraint is constrained rather than trapped.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree to which actual TCP implementations deviate from RFC to accommodate middleboxes"
+    },
+    {
+      "id": "cs_kernel_revision_failure",
+      "question": "Why have RFC TCP revisions (including RFC 9293) failed to eliminate middlebox-driven specification deviation? Is it due to path-dependent lock-in, extraction benefit concentration among middlebox operators, or technical impossibility?",
+      "resolution_mechanism": "History of IETF TCP proposals: analyze rejected or stalled proposals that would have formalized middlebox behavior or required middlebox standardization. Identify which proposals failed due to: deployment complexity, middlebox vendor opposition, lack of incentive for implementation, or authority erosion (the constraint itself preventing repair).",
+      "impact": "Path-dependent lock-in: constraint is stable; specification authority is permanently subordinate. Extraction benefits: middleboxes gain from preventing standardization revision; snare classification confirmed. Technical impossibility: constraint approaches mountain classification.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Why RFC revisions have not resolved middlebox specification deviation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28,
+      "id_override": "tcp_mb_extractiveness_t0_2002"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42,
+      "id_override": "tcp_mb_extractiveness_t5_2010"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58,
+      "id_override": "tcp_mb_extractiveness_t10_2018"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "tcp_mb_suppression_t0_2002"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.52,
+      "id_override": "tcp_mb_suppression_t5_2010"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.68,
+      "id_override": "tcp_mb_suppression_t10_2018"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38,
+      "id_override": "tcp_mb_theater_t0_2002"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.51,
+      "id_override": "tcp_mb_theater_t5_2010"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64,
+      "id_override": "tcp_mb_theater_t10_2018"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "RFC 9293 (TCP Specification Version 9) formally describes TCP endpoint behavior as a distributed protocol with specific packet format, state machine transitions, and algorithmic requirements. However, the deployed network deviates from this specification in systematic ways: stateless firewalls and DPI systems (middleboxes) modify TCP packets in flight to enforce policies (filtering, traffic classification, surveillance) that the RFC does not describe. Endpoints cannot implement the specification as written because their packets will be dropped or mangled by middleboxes; they must implement to the deployed middlebox population instead. This constraint is the MIDDLEBOX REALISM READING of the RFC 9293 TCP specification kernel — the reading that treats the network's actual behavior (determined by the middlebox population) as normative, subordinating the formal specification's authority to what the network actually does. This reading coexists with two siblings: the STRICT INVARIANCE reading (which treats RFC 9293 as an invariant specification that middleboxes violate, making middleboxes the problem) and the OPTIMIZATION LATITUDE reading (which treats RFC 9293 as a specification with intentional design latitude, allowing middlebox modifications as legitimate optimization within bounds). This story instantiates the middlebox realism reading as a clean, ε-invariant constraint: Snare from the endpoint perspective (trapped, no exit, extracted control), Rope from the middlebox operator perspective (beneficiary, coordination function), Tangled Rope from the application developer perspective (constrained, mixed coordination and extraction), and Piton from the formal standards authority perspective (degraded, theatrical authority). The constraint's extractiveness has risen over two decades (0.28 in 2002 → 0.58 in 2018) as middlebox deployment has intensified and endpoint autonomy has eroded. The suppression requirement tracks with extractiveness: as more middleboxes deploy, endpoints must suppress (hide, encrypt, or work around) their TCP behavior to avoid modification.",
+    "key_agents": [
+      "Endpoint Implementation: Powerless/trapped (biography) — cannot implement RFC 9293 because deployed middleboxes will reject it; must implement to middlebox population instead; victim of extracted control",
+      "Standards Body (IETF): Moderate/constrained (generation) — maintains specification authority but cannot enforce; resources spent on standards that become decorative rather than normative; tragic loss of authority",
+      "Middlebox Operator Coalition: Institutional/arbitrage (immediate) — ISPs, firewalls, DPI vendors, state surveillance systems; collectively enforce protocol interpretation over RFC; beneficiary with high agency; experience constraint as coordination",
+      "Application Developer Coalition: Organized/constrained (biography) — must implement workarounds (QUIC, TLS-wrapped TCP, application encryption) to circumvent middleboxes; mixed coordination (resilience) and extraction (duplication of transport-layer functions)",
+      "Surveillance State Infrastructure: Institutional/arbitrage (immediate) — state actors operating or relying on middleboxes to intercept/classify traffic at protocol level; pure beneficiary; extract information from plaintext TCP",
+      "Formal Standards Authority: Institutional/arbitrage (civilizational) — RFC 9293 persists as institutional standard but actual prescriptive force has atrophied; theater ratio high; authority is piton (degraded, maintained through inertia)",
+      "Analytical Observer: Analytical/analytical (civilizational) — observes that specification authority has been expropriated by deployed middlebox population; deployed behavior IS the specification"
+    ],
+    "logic_rationale": "Base extractiveness (0.58): Moderate-high. Endpoints extract from endpoints via middleboxes: control over packet transmission is extracted from endpoints and concentrated in middlebox operators (ISPs, firewalls, surveillance systems). The extraction is not total because: (a) endpoints retain some agency through encryption/tunneling workarounds, and (b) the extracted control is not pure rent-seeking — middleboxes do solve real operational problems (DDoS mitigation, traffic classification, network management). However, the extraction far exceeds the coordination benefit: middleboxes extract data visibility and control authority; the coordination function they provide (traffic management) could theoretically be delegated to endpoints with less extraction. Suppression (0.68): Moderate-high. Endpoints have significant barriers to implementing RFC 9293: packets that conform to the standard are dropped or modified. Suppression includes structural barriers (no alternative physical network path), practical barriers (encryption/tunneling have performance costs), and institutional barriers (ISP blocking of VPNs, state prohibition of encryption in some jurisdictions). Suppression is not total because workarounds exist (TLS, QUIC, application-layer encryption, VPNs), but they are costly and imperfect. Theater ratio (0.64): Moderate-high. The RFC standards process is substantially performative: standards are published, reviewed, and formally designated as Internet Standards, but the actual protocol behavior is determined by the middlebox population, not by the RFC text. The theater includes: textbooks teaching RFC 9293 as normative, conferences discussing TCP protocol design, implementations claiming 'RFC compliance' while actually implementing to middleboxes, and IETF working groups proposing TCP revisions that are ignored by deployed middleboxes. The theater tracks with extractiveness because the more middleboxes extract control, the more the formal standards process becomes performative rather than prescriptive. Extractiveness trajectory (0.28 → 0.58): The constraint has accumulated over two decades as middleboxes have proliferated. In 2002, many network paths had few or no middleboxes; endpoints could implement closer to the RFC. By 2010, enterprise firewalls and ISP DPI systems were common; endpoints had to accommodate them. By 2018, middleboxes were ubiquitous; endpoints almost always encountered at least one, and often many. The suppression trajectory mirrors this: fewer workarounds were necessary in 2002; by 2018, encryption is essential. Theater ratio tracks because the standards authority's degradation is cumulative: each time a RFC revision fails to eliminate middlebox behavior, the standards process loses credibility.",
+    "perspectival_gap": "The middlebox realism reading produces a maximum perspectival gap. Endpoints see Snare (trapped, no exit, extracted control). Middlebox operators see Rope (coordination, beneficiary, no asymmetric extraction from their perspective). Application developers see Tangled Rope (constrained exit, mixed coordination and extraction). Standards body sees tragic Snare (authority subordinated, resources spent on advisory documents). Surveillance state sees Rope (pure coordination). Formal standards authority sees Piton (degraded, theatrical). The analytical observer confirms Snare (specification authority has been expropriated). The gap between Rope (middlebox operator view) and Snare (endpoint view) is the core of this reading: the same structural mechanism appears as benign coordination from one perspective and as entrapment from another. The sibling reading (strict invariance) would collapse this gap by declaring middleboxes the problem and endpoints the victims. The optimization latitude reading would re-interpret the gap as legitimate design latitude. The middlebox realism reading preserves the gap: it accurately reflects that the constraint IS experienced differently depending on structural position, and that the deployed network's actual behavior (dominated by middleboxes) has become normative.",
+    "directionality_logic": "Each perspective's directionality (d) is computed from the agent's power, exit options, and structural position. Endpoints (powerless/trapped/global): d ≈ 0.95 (full target of extraction). f(d) ≈ 1.42 (maximum experienced extractiveness). Middlebox operators (institutional/arbitrage/global): d ≈ 0.05 (full beneficiary; arbitrage exit allows them to diverge from RFC freely). f(d) ≈ -0.12 (negative experienced extractiveness from their perspective — they benefit). Application developers (organized/constrained/global): d ≈ 0.60 (both benefit from workarounds and extract engineering costs from middlebox incompatibility). f(d) ≈ 0.85 (moderate experienced extraction). IETF standards body (moderate/constrained/global): d ≈ 0.72 (victim of authority erosion, not primary target). f(d) ≈ 1.15 (analytical-level experienced extraction). Analytical observer (analytical/analytical/universal): d ≈ 0.72 (observer position; canonical fallback). f(d) ≈ 1.15 (analytical chi). The derivation chain prioritizes explicit structural relationships: the RFC specification kernel defines beneficiaries (middlebox operators) and victims (endpoint autonomy, protocol integrity). The engine computes d from these declared relationships and exit options, producing the perspectival gap.",
+    "mandatrophy_analysis": "This constraint does not resolve into a single pure type — the mandatrophy is structural, not reducible. From the endpoint perspective, it is Snare: trapped, high extraction, high suppression. From the middlebox operator perspective, it is Rope: coordination function, beneficiary, no asymmetric extraction from their standpoint. From the application developer perspective, it is Tangled Rope: mixed coordination (workarounds enable resilience) and extraction (forced engineering duplication). The mandatrophy is resolved by recognizing that the constraint's CLASSIFICATION is relative to observational position, not an objective property of the network. The middlebox realism reading resolves the mandatrophy by accepting that specification authority is subordinate to deployed behavior — the constraint IS what the network does, not what the RFC says it should do. This reading forecloses the strict invariance reading: if specification authority is subordinate to deployment, then the strict invariance interpretation (RFC is the standard, middleboxes are violations) becomes incoherent. However, it coexists with the optimization latitude reading: deployment could still be legitimate optimization within specification-intended design latitude.",
+    "kernel_context": "The RFC 9293 TCP specification is a contested kernel: a formal, written specification whose authority to govern actual network behavior is disputed. The MIDDLEBOX REALISM READING (this constraint) treats the kernel as subordinate to the deployed middlebox population — actual network behavior is normative; the specification is advisory. The STRICT INVARIANCE READING treats the kernel as authoritative — the specification defines correct behavior; middleboxes that violate it are the problem. The OPTIMIZATION LATITUDE READING treats the kernel as providing design bounds — the specification is authoritative on bounds but allows implementation latitude; middleboxes are legitimate optimization within bounds. These three readings are held by different communities: network protocol researchers and IETF standards body members tend toward strict invariance; network engineers and middlebox operators tend toward optimization latitude; endpoint developers and security researchers tend toward middlebox realism. No single party's framework could hold all three as equally valid — they make different claims about the source of protocol authority. The middlebox realism reading makes a specific claim: deployed behavior (the middlebox population) is the actual specification; formal RFC authority is subordinate. This claim forecloses strict invariance (which asserts RFC authority is supreme) but coexists with optimization latitude (which could accommodate middlebox behavior as legitimate optimization if the RFC intentionally permits it)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "endpoint_encryption_arms_race",
+      "internet_ossification",
+      "transport_layer_surveillance_capability"
+    ],
+    "dual_formulation_note": "The RFC 9293 specification constraint family decomposes into three reading-specific constraints: (1) strict_invariance_reading (ε ≈ 0.15, Mountain from IETF perspective; specification is normative and unchanging), (2) optimization_latitude_reading (ε ≈ 0.35, Tangled Rope from network engineer perspective; middleboxes optimize within specification-intended bounds), (3) middlebox_realism_reading (ε ≈ 0.58, Snare from endpoint perspective; deployed behavior is normative). Each reading has its own epsilon, its own perspectives, and its own classification. The family is linked via network.affects_constraints: strict invariance affects optimization latitude (if invariance is false, latitude is necessary) and middlebox realism (if invariance fails, realism describes what actually happens). The epsilon values differ by a factor of 3.8 because they describe different structural claims about specification authority, not different measurements of the same claim."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": false,
+    "reference_frame": "formal_specification_authority",
+    "drift_state": {
+      "moment": "contemporary_ubiquitous_middleboxes",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "strict_invariance_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "optimization_latitude_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "deployed_behavior_is_normative_specification",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "formal_rfc_authority_subordinate_to_network_behavior",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  }
+}

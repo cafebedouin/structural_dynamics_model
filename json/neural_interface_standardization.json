@@ -3,24 +3,26 @@
     "constraint_id": "neural_interface_standardization",
     "version": "1.0",
     "generated_date": "2026-02-26",
-    "status": "ACTIVE"
+    "status": "ACTIVE",
+    "measurement_id_prefix": "nis",
+    "story_uid": "db5abce3-b977-44b5-b550-86a91e23d830"
   },
   "base_properties": {
     "extractiveness": 0.58,
-    "suppression": 0.68,
+    "suppression": 0.62,
     "theater_ratio": 0.55,
     "claimed_type": "tangled_rope",
-    "human_readable": "Neural Interface Standardization",
+    "human_readable": "Neural Interface Standardization and Proprietary Lock-In",
     "topic_domain": "neurotechnology/medical_device_regulation",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "early_adopter_device_manufacturers",
-      "regulatory_capture_actors"
+      "early_adopter_manufacturers",
+      "regulatory_agencies_captured"
     ],
     "victims": [
-      "patients_dependent_on_neuroprosthetics",
-      "competing_device_manufacturers",
-      "field_interoperability"
+      "patient_switching_costs",
+      "competing_manufacturers",
+      "device_interoperability"
     ]
   },
   "perspectives": [
@@ -30,17 +32,8 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "Patients Locked Into Device Ecosystems",
-      "comment": "PERSPECTIVE 1: PATIENTS DEPENDENT ON NEUROPROSTHETICS (SNARE) \u2014 Once implanted with a proprietary neural interface, patients face irreversible switching costs. The device manufacturer controls firmware, calibration, and compatibility with rehabilitation systems. Alternative devices cannot interface with existing implants without surgical removal and reinervation. Extraction runs maximum from this population \u2014 trapped with no exit options."
-    },
-    {
-      "classification_type": "snare",
-      "agent_power": "powerless",
-      "time_horizon": "generational",
-      "exit_options": "trapped",
-      "spatial_scope": "global",
-      "label": "Field Interoperability (Epistemic Commons)",
-      "comment": "PERSPECTIVE 2: FIELD INTEROPERABILITY AND KNOWLEDGE COMMONS (SNARE) \u2014 The neurotechnology research community depends on sharing data, device specifications, and integration protocols. Proprietary standards fragment the field into incompatible silos. Researchers cannot cross-validate findings across device platforms. The epistemic commons \u2014 the collective ability to accumulate reliable knowledge about neural interfaces \u2014 has no advocate and cannot exit the standardization constraint."
+      "label": "The Implanted Patient",
+      "comment": "PERSPECTIVE 1: IMPLANTED PATIENT (SNARE) — Once a neural interface is implanted, the patient is structurally trapped. Switching to a competing device requires neurosurgery with non-negligible morbidity risk, retraining on new protocols, and potential loss of years of neural adaptation. The patient bears full extraction cost: high switching costs, limited device choice, proprietary software dependencies, manufacturer-controlled firmware updates. No coordination benefit reaches the patient — the standardization constraint serves manufacturers, not patient safety."
     },
     {
       "classification_type": "tangled_rope",
@@ -48,8 +41,8 @@
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "Competing Device Manufacturers",
-      "comment": "PERSPECTIVE 3: COMPETING DEVICE MANUFACTURERS (TANGLED ROPE) \u2014 Smaller manufacturers face high barriers to entry but some market access exists. They benefit from genuine device validation and regulatory approval infrastructure (coordination function). But early-adopter manufacturers have entrenched proprietary standards that lock out competitors. Extraction is significant but not total \u2014 constrained exit at moderate power level with mixed coordination and extraction."
+      "label": "The Competing Manufacturer",
+      "comment": "PERSPECTIVE 2: COMPETING MANUFACTURER (TANGLED ROPE) — New entrants face genuine coordination costs: they must validate devices against proprietary standards set by incumbent manufacturers, navigate regulatory approval that references first-mover design specs, and build ecosystem support (software, clinical training, aftermarket services). They also bear extraction: lock-in standards exclude them from established patient populations. But they can exit at high cost (relocating to alternative healthcare markets, investing in proprietary ecosystems). Mixed extraction and coordination burden."
     },
     {
       "classification_type": "rope",
@@ -57,8 +50,8 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Early-Adopter Manufacturers",
-      "comment": "PERSPECTIVE 4: EARLY-ADOPTER DEVICE MANUFACTURERS (ROPE) \u2014 First-movers in neural interface technology benefit from network effects: more patients \u2192 more data for algorithm training \u2192 better performance \u2192 market lock-in. They experience the standardization constraint as coordination mechanism: proprietary standards and regulatory approval infrastructure serve their interests. Low experienced extraction due to beneficiary status and arbitrage exit options."
+      "label": "The Early Adopter Manufacturer",
+      "comment": "PERSPECTIVE 3: EARLY ADOPTER MANUFACTURER (ROPE) — Experiences the constraint as pure coordination: their de facto standard becomes the reference point for regulatory approval, clinical practice, and patient expectations. They capture network effects (more patients on their device = more software developers, more clinical knowledge, more regulatory favorable treatment). They have arbitrage exit: can leverage their standard-setting position in one market into another, can license their standard to others and extract licensing rents. Benefits flow toward them; they perceive the constraint as solving genuine safety coordination problems."
     },
     {
       "classification_type": "tangled_rope",
@@ -66,8 +59,17 @@
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "Regulatory Agencies (Captured)",
-      "comment": "PERSPECTIVE 5: REGULATORY AGENCIES IN CAPTURE DYNAMICS (TANGLED ROPE) \u2014 Regulators (FDA, EMA) must approve new devices and establish safety standards. Early-adopter manufacturers engage in intense regulatory consultation, effectively co-designing approval pathways with agencies. The regulatory infrastructure provides genuine coordination (ensuring patient safety through rigorous validation). But the constraint also enables rent extraction through regulatory barriers that freeze proprietary standards as de facto requirements. Regulators experience both coordination and extraction."
+      "label": "The Regulatory Agency",
+      "comment": "PERSPECTIVE 4: REGULATORY AGENCY (TANGLED ROPE) — Faces genuine coordination problem: neural interfaces are high-risk devices requiring validated safety standards, and creating standards from scratch is expensive and slow. Accepting the incumbent manufacturer's de facto standard dramatically accelerates approval and reduces agency liability risk. But the agency becomes partially captured: it references incumbent specs in approval frameworks, making competitors appear 'non-standard' even when equivalently safe. The agency experiences both coordination benefit (faster, safer approvals) and subtle extraction (loses independent standard-setting authority; incumbent manufacturers gain regulatory voice)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Standardization Body",
+      "comment": "PERSPECTIVE 5: STANDARDIZATION BODY (SCAFFOLD) — International bodies (ISO, IEEE) are working to create genuinely open standards for neural interface interoperability, biocompatibility, and safety validation. These efforts have a sunset clause: successful open standards would enable device switching, reduce lock-in extraction, and distribute coordination burden across manufacturers. The constraint persists because standardization is slow (5-10 years to publish mature standards) and incumbent manufacturers have regulatory capture advantage. But organized pressure (patient advocacy, regulators in non-captured jurisdictions) is pushing the process forward. This perspective sees the lock-in as a temporary coordination failure being actively solved."
     },
     {
       "classification_type": "piton",
@@ -75,17 +77,8 @@
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Legacy IEEE Standards Bodies",
-      "comment": "PERSPECTIVE 6: LEGACY IEEE STANDARDS BODIES (PITON) \u2014 IEEE and similar organizations attempted to develop open neural interface standards (IEEE 1451.x family), but adoption failed among manufacturers who preferred proprietary lock-in. The standards bodies maintain formal technical committees and publish specifications, but the work is largely theatrical \u2014 industry ignores the standards in favor of closed protocols. The standards bodies persist through institutional inertia and regulatory theater (regulators cite IEEE standards despite industry non-compliance)."
-    },
-    {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "Open Neurotechnology Coalition",
-      "comment": "PERSPECTIVE 7: OPEN NEUROTECHNOLOGY COALITION (SCAFFOLD) \u2014 Academic research groups, patient advocacy organizations, and open-source hardware projects are building alternative verification and integration pathways. OpenBCI, Neuros, and academic neural recording platforms provide open-access interfaces. These organized agents see the proprietary standardization constraint as temporary \u2014 open-source demonstrations and regulatory pre-market approval pathways are creating competitive pressure for genuine interoperability. Sunset horizon: 15-25 years as open alternatives mature and patient demand forces interoperability requirements."
+      "label": "The Legacy Device Ecosystem",
+      "comment": "PERSPECTIVE 6: LEGACY DEVICE ECOSYSTEM (PITON) — Many early neural interfaces are no longer actively supported by manufacturers (technology obsolescence, company acquisition, market retreat). Yet patients remain implanted on these deprecated devices, and the 'standardization framework' for supporting them is largely theatrical: regulatory compliance focused on legacy device documentation rather than genuine interoperability, clinical practice centered on individual device training rather than transferable protocols. The constraint persists through institutional inertia — the ecosystem is maintained because patients still use the devices, not because the standards actually work. Theater ratio is elevated by this deadweight of unsupported legacy devices."
     },
     {
       "classification_type": "mountain",
@@ -93,58 +86,82 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "Analytical Observer (Natural Law View)",
-      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From an analytical/civilizational perspective, some degree of proprietary platform differentiation in medical devices is inherent to the innovation model: high development costs, regulatory risk, and liability require exclusive market returns to justify investment. This perspective risks naturalizing what is actually a contingent policy choice about intellectual property, regulatory approval pathways, and liability frameworks. The false summit detector will flag this as naturalization of institutional arrangements rather than immutable constraint."
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a neuroscience and biomedics perspective, some standardization lag is inherent to the neural interface domain: individual nervous systems vary substantially in electrode sensitivity, signal characteristics, adaptation kinetics, and biocompatibility responses. A 'universal standard' that works identically across all patients and anatomies is theoretically impossible — neural tissue is not silicon. This perspective views standardization variation as a natural consequence of biological complexity, not a contingent institutional arrangement. However, the structural data reveals this as a false summit: the lock-in extraction mechanism operates at the data protocol, software API, and regulatory compliance level — layers where genuine standardization is entirely feasible. The 'biological uniqueness' frame naturalizes what is actually a policy choice."
     }
   ],
   "omegas": [
     {
-      "id": "biocompatibility_versus_standardization_tradeoff",
-      "question": "Are proprietary neural interface designs necessary to optimize biocompatibility and patient-specific customization, or is this biocompatibility advantage a post-hoc rationalization for proprietary lock-in?",
-      "resolution_mechanism": "Comparative biocompatibility analysis of open-source (OpenBCI) vs proprietary systems (Neuralink, BrainGate) across patient cohorts; measurement of long-term implant stability, infection rates, and signal degradation for standardized vs custom interfaces",
-      "impact": "If biocompatibility advantage is real and significant: proprietary customization may be justifiable coordination cost, reducing Snare classification severity. If biocompatibility differences are marginal: standardization blocks genuine improvements with minimal medical benefit.",
+      "id": "biocompatibility_variation_scope",
+      "question": "To what extent does genuine inter-individual neural tissue variation necessitate device-specific calibration vs. to what extent does manufacturer proprietary calibration create artificial incompatibility?",
+      "resolution_mechanism": "Comparative analysis of open-standard calibration protocols vs proprietary protocols for the same neural interface hardware; cross-device validation studies; examination of neural signal characteristics across patient populations using standardized measurement conditions",
+      "impact": "If variation is primarily biological: standardization is limited to data interchange formats and safety validation protocols, leaving manufacturers room for device differentiation (Rope perspective strengthened). If proprietary calibration is primary: genuine interoperability is feasible, and lock-in is pure rent extraction (Snare perspective strengthened, mountain perspective becomes false summit).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether biocompatibility necessitates proprietary designs"
+      "description": "Extent of true biocompatibility variation vs. artificial proprietary incompatibility"
     },
     {
-      "id": "regulatory_approval_cost_necessity",
-      "question": "Do proprietary standards reduce or increase the total regulatory approval burden? Would open standards accelerate or delay FDA/EMA approval for new neural interface systems?",
-      "resolution_mechanism": "Historical analysis of approval timelines for proprietary vs open-standard medical device categories; cost accounting for regulatory compliance under proprietary vs open standards; counterfactual modeling of approval pathways under hypothetical open standards",
-      "impact": "If open standards reduce approval burden: the regulatory capture narrative is confirmed \u2014 proprietary standards function to delay competitors. If open standards increase uncertainty and approval time: proprietary lock-in may be a genuine efficiency mechanism.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether proprietary standards increase or decrease regulatory burden"
-    },
-    {
-      "id": "patient_switching_cost_internalization",
-      "question": "To what extent do patients accept proprietary lock-in as a cost of medical innovation versus experiencing it as extractive constraint? Do patients perceive the switching cost as payment for safety vs payment for monopoly rent?",
-      "resolution_mechanism": "Patient surveys and focus groups with neural interface users; analysis of patient-initiated litigation around switching costs and repair restrictions; longitudinal tracking of patient satisfaction metrics against switching cost magnitudes",
-      "impact": "If patients see lock-in as inherent safety cost: Snare classification is justified but extraction may be lower than structural measures suggest. If patients perceive extraction: Snare classification is confirmed with high experienced extraction and suppression.",
+      "id": "regulatory_capture_reversibility",
+      "question": "Is the regulatory agency's acceptance of incumbent standards reversible if genuine open standards become available, or has path dependence locked in the capture?",
+      "resolution_mechanism": "Historical analysis of regulatory standard switching in analogous medical device domains (pacemakers, cochlear implants, insulin pumps); interviews with regulators about decision constraints; policy experiment: jurisdiction that adopts open neural interface standards and measures competitive entry impact",
+      "impact": "If reversible: the constraint can transition from Snare+Tangled Rope to Rope+Scaffold as open standards mature (scaffold sunset becomes real). If locked in: regulatory capture is structural, and only external shock (litigation, political pressure) can break the path dependence.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Patient perception of switching costs as safety vs extraction"
+      "description": "Whether regulatory capture of neural interface standards is reversible"
     },
     {
-      "id": "open_source_medical_device_liability",
-      "question": "What is the liability and insurance structure for open-source neural interfaces? Does the absence of manufacturer liability create a barrier to open standards adoption, or is this a rationalization for closed proprietary systems?",
-      "resolution_mechanism": "Legal analysis of liability frameworks for open-source medical devices; insurance underwriting practices for open-source vs proprietary neural interfaces; regulatory precedent in other medical device categories (glucose monitors, insulin pumps) that have moved toward interoperability",
-      "impact": "If open-source liability is genuinely intractable: proprietary standards may be necessary regulatory requirement, reducing Tangled Rope severity. If liability is surmountable through regulatory innovation: the open coalition's scaffold perspective is feasible and sunset timing is achievable.",
+      "id": "network_effect_magnitude",
+      "question": "How large are the genuine network effects that make early-adopter standards attractive to downstream actors (software developers, clinicians, patients), and are these effects dependent on proprietary lock-in or achievable with open standards?",
+      "resolution_mechanism": "Comparative case study: markets where open standards have achieved network effects (internet protocols, Linux ecosystem) vs. markets where lock-in has proven more durable (Apple/iOS, proprietary medical devices); modeling of switching costs vs. software ecosystem value for neural interfaces",
+      "impact": "If network effects are lock-in-dependent: incumbent manufacturers must maintain proprietary control (snare structure persists). If open standards can achieve network effects: genuine coordination (rope) is possible without extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Magnitude and lock-in-dependency of network effects in neural interface ecosystem"
+    },
+    {
+      "id": "surgical_switching_cost_reduction",
+      "question": "Will emerging technologies (wireless power/data transfer, biodegradable scaffolds, implant-less interfaces) substantially reduce the surgical switching cost that currently traps patients?",
+      "resolution_mechanism": "Technology roadmap analysis for next-generation neural interfaces; preclinical data on reversible implantation; cost projections for minimally invasive revision surgery",
+      "impact": "If surgical switching becomes low-cost (< 10% of original implant cost): patient exit option shifts from 'trapped' to 'constrained', changing perspectives on tangled rope toward rope. Snare perspective becomes unsustainable. If surgical switching remains high-cost: patient trap persists regardless of standardization progress.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Future reduction in surgical switching costs for neural interfaces"
+    },
+    {
+      "id": "false_summit_natural_law_test",
+      "question": "Is the claim that neural interface standardization is inherently difficult due to biological uniqueness (mountain perspective) actually a naturalization of a policy-and-engineering problem?",
+      "resolution_mechanism": "Decomposition: (1) Identify which aspects of neural interfaces are biologically unique and necessitate individual calibration (genuine); (2) Identify which aspects operate at standardizable layers (data format, safety validation, firmware interface, software API); (3) Compare with historically analogous domains (pacemakers with individual patient variation, cochlear implants with auditory system uniqueness, EEG systems with individual brain electrical properties). Test whether standardization is feasible at the layers where it matters for switching costs.",
+      "impact": "If biological uniqueness is limited to patient-level tuning parameters: standardization is feasible and lock-in is pure extraction (false summit confirmed, snare/tangled rope classification strengthened). If standardization is genuinely impossible: mountain perspective is correct, and lock-in is an inherent feature of neural interfaces rather than a policy failure.",
       "confidence": "high",
       "type_class": "conceptual",
-      "description": "Whether open-source liability prevents interoperable standards"
+      "description": "Whether 'biological complexity' naturalizes policy choices about standardization"
     }
   ],
   "measurements": [
     {
-      "metric": "theater_ratio",
+      "metric": "base_extractiveness",
       "time_point": 0,
       "value": 0.35
     },
     {
-      "metric": "theater_ratio",
+      "metric": "base_extractiveness",
       "time_point": 5,
       "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.5
     },
     {
       "metric": "theater_ratio",
@@ -152,19 +169,19 @@
       "value": 0.55
     },
     {
-      "metric": "base_extractiveness",
+      "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.42
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 5,
       "value": 0.5
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 10,
+      "metric": "suppression_requirement",
+      "time_point": 5,
       "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62
     }
   ],
   "interval": {
@@ -172,36 +189,37 @@
     "end": 10
   },
   "commentary": {
-    "narrative_context": "Neural interface standardization presents a structural conflict between genuine coordination needs (ensuring patient safety through rigorous validation and device compatibility) and proprietary lock-in mechanisms (manufacturers controlling switching costs to extract rents from patients and competitors). The constraint exhibits strong tangled rope characteristics: early-adopter manufacturers benefit from network effects and regulatory lock-in while bearing some genuine coordination burden for safety validation; patients face irreversible implantation decisions that create perfect switching costs; competing manufacturers are barred by high standards adoption barriers; and regulatory agencies are captured into co-designing approval pathways that freeze proprietary standards as de facto requirements. The constraint is not yet as severe as a pure Snare (high-extraction monopoly without coordination benefit) because genuine medical device validation, biocompatibility testing, and safety oversight provide real coordination value. However, the extraction mechanisms are substantial: once a patient accepts a neural implant, they face decades of dependency on proprietary device ecosystem, firmware updates, rehabilitation system compatibility, and repair/replacement options controlled entirely by the manufacturer. The theater ratio (0.55) reflects that regulatory approval, standards committee work, and device validation include significant performative elements: regulators cite IEEE standards that manufacturers ignore; standards bodies publish specifications with minimal industry adoption; safety requirements could be met through open standards but instead function to entrench proprietary designs.",
+    "narrative_context": "Neural interface standardization presents a critical tension in medical device regulation: the genuine need for rigorous safety standards and device compatibility intersects with incumbent manufacturers' ability to control standardization processes and extract economic rents from patients and competitors. The neural interface market is transitioning from a single-player monopoly (first-generation invasive devices) to multi-manufacturer competition, but standardization remains fragmented and proprietary. Early-adopter manufacturers have de facto standard-setting power through regulatory capture and network effects, while patients implanted with incompatible devices face surgical switching costs that lock them into single-manufacturer ecosystems. The constraint exhibits tangled rope structure: real coordination benefits (safety validation, clinical training protocols, software ecosystem development) coexist with substantial extraction mechanisms (proprietary lock-in, regulatory barriers to entry, patient switching costs). The measurement trajectory shows the constraint's extraction increasing over the interval as the installed base of locked-in patients grows, manufacturers consolidate capture of regulatory processes, and the theater ratio (clinical and regulatory performance of standardization efforts) climbs while real interoperability stalls. This is a constraint family that decomposes into three structurally distinct stories: (1) proprietary device firmware/software lock-in (ε≈0.65, Snare for patients), (2) regulatory standardization capture (ε≈0.48, Tangled Rope for competing manufacturers), and (3) data protocol interoperability (ε≈0.35, Rope with real coordination burden). We generate the family-level story that integrates across all three.",
     "key_agents": [
-      "Patients Dependent on Neuroprosthetics: Primary victim (powerless/trapped) \u2014 irreversible implantation decisions create permanent switching costs",
-      "Field Interoperability: Primary victim (powerless/trapped) \u2014 abstract epistemic commons that cannot organize or exit",
-      "Early-Adopter Manufacturers: Primary beneficiary (institutional/arbitrage) \u2014 network effects and regulatory lock-in secure market dominance",
-      "Competing Device Manufacturers: Secondary victim (moderate/constrained) \u2014 face high standards adoption barriers and first-mover disadvantage",
-      "Regulatory Agencies: Institutional actor (institutional/constrained) \u2014 provide genuine safety validation but captured into proprietary lock-in dynamics",
-      "Legacy IEEE Standards Bodies: Institutional actor (institutional/arbitrage) \u2014 maintain formal technical work with minimal industry compliance; theater of standardization",
-      "Open Neurotechnology Coalition: Organized agents (organized/mobile) \u2014 academic groups and patient advocates building open-source alternatives with sunset horizon"
+      "Early Adopter Manufacturers (institutional/arbitrage): Beneficiaries — establish de facto standards, capture network effects, extract licensing rents; experience constraint as coordination problem they are solving",
+      "Implanted Patients (powerless/trapped): Primary victims — locked into incompatible device ecosystems, face surgical switching costs, bear full extraction burden with no coordination benefit",
+      "Competing Manufacturers (moderate/constrained): Secondary victims — face regulatory barriers to entry, must validate against proprietary standards, excluded from established patient populations but can exit at high cost",
+      "Regulatory Agencies (institutional/constrained): Captured beneficiaries — accept incumbent standards to accelerate approval, reduce liability; become partially dependent on manufacturer technical expertise",
+      "Standardization Bodies ISO/IEEE (organized/constrained): Attempting to break lock-in — developing open neural interface standards but progress is slow (5-10 years); have organized power but limited enforcement mechanism",
+      "Legacy Device Patients (powerless/trapped): Structurally similar to current patients but even more severely trapped — devices no longer supported by manufacturers, standards frameworks are theatrical, no upgrade pathway",
+      "Analytical Observer (analytical/analytical): Risks naturalizing contingent policy failures as inherent biological complexity"
     ],
-    "logic_rationale": "Extractiveness (0.58): High. The constraint enables significant rents through patient lock-in (irreversible implantation), market barriers to competitor entry (high standards adoption costs), and regulatory capture (FDA/EMA approval pathways effectively designed by incumbent manufacturers). However, extractiveness is not as severe as pure Snare values (0.70+) because genuine device safety validation and biocompatibility testing provide real coordination value \u2014 the constraint is not pure predation. The value reflects strong extraction layered onto legitimate coordination. Suppression (0.68): High. Multiple barriers prevent exit: medical devices require FDA approval, which is expensive and time-consuming; patient implantation is irreversible without surgery; switching to alternative devices requires reinervation and retraining; regulatory frameworks explicitly privilege existing safety data, creating approval barriers for open alternatives. Theater ratio (0.55): Moderate. Regulatory approval processes and standards committee work include significant theater: IEEE standards exist but are ignored by manufacturers; regulators cite standards that lack industry uptake; safety validation procedures are rigorous but applied asymmetrically (proprietary systems get streamlined approval via existing data; open alternatives face de novo approval requirements). The theater is not dominant (0.70+) because genuine biocompatibility testing and safety oversight occur, but performative elements are substantial.",
-    "directionality_logic": "Directionality values derive from each agent's structural relationship to the extraction flow and their exit options. Early-adopter manufacturers have low d (beneficiaries with arbitrage options) \u2014 they experience the constraint as coordination and capture value through network effects. Patients have high d (victims with trapped exit) \u2014 once implanted, they face decades of dependency on proprietary ecosystem. Competing manufacturers have moderate-high d (victims with constrained but not trapped exit) \u2014 they can theoretically develop competing devices, but high regulatory barriers and market dominance of first-movers impose substantial costs. Regulatory agencies have moderate d due to capture dynamics (constrained institutional power) \u2014 they provide safety validation (coordination benefit) but are captured into proprietary lock-in (extraction mechanism). The analytical observer at civilizational scope has high risk of d distortion toward naturalizing the constraint as immutable \u2014 the false summit detector will flag this.",
-    "perspectival_gap": "This constraint demonstrates perspectival inversion across power levels. Early-adopter manufacturers see low extraction (rope perspective) \u2014 they experience the standardization constraint as solving genuine coordination problems. Patients see maximum extraction (snare perspective) \u2014 they experience irreversible implantation and proprietary lock-in with no alternatives. Competing manufacturers see mixed extraction (tangled rope) \u2014 some coordination benefits (safety validation, regulatory pathways) layered with significant extraction (market barriers). The open coalition sees a temporary constraint with sunset (scaffold) \u2014 open-source alternatives are building parallel verification pathways that will eventually compete away the proprietary lock-in. The regulatory agencies see capture dynamics (tangled rope) \u2014 they provide genuine validation but are partly captured into proprietary standards co-design. The legacy standards bodies see their own degradation (piton) \u2014 IEEE standards remain formally active but with minimal industry relevance. The civilizational analytical observer risks naturalizing the constraint as immutable (mountain) \u2014 wrongly treating contingent policy choices about IP, liability, and regulatory frameworks as laws of nature.",
-    "mandatrophy_analysis": "The mandatrophy in neural interface standardization resolves by recognizing that the classification depends entirely on the observer's structural position and time horizon. From the patient's immediate/biographical perspective (trapped exit), the constraint is Snare \u2014 maximum extraction with no alternatives. From the manufacturer's immediate/institutional perspective (arbitrage exit), the constraint is Rope \u2014 genuine coordination with net benefit. From the open coalition's generational/organized perspective (mobile exit), the constraint is Scaffold \u2014 temporary problem being solved by open-source alternatives. The piton perspective reveals that regulatory standards bodies maintain formal work with minimal functional relevance \u2014 theater of standardization that persists through institutional inertia. No single type is 'correct' \u2014 the presheaf over the observation site, with its multiple incompatible perspectives, IS the answer. The mandatrophy is resolved not by choosing one type but by recognizing why different agents legitimately perceive different constraint types: their structural positions, exit options, and time horizons produce genuinely different experienced extractiveness values."
+    "logic_rationale": "Extractiveness (0.58): The constraint exhibits substantial extraction but not maximum because genuine coordination benefits exist alongside lock-in mechanisms. Early-adopter manufacturers do invest in safety validation and ecosystem development — this is not pure predation. The measuring extractiveness at 0.58 reflects that roughly 60% of the constraint's structure serves extraction/lock-in while 40% provides real coordination value. The trajectory from 0.35 to 0.58 reflects the accumulation of lock-in extraction as the installed base of locked-in patients grows. Suppression (0.62): High. Multiple barriers exist to exiting the constraint: surgical switching costs (medical/physical barrier), regulatory approval delays (institutional barrier), proprietary software lock (technical barrier), and lack of clinician training on alternative devices (informational barrier). The trajectory from 0.50 to 0.62 reflects increasing regulatory entrenchment and patient switching cost accumulation. Theater ratio (0.55): Moderate-high. Regulatory approval processes reference 'neural interface safety standards' that are largely incumbent manufacturer specifications rather than independently validated standards. Clinical training frameworks emphasize device-specific protocols rather than transferable skills. Standardization bodies publish guidelines that lack enforcement mechanisms. The theater increases from 0.42 to 0.55 as regulatory and clinical institutions invest more effort in supporting the incumbent standard while alternatives remain underdeveloped.",
+    "perspectival_gap": "The perspectival gap between early-adopter manufacturer (Rope) and implanted patient (Snare) reveals the constraint's core structural inequality. The manufacturer's perception of 'solving safety coordination problems' and the patient's perception of 'being locked into incompatible ecosystem' are both accurate descriptions of the same structural mechanisms. A standardization framework that truly served coordination would: (1) establish safety validation criteria independent of any manufacturer's proprietary specs; (2) certify device interoperability at standardizable interfaces (data protocol, firmware API, software module boundaries); (3) ensure patient/clinician access to device-switching information and compatible alternatives. The current framework serves these functions partly (safety validation exists) but not fully (interoperability certification is weak, switching barriers are high). The gap between what manufacturers perceive as their coordination burden and what patients perceive as extractive lock-in is the target for reform.",
+    "directionality_logic": "Directionality for each perspective is computed from the agent's structural relationship to extraction flows and exit capacity. Early-adopter manufacturers (institutional/arbitrage) derive d≈0.10 from beneficiary status + high exit options (can relocate standard to other markets, can license it, can shift to next-generation technology) — their experienced extraction is low/negative (they net benefit). Implanted patients (powerless/trapped) derive d≈0.95 from victim status + zero exit options (surgery is infeasible, no alternative ecosystems exist) — their experienced extraction is maximum. Competing manufacturers (moderate/constrained) derive d≈0.65 from victim status + moderate exit options (can relocate to alternative markets, can build proprietary ecosystems, but at high cost) — experienced extraction is substantial but not absolute. Regulatory agencies (institutional/constrained) derive d≈0.35 from partial beneficiary status (they solve a coordination problem) + constrained exit (they depend on manufacturer technical input, cannot easily switch standards) — experienced extraction is moderate toward the beneficiary end. Standardization bodies (organized/constrained) derive d≈0.50 from neutral position (neither primary beneficiary nor victim, but constrained by incumbent market power) — experienced extraction is balanced. The directionality spread (0.10 to 0.95) is the perspectival gap.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint at ε=0.58 requires mandatrophy resolution because the base extractiveness exceeds the tangled rope threshold (0.46). The resolution shows that the constraint IS genuinely tangled rope (not pure snare) because: (1) Beneficiaries exist (early-adopter manufacturers, regulatory agencies) and receive real coordination benefits in addition to extraction rents; (2) Active enforcement mechanisms exist (regulatory approval frameworks, clinical training standardization, manufacturer ecosystem development); (3) The coordination function is non-trivial — safety validation of neural interfaces IS genuinely difficult and the first manufacturer investing in rigorous validation provides positive externality to competitors and patients (though they extract rents for this). The mandatrophy is NOT resolved by claiming the constraint is 'really just extraction' — the coordination is real. The mandatrophy IS resolved by showing that the constraint could be restructured to separate coordination from extraction: open standards could provide the safety validation and clinical training benefits while removing the lock-in extraction. The current tangled rope structure is not inevitable; it reflects policy choices (which manufacturer gets to set standards, which standards framework gets regulatory blessing) that concentrate extraction alongside coordination. The omega variables address whether biological complexity necessitates the current proprietary structure (suggesting mountain perspective applies) or whether standardization is feasible at the policy/engineering layer (suggesting snare+rope decomposition is more accurate than unified tangled rope). Until those empirical questions are resolved, mandatrophy stands: the constraint is tangled rope, but the proportions of coordination vs. extraction are not yet determined.",
+    "kernel_context": "This constraint is NOT a kernel reading. It is a single claim about the structure of neural interface standardization in medical device regulation. No contested foundational commitment or alternative readings are involved — the standardization structure is what it is. The constraint does involve risk of naturalizing policy choices as biological necessity (the mountain perspective), but this is an error in perspective rather than a legitimate alternative reading."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "medical_device_interoperability",
-      "brain_computer_interface_regulation",
-      "neuroprosthetic_implant_ownership"
+      "neural_interface_firmware_lock_in",
+      "neural_interface_regulatory_approval",
+      "neural_interface_data_protocol_interoperability"
     ],
-    "dual_formulation_note": "Neural interface standardization is part of a constraint family spanning medical device regulation, intellectual property in neurotechnology, and patient agency over implanted systems. Each story has its own extractiveness value reflecting different observable aspects: standardization itself (this story, \u03b5=0.58), regulatory approval pathways (downstream story with different \u03b5), and patient control over device firmware and data (separate story addressing implant ownership)."
+    "dual_formulation_note": "Neural interface standardization decomposes into three structurally distinct constraints: (1) firmware/software lock-in at the device-patient interface (ε≈0.65, Snare for patients, Rope for manufacturers) — drives patient switching costs; (2) regulatory approval standardization (ε≈0.48, Tangled Rope) — benefits incumbent manufacturers, creates barriers for competitors; (3) data protocol interoperability (ε≈0.35, Rope with coordination burden) — lower extraction but more technically tractable. This story integrates the family-level structure; the three siblings address the component mechanisms separately. The upstream story (regulatory approval standardization) influences the downstream stories (firmware lock-in and data protocol), because regulatory approval frameworks reference specific device technical specifications, making non-approved alternatives appear to clinicians as 'non-standard' even when equivalently safe."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.42
+      "d_value": 0.35
     }
   ]
 }

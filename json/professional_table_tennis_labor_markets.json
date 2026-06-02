@@ -4,25 +4,26 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "pttlm"
+    "measurement_id_prefix": "pttlm",
+    "story_uid": "892d4e54-a1a3-4d87-a97e-42aec4438bcb"
   },
   "base_properties": {
     "extractiveness": 0.58,
-    "suppression": 0.65,
-    "theater_ratio": 0.55,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
     "claimed_type": "tangled_rope",
     "human_readable": "Professional Table Tennis Labor Market Extraction",
     "topic_domain": "sports_economics/labor",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "national_federations",
-      "tournament_organizers",
-      "equipment_manufacturers"
+      "ittf_administrative_structure",
+      "elite_top_tier_players"
     ],
     "victims": [
-      "professional_players",
-      "developing_nation_athletes",
-      "grassroots_coaches"
+      "emerging_semi_professional_players",
+      "developmental_stage_athletes",
+      "non_elite_competitive_players"
     ]
   },
   "perspectives": [
@@ -31,18 +32,18 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "global",
-      "label": "The Professional Player (Trapped)",
-      "comment": "PERSPECTIVE 1: PROFESSIONAL PLAYER (SNARE) \u2014 Trapped in the labor market by career path dependence. Early specialization (age 6-8) makes exit costlier than continuation. High suppression: contract obligations to national federations, tournament circuit dependency for income, no portable skills to alternative careers. No coordination benefit perceived \u2014 the player experiences pure extraction through contractual obligations, tournament fee structures, and geographic mobility restrictions imposed by federation assignments."
+      "spatial_scope": "national",
+      "label": "The Developmental Athlete",
+      "comment": "PERSPECTIVE 1: DEVELOPMENTAL ATHLETE (SNARE) — Trapped in federation-controlled pathway with no exit. Player invests years in training, accepts low/unpaid wages, absorbs all performance risk while federation controls tournament access, ranking opportunity, and international competition slots. No alternative labor market exists; coaching licenses and training structures are federation-gatekept. Exit means abandoning invested identity and training infrastructure."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "moderate",
-      "time_horizon": "biographical",
+      "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "regional",
-      "label": "The Mid-Tier Player (Constrained)",
-      "comment": "PERSPECTIVE 2: MID-TIER PLAYER (TANGLED ROPE) \u2014 Structurally constrained by tournament circuit economics and federation governance, but also benefits from tournament infrastructure, coaching networks, and standardized competition rules. Extraction is significant but not absolute: some tournament revenue sharing, some sponsorship autonomy, possibility of switching federations at high but surmountable cost. Mixed experience of coordination (tournaments enable competition) and extraction (skewed revenue distribution)."
+      "label": "The Semi-Professional Regional Player",
+      "comment": "PERSPECTIVE 2: SEMI-PROFESSIONAL REGIONAL PLAYER (TANGLED ROPE) — Benefits from federation training standards, coaching infrastructure, and regional competition ecosystem (genuine coordination). Simultaneously extracted through: tournament fee structures that profit federations, ranking manipulation (tournaments weighted to favor federation-sponsored events), tight control over international opportunity access. High cost to exit (lose ranking infrastructure, lose coaching network) but exit is structurally possible with 3-5 year career transition."
     },
     {
       "classification_type": "rope",
@@ -50,91 +51,91 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The National Federation",
-      "comment": "PERSPECTIVE 3: NATIONAL FEDERATION (ROPE) \u2014 Experiences the constraint as coordination. Federation manages player pipelines, standardizes training curricula, organizes domestic tournaments, and negotiates international circuit access. Revenue flow toward federation through player contracts and tournament sanctioning fees. Primary beneficiary with arbitrage options \u2014 can shift talent development models, redirect players between disciplines, modify federation structures with limited cost to their institutional capacity."
+      "label": "National Federation Administrative Structure",
+      "comment": "PERSPECTIVE 3: NATIONAL FEDERATION (ROPE) — Pure coordination from federation perspective. Controls training curricula (real function: standardization enables talent comparison). Allocates tournament slots (real function: prevents chaos). Collects player fees and tournament revenue (real function: funds infrastructure). Net beneficiary — arbitrage exit available if federation loses athlete pool (can shift to esports, corporate retreats, or administrative consolidation). Experiences constraint as coordination mechanism where extraction is compensation for provision."
     },
     {
       "classification_type": "rope",
-      "agent_power": "powerful",
-      "time_horizon": "generational",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The ITTF and Tournament Organizers",
-      "comment": "PERSPECTIVE 4: ITTF AND TOURNAMENT ORGANIZERS (ROPE) \u2014 International federation and major tournament hosts experience the labor market as a coordination mechanism. They set rules, allocate tournament slots, enforce ranking systems, and structure revenue sharing. Powerful position with full arbitrage: can restructure tournament formats, modify player compensation models, adjust circuit geography. Net beneficiary position \u2014 extraction flows toward this institutional level."
+      "label": "ITTF Governance Structure",
+      "comment": "PERSPECTIVE 4: ITTF GOVERNANCE (ROPE) — Coordinating global ranking systems, standardizing competition rules, allocating World Championship and Olympic slots. These are genuine coordination functions. ITTF extracts through: licensing fees, ranking formula control, tournament prioritization decisions that favor sponsors/wealthy federations. Can arbitrage out if global competition fragment (already happening with private league emergence). Experiences constraint as coordination with embedded fee structure."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "regional",
-      "label": "The Developing Nation Athlete",
-      "comment": "PERSPECTIVE 5: DEVELOPING NATION ATHLETE (TANGLED ROPE) \u2014 Organized collective (though informal). Faces high suppression through visa restrictions, limited tournament access in home regions, language barriers, and lack of equipment supply chains. But also genuinely benefits from international competition infrastructure, sponsorship opportunities unavailable domestically, and access to high-level training. Extraction is embedded in coordination benefits \u2014 international circuit enables upward mobility but extracts through visa dependence and currency arbitrage."
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Elite Top-Tier Players (World-Ranked Top 50)",
+      "comment": "PERSPECTIVE 5: ELITE TOP-TIER PLAYERS (TANGLED ROPE) — Powerful agents with mobile exit (can negotiate appearance fees, private tournaments, sponsorship outside federation control, international transfers). Experience genuine coordination benefit: federation rankings drive sponsorship value, tournament infrastructure enables high-level competition. Simultaneous extraction through: appearance fees capped or collected by federations, mandatory ranking-point-awarding tournaments, limited flexibility in competition schedule. Lower suppression because these players can arbitrage — they coordinate and extract simultaneously but retain negotiating power."
     },
     {
       "classification_type": "piton",
-      "agent_power": "moderate",
-      "time_horizon": "civilizational",
-      "exit_options": "constrained",
-      "spatial_scope": "local",
-      "label": "The Grassroots Coach",
-      "comment": "PERSPECTIVE 6: GRASSROOTS COACH (PITON) \u2014 Local coaches maintain training infrastructure through institutional inertia. Theater ratio high (0.55+) \u2014 much coaching activity is performative credential maintenance rather than functional talent development. Coaches face suppression through federation qualification requirements, standardized curriculum mandates, and economic dependency on player fees. But also constrained by exit costs (local reputational capital, limited alternative income sources). Classification reflects degradation: coaching infrastructure persists because no alternative has replaced it, not because the system optimally develops talent."
-    },
-    {
-      "classification_type": "tangled_rope",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational distance, the professional table tennis labor market exhibits genuine coordination (standardized tournaments, training infrastructure, career pathways) alongside systematic extraction. Coordination function: enables global competition, talent discovery, and skill development at scale. Extraction mechanisms: skewed revenue distribution, geographic mobility controls, monopsony power of national federations, suppression of player mobility between nations. The constraint is real tangled rope \u2014 both functions exist, neither can be eliminated without collapsing the other."
+      "label": "Analytical Observer (Historical Institutional Lens)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (PITON) — Table tennis governance structures (national federations, ITTF) were built 50+ years ago as centralized talent development and competition systems. Theater ratio is moderate-to-high: extensive bureaucratic processes for ranking appeals, tournament licensing, athlete certification that produce limited functional verification of actual player capability (subjective selection for national teams still dominates ranking-based selection). The institutional machinery persists through Olympic/governmental funding and administrative inertia despite significant alternative pathways emerging (private leagues, streaming, direct sponsorship). Primary function has partially atrophied — talent discovery no longer depends on federation tournaments (YouTube, coaching visibility, international club competitions reveal talent), but federation gatekeeping persists."
     }
   ],
   "omegas": [
     {
-      "id": "federation_monopsony_vs_coordination",
-      "question": "Is national federation control over player labor primarily an exercise of monopsony power or a necessary coordination mechanism?",
-      "resolution_mechanism": "Comparative analysis: labor market outcomes in contexts with federation control vs. looser governance models (private club systems, player unions). Measurement of wage dispersion, career duration, transition rates, and player satisfaction.",
-      "impact": "If primarily monopsony: reclassify toward Snare from more perspectives. If primarily coordination: reclassify toward Rope. The extractiveness value depends critically on this distinction.",
+      "id": "federation_monitoring_capacity",
+      "question": "Do national federations possess genuine capacity to monitor and verify player development quality, or is the monitoring function primarily theater masking extractive fee collection?",
+      "resolution_mechanism": "Audit of coaching credential standards, training facility inspections, performance outcome tracking vs. player-reported coaching quality; comparison of federation-trained vs. independently-trained players' international outcomes",
+      "impact": "If genuine capacity: tangled_rope classification holds — coordination function is real. If theater: classification shifts toward snare for developmental players — extraction is primary function, coordination is justification.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether federation control is monopsony extraction or necessary coordination"
+      "description": "Whether federation monitoring provides substantive player development verification"
     },
     {
-      "id": "developing_nation_athlete_identity_lock",
-      "question": "To what extent are developing nation athletes trapped by structural barriers vs. identity-locked into career paths by cultural expectations and invested identity?",
-      "resolution_mechanism": "Post-exit analysis: study athletes who leave professional circuits. Do they experience barriers (visa, funding, opportunity scarcity) or identity shifts (no longer identifying as 'athlete', social status loss, family rejection)?",
-      "impact": "If primarily structural barriers: use trapped/constrained exit options. If primarily identity-fused: use identity_locked. Affects directionality derivation and may shift some perspectives from Tangled Rope to Snare.",
-      "confidence": "low",
+      "id": "ranking_formula_arbitrariness",
+      "question": "Do ITTF ranking formulas systematically favor federation-controlled tournaments over independent club/private tournaments in ways that are arbitrary rather than merit-based?",
+      "resolution_mechanism": "Statistical analysis of ranking point distribution by tournament type; correlation between point-per-match and actual subsequent head-to-head performance; time-series analysis of ranking volatility before/after formula changes",
+      "impact": "If systematic arbitrary favoring: suppression increases (players forced into federation circuit to maintain ranking regardless of actual development opportunity). If formula is merit-neutral: suppression decreases (alternative pathways equally valued).",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Structural vs. identity-based entrapment of developing nation athletes"
+      "description": "Whether ITTF ranking formulas systematically favor federation-controlled tournaments"
     },
     {
-      "id": "equipment_manufacturer_dependency",
-      "question": "Does equipment manufacturer control over standardization create a separate extractive constraint or is it structurally inseparable from labor market extraction?",
-      "resolution_mechanism": "Decomposition analysis: compare labor market outcomes in equipment-monopoly regimes (single approved manufacturer) vs. open equipment markets (multiple approved brands). Measure player equipment costs as percentage of career earnings.",
-      "impact": "If separable: write a distinct constraint story (equipment_supply_standardization) with its own extractiveness value and network link. If inseparable: keep as part of labor market story. This is an \u03b5-invariance decision.",
+      "id": "developmental_pathway_necessity",
+      "question": "Are federation-controlled developmental pathways (training camps, coaching certification, junior circuit) genuinely necessary for reaching elite levels, or can independent pathways (club coaching, private tournaments, streaming visibility) produce equivalent outcomes?",
+      "resolution_mechanism": "Career trajectory analysis of top 100 players: proportion trained through federation pathway vs. independent pathway; comparison of career longevity, injury rates, and peak ranking by pathway; emergence of non-federation-trained world-ranked players",
+      "impact": "If federation pathways are necessary: suppression is structural necessity, not extraction. If independent pathways are equivalent: suppression is extraction mechanism — players are forced into federation structures despite non-superior outcomes.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether equipment standardization is a separate extractive constraint"
+      "description": "Whether federation developmental pathways are genuinely necessary for elite achievement"
     },
     {
-      "id": "tournament_revenue_sharing_opacity",
-      "question": "Are tournament revenue allocation formulas genuinely obscure or is opacity itself an extraction mechanism (making verification of unfairness infeasible)?",
-      "resolution_mechanism": "Access to federation accounting records and contract documentation. Analysis of whether opacity persists due to genuine complexity or deliberate withholding. Comparison with sports leagues that practice full transparency.",
-      "impact": "If genuinely complex: suppression value justified (0.65) as coordination cost. If deliberately opaque: suppress value should be higher (0.75+) as extraction mechanism. Affects tangled_rope vs. snare boundary.",
-      "confidence": "low",
+      "id": "alternative_professional_circuits_growth",
+      "question": "Are private professional table tennis leagues (WTT — World Table Tennis league) and independent tournament circuits growing fast enough to create genuine alternative labor markets outside federation control?",
+      "resolution_mechanism": "Longitudinal growth data: player participation in non-ITTF-affiliated tournaments as percentage of total; player earnings from private circuits vs. federation-sanctioned tournaments; emergence of players who bypass federation junior circuit entirely",
+      "impact": "If rapid growth: constraint is approaching sunset — private circuits are reducing federation leverage (scaffold rather than snare for emerging players). If stagnant or declining: federation monopoly holds (snare/tangled_rope persist).",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether revenue allocation opacity is intentional extraction mechanism"
+      "description": "Growth trajectory of alternative professional table tennis circuits"
     },
     {
-      "id": "early_specialization_causation",
-      "question": "Does federation emphasis on early specialization (age 6-8) reflect genuine talent development science or institutional path dependence that now extracts through career lock-in?",
-      "resolution_mechanism": "Comparative pedagogy: peak performance age analysis across cohorts trained with early vs. delayed specialization models. Long-term career duration and post-athletic transition outcomes.",
-      "impact": "If scientifically justified: early specialization is coordination (necessary for elite development). If path-dependent: it is extraction mechanism (locks players into path despite better alternative models). Affects whether young players experience 'trapped' or 'constrained' exit, and fed into classification from younger cohorts.",
+      "id": "identity_lock_in_mechanism",
+      "question": "Is the constraint binding developmental players primarily through material barriers (controlled training facilities, gated competition access) or through identity fusion with federation-sponsored identity ('national team player', 'federation-certified talent')?",
+      "resolution_mechanism": "Qualitative analysis: exit interviews with players who left competitive table tennis, career transition narratives; psychological assessment of identity separation post-retirement; measurement of identity lock vs. structural lock through exit cost decomposition",
+      "impact": "If material barriers dominate: players trapped or constrained (external barriers). If identity fusion dominates: players identity_locked (cognitive binding despite structural mobility). Affects classification and intervention design.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether early specialization reflects science or institutional path dependence"
+      "description": "Whether developmental player binding is material or identity-based"
+    },
+    {
+      "id": "mandate_substitution_drift",
+      "question": "Has the federation mandate evolved from genuine player development coordination toward administrative self-perpetuation and fee extraction as the primary institutional goal?",
+      "resolution_mechanism": "Historical document analysis: federation mission statements, budget allocation trends, tournament fee structures over 20-year period; measurement of correlation between fee increases and player development outcome improvements",
+      "impact": "If drift confirmed: theater_ratio should increase, classification drifts toward piton/snare. Mandatrophy resolution requires acknowledging institutional goal substitution.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Drift from player development mandate toward institutional self-perpetuation"
     }
   ],
   "measurements": [
@@ -154,19 +155,34 @@
       "value": 0.58
     },
     {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.4
+      "value": 0.38
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.48
+      "value": 0.43
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
-      "value": 0.55
+      "value": 0.48
     }
   ],
   "interval": {
@@ -174,35 +190,29 @@
     "end": 20
   },
   "commentary": {
-    "narrative_context": "The professional table tennis labor market exhibits structural extraction embedded within genuine coordination mechanisms. National federations and the International Table Tennis Federation (ITTF) organize global competition infrastructure, standardize training curricula, and allocate tournament opportunities \u2014 coordination functions that enable talent discovery and elite performance. Simultaneously, these same institutions exercise monopsony control over player labor, enforce geographic mobility restrictions through federation assignment systems, capture tournament revenue asymmetrically, and suppress player bargaining power through early-career commitment mechanisms. The constraint demonstrates tangled rope dynamics: players experience both the coordination benefit (access to international tournaments, standardized competition, career pathways) and the extraction cost (controlled wages, restricted exit options, geographic dependency). The extractiveness trajectory shows an increasing trend (0.35 \u2192 0.58 over 20 years), reflecting the consolidation of federation power and professionalization of the circuit. Theater ratio increase (0.40 \u2192 0.55) reflects growing performative elements in player development and tournament formats designed for media consumption rather than fair competition.",
+    "narrative_context": "The professional table tennis labor market exhibits a textbook tangled_rope structure: genuine coordination mechanisms (standardized training curricula, global ranking systems, tournament infrastructure enabling talent discovery) coexist with systematic asymmetric extraction. National federations and the ITTF organize global competition infrastructure that solves real coordination problems — without centralized ranking and tournament allocation, no global talent comparison or competitive opportunity structure would exist. Simultaneously, these same institutions extract through gated access to competition opportunities, fee structures that concentrate revenue in federation hands, and monopoly control over ranking pathways. The constraint is neither pure coordination nor pure extraction; it is a hybrid where the coordination function is genuine but enables extractive structures. The perspectival gap is sharp: elite players with international visibility (powerful, mobile exit) experience the constraint as manageable coordination with embedded fees; developmental athletes (powerless, trapped) experience it as a snare where federation control blocks all alternative pathways. The measurement trajectory shows extractiveness and suppression increasing over the 20-year interval, reflecting the growth of federation administrative infrastructure and the consolidation of ITTF ranking system control. Theater ratio remains moderate because the coordination functions are substantive — unlike purely performative institutional systems, federations genuinely organize tournaments, allocate ranking points, and maintain training standards. However, the theater is rising as bureaucratic gatekeeping (certification processes, tournament licensing, ranking appeals) grows relative to the actual training/competition value delivered.",
     "key_agents": [
-      "Professional Players (Powerless/Trapped): Primary victims \u2014 early specialization creates path dependence; contractual obligations to national federations restrict labor mobility",
-      "Mid-Tier Players (Moderate/Constrained): Mixed experience \u2014 structurally constrained but also benefit from tournament infrastructure and sponsorship networks",
-      "National Federations (Institutional/Arbitrage): Primary beneficiaries \u2014 control player pipelines, capture federation fees, set training standards",
-      "ITTF and Tournament Organizers (Powerful/Arbitrage): Institutional beneficiaries \u2014 set ranking systems, allocate tournament slots, determine revenue sharing formulas",
-      "Developing Nation Athletes (Organized/Constrained): Organized collective at disadvantage \u2014 visa barriers and currency arbitrage create extraction within coordination opportunities",
-      "Grassroots Coaches (Moderate/Constrained): Degraded institutional role (Piton) \u2014 maintain training infrastructure through inertia; suppressed by federation qualification mandates",
-      "Equipment Manufacturers (Powerful/Arbitrage): Secondary beneficiaries \u2014 standardization creates controlled market; captured demand from player contracts"
+      "National Table Tennis Federations: Primary beneficiary (institutional/arbitrage) — collect membership fees, tournament revenue, training facility fees; control athlete pathway access; can arbitrage to esports or corporate events if athlete talent pool declines",
+      "ITTF Governance Structure: Primary beneficiary (institutional/arbitrage) — maintains global ranking system, allocates World Championship and Olympic slots, collects licensing fees; core coordination function (global ranking standardization) is genuine",
+      "Developmental-Stage Athletes: Primary victim (powerless/trapped) — invest years in federation-controlled training without guaranteed professional opportunity; no alternative competitive pathway; trapped by sunk costs and identity fusion with 'national team player' identity",
+      "Semi-Professional Regional Players: Secondary victim (moderate/constrained) — constrained by tournament access control and ranking system dependence; can exit but at high cost (losing ranking infrastructure, coaching network)",
+      "Elite Top-Tier Players (World Rank 1-50): Tertiary agent (powerful/mobile) — experience tangled_rope (genuine benefit from ranking/federation infrastructure coexists with extraction), but have exit options (private tournaments, sponsorship negotiation) that reduce experienced suppression",
+      "Private League Operators (WTT): Emerging alternative (organized/mobile) — creating parallel labor market outside federation control; pressure testing federation monopoly"
     ],
-    "logic_rationale": "Extractiveness (0.58): Moderate-high. The professional table tennis labor market shows extraction well above the pure coordination threshold. Revenue concentration: ~70% of tournament prize pools go to top 50 players globally, while ~95% of players earn below median income. Wage suppression through monopsony: federations control player assignments to tournaments, preventing wage competition. Geographic mobility restriction: federation assignment determines tournament access; players cannot freely shop between federations without losing circuit status. However, extractiveness is not at maximum snare levels (0.75+) because genuine coordination benefits exist: players can pursue international careers at all, training infrastructure enables talent identification, tournament standardization creates predictable competition. The value (0.58) reflects mixed extraction and coordination. Suppression (0.65): High. Multiple mechanisms: (1) Career path dependence \u2014 early specialization (age 6-8) makes exit costly; (2) Contractual lock-in \u2014 federation agreements restrict player movement; (3) Visa and geographic barriers \u2014 developing nation athletes face structural mobility costs; (4) Information asymmetry \u2014 tournament revenue formulas and federation accounting are opaque; (5) Economic dependency \u2014 limited alternative income sources for specialized athletes. Theater ratio (0.55): Moderate-high. Growing component of performative activity in professional circuits: exhibition matches designed for media spectacle, ranking system optimization for viewership, player brand management and content creation obligations. Theater has increased over the interval as the circuit professionalized and commercial broadcasting became dominant revenue source. Theater is not dominant (would approach 0.70+ for piton) but significant enough to indicate degradation of pure competition function.",
-    "perspectival_gap": "The professional table tennis labor market demonstrates dramatic perspectival divergence. The trapped professional player sees pure snare extraction: contractual obligations, restricted tournament access, wage suppression, no meaningful exit option. The national federation sees coordination (rope): solving the problem of organizing global competition and player development. The developing nation athlete sees tangled rope: genuine benefits from international circuit access alongside extraction through visa barriers and currency arbitrage. The grassroots coach sees a degraded system (piton): infrastructure persists through inertia despite poor talent development outcomes. The analytical observer sees clear tangled rope: both functions exist and are inseparable. The perspectival gap reveals why labor organizing in professional table tennis is difficult \u2014 different athlete cohorts (trapped vs. constrained vs. mobile) perceive the constraint differently and thus have divergent preferences about reform.",
-    "directionality_logic": "Directionality (d) values range from 0.05 (federation beneficiary with arbitrage) to 0.95 (trapped player). National federations derive d \u2248 0.10 (institutional + beneficiary + arbitrage) \u2192 f(d) \u2248 -0.10, producing negative effective extraction (net benefit). Professional players derive d \u2248 0.92 (powerless + victim + trapped) \u2192 f(d) \u2248 1.38, producing maximum effective extraction. Mid-tier players derive d \u2248 0.65 (moderate + mixed victim/beneficiary + constrained) \u2192 f(d) \u2248 1.00, producing symmetric effective extraction. Developing nation athletes derive d \u2248 0.78 (organized + victim + constrained) \u2192 f(d) \u2248 1.18, producing high effective extraction. Scope modifier \u03c3(S) scales extractiveness: local (0.8), regional (0.9), national (1.0), global (1.2). From a powerless player's trapped perspective at global scope: \u03c7 = 0.58 \u00d7 1.38 \u00d7 1.2 \u2248 0.96 (near-maximal perceived extraction). From institutional federation's arbitrage perspective at global scope: \u03c7 = 0.58 \u00d7 (-0.10) \u00d7 1.2 \u2248 -0.07 (perceived benefit). The large perspectival gap in derived \u03c7 (0.96 vs. -0.07) explains why labor disputes in professional table tennis revolve around fundamentally incompatible experienced realities.",
-    "mandatrophy_analysis": "RESOLVED: The professional table tennis labor market resolves the mandatrophy by showing tangled rope as the stable analytical classification. The constraint cannot be reduced to pure coordination (Rope) because extraction is systematic: players do not exit en masse only because viable alternatives don't exist, not because coordination benefits are balanced with extraction. The constraint cannot be classified as pure extraction (Snare) because genuine coordination mechanisms exist and players do receive access to competitive opportunities that would be unavailable without federation infrastructure. The extractiveness value (0.58) sits firmly in the tangled rope window (0.40 \u2264 \u03c7 \u2264 0.90 at analytical context). Both functions are real: federations genuinely solve coordination problems (standardizing rules, organizing tournaments, developing talent pipelines); simultaneously, they genuinely extract (controlling wages, restricting mobility, capturing revenue asymmetrically). Mandatrophy is avoided by acknowledging both functions as structural, not pretending extraction is coordination cost or coordination is rhetorical cover for extraction."
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The federation structure extracts through multiple mechanisms: (1) gated access to ranking-point tournaments (players forced into federation circuit), (2) fee structures that profit federations while leaving athletes underpaid, (3) ranking formula arbitrariness that favors federation-sponsored events, (4) monopoly control over international competition opportunity. However, extractiveness is not at snare levels (≥0.66) because: (a) genuine coordination functions exist and are substantive, (b) elite players have arbitrage options, (c) private circuits are emerging. The measured 0.58 reflects moderate-to-high extraction embedded within functional coordination. Suppression (0.62): High. Multiple structural barriers: (1) gated access to training facilities (credential/cost barriers), (2) ranking dependence creates forced federation participation, (3) career risk of non-federation pathway (unranked players cannot access sponsorship/professional opportunities), (4) identity lock-in (players internalize 'federation player' identity as core to competitive identity). The suppression is structural (material barriers) and partially internalized (identity fusion). Theater ratio (0.48): Moderate. Federation coordination functions are substantive — ranking systems actually measure player capability comparatively, training standards actually improve player technique, tournaments genuinely generate competitive data. However, theater is present in: bureaucratic gatekeeping (certification/appeals processes), ranking formula changes that lack transparent merit-based justification, administrative overhead that doesn't translate to player development. Theater ratio is rising over the interval (0.38→0.48) as federation bureaucracy expands relative to core training/competition value.",
+    "perspectival_gap": "The perspectival divergence is extreme. Elite top-50 players (powerful/mobile) see coordination-with-fees (tangled_rope): federation infrastructure is genuinely valuable for ranking visibility and international competition access, but fees and appearance regulations are negotiable extraction costs. Semi-professional players (moderate/constrained) see mixed coordination-and-extraction (tangled_rope): they benefit from federation training standards and regional competition, but face high costs to exit and are trapped in federation tournament circuit for ranking maintenance. Developmental athletes (powerless/trapped) see pure extraction (snare): federation control blocks all pathways, creates multi-year sunk-cost investments with no guaranteed professional outcome, and maintains identity lock-in. The national federation (institutional/arbitrage) sees pure coordination (rope): they solve tournament logistics, maintain ranking standards, allocate slots efficiently. The ITTF (institutional/arbitrage) sees coordination (rope): global standardization and Olympic/World Championship allocation are genuine functions. The analytical observer sees inertial institutional maintenance (piton): the core coordination functions (ranking, tournament logistics) are performed more efficiently by private platforms (Heisenflop algorithm for ratings, YouTube for talent discovery, private league tournaments for competitive opportunity), yet federation gatekeeping persists through governmental funding and Olympic linkage.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from structural position — power level, exit options, and beneficiary/victim relationship. Developmental athletes: powerless + trapped + victim → high d → high f(d) ≈ 1.42, producing snare classification. Semi-professional players: moderate + constrained + mixed victim-beneficiary → mid d ≈ 0.60 → f(d) ≈ 0.85, producing tangled_rope. Elite players: powerful + mobile + mixed beneficiary-victim → low-mid d ≈ 0.45 → f(d) ≈ 0.55, producing tangled_rope with lower experienced extraction than semi-professionals. National federations: institutional + arbitrage + beneficiary → low d ≈ 0.15 → f(d) ≈ -0.01, producing rope (effective extraction experienced as negative — coordinative burden is offset by fee and control benefits). ITTF: institutional + arbitrage + beneficiary → low d ≈ 0.12 → f(d) ≈ -0.08, producing rope. The engine derives d automatically from beneficiary/victim declarations and exit options; the classification follows from chi = epsilon × f(d) × sigma(scope). No directionality overrides are needed — the structural derivation captures the true relationships.",
+    "mandatrophy_analysis": "Mandatrophy — the indeterminacy of whether a constraint is coordination mechanism or extraction mechanism — is resolved here through structural differentiation. The federation IS a coordination mechanism for allocating global competition opportunity, maintaining ranking integrity, and training standardization. It IS ALSO an extraction mechanism for capturing fees from developmental athletes who have no exit options. The constraint is not 'actually' one or the other; it is genuinely both simultaneously, experienced differently by different agents. The 'solution' to mandatrophy is not to determine the 'true' nature but to acknowledge that tangled_rope classification is correct: the system exhibits both functions, and their distribution across agents is asymmetric (beneficiaries perceive coordination; victims perceive extraction). The measurement trajectory showing rising extractiveness and suppression does not indicate mandatrophy — it indicates the coordination function is real and persistent while extraction mechanisms are strengthening (tightening of gatekeeping, increasing fee structures). The constraint is not drifting from coordination toward extraction or vice versa; both are stable."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "elite_sports_visa_restrictions",
-      "athletic_equipment_standardization"
+      "olympic_sport_monopoly_allocation",
+      "athlete_wage_suppression_across_niche_sports"
     ],
-    "dual_formulation_note": "Professional table tennis labor markets decompose along domain lines: (1) labor_extraction_component (\u03b5 \u2248 0.58, primary story), (2) equipment_supply_standardization (separate story if equipment monopoly control has independent \u03b5 > 0.40), (3) visa_system_coupling (separate story if athletic visa restrictions exhibit their own structural dynamic). All three are linked via network.affects_constraints."
+    "dual_formulation_note": "Professional table tennis labor market extraction is part of a larger constraint family around Olympic sport governance. The table tennis case exemplifies patterns that appear in archery, badminton, weightlifting, and other niche Olympic sports where national federations control both talent development and professional opportunity. A second story (olympic_sport_monopoly_allocation) examines the ITTF-IOC relationship and Olympic qualification gatekeeping; a third (athlete_wage_suppression_across_niche_sports) examines the common mechanism across all niche sports. The three stories have different epsilon values reflecting different scope and power relationships. Link them via affects_constraints."
   },
-  "directionality_overrides": [
-    {
-      "power_atom": "institutional",
-      "d_value": 0.08
-    }
-  ]
+  "directionality_overrides": []
 }

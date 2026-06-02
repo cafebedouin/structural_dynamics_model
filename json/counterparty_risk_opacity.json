@@ -4,23 +4,25 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "cprty"
+    "measurement_id_prefix": "cpo",
+    "story_uid": "10c66925-fb8a-4b51-9d50-9b7ca76a1a89"
   },
   "base_properties": {
     "extractiveness": 0.58,
-    "suppression": 0.65,
-    "theater_ratio": 0.68,
+    "suppression": 0.62,
+    "theater_ratio": 0.65,
     "claimed_type": "tangled_rope",
     "human_readable": "Counterparty Risk Opacity in Financial Markets",
     "topic_domain": "finance/systemic_risk",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "opacity_maintaining_institutions",
-      "risk_arbitrage_traders"
+      "large_financial_institutions",
+      "derivatives_market_participants"
     ],
     "victims": [
-      "counterparty_exposure_agents",
-      "systemic_stability"
+      "financial_system_stability",
+      "counterparty_verification_capacity",
+      "collateral_strained_entities"
     ]
   },
   "perspectives": [
@@ -30,17 +32,17 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Interconnected Debtor",
-      "comment": "PERSPECTIVE 1: INTERCONNECTED DEBTOR (SNARE) \u2014 Structurally trapped in counterparty networks with no ability to verify or exit exposure. Bears full cost of hidden leverage, off-balance-sheet derivatives, and contagion risk. Cannot organize or escape without abandoning financial participation entirely."
+      "label": "The Financial System Stability Collective",
+      "comment": "PERSPECTIVE 1: SYSTEM STABILITY (SNARE) — Cannot exit the opacity regime; bears full contagion cost during crises. The abstract collective of depositors, counterparties, and systemic participants has no ability to withdraw from interconnected markets or organize collective verification. Experiences maximum extraction through tail-risk concentration without compensation or agency."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "snare",
       "agent_power": "moderate",
       "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Regional Bank",
-      "comment": "PERSPECTIVE 2: REGIONAL BANK (TANGLED ROPE) \u2014 Faces high cost to verify counterparty risk (requires expensive analytics, legal review, collateral assessment). Benefits from opacity through reduced disclosure burden on its own balance sheet. Extraction asymmetry is real but not total \u2014 regulatory pressure and client relationships create some transparency incentives."
+      "spatial_scope": "global",
+      "label": "The Collateral-Strained Counterparty",
+      "comment": "PERSPECTIVE 2: COLLATERAL-STRAINED COUNTERPARTY (SNARE) — Mid-size institutions face binding collateral requirements and mark-to-market losses during opacity cascades. Cannot fully exit due to market dependency and funding needs, but bears disproportionate losses relative to access to opacity. Faces both direct extraction (margin calls, repo haircuts) and indirect extraction (contagion absorption)."
     },
     {
       "classification_type": "rope",
@@ -48,17 +50,17 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Information-Privileged Dealer",
-      "comment": "PERSPECTIVE 3: INFORMATION-PRIVILEGED DEALER (ROPE) \u2014 Major financial institutions with market-making operations and client flows benefit from opacity as pure coordination mechanism. Opacity enables their primary function: profiting from information asymmetry while maintaining liquidity provision. Low perceived extraction because their institutional design assumes opacity."
+      "label": "The Systemically Important Financial Institution",
+      "comment": "PERSPECTIVE 3: SIFI (ROPE) — Large institutions experience opacity as pure coordination mechanism: information asymmetry enables price discrimination, opacity-based collateral advantage, and implicit government backstop. Net beneficiary. Sees the constraint as solving the coordination problem of decentralized credit — opacity is the price of avoiding centralized clearing. Effective extraction runs toward this actor."
     },
     {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "generational",
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
       "exit_options": "mobile",
       "spatial_scope": "global",
-      "label": "The Transparency Mandate Coalition",
-      "comment": "PERSPECTIVE 4: TRANSPARENCY MANDATE COALITION (SCAFFOLD) \u2014 Post-2008 regulatory reforms (DODD-FRANK, EMIR, CSPR) create alternatives to opacity: centralized clearing, trade repositories, standardized derivatives. These have sunset logic: as distributed ledger technology and real-time settlement mature, the information advantage from opacity declines. Organized agents see opacity as a temporary coordination failure, not inherent."
+      "label": "The Derivatives Trading Desk",
+      "comment": "PERSPECTIVE 4: DERIVATIVES TRADING DESK (TANGLED ROPE) — Derives substantial profits from opacity-enabled pricing arbitrage and counterparty risk mispricing, but also faces execution constraints and regulatory pressure. Has agency to adjust exposure but operates within market structure constraints. Benefits from coordination function (decentralized credit market) AND from extraction (counterparty risk mispricing). Active enforcement through internal controls and counterparty agreements."
     },
     {
       "classification_type": "piton",
@@ -66,8 +68,8 @@
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Regulatory Reporting Theater",
-      "comment": "PERSPECTIVE 5: REGULATORY REPORTING THEATER (PITON) \u2014 Stress testing, capital adequacy ratios, and counterparty exposure disclosure frameworks persist despite low functional verification capacity. Regulators cannot genuinely assess whether reported exposures match market reality \u2014 testing is largely performative. The theater is maintained through institutional inertia and the fiction that regulatory reports provide real oversight."
+      "label": "The Regulatory Surveillance Apparatus",
+      "comment": "PERSPECTIVE 5: REGULATORY SURVEILLANCE (PITON) — Stress testing and capital requirements simulate counterparty risk verification without enabling true real-time transparency. Regulatory frameworks measure opacity as 'concentration risk' and 'CDS basis widening' but cannot reverse the structural information asymmetry. Theater ratio high because models predict systemic failure but cannot prevent it once opacity cascade begins. Maintains performative oversight (quarterly reporting, stress tests) while the constraint persists largely unchanged."
     },
     {
       "classification_type": "mountain",
@@ -76,113 +78,146 @@
       "exit_options": "analytical",
       "spatial_scope": "universal",
       "label": "The Analytical Observer (Natural Law View)",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a pure information-theoretic perspective, counterparty risk opacity appears immutable: any agent cannot know the true state of another agent's portfolio in real time. Information asymmetry is inherent to decentralized finance. However, this naturalizes contingent institutional choices \u2014 the degree of opacity is a policy parameter, not a law of nature. This perspective risks false summit classification."
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) — From a civilizational perspective, information asymmetry in credit markets is a fundamental property of decentralized finance: verification of complex derivatives positions is inherently costly, and some opacity is inevitable in systems that do not require centralized clearing. However, this perspective risks naturalizing what is an institutional choice (decentralized over centralized clearing), and the presence of beneficiaries suggests false summit dynamics."
     }
   ],
   "omegas": [
     {
-      "id": "opacity_intentionality_threshold",
-      "question": "What proportion of observed opacity is intentional obfuscation versus unavoidable information lags?",
-      "resolution_mechanism": "Forensic analysis of clearing data, trade repository records, and internal communications during crisis periods; comparison of disclosed vs revealed exposures post-default",
-      "impact": "If intentional > 70%: classification remains Snare from powerless perspective. If intentional < 40%: may downgrade to Tangled Rope (legitimate coordination costs justify asymmetry)",
+      "id": "verification_cost_threshold",
+      "question": "At what point do real-time counterparty verification costs exceed the coordination benefits of decentralized credit markets?",
+      "resolution_mechanism": "Cost-benefit analysis of centralized clearing (fixed verification overhead) versus decentralized (variable verification costs scaled with interconnection density); historical data from central counterparty adoption periods (post-2008 regulatory changes)",
+      "impact": "If threshold exceeded: constraint shifts from coordination (Rope/Tangled Rope) to pure extraction (Snare) — opacity is maintained despite technical solvability. If not exceeded: opacity remains a genuine tradeoff between coordination and verification burden.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Proportion of opacity from intentional obfuscation vs information lags"
+      "description": "Threshold at which verification costs exceed decentralized credit benefits"
     },
     {
-      "id": "distributed_ledger_viability",
-      "question": "Can distributed ledger technology (blockchain-based settlement, real-time gross settlement) eliminate counterparty risk opacity without unacceptable performance degradation?",
-      "resolution_mechanism": "Implementation trials (CBDC clearing networks, tokenized settlement); measurement of transaction throughput, latency, and systemic stability under stress conditions",
-      "impact": "If viable: scaffold sunset is plausible, opacity becomes temporary extractive mechanism. If not viable: opacity persists as structural feature, classification shifts toward Mountain",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether distributed ledger can replace opacity-dependent clearing"
-    },
-    {
-      "id": "regulatory_forbearance_cycle",
-      "question": "Does regulatory pressure systematically reduce opacity during crisis periods and relax during stable periods, creating a cyclical extraction rhythm?",
-      "resolution_mechanism": "Time series analysis of regulatory disclosure requirements and enforcement intensity; correlation with financial stability indices and proprietary trade volume",
-      "impact": "If cyclical: piton classification is accurate (enforcement theater that oscillates). If monotonic: classification may shift toward Rope (stable institutional coordination mechanism)",
+      "id": "counterparty_information_asymmetry_mechanism",
+      "question": "Is counterparty opacity maintained by technical barriers (complexity of off-balance-sheet exposures) or by institutional incentive structures (opacity-driven profit extraction)?",
+      "resolution_mechanism": "Cross-institutional comparison: firms with highest opacity levels versus those with greater transparency; correlation between opacity reduction and profit margin compression; analysis of competitive advantage from opacity.",
+      "impact": "If technical: constraint is genuine coordination tradeoff (higher ε for legitimacy, lower suppression). If institutional: constraint is extractive mechanism disguised as necessity (lower ε, higher suppression, likely Snare rather than Tangled Rope).",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Cyclical nature of regulatory enforcement versus opacity"
+      "description": "Whether opacity is technical necessity or institutional extraction mechanism"
     },
     {
-      "id": "contagion_risk_measurability",
-      "question": "Is systemic contagion risk from opacity fundamentally unmeasurable, or is our inability to measure it a contingent limitation of current analytics?",
-      "resolution_mechanism": "Agent-based modeling of counterparty networks under opacity vs full transparency; validation against realized contagion patterns from past crises (2008, 2020)",
-      "impact": "If fundamentally unmeasurable: Mountain classification of 'inherent uncertainty' is justified. If measurable: opacity becomes strategic choice, supporting Snare/Tangled Rope classifications",
+      "id": "implicit_backstop_extraction",
+      "question": "To what degree does counterparty opacity profit-taking depend on implicit government guarantees (too-big-to-fail backstop)?",
+      "resolution_mechanism": "CDS spread analysis during systemic stress events; comparison of pricing during periods of explicit vs implicit backstop clarity; historical comparison pre/post-2008 regulatory clarity on rescue criteria.",
+      "impact": "If high dependence: opacity is systematized rent extraction subsidized by public sector. Reclassify as Snare with public sector as hidden beneficiary. If low dependence: constraint reflects genuine market coordination tradeoff.",
       "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether systemic contagion risk is fundamentally unmeasurable"
+      "type_class": "empirical",
+      "description": "Dependence of opacity-enabled extraction on implicit government backstop"
+    },
+    {
+      "id": "central_clearing_adoption_dynamics",
+      "question": "Why do institutions resist mandatory central counterparty clearing (CCP) adoption for opaque derivative positions despite post-2008 regulatory pressure?",
+      "resolution_mechanism": "Regulatory timeline analysis: mandated CCP adoption rates versus voluntary adoption; cost-benefit calculations presented by industry in regulatory comment periods; correlation between resistance intensity and opacity-profit dependency.",
+      "impact": "If resistance is rent protection: constraint is institutional extraction (supports Snare classification). If resistance is execution/cost concerns: constraint is genuine coordination tradeoff (supports Tangled Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Resistance to CCP adoption as indicator of extraction versus tradeoff"
+    },
+    {
+      "id": "cascade_asymmetry_measurement",
+      "question": "During opacity-induced cascade events (2008 credit crisis, March 2020 volatility spike), does contagion impact correlate with institutional size/power or with exposure level alone?",
+      "resolution_mechanism": "Empirical analysis of crisis propagation: did large but highly-exposed institutions face greater pressure than smaller well-capitalized institutions? Did crisis asymmetry protect larger players through implicit backstop?",
+      "impact": "If contagion asymmetric to size: indicates suppression mechanism that protects institutional beneficiaries from worst outcomes (supports Snare or Tangled Rope with protected beneficiary). If contagion asymmetric to exposure: constraint operates more equitably, supporting Tangled Rope over Snare.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether cascade harm correlates with institutional size or actual exposure"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.38
+      "value": 0.35,
+      "id_override": "cpo_extractiveness_t0"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.48
+      "time_point": 8,
+      "value": 0.5,
+      "id_override": "cpo_extractiveness_t8"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.58
+      "time_point": 16,
+      "value": 0.58,
+      "id_override": "cpo_extractiveness_t16"
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.52
+      "value": 0.48,
+      "id_override": "cpo_theater_t0"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.62
+      "time_point": 8,
+      "value": 0.6,
+      "id_override": "cpo_theater_t8"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.68
+      "time_point": 16,
+      "value": 0.65,
+      "id_override": "cpo_theater_t16"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48,
+      "id_override": "cpo_suppression_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.58,
+      "id_override": "cpo_suppression_t8"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 16,
+      "value": 0.62,
+      "id_override": "cpo_suppression_t16"
     }
   ],
   "interval": {
     "start": 0,
-    "end": 10
+    "end": 16
   },
   "commentary": {
-    "narrative_context": "Counterparty risk opacity in financial markets creates a structural tension between the operational necessity of decentralized credit markets and the systemic danger of unmeasured interconnection. When one financial institution cannot reliably assess the solvency or leverage of its counterparties, it faces two costs: the direct cost of verification (which is high for complex derivatives and off-balance-sheet exposures) and the indirect cost of unmonitored contagion risk. This constraint exhibits tension between what appears as immutable (information asymmetry is inherent to markets) and what is contingent policy (the degree of opacity is a choice). The extractiveness trajectory (0.38 \u2192 0.58 over interval) reflects increasing leverage concentration and complexity in derivatives markets outpacing regulatory disclosure capacity. The theater ratio rise (0.52 \u2192 0.68) indicates that regulatory oversight increasingly consists of performative reporting rather than genuine verification \u2014 stress tests and capital ratios persist despite evidence that they fail to predict stress scenarios.",
+    "narrative_context": "Counterparty risk opacity in financial markets is a foundational constraint that enables decentralized credit systems to function while creating systemic contagion pathways. The constraint operates at multiple scales: bilateral institution-to-institution relationships, systemwide interconnection networks, and the macroeconomic level where cascading defaults propagate. The opacity itself is not accidental — it is structurally maintained through the complexity of off-balance-sheet derivatives, the cost of comprehensive verification, and most importantly, the institutional incentive structure that rewards participants who exploit information asymmetry. The 2008 financial crisis revealed that institutions had built entire profit centers on counterparty opacity while simultaneously being shielded from worst-case outcomes through implicit government backstops. The post-2008 regulatory response (stress testing, capital requirements, central counterparty clearing mandates) has reduced opacity in some segments (standardized derivatives) while opacity persists in bespoke instruments, lending relationships, and interconnection measurement. The constraint exhibits a classic Tangled Rope signature: genuine coordination function (decentralized credit markets require some opacity to avoid prohibitive verification overhead), combined with substantial asymmetric extraction (large institutions profit from opacity while transferring tail risk to system and smaller counterparties), and active enforcement (internal risk systems, counterparty agreements, regulatory capital buffers all maintain the opacity regime). The theater ratio (0.65) reflects that regulatory surveillance (stress tests, CDS monitoring, interconnection mapping) is substantially performative — regulators measure opacity retrospectively but cannot prevent cascade once opacity-induced mispricing becomes manifest.",
     "key_agents": [
-      "Interconnected Debtor: Primary victim (powerless/trapped) \u2014 participants in OTC derivatives networks with no ability to verify counterparty leverage; bears full contagion cost",
-      "Opacity-Maintaining Institutions: Primary beneficiary (institutional/arbitrage) \u2014 major dealers and asset managers who profit from information asymmetry and market-making spreads; can assess peer risk through privileged information channels",
-      "Risk Arbitrage Traders: Secondary beneficiary (powerful/mobile) \u2014 specialized traders who extract value from opacity through leveraged bets on hidden exposures; can exit the market when information advantages decline",
-      "Regional Banks: Secondary victim (moderate/constrained) \u2014 face barriers to counterparty verification due to cost and complexity; also benefit from opacity on their own balance sheet, creating ambiguous exit position",
-      "Transparency Mandate Coalition: Organized agents (organized/mobile) \u2014 regulators, central banks, and open-finance advocates building alternative infrastructures (CBDC, trade repositories, centralized clearing)",
-      "Regulatory Reporting Theater: Institutional actor (institutional/arbitrage) \u2014 maintains stress testing and capital adequacy frameworks that provide appearance of oversight without genuine verification capacity",
-      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent market structures as inherent properties of finance"
+      "Systemically Important Financial Institutions (SIFIs): Primary beneficiaries (institutional/arbitrage) — capture opacity-driven pricing advantages, implicit government backstop, counterparty risk mispricing arbitrage. Net recipients of effective extraction flow.",
+      "Financial System Stability Collective: Primary victim (powerless/trapped) — abstract collective of depositors, counterparties, and economy. Bears contagion cost and tail risk. Cannot organize or exit.",
+      "Collateral-Strained Counterparties: Secondary victim (moderate/constrained) — mid-size institutions face binding margin calls and repo haircuts during opacity cascades; cannot fully exit due to market dependency.",
+      "Derivatives Trading Desks: Mixed position (powerful/mobile) — derive profits from opacity-enabled arbitrage but also face regulatory constraints and execution pressure. Active participants in maintaining constraint through counterparty agreements and position management.",
+      "Regulatory Surveillance Apparatus: Institutional actor (institutional/arbitrage) — maintains performative oversight (stress tests, reporting) while constraint persists; benefits from opacity through reduced supervision burden (unmonitored tail risk avoids political pressure).",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing opacity as inherent to decentralized credit, missing institutional choice dimension."
     ],
-    "logic_rationale": "Extractiveness (0.58): Substantial and rising. The constraint enables information-privileged institutions to capture value from counterparty risk that less-informed agents cannot price. Initial value (0.38) reflects baseline information advantage; terminal value (0.58) reflects concentration of derivatives trading in a shrinking dealer network that can self-assess risk through cross-client information flows. The increase is real \u2014 market structure changes have made opacity more extractive, not less. Suppression (0.65): High. Barriers to exit and verification include: (1) OTC derivatives settlement requires counterparty relationships with major dealers who control opacity; (2) alternative clearing venues have inferior liquidity and higher trading costs; (3) regulatory frameworks incentivize opacity through proprietary treatment of client lists and trading positions; (4) technological barriers (legacy settlement systems, firm-specific derivatives) create switching costs. Theater ratio (0.68): Moderately high and rising. Regulatory stress testing (CCAR, DFAST) provides appearance of capital adequacy verification without genuine reconstruction of market-wide leverage and contagion pathways. Regulators cannot independently verify whether reported exposures match reality \u2014 test exercises are based on firm submissions without direct market data access. Post-2008 regulatory momentum created theater institutions (Basel III reporting, LIBOR reform) that maintain appearance of control over opacity.",
-    "perspectival_gap": "The constraint exhibits dramatic perspectival divergence. Information-privileged dealers see opacity as pure coordination (Rope) \u2014 they are managing counterparty risk through information flows, and opacity enables their liquidity function. The organized transparency coalition sees opacity as temporary (Scaffold) \u2014 centralized clearing and real-time settlement reduce information advantage from opacity. Regional banks see mixed extraction and coordination (Tangled Rope) \u2014 opacity costs them verification expense but benefits their own non-disclosure, so exit is ambiguous. The interconnected debtor sees pure extraction (Snare) \u2014 unable to verify exposure, trapped in networks of major dealers. The regulatory theater sees its own role as degraded (Piton) \u2014 oversight mechanisms persist despite acknowledged limited capacity to verify leverage. The analytical observer risks a false mountain \u2014 treating market information asymmetry as an immutable law rather than a design choice. The perspectival gap is wide because the structural position relative to opacity determines whether the agent experiences it as profitable (dealers), costly (debtors), temporary (reformers), or performative (regulators).",
-    "directionality_logic": "Directionality values (d) range from 0.05 (information-privileged institutional beneficiaries with full information advantage and arbitrage exit) to 0.95 (trapped debtors with no independent verification capacity and systemic exposure). The sigmoid function f(d) amplifies the directionality gap: beneficiaries with arbitrage exit experience negative effective extraction (coordination benefit), while trapped debtors with no verification exit experience maximum extraction near 1.42. The piton classification derives from the high theater ratio (0.68), not from high chi \u2014 the regulatory reporting apparatus appears substantial but provides minimal actual counterparty risk monitoring capacity. Regional banks occupy the constrained middle: they face real verification costs that suppress their exit options, but they also benefit from opacity on their own disclosures, creating an ambiguous position reflected in the Tangled Rope classification at the moderate power level."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts from counterparties and system stability through multiple mechanisms: (1) opacity-enabled mispricing of counterparty risk (derivatives traders price credit risk below true levels because counterparty solvency is unmeasured), (2) collateral arbitrage (large institutions access cheap funding because counterparties cannot accurately assess their leverage), (3) implicit government backstop (large institutions extract value from public sector rescue insurance that smaller counterparties do not receive), (4) contagion transfer (opacity enables cascade where concentrated institutions shed risk onto fragmented counterparties). However, extractiveness is not maximal (not >0.70) because some genuine coordination value exists — decentralized credit markets do solve the problem of funding allocation without requiring centralized clearing for every position. Suppression (0.62): High. Multiple barriers prevent accurate counterparty risk measurement: (1) technical complexity of derivative positions (off-balance-sheet exposures, model dependencies, nonlinear sensitivities), (2) institutional barriers (confidentiality agreements, competitive secrecy, information asymmetry incentivized by profit-taking), (3) regulatory gaps (regulators can measure some systemic risks but cannot enforce real-time transparency), (4) market structure (fragmented bilateral relationships prevent coordination on information sharing). Theater ratio (0.65): Moderate-high. Post-2008 regulatory apparatus (stress testing, capital requirements, CDS monitoring) is substantially performative. Stress tests predict crisis modes but cannot prevent them once opacity-induced mispricing manifest. Regulators measure interconnection retrospectively through CDS spreads and credit event data, not prospectively. Capital requirements set to levels that assume counterparty risk is correctly priced — but opacity means the pricing assumption is violated precisely when constraint matters most.",
+    "perspectival_gap": "The constraint demonstrates classification divergence driven by agent structural position and exit capacity. The SIFI sees pure coordination (Rope) — opacity enables the decentralized credit function they depend on. The collateral-strained counterparty sees extraction (Snare or Tangled Rope) — they face binding constraints precisely because opacity prevents accurate risk measurement, yet they have constrained exit options. The derivatives desk sees mixed extraction and coordination (Tangled Rope) — they profit from mispricing but operate within regulatory and execution constraints. The regulatory apparatus sees degraded oversight (Piton) — stress tests and reporting create appearance of monitoring without enabling prevention. The system-level observer sees extraction (Snare) — the collective contagion cost vastly exceeds coordination benefits. The civilizational analytical observer risks seeing necessity (Mountain) — opacity seems inherent to decentralized credit — but this naturalizes an institutional choice (decentralized over centralized clearing).",
+    "directionality_logic": "Each perspective's directionality derives from structural position: (1) SIFIs are beneficiaries with arbitrage-level exit options (can switch counterparties, access multiple funding sources, shape regulatory environment). Their d is low (~0.15), producing negative chi — they experience opacity as net benefit. (2) Collateral-strained counterparties are victims with constrained exit (depend on funding relationships, face regulatory and operational barriers to leaving). Their d is high (~0.80), producing high chi — they experience opacity as extraction. (3) System stability collective is victim with trapped exit (cannot exit interconnected system). Their d is very high (~0.95), producing maximum chi — they bear full contagion cost. (4) Derivatives desks are beneficiaries with mobile-to-arbitrage exit (can adjust positions, reallocate capital). Their d is moderate (~0.45), producing moderate chi — they profit but within constraints. (5) Regulatory apparatus sees opacity as beneficiary through reduced supervision burden, with arbitrage-level exit (can adjust surveillance focus). Their d is low (~0.20), producing negative chi — they benefit from not having to police opacity. (6) Analytical observer's d is computed from observer position (~0.72), revealing the natural law perspective as downstream of SIFI framing.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy through differentiated perspectives rather than type uncertainty. All institutional perspectives agree the constraint involves both coordination (enabling decentralized credit) and extraction (beneficiary profit from information asymmetry). The question is not 'is this really extraction or coordination?' but 'whose extraction and whose coordination?' The SIFI sees coordination (benefits from opacity). The system sees extraction (bears contagion). The collateral-strained counterparty sees both — coordination benefits from market access, extraction costs from margin calls. The mandatrophy dissolves when the analytical framework captures that the same structural feature (opacity) enables coordination for beneficiaries and extraction for victims. This is the essential feature of Tangled Rope: real coordination function + asymmetric extraction + active enforcement to maintain both simultaneously."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "liquidity_illusion_in_derivatives",
-      "systemic_contagion_fragility",
-      "regulatory_forbearance_cycle"
+      "credit_default_swap_basis_mispricing",
+      "margin_amplification_cascade",
+      "implicit_government_backstop_pricing"
     ],
-    "dual_formulation_note": "Counterparty risk opacity is upstream of specific contagion scenarios. The structural ambiguity about opacity (coordinating mechanism vs extraction device) cascades to market liquidity claims (which rest on information asymmetry) and systemic stability assessment (which assumes opacity is knowable). Decomposition: information_standard_clearing (\u03b5\u22480.12, Rope) vs counterparty_leverage_hiding (\u03b5\u22480.72, Snare) are separable constraints in the same market structure."
+    "dual_formulation_note": "Counterparty risk opacity is upstream of specific pricing mechanisms (CDS basis mispricing, margin amplification) and institutional dependencies (implicit backstop pricing). Each downstream constraint has its own ε and structural data but inherits the opacity regime as a causal precondition. Network links enable contamination propagation analysis: if opacity constraints degrade (due to regulatory mandate or competitive pressure), downstream constraints shift in predictable ways."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.08
+      "d_value": 0.2
     }
   ]
 }

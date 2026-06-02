@@ -1,0 +1,264 @@
+{
+  "header": {
+    "constraint_id": "public_health_mandate_authority__proportionality_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-27",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_public_health_mandate_authority__proportionality_reading",
+    "measurement_id_prefix": "phma_prop",
+    "story_uid": "2370f68c-27e7-40b7-8b5a-4da15bb441c9"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Public Health Mandate Authority (Proportionality Reading)",
+    "topic_domain": "public_health_law/constitutional_rights/bioethics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "immunocompromised_populations",
+      "high_transmission_prevention_agents"
+    ],
+    "victims": [
+      "mandate_noncompliers",
+      "bodily_autonomy_bearers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Mandate Noncomplier (Trapped)",
+      "comment": "PERSPECTIVE 1: MANDATE NONCOMPLIER (SNARE) — Agent faces absolute prohibition on exit; refusal triggers mandatory enforcement (employment loss, institutional exclusion, legal penalty). No meaningful alternatives; coercion is maximum. Trapped by regulatory regime with no proportionality brake perceivable from inside the constraint."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Conditionally Exempt Population",
+      "comment": "PERSPECTIVE 2: CONDITIONALLY EXEMPT POPULATION (TANGLED ROPE) — Medical exemptions, religious exemptions, prior-infection recognition exist as theoretical alternatives but are constrained by administrative burden, proof requirements, and discretionary denial. Agent benefits from collective protection yet bears asymmetric burden of seeking exemption. Mixed coordination (collective goods) and extraction (selective burden placement)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Public Health Authority",
+      "comment": "PERSPECTIVE 3: PUBLIC HEALTH AUTHORITY (ROPE) — Experiences mandate as coordination mechanism for disease containment. Authority has exit option (arbitrage): can calibrate mandate scope, intensity, and duration based on threat level. Can transition to voluntary measures without institutional collapse. Mandate serves genuine coordinating function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Immunocompromised Coalition",
+      "comment": "PERSPECTIVE 4: IMMUNOCOMPROMISED COALITION (TANGLED ROPE) — Benefits from mandate (reduced transmission risk) but constrained by mandate design that may exclude them or create perverse incentives (e.g., mandate based on vaccination status alone may not account for immunocompromised unvaccinated or vaccine-resistant populations). Organizational capacity allows advocacy but lacks ultimate exit option — cannot escape epidemiological vulnerability."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Proportionality Enforcement Mechanism",
+      "comment": "PERSPECTIVE 5: PROPORTIONALITY ENFORCEMENT MECHANISM (SCAFFOLD) — Sunset logic embedded in proportionality standards: mandate intensity should decline as threat level declines, duration should be limited to epidemiological necessity, coercion magnitude should scale with invasion severity. Organized agents (courts, ethics boards) with mobile exit can calibrate mandate. When threat recedes, proportionality framework mandates mandate recession. Temporal boundary condition."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From civilizational scope, infectious disease dynamics and population immunity constitute natural constraints on liberty: some degree of collective coordination is structurally inevitable when pathogenic threat exists. Liberty itself depends on population health. This perspective treats proportionality balancing as immutable natural law — the necessity of trading liberty for epidemiological containment. Engine's false summit detector will identify beneficiaries and reveal this as naturalization of a contingent constitutional framework."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "threat_level_measurement_ambiguity",
+      "question": "What constitutes 'sufficient threat level' to justify proportionality of a particular mandate intensity? Who measures threat, and by what standard?",
+      "resolution_mechanism": "Epidemiological comparative analysis: case fatality rate thresholds, transmission rate dynamics, healthcare system capacity burden. Institutional analysis: which decision-maker controls threat assessment, what appeals mechanisms exist, what external review is available.",
+      "impact": "If threat measurement is opaque or authority-controlled: mandate appears as extraction even under proportionality framework (Snare). If measurement is transparent and externally reviewable: proportionality framework functions as designed (Tangled Rope with operative constraint on extraction).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Who measures threat level and by what epistemic standard"
+    },
+    {
+      "id": "alternative_containment_sufficiency",
+      "question": "For a given threat level, do non-coercive alternatives (voluntary measures, targeted protection of vulnerable populations, voluntary isolation protocols) achieve epidemiological sufficiency, or is mandate coercion structurally necessary?",
+      "resolution_mechanism": "Comparative epidemiological data: voluntary vs mandatory intervention outcomes in equivalent threat scenarios. Historical analysis of containment success with and without mandates. Population behavior modeling with and without coercive enforcement.",
+      "impact": "If alternatives suffice: proportionality framework collapses — mandate fails proportionality test on 'necessity' dimension (victim classification shifts, extractiveness rises to snare range). If alternatives are insufficient: proportionality framework holds (tangled rope confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether non-coercive alternatives achieve epidemiological containment"
+    },
+    {
+      "id": "proportionality_metric_alignment",
+      "question": "Do the four dimensions of proportionality (threat severity, alternative availability, coercion magnitude, duration constraint) actually determine mandate legitimacy and extractiveness, or do political/institutional factors decouple from this calculus?",
+      "resolution_mechanism": "Institutional analysis: cases where proportionality metrics would justify mandate recession but mandates persisted; cases where low-proportionality mandates were imposed but faced successful challenge. Comparative constitutionalism: how different jurisdictions operationalize proportionality and what outcomes follow.",
+      "impact": "If metrics align with outcomes: proportionality reading is operative constraint on extraction (tangled rope, scaffold). If decoupled: proportionality is theater masking extraction (piton). If metrics are manipulated by authority: proportionality is false summit (snare with naturalization).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether proportionality metrics actually constrain mandate legitimacy"
+    },
+    {
+      "id": "victim_boundary_determination",
+      "question": "Which populations count as 'victims' in the proportionality framework? Does a mandate protect some populations (immunocompromised) while extracting from others (bodily autonomy-privileged noncompliers)? Or is the victim set determinate?",
+      "resolution_mechanism": "Epidemiological decomposition: which populations experience net harm from mandate, which net benefit, which mixed effect. Equity analysis: how mandate impacts vary by baseline health status, access to exemption mechanisms, economic capacity to absorb employment loss.",
+      "impact": "If victim boundary is ambiguous or context-dependent: extractiveness is dynamic, constrained by threat level (reading's core claim). If victim boundary is fixed regardless of threat: constraint collapses to pure extraction (snare). If victim boundary is deliberately obscured: constraint is false summit (snare disguised as proportionality).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "How victim populations are determined under proportionality framework"
+    },
+    {
+      "id": "proportionality_vs_primary_readings_foreclosure",
+      "question": "Does commitment to proportionality framework logically foreclose the bodily_autonomy_primary reading (which denies that any level of threat can justify mandate coercion) or the public_health_primary reading (which denies that proportionality considerations can limit mandate scope)?",
+      "resolution_mechanism": "Logical analysis of axiom commitments: if proportionality grants legitimacy to mandates conditional on threat/alternative/coercion/duration metrics, can a framework simultaneously hold that (a) no threat level justifies coercion, or (b) any public health benefit justifies unlimited mandate scope? Map the logical space and identify genuine foreclosures vs coexistence.",
+      "impact": "If proportionality forecloses bodily_autonomy_primary: the two readings are incompatible within a single framework. If proportionality forecloses public_health_primary: constraint on mandate scope is operative. If neither is foreclosed: all three readings coexist across different institutional and political contexts.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Logical relationship between proportionality reading and the two sibling readings"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15,
+      "id_override": "phma_prop_extr_low_threat"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.42,
+      "id_override": "phma_prop_extr_moderate_threat"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.68,
+      "id_override": "phma_prop_extr_high_threat"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "phma_prop_supp_low_threat"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.58,
+      "id_override": "phma_prop_supp_moderate_threat"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.78,
+      "id_override": "phma_prop_supp_high_threat"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.62,
+      "id_override": "phma_prop_theater_low_threat"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48,
+      "id_override": "phma_prop_theater_moderate_threat"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35,
+      "id_override": "phma_prop_theater_high_threat"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The proportionality reading of public health mandate authority constructs legitimacy as a **dynamic, threat-indexed constraint** on governmental power to impose medical interventions. Under this reading, mandate legitimacy and extractiveness are not fixed properties but slide along four dimensions: (1) severity of the epidemiological threat, (2) availability of non-coercive alternatives, (3) magnitude of bodily or economic coercion imposed, and (4) duration of imposition. Mandates are justified (low extractiveness, coordination-dominant) only when all four dimensions align: high threat + no alternatives + proportional coercion + limited duration. As any dimension weakens, mandate legitimacy erodes and extractiveness rises. The constraint exhibits full perspectival heterogeneity: trapped noncompliers experience maximum extraction (snare); conditionally exempt populations experience mixed coordination-extraction (tangled rope); public health authorities experience a functional coordination mechanism (rope); immunocompromised populations experience asymmetric benefit and burden (tangled rope); proportionality enforcement mechanisms function as temporal sunset logic (scaffold); and the analytical observer risks naturalizing this institutional framework as immutable law of epidemiology (mountain → false summit). The core analytical claim: proportionality is not a rhetorical cover for unlimited mandate power but an actual structural constraint that should recalibrate mandate intensity as threat recedes.",
+    "key_agents": [
+      "Mandate Noncompliers: Powerless/trapped (biological/vocational/civic attachment), experience maximum extraction — absolute prohibition on alternatives, enforcement without proportionality threshold perceivable from their position",
+      "Immunocompromised Populations: Organized/constrained, experience mixed extraction and benefit — mandate protects them but may exclude them if based on vaccination status alone",
+      "Public Health Authority: Institutional/arbitrage, experience coordination function — can calibrate mandate scope and duration based on threat level and has exit to voluntary measures",
+      "Proportionality Courts/Ethics Boards: Organized/mobile, enforce temporal and intensity constraints — can mandate mandate recession as threat declines; represent operative constraint on authority",
+      "Bodily Autonomy Advocates: Organized/mobile, experience mandate as existential constraint on liberty; dispute whether any threat level justifies coercion (sibling reading anchor)",
+      "Public Health Primacy Advocates: Institutional/arbitrage, dispute whether proportionality should limit mandate scope; claim public health benefit justifies unlimited mandate (sibling reading anchor)",
+      "Analytical Observer: Civilizational/analytical, risk naturalizing proportionality framework as immutable epidemiological law rather than contingent constitutional choice"
+    ],
+    "logic_rationale": "Base extractiveness (0.52): Moderate. The proportionality reading treats extractiveness as dynamic, varying with threat level. At low threat (e.g., endemic seasonal respiratory virus), mandates fail proportionality on 'necessity' dimension — alternatives suffice, making mandate appear extractive (shift toward snare). At high threat (e.g., novel high-mortality pathogen), mandates meet proportionality — no viable alternatives exist, making mandate appear as legitimate coordination (shift toward rope/tangled rope). The baseline value (0.52) represents a **moderate threat scenario** where proportionality analysis produces mixed results: some populations benefit, some bear disproportionate burden. Suppression (0.58): Moderate-high. Mandates employ regulatory prohibition and employment/institutional exclusion — significant coercive force. But suppression is constrained by proportionality framework: proportional suppression should decline as threat reclines. The measurement trajectory shows suppression rising (0.25 → 0.78) as threat escalates, then expected to decline as threat recedes (not shown beyond time point 6). Theater ratio (0.48): Moderate-low. Under the proportionality reading, mandate communications should justify each coercive measure by reference to threat, alternatives, and duration. Theater is relatively low because the reading treats proportionality as an **operative constraint**, not rhetorical cover. Theater rises at low threat (0.62) when proportionality justification becomes attenuated, falls at high threat (0.35) when threat-necessity is clear. This trajectory reveals the reading's claim: as threat is unambiguous, performative justification declines; as threat recedes, performative justification must increase to maintain mandate legitimacy or mandate must be rescinded.",
+    "directionality_logic": "Each perspective's structural position determines directionality value (d) and experienced extractiveness (χ). Mandate noncompliers: d ≈ 0.95 (maximum target), d-value approaches 1.0 → f(d) ≈ 1.42 (powerless multiplier) → high χ. These agents face absolute prohibition and enforcement; their only exit is flight. Conditionally exempt populations: d ≈ 0.60 (asymmetric cost distribution), moderate/constrained power → d-value 0.60 → f(d) ≈ 0.88 → moderate χ. Public health authority: d ≈ 0.08 (beneficiary with arbitrage exit), institutional/arbitrage → d-value 0.08 → f(d) ≈ -0.08 → negative χ (authority experiences mandate as enabling rather than extractive). Immunocompromised coalition: d ≈ 0.45 (mixed costs and benefits), organized/constrained → d-value 0.45 → f(d) ≈ 0.38 → moderate-low χ. Proportionality enforcement: d ≈ 0.50 (symmetric observer position), organized/mobile → d-value 0.50 → f(d) ≈ 0.65 → moderate χ but with exit capacity (can calibrate or rescind). The proportionality reading's core claim: d and f(d) are **threat-indexed**. As threat level rises, noncompliers' d approaches 1.0 (their victim status becomes justified); as threat recedes, d should fall toward 0.3 (noncompliers become arbitrary targets, extraction rises). The engine's derived d values should track threat trajectory; if they don't, proportionality constraint is inoperative.",
+    "perspectival_gap": "This reading produces maximum perspectival gap. The noncomplier sees snare (absolute prohibition, enforcement, no perceivable proportionality threshold). The authority sees rope (functional coordination, threat-responsive calibration, arbitrage exit). The immunocompromised coalition sees mixed benefit-and-burden (tangled rope). Proportionality enforcement sees temporal constraint (scaffold with sunset as threat recedes). The analytical observer risks seeing mountain (natural epidemiological law requiring liberty-health tradeoff). The kernel contest surface in this gap: does proportionality actually constrain mandate power (proportionality_reading), or do authorities claim proportionality while maintaining unlimited mandate scope (public_health_primary falsely wearing proportionality clothing), or do any mandates constitute unjustifiable violation (bodily_autonomy_primary)? The gap reveals which reading is operative in practice: if mandates persist long after threat recedes, proportionality is theater (piton) and public_health_primary reading governs actual behavior. If mandates are rescinded when proportionality metrics fail, proportionality reading governs and public_health_primary is foreclosed.",
+    "mandatrophy_analysis": "The proportionality reading resolves mandatrophy by introducing a **metric-indexed constraint** on mandate legitimacy: extractiveness is not fixed but varies with threat level, alternative availability, coercion magnitude, and duration. This requires the analyst to ask not 'Is this mandate a Rope or Snare?' but 'Under what conditions does this mandate classify as what type?' The reading avoids false mandatrophy resolution by refusing to collapse the six types into a single claim. Instead, it maps the conditions under which each type is appropriate: Snare (mandate persists despite low threat or availability of alternatives), Tangled Rope (mixed benefit and burden with proportional coercion), Rope (clear threat, no alternatives, proportional response, functional coordination), Scaffold (time-limited mandate with sunset logic). The reading is mandatrophy-resolving because it treats classification as **contextual and revisable**, not frozen. The engine's task becomes: as threat level changes (empirical measurement), does mandate intensity change correspondingly? If yes, proportionality operates and the constraint is legitimately tangled rope/rope. If no, proportionality is theater and the constraint degrades to snare/piton.",
+    "kernel_context": "This constraint is the **proportionality_reading** of the contested kernel **public_health_mandate_authority**. The kernel is the stabilized commitment upon which public health law grounds the legitimacy of mandatory medical interventions. The proportionality reading instantiates one interpretation of that kernel: mandate legitimacy depends on **dynamic balancing** of threat severity, alternative availability, coercion magnitude, and duration. This contrasts with two sibling readings: (1) **public_health_primary**: public health benefit alone justifies mandate scope (no proportionality limit); (2) **bodily_autonomy_primary**: bodily integrity permits no mandate coercion regardless of threat level. All three readings cite the same kernel (public health mandate authority) but read it differently. The proportionality reading explicitly forecloses neither sibling reading logically — all three remain 'live' positions in different constitutional contexts — but influences both downstream: proportionality constrains public_health_primary's mandate scope, and proportionality is constrained by bodily_autonomy_primary's invocation of fundamental rights. The reading's reference frame is **balancing_test_constitutional_framework**, grounding legitimacy in case-law doctrines (strict scrutiny, least restrictive means, narrow tailoring) developed in free-speech and equal-protection jurisprudence, adapted to public health. The reading's foundational axiom is **proportionality_constrains_mandate_legitimacy**: mandate legitimacy is not solely a function of public health benefit but requires proportional relationship between coercion imposed and threat severity. This axiom is holdable within contemporary constitutional law — it is the actual governing standard in several jurisdictions — but faces continuous pressure from public_health_primary advocates who dispute that proportionality should limit mandate scope."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "public_health_mandate_authority__public_health_primary",
+      "public_health_mandate_authority__bodily_autonomy_primary"
+    ],
+    "dual_formulation_note": "Public health mandate authority is a contested kernel with three structurally distinct readings, each constituting a separate constraint. The proportionality_reading treats mandate legitimacy as dynamic and threat-indexed; the public_health_primary reading treats mandate scope as unrestricted by proportionality; the bodily_autonomy_primary reading denies that any threat level justifies mandate coercion. The three constraints have different ε values: proportionality (ε=0.52, dynamic) reflects mixed coordination-extraction that varies with context; public_health_primary (expected ε>0.70, snare-range) treats mandate as institution-benefiting extraction disguised as public health; bodily_autonomy_primary (expected ε<0.25, rope or mountain-range) treats mandate as illegitimate constraint on inalienable rights. Each constraint is a separate JSON file linked via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.6
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "balancing_test_constitutional_framework",
+    "drift_state": {
+      "moment": "contemporary_post_pandemic_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "public_health_mandate_authority__public_health_primary",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "public_health_mandate_authority__bodily_autonomy_primary",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "proportionality_constrains_mandate_legitimacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "mandate_necessity_conditional_on_alternatives",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  }
+}

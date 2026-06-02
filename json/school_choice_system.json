@@ -4,7 +4,8 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "schoolchoice"
+    "measurement_id_prefix": "schoolchoice",
+    "story_uid": "85ce332d-5472-4f8e-ab79-8a74f234b3b3"
   },
   "base_properties": {
     "extractiveness": 0.52,
@@ -15,14 +16,14 @@
     "topic_domain": "education/policy",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "advantaged_families",
-      "charter_operators",
-      "selective_schools"
+      "affluent_families",
+      "high_performing_schools",
+      "charter_school_operators"
     ],
     "victims": [
       "low_income_families",
-      "public_school_funding",
-      "students_with_disabilities"
+      "neighborhood_public_schools",
+      "students_in_school_instability"
     ]
   },
   "perspectives": [
@@ -31,9 +32,9 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "regional",
-      "label": "The Immobilized Low-Income Family",
-      "comment": "PERSPECTIVE 1: LOW-INCOME FAMILY (SNARE) \u2014 Structurally trapped by transportation, information, and application barriers. School choice rhetoric promises agency but delivers extraction: the family cannot exercise choice due to work schedules, lack of transportation, inability to navigate application systems, or unavailability of slots in quality schools near them. Maximum suppression; no exit options; zero perceived coordination benefit."
+      "spatial_scope": "local",
+      "label": "Low-Income Family in Failing School District",
+      "comment": "PERSPECTIVE 1: LOW-INCOME FAMILY (SNARE) — Formally has choice but faces material barriers: transportation costs, information asymmetries about school quality, application complexity, inflexible work schedules, lack of social networks informing school selection. The choice mechanism exists but its prerequisites (time, information, mobility) are inaccessible. Maximum extraction: family bears the suppression of limited access while high-performing schools capture the motivated families they want."
     },
     {
       "classification_type": "tangled_rope",
@@ -41,8 +42,8 @@
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "regional",
-      "label": "The Mobile Middle-Class Family",
-      "comment": "PERSPECTIVE 2: MOBILE MIDDLE-CLASS FAMILY (TANGLED ROPE) \u2014 Faces high but surmountable costs to exercise choice: time investment in research, application competition, possible relocation. Experiences genuine coordination benefit (expanded options if they win the competitive process) alongside extraction (time, emotional labor, status anxiety, social sorting). Constrained exit \u2014 can participate but at significant cost."
+      "label": "Middle-Class Family with Partial Mobility",
+      "comment": "PERSPECTIVE 2: MIDDLE-CLASS FAMILY (TANGLED ROPE) — Can exercise choice through modest time/resource investment or residential relocation. Benefits from access to better-performing schools than assignment would provide. Also bears costs: information burden, potential longer commute, risk of mismatched school fit, family displacement. Genuine mixed experience — coordination function (better match with students' needs and school capacity) coexists with asymmetric extraction (wealthier families capture the best options)."
     },
     {
       "classification_type": "rope",
@@ -50,89 +51,134 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "regional",
-      "label": "The Charter School Operator",
-      "comment": "PERSPECTIVE 3: CHARTER SCHOOL OPERATOR (ROPE) \u2014 Experiences choice system as pure coordination mechanism for their benefit. Gains access to students, public funding, operational autonomy, and growth capital through choice architecture. Sees the system as solving a genuine problem: providing alternative to failing traditional public schools. Arbitrage options (can exit to private sector, other jurisdictions); net beneficiary."
+      "label": "High-Performing Public School",
+      "comment": "PERSPECTIVE 3: HIGH-PERFORMING PUBLIC SCHOOL (ROPE) — Pure coordination benefit: choice mechanism allows them to serve motivated families, builds school community with aligned expectations, enables enrollment planning. No extraction burden — the school captures positive selectivity and network effects. Low effective extractiveness from this position."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Charter School Operator",
+      "comment": "PERSPECTIVE 4: CHARTER SCHOOL OPERATOR (ROPE) — Pure coordination plus profit opportunity: mechanism enables market entry, attracts motivated families, provides public funding. Coordination function is genuine (serves students who would otherwise be trapped in bad district schools). Extraction (profit margin, selective enrollment) is modest relative to the real coordination benefit. Net beneficiary with low suppression overhead."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "powerful",
-      "time_horizon": "biographical",
-      "exit_options": "arbitrage",
-      "spatial_scope": "regional",
-      "label": "The Advantaged Family with Arbitrage",
-      "comment": "PERSPECTIVE 4: ADVANTAGED FAMILY (TANGLED ROPE) \u2014 Experiences choice system as producing genuine coordination value (true expansion of options, real alternatives to assigned school) while simultaneously extracting from the system they use. Benefits from selective school access while profiting from property value appreciation in high-demand school zones. Arbitrage options; experiences minimal suppression; significant net benefit with some extraction embedded."
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Public School District (Under Choice Pressure)",
+      "comment": "PERSPECTIVE 5: PUBLIC SCHOOL DISTRICT (TANGLED ROPE) — Experiences choice as both coordination and extraction. Genuine benefit: forced to compete, improve pedagogy, serve remaining families better. Real extraction: loss of highest-performing students and families to selective schools and charters; funding follows students, reducing resources for lowest-performing schools; residual school population becomes increasingly disadvantaged; district loses best teachers to charter or suburban migration. Moderate power (can adjust policies, invest in instruction) but constrained by state funding formulas and competition."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Lowest-Performing Schools Left Behind",
+      "comment": "PERSPECTIVE 6: LOWEST-PERFORMING SCHOOLS (SNARE) — Experience pure extraction and abandonment. Choice mechanisms drain motivated families and best-performing students, leaving behind a more difficult-to-serve population with fewer resources. Suppression is extreme: trapped in a negative selection spiral with no capacity to improve enrollment, no ability to exit the policy regime, declining per-pupil funding as students depart. Maximum experienced extraction with no exit option."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
       "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "regional",
-      "label": "The Traditional Public School District",
-      "comment": "PERSPECTIVE 5: PUBLIC SCHOOL DISTRICT (PITON) \u2014 Maintains institutional legitimacy through choice-responsive rhetoric and selective school programs while core function degrades. Per-pupil funding declines as choice diverts resources; schools become sorted by family demographic; district serves increasingly immobile families (lowest-income, highest-need) with declining capacity. Theater ratio high: choice reports, selective enrollment policies, charter authorization mimics functional responsiveness while structural sorting intensifies. Trapped by statutory authority; cannot exit."
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "District Accountability and Reporting System",
+      "comment": "PERSPECTIVE 7: ACCOUNTABILITY METRICS (PITON) — School choice policies are justified through choice-amplifying metrics (test score gaps, graduation rates, value-added measures) that have become increasingly performative. The metrics drive school gaming (teaching to test, pushing out low-performing students), diverge from student wellbeing, and measure choice access rather than actual learning. The reporting apparatus persists through institutional inertia despite degraded function. Theater ratio: high (schools optimize metrics rather than pedagogy; choice data published but not actionable for powerless families)."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Views choice system as genuinely solving a coordination problem (assignment to neighborhood schools is inflexible, preventing response to demographic change or school quality variation) while simultaneously implementing a mechanism that extracts from powerless agents (low-income families, students with disabilities, English language learners). Sees the extraction as the primary outcome: choice systems sort families by ability to navigate complexity, concentrate resources in popular schools, and reduce funding for high-need populations. The coordination benefit is real but dwarfed by the extraction mechanism."
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Limits View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LIMITS (MOUNTAIN) — From a civilizational view, school quality is inextricably linked to residential location and family background. Choice cannot overcome these constraints — it merely redistributes who gets access to scarce high-quality seats. The constraint appears natural (fixed supply of good schools, unequal family resources) and immutable. This perspective risks naturalizing what is actually a policy choice (funding formulas, school assignment, zoning)."
     }
   ],
   "omegas": [
     {
-      "id": "information_access_sufficiency",
-      "question": "Do transparent school performance data and choice information systems actually eliminate information barriers for low-income families, or do structural barriers (language, time poverty, trust) prevent utilization?",
-      "resolution_mechanism": "Comparison of choice utilization rates by income/language across transparent vs opaque choice systems; exit surveys of families who did not exercise choice despite availability",
-      "impact": "If information sufficient: suppression \u2264 0.40, reclassify as Rope from low-income perspective. If barriers persist: suppression remains high, confirms Snare classification.",
+      "id": "choice_accessibility_threshold",
+      "question": "What level of information, transportation, application complexity, and time cost constitutes a genuine choice option for low-income families vs a formal-but-inaccessible option?",
+      "resolution_mechanism": "Longitudinal tracking of family choice patterns by income level; measurement of actual vs stated accessibility (families who know about options vs families who apply vs families who enroll); qualitative interviews on decision barriers",
+      "impact": "If threshold is low (modest information/time sufficient): choice mechanism is more rope than snare for low-income families. If threshold is high (substantial barriers required): choice is largely inaccessible, snare classification holds.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether information transparency eliminates low-income choice barriers"
+      "description": "Threshold for genuine vs formal choice accessibility by income level"
     },
     {
-      "id": "cream_skimming_mechanism",
-      "question": "Do charter schools and selective programs systematically attract above-average students through explicit selection, application complexity, or peer effects, thereby mechanically reducing peer quality in traditional public schools?",
-      "resolution_mechanism": "Longitudinal student demographic tracking; comparison of peer achievement distributions in choice schools vs public schools controlling for initial selection criteria; simulation of funding flow under counterfactual no-choice assignment",
-      "impact": "If systematic cream skimming confirmed: extractiveness should increase to 0.65+; mechanism is structural, not aspirational. If cream skimming minimal: choice system may genuinely improve average outcomes.",
+      "id": "selection_bias_vs_school_quality",
+      "question": "How much of the test score gap between choice schools and non-choice schools reflects genuine school quality improvement vs student selection bias (motivated families, higher baseline achievement, fewer special-needs students)?",
+      "resolution_mechanism": "Quasi-experimental design comparing charter/choice students to observationally similar public school students; randomized lottery analysis for oversubscribed schools; value-added models controlling for student and family characteristics",
+      "impact": "If selection dominates (>60% of gap): choice mechanism is primarily redistributive (allocating scarce spots), not improving overall quality. If school quality dominates (>40% of gap): genuine coordination benefit exists, snare classification for non-chosen schools is overstated.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Extent of systematic selection bias by charter and selective schools"
+      "description": "Decomposition of choice school gains into selection vs school quality effects"
     },
     {
-      "id": "funding_mechanism_neutrality",
-      "question": "Does per-pupil funding truly follow students to new schools, or do fixed costs in traditional public schools create a funding death spiral where choice systems drain resources faster than enrollment declines?",
-      "resolution_mechanism": "Comparative financial analysis of per-pupil funding trends in high-choice vs low-choice districts; accounting for fixed vs variable cost structures",
-      "impact": "If funding is neutral: Rope classification becomes more defensible. If funding creates death spiral: extractiveness increases, Tangled Rope confirmed, theater ratio may be understated.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether per-pupil funding adequately follows students across school systems"
-    },
-    {
-      "id": "special_needs_access_asymmetry",
-      "question": "Do charter schools and selective programs systematically under-serve students with disabilities, English language learners, and high-cost special needs despite legal access requirements?",
-      "resolution_mechanism": "Comparison of special needs population representation in choice schools vs public school baseline; analysis of explicit vs implicit barriers (enrollment caps, lack of services, application requirements)",
-      "impact": "If systematic exclusion confirmed: victims should include 'students_with_disabilities' and 'english_learners' as primary categories. Extraction mechanism targets most vulnerable; suppression increases; Snare classification becomes more prominent.",
+      "id": "equilibrium_redistribution_stability",
+      "question": "Does choice reach an equilibrium where everyone who can exit does so, creating stable two-tier systems? Or does continuing instability and redistribution prevent equilibrium?",
+      "resolution_mechanism": "Historical time-series of school enrollment shifts over 10+ years; demographic tracking of school composition changes; inter-generational family school choices; comparative analysis across districts with different choice policies",
+      "impact": "If stable two-tier: snare classification for trapped populations is permanent structural feature. If continuing redistribution: system is dynamically unstable, potentially opening windows for intervention.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether choice schools systematically under-serve students with special needs"
+      "description": "Long-term equilibrium structure of school choice systems"
     },
     {
-      "id": "choice_system_counterfactual_outcome",
-      "question": "If choice systems were removed, would student outcomes improve (due to funding consolidation and reduced sorting) or deteriorate (due to loss of alternatives and flexibility)?",
-      "resolution_mechanism": "Comparison of jurisdictions with declining vs expanding choice; longitudinal outcome tracking; simulation of resource reallocation under assignment vs choice",
-      "impact": "If outcomes improve without choice: Snare classification dominates; constraint is pure extraction. If outcomes deteriorate: Rope classification gains ground; constraint solves real coordination problem at extraction cost.",
-      "confidence": "low",
+      "id": "neighborhood_school_recovery_capacity",
+      "question": "Can neighborhood public schools that lose motivated families and resources recover through pedagogical improvement, or are negative selection effects (composition decline) self-reinforcing?",
+      "resolution_mechanism": "Case studies of district schools that improved despite choice competition; measurement of recovery investment vs selection pressure; teaching quality metrics in recovering vs declining schools",
+      "impact": "If recovery is possible: tangled rope is accurate (schools experience extraction but have agency to improve). If self-reinforcing decline: snare classification is more accurate (trapped in negative spiral).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Recovery capacity of non-chosen public schools under choice pressure"
+    },
+    {
+      "id": "charter_accountability_mechanism",
+      "question": "Are charter schools genuinely subject to closure for poor performance (accountability function) or insulated from accountability pressure by political protection or enrollment fluctuation?",
+      "resolution_mechanism": "Tracking of charter closures vs public school closures for equivalent performance; analysis of charter performance variation; case studies of underperforming charters that remain open",
+      "impact": "If genuine accountability: rope classification for charter operators is defensible (market discipline + coordination). If insulated: piton or snare classification (protected institutions extracting public funding with degraded accountability).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Actual charter school accountability vs claimed market discipline"
+    },
+    {
+      "id": "funding_follow_student_adequacy",
+      "question": "Does per-pupil funding follow the student adequately to maintain educational quality in non-chosen schools, or does funding adequacy decline for remaining students?",
+      "resolution_mechanism": "Tracking of per-pupil spending in choice vs non-choice schools; analysis of fixed costs (facilities, administration) that don't scale with enrollment loss; comparative resource availability for remaining students",
+      "impact": "If funding follows adequately: snare classification for lowest-performing schools is overstated (they retain adequate resources). If not: snare is accurate (declining resources compound selection losses, creating self-reinforcing decline).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether per-pupil funding adequately follows student movement"
+    },
+    {
+      "id": "false_summit_natural_law",
+      "question": "Is the unequal distribution of school quality a natural consequence of housing segregation and family-background effects (mountain), or a policy choice contingent on school funding mechanisms and assignment rules (tangled rope / snare)?",
+      "resolution_mechanism": "Comparative analysis: districts with different funding formulas (property-tax-dependent vs equalized), different choice architectures (universal vs limited), different residential integration levels; historical before/after of policy changes",
+      "impact": "If natural law: choice is inevitable redistribution mechanism, snare for low-income families is unavoidable. If contingent: different policies (equalized funding, universal access design) could reshape the constraint entirely.",
+      "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Counterfactual outcome comparison: choice vs no-choice systems"
+      "description": "Whether unequal school quality reflects natural law or policy design"
+    },
+    {
+      "id": "information_asymmetry_persistence",
+      "question": "As choice systems mature and information spreads, does the information asymmetry advantage for affluent families persist or diminish? Can universal information provision overcome the structural advantage?",
+      "resolution_mechanism": "Longitudinal tracking of information awareness by family SES over 5-10 years; evaluation of information interventions (choice guides, school comparison tools); measurement of choice-making quality improvements among low-income families",
+      "impact": "If asymmetry persists despite information: suggests structural barriers (time/transportation/risk-aversion) beyond information are the binding constraint. If asymmetry diminishes: information provision alone may reduce extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether information asymmetry advantages persist as systems mature"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.28
+      "value": 0.25
     },
     {
       "metric": "base_extractiveness",
@@ -145,6 +191,11 @@
       "value": 0.52
     },
     {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
       "metric": "theater_ratio",
       "time_point": 0,
       "value": 0.35
@@ -152,22 +203,27 @@
     {
       "metric": "theater_ratio",
       "time_point": 5,
-      "value": 0.5
+      "value": 0.48
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.65
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.58
+      "value": 0.62
     },
     {
       "metric": "theater_ratio",
       "time_point": 15,
-      "value": 0.72
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.58
     }
   ],
   "interval": {
@@ -175,35 +231,41 @@
     "end": 15
   },
   "commentary": {
-    "narrative_context": "School choice systems (charter schools, vouchers, open enrollment across district lines, selective schools within districts) represent a policy mechanism for decoupling school assignment from neighborhood residence. The stated coordination function is genuine: rigid assignment to failing neighborhood schools prevents families from accessing alternatives and prevents successful schools from expanding. However, the choice architecture simultaneously implements an extraction mechanism that sorts families by ability to navigate the system, concentrates resources in schools serving advantaged populations, and reduces funding available to high-need students. The constraint exhibits all characteristics of Tangled Rope: real coordination benefits for mobile, informed families; real extraction from trapped, immobile families; active enforcement through admissions policies, funding allocation, and application requirements; and a theater ratio that has increased over time as choice systems have emphasized aspiration and meritocratic framing while sorting intensifies. The extractiveness trajectory shows acceleration: initial choice systems were relatively low-extraction (0.28), creating genuine new options for constrained middle-class families. As systems matured, cream-skimming effects accumulated, peer composition sorting intensified, and funding mechanisms produced cascading effects (fixed costs remaining in public schools while per-pupil funding declined), raising extractiveness to current levels (0.52). Theater has similarly increased as choice systems rely on transparency reports and merit-based framing to justify outcomes that are increasingly determined by family background and ability to navigate applications.",
+    "narrative_context": "School choice systems (charter schools, vouchers, open enrollment across district lines, selective schools within districts) represent a policy mechanism for decoupling school assignment from neighborhood residence. The stated coordination function is genuine: rigid assignment to failing neighborhood schools prevents families from accessing alternatives and prevents successful schools from expanding. However, the implementation exhibits asymmetric extraction: affluent families can exercise choice through information access, transportation flexibility, and application navigation; low-income families face material barriers that render choice formal but inaccessible. The constraint exhibits tangled rope structure — real coordination coexists with asymmetric extraction — alongside snare dynamics for trapped populations, rope dynamics for beneficiaries, and piton dynamics for the accountability system that justifies the policy. The extractiveness trajectory shows accumulation over 15 years (0.25 → 0.58) as selection pressure intensifies, lowest-performing schools decline in composition and funding, and the two-tier system stabilizes. The theater ratio rises as accountability metrics (test scores, choice access) diverge from student wellbeing and learning quality.",
     "key_agents": [
-      "Low-income families: Primary victims (powerless/trapped) \u2014 Cannot exercise choice due to transportation, information, application barriers, and lack of slots in quality schools; experience choice rhetoric without choice reality",
-      "Middle-class families with resources: Secondary beneficiaries (moderate/constrained) \u2014 Gain genuine choice options but at high search/application/relocation cost; mixed experience",
-      "Advantaged families: Primary beneficiaries (powerful/arbitrage) \u2014 Gain selective school access and can arbitrage through property markets; net beneficiaries with minimal extraction cost",
-      "Charter operators: Secondary beneficiaries (institutional/arbitrage) \u2014 Gain access to public funding and growth capital; operate in advantaged market position",
-      "Traditional public school system: Primary victim (institutional/constrained) \u2014 Faces declining per-pupil funding, residualization to highest-need students, and institutional legitimacy loss",
-      "Students with disabilities: Primary victims (powerless/trapped) \u2014 Systematically excluded or under-served by choice schools despite legal access; bear extraction cost through reduced service availability",
-      "Analytical observer: Sees full structure (analytical/analytical) \u2014 Recognizes genuine coordination benefit alongside extraction mechanism that targets powerless agents"
+      "Low-Income Families: Primary victims (powerless/trapped) — formal choice exists but material barriers (transportation, information, application complexity, work schedule inflexibility) make choice inaccessible. Bears the suppression of limited de facto options.",
+      "Affluent Families: Primary beneficiaries (institutional/arbitrage) — can exercise choice through information access, transportation flexibility, residential mobility, and social networks. Captures high-performing school access.",
+      "High-Performing Public Schools: Secondary beneficiary (institutional/arbitrage) — benefits from positive selectivity, motivated student population, engaged families; genuine coordination function (better match of student/school).",
+      "Charter School Operators: Beneficiary (institutional/arbitrage) — captures public funding, attracts motivated families, has freedom from district constraints; experiences genuine coordination function alongside profit extraction.",
+      "Public School Districts: Mixed actor (moderate/constrained) — forced to compete (coordination benefit: improved performance), but also experiences extraction through loss of best students and families, declining funding, residual population becomes harder to serve.",
+      "Lowest-Performing Schools: Primary victims (powerless/trapped) — experience pure extraction through selection losses, declining resources, and negative composition shifts; no capacity to improve or exit.",
+      "Accountability and Metrics System: Institutional actor (institutional/arbitrage) — justifies choice through test score gaps and choice access data, but metrics have become performative and drive gaming rather than genuine learning improvement.",
+      "Analytical Observer: Sees natural law (civilizational/analytical) — risks treating unequal school quality as inherent rather than policy-contingent."
     ],
-    "logic_rationale": "Extractiveness (0.52): Moderate-high and increasing. The trajectory from 0.28 to 0.52 over 15 years reflects the maturation of cream-skimming effects and funding spiral impacts. Initial choice systems did solve real coordination problems (inflexible assignment, mismatch between families and neighborhood schools) with moderate extraction. As systems expanded, the sorting mechanism became dominant: families with information, time, and social capital could navigate choice; families without these resources could not. Funding followed students, but fixed costs in traditional public schools remained, creating a negative spiral. Current extractiveness reflects that choice systems primarily redistribute access toward advantaged families rather than expand total opportunity. Suppression (0.58): Moderate-high and stable. Multiple barriers prevent low-income families from exercising choice: transportation costs, application complexity, information asymmetries, lack of availability in desired schools, implicit/explicit enrollment barriers for high-need students. These barriers are not absolute (some low-income families do exercise choice) but are sufficiently high that the distribution of choice-takers is sharply skewed toward advantaged families. Theater ratio (0.65): Moderate-high and increasing. Choice systems maintain substantial performative activity: school choice reports, transparency metrics, merit-based admissions rhetoric, equity commitments despite systematic sorting. The theater serves to legitimate outcomes determined largely by family background. As the gap between stated meritocratic principles and sorting-based outcomes has widened, theater has increased to maintain institutional legitimacy.",
-    "perspectival_gap": "This constraint demonstrates sharp perspectival divergence driven by structural position. Low-income families see Snare: choice rhetoric without choice reality, pure extraction of hope without delivery. Middle-class families see Tangled Rope: genuine new options gained at high cost. Advantaged families see Rope: coordination benefits with minimal personal cost. Charter operators see Rope: pure coordination benefit from access to public funding and advantaged student demographics. Public school system sees Piton: degraded core function maintained through selective enrollment theater. Analytical observer sees Tangled Rope: real coordination benefit (alternatives to inflexible assignment) alongside real extraction mechanism (sorting by family resources). The perspectival gap reveals that 'choice' is not a neutral policy mechanism but a sorting device: it benefits families with resources to navigate it and extracts from families without those resources.",
-    "directionality_logic": "Directionality is derived from structural position (beneficiary vs victim) and exit options. Low-income families are victims with trapped exit (high d ~0.90), experiencing maximum extractiveness from the system. Middle-class families are both victims (high application costs, social anxiety) and partial beneficiaries (real options if they win the competition), with constrained exit (high cost but possible), yielding moderate d (~0.60). Advantaged families are beneficiaries with arbitrage exit (can leverage choice system or exit to private schools), yielding low d (~0.20). Charter operators are beneficiaries with arbitrage exit (can exit to other jurisdictions or private sector), yielding low d (~0.15). Public school system is a victim with constrained exit (cannot exit assignment role but can strategically serve choice-advantaged populations), yielding high d (~0.75). The analytical observer has analytical exit (can observe from outside the system) with d derived from the aggregate extraction pattern (~0.72), showing that the system primarily targets powerless agents. This directionality structure explains why Snare dominates from the powerless perspective while Rope dominates from the beneficiary perspectives.",
-    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that choice systems exhibit genuine coordination benefits (solving the real problem of inflexible assignment) while simultaneously implementing an extraction mechanism (sorting by family resources) that targets powerless agents. The false summit would be naturalizing choice as either 'pure coordination' (ignoring the sorting mechanism) or 'pure extraction' (ignoring the real alternatives created). The analytical classification as Tangled Rope reflects that both functions are structural: choice systems do expand options for some families AND do sort families by ability to navigate the system. The Tangled Rope classification prevents both errors: it rejects the libertarian framing that choice is pure coordination (ignoring distributional effects) and the leftist framing that it is pure extraction (ignoring that some families genuinely benefit). The reality is that choice systems coordinate school allocation while extracting from families without navigation capacity, making them structurally hybrid. The increasing extractiveness trajectory (0.28 \u2192 0.52) shows that as these systems mature, the extraction mechanism becomes more prominent: initial choice creates genuine new options; sustained choice sorts by family resources; mature choice systems concentrate resources in advantaged schools while funding traditional public schools serving residual populations. The mandatrophy is thus resolved not by claiming one type is 'correct' but by showing that Tangled Rope captures the structure: genuine coordination asymmetrically benefiting advantaged families, financed through extraction from powerless families."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The system exhibits genuine coordination (matching families with schools better suited to their preferences and needs) alongside significant asymmetric extraction (affluent families capture scarce high-quality seats, low-income families bear the suppression cost of limited access). The 0.52 value reflects that coordination is real but extraction dominates for trapped populations. The trajectory from 0.25 to 0.58 over 15 years shows accumulation as selection pressure increases, lowest-performing schools decline, and stable two-tier structures form. Suppression (0.58): Moderate-high. Multiple barriers suppress choice for low-income families: transportation costs (bus fare, longer commute, schedule constraints for working parents); information asymmetry (affluent families have social networks providing school quality information, low-income families lack these); application complexity (choice requires navigation of multiple school applications, different deadlines, enrollment procedures); enrollment timing (schools may reach capacity before low-income families learn about them); risk aversion (low-income families face greater risk from school mismatch — job loss means family relocation, school instability cascades). These barriers are structural, not individual. Theater ratio (0.65): High. Accountability metrics (test score gaps, choice access percentages, graduation rates) have become increasingly performative. Schools optimize for metrics rather than learning (teaching to test). Choice data is published (showing which students accessed choice) but is not actionable for powerless families (knowing 30% of families chose out of the district does not help a trapped family access choice). Metrics measure choice access, not choice quality or student learning outcomes. The gap between metric and function widens as systems mature.",
+    "perspectival_gap": "The gap between beneficiary (Rope) and victim (Snare) perspectives reveals that the constraint's extractiveness is not intrinsic but perspectival. The same policy mechanism produces coordination for agents with choice and extraction for agents without. The gap is not a measurement ambiguity — it reflects genuine structural asymmetry in access and exit options. The false summit (Mountain) perspective reveals that the analytical observer risks naturalizing policy contingency as natural law.",
+    "directionality_logic": "Beneficiaries with arbitrage exit (affluent families, charter operators) derive low d from beneficiary status + high exit capacity. Victims with trapped exit (low-income families in worst schools) derive high d from victim status + no exit capacity. Mixed-victim agents with constrained exit (public school districts, lowest-performing schools) derive moderate-to-high d from victim status + some but limited exit capacity (can improve instructional quality, but cannot overcome selection pressure or funding inadequacy). The suppression values calibrate how much the structural barriers matter: high suppression (0.58) means that formal choice without material access is inaccessible, increasing effective d and χ for trapped agents.",
+    "mandatrophy_analysis": "TANGLED ROPE is the canonical claim type because it correctly captures the coexistence of genuine coordination (solving the assignment rigidity problem) with asymmetric extraction (affluent families capture scarce quality, low-income families bear the suppression cost). The constraint is NOT a pure rope (which would require minimal extraction and no victims). It is NOT a pure snare for all populations (beneficiaries genuinely experience coordination, not extraction). The tangled rope type preserves both functions and prevents the common error of misclassifying mixed extraction-coordination as either pure coordination (Rope) or pure extraction (Snare). The false summit perspective (Mountain) is a diagnostic tool: it exposes the risk that policy makers naturalize what is actually contingent (unequal school quality is treated as natural consequence of housing and family background, rather than as a choice about school funding and assignment rules)."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "school_funding_distribution",
-      "residential_segregation_amplification"
+      "residential_segregation_and_school_composition",
+      "school_funding_adequacy",
+      "teacher_quality_distribution"
     ],
-    "dual_formulation_note": "School choice systems operate as a distinct constraint from the underlying school assignment mechanism. The choice architecture itself is decomposed from the funding mechanism (school_funding_distribution) and the residential segregation feedback (residential_segregation_amplification). Each story has its own extractiveness: assignment rigidity (low \u03b5), choice sorting (moderate-high \u03b5), funding dynamics (high \u03b5), segregation feedback (high \u03b5). Linked through network effects: choice \u2192 funding extraction \u2192 segregation \u2192 reduced public school capacity \u2192 increased extraction from immobile families."
+    "dual_formulation_note": "School choice represents one reading of the school assignment problem. An alternative reading (universal equalized funding + integrated neighborhoods) would produce a different constraint structure. These are distinct policies on the same domain; network links show how choice policy generates downstream effects on segregation, funding adequacy, and teacher distribution."
   },
   "directionality_overrides": [
     {
+      "power_atom": "institutional",
+      "d_value": 0.78
+    },
+    {
       "power_atom": "moderate",
-      "d_value": 0.58
+      "d_value": 0.42
     }
   ]
 }

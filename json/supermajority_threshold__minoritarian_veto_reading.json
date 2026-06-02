@@ -1,0 +1,265 @@
+{
+  "header": {
+    "constraint_id": "supermajority_threshold__minoritarian_veto_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "smaj",
+    "module_name_override": "constraint_supermajority_threshold__minoritarian_veto_reading",
+    "story_uid": "7f207f97-f850-4ebf-9dab-ae82d651a912"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Supermajority Threshold as Minoritarian Veto Lock-in (Minoritarian Veto Reading)",
+    "topic_domain": "constitutional_theory/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "status_quo_beneficiaries",
+      "entrenched_elites",
+      "historical_privilege_holders"
+    ],
+    "victims": [
+      "contemporary_majorities",
+      "reform_constituencies",
+      "systemic_change_constituencies"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Reform Constituency",
+      "comment": "PERSPECTIVE 1: REFORM CONSTITUENCY (SNARE) — Contemporary majorities commanding majority support for constitutional amendment (e.g., campaign finance reform, voting rights expansion, economic redistribution) face insurmountable threshold. No exit: they cannot withdraw from the polity; cannot override supermajority requirement; cannot change rules without the supermajority they lack. Maximum extraction and suppression experienced by those blocked from reform."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Status Quo Beneficiary Bloc",
+      "comment": "PERSPECTIVE 2: STATUS QUO BENEFICIARY BLOC (ROPE) — Entrenched elites, historical privilege holders, and incumbent power structures benefit from the supermajority threshold as a coordination mechanism: it coordinates their defense against majoritarian change without requiring constant active mobilization. The threshold's enforcement is structural (embedded in constitutional text) rather than performative. Pure coordination from this perspective — the constraint solves the collective action problem of defending existing distributions."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Transitional Swing Minority",
+      "comment": "PERSPECTIVE 3: TRANSITIONAL SWING MINORITY (TANGLED ROPE) — Agents positioned near the supermajority threshold (at 55-65% support for an amendment) experience the constraint as mixed. They face genuine coordination problems: supermajority thresholds protect minority rights against fleeting majoritarian impulses, and some protection is functional. But they also face extraction: their structural position as swing voters gives entrenched minorities disproportionate power to block reforms even when support is well above 50%. Constrained exit — leaving the polity, exit is high-cost; but swing position offers some agency."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Consensus Safeguard View)",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER / CONSENSUS SAFEGUARD VIEW (MOUNTAIN) — From a civilizational perspective emphasizing constitutional stability, supermajority thresholds appear as natural law: stable constitutions require supramajority support for radical change to prevent tyranny of temporary majorities. The threshold appears immutable — built into the logic of federalism and constitutional design itself. DIAGNOSTIC: This perspective is a false summit candidate. The structural data (identifiable beneficiaries, clear extraction flow, active enforcement requirement) contradicts the natural-law framing."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Historical Justification Apparatus",
+      "comment": "PERSPECTIVE 5: HISTORICAL JUSTIFICATION APPARATUS (PITON) — The original constitutional framers' justification (protecting minority rights, preventing tyranny of majorities, ensuring deliberation) persists as a legitimacy narrative even when the threshold has become a mechanism for entrenching historical privilege rather than protecting genuine minority rights. Theater ratio is low (the mechanism is not performative — it actually blocks reform), but the institutional narrative maintaining the threshold's legitimacy is degraded: institutions invoke 'minority protection' as cover for veto of majoritarian reform. Inertial persistence of original justification despite changed function."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Successor Majorities Across Generations",
+      "comment": "PERSPECTIVE 6: SUCCESSOR MAJORITIES ACROSS GENERATIONS (SNARE) — Even organized reform coalitions that achieve 55-60% support face the supermajority barrier. Unlike individual powerless agents, they have organizational capacity, but the structural constraint is extractive: successive majorities across generations are blocked by constitutional rules authored by coalitions that no longer command support. The constraint accumulates extraction across time as each new majoritarian impulse for reform is blocked. Organized but structurally defeated — the high suppression reflects that overcoming the threshold requires not just majority mobilization but sustained, increasing supermajorities."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "threshold_genesis_intent_vs_function_drift",
+      "question": "Was the supermajority threshold originally intended to protect discrete minority rights (e.g., religious minorities, small states), or was it designed to entrench the coalition that authored the constitution (historical privilege holders)?",
+      "resolution_mechanism": "Framers' intent analysis (Madison, Federalist papers); comparison of stated purpose vs. actual beneficiary bloc over constitutional history; analysis of which minorities the threshold has actually protected vs. which coalitions have used it to block reform",
+      "impact": "If original intent was discrete minority protection: threshold may be legitimately functional (Rope from consensus perspective, not Snare). If original intent was entrenchment: threshold is snare by design, and 'minority protection' framing is false summit. If both: threshold has drifted from protection to entrenchment over time as original minority constituencies gained power.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether supermajority threshold was designed for minority protection or entrenchment of founding coalition"
+    },
+    {
+      "id": "majoritarian_impulse_stability_empirics",
+      "question": "How often do documented majoritarian impulses for constitutional amendment (>50% sustained support) represent fleeting preferences vs. stable reform demands?",
+      "resolution_mechanism": "Longitudinal polling data on proposed amendments; historical tracking of public opinion on specific reform proposals (voting rights, campaign finance, economic policy) over decades; analysis of which blocked reforms have later achieved supermajority support vs. which have receded",
+      "impact": "If majorities are typically fleeting: supermajority threshold protects against temporal tyranny (Rope/Tangled Rope perspectives more defensible). If majorities are typically stable: blocking 55-65% supermajorities represents pure extraction (Snare classification robust). If pattern is mixed: threshold's function depends on domain (minority rights vs. economic redistribution may differ in temporal stability).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Temporal stability of documented majoritarian preferences for constitutional reform"
+    },
+    {
+      "id": "alternative_constitutional_threshold_comparison",
+      "question": "Jurisdictions using simple majority or different supermajority thresholds (e.g., 60%, 55%) — do they show different patterns of minority protection vs. majority entrenchment compared to the 66% threshold?",
+      "resolution_mechanism": "Comparative institutional analysis: cross-national and cross-state data on amendment success rates, minority protection track record, and reform lag by threshold level; analysis of whether lower thresholds correlate with more frequent reform or with degraded minority protection",
+      "impact": "If lower thresholds show similar minority protection with higher reform rates: 66% threshold is extractive choice, not necessary protection (Snare reading robust). If lower thresholds show degraded minority protection: threshold level is functionally justified (Rope reading more defensible). Threshold sensitivity analysis would reveal whether minority protection flattens after 55% or requires 66%.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Comparative institutional outcomes across different constitutional amendment thresholds"
+    },
+    {
+      "id": "entrenchment_coalition_demographic_evolution",
+      "question": "As the original constitutional coalition's demographic composition changes (e.g., descendant minorities gaining power, new ethnic majorities emerging), does the beneficiary bloc of the supermajority threshold shift, or does the threshold remain locked to the original beneficiary distribution?",
+      "resolution_mechanism": "Demographic tracking of which groups have used supermajority threshold as a veto against reform over time; analysis of whether descendant minorities of original beneficiary coalition now block reforms affecting their interests; comparison of beneficiary coalitions at constitution's founding vs. contemporary moment",
+      "impact": "If beneficiary bloc shifts with demographic change: threshold remains functional at protecting contemporary minorities (Rope reading). If beneficiary bloc locks to historical privilege even as power distributions change: threshold is pure entrenchment mechanism (Snare reading robust). If pattern is mixed (some beneficiaries shift, some lock): threshold enables entrenchment by earlier coalitions while creating new veto power.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether supermajority threshold beneficiary coalition shifts with demographic evolution"
+    },
+    {
+      "id": "reading_committer_ambiguity",
+      "question": "This is ONE READING of the supermajority_threshold kernel: the minoritarian_veto_reading. The sibling readings (consensus_safeguard_reading, adaptive_gradient_reading) advance different structural interpretations. Which reading's core premise should govern if all three cannot be simultaneously true within a single constitutional framework?",
+      "resolution_mechanism": "Framing resolution: empirical evidence on threshold function (does it protect minorities or entrench status quo?) guides which reading's foundational axiom is operative. But readings may coexist across different parties' commitments — consensus framers hold safeguard reading; reform movements hold veto reading; designers seeking optimization hold gradient reading. Resolution requires adjudication at the level of political power, not logical necessity.",
+      "impact": "If minoritarian_veto_reading forecloses consensus_safeguard_reading: amendment authority structure is fundamentally delegitimated (requires constitutional replacement or revolution). If readings coexist: threshold persists despite contested legitimacy (current structural state). If adaptive_gradient_reading forecloses both: threshold can be made functionally responsive to contingent historical conditions (reform path exists).",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Committer-frame ambiguity: which reading's axioms should govern the supermajority threshold's legitimacy"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "smaj_base_extract_founding"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.55,
+      "id_override": "smaj_base_extract_mid"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.68,
+      "id_override": "smaj_base_extract_contemporary"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45,
+      "id_override": "smaj_suppression_founding"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.58,
+      "id_override": "smaj_suppression_mid"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.72,
+      "id_override": "smaj_suppression_contemporary"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "smaj_theater_founding"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.3,
+      "id_override": "smaj_theater_mid"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.35,
+      "id_override": "smaj_theater_contemporary"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The supermajority threshold for constitutional amendment creates a fundamental structural constraint on majoritarian democratic will: proposals commanding 50-66% of public support and legislative majorities remain blocked from constitutional incorporation. This constraint is ONE READING of a contested kernel — the supermajority_threshold — that different political communities read differently. The minoritarian_veto_reading interprets the threshold as a snare: a mechanism that converts historical privilege (the coalitions that authored the constitution) into permanent veto power against reform, regardless of contemporary majoritarian support. Under this reading, the threshold is not a functional minority-rights protection but rather an entrenchment device that blocks necessary constitutional evolution while laundering its function through a 'consensus-safeguard' narrative. The beneficiary bloc (status quo beneficiaries, entrenched elites, historical privilege holders) experiences the threshold as pure coordination that solves their collective action problem. The victim bloc (contemporary majorities seeking constitutional reform on issues like voting rights, campaign finance, economic redistribution) experiences systematic extraction: their majority support is rendered powerless by rules authored by coalitions that no longer command contemporary legitimacy. The measurements show extraction and suppression accumulating over constitutional history — as the original coalition's privilege consolidates and becomes entrenched, the threshold's extractive function intensifies. Theater ratio remains low because the mechanism is not performative; it is functionally effective at blocking reform.",
+    "key_agents": [
+      "Status Quo Beneficiary Bloc (institutional/arbitrage): Coalition whose existing power distribution is protected by supermajority requirement; benefits from coordination function without facing extraction. Includes: established economic interests, regional power distributions locked into founding constitutional compromises, demographic groups whose relative power has increased since founding.",
+      "Contemporary Reform Majorities (powerless/trapped): Multiple successive waves of majority-seeking constituencies (voting rights expansion advocates, campaign finance reformers, economic redistribution movements, climate action proponents) blocked by supermajority barrier. Structurally defeated across generations.",
+      "Entrenched Elites (institutional/arbitrage): Historical privilege holders whose advantages are constitutionally locked in; benefit from inertia.",
+      "Swing Minorities at 55-65% Threshold (moderate/constrained): Agents and coalitions positioned near the supermajority line; experience mixed coordination and extraction as they negotiate between protection of their own interests and blocking of broader reforms.",
+      "Constitutional Framers' Legitimacy Apparatus (institutional/arbitrage): The institutional narrative that justifies the threshold as protecting minority rights against tyranny; persists as piton despite changed function.",
+      "Analytical Observer (analytical/analytical): Risks naturalizing the threshold as immutable constitutional law rather than contingent institutional design."
+    ],
+    "logic_rationale": "Extractiveness (0.68): High and accumulating. Base extractiveness measures the asymmetry between beneficiary and victim positions. At founding (t=0), extractiveness is moderate (0.35) because the threshold genuinely coordinates among multiple competing factions and protects against some tyranny risks. But as the founding coalition's privilege consolidates and becomes entrenched across generations (t=100), the same threshold mechanism increasingly functions to block majoritarian reform rather than to protect legitimate minority interests. Contemporary value (0.68) reflects that the threshold now blocks broad-based majoritarian preferences on major issues (voting rights, campaign finance, economic policy) while protecting a narrower beneficiary bloc. The upward trajectory is crucial: supermajority thresholds exhibit extraction_accumulation — a core diagnostic for degraded institutional function. Suppression (0.72): High. Measured by the cost imposed on reform constituencies to overcome the threshold. Requires not just majority coalition-building but a supermajority exceeding 66%, which means sustained support that can survive political cycles. Suppression includes: blocking of widely-supported reforms, blocking of necessary constitutional evolution in response to changed conditions, concentration of power in 33%+ blocking minorities. Suppression has accumulated as polity has become more pluralistic and diverse — coalitions that author constitutions are smaller and less representative than contemporary majorities. Theater ratio (0.35): Low-to-moderate. The supermajority threshold is not primarily performative — it actually blocks amendment and functions as an effective veto mechanism. Low theater means the mechanism is structurally real, not theater. The slight increase over time (0.25 → 0.35) reflects modest increase in performative elements: increasingly frequent invocation of 'minority protection' narrative even as the threshold's actual function is entrenchment.",
+    "perspectival_gap": "The gap between beneficiary and victim perspectives is maximum: one experiences pure coordination, the other pure extraction, from the identical structural mechanism. The analytical observer's mountain classification is a false summit — the threshold is not an immutable law but a contingent constitutional design. The piton perspective reveals degraded legitimacy narratives. The tangled rope and organized snare perspectives show how mixed and compounded extraction emerges at different organizational scales.",
+    "directionality_logic": "Each perspective's directionality (d) is derived from the agent's structural relationship to the extraction flow. Status quo beneficiaries have d ≈ 0.10 (full beneficiaries with arbitrage options to exit if necessary — they can exit by accepting majoritarian change, but choose not to because they benefit from the status quo). Reform majorities have d ≈ 0.95 (full targets with no exit option — they cannot withdraw from the polity, cannot override the supermajority requirement, cannot change rules without the supermajority they lack). Swing minorities have d ≈ 0.55 (symmetric: they benefit from minority protection of their own interests while also bearing costs from blocked reforms that would benefit broader coalitions they partially belong to). The sigmoid f(d) converts these directionality values to effective power modifiers. Beneficiaries with low d experience negative or minimal χ; trapped majorities with high d experience χ ≈ 1.42 (powerless level). The accumulated extraction across generations is modeled through the measurements: as suppression increases and extractiveness accumulates, the derived d values for subsequent generations shift upward (trapped minorities become more trapped) while beneficiary d values remain stable (entrenchment is self-reinforcing).",
+    "mandatrophy_analysis": "The minoritarian_veto_reading resolves mandatrophy by showing that the supermajority threshold IS a snare, not a coordination mechanism, when measured from the structural perspective of contemporary majorities blocked from constitutional reform. The mandatrophy is not 'is it coordination or extraction?' but rather 'for whom does it coordinate, and whom does it extract from?' The threshold coordinates the defense of existing distributions (Rope from beneficiary perspective) while extracting from those seeking reform (Snare from majority perspective). The false summit in the analytical observer's perspective is essential: the 'constitutional stability' framing naturalizes what is actually a choice to prioritize entrenchment of existing power over majoritarian responsiveness. Resolving mandatrophy requires acknowledging that the same mechanism is both genuinely functional (prevents some forms of tyranny) AND genuinely extractive (blocks majoritarian will across generations). The reading declares that extraction dominates: the threshold is primarily a snare dressed in coordination language.",
+    "kernel_context": "This constraint is the minoritarian_veto_reading of the supermajority_threshold kernel. The kernel is the fixed constitutional rule requiring 2/3 supermajority for amendment. Three readings instantiate different structural interpretations: (1) CONSENSUALSAFEGUARD_READING: The threshold protects minority rights and constitutional stability against tyranny of temporary majorities; it is a functional coordination mechanism. (2) MINORITARIAN_VETO_READING (this reading): The threshold converts historical privilege into permanent veto power; it is an extractive lock-in mechanism that blocks necessary reform. (3) ADAPTIVE_GRADIENT_READING: The threshold is a design parameter that could be made responsive to historical conditions — thresholds could vary by amendment type (civil rights vs. structural) or by temporal accumulation of majoritarian support, preventing both tyranny and entrenchment. The minoritarian_veto_reading claims the threshold's core function has drifted from protection (t=founding) to entrenchment (t=contemporary). The sibling readings advance different diagnoses of that function and different solutions."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "supermajority_threshold__consensus_safeguard_reading",
+      "supermajority_threshold__adaptive_gradient_reading"
+    ],
+    "dual_formulation_note": "The supermajority_threshold is a single kernel read by three structurally distinct constraint stories. Each reading instantiates a different ε and classification: consensus_safeguard_reading (ε ≈ 0.20, Rope) emphasizes coordination; minoritarian_veto_reading (ε ≈ 0.68, Snare) emphasizes extraction; adaptive_gradient_reading (ε ≈ 0.40, Tangled Rope) emphasizes design flexibility. These are not alternative measurements of the same constraint but three genuinely distinct claims about what function the threshold performs in constitutional reality. The network edges record which reading influences or constrains which others."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.93
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "founding_coalition_constitutional_authority",
+    "drift_state": {
+      "moment": "contemporary_demographic_pluralism",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "supermajority_threshold__consensus_safeguard_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "supermajority_threshold__adaptive_gradient_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "threshold_predominantly_entrenches_rather_than_protects",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "democratic_legitimacy_requires_majoritarian_constitutional_responsiveness",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  }
+}

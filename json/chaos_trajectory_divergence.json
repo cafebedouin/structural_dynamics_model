@@ -4,125 +4,153 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "chaos"
+    "measurement_id_prefix": "ctd",
+    "story_uid": "6a742750-9c1c-4567-9fbf-fe22da22f851"
   },
   "base_properties": {
     "extractiveness": 0.12,
     "suppression": 0.03,
-    "theater_ratio": 0.05,
+    "theater_ratio": 0.15,
     "claimed_type": "mountain",
-    "human_readable": "Chaos Trajectory Divergence",
+    "human_readable": "Chaos Trajectory Divergence in Nonlinear Dynamical Systems",
     "topic_domain": "dynamical_systems/mathematics",
     "emerges_naturally": true,
-    "accessibility_collapse": 0.95,
-    "resistance": 0.05
+    "accessibility_collapse": 0.92,
+    "resistance": 0.08
   },
   "perspectives": [
-    {
-      "classification_type": "mountain",
-      "agent_power": "powerless",
-      "time_horizon": "civilizational",
-      "exit_options": "trapped",
-      "spatial_scope": "universal",
-      "label": "The Predictor Facing Sensitive Dependence",
-      "comment": "PERSPECTIVE 1: PREDICTOR FACING SENSITIVE DEPENDENCE (MOUNTAIN) \u2014 An agent attempting to forecast the long-term trajectory of a chaotic system faces an immutable constraint: exponential divergence of nearby initial conditions. No escape from this limit exists through effort, resources, or institutional arrangement. The divergence is inherent to the mathematical structure."
-    },
-    {
-      "classification_type": "mountain",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The Scientific Community Studying Chaotic Systems",
-      "comment": "PERSPECTIVE 2: SCIENTIFIC COMMUNITY (MOUNTAIN) \u2014 Despite institutional effort, funding, computational power, and methodological sophistication, the divergence constraint cannot be overcome. Generations of scientists have accepted this as a fundamental limit. It has become encoded in statistical mechanics, weather forecasting, and dynamical systems theory as law."
-    },
     {
       "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From the global analytical position, chaos-induced trajectory divergence is a mathematical law: in sufficiently complex dynamical systems with positive Lyapunov exponents, the distance between trajectories starting from slightly different initial conditions grows exponentially over time. This is not a policy choice, institutional artifact, or coordination failure \u2014 it is a property of nonlinear mathematics itself."
+      "label": "The Pure Mathematician",
+      "comment": "PERSPECTIVE 1: PURE MATHEMATICS (MOUNTAIN) — From the perspective of formal dynamical systems theory, trajectory divergence in chaotic systems is an irreducible mathematical property. Systems with positive Lyapunov exponents diverge by necessity, not by institutional arrangement or practical limitation. The constraint is logically necessitated by the structure of the equations themselves. No exit, no alternative, no degree of freedom."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Predictor Agent",
+      "comment": "PERSPECTIVE 2: PREDICTOR (MOUNTAIN) — Any agent attempting to forecast the long-term evolution of a chaotic system faces an immutable barrier. Perfect knowledge of initial conditions yields perfect predictions only for infinitesimal time windows; exponential divergence renders long-term forecasting impossible regardless of computational resources or measurement precision. The constraint is unchangeable from any practical perspective."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Applied Engineer",
+      "comment": "PERSPECTIVE 3: APPLIED ENGINEERING (MOUNTAIN) — Engineering systems sensitive to chaotic divergence (turbulence modeling, weather prediction, climate simulation) cannot escape the constraint through better design or more careful implementation. The exponential divergence timescale — the Lyapunov time — is a fundamental property of the physical system being modeled, not an artifact of engineering practice."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "biographical",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Statistical Modeler",
+      "comment": "PERSPECTIVE 4: STATISTICAL INFERENCE (MOUNTAIN) — Agents attempting statistical inference or ensemble prediction acknowledge the constraint but work within it rather than against it. Ensemble methods, probability distributions, and statistical attractors are workarounds that respect rather than bypass the underlying divergence. The constraint is immutable; the response is pragmatic acceptance."
     }
   ],
   "omegas": [
     {
-      "id": "measurement_precision_threshold",
-      "question": "Does trajectory divergence reflect a fundamental mathematical property or a practical limitation of measurement precision and computational resources?",
-      "resolution_mechanism": "Examine whether divergence is an inherent feature of the equations or an artifact of finite-precision arithmetic. Infinite-precision symbolic computation vs. floating-point approximation.",
-      "impact": "If fundamental: mountain classification is robust. If artifact of precision: the constraint might be reconceptualized as a tangled_rope of computational resource limits rather than pure mathematics.",
+      "id": "measurement_vs_idealization",
+      "question": "Is trajectory divergence a property of idealized mathematical systems or a constraint on real physical measurements?",
+      "resolution_mechanism": "Comparison of actual experimental divergence rates in real chaotic systems (turbulent flows, chemical oscillators, biological neural networks) against theoretical Lyapunov exponent predictions. Measurement of whether real systems show slower divergence due to noise-induced contraction or other regularization mechanisms.",
+      "impact": "If measurement-limited: divergence is partially regularized by observational noise, reducing effective Lyapunov exponent and extending predictability horizon. The constraint is less severe in physical reality than in pure mathematics. If mathematically strict: divergence is exactly as predicted, and the mountain classification is confirmed with no observational escape.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether divergence is fundamental or measurement-induced"
+      "description": "Whether divergence is a mathematical property or measurement artifact"
     },
     {
-      "id": "attractor_dynamics_scope",
-      "question": "Does the trajectory divergence constraint apply uniformly to all regions of phase space, or only to certain regimes far from attractors?",
-      "resolution_mechanism": "Analysis of Lyapunov exponent distributions across phase space; identification of regions where divergence is suppressed by attractor geometry.",
-      "impact": "If uniform: mountain. If spatially heterogeneous: some portions of phase space might exhibit rope-like coordination (stable regions) while others exhibit snare-like divergence (chaotic regions).",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Spatial uniformity of trajectory divergence across phase space"
-    },
-    {
-      "id": "coarse_graining_escape",
-      "question": "Can coarse-graining or ensemble-based approaches effectively escape the divergence constraint by shifting from individual trajectories to probabilistic descriptions?",
-      "resolution_mechanism": "Comparison of trajectory-level unpredictability with ensemble-level statistical predictability; examination of Fokker-Planck equations and density evolution.",
-      "impact": "If ensemble approach succeeds: the constraint applies only to point-trajectory prediction, not to statistical forecasting. Could reframe as a rope (coordination of probabilistic rather than deterministic prediction). If ensembles also diverge: mountain remains robust.",
+      "id": "lyapunov_exponent_sign_reversal",
+      "question": "Can systems transition from positive to negative Lyapunov exponents through parameter drift or bifurcation, converting chaotic to stable regimes?",
+      "resolution_mechanism": "Parameter sweep studies showing bifurcation boundaries where Lyapunov exponent crosses zero. Examination of whether such transitions are reversible or create hysteresis.",
+      "impact": "If transitions are common and controllable: the constraint applies only to a parameter region, not universally — the mountain classification is correct but the spatial scope is more bounded. If transitions are rare or irreversible: the constraint is more rigidly enforced.",
       "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether ensemble methods bypass individual trajectory divergence"
+      "type_class": "empirical",
+      "description": "Whether Lyapunov exponent sign can be reversed by parameter control"
+    },
+    {
+      "id": "information_geometric_escape",
+      "question": "Can geometry-aware inference methods (differential geometry, information-theoretic reconstruction) extract predictive information beyond the theoretical Lyapunov-time horizon by exploiting manifold structure?",
+      "resolution_mechanism": "Development of reservoir computing and machine learning approaches that predict chaotic systems far beyond the Lyapunov time using learned manifold embeddings. Empirical comparison of prediction accuracy vs theoretical decay timescale.",
+      "impact": "If successful: the practical predictability horizon can be extended beyond the theoretical limit, suggesting that while exponential divergence is real, information about the system is preserved in higher-order structures. The constraint remains but is less crippling. If unsuccessful: the Lyapunov time is a hard barrier even for learned models.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether manifold-based inference can extend predictability beyond Lyapunov time"
+    },
+    {
+      "id": "negative_lyapunov_measure_zero_subset",
+      "question": "In high-dimensional chaotic systems, what fraction of phase space consists of low-divergence trajectories or marginally stable manifolds that violate the positive Lyapunov property?",
+      "resolution_mechanism": "Dynamical systems analysis of unstable manifolds, periodic orbits, and rare trajectories in well-studied chaotic systems (Henon map, Lorenz attractor, driven pendulum). Measurement of the phase-space measure of exceptions to generic divergence.",
+      "impact": "If non-negligible measure: there exist regions of predictability even within chaotic systems, and the constraint is less absolute than the mountain classification suggests. If zero measure: the constraint is truly universal within the attractor.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Measure of phase-space regions with atypical divergence properties"
     }
   ],
   "measurements": [
     {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.15
+    },
+    {
       "metric": "base_extractiveness",
       "time_point": 0,
       "value": 0.12
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
+      "time_point": 25,
       "value": 0.12
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 50,
       "value": 0.12
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.05
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.05
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.05
     }
   ],
   "interval": {
     "start": 0,
-    "end": 10
+    "end": 50
   },
   "commentary": {
-    "narrative_context": "Chaos trajectory divergence is a mathematical constraint arising from the sensitivity of nonlinear dynamical systems to initial conditions. In sufficiently chaotic systems (those with positive Lyapunov exponents), trajectories beginning from two points separated by an infinitesimal distance will diverge exponentially, eventually becoming decorrelated. This constraint is central to understanding weather prediction limits, molecular dynamics simulations, planetary orbital mechanics, and quantum chaos. Unlike institutional or policy constraints, trajectory divergence has no beneficiaries or victims \u2014 it is an immutable feature of nonlinear mathematics. The constraint manifests universally: no amount of computational power, observational precision, or institutional reorganization can overcome it. It is a canonical example of a mountain constraint.",
+    "narrative_context": "Chaos trajectory divergence is a pure constraint arising from the structure of nonlinear dynamical systems with positive Lyapunov exponents. The constraint is that two trajectories separated by an infinitesimal distance will diverge exponentially, eventually decorrelating completely. This is not a policy choice, institutional arrangement, or strategic limitation — it is a mathematical necessity. The constraint appears identically from all structural positions because it is an intrinsic property of the system being observed, not a relational property that varies with observer position. All six perspectives converge on Mountain classification because no agent — no matter their power, resources, or exit options — can alter the mathematical structure of chaotic divergence. This is the exemplar case of a genuine natural law within the DR framework.",
     "key_agents": [
-      "Predictors/Forecasters: Agents attempting long-term trajectory prediction in chaotic systems (powerless relative to the constraint) \u2014 face unavoidable prediction horizon limits",
-      "Scientific Community: Organized agents studying dynamical systems (organized) \u2014 have institutionalized the constraint into theory and practice; use ensemble and statistical methods to work around it",
-      "Analytical Observer: Mathematical and physical theorist (analytical) \u2014 recognizes the constraint as a fundamental property of nonlinear equations"
+      "Pure Mathematician: Views divergence as a logical necessity inherent to the equations defining chaotic systems",
+      "Predictor Agent: Confronts divergence as an immutable barrier to long-term forecasting capacity",
+      "Applied Engineer: Works within divergence constraints rather than against them; uses ensemble methods and statistical approaches",
+      "Statistical Modeler: Acknowledges the constraint and develops inference methods that respect its limits"
     ],
-    "logic_rationale": "Extractiveness (0.12): Very low. The constraint does not extract resources or favor one agent over another \u2014 it is universally binding. The minimal value reflects that this is a mathematical law, not a rent-seeking mechanism. Suppression (0.03): Negligible. The constraint does not suppress alternatives through coercion or institutional power \u2014 it simply cannot be escaped. Theater ratio (0.05): Minimal. The constraint has no performative component \u2014 it is a direct mathematical consequence. Accessibility collapse (0.95): Extremely high. All investigative approaches (numerical, analytical, computational) converge on the same limit: trajectories diverge. No workaround avoids this fundamental property. Resistance (0.05): Very low. There is no resistance to accepting the constraint \u2014 it is universally acknowledged and encoded in standard theory.",
-    "perspectival_gap": "This constraint displays minimal perspectival gap because it is truly universal. All three perspectives classify it identically as mountain. The predictor, the scientific community, and the analytical observer all agree: trajectory divergence is an immutable property of chaotic systems. The absence of perspectival disagreement is diagnostic \u2014 it is a mark of a true natural law, not a contingent institutional arrangement.",
-    "directionality_logic": "Directional analysis is inapplicable to this constraint. There is no extraction flow, no beneficiary, no victim. The constraint is symmetric \u2014 it applies equally to all agents attempting prediction in chaotic systems. Directionality cannot be defined when there is no asymmetry of costs and benefits."
+    "logic_rationale": "Extractiveness (0.12): Extremely low. Trajectory divergence does not extract value from any agent; it is a structural property of the system itself. No agent pays a cost to anyone else — the constraint simply makes certain predictions and forecasts impossible. The minimal nonzero value reflects measurement uncertainty in quantifying the property itself, not actual extraction. Suppression (0.03): Negligible. The constraint does not suppress alternatives; there are no alternatives. The near-zero value captures only the minimal descriptive uncertainty. Theater ratio (0.15): Low. The constraint has virtually no performative or institutional content — it is pure mathematics. The small value reflects only notational and pedagogical conventions in how divergence is presented and measured. Accessibility collapse (0.92) and Resistance (0.08): The accessibility profile shows that attempts to overcome trajectory divergence face near-total failure — the constraint is fundamentally inaccessible. The low resistance means there is virtually no friction or opposing force; the constraint simply applies universally.",
+    "directionality_logic": "This constraint has no directionality because it has no beneficiaries or victims. Trajectory divergence does not benefit one agent at the expense of another — it is a structural property of the system that all agents face uniformly. No beneficiary/victim declarations are appropriate for a genuine mountain constraint. The d value would be undefined or set to 0.5 (symmetric), but this is not meaningful because the constraint is not about extraction or resource transfer; it is about the structural impossibility of certain types of knowledge or prediction.",
+    "perspectival_gap": "There is no perspectival gap. All four perspectives classify the constraint as Mountain because the underlying mathematical structure is invariant across all observer positions. The pure mathematician sees it as a formal property; the predictor sees it as a forecasting limit; the engineer sees it as a design constraint; the statistician sees it as a boundary on inference. These are different *ways of experiencing* the same immutable constraint, not different classifications. The absence of perspectival gap is diagnostic: genuine natural laws exhibit classification invariance.",
+    "mandatrophy_analysis": "This constraint fully resolves the mandatrophy — mandatrophy does not arise because there is no choice between 'this is pure coordination' and 'this is pure extraction.' The constraint is neither. It is a structural limit on what is computationally or informationally possible. The mandatrophy resolution is: when all perspectives converge on the same classification, the constraint is likely a genuine natural law rather than a hidden extraction mechanism."
   },
   "boltzmann": {
     "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "lyapunov_time_prediction_horizon",
+      "sensitivity_initial_conditions"
+    ],
+    "dual_formulation_note": "Chaos trajectory divergence is a foundational property on which more specific constraints depend. Related constraints like prediction-horizon limitations and sensitivity to initial conditions are downstream expressions of this more fundamental divergence property. Each related constraint has its own ε value reflecting measurement-specific extractiveness, but all are rooted in the underlying divergence structure."
   }
 }

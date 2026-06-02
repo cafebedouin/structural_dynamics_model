@@ -4,25 +4,27 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "prev_med"
+    "measurement_id_prefix": "prev_med",
+    "story_uid": "611ada74-1bc7-463f-86b5-f4035574a1c8",
+    "created_at": "2026-02-26T00:00:00Z"
   },
   "base_properties": {
     "extractiveness": 0.52,
-    "suppression": 0.58,
-    "theater_ratio": 0.64,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
     "claimed_type": "tangled_rope",
     "human_readable": "Preventive Medicine Implementation Gap",
     "topic_domain": "healthcare/public_health/behavioral_economics",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "acute_care_industry",
+      "acute_care_providers",
       "pharmaceutical_manufacturers",
-      "insurance_underwriters"
+      "hospital_systems"
     ],
     "victims": [
-      "disease_burden_reduction",
-      "low_income_populations",
-      "preventive_care_providers"
+      "preventable_disease_population",
+      "public_health_infrastructure",
+      "long_term_population_health"
     ]
   },
   "perspectives": [
@@ -32,198 +34,235 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "The Uninsured or Underinsured Patient",
-      "comment": "PERSPECTIVE 1: UNINSURED/UNDERINSURED PATIENT (SNARE) \u2014 Structurally trapped by inability to afford preventive care; faces maximum extraction through acute episodes, emergency room visits, and compounding health costs. No exit: preventive medicine becomes unaffordable luxury, acute care becomes forced consumption. Suppression is high (cost barriers) and unilateral (flows toward acute care consumption)."
+      "label": "The Preventable-Disease Population",
+      "comment": "PERSPECTIVE 1: PREVENTABLE-DISEASE POPULATION (SNARE) — Structurally trapped by healthcare system incentive structures that do not reach them until disease is established. Cannot exit the system; bears full cost of preventable illness. No voice in resource allocation decisions. Maximum experienced extraction — knows preventive care exists but cannot access or afford it."
     },
     {
-      "classification_type": "snare",
+      "classification_type": "tangled_rope",
       "agent_power": "moderate",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "Disease Burden and Population Health",
-      "comment": "PERSPECTIVE 2: DISEASE BURDEN / POPULATION HEALTH (SNARE) \u2014 The public health commons bears the full cost of prevention failure through accumulating disease burden, lost productivity, and emergency care utilization. Cannot organize or exit the constraint. Systematic underfunding of primary prevention while acute care captures costs. Experiences pure extraction with no coordination benefit."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "powerful",
       "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "national",
-      "label": "Federally Qualified Health Centers (FQHCs)",
-      "comment": "PERSPECTIVE 3: FEDERALLY QUALIFIED HEALTH CENTERS (TANGLED ROPE) \u2014 Genuinely coordinate preventive care delivery to underserved populations AND extract through grant dependency, patient volume requirements, and restricted reimbursement models. Powerful enough to refuse extraction but face real incentive constraints. Experience is mixed coordination (health delivery) and constrained extraction (funding/reimbursement asymmetry)."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "institutional",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "Acute Care Hospital System",
-      "comment": "PERSPECTIVE 4: ACUTE CARE HOSPITAL SYSTEM (ROPE) \u2014 Primary beneficiary. Captures revenue from preventable disease through emergency department utilization and crisis interventions. For this actor, the constraint functions as pure coordination: the weak prevention system 'solves' their utilization problem by reliably generating acute-care demand. Zero suppression perceived \u2014 the actor experiences this as a beneficial market condition, not constraint."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "institutional",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "Pharmaceutical and Medical Device Industry",
-      "comment": "PERSPECTIVE 5: PHARMACEUTICAL & MEDICAL DEVICE INDUSTRY (ROPE) \u2014 Secondary beneficiary. Prevention-gap extracts directly through higher disease incidence and sustained medication/intervention demand. Experiences constraint as pure coordination mechanism: weak prevention reliably drives therapeutic markets. Theater is low from this perspective (the mechanism is transparent: weak prevention = sustained drug demand). Suppression is minimal \u2014 no barriers to capturing this benefit."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "organized",
-      "time_horizon": "generational",
       "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Primary Care Providers and Public Health Workers",
+      "comment": "PERSPECTIVE 2: PRIMARY CARE PROVIDERS AND PUBLIC HEALTH WORKERS (TANGLED ROPE) — Constrained by resource limitations, insurance reimbursement structures, and time pressures. Also benefit from prevention-focused care models that reduce acute crises and emergency burden. Mixed position: some coordination function (disease prevention reduces system strain) alongside genuine extraction (underfunded relative to acute care, career prestige concentration in specialist practice)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "Insurance Industry and Payers",
-      "comment": "PERSPECTIVE 6: INSURANCE INDUSTRY / PAYERS (TANGLED ROPE) \u2014 Ambiguous position. Insurance theory says prevention reduces long-term costs (coordination function). Actual practice: acute care extracts higher margins per visit; prevention incentives are weak due to adverse selection, moral hazard, and customer churn (constrained by actuarial realities). Genuine coordination function (incentivizing prevention) conflicts with extractive incentive structure (profit maximization through service volume). Requires active enforcement to shift toward prevention; current enforcement is minimal."
+      "label": "Acute Care Providers and Hospital Systems",
+      "comment": "PERSPECTIVE 3: ACUTE CARE PROVIDERS AND HOSPITAL SYSTEMS (ROPE) — Primary institutional beneficiary. Experiences the constraint as coordination: the systematic underfunding of prevention maintains a steady stream of acute interventions that sustain acute care revenue. High fees and reimbursement rates for procedures, surgeries, and emergency care. Effective arbitrage position — can shift between acute and preventive focus but economically incentivized toward acute."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Pharmaceutical Manufacturers",
+      "comment": "PERSPECTIVE 4: PHARMACEUTICAL MANUFACTURERS (ROPE) — Secondary institutional beneficiary. Benefit from chronic disease treatment markets (statins, antihypertensives, diabetes medications, cancer treatments). Prevention that reduces disease incidence would reduce long-term treatment revenue. Coordination function exists: pharmaceutical companies provide treatments that manage preventable diseases, enabling life extension and quality of life maintenance. But underlying incentive structure opposes prevention at scale."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
-      "time_horizon": "civilizational",
-      "exit_options": "arbitrage",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "Public Health Infrastructure",
-      "comment": "PERSPECTIVE 7: PUBLIC HEALTH INFRASTRUCTURE (PITON) \u2014 Formal prevention apparatus (CDC, state health departments, community health programs) has degraded from functional prevention coordination to performative disease surveillance and guideline production. Theater ratio is high: guidelines are issued, programs are funded, but implementation barriers remain unaddressed. The infrastructure persists through institutional inertia and political legitimacy signaling, not through functional disease reduction. Piton classification: \u03b5 \u2264 0.25, theater \u2265 0.70."
+      "label": "Public Health Agencies",
+      "comment": "PERSPECTIVE 5: PUBLIC HEALTH AGENCIES (PITON) — Institutional actors with degraded function and inertial persistence. Public health infrastructure (CDC, local health departments) performed critical prevention coordination during mid-20th century (vaccination campaigns, sanitation, infectious disease control). Now largely performative: underfunded, understaffed, with theater-heavy mandates (reporting, surveillance) while prevention programs lack sustained funding. Persist through institutional obligation rather than functional necessity in eyes of healthcare system. Theater ratio high due to emphasis on compliance reporting over actual prevention delivery."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "national",
-      "label": "Community-Based Prevention Programs",
-      "comment": "PERSPECTIVE 8: COMMUNITY-BASED PREVENTION PROGRAMS (SCAFFOLD) \u2014 Emergent programs (vaccination campaigns, workplace wellness, digital health monitoring, lifestyle interventions) show sunsetable extraction: as prevention becomes embedded in primary care norms and employer infrastructure, the temporary 'implementation gap' constraint decays. Sees current gap as solvable through normalization (sunset: 10-15 years as digital, employer-based, and community models scale). Low theater (direct health impact), explicit sunset clause."
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Value-Based Care Reform Coalition",
+      "comment": "PERSPECTIVE 6: VALUE-BASED CARE REFORM COALITION (SCAFFOLD) — Organized agents (value-based care advocates, insurance companies experimenting with outcomes-based reimbursement, preventive health startups, employee wellness programs) are building alternative payment mechanisms with sunset logic. Capitation models, outcomes-based bundling, and direct primary care are creating pathways where prevention funding increases because providers capture long-term savings. Low effective extraction because these organized actors have agency and exit paths. Sunset clause: as value-based care matures (estimated 10-15 years), the acute-care extraction mechanism's force diminishes."
     },
     {
       "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Insurance Companies and Employers",
+      "comment": "PERSPECTIVE 7: INSURANCE COMPANIES AND EMPLOYERS (TANGLED ROPE) — Organized agents bearing costs but also capturing some benefits. Insurance companies and employers both fund healthcare and bear costs of preventable disease (claims, lost productivity). Incentivized toward prevention at long-term timescales but face short-term cash flow pressures and adverse selection risks (prevention investments benefit competitors if enrollees switch). Mobile exit option: can shift between prevention-focused and acute-focused plans. Mixed position reflects both coordination function (disease prevention is economically rational) and extraction (structural misalignment means prevention underfunded relative to actuarial benefit)."
+    },
+    {
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "Analytical Observer",
-      "comment": "PERSPECTIVE 9: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational scope, the prevention-gap is a hybrid of genuine coordination failure (prevention and acute care require system-level integration) AND extractive institutional design (acute-care-heavy reimbursement incentivizes disease incidence, not prevention). The constraint exists because both functions (coordination + extraction) are simultaneously true: the system genuinely needs acute care capacity, AND it over-invests in acute care relative to prevention-optimal allocation. Resolution requires separating the genuine coordination need from the extractive surplus."
+      "spatial_scope": "universal",
+      "label": "Analytical Observer - Natural Law View",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From civilizational timescale, the prevention-implementation gap appears as an immutable property of how healthcare systems coordinate under uncertainty. Prevention benefits are distributed across populations and delayed in time; acute care benefits are concentrated and immediate. This asymmetry is inherent to how humans process risk and allocate resources. However, the structural data contradicts the mountain classification — identifiable beneficiaries (acute care providers, hospitals, pharmaceutical companies) profit from prevention underfunding. The engine will compute this as a false summit, revealing that the 'inherent to human risk perception' framing naturalizes what is actually extractive institutional design."
     }
   ],
   "omegas": [
     {
-      "id": "prevention_attribution_causality",
-      "question": "Does prevention cause observed health improvements or does selection bias (healthier populations self-select into prevention) account for measured outcomes?",
-      "resolution_mechanism": "Randomized controlled trials of prevention programs; instrumental variable analysis of natural policy discontinuities; longitudinal tracking of prevention adopters vs matched controls with baseline health adjustment",
-      "impact": "If prevention is highly causal: the gap is pure extraction (prevention works but is systematically underfunded). If selection is dominant: the gap partly reflects efficient sorting (prevention targets populations with lower baseline risk; acute care captures higher-need populations). Changes incentive attribution across beneficiary/victim classifications.",
+      "id": "discounting_mechanism_ambiguity",
+      "question": "Is prevention underfunding driven by rational time-discounting of future health benefits (individuals and systems legitimately discount distant outcomes), or by institutional extraction (beneficiaries deliberately suppress prevention to maintain acute-care revenue)?",
+      "resolution_mechanism": "Comparative analysis of prevention funding in systems with different institutional structures: single-payer (UK NHS, Canada) vs fee-for-service (US) vs capitation-based (managed care). If UK/Canada still underfund prevention at similar rates despite different incentives, suggests discounting. If substantial difference, suggests extraction.",
+      "impact": "If discounting dominates: reclassify as Rope (coordination problem around temporal misalignment) rather than Tangled Rope/Snare. If extraction dominates: current classifications confirmed. Mixed mechanism: omega resolution required for policy design.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether prevention causally improves health or reflects selection effects"
+      "description": "Whether prevention underfunding reflects rational discounting or institutional extraction"
     },
     {
-      "id": "time_horizon_discount_rate",
-      "question": "What discount rate is appropriate for comparing prevention costs (now) to acute care savings (future)? Should prevention be optimized for societal benefit or individual patient financial benefit?",
-      "resolution_mechanism": "Policy analysis of implicit discount rates in reimbursement structures; comparison of prevention ROI at 3%, 5%, and 10% discount rates; survey of patient time preferences for prevention vs acute care spending",
-      "impact": "At high discount rates (>8%): prevention appears uneconomical, justifying acute-care-heavy investment (snare perspective validated). At low rates (<3%): prevention is highly cost-effective, revealing the gap as pure extraction. Determines whether the constraint should optimize for individual financial incentives or population health.",
-      "confidence": "medium",
-      "type_class": "preference",
-      "description": "Appropriate discount rate for prevention ROI evaluation"
-    },
-    {
-      "id": "reimbursement_incentive_specificity",
-      "question": "Are current acute-care-biased reimbursement incentives a deliberate extraction mechanism or an artifact of Fee-for-Service model agnosticism to outcome?",
-      "resolution_mechanism": "Historical policy analysis of reimbursement design decisions; comparison of prevention-optimized vs acute-care-optimized payer models; structured interviews with payer strategy teams on prevention ROI calculations",
-      "impact": "If deliberate extraction: snare classification is correct. If artifact: tangled_rope classification is correct \u2014 the system needs redesign but is not malicious. Affects policy remediation (regulatory enforcement vs structural redesign).",
+      "id": "prevention_effectiveness_measurement_ambiguity",
+      "question": "Do cost-effectiveness estimates for prevention reflect genuine health economic benefit, or do they systematically undercount implementation costs (behavioral change barriers, systems redesign, coordination overhead) and overestimate compliance rates?",
+      "resolution_mechanism": "Prospective randomized trials comparing cost-effectiveness estimates (pre-implementation) with realized costs and outcomes (post-implementation); analysis of compliance attrition in prevention programs; subgroup analysis of prevention effectiveness by socioeconomic status and health literacy.",
+      "impact": "If estimates are accurate and implementation barriers are surmountable: prevention gap is purely extractive (Snare/Tangled Rope). If estimates are optimistic: some underfunding reflects rational skepticism about delivery feasibility; constraint may be Piton (degraded coordination) rather than active extraction.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether prevention underfunding reflects deliberate extraction or design artifact"
+      "description": "Whether prevention cost-effectiveness estimates reflect true implementable benefit"
     },
     {
-      "id": "behavioral_inertia_vs_structural_barrier",
-      "question": "How much of the prevention-gap reflects patient behavioral inertia (people don't pursue prevention even when cost-free) vs structural barriers (lack of access, transportation, information)?",
-      "resolution_mechanism": "Comparison of prevention uptake in universal-access systems (Canada, UK) vs systems with cost barriers (US); RCTs of behavioral nudges (appointment reminders, default enrollment) vs structural interventions (co-located services, transportation assistance); measurement of prevention uptake when all barriers removed",
-      "impact": "If behavioral: targets enforcement at patient incentives (behavioral economics, choice architecture). If structural: targets enforcement at system redesign (access, convenience, integration). Affects which agent bears responsibility for the gap.",
+      "id": "moral_hazard_suppression_mechanisms",
+      "question": "Do insurance companies and healthcare systems suppress prevention information or access to avoid moral hazard (insured populations becoming complacent about risk if prevention is available), or is information suppression driven by cost-containment extraction?",
+      "resolution_mechanism": "Comparative messaging analysis across insurance products (high-deductible vs comprehensive plans); tracking of patient communication about preventive benefits; analysis of prior-authorization barriers for preventive services; patient survey data on awareness of preventive coverage.",
+      "impact": "If moral hazard suppression is primary: constraint is Rope (coordination failure due to adverse incentives). If cost-containment dominates: constraint is Tangled Rope/Snare (active extraction via suppression). Pattern reveals whether suppression is defensive or extractive.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether prevention suppression is driven by moral hazard concerns or cost-extraction motives"
+    },
+    {
+      "id": "organizational_inertia_vs_rational_equilibrium",
+      "question": "Is the acute-care bias a stable rational equilibrium (acute care does maximize short-term system revenue and institutional prestige under current conditions), or is it organizational inertia (systems persist in acute-care focus despite rational alternatives being available)?",
+      "resolution_mechanism": "Historical analysis of prevention funding by age of healthcare institution (newer systems, de novo built institutions, reform pilots); simulation models of healthcare system payoffs under different prevention/acute ratios; case studies of system transitions to prevention-focused models and barriers encountered.",
+      "impact": "If equilibrium: constraint is Rope or Tangled Rope reflecting genuine trade-offs. If inertia: constraint is Piton (degraded, theater-dependent). Distinction affects policy intervention: inertia requires active disruption; equilibrium requires incentive restructuring.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether acute-care bias is stable equilibrium or organizational inertia"
+    },
+    {
+      "id": "value_based_care_sustainability",
+      "question": "Can value-based care models (capitation, bundled payments, outcomes-based reimbursement) actually scale to address the prevention-implementation gap, or do they encounter fundamental adverse selection and sustainability limits?",
+      "resolution_mechanism": "Longitudinal tracking of value-based care adoption rates; analysis of populations served by value-based vs fee-for-service providers; profitability and sustainability data for value-based models over 10+ year timescale; assessment of whether value-based providers continue prevention investment or revert to acute care during financial stress.",
+      "impact": "If value-based models scale: Scaffold classification is confirmed — organized exit path with sunset trajectory. If models hit sustainability limits: Scaffold reclassifies to Tangled Rope/Snare (temporary relief masked as structural reform). Affects confidence in prevention-gap resolution timeline.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether value-based care models can sustainably fund prevention at scale"
+    },
+    {
+      "id": "prevention_population_heterogeneity",
+      "question": "Do prevention program benefits distribute uniformly across population, or do they concentrate in relatively healthy, motivated populations while missing high-risk, hard-to-reach populations that need prevention most?",
+      "resolution_mechanism": "Subgroup analysis of prevention program participation and outcomes by socioeconomic status, health literacy, chronic disease prevalence, geographic isolation; cost-effectiveness analysis stratified by baseline risk; tracking of equity metrics in prevention initiatives.",
+      "impact": "If benefits concentrate in already-healthy populations: prevention gap widens health inequities (constraint becomes worse for powerless perspective). If benefits distribute broadly: prevention is genuine coordination good. Affects assessment of whether prevention is Rope (true coordination) vs Snare (benefits for healthy, extraction from vulnerable).",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Relative contribution of behavioral inertia vs structural barriers to prevention gap"
-    },
-    {
-      "id": "prevention_substitution_vs_addition",
-      "question": "Does prevention reduce acute care utilization (substitution) or add to total health spending through early detection of previously undiagnosed conditions (addition)?",
-      "resolution_mechanism": "Longitudinal tracking of total health care spending (prevention + acute) before/after prevention program adoption; cost-effectiveness analysis comparing integrated vs separate prevention/acute systems",
-      "impact": "If substitution: prevention is cost-saving and the gap is pure extraction. If addition: prevention increases total spending (earlier detection \u2192 more treatment), changing the economic case for prevention and the beneficiary/victim classification.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether prevention substitutes for or adds to acute care spending"
+      "description": "Whether prevention benefits reach or exclude high-risk populations"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.35,
+      "id_override": "prev_med_extractiveness_t0"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.48
+      "time_point": 15,
+      "value": 0.47,
+      "id_override": "prev_med_extractiveness_t15"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.52
+      "time_point": 30,
+      "value": 0.52,
+      "id_override": "prev_med_extractiveness_t30"
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.48
+      "value": 0.5,
+      "id_override": "prev_med_theater_t0"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.58
+      "time_point": 15,
+      "value": 0.62,
+      "id_override": "prev_med_theater_t15"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.64
+      "time_point": 30,
+      "value": 0.65,
+      "id_override": "prev_med_theater_t30"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "id_override": "prev_med_suppression_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.65,
+      "id_override": "prev_med_suppression_t15"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.68,
+      "id_override": "prev_med_suppression_t30"
     }
   ],
   "interval": {
     "start": 0,
-    "end": 20
+    "end": 30
   },
   "commentary": {
-    "narrative_context": "The prevention-implementation gap is the structural mismatch between the known effectiveness of preventive medicine and the systematic underfunding and underutilization of prevention in healthcare systems. Despite overwhelming evidence that prevention (vaccination, screening, lifestyle intervention, chronic disease management) is cost-effective and health-effective compared to acute care, healthcare spending patterns heavily favor acute and episodic intervention. This constraint exhibits tangled_rope characteristics: a genuine coordination problem (prevention and acute care require integrated system design) coupled with extractive institutional incentives (acute care generates higher margins per episode, creating hidden disincentives for prevention). The constraint's extractiveness (0.52) reflects moderate but sustained extraction flowing from disease burden and underinsured populations toward acute care providers and pharmaceutical manufacturers. Suppression (0.58) reflects multiple barriers: cost (insurance gaps, out-of-pocket spending), access (geographic, informational, transportation), behavioral inertia (people don't pursue prevention even when available), and system structure (reimbursement incentives against prevention). Theater ratio (0.64) reflects that prevention has become increasingly performative: guidelines are issued, programs are funded, but implementation barriers remain systematically unaddressed. The system produces the appearance of prevention commitment while maintaining acute-care-centric financial flows.",
+    "narrative_context": "The prevention-implementation gap represents a fundamental structural mismatch in healthcare systems between known evidence (prevention is cost-effective and health-effective) and institutional practice (acute and episodic care dominates funding and prestige). This constraint exhibits Tangled Rope structure: genuine coordination function exists (preventing disease reduces overall system burden, saves lives, improves population health) alongside systematic extraction (acute care providers, hospitals, and pharmaceutical manufacturers benefit from keeping prevention underfunded, maintaining a steady stream of treatable disease cases). The constraint has intensified over 30 years as healthcare costs have risen, acute care specialization has deepened, and fee-for-service reimbursement has become dominant. The theater ratio (0.65) reflects performative prevention activities: public health agencies conduct screening and reporting, insurance companies advertise preventive benefits, healthcare systems sponsor wellness programs, yet actual prevention funding and implementation capacity remain marginal. The suppression mechanisms are both structural (reimbursement incentives favor acute care, insurance barriers to preventive access) and informational (patient awareness of preventive options remains low, medical education concentrates on disease treatment). The constraint's extractiveness has risen from 0.35 to 0.52 over the interval as institutional capture has intensified — hospitals and pharmaceutical companies have consolidated power over payers and public health agencies. An emerging organized coalition (value-based care reformers, employers, progressive insurance companies, preventive health startups) is building alternative pathways (capitation, bundled payments, outcomes-based models) that could shift funding toward prevention at timescales of 10-15 years, suggesting a genuine sunset mechanism.",
     "key_agents": [
-      "Uninsured/Underinsured Patients: Primary victim (powerless/trapped) \u2014 cannot afford preventive care, forced into acute care consumption",
-      "Disease Burden and Population Health: Primary victim (moderate/constrained) \u2014 public health commons bears cost of prevention failure",
-      "Federally Qualified Health Centers: Mixed (powerful/mobile) \u2014 coordinate prevention delivery but face extractive reimbursement constraints",
-      "Acute Care Hospital Systems: Primary beneficiary (institutional/arbitrage) \u2014 extract revenue from preventable disease",
-      "Pharmaceutical Industry: Secondary beneficiary (institutional/arbitrage) \u2014 benefit from higher disease incidence through sustained medication demand",
-      "Insurance Industry and Payers: Ambiguous (organized/constrained) \u2014 theory says prevention reduces costs; practice shows acute care margins are higher",
-      "Public Health Infrastructure: Degraded institutional actor (institutional/arbitrage) \u2014 performative disease surveillance, minimal functional prevention",
-      "Community-Based Prevention Programs: Emerging organized actor (organized/mobile) \u2014 building alternative pathways with sunset logic",
-      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees both genuine coordination failure and extractive institutional design"
+      "Preventable-Disease Population: Primary victim (powerless/trapped) — systematically denied access to known effective prevention; bears full cost of preventable illness",
+      "Primary Care Providers and Public Health Workers: Secondary victim (moderate/constrained) — underfunded, deprioritized, career paths favor acute-care specialization; also coordinate some prevention function",
+      "Acute Care Providers and Hospital Systems: Primary beneficiary (institutional/arbitrage) — sustained by steady stream of acute interventions; high reimbursement rates; incentivized to suppress prevention",
+      "Pharmaceutical Manufacturers: Secondary beneficiary (institutional/arbitrage) — profit from chronic disease treatment markets; would lose revenue if prevention reduced disease incidence; participate in suppression",
+      "Insurance Companies and Employers: Mixed position (organized/mobile) — fund healthcare, bear costs of preventable disease, but face short-term cash flow pressures and adverse selection; organized actors with exit paths",
+      "Public Health Agencies: Degraded institutional actor (institutional/constrained) — performative role, historical coordination function atrophied, persist through institutional obligation",
+      "Value-Based Care Reform Coalition: Organized actors (organized/constrained) — arXiv of healthcare: alternative payment models building exit paths with sunset logic",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing institutional misalignment as inevitable consequence of human risk perception"
     ],
-    "logic_rationale": "Base extractiveness (0.52): Moderate-high. The constraint channels resources away from prevention toward acute care through reimbursement incentives, insurance design, and patient cost-sharing structures. Extractiveness has risen from 0.35 to 0.52 over the interval as healthcare consolidation has concentrated acute-care capacity and margin-maximization has become more explicit. The value reflects that extraction is not total (prevention funding exists, public health infrastructure persists) but systematic and sustained. Suppression (0.58): High. Multiple overlapping barriers: cost barriers (uninsured/underinsured), access barriers (geographic, informational, transportation), behavioral inertia (people don't pursue prevention even when cost-free in universal-access systems), and system-structural barriers (reimbursement models penalize prevention). Theater ratio (0.64): Moderate-high. Prevention is increasingly discussed, recommended, and funded, but implementation remains minimal relative to the scale of the problem. Guidelines are issued (CDC, AHA, ACS), programs are funded (community health centers, workplace wellness), but actual prevention uptake lags far behind evidence-based recommendations. The gap between prevention discourse and prevention practice has widened (theater ratio rising from 0.48 to 0.64) as prevention has become more politically salient while implementation barriers remain.",
-    "perspectival_gap": "The constraint demonstrates extreme perspectival divergence across power positions. For the powerless and trapped (uninsured patients), the gap appears as a snare: they cannot afford prevention and are forced into acute care consumption at high cost. For the disease burden (population health), it is also a snare: systematic prevention failure accumulates disease burden with no self-correction. For FQHCs and organized prevention programs, it is tangled_rope or scaffold: genuine coordination challenges exist (integration, access), but they can organize around solutions. For acute care providers and pharma, it is pure rope: prevention failure is experienced as a beneficial market condition that reliably generates demand. For the insurance industry, it is tangled_rope: the theory says prevention is cost-reducing, but the practice of acute-care-heavy reimbursement conflicts with prevention incentives. For public health infrastructure, it is piton: the formal apparatus persists through political legitimacy signaling while functional prevention capacity has degraded. For the analytical observer, it is tangled_rope at the civilizational level: a genuine system-integration problem (prevention and acute care need coordinated design) is exploited by extractive incentive structures (acute care over-investment relative to prevention-optimal allocation).",
-    "directionality_logic": "Directionality derives from structural position relative to the prevention-gap constraint. Uninsured patients are full targets (d \u2248 0.95): they bear costs of prevention failure through acute-care consumption and have zero exit options (trapped). Disease burden is a full target (d \u2248 1.0): it is an abstract commons with no agency or exit. FQHCs are mixed (d \u2248 0.55): they are structurally mobile and have genuinely benefited from prevention mission alignment, but face reimbursement constraints that extract from their model. Acute care and pharma are beneficiaries (d \u2248 0.10): they extract from prevention failure through higher disease incidence and have high exit capacity (can switch models). Insurance industry is complex (d \u2248 0.50): they are nominally affected by prevention outcomes but their reimbursement incentives are structurally misaligned with prevention. The derived d values produce a perspectival gap: powerless/trapped agents see snare (high f(d)), institutional beneficiaries see rope (low f(d)), and mixed actors show tangled_rope depending on their specific structural relationship to prevention mechanisms.",
-    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the prevention gap is genuinely hybrid: it contains BOTH a coordination problem (integrating prevention and acute care at the system level requires coordinated design) AND an extraction problem (reimbursement incentives systematically favor acute care over prevention, creating a financial extraction flow from prevention toward acute care). Neither snare nor rope alone captures the structure. The tangled_rope classification is correct: beneficiaries (acute care, pharma) experience pure coordination (the weak prevention system solves their utilization problem), while victims (disease burden, underinsured populations) experience extraction, and mixed actors (insurance, FQHCs) experience both simultaneously. The theater ratio (0.64) indicates that the constraint is not purely natural or purely institutional \u2014 prevention has become increasingly performative as policy discourse has separated from implementation, suggesting institutional inertia and policy theater rather than genuine natural law. Resolving the mandatrophy requires separating the genuine coordination need (system integration) from the extractive surplus (acute-care-biased reimbursement) and addressing them through distinct mechanisms."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint systematically extracts from preventable-disease populations and public health capacity to sustain acute-care provider revenue. The level reflects that the extraction is substantial but not total — some prevention does occur, some coordination function persists, and value-based care alternatives are emergent. The rising trajectory (0.35 → 0.52) indicates that institutional capture has intensified as healthcare consolidation has concentrated acute-care provider power and pharmaceutical company influence over payment systems. Suppression (0.68): High. Multiple suppression mechanisms operate simultaneously: reimbursement structures (prevention receives 1-3% of healthcare spending despite evidence supporting 10-20% allocation); informational barriers (patients and primary care providers lack access to evidence of prevention effectiveness); authorization requirements (insurance companies require prior approval for preventive services); and time poverty (providers lack time to deliver prevention in fee-for-service settings). The rising trajectory (0.55 → 0.68) reflects that suppression mechanisms have strengthened as healthcare complexity has increased and institutional coordination has weakened. Theater ratio (0.65): Moderately high. Public health agencies conduct performative surveillance and reporting; healthcare systems sponsor wellness programs with low utilization; insurance companies advertise preventive benefits without removing access barriers; medical education teaches about prevention while career paths reward acute-care specialization. Theater has increased over time as public expectations of prevention have risen without corresponding institutional restructuring to deliver it.",
+    "perspectival_gap": "The powerless perspective (Snare) and the institutional beneficiary perspective (Rope) present contradictory phenomenologies of the same structural phenomenon. From the beneficiary's frame, prevention-focused messaging and occasional screening programs are coordination — communication about health, enabling better outcomes. From the trapped perspective, this same activity is performative theater masking systematic exclusion from actual prevention access and resources. The gap reveals that the 'coordination' beneficiaries experience depends entirely on suppression mechanisms preventing transparent comparison of prevention vs acute-care effectiveness. When prevention access barriers are visible, the Rope classification collapses into Snare for those with power to act. The Scaffold classification (value-based reformers) coexists with Tangled Rope and Snare at current time — reformers see a sunset path while victims see ongoing extraction. The resolution of this gap depends on whether value-based care reforms can scale to make prevention the economically dominant strategy.",
+    "directionality_logic": "Directionality values are derived from structural positions: beneficiaries (acute care, pharmaceuticals) receive positive institutional support and arbitrage options, producing low d (around 0.15-0.20), experienced as Rope from their perspective. Victims (preventable-disease population) are trapped with no exit options, producing high d (around 0.90-0.95), experienced as Snare from their perspective. Mixed actors (insurance, employers) occupy moderate positions (d around 0.55-0.65) reflecting both beneficiary and victim roles. Organized reformers (value-based care coalition) have mobile exit options and partial agency, producing moderate d (around 0.50-0.60). Public health agencies, despite institutional power, face constrained exits due to budget dependence and legal mandates, producing d around 0.65-0.70. The Tangled Rope classification at base level reflects that the constraint simultaneously coordinates disease prevention (genuine shared function) and extracts from vulnerable populations, with power asymmetrically concentrated in acute-care beneficiaries. The classification holds because both properties are structurally present — it is not a pure coordination problem (victims are actively harmed) but neither is it pure extraction (disease prevention remains a real collective good that the constraint nominally serves).",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy through a clear structural mechanism: beneficiaries of acute care have institutional power to suppress prevention coordination at scale while maintaining nominal commitment to prevention as a public good. The 'we support prevention' rhetoric accompanied by 1-3% funding allocation is the mandatrophy — the institutional commitment to preventing disease explicitly coexists with structural choices that ensure disease remains treatable and profitable. The engine's false summit detector will flag the analytical observer's 'natural law' classification as naturalization of extractive design: the supposed inevitability of prevention underfunding masks institutional choice. The Scaffold classification provides the mandatrophy's temporal resolution: as value-based care models mature, the acute-care extraction mechanism loses its economic rationale. Capitation, bundling, and outcomes-based models align provider incentives with prevention, enabling institutions to credibly commit to prevention without sacrificing revenue. The constraint's current Tangled Rope classification is stable only under fee-for-service reimbursement; the Scaffold sunset mechanism, if successful, removes the fundamental extraction driver by changing what 'coordination' actually means (coordination around population health rather than acute-care volume)."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "health_insurance_risk_selection",
-      "chronic_disease_burden_accumulation",
-      "primary_care_access_gap"
+      "chronic_disease_burden",
+      "health_equity_concentration",
+      "primary_care_workforce_degradation",
+      "pharmaceutical_pricing_extraction",
+      "insurance_adverse_selection"
     ],
-    "dual_formulation_note": "The prevention gap decomposes into three structurally distinct constraints: (1) Health Insurance Risk Selection \u2014 insurers optimize profit through enrollment selection rather than prevention incentives (\u03b5 \u2248 0.65, Snare); (2) Prevention Coordination Failure \u2014 system-level integration of prevention and acute care is underfunded and uncoordinated (\u03b5 \u2248 0.35, Tangled Rope); (3) Primary Care Access Gap \u2014 access barriers (geographic, financial, informational) prevent prevention utilization even when incentives align (\u03b5 \u2248 0.48, Tangled Rope). The prevention implementation gap is downstream of all three and represents their combined effect. Each story has its own \u03b5 value and perspectives; the implementation gap is their aggregate manifestation."
+    "dual_formulation_note": "The prevention-implementation gap decomposes into multiple structurally distinct constraints sharing a common driver (reimbursement misalignment): prevention underfunding (this story, ε=0.52, Tangled Rope), acute-care specialization cascade (ε=0.48, Tangled Rope with different victim set), pharmaceutical chronic-disease profiteering (ε=0.68, Snare), and insurance adverse selection dynamics (ε=0.42, Rope). Each has distinct beneficiary/victim structures but all propagate from the underlying fee-for-service payment model. They are linked through network.affects_constraints rather than merged because their ε values differ and their local classification dynamics (which agents perceive extraction, which coordination) differ by perspective domain."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.15
+      "d_value": 0.18
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.58
     }
-  ]
+  ],
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "fee_for_service_reimbursement",
+      "acute_care_specialization_prestige_gradient"
+    ]
+  }
 }

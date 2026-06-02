@@ -2,28 +2,26 @@
   "header": {
     "constraint_id": "voluntary_presence_constraint",
     "version": "1.0",
-    "generated_date": "2025-01-02",
+    "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "volpres"
+    "measurement_id_prefix": "volpres",
+    "story_uid": "7d33c1c0-443c-43cb-9984-c007fe4f3f9a"
   },
   "base_properties": {
-    "extractiveness": 0.68,
-    "suppression": 0.72,
-    "theater_ratio": 0.78,
-    "claimed_type": "snare",
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
     "human_readable": "Voluntary Presence Constraint in Intimate Relationships",
     "topic_domain": "philosophy_of_mind/social_psychology/relationship_ethics",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "status_quo_relationship_stability",
-      "exit_cost_beneficiaries"
+      "controlling_partner"
     ],
     "victims": [
-      "authentic_voluntary_presence",
-      "trapped_partners",
-      "relationship_epistemic_quality"
-    ],
-    "mandatrophy_resolved": true
+      "structurally_dependent_partner",
+      "relationship_authenticity"
+    ]
   },
   "perspectives": [
     {
@@ -32,62 +30,44 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "local",
-      "label": "The Trapped Partner",
-      "comment": "PERSPECTIVE 1: TRAPPED PARTNER (SNARE) \u2014 Economically dependent, socially isolated, or psychologically bound. Cannot exit without catastrophic cost. The constraint extracts authentic presence while maintaining the appearance of voluntary commitment. Maximum experienced extraction \u2014 no agency, no exit, full cost."
+      "label": "The Structurally Dependent Partner",
+      "comment": "PERSPECTIVE 1: STRUCTURALLY DEPENDENT PARTNER (SNARE) — Faces catastrophic exit costs: economic ruin (loss of shared assets, income dependency), social isolation (dismantled support network), identity dissolution (self-concept constituted through the relationship), child custody loss (legal and financial barriers). No meaningful exit option. Maximum experienced extraction — presence is compelled by material barriers, not authentic choice. The partner bears the full cost of suppression (inability to leave) and derives no net benefit from the constraint."
     },
     {
-      "classification_type": "snare",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "identity_locked",
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
       "spatial_scope": "local",
-      "label": "The Identity-Fused Partner",
-      "comment": "PERSPECTIVE 2: IDENTITY-FUSED PARTNER (SNARE) \u2014 Structurally mobile but cognitively trapped. Self-concept is constituted through the relationship role. Exit would require becoming a different person. The constraint extracts through internalized framing rather than external barriers. High extraction despite moderate power because identity lock prevents exercising exit capacity."
+      "label": "The Controlling Partner",
+      "comment": "PERSPECTIVE 2: CONTROLLING PARTNER (ROPE) — Experiences the constraint as coordination: maintaining the relationship requires managing the other partner's presence through exit-cost architecture (financial control, isolation, emotional manipulation). Net beneficiary — extracts compliance through suppression without perceiving themselves as extractive. The constraint solves their coordination problem: keeping the partner present. Minimal suppression from their perspective; maximum benefit."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "moderate",
       "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "regional",
-      "label": "The Constrained Partner",
-      "comment": "PERSPECTIVE 3: CONSTRAINED PARTNER (TANGLED ROPE) \u2014 Faces high but surmountable exit costs: shared property, children, social network disruption, career impact. Genuine coordination exists (shared life infrastructure) alongside extraction (presence maintained partly by cost rather than pure choice). Mixed experience \u2014 some agency, some benefit, significant extraction."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "powerful",
-      "time_horizon": "immediate",
-      "exit_options": "mobile",
       "spatial_scope": "local",
-      "label": "The Mobile Partner",
-      "comment": "PERSPECTIVE 4: MOBILE PARTNER (ROPE) \u2014 Has independent income, social network, housing options. Can exit at manageable cost. Experiences the relationship's structural commitments as coordination mechanisms that enable shared projects. Low extraction \u2014 presence is genuinely voluntary because exit is genuinely available."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "institutional",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
-      "spatial_scope": "national",
-      "label": "The Exit Cost Beneficiary",
-      "comment": "PERSPECTIVE 5: EXIT COST BENEFICIARY (ROPE) \u2014 Institutional actors who benefit from relationship stability regardless of quality: mortgage lenders, family court systems, joint asset managers, social institutions built on coupled-household assumptions. Experience the constraint as pure coordination \u2014 relationship persistence enables their function. Net beneficiary with arbitrage exit."
+      "label": "The Partner with Partial Exit Capacity",
+      "comment": "PERSPECTIVE 3: PARTNER WITH PARTIAL EXIT CAPACITY (TANGLED ROPE) — Faces high but not insurmountable exit costs (career interruption, housing loss, financial penalty, social damage). Also receives genuine relational benefits: emotional support, shared projects, intimacy infrastructure. Mixed experience — significant extraction but not total, some coordination function, constrained but not trapped. Represents the modal case where relationships combine authentic coordination with embedded extraction."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Relationship Reform Coalition",
-      "comment": "PERSPECTIVE 6: RELATIONSHIP REFORM COALITION (SCAFFOLD) \u2014 Organized agents building alternative structures: no-fault divorce, domestic violence shelters, economic independence programs, therapeutic frameworks for healthy exit. See the constraint as temporary \u2014 exit costs are being systematically reduced through legal reform, economic policy, and cultural change. Sunset logic: as exit becomes genuinely available, authentic voluntary presence becomes structurally possible."
+      "spatial_scope": "regional",
+      "label": "The Relationship Support Infrastructure",
+      "comment": "PERSPECTIVE 4: RELATIONSHIP SUPPORT INFRASTRUCTURE (SCAFFOLD) — Legal frameworks (no-fault divorce, spousal support, child custody protections, domestic violence statutes, asset division), social programs (emergency housing, job retraining, childcare support), and cultural norms (relationship counseling, safe-exit resources) are building alternative pathways that reduce catastrophic exit costs. These structured interventions have sunset logic — as they mature and become accessible, the voluntary presence constraint's suppression mechanism loses force. Organized agents (legal aid, shelters, counselors) have agency and see an exit path."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "The Romantic Love Ideology",
-      "comment": "PERSPECTIVE 7: ROMANTIC LOVE IDEOLOGY (PITON) \u2014 Cultural narrative that 'true love conquers all' and 'commitment means staying through hardship' has degraded into theatrical cover for structural entrapment. The ideology persists through institutional inertia (wedding industry, relationship advice media, religious institutions) despite low functional value. High theater ratio \u2014 the performance of voluntary commitment masks involuntary persistence."
+      "spatial_scope": "regional",
+      "label": "The Marriage Institution",
+      "comment": "PERSPECTIVE 5: MARRIAGE INSTITUTION (PITON) — Marriage as a formal institution persists through cultural/legal inertia despite degraded primary function. Historically coordinated economic survival, property transfer, child legitimacy, and social belonging. Modern marriage has attenuated these functions (economic independence possible, property law reformed, child legitimacy decoupled from marital status, social belonging available elsewhere), yet the institutional form persists with theater — wedding rituals, legal ceremonies, cultural expectation narratives. The institution sees its own function as degraded but maintains the form because alternatives haven't fully displaced it."
     },
     {
       "classification_type": "mountain",
@@ -95,155 +75,153 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer (Naturalized View)",
-      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURALIZED VIEW (MOUNTAIN) \u2014 Risks naturalizing the constraint as inherent to human attachment: 'relationships always involve compromise,' 'exit costs are natural consequences of interdependence,' 'authentic presence is philosophically incoherent.' This perspective sees the constraint as an immutable feature of intimate bonds. However, structural data contradicts this \u2014 the constraint's extractiveness varies with policy, economic structure, and cultural norms, revealing it as contingent rather than natural."
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a philosophical perspective, some asymmetry between partners may be inherent to intimate relationships: vulnerability, identity fusion, asymmetric caregiving needs, and temporal path-dependency create structural pressures that no relationship can fully escape. This perspective risks naturalizing what is actually a contingent institutional arrangement — treating the suppression mechanisms as inevitable rather than as engineered exit barriers. FALSE SUMMIT RISK: the constraint benefits the controlling partner, and this structure is not a law of nature but a choice-architecture."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "label": "The Identity-Locked Analyst",
+      "comment": "PERSPECTIVE 7: IDENTITY-LOCKED ANALYST (TANGLED ROPE) — An analyst embedded in relationship institutions (therapist, counselor, mediator, family law expert) whose professional identity is constituted through the relationship framework faces a reflexive version of the constraint: their capacity to see the extraction mechanisms is occluded by identity fusion with the institution they are theorizing. They experience genuine coordination function (relationships do provide care, intimacy, project alignment) alongside structural extraction, and the identity lock prevents them from fully exiting the frame even when analysis reveals it. This perspective instantiates the oracle gap: the framework's structure prevents the framework's users from seeing the structure itself."
     }
   ],
   "omegas": [
     {
-      "id": "exit_cost_threshold",
-      "question": "What level of exit cost is compatible with genuine voluntary presence? At what threshold does cost convert choice into coercion?",
-      "resolution_mechanism": "Longitudinal studies correlating exit cost magnitude with relationship satisfaction trajectories; comparison of relationship quality in high-exit-cost vs low-exit-cost structural contexts (e.g., economic independence, no-fault divorce availability)",
-      "impact": "If threshold is low (e.g., any significant financial disruption): most long-term relationships involve coerced presence. If threshold is high (e.g., only physical danger or total economic ruin): the constraint affects fewer relationships than claimed.",
+      "id": "exit_cost_threshold_ambiguity",
+      "question": "What exit cost threshold converts 'high-cost choice' (constrained) into 'structural compulsion' (trapped)? Is this threshold absolute or context-dependent?",
+      "resolution_mechanism": "Cross-cultural longitudinal data on partner presence given varying exit cost architectures (economic, social, legal, identity); comparison of presence rates when exit costs are actively reduced (divorce law reform, economic support programs) vs. held constant",
+      "impact": "If threshold is cultural/political (not natural): the voluntary presence constraint is a choice-architecture that can be redesigned. If threshold is invariant: some level of compulsion is inherent to intimate bonding. Determines whether Piton/Mountain perspectives accurately represent constancy or whether they mask engineered compulsion.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold at which exit costs convert choice into compulsion"
+    },
+    {
+      "id": "relationship_authenticity_definition",
+      "question": "What constitutes 'authentic presence' in intimate relationships? Can presence be simultaneously voluntary and constrained?",
+      "resolution_mechanism": "Philosophical analysis of agency under constraint; empirical study of partner self-reported motivation (choice/love vs. obligation/fear) and comparison with behavioral indicators (intimacy, caregiving, coordination investment); longitudinal study of presence and intimacy quality before/after exit-cost reduction",
+      "impact": "If authentic presence requires zero exit costs: most relationships are structurally inauthentic (constrained presence misnamed as love). If presence can be authentic despite high costs: the constraint may be reframed as a coordination mechanism requiring transparency rather than suppression. Determines whether the constraint is inherently extractive or contingently configured.",
       "confidence": "low",
       "type_class": "conceptual",
-      "description": "Exit cost threshold distinguishing voluntary from coerced presence"
+      "description": "Definition and conditions of authentic relational presence"
     },
     {
-      "id": "suppression_mechanism_ambiguity",
-      "question": "Is the measured suppression structural (external barriers) or internalized (cognitive patterns that persist after barrier removal)?",
-      "resolution_mechanism": "Post-exit suppression trajectory: if suppression persists after the extractive mechanism is removed (e.g., partner reports continued inability to imagine exit even after gaining economic independence), reclassify as partially internalized.",
-      "impact": "If internalized, the constraint's effective suppression is higher than the structural measure suggests \u2014 the target carries the suppression with them after exit. If structural, reducing external barriers (economic policy, legal reform) directly reduces suppression.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Structural vs internalized suppression mechanism"
-    },
-    {
-      "id": "authentic_presence_measurability",
-      "question": "Can authentic voluntary presence be distinguished from performed voluntary presence through observable behavior, or is it inherently private/phenomenological?",
-      "resolution_mechanism": "Behavioral markers: frequency of relationship continuation despite stated dissatisfaction, correlation between exit cost reduction and relationship quality improvement, longitudinal tracking of partners who gain exit capacity",
-      "impact": "If measurable: the constraint's victim (authentic voluntary presence) can be empirically tracked. If inherently private: the constraint operates in a domain where extraction is undetectable from outside, making intervention difficult.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Measurability of authentic vs performed voluntary presence"
-    },
-    {
-      "id": "interdependence_vs_entrapment",
-      "question": "Does healthy interdependence necessarily involve exit costs, or can genuine mutual dependence coexist with low-cost exit?",
-      "resolution_mechanism": "Case studies of relationships with high interdependence but low exit costs (e.g., economically independent partners with shared projects); comparison of relationship quality in high-interdependence/low-exit-cost vs high-interdependence/high-exit-cost contexts",
-      "impact": "If interdependence requires exit costs: the constraint is partly inherent to intimate bonds (mountain component). If interdependence can coexist with low exit costs: the constraint is fully contingent on structural arrangements (snare component).",
+      "id": "controlling_partner_agency_separation",
+      "question": "Are controlling behaviors (exit-cost engineering, isolation, financial control, emotional manipulation) a distinct constraint from the voluntary presence constraint, or are they the same constraint viewed through different exit-option lenses?",
+      "resolution_mechanism": "Decomposition analysis: write separate stories for (a) the exit-cost architecture imposed by controlling partners, (b) the identity-fusion mechanism binding the dependent partner, (c) the coordination function that genuine relationships provide. Compare epsilon values across these stories. If epsilon differs significantly: three separate constraints. If epsilon converges: one constraint with multiple manifestations.",
+      "impact": "If separate: controlling behavior is a snare that can exist independently of voluntary-presence ambiguity. If unified: the voluntary presence constraint IS the controlling behavior pattern viewed from the beneficiary's frame. Determines whether to decompose this story into a constraint family.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether interdependence necessarily involves exit costs"
+      "description": "Whether controlling behavior and voluntary presence are one constraint or multiple"
+    },
+    {
+      "id": "identity_locked_suppression_internalization",
+      "question": "In relationships where identity fusion is the primary suppression mechanism (vs. material barriers), does the measured suppression persist after structural barriers are removed?",
+      "resolution_mechanism": "Longitudinal study of partners after divorce: does suppression decrease immediately (suggesting structural mechanism) or persist (suggesting internalized suppression that travels with the partner post-exit)? Distinction between structural suppression (exit barriers) and internalized suppression (self-imposed constraints learned from the relationship).",
+      "impact": "If suppression is primarily structural: reducing exit costs (economic support, housing, legal aid) resolves the constraint. If suppression is internalized: the constraint's true mechanism is cognitive capture that survives material liberation. Determines whether the scaffold perspective adequately captures the sunset clause or whether identity-locked partners require different intervention architectures.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Internalized vs. structural suppression in relationships"
+    },
+    {
+      "id": "false_summit_natural_law_risk",
+      "question": "Is the asymmetry and vulnerability inherent to intimate bonding a law of relationship nature, or a contingent institutional arrangement that appears natural only because its alternatives are suppressed?",
+      "resolution_mechanism": "Comparative analysis: examine relationships in contexts with minimal exit costs (decoupled economics, legal parity, social support infrastructure) vs. high exit costs. If asymmetry persists in low-cost contexts: suggests natural inevitability. If asymmetry vanishes: suggests engineered architecture.",
+      "impact": "If natural: Mountain and Piton perspectives are accurate; some suppression is inescapable. If engineered: the mountain classification is a false summit (naturalization of choice architecture). Determines whether the constraint's naturalness claim withstands scrutiny.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether relationship asymmetry is natural or engineered"
+    },
+    {
+      "id": "care_coordination_genuine_vs_compelled",
+      "question": "In tangled-rope relationships where both coordination and extraction occur, how much of the caregiving and intimacy is genuine coordination responding to mutual vulnerability, vs. how much is compelled performance of care-by-trapped-partners?",
+      "resolution_mechanism": "Qualitative study of caregiving patterns in relationships with varying exit-cost architectures; measurement of reciprocity, responsiveness, and self-reported motivation; comparison of care quality in high-suppression vs. low-suppression relationship contexts",
+      "impact": "If caregiving is primarily genuine coordination even under high exit costs: Tangled Rope classification is accurate; extraction is modest. If caregiving is primarily compelled performance: the extraction metric is underestimated, and the constraint should classify higher (toward Snare). Determines whether the Tangled Rope type misses the extractive core by crediting coordination that is actually coerced.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of caregiving that is genuine vs. compelled"
     }
   ],
   "measurements": [
     {
-      "metric": "theater_ratio",
+      "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.55
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 3,
-      "value": 0.68
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 6,
-      "value": 0.74
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.78
+      "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 3,
       "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 3,
+      "time_point": 6,
       "value": 0.58
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 6,
-      "value": 0.64
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.68
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2,
+      "metric": "suppression_requirement",
+      "time_point": 0,
       "value": 0.52
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.61
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 8,
-      "value": 0.66
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2,
+      "metric": "suppression_requirement",
+      "time_point": 3,
       "value": 0.62
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.71
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.68
     },
     {
       "metric": "theater_ratio",
-      "time_point": 8,
-      "value": 0.76
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
     }
   ],
   "interval": {
     "start": 0,
-    "end": 10
+    "end": 6
   },
   "commentary": {
-    "narrative_context": "The voluntary presence constraint operates at the intersection of philosophy of mind (what constitutes authentic choice), social psychology (how exit costs shape behavior), and relationship ethics (what conditions enable genuine care). The constraint's core mechanism: when exit from a relationship carries catastrophic cost (economic ruin, social isolation, identity dissolution, child custody loss), continued presence becomes structurally ambiguous \u2014 is the partner staying because they choose to, or because they cannot afford to leave? This ambiguity extracts authentic voluntary presence (the epistemic and ethical foundation of genuine care) while maintaining the theatrical performance of voluntary commitment. The constraint exhibits cyclical dynamics: tension accumulates \u2192 exit consideration \u2192 cost calculation \u2192 renewed commitment performance \u2192 tension accumulates. The theater_ratio (0.78) reflects that much relationship maintenance activity is performative rather than functional \u2014 anniversary celebrations, public displays of affection, and commitment narratives serve to signal voluntary presence to self and others despite underlying structural coercion. The constraint is downstream of epistemic_substitution (the inability to distinguish authentic from performed presence) and conformity_extraction (social pressure to maintain relationship stability regardless of quality).",
+    "narrative_context": "The voluntary presence constraint operates at the philosophical intersection of authentic choice and structural compulsion in intimate relationships. When exit from a relationship carries catastrophic cost — economic ruin (loss of shared assets, income dependency), social isolation (dismantled support networks, custody loss), identity dissolution (self-concept constituted through the relationship), or family fragmentation — continued presence becomes structurally ambiguous. The partner may be staying because they choose to (authentic love, genuine coordination) or because they cannot leave (trapped by exit-cost architecture, material dependence, identity fusion). The constraint's core extraction mechanism is the asymmetric engineering of exit costs: one partner benefits from the other's continued presence while the cost of departure is made catastrophic, creating a bind where presence appears voluntary but is structurally compelled. This constraint demonstrates how authentic-seeming relationships can embed extractive mechanisms, how control can operate through suppression of alternatives rather than overt coercion, and how institutional arrangements (marriage law, economic coupling, social norms, childcare architecture) engineer the exit-cost barriers that make departure unthinkable. The theater ratio (0.55) reflects the gap between relational narrative (presence as love, choice, commitment) and structural reality (presence constrained by engineered barriers). The rising suppression and extractiveness over the measurement interval model the progressive tightening of the constraint as financial coupling deepens, children are born, and the partner's identity becomes fused with the relationship.",
     "key_agents": [
-      "Trapped Partner: Primary victim (powerless/trapped) \u2014 economically dependent, socially isolated, or psychologically bound; cannot exit without catastrophic cost; bears full extraction",
-      "Identity-Fused Partner: Primary victim (moderate/identity_locked) \u2014 structurally mobile but cognitively trapped; self-concept constituted through relationship role; exit requires identity dissolution",
-      "Constrained Partner: Secondary victim (moderate/constrained) \u2014 faces high but surmountable exit costs; experiences mixed coordination and extraction",
-      "Mobile Partner: Beneficiary (powerful/mobile) \u2014 has independent resources and social network; experiences relationship commitments as genuine coordination",
-      "Exit Cost Beneficiaries: Institutional beneficiaries (institutional/arbitrage) \u2014 mortgage lenders, family courts, joint asset managers benefit from relationship persistence regardless of quality",
-      "Relationship Reform Coalition: Organized agents (organized/constrained) \u2014 building alternative structures to reduce exit costs and enable authentic voluntary presence",
-      "Romantic Love Ideology: Institutional actor (institutional/arbitrage) \u2014 maintains theatrical narrative that naturalizes structural entrapment as 'true commitment'",
-      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent structural arrangements as inherent to human attachment"
+      "Structurally Dependent Partner: Primary victim (powerless/trapped) — bears full cost of suppression through economic dependency, social isolation, identity fusion, and custody barriers. Presence is compelled by catastrophic exit costs.",
+      "Controlling Partner: Primary beneficiary (institutional/arbitrage) — benefits from continued presence through emotional labor, financial consolidation, care provision, and identity regulation. Extracts compliance through suppression architecture while experiencing the constraint as coordination.",
+      "Partner with Partial Exit Capacity: Secondary agent (moderate/constrained) — faces high but not insurmountable costs; also receives genuine relational benefits. Represents mixed coordination-extraction experience.",
+      "Relationship Support Infrastructure: Organized agents (organized/constrained) — legal frameworks, social programs, cultural norms building alternative pathways that reduce exit-cost barriers and enable genuine choice. Have agency and sunset perspective.",
+      "Marriage Institution: Institutional actor (institutional/arbitrage) — maintains the formal structure through cultural inertia and legal embedding despite degraded original coordination functions. Performs degraded ritual rather than core function (Piton).",
+      "Identity-Locked Analyst: Professional embedded in relationship institutions (analytical/identity_locked) — sees the structural extraction but cannot fully exit the interpretive frame because their identity is constituted through the institution. Instantiates the oracle gap.",
+      "Relationship Authenticity: Abstract victim (powerless/trapped) — the quality of genuine care and mutual choice is corroded by the suppression mechanism. Cannot organize or advocate for itself."
     ],
-    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts authentic voluntary presence \u2014 the epistemic foundation of genuine care \u2014 by making exit prohibitively costly. Partners continue relationships despite stated dissatisfaction at rates far exceeding what would occur if exit were genuinely available. The extraction is not total (0.68 rather than 0.85+) because some coordination genuinely exists: shared life infrastructure, children, joint projects. But the extraction is severe enough to qualify as snare from trapped and identity-locked perspectives. Suppression (0.72): High. Multiple mechanisms suppress alternatives: economic dependency (shared assets, income disparity, housing costs), social isolation (relationship-contingent friendships, family pressure), psychological binding (sunk cost fallacy, identity fusion, fear of loneliness), legal barriers (custody arrangements, divorce costs), and cultural narratives that frame exit as moral failure. Suppression is not total because some exit pathways exist (domestic violence shelters, no-fault divorce, economic independence programs), but barriers are severe enough to make exit catastrophic for many. Theater ratio (0.78): High. Much relationship maintenance activity is performative: anniversary celebrations that mask dissatisfaction, public displays of affection that signal commitment to observers, commitment narratives that convince self and others of voluntary presence. The performance serves to maintain the fiction that presence is chosen rather than coerced. Theater has increased over the interval as the gap between relationship ideology (voluntary commitment based on authentic care) and relationship reality (persistence based on exit costs) has widened.",
-    "directionality_logic": "The constraint's directionality structure reveals how exit capacity determines experienced extraction. Trapped partners (d \u2248 0.95) experience maximum extraction \u2014 they are full targets with no exit and no agency. Identity-locked partners (d \u2248 0.89) experience high extraction despite moderate power because their cognitive binding prevents exercising structural exit capacity. Constrained partners (d \u2248 0.85) experience significant extraction but retain some agency through surmountable exit costs. Mobile partners (d \u2248 0.15) experience low extraction \u2014 they are partial beneficiaries because their exit capacity makes their presence genuinely voluntary. Exit cost beneficiaries (d \u2248 0.05) experience negative extraction \u2014 they benefit from relationship persistence regardless of quality. The directionality gradient maps directly onto the philosophical question: at what point do exit costs convert choice into coercion? The engine's structural answer: when d exceeds approximately 0.70, presence is more coerced than voluntary.",
-    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon \u2014 relationship persistence despite dissatisfaction \u2014 appears radically different depending on exit capacity. The trapped partner sees pure extraction (Snare) \u2014 they are held captive by economic dependency or social isolation. The identity-locked partner also sees extraction (Snare) but through internalized rather than external mechanisms \u2014 their identity is constituted through the relationship role. The constrained partner sees mixed coordination and extraction (Tangled Rope) \u2014 genuine shared life infrastructure exists alongside coercive exit costs. The mobile partner sees coordination (Rope) \u2014 relationship commitments enable shared projects because exit remains genuinely available. Exit cost beneficiaries see pure coordination (Rope) \u2014 relationship stability enables their institutional function. The reform coalition sees a temporary problem with a sunset (Scaffold) \u2014 exit costs are being systematically reduced through legal and economic reform. The romantic love ideology sees its own degraded ritual (Piton) \u2014 commitment narratives persist through inertia despite low functional value. The analytical observer risks seeing an immutable natural law (Mountain) \u2014 exit costs are inherent to interdependence \u2014 but structural data reveals this as naturalization of contingent arrangements.",
-    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the mandatrophy by demonstrating that 'voluntary presence' is not a binary property but a continuous function of exit cost. At low exit cost (mobile partner), presence is genuinely voluntary and the constraint functions as coordination (Rope). At moderate exit cost (constrained partner), presence is partly voluntary and partly coerced, producing mixed coordination and extraction (Tangled Rope). At high exit cost (trapped or identity-locked partner), presence is predominantly coerced and the constraint functions as extraction (Snare). The analytical observer's mountain classification (exit costs are inherent to interdependence) is a false summit \u2014 it naturalizes what is actually a policy-dependent variable. The reform coalition's scaffold classification reveals the sunset logic: as exit costs decline through legal reform (no-fault divorce), economic policy (income support, housing access), and cultural change (reduced stigma), the constraint's extractive component diminishes. The constraint is not 'really' a snare or 'really' a rope \u2014 it is a snare from the trapped perspective and a rope from the mobile perspective, and both classifications are structurally accurate descriptions of different agents' experiences of the same institutional arrangement. The mandatrophy dissolves when we recognize that the question 'is this constraint extractive or coordinative?' presupposes a single objective answer, when the framework's insight is that extractiveness is indexical \u2014 it depends on who you ask."
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The controlling partner extracts presence, emotional labor, financial consolidation, and identity regulation from the dependent partner, who receives minimal net benefit (or benefit conditioned on compliance). The extractiveness is not as extreme as a pure snare (0.72+) because many relationships contain genuine coordination elements — mutual care, shared projects, authentic intimacy — that coexist with the extraction mechanism. The measure reflects the dominant structure: presence is primarily compelled rather than chosen, but the relationship retains enough genuine coordination function to classify as Tangled Rope rather than pure Snare. The rising trajectory over time models the progressive deepening of financial coupling, children, and identity fusion that tightens the constraint. Suppression (0.68): High. Multiple barriers to exit operate simultaneously: economic (financial dependency, shared assets, income loss), social (network dismantling, custody barriers, public shame), identity (self-concept fused with relationship role), legal (asset division, spousal support obligations), and cognitive (identity lock preventing perception of exit as possible or desirable). The suppression is structural — engineered through choice-architecture rather than explicit coercion — and thus invisible as suppression: the dependent partner experiences barriers not as imposed constraints but as natural consequences of love and commitment. Theater ratio (0.55): Moderate. The relational narrative (presence as choice, love, commitment) diverges from structural reality (presence compelled by exit costs), but the gap is not as large as in purely performative institutions (marriage_institution at 0.70). Many relationships do provide genuine intimacy and care; the theater is not complete fabrication but a cover story layered over extraction. The theater rises slightly over time as partners develop a shared narrative that justifies the arrangement ('this is what love requires', 'sacrifice is natural', 'this is how relationships work').",
+    "perspectival_gap": "The gap between the controlling partner's rope classification and the dependent partner's snare classification reveals the constraint's core extractive structure. The controlling partner experiences the constraint as coordination because they benefit from continued presence and do not pay the suppression cost. The dependent partner experiences snare because they bear the full suppression cost and receive minimal benefit (or benefit conditioned on compliance). This perspectival inversion is the diagnostic signature of extraction disguised as coordination. The scaffold perspective's sunset logic (legal/social reforms reducing exit costs) predicts that as suppression decreases, the constraint should reclassify toward rope or piton (coordination or degraded ritual) if the controlling partner's benefits are genuine coordination, or persist as snare/tangled_rope if the extraction mechanism is the core function. The mountain perspective's naturalization risk reveals how philosophy can legitimize choice-architecture by treating contingent institutional arrangements as immutable properties of intimate bonding.",
+    "directionality_logic": "The directionality derivation chains beneficiary/victim declarations + exit options + power level → d value → f(d) → effective extraction chi. Controlling partner: beneficiary + arbitrage + institutional → d ≈ 0.20 → f(d) ≈ 0.02 (negative chi: they experience the constraint as beneficial). Dependent partner: victim + trapped + powerless → d ≈ 0.95 → f(d) ≈ 1.42 (maximum chi: they experience maximum extraction). Moderate partner: victim + constrained + moderate → d ≈ 0.65 → f(d) ≈ 1.00 (moderate chi: costs real but not insurmountable). Scaffold agents: mixed (advocate for victims, benefit from reducing constraint) + constrained + organized → d ≈ 0.40 → f(d) ≈ 0.40 (scaffold-level chi, lowered by agency). No directionality overrides needed — the derivation chain captures the structural relationships accurately.",
+    "mandatrophy_analysis": "This constraint's mandatrophy resolves through the perspectival landscape: there is no single 'correct' classification because different observers occupy genuinely different structural positions. The controlling partner's rope is their actual experience (they benefit, coordinate successfully, suppress minimally). The dependent partner's snare is their actual experience (they are trapped, extract nothing, bear full suppression). The scaffold's sunset logic is a real structural feature (legal/social reforms do reduce exit costs). The piton's degradation is real (the marriage institution has lost original function). The mountain's naturalization risk is a real epistemic trap. The identity-locked analyst's oracle gap is real (they cannot see structure their identity is constituted through). All six types are true from their respective observation points; the constraint's nature is the presheaf of these truths across the observation site. The mandatrophy does not resolve to 'which type is correct?' but to 'what is the structure that makes all these perspectival readings coherent?' The answer is: the voluntary presence constraint is a choice-architecture that appears voluntary from the beneficiary's frame, compulsory from the victim's frame, and reformable from the organized agent's frame, while risking naturalization from institutional/philosophical frames and remaining partially invisible to those whose identities are constituted through it. This is not ambiguity but structure.",
+    "kernel_context": "Optional. This constraint does not constitute a kernel-reading scenario — it is not one reading of a contested foundational commitment. It is a straightforward structural constraint with multiple perspectival views."
   },
   "boltzmann": {
     "coordination_type": "attachment_coordination"
   },
   "network": {
-    "affects_constraints": [],
-    "dual_formulation_note": "This constraint is downstream of epistemic_substitution (the inability to distinguish authentic from performed presence) and conformity_extraction (social pressure to maintain relationship stability). The voluntary presence constraint has its own extractiveness (0.68) reflecting the career and identity costs of exit; the upstream constraints have their own extractiveness values reflecting their distinct mechanisms. The constraint family models how epistemic limits (substitution) and social pressure (conformity) combine to create structural entrapment in intimate relationships."
+    "affects_constraints": [
+      "control_isolation_mechanism",
+      "financial_coupling_asymmetry",
+      "identity_fusion_cognitive_capture"
+    ],
+    "dual_formulation_note": "The voluntary presence constraint should decompose into three structurally distinct stories: (1) voluntary_presence_constraint (this story): the overarching choice-architecture ambiguity; (2) control_isolation_mechanism (ε ≈ 0.72, Snare): the suppression machinery (financial control, network dismantling, emotional manipulation) as a pure extraction constraint; (3) identity_fusion_cognitive_capture (ε ≈ 0.65, Snare): the internalization of suppression through identity lock, separate from material barriers. Each story has different epsilon, different omegas, different measurement patterns. The family structure captures how exit-cost architecture (this story) depends on enforcement mechanisms (control_isolation) and cognitive capture (identity_fusion)."
   },
-  "directionality_overrides": [],
-  "uke_scope": {
-    "epsilon_bin": "high",
-    "hypothesis": "snare",
-    "downstream_of": [
-      "epistemic_substitution",
-      "conformity_extraction"
-    ]
-  }
+  "directionality_overrides": []
 }

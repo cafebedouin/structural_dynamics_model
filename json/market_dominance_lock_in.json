@@ -4,23 +4,23 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "mdli"
+    "measurement_id_prefix": "mdli",
+    "story_uid": "268c2a48-b898-495e-89de-c7fbc050d89e"
   },
   "base_properties": {
-    "extractiveness": 0.58,
-    "suppression": 0.62,
+    "extractiveness": 0.52,
+    "suppression": 0.58,
     "theater_ratio": 0.48,
     "claimed_type": "tangled_rope",
     "human_readable": "Market Dominance Lock-In: Network Effects and Switching Costs",
     "topic_domain": "economic/competition",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "dominant_incumbent_firm"
+      "dominant_platform_firm"
     ],
     "victims": [
-      "competing_entrants",
-      "end_users",
-      "ecosystem_innovation"
+      "competing_firms",
+      "consumer_lock_in_cohort"
     ]
   },
   "perspectives": [
@@ -30,26 +30,17 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Locked-In End User",
-      "comment": "PERSPECTIVE 1: LOCKED-IN END USER (SNARE) \u2014 Cannot exit without prohibitive switching costs (data migration, workflow retraining, ecosystem compatibility loss). Trapped by network effects and sunk investments. Bears full extraction burden: higher prices, slower innovation, reduced feature choice. Maximum perceived extraction from complete structural lock-in."
+      "label": "The Locked-In User Base",
+      "comment": "PERSPECTIVE 1: LOCKED-IN USER BASE (SNARE) — Users face extreme switching costs: migrating data, relearning interfaces, losing network value (social graph, data, integration partners). Cannot exit without material sacrifice. Zero exit agency. The platform extracts through degrading service quality, raising prices, reducing privacy, or weakening product innovation — users absorb all costs. No coordination benefit perceived from the user's position."
     },
     {
       "classification_type": "snare",
-      "agent_power": "powerless",
+      "agent_power": "moderate",
       "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "regional",
-      "label": "The Competing Entrant",
-      "comment": "PERSPECTIVE 2: COMPETING ENTRANT (SNARE) \u2014 Faces asymmetric barriers: must overcome network effects that benefit the incumbent, cannot match ecosystem breadth, and bears customer acquisition costs the incumbent does not. Even with superior technology, switching cost burden falls disproportionately on users who would defect, reducing addressable market. High extraction via barrier-to-entry structure."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Ecosystem Developer",
-      "comment": "PERSPECTIVE 3: ECOSYSTEM DEVELOPER (TANGLED ROPE) \u2014 Depends on the dominant platform for distribution and network access (genuine coordination function: reaches billions of users). But also subject to unilateral policy changes, API throttling, revenue share extraction, and threat of direct competition from the platform itself. Mixed: real benefit from coordination, real cost from extraction."
+      "spatial_scope": "global",
+      "label": "The Dependent Business Ecosystem",
+      "comment": "PERSPECTIVE 2: DEPENDENT BUSINESS ECOSYSTEM (SNARE) — App developers, service providers, and complementary businesses have built revenue models on platform APIs and user access. High switching costs (recoding entire applications, losing user base, learning new platform rules). Career risk and financial loss prevent exit despite extractive platform behavior (API deprecation, margin compression, arbitrary policy changes). Moderate power through organizing (group action, regulatory appeal) but constrained exit."
     },
     {
       "classification_type": "rope",
@@ -57,26 +48,35 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Dominant Incumbent",
-      "comment": "PERSPECTIVE 4: DOMINANT INCUMBENT (ROPE) \u2014 Perceives lock-in as pure coordination: their network effects benefit everyone (more users = more value). Exercises pricing power and policy control as legitimate coordination authority. Can arbitrage out (switch business models, absorb competitors, pivot to new markets). Extraction runs toward this agent; they experience net subsidy."
+      "label": "The Dominant Platform Firm",
+      "comment": "PERSPECTIVE 3: DOMINANT PLATFORM FIRM (ROPE) — Experiences the constraint as pure coordination: network effects are the coordination mechanism that keeps users on the platform, complementary developers building value, and economic activity flowing through the ecosystem. Benefits from growth without bearing switching costs. The firm sees the constraint as enabling, not extractive. Arbitrage available (can exit by selling or merging; low personal downside from degradation)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Competing Firm Coalition",
+      "comment": "PERSPECTIVE 4: COMPETING FIRM COALITION (TANGLED ROPE) — Organized competitors (mobile OS providers, search engines, social platforms) experience genuine coordination value from standardized protocols, open APIs, and interoperability requirements; simultaneously bear extraction costs through regulatory compliance, competitive disadvantage from network effects, and inability to access platform-specific data. Active enforcement (antitrust regulation, interoperability mandates) creates a hybrid structure: coordination function (ecosystem stability) + asymmetric extraction (dominant firm retains core advantage)."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
-      "time_horizon": "civilizational",
+      "time_horizon": "generational",
       "exit_options": "mobile",
       "spatial_scope": "global",
-      "label": "The Interoperability Coalition",
-      "comment": "PERSPECTIVE 5: INTEROPERABILITY COALITION (SCAFFOLD) \u2014 Regulatory mandates (EU DMA, digital markets acts, interoperability requirements) are creating forced decoupling pathways: APIs, data portability, plugin ecosystems. Lock-in has a sunset clause \u2014 regulation is actively engineering exit routes, increasing user mobility. High suppression during enforcement, but declining as exit options multiply. Sunset: 5-10 years for interoperability standards to mature."
+      "label": "The Antitrust/Regulatory Coalition",
+      "comment": "PERSPECTIVE 5: ANTITRUST/REGULATORY COALITION (SCAFFOLD) — Regulators and policymakers see market dominance lock-in as a temporary governance failure solvable through interoperability mandates, data portability rights, and API standards. Active enforcement mechanisms (DMA in EU, proposed legislation in US) create sunset conditions: if enforced, interoperability reduces switching costs and unlocks trapped users. Low effective extraction because regulatory agents have power and see an exit path (structural remedies). Theater moderately low — actual enforcement data vs compliance theater."
     },
     {
       "classification_type": "piton",
-      "agent_power": "institutional",
-      "time_horizon": "civilizational",
-      "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "The Legacy Market Structure",
-      "comment": "PERSPECTIVE 6: LEGACY MARKET STRUCTURE (PITON) \u2014 Traditional antitrust frameworks assume perfect competition and rational price-taking agents. But network effects and switching costs have made the competitive model largely performative for digital markets. Antitrust theater (merger review, market definition disputes, remedies that don't address lock-in) persists while the market structure it was designed for has degraded. Agency capacity to enforce competition has atrophied relative to market complexity."
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Legacy Competitor",
+      "comment": "PERSPECTIVE 6: LEGACY COMPETITOR — Older firms (ex: Yahoo, Nokia, MySpace legacy business units) that once competed effectively but lost to network effects. Competitive constraints persist through vestigial brand loyalty, remaining user base, or niche positioning, but the dominant firm has structurally won. These constraints persist through inertia rather than function. Theater high — maintenance of competitive posturing despite minimal competitive function."
     },
     {
       "classification_type": "mountain",
@@ -84,68 +84,92 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Natural Law View (False Summit)",
-      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 Risk perspective that network effects are an immutable law of economics: positive feedback, winner-take-all outcomes, and lock-in are inherent to any technology with network value. This naturalizes what is actually a contingent institutional arrangement (weak interoperability requirements, high switching costs by design, regulatory forbearance). The engine will flag this as a false summit \u2014 the 'naturalness' of lock-in depends entirely on policy choices about data portability, API access, and platform bundling."
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, network effects are a fundamental property of communication systems: the value of a network grows with user count (metcalfe-like scaling). Lock-in is inherent to any system with increasing returns and information transfer costs. This perspective sees market dominance as an immutable consequence of network economics. However, the structural data contradicts the mountain classification — regulatory capacity to mandate interoperability and API access reveals that lock-in is partly contingent on institutional architecture, not purely a law of network economics."
     }
   ],
   "omegas": [
     {
-      "id": "switching_cost_measurement",
-      "question": "Are measured switching costs structural (actual technical barriers) or behavioral (perceived/psychological lock-in that would disappear with better information)?",
-      "resolution_mechanism": "Controlled switching experiments: offer incentives to switch and measure actual migration rates vs. stated switching cost estimates. Compare user retention after new competing options emerge with low marketing budgets.",
-      "impact": "If structural: lock-in is a genuine network effect constraint (higher \u03b5). If behavioral: users have mobile exit options that are merely invisible (lower d from market perspective, higher d from individual perspective). Classification may shift from Snare to Tangled Rope depending on behavioral component.",
+      "id": "network_effect_magnitude",
+      "question": "What fraction of the platform's value derives from network effects vs. intrinsic product quality and switching cost engineering?",
+      "resolution_mechanism": "Comparative analysis across platforms with similar feature sets but different network sizes; historical data on user migration when switching cost barriers were reduced (e.g., data export, API access); user surveys on value attribution",
+      "impact": "If network effects dominate (>70%): lock-in is largely structural (users genuinely value the network). If intrinsic quality/switching costs dominate (>50%): lock-in is more extractive than appears. Classification shifts from Rope (network coordination) toward Snare (engineered switching costs).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether switching costs are structural or behavioral/psychological"
+      "description": "Relative contribution of network effects vs. intrinsic product quality"
     },
     {
-      "id": "network_effect_versus_lock_in",
-      "question": "What proportion of the incumbent's market dominance derives from genuine network effects (value increases with scale) versus switching cost barriers (value cannot be accessed by switching)?",
-      "resolution_mechanism": "Counterfactual analysis: simulate reduced switching costs (interoperability, data portability) while holding network effects constant. Measure resulting market share churn. Compare to empirical cases where interoperability increased (VoIP, mobile carriers with number portability).",
-      "impact": "If network effects dominate: lock-in is a coordination mechanism, beneficiaries are all network participants (Rope from more perspectives). If switching costs dominate: lock-in is pure extraction mechanism (Snare is correct classification). If mixed: Tangled Rope is correct.",
+      "id": "switching_cost_irreversibility",
+      "question": "To what extent are switching costs reversible (can users migrate with data/social graph intact) vs. irreversible (data trapped, relationships severed)?",
+      "resolution_mechanism": "Technical audit of data portability APIs, social graph export capabilities, integration standards; empirical tracking of user migration patterns after interoperability mandates (e.g., EU DMA); user interviews on perceived data loss on exit",
+      "impact": "If highly reversible: users have more exit agency; classification shifts toward Rope/Tangled Rope. If largely irreversible: users are trapped; classification confirms Snare. This distinction determines whether interoperability remedies actually reduce lock-in or merely reduce friction.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Proportion of dominance from network effects vs switching cost barriers"
-    },
-    {
-      "id": "interoperability_ceiling",
-      "question": "Can forced interoperability (data portability, API access, plugin ecosystems) reduce lock-in without destroying the network effects that generate legitimate coordination value?",
-      "resolution_mechanism": "Historical study of interoperability mandates: GDPR data portability impact, EU DMA compliance timelines, cellular number portability outcomes. Measure whether open standards preserve network value while reducing switching costs.",
-      "impact": "If interoperability works: scaffold sunset is real, extraction can be decoupled from coordination (lock-in becomes surmountable). If interoperability fails: network effects prove to be tightly coupled with switching costs (lock-in is inherent to network coordination, not contingent on architecture). Classification implications: transition from Snare/Tangled Rope to Rope/Piton.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether forced interoperability can preserve network value while reducing lock-in"
+      "description": "Reversibility of switching costs and data lock-in"
     },
     {
       "id": "regulatory_enforcement_capacity",
-      "question": "Do antitrust agencies have sufficient technical capacity and legal authority to enforce interoperability in real time, or is antitrust theater (merger review, pricing investigations) mismatched to the actual speed of digital market evolution?",
-      "resolution_mechanism": "Comparative analysis of EU DMA vs US antitrust enforcement on actual lock-in reduction. Timeline comparison: how long between violation and remedy? Do remedies precede or follow market shifts?",
-      "impact": "If agencies have capacity: scaffold perspective is real (regulation reduces lock-in over time). If agencies lag: piton perspective is real (enforcement is performative, market structure persists despite formal intervention). This determines whether the regulatory sunset clause has teeth.",
+      "question": "Can regulatory bodies actually enforce interoperability mandates and data portability rights, or does platform complexity and technical obfuscation prevent effective enforcement?",
+      "resolution_mechanism": "Post-enforcement audit of DMA compliance in EU; comparative analysis of achieved vs mandated interoperability; third-party technical verification of API access and data export functionality; measurement of actual user switching post-enforcement",
+      "impact": "If enforcement effective: scaffold classification confirmed; sunset is real. If enforcement blocked by complexity: scaffold is aspirational; the constraint persists as Snare/Tangled Rope despite regulatory intent. This determines whether institutional remedies can actually reduce lock-in.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether antitrust enforcement capacity matches digital market evolution speed"
+      "description": "Feasibility of regulatory enforcement of interoperability"
+    },
+    {
+      "id": "alternative_coordination_models",
+      "question": "Are decentralized/federated coordination models (e.g., ActivityPub, blockchain platforms) technically capable of achieving equivalent network effects to centralized platforms?",
+      "resolution_mechanism": "Technical benchmark of decentralized network performance (latency, throughput, feature parity); user adoption rates and retention in federated platforms; comparative analysis of equilibrium network size and economic value",
+      "impact": "If decentralized models viable: alternative coordination pathway exists; scaffold/rope perspectives gain credibility. If decentralized models fail: lock-in to centralized platforms is partly structural (coordination requires centralization); mountain perspective gains credibility. This determines whether market dominance is contingent or inevitable.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Technical viability of decentralized network alternatives"
+    },
+    {
+      "id": "extractive_behavior_measurement",
+      "question": "How much of the dominant platform's revenue growth derives from extraction mechanisms (data monetization, margin compression, service degradation) vs. value creation (features, ecosystem investment)?",
+      "resolution_mechanism": "Financial decomposition of revenue sources; user experience metrics over time (feature quality, downtime, privacy loss); comparative analysis with competitive-era behavior; ecosystem impact assessment (developer revenue compression, complementary service quality)",
+      "impact": "If extraction-driven (>50% of growth): lock-in enables extraction; Snare classification confirmed. If value-creation-driven (>50% of growth): lock-in is coupled with genuine ecosystem benefits; Tangled Rope or Rope classification confirmed. Determines whether regulators should target lock-in (Snare/Tangled Rope) or allow continued dominance (Rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of growth driven by extraction vs. value creation"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.25
     },
     {
       "metric": "base_extractiveness",
       "time_point": 5,
-      "value": 0.48
+      "value": 0.38
     },
     {
       "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
       "time_point": 10,
       "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.32
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
@@ -163,31 +187,32 @@
     "end": 10
   },
   "commentary": {
-    "narrative_context": "Market dominance lock-in is a structural constraint that emerges when a firm gains market leadership through network effects, scale, or ecosystem breadth, then faces decreasing competitive pressure as switching costs and lock-in grow faster than the constraint that generated the dominance. The constraint exhibits all six DR types from different perspectives, making it an exemplar for how coordination mechanisms can be coupled with extraction mechanisms. From the locked-in user's perspective, it is a Snare (pure extraction with minimal exit). From the dominant incumbent's perspective, it is Rope (pure coordination). From the ecosystem developer's perspective, it is Tangled Rope (genuine coordination coupled with unilateral control). From regulators and interoperability advocates, it is Scaffold (a temporary problem with a regulatory sunset clause). From legacy antitrust frameworks, it is Piton (performative enforcement of a market structure that has degraded). The constraint's extractiveness (0.58) and suppression (0.62) reflect moderate-to-high barriers to competitive entry and user exit. The theater ratio (0.48) is lower than in regulatory capture scenarios because network effects and switching costs have a genuine structural basis, not just performative cover \u2014 but regulatory theater (merger review, market definition disputes) adds performative content without addressing lock-in mechanisms. The trajectory shows extractiveness increasing over time as dominance consolidates and interoperability barriers harden, but theater_ratio remaining relatively stable because the underlying network effect is genuine, not theatrical.",
+    "narrative_context": "Market dominance lock-in occurs when a firm achieves leadership through coordination mechanisms (network effects, ecosystem breadth, scale) and then leverages that position to extract rents through switching cost elevation, data control, API restrictions, and service degradation. The constraint exhibits a structural transition: what begins as pure coordination (Rope—the network is genuinely valuable and coordination of users is the benefit) gradually couples with extraction mechanisms as the firm faces decreasing competitive pressure. Users become locked in not just because the network is valuable, but because exit is artificially expensive (data trapping, integration fragmentation, UI learning costs). Competitors become locked in through ecosystem dependency and API control. The constraint demonstrates that coordination mechanisms can be weaponized as extraction mechanisms once competitive checks are removed. Regulatory intervention (interoperability mandates, data portability rights) attempts to sever the coupling by reducing switching costs, creating a Scaffold structure with a sunset clause: if enforcement succeeds, lock-in becomes uneconomical and the market exits the Snare/Tangled Rope states. The analytical observer risks naturalizing this as an immutable property of network economics (Mountain) when it is partly contingent on institutional architecture.",
     "key_agents": [
-      "Dominant Incumbent Firm: Primary beneficiary (institutional/arbitrage) \u2014 captures value from network scale, can set terms unilaterally, has full exit optionality",
-      "Locked-In End Users: Primary victim (powerless/trapped) \u2014 cannot exit without prohibitive switching costs, face price increases and reduced choice",
-      "Competing Entrants: Secondary victim (powerless/constrained) \u2014 face asymmetric barriers, cannot match ecosystem breadth, carry customer acquisition costs",
-      "Ecosystem Developers: Secondary victim (organized/constrained) \u2014 depend on platform for distribution but subject to unilateral policy changes and revenue extraction",
-      "Interoperability Coalition: Organized actors (organized/mobile) \u2014 regulators and standards bodies building alternative exit routes via data portability and API mandates",
-      "Legacy Antitrust Framework: Institutional actor (institutional/arbitrage) \u2014 maintains performative merger review and market definition disputes; enforcement lags market evolution",
-      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as immutable network laws"
+      "Dominant Platform Firm: Primary beneficiary (institutional/arbitrage) — captures network value and switching cost rents; experiences constraint as enabling coordination",
+      "Locked-In User Base: Primary victim (powerless/trapped) — faces extreme switching costs (data migration, social graph loss, interface learning); absorbs extraction costs with zero exit agency",
+      "Dependent Ecosystem: Secondary victim (moderate/constrained) — app developers, service providers dependent on platform APIs; face API deprecation, margin compression, policy changes; cannot exit without financial loss",
+      "Competing Firms: Organized victim (organized/constrained) — competitors unable to build equivalent network scale; face structural disadvantage despite competitive product quality; barrier to entry through network effects and data access asymmetry",
+      "Antitrust/Regulatory Coalition: Organized intermediary (organized/mobile) — perceive lock-in as temporary governance failure solvable through interoperability mandates and data portability; have regulatory power to mandate structural remedies",
+      "Legacy Competitors: Institutional actors (powerful/mobile) — firms that once competed (Yahoo, Nokia, etc.) that lost to network effects; constraints persist through vestigial positioning and inertia",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing contingent institutional arrangements as laws of network economics"
     ],
-    "logic_rationale": "Extractiveness (0.58): Moderate-high. The dominant incumbent captures value through multiple mechanisms: pricing power to locked-in users, revenue share terms with ecosystem developers, and reduced competitive pressure from barriers to entry. However, the extraction is not as severe as pure monopoly pricing (\u03b5 would approach 0.85+) because network effects generate legitimate value \u2014 more users do mean more value to all users. The moderate level reflects that extraction is coupled with real coordination benefit. The trajectory shows increasing extractiveness over the 10-year interval (0.35 \u2192 0.58) as dominance compounds and switching costs harden. Suppression (0.62): Moderate-high. Barriers to exit include data lock-in (user data cannot migrate), API dependency (developers cannot reach users without the platform), ecosystem lock-in (complementary services only exist on the dominant platform), and psychological switching costs. But suppression is not total (0.80+) because some users do switch, some developers build alternatives, and regulatory mandates are beginning to reduce barriers. Theater ratio (0.48): Moderate. Antitrust enforcement and merger review processes contribute performative content (market definition disputes, remedy packages that don't address lock-in), but the underlying network effects and switching costs have genuine structural bases. Theater is not the primary mechanism \u2014 extraction derives from real coordination coupling and real barriers. Theater has increased slightly over the interval as regulatory theater has intensified without matching market structure changes.",
-    "directionality_logic": "Directionality (d) for each perspective derives from power level, exit options, and structural relationship to extraction flow. The locked-in user has powerless status + trapped exit options \u2192 high d (1.0, maximum target). The competing entrant has powerless status + constrained exit (can attempt to build, but barriers are high) \u2192 high d (0.90). The ecosystem developer has organized status + constrained exit (depends on platform, cannot easily leave, but has some negotiating power) \u2192 moderate-high d (0.60). The dominant incumbent has institutional status + arbitrage exit (can switch business models, absorb competitors, pivot markets) \u2192 very low d (0.10, near-full beneficiary). The interoperability coalition has organized status + mobile exit (regulatory mandates give them agency to shape terms) \u2192 moderate d (0.45). This produces a perspectival gap: the incumbent sees net subsidy (low effective extraction toward them), locked-in users see maximum extraction (high chi), competing entrants see asymmetric barriers (high chi), and the coalition sees a solvable problem with sunset (moderate chi).",
-    "perspectival_gap": "Market dominance lock-in generates a maximal perspectival gap across all six DR types. The dominant incumbent perceives pure Rope: they frame network effects as a coordination good that benefits all participants equally, and experience pricing power as a legitimate exercise of coordinating authority. The locked-in user perceives pure Snare: they see extraction with minimal coordination benefit and no exit path. The competing entrant perceives Snare with higher barriers: they cannot match ecosystem breadth and carry disproportionate customer acquisition costs. The ecosystem developer perceives Tangled Rope: genuine platform access (coordination) coupled with unilateral terms and threat of direct competition (extraction). The interoperability coalition perceives Scaffold: regulatory mandates are actively creating exit routes (data portability, API access) with a sunset (5-10 years for standards to mature). The legacy antitrust framework perceives Piton: merger review and market definition disputes are performative rituals that don't address the underlying lock-in mechanism; the framework has become largely theatrical while markets have evolved past its assumptions. The civilizational analytical observer risks perceiving Mountain (network effects are immutable laws of economics), but the structural data shows this is false naturalization \u2014 the contingency of lock-in depends entirely on interoperability policy, not on physics. The perspectival gap is so wide that no single observer can claim to see the 'real' constraint \u2014 the constraint's structure is fully revealed only by comparing all perspectives.",
-    "mandatrophy_analysis": "DIAGNOSTIC EXEMPLAR: Market dominance lock-in resolves the mandatrophy through perspectival multiplicity and regulative intervention. The false summit (mountain perspective) is revealed as naturalization of contingent policy: lock-in feels immutable only because regulators have not yet enforced interoperability. The scaffold is real but nascent: data portability mandates (GDPR, EU DMA) are building exit routes, but maturation requires 5-10 years. The snare is the powerless agent's structural reality while interoperability is incomplete. The rope is the incumbent's genuine experience of network coordination (more users do create value for all). The tangled rope is the ecosystem developer's mixed experience. The piton is the institutional lag: antitrust theater persists despite its actual powerlessness over lock-in mechanisms. The mandatrophy is resolved by recognizing that all six types are legitimate perspectival readings of the same constraint at different phases of regulatory evolution \u2014 the constraint is a Snare under the current (low-interoperability) regime, a Tangled Rope under partial interoperability, and a Rope under full interoperability. The 'correct' classification depends on which policy baseline you assume, not on objective facts about network effects. This shows why mandatrophy cannot be resolved by appeal to 'what the constraint really is' \u2014 the constraint's nature is determined by the regulatory and architectural choices that structure switching costs."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, reflecting the coupling of coordination benefits with extraction mechanisms. Initial extractiveness (0.25) reflects genuine network value — users benefit from being on the network with many others, developers benefit from access to users, and the firm benefits from coordination of these groups. Rising extractiveness (0.38 → 0.52) reflects that as dominance solidifies, the firm increasingly extracts through switching cost elevation, data trapping, ecosystem control, and service degradation. The platform captures the coordination benefit while shifting costs to users and competitors. At 0.52, the constraint remains tangled (both coordination and extraction present) but extraction is becoming dominant. If extractiveness exceeds 0.66, classification would shift decisively to Snare. Suppression (0.58): Moderate-high, reflecting that while users and competitors cannot physically exit (the network is necessary for economic activity), they face very high costs to do so. Suppression is not total because: (1) regulatory intervention (interoperability mandates) is reducing technical suppression, (2) decentralized alternatives exist but are not yet competitive, (3) some users can exit to niche platforms. Theater ratio (0.48): Moderate, reflecting that platform behavior includes both genuine product development and performative compliance (privacy policies that obscure data monetization, competitive posturing despite market dominance, ecosystem theater vs. actual benefit).",
+    "perspectival_gap": "The gap between the dominant firm's Rope classification and the locked-in user's Snare classification is the diagnostic signal that extraction is occurring. If all perspectives converged on a single type, the constraint would be either pure coordination or pure extraction. The perspectival divergence reveals a hybrid: the network provides genuine value (coordination) but the firm's behavior exploits the lock-in to extract rents (extraction). The regulatory perspective (Scaffold) is crucial because it asserts that the coupling is contingent on institutional architecture — if interoperability is mandated, switching costs fall, and users regain exit agency. This assertion can be tested empirically: post-enforcement, if users do migrate and extraction ceases, the Scaffold hypothesis is confirmed and the constraint transitions to Rope/Mountain (either stable coordination or genuine natural law). If enforcement fails or users don't migrate despite mandated interoperability, the Snare hypothesis is confirmed and lock-in is deeper than regulation can reach.",
+    "directionality_logic": "Directionality is derived from the base_properties beneficiary/victim declarations and the power/exit tuple for each perspective. Dominant firm (beneficiary + institutional/arbitrage) derives d ≈ 0.12 via the canonical table. Locked-in users (victims + powerless/trapped) derive d ≈ 0.95. Competing firms (victims + organized/constrained) derive d ≈ 0.62 (organized power reduces d from the would-be 0.80 for unorganized victims). Regulatory coalition (intermediary + organized/mobile) derives d ≈ 0.40 (constrained by political power but mobile exit through policy change). No directionality overrides are needed — the derivation chain produces appropriate d values without adjustment. The suppression scaling (suppression is not scaled by f(d); only extractiveness is) means that the high suppression (0.58) applies to all agents equally — the technical barriers to exit (data migration complexity, API fragmentation, interface learning) are objective constraints, not perspective-dependent.",
+    "mandatrophy_analysis": "EXEMPLAR FOR CONSTRAINT COUPLING: This constraint resolves the mandatrophy by demonstrating that the six classifications are not mutually exclusive perspectives on a single constraint but rather accurate descriptions of different structural phases and positions. Early dominance (t=0) is Rope: genuine coordination of users and developers, network effects are real, the firm's behavior is competitive. Middle dominance (t=5) is Tangled Rope: coordination function persists (the network is still valuable) but extraction mechanisms emerge (switching costs rise, API restrictions tighten). Late dominance (t=10) moves toward Snare for locked-in agents: the coordination benefit is taken for granted, extraction mechanisms dominate user experience, and competitive pressure has vanished. The regulatory perspective introduces Scaffold: institutions capable of mandating interoperability can create an exit path. The legacy perspective shows Piton: competitive pressure from the dominant firm has so degraded that competition itself becomes vestigial theater. The analytical observer risks Mountain (naturalizing the outcome). The mandatrophy is resolved not by choosing one classification but by recognizing that (1) all classifications are structurally accurate from their respective positions, (2) the constraint transitions between types as dominance solidifies and suppression increases, and (3) institutional intervention can create structural discontinuities (interoperability reduces switching costs) that move the constraint from Snare toward Rope/Scaffold."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
   },
   "network": {
     "affects_constraints": [
-      "platform_ecosystem_dependency",
-      "data_portability_barriers",
-      "network_effect_winner_take_all"
+      "switching_cost_elevation_mechanism",
+      "ecosystem_dependency_lock_in",
+      "data_portability_governance"
     ],
-    "dual_formulation_note": "Market dominance lock-in is upstream of specific platform constraints (social media network effects, cloud infrastructure lock-in, mobile ecosystem gatekeeping). This story models the general mechanism; downstream stories model domain-specific instantiations with different \u03b5 values and empirical baselines."
+    "dual_formulation_note": "Market dominance lock-in is a constraint family with multiple decomposable components: (1) network_effects_coordination (ε=0.05, Rope) — the genuine coordination mechanism that creates value, (2) switching_cost_elevation (ε=0.65, Snare) — engineered barriers that trap users, (3) ecosystem_dependency (ε=0.58, Tangled Rope) — mixed coordination and extraction for developers, (4) regulatory_enforcement (ε=0.35, Scaffold) — temporary governance intervention. Each decomposition has different base_extractiveness, different beneficiary/victim structures, and different temporal trajectories. Market dominance lock-in as described here is the hybrid constraint that couples (1) with (2)/(3). Upstream network effects provide the coordination basis; downstream switching costs provide the extraction mechanism. The constraint family links are bidirectional: network effects enable switching costs (you can only trap users on a valuable network), and switching costs enable network dominance (lock-in prevents competitors from building equivalent networks)."
   },
   "directionality_overrides": []
 }

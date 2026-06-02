@@ -1,0 +1,208 @@
+{
+  "header": {
+    "constraint_id": "licensing_statute_mandate__public_safety_coordination",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lsm_psc",
+    "story_uid": "e9e79e8f-0ddc-4af0-ae6e-e2fb0b30398e"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.35,
+    "theater_ratio": 0.48,
+    "claimed_type": "rope",
+    "human_readable": "Statutory Credential Requirements as Public Safety Coordination",
+    "topic_domain": "labor_economics/regulatory_policy/public_administration",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "consumers",
+      "honest_practitioners"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Consumer (Information Asymmetry)",
+      "comment": "PERSPECTIVE 1: CONSUMER (ROPE) — Cannot evaluate practitioner competence through direct observation. Licensing statute solves a coordination problem: the consumer trusts the credential signal rather than attempting individual quality assessment. Low suppression (consumer can choose not to use the service); high coordination benefit (threshold quality guaranteed). Classification as Rope reflects that extraction is minimal — the consumer benefits from the coordination mechanism itself."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Honest Practitioners (Quality Competition)",
+      "comment": "PERSPECTIVE 2: HONEST PRACTITIONERS (ROPE) — Benefit from licensing because it eliminates incompetent competitors who would undercut prices or damage professional reputation through poor outcomes. Licensing is a coordination mechanism that allows honest practitioners to compete on quality and ethics rather than on willingness to cut corners. Constrained exit (leaving the profession is costly) but genuinely benefits from the constraint's existence. Coordination function is real — the licensing statute enables quality-based competition."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Marginal Practitioner (Capability Boundary)",
+      "comment": "PERSPECTIVE 3: MARGINAL PRACTITIONER (TANGLED ROPE) — Faces both coordination benefit and extraction. The licensing statute establishes a minimum competence threshold. A practitioner at or slightly below the threshold experiences this constraint as mixed: the coordination benefit is real (they benefit from consumer trust in the profession), but the enforcement of the threshold extracts barriers to entry or practice. The statue both enables the profession (coordination) and restricts who can practice it (extraction). This perspective shows the hybrid nature."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Professional Association (Legitimacy Maintenance)",
+      "comment": "PERSPECTIVE 4: PROFESSIONAL ASSOCIATION (ROPE) — Institutional beneficiary. The licensing statute gives the profession's self-regulatory authority legitimacy and ensures that the profession maintains its reputation through enforcement of minimum standards. The association benefits from the coordination mechanism (consumers trust the profession because of licensing) without bearing suppressive costs (the association adjudicates standards, not the statute directly). Arbitrage exit (the association could abandon endorsement, but would lose institutional authority). Low effective extraction — genuine coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Pure Coordination Thesis)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (ROPE) — From a civilizational perspective focused on information-asymmetry resolution, the licensing statute is a pure coordination mechanism. The threshold-setting solves a collective action problem: without statutory enforcement, individual consumers would face prohibitive verification costs, and practitioners would have no incentive to maintain quality standards. The statute internalizes these externalities. This perspective assumes minimal rent-seeking overlay and sees the constraint as primarily coordinative."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "minimum_competence_threshold_boundary",
+      "question": "Is the statutory minimum competence threshold set at the true public-safety boundary, or is it set higher (excluding capable but uncredentialed practitioners) or lower (permitting incompetent but credentialed practitioners)?",
+      "resolution_mechanism": "Historical comparison of licensing threshold changes with measured consumer harm (liability claims, regulatory violations, consumer complaints) before and after threshold adjustments. Evidence of threshold capture by incumbent practitioners.",
+      "impact": "If threshold aligns with safety boundary: Rope classification confirmed for all perspectives. If threshold is above the safety boundary: constraint is Tangled Rope from the capability-boundary perspective and contains hidden rent-seeking extraction. If threshold is below the safety boundary: the coordination function is compromised and rent-seeking dominates.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether licensing threshold matches true public-safety competence boundary"
+    },
+    {
+      "id": "alternative_verification_mechanisms",
+      "question": "Do market-driven reputation systems (online reviews, bonding/insurance, professional liability) provide consumer protection equivalent to statutory licensing for this occupation?",
+      "resolution_mechanism": "Comparative analysis of consumer harm rates (e.g., malpractice claims, regulatory violations) in licensed vs. unregulated adjacent occupations; measurement of information asymmetry reduction through market mechanisms vs. statutory enforcement.",
+      "impact": "If market mechanisms are equivalent: licensing statute is redundant coordination overhead (Scaffold). If market mechanisms fail: licensing statute is necessary coordination mechanism (Rope confirmed). If market mechanisms are partially effective: licensing is mixed coordination and barrier (Tangled Rope confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Effectiveness of alternative consumer-protection mechanisms"
+    },
+    {
+      "id": "credential_capture_by_incumbents",
+      "question": "To what degree has the licensing statute been captured by incumbent practitioners to exclude competitors (rent-seeking overlay), versus serving as a genuine public-safety mechanism?",
+      "resolution_mechanism": "Analysis of licensing requirement evolution: comparison of minimum competence thresholds across time; examination of whether requirements increase as the occupational supply increases; measurement of practitioner income relative to unregulated comparables; evidence of deliberate requirement design to exclude specific competitor groups.",
+      "impact": "If captured (strong rent-seeking): constraint is Tangled Rope or Snare from competent-but-excluded perspective, and Rope-as-cover-story from institutional beneficiary perspective. If uncaptured (strong coordination): Rope classification holds across all perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of incumbent practitioner capture of licensing requirements"
+    },
+    {
+      "id": "kernel_reading_contest",
+      "question": "Which reading of the licensing statute kernel is operative in this jurisdiction: public_safety_coordination, rent_seeking_suppression, or graduated_access_filter?",
+      "resolution_mechanism": "Textual analysis of statute language (safety-explicit vs. access-implicit), legislative record intent statements, regulatory enforcement patterns (safety violations vs. credential violations), practitioner composition changes post-licensing, consumer harm trajectories.",
+      "impact": "If public_safety_coordination: Rope classification stable. If rent_seeking_suppression: constraint is Snare from excluded-practitioner and Tangled Rope from honest-practitioner perspectives. If graduated_access_filter: constraint is Scaffold with sunset (pathway to deregulation or alternative credentialing).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Which reading of the licensing statute kernel is structurally operative"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.43
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Statutory credential requirements exist within a contested institutional framework that can be read multiple ways: as a public-safety mechanism (protecting consumers from incompetent practitioners through minimum competence standards), as rent-seeking suppression (incumbent practitioners using statutory barriers to restrict competition and maintain above-market wages), or as a graduated access filter (a transitional mechanism creating multiple pathways to practice while maintaining quality thresholds). This constraint story instantiates THE FIRST READING: public-safety coordination. From this reading, the licensing statute solves an information-asymmetry problem that market mechanisms alone cannot solve — consumers cannot evaluate practitioner competence directly, and practitioners face incentives to cut corners on quality. The statute coordinates on a shared minimum competence threshold, enabling both consumers and honest practitioners to benefit. However, the structural data shows rising theater ratio (0.35 → 0.48) and rising extractiveness (0.18 → 0.32) over the 20-year measurement interval, suggesting that the pure-coordination reading is under pressure from rent-seeking overlay. The sibling readings (rent_seeking_suppression, graduated_access_filter) remain live interpretations of the same statutory text — they are not foreclosed by this reading, but they occupy different institutional jurisdictions and different moments in the statute's evolution.",
+    "key_agents": [
+      "Consumers: Primary beneficiary (powerless/trapped) — cannot evaluate competence independently; benefit from statutory quality assurance signal",
+      "Honest Practitioners: Primary beneficiary (organized/constrained) — benefit from elimination of incompetent competition; licensing enables quality-based differentiation",
+      "Marginal Practitioners (at capability boundary): Secondary victim-beneficiary (moderate/constrained) — experience the statute as mixed coordination and barrier to practice",
+      "Professional Association: Institutional beneficiary (institutional/arbitrage) — gains legitimacy and self-regulatory authority; maintains profession reputation",
+      "Excluded Incompetent Practitioners: Potential victim (moderate/trapped) — cannot practice despite market demand; bear full suppressive cost of licensing requirement",
+      "Analytical Observer: Structural analyst (analytical/analytical) — sees the statute as solving a collective action problem around information asymmetry"
+    ],
+    "logic_rationale": "Extractiveness (0.32): Low-to-moderate. The public-safety reading assumes that the minimum competence threshold is set at or near the true boundary of public harm — practitioners below the threshold cause demonstrable consumer injury, practitioners above it do not. From this reading, the extractiveness reflects only the coordination overhead: administrative costs of credentialing, minor productivity loss from practitioners meeting threshold requirements, and legitimate quality-signal function. The rising trajectory (0.18 → 0.32) reflects increasing overlay of rent-seeking as the profession matures and threshold requirements accumulate — but the base reading assumes this rise is secondary to the primary coordination function. Suppression (0.35): Moderate. The statute creates barriers to entry for uncredentialed practitioners, and enforcement mechanisms prevent non-credentialed practice. However, suppression is not as severe as snare-level (≥0.60) because: (1) legitimate practitioners can achieve credentials, (2) consumers can choose not to use the credentialed service (if they prefer risk), (3) alternative verification mechanisms partially substitute (insurance, reputation, bonding). Theater ratio (0.48): Moderate-high. A substantial portion of licensing enforcement is procedural theater — credential maintenance, continuing education requirements, licensure renewal — that may not correlate tightly with actual practitioner competence. The rising trajectory (0.35 → 0.48) suggests the theater is increasing relative to genuine safety function, a signal of potential capture. From the public-safety reading, this theater is necessary overhead, not extractive corruption; the sibling readings interpret the same theater as evidence of rent-seeking.",
+    "perspectival_gap": "This reading produces Rope across all five perspectives — consumers, honest practitioners, professional association, marginal practitioners (from their coordinated perspective), and analytical observer all perceive the statute as primarily coordinative. The reading therefore exhibits uniform classification, which is valid for a pure-coordination mechanism but creates a diagnostic vulnerability: uniform classification can mask rent-seeking overlay. The upward trajectory in extractiveness and theater ratio, though modest, signals that the sibling readings (rent_seeking_suppression, graduated_access_filter) are gaining structural ground. The analytical observer's Rope assumes the minimum competence threshold is set near the true public-safety boundary; if the threshold is actually above that boundary (capturing rents by excluding capable practitioners), the observer's perspective would shift toward Tangled Rope. The marginal practitioner's classification depends on where the capability boundary is drawn — if it is drawn below their actual competence, they experience Rope; if above, they experience Snare or constrained Tangled Rope. This reading assumes the former; the sibling rent_seeking_suppression reading assumes the latter.",
+    "directionality_logic": "From the public-safety reading, directionality is structured around the coordination function rather than extraction. Consumers benefit from the coordination signal (low d → low effective extraction χ). Honest practitioners benefit from competitor elimination through quality-raising mechanism (low-to-moderate d → low-moderate χ). The professional association benefits from legitimacy (near-zero d → arbitrage exit, near-zero χ). The marginal practitioners experience mixed benefit and barrier (moderate d → moderate χ). The analytical observer sees the coordination function (moderate d derived from analytical position → moderate χ). None of these derives from extraction-toward-an-actor (which would produce high d > 0.7); all derive from shared threshold participation. This uniform low-d profile is the signature of Rope classification. The sibling rent_seeking_suppression reading would produce much higher d values for excluded practitioners and marginal practitioners, shifting their classifications to Snare or Tangled Rope.",
+    "mandatrophy_analysis": "This reading resolves the mandatrophy by establishing that the licensing statute is fundamentally a Rope: a pure coordination mechanism around minimum competence standards. The mandatrophy question is not 'should licensing exist?' but 'is the minimum competence threshold set at the genuine public-safety boundary, or has it been captured to serve rent-seeking?' The analytical approach: accept Rope as the base classification (public-safety function is real and genuine), then test the omegas to determine whether the threshold remains at the safety boundary (Rope confirmed) or has migrated upward (Tangled Rope + rent-seeking hybrid). The rising theater ratio and extractiveness, while concerning, are consistent with Rope-turning-into-Piton (theatrical degradation of function due to institutional inertia) rather than Rope-revealing-hidden-Snare (the extraction was there all along). This reading aligns with evidence that licensing does reduce consumer harm for high-risk occupations — the Rope function is real — but does not rule out that the threshold has drifted upward over time, adding rent-seeking overlay.",
+    "kernel_context": "This constraint instantiates the public_safety_coordination reading of the contested licensing_statute_mandate kernel. The kernel is a statutory framework authorizing state licensing of practitioners in occupations with information asymmetry and potential consumer harm. Three distinct readings compete: (1) public_safety_coordination (THIS READING): licensing solves an information asymmetry by coordinating on a minimum competence threshold that protects consumers. (2) rent_seeking_suppression: licensing is a mechanism for incumbent practitioners to restrict entry and maintain above-market wages, with the public-safety framing serving as cover story. (3) graduated_access_filter: licensing is a transitional multi-pathway system that allows capable practitioners to gain credentials through various routes (apprenticeship, alternative education, demonstrated competence) while maintaining quality boundaries. These readings coexist — they are held by different institutional actors and jurisdictions — and the manifest empirical evolution of licensing regimes shows drift from reading 1 toward hybrid (1 + 2) as threshold requirements accumulate. This story focuses exclusively on reading 1, establishing its structural coherence and the conditions under which it holds."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "licensing_statute_mandate__rent_seeking_suppression",
+      "licensing_statute_mandate__graduated_access_filter"
+    ],
+    "dual_formulation_note": "The licensing statute kernel admits three structurally distinct constraint readings. This story (public_safety_coordination) models the statute as a pure coordination mechanism with ε=0.32. The rent_seeking_suppression reading would produce ε≥0.55 by interpreting the same threshold requirements as barriers to competition. The graduated_access_filter reading would produce ε≤0.28 by interpreting the statute as a transitional framework with multiple pathways. All three readings apply to the same statutory text; they differ in which structural elements are treated as primary (coordination vs. extraction vs. transitional design). The network links model the constraint family and enable contamination analysis: if the public_safety reading is compromised (threshold captured), the rent_seeking reading gains structural force."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "licensing_statute_mandate__rent_seeking_suppression",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "licensing_statute_mandate__graduated_access_filter",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "minimum_competence_threshold_serves_public_safety",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "information_asymmetry_requires_state_coordination",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "consumer_protection_through_competence_assurance",
+    "drift_state": {
+      "moment": "contemporary_post_occupational_maturation",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

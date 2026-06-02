@@ -2,12 +2,14 @@
   "header": {
     "constraint_id": "state_surveillance_capacity_extraction",
     "version": "1.0",
-    "generated_date": "2026-02-27",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "surv",
+    "story_uid": "87768043-385d-4ca1-8ee4-4263118ab9c1"
   },
   "base_properties": {
     "extractiveness": 0.68,
-    "suppression": 0.75,
+    "suppression": 0.78,
     "theater_ratio": 0.55,
     "claimed_type": "snare",
     "human_readable": "State Surveillance Capacity Extraction",
@@ -17,9 +19,9 @@
       "state_security_apparatus"
     ],
     "victims": [
-      "population_under_surveillance",
-      "democratic_deliberation",
-      "press_freedom"
+      "surveilled_population",
+      "political_opposition",
+      "marginalized_communities"
     ]
   },
   "perspectives": [
@@ -30,16 +32,7 @@
       "exit_options": "trapped",
       "spatial_scope": "national",
       "label": "The Surveilled Citizen",
-      "comment": "PERSPECTIVE 1: SURVEILLED CITIZEN (SNARE) \u2014 Citizens cannot opt out of surveillance infrastructure. Exit options are trapped: relocating to another jurisdiction is materially difficult, legally restricted, or provides only illusory escape (surveillance is international). The constraint extracts behavioral modification (chilling effect on expression, communication, political participation) without corresponding coordination benefit. Maximum experienced extraction."
-    },
-    {
-      "classification_type": "snare",
-      "agent_power": "powerless",
-      "time_horizon": "generational",
-      "exit_options": "identity_locked",
-      "spatial_scope": "global",
-      "label": "Democratic Deliberation as Epistemic Commons",
-      "comment": "PERSPECTIVE 2: DEMOCRATIC DELIBERATION (SNARE, identity_locked) \u2014 The epistemic commons cannot exit. Its identity is constituted through open deliberation and shared information access. Surveillance degrades both through targeted suppression of certain speakers and through mass chilling effects. The commons cannot perceive alternatives from within its own frame because the frame assumes open discourse as foundational. This is an identity lock, not a trapped boundary: the epistemic infrastructure could restructure itself to function under surveillance (encrypted, pseudonymous, federated), but doing so would require abandoning the identity claim of 'democratic deliberation' and becoming something else entirely."
+      "comment": "PERSPECTIVE 1: SURVEILLED CITIZEN (SNARE) — Trapped within national territory; cannot exit surveillance without emigration (high cost, legal barriers, family separation). Asymmetric knowledge: state observes behavior, communications, financial transactions; citizen cannot know what is collected or how it is used. No coordination benefit — the surveillance apparatus does not solve citizen problems, only monitors for state benefit. Maximum experienced extraction."
     },
     {
       "classification_type": "snare",
@@ -47,85 +40,94 @@
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "Journalists and Activists",
-      "comment": "PERSPECTIVE 3: JOURNALISTS AND ACTIVISTS (SNARE) \u2014 Constrained exit: they can relocate, use pseudonyms, or adopt operational security practices, but these actions carry high costs (professional isolation, reduced impact, career disruption). Surveillance extracts through source chilling, restricted access to information, and targeting of organizing networks. The constraint produces snare classification because effective exit costs are near-total for remaining in their profession."
+      "label": "The Political Opposition",
+      "comment": "PERSPECTIVE 2: POLITICAL OPPOSITION (SNARE) — Constrained by surveillance targeting and differential enforcement. Opposition figures face heightened monitoring, account freezes, travel restrictions, and prosecution based on surveillance data. Exit options exist (emigration, legitimization through formal politics) but at high cost. Surveillance is explicitly coercive — designed to suppress opposition organizing. No coordination function; pure extraction with suppression as the mechanism."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The State Security Apparatus",
+      "comment": "PERSPECTIVE 3: STATE SECURITY APPARATUS (ROPE) — Sees surveillance as solving a genuine coordination problem: detecting threats, preventing terrorism, managing national security. From this perspective, the asymmetry is necessary and legitimate — state needs to know, population needs protection. Experiences surveillance as coordination mechanism with benefits (threat prevention, order maintenance). Net beneficiary; extraction runs toward this agent. High arbitrage: can reallocate resources if surveillance curtailed, redirect to other monitoring priorities."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "institutional",
-      "time_horizon": "immediate",
-      "exit_options": "mobile",
-      "spatial_scope": "national",
-      "label": "State Security Apparatus",
-      "comment": "PERSPECTIVE 4: STATE SECURITY APPARATUS (TANGLED ROPE) \u2014 The security apparatus benefits from surveillance capacity (access to threat intelligence, targeting capability, population control) while also bearing genuine coordination costs (legal oversight requirements, operational complexity, budget constraints). They experience the constraint as both enabling and constraining. The apparatus can reallocate resources (exit the current surveillance regime for alternative intelligence methods), but operational efficiency is reduced. Tangled rope reflects genuine security coordination alongside asymmetric extraction from the population."
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Civil Rights Coalition",
+      "comment": "PERSPECTIVE 4: CIVIL RIGHTS COALITION (TANGLED ROPE) — Organized agents (NGOs, lawyers, technologists, international bodies) see surveillance both as a governance coordination mechanism (legitimate security needs) AND as an extraction mechanism (suppression of dissent, targeting of minorities, chilling effects on speech). These agents have partial exit: they can organize internationally, document abuses, build technical countermeasures, pressure governments. Genuine coordination function exists (threat detection); asymmetric extraction also exists (oppression). The constraint exhibits both features simultaneously — the classification depends on which function is foregrounded and at what time scale."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
-      "time_horizon": "generational",
+      "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "Judicial and Legislative Oversight Bodies",
-      "comment": "PERSPECTIVE 5: OVERSIGHT BODIES (PITON) \u2014 Courts and legislatures maintain the performative function of overseeing surveillance (issuing warrants, debating authority, setting limits) but lack effective enforcement mechanisms. Surveillance capabilities are too technical for legislative review, data requests from courts are routinely delayed, and national security exceptions override formal oversight. The theater persists through institutional inertia \u2014 oversight bodies maintain their identity as constraint-setters even as their practical authority has atrophied. Theater ratio reflects the gap between nominal oversight authority and actual surveillance scope."
+      "label": "The Formal Oversight Framework",
+      "comment": "PERSPECTIVE 5: FORMAL OVERSIGHT FRAMEWORK (PITON) — Legal frameworks (warrants, judicial review, legislative oversight committees) are designed to constrain state surveillance. In practice, these frameworks are largely performative: oversight committees lack enforcement power, classified proceedings prevent public scrutiny, national security exemptions erode warrant requirements, and technical complexity outpaces judicial comprehension. Oversight persists as institutional theater — the apparatus maintains the appearance of constraint while technical capacity has grown beyond oversight's functional reach. Theater ratio high; actual constraint on extraction low."
     },
     {
-      "classification_type": "snare",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE, civilizational scope) \u2014 From a civilizational perspective, modern surveillance is a structural feature of state apparatus itself \u2014 the technological capacity, once developed, is retained and expanded without reversal. No democratic state has meaningfully reduced surveillance capacity after expansion. The constraint appears unchangeable at civilizational scale because the ratchet mechanism (capacity enabling new threat perception enabling expanded authority) is self-reinforcing. From this vantage, surveillance is snare across all observations."
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Technology Naturalization)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / TECHNOLOGY NATURALIZATION (MOUNTAIN) — From a civilizational/universal perspective, surveillance capacity follows from the laws of information technology: once data can be collected and analyzed, state capacity to do so becomes a natural law-like fact of modernity. This perspective sees surveillance asymmetry as inevitable, emerging naturally from technological capability rather than political choice. However, this perspective instantiates a false summit: the natural law framing naturalizes what is actually a contingent institutional and political choice — the beneficiary group (state security apparatus) has strong incentives to present surveillance capability as inevitable rather than chosen."
     }
   ],
   "omegas": [
     {
-      "id": "threshold_for_mass_surveillance_extraction",
-      "question": "At what surveillance coverage threshold does the mechanism shift from targeted extraction to mass behavioral modification through ambient panopticism?",
-      "resolution_mechanism": "Cross-national comparison of surveillance capacity vs measured chilling effects in speech, assembly, and political participation. Identify correlation between coverage density and self-censorship rates.",
-      "impact": "If threshold is low (< 30% coverage): ambient surveillance is the mechanism, snare classification is robust. If threshold is high (> 70% coverage): targeted extraction dominates, and some populations might experience the constraint as lower extraction than others, shifting some perspectives toward tangled rope.",
+      "id": "coordination_vs_oppression_threshold",
+      "question": "At what level of surveillance scope and targeting does the constraint shift from legitimate coordination (threat detection) to pure extraction (oppression)?",
+      "resolution_mechanism": "Comparative analysis across regimes: mapping surveillance capacity against opposition mortality/imprisonment rates, minority targeting, and prosecution of political speech; identifying correlates of shift from coordination-dominant to extraction-dominant regimes",
+      "impact": "If threshold is capacity-based (surveillance naturally becomes oppressive above certain tech level): supports mountain framing. If threshold is governance-choice based (same capacity used differently in different regimes): supports snare/tangled_rope framing.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Coverage threshold for transition from targeted to mass behavioral extraction"
+      "description": "Threshold separating surveillance-for-security from surveillance-for-oppression"
     },
     {
-      "id": "security_coordination_necessity",
-      "question": "Is the security apparatus's coordination benefit genuine (surveillance prevents real threats) or illusory (perceived threats are artifacts of surveillance-driven threat inflation)?",
-      "resolution_mechanism": "Longitudinal analysis of threat prevention claims. Comparison of attack prevention rates in high-surveillance vs low-surveillance jurisdictions controlling for threat density. Assessment of how threat perception changed before and after surveillance expansion.",
-      "impact": "If genuine: tangled rope classification of security apparatus perspective is correct; some asymmetry is justified. If illusory: apparatus perspective should be snare; extraction has no coordination justification.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether security apparatus coordination benefit is genuine or threat-inflation artifact"
-    },
-    {
-      "id": "international_surveillance_coupling",
-      "question": "Are national surveillance regimes operating independently or are they coordinated through intelligence-sharing treaties and shared infrastructure?",
-      "resolution_mechanism": "Documentation of data-sharing agreements, common technical standards, joint operations, and personnel exchanges among national security agencies. Assessment of whether the regime is better modeled as single global surveillance apparatus or as competing national programs.",
-      "impact": "If coordinated: global scope analysis is justified, and exit via relocation is truly trapped (nowhere outside the network). If independent: individuals might arbitrage between jurisdictions, shifting some perspectives from trapped to constrained.",
+      "id": "exit_option_feasibility",
+      "question": "Is emigration a genuine exit option or a theoretical one? What proportion of surveilled population has realistic capacity to emigrate?",
+      "resolution_mechanism": "Analysis of emigration barriers by socioeconomic class, documentation requirements, visa availability, asset seizure risk, family separation costs; calculating effective exit cost as proportion of lifetime income",
+      "impact": "If emigration is genuinely available (cost < 5% lifetime income, legal pathways exist): agents classified with 'mobile' exit options, reducing experienced chi. If emigration is illusory (cost > 30% lifetime income, paths blocked): confirms 'trapped' classification, increases experienced chi.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether surveillance regimes are coordinated or independent"
+      "description": "Whether emigration is a feasible exit or theoretical escape"
     },
     {
-      "id": "identity_lock_vs_constrained_distinction",
-      "question": "For the democratic deliberation perspective, is the binding mechanism identity-lock (cannot imagine deliberation under surveillance) or constraint (high cost to restructure deliberation infrastructure)?",
-      "resolution_mechanism": "Comparison of how deliberative communities actually adapt when under surveillance: do they develop encrypted, pseudonymous, or federated alternatives that function as deliberation by other means, or do they collapse? Evidence of psychological inability to imagine alternatives vs structural inability to implement them.",
-      "impact": "If identity-lock: the epistemic commons is genuinely trapped by its own framing and cannot self-restructure. If constrained: communities can and do restructure, and the snare classification is too strong.",
+      "id": "oversight_effectiveness_delta",
+      "question": "Do formal oversight frameworks (warrants, judicial review, legislative committees) actually constrain surveillance scope and target selection, or are they purely performative?",
+      "resolution_mechanism": "Audit of rejected surveillance requests vs total requests; analysis of court cases overturning surveillance; timeline analysis of oversight process vs technical deployment cycle; comparison of surveillance scope in high-oversight vs low-oversight democracies",
+      "impact": "If oversight is effective (>30% rejection rate, <6 month lag behind technical deployment): piton classification is premature, snare may be overstated. If oversight is performative (<5% rejection rate, lags by years): piton confirmed, snare severity confirmed.",
       "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Functional effectiveness of formal surveillance oversight"
+    },
+    {
+      "id": "false_summit_naturalization",
+      "question": "Is the inevitability of surveillance capacity a genuine natural law of information technology, or a false summit that naturalizes political choices benefiting the state security apparatus?",
+      "resolution_mechanism": "Historical analysis: surveying regimes with identical technical capability but different surveillance scope/targeting. If variation exists: political choice, not technology. If uniform: technology is the limiting factor. Examine cases where surveillance capacity was deliberately curtailed or refused (e.g., EU privacy regulations) despite technical feasibility.",
+      "impact": "If technology is determining: surveillance capacity extraction is mountain-like (ineliminable). If politics is determining: the natural law framing is a false summit (beneficiary-driven). The engine's false_summit_mountain signature will flag this if beneficiary presence is declared.",
+      "confidence": "high",
       "type_class": "conceptual",
-      "description": "Whether democratic deliberation is identity-locked or constrained by surveillance"
+      "description": "Whether surveillance inevitability is technology or politics"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.42
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.52
+      "value": 0.55
     },
     {
       "metric": "base_extractiveness",
@@ -148,14 +150,19 @@
       "value": 0.55
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.43
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.4
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.72
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.78
     }
   ],
   "interval": {
@@ -163,35 +170,31 @@
     "end": 20
   },
   "commentary": {
-    "narrative_context": "State surveillance capacity extraction models the structural asymmetry between state security apparatus and the population under surveillance. The constraint emerges from technological capability (signals intelligence, data aggregation, pattern analysis) combined with asymmetric knowledge (state knows what it collects; population does not) and asymmetric exit options (population cannot opt out; state apparatus can reallocate resources if surveillance is curtailed). The surveillance regime's extractiveness has increased over the measurement interval (0.35 \u2192 0.68) as technical capabilities expanded and oversight mechanisms proved inadequate. The theater ratio (0.55) reflects the persistent performance of democratic oversight (warrants, court review, legislative debate) that operates on a different timescale and with different information access than the actual surveillance apparatus. The constraint exhibits snare classification from most perspectives because the suppression (0.75) is structural and comprehensive \u2014 citizens cannot meaningfully exit the surveillance infrastructure, and the constraint extracts behavioral modification (chilling effects on expression and assembly) with minimal coordination benefit to the population.",
+    "narrative_context": "State surveillance capacity extraction models the structural asymmetry between state security apparatus and the population under surveillance. The constraint emerges from technological capability (signals intelligence, data aggregation, pattern analysis) combined with asymmetric knowledge (state knows what it collects; population does not) and asymmetric exit options (population cannot opt out; state apparatus can reallocate resources if surveillance is curtailed). The extractiveness has grown substantially over the 20-year measurement interval (0.42 → 0.68) as technical capacity for data collection and analysis has increased exponentially. Theater ratio has also risen (0.35 → 0.55) as formal oversight frameworks have become increasingly performative — creating the appearance of constraint while technical capability has outpaced oversight's functional reach. Suppression requirement (the active coercive force needed to maintain the constraint) has intensified (0.65 → 0.78) as awareness of surveillance has grown and resistance to it has organized. This constraint exemplifies extraction-dominant dynamics: the apparatus benefits, the population bears costs, and the constraint persists through a combination of technical capability, legal authorization, and suppression of alternatives.",
     "key_agents": [
-      "State Security Apparatus: Primary beneficiary (institutional/mobile) \u2014 captures threat intelligence, targeting capability, population behavior monitoring; can reallocate resources to alternative intelligence methods but efficiency reduced",
-      "Population Under Surveillance: Primary victim (powerless/trapped) \u2014 cannot exit; bears full cost of behavioral chilling effects",
-      "Democratic Deliberation (Epistemic Commons): Secondary victim (powerless/identity_locked) \u2014 cannot exit without abandoning identity; surveillance degrades open discourse and information access",
-      "Journalists and Activists: Secondary victim (moderate/constrained) \u2014 can employ operational security or relocate but at high professional cost",
-      "Judicial and Legislative Oversight Bodies: Institutional actor (institutional/arbitrage) \u2014 maintain nominal authority but lack effective enforcement; surveillance capacity is too technical for legislative review and too compartmentalized for judicial access",
-      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 observes ratchet mechanism: surveillance capacity, once developed, is retained and expanded without reversal; no democratic state has successfully reduced surveillance scope"
+      "Surveilled Citizen: Primary victim (powerless/trapped) — bears full extraction cost; cannot exit without emigration; experiences asymmetric knowledge and behavioral chilling effects",
+      "Political Opposition: Secondary victim (moderate/constrained) — faces targeted surveillance, differential enforcement, prosecution based on surveillance data; constrained exit options",
+      "State Security Apparatus: Primary beneficiary (institutional/arbitrage) — captures security coordination benefits; asymmetric knowledge advantage; can reallocate resources if surveillance curtailed",
+      "Civil Rights Coalition: Organized actors (organized/constrained) — recognize both coordination (legitimate security needs) and extraction (oppression); attempt to constrain via legal challenge, documentation, technical countermeasures",
+      "Formal Oversight Framework: Institutional actor (institutional/arbitrage) — designed to constrain but largely performative; maintains appearance of constraint while capacity grows unchecked",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing political surveillance choices as inevitable technology consequences (false summit)"
     ],
-    "logic_rationale": "Extractiveness (0.68): High. The state apparatus extracts information asymmetrically and uses that information to modify population behavior through selective targeting and ambient panopticism. The measurement trajectory shows continuous expansion: initial capability (0.35) drove threat inflation, which justified expanded collection, which created capacity for expanded extraction, which in turn created new threat categories. This is a ratchet mechanism. The 0.68 value reflects that extraction has reached comprehensive scale while retention of alternative intelligence methods remains technically feasible (preventing maximum extraction). Suppression (0.75): Very high. The suppression is structural and multi-layered: technological complexity prevents understanding what is collected; classification prevents disclosure of collection methods; legal carve-outs (national security exceptions) prevent remedy; international coordination prevents jurisdictional escape. Exit costs are near-absolute for remaining in normal society. Theater ratio (0.55): Moderate-high. Oversight mechanisms (warrant requirements, FISA court review, congressional intelligence committees) persist as formal constraints but operate with massive information asymmetry and compartmentalization. Their theater is real \u2014 they produce binding formal requirements \u2014 but actual enforcement capability is limited by the state's classification authority and technical complexity. The ratio is increasing over the interval as oversight bodies' capability lag increases with collection scale.",
-    "perspectival_gap": "The security apparatus sees tangled rope (both coordination and extraction) because surveillance capacity genuinely enables threat detection while also creating operational constraints and legal oversight burden. But the population sees snare (pure extraction with minimal coordination benefit). This gap reflects asymmetric information access and divergent beneficiary/victim status. The population cannot perceive the genuine security coordination benefits because they lack threat intelligence; the security apparatus cannot perceive the extraction it imposes because it operates under classified threat models. The oversight bodies' piton perspective reveals the mechanism: they perform the role of constraint-setter while operating with a fundamentally different information base than the apparatus being constrained. The epistemic commons' identity_locked perspective reveals that democratic deliberation as a social form is threatened by surveillance not through material barriers but through the impossibility of open deliberation while under panopticism \u2014 the identity of 'democratic' and 'open' cannot be maintained while populations self-censor.",
-    "directionality_logic": "The security apparatus (institutional/mobile) derives low d because they are structural beneficiaries with exit options (can shift to alternative intelligence methods). Their d is approximately 0.20. The population (powerless/trapped) derives high d because they are structural victims with no exit \u2014 their d is approximately 0.95. Journalists and activists (moderate/constrained) derive d approximately 0.65 because exit is materially possible but carries high professional costs. The epistemic commons (powerless/identity_locked) derives d approximately 0.92 because while structurally mobile (could relocate to non-surveillance jurisdictions), they cannot exercise this mobility without abandoning the identity that constitutes them as 'democratic deliberation.' The identity lock is a perceptual filter: the commons cannot perceive restructuring options as genuine alternatives because doing so would require them to become something other than what they are. Oversight bodies (institutional/arbitrage) derive low-to-moderate d (approximately 0.35) because they nominally benefit from security apparatus function while also being partially captured by it \u2014 their directionality is mixed, reflected in the tangled rope classification.",
-    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that surveillance capacity is fundamentally asymmetric: the apparatus cannot be constrained by the population it surveils because constraint mechanisms depend on information the population does not possess and cannot access. Traditional extraction constraint types (rope, scaffold) assume relatively symmetric information access and exit options. Snare classification is appropriate because suppression is comprehensive, exit is unavailable, and there is no genuinely mutual coordination function \u2014 the apparatus benefits; the population bears costs. The tangled rope perspective from the apparatus reflects their genuine experience, but it does not undermine the snare classification from the population's perspective. The analysis prevents mislabeling surveillance as 'coordination for security' by requiring explicit declaration of coordination benefit to the population. Surveillance provides zero coordination benefit to the population (no shared security dividend, no information exchange, no mutual constraint reduction). The apparatus benefits unilaterally. This is extraction, not coordination. The scaffold perspective would be appropriate only if surveillance capacity had a genuine sunset clause (e.g., emergency powers with legislative reauthorization requirement, declining over a defined interval). Current surveillance regimes have ratchet mechanisms that prevent sunset. Therefore, scaffold does not apply."
+    "logic_rationale": "Extractiveness (0.68): High. The state security apparatus captures substantial benefits — security coordination, threat detection, operational intelligence — while the population bears costs without proportional benefit. The asymmetric knowledge (state observes; population does not) is the key extraction mechanism. The population cannot price the cost of surveillance because they do not know what is collected or how it is used. Rising extractiveness over the interval reflects accumulating technical capacity: early surveillance (0.42) was expensive and targeted; modern surveillance (0.68) is automated and comprehensive. Suppression (0.78): High. The constraint requires active suppression mechanisms: legal authorization (national security exemptions), technical barriers (encrypted communications detection), political suppression (opposition targeting), informational suppression (classified programs prevent public knowledge). Exit options are suppressed — emigration requires resources and legal permission; domestic opposition faces surveillance targeting; organizing outside the apparatus is monitored. Theater ratio (0.55): Moderate-high. Formal oversight frameworks (warrants, judicial review, legislative committees) create the appearance of constraint without providing effective functional constraint. Oversight committees lack resources to understand technical systems; classification prevents public scrutiny; national security exception clauses erode warrant requirements. The theater has increased as technical complexity has outpaced oversight comprehension.",
+    "directionality_logic": "Each perspective's directionality derives from structural position: beneficiary vs victim, power level, and exit options. The state security apparatus (institutional/arbitrage) has low d — they benefit, have high exit capacity (can redirect resources), and receive positive net value from the constraint. The surveilled citizen (powerless/trapped) has high d — they are the extraction target, have zero exit options, and experience maximum chi. The political opposition (moderate/constrained) has moderately-high d — they are explicitly targeted for suppression, have some exit options (emigration, legitimization) but at high cost. The civil rights coalition (organized/constrained) has moderate d — they have agency and international exit options, but are constrained by resource limits and legal barriers. The formal oversight framework (institutional/arbitrage) has low d despite attempting constraint — it is a beneficiary of the surveillance apparatus (provides legitimacy) and has arbitrage options (can shift to different oversight forms). The piton classification derives from theater ratio, not from measured d — the oversight framework is performative rather than extractive. The mountain classification at the analytical context produces a false summit signal: the beneficiary-driven naturalization of surveillance as inevitable technology rather than political choice.",
+    "perspectival_gap": "This constraint demonstrates a fundamental perspectival gap between the security apparatus and the surveilled population. The apparatus sees coordination (rope) — surveillance solves the genuine problem of threat detection and enables operational security. The population sees extraction (snare) — surveillance is purely coercive, provides no benefit, and cannot be refused. The civil rights coalition sees both (tangled rope) — acknowledging legitimate security needs while documenting extraction mechanisms. The formal oversight framework sees its own degradation (piton) — designed to constrain but reduced to theater. The analytical observer risks seeing inevitability (mountain) — but the structure data reveals contingency: surveillance capacity is increasing not because of technology necessity but because of political choice by beneficiary actors. The gap is not a matter of interpretation — it is a structural fact that the apparatus benefits while the population bears costs.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that the snare classification is perspectival but structurally justified. From the surveilled citizen's view, this IS a snare (trapped, no coordination benefit, pure extraction, maximum suppression). From the security apparatus's view, it IS a rope (coordination function, benefit delivery, legitimate asymmetry). From the analytical civilizational view, it appears to be a mountain (surveillance is inevitable given technology) but this is a false summit — the beneficiary group (state security apparatus) has strong incentive to naturalize surveillance as technological inevitability rather than political choice. The mandatrophy resolves: the constraint is a snare-dominant structure that benefits from false-summit naturalization. Different perspectives see different types, but the asymmetry of benefit (apparatus gains, population loses) and the asymmetry of exit options (apparatus can reallocate, population cannot opt out) are structural facts that make snare the dominant classification from the population's structural reality, regardless of how the apparatus frames it."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "press_freedom_under_threat",
-      "political_dissent_suppression",
-      "encrypted_communication_restriction"
+      "political_opposition_suppression",
+      "financial_transaction_monitoring",
+      "communication_interception",
+      "minority_targeting_systems"
     ],
-    "dual_formulation_note": "State surveillance capacity extraction is upstream of constraints on specific freedoms (press, dissent, encrypted communication). The surveillance apparatus creates the technical and legal infrastructure for downstream restrictions. Each downstream constraint should link back to this root constraint via network.affects_constraints."
+    "dual_formulation_note": "State surveillance capacity extraction is the primary structural constraint. Downstream constraints (opposition suppression, financial monitoring, communication interception, minority targeting) are specific instantiations of the surveillance apparatus's extraction capacity in particular domains. Each downstream constraint has its own ε and perspectives but shares the upstream extraction mechanism."
   },
-  "directionality_overrides": [
-    {
-      "power_atom": "institutional",
-      "d_value": 0.35
-    }
-  ]
+  "directionality_overrides": []
 }

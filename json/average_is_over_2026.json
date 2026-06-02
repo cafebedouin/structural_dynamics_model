@@ -2,25 +2,29 @@
   "header": {
     "constraint_id": "average_is_over_2026",
     "version": "1.0",
-    "generated_date": "2026-02-26",
+    "generated_date": "2026-02-27",
     "status": "ACTIVE",
-    "measurement_id_prefix": "aio"
+    "measurement_id_prefix": "aio",
+    "story_uid": "f5980e9e-0fc1-48ca-bb3a-862413c14be6",
+    "created_at": "2026-02-27T14:32:00Z"
   },
   "base_properties": {
     "extractiveness": 0.58,
-    "suppression": 0.62,
-    "theater_ratio": 0.48,
-    "claimed_type": "snare",
-    "human_readable": "The AI-Talent Barbell Economy",
-    "topic_domain": "economic/technological",
-    "requires_active_enforcement": false,
+    "suppression": 0.68,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "AI-Talent Barbell Economy: Dual-Tier Labor Market Separation",
+    "topic_domain": "economic/technological/labor",
+    "requires_active_enforcement": true,
     "beneficiaries": [
-      "elite_ai_native_talent",
-      "capital_owners_of_ai_infrastructure"
+      "elite_ai_literate_workers",
+      "ai_platform_owners",
+      "venture_capital_allocators"
     ],
     "victims": [
       "median_skill_workers",
-      "displaced_cognitive_labor"
+      "transition_cohorts",
+      "displaced_knowledge_workers"
     ]
   },
   "perspectives": [
@@ -31,61 +35,61 @@
       "exit_options": "trapped",
       "spatial_scope": "global",
       "label": "The Median Skill Worker",
-      "comment": "PERSPECTIVE 1: MEDIAN SKILL WORKER (SNARE) \u2014 Trapped in a labor market where AI has rendered traditional skill-building pathways obsolete. Cannot retrain into elite tier without exceptional intrinsic talent. No viable exit from the barbell structure \u2014 constrained to low-automation-resistant roles with compressed wages. Maximum experienced extraction: career trajectory determined by initial talent distribution, not effort."
-    },
-    {
-      "classification_type": "snare",
-      "agent_power": "moderate",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Displaced Cognitive Labor Cohort",
-      "comment": "PERSPECTIVE 2: DISPLACED COGNITIVE LABOR (SNARE) \u2014 Former routine cognitive jobs (bookkeeping, junior analysis, content moderation, basic programming) have been eliminated or restructured as low-wage, high-turnover positions. Retraining programs exist but do not bridge the gap to elite-tier compensation. Exit options are constrained: geographic mobility limited, sector transitions costly, age discrimination compounds. Extraction rate is severe: income floors have collapsed and bargaining power is minimal."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "institutional",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "Elite AI-Native Talent",
-      "comment": "PERSPECTIVE 3: ELITE AI-NATIVE TALENT (ROPE) \u2014 Experiences the constraint as pure coordination: AI systems amplify cognitive leverage, enabling elite talent to extract disproportionate value from each hour worked. Arbitrage options abundant: startups, hedge funds, tech giants compete for top talent with equity and compensation packages. The constraint is a beneficial coordination structure for this agent \u2014 access to AI leverage is what they organize themselves to capture."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "institutional",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "Capital Owners of AI Infrastructure",
-      "comment": "PERSPECTIVE 4: CAPITAL OWNERS / AI INFRASTRUCTURE (ROPE) \u2014 Own the hardware, models, and API endpoints that gate access to AI tools. Experience the barbell economy as a coordination success: elite talent + AI infrastructure complementarity creates exponential value capture. Arbitrage options abundant: monopolistic pricing on compute, licensing fees, equity positions in AI-native companies. The constraint is self-reinforcing coordination from this agent's perspective."
+      "comment": "PERSPECTIVE 1: MEDIAN SKILL WORKER (SNARE) — Trapped between obsolescence and unattainability. Traditional middle-skill work (paralegals, radiologists, junior analysts, copywriters) faces displacement with no viable transition path. Retraining requires sustained education and income during learning period; elite-tier entry requires both credentials and proximity to cutting-edge infrastructure not available at their income level. Suppression is extreme: the economic incentive to employ cheaper, faster AI is structural and absolute. No viable exit except downward mobility or geographic arbitrage to lower cost-of-living regions. Maximum extraction — this agent cannot organize effectively across dispersed, competing peers."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "moderate",
       "time_horizon": "biographical",
-      "exit_options": "mobile",
+      "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The High-Touch Service & Skilled Trades Sector",
-      "comment": "PERSPECTIVE 5: HIGH-TOUCH SERVICE & SKILLED TRADES (TANGLED ROPE) \u2014 Experiences mixed signals: some roles (nursing, electrician, HVAC, plumbing) remain AI-resistant and see wage growth from labor scarcity. But entry barriers have risen (licensing, apprenticeship costs, credential inflation) and the perception of AI disruption has created educational bifurcation \u2014 fewer young people invest in trade training, creating supply constraints. Mobile exit options exist but require geographic flexibility and physical relocation. Some extraction through credential gatekeeping and apprenticeship bottlenecks, but also genuine coordination benefit from supply scarcity."
+      "label": "The Transition Cohort",
+      "comment": "PERSPECTIVE 2: TRANSITION COHORT (TANGLED ROPE) — Workers with sufficient resources and circumstance to retrain but facing substantial cost and risk. Can access bootcamps, online learning, mentorship networks. Benefits from genuine coordination: cross-skill learning, community support, peer accountability structures. But extraction is real: credential inflation, job-market competition for seats in selective programs, employer preference for native elite-tier candidates even after retraining. Time cost during learning period (1-2 years) creates severe financial pressure. Constrained exit — possible but expensive."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Elite AI-Literate Workers",
+      "comment": "PERSPECTIVE 3: ELITE AI-LITERATE WORKERS (ROPE) — Experience the constraint as pure coordination gain. Each unit of their cognitive effort is multiplied by 5-50x through model-augmentation. Their productivity gains are shared (somewhat) with employers and collaborators, enabling coordination on problems previously intractable. The constraint solves a genuine collective action problem: complex projects that required huge teams are now possible with smaller, better-coordinated groups. Low extraction experienced by this cohort because their exit capacity is maximal (always have offers from competing firms) and their gain is directly correlated with system productivity growth."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "AI Platform Owners",
+      "comment": "PERSPECTIVE 4: AI PLATFORM OWNERS (TANGLED ROPE) — Primary beneficiaries of the barbell structure. Genuine coordination function: platforms must maintain model quality, API reliability, and feature development — all require solving real collective action problems with users and internal teams. But extraction is substantial: platform fees (15-40% of margin on many enterprise uses), lock-in (high switching costs once workflows built on a platform), and information asymmetries (users cannot see model improvements or degradations without significant audit). Enforced actively through terms-of-service and technical architecture. Exit constrained by switching costs and lack of genuine alternatives at comparable scale."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "Universal Basic Income / Social Redistribution Coalition",
-      "comment": "PERSPECTIVE 6: UBI / REDISTRIBUTION COALITION (SCAFFOLD) \u2014 Organized movements (labor unions, policy advocates, some institutional investors) propose redistributive mechanisms (UBI, wealth taxes, job guarantees) as temporary corrections to the barbell structure. These are intentionally sunset mechanisms: designed to bridge the labor-market transition until new equilibrium emerges (or until the constraint structure degrades enough that redistribution becomes politically unsustainable). Theater ratio is moderate because the proposals address real structural data but implementation remains contested and politically volatile."
+      "spatial_scope": "global",
+      "label": "Open-Source AI Coalition",
+      "comment": "PERSPECTIVE 5: OPEN-SOURCE AI COALITION (SCAFFOLD) — Community-driven alternatives (Hugging Face open models, local-running systems, open-weights checkpoints) see the barbell as a temporary market configuration being undermined by distributed model development and inference. As model-hosting costs drop and local GPU clusters become economically competitive, platform lock-in decreases. The sunset logic: within 5-10 years, fine-tuning and deployment of state-equivalent models on local infrastructure becomes cost-competitive with proprietary APIs. Coalition has agency and organized membership (researchers, engineers, institutions). Theater is low — actual functional coordination on model release, documentation, and community standards. Suppression required to maintain sunset timeline: platform monopoly pricing, strategic model withholding, API terms-of-service designed to prevent self-hosting comparisons."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
-      "time_horizon": "civilizational",
+      "time_horizon": "biographical",
       "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Traditional Credentialing Systems",
+      "comment": "PERSPECTIVE 6: TRADITIONAL CREDENTIALING SYSTEMS (PITON) — Universities, professional licensing bodies, and certification programs are largely performative in the AI-talent barbell context. Elite hiring now depends on portfolio work, model capability demonstrations, and peer reputation rather than transcripts or degrees. Yet credentialing persists through institutional inertia: employers still require degrees (litigation risk, HR bureaucracy), gate-keepers maintain accreditation requirements (institutional survival depends on tuition revenue and alumni networks), and the prestige hierarchy of universities persists despite weak correlation to AI-era skill demonstration. Theater ratio is high (0.65): the credential validates nothing about AI capability but persists because alternatives haven't fully displaced it. No real suppression — the system simply hasn't been disrupted yet."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
       "spatial_scope": "global",
-      "label": "The Meritocracy Narrative",
-      "comment": "PERSPECTIVE 7: MERITOCRACY NARRATIVE (PITON) \u2014 The institutional story that 'talent and hard work determine outcomes' persists as a cultural narrative despite collapsing validity. Educational institutions, media, and policymakers continue to frame economic outcomes as merit-based even as the barbell structure renders effort and incremental skill-building functionally irrelevant for the median cohort. This narrative is performative: it legitimates existing inequality through a narrative frame that has lost structural function. Theater ratio high because maintenance of the meritocracy myth requires constant rhetorical work with diminishing empirical support."
+      "label": "Nation-States and Public Policymakers",
+      "comment": "PERSPECTIVE 7: NATION-STATES AND POLICYMAKERS (TANGLED ROPE) — States face a coordination problem: AI talent concentration in global tech hubs creates competitive disadvantage for countries with distributed talent. Genuine need for coordination on education, infrastructure investment, visa/immigration policy, and public R&D funding. But extraction is embedded in the structure: states that invest heavily in STEM pipelines create talent pools that migrate to higher-wage global markets (brain drain); concentration of AI services in a few jurisdictions creates dependency; unilateral policy changes face capital flight or tech-sector resistance. Exit constrained by capital mobility and network effects in tech hubs. Active enforcement via immigration policy, visa restrictions, regulatory capture by tech firms."
     },
     {
       "classification_type": "mountain",
@@ -93,87 +97,126 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer (Natural Law View)",
-      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) \u2014 From a long-term lens, the barbell economy appears as an inevitable consequence of technological leverage: any technology that amplifies cognitive output will create multiplicative returns for high-skilled agents, producing inherent bimodal distributions in economic outcomes. This perspective risks naturalizing what is actually a contingent institutional arrangement (access to AI, training concentration, capital allocation mechanisms) as an immutable law of technological change."
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From civilizational distance, the barbell appears as a natural consequence of exponential returns to scale and network effects in AI systems: whoever has access to the best models and largest datasets compounds advantages at accelerating rates. This appears immutable — a law-like outcome of information economics. However, the structural data reveals false summitry: identifiable beneficiaries extract from designed mechanisms (API pricing, credential requirements, visa restrictions, knowledge gatekeeping). The 'natural' framing obscures policy choices (open-source funding levels, visa policy, education investment, antitrust enforcement) that could reshape the constraint."
     }
   ],
   "omegas": [
     {
-      "id": "ai_training_accessibility_threshold",
-      "question": "At what cost and complexity threshold does AI tool accessibility shift from elite gatekeeping to genuinely commodified?",
-      "resolution_mechanism": "Market analysis of API pricing, model parameter counts required for useful tasks, compute cost curves; comparison with historical technology adoption curves (SQL databases, cloud computing, spreadsheet software)",
-      "impact": "If threshold drops to near-zero (open models, low-cost inference): barbell may be temporary coordination problem (Scaffold perspective gains strength). If threshold remains high (proprietary models, compute scarcity): barbell locks in as permanent extraction structure (Snare perspective confirmed).",
+      "id": "skill_transfer_velocity",
+      "question": "Can transition cohorts acquire elite-tier AI capabilities fast enough to remain economically viable before displacement accelerates?",
+      "resolution_mechanism": "Longitudinal tracking of retraining cohort employment outcomes; comparison of time-to-productivity for different learning pathways; correlation between bootcamp completion and sustainable employment at above-median wages",
+      "impact": "If velocity < 18 months: transition paths are illusory; snare perspective dominates and suppression increases. If velocity > 24 months: retraining becomes structurally infeasible during typical job-search window; snare classification confirmed. If velocity 18-24 months: tangled rope dynamics genuine — constrained but possible exits exist.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Cost and complexity threshold for AI tool accessibility"
+      "description": "Whether retraining velocity permits viable transition for median-skill workers"
     },
     {
-      "id": "skill_substitution_vs_complementarity",
-      "question": "Does AI primarily substitute for median-skill cognitive labor or complement it?",
-      "resolution_mechanism": "Labor economics analysis: wage changes by skill decile; job displacement vs job creation by sector; productivity gains vs wage gains by skill level; cross-national comparison of labor markets with different AI adoption rates",
-      "impact": "If substitution dominates: barbell structure deepens (Snare classification confirmed). If complementarity dominates: median workers gain leverage and mobility (Tangled Rope classification gains strength, Snare weakens).",
+      "id": "open_source_capability_parity",
+      "question": "Do open-source models and local deployment achieve functional parity with proprietary platforms within the 5-10 year scaffold sunset window?",
+      "resolution_mechanism": "Performance benchmarking of open-weights models vs proprietary flagship systems; cost analysis of local GPU infrastructure vs API pricing; user migration tracking from proprietary to open platforms",
+      "impact": "If parity achieved: scaffold perspective validated; platform lock-in breaks and extraction mechanism loses force. If parity not achieved: open-source remains speculative alternative; scaffold is aspirational, not structural.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether AI substitutes for or complements median-skill labor"
+      "description": "Whether open-source models achieve functional parity with proprietary systems"
     },
     {
-      "id": "talent_identification_mechanism_stability",
-      "question": "How stable are the mechanisms that identify 'elite talent' in an AI-native economy?",
-      "resolution_mechanism": "Analysis of elite identification pathways: educational credentials, test scores, prior work experience, network effects; comparison with actual performance in AI-native roles; identification of selection bias and false positives in talent identification",
-      "impact": "If identification is highly stable and predictive: barbell structure locks in early (Mountain perspective gains force). If identification is unstable and subject to measurement error: alternative talent pools may be misclassified as low-tier (Scaffold perspective: UBI or education restructuring could reveal hidden talent).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Stability of elite talent identification mechanisms"
-    },
-    {
-      "id": "redistribution_feasibility_and_political_viability",
-      "question": "Can redistributive mechanisms (UBI, wealth taxes, job guarantees) sustainably address barbell inequality or do they face structural political failure?",
-      "resolution_mechanism": "Policy analysis: historical attempts at redistribution (Nordic models, guaranteed employment, basic income pilots); political economy of wealth concentration; dynamics of elite tax avoidance; feedback loops between inequality and political influence",
-      "impact": "If redistribution is politically feasible: Scaffold perspective is structural (sunset mechanisms can work). If redistribution is politically blocked: Snare perspective is confirmed (no real exit for trapped cohort, redistribution is performative).",
+      "id": "wage_bifurcation_permanence",
+      "question": "Is the dual-tier wage structure temporary (10-20 year transition) or permanent (civilization-scale separation)?",
+      "resolution_mechanism": "Historical comparison to prior technological transitions (electricity, computing, internet); analysis of whether retraining cohorts stabilize at median tier or continue cascading downward; measurement of intergenerational mobility for children of displaced workers; policy intervention outcomes (education funding, visa policy, wage support)",
+      "impact": "If temporary: constraint is Scaffold or Piton (degraded system being replaced). If permanent: constraint is Mountain (immutable consequence of exponential returns) or Snare (sustained extraction mechanism). Policy choice (antitrust, open-source funding, education investment) determines outcome within empirical bounds.",
       "confidence": "low",
-      "type_class": "preference",
-      "description": "Political feasibility of redistributive responses to barbell economy"
+      "type_class": "empirical",
+      "description": "Whether wage bifurcation is temporary or permanent"
     },
     {
-      "id": "human_labor_scarcity_value_preservation",
-      "question": "In which sectors do human labor scarcity genuinely preserve high wage floors, and in which sectors does scarcity merely increase cost with limited compensation growth?",
-      "resolution_mechanism": "Sectoral analysis: wage growth rates in AI-resistant sectors; cost pass-through to consumers; labor supply elasticity; barriers to apprenticeship and credential acquisition; geographic wage variation",
-      "impact": "If scarcity genuinely preserves value: high-touch service sector (Tangled Rope perspective) creates real exit route. If cost scarcity without compensation: skilled trades experience squeeze (Snare features creep into Tangled Rope).",
-      "confidence": "high",
+      "id": "coordination_deficit_vs_market_failure",
+      "question": "Is the barbell structure a coordination problem (market could solve with right incentives) or an inherent market failure (no set of incentives produces equitable outcome)?",
+      "resolution_mechanism": "Mechanism design analysis: can targeted education subsidies, wage insurance, or geographic redistribution policies produce sustainable broad-based AI literacy? Or do network effects and capital concentration make dispersed talent development economically irrational from investor perspective?",
+      "impact": "If coordination problem: policy intervention (public investment, visa liberalization, education funding) can reshape constraint toward Rope or Scaffold. If market failure: constraint may be immutable given capital markets; reframing as Mountain or Snare may be structural rather than analytical.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether barbell is coordination problem or structural market failure"
+    },
+    {
+      "id": "elite_tier_saturation",
+      "question": "Does elite-tier talent face its own capacity ceiling? Do returns to AI-augmentation continue exponentially, or plateau at some talent-to-model ratio?",
+      "resolution_mechanism": "Measurement of productivity gains for elite cohorts over time; identification of diminishing returns thresholds; analysis of whether elite-tier job creation scales with productivity gains or whether productivity gains concentrate in fewer positions",
+      "impact": "If plateau emerges: elite tier faces internal differentiation and potential saturation; secondary tiers may develop as elite productivity gains slow. If exponential continues: extraction mechanism remains structural for decades. Returns plateau would suggest barbell is transitory (Scaffold logic); continued exponential returns suggest permanence.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether labor scarcity in AI-resistant sectors preserves wage floors"
+      "description": "Whether elite-tier productivity gains face saturation or continue exponential growth"
+    },
+    {
+      "id": "false_summit_natural_law",
+      "question": "Is the barbell structure a natural consequence of exponential returns (immutable law) or a constructed institutional arrangement (contingent, reversible)?",
+      "resolution_mechanism": "Policy counterfactual analysis: identifying which policy levers (open-source funding, education investment, visa liberalization, antitrust enforcement, wage support) could reshape the structure. If multiple levers exist with material effect: false summit (constructed). If structure persists despite policy intervention: genuine mountain (natural law).",
+      "impact": "If false summit confirmed: the 'naturalness' framing is cover for policy choices benefiting elite-tier agents and platform owners. Reclassify perspective and reframe as Snare or Tangled Rope from analytical perspective. If genuine mountain: constraint is immutable and policy focus should shift to adaptation and damage mitigation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether barbell is natural law or constructed institutional arrangement (FSM candidate)"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.32
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 3,
-      "value": 0.48
+      "time_point": 2,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.58
     },
     {
       "metric": "base_extractiveness",
       "time_point": 6,
-      "value": 0.58
+      "value": 0.64
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.38
+      "value": 0.22
     },
     {
       "metric": "theater_ratio",
-      "time_point": 3,
-      "value": 0.43
+      "time_point": 2,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
       "time_point": 6,
-      "value": 0.48
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.71
     }
   ],
   "interval": {
@@ -181,36 +224,38 @@
     "end": 6
   },
   "commentary": {
-    "narrative_context": "The AI-talent barbell economy of 2026 represents a structural separation of the labor market into two tiers with minimal mobility between them. The top tier \u2014 composed of elite cognitive talent with deep AI literacy and access to cutting-edge models \u2014 experiences exponential returns from AI-augmentation: their productivity multipliers, creativity leverage, and decision-making speed are amplified by orders of magnitude. The bottom tier \u2014 median-skill workers whose competencies were traditionally built through incremental upskilling \u2014 finds that traditional pathways no longer lead to stable middle-class outcomes. AI has not eliminated jobs uniformly; rather, it has bifurcated the skill distribution: roles that require intuitive judgment, pattern recognition at scale, and creative recombination of ideas now require elite-level talent to access, while routine cognitive labor has been eliminated or commodified into low-wage, high-turnover positions. The constraint is maintained by three reinforcing mechanisms: (1) training concentration \u2014 elite AI training is expensive and gatekept by capital owners and top universities, (2) income-based access \u2014 elite talent can afford premium tools and compute, creating a positive feedback loop, and (3) cultural legitimacy \u2014 the meritocracy narrative persists despite its structural invalidity, suppressing demand for redistributive intervention. This constraint exhibits all six classification types from different perspectives, revealing the perspectival depth of how inequality becomes institutionalized.",
+    "narrative_context": "The AI-talent barbell economy of 2026 represents a structural bifurcation of the labor market with minimal mobility between tiers. The top tier—composed of elite cognitive talent with deep AI literacy and access to cutting-edge models—experiences exponential productivity multipliers (5-50x depending on task domain), while the median-skill tier faces displacement without viable transition paths. The constraint exhibits genuine coordination benefits for the elite tier (problems previously requiring teams of 50 now solvable by 5) while simultaneously extracting from median-skill workers through credential inflation, job elimination, and the removal of traditional middle-skill work (paralegals, junior analysts, radiologists, copywriters). The barbell is maintained actively through multiple mechanisms: immigration policy gatekeeping (visa restrictions concentrate talent in global hubs), credential requirements (traditional degree requirements persist despite weak correlation to AI capability), platform lock-in (API pricing and switching costs), and information asymmetries about model capability improvements. The constraint shows rising extractiveness over the 6-year measurement window (0.32 → 0.64) as displacement accelerates and retraining cohorts discover the velocity gap—the time required to achieve elite-tier capability exceeds the job-search window before savings deplete. Theater ratio remains low (0.35) because the barbell is driven by genuine economic incentives, not performative mechanisms, though credentialing systems within the barbell are increasingly theatrical.",
     "key_agents": [
-      "Elite AI-Native Talent: Primary beneficiary (institutional/arbitrage) \u2014 experiences exponential returns, abundant exit options, coordination benefit from AI leverage",
-      "Median Skill Workers: Primary victim (powerless/trapped) \u2014 no viable exit from barbell structure, effort-based upskilling no longer functional, wage compression",
-      "Displaced Cognitive Labor: Secondary victim (moderate/constrained) \u2014 eliminated or restructured roles, retraining barriers, age and geographic constraints on mobility",
-      "Capital Owners / AI Infrastructure: Primary beneficiary (institutional/arbitrage) \u2014 gatekeep access to compute and models, extract licensing rents, control talent allocation mechanisms",
-      "High-Touch Service & Skilled Trades: Secondary actor (moderate/mobile) \u2014 partially insulated from AI substitution, but entry barriers rising, supply constraints creating mixed benefits and extraction",
-      "Redistribution Coalition: Organized agent (organized/constrained) \u2014 proposes sunset mechanisms (UBI, job guarantees) to bridge transition, but political viability contested",
-      "Meritocracy Narrative Maintainers: Institutional (institutional/arbitrage) \u2014 educational institutions, media, policymakers sustain legitimacy narrative despite empirical collapse"
+      "Elite AI-Literate Workers: Primary beneficiary (institutional/arbitrage) — capture exponential productivity gains; always have alternative employment options; experience the constraint as coordination mechanism",
+      "Median-Skill Workers: Primary victim (powerless/trapped) — face displacement with no viable transition; structured barriers to elite-tier entry; cannot organize effectively across dispersed competition",
+      "Transition Cohorts: Secondary victim (moderate/constrained) — workers with sufficient resources to attempt retraining; face credential inflation, time costs, and employer preference for native elite-tier candidates",
+      "AI Platform Owners: Primary beneficiary (institutional/constrained) — benefit from user lock-in, API pricing power, and network effects; constrained by open-source competition and regulatory risk",
+      "Venture Capital Allocators: Primary beneficiary (institutional/arbitrage) — concentrate capital in elite-tier talent and platform companies; capture returns through equity positions",
+      "Open-Source AI Coalition: Organized actor (organized/constrained) — building alternative infrastructure pathways; constrained by funding scarcity and talented volunteer bandwidth; building sunset trajectory for platform lock-in",
+      "Nation-States and Policymakers: Institutional actor (powerful/mobile) — face coordination problem (brain drain, competitive disadvantage); constrained by capital mobility and tech-sector political influence; have mobility in policy levers",
+      "Traditional Credentialing Systems: Institutional actor (institutional/arbitrage) — persist through inertia; face slow obsolescence as portfolios and demonstrations replace credentials"
     ],
-    "logic_rationale": "Extractiveness (0.58): High. The constraint extracts significantly from the median and displaced cohorts through income compression, reduced bargaining power, and elimination of traditional upskilling pathways. The extraction rate reflects sustained suppression of exit options and concentration of AI-access benefits at the top tier. Theater ratio (0.48): Moderate-low. The barbell economy has real functional content \u2014 AI does amplify elite talent, compute is genuinely scarce, training does require substantial investment. The theater is not performative maintenance of a degraded system (that would be higher theater), but rather the performative maintenance of meritocracy narratives despite structural invalidity. The ratio would be lower (0.3-0.35) if the redistribution debate were absent, but the presence of contested solutions and cultural negotiation about inequality adds theater. Suppression (0.62): High. Barriers to median-worker exit are severe: retraining costs, age discrimination, geographic immobility, credential inflation, opportunity costs during transition. The suppression is structural, not primarily coercive, but equally effective. Claimed type: Snare. The constraint meets snare thresholds: high extractiveness (0.58), high suppression (0.62), high effective extraction for trapped agents (chi >> 0.66 at powerless/trapped index). The constraint persists not through coordination benefit but through capital concentration and access gatekeeping.",
-    "perspectival_gap": "This constraint demonstrates the full perspectival bifurcation of the barbell economy. The elite talent (institutional/arbitrage) genuinely experiences Rope: AI is a coordination technology that enables their productivity. The capital owners (institutional/arbitrage) also experience Rope: they benefit from scarcity rent on compute and model access. The median worker (powerless/trapped) experiences pure Snare: maximum extraction with no exit. The displaced cognitive labor (moderate/constrained) experiences Snare with slightly more agency: some mobility options exist (geographic relocation, sector transition) but barriers are severe. The high-touch service sector (moderate/mobile) experiences Tangled Rope: genuine supply scarcity creates wage protection but rising credential barriers and gatekeeping create extraction features. The redistribution coalition (organized/constrained) experiences Scaffold: they see the barbell as a temporary coordination failure with a sunset \u2014 UBI or education restructuring could dissolve the barbell by democratizing AI access or replacing the credential hierarchy. The meritocracy narrative (institutional/arbitrage) persists as Piton: the story of talent-based outcomes is maintained through constant institutional effort despite its structural invalidity, creating the theater that legitimates the inequality. The analytical observer risks seeing Mountain: 'technological leverage inherently creates bimodal distributions' \u2014 but the structural data reveals this as a false summit; the barbell is sustained by contingent institutional arrangements (access gatekeeping, training concentration, credential hierarchies) not by physical or logical necessity.",
-    "directionality_logic": "Directionality values (d) vary dramatically across the labor market. Elite talent beneficiaries with arbitrage options derive low d (0.15-0.25) \u2014 they experience negative effective extraction (they are subsidized by the system). Trapped median workers derive high d (0.90-0.98) \u2014 they experience maximum extraction from the constraint. The sigmoid f(d) amplifies this gap: beneficiaries' low d maps to negative f(d) (-0.12 to -0.01), reducing their apparent chi; victims' high d maps to high f(d) (1.2-1.42), amplifying their experienced extraction. Displaced cognitive labor with constrained mobility derive intermediate-high d (0.75-0.85), experiencing strong extraction with some agency. Capital owners derive very low d (0.0-0.10) because their arbitrage options are abundant and the constraint directly subsidizes them. This d structure reveals the fundamental asymmetry: the constraint's extractiveness (0.58) is a base property, but effective extraction (\u03c7) is highly heterogeneous across the population. The beneficiaries experience the system as beneficial coordination; the trapped experience it as pure extraction. The constraint's power to suppress alternatives (suppression = 0.62) is what holds the barbell in place despite the stark perspectival divergence.",
-    "mandatrophy_analysis": "The constraint resolves mandatrophy by distinguishing genuine coordination function (AI amplifies elite productivity \u2014 real) from extraction (barbell structure suppresses median-worker alternatives \u2014 real). The Rope perspective (elite talent, capital owners) is not false; the Snare perspective (trapped workers) is not false. Both are structurally accurate. The mandatrophy is resolved by recognizing that the same technical system (AI leverage) functions as coordination for those with access and as extraction for those without. The false summit risk is the Mountain perspective: 'bimodal distributions are inherent to technological change.' The structural data contradicts this: the barbell is sustained by contingent institutional choices (who controls AI access, how training is gatekept, whether redistribution is funded). A different institutional arrangement (open-source models, universal AI training, wealth redistribution) would produce different outcomes without changing the underlying technology. The Scaffold perspective (sunset mechanisms) is not false but may be politically infeasible \u2014 that's an omega variable, not a mandatrophy issue. The meritocracy narrative is indeed Piton: it performs legitimacy while the underlying structural basis has collapsed."
+    "logic_rationale": "Extractiveness (0.58): High-moderate, trending toward high. The barbell creates asymmetric returns: elite-tier productivity gains do not translate to proportional wage increases (platform owners and venture capitalists capture much of the surplus), while median-skill workers face absolute income loss. The measurement trajectory (0.32 → 0.64) captures the acceleration of displacement as models improve and adoption spreads. Extraction is primarily economic (lost wages, credential inflation costs, migration barriers) rather than physical coercion. Suppression (0.68): High. Barriers to exit include: structural (requires 18-24 months of sustained learning and income loss for retraining), institutional (credential requirements, visa gatekeeping, information asymmetries about model capabilities), and psychological (internalized beliefs about AI being 'magic' accessible only to PhDs). Suppression is not exogenously maintained—it emerges from the rational incentives of employers and platforms to automate rather than retrain median-skill workers. Theater ratio (0.35): Low. The barbell is driven by genuine economic incentive structures (automation reduces costs, AI-augmented workers are 5-50x more productive) rather than performative mechanisms. Credentialing persists as theater, but the core constraint is functional—the economic incentives are real. Rising theater ratio over the interval (0.22 → 0.38) reflects increasing reliance on certification-program theater as employers use credentials as proxy signals when actual capability assessment is costly.",
+    "perspectival_gap": "The analytical observer risks viewing the barbell as a natural law (Mountain)—an immutable consequence of exponential returns and network effects in information economics. But the structural data reveals false summitry: identifiable beneficiaries (elite workers, platform owners, capital allocators), identifiable victims (median-skill workers, displaced cohorts), and active enforcement mechanisms (visa policy, credential requirements, platform terms-of-service). The barbell appears 'natural' from the elite perspective (experiencing genuine coordination gains) and 'natural' from the capital allocator perspective (capital flows rationally to highest-return investments). But from the victim's perspective, it is extraction—the structure could be reshaped by policy (education investment, open-source funding, visa liberalization, antitrust enforcement, wage insurance) but is not being reshaped because beneficiaries have political power. The scaffold perspective sees the open-source coalition building an exit path (5-10 year sunset), but the sunset timeline depends on policy support that may not materialize. The piton perspective sees credentialing as degraded theater—degrees validate nothing about AI capability but persist through institutional inertia.",
+    "directionality_logic": "Directionality values (d) derive from each agent's structural position relative to the extraction flow. Elite workers with arbitrage exit options (always have offers) experience low d (~0.15), resulting in negative f(d) and low effective extraction chi despite high base extractiveness—they benefit from the constraint. Median-skill workers with trapped exit options (cannot afford retraining, face displacement) experience high d (~0.92), resulting in high f(d) and maximum chi—extraction is severe from their perspective. Transition cohorts with constrained exit (can retrain but at high cost) experience moderate d (~0.55), resulting in moderate chi—the constraint is partially extractive, partially enabling. Platform owners with constrained exit (locked into their own platforms through switching costs and network effects) experience d ~0.40, resulting in moderate positive chi—they benefit overall but face lock-in. The scaffold coalition with organized exit (building alternatives) experiences d ~0.35, resulting in lower chi—they have agency and see a path forward. Policymakers with mobile exit options in policy levers experience moderate d (~0.60) but their classification depends on which policy levers they actually exercise; most are constrained by political economy factors.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION — Extractiveness is 0.58, below the 0.70 threshold requiring explicit mandatrophy_resolved, but the trajectory suggests it will reach high extractiveness by year 8-10. The constraint exemplifies the mandatrophy by presenting simultaneously as Rope (elite workers experiencing genuine coordination), Tangled Rope (multiple perspectives showing mixed coordination and extraction), and Snare (median workers experiencing pure extraction). The classification varies across perspectives, not because of measurement ambiguity but because the constraint structurally benefits some agents while harming others. The mandatrophy is resolved by recognizing that TANGLED ROPE is the accurate summary classification: the constraint provides genuine coordination benefits (elite productivity gains, problem-solving capacity) while simultaneously extracting from median-skill workers through displacement and credential inflation. The beneficiaries (elite workers, platforms) have stronger political economy than the victims (dispersed, unorganized median workers), so the extraction persists even when policy alternatives exist that could reshape the structure. The false summit risk is high—analysts may naturalize the barbell as inevitable AI economics rather than contingent policy choice. The open-source coalition represents a genuine alternative pathway (Scaffold logic with sunset), but policy choices (funding levels, visa policy, education investment) determine whether the sunset materializes."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "skill_premium_concentration",
-      "education_credentialism_spiral",
-      "capital_labor_substitution"
+      "credential_inflation_spiral",
+      "geographic_brain_drain",
+      "platform_lock_in_dynamics",
+      "open_source_model_access"
     ],
-    "dual_formulation_note": "The AI-talent barbell economy is a unified structural phenomenon with multiple perspectives, not a decomposed constraint family. The extractiveness value reflects the actual income compression and labor-market bifurcation observed in 2026. Alternative formulations measuring only 'AI adoption rate' or 'talent scarcity' would produce different epsilon values and should be written as separate constraint stories if their measurement basis differs significantly."
+    "dual_formulation_note": "The AI-talent barbell decomposes into multiple constraint stories: (1) Elite-tier productivity gains and coordination benefits (Rope, ε=0.15); (2) Median-skill displacement and retraining barriers (Snare, ε=0.72); (3) Platform lock-in and API pricing extraction (Snare, ε=0.65); (4) Open-source competition and platform sunset pathway (Scaffold, ε=0.30, 5-10 year horizon); (5) Credential inflation and signaling cascades (Piton, ε=0.35). The aggregate barbell constraint (this story, ε=0.58, Tangled Rope) integrates these components. Each decomposed story has different ε values and different measurement trajectories. The barbell story links them through network.affects_constraints."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.05
+      "d_value": 0.4
     }
   ]
 }

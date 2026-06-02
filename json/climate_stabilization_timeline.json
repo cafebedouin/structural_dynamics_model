@@ -4,44 +4,73 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "clim"
+    "measurement_id_prefix": "clim",
+    "story_uid": "8ea9e7b1-d86a-4294-88d8-dec09a9c6dc1"
   },
   "base_properties": {
     "extractiveness": 0.58,
-    "suppression": 0.72,
-    "theater_ratio": 0.68,
+    "suppression": 0.68,
+    "theater_ratio": 0.76,
     "claimed_type": "tangled_rope",
     "human_readable": "Climate Stabilization Timeline Constraint",
     "topic_domain": "environmental_policy/climate_science",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "carbon_intensive_industries",
-      "high_consumption_economies"
+      "high_emission_incumbent_industries",
+      "global_north_consumption_patterns",
+      "short_term_growth_dependent_economies"
     ],
     "victims": [
       "climate_vulnerable_populations",
       "future_generations",
-      "ecosystem_stability"
+      "atmospheric_carbon_budget"
     ]
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "biographical",
+      "time_horizon": "generational",
       "exit_options": "trapped",
-      "spatial_scope": "local",
+      "spatial_scope": "global",
       "label": "Climate Vulnerable Populations",
-      "comment": "PERSPECTIVE 1: CLIMATE VULNERABLE POPULATIONS (SNARE) \u2014 Small-island nations, subsistence communities, and low-income populations in climate-exposed regions face existential threats but have zero viable exit options. They did not cause the constraint yet bear maximum extraction cost. No escape, no negotiation power, no compensation mechanism. Pure extraction experienced as immutable fact."
+      "comment": "PERSPECTIVE 1: CLIMATE VULNERABLE POPULATIONS (SNARE) — Small island states, subsistence agricultural communities, and low-latitude regions face physical constraints that permit no exit. Rising sea levels, crop failures, and heat mortality are non-negotiable. These agents bear full extraction with zero alternatives. The constraint is experienced as pure coercion with minimal coordination benefit — institutional climate action proceeds at pace independent of their survival pressure."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "Future Generations",
+      "comment": "PERSPECTIVE 2: FUTURE GENERATIONS (SNARE) — Structurally unable to participate in contemporary climate governance. Bear full cost of stabilization delay while having zero decision power. The constraint appears as pure extraction — present actors extract carbon budget that future actors must repay through forced adaptation. Temporal asymmetry produces maximum experienced suppression."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "moderate",
-      "time_horizon": "biographical",
+      "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "national",
       "label": "Transition-Dependent Communities",
-      "comment": "PERSPECTIVE 2: TRANSITION-DEPENDENT COMMUNITIES (TANGLED ROPE) \u2014 Coal-mining regions, oil-dependent economies, and fossil-fuel-reliant workers experience genuine coordination (energy transition requires planning) alongside severe extraction (transition costs concentrated on them while benefits disperse globally). High suppression from economic dependency; moderate exit options through retraining programs (constrained). Asymmetric cost-benefit."
+      "comment": "PERSPECTIVE 3: TRANSITION-DEPENDENT COMMUNITIES (TANGLED ROPE) — Coal mining regions, fossil fuel workers, and extraction-dependent economies face high costs to exit the carbon lock-in but also benefit from transitional support infrastructure and energy access. The constraint exhibits both genuine coordination (shared infrastructure modernization) and asymmetric extraction (workers bear disproportionate relocation and retraining burden). Exit is possible but costly."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Climate Action Movements",
+      "comment": "PERSPECTIVE 4: CLIMATE ACTION MOVEMENTS (TANGLED ROPE) — Organized civil society groups benefit from carbon governance institutional infrastructure (legal standing, negotiation platforms, data access) while constrained by limited enforcement power and co-optation of radical demands into performative commitments. Mixed position: genuine coordination function (pressure for institutional accountability) coupled with asymmetric extraction (movement labor subsidizes institutional legitimacy without delivery)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Climate Governance Apparatus",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL CLIMATE GOVERNANCE APPARATUS (ROPE) — UNFCCC, COP presidencies, and multilateral climate institutions coordinate global information exchange, establish baseline carbon accounting, and create venues for negotiation. These actors benefit from the institutional infrastructure (authority, funding, visibility) while performing genuine coordination function. Experience the constraint as manageable — negotiation itself is the goal, independent of physical emissions outcomes."
     },
     {
       "classification_type": "rope",
@@ -49,17 +78,8 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Carbon-Intensive Industry Incumbents",
-      "comment": "PERSPECTIVE 3: CARBON-INTENSIVE INDUSTRY INCUMBENTS (ROPE) \u2014 Oil, coal, and cement majors benefit from delayed climate action. They experience the constraint as coordination: managing regulatory uncertainty, coordinating transition timelines to protect asset values, and arbitraging climate policy delays. Net beneficiaries with high agency and low suppression. Extraction flows toward them."
-    },
-    {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "Renewable Energy and Climate Tech Coalition",
-      "comment": "PERSPECTIVE 4: RENEWABLE ENERGY AND CLIMATE TECH COALITION (SCAFFOLD) \u2014 Organized agents (renewable firms, climate tech startups, green-focused finance, progressive governments) see the stabilization timeline as a temporary coordination failure with a clear sunset. Market mechanisms, renewable cost curves, and policy mandates are building alternative energy infrastructure. Suppression is declining as solar/wind costs drop and battery technology matures. Exit path visible and approaching. Theater ratio declines as renewable deployment accelerates."
+      "label": "High-Emission Incumbent Industries",
+      "comment": "PERSPECTIVE 6: HIGH-EMISSION INCUMBENT INDUSTRIES (ROPE) — Fossil fuel companies, aviation, cement, and steel sectors coordinate carbon management through voluntary standards, offset markets, and net-zero pledges while extracting substantial benefit from the delay mechanism. These actors have high exit optionality (capital mobility, supply chain substitutability) and experience the constraint primarily as coordination machinery that legitimizes continued extraction. Low experienced suppression because alternatives exist but are economically disfavored."
     },
     {
       "classification_type": "piton",
@@ -67,17 +87,8 @@
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "International Climate Governance Apparatus",
-      "comment": "PERSPECTIVE 5: INTERNATIONAL CLIMATE GOVERNANCE APPARATUS (PITON) \u2014 The UNFCCC, COP meetings, and NDC frameworks are largely performative. They coordinate discourse and signal commitment but lack enforcement mechanisms. The apparatus persists through institutional inertia (it exists; actors participate in rituals) despite low functional impact on emissions trajectories. Theater ratio (0.68) reflects that climate summitry generates theatrical output (target announcements, pledge ceremonies, agreement texts) with weak correlation to actual policy implementation or emissions reductions. The mechanism is maintained because alternatives haven't fully replaced it, not because it achieves stated goals."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "powerful",
-      "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "High-Income Non-Carbon-Intensive Economies",
-      "comment": "PERSPECTIVE 6: HIGH-INCOME NON-CARBON-INTENSIVE ECONOMIES (TANGLED ROPE) \u2014 Wealthy economies with diversified energy portfolios experience genuine coordination (global supply chains, international markets, climate-risk hedging) alongside asymmetric extraction opportunities (ability to externalize climate costs to vulnerable regions, import carbon-intensive goods while claiming climate leadership). High mobility and arbitrage capacity; can exit unfavorable climate policies through relocation. Suppression lower than transition-dependent communities but still present from coordination complexity."
+      "label": "Fossil Fuel Energy System",
+      "comment": "PERSPECTIVE 7: FOSSIL FUEL ENERGY SYSTEM (PITON) — The physical infrastructure (power plants, refineries, supply chains) has become institutionally locked-in despite degraded functional rationale. Renewable energy technology now demonstrates superior economics in most contexts, yet fossil infrastructure persists through sunk cost, workforce coupling, and regulatory capture. The system is maintained through theater: carbon pricing schemes, renewable energy mandates, and efficiency standards create appearance of transition while preserving incumbent position. Theater ratio (0.76) reflects that policy machinery is substantially performative — 70+ years of international climate action has failed to bend emissions curves."
     },
     {
       "classification_type": "mountain",
@@ -85,134 +96,155 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "Natural Law View (Physics of Carbon Cycle)",
-      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal/analytical perspective, the climate stabilization timeline appears as an immutable law: the physics of atmospheric CO2 residence time (~300 years), thermal inertia of ocean circulation, and feedback mechanisms create a hard deadline after which certain climate outcomes become inevitable regardless of future action. This perspective risks naturalizing what is actually a contingent institutional arrangement (failure to enforce emissions reductions) as a physical inevitability. The engine's false summit detector identifies this as naturalization of a policy choice."
+      "label": "Analytical Observer (Physical Constraint View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / PHYSICAL CONSTRAINT VIEW (MOUNTAIN) — From a universal/civilizational perspective, the climate stabilization timeline appears as an immutable physical limit: the carbon budget for 1.5°C warming is finite and depleting. Once exceeded, the constraint is naturally enforced via radiative forcing, albedo feedback, and ocean acidification. No institution can negotiate with thermodynamics. However, this classification will trigger false-summit detection: the structural data reveals that the 'natural' constraint is mediated entirely through human institutional choice about emissions pathways. The apparent mountain is a naturalized political economy."
     }
   ],
   "omegas": [
     {
-      "id": "tipping_point_certainty",
-      "question": "At what atmospheric CO2 level does climate stabilization become physically impossible (rather than politically difficult)?",
-      "resolution_mechanism": "Ice-core paleoclimate data; climate modeling consensus on irreversible feedback thresholds; observation of permafrost methane release rates and tipping point activation",
-      "impact": "If tipping point is >550 ppm CO2: stabilization remains achievable through policy change (tangled_rope/snare). If tipping point is <450 ppm and already exceeded: constraint becomes mountain (immutable physical fact). Current trajectory (~420 ppm) is in ambiguous zone where window is closing but still open.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Atmospheric CO2 threshold for irreversible climate tipping"
+      "id": "carbon_budget_physical_vs_institutional",
+      "question": "Is the climate stabilization timeline a physical constraint (carbon budget depletion) or an institutional failure (delay in decarbonization)?",
+      "resolution_mechanism": "Decompose into two separate constraint stories: (1) carbon-budget physical constraint (inherent thermodynamic limit), (2) decarbonization-delay institutional constraint (political economy of fossil fuel lock-in). Compare epsilon values: physical constraint has low epsilon (coordination around physics = rope); institutional constraint has high epsilon (political extraction = tangled rope or snare). If only one story is needed, the boundary is misdrawn.",
+      "impact": "If primarily physical: mountain classification correct — constraint is unchangeable, stabilization requires accepting equilibrium at higher warming. If primarily institutional: false summit — constraint is changeable, stabilization requires political defeat of incumbents.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether timeline is physical limit or institutional failure"
     },
     {
-      "id": "renewable_cost_curve_asymptote",
-      "question": "Can renewable energy and battery storage costs decline far enough to enable 100% decarbonization without material sacrifice in developed economies?",
-      "resolution_mechanism": "Continuation of learning curves for solar (declining ~15% per doubling), wind, and batteries; identification of fundamental cost floors; assessment of mineral constraint bottlenecks (lithium, cobalt)",
-      "impact": "If renewable costs reach floor <$20/MWh: scaffold perspective confirmed, sunset is real, transition becomes fundamentally economic (not political). If costs asymptote higher: suppression persists, constraint remains tangled_rope/snare for longer timeline.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether renewable energy can achieve cost parity without systemic constraint"
-    },
-    {
-      "id": "behavioral_willingness_divide",
-      "question": "Is the gap between climate knowledge and climate action driven by structural suppression (material barriers, institutional lock-in) or by internalized preference structures (identity fusion with consumption norms, cognitive discount of future risk)?",
-      "resolution_mechanism": "Comparison of policy compliance rates under constrained vs incentivized conditions; psychological studies of identity-locked vs constrained climate actors; post-policy behavior tracking when barriers are removed",
-      "impact": "If primarily structural: removing policy barriers enables rapid transition (scaffold logic). If primarily identity-locked: agents carry internalized constraints even after barriers fall, requiring longer cultural reframing (extends timeline, deepens suppression).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether climate inaction is structural suppression or identity-locked preference"
-    },
-    {
-      "id": "developed_economy_carbon_relocation",
-      "question": "Do high-income economies externalizing carbon-intensive production to lower-income regions (carbon outsourcing) represent genuine decoupling of consumption from emissions, or accounting shell games masking continued extraction?",
-      "resolution_mechanism": "Consumption-based emissions accounting (carbon footprint including imports) vs production-based accounting; tracking of embodied carbon in trade flows; assessment of whether carbon-outsourcing countries bear climate costs while high-income countries claim climate leadership",
-      "impact": "If genuine decoupling: scaffold perspective is valid (transition is achievable). If shell game: extraction mechanism is disguised, suppression on vulnerable populations is higher than claimed, constraint remains snare/tangled_rope masked as rope.",
+      "id": "net_zero_pledge_credibility",
+      "question": "Do national net-zero pledges and corporate carbon commitments represent genuine emissions reduction pathways or performative delay mechanisms?",
+      "resolution_mechanism": "Longitudinal analysis of pledge versus actual emissions trajectory; decomposition of pledges into direct reduction vs. offset-dependent targets; examination of enforcement mechanisms and penalty structures for non-compliance. Compare pledge stringency to physical requirements for 1.5°C pathway.",
+      "impact": "If credible: institutional constraint is rope (genuine coordination of global response). If performative: institutional constraint is piton (degraded theater maintaining incumbent position). Theater ratio drops from 0.76 to <0.5 if credibility is established.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether carbon outsourcing enables genuine decoupling or masks extraction"
+      "description": "Credibility of net-zero pledges as emissions reduction mechanisms"
     },
     {
-      "id": "collective_action_sufficient_scale",
-      "question": "Can voluntary climate action by coalitions of aligned actors (corporations, nations, cities) achieve stabilization without universal enforcement, or does the constraint require global coordination that no current governance structure can enforce?",
-      "resolution_mechanism": "Modeling of emissions trajectory under current policy vs under full coalition commitment; assessment of whether coalition defection (freerider problem) undermines aggregate targets; empirical tracking of policy implementation gaps (Paris NDCs vs actual emissions)",
-      "impact": "If coalition-sufficient: scaffold/rope perspectives dominate, organized agents can solve coordination problem. If universal enforcement required: constraint remains snare/tangled_rope indefinitely, suppression does not decline.",
+      "id": "tipping_point_interaction",
+      "question": "Does institutional delay itself modify the physical carbon budget by accelerating tipping-point dynamics (cloud feedbacks, forest dieback, permafrost melt)?",
+      "resolution_mechanism": "Climate modeling comparison: carbon budget for 1.5°C stabilization conditional on immediate action versus conditional on 10-year delay. Quantify how tipping-point acceleration reduces physical buffer. Integration of fast feedbacks into institutional constraint model.",
+      "impact": "If significant: the institutional delay IS part of the physical constraint (coupled system). The separation between 'mountain' and 'institutional failure' collapses — delay itself narrows the physical pathway. Epsilon and suppression increase because the constraint becomes irreversible beyond a threshold. Mandatrophy changes from institutional failure to irreversible physical lock-in.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether climate stabilization requires universal enforcement or achievable through coalitions"
+      "description": "Whether institutional delay modifies physical carbon budget via tipping-point acceleration"
+    },
+    {
+      "id": "just_transition_coordination_vs_extraction",
+      "question": "Does 'just transition' framing coordinate genuine burden-sharing (rope) or rationalize unequal extraction by shifting costs to transition-dependent communities (snare/tangled rope)?",
+      "resolution_mechanism": "Distributional analysis of transition costs and benefits across income quintiles, geographies, and time horizons. Comparison of pledge climate finance to actual transition funding flows. Examination of policy pathways: carbon tax with direct rebate (coordination) versus offset markets (extraction).",
+      "impact": "If genuine coordination: transition-dependent perspectives shift from snare to tangled rope, suppression drops. If rationalization: beneficiary-victim structure persists, theater ratio increases (performative equity framing masks extraction). Affects classification of multiple perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether just-transition framing enables coordination or masks extraction"
+    },
+    {
+      "id": "systemic_alternative_viability",
+      "question": "Do renewable energy systems plus grid modernization represent a genuine systemic alternative to fossil infrastructure, or does their scaling face irreducible bottlenecks?",
+      "resolution_mechanism": "Technical analysis of mineral constraints (lithium, cobalt, rare earths), grid stability requirements, and manufacturing capacity for renewables deployment. Comparison of decarbonization cost curves under different technology availability scenarios. Modeling of rapid transition feasibility.",
+      "impact": "If viable: incumbent suppression is extracted choice, not technical necessity — snare/tangled rope classification correct. If bottlenecked: transition timelines are physically constrained — mountain classification more defensible. Affects directionality and exit_options for all perspectives.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether renewable systems are viable systemic alternative"
+    },
+    {
+      "id": "institutional_capture_structural_permanence",
+      "question": "Is fossil fuel dominance in climate governance a temporary institutional capture (piton/scaffold with sunset) or structurally permanent (snare)?",
+      "resolution_mechanism": "Historical analysis of regulatory capture dynamics in other sectors (tobacco, financial derivatives, pharmaceutical pricing). Examination of fossil fuel political spending, revolving-door dynamics, and institutional structural dependence. Scenario analysis of governance reform feasibility.",
+      "impact": "If temporary: policy interventions can break capture — scaffold with sunset clause. If structural: capture is self-reinforcing — snare or permanent piton. Affects organizational perspective classification and mandatrophy resolution.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether fossil fuel capture is temporary or structurally permanent"
     }
   ],
   "measurements": [
     {
-      "metric": "theater_ratio",
-      "time_point": 1990,
-      "value": 0.55
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2005,
-      "value": 0.62
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2020,
-      "value": 0.68
-    },
-    {
       "metric": "base_extractiveness",
-      "time_point": 1990,
+      "time_point": 0,
       "value": 0.32
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2005,
-      "value": 0.48
+      "time_point": 10,
+      "value": 0.45
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2020,
+      "time_point": 20,
       "value": 0.58
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2026,
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
       "value": 0.68
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 2026,
-      "value": 0.58
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.76
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68
     }
   ],
   "interval": {
-    "start": 1990,
-    "end": 2026
+    "start": 0,
+    "end": 20
   },
   "commentary": {
-    "narrative_context": "The climate stabilization timeline constraint represents the structural divergence between the pace of atmospheric CO2 accumulation and the pace of institutional climate action. Over the past three decades, international climate governance has generated increasingly elaborate performative structures (UNFCCC conferences, nationally-determined contributions, net-zero pledges) while global emissions have continued rising. The constraint operates as a hybrid coordination-extraction mechanism: genuine coordination problems exist (energy transition requires international supply-chain coordination, research cooperation, and technology transfer), but these coordination functions are embedded within asymmetric extraction where carbon-intensive incumbents benefit from policy delays while vulnerable populations bear concentrated climate costs. The theater ratio has risen (0.55\u21920.68) as climate discourse has intensified while policy implementation gaps have widened. The extractiveness has increased (0.32\u21920.58) as the window for low-cost emissions reductions has closed and remaining mitigation options require more disruptive structural changes. From different structural positions, this single phenomenon appears as an immutable physical deadline (mountain), a coordination problem with a technology-enabled sunset (scaffold), a degraded governance apparatus (piton), pure extraction toward vulnerable populations (snare), or a genuine mixed coordination-extraction hybrid (tangled_rope). The constraint demonstrates how indexical classification disambiguates between 'climate crisis is real physical fact' and 'our institutional response is choosing to extract rather than coordinate'.",
+    "narrative_context": "The climate stabilization timeline constraint represents the structural divergence between atmospheric carbon accumulation and institutional climate action capacity. Since 1992, the UNFCCC process has produced 28 COPs, legally binding agreements (Kyoto Protocol, Paris Agreement), nationally-determined contributions, corporate net-zero pledges, and elaborate carbon accounting frameworks — while global CO2 emissions have risen from 21.4 Gt/year to 37.5 Gt/year. This is not a failure of coordination logic; it is structural. The constraint operates through temporal asymmetry (present actors benefit from carbon-intensive consumption, future actors bear costs), incumbent lock-in (fossil infrastructure dominates energy systems despite economic superiority of alternatives), and institutional capture (fossil fuel industries shape climate governance). The theater ratio (0.76) reflects that climate policy machinery is substantially performative: pledges use accounting tricks (offsets, scope exclusion, equity carve-outs), enforcement mechanisms lack teeth, and the gap between treaty language and physical emissions outcomes is widening. The constraint exhibits all six DR types simultaneously, making it a diagnostic exemplar for how political economy naturalizes contingent institutional arrangements as physical necessity.",
     "key_agents": [
-      "Climate Vulnerable Populations: Primary victims (powerless/trapped/local) \u2014 small-island nations, subsistence communities, low-income climate-exposed regions; bear maximum cost, have zero exit options",
-      "Transition-Dependent Communities: Secondary victims (moderate/constrained/national) \u2014 coal-mining regions, oil-dependent economies; face high suppression from economic dependency; some exit options through retraining",
-      "Carbon-Intensive Industry Incumbents: Primary beneficiaries (institutional/arbitrage/global) \u2014 oil, coal, cement majors; benefit from delayed climate action; high agency and low suppression",
-      "Renewable Energy and Climate Tech Coalition: Organized agents (organized/mobile/global) \u2014 renewables, clean tech, progressive finance; see stabilization as temporary problem with sunset through market mechanisms",
-      "International Climate Governance Apparatus: Institutional actor (institutional/arbitrage/global) \u2014 UNFCCC, COP summits, NDC frameworks; maintains performative structures; sees own function as degraded (piton)",
-      "High-Income Non-Carbon-Intensive Economies: Powerful agents (powerful/mobile/global) \u2014 wealthy diversified economies; experience mixed coordination and extraction; high mobility allows exit from unfavorable policies",
-      "Analytical Observer: Civilizational view (analytical/analytical/universal) \u2014 risks naturalizing contingent institutional failure as physical law"
+      "Climate Vulnerable Populations: Primary victims (powerless/trapped) — small island states, subsistence agricultural communities, low-latitude regions with zero exit capacity; bear full cost of stabilization delay with zero decision power",
+      "Future Generations: Primary victims (powerless/trapped) — structurally excluded from contemporary governance; face irreversible carbon budget depletion; experience pure extraction across civilizational time horizon",
+      "Transition-Dependent Communities: Secondary victims (moderate/constrained) — coal workers, extraction-dependent economies; face high relocation/retraining costs but benefit from transitional support infrastructure; mixed coordination and extraction",
+      "Climate Action Movements: Organized secondary agents (organized/constrained) — civil society, environmental NGOs; benefit from institutional platforms but constrained by limited enforcement power; movement labor subsidizes institutional legitimacy",
+      "International Climate Governance Apparatus: Primary beneficiary (institutional/arbitrage) — UNFCCC, COP presidencies, multilateral institutions; coordinate information exchange and negotiation venues; benefit from funding and authority independent of physical outcomes",
+      "High-Emission Incumbent Industries: Primary beneficiary (institutional/arbitrage) — fossil fuel companies, aviation, cement/steel; coordinate carbon management through offsets and pledges; extract benefit from institutional delay machinery; high exit optionality",
+      "Fossil Fuel Energy System: Institutional infrastructure (institutional/arbitrage) — physical plants, supply chains, workforce; maintained through regulatory capture and sunk cost despite degraded functional rationale; experienced as piton (performative theater)",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing institutional failure as immutable physical law; risks false summit by treating carbon budget depletion as constraint when actual constraint is political economy of energy transition"
     ],
-    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint shows substantial extraction: carbon-intensive incumbents extract from climate-vulnerable populations through policy delays and externalization of transition costs. However, 0.58 reflects that genuine coordination problems exist (energy transition genuinely requires international cooperation) and that extraction is not total \u2014 some policy progress has occurred (renewable deployment, efficiency gains), and the constraint is not a pure snare. The trajectory shows extraction increasing over time (0.32\u21920.58) as the window for low-cost mitigation closes and remaining options require more disruptive changes. Suppression (0.72): High. Multiple suppression mechanisms operate simultaneously: economic dependency of fossil-fuel workers, institutional lock-in of energy infrastructure, political influence of incumbent industries, cognitive discounting of diffuse future costs, and the structural difficulty of coordinating global action. Suppression is particularly high for vulnerable populations (trapped, 0.95+) and moderate for transition communities (constrained, 0.60-0.70). Theater ratio (0.68): High. International climate governance produces substantial performative output (COP agreements, net-zero pledges, emission reduction targets) with weak correlation to implementation. UNFCCC frameworks lack enforcement mechanisms; NDCs routinely miss targets; corporate net-zero pledges rely on carbon offsets and scope-3 accounting loopholes. The theater has increased over time as discourse intensity has grown while policy-emissions gap has widened.",
-    "directionality_logic": "Directionality (d) for each perspective is derived from structural position: beneficiary status (carbon-intensive incumbents \u2192 low d), victim status (vulnerable populations \u2192 high d), power level (powerless vs institutional \u2192 higher vs lower experienced extraction), and exit options (trapped vs arbitrage \u2192 higher vs lower chi). The sigmoid f(d) converts directionality to experienced extractiveness. Carbon-intensive incumbents with arbitrage options experience low or negative chi (they benefit). Vulnerable populations with trapped exit experience maximum chi (0.95+). Transition-dependent communities with constrained exit experience moderate-high chi (0.65-0.75). High-income economies with mobile exit experience moderate chi (0.55-0.65). Organized green-tech actors with mobile exit and beneficiary status experience low chi (0.20-0.30). The piton classification derives from theater ratio (0.68 \u2265 0.70 threshold approached) and low functional impact despite high institutional presence. The mountain classification at civilizational scope risks naturalizing contingent institutional failure as physical inevitability \u2014 the engine's false summit detector flags this as misclassification.",
-    "perspectival_gap": "This constraint exhibits maximum perspectival divergence. Vulnerable populations see pure extraction (snare) \u2014 they bear all costs, have no exit, and receive no coordination benefit. Transition communities see mixed extraction and coordination (tangled_rope) \u2014 the energy transition genuinely requires coordination, but the distribution of costs and benefits is severely asymmetric. Carbon-intensive incumbents see coordination (rope) \u2014 they experience the constraint as solving a real problem (managing regulatory uncertainty, timing transition to protect asset values) with net benefit. The green-tech coalition sees a temporary problem with a sunset (scaffold) \u2014 renewable costs and policy momentum are visible exit paths. International climate governance sees its own degraded ritual (piton) \u2014 the apparatus persists through inertia despite low functional impact. High-income economies see mixed coordination and arbitrage (tangled_rope) \u2014 genuine coordination needs alongside ability to externalize costs to vulnerable regions. The civilizational observer risks seeing immutable physical law (mountain) \u2014 the CO2 residence time and thermal inertia create real deadlines, but the classification error is treating institutional failure to act as a physical constraint. The perspectival gap reveals that what vulnerable populations experience as pure extraction is seen by incumbents as legitimate coordination, and what appears to governance actors as performative ritual appears to renewable-tech actors as a temporary problem being solved by market mechanisms.",
-    "mandatrophy_analysis": "RESOLUTION: This constraint resolves the mandatrophy by demonstrating that all six types are legitimate readings of the same structural data, but the analytical observer's mountain classification is a FALSE SUMMIT \u2014 it naturalizes institutional choice (failure to enforce emissions reductions) as physical inevitability. The correct perspectival interpretation: (1) Vulnerable populations genuinely experience snare \u2014 this is not false; (2) Incumbents genuinely experience rope \u2014 this is not false; (3) Green-tech coalitions genuinely see scaffold \u2014 this is structurally real; (4) UNFCCC genuinely is piton \u2014 performative ritual with low functional impact; (5) The 'immutable deadline' view is false summit \u2014 it conflates 'windows are closing' (true) with 'action is physically impossible' (false until tipping point is crossed). The constraint is currently tangled_rope with snare components for vulnerable populations. It becomes mountain only if omega_1 (tipping_point_certainty) resolves to 'we have already crossed the physical threshold' \u2014 which may happen, but has not yet. Mandatrophy resolution: classify as tangled_rope, track omega variables, and prepare to reclassify to mountain only when empirical evidence of irreversible tipping is unambiguous."
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint's primary extraction is temporal — present actors (high-emission nations, incumbent industries) capture benefits from carbon-intensive consumption while future actors (small island states, subsistence communities) bear costs. The current-generation extraction is not as severe as pure snare (0.72+) because some coordination exists (renewable technology, grid modernization, energy efficiency) alongside extraction, but it exceeds rope (0.45) because the coordination is subordinated to incumbent interest preservation. The measurement trajectory (0.32 → 0.45 → 0.58 over 20 years) reflects accumulating extraction: each year of delay narrows the carbon budget for 1.5°C, increasing the cost of stabilization, which increases the extraction burden on future actors while present actors continue benefiting. Theater ratio (0.76): High. Climate governance has produced 28 COPs, thousands of pages of treaty language, nationally-determined contributions from 195 countries, and corporate net-zero pledges from the largest companies — while global emissions curve has inverted in the opposite direction. The performative content is not accidental: pledges use accounting scope exclusion (Scope 3 emissions often excluded), offset mechanisms that permit continued fossil extraction in other jurisdictions, and 'net-zero' targets that rely on speculative future carbon removal. Suppression (0.68): High. Multiple mechanisms suppress exit: (1) incumbent energy infrastructure creates path dependence for fossil-dependent regions; (2) global supply chains depend on fossil energy, making unilateral decarbonization economically costly; (3) information asymmetry — carbon accounting permits incumbent companies to greenwash continued fossil expansion; (4) political capture — incumbent industries fund climate-skepticism campaigns and regulatory delay; (5) temporal lock-in — once carbon is emitted, atmospheric residence time ensures multi-century consequences.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. Vulnerable populations perceive snare (pure coercion with no coordination benefit). Future generations perceive snare (zero decision power, maximum temporal extraction). Transition-dependent communities perceive tangled rope (genuine infrastructure coordination mixed with disproportionate burden). Climate movements perceive tangled rope (institutional platforms coupled with co-optation of demands). International climate governance perceives rope (coordination of information exchange, negotiation venues). Incumbent industries perceive rope (legitimacy of carbon management, offset mechanisms). Fossil infrastructure perceives piton (performative policy maintenance). Analytical observer risks mountain (naturalizing institutional delay as immutable physical constraint). The gap between snare and rope perspectives is irreducible: the same institutional machinery appears as pure extraction to powerless agents and pure coordination to beneficiary institutions. The gap reveals that the 'constraint' is not the carbon budget (that is a background condition) but the political economy of institutional capture that prevents carbon budgets from directing action.",
+    "directionality_logic": "Directionality computation reveals the structural extraction flow. Climate-vulnerable populations: beneficiary=false (victims), exit_options=trapped, power=powerless → d ≈ 0.95 → f(d) ≈ 1.42 → high experienced chi. High-emission industries: beneficiary=true, exit_options=arbitrage, power=institutional → d ≈ 0.05 → f(d) ≈ -0.12 → negative experienced chi (extraction flows toward them). Transition-dependent communities: beneficiary=mixed (benefit from infrastructure, bear transition costs), exit_options=constrained, power=moderate → d ≈ 0.62 → f(d) ≈ 0.92 → moderate experienced chi. Analytical observer: power=analytical, exit_options=analytical, scope=universal → d ≈ 0.73 → f(d) ≈ 1.15 → moderate chi. The scope modifier σ(S)=global (1.2) amplifies all chi values — the constraint's extraction is harder to verify and easier to rationalize at planetary scale. Beneficiary-victim structure is clear: future generations and vulnerable populations are pure victims; incumbent industries are pure beneficiaries; transition communities are mixed; governance apparatus is beneficiary (authority and funding independent of emissions outcomes).",
+    "mandatrophy_analysis": "RESOLVED MANDATROPHY: The constraint's extractiveness (0.58) exceeds the snare threshold (0.66) for only three perspectives (vulnerable populations, future generations, fossil infrastructure degradation); it stays below threshold for most institutional perspectives. The mandatrophy is resolved by recognizing that this is not 'one constraint misclassified' but multiple perspectives on a hybrid coordination-extraction system. The International Climate Governance Apparatus experiences genuine rope (coordination of information, negotiation venues) because it successfully achieves coordination — parties do negotiate, agree on frameworks, and exchange data. High-emission industries experience rope because offset mechanisms and carbon pledges do coordinate emissions accounting (even if poorly). But from the snare-experiencing victims' perspective, this coordination is subordinated to extraction — the 'coordination' of governance is coordination TO PRESERVE INCUMBENT POSITION, not to stabilize climate. The paradox resolves through the distinction between objective coordination function and net directionality. Objectively, climate governance coordinates information exchange (rope function). But directionally, the coordination is structured to extract maximum benefit for present/wealthy actors and defer costs to future/vulnerable actors (snare directionality). The system exhibits tangled rope structure at the whole: genuine coordination machinery (Paris Agreement framework, carbon accounting standards) coupled with asymmetric extraction (temporal asymmetry, geographic asymmetry, intergenerational asymmetry). Mandatrophy is resolved by accepting that both rope and snare classifications are correct — rope describes the institutional machinery's coordination function, snare describes the distributional outcome."
   },
   "boltzmann": {
-    "coordination_type": "global_infrastructure"
+    "coordination_type": "global_infrastructure",
+    "boltzmann_floor_override": 0.22
   },
   "network": {
     "affects_constraints": [
-      "fossil_fuel_economic_lock_in",
-      "carbon_outsourcing_mechanisms",
-      "climate_migration_patterns"
+      "fossil_fuel_energy_infrastructure_lock_in",
+      "carbon_accounting_offset_mechanism",
+      "national_sovereignty_climate_governance",
+      "green_finance_greenwashing"
     ],
-    "dual_formulation_note": "The climate stabilization timeline decomposes into multiple structurally distinct constraints. The physics of CO2 residence time is a separate mountain-type constraint. The institutional failure to implement known mitigation measures is a separate snare/tangled_rope. The renewable energy cost curve represents a third constraint (scaffold with sunset). Each has its own epsilon; the family is linked by causal dependency. The timeline constraint is upstream of migration patterns and economic transitions, which are downstream consequences."
+    "dual_formulation_note": "The climate stabilization timeline constraint decomposes into multiple structurally distinct stories: (1) carbon-budget physical limit (ε=0.05, mountain) — inherent thermodynamic constraint; (2) fossil-infrastructure lock-in (ε=0.65, snare) — incumbent energy system maintains position despite alternatives; (3) international-governance capture (ε=0.48, tangled rope) — climate policy coordinated but directed toward incumbent preservation; (4) temporal extraction mechanism (ε=0.72, snare) — present actors extract carbon budget from future actors. These four stories are linked: the physical limit (1) becomes a constraint only through political-economic choices (2-4). The present story focuses on the integrated institutional constraint; decomposition into separate stories is recommended for higher-resolution analysis of specific mechanism."
   },
   "directionality_overrides": [
     {
+      "power_atom": "organized",
+      "d_value": 0.58
+    },
+    {
       "power_atom": "institutional",
-      "d_value": 0.25
+      "d_value": 0.09
     }
   ]
 }

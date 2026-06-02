@@ -4,27 +4,28 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "orgrat"
+    "measurement_id_prefix": "organ",
+    "story_uid": "fb77623b-29f3-4d4d-975d-83e603d36d52"
   },
   "base_properties": {
     "extractiveness": 0.58,
     "suppression": 0.72,
-    "theater_ratio": 0.65,
+    "theater_ratio": 0.68,
     "claimed_type": "tangled_rope",
     "human_readable": "Organ Scarcity and Moral Rationing Systems",
     "topic_domain": "medical_ethics/healthcare_allocation",
     "requires_active_enforcement": true,
     "beneficiaries": [
+      "dialysis_industry",
       "transplant_centers",
-      "wealthy_patients",
-      "dialysis_industry"
+      "wealthy_patients_with_arbitrage_access",
+      "organ_allocation_bureaucrats"
     ],
     "victims": [
-      "end_stage_organ_failure_patients",
-      "marginalized_populations",
-      "organ_donation_families"
-    ],
-    "mandatrophy_resolved": true
+      "end_stage_renal_disease_patients_without_arbitrage",
+      "marginalized_populations_systematically_disadvantaged_by_criteria",
+      "waiting_list_mortality_burden"
+    ]
   },
   "perspectives": [
     {
@@ -33,26 +34,17 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "The End-Stage Patient (Trapped)",
-      "comment": "PERSPECTIVE 1: END-STAGE PATIENT (SNARE) \u2014 Faces imminent death without transplant. No exit option: cannot purchase organs legally, cannot access organs through informal markets in most jurisdictions, cannot negotiate allocation criteria that favor their survival. Experiences the constraint as pure extraction \u2014 the rationing system determines who lives based on criteria (age, comorbidities, social utility) that systematically disadvantage elderly, disabled, and socially marginalized patients. Maximum suppression: medical dependency creates absolute barrier to exit."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Marginalized Patient Population",
-      "comment": "PERSPECTIVE 2: MARGINALIZED PATIENT POPULATION (TANGLED ROPE) \u2014 Constrained by systemic barriers: less access to pre-transplant care, higher infection rates from treatment gaps, lower social capital in transplant center evaluations. Modest coordination benefit exists \u2014 formal allocation rules prevent purely nepotistic or wealth-based distribution. But the rationing criteria themselves embed extraction: allocation algorithms weight social factors (likelihood to comply with post-transplant medication, employment status, family support) that disadvantage patients from low-income communities. Significant asymmetric extraction layered onto imperfect coordination."
+      "label": "The Dialyzed Patient Without Arbitrage",
+      "comment": "PERSPECTIVE 1: DIALYZED PATIENT WITHOUT ARBITRAGE (SNARE) — Structurally trapped. Cannot exit dialysis without organ transplant. Waiting list duration measured in years; mortality rates 10-15% annually on dialysis. No international arbitrage option (cannot afford transplant tourism to India, Eastern Europe, or China). Bears full suppressive weight: medical criteria systematically disadvantage patients with comorbidities, behavioral complexity, or social vulnerability. Zero exit options. Maximum experienced extraction — the constraint extracts from this agent continuously through loss of life-years and mobility restrictions."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "The Organ Procurement Organization (OPO) Network",
-      "comment": "PERSPECTIVE 3: OPO NETWORK (TANGLED ROPE) \u2014 Organized institutional actors managing allocation for regional networks. Genuine coordination function: standardized criteria prevent chaos and explicit nepotism. Also substantial extraction mechanism: OPO administrators gain prestige and funding through transplant volume metrics, creating incentive to claim organs (via expanded donation criteria, aggressive family approach) while rationalizing allocation through medical-necessity framing. Exit option (mobile) derives from capacity to adjust allocation policies and criteria \u2014 but institutional legitimacy depends on maintaining appearance of purely medical rationing."
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Transplant Advocacy Coalition",
+      "comment": "PERSPECTIVE 2: TRANSPLANT ADVOCACY COALITION (TANGLED ROPE) — Organized agents (patient advocacy groups, equity-focused physicians, social workers) see both coordination function and systematic extraction. The rationing criteria do solve the coordination problem (prevent market allocation, nepotism, medical free-for-all), but the same criteria are weaponized against marginalized populations. High suppressiveness — advocates face career risk, institutional opposition, and epistemic capture by transplant center authority. Some exit capacity through coalition organization (litigation, policy advocacy, public scrutiny), but constrained by medical establishment gatekeeping. Both genuine coordination (fair allocation prevents chaos) and genuine extraction (criteria embed bias)."
     },
     {
       "classification_type": "rope",
@@ -60,82 +52,109 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "The Transplant Center (Net Beneficiary)",
-      "comment": "PERSPECTIVE 4: TRANSPLANT CENTER (ROPE) \u2014 Benefits from organ availability through institutional prestige, funding, and patient volume. Experiences the constraint as coordination: the rationing system allocates scarce organs to the centers best positioned to use them (verified infrastructure, experienced surgeons, better outcomes). Near-perfect exit option (arbitrage): can transfer patients between centers, participate in multi-regional allocation networks, influence criteria through clinical guidelines. The constraint functions as pure coordination from this perspective \u2014 solving the collective action problem of matching organs to centers."
+      "label": "The Organ Procurement and Transplantation Network (OPTN)",
+      "comment": "PERSPECTIVE 3: OPTN BUREAUCRACY (ROPE) — Institutional perspective emphasizes coordination function. Allocation criteria prevent market trading, preserve medical urgency assessment, and distribute organs by medical/ethical criteria rather than willingness to pay. This is genuine coordination solving a real collective action problem. OPTN has high exit capacity through regulatory authority and scientific legitimacy. Experiences the constraint as successful system maintenance: the rationing criteria are experienced as functional tools, not extractive mechanisms. Low effective extraction from this perspective because the constraint subsidizes institutional legitimacy and resource control."
     },
     {
       "classification_type": "snare",
-      "agent_power": "powerful",
-      "time_horizon": "generational",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Wealthy Patient (International Access)",
-      "comment": "PERSPECTIVE 5: WEALTHY PATIENT (SNARE) \u2014 Powerful agent with arbitrage exit option: can travel internationally to access organs in systems with lower rationing barriers (organ markets in some regions, less stringent allocation criteria). From this agent's perspective, the domestic rationing constraint does not actually bind \u2014 effective extraction is low because arbitrage is available. But this arbitrage depends on maintaining global inequality: wealthy patients extracting organs from poorer populations through medical tourism. The domestic constraint appears as rope (coordination) to this agent; the global structure reveals snare extraction displaced to more vulnerable populations."
+      "label": "The Dialysis Industry (Fresenius, DaVita, Baxter)",
+      "comment": "PERSPECTIVE 4: DIALYSIS INDUSTRY (SNARE) — Institutional beneficiary with arbitrage. Chronic organ scarcity guarantees dialysis market stability. Three major dialysis corporations (Fresenius, DaVita, Baxter) generate combined annual revenue >$150B globally; annual dialysis patient population stable at 2-3M despite transplant availability. The industry's business model structurally benefits from delayed transplantation. Evidence: (a) industry lobbying against living-donor incentives; (b) inadequate transplant center investment; (c) quality-of-life data consistently show transplantation superior to dialysis, yet dialysis capacity continuously expanded. High extraction directed toward end-stage renal disease patients (forced dialysis dependency), institutional suppression of transplant expansion. From the industry perspective, classification is Rope (coordination of dialysis provision) or even Mountain (organ scarcity is natural/immutable). Engine will flag extraction asymmetry via victim declarations and reclassify."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Wealthy Patient With International Arbitrage",
+      "comment": "PERSPECTIVE 5: WEALTHY PATIENT WITH ARBITRAGE (TANGLED ROPE) — Experiences the constraint as mixed coordination and privilege. The formal rationing system coordinates allocation for most patients, which they endorse (fair, prevents market chaos). But their own exit option — international transplant tourism to countries with weaker regulatory oversight (Pakistan, Philippines, China) — extracts from both the formal system (jumps the queue) and from donors in arbitrage-destination countries (often coerced or exploited donors). High arbitrage exit option paradoxically gives them local exit too: they can influence their own national transplant criteria through medical networks and wealth. Some suppression (social stigma of purchasing organs) but light. Both benefits from coordination (system prevents chaos) and benefits from escaping coordination (can pay for priority)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Transplant Center (Volume Maximizer)",
+      "comment": "PERSPECTIVE 6: TRANSPLANT CENTER (TANGLED ROPE) — Institutional actor with institutional exit (arbitrage). Centers benefit from rationing: it justifies their role as gatekeepers of scarce resources and legitimizes their authority over allocation criteria. Center staff experience genuine coordination function (they are solving allocation conflicts fairly). Simultaneously, centers compete for transplant volume (metric for institutional prestige and revenue), which creates extraction: marginal transplants performed on patients with poor prognosis to inflate volume statistics. Theater evident in: (a) risk-adjustment gaming (reporting better outcomes than real by patient selection); (b) expanding criteria to borderline-suitable organs to increase throughput; (c) justifying volume increases as 'expansion of access' when data show worse outcomes. Both coordination (fair allocation among candidates) and extraction (volume competition penalizes marginal patients)."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
-      "spatial_scope": "national",
-      "label": "The Dialysis Industry Alternative",
-      "comment": "PERSPECTIVE 6: DIALYSIS INDUSTRY (PITON) \u2014 Institutional beneficiary with arbitrage option. Dialysis providers benefit substantially from chronic kidney disease population unable to access transplants \u2014 prolonged dialysis dependence generates revenue. Theater ratio is high: rationing is justified through medical criteria and scarcity framing, but the scarcity is partially maintained by low donation rates (which dialysis industry does not incentivize to change). The constraint persists through institutional inertia \u2014 alternatives to scarcity-based rationing (incentivized donation, xenotransplantation, artificial organs) exist but are underinvested. The theater is the moral framing (we allocate fairly within constraints) masking the structural interest (prolonged scarcity is profitable)."
+      "spatial_scope": "global",
+      "label": "The Living Donor Rationing Norm",
+      "comment": "PERSPECTIVE 7: LIVING DONOR ALTRUISM NORM (PITON) — Formalized norm against compensating living kidney donors (USA, UK, much of Europe) is institutionalized through ethics, law, and professional licensing. The norm emerged from genuine coordination need (prevent exploitation, preserve altruism, prevent market races). But the norm's functional purpose has atrophied: living-donor shortage is catastrophically severe (2-3 year waitlists), quality-adjusted life-year gains from living-donor transplant are massive, and evidence strongly supports regulated monetary incentives (Iran's paid-donor model has zero waiting list and excellent outcomes). The norm persists through institutional inertia — transplant ethics committees, professional societies, and regulatory bodies treat the prohibition as settled principle rather than contingent policy. Theater ratio high because the altruism language persists while donor recruitment crisis worsens. Piton classification: the norm was coordination, the function degraded, the institution maintains it through rhetoric. Changing the norm requires institutional disruption (ethics committee chairs, licensing boards, international harmonization), so arbitrage exit is available to system-level reformers but prohibitively expensive."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer (Ethical Framework)",
-      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Sees the constraint as genuine coordination (rationing prevents pure market or nepotistic allocation) layered with extraction mechanisms at multiple scales: wealthy patients arbitrage to global markets, marginalized populations are systematically disadvantaged by allocation criteria, dialysis industry benefits from chronic scarcity, transplant centers compete for volume, OPOs manage allocation while building prestige metrics. The constraint resolves mandatrophy by confirming it is genuinely hybrid \u2014 coordination and extraction are both real structural features, not one naturalizing the other."
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Scarcity View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL SCARCITY VIEW (MOUNTAIN) — From civilizational scope, organ scarcity appears as immutable natural law: human biology produces organ failure faster than donation supply can match. Donation rates are physiologically bounded (death and disease rates are biological facts). The rationing constraint appears as a natural mathematical consequence of supply/demand imbalance. From this perspective, extractiveness is inherent to scarcity itself — not a feature of institutions, incentives, or allocation criteria, but a fact of human biology. This perspective risks naturalizing contingent institutional choices (suppression of living-donor incentives, transplant center business models, dialysis industry extraction) as inevitable. Engine false-summit detection will identify beneficiary declarations (dialysis industry, transplant centers) as evidence that the 'natural law' framing naturalizes constructed constraints. This exemplifies the oracle gap: the civilizational/analytical position cannot see institutional extraction that becomes visible from lower-scope positions."
     }
   ],
   "omegas": [
     {
-      "id": "scarcity_naturalness_vs_policy",
-      "question": "Is organ scarcity an immutable natural limit (physiological constraint on donation rates) or a partially contingent policy outcome (low donation rates reflect suboptimal recruitment, infrastructure underinvestment, and deliberate market restrictions)?",
-      "resolution_mechanism": "Cross-national comparative analysis: donation rates correlate with opt-out vs opt-in registry laws, family approach training, transplant infrastructure investment, and xenotransplantation permitting. Counterfactual modeling of donation rate under alternative policies.",
-      "impact": "If natural: rationing is pure coordination problem (mountain), scarcity-based allocation is inevitable. If policy-contingent: scarcity is partially maintained by institutional choices, rationing system can be analyzed for extractive vs coordinative functions independent of scarcity claim.",
+      "id": "living_donor_incentive_threshold",
+      "question": "Would regulated monetary incentives for living kidney donation substantially increase donation supply and improve allocation outcomes without creating coercive exploitation?",
+      "resolution_mechanism": "Comparative empirical analysis of Iran's regulated paid-donor system (outcomes, donor satisfaction, exploitation metrics) vs. US altruism-only system; cost-benefit analysis of incentive magnitude and health outcomes gained",
+      "impact": "If true: piton classification confirmed — living-donor altruism norm is degraded institution maintained by inertia. Rationing constraint would downshift to rope or tangled_rope if incentives implemented. If false: altruism prohibition is justified; piton classification is error. Dialysis industry extraction would remain unchanged.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether organ scarcity is inherent or policy-maintained"
+      "description": "Whether living-donor incentives would substantially increase supply"
     },
     {
-      "id": "allocation_criterion_neutrality",
-      "question": "Do UNOS allocation criteria (age, comorbidities, time on waitlist, social factors) function as fair coordination or do they systematically extract from specific populations?",
-      "resolution_mechanism": "Longitudinal outcome analysis: stratify by race, income, age, disability status; measure survival disparities, access time, explicit refusals correlated with demographic factors; analyze criterion weights for systematic bias.",
-      "impact": "If neutral: rationing is coordination (Rope/Tangled Rope). If systematically biased: rationing is extraction mechanism disguised as medical neutrality (Snare/Tangled Rope with higher victim extraction).",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether allocation criteria are systematically biased"
-    },
-    {
-      "id": "dialysis_industry_incentive_structure",
-      "question": "Does the dialysis industry actively oppose expansion of transplantation rates or organ donation infrastructure, and what is the financial dependency of patient populations on chronic dialysis?",
-      "resolution_mechanism": "Industry financial analysis, lobbying records, policy positions on xenotransplantation and donation rate expansion; patient outcome data comparing transplant vs dialysis cohorts; revenue modeling for dialysis providers.",
-      "impact": "If active opposition exists: dialysis industry is direct beneficiary of scarcity constraint (piton/snare extraction). If neutral or supportive: scarcity is not maintained by competing industry interest (reduces piton evidence).",
+      "id": "dialysis_industry_structural_dependence",
+      "question": "Does the dialysis industry's business model structurally depend on chronic organ scarcity, or is dialysis profitable regardless of transplant availability?",
+      "resolution_mechanism": "Financial analysis of dialysis company margins under counterfactual high-transplant-availability scenario; correlation of transplant expansion with dialysis company profitability; lobbying expenditure correlation with transplant policy outcomes",
+      "impact": "If true: dialysis industry extraction classification (snare) is correct, and industry opposition to transplant expansion is rational profit-maximization. If false: scarcity is coincidental to industry profitability, and dialysis industry is not structurally extractive. Would require reclassification of industry perspective.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether dialysis industry opposes transplantation expansion"
+      "description": "Whether dialysis industry business model depends on organ scarcity"
     },
     {
-      "id": "international_arbitrage_dependency",
-      "question": "What proportion of wealthy patients accessing organs internationally are extracting from populations without legal protections or meaningful informed consent?",
-      "resolution_mechanism": "Epidemiological tracking of organ sources for medical tourists; survey data on payment, consent process, and long-term outcomes for donors in recipient-source countries; legal analysis of national organ trade frameworks.",
-      "impact": "If high proportion: wealthy patient perspective is snare at global scale (arbitrage conceals exploitation). If low/negligible: arbitrage option is genuine coordination mechanism (rope from wealthy perspective reflects real legitimate access).",
+      "id": "allocation_criteria_bias_mechanism",
+      "question": "Do formal allocation criteria (UNOS scoring, HLA matching, medical urgency) systematically disadvantage marginalized populations through content bias (criteria discriminate) or through design bias (equal application of criteria produces disparate outcomes)?",
+      "resolution_mechanism": "Multivariate analysis of transplant allocation outcomes controlling for medical factors; comparison of pre-criteria vs post-criteria allocation patterns across demographic groups; historical document analysis of criteria design intent",
+      "impact": "If content bias: criteria should be reformed. If design bias: the same criteria discriminate through disparate impact despite neutral language. If both: tangled_rope classification confirmed (genuine coordination function + genuine systematic extraction). If neither: allocation criteria are fair, and observed disparities are medical (not institutional).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether international organ access involves coercive donation"
+      "description": "Mechanism of systematic disadvantage in allocation criteria"
     },
     {
-      "id": "xenotransplantation_viability_timeline",
-      "question": "What is the realistic timeline for xenotransplantation (genetically modified pig organs, artificial organs) to reduce or eliminate scarcity constraint?",
-      "resolution_mechanism": "Technological assessment: clinical trial progress, regulatory pathway clearance, manufacturing scalability analysis, cost projections; expert consensus on 10-year feasibility.",
-      "impact": "If viable within 10 years: scaffold perspective is accurate (sunset clause emerging from technology). If > 20 years or infeasible: scarcity constraint persists indefinitely, mandatrophy resolution requires accepting extraction as permanent feature.",
+      "id": "transplant_center_volume_gaming",
+      "question": "To what extent do transplant centers perform marginal transplants (donor/recipient pairs with poor prognosis) to inflate volume statistics, rather than to maximize patient outcomes?",
+      "resolution_mechanism": "Risk-adjusted outcome analysis comparing volume-leaders vs outcome-leaders; correlation of center volume metrics with actual quality-adjusted life-year production; analysis of marginal case decision patterns relative to published criteria",
+      "impact": "If widespread: transplant center perspective is extraction-biased; centers benefit from rationing through volume competition. If rare: centers are outcome-focused despite volume metrics; extraction classification overstates center behavior. Affects whether tangled_rope classification correctly captures center dynamics.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether transplant centers perform marginal transplants for volume"
+    },
+    {
+      "id": "international_organ_arbitrage_coercion",
+      "question": "In international organ transplant tourism destinations (Pakistan, Philippines, China), to what extent are living donors coerced or exploited (payment extraction, unfair risk allocation) vs. genuinely consenting to regulated transaction?",
+      "resolution_mechanism": "Qualitative research with living donors in arbitrage-destination countries; comparative analysis of donor post-transplant health outcomes and satisfaction; documentation of payment adequacy relative to opportunity cost and health risk",
+      "impact": "If coercion is systemic: wealthy-patient arbitrage extracts from vulnerable populations, making their snare classification stronger. If donors are genuinely consenting: arbitrage is market coordination between willing parties; wealthy-patient extraction is less severe. Affects whether to upgrade wealthy-patient extraction or accept as legitimate market activity.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "Viability timeline for xenotransplantation"
+      "description": "Coercion vs. consent in international organ transplant arbitrage"
+    },
+    {
+      "id": "dialysis_quality_of_life_suppression",
+      "question": "To what extent is the suppression experienced by dialyzed patients (0.72 base suppression) a direct effect of organ scarcity vs. institutional choice to prioritize dialysis expansion over transplant accessibility?",
+      "resolution_mechanism": "Historical analysis of dialysis capacity expansion vs. transplant center funding; comparison of countries with different dialysis/transplant mix; cost-benefit analysis showing transplant-centric vs dialysis-centric resource allocation",
+      "impact": "If institutional choice dominates: suppression is partly constructed, not entirely natural. Constraint type could downshift from snare to tangled_rope if dialysis investment redirected to transplants. If scarcity dominates: suppression is inherent; classification stands.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Institutional choice vs. scarcity in dialysis suppression"
     }
   ],
   "measurements": [
@@ -147,7 +166,7 @@
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.5
+      "value": 0.52
     },
     {
       "metric": "base_extractiveness",
@@ -157,37 +176,32 @@
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.52
+      "value": 0.55
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.6
+      "value": 0.62
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
       "value": 0.65
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.46
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.69
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.57
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.54
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.63
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.72
     }
   ],
   "interval": {
@@ -195,37 +209,51 @@
     "end": 20
   },
   "commentary": {
-    "narrative_context": "Organ scarcity creates a constraint that functions simultaneously as pure coordination (preventing nepotistic or market-based organ allocation), as mixed coordination-extraction (formal rationing criteria both enable fair allocation and systematically disadvantage marginalized patients), and as extraction disguised as medical necessity (dialysis industry benefits from chronic scarcity, wealthy patients arbitrage to international markets, transplant centers compete for volume). The constraint exhibits the full mandatrophy pattern: different institutional actors perceive it as rope (coordination), snare (pure extraction), piton (degraded ritual), tangled rope (hybrid), or mountain (natural limit). The extractiveness trajectory (0.42\u21920.58 over 20 years) reflects gradual recognition that scarcity is partially policy-maintained rather than immutable\u2014as alternatives (xenotransplantation, incentivized donation programs) become technologically feasible, the extraction mechanisms become more visible. Theater ratio (0.52\u21920.65) tracks the increasing performative component: moral language about 'fair allocation' and 'medical necessity' intensifies as the constraint becomes harder to justify as natural scarcity.",
+    "narrative_context": "Organ scarcity creates a constraint system that simultaneously solves a genuine coordination problem (preventing market allocation, nepotism, and medical free-for-all in transplant access) while functioning as an extraction mechanism that systematically disadvantages patients without arbitrage access and benefits entrenched institutional actors (dialysis industry, transplant centers, wealthy patients able to pay for international transplant tourism). The constraint exhibits the full complexity of tangled rope: it has both real coordination function (fair allocation criteria) and real asymmetric extraction (systematic disadvantage of marginalized populations, industry dependence on chronic dialysis, transplant center volume gaming). Base extractiveness has risen from 0.42 to 0.58 over a twenty-year interval, driven by: (1) dialysis industry consolidation and profit maximization creating structural opposition to transplant expansion; (2) transplant center competition increasing volume-gaming pressure; (3) living-donor altruism norm degrading while regulatory/ethical justification persists (piton dynamics); (4) international organ arbitrage creating separate tier for wealthy patients. Theater ratio has risen from 0.55 to 0.68, reflecting increasing performativity of ethics review and allocation criteria language masking volume competition and profit incentives. Suppression has risen from 0.65 to 0.72 as waiting-list times extended and dialysis options expanded relative to transplant investment. The constraint is analyzed across eight perspectives ranging from snare (dialyzed patients without arbitrage), through tangled rope (advocacy coalitions, wealthy arbitrage patients, transplant centers, OPTN), through piton (living-donor altruism norm), to false-summit mountain (naturalizing observer). The perspectival gap reveals that what appears as immutable biological scarcity from civilizational/analytical scope is actually a contested institutional system from the position of patients, advocates, and economists analyzing counterfactual policy scenarios.",
     "key_agents": [
-      "End-Stage Organ Failure Patients: Primary victims (powerless/trapped) \u2014 systematically disadvantaged by allocation criteria; no exit option; mortality consequence of rationing",
-      "Marginalized Populations: Secondary victims (moderate/constrained) \u2014 face systemic barriers to pre-transplant care, higher infection rates, lower social capital; extraction layered onto coordination",
-      "Transplant Centers: Primary beneficiaries (institutional/arbitrage) \u2014 gain prestige, funding, volume through organ access; experience constraint as pure coordination",
-      "Organ Procurement Organizations: Institutional coordinators (organized/mobile) \u2014 manage allocation networks; also benefit from organ volume metrics and regulatory authority",
-      "Dialysis Industry: Secondary beneficiary (institutional/arbitrage) \u2014 revenue depends on chronic dialysis population; low incentive to expand transplantation",
-      "Wealthy Patients: Global beneficiaries (powerful/arbitrage) \u2014 can access organs internationally, bypassing domestic rationing constraints; extraction displaced to source populations",
-      "Families of Organ Donors: Affected parties (moderate/trapped) \u2014 face intensive recruitment pressure; limited ability to refuse donation; moral framing obscures coercive elements",
-      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees mandatrophy resolution: constraint is genuinely hybrid, not one function naturalizing another"
+      "Dialyzed Patient Without Arbitrage (powerless/trapped) — Primary victim; bears full suppressive weight; no exit options; mortality 10-15% annually on dialysis; waiting list 2-3 years",
+      "Transplant Advocacy Coalition (organized/constrained) — Secondary actor; sees both coordination and extraction; faces institutional opposition and career risk",
+      "OPTN Bureaucracy (institutional/arbitrage) — Primary beneficiary from institutional legitimacy; experiences coordination as functional; controls allocation authority",
+      "Dialysis Industry (institutional/arbitrage) — Structural beneficiary from chronic scarcity; business model depends on transplant unavailability; lobbies against living-donor incentives",
+      "Wealthy Patient With Arbitrage (powerful/arbitrage) — Tertiary beneficiary; exits constraint via international transplant tourism; benefits from both coordination (fair allocation for others) and from circumventing it (pays for priority)",
+      "Transplant Center (institutional/arbitrage) — Mixed beneficiary; benefits from rationing (legitimacy, gatekeeping authority) and from volume competition; extracts through marginal transplant performance",
+      "Living-Donor Altruism Norm (institutional/arbitrage) — Piton institution; emerged from coordination need; function degraded (chronic living-donor shortage despite evidence supporting incentives); maintained by inertia",
+      "Analytical Observer (analytical/analytical) — Risks naturalizing institutional extraction as immutable biological law; exemplifies oracle gap where civilizational perspective cannot see extraction visible from lower scopes"
     ],
-    "logic_rationale": "Extractiveness (0.58, rising from 0.42): Reflects the constraint's core function\u2014scarcity-based rationing inherently extracts from patients unable to meet allocation criteria or lacking arbitrage options. The rising trajectory (0.42\u21920.58) indicates growing recognition that scarcity is policy-contingent: as xenotransplantation becomes technologically feasible and donation expansion programs prove viable, the extraction becomes harder to naturalize as 'inevitable scarcity.' Current extractiveness is moderate-high because the coordination function (preventing nepotism, standardizing allocation) is genuine but deeply compromised by extraction at multiple scales. Suppression (0.72): Very high. Multiple barriers confine patients: dialysis dependence creates medical vulnerability, legal prohibition on organ markets blocks formal trading, information asymmetry about allocation criteria, geographic barriers to transplant center access, social barriers for marginalized populations. Suppression mechanisms are both structural (medical dependency, legal prohibitions) and internalized (moral framing that rationing is 'fair' and 'necessary'). Theater ratio (0.65, rising from 0.52): Increasingly performative. The moral language of 'ethical allocation' and 'medical necessity' intensifies as the technical basis for scarcity weakens. Allocation criteria are presented as objectively medical (age, comorbidity) but function as social sorting. Transplant center 'evaluation' of patient social factors is framed as medical-predictive but operates as social gatekeeping. The rising theater reflects Goodhart drift\u2014metrics (transplant outcomes, patient compliance, survival probability) become targets, and the allocation system optimizes toward these metrics at the cost of explicit fairness.",
-    "perspectival_gap": "This constraint demonstrates mandatrophy through radical perspectival divergence on the same structural facts. The end-stage patient sees snare\u2014mortality consequence, no exit, pure extraction. The transplant center sees rope\u2014coordination solving allocation problem. The dialysis industry sees piton\u2014the constraint is performatively justified but actually benefits them through chronic patient dependency. Wealthy patients see rope at the domestic scale (coordination works for them) but snare at the global scale (their arbitrage depends on exploitation in source countries). The OPO network sees tangled rope\u2014genuine coordination with embedded extraction through volume-maximization incentives. The analytical observer sees tangled rope with embedded dialysis industry interest. No single type captures the structure; the presheaf of perspectives reveals the hybrid function (genuine coordination layered with structural extraction at multiple scales) and the international displacement of extraction (wealthy patient arbitrage outsources snare mechanisms to source populations).",
-    "directionality_logic": "Directionality values are derived from beneficiary/victim declarations and exit options. End-stage patients (trapped, victim status) compute high d\u2192high f(d)\u2192high experienced \u03c7. Marginalized populations (constrained, victim status) compute moderate-high d, producing tangled rope (mixed coordination-extraction). Transplant centers (arbitrage, beneficiary status) compute low d\u2192negative f(d)\u2192low/negative experienced \u03c7, perceiving the constraint as rope. Wealthy patients (arbitrage, beneficiary-at-global-scale-but-victim-as-source) exhibit perspectival split: at the national level d is very low (beneficiary with arbitrage); at the global level d approaches victim status (beneficiary because others pay cost). OPOs (organized/mobile, institutional beneficiary) compute d around 0.35-0.45 depending on institutional dependency on volume metrics\u2014mobile because they can adjust policies, but organized entanglement with transplant center incentives. Dialysis industry (institutional/arbitrage, secondary beneficiary through sustained scarcity) computes d toward 0.1-0.2 (full beneficiary, arbitrage exit because profit depends on persistent patient population). The analytical observer computes canonical d for analytical power (0.73), perceiving the constraint at the civilizational scale where all extraction mechanisms become visible.",
-    "mandatrophy_analysis": "This constraint resolves mandatrophy through perspectival completeness: all six classification types emerge from the structural data without contradiction. The RESOLUTION reveals that the constraint is genuinely hybrid (tangled_rope at the analytical level, mandatrophy_resolved = true), not a false natural law disguised as coordination. The mandatrophy operates at three levels: (1) DOMESTIC-SCALE MANDATROPHY: Is the constraint pure coordination (fair allocation preventing nepotism) or mixed coordination-extraction (fair allocation criteria systematically disadvantage marginalized populations)? The data resolves to 'mixed'\u2014both functions are real. (2) INTERNATIONAL-SCALE MANDATROPHY: Does wealthy patient arbitrage represent legitimate coordination (access to treatment) or snare extraction (treatment access depends on coercive organ procurement from poorer populations)? The data resolves to 'both'\u2014the same institutional arrangement is rope for wealthy agents and snare for source-population agents. (3) TEMPORAL MANDATROPHY: Is scarcity an immutable natural limit (mountain) or a policy-contingent arrangement that could be dissolved by xenotransplantation or incentivized donation (scaffold)? The data resolves to 'policy-contingent'\u2014scarcity is partially maintained by institutional choices, not immutable. The rising extractiveness (0.42\u21920.58) and theater ratio (0.52\u21920.65) tracks the increasing visibility of policy contingency\u2014as alternatives become feasible, the extraction becomes harder to naturalize, and the constraint's classification approaches snare (from piton/rope hybrid). The mandatrophy is NOT resolved by discovering 'the true type' but by recognizing that the constraint is genuinely multi-typed across perspectives and scales, with embedded extraction mechanisms that become more visible as the scarcity-naturalness framing weakens."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The constraint extracts from end-stage renal disease patients without arbitrage through multiple mechanisms: (1) forced dialysis dependency (inferior health outcomes, mobility restrictions, mortality risk); (2) waiting-list mortality (5,000-10,000 US deaths annually waiting for transplant); (3) systematic disadvantage of marginalized populations (Black, Hispanic, low-income patients receive fewer transplants despite equivalent medical candidacy); (4) industry dependence on scarcity (dialysis companies profit from chronic kidney disease management). However, extractiveness is not maximal (0.72+) because the constraint also provides genuine coordination value — formal allocation criteria prevent market chaos and medical free-for-all. Base extractiveness has risen from 0.42 to 0.58 over 20 years due to dialysis industry profit-maximization, transplant center volume competition, and institutional resistance to living-donor incentives. Suppression (0.72): High and rising. Multiple suppressive mechanisms: (1) regulatory prohibition of living-donor incentives (despite evidence they increase supply without exploitation in Iran model); (2) transplant center gatekeeping and medical authority (patients cannot appeal allocation decisions, cannot self-advocate without expertise); (3) dialysis industry lobbying against transplant expansion; (4) medical establishment consensus treating rationing criteria as settled rather than contingent policy; (5) information asymmetry (patients lack data on center outcomes, donor profiles, allocation algorithm details); (6) career risk for advocates challenging status quo (physicians questioning allocation criteria face professional isolation). Theater ratio (0.68): High and rising. Performativity evident in: (1) ethics review language emphasizing fairness while allocation criteria systematically disadvantage marginalized populations; (2) transplant center quality-of-life messaging ('gift of life') masking volume-competition incentives; (3) living-donor altruism norm rhetoric persisting despite growing evidence that incentives work and harm evidence is weak; (4) OPTN policy statements treating organ scarcity as natural/immutable while dialysis industry actively works to maintain shortage; (5) expanding allocation criteria language (marginal kidneys, 'expanded criteria donors') to justify marginal transplants performed for volume rather than outcomes. Theater has risen as the gap widened between coordination rhetoric and extraction reality.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. The dialyzed patient without arbitrage (powerless/trapped) experiences pure extraction (snare) — trapped on dialysis with no exit, bearing mortality risk and mobility loss. The transplant advocacy coalition (organized/constrained) experiences tangled rope accurately — they see both the coordination function (fair allocation, prevents chaos) and the extraction mechanism (systematic disadvantage of marginalized populations). The OPTN (institutional/arbitrage) experiences rope or even mountain — legitimate coordination solving a real problem. The dialysis industry (institutional/arbitrage) experiences rope or mountain depending on perspective (coordination of dialysis provision, natural scarcity) while structurally benefiting from extraction. The wealthy patient with arbitrage (powerful/arbitrage) experiences mild tangled rope — they benefit from the coordination (fair allocation for others) while escaping the extraction (can pay for priority). The transplant center (institutional/arbitrage) experiences tangled rope — real coordination function (fair allocation) combined with extraction through volume gaming. The living-donor altruism norm (institutional/arbitrage) is classified as piton — it was coordination, it degraded, it persists through institutional inertia. The analytical observer (analytical/analytical) at civilizational scope risks classifying as mountain — immutable biological scarcity — which false-summit detection identifies as naturalization of institutional choices. The gap between the dialyzed patient's snare and the analytical observer's mountain is the diagnostic signal: what appears as immutable law from one scope is revealed as contingent institution from another.",
+    "directionality_logic": "Directionality (d) varies sharply across perspectives, reflecting different structural relationships to the constraint. Dialyzed patients without arbitrage: d ≈ 0.95 (victims, trapped, powerless) → f(d) ≈ 1.42 → maximum experienced extraction. OPTN bureaucracy: d ≈ 0.10 (beneficiary, institutional, arbitrage) → f(d) ≈ -0.05 → negative effective extraction (constraint subsidizes them). Dialysis industry: d ≈ 0.12 (beneficiary, institutional, arbitrage) → f(d) ≈ -0.02 → negative experienced extraction (profit-maximizing), though they are declared as beneficiary because their business model structurally depends on scarcity. Wealthy patient with arbitrage: d ≈ 0.20 (mixed — beneficiary from coordination, escaper from extraction via arbitrage) → f(d) ≈ 0.02 → near-zero experienced extraction (they benefit from system coordination and circumvent extraction). Transplant center: d ≈ 0.35 (mixed — beneficiary from gatekeeping authority, extracting through volume gaming) → f(d) ≈ 0.35 → moderate experienced extraction. Advocacy coalition: d ≈ 0.70 (victim, organized, constrained) → f(d) ≈ 1.00 → moderate-high experienced extraction (they are fighting extraction but face institutional resistance). These d values are not uniform — the engine derives them from the power atom, exit options, and beneficiary/victim declarations. The piton perspective (living-donor norm) represents institutional d ≈ 0.15 (arbitrage) → f(d) ≈ -0.02, which underestimates the suppression it creates for patients advocating reform. The mountain perspective (analytical) uses d ≈ 0.73 (analytical) → f(d) ≈ 1.15, which produces over-estimated extractiveness if scope is universal (σ=1.0), partly compensating for the natural-law framing that would otherwise produce zero extraction.",
+    "mandatrophy_analysis": "Organ scarcity and moral rationing resolves mandatrophy by recognizing that tangled rope is the correct classification because the constraint genuinely has BOTH coordination function and asymmetric extraction. The coordination function is real: without allocation criteria, organ allocation would devolve to market (wealthy get all organs), nepotism (family connections), or medical free-for-all (doctors' preferences). The allocation criteria solve a genuine collective action problem — they enable fair distribution when supply is limited. This is not theater; this is real coordination. Simultaneously, the asymmetric extraction is real: the same criteria that prevent chaos systematically disadvantage marginalized populations through content bias (criteria language disadvantages patients with comorbidities, behavioral complexity, social vulnerability) and disparate impact (equal application of criteria produces unequal outcomes across demographic groups). The dialysis industry benefits structurally from sustained scarcity. Transplant centers benefit from volume competition layered over allocation authority. Wealthy patients benefit by escaping the rationing system they endorse for others. These are not coincidental — they are structural features of how the constraint operates. The piton classification for the living-donor altruism norm adds diagnostic precision: the norm was genuine coordination (prevent donor exploitation), but the function has degraded (living-donor shortage now causes more harm than regulated incentives would), and the institution persists through inertia rather than functional necessity. The false-summit classification for the analytical mountain reveals that naturalizing organ scarcity as immutable biological law obscures contingent institutional choices (dialysis industry opposition to transplants, regulatory prohibition of incentives, transplant center volume gaming) that constitute much of the effective scarcity. The mandatrophy is resolved not by choosing one type but by recognizing that the constraint instantiates all of them: coordination (rope) from institutional beneficiary perspective, extraction (snare) from dialyzed-patient perspective, degraded institution (piton) from living-donor norm, and naturalized choice (false-summit mountain) from analytical perspective. The presheaf of perspectives IS the answer.",
+    "kernel_context": "Organ allocation operates within two contested kernels: (1) the personhood/allocation kernel — WHO counts as a person deserving moral consideration in allocation decisions? Does a patient's social worth matter? Does behavioral 'compliance' matter? This reading declares social-neutral medical criteria; rival readings weight social contribution or behavioral predictability. (2) The duty-to-treat kernel — WHAT are physicians' duties when resources are scarce? This reading declares equal access and medical criteria; rival readings declare duty to maximize outcomes (favoring low-risk recipients), duty to serve community (favoring socially integrated patients), or duty to prevent harm (favoring marginal/vulnerable patients). These kernels are not articulated as explicit texts but are instantiated through allocation criteria, ethics committee decisions, and regulatory frameworks. The constraint story generates one reading (medical criteria, social-neutral allocation), but the rival readings (social-worth weighting, outcome-maximization, community-service duties) generate different constraint stories with different ε values and victim/beneficiary distributions."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "dialysis_dependency_chronic_illness",
-      "xenotransplantation_regulatory_barriers",
-      "medical_tourism_exploitation"
+      "dialysis_industry_profit_model",
+      "living_donor_incentive_prohibition",
+      "transplant_center_volume_competition",
+      "medical_rationing_criteria_bias"
     ],
-    "dual_formulation_note": "Organ scarcity moral rationing decomposes into three structurally distinct constraints: (1) scarcity_coordination\u2014pure coordination problem of matching scarce organs to patients (\u03b5\u22480.15, rope); (2) rationing_extraction\u2014allocation criteria systematically disadvantaging marginalized populations (\u03b5\u22480.52, snare/tangled_rope); (3) dialysis_industry_dependency\u2014institutional interest in maintaining chronic scarcity (\u03b5\u22480.48, piton/snare). This story treats them as a single hybrid constraint; decomposition into separate stories recommended for targeted policy analysis."
+    "dual_formulation_note": "Organ scarcity constraint decomposes into four structurally distinct sub-constraints: (1) dialysis_industry_profit_model (ε≈0.72, snare) — industry business model depends on chronic kidney disease market; (2) living_donor_incentive_prohibition (ε≈0.45, piton) — altruism norm emerged from genuine coordination, degraded function, persists via inertia; (3) transplant_center_volume_competition (ε≈0.55, tangled_rope) — centers benefit from rationing authority and compete for volume, mixing coordination and extraction; (4) medical_rationing_criteria_bias (ε≈0.50, tangled_rope) — allocation criteria solve fair-access coordination problem and systematically disadvantage marginalized populations through design/content bias. Each sub-constraint has different ε, different perspectives, different beneficiary/victim structure. The parent constraint (organ_scarcity_moral_rationing) aggregates the effects; each sub-constraint reveals a distinct structural mechanism contributing to overall extractiveness."
   },
   "directionality_overrides": [
     {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    },
+    {
       "power_atom": "powerful",
-      "d_value": 0.85
+      "d_value": 0.2
     }
-  ]
+  ],
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "dialysis_industry_profit_model",
+      "living_donor_incentive_prohibition"
+    ]
+  }
 }

@@ -4,26 +4,26 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "ucp"
+    "measurement_id_prefix": "gucp",
+    "story_uid": "dec824d8-393a-4e2c-9358-6a08fc169ce6"
   },
   "base_properties": {
     "extractiveness": 0.52,
     "suppression": 0.58,
-    "theater_ratio": 0.48,
+    "theater_ratio": 0.64,
     "claimed_type": "tangled_rope",
-    "human_readable": "Google Universal Commerce Protocol (UCP)",
+    "human_readable": "Google Universal Commerce Protocol (UCP) — Product Data Standardization & Merchant Lock-In",
     "topic_domain": "technological/e_commerce/digital_infrastructure",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "google_search_and_commerce_division",
-      "large_retailers_with_native_adoption"
+      "google_advertising_infrastructure",
+      "large_platform_merchants"
     ],
     "victims": [
-      "independent_merchants_and_small_platforms",
-      "alternative_search_ecosystems",
-      "merchant_data_autonomy"
-    ],
-    "mandatrophy_resolved": false
+      "independent_merchants",
+      "marketplace_interoperability",
+      "price_discovery_ecosystem"
+    ]
   },
   "perspectives": [
     {
@@ -33,16 +33,16 @@
       "exit_options": "trapped",
       "spatial_scope": "global",
       "label": "The Independent Merchant",
-      "comment": "PERSPECTIVE 1: INDEPENDENT MERCHANT (SNARE) \u2014 Small retailers and marketplace vendors have no realistic exit from UCP adoption. Algorithmic visibility on Google Shopping depends on protocol compliance; alternative discovery channels (Amazon, eBay) are themselves proprietary ecosystems with equivalent lock-in. The merchant bears full cost of standardization labor, data schema restructuring, and algorithmic opacity in ranking \u2014 they cannot refuse without losing market reach. This is pure extraction: Google captures merchant data, optimizes its own commerce division, and marginalizes non-adopters."
+      "comment": "PERSPECTIVE 1: INDEPENDENT MERCHANT (SNARE) — Small merchants cannot exit UCP adoption without losing visibility in Google Search and Shopping. Trapped by algorithmic dependency; suppression is maximal because alternative listing services lack comparable reach. The merchant's product data becomes Google asset; switching costs are immense."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "moderate",
+      "agent_power": "powerful",
       "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Regional E-Commerce Platform",
-      "comment": "PERSPECTIVE 2: REGIONAL E-COMMERCE PLATFORM (TANGLED ROPE) \u2014 Platform operators like Shopify, WooCommerce, or regional marketplaces experience both coordination benefit and extraction. UCP standardization reduces fragmentation in product metadata \u2014 genuine benefit for merchant tools and cross-platform visibility. But adoption is constrained: Google's algorithmic weighting toward UCP-native data creates pressure to implement and embed the protocol. Platforms cannot exit without losing competitive position, yet benefit from the coordination function. Active enforcement is required \u2014 Google maintains algorithmic incentives favoring protocol compliance."
+      "spatial_scope": "global",
+      "label": "The Large E-Commerce Platform (Non-Google)",
+      "comment": "PERSPECTIVE 2: LARGE E-COMMERCE PLATFORM (TANGLED ROPE) — Amazon, eBay, Shopify face constrained exit: refusing UCP adoption means merchants lose Google integration, but adoption means feeding data into Google's ecosystem. Suppression is high but not maximal — they retain alternative channels (direct traffic, email, mobile apps). Genuine coordination benefit (unified metadata) coexists with extraction (data asymmetry, algorithmic preference)."
     },
     {
       "classification_type": "rope",
@@ -50,35 +50,35 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Google Commerce Division",
-      "comment": "PERSPECTIVE 3: GOOGLE COMMERCE DIVISION (ROPE) \u2014 Google experiences UCP as pure coordination: a mechanism to consolidate merchant data, improve search relevance, and enable direct transaction processing in search results. The protocol solves Google's legitimate problem of integrating heterogeneous product feeds. From this perspective, UCP is a standard \u2014 Google benefits from first-mover advantage and market consolidation, but the primary function is coordination. Exit options are arbitrage: Google can scale this unilaterally or negotiate with other platforms, but the incentive structure captures unilateral benefit."
+      "label": "Google Corporation",
+      "comment": "PERSPECTIVE 3: GOOGLE (ROPE) — Experiences UCP primarily as coordination mechanism for its ad targeting and Shopping ecosystem. Data flow enables better attribution, price signals, and inventory matching. Arbitrage access means Google can opt out of its own standard or modify rules unilaterally. Net beneficiary experiencing coordination benefits with minimal extraction cost."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "Alternative Search and Commerce Ecosystems",
-      "comment": "PERSPECTIVE 4: ALTERNATIVE SEARCH ECOSYSTEMS (TANGLED ROPE) \u2014 DuckDuckGo, Brave Search, Amazon, Alibaba, and other platforms have organizational capacity to adopt or create parallel standards. They benefit from UCP's standardization work (avoiding redundant standardization labor) but experience extraction through network effects: as UCP becomes the de facto standard, non-adoption marginalizes their own product discovery. Some exit capacity exists (create proprietary protocols, join standards bodies), but constrained by coordination costs and lock-in from merchant adoption. Organized agents can resist, but at significant cost."
+      "label": "The Interoperability Coalition",
+      "comment": "PERSPECTIVE 4: INTEROPERABILITY COALITION (SCAFFOLD) — Open Standards Organizations (W3C, Schema.org), competition authorities, merchant advocacy groups see UCP as a temporary coordination solution with a sunset: open federated commerce protocols (ActivityPub for commerce, decentralized product registries, blockchain-backed merchant identities) are building alternatives that reduce dependence on any single search/commerce engine. Sunset estimated at 10-15 years as alternatives mature."
     },
     {
-      "classification_type": "snare",
-      "agent_power": "powerless",
-      "time_horizon": "civilizational",
-      "exit_options": "trapped",
-      "spatial_scope": "global",
-      "label": "Merchant Data Autonomy and Privacy Collective",
-      "comment": "PERSPECTIVE 5: MERCHANT DATA AUTONOMY (SNARE) \u2014 The collective interest in merchant data remaining independent from algorithmic ranking systems cannot organize or exit. UCP centralizes product metadata under Google's control and algorithmic scoring, eliminating the possibility of neutral data infrastructure. This perspective bears full extraction cost: merchant data becomes an input to Google's ranking and commercial advantage algorithms with no way for the data subjects (merchants) to prevent it. The constraint eliminates alternatives rather than offering coordination."
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Regulatory Authority",
+      "comment": "PERSPECTIVE 5: REGULATORY AUTHORITY (TANGLED ROPE) — Antitrust enforcers and consumer protection agencies see coordinated benefit (simplified merchant compliance, reduced fragmentation) alongside asymmetric extraction (Google's data monopoly, algorithmic opacity, unilateral rule-setting). Mobile exit exists (regulation can mandate interoperability) but at high political cost. Active enforcement required to prevent extraction from converting to snare."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
       "time_horizon": "civilizational",
-      "exit_options": "constrained",
+      "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Legacy E-Commerce Standards Bodies",
-      "comment": "PERSPECTIVE 6: LEGACY STANDARDS BODIES (PITON) \u2014 W3C, IETF, microdata/schema.org communities created earlier product markup standards (hProduct, schema.org/Product, JSON-LD). These standards persist through institutional inertia despite UCP's superior (from Google's perspective) functionality. Standards bodies cannot exit or compete meaningfully, but they maintain vestiges of legitimacy through continued minimal maintenance. Theater is high: standards documentation persists, governance meetings occur, but actual development and adoption momentum flows to UCP. This is degraded infrastructure maintained by institutional memory."
+      "label": "The Traditional Retail Infrastructure",
+      "comment": "PERSPECTIVE 6: TRADITIONAL RETAIL INFRASTRUCTURE (PITON) — Physical retail, legacy EDI systems, and offline distribution networks persist in a state of degraded functional relevance. UCP accelerates their obsolescence by concentrating commerce metadata online under a single platform. Theater ratio reflects the performative 'openness' of the standard while actual control remains centralized. Infrastructure maintains inertia through institutional lock-in rather than functionality."
     },
     {
       "classification_type": "mountain",
@@ -86,46 +86,64 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "Natural Law View: Protocol Convergence",
-      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, e-commerce ecosystems necessarily converge on unified protocols for data exchange. This perspective treats network effects and standardization as natural laws \u2014 all sufficiently large markets must eventually standardize, and the first mover to establish the de facto standard captures the position. However, the structural data contradicts the mountain classification: UCP is not a natural convergence but the result of Google's monopoly power in search directing adoption pressure. The 'convergence is inevitable' framing naturalizes what is actually extractive control."
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, product metadata standardization is an inherent requirement of global commerce at scale. UCP appears as an inevitable law of economic infrastructure — someone must standardize, and whoever standardizes first will naturally accumulate control. This perspective risks naturalizing a contingent institutional choice (Google's unilateral standard-setting) as a law of markets."
     }
   ],
   "omegas": [
     {
-      "id": "google_algorithmic_neutrality",
-      "question": "Does Google's ranking algorithm treat UCP-native data identically to UCP-compliant data provided by non-Google platforms, or is there systemic bias favoring Google Commerce Division transactions?",
-      "resolution_mechanism": "Comparative ranking analysis: UCP-native products from Google merchants vs equivalent products from independent merchants using identical protocol compliance; audit of ranking weights and algorithmic treatment of protocol-compliant data by source",
-      "impact": "If truly neutral: UCP classifies as Rope for all perspectives. If biased: UCP is pure extraction mechanism (Snare from merchant perspective), confirming tangled_rope classification.",
+      "id": "merchant_data_ownership_scope",
+      "question": "Who legally and operationally owns merchant product data within UCP? Is it licensed data (merchant retains ownership) or transferred data (Google asset)?",
+      "resolution_mechanism": "Terms of service analysis; regulatory interpretation of data ownership under GDPR, CCPA, and proposed Digital Services Act; litigation outcomes on data access rights post-contract termination",
+      "impact": "If licensed: merchants retain bargaining power and exit capacity (constrained → mobile). If transferred: merchants become powerless data providers (trapped → snare). This determines whether UCP is Tangled Rope or Snare across victim perspectives.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether Google applies neutral algorithmic treatment to all UCP-compliant data"
-    },
-    {
-      "id": "merchant_adoption_coercion_threshold",
-      "question": "At what threshold of Google Shopping traffic loss does a merchant's UCP adoption shift from voluntary coordination to coerced compliance?",
-      "resolution_mechanism": "Historical analysis of merchant adoption patterns post-UCP launch; correlation between adoption rates and revenue impact across merchant size categories; survey data on perceived coercion",
-      "impact": "If threshold \u2264 10% traffic loss: coercion is severe (Snare classification confirmed). If threshold \u2265 30%: adoption appears genuinely voluntary for many merchants (Rope or Tangled Rope).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Threshold of algorithmic disadvantage that triggers perceived coerced adoption"
-    },
-    {
-      "id": "interoperability_and_data_portability",
-      "question": "Can merchants and platforms export their product data and merchant metrics from Google UCP infrastructure and port them to competing ecosystems without loss of transaction history or algorithmic signal?",
-      "resolution_mechanism": "Technical audit of data export APIs and format compatibility; case study of merchants attempting to migrate to alternative platforms; analysis of data lock-in mechanisms",
-      "impact": "If data is truly portable: exit costs are low (Rope classification likely). If locked in: exit costs are extreme (Snare classification confirmed). Data lock-in is the primary extraction mechanism.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether merchant data can be ported to competing ecosystems"
+      "description": "Legal and operational ownership of merchant product data within UCP"
     },
     {
       "id": "alternative_standard_viability",
-      "question": "Can organized alternative platforms (Amazon, Alibaba, Microsoft) collectively establish a competing open standard with network effects comparable to UCP?",
-      "resolution_mechanism": "Analysis of alternative standard adoption rates; coordination among competing platforms; merchant adoption of dual-standard infrastructure; economic feasibility of maintaining parallel ecosystems",
-      "impact": "If viable: Tangled Rope classification holds (constrained exit possible). If not viable: Snare classification may apply to organized actors as well (trapped despite organizational capacity).",
+      "question": "Can decentralized or non-Google-controlled product metadata standards (Schema.org without Google control, ActivityPub commerce, blockchain-backed registries) achieve comparable network effects and merchant adoption?",
+      "resolution_mechanism": "Adoption rate tracking for alternative standards; merchant switching behavior if regulations mandate interoperability; technical sufficiency analysis of alternatives for use cases currently handled by UCP",
+      "impact": "If alternatives viable: scaffold perspective confirmed, sunset is real, exit becomes mobile. If unviable: suppression increases, classification slides toward snare. This determines whether the constraint has a genuine exit pathway.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of alternative product metadata standards"
+    },
+    {
+      "id": "algorithmic_preferencing_opacity",
+      "question": "Does Google's search and Shopping ranking algorithm preferentially treat UCP-native listings vs. non-UCP data feeds? Is this preferencing disclosed?",
+      "resolution_mechanism": "Ranking algorithm reverse engineering; Google disclosure analysis; merchant empirical observations of traffic patterns; regulatory investigation findings",
+      "impact": "If preferencing exists and is undisclosed: suppression increases substantially (merchants cannot optimize without understanding the preference function). If transparent: suppression decreases, some exit capacity returns (constrained → mobile). Foundational to whether extraction is enforced coercively or incentive-aligned.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether UCP listings receive algorithmic preferencing in Search and Shopping"
+    },
+    {
+      "id": "regulation_mandated_interoperability_timeline",
+      "question": "Will competition authorities (EU DMA, US FTC) mandate that Google open UCP to competitors or divest control to an independent standard-setter? What is the realistic timeline?",
+      "resolution_mechanism": "Regulatory proceedings status; legislative proposals (DMA Phase 2, US antitrust bills); enforcement actions; settlement agreements with conditions",
+      "impact": "If mandated within 3 years: suppression decreases sharply, exit becomes mobile, scaffold analysis confirmed. If mandated 5+ years out: current constraints persist; extraction accumulates during regulatory lag. If never mandated: suppression remains high, snare outcome likely.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline and likelihood of regulatory mandates for UCP interoperability"
+    },
+    {
+      "id": "independent_merchant_coalition_power",
+      "question": "Can independent merchants (small retailers, marketplaces, niche sellers) organize collectively to negotiate UCP terms or support alternative standards? What is their critical mass?",
+      "resolution_mechanism": "Merchant association membership and activity; coalition formation around antitrust complaints; political advocacy effectiveness; merchant willingness to coordinate on exit",
+      "impact": "If coalition strong: organized merchants move from powerless → organized, classification shifts from snare → tangled rope. If coalition weak: fragmented merchants remain trapped. This determines whether the constraint can self-correct toward Tangled Rope or degrades toward Snare.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Coalition power of independent merchants to negotiate or organize exit"
+    },
+    {
+      "id": "false_summit_natural_law_framing",
+      "question": "Is product metadata standardization under a single platform actor an inevitable law of commerce (natural law), or a contingent institutional choice that benefits Google but could be structured differently?",
+      "resolution_mechanism": "Comparative historical analysis (did pre-Internet commerce standardize under single actors?); technical analysis of whether decentralized standardization is feasible; examination of other industries' standardization choices",
+      "impact": "If natural law: mountain classification holds, extraction is immutable. If contingent choice: mountain is false summit, and the constraint is Tangled Rope with change potential. This omega instantiates the oracle gap (Theorem 4) — the analytical observer's native instruments risk naturalizing a power structure as a law of nature.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether competitive alternatives to UCP can achieve comparable network effects"
+      "description": "Whether metadata standardization under single platform is natural law or contingent institutional choice"
     }
   ],
   "measurements": [
@@ -136,64 +154,84 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 6,
-      "value": 0.48
+      "time_point": 2,
+      "value": 0.42
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 12,
+      "time_point": 4,
       "value": 0.52
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.38
+      "value": 0.45
     },
     {
       "metric": "theater_ratio",
-      "time_point": 6,
-      "value": 0.42
+      "time_point": 2,
+      "value": 0.55
     },
     {
       "metric": "theater_ratio",
-      "time_point": 12,
-      "value": 0.48
+      "time_point": 4,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.58
     }
   ],
   "interval": {
     "start": 0,
-    "end": 12
+    "end": 4
   },
   "commentary": {
-    "narrative_context": "Google's Universal Commerce Protocol (UCP) launched in 2026 as an AI-driven open standard to unify product listings, reviews, and transactions across the web. The framing emphasizes interoperability and merchant benefit \u2014 a public good for commerce infrastructure. However, the constraint exhibits simultaneous coordination and extraction: UCP genuinely solves the problem of fragmented product metadata across the internet, but it does so while centralizing merchant data under Google's control and algorithmic ranking systems. Independent merchants have no practical exit option; alternative platforms experience constrained choices; Google's Commerce Division captures first-mover advantage; and merchant data autonomy as a collective good cannot organize to resist. The theater ratio (0.48) reflects that UCP's marketing emphasizes openness and standardization \u2014 the performative aspects are present but not dominant. The extractiveness (0.52) indicates moderate but not severe extraction: Google gains significant commercial advantage, but the protocol does deliver real coordination benefits that partially offset the asymmetry.",
+    "narrative_context": "Google's Universal Commerce Protocol (UCP), launched in 2026, presents itself as a public good for commerce infrastructure — an open standard that unifies fragmented product metadata across the internet, reducing complexity for merchants and improving search relevance and price discovery for consumers. However, UCP exemplifies a tangled rope constraint: it genuinely solves a coordination problem (merchants no longer maintain separate feeds for Google, Amazon, eBay, etc.) while simultaneously extracting asymmetric value for Google (centralized product data enriches Google's advertising, Shopping, and AI training pipelines). The constraint exhibits rising extractiveness over its first four years as Google's algorithmic preferencing for UCP-native listings becomes more pronounced and merchant alternatives (independent commerce platforms, decentralized registries) fail to achieve comparable network effects. The theater ratio has also risen, reflecting Google's performative 'openness' (open standard, merchant agency framing) masking actual control concentration (unilateral rule-setting, algorithmic opacity, data ownership asymmetry). This constraint is diagnostic for understanding how platform power operates through standardization narratives.",
     "key_agents": [
-      "Google Commerce Division: Primary beneficiary (institutional/arbitrage) \u2014 captures algorithmic control, merchant data, transaction routing, and first-mover advantage in unified commerce",
-      "Independent Merchants: Primary victim (powerless/trapped) \u2014 face adoption pressure, data lock-in, and algorithmic opacity with no viable exit option",
-      "Regional E-Commerce Platforms: Secondary beneficiary/victim (moderate/constrained) \u2014 benefit from coordination but constrained by Google's algorithmic weighting favoring protocol compliance",
-      "Alternative Search Ecosystems: Organized competitors (organized/constrained) \u2014 can resist but face network effects and coordination costs",
-      "Merchant Data Autonomy: Institutional victim (powerless/trapped) \u2014 abstract collective good that cannot organize; bears full cost of centralization under Google control",
-      "Legacy Standards Bodies: Institutional legacy actors (institutional/constrained) \u2014 maintain vestigial legitimacy but real development flows to UCP"
+      "Google Corporation: Primary beneficiary (institutional/arbitrage) — consolidates product metadata across web, enriches advertising targeting and AI training. Can exit or modify UCP unilaterally.",
+      "Independent Merchants: Primary victim (powerless/trapped) — lack alternatives for reaching Google Search users. Product data becomes Google asset. Subject to algorithmic preferencing they cannot understand or optimize against.",
+      "Large E-Commerce Platforms (Amazon, eBay, Shopify): Secondary victim (powerful/constrained) — face prisoner's dilemma: adopt UCP and feed data to Google, or reject it and lose merchant integration. Retain some alternatives (direct traffic, mobile apps) but suppression is real.",
+      "Price Discovery Ecosystem: Victim (analytical/trapped) — product data centralization under Google's control reduces transparent price signals across web. Comparison shopping and consumer welfare depend on data fragmentation that UCP eliminates.",
+      "Interoperability Coalition: Organized agent (organized/constrained) — W3C, Schema.org, merchant associations, antitrust authorities building alternatives. Scaffold logic: decentralized commerce protocols and regulatory mandates can displace UCP within 10-15 years.",
+      "Regulatory Authorities: Organized agent (organized/mobile) — EU DMA, US FTC, national antitrust agencies can mandate interoperability or force Google to divest UCP control. Exit capacity exists but at high political cost.",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent platform choice as inevitable law of commerce."
     ],
-    "logic_rationale": "Extractiveness (0.52): Moderate-high. Google's Commerce Division captures merchant data, algorithmic control over product visibility, and direct transaction processing through UCP. Independent merchants bear significant costs: restructuring product feeds, learning the standard, accepting algorithmic ranking opacity, and data lock-in. However, the extraction is not maximal (0.70+) because UCP delivers genuine coordination benefit \u2014 fragmented product metadata was a real problem, and unified schemas reduce merchant labor. The moderate extractiveness reflects this hybrid: real coordination function paired with asymmetric capture. Suppression (0.58): Moderate-high. Significant barriers to exit include Google Shopping's dominance in product discovery, algorithmic weighting favoring UCP compliance, merchant data lock-in, and the absence of viable alternatives at comparable scale. However, suppression is not total \u2014 some merchants can survive on alternative channels (Amazon, Alibaba, direct-to-consumer), and alternative standards are technically possible. Theater ratio (0.48): Moderate. UCP's marketing emphasizes technical standardization and merchant benefit \u2014 these claims are partially true but performative: the true extraction mechanism (algorithmic control, data lock-in, first-mover advantage) is not prominently disclosed. Theater increased over the measurement period as adoption pressure became clearer.",
-    "directionality_logic": "Each perspective's directionality (d) is determined by structural position within the extraction flow. Independent merchants are full targets: they bear adoption costs, have no exit, and benefit minimally from coordination. Their d \u2248 0.95, yielding high f(d). Google is a beneficiary: it captures data and algorithmic advantage without corresponding costs. Its d \u2248 0.05, yielding negative f(d). Regional platforms are mixed: they benefit from coordination (lower adoption labor) but face constrained exit due to algorithmic weighting. Their d \u2248 0.60, yielding moderate f(d). Alternative ecosystems have organizational capacity to resist but face significant coordination costs. Their d \u2248 0.55, yielding moderate f(d). The merchant data autonomy collective cannot organize and has zero agency. Its d \u2248 1.0, yielding maximum f(d). Legacy standards bodies have minimal agency and no meaningful benefit, making their d \u2248 0.90. The analytical observer's mountain perspective treats protocol convergence as natural law, but the structural data reveals this as naturalization of Google's market power.",
-    "perspectival_gap": "The constraint demonstrates a profound perspectival gap between beneficiaries and victims. Google's Commerce Division sees pure coordination (Rope) \u2014 they are solving the legitimate problem of fragmented product metadata. Independent merchants see pure extraction (Snare) \u2014 they face adoption pressure, data lock-in, and algorithmic opacity with no real alternative. Regional platforms see mixed coordination and extraction (Tangled Rope) \u2014 the standard reduces their metadata fragmentation labor, but algorithmic weighting constrains their exit options. Alternative search ecosystems (organized agents) see a constrained choice between painful adoption or competitive disadvantage (Tangled Rope) \u2014 they have organizational capacity to resist but face significant costs. The merchant data autonomy collective (powerless, abstract) sees pure extraction and elimination of alternatives (Snare) \u2014 the constraint prevents neutral data infrastructure. The civilizational analytical observer risks naturalizing this as protocol convergence law (Mountain), but the structural data shows this is actually Google's market power creating the appearance of inevitability.",
-    "mandatrophy_analysis": "The mandatrophy in UCP resolution asks: Is this genuinely open standardization (Rope with some coordination benefits) or is it disguised extraction (Snare with coordination theater)? The answer is Tangled Rope: UCP is simultaneously both. The coordination function is real \u2014 merchants benefit from unified schemas reducing metadata fragmentation. But the extraction is also real and asymmetric \u2014 Google captures merchant data, algorithmic control, and transaction routing without corresponding costs. The protocol solves a genuine problem (fragmented metadata) while solving it in a way that maximizes Google's advantage (centralized under Google's control and algorithmic systems). The mandatrophy resolution requires naming this reality: UCP is not a pure standard (Rope) and not pure extraction (Snare). It is hybrid infrastructure where the coordination benefit is partially real and partially theater masking extraction. The false summit is the 'inevitable protocol convergence' narrative \u2014 this naturalizes what is actually Google's market power directing standardization toward its own advantage."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, rising. At launch (0.35), UCP appeared primarily as coordination mechanism — merchants benefited from unified feed, Google benefited from data. Within 4 years (0.52), algorithmic preferencing becomes apparent and undisclosed. Merchants discover that UCP compliance doesn't guarantee visibility without algorithmic alignment. Data ownership asymmetry becomes clearer as merchants realize they cannot access or port their UCP data without Google's permission. The trajectory models extraction accumulation as Google consolidates merchant dependency. Suppression (0.58): Moderate-high, stable. Merchants face significant barriers to exit (loss of Google Search visibility), but suppression is not total because alternatives exist (Amazon, eBay, Shopify, independent websites). The suppression floor reflects that no single channel is monopolistic — but Google's dominance in product search (72% market share) makes UCP adoption near-mandatory. Theater ratio (0.64): Moderate-high, rising. The 'openness' of the standard (public specification, merchant participation in standards body) creates performative legitimacy, but actual control remains concentrated: Google sets algorithmic rules unilaterally, owns data infrastructure, preferencies UCP-native content. Theater increase models the growing gap between open-standard framing and concentrated control.",
+    "perspectival_gap": "The gap between the beneficiary's rope (Google sees coordination and mutual benefit) and the victim's snare (independent merchants see locked-in dependency) is the signature of this constraint. Google's institutional perspective emphasizes the genuine coordination problem UCP solves — merchants reduce operational complexity, Google improves search quality. Independent merchants' powerless perspective experiences extraction: they must adopt UCP to be visible, but adoption doesn't guarantee success; algorithmic rules are opaque; data becomes Google's asset. The gap is NOT symmetrical ignorance — both parties understand the same facts, but they experience the constraint differently based on their structural position. Large platforms (Amazon, Shopify) occupy the tangled rope middle ground: they benefit from coordination (simplified merchant data management) and extraction simultaneously (data asymmetry, algorithmic dependency). The scaffold perspective (interoperability coalition, regulators) is forward-looking: they see UCP as a temporary coordination structure with a sunset — regulatory mandates or decentralized alternatives can displace it. The piton perspective (traditional retail, legacy EDI) sees UCP as accelerating their obsolescence through performative modernization. The analytical mountain perspective risks treating UCP as inevitable — 'someone must standardize; whoever does will naturally accumulate control' — when in fact regulatory intervention or decentralized alternatives are structurally possible.",
+    "directionality_logic": "Google's directionality (d) is low (~0.10): beneficiary with arbitrage exit. Merchants' directionality is high (~0.92): victims with trapped exit, no algorithmic alternatives for reaching Google users. Large platforms occupy middle ground (d~0.55): partial beneficiaries (data utility, merchant attraction) and partial victims (data asymmetry, algorithmic dependency), with constrained exit (can't ignore Google, can't fully comply without strategic cost). Regulatory authorities occupy inflection point (d~0.65): currently constrained by need to maintain legitimacy while acting against Google, but mobile exit exists (can mandate interoperability). The engine derives directionality automatically from beneficiary/victim declarations and exit options; no overrides needed. The perspectival gap is structural, not epistemic: the parties understand the same constraint but experience it differently because extraction flows from Google toward merchants, and escape velocity depends on global reach.",
+    "mandatrophy_analysis": "This constraint exemplifies mandatrophy resolution through multi-perspective classification. The question 'Is UCP coordination or extraction?' is false — it is both simultaneously, from different standpoints. Google's institutional perspective legitimately sees Rope (pure coordination for its ecosystem optimization). Independent merchants legitimately see Snare (locked-in extraction with minimal coordination benefit). The analytical observer must recognize this presheaf over observation positions rather than seek a single 'true' type. The mandatrophy is resolved by declaring: UCP is Tangled Rope from the system-wide view (both coordination and extraction), but decomposes into Rope (beneficiary), Snare (victim), and Tangled Rope (intermediate actors) when perspectives are indexed. This resolves the paradox: the constraint's claimed type is Tangled Rope (its actual structure), and all six perspectival classifications are correct relative to their observation positions."
   },
   "boltzmann": {
     "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
-      "algorithmic_ranking_opacity",
-      "merchant_data_lock_in",
-      "search_result_monetization"
+      "platform_algorithmic_opacity",
+      "data_portability_asymmetry",
+      "ecommerce_dependency_on_search"
     ],
-    "dual_formulation_note": "UCP is a single constraint with high perspectival sensitivity. Multiple structurally distinct claims (protocol standardization vs algorithmic control vs data lock-in) are unified under the UCP label but share identical base properties and classification type. The constraint family does not decompose by \u03b5-invariance here \u2014 the protocol standardization, algorithmic control, and data lock-in are structurally entangled. Separate stories would fragment an integral extraction mechanism. However, network edges link UCP to upstream constraints (algorithmic opacity) and downstream consequences (merchant lock-in, search monetization)."
+    "dual_formulation_note": "UCP is upstream of merchant lock-in and downstream of platform dominance in search. The constraint family consists of: (1) UCP as information standard (this file), (2) algorithmic preferencing for UCP-native data (separate story, higher extractiveness), (3) data portability barriers after merchant exit (separate story, snare structure). Each story has distinct ε. The family is linked by the fact that UCP is the mechanism through which platform dominance operationalizes as merchant lock-in."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
       "d_value": 0.08
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.62
     }
   ]
 }

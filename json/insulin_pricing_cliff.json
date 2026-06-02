@@ -4,23 +4,26 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "insulin"
+    "measurement_id_prefix": "insulin",
+    "story_uid": "ca397c47-dd7f-425a-80cf-817b8109479e"
   },
   "base_properties": {
     "extractiveness": 0.68,
-    "suppression": 0.72,
-    "theater_ratio": 0.58,
+    "suppression": 0.82,
+    "theater_ratio": 0.45,
     "claimed_type": "snare",
     "human_readable": "Insulin Pricing Cliff: Market Capture and Extraction from Insulin-Dependent Patients",
     "topic_domain": "healthcare/pharmaceutical_pricing/metabolic_disease",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "insulin_manufacturers",
-      "pharmacy_benefit_managers"
+      "pharmacy_benefit_managers",
+      "insurance_underwriters"
     ],
     "victims": [
-      "insulin_dependent_patients",
-      "type_1_diabetes_access"
+      "type_one_diabetics",
+      "uninsured_insulin_dependent_patients",
+      "fixed_income_populations"
     ]
   },
   "perspectives": [
@@ -31,16 +34,25 @@
       "exit_options": "trapped",
       "spatial_scope": "national",
       "label": "The Insulin-Dependent Patient",
-      "comment": "PERSPECTIVE 1: INSULIN-DEPENDENT PATIENT (SNARE) \u2014 Trapped by biological necessity. Type 1 diabetes requires insulin for survival; there is no substitute, no delay, no negotiation. The constraint extracts maximum rent from a population with zero exit optionality. Patients cannot choose generic alternatives, skip doses without fatal consequence, or delay treatment. Suppression is structural: the biological need cannot be negotiated or waived. This is the perspective of maximum experienced extraction."
+      "comment": "PERSPECTIVE 1: INSULIN-DEPENDENT PATIENT (SNARE) — Zero biological negotiating power. Insulin is not discretionary; missing doses causes DKA, coma, death. The patient cannot refuse, cannot switch, cannot ration effectively below therapeutic levels. Faces list prices of $300–400/vial, even with insurance. No exit exists except death or medical crisis. Maximum suppression and experienced extraction. The constraint's core target."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "moderate",
+      "agent_power": "organized",
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Primary Care Physician",
-      "comment": "PERSPECTIVE 2: PRIMARY CARE PHYSICIAN (TANGLED ROPE) \u2014 Constrained by formulary restrictions and insurance denial-of-coverage protocols but also embedded in a system that generates consistent referral revenue and specialist dependence. Physicians coordinate necessary care while simultaneously enforcing extraction mechanisms through prior authorization delays and formulary gatekeeping. They experience both coordination function (ensuring appropriate insulin selection) and asymmetric extraction (being paid to delay or deny coverage)."
+      "label": "The Patient Advocacy Coalition",
+      "comment": "PERSPECTIVE 2: PATIENT ADVOCACY COALITION (TANGLED ROPE) — Organized victims (American Diabetes Association, JDRF, patient unions) have coordinated to demand price caps and transparency, creating some collective pressure. Benefits from coalition membership (information sharing, political leverage) but faces severe cost barriers: legal action against manufacturers costs millions, legislative campaigns require sustained funding. Suppression is high but not total; coalition has achieved some price concessions (Novo Nordisk price cuts in 2024, though temporary). Classification: tangled_rope — coordination function exists but enforcement asymmetry is extreme."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Insulin Manufacturers",
+      "comment": "PERSPECTIVE 3: INSULIN MANUFACTURERS (ROPE) — Eli Lilly, Novo Nordisk, Sanofi collectively control >90% of global insulin supply. They experience the constraint as a coordination mechanism: setting list prices creates formulary placement incentives, encouraging pharmacy benefit managers to promote their products over competitors. The manufacturers benefit from list price escalation without bearing costs — they receive rebates that more than offset discounting. They have exit options (geographic arbitrage, product differentiation, market segmentation). The constraint is experienced as valuable coordination, not extraction. Classification: rope — pure coordination with asymmetric benefit."
     },
     {
       "classification_type": "rope",
@@ -48,151 +60,171 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "The Insulin Manufacturer",
-      "comment": "PERSPECTIVE 3: INSULIN MANUFACTURER (ROPE) \u2014 Experiences the constraint as coordination: managing supply, determining dosing protocols, and maintaining market distribution. From the manufacturer's view, high pricing is merely market-clearing and R&D compensation. The constraint coordinates the production and delivery of an essential drug. The manufacturer has arbitrage options: can shift production, adjust market positioning, or innovate. Net beneficiary position; effective extraction runs toward this agent, not away from them."
+      "label": "Pharmacy Benefit Managers",
+      "comment": "PERSPECTIVE 4: PHARMACY BENEFIT MANAGERS (ROPE) — Express Scripts, CVS Caremark, Optum manage prescription benefits for employers and insurers. They layer rebate structures and formulary tiers on top of manufacturers' list prices, negotiating rebates that create opaque pricing. PBMs benefit from list price escalation because higher rebates generate larger absolute dollar savings that they pocket as spread. They have significant exit options and operate as arbitrageurs between payers and manufacturers. Classification: rope — pure coordination with substantial benefit."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "organized",
-      "time_horizon": "generational",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Patient Advocacy Coalition",
-      "comment": "PERSPECTIVE 4: PATIENT ADVOCACY COALITION (TANGLED ROPE) \u2014 Organized agents (JDRF, ADA, diabetes councils) coordinate insulin access programs and negotiate bulk pricing while also being structurally embedded in a system that depends on high prices to justify their interventions. They have constrained exit: can advocate for price controls but cannot exit the market structure they are trying to reform. They both reduce extraction (through access programs) and enforce it (by legitimizing the market as 'working' when supplementary programs exist)."
+      "label": "Insurance Underwriters (Employer Plans)",
+      "comment": "PERSPECTIVE 5: INSURANCE UNDERWRITERS / EMPLOYER PLANS (TANGLED ROPE) — Large employers self-insure health benefits and negotiate with PBMs. They have genuine coordination function: managing risk across a population requires pooling mechanisms. But they also face extraction: PBM rebate structures are opaque, and the pass-through to patient out-of-pocket costs is not fully transparent. Employers experience moderate extraction — they benefit from cost-containment mechanisms but don't capture the full value of rebates. Classification: tangled_rope — coordination with partial extraction."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
-      "time_horizon": "civilizational",
-      "exit_options": "arbitrage",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The FDA Regulatory System",
-      "comment": "PERSPECTIVE 5: FDA REGULATORY SYSTEM (PITON) \u2014 Maintains formal insulin approval and safety monitoring but is largely performative in pricing oversight. The FDA certifies biological equivalence and manufacturing safety but has no authority over pricing (delegated to 'market mechanisms'). The regulatory theater persists through institutional inertia \u2014 FDA presence legitimizes the market as 'regulated' while actual pricing extraction occurs outside FDA jurisdiction. Theater ratio is elevated because compliance with FDA rules (manufacturing standards, adverse event reporting) is mistaken for oversight of market extraction."
+      "label": "The FDA Regulatory Framework",
+      "comment": "PERSPECTIVE 6: FDA REGULATORY FRAMEWORK (PITON) — FDA regulates insulin as an approved pharmaceutical but has no explicit price-regulation authority in the US market (unlike most developed nations). The regulatory framework persists through institutional inertia — maintaining separation between drug safety approval and pricing policy — despite the framework's failure to prevent market capture. Theater ratio is moderate-to-high: FDA publishes requirements and guidance that appear to govern access, but lack pricing teeth. The regulatory apparatus has atrophied toward pure performative function. Classification: piton — degraded coordination mechanism maintained through institutional path dependence."
     },
     {
-      "classification_type": "snare",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer: Metabolic Biology Lock",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) \u2014 From a biological/civilizational view, the insulin extraction mechanism is structurally analogous to other metabolically-driven snares. Type 1 diabetes is an autoimmune condition where the body attacks insulin-producing cells; the constraint is that the destroyed metabolic capacity must be externally sourced and maintained for life. This is not a market mechanism \u2014 it is metabolic biology being captured by a market mechanism. The analytical perspective reveals that the snare's foundation is biological necessityaccess, not economic coordination. The constraint's power derives entirely from the fact that insulin is non-negotiable for survival."
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, pharmaceutical innovation requires profit incentives; manufacturers argue that high prices fund R&D for better insulins and new diabetes treatments. The natural-law framing positions insulin pricing as an inevitable trade-off: high prices enable innovation, ergo the pricing cliff is an unchangeable feature of market-driven pharmaceutical development. However, this perspective conflicts with structural data: competitors in Canada and the EU pay $30–50/vial; identical insulin molecule carries different price tags by geography. The 'natural law' framing obscures policy choices. The engine will flag this as a false summit candidate — the constraint is contingent on regulatory policy, not immutable."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "Healthcare Workers Complicit in Rationing",
+      "comment": "PERSPECTIVE 8: HEALTHCARE WORKERS / CLINICAL RATIONING ROLE (SNARE) — Doctors, nurses, and diabetes educators are structurally mobile (could advocate for regulatory change, could refuse to participate in rationing) but identity-locked into their clinical role: they are trained to work within budget constraints, to optimize dosing within formulary limits, and to accept insurance denials as the 'system.' Their professional identity requires functioning within the constraint rather than challenging it. They experience the constraint as a snare because they bear the emotional cost of rationing (denying patients optimal treatment) while unable to exit their role. Theater ratio is high: clinical note-writing about insurance denials is performative documentation without power. Classification: snare with identity_locked exit, revealing cognitive capture of medical professionals by the extractive system."
     }
   ],
   "omegas": [
     {
-      "id": "generic_insulin_availability",
-      "question": "Do generic and biosimilar insulin formulations represent genuine alternatives that reduce extraction, or are they priced within 90-95% of branded versions, reproducing the same extraction structure?",
-      "resolution_mechanism": "Market analysis of generic insulin pricing trajectories; comparison of insulin cost structure to other generic pharmaceutical categories; analysis of pharmacy benefit manager formulary placement of generics vs branded",
-      "impact": "If generics are true alternatives: classification downgrade from Snare to Tangled Rope (patients have constrained exit). If generics reproduce pricing: confirms Snare classification (market structure prevents price competition even at generic tier).",
+      "id": "list_price_vs_net_price_asymmetry",
+      "question": "What proportion of insulin 'extraction' derives from patient out-of-pocket costs versus hidden manufacturer-PBM rebate asymmetries that don't benefit patients?",
+      "resolution_mechanism": "Full transparency of manufacturer rebate structures, PBM spread data, and employer plan pass-through rates. Longitudinal comparison of patient OOP cost trajectories against aggregate rebate accumulation.",
+      "impact": "If patient OOP costs track list price escalation (low rebate pass-through): patients bear full extraction. If rebates exceed patient OOP savings (high PBM spread): patients experience extraction despite nominal rebate programs. Magnitude determines whether to classify unsured patients as additional victim group.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether generic and biosimilar insulins provide genuine price alternatives"
+      "description": "Allocation of extraction between patient costs and hidden rebate structures"
     },
     {
-      "id": "international_price_differential",
-      "question": "Why is insulin 3-10x cheaper in Canada, Europe, and Australia than in the US despite identical molecular formulations and equivalent manufacturing quality?",
-      "resolution_mechanism": "Regulatory analysis of pricing authority differences; comparison of FDA vs EMA vs Health Canada approval processes; analysis of reference pricing mechanisms in other countries",
-      "impact": "If differential is regulatory: US pricing is policy choice, not market outcome \u2014 reclassifies from natural market mechanism to institutional extraction. If differential is demand-driven: validates US market pricing as clearing mechanism.",
+      "id": "innovation_incentive_necessity",
+      "question": "Does the pharmaceutical industry's claimed innovation incentive—that high insulin prices fund better treatments—reflect empirical R&D productivity, or rationalize extraction?",
+      "resolution_mechanism": "Historical correlation analysis: compare R&D spending to new therapy launches across pre-price-escalation (1996–2008) vs post-escalation (2009–2026) periods. Map manufacturing profit margins to new molecule development timelines. Compare US innovation output to EU/Canadian markets with strict price regulation.",
+      "impact": "If innovation productivity correlates with price escalation: natural-law framing has merit; classify mountain candidates as legitimate. If innovation productivity is uncorrelated or negative: the innovation rationale is theater; classify mountain candidates as false summits with clear malice. If EU strict regulation produces equivalent innovation: regulatory policy choice is evident; constraint is policy-contingent, not immutable.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Root cause of 3-10x US-international insulin price differential"
+      "description": "Whether high insulin prices empirically drive innovation"
     },
     {
-      "id": "patient_death_attributable_to_rationing",
-      "question": "What is the annual count of insulin-dependent patients who die or suffer severe complications from insulin rationing (dose stretching, switching to less-suitable formulations) and how does this trend relate to insurance coverage changes?",
-      "resolution_mechanism": "Analysis of death certificates and adverse event reports; medical claims database analysis correlating insulin coverage denials with hospitalization/complications; qualitative documentation from endocrinology case files",
-      "impact": "If death count > 0 (documented): establishes extraction as lethal; classification confirmed as Snare with no ambiguity about coercion threshold. If death count is low/unmeasured: suggests some patients have exit options or adaptive strategies; potential reclassification to Tangled Rope.",
+      "id": "patient_demographic_targeting",
+      "question": "Is the pricing cliff's suppression mechanism uniformly distributed across diabetes populations, or targeted toward those with lowest collective bargaining power (rural, uninsured, poor, elderly)?",
+      "resolution_mechanism": "Geographic analysis of insulin access by insurance status, income, and population density. Temporal tracking of formulary restrictions imposed on uninsured populations vs insured populations. Comparative pricing analysis for identical insulin across insured/uninsured distribution channels.",
+      "impact": "If suppression is uniform: constraint is systemic market failure. If suppression is targeted: constraint exhibits intentional discrimination, escalating from snare to engineered predation. Victim group taxonomy must expand to include specific demographics bearing maximum cost.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Mortality and morbidity attributable to insulin access denial"
+      "description": "Whether pricing suppression targets specific vulnerable demographics"
     },
     {
-      "id": "pbm_rebate_opacity",
-      "question": "What proportion of insulin manufacturer list prices are recaptured by pharmacy benefit managers as rebates, and are these rebates passed to patients or retained as PBM margin?",
-      "resolution_mechanism": "Pharmacy Benefit Manager disclosure analysis; insulin rebate contract database analysis; claims data showing manufacturer list price vs patient out-of-pocket across PBM networks",
-      "impact": "If rebates are retained by PBMs: identifies a secondary extraction mechanism that hides true manufacturer margin while creating appearance of 'discounting'. If rebates are passed to patients: validates some pricing legitimacy.",
+      "id": "regulatory_capture_mechanism",
+      "question": "Does the FDA's separation of price regulation from drug approval reflect principled policy design, or regulatory capture by manufacturers who benefit from price opacity?",
+      "resolution_mechanism": "Historical analysis of FDA legislative authority vs statutory constraints imposed by pharmacy benefit manager exemptions and state-level regulatory preemption. Comparison of FDA transparency disclosures versus manufacturer price-setting authority. Tracking of manufacturer lobbying spend against regulatory restrictiveness.",
+      "impact": "If principled design: regulatory framework is appropriately constrained and separate; classify FDA as piton (atrophied coordination mechanism). If regulatory capture: the piton is actually a snare from the FDA's perspective — manufacturers have trapped regulators into non-enforcement. The FDA perspective may reclassify to snare.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Proportion of insulin rebates retained by PBMs vs passed to patients"
+      "description": "Whether FDA regulatory structure reflects capture by manufacturers"
     },
     {
-      "id": "patent_listing_strategy",
-      "question": "Are insulin manufacturers extending patent protection through formulation changes (insulin analogs, new delivery devices) that provide marginal clinical benefit primarily to maintain monopoly pricing, or do these innovations represent genuine therapeutic advances?",
-      "resolution_mechanism": "Comparative clinical effectiveness analysis of new vs legacy insulin formulations; patent timeline analysis correlating new patent filings with impending expiry of original compounds; endocrinology literature review of innovation necessity vs market positioning",
-      "impact": "If marginal benefit: patent strategy is an extraction mechanism that extends monopoly artificially; confirms Snare classification with institutional enforcement. If genuine advances: validates some premium pricing as innovation reward.",
+      "id": "identity_lock_persistence_after_exit",
+      "question": "When healthcare workers exit the clinical rationing role, does their identity-lock persist (continuing to internalize constraints) or dissolve (revealing the lock was institutional rather than intrinsic)?",
+      "resolution_mechanism": "Qualitative interviews with retired physicians, nurses, and diabetes educators who left clinical practice. Tracking whether post-exit advocacy positions change relative to their clinical-period positions. Comparison of regulatory testimony by current vs retired healthcare professionals.",
+      "impact": "If identity lock persists: the suppression mechanism is deeply internalized, and healthcare workers are not recoverable advocates for price reform. If lock dissolves: healthcare workers are constrained rather than identity-locked; they have latent advocacy capacity that exit reveals. Distinction affects strategy for mobilizing healthcare worker constituencies.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether insulin formulation changes provide genuine clinical benefit or extend monopoly pricing"
+      "description": "Whether healthcare worker identity lock persists after role exit"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.42
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 8,
-      "value": 0.52
+      "time_point": 5,
+      "value": 0.58
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 16,
+      "time_point": 10,
       "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.74
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.82
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.42
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
-      "time_point": 8,
-      "value": 0.5
+      "time_point": 5,
+      "value": 0.4
     },
     {
       "metric": "theater_ratio",
-      "time_point": 16,
-      "value": 0.58
+      "time_point": 10,
+      "value": 0.45
     }
   ],
   "interval": {
     "start": 0,
-    "end": 16
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "The insulin pricing cliff represents a structural extraction mechanism targeting patients with Type 1 diabetes \u2014 a population with zero negotiating power due to absolute biological dependency. Insulin is not a discretionary pharmaceutical; it is a metabolic necessity. The constraint operates through a multi-layered enforcement apparatus: insulin manufacturers set list prices; pharmacy benefit managers layer rebate structures and formulary restrictions; insurance companies enforce prior authorization and coverage denials; primary care physicians are embedded in systems that reward gatekeeping delays. The patient, biologically locked into demand, absorbs the extraction. Over the past 16 years, the extractiveness of the constraint has roughly doubled as manufacturers have implemented continuous-price-escalation strategies, patent-extension tactics, and biosimilar pricing that remains 90%+ of branded versions. The theater ratio reflects the legitimizing narratives that obscure the underlying extraction: 'market innovation,' 'rebate optimization,' 'formulary management for cost control,' and 'safety monitoring' are all institutional theaters that maintain the system while extraction flows outward. The constraint is a canonical Snare: the victims (insulin-dependent patients) have no exit options, the beneficiaries (manufacturers and PBMs) have full arbitrage capacity, and the suppression mechanism is biological necessity backed by institutional enforcement.",
+    "narrative_context": "The insulin pricing cliff represents a pure extraction mechanism targeting patients with Type 1 diabetes and insulin-dependent Type 2 diabetes patients — populations with zero negotiating power due to absolute biological dependency. Insulin is metabolically non-negotiable: missing doses causes diabetic ketoacidosis, coma, and death. The constraint operates through a multi-layered enforcement apparatus: insulin manufacturers (Eli Lilly, Novo Nordisk, Sanofi) set list prices that have escalated 300% since 1996; pharmacy benefit managers layer rebate structures and formulary restrictions; insurance companies enforce prior authorization requirements; and the FDA maintains regulatory abstinence from price governance. The combination creates a snare: patients face list prices of $300–400/vial, even those with insurance face $35–100 copays per vial, and uninsured patients face near-total cost. Rationing and medical non-adherence are systematic outcomes. The constraint exhibits all six DR types from different perspectives: a snare from the patient perspective, pure coordination (rope) from manufacturer and PBM perspectives, mixed coordination-extraction (tangled rope) from organized patient advocacy and employer plan perspectives, a degraded regulatory ritual (piton) from the FDA perspective, identity-locked entrapment (snare with cognitive capture) from healthcare worker perspectives, and a false natural-law (mountain) from the innovation-incentive narrative that obscures policy contingency.",
     "key_agents": [
-      "Insulin-Dependent Patients: Primary victims (powerless/trapped) \u2014 biologically locked into absolute demand with no substitutes; cannot negotiate, delay, or refuse treatment; bear maximum extraction through out-of-pocket costs, rationing, and medical complications from coverage denials",
-      "Insulin Manufacturers (Novo Nordisk, Eli Lilly, Sanofi): Primary beneficiaries (institutional/arbitrage) \u2014 capture list-price margin and can shift production, adjust pricing by market, or innovate; net beneficiaries with full strategic flexibility",
-      "Pharmacy Benefit Managers (CVS Caremark, Express Scripts, Optum): Secondary beneficiaries (institutional/arbitrage) \u2014 capture rebates and formulary placement leverage; have arbitrage options in network design and contracting",
-      "Primary Care Physicians: Secondary actors (moderate/constrained) \u2014 constrained by insurance formularies and prior authorization protocols; coordinate care delivery while enforcing extraction through gatekeeping delays",
-      "Patient Advocacy Organizations (JDRF, ADA): Organized agents (organized/constrained) \u2014 provide access programs and negotiate discounts but remain structurally embedded in the pricing system they attempt to reform",
-      "FDA Regulatory System: Institutional actor (institutional/arbitrage) \u2014 maintains performative oversight (safety certification) while lacking pricing authority; legitimizes the market as 'regulated' without controlling extraction",
-      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 recognizes that insulin extraction is fundamentally biological lock masked by market mechanism"
+      "Insulin-Dependent Patients (Type 1 and insulin-dependent Type 2): Primary victims (powerless/trapped) — bear full biological and financial extraction; zero exit options",
+      "Uninsured and Fixed-Income Populations: Secondary victims (powerless/constrained-to-trapped) — face maximum out-of-pocket costs and are forced into life-threatening rationing",
+      "Insulin Manufacturers (Eli Lilly, Novo Nordisk, Sanofi): Primary beneficiaries (institutional/arbitrage) — set list prices, receive rebates, capture monopoly rents from captive market",
+      "Pharmacy Benefit Managers (Express Scripts, CVS Caremark, Optum): Secondary beneficiaries (institutional/arbitrage) — layer rebate spreads, negotiate with manufacturers, extract spread from payers and patients",
+      "Insurance Underwriters and Employers: Tertiary actors (powerful/constrained) — negotiate with PBMs, bear costs of formulary restrictions and prior authorization overhead",
+      "Patient Advocacy Coalition (ADA, JDRF, patient unions): Organized victims (organized/constrained) — coordinate collective action, have achieved limited price concessions, constrained by resource barriers to litigation and sustained legislative campaigns",
+      "Healthcare Workers (Physicians, Nurses, Diabetes Educators): Identity-locked suppressors (moderate/identity_locked) — structurally mobile but professionally captured to function within rationing constraints; bear emotional cost of denying optimal treatment",
+      "FDA Regulatory Framework: Institutional observer (institutional/constrained) — maintains separation between drug approval and pricing, lacks statutory price authority, serves performative role in creating appearance of oversight"
     ],
-    "logic_rationale": "Extractiveness (0.68): High. Insulin list prices have increased 1,200% over the past two decades while manufacturing costs have remained flat. Patient out-of-pocket costs have tripled since 2010. The escalation is not driven by manufacturing innovation (biosynthetic insulin process was perfected in the 1980s) but by market consolidation and pricing strategy. The 0.68 value reflects that the extraction is severe and sustained but not absolute \u2014 some patient access occurs through manufacturer assistance programs and state Medicaid coverage, creating a floor. Full extraction would be 0.85+. Suppression (0.72): High. Biological necessity provides absolute suppression: patients cannot refuse insulin without fatal consequence. Insurance barriers add institutional suppression: prior authorization delays, formulary restrictions, and coverage denials. The 0.72 value reflects that suppression operates at both biological and institutional levels. Patients who achieve insurance coverage still face high out-of-pocket costs (copays, deductibles), creating effective suppression through financial constraint. Theater ratio (0.58): Moderate-high. The constraint maintains substantial institutional theater: FDA regulation appears to oversee the market but lacks pricing authority; rebate structures claim to 'optimize costs' while obscuring true pricing; pharmacy benefit managers claim formulary restrictions control costs while actually enabling manufacturer pricing power through formulary placement leverage; manufacturer assistance programs claim to help patients while creating data collection infrastructure that reinforces pricing power. However, the theater is lower than pure pitons because the extraction mechanism is direct and visible \u2014 patients and physicians understand that insulin costs are high and rising. The visibility prevents full theater (0.70+). The measurement trajectory shows accelerating extractiveness (0.35\u21920.68 over 16 years) while theater ratio has remained stable around 0.50, suggesting that the extraction has become more overt rather than more theatrical.",
-    "directionality_logic": "The directionality d for each perspective is determined by their structural relationship to the extraction flow and their exit capacity. Trapped patients (powerless exit) experience d \u2248 0.95 (nearly perfect victims), yielding high f(d) \u2248 1.42 and high experienced extractiveness \u03c7. Institutional manufacturers with arbitrage exit experience d \u2248 0.05 (nearly perfect beneficiaries), yielding negative f(d) \u2248 -0.12 and negative \u03c7 (extraction runs toward them). Moderate physicians with constrained exit and mixed benefit/victim status experience d \u2248 0.55, yielding f(d) \u2248 0.75 and moderate \u03c7. The pipeline reveals why the system is stable: the maximum-extraction agents (beneficiaries with arbitrage) experience negative \u03c7 (no felt extraction cost), while maximum-extraction-bearing agents (patients with trapped exit) experience maximum \u03c7 (cannot escape). The system is stable because the extraction-bearing population has no leverage to resist.",
-    "perspectival_gap": "The constraint demonstrates the full dimensionality of perspectival difference. The insulin manufacturer sees coordination: we develop, manufacture, and distribute an essential drug; we manage supply chains; we conduct clinical research; we maintain manufacturing standards. This is a Rope perspective from the beneficiary position. The patient sees pure extraction: my insulin costs $300/vial, I cannot negotiate, I cannot substitute, I cannot refuse, and my survival depends on payment. This is a Snare perspective from the trapped victim position. The primary care physician sees mixed extraction and coordination: I coordinate appropriate insulin selection based on patient needs AND I enforce insurance gatekeeping that delays patient access. This is a Tangled Rope perspective from the moderate constrained position. The patient advocacy organization sees a temporary problem in need of reform: policy changes (price controls, reference pricing, patent reform) could restructure the market. This is a Scaffold perspective from the organized constrained position. The FDA sees its regulatory function as complete: we approve insulins, monitor safety, enforce manufacturing standards. We do not control pricing \u2014 that is market function. This is a Rope perspective from the institutional arbitrage position, but it is performative (Piton) because FDA oversight obscures rather than addresses pricing extraction. The analytical observer sees the structure: insulin extraction is biological lock (Type 1 diabetes requires insulin) captured by market mechanism (monopolistic pricing). The constraint's power derives entirely from the biological necessity, not from market efficiency. The perspectival gap reveals that most agents experience only their local view \u2014 the manufacturer sees innovation, the patient sees unaffordable necessity, the physician sees appropriate gatekeeping, the FDA sees regulatory compliance. The analytical perspective reveals the full structure: it is a Snare that uses institutional theater (rebates, formulary management, safety monitoring) to maintain extraction from a trapped population.",
-    "mandatrophy_analysis": "The insulin pricing constraint resolves mandatrophy by establishing that the beneficiary (manufacturer) and victim (patient) perspectives are structurally inverse, with no shared classification across power levels. The manufacturer sees Rope; the patient sees Snare. The gap between these is not perspectival relativity \u2014 it is structural asymmetry. The manufacturer has exit options (can reduce prices, can innovate different models, can shift markets); the patient has none (biologically locked). The constraint is unambiguously Snare from the analytical position because the suppression mechanism is absolute and the extraction mechanism has no coordination benefit for the victims. There is no mandatrophy confusion about whether this is extraction masked as coordination \u2014 the coordination (drug manufacturing and distribution) is genuine but is completely separate from the extraction mechanism (pricing capture). A manufacturer could maintain the same supply chain, distribution, clinical research, and manufacturing standards at 10% of current prices and the coordination function would remain intact. The extraction is not necessary for coordination. This is what makes it a Snare rather than a Tangled Rope: the extraction is surplus to the coordination function. The Tangled Rope would require that dismantling the extraction mechanism would also disable the coordination. In insulin markets, that is false \u2014 price reductions would not prevent insulin manufacture or distribution."
+    "logic_rationale": "Extractiveness (0.68): High and escalating. The constraint's core extraction mechanism is the gap between manufacturing cost (approximately $6–12 per vial globally) and list prices ($300–400). The manufacturers capture the full spread through rebate structures with PBMs. Patients experience extraction through out-of-pocket costs and access barriers. The extractiveness value reflects the net transfer from trapped patients to manufacturer-PBM-insurer coalition. The trajectory shows acceleration: baseline 0.42 (mid-2010s) → 0.68 (present), driven by list price escalation and opacity of rebate pass-through. Suppression (0.82): Very high and structural. Patients cannot refuse insulin (biological trap), cannot substitute (insulin is monopoly product with no functionally equivalent alternatives for Type 1), cannot negotiate price (individual bargaining power is zero), and cannot exit (medical exit is death). Prior authorization requirements and formulary restrictions create institutional suppression layered on top of biological necessity. The trajectory shows intensification: baseline 0.64 (mid-2010s) → 0.82 (present), driven by PBM formulary tightening and prior authorization expansion. Theater Ratio (0.45): Moderate. The constraint has a functional core (managing disease through medication) but increasing performative content (prior authorizations that delay access without reducing cost, rebate disclosures that appear to address extraction without affecting patient prices, FDA guidance that does not govern pricing). Theater has increased from 0.35 → 0.45 as regulatory agencies and PBMs add compliance rituals without functional impact. Classification as Snare: Extractiveness 0.68 > 0.66 threshold, suppression 0.82 > 0.60 threshold, χ (effective extraction) will be >= 0.66 when computed against powerless/trapped agents. Snare criteria are met fully.",
+    "perspectival_gap": "The insulin pricing cliff demonstrates the widest perspectival gap in the corpus: the same structural phenomenon is experienced as pure extraction (snare) by patients, pure coordination (rope) by manufacturers and PBMs, mixed coordination-extraction (tangled rope) by patient advocates and employers, a degraded ritual (piton) by the FDA, identity-locked entrapment (snare) by healthcare workers, and a natural-law trade-off (mountain candidate) by innovation advocates. The gap between powerless/trapped (snare) and institutional/arbitrage (rope) perspectives is near-maximal: the beneficial-to-beneficiary agent experiences the constraint as valuable coordination enabling price-based formulary negotiation; the trapped-to-victim agent experiences the constraint as life-threatening extraction with no exit. The piton classification of the FDA reveals that regulatory governance has atrophied — the FDA publishes guidelines and maintains approval authority but lacks price-control mechanism, making its institutional role performative. The mountain classification is a false summit candidate: the innovation-incentive argument naturalizes a policy choice (high US prices) as inevitable trade-off for pharmaceutical R&D, but identical insulin molecules sold for $30–50/vial in Canada and EU demonstrate that price escalation is policy-contingent, not immutable.",
+    "directionality_logic": "Directionality (d) is derived from beneficiary/victim status and exit options. Patients: d = 0.95 (full target due to biological trap + victim status) → f(d) = 1.42 → high experienced extraction (χ approaches 1.0 at local scope). Manufacturers: d = 0.05 (full beneficiary + arbitrage exit) → f(d) = -0.12 → negative experienced extraction (they experience the constraint as net benefit through pricing power). PBMs: d = 0.10 (beneficiary + arbitrage) → f(d) ≈ -0.05 → slight negative experience (rebate spreads exceed their operational costs). Patient advocates: d = 0.70 (victim + constrained exit from coalition membership costs) → f(d) ≈ 1.05 → moderate-high extraction despite organized power. Healthcare workers: d = 0.80 (victim + identity_locked exit; they bear emotional cost of rationing without ability to exit their clinical role) → f(d) ≈ 1.20 → high extraction despite moderate power atom. The directionality computations explain why beneficiaries see rope (coordination mechanism for negotiation) while victims see snare (inescapable extraction): they occupy opposite ends of the d spectrum, and the sigmoid amplifies the difference.",
+    "mandatrophy_analysis": "The insulin pricing cliff resolves mandatrophy by revealing that the snare classification is stable across multiple victim perspectives (powerless/trapped, organized/constrained, moderate/identity_locked) and multiple beneficiary perspectives (institutional/arbitrage) produce the same rope classification. The tangled rope classification (patient advocates, employer plans) occupies a structural middle ground where both genuine coordination functions and asymmetric extraction are present. The piton and mountain perspectives are analytically interesting but do not undermine the core snare diagnosis: they are higher-scope and longer-horizon perspectives that reframe the constraint as institutional inertia or innovation trade-off, but do not change the immediate-biographical-local lived experience of the snare from the patient perspective. The mandatrophy is resolved by accepting all six classifications as structurally valid readings of different observational contexts, with the snare at the powerless/trapped/biographical/local context being the most ethically salient and the most structurally invariant."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "pharmaceutical_patent_extension",
-      "pharmacy_benefit_manager_rebate_opacity",
-      "medicaid_insulin_coverage_variation"
+      "prior_authorization_enforcement",
+      "pbm_rebate_opacity",
+      "insulin_access_rationing"
     ],
-    "dual_formulation_note": "The insulin pricing cliff decomposes into three linked constraints: (1) insulin_pricing_cliff (this story) models the primary extraction mechanism of market consolidation and price escalation; (2) pharmaceutical_patent_extension models the intellectual property enforcement that blocks generic competition; (3) pharmacy_benefit_manager_rebate_opacity models the secondary extraction mechanism through rebate capture. Each has distinct \u03b5: patent_extension operates at \u03b5 \u2248 0.45 (prevents competition but does not directly extract from patients), pbm_rebate_opacity operates at \u03b5 \u2248 0.55 (extracts from manufacturers but obscures patient-facing costs), insulin_pricing_cliff operates at \u03b5 \u2248 0.68 (direct patient extraction). All three are causally linked and should be analyzed together."
+    "dual_formulation_note": "The insulin pricing cliff is a composite constraint family with separable mechanisms. The pricing cliff itself (manufacturer list price escalation) has ε=0.68. The prior authorization mechanism (insurance gatekeeping) has ε=0.55 (tangled rope—has access-control coordination function but extracts time and medical risk). The PBM rebate structure (opacity of spread extraction) has ε=0.62 (snare—pure opacity-based extraction). Each story gets its own ε and classification; they are linked by network dependencies."
   },
-  "directionality_overrides": [
-    {
-      "power_atom": "institutional",
-      "d_value": 0.08
-    }
-  ]
+  "directionality_overrides": []
 }

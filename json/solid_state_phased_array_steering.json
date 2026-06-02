@@ -4,14 +4,15 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "sspa"
+    "measurement_id_prefix": "sspa",
+    "story_uid": "f6771cce-7e58-4d4f-8df7-f639ae956dda"
   },
   "base_properties": {
-    "extractiveness": 0.18,
-    "suppression": 0.03,
-    "theater_ratio": 0.15,
+    "extractiveness": 0.12,
+    "suppression": 0.02,
+    "theater_ratio": 0.05,
     "claimed_type": "mountain",
-    "human_readable": "Solid State Phased Array Steering",
+    "human_readable": "Solid State Phased Array Steering via Grating Equation",
     "topic_domain": "physics/electromagnetics",
     "emerges_naturally": true,
     "accessibility_collapse": 0.92,
@@ -20,121 +21,129 @@
   "perspectives": [
     {
       "classification_type": "mountain",
-      "agent_power": "analytical",
+      "agent_power": "powerless",
       "time_horizon": "civilizational",
-      "exit_options": "analytical",
+      "exit_options": "trapped",
       "spatial_scope": "universal",
-      "label": "The Physical Law Perspective",
-      "comment": "PERSPECTIVE 1: PHYSICAL LAW \u2014 Phase interference of electromagnetic waves in a linear array produces a grating pattern with fixed main lobe and grating lobe positions determined by the Grating Equation: sin(\u03b8) = (\u03bb/d)[m + (\u03c6/2\u03c0)] where \u03c6 is the phase offset between elements. This relationship is invariant across all implementations and scales. No degrees of freedom exist to escape the grating structure itself."
+      "label": "The Electromagnetic Wave",
+      "comment": "PERSPECTIVE 1: ELECTROMAGNETIC WAVE (MOUNTAIN) — The wave propagates according to Maxwell's equations and the grating equation constraint. No exit, no modification, no agency. The constraint is immutable from all possible reference frames in classical electromagnetism."
     },
     {
       "classification_type": "mountain",
       "agent_power": "powerful",
-      "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "The Well-Resourced Engineer",
-      "comment": "PERSPECTIVE 2: WELL-RESOURCED ENGINEER \u2014 Even with unlimited resources and design freedom, the grating equation constraint persists. Design can optimize element spacing, frequency selection, and control algorithms, but cannot eliminate the fundamental interference pattern. The constraint appears immutable regardless of implementation approach."
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Array Engineer",
+      "comment": "PERSPECTIVE 2: ARRAY ENGINEER (MOUNTAIN) — Must operate within the laws of electromagnetic interference. No engineering approach can escape the grating equation; the phase-steering relationship is a hard constraint on any implementation. Trapped by physics, not by institutional design."
     },
     {
       "classification_type": "mountain",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Hardware Developer",
-      "comment": "PERSPECTIVE 3: HARDWARE DEVELOPER \u2014 Must work within the grating equation limits. Cannot design around the constraint through engineering choices alone. The physical reality of wave interference provides zero exit option \u2014 development resources and timelines must accommodate the fundamental limits."
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) — From the civilizational and universal scope, the grating equation is a mathematical consequence of wave superposition in periodic structures. No agent perspective changes this. The constraint is a natural law of wave physics."
     }
   ],
   "omegas": [
     {
-      "id": "grating_mitigation_effectiveness",
-      "question": "Do advanced techniques (random element spacing, non-uniform arrays, frequency hopping) actually eliminate grating lobes or only suppress them?",
-      "resolution_mechanism": "Rigorous electromagnetic simulation and measurement of suppressed vs relocated grating lobes across design parameter space",
-      "impact": "If grating lobes are relocated but not eliminated: mountain classification confirmed. If techniques achieve true elimination: classify as rope (coordination with wave physics rather than immutable constraint).",
+      "id": "quantum_vs_classical_regime",
+      "question": "Does the constraint persist identically in the quantum electrodynamic regime, or does quantum coherence/decoherence create an alternative phase-steering dynamic?",
+      "resolution_mechanism": "Quantum field theory analysis of phased array steering in the regime where photon number becomes discrete and coherence properties matter; empirical verification in systems where quantum effects become dominant",
+      "impact": "If identical in quantum regime: mountain classification is robust across all physics scales. If different: the constraint is classical-regime-specific, and a quantum-regime story would have different ε and mechanics.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether mitigation techniques eliminate or only suppress grating lobes"
+      "description": "Whether grating equation constraint persists in quantum electrodynamic regime"
     },
     {
-      "id": "wavelength_dependency_universality",
-      "question": "Is the grating equation constraint truly wavelength-independent or does behavior differ significantly at extreme frequency ranges (THz, microwave)?",
-      "resolution_mechanism": "Experimental verification of grating pattern structure across frequency spectrum from microwave to optical domains",
-      "impact": "If universal: mountain classification strengthened. If domain-dependent: constraint may decompose into separate stories per frequency regime.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether grating equation holds universally across frequency ranges"
-    },
-    {
-      "id": "design_freedom_boundary",
-      "question": "What is the minimal set of design constraints required to produce a functional phased array, and can this set be further reduced?",
-      "resolution_mechanism": "Historical review of phased array designs and parameter space exploration for minimum achievable constraint coupling",
-      "impact": "If design freedom is truly zero: mountain classification robust. If residual degrees of freedom exist: classify as rope with embedded optimization problem.",
+      "id": "measurement_collapse_ambiguity",
+      "question": "If phased array steering is applied to entangled or coherent quantum states, does the measurement of steering outcome collapse the state, creating an effective escape from the classical grating equation?",
+      "resolution_mechanism": "Quantum measurement theory applied to phased array steering; experimental verification using entangled photon arrays and weak-measurement protocols",
+      "impact": "If no collapse: mountain classification holds even for quantum systems. If collapse is relevant: there exists a quantum loophole where the classical constraint becomes an effective constraint rather than a natural law.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether residual design freedom exists beyond grating equation constraint"
+      "description": "Whether measurement collapse provides escape from grating equation in quantum context"
+    },
+    {
+      "id": "metamaterial_circumvention",
+      "question": "Can engineered metamaterials or nonlinear media create phase-steering behavior that is not subject to the classical grating equation constraint?",
+      "resolution_mechanism": "Experimental demonstration of phase steering in metamaterials without grating equation compliance; theoretical derivation of the constraint from first principles in nonlinear media",
+      "impact": "If circumvention is possible: constraint is domain-specific to linear isotropic media, not universal. If impossible: mountain classification is validated for all foreseeable material systems.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether metamaterials can achieve steering outside grating equation"
+    },
+    {
+      "id": "institutional_false_summit_candidate",
+      "question": "Is the grating equation framed as 'natural law' by institutional physics partly to naturalize what are actually engineering trade-offs (cost, efficiency, directivity limits) as inevitable?",
+      "resolution_mechanism": "Historical analysis of how the constraint was discovered and taught; examination of whether alternative steering paradigms were actively suppressed or merely underexplored; survey of engineering literature on steering approaches that depart from grating-equation framework",
+      "impact": "If institutional naturalization is detected: the mountain classification may be a false summit — the constraint is natural law overlaid with naturalized engineering limits. If not: the mountain is genuine.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether institutional physics naturalizes engineering limits as physical laws"
     }
   ],
   "measurements": [
     {
-      "metric": "theater_ratio",
+      "metric": "base_extractiveness",
       "time_point": 0,
       "value": 0.12
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.14
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 40,
-      "value": 0.15
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.12
     },
     {
       "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.16
+      "value": 0.05
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.17
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.05
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 40,
-      "value": 0.18
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.05
     }
   ],
   "interval": {
     "start": 0,
-    "end": 40
+    "end": 100
   },
   "commentary": {
-    "narrative_context": "Solid state phased array steering is a fundamental constraint arising from the physics of electromagnetic wave interference. A phased array achieves directional steering by controlling the phase offset between elements in an antenna array. The main lobe (primary radiation pattern) can be steered by varying this phase offset, governed by the Grating Equation. However, this same equation produces grating lobes \u2014 unwanted secondary radiation patterns at fixed angles determined by wavelength and element spacing. This constraint is present in every phased array implementation and represents an irreducible aspect of how wave interference works in discrete linear structures. The constraint exhibits zero degrees of freedom across all indices: no amount of engineering ingenuity, computational resources, or design innovation can eliminate the fundamental interference pattern. The constraint remains stable across time (measured theater ratio = 0.15, minimal drift), reflecting that the underlying physics has not changed and no institutional narrative has emerged to reframe or replace it.",
+    "narrative_context": "Solid state phased array steering is a genuine natural law constraint arising from the fundamental physics of electromagnetic wave interference. The grating equation (describing the relationship between phase offset and main-lobe direction) emerges from Maxwell's equations and the principle of superposition in periodic structures. No agent can escape this constraint through engineering innovation, institutional redesign, or clever implementation. The constraint is invariant across all application domains: radar systems, wireless communications, astronomical instrumentation, and medical imaging all operate within the same electromagnetic laws. The extraction value (0.12) reflects minimal overhead — the constraint does not extract resources from anyone; rather, it imposes a fixed structural limit on what is physically possible. The suppression (0.02) and theater ratio (0.05) are near-zero because there is no coercive enforcement mechanism and no performative layer — the constraint simply is.",
     "key_agents": [
-      "Physicists and Electromagnetic Theorists: Analytical observers (analytical/analytical) \u2014 formalize and verify the grating equation as invariant",
-      "Hardware Engineers: Powerful to moderate agents (powerful/mobile to moderate/constrained) \u2014 must design systems that accommodate grating limits",
-      "System Designers: Moderate agents (moderate/constrained) \u2014 optimize within grating constraint boundaries",
-      "Military/Radar Applications: Institutional actors (institutional/arbitrage) \u2014 benefit from steering capability despite grating limitation",
-      "Measurement and Standards Bodies: Institutional actors (institutional/arbitrage) \u2014 establish performance baselines that incorporate grating effects"
+      "Electromagnetic waves: Physical substrate — propagate according to Maxwell equations without agency",
+      "Array elements: Physical components — phase-shifted by design; behavior is determined by the grating equation",
+      "Array engineers: Institutional agents (powerful/trapped) — must design systems within the constraint; cannot violate grating equation",
+      "Physics community: Epistemic authority (institutional/analytical) — understands and teaches the constraint as a natural law",
+      "Analytical observer: External perspective (analytical/analytical) — sees the constraint as a mathematical consequence of wave superposition"
     ],
-    "logic_rationale": "Extractiveness (0.18): Very low. The grating equation produces a structural constraint but does not extract resources or impose asymmetric costs. The constraint is symmetrical \u2014 all agents (designers, users, researchers) experience the same immutable limits. There is no beneficiary capturing value from victims; the constraint is a pure natural limitation. Theater ratio (0.15): Very low. The constraint requires minimal performative activity \u2014 its existence is directly verifiable through physical measurement. No institutional narrative, regulatory framework, or organizational theater is needed to maintain the constraint. Suppression (0.03): Minimal. While the constraint limits design freedom, it does not suppress information flow, alternative approaches, or exit options beyond what the physics naturally requires. Accessibility collapse (0.92): Very high. The grating equation is accessible only through rigorous mathematical and experimental understanding; lay understanding of wave physics is minimal. However, the constraint's reality is universal and unambiguous \u2014 accessibility to the physics is difficult, but accessibility to the constraint's real effects is complete. Resistance (0.08): Very low. The constraint encounters no active resistance \u2014 no actor benefits from denying its existence or maintaining false beliefs about it. The scientific consensus on grating patterns is stable and high-fidelity.",
-    "perspectival_gap": "All three perspectives classify identically as mountain because the constraint is invariant across all observation positions. A well-resourced engineer cannot escape the grating equation through resource investment. A constrained hardware developer experiences the same grating limits as an unconstrained designer with infinite resources. The analytical observer sees the same immutable physics that shapes the engineer's actual design tradeoffs. This uniformity across perspectives is the defining characteristic of a true natural law constraint \u2014 no perspectival leverage exists.",
-    "directionality_logic": "The grating equation constraint exhibits zero directionality differentiation. All agents \u2014 regardless of power, exit options, or scope \u2014 experience the same structural limit. The constraint is neither extractive (no beneficiary/victim relationship) nor coordinate (no agent benefits from others' compliance). It is a symmetrical physical reality. The absence of beneficiary and victim declarations reflects this structural neutrality: the constraint does not extract value from one agent to another.",
-    "mandatrophy_analysis": "This constraint resolves the mandatrophy in the most straightforward manner \u2014 as a genuine natural law with no extractive or coordinative function. The false summit (mountain misclassified as a performance narrative) does not apply here. The actual narrative would be: 'The grating equation is an inconvenient physical reality, so we use design techniques to suppress or mitigate grating lobes.' This narrative does not naturalize a contingent institutional arrangement; it acknowledges the constraint and describes legitimate engineering responses. No mandatrophy exists to resolve."
+    "logic_rationale": "Extractiveness (0.12): Minimal. The grating equation does not extract resources, attention, or value from any agent. The small nonzero value represents the unavoidable overhead of understanding and working with the constraint — the effort required to apply the equation, the design time spent optimizing around it, the cognitive load of thinking within this constraint space. But this is not extraction in the DR sense (asymmetric value transfer); it is merely the cost of engaging with reality. Suppression (0.02): Minimal. There is no suppression mechanism because there is no enforcement agent. The constraint enforces itself through physics. No agent can be threatened into compliance or prevented from attempting escape — the physics prevents escape directly. Theater ratio (0.05): Minimal. No performative layer exists. The relationship between phase offset and steering direction is direct and verifiable. An engineer applies the grating equation; the array steers; the physics works. No ritual, no legitimacy claim, no theater required.",
+    "perspectival_gap": "This constraint exhibits NO perspectival gap. All three perspectives classify it identically as mountain. The powerless agent (electromagnetic wave) experiences it as an immutable boundary. The powerful agent (array engineer) experiences it as an immutable boundary. The analytical observer sees it as an immutable boundary. This uniformity is diagnostic of a genuine natural law — the constraint is not observer-dependent or context-relative. The grating equation holds in a physics lab, in a deployed radar system, in a communications satellite, and in a theoretical derivation. The absence of perspectival gap validates the mountain classification.",
+    "directionality_logic": "Directionality is not applicable to this constraint in the standard sense because there are no beneficiaries or victims. The grating equation does not transfer value from one agent to another; it is a symmetric constraint on all parties. An array engineer who wants to steer the main lobe northward cannot do so if the grating equation forbids it — but neither does the constraint benefit a competing engineer who wants it to steer southward. The constraint is equally binding on all agents at all times. The absence of asymmetric value transfer (the core feature of all non-mountain constraints) confirms that this is a mountain, not a coordinate system for extraction.",
+    "mandatrophy_analysis": "No mandatrophy exists. The constraint cannot be mistaken for a rope (coordination without extraction) because there is no coordination function — there is only a hard physical limit. The constraint cannot be mistaken for a tangled rope or snare because there is no extraction and no alternative the constraint is suppressing. The mountain classification is unambiguous and requires no resolution."
   },
   "boltzmann": {
     "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
-      "radar_detection_range_tradeoff",
-      "antenna_sidelobe_suppression_cost",
-      "frequency_allocation_spectrum_efficiency"
+      "phased_array_grating_lobe_tradeoff",
+      "beam_scanning_speed_limits"
     ],
-    "dual_formulation_note": "The grating equation constraint is upstream of several applied constraints in radar and communications systems. Those downstream constraints inherit the grating limits and must design around them. This constraint family reflects decomposition along application domains, not along structural \u03b5 values \u2014 all members are mountains with different engineering contexts."
+    "dual_formulation_note": "Solid state phased array steering is the foundational constraint; downstream constraints (grating lobe formation, beam-switching latency) are derived consequences of the grating equation. The family structure reflects increasing specificity: the parent constraint is the mathematical law; children are application-domain constraints where the law meets engineering trade-offs and institutional choices."
   },
   "directionality_overrides": []
 }

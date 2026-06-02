@@ -1,0 +1,248 @@
+{
+  "header": {
+    "constraint_id": "licensing_statute_mandate__graduated_access_filter",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_licensing_statute_mandate__graduated_access_filter",
+    "measurement_id_prefix": "lic_grad",
+    "story_uid": "9a1a026b-a358-40c8-8267-d9c40ffcdfff",
+    "created_at": "2026-02-26T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.45,
+    "claimed_type": "snare",
+    "human_readable": "Statutory Credential Requirements as Graduated Access Filter",
+    "topic_domain": "labor_economics/regulatory_policy/public_administration",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "credentialed_incumbents",
+      "credential_granting_institutions"
+    ],
+    "victims": [
+      "resource_constrained_workers",
+      "marginalized_entry_cohort"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Resource-Constrained Worker Without Credential Access",
+      "comment": "PERSPECTIVE 1: POWERLESS WORKER (SNARE) — Faces absolute barrier to entry without credential. Cannot exit labor market entirely; must accept informal/unregulated alternatives or below-credential wages. No alternative pathways; credential monopoly is enforceable by state apparatus. Maximum experienced extraction — structural barriers are enforced through licensing statute, credential verification, and prosecution of unlicensed practice."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Aspiring Worker With Limited Resources",
+      "comment": "PERSPECTIVE 2: MODERATE WORKER (SNARE) — Can acquire credential but faces high cost barriers (tuition, exam fees, prerequisites, income forgone during training). Exit option (credential acquisition) is available but costly enough to function as exclusion. Experiences snare-level extraction through the cost-barrier mechanism. Suppression is sustained through credential gatekeeping and cost-inflation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Credentialed Practitioners Association",
+      "comment": "PERSPECTIVE 3: CREDENTIALED INCUMBENTS (ROPE) — Captures coordination benefit from the credential statute: unified skill standard, reputation protection, market stability, reduced unlicensed competition. Experiences the constraint as legitimate coordination mechanism. Arbitrage option (can relocate license across jurisdictions, can establish credential standards) means low or negative experienced extraction. Beneficiary position with highest agency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Credential-Granting Institution",
+      "comment": "PERSPECTIVE 4: CREDENTIAL-GRANTING INSTITUTION (TANGLED ROPE) — Genuinely coordinates skill transmission and labor market matching. Simultaneously extracts rents through tuition inflation, reduced competition from alternative credentials, and regulatory moat (only certain institutions can grant recognized credentials). Benefits from state enforcement of credential monopoly. Mixed coordination and extraction with significant extraction component — institutional power and arbitrage exit options allow navigation of the constraint rather than entrapment."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Regulatory Licensing Board",
+      "comment": "PERSPECTIVE 5: REGULATORY LICENSING BOARD (PITON) — Maintains credential verification and enforcement apparatus as ostensible public safety mechanism. Actual function has atrophied: board performance is largely performative (licensing exam validity disputed, continuing education requirements often theater). Persists through institutional inertia and credentialed incumbent capture. Theater ratio below full snare because the enforcement machinery is visible but degraded. Low functional coordination capacity despite formal mandate."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law Framing)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN - FALSE SUMMIT) — From a universal/civilizational perspective, market entry regulation might appear as an immutable natural law: 'any complex service requires verification of practitioner competence, ergo credential barriers are inherent to functional labor markets.' This framing naturalizes what is actually a contingent institutional choice (could be apprenticeship, peer review, portfolio-based entry, provisional licensing). The engine will classify this as false summit: identifiable beneficiaries exist (credentialed incumbents), suppression is enforced through state apparatus (not natural law), and alternative institutional arrangements are structurally possible."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "credential_validity_measurement",
+      "question": "Does the licensing credential actually predict practitioner competence and public safety outcomes, or does it primarily function as an exclusion mechanism?",
+      "resolution_mechanism": "Comparative analysis: outcome data (client/patient safety, complaint rates, disciplinary actions) for credentialed vs alternative-entry practitioners; correlation analysis between credential standards and measured public safety improvements",
+      "impact": "If credential predicts safety: classification shifts toward Rope/Tangled Rope (genuine coordination function). If correlation is weak or absent: classification confirms Snare (credential is pure extraction disguised as safety).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether licensing credential predicts competence and safety outcomes"
+    },
+    {
+      "id": "alternative_entry_viability",
+      "question": "Are structurally viable alternative entry mechanisms available (apprenticeship, portfolio-based licensing, tiered credentials, reciprocal recognition across jurisdictions) that would maintain public safety while reducing access barriers?",
+      "resolution_mechanism": "Comparative institutional analysis: evidence from jurisdictions with alternative entry pathways; outcome data from hybrid/apprenticeship models; analysis of barriers to adoption in current regime",
+      "impact": "If alternatives are viable: suppression is choice-based (regulatory stance) rather than structural inevitability — snare classification confirmed. If alternatives fail safety tests: suppression reflects genuine complexity — classification shifts toward Tangled Rope or legitimate Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability of alternative entry mechanisms"
+    },
+    {
+      "id": "cost_inflation_structural_vs_intentional",
+      "question": "Is credential acquisition cost inflation (tuition, exam fees, prerequisite programs) a structural consequence of credential maintenance or an intentional extraction mechanism designed to limit access?",
+      "resolution_mechanism": "Historical cost analysis: comparison of credential acquisition cost to actual education/verification cost; analysis of cost increases independent of instruction quality or safety standard increases; comparative analysis of cost across jurisdictions with similar safety standards",
+      "impact": "If structural: cost barrier is incidental to coordination. If intentional: cost barrier is primary extraction mechanism — strengthens Snare classification and identifies rent-seeking suppression as the organizing principle.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Cost inflation as structural vs intentional mechanism"
+    },
+    {
+      "id": "reading_contestation_public_safety_vs_access_filter",
+      "question": "Is this statute best read as primarily protecting public safety (public_safety_coordination kernel reading) or as primarily filtering market access by class/resource status (graduated_access_filter reading instantiated here)?",
+      "resolution_mechanism": "Discourse analysis: legislative record, regulatory guidance, enforcement priority documentation; outcome comparison with public safety mandate; analysis of protected vs excluded populations for correlation with resource access patterns",
+      "impact": "If public safety is primary: beneficiary set differs (public as victim, credentialed as incidental), suppression has different justification. If access filter is primary: current Snare classification confirmed. Both readings coexist in policy debate — this reading formalizes one pole.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Kernel reading contestation: public safety coordination vs access filter"
+    },
+    {
+      "id": "intersectional_access_barrier_magnitude",
+      "question": "What proportion of excluded populations face barriers due to resource constraints vs discrimination, spatial accessibility, prior educational gaps, or credential transfer blockages?",
+      "resolution_mechanism": "Demographic analysis of credentialed vs excluded populations; analysis of barrier composition by exclusion mechanism (cost, discrimination, geographic, educational prerequisite, jurisdictional); comparative analysis across protected classes",
+      "impact": "If majority is resource-constrained: suppression primarily economic (class-based sorting). If significant proportion discriminatory/geographic/jurisdictional: suppression has compound mechanisms requiring separate constraints for each barrier.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Intersectional composition of access barriers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.45
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Statutory credential requirements for licensed professions create a tiered labor market structure where access is distributed by ability to pay for credential acquisition rather than demonstrated competence. This constraint is one reading of the contested licensing_statute_mandate kernel: the graduated_access_filter reading interprets the statute's primary structural function as sorting workers by prior resource access (class, geography, family wealth) rather than exclusively protecting public safety. From the perspective of resource-constrained workers, the constraint functions as a snare: state-enforced barriers to entry with no alternative pathways and suppression maintained through prosecution of unlicensed practice and credential monopoly enforcement. From the perspective of credentialed incumbents, the same statute provides coordination benefits (skill verification, reputation protection, market stability) and functions as rope. The regulatory licensing board maintains performative review functions (exam design, continuing education requirements) with low functional safety correlation — theater ratio of 0.45 reflects that the apparatus is less theatrical than a full piton but more theatrical than a genuine coordination mechanism. The constraint exhibits extraction accumulation over the interval: extractiveness increases from 0.42 to 0.58 as credential acquisition costs inflate, suppression requirements increase to maintain the access barrier (enforcement machinery expanded), and theater ratio remains stable (performance ritual unchanged despite cost inflation). The analytical observer risks naturalizing this as an immutable natural law of labor market organization ('any complex service requires credential barriers'), which the engine will detect as a false summit: identifiable beneficiaries exist, suppression is state-enforced rather than natural, and alternative institutional arrangements (apprenticeship, portfolio licensing, tiered credentials) are structurally possible.",
+    "key_agents": [
+      "Resource-Constrained Workers: Primary victim (powerless/trapped) — absolute barriers to entry without credential; no alternative pathways; experience maximum snare-level extraction",
+      "Aspiring Workers with Limited Resources: Secondary victim (moderate/constrained) — can theoretically acquire credential but face high cost barriers functioning as exclusion mechanism",
+      "Credentialed Incumbents (Professional Association): Primary beneficiary (institutional/arbitrage) — captures coordination benefits and market protection; experiences constraint as legitimate rope; lowest experienced extraction due to high agency",
+      "Credential-Granting Institution: Secondary beneficiary (institutional/arbitrage) — extracts rents through tuition inflation, reduced competition, and regulatory moat; mixed coordination and extraction (tangled rope)",
+      "Regulatory Licensing Board: Institutional actor (institutional/arbitrage) — maintains performative enforcement apparatus; sees own function as degraded (piton); captures legitimacy from statute despite low functional safety correlation",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent institutional arrangement as inherent to functional labor markets; false summit candidate"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate, reflecting the magnitude of economic extraction through credential cost barriers and market access restriction. The value is not as extreme as 0.72+ (snare floor) because some credential incumbents genuinely value the coordination function and maintain safety standards; the extraction is not purely predatory. However, extractiveness exceeds 0.46 threshold, indicating that the extraction component dominates over coordination function from the primary target's perspective. Suppression (0.68): High. The state enforces credential monopoly through prosecution of unlicensed practice, credential verification requirements, exam gatekeeping, and reciprocal licensing restrictions across jurisdictions. Barriers are sustained through active enforcement machinery (licensing boards, disciplinary proceedings) rather than passive market forces. Theater ratio (0.45): Moderate-low. The licensing board maintains exam design and continuing education requirements, but these are not primarily performative — they reflect genuine (if contested) safety concerns. The theater is lower than a full piton (0.70+) because some functional safety review occurs, but the ratio indicates that performative maintenance exceeds functional necessity.",
+    "directionality_logic": "Directionality derives from each agent's structural position relative to the extraction flow. Resource-constrained workers (powerless/trapped) experience high d (~0.95) because they are full targets of extraction with no exit options — the sigmoid function produces maximum f(d). Credentialed incumbents (institutional/arbitrage) experience low d (~0.10) because they are beneficiaries with high exit options (can relocate, establish alternative credentials, influence regulation) — f(d) produces negative effective extraction. The perspectival gap is wide: measured extractiveness chi is high (~0.68) for powerless targets but negative (~-0.15) for institutional beneficiaries, both derived from the same base extractiveness and suppression metrics. Moderately-resourced workers (moderate/constrained) experience medium d (~0.65), producing moderate-to-high chi. The credential-granting institution experiences mixed extraction (tangled rope) because it benefits from the regulatory moat while simultaneously funding genuine skill transmission — d is intermediate (~0.35), producing moderate positive chi. The licensing board experiences low d (institutional/arbitrage position) but piton classification derives from theater ratio, not from chi magnitude.",
+    "perspectival_gap": "This constraint exhibits radical perspectival divergence. The resource-constrained worker sees an absolute snare — state-enforced exclusion with no exit option and economic extraction through credential cost barriers. The credentialed incumbent sees a legitimate rope — coordination mechanism that protects reputation and maintains skill standards without being experienced as extraction (arbitrage options and beneficiary status produce negative chi). The credential-granting institution sees tangled rope — genuine education provided alongside rent extraction through tuition inflation and competition suppression. The licensing board sees itself as performing a piton role — maintaining a degraded safety verification ritual. The analytical observer risks seeing a mountain — naturalizing labor market credential requirements as inherent to functional markets, a reading that the engine will flag as false summit because identifiable beneficiaries exist and alternative entry mechanisms are structurally viable. The perspectival gap is not mere disagreement; it reflects real structural differences in how the constraint functions for different agent types.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating that the six types represent legitimate structural readings of different agent positions within the same institutional arrangement. The snare classification (resource-constrained workers) is not 'the correct answer' but rather the perspective of agents bearing the extraction. The rope classification (credentialed incumbents) is their genuine experience of coordination benefits. The tangled rope (institutions) reflects the actual mixture of educational service and rent extraction. The piton (regulatory board) is the degraded performance of safety verification. The mountain (analytical observer) is the false-summit framing that must be rejected because the evidence reveals contingent institutional choices rather than natural law. The mandatrophy resolves not by choosing one type but by recognizing that the constraint's structural form instantiates all types simultaneously from different positions. What appears as 'coordination' from the incumbent's perspective appears as 'extraction' from the excluded worker's perspective, and both are correct observations of the same constraint's function.",
+    "kernel_context": "This constraint is one reading of the contested licensing_statute_mandate kernel. The reading instantiated here is graduated_access_filter: the statute's primary structural function is sorting workers by prior resource access (class, geography, family wealth) rather than exclusively protecting public safety. Sibling readings under the same kernel are: (1) public_safety_coordination (statute primarily protects public through competence verification); (2) rent_seeking_suppression (statute primarily benefits credentialed incumbents through artificial market restriction). The gradient between readings is not arbitrary disagreement — the structural delta is real: the graduated_access_filter reading formalizes the class-sorting mechanism as primary, rather than secondary or incidental. The kernel itself is the statutory text: the codified requirement that practitioners hold specified credentials. Different authorities (legislatures, courts, professional associations, labor advocates) read this kernel differently depending on which mechanism (safety, class sorting, coordination, extraction) they emphasize. This story instantiates one reading; the others are separate constraints in the family."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "licensing_statute_mandate__public_safety_coordination",
+      "licensing_statute_mandate__rent_seeking_suppression",
+      "credential_acquisition_cost_barrier",
+      "apprenticeship_pathway_suppression"
+    ],
+    "dual_formulation_note": "The licensing statute manifests as three structurally distinct constraints depending on reading and observable: public_safety_coordination (statute protects public through competence standards — ε~0.25), rent_seeking_suppression (statute benefits credentialed incumbents through market restriction — ε~0.70), and graduated_access_filter (this constraint — statute sorts workers by resource access — ε~0.58). All three operate simultaneously; this story formalizes the access-filter reading. Decomposition follows from ε-invariance principle: changing which mechanism (safety, extraction, or access-filtering) is treated as primary changes ε and classification, indicating structurally distinct constraints."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "credential_protection_for_competence",
+    "drift_state": {
+      "moment": "contemporary_access_barrier_escalation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "licensing_statute_mandate__public_safety_coordination",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "licensing_statute_mandate__rent_seeking_suppression",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "credential_requirements_sort_by_prior_resource_access",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "credential_acquisition_cost_functions_as_market_exclusion_mechanism",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  }
+}

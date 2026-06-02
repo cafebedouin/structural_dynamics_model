@@ -4,23 +4,26 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "eic"
+    "measurement_id_prefix": "eic",
+    "story_uid": "01ed1c63-9177-4ccb-b26b-28547670ba23"
   },
   "base_properties": {
     "extractiveness": 0.58,
-    "suppression": 0.68,
-    "theater_ratio": 0.64,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
     "claimed_type": "tangled_rope",
     "human_readable": "Elite Identity Capture (Staley-Bagg Synthesis)",
     "topic_domain": "political/social",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "institutional_elites",
-      "cultural_gatekeepers"
+      "institutional_gatekeepers",
+      "cultural_validation_apparatus",
+      "media_corporations"
     ],
     "victims": [
-      "authentic_subaltern_identity",
-      "grassroots_political_mobilization"
+      "authentic_identity_movements",
+      "grassroots_coalitions",
+      "subaltern_political_voice"
     ]
   },
   "perspectives": [
@@ -29,18 +32,18 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "global",
-      "label": "The Subaltern Subject",
-      "comment": "PERSPECTIVE 1: SUBALTERN SUBJECT (SNARE) \u2014 Identity becomes a commodity; authentic self-expression is relentlessly channeled into consumption, spectacle, and elite-approved discourse. The subaltern has no exit from the identity market; resistance itself is captured and commodified. Maximum experienced extraction through the mechanism of authenticity-laundering."
+      "spatial_scope": "national",
+      "label": "The Grassroots Identity Movement",
+      "comment": "PERSPECTIVE 1: GRASSROOTS IDENTITY MOVEMENT (SNARE) — Authentic identity formation is the primary target. Movements face gatekeeping (what counts as 'legitimate' identity), media surveillance that transforms lived experience into consumable narrative, and institutional capture of spokespersons. Exit options are severely constrained: claiming identity authentically without institutional validation means invisibility; seeking validation means compromising the authenticity that motivated organizing in the first place. The constraint extracts coordination capacity and converts it into controlled representation."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "moderate",
-      "time_horizon": "generational",
+      "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Community Organizer",
-      "comment": "PERSPECTIVE 2: COMMUNITY ORGANIZER (TANGLED ROPE) \u2014 Uses identity-based framing as a coordination tool (rope function) but is constrained by elite gatekeeping of mainstream visibility. Benefits from community cohesion; harmed by the capture of identity into elite discourse. Faces active enforcement \u2014 attempted co-optation, deplatforming, and misrepresentation."
+      "spatial_scope": "regional",
+      "label": "The Community Identity Leader",
+      "comment": "PERSPECTIVE 2: COMMUNITY IDENTITY LEADER (TANGLED ROPE) — Local leaders experience mixed coordination and extraction. They genuinely coordinate within-community identity formation and build solidarity (coordination function). But they also face institutional pressure: media requests demand 'representative' framing, funders require 'bankable' narratives, and academic institutions offer validation only for certain framings of their identity. The constraint provides some benefits (amplification, resources) alongside extraction (compromised authenticity, coopted representation). Exit is costly but possible."
     },
     {
       "classification_type": "rope",
@@ -48,17 +51,26 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Elite Institution",
-      "comment": "PERSPECTIVE 3: ELITE INSTITUTION (ROPE) \u2014 Experiences identity capture as pure coordination: managing narrative coherence, channeling dissent into approved identities, maintaining cultural hegemony. Extraction runs toward the elite; the coordination mechanism (controlling which identities are legible, legitimate, marketable) is the institution's primary function."
+      "label": "The Cultural Institution (Museum/Academy)",
+      "comment": "PERSPECTIVE 3: CULTURAL INSTITUTION (ROPE) — Museums, universities, and cultural organizations experience the constraint as a coordination mechanism: they translate lived identity into legible, preservable, shareable cultural knowledge. This perspective experiences no meaningful extraction — it is the beneficiary. The institution provides genuine coordination value (preserving identity narratives, enabling cross-community learning) while capturing tremendous value through control over which identities become canonical and which remain invisible. This is experienced as pure coordination from the institutional perspective."
     },
     {
-      "classification_type": "scaffold",
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Influential Identity Entrepreneur",
+      "comment": "PERSPECTIVE 4: INFLUENTIAL IDENTITY ENTREPRENEUR (SNARE) — Well-positioned individuals (activists, intellectuals, artists) who achieve mainstream prominence through the gatekeeping apparatus experience the constraint as a snare. Initial access to platform and validation creates dependency: continued visibility requires maintaining institutional favor, moderating radical claims, 'translating' identity for mainstream consumption. Mobility is illusory — visible exit from the apparatus (rejecting institutional validation) typically results in complete loss of platform. The constraint extracts radical potential and converts it into marketable cultural content."
+    },
+    {
+      "classification_type": "tangled_rope",
       "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The Counter-Hegemonic Coalition",
-      "comment": "PERSPECTIVE 4: COUNTER-HEGEMONIC COALITION (SCAFFOLD) \u2014 Internet-enabled alternative identity formation and horizontal networks bypass traditional gatekeeping. Sees identity capture as a temporary institutional arrangement being undermined by decentralized communication. Sunset logic: as alternative platforms mature and community consensus becomes less dependent on elite legitimation, the capture mechanism loses force."
+      "spatial_scope": "national",
+      "label": "The Counter-Institutional Network",
+      "comment": "PERSPECTIVE 5: COUNTER-INSTITUTIONAL NETWORK (TANGLED ROPE) — Organized groups building alternative validation systems (independent presses, community archives, peer-to-peer identity documentation) experience both coordination and extraction. They coordinate genuine alternative framings and bypass gatekeeping for members (coordination function). But they also face resource constraints, epistemic isolation (their work is dismissed as non-expert or non-canonical), and the structural pressure of having to constantly demonstrate legitimacy against institutional standards they reject. Active enforcement comes through epistemic delegitimization."
     },
     {
       "classification_type": "piton",
@@ -66,8 +78,8 @@
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Legacy Media-Intellectual Complex",
-      "comment": "PERSPECTIVE 5: LEGACY MEDIA-INTELLECTUAL COMPLEX (PITON) \u2014 Traditional mass media and academic credentialing are the institutional mechanisms of identity capture, but their functional power has attenuated as audiences fragment across digital platforms. The theater of 'legitimate representation' persists despite degraded gatekeeping capacity \u2014 universities still bestow cultural capital, newspapers still frame 'serious' identities, but their enforcement mechanisms are inertial rather than structural. Theater ratio \u2265 0.70 as legitimacy narratives become performative."
+      "label": "The Legacy Gatekeeping Apparatus",
+      "comment": "PERSPECTIVE 6: LEGACY GATEKEEPING APPARATUS (PITON) — Traditional media, university departments, and cultural institutions that once controlled identity representation are increasingly performing their own gatekeeping function through institutional inertia. Their claims to expertise in 'legitimate' identity formation persist despite degraded actual authority (social media, community networks, peer validation now compete with institutional judgment). The theater of gatekeeping — peer review panels, editorial boards, curatorial committees — is maintained because the alternative hasn't fully replaced it, not because the mechanism is functionally sufficient. This is theatrical preservation of fading power."
     },
     {
       "classification_type": "mountain",
@@ -75,78 +87,102 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer (Naturalized View)",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURALIZED VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some degree of identity mediation through cultural institutions is inherent to scale. Complex societies always require legible, recognizable identity categories; the gap between lived identity and institutional representation is structural to civilization itself. However, the structural data contradicts the mountain classification \u2014 the engine's false summit detector will identify this as naturalization of what is actually a contingent institutional choice to concentrate gatekeeping power."
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, identity representation necessarily involves mediation, translation, and institutional crystallization — the argument runs that all identity claims must be articulated, framed, and presented to be politically effective, and this inevitably involves gatekeeping of some form. This perspective treats institutional mediation as an immutable law of how collective identity becomes politically legible. However, the omega variables and false summit analysis reveal this as naturalization of a specific institutional arrangement, not an inherent feature of identity politics."
     }
   ],
   "omegas": [
     {
-      "id": "authenticity_measurability",
-      "question": "What constitutes measurable deviation between 'authentic' subaltern identity and elite-captured representation?",
-      "resolution_mechanism": "Comparative discourse analysis of identity expression across gatekept vs ungated platforms; community self-report vs media representation; longitudinal tracking of identity framings over time",
-      "impact": "If deviation is small: identity capture is minimal, constraint is weak rope. If deviation is large and systematic: capture is severe, constraint is snare.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Measurability of deviation between authentic and captured identity"
-    },
-    {
-      "id": "subaltern_coalition_threshold",
-      "question": "At what scale of decentralized identity formation do subaltern groups achieve structural independence from elite gatekeeping?",
-      "resolution_mechanism": "Network analysis of identity formation pathways; measurement of elite gatekeeping reach across platforms; tipping point analysis for shifts from institutional to peer legitimation",
-      "impact": "If threshold is exceeded: scaffold sunset is real and imminent. If threshold is unreachable: scaffold is aspirational; constraint hardens into long-term snare.",
+      "id": "authenticity_vs_legibility_tradeoff",
+      "question": "Is the apparent tradeoff between authentic identity expression and institutional legibility inherent to identity politics, or a contingent feature of elite gatekeeping control?",
+      "resolution_mechanism": "Comparative analysis of identity movements that achieved political power through institutional channels vs those that maintained autonomy outside institutions; examination of whether counter-institutional validation systems produce equally effective political coordination without the authenticity loss.",
+      "impact": "If inherent: mountain classification is justified and elite capture is coordination cost. If contingent: mountain is false summit; the tradeoff is artificially imposed by gatekeeping structure and could be eliminated by decentralized validation systems.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Critical mass for subaltern coalition independence"
+      "description": "Whether authenticity-legibility tradeoff is inherent or contingent"
     },
     {
-      "id": "elite_capture_resilience",
-      "question": "How quickly do elite institutions adapt to and re-capture counter-hegemonic identity forms as they emerge?",
-      "resolution_mechanism": "Time-series analysis of identity memes from grassroots origin to elite adoption; measurement of capture latency; identification of identity forms that resist elite absorption",
-      "impact": "If latency is short (< 6 months): elite capture is near-total, enabling rapid conversion of dissent to commodity. If latency is long (> 2 years): window for autonomous identity politics exists.",
+      "id": "institutional_vs_subaltern_epistemology",
+      "question": "Do institutional validation systems (academia, museums, media) genuinely assess identity authenticity, or do they evaluate conformity to institutional aesthetic and political preferences?",
+      "resolution_mechanism": "Meta-analysis of institutional selection bias in which identity narratives are elevated vs suppressed; examination of institutional positions on politically threatening vs politically neutral identity claims; comparison of 'expert' institutional judgment against community self-assessment of representativeness.",
+      "impact": "If genuine assessment: institutions provide valuable filtering and curation. If aesthetic conformity: institutional validation is extraction mechanism disguised as expertise, and institutional gatekeeping is structural oppression.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Adaptive capacity of elite institutions to recapture emerging identities"
+      "description": "Whether institutions assess authenticity or enforce conformity"
     },
     {
-      "id": "horizontal_legitimation_sufficiency",
-      "question": "Does peer-based identity legitimation (community consensus, grassroots verification) substitute for institutional credentialing as a source of political efficacy?",
-      "resolution_mechanism": "Comparative study of identity-based mobilization effectiveness: institutional-certified vs community-legitimate vs hybrid; tracking of sustained organization without elite validation",
-      "impact": "If sufficient: subaltern groups can mobilize independently; scaffold sunset is structural. If insufficient: institutional legitimation remains bottleneck; constraint hardens.",
+      "id": "commensurability_of_counterinstitutional_validation",
+      "question": "Can decentralized, community-based identity validation systems (peer networks, community archives, social media coordination) scale to provide equivalent legitimacy and political efficacy as institutional validation?",
+      "resolution_mechanism": "Longitudinal tracking of identity movements with primarily community-based vs institutional validation; measurement of political outcomes, longevity, and coalition durability across both pathways; assessment of whether institutional dismissal of non-institutional validation is epistemically justified or a power maintenance strategy.",
+      "impact": "If scalable and effective: scaffold perspective is justified; alternative pathways can bypass the snare. If not: grassroots movements remain dependent on institutional recognition for political effectiveness.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether peer legitimation can substitute for institutional credentialing"
+      "description": "Whether counter-institutional validation systems can scale effectively"
+    },
+    {
+      "id": "elite_consolidation_vs_identity_democratization",
+      "question": "Is the constraint maintaining stable elite control of identity representation, or is elite control actively eroding as communication technologies and decentralized platforms distribute validation authority?",
+      "resolution_mechanism": "Measurement of institutional gatekeeping power over time; tracking of successful identity movements that bypass traditional institutions; assessment of whether elite consolidation metrics are increasing or decreasing; analysis of whether theater_ratio increase indicates gatekeeping adaptation or actual loss of substantive control.",
+      "impact": "If consolidating: snare classification persists; counter-institutional movements will face persistent extraction. If eroding: constraint may be transitioning from snare toward scaffold as alternative pathways mature.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether elite identity control is consolidating or eroding"
+    },
+    {
+      "id": "identity_capture_specificity",
+      "question": "Does elite identity capture function uniformly across all marginalized identity categories, or does effectiveness vary substantially by identity type, geographic location, and political threat level?",
+      "resolution_mechanism": "Comparative analysis across identity movements (racial, gender, class, religious, sexual orientation, disability, etc.); measurement of institutional capture rates and counter-institutional success rates by identity category; assessment of whether threat level to elite interests correlates with capture intensity.",
+      "impact": "If uniform: single constraint story is appropriate. If highly variable: decompose into constraint family with separate stories for each identity-type/threat-level combination.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether identity capture operates uniformly across identity categories"
     }
   ],
   "measurements": [
     {
-      "metric": "theater_ratio",
+      "metric": "base_extractiveness",
       "time_point": 0,
       "value": 0.42
     },
     {
-      "metric": "theater_ratio",
+      "metric": "base_extractiveness",
       "time_point": 10,
       "value": 0.52
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.64
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.38
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
       "time_point": 20,
       "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.62
     }
   ],
   "interval": {
@@ -154,37 +190,34 @@
     "end": 20
   },
   "commentary": {
-    "narrative_context": "Elite identity capture is the process by which authentic social identity \u2014 a potential source of grassroots political coordination, solidarity, and resistance \u2014 is systematically neutralized through institutional gatekeeping, commodification, and controlled representation. The constraint operates through multiple overlapping mechanisms: media gatekeeping determines which identities are 'legible' or 'legitimate' to mainstream audiences; academic and cultural institutions validate certain identity narratives while delegitimizing others; consumer markets absorb identity expression as commodity fetishism; digital platforms intermediate identity formation while extracting data and attention. The Staley-Bagg synthesis identifies the core structural dynamic: authentic identity would enable subaltern groups to coordinate political action independent of elite approval. By controlling the channels through which identity becomes publicly legible (media, academia, cultural production), elites convert identity from a potential source of autonomous power into a mechanism of extraction and control. The theater_ratio (0.64) reflects that much of the institutional apparatus around identity legitimation is performative \u2014 credentialing institutions maintain the appearance of meritocratic judgment while gatekeeping access; media outlets claim to represent diverse voices while filtering through editorial control; platforms advertise freedom while algorithmically steering toward elite-preferred narratives. The extractiveness (0.58) reflects that the constraint is hybrid: some genuine coordination occurs (identities do coalesce into movements), but the coordination is systematically advantaged toward elite-approved forms and disadvantaged toward autonomous subaltern power. The suppression (0.68) reflects substantial barriers to exit \u2014 subaltern groups cannot easily form politically efficacious identities outside the institutional mediation system, because the institution controls access to visibility, resources, and the practical pathways to political organization.",
+    "narrative_context": "Elite identity capture describes the systematic process by which authentic social identities — capable of generating grassroots political coordination, solidarity, and resistance — are neutralized through institutional gatekeeping, commodification, and controlled representation. The mechanism operates across media, academia, museums, and cultural institutions that determine which identities are 'legible,' 'legitimate,' or 'representable' to mainstream audiences. This constraint exhibits Tangled Rope structure at the analytical level: it performs genuine coordination (translating lived experience into shareable cultural knowledge, enabling cross-community learning) while simultaneously extracting the political power from identity movements by channeling them through institutions controlled by elites with different interests. The false summit analysis reveals that treating institutional mediation as an immutable law of identity politics naturalizes what is actually a specific institutional arrangement vulnerable to disruption by decentralized validation systems. The rising theater_ratio over the measurement interval indicates that institutional gatekeeping has increasingly become performative rather than functionally necessary — elite institutions maintain control through theatrical legitimacy claims and epistemic authority rather than substantive coordination value.",
     "key_agents": [
-      "Authentic Subaltern Identity: Primary victim (powerless/trapped) \u2014 source of potential political power, systematically captured and converted to commodity",
-      "Grassroots Political Mobilization: Primary victim (powerless/trapped) \u2014 constrained by institutional gatekeeping, faces active suppression of non-approved identity framings",
-      "Institutional Elites: Primary beneficiary (institutional/arbitrage) \u2014 maintain hegemony through control of identity legitimation channels; extract cultural authority and political consent",
-      "Cultural Gatekeepers: Primary beneficiary (institutional/arbitrage) \u2014 media, academia, publishing, cultural institutions; manage narrative coherence and maintain elite coordination",
-      "Community Organizers: Secondary victim (moderate/constrained) \u2014 attempt to mobilize subaltern identity for autonomous politics but face co-optation and deplatforming",
-      "Counter-Hegemonic Coalition: Organized victim (organized/constrained) \u2014 internet-enabled horizontal networks building alternative identity formation pathways with sunset logic",
-      "Legacy Media-Intellectual Complex: Institutional beneficiary (institutional/arbitrage) \u2014 maintains gatekeeping function through performative legitimation; power is inertial rather than active",
-      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional gatekeeping as inherent to complex societies"
+      "Grassroots Identity Movements: Primary victims (powerless/trapped) — authentic identity formation systematically channeled through gatekeeping apparatus; authenticity sacrificed for institutional recognition",
+      "Community Identity Leaders: Secondary victims (moderate/constrained) — coordinate within-community identity formation but face institutional pressure to conform narratives; constrained by career/funding dependencies",
+      "Influential Identity Entrepreneurs: Captured beneficiaries (powerful/mobile) — achieve prominence through gatekeeping but become dependent on institutional favor; exit from apparatus results in platform loss",
+      "Cultural Institutions (Museums, Universities): Primary beneficiaries (institutional/arbitrage) — control canonical identity representation; provide coordination value (preservation, cross-community learning) while capturing political authority",
+      "Media Corporations: Primary beneficiaries (institutional/arbitrage) — transform identity claims into consumable narrative; gatekeep which identities become visible to mass audiences",
+      "Counter-Institutional Networks: Organized resisters (organized/constrained) — build alternative validation systems (independent presses, community archives, peer validation) to bypass gatekeeping; face epistemic delegitimization",
+      "Legacy Gatekeeping Apparatus: Institutional preservationists (institutional/arbitrage) — maintain gatekeeping through inertia as actual authority erodes; increasingly theatrical as decentralized platforms reduce dependence on institutional validation",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing gatekeeping as immutable law of identity politics rather than contingent institutional arrangement"
     ],
-    "logic_rationale": "Extractiveness (0.58): Moderate-high. The elite captures authenticity itself as a commodity \u2014 the more genuine a subaltern identity feels, the more valuable it is on the cultural market. But the extraction is not maximal (which would require complete suppression of subaltern capacity to form any identity). Subaltern groups do generate genuine identity-based movements; those movements are then channeled into elite-approved forms (electoral politics, consumer activism, cultural representation). The constraint extracts the autonomous political force of identity while leaving enough room for subaltern groups to maintain their own sense of agency. Suppression (0.68): High but not total. Barriers to forming identity outside the gatekeeping system are severe: mainstream visibility requires institutional approval; resource flows go through elite-controlled channels; alternative platforms exist but operate at much smaller scale; deplatforming and discreditation are active mechanisms. But suppression is not absolute \u2014 grassroots identity formation does occur, and counter-hegemonic coalitions are organizing at significant scale. Theater ratio (0.64): Moderate-high and rising. Media representation of identity is substantially performative: newspapers claim to represent diverse perspectives while filtering through editorial control; academia claims meritocratic credentialing while gatekeeping based on cultural capital; platforms claim algorithmic neutrality while optimizing for engagement and elite-preferred narratives. The theater ratio has increased over the interval (0.42 \u2192 0.64) because the actual gatekeeping capacity of legacy institutions has declined (fragmented media, credential inflation, platform saturation) while the performative apparatus has expanded (diversity rhetoric, inclusion initiatives, algorithmic transparency claims) to compensate. The gap between theatrical legitimacy claims and actual gatekeeping function has widened.",
-    "perspectival_gap": "The six perspectives reveal the full structure of how different agents experience the same constraint. The beneficiary (elite institution) experiences rope \u2014 pure coordination that serves their interests. The primary victim (subaltern subject) experiences snare \u2014 trapped extraction with no exit. The moderate victim (community organizer) experiences tangled rope \u2014 some coordination benefit (identity does mobilize communities) mixed with severe extraction (gatekeeping suppresses autonomous politics). The organized victim (counter-hegemonic coalition) experiences scaffold \u2014 the constraint is temporary, being undermined by decentralized platforms and horizontal networks. The degraded beneficiary (legacy media-intellectual complex) experiences piton \u2014 their gatekeeping mechanism is inertial rather than active; theater persists despite declining functional power. The civilizational observer risks false summit (mountain) \u2014 naturalizing institutional gatekeeping as inherent to scale rather than recognizing it as a contingent choice to concentrate legitimation power. This perspectival spread from snare to rope within a single structural phenomenon is diagnostic of the mandatrophy problem: the constraint cannot be classified from a single index because different actors genuinely experience different constraint types.",
-    "directionality_logic": "Directionality (d) derives from the agent's structural position: their power level, exit options, and relationship to the extraction flow. Institutional elites with arbitrage exit options experience low d (0.0-0.15 range) because they are beneficiaries and can arbitrage between competing identity narratives. Powerless subalterns with trapped exit experience high d (0.95 range) because they are victims with no exit from the gatekeeping system. Moderate community organizers with constrained exit experience mid-high d (0.65-0.75 range) because they are partly victimized (gatekeeping constrains their organizing capacity) but also partly capable (community identity does mobilize). Organized counter-hegemonic coalitions with constrained exit experience lower d (0.45-0.55 range) because they have some agency (alternative platforms, horizontal networks) even though they face gatekeeping constraints. The engine computes f(d) from these values, producing chi = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S). For the subaltern trapped agent, high d yields high f(d), amplifying the experienced extraction. For the elite beneficiary, low d yields negative f(d), producing negative chi (they experience the constraint as subsidizing them, not extracting from them). The national scope (\u03c3=1.0) provides standard scaling; global scope (\u03c3=1.2) amplifies verification difficulty and thus extraction.",
-    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The constraint satisfies the tangled rope gates: (1) requires_active_enforcement=true: elite institutions actively maintain gatekeeping mechanisms (editorial boards, credentialing procedures, algorithmic ranking, deplatforming); (2) beneficiaries=[institutional_elites, cultural_gatekeepers]: clear identification of who benefits from identity capture; (3) victims=[authentic_subaltern_identity, grassroots_political_mobilization]: clear identification of who bears the cost. The constraint exhibits both genuine coordination function (identity formation does enable subaltern groups to organize) and asymmetric extraction (the coordination is systematically advantaged toward elite-approved forms). The mandatrophy is resolved by recognizing that identity capture is neither pure extraction (snare) nor pure coordination (rope), but a hybrid mechanism where coordination infrastructure is captured to extract autonomous political power. The snare perspective (subaltern subject) represents the subaltern's genuine structural experience \u2014 they cannot exit gatekeeping. The rope perspective (elite institution) represents the elite's genuine structural experience \u2014 they coordinate cultural hegemony with no experienced extraction. The tangled rope perspective (community organizer) represents the mixed experience of moderate agents \u2014 both benefits and costs are real. The scaffold perspective reveals the structural fragility of the constraint \u2014 as alternative legitimation sources mature, the gatekeeping mechanism loses force. The piton perspective identifies institutional decay \u2014 the actual gatekeeping capacity is declining even as the performative apparatus expands."
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts political power from identity movements by requiring institutional validation for mainstream legitimacy. Communities that organize around authentic identity claims must either remain invisible (no political efficacy) or seek institutional representation (which requires narrative compromise). The extraction is substantial because it redirects the political energy of identity movements toward elite institutions. However, extractiveness is not as high as pure snare (0.72+) because genuine coordination value exists — institutions do translate identity into culturally legible forms that enable some cross-community learning and political resonance. The measurement trajectory (0.42 → 0.58) indicates rising extraction as digital platforms have reduced the institutional gatekeeping apparatus's functional necessity while it maintains control through theatrical authority and epistemic delegitimization. Suppression (0.62): High. Multiple overlapping suppression mechanisms: media gatekeeping determines visibility (what identities become culturally legible); academic validation systems determine which identity narratives become 'expert-approved'; institutional capture of spokespersons removes radicalizing potential; epistemic delegitimization of non-institutional validation ('that's not real scholarship/journalism/curation'). Rising trajectory (0.48 → 0.62) indicates enforcement intensification — institutions are doubling down on theatrical gatekeeping authority as substantive control erodes. Theater ratio (0.68): High. Institutional validation increasingly performs legitimacy rather than assesses authenticity. Peer review panels, editorial boards, and curatorial committees operate as theatrical demonstrations of expertise and impartiality while actually enforcing conformity to institutional aesthetic and political preferences. The rising trajectory (0.55 → 0.68) indicates that gatekeeping has become increasingly performative — institutions maintain appearance of authority through ritual even as decentralized validation systems undermine substantive dependence on institutional judgment.",
+    "perspectival_gap": "The constraint produces maximal perspectival divergence across the observation site. The institutional cultural validator (rope) experiences pure coordination — they are extracting no meaningful value, merely performing a coordination service. The grassroots identity movement (snare) experiences pure extraction — they must surrender authenticity to achieve visibility. The community identity leader (tangled rope) experiences mixed coordination/extraction — they genuinely coordinate within-community but face institutional pressure to compromise. The influential entrepreneur (snare) experiences dependency extraction — initial visibility creates lock-in requiring continued institutional favor. The counter-institutional network (tangled rope) experiences resistance extraction — they provide coordination alternatives but face epistemic suppression. The analytical observer (mountain) risks seeing immutable natural law where the structural data reveals contingent institutional arrangement. The perspectival gap reveals that the same phenomenon (identity-to-institution translation) appears as legitimate coordination from the institutional perspective and extractive gatekeeping from the grassroots perspective. The false summit analysis exposes that framing institutional mediation as immutable naturalizes the gatekeeping power that could be bypassed through decentralized validation.",
+    "directionality_logic": "Directionality in this constraint is determined by structural position relative to institutional gatekeeping authority. Institutions (cultural validators, media corporations) occupy the low-d beneficiary position — they extract value (control over canonical representation) while experiencing the constraint as coordination. Grassroots movements occupy the high-d victim position — they bear the cost of authentication through institutional channels (compromised authenticity, platform dependence). Community leaders occupy the medium-d position (constrained exit) — they gain resources and amplification through institutional channels while paying the cost of narrative compromise. Identity entrepreneurs occupy an unstable position: initially appear to have mobile exit options (powerful + mobile) but the snare classification reveals that institutional dependence locks them in despite surface mobility. The counter-institutional network occupies the organized/constrained position — they have agency and alternatives but face structural barriers (epistemic delegitimization, resource scarcity) that limit exit effectiveness. No directionality overrides are necessary — the structural derivation captures the actual relationship through power atom + exit options + beneficiary/victim declarations.",
+    "mandatrophy_analysis": "The mandatrophy in elite identity capture is resolved by decomposing perspectives across institutional position. The apparent conflict ('is this coordination or extraction?') reflects that different institutional positions experience genuinely different constraint structures. From the cultural institution's perspective, the constraint IS pure coordination (rope) — institutions do perform real service. From the grassroots movement's perspective, it IS pure extraction (snare) — movements lose political autonomy for institutional validation. From the analytical perspective, recognizing both as simultaneously true reveals that the constraint is a tangled_rope operating as a coordination mechanism for elites while functioning as an extraction mechanism for subalterns. The false summit perspective (mountain) represents the naturalization move that masks this asymmetry — treating institutional mediation as inevitable law rather than contingent structure. Resolving the mandatrophy requires the analytical observer to recognize that all six classifications are structurally accurate from their respective observation positions, and that the constraint cannot be reduced to a single type without losing the asymmetric structure it instantiates. The synthesis reveals this as the core extractive mechanism: elite gatekeeping institutions legitimize themselves by framing their control as inevitable coordination necessity, while grassroots movements experience the same structure as contingent suppression. The false summit detection (engine classifies this as mountain from the analytical civilizational perspective despite measurable beneficiaries and victims) signals this naturalization and prompts investigation into whether institutional gatekeeping is inherent or imposed."
   },
   "boltzmann": {
-    "coordination_type": "information_standard"
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
   },
   "network": {
     "affects_constraints": [
-      "credential_inflation_cycle",
-      "algorithmic_narrative_gatekeeping",
-      "media_ownership_concentration"
+      "grassroots_coalition_formation",
+      "subaltern_epistemic_authority",
+      "institutional_legitimacy_capture",
+      "media_representation_gatekeeping"
     ],
-    "dual_formulation_note": "Elite identity capture decomposes into three structurally distinct constraints: (1) credential_inflation_cycle (\u03b5\u22480.35): institutional gatekeeping through academic/cultural capital; (2) algorithmic_narrative_gatekeeping (\u03b5\u22480.52): platform-mediated identity filtering; (3) media_ownership_concentration (\u03b5\u22480.48): legacy media control of narrative legitimacy. The parent constraint (elite_identity_capture_2026, \u03b5\u22480.58) models the integrated system. Each upstream constraint contributes to the overall extraction mechanism; weakening any upstream constraint (e.g., credential inflation through decentralization, algorithmic gatekeeping through interoperability, media concentration through platform fragmentation) reduces the parent constraint's effective extraction."
+    "dual_formulation_note": "Elite identity capture is a meta-constraint that operates across multiple subordinate constraints. Stories of specific identity movements (racial justice, labor organizing, gender identity, class consciousness) each contain their own extractiveness and constraint structure, but they all share the common gatekeeping mechanism described here. This story describes the generic constraint structure; specific identity movements instantiate variations with different ε values depending on the particular gatekeeping apparatus and counter-institutional resistance capacity."
   },
-  "directionality_overrides": [
-    {
-      "power_atom": "institutional",
-      "d_value": 0.1
-    }
-  ]
+  "directionality_overrides": []
 }

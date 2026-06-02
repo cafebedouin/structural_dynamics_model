@@ -1,0 +1,269 @@
+{
+  "header": {
+    "constraint_id": "qualified_immunity_doctrine__accountability_void_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_qualified_immunity_accountability_void",
+    "measurement_id_prefix": "qiav",
+    "story_uid": "b6d0eb89-0193-46f6-9f4a-3911ee20cfef"
+  },
+  "base_properties": {
+    "extractiveness": 0.81,
+    "suppression": 0.78,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Qualified Immunity Doctrine: Accountability Void Reading",
+    "topic_domain": "constitutional_law/civil_rights/law_enforcement_accountability",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "law_enforcement_officers",
+      "government_jurisdictions"
+    ],
+    "victims": [
+      "constitutional_rights_victims",
+      "civil_rights_remedial_capacity",
+      "equal_protection_guarantees"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Constitutional Rights Victim",
+      "comment": "PERSPECTIVE 1: VICTIM OF CONSTITUTIONAL VIOLATION (SNARE) — Officer commits clear constitutional violation (unreasonable seizure, excessive force, warrantless arrest). Victim has no remedy: qualified immunity bars § 1983 suit unless victim can cite prior case with materially identical facts ('clearly established law'). This is structurally a catch-22 — no case law until a victim wins a suit, but no suit succeeds without prior case law. Victim is trapped with no exit and no recourse. Maximum extraction: the officer acted with constitutional knowledge they would face no consequence."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Municipal Government",
+      "comment": "PERSPECTIVE 2: MUNICIPAL GOVERNMENT / JURISDICTION (TANGLED ROPE) — City faces liability pressure from civil rights lawsuits and negative publicity, but qualified immunity provides significant insulation. Municipality benefits from cost-reduction (fewer settlements, lower liability exposure) but also bears costs: reputational damage from high-profile violations, pressure to maintain officer discipline independently of litigation threat, tension between federal funding conditions (sometimes tied to compliance) and qualified immunity shields. Mixed extraction and coordination function — some genuine coordination (need to maintain government function without paralyzing officer discretion) alongside asymmetric extraction (cost-shifting to victims)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Law Enforcement Officer",
+      "comment": "PERSPECTIVE 3: LAW ENFORCEMENT OFFICER (ROPE) — Officer perceives qualified immunity as coordination mechanism solving a legitimate collective action problem: officers need discretion to act decisively in uncertain situations without fear of personal financial ruin from frivolous litigation. The doctrine provides this through the 'clearly established law' requirement. From the officer's immediate perspective, QI is not an extraction mechanism but a necessary protection enabling effective policing. Officers experience this as coordination that enables their function, not as extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Civil Rights Litigation Community",
+      "comment": "PERSPECTIVE 4: CIVIL RIGHTS ADVOCATES & LITIGATION INFRASTRUCTURE (TANGLED ROPE) — Civil rights attorneys and advocacy organizations (NAACP-LDF, ACLU, Center for Constitutional Rights, local legal aid) benefit from qualified immunity in one sense — it creates a clear 'enemy' for fundraising and mobilization, and generates the ongoing need for litigation infrastructure. But they face extreme extraction: the clearly-established-law bar makes almost every novel violation immune, gutting the litigation strategy. This is a constrained-to-mobile paradox: they have resources and expertise (mobile), but the doctrine's structure (requires pre-existing case law) constrains their ability to set precedent through litigation. Mixed extraction and coordination — both elements genuinely present."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Supreme Court & Precedent Machine",
+      "comment": "PERSPECTIVE 5: SUPREME COURT DOCTRINE & PRECEDENT INSTITUTION (PITON) — The Supreme Court created and maintains qualified immunity doctrine through case law interpretation (not statutory text). The doctrine persists despite documented critique from sitting justices (Sotomayor), legal scholars (Baude, Sachs), and comparative constitutional systems. The SCOTUS institution sees the doctrine as degraded — multiple justices have signaled concern — but the precedent persists through institutional inertia. Reversal requires either SCOTUS majority change or Congressional intervention. The performative element: QI is maintained through formal reasoning about 'clearly established law' and 'objectively reasonable' officer conduct, but the practical effect is nearly absolute immunity. Theater ratio reflects this gap between doctrinal language and actual outcome."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law View (Accountability Void)",
+      "comment": "PERSPECTIVE 6: NATURAL LAW VIEW / INHERENT LIMITS (MOUNTAIN) — From a civilizational perspective, some form of official immunity from personal liability is inevitable and natural: officers cannot function if every discretionary decision risks personal bankruptcy. The argument naturalizes: functional government inherently requires some shield against consequences. However, this is a false summit — the natural-law framing masks the contingent choice to place the shield at the 'clearly established law' bar rather than at alternative thresholds (e.g., 'in violation of a constitutional right,' 'reckless disregard for rights,' 'lack of probable cause,' standard tort negligence). The constraint is not natural law but a specific doctrinal allocation that benefits officers and governments at the cost of victim remedies."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "clearly_established_law_circularity",
+      "question": "Does the 'clearly established law' requirement create an impossible circularity that amounts to absolute immunity in practice?",
+      "resolution_mechanism": "Empirical analysis: (a) percentage of qualified immunity motions granted in practice; (b) success rate of cases that reach summary judgment on QI grounds; (c) comparison of constitutional violation frequency to damages awards; (d) analysis of 'novel facts' determination by courts (how frequently are facts deemed insufficient precedent?)",
+      "impact": "If the circularity is empirically real (>90% of QI motions granted, <5% of novel violations reach jury): this confirms snare classification from victim perspective and rules out protective_scaffold_reading (which requires genuine discretionary protection vs actual chilling effect on accountability). If circularity is overstated: snare classification weakens toward tangled_rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether clearly established law requirement creates empirical absolute immunity"
+    },
+    {
+      "id": "officer_chilling_effect_threshold",
+      "question": "What level of liability threat (what doctrinal standard) would actually chill officer discretion vs. what level merely prevents accountability?",
+      "resolution_mechanism": "Comparative analysis: jurisdictions or periods with different QI standards (e.g., pre-Harlow absolute immunity, post-Harlow reasonable-officer standard, hypothetical strict liability); correlate with data on: officer-involved incidents, use-of-force rates, complaint and investigation patterns, settlements and verdicts, officer recruitment and retention",
+      "impact": "If officer behavior is unaffected by moving from current QI to reasonable-care standard: current QI is not protective of discretion but merely shields extraction. If officer behavior significantly changes: some form of immunity may be structurally necessary. This omega determines whether protective_scaffold_reading has a coherent empirical basis.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal link between liability threat and officer conduct change"
+    },
+    {
+      "id": "congressional_section_1983_intent",
+      "question": "What did Congress intend § 1983 to provide as a remedy for constitutional violations by state actors?",
+      "resolution_mechanism": "Historical analysis: (a) legislative history of 1871 civil rights act (Reconstruction era intent); (b) 1871 common-law context (did officers have immunity?); (c) text of statute ('deprived of any rights, privileges, or immunities'); (d) contemporaneous state court and federal court interpretation",
+      "impact": "If Congress intended full remedy without officer immunity: QI is ultra vires judicial doctrine inconsistent with statutory text, supporting constitutional_fidelity_reading and undermining this accountability_void_reading's legitimacy claim. If Congress intended some immunity: both readings have doctrinal grounding. This is the definitional fork between readings.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Congressional intent regarding § 1983 officer liability and immunity"
+    },
+    {
+      "id": "alternative_accountability_mechanisms_effectiveness",
+      "question": "Do alternative accountability mechanisms (state tort law, administrative discipline, criminal prosecution, civil service procedures) adequately protect constitutional rights in absence of § 1983 damages remedy?",
+      "resolution_mechanism": "Empirical comparison: jurisdictions with strong QI immunity paired with: (a) robust state tort remedies; (b) independent civilian oversight boards; (c) state attorney general enforcement; (d) federal criminal Civil Rights Act § 242 prosecution rates. Cross-correlate constitutional violations with accountability outcomes.",
+      "impact": "If alternative mechanisms are effective: QI may represent a systematic choice to route accountability through different channels (administrative/criminal vs civil damages). If alternatives are documented failures: QI creates systematic immunity gap. This determines whether extractiveness should be adjusted downward or remains at 0.81.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Efficacy of alternative accountability mechanisms absent § 1983 remedy"
+    },
+    {
+      "id": "qualified_immunity_reading_kernel_distinction",
+      "question": "Which reading of the qualified immunity doctrine kernel is empirically instantiated in current Supreme Court jurisprudence and lower court practice?",
+      "resolution_mechanism": "Doctrinal analysis: (a) track Supreme Court language in recent QI decisions (Kisela 2018, McCoy 2020, Taylor v. Riojas 2020); (b) analyze summary judgment grant rates and reasoning patterns in lower courts; (c) examine how courts apply 'clearly established law' and 'objective reasonableness' in practice vs. doctrinal language; (d) compare SCOTUS majority rhetoric (protective scaffolding narrative) vs. observed outcomes (systematic immunity)",
+      "impact": "If observed practice matches accountability_void_reading (near-absolute immunity in practice): this reading is the true structural description. If practice matches protective_scaffold_reading (genuine protection of reasonable discretion): the readings are both live and the snare classification should be reconsidered as tangled_rope. This omega documents which reading has structural coherence.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Which QI reading is instantiated in actual judicial practice"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.62,
+      "id_override": "qiav_extractiveness_1971"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1,
+      "value": 0.71,
+      "id_override": "qiav_extractiveness_1989"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.81,
+      "id_override": "qiav_extractiveness_2024"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55,
+      "id_override": "qiav_suppression_1971"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1,
+      "value": 0.68,
+      "id_override": "qiav_suppression_1989"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.78,
+      "id_override": "qiav_suppression_2024"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4,
+      "id_override": "qiav_theater_1971"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1,
+      "value": 0.52,
+      "id_override": "qiav_theater_1989"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.65,
+      "id_override": "qiav_theater_2024"
+    }
+  ],
+  "interval": {
+    "start": 1971,
+    "end": 2024
+  },
+  "commentary": {
+    "narrative_context": "Qualified immunity doctrine is a judicial creation (not in § 1983 statutory text) that shields state officers from personal § 1983 damages liability except in cases where the officer violated a 'clearly established' constitutional right. This reading, the accountability_void_reading, models qualified immunity as a systematic extraction mechanism that guarantees impunity for constitutional violations by making the remedy (damages suit) structurally unavailable. The constraint operates through a circularity: a right is 'clearly established' only if a prior case with materially identical facts has declared it; new violations are by definition not clearly established; therefore novel constitutional violations enjoy immunity. The victim faces a catch-22 — they cannot win a suit because no prior case establishes the violation, but no case law can be established until someone wins a suit. This reading is one of three structurally distinct interpretations of the QI kernel. The protective_scaffold_reading argues that QI is necessary to protect officer discretion and that 'clearly established law' is a coherent standard enabling genuine protection. The constitutional_fidelity_reading argues that QI is inconsistent with § 1983 statutory text, which creates liability for violations of constitutional rights with no textual immunity. The accountability_void_reading argues that regardless of the doctrine's original intent, its current instantiation and doctrinal trajectory have created near-absolute immunity, making it an extraction mechanism. This reading's structural claim: the doctrine systematically shields from consequences those who violate rights, and shields governments from vicarious liability for officers' violations, while placing the full cost on rights-violation victims who have no remedy. The extractiveness trajectory (0.62 → 0.71 → 0.81 from 1971 to 2024) reflects the ratcheting effect of expanding 'clearly established law' requirement and increasingly stringent summary judgment standards for qualified immunity, making the immunity more comprehensive over time.",
+    "key_agents": [
+      "Law Enforcement Officers: Primary beneficiary (institutional/arbitrage) — shielded from personal damages liability; experience doctrine as protective of discretion",
+      "Constitutional Rights Victims: Primary victim (powerless/trapped) — suffer constitutional violations with no damages remedy; caught in clearly-established-law circularity",
+      "Government Jurisdictions (cities, counties, states): Secondary beneficiary (institutional/arbitrage) — shielded from vicarious liability; experience cost-reduction from limited settlements",
+      "Civil Rights Litigation Infrastructure: Mixed (organized/mobile-constrained) — benefits from mobilization against QI but constrained by immunity from setting precedent; operates in a high-friction environment",
+      "Supreme Court / Doctrinal Institution: Piton actor (institutional/arbitrage) — maintains degraded doctrine through institutional inertia despite expressed concern from sitting justices",
+      "Alternative Accountability Systems (administrative discipline, state courts, criminal prosecution): Weak actors (moderate/constrained) — cannot fully substitute for § 1983 remedy despite potential coordination function"
+    ],
+    "logic_rationale": "Extractiveness (0.81): High and rising. The doctrine shields officers from consequences for constitutional violations. Base extractiveness reflects the structural reality that the 'clearly established law' requirement eliminates remedy for novel constitutional violations — this is systematic extraction from victims to officers. The rising trajectory (0.62 → 0.81 over 53 years) reflects doctrinal drift toward stricter immunity standards. Early QI (1970s) was a qualified immunity with some access to jury; current QI (2024) is near-absolute immunity for officials in discretionary roles. Suppression (0.78): High. The constraint operates through multiple suppressive mechanisms: (a) legal barrier — qualified immunity bars the suit on summary judgment; (b) epistemic barrier — victims and advocates cannot identify 'clearly established' standards in advance; (c) cost barrier — litigation costs are borne by victims while officers face no personal cost; (d) institutional barrier — alternative accountability mechanisms (administrative, criminal) are substantially weaker than § 1983 damages. Theater ratio (0.65): Moderate-high and rising. The performative element is the 'clearly established law' and 'objective reasonableness' standard, which operates as formal legal reasoning but produces outcomes (near-absolute immunity) that do not match the doctrine's stated protective intent. The rising trajectory reflects increasing gap between doctrinal language (protection of genuine discretion) and actual effect (systematic immunity).",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. Officers experience it as rope (necessary coordination mechanism protecting discretion). Victims experience it as snare (systematic extraction with no exit). Litigation advocates experience it as tangled rope (mixed benefit and constraint). Governments experience it as tangled rope (cost reduction alongside reputational pressure). The Supreme Court institutional perspective is piton (acknowledging degradation while maintaining through inertia). The civilizational analytical view risks naturalizing contingent doctrine as inherent limit. The gap between rope (officer perspective) and snare (victim perspective) is the core diagnostic signal — it reveals that the constraint's protective framing (rope) masks systematic immunity (snare).",
+    "directionality_logic": "Directionality is derived from beneficiary/victim status and exit options. Officers are beneficiaries with arbitrage-exit: they can comply with law, pay damages, and continue functioning (they exit the constraint by accepting accountability). But they choose not to — they benefit from immunity. Their d is low (0.05–0.15, around beneficiary + institutional canonical). Victims are pure victims with no exit: they cannot exit the constraint by complying with law (officers violated it), cannot exit by leaving jurisdiction (it's national), cannot exit by accepting damages (remedy is barred). Their d is maximal (0.95). This asymmetry is the structural description of extraction: officers benefit, victims bear cost, exit asymmetry is extreme. The f(d) sigmoid maps victim d=0.95 to maximum experienced extractiveness (~1.42 in legacy π scale). Scope modifier σ(national) = 1.0, so chi calculation for victims is χ = 0.81 × 1.42 × 1.0 ≈ 1.15, confirming snare-level experienced extraction.",
+    "kernel_context": "This constraint instantiates the accountability_void_reading of the qualified_immunity_doctrine kernel. The kernel is the judicial doctrine created in Harlow v. Fitzgerald (1457 U.S. 800, 1982): officers are immune from personal liability under § 1983 except when they violate a 'clearly established' constitutional right. Three readings are structurally distinct: (1) accountability_void_reading (this constraint): QI has become near-absolute immunity, creating a systematic accountability gap; (2) protective_scaffold_reading: QI protects genuine discretion necessary for effective officer function, and 'clearly established law' is a workable standard; (3) constitutional_fidelity_reading: QI is inconsistent with § 1983 statutory text, which creates liability without textual immunity. These readings coexist as live jurisprudential positions held by different courts, scholars, and justices. Accountability_void_reading influences the other two by establishing the empirical severity level — if extractiveness is truly 0.81 and rising, the protective_scaffold_reading's claim of 'necessary protection' becomes harder to defend, and constitutional_fidelity_reading becomes more attractive as alternative interpretation.",
+    "mandatrophy_analysis": "Mandatrophy is resolved by recognizing this as a snare reading of a contested kernel. The constraint is high-extraction (0.81) with substantial suppression (0.78) and performative elements (theater 0.65). The mandatrophy check: 'Is this pure extraction or genuine coordination?' The protective_scaffold_reading claims coordination — officers need discretion protection. The accountability_void_reading claims pure extraction — the 'protection' masks immunity. The mandatrophy resolves through the directionality analysis: if officers genuinely needed the specific 'clearly established law' standard to function (rather than alternative standards like 'reckless disregard' or 'lack of probable cause'), then some coordination function exists. But the empirical trajectory (rising extractiveness, expanding immunity, rising theater) suggests the doctrine has drifted from protection toward extraction. The reading's coherence lies in documenting this drift — QI may have started as protective scaffolding (coordinate protection + some openness to liability) and degraded into pure snare (near-absolute immunity). The classification as snare (not tangled rope) is justified because the coordination function (if it existed) has atrophied and the doctrine now operates primarily as extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "qualified_immunity_doctrine__protective_scaffold_reading",
+      "qualified_immunity_doctrine__constitutional_fidelity_reading",
+      "police_union_contract_immunity",
+      "municipal_liability_doctrine",
+      "state_tort_immunity",
+      "civil_rights_remedial_gap"
+    ],
+    "dual_formulation_note": "The qualified_immunity_doctrine kernel has three structurally distinct readings, each with its own ε value and classification. This file instantiates accountability_void_reading (ε=0.81, snare). Sibling readings (protective_scaffold_reading and constitutional_fidelity_reading) are separate constraint stories with different ε values reflecting different empirical assessments. All three link through network.affects_constraints to show their interdependence within the kernel structure. The constraint family is: (1) accountability_void_reading (this file, ε=0.81, snare, empirical claim: immunity is nearly absolute); (2) protective_scaffold_reading (separate file, ε≈0.35–0.45, tangled rope or scaffold, empirical claim: immunity is necessary for discretion); (3) constitutional_fidelity_reading (separate file, ε≈0.55–0.65, tangled rope, empirical claim: QI is inconsistent with § 1983 text but operates as mixed mechanism). The epsilon difference reflects that the readings make genuinely different empirical predictions about what the doctrine does. Downstream constraints (police_union_contract_immunity, municipal_liability_doctrine) are affected by which reading of QI becomes institutionally dominant."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.1
+    },
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "qualified_immunity_doctrine__protective_scaffold_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "qualified_immunity_doctrine__constitutional_fidelity_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "accountability_gap_is_rights_violation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "clearly_established_law_circularity_empirical_absolute_immunity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "full_constitutional_remedy_for_rights_violations",
+    "drift_state": {
+      "moment": "contemporary_expanded_immunity",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

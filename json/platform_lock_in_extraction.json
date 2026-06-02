@@ -4,23 +4,25 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "plat"
+    "measurement_id_prefix": "plockex",
+    "story_uid": "4d95c5f4-d527-44e4-a99d-78ee54a75bbe",
+    "created_at": "2026-02-26T14:32:18Z"
   },
   "base_properties": {
-    "extractiveness": 0.68,
-    "suppression": 0.72,
-    "theater_ratio": 0.55,
-    "claimed_type": "snare",
-    "human_readable": "Platform Lock-In Extraction",
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Platform Lock-In Extraction in Digital Marketplaces",
     "topic_domain": "digital_economy/platform_governance",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "platform_operator"
     ],
     "victims": [
-      "merchant_sellers",
-      "creator_economy_workers",
-      "consumer_price_discovery"
+      "trapped_merchants",
+      "price_constrained_consumers",
+      "competitive_ecosystems"
     ]
   },
   "perspectives": [
@@ -30,17 +32,8 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Dependent Merchant",
-      "comment": "PERSPECTIVE 1: DEPENDENT MERCHANT (SNARE) \u2014 Small merchants and creators face inescapable platform dependence. Switching platforms requires rebuilding customer relationships, algorithmic discovery from zero, and losing accumulated reputation capital. Economic dependency on platform revenue with no viable alternative channels. Network effects mean exit is structurally impossible for most agents."
-    },
-    {
-      "classification_type": "snare",
-      "agent_power": "powerless",
-      "time_horizon": "biographical",
-      "exit_options": "trapped",
-      "spatial_scope": "global",
-      "label": "The Price-Constrained Consumer",
-      "comment": "PERSPECTIVE 2: PRICE-CONSTRAINED CONSUMER (SNARE) \u2014 Consumers trapped in platform ecosystems through data lock-in, switching costs, and ecosystem integration (payment systems, recommendations, review histories). Price discovery becomes impossible when competing platforms obscure pricing through algorithmic curation and personalized pricing. Limited transparent alternatives."
+      "label": "The Trapped Small Merchant",
+      "comment": "PERSPECTIVE 1: TRAPPED SMALL MERCHANT (SNARE) — A seller with 40-60% revenue flow through a single platform has no exit. Reputational capital is platform-specific; algorithmic downranking for non-compliance is immediate; customer list is platform property. Restructuring sales infrastructure to exit takes 18-36 months with zero revenue. Suppression is total: coercive terms, opaque algorithm changes, mandatory fee escalation. The trapped merchant experiences pure extraction with minimal coordination benefit."
     },
     {
       "classification_type": "tangled_rope",
@@ -49,7 +42,16 @@
       "exit_options": "constrained",
       "spatial_scope": "national",
       "label": "The Mid-Market Seller",
-      "comment": "PERSPECTIVE 3: MID-MARKET SELLER (TANGLED ROPE) \u2014 Medium-sized merchants experience genuine coordination benefits (access to logistics, payment infrastructure, customer reach) alongside asymmetric extraction (commission increases, algorithm opacity, policy changes). Costs of exit are high but surmountable; some negotiating power exists. Mixed coordination and extraction."
+      "comment": "PERSPECTIVE 2: MID-MARKET SELLER (TANGLED ROPE) — A seller with 20-35% platform revenue has meaningful but costly exit options: building owned channels, listing on competing platforms, integrating fulfillment. The platform genuinely provides coordination services (customer acquisition, logistics infrastructure, payment processing, dispute resolution). But the coordination is paired with asymmetric extraction: algorithmic opacity, unilateral fee changes, promotional preferencing. Real agency exists but at high cost; real benefit exists but paired with real extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Diversified Multi-Platform Seller",
+      "comment": "PERSPECTIVE 3: DIVERSIFIED MULTI-PLATFORM SELLER (ROPE) — A seller with balanced revenue across 4+ platforms and owned channels (15-20% per platform) has structural mobility. Exit cost from any single platform is material but not existential. The platform relationship becomes pure coordination: market access, customer aggregation, standardized payment processing. No individual platform can extract via lock-in because the seller can reallocate traffic. Experiences the constraint as coordination problem, not extraction."
     },
     {
       "classification_type": "rope",
@@ -58,34 +60,34 @@
       "exit_options": "arbitrage",
       "spatial_scope": "global",
       "label": "The Platform Operator",
-      "comment": "PERSPECTIVE 4: PLATFORM OPERATOR (ROPE) \u2014 Experiences the constraint as pure coordination: solving the matching problem between buyers and sellers, enabling transactions at scale. Network effects benefit the operator directly through increased transactional volume and data aggregation. Sees lock-in as solving a fundamental coordination problem."
+      "comment": "PERSPECTIVE 4: PLATFORM OPERATOR (ROPE) — Experiences the constraint as pure coordination. Network effects are real: seller value increases with buyer count; buyer value increases with seller variety. The platform solves genuine matching problems and reduces transaction friction. From the operator's perspective, scale and lock-in are the platform's core function — they enable coordination at marginal cost. The operator benefits from the lock-in, but the primary mechanism is coordination, not coercion (from their own internal model)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "label": "The Consumer-as-Habit",
+      "comment": "PERSPECTIVE 5: CONSUMER-AS-HABIT (TANGLED ROPE, IDENTITY_LOCKED) — Price-conscious consumers benefit from platform aggregation (low search cost, diverse sellers, convenient payment). But exit is blocked by internalized habit, algorithmic dependency (personalization becomes the frame through which they discover products), and sunk investment in seller relationships and account history. Structurally mobile — could switch platforms or buy direct — but identity fused with the platform's interface and recommendation logic. The lock-in is cognitive rather than legal, but equally binding at biographical time horizon."
     },
     {
       "classification_type": "piton",
-      "agent_power": "organized",
+      "agent_power": "institutional",
       "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "The Regulatory Coalition",
-      "comment": "PERSPECTIVE 5: REGULATORY COALITION (PITON) \u2014 Regulators and antitrust authorities see lock-in as a problem requiring intervention, but enforcement mechanisms are largely theatrical: consent decrees, transparency mandates, interoperability rules often fail to break network effects. Theater ratio high \u2014 regulatory activity appears to constrain extraction but structural lock-in persists. Sunset logic: if interoperability standards mature (DMA provisions, potential data portability), extraction mechanism degrades."
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Theater",
+      "comment": "PERSPECTIVE 6: REGULATORY THEATER (PITON) — Competition authorities and consumer protection agencies conduct audits, issue guidance, and occasionally levy fines for algorithmic opacity and unfair terms. But the regulatory machinery is substantially performative: enforcement requires proving intentional harm; fines are calculated as small fractions of revenue (cost of business, not deterrent); compliance reporting is opaque. The regulation persists through institutional pressure but lacks functional teeth. Theater ratio is high because inspection replaces structural change."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "The Open-Platform Initiative",
-      "comment": "PERSPECTIVE 6: OPEN-PLATFORM INITIATIVE (SCAFFOLD) \u2014 Decentralized platforms, open-source marketplaces, and federated commerce protocols represent temporary coordination scaffolding designed to reduce extraction by breaking network effect locks. Low extraction because the initiative has agency and a clear sunset: if portability standards and multi-platform aggregation mature, lock-in extraction mechanism becomes structurally unviable."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "organized",
-      "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Seller Coalition",
-      "comment": "PERSPECTIVE 7: SELLER COALITION (TANGLED ROPE) \u2014 Organized seller groups (unions, associations) benefit from platform coordination (access to logistics, payment systems, customer reach at scale) while experiencing asymmetric extraction (commission rates, algorithm opacity, policy changes without consultation). Coalition increases exit costs through collective bargaining but does not eliminate structural lock-in."
+      "spatial_scope": "continental",
+      "label": "The Regulatory Reform Coalition",
+      "comment": "PERSPECTIVE 7: REGULATORY REFORM COALITION (SCAFFOLD) — EU Digital Markets Act, potential US legislation, and interoperability advocates see platform lock-in as a temporary institutional failure with a policy sunset. Data portability, forced interoperability, and app store gatekeeping reforms create alternative pathways. If enacted and enforced (big if), these policies reduce lock-in extraction by structural design — merchants can migrate data, consumers can switch without losing history. This perspective sees the constraint as solvable via sunset mechanisms (regulatory reform with enforcement teeth)."
     },
     {
       "classification_type": "mountain",
@@ -93,87 +95,102 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Natural Law View (False Summit)",
-      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 Viewed from civilizational/universal scale, network effects and data network effects appear immutable: platforms require critical mass to function, and switching costs are inherent to network coordination. Lock-in might appear as inevitable property of digital markets. However, this perspective naturalizes a contingent institutional arrangement: switching costs and data lock-in are policy choices (data portability, interoperability standards, cross-platform aggregation), not physical laws. Engine flags as false summit."
+      "label": "The Natural Law View",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational lens, network effects and data aggregation are immutable properties of digital platforms. Two-sided markets inherently have lock-in dynamics; algorithms necessarily embed opacity; switching costs are structural, not contingent. The platform operator frames lock-in as a natural law: 'This is just how network effects work.' The mountain classification flags this as a false summit candidate — the structural data shows identifiable beneficiaries (platform operator) and victims (trapped merchants), suggesting the 'immutability' is naturalization of a contingent institutional arrangement rather than discovery of a physical law."
     }
   ],
   "omegas": [
     {
-      "id": "exit_cost_measurement",
-      "question": "What constitutes the true exit cost for platform-dependent agents: financial transaction costs, reputation capital loss, or identity lock-in through social graph integration?",
-      "resolution_mechanism": "Empirical tracking of merchant margins post-exit vs margins on platform; consumer switching behavior when price differentials exceed switching costs; measurement of reputation loss when accounts migrate",
-      "impact": "If primarily financial: exit_options downgrades from trapped to constrained for some agents, reducing effective extraction. If primarily reputational/identity-based: identity_locked becomes more accurate classification than trapped for subset of agents, changing perspectival gap.",
+      "id": "algorithmic_opacity_necessity",
+      "question": "Is algorithmic opacity necessary for platform function or a deliberate rent-extraction mechanism?",
+      "resolution_mechanism": "Comparative analysis: platforms that transparently publish ranking factors vs. proprietary platforms; user outcomes under transparency vs. opacity; patent evidence of deliberate suppression vs. necessary technical constraints",
+      "impact": "If necessary: suppression value justified by coordination function; reclassify as lower-suppression tangled_rope. If deliberate: confirms extraction mechanism; suppression value indicates snare-level coercion.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Measurement of true exit costs: financial, reputational, or identity-based"
+      "description": "Whether algorithmic opacity is technically necessary or instrumentally coercive"
     },
     {
-      "id": "network_effect_inevitability",
-      "question": "Are network effects in platform markets a structural inevitability or a policy-contingent outcome of data lock-in and algorithmic opacity?",
-      "resolution_mechanism": "Comparative analysis of interoperability standards in payment systems (visa/mastercard coexistence, open banking regulations) vs proprietary platforms; measurement of switching rates when portability is available",
-      "impact": "If inevitable: mountain classification gains credibility and lock-in becomes accepted cost of coordination. If policy-contingent: opens pathway for regulatory intervention; lock-in is snare masquerading as coordination necessity.",
+      "id": "lock_in_magnitude_threshold",
+      "question": "At what revenue concentration does a seller transition from constrained exit to trapped exit?",
+      "resolution_mechanism": "Longitudinal merchant data: time-to-rebrand after platform delisting or demotion; financial survival rates; secondary market valuations for platform-dependent businesses",
+      "impact": "If threshold < 25% platform revenue: most sellers are trapped; constraint is snare-dominant. If threshold > 60%: most sellers remain constrained; constraint is tangled_rope-dominant.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Revenue concentration threshold distinguishing trapped from constrained merchant exit"
+    },
+    {
+      "id": "consumer_exit_cost_structure",
+      "question": "Is consumer lock-in primarily identity-locked (cognitive habit) or structurally trapped (data/network dependency)?",
+      "resolution_mechanism": "Consumer surveys on exit motivation; A/B testing of interface changes that highlight alternatives; measurement of search behavior when competitor platforms are prominently advertised; tracking of habit persistence after forced platform interruption",
+      "impact": "If identity_locked dominant: constraint appears as tangled_rope for consumers; narratives about 'digital natives' having natural platform affinity are validated. If trapped dominant: consumers shift to snare classification; reveals structural rather than cognitive binding.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether network effects are inevitable or policy-contingent"
+      "description": "Whether consumer lock-in is identity-fused or structurally trapped"
     },
     {
-      "id": "commission_extraction_vs_service_cost",
-      "question": "What portion of platform commissions represents genuine service coordination (logistics, payments, dispute resolution) versus pure extraction rent?",
-      "resolution_mechanism": "Cost accounting of actual services provided; comparison with transparent-cost competitor platforms; analysis of margin compression in competitive vs monopolistic platform segments",
-      "impact": "If service cost dominates: extractiveness should be downgraded, constraining classification toward Tangled Rope. If extraction dominates: snare classification reinforced, theater_ratio increases as service justification becomes cover story.",
+      "id": "interoperability_feasibility",
+      "question": "Can data portability and interoperability protocols eliminate lock-in extraction without collapsing network effects?",
+      "resolution_mechanism": "Technical feasibility studies; pilot programs (EU data portability, app store sideloading); market outcomes after forced interoperability mandates; measurement of switching costs post-portability",
+      "impact": "If feasible with preserved effects: scaffold sunset is real; regulatory reform can eliminate constraint. If effects collapse: lock-in is functionally inseparable from network benefits; constraint persists even under reform.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Decomposition of commission rates into service cost vs extraction rent"
+      "description": "Whether interoperability mandates can break lock-in while preserving coordination benefits"
     },
     {
-      "id": "algorithmic_opacity_intentionality",
-      "question": "Is algorithmic opacity (seller deranking, recommendation suppression, search visibility manipulation) an incidental byproduct of complex systems or an intentional suppression mechanism to increase merchant dependence?",
-      "resolution_mechanism": "Forensic analysis of algorithm design choices; comparison with transparent-algorithm platforms; whistleblower/internal documentation on recommendation system intent",
-      "impact": "If incidental: suppression metric should be lowered; treats extraction as byproduct rather than design feature. If intentional: suppression is confirmed as core extraction mechanism; snare classification strengthened; moves from 'trap caused by network effects' to 'trap designed into algorithms'.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether algorithmic opacity is incidental or intentional suppression"
-    },
-    {
-      "id": "interoperability_viability",
-      "question": "Can open standards and data portability actually break platform lock-in at scale, or do they create coordination failures that reduce service quality below pre-interop baseline?",
-      "resolution_mechanism": "Pilot programs with federated commerce protocols, cross-platform aggregation systems; measurement of merchant satisfaction and consumer experience; analysis of whether fragmented platforms lose critical services (fraud detection, recommendation quality, payment security)",
-      "impact": "If viable: scaffold and open-platform perspectives confirmed; extractiveness can decline through regulatory sunset. If viability fails: lock-in becomes 'least-bad' solution; reclassify toward rope (coordination benefit) from moderate/organized perspectives; constrains intervention pathway.",
+      "id": "platform_coordination_necessity",
+      "question": "Could the coordination functions (matching, payment, reputation, logistics) be provided through competitive alternatives without lock-in?",
+      "resolution_mechanism": "Analysis of public utility models, cooperative platforms, API-based marketplaces; historical cases of unbundling (e.g., payment processing moving to Stripe, fulfillment to third parties); comparative outcomes in regulated verticals",
+      "impact": "If alternatives exist: lock-in is extractive overlay on optional coordination; constraint is snare-ish. If coordination is inseparable from lock-in: extraction is tied to genuinely valuable service; constraint is tangled_rope-ish.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether open standards can break lock-in without degrading service quality"
+      "description": "Whether platform coordination requires lock-in or is bundled with it contingently"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.42
+      "value": 0.38
     },
     {
       "metric": "base_extractiveness",
       "time_point": 5,
-      "value": 0.58
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
       "time_point": 10,
       "value": 0.68
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
       "time_point": 5,
-      "value": 0.48
+      "value": 0.55
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.55
+      "value": 0.65
     }
   ],
   "interval": {
@@ -181,38 +198,47 @@
     "end": 10
   },
   "commentary": {
-    "narrative_context": "Platform lock-in extraction represents a structural asymmetry where digital intermediaries capture value through network effects, data aggregation, and algorithmic opacity while making exit prohibitively costly for dependent merchants and constrained consumers. The constraint exhibits the full diagnostic spectrum: pure coordination from the platform operator's view, pure extraction from trapped merchants' view, mixed coordination-extraction from mid-market sellers, regulatory theater from organized coalitions attempting intervention, and temporary scaffolding from emerging decentralized alternatives. The rising extractiveness (0.42\u21920.68) over the interval reflects commission increases, algorithmic deranking of independent seller channels, and deepening ecosystem lock-in as consumer data and transaction history accumulate. Theater_ratio increases from 0.35 to 0.55 as regulatory interventions (interoperability mandates, transparency requirements) mount without breaking the underlying lock-in mechanism\u2014the performative appearance of constraint without structural change.",
+    "narrative_context": "Platform lock-in extraction represents a structural phenomenon that exhibits all six constraint types depending on the observer's position within the digital economy ecosystem. A single platform architecture (Uber, Amazon, Shopify, TikTok) simultaneously appears as pure coordination from the operator's perspective, pure extraction from trapped merchants, mixed coordination-extraction from mid-market sellers, regulatory theater from policy authorities, a solvable temporary problem from reform coalitions, and a natural law from civilizational analysts. The constraint's extractiveness has increased over the measurement interval (0.38 → 0.58) as platforms have consolidated market power, while suppression requirements and theater ratios have both risen, indicating both harder enforcement and more performative regulation. The mechanism is threefold: (1) network effects create genuine coordination value (matched buyers and sellers, reduced search friction, standardized payments); (2) data aggregation and algorithmic opacity create switching costs that exceed the value of the coordination services alone; (3) unilateral control over terms (fee changes, algorithmic ranking, payment holds) allows continuous extraction without explicit coercion. The constraint is tangled_rope from the analytical perspective because genuine coordination (required for the platform to function) is inseparable from asymmetric extraction (the mechanism by which the operator captures disproportionate value).",
     "key_agents": [
-      "Platform Operator: Primary beneficiary (institutional/arbitrage) \u2014 captures value through network effects, data aggregation, and commission structure; experiences constraint as coordination mechanism",
-      "Dependent Merchants: Primary victim (powerless/trapped) \u2014 structurally locked in through customer relationship lock-in, reputation capital, algorithmic visibility dependencies; no viable exit",
-      "Price-Constrained Consumers: Secondary victim (powerless/trapped) \u2014 trapped through ecosystem integration, data history, switching costs, and algorithmic price discovery opacity",
-      "Mid-Market Sellers: Secondary victim (moderate/constrained) \u2014 experience both coordination benefits and extraction; high exit costs but surmountable through diversification",
-      "Seller Coalition: Organized victim (organized/constrained) \u2014 collective bargaining power raises negotiation capacity but does not eliminate structural lock-in; benefits coordination but constrained by platform policy changes",
-      "Regulatory Coalition: Organized actor attempting intervention (organized/mobile) \u2014 sees lock-in as solvable through mandates but lacks enforcement capacity; regulatory activity becomes theatrical",
-      "Open-Platform Initiative: Alternative provider (organized/mobile) \u2014 building decentralized alternatives with genuine sunset logic; represents structural pathway to reduced extraction if standards mature",
-      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements (data lock-in, algorithmic opacity) as inevitable properties of digital markets"
+      "Platform Operator: Primary beneficiary (institutional/arbitrage) — captures value through network effects, data aggregation, algorithmic opacity, and lock-in mechanisms",
+      "Trapped Small Merchant: Primary victim (powerless/trapped) — revenue concentration creates irreversible dependency; reputational capital is platform-specific; exit requires 18-36 months zero-revenue restructuring",
+      "Mid-Market Seller: Secondary victim (moderate/constrained) — has exit options at high cost; experiences real coordination benefit paired with real extraction",
+      "Diversified Multi-Platform Seller: Mobile actor (moderate/mobile) — low lock-in due to platform diversification; experiences constraint as pure coordination",
+      "Price-Constrained Consumer: Identity-locked victim (powerless/identity_locked) — structurally mobile but cognitively fused with platform's interface, recommendation logic, and seller reputation history",
+      "Regulatory Authority: Theater performer (institutional/constrained) — conducts audits and levies fines, but enforcement is symbolic; fines are minor cost of business; compliance reporting is opaque",
+      "Reform Coalition: Organized reformer (organized/constrained) — advocates for data portability, interoperability mandates, and app store gatekeeping restrictions; sees sunset pathway through regulation",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing contingent institutional arrangements (lock-in, opacity) as immutable properties of network effects"
     ],
-    "logic_rationale": "Extractiveness (0.68): High, with rising trend. Platform commissions (15-30% on marketplace transactions) exceed documented service costs (3-8% for payment processing, fraud detection, hosting). Additional extraction occurs through algorithm-driven seller deranking (forced advertising purchases to restore visibility), data lock-in (merchant sales history, customer relationships trapped on platform), and switching cost accumulation. The 0.42\u21920.68 trajectory reflects systematic commission increases and algorithmic opacity deepening. Mid-interval value 0.58 captures 5-year period when major platforms increased commission rates 2-3x on smaller sellers. Suppression (0.72): High and structural. Merchants cannot exit without abandoning established customer bases and algorithmic visibility\u2014true exit cost is reputational/relationship capital loss, not just financial transaction cost. Consumers face payment system lock-in, personalized pricing algorithms that obscure true price discovery, and recommendation algorithm opacity. Platform policies forbid or make costly any merchant activity that directs customers off-platform (affiliate link suppression, contact extraction prohibition). Network effects and data lock-in function as enforcement mechanisms\u2014the platform does not need explicit coercion because structural dependencies do the work. Theater ratio (0.55): Moderate and rising. Regulatory mandates (DMA interoperability rules, platform transparency requirements, seller-centered policy debates) create theatrical activity without structural change\u2014lock-in persists through data aggregation and network effects despite regulatory pressure. Theater has increased from 0.35 to 0.55 as regulatory activity mounts without solving underlying extraction.",
-    "directionality_logic": "Beneficiaries: platform_operator (institutional/arbitrage). Extracts through commission structure, algorithmic visibility control, and data aggregation. Direction of extraction flow: merchants and consumers \u2192 platform operator. Victims: merchant_sellers (powerless/trapped, moderate/constrained), consumer_price_discovery (powerless/trapped), seller organizations (organized/constrained). Each victim group has different exit capacity and different experienced extraction severity. The asymmetry is the core snare structure: platform creates value coordination (solves matching problem) AND extracts more value than service justifies (commission premium over competitive baseline). Snare gate requires victims + beneficiaries + high suppression + high extraction. All four criteria met. Chi calculation: Platform operator d \u2248 0.05 \u2192 f(d) \u2248 -0.12 \u2192 \u03c7 \u2248 0.68 \u00d7 (-0.12) \u00d7 1.0 \u2248 -0.08 (experiences negative extraction = net benefit). Trapped merchant d \u2248 0.95 \u2192 f(d) \u2248 1.42 \u2192 \u03c7 \u2248 0.68 \u00d7 1.42 \u00d7 1.0 \u2248 0.97 (experiences maximum extraction). Mid-market seller d \u2248 0.65 \u2192 f(d) \u2248 1.00 \u2192 \u03c7 \u2248 0.68 \u00d7 1.00 \u00d7 1.0 \u2248 0.68 (experiences moderate extraction). Scope modifier \u03c3(global) = 1.2 applies to all perspectives.",
-    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence. Platform operator sees Rope (pure coordination problem: matching buyers and sellers). Trapped merchants see Snare (pure extraction with no escape). Mid-market sellers see Tangled Rope (genuine coordination benefits alongside asymmetric extraction). Regulatory coalition sees Piton (their interventions appear to constrain extraction but theater dominates; actual lock-in persists). Open-platform initiative sees Scaffold (alternative pathways with sunset logic). The gap reflects genuine structural divergence, not mere differences in interpretation. Each perspective's classification is correct from its context. The platform operator's Rope is their actual structural experience (coordination problem solving = their activity). The trapped merchant's Snare is their actual structural experience (locked in through relationships and visibility). Neither is a misunderstanding\u2014they have genuinely different structural relationships to the same constraint. The perspectival gap is the constraint itself: one agent's coordination benefit is another agent's extraction trap.",
-    "mandatrophy_analysis": "Platform lock-in resolves mandatrophy by distinguishing genuine coordination (Rope) from extraction using coordination as cover story (Snare + theater). The platform operator truthfully experiences this as solving a coordination problem\u2014they are. But the asymmetry (merchant extraction plus consumer lock-in) reveals that solving the matching problem is not the constraint's primary function. The primary function is extraction through lock-in. Theater_ratio (0.55) is moderate, not high\u2014this is not primarily theatrical. The constraint is structurally real extraction, not performative. Snare classification confirmed. The scaffold and piton perspectives represent intervention attempts (regulatory theater, open-platform sunset logic) that acknowledge extraction exists. The false mountain perspective (naturalizing lock-in as inevitable) is correctly flagged as false summit by the engine\u2014interoperability standards, data portability, and cross-platform aggregation are policy choices, not physical laws. Mandatrophy is resolved through the perspectival presheaf: the constraint is genuinely Rope from operator perspective, genuinely Snare from merchant perspective, and the divergence itself is the diagnostic signal that justifies intervention\u2014when one agent's coordination is another agent's extraction, the asymmetry reveals extractive mechanism."
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The platform operator captures surplus through three mechanisms: (1) genuine coordination value (network effects, transaction friction reduction) — real and non-extractive; (2) data and algorithmic advantages that exceed coordination benefits — partially extractive; (3) unilateral control over terms enabling continuous rent extraction — fully extractive. The 0.58 value reflects that the constraint bundles all three, with the coordination component reducing the pure-extraction value. If extraction were attempted without coordination services, ε would exceed 0.75 (snare territory). Suppression (0.68): High. Multiple enforcement mechanisms exist: algorithmic downranking of non-compliant sellers; account suspension; payment hold threats; terms-of-service unilaterality that makes exit costly and public complaint difficult (forced arbitration, NDA clauses). For trapped merchants, suppression approaches 0.90. For mobile sellers, suppression approaches 0.40. The 0.68 average reflects the weighted distribution of merchant power across the ecosystem. Theater ratio (0.65): High. Regulatory compliance reporting, transparency dashboards, algorithmic fairness commitments, and merchant appeal processes are substantially performative: audits are post-hoc and rule-focused rather than outcome-focused; fines are minor fractions of revenue; algorithm changes continue regardless of merchant complaints; 'appeals' are routed to the same algorithmic ranking system that generated the original decision. The theater has increased over the interval as regulatory pressure has mounted, incentivizing performative compliance signaling without structural change.",
+    "perspectival_gap": "The constraint demonstrates maximum perspectival divergence across institutional and individual perspectives. The platform operator sees rope (network effects, genuine coordination function). The trapped small merchant sees snare (irreversible extraction, zero agency). The mid-market seller sees tangled_rope (real benefit paired with real extraction). The diversified seller sees rope (coordination without lock-in). The consumer may see either tangled_rope (real benefit from aggregation, constrained by habit) or identity_locked rope (habit plus identity fusion). The regulator sees piton (performative compliance, degraded enforcement). The reform coalition sees scaffold (solvable via sunset reforms). The civilizational analyst risks mountain (naturalizing lock-in as inherent to network effects). These gaps are not measurement errors — they reflect genuine structural differences in how the agents experience the same constraint. The constraint's presence is universal; its classification is observer-dependent.",
+    "directionality_logic": "Directionality (d) for each perspective is computed from beneficiary/victim status combined with exit options. Platform operator: beneficiary + arbitrage → d ≈ 0.10 → f(d) ≈ -0.05 → negative effective extraction (experiences subsidy). Trapped merchant: victim + trapped → d ≈ 0.95 → f(d) ≈ 1.42 → high effective extraction. Mid-market seller: victim + constrained → d ≈ 0.70 → f(d) ≈ 1.05 → moderate-high effective extraction. Diversified seller: neither clearly (mobile exit option) → d ≈ 0.50 → f(d) ≈ 0.65 → moderate effective extraction. Consumer identity_locked: victim + identity_locked → d ≈ 0.85 → f(d) ≈ 1.15 → high effective extraction (adjusted for internal binding rather than external barriers). Regulator: observer (institutional) → d ≈ 0.65 → f(d) ≈ 1.00 → moderate effective extraction (sees extraction but filtered through institutional constraints). These derived d values confirm the perspectival gap: trapped merchants and identity_locked consumers experience the highest χ (effective extraction); the operator experiences negative χ (benefit from the constraint); mobile and regulated actors experience moderate χ.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the mandatrophy through perspectival relativism. From the operator's view, the constraint is pure coordination (Rope) — no extraction is visible because the operator is structurally exempt from the lock-in mechanism. From the trapped merchant's view, the constraint is pure extraction (Snare) — no coordination benefit is legible because the merchant has no alternative. From the mid-market view, the constraint is hybrid (Tangled Rope) — both coordination and extraction are simultaneously true. The mandatrophy is not 'which type is correct?' but 'which structural position are you measuring from?' All six types are perspectivally valid. The constraint structure itself — the bundling of genuine coordination with asymmetric extraction — IS the answer. Unifying the perspectives requires recognizing that platform architecture enables both functions simultaneously, and the question 'can we separate them?' is not a classification question but a policy question (resolvable via regulatory reform — see scaffold perspective)."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation",
-    "boltzmann_floor_override": 0.12
+    "boltzmann_floor_override": 0.18
   },
   "network": {
     "affects_constraints": [
       "data_portability_regulation",
-      "algorithmic_transparency_mandate",
-      "digital_market_concentration"
+      "algorithmic_fairness_standards",
+      "digital_markets_act_enforcement",
+      "merchant_power_asymmetry"
     ],
-    "dual_formulation_note": "Platform lock-in extraction is downstream of digital network effects and data aggregation economics. Upstream constraints (network_effects_inevitability, data_ownership_asymmetry) establish preconditions; this constraint formalizes the extraction mechanism that locks in dependent agents. Separate stories decompose regulatory intervention (interoperability_mandate_effectiveness, platform_transparency_theater) from the structural lock-in itself."
+    "dual_formulation_note": "Platform lock-in is a single structural constraint that decomposes into distinct stories when analyzed by specific mechanism: (1) network effect coordination (ε=0.12, pure rope), (2) algorithmic opacity extraction (ε=0.48, tangled_rope), (3) data lock-in mechanism (ε=0.55, tangled_rope), (4) fee escalation extraction (ε=0.52, tangled_rope), (5) merchant power asymmetry (ε=0.62, snare for trapped merchants). The constraint as described (platform lock-in broadly) bundles all five mechanisms into a single 0.58 ε value. Network decomposition would separate these, but the constraint story models them as a unified phenomenon because they operate interdependently — separating the mechanisms reduces analytical fidelity. The downstream affects_constraints array links to domain-specific regulatory and structural responses: data portability regulation attacks lock-in directly; algorithmic fairness standards constrain opacity; DMA enforcement attempts structural reform; merchant power asymmetry is the field-level outcome."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.05
+      "d_value": 0.08
     }
-  ]
+  ],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "network_effect_coordination",
+      "data_aggregation_advantage"
+    ]
+  }
 }

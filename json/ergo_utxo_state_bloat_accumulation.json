@@ -4,23 +4,26 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "ergobloa"
+    "measurement_id_prefix": "ergo_utxo",
+    "story_uid": "7222be4a-1dfd-4afc-b06a-1f9834ae0c14"
   },
   "base_properties": {
     "extractiveness": 0.58,
     "suppression": 0.65,
-    "theater_ratio": 0.48,
+    "theater_ratio": 0.42,
     "claimed_type": "tangled_rope",
-    "human_readable": "Ergo UTXO State Bloat Accumulation",
+    "human_readable": "Ergo UTXO State Bloat Accumulation Constraint",
     "topic_domain": "blockchain/systems_scalability",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "early_utxo_holders",
-      "light_client_developers"
+      "light_clients",
+      "exchange_operators",
+      "spv_wallets"
     ],
     "victims": [
       "full_node_operators",
-      "blockchain_scalability"
+      "network_decentralization",
+      "blockchain_state_efficiency"
     ]
   },
   "perspectives": [
@@ -31,16 +34,7 @@
       "exit_options": "trapped",
       "spatial_scope": "global",
       "label": "The Full Node Operator",
-      "comment": "PERSPECTIVE 1: FULL NODE OPERATOR (SNARE) \u2014 Trapped in the accumulation dynamic. Running a full node requires storing the entire UTXO set, which grows monotonically as new outputs accumulate. Storage costs rise without relief; operators cannot exit without abandoning node participation. Suppression is structural: no incentive mechanism rewards UTXO set pruning, and the protocol enforces that all historical outputs remain valid. Maximum extraction \u2014 the constraint transfers storage and compute costs to node operators while benefiting early-stage protocol participants."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "moderate",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The Blockchain Scalability Infrastructure",
-      "comment": "PERSPECTIVE 2: BLOCKCHAIN SCALABILITY INFRASTRUCTURE (TANGLED ROPE) \u2014 Experiences both coordination and extraction. The UTXO accumulation enables genuine coordination: outputs represent valid value transfers and provide proof of stake attestation. But extraction is embedded: as UTXO set grows, verification latency increases, transaction throughput decreases, and light client synchronization becomes costlier. The constraint solves a real problem (maintaining outputs for verification) while degrading system capacity. Exit is costly: redesigning output retention would require protocol hard fork."
+      "comment": "PERSPECTIVE 1: FULL NODE OPERATOR (SNARE) — Trapped by the protocol guarantee that all historical outputs remain valid. Cannot prune, cannot optimize away the storage burden. As UTXO set grows, storage requirements and verification costs increase monotonically with no mechanism to reverse course. No exit: maintaining a full node becomes increasingly costly; abandoning it degrades network security. Maximum extraction — the operator bears full cost of historical accumulation with no benefit mechanism."
     },
     {
       "classification_type": "rope",
@@ -48,8 +42,17 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Early UTXO Holders and Protocol Designers",
-      "comment": "PERSPECTIVE 3: EARLY UTXO HOLDERS AND PROTOCOL DESIGNERS (ROPE) \u2014 Experience the constraint as pure coordination. The guarantee that all outputs remain accessible indefinitely creates strong incentives for early participation and long-term holding. Protocol designers benefit from lower complexity requirements (no pruning logic, no state rent mechanisms). This perspective sees the accumulation as a feature enabling confidence in output permanence. Extraction runs toward these agents \u2014 they benefit from the asymmetric storage burden placed on operators."
+      "label": "Light Client and SPV Wallet Operators",
+      "comment": "PERSPECTIVE 2: LIGHT CLIENT AND SPV WALLET OPERATORS (ROPE) — Benefit from the protocol's guarantee that all outputs remain accessible. Can verify transaction history and wallet balances without maintaining full state. Arbitrage options: operate lightweight infrastructure or shift to more scalable chains. Experience the constraint as pure coordination: the UTXO accessibility guarantee enables their service model. Zero extraction — full beneficiary of the structure without bearing bloat cost."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Ergo Protocol Developers and Governance",
+      "comment": "PERSPECTIVE 3: ERGO PROTOCOL DEVELOPERS AND GOVERNANCE (TANGLED ROPE) — Organized actors (protocol core team, EIP contributors) experience the constraint as both coordination mechanism and extraction. The no-pruning guarantee was a deliberate design choice to maintain state accessibility — genuine coordination function. However, the constraint imposes escalating implementation burden on the team to manage storage optimization and node software improvements. Constrained: cannot easily modify the guarantee without contentious hard fork; must absorb increasing R&D costs to mitigate bloat. Mixed extraction and coordination."
     },
     {
       "classification_type": "scaffold",
@@ -57,8 +60,8 @@
       "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "State Rent and Pruning Protocol Designers",
-      "comment": "PERSPECTIVE 4: STATE RENT AND PRUNING PROTOCOL DESIGNERS (SCAFFOLD) \u2014 Organized technical communities working on solutions (state rent mechanisms, UTxO consolidation incentives, tiered storage) view the bloat accumulation as a temporary coordination failure with an exit path. Light client protocols, compression techniques, and economic incentives for output consolidation represent the sunset clause. However, implementation requires either soft fork coordination (constrained exit) or hard fork (high cost). The scaffold perspective assumes these solutions mature within a generational timeline \u2014 optimistic but structural."
+      "label": "State Rent and Pruning Advocates",
+      "comment": "PERSPECTIVE 4: STATE RENT AND PRUNING ADVOCATES (SCAFFOLD) — Organized research community and protocol upgraders see the bloat as a solvable coordination failure with a sunset path. Proposals like state rent (charging for storage) or soft-pruning (incentivized archival) represent temporary scaffolding: the constraint would be actively managed rather than passively accumulated. This perspective has low theater (direct technical solution) and constrained exit (adoption requires community consensus). Sunset logic: if adopted, state rent or pruning mechanism would convert the bloat from passive accumulation to active management, reducing the snare classification for full nodes."
     },
     {
       "classification_type": "piton",
@@ -66,8 +69,8 @@
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Legacy Full Node Infrastructure",
-      "comment": "PERSPECTIVE 5: LEGACY FULL NODE INFRASTRUCTURE (PITON) \u2014 The maintained but degrading institutional role. Full node operation is conceptually required for network security (decentralization, censorship resistance) but increasingly performative in practice as most users rely on light clients and hosted nodes. The infrastructure persists through institutional commitment to decentralization values, but the actual verification role has atrophied. Theater ratio is moderate here \u2014 the infrastructure remains functional but not optimal. Piton classification derives from degraded primary function masked by ideological maintenance."
+      "label": "The Historical Accessibility Dogma",
+      "comment": "PERSPECTIVE 5: HISTORICAL ACCESSIBILITY DOGMA (PITON) — The protocol's guarantee that all outputs remain valid indefinitely is maintained largely through institutional commitment to the design principle rather than active functional necessity. Most transactions after ~3 years are economically dead (dust outputs, abandoned addresses). The accessibility guarantee has real utility for auditing and history verification, but much of the maintained state serves no active function. Theater ratio reflects the performative aspects of the guarantee: claiming absolute historical immutability while practical node operators employ various caching and compression strategies that approximate pruning. Piton: the guarantee persists through commitment to the principle, not because perfect accessibility is technically essential at scale."
     },
     {
       "classification_type": "mountain",
@@ -75,109 +78,154 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer (Physics-of-Accumulation View)",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / PHYSICS-OF-ACCUMULATION VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, monotonic accumulation of immutable historical records is a fundamental constraint of any append-only ledger. The UTXO set accumulation appears as an irreducible law: you cannot simultaneously guarantee output permanence and avoid state growth. However, the structural data contradicts this naturalization \u2014 the constraint is contingent on protocol design choices (immutability guarantee, full node archival requirement, lack of state rent mechanisms). The mountain classification is a false summit revealing how technical contingencies are naturalized as laws of decentralized systems."
+      "label": "The Analytical Observer (State Bloat as Natural Law)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) — From a civilizational/universal perspective, state bloat appears as an immutable property of any UTXO-based system: if outputs are never deleted and transaction volume grows, the state must grow. This is logically necessary given the protocol's design choice. However, the classification is a false summit: the 'necessity' is contingent on the design choice to forbid pruning. The constraint is a realized policy choice, not a law of nature."
     }
   ],
   "omegas": [
     {
-      "id": "state_rent_feasibility",
-      "question": "Can state rent mechanisms (charging fees to keep outputs in active state) be implemented without creating extractive barriers to asset ownership?",
-      "resolution_mechanism": "Analysis of proposed state rent designs; simulation of rent costs relative to typical output value; survey of user experience in systems with rent (e.g., Ethereum 2.0 EIP-4488 proposals); measurement of adoption rates if implemented",
-      "impact": "If feasible with low friction: constraint converts from snare to tangled_rope with sunset path. If rent becomes extractive: replaces one extraction mechanism with another, shifting rather than resolving.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether state rent can resolve bloat without creating secondary extraction"
-    },
-    {
-      "id": "light_client_sufficiency",
-      "question": "Do light client protocols (SPV, SNARKs, rollup-based verification) provide equivalent security guarantees to full node verification for preventing double-spending and consensus attacks?",
-      "resolution_mechanism": "Comparative security analysis of light vs full node verification; historical analysis of attacks prevented by full node validation that light clients would have missed; game-theoretic analysis of incentives for honest light client operators",
-      "impact": "If light clients are sufficient: full node archival is not a consensus requirement, and the UTXO set bloat becomes a coordination choice rather than immutable constraint. Transitions mountain to rope/tangled_rope. If light clients have fundamental gaps: full node bloat is unavoidable, supporting mountain classification.",
+      "id": "dust_output_reactivation_risk",
+      "question": "What percentage of economically dead outputs (dust, abandoned addresses, unspent change) could be safely pruned without compromising protocol guarantees for economically active transactions?",
+      "resolution_mechanism": "Empirical analysis of UTXO set composition: age distribution, value distribution, reactivation probability after dormancy periods. Statistical modeling of revival risk.",
+      "impact": "If high pruning safety (>90% of old outputs expendable): state rent design is viable and constraint classification shifts toward Tangled Rope with sunset potential. If low safety (<50% confidently expendable): bloat is more genuinely immutable and snare classification persists.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether light clients provide equivalent security to full node verification"
+      "description": "Fraction of UTXO set safely prunable without breaking protocol guarantees"
     },
     {
-      "id": "accumulation_rate_sustainability",
-      "question": "At current transaction volume and density, what is the timeline before UTXO set storage exceeds affordable hardware for individual node operators?",
-      "resolution_mechanism": "Projection of UTXO set growth based on historical transaction rates; comparison to consumer-grade storage hardware cost curves; measurement of minimum viable full node operator equipment costs over time",
-      "impact": "If timeline > 50 years: constraint is manageable within generational horizon, supporting scaffold/piton perspectives. If timeline < 10 years: critical inflection point approaching, supporting snare/tangled_rope severity assessment.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Timeline to UTXO set storage exceeding affordable hardware"
-    },
-    {
-      "id": "protocol_coordination_capacity",
-      "question": "Can the Ergo protocol community achieve consensus on hard fork governance and execute it without contentious chain split?",
-      "resolution_mechanism": "Historical analysis of prior Ergo governance decisions; assessment of developer community alignment on scaling roadmap; monitoring of hashpower distribution and miner signaling on protocol changes",
-      "impact": "If high coordination capacity: scaffold sunset path is real (state rent mechanisms can be deployed). If low capacity: coordination failure locks in the constraint, supporting piton/snare perspectives.",
+      "id": "state_rent_adoption_feasibility",
+      "question": "Can state rent mechanisms be introduced via soft fork (backward compatible, opt-in) or do they require contentious hard fork that risks chain split?",
+      "resolution_mechanism": "Technical analysis of UTXO model compatibility with rent logic. Simulation of adoption scenarios under partial node support. Historical precedent analysis from other UTXO chains (Bitcoin, Cardano).",
+      "impact": "If soft fork viable: scaffold sunset is realistic, protocol has evolutionary pathway. If hard fork required: adoption barrier is political consensus, not technical feasibility — sunset timelines extend or stall.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether Ergo protocol community can coordinate on hard fork solutions"
+      "description": "Whether state rent can be introduced without contentious hard fork"
+    },
+    {
+      "id": "full_node_operator_threshold",
+      "question": "At what UTXO set size do consumer-grade hardware (16GB RAM, 2TB SSD) become insufficient for reliable full node operation, given current node optimization trends?",
+      "resolution_mechanism": "Technical benchmarking: node software memory/disk profiling across historical UTXO set sizes. Extrapolation to projected growth rates (transaction volume trends). Hardware cost curves (CPU, RAM, storage) vs. network participation incentives.",
+      "impact": "If threshold is <10 years away at current growth: snare classification is temporally acute, network decentralization risk becomes acute. If threshold >20 years: constraint is slow-moving, more time for scaffold solutions to mature.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Time until consumer hardware becomes insufficient for full nodes"
+    },
+    {
+      "id": "alternative_model_sufficiency",
+      "question": "Do account-based models (Ethereum, Cardano Plutus) or layered commitment schemes (sidechains, L2s) actually reduce state bloat, or do they merely displace it to different layers?",
+      "resolution_mechanism": "Comparative analysis of state growth curves across model types. Investigation of whether L2/sidechain approaches have identical bloat trajectories, just segregated from L1.",
+      "impact": "If alternative models genuinely reduce bloat: the constraint is model-specific and Ergo's choice is sub-optimal (moves classification toward snare as deliberate cost). If bloat is universal across models: constraint is closer to a natural law of blockchain systems.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether non-UTXO models reduce state bloat or displace it"
+    },
+    {
+      "id": "utxo_accessibility_vs_immutability_decoupling",
+      "question": "Can state accessibility for historical verification be decoupled from the requirement that all outputs remain *spendable*? Could archive nodes satisfy audit requirements while full nodes operate under soft-pruning?",
+      "resolution_mechanism": "Technical analysis of UTXO query patterns (auditors vs. active users). Investigation of two-tier node architectures: full nodes with soft-pruned state + designated archive nodes with complete state.",
+      "impact": "If decoupling is viable: the snare for full nodes can be weakened by making the bloat optional rather than mandatory. Full nodes could opt for soft-pruning while archive tier handles accessibility.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether state accessibility can be decoupled from full-node spendability guarantee"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.22
     },
     {
       "metric": "base_extractiveness",
       "time_point": 3,
-      "value": 0.48
+      "value": 0.35
     },
     {
       "metric": "base_extractiveness",
       "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
       "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.32
     },
     {
       "metric": "theater_ratio",
       "time_point": 3,
-      "value": 0.41
+      "value": 0.36
     },
     {
       "metric": "theater_ratio",
       "time_point": 6,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
       "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.65
     }
   ],
   "interval": {
     "start": 0,
-    "end": 6
+    "end": 9
   },
   "commentary": {
-    "narrative_context": "The Ergo UTXO state bloat accumulation constraint arises from a fundamental design choice: the protocol guarantees that all historical outputs remain valid and accessible indefinitely, with no pruning or state rent mechanism to retire inactive outputs. As transaction volume accumulates, the UTXO set grows monotonically, imposing increasing storage and verification costs on full node operators. This constraint exhibits the characteristic dual nature of coordination-extraction hybrids: the immutability guarantee genuinely coordinates around confidence in output permanence (enabling long-term holding and reducing counterparty risk), but it simultaneously extracts from node operators by concentrating storage and latency burdens without incentive compensation. The accumulation is neither a natural law nor a simple coordination problem\u2014it is a contingent protocol design that trades node operator burden for early-holder confidence. The constraint's theater_ratio (0.48) reflects that some aspects are performative (the increasing need for distributed node validation becomes theater as users migrate to light clients) but core coordination remains functional. The extractiveness trajectory (0.35 \u2192 0.58) shows accumulation acceleration as transaction density increases.",
+    "narrative_context": "The Ergo UTXO state bloat accumulation constraint is a structural consequence of a deliberate protocol design choice: the guarantee that all historical outputs remain valid and spendable indefinitely, with no pruning mechanism, state rent, or expiration logic. As transaction volume accumulates, the UTXO set grows monotonically, imposing increasing storage and verification costs on full node operators. This constraint exhibits characteristics of both coordination (the accessibility guarantee enables light clients and auditing) and extraction (the costs are concentrated on full node operators with no corresponding benefit). The measurements show accumulating pressure over nine years of observation: base extractiveness rises from 0.22 to 0.58 as the UTXO set grows and hardware requirements escalate. Suppression increases from 0.48 to 0.65 as the economic and technical barriers to running a full node strengthen. Theater ratio remains low (0.32–0.42) because the bloat mechanism is technically legible and directly measurable — there is no performative aspect to storage accumulation. The constraint is a diagnostic exemplar for how a genuine coordination mechanism (accessibility guarantee) can generate asymmetric extraction (bloat cost) when the cost of maintaining the guarantee grows with scale and concentrates on a subset of actors.",
     "key_agents": [
-      "Full Node Operators: Primary victims (powerless/trapped) \u2014 bear monotonic increase in storage and verification costs with no exit mechanism or incentive compensation",
-      "Early UTXO Holders: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from immutable permanence guarantee that protects holdings indefinitely and creates confidence premium",
-      "Blockchain Scalability Infrastructure: Secondary victim (moderate/constrained) \u2014 system performance degrades as UTXO verification latency increases; can partially exit via light client delegation at cost",
-      "State Rent Protocol Designers: Organized technical communities (organized/constrained) \u2014 developing sunset mechanisms (state rent, UTxO consolidation incentives) with medium-term deployment horizon",
-      "Light Client Developers: Secondary beneficiary (institutional/arbitrage) \u2014 benefit as full node bloat drives users toward light client solutions they develop and maintain",
-      "Ergo Protocol Governance: Institutional actor (institutional/arbitrage) \u2014 maintains immutability guarantee through inertia; governs decision to implement or reject state rent solutions"
+      "Full Node Operators: Primary victim (powerless/trapped) — bear monotonically increasing storage and verification costs with no exit mechanism. Hardware requirements escalate as UTXO set grows.",
+      "Light Client and SPV Wallet Operators: Primary beneficiary (institutional/arbitrage) — leverage the accessibility guarantee to operate lightweight services without maintaining full state. Can arbitrage to other chains if costs rise.",
+      "Exchange Operators: Secondary beneficiary (institutional/arbitrage) — benefit from guaranteed output accessibility for transaction verification and wallet auditing without full node burden.",
+      "Ergo Protocol Developers and Governance: Organized actor (organized/constrained) — designed the no-pruning guarantee deliberately; now manage mitigation R&D and community pressure for sunset mechanism.",
+      "State Rent and Pruning Advocates: Organized actor (organized/constrained) — research community and protocol upgraders proposing technical solutions (state rent, soft-pruning, archive tiers) with sunset logic.",
+      "Network Decentralization: Victim (powerless/trapped) — abstract collective: as full node costs rise, decentralization risk increases. Fewer operators can sustain full nodes, increasing centralization pressure.",
+      "Analytical Observer: Observing the structure (analytical/analytical) — risks naturalizing the design choice as an immutable property of UTXO systems rather than a policy decision."
     ],
-    "logic_rationale": "Extractiveness (0.58): Moderate-high. The UTXO accumulation transfers real resource costs (storage, bandwidth, CPU for verification) to node operators without compensation mechanism or exit option. This is structural extraction. However, it is not maximal (0.72+) because: (1) early UTXO holders' benefit is legitimate coordination incentive (not pure rent), (2) node operators retain the technical capability to exit via light client delegation (constrained but possible), and (3) no single entity controls the accumulation\u2014it is distributed across all protocol participants. Suppression (0.65): Moderate-high. Barriers to escaping the accumulation include: technical complexity of running light clients, network effects favoring full node security arguments, lack of alternative accumulation-control mechanisms, and protocol immutability making state rent retroactively difficult. However, suppression is not total because light client alternatives exist and state rent solutions are technically feasible. Theater ratio (0.48): Moderate. The increasing need for distributed full node validation becomes partially performative as users migrate to light clients and hosted nodes, yet core output verification remains functional. The gap between 'we need many full nodes for decentralization' and 'most users don't run nodes' is where theater accumulates.",
-    "directionality_logic": "Directionality (d) values are derived from structural position: Full node operators occupy the target position (d \u2248 0.90) \u2014 they bear costs and face trapped exit, producing high f(d) \u2248 1.38 and high experienced extraction. Early UTXO holders occupy the beneficiary position (d \u2248 0.05) \u2014 they receive extraction benefits and have arbitrage exit, producing low f(d) \u2248 -0.12 and negative experienced extraction (the constraint subsidizes them). Blockchain scalability infrastructure occupies a mixed position (d \u2248 0.55) \u2014 it both enables coordination and experiences extraction, producing moderate f(d) \u2248 0.75 and moderate chi. The scaffold perspective (organized/constrained) has derived d \u2248 0.40, reflecting that organized agents have some agency through protocol change proposals but remain constrained by coordination requirements. No directionality overrides are required\u2014the structural relationships are clear.",
-    "perspectival_gap": "This constraint demonstrates how a single accumulation mechanism produces fundamentally different classifications across perspectives. The full node operator sees pure extraction (Snare): their costs rise without relief and they cannot exit without abandoning participation. The early UTXO holder sees coordination (Rope): the immutability guarantee solves their problem (protecting holdings indefinitely) and the operator burden is not their responsibility. The blockchain infrastructure sees hybrid coordination-extraction (Tangled Rope): the mechanism both enables verification and degrades capacity. The state rent designers see a temporary problem with a sunset (Scaffold): state rent mechanisms can emerge within a generational timeframe. The full node infrastructure sees its own degraded role (Piton): the validation function persists through ideological commitment to decentralization even as users migrate to light clients. The civilizational analytical observer risks seeing an immutable law (Mountain) \u2014 'you cannot guarantee permanence without accumulation'\u2014but this is a false summit naturalizing contingent design choices. The perspectival gap reveals that the constraint is not 'the physics of accumulation' but 'the institutional choice to prioritize early-holder confidence over operator burden distribution.'",
-    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that the six-type spectrum is not a classification problem but a governance problem. The mountain perspective (universal/civilizational) naturalizes what is actually a protocol design choice. The rope perspective (beneficiary) captures the genuine coordination function. The snare perspective (operator) captures the genuine extraction burden. The tangled rope perspective (infrastructure) is the structural reality\u2014the constraint BOTH coordinates output verification AND extracts from operators. The scaffold perspective (technical designers) is the forward-looking solution. The piton perspective (legacy institution) is the institutional reality of degradation masked by ideological maintenance. No single type is 'correct'\u2014the constraint's classification is a presheaf over observational positions. The mandatrophy is resolved by accepting that different institutional actors experience legitimately different classifications, and that the 'true' constraint is the tangled rope (hybrid coordination-extraction), with a genuine sunset path via state rent mechanisms that could transition it toward pure coordination (rope) if implemented."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint exhibits genuine extraction: full node operators bear costs (storage, CPU, synchronization time) that grow monotonically with transaction volume, while beneficiaries (light clients, exchanges) pay diminishing per-transaction costs. The extraction is not maximal because the protocol offers genuine benefits to many users; the bloat cost is concentrated rather than universal. The measurement trajectory (0.22 → 0.58 over 9 years) reflects that extractiveness was initially low when the UTXO set was manageable but has risen as transaction volume accumulated. Suppression (0.65): High. Multiple layers of suppression maintain the bloat: (1) The protocol guarantee makes pruning impossible without contentious fork; (2) Economic incentives favor light clients over full node operators, discouraging full node participation; (3) Network effects make exiting Ergo for an alternative chain costly for operators already committed; (4) The distributed nature of node operation prevents collective bargaining — individual operators cannot negotiate terms with the protocol. Suppression is technically surmountable (state rent mechanism could be adopted) but politically difficult (requires community consensus for protocol change). Theater ratio (0.42): Moderate-low. The bloat mechanism is technically transparent — UTXO set size, growth rate, and hardware requirements are measurable and legible. There is no performative opacity around the constraint itself. However, some theater exists in the framing: the protocol presents the no-pruning guarantee as a security feature (immutable history, auditability) when much of the bloat is economically dead state. The theater masks the contingency of the design choice.",
+    "perspectival_gap": "This constraint demonstrates sharp perspectival divergence driven by directionality. The full node operator (powerless/trapped) perceives maximum extraction and classifies as Snare — they see only burden. The light client operator (institutional/arbitrage) perceives pure coordination and classifies as Rope — they see only benefit. The protocol developers (organized/constrained) perceive a mixed structure: they created the guarantee for legitimate reasons (accessibility, auditability) but now manage escalating mitigation costs. The state rent advocates (organized/constrained) perceive a solvable problem with a sunset mechanism — the constraint is Scaffold-like if a technical solution is adopted. The institutional commitment to the accessibility guarantee appears Piton-like from the civilizational view: the principle persists through commitment, not active necessity. The analytical observer risks Mountain classification (state bloat is inherent to UTXO systems) but the base properties reveal this as false summit: the bloat is a policy choice, not a natural law.",
+    "directionality_logic": "Directionality derivation operates through three channels: (1) Beneficiary/victim declarations: Light clients and exchanges are beneficiaries (low d, negative/low χ); full node operators and network decentralization are victims (high d, high χ). (2) Exit options: Full node operators are trapped — they cannot prune, cannot migrate to alternative chains without losing their Ergo participation, cannot negotiate terms. Trapped exit yields high d (≈0.95 for full node operators). Light clients have arbitrage options — they can switch to alternative chains, use alternative wallet technologies, or shift service models. Arbitrage exit yields low d (≈0.15 for light clients). (3) Power level: Institutional actors (organized developers, exchanges) have higher power and thus somewhat lower experienced χ despite being beneficiaries; they have recourse to governance structures. Powerless full node operators experience maximum χ. The engine derives d automatically from these structural parameters, yielding directionality profiles that explain why the same constraint appears as Snare from the full node perspective and Rope from the light client perspective.",
+    "mandatrophy_analysis": "The mandatrophy resolves through recognizing that the constraint is structurally a Tangled Rope — it has BOTH genuine coordination function (the accessibility guarantee enables light clients, auditing, and history verification) AND asymmetric extraction (the costs concentrate on full node operators). The snare classification from the powerless operator's view and the rope classification from the beneficiary's view are both perspectival truths, not contradictions. The constraint resolves to Tangled Rope at the organized developer level (they designed both the coordination and the extraction) and Scaffold at the sunset level (state rent or pruning mechanisms would convert passive bloat to managed cost). The analytical observer's temptation to see Mountain (state bloat is natural to blockchains) is a false summit — the same logical argument could apply to any UTXO system, yet different systems make different design choices. The contingency is in the design, not in the law of nature."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation",
-    "boltzmann_floor_override": 0.18
+    "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "ergo_light_client_security_assumptions",
-      "ergo_network_decentralization_requirement"
+      "blockchain_full_node_hardware_decentralization",
+      "utxo_transaction_fee_design",
+      "blockchain_state_commitment_mechanisms"
     ],
-    "dual_formulation_note": "The UTXO state bloat accumulation decomposes into two structurally distinct constraints: (1) output_permanence_coordination (\u03b5 \u2248 0.15, Rope) \u2014 the genuine coordination mechanism guaranteeing immutability, upstream and foundational; (2) ergo_utxo_state_bloat_accumulation (\u03b5 \u2248 0.58, Tangled Rope) \u2014 the extraction of storage/verification costs from node operators downstream of the permanence guarantee. The story focuses on the accumulated bloat constraint; the permanence coordination is the upstream constraint in the family. Both stories required for full decomposition."
+    "dual_formulation_note": "The UTXO state bloat accumulation is downstream of Ergo's decision to forbid pruning (a design principle constraint). The upstream constraint embodies the commitment to absolute historical accessibility; this story models the resource cost consequence of that commitment. Separate stories address alternative design choices (soft-pruning, state rent, account-based models) which have different ε values and different perspectival classifications."
   },
-  "directionality_overrides": []
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
 }

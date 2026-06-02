@@ -566,6 +566,14 @@ def build_level1_identity(constraint_id, pipeline_data, prolog_output):
 
         lines.append(f"    Boltzmann:        {boltzmann}")
 
+        live_index = coupling.get("live_index")
+        if live_index is not None:
+            sv = coupling.get("scope_violations")
+            pv = coupling.get("power_violations")
+            lines.append(
+                f"    Live index:       {live_index} (scope={sv}, power={pv})"
+            )
+
         # Drift events
         drift = entry.get("drift_events", [])
         if drift:

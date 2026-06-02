@@ -116,6 +116,9 @@ def build_dataframe():
             row["coupling_category"] = coupling.get("category")
             row["coupling_score"] = coupling.get("score")
             row["coupling_boltzmann"] = coupling.get("boltzmann")
+            row["coupling_live_index"] = coupling.get("live_index")
+            row["coupling_scope_violations"] = coupling.get("scope_violations")
+            row["coupling_power_violations"] = coupling.get("power_violations")
 
             perspectives = pdata.get("perspectives", {})
             for p in VALID_PERSPECTIVES:
@@ -131,6 +134,9 @@ def build_dataframe():
             row["coupling_category"] = None
             row["coupling_score"] = None
             row["coupling_boltzmann"] = None
+            row["coupling_live_index"] = None
+            row["coupling_scope_violations"] = None
+            row["coupling_power_violations"] = None
             for p in VALID_PERSPECTIVES:
                 row[f"persp_{p}"] = None
 
@@ -384,6 +390,9 @@ def output_detail(df, constraint_id, pipeline_raw, omega_raw):
     print(f"  Category  : {row.get('coupling_category', 'N/A')}")
     print(f"  Score     : {row.get('coupling_score', 'N/A')}")
     print(f"  Boltzmann : {row.get('coupling_boltzmann', 'N/A')}")
+    print(f"  Live index: {row.get('coupling_live_index', 'N/A')} "
+          f"(scope={row.get('coupling_scope_violations', 'N/A')}, "
+          f"power={row.get('coupling_power_violations', 'N/A')})")
 
     # --- Perspectives ---
     print()

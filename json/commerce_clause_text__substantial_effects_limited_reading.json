@@ -1,0 +1,242 @@
+{
+  "header": {
+    "constraint_id": "commerce_clause_text__substantial_effects_limited_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_commerce_clause_text__substantial_effects_limited_reading",
+    "measurement_id_prefix": "ccse",
+    "story_uid": "f7a888fd-4509-4b61-9e9c-005d0afed6ab"
+  },
+  "base_properties": {
+    "extractiveness": 0.42,
+    "suppression": 0.48,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Commerce Clause Substantial Effects Test (Limited Reading)",
+    "topic_domain": "constitutional_law/federalism/commerce_regulation",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "congress_enumerated_commerce_power",
+      "national_regulatory_apparatus"
+    ],
+    "victims": [
+      "state_police_power_domain",
+      "intrastate_non_economic_regulation"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "State Police Power (Powerless)",
+      "comment": "States attempting to regulate noneconomic intrastate activity (family law, criminal procedure, education) face federal preemption if courts find an attenuated link to interstate commerce. The state has no exit — the Supremacy Clause forecloses alternative regulatory frameworks. Effective suppression: 0.60. States cannot operate outside this constraint structure without constitutional amendment. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "States with Economic Regulatory Capacity",
+      "comment": "States that regulate genuinely economic intrastate activity (labor standards, environmental protection, professional licensing affecting commerce) retain real authority under the substantial effects test while also benefiting from federal coordination of multi-state problems. Mixed experience: genuine state autonomy for economic regulation within the commerce domain, but subject to federal override if Congress acts. Suppression: 0.35."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Congress (Primary Beneficiary)",
+      "comment": "Congress experiences this constraint as pure coordination: the substantial effects test provides a stable framing for enumerating its commerce power without requiring explicit invocation of police power pretext. Congress can coordinate multi-state problems without preempting all state autonomy. Low effective extraction — coordination function is genuine."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Federal Regulatory Agencies (Organized Beneficiaries)",
+      "comment": "Agencies benefit from the substantial effects framing as a legitimacy story for their authority over intrastate economic activity (EPA, OSHA, FCC). They also bear some constraint: they must demonstrate economic nexus and avoid obvious pretext (noneconomic objectives). Organized power with constrained exit — can challenge the doctrine through litigation strategy but cannot escape jurisdictional requirement."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Federalism Doctrine Courts (Constraint Enforcers)",
+      "comment": "Courts enforcing the substantial effects test see themselves as temporary umpires maintaining federalism balance. The doctrine has a structural sunset: as the gap between local and national economic integration widens, the boundary between 'substantial' economic effects and trivial ones becomes arbitrary, pressuring courts toward either pure expansion (coexistence with expansive reading) or abandonment. Current status: performative boundary policing (theater_ratio: 0.70)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Natural Federalism Structure (False Summit Candidate)",
+      "comment": "Analytical perspective risks naturalizing the substantial effects test as a necessary feature of any federal system. However, structural data reveals this as a constructed category boundary (economic vs noneconomic) maintained through active enforcement by courts. Not a natural law — a doctrine with beneficiaries."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "economic_noneconomic_boundary_coherence",
+      "question": "Is the economic/noneconomic distinction coherent and stable, or is it a constructed category boundary maintained through judicial line-drawing?",
+      "resolution_mechanism": "Historical analysis of decisions at the boundary: cases where activities were reclassified (e.g., family law as economic, criminal procedure as implicating commerce); doctrine trajectory showing increasing incoherence at margins; comparison to alternative coherence boundaries (e.g., political economy framework, structural dependence rather than economic nature).",
+      "impact": "If boundary is coherent and stable: substantial effects test is a sustainable doctrine. If boundary is constructed: the constraint is a tangled rope with built-in instability; boundary policing becomes increasingly expensive (theater rises); doctrine drifts toward either pure expansion or abandonment.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Coherence and stability of economic/noneconomic boundary"
+    },
+    {
+      "id": "substantial_effects_measurement_circularity",
+      "question": "Can 'substantial effects on interstate commerce' be measured without circularity? Do courts measure actual economic effects or apply the doctrine to pre-justify conclusions reached through other reasoning?",
+      "resolution_mechanism": "Systematic analysis of Commerce Clause cases: correlation between stated quantification of economic effects and decision outcome; whether courts grant deference to congressional factfinding about economic effects or substitute their own judgment; meta-analysis of effect sizes claimed across doctrinal areas (labor regulation, environmental regulation, noneconomic activity regulation).",
+      "impact": "If measurement is circular: suppression value (0.48) understates the true constraint mechanism. The real constraint is category pretext, not genuine economic effect analysis. Theater ratio should exceed 0.70. If courts genuinely measure effects: doctrine is less extractive; suppression may be lower.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether substantial effects measurement avoids circularity and pretext"
+    },
+    {
+      "id": "sibling_doctrine_incompatibility",
+      "question": "Is the substantial effects test logically compatible with both the originalist narrow reading and the expansive federal reading? Or does the boundary policing mechanism inherently pressure toward one sibling or away from the other?",
+      "resolution_mechanism": "Formal analysis of axiom structures: which axioms are shared across readings, which are contradictory, which create path dependency. Historical case law showing doctrine drift toward or away from each sibling. Evolution of lower-court interpretation of boundary in response to Supreme Court signals.",
+      "impact": "If test is genuinely coexistent with both siblings: three readings remain structurally viable. If test inherently pressures toward expansion: coexistence with expansive reading is strained; foreclosure of originalist reading may be latent. If test is unstable: all three readings face delegitimacy pressures.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Logical compatibility of substantial effects test with sibling readings"
+    },
+    {
+      "id": "categorical_vs_functional_federalism",
+      "question": "Does the category boundary (economic/noneconomic) track real federalism structural distinctions, or would a functional federalism framework (assessing multi-state spillovers, coordination costs, regulatory arbitrage incentives) better capture the normative concern?",
+      "resolution_mechanism": "Comparison of outcomes: cases where categorical and functional analyses reach different conclusions; historical periods where the boundary was drawn differently; analysis of whether the doctrine's instability correlates with boundary misalignment with functional spillover structure.",
+      "impact": "If functional framework better tracks federalism structure: the substantial effects test is a second-best doctrine with built-in drift. The constraint would be more accurately modeled as a piton (degraded from a better functional framing). If categorical boundary is appropriate: doctrine is more stable than omega suggests.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether categorical boundary tracks functional federalism structure"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "kernel_context": "This constraint is one reading of the contested kernel 'Commerce Clause Text' (commerce_clause_text). This reading instantiates the 'substantial effects limited reading' — federal authority extends to intrastate economic activity with substantial effects on interstate commerce, but requires both (1) genuine economic nexus and (2) non-pretextual regulation. Sibling readings include: (a) 'expansive federal reading' — any activity with any conceivable effect on commerce falls within federal jurisdiction (coexists); (b) 'originalist narrow reading' — the Commerce Clause reaches only activity that is itself an act of buying, selling, or exchanging across state lines (coexists but under tension). This reading polices the category boundary between economic and noneconomic activity. The boundary is maintained through active judicial enforcement and carries built-in instability: as economic integration deepens and regulatory domains blur, the distinction becomes increasingly arbitrary.",
+    "narrative_context": "The substantial effects test represents the Supreme Court's settled reading of the Commerce Clause since the 1940s-1990s: Congress may regulate intrastate activity if it substantially affects interstate commerce, provided the activity is genuinely economic in nature and the regulation does not use the commerce power as a pretext for police power concerns. This reading emerged from the New Deal crisis (when the Court abandoned Lochner formalism) and crystallized in cases like Wickard v. Filburn (wheat production for home consumption) and Gonzales v. Raich (homegrown marijuana). The reading benefits Congress and federal agencies by providing a stable jurisdictional framing that avoids the categorical explosion of pre-New Deal jurisprudence while preserving some state autonomy for genuinely local matters. It harms states attempting to regulate noneconomic intrastate activity (family law, criminal procedure, education) — if courts find even attenuated commerce connections, federal preemption follows. The constraint exhibits the structure of a tangled rope: genuine coordination function (preventing regulatory races-to-the-bottom in genuinely economic domains, enabling Congress to address multi-state problems) combined with asymmetric extraction (states lose authority in borderline cases, federal power systematically expands when economic effects are plausibly claimed). The rising theater ratio (0.48 → 0.65) reflects increasing performativity in boundary policing — courts struggle to distinguish genuine economic effects from pretextual invocation, especially as the domain of 'economic' regulation has expanded to cover environmental, health, and labor domains with complex causal chains to interstate commerce. The suppressiveness trajectory (0.38 → 0.48) reflects increasing barriers to state regulatory autonomy as federal agencies build interpretive infrastructure around the commerce power.",
+    "key_agents": [
+      "Congress: Primary beneficiary (institutional/arbitrage) — gains stable framing for enumerating commerce power without pretext; coordinates multi-state problems",
+      "Federal Regulatory Agencies (EPA, OSHA, FCC, etc.): Organized beneficiaries (organized/constrained) — benefit from substantial effects legitimacy but must maintain appearance of economic nexus",
+      "States Exercising Police Power: Primary victims (powerless/trapped) — lose authority over noneconomic intrastate matters if federal commerce nexus is found; no exit from Supremacy Clause",
+      "State Economic Regulators: Secondary agents (powerful/constrained) — retain substantial authority for genuinely economic regulation while sharing regulatory space with federal agencies",
+      "Federal Courts (Doctrine Enforcers): Organized actors (organized/constrained) — perform boundary policing function; see themselves as temporary umpires but face mounting complexity at margins",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing the category boundary as a necessary feature of federalism rather than a constructed distinction requiring active maintenance"
+    ],
+    "logic_rationale": "Extractiveness (0.42): Moderate. The substantial effects test carries genuine coordination benefits for Congress (multi-state externalities, regulatory spillovers) but also enables federal expansion into domains with attenuated or constructed commerce connections. The value reflects a hybrid: real coordination function combined with real asymmetric extraction of state authority. Not pure extraction (snare: 0.66+) because the doctrine preserves genuine state autonomy in legitimately local domains. Not pure coordination (rope: 0.35 or less) because states systematically lose authority at boundaries and federal agencies have extractive incentive to expand the definition of 'economic.' Suppression (0.48): Moderate-high. Significant barriers to state regulatory autonomy in contested domains: states cannot effectively challenge federal commerce power through the courts (rational basis review is highly deferential), cannot opt out through intergovernmental compacts without federal permission, and face preemption risk if they attempt regulation of activities with plausible commerce connections. But suppression is not total (snare: 0.60+) because states retain genuine authority in many domains and can influence the boundary through political channels. Theater ratio (0.65): High. Boundary policing between economic and noneconomic activity requires increasingly performative justification as economic integration deepens. Courts claim to measure actual economic effects but apply the doctrine flexibly to reach pre-determined conclusions. Federal agencies engage in post-hoc rationalization of economic effects to justify regulations motivated by other concerns (public health, environmental protection). The trajectory reflects increasing theater as the boundary becomes more strained.",
+    "perspectival_gap": "Congress sees coordination (Rope from immediate perspective): the substantial effects framing enables efficient multi-state regulation without the transaction costs of negotiated compacts or state-by-state patchworks. Federal agencies see beneficiary status (Rope): they gain jurisdictional legitimacy. States attempting noneconomic regulation see extraction (Snare): their police power domain is progressively compressed. States with economic regulatory capacity see mixed experience (Tangled Rope at generational scale): genuine autonomy for labor, environmental, and commercial regulation, but subject to federal override and category boundary pressure. Courts see themselves as performing necessary boundary maintenance (Scaffold with sunset logic): the doctrine is temporary, sustainable only if the economic/noneconomic distinction remains coherent, but the distinction is becoming unstable as integration deepens. The analytical observer risks seeing natural federalism (Mountain): federalism structures require some allocation of regulatory authority, and the substantial effects test is a reasonable way to allocate it. But structural data reveals this as false summit: the allocation mechanism benefits identifiable actors (Congress, federal agencies) and harms others (states exercising police power), and the category boundary is actively maintained through court enforcement rather than emerging naturally.",
+    "directionality_logic": "Congress (institutional beneficiary, arbitrage exit): derives d ≈ 0.10 from beneficiary status + ability to arbitrage policy venues. Federal agencies (organized beneficiary, constrained exit): derive d ≈ 0.25 — they benefit substantially but face constraints from needing to maintain the facade of economic nexus. States with police power (powerful/moderate power, trapped exit in preemption disputes): derive d ≈ 0.90 — they are structural targets, face federal supremacy, have no exit from the constitutional hierarchy. States with economic regulatory capacity (powerful power, constrained exit): derive d ≈ 0.55 — they are partially targeted (boundary pressure) but retain genuine authority and can negotiate federal arrangements. Courts (organized enforcers, constrained exit): derive d ≈ 0.40 — they are neither pure beneficiaries nor targets, but maintain the constraint mechanism. The perspectival variation in d explains why the same base extractiveness produces different classifications: beneficiaries perceive rope (low f(d) → low chi), targets perceive snare (high f(d) → high chi), mixed agents perceive tangled rope (moderate f(d) → moderate chi).",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that the classification depends on which structural position one occupies within the constraint. Congress genuinely benefits from having a stable jurisdictional framing (rope): the coordination function is real — multi-state externalities are costly to address through compacts, and a clear federal authority reduces transaction costs. States genuinely lose authority over noneconomic regulation (snare for police power domain): the extraction is real — once federal courts find a commerce nexus, Supremacy Clause forecloses state alternatives. States with economic regulation (tangled rope): the mixed experience is real — they benefit from federal coordination of multi-state externalities while bearing costs of preemption risk and regulatory overlap. The constraint is a genuinely hybrid coordination-extraction mechanism, not a misclassification. The tension arises from the fact that 'coordination' (multi-state externality management) and 'extraction' (state authority loss) flow through the same institutional mechanism (federal commerce jurisdiction). The doctrine distributes benefits and harms asymmetrically across agents. This is precisely what tangled rope describes: both functions are structural, both are real, and their coexistence creates the constraint."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "dormant_commerce_clause",
+      "state_police_power_boundary",
+      "regulatory_preemption_doctrine"
+    ],
+    "dual_formulation_note": "The substantial effects test is one component of a broader Commerce Clause constraint family. Upstream: the constitutional text (interpretation problem). Downstream: dormant commerce clause (state burden on interstate commerce even absent federal regulation) and preemption doctrine (federal vs state regulatory authority). The three sibling readings (substantial_effects_limited, expansive_federal, originalist_narrow) form a contest over the same legal text. Each reading would decompose differently into network-affected constraints — the expansive reading would upstream affect dormant commerce doctrine differently than the limited reading."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.4
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "enumerated_commerce_power_dual_federalism",
+    "drift_state": {
+      "moment": "contemporary_economic_integration",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "expansive_federal_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "originalist_narrow_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "economic_noneconomic_distinction_coherent",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "congress_factfinding_deference_appropriate",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  }
+}

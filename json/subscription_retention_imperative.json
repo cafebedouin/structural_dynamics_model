@@ -2,53 +2,82 @@
   "header": {
     "constraint_id": "subscription_retention_imperative",
     "version": "1.0",
-    "generated_date": "2025-02-27",
+    "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "subret"
+    "measurement_id_prefix": "subs_ret",
+    "story_uid": "865ee87c-a212-4f3b-a369-2ac2bb6c3b4c"
   },
   "base_properties": {
-    "extractiveness": 0.08,
-    "suppression": 0.03,
-    "theater_ratio": 0.15,
-    "claimed_type": "mountain",
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
     "human_readable": "Subscription Retention Imperative in Digital Media",
     "topic_domain": "media_studies/political_economy/cognitive_infrastructure",
-    "emerges_naturally": true,
-    "accessibility_collapse": 0.92,
-    "resistance": 0.08,
+    "requires_active_enforcement": true,
     "beneficiaries": [
-      "media_organizations",
-      "tenured_subscriber_cohorts"
+      "subscription_dependent_publishers"
     ],
-    "victims": []
+    "victims": [
+      "editorial_independence",
+      "audience_epistemic_wellbeing",
+      "civic_mobilization_capacity"
+    ]
   },
   "perspectives": [
     {
-      "classification_type": "mountain",
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Habituated Subscriber",
+      "comment": "PERSPECTIVE 1: HABITUATED SUBSCRIBER (SNARE) — Trapped in a renewal cycle designed to minimize cancellation friction. High cognitive switching costs, platform lock-in, and habit automation mean the subscriber cannot meaningfully exit despite dissatisfaction. The system extracts continuous payment through inertia, not choice."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Epistemically Vulnerable Audience",
+      "comment": "PERSPECTIVE 2: EPISTEMICALLY VULNERABLE AUDIENCE (SNARE) — Those most dependent on media for civic knowledge face optimization for retention over accuracy. Content design prioritizes keeping attention and subscriptions over informing. Audiences without alternative epistemic resources are trapped in a feed designed to maximize psychological engagement rather than comprehension."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Staff Journalist",
+      "comment": "PERSPECTIVE 3: STAFF JOURNALIST (TANGLED ROPE) — Experiences genuine coordination (covering events readers care about, building audience) alongside asymmetric extraction (assignment pressure toward retention-optimized angles, suppression of coverage that would cause cancellations). Career security depends on subscriber metrics, not editorial judgment."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Civic Information Ecosystem",
+      "comment": "PERSPECTIVE 4: CIVIC INFORMATION ECOSYSTEM (TANGLED ROPE) — Organized actors (news organizations, civil society) experience coordination (media funding via subscriptions stabilizes local reporting) alongside extraction (systematic bias toward content that drives subscriptions over content that serves civic knowledge, hollowing out investigative and beat reporting)."
+    },
+    {
+      "classification_type": "rope",
       "agent_power": "institutional",
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Media Organization",
-      "comment": "PERSPECTIVE 1: MEDIA ORGANIZATION (MOUNTAIN) \u2014 Subscription economics impose an immutable constraint: recurring revenue requires stable returning readers. Content optimization for retention is not a choice but a structural necessity of the business model. The organization experiences this as a natural law of digital media economics."
+      "label": "The Subscription-Dependent Publisher",
+      "comment": "PERSPECTIVE 5: SUBSCRIPTION-DEPENDENT PUBLISHER (ROPE) — Benefits from the retention mechanism as coordination: subscriber revenue enables continued operation. The constraint is experienced as a beneficial coordination solution to funding scarcity — publishers solve the problem of sustainable media economics through retention design. Net beneficiary."
     },
     {
-      "classification_type": "mountain",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "national",
-      "label": "The Tenured Subscriber",
-      "comment": "PERSPECTIVE 2: TENURED SUBSCRIBER (MOUNTAIN) \u2014 Long-term subscribers experience content optimization for retention as a natural feature of subscription media. The constraint is invisible because it aligns with their preferences: they want stable, predictable content that justifies ongoing payment. ARPU growth from tenured cohorts ($9.72 Q4 2025) reflects genuine value alignment, not extraction."
-    },
-    {
-      "classification_type": "mountain",
-      "agent_power": "moderate",
-      "time_horizon": "immediate",
-      "exit_options": "mobile",
-      "spatial_scope": "regional",
-      "label": "The Casual Reader",
-      "comment": "PERSPECTIVE 3: CASUAL READER (MOUNTAIN) \u2014 Non-subscribers experience the retention optimization indirectly through content selection and framing. The 42% conversion rate within 6 months suggests the constraint operates as a filter rather than a trap: readers who don't align with retention-optimized content simply don't subscribe. No coercion, no suppression."
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Intermediary",
+      "comment": "PERSPECTIVE 6: PLATFORM INTERMEDIARY (TANGLED ROPE) — Coordinates media distribution and reader identity (arbitrage exit via advertising, data sales) while extracting value through algorithmic curation that reinforces retention-optimized content. Benefits from the subscription model's success while also profiting from its externalities."
     },
     {
       "classification_type": "mountain",
@@ -56,85 +85,149 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a civilizational perspective, the subscription retention imperative is a structural property of recurring revenue models across all domains. Any business model requiring stable returning customers will optimize for retention over mobilization. This is not specific to media \u2014 it applies to SaaS, gyms, utilities, and any subscription service. The constraint emerges from the mathematics of customer lifetime value, not from institutional choice."
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, the retention-mobilization tradeoff reflects an immutable mathematical constraint: recurring revenue models inherently favor habit and predictability over disruption. This appears as a law of economics. However, structural beneficiaries exist — the engine will compute false summit, revealing that the 'inherent to subscription math' framing naturalizes a contingent institutional choice to maximize extraction over editorial freedom."
     }
   ],
   "omegas": [
     {
-      "id": "retention_mobilization_tradeoff",
-      "question": "Is the retention-mobilization tradeoff a genuine structural constraint of subscription economics, or a contingent choice that could be resolved through alternative business models?",
-      "resolution_mechanism": "Comparative analysis of hybrid models (e.g., impact-funded journalism, cooperative ownership, public media) that attempt to decouple revenue stability from content optimization for retention. Measure whether these models achieve comparable financial sustainability without the retention imperative.",
-      "impact": "If alternative models achieve sustainability without retention optimization: the constraint is contingent (false summit). If all sustainable models converge on retention optimization: the constraint is structural (genuine mountain).",
+      "id": "mobilization_vs_retention_optimization",
+      "question": "Is the retention-mobilization tradeoff truly inherent to subscription economics, or is it a contingent choice by publishers to optimize for maximum extraction over editorial independence?",
+      "resolution_mechanism": "Comparative analysis of publisher editorial policies across different revenue models (subscription-primary, advertising-primary, membership, grants); measurement of editorial constraint elasticity with revenue model; historical case studies of publishers that prioritized editorial independence despite subscription pressure (and their outcomes)",
+      "impact": "If inherent: mountain classification is correct — subscription economics mathematically forces retention optimization. If contingent: false summit — publishers chose extraction over independence; alternative editorial models are structurally possible.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether retention-mobilization tradeoff is structural or contingent"
+      "description": "Whether retention-mobilization tradeoff is inherent to subscription math or a contingent editorial choice"
     },
     {
-      "id": "beneficiary_identification_ambiguity",
-      "question": "Are media organizations and tenured subscribers genuine beneficiaries of a natural constraint, or are they beneficiaries of a constructed constraint that naturalizes their preferences?",
-      "resolution_mechanism": "Historical analysis of media business models pre-subscription era. Did advertising-supported models produce different content optimization patterns? Do public media models without subscription imperatives produce different mobilization vs retention balances?",
-      "impact": "If subscription model produces unique retention bias not present in alternative models: beneficiaries are benefiting from a constructed constraint (false summit). If all sustainable models converge on similar retention optimization: beneficiaries are simply aligned with a natural constraint (genuine mountain).",
+      "id": "cancellation_friction_necessity",
+      "question": "How much of the observed subscriber retention derives from genuinely reduced cancellation friction (behavioral design, habit automation) versus from content quality and audience satisfaction?",
+      "resolution_mechanism": "Experimental variation: A/B testing cancellation interfaces (friction vs frictionless); longitudinal analysis of churn rates pre- and post-interface redesign; comparison of churn elasticity across publishers with different friction levels but similar content quality",
+      "impact": "If friction-driven: suppression mechanism is the design of the cancellation path itself — high suppression score is correct. If satisfaction-driven: retention reflects genuine audience preference — suppression is lower, constraint approaches rope rather than snare.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether beneficiaries indicate constructed vs natural constraint"
+      "description": "Relative contributions of behavioral friction versus content satisfaction to retention"
+    },
+    {
+      "id": "editorial_independence_cost_empirical",
+      "question": "What is the empirical cost (in subscriber churn and revenue) of publishing coverage that does NOT optimize for retention?",
+      "resolution_mechanism": "Measurement of subscriber response (churn, engagement) to specific editorial decisions: investigations that anger advertisers or subscribers; coverage of issues that depress engagement; long-form journalism that demands sustained attention; coverage of topics with low sustained reader interest; cross-publisher correlation between editorial constraint and financial performance",
+      "impact": "If cost is severe: publishers face genuine economic pressure — extraction is real but bounded by economic necessity, not pure rent-seeking. If cost is moderate: publishers could fund editorial independence through mixed revenue strategies — the constraint reflects choice, not necessity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Financial impact of editorial independence from retention optimization"
+    },
+    {
+      "id": "audience_habitual_vs_informed_engagement",
+      "question": "Does subscription retention design produce primarily habitual engagement (scrolling, skim-reading, viral sharing) or genuinely informed engagement (deep reading, knowledge retention, behavior change)?",
+      "resolution_mechanism": "Measurement of reading depth, comprehension, and behavior change across retention-optimized versus editorial-priority content; longitudinal tracking of subscriber knowledge acquisition and civic participation; comparison of engagement metrics versus cognitive outcome metrics",
+      "impact": "If primarily habitual: suppression is high (audience is trapped in low-information engagement) and theater_ratio is high (metrics-driven content mimics information without substance). If substantial informed engagement: suppression is lower, audience is not epistemically trapped.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether subscription retention produces habitual versus informed audience engagement"
+    },
+    {
+      "id": "alternative_funding_model_feasibility",
+      "question": "Are hybrid or alternative funding models (membership, public funding, grants, cooperative ownership) structurally capable of funding news organizations at current scale while preserving editorial independence?",
+      "resolution_mechanism": "Case study analysis of news organizations with non-subscription-primary funding; financial comparison of revenue-per-journalist and editorial autonomy across funding models; assessment of scalability of alternative models to support investigative and beat reporting",
+      "impact": "If feasible: the constraint reflects choice to extract maximum subscriber value rather than necessity — Snare classification more defensible. If infeasible: publishers face genuine economic pressure — constraint reflects real structural bind between sustainability and editorial freedom.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Feasibility of alternative funding models for news organizations"
+    },
+    {
+      "id": "false_summit_natural_law_framing",
+      "question": "Does the 'subscription mathematics as natural law' framing serve institutional interests by naturalizing what is actually a contingent design choice?",
+      "resolution_mechanism": "Rhetorical analysis of publisher statements about retention constraints; historical comparison of editorial freedom across subscription adoption periods; identification of moments where publishers chose editorial independence despite subscription pressure (and documented decision-making rationale)",
+      "impact": "If framing serves institutional extraction: mountain classification is false summit — reveals how mathematical determinism rhetoric protects extractive design from scrutiny. If framing reflects genuine structural constraint: mountain classification is correct.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether natural law framing serves to legitimize contingent extraction choices"
     }
   ],
   "measurements": [
     {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.12
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 3,
-      "value": 0.14
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 6,
-      "value": 0.15
-    },
-    {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.06
+      "value": 0.32
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 3,
-      "value": 0.07
+      "time_point": 4,
+      "value": 0.45
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 6,
-      "value": 0.08
+      "time_point": 8,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 8,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.65
     }
   ],
   "interval": {
     "start": 0,
-    "end": 6
+    "end": 8
   },
   "commentary": {
-    "narrative_context": "The subscription retention imperative represents a structural constraint emerging from the mathematics of recurring revenue models. Media organizations operating on subscription economics face an immutable tradeoff: content optimized for mobilization (urgent, disruptive, action-oriented) produces high churn, while content optimized for retention (stable, predictable, habit-forming) produces sustainable revenue. The 42% conversion rate within 6 months and ARPU growth from tenured cohorts ($9.72 Q4 2025) reflect this structural reality. However, the constraint's classification as mountain depends on whether this tradeoff is inherent to sustainable journalism or contingent on the subscription business model itself. The presence of identifiable beneficiaries (media organizations and tenured subscribers who prefer retention-optimized content) triggers false summit detection, requiring resolution of whether alternative models could achieve sustainability without the retention imperative.",
+    "narrative_context": "The subscription retention imperative represents a structural constraint emerging from the mathematics of recurring revenue models in digital media. Media organizations operating on subscription economics face a fundamental design problem: content optimized for mobilization (urgent, surprising, action-oriented) produces high cancellation rates, while content optimized for retention (stable, predictable, habit-forming, emotionally consistent) sustains subscriber bases. This constraint appears as a natural law of economics but exhibits all the markers of an institutional extraction mechanism masquerading as mathematical necessity. The constraint operates across the entire cognitive infrastructure of digital news — affecting which stories are covered, how they are framed, what investigative resources are allocated, and which audiences receive which information. It creates asymmetric extraction: publishers benefit from subscription revenue stabilization; subscribers are trapped in habit-forming interfaces designed to minimize cancellation; journalists face assignment pressure toward retention-optimized angles; and the civic information ecosystem experiences systematic bias toward engagement-maximizing content over public-knowledge-maximizing content.",
     "key_agents": [
-      "Media Organizations: Primary beneficiary (institutional/arbitrage) \u2014 subscription model provides revenue stability; retention optimization is experienced as natural business necessity",
-      "Tenured Subscriber Cohorts: Secondary beneficiary (moderate/mobile) \u2014 long-term subscribers prefer stable, predictable content that justifies ongoing payment; ARPU growth reflects genuine value alignment",
-      "Casual Readers: Neutral observer (moderate/mobile) \u2014 non-subscribers experience retention optimization indirectly through content selection; 42% conversion rate suggests filter rather than trap",
-      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees retention imperative as structural property of recurring revenue models across all domains"
+      "Subscription-Dependent Publisher: Primary beneficiary (institutional/arbitrage) — captures recurring revenue, predictable cash flow, and data about subscriber behavior; insulated from advertising market volatility",
+      "Habituated Subscriber: Primary victim (powerless/trapped) — trapped in renewal cycle with high friction cancellation; psychological switching costs; continues payment despite dissatisfaction",
+      "Epistemically Vulnerable Audience: Secondary victim (powerless/trapped) — depends on media for civic knowledge; exposed to content optimized for retention over accuracy; epistemically trapped in habit-forming feeds",
+      "Staff Journalist: Tertiary actor (moderate/constrained) — experiences coordination (covering events audiences engage with) alongside extraction (assignment pressure toward retention angles, suppression of coverage that would cause churn)",
+      "Civic Information Ecosystem: Organizational victim (organized/constrained) — experiences coordination (subscription model stabilizes local reporting funding) alongside extraction (systematic bias away from investigative and beat reporting)",
+      "Platform Intermediary: Secondary beneficiary (powerful/arbitrage) — coordinates distribution while extracting value through algorithmic curation that reinforces retention-optimized content; profits from both subscription model and its externalities",
+      "Analytical Observer: Civilizational position (analytical/analytical) — risks naturalizing contingent editorial choices as immutable mathematical laws"
     ],
-    "logic_rationale": "Extractiveness (0.08): Very low. The constraint imposes minimal extraction because it operates through preference alignment rather than coercion. Tenured subscribers who generate ARPU growth are receiving content they value; casual readers who don't convert simply exit without cost. The retention optimization creates a selection effect (filtering for readers who prefer stable content) rather than an extraction mechanism. Suppression (0.03): Negligible. No barriers prevent readers from exiting subscriptions or accessing alternative media. The 42% conversion rate indicates the constraint operates through voluntary alignment, not through suppression of alternatives. Theater ratio (0.15): Very low. Subscription metrics (conversion rate, churn by content type, ARPU growth) are genuine functional measurements, not performative proxies. Media organizations track these metrics because they directly determine revenue sustainability. Accessibility collapse (0.92): Very high. The retention imperative is accessible to all observers \u2014 media organizations, subscribers, and analysts all recognize that recurring revenue requires stable returning customers. Resistance (0.08): Very low. The constraint shows minimal resistance to analytical scrutiny. The mathematics of customer lifetime value are well-understood and non-controversial.",
-    "directionality_logic": "Media organizations are declared as beneficiaries because they achieve revenue stability through the retention imperative. Tenured subscriber cohorts are declared as beneficiaries because retention-optimized content aligns with their preferences (stable, predictable, habit-forming content that justifies ongoing payment). However, this beneficiary declaration triggers false summit detection: if the constraint is a genuine natural law (subscription economics inherently require retention optimization), then beneficiaries are simply agents whose preferences align with an immutable constraint. If the constraint is contingent (alternative business models could achieve sustainability without retention optimization), then beneficiaries are agents who benefit from naturalizing a constructed constraint. The omega variables address this ambiguity directly.",
-    "perspectival_gap": "All four perspectives classify the constraint as mountain, reflecting the hypothesis that the retention imperative is a structural property of subscription economics. The institutional perspective (media organization) experiences it as a business necessity. The moderate perspectives (tenured subscriber and casual reader) experience it as a natural feature of subscription media or a voluntary filter. The analytical perspective sees it as a universal property of recurring revenue models. The absence of perspectival gap is itself diagnostic: if the constraint is a genuine mountain, all observers should converge on the same classification. If it's a false summit, the convergence reveals successful naturalization of a contingent arrangement.",
-    "mandatrophy_analysis": "The constraint resolves mandatrophy by demonstrating that very low extraction (0.08) can coexist with identifiable beneficiaries when the constraint operates through preference alignment rather than coercion. The retention imperative is not extractive because it filters for subscribers whose preferences align with retention-optimized content, rather than trapping subscribers who prefer mobilization-oriented content. The 42% conversion rate and low churn among tenured cohorts indicate voluntary alignment, not extraction. However, the false summit detector will flag this constraint for review: are media organizations and tenured subscribers benefiting from a natural law, or from a constructed constraint that naturalizes their preferences? The omega variables provide the resolution mechanism."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, trending upward. The constraint operates through direct extraction (subscribers trapped in renewal cycles), epistemic extraction (audience fed retention-optimized rather than knowledge-optimized content), and editorial extraction (journalists assigned toward retention angles). The trend from 0.32 to 0.58 reflects intensifying optimization pressure as competitive pressures in the subscription market increase. The constraint is not extracting maximally because alternative funding models and editorial independence choices are structurally possible — publishers have chosen this path, not been forced into it. Suppression (0.65): High and rising. Suppression operates through multiple mechanisms: (1) behavioral design of cancellation interfaces (technical suppression of exit), (2) habit automation and psychological switching costs (cognitive suppression), (3) epistemic suppression — audiences receive systematically biased information designed to maximize engagement rather than comprehension, (4) editorial suppression — journalists operate under assignment pressure toward retention-optimized angles. The rising trajectory reflects intensifying suppression investments as subscription markets saturate. Theater ratio (0.48): Moderate and stable. Retention optimization does produce genuine engagement metrics and subscriber behavior — it is not purely performative. However, engagement metrics increasingly decouple from information quality or civic outcomes. The theater represents the gap between metrics-driven content design and editorial purpose.",
+    "perspectival_gap": "The structure gap is stark: beneficiary publishers perceive coordination (rope), powerless subscribers perceive extraction (snare), moderate journalists perceive hybrid (tangled rope), and the civilizational analytical observer risks naturalizing extraction as law (false mountain). The gap reveals how the same structural constraint — retention-optimized content design — produces radically different classifications depending on power, exit options, and benefit flows.",
+    "directionality_logic": "Directionality derives from the beneficiary/victim structure: subscription publishers are primary beneficiaries (d ≈ 0.15, low extraction experienced); subscribers are victims (d ≈ 0.85, high extraction experienced); journalists and civic actors are mixed (d ≈ 0.55-0.65). The epistemic dimension (platform curation, information quality trade-offs) is captured in the omega variables rather than in directionality itself — directionality measures economic/material extraction, while the omegas address epistemic suppression mechanisms.",
+    "mandatrophy_analysis": "This constraint exhibits the classic mandatrophy pattern: the beneficiary sees pure coordination (rope), the victims see pure extraction (snare), and the analytical observer at civilizational scope risks false summit (natural law). Resolution requires recognizing that all three classifications are structurally correct relative to their observation points, but the beneficiary's rope experience masks the victims' snare experience. The constraint resolves the mandatrophy by showing that subscriber retention IS a coordination mechanism (solving the problem of sustainable media funding) AND an extraction mechanism (optimizing content for habit-formation over knowledge). Both are true. The ethical and political question is whether the coordination benefit justifies the extraction cost — that is not resolved by classification, but made visible by it."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
-    "affects_constraints": [],
-    "dual_formulation_note": "The subscription retention imperative is a candidate for decomposition if alternative business models (advertising-supported, impact-funded, cooperative) produce structurally different retention-mobilization tradeoffs. If all sustainable models converge on similar retention optimization, the constraint is a genuine mountain. If alternative models achieve sustainability without retention optimization, the subscription-specific constraint should be decomposed from the general constraint of sustainable journalism."
+    "affects_constraints": [
+      "algorithmic_curation_bias",
+      "editorial_independence_degradation",
+      "civic_information_poverty",
+      "subscriber_surveillance_infrastructure"
+    ],
+    "dual_formulation_note": "The subscription retention imperative is upstream of multiple downstream constraints: algorithmic curation that reinforces retention optimization, editorial independence erosion as publishers optimize for metrics, civic information poverty as knowledge-optimized content loses resources, and subscriber surveillance infrastructure built to enable retention design. Each downstream constraint has its own extractiveness value and beneficiary/victim structure, but all are causally influenced by the retention incentive at the core."
   },
-  "directionality_overrides": []
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
 }

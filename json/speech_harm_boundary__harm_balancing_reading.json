@@ -1,0 +1,273 @@
+{
+  "header": {
+    "constraint_id": "speech_harm_boundary__harm_balancing_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_speech_harm_boundary__harm_balancing_reading",
+    "measurement_id_prefix": "speech_harm_bal",
+    "story_uid": "reading_harm_balancing_kernel_speech_harm_boundary",
+    "created_at": "2026-02-26T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Speech Protection with Harm-Balancing Restriction (Constitutional Reading)",
+    "topic_domain": "constitutional_law/free_speech/proportionality_doctrine",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "protected_speakers",
+      "state_enforcement_capacity"
+    ],
+    "victims": [
+      "speakers_of_harmful_content",
+      "marginalized_groups_subject_to_hate_speech"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Marginalized Group Subject to Hate Speech",
+      "comment": "PERSPECTIVE 1: MARGINALIZED GROUP SUBJECT TO HATE SPEECH (SNARE) — Trapped by both the speech that targets them AND by the requirement to prove 'demonstrated harm' to trigger restriction. No exit from exposure to speech; burden of proof shifts extraction toward the target. High extraction, suppression through epistemic barriers to harm demonstration."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Restricted Speaker (Demonstrable Harm Case)",
+      "comment": "PERSPECTIVE 2: RESTRICTED SPEAKER FACING DEMONSTRABLE HARM THRESHOLD (TANGLED ROPE) — Faces real restriction costs when harm is demonstrated, but also benefits from the coordination function of proportionality doctrine: clear (if demanding) rules about when restriction is legitimate. Not maximally trapped — has exit path through legal process and burden of proof. Experiences both coordination (transparent balancing) and extraction (restriction when threshold met)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Enforcement Institution (State/Court)",
+      "comment": "PERSPECTIVE 3: STATE ENFORCEMENT INSTITUTION (ROPE) — Benefits from clear proportionality doctrine that enables consistent application and public legitimacy. Sees the constraint as coordination mechanism: harm-balancing provides institutional framework for settling speech disputes without total prohibition or total permission. Arbitrage exit — can switch enforcement standards if doctrine changes."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Powerful Speaker (Media/Institutional Platform)",
+      "comment": "PERSPECTIVE 4: POWERFUL SPEAKER WITH INSTITUTIONAL PLATFORM (TANGLED ROPE) — Has resources to contest harm determinations and navigate legal process; also benefits from baseline speech protection. Experiences the constraint as mixed: gains coordination benefit of predictable legal framework but bears modest restriction costs when harm is demonstrated. Mobile exit — can relocate speech to jurisdictions with weaker harm-balancing doctrine."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Civil Society Coalition Monitoring Implementation",
+      "comment": "PERSPECTIVE 5: ORGANIZED CIVIL SOCIETY / ADVOCACY COALITION (SCAFFOLD) — Sees harm-balancing doctrine as a temporary coordination solution with sunset logic: as social norms evolve and shared epistemic standards for 'harm' mature, the need for judicial intervention declines. Organized agents pushing for clearer harm standards and public deliberation. Constraints enforcement through social scrutiny rather than legal restriction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Formal Legal Doctrine (Doctrinal Institution)",
+      "comment": "PERSPECTIVE 6: FORMAL LEGAL DOCTRINE AS INSTITUTIONAL ACTOR (PITON) — The harm-balancing framework itself has become largely performative: courts apply harm-balancing formulae as ritual (the 'proportionality test'), but actual outcomes depend more on political composition of the bench and public sentiment than on the formal doctrine. Theater ratio is moderate-high because doctrine provides appearance of rational constraint on political speech enforcement, but the doctrine is honored in form while outcomes are driven by power."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Limits View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / UNIVERSAL VIEW (MOUNTAIN) — From a civilizational/universal perspective, some balance between protection and restriction is inherent to any communication system: absolute prohibition silences necessary voices; absolute protection enables organized silencing through speech itself. The constraint appears as an immutable feature of social coordination. However, the structural data indicates false summit: the specific balance point, burden of proof placement, and harm definitions are contingent institutional choices, not natural laws."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "harm_demonstration_standard_ambiguity",
+      "question": "What standard of evidence constitutes 'demonstrated harm' sufficient to justify speech restriction under this reading?",
+      "resolution_mechanism": "Comparative analysis of jurisdictions with different harm thresholds; empirical measurement of impact on marginalized groups under strict vs. permissive harm standards; tracking of legal outcomes across cases with similar speech but different harm-proof strategies",
+      "impact": "High threshold (empirically verified direct violence, measurable economic loss): narrow unprotected category, favors speakers, requires marginalized groups to prove severe harm. Low threshold (reasonable fear, documented harassment patterns, community testimony): broad unprotected category, favors marginalized groups, requires state to show proportionality. Determines whether this reading is closer to absolutist (high threshold) or dignity (low threshold).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Evidentiary standard for 'demonstrated harm' determining restriction threshold"
+    },
+    {
+      "id": "proportionality_calculus_instability",
+      "question": "Is the proportionality balance between restriction costs and harm prevention stable across different power configurations, or does it depend on the political position of enforcement institutions?",
+      "resolution_mechanism": "Longitudinal analysis of harm-balancing application across administrations with different political compositions; comparison of identical speech types treated as protected vs. restricted under different governments; measurement of doctrine-drift correlation with institutional power shifts",
+      "impact": "If stable: proportionality doctrine functions as genuine rule of law constraint. If unstable: doctrine is piton (performative ritual maintained by power structures, not functional constraint). Determines whether piton perspective is diagnostic or misclassification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Stability of proportionality doctrine across political configurations"
+    },
+    {
+      "id": "social_epistemic_standard_evolution",
+      "question": "As social understanding of harm evolves (e.g., recognition of algorithmic amplification effects, cumulative harassment, epistemic injustice), does the harm-balancing doctrine evolve to track shared standards, or does it lag behind evolving consensus?",
+      "resolution_mechanism": "Historical comparison of harm standards across decades; tracking of gap between academic/activist definitions of harm and doctrinal definitions; survey of convergence/divergence between public understanding and legal standards over time",
+      "impact": "If doctrine tracks social consensus: scaffold perspective is accurate — sunset logic works as norms mature. If doctrine lags: gap persists, marginalized groups cannot access updated harm standards through legal process, extraction mechanism continues. Determines whether harm-balancing is temporary coordination or stable extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Doctrinal evolution in response to evolving social understanding of harm"
+    },
+    {
+      "id": "false_summit_naturalization",
+      "question": "Is the claim that 'all communication systems require some speech-harm balance' a universal natural law, or a contingent institutional arrangement that naturalizes specific political choices?",
+      "resolution_mechanism": "Cross-cultural and historical comparison: do societies with radically different speech protection frameworks (absolute prohibition, absolute protection, communal consensus models) all achieve successful communication? If yes: balance is contingent, not natural. If no: balance point may be natural but specific location (this reading's harm threshold) is not.",
+      "impact": "If natural law: mountain classification is correct, harm-balancing is universal feature of human communication. If contingent: mountain is false summit, this reading instantiates a specific political choice presented as natural inevitability. Determines whether the analytical observer's perspective is genuine insight or naturalization.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether speech-harm balance is universal natural law or contingent institutional choice"
+    },
+    {
+      "id": "sibling_reading_foreclosure_status",
+      "question": "Does harm-balancing doctrine logically foreclose the absolutist reading, or do they coexist as live alternative positions held by different parties?",
+      "resolution_mechanism": "Examination of whether a single legal framework could hold both: can a jurisdiction maintain harm-balancing as the law while recognizing absolutist arguments as legally respectable? Comparison with jurisdictions that have formally rejected harm-balancing (what grounds do they use?). Assessment of whether the readings differ only in policy preference or in fundamental commitments.",
+      "impact": "If forecloses: absolutist reading's core premise is logically impossible within this reading's framework. If coexists: both readings remain live, present as competing values within pluralist frameworks. Determines reading_relations type and grounds for this reading's legitimacy claim.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Logical relationship between harm-balancing and absolutist readings of speech protection"
+    },
+    {
+      "id": "burden_of_proof_asymmetry_origin",
+      "question": "Is the burden of proof placed on marginalized groups (to demonstrate harm) or on state enforcement institutions (to justify restriction) a deliberate design choice of this reading, or a contingent outcome of institutional power?",
+      "resolution_mechanism": "Analysis of alternative burden-placement regimes: what if burden were on speakers to justify absence of harm? What if burden were shared? Comparison of how different jurisdictions place burden and outcomes for marginalized groups. Assessment of whether burden placement follows from harm-balancing principle or from independent power structure.",
+      "impact": "If design choice: reading is internally coherent and burden could be rebalanced without abandoning harm-balancing. If contingent: burden placement reflects power dynamics, not doctrine, and represents disguised extraction. Determines whether reading is coherent Tangled Rope or whether snare perspective more accurately captures structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Origins and contingency of burden-of-proof placement in harm demonstration"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates the HARM-BALANCING READING of the speech-harm boundary kernel — one of three live alternative readings in constitutional law. Under this reading, speech receives presumptive protection, but that protection yields when an agent demonstrates that speech causes concrete, measurable harm exceeding some threshold. The reading establishes a proportionality doctrine: restrictions are justified only when harm is demonstrated AND the restriction is proportional to the harm. This reading is distinct from the absolutist reading (which rejects all harm-based restriction) and the dignity reading (which permits restriction for dignitary harm and group libel without requiring empirical harm demonstration). The harm-balancing reading occupies a moderate position: narrower than the dignity reading's protected categories, broader than absolutism's near-universal protection. The constraint exhibits Tangled Rope structure: it provides a genuine coordination function (the proportionality doctrine offers predictable framework for settlement) while also extracting costs from speakers whose speech crosses the harm threshold and from marginalized groups who must bear burden of proving harm. The extractiveness has increased over time (0.38 → 0.52) as the burden-of-proof mechanism has clarified and as enforcement institutions have developed more sophisticated means of harm measurement, making the doctrine more operationally demanding for marginalized groups to activate.",
+    "key_agents": [
+      "Marginalized groups subject to hate speech: Primary victims (powerless/trapped) — face exposure to speech and bear epistemic burden to prove harm sufficient for restriction",
+      "Protected speakers (general category): Primary beneficiaries (institutional/arbitrage) — receive baseline speech protection under presumption that benefits from predictable legal framework",
+      "Restricted speakers (demonstrable harm case): Secondary actors (moderate/constrained) — face restriction costs when harm is demonstrated; also benefit from transparency of harm-balancing threshold",
+      "State enforcement institutions (courts, administrative bodies): Institutional beneficiaries (institutional/arbitrage) — benefit from doctrine's coordination function providing legitimate framework for decision-making",
+      "Powerful speakers with institutional platforms: Secondary beneficiaries (powerful/mobile) — have resources to contest harm determinations and navigate legal process; benefit from protection while bearing modest restriction costs",
+      "Civil society advocacy coalition: Organized agents (organized/constrained) — monitor doctrine implementation and push for clearer shared harm standards through public deliberation",
+      "Legal doctrine itself (as institution): Piton perspective — harm-balancing formulae maintained as performative ritual; actual outcomes increasingly driven by political composition of enforcement bodies rather than by doctrine",
+      "Analytical observer: Civilizational perspective — risks naturalizing contingent institutional arrangement (specific balance point, burden-of-proof placement) as universal feature of all communication systems"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate, trending upward. The harm-balancing reading imposes real restriction costs on speakers whose speech demonstrably causes harm, but those costs are bounded by the proportionality requirement and the burden of proof. The extractiveness is not as high as pure snare (which would have ε > 0.66) because the doctrine offers genuine coordination benefit — clear (if demanding) rules about when restriction is legitimate. However, the measurement trajectory shows increasing extractiveness over the 30-year interval as enforcement institutions have become more sophisticated in measuring and demonstrating harm, and as marginalized groups have developed better documentation of cumulative harassment effects. This rising trend suggests the constraint is drifting toward snare territory as the harm threshold becomes more operable. Suppression (0.48): Moderate. There are genuine barriers to demonstrating harm (epistemic burden, difficulty capturing cumulative effects, power asymmetries in who can present evidence), but these are not total barriers — legal process exists and some marginalized groups have successfully met the threshold. Theater ratio (0.38): Low-moderate. The harm-balancing doctrine is substantive rather than performative — proportionality analysis genuinely constrains enforcement outcomes more than pure ritual would. However, the doctrine still contains performative elements (proportionality tests applied formulaically, outcomes diverging from doctrine based on political factors), explaining the non-trivial theater value.",
+    "directionality_logic": "Each perspective's directionality is determined by their structural position: whether they benefit or bear costs from this reading's specific balance point and burden-of-proof placement. Marginalized groups subject to hate speech experience high d (close to 1.0 — full targets of extraction) because they bear both the primary speech harm AND the secondary epistemic burden of demonstrating harm. Powerful speakers with institutional platforms experience low d because they benefit from baseline protection and have resources to navigate the burden-of-proof system. State enforcement institutions experience low d because they benefit from the coordination framework that legitimizes their decisions. The tangled rope classification at moderate power reflects that restricted speakers in successful harm-demonstration cases experience mixed effects: real restriction costs but also genuine coordination benefit from predictable framework. The piton classification reflects that the doctrine's actual constraint on enforcement outcomes has weakened as political factors have become dominant in determining which cases succeed.",
+    "perspectival_gap": "This constraint exhibits stark perspectival gaps that reveal the reading's asymmetries. Marginalized groups see a snare: they are trapped by speech exposure and trapped again by burden of proof. State enforcement sees a rope: coordination mechanism that provides legitimate framework. The restricted speaker (moderate power) sees tangled rope: mixed extraction and coordination. The powerful speaker sees near-rope (minor restriction costs offset by baseline protection and ability to contest determinations). The analytical observer risks seeing mountain (universal feature of communication systems), but the structural data reveals false summit: the specific burden-of-proof placement and harm threshold are institutional choices, not natural laws. The largest gap is between the marginalized group perspective (snare) and the institutional perspective (rope): the same doctrine appears as constraint vs. coordination depending on who must activate it and who benefits from its application.",
+    "mandatrophy_analysis": "The harm-balancing reading resolves mandatrophy through explicit acknowledgment of mixed function: the doctrine genuinely coordinates speech disputes (marginalizing groups and state enforcement need predictable framework) while also extracting costs (speakers bear restriction costs, marginalized groups bear burden of proof). The mandate is not 'pure protection' or 'pure restriction' but 'predictable balancing.' The mandatrophy surfaces as the gap between the doctrine's stated function (proportionality-based coordination) and its actual operation (burden of proof heavily weighted against those seeking restriction, enforcement outcomes determined by political factors rather than doctrinal coherence). This gap is captured in the piton perspective: doctrine maintained for legitimacy while actual constraint comes from power.",
+    "kernel_context": "This constraint instantiates the HARM-BALANCING READING of the speech-harm boundary kernel. The kernel is the fundamental commitment: what should be the relationship between speech protection and the harm speech causes? Three sibling readings provide alternative answers: (1) the absolutist reading (speech protection is nearly universal; harm-based restriction is not justified), (2) the dignity reading (speech protection yields to dignitary harm and group libel without requiring empirical harm demonstration), and (3) this reading (speech protection yields to demonstrated concrete harm through proportionality balancing). These readings are not mere policy disagreements — they instantiate fundamentally different constitutional understandings of what free speech is FOR. The absolutist reading treats speech as self-expression right prior to social coordination. The dignity reading treats speech as socially embedded act that can violate community standing. This reading treats speech as instrumentally important for truth-seeking and autonomy but also as capable of inflicting concrete, measurable harm that can justify restriction. The readings coexist as live positions held by different judicial and political coalitions — no single coalition has definitively foreclosed the others, though jurisdictions differ in which reading they adopt as doctrine."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "speech_harm_boundary__absolutist_reading",
+      "speech_harm_boundary__dignity_reading",
+      "hate_speech_epistemic_burden",
+      "proportionality_doctrine_enforcement"
+    ],
+    "dual_formulation_note": "The speech-harm boundary constraint family contains three structurally distinct readings of the same kernel: absolutist_reading (ε≈0.15, Mountain for most perspectives, near-universal protection), dignity_reading (ε≈0.68, Snare for speakers, high restriction costs without empirical harm requirement), and harm_balancing_reading (ε=0.52, Tangled Rope, moderate restriction costs bounded by proportionality). Each reading has different ε, different beneficiary/victim structures, and different operational mechanisms. They are not the same constraint viewed from different angles — they are genuinely different interpretations of the constitutional kernel that produce different outcomes. Network links these three readings as family members competing for institutional adoption."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.88
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "speech_harm_boundary__absolutist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "speech_harm_boundary__dignity_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "demonstrated_harm_justifies_restriction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "proportionality_limits_restriction_scope",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "liberal_constitutional_speech_baseline",
+    "drift_state": {
+      "moment": "contemporary_era_of_epistemic_fragmentation",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

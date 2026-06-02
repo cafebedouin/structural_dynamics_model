@@ -4,61 +4,63 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "nipopow"
+    "measurement_id_prefix": "nipopow",
+    "story_uid": "23edb725-8ce2-4014-8242-07054ef3d48a"
   },
   "base_properties": {
-    "extractiveness": 0.38,
-    "suppression": 0.42,
-    "theater_ratio": 0.55,
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.38,
     "claimed_type": "tangled_rope",
     "human_readable": "Non-Interactive Proofs of Proof-of-Work (NiPoPoWs)",
-    "topic_domain": "technological/cryptographic",
+    "topic_domain": "cryptographic/blockchain_infrastructure",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "light_client_users",
-      "ergo_ecosystem_validators"
+      "lightweight_clients",
+      "mobile_wallets",
+      "resource_constrained_devices"
     ],
     "victims": [
       "full_node_operators",
-      "bandwidth_constrained_networks"
+      "network_bandwidth_provisioners"
     ]
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "immediate",
+      "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
       "label": "The Full Node Operator",
-      "comment": "PERSPECTIVE 1: FULL NODE OPERATOR (SNARE) \u2014 Trapped by network economics. Full nodes must validate entire chains to participate trustlessly. NiPoPoW extracts value by enabling light clients that depend on this validation work without compensating validators. No exit option: cannot both verify blockchain state and avoid the computational cost of full validation that their work subsidizes."
+      "comment": "Full node operators cannot opt out of bearing validation costs while lightweight clients extract security guarantees without reciprocal burden. Exit options are severely limited: running a full node is the only way to validate independently; abandoning it means trusting centralized services. The extraction is sustained by the protocol's design assumptions — full nodes are incentivized to exist (mining rewards, fee collection) but NiPoPoWs decouple the security benefit from the cost burden."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "moderate",
-      "time_horizon": "biographical",
+      "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The Network Node",
-      "comment": "PERSPECTIVE 2: NETWORK NODE (TANGLED ROPE) \u2014 Constrained by bandwidth costs and hardware requirements. Benefits from network utility (more light clients = more ecosystem activity) but bears costs of proof verification and chain monitoring. Partial agency: can run lightweight clients themselves, but full node ecosystem benefits would accrue to light clients primarily."
+      "label": "The Resource-Constrained Device User",
+      "comment": "Lightweight clients gain genuine coordination benefit (accessible blockchain verification without gigabytes of storage) alongside asymmetric extraction — they receive security guarantees funded by full node operators' infrastructure without compensating them. Cost to exit is high (running full nodes is resource-prohibitive on mobile devices) but not absolute — they could use centralized light wallets or trusted validators, accepting different tradeoffs."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "generational",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Light Client User",
-      "comment": "PERSPECTIVE 3: LIGHT CLIENT USER (ROPE) \u2014 Institutional beneficiary with arbitrage options. Can move between blockchains, protocols, or verification models. NiPoPoW provides coordination: enables participation in PoW ecosystems without bearing full validation costs. Network effect positive-sum: more participants = stronger security consensus."
+      "label": "The Protocol Development Community",
+      "comment": "The protocol development community benefits from NiPoPoW adoption: it solves real coordination problems (mobile wallet adoption, geographic distribution of validation capacity) that increase network utility. They experience NiPoPoWs as coordination infrastructure rather than extraction — the technology enables legitimate scalability. Exit options are high (protocol design can be modified) and directionality is favorable (they are institutional actors who can negotiate outcomes)."
     },
     {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
       "time_horizon": "biographical",
-      "exit_options": "constrained",
+      "exit_options": "mobile",
       "spatial_scope": "global",
-      "label": "The Ergo Foundation / Ecosystem Stewards",
-      "comment": "PERSPECTIVE 4: ERGO FOUNDATION / ECOSYSTEM STEWARDS (SCAFFOLD) \u2014 Organized agents implementing NiPoPoW as transitional infrastructure. The constraint has a sunset: as light clients proliferate and mobile verification becomes standard, the asymmetry between full node costs and light client benefits will stabilize into a normalized incentive structure. Suppression (mandatory proof validation) declines as protocols mature. Current theater reflects the innovation phase where NiPoPoW adoption is still being established."
+      "label": "The Exchange/Wallet Provider",
+      "comment": "Commercial wallet and exchange operators benefit substantially from NiPoPoW adoption (reduced infrastructure costs for light wallet offerings) while imposing partial costs on the broader network. They have high exit options (can operate with or without NiPoPoWs, can use alternative protocols) and significant power (network adoption decisions). They coordinate genuine services (wallet access) alongside asymmetric extraction (cost-shifting to full nodes) — textbook tangled rope for powerful actors."
     },
     {
       "classification_type": "piton",
@@ -66,108 +68,156 @@
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Proof-of-Work Assumption Itself",
-      "comment": "PERSPECTIVE 5: PROOF-OF-WORK ASSUMPTION (PITON) \u2014 From civilizational view, PoW's claim to trustless verification is increasingly performative. NiPoPoWs solve an artifact problem: the bloat created by requiring clients to validate entire PoW chains. But as alternative consensus (PoS, hierarchical, sharded) mechanisms mature, the constraint degrades to theatrical: NiPoPoW is a clever patch on an antiquated model. Theater ratio high because the 'solution' perpetuates the underlying PoW extraction (mining) rather than addressing it."
+      "label": "The Legacy Full Node Ecosystem",
+      "comment": "The older ecosystem of resource-intensive full node validation persists largely through institutional inertia and economic lock-in rather than functional necessity. NiPoPoWs reveal this inertia — the resource intensity of full nodes is not technically mandatory but sustained by network effects and historical path-dependency. The legacy ecosystem maintains itself through theater: claims about the necessity of running full nodes persist even as alternative architectures (light clients, sharded validation) become viable. Theater ratio reflects this performative element."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Incentive Alignment Initiative",
+      "comment": "Organized efforts to align incentives between light clients and full node operators (via proof rewards, delegation mechanisms, or stake-weighted proof compression) see NiPoPoWs as a temporary coordination failure with a sunset path. If incentive structures can be redesigned (validators earn rewards from proving work to light clients), the asymmetric extraction can be transformed into symmetric coordination. This perspective sees a clear exit path within institutional timescales — estimated 3-7 year sunset as incentive mechanisms mature."
+    },
+    {
+      "classification_type": "rope",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From universal perspective, NiPoPoWs coordinate two conflicting objectives: making PoW accessible to light clients (coordination benefit) while preserving the security model that requires full nodes to do expensive validation work (extraction mechanism). The constraint is both enabling (new use cases) and extractive (externalizing validation costs)."
+      "label": "The Analytical Observer (Coordination View)",
+      "comment": "From a civilizational perspective, NiPoPoWs are primarily coordination infrastructure: they solve a fundamental problem of blockchain scalability (making cryptographic verification accessible without centralized trust) that would otherwise concentrate validation capacity. The technology enables a coordination function that was previously locked behind resource barriers. The extraction dynamics are secondary — they are adjustment costs as the network transitions from full-node-intensive to client-light architectures."
     }
   ],
   "omegas": [
     {
-      "id": "security_margin_validity",
-      "question": "What security margin is preserved when light clients accept NiPoPoW proofs vs full validation? Does the 'succinct' proof sacrifice practical security guarantees?",
-      "resolution_mechanism": "Formal analysis of proof-of-work collision probability under NiPoPoW sampling; empirical testing of proof forgery difficulty; comparison to full node security margins under network attack conditions",
-      "impact": "If margin is negligible (< 1% security loss): NiPoPoWs are pure coordination mechanism (Rope from more perspectives). If margin is significant (> 10% security loss): extraction mechanism (victims bear security risk) becomes primary.",
+      "id": "full_node_viability_without_extraction",
+      "question": "Can full node operators remain economically viable after widespread NiPoPoW adoption without protocol-level compensation for proof generation?",
+      "resolution_mechanism": "Empirical measurement of full node operator count and operational costs post-adoption; correlation with mining reward structures and transaction fee distribution. Model full node maintenance costs against solo-mining and pool-mining profitability.",
+      "impact": "If viable without compensation: extraction is actually coordination (Rope from more perspectives, protocol development becomes primary beneficiary). If unviable: extraction is structural and sustained, requiring protocol-level incentive redesign to resolve asymmetry.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Security margin preservation in NiPoPoW light client verification"
+      "description": "Full node operator economic viability post-adoption"
     },
     {
-      "id": "full_node_incentive_sustainability",
-      "question": "Can full node networks sustain if the primary use case (mobile verification) becomes feasible without full node infrastructure?",
-      "resolution_mechanism": "Economic modeling of full node operator incentives; analysis of mining pool centralization if light client dominance reduces full node demand; historical comparison to other 'light' protocol implementations (SPV, Ethereum light clients)",
-      "impact": "If sustainable: constraint is coordination (ecosystem can support both). If unsustainable: NiPoPoWs create a tragedy of the commons where the infrastructure (full nodes) degrades under its own success.",
-      "confidence": "medium",
+      "id": "proof_compression_fraud_vector",
+      "question": "Do NiPoPoW compression techniques introduce new attack surfaces or false-acceptance risks that require additional defensive infrastructure (full nodes specifically for verification)?",
+      "resolution_mechanism": "Formal verification of proof compression cryptography; empirical testing of light client vulnerability to reorganization attacks and Sybil-resistant proof validation. Compare security assumptions of light clients using NiPoPoWs to those using SPV.",
+      "impact": "If new vulnerabilities exist: full node infrastructure becomes necessary as defensive network layer (Rope — legitimate coordination cost). If compression is cryptographically sound: full node extraction becomes unambiguous (Snare from light client perspective, Piton from network design perspective).",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Long-term viability of full node incentives under NiPoPoW light client adoption"
+      "description": "Whether NiPoPoW compression introduces new attack surfaces"
     },
     {
-      "id": "adoption_threshold_externality",
-      "question": "At what light client adoption percentage does the security of the full PoW network degrade? Is there a critical mass above which NiPoPoWs undermine their own security base?",
-      "resolution_mechanism": "Network simulation; empirical analysis of mining distribution and orphan rates under various light client percentages; analysis of attack surface expansion when full node diversity decreases",
-      "impact": "If threshold is high (> 80% light clients): NiPoPoWs can scale without undermining PoW security. If threshold is low (< 20% light clients): NiPoPoWs create a fundamental instability \u2014 success produces conditions for failure.",
+      "id": "geographic_decentralization_effect",
+      "question": "Does NiPoPoW adoption actually increase geographic decentralization of validation capacity, or does it concentrate validation power in high-resource regions while dispersing trust-verification?",
+      "resolution_mechanism": "Measurement of validator geographic distribution pre- and post-adoption. Correlation with NiPoPoW light client adoption rates by region. Analysis of whether resource barriers to running full nodes have shifted to hardware/connectivity barriers favoring wealthy regions.",
+      "impact": "If decentralization increases: constraint is pure coordination (Rope becomes primary classification). If concentration increases: constraint masks centralization while claiming distribution (Tangled Rope with false-summit components).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Critical adoption threshold for NiPoPoW light client security externality"
+      "description": "Geographic decentralization effects of NiPoPoW adoption"
+    },
+    {
+      "id": "proof_generation_incentive_design_space",
+      "question": "What incentive mechanisms can credibly compensate full node operators for proof generation without recreating the resource barriers that NiPoPoWs were designed to bypass?",
+      "resolution_mechanism": "Game-theoretic analysis of proof reward mechanisms; empirical testing of proposed incentive structures (proof-of-work delegation, validator proof markets, state-root verification contracts). Historical comparison to fee markets in other protocols.",
+      "impact": "If viable mechanisms exist: sunset path is concrete and timeline is estimable (Scaffold classification is warranted). If mechanisms are economically infeasible: asymmetric extraction is permanent (Snare or Piton classification).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Viable incentive mechanisms for proof compensation"
+    },
+    {
+      "id": "sybil_resistance_dependency",
+      "question": "Are NiPoPoW security guarantees fundamentally dependent on some threshold of full node participation, even if light clients never interact with those nodes directly?",
+      "resolution_mechanism": "Formal analysis of Sybil resistance in proof compression; empirical measurement of security degradation at varying full node population levels. Testing: what minimum full node count is required for light client security?",
+      "impact": "If threshold dependency exists: full nodes are network commons (Rope from analytical view — necessary coordination cost). If not: full node existence is decoupled from light client security (Snare — pure extraction benefit captured by light clients).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Sybil resistance dependency on full node participation"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.22
+      "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 3,
-      "value": 0.3
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 6,
-      "value": 0.38
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.38
-    },
-    {
-      "metric": "theater_ratio",
       "time_point": 3,
       "value": 0.48
     },
     {
-      "metric": "theater_ratio",
+      "metric": "base_extractiveness",
       "time_point": 6,
       "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.46
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.38
     }
   ],
   "interval": {
     "start": 0,
-    "end": 6
+    "end": 9
   },
   "commentary": {
-    "narrative_context": "Non-Interactive Proofs of Proof-of-Work (NiPoPoWs) enable lightweight clients to verify blockchain state by downloading only kilobytes of proof data instead of gigabytes of full chain history. This creates a structural tension: the technology is coordination infrastructure (making PoW blockchains accessible to resource-constrained participants) but simultaneously extracts value from full node operators by enabling clients to gain security guarantees without bearing validation costs. The constraint exhibits tangled rope structure because NiPoPoWs serve a genuine coordination function (enabling broader participation) while simultaneously establishing an asymmetric extraction relationship (light clients benefit from validation work they don't perform, externalizing costs to full nodes). The theater_ratio (0.55) reflects that while NiPoPoWs are technically elegant, they perpetuate a performative security model: the 'lightweight' verification still depends on the existence of a network of expensive full nodes doing the real work. The constraint's extractiveness (0.38) is moderate because the asymmetry, while real, is partially justified by network effects\u2014light clients increase ecosystem value and thus create secondary benefits for validators.",
+    "narrative_context": "Non-Interactive Proofs of Proof-of-Work (NiPoPoWs) are a cryptographic technology that enables lightweight blockchain clients to verify consensus state by downloading and validating only kilobytes of proof data rather than gigabytes of full transaction history. The constraint emerges from a fundamental structural asymmetry: the technology provides a genuine coordination benefit (making blockchain validation accessible to resource-constrained devices including mobile wallets, IoT devices, and users in low-bandwidth regions) while simultaneously creating an extraction mechanism where light clients receive security guarantees funded by full node operators who bear the full computational burden of validation without direct compensation. The constraint exhibits genuine tangled rope structure — there is a coordination function (enabling client-light blockchain verification) coupled with asymmetric extraction (full nodes subsidize light client security). The tension intensifies because the technology is not parasitic but genuinely valuable: it solves real problems of blockchain scalability and geographic accessibility. Yet the architecture distributes validation costs asymmetrically, placing full computational burden on operators while dispersing the security benefits to unlimited light clients. This creates a mechanism where the more successful NiPoPoWs become at enabling adoption, the more severe the extraction becomes for full node operators.",
     "key_agents": [
-      "Light Client Users: Primary beneficiary (institutional/arbitrage) \u2014 gain blockchain access with minimal bandwidth and hardware; can switch protocols freely",
-      "Full Node Operators: Primary victim (powerless/trapped) \u2014 bear full validation costs that enable light clients; cannot exit without degrading network security",
-      "Network Node Operators: Secondary victim (moderate/constrained) \u2014 face ongoing proof verification and chain monitoring costs; partial agency via lightweight client adoption",
-      "Ergo Foundation / Ecosystem Stewards: Organized implementer (organized/constrained) \u2014 driving NiPoPoW adoption; see constraint as transitional (scaffold) infrastructure",
-      "Proof-of-Work Consensus Model: Institutional actor (institutional/arbitrage) \u2014 perpetuates validation cost structure; NiPoPoWs patch rather than replace this model",
-      "Analytical Observer: Civilizational context (analytical/analytical) \u2014 observes both coordination function and extraction mechanism; sees constraint as tangled rope bridging accessibility and sustainability"
+      "Full Node Operators: Primary victims (powerless/trapped) — bear full computational validation costs; cannot exit without abandoning independent verification; mining rewards insufficient to offset NiPoPoW-driven cost increases as network scales",
+      "Lightweight Clients (mobile wallets, resource-constrained devices): Primary beneficiaries (moderate/constrained) — gain blockchain access previously locked behind resource barriers; exit costs are high but not absolute (could use centralized services)",
+      "Exchange and Wallet Providers: Secondary beneficiaries (powerful/mobile) — reduce infrastructure costs for light wallet offerings; can exit by operating alternative protocols; high negotiating power with full node operators",
+      "Protocol Development Community: Coordinators (institutional/arbitrage) — solve genuine scalability problem; experience NiPoPoWs as infrastructure rather than extraction",
+      "Incentive Alignment Researchers: Organized agents (organized/constrained) — designing proof reward mechanisms to transform asymmetric extraction into symmetric coordination; see sunset path",
+      "Legacy Full Node Ecosystem: Institutional inertia (institutional/arbitrage) — maintains resource-intensive validation partly through network effects, partly through performative claims about necessity"
     ],
-    "logic_rationale": "Extractiveness (0.38): Moderate-high. Light clients derive security guarantees from full node validation work without directly compensating that work. The extraction is real\u2014clients externalize costs\u2014but justified partially by network effects. As light client adoption increases (from 0.22 at interval start to 0.38 at interval end), the extractiveness rises because the asymmetry compounds. Suppression (0.42): Moderate. Full nodes cannot refuse to validate proofs or exclude light clients\u2014they must participate in the consensus mechanism. However, suppression is not total because validators can choose whether to run full nodes vs joining mining pools or light client networks. The constraint is suppressive but has exit points. Theater_ratio (0.55): Moderate-high and increasing. NiPoPoWs perform the function of 'lightweight verification' but perpetuate the underlying PoW theater\u2014clients accept probabilistic security guarantees based on the assumption that full nodes are performing expensive work. As adoption spreads, the performative aspect (claiming lightweight security while depending on expensive infrastructure) becomes more apparent.",
-    "directionality_logic": "Full node operators derive d \u2248 0.95 (victim + trapped exit): they bear validation costs for light clients with no ability to opt out without degrading network security. f(d) \u2248 1.42 gives them maximum experienced extraction. Light client users derive d \u2248 0.10 (beneficiary + arbitrage exit): they gain access without validation costs and can move to alternative protocols freely. f(d) \u2248 -0.01 gives them negative/negligible extraction. Network nodes occupy a middle ground: d \u2248 0.55 (both + constrained exit), reflecting their mixed experience of benefit (ecosystem strength) and cost (proof verification). The ergo foundation and ecosystem stewards occupy institutional roles with arbitrage options (d \u2248 0.15), seeing NiPoPoWs as a coordination mechanism with declining suppression over time (scaffold logic). The analytical observer uses d \u2248 0.72 (observer status) to hold the entire structure in view.",
-    "perspectival_gap": "The beneficiary (light client user) sees rope: 'NiPoPoWs solve a real coordination problem by enabling mobile verification.' The victim (full node operator) sees snare: 'I bear costs with no exit; clients free-ride on my validation.' The ecosystem steward sees scaffold: 'This is temporary infrastructure with declining theater as adoption stabilizes incentives.' The PoW model itself, from civilizational perspective, sees piton: 'NiPoPoWs are a patch on an outdated system; they perpetuate rather than resolve the underlying cost structure.' The analytical observer sees the full tangled rope: 'Both perspectives are structurally correct. Coordination and extraction are co-present. The constraint's stability depends on whether light client benefits to the ecosystem outweigh the private costs to full nodes.'",
-    "mandatrophy_analysis": "RESOLVES THE MANDATROPHY: The constraint avoids false classification as 'pure coordination' (Rope) or 'pure extraction' (Snare) by recognizing that both functions are genuine. NiPoPoWs DO solve a coordination problem (enabling light client participation). They DO extract value (externalizing validation costs). The tangled_rope classification captures this duality: base extraction (0.38) is high enough to establish a real asymmetry; suppression (0.42) is significant but not total; beneficiaries and victims are both present and structurally necessary for the mechanism to function. The perspectives reveal that this is not a measurement ambiguity but a structural feature: different agents genuinely experience the constraint differently because they occupy different structural positions. The light client perspective (rope) and full node perspective (snare) are not competing descriptions of the same thing\u2014they are accurate descriptions of different structural relationships to the same constraint."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high, increasing over adoption window then stabilizing. At t=0 (pre-adoption), extractiveness is moderate (0.35) because NiPoPoW incentive problems are theoretical — few light clients exist to create asymmetry. As adoption increases (t=3 to t=6), extractiveness rises sharply (0.48→0.55) as the actual cost differential becomes measurable and light client populations grow. By t=9, extractiveness stabilizes around 0.52 because adoption saturates and protocol responses (proof reward mechanisms, incentive alignment) begin dampening the asymmetry. The metric reflects the actual cost-benefit distribution: light clients receive security guarantees worth the computational cost of validation (~$X in hardware and electricity per light client supported), but full node operators capture zero direct compensation — the extraction is the divergence between the value provided and the compensation received. Suppression (0.48): Moderate. Full node operators can theoretically exit (switch protocols, demand compensation, stop running nodes) but face genuine barriers: network effects (their node validates the established chain), economic lock-in (sunk hardware costs), and lack of coordination mechanisms to collectively demand compensation. Barriers are surmountable (exit is possible at a cost) rather than absolute, placing this in the constrained/suppressed range rather than trapped. Theater ratio (0.38): Low-moderate. NiPoPoWs are primarily technical infrastructure with low performative content — the proofs either compress validly or they do not. However, some theater exists around necessity narratives ('full nodes are essential' claims that mask the shift toward client-light architectures) and around claims that current incentive structures are permanent. The relatively low theater reflects that the technical function is genuine and measurable.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from structural relationship to extraction flow, exit capacity, and power atom. Full node operators: d ≈ 0.92 (victim + trapped exit → maximum experienced extractiveness). Lightweight clients: d ≈ 0.55 (beneficiary-with-caveats + constrained exit → moderate extraction by full nodes, meaning light clients experience negative extraction — they gain benefit). Wallet providers: d ≈ 0.48 (beneficiary + mobile exit → low to moderate extraction experience — they can negotiate). Protocol developers: d ≈ 0.25 (institutional beneficiary + arbitrage → they designed the benefit, exit costs are near zero). The scoping modifier σ(S) = 1.2 (global scale) slightly amplifies effective extractiveness because the asymmetry is harder to verify and coordinate against when distributed globally. Local NiPoPoW deployments would show lower χ; global adoption amplifies the extraction mechanism by making coordination among full node operators harder.",
+    "perspectival_gap": "The constraint exhibits extreme perspectival divergence. Full node operators perceive a Snare (trapped, cannot exit, subsidizing others) while lightweight clients perceive a Rope (coordination benefit without perceived extraction cost). Wallet providers perceive tangled_rope with favorable terms (they benefit and can exit). The protocol development community perceives pure Rope (solving a legitimate coordination problem). The legacy full node ecosystem perceives Piton (its own infrastructure is partially degraded by client-light adoption but persists through inertia). The organized incentive-alignment community perceives Scaffold (temporary asymmetry with a clear sunset path via incentive redesign). The analytical observer perceives Rope (civilizational coordination infrastructure). This perspectival range from Snare (full node operators) through Rope (multiple views) is diagnostic of genuine tangled-rope structure: there IS a coordination function (undeniable — NiPoPoWs solve real scalability problems) AND there IS asymmetric extraction (equally undeniable — full nodes subsidize light clients). The disagreement about whether this is 'just coordination costs' or 'extractive asymmetry' reflects the genuine ambiguity in the constraint's causal structure.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by exemplifying why the six types are not competing hypotheses but perspectival readings of genuine mixed-mechanism structures. The constraint is legitimately both tangled_rope (from the system design view) and snare (from the full node operator view) and rope (from the protocol development view). The mandatrophy is resolved by recognizing that NiPoPoWs are not mislabeled — they have BOTH a coordination function (legitimate, measurable, valuable) AND an extraction mechanism (legitimate, measurable, costly). The question is not 'which type is it really?' but 'from what structural position are we observing?' This exemplifies the framework's core claim: apparent classification ambiguity disappears when you specify the observation site (agent power, time horizon, exit options, scope). The constraint is simultaneously all six types because all six observation sites coexist in the blockchain network. Full node operators occupy the Snare position; protocol developers occupy the Rope position; incentive researchers occupy the Scaffold position; legacy infrastructure operators occupy the Piton position. The mandatrophy resolves not by choosing one type but by mapping the perspectival geometry."
   },
   "boltzmann": {
-    "coordination_type": "information_standard"
+    "coordination_type": "global_infrastructure"
   },
   "network": {
     "affects_constraints": [
-      "proof_of_work_light_client_security",
-      "full_node_economic_sustainability"
+      "blockchain_client_centralization",
+      "mining_pool_consolidation",
+      "validator_incentive_asymmetry"
     ],
-    "dual_formulation_note": "NiPoPoWs can be analyzed as a pure coordination mechanism (light client infrastructure enabling broader participation) or as an extraction mechanism (externalizing validation costs to full nodes). These are not observables of the same constraint but structurally distinct claims. Upstream: proof-of-work security assumptions (whether PoW guarantees are actually preserved under light client dominance). Downstream: full node incentive structures (whether validators can sustain without explicit compensation from light clients)."
+    "dual_formulation_note": "NiPoPoWs are one instantiation of a broader constraint family around client-light verification. The constraint decomposes into two structurally distinct stories: (1) NiPoPoWs as cryptographic mechanism (compression techniques, proof validation logic) which is largely coordination infrastructure; (2) NiPoPoWs as incentive structure (who bears validation costs, who receives security benefit) which exhibits extraction. The extractiveness value (0.52) reflects the second story primarily — the technical mechanisms are sound (low ε on compression), but the incentive asymmetry is substantial (high ε on cost-shifting). These could be authored as separate constraint stories; the unified story treats the incentive problem as primary."
   },
   "directionality_overrides": []
 }

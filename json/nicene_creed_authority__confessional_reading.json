@@ -1,0 +1,206 @@
+{
+  "header": {
+    "constraint_id": "nicene_creed_authority__confessional_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_nicene_creed_authority__confessional_reading",
+    "measurement_id_prefix": "nicene_conf",
+    "story_uid": "4f8da6f6-872a-4243-bd24-32d4f6322a32",
+    "created_at": "2026-02-26T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.08,
+    "theater_ratio": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "Nicene Creed Authority: Confessional Reading (Shared Theological Vocabulary via Persuasion and Tradition)",
+    "topic_domain": "religious_history/theology/liturgical_authority",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "christian_communities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Participating Believer",
+      "comment": "PERSPECTIVE 1: PARTICIPATING BELIEVER (ROPE) — Agent who embraces the Creed's vocabulary through persuasion and identification with the tradition. Recitation is voluntary; membership is affirmed through consent. Low extraction — the agent gains linguistic precision, liturgical participation, and communion with others sharing the vocabulary. Mobility preserved; exit costs are social but not structural."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Local Ecclesiastical Community",
+      "comment": "PERSPECTIVE 2: LOCAL ECCLESIASTICAL COMMUNITY (ROPE) — Organized agents (parish leadership, theological councils, bishops coordinating doctrine) experience the Creed as a coordination mechanism: shared formulation resolves ambiguity, enables collective worship, and authenticates membership. Extraction is minimal — the community benefits from liturgical coherence and canonical reference. Constraints are real (enforcing doctrinal consistency) but exist to serve the community's own coordination function, not external parties."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The Theologically Sophisticated Agent",
+      "comment": "PERSPECTIVE 3: THEOLOGICALLY SOPHISTICATED AGENT (ROPE) — Theologians, philosophers, and educated clergy experience the Creed as a framework enabling rigorous theological discourse. The formulation provides constraints that clarify debate but do not foreclose inquiry. Agents can affirm the Creed while developing heterodox interpretations (negative theology, apophatic traditions, mystical readings). No extraction — rather, the constraint enables the agent's own work."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Theologically Dissenting Community",
+      "comment": "PERSPECTIVE 4: THEOLOGICALLY DISSENTING COMMUNITY (TANGLED ROPE) — Communities with heterodox views experience the Creed simultaneously as coordination mechanism and as extractive pressure. The shared vocabulary enables dialog but also marks boundaries: non-compliance carries social cost (exclusion from communion, institutional marginalization). Victims of extraction; also genuine coordination benefits if they remain within the tradition. This perspective reveals the constraint's hybrid character: coordination function for intra-tradition agreement; extraction mechanism against trans-tradition diversity."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Imperial Unification Project (Temporary Reading)",
+      "comment": "PERSPECTIVE 5: IMPERIAL UNIFICATION PROJECT—TEMPORARY (SCAFFOLD) — If the Creed is read as a temporary coordination device to consolidate post-Constantinian empire, this perspective sees a sunset: as regional churches mature and develop independent liturgical traditions, the empire's need for theological uniformity dissipates. This reading treats the constraint as enforcement-dependent (requires imperial authority to maintain compliance) with a temporal boundary. From the confessional reading's standpoint, this is not the Creed's actual function — it is an alternative reading (imperial_uniformity_reading) that reads the same artifact as a state tool rather than a voluntary ecclesiastical one."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Confessional Mechanism)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (ROPE) — From a civilizational vantage, the Creed represents a pure coordination mechanism: shared theological vocabulary enabling dispersed communities to recognize each other as part of one tradition without requiring central authority to enforce compliance. Low theater (the formulation is functional, not performative); low suppression (dissent is costly but not prohibited). The mechanism works through persuasion, tradition, and voluntary identification — the features that distinguish rope from snare."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "creed_function_empirical_status",
+      "question": "What proportion of historical Creed-affirmation was genuinely voluntary persuasion vs. coerced compliance with imperial power?",
+      "resolution_mechanism": "Historical reconstruction from councils, letters, and local practice records; analysis of communities that rejected the Creed and their treatment; comparison of enforcement levels in different regions and periods",
+      "impact": "If predominantly voluntary (>70%): confessional reading confirmed; ε remains ~0.12 (rope). If predominantly coerced (<30%): imperial uniformity reading gains structural evidence; ε shifts upward to ~0.45-0.55 (tangled_rope); confessional reading becomes the counterfactual ideal rather than historical reality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Creed affirmation was voluntary persuasion or coerced compliance"
+    },
+    {
+      "id": "alternative_readings_foreclosure_test",
+      "question": "Does the confessional reading's core premise (authority derives from persuasion and tradition, not coercion) logically foreclose the imperial uniformity reading (authority derives from state power to enforce doctrinal conformity)?",
+      "resolution_mechanism": "Logical analysis: can a single historical agent or institution coherently hold both readings simultaneously? Or are they mutually exclusive within any single framework? Test case: a bishop who derives authority both from imperial appointment and from persuasive theological reputation.",
+      "impact": "If foreclosing: the two readings are contradictory at the axiom level (relation = forecloses). If coexisting: both readings remain live alternatives held by different parties or at different analytical levels (relation = coexists_with). If one influences the other: partial logical pressure without full exclusion (relation = influences).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Logical foreclosure between confessional and imperial readings"
+    },
+    {
+      "id": "dissent_cost_structure_asymmetry",
+      "question": "Is the cost of theological dissent from the Creed structural (excommunication, material loss, institutional exclusion) or identity-based (loss of community identification, spiritual fellowship)?",
+      "resolution_mechanism": "Historical case analysis of heterodox communities (Arians, Nestorians, Monophysites, etc.); documentation of material penalties vs. relational rupture; whether dissenting communities remained economically functional outside the orthodox fold",
+      "impact": "If structural costs dominate: the constraint includes hidden extraction mechanism targeting dissenters; ε rises toward 0.30-0.40. If identity costs dominate: extraction is minimal (agent can leave community without material loss); ε remains ~0.12-0.15. This determines whether the tangled_rope perspective (dissenting communities) reveals asymmetric extraction or merely identity-based separation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether dissent costs are structural or identity-based"
+    },
+    {
+      "id": "confessional_vs_imperial_empirical_signature",
+      "question": "What observable difference would distinguish confessional (persuasion-based authority) from imperial (coercion-based authority) as the primary legitimacy mechanism across the historical period?",
+      "resolution_mechanism": "Time-series analysis: frequency of enforcement actions vs. voluntary reaffirmations; geographic correlation between imperial administrative capacity and Creed compliance; narrative evidence from bishops' letters about authority justifications; evolution of Creed's role as empire fragments and centralized enforcement capacity declines",
+      "impact": "If compliance tracks imperial administrative capacity and decays with it: imperial reading confirmed. If compliance remains stable or increases as imperial authority declines: confessional mechanisms are primary. Mixed pattern: both mechanisms active at different times/regions, requiring separate constraint stories.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Observable signature distinguishing confessional from imperial authority"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.12
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The Nicene Creed, formulated at the Council of Nicaea (325 CE), presents a contested constraint structure. The confessional reading interprets the Creed as a voluntary ecclesiastical coordination mechanism grounded in persuasion and tradition: Christian communities adopt shared theological vocabulary to clarify doctrine, enable unified worship, and recognize each other as part of a single tradition. Authority derives from the persuasive force of the formulation itself and from the communities' commitment to the tradition it represents, not from coercive enforcement. This reading emphasizes that the Creed was transmitted through liturgical practice, theological education, and voluntary participation in communities that embraced its vocabulary. The formulation enables precision in theological debate without prohibiting heterodox inquiry — agents can affirm the Creed while developing alternative interpretations (apophatic theology, mystical traditions, philosophical sophistication). Low extraction, low suppression, low theater characterize this mechanism.",
+    "key_agents": [
+      "Christian communities (particularly local parishes and monastic traditions): Primary beneficiary (moderate/mobile) — gain shared vocabulary for worship, theological precision, and community identification",
+      "Ecclesiastical leadership (bishops, councils, theologians): Organized coordinator (organized/constrained) — maintain doctrinal coherence and resolve theological ambiguity; derive authority from persuasive expertise and canonical knowledge",
+      "Theologically dissenting communities (Arians, Nestorians, Monophysites, and later heterodox traditions): Secondary victim/coordinate (powerless/constrained) — experience Creed as coordination mechanism AND as boundary-marking exclusion; face social cost of dissent",
+      "Imperial administrative authority (Constantine, successors): Alternative power structure (institutional/arbitrage) — may instrumentalize Creed for state uniformity; appears in imperial_uniformity_reading, not confessional_reading",
+      "Analytical observer (civilizational/global): Sees the confessional mechanism as pure coordination enabling trans-regional Christian identity"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Very low. The confessional reading models the Creed as a pure coordination mechanism with minimal extraction. Beneficiaries are the Christian communities that adopt the vocabulary — they gain precision, communion, and shared identity. No distinct victim group exists in this reading (unlike the imperial_uniformity_reading, which identifies resistant populations as victims). The small residual extractiveness (0.12, above the rope floor of 0.02-0.05) reflects that the Creed does establish boundaries (non-compliance carries social cost) and that theological sophistication is unevenly distributed (educated clergy can interpret the formulation more flexibly than lay participants). But these costs are not extraction in the economic sense — they are coordination overhead and knowledge asymmetry typical of any shared practice. Suppression (0.08): Very low. The confessional reading does not model enforcement through coercion. Dissent is socially costly but not prohibited — heterodox communities remained economically functional, maintained their own hierarchies, and in some cases thrived (Nestorian church in Asia, Coptic church in Egypt). The suppression value reflects that non-participation in the Creed entails loss of communion status and exclusion from certain liturgical functions, but not material deprivation or legal prohibition. Theater ratio (0.25): Low. The Creed's liturgical function (recitation in communal worship) has some performative content — the shared verbal affirmation reinforces community bonds independent of individual conviction — but the primary function is semantic: providing precise theological vocabulary. The formulation itself is functional (resolves the Arian controversy by specifying 'substance' and 'person' rather than intuitive language), not primarily theatrical. The low theater ratio distinguishes this from the piton reading where the same artifact would appear as a degraded ritual maintained through institutional inertia.",
+    "perspectival_gap": "The confessional reading produces rope classifications across all but one perspective (the dissenting community, which experiences a hybrid tangled_rope). The beneficiary perspective sees pure coordination (rope). The sophisticated theologian sees an enabling framework (rope). The analytical observer sees the coordination mechanism (rope). The dissenting community sees coordination AND boundary-enforcement (tangled_rope) — they experience the Creed's benefit (shared vocabulary for theological discourse) alongside its cost (exclusion from communion if they refuse affirmation). The imperial perspective, if included as a separate story (imperial_uniformity_reading), would classify the same artifact differently — seeing it as a state enforcement mechanism (snare or tangled_rope from the victim population's perspective, scaffold from the imperial authority's perspective). The perspectival gap between confessional and imperial readings reveals that the same historical artifact (the Creed, its affirmation, its enforcement) is structurally different depending on which legitimacy mechanism is primary: persuasion-based (confessional) or coercion-based (imperial). The historical record likely shows both mechanisms active, requiring decomposition into separate constraint stories with different ε values.",
+    "directionality_logic": "Beneficiaries are christian_communities, who experience the Creed as enabling vocabulary and communion. No victims are declared in the confessional reading because extraction is not the primary mechanism. The constraint operates through persuasion (tradition, theological education, liturgical practice) and voluntary identification, not through extraction targeting a victim population. The dissenting community perspective (tangled_rope) reveals a minor extraction component — the cost of maintaining doctrinal alternatives — but even this is experienced as social rather than economic. Directionality values across perspectives are derived from the voluntary/persuasion-based mechanism: participating believers (moderate/mobile) experience low d; organized ecclesiastical coordinators (organized/constrained) experience low d reflecting their role as beneficiaries; the sophisticated theologian (powerful/mobile) experiences low d as an enabled rather than constrained agent; the dissenting community (powerless/constrained) experiences slightly elevated d due to the boundary-maintenance cost, but not the high d of a trapped victim. The analytical observer has no beneficiary status — they are observational. The confessional reading's directionality profile reflects that this constraint operates through coordination gains shared across participants, not through asymmetric extraction.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel: nicene_creed_authority. The kernel is the Nicene Creed itself — a fixed historical text adopted in 325 CE and affirmed in liturgical practice across Christian traditions. The confessional_reading instantiates the creed's authority as deriving from persuasion and tradition: communities voluntarily adopt the shared vocabulary because it clarifies doctrine and enables communion. Sibling readings are imperial_uniformity_reading (authority derives from imperial power to enforce doctrinal conformity, making the Creed an instrument of state unification) and boundary_maintenance_reading (authority derives from the Creed's function in defining group membership and policing orthodoxy against heresy, independent of imperial enforcement). Each reading produces different structural classifications, different ε values, and different beneficiary/victim structures from the identical historical artifact. The confessional reading treats the Creed as a pure coordination mechanism; the imperial reading treats it as a state enforcement tool; the boundary-maintenance reading treats it as an identity-boundary mechanism. The three readings coexist as live historical interpretations held by different scholarly and ecclesiastical communities."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "nicene_creed_authority__imperial_uniformity_reading",
+      "nicene_creed_authority__boundary_maintenance_reading"
+    ],
+    "dual_formulation_note": "The Nicene Creed authority comprises three constraint stories corresponding to three competing readings of the same historical artifact. (1) confessional_reading: ε≈0.12, rope, authority through persuasion and tradition, pure coordination mechanism. (2) imperial_uniformity_reading: ε≈0.45-0.55, tangled_rope/snare, authority through state enforcement, extraction targeting dissenting populations. (3) boundary_maintenance_reading: ε≈0.25-0.35, tangled_rope, authority through identity policing, asymmetric enforcement against heterodox groups. The three stories share the kernel (the Creed text) but differ in which legitimacy mechanism is primary. The historical record likely shows all three mechanisms active to varying degrees in different regions and periods."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "expertise",
+    "interpretation_layer_present": true,
+    "reference_frame": "voluntary_theological_precision",
+    "drift_state": {
+      "moment": "post_imperial_fragmentation",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "nicene_creed_authority__imperial_uniformity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "nicene_creed_authority__boundary_maintenance_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "theological_authority_derives_from_persuasion",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "creed_function_is_coordinate_not_coerce",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  }
+}

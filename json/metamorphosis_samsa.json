@@ -4,22 +4,25 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "meta"
+    "measurement_id_prefix": "samsa",
+    "story_uid": "ad69eee5-028c-46b8-a8e8-e8c16c980102"
   },
   "base_properties": {
     "extractiveness": 0.68,
-    "suppression": 0.75,
-    "theater_ratio": 0.38,
+    "suppression": 0.78,
+    "theater_ratio": 0.55,
     "claimed_type": "snare",
-    "human_readable": "The Samsa Family's Debt Bondage",
+    "human_readable": "Samsa Family Debt Bondage and Biological Precarity",
     "topic_domain": "economic/social/biological",
-    "requires_active_enforcement": false,
-    "beneficiaries": [],
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "creditor_class",
+      "parental_authority"
+    ],
     "victims": [
       "gregor_samsa",
-      "samsa_family_unit"
-    ],
-    "mandatrophy_resolved": true
+      "family_economic_autonomy"
+    ]
   },
   "perspectives": [
     {
@@ -28,26 +31,44 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "local",
-      "label": "Gregor's Immobilization",
-      "comment": "PERSPECTIVE 1: GREGOR SAMSA (SNARE) \u2014 Complete structural trap. The biological transformation eliminates his sole income source while the debt obligation persists. No exit options: he cannot work, cannot leave, cannot escape the family's dependence on his earnings. Maximum suppression \u2014 the constraint combines biological incapacity with economic coercion. His experienced extractiveness is maximal because the debt mechanism now feeds off his immobility itself."
+      "label": "Gregor Samsa (Post-Transformation)",
+      "comment": "PERSPECTIVE 1: GREGOR SAMSA POST-TRANSFORMATION (SNARE) — Trapped by biological incapacity and debt obligation. The transformation removes his capacity to service the debt while simultaneously intensifying the family's dependency on the debt structure itself. No exit available: cannot work (biologically changed), cannot speak (degraded), cannot escape (confined). The extraction is total — his body and labor were the collateral; their absence leaves him a pure liability in the family's accounting."
     },
     {
       "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Samsa Family Economic Unit",
+      "comment": "PERSPECTIVE 2: SAMSA FAMILY ECONOMIC UNIT (SNARE) — Trapped in a structure where debt service requires a specific body (Gregor's) performing a specific function (traveling salesman income). The transformation reveals the constraint's true severity: the family is not just in debt, but debt-bound to Gregor's biological capacity. Without him, they face immediate destitution. The only available responses are degradation (Grete taking work), liquidation of assets, or absorption into the creditor system. Suppression is maximal — no alternatives exist within the family's economic reach."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Creditor Class and Parental Authority",
+      "comment": "PERSPECTIVE 3: CREDITOR CLASS & PARENTAL AUTHORITY (ROPE) — Net beneficiaries experiencing the constraint as a coordination mechanism for extracting family labor. The father's authority is legitimized through debt management; the creditor's claim is legitimized through the father's enforcement. The transformation strengthens their position by making the family's dependency more acute and unconcealed. They maintain arbitrage (can exit the relationship at any time, absorb the remaining collateral). The constraint functions for them as pure coordination of extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
       "agent_power": "moderate",
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "local",
-      "label": "The Samsa Family's Survival Dependency",
-      "comment": "PERSPECTIVE 2: SAMSA FAMILY UNIT (SNARE) \u2014 Trapped by their dependence on Gregor's income. The family cannot exit because they have no alternative income source and are bound by social obligation to support Gregor (and by law in some jurisdictions). The transformation does not relieve the debt \u2014 it intensifies extraction by making Gregor a permanent drain on household resources rather than an asset. The family is now victim to both the employer's debt claim AND to the biological fact of Gregor's condition."
+      "label": "Grete Samsa (The Sister)",
+      "comment": "PERSPECTIVE 4: GRETE SAMSA (TANGLED ROPE) — Constrained by family obligation and emerging economic precarity, but also gains relative agency through Gregor's incapacitation. She moves into the servant labor market, losing innocence but gaining negotiating position (she becomes the family's only viable income generator). The constraint exhibits both coordination (family survival requires her work) and extraction (her labor value is extracted by parental authority and creditors). She has constrained exit options (marriage, institutional service, continuing household labor) but not no exit. Mixed experience: genuine new responsibility and some expansion of horizon, alongside exploitation."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "piton",
       "agent_power": "institutional",
       "time_horizon": "generational",
-      "exit_options": "arbitrage",
-      "spatial_scope": "regional",
-      "label": "The Employer's Structural Position",
-      "comment": "PERSPECTIVE 3: EMPLOYER / CREDITOR (TANGLED ROPE) \u2014 Institutional actor with genuine arbitrage options. The employer has a coordination function (organizing Gregor's labor for commercial purposes) but uses debt leverage to extract surplus labor time and compliance. The transformation creates a structural ambiguity: the debt remains enforceable even though Gregor cannot work. The employer can maintain the debt claim indefinitely, turning the constraint into pure extraction. However, there is also a vestigial coordination component \u2014 the original debt was incurred through a legitimate labor exchange. The employer's position is hybrid: benefiting from continued debt leverage while losing the coordination function that originally justified it."
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Boarding House / Social Respectability Apparatus",
+      "comment": "PERSPECTIVE 5: BOARDING HOUSE & RESPECTABILITY APPARATUS (PITON) — The family maintains appearance of respectability (they keep house, maintain the boarding arrangement) long after its economic foundation has cracked. The constraint operates through performative stability — keeping Gregor hidden, maintaining household rituals, performing normalcy. Theater ratio is moderate (0.55) because the family's actual work is significant, but much of their effort goes toward concealment and appearance management. The ritual persists through institutional inertia: the boarding arrangement provides housing in exchange for propriety; the family performs propriety despite economic collapse. The constraint has functionally degraded but persists through repeated performance."
     },
     {
       "classification_type": "mountain",
@@ -55,103 +76,142 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer (Biological Constraint View)",
-      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a naturalistic perspective, the biological transformation appears to be an immutable constraint: a human body cannot serve as a salesman if it has become physically incompatible with human society. The constraint appears to emerge naturally from biological fact. However, the mountain classification is false. The structural data reveals this as naturalization of a social-economic arrangement (debt obligations). The 'mountain' is actually the intersection of a biological event with a pre-existing snare (debt bondage). The engine's false summit detector will expose this."
+      "label": "The Analytical Observer (Biological Determinism View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / BIOLOGICAL DETERMINISM VIEW (MOUNTAIN) — From a civilizational perspective, the constraint appears as an immutable natural law: a living organism that loses productive capacity becomes a pure liability to its economic dependents. The transformation reveals an allegedly invariant biological fact — that humans who cannot work are burdens. However, this naturalizes what is actually a constructed constraint: the contingent dependency of family survival on one individual's labor capacity, the absence of alternative support structures, and the creditor's ability to claim that body as collateral. The engine will identify this as a false summit, revealing that 'biological burden' is a social classification, not a natural law."
     }
   ],
   "omegas": [
     {
-      "id": "biological_determinism_vs_social_construction",
-      "question": "Is the constraint fundamentally biological (the transformation itself) or fundamentally social (the debt mechanism that persists after transformation)?",
-      "resolution_mechanism": "Counterfactual analysis: if Gregor had been born with the same physical form, would the family debt still be enforceable? If yes, the constraint is social. If the transformation occurred in a society with debt forgiveness provisions for incapacity, would the family be trapped? If no, the constraint is institutional, not biological.",
-      "impact": "If biological: Snare classification is correct but focuses on the wrong agent (biological fact rather than debt structure). If social: Snare classification is correct and the biological event is merely a trigger that exposes a pre-existing extractive arrangement.",
+      "id": "biological_causation_vs_institutional_contingency",
+      "question": "Is Gregor's status as a pure liability to the family a consequence of biological incapacity (natural law), or a consequence of the family's structural dependency on a single income source within a debt-bound system (contingent institutional arrangement)?",
+      "resolution_mechanism": "Counterfactual analysis: if the family were not debt-bound, would Gregor's biological transformation result in the same economic catastrophe? If universal support structures existed, would he become a pure liability? If the creditor had not claimed debt against his labor, what would his status be?",
+      "impact": "If natural law: Gregor's transformation necessarily causes family destitution regardless of institutional context. If contingent: the transformation exposes and intensifies a pre-existing extractive structure; the catastrophe is institutional, not biological. Classification shifts from mountain (inescapable liability) to snare (extractive debt bondage) at the analytical context.",
       "confidence": "high",
       "type_class": "conceptual",
-      "description": "Whether constraint is rooted in biology or social structure"
+      "description": "Whether Gregor's liability status is biologically determined or institutionally contingent"
     },
     {
-      "id": "debt_enforceability_after_incapacity",
-      "question": "Under what legal and social regimes can debt be enforced against an incapacitated debtor? Is the Samsa family's continued obligation a matter of law or of social pressure?",
-      "resolution_mechanism": "Comparative institutional analysis: examination of debt enforcement norms in the text's implied jurisdiction; analysis of whether creditors pursue debt claims against permanently disabled individuals in similar circumstances; assessment of whether family members can be held liable for the debtor's incapacity.",
-      "impact": "If debt is legally enforceable despite incapacity: institutional snare with clear legal backing. If debt enforcement relies on social pressure and family shame: social snare with weak but effective coercive power.",
+      "id": "suppression_mechanism_internalization",
+      "question": "To what degree is the Samsa family's suppression structural (creditor enforcement, economic necessity, physical confinement of Gregor) versus internalized (the family has adopted the creditor's and society's view that Gregor is a burden and disgrace, making emotional compliance with the debt structure)?",
+      "resolution_mechanism": "Examine family members' statements and actions: Do they experience suppression as external coercion (if Gregor's income stopped, creditors will seize property, they will lose housing)? Or as moral internalization (Gregor's transformation is shameful; the family's duty is to conceal him and preserve respectability at any cost)? Post-constraint narrative: if suppression is internalized, it persists after Gregor's death even when the economic crisis resolves.",
+      "impact": "If primarily structural: suppression is the creditor's active enforcement machinery (χ remains high). If primarily internalized: the family carries suppression with them; they have become their own enforcers. Partial internalization indicates identity capture — the family's self-concept depends on their status as debtors and respectable householders, making exit cognitively impossible even when economically possible.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether debt can be enforced against incapacitated debtors"
+      "description": "Proportion of suppression that is structural versus internalized"
     },
     {
-      "id": "gregor_agency_in_biological_form",
-      "question": "What degree of agency or economic contribution is possible for Gregor in his transformed state? Can he work in alternative forms, generate income through other means, or is the transformation total immobilization?",
-      "resolution_mechanism": "Textual analysis of Gregor's actual capabilities after transformation; assessment of whether any economic role remains available to him; determination of whether the constraint is purely biological immobility or a combination of immobility plus social rejection.",
-      "impact": "If total immobility: constraint is primarily biological (albeit expressed through debt mechanism). If partial agency remains: constraint is primarily social (institutional rejection of transformed Gregor as economically viable). This affects whether the snare classification emphasizes biological or institutional suppression.",
+      "id": "debt_collateral_nature",
+      "question": "What exactly was collateralized by Gregor's labor — the original debt amount, or his future earning capacity itself? Is the debt a fixed obligation, or does it expand to claim whatever surplus value his labor generates?",
+      "resolution_mechanism": "Historical examination of the debt contract (if available) or family narrative: Did the creditor claim a fixed repayment schedule, or did the father (as household authority) structure the arrangement as indefinite extraction of Gregor's earnings? Does the father's attitude suggest he views the debt as repayable, or as a permanent structure extracting from Gregor's biological capacity for work?",
+      "impact": "If fixed debt: the constraint is theoretically repayable; it is a Tangled Rope (extraction with a potential exit path). If indefinite: the constraint is structurally a Snare (extraction that persists regardless of payment). The father's statement that he still owes money after years of Gregor's service suggests indefinite extraction (Snare logic).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether Gregor retains any capacity for economic contribution"
+      "description": "Whether the debt is a fixed obligation or indefinite extraction of earning capacity"
+    },
+    {
+      "id": "identity_lock_mechanism_father",
+      "question": "Is the father's commitment to the debt structure a constrained choice (high cost to exit, but exit is possible) or an identity-locked commitment (the father's self-concept as household authority, provider, and social equal depends on maintaining the debt structure and the domination of Gregor)?",
+      "resolution_mechanism": "Examine the father's actions and statements: Does he treat the debt as a burden he wishes to escape? Or does he treat it as the organizing principle of his authority and family role? After Gregor's transformation, does the father accept relief from the extraction obligation, or does he intensify enforcement (demanding Gregor remain productive despite incapacity)? Post-Gregor-death narrative: does the father's identity collapse, suggesting identity fusion with the extraction structure?",
+      "impact": "If constrained exit: the father could theoretically reorganize family structure without loss of core identity. If identity-locked: the father's identity is constituted through domination and debt management; exit would require becoming a different person. Identity-locked status implies the constraint persists even when economically irrational, because the father cannot perceive it as optional. Classification of the father's perspective shifts from institutional/arbitrage (rational extraction) to institutional/identity_locked (capture), changing his experienced χ and the perspectival gap.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the father's debt-enforcement is a constrained choice or identity-locked commitment"
+    },
+    {
+      "id": "grete_coalition_formation",
+      "question": "Is Grete's emergence as an economic actor a genuine coalition building against the constraint (her labor could enable family exit from debt), or is she being incorporated into the same extractive structure (her labor now services the debt Gregor's incapacity exposed)?",
+      "resolution_mechanism": "Examine whether Grete's economic activity creates new exit options for the family, or whether it simply reproduces the Gregor pattern with a different body. Does the family's acquisition of Grete's income increase their negotiating power with the creditor, or does it increase the family's total debt-service capacity, making them more extractable? Do other family members propose using Grete's independence to escape the debt structure, or do they propose deepening family obligation to consolidate her earnings?",
+      "impact": "If coalition building: Grete represents an organizational possibility; the constraint could shift toward Tangled Rope (mixed coordination and extraction) or even Scaffold (temporary problem being solved). If incorporation: Grete's labor is simply the next body claimed by the extractive structure; the Snare persists. This affects the medium-term classification and the likelihood of structural resolution.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether Grete's economic emergence enables coalition or deepens extraction"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.35,
-      "id_override": "meta_extractiveness_t0"
+      "value": 0.42,
+      "id_override": "samsa_extract_t0_prechange"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 3,
-      "value": 0.52,
-      "id_override": "meta_extractiveness_t3"
+      "time_point": 2,
+      "value": 0.55,
+      "id_override": "samsa_extract_t2_immediate"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 6,
+      "time_point": 5,
       "value": 0.68,
-      "id_override": "meta_extractiveness_t6"
+      "id_override": "samsa_extract_t5_full"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48,
+      "id_override": "samsa_supp_t0_prechange"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.63,
+      "id_override": "samsa_supp_t2_immediate"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.78,
+      "id_override": "samsa_supp_t5_full"
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.22,
-      "id_override": "meta_theater_t0"
+      "value": 0.35,
+      "id_override": "samsa_theater_t0_prechange"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 3,
-      "value": 0.3,
-      "id_override": "meta_theater_t3"
+      "time_point": 2,
+      "value": 0.48,
+      "id_override": "samsa_theater_t2_immediate"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 6,
-      "value": 0.38,
-      "id_override": "meta_theater_t6"
+      "time_point": 5,
+      "value": 0.55,
+      "id_override": "samsa_theater_t5_full"
     }
   ],
   "interval": {
     "start": 0,
-    "end": 6
+    "end": 5
   },
   "commentary": {
-    "narrative_context": "Gregor Samsa's biological transformation into a 'horrible vermin' exposes and intensifies a pre-existing debt bondage that governs the family's entire economic structure. Before the transformation, the constraint operated as a standard labor-debt mechanism: Gregor's income service justified the debt claim and maintained the family's precarious respectability. The transformation eliminates Gregor's labor capacity while preserving the debt obligation, revealing the constraint's true extractive nature. The family now bears double extraction: the employer's continuing debt claim AND the biological fact of Gregor's permanent dependency. The constraint operates across multiple structural levels \u2014 biological (incapacity), economic (debt enforcement), familial (obligation to support), and social (rejection and disgust). The extractiveness increases over the measurement interval as the family exhausts savings, accepts Gregor's permanent incapacity, and realizes the debt will never be discharged through his future earnings.",
+    "narrative_context": "Gregor Samsa's biological transformation into a 'horrible vermin' exposes and intensifies a pre-existing debt bondage that structures the entire family's economic and social existence. Before the transformation (t=0), the constraint operated as a standard labor-debt mechanism: Gregor's income as a traveling salesman justified the creditor's claim and maintained the family's precarious respectability within the boarding house. The transformation (t=2) reveals that the family's entire structure — their housing, their social standing, their parental authority over Gregor, their sense of obligation — rests on the extraction of Gregor's labor capacity. When that capacity is removed, the constraint shifts from a hybrid coordination-extraction system (the family coordinated around Gregor's income) to a pure extraction mechanism (the debt persists, but Gregor cannot service it, making him a pure liability in the family's accounting). By t=5, the constraint has hardened into a Snare: Gregor is imprisoned, the family is suppressed through economic necessity and shame, the debt cannot be repaid, and no member can exit without catastrophic loss. The transformation is not the cause of the bondage; it is the revelation of bondage that was always structural.",
     "key_agents": [
-      "Gregor Samsa: Primary victim (powerless/trapped) \u2014 sole income earner rendered permanently incapable; bears full force of extraction through immobility",
-      "Samsa Family Unit: Secondary victim (moderate/constrained) \u2014 dependent on Gregor's income; now faces debt obligation plus permanent care burden with no exit",
-      "The Employer / Creditor: Beneficiary (institutional/arbitrage) \u2014 holds debt claim that persists after Gregor's incapacity; can maintain extraction indefinitely through family liability",
-      "Social Context (Urban Prague): Structural actor (analytical/analytical) \u2014 establishes norms of respectability, work obligation, and debt enforcement that frame the family's trap"
+      "Gregor Samsa: Primary victim (powerless/trapped) — debt collateral whose biological incapacity transforms him from producer to pure liability within the family's extractive accounting",
+      "The Father (Mr. Samsa): Primary beneficiary and enforcer (institutional/arbitrage, with identity_locked dynamics) — maintains authority through debt management and Gregor's domination; intensifies enforcement even after Gregor's incapacitation",
+      "The Mother (Mrs. Samsa): Secondary victim and ambivalent enforcer (moderate/constrained) — trapped in family structure; experiences Gregor's transformation as both tragedy and violation of the constraint's implicit terms",
+      "Grete Samsa: Transitional victim becoming secondary producer (moderate/constrained) — moves into servant labor; both constrained by family obligation and gaining relative agency through Gregor's incapacitation",
+      "The Creditor Class: Structural beneficiary (institutional/arbitrage) — claims legal right to extract family income; enforcement is delegated to the father but backed by property seizure threat",
+      "The Boarding House and Social Respectability Apparatus: Institutional enforcer (institutional/constrained) — maintains the physical space and social conditions that conceal the constraint; enforcement through visibility and shame"
     ],
-    "logic_rationale": "Extractiveness (0.68): High and increasing. Initial base extractiveness (0.35) reflects standard labor-debt extraction \u2014 Gregor works, earns, services debt, family survives. This is extraction but with a coordination function: the employer benefits from organized labor. After transformation, extractiveness rises sharply (0.68) because the debt claim persists while labor becomes impossible. The employer now extracts pure rent: the family cannot escape the debt, Gregor cannot work off the debt, and the constraint feeds on immobility itself. Suppression (0.75): Very high. The constraint combines biological incapacity (Gregor cannot transform back), economic coercion (debt claim is enforceable), social exclusion (the family is increasingly isolated), and family obligation (they cannot abandon Gregor). Every exit route is blocked. Theater ratio (0.38): Moderate but increasing over time. Early in the transformation, there is still pretense that Gregor's condition is temporary and he might recover. The family maintains social rituals (keeping the room locked, feeding Gregor, managing appearances). By the end, the theater increases as the family accepts Gregor's permanence and the rituals become purely performative \u2014 feeding a creature that will never work again, maintaining a debt claim on an incapacitated debtor. The theater is not false review or performative compliance; it is the family's construction of meaning around a structural trap.",
-    "directionality_logic": "Gregor as powerless/trapped: d \u2248 0.95 \u2192 f(d) \u2248 1.42. He experiences maximum extraction because he has zero exit options (biological incapacity), zero power (dependent), and zero time horizon (immediate survival focus). The employer as institutional/arbitrage: d \u2248 0.08 \u2192 f(d) \u2248 -0.12. The employer experiences negative effective extraction (benefits) because of arbitrage options and beneficiary status. The family as moderate/constrained: d \u2248 0.70 \u2192 f(d) \u2248 1.15. The family is partially trapped (debt obligation, family duty to Gregor) but retains moderate power (can negotiate with employer, can seek alternative support). Their experienced extraction is moderate-to-high because the constraint is real but not absolute.",
-    "perspectival_gap": "The perspectival gap between Gregor (Snare) and the Employer (Tangled Rope) is maximal. Gregor sees pure extraction \u2014 the constraint yields him nothing but incapacity and dependence. The employer sees a hybrid: they originally offered legitimate coordination (employment, which the Samsa family needed), and the debt was incurred through this exchange. However, the employer's perspective becomes increasingly snare-like as they maintain debt enforcement against an incapacitated debtor. The gap reveals that the constraint has degraded from Tangled Rope (labor + debt as legitimate coordination-extraction mix) to pure Snare (debt without the possibility of labor). The family's perspective (Snare) aligns with Gregor's, but for different reasons: Gregor is trapped by incapacity, while the family is trapped by obligation and dependence on debt discharge that cannot occur. The analytical observer's Mountain classification is a false summit: the observer risks naturalizing the social-economic arrangement (debt enforcement) as a biological law.",
-    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint has TWO distinct components: (1) the biological transformation (which might appear as a Mountain \u2014 immutable biological fact), and (2) the debt mechanism (which is clearly a Snare \u2014 enforced extraction with suppression). The narrative conflates these into a single constraint, but the structural analysis reveals they are separable. The biological fact (Gregor's transformation) is not the constraint \u2014 it is a trigger that exposes the pre-existing constraint (debt bondage). A society with debt forgiveness for incapacity would have a different constraint (biological isolation without economic extraction). A society with universal income would have a different constraint (Gregor's condition is private tragedy, not family economic catastrophe). The Snare classification is correct because it identifies the debt mechanism as the extractive element, not the biological transformation itself. The mandatrophy is resolved by refusing to naturalize the social-economic arrangement and by recognizing that 'extraction through debt' and 'biological incapacity' are two separate phenomena forced into proximity by the story's social context."
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts substantial surplus value from Gregor's labor throughout his productive period; the transformation reveals this as an indefinite extraction mechanism rather than a repayable debt. The family's response (intensified shame, confinement, economic desperation) indicates the debt was never structured to be repaid — it was structured to claim Gregor's entire productive capacity indefinitely. The rise from 0.42 (t=0) to 0.68 (t=5) reflects the constraint's true character becoming visible: before transformation, Gregor could rationalize his sacrifice as temporary (paying down the debt); after transformation, the extraction structure stands exposed. Suppression (0.78): Very high. Suppression mechanisms include: (1) economic necessity — without Gregor's income, the family faces destitution, making debt compliance mandatory; (2) confinement — Gregor is literally imprisoned in his room, unable to speak for himself; (3) shame — the family's social standing depends on concealment, making Gregor's existence a threat to their honor; (4) parental authority — the father's domination is legitimized through debt management, suppressing any organized family resistance. The rise from 0.48 (t=0) to 0.78 (t=5) reflects that suppression was always present (before the transformation, the family's obligation to Gregor's income was psychologically and economically inescapable) but becomes explicit and violent after the transformation. Theater ratio (0.55): Moderate. Before transformation, the family's work is substantially functional — Gregor's employment is real, the debt payments are real, the coordination around income is necessary. After transformation, theater increases slightly as the family invests effort in concealment (keeping Gregor hidden, maintaining boarding house propriety despite crisis) while the underlying economic problem (the unpayable debt) becomes increasingly performative. The ratio remains moderate (not Piton-level degradation) because the family's labor remains genuinely economically necessary for survival, even as it ceases to service the original debt. Claimed type (Snare): The constraint exhibits pure extraction with minimal coordination function post-transformation, high suppression, and no exit pathway for the primary victim. Pre-transformation, the constraint could be read as Tangled Rope (genuine income coordination + asymmetric extraction), but the transformation reveals the extraction as the true stable structure.",
+    "perspectival_gap": "The perspectival gap between Gregor and the father is maximal: Gregor sees a Snare (χ ≈ 0.97, high extraction, no exit), while the father sees Rope (χ ≈ -0.08, minimal extraction, high exit capacity). This is not a disagreement about facts — both accurately perceive their structural position — but a revelation that the same constraint structure is experienced as opposite types depending on whether you are beneficiary or victim. The gap widens as the transformation proceeds: before transformation, Gregor could rationalize the constraint as temporary (paying down a debt), and the father could rationalize it as necessary (maintaining family respectability). After transformation, Gregor perceives the constraint as permanent bondage, while the father intensifies enforcement, revealing his commitment as identity-locked rather than instrumental (he doubles down on debt management even when it becomes economically irrational). Grete's perspective is transitional: she initially experiences the constraint as family duty (victim position) but gradually perceives agency-enabling (becoming the new income source, which gives her negotiating power not available to Gregor). This suggests the constraint's Snare classification is not invariant across victims — some victims can organize coalition (Grete) while others are isolated (Gregor).",
+    "directionality_logic": "The father's perspective requires close analysis because it exhibits both institutional power (beneficiary status) and identity-lock dynamics. His statement that he still owes money after years of Gregor's service suggests the debt structure is not instrumentally rational (a typical creditor would resolve a paid debt) but identity-constituting (the father's role as debtor-authority is his social identity). This maps to an identity_locked exit option rather than standard arbitrage: he could theoretically walk away from the debt (he is institutional/powerful), but cannot do so without ceasing to be the father as he has constituted himself. This makes his directionality more complex: d is low (beneficiary, arbitrage baseline ≈ 0.05), but the identity-lock modulates his experienced χ upward — he experiences the constraint as more extractive/necessary than pure arbitrage power would suggest, because his identity is fused with the extraction role. This is the diagnostic signal the system is designed to detect: when an institutional beneficiary experiences a constraint as more necessary than their power position would suggest, identity capture is operating. Declare this with identity_locked exit options and note in commentary.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that Snare is the correct classification at the analytical/civilizational level. The temptation is to classify it as Tangled Rope pre-transformation (genuine income coordination + asymmetric extraction) and see the transformation as shifting it to Snare. But careful analysis reveals that the Rope coordination element was always asymmetric and extractive in structure — it was only experienced as coordination by the beneficiary because it functioned. The transformation does not change the constraint's type; it reveals the constraint's true character. A Tangled Rope has a genuine dual function: coordination that would be selected even absent extraction, and extraction that adds asymmetry. The Samsa constraint fails this test: the family's 'coordination' is imposed by debt obligation, not freely selected. Without the debt (without the extraction), the family would not coordinate around Gregor's specific travel-salesman role. Therefore, the constraint is structurally a Snare at all times; the transformation merely makes this visible. The mandatrophy is resolved by asserting that extraction disguised as coordination is still extraction, and that the correct classification is the one that holds across all changes in observability (pre- and post-transformation)."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "debt_enforcement_against_incapacity",
-      "family_obligation_vs_survival"
+      "parental_authority_patriarchal",
+      "boarding_house_social_control",
+      "travel_salesman_labor_precarity"
     ],
-    "dual_formulation_note": "The Samsa constraint decomposes into two structural elements: (a) the biological transformation as a trigger event (\u03b5 \u2248 0.05, immutable), and (b) the debt bondage as the extractive mechanism (\u03b5 \u2248 0.68, social/institutional). These are linked but distinct constraints. The narrative conflates them, which is the source of the apparent Mountain classification at the analytical level. The proper decomposition treats the debt mechanism as the constraint and the biological transformation as an exogenous shock that changes the constraint's configuration from Tangled Rope to Snare."
+    "dual_formulation_note": "The Samsa constraint family decomposes into three structurally distinct constraints: (1) metamorphosis_samsa (this story, ε=0.68) — the debt bondage mechanism itself; (2) parental_authority_patriarchal (ε=0.55) — the legitimacy structure that authorizes the father's enforcement, a Tangled Rope of genuine household coordination and patriarchal extraction; (3) boarding_house_social_control (ε=0.40) — the performative respectability apparatus, a Piton of degraded social gatekeeping. The debt bondage is upstream of the authority legitimacy and downstream of the labor precarity that makes Gregor vulnerable to creditor claims in the first place. Each has its own ε and classification; they are linked by causal and institutional dependency, not by being multiple readings of one constraint."
   },
   "directionality_overrides": [
     {

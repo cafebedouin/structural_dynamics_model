@@ -2,14 +2,15 @@
   "header": {
     "constraint_id": "ergodic_decomposition",
     "version": "1.0",
-    "generated_date": "2026-02-27",
+    "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "ergodic"
+    "measurement_id_prefix": "ergdec",
+    "story_uid": "f999bf0f-ca9f-494c-9737-7d02e0bb20c8"
   },
   "base_properties": {
-    "extractiveness": 0.18,
-    "suppression": 0.03,
-    "theater_ratio": 0.12,
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.15,
     "claimed_type": "mountain",
     "human_readable": "Ergodic Decomposition of Dynamical Systems",
     "topic_domain": "mathematical_physics/dynamical_systems",
@@ -24,17 +25,8 @@
       "time_horizon": "civilizational",
       "exit_options": "trapped",
       "spatial_scope": "universal",
-      "label": "The Trajectory Observer",
-      "comment": "PERSPECTIVE 1: TRAJECTORY OBSERVER (MOUNTAIN) \u2014 An agent tracking a single trajectory of a dynamical system cannot escape the ergodic constraint. Over any finite time window, the trajectory may concentrate on sub-manifolds, and decomposition into ergodic components is unavoidable for predictive purposes. The constraint emerges as an irreducible structural feature of phase space."
-    },
-    {
-      "classification_type": "mountain",
-      "agent_power": "moderate",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "universal",
-      "label": "The Statistical Physicist",
-      "comment": "PERSPECTIVE 2: STATISTICAL PHYSICIST (MOUNTAIN) \u2014 Decomposition is computationally necessary to extract equilibrium properties from dynamics. Even with powerful computers and centuries of observation, the structure of ergodic components cannot be bypassed \u2014 it is fundamental to how information flows through the system."
+      "label": "The System State",
+      "comment": "PERSPECTIVE 1: THE SYSTEM STATE (MOUNTAIN) — A phase-space point or ensemble of points is subject to the ergodic decomposition unconditionally. No trajectory can escape the structure imposed by the underlying measure and group action. The constraint is immutable from this perspective — it is the very structure that defines dynamical evolution."
     },
     {
       "classification_type": "mountain",
@@ -42,95 +34,114 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a mathematical standpoint, the Birkhoff Ergodic Theorem establishes that ergodic decomposition is a universal property of measure-preserving dynamical systems. No agent, no measurement strategy, and no time horizon can avoid the constraint. It is a structural invariant of the phase space itself."
+      "label": "The Mathematical Observer",
+      "comment": "PERSPECTIVE 2: THE MATHEMATICAL OBSERVER (MOUNTAIN) — Ergodic decomposition follows necessarily from the axioms of measure theory and the definition of measure-preserving transformations. The decomposition is not enforced by any external agent — it is a logical necessity. From the analytical perspective at civilizational timescale, the constraint is invariant across all possible systems and all possible measurements. No observational choice or theoretical innovation can alter the fundamental theorem."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Mathematical Community",
+      "comment": "PERSPECTIVE 3: THE MATHEMATICAL COMMUNITY (MOUNTAIN) — Even with institutional power and access to arbitrage options (choice of which systems to study, which properties to emphasize), the mathematical community cannot construct a measure-preserving dynamical system that lacks ergodic decomposition. The community benefits from the constraint insofar as it provides a universal structural framework, but no institutional actor can extract asymmetrically or evade the decomposition theorem. The constraint is immutable even at the generational timescale where institutions operate."
     }
   ],
   "omegas": [
     {
-      "id": "computational_accessibility",
-      "question": "Is ergodic decomposition computationally accessible for all practical systems, or does NP-hardness hide some decompositions?",
-      "resolution_mechanism": "Analysis of complexity-theoretic bounds for identifying ergodic components; comparison of theoretical accessibility with empirical computability for systems of various dimensions",
-      "impact": "If all decompositions are computationally accessible: constraint remains pure mountain. If some decompositions are hidden by computational hardness: perspectival mountain becomes pragmatic snare for agents with bounded compute.",
+      "id": "natural_law_vs_formal_construction",
+      "question": "Is ergodic decomposition a natural law (intrinsic to the structure of dynamics itself) or a formal mathematical construction (true because we defined measure-preserving transformations that way)?",
+      "resolution_mechanism": "Philosophical analysis of whether the theorem would hold for any conceivable definition of 'measure-preserving transformation' or whether the theorem is dependent on specific mathematical conventions chosen by mathematicians. Examine whether alternative foundational frameworks (category theory, non-standard analysis, constructive mathematics) produce equivalent results.",
+      "impact": "If natural law: confirms mountain classification at all perspectives and timescales. If formal construction: suggests the constraint is imposed by the mathematical framework's authority structure rather than discovered as a property of physical systems, potentially opening space for a false-summit analysis.",
       "confidence": "high",
-      "type_class": "empirical",
-      "description": "Computational accessibility of ergodic decomposition identification"
+      "type_class": "conceptual",
+      "description": "Whether ergodic decomposition is intrinsic natural law or formal mathematical construction"
     },
     {
-      "id": "chaos_vs_decomposition",
-      "question": "In chaotic systems, does the mixing property render ergodic decomposition meaningful, or is it an abstract artifact?",
-      "resolution_mechanism": "Empirical analysis of lyapunov exponents and mixing timescales in specific dynamical systems; measurement of whether decomposition structure persists or dissolves under perturbation",
-      "impact": "If mixing dominates: decomposition is a mathematical construct without physical significance (piton reclassification). If structure persists: decomposition has measurable physical content (mountain confirmed).",
+      "id": "empirical_realizability_gap",
+      "question": "Does the mathematical necessity of ergodic decomposition translate to empirical realizability in physical systems? Can all known dynamical systems in nature be meaningfully decomposed into ergodic components, or are real systems opaque to this decomposition?",
+      "resolution_mechanism": "Survey of empirical dynamical systems in physics, chemistry, and biology: Lyapunov exponents, entropy production rates, mixing times. Identification of systems where ergodic decomposition is theoretically guaranteed but practically inaccessible due to timescale separation, measurement limits, or phase-space dimensionality. Comparison with theoretical predictions.",
+      "impact": "If gap is negligible: the mountain classification holds empirically — the constraint is both mathematically necessary and physically manifest. If gap is substantial: ergodic decomposition is a true mathematical mountain but its empirical relevance is domain-dependent, requiring separate constraint stories for specific physical realizations.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Physical meaningfulness of decomposition in chaotic systems"
+      "description": "Gap between theoretical ergodic decomposition and empirical realizability in physical systems"
     },
     {
-      "id": "observer_dependent_decomposition",
-      "question": "Does the choice of observable or measurement basis change which decomposition is 'true' for a given system?",
-      "resolution_mechanism": "Formal analysis of how decomposition changes with different partition functions and observables; investigation of whether different measurement bases reveal different ergodic structures",
-      "impact": "If decomposition is basis-dependent: constraint is observer-relative (false mountain, reclassify as rope or tangled rope). If decomposition is basis-invariant: mountain classification confirmed.",
+      "id": "alternative_decomposition_frameworks",
+      "question": "Are there alternative decomposition schemes (spectral decomposition, functional decomposition, network decomposition) that are structurally equivalent to ergodic decomposition, or does the mathematical community privilege ergodic decomposition for institutional reasons?",
+      "resolution_mechanism": "Comparative analysis of decomposition theorems in dynamical systems: Oseledets theorem (Lyapunov exponents), symbolic dynamics, Sinai-Ruelle-Bowen measures. Evaluation of whether these frameworks address the same structural problem or occupy genuinely different mathematical territory. Citation analysis: what proportion of dynamics papers cite ergodic decomposition vs alternatives?",
+      "impact": "If alternatives are genuinely equivalent: ergodic decomposition is one naming of an immutable structure (mountain). If alternatives are structurally different: the mathematical community's focus on ergodic decomposition may reflect institutional preference (research tradition, textbook canonicity) rather than logical uniqueness, suggesting potential false-summit dynamics.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Basis-independence of ergodic decomposition"
+      "description": "Whether ergodic decomposition is unique or one of several structurally equivalent frameworks"
+    },
+    {
+      "id": "constructivity_and_computability",
+      "question": "In constructive mathematics or computability theory, does ergodic decomposition remain a universally valid theorem, or do alternative foundations reveal hidden dependencies on classical logic or the axiom of choice?",
+      "resolution_mechanism": "Review of ergodic decomposition proofs across foundational systems (classical, intuitionistic, constructive, predicative). Examination of proof dependencies: which lemmas rely on excluded middle, axiom of choice, or non-constructive existence arguments? Formalization in proof assistants (Coq, Lean, Isabelle) with different foundational assumptions.",
+      "impact": "If constructively valid: mountain classification holds across all mathematical foundations, confirming universality. If dependent on classical logic or choice: the constraint is weaker than universal natural law status — it is contingent on foundational conventions chosen by the mathematical community.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether ergodic decomposition survives in constructive and alternative mathematical foundations"
     }
   ],
   "measurements": [
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 1000,
       "value": 0.12
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10000,
-      "value": 0.12
+      "time_point": 50,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.18
     },
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.16
+      "value": 0.06
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 1000,
-      "value": 0.18
+      "time_point": 50,
+      "value": 0.07
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10000,
-      "value": 0.18
+      "time_point": 100,
+      "value": 0.08
     }
   ],
   "interval": {
     "start": 0,
-    "end": 10000
+    "end": 100
   },
   "commentary": {
-    "narrative_context": "Ergodic decomposition is a mathematical constraint on all measure-preserving dynamical systems: every such system can be decomposed into ergodic components on which the dynamics are irreducibly mixing. This decomposition is not optional \u2014 it is an inevitable consequence of the structure of phase space itself. No agent, no matter their power or observational capacity, can avoid or exit this constraint. The constraint exhibits all the hallmarks of a mountain: it emerges naturally from the axioms of measure theory, has near-total accessibility collapse (any two dynamical systems can be shown to have ergodic components), and zero degrees of freedom for all observational contexts. Theater ratio is minimal because the decomposition is a pure structural fact, not a performed ritual. The constraint's only vulnerability is computational: in complex systems, the components may be difficult to identify in practice, which creates a pragmatic-vs-theoretical gap.",
+    "narrative_context": "Ergodic decomposition is a foundational theorem in the theory of dynamical systems: every measure-preserving transformation on a probability space can be decomposed into ergodic components, where each component is irreducibly mixing. This decomposition is not a choice, approximation, or institutional convention — it is a logical consequence of the measure-theoretic structure of dynamics itself. No observer, regardless of their power, observational method, or theoretical framework, can construct a measure-preserving system that lacks this decomposition. The constraint is invariant across all timescales (immediate through civilizational) and all spatial scopes (local through universal). From every structural position, the ergodic decomposition appears as an immutable feature of the universe of measure-preserving systems.",
     "key_agents": [
-      "Trajectory Observer: Powerless agent (powerless/trapped) \u2014 cannot observe a single trajectory without decomposition structure constraining what they see",
-      "Statistical Physicist: Moderate agent (moderate/constrained) \u2014 needs decomposition to extract equilibrium properties; constrained by computational limits but not by the math itself",
-      "Analytical Observer: Civilizational context (analytical/analytical) \u2014 recognizes decomposition as a universal mathematical law"
+      "The Dynamical System (powerless/trapped) — any system subject to a measure-preserving transformation undergoes ergodic decomposition necessarily",
+      "The Phase Space (powerless/trapped) — the underlying measure-theoretic structure imposes the decomposition on all trajectories and all observables",
+      "The Mathematical Observer (analytical/analytical) — can recognize the decomposition but cannot escape it; all theoretical frameworks operating within measure-theoretic dynamics assume the decomposition",
+      "The Mathematical Community (institutional/arbitrage) — benefits from the universality of the decomposition as a structural theorem; cannot extract asymmetrically from the constraint itself"
     ],
-    "logic_rationale": "Extractiveness (0.18): Very low. The constraint does not extract value from any agent \u2014 it is purely a structural property of dynamical systems. The low value reflects that decomposition is a mathematical fact, not an economic or political mechanism. Suppression (0.03): Minimal. There is no suppression mechanism; agents are not prevented from understanding or applying ergodic theory. The low value reflects the transparency of the mathematical constraint. Theater ratio (0.12): Very low. Ergodic decomposition is not performative \u2014 it is either present in the mathematics or it is not. The slight non-zero value accounts for the pedagogical theater in how decomposition is taught (simplified examples that hide the full complexity), but the core constraint is non-performative. Accessibility collapse (0.92): Extremely high. Every dynamical system, without exception, has an ergodic decomposition. The constraint is unavoidable. Resistance (0.08): Minimal. Once understood, the mathematical necessity of decomposition cannot be resisted. The small non-zero value reflects minor gaps in pedagogical clarity, not structural resistance.",
-    "perspectival_gap": "This constraint has zero perspectival gap \u2014 all three perspectives classify it as mountain. This is the signature of a true natural law. The trajectory observer, the statistical physicist, and the analytical observer all perceive the same invariant structure. There is no disagreement about the constraint's nature, only variation in how directly each agent experiences its force.",
-    "directionality_logic": "Ergodic decomposition has no directionality in the sense of extraction direction. It is not a constraint imposed by one agent on another; it is a constraint imposed by mathematics on all agents equally. The agent_power values vary (powerless, moderate, analytical) to show different observational contexts, but all contexts confirm the mountain classification. There are no beneficiaries or victims \u2014 the constraint is impersonal.",
-    "mandatrophy_analysis": "NATURAL LAW EXEMPLAR: This constraint resolves mandatrophy trivially \u2014 all perspectives agree on mountain classification. The resolution is not analytical but axiomatic: Birkhoff's Ergodic Theorem is a proven mathematical result. Mandatrophy dissolves when the structure itself is invariant across all observation contexts. The only residual uncertainty (omegas) concerns computational accessibility and basis-dependence, not the mathematical existence of decomposition."
+    "logic_rationale": "Extractiveness (0.08): Minimal. The constraint extracts nothing from any agent because it is not enforced by any agent — it is intrinsic to the structure. No asymmetry exists between beneficiaries and targets; no one benefits from the decomposition and no one bears costs. The low but non-zero value reflects the minimal theater required to state and verify the theorem (mathematical notation, proof steps, institutional context of mathematics education). Suppression (0.02): Negligible. There are no alternatives to suppress — there is no way to avoid or exit the constraint. The near-zero value reflects that suppression is inapplicable to natural laws. Theater ratio (0.15): Low. The constraint requires mathematical statement and proof, but these are direct logical derivations rather than performative. The theorem is stated in formal notation, proofs are canonical, and verification is deterministic. The small theater component reflects the institutional practice of mathematics education (courses, textbooks, seminars) which adds pedagogical overhead without changing the underlying logical necessity.",
+    "perspectival_gap": "The remarkable feature of ergodic decomposition is the absence of a perspectival gap. All three perspectives (system state, mathematical observer, mathematical community) classify the constraint identically as mountain. This uniformity is diagnostic: it indicates the constraint has no structural asymmetry, no beneficiary-victim relationship, and no exit optionality from any position. The institutional perspective maintains mountain classification even when the observer has arbitrage options — this marks the constraint as fundamentally different from extracted constraints that depend on observational position. The absence of a gap confirms the natural law status.",
+    "mandatrophy_analysis": "This constraint resolves any potential mandatrophy by being a genuine, unambiguous natural law. There is no tension between coordination function and extraction — there is neither. The decomposition is not enforced by institutional authority; it is not contingent on social agreement; it is not subject to interpretation or revision. The mountain classification holds uniformly across all indices (P, T, E, S). The constraint serves as the canonical exemplar of what a true natural law looks like in the DR system: immutable, invariant, necessary, and unburdened by perspectival disagreement."
   },
   "boltzmann": {
     "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
-      "mixing_property_dynamics",
-      "equilibrium_attainment",
-      "kac_return_time_theorem"
-    ]
+      "birkhoff_ergodic_theorem",
+      "symbolic_dynamics_shift_spaces",
+      "lyapunov_exponent_computation"
+    ],
+    "dual_formulation_note": "Ergodic decomposition is a foundational constraint on which many downstream theorems depend. Birkhoff's ergodic theorem requires the ergodic decomposition as a prerequisite; symbolic dynamics relies on the decomposition to justify the study of symbolic spaces; Lyapunov exponent computation uses ergodic components to define exponents meaningfully. These constraints form a family where ergodic decomposition is the upstream natural law foundation."
   }
 }

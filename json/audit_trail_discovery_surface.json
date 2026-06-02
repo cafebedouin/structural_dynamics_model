@@ -1,0 +1,198 @@
+{
+  "header": {
+    "constraint_id": "audit_trail_discovery_surface",
+    "version": "1.0",
+    "generated_date": "2025-01-02",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "audit_trail",
+    "story_uid": "baf1877e-24e5-4177-8601-572c705e9308",
+    "created_at": "2026-06-01T23:37:20.621849+00:00"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.52,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Audit Trail Discovery Surface in Legal Technology",
+    "topic_domain": "legal_technology/data_sovereignty/professional_services",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "plaintiff_malpractice_bar",
+      "legal_tech_vendors"
+    ],
+    "victims": [
+      "law_firm_risk_management",
+      "associate_attorneys"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Associate Attorney",
+      "comment": "PERSPECTIVE 1: ASSOCIATE ATTORNEY (SNARE) — Trapped by employment structure and professional norms requiring use of firm systems. Every research query, every draft iteration, every partner consultation request creates permanent attributed record. Cannot opt out without appearing uncooperative or technologically incompetent. Bears maximum career risk from discoverable research patterns showing gaps or inefficiencies."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Law Firm Risk Management",
+      "comment": "PERSPECTIVE 2: LAW FIRM RISK MANAGEMENT (TANGLED ROPE) — Constrained by malpractice insurance requirements and client expectations for audit trails, but also benefits from the coordination function: audit trails enable quality control, billing verification, and compliance demonstration. Significant extraction through expanded discovery surface in fee disputes and malpractice claims, but genuine coordination value in demonstrating diligence to clients and insurers."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Plaintiff Malpractice Bar",
+      "comment": "PERSPECTIVE 3: PLAINTIFF MALPRACTICE BAR (ROPE) — Primary beneficiary. Immutable audit trails provide discovery gold mine: associate query patterns reveal knowledge gaps, partner review timestamps show supervision failures, research trails demonstrate missed issues. Experiences constraint as pure coordination: the legal tech infrastructure solves their evidence-gathering problem. Can arbitrage across multiple cases and firms using standardized discovery requests."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Legal Tech Vendor",
+      "comment": "PERSPECTIVE 4: LEGAL TECH VENDOR (ROPE) — Benefits from selling audit trail immutability as privilege protection feature while the same immutability creates malpractice liability surface. Market position strengthened by regulatory compliance requirements and client demand for audit capabilities. Can arbitrage between security/compliance narrative and actual discovery risk. Low extraction experienced because vendor captures revenue from both the coordination function and the liability surface it creates."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Professional Liability Insurers",
+      "comment": "PERSPECTIVE 5: PROFESSIONAL LIABILITY INSURERS (TANGLED ROPE) — Organized institutional actors who both benefit from audit trail transparency (enables risk assessment and premium pricing) and bear costs (increased claim frequency and settlement values when audit trails reveal gaps). Can influence policy terms and technology requirements but cannot exit the market. Mixed coordination-extraction: genuine underwriting value from transparency, but also subsidizes plaintiff bar's discovery advantage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From civilizational perspective, the constraint exhibits genuine coordination function (quality control, compliance, billing transparency) layered with asymmetric extraction (discovery surface expansion, associate surveillance, fee dispute weaponization). The immutability marketed as privilege protection creates permanent liability record. Coordination floor is real but extraction is substantial and growing as discovery practices adapt to exploit granular attribution."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "privilege_protection_vs_discovery_surface",
+      "question": "Does the audit trail's immutability actually protect attorney-client privilege, or does it primarily create discoverable work product that would otherwise be ephemeral?",
+      "resolution_mechanism": "Empirical analysis of privilege assertion success rates in cases with vs without granular audit trails; comparison of discovery motion outcomes across technology platforms with different retention policies",
+      "impact": "If privilege protection is genuine: coordination function dominates and lower extractiveness justified. If privilege protection is marketing narrative: extraction dominates and higher extractiveness warranted.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether audit trail immutability protects privilege or expands discovery surface"
+    },
+    {
+      "id": "deletion_capability_threshold",
+      "question": "What level of selective deletion capability would preserve coordination benefits (quality control, billing verification) while reducing extraction (malpractice discovery surface)?",
+      "resolution_mechanism": "Comparative analysis of legal tech platforms with different retention policies; correlation between deletion granularity and both quality control effectiveness and malpractice claim outcomes",
+      "impact": "If narrow deletion windows sufficient: constraint could migrate toward rope with lower extraction. If broad deletion required: coordination function collapses and extraction persists.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Deletion capability threshold balancing coordination and extraction"
+    },
+    {
+      "id": "attribution_granularity_necessity",
+      "question": "Is individual attorney attribution necessary for the coordination functions (quality control, billing), or would team-level or matter-level attribution suffice?",
+      "resolution_mechanism": "Analysis of quality control and billing dispute resolution effectiveness at different attribution granularities; assessment of whether individual-level attribution provides marginal coordination value beyond team-level",
+      "impact": "If individual attribution unnecessary: extraction mechanism (associate surveillance, career risk) is gratuitous and extractiveness should be higher. If individual attribution necessary: some extraction is inherent to coordination function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether individual attribution is necessary for coordination functions"
+    },
+    {
+      "id": "malpractice_claim_frequency_causation",
+      "question": "Does granular audit trail availability increase malpractice claim frequency by revealing actionable gaps, or does it primarily shift claim outcomes without changing filing rates?",
+      "resolution_mechanism": "Longitudinal analysis of malpractice claim frequency and outcomes before and after adoption of immutable audit trail systems; comparison across jurisdictions with different discovery rules for work product",
+      "impact": "If claim frequency increases: audit trails are generating new liability rather than just evidencing existing negligence, suggesting higher extraction. If only outcomes shift: audit trails are coordination mechanism for legitimate claims.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether audit trails increase claim frequency or only shift outcomes"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.52
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Legal technology platforms marketed as privilege protection and compliance tools create immutable, attributed audit trails of attorney work product. Every research query, document review action, partner consultation, and draft iteration generates permanent timestamped records tied to individual attorneys. Vendors market this immutability as safeguarding attorney-client privilege and demonstrating diligence, but the same immutability creates a comprehensive discoverable record in malpractice litigation and fee disputes. The constraint exhibits genuine coordination functions—quality control, billing verification, regulatory compliance—layered with asymmetric extraction as plaintiff malpractice attorneys exploit granular attribution to reveal associate knowledge gaps, partner supervision failures, and research pattern deficiencies. The structural tension arises because the features that enable coordination (immutability, attribution, comprehensive logging) are identical to the features that expand liability surface. Associate attorneys are trapped by employment requirements and professional norms requiring system use. Law firm risk management is constrained by malpractice insurance requirements and client expectations but also benefits from demonstrable diligence. Plaintiff malpractice bar and legal tech vendors are primary beneficiaries with arbitrage exit options. The constraint's extractiveness has increased over the measurement interval as discovery practices have adapted to exploit the granular data, while theater ratio has risen as firms perform compliance rituals (partner review checkboxes, research documentation requirements) that generate discoverable records without necessarily improving work quality.",
+    "key_agents": [
+      "Associate Attorney: Primary victim (powerless/trapped) — required to use firm systems, every action creates attributed permanent record, bears maximum career risk from discoverable research patterns",
+      "Law Firm Risk Management: Secondary victim and beneficiary (moderate/constrained) — constrained by insurance and client requirements, benefits from quality control and compliance demonstration, bears discovery surface expansion in disputes",
+      "Plaintiff Malpractice Bar: Primary beneficiary (institutional/arbitrage) — audit trails provide discovery evidence of knowledge gaps and supervision failures, can arbitrage across cases and firms",
+      "Legal Tech Vendor: Primary beneficiary (institutional/arbitrage) — captures revenue from both coordination narrative and liability surface creation, markets immutability as protection while it expands risk",
+      "Professional Liability Insurers: Mixed position (organized/mobile) — benefit from risk assessment transparency, bear increased claim costs, can influence policy terms",
+      "Analytical Observer: Civilizational view (analytical/analytical) — sees genuine coordination function with substantial and growing asymmetric extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.48): Moderate-high. The constraint exhibits genuine coordination value (quality control, billing verification, compliance demonstration) but substantial extraction through expanded discovery surface. The base extractiveness has risen from 0.32 to 0.48 over six years as plaintiff malpractice attorneys have developed sophisticated discovery strategies exploiting granular attribution. The coordination floor is real—firms do need audit capabilities for client service and regulatory compliance—but the extraction layer is significant and growing. The immutability marketed as privilege protection creates permanent liability records that would otherwise be ephemeral (draft research notes, preliminary analyses, internal consultations). Suppression (0.52): Moderate-high and rising. Associates cannot opt out without career penalty. Firms are constrained by malpractice insurance requirements mandating audit trail capabilities and client expectations for transparency. The suppression has increased from 0.42 to 0.52 as insurance underwriting has tightened requirements and as major clients have standardized audit trail expectations in outside counsel guidelines. Alternative systems without immutable attribution exist but face market barriers from insurance and client requirements. Theater ratio (0.38): Moderate and rising. Some performative compliance activity has emerged: partner review checkboxes that generate discoverable timestamps without substantive review, research documentation requirements that create records for compliance rather than quality improvement, mandatory consultation logs that formalize what were previously informal hallway conversations. The theater has increased from 0.25 to 0.38 as firms have layered compliance rituals onto the underlying coordination function. However, theater is not dominant—much of the audit trail activity serves genuine coordination purposes.",
+    "directionality_logic": "Associate attorneys are victims with trapped exit options, yielding high d and high experienced extraction—they bear maximum career risk from permanent attributed records and cannot opt out. Law firm risk management is both victim and beneficiary with constrained exit, yielding moderate d—they face expanded discovery surface in disputes but also benefit from quality control and compliance demonstration capabilities. Plaintiff malpractice bar is primary beneficiary with arbitrage exit, yielding very low d and negative experienced extraction—audit trails solve their evidence-gathering problem and they can arbitrage discovery strategies across multiple cases. Legal tech vendors are beneficiaries with arbitrage exit, yielding very low d—they capture revenue from both the coordination narrative and the liability surface they create. Professional liability insurers are mixed beneficiaries and victims with mobile exit options, yielding moderate d—they benefit from underwriting transparency but bear increased claim costs. The analytical observer uses canonical analytical d, recognizing both genuine coordination function and substantial asymmetric extraction. No directionality overrides are needed—the structural derivation from beneficiary/victim declarations and exit options accurately captures each agent's relationship to the constraint.",
+    "perspectival_gap": "The associate attorney experiences pure extraction (snare)—trapped by employment requirements, every action creates permanent attributed record usable against them in career evaluations or malpractice claims. Law firm risk management experiences mixed coordination and extraction (tangled rope)—constrained by insurance and client requirements, benefits from quality control capabilities, but bears expanded discovery surface in fee disputes and malpractice litigation. Plaintiff malpractice bar experiences pure coordination (rope)—audit trails solve their evidence-gathering problem, providing timestamped records of knowledge gaps and supervision failures. Legal tech vendors experience pure coordination (rope)—they benefit from selling the constraint as both privilege protection and compliance tool. Professional liability insurers experience mixed coordination and extraction (tangled rope)—transparency enables better risk assessment and pricing, but also increases claim frequency and settlement values. The analytical observer sees tangled rope at civilizational scope—genuine coordination function (quality control, billing verification, regulatory compliance) layered with substantial and growing asymmetric extraction (discovery surface expansion, associate surveillance, fee dispute weaponization). The perspectival gap reveals that the same immutability feature is simultaneously a coordination mechanism (for quality control and compliance), an extraction mechanism (for malpractice discovery), and a career surveillance system (for associates).",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by demonstrating that the same structural features (immutability, attribution, comprehensive logging) serve both genuine coordination functions and asymmetric extraction simultaneously. This is not a case of mislabeling coordination as extraction or vice versa—both are present and structurally inseparable given current technology design. The coordination function is real: firms need audit capabilities for quality control, billing verification, and regulatory compliance. The extraction is also real: immutable attributed records create permanent discoverable evidence of associate knowledge gaps, partner supervision failures, and research pattern deficiencies that would otherwise be ephemeral. The tangled rope classification captures this structural duality. The constraint could migrate toward rope if deletion capabilities were introduced that preserved coordination benefits while reducing discovery surface, or toward snare if coordination functions atrophied while extraction persisted. The omega variables identify the empirical questions that would determine whether current extraction levels are inherent to the coordination function or gratuitous additions that could be engineered away."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "privilege_architecture_coordination"
+    ],
+    "dual_formulation_note": "This constraint is downstream of privilege_architecture_coordination. The upstream constraint (rope classification) describes the coordination function of attorney-client privilege and work product doctrine. This constraint describes how legal technology implementation of privilege protection creates a distinct structural problem: the audit trail marketed as privilege safeguard becomes a malpractice discovery surface. The two constraints have different extractiveness values reflecting different structural dynamics—the upstream privilege coordination is low-extraction rope; the downstream audit trail implementation is moderate-extraction tangled rope."
+  },
+  "directionality_overrides": []
+}

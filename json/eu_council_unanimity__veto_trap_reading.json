@@ -1,0 +1,275 @@
+{
+  "header": {
+    "constraint_id": "eu_council_unanimity__veto_trap_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "euveto",
+    "story_uid": "eu-unanimity-veto-trap-2026-02",
+    "created_at": "2026-02-26T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Council Unanimity as Minoritarian Veto Trap",
+    "topic_domain": "institutional_design/international_relations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "blocking_state",
+      "veto_holder_government"
+    ],
+    "victims": [
+      "coalition_majority",
+      "supranational_agenda"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "label": "The Coalition Majority",
+      "comment": "PERSPECTIVE 1: COALITION MAJORITY (SNARE) — Member states aligned with a proposal have no exit: withdrawal from the Council is structurally impossible; defection or splitting the EU is not available. The majority bears full cost of concessions, side-payments, and opt-outs demanded by the blocking minority. Maximum extraction — the veto holder can extract indefinitely because the majority has no credible exit threat."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Blocking State Government",
+      "comment": "PERSPECTIVE 2: BLOCKING STATE GOVERNMENT (ROPE) — Exercises veto as a pure coordination function: credible blocking threat coordinates member state preferences toward packages all can accept. From this perspective, unanimity is a mechanism ensuring no state is overruled on fundamental interests. Net beneficiary — extraction runs toward this actor through concessions and opt-outs, but framed as legitimate protection of minority state sovereignty."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The European Commission",
+      "comment": "PERSPECTIVE 3: EUROPEAN COMMISSION (TANGLED ROPE) — Functionally benefits from unanimity (acts as honest broker, gains negotiating leverage through knowledge asymmetries, can shape 'win-sets' of acceptable outcomes). Simultaneously constrained by veto power of any member state — its supranational agenda is hostage to member state blocking threats. Moderate extraction with genuine coordination function: agenda-setting authority paired with veto vulnerability creates mixed extraction-coordination dynamic."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Reform-Oriented Member States",
+      "comment": "PERSPECTIVE 4: REFORM-ORIENTED MEMBER STATES (SCAFFOLD) — States frustrated by unanimity gridlock but locked in by treaty amendment rules (which themselves require unanimity — a lock-in trap). They perceive the unanimity rule as a temporary institutional design that should sunset. Qualified majority voting in specific policy domains (EMU, social policy) represents partial scaffolding away from unanimity. Exit is constrained by the recursion: changing unanimity requires unanimity."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "continental",
+      "label": "The Unanimity Norm Itself",
+      "comment": "PERSPECTIVE 5: UNANIMITY NORM AS INSTITUTIONAL INERTIA (PITON) — Unanimity persists through treaty entrenchment and political mythology ('Luxembourg Compromise protects small states') long after its functional value has degraded. The rule survives through its own immobility — amending it requires unanimity, which means blocking states can veto their own disempowerment. Theater ratio 0.48: much political performance around 'protecting sovereignty' masks that the real extraction mechanism is credible blocking threats, not principled minority protection."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "Large Member States",
+      "comment": "PERSPECTIVE 6: LARGE MEMBER STATES (TANGLED ROPE) — Large states have genuine mobile options: threat to block within Council, exit to bilateral agreements or smaller coalitions (e.g., France-Germany directoire), or enhanced cooperation without unanimity participation. They benefit from coordination function (no major state overruled) but face moderate extraction from smaller blocking states demanding opt-outs and side-payments. Their mobility constrains the snare mechanism."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law View (False Summit Candidate)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, unanimity appears as an immutable requirement for legitimate supranational authority: any supranational body that overrules member states without consent violates state sovereignty. This perspective naturalizes unanimity as a constitutional principle. However, the structural data (organized beneficiaries extracting through credible blocking threats, identifiable victims bearing concessions, active enforcement of veto power) contradicts pure natural law. The engine will detect this as a false summit: the 'inherent to sovereignty' framing naturalizes what is actually a contingent institutional choice with measurable extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "veto_vs_coordination_threshold",
+      "question": "At what frequency of veto use does the coordination function collapse and pure extraction dominates?",
+      "resolution_mechanism": "Historical frequency analysis: count vetoes per year; correlate with subjective assessments of 'legitimate protection' vs 'obstruction' from majority member states; measure side-payment sizes relative to policy value",
+      "impact": "If vetoes < 1/year: coordination function remains credible (Rope classification more accurate). If vetoes > 3/year: extraction mechanism dominates (Snare classification for majority more accurate). Current rate: ~2.1/year on contentious issues, ~0.3/year overall.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Threshold for veto frequency separating coordination from extraction"
+    },
+    {
+      "id": "side_payment_extraction_quantification",
+      "question": "What proportion of side-payments extracted via veto represent genuine accommodation of legitimate minority interests vs extractive rent-seeking by blocking states?",
+      "resolution_mechanism": "Cost-benefit analysis of opt-outs and exemptions: (a) do they protect demonstrable vital interests of blocking states? (b) are they asymmetric (always favor the blocker)? (c) do they persist after the blocking state's claimed concern is addressed?",
+      "impact": "If >70% legitimate accommodation: veto mechanism is justified as minority protection (Rope, not Snare). If <30% legitimate: extraction mechanism is dominant (Snare for majority is correct). If 30-70% mixed: Tangled Rope classification confirmed.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of veto-extracted concessions serving legitimate minority interests"
+    },
+    {
+      "id": "alternative_governance_counterfactual",
+      "question": "Would qualified majority voting (QMV) in these policy domains produce systematically worse outcomes for blocking states than current unanimity outcomes?",
+      "resolution_mechanism": "Counterfactual analysis: examine policies blocked under unanimity vs policies passed under QMV in other EU domains; assess blocking state satisfaction and policy alignment; model QMV outcomes with weighted voting reflecting state size and preferences",
+      "impact": "If blocking states do systematically worse under QMV: unanimity is genuine minority protection (reduces Snare classification magnitude). If blocking states do equivalent or better: unanimity is extractive (Snare classification confirmed for majority).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether QMV would systematically disadvantage blocking states"
+    },
+    {
+      "id": "reading_kernel_ambiguity",
+      "question": "Is unanimity fundamentally a sovereignty-guarantor mechanism (sibling reading: sovereignty_guarantor_reading) or a mechanism enabling minoritarian extraction through credible blocking threats (this reading: veto_trap_reading)?",
+      "resolution_mechanism": "Axiomatic: the two readings assign opposite roles to the veto. Sovereignty guarantor reading: veto protects state autonomy from supranational override; extraction is a byproduct, not the mechanism. Veto trap reading: veto IS the extraction mechanism; sovereignty protection is the legitimacy cover story. Resolution requires examining which actors benefit systematically and whether the distribution of benefits matches the stated protective function.",
+      "impact": "If sovereign protection is the primary function: reclassify to Rope/Tangled Rope with lower ε. If extraction is the primary function: maintain Tangled Rope/Snare with higher ε for majority. This omega documents the irreducible interpretive disagreement between the two readings.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether unanimity functions primarily as sovereignty protection or as minoritarian extraction mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.35,
+      "id_override": "euveto_extractiveness_1995"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.48,
+      "id_override": "euveto_extractiveness_2005"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2015,
+      "value": 0.58,
+      "id_override": "euveto_extractiveness_2015"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2025,
+      "value": 0.62,
+      "id_override": "euveto_extractiveness_2025"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.32,
+      "id_override": "euveto_theater_1995"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.39,
+      "id_override": "euveto_theater_2005"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2015,
+      "value": 0.45,
+      "id_override": "euveto_theater_2015"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2025,
+      "value": 0.48,
+      "id_override": "euveto_theater_2025"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.48,
+      "id_override": "euveto_suppression_1995"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.55,
+      "id_override": "euveto_suppression_2005"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2015,
+      "value": 0.6,
+      "id_override": "euveto_suppression_2015"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2025,
+      "value": 0.62,
+      "id_override": "euveto_suppression_2025"
+    }
+  ],
+  "interval": {
+    "start": 1995,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "The EU Council unanimity rule instantiates a structural trap where the requirement for consensus among all member states creates a mechanism for minoritarian extraction through credible blocking threats. This constraint story generates ONE reading of a contested kernel: the veto-trap reading emphasizes that unanimity functions primarily as an extraction mechanism enabling smaller or aligned states to extract concessions, opt-outs, and side-payments from the coalition majority by threatening to block consensus. The sibling readings (sovereignty-guarantor reading, diplomatic-capital reading) attribute different primary functions to the same rule — treating the blocking threat as legitimate minority protection or as a tool for building diplomatic relationships — but the veto-trap reading operationalizes extraction as the mechanism through which unanimity transfers value from majority preference to minority leverage. The measurement trajectory (extractiveness rising from 0.35 in 1995 to 0.62 in 2025) reflects accumulating veto use on high-stakes issues (climate policy, tax harmonization, social standards, immigration), rising costs of blocking (larger side-payments demanded), and intensifying theater (increased performance around 'protecting sovereignty' even as the substantive protection function degrades). The suppression metric rises in tandem: member states in the majority have declining alternatives to compliance (exit costs rise as EU integration deepens; defection or EU withdrawal becomes structurally more expensive). This is the veto-trap reading — the unanimity rule extracts systematically because it locks the majority into a framework where only blocking threats can shift outcomes, and blocking states exploit this asymmetry.",
+    "key_agents": [
+      "Coalition Majority (Member States supporting the proposal): Primary victim (powerless/trapped at continental scale) — face zero-cost blocking threats; must concede, modify proposals, or offer opt-outs to unblock consensus",
+      "Blocking State Government: Primary beneficiary (organized/arbitrage) — captures value through credible veto threat; extracts side-payments, opt-outs, and agenda-setting power from majority",
+      "European Commission: Secondary beneficiary with constraints (institutional/constrained) — benefits from agenda-setting authority and knowledge asymmetries, but constrained by veto vulnerability; must accommodate blocking state preferences to maintain consensus",
+      "Reform-Oriented Member States: Secondary victim (moderate/constrained) — frustrated by unanimity gridlock; trapped by recursive lock-in (amending unanimity requires unanimity)",
+      "Large Member States: Mixed position (powerful/mobile) — benefit from coordination function (no override possible) but face extraction from smaller blocking states; retain exit options (enhanced cooperation, bilateral agreements)",
+      "Analytical Observer: Sees structure (analytical/analytical) — can identify the extraction mechanism (credible blocking threat creating asymmetric value transfer) that the sovereignty-protection reading naturalizes"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The veto mechanism systematically transfers value from majority to blocking minority through: (1) direct concessions on policy content (exemptions, opt-outs, carve-outs), (2) side-payments (funding increases, regulatory flexibility in other domains), (3) agenda-setting power (blocking states shape which proposals reach the Council in the first place). The measurement trajectory shows acceleration: extractiveness rose from 0.35 (low blocking frequency, mostly ceremonial veto power) to 0.62 (regular blocking, large side-payments, high credibility of blocking threat) as EU integration increased the stakes and asymmetry between exit costs for different member states. Suppression (0.62): Moderate-high. Suppression mechanisms: (1) treaty entrenchment (unanimity rule embedded in foundational treaties; amendment requires unanimity, creating a lock-in trap), (2) exit cost escalation (withdrawal from EU is increasingly expensive as integration deepens; member states cannot credibly threaten exit on individual Council votes), (3) framing trap (legitimacy narrative around 'protecting state sovereignty' prevents reframing unanimity as an extraction mechanism). Theater ratio (0.48): Moderate. The constraint involves genuine functional elements (legitimate minority protection, preventing hegemon override) mixed with performative elements (invocations of 'sovereignty' that mask pure blocking-threat extraction; ceremonial Council sessions after real negotiations conclude in smaller directoires). Theater is lower than classical pitons because the substantive coordination function (coordinating across member state preferences) remains real, even as its distribution becomes increasingly asymmetric. The measurement shows theater rising slightly (0.32 → 0.48) as the extraction function becomes more salient and legitimacy performance becomes more important.",
+    "directionality_logic": "The directionality derivation for each perspective: Blocking state (beneficiary + organized + arbitrage options) derives d ≈ 0.08 (full beneficiary position; can credibly exit negotiations without consequence because alternatives exist: bilateral deals, enhanced cooperation subsets, informal directoires). Coalition majority (victim + powerless + trapped) derives d ≈ 0.95 (full target position; zero exit options, faces blocking threat with no credible counter-threat, must accept concessions to unblock). European Commission (mixed + institutional + constrained) derives d ≈ 0.62 (moderate-high target position: constrained by veto vulnerability, but benefits from knowledge asymmetries and agenda-setting authority; can exit to selective implementation but loses supranational legitimacy). Reform-oriented states (victim + moderate + constrained) derive d ≈ 0.78 (high target: trapped by unanimity lock-in, cannot change the rule because changing it requires unanimity). Large states (mixed + powerful + mobile) derive d ≈ 0.48 (moderate: retain exit options through enhanced cooperation or informal coalitions; benefit from coordination function but face extraction pressure from smaller states). Analytical observer (d ≈ 0.72 canonical for analytical position) sees the asymmetry clearly: the structure extracts because exit costs are asymmetric, not because veto power is distributed equally.",
+    "perspectival_gap": "The perspectival gap between this reading (veto-trap) and the sibling sovereignty-guarantor reading centers on which direction the value transfer runs: (1) Veto-trap reading: extraction flows from majority to blocking minority; beneficiary is the blocker; cost-bearer is the majority. (2) Sovereignty-guarantor reading: protection flows from veto holder to all member states equally; veto is a mutual defense mechanism; cost is the side-effect of needing consensus. The gap manifests in how each reading interprets the measurement trajectory. Veto-trap reading: extractiveness rises because blocking states are learning to exploit veto power more effectively (earlier blocking, larger concessions, more credible threats). Sovereignty-guarantor reading: extractiveness fluctuates because blocking is necessary when vital interests are threatened, not because extraction is the mechanism. The two readings assign opposite normative valence to identical behavior (veto use = extraction vs veto use = protection). The engine's false summit detection will flag the natural law perspective (mountain) as a false summit because beneficiaries are identifiable (blocking states) and extraction is measurable (side-payments, opt-outs). But the deeper perspectival gap is between veto-trap and sovereignty-guarantor readings — both are live positions in actual EU debates, and each captures something real about the constraint.",
+    "kernel_context": "This constraint is ONE READING of a contested kernel: eu_council_unanimity. The kernel is the rule itself: 'Decisions of the Council shall be taken by unanimous agreement.' The veto-trap reading instantiates one interpretation of how this rule functions: as a mechanism for minoritarian extraction through credible blocking threats. The sibling readings interpret the same rule differently: (1) sovereignty_guarantor_reading: the rule protects member state autonomy from supranational override; veto use is legitimate minority protection, not extraction. (2) diplomatic_capital_reading: the rule serves as a mechanism for building diplomatic relationships and distributing influence; blocking is a negotiation tool that strengthens ties through reciprocal side-payment exchange. The three readings coexist as live positions in contemporary EU debates. The veto-trap reading is structurally detailed in omega variables and false-summit detection: if unanimity genuinely protects sovereignty equally, beneficiaries should be distributed across the entire membership (all states benefit equally from not being overruled). But empirically, benefits accrue to states that block frequently (Poland, Hungary, Cyprus on specific issues, France on institutional questions). This concentration of benefit is the signal that extraction dominates the protection function — which is precisely what the veto-trap reading claims.",
+    "mandatrophy_analysis": "The mandatrophy resolves by recognizing that tangled-rope classification for this reading is correct: unanimity genuinely coordinates member state preferences (all states avoid override, all have veto power in principle), AND it systematically extracts from the majority (through blocking threats, side-payments, opt-outs). The mixture is structural, not perceptual. The snare classification from the majority's perspective is also correct: from the majority's viewpoint (powerless/trapped), they face pure extraction with no credible counter-threat. The rope classification from the blocking state's perspective is their genuine experience: they exercise legitimate leverage to protect their interests. The false summit arises from naturalizing unanimity as a law of sovereignty — the constraint is instead a contingent institutional choice with measurable extraction. The mandatrophy does NOT resolve by choosing one type; it resolves by recognizing that the perspectival gap IS the analytical content: unanimity appears as Tangled Rope from the rule's structural properties, Snare from the majority's position, Rope from the blocker's position, and Mountain (false) from naturalizing frames. All are correct within their observational context."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_council_unanimity__sovereignty_guarantor_reading",
+      "eu_council_unanimity__diplomatic_capital_reading",
+      "qualified_majority_voting_institutional_capacity",
+      "enhanced_cooperation_coalition_fragmentation"
+    ],
+    "dual_formulation_note": "The EU Council unanimity rule is ONE constraint that three different readings conceptualize as different constraint stories: veto_trap_reading (this file) emphasizes extraction mechanism; sovereignty_guarantor_reading emphasizes protection function; diplomatic_capital_reading emphasizes relationship-building. The three readings share identical base_properties (same extractiveness, suppression, theater scores) but reflect different core normative framings of how the rule functions. This is kernel decomposition, not constraint decomposition per the ε-invariance principle. The ε is stable across readings (0.58). The readings differ in which causal mechanism they emphasize as primary — which is a framing choice, not an observational one. Network links connect all three readings to enable contrastive analysis."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "eu_council_unanimity__sovereignty_guarantor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "eu_council_unanimity__diplomatic_capital_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "veto_mechanism_primary_extraction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "blocking_state_asymmetric_benefit",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "extracted_value_framework",
+    "drift_state": {
+      "moment": "contemporary_post_2015",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "header": {
+    "constraint_id": "notability_guidelines__deletionist_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "notab_del",
+    "story_uid": "c478aa42-093e-4e57-a79b-1b957a2af4cc"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.38,
+    "theater_ratio": 0.45,
+    "claimed_type": "rope",
+    "human_readable": "Wikipedia Notability Guidelines as Epistemic Quality Filter (Deletionist Reading)",
+    "topic_domain": "digital_commons/platform_governance/knowledge_infrastructure",
+    "requires_active_enforcement": false,
+    "beneficiaries": [
+      "encyclopedia_readership",
+      "knowledge_commons_integrity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Encyclopedia Readership (Quality Preservation)",
+      "comment": "PERSPECTIVE 1: READERSHIP / QUALITY PRESERVATION (ROPE) — The notability filter solves a genuine coordination problem: distinguishing signal (verifiable, encyclopedic content) from noise (vanity, original research, advertising). Readers benefit from curation without bearing extraction costs. Exit option is mobile because readers can migrate to other encyclopedias or secondary sources, but Wikipedia's coordination is valuable."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Marginalized Subject Contributors",
+      "comment": "PERSPECTIVE 2: MARGINALIZED SUBJECT CONTRIBUTORS (TANGLED ROPE) — Non-Western, indigenous, LGBTQ+, disability, women's history, and other underrepresented subjects face systematic barriers to notability. Constrained by reliable-source requirements (Western academic publishing bias), non-English language penalties, and verifiability thresholds calibrated to mainstream topics. Receives some benefit from Wikipedia's global reach but bears disproportionate extraction cost through systemic exclusion. Exit is costly: abandoning Wikipedia means losing platform for otherwise-unmapped knowledge."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "Local/Niche Knowledge Holders (Deletionist Perspective)",
+      "comment": "PERSPECTIVE 3: LOCAL AND NICHE KNOWLEDGE HOLDERS (SNARE) — From the deletionist frame, highly local subjects (village histories, regional figures, specialized communities) fall below notability thresholds and face deletion. Trapped by Wikipedia's gatekeeping — no alternative platform reaches comparable audiences for local knowledge. Maximum extraction: valuable epistemic contributions are permanently removed; knowledge holders have no recourse. The notability filter, under deletionist enforcement, becomes a suppression mechanism for non-canonical knowledge."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Wikipedia Editorial Community (Notability Enforcer)",
+      "comment": "PERSPECTIVE 4: WIKIPEDIA EDITORIAL COMMUNITY (ROPE) — Administrators and deletion review committees experience notability as coordination mechanism: it enables them to manage vandalism, spam, and low-quality articles without unlimited moderation burden. The filter provides a structuring principle for editorial decisions. Arbitrage exit: editors can shift resource allocation across deletion categories without leaving the platform. Low extraction experienced because editors benefit from the coordination function itself."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Notability Guidelines as Institutional Artifact (Theater)",
+      "comment": "PERSPECTIVE 5: NOTABILITY GUIDELINES AS INSTITUTIONAL ARTIFACT (PITON) — The guidelines have become substantially performative over their 20-year evolution. Deletion discussions invoke notability criteria but often route on unstated encyclopedic-judgment calls. Theater_ratio high because: (a) reliable-source requirement masks editorial preference for mainstream sources; (b) 'general audience interest' is never operationalized; (c) historical bias toward already-covered topics creates self-reinforcing canonicity. The ritual persists through institutional inertia — editors trained in deletion culture, Wikimedia Foundation grants awards for deletion reviews — despite declining functional coordination value."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law Frame)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a universal/civilizational perspective, notability is an inherent epistemic requirement: any knowledge commons must filter signal from noise, and some quality standard is mathematically necessary to prevent commons tragedy. This perspective sees notability as natural law — immutable structural requirement. However, the constraint's metrics (low extractiveness 0.32, moderate suppression 0.38, low theater 0.45) and identified beneficiaries reveal this is institutional choice, not natural law. The deletionist reading naturalizes a contingent governance decision."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "notability_threshold_measurability",
+      "question": "Is notability (as defined by the guidelines) objectively measurable or inherently subjective editorial judgment?",
+      "resolution_mechanism": "Inter-rater reliability study: Have multiple independent editors apply notability criteria to 100 disputed articles. Measure agreement rates. If agreement < 70%, criteria are subjective proxies for editorial preference.",
+      "impact": "If measurable: coordination function is real (Rope from all perspectives). If subjective: notability criteria are cover story for discretionary gatekeeping (Snare/Tangled Rope from marginalized perspectives).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether notability criteria are objectively measurable or subjective judgment"
+    },
+    {
+      "id": "alternate_filtration_mechanism_sufficiency",
+      "question": "Could alternative quality-filter mechanisms (tagging, probabilistic visibility, community-based curation) achieve comparable signal/noise ratio without deletionism?",
+      "resolution_mechanism": "Comparative analysis: measure vandalism/spam persistence in tagged-but-not-deleted articles vs deleted articles; assess user-perceived quality in forums with algorithmic vs editorial filtering.",
+      "impact": "If alternatives sufficient: notability is coordination choice, not necessity (Rope with alternatives visible). If alternatives insufficient: notability deletion is irreducible (Mountain). Deletionist reading is valid only if alternatives fail.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative filtration mechanisms could replace deletion-based quality control"
+    },
+    {
+      "id": "marginalization_mechanism_in_notability",
+      "question": "Are systematic biases toward Western/English/mainstream sources embedded in the notability criteria themselves, or are they artifacts of reliable-source availability?",
+      "resolution_mechanism": "Comparative deletion rate analysis: measure deletion rates for (a) topics with strong non-Western source bases (e.g., traditional medicine, indigenous history) vs (b) equivalent-notability Western topics. If rates differ, criteria embed systematic bias.",
+      "impact": "If embedded: notability is Snare for marginalized knowledge (extraction mechanism). If artifact: notability is neutral tool mis-applied (Tangled Rope — coordination with systemic bias). This determines whether deletionist reading is defensible or naturalizes exclusion.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether notability criteria embed systematic biases toward Western/English knowledge"
+    },
+    {
+      "id": "reading_contestation_nature",
+      "question": "Is the disagreement between deletionist and inclusionist readings a dispute about notability thresholds (quantitative), or about the epistemic legitimacy of different knowledge types (qualitative)?",
+      "resolution_mechanism": "Discourse analysis: map deletion discussions onto (a) threshold disputes ('is X notable enough?') vs (b) legitimacy disputes ('should local history count as encyclopedic?'). If >60% of contested cases are legitimacy disputes, readings are not commensurate.",
+      "impact": "If quantitative: readings coexist — both parties can accept higher thresholds (influences relation, not forecloses). If qualitative: readings may foreclose (deletionist denies legitimacy of inclusionist's knowledge categories). This determines reading_relations value.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether reading dispute is about notability thresholds or epistemic legitimacy of knowledge types"
+    },
+    {
+      "id": "false_summit_epistemic_necessity",
+      "question": "Is the mountain classification (notability as natural law) justified by actual commons-degradation dynamics, or is it post-hoc naturalization of editorial preference?",
+      "resolution_mechanism": "Historical reconstruction: trace the conceptual origins of notability (early Wikipedia deletion policies, Nupedia influence, editorial culture evolution). Assess whether current deletionism follows from empirical commons-tragedy dynamics or from inherited editorial priors.",
+      "impact": "If justified: mountain classification valid (natural law of knowledge commons). If naturalization: this reading is false-summit candidate — deletionist framing masks institutional choice. This determines whether the analytical perspective's mountain classification should trigger FSM evaluation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether notability as natural law is justified by commons-degradation dynamics or is naturalization of editorial preference"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 7,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 14,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 7,
+      "value": 0.36
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 14,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 14
+  },
+  "commentary": {
+    "narrative_context": "The Wikipedia Notability Guidelines represent a constitutive choice about how an open knowledge commons maintains quality without total editorial review. The deletionist reading interprets notability as a necessary epistemic filter: articles about non-verifiable subjects, vanity topics, or insufficiently-established concepts threaten the encyclopedia's credibility and consume volunteer editorial resources. From this perspective, deletion is coordination, not extraction — it solves the collective action problem of distinguishing valuable knowledge from noise. However, the same structural mechanism appears differently from other vantage points. Marginalized knowledge holders experience notability thresholds as systematic exclusion. Local history, non-Western scholarship, indigenous knowledge, and other epistemically valuable but locally-sourced material fall below thresholds calibrated to mainstream academic publishing. The deletionist reading naturalizes this exclusion as epistemic necessity; the inclusionist reading reframes it as institutional choice. The constraint instantiates a fundamental tension in platform governance: quality control requires boundaries, but boundaries embed power asymmetries. This JSON models the deletionist reading only — the reading that sees notability as coordination mechanism preserving commons integrity. The sibling readings (inclusionist: lower thresholds, expanded knowledge types; deliberative: participatory threshold-setting) are separate constraints with different ε values and different beneficiary/victim structures.",
+    "key_agents": [
+      "Encyclopedia Readership: Primary beneficiary (powerful/mobile) — benefits from quality curation without bearing moderation burden; can exit to alternative encyclopedias but values Wikipedia's coordination",
+      "Knowledge Commons Integrity: Primary beneficiary (abstract/N/A) — preserved by preventing vandalism, spam, original research; no agent but represented in editorial community's goals",
+      "Marginalized Subject Contributors: Secondary victim (moderate/constrained) — face systematic barriers from reliable-source bias, language bias, non-Western knowledge penalties; constrained because Wikipedia's reach is valuable but exclusion costly",
+      "Local and Niche Knowledge Holders: Tertiary victim (powerless/trapped) — fall below notability thresholds; trapped because no alternative platform reaches comparable audiences for local knowledge",
+      "Wikipedia Editorial Community: Institutional beneficiary (institutional/arbitrage) — experiences notability as coordination mechanism enabling resource allocation and moderation decisions; can arbitrage across deletion categories",
+      "Notability Guidelines as Institutional Artifact: Piton phenomenon (institutional/arbitrage) — maintains through institutional inertia; deletion culture, training practices, Wikimedia awards sustain guidelines despite declining functional value",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing contingent governance choice as epistemic necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.32): Low-to-moderate. The deletionist reading emphasizes notability's coordination function — it solves the genuine problem of maintaining encyclopedia quality without unlimited editorial review. However, it is not zero extraction because the filter does exclude legitimate knowledge from the global platform. The moderate value reflects that the constraint does both: enables coordination and creates barriers. The measurement trend (0.28 → 0.30 → 0.32) shows slow accumulation of extraction pressure as Wikipedia ages and deletion becomes more systematized. Suppression (0.38): Moderate. Barriers include reliable-source requirements (which disfavor non-Western sources), English-language bias, verification thresholds (which disadvantage emerging topics and non-academic knowledge), and deletion-culture enforcement. These are real but not total — alternatives exist (Wikimedia Commons, sister projects, external documentation), and some marginalized knowledge does survive notability scrutiny. Theater ratio (0.45): Moderate-low. Lower than the quality-maintenance narrative might suggest because some substantive editorial judgment drives notability decisions. However, theater is present: 'general audience interest,' 'encyclopedic value,' and verifiability standards are interpreted flexibly and reflect editorial consensus rather than objective criteria. The rising trend (0.30 → 0.38 → 0.45) indicates increasing performativity as deletion discussions accumulate and editors apply precedent rather than re-evaluating criteria. Theater rises because enforcement becomes ritualized — the decision framework persists through institutional practice even as its functional rationale evolves.",
+    "perspectival_gap": "The deletionist reading produces a narrow perspectival gap because the coordinating parties (readership, editorial community) experience low extraction, while the excluded parties (marginalized subjects, local knowledge) are positioned outside the coordination mechanism. The gap is not between negotiating parties — it is between those who benefit from coordination and those excluded from it. The piton perspective reveals that notability enforcement is becoming increasingly performative: deletion discussions invoke criteria but often route on aesthetic/canonical judgments. The mountain perspective risks naturalizing editorial choice as epistemic necessity. The tangled-rope perspective (marginalized subjects) shows the constraint is not pure coordination — it extracts value (knowledge exclusion) alongside coordinating (quality maintenance). The deletionist reading assumes the snare perspective (local knowledge holders) represents invalid entries correctly excluded; the inclusionist reading would argue the snare is a systematic injustice.",
+    "directionality_logic": "Directionality (d) values derive from each agent's relationship to the extraction/coordination flow. Readership (beneficiary, mobile exit) has low d — they benefit from quality curation and can exit to alternatives but choose Wikipedia. Editorial community (beneficiary, arbitrage exit) has very low d — they experience notability as enabling their coordinating function. Marginalized subjects (victim, constrained exit) have moderate-high d — they bear extraction costs through systematic barriers but have structural mobility (could publish elsewhere) at significant cost. Local knowledge holders (victim, trapped exit) have very high d — they bear full extraction cost and face insurmountable barriers to alternative platforms with comparable reach. The canonical fallback (moderate power → d≈0.65) was overridden by beneficiary/victim declarations: beneficiaries are explicitly identified, victims are explicitly identified, and their exit options are specified. The directionality chain computes: beneficiary + mobile → low d; victim + constrained → moderate-high d; victim + trapped → very high d.",
+    "kernel_context": "This constraint instantiates the DELETIONIST READING of the contested kernel NOTABILITY_GUIDELINES. The kernel is the formalized but ambiguous commitment: Wikipedia notability standards (defined in GNG and other guidelines) that adjudicate what knowledge is encyclopedic. The reading you are generating treats notability as a necessary coordination mechanism preventing commons degradation — the quality filter that distinguishes signal from noise. The sibling readings are: (a) INCLUSIONIST_READING — interprets notability thresholds as unnecessarily restrictive, advocates lower boundaries and expanded knowledge types (separate constraint with higher ε, different beneficiary/victim structure); (b) DELIBERATIVE_READING — questions the kernel itself, proposing participatory/community-driven threshold-setting rather than top-down editorial judgment (separate constraint with different authority_grounding). The deletionist reading COEXISTS_WITH both siblings: different parties in the Wikipedia community hold each reading simultaneously. The disagreement is neither logically foreclosed nor fully commensurate — it is a live institutional dispute grounded in different weighting of coordination vs inclusion values.",
+    "mandatrophy_analysis": "The deletionist reading resolves the potential mandatrophy by declaring notability as pure coordination (Rope in the primary perspectives). The extractiveness value (0.32) is below the snare threshold (0.46), which forestalls the mandatrophy anxiety: 'Is this coordination or extraction?' The constraint is claimed as Rope because it genuinely coordinates (readership benefits, editorial management enabled). However, the marginal perspectives reveal real extraction: the snare perspective (local knowledge) and tangled-rope perspective (marginalized subjects) show that the coordination mechanism excludes knowledge systematically. The mandatrophy is resolved by acknowledging multiple truths: notability IS coordination from the beneficiary perspective, AND notability IS extraction from the victim perspective. The constraint is genuinely Rope for those it benefits; Snare for those it excludes. The deletionist reading emphasizes the coordination function; the inclusionist reading would emphasize the extraction function. Both are structurally correct — they describe the same mechanism from different positions."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "notability_guidelines__inclusionist_reading",
+      "notability_guidelines__deliberative_reading",
+      "reliable_sources_bias_toward_mainstream",
+      "wikipedia_deletion_as_epistemic_violence"
+    ],
+    "dual_formulation_note": "The notability guidelines kernel decomposes into three structurally distinct constraint stories with different ε values: (1) deletionist_reading (ε=0.32, Rope) — notability as coordination; (2) inclusionist_reading (ε≈0.55, Tangled Rope, separate file) — notability as systematic exclusion of marginalized knowledge; (3) deliberative_reading (ε≈0.40, Scaffold, separate file) — notability with participatory threshold-setting. Each reading instantiates a different structural interpretation of the same governance kernel. The deletionist reading emphasizes coordination; the inclusionist reading emphasizes extraction; the deliberative reading proposes sunset/reform. All three are live readings held by different factions in Wikipedia governance. The trio forms a constraint family: inclusion of beneficiaries/victims in deletionist reading enables FSM detection if the analysis reveals the coordination function is weaker than claimed."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reference_frame": "signal_preservation_through_curation",
+    "drift_state": {
+      "moment": "contemporary_wikipedia_maturity",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "notability_guidelines__inclusionist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "notability_guidelines__deliberative_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "notability_as_epistemic_necessity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "marginalization_is_justified_exclusion",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate",
+    "hypothesis": "rope",
+    "downstream_of": [
+      "platform_knowledge_infrastructure"
+    ]
+  }
+}

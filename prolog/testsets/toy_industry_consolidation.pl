@@ -1,0 +1,303 @@
+% ============================================================================
+% CONSTRAINT STORY: toy_industry_consolidation
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_toy_industry_consolidation, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: toy_industry_consolidation
+ *   human_readable: Toy Industry Consolidation and Market Gatekeeping
+ *   domain: economic/antitrust/consumer_markets
+ *
+ * SUMMARY:
+ *   The toy industry consolidation represents a three-tier concentration
+ *   process: retailer consolidation (Walmart, Target, Amazon capturing 60%+
+ *   of toy retail), manufacturer consolidation (Mattel-Hasbro dominance,
+ *   private equity roll-ups), and supply chain integration (outsourced
+ *   manufacturing concentrated in 3-5 major Asian suppliers per category).
+ *   This constraint exhibits genuine Tangled Rope structure: consolidated
+ *   logistics reduces waste, enables just-in-time inventory, and improves
+ *   product availability at scale. Simultaneously, the same consolidation
+ *   forecloses market entry for independent toy makers, compresses margins
+ *   for small retailers, and reduces the diversity of available products. The
+ *   extractiveness value (0.58) reflects that asymmetric surplus capture
+ *   (benefiting consolidated actors) outweighs but does not eliminate
+ *   coordination gains. Suppression (0.62) captures the high barriers to
+ *   entry (capital requirements, logistics infrastructure, retail
+ *   gatekeeping, shelf space scarcity) that prevent alternative supply chains
+ *   from forming. Theater ratio (0.38, relatively low) indicates the
+ *   constraint is functionally operational — the coordination gains are real,
+ *   not purely performative. The trajectory from 1995 (ε=0.25,
+ *   suppression=0.35) to 2025 (ε=0.58, suppression=0.62) shows extraction
+ *   accumulation: consolidation began as a genuine coordination mechanism and
+ *   progressively shifted toward gatekeeping and margin compression.
+ *
+ * KEY AGENTS:
+ *   - Consolidated Retailers (Walmart, Target, Amazon): Institutional beneficiaries (institutional/arbitrage) — centralized purchasing, supply chain control, margin preservation through scale and negotiating power
+ *   - Consolidated Manufacturers (Mattel, Hasbro): Institutional mixed actors (institutional/constrained) — benefit from scale R&D and manufacturing efficiency but constrained by retailer power and margin pressure
+ *   - Independent Toy Makers (designers, small manufacturers): Primary victims (powerless/trapped) — cannot access retail channels without intermediaries; face margin compression; no viable exit within traditional toy industry
+ *   - Independent Retailers (specialty stores, small chains): Secondary victims (moderate/constrained) — constrained by manufacturer consolidation and retailer power imbalance; some exit via niche positioning
+ *   - Toy Industry Diversity: Victim collective (organized/constrained) — product diversity, innovation pathways, retail ecosystem diversity all compressed by gatekeeping; some agency through alternative channels
+ *   - Consumers: Mixed observers (analytical/mobile) — benefit from supply chain efficiency and price stability; constrained by reduced product diversity and retailer shelf-space biases
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(toy_industry_consolidation, 0.58).
+domain_priors:suppression_score(toy_industry_consolidation, 0.62).
+domain_priors:theater_ratio(toy_industry_consolidation, 0.38).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(toy_industry_consolidation, extractiveness, 0.58).
+narrative_ontology:constraint_metric(toy_industry_consolidation, suppression_requirement, 0.62).
+narrative_ontology:constraint_metric(toy_industry_consolidation, theater_ratio, 0.38).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(toy_industry_consolidation, tangled_rope).
+narrative_ontology:human_readable(toy_industry_consolidation, "Toy Industry Consolidation and Market Gatekeeping").
+narrative_ontology:topic_domain(toy_industry_consolidation, "economic/antitrust/consumer_markets").
+
+domain_priors:requires_active_enforcement(toy_industry_consolidation).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(toy_industry_consolidation, consolidated_retailers).
+narrative_ontology:constraint_beneficiary(toy_industry_consolidation, consolidated_manufacturers).
+narrative_ontology:constraint_beneficiary(toy_industry_consolidation, large_distributors).
+narrative_ontology:constraint_victim(toy_industry_consolidation, independent_toy_makers).
+narrative_ontology:constraint_victim(toy_industry_consolidation, small_retailers).
+narrative_ontology:constraint_victim(toy_industry_consolidation, toy_industry_diversity).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: INDEPENDENT TOY MAKER (SNARE) — Trapped by channel closure and retail gatekeeping. Cannot access shelf space without intermediaries who extract 50%+ margins. Cannot bypass gatekeepers due to capital requirements and logistics infrastructure. No exit path within the toy industry itself. Maximum experienced extraction.
+constraint_indexing:constraint_classification(toy_industry_consolidation, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(national))).
+
+% PERSPECTIVE 2: INDEPENDENT RETAILER (SNARE) — Constrained by manufacturer consolidation and supplier power asymmetry. Must buy from consolidated manufacturers at wholesale rates determined unilaterally. Cannot negotiate favorable terms. Shelf space allocation driven by manufacturer relationships, not merit. High suppression but some exit through niche positioning (specialty stores, online channels).
+constraint_indexing:constraint_classification(toy_industry_consolidation, snare,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: CONSOLIDATED RETAILER (ROPE) — Walmart, Target, Amazon experience the consolidation as pure coordination: centralized purchasing reduces transaction costs, scale enables just-in-time inventory, standardized logistics reduce waste. These are genuine coordination benefits with no perceived extraction. The retailer has maximum arbitrage — can switch suppliers, can reshape entire categories through buying power.
+constraint_indexing:constraint_classification(toy_industry_consolidation, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: CONSOLIDATED MANUFACTURER (TANGLED ROPE) — Experiences both genuine coordination (scale efficiency, R&D investment capacity, supply chain control) AND asymmetric extraction (margin pressure from retailers, supply chain dependency on consolidated manufacturers of components, barrier to entry for smaller competitors). Beneficiary relative to smaller makers, but constrained relative to retailers. Chi moderately high due to moderate power level.
+constraint_indexing:constraint_classification(toy_industry_consolidation, tangled_rope,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: TOY INDUSTRY ECOSYSTEM (TANGLED ROPE) — The broader ecosystem (designers, small manufacturers, retailers, consumer diversity) both benefits from scale coordination and suffers from channel closure. Design innovation persists but within consolidated brand frameworks. Retail diversity has collapsed. Supply chain efficiency improved while product diversity declined. Organized agents (industry associations, advocacy groups) see constraint as mixed — real coordination gains alongside real extraction. Significant agency and some exit through alternative channels (direct-to-consumer, crowdfunding, niche platforms).
+constraint_indexing:constraint_classification(toy_industry_consolidation, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a market dynamics perspective, consolidation may appear as an inherent structural outcome: scale advantages in manufacturing and logistics create natural incentives toward consolidation. Retail power concentration appears inevitable given inventory costs and distribution economics. However, this perspective risks naturalizing what is a contingent outcome of specific policy choices (merger approval thresholds, tariff structures, intellectual property scope) and competitive dynamics that could be governed differently. Engine will classify as false summit.
+constraint_indexing:constraint_classification(toy_industry_consolidation, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(toy_industry_consolidation_tests).
+
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(toy_industry_consolidation, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(toy_industry_consolidation, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(toy_industry_consolidation, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+:- end_tests(toy_industry_consolidation_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness (0.58): Moderate-high. The consolidation produces genuine supply chain coordination (inventory efficiency, logistics optimization, transaction cost reduction). However, consolidated retailers use purchasing power to extract asymmetric margins, manufacturers face margin compression from retailers while extracting from smaller suppliers, and independent makers face channel closure. The net effect is that coordination gains are captured disproportionately by consolidated actors at the top of the supply chain. The value reflects real extraction without absolute gatekeeping (alternative channels exist at low scale, direct-to-consumer is viable but marginal). Suppression (0.62): Moderate-high. Entry barriers are substantial: manufacturing capital requirements (>$500K minimum for viable factory), logistics infrastructure, retail gatekeeping (shelf space controlled by 3-4 major retailers), wholesale margin compression (40%+ margin loss vs. 20% in 1995). However, suppression is not absolute — Kickstarter, Etsy, direct-to-consumer channels exist; some independent makers succeed. Suppression primarily affects traditional retail entry, not market entry itself. Theater ratio (0.38): Low. The coordination gains are real and measurable — supply chain efficiency is documented, inventory waste reduced, logistics optimized. The constraint is not primarily theatrical (unlike degraded piton-class constraints). Coordination is genuinely functional; extraction is embedded in how coordination benefits are distributed, not in pretending coordination occurs.
+ *
+ * PERSPECTIVAL GAP:
+ *   The consolidated retailer (Rope) perceives pure coordination — centralized purchasing is solving a real problem (transaction costs, inventory management). The independent maker (Snare) perceives pure extraction — gatekeeping eliminates viable business models. The consolidated manufacturer (Tangled Rope) perceives mixed coordination and extraction — they benefit from scale efficiency relative to smaller makers but suffer margin compression from retailers. The industry ecosystem (Tangled Rope) perceives the same mixed structure at the collective level — genuine efficiency alongside reduced diversity. The analytical observer (risking Mountain) perceives an inherent economic law — scale consolidation is inevitable given inventory costs and logistics constraints — but this perspective naturalizes what is a contingent policy outcome (merger approval thresholds, tariff structures, logistics infrastructure investment) that could have been governed differently. The perspectival gap reveals that the question 'Is consolidation coordination or extraction?' has no universal answer — it depends entirely on structural position within the supply chain.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Directionality values (d) distribute along the supply chain: consolidated retailers derive d ≈ 0.10 (strong beneficiaries with arbitrage options, negative f(d)); consolidated manufacturers derive d ≈ 0.45 (mixed — beneficiaries relative to smaller makers, but constrained relative to retailers); independent makers derive d ≈ 0.90 (strong targets with trapped exit, high f(d)); independent retailers derive d ≈ 0.70 (targets with constrained but viable exit). The engine computes effective extractiveness (χ) from these d values, the beneficiary/victim structure, and scope modifiers. National scope (σ=1.0) keeps χ within Tangled Rope bounds without amplification. The gap between beneficiary and victim directionality is substantial — the constraint extracts significantly more from independent makers than it benefits consolidated retailers — producing the perspectival gap where one group sees Rope and another sees Snare.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   RESOLUTION: The mandatrophy is resolved by recognizing that 'toy industry consolidation' conflates multiple structural stages. Stage 1 (1995-2005): Consolidation as genuine coordination — eliminating duplicate supply chains, reducing transaction costs, enabling scale investment. ε ≈ 0.25, properly classified as Rope/Tangled Rope from most perspectives. Stage 2 (2005-2015): Consolidation + margin compression — retailers/manufacturers using consolidation leverage to compress supplier margins. ε ≈ 0.42, transitioning toward Snare for independent makers. Stage 3 (2015-2025): Consolidation + gatekeeping — shelf space allocation, channel closure, margin floors imposed by retailers. ε ≈ 0.58, Snare for independent makers, Tangled Rope at ecosystem level. The upward trajectory is not a measurement artifact but a genuine accumulation of extraction: consolidation's original coordination function persists, but extraction mechanisms layer on top. The constraint remains Tangled Rope (beneficiaries exist, coordination function real) rather than degrading to Snare (because ecosystem still coordinates, alternative channels exist) because the coordination and extraction mechanisms are genuinely interdependent — the consolidation structure that enables coordination also enables gatekeeping. Disentangling them would require policy intervention (antitrust action on shelf space, transparency requirements, alternative channel protection) that has not yet occurred.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    coordination_extraction_decomposition,
+    'How much of the measured extractiveness (0.58) is genuine coordination cost vs. asymmetric surplus capture by consolidated actors?',
+    'Cost accounting of supply chain efficiency gains (manufacturing, logistics, inventory) vs. margin compression data and markup changes across supply chain tiers from 1995 to present. Compare efficiency gains to price changes at consumer level and at producer level.',
+    'If coordination >> extraction: reclassify toward Rope (ε reduced to 0.35). If extraction >> coordination: reclassify toward Snare (ε increased to 0.72). Current Tangled Rope (0.58) assumes rough balance with slight extraction advantage.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(coordination_extraction_decomposition, empirical, 'Proportion of measured extractiveness attributable to coordination cost vs. asymmetric surplus capture').
+
+omega_variable(
+    supply_chain_efficiency_magnitude,
+    'What fraction of toy industry supply chain cost reduction since 1995 reflects genuine efficiency vs. labor cost arbitrage and supplier margin compression?',
+    'Component-level cost analysis: supplier costs (wages, overhead, profit margins) vs. logistics costs vs. retail markup changes. Cross-tabulation of production location changes (China/Vietnam shift) with supply chain efficiency metrics. Wage and margin data for suppliers before/after consolidation.',
+    'If efficiency is predominantly real cost reduction: the coordination story holds. If primarily labor arbitrage and suppressed supplier margins: the extraction mechanism is more severe (suppression ≥ 0.70). Current suppression (0.62) assumes mixed — some real efficiency, significant margin compression.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(supply_chain_efficiency_magnitude, empirical, 'Whether supply chain cost reductions reflect efficiency or labor/supplier arbitrage').
+
+omega_variable(
+    market_contestability_via_alternatives,
+    'Do alternative distribution channels (direct-to-consumer, crowdfunding, international retailers, niche platforms) enable real market entry for independent toy makers, or are they genuinely marginal?',
+    'Market share data for toys sold via alternative channels (Kickstarter, Etsy, Amazon Marketplace, direct websites) as % of total toy sales. Revenue data for independent makers using alternative channels. Comparison of success rates and profitability for independent makers with/without retail gatekeeping access.',
+    'If alternatives are viable (>>5% of market, profitable independent makers): exit_options for independent makers upgrade from ''trapped'' to ''constrained'' or ''mobile'', suppression decreases (≤0.45), Snare perspectives reclassify as Tangled Rope. If alternatives are marginal: gatekeeping is absolute, suppression confirmed ≥0.60.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(market_contestability_via_alternatives, empirical, 'Viability of alternative distribution channels for independent toy makers').
+
+omega_variable(
+    merger_integration_extraction_timing,
+    'Did the Mattel-Hasbro merger (or attempted merger) and private equity consolidation increase or decrease extractiveness for independent makers and retailers?',
+    'Time-series analysis: margin compression, retail shelf space allocation, manufacturer purchasing power, and entry barriers measured at 5-year intervals 1995-2025. Comparison of periods pre/post major M&A activity (Hasbro buyouts 2000s-2010s, Mattel mega-deals 2010s-2020s, PE acquisitions). Retail channel concentration metrics before/after specific merger announcements.',
+    'If extraction increased post-merger: confirms consolidation as primary driver of current constraint (extractiveness may be higher, 0.65+). If extraction was already high pre-merger: consolidation accelerated but did not create the constraint (current ε = 0.58 appropriate). If extraction mixed: some mergers worsened gatekeeping, others improved logistics.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(merger_integration_extraction_timing, empirical, 'Impact of major M&A activity on extractiveness trajectories').
+
+omega_variable(
+    consumer_welfare_vs_producer_surplus,
+    'Does consolidation''s supply chain efficiency translate to lower consumer toy prices, or is the efficiency captured entirely by retailers and manufacturers as margin expansion?',
+    'Real price analysis (inflation-adjusted toy prices, 1995-2025) vs. quality-adjusted price data. Comparison of toy price inflation to general CPI and retail inflation. Retailer and manufacturer margin data (gross margin % of revenue). Retail price variance across Walmart/Target vs. independent retailers for comparable products.',
+    'If prices decreased: consolidation provides consumer benefit offsetting producer-side extraction (Rope/Tangled Rope interpretation strengthened). If prices flat or increased despite efficiency: efficiency entirely captured by consolidators (Snare interpretation strengthened, extraction confirmed ≥0.65).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(consumer_welfare_vs_producer_surplus, empirical, 'Whether supply chain efficiency benefits consumers or consolidators').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(toy_industry_consolidation, 1995, 2025).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(toy_consol_tr_t0, toy_industry_consolidation, theater_ratio, 0, 0.28).
+narrative_ontology:measurement(toy_consol_tr_t7, toy_industry_consolidation, theater_ratio, 7, 0.33).
+narrative_ontology:measurement(toy_consol_tr_t14, toy_industry_consolidation, theater_ratio, 14, 0.38).
+
+% Extraction over time
+narrative_ontology:measurement(toy_consol_be_t0, toy_industry_consolidation, base_extractiveness, 0, 0.25).
+narrative_ontology:measurement(toy_consol_be_t7, toy_industry_consolidation, base_extractiveness, 7, 0.42).
+narrative_ontology:measurement(toy_consol_be_t14, toy_industry_consolidation, base_extractiveness, 14, 0.58).
+
+% Suppression requirement over time
+narrative_ontology:measurement(toy_consol_su_t0, toy_industry_consolidation, suppression_requirement, 0, 0.35).
+narrative_ontology:measurement(toy_consol_su_t7, toy_industry_consolidation, suppression_requirement, 7, 0.48).
+narrative_ontology:measurement(toy_consol_su_t14, toy_industry_consolidation, suppression_requirement, 14, 0.62).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(toy_industry_consolidation, resource_allocation).
+narrative_ontology:affects_constraint(toy_industry_consolidation, retail_channel_closure).
+narrative_ontology:affects_constraint(toy_industry_consolidation, supply_chain_margin_compression).
+narrative_ontology:affects_constraint(toy_industry_consolidation, product_diversity_reduction).
+
+% DUAL FORMULATION NOTE:
+% Toy industry consolidation can be decomposed into three structurally distinct constraints: (1) Retail channel consolidation (ε≈0.55, retailer power asymmetry) — affects shelf space allocation and distribution; (2) Manufacturing consolidation (ε≈0.48, manufacturer scale efficiency with margin pressure) — affects production capacity and R&D investment; (3) Supply chain integration (ε≈0.62, supplier dependency and logistics lock-in) — affects sourcing costs and product flexibility. The parent story (toy_industry_consolidation) models the three as interdependent. Upstream constraints should model the causal chain: supply chain integration → manufacturing consolidation → retail channel consolidation. Each downstream constraint is influenced by the accumulation of upstream constraints.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(toy_industry_consolidation, institutional, 0.42).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

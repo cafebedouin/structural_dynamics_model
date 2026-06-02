@@ -1,0 +1,260 @@
+{
+  "header": {
+    "constraint_id": "gpl_derivative_work_trigger__narrow_linking_permissive_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gpl_narrow",
+    "story_uid": "8e20bfb3-6707-448d-9b13-9f9c9a21ffcf",
+    "created_at": "2026-02-26T14:32:18Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "GPL Derivative Work Trigger: Narrow Linking Permissive Reading",
+    "topic_domain": "software_licensing/copyright_law/open_source_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "proprietary_software_vendors",
+      "closed_source_integrators"
+    ],
+    "victims": [
+      "gpl_copyleft_goal",
+      "end_users_source_visibility"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "End User (Proprietary Linking Wall)",
+      "comment": "PERSPECTIVE 1: END USER TRAPPED BY PROPRIETARY WALL (SNARE) — User receives compiled binary with linked proprietary modules; GPL source code is available for the GPL component only, but the proprietary component's source is withheld. User cannot obtain or modify the full working system. Trapped: cannot exit the proprietary-linked system without abandoning the functionality. High extraction: loses source-code transparency guarantee that GPL promises. Maximum suppression: no legal mechanism forces the proprietary vendor to license or disclose."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "GPL Community Developer (License Maintainer)",
+      "comment": "PERSPECTIVE 2: GPL COMMUNITY DEVELOPER / MAINTAINER (TANGLED ROPE) — GPL maintainers benefit from broad adoption and ecosystem integration (coordination function: GPL code is more useful when linked into larger systems). But the linking boundary allows proprietary extraction: vendors can extract value from GPL code's functionality while withholding reciprocal source. Constrained exit: a maintainer can fork or change license, but faces community backlash and ecosystem fragmentation. Moderate extraction: the coordination benefit is real (broader use), but asymmetric (benefits flow to proprietary downstream more than upstream GPL author)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Proprietary Software Vendor (Narrow Reading Beneficiary)",
+      "comment": "PERSPECTIVE 3: PROPRIETARY VENDOR (ROPE) — Under the narrow linking reading, vendor can integrate GPL library via dynamic linking without triggering copyleft obligations. Vendor experiences the constraint as pure coordination: GPL library solves technical problems (cryptography, compression, UI framework); linking is the mechanism that makes integration work. Arbitrage: vendor can choose proprietary or GPL dependencies based on licensing economics. Net beneficiary: extracts GPL functionality without reciprocal source obligation. Effective extraction is low from vendor perspective because the licensing boundary is treated as natural and expected."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "License Interpretation Governance (FSF, Courts, SFLC)",
+      "comment": "PERSPECTIVE 4: LICENSE INTERPRETATION GOVERNANCE (PITON) — Institutions claiming to enforce GPL intent (FSF, Software Freedom Law Center, courts) face degraded authority under the narrow reading. Their formal position (derivative works include all linked modules) is contradicted by the narrow reading (only modifications to GPL code trigger obligations). Theater: governance structures issue interpretive guidance, legal opinions, enforcement threats, but the narrow reading's legal plausibility means enforcement is uncertain and costly. The institutional position persists through authority lineage (GPLv2/v3 text) but its operative force has atrophied as the narrow reading proliferates."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Strong Copyleft / Network Commons Movement",
+      "comment": "PERSPECTIVE 5: STRONG COPYLEFT / NETWORK COMMONS MOVEMENT (SCAFFOLD) — Organized agents (Software Freedom Law Center, AGPL advocates, commons-based peer production communities) see the narrow reading as a temporary coordination failure with a structural sunset. AGPL (Affero GPL) and stricter licensing models deliberately foreclose the narrow-reading strategy by defining 'network interaction' as derivative work trigger. This perspective treats GPLv2/v3's linking ambiguity as a resolved problem: stronger licenses with explicit functional-modification boundaries are establishing a new norm. Sunset: as GPL codebases age and AGPL / service-side GPL norms mature, the linking loophole becomes recognized as a vulnerability rather than a feature. Mobile exit: communities can migrate to explicit copyleft-network frameworks that close this gap."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Kernel Ambiguity)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE — KERNEL AMBIGUITY) — From a civilizational/global perspective, the narrow reading is a legitimate textual interpretation of GPLv2/v3's operative language ('derivative works'). The text is ambiguous between narrow (code-level modifications to copyrighted GPL material) and broad (any linked system that includes GPL code). Both readings are defensible under standard copyright law principles. The constraint exhibits tangled rope structure: GPL's coordinating function (sharing improvements) coexists with extraction asymmetry (narrow reading allows proprietary extraction of the coordination benefit). The analytical position is identity-locked in the committer framework: acknowledging that both readings are live means the analytical observer cannot simply declare one interpretation correct without accepting a normative stance on what GPL ought to mean."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "dynamic_vs_static_linking_boundary",
+      "question": "Does the GPL's 'derivative work' trigger depend on the linking mechanism (static vs dynamic), or on functional integration regardless of linking mechanism?",
+      "resolution_mechanism": "Analysis of GPLv2/v3 operative language, copyright case law on integration tests (merger doctrine, combined work doctrine), and license author intent statements. Empirical: how do courts and FSF resolve this in litigation?",
+      "impact": "If mechanism-dependent: narrow reading is legally defensible, and dynamic linking is a legitimate GPL-compatible interface. If function-dependent: broad reading prevails, and any functional integration triggers copyleft. This is the core axis of the kernel ambiguity.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether derivative work trigger depends on linking mechanism or functional integration"
+    },
+    {
+      "id": "fsf_intent_vs_textual_meaning",
+      "question": "Does FSF's stated intent (all linked modules are derivative works / copyleft applies to the whole system) override the narrow reading's textual defensibility (only modifications to copyrighted code trigger obligations)?",
+      "resolution_mechanism": "License drafting history (GPL Preamble, GPLv3 Rationale), FSF enforcement actions vs court outcomes, longitudinal analysis of FSF position statements and their legal weight in jurisdictions.",
+      "impact": "If intent controls: narrow reading is overridden, FSF governance authority is strengthened, broad reading prevails. If text controls: narrow reading remains defensible even against FSF's stated intent, creating an authority-text gap that the piton perspective captures.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether FSF authorial intent overrides the narrow reading's textual defensibility"
+    },
+    {
+      "id": "network_effects_of_reading_proliferation",
+      "question": "As the narrow reading proliferates in proprietary integrations, does it create strong network effects that entrench the reading (proprietary vendors depend on the narrow boundary, making reversal costly), or does the broad reading's ecosystem resilience withstand the fragmentation?",
+      "resolution_mechanism": "Empirical: count of major proprietary projects using GPL dependencies under narrow-reading assumptions. Analysis of license-switching rates (GPL → Apache 2.0, MIT) by GPL authors responding to narrow-reading extraction. Modeling of ecosystem fragmentation trajectory.",
+      "impact": "If strong network effects entrench narrow reading: the scaffold perspective's sunset is delayed or prevented; broad reading becomes an unrecoverable historical position. If resilient: AGPL / stronger copyleft adoption rate increases, and the narrow reading is isolated to specific use cases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether narrow reading's network effects entrench or the broad reading's ecosystem absorbs fragmentation"
+    },
+    {
+      "id": "committer_reading_kernel_ambiguity",
+      "question": "Is this a genuine kernel ambiguity (both readings are live under the same text), or has one reading foreclosed the other through case law, FSF enforcement success, or author intent recognition?",
+      "resolution_mechanism": "Legal historical analysis: identify the moment (if any) when the narrow reading transitioned from 'possible interpretation' to 'established reading' or vice versa. Empirical corpus of court decisions, FSF enforcement letters, and license author statements.",
+      "impact": "If kernel remains open: both readings coexist, committer frame applies, omega_variable routing is correct. If one reading is foreclosed: the constraint should be reclassified as a single-reading story with the foreclosed reading moved to historical commentary. If closed by FSF governance authority: the piton perspective's degradation is temporary — authority can be recovered through litigation.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether the GPL derivative-work boundary is a genuine open kernel or a foreclosed reading"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "gpl_narrow_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48,
+      "id_override": "gpl_narrow_extract_t5"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52,
+      "id_override": "gpl_narrow_extract_t10"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "gpl_narrow_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55,
+      "id_override": "gpl_narrow_theater_t5"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58,
+      "id_override": "gpl_narrow_theater_t10"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48,
+      "id_override": "gpl_narrow_suppress_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.6,
+      "id_override": "gpl_narrow_suppress_t5"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65,
+      "id_override": "gpl_narrow_suppress_t10"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The GPL derivative-work trigger is a contested boundary in software copyright. The narrow reading instantiated here claims that only modifications to copyrighted GPL code trigger reciprocal licensing obligations; dynamic linking of proprietary modules does not create a derivative work. This reading operates as one interpretation of GPLv2/v3's operative language and creates a licensing wall: proprietary vendors can integrate GPL libraries (libssl, zlib, libc, Qt) without disclosing their own source code. The constraint exhibits tangled rope structure: GPL's coordination function (sharing improvements, building on prior work) is genuine, but the narrow reading allows proprietary extraction of that coordination benefit. End users receive binaries with linked proprietary components whose source remains withheld — they lose the transparency guarantee GPL intends. The measurement trajectory shows extractiveness and suppression rising over the interval (t=0 to t=10) as the narrow reading spreads from legal theory into practice: more vendors rely on it, more proprietary integrations assume the reading is correct, and the enforcement cost for FSF governance structures rises as litigation uncertainty persists.",
+    "key_agents": [
+      "Proprietary Software Vendors: Primary beneficiary (institutional/arbitrage) — integrate GPL libraries without source-sharing obligations under narrow reading",
+      "End Users: Primary victim (powerless/trapped) — receive binaries with proprietary-linked components; source visibility guarantee is not fulfilled",
+      "GPL Community (Maintainers/Authors): Secondary victim (moderate/constrained) — lose coordination benefit reciprocity; see their work integrated into closed systems",
+      "FSF / License Governance (SFLC, Courts): Institutional interpreter (institutional/constrained) — maintain formal authority to interpret GPL but face erosion as narrow reading proliferates",
+      "AGPL / Strong Copyleft Movement: Organized counter-position (organized/mobile) — foreclose the narrow reading by explicitly defining network interaction and functional integration as derivative-work triggers",
+      "Analytical Observer: Structural analyst (analytical/analytical) — acknowledges both readings as textually defensible, revealing the kernel ambiguity"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The narrow reading extracts substantial value for proprietary vendors — they gain access to tested GPL functionality (cryptographic libraries, compression, standard C library) without reciprocal obligation. The extraction is not maximal because GPL's coordination function is real: GPL libraries do solve legitimate technical problems, and the narrow reading does preserve the GPL ecosystem (vendors do integrate GPL code rather than reject it). The extraction value rises from t=0 (0.35, when the narrow reading was primarily theoretical) to t=10 (0.52, when it is normalized practice across major proprietary software projects). Suppression (0.65): High. The narrow reading suppresses two mechanisms that would otherwise constrain proprietary extraction: (1) the legal/contractual mechanism (FSF enforcement threat, copyleft obligations), rendered ineffective by the reading's textual defensibility; (2) the social/reputational mechanism (community pressure on proprietary integrators), partially suppressed by the reading's apparent legitimacy under copyright law. The suppression rises as the reading gains acceptance and vendors normalize its use. Theater ratio (0.58): Moderate-high. FSF's governance structures (interpretive statements, enforcement letters, license text revisions) are partially performative under this reading — FSF claims the narrow reading is wrong, but lacks clear legal precedent and enforcement success to make the claim stick. The theatrical element is the gap between FSF's formal position (derivative works include all linked modules) and the reading's persistent legal viability. Theater rises as more vendors adopt the narrow reading despite FSF's stated intent, rendering FSF's governance noise rather than binding authority.",
+    "perspectival_gap": "The constraint manifests as six distinct types depending on the observer's structural position. Proprietary vendors experience pure coordination (Rope) — GPL libraries solve problems, linking is the mechanism. FSF governance structures experience degraded authority (Piton) — their interpretive position is undermined by the reading's legal viability. GPL community members experience mixed extraction and coordination (Tangled Rope) — they benefit from adoption but lose reciprocal obligation. End users experience pure extraction (Snare) — they are trapped in the proprietary-linked system with no source visibility. The strong copyleft movement experiences a solvable coordination problem (Scaffold) — AGPL and stricter copyleft models foreclose the narrow reading and establish a new norm. The analytical observer experiences the genuine kernel ambiguity (Tangled Rope at analytical scope) — acknowledging that both readings are defensible from the text reveals that GPL's derivative-work boundary is not settled, and that the narrow reading extracts value precisely because the text supports it.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from the structural position: proprietary vendors are beneficiaries with arbitrage options (d ≈ 0.10, low extraction), GPL maintainers are secondary victims with constrained options (d ≈ 0.55, moderate extraction), end users are victims with trapped options (d ≈ 0.90, high extraction), FSF governance is a constrained institutional actor caught between authority claim and reading defensibility (d ≈ 0.60), strong copyleft movement has mobile/organized options to foreclose the reading (d ≈ 0.40, lower extraction), analytical observer has analytical position (d ≈ 0.72, analytical standard). These d values feed the sigmoid f(d) to compute effective extractiveness chi for each perspective. The vendor perspective's low chi (rope classification) reflects that from their position, the licensing mechanism is not experienced as extraction but as normal coordination. The end-user perspective's high chi (snare classification) reflects that from their position, the linking mechanism that the vendor treats as normal is experienced as entrapment.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel gpl_derivative_work_trigger. The kernel is the GPLv2/v3 text's operative language defining when copyleft obligations apply: 'derivative works' or 'works based on' GPL code. This reading (narrow_linking_permissive_reading) instantiates the interpretation: only modifications to the copyrighted GPL material trigger copyleft; dynamic linking of proprietary modules does not create a derivative work. The sibling readings are: (1) broad_copyleft_reading — any linked system that includes GPL code is a derivative work subject to copyleft; (2) interface_boundary_reading — the boundary depends on API/ABI stability, not linking mechanism. Each reading instantiates a different constraint with different beneficiaries, victims, and extractiveness profiles. This reading produces a tangled rope because it preserves GPL's coordination function (libraries are integrated, improvements can be shared) while creating an extraction pathway (proprietary vendors benefit without reciprocal obligation). The broad reading would produce a snare (no loophole, vendors cannot extract without sharing source). The interface reading produces a rope or piton depending on how API boundaries are legally defined.",
+    "mandatrophy_analysis": "The narrow reading resolves mandatrophy by showing that GPL's coordination function is real but the reading enables asymmetric extraction. The constraint is NOT pure coordination (Rope) because proprietary extraction is the operative mechanism — vendors can link without sharing source. The constraint is NOT pure extraction (Snare) because GPL libraries do genuinely solve problems and are voluntarily integrated. The tangled rope classification captures both: the coordination function (GPL code solves technical problems) coexists with extraction asymmetry (narrow reading allows proprietary vendors to benefit without reciprocal obligation). The mandate the narrow reading satisfies is proprietary software vendors' legal interest in integrating GPL functionality without source-sharing cost. The mandate that opposes it is GPL authors' interest in establishing copyleft reciprocity — software freedom through obligatory source sharing. The mandatrophy is not resolved by choosing a single type but by acknowledging that the constraint creates a structural conflict between two incompatible mandates, and that the narrow reading privileges one mandate over the other."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
+  },
+  "network": {
+    "affects_constraints": [
+      "gpl_derivative_work_trigger__broad_copyleft_reading",
+      "gpl_derivative_work_trigger__interface_boundary_reading",
+      "proprietary_linking_wall",
+      "software_license_capture"
+    ],
+    "dual_formulation_note": "The GPL derivative-work kernel decomposes into three constraint stories, one per reading. This story (narrow_linking_permissive_reading) has ε=0.52 (tangled rope); the broad_copyleft_reading has ε=0.32 (snare from proprietary perspective, rope from GPL perspective) — lower extraction because the broad reading forecloses the vendor benefit; the interface_boundary_reading has ε≈0.45 (contested boundary, high theater). All three are linked via the common kernel. Each story's ε differs because the reading changes who benefits and who bears extraction cost. The narrow reading maximizes vendor benefit, so it has the highest ε."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.6
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "broad_copyleft_derivative_work_boundary",
+    "drift_state": {
+      "moment": "contemporary_narrow_reading_acceptance",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "gpl_derivative_work_trigger__broad_copyleft_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "gpl_derivative_work_trigger__interface_boundary_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "linking_mechanism_exhausts_derivative_work_determination",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "copyleft_reciprocity_applies_only_to_direct_modifications",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "gpl_derivative_work_trigger"
+    ]
+  }
+}

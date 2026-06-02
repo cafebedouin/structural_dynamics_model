@@ -1,0 +1,233 @@
+{
+  "header": {
+    "constraint_id": "gpl_copyleft_scope__narrow_scope_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gpl_narrow",
+    "story_uid": "53be1e1d-1b45-4da4-9920-cdabf29291d2"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "GPL Section 2(b) Narrow Copyleft Scope (Traditional Copyright Doctrine Reading)",
+    "topic_domain": "software_licensing/intellectual_property/open_source_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "commercial_integrators",
+      "proprietary_layer_vendors"
+    ],
+    "victims": [
+      "gpl_copyleft_advocacy_community"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "GPL Copyleft Advocacy Community",
+      "comment": "PERSPECTIVE 1: GPL COPYLEFT ADVOCACY (SNARE) — Trapped by the narrow reading's legal entrenchment. The community's foundational assumption — that Section 2(b) mandates universal code-sharing for all derivative works — is structurally undermined by a copyright-doctrine interpretation that excludes aggregation, plugins, and dynamic linking. No viable exit: the courts have adopted the narrow reading, enforcement actions fail, and rewriting the license requires consensus that will not materialize. Full extraction: the commercial integrators gain flexibility while the advocacy community's coordination mechanism (copyleft obligation) loses force. Zero degrees of freedom for reorienting strategy within the existing license framework."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Commercial Integrators",
+      "comment": "PERSPECTIVE 2: COMMERCIAL INTEGRATORS (ROPE) — Experiences the narrow reading as coordination: GPL components can be integrated with proprietary layers without triggering copyleft obligations. The constraint solves a genuine collective action problem — how to mix open and closed code in a single product. Legal certainty around derivative work boundaries enables product architecture. The integrator benefits from the clarity (arbitrage: can exit GPL use entirely if needed, or structure code to avoid derivative-work triggers). Coordination without maximal coercion."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Secondary GPL Contributors (Weak Position)",
+      "comment": "PERSPECTIVE 3: SECONDARY GPL CONTRIBUTORS (TANGLED ROPE) — Benefit from the license's attribution and attribution-share clauses, but suffer extraction via the narrow derivative-work boundary. A contributor to a GPL library that gets wrapped in a proprietary plugin cannot enforce copyleft against the plugin vendor. Mixed dynamics: genuine coordination (the GPL library is maintained as shared commons) coexists with structural asymmetry (the narrower the derivative-work boundary, the less secondary contributors' leverage over downstream use)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "GPL Enforcement Machinery",
+      "comment": "PERSPECTIVE 4: GPL ENFORCEMENT MACHINERY (PITON) — The formal enforcement mechanism (licensing audits, cease-and-desist letters, litigation threats) has largely decayed in effectiveness for the narrow-scope boundaries. Enforcement actions against dynamic linking or plugin architectures consistently fail under copyright law doctrine. The enforcement apparatus persists through institutional inertia — Software Freedom Conservancy, FSF, and individual copyright holders maintain the machinery — but its functional goal (inducing universal code-sharing) has atrophied. Theater ratio is high because enforcement claims rest on interpretations of 'derivative work' that courts reject; the ritual persists but produces few victories."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "License Drafting Reform Coalition",
+      "comment": "PERSPECTIVE 5: LICENSE DRAFTING REFORM COALITION (SCAFFOLD) — Organized actors (GPLv3 drafters, AGPL advocates, Commons Clause projects) recognize that the narrow reading is a temporary institutional arrangement and are building explicit exit paths. GPLv3 strengthened language around linking and aggregation; AGPL added network-use provisions; Commons Clause wraps GPL with proprietary-style restrictions. These represent structured sunset alternatives: copyleft advocates accept the narrow reading as a constraint they must work around rather than a settled law. The sunset is a strategy (accept the narrow reading, build layer-by-layer alternatives) rather than a formal license term, but it functions as scaffold logic."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Copyright Doctrine View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / COPYRIGHT DOCTRINE (MOUNTAIN) — From the civilizational perspective, the narrow reading appears as an immutable consequence of traditional copyright law. Derivative work is a fixed legal category rooted in the Copyright Act; modification, translation, and preparation of adaptations are enumerated; the enumeration is exhaustive; plugin architectures and dynamic linking do not fit the statutory language. This perspective naturalizes the narrow reading as a necessary consequence of copyright doctrine. However, the structural data reveals this as a false summit: the 'immutability' is contingent on the choice to apply copyright doctrine rather than trade secret or technology law frameworks; different jurisdictions apply different doctrinal lenses; the GPL could be rewritten to extend beyond derivative work; the narrowness is a strategic choice, not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "derivative_work_boundary_contest",
+      "question": "Does 'derivative work' under copyright law structurally include dynamic linking, plugin loading, and aggregation in linked binaries, or are these legally separable?",
+      "resolution_mechanism": "Appellate precedent on linking architectures (currently split: some jurisdictions recognize derivative-work status for dynamic linking; others treat it as separate distribution). Test case: jurisdiction-by-jurisdiction survey of GPL enforcement outcomes and court findings on linking scope.",
+      "impact": "If derivative work scope widens: narrow reading collapses into strong copyleft reading; extraction flows toward advocacy community. If scope narrows further: narrow reading entrenches; GPL loses effective enforcement against integration strategies.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether copyright derivative-work doctrine encompasses dynamic linking and plugin architectures"
+    },
+    {
+      "id": "doctrine_versus_intention_gap",
+      "question": "Is the narrow reading a faithful application of GPL drafters' original intent (Stallman, Moglen), or has it diverged from the drafters' expectations through judicial interpretation of copyright doctrine?",
+      "resolution_mechanism": "Textual analysis of GPL preamble, Section 2(b) drafting history, and founding FSF documentation. Comparison with GPLv2 vs GPLv3 language evolution. Interviews with drafters on linking scope.",
+      "impact": "If faithful: narrow reading is intentional constraint design, not interpretive drift. If diverged: the narrow reading is an unintended side effect of applying copyright law to a license designed with stronger assumptions about code-sharing. This omega flags the identity-lock mechanism: GPL advocates may be 'trapped' by their own license's vulnerability to copyright-doctrine interpretation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Alignment between GPL drafters' intent and current copyright-doctrine interpretation of Section 2(b)"
+    },
+    {
+      "id": "commercial_integration_necessity",
+      "question": "Do commercial integrators actually require the narrow reading to build mixed-license products, or could they structure code to comply with stronger copyleft obligations at acceptable cost?",
+      "resolution_mechanism": "Cost-benefit analysis: survey of proprietary software vendors on compliance costs for universal copyleft vs. current narrow-boundary compliance. Measurement of architectural flexibility lost under universal copyleft.",
+      "impact": "If necessity is real: the narrow reading solves a genuine coordination problem and the rope classification is accurate. If necessity is exaggerated: the extraction is larger than claimed, the beneficiary's escape hatch is less justified, and the constraint shifts toward snare territory.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether commercial integrators need the narrow derivative-work boundary to feasibly build mixed-license software"
+    },
+    {
+      "id": "reading_collapse_mechanism",
+      "question": "Which conditions would cause this narrow reading to coalesce with or diverge from the strong copyleft reading or enforcement vacuum reading?",
+      "resolution_mechanism": "Scenario analysis: (a) Court decision widening derivative-work scope → narrow reading collapses into strong copyleft reading. (b) Adoption of GPLv4 with explicit linking/plugin language → narrow reading becomes obsolete but re-emerges in software using GPLv2/v3. (c) Shift in commercial practice toward stronger copyleft (Affero, Commons Clause) → narrow reading becomes enforcement-vacuum reading (agreement without mechanism). (d) Jurisdictional fragmentation (EU stronger protections, US narrower scope) → narrow reading persists in some jurisdictions, collapses in others.",
+      "impact": "Determines long-term stability and stability of this reading as a kernel interpretation. High-impact omega for strategic planning by advocacy community.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Conditions under which this narrow reading would merge with or split from sibling readings"
+    },
+    {
+      "id": "identity_lock_via_license_choice",
+      "question": "Are GPL adopters identity-locked to Section 2(b)'s copyright-doctrine interpretation by their foundational commitment to copyleft, even when the copyright framework undermines their stated goals?",
+      "resolution_mechanism": "Interview and historical analysis: Do GPL project maintainers perceive the narrow reading as a changeable institutional artifact or as an immutable feature of 'how GPL works'? Measure the cognitive cost of shifting to alternative licenses (AGPL, Commons Clause, custom copyleft) vs. accepting the narrow reading.",
+      "impact": "If identity-locked: the constraint's binding mechanism is cognitive (developers have internalized the narrow reading as 'GPL's nature') rather than structural (the law forces it). Reclassifies the trapped perspective as identity_locked, revealing that the advocacy community's binding is self-imposed through license commitment rather than external legal force.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether GPL adopters are identity-locked to narrow-reading interpretation through their license commitment"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "GPL Section 2(b) establishes a copyleft obligation: any work that copies or modifies the licensed code must itself be distributed under the GPL. The narrow reading interprets 'derivative work' according to traditional copyright law doctrine, which excludes aggregation, plugin architectures, and dynamic linking — these are treated as separate works under copyright, not modifications of the GPL'd code. This reading generates moderate-extraction tangled rope dynamics. Commercial integrators gain coordination benefits (legal certainty for mixed-license products) and an extraction benefit (flexibility to wrap GPL components in proprietary layers without triggering copyleft). The GPL advocacy community suffers: their foundational assumption — that copyleft would induce universal code-sharing — is structurally weakened by a copyright-doctrine interpretation they cannot easily challenge. Enforcement machinery persists but has decayed in effectiveness (piton). Organized reform coalitions (GPLv3, AGPL, Commons Clause) are building layer-by-layer alternatives that work within the narrow reading's constraints (scaffold). The constraint is one reading of a contested kernel: how should Section 2(b) be interpreted when copyright doctrine's 'derivative work' category is narrower than the drafters' apparent intent? The narrow reading coexists with stronger-copyleft alternatives without logically foreclosing them; rather, it creates structural pressure on the advocacy community to build explicit workarounds.",
+    "key_agents": [
+      "Commercial Integrators (institutional/arbitrage): Primary beneficiary — gains legal flexibility to combine GPL components with proprietary layers; experiences constraint as coordination mechanism",
+      "GPL Copyleft Advocacy Community (powerless/trapped): Primary victim — foundational assumption of universal code-sharing is structurally undermined; trapped within GPL framework they cannot easily exit or rewrite",
+      "Secondary GPL Contributors (powerful/mobile): Mixed position — benefit from GPL's coordination mechanism but suffer from narrow derivative-work boundary that reduces their leverage",
+      "GPL Enforcement Machinery (institutional/arbitrage): Institutional actor experiencing piton degradation — enforcement actions against linking/plugin architectures fail under copyright doctrine; apparatus persists through inertia",
+      "License Drafting Reform Coalition (organized/constrained): Organized actors building structured alternatives (GPLv3, AGPL, Commons Clause) that work around the narrow reading",
+      "Analytical Observer (analytical/analytical): Civilizational view at risk of naturalizing contingent copyright-doctrine framing as immutable law"
+    ],
+    "kernel_context": "This constraint is the NARROW SCOPE READING of the gpl_copyleft_scope kernel. The kernel is GPL Section 2(b)'s text: 'You may not copy or modify the Program except as expressly provided under this License. Any attempt otherwise to copy, modify, sublicense or distribute the Program is void, and will automatically terminate your rights under this License.' The scope of 'derivative work' triggering the copyleft obligation is the contested ground. The NARROW SCOPE READING interprets 'derivative work' according to copyright law doctrine (traditional Copyright Act categories), which narrows the scope to direct modifications, translations, and statutory adaptations — excluding aggregation, plugin loading, and dynamic linking. The STRONG COPYLEFT READING interprets copyleft as applying to all work that uses, integrates with, or dynamically links the licensed code, regardless of copyright doctrine boundaries. The ENFORCEMENT VACUUM READING observes that the narrow interpretation has rendered the copyleft mechanism largely unenforceable: legal uncertainty and court bias toward commercial defendants mean that copyleft claims fail even when the strong reading would technically apply. This story instantiates the narrow reading — the copyright-doctrine framing that limits Section 2(b)'s scope. The sibling readings represent alternative interpretations of the same kernel (the same license text) from different perspectives or with different underlying assumptions about how copyright law should apply.",
+    "logic_rationale": "Extractiveness (0.38): Moderate. Commercial integrators benefit from legal clarity and flexibility to structure code with proprietary layers. But the extraction is not maximal (0.7+) because: (a) GPL projects still capture significant benefit from being used in commercial products — user base, funding, development attention; (b) the narrow reading has been judicially established, reducing uncertainty for both GPL advocates and integrators; (c) secondary contributors retain attribution and copyleft benefits within the GPL-licensed portions. The 0.38 value reflects genuine coordination benefits for integrators (solving the mixed-license problem) alongside extraction from the advocacy community (weakened enforcement). Suppression (0.42): Moderate. Barriers to escape the narrow reading include: copyright law's established doctrine (difficult to challenge through GPL rewriting); judicial precedent against broader derivative-work interpretations; the GPL's foundational license-text framing (rewording to extend beyond copyright categories requires consensus). But suppression is not total: GPLv3, AGPL, and Commons Clause demonstrate structured alternatives; jurisdictions apply doctrine differently; projects can migrate to stronger copyleft frameworks. Theater ratio (0.58): Moderate-high. Rising over the interval. Enforcement actions against linking and plugin architectures rest on interpretations of 'derivative work' that courts consistently reject. The enforcement machinery (Conservancy, FSF litigation threats, copyright audits) persists despite low success rates, suggesting performative character — the ritual of enforcement maintains the illusion of copyleft strength even as court decisions narrow its scope. Theater increases as the gap widens between copyleft advocates' expectations and enforcement outcomes.",
+    "directionality_logic": "The narrow reading's directionality differs sharply by agent perspective. Commercial integrators (institutional/arbitrage) experience low d — they are net beneficiaries who can exit GPL use entirely if needed, giving them high flexibility. The advocacy community (powerless/trapped) experiences high d — they are net victims facing legal entrenchment of their loss through copyright doctrine; trapped by their own license choice and the courts' interpretation of copyright law. Secondary contributors (powerful/mobile) experience moderate d — they retain some benefit from the GPL's coordination function but suffer extraction through the narrow derivative-work boundary. These differences are not derived from a single power level but from the agent's structural position relative to THIS specific constraint: the beneficiary's exit flexibility, the victim's inability to escape copyright-doctrine interpretation, the secondary actor's split position. The narrow reading's extraction runs toward integrators and away from advocates — a clear directionality gradient that prevents uniform classification across all perspectives.",
+    "perspectival_gap": "The perspectival gap is extreme. The commercial integrator sees coordination (Rope) — the narrow reading solves a genuine problem of mixed-license architecture. The advocacy community sees pure extraction (Snare) — their foundational copyleft mechanism has been structurally undermined by copyright doctrine in a way they cannot escape. The reform coalition sees a problem to work around with structured alternatives (Scaffold). The enforcement machinery sees its own decay (Piton) — the ritual persists but produces few victories. The analytical observer risks naturalizing copyright doctrine as immutable law (Mountain), when in fact the narrowness is a choice to apply one legal framework rather than others. The gap reveals that all six types are legitimate readings of the same constraint from different structural positions — the narrow reading's nature depends on where you stand relative to it.",
+    "mandatrophy_analysis": "This constraint demonstrates how a single institutional interpretation (copyright-doctrine reading of Section 2(b)) can simultaneously be coordination mechanism for one agent (commercial integrator), extraction mechanism for another (advocacy community), degraded ritual for a third (enforcement machinery), and work-around target for a fourth (reform coalition). The mandatrophy is resolved by accepting that the constraint's classification depends on observational position and that all six types are structural facts rather than errors. The narrow reading creates genuine coordination value for mixed-license software while extracting from copyleft advocates' capability to enforce universal code-sharing. Both are real. The apparent contradiction dissolves when the perspectival nature of the classification is made explicit. No single type is 'correct' — the presheaf over the full set of positions is the complete description."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "gpl_copyleft_scope__strong_copyleft_reading",
+      "gpl_copyleft_scope__enforcement_vacuum_reading"
+    ],
+    "dual_formulation_note": "The narrow reading, strong reading, and enforcement vacuum reading are three interpretations of the same kernel (GPL Section 2(b)). They are not independent constraints but rather three ways of reading the same license text. The network edges indicate that the narrow reading's entrenchment creates structural pressure on both sibling readings: it reduces the feasibility of strong copyleft enforcement (influences strong reading) and it concentrates the enforcement-vacuum effect by narrowing the scope where enforcement is even theoretically attempted (influences enforcement vacuum reading). The three stories must be treated as a reading family — they share a kernel and presheaf over different interpretive positions."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "gpl_copyleft_scope__strong_copyleft_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "gpl_copyleft_scope__enforcement_vacuum_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "copyright_doctrine_is_controlling_framework",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "aggregation_and_dynamic_linking_are_separate_works",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "copyright_doctrine_interpretation_of_derivative_work",
+    "drift_state": {
+      "moment": "contemporary_post_appellate_precedent",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    }
+  ]
+}

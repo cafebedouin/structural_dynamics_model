@@ -4,26 +4,25 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "bbpd"
+    "measurement_id_prefix": "bbpd",
+    "story_uid": "294ae6b9-71ff-4280-b021-3ce470ff6697"
   },
   "base_properties": {
     "extractiveness": 0.38,
-    "suppression": 0.68,
+    "suppression": 0.52,
     "theater_ratio": 0.78,
     "claimed_type": "piton",
-    "human_readable": "The Heritage Fund Piton (Fiscal Volatility Path)",
+    "human_readable": "Alberta Boom-Bust Fiscal Cycle (Path Dependency)",
     "topic_domain": "economic/policy",
     "requires_active_enforcement": false,
-    "has_sunset_clause": false,
     "beneficiaries": [
-      "resource_extractors",
-      "low_tax_advocates"
+      "resource_extraction_industry",
+      "incumbent_political_coalition"
     ],
     "victims": [
-      "healthcare_workers",
-      "public_service_workers",
-      "future_taxpayers",
-      "rural_communities"
+      "fiscal_stability",
+      "public_service_funding",
+      "intergenerational_equity"
     ]
   },
   "perspectives": [
@@ -33,98 +32,125 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "regional",
-      "label": "Healthcare Workers and Public Service Employees",
-      "comment": "PERSPECTIVE 1: HEALTHCARE WORKERS (SNARE) \u2014 Trapped in a system of perpetual austerity cycles driven by boom-bust commodity volatility. No exit from provincial employment; subject to wage freezes, layoffs, and service cuts during busts. Extract maximum experienced cost with no agency or compensation mechanism. The constraint is enforced through budget discipline and political blame-shifting, not through voluntary coordination."
+      "label": "The Public Service System",
+      "comment": "PERSPECTIVE 1: PUBLIC SERVICE SYSTEM (SNARE) — Schools, hospitals, social services face serial crises during downturns; expansion during booms is temporary and politically rewarded, contraction during busts is painful and inevitable. No exit from fiscal volatility — the system is structurally trapped in the boom-bust cycle. Maximum extraction: bears full cost of instability while lacking agency to change the constraint."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "moderate",
-      "time_horizon": "generational",
+      "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "regional",
-      "label": "Rural and Regional Communities",
-      "comment": "PERSPECTIVE 2: RURAL COMMUNITIES (TANGLED ROPE) \u2014 Benefit from periodic oil-driven infrastructure investment during booms (roads, schools, utilities) but face service collapses during busts. Constrained exit: costly to relocate; depend on provincial services. Experience both coordination (needed for infrastructure scale) and extraction (unequal burden of austerity). Active enforcement through provincial budget cycles and federal transfer negotiations."
+      "label": "Workers and Households",
+      "comment": "PERSPECTIVE 2: WORKERS AND HOUSEHOLDS (TANGLED ROPE) — Experience genuine coordination benefits from resource-sector employment during booms and access to publicly funded services. But also experience extraction: wage volatility, job insecurity, service degradation during busts. Can migrate out (constrained exit) but at career and social cost. Mixed experience — both coordination and extraction present."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "Resource Extractors and Energy Companies",
-      "comment": "PERSPECTIVE 3: RESOURCE EXTRACTORS (ROPE) \u2014 Benefit from low and stable royalty rates regardless of commodity cycle. Arbitrage options: can shift operations across jurisdictions or adjust production volume. Experience the constraint primarily as coordination: predictable tax/royalty rates enable long-term investment planning. Net beneficiary \u2014 the low royalty regime persists because political actors externalize volatility onto public services rather than stabilizing via resource rents."
+      "spatial_scope": "regional",
+      "label": "Resource Extraction Industry",
+      "comment": "PERSPECTIVE 3: RESOURCE EXTRACTION INDUSTRY (ROPE) — Experiences the constraint as coordination: low royalty rates, minimal windfall taxation, and public infrastructure investment during booms create favorable operating environment. Benefits from the cycle without bearing stabilization costs. Arbitrage capacity allows arbitration between jurisdictions (can threaten relocation if terms worsen). Net beneficiary."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Incumbent Political Coalition",
+      "comment": "PERSPECTIVE 4: INCUMBENT POLITICAL COALITION (ROPE) — The policy consensus (low royalties, no Heritage Fund, limited progressive taxation) is reinforced by campaign financing from resource sector and political acceptance of boom-bust as inevitable. During booms, the coalition wins re-election on revenue growth; during busts, opposition is fragmented and resource-sector support remains solid. Arbitrage: can credibly threaten to leave office if policy changes (electoral mobility). Net beneficiary from the constraint."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Reform Coalition (Alternative-Policy Advocates)",
+      "comment": "PERSPECTIVE 5: REFORM COALITION (TANGLED ROPE) — Economists, social advocates, and opposition parties see the constraint's dysfunction clearly and propose alternatives (Heritage Fund, progressive taxation, counter-cyclical budgeting). But face high barriers to implementation: resource-sector opposition, political inertia, public acceptance of boom-bust as natural. Experience extraction (marginalization from policymaking) but also benefit from the constraint's visibility — reform proposals gain traction during busts when public appetite for change peaks. Constrained exit: can organize and advocate but cannot unilaterally override the incumbent coalition."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
-      "spatial_scope": "national",
-      "label": "Alberta Provincial Government",
-      "comment": "PERSPECTIVE 4: PROVINCIAL GOVERNMENT (PITON) \u2014 The core piton: maintains a low-tax/low-royalty regime and narrative ('Alberta advantage') despite ample historical evidence that this strategy creates fiscal volatility. The narrative persists through institutional inertia and political theater despite degraded function. The government experiences the volatility problem as externally imposed (blame Ottawa, blame markets) rather than as a consequence of policy choices. Active enforcement through perpetual rhetoric ('we can't raise taxes because the private sector will leave') maintains the piton even as its stated purpose\u2014attracting investment and ensuring prosperity\u2014has degraded. Theater ratio high (0.78): performative debates about 'fixing the budget' while avoiding the core policy levers (royalty rates, Heritage Fund contribution mandates, progressive taxation)."
-    },
-    {
-      "classification_type": "snare",
-      "agent_power": "moderate",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
       "spatial_scope": "regional",
-      "label": "Future Taxpayers and Intergenerational Beneficiaries",
-      "comment": "PERSPECTIVE 5: FUTURE TAXPAYERS (SNARE) \u2014 Trapped by path dependency: today's low-revenue, high-volatility regime constrains tomorrow's fiscal capacity. Capital underinvestment in education, infrastructure, and health systems during austerity cycles compounds intergenerational cost. Cannot exit; will bear increased debt service, deferred maintenance, and limited public investment. No compensation mechanism for the extraction of present prosperity at future expense."
+      "label": "The Policy Ritual (Piton View)",
+      "comment": "PERSPECTIVE 6: THE POLICY RITUAL (PITON) — The boom-bust cycle itself has become performative theater. Policy rhetoric celebrates the boom as inevitable success ('the resource sector drives growth'), and busts are treated as exogenous shocks ('markets beyond our control'). The high theater_ratio reflects that much political discourse is about maintaining the narrative of resource-sector inevitability rather than actually addressing fiscal volatility. The constraint persists through institutional inertia — path dependency has become a cultural fact — even though the policy toolkit exists to escape it (Heritage Funds are proven models; counter-cyclical budgeting is standard practice). The constraint's primary function has atrophied; it is maintained because changing it would require the incumbent coalition to accept loss of control and the resource sector to accept reduced leverage."
     },
     {
       "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "universal",
-      "label": "Analytical Observer (Commodity Curse Framing)",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER \u2014 COMMODITY CURSE (FALSE MOUNTAIN) \u2014 From an analytical/civilizational view, commodity-dependent fiscal structures inevitably create volatility: this is a natural law of resource economies. However, this naturalizes what is actually a policy choice: Norway stabilized through a sovereign wealth fund, Chile through countercyclical spending rules, Canada through transfer programs. The mountain classification is a false summit masking contingent institutional design. Alberta's volatility is not inherent to oil; it is inherent to the choice to keep royalties low, avoid wealth fund accumulation, and shift risk onto public employment and service provision."
+      "spatial_scope": "global",
+      "label": "Natural Law View (Analytical, False Summit Candidate)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL / NATURAL LAW VIEW (MOUNTAIN, FALSE SUMMIT CANDIDATE) — From a global/civilizational perspective, the boom-bust cycle could be naturalized as inherent to commodity-dependent economies: resource prices are volatile, wealth depends on exports, fiscal volatility is unavoidable. But this view naturalizes what is actually a policy choice: Norway, Canada's other provinces, and commodity-exporting nations demonstrate that Heritage Funds, progressive taxation, and counter-cyclical budgeting reduce (though do not eliminate) volatility. The mountain classification is a false summit — the constraint is sustained by political inertia and beneficiary opposition, not by the laws of economics."
     }
   ],
   "omegas": [
     {
-      "id": "counterfactual_heritage_fund",
-      "question": "Would a Norway-style Heritage Fund mandate (e.g., 50% of resource revenues at consistent commodity prices) have stabilized fiscal volatility, or would political pressure have eroded the mandate during booms?",
-      "resolution_mechanism": "Historical analysis of failed provincial savings fund mandates (e.g., Alberta Heritage Fund 1976-1987 contribution patterns); comparative study of Norway's governance structures that sustained the fund vs political dynamics in resource-dependent regions",
-      "impact": "If mandate would have held: the piton is a choice masquerading as necessity (false mountain confirmed). If mandate would have been eroded: volatility is a political economy problem requiring stronger institutions, not merely better policy design.",
+      "id": "path_dependency_vs_beneficiary_lock",
+      "question": "Is the boom-bust constraint maintained primarily by institutional inertia and political path dependency, or primarily by the structural lock-in of beneficiaries (resource sector and incumbent coalition) whose interests depend on the constraint?",
+      "resolution_mechanism": "Counterfactual analysis: What barriers prevent policy change? Political economy analysis of resource-sector campaign financing and political coalition structure. Comparative analysis with jurisdictions that successfully transitioned away from boom-bust (Norway, Saskatchewan-oil/minerals).",
+      "impact": "If path dependency dominates: constraint may be reversible through institutional redesign or political realignment without direct beneficiary opposition. If beneficiary lock dominates: constraint requires political defeat of the incumbent coalition or resource-sector cooperation — higher barrier to change.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether constraint persistence is due to institutional inertia or beneficiary lock-in"
+    },
+    {
+      "id": "royalty_rate_counterfactual",
+      "question": "If Alberta had adopted Norway-style Heritage Fund and higher progressive taxation from 1970s onward, how much fiscal volatility would be reduced? What share of current volatility is policy-induced vs economically necessary?",
+      "resolution_mechanism": "Historical simulation modeling: apply Norway's policy parameters to Alberta's resource revenue stream; compare predicted fiscal stability to actual outcome. Literature review of commodity-fund effectiveness across jurisdictions.",
+      "impact": "If volatility reduction > 60%: constraint is significantly policy-induced; classification shifts toward snare/extraction. If volatility reduction < 20%: constraint is closer to a genuine natural law; classification toward mountain more defensible.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether Heritage Fund mandate could have stabilized volatility"
+      "description": "Estimate of volatility reduction from Heritage Fund and progressive taxation"
     },
     {
-      "id": "attribution_of_austerity_burden",
-      "question": "What share of Alberta's public service austerity and healthcare cutbacks since 2015 is attributable to federal transfer reductions vs provincial revenue volatility from low royalties?",
-      "resolution_mechanism": "Fiscal accounting: decompose provincial budget deficits by source (lower commodity prices, lower royalty take, lower federal transfers, policy choices); comparative analysis of peer provinces with different revenue structures",
-      "impact": "If federal transfers dominate: sovereigntist narrative gains traction (piton persists through blaming Ottawa). If low royalties dominate: self-inflicted narrative gains traction (piton exposed as choice, not necessity).",
+      "id": "public_service_adaptation_ceiling",
+      "question": "Can public service systems (education, healthcare, social services) functionally adapt to boom-bust fiscal cycles through built-in flexibility, or is there a structural ceiling beyond which volatility becomes destructive regardless of adaptation?",
+      "resolution_mechanism": "Comparative analysis of educational outcomes, healthcare quality, social service utilization across stable vs volatile funding regimes. Longitudinal analysis of Alberta public services through boom-bust cycles: hiring freezes, program cuts, and downstream effects on service quality.",
+      "impact": "If adaptation possible: constraint is extractive but manageable (Tangled Rope). If ceiling exists: extraction is severe and cumulative (Snare). High confidence would shift victim classifications.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Attribution of austerity to federal transfers vs provincial revenue choices"
+      "description": "Structural limits of public service adaptation to fiscal volatility"
     },
     {
-      "id": "political_sustainability_of_reform",
-      "question": "If Alberta moved to Scandinavian-level royalty rates (40-50% of resource value) and a mandatory Heritage Fund contribution, would the political coalition supporting low-tax ideology collapse, or would the distributional benefits (reduced volatility, increased public investment) stabilize the reform?",
-      "resolution_mechanism": "Comparative political economy: study outcomes of similar reform attempts in resource-dependent regions (Alaska, Canada, Chile); scenario modeling of Alberta fiscal stability under higher royalty regimes; polling and political alignment analysis",
-      "impact": "If reform would collapse: path dependency is locked in by political economy (piton is entrenched). If reform would stabilize: the piton is maintained by myopia and elite capture rather than structural necessity.",
+      "id": "political_coalition_stability_under_policy_change",
+      "question": "If policy shifted toward Heritage Fund and counter-cyclical budgeting, would the incumbent political coalition fragment, or would beneficiaries accept the new constraint in exchange for other policy concessions?",
+      "resolution_mechanism": "Political simulation and electoral analysis. Case studies from provinces and nations that successfully shifted resource-based policies (Norway's transition, Saskatchewan, Albertan provincial comparisons). Survey analysis of resource-sector and voter preferences under alternative scenarios.",
+      "impact": "If coalition fragments: policy change is politically possible but requires electoral defeat of incumbents. If coalition adapts: policy change is possible through negotiation.",
       "confidence": "low",
       "type_class": "preference",
-      "description": "Political sustainability of moving to higher royalty rates"
+      "description": "Political viability of escaping the boom-bust constraint"
+    },
+    {
+      "id": "false_summit_grounding",
+      "question": "Is the boom-bust cycle presented as 'natural to commodity economies' (natural law framing) or as 'policy choice' (contingent institutional framing)? Which framing dominates political and public discourse?",
+      "resolution_mechanism": "Content analysis of political rhetoric, media coverage, and policy documents. Tracking of how busts are explained: as market outcomes vs as policy failures. Public opinion surveys on whether boom-bust is seen as inevitable or changeable.",
+      "impact": "If natural law framing dominates: false summit is operational (policy naturalized); constraint is maintained through discursive lock. If policy framing visible: false summit is contested; change is politically possible.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether boom-bust is framed as natural law or policy choice"
     }
   ],
   "measurements": [
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.65
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.7
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.72
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
       "value": 0.78
     },
     {
@@ -134,48 +160,69 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 5,
       "value": 0.33
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 10,
       "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.52
     }
   ],
   "interval": {
-    "start": 1980,
-    "end": 2025
+    "start": 0,
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "Alberta's boom-bust fiscal cycle is a piton: a degraded institutional constraint maintained through political inertia and theatrical rhetoric despite ample evidence of its dysfunction. The constraint emerges from a specific set of policy choices\u2014keeping resource royalties among the lowest in North America, rejecting a Norway-style Heritage Fund, resisting progressive taxation\u2014that create structural fiscal volatility. Rather than address the root causes, political actors (particularly sovereigntist movements) externalize blame onto federal transfers and 'Ottawa capture,' perpetuating a narrative that the volatility is exogenous and inevitable. This framing naturalizes what is actually a contingent policy regime. The piton's theater ratio (0.78) reflects the performative debates about 'fixing the budget' through austerity while avoiding the core policy levers. Healthcare workers, public servants, and future taxpayers bear the extraction costs; resource extractors and low-tax advocates benefit from the regime. The constraint exhibits path dependency: early choices (low royalties, no savings fund) created institutional and political lock-in that makes reform costly and politically fraught, even as the original rationale has degraded.",
+    "narrative_context": "Alberta's boom-bust fiscal cycle exemplifies the Piton type: a policy framework that was once functionally optimized for a particular context (maximizing resource extraction and reinvestment during commodity booms) but has degraded into institutional theater maintained by political inertia and beneficiary lock-in. The constraint emerges from three interlocking policy choices: (1) keeping resource royalty rates among the lowest in North America, (2) rejecting the Heritage Fund model proven by Norway and used by other commodity exporters, and (3) resisting progressive taxation that would smooth revenues across economic cycles. These choices create structural fiscal volatility — government revenue swings 20-40% between boom and bust, forcing destructive cycles of expansion and contraction in public services. The constraint persists not because it is an inevitable feature of commodity dependence (counterfactual comparisons with Norway and other jurisdictions show that alternative policies significantly reduce volatility) but because the incumbent political coalition and resource extraction industry benefit from maintaining it. The theater_ratio of 0.78 reflects the high performative content: political rhetoric celebrates booms as inevitable successes and treats busts as exogenous market shocks beyond policy control, obscuring that the volatility is policy-induced and therefore policy-addressable. The constraint is a Piton because its primary function (optimizing extraction during booms) has been attained, yet the policy framework persists through institutional inertia and political fear of policy change.",
     "key_agents": [
-      "Healthcare Workers and Public Service Employees: Primary victims (powerless/trapped) \u2014 subject to perpetual wage freezes, layoffs, and service cuts; no exit from provincial employment",
-      "Resource Extractors and Energy Companies: Primary beneficiaries (institutional/arbitrage) \u2014 benefit from low, stable royalty rates and predictable tax regime; can shift operations across jurisdictions",
-      "Rural and Regional Communities: Secondary victims (moderate/constrained) \u2014 benefit from boom-time infrastructure but face severe service collapses during busts; high cost of exit",
-      "Future Taxpayers: Secondary victims (moderate/constrained) \u2014 bear intergenerational costs of capital underinvestment and deferred maintenance; trapped by demographic and geographic constraints",
-      "Provincial Government: Institutional actor maintaining the piton (institutional/arbitrage) \u2014 sustains low-tax/low-royalty regime through political theater despite recognition of volatility problem",
-      "Sovereigntist Political Movement: Institutional amplifier (institutional/arbitrage) \u2014 benefits from external blame narrative ('Ottawa's fault'); reinforces piton by externalizing causality"
+      "Public Service System: Primary victim (powerless/trapped) — schools, hospitals, social services bear the full cost of fiscal instability with no exit option",
+      "Workers and Households: Secondary victim (moderate/constrained) — experience both coordination benefits (boom-time employment) and extraction (wage volatility, service degradation)",
+      "Resource Extraction Industry: Primary beneficiary (institutional/arbitrage) — benefits from low royalty rates, minimal windfall taxation, public infrastructure investment during booms; can threaten relocation if policy terms worsen",
+      "Incumbent Political Coalition: Secondary beneficiary (institutional/arbitrage) — captures electoral credit during booms; maintains political control through resource-sector support",
+      "Reform Coalition: Organized challenger (organized/constrained) — proposes Heritage Fund and counter-cyclical budgeting; faces high barriers to implementation",
+      "Fiscal Policy Framework: Institutional actor (institutional/arbitrage) — the policy ritual itself persists through discursive naturalization of boom-bust as inevitable"
     ],
-    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint extracts from public service workers and future taxpayers through austerity cycles, but extraction is not as severe as a snare (\u03b5 > 0.46) because it is partly voluntarily maintained through political choice rather than structural necessity. The beneficiaries (resource extractors, low-tax advocates) capture value, but the regime's reproduction relies on political rhetoric and institutional inertia, not pure coercion. Suppression (0.68): High. Barriers to exit include: (1) geographic immobility (cannot easily leave provincial employment), (2) political capture (low-tax ideology dominates discourse), (3) institutional lock-in (decades of low-royalty contracts limit revenue capacity), (4) blame-shifting (external attribution to federal transfers prevents internal policy reform). These are suppressed alternatives: progressive taxation, higher royalties, and Heritage Fund mandates are politically radioactive despite strong comparative evidence. Theater ratio (0.78): High. The constraint is maintained substantially through theatrical activity: political debates about 'belt-tightening' and 'fiscal responsibility' that avoid the core policy choices (royalty rates, taxation structure, savings fund requirements). The theater has increased over time as the original rationale (attracting investment) has degraded\u2014Alberta's oil industry is now subject to global commodity markets and climate policy regardless of tax rates, yet the low-tax narrative persists.",
-    "directionality_logic": "Directionality values derive from agents' structural positions relative to the fiscal volatility constraint. Resource extractors (beneficiaries, arbitrage options) experience low d \u2248 0.10-0.15: they benefit from predictable low royalties and can shift production volume to manage revenue risk. The provincial government (institutional beneficiary, arbitrage through political rhetoric) experiences d \u2248 0.20-0.30: they benefit from the low-tax narrative and can avoid internal policy reform through external blame. Public service workers and healthcare employees (trapped, victims) experience high d \u2248 0.90-0.95: they bear volatility costs with no exit option. Rural communities (constrained, mixed victims/beneficiaries) experience moderate d \u2248 0.55-0.65: they benefit from boom-time infrastructure but face severe bust-time service cuts. Future taxpayers (constrained, pure victims) experience high d \u2248 0.80-0.85: they inherit fiscal constraints with no agency in creating them. The engine's directionality derivation automatically computes these from the beneficiary/victim declarations and exit options.",
-    "perspectival_gap": "The perspectival gap reveals how the same constraint structure produces divergent classifications. Resource extractors see Rope (pure coordination of predictable fiscal regime enabling investment). The provincial government sees Piton (recognizes volatility as a problem but maintains the regime through political inertia). Healthcare workers see Snare (trapped in austerity with no exit). Rural communities see Tangled Rope (both coordinated infrastructure provision and extraction through bust-time service cuts). Future taxpayers see Snare (pure extraction via deferred investment and accumulated debt). The analytical observer risks seeing Mountain (commodity volatility as inevitable law of resource economies) but structural analysis reveals this as a false summit: Norway, Chile, and Canada demonstrate that policy design (not commodity curse) determines fiscal stability. The gap between beneficiary (Rope) and victim (Snare) perspectives is maximal, indicating strong asymmetric extraction masked by coordination rhetoric.",
-    "mandatrophy_analysis": "This constraint resolves the mandatrophy by exposing the piton classification itself: the constraint is NOT a mountain of economic necessity, but a piton of institutional inertia. The provincial government maintains the low-tax/low-royalty regime while simultaneously claiming that volatility is an external problem ('Ottawa's fault,' 'commodity markets'). This is the canonical piton pattern: maintaining a defunct institutional arrangement through theater while externalizing causality. The mandatrophy is resolved by recognizing that 'fiscal volatility' is not an irreducible constraint but a consequence of specific policy choices that persist through political narrative rather than structural necessity. The false mountain (commodity curse) naturalizes what is actually institutional design. The true structure is a piton maintained by sovereigntist narrative that externalizes blame, preventing reform to royalty rates, tax progressivity, or Heritage Fund mandates. The constraint persists not because volatility is unavoidable but because reform is politically costly and the cost is externalized onto powerless agents (healthcare workers, future taxpayers)."
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint extracts from public services and households through fiscal instability, but the extraction is not as severe as a pure Snare because beneficiaries also provide genuine coordination services (resource sector drives employment, public infrastructure investment improves productivity). The measurement trajectory (0.28 → 0.33 → 0.38) reflects that extractiveness has increased over the interval as beneficiaries have accumulated advantages during sustained boom periods and as public service systems have become more fragile. Suppression (0.52): Moderate-high. Significant barriers prevent escape: (1) political economy barriers (resource-sector campaign financing locks in incumbent coalition), (2) institutional barriers (path dependency in budget processes and public service structures), (3) discursive barriers (boom-bust naturalized as inevitable). But suppression is not total — reform coalitions exist, opposition parties propose alternatives, and some policy change is politically possible during crisis periods. Theater ratio (0.78): High and rising. Political rhetoric focuses on celebrating booms and explaining busts, creating theatrical narrative that obscures policy-addressability. The rise in theater_ratio from 0.62 to 0.78 reflects increasing discursive naturalization of boom-bust as inevitable feature of commodity dependence, despite evidence that policy alternatives reduce volatility. The Piton classification derives from this high theater combined with visible policy dysfunction — the constraint persists despite clear evidence of alternatives.",
+    "perspectival_gap": "The gap is maximum: from Rope (beneficiaries) to Snare (victims) to Piton (institutional theater). No two perspectives agree on classification. This signals a highly contested constraint with clear winners and losers. The beneficiaries' experience of coordination (Rope) coexists with the victims' experience of pure extraction (Snare). The institutional view reveals the constraint has degraded into theater — the policy framework persists not because it coordinates or extracts effectively but because changing it would require political realignment.",
+    "directionality_logic": "Each agent's experienced extractiveness (chi) depends on their structural position relative to the extraction flow. Beneficiaries with exit options (resource sector, incumbent coalition) experience low or negative chi — the constraint delivers benefits. Victims with trapped or constrained exit (public services, workers) experience high chi — the constraint delivers extraction. Organized challengers (reform coalition) experience moderate chi — they can articulate alternatives but face implementation barriers. The mechanism is the directionality formula: beneficiaries' d is pulled toward 0 (beneficiary direction), victims' d pulled toward 1 (target direction). Applied to the baseline metrics, this produces the observed perspectival gap.",
+    "mandatrophy_analysis": "The boom-bust constraint resolves the mandatrophy by showing that Piton is a distinct category from pure extraction (Snare). The Piton classification indicates that the constraint's primary functional purpose (coordination of resource booms for maximum extraction and reinvestment) has been attained, yet the institutional framework persists despite degradation and despite available alternatives. The mandatrophy question — 'Is this extractive coordination or pure extraction?' — is answered by the theater_ratio gate: when theater exceeds 0.70, the constraint has shifted from functional to performative. The high theater_ratio (0.78) indicates that political rhetoric and institutional inertia now maintain the constraint more than either coordination benefits or extraction benefits. This is the Piton signal: the constraint still extracts from victims, but the primary mechanism is no longer functional — it is institutional maintenance through discursive naturalization and political path dependency.",
+    "kernel_context": "The boom-bust constraint is not a reading of a contested kernel; it is a singular institutional arrangement. However, the analytical observer's false-summit perspective reflects a potential kernel dispute: whether boom-bust is 'natural to commodity economies' (institutional reading) or 'policy-contingent and changeable' (reform reading). These readings could coexist as different policy kernels grounding legitimacy. The false summit omega documents this contestation."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "canadian_transfer_payment_capture",
-      "resource_curse_narrative"
+      "public_service_fiscal_fragility",
+      "intergenerational_resource_equity",
+      "regulatory_capture_resource_sector"
     ],
-    "dual_formulation_note": "The boom-bust fiscal path dependency decomposes into two distinct constraint stories: (1) boom_bust_path_dependency (this story, \u03b5=0.38, piton) \u2014 the institutional choice to maintain low-tax/low-royalty regime despite recognized volatility costs; (2) commodity_price_transmission (\u03b5=0.08, rope) \u2014 the structural necessity for fiscal policy to respond to commodity prices given a resource-dependent revenue base. The piton is downstream of the commodity price transmission constraint but represents a distinct institutional failure to adopt stabilization mechanisms (Heritage Fund, progressive taxation, countercyclical spending) that would convert rope into managed coordination."
+    "dual_formulation_note": "The boom-bust path dependency decomposes into multiple downstream constraints. The fiscal volatility constraint (this story) operates at the macro-policy level; public service degradation operates at the service-delivery level; resource-sector regulatory capture operates at the institutional-capture level. Each has its own extractiveness value reflecting its structural position. They are linked by the upstream boom-bust cycle: volatility drives service degradation, and regulatory capture locks in the low-royalty-rate policy that sustains volatility."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.25
+      "d_value": 0.12
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
     }
   ]
 }

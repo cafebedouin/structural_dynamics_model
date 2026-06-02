@@ -4,25 +4,26 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "usmil"
+    "measurement_id_prefix": "usmil",
+    "story_uid": "cf466d78-d365-43fa-8a7f-5032d3fdb217"
   },
   "base_properties": {
     "extractiveness": 0.58,
-    "suppression": 0.65,
+    "suppression": 0.62,
     "theater_ratio": 0.68,
     "claimed_type": "tangled_rope",
     "human_readable": "US Military Spending Justification Framework",
     "topic_domain": "geopolitical/economic/security",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "defense_industrial_complex",
-      "military_leadership",
-      "geopolitical_dominance_states"
+      "defense_contractors",
+      "military_institutional_hierarchy",
+      "strategic_alliance_partners"
     ],
     "victims": [
-      "domestic_social_programs",
-      "fiscal_sustainability",
-      "non_military_technological_innovation"
+      "domestic_social_spending_capacity",
+      "fiscal_deficit_constraint",
+      "geopolitical_rival_states"
     ]
   },
   "perspectives": [
@@ -31,18 +32,27 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Rival State Security Dilemma",
+      "comment": "PERSPECTIVE 1: RIVAL STATE / SECURITY DILEMMA (SNARE) — Cannot exit the arms escalation spiral without unilateral vulnerability. The structure of mutual deterrence creates a prisoner's dilemma where extraction occurs through forced military expenditure and capability matching. Each state is a victim of the system's logic, unable to exit without accepting strategic disadvantage."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "The Fiscal Constraint Victim",
-      "comment": "PERSPECTIVE 1: FISCAL SUSTAINABILITY (SNARE) \u2014 Cannot exit the military spending framework; bears full opportunity cost. Every dollar allocated to military spending is unavailable for infrastructure, education, healthcare. Powerless agents (low-income citizens, future generations) have no mechanism to redirect spending. The constraint extracts through budget lock-in and political asymmetry."
+      "label": "Domestic Social Spending Capacity",
+      "comment": "PERSPECTIVE 2: DOMESTIC SOCIAL SPENDING / FISCAL CROWDING OUT (SNARE) — Trapped by budget scarcity. Military justification framework locks spending levels through path dependency (existing contracts, base locations, workforce), preventing reallocation to healthcare, education, infrastructure. Generational time horizon reveals that children born today inherit constrained social investment as structural fact of US fiscal architecture."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "moderate",
-      "time_horizon": "generational",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Taxpayer Base",
-      "comment": "PERSPECTIVE 2: TAXPAYER BASE (TANGLED ROPE) \u2014 Faces genuine security coordination benefits (deterrence, power projection capacity) alongside asymmetric extraction (tax burden, opportunity cost). Constrained by political mobilization barriers and information asymmetry. Some capacity to organize (voting, advocacy) but structural barriers prevent effective exit or reallocation."
+      "label": "Congress and Executive Authority",
+      "comment": "PERSPECTIVE 3: CONGRESS / EXECUTIVE (TANGLED ROPE) — Organized institutional actors. Genuine coordination function: military readiness is a legitimate public good. But constrained by information asymmetry (DoD budget complexity exceeds legislative oversight capacity), lobbying pressure, and electoral incentives (military spending concentrated in key districts). Experiences both coordination benefit (deterrence function) and constraint (cannot reduce without appearing weak)."
     },
     {
       "classification_type": "rope",
@@ -50,17 +60,17 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Defense Contractor Network",
-      "comment": "PERSPECTIVE 3: DEFENSE INDUSTRIAL COMPLEX (ROPE) \u2014 Experiences the constraint as pure coordination: government demand creates stable, predictable revenue. Sole source contracts, cost-plus pricing, and revolving-door personnel flow create arbitrage opportunities. Net beneficiary. The coordination function is real (procurement efficiency, supply chain stability) but extraction runs entirely toward this agent."
+      "label": "Defense Contractors and Military Industrial Complex",
+      "comment": "PERSPECTIVE 4: DEFENSE CONTRACTORS (ROPE) — Institutional beneficiaries with arbitrage options. Experience the constraint as pure coordination: military demand creates stable, profitable markets with high barriers to entry. Contract concentration, geographic distribution across congressional districts, and technological lock-in create structural coupling that makes exit costly for contractors and politically costly for legislators. Net beneficiary — extraction flows toward this actor."
     },
     {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
+      "classification_type": "rope",
+      "agent_power": "institutional",
       "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Defense Budget Reformers",
-      "comment": "PERSPECTIVE 4: DEFENSE BUDGET REFORMERS (SCAFFOLD) \u2014 Organized advocates (think tanks, Congress members, audit bodies) see military spending as a temporary coordination failure with a sunset: acquisition reform, competitive bidding, performance auditing, and base closure rounds represent exit pathways. Theater is high (bipartisan military-support rhetoric), but organized agents perceive actionable alternatives. Sunset logic assumes reform can reduce extraction component while maintaining coordination function."
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Strategic Alliance Partners",
+      "comment": "PERSPECTIVE 5: STRATEGIC ALLIANCE PARTNERS (ROPE) — NATO allies, Japan, South Korea, and other partners benefit from US force projection and security umbrella. Experience the constraint as beneficial coordination: US military capacity enables extended deterrence and alliance stability. Exit options are mobile but costly (would require independent military buildup). Net beneficiary — the justification framework sustains alliance commitments that benefit these actors."
     },
     {
       "classification_type": "piton",
@@ -68,156 +78,146 @@
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Cold War Institutional Legacy",
-      "comment": "PERSPECTIVE 5: COLD WAR INSTITUTIONAL LEGACY (PITON) \u2014 The justification framework persists through institutional inertia despite its primary rationale (Soviet containment) having evaporated three decades ago. Military spending levels are maintained through performative threat narratives and theater (China threat, terrorism, near-peer competition) rather than through genuine strategic necessity calculation. The institutional system itself has become the primary customer of threat narratives."
-    },
-    {
-      "classification_type": "mountain",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer (Natural Law View)",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, military spending may appear as an immutable requirement: great power competition creates a security dilemma where no state can unilaterally reduce military expenditure without accepting dominance risk. This perspective naturalizes military spending as a structural law of geopolitics. However, the structural data contradicts this \u2014 US military spending (3.5% of GDP, 40% of global military expenditure) dramatically exceeds peer competitor levels and historical deterrence thresholds, suggesting the mountain classification conceals a contingent institutional arrangement rather than a natural law."
+      "label": "Cold War Security Justification Apparatus",
+      "comment": "PERSPECTIVE 6: COLD WAR INSTITUTIONAL RESIDUE (PITON) — The post-Cold War security apparatus maintains many structural features designed for a threat that no longer exists at Cold War intensity. Theater ratio (0.68) reflects that substantial portion of justification discourse (NATO expansion prevention, containment logic, regional great-power competition) persists through institutional inertia rather than direct functional necessity. The apparatus continues because alternatives haven't fully replaced it and because beneficiaries resist change, not because the original threat persists at Cold War scale."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "institutional",
+      "agent_power": "analytical",
       "time_horizon": "generational",
-      "exit_options": "constrained",
+      "exit_options": "analytical",
       "spatial_scope": "global",
-      "label": "The Military Leadership Hierarchy",
-      "comment": "PERSPECTIVE 7: MILITARY LEADERSHIP (TANGLED ROPE) \u2014 Institutional actor with genuine coordination function (deterrence, readiness, force projection) alongside extraction (budget maximization, institutional autonomy, personnel incentives). Constrained exit due to civil-military norms and statutory requirements. Leadership benefits from spending growth but also genuinely coordinates national defense. Differs from defense contractor perspective through alignment with public institutions rather than profit maximization."
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / STRATEGIC NECESSITY VIEW (TANGLED ROPE) — From a cross-position analytical frame, the constraint is genuinely hybrid. Legitimate deterrence and alliance coordination functions coexist with extractive lock-in, institutional momentum, and budget inflation driven by supplier lobbying rather than threat-based strategic logic. The 0.58 extractiveness reflects this hybridity: real coordination benefits (genuine, not performative) combined with real asymmetric extraction (contractors, military hierarchy benefit disproportionately from justification opacity)."
     }
   ],
   "omegas": [
     {
-      "id": "threat_assessment_objectivity",
-      "question": "To what degree do measured threat levels reflect independent geopolitical reality versus institutional preference for high spending?",
-      "resolution_mechanism": "Comparative threat assessment analysis: contrast US threat estimates with allied nations' estimates and historical threat accuracy; examine whether threat assessments correlate with spending decisions or precede them",
-      "impact": "If threats are objective: military spending constraint is genuine security coordination (shifts snare perspectives toward rope). If threats are endogenous to institutional preference: constraint is primarily extractive (confirms snare/tangled rope classifications).",
+      "id": "threat_inflation_mechanism",
+      "question": "How much of military spending growth is driven by genuine threat escalation versus institutional and contractor pressure to justify existing capacity?",
+      "resolution_mechanism": "Comparative analysis of threat indicators (rival military capability growth, geographic proximity, demonstrated hostile intent) versus budget growth trajectories and budget justification language over 20-year periods",
+      "impact": "If threat-driven: extractiveness should be lower (0.35-0.45) because spending reflects genuine security needs. If pressure-driven: extractiveness should be higher (0.65-0.75) because institutional actors are manufacturing threat narratives to justify spending.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether threat assessments are objective or endogenous to institutional spending preferences"
+      "description": "Degree to which spending growth reflects genuine threat escalation vs institutional pressure"
     },
     {
-      "id": "deterrence_threshold_ambiguity",
-      "question": "What is the minimum military spending level that maintains credible deterrence and great power status?",
-      "resolution_mechanism": "Historical analysis of deterrence failures and successes correlated with spending ratios; peer comparison (NATO, China, Russia spending as percentage of GDP and absolute terms); modeling of force sufficiency thresholds",
-      "impact": "If threshold is high (current US levels): spending is necessary (rope). If threshold is much lower (2-2.5% GDP): extraction is substantial (snare/tangled rope confirmed). If threshold is ambiguous: theater ratio dominates classification.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "The minimum spending level required for credible deterrence and great power status"
-    },
-    {
-      "id": "domestic_opportunity_cost_measurability",
-      "question": "Can the counterfactual domestic investments (healthcare, infrastructure, education) from reallocated military spending be accurately modeled, or is the opportunity cost fundamentally unmeasurable?",
-      "resolution_mechanism": "Economic modeling of alternative spending allocation scenarios; comparison with allied nations' spending prioritization patterns; historical analysis of periods where military spending declined",
-      "impact": "If measurable: victim classification is precise, snare features are clearly documentable. If unmeasurable: extraction is difficult to quantify, enabling plausible deniability and higher theater ratio.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether domestic opportunity cost from military spending reallocation is measurable"
-    },
-    {
-      "id": "revolving_door_causality",
-      "question": "Do military-industry personnel flows (contractors hiring former Pentagon officials, senators protecting district bases) constitute genuine coordination or institutional capture mechanism?",
-      "resolution_mechanism": "Network analysis of personnel flows; correlation between post-government industry positions and Pentagon policy decisions; comparison with sectors lacking this flow (education, healthcare)",
-      "impact": "If coordination: defense contractor perspective is accurately rope. If capture: defense contractor perspective should be snare or piton (institution colonized). Affects directionality and f(d) computation.",
+      "id": "deficit_crowding_out_magnitude",
+      "question": "What is the true fiscal opportunity cost of military spending in terms of foregone domestic investment?",
+      "resolution_mechanism": "Counterfactual analysis using historical periods of lower military spending; comparative international analysis of military spending ratios and domestic investment outcomes; econometric modeling of substitution elasticity",
+      "impact": "If crowding-out is severe (e.g., 1:1 substitution): suppression metric should increase to 0.75+ because military spending directly prevents social investment. If partial (e.g., 0.3:1): suppression should decrease to 0.50 because budget choices are partly constrained by other factors.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether military-industry revolving door is coordination or capture mechanism"
+      "description": "Fiscal substitution rate between military and domestic spending"
     },
     {
-      "id": "reform_sunset_feasibility",
-      "question": "Is the scaffold perspective's sunset logic (acquisition reform, performance auditing) structurally feasible, or are institutional lock-in mechanisms sufficiently strong to prevent meaningful extraction reduction?",
-      "resolution_mechanism": "Historical analysis of defense reform attempts (PPBS, RFP reforms, base closure commissions) and their outcomes; identification of institutional mechanisms that have reversed or reversed-pending reforms",
-      "impact": "If reform is feasible: scaffold classification is correct, extraction component is reducible. If lock-in is total: scaffold is aspirational, constraint remains snare/tangled rope. Affects mandatrophy analysis.",
+      "id": "technological_lock_in_reversibility",
+      "question": "How reversible are the technological and geographic commitments that create path dependency in military spending?",
+      "resolution_mechanism": "Historical case analysis of attempted major reductions (Base Realignment and Closure, strategic force structure changes); cost and timeline estimates for capability transition; identification of irreversible infrastructure and training investments",
+      "impact": "If largely irreversible: lock-in is a genuine structural feature and suppression remains high. If reversible over 5-10 years: suppression should decrease to 0.45 because the constraint is institutional inertia rather than sunk-cost trap.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether defense acquisition reform can structurally reduce extraction component"
+      "description": "Reversibility of technological and geographic commitments in military spending"
+    },
+    {
+      "id": "deterrence_function_sufficiency",
+      "question": "What minimum level of military spending maintains effective deterrence versus sufficient-but-not-necessary levels?",
+      "resolution_mechanism": "Game-theoretic modeling of deterrence thresholds; comparative analysis with peer NATO allies; strategic stability analysis under different spending scenarios; historical comparison with Cold War deterrence stability at lower spending ratios",
+      "impact": "If current spending is near minimum necessary: claimed tangled_rope is correct and extractiveness reflects genuine coordination plus modest extraction overhead. If current spending exceeds minimum by 20%+ margin: extractiveness should increase to 0.68+ because extraction component dominates.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Minimum military spending required for effective deterrence"
+    },
+    {
+      "id": "information_asymmetry_scope",
+      "question": "How complete is congressional oversight of military spending justifications, and how much is based on executive assessment versus independent verification?",
+      "resolution_mechanism": "Analysis of Congressional Budget Office and Government Accountability Office reports; documentation of classified vs publicly available budget justifications; audit findings on contractor compliance and cost overruns",
+      "impact": "If asymmetry is high (>60% classified or unaudited): suppression should increase to 0.70+ because information barriers enable extraction. If asymmetry is low (<20%): suppression should decrease to 0.50 because transparency enables accountability.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Degree of information asymmetry in military spending oversight"
     }
   ],
   "measurements": [
     {
-      "metric": "theater_ratio",
-      "time_point": 1991,
-      "value": 0.38
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2001,
-      "value": 0.52
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2011,
-      "value": 0.62
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 2024,
-      "value": 0.68
-    },
-    {
       "metric": "base_extractiveness",
-      "time_point": 1991,
+      "time_point": 0,
       "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2001,
-      "value": 0.45
+      "time_point": 15,
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2011,
-      "value": 0.52
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2024,
+      "time_point": 30,
       "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.62
     }
   ],
   "interval": {
     "start": 1991,
-    "end": 2024
+    "end": 2021
   },
   "commentary": {
-    "narrative_context": "The US military spending justification framework represents a structural constraint that coordinates genuine national security functions (deterrence, force projection, alliance commitments) while simultaneously enabling substantial extraction through budget lock-in, institutional momentum, and asymmetric information. The constraint exhibits tangled rope characteristics: real coordination benefits coexist with extractive asymmetry. Beneficiaries (defense contractors, military leadership) experience the constraint as pure coordination; victims (fiscal sustainability, displaced domestic programs) experience it as pure extraction. The framework's theater ratio (0.68) reflects high performative content: threat narratives are continuously regenerated and updated post-hoc to justify existing spending levels rather than preceding spending decisions. The empirical puzzle is whether military spending reflects objective geopolitical necessity or institutional preference amplified through information asymmetry and organized beneficiary pressure. The cold war institutional legacy perspective suggests spending levels persist through inertia despite the primary rationale (Soviet containment) having evaporated; the natural law perspective risks naturalizing as immutable security requirement what may be a contingent institutional arrangement.",
+    "narrative_context": "The US military spending justification framework represents a constraint that genuinely coordinates legitimate security functions while simultaneously enabling substantial extraction through budget lock-in, information asymmetry, and institutional momentum. The constraint emerged from Cold War deterrence logic and persists through path dependency, geographic dispersion of military spending across congressional districts, and technological commitments that create irreversible infrastructure. The framework exhibits the core tangled_rope signature: real coordination benefits (deterrence, alliance stability, force projection capacity) coexist with real asymmetric extraction (contractors capture rents, military institutional hierarchy resists oversight, civilians lose fiscal capacity for social investment). The rising theater ratio (0.42 → 0.68) over the 1991-2021 interval reflects increasing performativity of threat narratives to justify spending levels that exceed Cold War-era deterrence minimums. The extractiveness growth (0.35 → 0.58) reflects the constraint's shift from genuine necessity (post-Cold War force realignment) toward institutional momentum and supplier pressure (sustained 3-4% of GDP military spending despite absence of peer military threat). Suppression increased (0.48 → 0.62) as information asymmetry deepened—classified budgets, contractor lobbying opacity, and Congressional expertise deficit created conditions for extraction hidden behind security classification.",
     "key_agents": [
-      "Defense Industrial Complex: Primary beneficiary (institutional/arbitrage) \u2014 sole-source contracts, cost-plus pricing, recurring revenue streams create arbitrage opportunities; experiences constraint as pure coordination",
-      "Military Leadership: Institutional beneficiary (institutional/constrained) \u2014 genuine coordination function (deterrence, readiness) but also benefits from budget maximization and institutional autonomy",
-      "Geopolitical Dominance States: Secondary beneficiary (institutional/arbitrage) \u2014 benefits from US military spending enabling global power projection and alliance dominance",
-      "Fiscal Sustainability: Primary victim (powerless/trapped) \u2014 abstract constraint that cannot organize; bears full opportunity cost through budget crowding",
-      "Domestic Social Programs: Primary victim (powerless/trapped) \u2014 infrastructure, education, healthcare programs face chronic underfunding relative to military spending; no exit or reallocation mechanism",
-      "Non-military Technological Innovation: Secondary victim (moderate/constrained) \u2014 loses talent pool and investment capital to defense sector; faces barriers to redirecting research funding",
-      "Taxpayer Base: Secondary victim (moderate/constrained) \u2014 bears tax burden and opportunity cost; some capacity to organize (voting, advocacy) but structural barriers prevent effective reallocation",
-      "Defense Budget Reformers: Organized advocates (organized/constrained) \u2014 perceive alternative institutional pathways (acquisition reform, competitive bidding) but face entrenched resistance",
-      "Cold War Institutional Legacy: Institutional momentum mechanism (institutional/arbitrage) \u2014 justification framework persists through inertia; generates threat narratives endogenously to sustain spending"
+      "Defense Contractors: Primary beneficiary (institutional/arbitrage) — Lockheed Martin, Boeing, Raytheon, General Dynamics. Capture rents through cost-plus contracts, technological lock-in, and geographic distribution across congressional districts. Structural coupling through campaign contributions, revolving-door employment.",
+      "Military Institutional Hierarchy: Secondary beneficiary (institutional/arbitrage) — Joint Chiefs, combatant commands, service branches. Benefits from budget lock-in, personnel growth, organizational prestige, and budget primacy. Resists civilian oversight and competitive alternatives.",
+      "Strategic Alliance Partners: Tertiary beneficiary (institutional/mobile) — NATO allies, Japan, South Korea, Taiwan. Benefit from extended deterrence and force projection capacity. Receive implicit security guarantee funded by US taxpayers.",
+      "Congress and Executive Authority: Organized victim (organized/constrained) — Trapped between legitimate security needs, lobbying pressure, and electoral incentives (military spending concentrated in key districts). Subject to information asymmetry from DoD.",
+      "Domestic Social Spending Capacity: Primary victim (powerless/trapped) — Abstract victim. Healthcare, education, infrastructure, climate adaptation suffer from fiscal crowding out. No institutional advocate; cannot organize or exit.",
+      "Fiscal Deficit and Economic Stability: Systemic victim (analytical/trapped) — Structural constraint on long-term fiscal sustainability. Military spending contributes to deficit accumulation and constrains future policy flexibility.",
+      "Geopolitical Rival States: Prisoner's Dilemma victim (powerless/trapped) — China, Russia face security dilemma logic: US military spending triggers escalation response, forcing costly counter-spending. Trapped in arms race spiral despite mutual long-term welfare loss.",
+      "Taxpaying Public: Diffuse victim (powerless/constrained) — Citizens bear fiscal cost through taxation or inflation; lack detailed knowledge of budget allocations; face information asymmetry and suppression of alternatives discussion."
     ],
-    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint exhibits genuine coordination function (deterrence capability, alliance architecture) estimated at approximately 0.25-0.30 of total spending; the remaining 0.28-0.33 represents extraction through budget lock-in, institutional momentum, and information asymmetry. The US military spending level (3.5% of GDP, ~$800B annually) is 10x+ the level of major peer competitors on a per-capita basis and far exceeds historical deterrence thresholds. This gap between coordination necessity and actual spending suggests substantial extractive component. Suppression (0.65): High. Barriers to reallocation include: congressional district dependence (military bases and contractors distributed across all states), revolving-door institutional capture (military-industry personnel flows), classification barriers (threat assessment opacity), and bipartisan military support norms that suppress debate. Information asymmetry is substantial \u2014 cost-plus contracting and classified threat assessments prevent transparent counterfactual comparison. Theater ratio (0.68): High and increasing over the measurement interval. Threat narratives (Cold War containment \u2192 terrorism \u2192 China threat \u2192 near-peer competition) are continuously updated post-hoc to justify existing spending rather than preceding budget decisions. The performance of threat identification appears endogenous to institutional preference for maintaining spending levels. The trajectory (0.38 \u2192 0.68) reflects declining fit between justification narratives and actual spending levels \u2014 higher theater required to sustain the same extraction as Soviet threat evaporated.",
-    "perspectival_gap": "Maximal gap between beneficiary (rope at d \u2248 0.10) and victim (snare at d \u2248 0.95). The same institutional arrangement is experienced as pure coordination by defense contractors and as pure extraction by domestic programs competing for fiscal resources. The reformer (scaffold) perspective splits the difference, perceiving both coordination and extraction but believing the extraction component is reducible through institutional reform. The piton perspective correctly identifies that much of the justification is performative (theater ratio 0.68) but remains locked in through institutional inertia. The analytical observer perspective risks false naturalization \u2014 treating contingent institutional spending levels as immutable laws of geopolitics.",
-    "directionality_logic": "Directionality (d) is determined by structural position relative to the extraction flow. Defense contractors: beneficiaries with arbitrage exit \u2192 d \u2248 0.05-0.15, producing negative \u03c7 (they benefit). Military leadership: institutional beneficiaries with constrained exit \u2192 d \u2248 0.20-0.30 (genuine coordination mixed with benefit). Taxpayers: secondary victims with constrained exit (can advocate but cannot force reallocation) \u2192 d \u2248 0.70, producing high \u03c7. Fiscal sustainability: powerless victim with trapped exit \u2192 d \u2248 0.95, producing maximum \u03c7. The reformers: organized agents with constrained exit but perceiving alternative pathways \u2192 d \u2248 0.45-0.55 (mixed experience). The piton perspective: institutional actors maintaining legacy arrangements through arbitrage \u2192 d \u2248 0.10-0.20 (beneficiaries of inertia). The natural law perspective: analytical context treating spending as structural necessity \u2192 canonical d \u2248 0.73 (but this is a false summit \u2014 the structural data shows contingent institutional arrangement).",
-    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The constraint is validly classified as tangled rope because: (1) genuine coordination function exists \u2014 US military capacity does deter aggression and enable alliance architecture, estimated at 0.25-0.30 of total spending; (2) asymmetric extraction documented \u2014 defense contractor profits, budget lock-in, opportunity cost concentration on powerless agents; (3) active enforcement required \u2014 continuous threat narratives and institutional mechanisms maintain the constraint. The mandatrophy is resolved by recognizing that the coordination and extraction components are structurally inseparable: the bureaucratic mechanisms that enable deterrence coordination (acquisition authority, force planning, classified threat assessment) are precisely the mechanisms that enable extraction (cost-plus pricing, constituency protection, information opacity). The constraint cannot be decomposed into separate coordination and extraction constraints because the institutional machinery does both simultaneously. The reform pathways (scaffold perspective) assume decomposition is possible \u2014 that acquisition reform can preserve coordination while reducing extraction \u2014 but historical evidence (PPBS, competition initiatives, base closure attempts) suggests the institutional coupling is stronger than assumed. The mandatrophy blocks mislabeling this as pure coordination (rope) while remaining honest about the genuine coordination function."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint exhibits genuine coordination benefits—deterrence is real, alliance commitments are substantive, force projection capacity delivers strategic value. But extractiveness has grown from 0.35 (1991, genuine post-Cold War restructuring) to 0.58 (2021, institutional momentum dominates) because: (1) threat environment did not escalate proportionally to spending growth (Cold War competitor USSR is gone; China and Russia present different threat profiles not requiring 1990s force structure), (2) contractor influence expanded through campaign finance and revolving-door employment, (3) information asymmetry deepened as budgets became more opaque and complex, (4) geographic dispersion locked spending into congressional incentives independent of strategic necessity. Suppression (0.62): Moderate-high. Real suppressive mechanisms include: (1) information asymmetry—classified budgets prevent public assessment of necessity and efficiency, (2) organizational complexity—DoD budget exceeds Congressional expertise capacity, creating dependency on executive briefings, (3) path dependency—existing contracts and bases create sunk costs that make reductions politically costly, (4) geographic lock-in—military spending distributed across all 50 states and most congressional districts creates constituency support independent of strategic logic, (5) ideology capture—post-Cold War security narrative ('forward defense,' 'global great power competition') frames spending as natural necessity rather than contingent choice. Theater ratio (0.68): High and rising. Performative elements include: (1) threat inflation in justification documents (China strategic competition narrative emerged gradually despite slow military modernization in 1990s-2000s), (2) rhetorical coupling of military spending to diverse goods (terrorism, climate, pandemic) disconnected from actual doctrine, (3) technological demonstration as necessity (expensive platforms justified by vendor capability rather than strategic requirement), (4) Cold War institutional language persisting post-Cold War (NATO expansion prevention framing despite absence of Soviet threat). The rising trajectory reflects increasing performativity—1991 spending cuts reflected genuine force restructuring; 2021 spending stability reflects institutional inertia and justification theater rather than strategic logic.",
+    "perspectival_gap": "This constraint reveals a fundamental perspectival gap between beneficiary and victim perspectives. The defense contractor (institutional/arbitrage) experiences pure coordination—their survival depends on military demand, so the constraint appears as a legitimate market signal. Congress (organized/constrained) experiences tangled rope—they perceive genuine deterrence needs but face pressure and information asymmetry that prevent rational assessment. Rival states (powerless/trapped) experience snare—they are locked into matching military capacity regardless of cost or preference. Domestic social spending (powerless/trapped) experiences snare—fiscal scarcity is presented as natural constraint rather than policy choice. The strategic alliance partner (institutional/mobile) experiences rope—they benefit from deterrence coordination without bearing spending cost. The analytical observer sees tangled rope—genuine coordination plus extraction are both real, not competing narratives. The key perspectival disagreement is over whether current spending reflects genuine deterrence needs (would support lower extractiveness, ~0.35-0.45) or institutional momentum (would support higher extractiveness, ~0.65-0.75). The measured value (0.58) represents the analytical assessment that both drivers operate simultaneously.",
+    "directionality_logic": "Directionality derivation from beneficiary/victim structure: Defense contractors are declared beneficiaries with institutional power and arbitrage exit options. Automatic derivation assigns d ≈ 0.05-0.15 (full beneficiary with exit → low directionality, they pull extraction toward themselves). Military hierarchy is institutional beneficiary, less mobile → d ≈ 0.20. Congress is organized victim and organized authority (constrained exit) → d ≈ 0.48. Domestic social spending is powerless victim with trapped exit → d ≈ 0.95. These heterogeneous d values reflect the constraint's asymmetry: extraction flows strongly toward contractors and military hierarchy, moderately toward Congress, catastrophically away from civilian social investment. The f(d) sigmoid transforms these d values into experienced extractiveness multipliers. At d=0.05 (beneficiary), f(d) ≈ -0.12 (extraction subsidizes the agent). At d=0.95 (powerless victim), f(d) ≈ 1.42 (extraction is multiplied by 1.42 relative to baseline ε). The scope modifier σ(S) for national scope is 1.0 (no dampening or amplification), so χ = ε × f(d) × 1.0 produces: contractors experience χ ≈ 0.58 × (-0.12) ≈ -0.07 (negative, they are subsidized); powerless victims experience χ ≈ 0.58 × 1.42 ≈ 0.82 (high extraction). This directionality structure explains the perspectival gap: beneficiaries see negative extraction (they are funded); victims see high extraction (they are depleted). No directionality overrides are required—the structural declaration (beneficiaries + arbitrage, victims + trapped) produces the correct d derivation automatically.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the mandatrophy by documenting that tangled_rope is the correct classification at extractiveness 0.58. The mandatrophy asks: is this coordination (rope) or extraction (snare)? Answer: it is both. The coordination function is genuine—deterrence, alliance commitment, and force projection deliver real security benefits. The extraction component is also genuine—contractors, military hierarchy, and institutional momentum enable rents, budget lock-in, and suppression of alternatives that would benefit domestic social investment. The omegas document the irreducible empirical uncertainties that prevent collapsing this to either pure type: (1) threat inflation mechanism determines whether spending reflects genuine necessity or institutional pressure, (2) deterrence function sufficiency determines the baseline ε value below which all spending is extractive excess, (3) information asymmetry scope determines how much suppression reflects legitimate classification versus enabled extraction. If threat inflation is high and deterrence sufficiency is low, extractiveness should increase toward 0.70+ (snare territory). If threat inflation is low and deterrence sufficiency is high, extractiveness should decrease toward 0.40 (rope territory). The current measurement (0.58) reflects moderate threat inflation (Cold War is gone; China threat is real but slower-growing than spending growth) and moderate deterrence sufficiency (current spending exceeds minimum necessary by estimated 15-25% margin based on alliance peer comparisons). The tangled_rope classification is stable under current uncertainty bounds. The theater ratio (0.68) and rising extractiveness trajectory (0.35 → 0.58) confirm the constraint is drifting toward snare; the coordination component is real but eroding as institutional momentum dominates. The mandatrophy is resolved by acknowledging both functions are real, measuring their relative magnitudes empirically, and accepting that the classification depends on those empirical facts."
   },
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism",
-    "boltzmann_floor_override": 0.25
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
   },
   "network": {
     "affects_constraints": [
-      "nato_burden_sharing",
-      "defense_contractor_monopoly",
-      "threat_assessment_classification",
-      "domestic_infrastructure_underfunding"
+      "us_deficit_fiscal_constraint",
+      "nato_alliance_stability",
+      "arms_race_escalation_spiral",
+      "defense_contractor_rent_seeking"
     ],
-    "dual_formulation_note": "The military spending justification is upstream of specific weapons procurement constraints (F-35, carrier programs, nuclear modernization) and downstream of broader geopolitical constraints (great power competition, alliance architecture). Separate constraint stories model the specific procurement bubbles and the geopolitical drivers; this story captures the justification framework that connects them."
+    "dual_formulation_note": "US military spending justification framework has upstream dependency on geopolitical threat assessment (constraint family: us_china_strategic_competition, russia_deterrence_posture) and downstream effects on fiscal policy (us_deficit_fiscal_constraint), alliance management (nato_alliance_stability), and competitor military spending (arms_race_escalation_spiral). Decomposition note: the genuine deterrence coordination function and the extractive lock-in are separate structurally distinct constraints that could be modeled separately (deterrence_capability_coordination ε≈0.25 vs military_budget_lock_in ε≈0.68), but they are deeply coupled in implementation—military personnel, platforms, and bases serve both functions simultaneously—making decomposition impractical. The tangled_rope classification reflects this structural coupling."
   },
-  "directionality_overrides": [
-    {
-      "power_atom": "institutional",
-      "d_value": 0.18
-    }
-  ]
+  "directionality_overrides": []
 }

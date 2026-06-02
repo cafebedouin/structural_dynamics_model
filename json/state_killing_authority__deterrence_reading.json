@@ -1,0 +1,253 @@
+{
+  "header": {
+    "constraint_id": "state_killing_authority__deterrence_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "state_kill_deter",
+    "story_uid": "f2c00851-8982-45b1-a949-6a3c570091df"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "State Killing Authority (Deterrence Reading)",
+    "topic_domain": "criminal_justice/legal_philosophy/political_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "potential_crime_victims",
+      "society_aggregate_safety"
+    ],
+    "victims": [
+      "condemned_person",
+      "condemned_person_family"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Condemned Person (No Exit)",
+      "comment": "PERSPECTIVE 1: CONDEMNED PERSON (SNARE) — Complete immobility. The condemned experiences execution as pure extraction — their life is the payment extracted to fund the deterrence hypothesis. No exit, no appeal to alternative reading, no say in whether the empirical claim (that their death deters others) is true. The state's instrumentalist reading of their death leaves them with zero agency. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Potential Crime Victims (Coordinated Safety Benefit)",
+      "comment": "PERSPECTIVE 2: POTENTIAL CRIME VICTIMS (TANGLED ROPE) — Mixed beneficiary and victim status. They benefit from the coordination function (execution is framed as part of crime-control infrastructure) and from the deterrent effect if it exists. But they are also potentially harmed if the deterrence claim is false — their safety is purchased with an innocent person's execution if the causal mechanism fails. Constrained exit because they bear distributed risk and cannot opt out of the deterrence regime without forsaking the safety coordination structure. Genuine coordination function (group safety) paired with asymmetric extraction (condemned person's life)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "State Authority (Legitimate Crime Prevention Mandate)",
+      "comment": "PERSPECTIVE 3: STATE AUTHORITY (ROPE) — Institutional beneficiary with full arbitrage capacity. The state derives authority from the instrumental mandate: execution is legitimate precisely because it is framed as crime prevention, not desert. The state sees the constraint as pure coordination — allocating the condemned's death efficiently toward the social good of deterrence. No suppression experienced; the framework is accepted as legitimate by institutional actors. Low theater because the state's own reasoning is internally consistent (even if empirically contestable)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "powerful",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Historical Deterrence Doctrine (Degraded Mechanism)",
+      "comment": "PERSPECTIVE 4: HISTORICAL DETERRENCE DOCTRINE (PITON) — At civilizational scale, the deterrence reading of capital punishment has degraded into performance of authority rather than functional crime control. Empirical evidence does not support deterrent efficacy beyond (or even equal to) imprisonment. The doctrine persists through institutional inertia and theatrical authority assertion, not because it works. Theater ratio high (0.58) reflects that execution continues to be staged as a crime-deterring act despite weak evidence of deterrent effect. The constraint maintains itself through narrative and institutional momentum rather than empirical validation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytic Natural Law View (Unavoidable Tradeoff)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, some societies may see punishment severity as an inherent necessity for deterrence, with execution as a natural limit imposed by the requirement to protect society. This perspective views the deterrence mechanism as an immutable property of rational crime control. However, this risks naturalizing what is actually a contestable empirical and normative claim about criminal psychology and deterrence. The engine's false-summit detector will flag this as a naturalization of a contingent institutional arrangement."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Abolitionist Coalition (Alternative Coordination)",
+      "comment": "PERSPECTIVE 6: ABOLITIONIST COALITION (TANGLED ROPE / SCAFFOLD NEIGHBOR) — Organized agents see execution as a failed coordination mechanism that persists through enforcement rather than through genuine crime-reduction function. They perceive genuine coordination in alternative systems (life imprisonment, rehabilitation-focused regimes) that achieve crime prevention without extraction. This reading trades the deterrence benefit (assumed zero or negative) for a coordination mechanism that does not require the condemned's death. Constrained because the current regime is institutionally entrenched, but they have exit path and alternative regime to point to."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "deterrence_efficacy_empirical",
+      "question": "Does execution actually deter crime beyond the deterrent effect of long imprisonment?",
+      "resolution_mechanism": "Systematic meta-analysis of criminological studies; cross-national comparison of execution vs. non-execution jurisdictions controlling for socioeconomic factors, policing intensity, and conviction certainty; time-series analysis of crime rates following execution moratoria",
+      "impact": "If deterrence is zero or negative (crimes do not decrease with execution): the state killing authority loses its instrumental legitimacy in this reading. The condemned person's death becomes pure extraction with no coordination benefit. Snare classification expands to society perspective. Abolitionist reading forecloses this reading. If deterrence is substantial (statistically significant crime reduction): the deterrence reading maintains Rope classification for state and Tangled Rope for potential victims. Abolitionist reading coexists but with weakened normative force.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether execution deters crime beyond imprisonment"
+    },
+    {
+      "id": "innocent_execution_risk_integration",
+      "question": "How does the risk of executing innocent persons integrate into the expected utility calculation of the deterrence reading?",
+      "resolution_mechanism": "Quantification of false-conviction rate; modeling of expected harm (executing innocent) vs. expected benefit (crimes prevented via deterrence); sensitivity analysis showing at what error rate the deterrence benefit disappears",
+      "impact": "If innocent execution risk is systematically excluded from the deterrence calculus (current practice): the framework is empirically incomplete. The condemned person's perspective as snare reflects this omission — their death counts toward deterrence benefit but potential innocence does not reduce it. If innocent risk is integrated: deterrence benefit must be large enough to offset the harm of wrongful execution. Small deterrence effects become insufficient to justify the constraint. The boundary between Tangled Rope and Snare shifts.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Role of false-conviction risk in deterrence calculation"
+    },
+    {
+      "id": "kernel_deterrence_vs_retribution_foreclosure",
+      "question": "Do the deterrence reading and retributive reading logically foreclose each other, or do they coexist as distinct normative frameworks?",
+      "resolution_mechanism": "Philosophical analysis of whether instrumentalist and retributive authority grounding can coexist in a single legal framework; empirical analysis of jurisdictions that cite both deterrence and desert in execution decisions",
+      "impact": "If foreclosure holds: one reading rules the other out, and the kernel has a binary structure. If coexistence holds: both readings can be live within different legal traditions or even within a single jurisdiction's mixed reasoning. This affects the cs_structure.reading_relations field and the narrative structure of the constraint family.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether deterrence and retribution logically foreclose each other"
+    },
+    {
+      "id": "reading_under_empirical_contestation",
+      "question": "As empirical evidence against deterrence accumulates (current state: meta-analyses show weak or zero effect), how does the deterrence reading maintain its legitimacy claim?",
+      "resolution_mechanism": "Analysis of how legal institutions respond to null empirical findings: do they retrench, shift to alternative justifications (e.g., retribution, incapacitation), or discard the reading entirely? Tracking of jurisdiction-level abolition decisions following major null findings.",
+      "impact": "If retrenchment: the deterrence reading becomes increasingly performative (theater ratio rises). The Piton perspective becomes dominant. If shift to retribution: the deterrence reading effectively forecloses, and the retributive reading takes over as legitimizing framework. If abolition: the reading is empirically and normatively rejected, and execution authority dissolves (or shifts to alternative frames).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "How deterrence reading sustains itself under empirical doubt"
+    },
+    {
+      "id": "instrumental_vs_intrinsic_value_boundary",
+      "question": "Where is the boundary between instrumental justification (execution is legitimate because it deters) and intrinsic justification (execution is legitimate because it satisfies retributive or incapacitative needs regardless of deterrence)?",
+      "resolution_mechanism": "Analysis of legal precedent and statutory language; identification of jurisdictions using pure instrumental framing vs. mixed instrumental-intrinsic framing; historical tracking of shifts between justifications",
+      "impact": "If boundary is blurred (most jurisdictions cite multiple justifications): the deterrence reading is empirically under-determined. Failure of deterrence might not eliminate execution authority if other justifications stand. If boundary is sharp: the deterrence reading stands or falls with its empirical claim. This affects whether the reading is Rope (pure coordination) or Tangled Rope (mixed with extraction justified on other grounds).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Boundary between instrumental and intrinsic authority justification"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "theater_1970s"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.5,
+      "id_override": "theater_1995"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.58,
+      "id_override": "theater_2015"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48,
+      "id_override": "extract_1970s"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58,
+      "id_override": "extract_1995"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.62,
+      "id_override": "extract_2015"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.68,
+      "id_override": "suppress_1970s"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.7,
+      "id_override": "suppress_1995"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 40,
+      "value": 0.72,
+      "id_override": "suppress_2015"
+    }
+  ],
+  "interval": {
+    "start": 1972,
+    "end": 2015
+  },
+  "commentary": {
+    "narrative_context": "This constraint story represents ONE reading of the contested kernel: state killing authority. The deterrence reading grounds execution's legitimacy in instrumental crime prevention — the condemned person's death is justified because it deters potential criminals from committing capital offenses. This reading is distinct from retributive readings (which justify execution on grounds of desert, proportional punishment for moral guilt) and abolitionist readings (which deny the state's authority to kill regardless of function). The deterrence reading has been empirically and normatively contested since the 1970s. Meta-analytic criminology increasingly shows weak or null deterrent effects of execution beyond imprisonment. Yet the reading persists in many jurisdictions, increasingly as institutional theater rather than as empirically grounded policy. The constraint exhibits Tangled Rope structure from the beneficiary perspective (society gains crime-prevention coordination at the cost of asymmetric extraction from the condemned) and Snare structure from the condemned's perspective (complete immobility, no recognition as agent, death deployed instrumentally). The rising theater ratio (0.35 → 0.58 over 40 years) reflects degradation: as empirical support weakened, the constraint maintained itself through narrative authority assertion (the myth of deterrence) rather than through demonstrated causal effect. This is the diagnostic signature of a Piton — a constraint whose primary function has atrophied but which persists through institutional momentum.",
+    "key_agents": [
+      "Condemned Person: Primary victim (powerless/trapped) — bears full extraction; provides the death-as-deterrent; no exit, no agency, no recognition as agent within the deterrence calculus",
+      "Society / Potential Crime Victims: Primary beneficiary (moderate/constrained) — benefits from crime-prevention coordination; distributed risk if deterrence is false; constrained because they cannot opt out of regime",
+      "State Authority: Institutional beneficiary (institutional/arbitrage) — derives authority from crime-prevention mandate; experiences constraint as pure coordination; full arbitrage capacity to shift away from execution if political pressure mounts",
+      "Retributive Legal Tradition: Competing institutional actor — sees execution as legitimate on grounds of desert, not deterrence; creates conceptual space for execution authority to persist even if deterrence fails",
+      "Abolitionist Movement: Organized agents (organized/constrained) — see execution as failed coordination mechanism; point to alternative regimes (life imprisonment, rehabilitation) that achieve crime prevention without state killing",
+      "Criminological Research Community: Analytical observer — empirical findings increasingly contradict deterrence hypothesis; role in reducing legitimacy of the reading"
+    ],
+    "logic_rationale": "Extractiveness (0.62): Moderate-high. The condemned person's death is extracted and instrumentally deployed for social benefit (deterrence). The state claims this extraction is justified by its crime-prevention function. However, if deterrence is weak or absent, the extraction becomes unjustified — the condemned's death is taken for a benefit that does not materialize. The extractiveness value reflects the structural mechanism (state taking life for instrumental purpose) rather than its empirical validation. Rising trajectory (0.48 → 0.62) reflects increasing consciousness of the empirical gap — as deterrence effects weakened over 40 years, the constraint became more transparently extractive (the illusion of justified extraction fell away). Suppression (0.72): High. The condemned has zero exit options. Legal appeals are narrowly constrained. The condemned cannot refuse participation in the framework. No social recognition as an agent whose preferences matter. No opportunity to argue that their death is not producing the claimed deterrent effect. Public discourse is substantially suppressed — execution is typically carried out with limited media access, limited discussion of the condemned's perspective, limited acknowledgment of systemic errors or uncertainty. Theater ratio (0.58): Moderate-high. Executions are performed as justice, as crime prevention, as rational institutional action. The theatrical elements include formal judicial procedures that create appearance of careful deliberation, official narratives about crime prevention effects, and public messaging about safety. The theater has increased over time as the empirical basis weakened — more narrative effort is required to maintain legitimacy when evidence fails.",
+    "perspectival_gap": "The gap is maximal because the empirical claim (deterrence works) is systematically contested. If true, state and potential victims see Rope/Tangled Rope (justified coordination). If false, condemned and analysts see Snare (pure extraction). If empirically ambiguous (most current position), different stakeholders interpret the gap differently — state sees noise around a real effect (Rope remains), abolitionist sees null finding that disconfirms the reading (Snare is revealed). The gap is not a measurement problem but a constitutive feature of how the reading legitimizes itself. The reading stands or falls with its empirical claim.",
+    "directionality_logic": "The condemned's directionality is d ≈ 1.0 (full victim, powerless, trapped exit) — they experience maximum extraction f(1.0) ≈ 1.42. The state's directionality is d ≈ 0.05 (full beneficiary, institutional power, arbitrage exit) — they experience negative extraction f(0.05) ≈ -0.12. Society's directionality is mixed: d ≈ 0.50 for distributed risk from potential crime victims who benefit from coordination but bear risk if deterrence fails. The abolitionist coalition's directionality is d ≈ 0.75 (victims of the failed coordination mechanism, organized power, constrained exit) — they experience f(0.75) ≈ 1.15 because they are organizing against a regime that constrains their exit path to alternative coordination mechanisms. The derivation chain runs from beneficiary/victim status (condemned is victim, state is beneficiary) through exit options (trapped vs. arbitrage) to power level (powerless vs. institutional), producing the directionality values that feed chi.",
+    "kernel_context": "This constraint is the DETERRENCE READING of the contested kernel: state_killing_authority. The kernel is the stabilized commitment grounding execution — the authoritative claim about what makes state killing legitimate. Three major readings have contended for this kernel: (1) DETERRENCE READING (this file): execution is legitimate because it prevents crime through deterrent effect. (2) RETRIBUTIVE READING (sibling constraint): execution is legitimate because it proportionally punishes moral guilt and satisfies the desert principle — the condemned deserves death for their crime. (3) ABOLITION READING (sibling constraint): the state has no legitimate authority to kill; execution is illegitimate regardless of deterrence, desert, or any other functional claim. These readings have different structural properties, different victim sets, and different empirical vulnerabilities. The deterrence reading uniquely depends on a single empirical claim (deterrence exists) whose falsification directly undermines the legitimacy framework. The retributive reading stands or falls with normative commitments about desert and proportionality, which are not empirically falsifiable in the same way. The abolition reading is a normativity-first reading: it denies the state the authority to kill, making empirical effects irrelevant to legitimacy. Each reading instantiates a distinct constraint with its own ε, perspectives, and beneficiary/victim structure.",
+    "mandatrophy_analysis": "The deterrence reading avoids mandatrophy by explicitly grounding authority in an instrumental mechanism (deterrence) rather than claiming coordination without extraction. The reading acknowledges that execution is extraction (the condemned person's life is taken) and claims this extraction is justified by its deterrent function. The mandatrophy would arise if the reading claimed execution was pure coordination (Rope) while simultaneously extracting the condemned's life. Instead, the reading claims Tangled Rope: genuine coordination function (crime prevention) paired with asymmetric extraction (condemned's death). The vulnerability is that if the empirical claim fails (deterrence is null), the extraction becomes unjustified, and the constraint reclassifies to Snare. The reading is empirically falsifiable in a way the retributive reading is not. This empirical dependency makes the deterrence reading structurally fragile compared to the retributive reading, which depends on normative commitments rather than empirical validation."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "state_killing_authority__retributive_reading",
+      "state_killing_authority__abolition_reading"
+    ],
+    "dual_formulation_note": "The state_killing_authority kernel has three distinct readings, each with its own constraint story and distinct ε. The deterrence reading (this file, ε=0.62) depends on empirical claims about crime prevention. The retributive reading (sibling, ε varies) depends on normative claims about desert and proportionality. The abolition reading (sibling, ε varies) is a normativity-first denial of state authority. All three are linked via network.affects_constraints because they contend for legitimacy of the same institutional practice. The three readings are NOT observables of a single constraint — they are structurally distinct commitments with different authority groundings, different victim/beneficiary structures, and different empirical or normative vulnerabilities."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "state_killing_authority__retributive_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "state_killing_authority__abolition_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "execution_deters_capital_crime",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "instrumental_state_authority_legitimate",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "utility_maximizing_crime_control",
+    "drift_state": {
+      "moment": "contemporary_criminological_consensus",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

@@ -4,7 +4,9 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "compl"
+    "measurement_id_prefix": "complicit",
+    "module_name_override": "constraint_complicity_equilibrium",
+    "story_uid": "e675fb29-2beb-4d2b-9044-ecf3ceef1ef6"
   },
   "base_properties": {
     "extractiveness": 0.58,
@@ -16,11 +18,14 @@
     "requires_active_enforcement": true,
     "beneficiaries": [
       "institutional_leadership",
-      "complicit_subordinates"
+      "middle_management",
+      "professional_cadres"
     ],
     "victims": [
-      "excluded_outsiders",
-      "institutional_integrity"
+      "institutional_integrity",
+      "external_stakeholders",
+      "whistleblowers",
+      "reform_advocates"
     ]
   },
   "perspectives": [
@@ -30,8 +35,17 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "The Excluded Outsider",
-      "comment": "PERSPECTIVE 1: EXCLUDED OUTSIDER (SNARE) \u2014 Structurally barred from the complicity equilibrium. Cannot enter the mutual benefit loop and bears extraction through denial of resources, opportunity, or recognition. No exit option within the institutional framework; exit requires abandoning institutional affiliation entirely."
+      "label": "The External Stakeholder",
+      "comment": "PERSPECTIVE 1: EXTERNAL STAKEHOLDER (SNARE) — Citizens, customers, or constituents subject to the institution's output (corrupted regulatory decisions, inadequate services, harmful policies) have no exit capacity within the biographical horizon. Trapped by geographic jurisdiction, legal obligation, or economic dependency. Bears full extraction cost — the institution's dysfunction is externalized onto those who cannot leave. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "national",
+      "label": "The Trapped Subordinate (Identity-Locked)",
+      "comment": "PERSPECTIVE 2: TRAPPED SUBORDINATE / IDENTITY-LOCKED (SNARE) — Entry-level or early-career professional within the institution. Structurally mobile (could find other employment) but identity-locked: their professional identity, credentials, and career trajectory are fused with THIS institution. Exit would require abandoning years of identity investment, breaking from institutional socialization, and becoming a 'disloyal' outsider. The binding mechanism is cognitive (internalized institutional identity) not structural (economic dependency alone). Suppression is enforced through identity frames: 'everyone does this,' 'this is how things work,' 'loyalty is expected.' The snare classification reflects that the identity lock creates effective trapedness despite structural mobility."
     },
     {
       "classification_type": "tangled_rope",
@@ -39,8 +53,8 @@
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Complicit Subordinate",
-      "comment": "PERSPECTIVE 2: COMPLICIT SUBORDINATE (TANGLED ROPE) \u2014 Participates in the mutual extraction equilibrium. Receives benefits (career advancement, resource access, protection from accountability) in exchange for enabling institutional dysfunction. Constrained exit due to career sunk costs and identity fusion with the organization. Genuine coordination function (maintaining organizational stability) coexists with asymmetric extraction (complicit agents benefit disproportionately)."
+      "label": "The Complicit Middle Manager",
+      "comment": "PERSPECTIVE 3: COMPLICIT MIDDLE MANAGER (TANGLED ROPE) — Faces high but surmountable costs to exit: loss of seniority, pension impacts, reputation damage within professional networks, need to relocate or accept lower-status position. But receives genuine coordination benefits — participates in the constraint's governance, has partial agency in decision-making, receives resource allocation and career advancement. The constraint genuinely coordinates information flow and resource distribution (tangled_rope requirement met: active enforcement + beneficiary function + asymmetric extraction). Exit costs are substantial but not insurmountable — constrained rather than trapped."
     },
     {
       "classification_type": "rope",
@@ -49,25 +63,25 @@
       "exit_options": "arbitrage",
       "spatial_scope": "national",
       "label": "The Institutional Leadership",
-      "comment": "PERSPECTIVE 3: INSTITUTIONAL LEADERSHIP (ROPE) \u2014 Primary architect and beneficiary of the complicity equilibrium. Experiences the constraint as pure coordination: distributing benefits to subordinates buys their silence and cooperation, enabling the leadership to maintain power and pursue objectives unobstructed by accountability. Maximum arbitrage capacity \u2014 can exit by dissolving the bargain, but chooses not to because the arrangement is profitable."
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL LEADERSHIP (ROPE) — Primary architect and beneficiary. Leadership experiences the constraint as coordination: distributing benefits to subordinates solves the collective action problem of maintaining institutional dysfunction while projecting legitimacy. The constraint functions to enable leadership's rent extraction. Leadership has maximum arbitrage — can shift to different institutions or roles without penalty; the constraint's benefits flow primarily upward. The classification as rope (not tangled_rope) reflects leadership's net-positive position: they are not bearing asymmetric extraction, they are designing it. Chi is low for this agent because f(d) for beneficiaries with arbitrage is negative."
     },
     {
-      "classification_type": "piton",
+      "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The External Oversight Body",
-      "comment": "PERSPECTIVE 4: EXTERNAL OVERSIGHT BODY (PITON) \u2014 Regulatory agencies, press, civil society watchdogs. The complicity equilibrium actively resists external oversight through performative accountability (token reforms, manufactured transparency). The oversight mechanism itself becomes degraded and inertial \u2014 performs the function of verification without actually verifying. Theater ratio high because compliance theater substitutes for genuine correction."
+      "spatial_scope": "national",
+      "label": "The Reform Coalition",
+      "comment": "PERSPECTIVE 5: REFORM COALITION (SCAFFOLD) — External reformers (oversight bodies, anti-corruption agencies, civil society organizations) see complicity equilibrium as a temporary structural problem with a sunset: as transparency increases (FOIA requests, investigative journalism, whistleblower protections), the information asymmetry that sustains the pact degrades. Institutional rotation (leadership turnover, generational change) creates windows for norm change. The coalition has agency through external pressure and sunset mechanisms are visible (legal reforms, media exposure, audit requirements). Low theater: reformers focus on structural change rather than ritualistic compliance. Constraint classification as scaffold reflects the presence of real exit paths and sunset logic, though constrained rather than mobile because systemic reform is slow and faces institutional resistance."
     },
     {
-      "classification_type": "tangled_rope",
-      "agent_power": "powerful",
-      "time_horizon": "generational",
-      "exit_options": "mobile",
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Institutional Integrity Advocate",
-      "comment": "PERSPECTIVE 5: INSTITUTIONAL INTEGRITY ADVOCATE (TANGLED ROPE) \u2014 External or internal reformer with sufficient power to disrupt the equilibrium but facing significant costs. Benefits from visibility and moral legitimacy; bears extraction through institutional retaliation, reputation attacks, and resource denial. Mobile exit options but high cost of exercise. Genuine coordination function (maintaining norms that would enable legitimate institutional functioning) coexists with extraction (reformers are punished for disrupting the profitable equilibrium)."
+      "label": "The Institutional Accountability Framework",
+      "comment": "PERSPECTIVE 6: INSTITUTIONAL ACCOUNTABILITY FRAMEWORK (PITON) — Formal oversight and ethics structures (compliance offices, audit committees, ethics policies) exist as ritualistic forms. They generate reports, hold meetings, and maintain procedural appearance without triggering real accountability. The framework persists through institutional inertia — formally required, regularly enacted, substantively degraded. Theater ratio high: compliance theater substitutes for genuine accountability. The constraint's primary function (extracting while maintaining legitimacy) is now performed by the accountability apparatus itself — compliance structures provide cover for the complicity pact they were designed to prevent."
     },
     {
       "classification_type": "tangled_rope",
@@ -76,54 +90,54 @@
       "exit_options": "analytical",
       "spatial_scope": "global",
       "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Sees the constraint as a structural solution to a coordination problem (how to maintain organizational stability when leadership cannot be held accountable) that necessarily produces asymmetric extraction (outsiders excluded, complicit agents enriched). The observer sees genuine coordination (the arrangement IS stable) and genuine asymmetry (it extracts from the powerless). Classification is tangled_rope because both dimensions are real."
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) — Views complicity equilibrium as a recurring structural pattern in institutional governance: the distribution of extracted rents as side payments to ensure complicity. The constraint genuinely coordinates institutional action (enforces collective silence, distributes resources, maintains legitimacy facade) AND extracts asymmetrically (leadership captures largest share, external stakeholders bear costs). Active enforcement via career incentives, loyalty testing, and accountability suppression. Classification reflects both the coordination function (which is real — the institution does function as a coordinated entity) and the extractive asymmetry (which is also real — power and benefits flow toward leadership)."
     }
   ],
   "omegas": [
     {
-      "id": "equilibrium_stability_mechanism",
-      "question": "What maintains the complicity equilibrium once formed? Is it fear of collapse, active enforcement of silence, or internalized acceptance of complicity as normal?",
-      "resolution_mechanism": "Post-exit interviews with defectors; analysis of defection triggers and costs; comparison of stated rationales vs behavioral patterns",
-      "impact": "If fear-based: equilibrium is brittle and vulnerable to coordinated exit. If enforcement-based: requires active surveillance/punishment systems. If internalized: equilibrium is self-sustaining and highly stable.",
+      "id": "voluntary_vs_coerced_complicity",
+      "question": "To what degree do subordinates voluntarily participate in the complicity pact versus being coerced through institutional power asymmetry?",
+      "resolution_mechanism": "Longitudinal interviews with exit cohorts; analysis of decision-framing ('I had to' vs 'I chose to') in whistleblower accounts; comparison of exit rates under different accountability regimes",
+      "impact": "Pure coercion: constraint reclassifies as snare for all subordinates (not tangled rope for middle managers). Genuine voluntariness: classification depends on whether subordinates perceive the distribution of benefits as fair (cooperative vs extractive framing). Most likely: mixed—coercion and voluntary participation coexist, with voluntariness increasing by rank.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Mechanism maintaining complicity equilibrium stability"
+      "description": "Voluntary vs coerced participation in complicity pact"
     },
     {
-      "id": "complicity_vs_honest_coordination",
-      "question": "Can the same structural arrangement be sustained through legitimate coordination rather than mutual complicity? What is the empirical boundary between 'necessary organization of power' and 'criminal conspiracy'?",
-      "resolution_mechanism": "Comparative institutional analysis; identification of alternative equilibria in similar-scale organizations; counterfactual analysis of what coordination mechanisms could sustain without asymmetric extraction",
-      "impact": "If boundary is clear: some complicity arrangements could be replaced with legitimate governance. If boundary is blurred: complicity is structurally necessary for organizations above some scale.",
-      "confidence": "low",
+      "id": "extractive_asymmetry_quantification",
+      "question": "What is the actual distribution of rents extracted by the constraint? What proportion goes to leadership vs subordinates vs is retained as institutional slack?",
+      "resolution_mechanism": "Forensic institutional accounting; comparison of career trajectory benefits across ranks; analysis of internal compensation structures and discretionary spending; comparison to benchmark institutions without complicity equilibrium",
+      "impact": "If leadership captures >80% of extracted value: tangled_rope classification confirmed. If distribution is more egalitarian (>40% to subordinates): constraint may be genuine rope (equitable coordination). If retained as slack: constraint may appear different from external vs internal perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Distribution of extracted rents across institutional hierarchy"
+    },
+    {
+      "id": "institutional_dysfunction_necessity",
+      "question": "Is the dysfunctional behavior that the complicity pact enables genuinely necessary for the institution to function, or is it purely extractive?",
+      "resolution_mechanism": "Comparative institutional analysis: performance metrics in institutions where complicity is broken (post-scandal reform, leadership transition, transparency shock); identification of which 'dysfunctions' are load-bearing vs performative; interview analysis of whether subordinates believe the dysfunction is necessary",
+      "impact": "If dysfunction is load-bearing (institution could not function without it): constraint approaches rope classification (genuine coordination requirement). If dysfunction is purely extractive: tangled_rope or snare classification confirmed. If dysfunction is performative (institution functions fine without it post-scandal): suggests theater_ratio underestimation and piton classification may be more accurate.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Necessity vs superfluity of institutional dysfunction"
+    },
+    {
+      "id": "information_asymmetry_degradation",
+      "question": "How stable is the information asymmetry that sustains the complicity pact? What is the half-life of suppressed information in the modern transparency environment?",
+      "resolution_mechanism": "Temporal analysis of major institutional scandals: how long from 'hidden complicity' to 'public exposure' across different institutional types; effectiveness of whistleblower mechanisms, FOIA requests, investigative journalism; prediction models of information leakage rates",
+      "impact": "If half-life < 5 years: scaffold perspective is accurate, sunset clauses are real, constraint has inherent degradation pathway. If half-life > 15 years: complicity equilibrium may be more stable than scaffold perspective suggests; reform timeline extends generational timescale. Directly affects whether constraint can sustain as tangled_rope long-term or will bifurcate into reform (scaffold) or breakdown (snare).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Information asymmetry half-life and suppression degradation"
+    },
+    {
+      "id": "identity_lock_mechanism_in_subordinates",
+      "question": "For identity-locked subordinates, what specific aspects of institutional identity prevent exit: professional credentials, relational bonds, ideological commitment, status/rank, or internalized institutional values?",
+      "resolution_mechanism": "Post-exit interviews with former professionals; analysis of which constraints prevent leaving vs which enable leaving (pension vesting, credential recognition, network ties); identity-framing analysis in institutional communication and training",
+      "impact": "If identity lock is primarily credential-based or status-based: supplementing credentials (second degree, lateral move to non-institutional sector) enables exit. If lock is ideological or relational: exit requires identity reconstruction, harder to achieve. Classification impact: stronger identity locks = worse perceptual distance between structurally mobile and functionally trapped = worse snare dynamics despite constrained exit options.",
+      "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Boundary between legitimate coordination and extractive complicity"
-    },
-    {
-      "id": "outsider_threshold_effect",
-      "question": "Is there a critical mass threshold at which excluded outsiders can coordinate to disrupt the equilibrium? Do 'outsiders' remain fundamentally unorganizable or can they form counter-coalitions?",
-      "resolution_mechanism": "Social network analysis of excluded groups; historical cases of successful outsider coalition formation; identification of bottlenecks to outsider coordination",
-      "impact": "If outsiders remain unorganizable: equilibrium is stable indefinitely. If coordinating threshold is achievable: equilibrium is vulnerable to external shock.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Critical mass threshold for outsider coalition formation"
-    },
-    {
-      "id": "identity_lock_vs_rational_choice",
-      "question": "To what extent are complicit subordinates bound by identity fusion (their professional/organizational identity IS participation in the equilibrium) vs rational cost-benefit calculation (they stay because exit is expensive)?",
-      "resolution_mechanism": "Psychological assessment of complicit agents; measurement of identity-fusion intensity; comparison with agents facing identical economic incentives but lower identity fusion",
-      "impact": "If primarily identity-locked: agents perceive exit as identity death, making equilibrium very stable. If primarily rational: agents are exit-ready if costs change.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Identity lock vs rational incentive basis for complicity"
-    },
-    {
-      "id": "institutional_autophagy_lag",
-      "question": "How long can an institution maintain complicity equilibrium before internal degradation (loss of competent non-complicit agents, accumulation of institutional debt, skill atrophy) destabilizes the arrangement?",
-      "resolution_mechanism": "Longitudinal institutional performance metrics; analysis of competency distribution as function of complicity tenure; identification of failure cascades in long-running complicity systems",
-      "impact": "If lag is long (>20 years): equilibrium can persist across generational timescales. If lag is short (<5 years): equilibrium is self-limiting.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Timeline for institutional autophagy destabilization"
+      "description": "Mechanisms of professional identity fusion in subordinate roles"
     }
   ],
   "measurements": [
@@ -134,78 +148,75 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 3,
-      "value": 0.45
+      "time_point": 4,
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 6,
-      "value": 0.55
+      "time_point": 8,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 8,
+      "value": 0.68
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.4
+      "value": 0.5
     },
     {
       "metric": "theater_ratio",
-      "time_point": 3,
-      "value": 0.55
+      "time_point": 4,
+      "value": 0.59
     },
     {
       "metric": "theater_ratio",
-      "time_point": 6,
+      "time_point": 8,
       "value": 0.65
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 9,
-      "value": 0.58
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 9,
-      "value": 0.67
     }
   ],
   "interval": {
     "start": 0,
-    "end": 10
+    "end": 8
   },
   "commentary": {
-    "narrative_context": "Complicity equilibrium occurs when institutional actors (leadership, middle management, professional cadres) form a mutual extraction pact: leadership distributes benefits to subordinates in exchange for enabling dysfunctional or harmful institutional behavior while maintaining a facade of legitimacy. Subordinates agree to silence, cooperation, or active participation in the dysfunction; in return they receive career advancement, resource access, and protection from accountability. The equilibrium is self-enforcing through a combination of economic incentive (subordinates are enriched by the arrangement), identity fusion (subordinates' professional identity becomes defined by participation), and selective enforcement (outsiders and reformers are excluded or punished). The constraint exhibits tangled rope characteristics because it solves a real coordination problem (how to maintain organizational stability without genuine accountability) while simultaneously producing asymmetric extraction (excluded agents bear costs, complicit agents receive benefits). The rising theater ratio (0.40 to 0.67 across the interval) reflects increasing resort to performative accountability mechanisms (token reforms, manufactured transparency, fake oversight bodies) as the underlying corruption accumulates and external pressure rises. This is diagnostic: as the real extraction grows, the theater must grow to obscure it.",
+    "narrative_context": "Complicity equilibrium represents a structural pattern in institutional governance where leadership and subordinate professionals form a mutual extraction pact: leadership captures rents (through policy decisions, resource allocation, or selective enforcement) and distributes side payments to subordinates (career advancement, resource access, protection from accountability) in exchange for their silence, cooperation, or active participation in dysfunctional institutional behavior. The institution maintains a legitimate public facade while the dysfunction continues internally. This constraint is distinguished from simple corruption by its equilibrium structure: it is not unstable theft but a stabilized distribution system that satisfies all participants (at least temporarily). It is distinguished from pure extraction (snare) by the genuine coordination benefits that subordinates receive—the constraint does solve the collective action problem of maintaining institutional dysfunction while appearing legitimate. From the perspective of external stakeholders or whistleblowers, the constraint is pure snare with no coordination benefit. From the perspective of leadership, it is pure rope (coordination mechanism). The analytical observer sees tangled rope: genuine coordination infrastructure layered with asymmetric extraction. The constraint is enforced through career incentives, loyalty testing, and selective accountability enforcement. As information asymmetry degrades through transparency mechanisms (FOIA, journalism, whistleblowers), the equilibrium destabilizes. The temporal measurement data shows extractiveness and suppression both rising as institutional complexity increases and information control requires more active effort. Theater ratio rises as the compliance apparatus expands to maintain legitimacy facade in the face of growing internal dysfunction.",
     "key_agents": [
-      "Institutional Leadership: Primary architect and beneficiary (institutional/arbitrage) \u2014 captures maximum value from the equilibrium by controlling resource distribution and accountability mechanisms",
-      "Complicit Subordinates: Secondary beneficiary and enforcer (moderate/constrained) \u2014 receive career/resource rewards in exchange for enabling dysfunction; identity-fused with organization; constrained by sunk costs",
-      "Excluded Outsiders: Primary victim (powerless/trapped) \u2014 structurally barred from the mutual benefit arrangement; bear costs through denial of opportunity, resources, and recognition",
-      "Institutional Integrity: Diffuse victim (powerless/trapped) \u2014 the organization's actual capacity to function legitimately; degraded by the equilibrium but has no organized advocate",
-      "External Oversight Bodies: Captured participant (organized/constrained) \u2014 regulatory agencies, media, civil society that are meant to police the arrangement but are incorporated into it through performative compliance and theater",
-      "Institutional Integrity Advocates: Reformers (powerful/mobile) \u2014 internal or external actors with sufficient power to disrupt the equilibrium but facing institutional retaliation"
+      "Institutional Leadership (institutional/arbitrage): Primary architect and beneficiary—captures majority of extracted rents, maintains external legitimacy facade, controls career advancement levers",
+      "Middle Management and Professional Cadres (moderate/constrained): Complicit subordinates—receive career advancement and resource access; face high but surmountable exit costs; genuinely benefit from coordination function while bearing asymmetric extraction",
+      "Entry-Level and Early-Career Professionals (powerless/identity_locked): Trapped by identity fusion with institution—structurally mobile but psychologically bound through professional identity; perceive constraint as snare despite exit capacity",
+      "External Stakeholders (powerless/trapped): Citizens, customers, constituents subject to institution's output—bear full extraction cost with no exit capacity within biographical horizon; no coordination benefit",
+      "Institutional Accountability Apparatus (institutional/arbitrage): Formal compliance, audit, and ethics structures—exist as ritualistic forms providing cover for complicity pact",
+      "Reform Coalitions (organized/constrained): External oversight bodies, anti-corruption agencies, civil society—see constraint as temporary structure with sunset mechanisms via transparency and institutional rotation",
+      "Analytical Observer (analytical/analytical): Sees the recurring structural pattern of mutual extraction pacts stabilizing institutional dysfunction"
     ],
-    "logic_rationale": "Extractiveness (0.58): Moderate-high, rising over the interval. The equilibrium starts as a marginal arrangement (low-level coordination between leadership and select subordinates) but accumulates as the complicity deepens and more actors are drawn in or excluded. Initial extractiveness (0.35) represents the early-stage benefit-sharing phase where subordinates still receive significant value relative to their participation cost. By mid-interval (0.45-0.55), extractiveness rises as the leadership increasingly consolidates its position and extracts more value while distributing fewer rewards. Final state (0.58) represents mature complicity where the extraction is evident but still balanced by enough subordinate benefits to maintain the equilibrium. Suppression (0.68): High and structural. The equilibrium requires active suppression of alternatives (outsiders cannot enter the arrangement), suppression of dissent (reformers are punished), and suppression of truth (performative accountability prevents genuine investigation). Theater ratio (0.65): High and rising, indicating that as the real extraction increases, the institutional theater must increase proportionally to maintain legitimacy. Rising theater from 0.40 to 0.67 reflects increasing resort to pseudo-accountability (investigation committees that exonerate leadership, policy reforms that change nothing, diversity initiatives that exclude material change). The theater is a cost of the equilibrium that grows as the underlying corruption deepens.",
-    "perspectival_gap": "The excluded outsider sees pure extraction (Snare) \u2014 they are barred from participation and bear costs with no reciprocal benefit. The complicit subordinate sees coordination (Tangled Rope) \u2014 they genuinely benefit from the arrangement and their participation genuinely does solve the leadership's coordination problem (maintaining stability without accountability). The leadership sees pure coordination (Rope) \u2014 the arrangement is an elegant solution to the problem of maintaining power without accountability; from their perspective there is no extraction, only mutual benefit exchange. The external oversight body sees a problem-solving system (Piton) \u2014 the compliance theater creates an appearance of accountability and oversight, but the mechanism is largely performative and degraded. The integrity advocate sees both coordination and extraction (Tangled Rope) \u2014 they see that legitimate institutional functioning requires removing the complicity equilibrium, and they see the equilibrium as extracting from those who would benefit from actual accountability. The analytical observer sees tangled rope \u2014 both the coordination function (institutional stability) and the asymmetry (excluded agents bear the cost) are real structural features.",
-    "directionality_logic": "Institutional leadership has arbitrage exit options \u2014 they can dissolve the complicity arrangement if incentives change, or defect and exit to other organizations. Their directionality is low (beneficiaries), producing negative or near-zero effective extraction from their perspective. Complicit subordinates are constrained by career sunk costs and identity fusion \u2014 exit would require abandoning their professional identity and accepting significant financial loss. Their directionality is moderate (complicit beneficiaries), producing moderate effective extraction from their perspective weighted toward the benefits they receive. Excluded outsiders are trapped \u2014 they cannot enter the arrangement and cannot escape its effects without leaving the institutional domain entirely. Their directionality is high (victims), producing high effective extraction from their perspective. External oversight bodies are organized actors with significant power but are themselves constrained by institutional incorporation \u2014 they can theoretically exit or disrupt the equilibrium but face institutional and reputational costs. Their directionality is moderate-high (incorporated victims), producing moderate effective extraction from their perspective.",
-    "mandatrophy_analysis": "The mandatrophy is resolved by observing that complicity equilibrium is structurally tangled: it performs a genuine coordination function (maintaining organizational stability when legitimate accountability mechanisms fail or are unavailable) AND it necessarily produces asymmetric extraction (some agents are excluded and bear costs while complicit agents are enriched). The constraint cannot be classified as pure coordination (rope) because the asymmetry is not incidental but structural \u2014 the arrangement requires excluding outsiders and extracting from them to maintain the complicity bonus for insiders. The constraint cannot be classified as pure extraction (snare) because the coordination function is genuine \u2014 the arrangement does solve a real problem (how to maintain organizational functioning without accountability), and many complicit agents genuinely prefer the outcome to the alternative (organizational chaos or legitimate reform). The tangled rope classification shows that both dimensions are real and necessary. Any attempt to remove the extraction without solving the underlying coordination problem (what happens to organizational stability when accountability mechanisms are restored?) will fail. Any attempt to maintain the coordination without addressing the asymmetry will perpetuate injustice. This is the mandatrophy resolved: complicity equilibrium IS a mixed extraction-coordination system, and the mixing is not accidental but structural."
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint enables leadership to extract rents while ensuring complicity from subordinates through benefit distribution. The extraction is not maximal (0.72+) because subordinates genuinely benefit from the coordination infrastructure and resource distribution—this is not pure theft. The extractiveness value reflects the asymmetry (leadership captures disproportionate share) tempered by the genuine coordination benefits. Suppression (0.68): High. The constraint requires active suppression of alternative information pathways, whistleblower channels, and competing narratives. Dissent is suppressed through career penalties, loyalty testing, and framing ('everyone does this,' 'this is standard practice'). Accountability mechanisms are themselves captured and converted to compliance theater. Theater ratio (0.65): Moderate-high. The compliance apparatus generates performative compliance activities (ethics trainings, audit reports, policy documents) that create appearance of accountability while the complicity pact continues. Theater rises over time (0.50 → 0.65) as institutional complexity increases and the gap between formal and actual accountability grows. Theater does not reach maximum (0.72+) because some genuine coordination functions remain; the institution does coordinate action and distribute resources according to its actual norms (the complicit norms), not purely according to facade.",
+    "perspectival_gap": "This constraint demonstrates the full perspectival gap problem. Leadership sees rope: the constraint elegantly solves the collective action problem of how to extract rents while maintaining legitimacy and ensuring subordinate cooperation. External stakeholders see snare: pure extraction with no coordination benefit and no exit capacity. Middle managers see tangled rope: they are extracting from below and being extracted from above; they genuinely benefit but also bear asymmetric costs. Entry-level professionals see snare despite structural mobility because identity-lock prevents exit perception. The reform coalition sees scaffold: the information asymmetry is degrading and institutional rotation creates windows for change. The accountability apparatus sees piton: degraded institution maintaining performative compliance rather than real accountability. The analytical observer sees tangled rope: both the coordination function and the extractive asymmetry are structural and real. The perspectival gap reveals how the same institutional arrangement can be experienced as coordination (leadership), extraction (stakeholders), mixed (middle management), identity trap (early career), temporary problem (reformers), or degraded ritual (compliance apparatus). Each perspective is analytically correct from its position—there is no 'true' classification, only indexed classifications.",
+    "directionality_logic": "Directionality values (d) are derived from each agent's structural relationship to the extraction flow and their exit capacity. Leadership (beneficiary + arbitrage): d ≈ 0.05, f(d) ≈ -0.12, low/negative chi—leadership is the beneficiary and has maximum exit options (can move to other institutions), so effective extraction runs opposite to them. Middle managers (mixed + constrained): d ≈ 0.55, f(d) ≈ 0.75, moderate chi—they are both beneficiaries (receive side payments) and victims (extract from below, extracted from above), with constrained exit (high costs but possible). Entry-level professionals (victim + identity_locked): d ≈ 0.89, f(d) ≈ 1.28, high chi—they are victims of extraction, believe themselves trapped despite structural mobility, so experienced extraction is amplified by the perceptual gap. External stakeholders (victim + trapped): d = 0.95, f(d) ≈ 1.42, maximum chi—pure victims with no exit capacity within biographical horizon. Analytical observer (d ≈ 0.72, canonical): observes the full structure from outside. The directionality derivation chain captures why middle managers experience moderate extraction (they genuinely benefit) while entry-level professionals experience severe extraction despite similar nominal status (identity lock amplifies perceptual distance from structural reality).",
+    "mandatrophy_analysis": "This constraint demonstrates the mandatrophy resolution through perspectival analysis. The apparent contradiction—is this rope (coordination) or snare (extraction)?—is resolved by indexing to position. From leadership's position, it is rope: the constraint solves the collective action problem of maintaining dysfunction while ensuring complicity and legitimacy. From external stakeholders' position, it is snare: extraction with no coordination benefit. From middle management's position, it is tangled rope: both coordination benefits (they participate in resource distribution and governance) and extraction (they are asymmetrically extracted from). The mandatrophy is resolved not by finding the 'correct' single classification but by recognizing that each indexed perspective captures a real aspect of the constraint's structure. The constraint IS both rope and snare simultaneously—rope for those who benefit from the mutual extraction pact, snare for those who bear costs without reciprocal benefits. The analytical observer's tangled rope classification captures this duality: the constraint has genuine coordination function (it coordinates institutional action toward its actual objectives, which are leadership extraction and complicity maintenance) AND asymmetric extraction (rents flow upward, costs flow outward to external stakeholders). The mandatrophy is not resolved by choosing one type; it is resolved by recognizing that the constraint is only stable because different agents experience it as different types."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "institutional_corruption_persistence",
-      "accountability_theater",
-      "career_incentive_misalignment"
+      "institutional_accountability_facade",
+      "whistleblower_suppression",
+      "career_path_incentive_distortion"
     ],
-    "dual_formulation_note": "Complicity equilibrium is the macroscale pattern that emerges from individual-level corruption (misuse of institutional power for personal benefit), accountability theater (performative compliance to suppress genuine oversight), and career misalignment (incentives that reward complicity over integrity). This story models the system-level constraint; the upstream stories model the individual and organizational-level mechanisms."
+    "dual_formulation_note": "Complicity equilibrium is composed of three structurally distinct sub-constraints: (1) the mutual extraction pact between leadership and subordinates (the primary constraint modeled here); (2) the accountability facade that provides cover for the pact (modeled separately as institutional_accountability_facade, piton classification); (3) the suppression mechanisms targeting whistleblowers and reform advocates (whistleblower_suppression, snare classification). These are linked constraints with ε values reflecting their different empirical status: the primary pact is high-extraction/high-coordination (tangled_rope, ε=0.58), the accountability facade is low-function/high-theater (piton, ε≈0.20), and whistleblower suppression is pure extraction (snare, ε≈0.72). All three are required for complicity equilibrium to sustain; decomposing them enables analysis of which mechanisms are most vulnerable to intervention."
   },
-  "directionality_overrides": [
-    {
-      "power_atom": "institutional",
-      "d_value": 0.08
-    },
-    {
-      "power_atom": "organized",
-      "d_value": 0.62
-    }
-  ]
+  "directionality_overrides": []
 }

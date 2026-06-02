@@ -1,0 +1,275 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper__p2p_cash_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "btcp2p",
+    "story_uid": "uuid-bitcoin-p2p-cash-reading-001"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin as Censorship-Resistant P2P Cash",
+    "topic_domain": "cryptocurrency_economics/monetary_systems/technology_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_frequency_transactors",
+      "unbanked_populations",
+      "censorship_resistant_users"
+    ],
+    "victims": [
+      "miners_restricted_by_fee_pressure",
+      "full_node_operators",
+      "transaction_throughput_constrained_users"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Excluded Transactor",
+      "comment": "PERSPECTIVE 1: EXCLUDED TRANSACTOR (SNARE) — Users with small transaction values face prohibitive fee ratios (fees exceed transaction value during congestion). Trapped by network effects: Bitcoin is the most censorship-resistant option, but its architecture extracts via fee markets. No alternative with equivalent properties. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Unbanked Population",
+      "comment": "PERSPECTIVE 2: UNBANKED POPULATION (TANGLED ROPE) — Access to permissionless transaction is real benefit (coordination function); but high fees and volatility create barriers to sustained use as daily medium of exchange. Organized through merchant networks and informal payment systems; constrained by technical knowledge, device access, and fee volatility. Mixed extraction and coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Exchange/Custodian",
+      "comment": "PERSPECTIVE 3: EXCHANGE/CUSTODIAN (ROPE) — Benefits from the network effect and transaction volume. Settlement via Bitcoin provides routing and value transfer coordination with minimal coercive overhead. Can arbitrage fee differences across ledgers and time periods. Net beneficiary with transaction facilitation; experiences constraint as pure coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Full Node Operator",
+      "comment": "PERSPECTIVE 4: FULL NODE OPERATOR (TANGLED ROPE) — Enforces network consensus rules (coordination function); requires significant computational resources and bandwidth (extraction cost). Censorship resistance is real public good they help maintain. Constrained by hardware costs and network growth. Benefits from network security increase but bears operational burden asymmetrically."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Miner Network",
+      "comment": "PERSPECTIVE 5: MINER NETWORK (SNARE) — Fee market architecture extracts from miners through difficulty adjustment and hash rate competition. Revenue constraint (block reward + fees) forces optimization of transaction selection; low-fee transactions excluded. Organized but constrained by hardware capital requirements and energy costs. Experiencing extraction disguised as incentive alignment."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The P2P Cash Narrative",
+      "comment": "PERSPECTIVE 6: P2P CASH NARRATIVE (PITON) — The original vision (Satoshi whitepaper) emphasized low-cost direct transactions. Contemporary Bitcoin practice has substantially departed from this narrative: average transaction fees exceed institutional payment rails for small values; settlement times incompatible with retail commerce. The narrative persists in community rhetoric but the functional reality has shifted toward digital gold. Piton classification: performative commitment to p2p cash vision maintained through narrative, not architecture."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Limit View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LIMIT VIEW (MOUNTAIN) — From a cryptographic/scaling perspective, any decentralized ledger faces immutable tradeoffs: bandwidth limits, state growth, and consensus overhead create inherent constraints on transaction throughput. Byzantine fault tolerance requires redundancy that precludes high-frequency settlement. This perspective sees the fee market not as contingent architecture but as necessary response to natural limits on what decentralized consensus can achieve. However, false summit risk: alternative architectures (rollups, sidechains, layer-2 payment channels) are contingent institutional solutions, not natural laws."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "decentralization_fee_tradeoff_necessity",
+      "question": "Is the fee market extraction inherent to decentralized consensus, or a contingent architectural choice for Bitcoin specifically?",
+      "resolution_mechanism": "Comparative analysis: (a) Bitcoin's block size limit and 10-minute block time are protocol choices, not cryptographic necessities; (b) Ethereum's higher block capacity shows different tradeoff curve; (c) Layer-2 solutions (Lightning, Rollups) achieve different throughput-decentralization-settlement-time profiles. If alternatives with lower fees and maintained decentralization are feasible, extraction is architectural not natural.",
+      "impact": "If natural law: mountain classification holds; fee markets are necessary. If contingent: tangled_rope confirmed; the p2p cash reading loses architectural ground against digital gold reading.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether fee market extraction is necessary or architectural"
+    },
+    {
+      "id": "network_effect_lock_in_degree",
+      "question": "How much is the continued use of Bitcoin as p2p cash constrained by network effects vs. active choice?",
+      "resolution_mechanism": "Measure user migration patterns when competing platforms (Litecoin, Dogecoin, Lightning Network) offer lower fees and comparable censorship resistance. Track transaction volume shifts during fee spikes. Distinguish exit caused by technical barriers (no merchant acceptance alternative) from exit caused by costs (user prefers other platform when fees are high).",
+      "impact": "If lock-in is high (users trapped by network effects): snare classification confirmed for excluded transactors. If lock-in is low (users switch when fees are prohibitive): snare weakens; users have mobile exit despite fees.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of network-effect lock-in vs. user choice in transaction platform selection"
+    },
+    {
+      "id": "reading_kernel_contest",
+      "question": "Which reading of the Bitcoin whitepaper is 'correct': p2p cash (this reading) or digital gold (sibling reading)?",
+      "resolution_mechanism": "Not empirically resolvable. The kernel (Satoshi's whitepaper) is ambiguous: abstract 1 emphasizes p2p electronic cash; protocol design emphasizes scarcity and immutable ledger. The readings coexist in the Bitcoin community as competing interpretations. Resolution would require authority (developer consensus, market practice, or formal amendment) to establish canonical reading. Currently distributed authority with no foreclosure.",
+      "impact": "If p2p cash reading dominates: network upgrades prioritize throughput (larger blocks, faster settlement); victim set expands to include high-frequency transactors denied capacity. If digital gold reading dominates: network prioritizes immutability and decentralization; victim set includes those denied transaction access due to fee markets (current state).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Which reading of Bitcoin whitepaper kernel is canonical: p2p cash or digital gold"
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_policy",
+      "question": "Is the suppression of high-frequency p2p transactions (via fee markets and block limits) a structural necessity or a policy choice encoded in the Bitcoin protocol?",
+      "resolution_mechanism": "Historical analysis: (a) Satoshi's writings emphasized p2p as primary use case; (b) Core developer consensus shifted toward digital gold (2013-2015); (c) Block size debate (2015-2017) made the choice explicit. Measure: What portions of suppression are cryptographic limits vs. protocol configuration choices (block size, fee minimum, block interval)?",
+      "impact": "If structural: mountain or rope classification appropriate. If policy: snare confirmed for excluded transactors; policy change could rebalance victims/beneficiaries.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether transaction suppression via fees is structural or policy-driven"
+    },
+    {
+      "id": "false_summit_risk_bitcoin_limits",
+      "question": "Is the p2p cash bottleneck being rationalized as a natural law of decentralized systems when it is actually a contingent institutional arrangement (protocol configuration)?",
+      "resolution_mechanism": "Compare Bitcoin's architecture choices against (a) theoretical cryptographic limits (Byzantine fault tolerance, consensus time-space tradeoffs), and (b) implemented alternatives (Ethereum, Lightning Network, Solana). Identify which constraints are forced by math vs. chosen by protocol design.",
+      "impact": "If false summit: the mountain perspective naturalizes contingent policy; restructured as tangled_rope with potential for architectural reform. If genuine summit: mountain perspective is valid.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "False summit detection: naturalizing architectural choices as cryptographic necessity"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15,
+      "id_override": "btcp2p_ext_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.32,
+      "id_override": "btcp2p_ext_t5"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48,
+      "id_override": "btcp2p_ext_t10"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "btcp2p_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48,
+      "id_override": "btcp2p_theater_t5"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58,
+      "id_override": "btcp2p_theater_t10"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4,
+      "id_override": "btcp2p_supp_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.58,
+      "id_override": "btcp2p_supp_t5"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62,
+      "id_override": "btcp2p_supp_t10"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Bitcoin's whitepaper promised 'a purely peer-to-peer version of electronic cash' enabling 'direct transactions without going through a financial institution.' This p2p cash reading interprets that promise as the primary constraint: Bitcoin should function as a low-cost medium of exchange for direct electronic transactions. The reading is contested by the digital gold interpretation (Bitcoin as censorship-resistant store of value rather than transaction medium) and the protocol ossification reading (Bitcoin as immutable reference ledger regardless of cash use case). This story generates Bitcoin as a tangled_rope constraint where censorship resistance and transaction accessibility form the coordination function, but architectural choices (10-minute blocks, 1MB block size limit post-2017 soft fork debate) suppress high-frequency p2p transactions and extract from users via fee markets. The victim set is powerless and organized transactors denied medium-of-exchange functionality; the beneficiary set is miners, exchanges, and wealth holders who benefit from scarcity and network effect value capture. The constraint demonstrates false summit risk: the fee market and transaction throughput limits are often rationalized as cryptographic necessities when they are actually contingent protocol design choices.",
+    "key_agents": [
+      "Excluded Small-Value Transactors: Primary victim (powerless/trapped) — face prohibitive fee ratios during congestion; denied p2p cash functionality by economic constraint not technical barrier",
+      "Unbanked/Underbanked Populations: Primary victim (organized/constrained) — receive genuine censorship-resistant access but high fees and volatility block sustainable daily-use adoption",
+      "Miners: Secondary victim (organized/constrained) — face fee pressure from block size limits; revenue model extracts via difficulty adjustment and hash rate competition",
+      "Full Node Operators: Secondary victim (moderate/constrained) — maintain network consensus; bear bandwidth and storage costs while experiencing fee-market asymmetry",
+      "Exchanges and Custodians: Primary beneficiary (institutional/arbitrage) — capture transaction routing value and fee differentiation arbitrage across platforms and time periods",
+      "High-Value Transactors: Secondary beneficiary (powerful/mobile) — can absorb fee costs; benefit from network effect and censorship resistance without transaction volume constraint",
+      "Bitcoin Core Developers: Institutional actor (institutional/constrained) — stewards protocol choices that instantiate the p2p vs. digital gold tradeoff; face governance constraints from community consensus and technical debt",
+      "Analytical Observer: Civilizational context (analytical/analytical) — risks naturalizing architectural choices (block size, fee market) as immutable cryptographic limits"
+    ],
+    "logic_rationale": "Extractiveness (0.48): Moderate-high. The p2p cash reading frames Bitcoin's fee market as extraction from transaction volume. Early Bitcoin (t=0, ε=0.15) had negligible fees and functioned as p2p cash. As adoption increased and block space became scarce (t=5-10), fees rose exponentially while suppression of transaction throughput increased (block size frozen at 1MB post-2017; average transaction size ~230 bytes = ~4 transactions per second capacity). By t=10, ε=0.48 reflects that the constraint now extracts via fee market: users denied transaction access unless they pay extraction cost proportional to network congestion. The extractiveness is not total (like a snare) because alternatives exist (layer-2 solutions, competitor chains) and users have some agency; hence tangled_rope rather than snare at the moderate power level. Suppression (0.62): Moderate-high. Multiple mechanisms suppress p2p transaction use: (1) technical (1MB block limit, 10-minute block time reduce transaction capacity), (2) economic (fee market prices out small transactions), (3) social (narrative shift toward digital gold reduces incentive to expand capacity). The suppression is enforced by miners (economically) and developers (technically), creating a maintenance cost. Theater ratio (0.58): Moderate. The p2p cash narrative persists in Bitcoin community rhetoric and remains in the whitepaper, but actual protocol development and community consensus prioritize immutability and security over transaction throughput. The gap between narrative promise and architectural reality is substantial but not total — layer-2 solutions (Lightning Network) provide technical fulfillment of p2p cash vision outside the base layer, maintaining plausible deniability that the p2p promise is being kept.",
+    "perspectival_gap": "This constraint's perspectival divergence reveals the kernel contest. From a p2p cash reading, Bitcoin's fee market is extractive—a contingent architectural choice that suppresses the primary use case (low-cost transactions). From the digital gold reading (sibling), the same fee market is a necessary feature that preserves scarcity and security. From the protocol ossification reading (sibling), neither transaction throughput nor gold-store properties matter—the constraint is the immutability of the ledger itself. The disagreement is not about facts (everyone agrees fees exist and throughput is limited) but about which narrative reading of the whitepaper kernel should determine architectural priorities.",
+    "directionality_logic": "Directionality values (d) flow from each agent's structural relationship to this specific constraint (p2p cash reading). Beneficiaries (exchanges, high-value transactors) have low d (0.10-0.25) because fee markets advantage them — extraction runs toward them, not away. Victims (excluded transactors, miners) have high d (0.75-0.95) because they experience costs without proportional benefits. The piton perspective derives from performance gap between narrative and architecture (theater gate, not chi gate). The mountain perspective risks false summit by naturalizing architectural choices — the engine's false summit detector should flag this perspective given the contingent protocol choices evidenced by the historical record.",
+    "mandatrophy_analysis": "KERNEL READING EXEMPLAR: The mandatrophy for the p2p cash reading resolves by recognizing that the constraint is fundamentally one reading of an ambiguous kernel. Satoshi's whitepaper contains elements supporting multiple readings: the abstract emphasizes 'peer-to-peer' and 'without a trusted third party'; the protocol design emphasizes immutability and scarcity. The community coalesced around the digital gold reading (circa 2013-2015), which deprioritizes throughput. The p2p cash reading persists but is architecturally marginalized by the base layer design. No single type is correct—the readings reflect different projections of an under-determined kernel onto different agent interests and technical priorities. The tangled_rope classification for this reading is stable: it genuinely coordinates (censorship resistance, peer settlement) while genuinely extracting (via fee markets, capacity limits).",
+    "kernel_context": "This constraint instantiates the p2p_cash_reading of the bitcoin_whitepaper kernel. The kernel is Satoshi Nakamoto's 2008 whitepaper, which describes an abstract system for peer-to-peer electronic cash. The reading I am authoring emphasizes the 'electronic cash' and 'peer-to-peer' elements as primary: Bitcoin's core constraint is enabling direct transactions between parties without intermediaries at low cost. Sibling readings: (1) digital_gold_reading interprets the kernel through the scarcity and immutability elements, prioritizing Bitcoin as a store of value over transaction medium; (2) protocol_ossification_reading treats the kernel as defining an immutable reference ledger regardless of use case, prioritizing consensus integrity over throughput. The structural delta: the p2p cash reading implies lower transaction costs should be prioritized, larger block sizes are legitimate infrastructure upgrades, and victims include those denied transactional access due to fee markets. The digital gold reading implies scarcity and security are paramount, block size limits are necessary for decentralization, and transaction throughput is a secondary concern. These readings coexist in the contemporary Bitcoin community as competing interpretations of an ambiguous kernel, with organized factions supporting each. No foreclosure—they are genuinely coexisting positions held by different parties."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_whitepaper__digital_gold_reading",
+      "bitcoin_whitepaper__protocol_ossification_reading",
+      "bitcoin_lightning_network_channel_state",
+      "cryptocurrency_fee_market_extraction"
+    ],
+    "dual_formulation_note": "The p2p cash reading (this constraint) and the digital gold reading (sibling) decompose the single Bitcoin whitepaper into two structurally distinct constraints with different victim sets, different architectural implications, and different ε values. The p2p reading emphasizes transaction throughput and fee suppression (ε=0.48, tangled_rope). The digital gold reading emphasizes immutability and scarcity (ε varies, likely rope or mountain from digital gold perspective). Both are valid readings of the same kernel; they are not measurement-dependent observations of one constraint but genuinely different constraints instantiated from an ambiguous kernel."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "bitcoin_whitepaper"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reference_frame": "satoshi_p2p_cash_vision",
+    "drift_state": {
+      "moment": "contemporary_bitcoin_protocol_design",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "bitcoin_whitepaper__digital_gold_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "bitcoin_whitepaper__protocol_ossification_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "transaction_throughput_priority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "network_effect_incumbent_responsibility",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ]
+  }
+}

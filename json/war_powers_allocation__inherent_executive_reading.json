@@ -1,0 +1,261 @@
+{
+  "header": {
+    "constraint_id": "war_powers_allocation__inherent_executive_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "warpow",
+    "module_name_override": "constraint_war_powers_allocation__inherent_executive_reading",
+    "story_uid": "67682a78-6f8e-43b1-aa7d-f6b5560c96f5"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Commander-in-Chief Power: Inherent Executive Authority Reading",
+    "topic_domain": "constitutional_law/separation_of_powers/war_powers",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "executive_branch",
+      "presidential_military_prerogative"
+    ],
+    "victims": [
+      "legislative_constraint_authority",
+      "statutory_war_powers_framework"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Statutory War Powers Framework",
+      "comment": "PERSPECTIVE 1: STATUTORY WAR POWERS CONSTRAINT (SNARE) — The War Powers Resolution (1973) is structurally trapped: Congress voted to constrain itself, but the inherent executive reading treats the statute as unconstitutional limitation on inherent authority. The statute cannot exit this constraint without repudiating itself. Trapped in pure extraction: executive authority uses commander-in-chief clause to override statutory limits, bearing maximum suppression (congressional avenue blocked)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Congress (Organized Minority)",
+      "comment": "PERSPECTIVE 2: CONGRESS AS ORGANIZED AGENT (TANGLED ROPE) — Congress retains coordination function (appropriations, treaty ratification, formal declarations) but faces extraction: presidential unilateral action reduces legislative constraint to ex-post ratification via appropriations. Congress can organize and delay, but cannot prevent. Constrained exit: formal veto power exists legally but politically costly to exercise. Mixed: genuine coordination function (war powers do require funding, which Congress provides) plus asymmetric extraction (presidential initiative + congressional reaction)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Executive Branch",
+      "comment": "PERSPECTIVE 3: EXECUTIVE BRANCH (ROPE) — Experiences the constraint as coordination: military readiness requires unified command, rapid decision-making, and executive operational flexibility. The commander-in-chief clause solves the genuine coordination problem of deploying force without legislative paralysis. Net beneficiary with arbitrage options: can act first and seek authorization later (appropriations), retaining initiative advantage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Judiciary (Structural Position)",
+      "comment": "PERSPECTIVE 4: JUDICIARY (TANGLED ROPE) — Powerful actors with mobility (can decline jurisdiction or interpret narrowly) but still trapped by the political question doctrine. Courts see genuine coordination value (unified command structure) and genuine extraction (executive unilateralism reduces judicial review access). Mobile exit available through jurisdictional doctrine, but institutional norms constrain exit. Low suppression of judicial alternatives (courts have interpretive authority) but high political friction."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Constitutive Power View)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / CONSTITUTIVE POWER (MOUNTAIN) — From a universal/civilizational frame, executive commander-in-chief authority is a foundational constitutional structure: the clause is textually explicit, historically rooted in separation of powers theory, and structurally necessary for operational coherence. This perspective risks naturalizing what is actually a contested reading. The engine will identify this as a false summit: the 'necessity' is interpretive, not natural law."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Authorization for Use of Military Force (AUMF)",
+      "comment": "PERSPECTIVE 6: THE AUMF FRAMEWORK (PITON) — Post-9/11 AUMFs (2001 Afghanistan, 2002 Iraq) functionally ratify executive war powers through broad language ('associated forces,' 'continuing threat'). The authorization mechanism is substantially performative: it provides legislative cover for executive action already underway or operationally necessary. Theater ratio high (AUMF language is theater for pre-authorized action); functional extraction low (the military action would proceed regardless). Piton because the mechanism persists through institutional inertia despite degraded original function."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "textual_permissiveness_boundary",
+      "question": "Does the Constitution's text ('commander in chief of the Army and Navy') grant inherent war-making authority or merely designate operational command within wars Congress authorizes?",
+      "resolution_mechanism": "Originalist exegesis of Founding-era understanding; comparative analysis with analogous constitutional democracies; historical practice analysis (Washington, Lincoln, FDR precedents)",
+      "impact": "If inherent: snare classification for Congress is correct. If operational-only: tangled_rope or rope classification from executive perspective becomes inaccurate; constraint becomes congressional primacy structure.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether commander-in-chief clause grants inherent war-making power or operational command only"
+    },
+    {
+      "id": "appropriations_ratification_mechanism",
+      "question": "Does congressional appropriation of military funds constitute post-hoc authorization of executive force deployments, or is it a separate structural constraint on executive action?",
+      "resolution_mechanism": "Case law analysis of congressional appropriation as explicit vs implicit authorization; historical instances of appropriations withheld from ongoing military actions; constitutional scholar consensus on appropriations doctrine",
+      "impact": "If constitutes authorization: executive action is formally validated after-the-fact, reducing snare classification severity. If separate: appropriations are a tardy structural check, not authorization, and snare classification is stronger.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether appropriations function as post-hoc authorization or separate constraint"
+    },
+    {
+      "id": "reading_relationship_to_functional_accommodation",
+      "question": "Does the inherent executive reading foreclose, coexist with, or influence the functional_accommodation_reading (which treats war powers as evolutionarily determined by practice rather than textual grant)?",
+      "resolution_mechanism": "Logical analysis of reading commitments: if both readings claim the same allocation mechanism (inherent grant vs evolved practice), they may foreclose; if they arrive at similar outcomes via different justifications, they coexist; if one creates conditions that pressure the other, they influence.",
+      "impact": "If foreclose: one reading must be abandoned. If coexist: both remain live options. If influence: one reading creates resource or legitimacy pressure on the other.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Logical relationship between inherent executive and functional accommodation readings"
+    },
+    {
+      "id": "congressional_primacy_suppression_paradox",
+      "question": "Why does Congress (organized, powerful) experience high suppression (0.68) under this reading, when Congress retains formal power to declare war and control appropriations?",
+      "resolution_mechanism": "Political economy analysis: congressional collective action costs, executive first-mover advantage, public opinion rallying effects, media framing dominance. Quantify: how often has Congress withheld appropriations or overridden executive deployment? Frequency of veto threats vs actual vetoes.",
+      "impact": "If suppression is political rather than structural: the constraint is weaker than coded. Congress's formal power is suppressed by political friction, not by constitutional architecture. If suppression is structural: constitutional design actively prevents congressional override.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Source of congressional suppression: constitutional architecture vs political economy"
+    },
+    {
+      "id": "false_summit_natural_law_charge",
+      "question": "Is the inherent executive authority reading grounded in discovered constitutional principle (mountain), or is it a contested interpretive reading that benefits the executive and therefore risks FNL classification?",
+      "resolution_mechanism": "Identify beneficiary (executive branch gains unilateral action authority). Identify alternative readings (congressional_primacy_reading, functional_accommodation_reading). If alternative readings exist with internal logical coherence, this is NOT a natural law but a contingent interpretation that benefits a named agent.",
+      "impact": "If natural law: accessibility_collapse and resistance metrics should show immutability. If contingent reading: beneficiary presence triggers false_summit_mountain evaluation in the engine.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether inherent executive reading is discovered constitutional principle or contingent interpretation benefiting executive"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "warpow_extract_t0_post_wpa"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48,
+      "id_override": "warpow_extract_t10_post_911"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58,
+      "id_override": "warpow_extract_t20_contemporary"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48,
+      "id_override": "warpow_suppress_t0_post_wpa"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62,
+      "id_override": "warpow_suppress_t10_post_911"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68,
+      "id_override": "warpow_suppress_t20_contemporary"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "warpow_theater_t0_post_wpa"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.52,
+      "id_override": "warpow_theater_t10_post_911"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55,
+      "id_override": "warpow_theater_t20_contemporary"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The inherent executive reading of commander-in-chief power holds that the Constitution grants the president structural authority to deploy military force in defense of national interests without prior congressional authorization. This reading interprets Article II's vesting of commander-in-chief authority as conferring independent war-making power, constrained only by subsequent legislative action (appropriations, formal declaration) rather than requiring legislative approval as a condition of deployment. The constraint exhibits a characteristic tangled-rope structure: genuine coordination function (unified command, operational flexibility, rapid response to security threats) coexists with asymmetric extraction (executive unilateral action reduces Congress to a post-hoc ratifying body). The measurement trajectory shows extraction accumulating over the interval: base extractiveness rising from 0.35 (post-1973 War Powers Resolution) through 0.48 (post-9/11 broad AUMFs) to 0.58 (contemporary). Suppression has correspondingly intensified (0.48 → 0.68) as executive precedent has normalized unilateral deployment. Theater ratio remains moderate (0.42 → 0.55), reflecting that while AUMF authorization provides performative legislative cover, the underlying mechanism involves genuine operational decisions, not pure performative ritual.",
+    "key_agents": [
+      "Executive Branch: Primary beneficiary (institutional/arbitrage) — gains unilateral action authority and operational initiative; can deploy force first and seek authorization after",
+      "Congress: Primary victim (organized/constrained) — structurally weakened from authorization authority to post-hoc ratification body; high political friction prevents meaningful override",
+      "Legislative Constraint Authority (War Powers Resolution): Secondary victim (powerless/trapped) — statutory framework undermined by constitutional interpretation; cannot defend itself without Congress repudiating its own statute",
+      "Judiciary: Powerful actor (powerful/mobile) — maintains interpretive authority but constrained by political question doctrine; can exit through jurisdictional doctrine but institutional norms discourage it",
+      "Military-operational system: Beneficiary-adjacent (institutional/arbitrage) — benefits from unified command and executive flexibility; operationally coordinated but not primary extraction target",
+      "Analytical Observer: Civilizational context (analytical/analytical) — risks naturalizing a contested reading as constitutive necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The executive gains unilateral action authority, but the extraction is not maximal because Congress retains formal power: appropriations authority, treaty ratification, formal declaration rights. The accumulation over time (0.35 → 0.58) reflects post-9/11 normalization of broad executive deployment authority through AUMF framework. Suppression (0.68): High. Congress faces severe structural barriers to exercising formal war powers: first-mover advantage to executive (forces already deployed), political cost of appearing to restrict military action, public opinion rallying effects, media control by executive branch during crises, and repeated AUMF framework ratifying executive deployment as fait accompli. However, suppression is not total because Congress can theoretically defund, override with statute, or impeach. Theater ratio (0.55): Moderate. AUMFs provide legislative theater (appearance of authorization) for executive action operationally necessary or already underway, but the mechanism involves genuine military decisions, not pure performative ritual like some regulatory theater.",
+    "directionality_logic": "Congress's structural relationship (organized power, constrained exit, victim status) derives d ≈ 0.60-0.65, producing high experienced extractiveness. Executive branch (institutional power, arbitrage exit, beneficiary status) derives d ≈ 0.15-0.25, producing low or negative experienced extractiveness. Congress experiences high chi despite organized power because constrained exit (high political cost to override) amplifies d; executive experiences low chi because arbitrage exit (can act first, seek ratification after) dampens d. The suppression coefficient (0.68) acts uniformly — not scaled by power or scope per the ε-invariance principle — constraining congressional override capacity across all contexts.",
+    "perspectival_gap": "This constraint exhibits a diagnostic perspectival gap between institutional perspectives. Congress (organized/constrained) sees tangled rope: mixed coordination (military readiness requires unified command) and extraction (reduced to ratification body). Executive (institutional/arbitrage) sees rope: coordination value dominates experienced extraction because they initiate action and select timing. The judiciary (powerful/mobile) sees tangled rope because they experience coordination value (clarity of command) but face structural extraction (political question doctrine prevents judicial review). The statutory framework (powerless/trapped) sees pure snare because it cannot exit or defend itself. The mountain perspective risks false-summit classification: the 'necessity' of inherent executive authority naturalizes what is actually a contested constitutional reading.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The inherent executive reading resolves the war powers mandatrophy by clearly declaring which agent (executive) benefits from the authority allocation and showing mixed function (genuine coordination value + asymmetric extraction). The extraction is NOT disguised as pure coordination — the oxygen variable on appropriations-as-ratification makes explicit that Congress's post-hoc approval is a structural weakening, not genuine co-authorization. The reading commits to the axiom 'executive inherent authority from text' which is distinct from the congressional_primacy_reading axiom 'congressional primacy from text + historical practice.' Both axioms are internally coherent but cannot coexist in a single framework (forecloses relation). The functional_accommodation_reading axiom 'war powers allocation by evolutionary practice' influences but does not foreclose either reading — practice could ratify either textual commitment.",
+    "kernel_context": "This constraint instantiates the inherent_executive_reading of the war_powers_allocation kernel. The kernel is the contested constitutional text and principle allocating war powers. Three sibling readings exist: (1) congressional_primacy_reading: Congress possesses exclusive war-making authority except for genuine defensive necessity; commander-in-chief is operational command only. (2) functional_accommodation_reading: war powers allocation is determined by evolutionary institutional practice rather than textual grant. (3) inherent_executive_reading (THIS READING): commander-in-chief clause grants independent authority to deploy force for national defense without prior authorization. The readings differ in what constitutes the 'kernel' (text vs practice vs text + interpretation) and produce different beneficiary/victim allocations. This reading treats the war-making authority as textually granted to executive, not derived from practice or shared with Congress. The alternative readings would reclassify Congress as beneficiary (congressional_primacy) or treat the allocation as contingent on practice (functional_accommodation)."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "war_powers_allocation__congressional_primacy_reading",
+      "war_powers_allocation__functional_accommodation_reading",
+      "aumf_ratification_mechanism",
+      "presidential_emergency_powers"
+    ],
+    "dual_formulation_note": "The war_powers_allocation kernel decomposes into three distinct readings with different ε values and beneficiary/victim allocations. inherent_executive_reading (ε≈0.58) treats executive authority as textually foundational. congressional_primacy_reading (ε≈0.22, expected) treats Congress as primary authority with executive narrow exception. functional_accommodation_reading (ε≈0.45, expected) treats allocation as evolved through practice rather than textually determined. All three stories should link via network.affects_constraints to model the kernel family."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.62
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "war_powers_allocation__congressional_primacy_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "war_powers_allocation__functional_accommodation_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "executive_inherent_commander_in_chief_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "unilateral_deployment_authorized_by_text",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "framers_unitary_executive_design",
+    "drift_state": {
+      "moment": "contemporary_post_911_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

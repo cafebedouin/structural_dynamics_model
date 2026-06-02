@@ -24,136 +24,19 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 PROLOG_DIR = REPO_ROOT / "prolog"
 PROCESSED_LOG = PROLOG_DIR / "beta_processed.txt"
 
-COMMENTARY_ALLOWED = {
-    "narrative_context", "key_agents", "logic_rationale",
-    "perspectival_gap", "directionality_logic", "mandatrophy_analysis",
-}
-OMEGA_ALLOWED = {
-    "id", "question", "resolution_mechanism", "impact",
-    "confidence", "type_class", "description",
-}
-PERSPECTIVE_ALLOWED = {
-    "classification_type", "agent_power", "time_horizon",
-    "exit_options", "spatial_scope", "label", "comment",
-}
-MEASUREMENT_ALLOWED = {"metric", "time_point", "value", "id_override"}
-TOP_LEVEL_ALLOWED = {
-    "header", "base_properties", "perspectives", "omegas",
-    "measurements", "interval", "commentary", "boltzmann",
-    "network", "directionality_overrides", "uke_scope",
-}
-BASE_PROPS_ALLOWED = {
-    "extractiveness", "suppression", "theater_ratio", "claimed_type",
-    "human_readable", "topic_domain", "requires_active_enforcement",
-    "emerges_naturally", "has_sunset_clause", "accessibility_collapse",
-    "resistance", "beneficiaries", "victims", "mandatrophy_resolved",
-}
-VALID_ID_RE = re.compile(r'^[a-z][a-z0-9_]*$')
-
-
-def sanitize_id(s):
-    """Convert a string to a valid constraint ID."""
-    s = s.lower()
-    s = re.sub(r'[^a-z0-9_]', '_', s)
-    s = re.sub(r'_+', '_', s)
-    if s and not s[0].isalpha():
-        s = 'id_' + s
-    return s
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from story_repair import repair_story  # canonical single-source repair
 
 
 def fix_story(story_dict, constraint_id):
-    """Strip extra fields and fix common schema violations in place."""
-    # Strip unknown top-level fields
-    for k in list(story_dict.keys()):
-        if k not in TOP_LEVEL_ALLOWED:
-            del story_dict[k]
+    """Thin wrapper over the canonical, single-source repair (was a local duplicate).
 
-    # Fix commentary
-    if "commentary" in story_dict and isinstance(story_dict["commentary"], dict):
-        c = story_dict["commentary"]
-        for k in list(c.keys()):
-            if k not in COMMENTARY_ALLOWED:
-                # Try to merge into an allowed field if semantically close
-                if "directionality_logic" in k and "directionality_logic" not in c:
-                    c["directionality_logic"] = c.pop(k)
-                elif "perspectival_gap" in k and "perspectival_gap" not in c:
-                    c["perspectival_gap"] = c.pop(k)
-                else:
-                    del c[k]
-
-    # Fix perspectives
-    if "perspectives" in story_dict and isinstance(story_dict["perspectives"], list):
-        for persp in story_dict["perspectives"]:
-            if not isinstance(persp, dict):
-                continue
-            for k in list(persp.keys()):
-                if k not in PERSPECTIVE_ALLOWED:
-                    del persp[k]
-
-    # Fix omegas
-    if "omegas" in story_dict and isinstance(story_dict["omegas"], list):
-        for omega in story_dict["omegas"]:
-            if not isinstance(omega, dict):
-                continue
-            for k in list(omega.keys()):
-                if k not in OMEGA_ALLOWED:
-                    del omega[k]
-            # Fix invalid omega IDs
-            if "id" in omega and not VALID_ID_RE.match(str(omega["id"])):
-                omega["id"] = sanitize_id(str(omega["id"]))
-
-    # Fix measurements
-    if "measurements" in story_dict and isinstance(story_dict["measurements"], list):
-        for m in story_dict["measurements"]:
-            if not isinstance(m, dict):
-                continue
-            for k in list(m.keys()):
-                if k not in MEASUREMENT_ALLOWED:
-                    del m[k]
-            # Fix null/negative time_point
-            if m.get("time_point") is None:
-                m["time_point"] = 0
-            elif isinstance(m.get("time_point"), (int, float)) and m["time_point"] < 0:
-                m["time_point"] = 0
-            # Fix null/negative value
-            if m.get("value") is None:
-                m["value"] = 0.0
-            elif isinstance(m.get("value"), (int, float)) and m["value"] < 0:
-                m["value"] = 0.0
-
-    # Fix base_properties
-    if "base_properties" in story_dict and isinstance(story_dict["base_properties"], dict):
-        bp = story_dict["base_properties"]
-        for k in list(bp.keys()):
-            if k not in BASE_PROPS_ALLOWED:
-                del bp[k]
-        # Add missing mandatrophy_resolved
-        if "mandatrophy_resolved" not in bp:
-            extractiveness = bp.get("extractiveness", 0)
-            bp["mandatrophy_resolved"] = extractiveness < 0.46
-
-    # Fix directionality_overrides
-    if "directionality_overrides" in story_dict:
-        overrides = story_dict["directionality_overrides"]
-        if isinstance(overrides, list):
-            for ov in overrides:
-                if isinstance(ov, dict) and "d_value" in ov:
-                    ov["d_value"] = max(0.0, min(1.0, float(ov["d_value"])))
-        elif isinstance(overrides, dict):
-            # Schema expects array — wrap it
-            story_dict["directionality_overrides"] = [overrides]
-
-    # Fix beneficiaries/victims: ensure list of strings matching pattern
-    for field in ("beneficiaries", "victims"):
-        bp = story_dict.get("base_properties", {})
-        if field in bp and isinstance(bp[field], list):
-            bp[field] = [
-                sanitize_id(str(v)) if not VALID_ID_RE.match(str(v)) else v
-                for v in bp[field]
-                if v is not None
-            ]
-
-    return story_dict
+    repair_story is a strict superset of the prior logic — it additionally sanitises
+    cs_structure atoms / network ids / id_override and transliterates non-ASCII. The one
+    prior nicety it drops: folding mis-named commentary keys (e.g. directionality_logic_*)
+    into their canonical field; stray commentary keys are now deleted, not merged."""
+    return repair_story(story_dict)
 
 
 def load_failed_seeds(seeds_path):

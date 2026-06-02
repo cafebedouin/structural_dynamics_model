@@ -4,15 +4,16 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "bb"
+    "measurement_id_prefix": "bb",
+    "story_uid": "0e278a78-057e-47d9-8ebe-2962dffb75bc"
   },
   "base_properties": {
     "extractiveness": 0.12,
-    "suppression": 0.02,
+    "suppression": 0.03,
     "theater_ratio": 0.05,
     "claimed_type": "mountain",
-    "human_readable": "The Non-Computability of the Busy Beaver Function (\u03a3)",
-    "topic_domain": "mathematical/computational",
+    "human_readable": "Non-Computability of the Busy Beaver Function",
+    "topic_domain": "mathematical_logic/computability_theory",
     "emerges_naturally": true,
     "accessibility_collapse": 0.92,
     "resistance": 0.08
@@ -24,8 +25,8 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Mathematician's Logical Perspective",
-      "comment": "PERSPECTIVE 1: MATHEMATICIAN (MOUNTAIN) \u2014 From the perspective of formal logic and computability theory, the non-computability of \u03a3(n) is a mathematical necessity, not a contingent institutional limit. No observer, no matter how powerful or well-resourced, can compute \u03a3(n) for n \u2265 5 using any Turing machine. This is not a suppression mechanism \u2014 it is an irreducible boundary of what computation itself can do. The constraint emerges naturally from the definitions of computability and halting."
+      "label": "The Computational Theorist",
+      "comment": "PERSPECTIVE 1: COMPUTATIONAL THEORIST (MOUNTAIN) — The non-computability of Σ emerges directly from the definition of the function and Turing's halting theorem. No alternative formalism, no hidden assumptions, no escape route. The barrier is logical, not institutional or contingent. Universal scope; zero degrees of freedom across all computational models satisfying Church-Turing thesis."
     },
     {
       "classification_type": "mountain",
@@ -33,62 +34,53 @@
       "time_horizon": "civilizational",
       "exit_options": "trapped",
       "spatial_scope": "universal",
-      "label": "The Computational Agent",
-      "comment": "PERSPECTIVE 2: COMPUTATIONAL AGENT (MOUNTAIN) \u2014 A Turing machine or any physical computer attempting to compute \u03a3(n) for large n faces an absolute barrier, not a policy barrier or resource constraint that could be overcome with more funding or better algorithms. The barrier is ontological: the function's definition guarantees non-computability. No exit option exists. This is not extraction \u2014 it is a physical law of computation."
-    },
-    {
-      "classification_type": "mountain",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "analytical",
-      "spatial_scope": "universal",
-      "label": "The Research Community",
-      "comment": "PERSPECTIVE 3: RESEARCH COMMUNITY (MOUNTAIN) \u2014 Even a fully coordinated, well-funded research program with access to all known computational resources cannot compute \u03a3(6) or higher values. The non-computability is not a bottleneck that research can circumvent \u2014 it is a structural feature of mathematical reality. The constraint is invariant under aggregation: more researchers, more computers, more clever algorithms do not change the fundamental limit."
+      "label": "The Algorithm Seeker",
+      "comment": "PERSPECTIVE 2: ALGORITHM SEEKER (MOUNTAIN) — Any agent attempting to compute Σ(n) for arbitrary n faces an absolute barrier. Not a resource constraint, not an engineering problem, not a matter of time or funding. The function is provably uncomputable by any algorithm. The barrier is structural to the mathematical universe, independent of computational capacity or cleverness."
     },
     {
       "classification_type": "mountain",
       "agent_power": "institutional",
       "time_horizon": "civilizational",
-      "exit_options": "arbitrage",
+      "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Institutional Knowledge System",
-      "comment": "PERSPECTIVE 4: INSTITUTIONAL KNOWLEDGE SYSTEM (MOUNTAIN) \u2014 Scientific institutions cannot negotiate, engineer around, or defer the non-computability of \u03a3(n). The constraint is not a policy that could be rewritten or a regulation that could be lobbied away. It is built into the mathematical structure of what 'computation' means. No institutional arbitrage, no regulatory capture, no paradigm shift can change this. The constraint is civilization-invariant."
+      "label": "The Research Institution",
+      "comment": "PERSPECTIVE 3: RESEARCH INSTITUTION (MOUNTAIN) — No institution, no matter how well-funded or coordinated, can hire its way out of this constraint. The non-computability is a logical fact, not an empirical discovery or a policy choice. The constraint persists across all possible institutional arrangements and technological substrates."
     }
   ],
   "omegas": [
     {
-      "id": "oracle_machine_hypercomputation",
-      "question": "Does hypercomputation (oracle machines, Turing machines with access to oracles) change the non-computability status of \u03a3(n)?",
-      "resolution_mechanism": "Formal proof establishing whether oracle machines can compute \u03a3(n) or whether the problem remains uncomputable at higher levels of the arithmetical hierarchy",
-      "impact": "If oracle machines can compute \u03a3(n): The constraint is relative to standard Turing machines, not absolute \u2014 it becomes a classification within a hierarchy rather than a mountain. If oracle machines cannot: The non-computability is robust across computational models and the mountain classification is confirmed.",
+      "id": "oracle_access_boundary",
+      "question": "Does hypercomputational access to an oracle machine or continuous-valued computation change the non-computability of Σ within classical Turing theory?",
+      "resolution_mechanism": "Formal analysis of oracle-assisted computation models and their relationship to standard Turing completeness. Determination of whether non-Turing models are coherent extensions of classical computability or categorical rejections of it.",
+      "impact": "If oracle access changes classification: the barrier is contingent on the Turing model choice, suggesting a false summit (mountain-only claim naturalizes one model as universal). If oracle access does NOT change it: the non-computability is deeper than model-dependence, confirming the mountain classification.",
       "confidence": "high",
       "type_class": "conceptual",
-      "description": "Whether hypercomputation undermines the mountain classification"
+      "description": "Whether oracle/hypercomputation models change non-computability status"
     },
     {
-      "id": "physical_realizability_ceiling",
-      "question": "Does the physical universe impose a lower ceiling on computable Busy Beaver values than mathematical non-computability suggests?",
-      "resolution_mechanism": "Analysis of whether physical constraints (thermodynamic limits, computational speed limits, quantum decoherence) make \u03a3(n) practically uncomputable below the mathematical non-computability threshold",
-      "impact": "If physical limits are more restrictive: The practical boundary is set by physics, not mathematics \u2014 the distinction between 'mathematically non-computable' and 'physically impossible' becomes empirically relevant. If mathematics is the limiting factor: The mountain classification reflects the actual constraint that agents face.",
+      "id": "finite_approximation_utility",
+      "question": "Do finite computable lower bounds on Σ(n) (e.g., Σ(5)=47,176,870) satisfy practical research goals sufficiently that the non-computability of the full function is a real constraint on actual inquiry, or is it a theoretical boundary with negligible practical impact?",
+      "resolution_mechanism": "Domain-specific survey of working computability researchers: What is the actual research utility of computing exact values of Σ(n) vs. computing best-known lower bounds? How many open problems require the exact value vs. accept approximations?",
+      "impact": "If exact values are practically essential: the constraint is functionally tight and research-limiting (mountain remains appropriate). If approximations suffice: the constraint is functionally loose and research is approximately liberated (suggests reclassification toward rope or piton — the non-computability exists but does not bind actual practice).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether physical limits are more restrictive than mathematical non-computability"
+      "description": "Practical vs theoretical impact of non-computability on research"
     },
     {
-      "id": "definitional_circularity",
-      "question": "Is the non-computability of \u03a3(n) a mathematical truth or a tautology that follows from how we define the function?",
-      "resolution_mechanism": "Examination of whether \u03a3(n) could be defined differently (e.g., as a computable approximation or truncated version) and whether alternative definitions would preserve the core conceptual content",
-      "impact": "If definitional choice: The non-computability is partly a feature of how we chose to set up the problem \u2014 not purely a natural law. If tautological: The mountain classification is correct but needs qualification that the constraint is linguistic-conceptual in origin, not physical.",
-      "confidence": "medium",
+      "id": "independence_from_axiomatics",
+      "question": "Is the non-computability of Σ dependent on the choice of formal axiom system (ZFC, PA, etc.), or is it independent of standard axiomatizations?",
+      "resolution_mechanism": "Meta-mathematical analysis of which axiom systems can prove Σ's non-computability. Determination of whether different axiomatizations produce different computability classes for Σ.",
+      "impact": "If dependent on axiom choice: the constraint is contingent on formal commitments, not on mathematical truth itself (false summit candidate; reclassify to rope or tangled_rope reflecting the choice architecture). If independent: the constraint is foundational to mathematics regardless of axiomatization (confirms mountain).",
+      "confidence": "high",
       "type_class": "conceptual",
-      "description": "Whether non-computability is mathematical truth or definitional artifact"
+      "description": "Axiom-independence of Σ non-computability"
     }
   ],
   "measurements": [
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.03
+      "value": 0.04
     },
     {
       "metric": "theater_ratio",
@@ -98,7 +90,7 @@
     {
       "metric": "theater_ratio",
       "time_point": 100,
-      "value": 0.05
+      "value": 0.06
     },
     {
       "metric": "base_extractiveness",
@@ -121,28 +113,17 @@
     "end": 100
   },
   "commentary": {
-    "narrative_context": "The Busy Beaver function, \u03a3(n), represents the maximum number of steps a halting Turing machine with n states can execute before terminating. The non-computability of this function is a fundamental mathematical truth: no algorithm can compute \u03a3(n) for all n. This constraint is a candidate for pure Mountain classification because it exhibits zero degrees of freedom, emerges naturally from mathematical definitions, and imposes an absolute boundary on what computation can achieve. The constraint is invariant across all observer positions: a powerless agent, a powerful institution, and an analytical observer all face the identical boundary. There are no beneficiaries or victims \u2014 the constraint is not extractive, not suppressive, and not performative. It simply is. The theater ratio (0.05) reflects that the mathematical proof of non-computability requires no ritual, no performance, no institutional apparatus. The resistance (0.08) captures that mathematical foundations cannot be challenged by experimental refutation \u2014 they can only be questioned through formal redefiniton. The accessibility collapse (0.92) reflects that the non-computability is not a hidden or difficult-to-access property \u2014 it follows directly from the definition and standard computability theory. This constraint serves as the canonical exemplar for mathematical-logical mountains in the DR system.",
+    "narrative_context": "The non-computability of the Busy Beaver function Σ(n) is a mathematical fact derived from Turing's halting theorem and the definition of the function itself. Σ(n) represents the maximum number of steps a halting Turing machine with n states can execute before terminating. The function grows faster than any computable function — it dominates all recursive functions. Rado proved in 1962 that no algorithm can compute Σ(n) for arbitrary n. This is not a conjecture, not a current gap in knowledge, not an engineering problem. It is a logical consequence of the definitions. The constraint has zero degrees of freedom: no reformulation, no axiom choice, no technological advance can eliminate the barrier. The constraint's empirical validation is universal and immediate — any attempt to compute Σ for large n fails not because we lack resources but because the function's definition mathematically entails uncomputability. This makes Σ's non-computability the canonical example of a Mountain constraint: it emerges naturally, exhibits accessibility collapse (agents cannot access even a general strategy for computing the function), and has near-zero resistance (no coherent alternative framing exists in mathematics).",
     "key_agents": [
-      "Turing Machines: Computational agents subject to the non-computability barrier (powerless/trapped) \u2014 cannot compute \u03a3(n) by definition",
-      "Mathematicians: Analytical observers of the constraint (analytical/analytical) \u2014 prove the non-computability; have no stake in whether it holds",
-      "Computational Systems: Any physical realization of computation (powerless/trapped) \u2014 subject to the same barrier as abstract Turing machines",
-      "Research Institutions: Organized knowledge systems (institutional/arbitrage) \u2014 cannot circumvent the constraint through coordination or resource aggregation"
+      "Computational Theorist: Analytical observer (analytical/analytical) — sees the logical necessity of the barrier",
+      "Algorithm Seeker: Any agent attempting computation (powerless/trapped) — faces an absolute barrier with zero escape routes",
+      "Research Institution: Collective effort (institutional/analytical) — cannot coordinate away the constraint"
     ],
-    "logic_rationale": "Extractiveness (0.12): Very low. The non-computability of \u03a3(n) is not an extraction mechanism \u2014 it does not benefit one agent at the expense of another. The minimal non-zero value (0.12 rather than 0.0) reflects that the mathematical proof itself is created and maintained by the research community, which requires institutional resources and creates epistemic authority structures. However, these institutional features are not the constraint itself \u2014 they are scaffolding around the constraint. The core mathematical fact (non-computability) has zero extractiveness. Suppression (0.02): Negligible. The non-computability is not a suppression mechanism \u2014 it is not hiding alternatives or creating coercive barriers to exit. There is simply no alternative pathway to computation of \u03a3(n) that could be suppressed. Theater ratio (0.05): Minimal. The proof of non-computability requires formal mathematical reasoning with no performative elements. The proof is either correct or incorrect; there is no ritual or institutional theater required to establish it.",
-    "directionality_logic": "All four perspectives are agents subject to the same constraint with identical structural positions. No agent benefits while others bear costs. The directionality derivation chain does not apply \u2014 there are no beneficiaries or victims. All agents experience the constraint as an immutable boundary (d \u2248 0.5 for all, f(d) \u2248 0.65, but this is moot because chi is not computed for mountains). The constraint is civilization-invariant and observer-invariant.",
-    "perspectival_gap": "All four perspectives converge on the same classification (Mountain) with the same underlying logic. There is no perspectival gap \u2014 the constraint looks identical from all structural positions. This uniformity is diagnostic of a true natural law: if the constraint were actually a social construction, institutional policy, or contingent arrangement, different observers would see different types (beneficiary seeing Rope, victim seeing Snare, etc.). The absence of perspectival gap confirms that we are measuring a structural feature of mathematical reality, not an institutional arrangement.",
-    "mandatrophy_analysis": "The Busy Beaver constraint resolves the mandatrophy trivially: it is a Mountain from all perspectives. The classification does not change based on observer position because the constraint is not extraction at all \u2014 it is an immutable boundary. The mandatrophy resolution affirms that mathematical non-computability is distinct from institutional extraction: the former is a structural law (Mountain), the latter is a social arrangement (Snare or Tangled Rope). The constraint exemplifies how to avoid the mandatrophy trap: when all perspectives converge on the same type with no perspectival gap, the classification is robust across contexts and observer positions."
+    "logic_rationale": "Extractiveness (0.12): Minimal. The constraint does not extract value from any agent; it simply marks a boundary that is impossible to cross. The low value reflects that this is a natural limit, not a mechanism that benefits some at the expense of others. Suppression (0.03): Minimal. The barrier does not require active enforcement or suppression of alternatives — the mathematical structure itself prevents computation. Accessibility collapse (0.92): Very high. No agent can access a strategy for computing Σ(n) because the mathematical definition entails uncomputability. The barrier is total and universal. Resistance (0.08): Very low. There is no coherent alternative to the standard proof of non-computability within classical mathematics. All attempts to formalize an escape route either violate the definitions or collapse into the same proof. Theater ratio (0.05): Nearly zero. The constraint requires no performative maintenance or institutional theater. It does not rest on interpretations or institutional practices. The proof is transparent and repeatable by anyone with knowledge of Turing theory.",
+    "perspectival_gap": "There is no perspectival gap for this constraint. All three perspectives — the theorist, the algorithm seeker, and the institution — converge on the mountain classification. This convergence is diagnostic: it indicates that the constraint is genuinely a natural law rather than an institutional arrangement misrepresented as natural law. The constraint imposes the same barrier from every observer position. The theoretical mathematician sees logical necessity; the applied researcher seeking to compute Σ sees an impassable wall; the institution seeking to fund computation toward this goal discovers the funding is irrelevant to the mathematical impossibility. This uniformity across perspectives is the signature of a true Mountain.",
+    "directionality_logic": "The constraint has no beneficiaries and no victims in the standard sense. It is not a mechanism through which some agents extract from others. Rather, it is a universal limit on what all agents (at any power level, temporal horizon, or scope) can achieve through computation. The directionality formula d applies to constraints where agents have asymmetric relationships to extraction flows. Here, there is no extraction flow — there is only a boundary. The analytical observer's d ≈ 0.72 (canonical fallback) is misleading if interpreted as 'experienced extractiveness.' In this constraint's case, f(d) produces an effective extraction that is substantively zero because the constraint has no extraction mechanism. The low base_extractiveness (0.12) reflects this accurately: the constraint bounds possibility but does not benefit anyone at anyone's expense."
   },
   "boltzmann": {
     "coordination_type": "information_standard"
-  },
-  "network": {
-    "affects_constraints": [
-      "halting_problem_decidability",
-      "turing_completeness_boundary",
-      "godel_incompleteness_theorem"
-    ],
-    "dual_formulation_note": "The Busy Beaver non-computability is a specific instance of the Halting Problem's undecidability. \u03a3(n) is non-computable because computing it would solve the Halting Problem. These are distinct constraints (different \u03b5 values, different measurement bases) but structurally coupled: non-computability of \u03a3(n) flows from the undecidability of the Halting Problem."
-  },
-  "directionality_overrides": []
+  }
 }

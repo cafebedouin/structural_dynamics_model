@@ -4,23 +4,25 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "smf"
+    "measurement_id_prefix": "smf",
+    "story_uid": "bb9ccc16-b2c2-478c-9bc0-e9e4b8f37ec0"
   },
   "base_properties": {
-    "extractiveness": 0.58,
-    "suppression": 0.65,
-    "theater_ratio": 0.61,
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.64,
     "claimed_type": "tangled_rope",
     "human_readable": "Status Market Fragmentation",
     "topic_domain": "social/economic",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "status_signal_gatekeepers",
-      "certification_monopolists"
+      "credentialing_system_operators",
+      "established_credential_holders"
     ],
     "victims": [
-      "status_seekers",
-      "signal_standardization"
+      "credential_seekers_without_initial_capital",
+      "workforce_participants_changing_fields",
+      "signal_verification_economy"
     ]
   },
   "perspectives": [
@@ -30,8 +32,8 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Status Seeker",
-      "comment": "PERSPECTIVE 1: STATUS SEEKER (SNARE) \u2014 Trapped in proliferating certification channels (LinkedIn credentials, degrees, certifications, social media metrics). No single signal guarantees recognition; must navigate fragmented landscape or face exclusion. Maximum extraction: must pay admission costs (time, money, identity investment) across multiple systems with no assurance of payoff. Sees barrier but cannot exit."
+      "label": "The Entry-Level Credential Seeker",
+      "comment": "PERSPECTIVE 1: ENTRY-LEVEL CREDENTIAL SEEKER (SNARE) — Trapped in signal multiplication. Must acquire credentials across multiple non-interchangeable systems (degree + LinkedIn + portfolio + GitHub + certifications) with no ability to exit or substitute. Cannot signal competence through any single channel; employers demand the full credential stack. Theater ratio is high for this agent — much activity is performative credentialing (social media maintenance, portfolio curation) with uncertain payoff. Maximum suppression: cannot move forward without accumulating all signals simultaneously."
     },
     {
       "classification_type": "tangled_rope",
@@ -39,8 +41,8 @@
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Credentialed Professional",
-      "comment": "PERSPECTIVE 2: CREDENTIALED PROFESSIONAL (TANGLED ROPE) \u2014 Constrained by career path dependence and reputation sunk costs in existing credentials. Genuine coordination benefit: credentials enable hiring matching and professional networks. Asymmetric extraction: must maintain multiple credential profiles (resume, LinkedIn, GitHub, portfolio) to remain competitive. Coordination real but extraction asymmetric."
+      "label": "The Career-Change Participant",
+      "comment": "PERSPECTIVE 2: CAREER-CHANGE PARTICIPANT (TANGLED ROPE) — Faces coordinated barriers (must prove competence in new field) but also benefits from existing credential ecosystem (can leverage prior degrees, professional reputation). Partially mobile — can acquire new credentials but at high cost (time, money, career interruption). Mixed experience: fragmentation is both a coordination mechanism (ensures serious commitment) and an extraction mechanism (requires redundant signaling)."
     },
     {
       "classification_type": "rope",
@@ -48,35 +50,35 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Credentialing Authority",
-      "comment": "PERSPECTIVE 3: CREDENTIALING AUTHORITY (ROPE) \u2014 University, professional board, certification vendor operates with high exit optionality. Experiences fragmentation as coordination problem: standardizing credentials enables efficient signaling. Net beneficiary (extraction runs toward them) but genuine coordination service provided. Can arbitrage between validation standards."
+      "label": "The Credentialing System Operator",
+      "comment": "PERSPECTIVE 3: CREDENTIALING SYSTEM OPERATOR (ROPE) — Universities, certification boards, LinkedIn, GitHub, portfolio platforms each solve a genuine coordination problem: communicating specialized information about competence to relevant audiences. From this agent's perspective, the constraint is pure coordination (Rope) — each system specializes in a different signal type, and the diversity enables more nuanced hiring decisions. Net beneficiary through monopoly rents and fee extraction, but the coordination function is real."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "institutional",
+      "agent_power": "powerful",
       "time_horizon": "biographical",
-      "exit_options": "constrained",
+      "exit_options": "mobile",
       "spatial_scope": "global",
-      "label": "The Hiring Manager",
-      "comment": "PERSPECTIVE 4: HIRING MANAGER (TANGLED ROPE) \u2014 Constrained by information overload and legal liability (must verify credentials due diligence). Genuine coordination benefit: fragmented signals help differentiate candidates across domains. Asymmetric extraction: must bear search and verification costs across multiple credentialing systems. Coordination real but verification burden high."
+      "label": "The Established Professional with Prior Credentials",
+      "comment": "PERSPECTIVE 4: ESTABLISHED PROFESSIONAL WITH PRIOR CREDENTIALS (TANGLED ROPE) — Has initial credential capital (degree, professional network). Can leverage existing signals, reducing coordination burden. More mobile than entry-level seekers. But fragmentation still imposes costs (must maintain multiple profiles, LinkedIn recommendations, etc.). Low experienced extraction — the system coordinates legitimate skill signaling while extracting modest ongoing maintenance costs. Benefits from fragmentation: existing credentials create barrier to entry for competitors."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Traditional Academic Credentialing System",
+      "comment": "PERSPECTIVE 5: TRADITIONAL ACADEMIC CREDENTIALING SYSTEM (PITON) — The degree was historically THE comprehensive signal of competence. That monopoly has eroded. Degrees persist through institutional inertia (employers still require them) but are supplemented, not replaced, by specialized signals. Theater ratio is rising (GPA, transcript quality matter less than portfolio and demonstrated skills) as the system degrades from its role as sole competence arbiter. Maintained by legal/regulatory lock-in (professional licensing) rather than genuine primacy."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
-      "exit_options": "mobile",
+      "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The Decentralized Credential Movement",
-      "comment": "PERSPECTIVE 5: DECENTRALIZED CREDENTIAL MOVEMENT (SCAFFOLD) \u2014 Organized agents (blockchain credentials, skills registries, open badges) building alternative verification pathways. Sunset clause: as decentralized identity and blockchain verification mature, the gatekeeping power of traditional credentialing authorities diminishes. Suppression declining as alternatives emerge."
-    },
-    {
-      "classification_type": "piton",
-      "agent_power": "institutional",
-      "time_horizon": "civilizational",
-      "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "The Legacy Credential System",
-      "comment": "PERSPECTIVE 6: LEGACY CREDENTIAL SYSTEM (PITON) \u2014 Degree-awarding institutions persist partly through institutional inertia and legal/regulatory lock-in. Theater ratio high: much of credential value is performative (signaling conscientiousness and rule-following) rather than demonstrating actual competence. As skill-based hiring and portfolio-driven selection grow, the functional role of traditional credentials atrophies but institutional frameworks persist."
+      "label": "The Unified Signal Standardization Movement",
+      "comment": "PERSPECTIVE 6: UNIFIED SIGNAL STANDARDIZATION MOVEMENT (SCAFFOLD) — Industry coalitions, standards bodies, and skills-based hiring advocates are building unified credential frameworks (e.g., industry certifications, competency-based hiring, open badge standards). This represents temporary coordination with a sunset: as standardization matures, the requirement to maintain multiple non-interchangeable signals diminishes. Theater is low for this perspective — the work is functional (setting technical standards) not performative. Extraction is minimal because the movement has agency and a clear exit criterion (interoperable standards adoption)."
     },
     {
       "classification_type": "mountain",
@@ -85,63 +87,48 @@
       "exit_options": "analytical",
       "spatial_scope": "universal",
       "label": "The Analytical Observer (Natural Law View)",
-      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational/universal perspective, status signaling fragmentation appears as an irreducible feature of asymmetric information: any claim to expertise invites verification costs that cannot be eliminated. The multiplicity of signals is inherent to the problem of signaling under uncertainty. However, the structural data contradicts this \u2014 the fragmentation is partly contingent, driven by network effects and extractive gatekeeping rather than purely by information asymmetry."
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From civilizational perspective, signal fragmentation is inherent to complex labor markets. With many specialized fields, each domain develops its own competence markers (research papers for academia, code for engineering, publications for journalism, cases for law). Perfect mutual intelligibility is impossible — some fragmentation is a structural property of knowledge specialization. The constraint appears unchangeable from this vantage. However, the structural data may reveal this as a false summit: the fragmentation is amplified by incumbent capture and non-interoperability, not merely by irreducible complexity."
     }
   ],
   "omegas": [
     {
-      "id": "fragmentation_intentionality",
-      "question": "Is credential fragmentation a side effect of decentralized innovation or an intentionally maintained extractive structure by gatekeepers?",
-      "resolution_mechanism": "Temporal analysis of credential system proliferation; correlation between new credential introduction and gatekeeper market concentration; patent/trademark analysis of defensive credentialing strategies",
-      "impact": "If side effect: constraint may downgrade toward rope (coordination problem without active extraction). If intentional: classification as snare for powerless agents and tangled rope for constrained agents is confirmed.",
+      "id": "fragmentation_necessity_vs_incumbent_lock",
+      "question": "Is status market fragmentation a necessary consequence of knowledge specialization, or is it artificially amplified by incumbent credentialing systems defending market share?",
+      "resolution_mechanism": "Comparative analysis: jurisdictions with unified credentialing frameworks (e.g., some EU countries with EQF mutual recognition) vs. fragmented systems (US, UK); measurement of how much fragmentation reduces when interoperability standards are enforced; counterfactual: what would signal consolidation look like if LinkedIn, universities, GitHub, and industry boards had compatible metrics?",
+      "impact": "If necessary: fragmentation is a rope-type coordination cost, unavoidable in complex labor markets. If amplified by lock-in: fragmentation is a tangled_rope or snare-type extraction mechanism, potentially resolvable through regulatory interoperability mandates.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether fragmentation is intentional gatekeeping or incidental innovation"
+      "description": "Whether fragmentation is inherent or amplified by incumbent capture"
     },
     {
-      "id": "skill_verification_irreducibility",
-      "question": "Is credential fragmentation necessary to solve the skill verification problem, or does it solve it worse than unified systems?",
-      "resolution_mechanism": "Comparative analysis of hiring accuracy/retention between single-credential verification (e.g., hiring via portfolio alone) vs multi-credential verification; skill transfer/portability metrics",
-      "impact": "If necessary: fragmentation reflects genuine uncertainty \u2014 system is closer to mountain. If worse: fragmentation is pure extraction masquerading as solution \u2014 system is snare/tangled rope.",
+      "id": "credential_stacking_switching_costs",
+      "question": "What is the actual switching cost for an individual to migrate from one dominant credentialing system to another (e.g., from degree-primary to portfolio-primary)?",
+      "resolution_mechanism": "Longitudinal tracking of career transitions; measurement of time/cost required to establish credibility in new systems; analysis of rejection rates for candidates without complete credential stacks vs. those with deep credentials in one system.",
+      "impact": "High switching costs (> 2 years, substantial financial outlay) confirm snare-like suppression for entry-level seekers. Low switching costs suggest false positives in snare classification and indicate system is more mobile than structured.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether credential fragmentation solves the verification problem efficiently"
+      "description": "Switching costs for credential system migration"
     },
     {
-      "id": "gatekeeper_rent_extraction",
-      "question": "What proportion of credentialing system revenue represents rent extraction (premium pricing for redundant signals) vs genuine service delivery (information compression)?",
-      "resolution_mechanism": "Cost accounting of credential production; comparison of pricing against cost-of-service; analysis of credential correlation (if credentials are highly correlated, pricing above marginal cost indicates rent extraction)",
-      "impact": "If >50% rent extraction: snare/tangled rope classification confirmed. If <20% rent extraction: rope/coordination classification indicated.",
+      "id": "mutual_recognition_technical_feasibility",
+      "question": "Are the technical barriers to mutual recognition of credentials across systems (academic degree <-> professional certification <-> portfolio assessment) primarily technical or primarily driven by incumbent resistance?",
+      "resolution_mechanism": "Analysis of existing interoperability standards (blockchain credentials, verifiable credentials, mutual recognition treaties); comparison of coordination costs in sectors with active standardization (finance, healthcare) vs. fragmented sectors (tech, creative); interviews with standards-body participants about rate-limiting factors.",
+      "impact": "If technical barriers dominate: scaffold perspective is correct and sunset is achievable within 10-15 years. If incumbent resistance dominates: fragmentation is sustained by extraction mechanisms, and scaffold perspective is aspirational rather than structural.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Proportion of credentialing revenue that is rent extraction"
+      "description": "Technical vs. incumbent barriers to credential mutual recognition"
     },
     {
-      "id": "identity_lock_in_credentials",
-      "question": "Are professionals trapped by credential fragmentation due to material barriers (sunken costs) or due to identity fusion with specific credentials (professional identity lock)?",
-      "resolution_mechanism": "Behavioral analysis of career transitions: do professionals switching domains/industries abandon old credentials easily (material cost) or resist letting them lapse (identity component)? Qualitative interviews about professional identity fusion.",
-      "impact": "If material: constraint is about economic barriers (trapped/constrained exit). If identity-based: professionals are identity_locked into credential systems that constrain their actual options.",
-      "confidence": "low",
+      "id": "theater_ratio_composition",
+      "question": "Of the time credential seekers invest in the status market, what fraction is genuinely communicating competence (functional signal) vs. performing credentialing identity (theatrical maintenance)?",
+      "resolution_mechanism": "Time-use surveys and work diaries from job seekers; analysis of credential impact: correlation between marginal credentials (additional GitHub stars, extra LinkedIn endorsements) and actual hiring outcomes; measurement of 'signal decay' (how quickly outdated credentials are abandoned).",
+      "impact": "If theater is < 0.40: fragmentation is more coordination than extraction; reduce theater_ratio estimate and reclassify perspectives toward rope. If theater is > 0.75: fragmentation is primarily performative; increase snare and piton classifications.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether credential lock-in is material or identity-based"
+      "description": "Proportion of credential work that is theatrical vs. functional signaling"
     }
   ],
   "measurements": [
-    {
-      "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.35
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.48
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.58
-    },
     {
       "metric": "theater_ratio",
       "time_point": 0,
@@ -150,12 +137,42 @@
     {
       "metric": "theater_ratio",
       "time_point": 5,
-      "value": 0.52
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.61
+      "value": 0.64
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.48
     }
   ],
   "interval": {
@@ -163,35 +180,37 @@
     "end": 10
   },
   "commentary": {
-    "narrative_context": "Status market fragmentation is the proliferation of non-interchangeable credentialing, certification, and signal systems that compete to certify competence, affiliation, or identity. A person seeking employment, professional recognition, or social status must navigate LinkedIn profiles, academic degrees, professional certifications, portfolios, GitHub repositories, social media metrics, and specialized credentials that are not mutually acceptable as substitutes. This fragmentation creates a constraint that exhibits tangled rope structure: credentialing authorities coordinate information transmission and enable matching between employers and workers, but the proliferation of non-interchangeable systems extracts value from status seekers who must maintain multiple credential profiles. The constraint has intensified over the past decade as digital platforms have lowered barriers to credential creation, credential inflation has eroded the signal value of existing credentials, and employers have increasingly demanded multi-system verification. The theater ratio reflects that much of the credentialing system's apparent function \u2014 demonstrating conscientiousness, rule-following, and commitment \u2014 is performative. The actual information compression (proving competence) is marginal and could be accomplished more efficiently through unified systems or direct demonstration.",
+    "narrative_context": "Status market fragmentation describes the proliferation of non-interchangeable credentialing and certification systems that collectively govern professional recognition, employment access, and social status. A person seeking career advancement must navigate and maintain credentials across academic degrees, professional certifications, LinkedIn profiles, GitHub repositories, portfolios, social media metrics, and domain-specific credentials that are not mutually substitutable. The constraint exhibits mixed coordination and extraction characteristics: each credentialing system solves a genuine problem (communicating specialized competence to relevant audiences), but the lack of mutual recognition creates compounded signal requirements that fall unevenly on credential-seekers with limited initial capital. The rising theater ratio (0.42 → 0.64 over the interval) reflects credential work becoming increasingly performative — social media maintenance, portfolio curation, and credential accumulation with uncertain payoffs — rather than substantive skill demonstration. The fragmentation is sustained by incumbent credentialing operators (universities, certification boards, platforms) who benefit from monopoly rents and non-interoperability, and by established professionals who have already accumulated the required credential stacks and thus face lower marginal costs.",
     "key_agents": [
-      "Status Seekers: Primary victims (powerless/trapped) \u2014 must navigate fragmented landscape with no exit; bear admission costs across multiple systems with uncertain payoff",
-      "Credentialed Professionals: Secondary victims (moderate/constrained) \u2014 constrained by career path dependence and reputation sunk costs; must maintain multiple profiles to remain competitive",
-      "Credentialing Authorities: Primary beneficiaries (institutional/arbitrage) \u2014 universities, professional boards, certification vendors capture rent from credential monopolies; can arbitrage between verification standards",
-      "Hiring Managers: Constrained institutional actors (institutional/constrained) \u2014 must bear search and verification costs across multiple systems; face legal liability for due diligence verification",
-      "Decentralized Credential Movement: Organized coalition (organized/mobile) \u2014 arXiv-like credential aggregators, blockchain verification, open badges building alternative pathways with sunset logic",
-      "Legacy Credential System: Institutional actor (institutional/arbitrage) \u2014 degree-awarding institutions maintain credentials through regulatory lock-in; theater ratio indicates performative function persists despite declining competence signal"
+      "Entry-level credential seekers: Primary victims (powerless/trapped) — must accumulate full credential stack simultaneously with no ability to substitute or exit",
+      "Career-change participants: Secondary victims (moderate/constrained) — face high switching costs when entering new fields with established credential requirements",
+      "Credentialing system operators: Primary beneficiaries (institutional/arbitrage) — universities, certification boards, LinkedIn, GitHub, portfolio platforms each extract value through monopoly position on their signal type",
+      "Established professionals with prior credentials: Secondary beneficiaries (powerful/mobile) — credential capital reduces fragmentation burden and creates barrier to entry for competitors",
+      "Traditional academic degree system: Piton actor (institutional/arbitrage) — degree was historically THE credential; now degraded from monopoly to one component in required stack, maintained through regulatory lock-in",
+      "Unified signal standardization movement: Organized countervailing force (organized/constrained) — industry coalitions and standards bodies building interoperable credential frameworks with sunset logic",
+      "Analytical observer: Civilizational risk (analytical/analytical) — risks naturalizing fragmentation as inherent complexity rather than incumbent-sustained extraction"
     ],
-    "logic_rationale": "Extractiveness (0.58): Moderate-high, increasing over interval. At interval start (t=0), credential fragmentation was a mild problem \u2014 most value came from traditional credentials (degrees, professional licenses) which were still reasonably standardized. By t=10, proliferation of non-interchangeable systems has increased extraction: status seekers must maintain profiles across LinkedIn, certifications, online portfolios, and social media, bearing costs (time, money, identity curation) with diminishing marginal returns. The trajectory reflects credential inflation and platform multiplication. Suppression (0.65): High. Significant barriers to exit: sunk costs in existing credentials, path dependence of career reputation, legal/contractual requirements for credential verification, lack of unified alternative systems (until recently). Status seekers cannot simply exit the game \u2014 professional participation requires some credentials. However, suppression is not total: some exit paths exist (portfolio-based hiring, skill-based matching), and new alternatives (decentralized credentials) are reducing barriers. Theater ratio (0.61): Moderate-high and increasing. Much of the credentialing system's apparent function is performative \u2014 signaling conscientiousness, rule-following, organizational socialization \u2014 rather than directly demonstrating competence. The ratio has increased as credential proliferation has outpaced meaningful differentiation (credential inflation); employers use credentials partly as exclusion filters rather than competence verification.",
-    "perspectival_gap": "Status seekers and credentialing authorities experience structurally opposite directionalities. The seeker pays costs (trapped, powerless) that flow to authorities (arbitrage, institutional). This asymmetry is the tangled rope signature: genuine coordination function (matching between credential holders and employers) layered beneath asymmetric extraction (credentialing monopoly rents). Hiring managers occupy a pivotal position: they benefit from signal diversity enabling differentiation, but they pay verification costs that flow to credentialing authorities. The decentralized credential movement sees the fragmentation as temporary (scaffold with sunset), while the legacy system sees itself as degraded (piton). The analytical observer risks naturalizing fragmentation as a law of signaling, which would misclassify the contingent institutional components.",
-    "directionality_logic": "Each agent's directionality is determined by their structural relationship to the extraction flow. Credentialing authorities benefit from fragmentation (low d, negative chi) because fragmentation allows them to maintain separate markets and prevent commodification. Status seekers lose to fragmentation (high d, high chi) because they bear switching costs and lack alternatives. Hiring managers have mixed directionality: they benefit from signal diversity (lower d) but bear verification costs (higher d). The pipeline computes d from beneficiary/victim status plus exit options. Beneficiaries with arbitrage options (credentialing authorities) experience low effective extraction and perceive rope/coordination. Trapped agents without alternatives (status seekers) experience high effective extraction and perceive snare. Constrained agents with partial alternatives (credentialed professionals, hiring managers) experience moderate extraction and perceive tangled rope.",
-    "mandatrophy_analysis": "CONSTRAINT FAMILY STRUCTURE: Status market fragmentation decomposes into three structurally distinct constraints: (1) credential_standardization_problem (\u03b5\u22480.08, Mountain) \u2014 the irreducible problem of signal verification under uncertainty; (2) credential_platform_coordination (\u03b5\u22480.35, Rope) \u2014 genuine coordination service provided by aggregators like LinkedIn; (3) credential_gatekeeping_monopoly (\u03b5\u22480.58, Tangled Rope) \u2014 the extractive rent-seeking by incumbent credentialing authorities. The aggregated story treats fragmentation as a tangled rope because it combines coordination (information compression, matching) with extraction (monopoly rents, switching costs). The mandatrophy resolves by showing that credentialing authorities extract value not by solving the underlying verification problem (they do solve part of it) but by preventing unified solutions that would commodify their service. The sunset clause on the fragmentation comes from decentralized credential systems that bypass traditional gatekeepers \u2014 as these mature and gain employer trust, the extraction mechanism (gatekeeper monopoly on verification) loses force."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint imposes genuine coordination costs (must signal competence in each specialized domain) but also enables incumbent extraction (credentialing operators profit from non-interoperability and mandatory maintenance of multiple profiles). The trajectory from 0.38 → 0.52 reflects fragmentation deepening: as new signal types emerge (social media metrics, GitHub portfolios), the requirement to maintain previous signals does not diminish — it accumulates. Suppression (0.48): Moderate. Barriers to exit are real but surmountable: credential seekers cannot ignore the fragmented system without harming career prospects, but can select which credentials to prioritize based on field and target audience. Suppression is not total (unlike trapped agents); it is high-cost navigation, not absolute barrier. Theater ratio (0.64): Moderate-high. A substantial fraction of credential work is performative: LinkedIn profile maintenance, social media personal branding, portfolio curation, and credential accumulation with uncertain direct impact on hiring. However, the signaling is not entirely theater — portfolios and GitHub repositories do communicate real competence; the theater is in the performative maintenance required to keep signals current and visible. Rising trajectory reflects the system becoming increasingly theatrical as signal saturation increases: marginal credentials require more theatrical performance to achieve same visibility.",
+    "perspectival_gap": "The constraint demonstrates sharp perspectival divergence depending on credential capital and structural position. Entry-level seekers experience maximum extraction and suppression (Snare): must acquire full credential stack with no exit option. Established professionals experience mixed coordination-extraction (Tangled Rope): fragmentation imposes maintenance costs but also protects their credential capital from devaluation. Credentialing system operators experience pure coordination (Rope): each platform solves a real problem and benefits from specialization. Traditional degree systems experience degradation (Piton): degrees persist through regulatory requirement and employer habit, not genuine primacy. Unified signal movement experiences temporary coordination with sunset (Scaffold): real structural work building interoperability standards with clear exit criterion. The civilizational analytical observer risks naturalizing fragmentation as inherent to complex labor markets (Mountain), but the structural data reveals this as false summit: the fragmentation is substantially amplified by incumbent lock-in and non-interoperability, not by irreducible complexity.",
+    "directionality_logic": "Directionality (d) varies sharply across perspectives based on power level, exit options, and relationship to extraction flow. Entry-level seekers with no prior credentials and trapped exit options experience d ≈ 0.92 (victims): all extraction flows toward credentialing system operators, none toward these agents. Credentialing operators with institutional power and arbitrage exit options experience d ≈ 0.08 (beneficiaries): extraction flows toward them, not away. Career-change participants (moderate/constrained) experience d ≈ 0.58 (partially targeted): mixed costs and benefits, constrained exit means they can navigate the system but at high cost. Established professionals (powerful/mobile) experience d ≈ 0.42 (partial beneficiary): their prior credentials reduce navigation costs, and they benefit from non-interoperability as barrier to entry. Directionality derivation for standardization movement: organized power level, constrained exit (they can exit through standards adoption but must actively work toward it), beneficiary status (successful standardization benefits participating institutions). The engine computes this as d ≈ 0.50 (symmetric) — the movement both bears costs (coordination work) and benefits (if standards succeed). Piton actors: institutional power, arbitrage exit (can theoretically exit through devaluation, but tied to regulatory requirement), beneficiary status (extract value from degree monopoly even as system degrades). Engine computes d ≈ 0.25 — low extraction because the primary function has atrophied and the constraint is maintained by inertia, not active extraction.",
+    "mandatrophy_analysis": "Mandatrophy is partially resolved by the decomposition into constraint family: if fragmentation were simply Rope (pure coordination), entry-level seekers would not experience suppression > 0.35 and theater > 0.42 — they would optimize which signals to acquire. The high suppression and theater among powerless agents reveals that fragmentation is not pure coordination; it is mixed. The Tangled Rope classification captures this: genuine coordination function (each system communicates specialized competence) mixed with extraction mechanism (non-interoperability creates compounded requirements and rents for operators). Resolution path: fragmentation becomes pure Rope (low suppression, low theater) if interoperability standards mature and entry-level seekers can substitute credentials across systems. Fragmentation becomes pure Snare if consolidation fails and theater/suppression continue rising. Current state at ε=0.52 is genuinely tangled: neither pure coordination nor pure extraction, but a mixture that shifts based on agent capital and field."
   },
   "boltzmann": {
-    "coordination_type": "identity_coordination"
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
   },
   "network": {
     "affects_constraints": [
-      "credential_inflation",
-      "hiring_market_information_asymmetry",
-      "professional_identity_lock_in"
+      "educational_credential_inflation",
+      "platform_monopoly_lock_in",
+      "professional_licensing_gatekeeping"
     ],
-    "dual_formulation_note": "Status market fragmentation is downstream of credential inflation and upstream of professional identity lock-in. As credential systems proliferate and inflate, professionals become locked into maintaining multiple credential profiles (identity_locked exit). The fragmentation also exacerbates information asymmetry in hiring markets because no single credential is sufficient for signaling."
+    "dual_formulation_note": "Status market fragmentation is downstream of decisions by individual credentialing systems (educational institutions, certification boards, platforms) to maintain non-interoperable signal types. It is upstream of labor market outcomes: fragmentation affects hiring, wage dispersion, and career mobility. The constraint family includes three related stories: (1) educational_credential_inflation (ε=0.38, Tangled Rope) — degree multiplication and rising requirements driven by signaling arms race; (2) platform_monopoly_lock_in (ε=0.61, Snare) — individual platforms (LinkedIn, GitHub, etc.) each creating single-point dependencies; (3) professional_licensing_gatekeeping (ε=0.58, Snare) — regulatory capture by established professions using credential requirements as market protection. Status_market_fragmentation (ε=0.52) integrates across all three: it is the emergent property when all three operate simultaneously without mutual recognition."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.25
+      "d_value": 0.15
     }
   ]
 }

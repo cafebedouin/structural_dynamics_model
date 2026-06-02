@@ -1,0 +1,253 @@
+{
+  "header": {
+    "constraint_id": "tcp_ip_interpretation__zero_rating_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "zero_rating",
+    "story_uid": "362fa0ba-9c3e-422a-a620-d5239a9fbf8a"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.64,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "TCP/IP Zero-Rating Exemption Authorization (ISP Selective Data Cap Waiver)",
+    "topic_domain": "telecommunications_law/internet_policy/network_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_content_platforms",
+      "isps_with_zero_rating_partnerships",
+      "sponsored_content_providers"
+    ],
+    "victims": [
+      "competitive_entry_startups",
+      "bandwidth_constrained_users",
+      "net_neutrality_principle"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Bandwidth-Constrained User",
+      "comment": "PERSPECTIVE 1: BANDWIDTH-CONSTRAINED USER (SNARE) — Data-capped users in regions with limited ISP competition have no meaningful choice. Zero-rating exemptions for incumbent platforms force them toward those platforms regardless of preference. Unable to exit or organize; bears full cost of reduced choice and entrenchment."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Startup Content Provider",
+      "comment": "PERSPECTIVE 2: STARTUP CONTENT PROVIDER (SNARE) — Faces asymmetric barriers: cannot negotiate zero-rating deals (lacks scale and negotiating power) while competitors gain data-cap exemptions. Users are pushed toward exempted platforms by bandwidth economics. Exit is high-cost (relocate to exempted platform at loss of differentiation). Structurally unable to compete on equivalent terms."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Incumbent Platform (Netflix, Meta, Google)",
+      "comment": "PERSPECTIVE 3: INCUMBENT PLATFORM (TANGLED ROPE) — Genuine coordination function: ISP partnerships solve the last-mile congestion problem and enable platforms to serve users in bandwidth-constrained regions. But also extracts: platform's exemption status creates moat against competitors and raises competitive entry barriers. Coordination benefit exists alongside asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The ISP Network Operator",
+      "comment": "PERSPECTIVE 4: ISP NETWORK OPERATOR (ROPE) — Pure coordination from this view: zero-rating enables traffic management (prioritizing important services) and partnerships solve genuine congestion. ISP experiences the exemption framework as a coordination mechanism enabling business partnerships. Low suppression; agent has exit and agency (can choose partners, set terms)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Net Neutrality Regulatory Principle",
+      "comment": "PERSPECTIVE 5: NET NEUTRALITY PRINCIPLE (PITON) — The net neutrality principle once functioned as a coordination mechanism ensuring open access. Zero-rating exemptions have degraded this principle into a theater: the regulatory framework (Telecommunications Act interpretation, FCC guidance) persists as a binding constraint but no longer serves its original coordination function. Maintained through institutional inertia and path dependence rather than functional necessity. Theater ratio high because enforcement decouples from stated principle."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Alternative Ecosystem (Open Networks, Mesh)",
+      "comment": "PERSPECTIVE 6: ALTERNATIVE ECOSYSTEM (SCAFFOLD) — Community networks, municipal broadband, satellite internet (Starlink, Kuiper) and mesh protocols offer bypass pathways around ISP gatekeeping. These represent temporary scaffolding with sunset logic: as alternatives mature (5-10 year horizon), ISP gatekeeping through zero-rating loses leverage. Organized agents pursuing mobile exit paths."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Network Engineering Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From engineering first-principles, ISP bandwidth management and content optimization partnerships are immutable features of network economics: data prioritization is inevitable given resource scarcity. This perspective risks naturalizing zero-rating exemptions as inherent to TCP/IP's own logic. However, the structural data reveals this is a false summit: the exemption framework is a policy reading of TCP/IP, not an immutable property of the protocol itself."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "definition_of_equivalent_access",
+      "question": "What constitutes 'equivalent access' to content under zero-rating exemptions? Is differential data-cap treatment equivalent to discrimination?",
+      "resolution_mechanism": "Comparative analysis of user experience: content speed, responsiveness, and practical usability with and without exemption; economic analysis of threshold where exemption becomes material competitive disadvantage",
+      "impact": "If exemption threshold is low: reading treats zero-rating as technical traffic management (coordination). If threshold is high: reading treats exemption as economic gatekeeping (extraction). This distinction determines whether the constraint is Rope or Tangled Rope at the ISP perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether differential data-cap treatment constitutes material discrimination"
+    },
+    {
+      "id": "protocol_vs_policy_distinction",
+      "question": "Is zero-rating authorization an interpretation of TCP/IP protocol itself, or a policy layer imposed above protocol-agnostic infrastructure?",
+      "resolution_mechanism": "Historical analysis of TCP/IP specification documents, RFC standards, and early Internet governance decisions. Determination of whether prioritization was ever contemplated as core protocol feature vs. implemented as later ISP policy choice.",
+      "impact": "If protocol-intrinsic: zero-rating is Mountain (immutable). If policy-layer: zero-rating is a contingent institutional reading (Tangled Rope/Snare). This omega resolves whether the mountain perspective instantiates true natural law or false summit.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Boundary between TCP/IP protocol design and ISP policy interpretation"
+    },
+    {
+      "id": "competitive_moat_materiality",
+      "question": "What percentage of users in competition-constrained regions (single ISP availability) are materially influenced toward exempted platforms by zero-rating incentives?",
+      "resolution_mechanism": "Market research: user data consumption patterns before/after zero-rating implementation; correlation between exemption availability and platform market share in single-ISP markets vs. multi-ISP markets",
+      "impact": "If >40% influence threshold crossed: extraction mechanism is material (Snare/Tangled Rope confirmed). If <20%: effect may be negligible (reading moves toward Rope). This empirical measure determines whether the startup victim perspective reflects real structural disadvantage or theoretical concern.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Materiality of zero-rating moat effect on competitive entry"
+    },
+    {
+      "id": "kernel_reading_ambiguity_zero_rating_vs_neutrality",
+      "question": "This reading (zero-rating) and the sibling neutrality_reading both interpret the same TCP/IP kernel but authorize opposite exemptions. Does the zero-rating reading's core premise foreclose the neutrality reading, or do both remain live policy options?",
+      "resolution_mechanism": "Examination of whether zero-rating and neutrality can coexist in a single regulatory framework (e.g., zero-rating permitted for essential services but prohibited for competitive advantage) vs. whether they are logically incompatible (zero-rating necessarily violates neutrality principle)",
+      "impact": "If coexist-capable: readings are coexists_with (live policy contest). If mutually exclusive: zero-rating forecloses neutrality or vice versa. This determines the cs_structure.reading_relations field for the neutrality sibling.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Logical compatibility of zero-rating and neutrality readings of TCP/IP kernel"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.64
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The zero-rating reading interprets TCP/IP's technical architecture to authorize ISP selective exemptions from data caps for sponsored content. This reading permits Internet Service Providers to offer zero-rated (data-cap-exempt) access to content partners in exchange for partnership fees, arguing that such arrangements are technically neutral optimizations that enable better service delivery in bandwidth-constrained networks. This is ONE reading of a contested kernel (tcp_ip_interpretation). Sibling readings include the neutrality_reading (TCP/IP mandates equal treatment regardless of content origin or sponsor) and the prioritization_reading (TCP/IP authorizes ISPs to prioritize based on technical criteria). The three readings coexist as competing policy interpretations of the same technical standard. The zero-rating reading is the subject of this constraint story. It exhibits classic tangled-rope structure: genuine coordination function (ISP-platform partnerships enable service delivery) combined with asymmetric extraction (incumbent platforms gain competitive moat, startup entrants face raised barriers). Over the measurement interval (approximately 2015-2021 in telecom regulatory time), extractiveness accumulated as zero-rating exemptions became standard ISP practice, suppression increased as competitive alternatives were foreclosed, and theater ratio declined slightly (the justification shifted from technical necessity toward explicit business partnership, reducing performative content).",
+    "key_agents": [
+      "ISP Network Operators: Primary beneficiary (institutional/arbitrage) — capture partnership fees and traffic management coordination benefits",
+      "Incumbent Content Platforms (Netflix, Meta, Google, Apple): Primary beneficiary (powerful/arbitrage) — gain data-cap exemptions that competitors cannot match; raised competitive moat",
+      "Startup Content Providers: Primary victim (moderate/constrained) — cannot negotiate exemptions; face user pressure toward exempted platforms; raised entry barriers",
+      "Bandwidth-Constrained Users: Primary victim (powerless/trapped) — in single-ISP markets, zero-rating forces platform choice; no exit option",
+      "Net Neutrality Regulatory Principle: Structural victim (institutional/constrained) — original coordination function (open access guarantee) degraded to theater",
+      "Alternative Ecosystem Providers: Organized secondary actors (organized/mobile) — community networks, municipal broadband, satellite operators providing bypass pathways"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, rising. Base extraction reflects asymmetric platform advantage (incumbents exempted, startups not) and user steering toward exempted content. Measurement trajectory shows accumulation: 0.35→0.48→0.58 across 6-year interval, indicating that as zero-rating became industry standard, the extraction mechanism solidified. By year 6, most major ISPs operated zero-rating partnerships, raising barriers materially. Suppression (0.64): High and rising. Barriers include: (1) startup inability to negotiate exemptions without massive scale, (2) user behavioral steering by bandwidth economics, (3) ISP market concentration reducing competitive pressure for neutrality, (4) lack of open-source or community alternative platforms at comparable scale. The trajectory 0.48→0.60→0.64 reflects increasing foreclosure of competitive pathways. Theater ratio (0.48): Low and declining. Unlike performative systems (e.g., CSR, token diversity initiatives), zero-rating justifications shifted from 'technical optimization' framing toward explicit 'business partnership' language, reducing rhetorical theater. The functional claim (data-cap exemption enables service) is substantive and testable, though contested.",
+    "perspectival_gap": "This reading instantiates deep perspectival divergence. The ISP sees Rope (coordination enabling partnership revenue). The incumbent platform sees Tangled Rope (coordination benefit + moat protection). The startup sees Snare (unable to compete). The bandwidth-constrained user sees Snare (forced choice). The net neutrality principle sees Piton (degraded regulatory function). The alternative ecosystem sees Scaffold (sunset pathway). The analytical observer risks seeing Mountain (network optimization as immutable). The most diagnostic gap: the ISP's rope vs. the startup's snare derive from identical base_properties, revealing that the classification depends entirely on structural position (beneficiary vs. victim, arbitrage vs. constrained). This gap is the core explanatory work of the zero-rating reading.",
+    "directionality_logic": "Directionality values (d) map to power and exit options. ISP operators (institutional/arbitrage) have low d (~0.15): beneficiaries with exit options → low extraction against them. Incumbent platforms (powerful/arbitrage) have moderate-low d (~0.25): beneficiaries but with competitive pressures → moderate extraction. Startups (moderate/constrained) have high d (~0.78): victims without significant exit → high extraction. Users in single-ISP markets (powerless/trapped) have maximum d (~0.95): victims with no exit → maximum extraction. The sigmoid f(d) transforms these d values into experienced extractiveness chi. The piton perspective for net neutrality principle uses d~0.72 (observer position) but low chi because the principle itself is not an agent making choices — the piton classification comes from theater_ratio exceeding 0.7, not from high effective extraction.",
+    "kernel_context": "This constraint is the zero-rating reading of the tcp_ip_interpretation kernel. The kernel is the contested interpretation of TCP/IP's design intent and governance authority. The zero-rating reading authorizes ISPs to offer selective data-cap exemptions for sponsored content. Sibling readings include: (1) neutrality_reading — TCP/IP mandates equal treatment, zero-rating is prohibited; (2) prioritization_reading — TCP/IP authorizes prioritization by technical criteria (latency-sensitive video), which is distinct from sponsor-based exemption. The three readings coexist as live policy positions in different regulatory regimes (US zero-rating permitted in many states; EU stricter net neutrality enforcement; other jurisdictions vary). The zero-rating reading and neutrality reading influence each other: where zero-rating becomes standard practice, it creates political pressure to change regulatory frameworks that mandate neutrality. The prioritization reading and zero-rating reading coexist with some tension: if technical prioritization is authorized, where is the boundary with sponsor-based priority? This boundary is precisely where extraction vs. coordination determination lives.",
+    "mandatrophy_analysis": "The zero-rating reading resolves mandatrophy by acknowledging that the same structural constraint (ISP exemption authority) exhibits tangled-rope characteristics: genuine coordination (partnerships enable service, traffic management) coexists with asymmetric extraction (incumbent moat, startup barriers). The mandatrophy question — is this coordination or extraction? — has a tangled-rope answer: both. The constraint is not misclassified as a snare (that would erase coordination). It is correctly classified as tangled rope because: (1) beneficiaries (ISPs, platforms) and coordination function exist, (2) victims (startups, users) and asymmetric extraction exist, (3) active enforcement required (FCC regulations, ISP contracts, technical implementations). The perspectival gap (ISP rope, startup snare, user snare) shows that tangled rope is the global constraint type — it contains local snare and rope regions depending on position."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "tcp_ip_interpretation__neutrality_reading",
+      "tcp_ip_interpretation__prioritization_reading",
+      "platform_competitive_moat",
+      "isp_market_concentration"
+    ],
+    "dual_formulation_note": "The zero-rating reading is one of three readings of the tcp_ip_interpretation kernel. The neutrality and prioritization readings are separate constraint stories with their own epsilon values, beneficiary/victim structures, and perspectives. The three are linked by network.affects_constraints and share the same kernel_id but different reading_id values. Decomposition is required because each reading authorizes different technical practices and produces different economic structures."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "tcp_ip_interpretation__neutrality_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "tcp_ip_interpretation__prioritization_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "network_operator_exemption_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "technical_optimization_permits_discrimination",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "open_internet_with_isp_optimization_authority",
+    "drift_state": {
+      "moment": "contemporary_platform_concentration_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

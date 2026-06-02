@@ -1,18 +1,23 @@
 #!/usr/bin/env python3
-"""Extract topic seeds from v3 archived .pl testset files.
+"""Extract topic seeds from archived .pl testset files.
 
-Reads prolog/archives/prolog_v3/testsets/*.pl and extracts:
+Reads <archive>/*.pl (default: prolog/archives/prolog_v5) and extracts:
   - constraint_id (from filename)
   - human_readable (from human_readable/2 fact)
   - topic_domain (from topic_domain/2 fact)
-  - summary (first sentence of the module doc comment, if present)
+  - summary (the FULL `SUMMARY:` block from the /* ... */ header comment)
 
 Outputs a JSON seeds file for the beta corpus generator.
 NO claimed_type is included — the generating model classifies from structure alone.
 
+Note (2026-06-01): the summary capture reads the single-star `/* ... SUMMARY: ... */`
+header block in full. The prior version matched only double-star `/** ... */` doc
+comments and kept the first sentence (≤500 chars), which both missed the single-star
+headers used by the prolog_v5 corpus and truncated multi-paragraph summaries.
+
 Usage:
     python3 python/seed_extractor.py
-    python3 python/seed_extractor.py --archive-dir prolog/archives/prolog_v3/testsets
+    python3 python/seed_extractor.py --archive-dir prolog/archives/prolog_v5
     python3 python/seed_extractor.py --output prolog/beta_seeds.json
 """
 
@@ -23,7 +28,7 @@ import sys
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_ARCHIVE = REPO_ROOT / "prolog" / "archives" / "prolog_v3" / "testsets"
+DEFAULT_ARCHIVE = REPO_ROOT / "prolog" / "archives" / "prolog_v5"
 DEFAULT_OUTPUT = REPO_ROOT / "prolog" / "beta_seeds.json"
 
 # ---------------------------------------------------------------------------
@@ -46,8 +51,9 @@ RE_TOPIC_DOMAIN = re.compile(
 # Matches the constraint_id from a module declaration or filename
 RE_MODULE = re.compile(r":- module\(constraint_(\w+)")
 
-# Matches doc comment blocks: /** ... */ or %% lines at top
-RE_DOC_COMMENT = re.compile(r"/\*\*(.*?)\*/", re.DOTALL)
+# Matches the SUMMARY: block inside the single-star /* ... */ header comment.
+# Non-greedy capture from "SUMMARY:" to the end of that header block (first */).
+RE_SUMMARY = re.compile(r"SUMMARY:\s*(.*?)\*/", re.DOTALL | re.IGNORECASE)
 
 
 def normalize_constraint_id(raw_id: str) -> tuple[str, bool]:
@@ -84,18 +90,17 @@ def extract_seed(pl_path: Path) -> dict | None:
     m = RE_TOPIC_DOMAIN.search(text)
     topic_domain = m.group(1).strip() if m else None
 
-    # Try to extract a summary from doc comment
+    # Extract the FULL SUMMARY: block from the /* ... */ header comment.
     summary = None
-    m = RE_DOC_COMMENT.search(text)
+    m = RE_SUMMARY.search(text)
     if m:
-        doc = m.group(1).strip()
-        # Take first sentence (up to period + space or end)
-        sentences = re.split(r'(?<=[.!?])\s+', doc)
-        if sentences:
-            # Clean up Prolog comment artifacts
-            first = sentences[0].strip().lstrip("*").strip()
-            if len(first) > 20:  # Skip trivially short comments
-                summary = first[:500]  # Cap length
+        body = m.group(1)
+        body = re.sub(r'\n\s*\*+', '\n', body)    # drop leading "* " on each line
+        body = re.sub(r'={3,}', ' ', body)         # drop ==== separators
+        body = re.sub(r'\s+', ' ', body).strip()   # collapse whitespace
+        body = re.sub(r'^[\*\s]+', '', body)       # drop any leading comment-star
+        if len(body) > 20:                         # skip trivially short blocks
+            summary = body                         # full block, no truncation
 
     if not human_readable:
         # Fallback: humanize the filename

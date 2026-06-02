@@ -1,0 +1,246 @@
+{
+  "header": {
+    "constraint_id": "feud_obligation_kernel__stateless_coordination_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_feud_obligation_kernel__stateless_coordination_reading",
+    "measurement_id_prefix": "feud_coord",
+    "story_uid": "c599e2cf-633b-426a-9be2-f8cbfc768d14"
+  },
+  "base_properties": {
+    "extractiveness": 0.35,
+    "suppression": 0.42,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Blood-Feud Obligation as Stateless Coordination Mechanism",
+    "topic_domain": "legal_anthropology/medieval_history/comparative_political_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "injured_kinship_group",
+      "would_be_targets_of_uncompensated_wrongs"
+    ],
+    "victims": [
+      "feud_cycle_perpetuation",
+      "defectors_from_kinship_obligation"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Injured Kinship Group (Coordination View)",
+      "comment": "PERSPECTIVE 1: INJURED KINSHIP GROUP (ROPE) — Feud obligation solves the coordination problem of securing justice and deterrence when no centralized enforcement exists. The group organizes response; the threat of retaliation deters future wrongs. Low net extraction because the mechanism actually coordinates legitimate protection of group members. Suppression exists (kinship loyalty is binding) but reflects coordination costs, not pure coercion."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "label": "The Kinship Obligor (Identity-Locked Participant)",
+      "comment": "PERSPECTIVE 2: KINSHIP OBLIGOR (TANGLED ROPE) — Individual members experience feud obligation as both coordination (legitimate justice-seeking) and extraction (mandatory participation regardless of personal risk or cost). Exit is identity-locked: refusing kinship obligation means expulsion from the group, loss of protection, and loss of social identity. Structural mobility exists (one could flee) but the binding is cognitive/identity-based. Genuine coordination function (deterrence) coexists with extraction (compulsory risk-bearing)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Feud-Cycle Perpetuation (Collective Harm)",
+      "comment": "PERSPECTIVE 3: FEUD-CYCLE PERPETUATION (SNARE) — The cycle itself is trapped. Retaliation provokes counter-retaliation; compensation demands trigger honor disputes; peacefully exiting the cycle means accepting injustice. No individual agent owns the cycle, but the cycle extracts continuously from all parties through escalating violence and resource depletion. Maximum suppression because the cycle is self-reinforcing through kinship obligation — breaking the obligation breaks one's identity."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Wergild Alternative (Coordination Upgrade)",
+      "comment": "PERSPECTIVE 4: WERGILD ALTERNATIVE (SCAFFOLD) — Wergild (monetary compensation) represents a coordination upgrade to feud: it provides restitution and deterrence without cycle escalation. From this perspective, the blood-feud obligation is a temporary coordination mechanism with a sunset: as wergild norms and compensation practices mature, the need for retaliation-based deterrence declines. Low effective extraction because the institutional actor (chief, community council) arbitrages between feud and wergild, phasing out feud as alternatives become available. The sunset is not formally decreed but structurally emergent — communities adopt wergild when it proves more efficient."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Stateless Authority (Chieftain/Elder)",
+      "comment": "PERSPECTIVE 5: STATELESS AUTHORITY (ROPE) — Chiefs and elders benefit from feud obligation as a decentralized enforcement mechanism: it reduces their direct enforcement costs. They coordinate justice through feud norms while maintaining social legitimacy. The institutional position has arbitrage (can negotiate peace, set wergild rates, broker compensation). Feud obligation appears as functional coordination infrastructure — they are solving the genuine problem of justice in stateless contexts. Low net extraction because they are genuinely enabling coordination."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Coordination vs. Extraction Ambiguity)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From civilizational view, blood-feud obligation genuinely coordinates justice and deterrence in the absence of centralized capacity. It is not pure extraction or pure coordination but a hybrid: it solves a real coordination problem while generating secondary extraction (cycle perpetuation, cycle-constrained agents, defectors). The constraint's extractiveness reflects this hybridity. The reading instantiated here — stateless coordination — captures feud obligation as a functional justice mechanism, not as pathological violence."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "feud_cycle_exit_mechanism",
+      "question": "What structural mechanism breaks the feud cycle, and is it built into feud obligation itself or requires external institutional innovation (wergild, centralized justice)?",
+      "resolution_mechanism": "Historical case analysis: Do feuds naturally exhaust and resolve within kinship groups, or do they require wergild/monetary compensation or state intervention to stop? Longitudinal tracking of feud durations across different institutional contexts.",
+      "impact": "If cycles self-resolve: feud obligation is genuinely self-limiting (lower ε for extraction-cycle reading). If cycles require external intervention: feud obligation creates trapped perpetuation (higher ε for extraction-cycle reading). If wergild is sufficiently mature: scaffold sunset logic holds (this reading remains rope/tangled rope, but the system is transitioning).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether feud cycles have intrinsic termination conditions"
+    },
+    {
+      "id": "deterrence_effectiveness_vs_cycle_cost",
+      "question": "Does the deterrence function of feud obligation (preventing initial wrongs) outweigh the cycle perpetuation costs (escalating retaliation, resource depletion)?",
+      "resolution_mechanism": "Comparative rates of violent injury in communities with active feud systems vs. communities without: do feud systems achieve lower pre-violence rates than the alternative (uncompensated wrongs + no deterrent)? Economic modeling of resource costs: total violence + cycle escalation vs. prevented first wrongs.",
+      "impact": "If deterrence > cost: coordination reading confirmed (ε closer to 0.25, lower tangled_rope edge). If cost > deterrence: extraction cycle reading confirmed (ε closer to 0.55, higher snare/tangled rope edge). If approximately balanced: constraint is genuine coordination mechanism with real collateral costs (supports claimed 0.35).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Net efficiency of feud deterrence relative to cycle costs"
+    },
+    {
+      "id": "reading_contingency_on_state_absence",
+      "question": "Is the stateless coordination reading only valid in contexts of state absence? Does centralized justice availability make feud obligation purely extractive/vestigial?",
+      "resolution_mechanism": "Historical analysis of feud persistence in early-state and proto-state societies: do feuds continue when state justice becomes available, and if so, do they serve coordination function (filling state justice gaps) or extraction function (pre-state power structures resisting centralization)?",
+      "impact": "If feuds persist as coordination in state-present contexts: reading is more general (ε holds across multiple political regimes). If feuds become purely extractive when states available: reading is specifically stateless (reading_relations imply transitions between readings as institutional context changes; this is a conceptual omega about reading identity and scope).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether stateless coordination reading is regime-contingent or generalizable"
+    },
+    {
+      "id": "identity_lock_breakability",
+      "question": "Under what conditions does the identity_locked binding of kinship obligation break? Is the binding cognitive/identity-based (feud participants internalize obligation) or structural/coercive (genuine material barriers to exit)?",
+      "resolution_mechanism": "Ethnographic observation: Can individuals who reject feud obligation remain in their community with reduced status but retained protection? Do defectors face material sanctions (expulsion, property loss, physical violence) or primarily status loss and social isolation? Comparative analysis across different kinship systems and historical periods.",
+      "impact": "If binding is primarily identity-locked: the kinship obligor perspective's exit should classify as identity_locked rather than constrained; this reading's suppression reflects cognitive capture, not material coercion. If binding is primarily structural: exit should classify as trapped/constrained, and suppression reflects material barriers. If mixed: supports the claimed identity_locked classification with significant structural elements, and measurement should show suppression that persists after exit (internalized component).",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Binding mechanism of kinship obligation: identity-locked vs. structural coercion"
+    },
+    {
+      "id": "sibling_reading_prevalence_in_discourse",
+      "question": "Which reading — stateless coordination, extraction cycle, or christianized pacification — is the dominant scholarly and cultural narrative in contemporary and medieval discourse?",
+      "resolution_mechanism": "Historiographic analysis: frequency and framing in primary sources (medieval chronicles, law codes), secondary sources (modern scholarship), and contemporary indigenous/traditional legal systems. Do actors describe feud obligation as coordination mechanism (justice, deterrence, honor) or extraction mechanism (violence, cycles, oppression)?",
+      "impact": "If coordination reading dominates: the reading's legitimacy is high; feud obligation is culturally validated as functional justice. If extraction reading dominates: coordination reading is marginalized/revisionist (requires asserting that participants were underestimating their own mechanism's function). If readings coexist in different discourse communities: supports coexists_with relation to sibling readings (different parties hold different readings).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Prevalence of stateless-coordination reading relative to extraction-cycle and pacification readings"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.37
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.41
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Blood-feud obligation in stateless and early-state societies represents a self-enforcing coordination mechanism for justice and deterrence in contexts where centralized enforcement capacity does not exist or is not available to all groups. This constraint is ONE reading of the contested kernel 'feud_obligation_kernel' — specifically, the stateless_coordination_reading. The kernel itself remains ambiguous: does feud obligation primarily solve the coordination problem of justice-seeking (coordination reading), or does it primarily perpetuate cycles of extraction and violence (extraction-cycle reading)? Or is it primarily a pre-state practice that religions (particularly Christianity) undermined through pacification norms (christianized_pacification_reading)? This story instantiates the first reading only: feud obligation as functional coordination. The other readings are separate constraint stories with different base_properties and perspectival classifications. All three readings coexist in contemporary scholarly and cultural discourse as live analytical positions held by different disciplinary communities and cultural interpreters.",
+    "key_agents": [
+      "Injured Kinship Group: Primary beneficiary (organized/constrained) — receives justice and deterrence; benefits from coordinated retaliation as enforcement mechanism",
+      "Kinship Obligor (individual member): Victim + beneficiary (moderate/identity_locked) — bears mandatory risk-bearing and participation costs but receives protection and justice; identity fused with kinship obligation",
+      "Feud-Cycle Perpetuation: Collective trapped agent (powerless/trapped) — the cycle itself is self-reinforcing and extracts from all parties through escalating violence and resource depletion",
+      "Stateless Authority (Chief/Elder): Beneficiary (institutional/arbitrage) — reduces direct enforcement costs; coordinates justice through feud norms; maintains social legitimacy",
+      "Wergild/Compensation System: Institutional alternative (institutional/arbitrage) — represents coordination upgrade; phasing out feud through alternative deterrence mechanism (monetary compensation)",
+      "Analytical Observer: Civilizational view (analytical/analytical) — assesses whether feud obligation is genuine coordination (solving real justice problem) or extraction mechanism with collateral costs"
+    ],
+    "logic_rationale": "Extractiveness (0.35): Moderate. The reading frames feud obligation as a coordination mechanism that solves the genuine problem of justice and deterrence in stateless contexts. The extractiveness reflects secondary effects: kinship obligors bear mandatory participation costs (risk-bearing, resource expenditure), and the system perpetuates cycles that constrain all parties. However, the primary function is coordinated justice provision, not extraction. This is significantly lower than the extraction-cycle reading would estimate (which would place ε around 0.55–0.65). Suppression (0.42): Moderate. Kinship obligation is binding (individuals cannot freely choose whether to participate), but the binding is mixed: partly identity-locked (feud participation is constitutive of kinship identity) and partly structural (material costs to defection exist but are not as severe as trapped/total suppression). The suppression value reflects that alternatives exist (wergild, flight, community exile) but participation is normatively mandatory and identity-threatening. Theater ratio (0.38): Low-moderate. Feud obligation has substantial functional content — it actually deters wrongs and coordinates justice response. The theater component reflects ritual elements (honor demands, formal challenge structures, cycles of insult and response) that amplify the mechanism beyond pure deterrence function. The functional content is higher than in degraded institutional forms (piton), supporting the lower theater ratio.",
+    "directionality_logic": "Directionality is determined by each agent's structural position relative to the constraint. Injured kinship groups (beneficiaries) and stateless authorities (beneficiaries/institutional) experience low or negative effective extraction — they benefit from the coordination function. Kinship obligors experience moderate extraction (mandatory participation, risk-bearing) but also benefit (protection, justice), creating the tangled_rope classification. The feud-cycle perpetuation (as an abstract entity) is trapped and powerless — it is self-reinforcing and extracts continuously. The analytical observer experiences the constraint structurally (can see the coordination function and the extraction costs) and assigns a moderate-ε tangled rope classification reflecting genuine hybridity. The readings differ in their directionality assignments: the extraction-cycle reading would assign higher d values to cycle perpetuation and kinship obligors (treating them as pure victims), while the christianized_pacification reading would assign feud obligation itself to the victim set (treating it as a harmful pre-state practice to be overcome).",
+    "perspectival_gap": "The key perspectival gap is between the beneficiary groups (injured kinship, stateless authority) who experience coordination and the trapped agents (feud-cycle perpetuation, cycle-constrained individuals) who experience extraction. The injured kinship group sees rope (genuine coordination of justice). The kinship obligor sees tangled rope (coordination function coexists with extraction). The stateless authority sees rope (coordination infrastructure reducing enforcement costs). The wergild alternative sees scaffold (temporary coordination mechanism being replaced by more efficient alternative). The feud-cycle perpetuation sees snare (self-reinforcing cycle with no exit). The analytical observer sees the constraint as genuinely hybrid — tangled rope — because both the coordination function and the extraction costs are structurally real. This reading differs from the extraction-cycle reading (which would lower the classification of beneficiaries toward snare, highlighting how they benefit from perpetuating cycles) and the pacification reading (which would classify feud obligation itself as a victim to be overcome).",
+    "mandatrophy_analysis": "This constraint exemplifies mandatrophy resolution through reading-specific classification. The question 'Is feud obligation pure coordination or pure extraction?' has no single answer independent of the reading adopted. Under the stateless-coordination reading, it is primarily tangled rope with genuine coordination function (ε=0.35). Under the extraction-cycle reading, it is snare-adjacent with dominant extraction logic (ε would be ~0.58). Under the pacification reading, it is a degraded institutional form (piton) whose function has been superseded. The mandatrophy resolves by recognizing that (a) all three readings are live analytical positions in contemporary discourse, (b) each reading instantiates a different constraint with different base_properties, and (c) the choice of reading is not empirically determined but depends on what one takes to be the primary function of the mechanism (justice provision, cycle perpetuation, or religious/moral opposition). The constraint story presented here commits to the coordination reading and assigns metrics accordingly.",
+    "kernel_context": "This constraint instantiates the stateless_coordination_reading of the feud_obligation_kernel. The kernel itself — the contested claim about what blood-feud obligation is and does — remains ambiguous: (1) Is it primarily a coordination mechanism providing justice and deterrence when centralized enforcement is absent? (2) Is it primarily a cycle of extraction and violence that perpetuates clan vendetta? (3) Is it primarily a pre-state practice that religious norms (Christianity, Islam) undermined through pacification teachings? This story answers (1): feud obligation as functional coordination. The sibling readings address (2) and (3) as separate constraint stories (constraint IDs: feud_obligation_kernel__extraction_cycle_reading and feud_obligation_kernel__christianized_pacification_reading). Each reading generates its own constraint with its own ε, beneficiaries, victims, and perspectives. The readings coexist in scholarly discourse without logical foreclosure: different disciplinary communities and cultural interpreters emphasize different aspects of the same historical/anthropological phenomenon. The reading-relation is coexists_with."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "feud_obligation_kernel__extraction_cycle_reading",
+      "feud_obligation_kernel__christianized_pacification_reading",
+      "wergild_compensation_system",
+      "stateless_justice_absence_bottleneck"
+    ],
+    "dual_formulation_note": "Blood-feud obligation decomposes into three structurally distinct constraint stories depending on the reading adopted: (1) stateless_coordination_reading frames feud as functional justice mechanism (this story, ε=0.35, tangled rope); (2) extraction_cycle_reading frames feud as perpetuating violence and extracting resources (separate story, ε~0.58, snare-adjacent); (3) christianized_pacification_reading frames feud as pre-state practice overcome by religious norms (separate story, ε~0.40, piton). The ε values differ substantially because each reading focuses on different mechanisms: coordination function vs. cycle perpetuation vs. institutional degradation. All three readings share the same historical phenomenon but instantiate different constraints by emphasizing different structural elements. This is not observable-dependence (ε-invariance violation) but genuine reading-dependence: the constraint's identity is constituted through the reading adopted, which is a legitimate analytical choice within commitment-system frameworks."
+  },
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "feud_obligation_kernel__extraction_cycle_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "feud_obligation_kernel__christianized_pacification_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "justice_coordination_primary_function",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "extractive_costs_secondary_to_coordination_benefits",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "stateless_justice_vacuum",
+    "drift_state": {
+      "moment": "early_state_formation_and_centralization",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

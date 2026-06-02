@@ -857,6 +857,8 @@ write_coupling_object(S, C) :-
               coupling(Cat, Score, _Pairs, BoltzResult, _Purity)), _, fail)
     ->  % Normalize boltzmann to a simple string
         boltzmann_label(BoltzResult, BoltzLabel),
+        % Liveness decomposition: which observer index moves the verdict.
+        coupling_liveness_fields(C, SV, PV, LiveIndex),
         format(S, '{~n', []),
         format(S, '        "category": ', []),
         write_json_string(S, Cat),
@@ -866,10 +868,38 @@ write_coupling_object(S, C) :-
         format(S, ',~n', []),
         format(S, '        "boltzmann": ', []),
         write_json_string(S, BoltzLabel),
+        format(S, ',~n', []),
+        format(S, '        "scope_violations": ', []),
+        write_json_number(S, SV),
+        format(S, ',~n', []),
+        format(S, '        "power_violations": ', []),
+        write_json_number(S, PV),
+        format(S, ',~n', []),
+        format(S, '        "live_index": ', []),
+        write_json_string(S, LiveIndex),
         format(S, '~n', []),
         format(S, '      }', [])
     ;   format(S, 'null', [])
     ).
+
+%% coupling_liveness_fields(+C, -ScopeViolations, -PowerViolations, -LiveIndex)
+%  Reads boltzmann_compliance:coupling_liveness/3 and derives the live-index
+%  label. On failure (no epistemic access / grid not buildable) emits nulls
+%  with live_index = inconclusive, so absence is reported AS absence rather
+%  than silently defaulting to a "seat-free" (0,0) reading.
+coupling_liveness_fields(C, SV, PV, LiveIndex) :-
+    (   catch(boltzmann_compliance:coupling_liveness(C, SVc, PVc), _, fail)
+    ->  SV = SVc, PV = PVc, live_index_label(SVc, PVc, LiveIndex)
+    ;   SV = null, PV = null, LiveIndex = inconclusive
+    ).
+
+%% live_index_label(+ScopeViolations, +PowerViolations, -Label)
+%  none  — index-invariant on the grid (seat-free w.r.t. observer index;
+%          consistent with a Mountain). scope/power/both — which index is live.
+live_index_label(0, 0, none)  :- !.
+live_index_label(SV, 0, scope) :- SV > 0, !.
+live_index_label(0, PV, power) :- PV > 0, !.
+live_index_label(_, _, both).
 
 %% boltzmann_label(+Result, -Label)
 %  Normalize boltzmann compliance term to a simple atom.

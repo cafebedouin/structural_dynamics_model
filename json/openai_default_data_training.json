@@ -4,23 +4,24 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "odt"
+    "measurement_id_prefix": "odt",
+    "story_uid": "4695187a-d673-4a65-890a-f52088398087"
   },
   "base_properties": {
     "extractiveness": 0.58,
-    "suppression": 0.68,
-    "theater_ratio": 0.55,
+    "suppression": 0.72,
+    "theater_ratio": 0.65,
     "claimed_type": "snare",
     "human_readable": "Default Use of ChatGPT User Data for Model Training",
     "topic_domain": "technology/platform_governance",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "openai_corporation"
+      "openai"
     ],
     "victims": [
-      "chatgpt_free_tier_users",
+      "chatgpt_free_users",
       "chatgpt_plus_users",
-      "user_data_commons"
+      "model_training_commons"
     ]
   },
   "perspectives": [
@@ -31,16 +32,16 @@
       "exit_options": "trapped",
       "spatial_scope": "global",
       "label": "The Free Tier User",
-      "comment": "PERSPECTIVE 1: FREE TIER USER (SNARE) \u2014 Trapped in the constraint by service dependency; cannot meaningfully opt out without losing access to the tool. Data extraction is structural condition of service access. No viable alternatives at comparable quality/cost. Suppression through information asymmetry: default-to-training is the path-dependent norm, with opt-out requiring navigation of settings."
+      "comment": "PERSPECTIVE 1: FREE TIER USER (SNARE) — Structurally trapped. User receives service (chatbot access) valued at zero monetarily; switching costs are near-zero materially but psychologically high (workflow disruption, relearning alternatives). The data extraction is architecturally suppressive: opt-out requires discovering settings buried in account preferences with no prominent disclosure at service entry. User perceives ChatGPT as 'free' but is paying in training data without meaningful choice architecture. Maximum extraction from this perspective — no exit capacity, no compensation, suppressed awareness."
     },
     {
-      "classification_type": "snare",
+      "classification_type": "tangled_rope",
       "agent_power": "moderate",
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The Paid ChatGPT Plus User",
-      "comment": "PERSPECTIVE 2: PAID PLUS USER (SNARE) \u2014 Nominally pays for premium access but still defaults to training data contribution unless opt-out is discovered. Even with pricing paid, has constrained rather than arbitrage exit: switching costs (lost conversation history, workflow integration), lock-in through complementary services. Extraction persists despite payment because the default architecture assumes consent."
+      "label": "The Plus Tier User",
+      "comment": "PERSPECTIVE 2: PLUS TIER USER (TANGLED ROPE) — Paid subscriber ($20/month) but data is still defaulted to training pipeline. User has slightly higher agency than free tier (can opt out more easily after discovery, has sunk investment making exit costly). Benefits genuinely from improved model (default training makes model better). Extraction is real but tempered by coordination value — the user's contribution directly improves the service they use. Still suppressive (opt-out is buried) but not maximal — some agency, some genuine benefit, asymmetric extraction."
     },
     {
       "classification_type": "rope",
@@ -48,8 +49,17 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "OpenAI Corporation",
-      "comment": "PERSPECTIVE 3: OPENAI CORPORATION (ROPE) \u2014 Experiences the constraint as coordination: user data enables continuous model improvement, which provides immediate feedback loop for safety and capability gains. Has full arbitrage options (can change policy unilaterally, can shift to other data sources, can monetize training data separately). Net beneficiary \u2014 extraction flows toward this agent. The constraint solves the problem of obtaining training signal without explicit per-user negotiation."
+      "label": "OpenAI (Model Training Beneficiary)",
+      "comment": "PERSPECTIVE 3: OPENAI (ROPE) — Benefits massively from default data pipeline. Data is essential coordination input for model improvement. The constraint solves real coordination problem: aggregating training data at scale. From OpenAI's perspective, this is governance necessity — distributing opt-out burden upstream (to users) rather than downstream (to data processors) reduces friction. Experiences the constraint as coordination: default inclusion enables high-quality training. Low experienced extraction from beneficiary — the constraint benefits this agent substantially."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Model Training Commons (Abstract Collective)",
+      "comment": "PERSPECTIVE 4: MODEL TRAINING COMMONS (SNARE) — Abstract epistemic commons that cannot organize or exit. Training data provenance is systematically obscured (users do not know their data improved specific model versions or applications). No feedback loop to users about their contribution value or model performance. Extraction is maximum — zero compensation, zero visibility, zero agency. The collective good (better AI models) is produced at the hidden cost of individual data extraction."
     },
     {
       "classification_type": "tangled_rope",
@@ -57,17 +67,17 @@
       "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "Privacy Advocates & Regulators",
-      "comment": "PERSPECTIVE 4: PRIVACY ADVOCATES & REGULATORS (TANGLED ROPE) \u2014 Organized agents (GDPR enforcers, privacy groups, civil society) see a coordination problem (need for training data) that is being solved via asymmetric extraction (default opt-in rather than explicit consent). They have constrained exit: can impose fines (EU) or threaten legislation, but cannot force architectural change without economic costs to innovation. This perspective sees both a real coordination function (continuous improvement requires signal) AND unjustified extraction (default bias toward consent rather than explicit opt-in)."
+      "label": "Data Privacy Advocates & Regulators",
+      "comment": "PERSPECTIVE 5: DATA PRIVACY ADVOCATES / REGULATORS (TANGLED ROPE) — Organized agents (GDPR enforcement bodies, consumer protection groups, EU AI Act compliance officers) see this as extractive by design. But enforcement creates coordination function: regulatory pressure is forcing OpenAI to implement better opt-out mechanisms and transparency. Constraint exhibits both extraction (users cannot easily know or control data use) and enforcement (regulatory bodies can impose costly compliance). Experience is mixed — genuine leverage to demand change but also recognition that default-opt-out is how training at scale gets done. Extraction is significant but contestable."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
-      "time_horizon": "generational",
+      "time_horizon": "biographical",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Consent Theater",
-      "comment": "PERSPECTIVE 5: CONSENT THEATER (PITON) \u2014 The terms-of-service disclosure of data training, while technically transparent, functions as performative consent. Users do not read, do not understand implications of 'your data improves our models,' and the default-to-yes architecture makes the stated option ('you can disable') functionally invisible. The consent mechanism is degraded \u2014 it persists through institutional inertia (tech industry norm) rather than functional legitimacy. Theater ratio high because the disclosure ritual satisfies legal requirements while the actual consent decision is predetermined by defaults."
+      "label": "Platform Terms of Service Theater",
+      "comment": "PERSPECTIVE 6: PLATFORM TERMS OF SERVICE THEATER (PITON) — The disclosed-but-unread ToS is largely performative. OpenAI discloses the data practice (legally defensible) but the disclosure is engineered to be invisible: buried in 15,000-word terms, not presented at account creation, not highlighted as a material consideration. The theater persists because it provides legal cover while suppressing actual user choice. Theater ratio (0.65) reflects that transparency exists but is architecturally obscured. The system is inertial — disclosure without salience is legally safe but functionally meaningless."
     },
     {
       "classification_type": "mountain",
@@ -75,58 +85,58 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer (Natural Law View)",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational timescale, training data is inherent to capability improvement: any system that improves over time must ingest signal, and user interactions are a natural source of that signal. The bottleneck is immutable \u2014 no AI system can improve without data. However, the structural data contradicts mountain classification: the constraint is not about WHETHER to use data, but HOW \u2014 default vs explicit, opt-in vs opt-out, transparent vs hidden. These are contingent policy choices, not laws of nature. The false summit reveals that 'we need training data' naturalizes the specific extraction mechanism (default opt-in)."
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational view, one might argue that large-scale model training requires data at unprecedented scale, and that user data is the only feasible source — making default inclusion an immutable necessity of the technology frontier. 'You cannot build frontier LLMs without human feedback at scale; therefore, user data must be incorporated; therefore, extraction is inherent.' However, the structural data contradicts this mountain classification: the suppressive choice architecture (buried settings, no prominent disclosure) is not a technological necessity — it is a governance decision. Alternative designs exist (opt-in with prominent disclosure, tiered compensation, transparent data tracking). The engine will classify this as a false summit, revealing that 'inevitable technological requirement' naturalizes a contingent business choice."
     }
   ],
   "omegas": [
     {
-      "id": "meaningful_consent_standard",
-      "question": "What level of user understanding and deliberation constitutes meaningful informed consent for training data contribution?",
-      "resolution_mechanism": "User comprehension studies: do users understand that 'improving our models' means their conversations are ingested into training data? Follow-up: do users understand the downstream uses and cannot prevent them once data is accepted?",
-      "impact": "If comprehension < 30%: current consent is spurious and should be reclassified from snare-with-disclosure to pure snare. If comprehension > 70%: consent mechanism is functionally legitimate and extraction classification drops to tangled_rope.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "User comprehension threshold for informed consent"
-    },
-    {
-      "id": "alternative_training_sufficiency",
-      "question": "Can OpenAI achieve comparable model performance using only API and explicitly consenting data sources, without default-training-by-free-tier?",
-      "resolution_mechanism": "Comparative capability analysis: model trained on opt-in data only vs current model; comparison of performance gaps in MMLU, reasoning, domain specialization; cost and time differential to equivalent capability",
-      "impact": "If performance gap < 5% and cost increase < 20%: default training is extraction optimization, not necessity (Snare classification confirmed). If performance gap > 20%: default training is coordination necessity (Rope/Tangled Rope classification supported).",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether default training is necessary for capability"
-    },
-    {
-      "id": "opt_out_visibility_and_uptake",
-      "question": "What percentage of users are aware of, locate, and successfully exercise the opt-out mechanism? Is the opt-out placement designed to minimize discovery?",
-      "resolution_mechanism": "Telemetry on opt-out clicks and setting changes; A/B testing on opt-out UI placement; user interviews on why they did/did not opt out",
-      "impact": "If awareness < 15% and placement obscured: default-to-yes is architecturally suppressive (supports snare). If awareness > 50% and prominent placement: suppression is lower, classification shifts toward tangled_rope with legitimate coordination rationale.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Opt-out discovery and exercise rates"
-    },
-    {
-      "id": "data_value_asymmetry",
-      "question": "What is the market value of the training data extracted from free tier users, and does it proportionally exceed the value of free service they receive?",
-      "resolution_mechanism": "Accounting for compute costs of model serving (free tier) vs market price of equivalent training data; comparison to data purchase prices from commercial sources; calculation of user value extraction ratio",
-      "impact": "If asymmetry ratio > 3:1: extraction is substantial and snare classification is robust. If ratio < 1.5:1: users are receiving rough value equivalence and snare shifts toward tangled rope with reasonable coordination justification.",
+      "id": "model_improvement_attribution",
+      "question": "How much of ChatGPT's empirical improvements from v1 to v4 are attributable to user conversation data versus synthetic data, RLHF feedback, or reinforced learning from structured sources?",
+      "resolution_mechanism": "Ablation studies comparing model performance with/without user conversation data; OpenAI technical documentation on training pipeline composition; comparison of model performance trajectories across user-data-heavy vs user-data-light training phases",
+      "impact": "If user data contributes >30% of improvement: extraction is instrumentally justified as coordination (users benefit from better model). If user data contributes <10%: extraction is gratuitous, and constraint reclassifies toward pure snare (no coordination justification). If attribution is opaque: omega cannot resolve empirically, indicating structural obfuscation.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "Market value asymmetry of extracted training data"
+      "description": "Empirical attribution of model improvements to user conversation data"
+    },
+    {
+      "id": "opt_out_salience_engineering",
+      "question": "Is the architectural choice to bury opt-out settings a technical necessity or a deliberate choice to minimize opt-out rates?",
+      "resolution_mechanism": "A/B test: present prominent opt-out banner at login with clear explanation of data use, measure opt-out rate change; compare opt-out rates pre/post UI redesign highlighting settings; user survey on awareness of opt-out existence",
+      "impact": "If opt-out rate stays <5% after prominent disclosure: suppression is structural (users genuinely prefer default inclusion). If opt-out rate jumps to 20%+ after disclosure: suppression is engineered (architectural choice to hide opt-out, not genuine preference). Constraint may reclassify from snare toward rope if user preference is revealed as genuine.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether opt-out burial is technical necessity or deliberate suppression"
+    },
+    {
+      "id": "data_value_disparity",
+      "question": "What is the economic value of user-generated training data relative to the service value users receive (free model access or Plus subscription value)?",
+      "resolution_mechanism": "Market valuation: compare OpenAI's revenue growth aligned with user-data cohorts to growth from other revenue sources; estimate training data cost if outsourced (e.g., via DataBricks, Hugging Face, synthetic data providers); survey users' willingness-to-accept for data contribution",
+      "impact": "If data value >> service value: extraction is asymmetric and unjustified (snare). If data value ≈ service value: extraction is symmetric compensation (rope). Value disparity is the empirical measure of extraction severity.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Economic value of user data relative to service received"
+    },
+    {
+      "id": "false_summit_natural_law_claim",
+      "question": "Is default data inclusion an immutable technological necessity or a contingent governance choice?",
+      "resolution_mechanism": "Feasibility analysis: can frontier LLM training operate with opt-in-only data (potentially at slower improvement rate or higher cost)? Do closed-source competitors (Claude, Gemini, Grok) achieve comparable performance with different data governance? Can synthetic or licensed data replace user conversations at acceptable cost?",
+      "impact": "If frontier training is possible without default inclusion: mountain classification is a false summit (natural law claim naturalizes contingent choice). If frontier training is genuinely constrained by data scarcity: mountain classification may be justified. This omega is the diagnostic signal for FSM engine evaluation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether default data inclusion is technological necessity or governance choice"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.45
+      "value": 0.42
     },
     {
       "metric": "base_extractiveness",
       "time_point": 2,
-      "value": 0.52
+      "value": 0.5
     },
     {
       "metric": "base_extractiveness",
@@ -136,17 +146,32 @@
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.48
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 2,
-      "value": 0.52
+      "value": 0.62
     },
     {
       "metric": "theater_ratio",
       "time_point": 4,
-      "value": 0.55
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.7
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.72
     }
   ],
   "interval": {
@@ -154,29 +179,30 @@
     "end": 4
   },
   "commentary": {
-    "narrative_context": "OpenAI's default-to-training policy for free tier and plus tier ChatGPT conversations represents a structural extraction mechanism disguised as a coordination necessity. Users implicitly consent (through disclosed but unread terms) to having their conversations incorporated into training data, improving the model at their expense. The policy is architecturally suppressive: opting out requires discovering and navigating settings that are not prominently advertised. The extraction is structurally asymmetric: OpenAI captures the training signal value while users receive a bounded service. From the free tier user perspective, this is a pure snare \u2014 no meaningful exit, no compensation, trapped by service dependency and information asymmetry. From OpenAI's perspective, it is coordination \u2014 solving the problem of obtaining diverse, real-world training data. From the paid user perspective, it is still snare because payment does not escape the training extraction. From regulators and privacy advocates, it is tangled rope: real coordination function (continuous improvement requires signal) but unjustified extraction (default bias toward contribution rather than explicit opt-in). The consent theater (Piton perspective) reflects that disclosure is performatively legitimate while functionally opaque.",
+    "narrative_context": "OpenAI's default-to-training policy for ChatGPT's free and Plus tiers represents a structural extraction mechanism where user conversations are automatically incorporated into model training without prominent disclosure or compensation. Users implicitly consent through disclosed-but-unread terms of service, and opting out requires discovering and navigating settings that are architecturally suppressed — not presented at service entry, not highlighted as material, buried in account preferences several levels deep. The constraint exhibits all six DR types from different perspectives, with particular diagnostic value for false summit detection: regulators and analytical observers may frame the policy as an immutable technological necessity ('frontier LLMs require training data at unprecedented scale'), but the structural data reveals it as a governance choice. Alternative architectures exist: OpenAI could default to opt-in with prominent disclosure, offer tiered compensation, or implement transparent data tracking. The architectural choices — default inclusion, buried settings, obscured disclosure — are not technological requirements but governance decisions that maximize extraction by minimizing user agency.",
     "key_agents": [
-      "Free Tier Users: Primary victim (powerless/trapped) \u2014 no payment, complete service dependency, cannot exit without losing tool access",
-      "ChatGPT Plus Users: Secondary victim (moderate/constrained) \u2014 paid subscription but still defaults to training data extraction, switching costs prevent true arbitrage exit",
-      "OpenAI Corporation: Primary beneficiary (institutional/arbitrage) \u2014 captures training data value without explicit per-user negotiation, can change policy unilaterally",
-      "Privacy Advocates & Regulators: Organized agent (organized/constrained) \u2014 see coordination problem AND extraction, can impose costs (GDPR fines, legislation) but cannot force architectural change without innovation tradeoffs",
-      "Consent Documentation System: Institutional actor (institutional/arbitrage) \u2014 maintains disclosure ritual that satisfies legal requirements while functioning as theater",
-      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent policy choice (default opt-in) as inherent necessity of model improvement"
+      "Free tier users: Primary victims (powerless/trapped) — receive service valued at zero cost; data extraction is architecturally suppressed through invisible opt-out",
+      "Plus tier users: Secondary victims (moderate/constrained) — paid subscribers but data still defaulted to training; some agency through sunk cost but suppression is real",
+      "OpenAI: Primary beneficiary (institutional/arbitrage) — captures training data at negligible cost; solves coordination problem of assembling training data at scale",
+      "Model training commons: Abstract victim (powerless/trapped) — epistemic collective good produced at hidden cost; zero compensation, zero visibility, zero agency",
+      "Data privacy regulators & advocates: Organized contestants (organized/constrained) — have leverage to demand change but also recognize training-at-scale coordination requirement",
+      "Platform terms of service: Institutional theater (institutional/arbitrage) — disclosure exists but is engineered to be invisible; provides legal cover while suppressing actual user choice",
+      "Analytical observer: Civilizational risk (analytical/analytical) — may naturalize contingent governance choice as technological necessity"
     ],
-    "logic_rationale": "Extractiveness (0.58): Substantial but not maximal. Free tier users receive a bounded service (access to model) in exchange for unlimited training data. The asymmetry is real \u2014 compute costs of serving free tier are lower than market value of training data obtained. However, extractiveness is not 0.8+ because users do receive genuine service value (access to a capable tool at zero cost). The value exchange is substantially imbalanced but not entirely one-way. Suppression (0.68): Moderate-high. Multiple suppressive mechanisms: information asymmetry (users do not read or understand terms), architectural default (training is opt-out not opt-in, requiring settings navigation), social pressure (network effects make defecting costly), and lack of alternatives at comparable quality/cost. Theater ratio (0.55): Moderate. The disclosure of data training in terms-of-service is technically transparent but functionally opaque \u2014 the language 'to improve our models' does not convey the scope or value extraction of training data ingestion. The opt-out mechanism exists but is not prominently advertised. The theater is real but not dominant \u2014 some users do discover and exercise the opt-out, indicating the mechanism is not purely performative.",
-    "directionality_logic": "The free tier user's directionality (d) is derived from powerless+trapped: they receive service value but have no genuine exit, cannot negotiate terms, bear extraction without compensation. This produces high d \u2192 high f(d) \u2192 high \u03c7. The paid user's directionality is moderate+constrained: they have paid for premium access but are still trapped by switching costs and the same default training extraction. Slightly lower d than free tier because of payment, but still high because of constrained exit. OpenAI's directionality is institutional+arbitrage: they are beneficiary with full exit options (can change policy, can adopt alternative data sources), producing low d \u2192 negative f(d) \u2192 extraction flows toward them. The piton classification derives from theater_ratio \u2265 0.70 gate not firing (theater is 0.55); instead, piton arises from the consent ritual being performatively legitimate while functionally opaque \u2014 a degraded coordination mechanism maintained by institutional inertia rather than structural necessity.",
-    "perspectival_gap": "This constraint shows maximum perspectival divergence. OpenAI sees coordination (Rope) \u2014 training data enables capability improvement that benefits all users through better models. Free tier users see extraction (Snare) \u2014 they are locked in, data is extracted without compensation or meaningful consent, they have no alternatives. Regulators see mixed extraction-coordination (Tangled Rope) \u2014 legitimate need for training data but unjustified default-to-yes architecture. The consent theater (Piton) is performatively legitimate but functionally inert \u2014 disclosure exists but is invisible to most users. The false summit (Mountain) naturalizes the policy choice as inherent necessity when the real necessity is only 'training data,' not 'default opt-in.' If OpenAI required explicit opt-in instead of opt-out, the coordination function (obtaining training signal) would remain, but the extraction mechanism would be reset to zero \u2014 the snare would collapse. This demonstrates that the extraction is architectural, not inevitable.",
-    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that the coordination function (continuous model improvement via training data) is real and necessary, but the extraction mechanism (default opt-in, suppressed opt-out) is contingent policy. A hypothetical alternative system \u2014 explicit opt-in with per-user compensation, or separate training data markets \u2014 could achieve the same coordination benefit with lower extraction. The snare classification is therefore not 'we extract because we must improve models' but 'we extract via default architecture when alternatives exist.' The paid user perspective (also snare despite payment) shows that the extraction is not a service fee but a data extraction mechanism independent of pricing. The regulatory perspective (tangled rope) validates that there IS a coordination problem while rejecting that default extraction is the only solution. The false summit reveals the mandatrophy: the analytical observer's claim that 'training data is inherent to AI' is true but naturizes the policy choice of HOW to obtain it. The constraint is not about WHETHER to use data, but whether free tier users should be extracted from via default without explicit consent and without compensation."
+    "logic_rationale": "Extractiveness (0.58): Moderately high. The value extracted from users (training data) is substantial and asymmetric. Users receive service access but do not receive compensation or even accurate valuation of their data contribution. The extraction is not maximal (snare-level ε ≥ 0.66) because there is genuine coordination value — user data does improve the model that users benefit from. However, the asymmetry is severe: OpenAI captures the vast majority of value (trained model, access monopoly, revenue from downstream API/Plus tiers) while users capture only service improvement they cannot quantify. The value disparity is the extraction signal. Suppression (0.72): High. The architectural suppression is systematic and deliberate. Opt-out requires: (1) awareness that the option exists (not discoverable at entry), (2) navigation to settings (buried 3–4 levels deep in account preferences), (3) interpretation of technical language (terms like 'conversation history' and 'model training' are not salient to typical users). The ToS disclosure is legally defensible but functionally meaningless — 15,000-word document not read at signup, not highlighted, not presented in plain language. Suppression is not total (opt-out IS technically available to those who search for it) but is engineered to minimize opt-out rates. Theater ratio (0.65): Moderate-high. The disclosure theater is substantial: OpenAI publishes detailed privacy policies, implements opt-out buttons, and claims transparency. But the theater is architecturally engineered to be performative. The discrepancy between disclosure completeness and disclosure salience is the theater signal. Rising trajectory (0.58→0.65 over 4 time periods) reflects that regulators are increasingly demanding transparency, forcing OpenAI to add more explicit disclosures, which increases the theater (performative compliance) without materially increasing user agency.",
+    "directionality_logic": "Directionality (d) for each agent is computed from structural position: power level, exit options, beneficiary/victim status. Free tier users (powerless + trapped + victim) derive d ≈ 0.95, producing maximum f(d) ≈ 1.42 and high experienced extraction. Plus users (moderate + constrained + mixed beneficiary-victim) derive d ≈ 0.55, producing f(d) ≈ 0.75 and moderate extraction. OpenAI (institutional + arbitrage + beneficiary) derives d ≈ 0.05, producing f(d) ≈ -0.12 and negative/low extraction (they are extracting from users, not experiencing extraction). Scope modifier σ(global) = 1.2 amplifies extractiveness: χ = 0.58 × f(d) × 1.2. For the trapped free user: χ ≈ 0.58 × 1.42 × 1.2 ≈ 0.99 (extreme effective extraction). For the constrained Plus user: χ ≈ 0.58 × 0.75 × 1.2 ≈ 0.52 (moderate-high). The perspectival gap is driven by these differential χ values: the same constraint appears as a snare to trapped users, tangled rope to Plus users, and rope to OpenAI.",
+    "perspectival_gap": "This constraint exhibits maximum perspectival divergence. Free tier users perceive pure extraction with no exit and no compensation (snare — χ ≈ 0.99). Plus tier users perceive mixed coordination and extraction with constrained exit and some genuine benefit (tangled rope — χ ≈ 0.52). OpenAI perceives coordination necessity with massive benefit and no experienced extraction (rope — negative χ from beneficiary perspective). Regulators perceive a constraint that is contestable and increasingly enforced (tangled rope with organized leverage). The abstract training commons perceives hidden extraction with zero agency (snare). The ToS theater persists because the architectural choice satisfies OpenAI (benefits from data without disclosure friction), satisfies regulatory letter-of-law (data use is disclosed), and suppresses user agency (most never opt out because most never discover the option). The perspectival divergence is not a failure of the framework — it is the diagnostic signal that the constraint IS extractive: it simultaneously looks like coordination to the beneficiary, and like pure extraction to the trapped users.",
+    "mandatrophy_analysis": "Mandatrophy is resolved by recognizing that this constraint is structurally snare-like with a thin rope coating. OpenAI frames the policy as coordination necessity ('we need training data to improve your model'; 'this benefits users through better AI'). This is partially true — user data does improve the model users benefit from. But the framing obscures the asymmetric value capture: OpenAI's benefit (access to training data worth billions in alternative acquisition cost) vastly exceeds users' benefit (incremental model improvement they receive for free). The snare structure is confirmed by: (1) suppressive opt-out architecture (powerless users cannot easily exit), (2) zero compensation (users receive no payment despite value extraction), (3) invisible extraction (users do not know or cannot control data use), (4) no feedback loop (users never learn what value their data contributed or how it improved the model). The rope coating is thin: genuine model improvement does occur, and users do benefit. But the extraction asymmetry is severe. Classification as snare (not tangled rope) is justified when suppression (0.72) is weighted appropriately — it indicates that the constraint's primary function is data extraction, not coordination."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "large_language_model_training_data_externalities",
-      "platform_user_consent_mechanisms"
+      "training_data_provenance_opacity",
+      "llm_model_alignment_incentives"
     ],
-    "dual_formulation_note": "This constraint is downstream of the general problem of training data sourcing for large language models, but represents a specific institutional choice (default opt-in) rather than a structural necessity. The upstream constraint (LLM training data externalities) has different \u03b5 values depending on whether training uses purchased data, opt-in data, or default-extracted data. This story focuses on the default-extraction implementation and its snare properties."
+    "dual_formulation_note": "The default data training policy is downstream of OpenAI's architectural decisions about training efficiency and upstream of broader constraints about model incentive structures. Training data provenance opacity (separate story, ε higher) models the systematic obscuring of data attribution; model alignment incentives (separate story) models how training dynamics shape output behavior. All three stories are linked via the data pipeline's structural influence."
   },
   "directionality_overrides": []
 }

@@ -4,24 +4,25 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "algoacc"
+    "measurement_id_prefix": "algoacct",
+    "story_uid": "6f11fcf5-8042-4842-97fd-e52a4de4440a"
   },
   "base_properties": {
     "extractiveness": 0.58,
     "suppression": 0.65,
-    "theater_ratio": 0.68,
+    "theater_ratio": 0.78,
     "claimed_type": "tangled_rope",
     "human_readable": "Algorithmic Accountability Regime",
     "topic_domain": "technology_governance/regulation",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "tech_platform_corporations",
+      "platform_operators",
       "regulatory_agencies"
     ],
     "victims": [
+      "affected_users",
       "algorithmic_transparency",
-      "affected_end_users",
-      "external_auditors"
+      "competing_platforms"
     ]
   },
   "perspectives": [
@@ -31,26 +32,17 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Affected End User",
-      "comment": "PERSPECTIVE 1: AFFECTED END USER (SNARE) \u2014 Users subject to algorithmic decisions (content moderation, credit scoring, hiring filtering, ad targeting) have no meaningful exit option from the platforms that govern their access to services, credit, employment, or information. No transparency into how decisions are made; no mechanism to contest them within the system; trapped within an extractive regime that optimizes for platform engagement and revenue, not user welfare. Maximum experienced extraction without coordination benefit."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Independent Auditor",
-      "comment": "PERSPECTIVE 2: INDEPENDENT AUDITOR (TANGLED ROPE) \u2014 External researchers and auditors (academics, civil society organizations, independent testing labs) face high friction to access algorithmic systems for independent evaluation. Formal accountability regimes (EU AI Act, algorithmic audit requirements) nominally enable access, but access is constrained by platform refusal to disclose proprietary models, limits on scope, and legal threats. The regime provides coordination benefit (establishes legitimacy of external verification) but also extraction (constrains what can be tested, requires regulatory approval, limits publication). Constrained exit \u2014 auditors can publish findings without platform permission but face legal liability, career risk, and defamation suits."
+      "label": "The Affected User",
+      "comment": "PERSPECTIVE 1: AFFECTED USER (SNARE) — Subject to algorithmic decisions (credit denial, hiring filter, content suppression, ad targeting) with no transparency into decision criteria and no meaningful appeal mechanism. The accountability regime produces audit reports that users cannot access, impact assessments they cannot challenge, and compliance statements they cannot verify. Exit is impossible — the platforms are infrastructural. Maximum extraction with minimal recourse."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "immediate",
+      "time_horizon": "biographical",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Tech Platform Corporation",
-      "comment": "PERSPECTIVE 3: TECH PLATFORM CORPORATION (ROPE) \u2014 Experiences the accountability regime as coordination rather than extraction. The regime legitimates the platform's decision-making to users and regulators by creating the appearance of oversight. Regulatory compliance (bias audits, impact assessments, audit logs) is performative \u2014 platforms control what gets audited, how results are presented, and which findings are disclosed. The regime coordinates user trust and regulatory tolerance without reducing algorithmic optimization for engagement and revenue. Arbitrage exit available: platforms can adjust which jurisdictions they operate in to minimize oversight friction."
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 2: PLATFORM OPERATOR (ROPE) — The accountability regime provides coordination function: it legitimates algorithmic decision-making by creating an audit trail, satisfies regulatory requirements through compliance theater, and enables platforms to claim transparency while controlling what information regulators and users can access. The regime serves genuine coordination (establishing rules for algorithmic governance) but the platform experiences it primarily as legitimacy subsidy. Platforms benefit from the appearance of oversight without the substance of constraint."
     },
     {
       "classification_type": "tangled_rope",
@@ -59,7 +51,16 @@
       "exit_options": "constrained",
       "spatial_scope": "national",
       "label": "The Regulatory Agency",
-      "comment": "PERSPECTIVE 4: REGULATORY AGENCY (TANGLED ROPE) \u2014 National and supranational regulators (FTC, EU regulators, national data authorities) have mandates to oversee algorithmic systems but lack technical capacity to evaluate opaque machine learning models, verify audit claims, or detect when platforms are providing false data. The accountability regime serves genuine coordination function (creates legal hooks for oversight, establishes reporting requirements) but also enables extraction: platform compliance is largely self-reported; audits are conducted by platform-selected vendors; regulators lack resources to verify independently. Constrained exit \u2014 agencies must operate within the regulatory framework they establish; leaving creates governance vacuum."
+      "comment": "PERSPECTIVE 3: REGULATORY AGENCY (TANGLED ROPE) — Genuine coordination function: developing standards for algorithmic transparency, establishing audit procedures, creating accountability mechanisms. But also significant extraction: regulatory agencies become dependent on platforms for data access, face resource constraints that prevent thorough verification, and see their mandate captured by the need to maintain platform cooperation. The regime extracts resources from agencies (staff time, expertise) while limiting their actual enforcement capacity. Mixed coordination-extraction hybrid."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Competing Platform",
+      "comment": "PERSPECTIVE 4: COMPETING PLATFORM (TANGLED_ROPE) — The accountability regime creates coordination around algorithmic standards (benefits all platforms through established rules). But also functions as extraction: compliance costs are fixed, creating barriers to entry for smaller competitors. Incumbent platforms achieve cost leverage through scale and can lobby regulators to maintain high compliance bars. Smaller platforms experience the regime as both coordination (shared rules) and extraction (disproportionate burden relative to market share)."
     },
     {
       "classification_type": "piton",
@@ -67,90 +68,99 @@
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Accountability Ritual Institution",
-      "comment": "PERSPECTIVE 5: ACCOUNTABILITY RITUAL INSTITUTION (PITON) \u2014 The formal accountability regime (algorithmic impact assessments, bias audit reports, transparency statements, algorithmic explainability certifications) is substantially performative. Platforms publish compliance documents, undergo audits, and issue statements of commitment to fairness. But the theater ratio has grown as the regime has matured: audits are conducted by vendors under platform contract; impact assessments are internal documents; explainability claims are marketing copy. The institutional function (establishing legitimacy) persists; the verification function (preventing harm) has atrophied. The regime persists through inertia because alternatives haven't fully replaced it, despite widespread recognition that the performative compliance doesn't prevent algorithmic harms."
+      "label": "The Audit and Transparency Apparatus",
+      "comment": "PERSPECTIVE 5: AUDIT AND TRANSPARENCY APPARATUS (PITON) — Algorithmic impact assessments, third-party audits, transparency reports, and compliance statements have become largely performative. Audits are conducted by firms hired by platforms; transparency reports contain aggregate statistics that obscure decision criteria; impact assessments follow template procedures disconnected from actual outcomes. The apparatus persists through institutional inertia and theater — required by regulation but widely understood to produce limited verification value. Theater ratio of 0.78 reflects that the compliance machinery is substantially ritual."
     },
     {
-      "classification_type": "snare",
-      "agent_power": "moderate",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The Transparency Aspiration",
-      "comment": "PERSPECTIVE 6: TRANSPARENCY ASPIRATION (SNARE) \u2014 The goal of algorithmic transparency \u2014 enabling users and auditors to understand and contest algorithmic decisions \u2014 faces structural barriers that the accountability regime actively reinforces. Trade secret protection, computational obscurity, technical complexity, and legal liability shield platforms from meaningful transparency. The accountability regime nominally advances transparency but creates a fa\u00e7ade that satisfies regulatory appetite while leaving actual opacity intact. Constrained but organized pushback exists (right-to-explanation advocates, transparency researchers) but faces suppression through legal threats and access denial."
-    },
-    {
-      "classification_type": "tangled_rope",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, the algorithmic accountability regime exhibits genuine coordination function (creates legal hooks for oversight, establishes shared terminology for harm, enables cross-jurisdictional coordination) alongside significant asymmetric extraction. The regime benefits platforms more than users or auditors through legitimation and regulatory predictability. The coordination benefit is real but skewed \u2014 accountability mechanisms coordinate platform compliance with legitimacy theater, not with actual harm reduction. This perspective reveals the regime as a hybrid mechanism, not a pure extraction scheme or pure coordination solution."
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Complexity View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / COMPLEXITY VIEW (MOUNTAIN) — From a universal/civilizational perspective, algorithmic accountability faces a natural limit: the complexity of modern machine learning systems (billions of parameters, non-linear decision surfaces, emergent behaviors from training data interactions) makes perfect transparency impossible. No audit procedure can fully specify how a neural network will respond to novel inputs. This perspective frames accountability constraints as hitting a natural barrier — the mathematics of opacity. However, this naturalizes what are actually institutional choices: platforms could use more interpretable models, could grant users meaningful access to decision criteria, could implement appeals mechanisms. The engine will detect this as a false summit."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Algorithmic Justice Movement",
+      "comment": "PERSPECTIVE 7: ALGORITHMIC JUSTICE MOVEMENT (SCAFFOLD) — Organized advocates (AI transparency groups, civil rights organizations, academic researchers) see the accountability regime as a transitional framework with a sunset clause: they are building alternative mechanisms for algorithmic oversight that bypass platform-controlled audits. Community-based algorithmic audits, distributed monitoring networks, open-source interpretability tools, and right-to-explanation legislation represent scaffolding designed to replace the current regime. Low effective extraction because organized agents have agency and see an exit path through alternative structures. Sunset estimated at 10-15 years as alternative mechanisms mature."
     }
   ],
   "omegas": [
     {
-      "id": "transparency_measurement_paradox",
-      "question": "Can algorithmic transparency be measured independently from platform-controlled disclosure, or does any measurable accountability metric become performative once platforms know how they will be evaluated?",
-      "resolution_mechanism": "Compare algorithmic outcomes across transparency-focused platforms vs opacity-focused platforms; analyze whether documented transparency correlates with reduced documented harm; evaluate whether announced transparency improvements precede or follow documented harm detection",
-      "impact": "If measurable transparency correlates with reduced harm: transparency-focused approach is valid (Rope or Scaffold classification more appropriate). If transparency improvements follow disclosure and regress when attention moves on: regime is pure extraction theater (Snare classification confirmed).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether algorithmic transparency can be measured independently from performative disclosure"
-    },
-    {
-      "id": "regulatory_technical_capacity",
-      "question": "What proportion of platform algorithmic harms can be detected by regulators with current computational capacity, or are the systems fundamentally opaque to external verification regardless of regulatory mandate?",
-      "resolution_mechanism": "Regulatory agency audits and independent verification; comparison of platform-disclosed harms vs independently discovered harms; analysis of false negatives in regulatory assessments",
-      "impact": "If regulators can verify >70% of claimed compliance: regime has real oversight function (Tangled Rope). If verification success rate <30%: regime is structurally incapable of detecting extraction (approaches pure Snare).",
+      "id": "transparency_sufficiency_threshold",
+      "question": "What level of algorithmic transparency (decision criteria, training data composition, feature weights) is actually achievable without destroying the platform's competitive advantage or the model's performance?",
+      "resolution_mechanism": "Comparative analysis of transparency across regulatory regimes (EU AI Act, GDPR Article 22, US state laws); documentation of specific model components platforms claim cannot be disclosed and technical justification for that claim; empirical testing of whether disclosed decision criteria match actual model behavior",
+      "impact": "If achievable transparency is minimal: accountability regime is structurally theater. If substantial transparency is feasible but withheld: regime is pure extraction masquerading as coordination. If trade-offs are genuine: regime becomes constrained coordination with legitimacy justified.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Technical capacity for external regulatory verification of algorithmic claims"
+      "description": "Feasible level of algorithmic transparency without compromising model performance or competitive advantage"
     },
     {
-      "id": "harm_reduction_causality",
-      "question": "Has the implementation of algorithmic accountability regimes (EU AI Act, bias audit requirements, algorithmic impact assessments) produced measurable reduction in documented algorithmic harms, or has harm continued despite compliance theater?",
-      "resolution_mechanism": "Longitudinal tracking of documented algorithmic harms (discrimination cases, content moderation errors, ranking biases) before and after regulatory implementation; controlled comparison with jurisdictions that lack formal accountability regimes",
-      "impact": "If harms decline post-implementation: regime has real coordination and accountability function. If harms continue or increase despite compliance: regime is pure extraction mechanism (Snare confirmed, Piton theater ratio valid).",
+      "id": "audit_independence_capture",
+      "question": "Can third-party algorithmic audits remain independent when auditors are hired, funded, and contractually bound by the platforms they audit?",
+      "resolution_mechanism": "Institutional analysis of audit firm incentives, scope of audit access, confidentiality restrictions, and publication rights; comparison of audit findings vs independent academic research on the same platforms; tracking of cases where auditors identified severe issues and subsequent platform response",
+      "impact": "If capture is structural: audit apparatus is pure theater (Piton confirmed). If auditors achieve meaningful independence: accountability regime has real coordination function.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether third-party audits remain independent under platform funding"
+    },
+    {
+      "id": "user_recourse_mechanism_efficacy",
+      "question": "Do algorithmic accountability regimes provide users with effective mechanisms to challenge or appeal algorithmic decisions, or do 'right to explanation' provisions function as information asymmetry that reinforces platform authority?",
+      "resolution_mechanism": "Data on appeal rates, overturn rates, and user outcomes following algorithmic decision challenges; comparison of user satisfaction and actual outcome changes between platforms with strong vs weak appeal mechanisms; analysis of whether explanations provided to users match technical model structure or are post-hoc narratives",
+      "impact": "If appeal mechanisms are effective: regime provides genuine coordination benefit to users. If explanations are narrative (matching user expectations rather than model logic): the regime extracts legitimacy while producing no material change in outcomes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Efficacy of user appeal and explanation mechanisms in algorithmic accountability"
+    },
+    {
+      "id": "regulatory_capacity_asymmetry",
+      "question": "Do regulatory agencies possess the technical capacity and resource allocation to perform meaningful algorithmic verification independent of platform data and cooperation?",
+      "resolution_mechanism": "Staffing analysis of regulatory bodies overseeing algorithmic systems (AI/ML expertise, data science capacity, relative to platform engineering teams); documentation of audit procedures that do not depend on platform-provided data or access; tracking of enforcement actions that required algorithmic re-specification or meaningful constraints on platform operations",
+      "impact": "If capacity is asymmetric: regulatory agencies are structurally dependent on platforms for verification (extraction mechanism). If capacity is adequate: oversight has teeth.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Measurable harm reduction from algorithmic accountability regimes"
+      "description": "Whether regulatory agencies have technical capacity for independent algorithmic verification"
     },
     {
-      "id": "audit_vendor_independence",
-      "question": "Can audit vendors maintain independence when selected and funded by the platforms they audit, and when future work depends on platform satisfaction with findings?",
-      "resolution_mechanism": "Comparison of audit findings across platform-selected vendors vs independently selected vendors; analysis of vendor financial ties to auditees; tracking of vendor recommendations vs subsequent platform behavior change",
-      "impact": "If vendor independence is maintained: audit regime provides real external constraint (Tangled Rope with real enforcement). If vendor capture is complete: audit regime is pure legitimation theater (Piton or Snare).",
+      "id": "democratic_legitimacy_of_regulatory_capture",
+      "question": "Is the regulatory agency's dependence on platform expertise and data access a form of epistemic capture that should be classified differently than standard regulatory capture?",
+      "resolution_mechanism": "Analysis of how platforms participate in regulatory standard-setting; documentation of regulatory decisions justified by appeal to technical necessity claims made by platforms; comparison of regulatory standards in jurisdictions with high vs low epistemic dependence on industry experts",
+      "impact": "If epistemic capture is structurally inevitable: the regime is extraction masquerading as coordination by design. If alternative epistemic bases exist: regulatory independence is possible through institutional restructuring.",
       "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Structural independence of platform-funded auditors"
+      "type_class": "conceptual",
+      "description": "Whether platform dependence constitutes epistemic capture distinct from standard regulatory capture"
     },
     {
-      "id": "end_user_agency_threshold",
-      "question": "What is the minimum level of algorithmic transparency and control capacity required for end users to meaningfully exit or contest algorithmic decisions, or is meaningful agency structurally impossible given the scale and complexity of deployed systems?",
-      "resolution_mechanism": "User studies on contestation success rates under different transparency/control conditions; analysis of user requests for explanation vs platform responses; legal analysis of contestation rights under current regimes",
-      "impact": "If users can achieve agency through transparency alone: trapped perspective may degrade to constrained (Tangled Rope). If agency requires structural platform changes that regimes don't enforce: trapped classification confirmed (Snare).",
+      "id": "false_summit_naturalization",
+      "question": "Does framing algorithmic opacity as a natural law of machine learning mathematics serve the interests of platforms seeking to avoid meaningful transparency?",
+      "resolution_mechanism": "Historical analysis of when 'algorithmic opacity is inevitable' arguments were deployed vs when platforms made interpretability investments; comparison of interpretability across jurisdictions with different regulatory intensity; technical audit of whether specific opacity claims are structural necessities or engineering choices",
+      "impact": "If naturalization is descriptive: complexity constraints are real and accountability regime must work within them. If naturalization is strategic: the mountain perspective is a false summit and extraction mechanisms remain unchanged by the regime.",
       "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Minimum conditions for meaningful end-user agency within algorithmic systems"
+      "type_class": "conceptual",
+      "description": "Whether algorithmic opacity is naturalized to avoid accountability"
     }
   ],
   "measurements": [
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.55
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.52
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
+      "time_point": 3,
       "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.78
     },
     {
       "metric": "base_extractiveness",
@@ -159,44 +169,61 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
+      "time_point": 3,
       "value": 0.5
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 6,
       "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.65
     }
   ],
   "interval": {
     "start": 0,
-    "end": 10
+    "end": 6
   },
   "commentary": {
-    "narrative_context": "The algorithmic accountability regime \u2014 the ensemble of regulatory mandates, audit requirements, transparency statements, and compliance mechanisms designed to oversee algorithmic decision-making in consequential domains (credit, hiring, content moderation, ad targeting) \u2014 exhibits a fundamental structural tension between its stated coordination function (establishing legitimate oversight and user protection) and its actual extraction mechanism (creating legitimacy for platforms while protecting algorithmic opacity from independent verification). End users subject to algorithmic decisions lack meaningful transparency into how those decisions are made or recourse to contest them. Regulators lack technical capacity to independently verify platform compliance claims. External auditors face legal and access barriers to independent evaluation. Meanwhile, platforms benefit from the regime's legitimation without materially reducing algorithmic optimization for engagement over fairness. The theater ratio reflects the growing gap between regulatory appearance and verification function \u2014 as the regime has matured, compliance has become increasingly performative (impact assessments, audit reports, transparency statements) while actual algorithmic opacity has been defended through intellectual property law and technical complexity arguments.",
+    "narrative_context": "The algorithmic accountability regime — the ensemble of regulatory mandates (GDPR Article 22, EU AI Act, state-level algorithmic transparency laws), audit requirements, impact assessments, and compliance mechanisms — exemplifies a tangled rope constraint that combines genuine coordination function with asymmetric extraction. On the coordination side: the regime establishes shared standards for algorithmic governance, defines user rights to explanation and algorithmic decision challenge, and creates accountability mechanisms that legitimate algorithmic decision-making by establishing oversight structures. On the extraction side: platforms capture the regime by controlling audit procedures (hiring and funding third-party auditors), controlling information disclosure (aggregate statistics that obscure decision criteria), and using compliance theater to satisfy regulators while maintaining opacity at the decision level. The regime's theater ratio (0.78) reflects that transparency reports, impact assessments, and audit findings are substantially performative — they create the appearance of accountability without enabling meaningful verification by users, competitors, or regulators. The extractiveness trajectory (0.42 → 0.58 over six years) shows accumulating extraction as platforms develop more sophisticated compliance theater and regulatory agencies become more dependent on platform data for verification. The suppression trajectory (0.50 → 0.65) reflects growing barriers to meaningful algorithmic challenge: users face cognitive barriers to understanding algorithmic decisions, procedural barriers to mounting appeals, and structural barriers to competing with established platforms.",
     "key_agents": [
-      "Tech Platform Corporations: Primary beneficiary (institutional/arbitrage) \u2014 capture legitimacy and regulatory predictability without reducing algorithmic extraction; can arbitrage between jurisdictions to minimize oversight friction",
-      "Affected End Users: Primary victim (powerless/trapped) \u2014 subject to algorithmic decisions with no transparency, no contestation rights, no exit option; concentrated harm in consequential domains (credit, employment, information access)",
-      "Regulatory Agencies: Secondary institutional actor (organized/constrained) \u2014 have mandates to oversee but lack technical capacity to verify claims; constrained by their own regulatory frameworks",
-      "Independent Auditors: Secondary victim (moderate/constrained) \u2014 nominally enabled to audit but face legal barriers, access denial, and platform control over scope and disclosure",
-      "Algorithmic Transparency Goal: Victim (powerless/trapped) \u2014 the aspiration of transparency is structurally opposed by the regime's protection of proprietary systems and computational obscurity",
-      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 sees the regime as hybrid coordination-extraction mechanism masquerading as pure accountability"
+      "Platform Operators: Primary beneficiary (institutional/arbitrage) — capture regulatory legitimacy while maintaining algorithmic opacity; achieve cost leverage over competitors through scale economies in compliance",
+      "Affected Users: Primary victim (powerless/trapped) — subject to algorithmic decisions with no transparency into criteria, no meaningful appeal mechanism, and no exit from platform infrastructure",
+      "Regulatory Agencies: Secondary beneficiary and victim (organized/constrained) — genuine coordination function (developing standards) but also structurally dependent on platforms for data access and technical expertise (extraction mechanism)",
+      "Competing Platforms: Mixed victim-beneficiary (moderate/constrained) — benefit from shared standards but bear disproportionate compliance burden relative to incumbent platforms",
+      "Algorithmic Justice Movement: Organized advocates (organized/constrained) — building alternative oversight mechanisms (community audits, distributed monitoring, interpretability tools) with sunset logic",
+      "Third-Party Auditors: Institutional actor (institutional/arbitrage) — hired by platforms to provide independent verification but structurally dependent on platform cooperation and funding",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing institutional choices (opacity of neural networks) as natural limits of mathematics"
     ],
-    "logic_rationale": "Extractiveness (0.58): Moderate-high. The regime provides genuine coordination benefit to platforms (legal certainty, regulatory legitimacy, predictable compliance pathways) while the extraction falls on end users (lack of transparency, absence of contestation mechanisms, concentrated harm) and auditors (limited access, legal threats, vendor capture). The value reflects that the regime benefits some actors substantially while imposing costs on others with no countervailing benefit. Suppression (0.65): High. Structural barriers to transparency include intellectual property law protection of models, computational complexity arguments, legal liability for disclosure, and contractual restrictions on auditor findings. These barriers are not incidental \u2014 they are actively defended by platforms and often written into regulatory frameworks. Theater ratio (0.68): High and rising. The regime is increasingly performative as platforms have learned to demonstrate compliance through low-cost performative acts (public statements, audit reports, impact assessments) rather than genuine system changes. The theater ratio has grown from 0.35 to 0.68 over the interval as the gap between announced accountability and actual algorithmic opacity has widened.",
-    "perspectival_gap": "The gap between the platform's rope perspective and the end user's snare perspective is maximal \u2014 the same accountability mechanism that appears to coordinate (establish legitimate oversight) to the platform appears extractive (create false sense of protection while maintaining opacity) to the user. The piton perspective reveals the institutional mechanism: accountability theater persists because alternative oversight models (decentralized algorithms, user-controlled ML, external hardware-based constraints) lack institutional legitimacy, regulatory infrastructure, and cultural acceptance. The regime doesn't necessarily make users better off; it makes them feel protected while platforms benefit from legitimacy. The analytical observer's tangled rope classification holds both truths simultaneously: the regime is coordination (it really does establish shared terminology for algorithmic harm and legal precedent for oversight) AND extraction (it benefits platforms more than users and creates legitimacy for systems that remain opaque).",
-    "directionality_logic": "Directionality is determined by each agent's structural position within the extraction flow. Platforms as beneficiaries with arbitrage options experience low effective extraction (d \u2248 0.15) \u2014 they control what gets audited and disclosed. End users as victims with trapped exit experience maximum extraction (d \u2248 0.95) \u2014 they cannot avoid algorithmic decision-making and have no recourse. Auditors as victims with constrained exit experience high extraction (d \u2248 0.75) \u2014 they face legal barriers and access constraints but could theoretically publish findings without platform permission (at significant career cost). Regulators as institutional actors with limited but real exit options experience moderate extraction (d \u2248 0.55) \u2014 they could choose not to implement accountability regimes (political cost) or challenge platforms more aggressively (regulatory capacity constraint). The divergence between beneficiary and victim directionality values produces the tangled rope classification: the regime genuinely coordinates (creates shared terminology, legal hooks, accountability expectations) while extracting asymmetrically (benefits platforms, costs borne by users and auditors).",
-    "mandatrophy_analysis": "MANDATROPHY PATHWAY: The algorithmic accountability regime resolves the mandatrophy by distinguishing who experiences the coordination benefit from who bears the extraction cost. The regime is NOT a pure extraction mechanism (snare) because it genuinely does create coordination infrastructure \u2014 it establishes legal terminology for algorithmic harm, creates reporting requirements that establish precedent, enables cross-jurisdictional learning about algorithmic risks, and creates space for auditor-researcher communities. However, the coordination benefit is appropriated asymmetrically: platforms use the regime to establish legitimacy; end users receive the appearance of protection without material improvement in transparency or contestation capacity; auditors face barriers despite nominal enablement. The tangled rope classification holds: the regime is hybrid, serving both coordination and extraction functions, with extraction distributed toward those least able to resist (powerless end users) and coordination benefits distributed toward those already powerful (platforms, institutional regulators). The distinction between snare and tangled rope is precisely whether the regime includes a genuine coordination function (it does) alongside asymmetric extraction (it does). The classification would degrade to snare only if the coordination mechanisms turned out to be entirely fictional \u2014 a hypothesis the omegas test empirically."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The regime produces substantial benefits for platforms (legitimacy, regulatory compliance) relative to the constraints imposed (disclosure requirements, audit obligations). The trajectory from 0.42 to 0.58 reflects accumulating extraction as platforms develop more sophisticated compliance theater. Suppression (0.65): High. Meaningful barriers to user challenge include: cognitive complexity of algorithmic decision criteria, procedural friction in appeal mechanisms, platforms' control of data needed for independent verification, regulatory agencies' resource constraints preventing thorough audits, and switching costs that prevent users from exiting to competitors. Theater ratio (0.78): Very high. Transparency reports contain aggregate statistics that obscure decision criteria; impact assessments follow template procedures disconnected from actual outcomes; audits are conducted by firms hired by platforms; explanations provided to users are often post-hoc narratives rather than actual model logic. The performative content has increased over time as regulatory pressure has grown — platforms have become more sophisticated at producing compliance theater rather than substantive transparency. The regime's core mechanism is legitimation: it allows platforms to claim accountability while maintaining control over verification. Users see transparency reports; regulators see audit findings; but neither can independently verify algorithmic decision criteria or challenge outcomes with meaningful effect.",
+    "perspectival_gap": "The gap is produced by differential access to verification and differential ability to challenge decisions. Platforms see coordination (shared rules, established procedures); users see extraction (opaque decisions, ineffective appeals). Regulators see both but are structurally dependent on platforms for verification, giving platforms extractive advantage. The gap reveals the regime's core mechanism: it legitimates algorithmic authority while limiting meaningful challenge to that authority.",
+    "directionality_logic": "Directionality values are derived from beneficiary/victim declarations and exit options. Platform operators (beneficiary + arbitrage) experience low d, translating to negative effective extraction χ (the regime subsidizes their operations). Affected users (victim + trapped) experience high d, translating to high χ (maximum experienced extraction). Regulatory agencies (mixed + constrained) experience moderate d, reflecting both their coordination function and their dependence on platforms. The regime's extraction mechanisms are most severe for powerless agents with no alternatives (users subject to algorithmic decisions with no exit option); they diminish for organized agents with agency and alternatives (algorithmic justice movement building parallel structures).",
+    "mandatrophy_analysis": "RESOLUTION: This constraint resolves mandatrophy by distinguishing the regime's stated function (coordination: establishing legitimate algorithmic governance) from its actual effect (extraction: legitimating platforms' opacity while preventing meaningful user challenge). The regime IS a tangled rope — not a confusion between two types but a genuine hybrid. The coordination function is real: the regime establishes shared standards, defines user rights, creates accountability procedures. The extraction mechanism is also real: platforms control audit procedures, users lack meaningful appeal mechanisms, regulators depend on platforms for verification. The mandatrophy resolves not by choosing between the two but by recognizing both as structural features. The perspectival gap (platform sees rope; user sees snare) is not a classification error but a diagnostic signal that the regime's coordination function accrues to platforms while its extractive mechanisms target powerless users. The analytical observer's mountain perspective (algorithmic complexity as natural law) is a false summit — it naturalizes institutional choices that could be made differently (platforms could use more interpretable models, could implement stronger appeal mechanisms, could grant genuine data access). The regime's theater ratio (0.78) and rising extractiveness (0.42 → 0.58) indicate that as regulatory pressure intensifies, platforms develop more sophisticated compliance theater rather than substantive transparency, confirming the tangled-rope classification over time.",
+    "kernel_context": "The algorithmic accountability regime is one reading of the contested kernel of 'algorithmic transparency.' The Reading instantiated here holds: transparency is achievable through regulatory mandate, audit procedures, and rights-to-explanation, and serves genuine accountability function. Sibling readings: (1) Transparency-as-false-promise: algorithmic complexity makes full transparency impossible; mandates produce theater without substance. (2) Transparency-as-liberation: distributed algorithmic audits and open-source interpretability tools can bypass platform-controlled verification. (3) Transparency-as-unnecessary: algorithm is not the problem; the problem is that we ask algorithms to make decisions about human welfare; the solution is to restrict algorithmic domains, not to make algorithms transparent within them. This story instantiates reading (1) — the coordination-plus-extraction hybrid — and documents why sibling reading (2) has partial truth while (3) challenges the kernel itself."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "algorithmic_transparency_deficit",
-      "platform_regulatory_capture",
-      "automated_decision_bias"
+      "platform_epistemic_authority",
+      "ai_model_interpretability_limits",
+      "regulatory_agency_capture"
     ],
-    "dual_formulation_note": "The algorithmic accountability regime is the institutional response to three upstream constraints: algorithmic transparency deficit (the structural opacity of deployed ML systems), platform regulatory capture (the ability of tech firms to influence their own oversight), and automated decision bias (the empirical problem of disparate impact from algorithmic systems). The regime itself becomes a constraint on achieving transparency because it creates legitimacy for platforms while protecting opacity through intellectual property and legal liability arguments. Each upstream constraint decomposes into separate stories reflecting their different empirical evidence and extractiveness values."
+    "dual_formulation_note": "The algorithmic accountability regime decomposes into three structurally distinct constraints: (1) The regime itself (this story) — the ensemble of regulatory mandates and compliance procedures, ε=0.58, Tangled Rope. (2) Platform epistemic authority (separate story) — the authority platforms derive from controlling algorithmic data and expertise, ε≈0.70, Snare. (3) Model interpretability limits (separate story) — technical constraints on neural network transparency, ε≈0.15, Mountain. The regime's extractiveness depends on platform epistemic advantage (story 2) and is downstream of technical interpretability constraints (story 3)."
   },
   "directionality_overrides": [
     {

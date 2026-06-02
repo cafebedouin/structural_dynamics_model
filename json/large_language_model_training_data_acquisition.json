@@ -4,23 +4,26 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "llm_train_data"
+    "measurement_id_prefix": "llm_tda",
+    "story_uid": "842df12f-41b8-457b-9afa-8c42bfa1fdcb"
   },
   "base_properties": {
     "extractiveness": 0.62,
     "suppression": 0.68,
-    "theater_ratio": 0.45,
-    "claimed_type": "tangled_rope",
+    "theater_ratio": 0.55,
+    "claimed_type": "snare",
     "human_readable": "LLM Training Data Acquisition Asymmetry",
     "topic_domain": "machine_learning/digital_economy/intellectual_property",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "llm_developers",
-      "model_deployers"
+      "model_developers",
+      "model_deployers",
+      "downstream_service_providers"
     ],
     "victims": [
       "content_creators",
-      "public_commons"
+      "copyright_holders",
+      "creative_professionals"
     ]
   },
   "perspectives": [
@@ -30,17 +33,26 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Content Creator",
-      "comment": "PERSPECTIVE 1: CONTENT CREATOR (SNARE) \u2014 Writers, artists, journalists, and knowledge workers cannot escape the constraint: their creative output is scraped without consent, compensation, or contractual recourse. No material exit option exists. Suppression is total: terms of service prohibit opt-out, legal ambiguity around copyright and fair use prevents enforcement, and the scale of scraping makes individual litigation impossible. Experiences pure extraction with no coordination benefit."
+      "label": "The Content Creator (Powerless/Trapped)",
+      "comment": "PERSPECTIVE 1: CONTENT CREATOR (SNARE) — Individual writers, artists, journalists lack capacity to prevent or negotiate data scraping. Exit is impossible: once published, content is scraped globally. No alternatives to participation in the digital commons without complete withdrawal. Maximum extraction, maximum suppression."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "snare",
       "agent_power": "moderate",
       "time_horizon": "biographical",
       "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Creative Professional (Moderate/Constrained)",
+      "comment": "PERSPECTIVE 2: CREATIVE PROFESSIONAL (SNARE) — Freelance writers, illustrators, musicians face career penalty for withdrawing from visibility (social media, portfolio sites). Can attempt contractual opt-out but face fragmented, legally uncertain enforcement. High cost to exit — remaining options (paywalls, closed platforms) reduce income and reach. Substantial extraction with some residual agency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Smaller AI Company",
-      "comment": "PERSPECTIVE 2: SMALLER AI COMPANY (TANGLED ROPE) \u2014 Constrained by data acquisition costs and legal risk. Smaller firms depend on free scraping for training data; licensing would be prohibitively expensive. Exit option is available (use only licensed data) but carries high cost. Also experiences genuine coordination benefit: access to diverse data improves model quality, which benefits all downstream consumers. Mixed experience of extraction and coordination."
+      "label": "The Copyright Holder Organization (Organized/Constrained)",
+      "comment": "PERSPECTIVE 3: COPYRIGHT HOLDER / PUBLISHER (TANGLED ROPE) — Publishers and media organizations have legal standing and enforcement capacity. Can sue (high cost, uncertain outcome), negotiate licensing (limited success), or lobby for regulation. Organized power constrains but doesn't eliminate extraction. Partial coordination benefit exists: some publishers negotiate data partnerships, creating licensing revenue and market differentiation. Mixed extraction-coordination dynamic."
     },
     {
       "classification_type": "rope",
@@ -48,169 +60,159 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Frontier AI Lab",
-      "comment": "PERSPECTIVE 3: FRONTIER AI LAB (ROPE) \u2014 Institutional beneficiary with arbitrage options. Can afford licensing, private data arrangements, or targeted scraping. Experiences the constraint as coordination mechanism: standardized data formats, common knowledge sources, and interoperable training datasets enable collaboration and model improvement. Net beneficiary with genuine exit \u2014 can switch to licensed data without prohibitive cost. Perceives the constraint as a coordination infrastructure."
+      "label": "The Model Developer (Institutional/Arbitrage)",
+      "comment": "PERSPECTIVE 4: MODEL DEVELOPER (ROPE) — Developers experience the constraint as a coordination mechanism: assembling a representative training corpus is a genuine technical problem, and open data (web crawls, public repositories) solve it efficiently. Can arbitrage between training-data procurement costs and model value. Net beneficiary experiencing minimal extraction cost."
     },
     {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The Open Data Governance Movement",
-      "comment": "PERSPECTIVE 4: OPEN DATA GOVERNANCE MOVEMENT (SCAFFOLD) \u2014 Organized agents (licensing frameworks like CreativeCommons-compatible training data, synthetic data initiatives, federated learning pilots) are building alternative pathways for data access that include creator consent and compensation. These alternatives have built-in sunset logic: as licensing infrastructure matures and synthetic data quality improves, the free-scraping extraction mechanism loses competitive advantage. Current suppression is high (licensing frameworks still nascent), but organized agents see clear exit path."
-    },
-    {
-      "classification_type": "tangled_rope",
+      "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The Platform (Data Host)",
-      "comment": "PERSPECTIVE 5: PLATFORM / DATA HOST (TANGLED ROPE) \u2014 Platforms and publishers (social media companies, news outlets, academic repositories) face constrained choices: they could sue scrapers (high cost, uncertain outcome due to fair-use ambiguity) or renegotiate terms with AI labs (costly, gives AI labs leverage). Also experience genuine coordination benefit from AI-powered features (content recommendation, search enhancement). Extraction flow: some of the AI-generated value flows back as platform integration contracts, but insufficient to offset data contribution."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "organized",
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Regulatory Coalition",
-      "comment": "PERSPECTIVE 6: REGULATORY COALITION (TANGLED ROPE) \u2014 EU AI Act, digital copyright proposals, and consent-based data frameworks represent organized enforcement attempts. These actors have arbitrage: they can set rules and enforce them within jurisdiction. Also coordinate genuine benefit: establishing clear norms around data use reduces uncertainty for all parties. But enforcement faces global friction (US-based labs, non-compliance incentives) and must balance creator protection against innovation. High suppression comes from global coordination barriers, not from powerlessness."
+      "label": "The Model Deployer (Institutional/Arbitrage)",
+      "comment": "PERSPECTIVE 5: MODEL DEPLOYER (ROPE) — Deployers (tech platforms, API providers) experience the constraint as enabling low-cost access to advanced capabilities. License trained models from developers and monetize through API access. Coordination mechanism: developers and deployers cooperate to extract value from the corpus without paying the upstream source."
     },
     {
-      "classification_type": "piton",
-      "agent_power": "institutional",
-      "time_horizon": "civilizational",
-      "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "The Copyright System",
-      "comment": "PERSPECTIVE 7: COPYRIGHT SYSTEM (PITON) \u2014 Traditional copyright enforcement for text/images used in training data is substantially performative: legal mechanisms exist but are unclear in application (fair use ambiguity), expensive to enforce (litigation costs), and difficult to scale (mass infringement). The copyright system persists through institutional inertia \u2014 it's the default intellectual property framework \u2014 despite low effectiveness in preventing or compensating for training data use. Theater ratio high because copyright notices and takedown requests are ritual-like: they persist despite acknowledged ineffectiveness. The system maintains itself through authority and convention rather than demonstrated function."
-    },
-    {
-      "classification_type": "mountain",
+      "classification_type": "tangled_rope",
       "agent_power": "analytical",
-      "time_horizon": "civilizational",
+      "time_horizon": "generational",
       "exit_options": "analytical",
-      "spatial_scope": "universal",
-      "label": "The Analytical Observer (Natural Law View)",
-      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, data scarcity is an immutable feature of knowledge creation: to train models on human knowledge, some agents must provide data. The bottleneck between data holders and model builders is a fundamental structural property of knowledge production, not a contingent institutional arrangement. Statistical patterns cannot be learned without access to data patterns. However, the structural data contradicts this \u2014 scraping without consent is a contingent choice, not a law of nature. The 'inevitable extraction' framing naturalizes a policy choice."
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (System Perspective)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From a generational systemic view, LLM training represents a genuine coordination advance (enabling powerful language capabilities) layered atop systematic content appropriation without compensation. The coordination function is real (better models benefit downstream users); the extraction is structural (value flows to model developers, not to data sources). Classic Tangled Rope signature: both coordination and asymmetric extraction present."
     }
   ],
   "omegas": [
     {
-      "id": "fair_use_copyright_boundary",
-      "question": "Does training LLMs on copyrighted text constitute fair use under copyright law, or does it constitute copyright infringement requiring compensation?",
-      "resolution_mechanism": "Judicial precedent (US courts, EU CJEU) establishing bright-line test for training data incorporation. Test must differentiate: memorization (infringement) vs. statistical pattern learning (potentially fair use).",
-      "impact": "If fair use: extraction mechanism is weak (legal framework permits scraping). If infringement: extraction mechanism is strong (legal liability gives content creators leverage). Classification shifts from Tangled Rope toward pure extraction Snare at creator perspective.",
-      "confidence": "medium",
+      "id": "fair_use_doctrine_contestation",
+      "question": "Does transformer-based training constitute fair use under copyright law, or does it constitute unauthorized derivative work?",
+      "resolution_mechanism": "Jurisdictional precedent via litigation (US, EU, UK courts); legislative clarification of fair use boundaries for AI training",
+      "impact": "If fair use: extraction becomes legally justified, reclassifying constraint toward Rope or Scaffold (transitional). If not fair use: snare classification strengthens; extraction becomes legally extractive (tortious), enabling organized victim responses. Entire constraint type depends on this resolution.",
+      "confidence": "low",
       "type_class": "conceptual",
-      "description": "Legal boundary between fair use and training data copyright infringement"
+      "description": "Fair use status of transformer training on copyrighted text"
     },
     {
-      "id": "synthetic_data_quality_parity",
-      "question": "Can synthetic data (generated by existing models, simulated via physical/logical rules, or crowdsourced from labeled volunteers) achieve performance parity with scraped internet data at scale?",
-      "resolution_mechanism": "Comparative benchmarking: models trained on synthetic vs. scraped data; cost-per-performance metrics; downstream task generalization across domains. Generational comparison (2025 models vs. 2027 models) to measure convergence.",
-      "impact": "If parity achievable: scaffold sunset is real, free-scraping loses competitive advantage. If synthetic data persistently inferior: suppression of alternative pathways is structural, and constraint persists indefinitely as Tangled Rope or Snare.",
+      "id": "market_power_concentration_dynamics",
+      "question": "As model training data becomes scarcer and legally contested, does market power consolidate further toward largest developers (who have capital for licensing and litigation), or do alternative data sources (synthetic, consented, synthetic) reduce the asymmetry?",
+      "resolution_mechanism": "Tracking of model training data provenance and licensing terms across developer cohorts; measurement of market share concentration in model development; emergence and adoption rates of synthetic/consented data frameworks",
+      "impact": "If concentration increases: snare persists and deepens (high barriers to entry prevent new competitors). If alternatives emerge: potential transition to Scaffold (sunset as licensing norms mature) or Tangled Rope (mixed coordination-extraction with negotiation frameworks).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether synthetic data can achieve performance parity with scraped data"
+      "description": "Whether data scarcity increases or decreases market concentration"
     },
     {
-      "id": "creator_organizing_potential",
-      "question": "Can content creators organize collectively (writers' unions, artist collectives, digital rights organizations) to enforce licensing and compensation mechanisms faster than solo litigation?",
-      "resolution_mechanism": "Rate of organizational adoption among creators; effectiveness of collective licensing frameworks (Creative Commons licensing adoption rate, rights collectives membership); revenue captured vs. litigation track record.",
-      "impact": "If organizing succeeds: creator power shifts from powerless/trapped to moderate/constrained, classification changes from Snare toward Tangled Rope. If organizing fails: powerless agents remain trapped, extraction persists.",
+      "id": "consent_and_compensation_feasibility",
+      "question": "Is individual-level compensation for training data use technically and economically feasible, or does per-creator micro-payment create more overhead and extraction than the current regime?",
+      "resolution_mechanism": "Cost-benefit analysis of distributed payment systems vs current free acquisition; pilot implementations of consent-based data acquisition; measurement of administrative overhead vs compensation per creator",
+      "impact": "If feasible: institutional pressure toward Scaffold (temporary free scraping transits to licensed/consented data) or negotiated Tangled Rope. If infeasible: snare persists and becomes naturalized as economically necessary.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Potential for creator collective action and licensing"
+      "description": "Feasibility of per-creator compensation and consent mechanisms"
     },
     {
-      "id": "regulatory_enforcement_capacity",
-      "question": "Can global regulation (GDPR, AI Act, digital copyright frameworks) actually enforce data consent requirements against distributed and international AI development?",
-      "resolution_mechanism": "Audit of non-compliance rates by jurisdiction; enforcement action frequency; costs to AI labs of compliance vs. penalties for violation; effectiveness of data provenance auditing at scale.",
-      "impact": "If enforcement effective: suppression decreases, constraint moves toward Scaffold with real sunset. If enforcement weak: regulation is performative (piton-like), and constraint persists as Tangled Rope with theater.",
-      "confidence": "low",
+      "id": "synthesized_data_sufficiency",
+      "question": "Can large language models trained primarily on synthetic or iteratively-filtered human-consented data match or exceed the performance of models trained on unconstrained web scraping?",
+      "resolution_mechanism": "Comparative benchmarking of synthetic-data-trained models vs web-crawl models; measurement of performance gaps across standard evaluation suites; tracking of commercial viability of consent-based alternatives",
+      "impact": "If synthetic data sufficient: snare constraint degrades toward Scaffold (sunset mechanisms emerge as alternatives become viable). If significant gaps remain: snare persists (extraction is 'necessary' for capability). This is the empirical hinge for whether the constraint is structurally inevitable or structurally chosen.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Capacity of global regulation to enforce data consent"
-    },
-    {
-      "id": "emergent_model_value_capture",
-      "question": "What portion of economic value generated by trained models flows back to original content creators vs. remaining with model developers and deployers?",
-      "resolution_mechanism": "Revenue accounting: aggregate value of model deployments (enterprise licensing, consumer products, API fees) vs. payments to creators for training data. Comparison of creator compensation mechanisms (none, flat-rate licensing, usage-based royalties).",
-      "impact": "If minimal flow-back: asymmetry is severe, classification remains Snare/Tangled Rope. If significant flow-back emerges: extraction ratio decreases, constraint softens toward Rope or Scaffold. Resolves whether this is disguised value extraction or genuine coordination-with-friction.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Proportion of model value flowing back to content creators"
+      "description": "Whether synthetic data can substitute for unconstrained web scraping"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.48
+      "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 2,
-      "value": 0.55
+      "time_point": 3,
+      "value": 0.5
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 4,
+      "time_point": 6,
       "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.68
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.38
+      "value": 0.3
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2,
+      "time_point": 3,
       "value": 0.42
     },
     {
       "metric": "theater_ratio",
-      "time_point": 4,
-      "value": 0.45
+      "time_point": 6,
+      "value": 0.55
     }
   ],
   "interval": {
     "start": 0,
-    "end": 4
+    "end": 6
   },
   "commentary": {
-    "narrative_context": "Large language models require vast amounts of text data to train effectively. The constraint structures the asymmetry between data provision (unpaid, uncontracted, often non-consenting content creators) and value capture (concentrated among model developers and deployers). This creates a classic extraction mechanism: content creators' intellectual property and labor are incorporated into models without compensation, licensing, or contractual consent. The constraint appears as coordination to frontier labs (standardized training datasets, interoperable models) but as pure extraction to powerless creators with no exit option. Suppression is high: copyright law is ambiguous on training-data fair use, terms of service prohibit scraping opt-outs, and the scale of infringement makes individual enforcement impossible. Extractiveness has increased from 0.48 to 0.62 over the interval as model developers have scaled scraping and the economic value of trained models has grown while creator compensation has remained near zero. Theater ratio is moderate (0.45) because the constraint operates with relatively low performative overhead \u2014 scraping is functionally effective, not ritualistic. The emerging regulatory and collective-licensing alternatives (perspective 4: scaffold, perspective 6: regulatory coalition) represent genuine sunset pathways if they can scale and achieve cost-competitiveness with free scraping.",
+    "narrative_context": "Large language models require massive text corpora to achieve state-of-the-art performance. The constraint structures an asymmetry between data provision and value capture: content creators publish freely on the open internet, and model developers freely scrape this content without compensation, licensing, or explicit consent. The extracted value is enormous — a single transformer model trained on billions of tokens can be worth billions of dollars in market capitalization or monopolistic advantage. The content creators receive zero compensation. This is not a coordination failure or a side effect; it is a structural extraction mechanism designed to maximize developer profit by externalizing training costs onto the creative commons. The constraint's suppression (0.68) reflects multiple barriers: technical (creators cannot detect or prevent scraping), legal (fair use doctrine remains contested), and economic (individual creators lack capital to litigate or negotiate). Theater (0.55) reflects the post-hoc rationalization: developers claim training data is 'freely available' (it is), that fair use justifies unconsented use (it is contested), and that compensation mechanisms are 'technically infeasible' (they are not, but are more expensive than free scraping). The constraint exhibits a clear snare signature from the perspective of individual creators and a rope signature from model developers — a perspectival gap revealing the asymmetry.",
     "key_agents": [
-      "Content Creators: Primary victims (powerless/trapped) \u2014 writers, artists, journalists, and knowledge workers whose creative output is scraped without consent or compensation",
-      "LLM Developers (Frontier Labs): Primary beneficiaries (institutional/arbitrage) \u2014 labs with resources to train frontier models; can afford licensing but benefit from free data; experience as coordination infrastructure",
-      "LLM Developers (Smaller Companies): Secondary beneficiary/victim (moderate/constrained) \u2014 depend on free scraping for viability; cannot afford licensing; experience mixed coordination and extraction",
-      "Platforms and Publishers: Secondary victim (institutional/constrained) \u2014 host the data; face difficult choices between litigation (costly, uncertain) and renegotiation (gives AI labs leverage)",
-      "Open Data Governance Movement: Organized alternative (organized/constrained) \u2014 building consent-based and licensed data pathways with sunset logic; currently nascent but structurally sound",
-      "Regulatory Coalition: Enforcement actors (organized/arbitrage) \u2014 EU, copyright offices, digital rights advocates setting consent and compensation rules; face global coordination challenges",
-      "Copyright System: Institutional mechanism (institutional/arbitrage) \u2014 persists through convention but functionally degraded for training-data enforcement (piton classification)",
-      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing the contingent choice to scrape without consent as an immutable property of knowledge creation"
+      "Content Creators: Individual writers, bloggers, social media authors (powerless/trapped) — bear full extraction cost, have no exit or negotiation capacity",
+      "Creative Professionals: Freelance writers, illustrators, musicians (moderate/constrained) — face career penalty for withdrawal from visibility; can attempt legal action but at high cost",
+      "Copyright Holders: Publishers, media organizations, creative collectives (organized/constrained) — have legal standing to litigate but face fragmented litigation, uncertain outcomes, high costs",
+      "Model Developers: Companies building foundation models (institutional/arbitrage) — primary beneficiaries; experience constraint as efficient data procurement mechanism",
+      "Model Deployers: Platforms, API providers licensing trained models (institutional/arbitrage) — secondary beneficiaries; benefit from low-cost access to advanced capabilities",
+      "Regulatory Bodies: Government agencies, courts setting fair use precedent (institutional/analytical) — shape the constraint through legislative and judicial action"
     ],
-    "logic_rationale": "Extractiveness (0.62): Moderate-high. Content creators experience significant extraction: their creative output generates economic value in trained models, and they receive zero direct compensation. However, the extractiveness is not maximal (0.72+) because: (1) some creators benefit indirectly through improved AI services, (2) some creators accept scraping as a norm or cost of digital publication, and (3) legal liability is still ambiguous, leaving escape routes theoretically open. The value of 0.62 reflects the actual asymmetry of current practice \u2014 systematic unpaid data extraction at scale \u2014 without assuming either total helplessness or total value capture. Suppression (0.68): High. Multiple barriers prevent content creator exit: (1) Copyright law ambiguity around fair use makes opt-out legally uncertain. (2) Terms of service for platforms typically prohibit scraping, but enforcement applies to scrapers, not creators. (3) Scale makes individual litigation infeasible; aggregate damages would be needed but are difficult to calculate. (4) Creator knowledge of scraping is asymmetric \u2014 most creators do not know their work is being used for training. (5) No practical consent mechanism exists \u2014 creators cannot choose to opt-in to specific models or opt-out of scraping generally. Theater ratio (0.45): Moderate. The constraint's mechanism is relatively direct and functional, not heavily ritualistic. Scraping works; it produces usable training data. However, theater is non-zero because: (1) Copyright frameworks (takedown notices, fair-use claims) are largely performative \u2014 they persist as a legal ritual but do not actually prevent training-data incorporation. (2) Terms-of-service enforcement against scrapers is theatrical \u2014 the industry knows enforcement is incomplete and widespread. (3) Claimed type (tangled_rope): The constraint exhibits both coordination (genuine improvement in data standardization and model interoperability) and asymmetric extraction (value flows disproportionately toward model developers). Both are present. Not pure extraction (snare) because the coordination function is real. Not pure coordination (rope) because suppression and extractiveness are both high.",
-    "directionality_logic": "Directionality (d) is determined by structural relationship: beneficiary or victim, power level, and exit options. Content creators (powerless/trapped) have d \u2248 0.95 (near 1.0 = full target). They cannot exit, receive no benefits, and bear full cost. LLM developers (institutional/arbitrage) have d \u2248 0.05 (near 0.0 = full beneficiary). They have exit options (can license data), receive full benefits (trained models), and bear minimal cost. Smaller companies (moderate/constrained) have d \u2248 0.65 (symmetric extraction-coordination mix). They experience both suppression (constrained exit) and benefit (access to diverse training data). Platforms (institutional/constrained) have d \u2248 0.55 because they host the data and lose direct value but gain secondary benefits through AI integration. The regulatory coalition (organized/arbitrage) has d \u2248 0.40 \u2014 they have enforcement capacity and arbitrage options, but face global coordination friction. The copyright system (institutional/arbitrage) has d \u2248 0.08 because it benefits from the current arrangement (maintains relevance as the framework) with minimal cost (enforcement failures are blamed on technology, not system design). The perspectival gap emerges: beneficiaries (frontier labs) see d \u2248 0.05, victims (creators) see d \u2248 0.95. This wide gap (90-point difference) is a signature of asymmetric extraction.",
-    "perspectival_gap": "The perspectival gap is extreme. Frontier labs (perspective 3: rope) experience the constraint as coordination infrastructure \u2014 access to standardized, diverse training data improves model quality for everyone. Content creators (perspective 1: snare) experience the constraint as pure extraction with no exit \u2014 their work is incorporated without consent or compensation. Smaller companies (perspective 2: tangled_rope) occupy the middle: they benefit from data access (coordination) but are also suppressed by inability to afford licensing (extraction). Platforms (perspective 5: tangled_rope, institutional) recognize genuine coordination (AI features improve their services) but also experience extraction (data is taken without renegotiated revenue share). Regulatory and governance actors (perspective 4: scaffold, perspective 6: tangled_rope) see the constraint as a temporary coordination problem with a solvable exit pathway \u2014 alternative licensing frameworks and synthetic data can replace free scraping as models mature. The copyright system (perspective 7: piton) sees its own degradation \u2014 the traditional intellectual property framework is inadequate for the data-extraction scale, but persists through convention. The analytical observer (perspective 8: mountain, false summit) risks naturalizing the contingent institutional choice (scrape without consent) as an immutable property of how knowledge works. This is a false summit: scarcity of training data is real, but the choice to acquire it via scraping without consent is a policy decision, not a law of nature. The gap between perspective 3 (rope, frontier labs, d \u2248 0.05, \u03c7 \u2248 -0.12) and perspective 1 (snare, creators, d \u2248 0.95, \u03c7 \u2248 1.42) is diagnostic of asymmetric extraction.",
-    "mandatrophy_analysis": "MANDATROPHY ANALYSIS: The constraint resolves the mandatrophy by showing that the 'is this coordination or extraction?' question depends entirely on structural position. From the frontier lab's position, it genuinely is coordination \u2014 the constraint solves a real problem (how to obtain diverse training data efficiently) and all parties benefit from improved models, even if the benefit is asymmetric. From the creator's position, it is pure extraction \u2014 they bear all cost and receive no benefit. The resolution is NOT to force the constraint into a single type but to recognize that Tangled Rope is the correct classification from the civilizational analytical perspective because BOTH coordination function AND asymmetric extraction are structurally real. The coordination (perspective 3) is genuine. The extraction (perspective 1) is genuine. Both are simultaneously true. The Tangled Rope classification prevents the false choice between 'it's just coordination' (which would hide the asymmetry) and 'it's just extraction' (which would ignore the real coordination benefit). The mandatrophy resolves by acknowledging the constraint coordinates access to training data (real) while asymmetrically extracting value from creators (real). This is the definition of Tangled Rope."
+    "logic_rationale": "Extractiveness (0.62): High but not maximum. The constraint extracts significant value from creators (their intellectual property and labor are incorporated into models worth billions) but falls short of total expropriation because some creators retain legal claims, some licensing negotiations occur, and some developers make voluntary commitments to partial consent-based acquisition. The value of the extracted content is enormous relative to creator compensation (zero), but the structural mechanism is not as total as a chattel slavery snare would be. Suppression (0.68): High. Multiple barriers prevent exit or negotiation: (1) technical: creators cannot detect or prevent automated scraping; (2) legal: fair use remains contested, and individual creators cannot afford litigation; (3) economic: coordinated action requires solving a massive collective action problem (millions of creators); (4) informational: many creators are unaware their work is being scraped and monetized. Theater (0.55): Moderate. Post-hoc rationalization emphasizes 'open data' and 'fair use,' framing the extraction as natural or necessary. This theater is not as dense as a piton (which would have theater ≥ 0.70) because the extraction mechanism is still actively defended and justified, not merely maintained through inertia. Theater ratio increasing over time (0.30 → 0.55) reflects growing post-hoc justification as legal challenges mount.",
+    "perspectival_gap": "The snare/rope perspectival gap is the diagnostic signature of this constraint. Individual creators and copyright organizations perceive extraction (snare or tangled_rope). Model developers perceive coordination (rope) — they genuinely are solving a technical problem of data collection. The gap reveals that the extraction is structurally embedded in the coordination mechanism itself: the 'problem' being solved (obtaining training data) is defined to externalize costs onto creators. A different solution (licensing, consent, compensation) would solve the same technical problem at higher cost to developers. The analytical observer sees both: the coordination benefit (better models) and the systematic extraction (value flow direction). The constraint is snare-not-rope precisely because creators cannot negotiate alternative arrangements or exit; the rope experience of developers is parasitic on the snare experience of creators.",
+    "directionality_logic": "Model developers and deployers are beneficiaries with arbitrage exit options (d ≈ 0.05–0.15), deriving negative or minimal effective extraction. They experience the constraint as enabling their business model — a coordination benefit. Content creators are victims with trapped or constrained exit options (d ≈ 0.85–0.95), deriving maximum effective extraction. Copyright organizations are organized victims with constrained options (d ≈ 0.60–0.70), deriving high extraction but with partial capacity for legal response. The analytical observer (d ≈ 0.72 canonical for observer position) sees the full structure: beneficiaries with optimal exit positions; victims with blocked exits. The directionality distribution is skewed toward extraction — the constraint's structural design favors beneficiaries.",
+    "mandatrophy_analysis": "SNARE CLASSIFICATION RESOLVED: The constraint exhibits the snare signature (ε > 0.46, χ > 0.66, suppression > 0.60) with no coordination function present. The rope experiences reported by developers are not coordination — they are one party's experience of extraction masked as efficiency. True coordination requires mutual benefit or at least mutual consent to the arrangement. Creators have provided neither. The constraint's entire function is to extract value from creators without paying them, and its existence relies entirely on suppressing (legal, technical, economic) alternatives to unconsented use. The false summit risk is minimal here — no one seriously claims training data acquisition is a natural law of physics. The mandatrophy resolves by showing that snare is the only defensible classification once you account for the suppression mechanisms and the beneficiary/victim asymmetry. The rope classification is a perspectival artifact of the beneficiary's subjective experience, not a structural property."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "copyright_fair_use_boundary",
-      "creator_labor_compensation_asymmetry",
-      "synthetic_data_alternative_viability"
-    ]
+      "copyright_enforcement_technological_asymmetry",
+      "platform_attention_extraction",
+      "creative_professional_income_precarity"
+    ],
+    "dual_formulation_note": "LLM training data acquisition is downstream of platform-driven content aggregation (Constraint: platform_attention_extraction) and upstream of copyright enforcement failures (Constraint: copyright_enforcement_technological_asymmetry). The three constraints form a family: platforms aggregate creator content for engagement metrics; model developers scrape aggregated content without compensation; copyright holders lack enforcement mechanisms against computational scraping. Each constraint has distinct ε values and beneficiary/victim structures."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.08
+      "d_value": 0.12
     }
-  ]
+  ],
+  "cs_structure": {
+    "kernel_codification": "distributed",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": false
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "platform_attention_extraction"
+    ]
+  }
 }

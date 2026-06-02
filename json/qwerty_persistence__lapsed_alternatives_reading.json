@@ -1,0 +1,201 @@
+{
+  "header": {
+    "constraint_id": "qwerty_persistence__lapsed_alternatives_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "qwerty_lapsed",
+    "story_uid": "a69fde66-92b1-463e-93e4-6eff237b7138"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "QWERTY Persistence via Coordination Value (Lapsed Alternatives Reading)",
+    "topic_domain": "technology_history/industrial_standards/path_dependence",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Keyboard Manufacturer (Rational Coordinator)",
+      "comment": "PERSPECTIVE 1: KEYBOARD MANUFACTURER (ROPE) — Adopts QWERTY because coordination on a single standard reduces training costs and interoperability friction. The constraint solves a genuine collective action problem: if manufacturers fragment across incompatible layouts, each design is niche, training becomes expensive, and network effects disappear. Coordination produces net benefit. Exit is mobile — could theoretically switch layouts, but the coordination logic locks them in via market size, not force. Experiences constraint as legitimate cooperation."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Software Ecosystem (Application Developers)",
+      "comment": "PERSPECTIVE 2: SOFTWARE ECOSYSTEM (ROPE) — Develops applications (operating systems, text editors, games) assuming QWERTY layout. The constraint is coordination: all developers benefit from assuming a single, predictable keyboard input standard. If developers had to support 10 incompatible layouts, each application becomes fragmented. Exit is mobile but costly — rewriting keyboard handling for multiple layouts is possible but reduces resources for other features. Net benefit from coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "End Users (Typists and Operators)",
+      "comment": "PERSPECTIVE 3: END USERS (ROPE) — Learn QWERTY because it is ubiquitous and because learning multiple layouts is costly. The constraint solves their coordination problem: a universal layout means skills transfer across devices, training is concentrated on one system, and keyboard hardware is cheap and interchangeable. Exit is constrained — learning Dvorak is possible but requires months of practice, carries social friction (unusual on shared computers), and provides no economic benefit without ecosystem shift. Benefits from coordination despite apparent inefficiency."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Alternative Layout Innovator (Dvorak/Colemak Designer)",
+      "comment": "PERSPECTIVE 4: ALTERNATIVE LAYOUT INNOVATOR (ROPE) — Invents improved layouts (Dvorak 1936, Colemak 2006) to solve typing ergonomics. From the innovator's perspective, the constraint is still rope — the innovator needs the existing standard to exist in order to measure improvement against it. The switching cost is not imposed by Dvorak enemies; it is a genuine coordination problem: nobody adopts Dvorak unless others do, so network effects trap the innovation below critical mass. Exit is mobile — Dvorak can be designed and published — but fails at coordination threshold."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Pure Coordination View)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (ROPE / CIVILIZATIONAL) — QWERTY persists because it solves a genuine multi-party coordination problem at scale. The standard coordinates keyboardmakers, software developers, training institutions, and users across billions of devices globally. The extractiveness is low because the constraint produces net benefit for all participants — switching costs are real, but they are the cost of coordination, not the cost of extraction. Theater is minimal: the constraint does what it claims (coordinates input). This reading sees QWERTY as a case study in how coordination values dominate the path."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "critical_mass_threshold_determinism",
+      "question": "Is the critical mass threshold that defeats alternatives a deterministic property of coordination costs, or is it contingent on historical accident (which layout first achieved scale)?",
+      "resolution_mechanism": "Counterfactual analysis: if Dvorak had been patented 20 years earlier and the keyboard industry was younger, would it have achieved critical mass? Historical analysis of other standards (e.g., metric system adoption, vehicle drive sides) to test whether critical-mass-first always wins regardless of superiority.",
+      "impact": "If deterministic: QWERTY persistence is a consequence of the mathematical structure of coordination games, not of extractive mechanisms. If contingent: alternative layouts could have won if history had ordered events differently, and the reading shifts toward luck-and-contingency framing.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether critical mass threshold is structural or historical-contingent"
+    },
+    {
+      "id": "coordination_versus_lock_in_boundary",
+      "question": "At what point does a coordination standard transition from 'coordination tool' (benefits all parties) to 'lock-in trap' (extraction mechanism)? Does QWERTY ever cross this boundary?",
+      "resolution_mechanism": "Measure switching costs over time: did keyboard switching cost decrease (allowing alternatives to emerge) as technology evolved? Did any alternative layout achieve adoption >1% of installed base despite network effects? Did ergonomic innovation occur within QWERTY (split keyboards, columnar layouts on QWERTY) instead of switching layouts entirely?",
+      "impact": "If switching costs remained prohibitively high: QWERTY is pure coordination, this reading is correct. If switching costs fell but no alternative emerged despite reduced costs: coordination mechanism is stronger than economic incentive, reading is confirmed. If alternatives DID emerge whenever switching costs fell enough: the constraint is not coordination-only, it is mixed or extractive.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Boundary between coordination and lock-in"
+    },
+    {
+      "id": "kernel_reading_ambiguity",
+      "question": "Is QWERTY persistence best explained by the coordination value of standards (this reading) or by mechanisms that preserve incumbent advantage (sibling incumbent_preservation_reading)? What empirical pattern would distinguish these readings?",
+      "resolution_mechanism": "Compare QWERTY to other standards where coordination succeeded without apparent incumbent advantage (metric system, SI units, ISO shipping containers). Compare QWERTY to standards where switching costs existed but alternatives emerged (VHS vs Betamax, AC vs DC power, gasoline vs other fuels). If standards succeed purely by coordination value, alternatives should emerge when they offer sufficient advantage to overcome switching costs. The incumbent_preservation reading predicts that alternatives fail even with superior utility. This reading predicts that alternatives fail only when switching costs exceed their utility advantage.",
+      "impact": "If switching-cost comparison supports this reading: QWERTY is Rope (coordination without extraction). If alternatives fail despite superior utility even at zero switching cost: incumbent_preservation reading (Snare or Tangled Rope) is correct. The empirical arbiter is whether alternatives ever achieve significant adoption when their advantage exceeds the measured switching cost.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Committer-axis ambiguity: coordination vs incumbent preservation"
+    },
+    {
+      "id": "network_effects_versus_ergonomics_tradeoff",
+      "question": "Do network effects from QWERTY coordination provide genuine ergonomic value to end users, or do they merely make QWERTY the only accessible option?",
+      "resolution_mechanism": "Controlled experiment: measure typing speed and error rates on QWERTY vs Dvorak for users with matched training investment. If Dvorak outperforms after equal training, the benefit of QWERTY coordination does not offset its ergonomic cost — extraction may be present (network effects prevent access to objectively superior layouts). If QWERTY matches Dvorak in controlled settings, the coordination benefit (ubiquity, training availability, hardware cost) genuinely compensates for layout suboptimality.",
+      "impact": "If Dvorak outperforms: QWERTY persistence may involve extraction (coordination value artificially sustains inferior technology). If QWERTY matches or exceeds Dvorak in utility: this reading is strongly supported — coordination value alone explains persistence.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether network effects genuinely compensate for layout ergonomics"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.18
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.25
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 40
+  },
+  "commentary": {
+    "narrative_context": "QWERTY persistence represents one reading of a contested kernel: does the standard persist because coordination value is genuine and overwhelming (this reading, Rope classification), or because incumbent actors have engineered barriers to alternatives (sibling incumbent_preservation_reading, mixed or Snare classification)? This story instantiates the lapsed_alternatives_reading: QWERTY persists because it solves a real, multi-party coordination problem at global scale, and alternatives fail not from conspiracy or extraction, but from their inability to overcome the critical mass threshold required to establish a competing network effect. Extractiveness is low (0.18) because the constraint produces net benefit for all parties: manufacturers coordinate on a single design, software developers assume a single input standard, training systems concentrate on one layout, and users benefit from universal hardware interoperability and knowledge transfer. The theater ratio is minimal (0.25) because the constraint does what it claims — it coordinates keyboard input effectively. Switching costs are real but they are coordination costs, not extractive overhead. The measured increase in extractiveness from 0.08 to 0.18 over 40 years reflects not the emergence of extraction but the gradual ossification of the standard as mobile computing, international adoption, and path dependence deepen the coordination lock. This reading claims that QWERTY would persist even without incumbent advantage because the coordination value is intrinsic to how large-scale technical standards work.",
+    "key_agents": [
+      "Keyboard Manufacturers (Powerful/Mobile): Benefit from coordination on QWERTY; could theoretically switch layouts but exit is motivated only by coordinating with competitors to shift the standard collectively",
+      "Software Ecosystem (Powerful/Mobile): Develops assuming QWERTY; coordination reduces fragmentation; switching requires rewriting across millions of applications",
+      "End Users (Moderate/Constrained): Benefit from ubiquitous training, cheap hardware, transferable skills; learning alternatives is costly but possible",
+      "Alternative Layout Innovators (Moderate/Mobile): Invent Dvorak (1936), Colemak (2006), other improvements; fail to achieve critical mass despite measurable ergonomic gains; fail not from suppression but from coordination threshold",
+      "Training Institutions (Institutional/Arbitrage): Teach QWERTY because it is universal; coordinate with education systems globally; switching would require retraining entire pedagogical infrastructure",
+      "Analytical Observer (Analytical/Analytical): Sees coordination problem at scale; recognizes that critical mass thresholds are structural features of network effects, not evidence of extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low. The constraint produces net benefit for all participants because it solves a genuine multi-party coordination problem. Keyboard makers save on design complexity when they can converge on one layout. Software developers save on conditional logic and input handling when they assume one keyboard standard. Training systems are efficient when they teach a single layout globally. Users benefit from universal interoperability — skills transfer across devices, hardware is cheap and standardized, and ecosystem support is concentrated. The low extractiveness reflects that the coordination value is real and broadly distributed. There is no hidden extraction flowing to one party; instead, all parties benefit from reduced friction. The measured increase from 0.08 to 0.18 reflects the constraint deepening over time as path dependence accumulates, not the emergence of extraction. Suppression (0.12): Low. The constraint operates through positive incentives (coordination benefits) rather than coercion or suppression of alternatives. Alternative layouts exist, are freely available, and are technically superior in measurable ways (Dvorak reduces finger travel distance by ~35%, reduces error rate for trained typists by ~5-10%). The reason alternatives fail is not that they are suppressed — they are published, marketed, and available — but that they fail to overcome the critical mass threshold. A single typist switching to Dvorak faces real costs (months of retraining, incompatibility with standard keyboards, social friction on shared computers) while gaining no benefit without widespread adoption. This is not suppression; it is a coordination threshold. Theater ratio (0.25): Low. The constraint's performative content is minimal. QWERTY does what it claims: it coordinates keyboard input. There is no theater hiding the constraint's function. The small theater ratio reflects minor performative elements (keyboard manufacturers may claim QWERTY is 'ergonomically optimized' when it is merely old, training systems may emphasize 'QWERTY mastery' when they are really just teaching the universal standard), but these are peripheral to the constraint's core function.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel qwerty_persistence. The reading instantiated here is lapsed_alternatives_reading: QWERTY persists because coordination value is genuine and alternatives lapse when they fail to reach critical mass. The sibling reading is incumbent_preservation_reading: QWERTY persists because incumbent actors (manufacturers, software firms, training institutions) have mechanisms that prevent alternatives from emerging even when they are superior. These readings share the same observable (QWERTY dominates the keyboard market globally) but disagree on the mechanism. In the lapsed_alternatives_reading, Dvorak and Colemak fail despite being designed and freely available because the switching costs are too high relative to the gained benefit without a coordinating migration. In the incumbent_preservation_reading, Dvorak and Colemak fail because incumbent interests actively or passively suppress alternatives to protect network effects. The empirical arbiter is whether alternatives could achieve adoption if switching costs fell or if their utility advantage were sufficient — this reading predicts yes, the sibling reading predicts no (extraction mechanisms prevent adoption regardless of utility). The committer-axis ambiguity is routed to omega variables (see kernel_reading_ambiguity), which specify how these readings would be distinguished empirically.",
+    "perspectival_gap": "The perspectival gap here is minimal — all perspectives classify as Rope because the constraint is genuinely coordinative from every angle. The analytical observer sees the same structure as the participants. The beneficiary (manufacturers, developers) see coordination and net benefit. The intermediate parties (users) see coordination with some constraint but overall benefit. The alternative innovator sees coordination as the barrier, not extraction — the innovator needs the standard to exist and needs critical mass to shift, which is a coordination threshold, not suppression. This uniformity is diagnostic: when all perspectives converge on Rope with low extractiveness and no beneficiary/victim split, the constraint is coordination-pure.",
+    "directionality_logic": "This constraint declares no beneficiaries or victims because the coordination benefit is genuinely symmetric across parties. Each party bears switching costs but also reaps coordination benefits. The symmetry is what distinguishes this reading from the incumbent_preservation reading, which would declare beneficiaries (incumbent manufacturers) and victims (alternative innovators, potential switchers). The derivation chain produces d = 0.50 for all parties (symmetric cost-benefit) without explicit override, resulting in f(d) ≈ 0.65 and low effective extractiveness chi even before scope modulation. This symmetric profile is the reading's core claim: QWERTY is not a Snare where one party extracts from another, it is a Rope where coordination value is broadly distributed.",
+    "mandatrophy_analysis": "This constraint demonstrates why mandatrophy resolution is necessary for classification clarity. Without the committer-frame analysis, QWERTY could be classified as either Rope (coordination story) or Snare/Tangled Rope (incumbent preservation story) depending on observer position and framing. The mandatrophy is resolved by declaring which reading is instantiated and populating the CS structure to route the ambiguity to omegas. The lapsed_alternatives_reading resolves the mandatrophy by asserting that coordination value is the mechanism, not incumbent extraction, and by specifying the empirical test that would confirm or refute this claim (do alternatives achieve adoption when switching costs fall?). The sibling incumbent_preservation_reading would resolve it differently (incumbent mechanisms prevent adoption regardless of costs/benefits). The engine cannot choose between them — the committer-axis ambiguity is genuine — but the framework can now make explicit which reading each constraint story embodies."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "qwerty_persistence__incumbent_preservation_reading"
+    ],
+    "dual_formulation_note": "QWERTY persistence is modeled as two constraint stories sharing the same observable (global QWERTY dominance) but differing in mechanism and reading. The lapsed_alternatives_reading frames QWERTY as a coordination success where alternatives fail at critical mass thresholds (Rope, low extractiveness). The incumbent_preservation_reading would frame QWERTY as a mechanism protecting incumbent advantage against superior alternatives (Snare or Tangled Rope, high extractiveness). These are not two measurements of the same constraint; they are two structurally distinct claims about what makes QWERTY persist. The omegas (kernel_reading_ambiguity) specify how empirical evidence could distinguish them. Network linking enables the engine to flag that a single natural-language claim (QWERTY persistence) decomposes into competing constraint stories with different ε values."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "qwerty_persistence__incumbent_preservation_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "coordination_value_sufficient_for_persistence",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "critical_mass_threshold_is_structural",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "coordination_consensus_equilibrium",
+    "drift_state": {
+      "moment": "post_personal_computing_era",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    }
+  }
+}

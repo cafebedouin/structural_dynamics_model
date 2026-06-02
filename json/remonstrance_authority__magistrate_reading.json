@@ -1,0 +1,262 @@
+{
+  "header": {
+    "constraint_id": "remonstrance_authority__magistrate_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-27",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "remo_mag",
+    "story_uid": "b21b9422-1780-46fa-98a4-b4d4ab01daa3"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Remonstrance Authority: Magistrate Reading (Ancient Liberty Preservation)",
+    "topic_domain": "constitutional_history/political_economy/legal_authority",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "parlementary_magistracy",
+      "tax_exempt_nobility"
+    ],
+    "victims": [
+      "crown_fiscal_authority",
+      "commoner_tax_base"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Commoner Tax Base",
+      "comment": "The commoner tax base has no exit from the constraint and no voice in remonstrance proceedings. Bears extraction through expanded fiscal authority while magistrates obstruct reform via constitutional doctrine. Trapped between crown demands and magistrate gatekeeping."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Parlementary Magistracy",
+      "comment": "The magistracy experiences remonstrance primarily as coordination: preserving constitutional balance between crown innovation and ancient liberty. Institutional beneficiary with arbitrage (can exit via accommodation). Extraction runs toward them through tax exemptions and veto power, but also coordinates real constitutional function."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Crown Authority",
+      "comment": "The crown is simultaneously beneficiary (seeks fiscal reform, trade regulation, administrative rationalization) and victim (constrained by remonstrance delays and obstruction). Mobile exit (can override via lit de justice or force) but also coordinated with magistracy on genuine constitutional maintenance. Mixed experience of extraction and coordination."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Ancient Liberty Doctrine Itself",
+      "comment": "Remonstrance as a constitutional practice is largely performative by the 18th century. The magistracy invokes ancient liberty, the crown overrides via lit de justice, and actual reform proceeds—the remonstrance delays but does not prevent. The doctrine persists through institutional inertia, not functional necessity. Theater ratio reflects the growing gap between constitutional claim and political reality."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Parlement Collective (Organized Resistance)",
+      "comment": "When magistrates coordinate across parlements (1770s resistance to Maupeou reforms, 1787-88 pre-Revolution mobilization), remonstrance becomes organized extraction—coordinated obstruction of reform while claiming constitutional duty. Organized power with constrained exit (can be exiled or reformed but cannot abandon institutional role). Genuine coordination function (preventing arbitrary royal action) combined with asymmetric extraction (tax exemptions, veto leverage)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law Reading)",
+      "comment": "From the magistrate reading's own tradition, ancient liberty appears as an immutable constitutional principle—written into France's fundamental law, discovered not invented, constraining all legitimate authority. This perspective risks treating the magistrate reading's doctrinal commitments as natural laws of political order. The structural data reveals this as a false summit: the magistracy constructed the doctrine to preserve fiscal privilege and veto power during a period of declining feudal authority."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "ancient_liberty_normative_status",
+      "question": "Are the magistrates' invoked ancient liberties genuine constitutional constraints on sovereign power, or post-hoc doctrinal constructions designed to preserve fiscal privilege and institutional veto?",
+      "resolution_mechanism": "Genealogical analysis of remonstrance doctrine: tracing claimed precedents to their actual historical sources; identifying when practices designated as 'ancient' were actually formalized or invented; comparing magistrate claims to actual medieval charter language.",
+      "impact": "If genuine constraints: magistrate reading is justified—remonstrance preserves real constitutional order. If constructions: magistrate reading is extraction mechanism disguised as liberty—the constraint is Snare, not Tangled Rope. The reading relations and axiom status shift from 'holdable' to 'overridden by historical evidence.'",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Genealogy of ancient liberty doctrine: genuine constraint or constructed privilege?"
+    },
+    {
+      "id": "fiscal_extraction_asymmetry_mechanism",
+      "question": "Does the magistrate reading's remonstrance authority systematically protect magistrate tax exemptions and nobility fiscal privilege while constraining crown fiscal reform that would burden the commons?",
+      "resolution_mechanism": "Comparative analysis of remonstrance outcomes: categorizing by whether edict affected magistrate/noble taxation vs commoner taxation; measuring veto success rates and override delays; analyzing which fiscal reforms were sustained vs which were abandoned after remonstrance.",
+      "impact": "If systematic asymmetry confirmed: suppression value should rise to 0.70+ (high structural extraction). If asymmetry is negligible: suppression drops to 0.40 (lower structural mechanism). Current assessment (0.62) assumes moderate selectivity; this omega resolves magnitude.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Remonstrance selectivity: does doctrine systematically protect magistrate fiscal privilege?"
+    },
+    {
+      "id": "lit_de_justice_ultimate_authority",
+      "question": "Does the crown's ability to override remonstrance via lit de justice render the magistrate reading's constitutional claim illusory, or is the override mechanism itself a constitutional safety valve that validates the constraint's coordination function?",
+      "resolution_mechanism": "Institutional analysis: does the lit de justice's availability reduce magistrate obstruction, or does the magistracy's awareness of the override mechanism actually entrench resistance (making them fight harder when override seems likely)? Compare parlement behavior pre- and post-Maupeou reforms.",
+      "impact": "If override mechanism validates coordination: suppression and theater_ratio both decrease (magistracy sees it as constitutional negotiation). If override is merely power assertion: theater_ratio rises further, suppression moves toward Snare threshold (0.70+). Current assessment treats lit de justice as coordination safety valve; this omega tests that assumption.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Lit de justice override: constitutional mechanism or mere power assertion?"
+    },
+    {
+      "id": "committer_frame_kernel_contest",
+      "question": "Does the magistrate reading's core premise (remonstrance as ancient liberty preservation) logically foreclose the crown reading's premise (remonstrance as aristocratic obstruction of rational reform), or do both readings coexist as live positions held by different institutional actors?",
+      "resolution_mechanism": "Textual and institutional analysis: mapping which premises are logically contradictory vs which are compatible within a single framework. Can a single institutional order recognize both 'remonstrance preserves ancient constitution' AND 'remonstrance obstructs necessary fiscal reform' without internal contradiction?",
+      "impact": "If foreclosure: reading_relations to crown_reading should be 'forecloses'. If coexistence: 'coexists_with'. If influence: 'influences'. Current authoring assumes 'coexists_with' (different institutional parties holding incompatible views); this omega tests whether the frameworks actually are mutually exclusive or merely politically opposed.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Kernel contest: do magistrate and crown readings foreclose each other logically?"
+    },
+    {
+      "id": "parlement_coalition_dynamics",
+      "question": "To what degree does the magistrate reading's extraction mechanism depend on coordinated action across multiple parlements, versus extraction that a single parlement could exercise independently?",
+      "resolution_mechanism": "Historical analysis of resistance episodes: measuring effectiveness of individual parlement remonstrances vs coordinated multi-parlement campaigns (1770s Maupeou crisis, 1787-88 pre-Revolution). Identifying threshold for coalition critical mass.",
+      "impact": "If coalition-dependent: powerless agents benefit from fragmentation (extraction weakens when magistrates cannot coordinate). Current coal_presence triggers organized power status for the collective perspective; this omega measures actual coordination cost and sustainability. If single-parlement extraction is significant, the 'organized' perspective should be weighted higher and therapeutic omega added.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Coalition dependency in magistrate extraction mechanism"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "remo_mag_extract_1650"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.52,
+      "id_override": "remo_mag_extract_1690"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.61,
+      "id_override": "remo_mag_extract_1750"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 140,
+      "value": 0.58,
+      "id_override": "remo_mag_extract_1790"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32,
+      "id_override": "remo_mag_theater_1650"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 40,
+      "value": 0.4,
+      "id_override": "remo_mag_theater_1690"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.52,
+      "id_override": "remo_mag_theater_1750"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 140,
+      "value": 0.48,
+      "id_override": "remo_mag_theater_1790"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45,
+      "id_override": "remo_mag_suppression_1650"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.68,
+      "id_override": "remo_mag_suppression_1750"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 140,
+      "value": 0.62,
+      "id_override": "remo_mag_suppression_1790"
+    }
+  ],
+  "interval": {
+    "start": 1650,
+    "end": 1789
+  },
+  "commentary": {
+    "narrative_context": "The magistrate reading of remonstrance authority constructs the Parlements of France as constitutional guardians of 'ancient liberties' against arbitrary royal innovation in fiscal, judicial, and administrative domains. From the magistrate institutional perspective, remonstrance represents a genuine coordination mechanism: the magistracy preserves fundamental constitutional order by requiring the crown to justify new edicts against established law and precedent. This reading grounds itself in a claimed genealogy connecting Parlement authority to medieval assemblies and foundational charters, presenting magistrate veto power as immutable constitutional duty rather than institutional privilege. However, the structural data reveals a tangled hybrid: the remonstrance authority does coordinate genuine constitutional constraint (preventing wholly arbitrary royal action), but it simultaneously extracts through systematic obstruction of fiscal reforms that would burden the magistrate and noble tax-exempt classes while constraining reforms that would expand the common tax base. The magistracy's doctrine of ancient liberty becomes a mechanism for preserving fiscal privilege while delegitimizing crown administrative rationalization as 'arbitrary innovation.' The measurements track the constraint's evolution from 1650–1789: extractiveness rises during the centralizing reigns of Louis XIV and Louis XV (0.35 → 0.61) as royal fiscal pressure increases and magistrate obstruction becomes more organized and selective; theater ratio rises as the constitutional doctrine becomes increasingly performative (crown overrides via lit de justice, magistracy remonstrates and delays but ultimately yields, the cycle repeats); suppression peaks at 1750 (0.68) when magistrate-coordinated resistance is highest (Maupeou crisis looms), then slightly declines by 1789 (0.62) as Revolutionary transformation reshapes the entire institutional framework. The magistrate reading is one reading of the 'remonstrance_authority' kernel—a contested commitment that the crown reading interprets as aristocratic obstruction rather than constitutional preservation.",
+    "key_agents": [
+      "Parlementary Magistracy: Primary beneficiary (institutional/arbitrage) — extracts through fiscal exemptions and veto leverage; experiences remonstrance as constitutional coordination",
+      "Tax-Exempt Nobility: Aligned beneficiary (powerful/mobile) — benefits from magistrate obstruction of fiscal reforms that would burden noble estates",
+      "Crown Authority: Simultaneously beneficiary and victim (powerful/mobile) — seeks fiscal and administrative reform but constrained by remonstrance delays; can override but at political cost",
+      "Commoner Tax Base: Primary victim (powerless/trapped) — bears fiscal burden while locked out of remonstrance proceedings; extraction rises as magistrates obstruct commoner-focused reforms",
+      "Parlement Collective (Organized): Organized resistance formation (organized/constrained) — when magistrates coordinate across parlements, remonstrance becomes collective extraction mechanism with escalating demands",
+      "Ancient Liberty Doctrine: Institutional practice (institutional/constrained) — the remonstrance ritual persists through inertia; increasingly performative as theatre_ratio rises"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The magistrate reading constructs remonstrance as coordination (preserving constitutional order), but the structural outcomes are asymmetric: magistrates extract through veto leverage and fiscal privilege preservation while commoners bear increased taxation. The extractiveness trajectory (0.35 → 0.61 → 0.58) reflects intensifying magistrate obstruction during the 18th century as crown fiscal pressure mounted, peaking when organized parlement resistance was highest (1750, 0.61), then slightly declining by 1789 as institutional collapse approached. This is not maximal Snare extraction (0.72+) because genuine constitutional coordination does occur—the crown cannot act arbitrarily, and remonstrance does constrain some reforms—but the coordination mechanism is asymmetrically distributed: magistrates benefit from the veto mechanism, commoners do not. Suppression (0.62): High. Barriers to circumventing the constraint include the doctrine's deep entrenchment in French legal tradition, magistrate institutional cohesion, and the enormous political cost of overriding the Parlements. However, suppression is not maximal (0.70+) because the crown does possess override mechanisms (lit de justice) and can force compliance through extreme measures (Maupeou reforms of 1768, exile and reformation of magistrates). Theater ratio (0.48): Moderate-low. In the magistrate reading's own framework, remonstrance is substantive constitutional action—the magistracy genuinely believes it is preserving ancient law, and the doctrine has real institutional force. Theater is lower than in a pure Snare because the magistracy's commitment to the doctrine is non-instrumental (they are not cynically performing; they genuinely believe). However, theater rises from 0.32 (1650) to 0.52 (1750) as the institutional reality increasingly diverges from the doctrine: the crown can override via lit de justice, magistrate obstruction delays but does not prevent reform, and the practice becomes increasingly ritualized. The slight decline to 0.48 by 1789 reflects the accelerating institutional collapse—the ritual breaks down as revolutionary pressure overwhelms the old constitutional framework.",
+    "perspectival_gap": "The magistrate reading generates multiple competing classifications from different structural positions. The commoner tax base sees pure extraction (Snare)—trapped with no voice in remonstrance and bearing increasing fiscal burden. The magistracy sees coordination (Rope)—preserving constitutional order through legitimate veto. The crown sees mixed extraction and coordination (Tangled Rope)—constrained by remonstrance but also coordinated with the magistracy on fundamental order. The organized collective of magistrates sees entrenched extraction (Tangled Rope with rising specificity)—when coordinated across parlements, they exercise organized veto power while maintaining the doctrine's legitimacy claim. The ancient liberty doctrine itself, viewed from the institutional practice perspective, appears degraded and performative (Piton)—the ritual persists through inertia as the crown increasingly overrides. The analytical observer risks seeing remonstrance as an immutable constitutional principle (Mountain)—ancient law constraining all legitimate authority—but the structural data reveals this as a false summit: the magistracy constructed the doctrine to preserve privilege during a period of declining feudal authority and rising fiscal pressure. The perspectival gap reveals that remonstrance's classification depends entirely on whether one accepts the magistrate reading's genealogy of ancient liberty or recognizes it as a doctrinal construction.",
+    "directionality_logic": "The magistrate reading's directionality computation depends on whether the magistracy is treated as genuine beneficiary (coordination of constitutional order) or as net extraction beneficiary (fiscal privilege + veto leverage). The Tangled Rope classification reflects both roles simultaneously: magistrates do coordinate genuine constitutional function (preventing wholly arbitrary royal action), but they also extract asymmetric benefit (fiscal exemptions + veto power) that falls on commoners. The crown's d value (0.48, moderate target) reflects its mixed position: it benefits from some remonstrance coordination (constraining overmighty magistrates would require greater coercive expenditure without the doctrine's legitimacy) but also bears costs (fiscal reform obstruction, administrative rationalization delays). The commoner tax base d value would be 0.95+ (near-total target)—trapped powerless agent with no exit and bearing full extraction. The magistracy's d value reflects beneficiary status with arbitrage exit: institutional power (can accommodate or resist) and arbitrage options (cooperate with crown or escalate resistance). The piton perspective's d derives from the practice's institutional inertia—the doctrine persists not because it extracts maximum value but because alternatives haven't replaced it.",
+    "mandatrophy_analysis": "The magistrate reading resolves its own mandatrophy by locating the measurement ambiguity at the kernel level. The question is not 'what type is remonstrance?' but 'which reading of the contested kernel (remonstrance_authority) is accurate?' The magistrate reading treats ancient liberty as a genuine constitutional constraint; the crown reading treats it as aristocratic obstruction. These readings coexist because they rest on different historiographical claims about the genealogy of remonstrance doctrine. The Tangled Rope classification (rather than pure Rope or pure Snare) reflects the accurate hybrid: remonstrance does coordinate genuine constitutional function, and it does extract asymmetric benefit. The mandatrophy is resolved by mapping the perspectival gap to the kernel contest: if the magistrate genealogy is correct (ancient liberties are genuine), then remonstrance is primarily coordination with secondary extraction (higher Rope weight). If the crown genealogy is correct (remonstrance is constructed privilege), then remonstrance is primarily extraction disguised as coordination (higher Snare weight). The magistrate reading stands at the Tangled Rope midpoint precisely because both genealogies have some truth: the magistracy did inherit genuine medieval assembly precedents, but they also constructed doctrinal extensions to preserve their privilege during the centralizing period. The constraint cannot collapse to pure Rope or pure Snare without resolving the contested historiography—which the magistrate reading deliberately leaves as omega variables.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel 'remonstrance_authority' (kernel_id: remonstrance_authority). The reading instantiated here is the 'magistrate_reading'—the magistracy's own construction of remonstrance as ancient liberty preservation against arbitrary royal innovation. The sibling reading is the 'crown_reading' (separate constraint file: remonstrance_authority__crown_reading), which constructs remonstrance as aristocratic obstruction of rational fiscal and administrative reform. These two readings cannot both be fully accurate—they rest on fundamentally different historiographical claims about the genealogy of Parlement authority. The magistrate reading asserts that Parlements inherited genuine medieval assembly powers and are preserving ancient constitutional order. The crown reading asserts that Parlements are constructions of the centralizing monarchy (established as judicial bodies, not legislative assemblies) that have inappropriately claimed veto authority as a power grab during periods of declining feudal nobility. The readings coexist as live institutional positions held by magistrates and crown officials throughout the 1650–1789 period; each party has substantial power and cannot be dismissed by the other. The structural delta between readings is significant: under the magistrate reading, Parlements are beneficiaries of a legitimate coordination mechanism (which generates Rope or Tangled Rope classifications); under the crown reading, Parlements are extractive actors using doctrinal cover to obstruct necessary reform (which generates Snare classifications). The ε values differ correspondingly: magistrate reading (this constraint) ε=0.58 reflects mixed coordination-extraction; crown reading ε=0.72+ would reflect extraction as primary mechanism."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "crown_fiscal_authority",
+      "lit_de_justice_override_mechanism",
+      "maupeou_reforms_institutional_dissolution"
+    ],
+    "dual_formulation_note": "The remonstrance_authority kernel decomposes into two competing readings with significantly different ε values: magistrate_reading (ε=0.58, Tangled Rope) treats remonstrance as genuine constitutional coordination with asymmetric extraction benefiting magistrates; crown_reading (ε=0.72+, Snare) treats remonstrance as constructed aristocratic extraction disguised as constitutional duty. Both readings rest on coherent historiographical claims; neither can be ruled out a priori. The measurements support both readings at different historical moments: magistrate reading is more accurate 1650–1715 (remonstrance genuinely constrains arbitrary royal action); crown reading becomes more accurate 1715–1789 (remonstrance becomes increasingly performative as crown overrides via lit de justice and magistrate obstruction becomes coordinated rent-seeking rather than constitutional constraint). The two constraint files are linked via network.affects_constraints and should be read together as competing interpretations of the same institutional phenomenon. A complete analysis requires understanding both readings and their historical conditions of validity."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "remonstrance_authority__crown_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "remonstrance_preserves_ancient_liberties",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "arbitrary_royal_innovation_threatens_constitutional_order",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "ancient_constitutional_order_preservation",
+    "drift_state": {
+      "moment": "contemporary_revolutionary_transformation_1789",
+      "direction": "codification_collapse",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  }
+}

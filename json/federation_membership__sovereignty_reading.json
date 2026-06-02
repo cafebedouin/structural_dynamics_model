@@ -1,0 +1,240 @@
+{
+  "header": {
+    "constraint_id": "federation_membership__sovereignty_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "fed_sov",
+    "story_uid": "23a1d1ca-8f72-4771-b2bd-b0b6a18951db",
+    "created_at": "2026-02-26T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Federation Membership as Conditional Treaty (Sovereignty Reading)",
+    "topic_domain": "political_economy/federalism/migration_policy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "national_labor_market_protectors",
+      "border_control_authorities"
+    ],
+    "victims": [
+      "mobile_citizens",
+      "transnational_workers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "continental",
+      "label": "The Mobile Citizen (Sovereignty Reading)",
+      "comment": "PERSPECTIVE 1: MOBILE CITIZEN (SNARE) — Citizens whose livelihoods depend on cross-border mobility experience the federation's border control regime as pure extraction. The suppression is structural: visa delays, work permit restrictions, residency penalties. Exit is unavailable — the citizen cannot choose not to be federated; withdrawal requires renouncing citizenship entirely. The coordination function (free movement as policy) is negotiable, not foundational, making extraction the primary structural feature from this perspective."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "National Labor Market Protectors (Sovereignty Reading)",
+      "comment": "PERSPECTIVE 2: NATIONAL LABOR MARKET PROTECTORS (ROPE) — State actors and domestic labor constituencies perceive the federation as a coordination mechanism solving a genuine collective action problem: preventing wage/employment competition across borders while maintaining federal institutional benefits. Border control is experienced as the legitimate expression of national sovereignty — retained authority to manage labor markets. Low suppression from this perspective because the mechanism is perceived as justified, not coercive."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Regional Trade Bodies (Sovereignty Reading)",
+      "comment": "PERSPECTIVE 3: REGIONAL TRADE BODIES (TANGLED ROPE) — Interstate bodies experience the tension directly: they coordinate trade, investment, and infrastructure (genuine coordination function) while simultaneously enforcing border barriers that extract from mobile citizens and restrict labor arbitrage (asymmetric extraction). High power but constrained exit — members are locked into bilateral dependencies. The constraint both enables and restricts their operation."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Free Movement Advocacy Coalition (Sovereignty Reading)",
+      "comment": "PERSPECTIVE 4: FREE MOVEMENT ADVOCACY COALITION (SCAFFOLD) — Organized actors (migration advocates, diaspora networks, transnational labor unions) see the mobility restriction as temporary institutional scaffolding: a transitional phase where states retain border authority pending convergence of wage levels and labor standards that would eliminate demand for protection. Scaffold derives from the coalition's perception of a sunset mechanism — as inequality decreases, the sovereignty-based restriction loses legitimacy. Constrained by the incumbent regulatory regime; they have agency and see a clear transition pathway."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Legacy Border Administration (Sovereignty Reading)",
+      "comment": "PERSPECTIVE 5: LEGACY BORDER ADMINISTRATION (PITON) — The border control apparatus itself persists largely through institutional inertia. Modern travel technology, digital identity systems, and EU-style open borders demonstrate that the enforcement infrastructure is theater — maintained because dismantling existing state capacity is politically costly, not because the border control function is optimized. The institutional routine persists despite degraded functionality. Theater ratio reflects the gap between stated border security outcomes and actual enforcement capacity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Sovereignty Reading)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — The civilizational view recognizes the structure as a genuine dilemma: free movement coordination (real function) vs. national labor market protection (real extraction asymmetry). Both functions are operant. The constraint is neither pure coordination nor pure extraction but genuinely hybrid. From this reading, the sovereignty principle (retained border authority as non-negotiable) creates the asymmetry — subordinating mobile citizens' interests to national constituencies' protection."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "sovereignty_vs_integration_empirical",
+      "question": "Is national border authority empirically necessary for labor market stability, or do alternative coordination mechanisms (wage/benefit harmonization, portable entitlements, skills recognition treaties) achieve equivalent outcomes with lower extraction?",
+      "resolution_mechanism": "Comparative analysis of labor market volatility, wage inequality, and employment stability in open-border regimes (EU post-Schengen) vs. restricted-border regimes; measurement of welfare outcomes for mobile citizens under each regime",
+      "impact": "If alternative mechanisms suffice: sovereignty reading's suppression (0.62) is unjustified; constraint reclassifies toward rope or snare depending on whether beneficiaries genuinely need the borders. If borders are empirically necessary: extraction is justified coordination cost; constraint remains tangled_rope but with lower perceived unfairness.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether national border authority is empirically necessary for labor market stability"
+    },
+    {
+      "id": "citizenship_exit_feasibility",
+      "question": "Can a mobile citizen genuinely exit the constraint by renouncing citizenship, or does the citizenship/non-citizenship boundary itself carry extraction (visa requirements, deportation risk, exclusion from services)?",
+      "resolution_mechanism": "Legal and historical analysis of statelessness costs, alternative-citizenship acquisition timelines, service exclusions for non-citizens; comparison with trapped vs. constrained exit costs",
+      "impact": "If citizenship exit is feasible at reasonable cost: exit_options should shift from trapped to constrained, changing mobile_citizens classification from snare to tangled_rope. If citizenship boundary itself extracts: confirms trapped classification and snare structure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether citizenship exit is feasible for mobile citizens"
+    },
+    {
+      "id": "reading_decomposition_kernel_choice",
+      "question": "This constraint instantiates the SOVEREIGNTY READING of the federation_membership kernel. The sibling INTEGRATION READING would subordinate border authority to supranational mobility rights and declare extraction the primary structural feature. Are these readings genuinely coexistent (live positions held by different parties) or does one reading logically foreclose the other within a single consistent framework?",
+      "resolution_mechanism": "Historical and institutional analysis: (a) Do states holding the sovereignty reading recognize the integration reading as a legitimate alternative that could be adopted by different member states, or is it treated as logically incompatible with federation membership itself? (b) Can a single federal framework hold both readings (e.g., EU opt-outs where some members retain border authority)? (c) Do the foundational axioms of each reading directly contradict or merely prioritize differently?",
+      "impact": "If readings coexist: both remain live policy options; the constraint family includes two separate stories with different ε values and classifications. If one forecloses the other: the reading relationship should shift from coexists_with to forecloses; the kernel is under resolution pressure, not under stable contestation.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether sovereignty and integration readings are coexistent or mutually foreclosing"
+    },
+    {
+      "id": "false_summit_natural_borders",
+      "question": "Does the sovereignty reading naturalize borders as inevitable features of the federal compact, or are they treated as chosen policy? If naturalized, what hidden beneficiaries might be adopting 'natural border necessity' as a cover story for labor market protection extraction?",
+      "resolution_mechanism": "Textual analysis of federal founding documents and sovereignty readings: are borders presented as natural consequences of federalism or as explicit treaty provisions? Historical comparison: how did similar federations treat borders at their founding vs. current periods?",
+      "impact": "If borders are naturalized: false summit candidate — the constraint may classify as mountain (natural law) from sovereignty perspective but snare from analytical perspective. Engine FSM detection would flag. If borders are presented as chosen: no false summit; the tangled_rope classification stands.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether borders are naturalized or treated as chosen policy in sovereignty reading"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Federation membership presents a structural dilemma: the federal compact requires coordination of policy across member states (genuine collective action problem — solving free-rider dynamics, harmonizing standards, enabling trade), yet the sovereignty reading subordinates transnational mobility to national labor market protection. This constraint instantiates ONE reading of the contested federation_membership kernel. The sovereignty reading treats national authority over borders as non-negotiable, derives legitimacy from state retention of labor market control, and perceives free movement as a negotiable policy concession rather than a foundational right. The competing integration reading (a separate constraint story) subordinates border authority to supranational mobility rights and identifies extraction as the primary structural feature. This story covers ONLY the sovereignty reading: the mechanism by which border control extracts from mobile citizens while enabling national labor market coordination.",
+    "key_agents": [
+      "National Labor Market Protectors: Beneficiary (institutional/arbitrage) — domestic constituencies and state actors benefit from border control that prevents wage/employment competition; perceive the mechanism as legitimate sovereignty expression",
+      "Mobile Citizens: Victim (powerless/trapped) — workers whose livelihoods depend on cross-border mobility face visa delays, work permit restrictions, residency penalties; cannot exit the federal framework without renouncing citizenship entirely",
+      "Border Control Authorities: Beneficiary (institutional/arbitrage) — state agencies retain administrative authority, resources, and legitimacy through border enforcement; experience the constraint as defining their mandate",
+      "Free Movement Advocacy Coalition: Organized (organized/constrained) — transnational labor unions, migration advocates, diaspora networks perceive the restriction as temporary scaffolding with a sunset mechanism",
+      "Regional Trade Bodies: Powerful but constrained (powerful/constrained) — interstate institutions coordinate across the constraint; experience both genuine coordination function and asymmetric extraction simultaneously",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — recognizes the structural dilemma: real coordination function + real extraction asymmetry = genuine tangled_rope"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The sovereignty reading creates asymmetric extraction from mobile citizens (visa delays, work permit delays, employment discrimination) that exceeds the coordination function's legitimate cost. However, the constraint is not pure extraction because it does solve a real collective action problem: preventing downward wage spirals and labor market race-to-bottom dynamics. The measurement trajectory (0.35 → 0.48 → 0.58) reflects accumulating extraction as border enforcement capacity has intensified and mobility pressure has increased, while the coordination benefit has remained stable. Suppression (0.62): High. Mobile citizens face structural barriers: visa/work permit administrative delay (2-12 months), residency restrictions, employment discrimination, deportation risk, exclusion from social entitlements during transition periods. These are not primarily economic barriers (which would be constrained) but structural legal barriers (which approach trapped). The measurement trajectory (0.42 → 0.52 → 0.62) reflects hardening border enforcement, particularly as migration pressure increased. Theater ratio (0.48): Moderate. The sovereignty reading includes performative elements — border security rhetoric exceeding actual enforcement capacity, ceremonial sovereignty affirmations — but the border control function is not primarily theatrical. Unlike legacy border administration (piton perspective), the sovereignty reading's enforcement apparatus is actively legitimated and regularly deployed. The moderate theater ratio reflects that the suppression mechanism is partly performative narrative (sovereignty rhetoric) and partly operational (actual mobility restrictions), without either dominating.",
+    "perspectival_gap": "The sovereignty reading naturalizes border authority in ways the integration reading explicitly rejects. A beneficiary perceives rope (coordination); a victim perceives snare (extraction); the analytical observer recognizes both structures coexist in the same institutional mechanism. The gap is not merely about disagreement on values but about whether the border mechanism's legitimacy is foundational (sovereignty reading) or instrumental (integration reading). This is the kernel-level disagreement that generates separate constraint stories with different ε values, different beneficiary/victim structures, and different primary types.",
+    "directionality_logic": "Directionality derivation for the sovereignty reading: national labor market protectors benefit from border control and have low cost to participate (institutional actors with arbitrage options can choose enforcement intensity) → d ≈ 0.10 → f(d) ≈ -0.05 → low/negative χ. Mobile citizens bear full cost and cannot exit (trapped boundary crossing) → d ≈ 0.92 → f(d) ≈ 1.32 → high χ. The regional trade bodies occupy middle ground: they benefit from federal coordination (d ≈ 0.35) but are constrained by member dependencies → χ ≈ 0.50, producing tangled_rope rather than rope. The analytical observer (d ≈ 0.72, canonical analytical directionality) experiences χ ≈ 0.80 (scope modifier 1.1 applied), correctly classifying the constraint as tangled_rope.",
+    "mandatrophy_analysis": "SOVEREIGNTY READING MANDATROPHY: The constraint avoids mandatrophy by recognizing the genuine coordination function — preventing labor market race-to-bottom, enabling wage/benefit stability, reducing long-term volatility. The extraction is real (asymmetric burden on mobile citizens) but not the only structural feature. The tangled_rope classification captures the simultaneity: the mechanism both coordinates labor supply across borders AND extracts from those whose livelihoods depend on mobility. The beneficiaries' perception of legitimate sovereignty (rope from their perspective) does not eliminate the victims' experience of extraction (snare from their perspective). The mandatrophy is resolved by acknowledging that the constraint is properly classified as tangled_rope FROM the analytical frame — it has both real coordination and real extraction, and neither feature eliminates the other.",
+    "kernel_context": "This constraint instantiates the SOVEREIGNTY READING of the federation_membership kernel. The kernel is formalized (expressed in founding treaties), grounded in extraction authority (states benefit from border control legitimacy), and shows substantial interpretation-layer presence (legal scholars, political actors, state agencies continuously reinterpret what sovereignty retention entails). The sibling INTEGRATION READING subordinates border authority to supranational mobility rights, treating borders as contingent policy rather than foundational sovereignty expression. The readings coexist across different member states (some favor sovereignty retention, others favor integration) but represent genuinely incompatible foundational axioms about what federation membership entails. The reference frame for the sovereignty reading is 'retained_national_authority_over_labor_markets'; the reference frame for the integration reading is 'supranational_mobility_rights_precedence'. The measurement trajectory (extractiveness rising from 0.35 to 0.58, suppression rising from 0.42 to 0.62) reflects authority_erosion in the sovereignty reading: as migration pressure has increased and integration advocates have gained institutional voice, the sovereignty reading's legitimacy has declined (acknowledged: increasingly contested in public discourse). The drift is substantial but not severe — sovereignty authority has not collapsed, merely eroded."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "federation_membership__integration_reading",
+      "labor_mobility_supply_shock",
+      "wage_convergence_pressure"
+    ],
+    "dual_formulation_note": "Federation membership decomposes into two structurally distinct constraints: (1) sovereignty_reading (ε=0.58, tangled_rope) treating border authority as foundational and mobility as negotiable policy; (2) integration_reading (ε=0.42, tangled_rope estimated, but check separately) treating mobility rights as foundational and border authority as contingent. The epsilon values differ because the observables differ: sovereignty reading measures extraction FROM mobile citizens TO labor market protectors; integration reading measures extraction FROM border authorities TO mobile citizens. These are inverse directionality framings of the same institutional mechanism. Both readings are live policy positions held by different member states (EU member states split on Schengen participation, migration policy, freedom of movement). Link the two stories via network.affects_constraints to enable the engine to compute cross-reading contamination and recognize the kernel-level contestation."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "federation_membership__integration_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "national_labor_market_protection_foundational",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      },
+      {
+        "atom": "border_authority_non_negotiable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ],
+    "reference_frame": "retained_national_authority_over_labor_markets",
+    "drift_state": {
+      "moment": "contemporary_migration_pressure_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "federation_membership"
+    ]
+  }
+}

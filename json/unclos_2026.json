@@ -2,28 +2,30 @@
   "header": {
     "constraint_id": "unclos_2026",
     "version": "1.0",
-    "generated_date": "2026-02-26",
+    "generated_date": "2026-02-27",
     "status": "ACTIVE",
-    "measurement_id_prefix": "unclos"
+    "measurement_id_prefix": "unclos",
+    "story_uid": "87b409ca-e823-468a-bf60-e567cfabf2ab",
+    "created_at": "2026-02-27T14:32:18Z"
   },
   "base_properties": {
-    "extractiveness": 0.52,
-    "suppression": 0.58,
-    "theater_ratio": 0.65,
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
     "claimed_type": "tangled_rope",
     "human_readable": "UN Convention on the Law of the Sea (2026 Context)",
     "topic_domain": "legal/geopolitical/environmental",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "developed_coastal_states",
+      "developed_maritime_states",
       "industrial_fishing_fleets",
-      "maritime_commerce_networks"
+      "multinational_resource_companies"
     ],
     "victims": [
-      "developing_coastal_states",
       "small_island_developing_states",
-      "marine_ecosystem_health",
-      "subsistence_fishing_communities"
+      "indigenous_ocean_communities",
+      "global_fish_stocks",
+      "deep_sea_mining_adjacent_ecosystems"
     ]
   },
   "perspectives": [
@@ -32,9 +34,9 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "local",
-      "label": "The Subsistence Fisher",
-      "comment": "PERSPECTIVE 1: SUBSISTENCE FISHING COMMUNITIES (SNARE) \u2014 Trapped within EEZ boundaries they do not control. Foreign industrial fleets deplete stocks; no mechanism to exit or compensate. UNCLOS enforcement mechanisms operate against them (illegal fishing prosecutions) while lacking capacity to constrain industrial extraction. Maximum experienced extraction with zero exit options. The constraint appears as pure extraction from this position."
+      "spatial_scope": "global",
+      "label": "Small Island Developing States (SIDS)",
+      "comment": "PERSPECTIVE 1: SIDS (SNARE) — Trapped within UNCLOS zones without capacity to enforce claims against industrial fleets or developed states. Nominal 200 nm EEZ provides no functional protection; fish stocks collapse before SIDS can build enforcement capacity. Maximum extraction with no exit option."
     },
     {
       "classification_type": "snare",
@@ -42,8 +44,8 @@
       "time_horizon": "generational",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "Marine Ecosystem Health (Collective)",
-      "comment": "PERSPECTIVE 2: MARINE ECOSYSTEM HEALTH (SNARE) \u2014 Non-agent abstract collective bearing costs of unsustainable extraction. UNCLOS article 192 declares duty to protect the marine environment, but this duty is systematically undermined by prior extractive rights (fishing, shipping, mining). The ecosystem cannot exit or organize. Extraction mechanism is structural subordination of environmental protection to economic activity. Theater ratio high because UNCLOS includes environmental language that appears protective but lacks enforcement teeth against state sovereignty."
+      "label": "Indigenous Ocean Communities",
+      "comment": "PERSPECTIVE 2: INDIGENOUS COMMUNITIES (SNARE) — Structural exclusion from decision-making despite high-seas commons traditionally governed through community norms. UNCLOS institutionalizes state sovereignty over zones where communities historically harvested resources. Generational extraction through dispossession."
     },
     {
       "classification_type": "tangled_rope",
@@ -51,8 +53,8 @@
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "regional",
-      "label": "Developing Coastal State",
-      "comment": "PERSPECTIVE 3: DEVELOPING COASTAL STATE (TANGLED ROPE) \u2014 Constrained by lack of enforcement capacity and unequal technological/military power. UNCLOS provides coordination function: legitimate claim to 200nm EEZ and seabed resources. But asymmetric enforcement: wealthy states monitor and police their EEZs; developing states cannot. Extraction runs toward developed states through regulatory capture and unequal technology access. Mixed experience: real resource rights (coordination) offset by enforcement asymmetry (extraction). Exit options are constrained \u2014 cannot unilaterally exit UNCLOS without severe diplomatic cost; cannot effectively enforce own EEZ."
+      "label": "Developing Coastal States (Non-SIDS)",
+      "comment": "PERSPECTIVE 3: DEVELOPING COASTAL STATES (TANGLED ROPE) — Benefit from nominal EEZ control and resource claims (coordination function), but lack enforcement capacity against industrial fleets. High compliance costs (monitoring, reporting, capacity-building) with limited revenue capture. Constrained exit — cannot withdraw from UNCLOS without geopolitical cost."
     },
     {
       "classification_type": "rope",
@@ -60,35 +62,35 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Developed Coastal State (High-Tech Enforcement)",
-      "comment": "PERSPECTIVE 4: DEVELOPED COASTAL STATE WITH ENFORCEMENT CAPACITY (ROPE) \u2014 Experiences UNCLOS primarily as coordination mechanism. Framework grants legitimate claims and recognition of enforcement rights. Possesses technological and military capacity to police EEZ and extraterritorial interests. Arbitrage options available: can operate under UNCLOS, negotiate bilateral exemptions, or exercise soft power over interpretations. Net beneficiary of the coordination function. Low experienced extraction because power asymmetry flows toward this agent."
+      "label": "Developed Maritime States",
+      "comment": "PERSPECTIVE 4: DEVELOPED MARITIME STATES (ROPE) — Primary beneficiaries. Possess enforcement capacity, flag-state control over merchant fleets, deep-sea resource access, and technological dominance. Experience UNCLOS as enabling coordination for global maritime commerce (high-seas freedom, predictable EEZ boundaries) while capturing asymmetric benefits. Can arbitrage between UNCLOS compliance and flag-state registry shopping."
     },
     {
       "classification_type": "rope",
-      "agent_power": "institutional",
+      "agent_power": "powerful",
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Industrial Fishing Fleet (Flag State Advantage)",
-      "comment": "PERSPECTIVE 5: INDUSTRIAL FISHING FLEET / MARITIME COMMERCE (ROPE) \u2014 Operates under flag state sovereignty (UNCLOS article 94). Experiences framework as enabling coordination: defines common rules for high seas access, reduces uncertainty in maritime commerce, provides dispute mechanisms. Flag state arbitrage: transfer registry to favorable jurisdiction for lower enforcement. Effective extraction from this position is low \u2014 the constraint provides more benefit (predictable rules, access guarantees) than cost (moderate compliance requirements). Primary beneficiary alongside developed coastal states."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "Environmental Coalition (BBNJ Integration)",
-      "comment": "PERSPECTIVE 6: ENVIRONMENTAL COALITION / CONSERVATION ACTORS (TANGLED ROPE) \u2014 The 2024 adoption of BBNJ (Agreement on Biodiversity Beyond National Jurisdiction) added binding conservation mechanisms to UNCLOS framework. Organized actors (IUCN, WWF, island nations, coastal communities) saw this as sunset modification \u2014 creating mechanism to constrain extractive fishing rights through marine protected areas. But extraction persists: BBNJ enforcement is weak, industrial fishing interests have carved out exemptions, and compliance remains voluntary. Mixed experience of coordination (new framework) and asymmetric enforcement (extractive interests protected). Exit options constrained: must work within UNCLOS/BBNJ system; cannot unilaterally create ocean governance. Theater moderate-high: BBNJ creates appearance of strengthened protection but exemptions and enforcement gaps undermine effectiveness."
+      "label": "Industrial Fishing and Resource Extraction Corporations",
+      "comment": "PERSPECTIVE 5: INDUSTRIAL EXTRACTION CORPORATIONS (ROPE) — Operate across maritime zones using flag-state arbitrage, IUU (illegal, unreported, unregulated) fishing, and technical non-compliance. Access open-access fish stocks and mineral deposits before regulatory capacity catches up. Experience UNCLOS as coordination mechanism for market access with minimal enforcement cost."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
-      "time_horizon": "civilizational",
-      "exit_options": "arbitrage",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "International Seabed Authority (Institutional Inertia)",
-      "comment": "PERSPECTIVE 7: INTERNATIONAL SEABED AUTHORITY (PITON) \u2014 Established by UNCLOS Part XI (1994 mod.) to regulate deep-sea mining. In 2026, ISA remains largely performative: approved exploitation regulations exist but deep-sea mining has not begun at scale. The ISA maintains procedural theater (meetings, regulatory drafting, environmental review protocols) without functional impact on extraction. As deep-sea mining interest accelerates (rare earth demands), ISA will either enforce constraints (shifting to Rope/Tangled Rope) or remain a ceremonial body (remaining Piton). Currently exhibits theater ratio >0.70: apparatus of regulation without proportional enforcement capacity."
+      "label": "International Seabed Authority (ISA)",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL SEABED AUTHORITY (PITON) — Created by UNCLOS to regulate deep-sea mineral extraction in the Area (commons beyond continental shelves). Functionally degraded by state capture, industry pressure, and lack of enforcement resources. Theater-heavy meetings produce licensing frameworks that lack real verification capacity. Persists through institutional inertia despite low functional authority over actual mining operations."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Regional Fisheries Management Organizations (RFMOs)",
+      "comment": "PERSPECTIVE 7: RFMO COALITION (SCAFFOLD) — Structured as temporary coordination overlays on UNCLOS (NAFO, CCAMLR, WCPFC). Display sunset logic in the 2026 context: electronic monitoring, blockchain catch documentation, and real-time satellite enforcement are creating alternatives to UNCLOS-mandated state-level reporting. Expected to supersede traditional UNCLOS compliance by ~2035 in major fishing zones."
     },
     {
       "classification_type": "mountain",
@@ -96,132 +98,236 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "Analytical Observer (False Summit Detection)",
-      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational timescale, the constraint appears as an immutable law: ocean commons fundamentally require coordination framework; no alternative exists. States cannot manage oceans without UNCLOS-like structure. However, this is a false summit. The 'immutability' is actually institutional path-dependency and great-power coordination to exclude alternatives (non-state ocean governance, indigenous maritime law, bioregional frameworks). The mountain classification reveals naturalization of a contingent legal-political choice."
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: CIVILIZATIONAL ANALYSIS / NATURAL LAW VIEW (MOUNTAIN) — From a universal timescale, ocean governance requires boundary-setting and dispute resolution that appear as natural/inevitable: dividing maritime space, allocating fishing rights, managing commons dilemmas. UNCLOS appears as the least-bad solution to inherent coordination problems. However, structural beneficiary data contradicts this naturalization — developed states designed UNCLOS to encode their advantages as permanent features."
     }
   ],
   "omegas": [
     {
-      "id": "enforcement_capacity_ceiling",
-      "question": "What is the structural limit of UNCLOS enforcement given global monitoring constraints and state sovereignty norms?",
-      "resolution_mechanism": "Empirical analysis of enforcement gap: tonnage of illegal fishing vs. prosecutions; deep-sea mining activities vs. ISA oversight; shipping emissions violations vs. detected violations. Comparison to enforcement models with higher monitoring (e.g., commodity supply chains with blockchain verification).",
-      "impact": "If enforcement ceiling is <30% of violations: constraint is primarily extractive (snare classification dominates). If ceiling >60%: constraint functions as intended coordination mechanism (rope/tangled rope). Current evidence suggests 15-25% ceiling.",
+      "id": "enforcement_capacity_asymmetry",
+      "question": "Is UNCLOS enforcement failure structural (no resources) or intentional (beneficial states block capacity-building)?",
+      "resolution_mechanism": "Historical analysis of ISA/ITLOS budget allocations, state compliance with monitoring requirements, and comparison with enforcement budgets in other international regimes (IAEA, WTO)",
+      "impact": "If structural/resource scarcity: reformable through funding (reduces snare classification for SIDS). If intentional underinvestment: reveals extraction mechanism and sustains snare classification.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Structural limit of UNCLOS enforcement capacity"
+      "description": "Whether enforcement failure is resource or intentional constraint"
     },
     {
-      "id": "bbnj_mechanism_effectiveness",
-      "question": "Do BBNJ marine protected areas (MPAs) actually constrain fishing extraction or function as theater masking continued extraction?",
-      "resolution_mechanism": "Longitudinal study of fish stock recovery in designated MPAs vs. open ocean; comparison of fishing pressure inside vs. outside MPAs; analysis of illegal fishing rates within MPAs; tracking of enforcement budget allocated to MPA monitoring vs. enforcement capability.",
-      "impact": "If MPAs reduce extraction by >40%: BBNJ represents genuine constraint on industrial fishing (Scaffold classification realistic). If <15%: MPAs are theater, and BBNJ is piton component (extractive interests persist). Current evidence (2026) suggests 20-30% reduction, indicating mixed efficacy.",
-      "confidence": "medium",
+      "id": "eez_nominal_vs_functional_control",
+      "question": "Does nominal EEZ ownership provide any actual control over fish stocks or mineral access to developing states, or is it purely ceremonial?",
+      "resolution_mechanism": "Empirical comparison: developing-state revenue from EEZ resources vs IUU fishing losses; time-series analysis of fish stock recovery in adequately-monitored vs under-monitored EEZs; satellite data on vessel compliance patterns",
+      "impact": "If functional: UNCLOS provides genuine coordination benefit (raises rope/tangled_rope classification). If nominal: EEZ is pure theater masking extraction (sustains snare).",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether BBNJ MPAs constrain fishing or function as theater"
+      "description": "Functional control: EEZ protection in developing states"
     },
     {
-      "id": "alternative_governance_feasibility",
-      "question": "Could bioregional ocean governance or blockchain-verified peer enforcement replace UNCLOS-based state sovereignty model?",
-      "resolution_mechanism": "Pilot programs in specific ocean basins (Antarctic Peninsula, North Atlantic, Southeast Asian EEZ); comparison of enforcement costs and effectiveness. Assessment of whether non-state actors (indigenous communities, port authorities, shipping networks) can coordinate without state-level framework.",
-      "impact": "If alternatives prove feasible: UNCLOS is revealed as contingent institutional choice, not natural law (mountain classification false). If not: state sovereignty framework may be closest possible to natural law given human coordination constraints (mountain classification partially justified). Current evidence suggests partial feasibility \u2014 some communities achieve >50% enforcement through peer mechanisms.",
-      "confidence": "low",
+      "id": "natural_law_vs_contingent_design",
+      "question": "Are UNCLOS boundary structures (territorial seas, EEZ widths, continental shelf rules) immutable features of ocean governance or contingent design choices that benefited state actors present in 1982?",
+      "resolution_mechanism": "Historical analysis of UNCLOS negotiation records; counterfactual exploration of alternative boundary regimes (narrow EEZs, expanded commons, Indigenous co-management); evidence from pre-1982 maritime disputes and customary law traditions",
+      "impact": "If natural law: mountain classification justified. If contingent design: reveals false summit and reclassifies as tangled_rope (beneficiary-designed system naturalizing extraction).",
+      "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Feasibility of non-state ocean governance alternatives"
+      "description": "Natural law vs contingent design of UNCLOS structures"
     },
     {
-      "id": "deep_sea_mining_extraction_threshold",
-      "question": "At what scale of deep-sea mining does ISA shift from piton (theater) to snare (active extraction enforcement)?",
-      "resolution_mechanism": "Tracking of approved mining contracts, mineral extraction volume, environmental impact assessments, and ISA enforcement actions. Determination of transition point where ISA bureaucracy becomes functionally extractive (actively protecting mining interests against conservation constraints).",
-      "impact": "If threshold is low (\u2248100 mining contracts): ISA rapidly becomes extractive snare, theater increases. If threshold is high (\u22481000+ contracts): ISA may maintain piton status longer, but eventual shift is inevitable given rare earth demand projections.",
+      "id": "iuu_fishing_causation",
+      "question": "Is IUU fishing (illegal, unreported, unregulated) a consequence of UNCLOS enforcement failures or a fundamental feature of open-access fish-stock dynamics that UNCLOS was designed to minimize?",
+      "resolution_mechanism": "Time-series analysis of IUU prevalence before/after UNCLOS entry-into-force; comparison with equivalent commons-management problems outside maritime (terrestrial wildlife, groundwater); analysis of IUU economics relative to UNCLOS-compliant fishing profit margins",
+      "impact": "If enforcement-driven: UNCLOS is improvable (scaffold logic applies). If fundamental: UNCLOS structure itself incentivizes extraction (snare logic applies).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Scale threshold at which ISA transitions from piton to active extraction"
+      "description": "IUU fishing: enforcement failure or structural incentive"
     },
     {
-      "id": "small_island_state_exit_feasibility",
-      "question": "Can small island developing states (SIDS) collectively exit UNCLOS or restructure within it, or are they structurally trapped?",
-      "resolution_mechanism": "Analysis of SIDS coalition capacity: Pacific Islands Forum, Caribbean Community governance. Assessment of alternative regional frameworks (e.g., Pacific Regional Environment Programme). Evaluation of cost of UNCLOS exit vs. cost of continued participation under asymmetric terms.",
-      "impact": "If exit is feasible: SIDS are constrained, not trapped (exit_options upgrade). If not: they are powerless victims with no exit (snare classification reinforced). Current evidence suggests exit is theoretically possible but politically/economically catastrophic, maintaining trapped status.",
-      "confidence": "medium",
+      "id": "deep_sea_mining_extraction_boundary",
+      "question": "Does deep-sea mineral extraction under ISA oversight represent genuine coordination for global benefit or exploitation of the global commons by states with capital/technology to extract?",
+      "resolution_mechanism": "Analysis of ISA licensing criteria, benefit-sharing mechanisms, and actual revenue flows to non-extracting states; comparison with terrestrial mining governance; ecological impact assessments vs revenue projections",
+      "impact": "If genuine coordination: ISA moves from piton toward rope/scaffold. If extraction: ISA is snare by another name, and the constraint reclassifies.",
+      "confidence": "low",
       "type_class": "empirical",
-      "description": "Whether SIDS can exit UNCLOS or restructure within it"
+      "description": "Deep-sea mining: coordination or commons extraction"
+    },
+    {
+      "id": "historical_custom_law_displacement",
+      "question": "Did UNCLOS institutional formalization displace existing customary maritime law traditions (Indigenous governance, regional norms) in ways that reduced community autonomy and increased state extraction?",
+      "resolution_mechanism": "Comparative legal history: pre-UNCLOS customary regimes vs post-UNCLOS governance; analysis of dispute outcomes in ITLOS involving Indigenous or community claims; archival evidence of negotiation positions by colonized vs colonizer states",
+      "impact": "If displacement occurred: reveals institutional extraction mechanism underlying UNCLOS (increases snare classification for affected communities). If integration attempted: demonstrates tangled_rope coordination-extraction hybrid.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "UNCLOS displacement of customary maritime law"
     }
   ],
   "measurements": [
     {
-      "metric": "theater_ratio",
+      "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.5
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 22,
-      "value": 0.62
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 44,
-      "value": 0.65
+      "value": 0.35,
+      "id_override": "unclos_extractiveness_1982"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.35
+      "time_point": 15,
+      "value": 0.48,
+      "id_override": "unclos_extractiveness_1997"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 22,
-      "value": 0.48
+      "time_point": 30,
+      "value": 0.58,
+      "id_override": "unclos_extractiveness_2012"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 44,
-      "value": 0.52
+      "value": 0.58,
+      "id_override": "unclos_extractiveness_2026"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "unclos_theater_1982"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.58,
+      "id_override": "unclos_theater_1997"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.65,
+      "id_override": "unclos_theater_2012"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 44,
+      "value": 0.68,
+      "id_override": "unclos_theater_2026"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45,
+      "id_override": "unclos_suppression_1982"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.55,
+      "id_override": "unclos_suppression_1997"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.62,
+      "id_override": "unclos_suppression_2012"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 44,
+      "value": 0.62,
+      "id_override": "unclos_suppression_2026"
     }
   ],
   "interval": {
-    "start": 1982,
-    "end": 2026
+    "start": 0,
+    "end": 44
   },
   "commentary": {
-    "narrative_context": "UNCLOS (1982) established a global legal framework for maritime activity, dividing oceans into jurisdictional zones (territorial seas, EEZs, continental shelves, high seas) and creating governance bodies (ISA, ITLOS, coastal state enforcement). From 1982-2026, the constraint has functioned as both a coordination mechanism (enabling maritime commerce, fisheries, resource claims) and an extraction mechanism (protecting developed-state and industrial interests while constraining developing-state enforcement capacity and environmental protection). The 2024 BBNJ (Agreement on Biodiversity Beyond National Jurisdiction) added binding conservation mechanisms, attempting to modify UNCLOS as a Scaffold with sunset logic \u2014 converting environmental commitments from aspirational to enforceable. However, the integration reveals persistent asymmetries: developed states enforce their EEZs; developing states cannot. Industrial fishing fleets operate with flag-state arbitrage; subsistence communities face border enforcement. The constraint exhibits all six types from different positions, with the primary tension between the coordination function (enabling legitimate resource claims and commerce) and the extraction mechanism (asymmetric enforcement protecting developed-state and commercial interests over developing-state and ecosystem interests).",
+    "narrative_context": "The UN Convention on the Law of the Sea (UNCLOS, 1982) established a global framework for maritime governance, creating jurisdictional zones (territorial seas, exclusive economic zones, continental shelves, high seas) and institutions (International Seabed Authority, International Tribunal for the Law of the Sea) to manage ocean use. In the 2026 context, UNCLOS functions simultaneously as a coordination mechanism enabling global maritime commerce, fisheries, and resource management, and as an extraction mechanism protecting developed-state and industrial interests while constraining developing-state autonomy and Indigenous ocean communities. The constraint exhibits all six Deferential Realism types from different structural positions: developed maritime states and industrial corporations experience UNCLOS as enabling coordination (Rope); developing coastal states experience mixed coordination and extraction (Tangled Rope); small island developing states and Indigenous communities experience pure extraction with no exit option (Snare); the International Seabed Authority functions as a degraded, performative institution (Piton); emerging enforcement technologies (RFMOs, satellite monitoring, blockchain catch documentation) are building alternative pathways to UNCLOS compliance (Scaffold); and from a civilizational view, UNCLOS appears as a natural solution to inherent ocean governance problems (Mountain, but with false-summit characteristics revealing beneficiary design).",
     "key_agents": [
-      "Developed Coastal States (institutional/arbitrage): Primary beneficiaries \u2014 control enforcement, negotiate favorable interpretations, exercise soft power",
-      "Industrial Fishing Fleets (institutional/arbitrage): Secondary beneficiaries \u2014 access high-seas resources, flag-state arbitrage, benefit from low effective enforcement",
-      "Developing Coastal States (moderate/constrained): Victims with limited agency \u2014 granted EEZ rights but lack enforcement capacity; subject to unequal compliance burden",
-      "Small Island Developing States (powerless/trapped): Primary victims \u2014 limited economic alternatives, dependent on marine resources, cannot enforce against distant-water fishing",
-      "Subsistence Fishing Communities (powerless/trapped): Primary victims \u2014 territorial claims subordinate to state/commercial interests; ecosystem degradation eliminates livelihood",
-      "Marine Ecosystem Health (powerless/trapped): Abstract collective victim \u2014 UNCLOS article 192 environmental duties subordinate to extraction rights",
-      "Environmental Coalition (organized/constrained): BBNJ actors attempting to modify constraint through binding conservation mechanisms; partial success with persistent exemptions",
-      "International Seabed Authority (institutional/arbitrage): Institutional actor exhibiting piton behavior \u2014 maintains regulatory apparatus without proportional enforcement; will likely become extractive beneficiary as deep-sea mining scales",
-      "Analytical Observer (analytical/analytical): Sees false summit \u2014 constraint appears immutable but is contingent on great-power coordination excluding non-state alternatives"
+      "Developed Maritime States (institutional/arbitrage): Primary beneficiaries — control enforcement capacity, flag-state registry, technological dominance; can arbitrage between compliance and non-compliance",
+      "Industrial Fishing and Resource Extraction Corporations (powerful/arbitrage): Primary beneficiaries — exploit fish stocks and minerals through flag-state arbitrage, IUU fishing, and technical non-compliance before enforcement catches up",
+      "Small Island Developing States (powerless/trapped): Primary victims — nominal EEZ ownership provides no functional protection against industrial fleets; fish stocks collapse before SIDS can build enforcement capacity",
+      "Indigenous Ocean Communities (powerless/trapped): Primary victims — structurally excluded from decision-making; UNCLOS institutionalizes state sovereignty over zones traditionally governed by community norms",
+      "Developing Coastal States (moderate/constrained): Secondary victims — benefit from nominal EEZ control but lack enforcement capacity; high compliance costs with limited revenue capture",
+      "International Seabed Authority (institutional/constrained): Institutional actor — degraded by state capture and industry pressure; functionless authority maintaining theater of regulation without real oversight of deep-sea mining",
+      "Regional Fisheries Management Organizations (organized/constrained): Emerging alternative pathway — building real-time enforcement infrastructure (electronic monitoring, satellite tracking, blockchain documentation) that may supersede UNCLOS-mandated state reporting",
+      "Analytical Observer (analytical/analytical): Civilizational perspective — risks naturalizing UNCLOS boundary structures as immutable features of ocean governance rather than contingent design choices that encoded beneficiary advantages"
     ],
-    "logic_rationale": "Extractiveness (0.52): Moderate-high. UNCLOS creates legitimate coordination function (fisheries management, maritime commerce rules, resource claims), but also enables asymmetric extraction through enforcement gaps and flag-state arbitrage. The 44-year trajectory shows increasing extractiveness as industrial fishing has scaled and developing states have become more economically dependent on marine resources. Suppression (0.58): Moderate-high. Multiple layers: flag-state sovereignty shields commercial operators from coastal-state enforcement (article 94); enforcement capacity gaps prevent detection of violations; environmental subordination via 'prior rights' doctrine; small island states lack alternatives to ocean-based livelihoods. Theater ratio (0.65): Moderate-high and rising. UNCLOS includes environmental protections (article 192, Part XII) and conservation mechanisms (BBNJ MPAs), but enforcement remains weak. ISA maintains regulatory apparatus without proportional impact on extraction. BBNJ introduces MPA theater: designated areas with limited enforcement and exemptions for fishing interests. The theater has increased over the interval as environmental language has proliferated without corresponding enforcement strengthening.",
-    "directionality_logic": "Directionality (d) values derive from structural position within the extraction flow. Developed coastal states benefit from the framework (low d \u2248 0.10) via enforcement capacity and arbitrage options. Industrial fleets benefit through flag-state arbitrage (low d \u2248 0.15). Developing coastal states are constrained victims (moderate-high d \u2248 0.65) \u2014 they have some agency (can enforce within own EEZ if capacity exists) but face asymmetric burden. Subsistence communities are trapped victims (high d \u2248 0.90) \u2014 no enforcement capacity, no exit options, ecosystem degradation beyond individual control. Marine ecosystem is abstract trapped victim (d \u2248 0.95) \u2014 non-agent bearing full cost. ISA institutional actors (d \u2248 0.20) \u2014 beneficiary position via potential future mining revenue and regulatory authority. The constraint's chi values vary dramatically across positions: developed states experience \u03c7 \u2248 0.10-0.20 (low extraction); developing states experience \u03c7 \u2248 0.35-0.50 (moderate extraction); subsistence communities experience \u03c7 \u2248 0.70+ (high extraction); ecosystem experiences \u03c7 \u2248 0.75+ (high extraction). This perspectival gap is the signature of a tangled rope at the system level.",
-    "perspectival_gap": "The constraint's classification varies from pure extraction (snare) from the subsistence fisher's perspective to pure coordination (rope) from the developed state's perspective. Subsistence communities and marine ecosystems experience maximum extraction with zero exit: trapped by geography, economics, and ecosystem dependence. They perceive UNCLOS as snare because enforcement mechanisms work against them (illegal fishing prosecutions, border closures) while failing to constrain industrial extraction. Developing coastal states perceive tangled rope: UNCLOS grants real resource rights (coordination function) but enforcement asymmetry extracts value toward developed states (asymmetric extraction). Environmental coalition perceives scaffold: BBNJ adds temporary conservation mechanisms with sunset logic \u2014 as monitoring capacity improves and alternatives mature, the extraction mechanism weakens. ISA perceives its own role as piton: maintains regulatory apparatus without proportional enforcement, theater increasing as mining scale accelerates. Developed states perceive rope: framework enables their enforcement, grants soft-power leverage, and arbitrage opportunities. Analytical observer risks perceiving mountain (natural law of ocean governance) but structural data reveals contingency: UNCLOS is a specific choice protecting state sovereignty and commercial interests, not an immutable necessity. Alternative governance models (bioregional, peer-based) show partial feasibility, indicating the mountain is a false summit \u2014 naturalization of political choice.",
-    "mandatrophy_analysis": "UNCLOS at the system level is tangled rope: it combines genuine coordination function (maritime commerce rules, fisheries management framework, dispute resolution) with asymmetric extraction (enforcement gaps protecting developed-state and commercial interests, environmental subordination). Mandatrophy would mislabel this as either pure coordination (rope \u2014 ignoring extraction asymmetries) or pure extraction (snare \u2014 ignoring real coordination benefits). The tangled rope classification captures both: UNCLOS does enable coordination that benefits all parties, AND it creates enforcement asymmetries that extract from developing states and ecosystems. The resolution is perspectival: from a subsistence fisher's position, the coordination benefits are inaccessible (trapped by enforcement gaps), so the constraint appears as snare. From a developed state's position, the coordination benefits are real and the extraction flow runs toward them, so it appears as rope. From the system level, tangled rope is accurate because both functions (coordination and extraction) are structurally present. The mandatrophy prevents collapsing either function: recognizing BBNJ as a real constraint on fishing (coordination improvement) while acknowledging persistent extraction (enforcement gaps, environmental subordination) is the mandatrophy-resolved position. The 2026 BBNJ integration demonstrates this: the agreement added binding conservation mechanisms (coordination strengthening) while carving out industrial fishing exemptions and maintaining weak enforcement (extraction persistence)."
+    "logic_rationale": "Extractiveness (0.58): Elevated and stable. UNCLOS creates nominal protections for coastal states (200 nm EEZs, continental shelf claims) while providing no enforcement mechanism to prevent industrial fleets from harvesting stocks faster than regulatory capacity can respond. Extractiveness rose from 0.35 (1982, when states simply didn't have the capacity to exploit the asymmetry) to 0.48 (1997, as fishing-fleet technology accelerated and IUU fishing became industrialized) to 0.58 (2012-2026, as deep-sea mining intensified and small island states faced unprecedented depletion of exclusive resources). The plateau at 0.58 from 2012 onward reflects that further extraction would trigger institutional breakdown (UNCLOS renegotiation pressure, SIDS coalition defection). Suppression (0.62): Moderate-high and rising. Suppression mechanisms include: enforcement asymmetry (developed states can monitor their fleets; SIDS cannot), technology barriers (satellite monitoring, underwater surveys require capital SIDS lack), institutional capture (ISA controlled by mining interests and developed states), and structural dependence (SIDS have no alternative governance framework and face geopolitical cost of UNCLOS withdrawal). Theater ratio (0.68): High and rising. ISA licensing procedures, ITLOS dispute rulings, and RFMO scientific committees produce extensive documentation and procedural compliance (theater) while actual fishing capacity, mineral extraction, and ecosystem damage proceed largely uncontrolled by these bodies. Theater increased from 0.42 (1982 — when UNCLOS was newly empowering) to 0.68 (2026 — as institutions mature without functional enforcement). This trajectory tracks the piton signature: original function (resource governance) degraded; institutional persistence maintained through procedural theater.",
+    "perspectival_gap": "The perspectival range reveals the constraint's Tangled Rope character: genuine coordination function coexists with asymmetric extraction. Developed states and corporations see coordination (Rope) — UNCLOS predictably allocates maritime space, provides rules for commerce, and enables resource access. Developing coastal states see mixed benefit and cost (Tangled Rope) — nominal sovereignty over EEZs provides coordination value (disputed boundaries resolved through UNCLOS rather than military confrontation) but extraction is severe (inability to enforce boundaries means fish stocks and minerals drain away). SIDS and Indigenous communities see pure extraction (Snare) — they are locked into a system that provides no protection and from which withdrawal incurs geopolitical cost. The ISA demonstrates piton dynamics: original regulatory function has atrophied (ISA cannot enforce mining standards) but institutional structures persist through theater. RFMOs show scaffold logic: new enforcement technologies (satellite monitoring, real-time reporting, blockchain documentation) are creating a parallel governance pathway that could supersede UNCLOS-mandated state-level enforcement within 10-15 years. The mountain perspective reveals the false summit: UNCLOS structures appear 'natural' (boundary-drawing is necessary for ocean governance) but are actually contingent design choices that encoded developed-state advantages.",
+    "directionality_logic": "Directionality (d) represents each agent's structural relationship to the constraint. Developed maritime states are net beneficiaries with exit arbitrage (d ≈ 0.05, low extraction experienced) — they designed UNCLOS, can flag-state arbitrage between regimes, and benefit from predictable rules. Industrial extraction corporations are similar beneficiaries with technological escape routes (d ≈ 0.15, low extraction) — they can shift operations, change flags, use IUU tactics. Small island developing states are full extraction targets locked into the system (d ≈ 0.95, maximum extraction) — they cannot exit UNCLOS without geopolitical isolation, cannot enforce boundaries against industrial fleets, and lack capital to exploit their own resources. Indigenous communities face structural exclusion with identity-locking (d ≈ 0.89) — they are both materially trapped (no autonomous governance structure outside UNCLOS) and identity-locked (their ocean identities are constituted through community relationships to marine resources that UNCLOS forbids them to govern). Developing coastal states occupy intermediate positions (d ≈ 0.65, moderate-high extraction) — they benefit from nominal EEZ ownership but face suppression through enforcement asymmetry. The ISA experiences moderate extraction (d ≈ 0.55) — its institutional mandate conflicts with pressure from mining interests, and its constrained exit (cannot withdraw without delegitimizing UNCLOS) creates persistent conflict.",
+    "mandatrophy_analysis": "UNCLOS resolves the mandatrophy by demonstrating that Tangled Rope classification is correct: the constraint simultaneously coordinates and extracts. Pure coordination (Rope) cannot explain why fish stocks collapse in SIDS EEZs despite nominal legal protections. Pure extraction (Snare) cannot explain why developed states invested decades in negotiating UNCLOS — they could have simply excluded SIDS through military dominance. The hybrid (Tangled Rope) explains both: UNCLOS genuinely coordinates global maritime commerce, provides dispute-resolution institutions, and enables resource claims (coordination function), while simultaneously encoding enforcement asymmetries that allow developed states and corporations to extract resources from developing-state EEZs (extraction function). The constraint requires active enforcement (Tangled Rope gate: true) because beneficiaries must actively suppress developing-state enforcement capacity to maintain the extraction advantage. The false summit (mountain perspective naturalizing UNCLOS as inherent to ocean governance) is unmasked by the beneficiary data: if UNCLOS were truly natural law, the boundary widths would be immutable rather than actively defended by developed states in 2026 renegotiation disputes. The ISA degradation (piton classification) demonstrates what happens when extraction exceeds coordination: the institution designed to manage the global commons has lost functional authority and persists through procedural theater. The scaffold perspective (RFMOs building real enforcement) shows the constraint's vulnerability: if alternative coordination mechanisms with lower extraction can develop, UNCLOS enforcement layer becomes supersedable within a generation."
   },
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism",
-    "boltzmann_floor_override": 0.35
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
   },
   "network": {
     "affects_constraints": [
-      "global_fishing_commons_tragedy",
-      "deep_sea_mining_regulation",
-      "island_state_climate_sovereignty",
-      "maritime_dispute_resolution"
+      "iuu_fishing_industrial_structure",
+      "deep_sea_mining_regulatory_capture",
+      "island_state_climate_migration_lock",
+      "indigenous_ocean_rights_exclusion"
     ],
-    "dual_formulation_note": "UNCLOS decomposition follows \u03b5-invariance principle. The overall framework (\u03b5=0.52, tangled rope) covers coordination + enforcement asymmetry. Two structurally distinct constraints are captured by separate stories: (1) UNCLOS dispute resolution mechanism (\u03b5\u22480.15, pure rope \u2014 ITLOS functions effectively as neutral arbiter), and (2) UNCLOS environmental protection regime (\u03b5\u22480.72, snare \u2014 article 192 environmental duties are systematically subordinated to extraction rights). These three stories form a constraint family: the dispute resolution mechanism enables coordination but lacks environmental authority; the environmental regime attempts coordination but lacks enforcement; the overall framework balances both functions asymmetrically. All three share the spatial scope (global) and institutional actors (coastal states) but differ in \u03b5 due to structural differences in enforcement mechanisms."
+    "dual_formulation_note": "UNCLOS decomposes into structurally distinct constraints along observable lines: (1) UNCLOS as coordination framework for maritime commerce (lower ε, higher coordination function) vs (2) UNCLOS as extraction lock for resource-dependent developing states (higher ε, lower coordination function for victims). The 0.58 base extractiveness value represents the aggregate structural property of the constraint; but a view emphasizing commerce coordination would produce lower ε (~0.35), while a view emphasizing resource extraction lock would produce higher ε (~0.75). Per ε-invariance principle, these observables indicate constraint family rather than single-observable-dependent constraint. The family is linked through network edges showing how maritime commerce coordination depends on resource extraction asymmetries being suppressed."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.2
+      "d_value": 0.08
     },
     {
-      "power_atom": "moderate",
-      "d_value": 0.65
+      "power_atom": "organized",
+      "d_value": 0.42
     }
-  ]
+  ],
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "post_colonial_institutional_inheritance",
+      "global_resource_commons_asymmetry"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "unclos_global_commons_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "unclos_sovereignty_maximization_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "unclos_indigenous_ocean_rights_reading",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "coastal_state_maritime_sovereignty",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "high_seas_freedom_of_navigation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "isba_authority_over_area_minerals",
+        "role": "secondary",
+        "status": "overridden",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "post_colonial_maritime_state_equality",
+    "drift_state": {
+      "moment": "contemporary_2026_extraction_asymmetry",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
 }

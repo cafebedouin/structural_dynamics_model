@@ -16,7 +16,7 @@ OVERLAY_TEMPLATE = """\
 :- ( retract(config:param(power_function, _)) -> true ; true ),
    asserta(config:param(power_function, {variant})).
 :- ( retract(config:param(corpus_path, _)) -> true ; true ),
-   asserta(config:param(corpus_path, 'testsets_3000')).
+   asserta(config:param(corpus_path, 'archives/prolog_v5')).
 :- [stack].
 :- [tests/test_battery_variants].
 :- [product_site_export].

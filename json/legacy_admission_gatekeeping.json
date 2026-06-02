@@ -4,23 +4,27 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "legacy"
+    "measurement_id_prefix": "legacy",
+    "story_uid": "8c0e976a-71cc-4da4-88cb-900fbc67668f"
   },
   "base_properties": {
-    "extractiveness": 0.52,
-    "suppression": 0.58,
+    "extractiveness": 0.58,
+    "suppression": 0.68,
     "theater_ratio": 0.64,
     "claimed_type": "tangled_rope",
     "human_readable": "Legacy Admission Gatekeeping in Elite Universities",
     "topic_domain": "education/institutional_access",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "legacy_families",
-      "university_endowment_maintenance"
+      "wealthy_alumni_families",
+      "elite_university_administration",
+      "donor_base"
     ],
     "victims": [
-      "non_legacy_applicants",
-      "field_institutional_diversity"
+      "qualified_non_legacy_applicants",
+      "first_generation_applicants",
+      "low_income_qualified_students",
+      "meritocratic_credibility"
     ]
   },
   "perspectives": [
@@ -30,156 +34,193 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "The Non-Legacy Applicant",
-      "comment": "PERSPECTIVE 1: NON-LEGACY APPLICANT (SNARE) \u2014 Faces systematic exclusion from elite institutional pathways with no alternative of comparable status. Career trajectories and economic outcomes are demonstrably constrained by admission gatekeeping. Cannot exit the constraint \u2014 the status differential between legacy-admitted and non-admitted groups is baked into hiring, networking, and credential recognition. Trapped with maximal experienced extraction."
+      "label": "The Qualified Non-Legacy Applicant",
+      "comment": "PERSPECTIVE 1: QUALIFIED NON-LEGACY APPLICANT (SNARE) — Cannot exit the credential market; faces systematic disadvantage with no alternative pathway to equivalent status. The applicant is fully trapped by credential architecture and resource barriers. Experiences pure extraction: opportunity cost of exclusion, wage premium from elite credential unavailable, network effects concentrated in excluded cohort. Maximum chi from powerless + trapped + national scope."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "First-Generation and Low-Income Applicants",
+      "comment": "PERSPECTIVE 2: FIRST-GENERATION / LOW-INCOME APPLICANTS (SNARE) — Face material barriers (test prep costs, college counseling access, application fees) plus identity barriers (unfamiliar with institutional culture, impostor syndrome from legacy-coded environment). Constrained exit options — can pursue regional/non-elite universities but at permanent earnings and network penalty. High experienced extraction."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "moderate",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
       "spatial_scope": "national",
-      "label": "The Aspiring Middle-Class Student",
-      "comment": "PERSPECTIVE 2: ASPIRING MIDDLE-CLASS STUDENT (TANGLED ROPE) \u2014 Constrained by high application costs, test preparation burdens, and limited information about institutional preferences. Also benefits from the legitimacy of elite university credentials \u2014 the system coordinates signals of competence alongside extracting exclusion. Can theoretically exit via other universities but faces prestige penalty. Mixed coordination-extraction experience."
+      "label": "Elite University Administration",
+      "comment": "PERSPECTIVE 3: ELITE UNIVERSITY ADMINISTRATION (TANGLED ROPE) — Experiences genuine coordination function: legacy preferences maintain alumni relationships, facilitate major gift fundraising ($1B+ endowment flows), sustain institutional culture and traditions. Simultaneously extracts from qualified non-legacy candidates by restricting access to credential premium. Active enforcement required (selective admission policy enforcement, donation cultivation). Benefits exceed costs for institution — asymmetric extraction toward donors."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
-      "spatial_scope": "national",
-      "label": "The University Endowment/Alumni Relations",
-      "comment": "PERSPECTIVE 3: UNIVERSITY ENDOWMENT/ALUMNI RELATIONS (ROPE) \u2014 Experiences legacy preference as coordination mechanism: maintains donor relationships, ensures fundraising continuity, and aligns institutional identity with historical community. Net beneficiary with full arbitrage options (can choose which applicants to admit without constraint). The constraint solves the genuine problem of sustaining institutional funding and alumni engagement."
+      "spatial_scope": "global",
+      "label": "Wealthy Alumni Families and Donor Base",
+      "comment": "PERSPECTIVE 4: WEALTHY ALUMNI FAMILIES / DONOR BASE (ROPE) — Net beneficiaries experiencing pure coordination: legacy preference signals their continued status and investment in institutional perpetuation. Donation flows sustained by preference system ($1.2B annual major gifts at top 20 institutions estimated 40-50% from legacy families or their networks). Arbitrage exit option — can invest elsewhere if preference disappears, but preference system locks in advantage. Low to negative experienced extraction."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
-      "exit_options": "mobile",
+      "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Diversity Coalition",
-      "comment": "PERSPECTIVE 4: DIVERSITY COALITION (SCAFFOLD) \u2014 Organized actors (civil rights groups, policy advocates, holistic admissions researchers) see legacy preferences as a temporary coordination mechanism being displaced by alternative legitimacy claims (merit-based holistic review, socioeconomic diversity, geographic diversity). The sunset is structural: as demographic pressures and legal challenges mount, legacy preferences face institutional and legal sunset. Mobile exit options: selective schools without legacy preferences are rising in status. Theater remains high because the system must maintain legitimacy narratives (diversity statements, merit claims) while preserving legacy extraction."
+      "label": "Access-Equity Coalition",
+      "comment": "PERSPECTIVE 5: ACCESS-EQUITY COALITION (SCAFFOLD) — Student-led and policy advocacy organizations (Students for Fair Admissions, affirmative action opponents, equity-focused administrators) see legacy preferences as a temporary institutional arrangement with an identifiable sunset pathway: federal policy intervention (Department of Education, Congressional action), institutional policy change (elimination of legacy consideration), or market pressure (demographic shifts reducing legacy applicant pool). Constraint has a clear exit mechanism and organized agents with agency."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
       "time_horizon": "civilizational",
-      "exit_options": "arbitrage",
+      "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The Merit Ideology",
-      "comment": "PERSPECTIVE 5: MERIT IDEOLOGY (PITON) \u2014 The explicit institutional narrative is meritocratic: elite universities claim to select by ability. Legacy preferences are rarely defended on philosophical grounds; instead, they persist through institutional inertia. The performative layer (admissions committees conducting 'holistic review,' claiming to seek 'diverse classes') masks the actual extraction mechanism (wealth-based gatekeeping). Theater ratio reflects the gap between stated meritocratic mission and actual legacy-weighted practice. The ideology is degraded \u2014 no one defends it, but it persists."
+      "label": "Merit-Based Ideology and Brand Performance",
+      "comment": "PERSPECTIVE 6: MERIT-BASED IDEOLOGY / INSTITUTIONAL BRAND (PITON) — Elite universities publicly commit to merit-based selection and diversity while maintaining legacy preferences. The merit narrative persists through institutional inertia and theatrical performance: U.S. News rankings reward 'selectivity' metrics that legacy preferences inflate (by admitting low-SAT legacy applicants, overall SAT average drops less than it would under pure merit, maintaining rank appearance). Theater ratio high because the merit story is maintained despite contradicting practice. Piton classification: degraded but persistent due to ranking theater."
     },
     {
       "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer (Market Equilibrium View)",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / MARKET EQUILIBRIUM VIEW (MOUNTAIN) \u2014 From a civilizational/global perspective on market equilibrium, elite gatekeeping is an immutable property of status systems: any positional good (admission to a scarce, high-status institution) will naturally generate gatekeeping mechanisms, and legacy preferences are one such mechanism. This perspective naturalizes institutional gatekeeping as a structural law of scarce resource allocation. However, the structural data contradicts this \u2014 legacy preferences are not inevitable but historically contingent (rare in US before 1920s, used explicitly to exclude Jewish applicants, maintained through deliberate institutional choice). The false summit detection reveals naturalization of a contingent rent-seeking arrangement."
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, wealth-based stratification may appear immutable: markets naturally concentrate resources, institutional prestige naturally clusters, meritocratic sorting always requires some selectivity gatekeeping. This perspective risks naturalizing contingent institutional choices as structural inevitabilities. Engine false summit detection will identify this as naturalization of social arrangements."
     }
   ],
   "omegas": [
     {
-      "id": "counterfactual_donation_elasticity",
-      "question": "Would legacy preference elimination significantly reduce university fundraising, or is the causal relationship between legacy preference and donations spurious?",
-      "resolution_mechanism": "Quasi-experimental analysis of universities that have eliminated legacy preferences (Bowdoin, Amherst, etc.) and subsequent donation trends; comparison to peer institutions with unchanged legacy policies; donor survey data on decision-making",
-      "impact": "If high elasticity (>30% donation decline): legacy preference is legitimately necessary for endowment maintenance (scaffolding logic). If low elasticity (<10%): legacy preference is rent-seeking with false justification (pure extraction). If medium (10-30%): tangled rope is correct classification.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether fundraising requires legacy preference or if donation drops are overstated"
-    },
-    {
-      "id": "alternative_status_coordination",
-      "question": "Are non-legacy students able to achieve equivalent career and networking outcomes through alternative elite institutions or merit-based cohorts?",
-      "resolution_mechanism": "Longitudinal earnings data for non-legacy graduates of top-20 universities vs legacy-admitted peers; network analysis of hiring patterns and alumni activation; prestige-adjusted career trajectory comparison",
-      "impact": "If high equivalence: legacy gatekeeping is coordinate selection (Rope, theater obscures low extraction). If low equivalence: gatekeeping creates durable disadvantage (Snare, extraction is real). If partial: tangled rope classification sustained.",
+      "id": "merit_versus_wealth_measurement",
+      "question": "How do we measure 'merit' independent of existing wealth-correlated proxies (standardized test scores, extracurricular access, college prep resources)?",
+      "resolution_mechanism": "Comparative longitudinal analysis: matched cohorts of admitted students (legacy vs non-legacy) tracked for academic performance, graduation outcomes, advanced degree attainment, and career achievement. If non-legacy cohort outperforms legacy cohort at equivalent test scores, legacy preferences are selection error, not coordination.",
+      "impact": "If legacy cohort underperforms: legacy preferences are pure extraction (not coordination, reclassifies toward snare). If performance equivalent: preferences reflect real coordination value (institutional culture/relationship maintenance) justifying tangled rope classification.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether alternative pathways provide equivalent status and outcomes"
+      "description": "Whether legacy status predicts genuine merit or is orthogonal to performance"
     },
     {
-      "id": "identity_lock_magnitude",
-      "question": "Do legacy applicants experience identity fusion with their inherited institutional affiliation sufficient to make exit from legacy preference unthinkable even when elimination would increase diversity without reducing overall institutional function?",
-      "resolution_mechanism": "Qualitative analysis of legacy donor rhetoric and alumni identity statements; behavioral data on whether legacy applicants from marginalized groups suppress diversity advocacy; survey data on identity-based resistance to preference elimination",
-      "impact": "If identity lock is high: legacy beneficiaries experience the constraint as natural/inevitable (piton theater rationale confirmed). If low: beneficiaries could exit but choose not to (pure rational extraction). If identity lock is asymmetric (strong for some legacy groups, weak for others): reveals which communities have most fused identity with institutional gatekeeping.",
+      "id": "donation_causality_ambiguity",
+      "question": "Do legacy preferences cause major gift flows, or do wealthy families with tradition of giving happen to have legacy-eligible children?",
+      "resolution_mechanism": "Institutional policy experiments: universities that eliminate legacy preferences and track subsequent major gift patterns. Donor survey data on preference elasticity of giving. Natural experiments from policy changes (Harvard/Yale legacy elimination outcomes).",
+      "impact": "If causal: legacy preferences generate $500M-$1B annually in marginal donation value (true coordination function justifying tangled rope). If spurious: preferences are pure extraction masquerading as coordination (reclassifies toward snare). If partially causal: proportional tangled rope vs snare mixture.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Degree of identity fusion between legacy beneficiaries and institutional gatekeeping"
+      "description": "Whether legacy preferences drive donations or reflect existing donor characteristics"
+    },
+    {
+      "id": "identity_lock_institutional_culture",
+      "question": "To what extent does 'institutional culture' and 'tradition' of elite universities depend on legacy composition, versus being cultural myths that rationalize wealth-based gatekeeping?",
+      "resolution_mechanism": "Historical institutional analysis of culture narratives before and after policy changes. Ethnographic/interview data with legacy and non-legacy students on experienced institutional culture and belonging. Institutional change processes at universities that eliminated legacy preferences.",
+      "impact": "If culture genuinely depends on legacy continuity: preferences serve real coordination function (justify tangled rope, institutional identity-coordination boltzmann type). If culture is post-hoc rationalization: preferences are pure extraction dressed in tradition-speak (reclassify toward snare).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether institutional culture requires legacy composition or is reconstructible post-elimination"
     },
     {
       "id": "suppression_mechanism_internalization",
-      "question": "Is suppression of non-legacy applicants primarily structural (lack of information, test prep resources, application cost barriers) or internalized (applicants from non-legacy backgrounds internalize inferiority narratives and self-select out)?",
-      "resolution_mechanism": "Comparison of application rates before/after public information campaigns about legacy preference impact; analysis of applicant pool composition in states with vs without affirmative action; post-admission student persistence and academic performance data",
-      "impact": "If structural only: removing gatekeeping mechanisms directly increases access (scaffold sunset is real). If primarily internalized: removal of formal gatekeeping may be insufficient without additional narrative interventions. If mixed: both structural and internalized mechanisms require simultaneous intervention.",
+      "question": "How much of the suppression experienced by non-legacy applicants is structural (material barriers) versus internalized (belief in meritocratic legitimacy of the system)?",
+      "resolution_mechanism": "Post-admission ethnography: tracking non-legacy admits' sense of belonging, impostor syndrome, and perceived legitimacy versus admitted legacy students with similar credentials. Panel studies on first-generation student self-perception of deservingness.",
+      "impact": "If highly internalized: suppression is maintained without enforcement infrastructure; constraint persists post-elimination through normative capture. If structural: enforcement can be removed and suppression decreases. Affects whether constraint is truly tangled_rope or partially piton.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether suppression is structural barriers or internalized inferiority narratives"
+      "description": "Structural versus internalized components of admission suppression"
+    },
+    {
+      "id": "false_summit_naturalization",
+      "question": "Is wealth stratification in credential access a fundamental property of high-stakes credentials, or a contingent institutional choice by elite universities?",
+      "resolution_mechanism": "Comparative institutional analysis: credential systems with different gatekeeping logics (public universities, credential guilds, government-issued credentials, international systems). Historical analysis of when/why elite US universities adopted legacy preferences (20th century formalization from 19th century informal practice).",
+      "impact": "If fundamental: mountain classification correct (extraction inherent to credentialing). If contingent: mountain is false summit — natural-law framing naturalizes institutional choice.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether wealth stratification in credentials is structural or contingent institutional choice"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.28
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 5,
       "value": 0.42
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.52
+      "value": 0.5
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.48
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 5,
+      "metric": "base_extractiveness",
+      "time_point": 20,
       "value": 0.58
     },
     {
       "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
       "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
       "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68
     }
   ],
   "interval": {
     "start": 0,
-    "end": 10
+    "end": 20
   },
   "commentary": {
-    "narrative_context": "Legacy admission preferences in elite universities create a multi-perspective structural constraint that bundles wealth-based gatekeeping, donation incentives, identity maintenance, and merit-ideology performance. The constraint exhibits genuine coordination properties (maintaining institutional relationships with alumni and donors) alongside pure extraction (excluding qualified applicants from status-bearing credentials). The increasing theater ratio (0.48 \u2192 0.64 over the interval) reflects growing visibility of the contradiction between meritocratic rhetoric and legacy-based practice, forcing universities to expand performative diversity narratives while maintaining extraction mechanisms. The extractiveness trajectory (0.28 \u2192 0.52) shows acceleration as demographic diversity pressures increase and legal challenges mount, forcing institutions to articulate ever-more-elaborate justifications for preference mechanisms. This constraint is a canonical tangled-rope exemplar: it solves a genuine coordination problem (sustaining endowments, maintaining institutional identity continuity) while simultaneously extracting status-based exclusion from non-legacy applicants.",
+    "narrative_context": "Legacy admission preferences in elite US universities create a hybrid constraint that simultaneously coordinates fundraising and alumni relationships while extracting opportunity cost from qualified non-legacy applicants. The constraint operates at the intersection of credential markets, philanthropic incentive structures, and institutional identity maintenance. From 2000-2020, base extractiveness rose from 0.42 to 0.58 as competition intensified (global applicant pool expanded while legacy slots remained constant), theater ratio increased from 0.52 to 0.64 as universities deployed stronger merit narratives while maintaining legacy practices, and suppression requirement climbed from 0.62 to 0.68 as non-legacy applicants required higher test scores and credentials to compete for reduced slots. The constraint exhibits all six DR types from different perspectives: pure extraction (powerless non-legacy applicants facing snare), genuine coordination (university fundraising and alumni relationships), temporary institutional arrangements solvable by policy (scaffold view from access-equity coalitions), degraded ritualism (piton view of merit ideology), mixed coordination-extraction (tangled rope view from institutional administration), and false naturalization of contingent choices (mountain view from analytical observers). The critical empirical questions are whether legacy preferences actually cause marginal donation flows (causal omega) or merely select for students already from giving families (spurious correlation), and whether 'institutional culture' is genuinely maintained by legacy composition or is a post-hoc rationalization that could be rebuilt post-elimination.",
     "key_agents": [
-      "Non-Legacy Applicants: Primary victims (powerless/trapped) \u2014 face systematic exclusion from status credentials with no functionally equivalent alternative",
-      "Legacy Families: Primary beneficiaries (institutional/arbitrage) \u2014 capture institutional status, networking access, and admission probability lift without explicit selection pressure",
-      "University Endowment/Alumni Relations: Secondary beneficiary (institutional/arbitrage) \u2014 maintains donor pipeline through preference signaling and historical relationship preservation",
-      "Aspiring Middle-Class Students: Mixed-position agent (moderate/constrained) \u2014 benefit from credential legitimacy but face resource and information barriers to access",
-      "Diversity Coalition: Organized challengers (organized/mobile) \u2014 civil rights groups, policy advocates, and researchers pushing sunset mechanisms through legal/normative pressure",
-      "Merit Ideology: Institutional narrative (institutional/arbitrage) \u2014 degraded performance of meritocratic claim; persists through inertia despite contradicting observed practice",
-      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent wealth-gatekeeping as immutable property of positional goods"
+      "Qualified Non-Legacy Applicants: Powerless/trapped (national scope) — excluded from credential premium without exit options; experience snare classification with maximum chi. Includes majority of applicant pool at elite institutions.",
+      "First-Generation and Low-Income Applicants: Moderate/constrained (national scope) — face layered material and identity barriers; experience snare with moderate chi from constrained exit options. Estimated 15-20% of incoming classes pre-policy reform.",
+      "Elite University Administration: Moderate/mobile (national scope) — coordinate fundraising and alumni relations while restricting access; experience tangled rope with genuine but asymmetric coordination function. Primary institutional agent maintaining constraint.",
+      "Wealthy Alumni Families and Donor Base: Institutional/arbitrage (global scope) — benefit from preference system and institutional fundraising; experience rope with negative or low chi. Source of $500M-$1B annual major gift flows (estimated 40-50% legacy-connected).",
+      "Access-Equity Coalition: Organized/constrained (national scope) — student activists, policy advocates, equity-focused administrators building alternative institutional logics; experience scaffold with sunset pathway. Growing power post-2020 (Harvard/Yale policy changes, federal scrutiny).",
+      "Merit Ideology and Ranking Theater: Institutional/constrained (global scope) — U.S. News selectivity metrics, institutional branding, merit narrative performance; experience piton as performative ritual maintaining contradiction between stated and actual selection logic.",
+      "Analytical Observer: Analytical/analytical (universal scope) — risks naturalizing contingent institutional choices as structural inevitabilities; experience mountain that engine flags as false summit."
     ],
-    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint extracts meaningful status advantage for legacy applicants (demonstrably higher admission rates, network effects that persist through career), but the extraction is not as severe as pure monopolistic gatekeeping would be. Non-legacy students can still achieve elite credentials at other institutions, and the status differential, while real, does not prevent alternative success pathways. The extraction reflects wealth-based privilege amplification rather than total exclusion. The trajectory from 0.28 to 0.52 shows acceleration as the mechanism becomes more overt and challenged. Suppression (0.58): Moderate-high. Non-legacy applicants face multiple barriers: lack of information about preference weights, test preparation resource gaps, application cost burden, and internalized narratives of institutional unwelcome. However, suppression is not total \u2014 the constraint operates through preference weightings rather than explicit bars, and organized applicants can still access information and resources. Theater ratio (0.64): Moderately high. Universities explicitly claim meritocratic selection while systematically weighting non-merit factors (legacy status). The theater has increased over the interval as visibility of the contradiction has grown \u2014 universities now issue diversity statements, conduct 'holistic review' narratives, and frame legacy preference as 'institutional mission' (code for endowment protection) rather than defending it on any philosophical ground. The trajectory (0.48 \u2192 0.64) reflects increasing performative justification burden.",
-    "perspectival_gap": "The snare perspective (non-legacy powerless applicant) perceives pure extraction because they are structurally trapped: admission to an elite institution is a scarce positional good, legacy preference directly reduces their probability of access, and no functionally equivalent alternative exists. Their experience of the constraint is coercive \u2014 the extraction is unavoidable and the exit option (attend a lower-status university) carries permanent earnings and network penalties. The rope perspective (university endowment) perceives pure coordination because the constraint solves a genuine institutional problem: maintaining donor relationships and funding continuity. From their vantage point, legacy preference is a legitimate coordination mechanism that aligns institutional incentives with community sustainability. The tangled rope perspective (moderate aspiring student) experiences both: the constraint coordinates educational signals (elite credentials have genuine labor market value) while simultaneously extracting status through gatekeeping. They can theoretically exit (attend other universities) but face prestige penalty. The scaffold perspective (diversity coalition) sees the extraction as temporally bounded \u2014 legal challenges (Students for Fair Admissions), normative shifts toward socioeconomic diversity, and rising prestige of merit-based alternatives are creating structural sunset for legacy preferences. The piton perspective (merit ideology) reveals that the institution no longer genuinely defends legacy preferences on philosophical grounds; instead, it maintains them through institutional inertia while increasingly resorting to performative diversity rhetoric. The false summit perspective (analytical observer naturalizing gatekeeping as immutable) is revealed as a misreading: legacy preferences are not an inherent property of positional goods but a historically specific institutional choice with alternatives.",
-    "directionality_logic": "The primary directionality flow runs from non-legacy applicants (victims with trapped exit \u2192 high d \u2192 high \u03c7) toward legacy families and university endowment (beneficiaries with arbitrage exit \u2192 low d \u2192 negative \u03c7). The beneficiary group gains admission probability lift, network effects, and identity continuity; the victim group loses status credentials and career-outcome opportunities. The aspiring middle-class student sits at the hinge: they benefit from credential legitimacy (institutional coordination) but bear extraction costs through information gaps and resource barriers. Directionality overrides are not needed here \u2014 the straightforward beneficiary/victim + exit options framework produces correct d values. The institutional/arbitrage beneficiary derives d \u2248 0.10 (nearly full beneficiary); the powerless/trapped victim derives d \u2248 0.95 (nearly full target). The divergence is stark, which explains why different indices classify the constraint so differently.",
-    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: This constraint avoids mandatrophy (false coordination/extraction confusion) by clearly satisfying all tangled-rope gates: (1) beneficiaries declared (legacy_families, university_endowment_maintenance) \u2014 genuine coordination function exists: maintaining donor relationships and institutional identity continuity; (2) victims declared (non_legacy_applicants, field_institutional_diversity) \u2014 asymmetric extraction occurs: status gatekeeping disproportionately targets non-legacy applicants; (3) requires_active_enforcement = true \u2014 the preference mechanism requires deliberate institutional choice and policy maintenance; (4) 0.40 \u2264 \u03c7 \u2264 0.90 for at least one perspective \u2014 the moderate constrained student and organized coalition perspectives produce \u03c7 in this range. The analytical observer's false summit (mountain perspective) is correctly identified as a false summit: the constraint is not a law of nature but a contingent institutional arrangement that could be (and is being) displaced by alternative legitimacy criteria. The mandatrophy is resolved by acknowledging that legacy preferences solve a real coordination problem (donor relationships, institutional continuity) while simultaneously extracting status through gatekeeping, and that both mechanisms are present, neither is reducible to the other, and different perspectives legitimately perceive different aspect ratios of the hybrid."
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Legacy preferences extract opportunity cost from non-legacy applicants through credential scarcity — elite degree premium (lifetime earnings difference ~$300K+, network effects in prestige sectors). However, the extraction is not maximal (snare level ~0.66+) because universities do admit substantial non-legacy cohorts and genuine merit consideration exists alongside legacy consideration. The constraint is hybrid: real coordination value in fundraising and alumni relations exists alongside pure extraction. Suppression (0.68): High. Multiple suppression mechanisms operate: material barriers (test prep costs, application fees, college counseling access concentration in wealthy schools); cultural barriers (unfamiliarity with elite institutional culture, legacy-coded expectations); normative barriers (belief in meritocratic legitimacy despite evidence of legacy preference); structural barriers (credential market logic where exclusion produces permanent earnings/network penalty). Suppression is not total (applicants can pursue non-elite credentials) but substantial enough to make exit costly. Theater ratio (0.64): Moderate-high. Elite universities explicitly commit to merit-based selection and diversity while maintaining legacy preferences. The merit narrative is substantially performative: published diversity statistics highlight race/ethnicity/first-generation while leaving legacy preference rates obscured; U.S. News rankings reward selectivity metrics that legacy preferences inflate (lower-credential legacy admits dilute SAT averages less than rejecting all below-cutoff applicants); institutional marketing emphasizes 'most rigorous selection process' while legacy consideration remains. The theater is not total (some genuine merit consideration occurs) but substantial enough to signal institutional inertia.",
+    "directionality_logic": "Directionality (d) computation drives chi = ε × f(d) × σ(S). Non-legacy applicants: victim status + trapped exit → high d (~0.95) → f(d) ≈ 1.42 → maximum chi. First-generation/low-income: victim status + constrained exit → high d (~0.82) → f(d) ≈ 1.20 → high chi. Administration: beneficiary + mobile exit → moderate d (~0.55) → f(d) ≈ 0.75 → moderate chi. Alumni/donors: beneficiary + arbitrage exit → low d (~0.15) → f(d) ≈ -0.01 → negative/near-zero chi (they experience low/negative extraction). Access-equity coalition: victim status + constrained exit → high d (~0.80) → but organized power atom → moderate d adjustment (~0.55) → f(d) ≈ 0.75 → moderate chi. National scope σ(S) = 1.0 (no scope amplification), producing final chi values in range 0.0-0.82 across perspectives. The perspectival gap emerges from directionality differences, not from ε or σ(S) differences.",
+    "perspectival_gap": "This constraint demonstrates maximal perspectival divergence from a single structural phenomenon. Non-legacy applicants (d≈0.95) experience snare — pure extraction, no coordination benefit visible to them. Alumni donors (d≈0.15) experience rope — coordination mechanism (institutional relationship maintenance) with minimal extraction. Administration (d≈0.55) experiences tangled rope — legitimate coordination function alongside asymmetric extraction, but benefits exceed costs from their institutional position. Access-equity coalition (d≈0.55 organized) experiences scaffold — same structural contradiction but with perceived agency and sunset pathway. Merit ideology (institutional/arbitrage) experiences piton — ritual performance persisting through inertia despite degraded function. Analytical observer risks mountain — naturalizing wealth stratification as inevitable feature of high-stakes credentials. The perspectival gap is structurally rooted: the same constraint produces genuinely different experienced chi values and classification outcomes depending on the observer's structural position, exit options, and power level. No single classification captures the phenomenon; the presheaf over all positions is necessary.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint exhibits genuine coordination properties (fundraising, alumni relations, institutional culture continuity) bundled with pure extraction (credential opportunity cost for non-legacy applicants). The tangled rope classification correctly captures this hybrid: 0.40 ≤ χ ≤ 0.90 (satisfied at ~0.60), base extraction ε ≥ 0.30 (satisfied at 0.58), suppression ≥ 0.40 (satisfied at 0.68), requires active enforcement true. The coordination function is real and substantial ($500M-1B annual gift flows), preventing pure snare classification. The extraction is asymmetric and structurally maintained by enforcement (selective admission decisions based on legacy status). However, the critical mandatrophy question is whether the 'coordination function' is genuine or a rationalization of pure extraction. The omegas address this: if legacy preferences do NOT causally drive major gifts (omega: donation_causality_ambiguity), then the 'coordination' is spurious and the constraint should reclassify toward snare. If institutional culture CANNOT be maintained post-elimination of legacy preferences (omega: identity_lock_institutional_culture), then the coordination is real and tangled rope is appropriate. The classification is stable under the assumption that both coordination functions are genuine. If either is empirically falsified, reclassification is warranted. The constraint demonstrates that high-ε tangled rope classifications require empirical validation of claimed coordination functions, not merely assumption of institutional claims about coordination benefit."
   },
   "boltzmann": {
-    "coordination_type": "identity_coordination",
-    "boltzmann_floor_override": 0.12
+    "coordination_type": "identity_coordination"
   },
   "network": {
     "affects_constraints": [
-      "socioeconomic_diversity_pressure",
-      "affirmative_action_legal_challenges",
-      "wealth_credential_feedback_loop"
+      "credential_premium_wage_gap",
+      "intergenerational_wealth_concentration",
+      "first_generation_student_dropout_risk"
     ],
-    "dual_formulation_note": "Legacy admission gatekeeping is upstream of broader status-reproduction mechanisms but represents a distinct structural constraint. Related constraints in the family include socioeconomic diversity pressures (agents organized to displace legacy preference), affirmative action legal challenges (institutional sunset mechanisms), and wealth-credential feedback loops (how status concentration through admission gatekeeping amplifies economic inequality). This story focuses on the gatekeeping mechanism itself; related stories address its downstream effects and institutional challengers."
+    "dual_formulation_note": "Legacy admission gatekeeping operates in a constraint family with three upstream structural constraints: the credentialing wage premium (why the gate matters), intergenerational wealth concentration (what funds alumni giving), and downstream first-generation dropout risk (downstream victim cohort experiencing identity and resource barriers in admitted cohort). Each story has distinct ε values reflecting different structural mechanisms. Legacy gatekeeping sits between credential value and family wealth concentration."
   },
-  "directionality_overrides": []
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.42
+    }
+  ]
 }

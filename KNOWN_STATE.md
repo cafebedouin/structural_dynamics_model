@@ -20,6 +20,46 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-02 — Toy corpus finished 769/770; generator repair + 3 robustness fixes
+
+**Result.** The kernel-aware toy corpus is complete at **769/770** (ladder `beta_processed.txt`;
+~772 `.pl` in `testsets/` incl. 3 user-added). Composition: ~566 kernel readings (200 kernels
+decomposed → 570 reading seeds) + ~200 plain (sampled from `beta_seeds.json`). One lone holdout:
+`market_as_natural_default__genuine_natural_reading` — claims `mountain` but the model keeps
+authoring `suppression 0.08 > 0.05`; this is a **false-mountain** (claimed-natural + real
+suppression), correctly rejected by the schema's conditional mountain gate, not a pipeline bug.
+Leave it or hand-author.
+
+**Four fixes landed in `agent/generate_kernel_corpus.py` + new `python/story_repair.py`** (all
+witnessed — plain went 0/200 → 199/200, residual 8 → 1):
+1. **`overwrite=True` in the no-scope path (`run_no_scope`).** The 0/200 plain failure cause:
+   `json/` still holds the **pre-rebuild ~4067-file corpus** (it was never archived alongside
+   `testsets/`), so plain seeds reuse archive ids whose stale `json/<id>.json` exists and hit the
+   `out_json.exists()` SKIP. The ladder (`beta_processed.txt`), not json-existence, is the rebuild's
+   idempotence source. **Tripwire: don't "fix" this back to skip-on-exists, and note `json/` is
+   stale — archiving it (like `testsets_3000`) is an open cleanup (GAP-style).**
+2. **`poll_batch` transient-error retry** (≤30) for 503/overloaded/rate-limit/timeout — a single
+   503 was crashing long batch runs mid-poll.
+3. **Plain seed summaries capped to ≤500** (`prolog/toy_plain_seeds_capped.json`). Phase-0.5
+   uncapped summaries (median 2585) made the model over-produce invented fields; the proven
+   generation regime is ≤500 (median 338). The full `beta_seeds.json` stays uncapped (for the probe).
+4. **`python/story_repair.py` — canonical deterministic repair**, wired into
+   `process_batch_results` (strip + `repair_story` + re-validate before fail). Repairs required-
+   defaults, **non-ASCII id transliteration across all 12 schema id-pattern fields** (incl.
+   `cs_structure.axioms[].atom`, `network.affects_constraints`, `reference_frame`), null→0,
+   unconditional [0,1] clamps. It does **NOT** touch conditional `allOf/then` bounds (claimed_type
+   vs metric) — those are semantic; clamping would fabricate. `recover_historical_seeds.fix_story`
+   now delegates to `repair_story` (fork removed; the one dropped nicety: commentary-key merge).
+
+**Prompt hardening.** `prompts/constraint_story_generation_prompt_json.md` gained a
+"TYPE↔METRIC CONSISTENCY IS A HARD GATE" block (piton ⇒ theater_ratio ≥ 0.70; mountain ⇒
+suppression ≤ 0.05 / extractiveness ≤ 0.25). It nudged `tsunami_stone…` (piton) over the line on
+retry; the mountain holdout resists because it is genuinely a false-mountain.
+
+**Open / follow-ups:** (1) `json/` pre-rebuild corpus archive cleanup; (2) the 1 false-mountain
+residual; (3) the static-ε-below-series-max authoring finding (70/499, prior entry) is still not
+an OQ.
+
 ## 2026-06-02 — `sheaf_status` now persisted (W1×sheaf join built); orbit provenance is a sidecar
 
 **If you are editing `json_report.pl`, `run_pipeline.py`'s `_manifest_step`, or anything that reads
@@ -222,6 +262,87 @@ removed symbol.
    That is a χ-input question on the observer axis, independent of the deleted report field. It is
    **not** yet an OQ — open one if it graduates from "authoring-convention note" to a classification
    concern.
+
+## 2026-06-01 — Corpus rebuild pipeline built + validated on N=1 (decompose → no-scope gen)
+
+**New CLI on `agent/generate_kernel_corpus.py` (default behavior CHANGED).** The script now
+has three modes:
+- **default = no-scope generation** (no flag): `python3 -m agent.generate_kernel_corpus [N]`
+  reads a seed pool (`--seeds`, default `prolog/beta_seeds.json`), takes the **next N
+  unprocessed** seeds per `prolog/beta_processed.txt`, generates full stories **flat** into
+  `prolog/testsets/` + `json/`, with collision-proof naming (`base` else `base__<uuid8>`,
+  checked vs corpus ∪ ladder) and **3× retry** → `outputs/no_scope_runs/failures.json`.
+  Seeds carrying `kernel_id`+`reading_id` generate as kernel readings (stamp `cs_kernel_id`);
+  others as plain. Repeated calls **advance** the ladder (no treadmill).
+- **`--decompose KERNELS_JSON [N]`**: batch-SCOPE (Sonnet) the next N kernels into reading
+  **seeds** (constraint-story seeds, NOT stories), namespaced `constraint_id=<kernel_id>__<reading_id>`,
+  appended to `prolog/kernel_readings_pool.json`; idempotent via `outputs/decompose/decomposed.txt`.
+- **`--scope --run-tag TAG`**: the legacy serial-SCOPE+generate, run-tagged (unchanged).
+
+**Rebuild input assembly.** `python/merge_kernels.py` merges `prolog/kernels/*.json`
+(per-model kernel proposals) + `prolog/kernel_seeds.json`, dedups (id OR normalized title) →
+`prolog/kernels_merged.json` (**K=200**), and samples K plain seeds from `beta_seeds.json` →
+`prolog/toy_plain_seeds.json` (200). `prolog/beta_seeds.json` is the full 3,380 re-harvest
+(Phase 0.5).
+
+**Probe finding (why kernels come from authored files, not the archive).**
+`python/partition_probe.py` (+ `outputs/partition_probe/validity_analysis.md`): the
+prolog_v5 archive is **observer-axis** — a tightened committer-kernel rubric finds **0
+kernels / 99** there while detecting **74%** of authored kernels (positive control). So
+committer-kernels are sourced from `kernels_merged.json`, the archive supplies plain seeds.
+
+**Validated end-to-end (N=1).** Decomposed `homoousios_christology` → 3 readings → generated
+3 `.pl` stories; engine loads, `cs_kernel_coverage(homoousios_christology, 3)`,
+`cs_kernel_divergence` fires (semi_arian vs pro_nicene at analytical contexts). The 3
+`homoousios_christology__*_reading.pl` in `testsets/` are the live PoC output (ladder records
+them). Next forward move: scale incrementally — `--decompose prolog/kernels_merged.json 10`
+then generate from `kernel_readings_pool.json`, and `--seeds prolog/toy_plain_seeds.json N`
+for plain. Tripwire: a generation quirk (model emits an extra `'description'` property) fails
+some seeds on first try but the 3× retry usually recovers; persistent ones land in
+`failures.json`.
+
+**Scale run (2026-06-01): decompose-all + generate-100, two engine-level fixes.**
+- Decomposed all **200** kernels → **570** reading seeds in `kernel_readings_pool.json`
+  (Sonnet batch, $7.21, $0.036/kernel). Generated **96/100** readings (4 skipped, below).
+- **FIX — duplicate `story_uid` (engine-rejecting).** The generator minted a UUID only via
+  `setdefault`, but Haiku copies the example's placeholder UUID (`550e8400-…`) into every
+  story, so 10 stories shared one uid and CS validation halted the corpus
+  (`duplicate story_uid`). Fixed at `generate_kernel_corpus.py:520` to **always overwrite**
+  `header.story_uid` with a fresh `uuid4` (story_uid is a per-generation surrogate, never
+  authored by the content model). Existing files repaired in place (re-mint + replace).
+  **Tripwire: do NOT revert to `setdefault` for story_uid** — it readmits duplicates.
+- **FOLLOW-UP — reading ids >64 chars are skipped (fail-loud).** `run_no_scope` skips seeds
+  whose `constraint_id` exceeds the batch `custom_id` 64-char limit (4 of the first 100, e.g.
+  `basic_law_interpretive_authority__parliamentary_sovereignty_reading`). They are logged,
+  not generated. To recover them, shorten the `<kernel_id>__<reading_id>` namespacing (e.g.
+  hash or abbreviate) in `run_decompose` before re-decomposing those kernels.
+- Post-fix corpus loads clean: 102 testsets, 99 cs_story_uid, 33 kernels, swipl exit 0.
+
+## 2026-06-01 — Corpus rebuild Phase 0: old corpora archived, `testsets/` emptied
+
+**What changed.** Start of the kernel-aware corpus rebuild (plan:
+`~/.claude/plans/i-rough-sketch-of-steady-squid.md`). Two `git mv`s and a retarget:
+- `prolog/testsets/` (229 `.pl` + 11 run-tagged subdirs) → `prolog/archives/prolog_v6/`.
+- `prolog/testsets_3000/` (3380 `.pl`) → `prolog/archives/prolog_v5/`.
+- Fresh **empty** `prolog/testsets/` (only `.gitkeep`) is now the active corpus — the
+  rebuild output destination. **The live engine corpus is empty until Phase 3 generates.**
+- The 4 executable overlays that hardcoded `corpus_path='testsets_3000'`
+  (`python/sweeps/range_sweep.py`, `python/tests/diff_cut_proof.py`,
+  `python/tests/test_battery.py` ×2, `python/tests/alt_power_transform_test_3k.py`) were
+  retargeted to `'archives/prolog_v5'`. Positive control: that overlay now loads
+  **3380** from the new path (`[corpus] Loading 3380 testset files...`, exit 0).
+
+**Archives are testable.** `prolog/archives/prolog_v5` holds the **3,380**-story pre-rebuild
+corpus; `prolog/archives/prolog_v6` holds the prior 229-story live corpus. To test either,
+overlay `corpus_path` to `archives/prolog_v5` (or `_v6`) before `load_all_testsets` — the
+glob `Dir/*.pl` resolves relative to swipl's cwd (`prolog/`).
+
+**Tripwire — `testsets_3000/` no longer exists; `testsets/` is empty.** A fresh agent that
+overlays `corpus_path='testsets_3000'`, or expects the live `testsets/` to hold ~223 stories,
+will **silently load 0**. The path is now `archives/prolog_v5`. (CLAUDE.md's "corpus is 223"
+distinction is stale during the rebuild — pending end-of-session CLAUDE.md update.) Note: this
+is the *archive convention* `prolog/archives/prolog_vN` matching the existing v1/v3/v4, not a
+top-level `archives/`.
 
 ## 2026-06-01 — `signature_detection.pl`: honest `unknown` now SURFACES (override removed, OQ-37)
 

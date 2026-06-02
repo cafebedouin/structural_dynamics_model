@@ -1,0 +1,169 @@
+{
+  "header": {
+    "constraint_id": "kodashim_obligation__memorial_archival",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_kodashim_obligation__memorial_archival",
+    "measurement_id_prefix": "kodashim_mem",
+    "story_uid": "6253b1f5-4346-4b49-ad2f-ec11d78818de"
+  },
+  "base_properties": {
+    "extractiveness": 0.08,
+    "suppression": 0.02,
+    "theater_ratio": 0.85,
+    "claimed_type": "rope",
+    "human_readable": "Kodashim Study as Memorial Archival (Post-70 CE Reading)",
+    "topic_domain": "religious_studies/jewish_law/commitment_systems",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "jewish_collective_memory"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "universal",
+      "label": "The Individual Student (Civilizational Memory Keeper)",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL STUDENT (ROPE) — The student who studies kodashim texts is engaged in a pure coordination mechanism: preserving knowledge of an extinct practice for collective memory. No extraction occurs. The student enters freely, can exit freely (mobile), and the constraint is coordinative only — transmitting the memorial archive across generations. Powerless in the nominal sense (no coercive authority) but culturally significant. At civilizational scale, this is rope: coordination of memory work without asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "universal",
+      "label": "The Rabbinical Authority (Ceremonial Custodian)",
+      "comment": "PERSPECTIVE 2: RABBINICAL AUTHORITY (ROPE) — The institutional body that maintains the kodashim study obligation in post-70 CE law sees this as coordination: preserving the textual archive ensures continuity of Jewish practice-memory and supports the broader institutional function of law study as identity maintenance. The authority does not extract from students; it coordinates their participation in memorial labor. This is arbitrage-level exit for institutional actors (they can choose whether to maintain the obligation, and they do), making the effective extractiveness near zero. The constraint is pure coordination of memory."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Study Community (Performative Maintenance)",
+      "comment": "PERSPECTIVE 3: STUDY COMMUNITY / INSTITUTIONAL PRACTICE (PITON) — At biographical timescale and regional scope, the ongoing study practice appears as inertial maintenance. The community continues the ritual of kodashim study not primarily because it serves the stated memorial function (which it does, archivally) but because the practice has institutional weight. Theater ratio 0.85 indicates that much of the study activity is performative: the ritual of studying extinct sacrifice procedures, the reverence for the texts, the institutional signaling that 'we preserve this knowledge' — all this performs cultural continuity more than it functionally preserves it. The constraint persists through habit and institutional identity, not because the memorial coordination breaks down without it. Constrained exit: communities cannot simply abandon the practice without institutional cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Memorial Coordination)",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (ROPE) — At analytical remove and civilizational scope, this constraint is pure coordination: the mechanism by which a dispersed Jewish diaspora preserves collective memory of extinct institutional practice. The coordination function is genuine — without such memorial study, the archive would degrade and knowledge of sacrificial practice would be lost. No extraction occurs; no beneficiary captures asymmetric gain. This is the lowest-theater perspective: the constraint's function and form align. The coordination is real and valuable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "memorial_function_vs_obligation_drift",
+      "question": "Is the stated obligation to study kodashim grounded in the memorial function (preserve cultural memory of extinct practice) or in a different axiom (e.g., spiritual merit of study itself, or restoration-readiness for messianic redemption)?",
+      "resolution_mechanism": "Textual analysis of Talmudic rationales for maintaining kodashim study post-70 CE; comparison of justifications in Mishnah, Gemara, and medieval responsa; historical tracing of why the obligation persisted vs. why it could have been abandoned.",
+      "impact": "If memorial function is primary: this reading's rope classification is correct — pure coordination of memory work. If restoration-readiness or spiritual merit is primary: the constraint should reclassify as a different reading (study_as_occupation or performance_prerequisite). The kernel itself may have multiple live readings with different legitimacy grounds.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether kodashim study obligation is grounded in memorial preservation vs. other axioms"
+    },
+    {
+      "id": "this_reading_vs_sibling_reading_foreclosure",
+      "question": "Does the memorial_archival reading logically foreclose the performance_prerequisite reading (obligation as spiritual readiness for redemptive restoration)? Or do they coexist as different interpretations held by different Jewish communities?",
+      "resolution_mechanism": "Survey of contemporary Jewish movements' approaches to kodashim study: do they treat it as memorial archival only, or do some maintain elements of restoration-readiness doctrine? Can a single community coherently hold both readings simultaneously?",
+      "impact": "If foreclosure: the engine computes one reading as overridden within the other's framework. If coexistence: both readings remain live and the kernel exhibits genuine indeterminacy. This determines reading_relations taxonomy (forecloses vs. coexists_with).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Logical relationship between memorial_archival and performance_prerequisite readings"
+    },
+    {
+      "id": "archive_degradation_mechanism",
+      "question": "What mechanism prevents the memorial archive of kodashim knowledge from degrading if the obligation to study is removed? Is continuous study essential, or could the knowledge be preserved through written texts alone without the ceremonial obligation?",
+      "resolution_mechanism": "Historical analysis: did kodashim knowledge actually degrade in communities that abandoned the obligation? Or is the degradation risk more epistemic (institutional loss of expertise) than textual (archive loss)? Comparison with other extinct practices whose archives survived without continuous obligatory study.",
+      "impact": "If study is essential to preservation: the coordination function is genuine and high-value. If texts alone suffice: the constraint's memorial function is ceremonial and could be replaced by lower-theater archival mechanisms. This affects whether rope classification accurately captures the constraint's functional value.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether continuous obligatory study is essential to preserving kodashim knowledge"
+    },
+    {
+      "id": "reading_kernel_identity_ambiguity",
+      "question": "Is this constraint one reading of a single kernel (kodashim_obligation), or do the memorial_archival reading and the performance_prerequisite reading operate on separate kernels (one grounded in post-70 CE continuity, one grounded in restoration theology)? If separate kernels, the constraint stories should be decomposed differently.",
+      "resolution_mechanism": "Textual archaeology: does the Talmudic discourse that established the post-70 CE obligation explicitly ground it in memorial function, or did memorial justification emerge as a post-hoc reading to explain an obligation that originated from different axioms? Chain-of-transmission analysis of when each reading became dominant.",
+      "impact": "If single kernel with multiple readings: this story correctly models one reading of kodashim_obligation. If separate kernels: the constraint family should decompose into separate kernel-groups, each with its own constraint_id (kodashim_obligation__restoration vs. kodashim_obligation__archival as separate kernels, not readings).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether memorial_archival and performance_prerequisite are readings of one kernel or separate kernels"
+    }
+  ],
+  "measurements": [],
+  "interval": {
+    "start": 70,
+    "end": 2026
+  },
+  "commentary": {
+    "narrative_context": "The destruction of the Second Temple in 70 CE severed the institutional practice of sacrificial worship in Jerusalem. Yet Jewish law maintained an obligation to study the detailed procedures and architecture of the Temple sacrificial system (kodashim, 'holy things'). This constraint models the memorial-archival reading: the obligation to study kodashim persists as a mechanism for preserving collective Jewish memory of an extinct practice. No performance is expected or possible. The study is purely archival — maintaining textual knowledge of procedures that will never again be enacted under present conditions. The kernel (kodashim_obligation) is acknowledged as historically binding — the obligation originated in post-70 CE Rabbinic law and remains formally binding in traditional Jewish practice. But the constraint is presently inactive in the performative sense: no actual sacrifices are prepared, no Temple service is conducted. The constraint's function collapses to ceremonial preservation of cultural memory. This reading competes with sibling readings that ground the obligation in different axioms: study_as_occupation (the obligation exists because continuous engagement with Jewish law is meritorious in itself, regardless of the material's practical relevance) and performance_prerequisite (the obligation persists because Jewish law anticipates messianic restoration of Temple worship, for which the knowledge must be preserved and ready). Each reading instantiates a different structural constraint on how the kodashim obligation functions in post-70 CE Jewish practice.",
+    "key_agents": [
+      "Individual Student: (powerless/mobile) — Freely enters memorial study; can exit without structural penalty; participates in coordination of collective memory.",
+      "Rabbinical Authority: (institutional/arbitrage) — Maintains the obligation in law; coordinates students' participation; benefits from institutional continuity of legal tradition.",
+      "Study Community: (institutional/constrained) — Maintains the ceremonial practice; invested in the performative transmission of the obligation; cannot abandon without institutional cost to identity.",
+      "Jewish Collective Memory: (abstract/universal) — Beneficiary of the memorial archival function; preserved through continuous study and textual transmission.",
+      "Analytical Observer: (analytical/analytical) — Sees the constraint as pure coordination of memory work; perceives the memorial function as genuine and valuable."
+    ],
+    "logic_rationale": "Extractiveness (0.08): Minimal. The memorial-archival reading produces essentially zero extraction. Students enter the study voluntarily (mobile exit). The authority gains no asymmetric benefit — maintaining the obligation serves the collective memorial function, not institutional extraction. No victim group exists: the study does not extract from anyone. The low extractiveness reflects that this is pure coordination. Suppression (0.02): Minimal. No coercive mechanisms enforce participation in kodashim study. No barriers prevent exit. The constraint is held in place by voluntary transmission of cultural practice, not by suppression. Theater ratio (0.85): High. Most of the observable activity in kodashim study is performative rather than functionally necessary for preservation. The reverence for the texts, the ritual of studying procedures that cannot be enacted, the institutional weight given to the practice — all this performs cultural continuity. But the theater does not indicate extraction; it indicates inertial maintenance through ceremonial practice. The constraint is a rope (coordination) that appears piton-like (performative) when observed at biographical timescale. From civilizational scope, the theater is the only available mechanism for preserving memory of extinct practice, and it works.",
+    "directionality_logic": "Directionality values are derived from structural position: powerless students with mobile exit experience near-zero extraction (d ≈ 0.15, beneficiary status without exit cost); institutional authority with arbitrage exit experiences negative extraction (d ≈ 0.05, beneficiary status with full escape option). The analytical observer derives d from the absence of coercive mechanisms and asymmetric extraction (d ≈ 0.50, symmetric). No override is needed — the structural data produces low directionality naturally. This reflects the constraint's genuine coordinativeness.",
+    "perspectival_gap": "The perspectival gap appears between timescales and scopes. At civilizational/universal scope, the constraint is pure rope: coordination of memory. At biographical/regional scope, it appears as piton: performative maintenance through institutional inertia. The same structural constraint exhibits different classifications depending on whether the observer assumes the memorial function is a genuine coordination goal (rope) or a rationalization for institutional momentum (piton). The gap is not an error; it is diagnostic. It reveals that the constraint's legitimacy in the memorial-archival reading depends on the observer accepting that preserving cultural memory is a genuine coordination value. If that value is questioned, the constraint degrades into ceremonial theater.",
+    "kernel_context": "This constraint instantiates the memorial_archival reading of the kodashim_obligation kernel. The kernel is the post-70 CE obligation to study Temple sacrifice procedures. The reading interprets this obligation as grounded in memorial preservation of extinct practice. Sibling readings: (1) study_as_occupation — the obligation exists because continuous engagement with Jewish law is intrinsically meritorious; (2) performance_prerequisite — the obligation persists to maintain readiness for messianic Temple restoration. Each reading generates a different constraint story with different extractiveness, different victim sets, and different structural mechanisms. The memorial_archival reading produces a low-extraction rope constraint; the occupation reading would produce a higher-extraction tangled_rope or scaffold (obligation as institution-creating labor); the prerequisite reading would produce a mountain or piton (obligation as preparation for impossible-in-present-conditions restoration). All three are live readings within contemporary Jewish practice, held by different communities and interpretive traditions.",
+    "mandatrophy_analysis": "This reading resolves the mandatrophy by reducing extractiveness nearly to zero: the constraint functions as pure coordination with no asymmetric extraction. The beneficiary (collective memory) is genuine and non-extractive. The cost-bearer is not a victim but a voluntary participant in the coordination. This is NOT mislabeling extraction as coordination — it is recognizing that the constraint genuinely lacks extraction. The piton perspective (performative maintenance at biographical scope) is real but subordinate to the rope perspective (genuine coordination at civilizational scope). The theater is high because it is the only available preservation mechanism for extinct practice, not because it masks extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination",
+    "boltzmann_floor_override": 0.02
+  },
+  "network": {
+    "affects_constraints": [
+      "kodashim_obligation__study_as_occupation",
+      "kodashim_obligation__performance_prerequisite"
+    ],
+    "dual_formulation_note": "The kodashim_obligation kernel decomposes into three structurally distinct constraint stories with different epsilon values and different structural relationships. The memorial_archival reading models the constraint as archival coordination (ε≈0.08, rope). The study_as_occupation reading models it as labor-institution creation (ε≈0.45, tangled_rope). The performance_prerequisite reading models it as restoration theology (ε≈0.30, scaffold). Each reading grounds the obligation in a different axiom. All three readings remain live in contemporary Jewish law; they represent different interpretations of the same kernel held by different communities. The network edges document the semantic and structural relationships between readings."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "post_70_ce_memorial_preservation",
+    "drift_state": {
+      "moment": "contemporary_diaspora_practice",
+      "direction": "stable",
+      "magnitude": "minor",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "kodashim_obligation__study_as_occupation",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "kodashim_obligation__performance_prerequisite",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "extinct_practice_requires_memorial_preservation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "archival_study_constitutes_valid_obligation_fulfillment",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  }
+}

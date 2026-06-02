@@ -3,25 +3,27 @@
     "constraint_id": "global_oil_supply_stability",
     "version": "1.0",
     "generated_date": "2026-02-26",
-    "status": "ACTIVE"
+    "status": "ACTIVE",
+    "measurement_id_prefix": "oilstab",
+    "story_uid": "57e3fd32-3bd2-4926-bdc1-287e97b854c9"
   },
   "base_properties": {
     "extractiveness": 0.58,
-    "suppression": 0.68,
-    "theater_ratio": 0.55,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
     "claimed_type": "tangled_rope",
-    "human_readable": "Global Oil Supply Stability as Coordination and Extraction",
+    "human_readable": "Global Oil Supply Stability: Coordination and Extraction",
     "topic_domain": "geopolitical_economy/energy_infrastructure",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "oil_producing_nations",
-      "integrated_energy_companies",
-      "consumer_nations_with_reserves"
+      "oil_producing_states",
+      "integrated_energy_majors",
+      "oil_exporting_companies"
     ],
     "victims": [
-      "oil_importing_nations_without_reserves",
+      "oil_importing_nations",
       "renewable_transition_actors",
-      "carbon_constrained_economies"
+      "energy_dependent_poor"
     ]
   },
   "perspectives": [
@@ -31,17 +33,26 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "Oil-Import-Dependent Nation Without Strategic Reserves",
-      "comment": "PERSPECTIVE 1: OIL-IMPORT-DEPENDENT NATION (SNARE) \u2014 A nation dependent on imported oil with no strategic reserves faces maximum extraction. Supply disruptions trigger immediate economic crisis; the nation cannot exit the constraint without multi-decade infrastructure transformation. Exit cost is civilizational. Suppression is total: military dependence on oil-producing allies, currency reserves consumed by price volatility, renewable transition indefinitely delayed by capital scarcity. This agent experiences pure extraction with no coordinating function."
+      "label": "Oil-Importing Nations Without Alternatives",
+      "comment": "PERSPECTIVE 1: OIL-IMPORTING NATIONS (SNARE) — Structurally trapped. Energy infrastructure is already built around oil; switching costs are prohibitive (decades for renewable transition, trillions in capital). Global oil price shocks cause immediate economic damage with no credible exit path in biographical time. Maximum experienced extraction through price volatility, supply disruption risk, and forced alignment with producer preferences. Zero degrees of freedom."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "powerful",
-      "time_horizon": "biographical",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "Oil-Producing Petrostate",
-      "comment": "PERSPECTIVE 2: OIL-PRODUCING PETROSTATE (TANGLED ROPE) \u2014 Coordinates global energy supply (genuine coordination function) while extracting rents through artificial scarcity and cartel discipline. OPEC coordination solves a real collective action problem: without production discipline, oil prices would collapse and all producers would suffer. But this coordination mechanism is asymmetrically structured \u2014 it extracts from import-dependent nations and constrains renewable alternatives. Exit options are constrained by economic lock-in: diversification is capital-intensive and often politically blocked by resource nationalism. Both beneficiary and victim of their own constraint."
+      "spatial_scope": "national",
+      "label": "Energy Transition Economies",
+      "comment": "PERSPECTIVE 2: ENERGY TRANSITION ECONOMIES (TANGLED ROPE) — Constrained but mobile across generational horizon. Genuine coordination function: global oil supply stabilizes energy infrastructure while transition alternatives mature. But also extraction: oil-dependent development pathway locks in infrastructure favoring fossil fuels; transition capital competes with oil subsidies and support for incumbent energy infrastructure. Significant agency but high cost to exit."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "Diversified Energy Companies",
+      "comment": "PERSPECTIVE 3: DIVERSIFIED ENERGY COMPANIES (ROPE) — Organized actors with portfolio flexibility. Coordinate supply stability across oil, gas, renewables, nuclear. Experience oil supply constraint as pure coordination mechanism — stabilizing one commodity enables investment in others. Can arbitrage between markets; low switching cost. Net beneficiary from the coordination function."
     },
     {
       "classification_type": "rope",
@@ -49,26 +60,8 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Integrated Energy Major (Oil + Gas + Renewables)",
-      "comment": "PERSPECTIVE 3: INTEGRATED ENERGY MAJOR (ROPE) \u2014 Multinational energy corporations with diversified portfolios experience the constraint as pure coordination. Oil supply stability enables long-term investment planning, futures markets, and refinery operations. The firm benefits from predictable pricing and established infrastructure. These firms have arbitrage options: they can shift investment into renewables, gas, or infrastructure. For them, oil stability is a solved coordination problem, not an extraction mechanism. Net experience: rope."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "moderate",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "Renewable Energy Transition Economy",
-      "comment": "PERSPECTIVE 4: RENEWABLE ENERGY TRANSITION ACTOR (TANGLED ROPE) \u2014 Wind, solar, battery, and grid-modernization industries benefit from price volatility and oil-supply disruptions, which create urgency for transition investment. However, they are constrained by capital competition with established fossil fuel infrastructure, regulatory capture by oil interests, and the long payback cycles for renewable infrastructure. The constraint both enables (crisis creates mandate) and constrains (capital scarcity) their growth. High extraction from coordination benefit mismatch."
-    },
-    {
-      "classification_type": "piton",
-      "agent_power": "institutional",
-      "time_horizon": "civilizational",
-      "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "Strategic Petroleum Reserve System",
-      "comment": "PERSPECTIVE 5: STRATEGIC PETROLEUM RESERVE SYSTEM (PITON) \u2014 The SPR (US, IEA, others) was created as a coordination mechanism to buffer supply shocks and prevent economic collapse from embargo. It has become substantially performative: reserve drawdowns are politically timed rather than reserve-scarcity driven; auction prices rarely reflect true emergency value; the system's primary function (stabilizing energy markets during genuine crisis) is opaque and rarely invoked. The SPR persists through institutional inertia, not active function. Theater ratio is high: the ritual of reserve management persists despite low actual protective capacity relative to total consumption."
+      "label": "Oil Producing States (OPEC and Non-OPEC)",
+      "comment": "PERSPECTIVE 4: OIL PRODUCING STATES (ROPE) — Institutional actors benefiting from supply coordination. OPEC production quotas and informal coordination among major producers (Russia, Saudi Arabia, Iraq) function as a collective action solution to the prisoner's dilemma of unlimited production. The constraint is coordination from their perspective: managing the supply curve to maintain prices above extraction costs. Arbitrage options available (switching between production levels, alliances, storage). Net beneficiaries."
     },
     {
       "classification_type": "scaffold",
@@ -76,8 +69,35 @@
       "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "Climate Commitment Coalition (State + City Level)",
-      "comment": "PERSPECTIVE 6: CLIMATE COMMITMENT COALITION (SCAFFOLD) \u2014 Nations and cities with net-zero commitments (Paris signatories, C40, subnational actors) experience oil supply stability as a temporary constraint with a sunset. The constraint declines as renewable capacity increases and demand shifts. However, enforcement is weak (many signatories miss targets), exit cost is high (energy poverty during transition), and the sunset timeline is contested. This is a genuine scaffold: coordination on transition pathway with explicit planned exit, but sunset is conditional on technology deployment and political will."
+      "label": "Renewable Energy Coalition and Climate Governance",
+      "comment": "PERSPECTIVE 5: RENEWABLE ENERGY COALITION (SCAFFOLD) — Organized actors (IEA, IRENA, climate policy advocates, renewable developers) see global oil supply stability as a temporary constraint with a sunset. The constraint is sunsetting as renewable costs fall below fossil fuels, battery technology scales, and carbon pricing internalizes externalities. Generational horizon — 30-50 years for full transition. Structured exit path: declining oil dependency, rising renewable penetration, phase-out of fossil fuel subsidies. Theater is moderate because transition infrastructure is being actively built."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "International Energy Institutions",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL ENERGY INSTITUTIONS (PITON) — IEA, OPEC, IAEA maintain elaborate monitoring and scenario-building apparatus around oil supply. The institutional function (price reporting, supply forecasting, strategic reserve management) is largely performative at civilizational scale — it communicates stability but does not fundamentally alter production decisions or geopolitical risk. Theater ratio 0.48 reflects that coordination is still genuine (supply data genuinely matters for investment), but much institutional activity is maintaining a narrative of managed stability rather than controlling underlying variables. Piton classification: institution persists through inertia (legacy role) while actual coordination increasingly happens through market mechanisms and bilateral deals."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Energy-Dependent Poor and Vulnerable Populations",
+      "comment": "PERSPECTIVE 7: ENERGY-DEPENDENT POOR (SNARE) — Structurally trapped. Oil price spikes directly reduce purchasing power for fuel and transportation; no alternatives available (cannot switch to renewables without capital investment). Immediate time horizon — crisis occurs within months. Global scope because oil prices are globally indexed. Maximum extraction with zero perceived agency."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Integrated Petroleum Majors (Supermajors)",
+      "comment": "PERSPECTIVE 8: INTEGRATED PETROLEUM MAJORS (TANGLED ROPE) — Powerful institutional actors (Shell, ExxonMobil, Saudi Aramco, ADNOC). Genuine coordination function: global oil market infrastructure (pipelines, refineries, distribution networks) is standardized and scaled through incumbent majors. But also extraction: market structure allows supermajors to capture downstream rents; barriers to entry protect incumbent positions; regulatory capture enables favorable taxation and environmental terms. Mobile — can diversify into renewables — but extraction premium from oil infrastructure lock-in makes exit costly."
     },
     {
       "classification_type": "mountain",
@@ -85,55 +105,64 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer (Natural Law View)",
-      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From the longest civilizational timescale, oil supply stability appears as an immutable law of geopolitical physics: energy density is finite, geological reserves are finite, production capacity is finite. Demand always exceeds supply at some price point. The structure of energy markets appears as a natural law constraint analogous to thermodynamic limits. However, the structural data contradicts this: the constraint is socially constructed (OPEC cartel behavior, renewable suppression, capital allocation decisions). This perspective risks false naturalization of extractive institutions as inherent limits."
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 9: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, oil supply stability reflects immutable geological and technological constraints: oil is a dense energy carrier requiring massive infrastructure; its extraction, refining, and distribution are capital-intensive and long-cycle; geopolitical concentration of reserves creates structural inequality in bargaining power. This perspective sees the constraint as an unavoidable feature of the Anthropocene energy transition. However, structural data contradicts the mountain classification — the engine will flag this as a false summit, revealing that natural-seeming constraints are actually the product of deliberate choice (infrastructure investment, subsidy allocation, regulatory capture)."
     }
   ],
   "omegas": [
     {
-      "id": "renewable_transition_cost_timing",
-      "question": "What is the true cost and timeline for global renewable energy transition at current technology deployment rates?",
-      "resolution_mechanism": "Life-cycle assessment of renewable infrastructure; cost-of-capital comparison with fossil fuel replacement; empirical transition timelines from early-adopter nations (Denmark, Costa Rica, Paraguay)",
-      "impact": "If transition cost < 10% of GDP over 30 years: scaffold sunset is achievable and the constraint is fundamentally temporary. If > 40% GDP: sunset timeline extends to civilizational scale and scaffold classification fails.",
+      "id": "extraction_vs_legitimate_scarcity_rent",
+      "question": "Is the price premium captured by oil-producing states and majors a legitimate return to scarce geological assets, or extractive rent enforced through cartelization and geopolitical leverage?",
+      "resolution_mechanism": "Comparative analysis: oil prices relative to extraction costs, refining margins, and transport costs; correlation between OPEC coordination strength and price spreads; counterfactual modeling of prices under perfect competition",
+      "impact": "If mostly legitimate scarcity rent: constraint reclassifies toward Rope from more perspectives. If mostly extraction rent: constraint reclassifies toward Snare from more perspectives. Determines whether beneficiary capture is structural or contingent.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Legitimate scarcity rent versus extractive cartel rent"
+    },
+    {
+      "id": "renewable_transition_timeline_credibility",
+      "question": "Is the scaffold sunset (30-50 year energy transition) a genuine structural path or aspirational narrative lacking credible financing and political commitment?",
+      "resolution_mechanism": "Tracking of renewable capacity additions, battery deployment rates, and carbon pricing trajectory against Net Zero scenarios; monitoring of fossil fuel subsidy removal vs maintained support; assessment of political consensus stability across electoral cycles",
+      "impact": "If genuinely credible: scaffold perspective confirmed. If aspirational without enforcement mechanisms: constraint persists beyond sunset and scaffold reclassifies to Rope or Tangled Rope. Affects directionality of transition economies.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether renewable transition has credible timeline and financing"
+    },
+    {
+      "id": "geopolitical_leverage_contingency",
+      "question": "How much of the extraction mechanism depends on specific geopolitical vulnerabilities (Middle East centrality, chokepoint straits, OPEC cohesion) versus fundamental scarcity?",
+      "resolution_mechanism": "Scenario analysis: oil supply stability under alternative geopolitical configurations (China-dominated Middle East, U.S. energy independence, OPEC dissolution, diversified supply sources). Historical correlation between geopolitical shocks and price spikes. Long-run elasticity of supply responses to price signals.",
+      "impact": "If mostly geopolitical contingency: constraint is contingently remediable through alliance restructuring, diversification, or strategic decoupling. If mostly fundamental scarcity: constraint is durable. Affects classification of importing nations — trapped vs constrained distinction hinges on whether exit is geopolitically or physically blocked.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Extent to which extraction depends on geopolitical leverage versus fundamental scarcity"
+    },
+    {
+      "id": "infrastructure_lock_in_reversibility",
+      "question": "How quickly can oil-dependent energy infrastructure be transitioned or repurposed? What is the true switching cost for importing nations?",
+      "resolution_mechanism": "Detailed lifecycle analysis of power generation fleets, vehicle fleets, heating infrastructure; capital replacement timelines; technical compatibility of renewable integration with existing grids; case study analysis of early-transition economies (Denmark, Costa Rica, Iceland)",
+      "impact": "If high reversibility and low switching cost: trapped classification becomes constrained or mobile. If low reversibility and extremely high cost: trapped classification is correct and persists. Directly affects biographical horizon assessment for importing nations.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Cost and timeline for global renewable transition"
+      "description": "Reversibility of oil infrastructure lock-in and true switching costs"
     },
     {
-      "id": "cartel_stability_mechanism",
-      "question": "What mechanism maintains OPEC+ cartel discipline despite price volatility, differing national interests, and production cost heterogeneity?",
-      "resolution_mechanism": "Historical analysis of cartel defection rates, pricing variance, and punishment mechanisms; comparison with other commodity cartels (copper, aluminum); geopolitical modeling of military alliance structures within OPEC+",
-      "impact": "If cartel is inherently unstable and discipline decays: oil supply becomes more volatile and extractiveness increases. If cartel discipline is self-enforcing: extraction persists at current levels indefinitely.",
+      "id": "supermajor_transition_credibility",
+      "question": "Can integrated petroleum majors genuinely transition to renewable-dominant business models, or do their organizational capabilities and asset bases make them structurally dependent on fossil fuels?",
+      "resolution_mechanism": "Tracking of major capital allocation to renewables vs fossil; organizational capability in low-carbon technologies; empirical comparison of transition progress across majors; scenarios from energy modeling groups about future energy mix",
+      "impact": "If credible transition: majors' mobile exit option is genuine, tangled_rope classification holds. If constrained transition: mobile classification overstates agency, classification becomes rope or snare. Affects understanding of who captures long-term rents.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Mechanism sustaining OPEC+ production discipline"
+      "description": "Credibility of petroleum major transition to renewables"
     },
     {
-      "id": "oil_demand_elasticity_threshold",
-      "question": "At what price point does oil demand collapse due to fuel-switching, behavioral change, or economic recession?",
-      "resolution_mechanism": "Empirical elasticity estimates from historical price shocks (1973, 1979, 2008, 2022); modeling of substitution rates for transportation (electric vehicles), heating (heat pumps), electricity (renewables); consumption pattern shifts in high-price regimes",
-      "impact": "If threshold is low (demand collapses at $80-100/barrel): constraint becomes self-limiting and extraction cannot persist indefinitely. If threshold is high (demand persists to $150+/barrel): extraction capacity is much larger and coordinating function is marginal.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Price elasticity threshold for oil demand destruction"
-    },
-    {
-      "id": "geopolitical_constraint_heterogeneity",
-      "question": "How much of the constraint's extraction is due to genuine scarcity vs. intentional supply restriction by geopolitically motivated actors?",
-      "resolution_mechanism": "Comparison of actual production capacity (estimated reserves, extraction technology) with actual production volumes; analysis of production cuts during non-crisis periods (OPEC+ quota management); modeling of counterfactual supply under perfect competition",
-      "impact": "If restriction accounts for > 60% of extraction: constraint is primarily political (tangled rope / snare) and could be rapidly destabilized by political realignment. If restriction < 20%: constraint is primarily physical scarcity and is more structurally stable.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Relative contribution of scarcity vs. intentional restriction"
-    },
-    {
-      "id": "carbon_constraint_internalization",
-      "question": "Will carbon pricing, regulation, or climate-motivated capital reallocation materially constrain oil demand within the constraint's biographical timescale (20-50 years)?",
-      "resolution_mechanism": "Empirical tracking of carbon tax implementation and pricing levels; monitoring of fossil fuel divestment and capital flight; historical comparison with other phase-out constraints (leaded gasoline, CFCs, asbestos)",
-      "impact": "If internalized rapidly: scaffold sunset accelerates and snare classification for locked-in nations becomes time-limited. If internalized slowly: constraint persists at current extractiveness for 50+ years.",
-      "confidence": "low",
-      "type_class": "preference",
-      "description": "Timeline for carbon constraints to materially affect oil demand"
+      "id": "false_summit_natural_law_claim",
+      "question": "Is global oil supply stability a natural law of energy infrastructure (geological scarcity + capital requirements), or a socially constructed constraint naturalizing economic and geopolitical choices?",
+      "resolution_mechanism": "Examining whether the constraint persists without beneficiary enforcement; counterfactual analysis of energy development pathways that might have been taken; historical sociology of oil infrastructure decision-making; assessment of which components are truly unavoidable versus which reflect deliberate design choices",
+      "impact": "If natural law: mountain classification is justified. If socially constructed: false summit signature fires, engine reclassifies to tangled_rope or snare. Affects entire analytical framing of whether 'stability' is achievable or whether instability is a feature.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Natural law versus socially constructed constraint"
     }
   ],
   "measurements": [
@@ -144,63 +173,102 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.52
+      "time_point": 15,
+      "value": 0.58
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
+      "time_point": 30,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 45,
       "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.38
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
+      "time_point": 15,
       "value": 0.48
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
+      "time_point": 30,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
       "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 45,
+      "value": 0.58
     }
   ],
   "interval": {
     "start": 0,
-    "end": 20
+    "end": 50
   },
   "commentary": {
-    "narrative_context": "Global oil supply stability functions as both a coordination mechanism solving the collective action problem of energy infrastructure investment and an extraction mechanism concentrating rents to oil-producing states and integrated energy majors at the cost of import-dependent economies and renewable transition actors. The constraint exhibits the full spectrum of DR classification: from snare (oil-importing nations without alternatives) to rope (diversified energy companies) to scaffold (renewable transition pathways with temporal sunset) to piton (Strategic Petroleum Reserve ritual). The extractiveness (0.58) reflects moderate asymmetric advantage to producers over consumers; suppression (0.68) reflects the high barriers to exit through renewable transition or energy efficiency. Theater ratio (0.55) reflects that approximately half of the observable supply management activity is genuine coordination (preventing wasteful price crashes) and half is performative (ritual reserve management, public announcements without material production changes).",
+    "narrative_context": "Global oil supply stability is a structurally hybrid constraint that simultaneously solves a genuine coordination problem (organizing massive capital investment in energy infrastructure across political borders and long timescales) and extracts rents through the concentration of geological reserves, market power by integrated majors, and geopolitical leverage by oil-producing states. The constraint exhibits all six DR types from different structural positions: from snare for trapped oil-importing nations to rope for organized energy companies to scaffold for renewable transition coalitions. The extractiveness trajectory (0.42 → 0.65 → 0.58) reflects a rise during the 2008-2015 period of resource nationalism and OPEC coordination strengthening, peak extraction around 2010-2015 (shale revolutions in importing nations + renewable cost collapse + climate policy acceleration), followed by partial moderation as transition economics improve and alternative energy sources mature. The suppression trajectory rises from 0.55 to 0.68 as geopolitical competition (U.S.-China, Russia sanctions, Middle East tensions) intensifies, then moderates as renewable transition reduces import dependence pressure. Theater ratio remains moderate (0.35→0.52) because coordination remains partly genuine — supply forecasting and price discovery have real coordination function — but increasingly performative as market mechanisms (futures, derivatives, strategic reserves) substitute for institutional coordination narrative.",
     "key_agents": [
-      "Oil-Producing Petrostates (Saudi Arabia, Russia, Iran): Primary beneficiaries (institutional/arbitrage) \u2014 capture rents through production discipline and cartel coordination",
-      "Oil-Importing Nations Without Reserves (India, Turkey, most developing nations): Primary victims (powerless/trapped) \u2014 dependent on imports with no exit capacity; bear full cost of supply disruptions and price volatility",
-      "Integrated Energy Majors (Shell, Chevron, TotalEnergies, Equinor): Secondary beneficiaries (institutional/arbitrage) \u2014 benefit from stable supply and infrastructure; have diversification options",
-      "Renewable Energy Transition Actors (solar, wind, battery, grid-tech): Secondary victims (moderate/constrained) \u2014 constrained by capital competition and regulatory capture despite enabling conditions from energy crisis",
-      "Climate-Committed Nations (Paris Agreement signatories): Organized actors (organized/constrained) \u2014 see energy transition as temporary constraint with sunset; constrained by energy poverty risk during transition",
-      "Strategic Petroleum Reserve System: Institutional actor (institutional/arbitrage) \u2014 maintains performative ritual; primary function increasingly decorative"
+      "Oil-Producing States (OPEC, Russia, Iraq, Iran, Saudi Arabia): Primary beneficiaries (institutional/arbitrage) — capture rents through cartelization and geopolitical leverage",
+      "Integrated Petroleum Majors (Shell, ExxonMobil, Saudi Aramco, TotalEnergies, ADNOC): Primary beneficiaries (powerful/mobile) — maintain downstream oligopoly and capture processing/distribution rents",
+      "Oil-Importing Nations (OECD Europe, Japan, Korea, India, developing world): Primary victims (powerless/trapped) — locked into oil-dependent infrastructure with no alternative in biographical horizon",
+      "Renewable Energy Coalition (IEA, IRENA, climate advocates, solar/wind developers): Organized beneficiaries of sunset (organized/constrained) — building alternative pathway with generational horizon",
+      "Energy-Dependent Poor and Vulnerable Populations: Powerless victims (powerless/trapped) — bear immediate cost of price spikes without exit options",
+      "Diversified Energy Companies: Organized coordinators (organized/mobile) — benefit from price stability across energy portfolio; have flexibility to arbitrage",
+      "International Energy Institutions (IEA, OPEC Secretariat, IAEA): Institutional theater-maintainers (institutional/arbitrage) — perform coordination narrative; actual coordination increasingly happens through bilateral deals and market mechanisms",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing contingent institutional arrangements as inevitable scarcity constraint"
     ],
-    "logic_rationale": "Extractiveness (0.58): The constraint extracts significant wealth from oil-importing to oil-producing nations through rent capture. OPEC+ production discipline maintains prices 20-40% above competitive marginal cost. However, extractiveness is not higher (e.g., 0.70+) because: (1) renewable alternatives are technically feasible and cost-competitive, preventing total lock-in; (2) integrated majors distribute rents to importing nations through refining operations and dividend flows; (3) supply shocks are genuine coordination problems whose solution has real value. Suppression (0.68): High but not total. Oil-importing nations face significant barriers to exit (infrastructure lock-in, capital scarcity, geopolitical dependence) but not insurmountable ones \u2014 renewable transition is technologically feasible within 20-30 years at scale. Strategic options exist (energy efficiency, electrification, hydrogen) but require sustained capital and political commitment. Theater ratio (0.55): OPEC+ announcements, reserve management, and price-target rhetoric are partially performative \u2014 they coordinate genuine supply decisions but also create false scarcity narratives. SPR management adds theatrical component (announced drawdowns that occur at small scale relative to consumption).",
-    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon (oil supply coordination with asymmetric rents) produces divergent classifications from different structural positions. The mapping is not arbitrary: it follows from the indexical tuple. A powerless agent with trapped exit options experiences maximum extraction (snare). An institutional beneficiary with arbitrage options experiences coordination (rope). An organized actor with sunset options sees temporary constraint (scaffold). The perspectival divergence is diagnostic: it reveals that the constraint's 'stability' is distributed unevenly. Stability for whom? For the producer, it is. For the import-dependent powerless nation, it is destabilizing instability.",
-    "directionality_logic": "Directionality values are derived from beneficiary/victim declarations and exit options. Oil-producing states as institutional beneficiaries with arbitrage options (can shift to downstream, gas, sovereign wealth) get low d (0.15-0.25), resulting in negative effective extraction for them\u2014they experience the constraint as beneficial coordination. Oil-importing nations as powerless victims with trapped exit options get high d (0.90-0.95), resulting in maximum experienced extraction. Integrated majors as institutional beneficiaries with arbitrage get low d. Renewable actors as moderate victims with constrained exit get moderate-high d (0.70-0.80). Climate-committed nations as organized actors with constrained exit get moderate d (0.50-0.65). The SPR as institutional arbitrage gets low d but high theater ratio prevents rope classification (piton instead). The analytical observer at civilizational scale risks deriving d from false naturalization\u2014treating scarcity as fixed rather than socially constructed.",
-    "mandatrophy_analysis": "This constraint avoids mandatrophy through careful decomposition of perspectives. The claimed type (tangled_rope) reflects the composite: genuine coordination function (supply stabilization, infrastructure investment) + asymmetric extraction (rent capture, transition blocking). The beneficiary perspective (rope) and victim perspective (snare) are both empirically justified\u2014they are not mandatrophic confusions but accurate readings from different structural positions. The mandate (that oil supply be stable and coordination function be real) is compatible with the observation (that distribution is asymmetric and extraction occurs). The risk of mandatrophy arises if the constraint claims to be pure rope (coordination without extraction) or pure snare (extraction without coordination). The data rejects both claims."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint genuinely coordinates supply, reducing catastrophic underinvestment and price crashes, which benefits all agents. But the coordination function is packaged with significant extraction: (1) OPEC/major producers capture geological scarcity rents (legitimate) plus cartel-enforced price premium (extraction); (2) supermajors maintain oligopolistic position in processing/distribution; (3) oil-dependent nations face externalized climate costs plus geopolitical vulnerability. The 0.58 value reflects that genuine coordination (justifying ~0.20-0.30 baseline) is layered with significant but not dominant extraction (adding ~0.30-0.35). Suppression (0.62): High. Multiple suppression mechanisms operate simultaneously: (1) infrastructure lock-in — oil infrastructure is capital-intensive and long-lived, creating high switching costs for importing nations; (2) geopolitical leverage — control of reserves and chokepoints enables coercion; (3) subsidy structures — many producing states subsidize domestic fuel, making alternative energy uncompetitive without policy intervention; (4) political capture — oil industry influences energy policy across importing nations. Suppression is not absolute (renewable transition is occurring), but credible alternative pathways require decades and active policy support. Theater ratio (0.48): Moderate. Supply coordination through IEA, OPEC, and national energy agencies has genuine information function — price discovery, inventory management, scenario planning have real coordination value. But increasingly, actual price discovery happens through futures markets and bilateral deals; institutional theater consists of producing supply forecasts and strategic narrative about 'stable markets.' The theater_ratio trajectory (rising from 0.35 to 0.52 at peak, falling to 0.45) reflects growth of institutional coordination narrative during 2010-2015 (IEA expanded, OPEC more vocal) followed by replacement of institutional narrative with market-based price discovery as renewable energy and shale production decentralized decision-making. Claimed type (tangled_rope): Justified by the presence of (1) genuine coordination function — stabilizing supply across long capital cycles; (2) active enforcement — OPEC production quotas, strategic reserve management, bilateral coordination among majors; (3) asymmetric distribution — benefits concentrate to producing states and majors, costs concentrate to importing nations and vulnerable populations.",
+    "perspectival_gap": "This constraint demonstrates stark perspectival divergence. Oil-producing states experience pure coordination (Rope) — they are solving their own prisoner's dilemma of avoiding destructive overproduction. Diversified energy companies experience coordination (Rope) — stable oil prices enable investment in renewables and other energy sources. But oil-importing nations without transition pathways experience pure extraction (Snare) — forced price-taker status with no agency. Renewable energy coalitions see a temporary problem with a sunset (Scaffold) — falling costs and accelerating transition mean the constraint's extraction mechanism is eroding. Energy-dependent poor experience maximum extraction (Snare) with zero perceived alternatives. Integrated majors experience mixed coordination and extraction (Tangled Rope) — they benefit from supply stability AND from oligopolistic position; their mobile exit option (to renewables) exists but is not costless. International institutions perform coordination narrative (Piton) — institutional apparatus persists despite declining real function as markets increasingly price supply. The analytical observer risks seeing natural law (Mountain) — geological scarcity appears immutable — but the structural data reveals this as false summit: the extraction mechanisms (cartelization, geopolitical leverage, subsidy structures, infrastructure lock-in) are socially constructed, not geological inevitabilities.",
+    "directionality_logic": "Directionality (d) is derived from structural position within the extraction flow. Oil-producing states as net beneficiaries with arbitrage options (mobile exit): d ≈ 0.10-0.15 (beneficiary location). Integrated majors as beneficiaries but with switching costs (mobile but constrained by asset base): d ≈ 0.25-0.35 (partial beneficiary). Oil-importing nations as victims with trapped exit: d ≈ 0.90+ (maximum victim location). Renewable transition actors as organized agents with exit pathway: d ≈ 0.55-0.65 (victim location but high agency). Energy-dependent poor as powerless victims: d ≈ 0.95+ (maximum victim location). The sigmoid f(d) transforms these position parameters into experienced extractiveness multipliers, with the formula χ = ε × f(d) × σ(S). For trapped importing nations: high d generates high f(d) ~1.35-1.42, which amplifies the base extractiveness (0.58) to experienced χ ≈ 0.78-0.85 despite moderate base rate. For beneficiary states with arbitrage: low d generates f(d) ~-0.05 to 0.20, which dampens or reverses the extraction signal, producing χ ≈ -0.03 to 0.12 (coordination signal). This explains the perspectival gap: same base extractiveness (0.58) produces snare experience (χ > 0.70) for victims and rope experience (χ < 0.35) for beneficiaries.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that this constraint exhibits all six types legitimately. The resolution does not require choosing one type as 'correct' but understanding the presheaf: each agent's classification is their true experienced constraint structure given their structural position. Oil-producing states genuinely coordinate supply (Rope). Importing nations genuinely experience extraction without perceived exit (Snare). Renewable coalitions genuinely see a sunset pathway (Scaffold). Integrated majors genuinely face mixed coordination and extraction (Tangled Rope). Institutions genuinely perform partially degraded functions (Piton). The analytical observer genuinely risks naturalizing contingency as law (false summit Mountain). No mandatrophy exists — the six types are six truthful measurements of the same constraint from six different structural positions. The constraint's identity is the presheaf over these perspectives, not any single point in the space."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "renewable_energy_transition_capital_bottleneck",
-      "geopolitical_energy_dependence",
-      "global_carbon_emissions_lock_in"
-    ]
+      "opec_production_coordination",
+      "petrodollar_currency_regime",
+      "renewable_energy_transition",
+      "geopolitical_middle_east_stability",
+      "climate_externality_pricing"
+    ],
+    "dual_formulation_note": "The global oil supply stability constraint decomposes into sub-constraints based on observable: (1) supply_price_coordination (ε ≈ 0.30, Rope) — the genuine coordination of investment and production across political borders; (2) cartel_rent_extraction (ε ≈ 0.65, Snare) — the enforced monopoly premium on oil pricing; (3) infrastructure_lock_in (ε ≈ 0.70, Mountain-candidate) — the apparent immutability of existing energy infrastructure. The aggregate story (this file) treats them as unified because they operate through the same mechanisms (OPEC coordination, supply uncertainty, geopolitical leverage) but the ε-invariance principle allows decomposition into separate stories if research focuses on one observable."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.2
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "institutional",
+      "d_value": 0.92
     }
   ]
 }

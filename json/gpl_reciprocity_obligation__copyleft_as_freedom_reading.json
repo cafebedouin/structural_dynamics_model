@@ -1,0 +1,242 @@
+{
+  "header": {
+    "constraint_id": "gpl_reciprocity_obligation__copyleft_as_freedom_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gpl_freedom",
+    "story_uid": "f4da63f6-ba71-4a8a-980e-2cc0df14723d"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "GPL Reciprocity Obligation (Copyleft-as-Freedom Reading)",
+    "topic_domain": "software_licensing/intellectual_property/open_source_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "downstream_users",
+      "open_source_ecosystem"
+    ],
+    "victims": [
+      "proprietary_integrators",
+      "commercial_closed_source_vendors"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Downstream User (Empowered by Reciprocity)",
+      "comment": "PERSPECTIVE 1: DOWNSTREAM USER (ROPE) — Mobile exit options (can fork, modify, redistribute under GPL terms). Experiences the reciprocity obligation as pure coordination: the requirement that derivative works remain open preserves the user's own freedoms and prevents proprietary capture of their modifications. Beneficiary of the constraint — gains access to source code, modification rights, and assurance of future derivative availability."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Proprietary Integrator (Constrained by Reciprocity)",
+      "comment": "PERSPECTIVE 2: PROPRIETARY INTEGRATOR (TANGLED ROPE) — Constrained exit options (can use GPL code but cannot close-source derivative without violating license). Experiences mixed coordination and extraction: benefits from using GPL-licensed components (coordination function — code reuse, development cost reduction) but faces suppression of the proprietary business model (extraction — must open-source modifications or abandon the GPL component). Active enforcement required to maintain the reciprocity obligation against integrators attempting to circumvent it."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Large Commercial Vendor (Trapped by Reciprocity)",
+      "comment": "PERSPECTIVE 3: LARGE COMMERCIAL VENDOR (SNARE) — Trapped by ubiquity of GPL components in infrastructure stack (Linux kernel, GNU tools, etc.). Cannot practically avoid GPL dependencies; exit is prohibitively costly. Experiences the reciprocal disclosure obligation as pure extraction with minimal coordination benefit — forced to choose between opening proprietary code or finding non-GPL alternatives (often unavailable). Experiences this constraint as coercive with high suppression of the proprietary business model."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Open Source Coalition (Enforcing Sunset of Proprietary Capture)",
+      "comment": "PERSPECTIVE 4: OPEN SOURCE COALITION (SCAFFOLD) — Organized agents (Free Software Foundation, Linux Foundation, open-source communities) maintaining GPL enforcement infrastructure with an implicit sunset: as open-source norms mature and proprietary software's economic value declines, the need for coercive reciprocity enforcement diminishes. The reciprocity obligation is temporary enforcement for a transitional period — enabling the open-source ecosystem to reach critical mass and legitimacy. Has sunset clause logic: as open-source becomes the default, proprietary capture becomes less viable and enforcement pressure relaxes."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Permissive License Ecosystem (Degraded GPL Rationale)",
+      "comment": "PERSPECTIVE 5: PERMISSIVE LICENSE ECOSYSTEM (PITON) — MIT, Apache 2.0, and BSD licenses achieve similar coordination (code reuse, open development) with lower theater and lower enforcement overhead. The GPL's reciprocity rationale was necessary in the 1990s-2000s to prevent proprietary capture (Tivoization risk was real); permissive licenses now coexist with strong community and reputational norms against capture. GPL enforcement persists through institutional inertia (FSF, Linux Foundation governance structures) despite diminished empirical necessity. Theater ratio reflects that much GPL enforcement is performative — legal threat without substantial bite, as empirical proprietary capture of GPL code is rare in modern ecosystem."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Copyleft as Natural Law of Information Freedom)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal analytical perspective, copyleft represents an immutable property of information economies: any permissive licensing system will eventually be captured by proprietary actors unless reciprocal disclosure is mathematically enforced. This perspective naturalizes the GPL reciprocity obligation as a logical necessity (if you want downstream freedom, you must prevent upstream enclosure). However, empirical data contradicts this: permissive-license projects (Linux permissively licensed drivers, Apache-licensed Hadoop, MIT-licensed JavaScript frameworks) have resisted proprietary capture through community norms and reputational mechanisms alone. The mountain classification is a false summit — it naturalizes what is actually a historically contingent choice about enforcement strategy."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "proprietary_capture_counterfactual",
+      "question": "Would significant proprietary capture of GPL-licensed code have occurred without the reciprocal disclosure obligation, or would community norms and reputational mechanisms provide sufficient defense?",
+      "resolution_mechanism": "Historical comparison: permissive-license ecosystems (Apache, MIT, BSD) vs GPL-licensed ecosystems; empirical rate of proprietary capture attempts and community response effectiveness; analysis of permissive-license projects that resisted capture (Linux permissive drivers, Hadoop, Node.js ecosystem)",
+      "impact": "If capture would occur without GPL: reciprocity is functionally necessary for downstream user freedom (Snare or Tangled Rope from vendor perspective is justified). If community norms suffice: GPL reciprocity is contingent enforcement strategy, not natural law (Piton or Scaffold more accurate than Mountain).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether proprietary capture is inevitable without GPL reciprocity or preventable through norms"
+    },
+    {
+      "id": "downstream_freedom_vs_upstream_constraint",
+      "question": "Does the GPL reciprocity obligation genuinely preserve downstream user freedoms, or does it primarily constrain upstream proprietary integrators' choices?",
+      "resolution_mechanism": "Empirical analysis of downstream user behavior: do downstream users perceive themselves as freer (more modification rights, more code access, more forking capability) under GPL vs permissive licenses? Survey of downstream user exit costs and perceived constraint. Compare with upstream integrator data on how reciprocity obligation constrains their technical choices and business models.",
+      "impact": "If downstream freedom is primary: constraint is coordination mechanism (Rope from user perspective is correct). If upstream constraint is primary: constraint is extraction against proprietary interests (Snare from vendor perspective is correct). If both are salient: Tangled Rope classification confirmed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether GPL reciprocity primarily enables downstream freedom or constrains upstream proprietary business models"
+    },
+    {
+      "id": "enforcement_mechanism_dependency",
+      "question": "How much does the GPL reciprocity obligation's effectiveness depend on active legal enforcement (FSF litigation, cease-and-desist) vs passive norm-based compliance (community pressure, reputational mechanisms)?",
+      "resolution_mechanism": "Historical analysis of GPL enforcement actions and their outcomes; comparison of compliance rates in jurisdictions with strong vs weak IP enforcement; study of GPL circumvention attempts and community response; measurement of which GPL violations are caught and enforced vs which persist undetected",
+      "impact": "If active enforcement is critical: constraint requires_active_enforcement=true is justified, Tangled Rope classification holds. If norm-based compliance dominates: enforcement is performative (Piton classification more accurate), theater_ratio should be higher.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree to which GPL reciprocity depends on active legal enforcement vs norm-based compliance"
+    },
+    {
+      "id": "reading_kernel_ambiguity",
+      "question": "Is the GPL reciprocity obligation grounded in a commitment to user freedom (this reading's premise), in prevention of proprietary restrictions (restriction reading's premise), or in maintenance of a commons (commons reading's premise)? These premises may coexist or may be in tension.",
+      "resolution_mechanism": "Textual analysis of GPL preamble and founding documents (Stallman's GNU Manifesto); examination of FSF's stated rationale in different periods; analysis of GPL enforcement priorities and arguments in litigation; study of how different GPL-variant communities (LGPL, AGPL, GPL3) have reframed the reciprocity obligation",
+      "impact": "If user freedom is central: this reading's axiom (reciprocity_preserves_downstream_freedom) is foundational and holdable. If preventing proprietary capture is central: restriction reading may be more foundational. If commons preservation is central: commons reading may be more foundational. Multiple coexisting rationales suggest 'coexists_with' relation type.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether GPL reciprocity is fundamentally about user freedom, proprietary prevention, or commons maintenance"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The GPL reciprocity obligation — the requirement that derivative works remain open-source under GPL terms — is one of the most structurally analyzed constraints in open-source governance. This story instantiates the 'copyleft-as-freedom' reading: the constraint is understood as a mechanism to preserve downstream user freedoms by preventing proprietary capture of collectively developed code. The reciprocity obligation benefits downstream users (who gain permanent access to source and modification rights) while constraining proprietary integrators (who cannot closed-source GPL derivatives without violating the license). From the analytical perspective, this reading risks naturalizing the GPL as a necessary law of information freedom (if you want user freedom, you must enforce reciprocity). However, empirical data from permissive-license ecosystems suggests the freedom preservation function can also be achieved through community norms and reputational mechanisms with lower enforcement overhead. This story models the constraint as a genuine Tangled Rope from the integrated view: real coordination function (enabling code reuse and open development) layered with genuine extraction against proprietary business models (preventing closed-source derivatives). The suppression of proprietary options is structurally necessary to the freedom-preservation function from this reading's perspective. The temporal measurements show declining suppression_requirement (from 0.55 to 0.48) as permissive licensing norms strengthen, suggesting the constraint's enforcement load is naturally decreasing as the ecosystem matures — consistent with the Scaffold perspective's sunset logic.",
+    "key_agents": [
+      "Downstream Users: Primary beneficiary (powerless/mobile) — gain permanent access to source code, modification rights, and assurance that derivative improvements remain open. Experiences constraint as pure coordination (Rope).",
+      "Proprietary Integrators: Primary victim (powerful/trapped) — cannot practically avoid GPL dependencies in infrastructure stack; forced to choose between opening proprietary code or abandoning GPL components. Experiences constraint as extraction (Snare from trapped perspective, Tangled Rope from constrained perspective).",
+      "Open Source Communities: Organized beneficiary (organized/constrained) — FSF, Linux Foundation, open-source projects maintaining GPL enforcement and governance structures. See reciprocity as temporary enforcement for ecosystem maturation with eventual sunset (Scaffold).",
+      "Permissive License Ecosystem: Institutional competitor (institutional/arbitrage) — MIT, Apache, BSD licenses achieving similar coordination with lower enforcement theater. GPL enforcement appears increasingly performative (Piton).",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing GPL reciprocity as inevitable law of information freedom when empirical evidence suggests community norms also suffice (False Summit Mountain)."
+    ],
+    "logic_rationale": "Extractiveness (0.32): Moderate-low. The GPL reciprocity obligation coordinates code reuse and open development (low-extraction coordination function) while suppressing proprietary business models (extraction against closed-source integrators). The net extractiveness is moderate because genuine coordination benefits exist alongside the suppression. This reading emphasizes the freedom-preservation (coordination) aspect over the proprietary-suppression (extraction) aspect, keeping extractiveness lower than the 'copyleft-as-restriction' reading would produce. Suppression (0.48): Moderate. The constraint suppresses proprietary business model options (inability to closed-source GPL derivatives), but this suppression is the intentional mechanism for preserving downstream freedoms from this reading's perspective. Not oppressive coercion but rather structural boundary maintenance. Theater ratio (0.35): Low-moderate. The reciprocity obligation has clear functional purpose (preventing proprietary capture) and generates measurable behavioral responses (compliance, license choice, architectural decisions). Less performative than traditional IP law, more tangible than pure theater. The theater ratio increases slightly over the interval as empirical proprietary capture becomes rare and enforcement becomes more norm-based than legal-threat-based, suggesting theater is rising relative to function.",
+    "perspectival_gap": "The perspectival gap reveals the structural tension between this reading's frame and others. The downstream user sees Rope (pure coordination with no extraction experienced). The constrained proprietary integrator sees Tangled Rope (mixed benefit and suppression). The trapped large vendor sees Snare (pure extraction with no alternative). The open-source coalition sees Scaffold (temporary enforcement for ecosystem maturation). The permissive license ecosystem sees Piton (degraded GPL rationale, now-unnecessary enforcement persisting through inertia). The analytical observer risks seeing Mountain (copyleft as natural law) but empirical data about permissive-license resilience suggests this is a false summit. The core perspectival gap is between the freedom-preservation reading (this story) and the restriction-based reading: does the reciprocity obligation primarily enable downstream freedom, or primarily restrict upstream proprietary options? This story takes the first position; the sibling reading takes the second.",
+    "directionality_logic": "The GPL reciprocity obligation's directionality depends on the agent's relationship to proprietary capture risk. Downstream users (beneficiaries of freedom preservation) have low d values — they experience the constraint as enabling rather than constraining. Proprietary integrators (victims of the suppression mechanism) have high d values — they experience suppression of their business model choices. The permissive license ecosystem represents a structural alternative with lower enforcement costs — their position relative to this constraint is one of arbitrage (they benefit from the freedom norm without the enforcement overhead). The analytical observer derives d from their position as an unaligned observer, taking a civilizational perspective on the constraint's necessity.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by recognizing that the apparent contradiction between 'copyleft-as-freedom' and 'copyleft-as-restriction' readings reflects a genuine structural duality: the reciprocity obligation is simultaneously freedom-enabling (from the downstream user's perspective) and proprietary-suppressing (from the closed-source vendor's perspective). The constraint's Tangled Rope classification holds both aspects simultaneously. The mandatrophy dissolves when we recognize that the two readings are not competing empirical claims about the same phenomenon — they are different perspectival descriptions of the same structural mechanism. Both the freedom-preservation and the proprietary-restriction aspects are real. The analytical observer's mountain (copyleft-as-natural-law) is a false summit because it naturalizes what is actually a historically contingent choice: communities could preserve downstream freedom through permissive licensing + strong norms, which would lower suppression and theater while preserving the coordination function. The GPL reciprocity obligation is effective but not inevitable.",
+    "kernel_context": "This constraint is one reading of the contested kernel: GPL reciprocity obligation. The kernel is the reciprocal-disclosure requirement embedded in GPL v2, v3, and variants (LGPL, AGPL). The reading this story instantiates is 'copyleft-as-freedom': the reciprocity obligation is framed as a mechanism to preserve downstream user freedoms by preventing proprietary capture of collectively developed code. Sibling readings: (1) 'copyleft-as-restriction' — frames the reciprocity obligation as a restriction on proprietary integration, emphasizing the suppression of closed-source business models; (2) 'copyleft-as-commons' — frames the obligation as preservation of a shared resource commons, emphasizing community governance over individual freedom or proprietary suppression. This reading (freedom) coexists with both siblings across different GPL communities, licensing contexts, and historical periods. The Free Software Foundation's primary rhetorical position is freedom-based (this reading); commercial open-source vendors emphasize restriction-resistance; commons-oriented communities (e.g., peer production networks) emphasize resource sharing. No single reading forecloses the others — different parties genuinely hold different framings of the same kernel, and both framings remain live in contemporary discourse."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "gpl_reciprocity_obligation__copyleft_as_restriction_reading",
+      "gpl_reciprocity_obligation__copyleft_as_commons_reading",
+      "permissive_licensing_ecosystem_adoption",
+      "proprietary_vendor_lock_in_prevention"
+    ],
+    "dual_formulation_note": "The GPL reciprocity obligation is a contested kernel with three structurally distinct readings, each producing a different constraint story with different ε values, beneficiary/victim structures, and classification patterns. This story (copyleft-as-freedom, ε=0.32, Tangled Rope) emphasizes the downstream-freedom coordination function. The copyleft-as-restriction reading (ε higher, more Snare-oriented) emphasizes proprietary suppression. The copyleft-as-commons reading (ε lower, more Rope-oriented) emphasizes resource governance. All three share the same kernel (the reciprocal-disclosure requirement) but interpret its purpose, function, and legitimacy differently. The three readings are linked as siblings via cs_structure.reading_relations."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.92
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "gpl_reciprocity_obligation__copyleft_as_restriction_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "gpl_reciprocity_obligation__copyleft_as_commons_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "reciprocity_preserves_downstream_freedom",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "proprietary_capture_threatens_freedom",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "copyleft_as_freedom_foundation",
+    "drift_state": {
+      "moment": "contemporary_permissive_license_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "header": {
+    "constraint_id": "acceptable_risk_energy__expected_value_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "accept_risk_ev",
+    "story_uid": "3135b429-59df-488b-87ae-341e3dad36d8"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Acceptable Risk via Expected Value (Deaths-per-TWh Aggregation)",
+    "topic_domain": "energy_policy/risk_governance/nuclear_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "nuclear_industry",
+      "coal_gas_incumbents",
+      "centralized_generation_operators"
+    ],
+    "victims": [
+      "categorical_tail_risk_populations",
+      "low_dose_chronic_exposure_cohorts",
+      "waste_sequestration_communities"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Nuclear Industry (Expected Value Reading)",
+      "comment": "PERSPECTIVE 1: NUCLEAR INDUSTRY (ROPE) — Experiences expected-value aggregation as legitimate coordination mechanism. The metric enables comparative risk assessment, shifting nuclear from perceived catastrophe-prone to lowest-mortality-per-TWh technology. Benefits from statistical reading that classifies accidents by frequency×severity rather than categorical worst-case. Net beneficiary with genuine coordination function: enables rational technology selection."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Siting Communities (Expected Value Reading)",
+      "comment": "PERSPECTIVE 2: SITING COMMUNITIES (TANGLED ROPE) — Constrained exit (cannot opt out of proximity; relocation cost prohibitive). The expected-value metric provides some benefit (transparent probabilistic risk communication replaces opaque assurance). But metric systematically underweights tail events and chronic low-dose exposure — community bears disproportionate weight in probability distribution (high-probability low-harm events weighted equally with low-probability catastrophic ones). Coordination function exists but asymmetric extraction embedded in how risk is aggregated."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Waste Sequestration Populations (Expected Value Reading)",
+      "comment": "PERSPECTIVE 3: WASTE SEQUESTRATION POPULATIONS (SNARE) — Geographically trapped, multi-generational (10,000+ year institutional continuity required for waste storage). Expected-value framing aggregates the 10,000-year tail — extremely low annual probability of breach weighted against civilization-scale consequences — into a 'manageable' expected mortality. The metric's mathematical structure renders the victim population's actual risk exposure invisible: low annual probability looks acceptable until multiplied by generational timescale. No coordination benefit, maximum suppression via metric aggregation."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Climate Decarbonization Coalition (Expected Value Reading)",
+      "comment": "PERSPECTIVE 4: CLIMATE DECARBONIZATION COALITION (SCAFFOLD) — Organized actors (climate scientists, energy modelers, policy networks) treat expected-value aggregation as temporary coordination framework for the decarbonization window (2025-2050). The metric solves the immediate problem: comparing nuclear's actual operational mortality to fossil fuels' immediate kill rate (coal: 24 deaths/TWh, gas: 4 deaths/TWh, nuclear: 0.07 deaths/TWh operationally). This enables rational fuel selection during climate emergency. Exit path (long-term: renewable build-out + storage maturity + waste solutions mature) implies sunset — expected value becomes unnecessary once decarbonization achieves base load without nuclear. Theater low (metric is functionally used). Coordination with sunset."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Risk Assessment Institutions",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL RISK ASSESSMENT INSTITUTIONS (PITON) — UNECE, IPCC, IAEA maintain expected-value protocols as formal standard despite recognition that tail risk aggregation is theoretically inadequate. The metric persists through institutional inertia: reorienting frameworks toward catastrophic-scenario analysis or weighted-tail-risk approaches would require renegotiating legitimacy with member states. Theater is moderate (institutions publish caveats about tail-risk limitations) but functional capacity has degraded — the frameworks are known to be inadequate for sequestration timescales and low-frequency/high-consequence scenarios. Maintenance cost (publications, workshops documenting limitations) exceeds functional benefit."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Expected Value as Natural Law)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / EXPECTED VALUE AS NATURAL LAW (MOUNTAIN) — From a mathematical-foundational perspective, expected value aggregation IS the correct risk metric under von Neumann-Morgenstern axioms (rational decision theory). The metric is not constructed but discovered: it follows logically from preferences over lotteries. This perspective risks naturalizing a mathematical abstraction as if it were a law of nature. However, the false-summit detector reveals the structural problem: the metric's appropriateness is axiom-dependent (von Neumann-Morgenstern), not universal. Different axiom systems (minimax, regret, catastrophic-bounds-first) produce different aggregation methods. The mountain classification is therefore contingent on mathematical premises, not inherent to reality."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "tail_risk_weighting_axiom_dependence",
+      "question": "Is expected-value aggregation the correct risk metric or is it one choice among axiomatically distinct frameworks (expected utility, minimax, regret-minimization, catastrophic-bounds-first)?",
+      "resolution_mechanism": "Comparative analysis of decision-theoretic axiom systems and their risk-aggregation outputs. Empirical test: which framework predicts actual policy decisions? Which produces outcomes retrospectively justified as 'optimal'?",
+      "impact": "If axiom-dependent: expected value is NOT a mountain but a tangled_rope with built-in extraction (benefits expected-value beneficiaries while rendering tail-weighted populations invisible). If universal: current framework correct and victim populations' concerns are orthogonal to rational risk assessment.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether expected value is axiomatically universal or one choice among frameworks"
+    },
+    {
+      "id": "timescale_commensurability_problem",
+      "question": "Can expected-value mortality aggregation meaningfully compare 80-year human lifespans (nuclear operational workers, coal miners) to 10,000-year institutional continuity requirements (waste sequestration)?",
+      "resolution_mechanism": "Discount-rate analysis: What social discount rate makes 10,000-year tail risks commensurate with 80-year individual exposure? Literature review: have risk economists justified the timescale commensurability?",
+      "impact": "If incommensurable: expected-value metric is mathematically fraudulent when applied across timescale orders of magnitude — masks structural incomparability as aggregated risk. If commensurable: requires explicit discount-rate specification that is normative (not empirical) and highly contestable.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether expected value can aggregate across 80-year and 10,000-year timescales"
+    },
+    {
+      "id": "chronic_exposure_nonlinearity",
+      "question": "Are low-dose chronic exposures (tritium in groundwater, radon from tailings) linearly aggregable with acute accident mortality, or do they exhibit dose-response nonlinearities that violate expected-value assumptions?",
+      "resolution_mechanism": "Radiobiology dose-response curve literature; comparison of linear no-threshold (LNT) model against hormesis and hormetic-region models. Epidemiological data on low-dose cohorts.",
+      "impact": "If nonlinear: expected-value aggregation commits a category error (treats dose-response curves as linear when they are not) — renders chronic exposure victim population's actual risk invisible. If linear: LNT assumption justified and current aggregation valid.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether low-dose chronic exposure is linearly aggregable with acute mortality"
+    },
+    {
+      "id": "categorical_irreversibility_weighting",
+      "question": "Should Chernobyl/Fukushima-scale exclusion zones (indefinite land-use prohibition, multi-generational displacement) be aggregated by mortality count or weighted separately as categorical irreversibility threshold events?",
+      "resolution_mechanism": "Policy analysis: how do regulatory frameworks actually treat exclusion zones? Are they modeled as low-probability-high-consequence or as constraints outside the expected-value frame? Precedent analysis in other domains (catastrophic ecosystem collapse, species extinction).",
+      "impact": "If categorical: expected-value metric is fundamentally incorrect framing — some outcomes are not commensurable with mortality aggregation. If aggregable: current metric appropriate but requires defensible willingness-to-pay conversion (lives per square-km of exclusion zone).",
+      "confidence": "medium",
+      "type_class": "preference",
+      "description": "Whether catastrophic exclusion zones are aggregable by mortality or categorical constraints"
+    },
+    {
+      "id": "intergenerational_consent_validity",
+      "question": "Can present-generation risk acceptance (expected-value decision) be justified on behalf of future waste-sequestration populations who did not consent and cannot exit?",
+      "resolution_mechanism": "Philosophical analysis of intergenerational justice; comparison with other irreversible harm frameworks (climate, persistent toxins). Precedent: how do legal systems treat binding commitments imposed on non-consenting future parties?",
+      "impact": "If invalid: expected-value framing is procedurally illegitimate regardless of mathematical correctness — constitutes imposition on powerless populations. If valid: current risk governance framework coherent.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Whether present-generation risk acceptance is valid for future non-consenting populations"
+    },
+    {
+      "id": "reading_observability_distinction",
+      "question": "This constraint is ONE READING of the acceptable_risk_energy kernel. Which reading governs actual policy decisions in a given jurisdiction? Is the reading-to-decision mapping observable?",
+      "resolution_mechanism": "Policy document analysis: trace regulatory decision pathways back to risk aggregation method. Interviews: which risk metric do decision-makers cite when justifying deployment/prohibition? Institutional archaeology: when did shifts between readings occur and what triggered them?",
+      "impact": "If one reading dominates: the 'minority' readings are systematically suppressed and constitute genuine victims. If readings coexist: different jurisdictions instantiate different readings and comparison enables outcome analysis (which reading produces better actual safety outcomes?).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Which reading of acceptable risk governs actual policy decisions"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The expected-value reading of acceptable risk aggregates energy source mortality across the full probability distribution without categorical weighting of accident scenarios, rendering nuclear power's low operational death rate (0.07 deaths/TWh) statistically superior to coal (24 deaths/TWh) and gas (4 deaths/TWh). This reading dominates risk assessment institutions globally (UNECE, IPCC, IAEA) and legitimates nuclear deployment policies in climate-decarbonization contexts. However, the expected-value framework systematically renders invisible the structural position of waste-sequestration populations (constrained across 10,000+ year timescales) and low-dose chronic-exposure cohorts (non-linear dose-response), while enabling incumbent fossil-fuel and nuclear industries to compete on aggregated mortality metrics that obscure categorical tail risks (Chernobyl/Fukushima exclusion zones, intergenerational consent violations). This constraint is ONE READING of a contested kernel: the acceptable_risk_energy kernel has multiple readings instantiating different risk aggregation methods (expected-value, catastrophic-tail, comparative-harm). Each reading produces different victim sets, different beneficiary structures, and different constraint types. The expected-value reading is structurally a tangled_rope: it provides genuine coordination benefit (enables rational fuel comparison during climate emergency) while embedding asymmetric extraction (benefits industries and present-generation decision-makers while imposing uncompensated risks on powerless future populations).",
+    "key_agents": [
+      "Nuclear Industry: Primary beneficiary (institutional/arbitrage) — expected-value metric shifts nuclear from perceived catastrophe-prone to lowest-mortality option; captures climate-emergency coalition support",
+      "Coal/Gas Incumbents: Secondary beneficiary (institutional/arbitrage) — expected-value metric enables continued operation during transition period by obscuring chronic cumulative mortality behind daily death counts",
+      "Waste Sequestration Communities: Primary victim (powerless/trapped) — geographically and temporally imprisoned; expected-value aggregation of low-annual-probability × 10,000-year timescale renders their actual exposure invisible",
+      "Low-Dose Chronic Exposure Cohorts: Secondary victim (moderate/constrained) — siting-community residents, groundwater-dependent populations; dose-response nonlinearities obscured by linear aggregation",
+      "Climate Decarbonization Coalition: Organized beneficiary-and-user (organized/mobile) — treats expected-value as temporary coordination framework for the decarbonization window; sees sunset as renewables mature",
+      "International Risk Assessment Institutions: Institutional maintainers (institutional/constrained) — UNECE, IPCC, IAEA maintain expected-value protocols as formal standard despite recognized inadequacy; constrained by member-state negotiation requirements"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The expected-value reading provides genuine coordination benefit — enables rational fuel comparison and supports climate decarbonization — but embeds extraction through metric design: present-generation decision-makers benefit from a risk aggregation method that renders future populations' and tail-risk populations' exposure statistically invisible. The extraction is not malicious but structural — the mathematical framework itself is the mechanism. Suppression (0.48): Moderate. Siting communities and waste-sequestration populations face significant barriers to exit (geographic entrenchment, relocation cost, institutional inertia in policy), but the primary suppression mechanism is epistemic — the expected-value metric itself suppresses perception of actual risk through mathematical aggregation. Theater ratio (0.55): Moderate. Expected-value calculations are transparent and defensible within decision-theoretic frameworks, but the framework selection itself is performed theater — presenting one axiom system as if it were universal or natural when alternative aggregation methods (minimax, catastrophic-bounds-first, weighted-tail) exist and would produce different policy conclusions.",
+    "directionality_logic": "The expected-value reading locates different agents along the directionality spectrum through their structural relationship to the risk aggregation mechanism. Nuclear industry and climate coalition have low d (beneficiaries with mobile/arbitrage exit) — they experience negative or near-zero effective extraction. Siting communities have moderate d (constrained exit, victim status) — they experience moderate extraction through the metric's systematic underweighting of their chronic exposure and siting-specific tail risks. Waste-sequestration populations have near-maximal d (trapped exit, multi-generational victim status) — they experience severe extraction through the metric's mathematical aggregation of low-annual-probability across timescales they cannot exit. The expected-value metric itself functions as a directionality device: it translates structural power (ability to choose aggregation method) into mathematical authorization (the metric 'legitimates' decisions that benefit present institutional actors while imposing future costs on powerless populations).",
+    "perspectival_gap": "This constraint demonstrates distinct perspectival readings arising from the same mathematical framework applied with different temporal and categorical boundaries. The nuclear industry and decarbonization coalition see coordination and legitimate risk comparison (rope/scaffold) because expected-value aggregation enables technology competition at their timescale (80-year facility lifespans, present-generation climate policy). Siting communities see mixed coordination and extraction (tangled_rope) because they benefit from transparent probabilistic communication but the metric systematically underweights their chronic exposure and low-frequency/high-consequence siting-specific risks. Waste-sequestration populations see pure extraction (snare) because the metric's mathematical structure renders their 10,000-year institutional burden invisible — low annual probability averaged across generational timescales produces 'acceptable' expected mortality that masks their actual irreversible exposure. The analytical observer risks seeing the expected-value metric as a natural law (mountain) — a discovery of decision theory rather than a choice among axiomatically distinct frameworks. The false-summit detector reveals the naturalization: expected value is one axiom system among others, and its selection distributes risk asymmetrically toward powerless, temporally-trapped populations.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy through explicit reading-level analysis. The expected-value reading IS a tangled_rope: it solves a genuine coordination problem (comparing technologies for rational fuel selection) while embedding asymmetric extraction (renders future and tail-risk populations invisible through mathematical aggregation). The mandatrophy is not 'which reading is correct?' but 'who benefits from choosing this reading?' The constraint demonstrates that risk aggregation methods are not discovered truths but institutional choices with distributional consequences. Alternative readings (catastrophic-tail reading, comparative-harm reading) would classify different constraint types and produce different victim/beneficiary sets. The system's integrity depends on making the reading selection explicit and observable, not naturalizing the expected-value reading as mathematically necessary.",
+    "kernel_context": "KERNEL: acceptable_risk_energy — the contested boundary defining when energy source risk is 'acceptable' for public policy. READING: expected_value_reading (this constraint) — risk aggregated as statistical expected mortality (deaths/TWh) across full probability distribution without categorical weighting of accident scenarios. SIBLING READINGS: (1) catastrophic_tail_reading — risk aggregation weighted by worst-case scenario severity and long-tail probabilities; (2) comparative_harm_reading — risk comparison based on immediate known harms (occupational deaths, air pollution) without probabilistic future-harm aggregation. STRUCTURAL DELTAS: Expected-value reading renders nuclear low-extractiveness (operational deaths lowest per TWh); shifts victim set toward future waste-sequestration and low-dose chronic-exposure populations rather than occupational or immediate air-pollution cohorts; enables present-generation decision-makers to claim risk acceptability via mathematical aggregation. Catastrophic-tail reading would render nuclear high-extractiveness due to Chernobyl/Fukushima exclusion-zone irreversibility; shifts victim set toward siting-community displacement and intergenerational burden. Comparative-harm reading would render all technologies moderate-extractiveness based on known immediate harms; renders probabilistic future scenarios secondary to observable present costs."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "acceptable_risk_energy__catastrophic_tail_reading",
+      "acceptable_risk_energy__comparative_harm_reading",
+      "waste_sequestration_burden_intergenerational",
+      "low_dose_chronic_exposure_nonlinearity"
+    ],
+    "dual_formulation_note": "The acceptable_risk_energy kernel has three structurally distinct readings with different ε values and victim sets. This file instantiates the expected-value reading (ε=0.38, tangled_rope). The catastrophic-tail reading would have higher ε due to exclusion-zone irreversibility; the comparative-harm reading would have lower ε by rendering probabilistic futures secondary. These are not observables of the same constraint but commitments to different risk aggregation axioms. Each reading is a separate constraint story linked via network.affects_constraints to enable comparative analysis of which reading governs actual policy decisions and what distributional consequences follow."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "acceptable_risk_energy__catastrophic_tail_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "acceptable_risk_energy__comparative_harm_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "expected_value_maximization_axiom",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "timescale_homogenization_axiom",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "rational_risk_governance_statistical_optimization",
+    "drift_state": {
+      "moment": "contemporary_climate_emergency_context",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

@@ -59,6 +59,7 @@ from agent.story_generator_base import (
 sys.path.insert(0, str(REPO_ROOT / "python"))
 from generate_constraint_pl import generate_pl, validate_json, _load_schema  # noqa: E402
 from linter import lint_file                    # noqa: E402
+from story_repair import repair_story           # noqa: E402  canonical deterministic repair
 
 # SCOPE protocol prompt — patched on kernel-frame branch with §1.3-K and expanded CSR object
 SCOPE_PROMPT_PATH = REPO_ROOT / "prompts" / "uke_scope_v2_json.md"
@@ -66,6 +67,12 @@ SCOPE_PROMPT_PATH = REPO_ROOT / "prompts" / "uke_scope_v2_json.md"
 SCOPE_MODEL = "claude-sonnet-4-5-20250929"   # matches c-orchestrator.py architect
 GEN_MODEL = "claude-haiku-4-5-20251001"      # matches generate_json_haiku.py
 BATCH_POLL_INTERVAL = 30
+
+# No-scope path: flat main corpus, ladder tracked by beta_processed.txt
+JSON_DIR = REPO_ROOT / "json"
+BETA_SEEDS = PROLOG_DIR / "beta_seeds.json"
+BETA_PROCESSED = PROLOG_DIR / "beta_processed.txt"
+MAX_CUSTOM_ID = 64  # Anthropic batch custom_id pattern: ^[a-zA-Z0-9_-]{1,64}$
 
 
 # ---------------------------------------------------------------------------
@@ -144,10 +151,11 @@ def _call_with_retry(client, max_retries=3, **kwargs):
 # Step A: SCOPE each kernel seed (serial, Sonnet, kernel-aware)
 # ---------------------------------------------------------------------------
 
-def scope_seed(seed, scope_prompt, research_context="", axes=3):
-    """Run kernel-aware SCOPE on one seed. Returns (manifest_dict | None, error)."""
+def _scope_user_prompt(seed, research_context="", axes=3):
+    """The per-kernel SCOPE user prompt — shared by serial scope_seed and the batch path
+    so the two cannot drift."""
     topic = f"{seed['human_readable']}\n\n{seed.get('summary', '')}"
-    prompt = (
+    return (
         f"Analyze the following topic using the UKE_SCOPE protocol.\n\n"
         f"TOPIC: {topic}\n\n"
         f"RESEARCH CONTEXT:\n{research_context}\n\n"
@@ -160,9 +168,18 @@ def scope_seed(seed, scope_prompt, research_context="", axes=3):
         f"  {{\"claim_id\": \"<reading_id>\", \"kernel_id\": \"<kernel_id>\", \"reading_id\": \"<reading_id>\"}} "
         f"If it is NOT a real kernel (the readings would collapse), set is_contested_kernel=false "
         f"and decompose normally into plain string claim_ids, noting the collapse in an omega.\n\n"
-        f"Select up to {axes} readings/axes for generation.\n\n"
+        f"AXIS BUDGET: a contested kernel counts as exactly ONE axis. Emit ALL of its readings "
+        f"(2-4) to generation_sequence — do NOT cap the readings at {axes}, and do NOT count each "
+        f"reading as a separate axis. You may select up to {max(axes - 1, 0)} ADDITIONAL ordinary "
+        f"(non-kernel) axes only if the topic has genuinely independent structure beyond the "
+        f"kernel; for a topic that is only a kernel, the readings are the entire sequence.\n\n"
         f"OUTPUT ONLY valid JSON — no markdown fences, no commentary outside the JSON."
     )
+
+
+def scope_seed(seed, scope_prompt, research_context="", axes=3):
+    """Run kernel-aware SCOPE on one seed. Returns (manifest_dict | None, error)."""
+    prompt = _scope_user_prompt(seed, research_context, axes)
     try:
         text = _call(prompt, model=SCOPE_MODEL, system_instruction=scope_prompt,
                      temperature=0.2, max_tokens=8192)
@@ -352,10 +369,45 @@ def build_batch_requests(gen_seeds):
     return reqs
 
 
+def build_indexed_batch_requests(gen_seeds):
+    """Like build_batch_requests but with short index custom_ids (g0, g1, ...) so the
+    real constraint_id — the module name / filename — can exceed the 64-char batch
+    custom_id cap. Returns (requests, id_map: custom_id -> constraint_id)."""
+    system = [{"type": "text", "text": _SYSTEM_INSTRUCTION, "cache_control": {"type": "ephemeral"}}]
+    reqs, id_map = [], {}
+    for i, s in enumerate(gen_seeds):
+        cidk = f"g{i}"
+        id_map[cidk] = s["constraint_id"]
+        reqs.append({
+            "custom_id": cidk,
+            "params": {
+                "model": GEN_MODEL,
+                "max_tokens": 8192,
+                "system": system,
+                "messages": build_cached_messages(s),
+            },
+        })
+    return reqs, id_map
+
+
 def poll_batch(client, batch_id, poll_interval):
     terminal = {"ended", "canceled", "expired"}
+    # Transient API errors (503 overloaded, rate limit, connection/timeout) must NOT kill a
+    # long run mid-poll — the batch keeps processing server-side. Retry the poll instead.
+    transient = (anthropic.InternalServerError, anthropic.APIConnectionError,
+                 anthropic.RateLimitError, anthropic.APITimeoutError)
+    fails = 0
     while True:
-        b = client.messages.batches.retrieve(batch_id)
+        try:
+            b = client.messages.batches.retrieve(batch_id)
+            fails = 0
+        except transient as e:
+            fails += 1
+            if fails > 30:
+                raise
+            print(f"  transient poll error ({type(e).__name__}); retry {fails} in {poll_interval}s")
+            time.sleep(poll_interval)
+            continue
         c = b.request_counts
         print(f"  Batch {batch_id}: {b.processing_status} — "
               f"succeeded={c.succeeded}, errored={c.errored}, processing={c.processing}")
@@ -414,7 +466,8 @@ def strip_extra_properties(story: dict, schema: dict) -> tuple:
 
 
 def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_log,
-                          gen_seeds_by_id=None, rejections_path=None, overwrite=False):
+                          gen_seeds_by_id=None, rejections_path=None, overwrite=False,
+                          id_map=None):
     """Write each result to run-tagged dirs: json_dir/.json + testsets_dir/.pl.
 
     Error handling (two tracks):
@@ -435,7 +488,9 @@ def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_lo
     _schema = _load_schema()  # load once; used by path-aware strip
 
     for result in client.messages.batches.results(batch_id):
-        cid = result.custom_id
+        # custom_id may be a short transport key (no-scope uses index ids because the batch
+        # custom_id is capped at 64 chars); resolve back to the real constraint_id.
+        cid = (id_map or {}).get(result.custom_id, result.custom_id)
         if result.result.type != "succeeded":
             print(f"  FAIL {cid}: {result.result.type}")
             failed += 1
@@ -451,48 +506,43 @@ def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_lo
             story.setdefault("header", {})["constraint_id"] = cid
 
         if errors:
-            prop_errors = [e for e in errors if "Additional properties are not allowed" in e]
-            schema_errors = [e for e in errors
-                             if "is not valid under any of the given schemas" in e
-                             or "interpretation_layer_present" in e]
-            other_errors = [e for e in errors if e not in prop_errors and e not in schema_errors]
+            # Deterministic repair, then re-validate: path-aware strip (additionalProperties)
+            # + comprehensive repair_story (required defaults, id transliteration, null/clamp).
+            # Repair edits the story to MEET the schema — it loosens nothing. Only what is
+            # still invalid after repair fails. CS anyOf/interpretation_layer rejections and
+            # conditional allOf/then (claimed-type vs metrics) survive repair → fail-closed,
+            # which is correct: those are semantic, and clamping them would fabricate data.
+            repaired, props_removed = strip_extra_properties(story, _schema)
+            repaired = repair_story(repaired, _schema)
+            retry_errors = validate_json(repaired)
 
-            if prop_errors and not schema_errors and not other_errors:
-                # Path-aware strip: remove extra fields only at the exact paths where
-                # they appear, preventing collateral removal of same-named required
-                # fields elsewhere (e.g., Omega.description is required).
-                stripped, props_removed = strip_extra_properties(story, _schema)
-                retry_errors = validate_json(stripped)
-                if retry_errors:
-                    print(f"  FAIL {cid}: strip retry still invalid: {retry_errors[:2]}")
+            if not retry_errors:
+                story = repaired
+                tag = f": stripped {props_removed}" if props_removed else ""
+                print(f"  REPAIRED {cid}{tag}")
+                errors = []  # fall through to save
+            else:
+                schema_errors = [e for e in retry_errors
+                                 if "is not valid under any of the given schemas" in e
+                                 or "interpretation_layer_present" in e]
+                if schema_errors:
+                    gen_seed = gen_seeds_by_id.get(cid, {})
+                    cs = (repaired.get("cs_structure") or {})
+                    rejected.append({
+                        "constraint_id": cid,
+                        "kernel_id": gen_seed.get("kernel_id"),
+                        "reading_id": gen_seed.get("reading_id"),
+                        "kernel_codification": cs.get("kernel_codification"),
+                        "authority_grounding": cs.get("authority_grounding"),
+                        "interpretation_layer_present": cs.get("interpretation_layer_present"),
+                        "schema_error": schema_errors[0],
+                        "other_errors": [e for e in retry_errors if e not in schema_errors],
+                    })
+                    print(f"  REJECTED {cid}: codification={cs.get('kernel_codification')} "
+                          f"authority={cs.get('authority_grounding')} → rejections.json")
                     failed += 1
                     continue
-                story = stripped
-                print(f"  STRIPPED {cid}: removed {props_removed}")
-                errors = []  # fall through to save
-
-            elif schema_errors:
-                # Capture rejection without saving — do NOT loosen the condition
-                gen_seed = gen_seeds_by_id.get(cid, {})
-                cs = (story.get("cs_structure") or {})
-                rejection = {
-                    "constraint_id": cid,
-                    "kernel_id": gen_seed.get("kernel_id"),
-                    "reading_id": gen_seed.get("reading_id"),
-                    "kernel_codification": cs.get("kernel_codification"),
-                    "authority_grounding": cs.get("authority_grounding"),
-                    "interpretation_layer_present": cs.get("interpretation_layer_present"),
-                    "schema_error": schema_errors[0],
-                    "other_errors": other_errors,
-                }
-                rejected.append(rejection)
-                print(f"  REJECTED {cid}: codification={cs.get('kernel_codification')} "
-                      f"authority={cs.get('authority_grounding')} → rejections.json")
-                failed += 1
-                continue
-
-            else:
-                print(f"  FAIL {cid}: {len(errors)} error(s): {errors[:2]}")
+                print(f"  FAIL {cid}: {len(retry_errors)} error(s) after repair: {retry_errors[:2]}")
                 failed += 1
                 continue
 
@@ -505,7 +555,11 @@ def process_batch_results(client, batch_id, json_dir, testsets_dir, processed_lo
         # Mint story_uid FIRST — generate_pl gates the entire CS block (including
         # cs_story_uid AND cs_kernel_id) on story_uid being present. Must precede
         # _kernel_id injection or kernel_id is silently dropped when uid is absent.
-        story.setdefault("header", {}).setdefault("story_uid", str(uuid.uuid4()))
+        # ALWAYS overwrite: story_uid is a per-generation-event surrogate identity minted
+        # by the pipeline, never authored by the content model. The model copies the
+        # example's UUID, so setdefault would let duplicates through (CS validation rejects
+        # the corpus: "duplicate story_uid"). Overwrite guarantees uniqueness.
+        story.setdefault("header", {})["story_uid"] = str(uuid.uuid4())
 
         # Inject kernel_id from manifest (not from model output — preserves Rule 2).
         # The model routes committer structure to omegas; the manifest is the authoritative
@@ -830,10 +884,201 @@ def emit_axiom_contradiction_facts(manifests, json_dir, testsets_dir):
 # Main
 # ---------------------------------------------------------------------------
 
+# ---------------------------------------------------------------------------
+# Decompose mode: batch-SCOPE kernels -> reading SEEDS (constraint-story seeds)
+# ---------------------------------------------------------------------------
+
+READINGS_POOL = PROLOG_DIR / "kernel_readings_pool.json"
+DECOMPOSE_DIR = REPO_ROOT / "outputs" / "decompose"
+
+
+def build_scope_batch_requests(kernel_seeds, scope_prompt, axes):
+    """One Sonnet SCOPE request per kernel; cache the (large, shared) scope prompt."""
+    system = [{"type": "text", "text": scope_prompt, "cache_control": {"type": "ephemeral"}}]
+    reqs, idmap = [], {}
+    for i, seed in enumerate(kernel_seeds):
+        cidk = f"k{i}"
+        idmap[cidk] = seed
+        reqs.append({"custom_id": cidk, "params": {
+            "model": SCOPE_MODEL, "max_tokens": 8192, "system": system,
+            "messages": [{"role": "user", "content": _scope_user_prompt(seed, "", axes)}]}})
+    return reqs, idmap
+
+
+def run_decompose(args):
+    """Batch-SCOPE kernels into reading SEEDS and append them to the readings pool.
+
+    Emits constraint-story SEEDS (constraint_id=<kernel_id>__<reading_id>, kernel_id,
+    reading_id, siblings, summary) — NOT full stories. The no-scope generator turns the
+    seeds into stories in a later step. Idempotent: decomposed kernel_ids are logged."""
+    DECOMPOSE_DIR.mkdir(parents=True, exist_ok=True)
+    manifests_sidecar = DECOMPOSE_DIR / "manifests"
+    manifests_sidecar.mkdir(exist_ok=True)
+    decomposed_log = DECOMPOSE_DIR / "decomposed.txt"
+
+    kernels = json.loads(Path(args.decompose).read_text(encoding="utf-8"))
+    done = load_processed_log(decomposed_log)
+    pending = [k for k in kernels if k.get("kernel_id") and k["kernel_id"] not in done]
+    if args.n and args.n > 0:
+        pending = pending[:args.n]
+    if not pending:
+        print("No undecomposed kernels remaining.")
+        return
+    print(f"Decomposing {len(pending)} kernels (model={SCOPE_MODEL})")
+
+    scope_prompt = _load_context_file(str(SCOPE_PROMPT_PATH))
+    client = get_client()
+    reqs, idmap = build_scope_batch_requests(pending, scope_prompt, args.axes)
+    batch = client.messages.batches.create(requests=reqs)
+    print(f"SCOPE batch created: {batch.id}")
+    poll_batch(client, batch.id, args.poll_interval)
+
+    manifests, scope_fail = [], 0
+    for result in client.messages.batches.results(batch.id):
+        seed = idmap.get(result.custom_id, {})
+        kid = seed.get("kernel_id", result.custom_id)
+        if result.result.type != "succeeded":
+            print(f"  SCOPE FAIL {kid}: {result.result.type}")
+            scope_fail += 1
+            continue
+        raw = "".join(b.text for b in result.result.message.content if b.type == "text")
+        try:
+            m = json.loads(strip_json_fences(raw))
+        except json.JSONDecodeError as e:
+            print(f"  SCOPE PARSE FAIL {kid}: {e}")
+            scope_fail += 1
+            continue
+        if "generation_sequence" not in m:
+            print(f"  SCOPE no generation_sequence {kid}")
+            scope_fail += 1
+            continue
+        m["_seed_id"] = kid
+        csr = m.get("commitment_system_recognition", {}) or {}
+        tag = "KERNEL" if csr.get("is_contested_kernel") else "collapsed"
+        print(f"  {kid}: {tag} ({len(csr.get('readings', []))} readings)")
+        manifests.append(m)
+        (manifests_sidecar / f"{kid}.manifest.json").write_text(
+            json.dumps(m, indent=2, ensure_ascii=False), encoding="utf-8")
+        append_to_log(decomposed_log, kid)
+
+    gen_seeds, recovery = flatten_manifests(manifests)
+    # Namespace kernel-reading ids so the same reading name can't collide across kernels.
+    for s in gen_seeds:
+        if s.get("kernel_id") and s.get("reading_id"):
+            s["constraint_id"] = f"{s['kernel_id']}__{s['reading_id']}"
+
+    pool = json.loads(READINGS_POOL.read_text(encoding="utf-8")) if READINGS_POOL.exists() else []
+    existing = {s["constraint_id"] for s in pool}
+    added = [s for s in gen_seeds if s["constraint_id"] not in existing]
+    pool.extend(added)
+    READINGS_POOL.write_text(json.dumps(pool, indent=2, ensure_ascii=False) + "\n",
+                             encoding="utf-8")
+    print(f"\nDecomposed {len(manifests)} kernels ({scope_fail} failed) -> "
+          f"{len(gen_seeds)} reading seeds ({len(added)} new) -> {READINGS_POOL.name} "
+          f"(pool now {len(pool)})")
+    if recovery:
+        print(f"  recovery count {recovery} (kernel_id present but reading_id missing) — "
+              f"inspect manifests if large")
+
+
+# ---------------------------------------------------------------------------
+# No-scope mode: consume a SEED POOL (readings + plain) -> full stories, flat corpus
+# ---------------------------------------------------------------------------
+
+def unique_constraint_id(base, registry):
+    """Collision-proof by construction: readable base, else base__<uuid8>."""
+    if base not in registry:
+        return base
+    cand = f"{base}__{uuid.uuid4().hex[:8]}"
+    while cand in registry:
+        cand = f"{base}__{uuid.uuid4().hex[:8]}"
+    return cand
+
+
+def run_no_scope(args):
+    """Generate full stories from a seed pool (reading-seeds and/or plain seeds), writing
+    flat into prolog/testsets/ + json/, advancing the beta_processed.txt ladder. The
+    trailing N = next N UNPROCESSED seeds; failures retried up to 3x then logged."""
+    seeds = json.loads(Path(args.seeds).read_text(encoding="utf-8"))
+    for s in seeds:
+        if "constraint_id" not in s:
+            if s.get("kernel_id") and s.get("reading_id"):
+                s["constraint_id"] = f"{s['kernel_id']}__{s['reading_id']}"
+            elif s.get("kernel_id"):
+                s["constraint_id"] = s["kernel_id"]
+    processed = load_processed_log(BETA_PROCESSED)
+    pending = [s for s in seeds if s["constraint_id"] not in processed]
+    n = args.n if (args.n and args.n > 0) else len(pending)
+    batch_seeds = pending[:n]
+    if not batch_seeds:
+        print("No unprocessed seeds to generate.")
+        return
+
+    # Collision-proof naming, checked against the live corpus + ladder. The constraint_id
+    # is the module name / filename and may exceed 64 chars (the batch custom_id cap applies
+    # only to the transport key, which is a short index — see build_indexed_batch_requests).
+    registry = {p.stem for p in TESTSETS_DIR.glob("*.pl")} | set(processed)
+    final_seeds = []
+    for s in batch_seeds:
+        fid = unique_constraint_id(s["constraint_id"], registry)
+        s["constraint_id"] = fid
+        registry.add(fid)
+        final_seeds.append(s)
+
+    JSON_DIR.mkdir(parents=True, exist_ok=True)
+    out_dir = REPO_ROOT / "outputs" / "no_scope_runs"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    client = get_client()
+
+    remaining = final_seeds
+    for attempt in range(1, 4):
+        gen_by_id = {s["constraint_id"]: s for s in remaining}
+        reqs, id_map = build_indexed_batch_requests(remaining)
+        print(f"\n[attempt {attempt}/3] submitting {len(reqs)} generation requests...")
+        batch = client.messages.batches.create(requests=reqs)
+        print(f"  batch {batch.id}")
+        poll_batch(client, batch.id, args.poll_interval)
+        process_batch_results(
+            client, batch.id, JSON_DIR, TESTSETS_DIR, BETA_PROCESSED,
+            gen_seeds_by_id=gen_by_id,
+            rejections_path=out_dir / "rejections.json",
+            # overwrite=True: the no-scope rebuild's idempotence source is the
+            # beta_processed.txt ladder (pending is already filtered by it above), NOT
+            # json-file existence. json/ still holds the PRE-REBUILD corpus (~4067 files),
+            # so plain seeds reuse archive ids whose stale json/<id>.json exists — without
+            # overwrite they hit the out_json.exists() SKIP and silently never save.
+            overwrite=True, id_map=id_map)
+        done = load_processed_log(BETA_PROCESSED)
+        remaining = [s for s in remaining if s["constraint_id"] not in done]
+        if not remaining:
+            break
+        print(f"  {len(remaining)} still failing after attempt {attempt}")
+
+    if remaining:
+        (out_dir / "failures.json").write_text(
+            json.dumps(remaining, indent=2, ensure_ascii=False), encoding="utf-8")
+        print(f"\nFAILURES: {len(remaining)} seeds unresolved after 3 attempts -> "
+              f"{out_dir / 'failures.json'}")
+    succeeded = len(final_seeds) - len(remaining)
+    print(f"\nNo-scope run complete: {succeeded}/{len(final_seeds)} generated into "
+          f"prolog/testsets/ (ladder: {BETA_PROCESSED.name}).")
+
+
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--seeds", default=str(PROLOG_DIR / "kernel_seeds.json"))
-    ap.add_argument("--run-tag", required=True, help="output namespace, e.g. run_01")
+    ap = argparse.ArgumentParser(
+        description="Default mode: no-scope generation from a seed pool into flat "
+                    "prolog/testsets/. Use --decompose to batch-SCOPE kernels into reading "
+                    "seeds, or --scope for the legacy serial-SCOPE+generate (run-tagged).")
+    ap.add_argument("n", nargs="?", type=int, default=0,
+                    help="number of items to process (next N unprocessed): seeds in "
+                         "no-scope mode, kernels in --decompose mode. 0 = all.")
+    ap.add_argument("--seeds", default=None,
+                    help="seed pool (default: beta_seeds.json no-scope, kernel_seeds.json --scope)")
+    ap.add_argument("--decompose", metavar="KERNELS_JSON", default=None,
+                    help="batch-SCOPE these kernels into reading seeds (appends to pool) and stop")
+    ap.add_argument("--scope", action="store_true",
+                    help="legacy serial-SCOPE + generate, run-tagged (requires --run-tag)")
+    ap.add_argument("--run-tag", default=None, help="output namespace for --scope mode")
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--axes", type=int, default=3)
     ap.add_argument("--skip-search", action="store_true",
@@ -845,6 +1090,21 @@ def main():
                     help="SCOPE one ordinary topic and stop, for the branch diff gate")
     args = ap.parse_args()
 
+    # --- Mode dispatch ---
+    if args.decompose:
+        run_decompose(args)
+        return
+    if not args.scope and not args.regression_check:
+        if args.seeds is None:
+            args.seeds = str(BETA_SEEDS)
+        run_no_scope(args)
+        return
+
+    # --- legacy --scope / --regression-check flow (run-tagged) ---
+    if not args.run_tag:
+        ap.error("--scope and --regression-check require --run-tag")
+    if args.seeds is None:
+        args.seeds = str(PROLOG_DIR / "kernel_seeds.json")
     json_dir, testsets_dir, manifests_dir, processed_log = run_dirs(args.run_tag)
     scope_prompt = _load_context_file(str(SCOPE_PROMPT_PATH))
 

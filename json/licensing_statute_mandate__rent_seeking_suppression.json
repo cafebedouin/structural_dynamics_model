@@ -1,0 +1,259 @@
+{
+  "header": {
+    "constraint_id": "licensing_statute_mandate__rent_seeking_suppression",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "lic_rent",
+    "story_uid": "81c86094-3b02-49a8-b81a-9c98636ebf51"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.62,
+    "claimed_type": "snare",
+    "human_readable": "Statutory Licensing Requirements as Rent-Seeking Suppression",
+    "topic_domain": "labor_economics/regulatory_policy/public_administration",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "incumbent_practitioners",
+      "licensing_boards"
+    ],
+    "victims": [
+      "labor_market_entrants",
+      "consumers_via_price_elevation",
+      "alternative_credential_holders"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Labor Market Entrant",
+      "comment": "PERSPECTIVE 1: LABOR MARKET ENTRANT (SNARE) — Faces mandatory, government-enforced credentialing requirements with no meaningful exit. Entry is legally impossible without statutory compliance. Suppression is complete: the entrant must either (a) spend years acquiring the mandated credential at substantial cost, (b) exit the profession entirely, or (c) operate illegally. The licensing statute creates artificial scarcity; extraction flows entirely toward incumbents."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Consumer",
+      "comment": "PERSPECTIVE 2: CONSUMER (SNARE) — Constrained by reduced supply and elevated prices created by the artificial scarcity. Can theoretically exit by not purchasing the service, but this is often impractical (occupational licensing for healthcare, legal services, plumbing, electrical work). The consumer bears the cost of the rent extraction through both higher prices and reduced access. Suppression is high because consumers cannot organize to challenge licensing boards."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Incumbent Practitioner",
+      "comment": "PERSPECTIVE 3: INCUMBENT PRACTITIONER (ROPE) — Perceives the licensing statute as legitimate coordination: ensuring only qualified practitioners serve the public. This perspective experiences genuine benefits from the credential requirement — reduced competition, maintained pricing power, professional prestige, and ability to set standards. The incumbents benefit from both the coordination function (genuine quality assurance) and the extraction function (artificial scarcity rent). From their position, the statute coordinates the profession AND secures their economic interests — these appear aligned."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Board",
+      "comment": "PERSPECTIVE 4: REGULATORY BOARD (TANGLED ROPE) — Occupies a genuinely hybrid position. The board coordinates legitimate public safety concerns (credential standards, disciplinary mechanisms, continuing education) and also captures rent for incumbents (controls supply, restricts entry, maintains pricing). Board members are often appointed from the incumbent practitioner pool, creating direct incentive alignment with restriction. The board's suppression of entrants is both justified (maintaining standards) and extractive (limiting competition). This is the perspective where the tangled nature is clearest."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Formal Statutory Architecture",
+      "comment": "PERSPECTIVE 5: FORMAL STATUTORY ARCHITECTURE (PITON) — At the macro institutional level, licensing statutes persist partly through genuine public safety justification but increasingly through theatrical maintenance of the rent mechanism. The theater shows through in: (a) credential inflation (degree requirements rising without corresponding risk increases), (b) continuing education requirements with low empirical tie to public safety, (c) reciprocity barriers between states despite identical actual competence, (d) disciplinary mechanisms that rarely remove practitioners for incompetence but strongly restrict entry. The formal apparatus persists because alternatives haven't fully replaced it and because institutional inertia is powerful, not because its primary function (public safety) would collapse without the current restrictive form."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (SNARE) — From an analytical, civilizational, universal scope, the licensing statute is a pure extraction mechanism. Public safety concerns can be addressed through transparent competence testing, transparent disciplinary records, and liability frameworks without the artificial scarcity. The continued use of restrictive credentialing despite these alternatives reveals extraction as the primary function. The analytical observer sees clear beneficiaries (incumbents, boards), clear victims (entrants, consumers), suppression (legal barriers to entry), and minimal genuine coordination function that requires the current restrictive form."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "public_safety_necessity_threshold",
+      "question": "What portion of the current licensing restrictiveness is genuinely necessary for public safety versus purely extractive?",
+      "resolution_mechanism": "Comparative analysis: jurisdictions with lower credential requirements (lower entry barriers, less restrictive continuing education); correlation between credential restrictiveness and actual disciplinary rates / consumer harm metrics. Interstate variation analysis: identical services with dramatically different licensing requirements across state lines.",
+      "impact": "If necessary_portion > 70%: constraint should reclassify toward Tangled Rope. If necessary_portion < 30%: snare classification confirmed. If variation shows public safety maintained at lower restrictiveness levels: rent-seeking function becomes salient.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Necessity threshold for public safety versus pure extraction"
+    },
+    {
+      "id": "disciplinary_mechanism_use",
+      "question": "Are licensing boards' disciplinary mechanisms used primarily to maintain quality or to protect incumbents from low-cost competitors?",
+      "resolution_mechanism": "Data on disciplinary actions: rate of removal for incompetence versus rate of restriction on alternative credentials; correlation between practitioner income and disciplinary case volume; analysis of discipline patterns for incumbents versus entrants attempting alternative pathways.",
+      "impact": "If discipline heavily targets entrants/alternatives: supports snare classification and extraction function. If discipline primarily targets genuinely incompetent practitioners: supports genuine quality maintenance (Tangled Rope or Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether discipline prioritizes quality or protects incumbents"
+    },
+    {
+      "id": "credential_inflation_trajectory",
+      "question": "Are credential requirements increasing over time independent of corresponding increases in actual occupational risk or complexity?",
+      "resolution_mechanism": "Historical analysis of credential requirements (1970-2026) versus job task complexity, consumer harm rates, and practitioner competence test scores. Identify fields where requirements have escalated (e.g., cosmetology) without corresponding risk changes.",
+      "impact": "If inflation is independent of risk: credential requirements serve extraction rather than safety (Snare). If correlated with actual risk changes: Tangled Rope.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether credential inflation correlates with actual occupational risk"
+    },
+    {
+      "id": "alternative_credential_efficacy",
+      "question": "Do alternative credentialing mechanisms (apprenticeship, direct competence testing, reciprocal recognition) produce equivalent public safety and consumer protection outcomes at lower cost?",
+      "resolution_mechanism": "Comparative study of jurisdictions using alternative mechanisms (Switzerland apprenticeship model, occupations with direct testing pathways, military-to-civilian credential bridges); outcomes data on consumer safety, practitioner competence, service quality.",
+      "impact": "If alternatives produce equivalent outcomes at lower cost: the restrictive statutory form is not necessary — extraction is the primary function (Snare confirmed). If alternatives produce worse outcomes: justifies Tangled Rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternatives provide equivalent public safety at lower cost"
+    },
+    {
+      "id": "cross_reading_feasibility",
+      "question": "Can the same statutory kernel be genuinely read as public_safety_coordination (sibling reading) or only as rent-seeking suppression?",
+      "resolution_mechanism": "Identify board compositions where incumbents do NOT hold seats; jurisdictions where entry requirements are low; cases where public safety standards are maintained despite low credential barriers. If such cases exist and produce equivalent safety outcomes, the public_safety_coordination reading is feasible. If such cases do not exist or produce inferior outcomes, the rent_seeking_suppression reading is more structural.",
+      "impact": "Determines whether the readings coexist_with or forecloses. If coexists_with: different parties hold different readings legitimately. If forecloses: the structural data makes only the rent-seeking reading coherent.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether the statutory kernel can sustain multiple readings"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.54
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.66
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 1975,
+    "end": 2025
+  },
+  "commentary": {
+    "narrative_context": "Statutory occupational licensing creates artificial scarcity in labor supply by requiring government-mandated credentials (degrees, certificates, continuing education, license fees) to enter regulated occupations. This constraint exhibits structural extraction: incumbents benefit from reduced competition and elevated prices; entrants and consumers bear suppression costs. The constraint is one reading of a contested kernel—the statutory mandate itself. This reading interprets the mandate as primarily a rent-seeking mechanism masked by public safety justification (the rent_seeking_suppression reading). Sibling readings frame the same statute as genuine public safety coordination or as a graduated access filter that serves both functions. The extractiveness has increased from ~0.35 (1975) to ~0.58 (2025) as credential inflation has accelerated independent of occupational risk changes. Theater ratio has risen as continuing education and credential maintenance requirements have become increasingly disconnected from actual public safety improvements. Suppression has remained high and stable because entry barriers are legally enforced—entrants cannot exit without either bearing full credential costs or abandoning the profession entirely.",
+    "key_agents": [
+      "Incumbent Practitioners: Primary beneficiary (institutional/arbitrage) — benefit from reduced competition, maintained pricing power, and professional prestige; largely control licensing board composition",
+      "Labor Market Entrants: Primary victim (powerless/trapped) — face mandatory, legally enforced credential requirements with no exit; must either acquire costly credentials, relocate, or abandon the profession",
+      "Consumers: Secondary victim (moderate/constrained) — bear costs through elevated prices and reduced access; face suppression through inability to organize challenge to boards",
+      "Licensing Boards: Institutional actor with hybrid position (institutional/constrained) — coordinate genuine public safety standards and simultaneously extract rent for incumbents; board members typically drawn from incumbent practitioners",
+      "Alternative Credential Holders (Apprentices, Reciprocal Practitioners, Military-Trained): Victims (moderate/trapped) — legally excluded from practice despite demonstrating competence through alternative pathways",
+      "Analytical Observer: Sees pure extraction mechanism (analytical/analytical) — public safety can be achieved through transparent testing and liability without artificial scarcity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts substantial rents through artificial scarcity—consumers pay premium prices, entrants bear credential acquisition costs, and alternative credential pathways are legally blocked. The extraction is not maximal (0.70+) because some credential requirements genuinely serve quality assurance (though far less than currently required). Suppression (0.68): High. Entry barriers are legally enforced; entrants cannot practice without statutory credentials. Suppression mechanisms include: (1) legal prohibition (practicing without license = criminal/civil liability), (2) credential gatekeeping (only state-approved schools count), (3) reciprocity barriers (credentials from other states/countries rarely recognized), (4) fee extraction (licensing fees rise annually without corresponding value), (5) continuing education inflation (rising requirements disconnected from risk changes). Theater ratio (0.62): Moderate-high. The public safety justification is genuine but increasingly theatrical. Continuing education requirements show theater signatures: (a) weak empirical correlation with practitioner competence, (b) proliferation (every continuing education provider approved), (c) compliance over learning (checking boxes vs mastering material), (d) cost extraction (fees rise independent of content value). The theatrical component has grown as credential inflation has accelerated. Trajectory: The measurements show credential inflation (extractiveness rising from 0.35 to 0.58 over 50 years) and theater growth (from 0.42 to 0.62) despite no corresponding increase in occupational risk in most regulated fields. This pattern reveals extraction as the primary function.",
+    "perspectival_gap": "This constraint demonstrates how the same statutory structure produces fundamentally different experienced constraint types depending on structural position. The incumbent sees this as solving a coordination problem (Rope—assuring consumer trust). The entrant sees this as insurmountable legal prohibition (Snare). The board sees genuine public safety goals mixed with rent extraction (Tangled Rope). The consumer sees price elevation with suppressed alternatives (Snare). The formal institutional architecture shows signs of piton (theatrical maintenance, declining primary function, persistence through inertia). The analytical observer, freed from institutional position, sees the extractive function clearly. The key insight: the snare classification from multiple victim perspectives (entrants, consumers, analytical observer) identifies which reading of the kernel is more structurally salient.",
+    "directionality_logic": "Directionality (d) values are derived from beneficiary/victim status plus exit options. Incumbents are beneficiaries with arbitrage exit (can move between regulated occupations, can leave regulation if profitable)—d ≈ 0.10, low extraction experienced. Entrants are victims with trapped exit (legally prohibited entry without credential)—d ≈ 0.92, maximum extraction experienced. Consumers are victims with constrained exit (can avoid service but at high practical cost)—d ≈ 0.75, high extraction. The regulatory board is simultaneously beneficiary (through regulatory capture) and victim (constrained by statutory obligation to enforce safety while boards extract rent)—d ≈ 0.50 with institutional power, producing the tangled rope classification. At the analytical level (observer position), d ≈ 0.78, revealing the constraint's extractive structure without institutional position distortion.",
+    "mandatrophy_analysis": "RENT-SEEKING READING MANDATROPHY: This constraint resolves mandatrophy by distinguishing extraction from coordination through observable structural features: (1) Credential inflation independent of risk (extracts rent without safety benefit), (2) Board composition favoring incumbents (captures regulatory apparatus), (3) Suppression of alternatives despite comparable safety outcomes (protects rents over optimization), (4) Theater growth (continuing education disconnected from competence), (5) Interstate variation (identical services, different requirements—reveals political economy, not safety). If the statute were primarily coordinating public safety, we would expect: (a) minimal credential requirements (sufficient for safety, not more), (b) board diversity (representatives of consumers, practitioners, researchers), (c) transparent safety outcome metrics, (d) reciprocal recognition of equivalent credentials, (e) declining theater ratio as systems mature. The opposite pattern confirms rent-seeking as primary function masked by safety framing. The reading resolves the ambiguity by anchoring to observed behavior rather than stated justification.",
+    "kernel_context": "This constraint is ONE reading of the contested kernel 'statutory_licensing_mandate'. The kernel is the formalized statutory requirement itself—a fixed text that grounds regulatory authority. This reading ('rent_seeking_suppression') interprets the kernel as primarily a mechanism for incumbent rent extraction masked by public safety justification. Sibling readings reframe the same kernel differently: 'public_safety_coordination' reads it as genuine quality assurance coordination; 'graduated_access_filter' reads it as a legitimate but perfectible entry mechanism. The dispute is NOT about what the statute says (the kernel is unambiguous) but WHAT THE STATUTE DOES—which function (public safety vs. rent extraction) is structurally primary. The reading_relations determine how the readings interact: 'rent_seeking_suppression' INFLUENCES 'public_safety_coordination' (this reading's observable effects—credential inflation, theater growth—constrain the plausibility of the public safety reading) and COEXISTS_WITH 'graduated_access_filter' (different parties genuinely hold different readings, though the structural data favors rent-seeking)."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "licensing_statute_mandate__public_safety_coordination",
+      "licensing_statute_mandate__graduated_access_filter",
+      "occupational_wage_dispersion",
+      "geographic_labor_mobility_barriers"
+    ],
+    "dual_formulation_note": "The statutory licensing mandate is ONE kernel with multiple structurally distinct readings. Each reading instantiates a different constraint with a different constraint_id. The 'rent_seeking_suppression' reading treats the statute as primarily extractive (Snare). The 'public_safety_coordination' reading treats it as primarily coordinative (Rope). The 'graduated_access_filter' reading treats it as hybrid (Tangled Rope). All three readings reference the same statutory text but decompose its structural function differently. Each story has its own ε, its own beneficiary/victim mapping, and its own classification. The network links reveal which reading's observables (credential inflation, theater growth, board capture) create structural pressure on the others."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.52
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "licensing_statute_mandate__public_safety_coordination",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "licensing_statute_mandate__graduated_access_filter",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "credentialing_surplus_extraction_primary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "incumbent_capture_inevitable",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "occupational_competition_unconstrained",
+    "drift_state": {
+      "moment": "contemporary_credential_inflation_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "licensing_statute_mandate"
+    ]
+  }
+}

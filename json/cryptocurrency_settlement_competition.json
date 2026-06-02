@@ -4,25 +4,26 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "crypto_settle"
+    "measurement_id_prefix": "crypto_settle",
+    "story_uid": "9a8b0a4f-d085-4f62-995a-1cf2b324161b"
   },
   "base_properties": {
     "extractiveness": 0.58,
-    "suppression": 0.52,
+    "suppression": 0.65,
     "theater_ratio": 0.48,
     "claimed_type": "tangled_rope",
     "human_readable": "Cryptocurrency Settlement Competition and Chain Fragmentation",
     "topic_domain": "financial_infrastructure/cryptocurrency",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "competing_layer1_protocols",
-      "exchange_operators",
-      "liquidity_aggregators"
+      "protocol_developers",
+      "liquidity_providers",
+      "arbitrage_traders"
     ],
     "victims": [
-      "cross_chain_interoperability",
-      "network_settlement_reliability",
-      "retail_users"
+      "retail_users",
+      "institutional_adopters",
+      "cross_chain_settlement_reliability"
     ]
   },
   "perspectives": [
@@ -32,17 +33,17 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Retail User",
-      "comment": "PERSPECTIVE 1: RETAIL USER (SNARE) \u2014 Trapped by fragmentation of liquidity across incompatible chains. Cannot exit without abandoning holdings or paying severe cross-chain arbitrage costs. Suppressed by technical complexity of bridge contracts, slippage on swaps, and inability to move value fluidly. Experiences pure extraction through settlement fees, liquidity fragmentation premiums, and bridge failure risk."
+      "label": "The Retail User Locked in Fragmentation",
+      "comment": "PERSPECTIVE 1: RETAIL USER (SNARE) — Powerless agent with no exit. User deposits funds on one chain (e.g., Ethereum) but liquidity they need is on another (Solana). No single protocol dominates settlement — the user must either accept unfavorable exchange rates or pay bridge fees (high suppression). Cannot exit the fragmentation without abandoning cryptocurrency entirely. Extraction is maximal: users bear coordination costs through slippage, bridge failures, and liquidity unavailability."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
+      "agent_power": "organized",
+      "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "regional",
-      "label": "The Institutional Market Maker",
-      "comment": "PERSPECTIVE 2: INSTITUTIONAL MARKET MAKER (TANGLED ROPE) \u2014 Constrained by ecosystem lock-in but benefits from fragmentation arbitrage. Genuine coordination function: liquidity provision across chains. Simultaneous extraction: forced to maintain parallel operations on multiple chains, creating infrastructure redundancy costs. High suppression from technical complexity and operational risk."
+      "spatial_scope": "global",
+      "label": "The Institutional Adopter",
+      "comment": "PERSPECTIVE 2: INSTITUTIONAL ADOPTER (TANGLED ROPE) — Organized agent facing constrained exit. Institutions need multi-chain presence for market access (genuine coordination benefit: can reach multiple asset pools, reduce counterparty concentration). But they bear extraction costs: maintaining liquidity on multiple chains, operational complexity, settlement risk across fragmented systems. Active enforcement required: institutions must run multi-chain wallets, monitor each protocol's finality guarantees, manage bridge security. Significant coordination function (reaching diverse liquidity) alongside substantial extraction (operational burden)."
     },
     {
       "classification_type": "rope",
@@ -50,26 +51,26 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Layer-1 Protocol Developer",
-      "comment": "PERSPECTIVE 3: LAYER-1 PROTOCOL DEVELOPER (ROPE) \u2014 Benefits from network effects of own chain. Experiences constraint as coordination: settlement finality and throughput differentiation are legitimate competitive dimensions. Can exit to alternative chain or abandon pursuit. Net beneficiary \u2014 extraction flows toward protocol ecosystem through user lock-in and developer commitment."
+      "label": "The Protocol Developer (Ethereum/Solana/Arbitrum)",
+      "comment": "PERSPECTIVE 3: PROTOCOL DEVELOPER (ROPE) — Institutional beneficiary with arbitrage exit. Developers solve genuine coordination problem: providing distinct settlement guarantees (Ethereum's security/decentralization trade-off, Solana's speed, Arbitrum's cost efficiency). Users benefit from choice of settlement properties. Developers capture liquidity and user growth during their protocol's ascendancy. Exit exists through governance token liquidity and alternative projects. Net positive coordination — the fragmentation problem is the externality cost of solving the settlement property diversity problem."
     },
     {
-      "classification_type": "tangled_rope",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
+      "classification_type": "snare",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Cross-Chain Bridge Network Operators",
-      "comment": "PERSPECTIVE 4: CROSS-CHAIN BRIDGE OPERATORS (TANGLED ROPE) \u2014 Organized but constrained by fundamental technical constraints (asset locking, custodial risk). Genuine coordination function: enabling cross-chain transfers. Simultaneous extraction: charging fees, maintaining redundant infrastructure, bearing custody risk. Suppression is asymmetric \u2014 operators have agency but face structural barriers to exit (sunk capital in bridge infrastructure)."
+      "label": "The Arbitrage Trader (Institutional Extraction)",
+      "comment": "PERSPECTIVE 4: ARBITRAGE TRADER (SNARE) — Powerful agent with exit, but operates as extractor. Fragmentation creates price discrepancies across chains (ETH/USDC on Ethereum costs differently than on Solana). Arbitrage traders capture these spreads by moving capital across chains. This is pure extraction: they profit from retail users' illiquidity. They have full exit (institutional funding, portfolio diversification) and suppress alternatives (their activity reinforces the fragmentation that generates their profit). Zero coordination function beyond market clearing — they exploit the gap rather than close it."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
-      "exit_options": "mobile",
+      "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "Interoperability Standards Initiative",
-      "comment": "PERSPECTIVE 5: INTEROPERABILITY STANDARDS INITIATIVE (SCAFFOLD) \u2014 Organized actors (Layer Zero, Cosmos IBC, rollup data availability committees) see settlement fragmentation as a temporary coordination failure with technological sunset. Building protocol-agnostic settlement abstraction layers. Low extraction because initiative has agency and sees genuine exit path through unified settlement standards maturation (10-15 year horizon)."
+      "label": "The Cross-Chain Infrastructure Builder",
+      "comment": "PERSPECTIVE 5: CROSS-CHAIN INFRASTRUCTURE (SCAFFOLD) — Organized agents (Stargate, Across, Connext, Wormhole) building temporary bridges and messaging protocols to coordinate settlement across chains. These solutions see the fragmentation as a coordination failure with a sunset: universal settlement layer (unified sequencer, shared validator set, or mature cross-chain virtual machine) will eventually replace multi-chain fragmentation. Theater ratio is moderate because the solutions are functional (actually move value) but incrementally complex and create new failure modes (bridge security, oracle attacks). Has sunset clause: as settlement technology matures, cross-chain infrastructure becomes legacy (Perspective 5: Scaffold)."
     },
     {
       "classification_type": "piton",
@@ -77,64 +78,73 @@
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Traditional Financial Rails Incumbent",
-      "comment": "PERSPECTIVE 6: TRADITIONAL FINANCE INCUMBENT (PITON) \u2014 Maintains legacy settlement infrastructure (SWIFT, ACH) despite availability of faster alternatives. Theater is high: regulatory risk aversion, reputation management, incumbent advantage maintenance. Functional purpose has atrophied \u2014 crypto settlement now faster/cheaper for many use cases \u2014 but constraint persists through institutional inertia. Arbitrage exit available but not exercised."
+      "label": "The Layer-2 Rollup Ecosystem (Performative Decentralization)",
+      "comment": "PERSPECTIVE 6: LAYER-2 ROLLUPS (PITON) — Institutional actors (Optimism, Arbitrum, Base, Polygon) that began as technical solutions to Ethereum's throughput but have become economically motivated competitors. Early rollups solved a genuine coordination problem (scalability). Now they compete for liquidity using marketing and governance tokenomics rather than technical differentiation. Theater ratio is high: governance tokens create the illusion of decentralization and community ownership, but the core economic incentive is liquidity capture and MEV extraction. The technical solution has atrophied into inertial institutional theater maintained through token incentives."
     },
     {
-      "classification_type": "mountain",
+      "classification_type": "tangled_rope",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "Analytical Observer (Fundamental Physics View)",
-      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / FUNDAMENTAL VIEW (MOUNTAIN) \u2014 From civilizational timescale, some settlement coordination failure is inherent to distributed consensus systems: any settlement mechanism must trade off finality time, throughput, and decentralization. The trilemma creates irreducible tension that no institutional arrangement can fully escape. However, the structural data contradicts true mountain status \u2014 most fragmentation is contingent institutional competition, not fundamental constraint."
+      "label": "The Analytical Observer (Coordination vs. Extraction Decomposition)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) — From a universal analytical perspective, the settlement competition is both a genuine coordination mechanism and a genuine extraction mechanism operating simultaneously. Protocols coordinate on distinct settlement properties (speed, cost, decentralization), solving the real problem that monolithic settlement cannot optimize all three. But the competition also extracts from users through fragmentation costs. The constraint is tangled because removing the competition (unified settlement) eliminates the coordination benefit (property diversity). The classification reflects this irreducible entanglement."
     }
   ],
   "omegas": [
     {
-      "id": "trilemma_vs_institutional_competition",
-      "question": "Is settlement fragmentation driven by fundamental distributed consensus trilemmas or by contingent institutional competition between layer-1 protocols?",
-      "resolution_mechanism": "Empirical analysis: compare settlement properties achievable on Ethereum (single chain, coordinated) vs fragmented ecosystem. If unified chain exceeds current fragmented best-in-class across all metrics, trilemma is not binding constraint.",
-      "impact": "If fundamental: mountain classification confirmed, fragmentation unavoidable. If institutional: piton/snare classifications confirmed, fragmentation is maintained by misaligned incentives.",
+      "id": "bridge_security_endogeneity",
+      "question": "Is bridge security (and the repeated bridge failures that drive retail user exit) a feature of the fragmentation or an artifact of immature cross-chain technology?",
+      "resolution_mechanism": "Historical analysis of bridge failure rates and root causes; comparison to existing settlement systems (ACH, SWIFT, fedwire); controlled experiments with isolated bridge architectures",
+      "impact": "If mature bridges stabilize failure rates below 0.1% annually: fragmentation suppression remains real (users still pay bridge costs and accept latency). If bridges cannot be hardened below 1% annual failure rates: fragmentation becomes untenable and forces consolidation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether bridge security is inherently unsolvable or an engineering maturation problem"
+    },
+    {
+      "id": "monolithic_settlement_property_trade_off",
+      "question": "Is the settlement property trade-off (speed vs. decentralization vs. cost) truly irreducible, or can a single protocol satisfy all three within acceptable bounds?",
+      "resolution_mechanism": "Technical benchmarking (Ethereum 2.0 post-surge throughput, PBS implementation, proto-danksharding impact); comparison of multi-protocol property distributions to single-protocol achievable bounds",
+      "impact": "If irreducible: fragmentation is necessary coordination mechanism (Rope dominates classification). If single protocol can satisfy all: fragmentation is pure extraction (Snare dominates). If partially achievable: Tangled Rope (mixed) confirmed.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether trilemma or institutional incentives drive fragmentation"
+      "description": "Whether settlement property trade-offs are fundamental or engineering constraints"
     },
     {
-      "id": "bridge_custody_technology_ceiling",
-      "question": "Do technical solutions to cross-chain custody risk (light clients, optimistic rollups) provide sufficient security guarantees to enable unified settlement layer, or is residual custody risk fundamental?",
-      "resolution_mechanism": "Security audit corpus analysis of bridge failures; modeling of exploit probability under different bridge architectures; user perception studies on acceptable custody risk",
-      "impact": "If sufficient: unified settlement technically feasible, scaffold perspective's sunset is real. If insufficient: technical barriers justify continued fragmentation.",
+      "id": "liquidity_network_effects_path_dependence",
+      "question": "Does early liquidity concentration on one protocol create path-dependent lock-in, or do users/institutions rationally migrate to superior settlement properties?",
+      "resolution_mechanism": "Historical tracking of liquidity flows relative to protocol technical improvements; counterfactual analysis of user migration patterns conditional on settlement property changes; survey of institutional capital allocation decisions and stated constraints",
+      "impact": "If strong path dependence: fragmentation locks in suboptimal equilibrium (Snare). If rational migration: competition drives efficiency and fragmentation is sustainable coordination (Rope). If mixed: confirms Tangled Rope.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether bridge technology can solve custody risk bottleneck"
+      "description": "Whether liquidity concentration is path-dependent lock-in or rational equilibrium"
     },
     {
-      "id": "regulatory_jurisdiction_incompatibility",
-      "question": "Do different jurisdictions' settlement finality requirements (e.g., US vs EU vs Asia) create structural incompatibility that forces parallel settlement mechanisms, or could unified layer accommodate regulatory variation through interface standards?",
-      "resolution_mechanism": "Legal analysis of settlement regulation per jurisdiction; documentation of technical/legal barriers to unified settlement serving multiple jurisdictions simultaneously",
-      "impact": "If incompatible: fragmentation driven by regulatory structure (external constraint, not extractive), should be reclassified. If compatible: regulatory justification for fragmentation is cover story for institutional competition.",
+      "id": "cross_chain_settlement_standardization",
+      "question": "Can cross-chain settlement be standardized (CCTP, LayerZero, IBC standards) such that the fragmentation cost becomes negligible, or is irreducible heterogeneity inherent?",
+      "resolution_mechanism": "Adoption metrics for emerging cross-chain standards; measurement of friction (cost, latency, complexity) for standard-compliant bridges vs. proprietary bridges; degree of protocol participation in unified settlement standards",
+      "impact": "If standardization succeeds: suppression drops significantly (users can move freely), extractiveness drops (fragmentation cost approaches coordination cost). If standards fail to converge: suppression remains high and fragmentation persists as structural constraint.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether regulatory requirements force settlement fragmentation"
+      "description": "Whether cross-chain settlement standardization can reduce fragmentation costs"
     },
     {
-      "id": "mev_extraction_legitimacy",
-      "question": "Is maximum extractable value (MEV) competition a necessary coordination incentive for validator participation or an exploitative mechanism that should be minimized through protocol design?",
-      "resolution_mechanism": "Game theory analysis comparing MEV-dependent vs MEV-minimized validator economics; empirical data on validator participation rates under different MEV environments",
-      "impact": "If necessary: elevated extractiveness in measurement is coordination cost (lower effective chi). If exploitative: extractiveness reflects actual extraction (higher effective chi), piton/snare perspectives confirmed.",
-      "confidence": "low",
+      "id": "retail_vs_institutional_constraint_structure",
+      "question": "Are retail users and institutions experiencing the same constraint (fragmentation) or structurally different constraints with the same label?",
+      "resolution_mechanism": "Decomposition: separate constraint stories for retail (powerless/trapped) vs. institutional (organized/constrained). Retail story focuses on bridge friction and unavailable liquidity. Institutional story focuses on operational complexity and settlement risk management.",
+      "impact": "If structurally distinct: classify separately with different epsilon values. If same constraint viewed from different power positions: unified story with perspectival gap confirmed.",
+      "confidence": "high",
       "type_class": "conceptual",
-      "description": "Whether MEV is coordination cost or extractive mechanism"
+      "description": "Whether retail and institutional settlement competition are one constraint or two"
     },
     {
-      "id": "network_effect_lock_in_depth",
-      "question": "How deep is layer-1 protocol lock-in due to network effects? Can users/developers realistically migrate between chains or does lock-in enforce exit-trap dynamics?",
-      "resolution_mechanism": "Historical analysis of cross-chain migrations (Solana users to Arbitrum, etc.); cost-benefit models of switching for different user segments; documentation of actual migration barriers vs theoretical barriers",
-      "impact": "If deep lock-in: retail users genuinely trapped (snare confirmed). If shallow: users constrained but mobile (tangled rope confirmed).",
-      "confidence": "high",
+      "id": "protocol_competition_sustainability",
+      "question": "Is multi-protocol competition sustainable indefinitely, or does network effects convergence force consolidation to 1-3 dominant chains?",
+      "resolution_mechanism": "Network effects analysis of cryptocurrency settlement (Herfindahl index of liquidity concentration, correlation with protocol feature diversity); historical precedent from payment system consolidations (Visa/Mastercard duopoly); modeling of equilibrium protocol count given transaction cost structure",
+      "impact": "If sustainable: fragmentation is permanent structural feature (Tangled Rope indefinite). If convergence: fragmentation is transitional (Scaffold sunset becomes real). If oscillating (periods of competition and consolidation): measurement interval matters for classification.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Depth of layer-1 protocol lock-in"
+      "description": "Whether protocol competition converges or sustains indefinitely"
     }
   ],
   "measurements": [
@@ -161,12 +171,27 @@
     {
       "metric": "theater_ratio",
       "time_point": 3,
-      "value": 0.42
+      "value": 0.41
     },
     {
       "metric": "theater_ratio",
       "time_point": 6,
       "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.65
     }
   ],
   "interval": {
@@ -174,35 +199,38 @@
     "end": 6
   },
   "commentary": {
-    "narrative_context": "Cryptocurrency settlement competition creates fragmentation across multiple layer-1 protocols (Ethereum, Solana, Arbitrum, Base, Optimism, Polygon, etc.), each optimizing for different settlement properties (speed, throughput, finality time, cost, decentralization). This constraint operates between protocol developers competing for liquidity/users and retail users/institutions bearing costs of fragmented settlement. The core tension: achieving optimal settlement coordination across the entire ecosystem would require either monopolistic control (centralized antithesis to crypto ideals) or coordination mechanism (multilateral agreement across competing protocols). Instead, parallel incompatible settlement layers persist, generating extraction through fragmentation premiums, bridge friction, and forced liquidity splitting. The constraint exhibits tangled rope structure because genuine coordination exists (each protocol provides genuine settlement finality within its boundaries, and bridges enable value transfer) alongside asymmetric extraction (retail users pay fragmentation tax, market makers absorb redundancy costs, protocols capture switching costs).",
+    "narrative_context": "Cryptocurrency settlement competition arises from protocols optimizing for different settlement properties (Ethereum prioritizes decentralization and security; Solana optimizes for speed and throughput; Arbitrum and Optimism focus on cost efficiency; Polygon pursues throughput and market-specific optimization). Each protocol's competitive success creates network effects that attract liquidity and users, but no single protocol dominates all settlement properties. This fragmentation creates an extraction mechanism: users who need assets across multiple chains must pay bridge costs, accept slippage, or trust third-party custodians. The constraint exhibits both genuine coordination (different protocols satisfy different use cases) and genuine extraction (users bear fragmentation costs). The tension between these functions makes this a canonical Tangled Rope constraint. Retail users experience this as a Snare (no exit, full cost absorption). Institutional adopters see Tangled Rope (mixed coordination and extraction with constrained but real exit). Protocol developers see Rope (genuine settlement property diversity benefit). Arbitrage traders see Snare from a powerful position (they extract spreads created by fragmentation). Cross-chain infrastructure builders see Scaffold (temporary solution with sunset as universal settlement emerges). Layer-2 rollups see Piton (original technical solution degraded into performative competition via governance tokens and MEV extraction).",
     "key_agents": [
-      "Retail Users: Primary victims (powerless/trapped) \u2014 fragmented by liquidity distribution, forced to choose single chain or pay bridge costs",
-      "Institutional Market Makers: Secondary victims/participants (moderate/constrained) \u2014 benefit from arbitrage but forced to maintain parallel operations",
-      "Layer-1 Protocol Developers: Primary beneficiaries (institutional/arbitrage) \u2014 capture network effects from own-chain settlement dominance",
-      "Cross-Chain Bridge Operators: Organized participants (organized/constrained) \u2014 provide genuine coordination function while extracting fees",
-      "Interoperability Standards Initiatives: Organized builders (organized/mobile) \u2014 creating technical sunset through protocol-agnostic standards",
-      "Traditional Finance Incumbents: Institutional status-quo preservers (institutional/arbitrage) \u2014 maintain legacy infrastructure through regulatory theater"
+      "Protocol Developers (Ethereum, Solana, Arbitrum, Base, Optimism, Polygon): Institutional beneficiaries (arbitrage exit) — capture liquidity and user growth; solve genuine settlement property diversity problem but create fragmentation externality",
+      "Retail Users: Primary victims (powerless/trapped) — must navigate fragmentation, pay bridge costs, accept slippage or unavailable liquidity",
+      "Institutional Adopters: Secondary victims (organized/constrained) — need multi-chain presence for market access; bear operational complexity and settlement risk; have limited exit but can shift chains",
+      "Liquidity Providers: Beneficiaries with constrained exit (powerful/constrained) — earn fees on cross-chain swaps and bridges but dependent on fragmentation for fee generation",
+      "Arbitrage Traders: Extractors (powerful/arbitrage) — profit from price discrepancies across chains created by fragmentation; suppress alternatives through their activity",
+      "Cross-Chain Infrastructure Builders (Stargate, Across, Connext, Wormhole): Organized agents (organized/constrained) — provide temporary solutions with genuine sunset as unified settlement emerges",
+      "Layer-2 Rollup Governance: Institutional actors (institutional/arbitrage) — begun as technical solution, degraded to performative competition via tokenomics"
     ],
-    "logic_rationale": "Extractiveness (0.58): Moderate-high. Fragmentation imposes genuine costs (slippage on cross-chain swaps, bridge fees, locked liquidity inefficiency). But extraction is not maximal because (a) users retain option value by choosing their optimal chain, (b) protocol competition is genuine (users can migrate if chain becomes too extractive), and (c) some fragmentation reflects real technical constraints (throughput/finality tradeoffs). The value has increased from 0.32 to 0.58 over the interval as fragmentation has deepened and interdependencies have increased. Suppression (0.52): Moderate-high. Barriers to exit include technical complexity of bridge mechanisms, switching costs to alternative chains, and network effect lock-in. But suppression is not total \u2014 users can theoretically exit to alternative chains or abandon crypto entirely. Theater ratio (0.48): Moderate. Much of settlement competition is performative (marketing claims of throughput superiority, finality guarantees that rest on unproven assumptions). But core coordination function (actual value transfer) is real. Theater has increased slightly as protocol claims have proliferated relative to genuine differentiation.",
-    "perspectival_gap": "Protocol developers see rope (pure coordination benefit from settlement finality differentiation). Retail users see snare (trapped by fragmentation). Market makers see tangled rope (both benefit and extraction). Bridge operators see tangled rope with higher suppression (genuine coordination but constrained by custody risk). Interoperability initiatives see scaffold (temporary problem with technological exit). Traditional finance sees piton (performative maintenance of legacy). Analytical observer risks mountain (naturalizing as trilemma). The gap reveals that classification depends critically on structural position \u2014 the constraint IS different for different agents because extraction flows asymmetrically toward beneficiaries.",
-    "directionality_logic": "Beneficiaries (protocol developers, exchange operators) have arbitrage-level exit options \u2014 they can reorient to different protocols or build new ones. Victims (retail users, cross-chain reliability) have trapped or constrained exit options \u2014 they cannot easily abandon ecosystem without incurring switching costs or accepting fragmentation. Directionality flows from beneficiaries (low d) toward victims (high d). Market makers occupy intermediate position (constrained exit, mixed benefit). Bridge operators have institutional power but are constrained by sunk infrastructure capital \u2014 their directionality is elevated relative to pure protocol developers.",
-    "mandatrophy_analysis": "TANGLED ROPE CONFIRMED: The constraint satisfies all three gates: (1) beneficiaries exist (protocol developers/exchanges benefit from fragmentation/network effects), (2) victims exist (retail users, cross-chain reliability), (3) active enforcement is required (protocols must actively maintain own-chain settlement rules, market makers must actively arbitrage fragments, users must actively choose routing). The constraint is not pure coordination (which would be rope \u2014 all agents benefit from settlement finality) because fragmentation creates asymmetric costs. It is not pure extraction (which would be snare \u2014 no coordination benefit) because genuine value transfer is enabled within-chain. The mandatrophy resolves by recognizing that settlement fragmentation simultaneously enables coordination (value transfer) and enforces extraction (fragmentation tax). The false summit mountain classification (from trilemma framing) is rejected because empirical evidence suggests fragmentation is institutional choice, not fundamental constraint."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint exhibits mixed function. Protocols do solve a genuine problem (settlement property diversity), which is why they command liquidity and users. But the fragmentation creates real costs: bridge fees (typically 0.1-0.5% per crossing), slippage from liquidity fragmentation (can exceed 1% for less liquid assets), and operational burden on institutions (multi-chain wallet management, finality monitoring, settlement risk). The measurement trajectory (0.32 → 0.45 → 0.58) reflects increasing fragmentation as more protocols launch and compete for liquidity. Theater ratio (0.48): Moderate. Most protocols use genuine technical differentiation (Solana's parallel processing, Arbitrum's compression, Optimism's bytecode sharing), but increasingly rely on governance token incentives and MEV-sharing narratives that are performative in nature. Cross-chain infrastructure claims solve the fragmentation problem but add layers of complexity and new failure modes (bridge security, oracle attacks). Suppression (0.65): Moderate-high. Users and institutions cannot exit fragmentation without abandoning cryptocurrency. Bridge fees and finality latency are significant barriers. Regulatory uncertainty about cross-chain transactions suppresses some use cases. But suppression is not total — users can choose a single protocol or accept fragmentation costs; institutions have more exit options than retail users. The measurement trajectory (0.52 → 0.60 → 0.65) reflects increasing suppression as fragmentation deepens and cross-chain infrastructure becomes more complex.",
+    "perspectival_gap": "Retail users classified as Snare (powerless/trapped) because they have no exit from fragmentation and bear full cost. Institutional adopters classified as Tangled Rope (organized/constrained) because they have genuine coordination benefit (multi-chain presence) alongside extraction (operational burden). Protocol developers classified as Rope (institutional/arbitrage) because they are solving a real problem and capturing fair reward. Arbitrage traders classified as Snare (powerful/arbitrage) because they are pure extractors profiting from the fragmentation they suppress alternatives against. The cross-chain infrastructure builders classified as Scaffold because they provide temporary solutions with genuine sunset logic. The analytical observer classified as Tangled Rope because the constraint irreducibly entangles coordination (settlement property diversity) and extraction (fragmentation costs). The gap reveals that the labeling 'settlement competition' obscures a multifunction constraint — some perspectives see genuine market efficiency (Rope), others see pure extraction (Snare), most see tangled dynamics.",
+    "directionality_logic": "Directionality for each perspective derives from beneficiary/victim status and exit options. Retail users: victims + trapped → d ≈ 0.95 → high f(d) → maximum experienced extraction. Institutional adopters: both victims and beneficiaries (multi-chain access benefit, but fragmentation cost) + constrained → d ≈ 0.55 → moderate f(d). Protocol developers: beneficiaries + arbitrage → d ≈ 0.15 → low f(d) (actually negative experienced extraction from their position). Arbitrage traders: beneficiaries (profit from spreads) + arbitrage → d ≈ 0.05 → negative f(d) (extraction runs toward them). Cross-chain infrastructure: mixed (solving a problem but also profiting from it) + constrained → d ≈ 0.50 → moderate f(d). Layer-2 rollups: beneficiaries (capture governance value) + arbitrage → d ≈ 0.12 → low f(d). Analytical observer: d ≈ 0.72 (canonical analytical) reflecting that the observer sees both functions clearly. The directionality derivation automatically produces the perspectival gap: beneficiaries experience low extraction, victims experience high extraction, from the same base ε value (0.58).",
+    "mandatrophy_analysis": "This constraint demonstrates the mandatrophy at extractiveness 0.58 by showing that the classification cannot collapse to pure extraction or pure coordination. Removing the settlement competition (forcing unified monolithic settlement) would eliminate the extraction (single chain, no fragmentation costs) but also eliminate the coordination benefit (users wanting speed get it at the cost of decentralization or cost; users wanting decentralization get it at the cost of speed). This is genuine entanglement, not a failure of classification. The Tangled Rope type correctly captures this: the constraint exhibits both a coordination function (diverse settlement properties) that requires asymmetric extraction (protocol competition captures liquidity/user growth) and sufficient suppression (users cannot easily exit fragmentation) that the extraction is coercive despite the coordination benefit. The mandatrophy is resolved by recognizing that coordination and extraction are not opposites in this context — they are coupled mechanisms in the same institutional arrangement. The analytical observer sees this coupling clearly, which is why the analytical perspective also classifies as Tangled Rope rather than converging to a single type.",
+    "kernel_context": ""
   },
   "boltzmann": {
-    "coordination_type": "global_infrastructure"
+    "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "blockchain_throughput_scaling",
-      "stablecoin_settlement_hierarchy",
-      "cross_asset_atomic_swap_feasibility"
+      "cross_chain_bridge_security",
+      "ethereum_layer_2_competition",
+      "decentralized_exchange_fragmentation",
+      "stablecoin_settlement_standards"
     ],
-    "dual_formulation_note": "Cryptocurrency settlement competition is downstream of layer-1 protocol competition but represents a distinct constraint with its own extractiveness. The upstream layer-1 competition has institutional/competitive structure; the settlement fragmentation has financial/coordination structure. Decomposition is appropriate \u2014 write separate stories for protocol competition and settlement fragmentation."
+    "dual_formulation_note": "Settlement competition is the upstream constraint that creates fragmentation. Downstream constraints (bridge security, DEX fragmentation, stablecoin standards) are all enabled by the multi-protocol structure. Cross-chain settlement reliability is a distinct constraint with different ε (higher certainty, lower extractiveness, but structurally dependent on settlement competition being resolved). Layer-2 competition is a specialized case of settlement competition, focused on Ethereum ecosystem rollups rather than cosmopolitan multi-chain settlement."
   },
   "directionality_overrides": [
     {
-      "power_atom": "institutional",
-      "d_value": 0.28
+      "power_atom": "powerful",
+      "d_value": 0.05
     }
   ]
 }

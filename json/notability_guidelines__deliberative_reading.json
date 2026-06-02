@@ -1,0 +1,226 @@
+{
+  "header": {
+    "constraint_id": "notability_guidelines__deliberative_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "notab_delib",
+    "story_uid": "6dc462f6-c764-4a1c-8a95-0e9efb2f1621",
+    "created_at": "2026-02-26T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.45,
+    "theater_ratio": 0.58,
+    "claimed_type": "scaffold",
+    "human_readable": "Wikipedia Notability Guidelines as Deliberative Governance Process",
+    "topic_domain": "digital_commons/platform_constitutionalism/knowledge_infrastructure",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "deliberative_contributors"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Deliberative Governance Coalition",
+      "comment": "PERSPECTIVE 1: DELIBERATIVE GOVERNANCE COALITION (SCAFFOLD) — Organized participants (editors, admins, ArbCom, policy makers) see notability as output of an ongoing AfD (Articles for Deletion) deliberation process. Suppression exists (gatekeeping effort, debate costs) but is bounded by the sunset logic: the policy is maintained as a living negotiation with periodic recalibration. The constraint has active enforcement (deletion via community consensus) but is temporary and revisable — new evidence or arguments can shift boundaries."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Active Editor Community",
+      "comment": "PERSPECTIVE 2: ACTIVE EDITOR COMMUNITY (ROPE) — Editors with sustained engagement experience notability as a coordination mechanism: shared criteria enable collaborative curation, reduce redundant adjudication, and align the encyclopedia's scope. Exit options exist (fork to Inclusionpedia, edit Wikivoyage, start a specialized wiki) but are costly. The constraint primarily solves a coordination problem (how do we decide together what to keep?) rather than extracting asymmetric benefit. Low theater — editorial decisions are transparent and appealable."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Marginalized Subject Communities",
+      "comment": "PERSPECTIVE 3: MARGINALIZED SUBJECT COMMUNITIES (TANGLED ROPE) — For communities with limited resources or visibility (indigenous knowledge systems, grassroots history, niche academic fields), notability gatekeeping creates asymmetric burden: they must present evidence in forms the consensus recognizes as legitimate, while mainstream subjects benefit from existing infrastructure. The constraint coordinates encyclopedia scope (coordination function) but also extracts a disproportionate evidentiary burden. Constrained exit: moving to specialized wikis fractures knowledge commons; staying means submitting to gatekeeping."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Notability Policy Institution",
+      "comment": "PERSPECTIVE 4: NOTABILITY POLICY INSTITUTION (PITON) — The formal policy machinery (WP:N page, guidelines documents, deletion templates) has become substantially performative. Most deletion decisions are made through local consensus on AfD pages, not by rigid application of stated criteria. The institutional policy persists through inertia (it provides a veneer of objectivity) while the actual mechanism is distributed deliberation. Theater ratio (0.58) reflects this gap: stated rules vs. actual practice diverge increasingly."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Subjects Lacking Organized Advocates",
+      "comment": "PERSPECTIVE 5: SUBJECTS LACKING ORGANIZED ADVOCATES (SNARE) — For topics without community advocates (deceased local figures, small businesses, marginalized cultural artifacts), notability becomes pure extraction: deletion risk with no voice in AfD process. Suppression is total — the subject cannot defend itself. Theater is high (formal criteria, citation standards) but purely performative for undefended topics. This perspective reveals the constraint's failure mode: when the deliberative mechanism assumes organized participants, powerless subjects face extractive gatekeeping."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Meta-Governance View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / META-GOVERNANCE (ROPE) — From a civilizational perspective, Wikipedia's notability negotiation is a functional prototype for distributed epistemic commons governance. The constraint coordinates diverse communities around shared knowledge standards without centralized authority. Scalability and emergent legitimacy demonstrate the viability of deliberative boundary-setting in large-scale knowledge systems. Pure coordination function — the debate itself IS the governance mechanism."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "deliberative_closure_adequacy",
+      "question": "Does the AfD deliberative process generate adequate closure (legitimate boundary decisions) or does it perpetually defer hard cases to informal consensus that varies by editorial clique?",
+      "resolution_mechanism": "Audit of deletion decision consistency: track how similar articles are treated across time and editor communities; measure variance in citation standard application and GNG interpretation across ArbCom decisions",
+      "impact": "If adequate closure: scaffold classification holds — sunset logic is real because boundaries can be negotiated and reset. If inadequate: constraint drifts toward piton (performative) or tangled_rope (clique extraction).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether AfD deliberation produces legitimate and consistent boundary decisions"
+    },
+    {
+      "id": "systemic_bias_in_gatekeeping",
+      "question": "Does notability enforcement distribute suppression equally across communities or does it systemically disadvantage subjects that lack organized editorial advocates?",
+      "resolution_mechanism": "Comparative deletion rates by subject domain (STEM vs. humanities vs. local history); survival analysis of biographical articles by subject prominence; language-edition analysis (Wikipedia-EN vs. Wikipedia-FR vs. Wikipedias in languages serving marginalized communities)",
+      "impact": "If equal distribution: scaffold maintains deliberative legitimacy. If systemic bias: snare classification becomes dominant for powerless subjects; constraint requires active bias correction (affirmative inclusion policies) to prevent pure extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether notability gatekeeping has systematic biases against marginalized communities"
+    },
+    {
+      "id": "afd_vs_stated_criteria_divergence",
+      "question": "How large is the gap between stated notability criteria (WP:N page) and actual deletion decisions in AfD deliberation? Are deletions justified by criteria logic or by editorial consensus that invokes criteria post-hoc?",
+      "resolution_mechanism": "Content analysis of AfD closing statements: extract explicit criteria citations vs. implicit consensus signals; compare invoked criteria to stated GNG/SNG definitions; track 'snowball' closures vs. detailed criterion-by-criterion analysis",
+      "impact": "Large divergence confirms piton status (theater) — the policy persists for appearance of legitimacy while actual mechanism is consensus negotiation. Small divergence supports scaffold status (deliberative output legitimates boundary).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Gap between stated notability criteria and actual AfD decision logic"
+    },
+    {
+      "id": "reading_identity_ambiguity",
+      "question": "Is notability fundamentally a deliberative governance process (this reading) or is it fundamentally a fixed set of rules administered through deliberation (deletionist reading) or fundamentally an inclusionist principle constrained by practical limits (inclusionist reading)?",
+      "resolution_mechanism": "Examine Wikipedia policy history: which reading was anchored first? How do policy makers justify amendments — as clarifying rules, as recalibrating consensus, or as defending inclusion against deletion pressure? Which institutional layer (ArbCom, Jimbo, community consensus) has final authority to revise boundaries?",
+      "impact": "If deliberative: scaffold reading is correct — boundaries are outputs of process. If deletionist: the reading is miscategorized as scaffold when it should be piton or snare (rules with appearance of deliberation). If inclusionist: the reading overstates the legitimacy of gatekeeping.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether notability is fundamentally deliberative (this reading), rule-based (deletionist), or inclusion-presumptive (inclusionist)"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.22
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.32
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Wikipedia's notability guidelines represent a distributed deliberative governance mechanism for maintaining encyclopedia scope and quality in the face of continuous information influx. Rather than treating notability as a fixed rule or a natural boundary, the deliberative reading frames it as an ongoing process where AfD (Articles for Deletion) discussions generate situated closure on boundary questions. This reading emphasizes that notability criteria (GNG, SNG) function as invocation hooks for community deliberation rather than automatic decision rules. The constraint exhibits scaffold characteristics: it has active enforcement (deletion via community consensus), bounded suppression (gatekeeping effort with appeal mechanisms), and a structured sunset logic (notability can be renegotiated as evidence or community judgment shifts). The theater ratio (0.58) reflects tension between the formal policy infrastructure (WP:N page, stated criteria) and the distributed decision-making process (AfD consensus). Extractiveness (0.32) is moderate because the constraint primarily coordinates scope but creates asymmetric burden on communities with limited editorial representation. The deliberative reading contrasts with the deletionist reading (which treats notability as fixed rules to be applied) and the inclusionist reading (which treats the burden of proof as illegitimately skewed toward deletion).",
+    "key_agents": [
+      "Deliberative Governance Coalition: Organized participants (editors, admins, policy makers) who see notability as ongoing negotiation; constrained but mobile within the system; beneficiaries of shared governance mechanism",
+      "Active Editor Community: Editors with sustained engagement; experience rope coordination; primarily solve the collective action problem of scope curation",
+      "Marginalized Subject Communities: Communities with limited resources (indigenous knowledge, grassroots history, niche fields); experience tangled rope (mixed coordination and asymmetric burden); constrained exit",
+      "Subjects Lacking Advocates: Topics without organized defenders (deceased local figures, small businesses); experience snare classification (trapped, zero voice in process)",
+      "Notability Policy Institution: The formal policy machinery (WP:N page, templates, guidelines); institutional actor maintaining appearance of objectivity; piton status (increasingly performative)",
+      "Analytical Observer: Meta-governance perspective; sees Wikipedia notability as functional prototype for distributed epistemic commons governance"
+    ],
+    "logic_rationale": "Extractiveness (0.32): Moderate-low. The deliberative reading treats notability as a governance coordination mechanism whose primary function is to align distributed editorial decisions without centralized authority. Moderate extractiveness reflects that the gatekeeping effort is real (marginalized communities face higher evidentiary burden) but is not the mechanism's dominant function. The scaffold classification holds because the constraint has a sunset logic: notability boundaries are legitimately revisable through deliberation. If the constraint were pure extraction (snare/tangled_rope dominant), sunset would not apply — the boundaries would be rigid extraction apparatus. Suppression (0.45): Moderate. Gatekeeping effort and citation standards create barriers to inclusion, but suppression is bounded by appeal mechanisms, community discussion forums, and the ability to contest decisions. Theater ratio (0.58): Moderate-high. The gap between formal criteria (WP:N page) and actual AfD decision logic is substantial. Many deletion decisions invoke criteria post-hoc or rely on implicit consensus signals rather than explicit criterion-by-criterion analysis. The theater has increased over time (0.48 → 0.58) as the community has shifted from rule application toward consensus deliberation, making stated policies increasingly performative.",
+    "directionality_logic": "Directionality for the deliberative reading is derived from the agent's structural relationship to the gatekeeping mechanism. Organized contributors (editors, policy makers) with mobile exit options experience low d (beneficiaries of the coordination function). Marginalized communities with constrained exit experience higher d (face asymmetric evidentiary burden). Powerless subjects with no organized voice experience maximal d (trapped, full target of gatekeeping). The analytical observer experiences d ≈ 0.72 (typical for knowledge-infrastructure assessment). The deliberative reading emphasizes that d is not fixed by the constraint structure but is negotiable through participation in AfD: an agent who enters the process and mobilizes community support can shift their structural position from target toward beneficiary. This negotiability is central to why the constraint is scaffold rather than snare.",
+    "perspectival_gap": "The deliberative reading generates perspectival gaps across multiple axes. The governance coalition sees coordination (rope/scaffold) — shared scope criteria enable collective curation. Marginalized communities see mixed coordination and extraction (tangled_rope) — they benefit from the epistemic commons but bear asymmetric evidentiary burden. Powerless subjects see pure extraction (snare) — they have zero voice in the deliberative process. The piton perspective (institutional policy machinery) reveals the constraint's degradation: formal criteria are increasingly performative as actual decisions are made through consensus negotiation. The analytical observer sees meta-governance (rope at civilizational scale) — Wikipedia's notability mechanism demonstrates a functional model for distributed epistemic commons governance. These gaps reveal that the deliberative reading is valid only when deliberative participation is possible; it collapses into snare/tangled_rope/piton for agents without access to or standing in AfD processes.",
+    "mandatrophy_analysis": "The deliberative reading resolves mandatrophy by distinguishing the constraint's coordination function (setting shared scope for collective action) from its gatekeeping function (excluding topics from the commons). The two functions coexist in the constraint, making it tangled_rope from certain perspectives and scaffold from others. The mandatrophy is resolved by recognizing that the classification depends on whether the agent has standing in the deliberative process: agents with genuine participation rights and the ability to organize support experience scaffold (temporary, revisable boundaries); agents excluded from deliberation or lacking advocacy capacity experience snare (permanent gatekeeping with no voice). The deliberative reading itself is mandatrophy-resolving because it foregrounds the process as the mechanism of legitimacy — closure is not imposed by rule but generated through distributed deliberation.",
+    "kernel_context": "This constraint is the DELIBERATIVE READING of the contested kernel 'notability_guidelines'. The kernel is Wikipedia's commitment to scope and quality curation. The deliberative reading instantiates this commitment as an ongoing negotiation process where AfD discussions generate situated closure on boundary questions. Sibling readings: (1) DELETIONIST_READING — treats notability as fixed rules (GNG, SNG) to be applied consistently; boundary questions are adjudicated by rule, not by ongoing deliberation. (2) INCLUSIONIST_READING — treats the burden of proof as systematically skewed toward deletion; argues for presumption of inclusion except where core policy is violated. The deliberative reading coexists with both siblings because each can be held by different Wikipedia communities (some edit spaces emphasize consistency with stated rules; others emphasize inclusion presumption). The reading differs in its core premise: deliberative reading asserts that notability is OUTPUT of process; deletionist asserts it is INPUT rule; inclusionist asserts burden distribution is the core question. These are not empirical disagreements but framing disagreements — they rest on different commitments about what legitimates gatekeeping."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "wikipedia_deletion_process",
+      "encyclopedic_inclusionism_bias",
+      "editorial_gatekeeping_asymmetry"
+    ],
+    "dual_formulation_note": "Notability guidelines decompose into three constraint stories corresponding to three readings of the same kernel. Deliberative reading (this file): ε=0.32, scaffold, emphasizes process-based legitimacy. Deletionist reading: ε≈0.15–0.20, rope, emphasizes rule consistency and predictability. Inclusionist reading: ε≈0.45–0.55, tangled_rope, emphasizes asymmetric burden and gatekeeping extraction. All three stories have the same base properties kernel but different classification chains reflecting different commitments about what grounds notability. Network links establish that changes in one reading's implementation create pressure on siblings (e.g., if AfD deliberation becomes more inclusive, deletionist reading's rule consistency suffers; if exclusionary bias emerges, inclusionist reading's framing becomes more salient)."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "distributed",
+    "interpretation_layer_present": false,
+    "reference_frame": "encyclopedia_as_curated_commons",
+    "drift_state": {
+      "moment": "contemporary_mass_deletion_pressure",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "notability_guidelines__deletionist_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "notability_guidelines__inclusionist_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "notability_as_process_output",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "deliberative_legitimacy_principle",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  },
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "scaffold",
+    "downstream_of": [
+      "wikipedia_knowledge_governance"
+    ]
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "header": {
+    "constraint_id": "monopoly_rulebook__extraction_demo_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "monopoly_extract",
+    "story_uid": "extraction-demo-reading-monopoly-kernel"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.35,
+    "claimed_type": "snare",
+    "human_readable": "Monopoly Rulebook as Extraction Mechanism (Pedagogical Demonstration)",
+    "topic_domain": "game_theory/economic_simulation/institutional_design",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "wealth_accumulator"
+    ],
+    "victims": [
+      "eliminated_players",
+      "early_losers"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Eliminated Player",
+      "comment": "PERSPECTIVE 1: ELIMINATED PLAYER (SNARE) — Trapped within the game duration (60-90 minutes) with no meaningful exit. Lacking capital, cannot continue play. Faces maximum suppression through cumulative disadvantage: early bad rolls create debt, which creates forced property sales at unfavorable rates, which accelerates elimination. Zero degrees of freedom once trapped. The rulebook extracts labor attention (continued gameplay watching) and psychological investment (witnessing own defeat become inevitable) from those no longer participating."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Struggling Player (Mid-Game)",
+      "comment": "PERSPECTIVE 2: MID-GAME STRUGGLING PLAYER (TANGLED ROPE) — Constrained by the momentum asymmetry: wealth generates wealth (collect more rent, purchase more properties, accumulate more capital), while poverty creates debt (land on expensive properties, forced sales, accelerating elimination). Experiences both coordination function (the rule system is coherent and mathematically tractable) and extraction (the rules ensure eventual ruin for those starting with disadvantage). Has marginal exit options (may negotiate trades or quit voluntarily) but faces significant social cost for quitting mid-game. Suppression is substantial but not absolute."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "local",
+      "label": "The Winning Player (Wealth Accumulator)",
+      "comment": "PERSPECTIVE 3: WEALTH ACCUMULATOR / WINNER (ROPE) — Experiences the rulebook as pure coordination mechanism that solves the shared problem of determining a legitimate winner. The game has reduced complexity, clear decision trees, and a transparent victory condition. Extraction flows toward this agent but is experienced as reward for successful play, not as predatory extraction. Exit options are strong (can quit when winning to secure victory) and asymmetric."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "Capitalism as Pedagogical System",
+      "comment": "PERSPECTIVE 4: CAPITALISM AS PEDAGOGICAL SYSTEM (SNARE) — From the reading's own intended vantage point: Monopoly demonstrates that wealth concentration is mechanically inevitable under capitalist rules absent redistribution mechanisms. Players collectively are trapped in a system demonstrating its own crushing logic: initial wealth asymmetries compound; capital accumulation accelerates; debt becomes inescapable; elimination becomes certain for losers. The game teaches the lesson ('this is how capitalism works') through enforced participation and forced witnessing of others' ruin. The suppression mechanism is pedagogical: the emotional/cognitive cost of recognizing the game demonstrates a harsh truth about the system it models."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Mathematical Inevitability (Natural Law Reading)",
+      "comment": "PERSPECTIVE 5: MATHEMATICAL INEVITABILITY / NATURAL LAW (MOUNTAIN) — From the civilizational analytical perspective: the rulebook produces wealth concentration as a mathematical inevitability, not as contingent institutional design. The game's mechanics (rent collection compounds wealth; wealth buys access to higher-rent properties; higher-rent properties compound wealth faster; debt spirals downward for those with insufficient capital) guarantee eventual monoply regardless of starting conditions or player agency. This perspective treats the outcome as a law of game-mechanics, analogous to physical laws. However, the structural data contradicts this — the reading itself identifies specific rule choices (no redistribution, winner-takes-all, geometric property cost structure) that could be modified."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "redistribution_counterfactual",
+      "question": "Does elimination occur under alternative rule-sets that include wealth redistribution, wealth cap, or debt forgiveness mechanics?",
+      "resolution_mechanism": "Playtest Monopoly variants with: (a) forced wealth redistribution at intervals, (b) property rent caps, (c) bankruptcy restructuring. Compare game length, winner emergence timeline, and elimination patterns to baseline.",
+      "impact": "If elimination persists: wealth concentration is robust mathematical feature independent of specific rules (supports mountain reading). If elimination disappears: wealth concentration is contingent institutional design choice (falsifies mountain reading, supports snare reading as product of specific rules).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether wealth concentration is inevitable or contingent on specific rule choices"
+    },
+    {
+      "id": "pedagogical_intent_ambiguity",
+      "question": "Was the original Monopoly rulebook designed to demonstrate capitalism's inevitable inequality, or to demonstrate successful capitalist competition?",
+      "resolution_mechanism": "Historical analysis of designer intent (Parker Bros internal documents, interviews with Charles Darrow/Henry George predecessors); comparison of game mechanics to The Landlord's Game (Henry George's proto-Monopoly emphasizing monopoly as evil). Examine whether 'teaching inequality' was explicit design goal or post-hoc interpretation.",
+      "impact": "If originally intended as critique: the extraction-demo reading aligns with designer intent (strengthens reading authority). If originally intended as celebration: the extraction-demo reading is counterinterpretation (weakens reading authority, may be influences rather than coexists_with relative to other readings).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether pedagogical demonstration of inequality was original design intent"
+    },
+    {
+      "id": "natural_law_vs_design_choice",
+      "question": "Is the inevitable wealth concentration a mathematical law of any zero-sum wealth-distribution game with geometric rent scaling, or is it specific to Monopoly's particular rule parameters?",
+      "resolution_mechanism": "Mathematical analysis of rent-scaling sensitivity: vary property cost structures, rent multipliers, starting capital, and movement rates. Identify the minimal rule set that produces inevitable concentration vs the minimal rule set that permits non-concentrated outcomes.",
+      "impact": "If law-like: extraction-demo reading's mountain perspective is justified (concentration is inherent to any such game). If parameter-dependent: mountain perspective is false summit (concentration is contingent on specific choices).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether wealth concentration is a law of zero-sum games or specific to Monopoly rules"
+    },
+    {
+      "id": "capital_intensity_temporal_path",
+      "question": "Does the time to reach winner determination (and elimination of all other players) scale with number of players in a way that reveals extraction as time-dependent phenomenon?",
+      "resolution_mechanism": "Empirical study: measure game duration and elimination timeline for 2-player, 3-player, 4-player, and 6-player Monopoly under standard rules. Track wealth concentration curve and elimination order. If extraction time is O(n²) in player count, elimination is feature; if O(n), concentration may be noise artifact.",
+      "impact": "If extraction time is scalable feature: supports snare reading (the system is designed to produce elimination). If extraction time is invariant: suggests elimination is secondary outcome of wealth concentration mechanics.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Temporal dynamics of elimination relative to game mechanics"
+    },
+    {
+      "id": "pedagogical_truth_claim_grounding",
+      "question": "What is the epistemic status of 'Monopoly demonstrates capitalism's truth'? Is this claim empirically grounded in real capitalism, theoretically derived from first principles, or interpretively assigned to the game?",
+      "resolution_mechanism": "Compare Monopoly's wealth-concentration mechanics to real-economy mechanisms: property ownership, rent extraction, debt dynamics, bankruptcy rules, wealth inheritance. Identify structural analogies and structural differences. Assess whether Monopoly's 'lesson' is descriptively accurate about capitalism or prescriptively ideological.",
+      "impact": "If true analog: extraction-demo reading has strong epistemic warrant (game teaches accurate lesson). If partial analog: reading has weak warrant (game teaches distorted lesson). Affects both the axiom status and the false-summit risk of the mountain perspective.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Epistemic grounding of Monopoly-as-capitalism-pedagogy claim"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 40,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 60,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 80,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 90,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 45,
+      "value": 0.33
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 90,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 45,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 90,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 90
+  },
+  "commentary": {
+    "narrative_context": "This is the extraction-demo reading of the Monopoly rulebook kernel. The reading interprets the game as a deliberate pedagogical demonstration that wealth concentration is mechanically inevitable under capitalist rules (property ownership, rent extraction, geometric cost scaling, no redistribution mechanisms). The game begins with rough initial parity but within 60-90 minutes produces a single winner and multiple eliminated players through a process that feels both determined by chance (dice) and determined by mathematics (wealth compounds). From this reading's perspective, the rules do not describe capitalism — they instantiate capitalism's essential extraction logic in miniature, making its inequality inevitable visible and measurable. The core claim is that Monopoly's rulebook, as-written, eliminates the possibility of alternative outcomes through its specific design choices: winner-takes-all payoff structure, no debt forgiveness, property costs that scale geometrically with ownership concentration, rent multipliers that accelerate wealth accumulation, and a game duration (60-90 minutes) short enough that elimination appears inevitable rather than contingent. The reading's pedagogical stance is that recognizing this inevitability is itself the game's 'truth': players learn by forced participation in a system that demonstrates capitalism's crushing logic.",
+    "key_agents": [
+      "Eliminated Players: Primary victims (powerless/trapped) — undergo forced exit from game; bear psychological cost of witnessing inevitable ruin; remain at table as spectators to their own economic destruction.",
+      "Mid-Game Struggling Players: Secondary victims (moderate/constrained) — experience mixed coordination and extraction; have marginal exit options but face social cost of quitting; witness the asymmetric rules producing their disadvantage.",
+      "Wealth Accumulator / Winner: Primary beneficiary (institutional/arbitrage) — experiences rulebook as pure coordination mechanism; accumulates capital and property; achieves victory through mechanical advantage compounding.",
+      "Game System (Collective Rule Authority): Neutral enforcer (institutional/analytical) — the rulebook itself, treating the written rules as the binding constraint; produces inevitable outcomes through mechanical operation, not through conscious enforcement.",
+      "Capitalism Itself: Macro reading (analytical/universal) — the reading treats Monopoly as a scale model demonstrating capitalism's structural properties; the game is evidence that inequality is mechanically, not contingently, produced."
+    ],
+    "logic_rationale": "Extractiveness (0.58): High. The rulebook produces wealth concentration as a mechanical outcome, and this concentration extracts value from losers in the form of eliminated capital, lost future action, and forced spectation. Early bad rolls create debt spirals; debt forces property liquidation at unfavorable rates; liquidation removes capital from losers; removed capital enters the accumulator's position. The extraction is smooth and mathematically traceable: Rent = (base_rent) × (1 + property_count), so owning 3 properties produces 3x + 6x + 9x rent collection on landing, while others pay into this pool. The 0.58 reflects that extraction is not experienced as coercive by the winner and feels like legitimate competition to participants, but the structural outcome (inevitable elimination) is the mechanism itself. Suppression (0.62): High. The suppression mechanism operates through cumulative disadvantage and mathematical certainty. Once a player lacks sufficient capital to meet rent obligations, they have no exit: bankruptcy rules force property sales; property sales reduce future earning capacity; reduced capacity guarantees elimination. The suppression is enforced not by the game-master but by the rules themselves — each player is compelled to play to the end or voluntarily quit (which carries social cost in competitive contexts). The suppression requirement increases over the game interval (early game allows hope; late game reveals inevitability) but remains stable in magnitude. Theater ratio (0.35): Low. The game has high functional transparency: dice rolls are pure chance, property acquisition is deterministic, rent calculations are explicit, elimination is mathematically predictable. There is little performative activity — the game does what it claims to do. The low theater ratio distinguishes this reading from piton (which would have high theater). The game genuinely produces its claimed outcome; the question is whether that outcome reveals a 'truth' about capitalism (extraction reading) or merely a 'competitive simulation' (social scaffold reading).",
+    "directionality_logic": "Directionality is computed from the beneficiary/victim structure and the power/exit asymmetries. Eliminated players occupy d ≈ 0.98 (full targets: trapped powerless agents bearing maximum extraction). The wealth accumulator occupies d ≈ 0.05 (near-full beneficiary: institutional power with arbitrage exit options; extraction flows toward them). Mid-game struggling players occupy d ≈ 0.62 (moderate power, constrained exit, mixture of costs and benefits). The analytical observer at civilizational scope occupies d ≈ 0.72 (analytical observer standard). These d values drive f(d) calculations that produce the chi values sustaining the perspective classifications: trapped powerless agents see snare (high chi); beneficiaries see rope (low/negative chi); moderate agents see mixed outcomes (tangled rope); analytical observers at highest scope risk false summits (natural law perspective). The engine's directionality derivation produces these values automatically from the declared beneficiary/victim structure; no overrides are needed.",
+    "perspectival_gap": "The perspectival gap reveals how the same rulebook produces radically different classifications depending on observer position. Eliminated players experience snare: they are trapped, targeted, and experience maximum extraction as their capital flows to the winner. Mid-game players experience tangled rope: mixed coordination and extraction, constrained exit, significant suppression but not absolute. The winner experiences rope: the rulebook solves their problem of determining legitimate competition. The pedagogical system (perspective 4) also reads as snare, but from the vantage point of the game-teaching-about-capitalism, where all players (including the winner) are trapped by the demonstration's logic: they cannot escape the system showing inequality is inevitable. The analytical observer risks false summit (treating the outcome as natural law) but the structural data contradicts this — the outcome depends on specific rule choices that could be modified. The perspectival gap between the winner's rope and the eliminated player's snare is the gap between those who benefit from the current rules and those whom the rules eliminate.",
+    "mandatrophy_analysis": "KERNEL READING RESOLUTION: The extraction-demo reading resolves the mandatrophy by claiming that Monopoly instantiates a specific teaching about capitalism: inequality is mechanically inevitable under the game's rules. This is neither pure coordination (Rope) nor a temporary coordination problem (Scaffold) — it is a designed mechanism for producing a specific outcome (wealth concentration and elimination). The mandatrophy is whether the game teaches its players a true lesson about capitalism or merely simulates a competitive scenario. The reading asserts the former. The sibling readings would dispute this: the social-scaffold reading would claim the game teaches coordination with a sunset (as players learn to modify rules), and the tournament-orthodoxy reading would claim the game teaches legitimate competition. The extraction-demo reading stands on the claim that the rules, as-written and played-as-written, make elimination inevitable and thus demonstrate capitalism's mechanical production of inequality.",
+    "kernel_context": "This constraint is ONE READING of the Monopoly rulebook kernel. The kernel is: the official Monopoly rulebook and its interpretation as a model of economic systems. The reading instantiated here is extraction_demo_reading: Monopoly demonstrates that wealth concentration is mechanically inevitable under capitalist rules (property ownership, rent extraction, geometric cost scaling, no redistribution). Sibling readings include: social_scaffold_reading (the game teaches coordination; players learn to modify rules to create fairer outcomes) and tournament_orthodoxy_reading (the game teaches legitimate competition and meritocratic reward for skillful play). This reading differs from the siblings in its core claim: that the rulebook, as-written, is pedagogically designed to demonstrate capitalism's crushing logic by making elimination inevitable. The reading makes elimination the feature, not a bug; pedagogical truth the goal, not an accident."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "monopoly_rulebook__social_scaffold_reading",
+      "monopoly_rulebook__tournament_orthodoxy_reading"
+    ],
+    "dual_formulation_note": "Monopoly rulebook kernel contains three structurally distinct readings producing different epsilon values and classifications. extraction_demo_reading: ε=0.58 (Snare). social_scaffold_reading: ε≈0.30-0.40 (Tangled Rope or Scaffold). tournament_orthodoxy_reading: ε≈0.25-0.35 (Rope). Each reading instantiates a different constraint with different beneficiary/victim structures, axioms, and epistemic warranties. They coexist as readings held by different communities: educators teaching about capitalism's inequality, game designers emphasizing fair play, and competitive players emphasizing meritocratic reward."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "mechanical_wealth_reproduction_capitalism",
+    "drift_state": {
+      "moment": "contemporary_social_critique_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "monopoly_rulebook__social_scaffold_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "monopoly_rulebook__tournament_orthodoxy_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "wealth_concentration_is_mechanically_inevitable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "pedagogical_function_is_demonstration_of_capitalism",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  }
+}

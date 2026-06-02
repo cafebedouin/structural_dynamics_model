@@ -4,26 +4,25 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "fishquota"
+    "measurement_id_prefix": "cfqs",
+    "story_uid": "912d908a-502c-4394-99c5-976c5ccd665a"
   },
   "base_properties": {
-    "extractiveness": 0.58,
-    "suppression": 0.65,
-    "theater_ratio": 0.52,
+    "extractiveness": 0.52,
+    "suppression": 0.58,
+    "theater_ratio": 0.48,
     "claimed_type": "tangled_rope",
     "human_readable": "Commercial Fishery Quota Systems",
     "topic_domain": "environmental_regulation/resource_extraction",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "large_industrial_fishing_fleets",
-      "fishing_rights_holders",
-      "regulatory_agencies"
+      "incumbent_fishing_fleets",
+      "quota_trading_operators"
     ],
     "victims": [
-      "small_scale_fishers",
-      "fishing_dependent_communities",
-      "marine_ecosystem_integrity",
-      "future_generations"
+      "coastal_fishing_communities",
+      "fish_stock_sustainability",
+      "small_scale_fishers"
     ]
   },
   "perspectives": [
@@ -32,101 +31,128 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "national",
-      "label": "The Artisanal Fisher",
-      "comment": "PERSPECTIVE 1: ARTISANAL FISHER (SNARE) \u2014 Small-scale fishers with no quota allocation face complete exclusion from historical fishing grounds. Material barriers include capital requirements for licensed vessels, legal prohibition on fishing without permits, and economic dependency on fishing for subsistence. No exit options exist: relocation requires abandonment of place-based knowledge, family networks, and cultural identity. Maximum extraction experienced."
+      "spatial_scope": "regional",
+      "label": "The Coastal Fishing Community",
+      "comment": "PERSPECTIVE 1: COASTAL FISHING COMMUNITY (SNARE) — Small-scale artisanal fishers are excluded from quota allocation or allocated subsistence-level permits. They face legal barriers to fishing (quota enforcement), economic barriers to quota purchase (prohibitive cost), and geographic barriers to relocation. The constraint extracts their historical fishing rights while providing no compensation or alternative livelihood. Maximum perceived extraction with no exit path."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "snare",
       "agent_power": "moderate",
       "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "regional",
-      "label": "The Fishing-Dependent Community",
-      "comment": "PERSPECTIVE 2: FISHING-DEPENDENT COMMUNITY (TANGLED ROPE) \u2014 Communities where fishing represents primary employment and cultural identity experience genuine coordination function (quota stabilizes fish populations, providing long-term sustainability) alongside severe extraction (quota allocation patterns concentrate access among large operators, displacing traditional small-scale practices). High suppression through job dependency and geographic isolation; moderate exit costs for community members (relocation burden, loss of cultural continuity). Mixed experience."
+      "spatial_scope": "national",
+      "label": "The Independent Fishing Boat Owner",
+      "comment": "PERSPECTIVE 2: INDEPENDENT FISHING BOAT OWNER (SNARE) — Owns a single vessel but cannot access quota without purchasing permits at escalating market prices or inheriting historical allocation. Faces suppression through permit costs (economic barrier), catch monitoring (enforcement), and quota trading concentration that favors large operators. Can theoretically exit (sell vessel, change occupation) but at severe career and financial cost. High extraction with constrained exit."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regional Fishing Cooperative",
+      "comment": "PERSPECTIVE 3: REGIONAL FISHING COOPERATIVE (TANGLED ROPE) — Organized groups benefit from collective quota allocation and can negotiate with regulators, but remain constrained by centralized catch limits and quota trading mechanics that favor consolidation. The quota system coordinates actual fish stock management (genuine coordination function) while extracting economic value from smaller operators (asymmetric extraction). Organized exit options and some agency, but caught between sustainability imperatives and economic displacement."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Incumbent Industrial Fleet",
+      "comment": "PERSPECTIVE 4: INCUMBENT INDUSTRIAL FLEET (ROPE) — Large-scale operators received substantial initial quota allocations (historical catch-based grandfathering) and benefit from quota trading infrastructure that consolidates fishing rights toward large players. They experience the quota system as pure coordination: managing overall catch prevents stock collapse, which would eliminate their fishing grounds entirely. Exit options (investing in alternative fisheries, relocating to new regions, quota arbitrage) are available. Net beneficiary experiencing coordination rather than extraction."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
-      "spatial_scope": "national",
-      "label": "Industrial Fishing Operator",
-      "comment": "PERSPECTIVE 3: INDUSTRIAL FISHING OPERATOR (ROPE) \u2014 Large-scale operators experience the quota system as coordination: it stabilizes supply chains, provides predictable planning horizons, and enables trading quota among operators. Beneficiary from quota allocation mechanisms that concentrate access. Can arbitrage quota trading, invest in alternative fisheries, or comply with regulations. Low experienced extraction \u2014 the constraint solves their coordination problem."
-    },
-    {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "continental",
-      "label": "Environmental and Social Justice Coalition",
-      "comment": "PERSPECTIVE 4: ENVIRONMENTAL/SOCIAL COALITION (SCAFFOLD) \u2014 Organized agents (conservation NGOs, indigenous rights organizations, fisheries reform advocates) see the quota system as a temporary institutional form with a sunset clause: ecosystem-based management, co-management agreements with indigenous communities, and marine protected areas represent alternative frameworks being gradually implemented. The quota system is being replaced rather than reformed. Medium extraction because organized actors can advocate, lobby, and implement parallel systems."
-    },
-    {
-      "classification_type": "piton",
-      "agent_power": "institutional",
-      "time_horizon": "civilizational",
-      "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Traditional Regulatory Framework",
-      "comment": "PERSPECTIVE 5: TRADITIONAL REGULATORY FRAMEWORK (PITON) \u2014 The quota system itself is increasingly recognized as a degraded institutional form: scientific evidence of ecosystem collapse despite quota compliance indicates that the system's core function (resource management) has atrophied. Regulatory theater persists (quota meetings, stock assessments, enforcement) despite growing evidence that catch limits are set to maintain industrial viability rather than ecosystem health. Theater ratio high because the performance of management continues despite functional failure."
+      "label": "The Fishery Management Authority",
+      "comment": "PERSPECTIVE 5: FISHERY MANAGEMENT AUTHORITY (ROPE) — Regulatory agency benefits from quota systems as a coordination mechanism: total allowable catch (TAC) limits prevent stock collapse and maintain fishery viability over time. The system solves their core mandate (prevent tragedy of the commons) with relatively low administrative overhead compared to effort-based management. Exit options (switching to alternative management schemes, ceding authority to fishing industry self-regulation) are theoretically available but politically constrained. Sees quota as effective coordination."
     },
     {
       "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Coastal State Government",
+      "comment": "PERSPECTIVE 6: COASTAL STATE GOVERNMENT (TANGLED ROPE) — Benefits from quota systems by extracting licensing revenue and maintaining fishery employment (political stability), while also constrained by international fishing agreements, competing stakeholder demands (environmental groups, fishing industry, indigenous rights), and the genuine need for stock management. Experiences the system as hybrid: legitimate coordination function (prevents stock collapse) plus asymmetric extraction (consolidates fishing rights toward industrial operators, displaces small-scale fishers)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Fish Stock / Ecosystem Health",
+      "comment": "PERSPECTIVE 7: FISH STOCK AND ECOSYSTEM HEALTH (SNARE) — The constraint's nominal target (fish stock management) functions only to the extent that TAC limits are set below maximum sustainable yield and enforced. However, quota trading, subsidy capture, and illegal unreported unregulated (IUU) fishing mean the nominal constraint is regularly violated. The fish stock cannot exit and bears the cost of extraction whenever actual catch exceeds sustainable limits. Abstract collective victim with no organizational capacity."
+    },
+    {
+      "classification_type": "piton",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "global",
-      "label": "Analytical Observer",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational/global perspective, the quota system exhibits genuine coordination (preventing tragedy of the commons through managed access) embedded within severe asymmetric extraction (allocation patterns concentrate benefits among industrial operators, displace small-scale fishers, and fail to prevent ecosystem degradation). The analytical view requires both beneficiary and victim recognition, making tangled rope the proper classification."
+      "label": "The Analytical Observer (Degradation View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / DEGRADATION VIEW (PITON) — The quota system has evolved from a conservation mechanism (1970s-1990s: strict TAC enforcement, stock recovery) into a theater for rent extraction and equity displacement (2000s-present: quota consolidation, IUU fishing, subsidy-driven overcapacity masking true stock status). The core conservation function persists but is overshadowed by performative compliance and hidden extraction. Theater ratio is rising as quota trading becomes the dominant mechanism and catch monitoring becomes ritualized."
     }
   ],
   "omegas": [
     {
-      "id": "allocation_equity_vs_sustainability",
-      "question": "Is the quota system's primary function equity-driven allocation among users or sustainability-driven ecosystem protection? These two functions can diverge radically.",
-      "resolution_mechanism": "Historical analysis of quota-setting decisions: cases where scientific advice for lower catches was overridden for economic/social reasons vs cases where equity concerns were sacrificed for sustainability",
-      "impact": "If equity-primary: system is tangled rope with victims being the powerless excluded from allocation. If sustainability-primary: system is snare because allocation patterns actively prevent effective ecosystem management.",
+      "id": "tac_setting_accuracy",
+      "question": "Are Total Allowable Catch limits set scientifically based on actual stock biomass, or are they politically negotiated values that systematically underestimate sustainable capacity to favor incumbent operators?",
+      "resolution_mechanism": "Comparison of TAC recommendations from stock assessment scientists vs. final regulatory TAC values; correlation of TAC-setting patterns with incumbent fleet interests; historical analysis of stock recovery vs. TAC adherence",
+      "impact": "If scientifically set: quota system is legitimate coordination (stronger Rope classification). If politically negotiated: TAC is a cover story for consolidation (stronger Snare classification for victims). Affects whether the beneficiary is receiving legitimate coordination benefit or extractive rent.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether quota system prioritizes allocation equity or ecosystem sustainability"
+      "description": "Whether TAC limits reflect scientific consensus or political negotiation favoring incumbents"
     },
     {
-      "id": "quota_trading_mechanism_integrity",
-      "question": "Does quota trading create genuine flexibility and efficiency (coordination function) or does it concentrate rights among capital-intensive operators and further exclude small-scale fishers (extraction mechanism)?",
-      "resolution_mechanism": "Analysis of quota ownership concentration over time; tracking of small-scale fisher participation in quota markets; comparison of quota prices against fisher incomes in different regions",
-      "impact": "If flexible/efficient: tangled rope classification stands. If concentrating: quota system functions as a mechanism for consolidating control, elevating classification toward pure snare.",
+      "id": "quota_trading_function",
+      "question": "Does quota trading enable efficient reallocation of catch rights to operators who can fish most sustainably, or does it concentrate rights toward large operators regardless of efficiency or sustainability outcomes?",
+      "resolution_mechanism": "Analysis of quota trading volume and directionality over time; correlation between quota concentration and catch-per-unit-effort; comparison of fishing practices between quota owners and quota lessees",
+      "impact": "If trading is efficiency-driven: tangled rope classification is correct (genuine coordination + asymmetric extraction). If trading concentrates rights without efficiency gains: system is closer to pure snare for small operators. Affects whether asymmetry reflects legitimate economic sorting or rent extraction.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether quota trading creates flexibility or concentrates control"
+      "description": "Whether quota trading improves efficiency or concentrates rents"
     },
     {
-      "id": "enforcement_cost_burden_distribution",
-      "question": "Who bears the costs of quota enforcement (monitoring, surveillance, compliance infrastructure) and how does this burden vary by fisher type and scale?",
-      "resolution_mechanism": "Cost accounting of compliance infrastructure; analysis of enforcement burden on small-scale vs industrial fishers (time, expense, legal risk); comparison of audit rates by operator size",
-      "impact": "If burden concentrated on small-scale fishers: suppression levels are higher than measured, and extraction experienced by powerless agents is maximized. If burden distributed equally: suppression metric is accurate.",
+      "id": "iuu_fishing_scale",
+      "question": "What proportion of actual catch is Illegal, Unreported, Unregulated (IUU) fishing, and does this represent a constraint-level failure of enforcement (rendering the nominal quota meaningless) or a survivable margin of system noise?",
+      "resolution_mechanism": "Port-level catch monitoring; at-sea observer programs; scientific stock assessment residuals (gap between predicted catch and observed stock decline); comparison of IUU estimates across regions and time periods",
+      "impact": "If IUU ≥ 30% of nominal TAC: enforcement is structurally degraded (piton classification is correct — theater persists despite functional failure). If IUU ≤ 10%: enforcement is working (tangled rope classification holds). Affects whether the constraint is a functional mechanism or a performative ritual.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Distribution of quota enforcement costs by fisher type"
+      "description": "Proportion of total catch that is Illegal, Unreported, or Unregulated"
     },
     {
-      "id": "ecosystem_health_trajectory_under_quotas",
-      "question": "Are marine ecosystems subject to quota management actually recovering, stabilizing, or continuing to degrade? Is quota compliance actually preventing collapse?",
-      "resolution_mechanism": "Time-series analysis of ecosystem indicators (species richness, trophic structure, primary productivity) in quota-managed vs unmanaged regions; analysis of cases where quota compliance was high but ecosystem continued degrading",
-      "impact": "If recovering: coordination function is real. If degrading despite quotas: quota system is theater masking continued extraction. Classification shifts toward piton or snare.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Ecosystem health trajectory under quota management"
-    },
-    {
-      "id": "indigenous_rights_integration_authenticity",
-      "question": "Are co-management agreements with indigenous communities genuine power-sharing arrangements or token inclusion that leaves substantive control with state agencies?",
-      "resolution_mechanism": "Analysis of decision-making authority in co-management agreements; tracking of indigenous-recommended policy changes that were adopted vs rejected; comparison of indigenous-managed areas vs state-managed areas on both sustainability and equity metrics",
-      "impact": "If genuine power-sharing: scaffold is confirmed \u2014 the system is transitioning toward more inclusive governance. If token: indigenous communities remain trapped, and the sunset clause narrative is false.",
+      "id": "small_scale_fisher_alternatives",
+      "question": "Do excluded small-scale fishers have viable economic alternatives (aquaculture, alternative employment, subsistence food security without commercial fishing) or are they genuinely trapped in a zero-sum choice between illegal fishing and economic destitution?",
+      "resolution_mechanism": "Comparative analysis of coastal communities with/without quota access; longitudinal tracking of excluded fisher livelihoods; assessment of alternative livelihood viability in low-income coastal regions",
+      "impact": "If alternatives exist: powerless/trapped classification may be overstated (could reclassify toward constrained). If no alternatives exist: trapped classification is correct and snare extraction is severe. Affects assessment of suppression mechanism (structural vs. lack of alternatives).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Authenticity of indigenous co-management integration"
+      "description": "Whether excluded fishers have viable economic alternatives"
+    },
+    {
+      "id": "stock_recovery_causation",
+      "question": "When fish stocks have recovered (e.g., Atlantic cod rebuilding, some Pacific rockfish recovery), is recovery causally attributable to quota enforcement or to other factors (fishing technology changes, marine spatial planning, pollution reduction, ocean conditions)?",
+      "resolution_mechanism": "Counterfactual analysis: comparison of recovery patterns between regions with strong quota enforcement vs. regions with weak enforcement; temporal correlation analysis (does recovery begin after quota implementation or earlier?); ecosystem modeling isolating quota impact from confounders",
+      "impact": "If quota is causal: coordination function is real (rope/tangled rope classification confirmed). If confounded: quota may be performative cover for stock recovery driven by other mechanisms (piton classification more likely). Affects the fundamental legitimacy of the extraction mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether quota enforcement causally drives fish stock recovery"
+    },
+    {
+      "id": "equity_vs_sustainability_tradeoff",
+      "question": "Is the quota system's consolidation toward large operators a necessary condition for stock sustainability (i.e., does equity necessarily degrade conservation outcomes), or is this a contingent design choice that could be restructured with different allocation and enforcement mechanisms?",
+      "resolution_mechanism": "Comparative analysis of quota systems with different allocation rules (equal division, community-based allocation, historical small-fisher protection); assessment of conservation outcomes across allocation regimes; case studies of alternative management approaches (spatial closures, effort limits, customary tenure)",
+      "impact": "If necessary tradeoff: snare extraction for small fishers is the cost of preventing stock collapse (justifies but clarifies the constraint). If contingent: alternative designs could achieve conservation without consolidation (suggests piton or false-summit dynamics where equity displacement is presented as natural rather than chosen).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether quota consolidation is necessary for conservation or a contingent design choice"
     }
   ],
   "measurements": [
@@ -143,32 +169,37 @@
     {
       "metric": "base_extractiveness",
       "time_point": 20,
-      "value": 0.58
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.38
+      "value": 0.32
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.45
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
-      "value": 0.52
+      "value": 0.48
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.41
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.41
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.58
     }
   ],
   "interval": {
@@ -176,37 +207,39 @@
     "end": 20
   },
   "commentary": {
-    "narrative_context": "Commercial fishery quota systems represent a global institutional mechanism for managing marine resource access and preventing tragedy-of-the-commons collapse. These systems coordinate fish stock management through catch limits and permit allocation, solving a genuine coordination problem: without managed access, competitive fishing leads to stock depletion and ecosystem collapse. However, quota allocation mechanisms concentrate fishing rights among large industrial operators, systematically exclude small-scale fishers from historical grounds, and have failed to prevent ecosystem degradation in many regions despite compliance with catch limits. This creates a hybrid constraint exhibiting both genuine coordination function and severe asymmetric extraction. The constraint's evolution shows increasing extractiveness (0.35 \u2192 0.58 over 20 years) as consolidation accelerates, and rising theater ratio (0.38 \u2192 0.52) as regulatory compliance becomes decoupled from actual ecosystem health. Alternative governance models (co-management with indigenous communities, ecosystem-based management, marine protected areas) represent a structural sunset to the traditional industrial quota model in some regions, supporting the scaffold perspective. Yet in most jurisdictions, the quota system persists as an inertial institutional form despite mounting evidence of functional failure, exhibiting piton characteristics.",
+    "narrative_context": "Commercial fishery quota systems represent a layered institutional mechanism that solves a genuine commons tragedy (overfishing and stock collapse) while simultaneously enabling rent extraction and equity displacement from small-scale fishers. The constraint operates globally through international agreements (United Nations Convention on the Law of the Sea, regional fisheries management organizations) and is implemented through national licensing and catch monitoring systems. The core coordination function is real: without managed access, competitive fishing depletes stocks below sustainable levels within years. However, the implementation mechanism — Transferable Catch Quota (TCQ) or Individual Transferable Quota (ITQ) systems — has evolved to concentrate fishing rights toward large industrial operators through quota trading and capital barriers to entry. Small-scale artisanal fishers, who historically accessed open-access commons, are economically or legally excluded, creating asymmetric extraction that persists under the cover of conservation necessity. The measurements show increasing extractiveness (0.35→0.52) and rising theater ratio (0.32→0.48) over the 20-year interval, indicating that the constraint's performance has drifted from conservation coordination toward rent consolidation and performance theater.",
     "key_agents": [
-      "Large Industrial Fishing Fleets: Primary beneficiary (institutional/arbitrage) \u2014 receive quota allocation concentration, access to quota trading, and long-term planning security",
-      "Small-Scale Fishers: Primary victim (powerless/trapped) \u2014 excluded from quota systems, face legal prohibition on traditional fishing, experience complete economic and geographic immobility",
-      "Fishing-Dependent Communities: Secondary victim (moderate/constrained) \u2014 experience both genuine coordination benefit (long-term stock sustainability) and severe extraction (job displacement, cultural disruption)",
-      "Regulatory Agencies: Beneficiary (institutional/arbitrage) \u2014 maintain institutional authority through quota administration, control access allocation, benefit from regulatory complexity",
-      "Marine Ecosystem Integrity: Victim (powerless/trapped) \u2014 cannot organize or exit; bears cost of continued extraction despite quota compliance",
-      "Environmental and Social Justice Organizations: Organized advocates (organized/constrained) \u2014 building alternative governance frameworks (co-management, MPAs) that create sunset pathway",
-      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 must recognize both the genuine coordination function and the systematic extraction"
+      "Incumbent Industrial Fleets: Primary beneficiary (institutional/arbitrage) — received substantial initial allocations and benefit from quota trading consolidation. Experience the system as coordination.",
+      "Coastal Fishing Communities: Primary victim (powerless/trapped) — artisanal and small-scale fishers excluded from quota access; bear career displacement without compensation.",
+      "Fish Stocks / Ecosystem Health: Secondary victim (powerless/trapped) — abstract collective that bears cost when enforcement fails or extraction exceeds sustainable limits.",
+      "Regional Fishing Cooperatives: Mixed agent (organized/constrained) — have some organizational capacity and voice but remain constrained by consolidation dynamics.",
+      "Fishery Management Authority: Institutional coordinator (institutional/arbitrage) — solves commons tragedy mandate while facing political pressure from incumbent operators and displaced communities.",
+      "Coastal State Government: Institutional mediator (institutional/constrained) — benefits from licensing revenue and employment maintenance but constrained by competing stakeholder demands and international agreements."
     ],
-    "logic_rationale": "Extractiveness (0.58): Moderate-high and increasing. The quota system extracts through multiple channels: (1) allocation patterns concentrate rights among large operators, (2) regulatory compliance creates barriers to entry for small-scale fishers, (3) quota trading concentration among capital-intensive players, (4) ecosystem degradation despite compliance indicates the system fails its stated conservation function. The trajectory shows extractiveness rising from 0.35 to 0.58 as consolidation accelerates and ecosystem decline becomes undeniable. Suppression (0.65): High. Multiple suppression mechanisms operate: legal prohibition on unquoted fishing (material barrier), capital requirements for licensed vessels (economic barrier), geographic isolation of fishing communities (exit cost), knowledge-based barriers (licensing requirements), and institutional capture of regulatory processes by industry (access barrier). Small-scale fishers experience near-total suppression; moderate communities experience high suppression through economic dependency. Theater ratio (0.52): Moderate and rising. Quota systems perform regulatory theater \u2014 stock assessments, scientific committees, permit hearings \u2014 while ecosystem indicators continue degrading in many regions. The theater persists because it maintains legitimacy of the allocation system and provides a performance of conservation that justifies the extraction. Theater ratio increase from 0.38 to 0.52 reflects growing decoupling between compliance performance and actual ecosystem outcomes.",
-    "directionality_logic": "Each agent's directionality value (d) reflects their structural relationship to the extraction flow. Industrial operators with arbitrage options and beneficiary status derive low d (0.10\u20130.20), producing negative or minimal \u03c7 \u2014 they experience the system as solving their coordination problem. Small-scale fishers with trapped exit and victim status derive high d (0.90\u20130.95), producing maximum \u03c7 \u2014 they experience near-total extraction with no escape. Moderate communities with constrained exit and mixed beneficiary/victim status derive moderate d (0.55\u20130.65), producing moderate \u03c7 \u2014 they benefit from sustainability coordination but suffer displacement extraction. Regulatory agencies with beneficiary status and arbitrage exit derive low d (0.15\u20130.25), producing low \u03c7 \u2014 they maintain institutional power. Suppression is NOT scaled by power or scope \u2014 it is a raw structural property measuring barriers to exit for trapped/constrained agents. Suppression (0.65) reflects high legal, economic, and geographic barriers for small-scale fishers; this value is unscaled by context, applying uniformly across the constraint.",
-    "perspectival_gap": "The gap between perspectives reveals how the same institutional mechanism is experienced radically differently by actors in different structural positions. Industrial operators (institutional/arbitrage) see coordination and planning stability; small-scale fishers (powerless/trapped) see legal prohibition and exclusion from livelihoods. Fishing communities (moderate/constrained) experience both the coordination benefit (long-term sustainability) and the extraction cost (job displacement). Environmental coalitions (organized/constrained) see a temporary institutional form being replaced by more inclusive alternatives. Regulatory agencies (institutional/arbitrage) maintain beneficiary status through control of the allocation mechanism. The analytical observer must acknowledge both the genuine coordination (preventing tragedy of commons) and the systematic extraction (allocation patterns concentrate benefits, displace small-scale operators, fail to prevent ecosystem degradation). The piton perspective emerges at civilizational timescale \u2014 the quota system is recognized as degraded (continued compliance despite ecosystem collapse) but persists through institutional inertia and regulatory capture by beneficiaries.",
-    "mandatrophy_analysis": "The mandatrophy in commercial fishery quota systems is resolved by the tangled_rope classification: the system is NOT pure coordination (rope) because beneficiary allocation is asymmetric; it is NOT pure extraction (snare) because genuine coordination function exists (preventing stock collapse). The constraint requires BOTH beneficiary recognition (industrial operators, regulatory agencies) AND victim recognition (small-scale fishers, communities, ecosystems) to classify correctly. From the industrial operator perspective (institutional/arbitrage), the classification appears to be rope \u2014 the system solves their coordination problem perfectly. From the small-scale fisher perspective (powerless/trapped), it appears to be snare \u2014 pure extraction with no exit. The analytical observer must hold both truths simultaneously: the constraint IS coordination (preventing tragedy of commons) AND extraction (concentrating benefits among industrial operators and displacing small-scale fishers). This simultaneity defines tangled rope. Falsely classifying the system as pure rope would naturalize the allocation asymmetry as coordination cost; falsely classifying as pure snare would deny the genuine sustainability function. The tangled rope classification forces recognition that the system coordinates while it extracts."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The quota system extracts fishing rights from historical open-access commons and redistributes them through market mechanisms that favor capital-rich operators. The extraction is not maximal (0.70+) because the system does maintain genuine stock sustainability and the efficiency gains from quota trading are partially real — catch is reallocated toward operators with lower costs and better technology. However, the extraction mechanism is substantial: entry barriers (quota cost), exclusionary allocation (historical grandfathering), and consolidation dynamics all concentrate rents. Suppression (0.58): Moderate-high. Enforcement mechanisms include catch monitoring (port inspections, observer programs), license revocation, vessel impoundment, and fines. These are substantial but not absolute — enforcement varies by region and nation, and IUU fishing is persistent. Small operators face barriers through permit costs (economic suppression) and legal exclusion (regulatory suppression). Theater ratio (0.48): Moderate. The quota system has functional conservation components (TAC-setting based on stock assessments, catch monitoring) but increasingly performative elements (quota trading theater that obscures actual conservation outcomes, compliance reporting that masks IUU fishing). The rising trajectory (0.32→0.48) reflects increasing mismatch between the system's nominal conservation function and its actual rent-extraction function.",
+    "perspectival_gap": "The clearest gap is between the incumbent fleet's Rope classification and the small-scale fisher's Snare classification. Both are experiencing the same quota system. The incumbent perceives coordination (preventing stock collapse) because they benefit from the allocation and can arbitrage within the system. The small-scale fisher perceives extraction (losing historical rights) because they are excluded and trapped. The management authority's Rope classification (solves the commons tragedy) rests on the assumption that stock sustainability is achieved through quota enforcement. The piton perspective challenges this: if enforcement is degraded (high IUU, subsidy-driven overcapacity) and theater is rising, the coordination function may be nominal while extraction persists. The delta between perspectives reflects whether the quota system's true function is conservation (rope/tangled rope) or rent consolidation masked as conservation (piton/false summit).",
+    "directionality_logic": "Directionality (d) is derived from each agent's structural relationship to the extraction flow. The incumbent industrial fleet benefits from quota allocation and trading; they have arbitrage options (invest in different fisheries, relocate, acquire more quota). Their d≈0.05-0.15, producing negative or minimal f(d), so χ is low/negative — they experience the quota system as a coordination benefit. The small-scale fisher is trapped (no capital to buy quota, limited geographic mobility, culturally dependent on fishing); they have no exit options. Their d≈0.90-0.95, producing maximum f(d)≈1.42, so χ is high — they experience maximum extraction. The regional cooperative is organized but constrained by consolidation mechanics; their d≈0.55-0.65, producing moderate f(d)≈0.75-1.00, so χ is moderate. The scope modifier σ(S) also applies: regional scope (σ=0.9) slightly dampens extractiveness, while global scope (σ=1.2) amplifies it. The global scale at which quota trading operates means that consolidation is not local friction but a systematic transnational mechanism, amplifying χ for those affected.",
+    "mandatrophy_analysis": "The mandatrophy in this constraint is the apparent necessity of choosing between commons collapse (no quota system) and equity displacement (quota consolidation toward large operators). The system narrative presents this as unavoidable: 'without transferable quotas, small fishers cannot access fish because they lack capital to buy quota; but without quota trading, the system cannot achieve conservation.' This forces small fishers into a false binary: accept exclusion or tolerate stock collapse. The omega variables suggest this is resolvable: alternative allocation mechanisms (equal division per community, protection of small-fisher baseline allocation, spatial management instead of catch quotas) could achieve conservation outcomes without consolidation. The mandatrophy resolves by recognizing that the tangled rope classification is correct — genuine coordination function exists alongside asymmetric extraction — but the asymmetry is not necessary for coordination. The extracted rents (quota consolidation toward large operators) could be redistributed without destroying the conservation function. The constraint remains tangled rope (both functions present) but the resolution pathway is equity-preserving quota redesign rather than false choice between conservation and fairness."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation",
-    "boltzmann_floor_override": 0.18
+    "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "ocean_commons_tragedy",
-      "indigenous_fishing_rights_suppression",
-      "marine_ecosystem_collapse"
+      "marine_protected_area_enforcement",
+      "subsidy_driven_fishing_capacity",
+      "iuu_fishing_supply_chain"
     ],
-    "dual_formulation_note": "Commercial fishery quota systems are downstream of the tragedy-of-the-commons problem (ocean_commons_tragedy: \u03b5\u22480.80, mountain) and represent one institutional response. The quota system's own extractiveness (0.58) is lower than the pure commons tragedy but higher than optimal coordination would achieve. The system also affects indigenous_fishing_rights_suppression (\u03b5\u22480.75, snare) as a specific extraction mechanism \u2014 quota allocation systematically excludes indigenous communities from traditional fishing practices. Marine ecosystem collapse is both upstream (driving quota reforms) and downstream (quota system fails to prevent ecosystem degradation despite compliance)."
+    "dual_formulation_note": "The quota system's conservation function and its rent-extraction function are structurally entangled but analytically separable. The conservation function (preventing tragedy of the commons through catch limits) is upstream; the allocation and trading mechanics are downstream mechanisms that implement conservation but also enable extraction. Subsidy-driven fishing capacity undercuts the system's conservation efficacy by masking true stock status. IUU fishing represents extraction that bypasses the constraint entirely."
   },
   "directionality_overrides": [
     {
-      "power_atom": "institutional",
-      "d_value": 0.22
+      "power_atom": "powerless",
+      "d_value": 0.92
+    },
+    {
+      "power_atom": "moderate",
+      "d_value": 0.78
     }
   ]
 }

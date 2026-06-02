@@ -4,24 +4,24 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "rpsc"
+    "measurement_id_prefix": "rpsc",
+    "story_uid": "860c4f09-7941-4a03-9526-172bd95a88ea"
   },
   "base_properties": {
     "extractiveness": 0.58,
-    "suppression": 0.65,
-    "theater_ratio": 0.48,
+    "suppression": 0.68,
+    "theater_ratio": 0.62,
     "claimed_type": "tangled_rope",
     "human_readable": "Regional Patron State Competition",
     "topic_domain": "geopolitical/economic",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "great_powers",
-      "regional_hegemon"
+      "patron_state_core",
+      "client_state_elites"
     ],
     "victims": [
-      "client_states",
-      "regional_stability",
-      "non_aligned_states"
+      "client_state_populations",
+      "regional_autonomy"
     ]
   },
   "perspectives": [
@@ -31,26 +31,17 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "regional",
-      "label": "The Client State",
-      "comment": "PERSPECTIVE 1: CLIENT STATE (SNARE) \u2014 Trapped in structural dependency. Economic integration, military aid, security guarantees, and diplomatic recognition are conditioned on alignment with patron state preferences. Exit costs include loss of security umbrella, economic isolation, and potential sanctions or intervention. Alternatives (neutrality, regional integration on equal terms) are foreclosed by patron demand for exclusive loyalty."
+      "label": "The Client State Population",
+      "comment": "PERSPECTIVE 1: CLIENT STATE POPULATION (SNARE) — Trapped within contested geopolitical space. Dependent on patron-provided security, market access, and development aid with no independent exit. Caught between competing patronage claims; defection or neutrality risks economic deprivation or security vulnerability. Suppression through security dependency and economic integration prevents exit."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "moderate",
-      "time_horizon": "generational",
+      "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "regional",
-      "label": "The Regional Non-Aligned State",
-      "comment": "PERSPECTIVE 2: NON-ALIGNED STATE (TANGLED ROPE) \u2014 Structurally mobile but constrained by competitive pressure. Can nominally choose alignment, but patron competition creates extraction: each patron offers conditional benefits (trade, investment, security) that require demonstrable loyalty, creating bidding wars and escalating demands. Genuine coordination function (security provision, economic integration) exists alongside asymmetric extraction (patron shapes internal policy, constrains foreign policy options)."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "regional",
-      "label": "The Regional Coalition",
-      "comment": "PERSPECTIVE 3: REGIONAL COALITION (TANGLED ROPE) \u2014 Collective action by mid-size states attempting to build regional autonomy. Coordination function is genuine (mutual defense, trade bloc integration). But extraction mechanism persists: patrons exploit inter-member disputes, offering selective benefits to break coalition unity. Requires active enforcement (institutionalization, dispute resolution). Coalition sees the constraint as both enabling (patron security umbrella allows coalition members to invest in regional cooperation) and extractive (patron competition destabilizes the coalition from within)."
+      "label": "The Client State Government",
+      "comment": "PERSPECTIVE 2: CLIENT STATE GOVERNMENT (TANGLED ROPE) — Constrained by security needs and economic development requirements but retains tactical agency through balancing strategies. Genuine coordination function: patron provides security umbrella and market integration. Asymmetric extraction: patron captures strategic positioning and resource access; client must accept political conditionality and reduced autonomy. Active enforcement through aid conditionality and implicit security guarantees."
     },
     {
       "classification_type": "rope",
@@ -58,26 +49,35 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Great Power Patron State",
-      "comment": "PERSPECTIVE 4: GREAT POWER PATRON (ROPE) \u2014 Experiences the constraint as pure coordination: providing security guarantees, economic benefits, and diplomatic recognition solves the collective action problem of regional alignment. Client states benefit from patron protection; patron benefits from geopolitical influence and market access. Extraction runs toward the patron (clients sacrifice autonomy), but patron frames this as legitimate payment for services rendered. Low experienced extractiveness because patron has exit options (can reallocate patron role to other regions) and framing power (control of legitimacy narratives)."
+      "label": "The Patron State Core",
+      "comment": "PERSPECTIVE 3: PATRON STATE CORE (ROPE) — Benefits from regional sphere expansion and client market integration. Experiences constraint as pure coordination: supporting client allies extends influence, access, and strategic positioning. Net beneficiary with exit options (can redirect patronage elsewhere). Arbitrage capacity allows selection among potential clients."
     },
     {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "civilizational",
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The International Institutions",
-      "comment": "PERSPECTIVE 5: INTERNATIONAL INSTITUTIONS (SCAFFOLD) \u2014 Regional organizations (ASEAN, African Union, MERCOSUR) aim to build regional autonomy and reduce patron dependence through institutionalized cooperation and dispute resolution. These mechanisms have a sunset clause: as regional capacity for self-governance increases, patron leverage decreases. Theater ratio is low because these institutions focus on functional integration rather than performative sovereignty. However, enforcement suppression is high \u2014 patrons can undermine institutions by funding competing regional blocs or threatening non-members with isolation."
+      "spatial_scope": "regional",
+      "label": "The Competing Patron State",
+      "comment": "PERSPECTIVE 4: COMPETING PATRON STATE (TANGLED ROPE) — Locked in ongoing competition for regional dominance. Coordination function: both patrons provide genuine security and development benefits that clients require. Asymmetric extraction: competition drives aid escalation and creates conditions for client elite capture. Enforcement through competitive matching of patron offers and implicit security commitments."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
-      "time_horizon": "civilizational",
+      "time_horizon": "generational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Cold War Alliance Structure",
-      "comment": "PERSPECTIVE 6: COLD WAR LEGACY (PITON) \u2014 NATO, Warsaw Pact-successor relationships, and other alliance remnants persist largely through institutional inertia. The original function (containing communist/capitalist bloc expansion) has degraded. Modern patron-client relationships are maintained through alliance rituals, burden-sharing theater, and historical legitimacy rather than current strategic necessity. Theater ratio is high \u2014 many allied states maintain military integration and treaty obligations that would be reconsidered in a post-ideological environment. The piton persists because alternatives require institutional reorganization, not because current structures optimize patron-client coordination."
+      "label": "The Regional Institutions",
+      "comment": "PERSPECTIVE 5: REGIONAL INSTITUTIONS (PITON) — Regional organizations (ASEAN, African Union, MERCOSUR) maintain formal neutral coordination functions but experience substantial theater ratio. The institutional frameworks for conflict resolution and economic integration persist despite patron state pressure that undermines their actual effectiveness. Formalized procedures (summit meetings, treaty mechanisms) are performative — real decisions are made through patron-client bilateral channels. Theater has risen as patrons have weaponized institutional participation."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Non-Aligned Coalition",
+      "comment": "PERSPECTIVE 6: NON-ALIGNED COALITION (SCAFFOLD) — Organized movement (India, South Africa, smaller states seeking strategic autonomy) to construct alternative patronage pathways and reduce bilateral dependency. Sees patron competition as temporary phase where distributed partnerships and South-South cooperation create exit routes. Has sunset logic: as client states build autonomous development capacity and diversify partnerships, bilateral patron dependency erodes. Constrained by donor concentration and security asymmetries but building structural alternatives."
     },
     {
       "classification_type": "mountain",
@@ -85,46 +85,55 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "global",
-      "label": "The Analytical Observer (Realist Natural Law)",
-      "comment": "PERSPECTIVE 7: ANALYTICAL / REALIST NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational scope, some patron-client structural relationship appears inevitable in international anarchy: states without military capacity must seek security guarantees; states without economic scale must seek trade partnerships; small states must align with larger powers. This perspective naturalizes patron competition as an immutable feature of the international system. However, structural data reveals this as a false summit: specific patron-client relationships (Cold War alliances, contemporary client states) are contingent institutional arrangements, not laws of nature. The 'inevitability' framing obscures how patron competition dynamics can be reshaped through institutional design."
+      "label": "The Structural Realist Observer",
+      "comment": "PERSPECTIVE 7: STRUCTURAL REALIST OBSERVER (MOUNTAIN) — From civilizational scale, patron-client hierarchies appear inherent to anarchic international system: weak states must align with great powers for security; this is an immutable feature of international structure. However, engine false-summit detection will identify beneficiaries (patron states, client elites) whose existence contradicts the naturalization. The 'immutable anarchy' framing obscures contingent institutional choices about how great powers compete."
     }
   ],
   "omegas": [
     {
-      "id": "voluntary_alignment_threshold",
-      "question": "At what point does conditional benefit provision cross from coordination incentive to coercive extraction?",
-      "resolution_mechanism": "Comparative analysis of client state policy changes attributable to patron pressure vs organic policy shifts; measurement of client state policy autonomy before/after patron integration; analysis of exit costs for client states attempting reorientation",
-      "impact": "If threshold is low (easily crossed): most patron-client relationships are snares. If threshold is high (rarely crossed): most relationships are ropes with asymmetric benefits. Current uncertainty: whether conditional benefits represent fair payment for services or extractive coercion depends on counterfactual client state security options.",
+      "id": "client_elite_capture_mechanism",
+      "question": "Do patron states intentionally cultivate client state elite factions, or does elite capture emerge as unintended consequence of aid flows and security partnerships?",
+      "resolution_mechanism": "Intelligence documentation, leaked communications, tracked funding flows to client political factions, interview evidence from client state officials regarding patron pressure for specific elite appointments",
+      "impact": "If intentional: patron states are orchestrating factional control (higher extraction, pure snare). If unintended: extraction mechanism is structural incentive misalignment (tangled rope classification strengthened). Changes assessment of systemic vs. agentic extraction.",
       "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Threshold distinguishing coordination from coercive extraction in patron-client relationships"
+      "type_class": "empirical",
+      "description": "Whether patron elite capture is intentional strategy or structural side effect"
     },
     {
-      "id": "regional_alternative_viability",
-      "question": "Could regional states achieve equivalent security and economic outcomes through autonomous regional integration instead of patron alignment?",
-      "resolution_mechanism": "Historical counterfactual analysis (Yugoslavia, Non-Aligned Movement outcomes); current experimentation (ASEAN integration, African Union capacity); modeling of regional military balance and economic integration feasibility without patron involvement",
-      "impact": "If viable alternatives exist: patron competition suppresses access to them (high suppression). If alternatives are structurally infeasible: client states' attachment to patrons reflects genuine rational choice, not extraction. Classification consequence: snare vs rope depends on alternative availability.",
+      "id": "exit_option_feasibility",
+      "question": "Can a client state genuinely pursue strategic autonomy without patron security guarantees, or is exit functionally impossible given regional security environment?",
+      "resolution_mechanism": "Case study analysis of states that have attempted non-alignment or patron switching: Costa Rica (security via US umbrella but regionalized), Finland (NATO accession after decades of constraint), Vietnam (post-Cold War balancing). Measurement of security costs, economic penalties, and diplomatic isolation incurred by exit attempts.",
+      "impact": "If exit is feasible: client state powerlessness is overstated; reclassify from trapped to constrained. If exit is functionally impossible: client populations are trapped by structural security dependency (mountain-level constraint). Affects whether constraint is snare or tangled_rope from client perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether strategic autonomy is feasible for client states"
+    },
+    {
+      "id": "patron_competition_intensity_threshold",
+      "question": "At what level of patron competition intensity does the coordination benefit (security provision) fall below the extraction cost (political conditionality, elite capture)?",
+      "resolution_mechanism": "Cross-regional comparison of security provision levels vs. political autonomy restrictions; measurement of aid flows vs. policy concessions; analysis of client state welfare outcomes under high-competition vs. low-competition patron regimes",
+      "impact": "If threshold is low: most client states are in net-extraction regime (snare). If threshold is high: tangled_rope framing is accurate for majority of cases. Determines whether constraint is inherently extractive or contingent on competition intensity.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "Whether viable regional autonomy alternatives exist to patron alignment"
+      "description": "Patron competition intensity threshold for coordination vs. extraction trade-off"
     },
     {
-      "id": "patron_substitutability",
-      "question": "How easily can client states switch patrons or diversify patron relationships without incurring extraction costs?",
-      "resolution_mechanism": "Analysis of switching costs: economic decoupling, military reorientation, diplomatic realignment timelines, sanctions risk; case studies of patron switching (Egypt, India, Vietnam transitions); measurement of client state freedom to maintain multiple patron relationships simultaneously",
-      "impact": "If switching is costly: client states are trapped (snare). If switching is feasible: client states are constrained but mobile (tangled rope). If switching is costless: client states are mobile (rope-level extraction only).",
+      "id": "regional_institution_functionality",
+      "question": "Do regional institutions provide genuine coordination benefits independent of patron state pressure, or are they purely theater masking bilateral patron-client transactions?",
+      "resolution_mechanism": "Process tracing of major regional disputes: do institutional mechanisms produce outcomes independent of patron preferences? Measurement of institutional decision autonomy from bilateral patron pressure. Analysis of when institutional rules are enforced vs. when bilateral arrangements supersede them.",
+      "impact": "If institutions are functional: scaffold perspective (sunset through institutional strengthening) is plausible. If purely theatrical: piton classification confirmed; exit path through institutional strengthening is aspirational rather than structural.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Switching costs for patron diversification or reorientation"
+      "description": "Whether regional institutions provide independent coordination benefits"
     },
     {
-      "id": "patron_competitive_dynamics",
-      "question": "Does patron competition in a region reduce or intensify extraction of client states?",
-      "resolution_mechanism": "Comparative analysis: regions with patron competition (Middle East, Southeast Asia) vs regions with patron monopoly (Eastern Europe post-2014); measurement of client state autonomy, benefit provision generosity, and extraction intensity across competition regimes; analysis of how patron switching threats affect patron behavior",
-      "impact": "If competition reduces extraction: client states benefit from patron bidding wars (rope-level). If competition intensifies extraction: each patron demands exclusive loyalty to retain position (snare-level). Current data ambiguous \u2014 depends on whether patrons compete on benefits or on coercion.",
-      "confidence": "medium",
+      "id": "alternative_patronage_viability",
+      "question": "Can South-South alternatives (BRICS, Shanghai Cooperation Organization, non-aligned coalitions) genuinely reduce bilateral patron dependency, or do they reproduce the same hierarchical patron-client structure at reduced scale?",
+      "resolution_mechanism": "Structural analysis of alternative patronage mechanisms: do they offer lower-extraction alternatives or merely diversify patron options? Measurement of conditionality levels, aid volatility, and policy autonomy under alternative vs. traditional patrons. Long-term tracking of client state outcomes under alternative partnerships.",
+      "impact": "If viable alternatives exist: scaffold sunset is real; non-aligned coalition has structural basis. If alternatives reproduce hierarchy: constraint is structural feature of weak-state positioning (mountain-level); scaffold is aspirational. Determines whether exit paths are genuine or illusory.",
+      "confidence": "low",
       "type_class": "empirical",
-      "description": "Whether patron competition reduces or intensifies client state extraction"
+      "description": "Whether alternative patronage systems can reduce extraction"
     }
   ],
   "measurements": [
@@ -136,7 +145,7 @@
     {
       "metric": "base_extractiveness",
       "time_point": 15,
-      "value": 0.48
+      "value": 0.5
     },
     {
       "metric": "base_extractiveness",
@@ -146,17 +155,32 @@
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.32
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
       "time_point": 15,
-      "value": 0.4
+      "value": 0.55
     },
     {
       "metric": "theater_ratio",
       "time_point": 30,
-      "value": 0.48
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.68
     }
   ],
   "interval": {
@@ -164,36 +188,40 @@
     "end": 30
   },
   "commentary": {
-    "narrative_context": "Regional patron state competition creates a structural constraint where geopolitical rivalry between great powers transforms medium-sized and small states into contested territories. The constraint exhibits the full spectrum of DR classifications depending on the observer's structural position. Patron states compete to expand their regional spheres of influence by offering conditional benefits (security guarantees, economic aid, diplomatic recognition) to client states. Client states face pressure to choose exclusive alignment or face extraction through conditional benefit withdrawal, military pressure, or sanctions. The constraint has intensified over the measured interval as patron competition has become more explicit and extractive demands more intrusive. The theater ratio remains moderate because patron-client relationships involve genuine security and economic coordination alongside explicit political demands. Regional organizations attempting to build autonomy experience the constraint as both enabling (patron security umbrellas allow regional cooperation) and extractive (patron competition destabilizes regional unity). The analytical observer risks naturalizing this contingent institutional arrangement as an immutable law of international relations.",
+    "narrative_context": "Regional patron state competition creates a structural constraint where geopolitical rivalry between great powers (patron states) transforms medium-sized and smaller states (client states) into contested territories. The constraint operates through conditional benefits — security guarantees, economic aid, diplomatic recognition, market integration — that create asymmetric dependency relationships. Patron states compete to expand their regional spheres of influence; client states navigate between competing patrons to secure resources and security. This constraint exhibits the full spectrum of DR classifications depending on the observer's structural position. From the client population perspective, the constraint appears as pure extraction (snare) — trapped within geopolitical competition with no independent exit. From the client government perspective, it is a hybrid coordination-extraction mechanism (tangled rope) — genuine security and development benefits offset by political conditionality and reduced autonomy. From the patron state perspective, it is coordination (rope) — supporting allies extends influence at manageable cost. From regional institutional perspectives, it appears as degraded theater (piton) — formal coordination mechanisms persist despite patron pressure that undermines their effectiveness. From the non-aligned coalition perspective, it is a temporary coordination problem with structural exit paths (scaffold) — alternative patronage mechanisms and development partnerships create a sunset. From the civilizational realist perspective, it appears as immutable structural law (mountain) — weak states must align with great powers in anarchic international systems. The engine's false-summit detection will identify this last classification as naturalization: patron states and client elites are identifiable beneficiaries whose existence contradicts the claim that hierarchy is inherent to international structure.",
     "key_agents": [
-      "Client States: Primary victims (powerless/trapped) \u2014 structurally dependent on patron security and economic benefits; face extraction through conditional benefit provision and pressure for exclusive alignment",
-      "Non-Aligned States: Secondary victims (moderate/constrained) \u2014 face competitive pressure from patron bidding; constrained by extraction costs of diversifying or switching patrons",
-      "Regional Coalition/Organizations: Moderate agent (organized/constrained) \u2014 attempting to build regional autonomy; face internal destabilization from patron exploitation of inter-member disputes",
-      "Great Power Patrons: Primary beneficiaries (institutional/arbitrage) \u2014 capture geopolitical influence, market access, and strategic positioning; experience the constraint as coordination of regional alignment",
-      "International Institutions: Organized agent (organized/constrained) \u2014 working to reduce patron leverage through regional institutional capacity building; face enforcement suppression from patrons undercutting competing blocs",
-      "Cold War Legacy Structures: Institutional remnant (institutional/arbitrage) \u2014 NATO and successor alliances persist through inertia; provide patron states with legitimacy structures and burden-sharing theater",
-      "Analytical Observer: Civilizational analyst (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements as inevitable structural features of international anarchy"
+      "Patron State Core (institutional/arbitrage): Primary beneficiary — expands regional sphere, captures strategic positioning and resource access, maintains security architecture",
+      "Competing Patron State (powerful/constrained): Secondary beneficiary and rival — drives competition dynamics; both patrons benefit from client alignments",
+      "Client State Government (moderate/constrained): Victim and tactical agent — accepts political conditionality and autonomy restrictions in exchange for security and development benefits",
+      "Client State Population (powerless/trapped): Primary victim — dependent on patron-provided security and markets with no independent exit options",
+      "Regional Institutions (institutional/arbitrage): Performative theater maintainers — formal coordination mechanisms persist as theater masking bilateral patron-client transactions",
+      "Non-Aligned Coalition (organized/constrained): Counter-structure builders — organized movement to diversify partnerships and reduce bilateral patron dependency",
+      "Structural Realist Observer (analytical/analytical): Risks naturalizing contingent institutional arrangements as immutable features of anarchic international system"
     ],
-    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The base extractiveness reflects patron competitive dynamics creating escalating demands for client state loyalty. Measurement trajectory (0.35 \u2192 0.58 over interval) shows intensifying extraction as patrons compete more explicitly for regional positioning. The increase is driven by: (1) patron willingness to use conditional benefits as leverage; (2) client state vulnerability to patron pressure due to limited alternatives; (3) competitive pressure driving patrons to demand more exclusive alignment. Suppression (0.65): High. Significant barriers to client state exit include: military vulnerability without patron security umbrella; economic integration creating trade dependency; diplomatic isolation risk if patron recognition is withdrawn; sanctions threat. However, suppression is not absolute \u2014 some client states maintain diversified patron relationships and switch patrons at significant but surmountable cost. Theater ratio (0.48): Moderate and stable. Patron-client relationships involve genuine security and economic coordination (low theater component) alongside explicit political demands and alliance rituals (higher theater component). Theater is increasing slightly (0.32 \u2192 0.48) as patron competition drives more performative alliance maintenance and burden-sharing negotiations. The moderate theater reflects that these relationships genuinely coordinate regional security while simultaneously extracting political concessions.",
-    "perspectival_gap": "The constraint demonstrates how the same structural arrangement (patron provision of security and economic benefits in exchange for client alignment) is experienced as coordination (by patrons and regional institutions) or extraction (by client states and non-aligned states) depending on structural position. The perspectival gap reveals that the constraint functions as both: genuine coordination of regional security alongside asymmetric extraction of client state autonomy. The gap is not resolvable into a single 'true' classification \u2014 the constraint genuinely is both rope and snare simultaneously, depending on observational position. The theater component (0.48) reflects this hybrid: alliance structures perform both real security functions and explicit power-sharing theater. The cold war legacy piton perspective highlights how some aspects of the constraint persist despite degraded original function, maintained through institutional inertia rather than current strategic necessity.",
-    "directionality_logic": "Beneficiaries are great power patrons and regional hegemon states \u2014 they capture geopolitical influence, market access, and alliance leverage. Victims are client states (bear extraction), non-aligned states (face competitive pressure), and regional stability (destabilized by patron competition). Regional institutions are ambiguous: they benefit from patron security umbrellas while victimized by patron-exploited divisions. Derived directionality ranges from d \u2248 0.95 (trapped client state) to d \u2248 0.10 (beneficiary patron state), producing f(d) range from 1.42 to -0.05. The broad range reflects the constraint's hybrid character: extraction concentrates on trapped agents while dissipates toward beneficiary agents with exit options. No directionality overrides needed \u2014 the structural derivation captures the asymmetry accurately.",
-    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that patron-client competition genuinely coordinates regional security while simultaneously extracting client state autonomy. The constraint is legitimately classified as tangled rope: it has a real coordination function (providing security guarantees reduces inter-regional conflict and stabilizes regional hierarchy) AND asymmetric extraction (client states sacrifice autonomy in exchange). The bifurcation in perspectives (rope from patrons, snare from clients, tangled rope from analysts) reflects the constraint's genuine hybrid character, not misclassification. The false summit risk is that realist international relations scholarship naturalizes patron-client competition as an inevitable feature of anarchic international order \u2014 a natural law. The structural data contradicts this: patron-client relationships are contingent institutional arrangements that could be reshaped through different coordination mechanisms (regional integration institutions, non-aligned coalitions, multipolarity without patron competition). The analytics showing increasing extractiveness (0.35 \u2192 0.58) and theater (0.32 \u2192 0.48) over the measurement interval suggest that the constraint is degrading \u2014 shifting from coordination-dominated (early interval) to extraction-dominated (current). This trajectory would eventually shift the classification toward snare if extractiveness continues rising above 0.66."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint exhibits substantial extraction — patron states capture strategic positioning, resource access, and policy influence over clients. But extraction is not maximized because genuine coordination benefits exist: patrons provide real security guarantees and market integration that clients need. The coordination benefit prevents classification as pure snare. The value reflects that the extraction mechanism is embedded within a functional coordination framework. Rising trajectory (0.35 → 0.58) indicates increasing extraction as competition intensifies: patron states escalate conditionality and elite capture mechanisms over time. Suppression (0.68): High. Multiple layers suppress exit options: security dependency (client cannot defend against regional threats without patron), economic dependency (patron controls trade preferences and development aid), diplomatic isolation (client that defects faces regional pressure), implicit military coercion (patron security guarantees can be withdrawn). Suppression has risen over the interval (0.55 → 0.68) as patron competition has intensified and client states have become more deeply integrated into patron-controlled supply chains and security architectures. Theater ratio (0.62): Moderate-high. Regional institutions (ASEAN, African Union, MERCOSUR) maintain formal coordination functions and decision procedures that are substantially performative. Real decisions are made through bilateral patron-client channels; institutional processes are theater that obscures this reality. Theater has risen over the interval (0.42 → 0.62) as patrons have weaponized institutional participation — sending high-level delegations to summit meetings, using institutional forums to broadcast their patronage narratives, while simultaneously pressuring clients bilaterally to defect from institutional consensus. The rising theater indicates that formal institutional processes are becoming increasingly decoupled from actual decision-making authority.",
+    "directionality_logic": "The constraint's directionality structure reveals why beneficiaries and victims experience it differently. Patron states (beneficiary, arbitrage exit) experience low effective extraction because they can redirect patronage and capture value. Client governments (mixed status, constrained exit) experience moderate extraction because they gain security benefits but lose autonomy. Client populations (victim, trapped exit) experience high extraction because they bear suppression costs without receiving direct benefits. The asymmetry in exit options (arbitrage vs. constrained vs. trapped) produces the perspectival gap: the same institutional arrangement is coordination from the beneficiary view, extraction from the victim view. This is the structural definition of asymmetric extraction: one party chooses to participate (patron), another party accepts participation to survive (client government), a third party has participation imposed without choice (client population).",
+    "perspectival_gap": "The patron state and client government classifications diverge sharply on the same structural arrangement. Patron sees rope (pure coordination); client government sees tangled rope (mixed). This gap reveals the directionality asymmetry: the same transaction is experienced as coordination by the beneficiary and as extraction by the victim. The client population perspective (snare) is qualitatively different: the population has no voice in the negotiation and bears suppression costs without receiving direct benefits. The regional institution perspective (piton) reveals that formal mechanisms are theater masking bilateral transactions. The scaffold perspective reveals that alternative structures are being built at the margins. The mountain perspective is a false summit — naturalizing what is actually a choice about how patron states organize competition.",
+    "mandatrophy_analysis": "The constraint resolves the mandatrophy by demonstrating how the same structural data produces different classifications from different perspectives. No single type is 'correct' — the constraint genuinely exhibits coordination function (rope) from the beneficiary perspective and extraction function (snare) from the trapped victim perspective. The engine's claimed_type (tangled rope) reflects the primary agents' perspective — the client government that experiences both coordination benefits and extraction costs. This is the accurate classification for the central structural relationship. The false-summit mountain classification reveals the analytical risk: framing weak-state alignment as 'natural' or 'immutable' rather than as a contingent institutional arrangement that benefits identifiable actors (patron states and client elites). The piton classification reveals the secondary institutional risk: regional coordination mechanisms becoming theatrical cover for bilateral transactions. The scaffold classification reveals the emerging counter-structure: non-aligned coalitions building alternative patronage pathways to reduce bilateral dependency."
   },
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism"
+    "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "regional_hegemonic_stability",
-      "client_state_autonomy_erosion",
-      "non_aligned_movement_viability"
+      "client_state_elite_capture",
+      "regional_security_dilemma",
+      "development_conditionality_extraction"
     ],
-    "dual_formulation_note": "Regional patron state competition is a higher-order constraint affecting multiple downstream constraints: hegemonic stability in specific regions, autonomy erosion of specific client states, and viability of non-aligned movement alternatives. Each downstream constraint has its own \u03b5 value reflecting local structural conditions. The upstream constraint (patron competition dynamics) creates the environmental conditions that drive downstream constraint intensification."
+    "dual_formulation_note": "Regional patron state competition is the umbrella constraint within which multiple specific extraction mechanisms operate: elite capture (patron targets client government factions), security dilemmas (patron competition escalates arms races), development conditionality (patron ties aid to policy concessions). Each downstream constraint has its own epsilon reflecting the specific extraction mechanism; the patron-state competition constraint represents the overarching structural framework that coordinates them."
   },
   "directionality_overrides": [
     {
-      "power_atom": "organized",
-      "d_value": 0.62
+      "power_atom": "institutional",
+      "d_value": 0.15
+    },
+    {
+      "power_atom": "powerful",
+      "d_value": 0.58
     }
   ]
 }

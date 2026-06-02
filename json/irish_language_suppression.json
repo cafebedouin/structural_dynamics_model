@@ -2,26 +2,28 @@
   "header": {
     "constraint_id": "irish_language_suppression",
     "version": "1.0",
-    "generated_date": "2026-02-27",
+    "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "module_name_override": "constraint_irish_language_suppression"
+    "measurement_id_prefix": "irls",
+    "story_uid": "b7cab5c5-8bcb-43a2-98cc-0a34117ecdd6"
   },
   "base_properties": {
-    "extractiveness": 0.68,
-    "suppression": 0.72,
-    "theater_ratio": 0.58,
+    "extractiveness": 0.78,
+    "suppression": 0.88,
+    "theater_ratio": 0.35,
     "claimed_type": "snare",
     "human_readable": "Irish Language Suppression as Colonial Extraction",
     "topic_domain": "colonial_policy/linguistic_suppression/cultural_control",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "english_administrative_class",
-      "colonial_landlord_class"
+      "english_colonial_administration",
+      "anglo_irish_landlord_class"
     ],
     "victims": [
-      "irish_speaking_population",
-      "irish_language_transmission"
-    ]
+      "irish_native_population",
+      "irish_linguistic_commons"
+    ],
+    "mandatrophy_resolved": true
   },
   "perspectives": [
     {
@@ -29,192 +31,238 @@
       "agent_power": "powerless",
       "time_horizon": "generational",
       "exit_options": "trapped",
-      "spatial_scope": "national",
-      "label": "The Irish-Speaking Population",
-      "comment": "PERSPECTIVE 1: IRISH-SPEAKING POPULATION (SNARE) \u2014 Trapped within colonial jurisdiction; cannot exit English education mandates, workplace requirements, or legal proceedings conducted in English. Bears full cost of language shift through loss of intergenerational transmission, identity rupture, and cultural subordination. No alternative pathway available during the suppression period (1600s-1920s). Maximum experienced extraction."
+      "spatial_scope": "regional",
+      "label": "The Irish Native Population (Active Suppression Era)",
+      "comment": "PERSPECTIVE 1: IRISH NATIVE POPULATION — SNARE (1600-1920). Trapped within colonial jurisdiction with no exit. English monolingualism becomes a survival requirement: Irish-speaking peasants face economic penalties (hiring discrimination, land access restrictions), legal penalties (Penal Laws prohibiting Irish education and cultural institutions), and social penalties (stigmatization of Gaelic identity). Exit would require abandonment of cultural identity and linguistic heritage. The constraint extracts labor value (depressed wages for Irish workers perceived as culturally inferior) and political compliance (cultural assimilation reduces autonomous collective identity). Suppression is maximum — language is prohibited in schools, courts, and administrative contexts. The victims cannot organize a linguistic commons or coordinate resistance within the constraint itself."
     },
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "biographical",
-      "exit_options": "identity_locked",
-      "spatial_scope": "national",
-      "label": "The Irish Language Itself (Transmission System)",
-      "comment": "PERSPECTIVE 2: IRISH LANGUAGE TRANSMISSION SYSTEM (SNARE WITH IDENTITY LOCK) \u2014 The constraint binds the language through speakers' identity fusion with cultural survival. Parents face the binding choice: teach Irish to children and condemn them to economic disadvantage, or abandon transmission and survive economically. The language cannot 'exit' \u2014 it exists only through speakers. Identity-locked captures that speakers cannot separate 'being Irish' from 'speaking Irish' despite structural pressure to do so. The constraint extracts the language itself from the population."
+      "time_horizon": "civilizational",
+      "exit_options": "trapped",
+      "spatial_scope": "universal",
+      "label": "The Irish Linguistic Commons (Active Suppression Era)",
+      "comment": "PERSPECTIVE 2: IRISH LINGUISTIC COMMONS — SNARE (1600-1920). Abstract collective good — the transmission of Irish as a living language across generations. During active suppression, this commons faces systematic destruction with no exit mechanism. Parents self-suppress their children's Irish to enable economic survival in English-dominant labor markets. Each generation loses native speakers. The constraint extracts cultural capital and extractive power (Irish identity becomes subordinate to English-derived status markers). Suppression manifests as institutional prohibition (Penal Laws) and economic pressure (wages/employment favor English speakers). The linguistic commons has no agent to advocate for it, no exit option, no counter-power. Pure extraction — no coordination function."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "immediate",
+      "time_horizon": "biographical",
       "exit_options": "arbitrage",
-      "spatial_scope": "continental",
-      "label": "The English Administrative Class",
-      "comment": "PERSPECTIVE 3: ENGLISH ADMINISTRATIVE CLASS (ROPE) \u2014 Experiences language suppression as coordination mechanism: enforcing English-only education, law, and bureaucracy centralizes control and reduces administrative friction. Benefits from unified language space for empire-wide coordination. Extraction toward this agent \u2014 English speakers capture power, prestige, and institutional positions through monopoly on official language."
+      "spatial_scope": "regional",
+      "label": "The English Colonial Administration",
+      "comment": "PERSPECTIVE 3: ENGLISH COLONIAL ADMINISTRATION — ROPE (1600-1920). From the colonial administrative perspective, language suppression is a coordination mechanism: unified governance requires linguistic standardization. The administration sees itself as solving a coordination problem — how to administer a diverse territory through a single administrative language and legal system. English monolingualism enables centralized control, reduces administrative complexity, and creates a unified labor market. The administration experiences the constraint as coordination with extraction as a side effect, not the primary function. Exit from this constraint would require tolerating linguistic pluralism in governance, which the administration does not perceive as feasible. The administration captures benefits (simplified governance, labor market control) and does not bear the suppression costs (those fall on Irish-speaking population)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Anglo-Irish Landlord Class",
+      "comment": "PERSPECTIVE 4: ANGLO-IRISH LANDLORD CLASS — ROPE (1600-1920). From the landlord perspective, Irish suppression coordinates an asymmetric labor market. Landlords benefit from depressed Irish wages (cultural inferiority stigma justifies lower pay), simplified tenant management (English-only contracts and communications), and cultural hegemony (Anglicization ensures tenant deference to English-derived authority). The landlords experience the constraint as coordination — it solves the problem of managing a large population with minimal overhead and maximum extraction. Exit would require dismantling the cultural hierarchy that justifies wage depression. The landlords capture maximum benefit (labor extraction, political compliance) while bearing minimal cost."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "organized",
-      "time_horizon": "generational",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Irish Nationalist Movement",
-      "comment": "PERSPECTIVE 4: IRISH NATIONALIST MOVEMENT (TANGLED ROPE) \u2014 Organized actors see language suppression as both extractive and coordinative. Language revival becomes coordination mechanism for nationalist identity and political resistance. But they remain constrained by the suppression mechanism itself \u2014 cannot organize in Irish when all institutions operate in English. Mixed function: the constraint simultaneously oppresses and catalyzes nationalist coordination. Language becomes symbol of freedom requiring political change to realize."
+      "spatial_scope": "regional",
+      "label": "The Irish Catholic Church",
+      "comment": "PERSPECTIVE 5: IRISH CATHOLIC CHURCH — TANGLED ROPE (1600-1920). The Church occupies a paradoxical position. It benefits from linguistic suppression in some dimensions (unified liturgy, centralized authority over diverse congregations, reduced risk of heterodox Irish religious movements) but bears extraction costs in others (prohibition of Irish language in some contexts, loss of Irish-language religious culture, pressure to use English in education and confessional practice). The Church is both beneficiary (controls religious authority regardless of language) and victim (loses Irish-language religious transmission). This is genuine Tangled Rope: active enforcement required (the Church enforces linguistic normalization through education), coordination function present (unified religious authority), but asymmetric extraction (some Church functions benefit from suppression while others are constrained). The Church can exit through language accommodation, but faces institutional costs (reduced standardization, increased complexity)."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
-      "time_horizon": "civilizational",
+      "time_horizon": "biographical",
       "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "Post-Independence Institutional Memory",
-      "comment": "PERSPECTIVE 5: POST-INDEPENDENCE INSTITUTIONAL MEMORY (PITON) \u2014 After independence (1922), Irish language suppression as formal policy ceases, yet the constraint persists through institutional inertia: English dominance in economy, higher education, and international communication remains. The revival effort (mandatory Irish in schools, state support for Irish speakers) becomes performative theater \u2014 the state goes through language-promotion rituals while material incentives favor English. Theater ratio rises as revival efforts become decoupled from actual transmission and usage. The piton structure: formal suppression has ended, but the mechanism that suppressed Irish (economic incentive structure, international dominance) persists."
+      "spatial_scope": "regional",
+      "label": "Irish Language Education Systems (Post-Colonial Piton Phase, 1920s-1980s)",
+      "comment": "PERSPECTIVE 6: IRISH LANGUAGE EDUCATION SYSTEMS (PITON, 1920s-1980s). After Irish independence (1922), the Free State/Irish Republic attempted to revive Irish through compulsory education programs. However, the revival mechanism became substantially performative (theater_ratio ≥ 0.70) by mid-20th century: students learned Irish grammar in school but faced no social incentive to speak it (employment markets favored English); textbooks became theatrical (focused on literary Gaelic disconnected from living speech); examination requirements became compliance rituals rather than competence gates. The constraint persists (students must complete Irish education) despite loss of functional revival purpose. It is maintained by institutional inertia — the education system has 'become' Irish language revival — but the primary function (actually creating Irish-speaking communities) has atrophied. Theater ratio rises from 0.35 (active suppression with clear extraction function) to 0.75 (vestigial revival mechanism maintained through compliance expectation)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Contemporary Irish Language Preservation Movement (1980s-present)",
+      "comment": "PERSPECTIVE 7: CONTEMPORARY IRISH LANGUAGE PRESERVATION MOVEMENT (SCAFFOLD, 1980s-present). Organized agents (Gaelchultúr organizations, Irish-medium schools, community language programs, media broadcasting in Irish) have constructed alternative institutional pathways for Irish transmission that bypass the degraded formal education system. These pathways create genuine coordination functions (Irish-language media coordinate cultural identity; Irish-medium schools create immersion coordination). The constraint has a sunset clause implicit in the mechanism: as Irish becomes viable through cultural institutions rather than compulsory education, the formal education requirement loses force. The organized movement experiences the constraint as temporary (educational mandate will become obsolete as cultural transmission succeeds through community choice). Exit is constrained but visible — if community Irish-language capacity reaches critical mass, the formal mandate becomes redundant. Theater ratio drops as actual cultural transmission replaces performative education."
     },
     {
       "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer (Natural Language Extinction View)",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / LANGUAGE EXTINCTION (MOUNTAIN) \u2014 From a civilizational analytical view, language extinction is an immutable consequence of power asymmetry and economic incentives: small languages always lose to large ones when speakers have access to the larger language. Irish suppression might appear as a natural law of linguistic competition \u2014 inevitable, unchangeable. However, the structural data (active enforcement, beneficiary/victim declarations, theater ratio) reveals this mountain as false: Irish extinction was not inevitable but engineered through policy, suppression mechanisms, and incentive structures that could have been otherwise."
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Colonial Linguistic Naturalization View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER — MOUNTAIN (CIVILIZATIONAL VIEW). From a civilizational/universal analytical perspective, one might perceive Irish suppression as a natural law of colonial governance: large empires must impose linguistic standardization for administrative efficiency. Language consolidation around the imperial language is treated as inevitable, not contingent. However, this perspective will trigger the false-summit detection mechanism: the structural data declares beneficiaries (colonial administration, landlord class) and victims (Irish population, linguistic commons), showing that the 'naturalness' is a framing choice, not an empirical fact. The constraint is constructed and extractive, not an immutable law of governance."
     }
   ],
   "omegas": [
     {
-      "id": "voluntary_vs_coerced_language_shift",
-      "question": "How much of the Irish language shift was coerced through enforcement mechanisms versus voluntary adoption driven by economic incentives?",
-      "resolution_mechanism": "Historical analysis of penal laws, educational mandates, and labor market data; comparison with voluntary language shifts in less-suppressed populations; examination of household language retention patterns in regions with different enforcement intensity",
-      "impact": "If primarily coerced: classification as snare is definitive (suppression \u2265 0.70). If primarily voluntary: reclassify toward tangled_rope (speakers chose extraction to gain access to economic opportunity). If mixed: proportional attribution to enforcement vs incentive.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Degree of coercion vs voluntary adoption in language shift"
-    },
-    {
-      "id": "transmission_threshold_collapse",
-      "question": "What was the critical threshold at which Irish-language transmission became identity-locked rather than constrained?",
-      "resolution_mechanism": "Generational cohort analysis of language competency and identity identification; ethnographic data on speaker self-perception during critical periods (1850-1920); examination of when speakers began reporting 'shame in Irish' vs 'practical disadvantage of Irish'",
-      "impact": "If threshold crossed early (pre-1800): identity lock is longstanding and deep. If threshold crossed late (post-1900): identity lock is recent trauma rather than internalized norm. Timing affects whether language revival is constrained reversibility or deep identity reconstruction.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Timing and nature of transition to identity-locked language suppression"
-    },
-    {
-      "id": "independent_language_viability",
-      "question": "Was Irish language economically viable under a different colonial policy (investment in Irish education, labor market incentives for bilingualism)?",
-      "resolution_mechanism": "Counterfactual modeling using comparable multilingual societies; analysis of cost structures for language maintenance; examination of modern language revival programs' efficacy at scale",
-      "impact": "If viable: suppression was policy choice (Snare confirmed). If not viable: some extraction is attributable to structural economic forces beyond policy control (reclassify partially as market-driven rather than purely extractive).",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether Irish language suppression was economically necessary or policy-contingent"
-    },
-    {
-      "id": "piton_authenticity_post_1922",
-      "question": "Is the post-independence Irish language theater (mandatory school Irish, state media support) preserving the language or merely performing its survival?",
-      "resolution_mechanism": "Longitudinal tracking of native speaker populations, intergenerational transmission rates, and daily usage frequency post-independence; comparison of revival-program investment vs actual speaker growth; examination of whether revival theater correlates with transmission metrics",
-      "impact": "If theater is preserving: piton classification is pessimistic but may be overdrawn. If theater is decoupled from transmission: piton classification confirmed \u2014 the suppression mechanism has mutated into institutional inertia and performative revival.",
+      "id": "suppression_coercion_vs_economic_incentive",
+      "question": "What proportion of Irish language abandonment resulted from direct legal prohibition versus economic incentives favoring English monolingualism?",
+      "resolution_mechanism": "Historical analysis of Penal Laws enforcement rates versus labor market segregation by language; comparison of regions with strict legal enforcement versus those with primarily economic pressure; linguistic shift patterns post-1829 (when some Penal Laws relaxed but economic incentives persisted)",
+      "impact": "If primarily legal: suppression is removable through policy change (as post-1922 revival policy attempted). If primarily economic: suppression persists as long as English dominance creates wage/employment premiums (explaining why Irish never revived despite independence and policy support). If mixed: revival requires both policy change AND economic restructuring.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether post-1922 Irish language revival is functionally preserving the language or theater"
+      "description": "Relative contribution of legal prohibition versus economic incentives to language shift"
+    },
+    {
+      "id": "critical_mass_threshold_for_language_viability",
+      "question": "Below what percentage of native speakers does a language become unviable for intergenerational transmission, even with institutional support?",
+      "resolution_mechanism": "Longitudinal tracking of Irish speaker populations through 20th century; comparison with other minority language cases (Welsh, Basque, Catalan); measurement of actual intergenerational transmission rates in Irish-medium households versus general population",
+      "impact": "If threshold crossed by mid-20th century: current revival efforts are preservational, not revivalist (constraint goal is different from what is structurally possible). If threshold not yet crossed: revival is still possible with sufficient institutional investment. This determines whether the scaffold perspective's sunset clause is realistic or aspirational.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Critical mass threshold for language viability"
+    },
+    {
+      "id": "colonial_extraction_legitimacy_frame",
+      "question": "Did the English colonial administration frame linguistic suppression as necessary governance (coordination narrative) or as civilizational extraction (explicit superiority narrative)?",
+      "resolution_mechanism": "Historical analysis of colonial administrative documents, policy rationales, and public discourse; comparison of framing in different colonial contexts (India, Africa); examination of whether administrators believed the coordination narrative or treated it as rhetorical cover for extraction",
+      "impact": "If primarily coordination narrative: the rope perspective captures the administrator's genuine frame (they saw language policy as neutral governance requirement). If primarily extraction narrative: administrators knew they were extracting cultural capital and used coordination language as cover (snare is more accurate). This affects how we classify the false summit detection — is it revealing hidden extraction or naturalization of legitimate governance?",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Colonial framing of suppression as governance versus cultural extraction"
+    },
+    {
+      "id": "post_colonial_institutional_persistence_mechanism",
+      "question": "Why did Irish language suppression persist through institutional momentum even after political independence removed the extractive beneficiary (colonial administration)?",
+      "resolution_mechanism": "Comparison of Irish language policy 1922-1980 with other post-colonial linguistic revivals; analysis of teacher training, textbook production, and employment structures that became path-dependent on English; interviews/analysis of why Irish-medium schools expanded only from 1980s onward despite 60+ years of independence and policy support",
+      "impact": "If institutional inertia is dominant: the piton classification is accurate — the education system became constituted by its failure, and revival required external organizational pressure (Gaelchultúr movement). If political/economic choices dominate: Ireland could have achieved revival earlier through different resource allocation, and post-colonial persistence is not institutional necessity but political choice.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Mechanism sustaining linguistic suppression post-independence"
+    },
+    {
+      "id": "irish_language_identity_lock_degree",
+      "question": "To what extent is Irish identity constituted through linguistic revival commitment versus maintained independently of language revival outcomes?",
+      "resolution_mechanism": "Sociological analysis of Irish identity formation in non-Irish-speaking communities; comparison of identity persistence across generations in diaspora populations (where institutional Irish support is absent); measurement of identity satisfaction in English-only Irish communities versus Irish-medium communities",
+      "impact": "If identity is highly language-dependent: current revival efforts are identity-essential, not merely cultural preservation. If identity persists independently: revival is valuable but not identity-constitutive. This affects whether non-Irish-speaking Irish people experience the constraint as identity_locked or merely as cultural loss.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of Irish identity constitution through language"
+    },
+    {
+      "id": "false_summit_colonial_naturalization",
+      "question": "Is the mountain classification (civilizational natural law of imperial governance) a genuine epistemological position or a naturalization of constructed colonial extraction?",
+      "resolution_mechanism": "Comparative colonial history: did all empires suppress indigenous languages, or did some accommodate linguistic pluralism? Analysis of whether language consolidation was technically necessary for governance or chosen as extraction mechanism. Comparison with non-imperial multilingual governance systems (medieval Europe, Ottoman administrative pluralism, contemporary multilingual states).",
+      "impact": "If genuinely natural: mountain classification is correct — language consolidation is an inherent requirement of large-scale governance. If naturalized extraction: false summit detection is triggered, revealing that colonial administration chose suppression as an extraction mechanism while framing it as inevitable. This is the core mandatrophy resolution for this constraint.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether colonial linguistic suppression is natural governance requirement or constructed extraction"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.55,
-      "id_override": "irish_extractiveness_1600"
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 100,
-      "value": 0.68,
-      "id_override": "irish_extractiveness_1700"
+      "value": 0.82,
+      "id_override": "irls_extr_1600"
     },
     {
       "metric": "base_extractiveness",
       "time_point": 200,
-      "value": 0.75,
-      "id_override": "irish_extractiveness_1800"
+      "value": 0.78,
+      "id_override": "irls_extr_1800"
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 300,
-      "value": 0.68,
-      "id_override": "irish_extractiveness_1900"
+      "time_point": 320,
+      "value": 0.72,
+      "id_override": "irls_extr_1920"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 350,
+      "value": 0.65,
+      "id_override": "irls_extr_1950"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 380,
+      "value": 0.52,
+      "id_override": "irls_extr_1980"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 400,
+      "value": 0.38,
+      "id_override": "irls_extr_2000"
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.25,
-      "id_override": "irish_theater_1600"
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 100,
-      "value": 0.35,
-      "id_override": "irish_theater_1700"
+      "value": 0.15,
+      "id_override": "irls_theater_1600"
     },
     {
       "metric": "theater_ratio",
       "time_point": 200,
-      "value": 0.4,
-      "id_override": "irish_theater_1800"
+      "value": 0.22,
+      "id_override": "irls_theater_1800"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 300,
+      "time_point": 320,
+      "value": 0.35,
+      "id_override": "irls_theater_1920"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 350,
       "value": 0.58,
-      "id_override": "irish_theater_1900"
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 350,
-      "value": 0.52,
-      "id_override": "irish_extractiveness_1950"
+      "id_override": "irls_theater_1950"
     },
     {
       "metric": "theater_ratio",
-      "time_point": 350,
-      "value": 0.68,
-      "id_override": "irish_theater_1950"
+      "time_point": 380,
+      "value": 0.75,
+      "id_override": "irls_theater_1980"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 400,
+      "value": 0.62,
+      "id_override": "irls_theater_2000"
     }
   ],
   "interval": {
     "start": 0,
-    "end": 350
+    "end": 400
   },
   "commentary": {
-    "narrative_context": "Irish language suppression represents a structural constraint operating across 400+ years (1600-2000s) with distinct phases: active coercive suppression (1600s-1920), post-colonial institutional persistence (1920s-1980s), and contemporary cultural preservation efforts (1980s-present). The constraint exhibits the diagnostic signature of a snare in its classical form \u2014 high extraction, high suppression, and victims with no viable exit option during the active suppression period. The paradox that makes this exemplary is the shift from direct enforcement to theatrical maintenance: formal suppression ends with Irish independence (1922), yet the language's near-extinction persists because the economic and social structures that incentivized English adoption remain. The Irish case demonstrates how a constraint can transition from pure snare (active enforcement) to piton (institutional inertia and performative revival) without fundamentally changing the lived experience of Irish speakers \u2014 the extraction mechanism mutates, not the extraction.",
+    "narrative_context": "Irish language suppression is a 400+ year constraint operating through distinct extractive phases: (1) Active legal suppression via Penal Laws (1600-1829) combining direct prohibition with economic incentives favoring English; (2) Post-independence institutional persistence (1920-1980) where Ireland as an independent state maintained education-based suppression momentum despite removing the primary colonial beneficiary; (3) Contemporary cultural preservation (1980-present) where organized language communities are building alternative institutional pathways with sunset logic embedded in community revival rather than state mandate. The constraint exhibits the classical snare signature during the active suppression era (extractiveness 0.78-0.82, suppression 0.88, minimal theater) because the extraction mechanism is explicit and functional: the colonial administration extracts political compliance and labor-market advantage from linguistic hegemony, while the Irish population is trapped with no exit option. Post-independence, the constraint shifts toward piton classification as theater rises (0.75 by 1980) — the education system maintains Irish language requirements through institutional inertia despite the original extraction mechanism (colonial domination) having been removed. Contemporary revival movements represent a scaffold structure: organized agents (Gaelchultúr, Irish-medium schools, broadcasting) are creating alternative transmission pathways with an implicit sunset clause — as cultural institutions prove capable of sustaining Irish, the formal education mandate becomes redundant. The false-summit detection system will identify the civilizational analytical perspective (treating suppression as a natural law of imperial governance) as a naturalization of a constructed extractive mechanism. This is the core mandatrophy: distinguishing between legitimate governance coordination and extractive exploitation using linguistic homogenization as cover.",
     "key_agents": [
-      "Irish-Speaking Population: Primary victim (powerless/trapped) \u2014 subject to English-only education mandates, workplace requirements, legal proceedings; no exit option from colonial jurisdiction during suppression period (1600-1922)",
-      "Irish Language Transmission System: Primary victim (powerless/identity_locked) \u2014 exists only through speakers; parents face binding choice between economic survival (English) and cultural continuation (Irish); identity fusion makes exit unthinkable despite structural pressure",
-      "English Administrative Class: Primary beneficiary (institutional/arbitrage) \u2014 monopolizes official positions, power, and prestige through English-language requirement; captures economic rents from coordination through unified English-language bureaucracy",
-      "Colonial Landlord Class: Secondary beneficiary (powerful/arbitrage) \u2014 benefits from labor subordination created by language suppression; workers unable to organize in Irish cannot effectively resist exploitation",
-      "Irish Nationalist Movement: Secondary actor (organized/constrained) \u2014 experiences suppression as both oppression and catalyst for political identity; constrained by inability to organize in suppressed language; language becomes symbol of freedom requiring political independence",
-      "Post-Independence Irish State: Institutional actor (institutional/arbitrage) \u2014 inherits suppression mechanism but reverses policy; attempts revival through mandatory education and state support (1922+); theater ratio rises as revival becomes decoupled from economic incentives favoring English",
-      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent policy outcomes as inevitable language extinction laws; false mountain threatens to rationalize suppression as natural linguistic competition"
+      "English Colonial Administration (1600-1922): Institutional beneficiary (institutional/arbitrage) — captures governance simplification, administrative efficiency, and political compliance through linguistic standardization",
+      "Anglo-Irish Landlord Class (1600-1922): Institutional beneficiary (institutional/arbitrage) — extracts depressed wages justified by cultural inferiority, simplified tenant management, and cultural hegemony",
+      "Irish Native Population (1600-1922): Primary victim (powerless/trapped) — faces legal prohibition, economic penalties, and social stigmatization; trapped within colonial jurisdiction with no viable exit",
+      "Irish Linguistic Commons (1600-present): Abstract victim (powerless/trapped) — systematic destruction of language transmission with no agent to advocate for preservation during suppression era",
+      "Irish Catholic Church (1600-1920): Mixed institutional actor (moderate/constrained) — both beneficiary (maintains unified authority) and victim (loses Irish-language religious culture); enforces normalization while losing religious transmission capacity",
+      "Independent Irish State (1922-1980): Institutional maintainer (institutional/constrained) — inherits suppression structure; maintains education-based language policy despite removing extraction beneficiary; trapped by path-dependent institutions",
+      "Irish Language Preservation Movement (1980-present): Organized agents (organized/constrained) — building alternative institutions; see constraint as temporary with sunset logic embedded in community capacity"
     ],
-    "logic_rationale": "Extractiveness (0.68): High, reflecting multi-generational extraction of linguistic capital from Irish-speaking population. The value increases from 0.55 (1600, when Irish retained institutional legitimacy in some regions) to 0.75 (1800, peak suppression under penal laws and land clearance) before declining slightly to 0.68 (1900) as active enforcement mechanisms face organized resistance. Post-1922 extractiveness drops to 0.52 as formal suppression ends, but theater rises (0.68), indicating the mechanism has mutated from coercion to institutional inertia. Suppression (0.72): Very high. Multiple enforcement layers: (1) Penal Laws (1690s-1820s) explicitly prohibited Catholic education in Irish; (2) National School system (1831+) mandated English-only instruction; (3) Economic incentive structure \u2014 Irish speakers excluded from land ownership, professional positions, and trade; (4) Social shame mechanisms \u2014 speaking Irish associated with peasantry, illiteracy, backwardness. Speakers faced no viable alternative pathway. Theater ratio (0.25 \u2192 0.68): Started low (direct enforcement left little room for theater) and rose over time as enforcement became increasingly ritualized. The post-1922 spike to 0.68 reflects that state revival programs (mandatory Irish in schools, state broadcasting in Irish, cultural institutions) operate with minimal material incentive backing \u2014 the theater has become the mechanism itself.",
-    "perspectival_gap": "The constraint demonstrates full range of DR types from a single structural situation. The victim perspective (Snare) perceives pure extraction and coercion. The beneficiary perspective (Rope) perceives coordination and mutual benefit. The organized resistance perspective (Tangled Rope) perceives both oppression and catalyzing opportunity. The post-suppression institutional perspective (Piton) perceives residual theater masking degraded function. The civilizational analytical perspective risks Mountain (inevitable extinction) but the structural data reveals false naturalization. No single perspective captures the full truth \u2014 the presheaf over all perspectives reveals that suppression operated as snare (active coercion), transformed into tangled rope (nationalism's response), and mutated into piton (post-colonial institutional inertia).",
-    "directionality_logic": "Directionality is derived from the asymmetry between beneficiaries and victims. English administrative class agents have low d (near 0.0) because they are beneficiaries with arbitrage exit options \u2014 they can always choose to operate outside the constraint; English language provides them options rather than limiting them. Irish-speaking population agents have high d (near 1.0) because they are victims with trapped exit options \u2014 they cannot exit Irish-dominated regions, cannot operate outside English-language requirements without economic catastrophe, and cannot abandon Irish identity without cultural death. The identity_locked exit option for the transmission system produces d near 0.89 (very close to trapped but with the distinguishing feature that structural mobility exists if identity frame breaks). This asymmetry generates the chi formula's directionality component: low d for beneficiaries yields low \u03c7; high d for victims yields high \u03c7. The snare classification requires \u03c7 \u2265 0.66, which is achieved when powerless victims with trapped exit face the extraction \u2014 the base extractiveness (0.68) is scaled upward by f(d) for victims to produce effective extractiveness well above the snare threshold.",
-    "mandatrophy_analysis": "The constraint resolves the mandatrophy by demonstrating the temporal dimension of classification: the same structural situation is Snare during active suppression (1600-1920), Tangled Rope during nationalist resistance (1850-1920), and Piton during post-colonial theater (1922-present). The mandatrophy appears if one asks 'Is Irish suppression a snare or rope or scaffold?' \u2014 the answer is 'different types at different phases.' During active enforcement, it is snare from the victim perspective and rope from the beneficiary perspective. During nationalist resistance, it becomes tangled rope from the organized perspective. After formal suppression ends, it mutates into piton from the state's perspective (revival theater without material support). The mandatrophy is resolved by recognizing that the constraint's classification depends on the temporal horizon and the agent's structural position \u2014 no single type is 'correct,' but the full classificatory spectrum reveals the constraint's lifecycle and transformation."
+    "logic_rationale": "Extractiveness (0.78, currently 0.38 post-2000): During active suppression (1600-1920), extractiveness is maximum because the mechanism is explicitly extractive — linguistic hegemony directly translates to labor market control, political compliance, and cultural subordination. The colonial administration and landlord class capture direct benefit (simplified governance, wage depression, political authority). Post-independence, extractiveness declines (0.72 by 1920, 0.65 by 1950, 0.38 by 2000) because the primary extraction mechanism (colonial exploitation) is removed. Remaining extractiveness in mid-20th century reflects path-dependent institutional structures (education system designed for English) and residual economic advantages of English fluency in global markets. Contemporary low extractiveness (0.38) reflects that linguistic suppression is no longer a primary extraction mechanism — Irish-medium education and community revival have created alternative pathways not structured around extraction. Suppression (0.88, constant during active era; declining post-1980): During Penal Laws period, suppression is maximum — Irish is legally prohibited in courts, education, and administrative contexts. Economic pressure ensures suppression persists even after legal prohibition relaxes (1829). Post-1922 suppression declines because formal prohibition is removed and state policy flips to support revival (though education mandate persists). Contemporary suppression is substantially lower (0.35-0.45) because community Irish-language contexts provide viable alternatives to suppression-based enforcement. Theater ratio (0.35 active era → 0.75 by 1950 → 0.62 by 2000): During active suppression, theater is low because the extraction mechanism is explicit and functional — suppression serves a clear purpose (political compliance, labor extraction). The performative dimension is minimal; the constraint functions as intended. Post-1920, theater rises sharply (0.58 by 1950, 0.75 by 1980) because the education system is maintaining Irish language requirements even though the original extraction purpose (colonial political dominance) is gone. The education mandate becomes increasingly performative — students learn Irish grammar for exams but have no social incentive to speak it; textbooks focus on literary Gaelic disconnected from living speech. This is the piton signature: performative maintenance of a defunct functional mechanism. Contemporary theater declines (0.62 by 2000) because organized community movements are creating genuine cultural transmission outside the performative education system.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence — from snare (victims' view during suppression) to rope (beneficiaries' coordination view) to piton (post-independence institutional view) to scaffold (contemporary preservation movement view) to mountain (analytical naturalization view). The original Irish population experienced the constraint as a snare with no exit: legal prohibition + economic pressure + cultural stigmatization creates a lock with no visible escape route. The colonial administration experienced it as rope: language coordination that solves governance problems while generating valuable side effects (labor market control, political compliance). The Irish Catholic Church experienced it as tangled rope: benefits from unified authority but loses Irish-language religious transmission. The post-independence Irish state experienced it as piton: inherited institutional structures that became constituted by their own failure (education system designed for mandatory Irish but generating no living speakers). The contemporary language movement experiences it as scaffold: alternative institutions with sunset logic (as community Irish capacity grows, formal mandate becomes obsolete). The civilizational analytical observer risks experiencing it as mountain: imperial language consolidation as a natural law. However, the structural data (beneficiaries = colonial administration + landlords; victims = Irish population + linguistic commons) triggers false-summit detection, revealing that the 'naturalness' is a naturalization of constructed extraction.",
+    "directionality_logic": "Directionality (d) is determined by each agent's structural position relative to the extraction flow. Victims (Irish population, linguistic commons) with trapped exit options derive high d (0.92-0.95 for trapped agents) → high f(d) (1.35-1.42) → high experienced extractiveness chi. Beneficiaries (colonial administration, landlords) with arbitrage exit options derive low d (0.05-0.15) → negative f(d) (-0.12 to -0.01) → negative or zero effective extraction (they experience coordination, not extraction). The Church as mixed actor derives moderate d (0.50-0.55 from constrained + mixed benefit/victim) → moderate f(d) (0.65-0.75). Post-independence Ireland as institutional maintainer derives higher d (0.60-0.70 from constrained + residual victim status even as formal power) because the state inherited the suppression structure and can only exit through institutional redesign (high cost). The contemporary language movement as organized beneficiary derives lower d (0.35-0.45 from constrained exit + genuine community benefit) → moderate f(d) (0.35-0.50). These directionality values are not overridden — they follow directly from beneficiary/victim declarations and exit options without explicit adjustment.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: Irish language suppression resolves the mandatrophy by demonstrating that the six classifications are not competing answers but sequential observations of the same constraint across historical phases. Active suppression (1600-1920) is genuinely snare: high extraction (explicit), high suppression (legal + economic), low theater (functional mechanism). The snare classification is not refuted by independence or by contemporary revival efforts — it remains accurate for the suppression era. Post-independence persistence (1920-1980) is genuinely piton: extractiveness declines (original beneficiary removed), but theater rises sharply (0.75 by 1980) because the education system maintains the constraint through institutional inertia despite its primary function (colonial extraction) being gone. The piton classification does not contradict the snare classification — it describes what happened when the snare lost its primary extraction mechanism but persisted through institutional momentum. Contemporary revival (1980-present) is genuinely scaffold: organized agents build alternative pathways, theater declines (0.62 by 2000) as actual cultural transmission replaces performative education, extractiveness continues declining (0.38 by 2000). The scaffold classification does not deny the snare or piton history — it describes the contemporary mechanism. The analytical mountain (treating suppression as natural law) is a false summit: the structural data (beneficiaries + victims) reveal that the constraint is constructed, not natural. The false-summit detection system identifies that someone (colonial administration, landlord class, or analytical observer) is naturalizing what is actually a designed extraction mechanism. This resolves the mandatrophy: the apparent contradiction between snare/piton/scaffold and mountain is resolved by recognizing that the mountain perspective is a naturalization attempt, not a legitimate classification. The constraint's true nature is snare-become-piton-become-scaffold, not a natural law of governance. No single type 'wins'; instead, the sequence of types across phases reveals the structure: extraction mechanism → institutional persistence of defunct mechanism → organized alternative pathways."
   },
   "boltzmann": {
-    "coordination_type": "identity_coordination",
-    "boltzmann_floor_override": 0.12
+    "coordination_type": "identity_coordination"
   },
   "network": {
     "affects_constraints": [
-      "colonial_administrative_standardization",
-      "penal_law_structural_subordination",
-      "language_based_labor_market_exclusion"
+      "anglo_irish_cultural_hegemony",
+      "irish_education_system_language_policy"
     ],
-    "dual_formulation_note": "Irish language suppression is downstream of colonial administrative standardization (the requirement to unify imperial bureaucracy through a single language) and upstream of multiple labor-market and social-identity constraints that depend on language-based discrimination. Each constraint story (administrative standardization, penal laws, labor exclusion) has its own epsilon value reflecting different aspects of the suppression mechanism."
+    "dual_formulation_note": "Irish language suppression is the primary constraint; it has two network dependents that represent downstream effects. Anglo-Irish cultural hegemony is the broader institutional structure that language suppression sustains. Irish education system language policy is the post-independence institutional persistence mechanism that inherited the suppression framework."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.18
+      "d_value": 0.65
     }
   ]
 }

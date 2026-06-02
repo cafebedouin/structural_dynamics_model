@@ -4,83 +4,86 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "sti"
+    "measurement_id_prefix": "tenure",
+    "story_uid": "9fc312ee-6d6f-470a-bd5e-4714fbbb40bf",
+    "created_at": "2026-02-26T14:32:00Z"
   },
   "base_properties": {
     "extractiveness": 0.58,
-    "suppression": 0.72,
-    "theater_ratio": 0.48,
+    "suppression": 0.68,
+    "theater_ratio": 0.52,
     "claimed_type": "tangled_rope",
     "human_readable": "Smallholder Tenure Insecurity and Extractive Land Governance",
     "topic_domain": "economic/agricultural/political",
     "requires_active_enforcement": true,
+    "emerges_naturally": false,
     "beneficiaries": [
-      "government_agencies",
-      "commercial_developers",
-      "foreign_investors",
-      "local_elites"
+      "state_land_agencies",
+      "commercial_agricultural_investors",
+      "agribusiness_corporations",
+      "international_development_funders"
     ],
     "victims": [
-      "smallholder_farmers",
+      "smallholder_farming_communities",
+      "indigenous_land_stewards",
       "pastoral_communities",
-      "indigenous_groups",
-      "agricultural_productivity"
+      "women_farmers"
     ]
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "biographical",
+      "time_horizon": "generational",
       "exit_options": "trapped",
       "spatial_scope": "national",
       "label": "The Smallholder Farmer",
-      "comment": "PERSPECTIVE 1: SMALLHOLDER FARMER (SNARE) \u2014 Trapped by insecure land tenure. Cannot exit without losing livelihood and ancestral land. Faces extraction through predatory land acquisition, forced displacement, uncompensated seizure, and coercive terms on remaining land. High suppression: legal systems favor documented ownership, credit systems exclude those without titles, enforcement mechanisms protect developer interests over cultivator rights. Maximum experienced extraction for this agent."
+      "comment": "PERSPECTIVE 1: SMALLHOLDER FARMER (SNARE) — Trapped by material and legal barriers. Land dependency is absolute; no alternative livelihood infrastructure exists. Formal recognition requires engagement with state bureaucracy they cannot navigate or afford. Suppression is structural and complete: losing access to ancestral land means losing subsistence, losing children's inheritance, losing identity as a farming household. The constraint extracts surplus labor, restricts crop choices, enables predatory crediting, and forecloses generational accumulation. Maximum experienced extraction with zero exit capacity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Smallholder Cooperative",
+      "comment": "PERSPECTIVE 2: SMALLHOLDER COOPERATIVE (TANGLED ROPE) — Limited collective power can negotiate with state and investors, accessing some markets and credit. But coordination is partial: competing individual interests, elite capture within cooperatives, and state co-optation fragment collective action. The constraint both enables (pooling land for large-buyer contracts) and extracts from (cooperative revenues captured by managers, unequal distribution of buyer contracts). Exit cost is high (losing collective access, losing market linkage) but not impossible. Moderate experience of extraction with some agency."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
-      "spatial_scope": "national",
-      "label": "The Government Agency",
-      "comment": "PERSPECTIVE 2: GOVERNMENT AGENCY (ROPE) \u2014 Experiences tenure insecurity as a coordination mechanism: unclear property rights reduce administrative burden (no titles to adjudicate in remote areas), enable flexible land allocation, and generate revenue through licensing developers. Beneficiary with exit options \u2014 can redefine policy, issue new titles, or maintain status quo. Sees the constraint as solving a real coordination problem: land allocation in contexts of limited state capacity and competing claims."
+      "spatial_scope": "global",
+      "label": "The State Land Agency",
+      "comment": "PERSPECTIVE 3: STATE LAND AGENCY (ROPE) — Experiences tenure insecurity as a coordination mechanism: formalizing titles requires consolidation, which requires reducing the number of land claims, which requires aggregating small plots into sellable units. The agency's core function is enabled by the insecurity: without it, their administrative load increases (managing millions of micro-plots), their revenue decreases (transaction fees on small transfers), and their development mandate (measured in hectares allocated to commercial agriculture) becomes harder to achieve. The constraint solves their coordination problem. They experience it as necessary bureaucratic infrastructure, not extraction. Net beneficiary with high exit optionality (can change tenure rules if political incentives shifted)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Commercial Agricultural Investor",
+      "comment": "PERSPECTIVE 4: COMMERCIAL AGRICULTURAL INVESTOR (ROPE) — Tenure insecurity solves their coordination problem: without it, they must negotiate with millions of smallholders, compensate each, manage complex rights-bundling, and contend with communal claims. Tenure insecurity reduces this complexity to a state negotiation (one party) and a land clearing operation (relocate/marginalize existing users). The constraint enables large-scale monoculture, export agriculture, and capital-intensive mechanization. They experience the constraint as solving the 'tragedy of the commons' — natural law justification for consolidation. Net beneficiary; high arbitrage optionality (can invest elsewhere if tenure regime changes)."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "powerful",
-      "time_horizon": "biographical",
+      "time_horizon": "generational",
       "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "The Commercial Developer",
-      "comment": "PERSPECTIVE 3: COMMERCIAL DEVELOPER (TANGLED ROPE) \u2014 Benefits from tenure insecurity (low acquisition costs, weak legal obstacles to displacement). Also experiences genuine coordination function: unclear tenure creates opportunity for large-scale investment that smallholders cannot finance individually. Mobile exit options (can invest elsewhere) but structurally benefits from this specific constraint. Mixed relationship: gains from extraction but also from solving coordination problem of consolidating fragmented holdings."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "moderate",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "regional",
-      "label": "The Pastoral Community",
-      "comment": "PERSPECTIVE 4: PASTORAL COMMUNITY (TANGLED ROPE) \u2014 Bears extraction through land loss to commercial agriculture and conservation reserves, but also genuinely coordinates access to pasture across seasonal and climatic cycles through customary tenure systems. Modern nation-state frameworks don't recognize customary title, creating asymmetric extraction. Constrained exit: they can abandon pastoralism but this requires economic restructuring and loss of cultural identity. High suppression: customary law unrecognized, state law imposed, enforcement favors modern titling over traditional rights."
-    },
-    {
-      "classification_type": "snare",
-      "agent_power": "powerless",
-      "time_horizon": "generational",
-      "exit_options": "identity_locked",
-      "spatial_scope": "global",
-      "label": "The Indigenous Land Rights Movement",
-      "comment": "PERSPECTIVE 5: INDIGENOUS COMMUNITIES (SNARE WITH IDENTITY_LOCK) \u2014 Trapped by dual suppression: state law denies land rights, and identity is constituted through ancestral territory. Exit would require abandoning indigenous identity and relationship to land. Maximum suppression: legal systems exclude communal title, enforcement mechanisms criminalize traditional resource use, alternative economic models are deliberately foreclosed. Identity-locked: cannot exercise what few mobility options exist because land is inseparable from cultural survival. Structural d high, cognitive lock adds extra immobility layer."
+      "spatial_scope": "continental",
+      "label": "The International Development Funder",
+      "comment": "PERSPECTIVE 5: INTERNATIONAL DEVELOPMENT FUNDER (TANGLED ROPE) — Land formalization is a canonical development intervention: property rights enable credit access, investment incentives, and market participation. The funder genuinely coordinates market entry and financial system integration for smallholders. BUT the funder's metrics reward land under formal title (hectares registered), not smallholder income or food security. This misalignment extracts value: formalization often triggers land concentration (smallholders sell under economic pressure, investors consolidate holdings), debt traps (credit becomes available but unpayable from marginal farm output), and market integration that exports profit (cash crops sold to multinational traders at commodity prices). The funder benefits from the narrative of market-making; smallholders often experience dispossession. Both coordination and extraction present."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The Land Rights Reform Movement",
-      "comment": "PERSPECTIVE 6: LAND RIGHTS REFORM COALITION (SCAFFOLD) \u2014 Organized actors (NGOs, international development agencies, civil society) see tenure insecurity as a soluble problem with sunset logic: formalization programs, community land titling, and rights-based approaches are creating alternative tenure arrangements. Experiences constraint as temporary coordination failure resolvable through policy reform. Theater low: reform movement builds on measured research and documented harm, not on ritualized compliance. Sunset clause: as formal titling expands and customary rights frameworks are legally recognized, the tenure insecurity mechanism should degrade. Constrained exit: reformers must work within state legitimacy frameworks and secure funding to implement alternatives."
+      "spatial_scope": "national",
+      "label": "The Land Rights Advocacy Coalition",
+      "comment": "PERSPECTIVE 6: LAND RIGHTS ADVOCACY COALITION (SCAFFOLD) — Organized civil society actors (NGOs, farmer unions, indigenous councils) mobilizing against tenure insecurity are building alternative governance pathways: community land trusts, participatory land mapping, customary rights codification, and legal recognition of informal tenure. These alternatives have sunset logic: as community-based tenure systems mature and gain legal standing, the state monopoly on land authority erodes. The coalition experiences the constraint as temporary and contestable. Their exit path is real (alternative institutions being built) and their agency is significant. But the timeline is long (generational) and state/investor resistance is high (suppression for coalition members is significant)."
     },
     {
       "classification_type": "piton",
@@ -88,8 +91,8 @@
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Colonial Land Registry System",
-      "comment": "PERSPECTIVE 7: COLONIAL LAND REGISTRY INSTITUTIONS (PITON) \u2014 Formal titling systems installed during colonialism persist through institutional inertia despite poor fit to local contexts. Theater high: land registries maintain elaborate bureaucratic processes (surveys, documentation, adjudication) that appear functional but exclude smallholders who lack literacy, capital, or documentation. The registry sees its own function as degraded (many smallholders never participate, customary systems continue in parallel) but persists because donor funding supports it and no competing institution has fully replaced it. Piton signature: high theater (bureaucratic ritual), low actual function (most land remains untitled or semi-titled), institutional inertia (persists despite known limitations)."
+      "label": "The Colonial Land Registration Framework",
+      "comment": "PERSPECTIVE 7: COLONIAL LAND REGISTRATION FRAMEWORK (PITON) — The institutional form of tenure insecurity (state-monopolized formal titling) is inherited from colonial administration (demarcating colonial territory, centralizing land authority, extracting tax revenue, enabling resource extraction). Post-independence states have maintained this framework despite its institutional degradation: formal titling is slow, expensive, inaccessible to the poor, and often produces contested rather than secure title (competing claims from different state agencies, legal ambiguities about pre-colonial rights). The theater ratio is high: the formal system performs legitimacy and state modernity while actual security remains low for those it claims to protect. The framework persists through institutional inertia and the beneficiary class (state agencies, investors) that depends on it, not because it functions as designed. Piton classification: degraded coordination mechanism maintained by theater and beneficiary lock-in."
     },
     {
       "classification_type": "mountain",
@@ -97,130 +100,143 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Natural Law View (False Summit)",
-      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN \u2014 FALSE SUMMIT) \u2014 From a civilizational/universal view, some degree of tenure insecurity appears inherent: land is scarce, claims overlap, and adjudicating competing uses requires governance structures. This perspective naturalizes tenure insecurity as an immutable feature of human-land relationships. However, structural data reveals this is a false summit: tenure insecurity is not physics-level constraint. The base extractiveness (0.58) and high suppression (0.72) indicate active enforcement of inequality, not natural scarcity. Comparable societies with strong customary tenure or comprehensive titling systems show much lower extractiveness. The 'natural law' framing obscures policy choices and institutional design."
+      "label": "The Natural Law View (Land Scarcity)",
+      "comment": "PERSPECTIVE 8: NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, land scarcity and population growth create inevitable pressure toward consolidation and intensification. Smallholding fragmentation is an inefficient allocation mechanism; formal titling and large-scale agriculture are the inevitable evolution. Tenure insecurity is merely the friction cost of this transition — a natural law of agricultural development. However, this perspective naturalizes what is actually a contingent political choice: the extraction is not inevitable but enforced; the consolidation beneficiaries are not all of society but a specific class; the alternatives (community tenure, cooperative consolidation, smallholder intensification) are structurally viable but politically opposed. False summit candidate."
     }
   ],
   "omegas": [
     {
-      "id": "titling_effectiveness_paradox",
-      "question": "Does formal land titling actually reduce tenure insecurity, or does it substitute one form of insecurity (lack of legal recognition) for another (vulnerability to legal dispossession)?",
-      "resolution_mechanism": "Longitudinal comparison: tenure security indices before and after titling programs in target countries; tracking of post-titling land loss rates; farmer welfare assessments across multiple time points",
-      "impact": "If titling effective: scaffold perspective valid, reform coalition strategy sound, constraint should degrade over time. If titling creates new insecurity: extraction mechanism persists, merely changes form, scaffold sunset is illusory. Classification may shift from tangled_rope toward snare.",
+      "id": "tenure_formality_paradox",
+      "question": "Does formal title certification actually increase smallholder security, or does it trigger dispossession by making land tradable and creating debt-trap collateral?",
+      "resolution_mechanism": "Longitudinal household panel data comparing smallholders with formal vs informal tenure over 10-20 years, tracking land retention, debt levels, income, and food security outcomes across regions with different investor pressure",
+      "impact": "If formalization increases security: tenure insecurity is a coordination problem (Rope from multiple perspectives). If formalization increases dispossession: it is an extraction mechanism disguised as property rights (Snare from victim perspective). Current evidence is mixed and region-dependent.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether formal titling reduces or transforms tenure insecurity"
+      "description": "Whether formal title increases or decreases smallholder security"
     },
     {
-      "id": "customary_tenure_recognition_feasibility",
-      "question": "Can state legal systems recognize and enforce customary land tenure without collapsing customary governance institutions or creating competitive dual-system extraction?",
-      "resolution_mechanism": "Case studies of countries with recognized customary title (Botswana, some Latin American countries); analysis of dual legal system stability; measurement of extraction rates in hybrid systems",
-      "impact": "If feasible: customary tenure pathways reduce suppression, shift classification toward rope for pastoral/indigenous communities. If unfeasible: recognition in law while enforcement remains state-biased maintains asymmetric extraction, classification remains snare/tangled_rope.",
+      "id": "community_tenure_effectiveness",
+      "question": "Can customary and community-based tenure systems (without state formalization) provide sufficient security and credit access for smallholder advancement, or is state-backed titling a necessary condition for market integration?",
+      "resolution_mechanism": "Comparative case studies of community-managed land systems (Ethiopian debo/dega, Tanzanian village land councils, indigenous territory management, pastoral commons) measuring tenure security, credit access, investment levels, and food security relative to formal-title regions",
+      "impact": "If community tenure is effective: the state-monopoly extraction mechanism is not structurally necessary; alternatives exist (Scaffold perspective confirmed). If community tenure fails at scale: state formalization is structurally necessary (Mountain perspective gains support).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether community-based tenure systems can provide comparable security without state formalization"
+    },
+    {
+      "id": "extraction_vs_coordination_boundary",
+      "question": "At what point does the legitimate coordination function of consolidating fragmented holdings become predatory extraction of smallholder land?",
+      "resolution_mechanism": "Define threshold metrics: consolidation pace (hectares per year), smallholder displacement rate, investor land acquisition cost vs smallholder forgone productivity, compensation adequacy relative to household relocation cost. Empirical mapping of regional tenure trajectories against these metrics.",
+      "impact": "If extraction begins early (low displacement rates already problematic): constraint is primarily Snare. If extraction requires high displacement rates: constraint permits Rope/Tangled Rope interpretations in low-pressure regions. Boundary is empirical, not conceptual.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether state recognition of customary tenure can reduce extraction"
+      "description": "Threshold metrics distinguishing coordination from predatory consolidation"
     },
     {
-      "id": "developer_incentive_substitution",
-      "question": "If smallholder tenure becomes secure through titling, will commercial developers seek alternative extraction mechanisms (financial debt traps, input dependency, price manipulation) rather than direct land seizure?",
-      "resolution_mechanism": "Observation of developer strategies in countries with strong smallholder titling (Kenya post-Land Bill, parts of India); tracking of indirect extraction mechanisms (contract farming coercion, input credit traps, output price manipulation)",
-      "impact": "If substitution occurs: constraint transforms rather than resolves, extractiveness may remain high but mechanism changes from snare (direct dispossession) to tangled_rope (financial coordination coercion). If extraction declines: reform coalition strategy valid, constraint genuinely resolves.",
-      "confidence": "low",
+      "id": "state_capacity_constraint",
+      "question": "Is tenure insecurity caused by structural state incapacity (too many claims to adjudicate, insufficient resources for land administration), or by deliberate enforcement choices (maintaining insecurity to enable land concentration)?",
+      "resolution_mechanism": "Comparison of state investment in land administration infrastructure and personnel across regions with different tenure security outcomes. Analysis of de jure vs de facto enforcement: do states with formal property law frameworks actually enforce them, or does enforcement selectively support investor interests?",
+      "impact": "If incapacity: tenure insecurity is partly a coordination problem requiring institutional investment (Rope/Scaffold perspective). If deliberate: insecurity is a maintained extraction mechanism (Snare perspective, false-summit mountain).",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether securing tenure shifts rather than removes extraction mechanisms"
+      "description": "Whether tenure insecurity reflects state incapacity or deliberate enforcement choices"
     },
     {
-      "id": "identity_lock_persistence_trajectory",
-      "question": "For indigenous communities classified as identity_locked on tenure insecurity, does the suppression persist and bind after material barriers (loss of land) are removed, or is identity lock purely dependent on the structural suppression?",
-      "resolution_mechanism": "Post-land-restitution assessment: communities regaining territory \u2014 do cultural identity and tenure security correlate, or do identity constraints persist even when material barriers dissolve?",
-      "impact": "If identity lock is independent: suppression mechanism includes cognitive/cultural dimensions requiring different policy responses than land reform alone. If lock is dependent on material barriers: resolving tenure insecurity directly resolves identity constraint. Classification refinement: distinguishes whether identity_lock is primary or secondary mechanism.",
-      "confidence": "low",
+      "id": "alternative_consolidation_models",
+      "question": "Could consolidation happen through voluntary smallholder cooperation (pooled marketing, cooperative land management) rather than through formal titling and dispossession?",
+      "resolution_mechanism": "Empirical case studies of cooperative consolidation models (cotton buying groups in West Africa, dairy pools in East Africa, fruit marketing cooperatives in South Asia) measuring consolidation benefits, smallholder retention, profit distribution, and resilience to commodity price shocks relative to investor-driven consolidation",
+      "impact": "If cooperative consolidation delivers comparable benefits with smallholder retention: the extraction is not necessary (Snare → Tangled Rope reclassification). If cooperatives fail or underperform: investor-driven consolidation gains legitimacy as necessity (Mountain perspective).",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether identity lock persists after material tenure barriers are removed"
+      "description": "Whether cooperative consolidation can deliver scale benefits without dispossession"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.42
+      "value": 0.38
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 25,
-      "value": 0.55
+      "time_point": 10,
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 50,
+      "time_point": 20,
       "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
       "value": 0.52
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 25,
-      "value": 0.48
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 50,
-      "value": 0.48
-    },
-    {
-      "metric": "base_extractiveness",
+      "metric": "suppression_requirement",
       "time_point": 10,
-      "value": 0.48
+      "value": 0.6
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.51
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68
     }
   ],
   "interval": {
     "start": 0,
-    "end": 50
+    "end": 20
   },
   "commentary": {
-    "narrative_context": "Smallholder tenure insecurity describes the structural vulnerability of farming communities whose land rights are not formally recognized or legally protected by the state. This constraint operates across Sub-Saharan Africa, South Asia, Latin America, and Southeast Asia, affecting approximately 2 billion people. The constraint exhibits tangled_rope properties: it contains genuine coordination functions (consolidating fragmented holdings for large-scale investment, reducing administrative burden on states with limited capacity, enabling flexible resource allocation) while simultaneously extracting from smallholders through land seizure, displacement, and coercive terms. The classification demonstrates how the same structural arrangement produces different perceived types across observer positions: government sees rope (coordination), smallholders see snare (pure extraction), developers see tangled_rope (mixed gains), and land rights reformers see scaffold (temporary problem with sunset). The theater ratio (0.48) reflects that this is primarily a functional extraction mechanism rather than a performative ritual \u2014 tenure insecurity does real work for beneficiaries, which is why it persists despite known harmful effects. The extractiveness has increased over the 50-year interval as commercial pressures intensified and state capacity for adjudication improved for some groups while systematically excluding others.",
+    "narrative_context": "Smallholder tenure insecurity describes the structural vulnerability of farming communities whose land rights are not formally recognized or legally protected by the state. This constraint operates across Sub-Saharan Africa, South Asia, Latin America, and Southeast Asia, affecting approximately 2 billion people. The constraint exhibits tangled_rope properties: it contains genuine coordination functions (consolidating fragmented holdings for large-scale investment, reducing administrative burden, enabling market participation through collateralizable credit) alongside asymmetric extraction (smallholders bear dispossession risk while benefits flow to state agencies, commercial investors, and development funders). The institutional framework is inherited from colonial land administration and has been maintained post-independence despite its degradation. Extractiveness has increased over the 20-year interval (0.38 → 0.58) as commercial agricultural investment and land commodification have intensified. Theater ratio has risen (0.35 → 0.52) as the legitimacy framing has shifted from efficiency/development to climate adaptation and carbon sequestration, creating new extractive claims on smallholder land. Suppression has intensified (0.52 → 0.68) as states and investors have deployed more aggressive enforcement mechanisms (security forces, legislative restriction of customary rights, acceleration of titling-for-dispossession programs). The constraint is analytically rich because it permits all six classification types from different structural positions, making it an exemplar for how indexical classification reveals the same phenomenon as fundamentally different structural experiences depending on the agent's power and exit options.",
     "key_agents": [
-      "Smallholder Farmers: Primary victims (powerless/trapped) \u2014 bear full extraction through land loss and coercive terms; no structural exit options available",
-      "Pastoral Communities: Secondary victims (moderate/constrained) \u2014 face extraction through land loss to agriculture/conservation; customary tenure systems unrecognized; constrained exit due to economic and cultural dependence",
-      "Indigenous Groups: Victims with identity lock (powerless/identity_locked) \u2014 face extraction compounded by identity fusion with ancestral territory; cannot exercise mobility options without abandoning cultural identity",
-      "Government Agencies: Primary beneficiary (institutional/arbitrage) \u2014 controls land allocation, captures licensing revenue, reduces administrative burden; has policy discretion and exit options",
-      "Commercial Developers: Secondary beneficiary (powerful/mobile) \u2014 acquire land at low cost due to unclear tenure; benefit from state enforcement; globally mobile exit options",
-      "Local Elites: Beneficiary (powerful/constrained) \u2014 accumulate land through insider connections; constrained by need to maintain state relationships",
-      "Land Rights Reform Coalition: Organized agents (organized/constrained) \u2014 NGOs, international agencies, civil society; see constraint as soluble through policy reform; constrained by need to work within state legitimacy frameworks",
-      "Colonial Land Registry Institutions: Institutional inertia actor (institutional/arbitrage) \u2014 formal titling systems persist through donor funding and institutional path dependence despite limited actual function"
+      "Smallholder Farming Communities: Primary victims (powerless/trapped) — bear full extraction cost; no alternative livelihood; tenure loss = subsistence loss + identity loss + children's displacement",
+      "Indigenous Land Stewards and Pastoral Communities: Specific victims with even lower state recognition (powerless/trapped) — pre-colonial land claims actively suppressed by formal titling",
+      "Women Farmers: Disproportionate victims (powerless/trapped + identity_locked) — tenure typically vests in household heads (male), excluding women despite their farming role; customary land loss eliminates autonomous income and inheritance security",
+      "State Land Agencies: Primary beneficiaries (institutional/arbitrage) — administrative simplification, revenue (titling fees, land sales), development metrics (hectares allocated)",
+      "Commercial Agricultural Investors: Primary beneficiaries (institutional/arbitrage) — access to consolidated land, reduced negotiation complexity, export market linkages, capital accumulation",
+      "International Development Funders: Secondary beneficiaries (powerful/mobile) — narrative success (property rights), development metrics, portfolio returns through impact investment vehicles",
+      "Land Rights Advocacy Coalition: Organized challengers (organized/constrained) — building alternative tenure frameworks (community land trusts, customary codification, participatory mapping) with generational sunset timeline",
+      "Colonial Land Registration Framework (institutional inertia): Piton-class mechanism persisting through theater and beneficiary lock-in despite degraded coordination function"
     ],
-    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts substantial value from smallholders through land loss and coercive terms, but is not maximum extraction \u2014 some smallholders retain land and some negotiate improved conditions, preventing full deprivation. The trajectory shows increasing extractiveness over the 50-year interval (from 0.42 to 0.58) as commercial pressures intensified and state capacity for selective enforcement improved. Suppression (0.72): High. Legal systems favor documented ownership over customary claims, credit systems exclude untitled holders, enforcement mechanisms systematically privilege developers over smallholders, and alternative governance structures are delegitimized. Suppression includes both structural barriers (capital requirements for titling, legal literacy) and ideological suppression (naturalizing formal titling as inevitable, portraying customary systems as backward). Theater ratio (0.48): Moderate-low. This is primarily functional extraction rather than performative theater \u2014 tenure insecurity does real work for beneficiaries, generating concrete benefits (reduced administrative costs for states, low acquisition costs for developers, access to consolidation opportunities). The theater component appears in formal titling systems that maintain elaborate bureaucratic processes with limited actual coverage, and in development narratives that frame tenure formalization as inevitable progress. The fact that theater ratio is lower than extractiveness indicates this is a real, functional constraint rather than one maintained primarily through ritual.",
-    "perspectival_gap": "The gap between the smallholder's snare classification and the government's rope classification reflects opposite experiences of the same constraint. The smallholder experiences tenure insecurity as pure coercion with no coordination benefit \u2014 they are pushed out of land, face insecure conditions, and have no exit. The government experiences it as coordination \u2014 it solves the problem of allocating land when administrative capacity is limited and claims overlap. This is not a dispute about facts but about structural position. From the smallholder's perspective, the 'coordination' (consolidating holdings for commercial investment) is not a coordination problem they asked to have solved. It's a mechanism to extract their land. The snare/rope divergence is the classification system detecting that this agent pair experiences radically different effective extractiveness from the same structural arrangement. The analytical observer at civilizational scope risks naturalizing this as immutable \u2014 'land scarcity is inherent' \u2014 but the structural data contradicts this. Comparable societies with strong property rights systems (either customary or formal, but applied equally) show much lower extractiveness and suppression. The tenure insecurity is not immutable; it's a policy choice about whose claims the state recognizes.",
-    "directionality_logic": "Directionality (d) for each perspective reflects the agent's structural position and experience of extraction flow. Smallholder farmers as trapped powerless agents derive d \u2248 0.95 (full target of extraction), yielding high f(d) \u2248 1.42 and high experienced extractiveness. Government agencies as institutional beneficiaries with arbitrage exit derive d \u2248 0.05 (full beneficiary), yielding f(d) \u2248 -0.12 and negative/neutral experienced extractiveness (they do not experience themselves as extracted from). Developers as powerful beneficiaries with mobile exit derive d \u2248 0.25, yielding f(d) \u2248 0.02 (near-neutral). Pastoral communities as moderate constrained agents who both contribute to coordination and bear extraction derive d \u2248 0.55 (mixed), yielding f(d) \u2248 0.75 (moderate experienced extraction). Indigenous groups as identity-locked agents derive d \u2248 0.89 (high target despite some structural mobility), yielding f(d) \u2248 1.28 (high experienced extraction). The identity lock adds perceptual immobility on top of structural mobility. Reform coalition as organized constrained beneficiary-victim mix derives d \u2248 0.45 (moderately distributed), yielding f(d) \u2248 0.45 (moderate experienced extraction as they work against their own beneficiary status). Spatial scope \u03c3(S) is national/regional for most perspectives, with some global scope for developers and reform movements, yielding \u03c3 \u2248 1.0\u20131.1. The effective extraction \u03c7 = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S) thus varies from negative/near-zero for government (beneficiary perspective) to 0.82+ for trapped smallholders at national scope.",
-    "mandatrophy_analysis": "MANDATROPHY SCENARIO: The constraint demonstrates how false natural-law framing conceals policy choices. The civilizational analytical observer's mountain classification falsely summarizes tenure insecurity as inherent scarcity. The base extractiveness (0.58) and suppression (0.72) metrics directly contradict this \u2014 if tenure insecurity were a law of nature (like gravity), different societies with identical resource constraints would show similar levels. They don't. Kenya, Uganda, and Rwanda with similar ecology show vastly different tenure security depending on policy choices. This reveals the mandatrophy: the mountain classification is a false summit, a naturalization of contingent institutional arrangements. The tangled_rope classification at the institutional/beneficiary level resolves the mandatrophy by acknowledging that the constraint contains BOTH genuine coordination (solving the problem of allocating land among competing claims) AND asymmetric extraction (systematically privileging some claimants over others). The reformist scaffold classification offers a sunset: policy reforms (titling programs, customary rights recognition, rights-based approaches) can degrade the constraint by making tenure security less dependent on state discretion and more formalized, reducing the extraction mechanism while maintaining coordination. However, the identity_lock omega variable introduces a secondary mandatrophy: even if material tenure becomes secure, do indigenous communities remain bound by identity lock to particular territories? This mandatrophy is deeper \u2014 it asks whether resolving structural tenure insecurity resolves the cognitive/identity dimensions of the constraint, or whether those persist independently."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts significant value from smallholders through multiple mechanisms: (1) dispossession under legal pressure (losing land = losing capital), (2) labor extraction (insecurity incentivizes low-cost farming inputs and high effort), (3) suppressed crop choice (insecurity agents select for quick-return commodity crops, reducing nutritional diversity and increasing market dependency), (4) credit trapping (insecurity makes smallholders prefer formal credit at high rates over community lending), (5) suppressed investment (no tenure security reduces incentive to improve soil or water infrastructure). But extractiveness is not maximal (not 0.72+) because: (a) genuine coordination benefits exist (some smallholders gain access to buyer contracts and credit they otherwise couldn't obtain), (b) not all smallholders are displaced (many maintain marginal holdings despite insecurity), (c) some regions show higher smallholder resilience and lower extraction. The 0.58 value reflects the tangled-rope structure: real coordination mixed with real asymmetric extraction. Suppression (0.68): High but not total. Structural barriers include: (1) formal titling cost (unaffordable for poor smallholders), (2) literacy/documentation barriers (smallholders lack birth certificates, ownership documents), (3) state access barriers (agencies geographically distant, bureaucracy incomprehensible), (4) legal barriers (customary land claims not recognized, married women excluded), (5) security forces enforcing investor claims against smallholder resistance. But suppression is not absolute: (a) some smallholders navigate formalization despite barriers, (b) customary tenure retains some de facto security, (c) advocacy coalitions are reducing barriers (community land mapping, NGO legal support). The 0.68 reflects significant but not total suppression. Theater ratio (0.52): Moderate-high. Substantial performative content includes: (1) property rights rhetoric (formalization presented as rights protection when often preceding dispossession), (2) development narrative (land consolidation justified as agricultural modernization and poverty reduction despite often worsening food security), (3) climate framing (land acquisition justified as carbon sequestration or climate-smart agriculture despite carbon-heavy export crops), (4) state capacity theater (land agencies claim to be protecting rights while selectively enforcing against smallholders). But theater is not dominant (not 0.70+) because: (a) genuine institutional processes exist (some titling does get completed), (b) actual land transfers do occur (not purely performative), (c) real coordination benefits do flow in some cases. The 0.52 reflects significant performative framing layered on real but asymmetric institutional processes. The rising trajectory (0.35 → 0.52) reflects increasing rhetorical framing of land consolidation as climate mitigation, ESG compliance, and development impact—narratives that have reduced transparency about dispossession costs.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence: the same institutional arrangement is experienced as Snare (victim), Rope (state agency), Rope (investor), Tangled Rope (cooperative and funder), Scaffold (advocacy coalition), Piton (colonial framework), and false-summit Mountain (analytical naturalization). The gaps reveal the structural reality: what appears as a coordination problem to the state and investors appears as pure extraction to smallholders. What appears as temporary friction (scaffold perspective) to advocates appears as permanent dispossession to victims. What appears as natural law evolution (mountain) is actually a maintained institutional choice that benefits specific classes. The perspectival gap is not epistemological confusion—it reflects genuine structural divergence in how the constraint functions for different agents. The smallholder farmer's Snare classification (trapped, maximum extraction) is not a misunderstanding of the state's Rope classification; it is the structural reality for someone with zero exit capacity and land dependency. The state agency's Rope classification (coordination) is also structurally accurate for their functional position—they do solve an administrative coordination problem through tenure insecurity. Both classifications are correct for their respective contexts. The analytical insight is that the constraint performs different structural functions for different agents: coordination for the powerful, extraction for the powerless. Recognition of this gap enables diagnosis: the constraint cannot be reformed through coordination improvements alone (more efficient titling) because the extraction is functionally necessary to the beneficiary class. Reform requires either (a) power rebalancing (smallholder organization or state capacity to enforce against investor pressure), or (b) institutional replacement (community tenure systems gaining legal standing, making state-monopoly tenure unnecessary).",
+    "directionality_logic": "Directionality (d) values reflect each agent's structural position in the extraction flow. Smallholder farmers are full victims (d ≈ 0.95): structurally trapped, no arbitrage options, tenure loss eliminates their primary livelihood. The sigmoid f(d) ≈ 1.42 amplifies their experienced extractiveness (χ = 0.58 × 1.42 × 1.0 ≈ 0.82 at national scope). State land agencies are net beneficiaries (d ≈ 0.05): extracting value (tenure fees, land sales, development metrics) with complete arbitrage optionality (can change tenure rules). The sigmoid f(d) ≈ -0.12 dampens their experienced extractiveness, making it appear as coordination (low effective extraction). Commercial investors are beneficiaries (d ≈ 0.10): consolidating land at reduced transaction cost, with high arbitrage optionality. The sigmoid f(d) ≈ -0.01 makes the extraction nearly invisible to them—they experience pure coordination benefit. Development funders occupy (d ≈ 0.48, powerful/mobile): moderately positioned between beneficiary framing and victim outcomes, with high exit optionality (can redeploy capital elsewhere). The sigmoid f(d) ≈ 0.60 produces moderate χ. The cooperative perspective (moderate/constrained) has intermediate directionality (d ≈ 0.55): victims of investor competition but beneficiaries of buyer contracts, constrained exit (losing collective access is costly). The advocacy coalition (organized/constrained) has high directionality (d ≈ 0.65): opposing the extraction but facing suppression. The state agency and investor perspectives both derive beneficiary+arbitrage → low d → low/negative f(d), making the constraint appear as coordination from their structural position. Smallholder perspectives derive victim+trapped → high d → high f(d), making the constraint appear as maximal extraction. The directionality divergence is not a measurement error—it is the structural reality that the constraint extracts from some and benefits others, producing genuine perspectival classification divergence. No override is necessary; the base derivation captures the actual structural relationships.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by mapping all six types to the fundamental question: 'Is tenure insecurity a coordination mechanism (market-making, administrative simplification) or an extraction mechanism (dispossession, rent capture)?' The answer is: both, for different agents. The state and investor perspectives see genuine coordination (Rope). The victim perspectives see genuine extraction (Snare). The tangled-rope classifications (cooperatives, funders, advocates) see both. The piton classification (colonial framework) sees degraded coordination maintained by theater. The mountain classification risks naturalizing the choice as inevitable. The mandatrophy is resolved not by selecting one type but by recognizing that the constraint performs different structural functions depending on power position. This recognition enables precise diagnosis: the constraint is NOT a coordination problem to be solved by more efficient titling (this would improve the Rope function while deepening the extraction). It is a redistribution mechanism that benefits smallholders only if rebalancing occurs (advocacy coalition/scaffold perspective) or if alternatives gain institutional standing (community tenure). The constraint cannot be 'fixed' within the state-formalization framework; it can only be replaced by institutional alternatives. The mandatrophy-resolution insight is that tenure insecurity is a stable equilibrium for beneficiary classes precisely because it performs both genuine coordination (for them) and asymmetric extraction (for victims) simultaneously. Removing the extraction would require removing the coordination benefits they derive, which they will resist. Reform requires institutional innovation (community tenure gaining legal parity) or power rebalancing (smallholder organization reaching critical mass), not incremental improvements to the existing framework.",
+    "kernel_context": "This constraint is NOT a kernel reading. It describes a unified institutional arrangement (state-monopolized land authority) rather than a contested kernel with multiple readings. The tenure question ('what land rights should be recognized?') is genuinely contested between state formalism and customary/community tenure paradigms, but this contest is between incompatible institutional systems, not alternative readings of a shared kernel. If future authoring decomposes the tenure domain into separate kernel readings (e.g., 'the legitimacy of state land authority' as a kernel with formalist vs customary readings), the constraint story would split and omega variables would be re-routed to the kernel-reading specification. For now, the constraint is authored as a unified institutional arrangement with multiple perspectives on its extraction/coordination structure."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.18
   },
   "network": {
     "affects_constraints": [
-      "agricultural_productivity_extraction",
-      "migration_lock_through_land_dependence",
-      "customary_law_vs_state_law_conflict"
+      "smallholder_credit_access",
+      "agricultural_export_dependency",
+      "commons_enclosure_dynamics",
+      "indigenous_land_dispossession"
     ],
-    "dual_formulation_note": "Smallholder tenure insecurity is a parent constraint that affects multiple downstream constraints in agricultural and rural development systems. The core constraint (who has enforceable land rights) structures access to productive resources, which affects agricultural productivity extraction. The land dependence also structures migration decisions (people trapped in declining agricultural zones). Customary/state law conflict is a structurally distinct constraint with different \u03b5 values, related to tenure insecurity but analytically separable."
+    "dual_formulation_note": "Smallholder tenure insecurity is a constraint family node. Upstream constraints (colonial land administration, state centralization, commercial agriculture expansion) create preconditions. Downstream constraints (credit access barriers, export crop dependency, indigenous dispossession) inherit the tenure insecurity structure. Each member has its own ε value: state formalization (ε≈0.55), customary suppression (ε≈0.65), development-funder conditionality (ε≈0.42). The family is linked by institutional dependency: all downstream constraints depend on the upstream tenure insecurity for their extraction mechanisms to function."
   },
   "directionality_overrides": [
     {
-      "power_atom": "powerful",
-      "d_value": 0.25
-    },
-    {
-      "power_atom": "moderate",
-      "d_value": 0.55
+      "power_atom": "institutional",
+      "d_value": 0.08
     }
   ]
 }

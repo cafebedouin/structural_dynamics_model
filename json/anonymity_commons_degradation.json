@@ -4,25 +4,26 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "anon"
+    "measurement_id_prefix": "anon",
+    "story_uid": "dca02630-e92b-4e8e-9205-b1867bcc7fad"
   },
   "base_properties": {
     "extractiveness": 0.58,
-    "suppression": 0.65,
-    "theater_ratio": 0.48,
+    "suppression": 0.68,
+    "theater_ratio": 0.51,
     "claimed_type": "tangled_rope",
-    "human_readable": "Anonymity Commons Degradation",
+    "human_readable": "Anonymity Commons Degradation in Digital Infrastructure",
     "topic_domain": "digital_infrastructure/social_governance",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "surveillance_infrastructure_operators",
-      "identity_verification_vendors",
-      "law_enforcement_agencies"
+      "state_surveillance_apparatus",
+      "platform_operators",
+      "commercial_data_brokers"
     ],
     "victims": [
-      "anonymity_commons_users",
-      "whistleblowers_and_dissidents",
-      "vulnerable_populations"
+      "dissidents_and_journalists",
+      "vulnerable_populations",
+      "epistemic_commons_integrity"
     ]
   },
   "perspectives": [
@@ -32,8 +33,17 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Anonymity-Dependent User",
-      "comment": "PERSPECTIVE 1: ANONYMITY-DEPENDENT USER (SNARE) \u2014 Cannot exit without losing access to critical services; bears full cost of degrading privacy infrastructure. Whistleblowers, dissidents, and abuse survivors face maximum suppression with no alternatives. Exit is identity-revealing."
+      "label": "The Dissident Under Surveillance",
+      "comment": "PERSPECTIVE 1: DISSIDENT UNDER SURVEILLANCE (SNARE) — No meaningful exit from persistent identity disclosure in digital spaces. State apparatus and platform operators have converged on real-name requirements, biometric tracking, and IP logging. The dissident faces maximum extraction: suppressed speech, targeted arrest, or exile. Exit means abandoning digital communication entirely — an immense cost for organizing, coordinating with allies, or accessing information. This agent bears the full suppressive weight of the constraint without coordinating benefits."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "label": "The Sex Worker Managing Safety",
+      "comment": "PERSPECTIVE 2: SEX WORKER MANAGING SAFETY (SNARE via identity_locked) — Structurally mobile (could use pseudonyms, encrypted tools) but identity-fused with the need for anonymity as survival mechanism. Identity lock derives from the internalized understanding that exposure = economic catastrophe, family rupture, legal jeopardy. The identity IS the anonymous work; exit from anonymity would require becoming a different person. Suppression is both structural (legal barriers, platform ToS enforcement) and internalized (the sex worker cannot imagine disclosing their work identity). High extraction — bears full cost of surveillance intensification."
     },
     {
       "classification_type": "tangled_rope",
@@ -41,8 +51,8 @@
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Platform User (Pseudonymous Community)",
-      "comment": "PERSPECTIVE 2: PLATFORM USER / PSEUDONYMOUS COMMUNITY (TANGLED ROPE) \u2014 Constrained by platform design choices and pressure to use real identity; benefits from the community coordination function of pseudonymous spaces. Some agency through alternative platforms but at adoption cost."
+      "label": "The Journalist in Restrictive Jurisdiction",
+      "comment": "PERSPECTIVE 3: JOURNALIST IN RESTRICTIVE JURISDICTION (TANGLED ROPE) — Mixed coordination and extraction. Anonymity enables investigative reporting (coordination function: builds accountability, enables whistleblowing, protects sources). But faces suppression: government mandates for identity disclosure, platform compliance with censorship requests, ISP logging. Can exit by relocating, changing beats, or self-censoring — all costly but possible. Not maximally trapped (not snare) because some agency remains. Experiences both benefits (ability to do investigative work) and costs (surveillance risk)."
     },
     {
       "classification_type": "rope",
@@ -50,8 +60,44 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Privacy Infrastructure Provider",
-      "comment": "PERSPECTIVE 3: PRIVACY INFRASTRUCTURE PROVIDER (ROPE) \u2014 Benefits from reduced surveillance pressure; experiences anonymity preservation as pure coordination enabling their business model. Can arbitrage between jurisdictions; arbitrage exit options."
+      "label": "The Platform Operator (Public Narrative)",
+      "comment": "PERSPECTIVE 4: PLATFORM OPERATOR — PUBLIC NARRATIVE (ROPE) — Framing anonymity as a coordination mechanism: online anonymity enables markets, communities, and social movements. From the platform's public narrative, requiring identity is regrettable but necessary for trust, safety, and regulatory compliance. This perspective experiences the constraint as solving a collective action problem (coordinating safety, preventing harassment, enabling commerce). Low effective extraction because the platform operator frames themselves as a neutral coordinator. This perspective naturalizes the constraint as beneficial coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator (Structural Reality)",
+      "comment": "PERSPECTIVE 5: PLATFORM OPERATOR — STRUCTURAL REALITY (ROPE, with concealed extraction) — Same agent as Perspective 4, but from the analytical position: the platform's real relationship to anonymity degradation is asymmetric benefit. Persistent identity enables behavioral tracking, profile construction, and data monetization. Real-name policies increase advertising accuracy and surveillance capital. The platform experiences anonymity commons degradation as beneficial coordination — it solves the platform's problem of user tracking and data extraction. Low effective extraction FOR THE PLATFORM, but conceals extraction FROM users. Rope classification holds because the platform genuinely benefits from a coordination solution (tracking, targeting, compliance)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Regulatory State (Active Enforcement)",
+      "comment": "PERSPECTIVE 6: REGULATORY STATE (TANGLED ROPE) — State apparatus benefits from persistent identity infrastructure (law enforcement, tax collection, border control, political control). But also faces coordination costs: maintaining the surveillance infrastructure requires investment, managing false positives, and responding to technological circumvention. The state is not fully arbitrage (constrained by technical limitations and cyber-attribution challenges). The constraint requires active enforcement: IMSI catchers, metadata logging, platform collaboration agreements, biometric systems. The state experiences both genuine coordination function (ability to enforce law, identify tax evaders) and asymmetric benefit (political control)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Privacy Law Theater",
+      "comment": "PERSPECTIVE 7: PRIVACY LAW THEATER (PITON) — GDPR, CCPA, and other privacy regulations create the performative appearance of privacy protection while the structural capacity for anonymity continues degrading. Privacy laws require consent banners, data access requests, and retention limits — theater that maintains legitimacy for data collection while constraining it minimally. The theater_ratio is high (0.65+) because privacy law produces compliance activities that do not meaningfully restore anonymity. Laws persist through institutional inertia: they enable regulators to claim effectiveness and platforms to claim compliance, while surveillance infrastructure continues accumulating. The functional verification of privacy law protection is low; the theatrical performance is high."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Cryptography & Privacy Coalition",
+      "comment": "PERSPECTIVE 8: CRYPTOGRAPHY & PRIVACY COALITION (SCAFFOLD) — Organized technical actors (Tor Project, Signal, privacy advocates) see anonymity commons degradation as a temporary coordination failure with emerging solutions. End-to-end encryption, pseudonymous identity systems, and decentralized infrastructure represent alternative pathways that bypass centralized surveillance. This perspective experiences the constraint as having a sunset: as cryptographic and distributed technologies mature, the centralized surveillance infrastructure's extraction mechanism weakens. Sunset driven by technology adoption and normative shifts toward privacy. Estimated horizon: 15-25 years for mature adoption in mainstream use cases."
     },
     {
       "classification_type": "tangled_rope",
@@ -59,35 +105,8 @@
       "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The Civil Liberties Movement",
-      "comment": "PERSPECTIVE 4: CIVIL LIBERTIES MOVEMENT (TANGLED ROPE) \u2014 Organized agents with generational perspective; constrained by legal frameworks and political feasibility; benefit from anonymity for organizing but also bear costs of surveillance expansion. Extractive enforcement of identity requirements; coordinating function in resistance."
-    },
-    {
-      "classification_type": "snare",
-      "agent_power": "institutional",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "The Surveillance Apparatus",
-      "comment": "PERSPECTIVE 5: SURVEILLANCE APPARATUS (SNARE) \u2014 From the perspective of law enforcement and security agencies, anonymity degradation is a coordination mechanism solving legitimate detection problems. But this perspective misses the asymmetry: the agencies benefit from expansion; the targets bear extraction. Labeling from inside the apparatus as pure coordination masks the snare structure."
-    },
-    {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The Technical Counter-Surveillance Community",
-      "comment": "PERSPECTIVE 6: TECHNICAL COUNTER-SURVEILLANCE COMMUNITY (SCAFFOLD) \u2014 Organized technical actors developing Tor, Signal, encrypted messaging, decentralized platforms. See anonymity degradation as temporary extraction phase before distributed privacy technologies achieve critical adoption. Constrained by regulatory pressure but with clear exit pathway. Sunset clause: distributed identity and privacy-preserving computation mature in 10-15 years."
-    },
-    {
-      "classification_type": "piton",
-      "agent_power": "institutional",
-      "time_horizon": "civilizational",
-      "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "The Regulatory Compliance Theater",
-      "comment": "PERSPECTIVE 7: REGULATORY COMPLIANCE THEATER (PITON) \u2014 Know-Your-Customer (KYC) and Anti-Money-Laundering (AML) regimes provide performative identity verification; the compliance theater persists through institutional inertia while failing to detect sophisticated financial crime. Real coordination function has atrophied; enforcement persists through regulatory habit."
+      "label": "The Marginalized Community Collective (Organized Resistance)",
+      "comment": "PERSPECTIVE 9: MARGINALIZED COMMUNITY COLLECTIVE (TANGLED ROPE) — Organized collectives (sex workers, LGBTQ+ groups, undocumented communities, dissidents) experience anonymity commons as both enabling coordination and under siege. They benefit from anonymous organizing capacity (mutual aid, community building, safety information sharing) while facing maximum suppression (law enforcement targeting, discriminatory enforcement, deplatforming). This perspective shows organized power emerging from powerless agents — the collective has agency that individual victims lack. Still snare-adjacent (high suppression, high extraction) but moving toward tangled rope as organizing capacity increases."
     },
     {
       "classification_type": "mountain",
@@ -95,128 +114,180 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer (Natural Law View)",
-      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 At civilizational timescale and universal scope, some tradeoff between privacy and identification appears inevitable: human coordination requires some identity signals, and the tension between anonymity and accountability seems inherent to social order. However, this perspective risks naturalizing what is a contingent institutional choice: the drive toward total identification is a product of specific surveillance technologies and economic incentive structures, not a law of nature."
+      "label": "The Technological Determinism View",
+      "comment": "PERSPECTIVE 10: TECHNOLOGICAL DETERMINISM (MOUNTAIN) — Naturalizes anonymity commons degradation as an inevitable feature of digital infrastructure scaling. Argues that persistent identity is inherent to creating robust, accountable digital systems; anonymity is inherently enabling of fraud, abuse, and disorder. This perspective views surveillance infrastructure as a natural law of complex networked societies — inescapable as thermodynamic entropy. However, this classification is a false summit: the structural data reveals that anonymity degradation is contingent on regulatory choices, platform business models, and state investment in surveillance infrastructure. The mountain classification naturalizes constructed constraints."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Information Symmetry View (Alternative Natural Law)",
+      "comment": "PERSPECTIVE 11: INFORMATION SYMMETRY (MOUNTAIN — Alternative) — Competing natural law perspective: the internet naturally tends toward disintermediation and pseudonymity. Persistent identity infrastructure requires active, expensive suppression. Anonymity is the default state; surveillance is the engineering effort. This perspective treats anonymity persistence as structurally inevitable absent continuous state/platform investment in identity tracking. Both mountain perspectives cannot be simultaneously correct — FSM resolution identifies which naturalizes contingency. FALSE SUMMIT MARKERS: both perspectives declare beneficiaries (perspective 10 benefits state/platforms, perspective 11 benefits dissidents), both rest on technological assertions that are empirically contested, and both motivate vastly different policy portfolios."
     }
   ],
   "omegas": [
     {
-      "id": "anonymity_necessity_threshold",
-      "question": "What degree of anonymity is strictly necessary for legitimate social coordination, versus degradable without systemic harm?",
-      "resolution_mechanism": "Cross-cultural comparison of societies with different anonymity norms; historical analysis of community coordination mechanisms before digital identification; measurement of actual harms from reduced anonymity in controlled contexts",
-      "impact": "If threshold is high (true anonymity necessity): degradation is Snare across more perspectives. If threshold is low (limited necessity): degradation may be acceptable Tangled Rope from coordination perspective.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Necessary vs. contingent anonymity for social coordination"
-    },
-    {
-      "id": "surveillance_effectiveness_paradox",
-      "question": "Does increasing identity verification actually improve law enforcement effectiveness, or does it displace criminal activity without net reduction?",
-      "resolution_mechanism": "Comparison of crime rates and detection rates in high-vs-low identification regimes; analysis of whether criminals adopt countermeasures that offset identification gains; cost-benefit analysis of surveillance infrastructure versus alternative enforcement methods",
-      "impact": "If verification improves effectiveness: enforcement perspective gains legitimacy as coordination mechanism. If ineffective: enforcement is pure extraction theater, Snare classification strengthens.",
+      "id": "encrypted_communication_adoption_threshold",
+      "question": "At what adoption rate does encrypted communication become the default rather than the exception, forcing surveillance apparatus to shift from passive collection to active exploitation?",
+      "resolution_mechanism": "Longitudinal measurement of Signal/Telegram/Wire adoption across jurisdictions; correlation with surveillance apparatus capability shifts; analysis of active exploitation (endpoint attacks, device compromise) vs passive collection costs",
+      "impact": "If threshold < 40%: encrypted comm is niche; passive surveillance dominates and extraction remains high. If threshold > 70%: surveillance apparatus forced to costly active measures; extraction becomes constrained by technical barriers and becomes visible.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether identity verification improves law enforcement outcomes"
+      "description": "Adoption threshold for encrypted communication becoming surveillance-resistant default"
     },
     {
-      "id": "technological_escape_velocity",
-      "question": "Can distributed privacy technologies (Tor, encrypted messaging, decentralized identity) actually maintain anonymity at scale against determined state-level adversaries, or is escape velocity unachievable?",
-      "resolution_mechanism": "Technical analysis of cryptographic robustness; longitudinal tracking of state capabilities versus technology advancement; study of actual anonymity preservation under adversarial conditions",
-      "impact": "If technologies achieve escape velocity: scaffold perspective is confirmed; sunset is real. If not: scaffold is aspirational, and the constraint becomes permanent Snare.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether distributed privacy technologies can sustain anonymity"
-    },
-    {
-      "id": "identity_externality_cascade",
-      "question": "Does requiring identity in one platform trigger cascading identity requirements across all others through network effects and compatibility pressure?",
-      "resolution_mechanism": "Network analysis of platform interdependencies; historical case studies of identity requirement diffusion across platforms; measurement of switching costs when one platform adopts identity verification",
-      "impact": "If cascade is strong: extraction accelerates through lock-in. If weak: individual platforms can maintain anonymity despite peer pressure.",
+      "id": "regulatory_capture_of_privacy_law",
+      "question": "Are privacy regulations (GDPR, CCPA, etc.) functionally protecting anonymity or performing theater that legitimates surveillance while constraining it minimally?",
+      "resolution_mechanism": "Empirical measurement: comparison of data retention/deletion enforcement vs actual industry practice; audits of consent mechanisms' effectiveness; correlation between regulatory action and surveillance infrastructure expansion; tracking whether platforms comply with privacy laws while expanding tracking",
+      "impact": "If protective: privacy law is substantive coordination mechanism (rope perspective stronger). If theater: piton classification confirmed and privacy regulations enable legitimacy capture (extraction component hidden beneath compliance performance).",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Network effects in identity requirement diffusion"
+      "description": "Whether privacy regulations substantively protect anonymity or perform theater"
+    },
+    {
+      "id": "state_surveillance_technical_brittleness",
+      "question": "How dependent is centralized state surveillance infrastructure on platform cooperation and internet routing control? What happens to extraction when platforms defect or routing is decentralized?",
+      "resolution_mechanism": "Technical analysis of surveillance dependency: metadata collection vs platform cooperation, IP-layer dependencies vs cryptographic bypasses; case studies of surveillance capability collapse when platforms withdraw cooperation (Signal's resistance to CALEA-style mandates); measurement of circumvention tool adoption when surveillance tightens",
+      "impact": "If high dependency: surveillance is brittle and scaffold sunset is plausible (technical defection enables escape). If low dependency: state can operate surveillance without platform consent; extraction becomes more severe and less constrained.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of surveillance infrastructure dependency on platform cooperation"
+    },
+    {
+      "id": "anonymity_as_natural_law_vs_constructed",
+      "question": "Is anonymity commons degradation inevitable (technological determinism — mountain) or contingent on institutional choices (constructed constraint — tangled rope/snare)?",
+      "resolution_mechanism": "Historical comparison: jurisdictions with different privacy laws and regulatory philosophies show different anonymity infrastructure outcomes. Technological analysis: does the internet architecture inherently enable or prevent anonymity? Can decentralized systems achieve the same coordination functions as centralized surveillance platforms?",
+      "impact": "If inevitable: mountain classification; policy futility. If contingent: tangled rope/snare with policy levers; coalition actions can restore anonymity commons. This omega directly gates between the two competing natural law perspectives (10 and 11).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether anonymity degradation is inevitable technological outcome or contingent institutional choice"
+    },
+    {
+      "id": "identity_locked_vs_trapped_mechanism",
+      "question": "For the sex worker (Perspective 2), is suppression structural (trapped: no technical escape routes) or identity-fused (identity_locked: could use tools but cannot imagine disclosing their work)?",
+      "resolution_mechanism": "Ethnographic study of anonymous labor (sex work, informal economy): how many workers face technical barriers to anonymity vs internalized barriers? Post-escape interviews: do workers report that anonymity exit required 'becoming a different person'? Do they maintain anonymity in low-surveillance contexts?",
+      "impact": "If trapped: emphasis on technical solutions (encryption tools, decentralized platforms). If identity_locked: emphasis on identity reframing and support for transition; technical solutions alone insufficient.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression of anonymous workers is structural or internalized identity-lock"
+    },
+    {
+      "id": "marginalized_coalition_critical_mass",
+      "question": "At what organizational threshold do marginalized communities (sex workers, dissidents, LGBTQ+, undocumented) achieve organized power (Perspective 9) that transitions constraint from snare to tangled rope?",
+      "resolution_mechanism": "Measurement of organized resistance capacity: network density of mutual aid groups, cryptographic tool adoption, legal defense funds, coordination infrastructure. Correlation with constraint experience: do organized communities show lower extraction than isolated individuals?",
+      "impact": "If critical mass < 30%: most vulnerable remain in snare despite organizing efforts. If critical mass > 60%: organized resistance can negotiate with platforms and states (tangled rope). Threshold determines whether coalition perspective is descriptive (current) or aspirational (potential).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Critical mass threshold for marginalized communities achieving organized resistance"
+    },
+    {
+      "id": "false_summit_detection_both_mountains",
+      "question": "Both mountain perspectives (10: surveillance inevitable, 11: anonymity inevitable) cannot be simultaneously correct. Which naturalizes contingency? What resolves the conflict?",
+      "resolution_mechanism": "Historical analysis: jurisdictions without state investment in surveillance infrastructure show different anonymity outcomes than those with. Counterfactual: what would internet look like without state/platform investment in identity infrastructure? Technical capability analysis: what would be required to shift from current surveillance dominance to anonymity dominance?",
+      "impact": "If perspective 10 is false summit: anonymity degradation is constructed and reversible; scaffold sunset is plausible. If perspective 11 is false summit: anonymity is contingent and surveillance is the structural default; mountain classification inappropriate.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Resolution mechanism for competing natural law perspectives on anonymity inevitability"
+    },
+    {
+      "id": "platform_dual_perspective_coherence",
+      "question": "Are Perspectives 4 and 5 (platform operator public vs structural reality) genuinely two perspectives on one constraint, or does the extraction component in Perspective 5 indicate a different underlying constraint?",
+      "resolution_mechanism": "Analysis of platform behavior: do platforms genuinely experience anonymity governance as coordination problem? Or is the stated coordination narrative (Perspective 4) a legitimacy cover for extraction (Perspective 5)? Measure: platform investment in anonymity vs platform investment in tracking and profile construction. Do platforms defend user anonymity when it conflicts with data monetization?",
+      "impact": "If coherent dual perspective: platform sees genuine coordination function. If narrative divergence: platforms are naturalizing extraction as coordination (rhetorical false summit). Affects whether rope classification holds or should degrade.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether platform's coordination narrative aligns with structural data or masks extraction"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.22
+      "value": 0.35
     },
     {
       "metric": "base_extractiveness",
       "time_point": 5,
-      "value": 0.38
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.52
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 15,
       "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.25
     },
     {
       "metric": "theater_ratio",
       "time_point": 5,
-      "value": 0.4
+      "value": 0.38
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.45
+      "value": 0.51
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.48
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.68
     }
   ],
   "interval": {
     "start": 0,
-    "end": 15
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "The anonymity commons \u2014 the technical and social infrastructure that enables communication without persistent identity disclosure \u2014 is experiencing structural degradation driven by converging surveillance capabilities, regulatory requirements, and platform design choices. This constraint exhibits the full spectrum of Deferential Realism classification types because anonymity simultaneously performs a coordination function (enabling communities, markets, and dissent) and provides extraction leverage (for surveillance, control, and asymmetric power). The constraint is tangled because enforcing identity reveals coordination benefits (law enforcement, fraud detection) while destroying coordination capabilities (anonymous whistleblowing, dissent, abuse escape). The extractiveness has increased from 0.22 to 0.58 over 15 years as surveillance technologies matured, KYC/AML regimes expanded, platform consolidation reduced exit options, and the natural friction that once preserved anonymity was engineered away. Theater ratio remains moderate (0.48) because while regulatory compliance is performative, the underlying surveillance infrastructure is functionally effective at degrading anonymity.",
+    "narrative_context": "The anonymity commons — the technical and social infrastructure enabling communication without persistent identity disclosure — is experiencing structural degradation driven by converging surveillance capabilities, regulatory requirements, and platform design choices. This constraint exhibits a complex perspectival structure because anonymity simultaneously performs a genuine coordination function (enabling markets, communities, social movements, dissent) and serves as the infrastructure for extracting behavioral data, suppressing vulnerable populations, and enforcing political control. The constraint is neither pure coordination (Rope) nor pure extraction (Snare), but a tangled hybrid where genuine coordination benefits coexist with asymmetric extraction. The extractiveness trajectory shows acceleration: from 0.35 at the interval start (early 2010s: decentralized infrastructure, relatively permissive platforms) to 0.58 at the interval end (2020s: centralized surveillance, mandatory identity systems). The theater ratio climbs correspondingly: from 0.25 (surveillance was openly discussed, platforms explicit about data collection) to 0.51 (privacy law theater, compliance performance, legitimacy narratives obscuring expansion). The suppression requirement intensifies: from 0.42 (state had significant technical barriers to surveillance) to 0.68 (unified IP logging, biometric systems, platform cooperation, metadata retention laws). The constraint showcases how different agents experience identical infrastructure changes as entirely different constraint types: the dissident sees pure extraction (Snare), the journalist sees mixed coordination-extraction (Tangled Rope), the platform sees beneficial coordination (Rope), the coalition sees temporary failure with solutions in sight (Scaffold), the privacy regulator sees performing legitimacy without substance (Piton), and the analytical observer risks naturalizing constructed choices as inevitable law (Mountain).",
     "key_agents": [
-      "Anonymity-Dependent Users: Primary victims (powerless/trapped) \u2014 whistleblowers, dissidents, abuse survivors, political minorities bearing full cost of degradation",
-      "Surveillance Infrastructure Operators: Primary beneficiaries (institutional/arbitrage) \u2014 law enforcement, intelligence agencies, tech companies capturing identity data as commodity",
-      "Platform Users: Secondary victims (moderate/constrained) \u2014 pseudonymous communities and ordinary users bearing privacy loss while retaining some platform choice",
-      "Privacy Technology Providers: Secondary beneficiaries (institutional/arbitrage) \u2014 Tor, Signal, encrypted messaging services that provide coordinate escape valve",
-      "Civil Liberties Organizations: Organized victims (organized/constrained) \u2014 advocating against degradation while themselves constrained by legal and political feasibility",
-      "Technical Counter-Surveillance Community: Organized builders (organized/constrained) \u2014 cryptographers and engineers developing distributed alternatives with sunset vision",
-      "Regulatory Compliance Apparatus: Institutional enforcers (institutional/arbitrage) \u2014 KYC/AML, Know-Your-Device, identity verification regimes maintaining theater",
-      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent infrastructure choices as inevitable tradeoffs"
+      "Dissident Under Surveillance (powerless/trapped) — bears maximum extraction, zero coordination benefit. No exit from persistent identity disclosure.",
+      "Sex Worker Managing Safety (powerless/identity_locked) — structurally mobile but identity-fused with anonymity as survival mechanism. Cannot imagine disclosure without becoming a different person.",
+      "Journalist in Restrictive Jurisdiction (moderate/constrained) — mixed experience: anonymity enables investigative work (coordination) but faces suppression (constrained exit). Can relocate or self-censor at significant cost.",
+      "Platform Operator (institutional/arbitrage) — benefits from persistent identity infrastructure through behavioral tracking and data monetization. Experiences anonymity governance as beneficial coordination while concealing extraction.",
+      "Regulatory State (institutional/constrained) — genuine coordination function (law enforcement, tax collection) but faces technical constraints and circumvention costs. Requires active maintenance of surveillance infrastructure.",
+      "Privacy Law Regulator (institutional/arbitrage) — maintains performative privacy regulations that produce compliance theater while surveillance expands. Benefits from legitimacy appearance.",
+      "Cryptography & Privacy Coalition (organized/constrained) — sees anonymity commons degradation as temporary failure with technical solutions in sight. End-to-end encryption and decentralized infrastructure represent exit pathways.",
+      "Marginalized Community Collective (organized/constrained but trending toward organized power) — experiences snare-level extraction individually; organized collective achieves tangled rope positioning through mutual aid and coordination capacity.",
+      "Technological Determinism Perspective (analytical/analytical) — naturalizes surveillance as inevitable and anonymity as inherently enabling of disorder. False summit: contingent choice presented as natural law.",
+      "Information Symmetry Perspective (analytical/analytical) — competing natural law: internet naturally tends toward pseudonymity; surveillance requires expensive state investment. Alternative false summit candidate."
     ],
-    "logic_rationale": "Extractiveness (0.58): High and rising. The constraint extracts from anonymity-dependent populations through expanding identity requirements, data collection, and surveillance capability deployment. The rise from 0.22 to 0.58 reflects accelerating platform adoption of identity verification, regulatory expansion (KYC/AML/sanctions regimes), and technical maturation of de-anonymization methods. The trajectory is monotonic \u2014 no reversal point \u2014 indicating ratcheting enforcement. Suppression (0.65): High. Barriers to maintaining anonymity include: platform monopoly power eliminating privacy-protective alternatives, legal prohibition of anonymity-enabling tools in several jurisdictions, technical sophistication required to use Tor/encrypted messaging effectively, career/credit consequences for using anonymous services, and identity externality cascades (once one critical service requires identity, pressure spreads across ecosystem). Theater ratio (0.48): Moderate. KYC/AML compliance is substantially performative \u2014 sophisticated actors evade while ordinary users bear friction. But the underlying surveillance infrastructure is functionally effective, so theater is not dominant as in the journal peer-review constraint. The constraint has genuine extraction capacity alongside performative enforcement.",
-    "perspectival_gap": "The constraint demonstrates how the same structural phenomenon \u2014 requiring verified identity for service access \u2014 classifies as: (1) Snare from the whistleblower perspective (trapped, powerless, pure extraction), (2) Tangled Rope from the pseudonymous community perspective (constrained, moderate power, mixed benefits/costs), (3) Rope from the privacy provider perspective (institutional, arbitrage, pure coordination enabling their market), (4) Tangled Rope from the civil liberties movement (organized, constrained, both resisting and benefiting from mobilization), (5) Snare from the internal law enforcement perspective (inverted: the constraint is coordination for them, extraction for others), (6) Scaffold from the technical builders (organized, sunset vision, exit pathway), (7) Piton from compliance theater view (degraded ritual), and (8) Mountain from civilizational analytical view (natural tradeoff). The perspectival gaps reveal that beneficiaries experience pure coordination, victims experience pure extraction, and the analytical observer risks naturalizing the extraction asymmetry as inevitable.",
-    "directionality_logic": "Surveillance operators and identity verification vendors are beneficiaries with arbitrage options \u2014 they can shift across jurisdictions or technology platforms if one anonymity-preserving technology gains dominance. They derive low d values and negative effective extraction. Anonymity-dependent users (whistleblowers, dissidents) are victims with no exit \u2014 they cannot operate openly without risk. They derive high d values (0.92-0.98) and maximum effective extraction. Pseudonymous platform communities are moderate victims with partial exit through alternative platforms \u2014 they derive moderate d values (0.65-0.75) and high but not maximal extraction. The civil liberties movement and technical counter-surveillance community are organized victims with constrained exit \u2014 they can advocate and build, but regulatory and economic barriers limit impact. They derive moderate-high d values and organized-level extraction. The regulatory apparatus sees itself as beneficiary but is actually captured by enforcement institutions \u2014 it maintains low d framing while the extraction flows outward. Directionality overrides are not needed; structural derivation produces appropriate d values.",
-    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that anonymity degradation is genuinely tangled: it coordinates some functions (fraud detection, law enforcement) while extracting from others (dissent, whistleblowing, vulnerable populations). The mandatrophy is not 'which is it, coordination or extraction?' but 'for whom?' The constraint cannot be classified as pure Rope because it asymmetrically extracts from powerless agents. It cannot be classified as pure Snare because surveillance infrastructure provides real coordination benefits to law enforcement and commerce. Treating it as pure coordination (Rope) naturalizes the extraction and harms vulnerable populations. Treating it as pure extraction (Snare) misses the genuine coordination function. The Tangled Rope classification preserves the asymmetry: active enforcement (identity verification) maintains the extraction; genuine coordination benefits exist; but they are asymmetrically distributed. The mandatrophy is resolved by accepting that the constraint serves multiple structural functions simultaneously and that classification must reflect the perspectival position of the observer."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, reflecting that anonymity commons degradation enables significant extraction (behavioral data, political control, surveillance capital) while retaining genuine coordination functions for platforms, states, and marginalized communities. If the constraint were pure extraction (snare, ε ≥ 0.66), marginalized communities would have zero coordination benefit; they actually benefit from organized anonymous communication. If pure coordination (rope, ε ≤ 0.45), states and platforms would experience no net benefit from identity enforcement; they clearly do extract significant value. The tangled rope threshold (ε ≥ 0.30, active enforcement required, beneficiaries + victims declared) is clearly met: beneficiaries are state apparatus, platforms, data brokers; victims are dissidents, vulnerable populations, epistemic commons. Suppression (0.68): High and intensifying. The measurement trajectory (0.42 → 0.68) reflects the systematic buildout of surveillance infrastructure: IMSI catchers, metadata retention laws, platform cooperation agreements, biometric systems, IP logging standardization, international intelligence sharing. Suppression is not total (agents can still use circumvention tools, some jurisdictions have weaker enforcement) but increasingly comprehensive. Theater ratio (0.51): Moderate and rising. Privacy law theater (GDPR, CCPA) and platform privacy narratives produce performative compliance while behavioral tracking and surveillance expansion continue. The theater is not dominant (not piton-level at 0.70+) because the extraction and coordination functions remain substantially real — the ritual performs legitimacy but the underlying machinery is genuinely extracting.",
+    "perspectival_gap": "This constraint demonstrates radical perspectival divergence from a single structural reality. The dissident experiences pure extraction (Snare) — anonymity degradation suppresses their capacity for organizing and increases arrest risk. The journalist experiences mixed coordination-extraction (Tangled Rope) — anonymity enables investigative reporting but faces state suppression. The platform experiences beneficial coordination (Rope) — anonymity governance solves their tracking and targeting problem, appearing to the platform as a solution to the legitimacy crisis (how to operate surveillance openly). The coalition experiences a temporary problem with solutions in sight (Scaffold) — cryptographic and decentralized technologies represent working exit strategies. The privacy regulator experiences performance without substance (Piton) — regulations persist through institutional inertia while surveillance expands beneath the compliance theater. The technological determinist experiences inevitable natural law (Mountain 10) — surveillance infrastructure is inherent to complex systems. The information symmetry analyst experiences competing inevitable natural law (Mountain 11) — anonymity is natural; surveillance requires expensive state engineering. The perspectival gaps are not measurement disagreements but structural position disagreements: the powerless dissident and the institutional platform have irreconcilable experiences of the same infrastructure because one is trapped in extraction while the other benefits from it. The two mountain perspectives cannot both be correct — they represent competing naturalizations of a contingent institutional arrangement, and FSM should detect the false summits.",
+    "directionality_logic": "Directionality (d) is determined by each agent's structural position: power level, exit options, and relationship to the extraction flow. Dissident/trapped: d ≈ 0.95 (full target of extraction). Journalist/constrained: d ≈ 0.65 (victim with some agency). Platform/arbitrage: d ≈ 0.15 (beneficiary with exit). State/constrained: d ≈ 0.45 (mixed: genuine coordination function but also extraction). Coalition/constrained: d ≈ 0.50 (symmetric: benefits from organizing capacity and suffers from suppression). Sex worker/identity_locked: d ≈ 0.89 (victim with internalized lock preventing exit — cannot perceive anonymity as external but also cannot leave it). The identity_locked classification captures the specific binding mechanism: the sex worker is not trapped by material barriers (other anonymous tools exist) but by identity fusion with anonymity as a survival mechanism. Escape from anonymity would require becoming a different person. This distinction between trapped and identity_locked is diagnostically crucial: trapped agents need technical/legal solutions (circumvention tools, decriminalization); identity_locked agents need identity reframing and support for transition alongside technical solutions. The perspectival gap between the dissident (snare, high d) and the platform operator (rope, low d) reveals the extraction structure: the same infrastructure that the platform experiences as beneficial coordination is the mechanism extracting data and suppressing the dissident.",
+    "mandatrophy_analysis": "The mandatrophy resolves through perspectival recognition: this constraint is genuinely tangled rope from a civilizational view (it is a mixture of coordination and extraction), but appears as different types from different structural positions. The resolution is not 'which type is correct?' but 'what is the distribution of types across the observation site?' The answer is: snare from the perspective of the dissident (maximum extraction, zero agency), snare (identity_locked variant) from the sex worker, tangled rope from the journalist, rope from the platform, piton from the privacy regulator, scaffold from the coalition, and mountain from both competing technological determinism perspectives (which are false summits naturalizing contingency). The analytics perspective on the system as a whole confirms tangled rope: genuine coordination functions (platform targeting, state law enforcement, community organizing all benefit from persistent/pseudonymous identity infrastructure) coexist with asymmetric extraction (dissidents suppressed, behavioral data extracted, vulnerable populations tracked). The mandatrophy is resolved not by choosing one type but by recognizing that the single constraint instantiates six different types at six different positions in the observation space, and this perspectival richness IS the structure.",
+    "kernel_context": "Anonymity commons degradation is not a reading of a contested kernel in the formal sense, but the constraint demonstrates kernel-adjacent dynamics: different political economies treat 'the right to anonymity' differently. Liberal democratic framings emphasize privacy-as-right; authoritarian framings emphasize transparency-as-order; libertarian framings emphasize pseudonymity-as-default. Each reading would instantiate a different constraint (different beneficiaries, different victims, different ε values). The two mountain perspectives (inevitable surveillance vs inevitable anonymity) are competing readings of the technological kernel — what the internet's nature entails. The false summit detection identifies that both naturalizations are contested, each resting on technological assertions that different experts disagree about. The manifest ambiguity here (unlike formal kernel readings) should route through omega variables documenting the disagreement rather than CS structure fields."
   },
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism",
-    "boltzmann_floor_override": 0.12
+    "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "kyc_aml_regime",
-      "platform_identity_verification",
-      "state_surveillance_infrastructure",
-      "distributed_identity_systems"
+      "encrypted_messaging_surveillance_gap",
+      "platform_content_moderation_infrastructure",
+      "state_attribution_capability",
+      "pseudonymous_identity_systems"
     ],
-    "dual_formulation_note": "Anonymity commons degradation is the parent constraint for several downstream enforcement and technology constraints. KYC/AML regimes and platform identity verification are specific instantiations of the enforcement mechanism. State surveillance infrastructure and distributed identity systems represent competing structural alternatives. The family forms a tradeoff ecosystem where improvements in one direction accelerate degradation in another."
+    "dual_formulation_note": "Anonymity commons degradation decomposes into multiple constraints: the technical infrastructure constraint (encryption standards, IP logging capacity), the regulatory constraint (mandatory identity disclosure laws), the platform governance constraint (real-name policies, biometric verification), and the surveillance apparatus constraint (SIGINT, metadata collection). This story captures the hybrid constraint where these mechanisms converge. Upstream constraints (encryption standards, state surveillance capacity) flow into this story; downstream constraints (pseudonymous identity systems, activist organizing infrastructure) are affected by outcomes here."
   },
   "directionality_overrides": [
     {
-      "power_atom": "institutional",
-      "d_value": 0.55
+      "power_atom": "organized",
+      "d_value": 0.5
     }
   ]
 }

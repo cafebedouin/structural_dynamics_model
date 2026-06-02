@@ -1,0 +1,232 @@
+{
+  "header": {
+    "constraint_id": "preparedness_transmission__competence_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "prep_competence",
+    "module_name_override": "constraint_preparedness_transmission__competence_reading",
+    "story_uid": "d4ccd387-eff5-443e-83de-9d2466d3f74b"
+  },
+  "base_properties": {
+    "extractiveness": 0.22,
+    "suppression": 0.18,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Preparedness Transmission via Live Exercised Knowledge (Competence Reading)",
+    "topic_domain": "disaster_risk_management/institutional_memory/civil_defense",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "disaster_response_organizations",
+      "civil_population"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Disaster Response Organization",
+      "comment": "PERSPECTIVE 1: DISASTER RESPONSE ORGANIZATION (ROPE) — Organized institutional actors (fire departments, emergency management agencies, civil defense commands) experience drills and inspections as genuine coordination mechanisms. The constraint solves the collective action problem of maintaining capability readiness without a current crisis. The structure benefits the organization through distributed competence validation; costs are real but proportional to benefit (training time, equipment wear, personnel cycles). Low extraction — the mechanism serves its stated function."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Trained Practitioner (Firefighter, EMT, Civil Defense Officer)",
+      "comment": "PERSPECTIVE 2: TRAINED PRACTITIONER (ROPE) — Individual responders see drills as skill maintenance and scenario learning. The constraint enables them to practice decision-making under conditions of controlled uncertainty, improvise adaptations, and recognize novel failure signatures they haven't encountered before. Exit option is mobile (can leave the profession, though career mobility has costs). Extraction is minimal — the practitioner gains competence, readiness confidence, and adaptive capacity directly from drill participation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Embedded Community Member",
+      "comment": "PERSPECTIVE 3: EMBEDDED COMMUNITY MEMBER (TANGLED ROPE) — Citizens who live in jurisdiction where drills occur experience mixed coordination and extraction. Benefit: the drills validate that responders possess the competence to protect them if an actual disaster occurs — genuine coordination function. Cost: drills disrupt routines, create anxiety about disaster risk, consume shared resources (street closures, traffic delays, alert system testing). Constrained exit — the community member cannot opt out of living in the jurisdiction without high relocation costs. The extraction is moderate because the coordination benefit is real and proportional to the cost burden."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Civil Defense System (Institutional View)",
+      "comment": "PERSPECTIVE 4: CIVIL DEFENSE SYSTEM (INSTITUTIONAL VIEW) (ROPE) — At the civilizational scale, the constraint codifies the principle that preparedness is maintained through continuous practice, not through stored procedures or documentation alone. The system benefits from distributed competence (no single point of failure, knowledge embedded in trained personnel networks). Extraction is minimal — the mechanism serves institutional continuity directly. This is the canonical institutional beneficiary perspective."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Bureaucratic Compliance Interpreter",
+      "comment": "PERSPECTIVE 5: BUREAUCRATIC COMPLIANCE INTERPRETER (PITON) — A degraded institutional reading: when drills become audit checkboxes rather than competence validation, the constraint atrophies into pure theater. Inspectors follow compliance rubrics, participants perform prescribed motions, debriefs record learning that isn't acted upon. The ritual persists due to mandates and liability protection, not because it maintains capability. Theater ratio is high (0.80+); extraction is minimal because the bureaucratic actor benefits primarily from defensibility ('we held the drill') rather than actual capability gain. This perspective represents the constraint in its degraded form."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Institutional Knowledge Epistemology)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (ROPE) — From the analytical/global perspective, the competence reading instantiates a claim about how institutional knowledge is transmitted: through live practice that allows participants to encounter novel scenarios, improvise responses, and internalize decision-making patterns that no documentation can fully capture. This is a genuine epistemic claim about knowledge transfer — that 'knowing how' requires repetition, variation, and real-time feedback. The constraint's low extraction and theater ratio (0.35) reflect that this mechanism actually works as stated: drills validly exercise and re-validate capability."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "competence_vs_compliance_boundary",
+      "question": "What observable signals distinguish genuine competence re-validation (rope, low theater) from bureaucratic compliance performance (piton, high theater) in a single drill event?",
+      "resolution_mechanism": "Post-drill analysis: (a) debriefs identify novel scenarios or unexpected failure modes discovered during drill; (b) follow-up actions are documented and implemented; (c) inspector findings reference adaptive responses, not just checklist completion; (d) participant interviews reveal learning and decision-making reflection, not rote performance",
+      "impact": "If boundary is clear and measurable: drills can be classified individually by theater_ratio. If boundary is ambiguous: classification requires longitudinal tracking to distinguish true competence maintenance from sustained theater.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Observable signals distinguishing competence re-validation from compliance theater"
+    },
+    {
+      "id": "generational_knowledge_transfer_mechanism",
+      "question": "Does competence actually transfer from experienced responders to new personnel through shared drills, or is structured training and apprenticeship the primary knowledge mechanism?",
+      "resolution_mechanism": "Comparative analysis: (a) competence test results for newly hired responders in organizations with frequent intergenerational drills vs organizations with formal training only; (b) incident response quality post-incident correlation with prior drill participation; (c) qualitative interviews with responders about knowledge acquisition pathways",
+      "impact": "If drills are primary mechanism: competence reading is correct — live practice is the irreplaceable knowledge vector. If formal training is sufficient: drills become supplementary, reducing the constraint's claimed coordination necessity; classification shifts toward piton (maintenance through inertia rather than essential function).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether drills are primary mechanism for generational knowledge transfer"
+    },
+    {
+      "id": "kernel_reading_contestation_locus",
+      "question": "Is the disagreement between competence_reading and husk_reading located in empirical claims about knowledge transfer, normative claims about disaster preparedness responsibility, or institutional claims about whose authority validates competence?",
+      "resolution_mechanism": "Structured comparison of the three sibling readings across three dimensions: (a) empirical claims about what drills accomplish (knowledge transfer, muscle memory, team cohesion, risk awareness); (b) normative claims about who has the duty to maintain preparedness and at what cost to other social goods; (c) institutional claims about which actors (inspectors, participants, administrators, community) have authority to declare preparedness adequate",
+      "impact": "If empirical disagreement dominates: the readings are falsifiable competitors; evidence about competence transfer settles the contest. If normative disagreement dominates: no amount of evidence resolves it — the readings reflect different value commitments. If institutional disagreement dominates: the readings reflect authority structure competition.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "The structural locus of disagreement between competence and sibling readings"
+    },
+    {
+      "id": "novel_scenario_improvisation_measurement",
+      "question": "How much of the drill's adaptive value comes from participants encountering scenarios they have seen before (pattern recognition) vs. novel scenario elements requiring real-time improvisation?",
+      "resolution_mechanism": "Drill design audit: measure novelty content in each drill across (a) scenario parameters (location variation, cascading failures, resource scarcity patterns); (b) post-drill analysis of which decision points were novel vs. replicated from prior drills; (c) inspector notes on improvisation instances vs. scripted response execution",
+      "impact": "If novelty is high (>60% novel elements per drill): competence reading is strong — improvisation is exercised. If novelty is low (<30%): drills function as muscle-memory reinforcement, closer to pure performance repetition (supports husk/piton readings).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Proportion of drill content that is novel vs. familiar scenario elements"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.21
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.22
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.18
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.18
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The competence reading of preparedness transmission frames drills and inspections as live exercised knowledge — a coordination mechanism where capability is re-validated through repeated practice under controlled variation. This reading emphasizes that disaster response competence cannot be maintained through documentation alone; it requires continuous embodied practice, scenario engagement, and real-time decision-making feedback. From this perspective, drills are not bureaucratic compliance events but essential mechanisms for maintaining the distributed institutional knowledge that enables effective response when actual disasters occur. The constraint exhibits low extraction (ε=0.22) and low theater ratio (0.35) because the mechanism genuinely serves its stated coordination function: responders gain competence and adaptive capacity; organizations maintain response readiness; communities benefit from validated response capability. This reading presupposes that knowledge transfer occurs primarily through practice-based learning, that novel scenario elements are essential for exercising improvisation capacity, and that decentralized competence (knowledge distributed across trained personnel networks) is superior to centralized procedural documentation.",
+    "key_agents": [
+      "Disaster Response Organizations: Primary beneficiary (organized/constrained) — maintain capability readiness and distributed competence through regular drills; coordination function is genuine and proportional to costs",
+      "Trained Practitioners (Firefighters, EMTs, Civil Defense Officers): Secondary beneficiary (powerful/mobile) — gain competence, decision-making skill, adaptive readiness; direct benefit from drill participation",
+      "Embedded Community Members: Mixed (moderate/constrained) — benefit from validated response capability but bear costs of disruption and resource allocation",
+      "Civil Defense System (Institutional): Primary beneficiary (institutional/arbitrage) — maintains continuity of preparedness capability across generations; no single point of failure",
+      "Inspectors and Training Officers: Moderate actor (organized/constrained) — validate competence, design scenario variations, identify knowledge gaps; benefit from having a functional assessment mechanism",
+      "Analytical Observer: Epistemological perspective (analytical/analytical) — represents the claim that institutional knowledge is maintained through live practice, not documentation"
+    ],
+    "logic_rationale": "Extractiveness (0.22): Low. The constraint solves a genuine collective action problem — maintaining disaster response competence without an active crisis. All parties benefit from the coordination function. Trained responders gain competence directly; organizations maintain readiness; communities benefit from validated response capability. The slight extractiveness reflects real costs: training time, personnel cycles, equipment wear, and community disruption. But these costs are proportional to benefits and transparently connected to the stated function. There is no hidden extraction or significant asymmetry. Suppression (0.18): Low. The constraint operates through voluntary institutional participation (disaster response organizations) and mandatory professional duty (trained responders). Suppression is minimal because the mechanism enables agency: responders practice decision-making under variation, improvise responses, and improve competence actively. Community members have constrained but not suppressed exit (relocation is high-cost but possible). Theater ratio (0.35): Low-moderate. Drills in organizations committed to actual competence maintenance show this ratio: some performative elements (official protocols, documentation, debriefs that record learning) alongside genuine adaptive content (novel scenarios, real-time problem-solving, genuine unknowns about system response). The ratio rises when compliance becomes the primary goal (piton reading), stays low when competence validation is primary (this reading). Measurements show slight rise over interval, reflecting institutional drift toward more formalized (more theatrical) processes, but the constraint remains functionally competence-focused rather than compliance-focused.",
+    "directionality_logic": "Each perspective's directionality is derived from structural position. Disaster response organizations are primary beneficiaries (arbitrage exit, low d ≈ 0.15) — they benefit from the coordination function directly and can exit if they choose (though response mandates constrain this). Trained practitioners are secondary beneficiaries (mobile exit, d ≈ 0.25) — they gain competence and readiness but can exit the profession. Embedded community members are mixed beneficiaries (constrained exit, d ≈ 0.45) — they benefit from validated capability but bear costs and cannot easily exit. The analytical observer (analytical exit, d ≈ 0.72) sees the full structure from outside and recognizes the coordination function. The institutional civil defense system (arbitrage exit, d ≈ 0.10) benefits directly from generational knowledge transfer. No single agent experiences this constraint as pure extraction because the coordination function is genuine. This differentiates the competence reading from sibling readings (husk_reading, which emphasizes degradation toward pure theater; hybrid_reading, which treats competence and compliance as equally weighted).",
+    "perspectival_gap": "The competence reading emphasizes adaptive capacity: inspectors recognize novel failure signatures; participants improvise effectively under scenario variation; knowledge transfer through practice enables real-time improvisation in actual emergencies. This perspective presupposes that the primary constraint function is working and that drills genuinely exercise competence. The piton perspective (Perspective 5, bureaucratic compliance interpreter) represents the constraint in its degraded form, where theater dominates and compliance becomes the primary goal. The analytical observer (Perspective 6) represents the epistemological claim about institutional knowledge — that 'knowing how' requires embodied practice. The gap between these perspectives is empirical: does the drill actually produce competence and adaptive capacity, or is it primarily performative? The competence reading says yes; the husk_reading (sibling, not included in perspectives) says the function has atrophied. The perspectival difference is measurable through theater_ratio and follow-up action metrics.",
+    "kernel_context": "This constraint is one reading (competence_reading) of the contested kernel preparedness_transmission. The kernel is the stabilized institutional commitment that disaster preparedness is maintained through some combination of practice, documentation, institutional structure, and training. The competence reading emphasizes live exercised knowledge: capability is re-validated through repeated practice, novel scenario engagement, and real-time feedback. Sibling readings include husk_reading (preparedness is maintained through institutional inertia and compliance theater, not genuine competence) and hybrid_reading (competence and compliance are equally important, and the constraint balances both). The readings coexist: different disaster management jurisdictions instantiate different readings based on their institutional priorities, budget constraints, and leadership philosophy. No single framework rules out all siblings — they represent different choices about what preparedness means and how it is validated."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "preparedness_transmission__husk_reading",
+      "preparedness_transmission__hybrid_reading"
+    ],
+    "dual_formulation_note": "The preparedness_transmission kernel has three structurally distinct constraint stories corresponding to three readings of what preparedness means and how it is maintained. The competence_reading (this story) emphasizes live practice and adaptive capacity (ε=0.22, low extraction). The husk_reading (sibling) emphasizes institutional inertia and compliance theater (ε=0.60+, high extraction). The hybrid_reading (sibling) treats both competence and compliance as essential and mixed (ε=0.40, tangled rope). Each reading generates different ε values and classifications because the observable (what makes a drill 'successful') differs across readings. The competence reading asks 'did participants improvise and learn novel failure signatures?' The husk reading asks 'was the compliance checklist completed?' The hybrid reading asks 'was both competence and compliance achieved?' These are not the same constraint viewed from different angles — they are different constraints instantiated by different interpretations of the same kernel."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "preparedness_transmission__husk_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "preparedness_transmission__hybrid_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "competence_requires_embodied_practice",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "improvisation_under_novel_scenarios_is_essential",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "preparedness_as_distributed_embodied_competence",
+    "drift_state": {
+      "moment": "contemporary_institutional_compliance_pressure",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

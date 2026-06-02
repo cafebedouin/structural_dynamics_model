@@ -182,9 +182,13 @@ decomposition.
 
 #### When the topic IS a kernel
 
-Decompose into **readings, not flat axes.** Identify 2–4 readings (the structural budget of three
-still applies to what proceeds to generation). Name each reading by its interpretive commitment
-(`conception_reading`, `originalist_reading`). Each reading becomes one entry in
+Decompose into **readings, not flat axes.** Identify 2–4 readings. **A contested kernel counts
+as ONE axis toward the three-axis budget**, not one axis per reading: emit **every** reading to
+`generation_sequence` as the expansion of that single kernel-axis — the readings are *not* each
+counted against the budget. The other two axis slots remain available for ordinary, independent
+(non-kernel) axes of the topic, if any genuinely exist; for a topic that is *only* a kernel, the
+kernel's readings are the whole generation_sequence. Name each reading by its interpretive
+commitment (`conception_reading`, `originalist_reading`). Each reading becomes one entry in
 `generation_sequence`, and that entry **must be an object** carrying `claim_id`, `kernel_id`,
 and `reading_id` — not a plain string:
 

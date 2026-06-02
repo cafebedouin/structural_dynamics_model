@@ -1,0 +1,248 @@
+{
+  "header": {
+    "constraint_id": "feud_obligation_kernel__extraction_cycle_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-27",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_feud_obligation_kernel__extraction_cycle_reading",
+    "measurement_id_prefix": "feud_extr",
+    "story_uid": "291f6611-cb25-43e2-a8ab-d4a7e8763202"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.72,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Blood-Feud Obligation Extraction Cycle (One Reading)",
+    "topic_domain": "legal_anthropology/medieval_history/comparative_political_systems",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "royal_consolidation_authority",
+      "kinship_elite_during_suppression_phase"
+    ],
+    "victims": [
+      "primary_feud_participants",
+      "territorial_economic_productivity",
+      "non_combatant_collateral_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Bound Kinship Group",
+      "comment": "PERSPECTIVE 1: BOUND KINSHIP GROUP (SNARE) — Trapped by honor obligation and kinship law. Exit is identity death (repudiation from lineage, loss of protection claims, economic exile). Bears full extraction cost: resources dedicated to vendetta maintenance, mortality among productive members, permanent state of mobilization. Suppression is total — kinship enforcement is internalized and externally reinforced."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Lesser Noble House",
+      "comment": "PERSPECTIVE 2: LESSER NOBLE HOUSE (TANGLED ROPE) — Constrained by coordination benefits (feud alliances provide mutual defense in the absence of centralized protection) but also extracted from (resources diverted to vendetta, vulnerability to counter-vendetta cycles, inability to accumulate capital). Both extraction and coordination present; suppression via legal obligation codes is moderate-high but not total."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Regional Territorial Overlord (Pre-Consolidation Phase)",
+      "comment": "PERSPECTIVE 3: REGIONAL OVERLORD PRE-CONSOLIDATION (ROPE) — During the period before royal consolidation intensifies, the overlord experiences feud obligation as coordination: vendetta cycles maintain factional balance, prevent any single house from dominating, and allow the overlord to extract rents by arbitrating disputes. Benefits from the constraint without bearing primary costs. Sees the system as legitimate, stable structure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Royal Consolidation Authority",
+      "comment": "PERSPECTIVE 4: ROYAL CONSOLIDATION AUTHORITY (TANGLED ROPE) — The emergent crown experiences feud obligation as both coordinating factor (centralizes violence under royal adjudication, justifies royal monopoly on legitimate force) and extraction mechanism (feud-depleted territories become easier to absorb, feud participants become dependent on royal protection, feud depletion justifies higher taxation to restore order). Active enforcement required: royal law must suppress private vendetta while maintaining the appearance of legitimate justice."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Post-Feudal Legal Tradition",
+      "comment": "PERSPECTIVE 5: POST-FEUDAL LEGAL TRADITION (PITON) — Medieval legal texts and chronicles preserve feud obligation as a formal system (compensation codes, honor semantics, kinship law) long after the functional coordination purpose has been replaced by royal courts and centralized enforcement. The historical narrative maintains the constraint's legitimacy through legal theater — historians and jurists discuss feud as a necessary system in a world without central authority, even as the textual record itself demonstrates the transition to alternative enforcement. Theater ratio is moderate-high: the constraint persists in legal doctrine and historiographical interpretation despite diminished functional role."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER NATURAL LAW (MOUNTAIN) — From a civilizational perspective, feud obligation could appear as an inevitable natural law: 'In the absence of centralized authority, kinship-based reciprocal justice is the only enforcement mechanism available — therefore feud obligation emerges necessarily.' However, the structural data contradicts this mountain classification. The constraint has identifiable beneficiaries (royal consolidation authority, regional overlords), victims, and suppression mechanisms — all hallmarks of constructed extraction masked as natural law. This perspective instantiates a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "feud_vs_compensation_regime",
+      "question": "Is the extraction cycle intrinsic to feud obligation, or is it a contingent property of how feud systems fail to transition to compensation-based settlement?",
+      "resolution_mechanism": "Comparative historical analysis: societies that developed formalized compensation codes (wergeld, blood-price systems) vs those that devolved into perpetual vendetta. Measurement of cycle duration before transition or state collapse.",
+      "impact": "If extraction is contingent on failed transition: the constraint is a Tangled Rope with a sunset, not a stable system. If extraction is structural to kinship enforcement: the constraint is a more fundamental Snare from the participant perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether feud extraction is intrinsic or contingent on failed transitions"
+    },
+    {
+      "id": "royal_consolidation_causality",
+      "question": "Does royal consolidation authority benefit from feud depletion, or does feud depletion merely enable consolidation that would have occurred through other mechanisms?",
+      "resolution_mechanism": "Counterfactual analysis: timeline comparison between regions with intense feud cycles and regions with early centralization. Measurement of royal tax extraction increases correlating with feud suppression periods.",
+      "impact": "If causal beneficiary: royal authority enters the beneficiary set and the constraint is Tangled Rope with asymmetric extraction. If merely enabled by: royal authority is a secondary beneficiary of a system that would have collapsed anyway, reducing the extraction reading.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether royal consolidation benefits from or merely exploits feud depletion"
+    },
+    {
+      "id": "kinship_enforcement_internalization",
+      "question": "To what extent is suppression of feud obligation structural (external legal codes, royal force) versus internalized (participants believe honor/kinship obligation is intrinsically binding)?",
+      "resolution_mechanism": "Textual analysis of law codes vs heroic narratives: do legal texts claim to enforce pre-existing obligation or to create new obligation? Do participants flee to uncentralized regions or embrace centralization? Post-suppression generational analysis: do participants maintain vendetta identity after enforcement ceases?",
+      "impact": "If internalized: suppression (0.72) may underestimate binding force — participants carry obligation identity even after external enforcement collapses, making exit functionally impossible. If structural: suppression measures effectiveness of royal enforcement, and alternative coordination structures could replace feud if enforcement ceased.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or internalized in kinship identity"
+    },
+    {
+      "id": "kernel_reading_contest",
+      "question": "Which reading of the feud obligation kernel is correct: extraction cycle, stateless coordination, or Christianized pacification?",
+      "resolution_mechanism": "This omega documents the committer-frame ambiguity. The three readings coexist as live interpretations in historical scholarship. Extraction-cycle reading (this file) emphasizes resource depletion and royal benefit. Stateless-coordination reading emphasizes genuine equilibrium-maintaining function in absence of central authority. Christianized-pacification reading emphasizes theological delegitimization of honor culture. All three readings are supported by subsets of the historical evidence.",
+      "impact": "If extraction-cycle reading is correct: feud is primarily extractive, royal consolidation is justified, and transition to centralized authority is welfare-improving. If stateless-coordination reading is correct: feud serves genuine function, and royal consolidation imposes costs through monopoly rent extraction. If Christianized-pacification reading is correct: feud is delegitimized by theological reframing, and transition is achieved through belief-change, not force. Classification differs substantially across readings.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Contest between extraction-cycle, stateless-coordination, and Christianized-pacification readings of the feud kernel"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "feud_extr_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.58,
+      "id_override": "feud_extr_extract_t50"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.72,
+      "id_override": "feud_extr_extract_t100"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "feud_extr_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.48,
+      "id_override": "feud_extr_theater_t50"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.55,
+      "id_override": "feud_extr_theater_t100"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45,
+      "id_override": "feud_extr_suppress_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.72,
+      "id_override": "feud_extr_suppress_t50"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.8,
+      "id_override": "feud_extr_suppress_t100"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates ONE READING of a contested medieval kernel: the blood-feud obligation system. The kernel is the formalized legal and cultural practice that kinship groups owe reciprocal vendetta for injuries to members — the obligation to pursue compensation or vengeance. Three structurally distinct readings of this kernel coexist in historical scholarship. THIS STORY represents the EXTRACTION-CYCLE READING: feud obligation functions as a destructive extraction mechanism that depletes productive capacity, concentrates mortality among territorial participants, and provides structural justification for royal consolidation of the violence monopoly. Under this reading, feud participants are victims of a system that extracts resources and labor toward unproductive (negative-sum) activities, while royal authority and initially regional overlords benefit from the depletion and instability feud creates. The constraint exhibits Tangled Rope classification at the primary level (both coordination benefits and asymmetric extraction present) but appears as Snare from the participant perspective (trapped by kinship obligation and honor semantics) and as Rope from the pre-consolidation overlord perspective (vendetta cycles maintain useful factional balance). The measurement trajectory shows extractiveness rising from 0.35 to 0.72 over a century, suppression intensifying from 0.45 to 0.80 as royal authority consolidates, and theater ratio increasing from 0.35 to 0.55 as legal doctrine increasingly formalizes what was once a functional enforcement mechanism.",
+    "key_agents": [
+      "Primary Feud Participants (kinship groups): Primary victims (powerless/trapped) — bear extraction costs of vendetta maintenance, mortality, resource depletion, territorial vulnerability",
+      "Regional Territorial Overlords: Secondary beneficiary (institutional/arbitrage, pre-consolidation phase) — profit from arbitrating disputes, extracting rents from feuding parties, maintaining balance of power",
+      "Royal Consolidation Authority: Primary beneficiary (institutional/constrained in the generational view) — extracts legitimacy and tax base from suppressing feud, justifies monopoly on violence, consolidates territorial control as feud-depleted regions become dependent on royal protection",
+      "Kinship Elite (during suppression): Ambiguous beneficiary (institutional/constrained) — initially benefit from honor and vendetta capital but become constrained by royal law; some transition to royal service",
+      "Non-Combatant Collateral Populations: Secondary victims (powerless/constrained) — experience economic disruption, resource diversion, mortality, territorial instability from feud cycles in their region",
+      "Post-Feudal Legal Tradition: Institutional observer (institutional/arbitrage) — preserves feud obligation in legal texts and historiography; maintains constraint through legal theater despite functional obsolescence"
+    ],
+    "logic_rationale": "EXTRACTIVENESS (0.58): High-moderate. Feud obligation extracts from participants in three forms: (1) direct resource costs — maintenance of vendetta networks, mobilization capacity, fortifications; (2) opportunity costs — labor and capital diverted from productive activities (agriculture, trade, craft) toward violence and preparation; (3) mortality risk — members killed in vendetta cycles represent permanent loss of productive capacity. The extraction is not total (0.72 would be snare threshold) because some coordination benefit exists (vendetta networks provide mutual defense in absence of central authority) and participants perceive the system as legitimate (identity-fused rather than purely coercive). SUPPRESSION (0.72): High. Feud obligation is enforced through multiple mechanisms: (1) kinship law — explicit codes imposing vendetta duties; (2) honor semantics — cultural obligation and reputation damage for non-compliance; (3) royal legal codes — penalty for abandoning or compromising feud claims; (4) internalized identity — participants' sense of self is constituted through kinship obligation and honor. Early in the interval (t=0), suppression is moderate (0.45) because enforcement relies primarily on kinship/honor, with limited royal capacity. As royal consolidation intensifies (t=50-100), suppression rises to 0.72-0.80 through active legal prohibition and enforcement machinery. THEATER RATIO (0.55): Moderate-high. Early feud systems have lower theater (0.35) because vendetta cycles are functionally achieving enforcement through actual reciprocal violence — the constraint works through threat and execution. As royal consolidation proceeds, feud becomes increasingly ritualized in legal discourse: law codes elaborate compensation schedules that parallel actual vendetta practice, chronicles narrativize feud as necessary system, and surviving participants maintain vendetta identity through legal claim rather than active prosecution. By t=100, theater has risen to 0.55 — the constraint persists in legal text and historical narrative despite diminished functional enforcement role.",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence. From the participant perspective (powerless/trapped), the system is a pure Snare — extraction with no perceived exit and no compensation. From the regional overlord perspective (institutional/arbitrage, pre-consolidation), the system is Rope — genuine coordination benefit that prevents dominance by any single house while allowing profitable arbitration. From the royal consolidation perspective (institutional/constrained, generational), the system is Tangled Rope — both coordination benefit (unifies the kingdom under royal justice) and extraction mechanism (depletes alternative centers of power, justifies fiscal extraction). From the post-feudal tradition perspective (institutional/arbitrage, civilizational), the system is Piton — preserved in legal text and historiography despite functional obsolescence. The analytical observer risks seeing a Mountain (inevitable natural law of stateless societies), but structural data contradicts this: the constraint has identifiable beneficiaries and suppression mechanisms inconsistent with natural law. The perspectival gap reveals that feud obligation's classification depends entirely on the observer's structural position relative to extraction flow.",
+    "directionality_logic": "Directionality d is determined by the agent's relationship to the extraction flow. Feud participants are victims with trapped exit (d ≈ 0.95) — maximum experienced extractiveness through f(d). Royal consolidation authority is initially ambiguous (benefits from feud depletion but bears suppression costs) — approximately institutional/constrained with d ≈ 0.55 at generational timescale, moderating to d ≈ 0.35 at civilizational timescale as the system matures. Regional overlords are beneficiaries with arbitrage exit (d ≈ 0.05) — minimal experienced extraction, sometimes negative (they net gain from the constraint). Post-feudal legal tradition is institutional beneficiary (preserves its interpretive authority) with d ≈ 0.20. The canonical derivation produces these values automatically from beneficiary/victim declarations and exit options; no override needed.",
+    "kernel_context": "This constraint story instantiates the EXTRACTION-CYCLE READING of the feud obligation kernel. The kernel is: kinship groups are obligated to pursue reciprocal vendetta for injuries to members. Three competing readings coexist in historical scholarship: (1) EXTRACTION-CYCLE READING (this file) — feud depletes productive capacity and justifies royal consolidation; (2) STATELESS-COORDINATION READING (sibling constraint) — feud serves legitimate equilibrium-maintenance function in absence of central authority; (3) CHRISTIANIZED-PACIFICATION READING (sibling constraint) — feud is delegitimized through theological reframing of honor culture, enabling peaceful transition. Each reading instantiates a different constraint with different epsilon values, beneficiary/victim sets, and classifications. The extraction-cycle reading emphasizes resource depletion trajectories and royal benefit extraction; it will classify the constraint as Tangled Rope (primary level) with Snare from participant perspective. The stateless-coordination reading emphasizes functional equilibrium and mutual benefit; it will classify the constraint as Rope or Tangled Rope depending on whether coordination benefits are symmetric. The Christianized-pacification reading emphasizes belief-change mechanisms and theological authority; it will classify the constraint as Piton or Scaffold (with a theological sunset clause). All three readings are supported by historical evidence and scholarly debate; none is uniquely correct. The contest is documented in the kernel_reading_contest omega variable.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by establishing that classification depends on reading choice within a contested kernel. The extraction-cycle reading produces Tangled Rope (primary classification) because it identifies both coordination function (vendetta networks provide mutual defense, royal consolidation achieves unified governance) and asymmetric extraction (participants bear resource costs, royal authority extracts fiscal benefit). No mandatrophy gap arises because the reading is internally consistent: feud obligation simultaneously coordinates (solves mutual defense problem) and extracts (depletes participants to benefit overlords and crown). The potential tension is resolved by observing that the coordination function and extraction mechanism are structurally orthogonal — the same vendetta system that achieves some coordination in the short term enables extraction in the long term, particularly as external (royal) consolidation pressure increases. The sibling readings resolve the mandatrophy differently: the stateless-coordination reading would classify as Rope or pure Tangled Rope by emphasizing symmetric benefits; the Christianized-pacification reading would classify as Piton by emphasizing theological theater replacing functional enforcement."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
+  },
+  "network": {
+    "affects_constraints": [
+      "feud_obligation_kernel__stateless_coordination_reading",
+      "feud_obligation_kernel__christianized_pacification_reading"
+    ],
+    "dual_formulation_note": "The feud obligation kernel has three structurally distinct constraint readings. This story (extraction-cycle) emphasizes depletion and royal benefit. The stateless-coordination reading (sibling) emphasizes equilibrium maintenance and mutual defense. The Christianized-pacification reading (sibling) emphasizes theological delegitimization. Each reading has distinct epsilon, beneficiary/victim structure, and classification. They are linked via network.affects_constraints and should not be merged into a single story — the ε-invariance principle requires separate constraint files for readings with measurably different extraction structures."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "feud_obligation_kernel__stateless_coordination_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "feud_obligation_kernel__christianized_pacification_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "feud_depletes_productive_capacity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "royal_monopoly_benefits_from_feud_collapse",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "feudal_kinship_enforcement_regime",
+    "drift_state": {
+      "moment": "royal_consolidation_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

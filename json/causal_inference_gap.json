@@ -4,28 +4,27 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "causal_inf"
+    "measurement_id_prefix": "causal_inf",
+    "story_uid": "eed84133-c9ea-424c-96ec-8ce75bfc3a2e"
   },
   "base_properties": {
-    "extractiveness": 0.68,
-    "suppression": 0.72,
-    "theater_ratio": 0.65,
-    "claimed_type": "snare",
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
     "human_readable": "Causal Inference Gap in Complex Biological Systems",
     "topic_domain": "systems_biology/epistemology/translational_medicine",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "gwas_research_groups",
-      "statistical_genomics_platforms",
-      "biomarker_discovery_programs"
+      "gwas_research_institutions",
+      "genetics_funding_bodies",
+      "pharmaceutical_gatekeepers"
     ],
     "victims": [
-      "translational_medicine_programs",
-      "drug_development_pipelines",
-      "precision_medicine_initiatives",
-      "patients_awaiting_treatments"
-    ],
-    "mandatrophy_resolved": false
+      "therapeutic_translation_pipeline",
+      "patient_access_to_validated_mechanisms",
+      "mechanistic_validation_researchers"
+    ]
   },
   "perspectives": [
     {
@@ -34,197 +33,205 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "Translational Medicine Programs",
-      "comment": "PERSPECTIVE 1: TRANSLATIONAL MEDICINE PROGRAMS (SNARE) \u2014 Trapped in a cycle where statistical associations cannot be converted to therapeutic targets. Cannot exit the GWAS paradigm because funding, infrastructure, and career paths are locked into association-based discovery. Bears maximum extraction: invests resources pursuing statistically significant variants that fail mechanistic validation at 85-90% rates. No alternative pathway available at biographical timescale."
+      "label": "The Mechanistic Validation Researcher",
+      "comment": "PERSPECTIVE 1: MECHANISTIC VALIDATION RESEARCHER (SNARE) — Trapped by the statistical-mechanistic divide. Cannot exit: publishing non-validated associations consumes research currency; validating individual associations requires years of bench work with limited reward. No pathway exists for translational researchers to move from statistical discovery to mechanistic proof without leaving academia or accepting permanent subordination to GWAS-generating teams. Maximum extraction with suppression through career incentive misalignment."
     },
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "immediate",
+      "time_horizon": "generational",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "Patients Awaiting Treatments",
-      "comment": "PERSPECTIVE 2: PATIENTS AWAITING TREATMENTS (SNARE) \u2014 Ultimate victims with zero exit options. The gap between association and mechanism directly translates to therapeutic delay: diseases with identified genetic associations but no validated causal pathways remain untreatable. Missing heritability (40-80% for most complex diseases) represents biological understanding that exists statistically but cannot be acted upon clinically."
+      "label": "The Patient Population (Untreated Disease)",
+      "comment": "PERSPECTIVE 2: PATIENT POPULATION — UNTREATED DISEASE (SNARE) — Bears the full cost of non-translation. Identified genetic associations are published and cited extensively but do not translate to new therapeutic mechanisms or clinical interventions. Trapped in disease state while association statistics accumulate. Suppression operates through institutional gatekeeping: drug development requires proof of mechanism (which doesn't exist) and investment (which doesn't flow to unvalidated associations). No mechanism for patients to directly benefit from association discovery."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "GWAS Research Institutions",
+      "comment": "PERSPECTIVE 3: GWAS RESEARCH INSTITUTIONS (ROPE) — Primary beneficiaries. Experience the constraint as pure coordination: identify associations rapidly, publish in high-impact venues, attract funding and citations. For this institutional perspective, the gap is not extraction — it is a solved problem (discovery scaling). No pressure to fund mechanistic validation; the coordination function (disseminating genetic associations) operates efficiently. Arbitrage available through alternative funding sources and career rewards. Extraction flows toward these institutions."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "moderate",
+      "agent_power": "organized",
       "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "Drug Development Pipelines",
-      "comment": "PERSPECTIVE 3: DRUG DEVELOPMENT PIPELINES (TANGLED ROPE) \u2014 Constrained by high failure rates (90% of targets from GWAS fail Phase II) but also benefit from the association data as a starting filter. Experience both coordination (GWAS narrows search space from 20,000 genes to hundreds of candidates) and extraction (most candidates fail mechanistic validation, wasting years and capital). Can partially exit by pivoting to phenotypic screening or model organism approaches, but at significant cost."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "institutional",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "GWAS Research Groups",
-      "comment": "PERSPECTIVE 4: GWAS RESEARCH GROUPS (ROPE) \u2014 Primary beneficiaries. Capture citation advantage, funding priority, and career advancement from association discoveries regardless of downstream mechanistic validation. The inference gap is invisible from this position: publishing statistically significant associations is the terminal goal, not a step toward mechanism. Experience the constraint as pure coordination: communicating genetic architecture to the field."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "institutional",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "Statistical Genomics Platforms",
-      "comment": "PERSPECTIVE 5: STATISTICAL GENOMICS PLATFORMS (ROPE) \u2014 Benefit from infrastructure lock-in. UK Biobank, All of Us, FinnGen, and similar platforms capture sustained funding and institutional prestige by generating associations. The causal inference gap is structurally advantageous: if associations translated directly to mechanisms, the platform's value would be one-time rather than continuous. Arbitrage exit: can pivot to other statistical phenotypes (proteomics, metabolomics) when genetic associations saturate."
-    },
-    {
-      "classification_type": "piton",
-      "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "Biomarker Discovery Programs",
-      "comment": "PERSPECTIVE 6: BIOMARKER DISCOVERY PROGRAMS (PITON) \u2014 Institutional actors maintaining a degraded ritual. Polygenic risk scores (PRS) are marketed as precision medicine tools but have limited clinical utility due to the causal inference gap: a high PRS indicates statistical risk but provides no mechanistic insight for intervention. The program persists through institutional inertia and commercial interest despite theater ratio >0.70 \u2014 most PRS applications are performative risk stratification rather than actionable clinical guidance."
+      "label": "Pharmaceutical Industry Validation Teams",
+      "comment": "PERSPECTIVE 4: PHARMACEUTICAL INDUSTRY VALIDATION TEAMS (TANGLED ROPE) — Constrained by the requirement to validate mechanisms before investing in drug development. Benefits from GWAS associations (filtering candidates, reducing early-stage screening costs) but bears the suppressive cost of implementing validation protocols that are not standardized, not funded by discovery teams, and often unsuccessful. Active enforcement: companies must develop proprietary validation frameworks because public infrastructure does not exist. Extracted from through the unpaid labor of mechanism identification; benefits through candidate prioritization."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "Functional Genomics Consortium",
-      "comment": "PERSPECTIVE 7: FUNCTIONAL GENOMICS CONSORTIUM (SCAFFOLD) \u2014 Organized agents (ENCODE, Roadmap Epigenomics, CRISPR screening consortia, single-cell atlases) building alternative pathways that bypass pure association. Massively parallel reporter assays, perturb-seq, and spatial transcriptomics are creating direct association-to-mechanism pipelines. Sunset logic: as functional screening costs drop and throughput increases, the GWAS-first paradigm loses necessity. Estimated sunset: 15-25 years for functional-first approaches to become standard in complex disease research."
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Systems Biology Mapping Initiatives",
+      "comment": "PERSPECTIVE 5: SYSTEMS BIOLOGY MAPPING INITIATIVES (SCAFFOLD) — Emerging organized effort to bridge the gap through protein-interaction mapping, expression quantitative trait loci (eQTL), and causal inference algorithms (e.g., Mendelian randomization). See the gap as temporary and solvable through infrastructure investment. Constrained by need for sustained funding and by competition with GWAS for institutional attention. The sunset clause is real: as multi-omic integration and causal inference methods mature, the statistical-mechanistic divide becomes traversable. Estimated sunset: 10–15 years for standard causal frameworks to integrate across biological scales."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Reductionist Molecular Validation Dogma",
+      "comment": "PERSPECTIVE 6: REDUCTIONIST MOLECULAR VALIDATION DOGMA (PITON) — The belief that mechanism validation requires single-gene perturbation studies (CRISPR knockout/knockdown, transgenic models, protein biochemistry) has become institutionally inert. This standard persists despite evidence that complex trait mechanisms often involve networks, epistasis, and context-dependence where reductionist validation cannot succeed. The theater ratio is high: publications of 'validated' mechanisms that don't translate to clinical phenotypes; grant reviews that demand reductionist proof even when systems-level logic suggests network models. The functional requirement (understanding causal pathways) has atrophied; the ritual (publish single-gene validation) persists through inertia and funding structure. Theater maintained by prestigious journals and review committees; function degraded to <15% translation rate."
+    },
+    {
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "Analytical Observer",
-      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, the gap represents both genuine epistemic limitation (complex systems have emergent properties not reducible to component associations) and extractive institutional arrangement (career incentives reward association discovery over mechanistic validation). The constraint coordinates research effort (GWAS provides systematic genome-wide coverage) while extracting from translational goals (most associations never yield mechanisms). Analytical classification as tangled_rope rather than mountain reflects that the gap's magnitude is contingent on methodological choices and resource allocation, not purely on inherent biological complexity."
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, the gap between statistical association and mechanistic causation appears as an immutable property of inference itself: Hume's problem of causation, the impossibility of inferring mechanisms from correlations alone, the fundamental incompleteness of any finite sample size. This perspective naturalizes what is actually a contingent institutional arrangement (institutional separation of discovery and validation, career incentives that reward association generation, lack of funding for mechanistic work). The engine will identify this as a false summit, revealing that the 'fundamental gap' is not a natural law but a constructed constraint."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "NIH/Major Funding Agencies",
+      "comment": "PERSPECTIVE 8: NIH / MAJOR FUNDING AGENCIES (TANGLED ROPE) — Powerful actors with mobile exit options who benefit from the current structure (large volume of publications, high citation impact of GWAS) while bearing suppression costs (pressure to fund validation without institutional mechanisms to do so, disease communities demanding translation, reputational risk from non-translation). Active enforcement via grant review requirements for 'preliminary data' and 'mechanistic rationale,' yet mechanism validation funding remains scarce. Experienced extraction is moderate — agencies can redirect funding and create new programs (mobile exit), but doing so requires admitting the gap exists and shifting political capital."
     }
   ],
   "omegas": [
     {
-      "id": "missing_heritability_resolution",
-      "question": "Is missing heritability (40-80% for most complex diseases) a measurement artifact, a consequence of rare variant burden below detection thresholds, or evidence of non-genetic inheritance mechanisms?",
-      "resolution_mechanism": "Whole-genome sequencing of large cohorts with deep phenotyping; family-based designs capturing shared environment; epigenetic and microbiome heritability estimates; comparison of SNP-heritability vs pedigree-heritability across populations",
-      "impact": "If measurement artifact: GWAS paradigm is fundamentally sound, gap is temporary (scaffold from more perspectives). If rare variant burden: current platforms are structurally inadequate (snare confirmed). If non-genetic mechanisms: association-to-mechanism pipeline is categorically wrong for a large fraction of heritability (mountain \u2014 irreducible epistemic limit).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Nature of missing heritability and implications for association-mechanism gap"
-    },
-    {
-      "id": "polygenicity_threshold",
-      "question": "At what level of polygenicity (number of causal variants) does the association-to-mechanism pipeline become structurally intractable rather than merely resource-limited?",
-      "resolution_mechanism": "Simulation studies of mechanistic validation success rates as function of variant count; empirical tracking of validation rates for monogenic vs oligogenic vs highly polygenic traits; cost-benefit analysis of functional follow-up for traits with >1000 associated loci",
-      "impact": "If threshold is low (<100 variants): most complex diseases are beyond mechanistic reach via GWAS (snare confirmed, mountain from some perspectives). If threshold is high (>1000 variants): gap is resource constraint, not epistemic limit (tangled_rope or scaffold from more perspectives).",
+      "id": "mechanism_definition_ambiguity",
+      "question": "What constitutes a valid 'mechanistic explanation' for a genetic association? Single-gene perturbation? Pathway models? Systems-level causal graphs? Network effects?",
+      "resolution_mechanism": "Empirical: correlate validation standard with clinical translation success; determine which mechanistic frameworks predict therapeutic efficacy best. Conceptual: clarify whether reductionist single-gene mechanisms are sufficient or whether network models are required for complex traits.",
+      "impact": "If single-gene reductionism is sufficient: current validation approach is adequate, and low translation rates reflect other constraints (drug development economics, polygenic architecture). If networks required: entire validation infrastructure must shift, rendering current piton status permanent unless reformed.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Polygenicity threshold beyond which mechanistic validation becomes intractable"
+      "description": "Definition of valid mechanistic explanation for genetic associations"
     },
     {
-      "id": "functional_screening_sufficiency",
-      "question": "Do high-throughput functional screens (CRISPR, perturb-seq, MPRA) actually bridge the causal inference gap, or do they introduce their own association-mechanism disconnect via context-dependence and model system artifacts?",
-      "resolution_mechanism": "Cross-platform validation: compare mechanistic conclusions from cell-line screens, organoid screens, and in vivo models for the same variants; track therapeutic success rates for targets identified via functional screening vs traditional GWAS follow-up",
-      "impact": "If sufficient: scaffold perspective confirmed \u2014 functional genomics provides genuine sunset for GWAS paradigm. If insufficient: the gap persists at a different level \u2014 we replace statistical association with experimental association, but mechanism remains elusive (snare from more perspectives, potential mountain).",
+      "id": "causal_inference_algorithm_sufficiency",
+      "question": "Do emerging causal inference algorithms (Mendelian randomization, instrumental variables, network analyses) actually bridge the statistical-mechanistic gap, or do they merely substitute one form of unvalidated inference for another?",
+      "resolution_mechanism": "Empirical: longitudinal comparison of therapeutic translation rates for associations validated via classical reductionism vs algorithm-based causal inference. Track false-positive rates and reproducibility.",
+      "impact": "If algorithms work: scaffold perspective is correct, and sunset is achievable. If algorithms fail: the gap is deeper than institutional infrastructure; fundamentally linked to the inferential limits of complex systems, and snare perspective dominates.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether functional genomics screens provide true mechanistic resolution"
+      "description": "Whether causal inference algorithms effectively bridge statistical-mechanistic gap"
     },
     {
-      "id": "emergent_property_fraction",
-      "question": "What fraction of complex disease heritability arises from emergent network properties (epistasis, gene-environment interaction, developmental contingency) that are irreducible to single-variant mechanisms?",
-      "resolution_mechanism": "Network modeling of validated disease mechanisms; quantification of epistatic variance in model organisms with complete genetic control; comparison of additive vs non-additive genetic architecture across traits; systems biology approaches to pathway-level rather than variant-level causation",
-      "impact": "If fraction is low (<20%): gap is methodological, not fundamental (tangled_rope or scaffold). If fraction is high (>50%): the association-to-mechanism paradigm is categorically wrong for most complex diseases \u2014 the causal structure is not decomposable into variant-level effects (mountain \u2014 irreducible epistemic limit requiring paradigm shift to network causation).",
-      "confidence": "low",
+      "id": "polygenicity_barrier",
+      "question": "Is the low translation rate fundamentally caused by polygenic architecture (most disease-associated variants have tiny individual effect sizes, making individual validation impractical), or by institutional separation of discovery and validation?",
+      "resolution_mechanism": "Empirical: comparison of translation rates for oligo-allelic traits vs highly polygenic traits; analysis of whether increasing effect-size threshold improves validation success. Structural: examine whether polygenicity is inherent or partly caused by current GWAS design (discovery power) vs replication power.",
+      "impact": "If polygenicity dominates: institutional reforms cannot solve the gap; it is rooted in the statistical nature of complex traits. If institutional separation dominates: the gap is remediable through funding and infrastructure changes. Likely: both factors interact; decomposition is essential for setting realistic expectations.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Relative contribution of polygenic architecture vs institutional separation to translation gap"
+    },
+    {
+      "id": "reductionist_validation_sufficiency",
+      "question": "Do single-gene perturbation studies (CRISPR, transgenics) actually validate complex trait mechanisms, or do they validate that the gene participates in biology but not that it causes disease through the proposed pathway?",
+      "resolution_mechanism": "Epistemological: clarify the logical structure of reductionist validation. Does perturbing a gene in controlled settings prove it causes disease in humans? Empirical: correlate reductionist validation papers with clinical translation success; identify failures.",
+      "impact": "If reductionism proves insufficient: piton classification is correct, and the validation dogma is theater. Mechanism validation requires network and system-level approaches, which current institutions do not fund. If sufficient: scale up reductionist validation capacity and expect translation rate improvements.",
+      "confidence": "high",
       "type_class": "conceptual",
-      "description": "Fraction of heritability arising from irreducible emergent properties"
+      "description": "Whether reductionist perturbation studies prove causal disease mechanisms"
     },
     {
-      "id": "therapeutic_validation_lag",
-      "question": "What is the empirical distribution of time-to-therapeutic-validation for GWAS-identified associations, and does it show convergence (gap closing over time) or divergence (gap widening as easy targets are exhausted)?",
-      "resolution_mechanism": "Longitudinal tracking of GWAS hits from discovery to clinical trial; survival analysis of association-to-drug timelines; comparison of validation rates for early GWAS (2007-2012) vs recent GWAS (2018-2023); stratification by effect size, allele frequency, and biological prior knowledge",
-      "impact": "If converging: gap is temporary resource constraint (scaffold). If diverging: gap is structural feature of the paradigm \u2014 low-hanging fruit (large effect, known biology) are exhausted, leaving associations that are statistically robust but mechanistically intractable (snare confirmed, potential mountain for remaining heritability).",
-      "confidence": "high",
+      "id": "funding_structure_constraint",
+      "question": "Is the low translation rate caused by GWAS generating more associations than mechanistic resources can validate (discovery-validation ratio imbalance), or by structural incentives that reward association generation but not validation?",
+      "resolution_mechanism": "Empirical: model required validation capacity for current association volume; determine whether increasing validation funding would solve the bottleneck or whether constraints are knowledge-based (we don't know how to validate these) vs resource-based (we can't afford to). Historical: compare institutional funding ratios across genomics research, disease research, and translational research; identify structural misalignment.",
+      "impact": "If imbalance correctable by funding: scaffold or organized actor (NIH/agencies) can implement targeted programs. If structural incentives dominate: cultural and institutional reform is required, not just budget reallocation.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Temporal trajectory of association-to-therapeutic validation rates"
+      "description": "Whether causal inference gap is caused by discovery-validation capacity imbalance or structural incentive misalignment"
+    },
+    {
+      "id": "false_summit_natural_law",
+      "question": "Is the causal inference gap a fundamental and immutable property of statistical epistemology (Hume's problem, unprovable from finite data), or a contingent institutional arrangement that can be reformed?",
+      "resolution_mechanism": "Philosophical: establish whether the gap is inherent to inference itself or to current institutional practices. Empirical: show whether historical periods with integrated discovery-validation systems (e.g., early pharmacology before GWAS) achieved better association-to-mechanism ratios. Structural: document whether the gap has widened as institutional separation has increased.",
+      "impact": "If immutable: mountain classification is correct, and acceptance rather than reform is appropriate policy. If contingent: the gap is a snare/tangled rope, and reform is possible and ethically mandated.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether causal inference gap is fundamental or contingent institutional arrangement"
     }
   ],
   "measurements": [
     {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.35,
-      "id_override": "theater_2007"
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.48,
-      "id_override": "theater_2012"
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.58,
-      "id_override": "theater_2017"
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.65,
-      "id_override": "theater_2022"
-    },
-    {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.42,
-      "id_override": "extract_2007"
+      "value": 0.32
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.54,
-      "id_override": "extract_2012"
+      "time_point": 6,
+      "value": 0.45
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.62,
-      "id_override": "extract_2017"
+      "time_point": 12,
+      "value": 0.58
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.68,
-      "id_override": "extract_2022"
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.65
     }
   ],
   "interval": {
     "start": 0,
-    "end": 15
+    "end": 12
   },
   "commentary": {
-    "narrative_context": "The causal inference gap in complex biological systems represents a structural disconnect between statistical association (what GWAS identifies) and causal mechanism (what translational medicine requires). Since the first wave of genome-wide association studies in 2007, the field has identified tens of thousands of disease-associated genetic variants, yet mechanistic validation rates remain below 15% and therapeutic translation rates below 5%. Missing heritability estimates (the gap between SNP-based heritability and pedigree-based heritability) range from 40% to 80% for most complex diseases, indicating that the majority of genetic architecture remains statistically invisible or mechanistically opaque. This constraint exhibits strong extraction accumulation over its 15-year interval: as GWAS sample sizes grew from thousands to millions, the marginal effect sizes of new discoveries decreased (winner's curse exhaustion), polygenicity increased (more variants of smaller effect), and the proportion of associations with plausible biological mechanisms declined. The theater ratio has increased correspondingly: polygenic risk scores are marketed as precision medicine despite limited clinical utility, and association publications continue to dominate funding and prestige despite poor downstream conversion rates. The constraint is downstream of two structural features: perturbation_epistemology (the mountain-level difficulty of inferring causation in non-perturbable complex systems) and methodological_lock_in (the tangled_rope of career incentives and infrastructure investment in association-based approaches).",
+    "narrative_context": "The causal inference gap in complex biological systems represents a fundamental structural mismatch between the exponential growth in disease-associated genetic variants identified through GWAS (tens of thousands since 2007) and the near-static validation and therapeutic translation rates (<15% mechanistic validation, <5% clinical translation). This constraint operates as a tangled rope: the discovery ecosystem (GWAS teams, funding agencies, journals) benefits from high publication volume and citation impact while remaining epistemically and institutionally decoupled from the validation ecosystem (mechanistic researchers, pharmaceutical companies, disease communities). The gap is neither purely a natural epistemological limit (causation cannot be inferred from correlations) nor purely an institutional separation — it is a hybrid where institutional structures reinforce and exploit the epistemological gap. The measurement trajectory shows extraction accumulating over time: base extractiveness rises from 0.32 (early GWAS era, when discovery and validation were loosely coupled) to 0.58 (contemporary), driven by career incentive misalignment and funding structure divergence. Theater ratio increases from 0.48 to 0.68, reflecting that reductionist validation 'successes' (published mechanism papers) fail to predict clinical translation, making the validation ritual increasingly performative. Suppression requirement rises from 0.50 to 0.65, indicating that mechanistic researchers face growing barriers: complex traits require multi-level validation, reductionist dogma resists systems approaches, and funding for validation remains scarce relative to discovery.",
     "key_agents": [
-      "Translational Medicine Programs: Primary victim (powerless/trapped) \u2014 cannot convert associations to therapeutic targets; 85-90% failure rate in mechanistic validation; no exit from GWAS paradigm at biographical timescale",
-      "Patients Awaiting Treatments: Ultimate victim (powerless/trapped) \u2014 diseases with known genetic associations but no validated mechanisms remain untreatable; missing heritability represents biological understanding that cannot be acted upon clinically",
-      "Drug Development Pipelines: Secondary victim (moderate/constrained) \u2014 90% Phase II failure rate for GWAS-derived targets; can partially exit via phenotypic screening but at significant cost; also benefit from association data as search-space filter",
-      "GWAS Research Groups: Primary beneficiary (institutional/arbitrage) \u2014 capture citation, funding, and career advancement from association discoveries regardless of mechanistic validation; inference gap is invisible from this position",
-      "Statistical Genomics Platforms: Primary beneficiary (institutional/arbitrage) \u2014 UK Biobank, All of Us, FinnGen capture sustained funding via association generation; causal gap is structurally advantageous (prevents one-time value extraction)",
-      "Biomarker Discovery Programs: Institutional actor (institutional/constrained) \u2014 maintain degraded ritual of polygenic risk scores with limited clinical utility; theater ratio >0.70",
-      "Functional Genomics Consortium: Organized agents (organized/mobile) \u2014 ENCODE, CRISPR screening consortia, single-cell atlases building alternative association-to-mechanism pipelines with sunset logic",
-      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees both genuine epistemic limitation (emergent properties of complex systems) and extractive institutional arrangement (career incentives misaligned with mechanistic validation)"
+      "GWAS Research Institutions: Institutional beneficiary (institutional/arbitrage) — capture citations, funding, and scientific prestige from association discovery; no pressure to fund validation",
+      "Mechanistic Validation Researchers: Primary victim (powerless/trapped) — trapped by the requirement to validate individual associations with no funding, career reward, or exit pathway; cannot return to GWAS generation without losing standing; cannot fund validation work",
+      "Patient Communities (Untreated Disease): Primary victim (powerless/trapped) — bear the cost of non-translation; face treatment stagnation while association publications accumulate",
+      "Pharmaceutical Industry: Organized secondary victim (organized/constrained) — benefit from candidate filtering but must fund their own validation infrastructure; constrained by lack of public validation data and by reductionist validation paradigm that may not work for complex traits",
+      "NIH/Funding Agencies: Powerful hybrid (powerful/mobile) — benefit from publication metrics and political optics of 'discovering disease genes'; bear suppression costs of pressure to fund translation without institutional mechanisms; mobile exit available but politically costly",
+      "Systems Biology Mapping Initiatives: Emerging organized coalition (organized/constrained) — see the gap as remediable through infrastructure; constrained by need for sustained funding and institutional acceptance of non-reductionist approaches",
+      "Analytical Observer (Natural Law): Civilizational perspective (analytical/analytical) — risks naturalizing the gap as an immutable epistemological problem, obscuring the contingent institutional choices that created it"
     ],
-    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts from translational medicine and patients by creating a structural trap: statistical associations are necessary for funding and publication but insufficient for therapeutic development. GWAS research groups capture career benefits during the association-discovery phase, but 85-90% of associations never yield validated mechanisms. The extraction has increased over the interval as effect sizes decreased and polygenicity increased \u2014 recent GWAS hits are statistically robust but mechanistically more opaque than early discoveries. Suppression (0.72): High. Barriers to bridging the gap include: (1) methodological \u2014 complex diseases involve emergent network properties not reducible to single-variant effects; (2) resource \u2014 functional validation requires expensive model systems and long timelines; (3) institutional \u2014 career incentives reward association discovery over mechanistic follow-up; (4) epistemic \u2014 perturbation experiments in humans are often impossible, and model organisms introduce their own inference gaps. Translational programs cannot exit because funding, infrastructure, and expertise are locked into the GWAS paradigm. Theater ratio (0.65): Moderate-high. Polygenic risk scores are the primary theatrical output: marketed as precision medicine tools but provide minimal clinical utility due to lack of mechanistic insight. A high PRS indicates statistical risk but offers no actionable intervention pathway. The theater has increased as PRS applications proliferated despite stagnant therapeutic conversion rates. Association publications continue to dominate high-impact journals despite poor downstream validation, sustained by the ritual of statistical significance rather than mechanistic understanding.",
-    "directionality_logic": "Translational medicine programs and patients are victims with trapped exit options, yielding high directionality values and maximum experienced extraction. They bear the full cost of the inference gap: resources invested in pursuing associations that fail mechanistic validation, and therapeutic delays for diseases with known genetic architecture but no validated causal pathways. Drug development pipelines are victims with constrained exit (can pivot to phenotypic screening or model organisms but at significant cost), yielding moderate-high directionality. They experience both extraction (90% target failure rate) and coordination benefit (GWAS narrows search space). GWAS research groups and statistical genomics platforms are beneficiaries with arbitrage exit options, yielding low directionality values and low or negative experienced extraction. They capture career and funding benefits from association discovery regardless of downstream mechanistic validation. The inference gap is structurally invisible from their position \u2014 publishing associations is the terminal goal. Biomarker discovery programs are institutional actors with constrained exit (locked into PRS paradigm by commercial investment and regulatory pathways), but their piton classification derives from the theater gate rather than from high experienced extraction. Functional genomics consortia are organized agents with mobile exit options (can pivot across screening modalities and biological systems), yielding moderate directionality and experiencing the constraint as a temporary coordination problem with a sunset. The analytical observer uses analytical exit and sees both genuine epistemic limitation and extractive institutional arrangement, yielding moderate directionality and tangled_rope classification.",
-    "perspectival_gap": "This constraint demonstrates extreme perspectival divergence driven by structural position relative to the association-mechanism pipeline. GWAS research groups and statistical genomics platforms see pure coordination (rope) \u2014 they are solving the legitimate problem of systematically mapping genetic architecture, and the inference gap is invisible because mechanistic validation is not their goal. Functional genomics consortia see a temporary problem with a sunset (scaffold) \u2014 high-throughput functional screens are building direct association-to-mechanism pathways that will bypass the GWAS paradigm within 15-25 years. Biomarker discovery programs see a degraded ritual (piton) \u2014 polygenic risk scores persist through commercial interest and institutional inertia despite limited clinical utility. Drug development pipelines see mixed coordination and extraction (tangled_rope) \u2014 GWAS provides valuable search-space filtering but most candidates fail mechanistic validation. Translational medicine programs and patients see pure extraction (snare) \u2014 the gap between association and mechanism directly translates to therapeutic delay and wasted resources, with no exit available at biographical timescale. The analytical observer sees both genuine epistemic limitation (some fraction of complex disease heritability may be irreducible to variant-level mechanisms due to emergent network properties) and extractive institutional arrangement (career incentives misaligned with mechanistic validation), yielding tangled_rope rather than mountain. The perspectival gap is not 'which type is correct?' but 'which structural position are you measuring from?' \u2014 the presheaf over observation sites captures the full constraint structure.",
-    "mandatrophy_analysis": "MANDATROPHY RESOLUTION INCOMPLETE (extractiveness 0.68 requires resolution; omega variables identify key empirical uncertainties but do not yet provide definitive classification boundaries). The constraint risks mandatrophy collapse if the analytical observer's tangled_rope classification is misread as 'the' answer, obscuring the snare experienced by translational medicine and patients. The critical mandatrophy question is: what fraction of the causal inference gap is genuine epistemic limitation (mountain \u2014 irreducible complexity of emergent biological systems) vs methodological lock-in (tangled_rope \u2014 contingent on current approaches and resource allocation) vs pure extraction (snare \u2014 career incentives misaligned with therapeutic goals)? Omega variable 'emergent_property_fraction' directly addresses this: if >50% of complex disease heritability arises from irreducible network properties, the association-to-mechanism paradigm is categorically wrong and the gap is a mountain (requiring paradigm shift to network causation). If <20%, the gap is methodological and the snare/tangled_rope classifications dominate. Omega variable 'therapeutic_validation_lag' provides temporal resolution: if validation rates are converging (gap closing as methods improve), scaffold logic applies; if diverging (gap widening as easy targets exhaust), snare is confirmed for remaining heritability. The mandatrophy is resolved by recognizing that different fractions of the heritability landscape may occupy different constraint types: monogenic and oligogenic traits (already largely validated) were temporary scaffolds; highly polygenic traits with small effect sizes and no biological prior are snares from the translational perspective; traits involving emergent network properties may be mountains requiring paradigm shift. The constraint as a whole is a snare because the dominant extraction flow (from translational medicine and patients to GWAS research groups and platforms) is structural and increasing, but the omega variables preserve the possibility that some fraction of the gap is irreducible epistemic limitation."
+    "logic_rationale": "Extractiveness (0.58): High-moderate, reflecting significant asymmetry. GWAS institutions extract benefit (citations, funding, discovery credit) while bearing minimal cost of validation. Mechanistic researchers bear high cost (validation work, career risk, scarce funding) with minimal reward. The constraint extracts from the validation pipeline and patient populations toward the discovery pipeline. However, extractiveness is not as severe as a pure snare (0.66+) because partial coordination function exists: GWAS genuinely identifies disease-associated variants, which are useful information even without mechanisms. The extraction layer sits atop legitimate coordination. Suppression (0.65): High. Barriers to mechanistic validation include: resource scarcity (validation costs 10–100x more than association identification), reductionist validation dogma (single-gene perturbation models are institutionally enforced but epistemically insufficient), funding structure (discovery funding is abundant, validation funding is sparse), career incentive misalignment (validation publications have lower citation impact than discovery papers, and timeframes exceed typical grant cycles), and institutional gatekeeping (journals prefer novel associations over mechanistic validation, pharmaceutical companies bear validation costs). These barriers are partly material (funding scarcity) and partly epistemic/institutional (dogma, career incentives). Theater ratio (0.68): High. The validation ritual has become increasingly performative. Reductionist perturbation studies (CRISPR knockdowns, transgenic models) are published as 'mechanism validation' but frequently fail to predict clinical phenotypes or drug efficacy. The theater has increased as validation has been institutionalized without reform — validation papers are now expected and published despite low predictive power. The ritual persists because journals, funding bodies, and pharmaceutical companies all demand it, even though it often doesn't work.",
+    "perspectival_gap": "This constraint exhibits the sharpest perspectival gap between GWAS institutions (rope/arbitrage) and mechanistic researchers (snare/trapped). For GWAS teams, the constraint is solved: they identify associations rapidly and publish prolifically. Mechanistic researchers experience it as inescapable: they cannot exit discovery (no pathway, insufficient standing) and cannot adequately fund validation (scarce resources). The pharmaceutical industry experiences it as tangled rope: they benefit from association filtering but must absorb the cost of building validation infrastructure. The systems biology coalition sees a temporary gap (scaffold) with a sunset — emerging causal inference methods will bridge the divide. The piton perspective reveals that reductionist validation is theater: the ritual persists (mechanism papers are published, grants are reviewed for 'mechanistic rationale') despite low translation success, indicating institutional inertia rather than functional validation. The natural law (mountain) perspective risks misclassifying a contingent institutional gap as an immutable epistemological limit. The engine will identify this as a false summit: the gap is constructed, not natural.",
+    "directionality_logic": "Each perspective's directionality value (d) is determined by beneficiary/victim status and exit options. GWAS institutions have beneficiary status (extract value) and arbitrage exit (can shift research focus if incentives change) → low d → negative chi, experienced as rope. Mechanistic researchers have victim status (bear validation cost) and trapped exit (cannot exit the field without career loss) → high d → high f(d), experienced as snare. Pharmaceutical companies have mixed status (benefit from candidates, bear validation cost) and constrained exit (must validate to develop drugs, but validation is unpaid public service) → d ≈ 0.50-0.60 → moderate chi, experienced as tangled rope. Systems biology initiatives have victim status (must fund research without institutional support) but constrained exit (can pursue alternative funding sources, collaborations) → d ≈ 0.55-0.65 → moderate-high chi, experienced as scaffold because they perceive a sunset. NIH agencies have beneficiary status (funding ratios favor discovery) but face powerful victim constituencies (disease communities) and mobile exit (can reallocate funding) → d ≈ 0.50-0.55 → moderate chi.",
+    "mandatrophy_analysis": "Mandatrophy is resolved by recognizing that the constraint is genuinely tangled rope at the structural level: it coordinates discovery (identifies disease associations, provides candidate filtering) while extracting from validation (asymmetric cost distribution, suppressed mechanistic pathways). The classification is NOT 'is this coordination or extraction?' but 'does this satisfy both gates for tangled rope?' (1) Does genuine coordination function exist? Yes — GWAS provides real informational value. (2) Does asymmetric extraction exist? Yes — GWAS institutions extract benefit while mechanistic researchers and patients bear costs. (3) Is active enforcement required? Yes — the institutional separation of discovery and validation is maintained through funding structure, career incentive alignment, and institutional review standards that privilege discovery over translation. All three tangled rope gates are satisfied. The high extractiveness (0.58) reflects that extraction dominates the functional value — for every genome-wide association identified, <5% translates to clinical intervention, making the extraction component substantial relative to coordination. The snare perspectives (mechanistic researchers, patients) are correct locally — they experience the constraint as pure extraction with no exit. The rope perspective (GWAS institutions) is correct locally — they experience it as coordination with high reward. The tangled rope classification is the structural description that encompasses both: the constraint's existence depends on both coordination and extraction; neither alone would sustain it."
   },
   "boltzmann": {
     "coordination_type": "information_standard"
   },
   "network": {
-    "affects_constraints": [],
-    "dual_formulation_note": "This constraint is downstream of perturbation_epistemology (mountain \u2014 inherent difficulty of causal inference in non-perturbable complex systems) and methodological_lock_in (tangled_rope \u2014 career incentives and infrastructure investment in association-based approaches). The causal_inference_gap represents the specific instantiation of these upstream constraints in the domain of complex disease genetics. The gap's extractiveness (0.68) is higher than methodological_lock_in would predict alone, indicating that perturbation_epistemology contributes genuine epistemic difficulty on top of the institutional lock-in. However, the gap is not purely a mountain (as perturbation_epistemology might suggest) because functional genomics approaches are building alternative pathways, and the magnitude of the gap is contingent on resource allocation and methodological choices. The network decomposition separates the irreducible epistemic limit (perturbation_epistemology, \u03b5=0.08) from the institutional arrangement (methodological_lock_in, \u03b5=0.52) from the specific domain instantiation (causal_inference_gap, \u03b5=0.68), allowing precise tracking of which component drives extraction in complex disease genetics."
-  },
-  "directionality_overrides": []
+    "affects_constraints": [
+      "pharmaceutical_translation_bottleneck",
+      "reductionist_validation_dogma",
+      "gwas_publication_bias"
+    ],
+    "dual_formulation_note": "The causal inference gap decomposes into three structural constraints: (1) causal_inference_gap itself (ε=0.58, tangled_rope) — the statistical-mechanistic divide; (2) pharmaceutical_translation_bottleneck (ε=0.72, snare) — the requirement for validated mechanisms before drug development; (3) reductionist_validation_dogma (ε=0.65, piton) — the performative theater of single-gene perturbation studies. The second and third stories are downstream of the first: the gap is created by institutional separation of discovery and validation; pharmaceutical development requirements impose a validation bottleneck; reductionist dogma provides a performative (non-functional) validation framework. These three constraints interact: the gap causes the bottleneck causes the dogma's persistence as theater."
+  }
 }

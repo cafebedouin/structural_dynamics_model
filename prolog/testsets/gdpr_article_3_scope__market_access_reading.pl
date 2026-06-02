@@ -1,0 +1,360 @@
+% ============================================================================
+% CONSTRAINT STORY: gdpr_article_3_scope__market_access_reading
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_gdpr_article_3_scope__market_access_reading, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: gdpr_article_3_scope__market_access_reading
+ *   human_readable: GDPR Article 3 Scope as Conditional Market Access Requirement (Brussels Effect Reading)
+ *   domain: technology_governance/international_law/privacy_regulation
+ *
+ * SUMMARY:
+ *   GDPR Article 3 scope is a contested kernel with three live readings:
+ *   effects-jurisdiction (GDPR applies to processing of EU residents' data
+ *   regardless of processor location via EU's territorial reach);
+ *   territorial-sovereignty (GDPR is a lawful exercise of EU's regulatory
+ *   authority over conduct affecting EU territory); and market-access (GDPR
+ *   is a global standard-setting mechanism that operates via conditional
+ *   market access, not jurisdiction assertion). This constraint story
+ *   instantiates the MARKET-ACCESS READING. In this reading, Article 3 is not
+ *   a claim that the EU has territorial jurisdiction over non-EU data
+ *   processors — it is a claim that access to the EU market is conditioned on
+ *   compliance with EU data protection standards. This is functionally
+ *   equivalent to saying 'companies that want to sell services to EU
+ *   residents must protect EU residents' data according to our standards' — a
+ *   coordination mechanism that diffuses global standards through market
+ *   incentives rather than through coercive enforcement of jurisdiction. The
+ *   market-access reading produces lower suppression and extraction scores
+ *   than the effects-jurisdiction reading because the binding mechanism is
+ *   conditional access (a choice point) rather than mandatory compliance
+ *   (coercion). The reading is structurally distinct: it predicts that as
+ *   third-country jurisdictions adopt privacy frameworks functionally
+ *   equivalent to GDPR, the unilateral standard-setting power diminishes
+ *   (sunset condition). It also predicts that firms have a genuine exit
+ *   option (decline to serve EU market) even if that option is costly. The
+ *   core axis of the committer frame is whether Article 3 represents
+ *   jurisdiction assertion (effects/territorial readings) or market-access
+ *   conditioning (this reading). This axis maps directly to the perspectival
+ *   gap: non-EU processors experience mandatory compliance (Snare); EU
+ *   regulators experience coordination (Rope); organized global coalitions
+ *   see a temporary standard-setting phase (Scaffold); legal formalists
+ *   perform the territorial-jurisdiction doctrine even as it atrophies
+ *   (Piton). The kernel remains contested because each reading is coherent
+ *   and institutionally operative: EU Commission rhetoric sometimes
+ *   emphasizes jurisdiction (deterrent effect), sometimes emphasizes market
+ *   access (incentive structure), sometimes emphasizes territorial
+ *   sovereignty (legal legitimacy). No single framework has fully displaced
+ *   the others.
+ *
+ * KEY AGENTS:
+ *   - EU Regulatory Authority (European Commission, DPAs): Primary beneficiary (institutional/arbitrage) — controls standard-setting via Article 3 scope; gains regulatory influence over global data ecosystem; maintains optionality to modify scope or grant exemptions
+ *   - Non-EU Data Processors (US tech platforms, Asian e-commerce, global analytics firms): Primary victim (powerless/trapped to powerful/mobile depending on firm size) — faces mandatory compliance to access EU market; suppressed by market dependency; larger firms have exit options but at significant cost
+ *   - EU Digital Services Ecosystem (consumers, EU-based companies, EU data processors): Secondary beneficiary (moderate/mobile) — benefits from harmonized data protection standards; reduced compliance fragmentation; consumer trust premium
+ *   - Global Digital Rights Coalition: Organized observer (organized/mobile) — sees GDPR as temporary standard-setting mechanism; advocates for global convergence; maintains optionality to support alternative frameworks
+ *   - Legal Formalism / Territorial Sovereignty Doctrine: Institutional performance (institutional/arbitrage) — maintains the judicial and doctrinal framing of Article 3 as territorial jurisdiction exercise; this framing is theatrically necessary but functionally secondary to market-access mechanism
+ *   - Third-Country Jurisdictions: Moderate observer (organized/constrained) — respond to Brussels Effect by adopting equivalent standards or constructing barriers; constrained by market dependency on EU but motivated to establish alternatives
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(gdpr_article_3_scope__market_access_reading, 0.38).
+domain_priors:suppression_score(gdpr_article_3_scope__market_access_reading, 0.48).
+domain_priors:theater_ratio(gdpr_article_3_scope__market_access_reading, 0.52).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(gdpr_article_3_scope__market_access_reading, extractiveness, 0.38).
+narrative_ontology:constraint_metric(gdpr_article_3_scope__market_access_reading, suppression_requirement, 0.48).
+narrative_ontology:constraint_metric(gdpr_article_3_scope__market_access_reading, theater_ratio, 0.52).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(gdpr_article_3_scope__market_access_reading, tangled_rope).
+narrative_ontology:human_readable(gdpr_article_3_scope__market_access_reading, "GDPR Article 3 Scope as Conditional Market Access Requirement (Brussels Effect Reading)").
+narrative_ontology:topic_domain(gdpr_article_3_scope__market_access_reading, "technology_governance/international_law/privacy_regulation").
+
+domain_priors:requires_active_enforcement(gdpr_article_3_scope__market_access_reading).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(gdpr_article_3_scope__market_access_reading, '070b9aa2-cad5-433c-8380-d3aa7d3f1b4b').
+narrative_ontology:cs_kernel_codification('070b9aa2-cad5-433c-8380-d3aa7d3f1b4b', formalized).
+narrative_ontology:cs_authority_grounding('070b9aa2-cad5-433c-8380-d3aa7d3f1b4b', extraction).
+narrative_ontology:cs_interpretation_layer_present('070b9aa2-cad5-433c-8380-d3aa7d3f1b4b').
+narrative_ontology:cs_reading_relation('070b9aa2-cad5-433c-8380-d3aa7d3f1b4b', gdpr_article_3_scope__effects_jurisdiction_reading, coexists_with).
+narrative_ontology:cs_reading_relation('070b9aa2-cad5-433c-8380-d3aa7d3f1b4b', gdpr_article_3_scope__territorial_sovereignty_reading, influences).
+narrative_ontology:cs_axiom('070b9aa2-cad5-433c-8380-d3aa7d3f1b4b', foundational, market_access_is_conditional).
+narrative_ontology:cs_axiom_status(market_access_is_conditional, holdable).
+narrative_ontology:cs_axiom_grounding('070b9aa2-cad5-433c-8380-d3aa7d3f1b4b', market_access_is_conditional, instrumental).
+narrative_ontology:cs_axiom('070b9aa2-cad5-433c-8380-d3aa7d3f1b4b', foundational, global_standard_diffusion_via_incentive).
+narrative_ontology:cs_axiom_status(global_standard_diffusion_via_incentive, holdable).
+narrative_ontology:cs_axiom_grounding('070b9aa2-cad5-433c-8380-d3aa7d3f1b4b', global_standard_diffusion_via_incentive, empirically_contingent).
+narrative_ontology:cs_reference_frame('070b9aa2-cad5-433c-8380-d3aa7d3f1b4b', competitive_global_data_market_with_eu_preference).
+narrative_ontology:cs_drift_state('070b9aa2-cad5-433c-8380-d3aa7d3f1b4b', contemporary_post_2024, gap(practice_drift, substantial, false)).
+narrative_ontology:cs_created_at('070b9aa2-cad5-433c-8380-d3aa7d3f1b4b', '').
+narrative_ontology:cs_kernel_id(gdpr_article_3_scope__market_access_reading, gdpr_article_3_scope).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(gdpr_article_3_scope__market_access_reading, eu_regulatory_authority).
+narrative_ontology:constraint_beneficiary(gdpr_article_3_scope__market_access_reading, eu_digital_services_ecosystem).
+narrative_ontology:constraint_victim(gdpr_article_3_scope__market_access_reading, non_eu_data_processors).
+narrative_ontology:constraint_victim(gdpr_article_3_scope__market_access_reading, global_compliance_burden_diffusion).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: NON-EU DATA PROCESSOR (SNARE) — No legal exit from GDPR compliance to access EU market; suppressed by market dependency (EU represents 15% of global digital services revenue); trapped by Article 3 scope's extraterritorial reach. Effective extraction: Brussels Effect as unilateral standard-setting without negotiation or exemption pathways.
+constraint_indexing:constraint_classification(gdpr_article_3_scope__market_access_reading, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: MAJOR US TECH PLATFORM (TANGLED ROPE) — Has exit optionality (can limit EU operations, use legal challenge vehicles, establish subsidiary structures) but at substantial cost; coordination function is genuine (GDPR enables EU consumer trust and data governance ecosystem); extraction is asymmetric (compliance costs concentrated, standard benefits distributed to EU residents and regulators). Moderate extraction with real alternatives, hence Tangled Rope rather than Snare.
+constraint_indexing:constraint_classification(gdpr_article_3_scope__market_access_reading, tangled_rope,
+    context(agent_power(powerful),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: EU REGULATORY AUTHORITY (ROPE) — Primary beneficiary; Article 3 enforcement is pure coordination function from this perspective: harmonizing data protection across EU territory and extending influence to globally-integrated supply chains. No suppression against EU authority; arbitrage optionality (can modify Article 3 scope, can negotiate exemptions, has global regulatory standing). Net coordination benefit; minimal experienced extraction.
+constraint_indexing:constraint_classification(gdpr_article_3_scope__market_access_reading, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(continental))).
+
+% PERSPECTIVE 4: NON-EU MID-MARKET TECH COMPANY (TANGLED ROPE) — Faces significant compliance costs but can absorb them through operational scaling; genuinely benefits from GDPR's coordination function (consumer trust, interoperability standards reduce friction); constrained exit (compliance cheaper than exit); asymmetric burden (compliance infrastructure is fixed cost, so smaller firms bear higher per-unit cost). Mixed coordination and extraction.
+constraint_indexing:constraint_classification(gdpr_article_3_scope__market_access_reading, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: GLOBAL DIGITAL RIGHTS COALITION (SCAFFOLD) — Sees Article 3 scope as temporary standard-setting mechanism that will diffuse globally (sunset condition: harmonization toward GDPR globally or regional alternatives that obsolete unilateral Brussels Effect). Organized (coalition has negotiating power); mobile (can shift strategy and support alternative frameworks). Low effective extraction because sunset is institutional: as other jurisdictions adopt privacy standards, GDPR's unilateral standard-setting power diminishes.
+constraint_indexing:constraint_classification(gdpr_article_3_scope__market_access_reading, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: LEGAL FORMALISM / TERRITORIAL SOVEREIGNTY DOCTRINE (PITON) — The classical international law principle that states have jurisdiction only within their territory is invoked as the canonical reading of legitimate regulatory authority. GDPR's Article 3 scope is presented as compliance with this principle through 'effects doctrine' reframing. However, the functional reality is standard-setting via market access conditioning, not territorial jurisdiction assertion. The piton classification reflects that the formal legal doctrine is maintained (performed) even as its substantive grounding has atrophied — market access requirement is the real mechanism; territorial jurisdiction is the theatrical justification.
+constraint_indexing:constraint_classification(gdpr_article_3_scope__market_access_reading, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER (ROPE) — From the analytical/civilizational frame, Article 3 is recognized as a standard-setting mechanism, not a jurisdictional assertion. The Brussels Effect operates as coordinated data governance via conditional market access: companies processing EU residents' data must comply with EU standards. This is coordination (voluntary adoption via market access incentive) with minimal coercion — it is how global standards emerge. The mechanism is cleaner from this perspective than from the trapped processor perspective because the analytical view sees the functional structure (standard diffusion) rather than only the coercive moment (compliance mandate).
+constraint_indexing:constraint_classification(gdpr_article_3_scope__market_access_reading, rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(gdpr_article_3_scope__market_access_reading_tests).
+
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(gdpr_article_3_scope__market_access_reading, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(gdpr_article_3_scope__market_access_reading, TypeOther, context(agent_power(powerful), _, _, _)),
+    TypePowerless \= TypeOther.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(gdpr_article_3_scope__market_access_reading, TR),
+    TR >= 0.70.
+
+:- end_tests(gdpr_article_3_scope__market_access_reading_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness (0.38): Moderate. This reading interprets Article 3 as market access conditioning rather than jurisdictional assertion, which lowers the baseline extraction score compared to the effects-jurisdiction reading. Extraction occurs because non-EU processors bear compliance costs concentrated (fixed infrastructure investment) while benefits are distributed (global standard diffusion). However, this is not maximal extraction (0.46+) because: (1) the binding mechanism is conditional market access, not coercion; (2) firms have genuine exit options (serve markets outside EU, decline EU service offering); (3) coordination benefits are real (harmonized standards reduce global fragmentation; consumer trust premium is positive for EU firms). The measurement trajectory (0.28 → 0.38 over 6 years) reflects increasing standardization and compliance infrastructure buildup — as GDPR matures, compliance becomes a routine operational cost rather than crisis response, and extractiveness moderates. Suppression (0.48): Moderate-high. The market-access framing assumes suppression operates through market dependency (losing EU revenue is costly) rather than through direct legal coercion. Non-EU firms are suppressed by: (1) market size (EU digital services market is ~15% of global, concentrated in high-value segments like e-commerce, cloud); (2) network effects (service to EU residents creates pressure to harmonize globally rather than maintain jurisdiction-specific versions); (3) reputational coupling (GDPR-compliant architecture becomes signaling device globally, so noncompliance triggers reputational cost beyond EU context). Suppression does not reach Snare levels (0.60+) because market access remains a choice — firms can and do exit EU market, though at cost. Theater ratio (0.52): Moderate. The performance aspect is the maintenance of Article 3 as a territorial jurisdiction doctrine even when the functional mechanism is market-access conditioning. Legal formalism requires this performance (CJEU, Member State courts, international law discourse all perform effects-doctrine/territorial-jurisdiction framing). However, the market-access mechanism is substantively transparent — companies understand compliance is market-access conditioned, regulators design enforcement via market incentive structures, treaty negotiations increasingly frame GDPR in data-governance rather than jurisdictional terms. Theater is not dominant (theater_ratio < 0.70) because the functional mechanism (market access) is materially visible and organizationally operative.
+ *
+ * PERSPECTIVAL GAP:
+ *   The market-access reading produces the widest perspectival gaps in the constraint corpus. Non-EU processors (powerless/trapped) experience the constraint as mandatory compliance (Snare) — market dependency leaves them no real exit; Article 3 feels like jurisdictional coercion. EU regulators (institutional/arbitrage) experience it as pure coordination (Rope) — they design standards, set incentives, maintain optionality to modify scope; the constraint advances their own regulatory goals. Major US platforms (powerful/mobile) experience it as mixed coordination and extraction (Tangled Rope) — they have exit options but at substantial cost; they benefit from standard harmonization (reduces fragmentation) but bear asymmetric compliance burden. Mid-market non-EU firms (moderate/constrained) experience it as coordination with asymmetric burden (Tangled Rope) — smaller absolute costs but higher per-unit burden relative to revenue. Organized global coalitions (organized/mobile) experience it as temporary coordination mechanism with sunset (Scaffold) — if global standards converge toward GDPR, the unilateral standard-setting phase ends. Legal formalists (institutional/arbitrage) perform it as territorial jurisdiction assertion (Piton) — the formal doctrine is maintained even as substantive grounding shifts to market mechanisms. The analytical observer (analytical/analytical) sees it cleanly as standard-setting via market access (Rope) — the mechanism is coordination, suppression is mediated through incentives, no coercion is required beyond market discipline. The perspectival gaps are largest between: (1) trapped processors vs institutional beneficiaries (Snare vs Rope): 3-type gap driven by exit optionality; (2) legal formalism vs market-access functionality (Piton vs Rope): driven by the contrast between theatrical maintenance and functional transparency; (3) small vs large processors (Tangled Rope with different χ): same type but vastly different experienced extraction due to scale differences. This reading's analytical contribution is that treating Article 3 as market-access conditioning rather than jurisdictional assertion explains why the constraint is more stable and lower-suppression than the effects-jurisdiction reading predicts.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Directionality (d) is derived from each perspective's structural relationship to the market-access mechanism. EU regulators (beneficiary + arbitrage) have d ≈ 0.10 (near-full beneficiary, maximum optionality) → f(d) ≈ -0.08 (negative extractiveness, pure benefit). Non-EU powerless processors (victim + trapped) have d ≈ 0.95 (near-full target, no exit) → f(d) ≈ 1.42 (maximum experienced extraction). Non-EU powerful platforms (victim + mobile) have d ≈ 0.65 (mixed victim/beneficiary, significant exit options) → f(d) ≈ 1.00 (moderate extraction). Mid-market non-EU firms (victim + constrained) have d ≈ 0.72 (victim with costly but possible exit) → f(d) ≈ 1.15 (moderate-high extraction). Organized coalitions (observer + mobile) have d ≈ 0.50 (neutral position, high optionality) → f(d) ≈ 0.65 (mild coordination function). The analytical observer (observer + analytical) has canonical d ≈ 0.73 → f(d) ≈ 1.15 (the standard analytical position). Scope modifier σ(continental) = 1.0 (EU is regional, though network effects are global; σ is set to national scope for calculation: σ=1.0). The market-access reading keeps directionality derivation transparent: we identify who benefits (EU regulators, EU processors, global standard-setters), who bears costs (non-EU processors dependent on EU market), and what exit options exist (genuine but costly for most). The suppression is not intrinsic coercion (coercive capacity of EU state apparatus) but market-mediated suppression (cost of exit via lost market access). This structure explains why Snare appears only at extreme positions (completely trapped, no exit): most firms have real alternatives, hence Tangled Rope is more common than pure Snare.
+ *
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    article_3_scope_interpretive_instability,
+    'Does Article 3 scope describe territorial jurisdiction (effects doctrine applied to EU territory) or market access conditioning (Brussels Effect as standard-setting)?',
+    'Comparative analysis of enforcement patterns: Do regulators treat non-compliance as territorial jurisdiction violation (assertion of control over foreign acts) or as market access violation (denial of EU market participation)? Examine DPA enforcement actions and legal defenses used by data processors.',
+    'If territorial jurisdiction: constraint is Snare from all perspectives; GDPR asserts control over global data processing; suppression is high. If market access conditioning: constraint is Tangled Rope/Rope from most perspectives; GDPR coordinates global standard-setting; suppression is moderate, mediated by market incentives. This reading instantiates the market-access interpretation.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(article_3_scope_interpretive_instability, conceptual, 'Ambiguity between territorial jurisdiction and market access conditioning interpretations of Article 3').
+
+omega_variable(
+    brussels_effect_legitimacy_grounding,
+    'Is the Brussels Effect a legitimate regulatory mechanism (standard diffusion via voluntary adoption incentivized by market access) or an illegitimate regulatory imperialism (unilateral standard-setting imposed on non-consenting jurisdictions)?',
+    'Examination of adoption patterns: Do third-country jurisdictions adopt GDPR standards autonomously (signaling legitimacy) or resist and work toward alternative frameworks (signaling imperialism)? Track UK, Japan, South Korea, India regulatory trajectory post-GDPR. Measure rate of autonomous GDPR adequacy adoptions vs forced compliance.',
+    'If legitimate: Brussels Effect is a recognized mechanism of global standard-setting; market-access reading is robust and will likely diffuse. If illegitimate: Brussels Effect is recognized as regulatory imperialism; pressure will mount for countervailing standards and exemptions. This reading assumes legitimacy but requires measurement to sustain.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(brussels_effect_legitimacy_grounding, preference, 'Whether Brussels Effect is legitimate standard-setting or regulatory imperialism').
+
+omega_variable(
+    extraction_vs_coordination_threshold,
+    'At what compliance cost burden does GDPR Article 3 transition from coordination mechanism (Rope) to extraction mechanism (Snare or Tangled Rope)?',
+    'Cost-benefit analysis per firm size and jurisdiction: GDPR compliance cost as percentage of firm revenue for small EU-dependent firms (>50% EU revenue) vs large firms vs US-centric firms. Measure adoption of compliance avoidance strategies (data localization, service suspension, subsidiary structures) by firm size.',
+    'If threshold < 5% annual revenue: most firms experience Rope (coordination benefit exceeds cost). If threshold > 15% annual revenue: firms experience Tangled Rope or Snare (extraction exceeds coordination benefit). Current empirical consensus suggests threshold around 8-12% for mid-market firms; this reading assumes threshold is below Snare intensity.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(extraction_vs_coordination_threshold, empirical, 'Extraction-to-coordination ratio as function of firm size and EU revenue dependency').
+
+omega_variable(
+    sibling_reading_structural_tension,
+    'Do the effects-jurisdiction reading and territorial-sovereignty reading foreclose the market-access reading, or do all three coexist as live positions in different institutional contexts?',
+    'Institutional analysis: Which reading is dominant in EU Commission rhetoric, in CJEU decisions, in third-country trade negotiations? Can a single state actor hold multiple readings simultaneously (e.g., EU asserts market-access logic to tech companies, territorial-jurisdiction logic to trading partners, effects-doctrine logic to courts)?',
+    'If foreclosed: this reading is not a live institutional position; GDPR''s official framing is effects-jurisdiction or territorial-sovereignty. If coexisting: this reading is strategically useful to EU authority as it downplays coercion and emphasizes coordination. This omega routes the committer uncertainty into empirical measurement of institutional positioning.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(sibling_reading_structural_tension, empirical, 'Whether market-access reading coexists with sibling readings or is institutionally foreclosed').
+
+omega_variable(
+    diffusion_terminal_state,
+    'Will GDPR standards globally converge (sunset condition: article 3 becomes default framework) or will alternative privacy regimes entrench (GDPR remains unilateral?)',
+    'Long-term tracking of regulatory adoption: Monitor adequacy decisions, bilateral data-sharing agreements, regional privacy framework development (African Union, ASEAN, etc.). Measure whether global firms are consolidating to single GDPR-compliant architecture or maintaining jurisdiction-specific compliance structures.',
+    'If convergence: Brussels Effect is real standard-setting with terminal state of global harmonization; scaffold perspective is correct. If entrenchment: Brussels Effect is stable constraint, not temporary; reclassify toward Snare/Tangled Rope as permanent extraction. This omega defines the temporal boundary of this reading''s validity.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(diffusion_terminal_state, empirical, 'Long-term terminal state: GDPR as global standard or permanent unilateral constraint').
+
+omega_variable(
+    market_access_conditionality_enforcement,
+    'Is Article 3 enforcement actually conditioned on market access (companies can choose to exit EU market to escape compliance) or is it mandatory regardless of market participation intent (enforceable against any processor touching EU resident data)?',
+    'Case law analysis: Have any firms successfully challenged Article 3 enforcement by establishing they have no intent to offer services in EU? Examine DPA enforcement against non-EU firms with incidental EU data exposure vs intentional EU market entry.',
+    'If conditioned: market-access reading is accurate; companies have real exit option (abstain from EU market). If mandatory: Article 3 is jurisdictional assertion, not market conditionality; reading should be reclassified. This omega tests the core structural premise of the market-access reading.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(market_access_conditionality_enforcement, empirical, 'Whether Article 3 is conditioned on market access intent or mandatory jurisdiction').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(gdpr_article_3_scope__market_access_reading, 2018, 2024).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(gdpr_ma_theater_2018, gdpr_article_3_scope__market_access_reading, theater_ratio, 0, 0.38).
+narrative_ontology:measurement(gdpr_ma_theater_2021, gdpr_article_3_scope__market_access_reading, theater_ratio, 3, 0.45).
+narrative_ontology:measurement(gdpr_ma_theater_2024, gdpr_article_3_scope__market_access_reading, theater_ratio, 6, 0.52).
+
+% Extraction over time
+narrative_ontology:measurement(gdpr_ma_extractiveness_2018, gdpr_article_3_scope__market_access_reading, base_extractiveness, 0, 0.28).
+narrative_ontology:measurement(gdpr_ma_extractiveness_2021, gdpr_article_3_scope__market_access_reading, base_extractiveness, 3, 0.34).
+narrative_ontology:measurement(gdpr_ma_extractiveness_2024, gdpr_article_3_scope__market_access_reading, base_extractiveness, 6, 0.38).
+
+% Suppression requirement over time
+narrative_ontology:measurement(gdpr_ma_suppression_2018, gdpr_article_3_scope__market_access_reading, suppression_requirement, 0, 0.42).
+narrative_ontology:measurement(gdpr_ma_suppression_2021, gdpr_article_3_scope__market_access_reading, suppression_requirement, 3, 0.46).
+narrative_ontology:measurement(gdpr_ma_suppression_2024, gdpr_article_3_scope__market_access_reading, suppression_requirement, 6, 0.48).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(gdpr_article_3_scope__market_access_reading, resource_allocation).
+narrative_ontology:affects_constraint(gdpr_article_3_scope__market_access_reading, gdpr_article_3_scope__effects_jurisdiction_reading).
+narrative_ontology:affects_constraint(gdpr_article_3_scope__market_access_reading, gdpr_article_3_scope__territorial_sovereignty_reading).
+
+% DUAL FORMULATION NOTE:
+% GDPR Article 3 decomposes into three structurally distinct constraints corresponding to three live institutional readings of the same text. Market-access reading (this constraint) predicts moderate extraction (0.38), moderate suppression (0.48), Tangled Rope type at analytical level, with sunset condition (as global standards converge). Effects-jurisdiction reading predicts higher extraction (0.55+), higher suppression (0.62+), Snare type from most perspectives, permanent structural constraint. Territorial-sovereignty reading predicts intermediate extraction (0.42+), intermediate suppression (0.55+), Tangled Rope type, with legitimacy stability (lawful regulation has lower terminal reclassification risk). The three constraints share the same base text (Article 3 scope) but instantiate different structural dynamics. The network links connect the readings to enable comparative analysis of how framing choice (which reading is operative in a given institutional context) predicts classification outcomes.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(gdpr_article_3_scope__market_access_reading, institutional, 0.08).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

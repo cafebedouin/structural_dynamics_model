@@ -1,0 +1,230 @@
+{
+  "header": {
+    "constraint_id": "lausanne_minority_protections__expansive_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "laus_exp",
+    "story_uid": "bab149e6-0366-4cf1-93f7-21fc3e795cae"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.42,
+    "theater_ratio": 0.55,
+    "claimed_type": "rope",
+    "human_readable": "Lausanne Minority Protections (Expansive Reading) — Treaty Guarantee of Religious Institutional Continuity",
+    "topic_domain": "international_law/religious_governance/minority_rights",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "minority_religious_institutions",
+      "treaty_guarantor_states"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Minority Religious Institution",
+      "comment": "PERSPECTIVE 1: MINORITY RELIGIOUS INSTITUTION (ROPE) — Depends on treaty guarantees for institutional self-administration, property rights, and clergy formation. No extraction mechanism; genuine coordination function: treaty ensures continuity across state boundaries and generational transitions. Constrained by dependence on guarantor compliance but benefits from coordination that enables transnational religious governance."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Guarantor State",
+      "comment": "PERSPECTIVE 2: GUARANTOR STATE (ROPE) — Experiences the constraint as coordination function: treaty obligation to protect minority institutions serves both minority interests and guarantor diplomatic legitimacy. No asymmetric extraction. The guarantor has arbitrage options (enforcing or ignoring treaty terms) but the treaty provides legitimate framework for state action. Pure coordination mechanism with low overhead."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Host State (Non-Guarantor)",
+      "comment": "PERSPECTIVE 3: HOST STATE (NON-GUARANTOR) (ROPE) — State wherein minority institutions operate under treaty obligation. Experiences constraint as coordination: treaty provides liability framework and legitimacy for minority rights protection. Has mobility options (can ratify or withdraw treaty compliance) but chooses coordination framework as more efficient than unilateral minority policy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Individual Minority Member",
+      "comment": "PERSPECTIVE 4: INDIVIDUAL MINORITY MEMBER (TANGLED ROPE) — Individual adherents have genuine coordination benefit (access to clergy, institutional continuity, cultural transmission) but face asymmetric extraction if the institutional reading diverges from individual prerogatives. Trapped by dependence on institutional gatekeeping. The treaty nominally protects the institution; whether it protects individual dissent or theological diversity is the extraction vector."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Rival Religious Faction",
+      "comment": "PERSPECTIVE 5: RIVAL RELIGIOUS FACTION (TANGLED ROPE) — Organized competitors within the same confessional tradition who may interpret 'institutional self-administration' differently. Coordination benefit: treaty protects religious pluralism and prevents state-favoring of one faction. Extraction cost: the treaty's guarantees of 'the institution' may freeze one faction's interpretation as official, excluding rival readings. Organized power enables exit via schism or appeal to guarantor, but constrained by costs."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The International Legal Observer",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL LEGAL OBSERVER (SCAFFOLD) — Treaty architecture is a temporary fix to a generational conflict: the Lausanne protections were designed to manage minority rights during the post-Ottoman state formation period. From a civilizational view, the constraint is sunset: as nation-states mature and pluralism norms strengthen, treaty-based minority protection becomes scaffolding to a more durable international human-rights regime. The extraction mechanism decays as alternatives mature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "institutional_versus_individual_scope",
+      "question": "Does 'religious institutional self-administration' protect only institutional prerogatives or also individual theological dissent and minority doctrine within the tradition?",
+      "resolution_mechanism": "Case law analysis of disputes between minority institutions and member factions claiming theological innovation; comparison of expansive (individual conscience protected) vs restrictive (institutional orthodoxy protected) interpretations in guarantor jurisprudence",
+      "impact": "Expansive reading: constraint is pure rope (coordination between institution and state). Restrictive reading: constraint becomes tangled_rope with extraction of individual theological autonomy by institutional gatekeeping. This omega locates the critical interpretive boundary within this reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Scope of protection: institutional governance vs individual theological freedom"
+    },
+    {
+      "id": "guarantor_enforcement_mechanism",
+      "question": "What enforcement mechanism ensures guarantor states actually protect minority institutions? Treaty language guarantees but external enforcement is weak.",
+      "resolution_mechanism": "Historical analysis of cases where guarantor states violated minority protections without penalty; identification of effective enforcement pathways (International Court of Justice, diplomatic pressure, sanctions) vs theatrical compliance",
+      "impact": "If enforcement effective: rope classification holds. If enforcement weak: theater_ratio rises sharply, constraint degrades to piton (ceremonial protection with inertial institutional maintenance).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of treaty enforcement mechanisms"
+    },
+    {
+      "id": "reading_interpretive_contest",
+      "question": "This reading (expansive_reading) asserts treaty guarantees functional continuity of pre-1923 governance. Will guarantor states and minority institutions converge on this interpretation, or will competing readings (restrictive_reading, guarantor_reading) win interpretive authority?",
+      "resolution_mechanism": "Future jurisprudence by International Court of Justice, guarantor state courts, and minority institution leadership councils; analysis of which reading is cited most frequently and applied most consistently in real disputes",
+      "impact": "If expansive reading holds: constraint remains rope with genuine coordination function. If restrictive reading wins: extraction mechanisms tighten (institutional orthodoxy enforced, individual dissent suppressed). If guarantor reading wins: constraint becomes extractive of minority institutional autonomy in service to state interests. This is a committer-axis omega documenting the reading contest itself.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Which reading of the Lausanne kernel will dominate future interpretation"
+    },
+    {
+      "id": "theological_school_formation_autonomy",
+      "question": "Can minority institutions freely determine theological curriculum and ordination standards ('clergy formation via theological schools'), or must guarantor state approval or secular accreditation constraints apply?",
+      "resolution_mechanism": "Documentary analysis of theological school charters, guarantor state educational regulations, and dispute resolution precedents involving theology curriculum control; examination of whether 'self-administration' includes curriculum autonomy",
+      "impact": "If autonomous: rope classification holds (genuine institutional self-governance). If constrained by state accreditation: tangled_rope (coordination benefit of institutional continuity paired with extraction of theological autonomy to secular standards).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether clergy formation is self-administered or subject to state oversight"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4,
+      "id_override": "laus_exp_theater_1923"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.52,
+      "id_override": "laus_exp_theater_1973"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.55,
+      "id_override": "laus_exp_theater_2023"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28,
+      "id_override": "laus_exp_extract_1923"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.3,
+      "id_override": "laus_exp_extract_1973"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.32,
+      "id_override": "laus_exp_extract_2023"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The Lausanne Treaty (1923) and its successor protocols guarantee minority religious institutions—primarily Greek Orthodox, Armenian Apostolic, and Jewish communities—functional continuity of pre-1923 governance structures within successor states of the Ottoman Empire. This reading (expansive_reading) interprets the guarantee as substantive institutional autonomy: minority institutions retain self-administration of internal affairs, property management, and clergy formation via theological schools without state interference. The constraint exhibits low extractiveness (0.32) and moderate suppression (0.42) characteristic of pure coordination mechanisms—the treaty solves a genuine collective action problem (how to protect minority religious continuity across state formation) with low coercive overhead. However, this reading is contested by two alternatives: a restrictive_reading that emphasizes state police power over minority institutions and a guarantor_reading that emphasizes guarantor state sovereignty. The expansive_reading assumes goodwill guarantor enforcement and institutional autonomy; competing readings assume strategic guarantor behavior and state subordination of minority governance. This story generates the expansive_reading constraint; the alternatives are separate stories in the same constraint family.",
+    "key_agents": [
+      "Minority Religious Institutions (Orthodox, Armenian, Jewish): Primary beneficiary (moderate/constrained) — depend on treaty guarantees for institutional continuity and self-administration; lack independent state power but have legal standing",
+      "Guarantor States (Greece, Serbia, Romania, Bulgaria): Secondary beneficiary (institutional/arbitrage) — fulfill treaty obligations to manage minority populations and enhance diplomatic legitimacy; have enforcement discretion",
+      "Host States (non-guarantor nations where minorities reside): Institutional coordination (institutional/mobile) — operate under treaty constraints but choose compliance as more efficient than unilateral minority policy",
+      "Individual Minority Members: Secondary victim if extraction occurs (powerless/trapped) — nominally protected by institutional autonomy but dependent on institutions not extracting their theological autonomy",
+      "Rival Theological Factions: Organized secondary victim (organized/constrained) — coordinate with institutions but may face extraction if institutional interpretation freezes one faction as official",
+      "International Legal Order: Analytical observer (analytical/analytical) — sees constraint as temporary scaffold to more durable human-rights regime"
+    ],
+    "logic_rationale": "Extractiveness (0.32): Low-moderate. The expansive reading assumes no systematic extraction—the treaty is pure coordination that enables minority institutional continuity. The 0.32 value reflects residual uncertainty about whether institutional gatekeeping (who controls seminary curriculum, who selects clergy) constitutes latent extraction. Under strict expansive reading, these are institutional prerogatives with no extraction cost. Under more skeptical analysis, institutional hierarchies do extract theological conformity. The 0.32 reflects the optimistic reading; omega variables document where extraction might emerge. Suppression (0.42): Moderate. State-level compliance with treaty guarantees is the suppression mechanism—if states choose not to enforce minority property rights or allow institutional autonomy to erode, minority institutions face substantial barriers. But suppression is not total because the treaty provides legal standing and international recourse. Theater ratio (0.55): Moderate-high, rising slightly over time. Early Lausanne era (1923) showed more genuine institutional autonomy; contemporary era shows more ceremonial compliance and state encroachment. The rise from 0.40 to 0.55 reflects growing disconnect between treaty language (institutional self-administration) and practice (increasing state oversight via secular accreditation and property law).",
+    "perspectival_gap": "The expansive reading produces homogeneous rope classification across beneficiary perspectives (institutions and guarantor states) because both parties perceive the constraint as genuine coordination with low overhead. However, perspectives from powerless agents (individual members, rival factions) diverge toward tangled_rope and scaffold, revealing that the 'pure coordination' reading depends on institutional good faith. The individual member perspective shows that institutional gatekeeping creates latent extraction—the individual benefits from institutional continuity but bears extraction cost if theological dissent is suppressed. The rival faction perspective shows that 'institutional self-administration' may freeze one faction's reading as official, excluding alternatives. The scaffold perspective reveals that the entire constraint is generational sunset—as national human-rights regimes mature and pluralism norms strengthen, the treaty's coordinating function decays and the constraint moves toward piton (ceremonial maintenance of international legal architecture).",
+    "directionality_logic": "Each perspective's directionality derives from the agent's structural power, exit options, and relationship to the treaty guarantee. Minority institutions have moderate power (legal standing but no enforcement capacity) and constrained exit (cannot abandon institutional continuity without losing cultural transmission), producing d ≈ 0.55–0.65 and rope classification via low effective extraction. Guarantor states have institutional power and arbitrage options (can enforce or ignore treaty), producing d ≈ 0.15–0.25 and rope classification via beneficiary directionality. Individual members are trapped with no exit, but the guarantor mechanism provides structural mobility (appeal to guarantor state), producing d ≈ 0.70–0.80 and tangled_rope rather than snare. The analytical observer at civilizational scope sees the constraint as sunset mechanism, producing scaffold classification—this is not a failure of rope classification but a temporal shift in what the constraint does (coordination → scaffolding).",
+    "mandatrophy_analysis": "This reading resolves the mandatrophy (disambiguation of coordination vs extraction in treaty-based minority protection) by declaring the beneficiary structure transparent: minority institutions and guarantor states benefit from the coordination mechanism; individual members and rival factions experience potential extraction. The rope classification is defensible IF (a) guarantor states enforce the treaty with genuine commitment to minority autonomy, (b) minority institutions do not use institutional gatekeeping to extract theological conformity, and (c) the treaty's scope is interpreted expansively to include individual conscience protections within institutional frameworks. Each of these assumptions is contestable—hence the competing readings (restrictive_reading, guarantor_reading) and the omegas documenting where extraction might emerge. The mandatrophy is not 'is this rope or snare?' but 'which assumptions about guarantor behavior and institutional good faith underpin this reading?'",
+    "kernel_context": "This constraint instantiates the expansive_reading of the lausanne_minority_protections kernel. The kernel is the Lausanne Treaty (1923) and successor protocols—a formal, treaty-codified commitment to minority religious protection. Three readings compete for interpretive authority: (1) expansive_reading (this story): treaty guarantees functional institutional autonomy and state non-interference; (2) restrictive_reading: treaty protections are limited to non-discrimination and state may regulate minority institutions via general law; (3) guarantor_reading: guarantor states retain final authority over minority affairs and may override institutional prerogatives. The expansive reading assumes goodwill guarantor enforcement and treats the treaty as a genuine coordination mechanism. The restrictive reading emphasizes state police power and treats the treaty as a liability cap. The guarantor reading emphasizes guarantor state sovereignty and treats minority institutional autonomy as conditional. These readings coexist in contemporary legal discourse but have incompatible implications for minority institutional power. This story models the structural constraints that emerge if the expansive reading holds; separate stories model the alternatives."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "lausanne_minority_protections__restrictive_reading",
+      "lausanne_minority_protections__guarantor_reading"
+    ],
+    "dual_formulation_note": "The Lausanne minority protections kernel has three structurally distinct constraint readings. This story (expansive_reading) assumes institutional autonomy and low extraction (ε=0.32, rope). The restrictive_reading (separate story) assumes state regulatory authority and moderate extraction (ε≈0.45, tangled_rope). The guarantor_reading (separate story) assumes guarantor state sovereignty over minorities and high extraction (ε≈0.60, snare). All three readings ground their legitimacy in the same treaty text; the ε-invariance principle requires separate stories because the observable (how 'institutional self-administration' and 'guarantor enforcement' are interpreted) determines whether the constraint is coordination or extraction."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.2
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "lausanne_minority_protections__restrictive_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "lausanne_minority_protections__guarantor_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "institutional_autonomy_substantive",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "guarantor_enforcement_good_faith",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "treaty_protected_institutional_autonomy",
+    "drift_state": {
+      "moment": "contemporary_securitization_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

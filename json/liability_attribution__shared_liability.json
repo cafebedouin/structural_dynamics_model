@@ -1,0 +1,254 @@
+{
+  "header": {
+    "constraint_id": "liability_attribution__shared_liability",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "liab_shared",
+    "story_uid": "2fbd4b40-a28c-453a-85d3-c74d01dc0b47"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Joint Liability Attribution via Causal Contribution and Control",
+    "topic_domain": "technology_governance/legal_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "injured_parties",
+      "insurance_markets"
+    ],
+    "victims": [
+      "technology_developers",
+      "technology_deployers",
+      "supply_chain_intermediaries"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Distributed Supplier",
+      "comment": "PERSPECTIVE 1: DISTRIBUTED SUPPLIER (SNARE) — Small component manufacturer or service provider in a global supply chain. Cannot exit (material dependency), cannot defend (asymmetric legal resources), cannot predict liability exposure (rules allocate retroactively). Trapped bears full extraction with zero agency. Maximum suppression through contractual indemnification cascades."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Tier Deployer",
+      "comment": "PERSPECTIVE 2: MID-TIER DEPLOYER (TANGLED ROPE) — Company deploying technology in operational setting (healthcare, transportation, infrastructure). Benefits from rapid deployment capability and cost-shifting through contractual liability allocation. Also bears significant risk: causal contribution doctrine makes them a joint defendant in harm cases. Constrained exit (regulatory requirements, market pressure, customer expectations force continued deployment despite liability exposure). Mixed coordination (liability rules coordinate safety incentives) and extraction (asymmetric burden)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Developer",
+      "comment": "PERSPECTIVE 3: PLATFORM DEVELOPER (ROPE) — Large technology firm controlling algorithmic, architectural, or design decisions. Benefits from broad architectural control and ability to disclaim liability through contractual allocation to deployers and users. Experiences shared liability as a coordination mechanism: causal contribution rules incentivize safety-by-design. Arbitrage exit (can shift deployment to regions with favorable liability regimes, or exit the market entirely while retaining IP). Net beneficiary — extraction runs toward this agent through contractual pass-through."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Insurance/Indemnity Market",
+      "comment": "PERSPECTIVE 4: INSURANCE/INDEMNITY MARKET (TANGLED ROPE) — Organized institutional structure (insurers, reinsurers, captive insurance arms, indemnity funds). Coordinates risk allocation by pricing liability exposure. Also extracts surplus: information asymmetry between insurers (who know causal contribution tests empirically) and insured parties (who must estimate exposure). Constrained: regulatory oversight and competitive pressure limit extraction. This perspective shows genuine coordination function (risk pooling and pricing) coupled with asymmetric information extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Legal Doctrine Apparatus",
+      "comment": "PERSPECTIVE 5: LEGAL DOCTRINE APPARATUS (PITON) — Courts, precedent, doctrinal interpretation of 'causal contribution,' 'control,' 'foreseeability.' Maintains the shared liability framework through case law and statutory interpretation. Theater-heavy: extensive litigation over causal contribution doctrine produces elaborate legal reasoning with unclear real-world verification (what counts as 'control' is litigated retrospectively, creating theater). The apparatus sees itself as degraded — judges acknowledge doctrine's vagueness but maintain it through inertia. Institutional arbitrage (courts generate billable controversy; legal certainty is not the apparatus's product)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Natural Law View (Causation as Immutable)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, shared liability appears to reflect an immutable principle: whoever causes harm bears responsibility. Causation and control are presented as objective features of the world, not contingent institutional constructs. This perspective risks false summitry — naturalizing what is actually a contested doctrinal choice (causal contribution is a legal construct with alternatives like strict liability, no-fault regimes, or developer-only liability). The engine will flag this as a false summit if beneficiary declarations are present."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "causal_contribution_operationalization",
+      "question": "What operational test distinguishes 'causal contribution' from 'causal involvement'? Where does a component supplier's contribution end and a deployer's control begin?",
+      "resolution_mechanism": "Analysis of settled vs. ongoing liability cases: identify categories of parties that litigation consistently places in snare vs. tangled_rope positions. Develop empirical typology of causal contribution tests.",
+      "impact": "If test is strict (binary control): shared liability collapses toward developer_liability reading. If test is permissive (any causal involvement): most parties in value chain become joint defendants, suppression increases, classification shifts toward snare. If test is deliberately ambiguous: theater_ratio increases, doctrine becomes self-perpetuating (litigation over the test itself).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Operational definition of 'causal contribution' in liability allocation"
+    },
+    {
+      "id": "contractual_allocation_enforceability",
+      "question": "To what extent can parties contractually override shared liability through indemnification clauses? Are such allocations enforceable against third-party claimants?",
+      "resolution_mechanism": "Comparative legal analysis across jurisdictions; case law on indemnity agreement enforceability; empirical study of actual liability burden distribution in major technology deployments.",
+      "impact": "If fully enforceable: shared liability becomes facade (de facto single-actor liability through contractual pass-through). Extractiveness drops, tangled_rope classification shifts toward rope for large firms with negotiating power. If unenforeable: shared liability is binding joint and several liability; no contractual escape. Extractiveness remains high, suppression increases, classification remains snare for trapped actors.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Enforceability of contractual liability allocation clauses"
+    },
+    {
+      "id": "control_definition_scope",
+      "question": "Does 'control' include passive design (algorithms run without active human intervention) or only active operational control? Does a developer retain control after deployment if they can push updates?",
+      "resolution_mechanism": "Doctrinal analysis of control test across AI/automated systems liability law; case law on developer liability for post-deployment updates; empirical study of actual control distribution in live systems.",
+      "impact": "If control includes passive design: developers bear significant liability even after deployment. Developer_liability reading becomes more salient; shared liability shifts toward strict developer responsibility. If control is operational-only: developers escape liability unless they actively intervene. Deployer_liability reading becomes more salient; shared liability shifts toward deployer responsibility. Scope of 'control' directly determines which reading is structurally dominant.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Definition of 'control' in causal contribution test"
+    },
+    {
+      "id": "information_asymmetry_under_liability",
+      "question": "Does shared liability increase or decrease transparency about safety risks, failure modes, and design tradeoffs in technology supply chains?",
+      "resolution_mechanism": "Comparative study of information disclosure before and after shared liability regimes; analysis of trade-secret claims and confidentiality assertions in liability cases; empirical measurement of how liability allocation affects developer disclosures to deployers.",
+      "impact": "If liability increases transparency: shared liability functions as a coordination mechanism (reduces hidden risks, enables informed deployment decisions). Extractiveness drops, tangled_rope classification is stable. If liability decreases transparency (parties withhold information to reduce liability exposure): opacity becomes a suppression mechanism. Theater_ratio rises (litigation over what should have been disclosed). Suppression increases; shared liability becomes a mechanism for extracting information rents.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effect of shared liability on information disclosure"
+    },
+    {
+      "id": "kernel_reading_alternative_doctrines",
+      "question": "This constraint instantiates the 'shared_liability' reading of the liability_attribution kernel. How do the sibling readings (developer_liability, deployer_liability) represent structurally different doctrinal choices?",
+      "resolution_mechanism": "Doctrinal comparison: identify the foundational axiom each reading rests on. Map the causal_contribution_operationalization, control_definition_scope, and contractual_allocation_enforceability omegas across all three readings to show how different resolutions produce different dominant readings.",
+      "impact": "If causal_contribution is strict and control is operational: developer_liability reading forecloses shared_liability (developers cannot be held for deployer's operational choices). If causal_contribution is permissive and control includes design: shared_liability coexists with both alternatives depending on case type. If control is actively contested in doctrine: all three readings coexist, each reflecting different judicial coalitions' preferences.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Relationship of shared_liability reading to alternative readings of the liability kernel"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Joint liability attribution regimes allocate legal responsibility for technology harms based on causal contribution and control. This constraint exists at the intersection of legal doctrine, technology governance, and risk allocation. The shared_liability reading holds that both developers (who design and control the technology) and deployers (who choose when and how to deploy) bear joint and several liability for harm caused by the technology. This contrasts with alternative readings: developer_liability (full responsibility on the technology creator) and deployer_liability (full responsibility on the operational actor). The shared_liability reading produces a tangled structure: it coordinates safety incentives across the value chain (both developers and deployers have reason to invest in safety) while simultaneously extracting compliance costs from all parties, suppresses alternatives through legal doctrine, and generates theater through retroactive causal contribution litigation. The constraint exhibits all six DR types from different perspectives because different actors occupy radically different structural positions: platform developers with architectural control and contractual exit options, deployers with regulatory constraints and operational responsibility, distributed suppliers with no exit, and the legal apparatus itself maintaining doctrine through case law.",
+    "key_agents": [
+      "Platform Developer: Institutional beneficiary (institutional/arbitrage) — controls architecture and design choices; can shift liability to deployers and suppliers through contractual allocation; retains IP value",
+      "Technology Deployer: Mixed victim/beneficiary (moderate/constrained) — benefits from rapid deployment and cost-shifting; also bears joint liability exposure and regulatory responsibility; operationally trapped by deployment dependencies",
+      "Distributed Supplier: Primary victim (powerless/trapped) — small component manufacturer or service provider with no negotiating power; subject to indemnification cascades; bears uninsurable liability exposure",
+      "Insurance/Indemnity Market: Organized actor (organized/constrained) — coordinates risk allocation through pricing; extracts information rents through asymmetry between insurer knowledge and insured uncertainty",
+      "Courts and Legal Doctrine: Institutional actor (institutional/arbitrage) — maintains shared liability framework through case law and precedent; generates theater through retroactive causal contribution tests; produces billable legal work",
+      "Injured Parties: Structural beneficiary (powerless/trapped) — hold joint and several claims against multiple defendants; benefit from expanded liability regime but do not control doctrine"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Shared liability extracts compliance costs from all participants in the value chain — developers must invest in safety-by-design, deployers must monitor and control deployment, suppliers must maintain documentation and insurance. The extraction is not maximal (0.70+) because the coordination function is genuine: shared liability does create safety incentives across the value chain. But the extraction exceeds a pure coordination mechanism (0.30–0.45) because the burden falls asymmetrically on those with less bargaining power, and the legal doctrine itself is ambiguous enough to create perpetual litigation costs. Suppression (0.65): High. Parties cannot exit shared liability: regulatory requirements often mandate liability insurance, contractual escape clauses may be unenforceable against third-party claimants, and reputational damage from 'trying to escape liability' is severe. Suppression mechanisms include: contractual indemnification cascades (each party pushes liability downstream), insurance requirements (parties must maintain expensive coverage), and doctrinal ambiguity (no party knows ex ante what 'causal contribution' will mean in litigation). Theater ratio (0.58): Moderate-high. The causal contribution test itself generates substantial theater. Litigation retroactively determines what 'control' meant, what 'causal contribution' included, and how to allocate responsibility. The legal apparatus produces elaborate doctrinal reasoning about causation while the actual causal structures in complex systems (AI, distributed infrastructure, supply chains) resist clear attribution. Theater increased over the interval (0.35 → 0.58) as systems became more complex and liability allocation became more contested.",
+    "perspectival_gap": "This constraint demonstrates a radical perspectival divide driven by structural position in the value chain and exit options. The platform developer (institutional/arbitrage) experiences shared liability as a coordination mechanism that they control — they write the indemnification clauses, set the liability caps, and retain architectural choices. The deployer (moderate/constrained) experiences shared liability as a mixed burden — they benefit from rapid deployment capability but bear significant operational liability exposure. The distributed supplier (powerless/trapped) experiences shared liability as pure extraction — they cannot negotiate, cannot exit, and cannot predict or control their liability exposure. The insurance market experiences shared liability as a coordination + information extraction opportunity. The legal apparatus experiences its own doctrine as degraded (theater-heavy, ambiguous, retroactive). The natural law view risks seeing causation as an objective feature to which liability naturally aligns, missing that causation is itself a doctrinal construct with alternatives.",
+    "directionality_logic": "Directionality values are derived from structural position and exit options. Platform developers (beneficiary + arbitrage exit) get low d values (~0.15) — they experience low or negative effective extraction because they control the rules. Deployers (victim + constrained exit) get moderate-high d values (~0.60) — they experience significant extraction but retain some agency through regulatory and market choices. Distributed suppliers (victim + trapped exit) get very high d values (~0.92) — they experience maximum extraction with zero agency. The insurance market (beneficiary + constrained exit) gets moderate d (~0.50) — they benefit from risk pooling but face regulatory and competitive constraints. The legal doctrine itself (beneficiary + arbitrage exit, creates theater) gets moderate d (~0.55) — it coordinates doctrine but extracts through billable litigation. The engine applies the sigmoid f(d) to convert these directionality values into experienced extractiveness modifiers, which then scale base extractiveness via χ = ε × f(d) × σ(S). Large scope (global) multiplier σ(1.2) amplifies the constraint's effective extraction because regulatory arbitrage and supply chain opacity increase extraction hideability.",
+    "mandatrophy_analysis": "The shared_liability reading resolves mandatrophy by showing that joint liability is genuinely tangled — it coordinates safety incentives (developers and deployers both invest in safety) while simultaneously extracting compliance costs asymmetrically. The classification is stable across base properties (ε=0.52, χ in the tangled_rope range) but produces a perspectival gap: institutional beneficiaries (developers, courts) see rope or scaffold; victims with exit (deployers) see tangled_rope; trapped victims (suppliers) see snare; the analytical observer risks seeing natural law. The mandatrophy is not 'which type is correct?' but 'who controls the allocation rules and who bears the burden?' The shared_liability reading succeeds as a doctrinal choice precisely because it can be framed as coordination (safety incentives for all) while actually concentrating extraction on trapped actors (suppliers) and shifting burden from beneficiaries (developers) to constrained victims (deployers).",
+    "kernel_context": "This constraint is the 'shared_liability' reading of the contested 'liability_attribution' kernel. The kernel is the foundational commitment about how legal responsibility distributes when multiple parties contribute to technology harm. Three distinct readings compete: (1) developer_liability — places primary responsibility on technology creators for design and control; (2) deployer_liability — places primary responsibility on operational actors who choose deployment contexts; (3) shared_liability (this reading) — distributes responsibility jointly based on causal contribution and control. The readings do not form a linear spectrum but rather coexist across different judicial coalitions, regulatory regimes, and doctrinal traditions. The shared_liability reading operationalizes 'causal contribution' and 'control' as the allocation vectors, which produces a tangled structure: genuine coordination incentives (both parties invest in safety) coupled with asymmetric extraction (burden concentrates on parties with less power). The sibling readings would produce different extraction profiles and different perspectival gaps: developer_liability would classify as rope or snare depending on whether developers can escape liability; deployer_liability would classify as tangled_rope or snare depending on deployers' bargaining power."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "liability_attribution__developer_liability",
+      "liability_attribution__deployer_liability"
+    ],
+    "dual_formulation_note": "The shared_liability reading is part of a constraint family decomposing the liability_attribution kernel into three structurally distinct readings. Each reading (shared, developer-only, deployer-only) has different ε, different beneficiary/victim structures, and different dominant perspectives. The readings coexist in live judicial and regulatory competition — different courts and jurisdictions adopt different readings. This story captures the shared_liability reading only; sibling stories capture developer_liability and deployer_liability readings. Affects edges show causal influence: shared_liability impacts both alternatives by defining the reference point against which they compete."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    },
+    {
+      "power_atom": "powerless",
+      "d_value": 0.93
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "joint_causal_responsibility",
+    "drift_state": {
+      "moment": "contemporary_complex_systems",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "liability_attribution__developer_liability",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "liability_attribution__deployer_liability",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "causal_contribution_basis_for_allocation",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "control_as_liability_anchor",
+        "role": "secondary",
+        "status": "overridden",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  }
+}

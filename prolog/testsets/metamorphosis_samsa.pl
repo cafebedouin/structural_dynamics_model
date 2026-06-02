@@ -1,0 +1,303 @@
+% ============================================================================
+% CONSTRAINT STORY: metamorphosis_samsa
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_metamorphosis_samsa, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: metamorphosis_samsa
+ *   human_readable: Samsa Family Debt Bondage and Biological Precarity
+ *   domain: economic/social/biological
+ *
+ * SUMMARY:
+ *   Gregor Samsa's biological transformation into a 'horrible vermin' exposes
+ *   and intensifies a pre-existing debt bondage that structures the entire
+ *   family's economic and social existence. Before the transformation (t=0),
+ *   the constraint operated as a standard labor-debt mechanism: Gregor's
+ *   income as a traveling salesman justified the creditor's claim and
+ *   maintained the family's precarious respectability within the boarding
+ *   house. The transformation (t=2) reveals that the family's entire
+ *   structure — their housing, their social standing, their parental
+ *   authority over Gregor, their sense of obligation — rests on the
+ *   extraction of Gregor's labor capacity. When that capacity is removed, the
+ *   constraint shifts from a hybrid coordination-extraction system (the
+ *   family coordinated around Gregor's income) to a pure extraction mechanism
+ *   (the debt persists, but Gregor cannot service it, making him a pure
+ *   liability in the family's accounting). By t=5, the constraint has
+ *   hardened into a Snare: Gregor is imprisoned, the family is suppressed
+ *   through economic necessity and shame, the debt cannot be repaid, and no
+ *   member can exit without catastrophic loss. The transformation is not the
+ *   cause of the bondage; it is the revelation of bondage that was always
+ *   structural.
+ *
+ * KEY AGENTS:
+ *   - Gregor Samsa: Primary victim (powerless/trapped) — debt collateral whose biological incapacity transforms him from producer to pure liability within the family's extractive accounting
+ *   - The Father (Mr. Samsa): Primary beneficiary and enforcer (institutional/arbitrage, with identity_locked dynamics) — maintains authority through debt management and Gregor's domination; intensifies enforcement even after Gregor's incapacitation
+ *   - The Mother (Mrs. Samsa): Secondary victim and ambivalent enforcer (moderate/constrained) — trapped in family structure; experiences Gregor's transformation as both tragedy and violation of the constraint's implicit terms
+ *   - Grete Samsa: Transitional victim becoming secondary producer (moderate/constrained) — moves into servant labor; both constrained by family obligation and gaining relative agency through Gregor's incapacitation
+ *   - The Creditor Class: Structural beneficiary (institutional/arbitrage) — claims legal right to extract family income; enforcement is delegated to the father but backed by property seizure threat
+ *   - The Boarding House and Social Respectability Apparatus: Institutional enforcer (institutional/constrained) — maintains the physical space and social conditions that conceal the constraint; enforcement through visibility and shame
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(metamorphosis_samsa, 0.68).
+domain_priors:suppression_score(metamorphosis_samsa, 0.78).
+domain_priors:theater_ratio(metamorphosis_samsa, 0.55).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(metamorphosis_samsa, extractiveness, 0.68).
+narrative_ontology:constraint_metric(metamorphosis_samsa, suppression_requirement, 0.78).
+narrative_ontology:constraint_metric(metamorphosis_samsa, theater_ratio, 0.55).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(metamorphosis_samsa, snare).
+narrative_ontology:human_readable(metamorphosis_samsa, "Samsa Family Debt Bondage and Biological Precarity").
+narrative_ontology:topic_domain(metamorphosis_samsa, "economic/social/biological").
+
+domain_priors:requires_active_enforcement(metamorphosis_samsa).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(metamorphosis_samsa, creditor_class).
+narrative_ontology:constraint_beneficiary(metamorphosis_samsa, parental_authority).
+narrative_ontology:constraint_victim(metamorphosis_samsa, gregor_samsa).
+narrative_ontology:constraint_victim(metamorphosis_samsa, family_economic_autonomy).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: GREGOR SAMSA POST-TRANSFORMATION (SNARE) — Trapped by biological incapacity and debt obligation. The transformation removes his capacity to service the debt while simultaneously intensifying the family's dependency on the debt structure itself. No exit available: cannot work (biologically changed), cannot speak (degraded), cannot escape (confined). The extraction is total — his body and labor were the collateral; their absence leaves him a pure liability in the family's accounting.
+constraint_indexing:constraint_classification(metamorphosis_samsa, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: SAMSA FAMILY ECONOMIC UNIT (SNARE) — Trapped in a structure where debt service requires a specific body (Gregor's) performing a specific function (traveling salesman income). The transformation reveals the constraint's true severity: the family is not just in debt, but debt-bound to Gregor's biological capacity. Without him, they face immediate destitution. The only available responses are degradation (Grete taking work), liquidation of assets, or absorption into the creditor system. Suppression is maximal — no alternatives exist within the family's economic reach.
+constraint_indexing:constraint_classification(metamorphosis_samsa, snare,
+    context(agent_power(powerless),
+            time_horizon(generational),
+            exit_options(trapped),
+            spatial_scope(local))).
+
+% PERSPECTIVE 3: CREDITOR CLASS & PARENTAL AUTHORITY (ROPE) — Net beneficiaries experiencing the constraint as a coordination mechanism for extracting family labor. The father's authority is legitimized through debt management; the creditor's claim is legitimized through the father's enforcement. The transformation strengthens their position by making the family's dependency more acute and unconcealed. They maintain arbitrage (can exit the relationship at any time, absorb the remaining collateral). The constraint functions for them as pure coordination of extraction.
+constraint_indexing:constraint_classification(metamorphosis_samsa, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(local))).
+
+% PERSPECTIVE 4: GRETE SAMSA (TANGLED ROPE) — Constrained by family obligation and emerging economic precarity, but also gains relative agency through Gregor's incapacitation. She moves into the servant labor market, losing innocence but gaining negotiating position (she becomes the family's only viable income generator). The constraint exhibits both coordination (family survival requires her work) and extraction (her labor value is extracted by parental authority and creditors). She has constrained exit options (marriage, institutional service, continuing household labor) but not no exit. Mixed experience: genuine new responsibility and some expansion of horizon, alongside exploitation.
+constraint_indexing:constraint_classification(metamorphosis_samsa, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(local))).
+
+% PERSPECTIVE 5: BOARDING HOUSE & RESPECTABILITY APPARATUS (PITON) — The family maintains appearance of respectability (they keep house, maintain the boarding arrangement) long after its economic foundation has cracked. The constraint operates through performative stability — keeping Gregor hidden, maintaining household rituals, performing normalcy. Theater ratio is moderate (0.55) because the family's actual work is significant, but much of their effort goes toward concealment and appearance management. The ritual persists through institutional inertia: the boarding arrangement provides housing in exchange for propriety; the family performs propriety despite economic collapse. The constraint has functionally degraded but persists through repeated performance.
+constraint_indexing:constraint_classification(metamorphosis_samsa, piton,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(local))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER / BIOLOGICAL DETERMINISM VIEW (MOUNTAIN) — From a civilizational perspective, the constraint appears as an immutable natural law: a living organism that loses productive capacity becomes a pure liability to its economic dependents. The transformation reveals an allegedly invariant biological fact — that humans who cannot work are burdens. However, this naturalizes what is actually a constructed constraint: the contingent dependency of family survival on one individual's labor capacity, the absence of alternative support structures, and the creditor's ability to claim that body as collateral. The engine will identify this as a false summit, revealing that 'biological burden' is a social classification, not a natural law.
+constraint_indexing:constraint_classification(metamorphosis_samsa, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(metamorphosis_samsa_tests).
+
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(metamorphosis_samsa, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(metamorphosis_samsa, TypeOther, context(agent_power(institutional), _, _, _)),
+    TypePowerless \= TypeOther.
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(metamorphosis_samsa, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(metamorphosis_samsa, TR),
+    TR >= 0.70.
+
+:- end_tests(metamorphosis_samsa_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness (0.68): High. The constraint extracts substantial surplus value from Gregor's labor throughout his productive period; the transformation reveals this as an indefinite extraction mechanism rather than a repayable debt. The family's response (intensified shame, confinement, economic desperation) indicates the debt was never structured to be repaid — it was structured to claim Gregor's entire productive capacity indefinitely. The rise from 0.42 (t=0) to 0.68 (t=5) reflects the constraint's true character becoming visible: before transformation, Gregor could rationalize his sacrifice as temporary (paying down the debt); after transformation, the extraction structure stands exposed. Suppression (0.78): Very high. Suppression mechanisms include: (1) economic necessity — without Gregor's income, the family faces destitution, making debt compliance mandatory; (2) confinement — Gregor is literally imprisoned in his room, unable to speak for himself; (3) shame — the family's social standing depends on concealment, making Gregor's existence a threat to their honor; (4) parental authority — the father's domination is legitimized through debt management, suppressing any organized family resistance. The rise from 0.48 (t=0) to 0.78 (t=5) reflects that suppression was always present (before the transformation, the family's obligation to Gregor's income was psychologically and economically inescapable) but becomes explicit and violent after the transformation. Theater ratio (0.55): Moderate. Before transformation, the family's work is substantially functional — Gregor's employment is real, the debt payments are real, the coordination around income is necessary. After transformation, theater increases slightly as the family invests effort in concealment (keeping Gregor hidden, maintaining boarding house propriety despite crisis) while the underlying economic problem (the unpayable debt) becomes increasingly performative. The ratio remains moderate (not Piton-level degradation) because the family's labor remains genuinely economically necessary for survival, even as it ceases to service the original debt. Claimed type (Snare): The constraint exhibits pure extraction with minimal coordination function post-transformation, high suppression, and no exit pathway for the primary victim. Pre-transformation, the constraint could be read as Tangled Rope (genuine income coordination + asymmetric extraction), but the transformation reveals the extraction as the true stable structure.
+ *
+ * PERSPECTIVAL GAP:
+ *   The perspectival gap between Gregor and the father is maximal: Gregor sees a Snare (χ ≈ 0.97, high extraction, no exit), while the father sees Rope (χ ≈ -0.08, minimal extraction, high exit capacity). This is not a disagreement about facts — both accurately perceive their structural position — but a revelation that the same constraint structure is experienced as opposite types depending on whether you are beneficiary or victim. The gap widens as the transformation proceeds: before transformation, Gregor could rationalize the constraint as temporary (paying down a debt), and the father could rationalize it as necessary (maintaining family respectability). After transformation, Gregor perceives the constraint as permanent bondage, while the father intensifies enforcement, revealing his commitment as identity-locked rather than instrumental (he doubles down on debt management even when it becomes economically irrational). Grete's perspective is transitional: she initially experiences the constraint as family duty (victim position) but gradually perceives agency-enabling (becoming the new income source, which gives her negotiating power not available to Gregor). This suggests the constraint's Snare classification is not invariant across victims — some victims can organize coalition (Grete) while others are isolated (Gregor).
+ *
+ * DIRECTIONALITY LOGIC:
+ *   The father's perspective requires close analysis because it exhibits both institutional power (beneficiary status) and identity-lock dynamics. His statement that he still owes money after years of Gregor's service suggests the debt structure is not instrumentally rational (a typical creditor would resolve a paid debt) but identity-constituting (the father's role as debtor-authority is his social identity). This maps to an identity_locked exit option rather than standard arbitrage: he could theoretically walk away from the debt (he is institutional/powerful), but cannot do so without ceasing to be the father as he has constituted himself. This makes his directionality more complex: d is low (beneficiary, arbitrage baseline ≈ 0.05), but the identity-lock modulates his experienced χ upward — he experiences the constraint as more extractive/necessary than pure arbitrage power would suggest, because his identity is fused with the extraction role. This is the diagnostic signal the system is designed to detect: when an institutional beneficiary experiences a constraint as more necessary than their power position would suggest, identity capture is operating. Declare this with identity_locked exit options and note in commentary.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   This constraint resolves the mandatrophy by demonstrating that Snare is the correct classification at the analytical/civilizational level. The temptation is to classify it as Tangled Rope pre-transformation (genuine income coordination + asymmetric extraction) and see the transformation as shifting it to Snare. But careful analysis reveals that the Rope coordination element was always asymmetric and extractive in structure — it was only experienced as coordination by the beneficiary because it functioned. The transformation does not change the constraint's type; it reveals the constraint's true character. A Tangled Rope has a genuine dual function: coordination that would be selected even absent extraction, and extraction that adds asymmetry. The Samsa constraint fails this test: the family's 'coordination' is imposed by debt obligation, not freely selected. Without the debt (without the extraction), the family would not coordinate around Gregor's specific travel-salesman role. Therefore, the constraint is structurally a Snare at all times; the transformation merely makes this visible. The mandatrophy is resolved by asserting that extraction disguised as coordination is still extraction, and that the correct classification is the one that holds across all changes in observability (pre- and post-transformation).
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    biological_causation_vs_institutional_contingency,
+    'Is Gregor''s status as a pure liability to the family a consequence of biological incapacity (natural law), or a consequence of the family''s structural dependency on a single income source within a debt-bound system (contingent institutional arrangement)?',
+    'Counterfactual analysis: if the family were not debt-bound, would Gregor''s biological transformation result in the same economic catastrophe? If universal support structures existed, would he become a pure liability? If the creditor had not claimed debt against his labor, what would his status be?',
+    'If natural law: Gregor''s transformation necessarily causes family destitution regardless of institutional context. If contingent: the transformation exposes and intensifies a pre-existing extractive structure; the catastrophe is institutional, not biological. Classification shifts from mountain (inescapable liability) to snare (extractive debt bondage) at the analytical context.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(biological_causation_vs_institutional_contingency, conceptual, 'Whether Gregor''s liability status is biologically determined or institutionally contingent').
+
+omega_variable(
+    suppression_mechanism_internalization,
+    'To what degree is the Samsa family''s suppression structural (creditor enforcement, economic necessity, physical confinement of Gregor) versus internalized (the family has adopted the creditor''s and society''s view that Gregor is a burden and disgrace, making emotional compliance with the debt structure)?',
+    'Examine family members'' statements and actions: Do they experience suppression as external coercion (if Gregor''s income stopped, creditors will seize property, they will lose housing)? Or as moral internalization (Gregor''s transformation is shameful; the family''s duty is to conceal him and preserve respectability at any cost)? Post-constraint narrative: if suppression is internalized, it persists after Gregor''s death even when the economic crisis resolves.',
+    'If primarily structural: suppression is the creditor''s active enforcement machinery (χ remains high). If primarily internalized: the family carries suppression with them; they have become their own enforcers. Partial internalization indicates identity capture — the family''s self-concept depends on their status as debtors and respectable householders, making exit cognitively impossible even when economically possible.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_mechanism_internalization, empirical, 'Proportion of suppression that is structural versus internalized').
+
+omega_variable(
+    debt_collateral_nature,
+    'What exactly was collateralized by Gregor''s labor — the original debt amount, or his future earning capacity itself? Is the debt a fixed obligation, or does it expand to claim whatever surplus value his labor generates?',
+    'Historical examination of the debt contract (if available) or family narrative: Did the creditor claim a fixed repayment schedule, or did the father (as household authority) structure the arrangement as indefinite extraction of Gregor''s earnings? Does the father''s attitude suggest he views the debt as repayable, or as a permanent structure extracting from Gregor''s biological capacity for work?',
+    'If fixed debt: the constraint is theoretically repayable; it is a Tangled Rope (extraction with a potential exit path). If indefinite: the constraint is structurally a Snare (extraction that persists regardless of payment). The father''s statement that he still owes money after years of Gregor''s service suggests indefinite extraction (Snare logic).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(debt_collateral_nature, empirical, 'Whether the debt is a fixed obligation or indefinite extraction of earning capacity').
+
+omega_variable(
+    identity_lock_mechanism_father,
+    'Is the father''s commitment to the debt structure a constrained choice (high cost to exit, but exit is possible) or an identity-locked commitment (the father''s self-concept as household authority, provider, and social equal depends on maintaining the debt structure and the domination of Gregor)?',
+    'Examine the father''s actions and statements: Does he treat the debt as a burden he wishes to escape? Or does he treat it as the organizing principle of his authority and family role? After Gregor''s transformation, does the father accept relief from the extraction obligation, or does he intensify enforcement (demanding Gregor remain productive despite incapacity)? Post-Gregor-death narrative: does the father''s identity collapse, suggesting identity fusion with the extraction structure?',
+    'If constrained exit: the father could theoretically reorganize family structure without loss of core identity. If identity-locked: the father''s identity is constituted through domination and debt management; exit would require becoming a different person. Identity-locked status implies the constraint persists even when economically irrational, because the father cannot perceive it as optional. Classification of the father''s perspective shifts from institutional/arbitrage (rational extraction) to institutional/identity_locked (capture), changing his experienced χ and the perspectival gap.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(identity_lock_mechanism_father, conceptual, 'Whether the father''s debt-enforcement is a constrained choice or identity-locked commitment').
+
+omega_variable(
+    grete_coalition_formation,
+    'Is Grete''s emergence as an economic actor a genuine coalition building against the constraint (her labor could enable family exit from debt), or is she being incorporated into the same extractive structure (her labor now services the debt Gregor''s incapacity exposed)?',
+    'Examine whether Grete''s economic activity creates new exit options for the family, or whether it simply reproduces the Gregor pattern with a different body. Does the family''s acquisition of Grete''s income increase their negotiating power with the creditor, or does it increase the family''s total debt-service capacity, making them more extractable? Do other family members propose using Grete''s independence to escape the debt structure, or do they propose deepening family obligation to consolidate her earnings?',
+    'If coalition building: Grete represents an organizational possibility; the constraint could shift toward Tangled Rope (mixed coordination and extraction) or even Scaffold (temporary problem being solved). If incorporation: Grete''s labor is simply the next body claimed by the extractive structure; the Snare persists. This affects the medium-term classification and the likelihood of structural resolution.',
+    confidence_without_resolution(low)
+).
+
+narrative_ontology:omega_variable(grete_coalition_formation, empirical, 'Whether Grete''s economic emergence enables coalition or deepens extraction').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(metamorphosis_samsa, 0, 5).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(samsa_theater_t0_prechange, metamorphosis_samsa, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(samsa_theater_t2_immediate, metamorphosis_samsa, theater_ratio, 2, 0.48).
+narrative_ontology:measurement(samsa_theater_t5_full, metamorphosis_samsa, theater_ratio, 5, 0.55).
+
+% Extraction over time
+narrative_ontology:measurement(samsa_extract_t0_prechange, metamorphosis_samsa, base_extractiveness, 0, 0.42).
+narrative_ontology:measurement(samsa_extract_t2_immediate, metamorphosis_samsa, base_extractiveness, 2, 0.55).
+narrative_ontology:measurement(samsa_extract_t5_full, metamorphosis_samsa, base_extractiveness, 5, 0.68).
+
+% Suppression requirement over time
+narrative_ontology:measurement(samsa_supp_t0_prechange, metamorphosis_samsa, suppression_requirement, 0, 0.48).
+narrative_ontology:measurement(samsa_supp_t2_immediate, metamorphosis_samsa, suppression_requirement, 2, 0.63).
+narrative_ontology:measurement(samsa_supp_t5_full, metamorphosis_samsa, suppression_requirement, 5, 0.78).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(metamorphosis_samsa, resource_allocation).
+narrative_ontology:affects_constraint(metamorphosis_samsa, parental_authority_patriarchal).
+narrative_ontology:affects_constraint(metamorphosis_samsa, boarding_house_social_control).
+narrative_ontology:affects_constraint(metamorphosis_samsa, travel_salesman_labor_precarity).
+
+% DUAL FORMULATION NOTE:
+% The Samsa constraint family decomposes into three structurally distinct constraints: (1) metamorphosis_samsa (this story, ε=0.68) — the debt bondage mechanism itself; (2) parental_authority_patriarchal (ε=0.55) — the legitimacy structure that authorizes the father's enforcement, a Tangled Rope of genuine household coordination and patriarchal extraction; (3) boarding_house_social_control (ε=0.40) — the performative respectability apparatus, a Piton of degraded social gatekeeping. The debt bondage is upstream of the authority legitimacy and downstream of the labor precarity that makes Gregor vulnerable to creditor claims in the first place. Each has its own ε and classification; they are linked by causal and institutional dependency, not by being multiple readings of one constraint.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(metamorphosis_samsa, institutional, 0.18).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

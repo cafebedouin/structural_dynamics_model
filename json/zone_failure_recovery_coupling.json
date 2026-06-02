@@ -4,23 +4,24 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "zfrc"
+    "measurement_id_prefix": "zfrc",
+    "story_uid": "493f7463-6b5c-48db-af28-83c965968714"
   },
   "base_properties": {
-    "extractiveness": 0.58,
+    "extractiveness": 0.52,
     "suppression": 0.62,
-    "theater_ratio": 0.55,
+    "theater_ratio": 0.38,
     "claimed_type": "tangled_rope",
-    "human_readable": "Zone Failure Recovery Coupling",
+    "human_readable": "Zone Failure Recovery Coupling in Power Grid Infrastructure",
     "topic_domain": "infrastructure/systems_reliability",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "zone_operators",
-      "system_resilience_infrastructure"
+      "grid_operators",
+      "load_balancing_algorithms"
     ],
     "victims": [
-      "adjacent_zone_operators",
-      "end_users_in_cascading_zones"
+      "adjacent_zones",
+      "distributed_generation_operators"
     ]
   },
   "perspectives": [
@@ -30,17 +31,17 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "regional",
-      "label": "End User in Cascading Failure",
-      "comment": "PERSPECTIVE 1: END USER IN CASCADING FAILURE (SNARE) \u2014 Cannot exit the coupled failure chain; bears full cost of zone failures in adjacent sectors. No alternative infrastructure; geographic and economic dependency. Maximum extraction with minimal coordination benefit. The user's only 'choice' is to absorb the outage."
+      "label": "The Adjacent Zone Under Cascade",
+      "comment": "PERSPECTIVE 1: ADJACENT ZONE UNDER CASCADE (SNARE) — No exit from electromagnetic coupling; load-shedding cascades are mandatory physics consequences. When Zone A fails, Zone B's protective relays shed load automatically. Zone B's operators cannot refuse this extraction — the coupling is physical law. Maximum suppression: no alternative exists except permanent disconnection from the grid."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
+      "agent_power": "organized",
+      "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "Adjacent Zone Operator",
-      "comment": "PERSPECTIVE 2: ADJACENT ZONE OPERATOR (TANGLED ROPE) \u2014 Constrained by technical coupling and regulatory coordination requirements, but also benefits from shared redundancy infrastructure and cross-zone emergency protocols. Must coordinate recovery sequences (coordination gain) while bearing cost of dependent zones' failures (extraction). Medium agency through sectoral coordination bodies."
+      "label": "Distributed Generation Operators",
+      "comment": "PERSPECTIVE 2: DISTRIBUTED GENERATION OPERATORS (TANGLED ROPE) — Coordinated with the grid (must synchronize frequency and phase) but asymmetrically extracting from them. When cascading failures occur, distributed resources are disconnected by protective relays before conventional generators. Generators benefit from grid access (coordination) but bear disproportionate shedding burden (extraction). Exit is costly (islanding requires specialized infrastructure; grid disconnection ends revenue)."
     },
     {
       "classification_type": "rope",
@@ -48,26 +49,17 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "System Resilience Authority",
-      "comment": "PERSPECTIVE 3: SYSTEM RESILIENCE AUTHORITY (ROPE) \u2014 Benefits from coordination of distributed recovery protocols. Views zone coupling as a solvable coordination problem with technical solutions (redundancy standards, communication protocols, priority restoration rules). Experiences the constraint as coordination infrastructure itself \u2014 the mechanisms they deploy ARE the solution."
+      "label": "Centralized Grid Operator",
+      "comment": "PERSPECTIVE 3: CENTRALIZED GRID OPERATOR (ROPE) — Experiences the coupling as coordination mechanism. Their authority to execute automated load-shedding protocols solves a genuine collective action problem (preventing total blackout cascades). They have arbitrage options: modify relay parameters, adjust zone boundaries, deploy HVDC interconnections. Net beneficiary — the coupling structures their control authority."
     },
     {
       "classification_type": "scaffold",
-      "agent_power": "organized",
+      "agent_power": "powerful",
       "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "Grid Decentralization Coalition",
-      "comment": "PERSPECTIVE 4: GRID DECENTRALIZATION COALITION (SCAFFOLD) \u2014 Organized agents (renewable microgrids, distributed storage, local resilience networks) see zone coupling as a temporary failure mode being solved by decentralization. Constraint has sunset: as local generation and storage mature, inter-zone dependency weakens. Current high suppression will decline as agents gain technical exit options."
-    },
-    {
-      "classification_type": "piton",
-      "agent_power": "institutional",
-      "time_horizon": "civilizational",
-      "exit_options": "arbitrage",
+      "exit_options": "mobile",
       "spatial_scope": "global",
-      "label": "Legacy Centralized Grid",
-      "comment": "PERSPECTIVE 5: LEGACY CENTRALIZED GRID (PITON) \u2014 The centralized grid architecture persists through institutional inertia despite known inefficiency at managing zone coupling. Regulatory frameworks, utility monopolies, and sunk infrastructure investments maintain the topology. Recovery protocols (automated load-shedding, demand response) are largely performative theater \u2014 they manage symptoms rather than address architectural coupling. Zone coupling is a feature of the degraded system, not a bug that gets fixed."
+      "label": "Microgrid and Islanding Technology Developers",
+      "comment": "PERSPECTIVE 4: MICROGRID AND ISLANDING DEVELOPERS (SCAFFOLD) — See the cascade coupling as a temporary coordination problem with a sunset. Distributed control, real-time voltage support, and intentional islanding protocols are building alternative failure pathways that don't propagate cascades across zones. Exit path is structural and visible (10-20 year transition to resilient distributed grids). Theater is low because the technical pathway is concrete."
     },
     {
       "classification_type": "mountain",
@@ -75,114 +67,147 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "Analytical Observer (Physical Law View)",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / PHYSICAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, power flow coupling between zones is a fundamental constraint of grid physics: electrical current follows least-resistance paths regardless of zoning boundaries. Kirchhoff's laws create inherent interdependence. This view naturalizes zone coupling as a law of physics rather than a contingent institutional choice. The engine's false summit detector will reveal whether this is genuine physical law or naturalization of architectural choices."
+      "label": "The Analytical Observer (Physics View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a universalizable perspective, electromagnetic coupling between adjacent power zones is a consequence of Kirchhoff's current law and nodal voltage equations. The interdependence is immutable at the physics level. However, the base properties show institutional beneficiaries, organized victims, and active enforcement — indicators of a false summit where physics gets naturalized to justify human-designed protection schemes."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Legacy Relay Configuration Standards",
+      "comment": "PERSPECTIVE 5: LEGACY RELAY CONFIGURATION STANDARDS (PITON) — The specific protective relay algorithms (over-current, under-voltage, rate-of-change-of-frequency thresholds) are institutionally maintained despite better alternatives being known. Utilities keep older relay settings in place due to standardization costs and certification delays. The theater is moderate (the relays function, but newer algorithms could prevent some cascades). Piton classification reflects institutional inertia rather than functional necessity."
     }
   ],
   "omegas": [
     {
-      "id": "architecture_vs_physics_coupling",
-      "question": "Is zone failure coupling primarily a constraint of electromagnetic physics or a consequence of centralized grid architecture design?",
-      "resolution_mechanism": "Comparative analysis of grid architectures (centralized vs distributed microgrids) and their susceptibility to cascading failures; measurement of coupling strength in islanded vs interconnected networks",
-      "impact": "If physics-driven: mountain classification valid. If architecture-driven: the constraint is contingent and should decompose into separate stories for circuit topology, regulatory boundaries, and economic incentives. Foundational to whether the 'law of nature' framing is accurate.",
+      "id": "physics_vs_design_boundary",
+      "question": "Is zone failure coupling a consequence of Kirchhoff's laws (immutable) or a consequence of centralized relay design (contingent)?",
+      "resolution_mechanism": "Analyze alternative grid architectures (peer-to-peer HVDC, mesh topologies with distributed protection logic). If cascades persist despite different topology and control schemes, the coupling is physics-constrained. If cascades disappear with alternative architectures, the coupling is design-contingent.",
+      "impact": "If physics-constrained: mountain classification is justified (though beneficiaries suggest false summit). If design-contingent: tangled-rope or scaffold classification is appropriate, and the coupling is subject to policy change.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether zone coupling is physical law or architectural choice"
+      "description": "Whether coupling is immutable physics or contingent design"
     },
     {
-      "id": "cascading_failure_predictability",
-      "question": "Are cascading failures between zones predictable and preventable through system design, or are they fundamentally stochastic phenomena that exceed operator control?",
-      "resolution_mechanism": "Historical analysis of major cascading events; correlation between prevention protocol deployment and actual cascade prevention; machine learning analysis of failure prediction accuracy at different lead times",
-      "impact": "If predictable: coordination mechanisms (rope/tangled rope) are viable and suppression is policy-contingent. If stochastic: suppression is inherent and snare classification is permanent. Determines whether the scaffold sunset is realistic or aspirational.",
+      "id": "distributed_generation_shedding_prioritization",
+      "question": "Why are distributed generators shed before conventional generators in cascade scenarios? Is this a required consequence of physical coupling or a choice embedded in relay algorithm design?",
+      "resolution_mechanism": "Historical analysis of relay parameter selection; expert elicitation from protection engineers on design rationale; simulation of alternative shedding priorities (e.g., shed load uniformly, shed large generators first, shed conventional generators first). If alternative shedding orders prevent cascades, the current prioritization is design choice; if all alternatives fail similarly, the prioritization reflects inevitable physics constraints.",
+      "impact": "If design choice: tangled-rope classification confirmed (asymmetric extraction via algorithm choice). If inevitable: snare classification for distributed generators (no escape from physics-mandated shedding). If hybrid: the coupling extracts via both physics and design, making mandatrophy analysis depend on which level of abstraction is being addressed.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Predictability and preventability of cascading zone failures"
+      "description": "Shedding prioritization as physics consequence vs. algorithmic choice"
     },
     {
-      "id": "decentralization_technical_viability",
-      "question": "Can distributed renewable generation and local storage actually decouple zone dependencies at scale, or does the intermittency problem recreate coupling through demand-side coordination requirements?",
-      "resolution_mechanism": "Modeling of large-scale microgrid scenarios; empirical data from deployed microgrids on inter-zone coordination frequency; analysis of whether intermittency management simply shifts coupling from supply-side (generation) to demand-side (storage coordination)",
-      "impact": "If decentralization viable: scaffold sunset is structural. If intermittency recreates coupling: the constraint evolves rather than resolves \u2014 same extraction mechanism under different labels. Affects mandatrophy resolution.",
+      "id": "islanding_technical_readiness",
+      "question": "Can distributed microgrids actually island successfully and achieve stable operation without central grid coordination? At what scale and cost?",
+      "resolution_mechanism": "Technical performance data from pilot microgrids (Denmark, Japan, USA) on islanding success rates, frequency stability without external support, cost per megawatt. Deployment timeline estimates for reaching 20-30% of grid capacity as managed microgrids.",
+      "impact": "If islanding is mature and cost-effective: scaffold sunset is real, and the coupling is temporarily necessary but structurally doomed. If islanding requires expensive infrastructure or unstable operation: scaffold perspective is aspirational, and the coupling persists indefinitely (reclassifies as permanent tangled-rope or snare).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Technical viability of decentralization to escape zone coupling"
+      "description": "Technical and economic viability of microgrid islanding as escape path"
     },
     {
-      "id": "regulatory_capture_in_resilience",
-      "question": "Do grid operators use zone-coupling recovery protocols as regulatory theater to avoid structural grid upgrades and distributed generation that would reduce their operational control?",
-      "resolution_mechanism": "Analysis of investment allocation (spending on redundancy/protocols vs grid topology modernization); correlation between regions with strong decentralization policies and regions with aging zone-coupled grids; rate of protocol obsolescence replacement vs actual failure prevention",
-      "impact": "If regulatory capture: piton classification confirmed and the institutional identity_locked dynamics explain why the constraint persists despite technical alternatives. Suppression is partly institutional choice rather than technical necessity. Affects beneficiary identification.",
+      "id": "centralized_optimization_necessity",
+      "question": "Does centralized grid-level optimization (demand-response, generator scheduling, cross-zone power flows) require the zone-coupling architecture, or is it an artifact of how current markets and regulatory frameworks are structured?",
+      "resolution_mechanism": "Analysis of alternative market designs (localized peer-to-peer energy trading, agent-based grid optimization, fully distributed economic dispatch). Simulation comparing social cost (blackout risk, generation cost) under centralized vs. distributed dispatch. Feasibility assessment of regulatory redesign required for each alternative.",
+      "impact": "If centralized optimization is functionally necessary: the coupling is a rational (if extractive) solution to a real coordination problem. If centralized optimization is contingent: the coupling structure could be redesigned entirely, and the current beneficiary advantage (grid operators' authority) is policy-granted rather than inevitable.",
       "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether resilience protocols serve or obstruct decentralization"
+      "type_class": "conceptual",
+      "description": "Whether centralized optimization requires zone-coupled architecture"
+    },
+    {
+      "id": "false_summit_natural_law",
+      "question": "Is the zone coupling presented as a natural law of physics when in fact it is a human institutional choice embedded in protection relay algorithms and zone boundary definitions?",
+      "resolution_mechanism": "Examine regulatory filings, utility documentation, and grid standards (NERC, IEC 61850) for language naturalizing the coupling. Conduct interviews with engineers and policy makers: do they discuss the coupling as immutable physics or as a design choice? Cross-check with the empirical record: have relay parameters, zone boundaries, or protection schemes ever been changed to reduce cascades, and if so, with what consequences?",
+      "impact": "If false summit confirmed: the mountain perspective is a mislabeling of a contingent institutional arrangement. The coupling benefits certain actors (grid operators, incumbents) and harms others (adjacent zones, distributed generators). Reclassification would shift the policy debate from 'how do we live with immutable physics?' to 'who benefits from this design and who should we redesign for?'",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Zone coupling as false summit: naturalizing contingent institutional choice as physics"
     }
   ],
   "measurements": [
     {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
       "metric": "theater_ratio",
       "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
       "value": 0.35
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.45
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.55
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.42
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.5
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.58
+      "value": 0.38
     }
   ],
   "interval": {
     "start": 0,
-    "end": 20
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "Zone failure recovery coupling describes the structural interdependence between geographically separated power zones where the failure of one zone's generation or distribution infrastructure cascades to adjacent zones through power flow physics and automated recovery protocols. This constraint operates across multiple scales: the physics of electrical coupling (Kirchhoff's laws create mandatory interdependence), the engineering of protective relays (load-shedding algorithms that isolate failures), the economics of grid operation (operators balance local reliability against inter-zone coordination costs), and the regulation of energy markets (zoning boundaries often follow utility monopoly territories rather than electrical topology). The constraint exhibits tangled rope structure: genuine coordination benefits exist (shared redundancy, emergency protocols, pooled reserves) alongside asymmetric extraction (operators in failure zones control who bears cascading costs). Theater ratio has increased over the measurement interval as automated recovery protocols have become more complex and opaque, while extractiveness has risen as operators accumulate more discretion in recovery sequence decisions. The constraint faces structural pressure from decentralization (microgrids, distributed storage, local renewable generation) which would reduce inter-zone dependency, and from regulatory capture (operators may resist decentralization to preserve central coordination control).",
+    "narrative_context": "Zone failure recovery coupling in electrical power grids describes the structural interdependence between geographically separated transmission zones where the failure of one zone's generation or distribution infrastructure cascades to adjacent zones through power flow physics (Kirchhoff's laws create mandatory electromagnetic interdependence) and automated protection protocols (load-shedding relays disconnect distributed resources before conventional generators). This constraint exemplifies how the same structural phenomenon can classify as natural law, coordination mechanism, temporary problem, institutional inertia, or pure extraction depending on the observer's position and time horizon. The physics of electrical coupling is real — power flows follow voltage gradients regardless of zone boundaries. But the extraction mechanism (why distributed generators are shed before conventional generators, why load-shedding algorithms protect large centralized generation over distributed resources) is embedded in relay parameter choices, protection standards, and regulatory market design. The constraint exhibits the hallmark signature of a false summit: presented as immutable physics, but with identifiable beneficiaries (centralized grid operators, conventional generation monopolies) and victims (distributed generation, adjacent zones). The theater ratio (0.38) is relatively low because the protection relay logic has genuine function (preventing total blackout cascades), but recent technologies (microgrids, distributed frequency support, HVDC links with independent protection) show that equivalent function can be achieved with different architectural choices.",
     "key_agents": [
-      "Zone Operators: Primary beneficiaries (institutional/arbitrage) \u2014 control recovery protocols, can shift failure costs to adjacent zones through restoration sequencing decisions",
-      "End Users in Cascading Zones: Primary victims (powerless/trapped) \u2014 no alternative infrastructure; geographic dependency with no exit option",
-      "Adjacent Zone Operators: Secondary victims (moderate/constrained) \u2014 bear costs of upstream failures; also benefit from shared redundancy and can organize through sectoral coordination",
-      "System Resilience Authority: Institutional coordinator (institutional/arbitrage) \u2014 sets standard protocols; benefits from perceived control over distributed risk",
-      "Grid Decentralization Coalition: Organized agents (organized/constrained) \u2014 renewable developers, microgrids, storage operators with exit option through technical alternatives",
-      "Legacy Centralized Grid: Institutional beneficiary (institutional/arbitrage) \u2014 perpetuates zone-based operations; sees decentralization as threat to utility business model"
+      "Centralized Grid Operator: Primary beneficiary (institutional/arbitrage) — controls load-shedding authority, maintains operational centrality, benefits from information asymmetry about relay parameters and cascade thresholds",
+      "Conventional Generator Owners: Secondary beneficiary (powerful/arbitrage) — protected from shedding, benefit from preferential dispatch in recovery protocols, stable revenue during cascade events",
+      "Adjacent Zones: Primary victim (powerless/trapped) — electromagnetic coupling forces load shedding on them regardless of their generation capacity or demand levels; no exit from physics of shared transmission",
+      "Distributed Generation Operators: Secondary victim (organized/constrained) — first resources disconnected in cascades; asymmetric shedding burden; face relocation/islanding costs for exit",
+      "Microgrid Developers: Organized challenger (powerful/mobile) — see cascade coupling as temporary coordination problem; building alternative architecture (islanding, local control, peer-to-peer balancing) with 10-20 year sunset",
+      "Utility Relay Engineers: Institutional actor (institutional/constrained) — execute algorithms they inherited; parameter choices are path-dependent; standard certification creates barrier to algorithm evolution"
     ],
-    "logic_rationale": "Extractiveness (0.58): High-moderate. Zone operators capture substantial value through discretion in restoration sequencing \u2014 they can deprioritize restoration in adjacent zones to preserve their own load. The extraction is not total (genuine coordination protocols constrain this; regulators impose restoration priorities) but substantial. The measurement trajectory shows rising extractiveness as automation increases operator discretion through more complex algorithms. Suppression (0.62): High. Substantial barriers exist to exit: geographic dependency (users cannot relocate), regulatory barriers (grid codes require interconnection; decentralization faces utility opposition), technical barriers (intermittency requires coordination even in microgrids), and information barriers (cascade prediction is imperfect). Theater ratio (0.55): Moderate-high. Recovery protocols involve genuinely functional elements (automated load-shedding prevents cascade spread) but increasingly theatrical elements (complex optimization algorithms serve regulatory compliance more than improved outcomes; demand response theater creates illusion of user participation without actual control). The rising trajectory reflects that as automation advances, protocols become more opaque and performative.",
-    "perspectival_gap": "The gap between perspectives reveals how the same physical phenomenon is experienced as coordination (rope for system authority), mixed coordination/extraction (tangled rope for adjacent operators), pure extraction (snare for trapped users), temporary failure (scaffold for decentralizers), degradation (piton for centralized grid), and natural law (mountain for analytical observer). The gap is structurally meaningful: zone operators who control restoration protocols experience the constraint as coordinating distributed resources (rope); users at the end of restoration queues experience it as pure extraction (snare). The piton perspective identifies that recovery protocols are increasingly theatrical \u2014 they satisfy regulatory requirements and create appearance of control without preventing the underlying problem (zone coupling). The scaffold perspective is real but conditional \u2014 decentralization reduces coupling only if intermittency does not recreate it through demand-side coordination. The mountain perspective risks naturalizing architecture as physics.",
-    "directionality_logic": "Each agent's directionality is determined by their structural relationship to the failure-cost flow. Zone operators who control restoration protocols have low d (they are beneficiaries \u2014 costs flow away from them through protocol design). End users with no alternatives have high d (costs flow entirely toward them). Adjacent zone operators have medium-high d (they face costs from upstream failures but can organize and have some protocol participation). System resilience authority has low d (they benefit from the coordination infrastructure they maintain). The scaffold coalition has low-to-medium d (they face constraints but have technical exit paths and organization). The measured extractiveness scales with f(d) \u2014 the snare perspective (trapped user, high d) produces high chi; the rope perspective (system authority, low d) produces low chi. Beneficiary/victim declarations directly drive this computation.",
-    "mandatrophy_analysis": "Zone failure recovery coupling resolves the mandatrophy by decomposing the constraint family into physics-level coupling (mountain \u2014 Kirchhoff's laws are immutable) and institutional-level extraction (tangled rope/snare \u2014 recovery protocol design is contingent). The false summit detector in the mountain perspective reveals this decomposition: 'zone coupling as a law of physics' is accurate for power flow (true mountain), but 'inability to prevent cascading failures' is institutional (contingent design choice, not law). The constraint family should decompose: (1) power_flow_kirchhoff_coupling (\u03b5=0.05, Mountain) \u2014 fundamental physics; (2) zone_failure_recovery_protocols (\u03b5=0.58, Tangled Rope) \u2014 institutional choice of who bears cascading costs. The measurement trajectory (rising theater ratio and extractiveness) reflects that institutional extraction has increased as automation has concentrated operator discretion. The scaffold perspective's sunset is conditional on whether decentralization actually decouples zones or merely shifts the coupling to demand-side coordination. Mandatrophy resolution requires keeping physics (mountain) and institutions (tangled rope) in separate stories."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The coupling extracts from adjacent zones and distributed generators through mandatory load-shedding. Distributed resources are shed first, creating asymmetric burden. But extractiveness is not maximal (≥0.66 for snare) because: (1) the shedding prevents total blackout, providing genuine coordination benefit; (2) adjacent zones can build redundant generation/transmission (costly but possible, not physically impossible); (3) distributed generators can invest in islanding (constrained, not trapped). Suppression (0.62): Moderate-high. Significant barriers to exit include: electromagnetic coupling enforced by Kirchhoff's laws (no agent can escape), protective relay algorithms that prioritize conventional generators (embedded in decades of standards), regulatory frameworks that reward centralized dispatchability (market design), and certification delays for new relay logic (10-15 years for standards adoption). But suppression is not maximal because alternative architectures are technically feasible and being deployed. Theater ratio (0.38): Moderate-low. The protection relays have genuine function — they prevent cascading total blackouts. But recent evidence shows that equivalent reliability can be achieved with distributed control schemes (microgrids, frequency-responsive loads, HVDC with independent protection). The theater is in presenting the current centralized architecture as the only option.",
+    "perspectival_gap": "The central diagnostic gap is between the mountain perspective (zone coupling is immutable physics) and the scaffold perspective (coupling is a temporary institutional arrangement being displaced by better technology). The mountain appears justified because Kirchhoff's laws are real — power flows follow voltage equations. But the snare and tangled-rope perspectives reveal that the extraction mechanism (shedding prioritization, asymmetric burden allocation) is design-contingent. The grid operator's rope perspective is genuine — they are solving a real coordination problem. But their solution benefits them disproportionately (maintains their authority and information advantage). The piton perspective on legacy relay standards captures institutional inertia: the specific algorithms persist not because they are optimal but because they are locked in by standardization costs. The microgrid scaffold shows a real, concrete exit path with identifiable timeline (10-20 years for mature distributed grids to reach 20-30% penetration). This perspectival divergence indicates that the classification depends on whether one measures the physics-level constraint (mountain: Kirchhoff's laws are immutable) or the institution-level constraint (tangled-rope: relay design choices create extraction). These are two different constraints with different ε values.",
+    "directionality_logic": "The grid operator benefits from the constraint (arbitrage: low d ≈ 0.10-0.15) because it centralizes their authority and information advantage. Conventional generators benefit (arbitrage: d ≈ 0.20) because they are protected from shedding. Distributed generators suffer (constrained victim: d ≈ 0.70-0.75) because they are shed first despite having no control over the cascade trigger. Adjacent zones suffer maximally (trapped victim: d ≈ 0.90-0.95) because electromagnetic coupling forces shedding regardless of their capacity or generation levels. The organized distributed generation sector has higher power than individual operators (d ≈ 0.55-0.65) because they can coordinate on technology standards, regulatory advocacy, and market participation. The microgrid developers have mobile exits (d ≈ 0.35-0.45) because they can build alternative architectures. These directionality values are stable over time because they reflect structural power asymmetries embedded in market design and regulatory frameworks, not temporary conditions.",
+    "mandatrophy_analysis": "The mandatrophy arises from distinguishing whether the zone coupling is a genuine coordination mechanism (rope: low-extraction collective action solution) or an extractive mechanism (snare or tangled-rope: high-extraction redistribution with a coordination cover story). The evidence distinguishes them: (1) Coordination function: The constraint does solve a real problem — preventing total blackout cascades through rapid load shedding. Equivalent function could theoretically be achieved through other means (demand response, generation scheduling, HVDC direct current links with independent protection), but the current mechanism is proven and reliable. This is genuine coordination. (2) Asymmetric extraction: Distributed generators are shed before conventional generators not because physics requires it but because protection relay parameters were set this way (historically, for simplicity; currently, maintained for administrative convenience). This is extraction — a design choice that benefits certain actors. (3) Enforcement: The coupling is actively maintained through relay certification standards (NERC, IEC 61850), utility operational procedures, and regulatory frameworks that reward centralized dispatchability. This is active enforcement, not passive physics. The tangled-rope classification is correct: the constraint has both genuine coordination function (preventing cascades) and asymmetric extraction (preferential shedding, authority concentration, market advantage). The false-summit omega documents whether this is presented as natural law (physics immutable) when in fact the extraction mechanism is policy-contingent."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "power_flow_kirchhoff_coupling",
-      "utility_monopoly_regulatory_capture",
-      "renewable_intermittency_coordination"
+      "distributed_generation_integration",
+      "microgrid_autonomy_standards",
+      "grid_resilience_standards"
     ],
-    "dual_formulation_note": "Zone failure recovery coupling decomposes into two structurally distinct constraints: power flow physics (immutable, mountain) and recovery protocol design (contingent, tangled rope). The physics constraint is downstream of neither. The institutional constraint is downstream of utility monopoly structure and upstream of grid decentralization. See constraint family documentation for decomposition rationale."
+    "dual_formulation_note": "Zone failure coupling decomposes into two constraints with different ε values: (1) electromagnetic_interdependence (ε≈0.05, mountain) — Kirchhoff's laws create mandatory voltage coupling, immutable physics; (2) relay_shedding_prioritization (ε≈0.52, tangled-rope) — choice of which generators to shed first, extractive institutional design. These are linked: the physical interdependence is real, but the extraction mechanism (why distributed is shed before conventional) is design-contingent. Separate stories with different ε values."
   },
   "directionality_overrides": [
     {
-      "power_atom": "institutional",
-      "d_value": 0.15
+      "power_atom": "organized",
+      "d_value": 0.6
     }
   ]
 }

@@ -4,25 +4,26 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "digid"
+    "measurement_id_prefix": "digid",
+    "story_uid": "9695ff43-b3d8-40a6-b412-cc4429d4a6af"
   },
   "base_properties": {
-    "extractiveness": 0.52,
-    "suppression": 0.58,
-    "theater_ratio": 0.64,
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
     "claimed_type": "tangled_rope",
-    "human_readable": "Digital Identity Standardization and Interoperability Constraint",
+    "human_readable": "Digital Identity Standardization and Interoperability",
     "topic_domain": "digital_infrastructure/governance",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "platform_operators",
-      "government_identity_systems",
-      "surveillance_infrastructure_beneficiaries"
+      "centralized_identity_providers",
+      "state_surveillance_apparatus",
+      "platform_ecosystem"
     ],
     "victims": [
       "individual_privacy",
-      "data_subjects",
-      "decentralized_identity_ecosystems"
+      "decentralized_identity_alternatives",
+      "jurisdictional_autonomy"
     ]
   },
   "perspectives": [
@@ -32,17 +33,17 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Data Subject",
-      "comment": "PERSPECTIVE 1: DATA SUBJECT (SNARE) \u2014 Individual cannot exit standardized identity systems; forced participation in centralized data architectures. No alternative pathway for participating in economic, social, or civic life without surrendering identity data to standardized systems. Maximum experienced extraction \u2014 trapped by necessity of digital participation."
+      "label": "The Surveilled Individual",
+      "comment": "PERSPECTIVE 1: SURVEILLED INDIVIDUAL (SNARE) — Citizens cannot exit digital identity systems; standardization forces behavioral conformity to unified tracking infrastructure. No alternative identity pathways available. Extraction is maximal: loss of anonymity, behavioral control, and data sovereignty with no compensating benefit."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "moderate",
-      "time_horizon": "generational",
+      "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "Privacy Advocate Communities",
-      "comment": "PERSPECTIVE 2: PRIVACY ADVOCATES (TANGLED ROPE) \u2014 Constrained by political powerlessness and resource limitations, but also benefit from standardization enabling interoperability tools that increase privacy protections. Some agency through coalition-building; some benefit through technical counter-measures. Asymmetric but not total extraction."
+      "label": "The Digital Service Provider",
+      "comment": "PERSPECTIVE 2: DIGITAL SERVICE PROVIDER (TANGLED ROPE) — Banks, healthcare systems, and government services genuinely coordinate through standardized identity (reduces onboarding friction, enables interoperability). But also bear extraction costs: compliance burden, data sharing obligations, liability concentration. Moderate agency — can negotiate technical specifications but cannot exit the standardization framework."
     },
     {
       "classification_type": "rope",
@@ -50,17 +51,8 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Platform Operators",
-      "comment": "PERSPECTIVE 3: PLATFORM OPERATORS (ROPE) \u2014 Primary beneficiary. Standardization enables interoperability and reduces fragmentation costs, creating genuine coordination benefit. Experiences constraint as coordination mechanism: standardized identity enables seamless platform integration. Net beneficiary with arbitrage options."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "institutional",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "Government Identity Systems",
-      "comment": "PERSPECTIVE 4: GOVERNMENT IDENTITY SYSTEMS (TANGLED ROPE) \u2014 Coordinate efficient citizen verification while extracting surveillance benefits. Genuine coordination function (enabling service delivery) alongside asymmetric access to population data. Requires active enforcement of interoperability standards. Constrained exit due to political dependencies."
+      "label": "Centralized Identity Provider",
+      "comment": "PERSPECTIVE 3: CENTRALIZED IDENTITY PROVIDER (ROPE) — Organizations like national identity authorities and major platforms experience standardization as pure coordination: unified schemas enable seamless data exchange, reduce technical friction, and concentrate control. Institutional agent with full arbitrage capacity — can exit to alternative standards or maintain legacy systems. Experiences constraint as coordination mechanism that benefits them."
     },
     {
       "classification_type": "scaffold",
@@ -69,7 +61,7 @@
       "exit_options": "constrained",
       "spatial_scope": "global",
       "label": "Decentralized Identity Coalition",
-      "comment": "PERSPECTIVE 5: DECENTRALIZED IDENTITY COALITION (SCAFFOLD) \u2014 Organized agents (W3C, blockchain-based identity systems, privacy-preserving tech communities) see standardization as a temporary bottleneck with a sunset clause. Building alternative identity architectures (self-sovereign identity, verifiable credentials) that bypass centralized standardization. Low effective extraction because the coalition has visible exit pathway \u2014 estimated 15-25 year sunset as distributed identity norms mature."
+      "comment": "PERSPECTIVE 4: DECENTRALIZED IDENTITY COALITION (SCAFFOLD) — Distributed ledger advocates, privacy technologists, and open standards communities frame the centralized standardization as temporary. Self-sovereign identity (SSI), zero-knowledge proofs, and blockchain-based credentials are building parallel verification pathways with explicit sunset logic. See the constraint as a coordination failure being solved by privacy-preserving alternatives. Organized agents with visible exit timeline."
     },
     {
       "classification_type": "piton",
@@ -77,8 +69,8 @@
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Legacy Interoperability Standards Bodies",
-      "comment": "PERSPECTIVE 6: LEGACY STANDARDS BODIES (PITON) \u2014 Traditional standards development (OASIS, ITU) maintains identity standards specification largely through institutional inertia. The actual coordination work has migrated to open-source communities and blockchain developers. Theater ratio of 0.64 reflects performative standards-writing persisting while real interoperability innovation happens outside formal channels. Maintenance of standards rituals despite reduced functional necessity."
+      "label": "Legacy Authentication Infrastructure",
+      "comment": "PERSPECTIVE 5: LEGACY AUTHENTICATION INFRASTRUCTURE (PITON) — Password-based systems, federated identity protocols, and older PKI systems persist through institutional inertia despite being functionally degraded. Organizations maintain parallel authentication pathways (legacy logins alongside standardized identity) because complete migration creates operational risk. Theater ratio is high: much authentication activity is ritual migration and backward-compatibility management rather than functional verification. The constraint persists because alternatives haven't fully replaced legacy systems, not because it works optimally."
     },
     {
       "classification_type": "mountain",
@@ -87,54 +79,54 @@
       "exit_options": "analytical",
       "spatial_scope": "universal",
       "label": "Analytical Observer (Natural Law View)",
-      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From civilizational scope, digital standardization appears as an immutable requirement of networked society \u2014 without standardized identity, interoperability is impossible. This perspective risks naturalizing what is actually a choice between centralized standardization (current) vs decentralized identity (emerging alternative). The mountain classification will be flagged as false summit by the engine \u2014 contingent institutional choice misclassified as natural law."
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal view, some form of identity standardization is inevitable and immutable: digital economies require reliable entity identification, transaction verification requires cryptographic binding to persistent identity, and interoperability demands shared schemas. This perspective treats the standardization bottleneck as an irreducible feature of digital infrastructure. However, the beneficiary declarations expose this as a false summit: identifiable state and corporate actors benefit from the specific form of centralized standardization adopted, revealing that the 'naturalness' of this particular architecture is contingent."
     }
   ],
   "omegas": [
     {
-      "id": "centralization_necessity_threshold",
-      "question": "Is centralized standardization strictly necessary for digital identity interoperability, or does it merely reduce coordination costs?",
-      "resolution_mechanism": "Empirical comparison: decentralized identity systems (W3C verifiable credentials, blockchain-based identity) vs centralized systems on metrics of interoperability coverage, transaction costs, and actual ecosystem adoption rates",
-      "impact": "If centralization is necessary: snare classification dominates (no exit exists). If centralization merely reduces costs: tangled_rope and scaffold classifications are more accurate (alternative pathways exist, just costlier).",
+      "id": "privacy_preserving_interop_technical_sufficiency",
+      "question": "Can privacy-preserving identity mechanisms (zero-knowledge proofs, differential privacy, homomorphic encryption) achieve the same coordination benefits as centralized standardization without enabling surveillance?",
+      "resolution_mechanism": "Empirical deployment of privacy-preserving identity systems at scale (EU's eIDAS 2.0 with privacy enhancements, decentralized credential networks); measurement of transaction friction and verification latency compared to centralized alternatives",
+      "impact": "If technically sufficient: the centralized standardization is extractive rather than necessary, and the scaffold perspective's sunset timeline is real. If insufficient: coordination and privacy goals are in genuine tension, and some degree of centralization is structurally required.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical feasibility of privacy-preserving identity coordination"
+    },
+    {
+      "id": "state_surveillance_necessity_claim",
+      "question": "Does state surveillance capacity require centralized identity standardization, or is this a contingent policy choice grounded in law enforcement preferences rather than technical necessity?",
+      "resolution_mechanism": "Comparative analysis of jurisdictions with strong privacy laws (Switzerland, Estonia) vs surveillance-first design (China) and measurement of actual law enforcement effectiveness and public safety outcomes; examination of whether decentralized verification achieves similar security without centralized tracking",
+      "impact": "If contingent: suppression (0.62) reflects political choice, not structural requirement. Standardization is a snare dressed as mountain. If technically necessary: suppression reflects genuine coordination-surveillance tradeoff, and tangled_rope classification is accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether state surveillance requires centralized identity standardization"
+    },
+    {
+      "id": "standardization_lock_in_reversibility",
+      "question": "Is the transition to centralized digital identity standardization reversible, or does path dependence create irreversible infrastructure lock-in that forecloses future alternatives?",
+      "resolution_mechanism": "Analysis of switching costs for decentralized alternatives; examination of legacy system persistence in high-switching-cost jurisdictions; measurement of whether new entrants (Estonia's e-Residency, Singapore's OpenAttestation) can viably build identity infrastructure outside centralized standard frameworks",
+      "impact": "If reversible: exit costs remain moderate, supporting constrained/mobile characterization. If irreversible: constraints should reclassify toward trapped, and the snare perspective becomes more dominant.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Reversibility of centralized standardization infrastructure lock-in"
+    },
+    {
+      "id": "decentralized_credential_security_paradox",
+      "question": "Does decentralized identity eliminate single points of failure or shift failure modes to distributed verification bottlenecks? Can distributed ledgers verify complex identity claims without recreating centralized oracles?",
+      "resolution_mechanism": "Security analysis of self-sovereign identity systems under adversarial conditions; measurement of credential revocation delays, privacy leakage in distributed ledgers, and oracle dependency in zero-knowledge proof systems",
+      "impact": "If decentralized verification works: the scaffold perspective's technical pathway is viable. If distributed systems recreate centralized bottlenecks: the mountain perspective (some centralization is inevitable) may be correct.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether centralized standardization is strictly necessary or merely cost-optimizing"
+      "description": "Security properties of decentralized credential verification"
     },
     {
-      "id": "surveillance_inherence_vs_design",
-      "question": "Is the surveillance capability of standardized identity systems an inherent feature of standardization itself, or a design choice embedded in current centralized architectures?",
-      "resolution_mechanism": "Technical architecture analysis: comparison of privacy properties in privacy-by-design identity standards (e.g., zero-knowledge proofs, privacy-preserving selective disclosure) vs current centralized systems; historical analysis of design decisions that enabled surveillance",
-      "impact": "If surveillance is inherent: suppression metric (0.58) is correct, and decentralized alternatives cannot escape the constraint. If surveillance is design choice: actual suppression is lower than measured; decentralized alternatives could substantially reduce it.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether surveillance is inherent to standardization or a contingent design choice"
-    },
-    {
-      "id": "network_effect_reversibility",
-      "question": "Once a centralized identity standard achieves network dominance, is migration to decentralized alternatives structurally reversible, or does lock-in make the current system a permanent equilibrium?",
-      "resolution_mechanism": "Game-theoretic analysis of switching costs; empirical case studies of past standards migrations (IPv4\u2192IPv6 dynamics, browser engine diversification); pilot programs measuring friction of decentralized identity adoption",
-      "impact": "If reversible: scaffold sunset is achievable; decentralized identity can replace centralized systems. If locked-in: current system is effectively permanent, snare classification dominates long-term.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether network lock-in makes centralized identity permanent or reversible"
-    },
-    {
-      "id": "interoperability_vs_privacy_tradeoff",
-      "question": "Is there an irreducible mathematical tradeoff between interoperability scope and privacy protection, or is the current privacy erosion a contingent design consequence?",
-      "resolution_mechanism": "Cryptographic analysis: formal privacy guarantees achievable in selective-disclosure identity systems vs centralized systems; benchmark measurement of privacy properties across different interoperability architectures",
-      "impact": "If irreducible tradeoff exists: privacy victims are inevitable cost; suppression cannot be reduced below 0.40 without sacrificing interoperability. If contingent: privacy-preserving architectures can achieve both; suppression metric reflects implementation choice, not structural necessity.",
+      "id": "natural_vs_constructed_standardization",
+      "question": "Is the specific form of centralized digital identity standardization (national authorities, biometric binding, real-name enforcement) a natural consequence of interoperability needs, or a constructed choice that benefits state and corporate surveillance?",
+      "resolution_mechanism": "Historical analysis of alternative standardization pathways considered but rejected (attribute-based identity, privacy-by-design mandates, federated rather than centralized models); examination of which actor coalitions advocated for each design; tracking of influence by law enforcement and security agencies on standard-setting bodies",
+      "impact": "If constructed: the analytical mountain view is a false summit. The constraint is a snare with political beneficiaries, not an immutable law. FSM reclassification should fire.",
       "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether privacy-interoperability tradeoff is irreducible or contingent"
-    },
-    {
-      "id": "identity_lock_cognitive_capture",
-      "question": "Do individuals and institutions experience centralized identity standardization as identity-locked (their digital self is constituted through the standardized architecture) or merely trapped (external barrier to exit)?",
-      "resolution_mechanism": "Ethnographic and survey analysis: do agents describe inability to exit as structural constraint or as identity fusion? Post-exit interview analysis: do barriers persist psychologically after technical alternatives are implemented?",
-      "impact": "If identity-locked: exit options should be 'identity_locked' not 'trapped' for multiple perspectives; classification gaps reveal cognitive capture alongside structural extraction. If merely trapped: current modeling is accurate; barriers are material, not psychological.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether digital identity standardization produces identity lock or merely structural entrapment"
+      "type_class": "conceptual",
+      "description": "Whether centralized standardization architecture is natural or constructed"
     }
   ],
   "measurements": [
@@ -146,27 +138,12 @@
     {
       "metric": "base_extractiveness",
       "time_point": 5,
-      "value": 0.4
+      "value": 0.38
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.52
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.42
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.53
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.64
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
@@ -175,8 +152,43 @@
     },
     {
       "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
       "time_point": 15,
-      "value": 0.71
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.62
     }
   ],
   "interval": {
@@ -184,36 +196,38 @@
     "end": 15
   },
   "commentary": {
-    "narrative_context": "Digital identity standardization represents a global infrastructure constraint that exhibits all six DR types depending on observational position. The constraint operates at the intersection of coordination (interoperability is genuinely needed) and extraction (centralized standards concentrate data access and surveillance capacity). Over a 15-year interval from pre-standardization fragmentation through post-standardization dominance, extractiveness has increased from 0.28 to 0.58, while theater ratio has risen from 0.42 to 0.71. This pattern reflects: (1) increasing centralization consolidating data access, (2) ritualization of standardization processes divorced from actual interoperability innovation, and (3) growing surveillance capability embedded in standards architecture. The constraint simultaneously solves a real coordination problem (different platforms need compatible identity systems) and creates an extraction mechanism (centralized control over identity infrastructure). The decentralized identity coalition's scaffold perspective identifies a 15-25 year sunset pathway through self-sovereign identity and verifiable credentials, suggesting the current constraint may be temporary despite its apparent permanence.",
+    "narrative_context": "Digital identity standardization represents a global infrastructure constraint operating at the intersection of genuine coordination needs (banks, governments, and digital services genuinely require interoperable identity verification) and systematic extraction (standardization concentrates data access, enables mass surveillance, and forecloses alternative identity architectures). Over a 15-year interval from pre-standardization fragmentation (passwords, federated identity, proprietary systems) through post-standardization dominance (national digital identity systems, biometric binding, real-name enforcement), extractiveness has increased from 0.28 to 0.58 while theater ratio has risen from 0.35 to 0.68. This trajectory reveals standardization functioning not as pure coordination but as a captured institutional process that uses coordination benefits to justify extractive architecture. The constraint exhibits all six DR types from different observational positions: immutable natural law (analytical/civilizational view that interoperability requires standardization), pure extraction (powerless individuals trapped in unified surveillance infrastructure), hybrid coordination-extraction (digital service providers who benefit from standards but bear compliance costs), temporary coordination problem (decentralized identity coalition building privacy-preserving alternatives with sunset timeline), degraded ritual (legacy systems persisting through inertia despite technical obsolescence), and pure coordination (centralized providers benefiting from unified data access). Suppression has increased over the interval as enforcement mechanisms mature: national identification laws, KYC/AML requirements, device binding, and cross-border data sharing agreements have hardened the technical and legal barriers to exit.",
     "key_agents": [
-      "Data Subjects: Primary victim (powerless/trapped) \u2014 forced into standardized identity systems with no exit for participating in digital economy",
-      "Platform Operators: Primary beneficiary (institutional/arbitrage) \u2014 capture interoperability benefits and data access through standardization",
-      "Government Identity Systems: Institutional actor (institutional/constrained) \u2014 coordinate service delivery while extracting surveillance benefits; constrained by political dependencies",
-      "Privacy Advocates: Secondary victim (moderate/constrained) \u2014 resource-limited but organized; benefit from some interoperability tools that enable privacy protections",
-      "Decentralized Identity Coalition: Organized actor (organized/constrained) \u2014 building alternative architectures with 15-25 year exit pathway",
-      "Legacy Standards Bodies: Institutional maintenance (institutional/arbitrage) \u2014 preserve standards-writing rituals with declining functional necessity",
-      "Analytical Observer: Civilizational analyst (analytical/analytical) \u2014 risks naturalizing centralized choice as inherent requirement"
+      "Individual Citizens: Primary victim (powerless/trapped) — cannot exit standardized identity systems; bear full cost of surveillance and behavioral control without compensating benefit",
+      "Centralized Identity Providers: Primary beneficiary (institutional/arbitrage) — national authorities, major platforms (Google, Apple, Microsoft) capturing data monopoly and coordination rent. Can arbitrage to alternative standards or maintain legacy systems.",
+      "Digital Service Providers: Secondary actor (moderate/constrained) — banks, healthcare, government agencies that genuinely need interoperability but bear compliance burden and liability concentration. Can negotiate specifications but cannot exit framework.",
+      "Decentralized Identity Coalition: Organized agents (organized/constrained) — privacy technologists, distributed ledger advocates, open standards communities building SSI, zero-knowledge credential systems with explicit sunset logic for centralized standardization.",
+      "State Surveillance Apparatus: Secondary beneficiary (institutional/arbitrage) — law enforcement, intelligence agencies, border control authorities whose surveillance capacity is amplified by standardization. Embedded in standards development.",
+      "Legacy Authentication Infrastructure: Institutional inertia (institutional/arbitrage) — older PKI systems, password managers, federated identity protocols that persist through backward compatibility requirements rather than functional superiority.",
+      "Analytical Observer: Civilizational position (analytical/analytical) — risks naturalizing contingent standardization choices (centralization, biometric binding, real-name enforcement) as immutable laws of digital infrastructure."
     ],
-    "logic_rationale": "Extractiveness (0.52): Moderate-high. The central component is data access concentration: standardized identity architectures create natural monopolies on identity infrastructure, enabling surveillance and behavioral data harvesting. Rising from 0.28 to 0.52 over the interval reflects increasing platform consolidation and expanding data use cases. The value is not higher because genuine coordination benefits (seamless interoperability) are real; extractiveness reflects the asymmetric distribution of those benefits toward platforms rather than users. Suppression (0.58): Moderate-high. Data subjects face high barriers to exit (no feasible alternative for digital participation); limited transparency into identity data flows; regulatory barriers to alternative identity systems (GDPR compliance burden favors centralized providers); and low public awareness of surveillance mechanisms. But suppression is not total: some decentralized alternatives exist, privacy regulations do limit (imperfectly) data use, and organized coalitions are building counter-architectures. Theater ratio (0.64): Moderate-high. Standards-writing processes maintain significant performative content: W3C working groups produce specifications with declining functional impact as real standardization happens in open-source communities, blockchain-based identity systems, and platform proprietary ecosystems. The formal standards processes perform legitimacy and governance while actual coordination happens elsewhere.",
-    "directionality_logic": "Data subjects: beneficiary=false, victim=true, exit_options=trapped \u2192 d \u2248 0.95 \u2192 high f(d) \u2248 1.42 \u2192 high experienced extraction. Platform operators: beneficiary=true, exit_options=arbitrage \u2192 d \u2248 0.05 \u2192 low f(d) \u2248 -0.12 \u2192 negative/low experienced extraction (they extract from others, not target of constraint). Government identity systems: beneficiary=true (surveillance access), victim=false, exit_options=constrained \u2192 d \u2248 0.25 (captured institutional actor) \u2192 f(d) \u2248 0.15 \u2192 moderate experienced extraction. Privacy advocates: beneficiary=false, victim=true, exit_options=constrained, organized=true \u2192 d \u2248 0.55 \u2192 f(d) \u2248 0.75 \u2192 moderate-high experienced extraction. Decentralized coalition: beneficiary=false, victim=false (building alternative), exit_options=constrained but visible \u2192 d \u2248 0.40 (working against constraint) \u2192 f(d) \u2248 0.40 \u2192 lower experienced extraction. Standards bodies: beneficiary=true (institutional maintenance), exit_options=arbitrage \u2192 d \u2248 0.10 \u2192 f(d) \u2248 -0.05 \u2192 negligible experienced extraction (they benefit from status quo).",
-    "perspectival_gap": "The constraint exhibits maximum perspectival divergence. Data subjects see pure extraction (Snare) \u2014 standardization forces identity data submission with no exit. Platforms see pure coordination (Rope) \u2014 standardization solves interoperability. Governments see mixed coordination-extraction (Tangled Rope) \u2014 they both coordinate citizen verification and extract surveillance benefits. Privacy advocates see constrained extraction (Tangled Rope) \u2014 some benefits from tools that standardization enables, but severe net extraction. Decentralized coalition sees a temporary problem (Scaffold) \u2014 alternative architectures are building an exit pathway. Standards bodies see their own degraded function (Piton) \u2014 formal specification processes persist through ritual despite innovation happening elsewhere. The analytical observer risks seeing permanent necessity (Mountain) \u2014 'digital systems require standardization' \u2014 but structural data reveals this as false summit: the choice is between centralized standardization (current, extractive) and decentralized alternatives (emerging, less extractive), not between standardization and chaos.",
-    "mandatrophy_analysis": "The mandatrophy resolution demonstrates that digital identity standardization exemplifies the mandatrophy's core problem: coordination and extraction are structurally entangled. Genuine interoperability requires standardization (coordination function is real). But standardized architectures create chokepoints for data access (extraction mechanism is real). The six perspectives are not competing analyses; they are accurate readings from different positions. The mandatrophy is resolved by recognizing that the current constraint (centralized standardization) is not the only solution to the coordination problem \u2014 decentralized alternatives like verifiable credentials and self-sovereign identity can achieve interoperability without centralized chokepoints. The scaffold perspective is the key: it identifies that the current extractive constraint is temporary because alternatives are technically feasible and politically mobilizing. The mountain perspective (standardization as natural law) is false: it confuses 'standardization is necessary' (true) with 'centralized standardization is necessary' (false). Decentralized standardization (standards without centralized control) is structurally possible, making the current extractive rent a contingent institutional choice."
+    "logic_rationale": "Extractiveness (0.58): High and rising. At t=0, fragmented identity systems created genuine coordination friction but also enabled privacy-preserving alternatives (attribute-based identity, pseudonymity, decentralized verification). Extractiveness was moderate (0.28) because no single actor controlled the standard. Over 15 years, centralized standardization concentrated control in national authorities and major platforms, enabling direct extraction: real-name binding prevents anonymity, biometric collection enables mass surveillance, and data sharing agreements facilitate cross-border tracking. The 0.28→0.58 trajectory reflects this power concentration. Suppression (0.62): High and rising. Barriers to exit have hardened through law and technology: national identification laws (mandatory real-name enrollment), KYC/AML requirements (financial system gatekeeping), device biometrics (technical binding), and international data-sharing agreements (jurisdictional coordination). At t=0, users could fragment identity across pseudonymous accounts; at t=15, unified tracking is technically enforced and legally mandated. Theater ratio (0.68): High and rising. Standardization bodies present themselves as purely technical (W3C, ISO, ITU) but decisions reflect power asymmetries: surveillance agencies shape threat models, platforms influence usability requirements, and states enforce compliance. Much standardization activity is ritual performance (security theater, privacy window-dressing, compliance documentation) rather than functional verification. Legacy authentication persists despite obsolescence because migration risk exceeds technical benefit — organizations maintain parallel systems, creating performative rather than functional authentication.",
+    "perspectival_gap": "The gap between the snare perspective (powerless/trapped citizens) and the rope perspective (institutional beneficiaries) reveals the extraction mechanism. Citizens perceive immutable lock-in; providers perceive seamless coordination. The gap between rope and scaffold perspectives reveals the temporal dimension: standardization appears stable to beneficiaries but temporary to organized coalitions building alternatives. The gap between tangled_rope (service providers) and snare (citizens) reveals asymmetric enforcement: compliance is mandatory but unevenly distributed. The analytical mountain view is a false summit: interoperability is genuinely needed (that part is correct), but the specific architecture — centralized, biometric, real-name-bound — concentrates surveillance capacity and was actively constructed, not naturally inevitable.",
+    "directionality_logic": "Directionality values are derived from structural position, exit capacity, and beneficiary/victim status. Centralized identity providers (institutional/arbitrage) have d ≈ 0.10: they are beneficiaries with full exit capacity, so f(d) is negative — the constraint subsidizes them. Citizens (powerless/trapped) have d ≈ 0.95: they are victims with no exit, so f(d) ≈ 1.42 — experienced extraction is severe. Digital service providers (moderate/constrained) have d ≈ 0.55: they are both beneficiaries (interoperability reduces friction) and victims (compliance burden), with constrained exit, so f(d) ≈ 0.75 — experienced extraction is moderate. The decentralized coalition (organized/constrained) has d ≈ 0.48: they are victims of lock-in but have organized agency and visible exit pathways, so f(d) ≈ 0.60. These derivations feed the χ formula: χ = ε × f(d) × σ(S). Global scope (σ=1.2) amplifies extraction for those with high d, suppresses it for those with low d. The perspectival gap is structural, not observational — it reflects real differences in how the constraint functions for agents at different structural positions.",
+    "mandatrophy_analysis": "Extractiveness (0.58) exceeds the tangled rope suppression floor (0.40), requiring mandatrophy resolution. The constraint resolves the mandatrophy by demonstrating that all six types are legitimate perspectival readings with different terminal states: (1) Snare for powerless individuals reflects their structural reality — unified surveillance with no exit. (2) Rope for institutional beneficiaries reflects their structural reality — net-beneficial coordination that concentrates control. (3) Tangled Rope for service providers reflects genuine hybrid structure — coordination benefits alongside compliance extraction. (4) Scaffold for coalitions reflects their structural strategy — temporary centralization being replaced by privacy-preserving alternatives. (5) Piton for legacy systems reflects their actual state — performative persistence despite technical degradation. (6) Mountain for the analytical observer reflects risk of naturalizing constructed choices. The mandatrophy resolution is not 'which type is the truth?' but 'which structural reality are you measuring from?' The false summit detection on the mountain perspective is critical: the constraint appears immutable only if you accept the framing that centralized standardization is inevitable. The beneficiary declarations reveal this framing as contingent. The decentralized coalition's scaffold perspective shows viable alternatives. The omega variables document irreducible uncertainties about privacy-preserving technical sufficiency and state surveillance necessity — questions that determine whether the constraint is structurally permanent or strategically temporary."
   },
   "boltzmann": {
-    "coordination_type": "information_standard"
+    "coordination_type": "information_standard",
+    "boltzmann_floor_override": 0.12
   },
   "network": {
     "affects_constraints": [
-      "financial_identity_verification",
-      "surveillance_infrastructure_interoperability",
-      "cross_border_data_flows"
+      "biometric_data_standardization",
+      "cross_border_identity_verification",
+      "real_name_enforcement_regimes",
+      "decentralized_identity_verification"
     ],
-    "dual_formulation_note": "Digital identity standardization decomposes into two structurally distinct constraints: (1) information_standard_identity_interoperability (\u03b5\u22480.15, Rope) \u2014 the pure coordination problem of compatible identity formats, (2) centralized_identity_data_monopoly (\u03b5\u22480.65, Snare) \u2014 the extraction mechanism that emerges from centralized control of identity infrastructure. The current story treats them together because they are empirically entangled in centralized standards architectures, but decentralized alternatives could separate them: maintaining interoperability coordination while eliminating the data monopoly extraction. This decomposition explains the scaffold perspective's sunset logic: technical feasibility of decoupling exists; political and economic adoption is the remaining barrier."
+    "dual_formulation_note": "Digital identity standardization decomposes into multiple structurally distinct constraints: (1) Technical interoperability (ε≈0.25, Rope) — genuine coordination problem solved by unified schemas. (2) Biometric binding (ε≈0.68, Snare) — extraction mechanism for surveillance capability. (3) Real-name enforcement (ε≈0.72, Snare) — prevents anonymity and enables behavioral tracking. (4) Privacy-preserving alternatives (ε≈0.18, Scaffold with sunset) — decentralized verification pathways. This constraint story models the aggregate system; decomposed stories track specific mechanisms. Links via affects_constraints document dependencies: standardization enables biometric binding; real-name requirements follow from standardization; decentralized alternatives undermine all three."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.35
+      "d_value": 0.08
     }
   ]
 }

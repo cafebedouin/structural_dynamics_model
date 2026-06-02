@@ -4,24 +4,26 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "cadvchip"
+    "measurement_id_prefix": "cacd",
+    "story_uid": "d5cae1ef-7183-4f1e-a958-995a7ace241b"
   },
   "base_properties": {
-    "extractiveness": 0.68,
+    "extractiveness": 0.58,
     "suppression": 0.72,
-    "theater_ratio": 0.55,
-    "claimed_type": "snare",
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
     "human_readable": "China Advanced Chip Design Constraint",
     "topic_domain": "geopolitical/technology/semiconductor",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "us_semiconductor_ecosystem",
-      "allied_chip_designers"
+      "us_semiconductor_firms",
+      "allied_foundry_operators",
+      "western_eda_vendors"
     ],
     "victims": [
-      "chinese_semiconductor_industry",
-      "chinese_research_institutions",
-      "domestic_chinese_tech_companies"
+      "chinese_chip_designers",
+      "chinese_semiconductor_companies",
+      "global_open_chip_design_ecosystem"
     ]
   },
   "perspectives": [
@@ -31,17 +33,35 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "Chinese Semiconductor Researchers",
-      "comment": "PERSPECTIVE 1: CHINESE SEMICONDUCTOR RESEARCHERS (SNARE) \u2014 Trapped by multilayered export controls, EDA tool access restrictions, and IP licensing barriers. Cannot access state-of-the-art design tools (Cadence, Synopsys) or foundational semiconductor IP without circumventing controls. Career advancement blocked by inability to work on cutting-edge nodes. No legitimate exit pathway within the constraint; continued advancement requires either covert acquisition or permanent career limitation."
+      "label": "The Trapped Chinese Researcher",
+      "comment": "PERSPECTIVE 1: TRAPPED CHINESE RESEARCHER (SNARE) — Faces multiple coordinated barriers: visa restrictions prevent emigration, EDA tool access requires US compliance certification, foundry access requires alliance membership, IP licensing is withheld by design. No exit option except abandoning career entirely. Maximum experienced extraction. The constraint is structurally designed to make alternatives unavailable."
     },
     {
       "classification_type": "snare",
-      "agent_power": "moderate",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Constrained Chinese Firm",
+      "comment": "PERSPECTIVE 2: CONSTRAINED CHINESE FIRM (SNARE) — Cannot access advanced EDA tools (Cadence, Synopsys restricted via ECCN), cannot use TSMC or Samsung foundries for advanced nodes (US alliance-based restrictions), cannot hire Western-trained talent (visa screening). The constraint's suppression is designed to foreclose alternatives. The firm experiences systematic extraction: margin compression, development delays, technological lag. No viable domestic substitute exists for critical EDA tools or advanced foundries at required performance levels."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "Chinese Semiconductor Companies",
-      "comment": "PERSPECTIVE 2: CHINESE SEMICONDUCTOR COMPANIES (SNARE) \u2014 Constrained by design tool access, talent drain, foundry limitations, and IP licensing costs. Can invest heavily in workarounds (reverse engineering, domestic tool development, acquiring talent) but face sustained extraction: forced to build redundant infrastructure, pay premium prices for restricted goods, and accept permanent technological lag. Exit options exist but carry extreme costs (relocation, complete business restructuring, or accepting inferior product lines)."
+      "label": "The Chinese Semiconductor Industry",
+      "comment": "PERSPECTIVE 3: CHINESE SEMICONDUCTOR INDUSTRY (TANGLED ROPE) — Experiences genuine coordination function (industry policy, state coordination of R&D, integration with supply chain) alongside asymmetric extraction. The constraint drives investment in domestic EDA alternatives (EDA365, HyperX) and domestic foundries (SMIC, Jiangnan), creating technological redundancy. Active enforcement through policy coordination and import substitution policy. Constrained exit: investment in alternatives is expensive and inferior, but possible. The industry is organized and strategically responding, not purely victimized — but the constraint still extracts via technological lag and efficiency penalties."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The US Semiconductor Firm",
+      "comment": "PERSPECTIVE 4: US SEMICONDUCTOR FIRM (ROPE) — Primary beneficiary. Cadence and Synopsys capture licensing revenue from non-restricted markets while excluding Chinese competitors. US foundries (Intel, other IDMs) maintain technological advantage via restricted access to advanced tools and design methodologies. Experiences the constraint as coordination: the industry collectively maintains IP protection and export control compliance. Net beneficiary position with arbitrage options (license to allies, maintain technological moat, capture market share from competitors who cannot operate). Effective extraction runs toward this agent."
     },
     {
       "classification_type": "rope",
@@ -49,170 +69,161 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "US Semiconductor Ecosystem",
-      "comment": "PERSPECTIVE 3: US SEMICONDUCTOR ECOSYSTEM (ROPE) \u2014 Benefits from constraint as coordination mechanism: export controls preserve market access, prevent competitive pressure from advanced Chinese designs, and maintain allied supply chain dominance. Experiences the constraint as legitimate coordination among aligned partners rather than extraction \u2014 the ecosystem has full exit freedom (could lift controls but chooses not to for strategic coordination)."
+      "label": "The Western Foundry Alliance",
+      "comment": "PERSPECTIVE 5: WESTERN FOUNDRY ALLIANCE (ROPE) — TSMC, Samsung, and other advanced-node operators maintain technological leadership and premium pricing via alliance-based exclusion of Chinese chip designers from advanced nodes. The constraint coordinates their market position and technological advantage. Arbitrage options: license to aligned partners, maintain pricing power. The coordination function is genuine (supply chain integrity, security validation, alliance cohesion) and the beneficiary position is stable."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "organized",
-      "time_horizon": "biographical",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "Allied Chip Designers (Non-US)",
-      "comment": "PERSPECTIVE 4: ALLIED CHIP DESIGNERS (NON-US) \u2014 Mixed perspective: benefit from reduced Chinese competition and access to US-controlled technology ecosystems, but face extraction through licensing restrictions, supply chain dependencies, and performance limitations imposed through alliance membership. Experience both coordination (access to advanced tools via alliance membership) and extraction (constrained to maintain alliance policy, cannot develop independent advanced designs, cannot access Chinese markets)."
+      "label": "The Open Chip Design Community",
+      "comment": "PERSPECTIVE 6: OPEN CHIP DESIGN COMMUNITY (TANGLED ROPE) — Benefits from open-source EDA tools (OpenROAD, Yosys) and open-source chip designs (RISC-V, open standard cells). The constraint drives investment in open-source alternatives, creating genuine coordination benefits. However, suppression remains high: open-source tools lag commercial tools by 2-3 generations; design complexity for advanced nodes exceeds current open-source capability. Constrained exit: open-source tools are improving but not yet sufficient for cutting-edge applications. Active enforcement reduces resources available for open-source development. The community is both beneficiary (receives investment from Chinese companies and researchers pursuing alternatives) and victim (constraint fragments the global chip design ecosystem, reducing access to talent and reducing collaborative innovation)."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "powerful",
-      "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "Chinese Government Industrial Policy",
-      "comment": "PERSPECTIVE 5: CHINESE GOVERNMENT INDUSTRIAL POLICY (TANGLED ROPE) \u2014 State actors experience both coordination and extraction relative to the constraint. Coordination function: unified state capacity to invest in alternative chip ecosystems (SMIC, local tool development, domestic IP) creates genuine collective action toward self-sufficiency. Extraction mechanism: the state must extract from private companies and citizens through subsidies, forced partnerships, IP seizure, and talent mobilization to fund these alternatives. Cannot exit without abandoning industrial policy objectives, but has significant agency and leveraging capacity."
-    },
-    {
-      "classification_type": "piton",
-      "agent_power": "institutional",
-      "time_horizon": "civilizational",
-      "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "Export Control Apparatus",
-      "comment": "PERSPECTIVE 6: EXPORT CONTROL APPARATUS (PITON) \u2014 The bureaucratic enforcement machinery (BIS, entity lists, license applications) is largely performative theater: sophisticated actors circumvent controls through gray-market imports, subsidiary companies, and legal arbitrage between jurisdictions. The machinery persists through institutional inertia and political messaging rather than actual enforcement effectiveness. Theater ratio reflects that visible restriction (publicized entity list actions) disguises low actual control efficacy."
-    },
-    {
-      "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "Alternative Chip Ecosystem Development",
-      "comment": "PERSPECTIVE 7: ALTERNATIVE CHIP ECOSYSTEM DEVELOPMENT (SCAFFOLD) \u2014 Chinese state investment in RISC-V, domestic EDA tools (EDA2.0), and fab capacity (SMIC, HiSilicon) represents a structured effort to sunset the constraint through redundant infrastructure. Theater remains moderate because these efforts are genuinely functional (not purely performative). However, the constraint will lose force as alternatives mature \u2014 generational timescale for RISC-V and domestic tools to reach feature parity with restricted ecosystem. Sunset clause is implicit: constraint weakens as alternatives become viable."
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The US Government Strategic Apparatus",
+      "comment": "PERSPECTIVE 7: US GOVERNMENT STRATEGIC APPARATUS (TANGLED ROPE) — Enforces the constraint via EDA tool export controls (ECCN regulations), foundry alliance coordination (Quad, partnership frameworks), talent mobility restrictions (visa screening, security clearance procedures). Genuine coordination function: US industrial policy, technology leadership maintenance, alliance cohesion. Active enforcement: BIS enforcement actions, CFIUS reviews, treaty negotiations. The constraint delivers both coordination benefits (allied technology sharing, aligned R&D incentives) and extraction dynamics (US firms capture protected market share, US government gains geopolitical leverage). The government's experience is tangled: it is enforcing coordination among allies while extracting geopolitical advantage from the resulting technology gap."
     },
     {
       "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "universal",
-      "label": "Analytical Observer (Technology Physics View)",
-      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / PHYSICS VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some chip design capability gap is inherent to technological asymmetry: leading-edge semiconductor design requires accumulated infrastructure, talent, supply chains, and institutional knowledge that cannot be instantly replicated. The gap is partly natural (knowledge is sticky). However, the structural data contradicts the mountain classification \u2014 the analytical engine will detect this as false naturalization. The gap is maintainable only through active enforcement, not through physical or logical necessity."
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, some technology differentiation is inherent to geographic distribution of semiconductor manufacturing: advanced chip design requires access to advanced foundries, which are concentrated in Taiwan and South Korea due to capital requirements, expertise clustering, and path dependence. This perspective risks naturalizing what is actually a coordinated institutional arrangement. The constraint is presented as inevitable consequence of technology economics, but the structural data (beneficiary coordination, active enforcement, forecloseability through policy change) reveals this as a false summit."
     }
   ],
   "omegas": [
     {
-      "id": "control_circumvention_efficacy",
-      "question": "What fraction of advanced chip design tools and IP are actually blocked by export controls vs. successfully circumvented through gray markets, re-export, and legal arbitrage?",
-      "resolution_mechanism": "Intelligence assessment of actual vs. declared technology transfer flows; cross-correlation with Chinese semiconductor capability advances; analysis of entity list effectiveness vs. substitute acquisition routes",
-      "impact": "If circumvention rate > 60%: controls are primarily theater (piton classification confirmed). If circumvention rate < 20%: controls are effective enforcement (snare classification). At 40-60%: hybrid snare/piton behavior.",
+      "id": "technology_substitution_feasibility",
+      "question": "Can Chinese domestic alternatives (SMIC foundries, EDA365, HyperX) achieve sufficient capability to become viable substitutes for TSMC/Cadence/Synopsys within the next 5-10 years?",
+      "resolution_mechanism": "Technical benchmarking: compare SMIC advanced-node yield and performance vs TSMC; compare open-source EDA tool capability vs commercial tools; track Chinese chip design performance metrics over time",
+      "impact": "If substitution is feasible: the constraint's extraction becomes temporary (scaffold rather than snare). If substitution fails: the constraint's suppression is confirmed as structural, not policy-dependent.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Actual effectiveness of export controls vs. circumvention routes"
+      "description": "Feasibility of Chinese domestic technological substitution"
     },
     {
-      "id": "alternative_ecosystem_maturation_timeline",
-      "question": "At what point do domestic Chinese EDA tools, RISC-V ecosystem, and advanced foundries achieve feature parity with US-controlled alternatives, making the constraint obsolete?",
-      "resolution_mechanism": "Capability assessment of SMIC node advancement, EDA2.0 tool maturity, HiSilicon design success metrics, and RISC-V market adoption; correlation with generational timescale projection",
-      "impact": "If maturation timeline < 10 years: scaffold perspective dominates and sunset is structural. If maturation timeline > 20 years: constraint persists beyond generational horizon; scaffold is aspirational. Timeline determines whether to classify as transient (scaffold) or persistent (snare).",
-      "confidence": "low",
+      "id": "alliance_solidarity_stability",
+      "question": "Is the Western foundry and EDA vendor alliance stable, or do individual firms have economic incentives to defect (license advanced tools to China, sell foundry access) if geopolitical conditions change?",
+      "resolution_mechanism": "Economic analysis of firm-level margin structure; historical precedent in previous technology embargoes (encryption, nuclear materials); game-theoretic modeling of defection incentives under different sanctions regimes",
+      "impact": "If stable: the constraint persists indefinitely as a coordinated enforcement regime. If unstable: the constraint is vulnerable to defection and may degrade over 5-15 year horizons.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Timeline for alternative ecosystem feature parity with restricted technologies"
+      "description": "Economic stability of Western alliance-based technology withholding"
     },
     {
-      "id": "compliance_vs_coercion_boundary",
-      "question": "Is the constraint maintained primarily through voluntary alliance compliance or through coercive sanctions that impose costs on non-compliant actors?",
-      "resolution_mechanism": "Analysis of voluntary vs. forced compliance by allied chip designers; examination of sanction severity and frequency; measurement of extraction costs imposed on constraint violators",
-      "impact": "If primarily voluntary (alliance members benefit from participation): stronger rope/scaffold signals. If primarily coercive (sanctions dominate): stronger snare signal. Classification sensitivity to this axis is high.",
+      "id": "domestic_eda_scaling_limits",
+      "question": "What is the fundamental limit to domestic EDA tool development in an embargo regime? Can a single country maintain EDA tool parity with an integrated global ecosystem?",
+      "resolution_mechanism": "Historical analysis of EDA tool development timelines; comparison of development resources (engineers, compute, testing infrastructure) required for commercial-grade tools vs embedded-in-embargo alternatives; complexity analysis of EDA tool codebases and their dependencies on external libraries",
+      "impact": "If scaling is possible: tangled rope classification is accurate. If scaling is fundamentally impossible: the constraint approaches snare for the victim population (trapped without viable alternatives).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Feasibility of domestic EDA tool ecosystem sustainability"
+    },
+    {
+      "id": "enforcement_mechanism_sustainment",
+      "question": "What is the minimum suppression level required to sustain the constraint's extraction function? If enforcement capacity decays (WTO challenges, US export control authority limitations, Allied defection), at what enforcement level does the constraint revert from tangled_rope to rope?",
+      "resolution_mechanism": "Scenario analysis: model constraint classification under different enforcement levels (current = 0.72; weakened = 0.50; minimal = 0.30). Identify the floor below which the constraint's coordination function dominates and extraction becomes negligible.",
+      "impact": "If floor is high (suppression > 0.50 required): constraint is resilient to moderate weakening. If floor is low: constraint is brittle and vulnerable to erosion.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether constraint is maintained by voluntary alliance compliance or coercive sanctions"
+      "description": "Minimum suppression required to sustain extraction function"
     },
     {
-      "id": "state_capacity_extraction_costs",
-      "question": "How much extraction does the Chinese state levy on private companies and citizens through subsidies, forced partnerships, IP appropriation, and talent mobilization to fund alternative chip ecosystems?",
-      "resolution_mechanism": "Measurement of state investment levels, private company burden-sharing agreements, IP seizure frequency, and productivity costs from talent mandates; comparison with unsubsidized market chip development costs",
-      "impact": "If extraction costs exceed alternative ecosystem savings: tangled rope classification weakened. If extraction is sustainable: tangled rope confirmed. High extraction costs signal hidden victims (domestic taxpayers, companies) not directly visible in international trade.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Domestic extraction costs Chinese state imposes to fund alternative chip ecosystems"
-    },
-    {
-      "id": "talent_circulation_asymmetry",
-      "question": "Do brain drain and reverse brain drain balance, or does net talent flow remain permanently asymmetric (more Chinese talent exodus than return)?",
-      "resolution_mechanism": "Longitudinal tracking of Chinese chip designer emigration vs. repatriation rates; career advancement comparison for equivalent talent in US vs. China positions; survey of return migration incentives",
-      "impact": "If permanent asymmetry: victim classification for Chinese institutions is robust (talent drain is irreversible extraction). If circulation becomes balanced: constraint weakens because domestic capacity can be built and retained. Talent dynamics are core to why constraint is snare for individuals.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether talent drain from China to US ecosystem is permanent or reversible"
+      "id": "false_summit_natural_law_framing",
+      "question": "Is the constraint presented as inevitable economic geography ('advanced chips require access to TSMC, which is in Taiwan') rather than as a contingent policy choice? If so, is the natural law framing covering for a beneficiary-coordinated extraction regime?",
+      "resolution_mechanism": "Discourse analysis: examine US government and industry rhetoric about China chip constraints. Identify cases where geographic/economic inevitability is asserted without acknowledging policy alternatives (e.g., Chinese investment in advanced foundries, technology transfer agreements, sanctions reversal). Compare to explicit policy documents where enforcement mechanisms are revealed.",
+      "impact": "If natural law framing is detected: the constraint is a false summit (genuine mountain with false appearance). The engine's FSM signature should flag this.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "False summit detection: is the constraint naturalized as inevitable rather than policy-chosen?"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.45
+      "value": 0.35
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
       "value": 0.58
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.68
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.72
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.48
+      "value": 0.28
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.52
+      "time_point": 3,
+      "value": 0.33
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.55
+      "time_point": 6,
+      "value": 0.38
     }
   ],
   "interval": {
     "start": 0,
-    "end": 10
+    "end": 6
   },
   "commentary": {
-    "narrative_context": "The constraint on Chinese advanced chip design operates through a combination of export controls (EDA tools, foundry access restrictions, IP licensing), talent mobility barriers (visa restrictions, security screening), and alliance-based technology withholding. This constraint exhibits multiple structural types depending on the observer's position: it appears as pure extraction (snare) to trapped researchers and constrained companies; as legitimate coordination (rope) to beneficiary US firms; as mixed coordination-extraction (tangled rope) to allied designers and Chinese government industrial policy; as degraded enforcement theater (piton) to the export control apparatus itself; and as a temporary problem with a sunset pathway (scaffold) to actors building alternative ecosystems. The constraint's extractiveness has increased from 0.45 to 0.68 over the measurement interval as controls have tightened and as Chinese investments in alternatives have revealed the true cost of the gap. Theater ratio remains moderate (0.55) because the constraint operates through multiple mechanisms \u2014 some highly visible enforcement (entity lists, license denials) and some invisible structural barriers (IP licensing complexity, foundry access). The constraint is maintained through sustained geopolitical enforcement rather than through natural law or inevitable technological asymmetry.",
+    "narrative_context": "The constraint on Chinese advanced chip design operates as a coordinated regime of technology withholding and market access restriction enforced through export controls, alliance-based exclusion, and talent mobility barriers. The constraint exhibits a genuine coordination function — it aligns US and allied interests in maintaining technological leadership, coordinates supply chain security, and enforces IP protection norms — alongside substantial extraction dynamics that concentrate technological advantage and create artificial scarcity rents for beneficiary firms. The constraint is not a natural law of economics (advanced chips require access to TSMC) but a contingent policy choice enforced through active mechanisms: EDA tool export controls (ECCN regulations restricting Cadence and Synopsys sales), foundry access restrictions (TSMC and Samsung alliance-based exclusion policies), visa screening (talent mobility barriers), and IP licensing restrictions (design methodology withholding). The structural data reveals this as a tangled rope: genuine coordination function coexists with asymmetric extraction targeting trapped researchers and constrained firms. The measurement trajectory shows rising extractiveness and suppression over the 6-year interval (2018-2024), reflecting escalation in enforcement mechanisms (Biden administration CHIPS Act, expanded ECCN controls, Quad alliance coordination). Theater ratio remains low (0.38), indicating that the extraction mechanism is relatively transparent — the constraint's enforcement is explicit policy, not performative ritual. The false summit risk is high: the constraint is frequently presented in discourse as an inevitable consequence of geography and economics ('TSMC is in Taiwan, therefore China cannot access cutting-edge chips') when it is actually a policy choice with identifiable beneficiaries and forecloseability conditions.",
     "key_agents": [
-      "Chinese Semiconductor Researchers: Primary victims (powerless/trapped) \u2014 blocked from access to state-of-the-art design tools and international collaboration; face permanent career limitations within the constraint",
-      "Chinese Semiconductor Companies (SMIC, HiSilicon, Huawei): Secondary victims (moderate/constrained) \u2014 can invest in workarounds but face extraction through forced domestic investment, restricted foundry access, and IP licensing costs",
-      "US Semiconductor Ecosystem (Cadence, Synopsys, Intel, TSMC): Primary beneficiaries (institutional/arbitrage) \u2014 benefit from market dominance, reduced competition, and supply chain control; experience constraint as coordination mechanism",
-      "Allied Chip Designers (Europe, South Korea, Taiwan): Secondary beneficiaries (organized/constrained) \u2014 benefit from reduced Chinese competition but face extraction through alliance compliance and licensing dependencies",
-      "Chinese Government Industrial Policy: State-level actor (powerful/mobile) \u2014 coordinates extraction from private sector to fund alternative ecosystems (RISC-V, domestic EDA, SMIC); experiences mixed coordination-extraction dynamic",
-      "Export Control Apparatus (BIS, Commerce Department): Institutional enforcer (institutional/arbitrage) \u2014 maintains performative enforcement machinery; actual control efficacy disputed (piton perspective)",
-      "Alternative Chip Ecosystem Development (RISC-V, EDA2.0, SMIC): Organized actors (organized/mobile) \u2014 building sunset pathway through domestic tool maturity and foundry advancement; expect constraint weakening over generational timescale"
+      "Chinese Chip Designers: Trapped victims (powerless/trapped) — face coordinated barriers (visa restrictions, EDA tool access controls, foundry access exclusion, IP licensing withholding); no viable exit except career abandonment",
+      "Chinese Semiconductor Companies: Constrained victims (powerless/constrained, organized/constrained) — SMIC, Huawei HiSilicon, others face foundry and tool access restrictions; constrained alternatives (domestic EDA, domestic foundries) are inferior but available; active enforcement via supply chain restrictions",
+      "US Semiconductor Firms: Primary beneficiaries (institutional/arbitrage) — Cadence, Synopsys, Intel, other IDMs capture protected market share, licensing revenue, and technological moat from constraint enforcement",
+      "Western Foundry Alliance: Secondary beneficiary (institutional/arbitrage) — TSMC, Samsung, other advanced-node operators maintain technological leadership and premium pricing via alliance-based exclusion",
+      "Chinese Semiconductor Industry: Organized victim (organized/constrained) — experiences both coordination function (state-coordinated R&D, industry policy) and extraction (technological lag, efficiency penalties); constrained exit via domestic alternatives",
+      "Open-Source Chip Design Community: Mixed actor (moderate/constrained) — benefits from Chinese investment in open-source alternatives but victimized by constraint's fragmentation of global ecosystem",
+      "US Government Strategic Apparatus: Enforcer (organized/institutional) — enforces constraint via export controls, alliance coordination, talent restrictions; experiences tangled rope (genuine coordination alongside geopolitical extraction)"
     ],
-    "logic_rationale": "Extractiveness (0.68): High and rising. The measurement trajectory (0.45 \u2192 0.58 \u2192 0.68) reflects tightening controls and Chinese response investments. The extractiveness value captures both the direct costs imposed (tool access, IP licensing, foundry delays) and the indirect costs (forced domestic R&D duplication, talent drain, slower product development). At 0.68, the constraint is severe enough to justify snare classification for trapped agents. Suppression (0.72): High. Multiple reinforcing barriers: (1) technical \u2014 advanced EDA tools are specialized IP with limited substitutes; (2) legal \u2014 export controls backed by sanctions; (3) economic \u2014 licensing costs are prohibitive for non-compliant pathways; (4) social \u2014 talent mobility restricted through visa and security screening. These mechanisms are not easily surmountable. Theater ratio (0.55): Moderate. The constraint operates through mixed mechanisms: visible enforcement (publicized entity list actions, denied licenses, sanctioned companies) creates theatrical effect, but actual control is substantive (tools are genuinely restricted, foundries genuinely have limited capacity). The moderateness reflects that enforcement is neither fully transparent (actual circumvention rates unknown) nor fully performative (real capability gaps exist).",
-    "perspectival_gap": "The constraint's classification spans all six types across different observational positions. This reveals fundamental disagreement about what the constraint is: an immutable technological gap that coordinate action around (mountain, false), a coordination mechanism that benefits all parties (rope, US view), an asymmetric mixed arrangement (tangled rope, state/allied view), pure extraction with no coordination value (snare, victim view), a degraded enforcement theater (piton, apparatus view), or a transient problem being solved (scaffold, alternative ecosystem view). No single type is 'correct' \u2014 each perspective captures a real aspect of the structure. The engine's role is to make the perspectival divergence explicit and measure it, which enables diagnosis of whether the constraint is actually justified by coordination value or maintained by extraction mechanisms.",
-    "directionality_logic": "Directionality (d) differs sharply by agent position. Chinese researchers at powerless + trapped: d \u2248 0.95 (full target, maximum f(d) \u2248 1.42). Chinese companies at moderate + constrained: d \u2248 0.75 (high target, f(d) \u2248 1.08). US ecosystem at institutional + arbitrage: d \u2248 0.15 (beneficiary, f(d) \u2248 -0.01). Allied designers at organized + constrained: d \u2248 0.55 (symmetric pressure, f(d) \u2248 0.75). Chinese government at powerful + mobile: d \u2248 0.50 (leveraged but constrained, f(d) \u2248 0.65). The directionality spread produces the perspectival gap: high-d agents experience severe effective extraction (\u03c7 \u2248 \u03b5 \u00d7 f(d) \u00d7 \u03c3(global) \u2248 0.68 \u00d7 1.42 \u00d7 1.2 \u2248 1.15 for powerless + trapped); low-d agents experience negative effective extraction (beneficiaries) or symmetric burden (leveraged state actors).",
-    "mandatrophy_analysis": "GEOPOLITICAL CONSTRAINT WITH UNRESOLVED JUSTIFICATION: This constraint resolves mandatrophy at the analytical level by revealing the perspectival core disagreement: Does the constraint serve legitimate coordination (protecting allied supply chains, preventing dual-use leakage) or is it primarily extractive (capturing market advantage, stifling competition)? The US perspective (rope/coordination) and Chinese perspective (snare/extraction) are incommensurable \u2014 they cannot both be fully correct. The constraint's mandatrophy is resolved by acknowledging that the justification is *political* (geopolitical competition) rather than *structural* (technological necessity). At \u03b5 = 0.68 with suppression = 0.72, the constraint is severe enough to require justification beyond coordination. The evidence that justifies the constraint (dual-use risk, supply chain security) is genuinely present but cannot be cleanly separated from the extractive benefits (market dominance, competitive protection) that accrue to beneficiaries. The engine's detection of this ambiguity \u2014 six types across eight perspectives \u2014 is the diagnostic output. The constraint is maintainable only through sustained geopolitical enforcement, not through natural coordination advantages."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts substantial value from trapped and constrained actors through restricted access to critical tools and foundries, but is not maximal extraction because: (1) domestic alternatives exist (inferior but available), (2) the constraint permits non-cutting-edge chip design, (3) some workarounds exist (reverse-engineering, procurement through gray markets). The rising trajectory (0.35 → 0.58 over 6 years) reflects escalating enforcement mechanisms. Suppression (0.72): High and rising. Multiple coordinated barriers foreclose alternatives: EDA tool export controls + foundry alliance exclusion + visa restrictions + IP licensing withholding. No single alternative is viable; only combinations of expensive domestic substitutes approach functionality. Rising trajectory reflects Biden administration policy intensification and quad alliance coordination. Theater ratio (0.38): Low. The constraint's enforcement is relatively transparent — explicit policy rather than performative ritual. ECCN controls are codified in law, foundry access restrictions are explicit alliance agreements, visa screening is formal procedure. The low theater indicates this is not a Piton (degraded ritual) but a functioning extraction regime. Claimed type (Tangled Rope): Justified by genuine coordination function (IP protection, supply chain security, alliance cohesion) coexisting with asymmetric extraction (market share capture, technological moat, geopolitical leverage). Active enforcement is required to maintain the tangled coordination.",
+    "perspectival_gap": "Beneficiaries (US firms, foundry alliance) classify the constraint as Rope at biographical timescale because they experience it as legitimate coordination: IP protection, supply chain security, technological incentives for continued innovation. Trapped researchers classify it as Snare at biographical timescale because they experience total exclusion from alternatives. The constrained Chinese industry classifies it as Snare at immediate timescale (no viable alternatives for current products) but Tangled Rope at generational timescale (investment in domestic alternatives is possible but expensive). The US government at immediate timescale sees enforcement activity (Tangled Rope), but at civilizational timescale risks natural law framing ('geographic inevitability'). The analytical observer's mountain classification is a false summit — the constraint is presented as natural geography when it is policy-chosen. The gap reveals that beneficiary-coordinated extraction is frequently naturalized as inevitable rather than contingent.",
+    "directionality_logic": "Directionality values are derived from the constraint's asymmetric benefit structure. Trapped Chinese researchers occupy the maximum-extraction position (d ≈ 0.95, f(d) ≈ 1.42): they bear costs with zero alternatives. Constrained Chinese firms occupy high-extraction position (d ≈ 0.85, f(d) ≈ 1.15): expensive alternatives exist. Organized Chinese industry (d ≈ 0.60, f(d) ≈ 0.85) can invest in alternatives at industrial scale. US firms, foundry operators, and government (d ≈ 0.10-0.20, f(d) ≈ -0.05 to 0.05) experience the constraint as protective and coordinating, not extractive. No directionality overrides are necessary — the beneficiary/victim declarations and exit options fully determine d via the standard derivation chain.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by distinguishing coordination function from extraction mechanism. At biographical timescale, the constraint appears as Snare to powerless agents (trapped) and Rope to institutional beneficiaries (arbitrage). At generational timescale, the organized Chinese industry sees Tangled Rope (genuine coordination via state policy alongside extraction via technological gap). At civilizational timescale, the analytical observer risks Mountain (natural law) but the structural data reveals false summit: beneficiaries are identifiable (US firms, foundry alliance, government), enforcement mechanisms are explicit (export controls, visa screening), and alternatives are forecloseably by policy (sanctions reversal, Chinese investment in advanced foundries). The mandatrophy is resolved by recognizing that all classifications are accurate from their respective positions — the constraint genuinely coordinates allied interests (Rope from beneficiary view) while genuinely extracting from trapped agents (Snare from victim view). The tangled_rope classification at the organized Chinese industry and US government perspectives captures the duality: coordination coexists with extraction, and both are structural features of the regime."
   },
   "boltzmann": {
-    "coordination_type": "global_infrastructure",
-    "boltzmann_floor_override": 0.18
+    "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "semiconductor_supply_chain_vulnerability",
-      "taiwan_fab_dependency",
-      "advanced_ai_training_model_export_controls"
+      "semiconductor_supply_chain_resilience",
+      "open_source_chip_design_fragmentation",
+      "taiwan_strait_technology_dependency"
     ],
-    "dual_formulation_note": "This constraint is upstream of multiple dependent constraints: Taiwan fab dependency, AI training export controls, and semiconductor supply chain vulnerabilities all derive their severity from this constraint. The alternative ecosystem development pathway (RISC-V, domestic EDA, SMIC capacity) will progressively weaken all downstream constraints as it matures. The network exhibits causal hierarchy: breaking or weakening this constraint reduces severity across all dependents."
+    "dual_formulation_note": "The advanced chip design constraint should be decomposed into three structurally distinct constraints with different ε values: (1) EDA tool access control (ε ≈ 0.50, Tangled Rope) — coordination function for IP protection; (2) Foundry access exclusion (ε ≈ 0.65, Snare) — pure market access restriction; (3) Talent mobility restrictions (ε ≈ 0.72, Snare) — pure extraction with no coordination function. These are presented here as one constraint for corpus coherence, but domain decomposition would improve resolution."
   },
-  "directionality_overrides": [
-    {
-      "power_atom": "institutional",
-      "d_value": 0.25
-    }
-  ]
+  "directionality_overrides": []
 }

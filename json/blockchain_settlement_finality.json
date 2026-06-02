@@ -4,25 +4,25 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "bsf"
+    "measurement_id_prefix": "bsf",
+    "story_uid": "af442844-6599-4929-abed-9d18ccf7725d"
   },
   "base_properties": {
     "extractiveness": 0.58,
-    "suppression": 0.65,
-    "theater_ratio": 0.48,
+    "suppression": 0.62,
+    "theater_ratio": 0.65,
     "claimed_type": "tangled_rope",
     "human_readable": "Blockchain Settlement Finality Constraint",
     "topic_domain": "cryptocurrency/distributed_systems",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "validator_operators",
-      "exchange_platforms",
-      "early_adopters"
+      "exchange_operators",
+      "protocol_developers"
     ],
     "victims": [
-      "retail_traders",
-      "security_auditors",
-      "network_participants"
+      "retail_transaction_participants",
+      "network_security_commons"
     ]
   },
   "perspectives": [
@@ -32,35 +32,35 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Retail Trader",
-      "comment": "PERSPECTIVE 1: RETAIL TRADER (SNARE) \u2014 Faces irreversible finality rules they cannot negotiate or exit. Cannot verify finality conditions, cannot recall funds once settlement occurs, cannot organize alternative settlement mechanisms. Bears full extraction cost: submitted transactions are irreversible but finality conditions are opaque and validator-controlled. Maximum experienced extraction with zero alternatives."
+      "label": "The Retail Participant",
+      "comment": "PERSPECTIVE 1: RETAIL PARTICIPANT (SNARE) — Trapped by the finality opacity. Cannot exit the settlement mechanism without abandoning their transaction. Bears full cost of reorganization risk, validator censorship, and MEV extraction. No information asymmetry remedy available. Maximum experienced extraction."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "moderate",
-      "time_horizon": "generational",
+      "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "Security Auditors and Protocol Developers",
-      "comment": "PERSPECTIVE 2: SECURITY AUDITORS (TANGLED ROPE) \u2014 Both benefit from and bear costs of finality constraints. Benefit: finality rules create demand for security audits and protocol design expertise. Bear costs: finality ambiguities require constant re-specification, finality edge cases create liability exposure, finality rollbacks threaten professional reputation. Constrained exit: can move to different chains but accumulated expertise locks them into blockchain security domain. Mixed coordination (securing the settlement mechanism) and extraction (finality ambiguity forces perpetual labor)."
+      "spatial_scope": "national",
+      "label": "The Exchange Operator",
+      "comment": "PERSPECTIVE 2: EXCHANGE OPERATOR (TANGLED ROPE) — Constrained by validator set structure and reorg risk but also benefits from finality arbitrage (accepting deposits vs releasing withdrawals) and MEV propagation. Genuine coordination function exists (settlement), but extraction embedded through finality timing control. Moderate agency — can choose block confirmation thresholds but cannot exit finality constraints entirely."
     },
     {
       "classification_type": "rope",
-      "agent_power": "institutional",
+      "agent_power": "organized",
       "time_horizon": "immediate",
-      "exit_options": "arbitrage",
+      "exit_options": "mobile",
       "spatial_scope": "global",
-      "label": "Exchange Platforms and Validators",
-      "comment": "PERSPECTIVE 3: EXCHANGE PLATFORMS & VALIDATORS (ROPE) \u2014 Experience finality as coordination mechanism. Finality rules enable them to operate efficiently: know when settlements are irreversible, can batch transactions, can derive fees from transaction ordering. Net beneficiaries. Can exit to alternative chains (arbitrage). Finality is genuine coordination for this agent \u2014 solves multi-party synchronization problem without excess coercion."
+      "label": "The Validator Coalition",
+      "comment": "PERSPECTIVE 3: VALIDATOR COALITION (ROPE) — Benefits from the finality constraint's existence. Extraction is perceived as legitimate coordination reward (transaction fees, MEV). Mobile exit options (can exit staking, can fork consensus). Net beneficiary. The finality mechanism solves Byzantine agreement; validators see this as pure coordination with themselves as service providers."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
-      "exit_options": "mobile",
+      "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "Protocol Evolution Community",
-      "comment": "PERSPECTIVE 4: PROTOCOL EVOLUTION COMMUNITY (SCAFFOLD) \u2014 Organized developers, researchers, and governance participants see finality as a temporary coordination problem with a sunset clause. Finality specifications are being replaced: layer-2 rollups bypass finality via commitment schemes; sharding enables finality parallelization; proof systems replace settlement delay. Exit is visible (alternative layer structures) and construction is active. Suppression exists (backward compatibility, legacy transaction validation) but declines as new mechanisms mature. Sunset horizon: 5-10 years as alternative settlement models become dominant."
+      "label": "The Protocol Development Community",
+      "comment": "PERSPECTIVE 4: PROTOCOL DEVELOPMENT COMMUNITY (SCAFFOLD) — Sees finality opacity as a temporary coordination failure with structural sunset. Sharding, rollups, and threshold encryption technologies are building pathways to provably-correct finality with reduced information asymmetry. Constrained by existing validator incentives but organized enough to coordinate fork events and protocol upgrades. Sunset clause: these technologies mature within 5-10 years, replacing current probabilistic finality with cryptographic certainty."
     },
     {
       "classification_type": "piton",
@@ -68,76 +68,85 @@
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Traditional Settlement Gatekeepers",
-      "comment": "PERSPECTIVE 5: TRADITIONAL SETTLEMENT GATEKEEPERS (PITON) \u2014 Legacy banking and clearing infrastructure view blockchain finality as a performative alternative to genuine settlement. Blockchain finality lacks the institutional backing, insurance, and legal enforceability of traditional settlement. Theater ratio high: blockchain settlement process mimics traditional settlement ritual (confirmation counts, validator agreement, block time) but lacks institutional guarantees. Piton classification: the blockchain settlement mythology persists despite low institutional trust, maintained through technological theater and investor belief rather than functional superiority over traditional systems."
+      "label": "The Consensus Mechanism Ritual",
+      "comment": "PERSPECTIVE 5: CONSENSUS MECHANISM RITUAL (PITON) — The proof-of-stake finality attestation ceremony is substantially performative. Validators attest to finality based on economic incentives and myopic information, not provable correctness. The ritual persists because no single actor has incentive to deviate (coordination equilibrium), but the function (proving finality) is not reliably achieved. Theater ratio elevated by: opacity of validator incentives, complexity of slashing conditions, and ritualistic confidence (many confirmations = finality) replacing actual safety proofs. Institutional inertia maintains the mechanism despite degradation."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "Analytical Observer",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From universal/civilizational view, blockchain settlement finality is a hybrid coordination-extraction mechanism. Coordination component: probabilistic finality rules do solve Byzantine agreement problems in distributed systems \u2014 genuine multi-party synchronization without central authority. Extraction component: opaque finality conditions, validator MEV (maximal extractable value), rollback risks, and asymmetric information about finality states create systematic extraction from retail participants. Both components are structural, not contingent. Perspectival gap reveals that agent's structural power and exit options determine which component dominates their experience."
+      "label": "The Analytical Observer (Consensus Inevitability View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / CONSENSUS INEVITABILITY (MOUNTAIN) — From a civilizational perspective, some settlement finality gap is inherent to distributed consensus: Byzantine agreement always requires time, participants always have asymmetric information, and some extraction is the inevitable cost of decentralization. This perspective sees finality probabilism as an immutable constraint on decentralized systems. However, structural data — identifiable beneficiaries (validators, exchanges), victims (retail), and active enforcement mechanisms — reveals this as a false summit: the gap is not inherent to consensus, but engineered through specific protocol design choices."
     }
   ],
   "omegas": [
     {
-      "id": "finality_probabilistic_vs_absolute",
-      "question": "Is blockchain settlement finality genuinely probabilistic (always reversible in principle) or has it reached practical absoluteness through economic incentives?",
-      "resolution_mechanism": "Analysis of historical chain reorganizations (reorgs) at different depths; cost-benefit analysis of 51% attacks vs finality reward structures; empirical measurement of finality probability as function of block depth and validator stake concentration",
-      "impact": "If truly probabilistic: constraint is pure coordination (Rope/Scaffold from all perspectives) \u2014 finality is a useful fiction enabling transactions. If practically absolute: constraint is extraction (Snare/Tangled Rope) \u2014 irreversibility is enforced regardless of agent consent or understanding.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether finality is probabilistic or economically absolute"
-    },
-    {
-      "id": "extraction_mechanism_design_intent",
-      "question": "Is validator MEV extraction a necessary feature of consensus mechanism design or an unintended rent-seeking loophole?",
-      "resolution_mechanism": "Analysis of protocol design documents and developer intent; comparison of MEV levels across consensus mechanisms with different ordering policies (encrypted mempools, threshold encryption, PBS); measurement of MEV as proportion of total validator revenue",
-      "impact": "If necessary: validator extraction is coordination cost (Tangled Rope). If unintended: validator extraction is pure rent-seeking (Snare). Claim extraction is extractiveness \u2265 0.70 (requires mandatrophy resolution).",
+      "id": "finality_opacity_necessity",
+      "question": "Is the opacity of finality conditions (probabilistic thresholds, validator incentive structures, reorg risk probabilities) necessary for consensus performance, or is it an artifact of current protocol design?",
+      "resolution_mechanism": "Empirical comparison of finality transparency vs consensus liveness/safety: measure protocol performance under full-information finality (threshold encryption, commit-reveal schemes) vs current opaque finality. Cross-chain comparison of finality transparency mechanisms.",
+      "impact": "If necessary: finality opacity is a rock-solid coordination cost (floor increases). If artifact: opacity is pure extraction mechanism (ε increases, suppression increases, tangled_rope → snare threshold crossed).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether MEV extraction is design feature or unintended loophole"
+      "description": "Whether finality opacity is necessary or engineered"
     },
     {
-      "id": "retail_finality_awareness",
-      "question": "Do retail traders understand the irreversibility conditions and probability distributions governing their settlement finality?",
-      "resolution_mechanism": "Survey of retail trader understanding of finality rules, block reorganization risks, and validator incentives; analysis of transaction patterns (e.g., submission rate relative to block confirmation depth, price impact of finality uncertainty)",
-      "impact": "If awareness low: suppression is largely internalized (cognitive rather than structural); identity_locked classification more appropriate for trapped exit. If awareness high: suppression is structural (external barriers to exit); trapped classification appropriate. Determines whether exit_options should include identity_locked for retail perspective.",
+      "id": "mev_extraction_magnitude",
+      "question": "What fraction of retail MEV loss is unavoidable ordering unavoidability (consensus-layer) vs avoidable through better interface design (application-layer)?",
+      "resolution_mechanism": "Decompose MEV into: ordering randomness (provably unavoidable), validator-side ordering (preventable through threshold encryption), and sandwich attacks (preventable through intent-based architectures). Measure actual distribution.",
+      "impact": "If high unavoidable fraction: MEV extraction floor is near current levels (ε unchanged). If high avoidable fraction: suppression metric should lower (alternative mechanisms exist), and retail perspective could shift to mobile/constrained rather than trapped.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Retail trader awareness of finality conditions"
+      "description": "MEV extraction avoidability"
     },
     {
-      "id": "staking_concentration_and_extraction",
-      "question": "Does validator stake concentration (Gini coefficient of staking distribution) determine extraction intensity, with more concentrated stake enabling higher MEV?",
-      "resolution_mechanism": "Longitudinal analysis of Gini coefficient of validator stake distribution; correlation with MEV levels, finality rollback frequency, and transaction fee variance by transaction size",
-      "impact": "If strong correlation: extractiveness is directly proportional to stake concentration \u2014 could vary by protocol version or network fork. If weak correlation: extraction is driven by other factors (information asymmetry, protocol design). Informs whether extractiveness should be updated as staking patterns evolve.",
+      "id": "validator_coalition_stability",
+      "question": "How stable is the current validator coalition against extraction-driven forking or protocol change? Do validator incentives align with settlement security, or do they align with revenue maximization at security's expense?",
+      "resolution_mechanism": "Historical analysis of validator behavior during finality crises (Ethereum Shanghai, beacon chain edge cases). Model incentive divergence: measure validator participation in protocol changes that reduce their MEV extraction power.",
+      "impact": "If stable and aligned: validator coalition rope classification is sound. If unstable or misaligned: coalition is constrained rather than organized; organized perspective should shift to constrained exit; rope → tangled_rope for validator view.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Relationship between staking concentration and extraction intensity"
+      "description": "Validator coalition stability and incentive alignment"
     },
     {
-      "id": "layer2_finality_replacement_timeline",
-      "question": "Will layer-2 rollup settlement and other alternative finality mechanisms achieve sufficient liquidity, adoption, and institutional integration to replace layer-1 blockchain settlement finality?",
-      "resolution_mechanism": "Measurement of total value locked in layer-2 systems relative to layer-1; adoption rate by institutional actors; settlement time and cost comparisons; regulatory approval of alternative settlement mechanisms",
-      "impact": "If replacement occurs: scaffold sunset is confirmed, constraint transitions to piton (obsolete but persisting). If replacement fails: constraint persists as tangled_rope or snare indefinitely, and sunset projection is aspirational rather than structural.",
+      "id": "threshold_encryption_timeline",
+      "question": "When will threshold encryption and commit-reveal schemes mature to production-grade reliability and validator participation? Does the scaffold sunset clause timeline (5-10 years) hold?",
+      "resolution_mechanism": "Technology maturation tracking: measure implementations deployed, security audits completed, validator adoption rates, liveness/safety empirical performance under production load.",
+      "impact": "If timeline holds: scaffold classification confirmed. If delayed: organized agents become constrained (sunset moves to 15-20 years), and scaffold → tangled_rope. If accelerated: sunset arrives within 3 years, piton and mountain perspectives begin aging immediately.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Finality transparency technology maturation timeline"
+    },
+    {
+      "id": "retail_exit_alternative_settlements",
+      "question": "Do layer-2 solutions and alternative settlement layers (off-chain systems, custodial systems, sidechain checkpoints) constitute genuine exit options for retail, or do they replicate the same extraction mechanism?",
+      "resolution_mechanism": "Structural analysis of layer-2 finality constraints: are finality opacities replicated or eliminated? Measure extraction rates on Arbitrum, Optimism, Polygon relative to Ethereum. Custody trust requirements.",
+      "impact": "If genuine alternatives exist: retail exit_options shift to constrained (mobile if L2s are truely equivalent). If extraction replicated: retail remains trapped (alternative mechanisms are shallow copies of the original). Classification shifts accordingly.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Layer-2 finality escape route viability"
+    },
+    {
+      "id": "false_summit_decentralization_necessity",
+      "question": "Is the finality gap and asymmetric information distribution necessary to any form of decentralization, or is it an engineered extractive mechanism layered over a decentralized consensus engine that could function with full-information finality?",
+      "resolution_mechanism": "Theoretical analysis: compare Byzantine-safe consensus algorithms under full-information vs partial-information finality. Empirical: measure consensus layer safety/liveness separately from finality signaling layer.",
+      "impact": "If necessary: mountain classification holds for analytical observer. If engineered: analytical observer perspective triggers false-summit reclassification to tangled_rope or snare. This omega documents the oracle gap (Theorem 4): the observer's native analytical position may be captured by decentralization mythology.",
       "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether layer-2 systems will replace layer-1 settlement finality"
+      "type_class": "conceptual",
+      "description": "Whether finality opacity is inherent to decentralization or engineered extraction"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.42
     },
     {
       "metric": "base_extractiveness",
       "time_point": 3,
-      "value": 0.48
+      "value": 0.51
     },
     {
       "metric": "base_extractiveness",
@@ -147,17 +156,32 @@
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.62
+      "value": 0.48
     },
     {
       "metric": "theater_ratio",
       "time_point": 3,
-      "value": 0.55
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 6,
-      "value": 0.48
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.57
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.62
     }
   ],
   "interval": {
@@ -165,35 +189,37 @@
     "end": 6
   },
   "commentary": {
-    "narrative_context": "Blockchain settlement finality is the constraint governing when transactions become irreversible and binding on a distributed ledger. This constraint exhibits the core tension of decentralized systems: probabilistic finality is necessary for Byzantine agreement in the absence of a central authority, but the opacity of finality conditions and asymmetric information about validator incentives create systematic extraction from retail participants. The constraint operates across multiple institutional layers \u2014 technical (consensus protocols), economic (validator rewards and MEV), social (trader expectations and risk models), and legal (regulatory treatment of settlement finality). It is a diagnostic exemplar for how coordination mechanisms can be weaponized for extraction when combined with information asymmetry and power imbalance. Extractiveness has risen from 0.35 to 0.58 over the interval as MEV mechanisms became more sophisticated and validator stake concentration increased, while theater ratio has declined slightly (0.62 to 0.48) as the technical mechanisms underlying finality have become more transparent in developer communities (though remaining opaque to retail traders). The constraint exhibits genuine coordination function (solving Byzantine agreement) combined with systematic extraction (MEV, validator ordering power, rollback risks), making it a canonical Tangled Rope at the analytical level.",
+    "narrative_context": "Blockchain settlement finality is the structural guarantee that a transaction is irreversible and binding on a distributed ledger. In decentralized systems (Proof-of-Stake Ethereum, Solana, Polkadot), finality is not cryptographic or algorithmic — it is probabilistic, grounded in economic incentives: validators stake capital and face slashing if they sign conflicting blocks, making reorganization economically irrational beyond some confirmation threshold. This constraint exhibits the core tension of decentralization: Byzantine agreement without a central authority requires probabilistic settlement, but the opacity of finality conditions and asymmetric information about validator incentives and MEV extraction create systematic extraction from retail participants. Finality is invoked as immutable decentralization — the beneficiaries of the current structure (validators, exchanges, protocol developers) naturalize the finality gap as inherent to consensus, while retail participants experience the opacity as trapped settlement with uncompensated reorg and extraction risk. The constraint is tangled_rope: genuine coordination function (settlement) exists, but extraction is embedded through finality timing control, MEV propagation, and informational asymmetry.",
     "key_agents": [
-      "Retail Traders: Primary victim (powerless/trapped) \u2014 submit irreversible transactions without understanding finality conditions or validator incentives; bear full extraction from MEV and ordering bias; cannot exit without abandoning blockchain participation",
-      "Exchange Platforms: Primary beneficiary (institutional/arbitrage) \u2014 capture MEV through transaction ordering and batch logic; can exit to alternative chains or layer-2 systems; experience finality as coordination mechanism",
-      "Validator Operators: Secondary beneficiary (institutional/arbitrage) \u2014 extract MEV and receive block rewards; maintain consensus mechanism; can arbitrage across protocols",
-      "Security Auditors: Mixed (moderate/constrained) \u2014 benefit from demand for finality audits and protocol design; bear cost of finality ambiguities and liability for rollback scenarios; locked into blockchain expertise",
-      "Protocol Developers: Organized (organized/mobile) \u2014 building alternative finality mechanisms (layer-2 rollups, sharding, proof systems); see blockchain finality as temporary problem with sunset; exiting through technological replacement",
-      "Traditional Settlement Gatekeepers: Institutional (institutional/arbitrage) \u2014 view blockchain finality as performative theater lacking institutional backing; maintain parallel settlement infrastructure; see blockchain as threat and copycat system"
+      "Retail Transaction Participants: Primary victim (powerless/trapped) — bear full cost of finality opacity, reorg risk, MEV extraction; no exit without abandoning transaction",
+      "Validator Operators: Primary beneficiary (organized/mobile) — capture extraction through MEV, flexible exit via unstaking, benefit from finality uncertainty",
+      "Exchange Operators: Secondary beneficiary (organized/constrained) — arbitrage finality timing (accept deposits, delay withdrawals); replicate finality opacity downstream",
+      "Protocol Developers: Tertiary beneficiary (institutional/arbitrage) — maintain finality design that benefits validator coalition; control protocol upgrade pathways",
+      "Network Security Commons: Primary victim (powerless/trapped) — finality opacity undermines settlement reliability; cannot organize or exit",
+      "Layer-2 Solution Providers: Organized agents (organized/constrained) — attempting to bypass finality constraint but constrained by need for root-chain settlement",
+      "Threshold Encryption Research Community: Organized agents (organized/constrained) — developing technologies (commit-reveal, threshold encryption) to enable provably-correct finality; constrained by validator incentive resistance"
     ],
-    "logic_rationale": "Extractiveness (0.58): Moderately high. The constraint extracts from retail participants through (1) MEV from transaction ordering, (2) information asymmetry about finality probability distributions, (3) rollback risk unpriced in transaction fees, (4) validator stake concentration enabling extraction. Not as severe as pure snares (\u22650.66) because institutional actors (exchanges, validators) do provide genuine coordination service \u2014 without them, Byzantine agreement fails entirely. The 0.35\u21920.58 trajectory reflects increasing sophistication of MEV extraction mechanisms (sandwich attacks, MEV-Boost, PBS) rather than fundamental worsening of coordination function. Suppression (0.65): High. Barriers to exit include: (1) retail traders cannot verify finality conditions mathematically or economically, (2) no alternative settlement mechanisms at comparable scale, (3) social pressure and FOMO lock traders into ecosystem, (4) asymmetric information about validator incentives and rollback probabilities. Suppression is partly structural (technical barriers to understanding consensus mechanisms) and partly internalized (belief in blockchain inevitability). Theater ratio (0.48): Moderate-declining. Blockchain finality mimics traditional settlement ritual (block confirmations, validator agreement, irreversibility claim) but the underlying mechanisms are increasingly transparent within developer communities. Theater is declining as layer-2 and alternative mechanisms become visible, reducing the mystique of layer-1 settlement. However, theater remains high for retail traders and traditional institutions who see blockchain settlement as black-box magic rather than probabilistic consensus.",
-    "directionality_logic": "Directionality (d) values derive from each agent's structural position in the extraction flow. Retail traders are pure victims (trapped, no exit alternatives) \u2192 high d (0.90+) \u2192 high f(d) \u2192 high experienced extraction despite moderate base extractiveness. Exchange platforms and validators are beneficiaries (institutional, arbitrage exit) \u2192 low d (0.10-0.20) \u2192 low/negative f(d) \u2192 negative experienced extraction (they see subsidy). Security auditors are mixed (moderate power, constrained exit, both benefits and costs) \u2192 middle d (0.55-0.65) \u2192 moderate f(d) \u2192 experienced extraction proportional to their inability to exit. Protocol developers are organized agents building sunset mechanisms (organized, mobile exit) \u2192 low-moderate d (0.35-0.45) \u2192 moderate f(d) \u2192 experienced extraction tempered by visible exit path. Analytical observer occupies universal scope and civilizational time \u2192 derives d from aggregate structural position (\u2211 extraction to victims \u2212 \u2211 benefits to beneficiaries) \u2192 d \u2248 0.60 \u2192 Tangled Rope classification. The perspectival gap between retail (snare) and exchange (rope) is maximized because exit options differ most: retail trapped, exchange arbitrage.",
-    "perspectival_gap": "The constraint demonstrates extreme perspectival divergence. Retail traders experience pure extraction (Snare) \u2014 they are locked into irreversible settlement with no understanding of finality conditions and no exit to alternative mechanisms. Exchange platforms experience pure coordination (Rope) \u2014 finality rules enable efficient order batching and transaction pricing without excess coercion. Protocol developers experience temporary coordination with sunset (Scaffold) \u2014 finality is a known problem being solved through technological replacement (rollups, sharding). Security auditors experience mixed extraction and coordination (Tangled Rope) \u2014 the system both demands their expertise and exploits the ambiguity they work to resolve. Traditional settlement gatekeepers experience performative theater (Piton) \u2014 blockchain finality persists as a ritualized mimicry of traditional settlement despite lower actual assurance. The analytical observer integrates all perspectives and identifies Tangled Rope \u2014 genuine Byzantine agreement coordination layered with systematic extraction through MEV and information asymmetry. The perspectival gap is driven by: (1) differential exit options (trapped vs arbitrage), (2) differential access to information (opacity for retail, transparency for validators), (3) differential power (organized vs powerless), (4) differential time horizons (immediate for validators, generational for auditors, civilizational for protocol developers).",
-    "mandatrophy_analysis": "RESOLVED: The mandatrophy is resolved by the tangled_rope classification at the analytical level, which integrates both the coordination component (solving Byzantine agreement) and the extraction component (MEV, information asymmetry, validator ordering power). The retail (snare) and exchange (rope) perspectives are not contradictory \u2014 they represent different structural positions experiencing the same constraint differently. The retail experience is genuinely snare-like because their exit options are effectively zero in the current architecture. The exchange experience is genuinely rope-like because they benefit from the coordination without coercion. The scaffold perspective shows why mandatrophy resolution is necessary: if finality constraints were mislabeled as pure extraction (snare across all perspectives), the protocol evolution would be misdirected toward 'fixing extraction' rather than 'replacing the finality requirement entirely.' The scaffold sunset thesis confirms that the constraint's true function (Byzantine agreement) is being replaced by alternative mechanisms, not reformed. The piton perspective indicates the risk of false theater \u2014 traditional institutions treating blockchain settlement as a credible alternative when it actually relies on different (not superior) trust assumptions. The mandatrophy resolves through structural clarity: the constraint IS both coordination and extraction, and the proportions vary by agent position and time horizon."
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Retail participants face systematic extraction through MEV, reorg risk (they bear slashing losses without compensation), and finality opacity (asymmetric information about validator incentives and confirmation safety). The magnitude is not total (some transactions complete safely) but substantial and asymmetric (extraction concentrates on retail, flows to validators). Suppression (0.62): High. Retail participants face multiple barriers to exit: no alternative settlement mechanisms with genuinely lower finality opacity (layer-2 solutions replicate the opacity), high switching costs (liquidity fragmentation, custody trust), and informational barriers (finality conditions are not publicly specified in human-readable form — they are embedded in validator client code and slashing conditions). Theater ratio (0.65): High-moderate. Finality is ritualized: the observance of many block confirmations and validator attestations creates perceived safety that exceeds actual safety. The ritual is performative because: (1) retail cannot verify that attestations represent informed validator evaluation vs reflexive staking incentives, (2) slashing conditions are complex and opaque (validators may not fully understand reorg risk they accept), (3) confirmation thresholds (30+ blocks on Ethereum) are conventional heuristics without safety proofs. Over the measurement interval (0-6 years), extractiveness increased from 0.42 → 0.58 as MEV mechanisms matured (sandwich attacks, just-in-time liquidations, ordering extraction) and validator coalitions consolidated, increasing both extraction magnitude and suppression (retail has fewer viable alternatives as centralization deepens).",
+    "perspectival_gap": "The perspectival gap is maximal between retail (snare from powerless position) and validator (rope from organized position). They perceive the same structural phenomenon (finality mechanism) as completely different constraint types because their structural positions to the constraint are inverted: retail bears costs without benefits (victim/trapped → snare), validators receive benefits without costs (beneficiary/mobile → rope). The tangled_rope perspective (exchanges, moderate power) is the middle-ground: genuine coordination function (settlement) exists, but beneficiary status creates systemic extraction. The piton perspective (ritual view) observes that the finality ceremony is substantially performed rather than achieved — validators attest based on incentive alignment, not proof of correctness. The analytical mountain (civilizational observer) risks naturalizing this as inherent to consensus, which the false-summit detection mechanism flags as unwarranted. The scaffold perspective (protocol development) documents real structural change: threshold encryption and commit-reveal schemes are maturing and could shift finality from probabilistic/opaque to cryptographic/transparent — enabling a sunset clause.",
+    "directionality_logic": "Directionality (d) is derived from beneficiary/victim status and exit options. Retail participants are victims with trapped exit (d ≈ 0.95, f(d) ≈ 1.42) — maximum experienced extraction. Validator operators are beneficiaries with mobile exit (d ≈ 0.15, f(d) ≈ -0.01) — negative experienced extraction (they extract from others). Exchange operators are beneficiaries with constrained exit (d ≈ 0.30, f(d) ≈ 0.10) — slight positive extraction experienced (they benefit but cannot exit costlessly). The pipeline computes effective extraction χ = ε × f(d) × σ(S) for each perspective: retail sees χ ≈ 0.58 × 1.42 × 1.2 ≈ 0.99 (severe), validators see χ ≈ 0.58 × (-0.01) × 1.2 ≈ -0.01 (benefit), exchanges see χ ≈ 0.58 × 0.10 × 1.0 ≈ 0.06 (mild). Scope modifier σ(S) reflects that finality constraints are global (σ = 1.2) — finality gaps are distributed across all blockchain users globally, amplifying extraction magnitude at global scope.",
+    "mandatrophy_analysis": "STRUCTURAL IMPOSSIBILITY (RESOLUTION): This constraint resolves mandatrophy by showing that the tangled_rope classification is sound and stable. The challenge for high-extraction constraints (ε > 0.46) is distinguishing genuine hybrid coordination-extraction from mislabeled pure extraction (snare). The mandatrophy here is: 'Is settlement finality coordination with extraction layered on top, or is it pure extraction wrapped in coordination language?' The structural data resolves this: (1) beneficiaries exist and are identifiable (validators, exchanges, developers), (2) victims exist and are identifiable (retail, network security), (3) active enforcement mechanism exists (slashing conditions, validator incentives), and (4) genuine coordination function exists (Byzantine agreement is achieved; transactions do settle). These four elements are the signature of tangled_rope. The piton perspective adds diagnostic weight: the ritual is degraded (theater_ratio 0.65) because validators attest based on incentives, not correctness proofs — finality is performed, not proven. The scaffold perspective confirms the classification is not yet inverted: the constraint is not yet a snare (organized beneficiaries still maintain coordination fiction successfully), but is moving toward snare-territory as extraction mechanisms (MEV) mature and validator consolidation increases. The mandatrophy resolves: this is tangled_rope, not snare, because the coordination function is genuine and the beneficiary coalition maintains sufficient consensus-coordination to prevent visible breakdown. But the trajectory is toward snare if MEV extraction and validator consolidation continue unchecked."
   },
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism"
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.12
   },
   "network": {
     "affects_constraints": [
-      "maximal_extractable_value",
-      "validator_centralization",
-      "cryptocurrency_market_price_discovery"
+      "mev_extraction_mechanism",
+      "validator_centralization_dynamics",
+      "layer2_settlement_dependence"
     ],
-    "dual_formulation_note": "Blockchain settlement finality decomposes into multiple structurally distinct constraints: (1) probabilistic_finality (\u03b5\u22480.08, Mountain) \u2014 the mathematical/physical requirement for Byzantine agreement, (2) validator_ordering_power (\u03b5\u22480.72, Snare) \u2014 MEV extraction from transaction ordering, (3) finality_opacity (\u03b5\u22480.65, Snare) \u2014 information asymmetry about finality conditions. These three constraints are linked: probabilistic finality is necessary (mountain), but validator ordering power and finality opacity are contingent institutional arrangements (snare). This story treats the unified constraint at the institutional/trader interface (\u03b5=0.58, Tangled Rope). See network links for decomposed stories."
+    "dual_formulation_note": "Blockchain settlement finality decomposes into three structurally distinct constraints: (1) consensus finality (mathematical — how validators agree on ordering), (2) MEV extraction (economic — how transaction ordering is monetized), and (3) retail finality perception (epistemic — how retail understands settlement irreversibility). This story covers the entanglement of all three. Each sibling constraint in the network (MEV extraction, validator centralization) has its own ε and its own classification. Settlement finality is the hybrid coordination-extraction that emerges from the interaction of all three components."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.15
+      "d_value": 0.22
     }
   ]
 }

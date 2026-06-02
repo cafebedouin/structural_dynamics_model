@@ -1,0 +1,261 @@
+{
+  "header": {
+    "constraint_id": "gdpr_article_3_scope__effects_jurisdiction_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gdpr_a3_eff",
+    "story_uid": "12191e22-6c10-487f-8616-5bf65ae88e46"
+  },
+  "base_properties": {
+    "extractiveness": 0.62,
+    "suppression": 0.68,
+    "theater_ratio": 0.54,
+    "claimed_type": "tangled_rope",
+    "human_readable": "GDPR Article 3(2) Effects-Based Jurisdiction Reading",
+    "topic_domain": "technology_governance/international_law/privacy_regulation",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "eu_data_subjects",
+      "eu_regulatory_authority"
+    ],
+    "victims": [
+      "non_eu_digital_service_providers",
+      "international_commerce_efficiency"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Non-EU Tech Service Provider",
+      "comment": "PERSPECTIVE 1: NON-EU TECH SERVICE PROVIDER (SNARE) — Cannot exit extraterritorial jurisdiction without abandoning EU market access. Trapped by the targeting/monitoring test: any processing of EU residents' data triggers GDPR compliance regardless of server location or corporate residence. Suppression is structural: compliance costs are mandatory (security measures, DPA appointment, breach notification, subject rights fulfillment) with no meaningful exemption pathway. Extraction flows from regulatory authority to service provider in the form of operational burdens and fine risk."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "International Commerce Coalition",
+      "comment": "PERSPECTIVE 2: INTERNATIONAL COMMERCE COALITION (TANGLED ROPE) — Organized actors (non-EU tech companies, global supply chains, data-intensive service providers) experience both coordination and extraction. The effects-based jurisdiction rule coordinates a unified privacy protection standard across markets (genuine coordination function — companies can invest in one compliance system rather than jurisdictional patchwork). But the rule also extracts via: (a) asymmetric enforcement burden falling on non-EU providers while EU companies can claim territorial exemption more easily, (b) compliance costs layered atop market access, and (c) structural asymmetry in who sets standards (EU unilaterally, others must adapt). Constrained exit: leaving EU market is costly but possible; complying is also costly."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "EU Regulatory Authority",
+      "comment": "PERSPECTIVE 3: EU REGULATORY AUTHORITY (ROPE) — Net beneficiary of the effects-based jurisdiction reading. Experiences the constraint as pure coordination: extending jurisdiction via targeting/monitoring test enables coordinated privacy protection for the largest bloc of digitally-active residents and establishes EU regulatory authority over global data flows affecting EU markets. Arbitrage exit available (can choose to enforce or not in each case). Low experienced extraction — the regulatory machinery is designed to benefit this actor."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "EU-Based Tech Giants",
+      "comment": "PERSPECTIVE 4: EU-BASED TECH GIANTS (ROPE) — Established EU companies with existing compliance infrastructure experience the constraint as coordination with selective benefit. They have built GDPR compliance systems; extending those systems to global operations is operationally incremental. Mobile exit exists (they could relocate HQ, though costly). But more importantly, they benefit from competitor suppression: non-EU competitors face disproportionate compliance friction. Net: coordination that disadvantages rivals more than it constrains them."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "EU Data Subjects",
+      "comment": "PERSPECTIVE 5: EU DATA SUBJECTS (TANGLED ROPE) — Genuine coordination function: the effects-based jurisdiction ensures their personal data receives protection regardless of where processing occurs. This is a real coordination benefit — collective action to protect privacy across borders. But also embedded asymmetry: data subjects cannot exit the regime (trapped by geography), and the protection extends only outbound (their data gets protected when accessed by non-EU companies, but their access to non-EU services is not reciprocally constrained). Generational horizon captures the long-term entrenchment of this coordination structure in EU governance identity."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Regulatory Inevitability View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / REGULATORY INEVITABILITY VIEW (MOUNTAIN) — From a universal/civilizational perspective, this reading risks naturalization as inevitable regulatory necessity. The logic: digital markets operate globally; personal data flows across borders; absent regulatory coordination, privacy protection fragments; therefore extraterritorial jurisdiction is inherent to protecting privacy in a digital world. This perspective sees the effects-based jurisdiction as a natural law of digital governance. However, the structural data contradicts this: the beneficiary/victim structure, the asymmetric enforcement burden, and the contingent choice to use 'targeting/monitoring' as the jurisdictional hook all reveal the reading as a constructed regulatory framework, not a natural limit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "effects_test_definitional_ambiguity",
+      "question": "What empirical threshold separates 'targeting/monitoring' (triggering jurisdiction) from passive exposure (not triggering jurisdiction)?",
+      "resolution_mechanism": "Case law evolution: analysis of CJEU decisions and national court rulings clarifying when incidental processing of EU resident data versus deliberate targeting distinction holds. Assessment of whether algorithmic targeting of regions counts as 'monitoring'.",
+      "impact": "If threshold is strict (deliberate intent required): many non-EU providers escape jurisdiction via 'unintended exposure' argument, reducing extraction experienced. If threshold is permissive (any processing of EU residents triggers jurisdiction): jurisdiction becomes quasi-universal for all data-intensive services, increasing suppression and extraction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Empirical threshold for 'targeting/monitoring' test in Article 3(2)"
+    },
+    {
+      "id": "adequacy_mechanism_effectiveness",
+      "question": "Do adequacy mechanisms (data transfer agreements, standard contractual clauses, binding corporate rules) genuinely reduce compliance burden for non-EU providers, or do they add bureaucratic overhead without substantive relief?",
+      "resolution_mechanism": "Cost-benefit analysis: comparison of compliance expenses under adequacy mechanisms vs full GDPR compliance for non-EU controllers; measurement of time-to-adequacy determination and frequency of adequacy revocation; survey of non-EU provider perceptions of adequacy as relief vs additional regulatory navigation.",
+      "impact": "If effective relief: suppression and extraction values lower; the constraint becomes more rope-like (genuine coordination with negotiated relief). If ineffective: suppression higher; adequacy becomes theatrical gateway, making suppression_requirement measurements rise.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether adequacy mechanisms provide meaningful compliance relief"
+    },
+    {
+      "id": "reading_contingency_on_territorial_interpretation",
+      "question": "Does the effects-based jurisdiction reading logically foreclose the territorial sovereignty reading (regulation applies only to establishments in EU territory), or can both readings coexist in different jurisdictional frameworks?",
+      "resolution_mechanism": "Legal doctrine analysis: examination of whether accepting effects-based jurisdiction requires rejecting territorial control as a legitimate boundary, or whether both can be valid under different legitimacy frameworks (Brussels I-bis recast principles, WTO non-discrimination, GDPR as supranational law vs customary international law on jurisdiction).",
+      "impact": "If foreclosure: the two readings are mutually exclusive; adoption of this reading structurally prevents the sibling reading. If coexistence: both readings remain live in different jurisdictional contexts or legal traditions. Affects cs_structure.reading_relations classification.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether effects-based reading forecloses territorial sovereignty reading"
+    },
+    {
+      "id": "market_access_reading_enforcement_coupling",
+      "question": "Is the effects-based jurisdiction reading dependent on market access as enforcement mechanism (threat of EU market exclusion for non-compliance), or is it enforced through direct fines and jurisdiction independent of market access leverage?",
+      "resolution_mechanism": "Empirical study of GDPR enforcement: analysis of penalty structures (fines vs market bans), frequency of actual market access denial vs fine imposition, effectiveness of adequacy threats in driving compliance, role of market access in behavioral compliance vs formal legal obligation.",
+      "impact": "If market access is primary enforcement mechanism: the effects reading influences and depends on the market access reading; they are structurally coupled. If fines and direct jurisdiction are primary: the readings can operate independently. Affects network.affects_constraints and dual_formulation_note.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Enforcement mechanism for effects-based jurisdiction: market access vs direct authority"
+    },
+    {
+      "id": "extraterritorial_enforcement_capacity",
+      "question": "What is the actual enforcement capacity of the EU regulatory authority over non-EU controllers outside EU territory?",
+      "resolution_mechanism": "Analysis of enforcement actions: percentage of GDPR violations by non-EU providers that result in fines vs warnings vs technical compliance only; measurement of collection rates on fines imposed on non-EU entities; assessment of Europol/INTERPOL cooperation mechanisms for cross-border enforcement.",
+      "impact": "If enforcement capacity is high: suppression and extraction values are accurately assessed. If enforcement capacity is low: measured suppression overstates the actual binding force of the jurisdiction; constraint is more aspirational than structural, potentially reclassifying toward scaffold (temporary enforcement mechanism) or piton (theatrical jurisdiction without teeth).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Enforcement capacity of EU authority over non-EU controllers"
+    },
+    {
+      "id": "effects_reading_naturalizes_regulatory_asymmetry",
+      "question": "Is the effects-based jurisdiction reading naturalizing a contingent power asymmetry (large regulatory bloc imposing standards unilaterally) as inherent to digital governance, thereby obscuring the constructed nature of this particular boundary?",
+      "resolution_mechanism": "Comparative regulatory analysis: examination of whether jurisdictional claims based on effects (rather than territory or nationality) are unique to GDPR or reflect broader patterns; assessment of whether non-EU jurisdictions (China, India, Russia) could claim equivalent effects-based jurisdiction over EU residents, and whether EU accepts such claims; analysis of whether 'effects' is a natural threshold or a contingent choice embedding particular values.",
+      "impact": "If naturalized: the mountain perspective misidentifies a contingent construction as inevitable law. The false summit detector should flag this. If contingent: the effects reading is a legitimate political choice, not a natural law, affecting how the mountain perspective should be weighted.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether effects-based jurisdiction naturalizes regulatory power asymmetry"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 4,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 4,
+      "value": 0.54
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 4
+  },
+  "commentary": {
+    "narrative_context": "Article 3(2) of the GDPR extends the regulation's scope beyond the territorial boundaries of the EU through an effects-based test: the regulation applies to any organization processing the personal data of EU residents, regardless of where the organization is established or where processing occurs. The operative clause declares that GDPR applies to 'the processing of personal data of data subjects who are in the Union by a controller or processor not established in the Union, where the processing activities are related to... (a) the offering of goods or services, irrespective of whether a payment of the data subject is required, to such data subjects in the Union; or (b) the monitoring of their behavior.' This creates a direct extraterritorial jurisdictional claim that operates through effects on EU residents rather than through territorial control or corporate establishment. The effects-based jurisdiction reading interprets this clause as the legitimate scope boundary for GDPR: if your processing targets, monitors, or affects EU residents, the regulation applies regardless of your location. This reading competes with at least two sibling interpretations: (1) the territorial sovereignty reading, which argues that jurisdiction should follow territorial boundaries and that extraterritorial application violates customary international law; (2) the market access reading, which grounds GDPR jurisdiction in the EU's power to control access to its market rather than in direct extraterritorial regulatory authority. The effects-based reading has won dominance in EU jurisprudence and institutional practice, but the sibling readings remain live in academic debate and non-EU regulatory frameworks.",
+    "key_agents": [
+      "EU Data Subjects: Beneficiary (powerful/mobile in-aggregate) — protected from data extraction across borders; benefit from coordinated privacy standard",
+      "EU Regulatory Authority (EDPB, national DPAs): Primary beneficiary (institutional/arbitrage) — extends regulatory reach and authority globally without requiring territorial presence",
+      "Non-EU Digital Service Providers: Primary victim (powerless/trapped) — cannot exit jurisdiction without abandoning EU market; face mandatory compliance costs and fine risk",
+      "International Commerce Coalition: Secondary victim (organized/constrained) — faces coordination burden (positive: unified standard) and extraction burden (negative: asymmetric enforcement on non-EU actors)",
+      "EU-Based Tech Giants: Strategic beneficiary (powerful/mobile) — existing GDPR compliance becomes competitive moat; rivals face higher friction",
+      "Analytical Observer: Civilian context (analytical/analytical) — observes potential naturalization of regulatory power asymmetry"
+    ],
+    "logic_rationale": "Extractiveness (0.62): Moderate-high. The effects-based jurisdiction rule imposes mandatory compliance costs on non-EU providers (technical safeguards, data protection officer appointment, breach notification, subject rights fulfillment, accountability mechanisms) and creates ongoing fine risk (up to 4% of global turnover for severe violations). These are direct extraction flows from non-EU providers to the EU regulatory system. The extractiveness is not maximum (0.80+) because: (a) some relief mechanisms exist (adequacy determinations, standard contractual clauses), (b) organized non-EU providers can achieve compliance economies of scale, (c) the rule coordinates a unified standard rather than forcing navigation of multiple jurisdictional regimes. Theater ratio (0.54): Moderate. The effects-based jurisdiction test itself contains ambiguity that generates theater. The 'targeting/monitoring' threshold is operationally vague — does algorithmic personalization count as 'targeting'? Does passive collection of IP geolocation count as 'monitoring'? This ambiguity creates extensive regulatory and legal theater around definitional disputes, safe harbor arguments, and adequacy determination procedures. However, the core GDPR compliance regime (technical safeguards, subject rights, accountability) is substantially functional — much theater is in the boundary-drawing, not in the core mechanism. Suppression (0.68): High. Non-EU providers face substantial structural barriers to exit: (a) market access suppression (leaving the EU market is costly for most large digital services), (b) technical suppression (GDPR compliance infrastructure becomes mandatory investment), (c) regulatory suppression (no meaningful exemption for minor controllers or limited processing). Suppression is higher than extractiveness because the barriers themselves (not just the extraction flowing through them) are the binding mechanism.",
+    "directionality_logic": "The effects-based jurisdiction reading operates through an asymmetric power structure that directly determines directionality. Non-EU providers are identified as primary victims because they bear the compliance costs and fine risk without controlling the standard-setting process. They are trapped by the scope rule — they cannot opt out of GDPR by staying outside EU territory when their processing affects EU residents. The EU regulatory authority benefits from the coordination (unified privacy standard) and from the asymmetric enforcement capacity (can impose fines globally without reciprocal claims on EU companies). The direction of extraction is from non-EU providers (high d, high f(d)) toward EU regulatory authority (low d, low f(d)). EU data subjects benefit from the coordination but do not experience extraction because they are protected, not charged. The theater ratio reflects the operational ambiguity of the targeting/monitoring test, which generates regulatory and legal theater around boundary cases without substantial functional cost to the protection mechanism itself.",
+    "perspectival_gap": "The effects-based jurisdiction reading produces sharp perspectival gaps across power levels. Non-EU powerless providers see a snare: mandatory jurisdiction with no exit, high suppression, pure extraction. International commerce coalitions see tangled rope: genuine coordination (unified standard) but asymmetric extraction (burden falls on non-EU actors). EU regulatory institutions see rope: coordination benefit with arbitrage exit (can enforce selectively). EU data subjects see tangled rope: coordination benefit (protection) with generational entrenchment (they cannot exit, but benefit from protection, so it's mixed). The analytical observer at civilizational scale risks seeing a mountain — the 'necessity' of effects-based jurisdiction for protecting privacy in global digital markets — but the structural data reveals this as a false summit: the effects test is a contingent jurisdictional choice, not a natural law, and it embeds power asymmetry that benefits the rule-maker (EU) more than the rule-subject (non-EU providers).",
+    "mandatrophy_analysis": "The effects-based jurisdiction reading resolves mandatrophy by showing that the constraint genuinely contains both coordination and extraction. The coordination function is real: a unified privacy standard across the largest bloc of digitally-active residents reduces transaction costs and enables innovation within a predictable compliance environment. The extraction is also real: non-EU providers bear disproportionate compliance costs and enforcement risk because they cannot control the rule-setting process. The snare perspective (non-EU providers) reflects genuine structural extraction; the rope perspective (EU regulatory authority) reflects genuine coordination benefit; the tangled rope perspectives (commerce coalitions, data subjects) reflect both. The constraint is not misclassified as rope when it should be snare — it is legitimately both, depending on structural position.",
+    "kernel_context": "This constraint instantiates the 'effects_jurisdiction_reading' of the contested kernel 'gdpr_article_3_scope'. The kernel itself is the authorization clause: GDPR applies to processing of personal data of EU residents by controllers/processors offering goods/services to them or monitoring their behavior. Different readings of this clause produce different jurisdictional boundaries. The effects-based reading (this constraint) interprets 'offering goods or services to such data subjects in the Union' and 'monitoring of their behavior' as the legitimate scope boundary — if your processing affects EU residents through targeting or monitoring, jurisdiction applies. The territorial sovereignty reading argues that jurisdiction should follow territorial boundaries (only controllers/processors established in the EU), treating extraterritorial application as a violation of customary international law principles. The market access reading grounds jurisdiction in EU power to control who can access EU markets, making GDPR a market-access requirement rather than a direct territorial claim. All three readings invoke the same text (the kernel) but interpret its authorization differently. The effects-based reading has won institutional dominance (CJEU interpretation, European Commission enforcement), but the territorial and market-access readings remain live in academic debate and non-EU jurisdictional frameworks. The three readings coexist structurally — they are held by different parties (EU institutions, non-EU governments, international law theorists) — but within a single legal framework (EU law), the effects-based reading does not logically foreclose the others so much as dominate them through institutional practice."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "gdpr_article_3_scope__territorial_sovereignty_reading",
+      "gdpr_article_3_scope__market_access_reading",
+      "transatlantic_data_transfer_adequacy",
+      "standard_contractual_clauses_enforcement"
+    ],
+    "dual_formulation_note": "The GDPR Article 3 scope question decomposes into three structurally distinct constraint stories, each representing a different reading of the authorization kernel. The effects-based reading (this story) has ε=0.62 (tangled rope with coordination and extraction); the territorial sovereignty reading has lower ε (treats extraterritoriality as overreach); the market access reading has different mechanism (power-based rather than effects-based). These are not variations of one constraint — they are fundamentally different interpretations of what the regulation authorizes. Network links show how the effects-based reading influences downstream constraints (adequacy determinations, data transfer mechanisms) and competes with sibling readings at the kernel level."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerful",
+      "d_value": 0.25
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "gdpr_article_3_scope__territorial_sovereignty_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "gdpr_article_3_scope__market_access_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "effects_principle_jurisdiction",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "targeting_monitoring_operational_boundary",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "eu_regulatory_authority_extraterritorial_jurisdiction",
+    "drift_state": {
+      "moment": "contemporary_post_cjeu_schrems_ii_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": true
+    }
+  }
+}

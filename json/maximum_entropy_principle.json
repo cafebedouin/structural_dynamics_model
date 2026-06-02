@@ -4,21 +4,19 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "mep"
+    "measurement_id_prefix": "maxent",
+    "story_uid": "aa72c387-7773-4018-a57a-1df37c24c944"
   },
   "base_properties": {
-    "extractiveness": 0.12,
-    "suppression": 0.03,
-    "theater_ratio": 0.15,
+    "extractiveness": 0.05,
+    "suppression": 0.02,
+    "theater_ratio": 0.08,
     "claimed_type": "mountain",
-    "human_readable": "Maximum Entropy Principle",
+    "human_readable": "Maximum Entropy Principle in Statistical Mechanics",
     "topic_domain": "statistical_mechanics/information_theory",
     "emerges_naturally": true,
     "accessibility_collapse": 0.92,
-    "resistance": 0.08,
-    "beneficiaries": [],
-    "victims": [],
-    "mandatrophy_resolved": false
+    "resistance": 0.08
   },
   "perspectives": [
     {
@@ -27,8 +25,8 @@
       "time_horizon": "civilizational",
       "exit_options": "trapped",
       "spatial_scope": "universal",
-      "label": "Any Agent in a Physical System",
-      "comment": "PERSPECTIVE 1: PHYSICAL SYSTEM PARTICIPANT (MOUNTAIN) \u2014 All agents operating within thermodynamic systems are subject to entropy increase as an immutable constraint. No exit exists; entropy production is not contingent on institutional arrangement or observational choice. Maximum accessibility collapse \u2014 the principle holds in every thermodynamic context. Minimum resistance \u2014 no mechanism can override the second law."
+      "label": "The Physical System",
+      "comment": "PERSPECTIVE 1: PHYSICAL SYSTEM (MOUNTAIN) — A macroscopic system cannot exit the entropy constraint. Microscopic particles follow deterministic dynamics; the ensemble of possible microstates evolves according to the principle with mathematical necessity. No escape mechanism exists at any timescale."
     },
     {
       "classification_type": "mountain",
@@ -37,129 +35,112 @@
       "exit_options": "analytical",
       "spatial_scope": "universal",
       "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 2: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a mathematical and physical perspective, the maximum entropy principle emerges from the symmetries of microscopic dynamics and the laws of probability. The principle is not enforced by any agent or institution \u2014 it derives from the structure of phase space itself. Emerges naturally from first principles; resistant to alternative formulations only insofar as alternative formulations would violate the symmetries they claim to preserve."
-    },
-    {
-      "classification_type": "mountain",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "Engineering Systems Design",
-      "comment": "PERSPECTIVE 3: ENGINEERING SYSTEMS DESIGN (MOUNTAIN) \u2014 Constraints from the maximum entropy principle are fundamental boundary conditions for all heat engines, information systems, and dissipative structures. Engineers cannot coordinate around entropy \u2014 they can only design within its bounds. The principle appears as an immutable natural law determining efficiency limits, cooling requirements, and information erasure costs. No institution can negotiate with thermodynamics."
+      "comment": "PERSPECTIVE 2: ANALYTICAL OBSERVER (MOUNTAIN) — The principle is a mathematical consequence of the phase-space measure and Liouville's theorem. From any epistemic position, the constraint is invariant: entropy increases for an isolated system approaching equilibrium. The mathematical structure is independent of observation method or measurement framework."
     },
     {
       "classification_type": "mountain",
       "agent_power": "institutional",
-      "time_horizon": "immediate",
-      "exit_options": "arbitrage",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "Computational Information Systems",
-      "comment": "PERSPECTIVE 4: COMPUTATIONAL INFORMATION SYSTEMS (MOUNTAIN) \u2014 The Landauer principle (entropy cost of information erasure) is a direct consequence of the maximum entropy principle. All computational systems, regardless of technological sophistication or institutional control, incur minimum entropy cost to irreversibly erase bits. Even institutional arbitrage \u2014 attempting to exploit information asymmetries \u2014 cannot bypass this thermodynamic constraint."
+      "label": "The Research Institution",
+      "comment": "PERSPECTIVE 3: RESEARCH INSTITUTION (MOUNTAIN) — From the perspective of a research program modeling thermodynamic systems, the maximum entropy principle is ineliminable. Institutions can refine measurements or improve models, but cannot escape the constraint. The constraint bounds all possible theories; any theory that violates it is demonstrably false. Constrained exit reflects that theoretical revision is possible but only within the constraint's bounds."
     }
   ],
   "omegas": [
     {
-      "id": "classical_vs_quantum_entropy",
-      "question": "Does the maximum entropy principle apply identically to quantum and classical systems, or are there fundamental differences in how entropy behaves across these domains?",
-      "resolution_mechanism": "Rigorous comparison of Shannon entropy, von Neumann entropy, and Gibbs entropy across quantum-classical boundary; analysis of whether quantum coherence violates or preserves maximum entropy constraints",
-      "impact": "If classical and quantum obey the same principle: mountain classification holds universally. If fundamental differences exist: the principle may be domain-contingent rather than universal.",
+      "id": "microscopic_reversibility_gap",
+      "question": "How does the microscopically reversible dynamics of particles lead to irreversible entropy increase at the macroscopic level?",
+      "resolution_mechanism": "Analysis of phase-space coarse-graining: the apparent irreversibility emerges from the informational limit on tracking individual microstates, not from fundamental asymmetry in microscopic laws. Loschmidt's paradox and Poincaré recurrence are the central interpretive puzzles.",
+      "impact": "If the apparent irreversibility is purely informational (coarse-grained), the maximum entropy principle is a constraint on observer knowledge rather than on physical evolution. If there is fundamental microscopic asymmetry, the principle reflects real physical directedness. This does not change the classification (mountain remains mountain) but clarifies the mechanism.",
       "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether maximum entropy principle is identical across classical and quantum domains"
+      "type_class": "conceptual",
+      "description": "Microscopic reversibility vs. macroscopic entropy increase"
     },
     {
-      "id": "time_reversal_symmetry_apparent_violation",
-      "question": "The apparent violation of time-reversal symmetry (entropy increases forward in time but not backward) seems to contradict the symmetry of microscopic laws. Is maximum entropy principle truly fundamental or does it hide a deeper asymmetry?",
-      "resolution_mechanism": "Analysis of the role of initial conditions and observer perspective; examination of whether entropy increase is a property of systems or a property of our measurement ensembles; investigation of whether the arrow of time is imposed by the maximum entropy principle or external to it",
-      "impact": "If asymmetry is imposed by maximum entropy principle: the principle is foundation for time's direction. If asymmetry is external: maximum entropy principle is consequent rather than fundamental.",
+      "id": "equilibrium_definition_underdetermined",
+      "question": "Is 'equilibrium' an intrinsic property of a system or a property relative to the set of accessible microstates (the constraint surface)?",
+      "resolution_mechanism": "Examination of whether equilibrium is uniquely defined by first-principles dynamics or depends on the specification of which microstates are accessible (initial conditions, boundary conditions, field constraints). The debate between ergodic and non-ergodic interpretations of equilibration.",
+      "impact": "If equilibrium is intrinsic: maximum entropy principle is an unconditional law. If equilibrium depends on constraint specification: the principle is conditional on defining the constraint surface correctly. The mountain classification holds either way because the principle itself is invariant; the ambiguity concerns interpretation rather than falsifiability.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether maximum entropy principle generates or presupposes time's arrow"
+      "description": "Whether equilibrium is intrinsic or relative to constraint surface"
     },
     {
-      "id": "black_hole_information_paradox_resolution",
-      "question": "Does Hawking radiation resolution (via holographic principle, unitary evolution, or other mechanisms) preserve the maximum entropy principle or require modification?",
-      "resolution_mechanism": "Comparison of expected entropy bounds (Bekenstein bound, holographic bound) with observed information flow; observation of whether black hole evaporation preserves unitarity and thermodynamic consistency",
-      "impact": "If maximum entropy principle survives intact: mountain classification is confirmed at extreme conditions. If modifications required: the principle may be approximate rather than fundamental at quantum gravity scales.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether maximum entropy principle survives black hole evaporation"
-    },
-    {
-      "id": "measurement_ensemble_dependence",
-      "question": "Is the maximum entropy principle a property of systems themselves or a property of our choice of measurement ensemble and probability model?",
-      "resolution_mechanism": "Analysis of whether different coarse-grainings or ensemble choices (microcanonical, canonical, grand-canonical) all maximize the same entropy, or whether entropy maximization depends on which questions we choose to ask",
-      "impact": "If system-intrinsic: mountain classification is objectively correct. If ensemble-dependent: maximum entropy principle might be a cognitive tool rather than physical law.",
+      "id": "information_theoretic_vs_thermodynamic",
+      "question": "Is the maximum entropy principle a fundamental law of thermodynamics (Boltzmann, Gibbs) or a principle of inference under uncertainty (Jaynes)?",
+      "resolution_mechanism": "Comparison of empirical predictions and theoretical scope. Thermodynamic interpretation: entropy is a physical property of matter. Information-theoretic interpretation: entropy is the measure of uncertainty about the underlying state given available information. Both yield the same mathematical form and empirical predictions.",
+      "impact": "If thermodynamic: the principle describes how matter actually behaves, independent of observers. If information-theoretic: the principle describes valid inference procedures for observers with limited information. This does not change the mountain classification (the principle is invariant) but affects how we understand what the constraint is constraining.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether maximum entropy principle is intrinsic to systems or ensemble-dependent"
+      "description": "Thermodynamic vs. information-theoretic interpretations"
+    },
+    {
+      "id": "false_summit_natural_law",
+      "question": "Does the maximum entropy principle describe a true natural law, or does its universality mask domain-specific institutional adoption of a particular formalism?",
+      "resolution_mechanism": "Historical analysis: how did the principle become canonical? Did it emerge from mathematical necessity or institutional/disciplinary consensus? Do alternative formalisms (Tsallis entropy, quantum information measures) violate or generalize the principle? Are there physical domains where maximum entropy fails empirically?",
+      "impact": "If true natural law: the principle is invariant across all physical domains and measurement contexts. If institutionalized formalism: domains that have adopted alternative entropy measures (non-extensive systems, quantum foundations) might reveal the principle as contingent on specific modeling choices. Engine's false summit detection applies here: genuine natural laws have no beneficiaries, but if the principle naturalizes a modeling convention that benefits specific research programs, FSM should trigger.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Natural law vs. institutionalized modeling convention"
     }
   ],
   "measurements": [
     {
-      "metric": "theater_ratio",
-      "time_point": 0,
-      "value": 0.1
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 25,
-      "value": 0.12
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 50,
-      "value": 0.15
-    },
-    {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.1
+      "value": 0.05
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 25,
-      "value": 0.11
+      "time_point": 100,
+      "value": 0.05
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 50,
-      "value": 0.12
+      "time_point": 1000,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.08
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.08
     }
   ],
   "interval": {
     "start": 0,
-    "end": 50
+    "end": 1000
   },
   "commentary": {
-    "narrative_context": "The maximum entropy principle stands as a foundational constraint in statistical mechanics and information theory, asserting that isolated systems evolve toward states of maximum entropy consistent with their constraints. Unlike institutional or coordination constraints, the maximum entropy principle emerges from the mathematical structure of probability distributions and the symmetries of microscopic dynamics. No agent enforces it; no institution maintains it; no coalitional exit is possible. It is a natural law constraint \u2014 the prototypical mountain. All agents in all physical systems operate under this constraint with identical structural relationship: complete subjection, zero degrees of freedom, universal applicability. The principle admits no perspectival gap because there is no perspective from which it appears negotiable or contingent.",
+    "narrative_context": "The maximum entropy principle in statistical mechanics asserts that isolated systems evolve toward states of maximum entropy consistent with their constraints. This is a genuine natural law: it emerges from the mathematical structure of probability distributions, the symmetries of microscopic dynamics, and the measure-preserving nature of phase-space evolution (Liouville's theorem). Unlike institutional or coordination constraints, the maximum entropy principle has no enforcer, no beneficiary structure, no exit mechanism. No coalition can exit it; no agent extracts value from it; its validity is independent of observation, measurement framework, or belief systems. It is ineliminable — any theory that violates it is demonstrably false. The principle holds at every timescale and across every domain: gases, liquids, solids, quantum systems, astrophysical objects, information channels. The extractiveness value (0.05) reflects the minimal conceptual and mathematical overhead of applying the principle — it is not zero because using the principle requires specifying the constraint surface (the set of accessible microstates), which is an epistemic choice. The theater ratio (0.08) reflects that entropy calculations may be presented with varying degrees of technical exposition, but the underlying structure is transparent: entropy is a well-defined function of microstate distribution. No performative activity is required to apply the principle; it yields testable predictions.",
     "key_agents": [
-      "Physical Systems: All systems subject to entropic constraints (no power, trapped exit, universal scope)",
-      "Statistical Mechanics Community: Institutional agent recognizing the principle as foundational (institutional/arbitrage but still bound by the constraint)",
-      "Engineering Systems: Organized agents designing within entropy bounds (organized/constrained)",
-      "Analytical Observer: Civilizational perspective recognizing the principle as emergent from fundamental symmetries"
+      "Isolated Physical System: Passive subject (powerless/trapped/civilizational) — bears the constraint with no exit. The system evolves according to the principle regardless of external observers or measurement choices.",
+      "Analytical Physicist: Observer (analytical/analytical/civilizational) — can measure and verify the principle but cannot escape or modify it. The principle bounds all possible theories.",
+      "Research Institution: Institutional actor (institutional/constrained/generational) — can refine models and measurements but operates within the invariant constraint. Theoretical revision is possible only within bounds set by the principle."
     ],
-    "logic_rationale": "Extractiveness (0.12): Minimal. The maximum entropy principle does not extract value from any agent to benefit another \u2014 it operates as a structural constraint on all systems equally. The small non-zero value (0.12 vs true zero) reflects the minimal cognitive/computational overhead required to work with entropic calculations, but this is not extraction in the sense of asymmetric benefit. Suppression (0.03): Minimal. There is no suppression mechanism \u2014 the principle is not enforced through coercion, withholding of alternatives, or institutional structures. Agents are not prevented from attempting lower-entropy states; they simply cannot achieve them in isolated systems. The minimal value reflects that there is no alternative mechanism being suppressed. Theater ratio (0.15): Minimal. The principle has no performative content \u2014 its mathematical statement and its physical instantiation are identical. Thermodynamic calculations and actual entropy changes correspond directly; there is no gap between theater and function. The small value reflects only the minimal pedagogical theater required to communicate the principle, not any structural mismatch between claim and reality. Accessibility collapse (0.92): Very high. Every measurement of an isolated system at every scale (molecular, macroscopic, astronomical) exhibits entropy increase. The principle is maximally accessible \u2014 observable in every domain. Resistance (0.08): Extremely low. No known mechanism or institutional arrangement resists entropy increase. Even quantum systems, where reversibility seems possible, show entropy increase when properly accounting for measurement entanglement. The resistance value reflects only the minimal logical space for unknown future physics.",
-    "directionality_logic": "This constraint has zero directionality variance because there is no beneficiary/victim distinction \u2014 entropy production affects all agents identically and symmetrically. In the technical apparatus, d = 0.5 (symmetric) for all agents because every agent is both subject to entropy constraints and unable to extract advantage from those constraints. The f(d) sigmoid at d=0.5 produces f(d)\u22480.65, which is not applied here because the constraint is classified as mountain on the Natural Law criterion (emerges_naturally: true, accessibility_collapse \u2265 0.85, resistance \u2264 0.15) rather than on effective extraction. Mountain classification is not subject to the chi formula; it is verified through the NL profile gates directly.",
-    "perspectival_gap": "There is no perspectival gap. All four perspectives produce identical mountain classification because the maximum entropy principle is structurally invariant across all observation positions. A powerless agent trapped in a physical system sees the constraint exactly as an analytical observer sees it \u2014 as an immutable law. This uniform classification is precisely the diagnostic signature of a true natural law constraint: the constraint's structural properties (emerges naturally, accessibility collapse, resistance) are independent of which agent's perspective is adopted.",
-    "mandatrophy_analysis": "NO MANDATROPHY PRESENT. The maximum entropy principle is a uniform-type constraint (mountain from all perspectives). There is no risk of mislabeling extraction as coordination or vice versa because no coordination function exists. The principle creates no asymmetric distribution of benefits and costs \u2014 it constrains all agents identically. The mandatrophy theorem applies only to constraints where perspectival misclassification could occur (Rope misclassified as Snare, Snare hidden inside Tangled Rope, etc.). The MEP's invariant classification across all perspectives resolves any possible mandatrophy by construction."
+    "logic_rationale": "EXTRACTIVENESS (0.05): Minimal. The maximum entropy principle imposes no asymmetric extraction. There is no beneficiary group that gains advantage from the principle; no victim group that bears costs. The principle is universally applicable and universally ineliminable. The non-zero value (0.05, not 0.00) reflects the minimal overhead of specifying the constraint surface — defining which microstates are accessible requires epistemic work (boundary conditions, conservation laws, field specifications), but this work is a prerequisite to applying the principle, not an extractive feature of it. SUPPRESSION (0.02): Minimal. The principle imposes no coercive enforcement mechanism. Physical systems do not 'choose' to increase entropy; they follow deterministic dynamics. There are no alternatives to suppress — all possible dynamical trajectories consistent with the constraint manifest entropy increase. The non-zero value reflects that systems with low initial entropy must pass through intermediate states before reaching maximum entropy equilibrium, creating an apparent 'constraint' during the transient approach to equilibrium. But this is not suppression in the DR sense — it is the system's own evolution, not an external force preventing alternatives. THEATER RATIO (0.08): Minimal. The mathematical structure is transparent: entropy is defined as S = -k_B Σ p_i ln(p_i) (or equivalent formulations). The principle follows from Liouville's theorem and phase-space measure preservation. No performative activity obscures the structure. Variations in how the principle is presented (thermodynamic vs. information-theoretic framing, classical vs. quantum formulations) are interpretive layers, not theater. The 0.08 value reflects minimal epistemic translation overhead — the principle must be stated in mathematical language and connected to empirical systems, which requires some expository work, but the connection is direct and verifiable.",
+    "perspectival_gap": "All three perspectives classify the constraint as mountain because the principle is genuinely invariant across observation contexts. The physical system experiences the principle as an ineliminable law governing its evolution. The analytical observer reconstructs the principle from mathematical structure and finds it invariant across all measurement frameworks and epistemic positions. The research institution models systems using the principle and finds it ineliminable — any theory that violates it is falsified. There is NO perspectival gap because the constraint is a true natural law, not a contingent institutional arrangement or coordination mechanism. This is the canonical case: all observers, regardless of power level or exit options, perceive the same constraint structure.",
+    "mandatrophy_analysis": "RESOLVED: The maximum entropy principle exhibits zero mandatrophy. There is no tension between coordination and extraction because there is no coordination function and no extraction. The principle is pure law — it constrains all possible states but imposes no asymmetric costs. The principle cannot be reframed as 'really a coordination mechanism' (no coordination function exists) nor as 'really an extractive mechanism' (no asymmetric beneficiary exists). The mathematical structure is univocal: all agents, all observers, all systems experience the same constraint. This is the diagnostic gold standard for mountain classification — no reframing, no perspectival escape, no hidden beneficiary structure can dissolve the constraint."
   },
   "boltzmann": {
-    "coordination_type": "global_infrastructure"
+    "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
-      "second_law_thermodynamics",
-      "landauer_principle_information_erasure",
-      "holographic_entropy_bound"
+      "second_law_of_thermodynamics",
+      "ergodic_hypothesis",
+      "arrow_of_time"
     ],
-    "dual_formulation_note": "The maximum entropy principle is a single constraint with multiple mathematical formulations (Boltzmann H-theorem, Gibbs entropy in statistical mechanics, Shannon entropy in information theory, von Neumann entropy in quantum mechanics) that all map to the same underlying structural reality. Unlike constraints that decompose per the epsilon-invariance principle, these formulations are observationally equivalent \u2014 they represent different languages describing the same immutable constraint, not different constraints with different epsilon values. All formulations yield identical mountain classification."
-  },
-  "directionality_overrides": [],
-  "uke_scope": {
-    "epsilon_bin": "negligible",
-    "hypothesis": "mountain",
-    "downstream_of": []
+    "dual_formulation_note": "The maximum entropy principle is foundational to three related constraints: (1) the second law of thermodynamics (empirical manifestation of entropy increase in closed systems), (2) the ergodic hypothesis (assumption that phase-space exploration allows entropy maximization), and (3) the arrow of time (the thermodynamic distinction between past and future). The maximum entropy principle is upstream — it provides the mathematical framework for understanding all three."
   }
 }

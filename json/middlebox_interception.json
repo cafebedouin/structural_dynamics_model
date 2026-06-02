@@ -4,25 +4,25 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "mbox"
+    "measurement_id_prefix": "mbox",
+    "story_uid": "b7f2eba2-091b-411f-b109-53b87f6b2667"
   },
   "base_properties": {
-    "extractiveness": 0.58,
-    "suppression": 0.68,
-    "theater_ratio": 0.55,
+    "extractiveness": 0.52,
+    "suppression": 0.65,
+    "theater_ratio": 0.58,
     "claimed_type": "tangled_rope",
     "human_readable": "Middlebox Interception in Network Infrastructure",
     "topic_domain": "network_security/infrastructure",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "network_operators",
-      "security_vendors",
-      "content_providers"
+      "content_delivery_providers",
+      "law_enforcement_agencies"
     ],
     "victims": [
       "end_users",
-      "network_privacy",
-      "protocol_integrity"
+      "encrypted_communication_systems"
     ]
   },
   "perspectives": [
@@ -33,16 +33,16 @@
       "exit_options": "trapped",
       "spatial_scope": "global",
       "label": "The End User",
-      "comment": "PERSPECTIVE 1: END USER (SNARE) \u2014 Trapped within networks where middleboxes intercept traffic. Cannot exit without abandoning connectivity. Interception occurs regardless of consent or knowledge. Suppression is high: encrypted payloads are accessed through MITM SSL/TLS attacks, DPI inspection, or forced certificate installation. The end user bears extraction costs (privacy violation, data harvesting) with minimal coordination benefit."
+      "comment": "PERSPECTIVE 1: END USER (SNARE) — Structurally trapped. Traffic routing through middleboxes is transparent and unavoidable — users have no technical means to detect or circumvent interception without abandoning internet access. Suppression is maximal: no alternative routes exist, no negotiation is possible, and the interception mechanism is deliberately obscured. The user bears extraction (data inspection, behavioral tracking, content filtering) with minimal benefit."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "moderate",
-      "time_horizon": "generational",
+      "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Protocol Community",
-      "comment": "PERSPECTIVE 2: PROTOCOL COMMUNITY (TANGLED ROPE) \u2014 Constrained by the need to maintain interoperability with deployed middleboxes. Protocol evolution (e.g., HTTP/2, QUIC, TLS 1.3) requires careful design to avoid breaking NAT traversal, firewalls, and inspection tools. The constraint provides genuine coordination value (network reliability, DDoS mitigation) alongside asymmetric extraction (design space restriction, performance penalties). Active enforcement through backward compatibility requirements."
+      "spatial_scope": "regional",
+      "label": "The Encrypted Application User",
+      "comment": "PERSPECTIVE 2: ENCRYPTED APPLICATION USER (TANGLED ROPE) — Constrained but not trapped. End-to-end encrypted protocols (TLS, HTTPS) prevent middlebox content inspection, but the constraint persists through traffic pattern analysis, metadata extraction, and connection throttling. Users pay adoption costs (incompatibility with some services, performance penalties) to maintain privacy. Both coordination and extraction coexist: the infrastructure requires middleboxes for DDoS mitigation and traffic engineering (users benefit indirectly), but those same middleboxes enable behavioral tracking and censorship (users are victimized)."
     },
     {
       "classification_type": "rope",
@@ -51,81 +51,99 @@
       "exit_options": "arbitrage",
       "spatial_scope": "global",
       "label": "The Network Operator",
-      "comment": "PERSPECTIVE 3: NETWORK OPERATOR (ROPE) \u2014 Benefits from middleboxes as coordination mechanism for network management, DDoS mitigation, content caching, and traffic shaping. Experiences the constraint as enabling their function rather than extractive. Exit is arbitrage-level: they can choose placement, depth of inspection, and enforcement intensity. Net beneficiary."
+      "comment": "PERSPECTIVE 3: NETWORK OPERATOR (ROPE) — Experiences middleboxes as pure coordination mechanism. Middleboxes solve genuine infrastructure problems: DDoS mitigation, traffic engineering, cache optimization, and congestion management. Operators deploy middleboxes to improve network quality and reduce infrastructure costs. The interception capability is secondary — operators frame it as necessary byproduct of traffic management, not primary function. They have arbitrage options: deploy alternative traffic engineering (SDN, in-band signaling) at higher cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Content Delivery Provider",
+      "comment": "PERSPECTIVE 4: CONTENT DELIVERY PROVIDER (ROPE) — Middlebox interception enables content optimization and caching coordination. CDNs benefit from traffic inspection to identify cacheable content, optimize delivery paths, and apply content-specific compression. They frame middlebox cooperation as coordination, not extraction. Alternative implementations (in-network caching coordination via HTTP headers, explicit CDN peering) exist but require endpoint participation. Low extraction experienced because CDN and operator interests align."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "institutional",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The Security Vendor",
-      "comment": "PERSPECTIVE 4: SECURITY VENDOR (TANGLED ROPE) \u2014 Constrained by regulatory requirements (lawful interception, traffic filtering mandates) and market expectations to provide deep packet inspection. Benefits from market demand for security tools. But constrained by encryption evolution and regulatory uncertainty. Coordinating role (security provision) combined with extraction (access to traffic data for commercial use). Active enforcement through regulatory compliance architecture."
-    },
-    {
-      "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
-      "exit_options": "mobile",
+      "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The Privacy Engineering Coalition",
-      "comment": "PERSPECTIVE 5: PRIVACY ENGINEERING COALITION (SCAFFOLD) \u2014 Organized agents (IETF Working Groups, browser vendors, VPN providers, DNS-over-HTTPS) see middlebox interception as a temporary problem with a structural sunset. Encrypted SNI (ESNI/ECH), encrypted DNS, onion routing, and protocol ossification resistance are engineering pathways that gradually reduce middlebox efficacy. Sunset mechanism: as encryption becomes mandatory and protocols are explicitly designed to block inspection, the middlebox constraint loses leverage. Estimated timeline: 10-15 years for mature deployment of privacy-preserving protocols."
+      "label": "The Encryption Standards Body",
+      "comment": "PERSPECTIVE 5: ENCRYPTION STANDARDS BODY (TANGLED ROPE) — Organized actors (IETF, TLS Working Group) experience middlebox interception as both coordination constraint and extraction threat. TLS specifications must account for middlebox behavior (TLS 1.3 was partly designed to prevent middlebox inspection). The standardization process itself becomes a site of contention: should protocols explicitly prevent middlebox access (benefiting users) or accommodate it (benefiting operators/law enforcement)? Constrained by institutional consensus requirements and political pressure. The constraint requires active enforcement — standards must be enforced against implementers who add backdoors for interception."
     },
     {
-      "classification_type": "piton",
-      "agent_power": "institutional",
-      "time_horizon": "civilizational",
-      "exit_options": "arbitrage",
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Regulatory Compliance System",
-      "comment": "PERSPECTIVE 6: REGULATORY COMPLIANCE SYSTEM (PITON) \u2014 Lawful interception mandates (CALEA, equivalents in EU/Asia) established middlebox inspection as institutional requirement. But the primary function (law enforcement access to communications) has become increasingly theatrical: sophisticated actors evade inspection, encrypted protocols render mandates unenforceable, and compliance infrastructure consumes resources with declining effectiveness. The constraint persists through regulatory inertia and sunk institutional cost rather than functional necessity. Theater ratio reflects that the compliance theater continues despite diminishing returns."
+      "label": "The Dissident in Censorious Jurisdiction",
+      "comment": "PERSPECTIVE 6: DISSIDENT IN CENSORIOUS JURISDICTION (SNARE) — For users in countries deploying middleboxes for political censorship, the constraint approaches pure extraction. Middleboxes perform content filtering, identity tracking, and targeted blocking. Exit options are partially constrained (VPN use is illegal, detected, and throttled). The victim bears maximum extraction — behavioral surveillance, censorship, and arrest risk — with no offsetting benefit. The institutional actors (government agencies) are pure beneficiaries."
     },
     {
       "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Law Enforcement Agency",
+      "comment": "PERSPECTIVE 7: LAW ENFORCEMENT AGENCY (TANGLED ROPE) — Experiences middleboxes as an interception access mechanism with legitimate (criminal investigation) and illegitimate (political surveillance, rights violations) uses. Powerful actors (governments) can demand backend access to middlebox data without user consent. The constraint requires active enforcement of access controls and warrant procedures (often violated in practice). From this perspective, the coordination function is law enforcement coordination; the extraction is political surveillance; the beneficiary is the powerful agency; the victim is the dissident population."
+    },
+    {
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a cross-position analytical view, middlebox interception exhibits genuine coordination functions (NAT traversal, caching, DDoS mitigation) alongside systematic extraction of privacy and data access rights from end users. The constraint is maintained through institutional layering: network operators deploy for efficiency, security vendors for market demand, regulators for law enforcement, but the layering creates suppression that prevents individual actors from withdrawing. Effective extraction (0.58) reflects this hybrid structure \u2014 not maximally extractive because coordination value is real, but high suppression makes exit costly."
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalized View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURALIZED VIEW (MOUNTAIN) — From a civilizational timescale, interception appears as an immutable feature of packet-switched networks. The claim is that intermediary devices are necessary for routing, and inspection is a necessary feature of routing hardware. However, this naturalizes a contingent architectural choice. End-to-end encryption, in-band signaling, and explicit consent protocols represent alternatives; they require institutional adoption, not technological impossibility. The mountain classification reveals itself as false summit — the constraint is enforceable institutional architecture, not immutable law."
     }
   ],
   "omegas": [
     {
-      "id": "encryption_obsolescence_timeline",
-      "question": "At what point does protocol-level encryption (TLS, QUIC, ECH) become sufficiently universal that middlebox interception becomes technically obsolete rather than suppressed?",
-      "resolution_mechanism": "Traffic analysis: measurement of encrypted vs cleartext fraction of internet traffic; correlation with protocol adoption timelines; analysis of middlebox effectiveness against mature encrypted protocols",
-      "impact": "If timeline < 10 years: scaffold perspective is optimistic but structural. If timeline > 20 years: middlebox constraint becomes semi-permanent, reclassifying toward snare. If timeline undefined (encryption never reaches universality): constraint persists indefinitely.",
+      "id": "middlebox_necessity_vs_choice",
+      "question": "Are middleboxes technically necessary for network management, or do they represent an institutional choice to centralize control?",
+      "resolution_mechanism": "Comparative analysis of network architectures: compare cost/complexity of middlebox-dependent vs. decentralized management (SDN, in-band signaling, explicit CDN coordination). Measure performance metrics and operational overhead for alternative implementations.",
+      "impact": "If necessary: constraint reclassifies toward Rope for operators and Mountain for users (technical immutability). If choice: constraint reclassifies toward Snare for users (institutional extraction enforced through monopoly on routing infrastructure).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether middleboxes are technically necessary or institutionally chosen"
+    },
+    {
+      "id": "interception_capability_necessity",
+      "question": "Can middleboxes perform legitimate network management (DDoS mitigation, traffic shaping) without content inspection and user surveillance capability?",
+      "resolution_mechanism": "Protocol analysis: identify minimum information requirements for each management function. Compare TLS 1.3 (metadata-only access) to earlier versions (full content access). Measure whether metadata alone (packet size, timing, frequency) suffices for management tasks.",
+      "impact": "If inspection unnecessary: extractiveness drops significantly; constraint becomes Rope for operators. If inspection required: extractiveness remains high; extraction and coordination are genuinely coupled.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Obsolescence timeline for middlebox interception via protocol-level encryption"
+      "description": "Whether content inspection is technically required for network management"
     },
     {
-      "id": "regulatory_enforcement_efficacy",
-      "question": "Does lawful interception infrastructure (CALEA, EU equivalents) actually achieve stated law enforcement objectives, or is it primarily performative compliance?",
-      "resolution_mechanism": "Judicial access analysis: comparison of court-ordered interception requests to actual successful prosecutions; measurement of investigation success rates with/without interception; analysis of evasion prevalence among investigated actors",
-      "impact": "If efficacy is high: regulatory compliance system's piton classification is incorrect \u2014 it should be rope or tangled_rope. If efficacy is low: piton classification confirmed \u2014 theater persists despite minimal functional output.",
-      "confidence": "high",
+      "id": "encryption_adoption_rate_threshold",
+      "question": "What adoption rate of end-to-end encryption technologies (TLS 1.3, encrypted DNS, VPN) breaks the middlebox interception constraint's suppression mechanism?",
+      "resolution_mechanism": "Time-series analysis of encryption adoption rates, correlation with middlebox effectiveness metrics (detection rates, content access success). Identify inflection point where middlebox-dependent revenue or control mechanisms fail.",
+      "impact": "If threshold < 50% adoption: middleboxes remain effective for majority; suppression stays high. If threshold > 70% adoption: middleboxes become ineffective; suppression collapses; constraint reclassifies toward Rope or Piton.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether lawful interception mandates achieve functional law enforcement objectives"
+      "description": "Encryption adoption threshold that breaks middlebox suppression"
     },
     {
-      "id": "coordination_benefit_decoupling",
-      "question": "Can network coordination functions (DDoS mitigation, caching, NAT traversal) be provided without payload interception, or is deep inspection technically necessary for these functions?",
-      "resolution_mechanism": "Technical analysis: comparison of network resilience with transparent proxies vs. deep inspection middleboxes; measurement of DDoS mitigation efficacy without payload analysis; protocol design alternatives that maintain coordination without interception",
-      "impact": "If decoupling is possible: middlebox constraint is pure extraction with coordination theater. If decoupling fails: constraint is genuine tangled_rope with irreducible extraction. Classification shifts toward snare in first case, remains tangled_rope in second.",
-      "confidence": "high",
+      "id": "interception_for_surveillance_vs_management",
+      "question": "How much of middlebox deployment is justified by legitimate network management versus unauthorized surveillance and censorship?",
+      "resolution_mechanism": "Jurisdictional analysis: survey middlebox deployment across regions with different legal/surveillance regimes. Correlate deployment intensity with documented human rights violations and censorship practices. Distinguish operators' stated purpose (management) from actual use patterns (surveillance).",
+      "impact": "If management-dominant (>70%): constraint is Tangled Rope with legitimate coordination component. If surveillance-dominant: constraint is Snare with thin management cover; extractiveness and suppression both rise substantially.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Technical necessity of payload interception for network coordination functions"
+      "description": "Proportion of middlebox deployment driven by surveillance versus management"
     },
     {
-      "id": "identity_lock_regulatory_capture",
-      "question": "Are network operators identity-locked to middlebox deployment (unable to perceive alternatives) or constrained by regulatory/market forces (perceive alternatives but face barriers)?",
-      "resolution_mechanism": "Interview analysis: operator perception of middlebox necessity; exploration of alternative architectures; assessment of whether operators have considered constraint-free network designs; analysis of regulatory vs. economic vs. technical barriers to exit",
-      "impact": "If identity-locked: operators cannot see decoupling alternatives even if technically possible \u2014 constraint becomes harder to resolve. If constrained: operators perceive exits but face barriers \u2014 policy/regulation changes might enable transition. Classification unchanged but mechanism differs fundamentally.",
+      "id": "false_summit_natural_law_status",
+      "question": "Is the inevitability of middlebox interception a natural law (immutable technical property) or a false summit (naturalized institutional choice)?",
+      "resolution_mechanism": "Historical comparison: evaluate network designs that eliminate middleboxes (end-to-end encryption, fully decentralized routing, in-band coordination). Assess adoption barriers (institutional, economic, regulatory) versus technical impossibility. Identify who benefits from naturalizing the constraint as law versus choice.",
+      "impact": "If natural law: Mountain classification holds; users must accept tradeoff. If false summit: Snare classification applies; the constraint is an enforcement mechanism for surveillance/control by powerful actors; policy alternatives exist.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether network operators are identity-locked to middlebox deployment or externally constrained"
+      "description": "Whether middlebox necessity is natural law or naturalized institutional choice"
     }
   ],
   "measurements": [
@@ -136,13 +154,13 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 7,
-      "value": 0.52
+      "time_point": 5,
+      "value": 0.47
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.58
+      "time_point": 10,
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
@@ -151,60 +169,65 @@
     },
     {
       "metric": "theater_ratio",
-      "time_point": 7,
-      "value": 0.48
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 15,
+      "time_point": 5,
       "value": 0.55
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.45
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
     },
     {
-      "metric": "theater_ratio",
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
       "time_point": 5,
-      "value": 0.46
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.65
     }
   ],
   "interval": {
     "start": 0,
-    "end": 15
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "Middlebox interception represents a structural tension between network management needs and user privacy. Middleboxes \u2014 devices that intercept, inspect, and modify network traffic \u2014 are deployed across internet infrastructure for multiple purposes: content caching, DDoS mitigation, traffic shaping, and law enforcement access. This creates a constraint that exhibits hybrid coordination-extraction dynamics. From network operators' perspective, middleboxes enable critical management functions. From end users' perspective, interception is a privacy violation with no meaningful exit. From the protocol community's perspective, interception creates design constraints that slow innovation. The constraint has intensified over the 15-year interval as interception capabilities have expanded and protocol-level encryption has driven deeper inspection practices (MITM attacks, DPI). Simultaneously, privacy-engineering initiatives (encrypted SNI, DNS-over-HTTPS, protocol ossification resistance) are building structural exits, suggesting the constraint may become technically obsolete even if regulatory mandates persist.",
+    "narrative_context": "Middlebox interception represents a structural tension between legitimate network infrastructure needs and systematic user surveillance. Middleboxes — intermediary devices deployed across internet infrastructure to intercept, inspect, and modify traffic — are deployed by network operators ostensibly for DDoS mitigation, caching, and traffic engineering. However, these same devices enable content censorship, behavioral tracking, and law enforcement surveillance. The constraint exhibits hybrid coordination-extraction dynamics: from operators' perspective, middleboxes provide genuine network management coordination; from users' perspective, the same devices perform extraction without consent. The extractiveness has increased from 0.35 to 0.52 over the measurement interval as: (1) encryption technologies (TLS 1.3) have reduced middlebox content access, forcing operators to intensify metadata analysis and traffic pattern extraction; (2) surveillance capabilities have expanded beyond DDoS mitigation into behavioral targeting and censorship; (3) regulatory pressure (law enforcement mandates for backend access) has increased institutional deployment of interception infrastructure. The theater ratio has risen from 0.42 to 0.58, reflecting that operators increasingly justify surveillance capabilities as necessary byproducts of network management, when in fact the interception mechanism is a primary institutional goal. The suppression requirement has risen from 0.48 to 0.65, indicating that maintaining user ignorance of interception and preventing exit through encryption adoption now requires active enforcement — blocking VPN traffic, throttling encrypted protocols, and legal prohibition of privacy tools.",
     "key_agents": [
-      "End Users: Primary victims (powerless/trapped) \u2014 no exit from networks containing middleboxes; traffic intercepted regardless of consent",
-      "Network Operators: Primary beneficiaries (institutional/arbitrage) \u2014 deploy middleboxes for network management; experience as coordination mechanism",
-      "Security Vendors: Secondary beneficiaries (institutional/constrained) \u2014 sell inspection tools and security services; constrained by encryption evolution",
-      "Protocol Community: Secondary victim (moderate/constrained) \u2014 protocol evolution requires middlebox compatibility; design space restricted",
-      "Privacy Engineering Coalition: Organized agents (organized/mobile) \u2014 IETF, browser vendors, VPN providers building encrypted alternatives with sunset timeline",
-      "Regulatory Compliance System: Institutional actor (institutional/arbitrage) \u2014 lawful interception mandates (CALEA) drive institutional middlebox deployment; increasingly performative",
-      "Analytical Observer: Cross-position view (analytical/analytical) \u2014 reveals hybrid coordination-extraction structure and nascent technical paths to resolution"
+      "End Users: Primary victims (powerless/trapped) — bear extraction of behavioral tracking and content filtering; have no technical or economic means to avoid interception",
+      "Network Operators: Primary beneficiaries (institutional/arbitrage) — gain operational control, cost reduction, and optional law enforcement access; frame interception as necessary management byproduct",
+      "Content Delivery Providers: Secondary beneficiaries (institutional/arbitrage) — benefit from traffic inspection for caching and optimization; coordinate with operators",
+      "Law Enforcement Agencies: Tertiary beneficiaries (powerful/arbitrage) — extract surveillance data from middleboxes for criminal investigation and political surveillance",
+      "Encryption Standards Bodies: Organized resistance (organized/constrained) — attempt to prevent middlebox access through protocol design (TLS 1.3), but face political pressure to accommodate backdoors",
+      "Dissidents in Censorious Jurisdictions: Maximal victims (moderate/constrained) — experience pure extraction: surveillance, censorship, and arrest risk with no offsetting benefit",
+      "Analytical Observer: Risk of false summit (analytical/analytical) — tempted to naturalize middleboxes as inevitable feature of packet-switched networks, obscuring that they represent institutional choice for centralized control"
     ],
-    "logic_rationale": "Extractiveness (0.58): Moderate-high. Middlebox interception extracts privacy and traffic data from end users (high extraction from powerless perspective) while providing genuine coordination value to network operators (low extraction from institutional perspective). The rising trend (0.35 \u2192 0.58 over 15 years) reflects intensified inspection practices as encryption became standard \u2014 operators compensated for loss of cleartext access by deploying deeper inspection (MITM SSL attacks, DPI, certificate injection). Suppression (0.68): High. Suppression operates through multiple mechanisms: technical (encrypted traffic is harder to analyze but still targetable), legal (interception is mandated by regulators, making exit impossible), institutional (network topology concentrates middleboxes at chokepoints), and epistemic (users are often unaware of interception). But suppression is not absolute \u2014 encrypted protocols and VPNs provide partial escapes. Theater ratio (0.55): Moderate. Regulatory compliance infrastructure (lawful interception) is increasingly theatrical \u2014 sophisticated actors evade inspection, encrypted protocols render mandates unenforceable, but compliance theater persists due to institutional inertia. Network management functions (caching, DDoS mitigation) are less theatrical \u2014 they provide real coordination value, though some of that value could be achieved without payload interception.",
-    "directionality_logic": "The directionality computation reveals structural asymmetry. Beneficiaries (network operators, security vendors, regulators) have exit options ranging from arbitrage to constrained, producing low or moderate d values and low/negative effective extraction. Victims (end users, privacy, protocol design space) have trapped or constrained exit, producing high d values and high effective extraction. The protocol community occupies an intermediate position \u2014 they benefit from the coordination (reliable networks) but bear extraction costs (design restrictions). Victims are listed as abstract: 'network_privacy' and 'protocol_integrity' are not human agents but structural goods that are degraded by interception. This is analytically correct but creates a classification subtlety: the piton perspective's 'regulatory compliance system' actor has arbitrage exit (can choose enforcement intensity) and sees the constraint as performative, not extractive. This is captured in the piton classification: theater_ratio is high (0.55), indicating functional degradation.",
-    "perspectival_gap": "The perspectival gap between the network operator (Rope) and end user (Snare) represents a fundamental disagreement about the constraint's nature. The operator genuinely uses middleboxes for coordination and experiences them as enabling. The end user genuinely cannot exit and experiences them as suppressive. Neither perspective is 'wrong' \u2014 they are measuring from different structural positions. The analytical observer (Tangled Rope) reveals that both are partially correct: the constraint contains real coordination functions (rope elements) layered with systematic extraction (snare elements). The private engineering coalition's scaffold view is prospective \u2014 they see a technical sunset path that neither the operator nor the end user currently perceives. The regulatory system's piton classification is diagnostic: lawful interception was installed as rope or tangled_rope (genuine law enforcement coordination need) but has degraded into piton (theater persisting despite minimal functional output). This degradation is captured in the rising theater_ratio (0.42 \u2192 0.55) while extractiveness also rose \u2014 the constraint became both more theatrical and more extractive, the signature of institutional inertia.",
-    "mandatrophy_analysis": "MANDATE ANALYSIS: The middlebox constraint resolves mandatrophy by decomposing coordination from extraction. The genuine coordination functions (NAT traversal, caching, DDoS mitigation, even lawful interception) are real and defensible. But the constraint is structured to prevent these functions from being unbundled: users cannot access networks with NAT traversal but no interception, cannot get DDoS protection without payload inspection, cannot benefit from caching without accepting MITM attacks. The unbundling is technically possible (transparent proxies can provide NAT services, DDoS detection can work on encrypted traffic, caching can operate on encrypted content metadata) but institutionally prevented. The mandatrophy is that the constraint's defenders must defend the entire bundled package (coordination + extraction) as necessary, when the coordination could be achieved with lower extraction. The scaffold view (privacy coalition) resolves this by building unbundled alternatives outside the constraint. The piton view (regulatory system) resolves it by admitting that extraction (law enforcement access) has become theatrical rather than functional. No single perspective resolves the mandatrophy \u2014 the resolution comes from the presheaf structure: some perspectives see genuine coordination (rope), others see genuine extraction (snare), and the analytical view sees that both are present but could be decoupled."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. Middlebox interception extracts user data (behavioral patterns, communications metadata, browsing history) without consent. The extraction is not total (end-to-end encryption prevents content access) but systematic (metadata analysis remains possible). The increasing trajectory (0.35→0.52) reflects that encryption has closed content channels, forcing extraction to intensify via metadata and behavioral analysis. Suppression (0.65): High. Users have limited practical exit options. Encryption provides partial protection at adoption cost (VPN blocking, performance penalties, compatibility problems). In many jurisdictions, circumvention tools are legally prohibited. Institutional barriers are substantial: network routing is a natural monopoly; users cannot choose alternative providers. The rising trajectory (0.48→0.65) reflects increased enforcement against circumvention techniques. Theater ratio (0.58): Moderate-high. Operators justify middleboxes primarily as network management tools (traffic engineering, DDoS mitigation, caching). These coordination functions are real but represent only part of the actual deployment driver. The growing theater (0.42→0.58) reflects that surveillance capabilities are increasingly embedded in the management justification — operators must perform theater to legitimize interception infrastructure.",
+    "perspectival_gap": "The eight-way perspectival split reveals how the same infrastructure constraint exhibits fundamentally different structural patterns depending on who is measuring. The end user sees pure predation (Snare): interception is unavoidable, non-consensual, and extractive with no offsetting benefit. The network operator sees infrastructure coordination (Rope): middleboxes solve real management problems (DDoS, congestion, caching) that benefit the entire network and users indirectly. Both agents are correct in their observations — the gap is not disagreement but rather different causal roles. The operator's benefit (operational control, cost savings) coexists with the user's cost (surveillance, censorship). This is the definition of Tangled Rope from the perspective of organized agents (encryption standards bodies, ISPs transitioning to encryption-friendly architectures) who see both functions clearly and perceive extraction as an extractable component of the coordination mechanism. The analytical observer at civilizational timescale risks naturalizing the constraint as Mountain — 'intermediaries are necessary, therefore interception is necessary, therefore users must accept surveillance' — but this reasoning smuggles in institutional choices (centralized routing control, operator surveillance capabilities) as if they were technical laws. The false summit detector will flag this.",
+    "directionality_logic": "Each agent's experienced extractiveness (χ) is derived from base extractiveness (ε=0.52), directionality (d from beneficiary/victim + exit options), and scope (σ(S) for global scope ≈ 1.2). End users: victims + trapped exit → d≈0.95 → f(d)≈1.42 → χ ≈ 0.52×1.42×1.2 ≈ 0.89 (perceived as near-total extraction). Network operators: beneficiaries + arbitrage exit → d≈0.05 → f(d)≈-0.12 → χ ≈ 0.52×(-0.12)×1.2 ≈ -0.07 (perceived as subsidy/coordination). Encrypted users: victims + constrained exit → d≈0.68 → f(d)≈0.95 → χ ≈ 0.52×0.95×1.2 ≈ 0.59 (perceived as moderate extraction). The gap between beneficiary χ (negative) and victim χ (0.89) is maximal, reflecting that the constraint extracts in one direction while the institution frames it as coordination.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by exhibiting genuine Tangled Rope structure: both coordination and extraction are structurally real, not illusion. Network operators genuinely solve real problems (DDoS mitigation, traffic management). Users genuinely suffer surveillance and censorship. These are not contradictory — they coexist in the same mechanism. The theater ratio (0.58) indicates that some performative justification exists (operators sometimes invoke management benefits that are secondary to surveillance goals), but not enough to classify as pure Piton. The measurements show extraction increasing even as encryption technology (TLS 1.3) has removed easy content access, indicating operators are intensifying surveillance via metadata and behavioral analysis — this is extraction being actively engineered, not coordination cost. The suppression trajectory rising from 0.48 to 0.65 indicates that as user exit options improve (encryption adoption), the institutional enforcement required to suppress those options increases. This is the Tangled Rope signature: active enforcement + persistent victim group + real coordination function + asymmetric benefit distribution."
   },
   "boltzmann": {
-    "coordination_type": "global_infrastructure",
-    "boltzmann_floor_override": 0.18
+    "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
       "end_to_end_encryption_adoption",
-      "regulatory_lawful_interception"
+      "network_operator_regulatory_capture",
+      "privacy_tool_prohibition"
     ],
-    "dual_formulation_note": "Middlebox interception decomposes into two structurally distinct constraints: (1) technical middlebox deployment (network operator coordination need) and (2) regulatory interception mandates (law enforcement extraction need). The technical coordination function (0.35 extractiveness) is separable from the regulatory extraction function (0.58 measured total). Future stories should decompose these into separate constraint families linked by network.affects_constraints. Current story treats them as unified because institutional practice bundles them."
+    "dual_formulation_note": "Middlebox interception decomposes into three structurally distinct constraints: (1) middlebox_interception (this story) — the coordination/extraction hybrid at infrastructure layer; (2) end_to_end_encryption_adoption — users' technical response, forms a competing constraint with lower extractiveness; (3) network_operator_regulatory_capture — the institutional dynamics where operators extract regulatory benefit from government surveillance demands. The middlebox constraint influences both downstream constraints; both downstream constraints feed back to make middleboxes harder to deploy and more extraction-dependent."
   },
   "directionality_overrides": [
     {
-      "power_atom": "institutional",
-      "d_value": 0.25
+      "power_atom": "analytical",
+      "d_value": 0.72
     }
   ]
 }

@@ -1,0 +1,237 @@
+{
+  "header": {
+    "constraint_id": "magna_carta_1215__baronial_privilege_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_magna_carta_1215__baronial_privilege_reading",
+    "measurement_id_prefix": "mc_baron",
+    "story_uid": "ab8cb747-8a46-4ecd-b84a-bb291e36935a"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Magna Carta 1215: Baronial Privilege Reading (Feudal Contract, Limited Protection)",
+    "topic_domain": "constitutional_law/legal_history/political_theory",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "landowning_barons",
+      "church_institutional_landholders"
+    ],
+    "victims": [
+      "crown_revenue_authority",
+      "common_subjects",
+      "peasant_populations"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Landowning Baron (Beneficiary)",
+      "comment": "PERSPECTIVE 1: LANDOWNING BARON (ROPE) — Experiences Magna Carta as pure coordination mechanism solving a collective action problem among barons. The constraint coordinates their joint demand (limit arbitrary taxation and wardship exploitation) and establishes mutual enforcement. Beneficiary with high exit options (can defect, renegotiate, appeal to Church) perceives low effective extraction. The charter is their victory — a mechanism to constrain the king's extractive prerogatives over feudal property."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Common Subject (Victim of Crown)",
+      "comment": "PERSPECTIVE 2: COMMON SUBJECT / NON-LANDOWNING FREEMAN (TANGLED ROPE) — Falls nominally within 'free men' language but has no actual protection. Experiences both genuine coordination benefit (constraint on arbitrary royal power does reduce violence and chaos) AND asymmetric extraction (the crown's constrained revenue-raising mechanisms are redirected onto non-baronial populations; sheriffs extract more aggressively from common subjects to compensate for lost wardship income). Constrained exit — cannot organize to enforce the charter, cannot appeal to Church, cannot negotiate alternative terms."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Peasant/Villeins (Invisible Victims)",
+      "comment": "PERSPECTIVE 3: PEASANT / VILLAIN POPULATION (SNARE) — Completely excluded from the charter's protection. Explicitly NOT 'free men.' Trapped by serfdom, bound to land, subject to manorial courts and baronial extraction. The charter's constraint on royal wardship and arbitrary taxation cascades into intensified baronial extraction from their labor (increased peasant obligations and rents to compensate barons for crown revenue losses). Zero exit options, zero coordination benefit. Pure extraction with suppression."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Church / Ecclesiastical Authority",
+      "comment": "PERSPECTIVE 4: CHURCH INSTITUTIONAL AUTHORITY (PITON) — The Church witnessed the 1215 baronial coup and benefited from explicit protections (Charter clause 1: 'Church shall be free'). But the Church's performative role in enforcing the charter (as spiritual guarantor of oaths, as mediator in disputes) has atrophied by the late 13th century. The Church retains institutional prestige and some claim to enforce baronial compliance but actual enforcement capacity has shifted to baronial councils and Parliament. The charter has become a ritual reaffirmation of mutual baronial obligation, not a living enforcement mechanism. Theater ratio rises as the Church's role becomes symbolic."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Civilizational / Natural Law View",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational distance, one might read Magna Carta 1215 as crystallizing an immutable principle: contract limits arbitrary power. But this reading naturalizes a contingent historical arrangement. The 'natural law' framing occludes the charter's actual function: formalization of baronial privilege as against royal extraction, with no universal principle of human rights. The natural law view is a false summit — it retrojects later (13th+ century) reinterpretations into the original 1215 text."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Royal Crown Authority",
+      "comment": "PERSPECTIVE 6: ROYAL CROWN AUTHORITY (TANGLED ROPE) — The king is constrained by the charter but also uses it as a coordination mechanism: it stabilizes the feudal relationship, reduces ruinous baronial revolt costs, and creates a predictable framework for taxing and governing. The crown's extractiveness is reduced (no more arbitrary wardship, reliefs, marriage fees) but stabilized at a sustainable level. The crown has both loss (revenue reduction) and gain (stability and legitimacy). Constrained exit — the crown could repudiate the charter (John tried; it failed; the charter's baronial enforcer network persists). The crown eventually learns to work within the charter framework, making it generative of new administrative mechanisms rather than purely constraining."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "universal_rights_retrojection",
+      "question": "Is the 1215 Magna Carta's 'free men' language a genuinely universal rights principle emergent in 1215, or a retrojection of later (14th-16th century) reinterpretation back onto the original baronial contract?",
+      "resolution_mechanism": "Textual and contextual analysis: compare 1215 charter language and contemporary chronicler interpretation with 14th-century legal commentaries (Bracton, Littleton) and 16th-century political theorists (Coke). Map the timeline of semantic drift from 'free men' (landowning barons) to 'free men' (universal principle).",
+      "impact": "If genuine emergence: the baronial_privilege_reading is anachronistic; universal_rights_reading is present in 1215. If retrojection: baronial_privilege_reading is structurally accurate; universal_rights_reading is a later construction imposed onto the text. This determines whether the two readings truly coexist or one foreclosures the other.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Textual authenticity: is universal-rights language in 1215 or a later retroinjection?"
+    },
+    {
+      "id": "enforcement_mechanism_collapse",
+      "question": "When did the baronial enforcement network for Magna Carta lose functional capacity? Was it gradual (14th-15th century atrophy) or precipitous (dissolution by centralizing crown)?",
+      "resolution_mechanism": "Historical record: frequency and effectiveness of baronial charter reissues; timeline of enforcement actions (charter-based litigation, baronial councils convening to enforce terms); correlation with shift from baronial to parliamentary enforcement mechanisms.",
+      "impact": "If gradual collapse: the constraint transitions from Tangled Rope (enforcement active) to Piton (ritual without function) around 14th-15th century. If precipitous: clear turning point for reclassification. Either way, the temporal measurement trajectory shifts from flat to declining extractiveness.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Timeline and mechanism of baronial enforcement network degradation"
+    },
+    {
+      "id": "peasant_protection_absence_structural",
+      "question": "Is the peasantry's explicit exclusion from Magna Carta 1215 a structural necessity of the feudal system, or a contingent political choice by baronial drafters?",
+      "resolution_mechanism": "Comparative feudalism: examine alternative feudal legal regimes (German, Italian, Iberian) where peasant protections or manorial constraints existed alongside nobility protections. If peasant protections appear in comparable feudal systems, exclusion was contingent; if absent, structural to feudalism.",
+      "impact": "If structural: the peasantry's snare classification is inherent to feudal arrangement; baron-peasant extraction is not a 'cost' of the charter but a separate mechanism. If contingent: the charter's drafters chose peasant exclusion, making it an asymmetric extraction feature of Magna Carta itself. This affects whether Magna Carta 1215 should include peasants in the victim set (it does here, presuming contingency).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether peasant exclusion was structural to feudalism or contingent to 1215 drafting"
+    },
+    {
+      "id": "reading_kernel_identity",
+      "question": "What is the kernel that both the baronial_privilege_reading and the universal_rights_reading read? Is it the 1215 document text, the principle of limited kingship, the concept of 'free' persons, or something else?",
+      "resolution_mechanism": "Meta-textual analysis: identify the invariant referent both readings appeal to and the points where they diverge in interpretation. If no single kernel is shared, the readings may not be siblings but wholly distinct constraints.",
+      "impact": "If kernel is identified and shared: the reading_relations (forecloses, coexists_with, influences) are meaningful. If readings reference different kernels: they are separate constraint families, not siblings within one kernel.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Identity of the shared kernel both sibling readings interpret"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 25,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 25,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 25,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 50
+  },
+  "commentary": {
+    "narrative_context": "Magna Carta (1215) is a feudal contract between King John and a coalition of barons, formalized as a response to the king's arbitrary extraction of feudal incidents (wardship, reliefs, marriage fees, scutage). The charter limits these prerogatives, protecting baronial property rights and establishing procedures for taxation. The constraint instantiated by the baronial_privilege_reading is the charter as feudal contract: 'free men' are landowning barons and church institutions; protection applies only to contracting parties; extraction is redirected from crown-to-baron onto baron-to-peasant. This reading is structurally distinct from the universal_rights_reading (which retrojects Enlightenment principles of human liberty onto 1215 language) and from the living_document_reading (which treats the charter as an evolving principle rather than a fixed feudal contract). The baronial_privilege_reading is the empirically grounded historical constraint — the actual 1215 document and its 13th-century enforcement. The other readings emerge later through textual reinterpretation. This constraint demonstrates how a single text can ground structurally distinct constraints depending on which reading is active.",
+    "key_agents": [
+      "Landowning Barons: Primary beneficiaries (powerful/arbitrage) — coordinate collective demand to constrain crown revenue extraction; extract surplus from peasant rents and labor to compensate for reduced crown levies",
+      "Church / Ecclesiastical Landholders: Secondary beneficiaries (institutional/arbitrage) — protected explicitly in Charter; maintain institutional prestige as oath-guarantor but enforcement capacity atrophies",
+      "King John and Crown Authority: Constrained party (institutional/constrained) — loses arbitrary revenue extraction mechanisms; gains stability and legitimacy; eventually learns to work within charter framework",
+      "Common Subjects / Non-Landowning Freemen: Secondary victims (moderate/constrained) — nominally included in 'free men' but receive no actual protection; bear increased extraction as crown redirects revenue-raising onto non-baronial populations",
+      "Peasant / Villain Populations: Primary victims (powerless/trapped) — explicitly excluded from charter protection; trapped in serfdom; bear intensified baronial extraction (increased rents and obligations) as barons compensate for crown revenue loss",
+      "Analytical Observer: Civilizational/universal (analytical/analytical) — risks reading the charter as natural law (mountain perspective) when it is contingent institutional arrangement"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The charter constrains one extraction flow (crown-to-baron) while leaving another intact and redirecting a third (king-to-baron extraction is replaced with baron-to-peasant extraction). The net extractiveness reflects that: (a) the charter genuinely coordinates baronial interests, reducing internal extraction among barons; (b) the crown's extraction is reduced by charter terms; (c) peasant extraction is maintained at high levels and may increase as barons shift extraction burden downward to compensate for crown losses. Suppression (0.62): High. The charter is enforced through baronial councils, Church authority, and threat of renewed baronial rebellion. The suppression value reflects both the mechanism needed to enforce charter terms (against crown resistance) and the suppression underlying peasant subjection (manorial courts, serfdom, bound labor). Theater ratio (0.48): Moderate-low in period 0 (1215 immediately after sealing), rising to 0.48 by period 50 (late 13th century). The charter begins as a functional enforcement mechanism — real constraint on crown revenue extraction, real coordination device among barons. By late 13th century, the charter's ritual reaffirmation (reissues in 1216, 1217, 1225, etc.) has partly become performative — the baronial enforcement network remains but the document's role shifts from crisis instrument to constitutional reference point. Theater rises as the Church's enforcement role becomes symbolic and as crown compliance becomes normalized (less need for active enforcement, more reliance on institutional expectation).",
+    "perspectival_gap": "The critical gap is between the baron-beneficiary experience (coordination, Rope) and the peasant-victim experience (pure extraction, Snare). Both experiences are correct relative to their structural position. The charter genuinely coordinates baronial interests AND genuinely intensifies peasant extraction. The perspective that mistakes this for a universal rights document (analytical false summit) misses both facts — it reads the charter as establishing universal principles when it establishes only baronial protections, and it misses how those protections are funded through intensified peasant extraction. The perspectival gap is not disagreement about facts but disagreement about scope — does 'free men' include peasants or only barons? The 1215 answer is clear (only barons), making universal_rights_reading a later retroinjection rather than a 1215 fact.",
+    "directionality_logic": "Each perspective's directionality (d) is derived from beneficiary/victim status and exit options. Barons as beneficiaries with arbitrage exit (can renegotiate, appeal to Church, defect) receive low d and low effective extraction chi. Peasants as victims with trapped exit (serfdom, no legal recourse, no organizational capacity) receive high d and high f(d), experiencing maximum chi. Common subjects as partial victims with constrained exit (can appeal to limited extent, can attempt relocation, but face barriers) receive moderate-high d. The crown as constrained party (could repudiate charter but enforcement network persists) has mid-range d reflecting mixed beneficiary-victim position. The directionality flow: extraction runs from crown toward barons (barons benefit), redirects from barons toward peasants (peasants bear cost), with common subjects caught in between. No directionality overrides needed — the structural relationships are unambiguous.",
+    "mandatrophy_analysis": "This constraint avoids mandatrophy through explicit scope limitation: the charter protects barons, not all subjects. There is no claim that Magna Carta 1215 is a universal rights document — the baronial_privilege_reading is precise about limited application. The mandatrophy would arise if one conflated this reading with the universal_rights_reading, which claims the same document established universal protections. The two readings are in deliberate tension. The engine's false_summit detector will flag the analytical observer's mountain perspective as naturalization of contingent baronial arrangement. Resolution: the mountain perspective is analytically coherent (from civilizational distance, one might see the charter as crystallizing immutable principles) but empirically false — the charter is explicitly and intentionally limited to contracting parties, not universal.",
+    "kernel_context": "This constraint is the baronial_privilege_reading of the Magna Carta 1215 kernel. The kernel is the 1215 document and the principle of contractual limitation of royal power. The baronial_privilege_reading reads the charter as a feudal contract between king and barons, with 'free men' = landowning barons + church institutions, and protection limited to contracting parties. Sibling readings: (1) universal_rights_reading — reinterprets 'free men' as universal principle of human liberty, reading the charter as establishing rights for all (emerges 14th-16th centuries through Coke and Common Law theorists, but retrojects meaning back to 1215). (2) living_document_reading — treats the charter as an evolving constitutional principle adaptable to contemporary circumstances, emphasizing the value of repeated reissues as evidence of continuous renewal rather than fixed text. The baronial_privilege_reading forecloses universal_rights_reading within the 1215 historical moment (the two cannot coexist in the same 1215 framework — the document is explicitly about baronial privilege, not universal rights). The baronial_privilege_reading coexists_with the living_document_reading (one can simultaneously hold that the 1215 charter was a feudal contract AND that it evolved into something else through repeated reinterpretation). The baronial_privilege_reading influences the living_document_reading by establishing what the initial constraint was — the living document reading requires knowing what the 1215 meaning was to show how meaning changed."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "magna_carta_universal_rights_reading",
+      "magna_carta_living_document_reading"
+    ],
+    "dual_formulation_note": "The Magna Carta kernel grounds three structurally distinct constraints: baronial_privilege_reading (ε=0.58, Tangled Rope, feudal contract, limited to contracting parties), universal_rights_reading (ε=0.32, Rope, universal human liberty principle, emerges through later reinterpretation), living_document_reading (ε=0.25, Scaffold, constitutional principle subject to sunset and renewal through reinterpretation cycles). The three readings diverge on kernel interpretation and victim/beneficiary scope. Each has its own ε, its own historical authority, and its own structural function. The baronial_privilege_reading is the empirically grounded 1215 constraint. The other readings emerge later and should be authored as separate constraint files with network links establishing the family relationship."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "feudal_contractual_authority",
+    "drift_state": {
+      "moment": "late_thirteenth_century",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "magna_carta_universal_rights_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "magna_carta_living_document_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "free_men_equals_landowning_barons",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "protection_limited_to_contracting_parties",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  }
+}

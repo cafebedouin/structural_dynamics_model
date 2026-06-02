@@ -4,24 +4,24 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "plb"
+    "measurement_id_prefix": "prof_lic",
+    "story_uid": "6bf6c9c0-30b6-4f9f-b5cd-8dd9e8a0cb02"
   },
   "base_properties": {
-    "extractiveness": 0.58,
-    "suppression": 0.65,
-    "theater_ratio": 0.48,
+    "extractiveness": 0.52,
+    "suppression": 0.68,
+    "theater_ratio": 0.58,
     "claimed_type": "tangled_rope",
     "human_readable": "Professional Licensing Barriers as Asymmetric Extraction",
     "topic_domain": "labor/regulation/professional_gatekeeping",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "incumbent_professionals",
+      "incumbent_licensed_practitioners",
       "licensing_boards"
     ],
     "victims": [
-      "aspiring_practitioners",
-      "underrepresented_populations",
-      "consumer_access"
+      "prospective_entrants",
+      "low_income_consumers"
     ]
   },
   "perspectives": [
@@ -31,17 +31,17 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "The Aspiring Practitioner",
-      "comment": "PERSPECTIVE 1: ASPIRING PRACTITIONER (SNARE) \u2014 Faces high barriers to entry: examination costs, education requirements, apprenticeship hours, licensing fees, and credential recognition delays. Cannot exit the constraint without abandoning career aspirations. Suppression is structural: alternative credentialing pathways are actively blocked by licensing boards. Maximum experienced extraction with zero degrees of freedom."
+      "label": "The Prospective Entrant",
+      "comment": "PERSPECTIVE 1: PROSPECTIVE ENTRANT (SNARE) — Faces insurmountable barriers to entry: expensive licensing exams, extended education requirements, residency restrictions, grandfathering clauses. Cannot exit without abandoning career aspirations. No coordination benefit accrues to this agent — they are purely victimized by supply restriction."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "snare",
       "agent_power": "moderate",
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "regional",
-      "label": "The Foreign-Trained Professional",
-      "comment": "PERSPECTIVE 2: FOREIGN-TRAINED PROFESSIONAL (TANGLED ROPE) \u2014 Possesses credentials but faces recognition barriers, credential evaluation costs, additional examination requirements, and reciprocity limitations. Has genuine coordination benefits (consumer protection through credential verification) alongside asymmetric extraction (substantial additional costs and delays compared to domestic applicants). Constrained exit: can practice in original country or apply for difficult reciprocal licensing, but both paths carry high costs."
+      "label": "The Low-Income Consumer",
+      "comment": "PERSPECTIVE 2: LOW-INCOME CONSUMER (SNARE) — Constrained by artificially inflated prices resulting from restricted supply of licensed practitioners. Cannot access affordable services in many markets; licensing reduces competition and raises consumer cost. Suppression is high because alternatives (unlicensed practitioners, self-service) are legally prohibited or heavily stigmatized."
     },
     {
       "classification_type": "rope",
@@ -49,145 +49,164 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "The Incumbent Professional",
-      "comment": "PERSPECTIVE 3: INCUMBENT PROFESSIONAL (ROPE) \u2014 Benefits from licensing restrictions that reduce competition and support wage premiums. Experiences the constraint as coordination: licensing ensures quality standards and consumer trust. Net beneficiary with arbitrage options (can relocate, change specialties, or exit the profession entirely). Extraction flows toward this agent."
+      "label": "The Incumbent Licensed Practitioner",
+      "comment": "PERSPECTIVE 3: INCUMBENT LICENSED PRACTITIONER (ROPE) — Experiences the constraint as coordination: licensing assures consumers of quality, builds consumer trust, enables professional networks. Benefits from reduced competition and wage premiums. Has arbitrage options (geographic relocation, credential reciprocity, specialization). Net beneficiary — extraction runs toward this agent; they perceive the constraint as solving a legitimate coordination problem (credential verification, consumer protection) and capture the benefits."
     },
     {
-      "classification_type": "rope",
+      "classification_type": "tangled_rope",
       "agent_power": "organized",
       "time_horizon": "generational",
-      "exit_options": "arbitrage",
+      "exit_options": "mobile",
       "spatial_scope": "national",
-      "label": "The Professional Association",
-      "comment": "PERSPECTIVE 4: PROFESSIONAL ASSOCIATION (ROPE) \u2014 Maintains licensing board control, sets examination standards, coordinates credential verification, and enforces reciprocity rules. Genuinely coordinates quality and consumer protection (coordination function) but uses this authority to restrict supply and maintain incumbent wage premiums (extraction mechanism). Organized power with arbitrage options (can negotiate regulatory exemptions, adjust standards, influence state legislation). Coordination and extraction are structurally inseparable."
+      "label": "The Licensing Board",
+      "comment": "PERSPECTIVE 4: LICENSING BOARD (TANGLED ROPE) — Has a genuine coordination function (setting standards, verifying credentials, disciplining incompetent practitioners) but also enforces supply restrictions that benefit incumbents. Board members are often incumbent practitioners (conflicts of interest). Mobile in principle (can relax standards) but constrained by incumbent pressure and regulatory capture. The board itself has become a mechanism for asymmetric extraction even as it performs a legitimate coordination function."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Historical Legitimacy Narrative",
+      "comment": "PERSPECTIVE 5: HISTORICAL LEGITIMACY NARRATIVE (PITON) — The original justification for professional licensing (consumer protection in opaque service markets) has atrophied as information asymmetries have declined (internet reviews, price comparison, professional standardization). Yet licensing persists through institutional inertia. Theater ratio is elevated because much regulatory activity now performs legitimacy-maintenance rather than actual quality assurance — continuing education requirements, examination rigor, and disciplinary procedures persist more as ritual than as effective mechanisms. The functional constraint (ensuring practitioner quality) has degraded while the extractive constraint (supply restriction) remains."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "The Regulatory Reform Coalition",
-      "comment": "PERSPECTIVE 5: REGULATORY REFORM COALITION (SCAFFOLD) \u2014 Organized agents (interstate compact systems, mutual recognition agreements, credential transparency initiatives) see licensing barriers as a temporary coordination problem with a sunset: national credential portability, competency-based assessment, and reciprocal recognition are reducing friction. Low effective extraction because organized agents have agency and see an exit path toward simplified verification systems."
-    },
-    {
-      "classification_type": "snare",
-      "agent_power": "powerless",
-      "time_horizon": "generational",
-      "exit_options": "trapped",
+      "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Consumer (Access Barrier)",
-      "comment": "PERSPECTIVE 6: CONSUMER (ACCESS BARRIER) (SNARE) \u2014 Faces reduced access to services due to supply restrictions (fewer licensed practitioners), higher costs due to artificial scarcity and wage premiums, geographic unavailability in underserved areas, and delayed access to innovation. Cannot exit the constraint \u2014 consumers depend on licensed professionals and have no alternative verification mechanism. Suppression is structural and invisible: barriers appear as 'quality assurance' rather than rationing."
+      "label": "The Licensing Reform Movement",
+      "comment": "PERSPECTIVE 6: LICENSING REFORM MOVEMENT (SCAFFOLD) — Organized actors (consumer advocates, occupational licensing reform coalitions, lower-income service organizations) see licensing barriers as a temporary coordination failure with a sunset path. Reciprocity agreements, competency-based assessments replacing time-in-grade, federal portability, and tiered licensing (apprenticeship pathways) represent structural solutions. The constraint is temporary because the coordination function (quality assurance) can be provided through alternative mechanisms (third-party certification, reputation systems, outcome-based accountability) with lower extraction. Sunset logic: as alternative verification mechanisms mature, licensing's monopoly on credential verification weakens."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, licensing serves dual functions: genuine consumer protection (coordination benefit) through credential verification and quality standards, but also systematic restriction of supply and restriction of entry (asymmetric extraction) that maintains incumbent wage premiums. The constraint is not pure extraction (many licensing rules genuinely improve quality) nor pure coordination (many rules exist to restrict supply). The perspectival gap reveals that professional associations conflate coordination and extraction in their rationale."
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, the constraint appears immutable: opaque service markets always require credentialing mechanisms; information asymmetries are inherent to professional services; some form of licensure is inevitable. But this perspective risks naturalizing a specific institutional arrangement. The engine's false summit detector will flag this as a false mountain — the apparent inevitability conceals structural choices (who sets standards? who benefits from supply restriction? what alternatives to licensing exist?) that are not laws of nature but contingent policy decisions."
     }
   ],
   "omegas": [
     {
-      "id": "quality_protection_vs_supply_restriction",
-      "question": "What fraction of licensing requirements genuinely protect consumer quality versus merely restrict supply?",
-      "resolution_mechanism": "Cross-national comparative analysis: jurisdictions with lower barriers but equivalent quality outcomes; experimental credential-blind consumer satisfaction studies; correlation between barrier height and actual consumer protection outcomes",
-      "impact": "If majority protective: higher coordination function, lower pure extraction, classification shifts toward Rope. If majority supply-restriction: lower coordination function, higher pure extraction, classification shifts toward Snare.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Fraction of licensing requirements that protect quality versus restrict supply"
-    },
-    {
-      "id": "credential_portability_timeline",
-      "question": "How quickly will interstate reciprocity, national credentials, and mutual recognition systems reduce licensing barriers?",
-      "resolution_mechanism": "Historical tracking of APLE (American Professional License Exchange), occupational licensing reform legislation, compact adoption rates, and credential portability timelines in leading jurisdictions",
-      "impact": "If sunset < 10 years: scaffold perspective confirmed, constraint is degrading. If sunset > 25 years: sunset is aspirational, classification remains tangled_rope or snare. If no sunset materializes: reform coalition is theater, classification shifts toward piton.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Timeline for significant credential portability and barrier reduction"
-    },
-    {
-      "id": "competency_verification_alternative",
-      "question": "Can competency-based assessment (skills testing, portfolio review, apprenticeship records) replace education-hours-based licensing without reducing consumer protection?",
-      "resolution_mechanism": "Pilot programs with competency-based pathways; comparison of consumer outcomes and safety records between hours-based and competency-based jurisdictions",
-      "impact": "If viable: alternative verification exists, extraction mechanism loses force, classification shifts toward Rope or Scaffold. If not viable: suppression is justified by actual consumer protection needs, extraction remains necessary.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Viability of competency-based assessment as licensing alternative"
-    },
-    {
-      "id": "incumbent_wage_premium_extraction",
-      "question": "What fraction of incumbent wage premiums in licensed professions derives from genuine skill scarcity versus artificial supply restriction?",
-      "resolution_mechanism": "Econometric analysis: wage differential between licensed and unlicensed comparable practitioners; wage changes in jurisdictions that relax licensing; international wage comparison for same profession with different licensing stringency",
-      "impact": "If majority skill scarcity: extraction component is smaller than apparent, classification skews toward Rope. If majority supply restriction: extraction is severe, classification confirms Snare or high-chi Tangled Rope.",
+      "id": "information_asymmetry_reduction",
+      "question": "Do modern information systems (reputation platforms, price transparency, outcome tracking) actually reduce the market information failures that licensing was designed to remedy?",
+      "resolution_mechanism": "Empirical comparison: consumer harm rates in lightly-licensed markets (cosmetics, personal training) vs heavily-licensed markets (law, medicine) controlling for service complexity; international comparison of licensing stringency vs consumer protection outcomes",
+      "impact": "If information systems sufficiently reduce asymmetries: licensing extraction becomes unjustifiable and the constraint reclassifies toward Snare across more perspectives. If information systems remain inadequate: licensing coordination function remains essential and justification for some supply restriction holds.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Fraction of incumbent wage premiums from scarcity versus restriction"
+      "description": "Whether digital information systems reduce opaque service market failures"
+    },
+    {
+      "id": "alternative_credentialing_feasibility",
+      "question": "Can tiered licensing (apprenticeship→journeyperson→master), industry-recognized certification, or outcome-based accountability replicate licensing's coordination function with lower extraction?",
+      "resolution_mechanism": "Case study analysis of hybrid licensing models; comparison of quality assurance effectiveness in reformed vs traditional licensing regimes; tracking of consumer outcomes under alternative credential systems",
+      "impact": "If alternatives are feasible: supply restriction has no coordination justification, and the constraint is pure Snare from all perspectives except incumbents. If alternatives fail quality gates: some licensing function is irreducible, supporting Tangled Rope classification.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative credentialing mechanisms can replace licensing"
+    },
+    {
+      "id": "incumbent_capture_degree",
+      "question": "What fraction of licensing board decisions reflect incumbent interest in supply restriction vs. genuine quality assurance or consumer protection?",
+      "resolution_mechanism": "Analysis of regulatory decisions correlated with incumbent income effects; tracking of exam difficulty evolution; comparing jurisdictions with reformist vs incumbent-controlled boards",
+      "impact": "If capture is high (>70%): constraint is structurally Snare even if coordination function nominally exists. If capture is low (<30%): constraint legitimately remains Tangled Rope with meaningful coordination component.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of licensing decisions driven by incumbent interest vs quality assurance"
+    },
+    {
+      "id": "geographic_wage_premium_origin",
+      "question": "How much of the wage premium for licensed practitioners is attributable to genuine quality vs. supply restriction?",
+      "resolution_mechanism": "Jurisdictional comparison: wage premiums in states with strict licensing vs states with reciprocity/reduced barriers, controlling for practitioner selection and service complexity; comparison of wage premiums to quality outcome differences",
+      "impact": "If most premium is from supply restriction (>60%): extraction is the primary function. If most premium reflects quality (>60%): coordination is primary and some extraction is justified cost.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Attribution of wage premiums to quality vs supply restriction"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.42
+      "value": 0.38
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.5
+      "time_point": 15,
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.58
+      "time_point": 30,
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.35
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
       "value": 0.42
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.48
+      "time_point": 15,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.68
     }
   ],
   "interval": {
     "start": 0,
-    "end": 20
+    "end": 30
   },
   "commentary": {
-    "narrative_context": "Professional licensing creates a structural tension between legitimate consumer protection (ensuring practitioners meet quality standards) and systematic restriction of entry that maintains incumbent wage premiums and controls labor supply. This constraint exhibits all characteristics of asymmetric coordination-extraction (Tangled Rope): genuine coordination benefits exist (credential verification, quality assurance, consumer trust), but the coordination function is inseparable from the extraction mechanism (supply restriction, high barriers to entry, incumbent protection). The constraint is enforced through professional associations that control licensing boards, examination standards, and reciprocity rules. Theater is moderate (0.48) because much of the licensing requirement is genuine quality assurance rather than pure performative ritual, but substantial portions exist primarily to restrict supply. Extractiveness has increased over 20 years as barriers have accumulated (examination complexity, education requirements, fees, credential evaluation) without proportional quality improvement. The aspiring practitioner and consumer perspectives reveal the constraint as a Snare: powerless agents face structural suppression and zero exit options. The professional association sees coordination and experiences themselves as quality-guardians. The analytical observer sees the dual function: genuine coordination inseparably bound to asymmetric extraction.",
+    "narrative_context": "Professional licensing creates a structural constraint that exhibits genuine coordination benefits (credential verification, consumer protection, quality assurance) inseparably bound to systematic extraction (supply restriction, wage maintenance, barrier elevation). The constraint is a paradigmatic Tangled Rope: incumbent practitioners and licensing boards benefit from both the coordination function and the resulting supply scarcity. Prospective entrants and low-income consumers bear the costs of both restricted supply and artificially elevated service prices. The constraint's evolution shows increasing theater ratio (0.42 → 0.58) as information technology reduces the original information-asymmetry problems licensing was designed to solve, yet licensing intensity has risen, not fallen — suggesting that quality assurance justification is increasingly theatrical while extraction function persists. The measurements span 30 years (baseline=1994, midpoint=2009, current=2024) capturing the period of accelerating information asymmetry reduction (internet expansion) and simultaneous licensing intensification (increased education requirements, exam rigor, credential bundling).",
     "key_agents": [
-      "Incumbent Professionals: Primary beneficiaries (institutional/arbitrage) \u2014 capture wage premiums, reduced competition, and market control through licensing restrictions",
-      "Aspiring Practitioners: Primary victims (powerless/trapped) \u2014 face high barriers to entry, examination costs, time requirements, credential recognition delays with no alternative pathways",
-      "Professional Associations: Institutional controllers (organized/arbitrage) \u2014 maintain licensing board authority, set standards, coordinate credential verification, and enforce supply restriction",
-      "Foreign-Trained Professionals: Secondary victims (moderate/constrained) \u2014 possess credentials but face recognition barriers, reciprocity limitations, and additional costs",
-      "Consumers: Diffuse victims (powerless/trapped) \u2014 face reduced access, higher costs due to artificial scarcity, geographic unavailability, innovation delays",
-      "Regulatory Reform Coalition: Emerging organized agents (organized/mobile) \u2014 building interstate compacts, mutual recognition agreements, credential portability systems with sunset toward simplified verification",
-      "Licensing Boards: Enforcement apparatus (institutional/arbitrage) \u2014 administer examinations, verify credentials, enforce restrictions"
+      "Prospective Entrants: Powerless/trapped (national scope) — face multi-year education requirements, expensive licensing exams, geographic restrictions, renewal fees. Bear suppression (legal barriers + market entry costs) without coordination benefit.",
+      "Low-Income Consumers: Moderate/constrained (regional scope) — face artificially inflated service prices due to restricted supply. Geographic or economic barriers prevent accessing services; unlicensed alternatives are legally prohibited.",
+      "Incumbent Licensed Practitioners: Institutional/arbitrage (national scope) — primary beneficiaries. Benefit from reduced competition, wage premiums, professional network enforcement, and consumer trust signals.",
+      "Licensing Boards: Organized/mobile (national scope) — officially coordinate quality standards but structurally captured by incumbent practitioners. Board membership typically restricted to license holders; regulatory capture is structural, not exceptional.",
+      "Licensing Reform Coalition: Organized/constrained (national scope) — consumer advocates, occupational licensing reform groups, low-income service organizations. Have political traction in some states but face incumbent opposition; constrained by institutional entrenchment.",
+      "Analytical Observer: Analytical/analytical (global scope) — risks naturalizing a specific institutional arrangement as inevitable."
     ],
-    "logic_rationale": "Extractiveness (0.58): Moderately high, reflecting substantial but not maximal extraction. The value reflects that licensing serves genuine coordination functions (quality assurance, consumer trust, credential verification) alongside extraction mechanisms (supply restriction, high barriers, incumbent protection). The extractiveness trajectory shows accumulation: as examination complexity increases and education requirements expand without proportional quality improvement, the extraction component rises relative to coordination. If barriers were pure supply restriction (no coordination function), extractiveness would approach 0.75-0.85 (snare range); the moderate value reflects genuine coordination value. Suppression (0.65): Moderately high. Structural barriers include examination costs ($300-$3,000+), education/apprenticeship hour requirements (1,000-4,000+ hours depending on profession), credential evaluation costs ($100-$500+), reciprocity limitations (state-by-state requirements), and publication bias against alternative credentialing. But suppression is not total \u2014 some jurisdictions have reciprocal agreements, and credential-blind alternative pathways exist in some fields. Theater ratio (0.48): Below the piton threshold (0.70) because much of the licensing requirement is genuine quality assurance rather than pure ritual. Examination content correlates with practitioner competency in many cases. But substantial portions of requirements (specific education hour counts, degree type requirements, apprenticeship duration) are performative proxies for competency rather than competency tests themselves.",
-    "perspectival_gap": "The constraint exhibits maximum perspectival heterogeneity. The incumbent professional sees coordination and fair market incentives (Rope perspective). The aspiring practitioner sees an immovable barrier with zero exit options (Snare perspective). The professional association sees quality assurance and consumer protection (Rope perspective oriented toward their agency). The regulatory reform coalition sees a temporary problem with a sunset (Scaffold perspective). The consumer sees restricted access and artificial scarcity (Snare perspective). The analytical observer sees genuine coordination inseparably bound to extraction (Tangled Rope perspective). The perspectival gap does not resolve by choosing one 'correct' view \u2014 it reveals that the constraint's structure is genuinely hybrid. Beneficiaries and beneficiary-adjacent actors (incumbent professionals, associations) see rope-like coordination. Victims (aspiring practitioners, consumers, foreign-trained professionals) see snare-like extraction. The analytical observer sees both simultaneously, which is the defining feature of Tangled Rope.",
-    "directionality_logic": "Directionality values derived from beneficiary/victim declarations and exit options. Incumbent professionals are beneficiaries with arbitrage exit options (can relocate, change specialties, exit profession) \u2014 low d value (~0.15), negative experienced extraction (they benefit from the constraint). Professional associations are beneficiaries with arbitrage options \u2014 low d value (~0.10-0.20), institutional net benefit. Aspiring practitioners are victims with trapped exit options (cannot practice without licensing, cannot exit without abandoning career aspiration) \u2014 high d value (~0.92), maximum experienced extraction. Foreign-trained professionals are victims with constrained exit (can practice elsewhere or in original country, but at substantial cost) \u2014 moderate-high d value (~0.75), significant experienced extraction. Consumers are victims with trapped exit (depend on licensed professionals, no alternative verification) \u2014 high d value (~0.90), substantial experienced extraction. The regulatory reform coalition are organized agents with mobile exit (can build alternative systems, negotiate exemptions, influence legislation) \u2014 moderate d value (~0.45-0.55), moderate experienced extraction. The directionality structure confirms Tangled Rope: beneficiaries (low d, negative chi) and victims (high d, high chi) are structurally inseparable within the same constraint.",
-    "mandatrophy_analysis": "The constraint resolves the mandatrophy by clarifying that Tangled Rope is the correct classification because professional licensing genuinely exhibits both coordination and extraction functions, and neither can be removed without removing the other. If the constraint were pure extraction (Snare), one could simply eliminate licensing and consumers would be safer (no coordination loss). But consumer protection through credential verification IS a real coordination benefit \u2014 eliminating licensing would create information asymmetry in practitioner quality. If the constraint were pure coordination (Rope), there would be no asymmetric extraction \u2014 but the evidence shows that barrier height far exceeds what is necessary for quality assurance alone, and incumbent wage premiums exist partly due to artificial scarcity. The classification refuses the false choice between 'all extraction disguised as coordination' and 'all coordination with some extraction overhead.' The dual function is structural. The mandatrophy is resolved by accepting that professional licensing is a genuine hybrid mechanism with substantial genuine coordination value AND substantial asymmetric extraction, and the policy question is not 'is it extraction?' but 'what ratio of coordination to extraction is justified and how do we shift it toward pure coordination without losing quality assurance?'"
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint restricts entry (reducing supply) and increases prices (transferring wealth from consumers to incumbents), but some extraction is justified by genuine quality assurance function. The 0.52 value reflects that extraction is significant but not maximal — a snare with pure extraction would score ≥0.66. The measurement trajectory (0.38 → 0.52) shows rising extraction despite falling information asymmetry, suggesting increasing supply-restriction pressure. Suppression (0.68): High. Significant legal barriers (examination requirements, education mandates, geographic restrictions, renewal fees) reduce alternatives and prevent entry. Suppression is not total because some alternatives exist (unlicensed practitioners, self-service, regulated alternatives like nurse practitioners), but legal/market barriers are substantial. Theater ratio (0.58): Moderate-high. Initial theater ratio (0.42) reflects that licensing had functional quality-assurance content in 1994 when information asymmetries were severe. Current theater ratio (0.58) reflects that continuing education, examination rigor, and disciplinary procedures increasingly perform legitimacy-maintenance rather than quality assurance — many requirements persist despite declining information failures. This is the clearest evidence that the constraint has shifted from coordination-dominant to extraction-dominant over the 30-year window.",
+    "perspectival_gap": "This constraint shows the full range of classification from fundamentally different structural positions. Incumbents see Rope (pure coordination benefiting all) because they internalize the supply restriction as legitimate and experience the wage premium as earned through quality verification. Low-income consumers see Snare (pure extraction with no benefit) because they cannot access services at all or only at inflated prices. Prospective entrants see Snare (barriers to entry with no immediate benefit, though some may later become incumbents and flip perspectives). Licensing boards see Tangled Rope in their immediate context (genuine quality-assurance work) but might see Piton from a longer horizon (the quality work is increasingly performative). Reform movements see Scaffold (the coordination function is real but can be achieved through alternative mechanisms with lower extraction). The analytical observer risks seeing Mountain (information asymmetries in professional services are inevitable) but the structural data reveals this as false naturalization — the specific institutional arrangement (state-granted monopoly on credentialing) is a policy choice, not a natural law.",
+    "directionality_logic": "Directionality is derived from beneficiary/victim status and exit options. Incumbents (beneficiaries + arbitrage) have d ≈ 0.15 (low extraction toward them). Prospective entrants (victims + trapped) have d ≈ 0.95 (maximum extraction target). Low-income consumers (victims + constrained) have d ≈ 0.85 (high extraction target with some options). Licensing boards occupy an interesting structural position: officially they are institutional actors with arbitrage options (can relax standards), but actually they are captured institutional actors (cannot deviate from incumbent preferences without facing political pressure and board replacement). The override would elevate board d from the derived ~0.20 to ~0.35-0.40 to capture this captured institutional position — the board is not a pure beneficiary even though it nominally has institutional power. This is regulatory capture in action: structural power (ability to set standards) is exercised on behalf of incumbents, not independently.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that professional licensing exhibits all six types simultaneously because the constraint has multiple structural dimensions that different observers weight differently. The Tangled Rope classification at the claimed_type level reflects the dominant structural fact: genuine coordination (quality assurance) and genuine extraction (supply restriction) are inseparable in the current institutional arrangement. The Snare classifications from powerless and moderate perspectives reflect that these agents experience only the extraction; they cannot capture the coordination benefit. The Rope classification from incumbent perspective reflects that incumbents experience primarily the coordination benefit (consumer trust, professional legitimacy) and capture the extraction benefit (wage premium, supply protection). The Piton classification from the historical narrative perspective reflects that the coordination function (information asymmetry reduction) has atrophied while the extraction function (supply restriction) persists, maintained through institutional theater. The Scaffold perspective reflects that the constraint's extraction function can be separated from its coordination function through alternative institutional designs (tiered licensing, outcome-based accountability, reciprocity agreements). The false Mountain at the analytical level reflects the risk of naturalizing a specific institutional arrangement as inevitable. All classifications are structurally valid — the mandatrophy is resolved by the ε-invariance principle: the constraint has one ε (0.52) and one definite structure (Tangled Rope), but multiple legitimate perspectival readings of that structure."
   },
   "boltzmann": {
-    "coordination_type": "information_standard"
+    "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
       "occupational_wage_inequality",
-      "credential_recognition_barriers"
+      "geographic_service_supply_inequality"
     ],
-    "dual_formulation_note": "Professional licensing barriers decompose into separate constraints per the \u03b5-invariance principle. The licensing-as-quality-assurance constraint (\u03b5 \u2248 0.15, information coordination function) is distinct from the licensing-as-supply-restriction constraint (\u03b5 \u2248 0.72, incumbent extraction mechanism). The unified story models the inseparability of these functions in practice; if they could be decomposed empirically, two separate stories would be warranted."
+    "dual_formulation_note": "Professional licensing connects to wage inequality (occupational licensing enforces wage premiums for incumbents) and geographic service availability (supply restriction concentrates services in wealthy urban areas). Each downstream constraint has its own ε reflecting different observables — licensing barriers create wage premiums (separate constraint) and geographic supply gaps (separate constraint). This story models the licensing mechanism itself; the others model its effects."
   },
-  "directionality_overrides": []
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.38
+    }
+  ]
 }

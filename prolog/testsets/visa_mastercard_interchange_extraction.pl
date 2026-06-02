@@ -1,0 +1,326 @@
+% ============================================================================
+% CONSTRAINT STORY: visa_mastercard_interchange_extraction
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_visa_mastercard_interchange_extraction, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: visa_mastercard_interchange_extraction
+ *   human_readable: Visa/Mastercard Interchange Fee Extraction System
+ *   domain: financial/payment_systems
+ *
+ * SUMMARY:
+ *   The Visa/Mastercard interchange fee system represents a globally dominant
+ *   payment coordination mechanism that exhibits genuine network effects and
+ *   fraud prevention benefits alongside systematic rent extraction from
+ *   merchants and consumers. Interchange fees—amounts paid by acquiring banks
+ *   to issuing banks for each card transaction—represent 1.5-3.5% of
+ *   transaction value in unregulated markets. The constraint demonstrates all
+ *   aspects of a Tangled Rope at the analytical level: a real coordination
+ *   function (settlement finality, fraud prevention, cardholder incentives)
+ *   combined with asymmetric extraction enabled by network-effect lock-in,
+ *   merchant negotiating powerlessness, and regulatory capture. The dual
+ *   nature creates a perspectival array spanning all six constraint types,
+ *   from the small merchant's Snare experience (no exit, non-negotiable fees)
+ *   to the card network's Rope perception (pure coordination solving network
+ *   formation) to the emerging Scaffold alternative (regulatory caps,
+ *   blockchain settlement, digital currency competition with genuine sunset
+ *   logic). The constraint has intensified over 14 years: base extractiveness
+ *   rose from 0.35 (2010-era fees at 1.5-2.0%) to 0.58 (contemporary
+ *   unregulated markets at 2.5-3.5%), while suppression has hardened as
+ *   merchant alternatives have failed and cardholder identity fusion
+ *   deepened. Theater ratio is moderate (0.45) because the coordination
+ *   function is genuine—fraud prevention and settlement are real technical
+ *   requirements—but the fee magnitude justification is increasingly
+ *   performative, with 30-40% of the measured fee attributable to pure
+ *   rent-seeking rather than coordination cost.
+ *
+ * KEY AGENTS:
+ *   - Card Networks (Visa, Mastercard): Primary beneficiaries (institutional/arbitrage) — extract 5-15 basis points per transaction through scheme fees and licensing; control fee-setting architecture
+ *   - Issuing Banks: Secondary beneficiaries (institutional/arbitrage) — capture 1.0-2.5% interchange margin; incentivize cardholder volume
+ *   - Acquiring Banks: Tertiary beneficiaries (institutional/constrained) — earn spread between interchange and merchant fee but bear competitive pressure from fintech alternatives
+ *   - Small Merchants (<$2M annual): Primary victims (powerless/trapped) — bear full 2.5-3.5% fee cost, cannot negotiate, lack alternative payment infrastructure
+ *   - Large Retailers (>$500M annual): Secondary victims (moderate/constrained) — negotiate modest fee reductions (0.2-0.5%) but cannot exit; absorb cost via price increases
+ *   - Consumers/Cardholders: Tertiary victims (moderate/identity_locked) — pay indirectly through merchant price pass-through; accept as natural cost despite structural mobility
+ *   - Payment Fintech Companies: Mobile agents (powerful/mobile) — offer 1.0-1.5% alternative fees; bypass issuer infrastructure; face scaling challenges
+ *   - Regulators (EU, UK, Australia): Organized reformers (organized/constrained) — implement caps (0.3% credit, 0.05% debit) and mandate interoperability; face lobbying resistance
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(visa_mastercard_interchange_extraction, 0.58).
+domain_priors:suppression_score(visa_mastercard_interchange_extraction, 0.68).
+domain_priors:theater_ratio(visa_mastercard_interchange_extraction, 0.45).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(visa_mastercard_interchange_extraction, extractiveness, 0.58).
+narrative_ontology:constraint_metric(visa_mastercard_interchange_extraction, suppression_requirement, 0.68).
+narrative_ontology:constraint_metric(visa_mastercard_interchange_extraction, theater_ratio, 0.45).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(visa_mastercard_interchange_extraction, tangled_rope).
+narrative_ontology:human_readable(visa_mastercard_interchange_extraction, "Visa/Mastercard Interchange Fee Extraction System").
+narrative_ontology:topic_domain(visa_mastercard_interchange_extraction, "financial/payment_systems").
+
+domain_priors:requires_active_enforcement(visa_mastercard_interchange_extraction).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(visa_mastercard_interchange_extraction, card_networks).
+narrative_ontology:constraint_beneficiary(visa_mastercard_interchange_extraction, issuing_banks).
+narrative_ontology:constraint_beneficiary(visa_mastercard_interchange_extraction, cardholders).
+narrative_ontology:constraint_victim(visa_mastercard_interchange_extraction, merchants).
+narrative_ontology:constraint_victim(visa_mastercard_interchange_extraction, consumers_via_price_pass_through).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: SMALL MERCHANT (SNARE) — Faces non-negotiable interchange fees (1.5-3.5% per transaction) with no exit option. Cannot process cards without accepting the fee schedule; cash-only alternative is economically infeasible in digital economy. Suppression is structural: the card networks' duopoly control, the absence of price competition at point of service, and the merchant's dependency on card payment for survival. Pure extraction from this agent's structural position.
+constraint_indexing:constraint_classification(visa_mastercard_interchange_extraction, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: LARGE RETAILER (TANGLED ROPE) — Bears significant interchange costs but has limited negotiating power; can negotiate modest fee reductions (0.2-0.5% differential for volume) but cannot opt out. Experiences genuine coordination benefits: fraud prevention, settlement reliability, customer acquisition (cardholders spend more with cards). High costs but also real benefits; constrained exit (could migrate to proprietary payment systems but at enormous operational cost).
+constraint_indexing:constraint_classification(visa_mastercard_interchange_extraction, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 3: CARD NETWORK & ISSUING BANKS (ROPE) — Primary beneficiaries. Perceive the constraint as pure coordination: setting interchange rates to incentivize card issuance, reward cardholder loyalty, and fund fraud prevention infrastructure. From this agent's structural position, the system is a coordination mechanism solving the network-formation problem (need both merchants and cardholders to create value). Arbitrage exit option reflects ability to rebalance fees across parties or deploy capital elsewhere. Net extraction flows toward this agent.
+constraint_indexing:constraint_classification(visa_mastercard_interchange_extraction, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: LARGE TECH/ALTERNATIVE NETWORKS (TANGLED ROPE) — Apple Pay, Google Pay, payment fintech firms have partially mobile exit: can build alternative payment rails with lower interchange (1.0-1.5%) by capturing merchants' customer data. Benefits from card network coordination (settlement, fraud prevention) while extracting rents by offering lower-cost alternatives to merchants. Experiences and creates hybrid extraction: genuine coordination function (fraud, settlement) with asymmetric fee advantage.
+constraint_indexing:constraint_classification(visa_mastercard_interchange_extraction, tangled_rope,
+    context(agent_power(powerful),
+            time_horizon(immediate),
+            exit_options(mobile),
+            spatial_scope(global))).
+
+% PERSPECTIVE 5: CARDHOLDER (TANGLED ROPE, IDENTITY-LOCKED) — Structurally mobile (could use cash, pay by transfer) but identity-fused with cashless payment convenience, fraud protection, rewards programs, purchase history tracking. The cardholder identity (modern consumer, digitally native, credit-worthy) is constituted through card-dependent transactions. Experiences genuine benefits (fraud protection, rewards, convenience) alongside internalized extraction (pays through merchant price increases, accepts interchange rent extraction as natural cost of modern commerce). Identity lock prevents perceiving the system as optional even though material barriers to exit are low.
+constraint_indexing:constraint_classification(visa_mastercard_interchange_extraction, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(identity_locked),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: REGULATORY INTERVENTION / REGIONAL ALTERNATIVES (SCAFFOLD) — EU capping interchange at 0.3% (credit) / 0.05% (debit), Australia's dual-network mandates, and emerging stablecoin/blockchain alternatives represent temporary coordination fixes with sunset logic. Regulators and alternative networks see the high-fee regime as a transient problem being solved by caps, mandates, and technical innovation. Sunset clause: as regulatory caps expand and blockchain settlement matures, the Visa/Mastercard duopoly's extraction mechanism loses force. Theater component is lower here (regulatory enforcement, technical standards) compared to the beneficiary's perspective.
+constraint_indexing:constraint_classification(visa_mastercard_interchange_extraction, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 7: LEGACY SETTLEMENT INFRASTRUCTURE (PITON) — The Visa/Mastercard fee structure preserves the role of traditional issuing banks in payment settlement despite newer technical alternatives (blockchain, real-time settlement, peer-to-peer networks) that could disintermediate the issuer entirely. The fee structure is maintained through institutional inertia: issuing banks have built business models around interchange margins, and the payment network persists in a degraded form (theater ≥ 0.70) because full technical replacement would require simultaneous coordination of millions of merchants and cardholders. The settlement function itself is real; the fee extraction overlaid on it is not.
+constraint_indexing:constraint_classification(visa_mastercard_interchange_extraction, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 8: ANALYTICAL OBSERVER (TANGLED ROPE) — The civilizational view sees a genuine coordination function (fraud prevention, settlement finality, cardholder incentives) combined with extractive rent-seeking enabled by network-effect lock-in and regulatory capture. The constraint is neither pure extraction nor pure coordination; it is a hybrid structure where the coordination rationale has become a cover story for systematic rent extraction. Beneficiaries (card networks, issuers) justify high fees as necessary for security and incentives; victims (merchants, consumers) pay without ability to negotiate. The constraint persists because exit costs exceed marginal fee increases.
+constraint_indexing:constraint_classification(visa_mastercard_interchange_extraction, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(visa_mastercard_interchange_extraction_tests).
+
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(visa_mastercard_interchange_extraction, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(visa_mastercard_interchange_extraction, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(visa_mastercard_interchange_extraction, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(visa_mastercard_interchange_extraction, TR),
+    TR >= 0.70.
+
+:- end_tests(visa_mastercard_interchange_extraction_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness (0.58): Moderately high. The system extracts real value (1.5-3.5% of transaction size) from merchants and consumers through fees justified primarily by genuine coordination functions (fraud prevention ~0.10-0.15% of fee, settlement ~0.05-0.10%, cardholder incentives ~0.20-0.30%) and secondarily by rent-seeking enabled by network lock-in (~0.80-1.50% of fees in unregulated markets). The extraction is not maximal (Snare level ≥0.66 χ) because the coordination function is real and cardholders derive genuine benefits. However, the constraint is substantially extractive because the fee level significantly exceeds the minimum required for equivalent coordination function (as demonstrated by EU regulation maintaining fraud/settlement at 0.3% credit / 0.05% debit). Base extractiveness of 0.58 reflects the empirical ratio of extracted value to total fee magnitude. Suppression (0.68): High. Merchants face non-negotiable fees with no realistic exit option — cash-only is economically impossible for retail in developed economies, and alternative networks (blockchain, fintech) have failed to achieve sufficient liquidity parity. Cardholders face suppression of a different type: internalized identity fusion preventing perception of alternative payment methods as viable. Suppression mechanisms include the card networks' duopoly control (Herfindahl index exceeds 3000 in most markets), absence of price transparency at point of service, regulatory capture preventing caps, and merchant cartel penalties for refusing cards. Theater ratio (0.45): Moderate. The coordination justifications for high fees are partially genuine (fraud prevention, settlement, cardholder benefits are real technical requirements) and partially performative (the specific fee magnitude cannot be justified by coordination cost alone; fraud rates are lower in regulated markets with 80% lower fees). The constraint persists because the narrativization ('these fees are necessary for security and rewards') is credible enough to prevent sustained merchant resistance, even though empirical evidence from EU regulation shows the coordination function persists at lower fees.
+ *
+ * PERSPECTIVAL GAP:
+ *   The 7-perspective array spans from pure Rope (card network coordination logic) to pure Snare (small merchant extraction experience) with all intervening types represented. The gap exists because the constraint simultaneously coordinates and extracts: its coordination function is genuine and produces benefits for some agents (cardholders, merchants who successfully acquire customers via card), while its extraction mechanism is equally genuine and produces costs for others (merchants who have no choice but to accept fees, consumers who pay indirectly). The merchant's Snare perception derives from their powerlessness and trapped exit; the network's Rope perception derives from their control of the coordination function and arbitrage exit. The gap is not perspectival error — both are structurally accurate descriptions of the same constraint from different positions within it. The analytical observer synthesizes these into Tangled Rope (genuine coordination plus extraction), which is the correct type-classification independent of observer position.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   The constraint's effective extractiveness (χ = ε × f(d) × σ(S)) varies dramatically by agent because f(d) (the directionality function) is agent-specific. For card networks (beneficiary, arbitrage exit, d≈0.05): χ ≈ 0.58 × (-0.10) × 1.2 ≈ -0.07 (negative effective extraction — the constraint subsidizes them). For small merchants (victim, trapped, d≈0.95): χ ≈ 0.58 × 1.42 × 1.2 ≈ 0.99 (near-maximal extraction experienced). For large retailers (constrained, mixed, d≈0.55): χ ≈ 0.58 × 0.75 × 1.0 ≈ 0.44 (moderate extraction). For cardholders (identity_locked, mixed, d≈0.45): χ ≈ 0.58 × 0.55 × 1.0 ≈ 0.32 (low experienced extraction due to benefit salience outweighing cost invisibility). The scope modifier σ(S) is 1.2 for global scope (verification difficulty is high — comparing across regulatory regimes, payment networks, merchant classes requires integrating heterogeneous data). The directionality gap, not the base extractiveness value, drives the perspectival classification divergence.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   This constraint resolves the mandatrophy through genuine hybrid structure: it is not 'really' a Tangled Rope with some perspectives misclassifying it as Rope/Snare. Rather, Tangled Rope is the analytical type because the constraint has both a real coordination function (fraud prevention, settlement, cardholder incentives) and real asymmetric extraction (non-negotiable fees, network lock-in, merchant powerlessness). The individual perspectives (merchant's Snare, network's Rope, cardholder's identity-locked Tangled Rope) are all causally accurate descriptions of different agents' structural relationships to the constraint. The mandatrophy is resolved by recognizing that the constraint's claimed type is Tangled Rope precisely because neither pure Rope nor pure Snare captures the structure — Rope alone would neglect the extraction, Snare alone would neglect the coordination. The analytical observer's Tangled Rope is not a compromise; it is the structurally accurate type that all individual perspectives instantiate fragments of. The small merchant's Snare perception is not error — from their trapped position, the coordination benefits are invisible and the extraction is maximal, producing a Snare experience. But the constraint's true structure (Tangled Rope) explains why the merchant's experience is Snare: because they are locked into a system with real coordination function they cannot access (cardholder fraud protection doesn't benefit the merchant directly) and cannot negotiate (no merchant coalition has succeeded in shifting terms). The mandatrophy dissolves when you recognize that different agents genuinely experience different constraint types because of their structural position, and the constraint's true type is the analytical one that explains the entire perspectival distribution.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    coordination_vs_extraction_partitioning,
+    'What proportion of the interchange fee (1.5-3.5%) is necessary coordination cost (fraud prevention, settlement, cardholder incentives) versus extractive rent?',
+    'Empirical analysis: compare fee structures in regulated markets (EU at 0.3% credit / 0.05% debit) to measured fraud rates, cardholder satisfaction, and merchant adoption. Test the hypothesis that regulated fees provide equivalent coordination benefits at lower extraction.',
+    'If regulated fees (0.3%) maintain fraud/settlement function: extractive component ≈ 70-80% of current fees, supporting Snare classification for merchants. If fraud/settlement deteriorates: higher fees reflect genuine coordination necessity, supporting Tangled Rope classification. Classification outcome shifts entire perspectival distribution.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(coordination_vs_extraction_partitioning, empirical, 'Partitioning interchange fee into coordination cost vs. pure extraction').
+
+omega_variable(
+    cardholder_identity_fusion_empirical,
+    'How much of cardholder preference for card payments reflects internalized identity fusion versus rational preference for fraud protection and rewards?',
+    'Behavioral study: measure cardholder willingness to use cash/transfer alternatives when offered equivalent fraud protection and rewards outside card ecosystem. Compare ''switching cost'' for identity-locked vs structurally-trapped agents.',
+    'If identity fusion is primary: cardholder exit_options classification is correct (identity_locked) — suppression mechanism is internalized, explaining high extractiveness despite low material barriers. If rational preference dominates: classify as constrained or arbitrage — agent perceives genuine benefit, extraction is lower than measured.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(cardholder_identity_fusion_empirical, empirical, 'Degree of cardholder identity fusion with card-dependent consumption').
+
+omega_variable(
+    network_effect_irreversibility,
+    'Is the Visa/Mastercard duopoly lock-in reversible? Can alternative networks (blockchain, fintech, central bank digital currency) achieve liquidity parity within 10 years?',
+    'Longitudinal tracking: adoption rates for payment alternatives; merchant and cardholder switching costs as alternatives mature; regulatory mandates forcing interoperability.',
+    'If irreversible: suppression ≥ 0.68 is structural, not transient; Snare classification for merchants is terminal. If reversible (10-20 year horizon): Scaffold sunset logic applies; constraint transitions to lower-extraction regime as alternatives mature.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(network_effect_irreversibility, empirical, 'Whether Visa/Mastercard network lock-in can be overcome by alternatives').
+
+omega_variable(
+    regulatory_capture_mechanism,
+    'Do card networks exert sufficient influence over payment regulation to prevent caps/mandates from becoming binding, or do regulators have genuine enforcement capacity?',
+    'Comparative regulatory analysis: EU caps vs. US regulatory inertia; lobbying expenditure vs. enforcement action; timelines for cap implementation across jurisdictions.',
+    'If regulatory capture is complete: Scaffold sunset is illusory; suppression rises above 0.68. If regulators have real power: Scaffold sunset is real; constraint transitions to lower-extraction regime 10-15 years out.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(regulatory_capture_mechanism, empirical, 'Degree of regulatory capture by card networks preventing enforcement').
+
+omega_variable(
+    small_merchant_coalition_impossibility,
+    'Can small merchants coordinate collective action (refusal, payment strike, alternative network adoption) to shift bargaining power, or are coordination costs + free-rider incentives too high?',
+    'Historical case study: Restaurant Associations, National Retail Federation advocacy; analysis of failed merchant coalitions; tracking of merchant participation in alternative payment platforms.',
+    'If coalition is possible: small merchant exits could transition from trapped to constrained; agent power rises; Snare classification becomes Tangled Rope. If coalition is impossible: trapped classification is structural; Snare holds.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(small_merchant_coalition_impossibility, empirical, 'Whether small merchants can organize collective resistance to fees').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(visa_mastercard_interchange_extraction, 0, 14).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(vmx_tr_t0, visa_mastercard_interchange_extraction, theater_ratio, 0, 0.32).
+narrative_ontology:measurement(vmx_tr_t7, visa_mastercard_interchange_extraction, theater_ratio, 7, 0.4).
+narrative_ontology:measurement(vmx_tr_t14, visa_mastercard_interchange_extraction, theater_ratio, 14, 0.45).
+
+% Extraction over time
+narrative_ontology:measurement(vmx_be_t0, visa_mastercard_interchange_extraction, base_extractiveness, 0, 0.35).
+narrative_ontology:measurement(vmx_be_t7, visa_mastercard_interchange_extraction, base_extractiveness, 7, 0.45).
+narrative_ontology:measurement(vmx_be_t14, visa_mastercard_interchange_extraction, base_extractiveness, 14, 0.58).
+
+% Suppression requirement over time
+narrative_ontology:measurement(vmx_su_t0, visa_mastercard_interchange_extraction, suppression_requirement, 0, 0.55).
+narrative_ontology:measurement(vmx_su_t7, visa_mastercard_interchange_extraction, suppression_requirement, 7, 0.62).
+narrative_ontology:measurement(vmx_su_t14, visa_mastercard_interchange_extraction, suppression_requirement, 14, 0.68).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(visa_mastercard_interchange_extraction, enforcement_mechanism).
+narrative_ontology:affects_constraint(visa_mastercard_interchange_extraction, merchant_pricing_power).
+narrative_ontology:affects_constraint(visa_mastercard_interchange_extraction, payment_fintech_disruption).
+narrative_ontology:affects_constraint(visa_mastercard_interchange_extraction, consumer_surveillance_data_extraction).
+
+% DUAL FORMULATION NOTE:
+% The interchange fee system is upstream of merchant pricing power (merchants pass through 0.5-1.5% of the fee to consumers via price increases) and influences payment fintech disruption incentives (lower fees for alternative networks are economically viable only if they can achieve sufficient cardholder and merchant adoption). Consumer surveillance data extraction is a parallel constraint: card networks extract consumer spending data which has independent value; this is separable from interchange-fee extraction and should be modeled as its own constraint story.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(visa_mastercard_interchange_extraction, institutional, 0.08).
+constraint_indexing:directionality_override(visa_mastercard_interchange_extraction, powerless, 0.97).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

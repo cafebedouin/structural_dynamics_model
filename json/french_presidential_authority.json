@@ -4,24 +4,22 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "frpres"
+    "measurement_id_prefix": "frpres",
+    "story_uid": "0aa51d2d-b559-4b20-b9b0-9426a8836322"
   },
   "base_properties": {
     "extractiveness": 0.52,
     "suppression": 0.48,
-    "theater_ratio": 0.58,
+    "theater_ratio": 0.62,
     "claimed_type": "tangled_rope",
     "human_readable": "French Presidential Authority Under Cohabitation",
     "topic_domain": "political/constitutional",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "presidential_office",
-      "unified_government_periods"
+      "prime_minister_government"
     ],
     "victims": [
-      "parliamentary_authority",
-      "legislative_autonomy",
-      "constitutional_clarity"
+      "presidential_executive_function"
     ]
   },
   "perspectives": [
@@ -31,170 +29,226 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "The Minority Parliamentary Opposition",
-      "comment": "PERSPECTIVE 1: MINORITY PARLIAMENTARY OPPOSITION (SNARE) \u2014 Structurally trapped within a cohabitation regime where presidential veto power and legislative majority control both extractive mechanisms. The minority has no exit; constitutional amendment requires supermajority consensus. Suppression is high (institutional barriers prevent alternative constitutional arrangements). Extraction runs maximum toward this agent through both legislative paralysis and presidential override."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Parliamentary Majority (Cohabitation Condition)",
-      "comment": "PERSPECTIVE 2: PARLIAMENTARY MAJORITY DURING COHABITATION (TANGLED ROPE) \u2014 Benefits from legislative agenda-setting power (coordination function) while constrained by presidential veto on foreign policy, defense, and treaty ratification (extraction mechanism). Exit through dissolution is costly (risks new elections unfavorable to current majority). Both beneficiary and victim of the same institutional structure."
+      "label": "The President in Cohabitation",
+      "comment": "PERSPECTIVE 1: PRESIDENT DURING COHABITATION (SNARE) — Trapped by constitutional architecture that strips domestic policy authority during divided government. Exit impossible without constitutional amendment or parliamentary dissolution. Experiences maximum extraction: presidential powers in foreign policy and defense persist, but domestic authority flows to PM. Career and legacy depend on surviving cohabitation; cannot resign without losing office."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "immediate",
+      "time_horizon": "biographical",
       "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "The Presidential Office (Unified Government)",
-      "comment": "PERSPECTIVE 3: PRESIDENTIAL OFFICE UNDER UNIFIED GOVERNMENT (ROPE) \u2014 Experiences authority as pure coordination: the constitution delegates foreign policy, defense, and treaty authority to the president, and a compatible prime minister executes domestic policy without conflict. No asymmetric extraction \u2014 presidential authority aligns with parliamentary will. Effective arbitrage through appointment and dissolution powers."
+      "label": "The Prime Minister Government",
+      "comment": "PERSPECTIVE 2: PRIME MINISTER DURING COHABITATION (ROPE) — Benefits from constitutional authority over domestic policy, legislation, and budgetary control. Exit option available through parliamentary dissolution. Experiences the constraint as coordination: both president and PM need each other for legitimacy and functional government. No asymmetric extraction — both institutions are necessary."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "powerful",
-      "time_horizon": "biographical",
+      "agent_power": "organized",
+      "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Prime Minister (Cohabitation Condition)",
-      "comment": "PERSPECTIVE 4: PRIME MINISTER DURING COHABITATION (TANGLED ROPE) \u2014 Coordinates domestic policy agenda (beneficiary function) while constrained by presidential authority over foreign/defense/treaty matters and presidential veto over key appointments (extraction mechanism). Exit through resignation risks political capital loss; constraining factors prevent unilateral action. Active enforcement required through cabinet negotiations and legislative/executive maneuvering."
+      "label": "The Parliamentary Coalition",
+      "comment": "PERSPECTIVE 3: PARLIAMENTARY COALITION (TANGLED ROPE) — Faces constrained exit: parliamentary dissolution triggers new elections with uncertain outcomes. Genuine coordination function: the system requires coalition discipline to pass legislation under divided authority. But also extraction: the PM can use presidential constraint to marginalize parliament's internal opponents (the president becomes a political liability the PM can blame for blocked initiatives). Constrained exit + mixed benefits and costs."
     },
     {
-      "classification_type": "piton",
-      "agent_power": "institutional",
+      "classification_type": "rope",
+      "agent_power": "moderate",
       "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Opposition (Outside Government)",
+      "comment": "PERSPECTIVE 4: OPPOSITION PARTIES (ROPE) — Mobile exit: can campaign for next election, build alternative coalitions, negotiate constitutional reforms. Sees cohabitation as pure coordination mechanism that regularized alternation in power. The constraint ensures neither the presidency nor a single-party parliament dominates indefinitely. No extraction from opposition perspective — they experience the system as structural stability mechanism."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "The Constitutional Fifth Republic Framework",
-      "comment": "PERSPECTIVE 5: CONSTITUTIONAL FRAMEWORK (PITON) \u2014 The Fifth Republic constitution (1958) was designed for a unified government where president and parliament align. Cohabitation (1986-1988, 1993-1995, 1997-2002) revealed the framework to be partially dysfunctional under divided government \u2014 the theatrical performance of constitutional roles (ceremonial presidency in cohabitation) obscures the lack of clear authority delegation. Theater ratio is high because both president and prime minister perform executive authority without clear separation of powers. The framework persists through institutional inertia despite functional degradation."
+      "label": "Constitutional Reform Pathway",
+      "comment": "PERSPECTIVE 5: CONSTITUTIONAL REFORM PATHWAY (SCAFFOLD) — The Fifth Republic's dual executive is temporary by constitutional logic: electoral cycles can align the presidency and parliament, eliminating cohabitation structurally. Sunset mechanism: if parliamentary terms align with presidential terms (as reform advocates propose), the oscillation ends. Theater low because the mechanism is transparent (electoral cycles) and reversible (by future constitutional amendment). Beneficiary: institutional architects who see divided government as a solvable coordination problem."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer (Comparative Constitutional Design)",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a comparative constitutional perspective, French presidential authority embeds coordination (unified state direction in foreign policy) alongside extraction (suppression of legislative autonomy in treaty/defense domains). The system shows genuine coordination function (preventing parliamentary fragmentation on security matters) AND asymmetric extraction (executive dominance over legislative coequals). This classifies as tangled rope under analytical scrutiny."
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / SEMI-PRESIDENTIALISM VIEW (MOUNTAIN) — From a civilizational perspective, cohabitation is an inherent feature of semi-presidential systems where both president and parliament claim popular sovereignty. The constraint is a structural inevitability: any system combining a separately elected president with a separately elected legislature faces periodic misalignment. Exit is impossible without abandoning semi-presidentialism entirely. This perspective risks naturalizing a contingent constitutional choice (Fifth Republic design) as a universal law of hybrid systems."
     }
   ],
   "omegas": [
     {
-      "id": "cohabitation_equilibrium_stability",
-      "question": "Is cohabitation an unstable equilibrium that will eventually collapse toward a unified-government norm, or a structurally sustainable dual-executive system?",
-      "resolution_mechanism": "Long-term empirical tracking: (1) frequency of cohabitation recurrence post-2002 (two-term limit eliminated in 2007, changing equilibrium conditions); (2) constitutional amendment proposals and success rates; (3) strategic voting behavior to avoid divided government",
-      "impact": "If unstable/regressing: presidential authority constraint is temporary (scaffold or piton with rising sunset probability). If sustainable: tangled rope classification is permanent structural feature of French politics.",
+      "id": "cohabitation_causation_mechanism",
+      "question": "Is presidential authority loss during cohabitation caused by constitutional text, institutional convention, or political power dynamics?",
+      "resolution_mechanism": "Comparative analysis: cohabitation in Portugal, Taiwan, and Russia shows varied outcomes despite similar constitutional texts. Trace specific incidents where presidents attempted to exercise suppressed authority and observe whether constitutional barriers or political opposition stopped them.",
+      "impact": "If constitutional: mountain classification more defensible. If conventional: tangled_rope classification correct — the constraint is maintained by enforcement choice, not structural law. If political: snare classification from PM perspective is justified; extraction is active, not passive.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Root cause of presidential authority loss during cohabitation"
+    },
+    {
+      "id": "pm_extractive_capacity_during_unified_government",
+      "question": "When parliament and presidency align, does the PM's authority collapse entirely, or do PM and president maintain extractive dynamics under unified government framing?",
+      "resolution_mechanism": "Institutional history analysis: Chirac-Raffarin period (unified), Macron-Philippe period (unified) vs. Mitterrand-Chirac cohabitations. Track: legislative initiative authorship, budget control, treaty negotiation leadership. Measure whether PM discretion persists under unified government or whether president achieves true delegation.",
+      "impact": "If PM authority collapses: constraint is state-dependent (Rope during unified, Snare during cohabitation). If PM retains extractive capacity: constraint is tangled_rope regardless of alignment — extraction persists, only visibility changes.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether PM extraction is state-dependent or persistent"
+    },
+    {
+      "id": "cohabitation_terminal_stability",
+      "question": "Is cohabitation a stable equilibrium that will persist indefinitely, a temporary phase being eliminated by electoral reform, or an oscillating attractor that returns regardless of reform attempts?",
+      "resolution_mechanism": "Historical trajectory analysis: electoral reforms (2000 presidential term alignment initiative), constitutional amendment proposals (reducing presidential term to 5 years), demographic/coalition stability analysis showing whether future elections will lock parliament and presidency together.",
+      "impact": "If temporary: scaffold classification confirmed — sunset is structural. If persistent: piton risk increases — enforcement effort rises as actors normalize the constraint. If oscillating: mountain risk increases — the system may be inherently unable to eliminate misalignment.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "Whether cohabitation is equilibrium or transient state"
+      "description": "Long-term trajectory of cohabitation as constitutional feature"
     },
     {
-      "id": "treaty_veto_vs_legislative_authority",
-      "question": "Does presidential treaty authority represent genuine coordination (preventing parliament from fragmenting security matters) or pure executive extraction (suppressing legislative voice on binding commitments)?",
-      "resolution_mechanism": "Comparative analysis: (1) instances where parliament opposed treaties president signed; (2) ratification voting patterns (unanimous vs contested); (3) post-treaty implementation parliamentary amendments or non-compliance; (4) cross-national comparison with other hybrid systems (German Bundestag, Italian parliament)",
-      "impact": "If genuine coordination: beneficiary declaration should include 'state_security_coherence'; extraction component drops. If pure extraction: victims list should emphasize 'parliamentary_constitutional_authority'; extraction component rises.",
+      "id": "foreign_policy_true_presidential_autonomy",
+      "question": "During cohabitation, does the president retain genuine autonomy in foreign policy and defense, or does the PM extract veto power through informal political channels?",
+      "resolution_mechanism": "Case analysis: specific treaties, defense spending decisions, NATO/EU votes, intelligence agency oversight during cohabitations (Mitterrand-Chirac, Chirac-Jospin). Track whether PM formally approved or blocked presidential initiatives; measure scope of informal PM influence on presidential decisions.",
+      "impact": "If true autonomy: foreign policy extraction is minimal (ε for that domain ≈ 0.15). If PM veto common: foreign policy extraction is high (ε ≈ 0.55), making cohabitation snare from broader perspective.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Nature of presidential treaty authority (coordination vs extraction)"
+      "description": "Whether presidential foreign policy autonomy is genuine or formally permitted but politically constrained"
     },
     {
-      "id": "dissolution_power_symmetry",
-      "question": "Does the president's dissolution power (Article 12) function as mutual deterrent (symmetric constraint) or as a one-way extraction tool favoring the sitting president?",
-      "resolution_mechanism": "Historical analysis: (1) dissolution outcomes vs expectations (did dissolved parliament return different majority or same?); (2) threat credibility during cohabitation (when was dissolution threat used, with what effect?); (3) whether dissolution creates mutual vulnerability or asymmetric advantage",
-      "impact": "If symmetric deterrent: suppression value drops (both parties have exit/credible threat). If asymmetric: suppression value rises (parliament's constraint is structural, president's is tactical).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Dissolution power as mutual deterrent vs one-way tool"
-    },
-    {
-      "id": "domestic_policy_extraction_by_president",
-      "question": "To what degree does the presidential office extract concessions on domestic policy despite explicit prime ministerial authority through informal influence, media power, or agenda-setting?",
-      "resolution_mechanism": "Longitudinal analysis of domestic policy disputes during cohabitation (1986-88, 1993-95, 1997-2002): (1) rate of government policy changes following presidential statements; (2) media framing attribution (does parliament get credit or president?); (3) Prime Minister public statements about constraint vs autonomy",
-      "impact": "If significant informal extraction: base_extractiveness rises (0.52 \u2192 0.58+). If minimal: domestic policy is genuine PM autonomy zone, beneficiaries list should exclude PM from extraction victims.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Degree of informal presidential extraction on domestic policy"
+      "id": "false_summit_risk_semi_presidentialism",
+      "question": "Is the constraint a true natural law of semi-presidential systems (mountain), or a false summit naturalizing a contingent Fifth Republic design that could be eliminated by constitutional choice?",
+      "resolution_mechanism": "Comparative constitutional analysis: France vs Portugal (cohabitation rare, weaker presidency), vs Romania (cohabitation common, strong presidency), vs hybrid systems (Germany, Italy — no separately elected president). Identify whether the constraint is inherent to the form or specific to French constitutional implementation.",
+      "impact": "If false summit: the 'naturalness' framing is a cover story; the constraint is tangled_rope or snare, not mountain. Political actors who frame cohabitation as inevitable law deflect responsibility for constitutional choices.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether cohabitation is inherent to semi-presidentialism or specific to Fifth Republic design"
     }
   ],
   "measurements": [
     {
-      "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.35,
-      "id_override": "frpres_extract_1958"
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 1,
-      "value": 0.38,
-      "id_override": "frpres_extract_1980"
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 2,
-      "value": 0.58,
-      "id_override": "frpres_extract_1986_cohabitation_onset"
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 3,
-      "value": 0.52,
-      "id_override": "frpres_extract_2000_post_cohabitation"
-    },
-    {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.25,
-      "id_override": "frpres_theater_1958"
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
-      "time_point": 2,
-      "value": 0.7,
-      "id_override": "frpres_theater_1986_cohabitation_onset"
+      "time_point": 5,
+      "value": 0.55
     },
     {
       "metric": "theater_ratio",
-      "time_point": 3,
-      "value": 0.58,
-      "id_override": "frpres_theater_2000_post_cohabitation"
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.46
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.44
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.48
     }
   ],
   "interval": {
-    "start": 1958,
-    "end": 2025
+    "start": 0,
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "French presidential authority under the Fifth Republic exhibits a structural constraint that oscillates between unified and divided government regimes. During periods of unified government (president and parliament from same coalition), the presidential office experiences its authority as pure coordination: constitutional delegation of foreign policy, defense, and treaty authority to the president aligns with parliamentary will, creating no extraction asymmetry. During cohabitation (1986-1988, 1993-1995, 1997-2002), the same constitutional framework produces asymmetric extraction: the president retains veto power over treaties and defense, constraining the parliamentary majority's agenda-setting authority, while the prime minister controls domestic policy, constraining the president's domestic reach. This creates a tangled rope structure: genuine coordination function (preventing parliamentary fragmentation on security matters and maintaining state coherence in foreign policy) alongside extraction (suppression of legislative autonomy in high-stakes domains). The constraint's theater ratio increased sharply during cohabitation (1986) as both offices performed executive authority without clear power separation, creating elaborate ceremonial roles to manage jurisdictional ambiguity. Post-cohabitation periods show theater decreasing as unified government clarifies roles, but extractiveness remains above pre-1986 baseline because actors learned tactical use of constitutional ambiguities.",
+    "narrative_context": "The French Fifth Republic establishes a dual executive combining a separately elected president with a separately elected parliament whose leader (prime minister) controls domestic legislation. During periods of unified government (president and parliamentary majority aligned), presidential authority operates as pure coordination — constitutional delegation to the president of foreign policy, defense, and treaty-making authority aligns with parliamentary will, creating no extraction asymmetry. During cohabitation (president and parliament from opposing coalitions), this same authority structure becomes a tangled constraint: the president retains ceremonial and constitutional foreign policy roles but experiences systematic extraction of effective domestic policy authority by the prime minister and parliament. The constraint exhibits all six classification types from different perspectives, with the key dynamic being oscillation between state regimes. Theater ratio (0.62) reflects that cohabitation requires elaborate constitutional theater: both president and PM must perform legitimacy through formal protocols while both retain genuine power in specific domains, creating substantial performative overhead. Suppression (0.48) indicates moderate barriers to exit: the president cannot resign without losing office, but can dissolve parliament if it becomes politically untenable; the PM cannot ignore the president but can constrain them through parliamentary discipline.",
     "key_agents": [
-      "The Presidential Office: Primary beneficiary during unified government (institutional/arbitrage) \u2014 gains unilateral authority over foreign policy, defense, treaties. Constrained beneficiary during cohabitation (powerful/constrained).",
-      "The Parliamentary Majority: Primary beneficiary under domestic policy (institutional/arbitrage) \u2014 controls legislation and government formation. Victim during cohabitation (moderate/constrained) \u2014 constrained on foreign policy by presidential veto.",
-      "The Prime Minister: Institutional bridge actor (powerful/constrained) \u2014 gains domestic authority in cohabitation but loses foreign policy control. Performs coordination function but constrained by presidential veto.",
-      "The Minority Parliamentary Opposition: Trapped victim (powerless/trapped) \u2014 no legislative leverage in any regime; cannot exit constitutional framework; constrained by both majority and president.",
-      "The Constitutional Fifth Republic Framework: Institutional inertia (institutional/arbitrage) \u2014 persists despite functional degradation during cohabitation. Theater ratio masks jurisdictional ambiguities.",
-      "The Analytical Observer: Sees tangled rope structure globally (analytical/analytical) \u2014 recognizes both coordination (security coherence) and extraction (legislative suppression) functions simultaneously."
+      "The President: Primary victim during cohabitation (powerless/trapped) — constitutional authority stripped through political means; no exit except constitutional amendment or parliamentary dissolution",
+      "The Prime Minister and Government: Primary beneficiary during cohabitation (institutional/arbitrage) — controls domestic policy, legislation, budgetary authority; can trigger dissolution if threatened",
+      "Parliamentary Coalition: Secondary actor (organized/constrained) — gains legislative control but faces dissolution risk; experiences constraint as mixed coordination-extraction",
+      "Opposition Parties: External observer (moderate/mobile) — experience cohabitation as stable coordination mechanism that ensures regular alternation",
+      "Constitutional Architects and Reform Advocates: Institutional (institutional/arbitrage) — view cohabitation as solvable through electoral alignment (sunset clause logic)",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent constitutional choice as inherent to semi-presidentialism"
     ],
-    "logic_rationale": "Base extractiveness (0.52): Moderate-high. Presidential authority extracts from the legislative domain through treaty and defense veto power, suppressing parliamentary autonomy in high-stakes decisions. However, the extraction is not maximal because the prime minister retains genuine domestic policy authority, and both offices coordinate on shared objectives during periods of compatible majority. The value reflects that extraction is domain-specific and oscillates with government composition. Suppression (0.48): Moderate. Constitutional amendment requires supermajority consensus (high barrier), but cohabitation remains possible and constitutional change is not physically impossible. Parliament cannot unilaterally restructure authority, but has fought for delineation (Laws clarifying cohabitation protocols). Theater ratio (0.58): Moderate-high. During unified government, theater is low (clear role separation). During cohabitation, both offices perform executive authority without explicit constitutional delineation, creating ceremonial performances ('presidential arbitrage,' 'prime ministerial governance'). Post-cohabitation theater remains elevated due to accumulated institutional learning about how to work ambiguities.",
-    "perspectival_gap": "The presidential office sees its authority as coordination (Rope during unified government, constrained Rope during cohabitation) because it solves the problem of preventing parliamentary fragmentation on security matters. The parliamentary majority sees authority as shared (Rope/Tangled Rope) when aligned with president, but constrained (Tangled Rope/Snare) when in opposition. The minority opposition sees pure extraction (Snare) \u2014 no legislative voice, no exit option, suppressed by both majority and president. The constitutional framework (Piton) sees itself degraded \u2014 the theatrical performance of cohabitation revealed the framework's functional gaps. The analytical observer sees tangled rope: genuine coordination function (preventing parliamentary fracture on security) plus asymmetric extraction (suppressing legislative voice on binding commitments).",
-    "directionality_logic": "The presidential office benefits from constitutional delegation of foreign/defense/treaty authority, giving it arbitrage exit options (can act unilaterally in those domains). Directionality points beneficiary: low d, low \u03c7. Parliamentary majority benefits from domestic authority but bears extraction through presidential veto on treaties and defense; during cohabitation, constrained exit (can dissolve parliament but at high cost) produces moderate d, moderate \u03c7. Prime minister during cohabitation benefits from domestic agenda-setting (beneficiary on domestic coordination) while constrained by presidential veto on foreign policy (victim on foreign extraction) \u2014 balanced at d \u2248 0.50. Opposition minority faces trapped exit (no legislative options, cannot exit constitutional frame) as victim, producing high d, high \u03c7. The constraint's directionality is not fixed across the political cycle \u2014 it shifts with government composition. The classification (Tangled Rope) holds because the underlying structure contains both coordination and extraction components regardless of which party holds which office."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The president experiences real loss of domestic policy authority during cohabitation, but extraction is not total — foreign policy, defense, and treaty authority persist as genuine presidential prerogatives. The 0.52 value reflects that domestic authority loss is substantial (primary victim perspective) but not absolute (foreign policy remains). Suppression (0.48): Moderate. The president faces significant barriers to exit — resignation means loss of office, parliamentary dissolution is nuclear option and uncertain. But suppression is not maximal: foreign policy authority persists, and dissolution remains available. Theater ratio (0.62): Moderate-high. The constraint requires constant constitutional theater: formal protocols distinguish presidential from PM prerogatives (foreign policy vs. domestic) while both actors must perform legitimacy. The theater increases during tense cohabitations (Mitterrand-Chirac period saw higher theater) as both actors perform constitutional roles to avoid direct conflict. The measurements show increasing theater and extractiveness over time, reflecting accumulation of cohabitation as an established pattern rather than emergency — as the constraint normalizes, its extractive character becomes more visible.",
+    "directionality_logic": "The primary beneficiary is the prime minister and parliamentary government during cohabitation: they gain control of domestic legislation, budgetary authority, and civil service direction. Directionality for PM: d ≈ 0.15 (beneficiary with arbitrage exit). The primary victim is the president: they experience authority loss in the domain they expected to control. Directionality for president: d ≈ 0.90 (victim with trapped exit). The derived chi for PM would be low (beneficiary + arbitrage → negative effective extraction); the derived chi for president would be high (victim + trapped → maximum effective extraction). The parliamentary coalition has mixed directionality: they benefit from domestic control but face suppression from the trapped president's potential use of constitutional powers (treaty vetoes, emergency powers). The opposition has neutral directionality: they experience the constraint as structural stability, not extraction — their exit option (electoral cycle) is mobile, and they benefit from the system's regularized alternation norm.",
+    "perspectival_gap": "This constraint demonstrates a state-dependent classification dynamic. During unified government (president and parliament aligned), the same constitutional structure would classify as Rope from most perspectives — both actors have incentives to coordinate because their political fates are linked. During cohabitation, the identical constitutional text produces Snare from the president's perspective (trapped, powerless, maximum extraction) and Rope from the PM's perspective (arbitrage exit, genuine coordination). The perspectival gap reveals that the constraint's type oscillates with political alignment, not with constitutional text change. The parliamentary coalition sees tangled rope because they face constrained exit (dissolution risk) but also benefit from domestic control. The opposition sees rope because cohabitation serves their long-term interest in power alternation. The analytical observer risks false summit by treating the oscillation itself as a natural law of semi-presidentialism, rather than a contingent outcome of the Fifth Republic's specific constitutional design.",
+    "mandatrophy_analysis": "MANDATROPHY SIGNATURE: This constraint exhibits mandatrophy because the same constitutional structure produces contradictory classifications depending on political alignment state. During unified government, the constraint appears as Rope (coordination with no asymmetric extraction). During cohabitation, it appears as Tangled Rope or Snare (extraction with formal coordination). The resolution is not 'which classification is correct?' but 'the constraint is state-dependent, and the oscillation between states is itself the structural feature.' The system does not evolve toward equilibrium; it cycles between unified and divided government regimes on timescales determined by electoral cycles and coalition stability. Mandatrophy is resolved by recognizing that the presheaf over observation sites includes both regime states, and the system's behavior cannot be reduced to a single type. The theater ratio and extractiveness measurements capture the regime oscillation: as cohabitation normalizes and becomes politically routine rather than constitutional crisis, the theater ratio and extractiveness both rise. This rising trajectory reflects not that the constraint is becoming more extractive in any absolute sense, but that its extractive character becomes more visible and formalized as actors accept cohabitation as permanent institutional feature."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "french_parliament_legislative_supremacy",
-      "treaty_ratification_authority",
-      "government_dissolution_power"
+      "french_parliamentary_legislative_authority",
+      "french_treaty_ratification_authority"
     ],
-    "dual_formulation_note": "French presidential authority decomposes into three linked constraints: (1) treaty_ratification_authority (\u03b5 \u2248 0.45) \u2014 presidential power to sign and ratify treaties; (2) government_dissolution_power (\u03b5 \u2248 0.40) \u2014 presidential power to dissolve parliament; (3) cohabitation_framework (\u03b5 \u2248 0.52) \u2014 the institutional architecture that enables dual-executive dynamics when government and parliament diverge. Each has different empirical status and temporal trajectories. This story models the unified constraint (presidential authority) as a tangled rope whose apparent type depends on government composition. The network links indicate structural dependencies: treaty authority depends on maintaining executive voice (dissolution); dissolution power depends on treaty authority's legitimacy; cohabitation emerges when both are exercised simultaneously against legislative majority."
+    "dual_formulation_note": "French presidential authority under cohabitation is decomposable into separate constraints: (1) domestic legislative authority (primarily controlled by PM during cohabitation), (2) foreign policy and treaty authority (retained by president), (3) emergency powers (retained by president under Article 16 but politically constrained during cohabitation). This story models the overall oscillation dynamic. Upstream constraints include specific domain-authority divisions (treaty ratification, legislative initiative) that have their own ε values. Downstream constraints include political party coalition dynamics that determine whether cohabitation occurs."
   },
-  "directionality_overrides": [
-    {
-      "power_atom": "powerful",
-      "d_value": 0.55
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "medium",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "french_electoral_misalignment_risk"
+    ]
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "french_presidential_unified_government",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "semi_presidentialism_inherent_cohabitation",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "dual_election_creates_cohabitation_risk",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "constitutional_authority_divided_by_domain",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "political_power_determines_effective_authority",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "constitutional_dual_executive",
+    "drift_state": {
+      "moment": "contemporary_normalized_cohabitation",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
     }
-  ]
+  }
 }

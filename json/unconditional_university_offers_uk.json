@@ -4,24 +4,25 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "uuo"
+    "measurement_id_prefix": "uncond",
+    "story_uid": "05b1df28-4458-4a42-b3fe-f13d7664f9c2"
   },
   "base_properties": {
-    "extractiveness": 0.52,
-    "suppression": 0.58,
-    "theater_ratio": 0.64,
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
     "claimed_type": "tangled_rope",
-    "human_readable": "Use of Unconditional Offers in UK University Admissions",
+    "human_readable": "Unconditional Offers in UK University Admissions",
     "topic_domain": "economic/social",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "research_intensive_universities",
-      "elite_institution_prestige"
+      "research_intensive_institutions",
+      "university_management"
     ],
     "victims": [
-      "state_school_applicants",
       "lower_income_students",
-      "admissions_system_integrity"
+      "state_school_students",
+      "admissions_integrity"
     ]
   },
   "perspectives": [
@@ -31,8 +32,8 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "The State School Applicant",
-      "comment": "PERSPECTIVE 1: STATE SCHOOL APPLICANT (SNARE) \u2014 Students from schools without institutional connections face maximum extraction. Unconditional offers target these students aggressively; they are unable to resist, lack information about the true selectivity of institutions, and bear the cost of low-quality degree outcomes. No exit once enrolled."
+      "label": "The Lower-Income State School Student",
+      "comment": "PERSPECTIVE 1: LOWER-INCOME STATE SCHOOL STUDENT (SNARE) — Faces maximum extraction with minimal exit options. The unconditional offer appears as liberation (no achievement pressure) but functions as enrollment lock: student accepts early, loses leverage to negotiate, may enroll at institution misaligned with actual interests. Cannot defer, cannot shop around post-offer, cannot renegotiate. Suppression operates through limited information (guidance counselors unfamiliar with higher education market), geographic isolation from elite university alumni networks, and economic desperation (needs scholarship/accommodation certainty). Zero degrees of freedom once offer accepted."
     },
     {
       "classification_type": "tangled_rope",
@@ -40,8 +41,8 @@
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Lower-Income Student",
-      "comment": "PERSPECTIVE 2: LOWER-INCOME STUDENT (TANGLED ROPE) \u2014 Benefits from some access to higher education and financial support infrastructure. Constrained by limited geographic mobility and information access. Experiences extraction through enrollment in lower-tier institutions via unconditional offers, but also coordinates via league tables and institutional reputation signals. Mixed benefits and costs."
+      "label": "The Student from Well-Resourced Background",
+      "comment": "PERSPECTIVE 2: WELL-RESOURCED STUDENT (TANGLED ROPE) — Has genuine coordination benefit (unconditional offer removes exam stress, enables certainty for family planning) alongside extraction. Can exit via conditional offer from competing institution, parental guidance, or explicit rejection of unconditional offer. But faces reputational cost of rejecting offer and social pressure from peer institutions. Moderate extraction with significant agency — extracted from but not trapped."
     },
     {
       "classification_type": "rope",
@@ -49,8 +50,8 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "The Research-Intensive University",
-      "comment": "PERSPECTIVE 3: RESEARCH-INTENSIVE UNIVERSITY (ROPE) \u2014 Primary beneficiary. Uses unconditional offers to secure student recruitment pipelines and guarantee enrollment numbers. Experiences the constraint as coordination: early commitment secures revenue, reduces recruitment uncertainty. Net beneficiary with full exit options."
+      "label": "Research-Intensive University Management",
+      "comment": "PERSPECTIVE 3: RESEARCH-INTENSIVE UNIVERSITY MANAGEMENT (ROPE) — Primary beneficiary. Secures enrollment pipeline early, reduces recruitment uncertainty, targets specific student demographics, locks in tuition revenue. Experiences unconditional offer as pure coordination: solving the legitimate problem of enrollment matching. Can exit via conditional offer strategy but benefits from unconditional approach in competitive market. Zero extraction experienced from their vantage — the mechanism exists to serve their interests."
     },
     {
       "classification_type": "scaffold",
@@ -58,8 +59,17 @@
       "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Teaching-Focused University",
-      "comment": "PERSPECTIVE 4: TEACHING-FOCUSED UNIVERSITY (SCAFFOLD) \u2014 Uses unconditional offers strategically but faces sunset pressure. Regulatory scrutiny (Office of Students TEF metrics, teaching quality standards) increasingly penalizes poor outcomes. Teaching-quality focus requires genuine student-institution fit, making unconditional offers less sustainable. Sees constraint as temporary, with exit path through market repositioning."
+      "label": "Student Advocacy Organizations",
+      "comment": "PERSPECTIVE 4: STUDENT ADVOCACY ORGANIZATIONS (SCAFFOLD) — See unconditional offers as a temporary market distortion with a sunset clause: regulatory pressure (Office of Fair Admissions inquiry, university transparency mandates, accreditation bodies) is building alternative enrollment pathways (contextual admissions, foundation years, access programs) that bypass the unconditional offer mechanism. Low effective extraction because organized agents have policy leverage and see an exit timeline. Sunset estimated at 5-10 years as regulatory framework matures."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "State School Leadership and Guidance Counselors",
+      "comment": "PERSPECTIVE 5: STATE SCHOOL LEADERSHIP (TANGLED ROPE) — Manages genuine coordination problem (matching students to suitable institutions) alongside extraction. Receives funding and partnership relationships from universities, increasing institutional prestige. But also bears pressure to advise students accurately, faces reputational damage from poor placement outcomes, and experiences information asymmetry about unconditional offer terms. Can exit by refusing to recommend unconditional offers but faces resource and partnership consequences. Mixed experience: genuine function (guidance) with embedded asymmetry (institutional incentives favor enrollment over optimal fit)."
     },
     {
       "classification_type": "piton",
@@ -67,63 +77,86 @@
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "The Admissions System",
-      "comment": "PERSPECTIVE 5: ADMISSIONS SYSTEM (PITON) \u2014 The prior A-level conditional offer system performed a real coordination function: students knew their admission depended on exam performance; universities knew their intake quality. Unconditional offers degraded this function \u2014 the signal has atrophied, replaced by theater: universities claim to identify 'high-potential' students but lack reliable criteria. The system persists through institutional inertia despite low functionality."
+      "label": "Traditional Conditional Offer Model",
+      "comment": "PERSPECTIVE 6: TRADITIONAL CONDITIONAL OFFER MODEL (PITON) — The prior system (conditional on exam results) persists in institutional memory and formal procedures, but its functional verification role has atrophied. Universities no longer use conditional offers as serious gates on enrollment — they rarely rescind for moderate grade shortfalls. The conditional offer is now largely performative: it maintains the fiction that entry requirements matter while institutions secure enrollment early via unconditional mechanisms. Theater ratio high because the conditional system still appears in regulations and communications but lacks enforcement."
     },
     {
-      "classification_type": "tangled_rope",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer / Regulatory Perspective",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / REGULATORY PERSPECTIVE (TANGLED ROPE) \u2014 The Office of Students and policy analysts see genuine coordination failure requiring intervention. Unconditional offers solve universities' enrollment security problem but create information asymmetry and misalignment of incentives. The emerging regulatory frameworks (student outcome metrics, teaching quality metrics) attempt to restore functionality through enforcement. This perspective combines both coordination gap analysis and extractive structure identification."
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Natural Law View (Market Competition)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From civilizational distance, the unconditional offer appears as an immutable property of competitive higher education markets: when caps are removed and institutions compete for students, the pressure to lock in enrollment early is inherent and inescapable. This framing naturalizes what is actually a contingent institutional and regulatory choice. The engine will identify this as a false summit, revealing that 'market forces' is a convenient naturalization of policies (cap removal, financial dependence on enrollment numbers, lack of price regulation) that are themselves changeable."
     }
   ],
   "omegas": [
     {
-      "id": "conditional_vs_unconditional_outcome_gap",
-      "question": "How much of the poor degree outcomes for unconditional offer recipients is attributable to the offer itself versus underlying student capability or institutional quality?",
-      "resolution_mechanism": "Longitudinal matching analysis: compare outcomes of students who received unconditional vs conditional offers from the same institution, controlling for entry grades and demographic factors",
-      "impact": "If outcome gap largely attributable to offer: extraction mechanism confirmed (adverse selection). If outcome gap reflects institutional quality: extraction is less severe, more structural (enrollment strategy).",
+      "id": "information_asymmetry_quantification",
+      "question": "What proportion of lower-income students making unconditional offer decisions have equivalent information access to well-resourced peers about institution quality, peer effects, and long-term career impact?",
+      "resolution_mechanism": "Survey of student knowledge: comparative understanding of institution rankings, employment outcomes by institution, scholarship terms, residential costs. Correlation analysis between parental education/income and decision-relevant knowledge.",
+      "impact": "If information asymmetry is severe (>70% knowledge gap): suppression gate rises, classification shifts toward snare. If asymmetry is moderate: tangled_rope classification holds. If asymmetry is minimal: classification shifts to rope (pure coordination).",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Attribution of outcome disparities to unconditional offers versus institutional factors"
+      "description": "Degree of information asymmetry between low-income and well-resourced students in unconditional offer decisions"
     },
     {
-      "id": "information_asymmetry_measurability",
-      "question": "Can students from disadvantaged backgrounds actually identify low-quality offers, or is the information asymmetry functionally irreducible?",
-      "resolution_mechanism": "Survey research on applicant decision-making; analysis of league table awareness and comprehension among state school versus independent school applicants; behavioral economics testing of offer evaluation",
-      "impact": "If students can identify poor offers: market self-correction possible, constraint is extractive but not immutable. If asymmetry is irreducible: suppression value may be higher, snare classification stronger.",
-      "confidence": "medium",
+      "id": "student_outcome_divergence",
+      "question": "Do students enrolling via unconditional offers (lower-income, state school) experience systematically different educational and career outcomes than conditional-offer cohorts?",
+      "resolution_mechanism": "Longitudinal tracking: degree completion rates, academic performance, employment outcomes, salary differential by offer type and student background. Decompose by institution quality and subject area.",
+      "impact": "If outcomes are equivalent: unconditional offer functions as pure coordination (Rope). If outcomes are worse: extractive mechanism is confirmed (Snare/Tangled Rope). If outcomes are better: coordination function is strengthened.",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether information asymmetries can be overcome or are functionally irreducible"
+      "description": "Whether unconditional offer recipients experience systematically different outcomes"
     },
     {
-      "id": "regulatory_effectiveness_ceiling",
-      "question": "Can regulatory intervention (Office of Students, TEF, OfS metrics) actually eliminate unconditional offer extraction, or will universities find institutional workarounds?",
-      "resolution_mechanism": "Tracking of unconditional offer volumes post-OfS regulation; analysis of alternative enrollment-securing mechanisms (foundation years, partnership pathways, clearing strategies); interviews with university admissions staff",
-      "impact": "If regulation effective: constraint is scaffold (sunset real). If universities circumvent: constraint may degrade to piton (regulatory theater). If circumvention reaches parity with original extraction: snare classification strengthens.",
+      "id": "alternative_enrollment_mechanisms",
+      "question": "Do contextual admissions, foundation years, and access program pathways provide genuine alternatives to unconditional offers, or do they serve different student demographics (not substitutes)?",
+      "resolution_mechanism": "Comparative analysis: enrollment volumes and student demographics via contextual vs unconditional pathways. Institutional adoption rate of alternatives. Cost-benefit analysis for universities (revenue, reputation, operational complexity).",
+      "impact": "If alternatives are genuine substitutes: scaffold sunset is real, and regulatory pressure will shift universities away from unconditional offers. If alternatives serve distinct populations: unconditional offers face no substitution pressure, and extraction mechanism persists.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether regulatory frameworks can eliminate or will merely redirect unconditional offer extraction"
+      "description": "Whether alternative enrollment mechanisms provide genuine substitutes for unconditional offers"
+    },
+    {
+      "id": "institutional_vs_student_benefit_attribution",
+      "question": "When universities claim unconditional offers benefit students (reduce exam stress, increase access), how much of that benefit is genuine coordination vs. rhetorical cover for enrollment capture?",
+      "resolution_mechanism": "Decompose benefits into measurable components: stress reduction (survey student wellbeing pre/post-offer), access improvement (enrollment rates from previously underrepresented backgrounds), information quality (offer clarity and terms transparency). Compare university messaging against actual terms and outcomes.",
+      "impact": "If benefits are substantial and genuine: tangled_rope classification confirmed with significant coordination function. If benefits are minimal: classification shifts to snare (extraction with minimal coordination cover).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Genuine vs. rhetorical extent of student benefits from unconditional offers"
+    },
+    {
+      "id": "regulatory_capture_mechanism",
+      "question": "To what extent do university interests in enrollment certainty shape regulatory frameworks (OfA guidance, QAA standards, accreditation criteria) that govern admissions?",
+      "resolution_mechanism": "Historical analysis of regulatory decisions: timing relative to unconditional offer growth, stakeholder input documentation, comparative analysis with international regulatory approaches (e.g., German numerus clausus, US regulatory constraints on binding admissions).",
+      "impact": "If capture is substantial: the false summit (mountain view) is accurate — regulatory environment makes unconditional offers inevitable given current cap removal. If capture is minimal: regulatory alternatives exist, and classification shifts toward snare (institutions choose extraction mechanism despite regulatory space for alternatives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of institutional capture in admissions regulation"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.28
+      "value": 0.18
     },
     {
       "metric": "base_extractiveness",
       "time_point": 3,
-      "value": 0.42
+      "value": 0.38
     },
     {
       "metric": "base_extractiveness",
       "time_point": 6,
       "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
@@ -133,48 +166,68 @@
     {
       "metric": "theater_ratio",
       "time_point": 3,
-      "value": 0.5
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
       "time_point": 6,
-      "value": 0.64
+      "value": 0.65
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 9,
+      "value": 0.62
     }
   ],
   "interval": {
     "start": 0,
-    "end": 6
+    "end": 9
   },
   "commentary": {
-    "narrative_context": "Following the 2015 removal of student number caps, UK universities entered a more competitive recruitment market. Research-intensive institutions began issuing unconditional offers to secure enrollment pipelines, particularly targeting students from state schools, lower-income backgrounds, and geographic regions without strong university presence. This constraint exemplifies the tangled rope pattern: universities solved a real coordination problem (enrollment uncertainty in a liberalized market) while simultaneously creating extractive mechanisms that harm disadvantaged students through information asymmetry and misaligned incentives. The unconditional offer functionally replaced the A-level conditional system, which had performed coordination work by signaling mutual expectations. The new system generates benefits (universities gain enrollment security; some lower-income students gain university access) while imposing costs (many enrolled students experience poor outcomes; the admissions signal degrades; institutional theater replaces genuine quality signaling).",
+    "narrative_context": "Following the 2015 removal of student number caps, UK universities entered a competitive recruitment market. Research-intensive institutions began issuing unconditional offers to secure enrollment pipelines early, targeting students from state schools, lower-income backgrounds, and geographic regions without strong university presence. The constraint exhibits high perspectival variation: universities experience it as coordination (solving legitimate enrollment matching), lower-income students experience it as extraction (early lock-in with information disadvantage), student advocacy organizations see it as a temporary market distortion with regulatory solutions, and from civilizational distance it appears as an immutable feature of competitive higher education. The measurement trajectory shows acceleration of both extractiveness and theater ratio over the post-cap period (2015-2024), with extractiveness nearly tripling from 0.18 to 0.58 as unconditional offers shifted from occasional practice to dominant enrollment strategy. Suppression (information asymmetry, geographic isolation, financial desperation) increased from 0.42 to 0.62 as competitive pressure intensified. Theater ratio (the performative conditional offer system persisting without enforcement) rose from 0.35 to 0.68, indicating the gap between formal admissions criteria and actual enrollment mechanics widened substantially.",
     "key_agents": [
-      "Research-Intensive Universities: Primary beneficiary (institutional/arbitrage) \u2014 secure enrollment numbers and revenue in competitive market",
-      "State School Applicants: Primary victim (powerless/trapped) \u2014 targeted by aggressive unconditional offers; lack information to evaluate quality; bear cost of poor outcomes",
-      "Lower-Income Students: Secondary victim (moderate/constrained) \u2014 face information asymmetry; benefit from some access but enrolled in mismatched institutions",
-      "Teaching-Focused Universities: Secondary beneficiary (organized/constrained) \u2014 participate in extraction but face regulatory pressure limiting sustainability",
-      "Office of Students / Regulatory Bodies: Analytical observer (organized/mobile) \u2014 identify market failure and attempt intervention through metrics and enforcement",
-      "Admissions System (Structural): Piton actor (institutional/arbitrage) \u2014 prior conditional system degraded; unconditional offer theater persists through institutional inertia"
+      "Research-Intensive University Management: Primary beneficiary (institutional/arbitrage) — secures enrollment early, targets specific student demographics, locks in tuition revenue",
+      "Lower-Income State School Students: Primary victim (powerless/trapped) — accepts unconditional offer due to information deficit and financial pressure; loses negotiating leverage; bears extraction cost of early lock-in",
+      "State School Guidance Counselors: Secondary victim (powerful/mobile) — manages genuine coordination function but operates under institutional incentives that favor enrollment over fit",
+      "Well-Resourced Background Students: Secondary beneficiary (moderate/constrained) — receives genuine coordination benefit (stress reduction) but also bears extraction cost of early commitment",
+      "Student Advocacy Organizations: Organized agents (organized/constrained) — sees regulatory solutions and sunset pathway; building alternative enrollment mechanisms",
+      "Office of Fair Admissions & Regulatory Bodies: Institutional actors (institutional/arbitrage) — gatekeeping admissions fairness but historically passive on unconditional offer proliferation",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing market-contingent institutional choices as inevitable features of competition"
     ],
-    "logic_rationale": "Extractiveness (0.52): Moderate-high. Universities extract enrollment security and revenue through the mechanism of unconditional offers. The extraction is not absolute (some lower-income students genuinely benefit from expanded access) but is substantial (many experience poor degree outcomes; information asymmetry enables mismatching). The value reflects the genuine coordination benefit (universities' market problem solved) balanced against the extraction harm (student misalignment costs). The metric shows measurable increase from 0.28 in 2015 (post-cap removal, before widespread unconditional offer adoption) to 0.52 by 2021 (peak adoption period), indicating accelerating extraction as universities optimized the mechanism. Suppression (0.58): Moderate-high. Significant barriers to resistance include information asymmetry (state school students lack league table literacy), geographic isolation (limited awareness of alternatives), financial pressure (lower-income students cannot easily reject offers), and lack of institutional advocacy. However, suppression is not total \u2014 some students do research institutions carefully, and regulatory pressure is beginning to reduce it. Theater ratio (0.64): Moderately high. Unconditional offers function as theater: universities claim to identify 'high-potential' students who will thrive, but the offers are actually enrollment-securing mechanisms with weak predictive basis. The admissions committees perform assessment rituals without genuine quality signal transmission. The theater has increased over the interval as universities refined the mechanism and regulatory scrutiny forced justification narratives.",
-    "directionality_logic": "The engine derives directionality from beneficiary/victim declarations and exit options. Research-intensive universities are beneficiaries with arbitrage options (can walk away, choose enrollment strategies) \u2014 they derive low d \u2192 negative \u03c7. State school applicants are victims with trapped exit (once enrolled, cannot easily leave) \u2014 they derive high d \u2192 high \u03c7. The tangled rope classification emerges from the combination: the constraint simultaneously solves a coordination problem (universities' market uncertainty) and creates extraction (student misalignment). Teaching-focused universities occupy an intermediate position: they benefit from the revenue but face regulatory penalties for poor outcomes, making their exit options constrained rather than free. This differentiation in exit options is critical to the perspectival gap.",
-    "perspectival_gap": "The research-intensive university sees Rope (solving genuine coordination problem of enrollment uncertainty). The teaching-focused university sees Scaffold (temporary solution with regulatory sunset). The state school applicant sees Snare (pure extraction with no exit). The analytical observer sees Tangled Rope (hybrid mechanism requiring intervention). The admissions system sees Piton (prior conditional system degraded, replaced by theater). The perspectival gaps reflect genuine differences in structural position: beneficiaries with exit options experience coordination; trapped victims experience extraction; regulatory observers see the full tangled structure requiring enforcement. The piton classification of the admissions system is the key diagnostic insight \u2014 it reveals that the prior A-level conditional system performed real work (alignment of expectations, quality signaling), while unconditional offers replaced function with theater.",
-    "mandatrophy_analysis": "RESOLVED via tangled rope specification. The unconditional offer constraint initially appears to be pure extraction (Snare: universities extracting enrollment security; students bearing cost of misalignment). However, the constraint genuinely includes a coordination component: universities solved a real problem (post-cap-removal market uncertainty), and some lower-income students gained access who would not have under the prior conditional system. The mandatrophy resolution requires identifying both components simultaneously \u2014 this is the tangled rope signature. The extraction is not hidden or incidental; it coexists with genuine coordination benefits. The regulatory response (Office of Students metrics, teaching quality frameworks) reflects this recognition: the intervention does not attempt to eliminate unconditional offers entirely (acknowledging the coordination function) but rather to align institutional incentives through outcome accountability (constraining the extraction component). This hybrid response confirms the tangled rope diagnosis."
+    "logic_rationale": "Extractiveness (0.58): High-moderate. Universities capture substantial value from early enrollment lock-in — reduced recruitment uncertainty, stronger negotiating position for student accommodation and course assignment, ability to plan cohorts and resource allocation. But extractiveness is not maximum because: (a) unconditional offers genuinely reduce application-stage stress for some students, (b) universities still must deliver educational value to maintain reputation, (c) students retain some exit options (declining offer, transferring post-enrollment, appealing if offer rescinded). The measurement trajectory from 0.18 to 0.58 reflects market transition: early adoption period (2015-2018) saw selective use; intensification period (2018-2024) saw widespread adoption and competitive escalation. Suppression (0.62): Moderate-high. Primary suppression mechanisms are (a) information asymmetry: lower-income students lack guidance on institution quality differences, peer effects, long-term career impact; (b) geographic isolation: students from areas without university presence lack alumni networks and local knowledge; (c) financial desperation: offering certainty about admission and accommodation appeals to students facing enrollment uncertainty; (d) limited exit options: once accepted, declining attracts reputational cost and forgoes certainty. But suppression is not total because: information is available online, advocacy organizations provide guidance, and students can technically decline offers. Theater ratio (0.68): High. The traditional conditional offer system persists in formal admissions procedures and university marketing (conditional on exam results) but lacks functional enforcement. Universities rarely rescind conditional offers for moderate grade shortfalls, effectively treating them as ceremonial. Unconditional offers bypass this theater entirely but replace it with different performative content (marketing language about 'flexibility' and 'access' that obscures early lock-in mechanics). Theater ratio increased from 0.35 to 0.68 as universities shifted from using conditional offers as actual gates (low theater) to using them as symbolic compliance artifacts (high theater) while employing unconditional offers for actual enrollment capture.",
+    "directionality_logic": "Each perspective's directionality derives from the agent's structural position within the constraint. Universities (institutional/arbitrage) are beneficiaries with low exit costs — they can switch to conditional offers if competitive pressure eases, making d ≈ 0.05-0.15 and f(d) ≈ -0.10 to 0.02. Lower-income students (powerless/trapped) are victims with no exit — they cannot exit the offer once accepted without substantial cost (loss of certainty, reputational damage, wasted application effort), making d ≈ 0.95 and f(d) ≈ 1.42. Well-resourced students (moderate/constrained) are mixed: they benefit from stress reduction but can exit via conditional offers from peer institutions, making d ≈ 0.50-0.60 and f(d) ≈ 0.65-0.85. State school counselors are secondary victims: they have nominal authority (can recommend declining offers) but face institutional pressure to maximize enrollment, making d ≈ 0.60-0.70 and f(d) ≈ 0.85-1.05. Student advocacy organizations are organized agents: they can organize collective action (accreditation lobbying, media campaigns), giving them effective exit and making d ≈ 0.40-0.50 and f(d) ≈ 0.40-0.65. The engine derives these values automatically from beneficiary/victim declarations and exit options; chi = ε × f(d) × σ(S) with S = national (σ = 1.0) produces different experienced extractiveness for each perspective.",
+    "perspectival_gap": "The perspectival divergence is extreme. Universities see rope (0.40 chi at institutional/arbitrage): a coordination mechanism for legitimate matching. Lower-income students see snare (1.22 chi at powerless/trapped): extraction with no exit. Well-resourced students see tangled_rope (0.50 chi at moderate/constrained): mixed benefits and costs. Student advocates see scaffold (0.18-0.30 chi at organized/constrained): a temporary market distortion with regulatory solutions visible. State school guidance counselors see tangled_rope from a different angle (0.75 chi at powerful/mobile): they have power to resist but face institutional pressure. The traditional conditional offer system sees piton (degraded ritual, maintained by inertia). The civilizational observer risks seeing mountain (immutable market competition) until the engine flags this as false-summit naturalization. The gap between university experience and student victim experience is the largest: a 2.4-fold difference in chi (1.22 vs 0.50). This gap reflects that universities have arbitrage options (can switch strategies) while trapped students do not.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that coordination and extraction functions coexist but are distributed across perspectives. From university perspective, the constraint is genuine coordination: it solves the problem of matching students to suitable institutions and reduces recruitment uncertainty. From lower-income student perspective, it is genuine extraction: early lock-in removes negotiating leverage and exploits information disadvantage. The tangled_rope classification at the analytical level captures this hybrid: unconditional offers have real coordination function (reduce stress, provide certainty) and real extraction function (capture enrollment value, exploit desperation). The question 'is this coordination or extraction?' has no single answer — it is both, experienced differently depending on structural position. The mandatrophy resolves by recognizing that the constraint TYPE is determined by analytical position, but all six types (rope, snare, scaffold, tangled_rope, piton, mountain perspectives) describe real structural features that different agents genuinely perceive. The remedy is not to determine 'the' type, but to measure the perspectival gap and design policy to shift the distribution of experienced extractiveness (e.g., regulatory requirements for conditional offer transparency, mandatory waiting periods, information equity mandates)."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "a_level_grading_inflation",
-      "university_league_table_rankings",
-      "student_debt_burden_uk"
+      "uk_university_funding_dependency",
+      "state_school_widening_participation_programs"
     ],
-    "dual_formulation_note": "The unconditional offer constraint is downstream of the 2015 student number cap removal, which created market competition, and upstream of student debt burden (higher enrollment of lower-income students in mismatched institutions increases default risk) and league table dynamics (institutions optimize for enrollment at cost of educational quality)."
+    "dual_formulation_note": "Unconditional offers are downstream of the 2015 cap removal and universities' subsequent financial dependence on enrollment volume. The cap removal is itself a distinct constraint (regulatory choice, not market necessity). The offer mechanism has its own ε reflecting the extraction asymmetry; the cap removal has different ε reflecting the availability of alternative regulatory regimes. These are linked: cap removal created pressure for unconditional offers, but the offer mechanism is a contingent institutional response, not an inevitable consequence."
   },
   "directionality_overrides": [
     {
-      "power_atom": "organized",
-      "d_value": 0.35
+      "power_atom": "powerful",
+      "d_value": 0.65
     }
   ]
 }

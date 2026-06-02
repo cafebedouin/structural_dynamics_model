@@ -1,0 +1,237 @@
+{
+  "header": {
+    "constraint_id": "income_support_commitment__dependency_trap_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "incsup",
+    "story_uid": "d70f26d3-92ac-490b-8962-9c48c28dae01"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Income Support Commitment: Dependency Trap Reading",
+    "topic_domain": "political_economy/social_policy/labor_economics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "current_taxpayers",
+      "welfare_bureaucracy"
+    ],
+    "victims": [
+      "future_income_support_recipients",
+      "labor_market_discipline"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Recipient Cohort (Intergenerational Trap)",
+      "comment": "PERSPECTIVE 1: INCOME SUPPORT RECIPIENT / INTERGENERATIONAL (SNARE) — Once enrolled in income support, recipients face skill atrophy, reduced work history accumulation, and employer screening bias. The longer the spell, the harder exit becomes. For intergenerational timeframes, children born into recipient households inherit reduced human capital accumulation, lower school engagement, and family habituation to non-work. The constraint extracts from future generations through mechanism of identity lock and normalized economic inactivity. Maximum extraction perceived by the powerless at generational scope."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Marginal Labor Market Participant",
+      "comment": "PERSPECTIVE 2: MARGINAL LABOR MARKET PARTICIPANT (TANGLED ROPE) — Benefits from income floor and reduced desperation-driven wage acceptance. Also bears extraction: employer wage discipline weakens (if labor supply shifts due to income support availability), and wage growth may stagnate as market discipline erodes. Career progression becomes costlier (must re-accumulate credentials if exiting support). Moderate power; constrained exit options due to skill and credential costs."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Fiscal Authority / Current Taxpayers",
+      "comment": "PERSPECTIVE 3: FISCAL AUTHORITY / CURRENT TAXPAYER (ROPE) — Experiences income support commitment as coordination mechanism: stabilizes labor supply, reduces desperation-driven crime and social costs, enables consumption and demand. Perceives primary benefit in short-term fiscal and social stability. At immediate timeframe, the extraction mechanism is opaque; the beneficiary role is clear (lower crime, more stable consumption = lower enforcement costs and better tax base). Current-period benefits dominate the calculus."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Market Organizing Coalition",
+      "comment": "PERSPECTIVE 4: LABOR MARKET ORGANIZING COALITION (SCAFFOLD) — Organized agents (unions, labor advocates, worker organizing) perceive income support as temporary infrastructure supporting wage floors and labor organizing capacity. The sunset logic: as labor market tightens and worker power increases through organization, income support becomes less necessary. Coalition sees the constraint as enabling transition to stronger labor market fundamentals, not permanent dependency. Temporary support with exit path through labor power."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Welfare Bureaucratic Apparatus",
+      "comment": "PERSPECTIVE 5: WELFARE BUREAUCRATIC APPARATUS (PITON) — The administrative apparatus that implements income support has become substantially performative. Case management, eligibility verification, and compliance monitoring consume 30-40% of program expenditure in many jurisdictions while generating minimal work incentive effects. The bureaucracy persists through institutional inertia and because alternatives (unconditional basic income, negative income tax with unified administration) have not fully crystallized. The apparatus sees its own operations as degraded but lacks coalitional pressure to reform. Theater ratio (0.55) reflects that administrative theater has not fully consumed the coordination function, but significant portion is performative gatekeeping rather than effective support."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From civilizational/universal scope, the tension between income support and work incentives appears as an immutable tradeoff: any income floor weakens the desperation mechanism that drives labor supply. The constraint appears as a natural law of incentive structures, independent of institutional design. However, the structural data contradicts the mountain classification — the engine will identify this as a false summit, revealing that what appears as a fundamental incentive law is actually a contingent feature of specific institutional arrangements (means-testing cliffs, implicit marginal tax rates, skill atrophy mechanisms)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "skill_atrophy_mechanism_clarity",
+      "question": "Is observed skill atrophy in long-term income support recipients primarily due to non-use of capabilities, or to selection effects (lower-skill individuals more likely to enter and remain on support)?",
+      "resolution_mechanism": "Longitudinal skills testing (literacy, numeracy, technical capability) pre and post support enrollment, matched to control group of similar baseline capability in non-support trajectory. Exogenous policy variation in support generosity/duration.",
+      "impact": "If primary mechanism is non-use atrophy: skill decay is reversible through retraining and workplace re-engagement; constraint is partially escape-able at moderate cost. If selection effect dominates: observed cohort differences reflect pre-existing heterogeneity, and atrophy fear may be overstated or addressed through selection-aware policy design.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether skill atrophy is non-use mechanism or selection artifact"
+    },
+    {
+      "id": "labor_market_discipline_mechanism",
+      "question": "Does income support reduce effective market discipline on employer wage-setting and working conditions, or do labor supply shifts from reduced desperation cancel out demand-side monopsony power gains?",
+      "resolution_mechanism": "Comparison of wage growth, benefit provision, and working condition improvements in labor markets with vs. without income support; analysis of employer job design and safety investment in high vs. low support jurisdictions. Test for differential effects by skill level and labor supply elasticity.",
+      "impact": "If support weakens discipline: wage stagnation and condition degradation likely, extraction of labor value increases. If labor supply effects dominate: worker power improves, wage growth accelerates, market discipline strengthens. Classification may shift toward rope (coordination benefit dominates) from snare (extraction dominates).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether income support reduces employer market discipline"
+    },
+    {
+      "id": "intergenerational_habituation_vs_aspiration",
+      "question": "Do children born into income-support households exhibit reduced labor market aspiration due to habituation and normalized non-work, or do they exhibit improved educational and labor outcomes due to reduced childhood poverty stress and material security?",
+      "resolution_mechanism": "Longitudinal outcome tracking (educational attainment, employment rates, earnings) comparing children born into support-recipient households with non-recipient controls matched on baseline parental education and earnings. Policy experiments varying support generosity and duration.",
+      "impact": "If habituation dominates: intergenerational dependency trap confirmed, extraction extends across generations through identity lock mechanism, snare classification strengthened. If poverty-alleviation effects dominate: long-term human capital improves, snare classification weakens toward tangled_rope or rope.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Intergenerational effects of income support on children's outcomes and aspirations"
+    },
+    {
+      "id": "reading_identity_contested_kernel",
+      "question": "Is income support primarily a safety-net intervention (dependency-trap reading) or a recognition of care economy contributions and relational interdependence (care-economy reading) or a floor for freedom and dignity (freedom-floor reading)?",
+      "resolution_mechanism": "Examination of authority legitimacy claims: which foundational premise (reducing dependency through work incentives / recognizing care value / guaranteeing dignity floor) does the authority structure actually adjudicate? Which reading's axioms are operationalized in policy design, measurement systems, and success criteria?",
+      "impact": "If dependency-trap reading's axiom (work-market-discipline-necessary) governs: policy design emphasizes clawbacks, time limits, work requirements. If care-economy reading's axiom (care-work-valuable-regardless-of-market) governs: policy design emphasizes unconditional support and care-sector recognition. If freedom-floor reading's axiom (dignity-floor-precondition) governs: policy design emphasizes universality and decoupling from work. The three readings coexist but influence institutional design; dominance shifts over jurisdictions and time periods.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel ambiguity: which reading dominates the institutional authority structure?"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "Income support as implemented in most welfare states creates a structural tension that this reading instantiates: between the coordination benefit of a consumption floor and the extraction mechanism of reduced labor market discipline and skill atrophy. This is ONE READING of the contested income support commitment kernel. The dependency-trap reading emphasizes the mechanisms through which income support weakens market discipline, reduces skill accumulation, and creates intergenerational habituation to non-work. Future recipients enter the victim set through skill atrophy and reduced employability. Current taxpayers benefit through reduced short-term fiscal burden and social costs (crime, desperation-driven consumption). The reading coexists with two sibling readings: the freedom-floor reading (which emphasizes income support as a precondition for dignity and freedom from desperation) and the care-economy reading (which emphasizes income support as recognition of unpaid care work's value). The three readings compete for institutional dominance, shaping whether policy design prioritizes work requirements (dependency-trap), universality and unconditional support (freedom-floor), or care-sector recognition and interdependence (care-economy). This constraint story instantiates the dependency-trap reading only, documenting its structural implications and resolving ambiguities specific to this reading's framework.",
+    "key_agents": [
+      "Future Income Support Recipients: Primary victim (powerless/trapped at generational scope) — face skill atrophy, employer screening bias, intergenerational habituation to non-work",
+      "Current Taxpayers / Fiscal Authority: Primary beneficiary (institutional/arbitrage) — benefit from consumption floor stability, reduced crime and desperation costs, lower fiscal pressure in short term",
+      "Marginal Labor Market Participants: Secondary agent (moderate/constrained) — benefit from income floor, constrained by wage discipline effects and reentry costs",
+      "Labor Market Organizing Coalition: Organized agent (organized/constrained) — perceive support as temporary enabling infrastructure for labor power, with sunset logic through organizing",
+      "Welfare Bureaucracy: Institutional actor (institutional/arbitrage) — maintains performative administrative apparatus with 30-40% theater ratio",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent institutional design as immutable incentive law"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The dependency-trap reading identifies extraction through multiple mechanisms: (1) skill atrophy reducing future employability and wage capacity, (2) intergenerational habituation reducing aspiration and capability accumulation, (3) weakened labor market discipline allowing employer monopsony power to persist, (4) career restart costs for exit from support. These are not pure benefits-provisioning; they are extraction mechanisms that compound over time. The measurement trajectory (0.35 → 0.58) reflects accumulating extraction as recipients spend longer in support and intergenerational effects emerge. Suppression (0.62): Moderate-high. Barriers to exit include: skill atrophy (reversible but costly), employer screening bias against gaps in work history, means-test cliffs creating implicit 80-100% marginal tax rates, childcare costs and family stability disruption from accepting low-wage work, reduced credit access and housing options during support period. These are formidable but not total — some recipients do successfully exit to stable employment. Suppression rises from 0.45 to 0.62 as institutional cliffs become sharper and screening bias hardens. Theater ratio (0.55): Moderate. Significant administrative theater exists (eligibility verification, case management consuming 30-40% of expenditure) but the core income-provision function remains genuine. Theater has risen from 0.38 to 0.55 as means-testing compliance monitoring has intensified without corresponding improvement in work incentive effectiveness. The ratio reflects that support systems are not purely performative (funds do reach recipients) but substantial portion is theater rather than effective re-engagement mechanism.",
+    "perspectival_gap": "This reading generates sharp perspectival gaps with sibling readings. The freedom-floor reading emphasizes dignity and unconditional entitlement; the dependency-trap reading emphasizes work incentives and market discipline. The care-economy reading emphasizes recognition of care work's value independent of market work; the dependency-trap reading emphasizes market participation as primary criterion. The snare perspective (powerless recipient, generational timeframe) emphasizes intergenerational trap and identity lock; the rope perspective (current taxpayer, immediate timeframe) emphasizes coordination benefit. The piton perspective reveals that the apparatus has become substantially performative despite the core extraction mechanism remaining real. The mountain perspective naturalizes the incentive tradeoff as immutable, but the structural data reveals it as a contingent feature of specific institutional design (means-test cliffs, work requirements, credential-dependent hiring).",
+    "directionality_logic": "Directionality values are derived from structural position. Current taxpayers (beneficiary + arbitrage exit) experience low d ≈ 0.10 → negative effective extraction. Future recipients (victim + trapped exit at generational scope, but constrained at biographical scope) experience high d ≈ 0.85 → high effective extraction. Marginal labor participants (mixed agent with constrained exit) experience d ≈ 0.60 → moderate extraction. The analytical observer (analytical power, analytical exit) derives canonical d ≈ 0.73 but experiences high extraction because the observable (skill atrophy mechanisms, intergenerational effects) places the observer at analytical remove from the lived experience of extraction. No overrides are needed — the structural derivation from beneficiary/victim + exit options produces accurate d values for all perspectives.",
+    "mandatrophy_analysis": "The dependency-trap reading resolves mandatrophy by anchoring to the mechanism of future recipient harm through skill atrophy and market discipline weakening. This reading is not claiming 'income support is always snare' — the institutional perspective sees coordination (rope), the organized coalition sees sunset structure (scaffold), the bureaucracy sees degradation (piton). Rather, this reading instantiates a specific structural claim: that the long-term effect on future recipients is extractive, regardless of the current generation's experience of coordination benefit. The mandatrophy is resolved by disaggregating temporal perspectives — immediate (current taxpayer benefit) from generational (future recipient harm). Both are real; the reading emphasizes one temporal direction of the extraction flow.",
+    "kernel_context": "This constraint is ONE READING of the contested income_support_commitment kernel. The reading instantiates: DEPENDENCY_TRAP_READING, which emphasizes mechanisms through which income support weakens labor market discipline, reduces skill accumulation, and creates intergenerational habituation to non-work. Sibling readings (other constraints, NOT this one): FREEDOM_FLOOR_READING (income support as precondition for dignity and freedom), CARE_ECONOMY_READING (income support as recognition of care work value). The three readings coexist in institutional discourse; none logically forecloses the others. They influence institutional design through competing axioms: dependency-trap emphasizes work-market-discipline-necessary; freedom-floor emphasizes dignity-floor-precondition; care-economy emphasizes care-work-valuable-regardless-of-market. Which reading dominates shapes whether policy prioritizes work requirements, universality, or care-sector recognition."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "income_support_commitment__freedom_floor_reading",
+      "income_support_commitment__care_economy_reading",
+      "labor_market_monopsony_power",
+      "means_test_welfare_cliff"
+    ],
+    "dual_formulation_note": "The income support commitment kernel decomposes into three structurally distinct constraint stories with different ε values and different victim/beneficiary structures. This story (dependency-trap reading) emphasizes future recipient harm through skill atrophy and market discipline weakening (ε=0.58). The freedom-floor reading emphasizes dignity as foundational (likely ε < 0.30, rope classification). The care-economy reading emphasizes care work recognition (likely ε ≈ 0.25, rope or tangled_rope). Each reading is a complete constraint story with its own perspectives, beneficiary/victim declarations, and measurements. They link through network.affects_constraints because they address the same kernel and compete for institutional dominance."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "income_support_commitment__freedom_floor_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "income_support_commitment__care_economy_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "work_market_discipline_necessary",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "skill_atrophy_mechanism_real",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "labor_market_discipline_regime",
+    "drift_state": {
+      "moment": "contemporary_welfare_state_expansion",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

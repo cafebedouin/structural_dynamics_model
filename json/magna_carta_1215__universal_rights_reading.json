@@ -1,0 +1,247 @@
+{
+  "header": {
+    "constraint_id": "magna_carta_1215__universal_rights_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "mc_univ",
+    "story_uid": "8a3e4d05-c113-4bd4-91d7-58adaa11df60",
+    "created_at": "2026-02-26T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Magna Carta as Universal Due Process Constraint (1215 Reading)",
+    "topic_domain": "constitutional_law/legal_history/political_theory",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "all_individual_subjects",
+      "claim_to_procedural_protection"
+    ],
+    "victims": [
+      "unconstrained_state_power",
+      "arbitrary_detention_apparatus"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Subject Without Protection",
+      "comment": "PERSPECTIVE 1: SUBJECT WITHOUT PROTECTION (SNARE) — An individual facing state power without access to due process protection, or denied access through state evasion of procedural constraints. Trapped by jurisdiction with no exit option. Experiences maximum extraction: vulnerability to arbitrary detention, punishment without trial, confiscation without law. The constraint's existence creates a nominal right but the subject's powerlessness means the state can suppress knowledge of the right itself."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Common Freeman",
+      "comment": "PERSPECTIVE 2: COMMON FREEMAN (TANGLED ROPE) — A person of some property or status (merchant, craftsman, minor landholder) who can invoke procedural protections at significant cost and risk, but also depends on those protections to maintain their modest position. Constrained by the cost of litigation and by fear of state retaliation for invoking rights. Experiences both genuine coordination (the right structures legitimate state action) and real extraction (the state retains discretion to oppress through procedural evasion or extrajudicial power). Mixed experience — can exercise the right sometimes, but not reliably."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Magnate or High-Status Agent",
+      "comment": "PERSPECTIVE 3: MAGNATE OR HIGH-STATUS AGENT (ROPE) — A baron, bishop, or wealthy merchant with resources to enforce rights, alternative jurisdictions to flee to, and networks to resist state overreach. Mobile because they can exit the constraint or relocate. Experiences the constraint purely as coordination: it structures legitimate exercise of power and protects their own substantial interests. Clause 39 serves them as a coordination mechanism — it prevents arbitrary seizure of their lands or imprisonment without law."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Arbitrary State Power Apparatus",
+      "comment": "PERSPECTIVE 4: ARBITRARY STATE POWER APPARATUS (SNARE) — The institutional machinery of unconstrained detention, confiscation, and punishment. This perspective sees the constraint as a victim — it is being restrained by Clause 39. Trapped by the law that forbids it from operating according to its own internal logic (maximum efficiency through force without procedure). The apparatus experiences the constraint as extraction of its freedom of action. From this inverted perspective, the constraint is a snare on state capacity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Rights-Claiming Movement",
+      "comment": "PERSPECTIVE 5: RIGHTS-CLAIMING MOVEMENT (TANGLED ROPE) — Organized agents (barons, clergy, commons claiming rights) who both benefit from the constraint's existence (it legitimates their resistance to arbitrary power) and bear extraction (the state retains mechanisms to suppress their organization or ignore the constraint). Constrained by the state's ability to revert to extrajudicial power. The movement experiences the constraint as both protection and limitation — it provides a focal point for coordination but also imposes a procedural requirement that slows resistance when faster action is needed."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law Reading)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW READING (MOUNTAIN) — From a transhistorical, universal perspective, the constraint appears as an immutable axiom: human dignity and the right to trial before punishment are self-evident truths that no legitimate authority can override. This perspective naturalizes the constraint as a discovery of pre-existing law rather than a constructed limitation. However, the structural data (require_active_enforcement=true, beneficiaries and victims identified, extractiveness > 0.25) contradicts the mountain classification. This is a false summit — the 'universal human right' framing naturalizes what is actually a contested institutional arrangement that requires enforcement and benefits specific agents."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "universal_scope_ambiguity",
+      "question": "Does 'free men' in Clause 39 (1215) mean literally all persons, or was it a reading imposed retroactively that transforms a baronial privilege agreement into a universal rights document?",
+      "resolution_mechanism": "Historical textual analysis of 1215 drafting intent vs. subsequent 13th-16th century interpretations; comparison of contemporaneous usage of 'free men' in legal documents; examination of which groups actually invoked Clause 39 across centuries.",
+      "impact": "If universal scope was original intent: this reading is structurally straightforward — the constraint extends to all subjects from inception. If retroactive expansion: the universal reading is a reframing strategy that redefines the kernel itself, not merely one interpretation of it. Changes whether this is a reading of a kernel or the kernel has been reconstructed.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether universal scope was original 1215 intent or later retroactive imposition"
+    },
+    {
+      "id": "enforcement_mechanism_sufficiency",
+      "question": "Does the written constraint (Clause 39 text alone) provide sufficient enforcement mechanism to bind state power, or does its force depend entirely on organized resistance by those powerful enough to enforce it?",
+      "resolution_mechanism": "Historical case studies of successful invocation vs. state evasion; analysis of which groups actually secured remedies for violations; examination of enforcement instruments (habeas corpus development, judicial review, executive constraint mechanisms).",
+      "impact": "If text alone is binding: the constraint is more rope-like than analysis suggests — it coordinates through shared acceptance of law. If enforcement depends on organized power: the constraint is more tangled_rope/snare — those without power to enforce it experience suppression. This determines whether the constraint functions as stated or whether it requires organized enforcement to be real.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether written text or organized enforcement power is primary constraint mechanism"
+    },
+    {
+      "id": "arbitrage_closure_credibility",
+      "question": "Can a subject credibly 'exit' the jurisdiction to avoid arbitrary state power, or is the constraint's suppression value artificially high because practical exit is impossible for most historical populations?",
+      "resolution_mechanism": "Historical mobility analysis: what fraction of population could actually relocate or claim asylum elsewhere? Which groups actually used exit as escape from arbitrary power vs. which were trapped? Geographic and legal barriers to exit in different periods.",
+      "impact": "If exit was genuinely unavailable for most: suppression measure understates the binding force — the constraint's lack of effectiveness is worse because exit is impossible. If exit was available for some: the constraint's effectiveness depends on agent power (high-status agents use exit, low-status cannot). This refines the directionality model.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether exit/arbitrage was credible option across social strata"
+    },
+    {
+      "id": "reading_vs_kernel_boundary",
+      "question": "Is this story a reading of a contested kernel (Magna Carta's meaning remains disputed), or is the universal-rights reading actually a reconstruction/replacement of the kernel rather than a reading of it?",
+      "resolution_mechanism": "Definitional: if this reading coexists with rival readings held by different parties simultaneously (siblings exist, are live), it is a reading. If this reading has foreclosed its siblings within the contemporary legal tradition, it may have become THE kernel rather than a reading.",
+      "impact": "If reading: the sibling readings (baronial_privilege, living_document) are live and coexist. The framework remains contested. If the universal reading has become hegemonic: it has become the canonical form and siblings are relegated to historical interest only. This affects whether cs_structure.reading_relations should use 'coexists_with' or 'forecloses'.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether this is a reading of contested kernel or has become the canonical kernel"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.68,
+      "id_override": "mc_univ_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 200,
+      "value": 0.45,
+      "id_override": "mc_univ_extract_t200"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 400,
+      "value": 0.38,
+      "id_override": "mc_univ_extract_t400"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "mc_univ_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 200,
+      "value": 0.5,
+      "id_override": "mc_univ_theater_t200"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 400,
+      "value": 0.58,
+      "id_override": "mc_univ_theater_t400"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.78,
+      "id_override": "mc_univ_suppress_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 200,
+      "value": 0.68,
+      "id_override": "mc_univ_suppress_t200"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 400,
+      "value": 0.62,
+      "id_override": "mc_univ_suppress_t400"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 800
+  },
+  "commentary": {
+    "narrative_context": "Magna Carta (1215) is a contested kernel — a single persisting text that different parties read as instantiating fundamentally different constraints. This story models ONE reading: the universal rights interpretation that treats Clause 39 ('no freeman shall be imprisoned or punished except by the lawful judgment of his peers or by the law of the land') as establishing an inviolable due process right that applies to all persons within the jurisdiction, extending protection against arbitrary state power universally. Under this reading, 'free men' is expanded to mean all subjects, and Clause 39 emits a constraint on state detention and punishment authority that binds all rulers to procedure regardless of victim status. This reading transformed Magna Carta from a feudal agreement between king and barons into a transhistorical human rights precedent — a legitimacy claim for universal due process. However, the constraint's actual operation (as measured by base_extractiveness, suppression, and theater_ratio) reveals it as a tangled_rope: it coordinates legitimate state action through procedural requirements, but those same procedures become mechanisms for extracting compliance costs from the powerless, while the powerful retain discretion to evade through extrajudicial power. The measurements show declining extractiveness (0.68 → 0.38) and rising theater (0.35 → 0.58) over 800 years: the constraint has become increasingly performative as written law has been formalized, yet increasingly effective at suppressing challenges to state power by channeling them into procedural forms the state controls.",
+    "key_agents": [
+      "All Individual Subjects: Nominal victims of arbitrary state power (powerless/trapped) — universal due process constraint purports to protect this group but protection is conditional on enforcement capacity",
+      "Arbitrary State Power Apparatus: Institutional machinery of detention, punishment, confiscation (institutional/trapped) — the constraint restrains this apparatus's unconstrained operation",
+      "Common Freemen: Moderate-status agents (moderate/constrained) — can sometimes invoke procedural rights at cost and risk; depend on the constraint but cannot reliably enforce it",
+      "Magnates and High-Status Agents: Barons, bishops, merchants with resources to enforce rights (powerful/mobile) — experience constraint as pure coordination; can exit or resist",
+      "Rights-Claiming Movements: Organized coalitions demanding procedural protection (organized/constrained) — both benefit from constraint's legitimacy and bear extraction through state suppression of coordination",
+      "Analytical Observer: Transhistorical perspective (analytical/analytical) — risks treating contingent institutional arrangement as natural law or inevitable moral discovery"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. Under the universal-rights reading, the constraint purports to protect all subjects from arbitrary detention and punishment. However, actual enforcement depends on access to legal process, resources for litigation, and organized power to resist state evasion. The moderate value reflects that the constraint provides nominal protection (reduces worst-case extraction scenarios) but leaves substantial discretion for state power to extract through procedural mechanisms, extrajudicial channels, or selective enforcement. The measurement trajectory (declining from 0.68 at t=0, when the constraint was new and rarely enforced, to 0.38 at t=400, when procedural enforcement mechanisms matured) shows that proceduralization reduced bare extraction but increased theater and embedded suppression through law itself. Suppression (0.62): Moderate-high. Multiple barriers prevent effective invocation: cost of legal process, fear of state retaliation for claiming rights, lack of knowledge of rights, and state capacity to operate outside procedure through emergency powers, extrajudicial authority, or simple non-compliance. However, suppression is not total — magnates and organized groups can invoke the constraint. Theater ratio (0.58): Moderate-high, rising over time. Historical interpretation required extensive performative work: invocation of the constraint's legitimacy, ceremonial re-issuance, coronation oaths, parliamentary recitation. The theater rose as the constraint became more distant from original context and required more interpretive work to extend to new situations (from feudal disputes between king and barons to modern criminal procedure). The rising trajectory reflects that the constraint's force increasingly depends on ritual invocation rather than structural enforcement.",
+    "perspectival_gap": "This reading produces maximum perspectival gap. The powerless subject sees a snare (nominal protection but suppressed enforcement). The magnate sees rope (pure coordination protecting their interests). The common freeman sees tangled rope (mixed protection and extraction). The arbitrary state apparatus sees constraint as snare on itself. The rights-claiming movement sees tangled rope (legitimacy with limits). The analytical observer risks seeing mountain (universal natural law) but structural data reveals false summit (contingent institutional arrangement with identifiable beneficiaries and enforcement mechanisms). The gap arises because the universal-rights reading posits a single constraint that operates identically for all persons, but actual enforcement depends entirely on agent power, exit options, and resource access. The constraint's universality is nominal — its effects are stratified by power.",
+    "directionality_logic": "Directionality is derived from the agent's structural relationship to due process protection. Powerless subjects (d ≈ 0.95, trapped + victim status) experience maximum extraction from suppression mechanisms. Magnates (d ≈ 0.15, mobile + beneficiary status) experience low effective extraction because they can enforce the constraint. Common freemen (d ≈ 0.65, constrained + mixed victim/beneficiary status) experience moderate extraction. The arbitrary state apparatus is itself a 'victim' of the constraint — from its perspective, d reverses (it experiences suppression of its own power). This unusual directionality (treating institutional apparatus as trapped victim) is semantically inverted but structurally accurate: the constraint binds the state just as it binds individual agents. No beneficiary/victim override needed — the structural derivation is correct.",
+    "mandatrophy_analysis": "The mandatrophy (contradiction between Clause 39's claim to protect all from arbitrary power and its actual operation as selective coordination for the powerful) is resolved by recognizing that this reading instantiates a false summit: it naturalizes a contingent institutional arrangement as universal human right. The constraint is not mountain (immutable natural law), nor is it pure rope (pure coordination without asymmetric extraction). It is tangled_rope because it serves genuine coordination function (all parties benefit from rule of law in principle) AND it produces asymmetric extraction (enforcement depends entirely on power to invoke rights). The mandatrophy dissolves when we recognize that universality claims about rights can coexist with stratified enforcement — the constraint is universal in scope but particularistic in implementation. This is not a contradiction; it is the constraint's actual structure.",
+    "kernel_context": "This story instantiates the 'universal rights reading' of the contested kernel magna_carta_1215. The kernel is Magna Carta's text and authority; the reading is the interpretation that treats Clause 39 as establishing universal due process protection against arbitrary state detention and punishment. Sibling readings include: (1) baronial_privilege_reading — Magna Carta as feudal agreement protecting only magnate class property and persons from arbitrary seizure; and (2) living_document_reading — Magna Carta as foundational but evolving commitment whose meaning changes through successive reinterpretation and amendment. The universal-rights reading differs from the baronial reading by extending 'free men' to all subjects and from the living-document reading by treating the constraint as having stable content (clause 39 has unchanging meaning, not evolving meaning). This story emphasizes textual scope expansion and enforceability architecture, not doctrinal evolution."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "habeas_corpus_writ_limitation",
+      "trial_by_jury_procedural_requirement",
+      "executive_detention_authority_constraint"
+    ],
+    "dual_formulation_note": "Magna Carta decomposes into multiple constraint stories along epistemic boundaries. The universal-rights reading (this story) treats the constraint as establishing universal due process. The baronial-privilege reading (sibling) treats it as feudal property protection. The living-document reading (sibling) treats it as evolving constitutional authority. These are NOT the same constraint viewed from different angles — they have materially different epsilon values (universal reading ε=0.38, baronial reading ε≈0.15, living-document reading ε≈0.45). The network links the stories across the constraint family."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "universal_procedural_protection_for_all_subjects",
+    "drift_state": {
+      "moment": "contemporary_human_rights_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "baronial_privilege_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "living_document_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "all_persons_equal_procedural_right",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "clause_39_text_stable_universally_binding",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ]
+  }
+}

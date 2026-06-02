@@ -4,15 +4,16 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "newton"
+    "measurement_id_prefix": "nmc",
+    "story_uid": "62552412-4ae2-4888-badc-1f83257891d1"
   },
   "base_properties": {
     "extractiveness": 0.12,
-    "suppression": 0.03,
-    "theater_ratio": 0.15,
+    "suppression": 0.02,
+    "theater_ratio": 0.05,
     "claimed_type": "mountain",
     "human_readable": "Newton's Method Convergence Guarantee",
-    "topic_domain": "mathematics/technological",
+    "topic_domain": "mathematics/numerical_analysis",
     "emerges_naturally": true,
     "accessibility_collapse": 0.92,
     "resistance": 0.08
@@ -20,30 +21,39 @@
   "perspectives": [
     {
       "classification_type": "mountain",
+      "agent_power": "powerless",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Practitioner (Root-Finding Agent)",
+      "comment": "PERSPECTIVE 1: PRACTITIONER (MOUNTAIN) — A numerical analyst seeking roots of a function confronts the convergence guarantee as an immutable logical boundary. The method either converges quadratically when conditions are met or fails to converge when they are not. No political negotiation, no alternative regime, no escape: the constraint is the mathematical structure itself. The practitioner cannot exit or evade — they can only choose whether to apply the method given the initial conditions. The guarantee is analytically transparent: it emerges from the smoothness and proximity axioms, not from institutional enforcement."
+    },
+    {
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Mathematician (Analytical Framework)",
-      "comment": "PERSPECTIVE 1: MATHEMATICIAN / ANALYTICAL OBSERVER (MOUNTAIN) \u2014 Viewed from pure mathematics, Newton's Method convergence is a theorem with precise conditions. The quadratic convergence guarantee near a simple root is a mathematical law: given sufficient smoothness (C\u00b2 continuity) and a good initial guess within the basin of attraction, convergence is provably inevitable. This is not a policy choice or institutional arrangement \u2014 it is a logical consequence of the Taylor expansion and contraction mapping principles. No suppression, no extraction, no alternatives that work better in the ideal case."
+      "label": "Mathematical Analyst (Theoretical Observer)",
+      "comment": "PERSPECTIVE 2: MATHEMATICAL ANALYST (MOUNTAIN) — From the rigorous analytical standpoint, Newton's Method convergence is a proven theorem: ∃ δ > 0 such that |x_0 - r| < δ ⟹ quadratic convergence to simple root r. This is not a contingent fact about computational systems but a logical consequence of the inverse function theorem and contraction mapping principles. The constraint is unchanging across all mathematical systems, all computational platforms, all eras. It exhibits zero degrees of freedom — every agent, every observer, every civilization that discovers this theorem will rediscover the same boundary conditions."
     },
     {
       "classification_type": "mountain",
-      "agent_power": "powerful",
-      "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "universal",
-      "label": "The Numerical Analyst (Practical Implementation)",
-      "comment": "PERSPECTIVE 2: NUMERICAL ANALYST / IMPLEMENTER (MOUNTAIN) \u2014 Even from the perspective of someone implementing Newton's Method in software, the core mathematical constraint is immutable. The conditions (smooth function, good initial guess, simple root) cannot be negotiated away. Convergence failure modes (basin of attraction boundary, multiple roots, non-smooth regions) are not suppressible \u2014 they are structural features of the mathematical space. The analyst can work around them, but cannot overcome the underlying theorem."
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Numerical Software Engineer",
+      "comment": "PERSPECTIVE 3: NUMERICAL SOFTWARE ENGINEER (MOUNTAIN) — Implementation experience reveals the theorem as an inescapable boundary on algorithm design. The engineer can choose from Newton's Method or alternatives (bisection, secant method, gradient descent) but cannot make Newton's Method converge outside the proven region. The constraint is experienced as unchanging: poor initial guesses still fail; smooth functions near simple roots still converge quadratically. The engineer has agency in algorithm selection but not in changing the convergence guarantee itself. Classification remains Mountain despite constrained exit because the constraint's unchangeability is logically absolute, not pragmatically escaping."
     },
     {
       "classification_type": "mountain",
       "agent_power": "institutional",
-      "time_horizon": "biographical",
+      "time_horizon": "generational",
       "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "The Algorithm Designer (Disciplined Engineering)",
-      "comment": "PERSPECTIVE 3: ALGORITHM DESIGNER / ENGINEER (MOUNTAIN) \u2014 From the viewpoint of computational engineers designing robust root-finding systems, Newton's Method convergence guarantee is a mountain: it defines what is possible and impossible. You cannot 'extract' extra convergence speed by institutional pressure or extraction. You can only choose: use Newton's Method in its proper domain (smooth, well-conditioned, good initial guess) where convergence is guaranteed, or use hybrid methods (Newton-Bisection, Levenberg-Marquardt) that add robustness at the cost of speed. The mathematical constraint on convergence speed and radius of convergence is fixed."
+      "spatial_scope": "universal",
+      "label": "Numerical Library Developer",
+      "comment": "PERSPECTIVE 4: NUMERICAL LIBRARY DEVELOPER (MOUNTAIN) — A software institution (LAPACK, GSL, NumPy scipy.optimize) implements Newton's Method and documents its convergence domain. The library can optimize performance, handle edge cases, or provide user warnings, but cannot alter the fundamental theorem. The institution benefits from implementing a reliable, well-understood algorithm, but this benefit does not derive from extraction — it comes from providing users correct access to a universal mathematical property. The constraint appears identical to all other perspectives: unchanging, non-negotiable, logically transparent."
     },
     {
       "classification_type": "mountain",
@@ -51,27 +61,96 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Student / Learner (Universal Applicability)",
-      "comment": "PERSPECTIVE 4: STUDENT / LEARNER (MOUNTAIN) \u2014 No matter what level of mathematical sophistication, the convergence guarantee is accessible and invariant. A calculus student learning Newton's Method and an expert numerical analyst both encounter the same underlying mathematical law: quadratic convergence near a simple root under smooth conditions. The law does not change based on the learner's power or position. This is the defining feature of a true mountain \u2014 universality across all observational contexts."
+      "label": "Civilizational Observer (Cross-Epistemic View)",
+      "comment": "PERSPECTIVE 5: CIVILIZATIONAL OBSERVER (MOUNTAIN) — Newton's Method convergence is among the rare mathematical facts that are invariant across human mathematical systems. Whether formalized in Euclidean or non-Euclidean spaces, finite or infinite dimensions, real or complex numbers, classical or constructive logic, the core boundary persists: quadratic convergence requires smoothness and proximity. Different formalizations may dispute the precise definition of 'smoothness' (Lipschitz vs C¹ vs analytic) but all reduce to the same fundamental constraint. No civilization that discovers numerical root-finding will escape this theorem."
     }
   ],
-  "omegas": [],
-  "measurements": [],
+  "omegas": [
+    {
+      "id": "natural_law_vs_formal_system",
+      "question": "Is Newton's Method convergence a law of nature (discovered truth about abstract mathematical space) or a theorem of formal axiomatic systems (truth relative to chosen axioms)?",
+      "resolution_mechanism": "Logical independence analysis: determine whether the convergence guarantee is provable in all consistent extensions of ZFC, or whether alternative set theories or constructive logics yield different boundaries. If the theorem holds across all known mathematical frameworks, the distinction collapses and it is more accurately termed a logical invariant than a contingent discovery.",
+      "impact": "If natural law: the constraint is truly Mountain across all observer contexts (current classification confirmed). If formal system artifact: the constraint is contingent on axiom choice and could theoretically be escaped by adopting alternative mathematics (potential reclassification to Rope for axiomatic communities with alternative frameworks).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether convergence is a discovered law or an artifact of formal systems"
+    },
+    {
+      "id": "computational_realizability",
+      "question": "Does the mathematical convergence guarantee map to computational convergence given finite precision arithmetic, rounding error, and hardware constraints?",
+      "resolution_mechanism": "Empirical study of Newton's Method implementations across platforms with different floating-point standards (IEEE 754 variants, arbitrary-precision libraries, quantum simulators). Measure convergence behavior when initial conditions meet theorem requirements but hardware introduces perturbations.",
+      "impact": "If mathematics-to-hardware mapping is faithful: the theorem provides genuine constraint on practice (Mountain confirmed). If mapping breaks down: computational practitioners experience a weaker guarantee due to implementation noise (reclassify to Tangled Rope from practitioner perspective — theorem intact in mathematics but extraction-like asymmetry between theory and practice).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether mathematical convergence guarantee holds under computational finitude"
+    },
+    {
+      "id": "extension_to_multivariable_systems",
+      "question": "Does Newton's Method for multivariable systems (Jacobian-based iteration) satisfy the same convergence guarantee as the univariate case, or does higher dimensionality introduce qualitative differences?",
+      "resolution_mechanism": "Comparative analysis of univariate vs multivariate convergence theorems. Identify whether dimension introduces new failure modes (e.g., saddle-point attraction, ill-conditioning of Jacobian near root) that are absent in the scalar case.",
+      "impact": "If qualitatively identical: the constraint generalizes uniformly and the Mountain classification holds. If qualitatively different: multivariable Newton's Method may be better modeled as Rope or Tangled Rope (coordination with local convergence properties, but no guarantee of global finding).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether multivariable Newton's Method exhibits same convergence guarantee as univariate case"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 250,
+      "value": 0.05
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.05
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 250,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.12
+    }
+  ],
   "interval": {
     "start": 0,
-    "end": 0
+    "end": 500
   },
   "commentary": {
-    "narrative_context": "Newton's Method convergence guarantee is a mathematical theorem, not a policy or institutional arrangement. The method finds roots of a function f(x) by iterating x_{n+1} = x_n - f(x_n)/f'(x_n), achieving quadratic convergence when the function is sufficiently smooth and the initial guess is sufficiently close to a simple root. This constraint exhibits the defining properties of a mountain: (1) it emerges from mathematical logic, not enforcement; (2) accessibility to the constraint is universal \u2014 all mathematicians, engineers, and students encounter the same theorem; (3) resistance to the constraint is zero \u2014 no one claims Newton's Method should converge differently, or that the theorem is an unfair institutional imposition; (4) base extractiveness is minimal \u2014 the theorem itself creates no asymmetric value capture. The convergence guarantee is a natural law of mathematics.",
+    "narrative_context": "Newton's Method convergence guarantee is a mathematical theorem establishing that iterative root-finding via x_{n+1} = x_n - f(x_n)/f'(x_n) achieves quadratic convergence when applied to a sufficiently smooth function with an initial guess sufficiently close to a simple root. This is a paradigm case of a Mountain constraint: it emerges from mathematical logic rather than enforcement, imposes zero degrees of freedom on all agents regardless of power, position, or perspective, and exhibits universality across time and space. The constraint has no beneficiaries and no victims — it is a structural property of abstract mathematical space that all agents encounter identically. The theorem has been stable for over 350 years (since Newton and Raphson) and exhibits no signs of revision despite centuries of mathematical development. It appears identical from every observable perspective: theoretical analysis, computational practice, pedagogical instruction, library implementation. The extractiveness value (0.12) reflects minimal 'cost' — the constraint simply says what convergence requires; there is no asymmetry in who benefits or who bears cost. The suppression value (0.02) reflects that the constraint imposes nearly zero resistance to understanding or application — the mathematics is transparent and non-coercive.",
     "key_agents": [
-      "The Mathematical Community: Universal observer (analytical/analytical) \u2014 all mathematicians recognize the theorem equally",
-      "The Implementer: Engineer (powerful/mobile) \u2014 works within the constraint's boundaries; cannot exceed them",
-      "The Learner: Student (moderate/constrained) \u2014 must master the theorem's conditions; cannot negotiate them away",
-      "The Algorithm Designer: Institutional actor (institutional/arbitrage) \u2014 chooses which method to use; cannot change Newton's Method's properties"
+      "Mathematical Practitioner: agent seeking roots (neutral position — no extraction experienced)",
+      "Theoretical Mathematician: proving convergence theorems (neutral position — constraint is logically transparent)",
+      "Numerical Software Engineer: implementing the method (neutral position — constraint is binding but fair to all)",
+      "Numerical Library Developer: documenting and distributing implementations (neutral position — benefits from correctness but does not extract)",
+      "Educational Institution: teaching Newton's Method (neutral position — constraint is pedagogically uniform)"
     ],
-    "logic_rationale": "Extractiveness (0.12): Minimal. Newton's Method creates no asymmetric value extraction because the convergence guarantee is a public mathematical fact. Anyone who understands the method has equal access to the knowledge. No actor benefits from suppressing the knowledge or enforcing artificial barriers to its use. The small nonzero value (0.12 rather than 0.00) accounts for the minimal effort required to verify the proof \u2014 there is a small threshold of mathematical training needed to fully grasp the convergence proof, creating a modest accessibility gradient. But this is not extraction in the DR sense; it is baseline epistemic entry cost. Suppression (0.03): Negligible. The theorem cannot be suppressed. It is universally taught in numerical analysis courses and is standard reference material. Its conditions are clearly documented. There are no alternatives that compete with the theorem or that would benefit from the theorem's suppression. Resistance (0.08): Minimal. No significant resistance exists to accepting the convergence guarantee. The theorem is 200+ years old and universally accepted. Some practitioners prefer alternative methods (bisection, Secant method, Levenberg-Marquardt) for specific problem classes, but they choose these freely based on the problem structure \u2014 they do not deny Newton's convergence guarantee or resist acknowledging it. Theater ratio (0.15): Very low. The convergence guarantee generates minimal performative activity. Numerical analysts may write papers about improvements or applications, but the core theorem is not dressed up or ritualized. The proof is straightforward and the conditions are clearly statable. Accessibility collapse (0.92): High. The constraint is accessible to anyone with basic calculus and linear algebra. The proof is elementary (Taylor expansion + contraction mapping). University students encounter it routinely. Universality of access is the hallmark of a mountain.",
-    "perspectival_gap": "Unlike the verification_bottleneck exemplar (which produced all six types from different perspectives), Newton's Method convergence produces MOUNTAIN from all perspectives. This is not a perspectival gap \u2014 it is perspectival invariance. The mathematical law is the same whether viewed by a student, a numerical analyst, a pure mathematician, or an engineer. The reason is that the constraint emerges from logic, not from institutional power structures. When a constraint is truly a mountain, all observational angles converge on the same classification.",
-    "directionality_logic": "Directionality is not applicable to mountain constraints. Newton's Method convergence does not involve asymmetric power relationships, extraction, or suppression. All agents relate to the constraint equally \u2014 as observers of a mathematical law, not as beneficiaries or victims of an institutional mechanism. The method's properties are the same regardless of who applies it.",
-    "mandatrophy_analysis": "NATURAL LAW EXEMPLAR: Newton's Method convergence demonstrates the mandatrophy resolution for true mountains. The constraint is not contestable from any structural position. Mathematicians cannot claim the theorem is wrong, engineers cannot claim it is unfairly imposed on them, and learners cannot claim it extracts unfair value. The theorem's conditions are neither hidden nor negotiable \u2014 they are transparently stated and universally acknowledged. This is the gold standard for distinguishing natural law constraints from institutional arrangements disguised as laws. Compare with the analytical perspective in verification_bottleneck, which claims convergence lag is 'inherent to science' but turns out to be contingent institutional arrangements. Newton's Method convergence is the true inherent constraint."
+    "logic_rationale": "Extractiveness (0.12): Minimal. The constraint imposes a boundary condition — 'quadratic convergence requires smoothness and proximity' — but does not extract from any agent. All practitioners and observers encounter the same requirement. The value 0.12 is slightly above zero only to account for the marginal asymmetry that practitioners who understand the theorem gain efficiency while practitioners who ignore it waste computational effort, but this is not extraction — it is the constraint's logical transparency enabling better choices. Suppression (0.02): Minimal. The constraint is not coercive. It simply specifies a boundary. Practitioners can choose to apply Newton's Method or not, can choose to check initial conditions or not, can choose to implement safeguards or not. The theorem does not enforce compliance; it only guarantees outcomes conditional on meeting stated requirements. Theater ratio (0.05): Minimal. The proof of convergence is direct and mathematical — there is virtually no performative element. Numerical tests confirm convergence; failed convergence is transparent (the initial guess was too far from the root, or the function lacked sufficient smoothness). No cover story or obfuscation is needed or present. Accessibility collapse (0.92): Very high. The constraint is fundamentally inaccessible to practitioners who lack mathematical training in real analysis and the inverse function theorem. Roughly 99.5% of the global population has zero accessibility to understanding the proof. Yet for trained mathematicians and numerical analysts, accessibility is complete — the theorem is fully transparent and requires no specialized institutional access. The high collapse value reflects this sharp binary: total inaccessibility for the untrained, total transparency for the trained. Resistance (0.08): Very low. Once the mathematical prerequisites are met, the theorem provides no resistance to understanding or application. The structure is simple (iterate, check convergence criterion, stop). The boundary conditions are clear (smoothness, proximity). No institutional or political forces resist accepting the convergence guarantee. The minimal value reflects that the only 'resistance' is the natural difficulty of acquiring the mathematical background needed to understand it — not any suppression of the constraint itself.",
+    "perspectival_gap": "There is no perspectival gap. All five perspectives yield identical classification (Mountain) with identical experiential content: the constraint is unchanging, non-negotiable, logically transparent, and universal across all agents and timescales. This uniformity is the diagnostic signature of a genuine Mountain. The lack of perspectival disagreement demonstrates that no agent benefits asymmetrically from the constraint, no agent experiences extraction, and no agent perceives the constraint as changeable if they understand its logical structure. Even the practitioner perspective (constrained exit) and the institutional perspective (arbitrage options) see Mountain — because the constraint is so thoroughly universal that exit options become irrelevant. The constraint applies identically whether you are powerless or institutional, whether you exit into alternative methods or double down on Newton's method, whether you operate locally or globally. The true test of a Mountain is that exit options do not change the classification, and this constraint passes that test completely.",
+    "directionality_logic": "No directionality analysis is required for a genuine Mountain constraint without declared beneficiaries. The constraint imposes no directional extraction flow. All agents — practitioners, theorists, implementers, educators — encounter the same boundary condition and benefit equally from understanding it. There is no agent whose power position allows them to exploit the constraint asymmetrically. The constraint is not a coordination mechanism that benefits some at the cost of others; it is a logical boundary that all must respect equally. If alternative observables or mathematical frameworks produced different ε values, those would represent different constraints (e.g., 'Newton's Method in non-Euclidean spaces' would be a separate story). But within classical mathematics and numerical analysis, this constraint is singular and symmetric."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [
+      "numerical_stability_in_floating_point",
+      "jacobian_computation_feasibility"
+    ],
+    "dual_formulation_note": "Newton's Method convergence is the upstream theoretical guarantee. Computational realizability of that guarantee under finite precision arithmetic is a downstream constraint with higher extractiveness (the computer/analyst asymmetry in what theorems predict vs. what silicon delivers)."
   }
 }

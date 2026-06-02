@@ -4,61 +4,46 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "jevons"
+    "measurement_id_prefix": "jevons",
+    "story_uid": "8d915c8a-2349-48a1-9068-2f6ef6dd5e62"
   },
   "base_properties": {
     "extractiveness": 0.38,
     "suppression": 0.42,
-    "theater_ratio": 0.58,
+    "theater_ratio": 0.55,
     "claimed_type": "tangled_rope",
-    "human_readable": "Jevons Paradox (The Rebound Effect)",
+    "human_readable": "Jevons Paradox: The Rebound Effect in Resource Consumption",
     "topic_domain": "economic/technological",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "resource_extractive_industries",
-      "capital_intensive_producers"
+      "resource_extractors",
+      "energy_intensive_industries",
+      "fossil_fuel_infrastructure"
     ],
     "victims": [
-      "environmental_commons",
-      "climate_stabilization_goal"
+      "atmospheric_carbon_budget",
+      "ecological_systems",
+      "future_generations"
     ]
   },
   "perspectives": [
     {
       "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "civilizational",
-      "exit_options": "trapped",
-      "spatial_scope": "global",
-      "label": "The Climate Stabilization Goal",
-      "comment": "PERSPECTIVE 1: CLIMATE STABILIZATION GOAL (SNARE) \u2014 Cannot exit the rebound mechanism; all efficiency gains are partially or fully offset by increased consumption. The climate system bears the full cost of demand elasticity. No choice, no escape path. Maximum extraction experienced: efficiency improvements that should reduce emissions instead maintain or increase them."
-    },
-    {
-      "classification_type": "snare",
-      "agent_power": "powerless",
       "time_horizon": "generational",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "Future Generations",
-      "comment": "PERSPECTIVE 2: FUTURE GENERATIONS (SNARE) \u2014 Inherit a climate system damaged by rebound effects that cannot be undone. Trapped by aggregated demand elasticity from present consumption patterns. No ability to exit or negotiate terms. Full extraction via inherited carbon debt."
+      "label": "The Carbon Budget",
+      "comment": "PERSPECTIVE 1: THE CARBON BUDGET (SNARE) — The atmospheric carbon system cannot exit the accumulation cycle. Each efficiency improvement that increases consumption directly increases extraction from the carbon sink. No alternative pathways; no negotiation capacity; full structural victimization. The constraint operates at civilizational scale with no agent representation."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "Resource Extractive Industries",
-      "comment": "PERSPECTIVE 3: RESOURCE EXTRACTIVE INDUSTRIES (ROPE) \u2014 Benefits from the rebound effect through sustained demand growth despite efficiency gains. Experiences the constraint as coordination: market mechanisms align efficiency with their profit incentives. Net beneficiary. Can arbitrage between jurisdictions with different carbon constraints."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "Green Technology Advocates",
-      "comment": "PERSPECTIVE 4: GREEN TECHNOLOGY ADVOCATES (TANGLED ROPE) \u2014 Organized agents (renewable energy sector, efficiency standards bodies, climate policy advocates) experience mixed coordination and extraction. They coordinate to deploy efficiency improvements, but the rebound effect undermines their climate goals. Constrained by politics, economics, and consumer preference elasticity. Experience both benefit (market for new technologies) and extraction (goal displacement)."
+      "label": "The Energy Industry",
+      "comment": "PERSPECTIVE 2: THE ENERGY INDUSTRY (ROPE) — Institutional beneficiary. Efficiency improvements expand their market through lower effective prices and increased demand. The constraint is experienced as pure coordination: consumers demand more energy at lower prices, and the industry satisfies this demand profitably. No extraction perceived — the mechanism aligns incentives perfectly. The industry has maximal arbitrage options: they can choose energy sources, technologies, and markets."
     },
     {
       "classification_type": "tangled_rope",
@@ -66,17 +51,26 @@
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "regional",
-      "label": "Individual Consumers",
-      "comment": "PERSPECTIVE 5: INDIVIDUAL CONSUMERS (TANGLED ROPE) \u2014 Benefit from efficiency gains (lower cost per unit of service), but constrained by the rebound mechanism itself: when energy becomes cheaper via efficiency, they increase consumption. Agents are both beneficiaries and victims of their own demand elasticity. Partial coordination (markets deliver what consumers want) and partial extraction (climate externalities)."
+      "label": "The Consumer Household",
+      "comment": "PERSPECTIVE 3: THE CONSUMER HOUSEHOLD (TANGLED ROPE) — Moderate agent with constrained options. Efficiency improvements lower appliance costs and operating expenses, creating genuine coordination benefits (affordable comfort, mobility, productivity). But consumption increase locks households into carbon-intensive infrastructure pathways (vehicle ownership, home electrification dependent on grid mix, energy-intensive services). The constraint has both genuine coordination (lower costs enable access) and asymmetric extraction (lock-in to fossil infrastructure). Exit options are constrained by infrastructure availability and upfront capital requirements."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Industrial Manufacturers",
+      "comment": "PERSPECTIVE 4: INDUSTRIAL MANUFACTURERS (TANGLED ROPE) — Organized agents that benefit from lower energy costs and expanded production capacity (coordination), but also face lock-in to energy-intensive production processes (extraction). Exit to low-carbon manufacturing requires major capital restructuring with significant switching costs. The constraint coordinates expansion of productive capacity while extracting a transition cost from those who attempt decarbonization."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
-      "spatial_scope": "national",
-      "label": "Carbon-Neutral Technology Certification",
-      "comment": "PERSPECTIVE 6: CARBON-NEUTRAL TECHNOLOGY CERTIFICATION (PITON) \u2014 The theater of 'carbon-neutral' or 'net-zero' technology claims persists despite rebound effects undermining them. Certification rituals (lifecycle analysis, carbon accounting) are largely performative when applied without demand-side behavioral constraints. Theater ratio high because compliance with efficiency standards is maintained (low functional output), but actual carbon reduction goals fail. Maintained through institutional inertia and regulatory theater."
+      "spatial_scope": "global",
+      "label": "Climate Policy Apparatus",
+      "comment": "PERSPECTIVE 5: CLIMATE POLICY APPARATUS (PITON) — Institutional actor with high theater ratio. Climate policies often assume decoupling: efficiency improvements will reduce total energy/emissions. The Jevons paradox demonstrates that decoupling at the sectoral level does not guarantee absolute decoupling at the system level. Carbon pricing, efficiency standards, and renewable mandates persist despite contradicting empirical evidence that they produce the assumed outcomes. The policy machinery is maintained through institutional inertia and performance theater rather than functional effectiveness. Theater increases as policy failures accumulate but policies remain intact."
     },
     {
       "classification_type": "mountain",
@@ -84,115 +78,149 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer (Price Elasticity View)",
-      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / PRICE ELASTICITY VIEW (MOUNTAIN) \u2014 From a civilizational analytical perspective, the rebound effect appears as an immutable law of economics: rational actors respond to price signals by increasing consumption when goods become cheaper. The constraint is presented as a natural law of demand elasticity rooted in human behavior and market mechanics. However, this naturalizes what is actually a contingent institutional arrangement \u2014 the magnitude of rebound varies by context (poor vs wealthy, time horizon, consumption category), and policy interventions (carbon pricing, behavior change campaigns, satiation effects) can substantially reduce or redirect rebound."
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: THE ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational/universal perspective, Jevons paradox is presented as an economic law: rational actors respond to price signals by increasing consumption of cheaper goods. The constraint is described as inherent to market economics itself — immutable, inevitable, beyond policy intervention. However, this perspective naturalizes what is actually a contingent institutional arrangement: the externality (atmospheric carbon cost) is not priced into energy, so rational actors have no economic signal to internalize the true cost of consumption. The 'law' is in fact a policy failure masquerading as natural law."
     }
   ],
   "omegas": [
     {
-      "id": "rebound_magnitude_empirical",
-      "question": "What is the true empirical magnitude of the rebound effect across different resource types and economic contexts?",
-      "resolution_mechanism": "Meta-analysis of empirical studies on price elasticity, substitution effects, and direct vs indirect rebound; controlled experiments comparing efficiency improvements with and without behavioral constraints",
-      "impact": "If rebound < 30%: efficiency improvements net positive; Rope perspective dominates. If rebound 30-100%: partial offset; Tangled Rope confirmed. If rebound > 100%: backfire scenario; full Snare. Magnitude varies by context (transport vs lighting vs heating), which may require constraint decomposition.",
+      "id": "rebound_magnitude_threshold",
+      "question": "What is the true magnitude of rebound effects across energy sectors? Does the rebound effect fully offset efficiency gains (100% rebound), partially offset (30-70%), or leave net savings (less than 30%)?",
+      "resolution_mechanism": "Longitudinal analysis of energy consumption data post-efficiency improvement; sector-specific accounting (direct rebound from increased use of the efficient good, indirect rebound from spending savings elsewhere, economy-wide rebound from GDP effects); controlled comparison of efficiency improvements with and without corresponding price reductions",
+      "impact": "If 100% rebound: Jevons paradox is a complete constraint rendering efficiency improvements ineffective for absolute emissions reduction. If <50% rebound: efficiency improvements combined with carbon pricing or absolute caps can drive decarbonization. If >70% but <100%: mixed strategy required (efficiency + demand reduction).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Empirical magnitude of rebound effect across contexts"
+      "description": "Magnitude of rebound effect across energy sectors"
     },
     {
-      "id": "behavioral_satiation_ceiling",
-      "question": "Are there satiation effects or consumption ceilings that naturally limit rebound, or is demand growth truly unbounded by efficiency improvements?",
-      "resolution_mechanism": "Cross-sectional analysis of wealthy societies with mature efficiency; behavioral studies on consumption preferences; testing whether demand for lighting, heating, or transportation continues to grow at constant elasticity as prices fall",
-      "impact": "If satiation exists: rebound is self-limiting; constraint is temporary (Scaffold). If unbounded: rebound continues indefinitely; Snare classification is stable. Satiation is context-dependent (energy use vs air travel), suggesting constraint decomposition.",
+      "id": "substitution_vs_income_effect",
+      "question": "Do rebound effects primarily result from substitution (consuming more of a good because it is now cheaper relative to other goods) or income effects (increased real income from lower energy costs enabling consumption of other goods)?",
+      "resolution_mechanism": "Econometric decomposition of consumption changes post-efficiency improvement; structural equation modeling isolating substitution elasticities from income effects; cross-sectional analysis of households with identical efficiency improvements but different income changes",
+      "impact": "If primarily substitution: policy can dampen rebound by maintaining price through carbon taxation. If primarily income: rebound effects are harder to constrain via price policy alone; absolute supply constraints may be required.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether consumption satiation limits rebound or demand is unbounded"
+      "description": "Whether rebound results from substitution or income effects"
     },
     {
-      "id": "policy_intervention_effectiveness",
-      "question": "Can policy interventions (carbon pricing, demand-side constraints, behavior change) successfully suppress rebound, or is it inevitable?",
-      "resolution_mechanism": "Comparison of jurisdictions with different policy regimes (high carbon tax vs low, regulatory constraints vs voluntary, information campaigns vs laissez-faire); time-series analysis of efficiency gains vs total consumption under different policy conditions",
-      "impact": "If interventions effective: rebound is contingent, not inevitable; constraint shifts to Scaffold or Rope depending on policy design. If interventions fail: rebound is structural; Snare confirmed. This resolves whether the mountain classification is correct (true law of economics) or false (naturalization of policy choice).",
+      "id": "decoupling_observability_ambiguity",
+      "question": "Is decoupling (relative decoupling: emissions per unit GDP declining) observable in data, or is it methodological artifact from accounting for traded emissions?",
+      "resolution_mechanism": "Lifecycle accounting of embodied carbon in traded goods; consumption-based carbon footprint (what nations actually consume) vs production-based (what they produce); inclusion of supply-chain outsourcing in carbon attribution",
+      "impact": "If decoupling is real: efficiency improvements can work alongside demand reduction. If decoupling is accounting artifact: high-income nations have merely outsourced extraction, not reduced it; the paradox holds at the consumption level.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether policy can suppress rebound or it is inevitable"
+      "description": "Whether decoupling is real or accounting artifact"
     },
     {
-      "id": "extraction_asymmetry",
-      "question": "Is the Jevons Paradox mechanism fundamentally extractive (benefits accrue to resource industries while climate costs are externalized) or is it a coordination failure where all agents are victims of their own demand elasticity?",
-      "resolution_mechanism": "Distributional analysis of who captures efficiency gains vs who bears climate costs; modeling of wealth concentration in resource sectors vs diffuse climate damages; comparison with scenarios where efficiency gains are taxed and recycled as climate investment",
-      "impact": "If extraction confirmed: Snare perspective is correct; resource industries are the primary beneficiary. If coordination failure: all perspectives experience rebound; no clear beneficiary/victim split. This determines whether the constraint is inherently exploitative or inherently collective-action-problem.",
+      "id": "exogeneity_of_resource_supply",
+      "question": "Does the rebound effect assume that resource supply is perfectly elastic (infinite supply at the market price), or do absolute resource constraints impose a natural ceiling on rebound magnitude?",
+      "resolution_mechanism": "EROI (Energy Return on Energy Invested) decline in fossil fuels and renewables; thermodynamic limits on energy density; geological constraints on resource extraction rates; price elasticity of resource supply at the margin",
+      "impact": "If supply is elastic: Jevons paradox holds indefinitely; efficiency improvements simply accelerate resource depletion. If supply is inelastic: rebound effects reach a ceiling as resource scarcity raises prices; the constraint transitions from price-driven to supply-driven.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether resource supply is elastic or constrained"
+    },
+    {
+      "id": "policy_externality_internalization",
+      "question": "Can policy mechanisms (carbon pricing, quantity caps, Pigouvian taxation) successfully internalize the externality and eliminate the rebound effect, or do behavioral/institutional barriers prevent full price transmission?",
+      "resolution_mechanism": "Comparison of emissions outcomes under different policy regimes (carbon tax vs cap-and-trade vs efficiency standards); analysis of behavioral responses to carbon prices vs equivalent explicit carbon costs; institutional tracking of policy slippage (exceptions, offsets, leakage)",
+      "impact": "If internalization succeeds: the constraint is policy-resolvable; Jevons paradox is a failure of policy design, not economic law. If institutional barriers prevent internalization: the constraint is structural; even well-designed policy will be undermined by evasion and behavioral response.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether policy can successfully internalize carbon externality"
+    },
+    {
+      "id": "false_summit_natural_law_framing",
+      "question": "Is Jevons Paradox genuinely a natural law of market economics, or is it a contingent institutional arrangement that depends on specific policy choices (externality non-pricing)?",
+      "resolution_mechanism": "Counterfactual: in a regulatory regime where carbon is fully priced and consumption decisions face true marginal cost, would rational actors increase consumption as predicted? Historical comparison of demand elasticity under different pricing regimes.",
+      "impact": "If natural law: decarbonization requires demand reduction or absolute caps, not efficiency. If contingent: decarbonization is achievable through policy reform (carbon pricing) plus efficiency.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether rebound is extraction or collective-action failure"
+      "description": "Whether Jevons Paradox is natural law or policy-contingent constraint"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.18
+      "value": 0.15
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 35,
-      "value": 0.32
+      "time_point": 50,
+      "value": 0.28
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 70,
+      "time_point": 100,
       "value": 0.38
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.32
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
-      "time_point": 35,
+      "time_point": 50,
       "value": 0.48
     },
     {
       "metric": "theater_ratio",
-      "time_point": 70,
-      "value": 0.58
+      "time_point": 100,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 50,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 100,
+      "value": 0.42
     }
   ],
   "interval": {
     "start": 0,
-    "end": 70
+    "end": 100
   },
   "commentary": {
-    "narrative_context": "Jevons Paradox describes a structural tension in technological progress: when efficiency improvements reduce the effective price of a resource, rational economic actors increase consumption, partially or fully offsetting the initial efficiency gain. Named after 19th-century economist William Stanley Jevons, who observed that coal efficiency improvements in Victorian England led to increased coal consumption rather than decreased. The constraint exhibits mixed classification across perspectives: resource industries and capital-intensive producers benefit from sustained demand growth; climate goals and future generations bear the cost of offset emissions; consumers experience mixed benefit and extraction through their own demand elasticity; green technology advocates experience partial success undermined by rebound; efficiency certification becomes performative theater; and naive analytical observers may naturalize the effect as an immutable law of economics when it is actually contingent on policy design, behavioral satiation, and distributional choices. The theater ratio (0.58) reflects that efficiency improvement rhetoric is substantially performative when unaccompanied by demand-side constraints or pricing mechanisms \u2014 the ritual of certification and standard-setting persists despite failing to achieve stated climate goals.",
+    "narrative_context": "Jevons Paradox describes a fundamental tension in technological solutions to resource scarcity: efficiency improvements that reduce the effective price of a resource induce rational economic actors to increase consumption, partially or fully offsetting the intended conservation goal. Named after 19th-century economist William Stanley Jevons, who observed that coal efficiency improvements in Victorian England led to increased coal consumption rather than decreased coal use. The constraint operates at multiple scales — household, industrial, sectoral, and global — with different classifications from each perspective. The deep structure reveals a false summit: the paradox is often framed as an immutable economic law (higher prices drive lower consumption, lower prices drive higher consumption), but this 'law' depends entirely on the assumption that the externality (resource depletion, climate impact) is not priced into the resource cost. When the externality is externalized — not incorporated into the market price — rational actors have no economic signal to constrain their consumption, and efficiency improvements simply accelerate resource depletion. The constraint is thus not a law of nature but a policy failure: the failure to price the true cost of resource extraction.",
     "key_agents": [
-      "Resource Extractive Industries: Primary beneficiary (institutional/arbitrage) \u2014 capture demand growth enabled by efficiency-driven price reductions; can arbitrage across carbon-pricing regimes",
-      "Climate Stabilization Goal: Primary victim (powerless/trapped) \u2014 abstract goal that cannot exit; all efficiency gains partially offset by rebound",
-      "Future Generations: Secondary victim (powerless/trapped) \u2014 inherit climate damages from aggregated rebound effects; no negotiating power",
-      "Green Technology Advocates: Organized mixed agent (organized/constrained) \u2014 coordinate to deploy efficiency but constrained by rebound mechanism and political limits; experience both market opportunity and goal displacement",
-      "Individual Consumers: Moderate mixed agent (moderate/constrained) \u2014 benefit from lower-cost services but constrained by own demand elasticity; partially solve their own problem and partially create it",
-      "Carbon-Neutral Certification Bodies: Institutional observer (institutional/arbitrage) \u2014 maintain performative verification rituals; benefit from legitimacy-granting role",
-      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent policy choices as immutable economic laws"
+      "Resource Extractors & Fossil Fuel Industries: Primary beneficiaries (institutional/arbitrage) — efficiency improvements expand markets and accelerate resource monetization",
+      "Energy-Intensive Industries: Secondary beneficiaries (organized/constrained) — benefit from lower energy costs but locked into carbon-intensive production pathways",
+      "Consumer Households: Mixed position (moderate/constrained) — gain access to cheaper services but locked into consumption pathways that increase total resource use",
+      "The Carbon Cycle: Primary victim (powerless/trapped) — cannot exit the accumulation; each efficiency-driven consumption increase directly increases atmospheric loading",
+      "Ecological Systems & Future Generations: Secondary victim (powerless/trapped) — bear costs of accelerated resource depletion and climate impacts from consumption rebound",
+      "Climate Policy Apparatus: Institutional actor (institutional/arbitrage) — maintains efficiency-focused policies despite contradicting empirical evidence; theater increases as policy failures accumulate",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing the contingent institutional failure (non-pricing of externality) as an immutable law of economics"
     ],
-    "logic_rationale": "Extractiveness (0.38): Moderate. The rebound effect is not pure resource extraction (\u03b5 would be >0.46) because it involves genuine consumer preference satisfaction and legitimate price response. But it is not pure coordination (\u03b5 would be \u22640.35) because resource industries systematically benefit from offset emissions while climate costs are externalized to future generations and non-human systems. The value reflects that the constraint combines real economic efficiency gains with asymmetric distribution of climate costs. Suppression (0.42): Moderate. Suppression is not maximal because exit paths exist in principle \u2014 consumers can choose not to increase consumption, resource industries can voluntarily constrain extraction, policy can implement carbon pricing. But suppression is significant because: (1) market mechanisms align extraction with profit incentives; (2) coordinating on demand reduction requires collective agreement that undermines individual welfare-maximizing choices; (3) information about rebound effects is not uniformly distributed; (4) wealthy actors can exit carbon constraints through arbitrage while poor actors are trapped in carbon-intensive consumption patterns. Theater ratio (0.58): Moderate-high. The increasing value over the 70-year interval reflects how efficiency improvement rhetoric has become increasingly performative. Certification of 'carbon-neutral' or 'net-zero' technologies proceeds without addressing rebound; lifecycle analysis ignores demand elasticity; efficiency standards are celebrated while total consumption accelerates. The theater persists because compliance with efficiency metrics is maintained (satisfying the performative requirement) while actual climate goals fail.",
-    "directionality_logic": "Directionality varies by agent type. Resource industries (beneficiary status + arbitrage exit) experience low d \u2192 negative effective extraction \u2192 classify as Rope from their perspective. Climate goals and future generations (victim status + trapped exit) experience high d \u2192 high f(d) \u2192 high \u03c7 \u2192 classify as Snare from their perspective. Consumers (mixed beneficiary-victim status depending on framing + constrained exit) experience moderate d \u2192 moderate f(d) \u2192 moderate \u03c7 \u2192 classify as Tangled Rope. Green technology advocates (organized status + constrained exit) experience moderate-to-high d because they are partly captured by the efficiency-gains narrative \u2192 classify as Tangled Rope. The piton classification derives from the theater gate (high theater ratio) despite moderate \u03c7, reflecting that efficiency certification persists through institutional ritual rather than functional climate impact. The analytical observer's mountain classification is a false summit: the price elasticity of demand is a contingent behavioral property in specific institutional contexts, not a universal law. Demand elasticity varies by consumption category (transport ~1.0, lighting ~0.3, heating ~0.3), by income level (poor households show higher elasticity to price changes), and by policy regime (satiation effects emerge under high carbon pricing). The 'inevitable rebound' framing naturalizes a policy choice to rely on market mechanisms rather than demand-side constraints.",
-    "perspectival_gap": "This constraint demonstrates how the same mechanism produces radically different classifications depending on the observer's structural position. Resource industries see a coordination mechanism delivering what markets demand (Rope). Climate goals see an offset mechanism trapping them in a losing race against increasing total consumption (Snare). Consumers see a benefit (cheaper services) and a constraint (they cannot collectively coordinate to refuse the cheaper option without coordinating on consumption reduction) (Tangled Rope). Green technology advocates see partial success undermined by forces beyond their control (Tangled Rope). Efficiency certification bodies see their ritual as successful (maintained compliance with standards) while actual climate metrics fail (Piton). Naive analytical observers see an immutable law of economics (Mountain). The perspectival gap is not a measurement ambiguity \u2014 it reflects genuine structural differences in how agents experience extraction flow, power, and exit options relative to this constraint. The gap widens over the 70-year interval as rebound effects accumulate and theater increases.",
-    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The constraint exhibits both genuine coordination (market efficiency delivering consumer preferences, legitimate price response to cost changes) and asymmetric extraction (resource industries capture demand growth while climate costs are externalized). It is not a pure Rope because suppression is significant and extraction is real. It is not a pure Snare because beneficiaries are not only exploiters \u2014 consumers genuinely benefit from cheaper services, and efficiency improvements represent real technical progress. The mandatrophy is resolved by recognizing that the constraint's extractiveness depends on policy design: (1) If carbon pricing internalizes climate costs, rebound is limited and the constraint shifts toward Rope. (2) If demand-side constraints are implemented, extraction is suppressed and the constraint becomes Scaffold. (3) If the constraint remains unpriced with high suppression of alternatives, it is Snare. The current institutional arrangement (weak carbon pricing, no mandatory demand reduction, efficiency-focused policy) maintains Tangled Rope status by delivering efficiency gains (rope function) while systematically externalizing climate costs (rope + extraction). The analytical observer's mountain classification is a false summit masking this policy contingency."
+    "logic_rationale": "Extractiveness (0.38): Moderate. The constraint exhibits genuine tension between efficiency (coordination benefit) and consumption increase (extraction from carbon budget). The initial efficiency improvement is real — lower cost genuinely benefits consumers and enables expanded access. But the consumption rebound transfers this benefit upstream to resource extractors and locks downstream actors into high-consumption pathways. The extractiveness increases over time (0.15 → 0.38) as cumulative consumption rebound reveals that efficiency without demand reduction is not decarbonization. Suppression (0.42): Moderate-high. Multiple barriers prevent exit from the rebound cycle: (1) Market structure: actors face genuine price signals for the efficiency good but no price signal for the externality (carbon/resource depletion). (2) Behavioral factors: the consumption increase feels voluntary (rational response to lower prices) even though the underlying structure removes alternatives (there is no pathway to consumption increase that does not increase emissions, because the externality is not priced). (3) Policy failure: even when the mechanism is understood, policy responses remain weak because pricing the externality creates political resistance and carbon leakage. Theater ratio (0.55): Moderate-high. Significant performative content exists in both directions. Efficiency improvement narratives (LED lightbulbs, electric vehicles, renewable energy) are marketed as decarbonization solutions despite accumulated evidence that they do not reduce total emissions without demand reduction or absolute caps. Climate policy maintains efficiency mandates as primary mechanisms despite their empirical failure to decouple energy use from growth. The theater increases over time as the gap between policy promises and outcomes widens (0.35 → 0.55).",
+    "perspectival_gap": "The constraint demonstrates radically different classifications from different structural positions. The energy industry sees rope (coordination) — efficiency creates demand, demand drives their business, everyone benefits. The consumer household sees tangled rope (mixed benefit and lock-in) — they gain lower costs but become locked into high-consumption infrastructure. Industrial manufacturers see tangled rope (coordination benefit with decarbonization lock-in costs) — they benefit from cheaper energy but face expensive transition to low-carbon manufacturing. The carbon cycle and future generations see snare (pure extraction, no exit) — efficiency-driven consumption increases atmospheric loading with no consent and no compensation. The climate policy apparatus sees piton (performative ritual) — efficiency policies persist despite failing to achieve stated goals, maintained through institutional inertia. The analytical observer risks seeing mountain (natural law) — 'the paradox' presented as inevitable economic truth — but the structural data reveals this as false summit: the 'law' is the institutional failure to price externalities. The perspectival gap reveals that the constraint's classification depends entirely on whether the observer's position includes or excludes the externality from their decision calculus.",
+    "directionality_logic": "The constraint's structure produces asymmetric directionality across beneficiaries and victims. Resource extractors experience very low or negative effective extraction (d ≈ 0.10, f(d) ≈ -0.08) — they are pure beneficiaries; efficiency improvements expand their markets. Consumers experience moderate extraction (d ≈ 0.55, f(d) ≈ 0.75) — they receive coordination benefits (lower costs) but experience lock-in (increased consumption commitment). The carbon cycle and future generations experience maximum extraction (d ≈ 1.0, f(d) ≈ 1.42) — they have no optionality, no compensation, no exit. The policy apparatus experiences moderate extraction (d ≈ 0.60) because it benefits from the appearance of action (efficiency policies) while bearing the reputational cost of failing to decarbonize. The directionality values reflect structural asymmetry: those who benefit from efficiency improvements face immediate gains and low lock-in costs; those who bear the extraction costs face diffuse, delayed, and cumulative harms.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by distinguishing between local and system-level effects. At the local level (household, firm), efficiency improvements are genuine coordination gains — lower costs, same service, reduced local resource consumption. At the system level (global emissions, absolute resource depletion), efficiency improvements without demand reduction produce rebound effects that offset the local gains. The constraint contains genuine coordination (efficiency reduces local resource intensity) AND genuine extraction (the consumption rebound increases total resource extraction and locks agents into high-consumption pathways). The mandatrophy dissolves when the scope dimension is made explicit: local scope produces rope (pure coordination), global scope produces snare (extraction from the atmospheric carbon sink). The tangled rope classification at regional/national scope captures the intermediate case where local efficiency gains are offset by partial consumption rebound."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "carbon_externality_pricing",
-      "energy_sufficiency_norm",
-      "demand_destruction_policy"
+      "carbon_pricing_mechanism",
+      "demand_reduction_necessity",
+      "rebound_effect_behavioral",
+      "absolute_cap_constraint"
     ],
-    "dual_formulation_note": "Jevons Paradox is a constraint family covering distinct structural claims: (1) the empirical rebound effect magnitude (downstream of specific energy/transport/material efficiency claims); (2) the policy-design contingency (whether rebound is addressed by pricing or demand-side constraints); (3) the asymmetric distribution of efficiency benefits vs climate costs. The stories are linked because magnitude determines policy necessity, and policy choice determines whether the constraint remains Tangled Rope (mixed benefit/extraction) or shifts toward Rope (pricing) or Scaffold (sunset via demand transformation)."
+    "dual_formulation_note": "Jevons Paradox can be decomposed into three structurally distinct constraints: (1) local_efficiency_gain (ε=0.10, Rope) — efficiency improvements genuinely reduce resource intensity at the point of use. (2) consumption_rebound_mechanism (ε=0.55, Tangled Rope) — the induced consumption increase locks agents into high-consumption pathways. (3) absolute_extraction_accumulation (ε=0.72, Snare) — the net effect on total resource extraction and atmospheric carbon is determined by rebound magnitude. Each has different empirical status and different policy implications. This story presents the integrated constraint; the decomposition is linked via network edges."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.25
+      "d_value": 0.08
     }
   ]
 }

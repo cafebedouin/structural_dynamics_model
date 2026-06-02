@@ -1,0 +1,265 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper_purpose__store_of_value_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "btc_sov",
+    "story_uid": "5ebbaa67-6099-49fd-b53d-800b78574cc0"
+  },
+  "base_properties": {
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin Store-of-Value Reading: Decentralization and Full-Node Verifiability as Binding Constraints",
+    "topic_domain": "distributed_systems/monetary_theory/technology_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "long_term_holders",
+      "node_operators",
+      "mining_pools"
+    ],
+    "victims": [
+      "low_value_users",
+      "payment_use_case",
+      "merchant_adoption"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Low-Value Payment Users",
+      "comment": "PERSPECTIVE 1: LOW-VALUE PAYMENT USERS (SNARE) — Users seeking to transact in small amounts or at high frequency are structurally locked out by rising on-chain fees and 1MB block cap. No arbitrage or exit: using Bitcoin becomes economically infeasible; forced to exit Bitcoin entirely or accept off-chain intermediaries (Lightning Network, custodial exchanges). The constraint extracts from this cohort by pricing them off the base layer."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Merchant Adoption Ecosystem",
+      "comment": "PERSPECTIVE 2: MERCHANT ADOPTION ECOSYSTEM (TANGLED ROPE) — Merchants wanting Bitcoin payment settlement face coordination benefits (censorship resistance, direct settlement without intermediaries) alongside significant extraction (high fees, confirmation delays, complex integration). Constrained by technical complexity and customer demand for low-cost payments. The constraint both enables (coordination via direct settlement) and burdens (off-chain solutions required for practical payments)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Long-Term Holders and Wealth Preservation",
+      "comment": "PERSPECTIVE 3: LONG-TERM HOLDERS (ROPE) — Agents focused on wealth preservation and portfolio diversification experience Bitcoin primarily as pure coordination. The constraint (limited on-chain capacity, high verification costs) serves their interests by enforcing scarcity, preventing payment inflation, and maintaining network security through full-node participation incentives. This cohort can arbitrage by holding and benefiting from price appreciation without payment-use friction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Mining and Node Infrastructure",
+      "comment": "PERSPECTIVE 4: MINING AND NODE INFRASTRUCTURE (TANGLED ROPE) — Mining pools and full-node operators benefit from the constraint enforcement (fees rise, scarcity maintained, security model protected) but bear costs (infrastructure complexity, regulatory exposure, transaction censorship responsibility). Organized and institutionalized, with strong coordination function (securing the ledger) but also clear extraction benefits (fee capture, block rewards, network control)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Core Protocol Development and Narrative Authority",
+      "comment": "PERSPECTIVE 5: CORE PROTOCOL DEVELOPERS (TANGLED ROPE) — The developers and researchers maintaining Bitcoin's protocol (the 'Satoshi vision' interpreters) experience the constraint as both coordination (enforcing the original design principles) and extraction (they hold significant Bitcoin, benefit from scarcity, and wield narrative authority over what 'real Bitcoin' means). Constrained by network consensus requirements but with outsized influence over the interpretation and enforcement of the whitepaper's intent."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Alternative Cryptocurrency Projects",
+      "comment": "PERSPECTIVE 6: ALTERNATIVE CRYPTOCURRENCY PROJECTS (PITON) — Projects like Litecoin, Monero, or altcoins pursuing higher on-chain throughput or different transaction models experience Bitcoin's constraint as degraded institutional inertia. They see Bitcoin as maintaining the 1MB block cap and decentralization-over-capacity trade-off largely through cultural momentum and brand authority rather than technical necessity. Their existence demonstrates the constraint is not a natural law — alternatives have chosen different trade-offs."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Natural Law View: Decentralization-Capacity Trade-Off",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, decentralization and high on-chain capacity may appear to be in inherent tension due to blockchain physics: verifying more data requires more computational resources, which raises barriers to running full nodes. The constraint appears as an immutable property of distributed consensus. However, the structural data reveals this as potential false summit — the specific choice to retain 1MB blocks is a governance decision, not a law of nature. Alternative implementations (higher block sizes, sharding, rollups) demonstrate the trade-off is negotiable."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "decentralization_definition_contention",
+      "question": "What constitutes 'sufficient decentralization' in practice — minimum number of validating nodes, geographic distribution, hardware requirements for participation, or resistance to state coercion?",
+      "resolution_mechanism": "Empirical measurement of node distribution and validator requirements across periods of network stress (fee spikes, scaling debates); analysis of which metrics correlate with actual censorship resistance outcomes.",
+      "impact": "If full-node accessibility becomes the binding metric: constraint classification shifts toward Snare (fees lock out low-income participation, reducing practical decentralization). If state coercion resistance is binding: constraint classification may remain Rope (current design achieves sufficient resistance). Definition contention is the core of the reading dispute.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "The operational definition of 'sufficient decentralization' is contested between readings"
+    },
+    {
+      "id": "off_chain_layer_substitutability",
+      "question": "Do off-chain scaling solutions (Lightning Network, rollups, sidechains) truly preserve decentralization benefits, or do they reintroduce trusted intermediaries and counterparty risk at the scaling layer?",
+      "resolution_mechanism": "Comparative analysis of Lightning Network routing failures, hub concentration, liquidity requirements, and watchtower trust assumptions; longitudinal tracking of whether off-chain adoption pattern replicates traditional payment intermediation hierarchies.",
+      "impact": "If off-chain solutions preserve decentralization: the store-of-value reading is vindicated — limited on-chain capacity with off-chain scaling maintains both decentralization and eventual payment capability. If off-chain solutions fail the decentralization test: the constraint reclassifies toward Snare because it imposes decentralization costs without providing decentralization benefits.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether off-chain scaling truly preserves decentralization properties"
+    },
+    {
+      "id": "sibling_reading_empirical_foreclosure",
+      "question": "Does the electronic-cash reading's bet on higher on-chain capacity (Bitcoin Cash, forks with larger blocks) empirically demonstrate that the store-of-value reading's constraints are unnecessary, or do those forks show degraded decentralization properties validating the original constraint design?",
+      "resolution_mechanism": "Node distribution, geographic concentration, hardware requirements for validators, and state-coercion resistance outcomes in larger-block implementations; correlation between adoption and decentralization metrics.",
+      "impact": "If larger-block forks maintain comparable decentralization: the store-of-value reading's empirical case weakens — capacity is not intrinsically opposed to decentralization. The sibling reading would coexist rather than be foreclosed. If larger-block forks show degraded decentralization: the store-of-value reading's axioms are empirically validated — capacity does trade off against decentralization in practice.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Empirical test whether larger-block designs validate or invalidate the store-of-value reading's decentralization claims"
+    },
+    {
+      "id": "whitepaper_original_intent_recovery",
+      "question": "Was Satoshi Nakamoto's original design intent (inferred from the 2008 whitepaper and early implementation) fundamentally oriented toward decentralized store of value with eventual payment via off-chain scaling, or was payment the primary use case with decentralization a means to that end?",
+      "resolution_mechanism": "Textual analysis of Satoshi's writings; historical reconstruction of design choices (1MB block selection, block time, scripting language limitations); comparison with contemporaneous alternatives to determine path-dependent choices vs. deliberate constraints.",
+      "impact": "If store-of-value intent is confirmed: the reading's legitimacy increases — it follows the original design trajectory. If payment intent is confirmed: the reading is a post-hoc reinterpretation, and the electronic-cash reading has stronger grounding. Either way, this is a committer-axis question, not a structural one — the classification outcome does not change, but the axiom status (holdable vs. overridden) may shift.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Satoshi's original design intent regarding payment vs. store-of-value purpose"
+    },
+    {
+      "id": "moral_hazard_of_settlement_finality",
+      "question": "Does the constraint's enforcement of settlement finality (irreversible transactions after ~10 minutes) create moral hazard by forcing merchants to accept either payment risk or off-chain intermediaries, or does it prevent the larger moral hazard of inflation-prone payment networks?",
+      "resolution_mechanism": "Analysis of merchant dispute rates and fraud patterns under different settlement models (on-chain vs. off-chain vs. custodial); comparison of hyperinflation regimes using cryptographic scarcity vs. fiat with malleable supply.",
+      "impact": "If on-chain settlement finality reduces systemic moral hazard: the constraint is justified by coordination benefits. If off-chain intermediaries recreate traditional payment risk: the constraint merely relocates the problem rather than solving it. This affects whether the Tangled Rope classification is sustainable or collapses toward Snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether the constraint's settlement finality rules reduce or relocate moral hazard"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "btc_sov_theater_2011"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.32,
+      "id_override": "btc_sov_theater_2017"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.38,
+      "id_override": "btc_sov_theater_2023"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18,
+      "id_override": "btc_sov_extract_2011"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.38,
+      "id_override": "btc_sov_extract_2017"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.52,
+      "id_override": "btc_sov_extract_2023"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35,
+      "id_override": "btc_sov_suppress_2011"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.42,
+      "id_override": "btc_sov_suppress_2017"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.48,
+      "id_override": "btc_sov_suppress_2023"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "This constraint story instantiates the store-of-value reading of the Bitcoin whitepaper's purpose kernel. The reading interprets the whitepaper's design — 1MB block size cap, ten-minute block time, proof-of-work consensus, full-node verifiability requirements — as binding commitments to decentralization and censorship resistance, with payment use subordinated to preserving these properties. Under this reading, the constraint is that on-chain capacity must remain limited to enforce the decentralization and verification guarantees that define Bitcoin's value proposition as a neutral, uncensorable store of value. The alternative electronic-cash reading (not generated here) interprets the same whitepaper as optimizing primarily for peer-to-peer cash transactions, with decentralization as a means to that end rather than an end in itself. The two readings invert the priority hierarchy: store-of-value subordinates capacity to decentralization; electronic-cash subordinates decentralization costs to transaction throughput. This is not a mere difference of opinion — it is a structural difference in the kernel's interpretation that produces different victim/beneficiary sets, different extractiveness values, and different classification outcomes from the same perspectives.",
+    "key_agents": [
+      "Long-term holders (institutional/arbitrage): Primary beneficiaries — constraint enforces scarcity and justifies premium valuations; no friction in this use case",
+      "Mining and node infrastructure (organized/constrained): Beneficiaries receiving fees and network control; bear costs of maintaining full nodes and managing block space",
+      "Low-value payment users (powerless/trapped): Primary victims — priced off base layer by limited capacity and rising fees; no viable alternative within Bitcoin itself",
+      "Merchant adoption ecosystem (moderate/constrained): Secondary victims — must choose between payment friction (high fees, slow confirmation) or off-chain intermediaries (counterparty risk, custody)",
+      "Core protocol developers (institutional/constrained): Narrative authority and beneficiary through interpretive control; constrained by network consensus requirements and institutional inertia",
+      "Alternative cryptocurrency projects (moderate/mobile): Demonstrate the constraint is not natural law; their adoption of different trade-offs proves the choice is contingent",
+      "Analytical observer (analytical/analytical): Risks naturalizing a governance choice as an immutable property of distributed consensus"
+    ],
+    "logic_rationale": "Extractiveness (0.52): Moderate-high and rising. In the early years (2011), extractiveness was low — the network was not full, fees were negligible, and on-chain capacity was not binding. As adoption grew and the block space became scarce (2017 scaling debate, 2023 ordinals/BRC-20 activation), extractiveness rose. The constraint now extracts by forcing users into tiers: wealthy investors and institutions transact on-chain; low-value users and payment use cases are priced off. The rising trajectory reflects not a change in the rule (1MB blocks remain fixed) but a change in how binding that rule has become as demand exceeded supply. Suppression (0.48): Moderate and rising. Early suppression was low because the constraint was not yet binding. Current suppression includes: technical barriers to running full nodes (hardware requirements, bandwidth), ecosystem fragmentation (not all wallets support Lightning or sidechains), regulatory uncertainty around off-chain solutions, and social pressure against capacity increases (which supporters frame as diluting the decentralization principle). The suppression is not total — users can exit to altcoins or custodial solutions — but the friction is substantial. Theater ratio (0.38): Low-to-moderate. The constraint has relatively high functional content (full nodes do verify the ledger; decentralization does prevent unilateral rule changes) but exhibits some performative elements. Theater has crept upward as the narrative emphasis on 'Satoshi's vision' and 'the original design' increasingly functions as justification independent of whether the current implementation still achieves superior decentralization outcomes. The constraint's legitimacy increasingly rests on historical authority rather than continuous verification of decentralization benefits.",
+    "perspectival_gap": "The store-of-value reading produces dramatically different classifications depending on who is positioned as the observer. Long-term holders experience pure coordination (Rope) because the constraint serves their goals without friction. Low-value users experience pure extraction (Snare) because they are locked out with no realistic exit. Merchants experience mixed coordination-extraction (Tangled Rope) — they benefit from settlement finality and censorship resistance but suffer from capacity constraints. Mining pools experience mixed benefits and costs (Tangled Rope). The alternative cryptocurrency projects see the constraint as degraded institutional inertia (Piton) — they have chosen different trade-offs, proving it is not immutable. The analytical observer risks seeing a natural law (Mountain) when in fact the 1MB block choice was a governance decision. The widest gap is between the powerless (Snare) and the institutional beneficiaries (Rope) — the same constraint is experienced as pure extraction by one cohort and pure coordination by another.",
+    "directionality_logic": "Directionality (d) for each perspective is derived from the agent's power level, exit options, and beneficiary/victim status. Long-term holders: institutional power + arbitrage exit + beneficiary status → low d → low experienced extraction (Rope). Low-value users: powerless + trapped exit + victim status → high d → high experienced extraction (Snare, maximum chi). Merchants: moderate power + constrained exit + mixed beneficiary/victim status → moderate d → moderate extraction (Tangled Rope). The core mechanism: beneficiaries of the constraint have arbitrage options (they can access Lightning, exchanges, custodial wallets) and thus experience low or negative effective extraction chi, even though the base extractiveness is substantial. Victims lack arbitrage options — they must either accept the constraint or exit Bitcoin entirely — and experience high chi. The constraint's directionality profile is highly asymmetric: it systematically favors large holders over payment users.",
+    "kernel_context": "This story instantiates the STORE-OF-VALUE READING of the kernel: bitcoin_whitepaper_purpose. The kernel is the Bitcoin whitepaper's stated design goals, which are contested between two major interpretations. The store-of-value reading prioritizes decentralization and full-node verifiability as binding constraints on on-chain capacity. The electronic-cash reading (alternative constraint story, not generated here) prioritizes peer-to-peer transactions and payment functionality, treating decentralization as a secondary property. The readings coexist in the Bitcoin ecosystem — different factions hold different interpretations, and no single framework resolves the dispute. Both readings cite the same 2008 whitepaper as authority; the readings differ in how they weight Satoshi's framing ('a peer-to-peer electronic cash system' vs. 'a proof of concept for a new kind of money'). The store-of-value reading's normative claim is that Bitcoin's fundamental value proposition depends on cryptographic scarcity and decentralized consensus, which require limiting on-chain capacity to keep verification costs manageable. The electronic-cash reading's normative claim is that Bitcoin's value depends on adoption as a practical payment medium, which requires sufficient on-chain capacity to serve merchant and consumer use cases. The constraint's extractiveness and classification outcomes differ between readings: the store-of-value reading classifies the constraint as Tangled Rope (mixed coordination and extraction, benefiting holders but extracting from payment users); the electronic-cash reading would likely classify the same structural phenomenon as Snare (pure extraction imposed by artificial scarcity). The readings do not foreclose each other — both remain live positions — but they influence each other: higher on-chain fees (driven by the store-of-value reading's capacity constraint) create pressure toward the electronic-cash reading's reinterpretation.",
+    "mandatrophy_analysis": "The store-of-value reading avoids mandatrophy by maintaining genuine coordination benefits (censorship resistance, settlement finality, decentralized consensus) alongside measurable extraction (fee capture from low-value users, price appreciation for early holders). The constraint is not pure extraction masquerading as coordination; nor is it pure coordination inappropriately taxing low-value use cases. The Tangled Rope classification is structurally justified. However, the reading faces a mandatrophy risk: as the gap between payment costs and store-of-value benefits widens, the constraint may reclassify toward Snare if it becomes clear that off-chain solutions cannot actually preserve decentralization properties. The measurement trajectory (extractiveness rising from 0.18 to 0.52 over 12 years) shows the constraint becoming more extractive over time — whether this remains justified depends on the resolution of the off-chain substitutability omega. If Lightning Network fails to preserve decentralization and users are forced into custodial intermediaries, the constraint would reclassify as Snare with mandatrophy unresolved. The reading survives mandatrophy review only if off-chain scaling truly maintains the coordination benefits promised."
+  },
+  "boltzmann": {
+    "coordination_type": "global_infrastructure"
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_whitepaper_purpose__electronic_cash_reading"
+    ],
+    "dual_formulation_note": "The bitcoin_whitepaper_purpose kernel decomposes into two constraint stories with different epsilon values and structural properties. The store-of-value reading (this file) focuses on decentralization as binding and treats capacity as subordinate; epsilon = 0.52, classification Tangled Rope at institutional beneficiary level. The electronic-cash reading (sibling constraint) prioritizes payment functionality and treats decentralization as secondary; epsilon would differ (expected ~0.65, Snare from low-value users' perspective) and victim/beneficiary relationships would invert. The readings are structurally distinct constraints arising from the same kernel, related by the reading_relations edges in cs_structure."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.18
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "decentralized_store_of_value_with_eventual_payment",
+    "drift_state": {
+      "moment": "contemporary_2026",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": true
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "bitcoin_whitepaper_purpose__electronic_cash_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "decentralization_binds_capacity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "censorship_resistance_primacy",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "header": {
+    "constraint_id": "resource_lock_in_mechanism",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rlockin",
+    "story_uid": "e618c47e-a67c-43da-8b05-e54151395e80"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Resource Lock-in Mechanism in AI Safety Research",
+    "topic_domain": "ai_safety/technology_governance/risk_assessment",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "compute_resource_holders",
+      "established_safety_labs"
+    ],
+    "victims": [
+      "independent_researchers",
+      "novel_methodology_development",
+      "safety_epistemology_diversity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Independent Safety Researcher",
+      "comment": "PERSPECTIVE 1: INDEPENDENT RESEARCHER (SNARE) — Lacks access to GPU clusters, proprietary model weights, and institutional compute budgets. Cannot verify claims about frontier AI systems without resources only labs control. Faces publication barriers in venues dominated by resource-rich institutions. Maximum extraction: researchers must abandon ambitious safety questions or join large labs, surrendering research autonomy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Mid-Tier Safety Lab",
+      "comment": "PERSPECTIVE 2: MID-TIER SAFETY LAB (TANGLED ROPE) — Partially integrated into resource allocation (cloud credits, some model access) but constrained by funding rounds and corporate partnership requirements. Benefits from coordination around shared safety evaluation protocols, but extraction persists: research directions must align with compute-provider priorities; reproducibility becomes a negotiation with proprietary platform owners."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Compute Resource Holder",
+      "comment": "PERSPECTIVE 3: COMPUTE RESOURCE HOLDER (ROPE) — Cloud providers and AI labs control access to frontier model weights and GPU clusters. Experience the constraint as pure coordination: allocating research credits enables external validation of safety claims (coordination benefit). Net beneficiary through pricing leverage, data from research results, and control over research agendas."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Established Safety Lab",
+      "comment": "PERSPECTIVE 4: ESTABLISHED SAFETY LAB (TANGLED ROPE) — Receives substantial compute allocations and model access, enabling ambitious research. But also constrained: funding depends on continued partnership with compute holders; research agendas implicitly directed toward questions compute providers find strategically useful; publication of critical findings may risk access revocation. Mixed: genuine coordination on safety evaluation, but asymmetric extraction on research autonomy and agenda-setting."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Academic Grant System",
+      "comment": "PERSPECTIVE 5: ACADEMIC GRANT SYSTEM (PITON) — Traditional peer-review-based research funding is performatively relevant but functionally downstream of resource lock-in. Grant programs claim to evaluate safety research merit, but computational resource access is controlled elsewhere (industry labs, cloud providers). The grant system persists as a coordinating mechanism but has lost functional control over research directions. Theater ratio high because grant committees simulate independence while actual constraints are enforced by proprietary resource holders."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, frontier AI safety research requires frontier model access; this is inherent to the domain. Verification of safety claims about GPT-scale systems requires GPT-scale compute; you cannot test trillion-parameter models on academic hardware. From this view, the resource concentration is an immutable natural law of the field. However, structural data reveals this as a false summit: the lock-in is contingent on proprietary model architectures and cloud computing business models, not on physics."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "open_weight_sufficiency",
+      "question": "Do open-weight model releases (Llama, Mistral) provide sufficient frontier-capability access for independent safety research, or do they lag proprietary systems enough that researchers remain locked into commercial access?",
+      "resolution_mechanism": "Comparative safety evaluation capability: can researchers verify specific safety properties (jailbreak resistance, alignment, interpretability) using open-weight models at equivalent scale to claims about proprietary systems? Longitudinal tracking of safety research productivity from open-weight era vs proprietary-only era.",
+      "impact": "If open-weight models suffice: resource lock-in degrades to a tangled rope (some extraction remains, but alternatives exist). If open-weight models lag: lock-in remains snare-level for frontier research; open-weight enables only lower-tier safety work.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Sufficiency of open-weight models for frontier safety research"
+    },
+    {
+      "id": "research_direction_capture",
+      "question": "To what extent are safety research agendas shaped by compute-holder priorities (interpretability over alignment, safety evals over mechanism design) versus researcher-driven scientific questions?",
+      "resolution_mechanism": "Citation and publication pattern analysis: research directions that require proprietary access vs those that do not; funding flow analysis; interviews with researchers about agenda constraints; historical case studies of safety research directions that were abandoned due to compute unavailability.",
+      "impact": "If capture is substantial (>60%): extraction mechanism is institutional (agenda-setting control). If capture is low (<20%): constraint is primarily a coordination problem. Magnitude directly affects whether constraint remains tangled rope or degrades to rope.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Degree of research agenda capture by compute holders"
+    },
+    {
+      "id": "natural_law_or_artifact",
+      "question": "Is the requirement for proprietary model access an inherent property of frontier AI safety research, or a contingent artifact of the current industry structure (proprietary architectures, closed training data, commercial cloud compute)?",
+      "resolution_mechanism": "Historical counterfactual: what safety research would be possible if architectures and training data were open? Design analysis: what would research need to look like to avoid proprietary access dependency? Long-term trajectory: do open-source models converge toward parity with proprietary systems, or do proprietary systems maintain permanent capability gap?",
+      "impact": "If natural law: mountain classification is correct, constraint is immutable. If artifact: constraint is a false summit — it is socially contingent and could be reorganized through open-source development, public compute investment, or regulation requiring safety researchers' access to proprietary systems.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether resource lock-in is inherent to AI safety research or contingent to industry structure"
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_intentional",
+      "question": "Is the measured suppression (barriers to independent research) primarily structural (you genuinely cannot run GPT-4 scale experiments on consumer hardware) or intentional (compute holders actively restrict access)?",
+      "resolution_mechanism": "Analysis of access policies: are compute holders proactively denying researchers access, or is access simply unavailable due to cost/capacity? Behavioral evidence: do researchers with legitimate safety purposes gain access if they request it? Do compute holders invest in improving access for safety research, or do access barriers persist despite stated commitment to AI safety?",
+      "impact": "If structural: suppression is difficult to change and lock-in may be unavoidable absent public compute investment. If intentional: suppression is a deliberate enforcement mechanism, making the constraint a more severe extraction device and suggesting policy intervention points (mandatory access, research right-to-audit, public compute infrastructure).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural or intentionally enforced"
+    },
+    {
+      "id": "research_autonomy_vs_resource_necessity_tradeoff",
+      "question": "What degree of research autonomy loss is acceptable in exchange for access to frontier model safety research? At what point does resource dependency become extractive rather than coordinative?",
+      "resolution_mechanism": "Researcher interviews and surveys: self-reported autonomy constraints; cases of research directions modified or abandoned due to compute provider preferences. Comparison to adjacent fields: how much autonomy loss do researchers accept in other high-cost domains (particle physics, astronomy)? Institutional analysis: governance structures in resource-constrained research.",
+      "impact": "If autonomy loss is minimal: constraint is closer to rope (coordination with minor asymmetry). If autonomy loss is severe: constraint is deeper tangled rope or snare. This determines whether the constraint can be reframed as legitimate access pricing or whether it constitutes extractive research capture.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Acceptable tradeoff between research autonomy and resource access"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.5
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.55
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The resource lock-in mechanism in AI safety research creates a structural asymmetry between compute-rich institutions (large labs, well-funded safety organizations, cloud providers) and compute-poor actors (independent researchers, novel methodology developers, safety epistemology pluralists). This constraint combines genuine coordination problems — frontier safety research genuinely requires access to frontier models — with extractive dynamics: those who control compute access also shape what safety questions get asked, which methodologies get validated, and which researchers can participate. The constraint exhibits three distinct structural features: (1) a material barrier (you cannot verify GPT-4 safety claims on your laptop), (2) an institutional barrier (compute-holding organizations control which researchers gain access), and (3) an epistemic barrier (the field converges on compute-holder-aligned safety methodologies because only those methodologies can be empirically validated at scale). The theater_ratio (0.55) reflects that grant programs, conferences, and journals claim to evaluate safety research merit, but the actual constraint enforcement happens through proprietary compute access — the academic evaluation system is performatively independent while functionally downstream of industry resource control.",
+    "key_agents": [
+      "Independent Researchers: Primary victims (powerless/trapped) — cannot access compute required for frontier-level safety research; face barriers to publication and funding",
+      "Novel Methodology Developers: Primary victims (moderate/constrained) — research approaches that don't align with compute-holder priorities cannot be empirically validated; face high barriers to proof-of-concept",
+      "Safety Epistemology Diversity: Collective victim (powerless/trapped) — the field cannot sustain multiple competing epistemologies for safety when only compute-holder-aligned methods can reach empirical maturity",
+      "Compute Resource Holders (Cloud Providers, AI Labs): Primary beneficiaries (institutional/arbitrage) — control research directions through access allocation; extract research insights for product development; shape industry narrative around safety priorities",
+      "Established Safety Labs: Secondary beneficiary (institutional/constrained) — receive substantial allocations and influence; constrained by dependency on continued compute access and implicit alignment with compute-holder priorities",
+      "Academic Grant System: Performative actor (institutional/arbitrage) — maintains appearance of research direction control but functionally downstream of proprietary resource allocation",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing contingent resource distribution as inherent scientific requirement"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The resource dependency creates asymmetric benefits: compute holders gain research insights and directional influence from subsidized external research; researchers gain necessary access but lose autonomy and compete for scarce allocation. The value is not at snare-level (0.70+) because coordination genuinely occurs — safety evaluation is possible and valuable. But it exceeds rope-level (0.35) because access is contingent on alignment with compute-holder preferences. The upward trajectory (0.35 → 0.48 → 0.58) reflects accumulating lock-in as frontier models become more concentrated in industry hands and the technical barrier to entry grows. Suppression (0.62): Moderate-high. Barriers include: (1) cost of frontier compute ($100K+ for large-scale experiments), (2) proprietary model weight restrictions (researchers cannot legally train on GPT-4), (3) publication norms (journals expect frontier-scale experiments), (4) career incentives (researchers who depend on cloud credits cannot build independent reputations), (5) institutional barriers (small labs have weaker negotiating positions than consortium members). The upward trajectory (0.48 → 0.62) reflects tightening proprietary restrictions and increasing compute cost. Theater ratio (0.55): Moderate. Academic evaluation mechanisms (peer review, grant committees, conference acceptance) appear to control research directions but lack actual enforcement power — compute access is the real gating mechanism. Grant programs sponsor safety research but cannot fund the compute itself; conferences validate methodologies but those methodologies must be computable within proprietary constraints; journals publish findings but those findings must involve proprietary systems. The theater persists because it legitimizes the constraint ('peer review determines what's good research') while the actual constraint is enforced elsewhere ('you can only do good research if you have compute access').",
+    "directionality_logic": "Each perspective experiences different directional pressure (d values). Independent researchers face maximum extraction (d ≈ 0.92, full victim + trapped exit) — they cannot exercise agency within the constraint. Established safety labs face moderate extraction despite beneficiary status (d ≈ 0.58) because their autonomy is constrained by compute dependency. Compute resource holders face minimal extraction (d ≈ 0.08, beneficiary + arbitrage exit) — they control the constraint and can always exit by withdrawing resources. The scaffold perspective (visible in some framings) would assign d ≈ 0.42 to the Open Science Coalition perspective if included — organized actors building open-weight model ecosystems have some agency but face structural headwinds from proprietary capability gaps. The perspectival gap between the powerless researcher's snare (maximum extraction experienced) and the compute holder's rope (coordination experienced) is the core diagnostic signal for this constraint.",
+    "perspectival_gap": "This constraint demonstrates how the same structural reality produces radically different classifications depending on structural position. The independent researcher sees a snare: their research questions are permanently constrained by compute unavailability; they have no exit option and no benefit. The established lab sees a tangled rope: genuine safety coordination occurs (they participate in shared evaluation protocols) but with asymmetric extraction (their research autonomy is implicitly constrained). The compute holder sees a rope: providing safety researcher access is a coordination solution to the legitimate problem of validating frontier systems. The open-science coalition (if it existed as a mature force) would see a scaffold: open-weight models are building an alternative pathway with a sunset clause ('as open models mature, proprietary access becomes less necessary'). The academic grant system sees none of this — it operates at the level of performative peer review, unaware that its verdicts are downstream of resource constraints it doesn't control. The civilizational analytical observer risks seeing a mountain: frontier AI safety requires frontier models; this is inherent to the field. But the structural data reveals the false summit: the requirement for proprietary access is contingent on current industry structure, not on physics or mathematics.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by distinguishing coordination (the genuine need to test safety claims against frontier models) from extraction (the use of compute access as leverage to shape research directions). A pure coordination view would classify as rope: safety researchers need compute, compute holders provide it, mutual benefit. A pure extraction view would classify as snare: researchers are trapped by compute dependency, compute holders extract research insights and directional control. The tangled rope classification captures both: genuine coordination exists (frontier safety evaluation is possible and valuable) and genuine extraction exists (research autonomy is constrained, field directions are shaped by compute allocation choices). The false summit analytical perspective is crucial: it reveals that 'frontier safety requires proprietary access' is a claim that naturalizes industry control rather than describing an inherent natural law. The constraint could be reorganized (public compute investment, mandatory researcher access to proprietary systems, open-source development converging to frontier capabilities) — which means the resource lock-in is not a mountain, it is a socially contingent tangled rope that benefits from being framed as a natural law."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "ai_safety_methodology_convergence",
+      "interpretability_alignment_resource_bias",
+      "frontier_model_access_governance"
+    ],
+    "dual_formulation_note": "The resource lock-in mechanism is upstream of specific safety research methodologies. Downstream constraints (interpretability vs alignment trade-offs, which safety properties get empirically validated) are affected by which research directions receive compute allocation. Network decomposition: lock-in mechanism (this story) determines access distribution; methodology convergence (sibling story) documents which safety questions get asked; governance structure (sibling story) describes institutional arrangements that could reshape the lock-in."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.12
+    }
+  ]
+}

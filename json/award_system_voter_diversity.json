@@ -2,28 +2,27 @@
   "header": {
     "constraint_id": "award_system_voter_diversity",
     "version": "1.0",
-    "generated_date": "2026-02-26",
+    "generated_date": "2026-02-27",
     "status": "ACTIVE",
-    "measurement_id_prefix": "awvd"
+    "measurement_id_prefix": "award_div",
+    "story_uid": "db48a309-6030-4a17-b95e-20b4ddcd327d"
   },
   "base_properties": {
     "extractiveness": 0.52,
     "suppression": 0.58,
-    "theater_ratio": 0.65,
+    "theater_ratio": 0.64,
     "claimed_type": "tangled_rope",
     "human_readable": "Award System Voter Diversity Constraint",
     "topic_domain": "cultural_institutional/governance",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "institutional_gate_keepers",
-      "established_aesthetic_consensus"
+      "established_tradition_gatekeepers",
+      "homogeneous_voter_coalition"
     ],
     "victims": [
-      "underrepresented_creators",
-      "aesthetic_diversity",
-      "emerging_traditions"
-    ],
-    "mandatrophy_resolved": false
+      "emerging_creative_traditions",
+      "underrepresented_creators"
+    ]
   },
   "perspectives": [
     {
@@ -31,18 +30,18 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "global",
-      "label": "The Underrepresented Creator",
-      "comment": "PERSPECTIVE 1: UNDERREPRESENTED CREATOR (SNARE) \u2014 Faces structural barriers to voting eligibility: membership thresholds, institutional affiliation requirements, language/geography barriers, or exclusionary credential definitions. Trapped within the award system's gatekeeping mechanisms. Participation requires accepting the dominant aesthetic tradition as legitimate metric. Maximum extraction experienced \u2014 no exit short of abandoning the field."
+      "spatial_scope": "continental",
+      "label": "The Emerging Creator Outside the Voter Coalition",
+      "comment": "PERSPECTIVE 1: EMERGING CREATOR (SNARE) — Trapped by structural exclusion from voter access and nomination gatekeeping. No mechanism to self-select into the award system; must prove work's worth via external validation that the system itself constrains. Maximum experienced extraction: career stigma of 'not award-winning' persists even when work objectively matches award criteria under blind evaluation."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "moderate",
-      "time_horizon": "generational",
+      "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Emerging Community",
-      "comment": "PERSPECTIVE 2: EMERGING CREATIVE COMMUNITY (TANGLED ROPE) \u2014 Benefits from award system recognition when it breaks through (establishes legitimacy, attracts resources) but faces high barriers to voting participation. Constrained by credential requirements and network gatekeeping. System coordinates some cross-community visibility while extracting through access barriers and vote concentration. Mixed structural position \u2014 some coordination benefit, significant extraction cost."
+      "label": "The Insider Creator with Marginal Status",
+      "comment": "PERSPECTIVE 2: INSIDER CREATOR WITH MARGINAL STATUS (TANGLED ROPE) — Has access to nomination and voting but constrained by expectation of conformity to established aesthetic. Experiences both coordination benefit (award validation carries institutional weight) and extraction (must suppress innovative impulses to remain electable). Career damage from experimentation; marginal chance of award even if work is nominated."
     },
     {
       "classification_type": "rope",
@@ -50,17 +49,17 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Established Institution",
-      "comment": "PERSPECTIVE 3: ESTABLISHED INSTITUTION (ROPE) \u2014 Benefits from homogeneous voter pool that reliably validates established aesthetic consensus. Experiences the award system as pure coordination: defining standards, communicating achievements across the field, directing resources to validated traditions. Net beneficiary with maximum exit flexibility \u2014 can adapt voting criteria without reputational cost."
+      "label": "The Established Tradition Gatekeeper",
+      "comment": "PERSPECTIVE 3: ESTABLISHED TRADITION GATEKEEPER (ROPE) — Benefits from coordination: award validates their aesthetic, reinforces their position as arbiter of excellence, and legitimates their curatorial selections. Experiences the constraint as pure coordination — they are solving the problem of recognizing excellence within their tradition. No perceived extraction because they occupy the beneficiary position."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
-      "exit_options": "mobile",
+      "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The Reform Coalition",
-      "comment": "PERSPECTIVE 4: DIVERSITY REFORM COALITION (SCAFFOLD) \u2014 Organized reform agents (diversity committees, alternative awards, open-access voting systems) see voter diversity constraints as temporary institutional failures with clear sunset mechanisms. Diversity expansion, quota systems, and alternative award structures represent pathways toward distributed legitimacy. Suppression declines over the time horizon as alternative systems mature. Has sunset clause \u2014 as new voting mechanisms establish parallel prestige, the original constraint's enforcement power weakens."
+      "label": "The Diversity Reform Coalition",
+      "comment": "PERSPECTIVE 4: DIVERSITY REFORM COALITION (SCAFFOLD) — Organized pressure (emerging voters, alternative award bodies, social media accountability) sees the homogeneous-voter constraint as a temporary institutional failure with a sunset. Diversity initiatives (expanding nominator pools, blind evaluation, demographic quotas for voters) are structural reforms with clear success metrics. Extraction falls as voter demographic barriers erode. Sunset logic: 15-25 years for norms to institutionalize 'diversity' as a structural feature rather than a reform goal."
     },
     {
       "classification_type": "piton",
@@ -69,7 +68,7 @@
       "exit_options": "arbitrage",
       "spatial_scope": "global",
       "label": "The Award Institution Itself",
-      "comment": "PERSPECTIVE 5: THE AWARD INSTITUTION (PITON) \u2014 The award mechanism itself sees diversity constraints as performance ritual: diversity statements, inclusion policies, and expanding membership categories are largely theatrical responses to external pressure. Core voting gatekeeping persists through institutional inertia despite visible commitment to diversity. The theater has increased as pressure has mounted, but functional verification (actual voter composition, actual access barriers) remains stable or worsens. Maintained by prestige inertia, not because it achieves stated diversity goals."
+      "comment": "PERSPECTIVE 5: AWARD INSTITUTION ITSELF (PITON) — The institution maintains the voter diversity ritual as theater: diversity statements, expanded nominator recruitment, demographic reports. But actual voter composition and award outcomes show structural inertia — the core voting coalition remains homogeneous, and 'diversity winners' often reproduce established aesthetic preferences. The theater ratio is high: the institution performs diversity work while extractive outcomes persist. This is inertial maintenance, not functional reform."
     },
     {
       "classification_type": "mountain",
@@ -77,46 +76,46 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer (Natural Law View)",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal frame, some aesthetic consensus concentration is inherent to how cultural validation operates: novel traditions take time to establish legitimacy, and the gap between emergence and recognition is a structural feature of cultural evolution. This perspective sees voter homogeneity as an immutable property of cultural authority systems. However, the structural data contradicts the mountain classification \u2014 the engine's false summit detector identifies it as naturalization of a contingent institutional arrangement that concentrates gatekeeping power."
+      "label": "The Analytical Observer (Aesthetic Universality View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / AESTHETIC UNIVERSALITY VIEW (MOUNTAIN) — From a civilizational perspective, excellence in artistic fields has objective criteria that transcend demographics: great work is great work regardless of creator origin. This perspective sees diversity concerns as performative — the real constraint is that voter coalitions must converge on shared aesthetic standards, and such convergence necessarily excludes alternatives. However, this naturalizes what is actually a contingent institutional arrangement: the specific standards that gatekeepers defend are culturally contingent, not universal. The engine will detect this as a false summit."
     }
   ],
   "omegas": [
     {
-      "id": "diversity_threshold_ambiguity",
-      "question": "What threshold of voter diversity constitutes genuine representation vs performative inclusion?",
-      "resolution_mechanism": "Longitudinal analysis of voting outcome distributions relative to voter population composition; measurement of decision-making influence by underrepresented voters across award categories",
-      "impact": "If threshold is demographic parity (50%+ underrepresented voters): current system is snare for majority of creators. If threshold is proportional influence: system may achieve tangled rope. If threshold is merely presence: piton classification dominates (theater without function).",
+      "id": "aesthetic_universality_contingency",
+      "question": "Are the established aesthetic standards that gatekeepers defend genuinely universal, or are they culturally contingent preferences that function as universal because they control the voting mechanism?",
+      "resolution_mechanism": "Comparative analysis of award-winning work from homogeneous vs. diverse voter coalitions; identification of systematic difference in selected aesthetic properties; longitudinal tracking of which 'universal' standards persist when voter demographics shift",
+      "impact": "If universal: diversity reform is theater (Piton dominates). If contingent: diversity reform is structural necessity (Scaffold dominates, and award system reclassifies from Mountain to Tangled Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether aesthetic standards are universal or contingently defended through gatekeeping"
+    },
+    {
+      "id": "voter_homogeneity_mechanism",
+      "question": "Is voter homogeneity a structural feature of how awards are administered (formal barriers, self-selection by existing voters, nomination gatekeeping) or an emergent outcome of meritocratic self-selection?",
+      "resolution_mechanism": "Historical analysis of voter recruitment, nomination pathways, and demographic barriers; comparison of demographic composition in fields with explicit diversity mandates vs. laissez-faire selection; identification of veto points in nomination and voting pathways",
+      "impact": "If structural: diversity reform can meaningfully alter outcomes (Scaffold). If emergent meritocratic outcome: diversity reform will be resisted or reversed as voters converge again on shared standards (Piton).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Threshold for genuine diversity representation vs performance"
+      "description": "Whether voter homogeneity is structural or emergently meritocratic"
     },
     {
-      "id": "aesthetic_meritocracy_assumption",
-      "question": "Does homogeneous voting pool reflect genuine aesthetic meritocracy or learned consensus bias within a dominant tradition?",
-      "resolution_mechanism": "Comparative analysis: outcomes when same works evaluated by in-group voters vs out-group voters; examination of voting patterns for boundary-case works (aesthetically experimental, traditionally undervalued); historical analysis of overturned judgments",
-      "impact": "If meritocratic: current gatekeeping is justified; diversity is additive. If consensus-biased: gatekeeping is extractive; diversity is corrective to systematic undervaluation.",
+      "id": "extraction_mechanism_locus",
+      "question": "Does the award system's extractive power operate primarily through direct gatekeeping (excluding creators from nomination/voting) or through normalization (making emerging traditions appear inferior until they conform)?",
+      "resolution_mechanism": "Comparative analysis of creator trajectories: those excluded from nomination vs. those nominated but marginalized; measurement of work quality perception before/after award outcomes; tracking of aesthetic innovation rates in nominated vs. non-nominated traditions",
+      "impact": "If direct gatekeeping: extraction is structural and measurable (Snare classification strengthens). If normalization: extraction operates through internalized inferiority framing (identity_locked exit applies, classification shifts to Tangled Rope with identity-lock binding).",
       "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether homogeneous voting reflects meritocracy or consensus bias"
+      "type_class": "empirical",
+      "description": "Whether extraction operates through direct exclusion or normalization"
     },
     {
-      "id": "alternative_legitimacy_pathway_viability",
-      "question": "Can parallel award systems (crowdsourced, community-based, algorithmic) establish sufficient prestige to reduce extraction from the traditional system?",
-      "resolution_mechanism": "Tracking of prestige metrics: citation/recognition rates for alternative-award winners; career outcomes for creators validated through non-traditional pathways; funding and opportunity access through alternative legitimacy channels",
-      "impact": "If alternative pathways gain parity prestige: scaffold sunset is real \u2014 extraction mechanism weakens as creators gain exit options. If alternatives remain marginal: suppression persists; snare classification hardens.",
+      "id": "diversity_reform_capture_risk",
+      "question": "As award systems expand voter diversity, will emerging traditions be genuinely empowered, or will diversity measures be captured by the established coalition (diversity window-dressing) and new standards be synthesized that still exclude alternatives?",
+      "resolution_mechanism": "Longitudinal tracking of award outcomes as voter demographics shift; identification of aesthetic standards that persist across diverse voter cohorts vs. standards that change; comparison of innovation rates in emerging traditions before/after diversity expansion",
+      "impact": "If empowerment: Scaffold is real (constraint has sunset). If capture: Piton is the long-term attractor (theater ratio remains high, actual extraction persists, reform becomes maintenance ritual).",
       "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether alternative award systems can establish competitive prestige"
-    },
-    {
-      "id": "identity_lock_voter_participation",
-      "question": "Are gatekeeping voters locked into exclusionary criteria by internalized professional identity rather than external enforcement?",
-      "resolution_mechanism": "Qualitative analysis of voter reasoning; measurement of voting change when professional identity frames are explicitly challenged; longitudinal tracking of voters who shift criteria",
-      "impact": "If identity-locked: voter diversity achieves rope/scaffold only through identity frame disruption (training, cultural critique). If structurally constrained: diversity achieves rope through institutional policy change alone.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether voter gatekeeping is identity-locked or structurally enforced"
+      "type_class": "preference",
+      "description": "Whether diversity reform will be captured or substantive"
     }
   ],
   "measurements": [
@@ -127,64 +126,78 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 3,
-      "value": 0.45
+      "time_point": 10,
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 6,
+      "time_point": 20,
       "value": 0.52
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.48
+      "value": 0.42
     },
     {
       "metric": "theater_ratio",
-      "time_point": 3,
+      "time_point": 10,
       "value": 0.58
     },
     {
       "metric": "theater_ratio",
-      "time_point": 6,
-      "value": 0.65
+      "time_point": 20,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.58
     }
   ],
   "interval": {
     "start": 0,
-    "end": 6
+    "end": 20
   },
   "commentary": {
-    "narrative_context": "Award systems function simultaneously as coordination mechanisms (establishing shared standards for excellence across a cultural field) and as extraction systems (concentrating gatekeeping power in homogeneous voter populations that validate established traditions while excluding emerging ones). The constraint exhibits the full range of DR classification from different structural positions: institutional gatekeepers experience pure coordination (rope), underrepresented creators experience pure extraction (snare), reform coalitions see a temporary institutional failure with clear remedies (scaffold), and the award institution itself uses diversity rhetoric to maintain core gatekeeping unchanged (piton). The theater ratio (0.65) reflects that diversity initiatives \u2014 expanded membership, equity committees, inclusion statements \u2014 are largely performative responses that leave core voting gatekeeping mechanisms intact. The extractiveness (0.52) reflects genuine career and opportunity asymmetries faced by underrepresented creators competing in fields where voting pools concentrate validation power. This constraint demonstrates how institutional legitimation systems use diversification theater to absorb external pressure while preserving extraction mechanisms.",
+    "narrative_context": "Award systems in cultural fields (literature, music, visual arts, film) function simultaneously as coordination mechanisms that establish shared excellence standards across dispersed creative communities and as extraction systems that concentrate gatekeeping power in homogeneous voter populations. The voter diversity constraint captures this dual function: the award system must converge voters on shared judgment criteria (coordination) while the actual voter coalition systematically excludes creators and aesthetic traditions outside its cultural frame (extraction). The constraint exhibits the full range of DR classifications from different structural positions. Established tradition gatekeepers experience pure coordination (Rope) — the award validates their aesthetic and reinforces their curatorial authority. Emerging creators outside the voter coalition experience pure extraction (Snare) — structural exclusion from nomination and voting mechanisms. The award institution itself maintains the appearance of addressing diversity through expanded nominator pools, demographic reporting, and diversity statements, but actual voting outcomes remain concentrated in the established coalition (Piton — high theater, persistent extraction). The diversity reform coalition sees this as a temporary institutional failure with a sunset (Scaffold) — expanding voter demographics and implementing blind evaluation are structural reforms with measurable success criteria. The civilizational analytical observer risks naturalizing this as an immutable law of aesthetic judgment (Mountain) — that convergent voting on shared standards necessarily excludes alternatives — when the specific standards are contingently defended, not universal.",
     "key_agents": [
-      "Underrepresented Creators: Primary victim (powerless/trapped) \u2014 face credential barriers, network exclusion, and aesthetic devaluation; no exit short of field abandonment",
-      "Emerging Creative Communities: Secondary victim (moderate/constrained) \u2014 structurally mobile but face high participation costs; benefit from occasional breakthrough recognition but most excluded from voting",
-      "Established Institutions: Primary beneficiary (institutional/arbitrage) \u2014 homogeneous voters validate established traditions; maximum flexibility in adapting criteria without reputational cost",
-      "Diversity Reform Coalition: Organized agent (organized/mobile) \u2014 institutional diversity committees, alternative awards, open-voting systems; building parallel legitimacy pathways",
-      "Award Institution Leadership: Institutional actor (institutional/arbitrage) \u2014 maintains voting gatekeeping while performing diversity commitment; sees diversity as risk-management ritual",
-      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent gatekeeping as inherent to cultural excellence"
+      "Established Tradition Gatekeepers: Primary beneficiary (institutional/arbitrage) — voter coalition controls nomination gatekeeping, defines excellence criteria, receives award validation that reinforces their curatorial authority",
+      "Emerging Creators Outside the Coalition: Primary victim (powerless/trapped) — excluded from nomination pathways, cannot self-select into voting, face career stigma of 'not award-winning' even when work meets objective criteria under blind evaluation",
+      "Insider Creators with Marginal Status: Secondary victim (moderate/constrained) — access to voting but constrained by aesthetic conformity pressure; career damage from innovation outside established preferences",
+      "Diversity Reform Coalition: Organized agents (organized/constrained) — social media accountability, alternative award bodies, emerging voters pushing expansion of nomination pools and voter demographics; see diversity as structural reform with sunset logic",
+      "Award Institution Administrative Body: Institutional actor (institutional/arbitrage) — maintains diversity rhetoric and performative expansion (expanded nominator categories, demographic reports) while core voter coalition remains structurally homogeneous",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing contingent aesthetic preferences as universal standards; false summit candidate"
     ],
-    "logic_rationale": "Extractiveness (0.52): Moderate-high. Underrepresented creators face real opportunity costs (reduced access to resources, visibility, career advancement) from voting exclusion, but extraction is not total \u2014 some creators do break through, and parallel prestige pathways are emerging. The value reflects that gatekeeping power is substantial but not absolute; escape is possible at high cost. Suppression (0.58): Moderate-high. Structural barriers include membership requirements, credential definitions, geographic/linguistic factors, and network gatekeeping. Underrepresented voters face multiple overlapping barriers \u2014 no single dominant barrier, but cumulative suppression is high. Theater ratio (0.65): High. Diversity initiatives (expanded membership tiers, equity committees, inclusion statements, external scrutiny) are substantially performative \u2014 they signal commitment to diversity without reducing core voting gatekeeping. Award institutions display high theater because diversity pressure is external and rising, forcing performative response while core mechanisms remain unchanged. The theater has increased over the interval from 0.48 to 0.65 as diversity critique has intensified.",
-    "perspectival_gap": "The established institution experiences the award system as pure coordination (rope) \u2014 defining standards, communicating validated achievements, directing resources to recognized traditions. The underrepresented creator experiences the same system as pure extraction (snare) \u2014 barriers to participation, devaluation of non-traditional aesthetics, concentration of gatekeeping power. The emerging community sees mixed coordination and extraction (tangled rope) \u2014 the system enables recognition when breakthrough occurs but erects high barriers to participation. The reform coalition sees a temporary institutional failure with remedies (scaffold) \u2014 diversity initiatives, alternative awards, and distributed legitimacy are building sunset mechanisms. The institution itself performs diversity commitment while maintaining gatekeeping (piton) \u2014 theater increases (visible diversity statements) while core extraction mechanisms persist. The civilizational analytical observer risks naturalizing gatekeeping as inherent to cultural authority (mountain), but structural evidence reveals this as contingent institutional arrangement.",
-    "directionality_logic": "Directionality is derived from structural position relative to gatekeeping power. Established institutions with high aesthetic validation and voting arbitrage experience d \u2248 0.15 (beneficiaries with low extraction). Underrepresented creators with no voting participation and trapped exit experience d \u2248 0.92 (victims with maximum extraction). Emerging communities with constrained participation experience d \u2248 0.68 (moderate victims with significant extraction). Reform coalitions with organized agency and mobile exit experience d \u2248 0.45 (organized agents with moderate extraction). The award institution itself occupies d \u2248 0.10 (beneficiary of voter homogeneity, high arbitrage flexibility). These directionality values, combined with power atoms and time horizons, produce the perspectival range from rope to snare.",
-    "mandatrophy_analysis": "CONSTRAINT FAMILY: This story decomposes into three structurally distinct constraints with different \u03b5 values that share the label 'award system voter diversity.' (1) AESTHETIC GATEKEEPING (\u03b5=0.52, Tangled Rope, this story) \u2014 career and opportunity extraction from homogeneous voting. (2) CREDENTIAL DEFINITION (\u03b5=0.35, Tangled Rope, decomposed) \u2014 structural barriers to voting eligibility (membership tiers, professional affiliation, geographic requirements). (3) CONSENSUS BIAS (\u03b5=0.42, Snare, decomposed) \u2014 aesthetic devaluation of non-traditional work beyond gatekeeping. Each has different beneficiary/victim dynamics and different remedies. Credential definition is most immediately remediable (expand eligibility, reduce barriers). Aesthetic gatekeeping requires voter diversity and behavioral change. Consensus bias requires long-term tradition shifting. The mandatrophy is resolved by recognizing that 'voter diversity' is not a single constraint but a family of three structurally distinct extraction mechanisms, each with different \u03b5 values and remedies."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The award system extracts significant value from emerging creators through structural exclusion (no nomination pathway) and normalization (emerging traditions appear inferior until they conform). However, extraction is not maximal (0.66+) because some mechanisms exist for outsider entry (social media platforms, alternative award bodies, grassroots recognition) that bypass the primary award system. The metric reflects that the primary system is substantially extractive but not monopolistic. Rising trajectory from 0.38 to 0.52 over 20 years reflects that as diversity rhetoric increases, the performative content of reform increases (theater ratio rises) while actual extraction persists or slightly worsens (emerging creators face higher normalization pressure as 'diversity' becomes an aesthetic category to conform to rather than a structural change). Suppression (0.58): Moderate-high and stable. Barriers to emerging creator participation include: nomination gatekeeping (established voters curate the eligible pool), aesthetic conformity pressure (innovation risks exclusion), information asymmetry about voting criteria, and career dependency on award status in some fields (literature, film, classical music). The stability of suppression reflects that diversity reforms have not substantially reduced these barriers — they have added rhetoric without removing mechanisms. Theater ratio (0.64): High and rising. The award institution performs diversity work extensively: diversity statements, expanded nominator categories, demographic tracking, public commitment to inclusion. But the performance outpaces structural change: core voter demographics remain concentrated, award outcomes persist in established aesthetic preferences, and the theater has increased as the gap between diversity commitment and extractive outcomes widened.",
+    "perspectival_gap": "This constraint demonstrates the full perspectival range within a single structural phenomenon. The established tradition gatekeeper sees Rope — pure coordination solving the problem of shared excellence standards. The emerging creator sees Snare — pure extraction with no escape mechanism. The insider with marginal status sees Tangled Rope — both coordination benefit and extraction cost. The diversity reform coalition sees Scaffold — a temporary institutional failure being solved through structural reforms with a sunset. The award institution sees Piton — maintains diversity ritual through performative expansion while extractive outcomes persist. The civilizational analytical observer risks Mountain — seeing aesthetic convergence as an immutable law — but the structural data reveals this as false summit: the specific standards that define excellence are culturally contingent, and the gatekeeping mechanism is institutional, not natural. The perspectival gap between Rope (gatekeeper) and Snare (excluded creator) is maximal — the same structural phenomenon appears as benign coordination from one position and as structural exclusion from another.",
+    "directionality_logic": "Directionality values are derived from each agent's structural position relative to the extraction flow. Established gatekeepers are beneficiaries with arbitrage options (d ≈ 0.15 → f(d) ≈ -0.01 → negative χ) — they experience the constraint as beneficial coordination. Emerging creators outside the coalition are victims with trapped exit (d ≈ 0.95 → f(d) ≈ 1.42 → high χ) — they experience maximum extraction. Insider creators with marginal status are both beneficiaries and victims with constrained exit (d ≈ 0.55 → f(d) ≈ 0.75 → moderate χ) — they experience mixed coordination and extraction. The diversity reform coalition is organized with constrained exit (d ≈ 0.45 → f(d) ≈ 0.50 → moderate χ) — they have agency but face resistance from entrenched gatekeepers. The award institution is a beneficiary with arbitrage (d ≈ 0.15 → f(d) ≈ -0.01 → negative χ) — it benefits from maintaining the system that validates its authority. The analytical observer faces directionality ambiguity (d ≈ 0.72 → f(d) ≈ 1.15) — they are not embedded in the extraction flow but risk naturalizing it as universal rather than contingent.",
+    "mandatrophy_analysis": "The mandatrophy resolution: this constraint demonstrates why single-type classification fails. The award system IS a coordination mechanism (Rope) and IS an extraction mechanism (Snare) simultaneously — not from observational ambiguity, but from structural reality. Established traditions require shared judgment standards (the coordination problem Rope solves). But the actual mechanism for establishing these standards excludes emerging traditions and concentrates power (the extraction problem Snare identifies). The Tangled Rope classification resolves the mandatrophy by capturing both functions in a single type: genuine coordination function (shared excellence standards) AND asymmetric extraction (homogeneous gatekeeping). The diversity reform coalition sees the constraint as Scaffold — a tangled rope with a sunset clause, where structural reforms (voter demographic expansion, blind evaluation, alternative nomination pathways) are eroding the gatekeeping mechanism over a 15-25 year horizon. The Piton classification (institutional perspective) reveals that institutional responses to diversity pressure are performative: the theater ratio rises as rhetoric increases while extraction persists. The Mountain classification at civilizational scope is a false summit — it naturalizes the gatekeeping mechanism as an inherent property of aesthetic judgment when the mechanism is actually institutional and contingent."
   },
   "boltzmann": {
     "coordination_type": "identity_coordination"
   },
   "network": {
     "affects_constraints": [
-      "credential_definition_gatekeeping",
-      "aesthetic_consensus_bias",
-      "alternative_legitimacy_pathway"
+      "aesthetic_canon_stability",
+      "emerging_tradition_gatekeeping"
     ],
-    "dual_formulation_note": "Award system voter diversity decomposes into credential definition (structural barriers), aesthetic gatekeeping (institutional extraction), and consensus bias (cognitive lock-in). Each component has distinct \u03b5 value and remediation pathway. This story addresses the institutional extraction component; sibling stories address credential and consensus mechanisms. All three are linked by network edges \u2014 removing one without addressing others produces incomplete remediation."
+    "dual_formulation_note": "The award system voter diversity constraint represents a single underlying structural phenomenon that decomposes into two distinct structural claims with different extractiveness values: (1) the coordination function — establishing shared excellence standards across creative fields (low extractiveness, Rope), and (2) the gatekeeping mechanism — the voter coalition's structural exclusion of emerging traditions (high extractiveness, Snare). These are not two observables of one constraint but two constraints with different ε values linked by causal structure. The present story models the unified constraint (tangled rope) that encompasses both functions. Downstream constraints track how diversity reform affects aesthetic canon stability and emerging tradition gatekeeping separately."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.08
+      "d_value": 0.18
     }
   ]
 }

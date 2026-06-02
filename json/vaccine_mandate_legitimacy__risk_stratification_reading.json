@@ -1,0 +1,264 @@
+{
+  "header": {
+    "constraint_id": "vaccine_mandate_legitimacy__risk_stratification_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "vmlegit_rs",
+    "story_uid": "6932ef53-cee0-406e-ad0d-83e0d58a0dc8",
+    "created_at": "2026-02-26T00:00:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Vaccine Mandate Legitimacy via Risk Stratification (Risk Stratification Reading)",
+    "topic_domain": "public_health_policy/constitutional_law/bioethics",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "high_risk_population_protected",
+      "healthcare_system_capacity"
+    ],
+    "victims": [
+      "low_risk_unvaccinated_individuals",
+      "medical_autonomy_principle"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "High-Risk Population (Protected Beneficiary)",
+      "comment": "PERSPECTIVE 1: HIGH-RISK POPULATION (ROPE) — Perceives the mandate as pure coordination. The constraint solves a genuine collective action problem: absent mandate, vaccination rates for immunocompromised and elderly populations would remain suboptimal because individual choice reflects private cost-benefit, not herd immunity threshold. The beneficiary experiences legitimate coordination benefit — the mandate coordinates vaccination to levels that protect them. Exit option is mobile (can relocate to jurisdictions with similar protections, or accept vaccination as condition of certain settings). No meaningful extraction perceived."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Low-Risk Unvaccinated Individual (Victim)",
+      "comment": "PERSPECTIVE 2: LOW-RISK UNVACCINATED INDIVIDUAL (SNARE) — For an agent whose actuarial risk is below the threshold defined by the reading, the mandate appears as pure extraction: the constraint is enforced against them despite the evidence-based case for their risk category not exceeding the legitimacy threshold. The victim experiences suppression through employment requirements, educational access barriers, and travel restrictions. Exit is trapped — they cannot reasonably relocate to escape nationwide or regional mandates. They perceive the constraint as an illegitimate use of state power that violates proportionality: it imposes compulsory medical intervention on an agent whose actual risk does not justify it."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Borderline-Risk Population (Mixed Coordination/Extraction)",
+      "comment": "PERSPECTIVE 3: BORDERLINE-RISK POPULATION (TANGLED ROPE) — For individuals whose actuarial risk sits at or near the threshold, the constraint mixes genuine coordination (they do benefit from broad vaccination) with extraction (the mandate applies to them despite their risk being marginal). Exit is constrained: they can accept vaccination to avoid the suppression mechanisms, but the cost is real (bodily autonomy, medical decision-making autonomy). The constraint coordinates herd immunity while extracting a rights concession from a population whose risk does not clearly justify it."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Public Health Authority (Enforcer)",
+      "comment": "PERSPECTIVE 4: PUBLIC HEALTH AUTHORITY (TANGLED ROPE) — The enforcement institution experiences the constraint as mixed coordination and extraction. Genuine coordination: the authority is solving the legitimate herd immunity problem by establishing mandates tied to evidence-based risk thresholds. Extraction: the authority derives legitimacy and power consolidation from the emergency declaration and enforcement machinery. The authority's exit is constrained: it could rescind mandates below the threshold, but doing so requires abandoning the uniform approach and investing in individualized risk assessment, which reduces administrative simplicity and loses some enforcement power. The authority experiences the constraint as legitimate coordination (from the high-risk protection goal) but also knows it functions partly as extraction (administrative convenience, authority consolidation)."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "Evidence-Based Policy Coalition (Organized Sunset Path)",
+      "comment": "PERSPECTIVE 5: EVIDENCE-BASED POLICY COALITION (SCAFFOLD) — Organized actors (epidemiological societies, medical ethics boards, transparency advocates) perceive the risk-stratification approach as a temporary scaffold with a clear sunset: as vaccine safety data mature, variant risk profiles stabilize, and population immunity accumulates, the justification for broad mandates erodes. The scaffold transitions to targeted protection (e.g., mandates for healthcare workers and high-risk settings only). This perspective sees the constraint as legitimate during the acute phase but unsustainable long-term without evidence-driven threshold updates. Low effective extraction because the coalition has agency and sees an exit path (threshold reductions, mandate rescissions)."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Emergency Authority Framework (Degraded Inertia)",
+      "comment": "PERSPECTIVE 6: EMERGENCY AUTHORITY FRAMEWORK (PITON) — The institutional apparatus sees the mandate legitimacy regime as increasingly performative. Early in the pandemic, the risk-stratification reading provided genuine functional guidance: narrow mandates to high-risk populations and high-transmission settings. Over time, the constraint becomes theater — mandates persist beyond evidence justification (theater_ratio rising), enforcement mechanisms harden (suppression increases), and the authority maintains the constraint partly through institutional inertia. Exit is arbitrage (the institution can rescind mandates, transition to voluntary programs), but doing so requires acknowledging that the emergency justification has degraded. The piton classification reflects that the constraint's original function (evidence-based risk coordination) atrophies while the enforcement machinery persists."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Public Health Naturalization)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN) — From a civilizational perspective, this reading risks naturalizing the constraint as an immutable principle: 'Public health requires risk-based mandatory vaccination; proportionality demands threshold-based mandates; these are structural features of legitimate epidemiology.' However, the base properties reveal this as a false summit: the constraint benefits identifiable actors (healthcare system, high-risk populations), requires active enforcement, and exhibits rising theater. The mountain classification is a perspectival trap — it naturalizes a contingent policy choice as inherent to public health science."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "threshold_definition_under_determination",
+      "question": "What actuarial risk threshold distinguishes legitimate mandate scope from overreach? How is it defined and by whom?",
+      "resolution_mechanism": "Comparative analysis across jurisdictions; epidemiological consensus documents; legal threshold definitions (e.g., CFR, state regulations); assessment of whether threshold is evidence-derived or politically negotiated",
+      "impact": "If threshold is high (e.g., >5% hospitalization risk): victim set is small, constraint appears as rope from more perspectives. If threshold is low (e.g., >0.1% risk): victim set is large, constraint appears as snare from more perspectives. If threshold is undefined or politically floating: constraint collapses into the public_health_primacy_reading (universal mandate).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Actuarial risk threshold definition and derivation"
+    },
+    {
+      "id": "risk_stratification_feasibility",
+      "question": "Can public health authorities actually implement individualized risk assessment and targeted mandates, or does administrative capacity force a choice between blanket mandates and no mandates?",
+      "resolution_mechanism": "Audit of jurisdictions attempting risk-stratified mandates; cost analysis of individualized vs. blanket approaches; assessment of compliance mechanisms for targeted mandates",
+      "impact": "If feasible: risk-stratification reading is structurally coherent; mandates remain tangled_rope for borderline cases. If infeasible: risk-stratification reading collapses into blanket mandates (public_health_primacy) or into no mandates (bodily_autonomy_primacy), depending on political pressure.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Feasibility of implementing individualized risk assessment for mandate scope"
+    },
+    {
+      "id": "variant_risk_profile_fluidity",
+      "question": "As variant severity profiles change, how stable is the risk threshold? Does the constraint update to match new evidence, or does the threshold persist through bureaucratic inertia?",
+      "resolution_mechanism": "Timeline analysis: comparison of mandate updates to variant emergence and risk reassessment; audit of whether thresholds were revised when new variant data arrived",
+      "impact": "If thresholds update fluidly: constraint remains tangled_rope. If thresholds persist despite changed evidence: constraint drifts toward piton (performative enforcement) or snare (extraction masked by outdated evidence).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Responsiveness of risk thresholds to new variant and epidemiological data"
+    },
+    {
+      "id": "proportionality_axiom_contestability",
+      "question": "Is proportionality itself a foundational principle that constrains mandate scope, or is it one policy consideration among others that can be overridden by public health authority judgment?",
+      "resolution_mechanism": "Constitutional law analysis; case law on proportionality standards; assessment of whether courts enforce proportionality constraints on emergency measures, or defer to public health authority discretion",
+      "impact": "If proportionality is foundational: this reading's axiom (mandate_scope_proportional_to_risk) is holdable. If proportionality is deferential: the axiom is weaker, and this reading coexists_with but is subordinate to public_health_primacy_reading.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether proportionality is foundational to mandate legitimacy or deferential to authority discretion"
+    },
+    {
+      "id": "bodily_autonomy_foreclosure_scope",
+      "question": "Does the risk-stratification reading's acceptance of mandates for high-risk populations logically foreclose the bodily_autonomy_primacy reading, or can both coexist as competing principles within a single legal framework?",
+      "resolution_mechanism": "Constitutional analysis: whether courts recognize a hierarchy between bodily autonomy and public health authority, or treat them as competing principles that must be balanced contextually",
+      "impact": "If foreclosed: this reading forecloses bodily_autonomy_primacy. If coexistent: they coexist_with each other, and the constraint remains contested within a single framework.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether risk-stratification logically forecloses bodily autonomy primacy or permits coexistence"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15,
+      "id_override": "vmlegit_rs_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.3,
+      "id_override": "vmlegit_rs_extract_t6"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.38,
+      "id_override": "vmlegit_rs_extract_t12"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "vmlegit_rs_suppress_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.42,
+      "id_override": "vmlegit_rs_suppress_t6"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.48,
+      "id_override": "vmlegit_rs_suppress_t12"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3,
+      "id_override": "vmlegit_rs_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.45,
+      "id_override": "vmlegit_rs_theater_t6"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.52,
+      "id_override": "vmlegit_rs_theater_t12"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 12
+  },
+  "commentary": {
+    "narrative_context": "This constraint represents ONE reading of a contested kernel: vaccine mandate legitimacy. The kernel itself is a stabilized commitment that different parties read differently. The risk-stratification reading holds that mandate legitimacy is contingent on actuarial risk thresholds — blanket mandates violate proportionality, but targeted mandates (high-risk populations, high-transmission occupations) are defensible. This reading sits between two extremes: the public_health_primacy reading (public health authority can mandate vaccination broadly to protect collective population health) and the bodily_autonomy_primacy reading (individuals have an inviolable right to refuse medical intervention regardless of public health benefit). The risk-stratification reading accepts mandates but constrains their scope through proportionality: mandate coverage should match evidence-based risk profiles. As the pandemic has evolved, the constraint has shifted from low extractiveness (early pandemic, clear high-risk groups) toward higher extractiveness (later variants with flatter risk profiles across age groups, mandates persisting despite evidence updates, suppression mechanisms hardening). The theater ratio has risen as the constraint's functional justification (evidence-based high-risk protection) decouples from its enforcement machinery (universal or broad-category mandates).",
+    "key_agents": [
+      "High-Risk Population: Primary beneficiary (powerful/mobile) — experiences the constraint as coordination; benefits from herd immunity and targeted protection",
+      "Low-Risk Unvaccinated Individual: Primary victim (powerless/trapped) — perceives mandate as illegitimate extraction; trapped by nationwide enforcement",
+      "Borderline-Risk Population: Secondary victim (moderate/constrained) — mixed experience; mandates apply to them despite marginal risk; exit constrained",
+      "Public Health Authority: Enforcer (institutional/constrained) — administers the constraint; experiences mixed coordination (solving herd immunity problem) and extraction (authority consolidation, administrative convenience)",
+      "Evidence-Based Policy Coalition: Organized actors (organized/mobile) — epidemiologists, medical ethics boards, transparency advocates; perceive scaffold with sunset as evidence accumulates",
+      "Emergency Authority Framework: Institutional apparatus (institutional/arbitrage) — maintains constraint through inertia as original evidence justification degrades; sees constraint as increasingly performative",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing a contingent policy choice as inherent to public health science"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The risk-stratification reading permits mandates only where actuarial evidence supports them. In the early pandemic, with clear high-risk populations and unknown natural immunity, extractiveness was low (~0.15) — mandates targeted genuinely high-risk groups, and the constraint functioned as coordination. Over time, extractiveness has risen as: (1) risk profiles have flattened across age groups (Omicron variants lower hospitalization risk at all ages), (2) natural immunity and vaccination rollout have reduced absolute risk for many populations, (3) thresholds have not updated to match new evidence, creating mandate scope creep. By t12, extractiveness reaches 0.38 — mandates persist for populations whose risk no longer clearly justifies them. Suppression (0.48): Moderate-high. The constraint operates through employment requirements (healthcare workers, public employees), educational access barriers (school attendance), and travel restrictions. These are significant but not absolute barriers — individuals can choose to accept vaccination, relocate to jurisdictions with lower mandates, or engage in political advocacy to change thresholds. Suppression is higher at t12 than t0 because enforcement mechanisms have hardened and alternative compliance paths have narrowed. Theater ratio (0.52): Moderate. Early in the pandemic, risk-stratification mandates were functional — targeting high-risk populations reflected genuine evidence and coordinated vaccination. Over time, theater has increased as mandates have become decoupled from current evidence: variant risk profiles have changed, but mandate categories persist; suppression mechanisms harden despite reduced risk justification; the constraint becomes increasingly about authority maintenance and less about evidence-based protection. Claimed type (tangled_rope): This reading is structurally a tangled_rope because it accepts mandates (coordination function) but applies them in a way that imposes costs on low-risk populations (extraction). The constraint is not pure coordination (which would permit only mandates clearly justified by high risk) nor pure extraction (which would maximize mandate scope for administrative convenience).",
+    "kernel_context": "This constraint is one reading of the contested kernel 'vaccine mandate legitimacy' (kernel_id: vaccine_mandate_legitimacy). The reading instantiated here is the risk-stratification reading (reading_id: risk_stratification_reading). Sibling readings include: (1) public_health_primacy_reading — public health authority can mandate vaccination broadly to protect collective population health, with individual risk irrelevant to mandate scope; (2) bodily_autonomy_primacy_reading — individuals have an inviolable right to refuse medical intervention regardless of actuarial risk or public health benefit. The risk-stratification reading sits between these extremes, accepting that mandates are legitimate when risk thresholds justify them but illegitimate when applied blanket. The structural delta is in the victim set size: risk-stratification reading produces victims only in populations whose actuarial risk is below the threshold; public_health_primacy produces no victims (mandates are universally justified); bodily_autonomy_primacy produces victims at all mandate scope (all mandates violate bodily autonomy). The coordination mechanism differs across readings: risk-stratification sees coordination (herd immunity protection for high-risk groups) as the legitimate justification; public_health_primacy sees coordination as secondary to collective welfare maximization; bodily_autonomy_primacy denies that any coordination justifies compulsory medical intervention.",
+    "directionality_logic": "Each perspective's directionality (d) is derived from their structural position relative to the constraint. High-risk populations are beneficiaries with mobile exit (they can relocate to jurisdictions with similar mandates) — canonical d ≈ 0.15, f(d) ≈ -0.01, producing rope classification. Low-risk unvaccinated are victims with trapped exit (nationwide mandates, no reasonable relocation option) — derived d ≈ 0.95, f(d) ≈ 1.42, producing snare classification. Borderline-risk populations are partially victims (marginal risk) with constrained exit (can accept vaccination at cost) — derived d ≈ 0.55, f(d) ≈ 0.75, producing tangled_rope. Public health authority is both beneficiary (gains enforcement power) and victim (constrained by evidence requirements if it accepts the reading) — derived d ≈ 0.45, f(d) ≈ 0.45, producing tangled_rope. Evidence-based coalition is organized with mobile exit (can advocate for threshold updates and exit/enter jurisdictions) — derived d ≈ 0.40, f(d) ≈ 0.40, producing scaffold. Emergency framework is institutional with arbitrage exit (can rescind mandates) — derived d ≈ 0.15, f(d) ≈ -0.01, but theater gate produces piton. Analytical observer is d ≈ 0.72, f(d) ≈ 1.15, producing mountain (false summit).",
+    "perspectival_gap": "The constraint exhibits maximum perspectival divergence across its index space. The high-risk population perceives rope (pure coordination), while the low-risk individual perceives snare (pure extraction). The public health authority perceives mixed tangled_rope (genuine coordination need + enforcement convenience), while the evidence-based coalition perceives scaffold (temporary measure with sunset as evidence updates). The emergency framework perceives piton (performative maintenance of authority), while the analytical observer risks perceiving mountain (naturalizing proportionality as inherent to epidemiology). The gap reveals that the constraint's classification depends entirely on the observer's structural position: who benefits, who bears costs, what exit options they have. There is no single 'true' classification — the presheaf over the observation site IS the full answer.",
+    "mandatrophy_analysis": "The risk-stratification reading resolves mandatrophy by accepting that proportionality constraints on mandate scope are foundational, not deferential. This distinguishes it from the public_health_primacy reading, which treats proportionality as secondary to public health authority judgment. The reading avoids the contradiction between 'mandates are legitimate coordination' and 'blanket mandates are over-extraction' by restricting mandate scope to populations where risk evidence supports them. The mandatrophy is not fully resolved at the empirical level (omega variables remain about threshold definition and variant fluidity), but it is resolved at the structural level: the constraint is legitimately tangled_rope (mixed coordination and extraction) when thresholds match current evidence, and it drifts toward snare (pure extraction) when thresholds persist despite evidence updates. The measurement trajectory shows this drift: extractiveness rises from 0.15 to 0.38, reflecting that the constraint's original justification (high-risk protection) is decoupling from its application (persistent mandates despite flattened risk profiles). Theater ratio rising from 0.30 to 0.52 indicates the constraint is transitioning from functional coordination toward performative authority maintenance."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "vaccine_mandate_legitimacy__public_health_primacy_reading",
+      "vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading"
+    ],
+    "dual_formulation_note": "This constraint is part of a constraint family modeling the contested kernel 'vaccine mandate legitimacy'. Each sibling reading (public_health_primacy and bodily_autonomy_primacy) instantiates a distinct constraint with different beneficiary/victim structures and ε values. The risk-stratification reading sits structurally between them, accepting mandates in high-risk cases but rejecting them in low-risk cases. Network links establish the reading relationships: this reading coexists_with its siblings, and proportionality constraints create influences (downstream pressure on public_health_primacy to justify mandate scope by evidence)."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "proportionality_constrained_mandate_scope",
+    "drift_state": {
+      "moment": "contemporary_omicron_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "vaccine_mandate_legitimacy__public_health_primacy_reading",
+        "relation": "influences"
+      },
+      {
+        "sibling_id": "vaccine_mandate_legitimacy__bodily_autonomy_primacy_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "mandate_scope_proportional_to_actuarial_risk",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "threshold_updates_track_evidence",
+        "role": "secondary",
+        "status": "overridden",
+        "grounding_type": "empirically_contingent"
+      }
+    ]
+  }
+}

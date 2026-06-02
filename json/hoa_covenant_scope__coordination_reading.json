@@ -1,0 +1,190 @@
+{
+  "header": {
+    "constraint_id": "hoa_covenant_scope__coordination_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "hoa_coord",
+    "story_uid": "19d1aacd-4c3d-4fe6-aad2-99999f7a437e"
+  },
+  "base_properties": {
+    "extractiveness": 0.12,
+    "suppression": 0.18,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "HOA Covenant as Shared Infrastructure Coordination (Coordination Reading)",
+    "topic_domain": "property_law/collective_governance/urban_planning",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "all_homeowners"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Homeowner (Local Collective Action)",
+      "comment": "PERSPECTIVE 1: HOMEOWNER PARTICIPANT (ROPE) — Views covenant as genuine coordination mechanism solving collective action problem: shared road maintenance, drainage, common area upkeep create positive externalities for all. Benefits from others' compliance; sees covenant as reciprocal (I maintain my share, you maintain yours). Cost of coordination (HOA fees) is transparent and proportional. Constrained exit because leaving means loss of property value (tied to covenant compliance), but not trapped — can sell and relocate. Experiences this as low-extraction coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Municipal Planning Authority",
+      "comment": "PERSPECTIVE 2: MUNICIPAL PLANNER (ROPE) — Views covenant infrastructure coordination as offloading legitimate municipal functions (stormwater management, road maintenance, common area upkeep) to private collective action. Benefits from reduced public burden; homeowners benefit from locally-responsive maintenance. Low extractiveness because the coordination function is genuine and the distribution of costs/benefits is symmetric. Arbitrage exit because the municipality can always choose to municipalize services instead."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Free-Rider Risk (Bounded by Enforcement)",
+      "comment": "PERSPECTIVE 3: FREE-RIDER (ROPE) — A homeowner who wants to avoid maintaining their property or contributing to shared costs faces enforcement (repair notices, liens, fines). But the enforcement is proportional and transparent — not coercive, but clear. Classification is rope rather than snare because: (a) enforcement scope is objectively defined (building codes, infrastructure standards), (b) exit option exists (sell the property), (c) the covenant's core function (infrastructure coordination) remains visible even from the free-rider position. The constraint coordinates; enforcement maintains the coordination."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Coordination Theory)",
+      "comment": "PERSPECTIVE 4: ANALYTICAL OBSERVER (ROPE) — Views covenant through coordination lens: classically solves collective action problem in housing where individual incentives (defer maintenance, avoid costs) conflict with collective interest (preserve property value, functional infrastructure). Theater ratio is low (0.35) because the covenant's rules directly specify outcomes (roof replacement timeline, drainage maintenance, paint standards) tied to material infrastructure rather than performative compliance. Extractiveness is low (0.12) because cost allocation is transparent and tied to actual coordination costs, not to asymmetric power dynamics. This reading assumes covenants can function as pure coordination mechanisms absent extractive institutional capture."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "covenant_scope_boundary_contestation",
+      "question": "Where is the boundary between legitimate infrastructure coordination (shared roads, drainage, common areas) and illegitimate behavioral control (aesthetic rules, lifestyle restrictions, privacy intrusion)?",
+      "resolution_mechanism": "Comparative analysis of covenant enforcement scope across jurisdictions; historical tracking of which covenant rules are enforceable and which courts void as overreach; examination of which rules serve infrastructure coordination vs. which serve homogeneity/control",
+      "impact": "If boundary is sharp and enforceable: coordination reading holds (ε ≈ 0.12). If boundary is contested and enforcement creeps: extraction reading becomes more accurate (ε > 0.40). If boundary is indeterminate: constraint is genuinely ambiguous between readings.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Boundary between legitimate infrastructure coordination and illegitimate behavioral control in covenant scope"
+    },
+    {
+      "id": "extractive_institutional_capture_likelihood",
+      "question": "Do HOA boards systematically become captured by developer interests or abuse enforcement powers to extract compliance from residents, even when the core coordination function is infrastructure-focused?",
+      "resolution_mechanism": "Longitudinal study of enforcement patterns over time; comparison of enforcement intensity before and after developer exit; analysis of which rules are enforced and which are not (signals what the actual constraint mechanism is)",
+      "impact": "If capture is rare and abuse is exceptional: coordination reading (Rope) holds empirically. If capture is systematic: extraction reading (Snare/Tangled Rope) is more empirically accurate, and the coordination reading becomes an ideological cover story.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether HOA boards systematically abuse enforcement powers or remain coordinating bodies"
+    },
+    {
+      "id": "reading_kernel_identity",
+      "question": "Is this constraint one reading of a contested kernel (the legitimate scope of HOA covenants), or are the competing readings describing structurally different constraints that should be decomposed?",
+      "resolution_mechanism": "Examination of whether all three readings (coordination, behavioral control, extraction) invoke the same covenant structure and dispute its legitimate scope, or whether they describe causally distinct mechanisms that should be separate stories with different ε values",
+      "impact": "If kernel reading: one fixture (covenant rules) has three interpretations. If decomposition needed: coordination reading (ε=0.12, Rope) is separate from behavioral control reading (ε=0.40+, Tangled Rope/Snare) based on actual scope of enforcement.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether this is a kernel reading or requires constraint decomposition"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.14
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint instantiates the coordination reading of a contested kernel: the legitimate scope and function of HOA covenants in residential development. Under the coordination reading, HOA covenants serve a genuine collective action function — coordinating shared infrastructure maintenance (roads, drainage, common areas) that create positive externalities for all homeowners. The covenant solves the problem that individual homeowners lack incentive to maintain shared infrastructure that benefits them symmetrically, and the municipality lacks capacity to manage micro-level infrastructure in private communities. This reading emphasizes that covenant enforcement is narrowly scoped to infrastructure standards and cost allocation, not behavioral control or homogeneity enforcement. The constraint exhibits low extractiveness (0.12) because coordination costs are transparent, proportional, and reciprocal — homeowners benefit symmetrically from collective action. Suppression is moderate (0.18) because enforcement mechanisms exist (liens, repair notices) but are proportional to actual coordination objectives and do not coerce behavior beyond infrastructure requirements. Theater ratio is low (0.35) because covenant rules specify material outcomes (roof replacement timelines, drainage maintenance standards) rather than performative compliance. This reading coexists with two sibling readings — the behavioral control reading (which emphasizes how covenants regulate lifestyle, aesthetics, and social composition, shifting focus from infrastructure to homogeneity) and the extraction reading (which emphasizes how HOA boards abuse enforcement powers for profit or control). All three readings invoke the same fixture (written HOA covenants and board enforcement), but diverge on whether the primary mechanism is infrastructure coordination, behavioral constraint, or institutional extraction.",
+    "key_agents": [
+      "Homeowners (collective): Primary beneficiary and participant — benefit from coordinated infrastructure maintenance that individual incentives would not provide",
+      "Municipal Planning Authority: Secondary beneficiary — offloads legitimate infrastructure coordination functions to private collective action; reduces public budget burden",
+      "Free-riders/Shirkers: Enforcement target — homeowners who avoid maintenance costs or infrastructure contributions; constrained by proportional enforcement tied to objective standards",
+      "HOA Board: Institutional actor managing coordination mechanism — interprets covenant scope and administers enforcement; potential capture point under competing readings",
+      "Analytical Observer: Sees the coordination function clearly; examines whether the constraint remains coordination or drifts toward extraction"
+    ],
+    "logic_rationale": "Extractiveness (0.12): Low. The coordination reading assumes that covenant enforcement is narrowly scoped to infrastructure costs and objective standards (building codes, drainage maintenance, road repair). Homeowners pay pro-rata shares of actual coordination costs; they benefit symmetrically from collective action outcomes. There is minimal asymmetric extraction because cost allocation is transparent and tied to real coordination requirements, not to board discretion or behavioral control. The measurement trajectory is nearly flat (0.10 → 0.14 over 20 years), indicating stable low extractiveness under the coordination reading. Suppression (0.18): Moderate-low. Enforcement mechanisms exist (repair notices, liens, fines) but are calibrated to achieve infrastructure objectives, not to maximize compliance or control. Homeowners have clear exit options (sell the property), though exit is costly (tied to property value). Suppression is bounded by the objective nature of infrastructure standards — boards cannot arbitrarily impose suppression. Theater ratio (0.35): Low. Covenant rules specify material outcomes (roof lifespan, gutter maintenance, drainage flow rates) rather than performative signals. Enforcement is proportional to actual infrastructure need, not ritualistic. The slight rise over 20 years (0.32 → 0.38) suggests minor drift toward more detailed specification of standards as complexity of community infrastructure increases, but remains well below the piton threshold (0.70) where theater would indicate degradation.",
+    "perspectival_gap": "The coordination reading produces unanimous or near-unanimous classification as Rope across most perspectives because all parties benefit from coordination. Homeowner and planner both see low extraction; free-riders see proportional enforcement, not coercion; the analytical observer sees genuine coordination function. The perspectival gap emerges only when comparing the coordination reading to the behavioral control reading (where homeowners perceive constraint classification differently depending on whether they emphasize infrastructure coordination or lifestyle regulation) or to the extraction reading (where the free-rider becomes a victim and enforcement becomes extractive). Within the coordination reading alone, the gap is minimal because the constraint appears to solve a genuine problem symmetrically.",
+    "directionality_logic": "All homeowners are declared as beneficiaries because the coordination reading assumes symmetric benefits — each homeowner benefits from others' infrastructure maintenance and pays pro-rata for coordination costs. No victims are declared because enforcement targets are viewed as free-riders within a coordination system, not as exploited parties. The free-rider perspective (Perspective 3) still classifies as Rope because exit is available (sell the property) and enforcement is proportional and transparent. Directionality d is derived from beneficiary status with constrained/mobile exit options — homeowners have some agency and can choose to comply or exit, reducing d toward the middle (d ≈ 0.35-0.45) rather than toward full targets (d > 0.85) or full beneficiaries (d < 0.15). The institutional planner's d is lower (toward 0.15-0.25) because they receive benefit (infrastructure offloading) without bearing enforcement burden.",
+    "kernel_context": "This constraint instantiates the COORDINATION READING of the kernel: hoa_covenant_scope. The kernel is the written HOA covenants and board enforcement mechanisms that govern shared infrastructure in residential communities. The three readings are: (1) COORDINATION READING (this file) — covenants solve collective action problems in infrastructure maintenance; emphasis on low extractiveness, symmetric benefits, objective scope boundaries. (2) BEHAVIORAL CONTROL READING (sibling constraint file: hoa_covenant_scope__behavioral_control_reading) — covenants regulate lifestyle, aesthetics, and social composition; emphasis on how enforcement creeps beyond infrastructure into private behavior, higher extractiveness, asymmetric power over homeowners' choices. (3) EXTRACTION READING (sibling constraint file: hoa_covenant_scope__extraction_reading) — HOA boards abuse enforcement powers for profit or control; emphasis on capture, selective enforcement, exploitative fee structures, high extractiveness, victims = homeowners. The three readings share the same fixture (the written covenant and enforcement mechanisms) but interpret the covenant's legitimate scope differently, leading to structurally distinct ε values and classifications.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that the coordination reading produces internally consistent low-extractiveness classification (ε=0.12, Rope) IF the empirical assumption holds: that covenant enforcement is narrowly scoped to infrastructure coordination and objectively bounded. The three readings represent three different factual hypotheses about actual enforcement behavior, not three different interpretive framings of identical facts. The coordination reading is falsifiable — if empirical analysis (measuring actual enforcement scope) shows that boards systematically enforce behavioral rules beyond infrastructure standards, then the empirical basis for ε=0.12 collapses and the constraint drifts toward the behavioral control or extraction reading. The mandatrophy is not resolved by choosing a reading, but by examining evidence about actual enforcement patterns."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "hoa_covenant_scope__behavioral_control_reading",
+      "hoa_covenant_scope__extraction_reading"
+    ],
+    "dual_formulation_note": "The HOA covenant kernel is decomposed into three constraint stories corresponding to three readings of its legitimate scope. All three stories invoke the same written covenants and enforcement mechanisms, but model structurally different ε values based on different factual claims about enforcement scope. The coordination reading assumes enforcement is narrowly scoped to infrastructure (ε=0.12). The behavioral control reading assumes enforcement includes lifestyle/aesthetic regulation (ε ≈ 0.40-0.50). The extraction reading assumes enforcement is systematically abusive (ε ≥ 0.55). The three readings coexist in contemporary legal disputes; each is held as true by different parties and courts in different jurisdictions. Empirical resolution would require measuring actual enforcement patterns."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "practice",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "hoa_covenant_scope__behavioral_control_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "hoa_covenant_scope__extraction_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "covenants_coordinate_infrastructure_only",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "symmetric_cost_benefit_distribution",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "covenants_as_coordination_devices",
+    "drift_state": {
+      "moment": "contemporary_enforcement_scope_expansion",
+      "direction": "practice_drift",
+      "magnitude": "minor",
+      "acknowledged": false
+    }
+  }
+}

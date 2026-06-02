@@ -1,0 +1,235 @@
+{
+  "header": {
+    "constraint_id": "rogers_commission_findings__engineering_absolute_threshold",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rogers_eng",
+    "story_uid": "e68ce21e-7b78-4a32-b62c-96926d332870",
+    "created_at": "2026-02-26T14:32:00Z"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.85,
+    "theater_ratio": 0.35,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Rogers Commission Engineering Absolute Threshold: Flight Operations Suspension Until O-Ring Redesign Certification",
+    "topic_domain": "organizational_safety/technology_governance/regulatory_compliance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "flight_crew_safety",
+      "design_engineering_authority"
+    ],
+    "victims": [
+      "launch_cadence_schedule",
+      "institutional_launch_capability"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Astronaut Corps",
+      "comment": "PERSPECTIVE 1: ASTRONAUT CORPS (SNARE) — No exit option. Flight operations suspended; crew cannot execute missions until engineering certification complete. Trapped between career risk (aging from the schedule hold) and mission risk (flying unverified systems). Bears full extraction of the schedule collapse with no agency in the certification process."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Space Shuttle Program Management",
+      "comment": "PERSPECTIVE 2: SHUTTLE PROGRAM MANAGEMENT (SNARE) — Constrained by the absolute engineering threshold. Cannot restart operations without certification; launch cadence collapses; budget allocation and contractor relationships are disrupted. The constraint enforces complete halt — no workarounds, no risk acceptance exemptions. High suppression: management has no exit option except waiting for engineering sign-off."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "NASA Flight Readiness Review Authority",
+      "comment": "PERSPECTIVE 3: NASA FLIGHT READINESS REVIEW AUTHORITY (TANGLED ROPE) — Constrained but powerful: the absolute threshold transfers veto authority from schedule-driven management to engineering certification. FRR authority experiences genuine coordination function (ensuring safety gates are respected) AND extraction (authority to halt billion-dollar programs). Certification delay extracts from launch operations but benefits flight safety assurance. Constrained by engineering timelines but holds gate-keeping power."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Design Engineering Community",
+      "comment": "PERSPECTIVE 4: DESIGN ENGINEERING COMMUNITY (ROPE) — Institutional beneficiary with arbitrage exit: can walk away to other programs if necessary, but the Rogers absolute threshold transfers authority to them. They coordinate the redesign process while gaining permanent veto authority over flight operations. Net beneficiary — the constraint consolidates engineering authority and validates their safety-first framing. Theater ratio low: actual redesign work is substantive, not performative."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Oversight Coalition",
+      "comment": "PERSPECTIVE 5: REGULATORY OVERSIGHT COALITION (SCAFFOLD) — Organized agents (Congress, internal Safety Panel, external safety advocates) enforcing the absolute threshold as a temporary measure with implicit sunset: once O-ring redesign is certified and verified through test flights, normal operations resume. The coalition sees the shutdown as enforcement of a temporary gate condition, not permanent constraint. Sunset estimated at 2-3 years post-Challenger."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Safety Physics View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / SAFETY PHYSICS VIEW (MOUNTAIN) — From a civilizational perspective, the O-ring failure mode represents a fundamental physical constraint: the joint design cannot reliably seal at low temperatures. The absolute threshold appears as a natural law — you cannot operate this design safely below redesign completion. This perspective risks naturalizing what is actually a contingent choice about safety burden allocation: other Space Shuttle concepts could have accepted O-ring risk through operational limits (temperature floors), but the Rogers reading forecloses this by treating engineering redesign as mandatory."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "engineering_redesign_timeline_uncertainty",
+      "question": "Is the O-ring redesign timeline fixed or subject to technical delays that could extend the operational halt indefinitely?",
+      "resolution_mechanism": "Engineering project tracking; comparison of initial redesign estimates (1986) vs. actual completion timelines (1988); identification of unanticipated technical challenges",
+      "impact": "If timeline is firm: scaffold sunset is credible, constraint is temporary. If timeline slides repeatedly: scaffold sunset erodes, constraint appears permanent (reclassifies toward snare for powerless agents).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether O-ring redesign timeline is credible or subject to extension"
+    },
+    {
+      "id": "alternative_launch_windows_operational",
+      "question": "Could launches resume with operational restrictions (minimum ambient temperature, flight envelope limits) while redesign proceeds, or is the engineering absolute threshold truly non-negotiable?",
+      "resolution_mechanism": "Historical analysis of NASA's internal redesign decision: was complete halt the only structurally defensible option, or a choice among multiple valid safety strategies? Review of post-Rogers flight readiness criteria.",
+      "impact": "If alternative windows were structurally available: Rogers reading is a political choice to maximize engineering authority (forecloses management_compliance_narrative). If no alternatives were viable: Rogers reading is inherent to the physics, and mountain perspective becomes more defensible.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether operational restrictions could substitute for complete halt during redesign"
+    },
+    {
+      "id": "certifying_authority_frame_assumptions",
+      "question": "What constitutes 'certification' of the redesigned O-ring system? Is this an engineering threshold (demonstrated thermal margin) or an institutional threshold (NASA confidence statement)?",
+      "resolution_mechanism": "Examination of actual certification criteria used in post-Challenger flight readiness reviews (1988-1989); comparison with engineering margin definitions from materials science standards",
+      "impact": "If engineering-defined (material science standards): certification is objective, threshold is stable. If institutional (NASA confidence): certification is political, threshold can shift, constraint erodes toward piton.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether certification is objective engineering threshold or institutional confidence statement"
+    },
+    {
+      "id": "reading_vs_alternative_kernels",
+      "question": "Does the Rogers Commission's canonical authority mandate the engineering_absolute_threshold reading, or is it one legitimate reading among alternatives (management_compliance_narrative, actuarial_risk_acceptance)?",
+      "resolution_mechanism": "Textual analysis of Rogers Report itself: explicit statements about absolute thresholds vs. risk management philosophy; comparison with how NASA actually implemented post-Challenger changes (e.g., did they truly treat engineering veto as absolute or did risk-acceptance logic resurface post-1990?)",
+      "impact": "If Rogers explicitly forecloses alternatives: this reading's axiom is foundational and overrides others within the Rogers framework. If Rogers permits multiple readings: this is one legitimate committer position that coexists_with others.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether Rogers Report mandates engineering-absolute reading or permits multiple readings"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 24,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 24,
+      "value": 0.32
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.82
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 12,
+      "value": 0.85
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 24,
+      "value": 0.68
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 24
+  },
+  "commentary": {
+    "narrative_context": "The Rogers Commission's engineering absolute threshold constraint mandates complete cessation of Space Shuttle flight operations until the O-ring joint design is fundamentally redesigned and certified safe across all operational temperatures. This reading instantiates a specific interpretation of the Rogers findings: that engineering authority must hold absolute veto over flight readiness decisions, and that no risk-acceptance exemptions or operational workarounds are permissible until the redesign is complete. The constraint embeds a structural choice: to transfer decision authority from schedule-driven program management to design engineers, and to treat the O-ring failure mode as a non-negotiable engineering problem requiring complete system redesign rather than operational restrictions or risk management protocols. This reading competes with alternative interpretations (the management_compliance_narrative reading emphasizing program continuity and risk-accepted returns to flight, and the actuarial_risk_acceptance reading framing the O-ring issue as a manageable risk to be quantified and incorporated into launch decisions). The engineering_absolute_threshold reading forecloses both alternatives by establishing that the redesign is mandatory and non-waivable.",
+    "key_agents": [
+      "Flight Crew (Astronaut Corps): Powerless/trapped (biographical) — mission suspension with no agency in certification decision; bearing career risk from schedule collapse",
+      "Shuttle Program Management: Moderate/constrained (biographical) — enforced operational halt with no exit option; budget and contractor relationships disrupted",
+      "NASA Flight Readiness Review Authority: Powerful/constrained (biographical) — veto power transferred to engineering; responsible for certifying redesign; constrained by engineering timelines but gates all operations",
+      "Design Engineering Community: Institutional/arbitrage (generational) — consolidated authority over flight operations; benefits from permanent veto position; can redirect effort to other programs if necessary",
+      "Regulatory Oversight Coalition (Congress, Safety Panel): Organized/constrained (generational) — enforcing absolute threshold; sees it as temporary until redesign verification complete",
+      "Analytical Observer: Analytical/analytical (civilizational) — risks treating contingent institutional choice (complete halt) as inherent physics (natural law)"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderately high, indicating genuine mixed coordination and extraction. The constraint coordinates essential safety work (O-ring redesign is necessary) but extracts from launch operations by imposing absolute halt rather than operational restrictions. The trajectory shows extractiveness rising from 0.38 (initial shock) to 0.62 (sustained hold) before declining toward 0.62 at month 24 as redesign nears completion. Suppression (0.85): Very high, reflecting the absolute nature of the threshold — no operational workarounds, no risk-acceptance exemptions, no schedule pressure overrides. Engineering authority is enforced via complete halt; program management has no exit option. Suppression rises from 0.82 to 0.85 as the constraint is institutionalized in post-Challenger culture, then begins declining toward 0.68 as redesign nears certification (the ending suppression reflects the constraint's transition toward sunset). Theater ratio (0.35): Low, indicating substantive engineering work rather than performative compliance. The redesign effort is genuine technical work; the constraint enforces actual physics-based requirements, not theatrical processes.",
+    "directionality_logic": "Each agent's directionality (d) is derived from their structural position relative to the constraint. Flight crew and program management are victims with trapped/constrained exits: high d → high f(d) → high experienced extraction (χ). They bear the cost of the operational halt. Design engineers are beneficiaries with arbitrage exits: low d → negative f(d) → negative experienced extraction. They benefit from authority consolidation. FRR authority occupies an intermediate position: they hold gate-keeping power (beneficiary-like) but are constrained by engineering timelines (victim-like), producing d ≈ 0.50 and moderate experienced extraction (rope to tangled_rope classification). The power atom assignments reflect constraint-specific positions, not global standing: program management is nominally powerful but structurally constrained by the absolute threshold (powerful + constrained exit), while the engineering community is institutional but holds asymmetric decision authority (institutional + arbitrage exit).",
+    "perspectival_gap": "The full range of classification emerges from different structural positions. The flight crew sees pure extraction (snare) — they bear the cost with no agency. Program management also sees extraction (snare) — operational halt extracts from their mission but the coordination function is external to their perspective. FRR authority sees mixed coordination and extraction (tangled_rope) — they must coordinate the redesign (genuine function) and simultaneously extract from operations (authority to halt programs). Engineering sees pure coordination (rope) — they are solving a safety problem and benefit from authority consolidation. Regulatory oversight sees a temporary problem being solved (scaffold) — the halt is enforced during redesign completion, then normal operations resume. The analytical observer risks seeing natural law (mountain) — 'you cannot operate this design safely' — but this naturalizes a choice about how to distribute the safety burden (engineer-mandated redesign vs. operational restrictions). The perspectival gap reveals that the constraint's classification depends entirely on the observer's structural position and exit options.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel: rogers_commission_findings. The kernel is the Rogers Commission Report itself — a stabilized text (published 1986) that NASA and Congress treat as canonical authority for post-Challenger policy. This reading instantiates the engineering_absolute_threshold interpretation: the kernel's canonical meaning is that engineering authority must hold absolute veto over flight readiness, and complete O-ring redesign is mandatory (non-waivable) before operations resume. Sibling readings are: (1) management_compliance_narrative — emphasizing NASA's operational responsibility to manage risk and resume flights within acceptable parameters, treating Rogers as a compliance checklist; (2) actuarial_risk_acceptance — treating the O-ring issue as a quantifiable risk to be incorporated into probabilistic launch decisions rather than mandating complete redesign. The engineering_absolute_threshold reading FORECLOSES both siblings: if engineering veto is absolute and redesign is mandatory, then management compliance logic (which seeks to return to flight) and actuarial risk acceptance (which quantifies and accepts risk) cannot coexist in the same framework. A framework that permits both engineering absolute veto AND risk-acceptance logic is internally contradictory — you cannot simultaneously treat the redesign as mandatory and as optional. However, the empirical history shows that NASA has actually operated all three readings simultaneously (engineering authority for design decisions, management compliance for program continuity, actuarial logic creeping back into post-1990s flight readiness criteria). This suggests the Rogers kernel itself is ambiguous enough to permit coexistence, or that the readings COEXIST_WITH rather than FORECLOSE. The omega variables (id: reading_vs_alternative_kernels) address this directly.",
+    "mandatrophy_analysis": "This is a high-extraction constraint (ε=0.58, χ ≥ 0.60 for powerless agents) where mandatrophy is resolved through the tangled_rope structure: genuine coordination function (O-ring redesign must happen) coexists with asymmetric extraction (the halt extracts from flight operations). The constraint is legitimized by the coordination function — engineering redesign is necessary for safety — and the extraction is accepted as the cost of enforcing that coordination. The mandatrophy resolves because the constraint is BOTH coordination and extraction, not one disguised as the other. The scaffolding perspective (organized/constrained/generational) confirms this by identifying the temporary sunset: once redesign is certified, the constraint relaxes and normal operations resume. The suppression trajectory (0.82 → 0.85 → 0.68) shows institutionalization of the threshold followed by relaxation as redesign nears completion, confirming the temporary character."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "shuttle_engineering_culture_post_challenger",
+      "flight_readiness_review_authority_structure"
+    ],
+    "dual_formulation_note": "The Rogers absolute threshold is downstream of the O-ring physics (joint design failure mode) and upstream of post-Challenger institutional culture (engineering authority elevation). The physics constraint is upstream; the authority structure constraint is downstream. This story addresses the authority-allocation reading of Rogers, not the physics reading."
+  },
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reference_frame": "engineering_veto_authority_over_flight_readiness",
+    "drift_state": {
+      "moment": "contemporary_post_2000_shuttle_operations",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "management_compliance_narrative",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "actuarial_risk_acceptance",
+        "relation": "forecloses"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "engineering_redesign_mandatory_non_waivable",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "engineering_holds_flight_readiness_veto",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  }
+}

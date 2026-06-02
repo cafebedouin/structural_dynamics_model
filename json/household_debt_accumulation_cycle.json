@@ -4,23 +4,24 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "hdac"
+    "measurement_id_prefix": "hdac",
+    "story_uid": "b2492990-e03e-46fd-955c-5110f25f734f"
   },
   "base_properties": {
     "extractiveness": 0.58,
-    "suppression": 0.65,
-    "theater_ratio": 0.58,
-    "claimed_type": "snare",
+    "suppression": 0.68,
+    "theater_ratio": 0.65,
+    "claimed_type": "tangled_rope",
     "human_readable": "Household Debt Accumulation Cycle",
     "topic_domain": "economic/financial",
-    "requires_active_enforcement": false,
+    "requires_active_enforcement": true,
     "beneficiaries": [
       "financial_institutions",
       "creditors"
     ],
     "victims": [
-      "indebted_households",
-      "wage_earners_trapped_in_debt_service"
+      "wage_stagnant_households",
+      "intergenerational_wealth_transfer"
     ]
   },
   "perspectives": [
@@ -30,17 +31,17 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "national",
-      "label": "The Indebted Household",
-      "comment": "PERSPECTIVE 1: INDEBTED HOUSEHOLD (SNARE) \u2014 Trapped in debt service by material barriers: credit dependency, wage stagnation, housing costs, medical emergencies, and childcare expenses create structural inability to exit. Extraction is maximized because exit options are materially blocked. The household perceives the constraint as unchangeable within their biographical horizon."
+      "label": "The Debt-Trapped Household",
+      "comment": "PERSPECTIVE 1: DEBT-TRAPPED HOUSEHOLD (SNARE) — Faces structural wage stagnation and cannot exit through savings or deleveraging. Rising housing costs, healthcare expenses, and education force borrowing for essential needs. Debt service consumes increasing share of income, trapping household in perpetual extraction cycle. No meaningful exit options; maximum experienced extractiveness."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "moderate",
-      "time_horizon": "generational",
+      "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "Wage Earners Across Generations",
-      "comment": "PERSPECTIVE 2: WAGE EARNERS ACROSS GENERATIONS (TANGLED ROPE) \u2014 At generational horizon, wage earners experience both coordination (credit enables household stability, education, housing) and extraction (debt service reduces disposable income, constrains life choices, transmits financial stress across family lines). High suppression but not total \u2014 some households break the cycle through income mobility, inheritance, or debt forgiveness."
+      "spatial_scope": "regional",
+      "label": "The Rate-Sensitive Borrower",
+      "comment": "PERSPECTIVE 2: RATE-SENSITIVE BORROWER (TANGLED ROPE) — Uses credit for legitimate household needs (home purchase, education) but faces extraction through interest rate mechanisms and fee structures. Some agency (can refinance, consolidate debt) but constrained by credit score penalties and limited alternative lenders. Genuine coordination function exists alongside asymmetric extraction."
     },
     {
       "classification_type": "rope",
@@ -48,151 +49,157 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Financial Institutions",
-      "comment": "PERSPECTIVE 3: FINANCIAL INSTITUTIONS (ROPE) \u2014 Experiences the constraint as coordination: credit systems solve household liquidity problems, enabling consumption smoothing and investment. Institutions benefit from interest income, fee collection, and collateral acquisition. They perceive low suppression and high agency \u2014 they can exit individual relationships, modify terms, or securitize portfolios. Net beneficiary with minimal extraction cost."
+      "label": "The Financial Institution",
+      "comment": "PERSPECTIVE 3: FINANCIAL INSTITUTION (ROPE) — Experiences the constraint as coordination: credit markets allocate capital efficiently, enable consumption smoothing, and facilitate productive investment. Net beneficiary through interest margins, fees, and securitization spreads. High exit optionality (arbitrage to other markets, securitization, derivative hedging). Constraint appears as low-friction wealth transfer mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Policy Coalition",
+      "comment": "PERSPECTIVE 4: POLICY COALITION (TANGLED ROPE) — Regulatory bodies, consumer protection agencies, credit counseling organizations see both coordination (credit access enables mobility) and extraction (predatory lending, fee spirals). Constrained by political economy: financial sector lobbying limits regulatory tightening; consumer protection mandates face compliance cost pass-through. Genuine enforcement exists but asymmetrically applied."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
       "time_horizon": "civilizational",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "Regulatory and Government Systems",
-      "comment": "PERSPECTIVE 4: REGULATORY AND GOVERNMENT SYSTEMS (PITON) \u2014 Regulation of consumer lending persists through institutional inertia despite limited enforcement effectiveness. Truth in Lending Act, Fair Debt Collection Practices Act, and bankruptcy law create performative consumer protections while debt accumulation accelerates. Theater ratio high: regulatory theater maintains appearance of consumer protection while structural extraction mechanisms remain unchanged. Sunset clause absent \u2014 no planned termination of the regulatory apparatus."
-    },
-    {
-      "classification_type": "snare",
-      "agent_power": "organized",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "Low-Income and Precarious Workers",
-      "comment": "PERSPECTIVE 5: LOW-INCOME AND PRECARIOUS WORKERS (SNARE) \u2014 Organized collective perception (union membership, worker advocacy groups) reveals the debt cycle as pure extraction with minimal coordination benefit. High suppression: wage stagnation, gig economy, employment instability, and lack of healthcare access force continued credit dependence. Organization provides some agency but exit paths remain materially constrained."
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Consumer Credit Narrative",
+      "comment": "PERSPECTIVE 5: CONSUMER CREDIT NARRATIVE (PITON) — The rhetorical justification for household debt ('building credit history,' 'investing in human capital,' 'consumption smoothing for lifecycle') persists as institutional theater despite growing evidence that debt accumulation is driven by wage stagnation, not consumption choice. The narrative maintains institutional legitimacy for extraction mechanisms. Theater ratio reflects the gap between stated coordination function and actual extraction driver."
     },
     {
       "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "universal",
-      "label": "The Analytical Observer (Natural Law View)",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a civilizational perspective, some household debt is inherent to modern economies: time-preference mismatches between consumption and income, uncertainty, and large capital needs (education, housing) create structural necessity for credit systems. This perspective risks naturalizing contingent institutional arrangements (usury rates, predatory lending, debt trap design) as immutable economic laws. The false summit detector will flag this classification as a naturalization of what is actually an extractive institutional arrangement with historical contingency."
+      "spatial_scope": "global",
+      "label": "The Natural-Law View",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, the argument claims that debt accumulation is an inevitable consequence of economic growth, financial innovation, and lifecycle consumption patterns. This perspective sees the cycle as arising naturally from individual rational choice and market equilibrium. However, the beneficiary declarations (financial institutions extracting through asymmetric information and fee structures) and suppression mechanisms (structural barriers to deleveraging, wage stagnation) indicate this is a false summit — naturalization of contingent institutional arrangements."
     }
   ],
   "omegas": [
     {
-      "id": "debt_necessity_threshold",
-      "question": "What portion of household debt represents genuine coordination (consumption smoothing, education investment, housing access) versus extractive accumulation driven by wage stagnation and cost-of-living inflation?",
-      "resolution_mechanism": "Decompose household debt by origination purpose (mortgage, education, emergency medical, discretionary consumption); correlate with household income trajectory; track repayment vs rollover cycles",
-      "impact": "If coordination dominates: constraint reclassifies toward Tangled Rope from more perspectives. If extraction dominates: confirms Snare classification across more contexts.",
+      "id": "wage_stagnation_causation",
+      "question": "Is wage stagnation an exogenous macroeconomic trend or an endogenous result of extractive debt mechanisms that reduce household bargaining power?",
+      "resolution_mechanism": "Time-series analysis correlating debt-to-income ratios with wage growth rates; international comparison with lower-debt-ratio economies; analysis of household bargaining power by debt quintile",
+      "impact": "If exogenous: household borrowing is a rational response to external shock (Rope/Tangled Rope). If endogenous: debt accumulation suppresses wages, creating feedback cycle that locks households into extraction (shifts classification toward Snare).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether wage stagnation drives debt or debt suppresses wages"
+    },
+    {
+      "id": "credit_access_necessity",
+      "question": "To what extent is household credit access genuinely necessary for consumption smoothing vs. a mechanism that substitutes for wage adequacy and social safety nets?",
+      "resolution_mechanism": "Comparative analysis: credit-dependent economies vs. high-wage/strong-safety-net economies (Nordic, German models); tracking of credit usage for essential (healthcare, education) vs. discretionary (consumption, lifestyle) purposes",
+      "impact": "If necessary: genuine coordination function justifies Rope/Tangled Rope classification. If substitution: credit enables institutional extraction instead of filling coordination gap, shifting toward Snare for trapped households.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether credit access is necessary coordination or substitution for adequate wages"
+    },
+    {
+      "id": "intergenerational_wealth_transfer_mechanism",
+      "question": "Does household debt accumulation systematically redirect wealth from wage-earning households to financial institutions and asset-owners, thereby suppressing intergenerational wealth transfer?",
+      "resolution_mechanism": "Wealth-flow accounting: proportion of household income flowing to debt service vs. savings/investment; correlation between household debt levels and intergenerational wealth mobility; analysis of debt burden by race and ethnic group (revealing historical asset gaps)",
+      "impact": "If yes: debt cycle is extraction mechanism that locks out multigenerational wealth building (Snare). If no or minor: debt is temporary burden recovered through income growth (Rope/Tangled Rope).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether debt accumulation suppresses intergenerational wealth transfer"
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_psychological",
+      "question": "What proportion of the measured suppression (0.68) is structural (legal barriers to deleveraging, credit scoring penalties) vs. internalized (psychological commitment to debt repayment, identity fusion with consumer role)?",
+      "resolution_mechanism": "Post-debt-forgiveness studies: how suppression changes after structured debt relief programs; psychological markers of debt-shame internalization; comparison of suppression levels in bankruptcy-reform regimes (Chapter 7 vs Chapter 13 states)",
+      "impact": "If structural dominant: barriers persist even after debt cleared (high mandatrophy risk). If psychological dominant: households carry suppression after exit (internalized mechanism requires identity reframing, not just financial restructuring).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Coordination vs extraction decomposition of household debt"
-    },
-    {
-      "id": "interest_rate_extraction_mechanism",
-      "question": "How much of the extraction mechanism is driven by interest rates above minimum necessary (reflecting monopolistic rents and predatory pricing) versus rates that reflect genuine default risk and capital costs?",
-      "resolution_mechanism": "Compare household debt interest rates to institutional cost of capital; analyze dispersion across credit tiers; identify markup components attributable to adverse selection vs monopoly pricing",
-      "impact": "High extraction through usurious rates: Snare classification strengthened. Rates aligned with risk: extraction appears more as legitimate coordination cost.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Interest rate composition: risk-adjusted cost vs monopolistic extraction"
-    },
-    {
-      "id": "exit_path_materiality",
-      "question": "Are reported exit paths (debt consolidation, refinancing, bankruptcy) genuinely available to trapped households or are they theater masking continued extraction?",
-      "resolution_mechanism": "Empirical tracking: percentage of households attempting each exit path; success rates; post-exit financial trajectories; costs (credit score damage, bankruptcy stigma, legal fees)",
-      "impact": "If exit paths are materially available: reclassify to constrained rather than trapped (Tangled Rope from more perspectives). If theater: trapped classification confirmed.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether debt exit paths are materially available or theater"
-    },
-    {
-      "id": "wage_stagnation_constraint_entanglement",
-      "question": "Is the household debt accumulation cycle primarily a mechanism of direct extraction by creditors, or is it a secondary effect of wage stagnation driven by separate labor market constraints?",
-      "resolution_mechanism": "Compare household debt accumulation trajectories across countries with different wage dynamics; isolate creditor behavior from labor market shocks; model counterfactual with stable real wages",
-      "impact": "If primary extraction mechanism: debt_accumulation_cycle is autonomous Snare. If secondary to wage stagnation: the primary constraint is labor market extraction, and debt_accumulation_cycle is an amplification mechanism (network dependency).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether debt accumulation is primary extraction or secondary effect of wage stagnation"
-    },
-    {
-      "id": "cyclical_dynamics_regime",
-      "question": "Does the household debt cycle exhibit endogenous oscillation (credit expansion \u2192 debt accumulation \u2192 defaults \u2192 credit contraction \u2192 recovery) or secular trend (monotonic accumulation)?",
-      "resolution_mechanism": "Time-series analysis of aggregate household debt, credit availability, default rates, and interest rates; identify cycle frequency and shock response patterns",
-      "impact": "Endogenous cycles: measurements should show oscillation pattern; extraction mechanism includes credit availability control. Secular trend: monotonic measurements indicate accumulation; extraction mechanism is more stable.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Cyclical vs secular dynamics of household debt"
+      "description": "Structural vs. internalized suppression mechanisms in debt cycle"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
       "value": 0.48
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 20,
+      "metric": "suppression_requirement",
+      "time_point": 5,
       "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.68
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.42
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.55
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.52
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.58
+      "value": 0.65
     }
   ],
   "interval": {
     "start": 0,
-    "end": 20
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "The household debt accumulation cycle represents a structural constraint where financial institutions extract wealth from households through credit mechanisms while presenting the constraint as a coordination solution (credit enabling consumption and investment). The cycle operates through multiple reinforcing mechanisms: wage stagnation forces households to borrow for essential expenses; rising interest rates and fees increase debt service burden; debt service reduces ability to save, forcing continued borrowing; asset values and collateral stakes bind households to the creditor relationship; regulatory theater (consumer protection laws) persists without effectively limiting extraction. The constraint demonstrates how a genuine coordination function (credit systems solving liquidity problems) becomes degraded into a pure extraction mechanism (debt traps), visible as the transition from Tangled Rope to Snare across different agent perspectives. The extractiveness trajectory (0.35 \u2192 0.58) reflects decades of structural change: financialization of household expenditure, declining real wages, healthcare and education cost inflation, and removal of traditional exit paths (bankruptcy reform making discharge harder, predatory lending practices disguising extraction). The theater ratio trajectory (0.42 \u2192 0.58) captures the increasing performative content of regulation relative to actual consumer protection.",
+    "narrative_context": "The household debt accumulation cycle represents a structural constraint where financial institutions systematically extract wealth from households through asymmetric credit mechanisms while presenting the constraint as a coordination solution enabling consumption and investment. The cycle operates through reinforcing mechanisms: wage stagnation forces households to borrow for essential expenses (housing, healthcare, education); rising interest rates and fees increase debt service burden; debt service consumes income that would otherwise fund savings, forcing continued borrowing; longer debt repayment periods extend extraction window and increase total interest paid. This constraint exhibits the full range of DR classification depending on observer position. Financial institutions experience pure coordination (Rope) — credit enables efficient capital allocation. Wage-stagnant households experience pure extraction (Snare) — they are trapped in perpetual debt service with no deleveraging exit. Moderate borrowers experience mixed coordination and extraction (Tangled Rope) — credit access is genuinely useful for major life investments (home, education) but extraction mechanisms (compounding fees, rate adjustments, securitization spreads) are substantial and asymmetric. The policy coalition experiences constrained enforcement (Tangled Rope) — regulatory mechanisms exist but are captured by financial sector lobbying. The consumer credit narrative (Piton) maintains that household borrowing is a rational, optional choice for lifestyle enhancement, despite evidence that debt is driven by necessity (wage inadequacy) rather than choice. The analytical observer risks naturalizing the cycle as an inevitable feature of modern capitalism (Mountain), but the structural beneficiary declarations and escalating suppression metrics reveal this as a false summit.",
     "key_agents": [
-      "Indebted Households: Primary victims (powerless/trapped) \u2014 structurally unable to exit debt service; bear extraction through interest, fees, and life opportunity costs",
-      "Financial Institutions: Primary beneficiaries (institutional/arbitrage) \u2014 capture interest income, fees, collateral, and behavioral extraction through debt trap design",
-      "Wage Earners Across Generations: Secondary victims (moderate/constrained) \u2014 experience coordination benefit but also extraction; generational transmission of debt stress",
-      "Low-Income and Precarious Workers: Organized victims (organized/constrained) \u2014 collective perception reveals extraction mechanism despite worker organization",
-      "Regulatory and Government Systems: Institutional actor (institutional/constrained) \u2014 maintains performative consumer protection apparatus while extraction mechanisms persist",
-      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing contingent institutional arrangements (usury rates, predatory design, wage suppression) as immutable economic laws"
+      "Wage-Stagnant Households: Primary victim (powerless/trapped) — lack bargaining power to demand higher wages; forced to borrow for essential expenses; debt service traps income",
+      "Financial Institutions: Primary beneficiary (institutional/arbitrage) — extract through interest margins, fees, securitization spreads; maintain arbitrage optionality by exiting individual borrower relationships",
+      "Rate-Sensitive Borrowers: Secondary victim (moderate/constrained) — use credit legitimately for homes and education but face extraction through interest rate adjustments and fee structures",
+      "Intergenerational Wealth Transfer: Systemic victim (analytical/trapped) — debt cycle suppresses household savings and asset accumulation, blocking multigenerational wealth building",
+      "Policy Coalition: Constrained enforcer (organized/constrained) — regulatory bodies and consumer advocates face political economy barriers to effective constraints on extraction",
+      "Consumer Credit Narrative: Institutional theater (institutional/arbitrage) — the rhetorical framing that presents debt as optional choice rather than forced necessity"
     ],
-    "logic_rationale": "Extractiveness (0.58): High-moderate, reflecting the constraint's function as a revenue mechanism for creditors through interest, fees, and debt trap design, offset partially by genuine coordination function (credit enabling household stability). The value reflects that extraction is significant but not total \u2014 some households maintain manageable debt levels, and credit does solve genuine liquidity problems. Suppression (0.65): High. Barriers to exit include: structural wage stagnation (external constraint), credit dependency for basic needs (external constraint), credit score system linking debt status to economic opportunity (institutional constraint), bankruptcy reform making discharge harder (policy constraint), lack of household savings (resource constraint), and predatory lending practices disguising trap mechanisms (informational constraint). Theater ratio (0.58): Moderate-high. Regulatory apparatus (Truth in Lending Act, Fair Debt Collection Practices Act, bankruptcy law) creates perception of consumer protection while extraction mechanisms persist largely unchanged. Regulatory enforcement is sporadic; penalties are often lower than extracted rents. Consumer education campaigns frame debt as personal responsibility rather than structural mechanism.",
-    "directionality_logic": "Each perspective's directionality derives from structural relationship to extraction flow. Indebted households occupy maximum target position (d \u2248 0.95): trapped by material barriers, gaining minimal coordination benefit relative to extraction cost. Financial institutions occupy beneficiary position (d \u2248 0.10): benefit from interest and fees, face no material barriers to exit relationships or modify terms. Low-income workers occupy constrained target position (d \u2248 0.80): materially trapped but organized, experiencing extraction but with some collective agency. Regulatory systems occupy ambiguous position (d \u2248 0.60): constrained by political economy (financial industry influence, campaign finance), partly captured by beneficiaries while ostensibly protecting victims. The perspectival gaps reflect these structural differences: beneficiaries see coordination; victims see extraction; regulators see theater.",
-    "perspectival_gap": "The original research group sees coordination (Rope) \u2014 they experience credit as enabling household stability and consumption smoothing. Financial institutions genuinely experience the constraint as coordination: credit systems solve their liquidity problems too, and interest income solves their revenue problems. But trapped households perceive pure extraction (Snare) because their structural position offers no exit: they cannot avoid borrowing, cannot negotiate rates, cannot benefit from alternative financial products. The moderate wage-earner perspective sees mixed coordination and extraction (Tangled Rope) \u2014 they benefit from credit access but also bear extraction cost through debt service. The organized worker perspective sees extraction (Snare) because collective analysis reveals how debt mechanisms are structurally designed to prevent exit. The regulator perspective sees theater (Piton) \u2014 they maintain a performative protection apparatus while the extraction mechanism persists. The false summit (Mountain) risks naturalizing the arrangement as an immutable property of economies with time-preference mismatches, obscuring the contingent institutional choices that converted coordination into extraction.",
-    "mandatrophy_analysis": "DIAGNOSTIC EXEMPLAR: This constraint demonstrates mandatrophy resolution through perspectival multiplicity. The question 'Is household debt a Rope or a Snare?' admits no single answer \u2014 both classifications are structurally valid from different agent positions. The debt arrangement functions as Rope (coordination) for those who exit it or control it (financial institutions, mobile professionals). It functions as Snare (extraction) for those trapped in it (low-income households, precarious workers). The Tangled Rope classification represents the modal case: households experience both coordination benefit (credit access) and extraction (debt service burden, interest, fees). The mandatrophy is resolved by recognizing that a single institutional arrangement can deliver coordination to beneficiaries and extraction to victims simultaneously. The constraint's true type is not 'Rope XOR Snare' but 'structured to transfer coordination benefit to beneficiaries while imposing extraction cost on victims.' The theater ratio trend (increasing over the interval) indicates that regulatory responses are primarily performative \u2014 new rules maintain appearance of protection without reducing extraction mechanisms. This pattern is diagnostic of a constraint that has evolved from genuine Rope (early credit systems with lower rates and simpler mechanics) toward Snare (modern debt trap mechanisms with sophisticated extraction design, predatory practices, and regulatory capture)."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high and rising. The base extractiveness reflects that financial institutions capture substantial wealth through interest margins (average 6-8% on mortgages, 15-25% on credit cards), origination fees (1-5% on mortgages), annual fees, late fees, and prepayment penalties. The rising trajectory (0.32→0.58 over interval) reflects both increasing debt volumes and increasing fee structures and interest rates over the measurement period. The extraction is not maximal (0.58 < 0.66 snare threshold for χ) because some households access credit at reasonable rates and for legitimate productive purposes (home ownership, education). Suppression (0.68): High and escalating. Barriers to deleveraging include: credit scoring penalties that persist 7+ years after default; refinancing barriers (loan-to-value requirements exceed asset values for underwater borrowers); legal barriers (bankruptcy discharge exclusions for student loans); structural wage inadequacy that prevents savings accumulation; and psychology of debt shame/identity fusion. The rising trajectory (0.48→0.68) reflects intensifying enforcement mechanisms: stricter credit reporting, expanded debt collection practices, student loan payment garnishment provisions. Theater Ratio (0.65): Moderate-high. The 'consumer credit' narrative presents household borrowing as enabling choice (consumption smoothing, investment in human capital, lifecycle optimization) while empirical drivers are necessity (wage stagnation, healthcare costs, education inflation, housing cost growth). The rising trajectory (0.45→0.65) reflects increasing gap between stated purpose (choice-enabling) and actual driver (necessity-driven).",
+    "directionality_logic": "Each perspective's directionality derives from the agent's structural position relative to the extraction flow. Financial institutions are net beneficiaries with arbitrage optionality — they can exit individual borrower relationships, securitize debt, or deploy capital elsewhere. Their d-value is low (approximately 0.10-0.20), producing negative or near-zero effective extractiveness (χ) — they experience the constraint as pure coordination or mild benefit, not extraction. Wage-stagnant households are trapped victims with no exit options — they experience maximum extractiveness. Their d-value is approximately 0.95, producing high f(d) ≈ 1.42, multiplying their experienced χ significantly. Moderate borrowers with constrained exit (can refinance, change jobs with cost, but cannot simply walk away from home equity) have mid-range d ≈ 0.65-0.75, experiencing χ in the 0.35-0.50 range. Policy actors face asymmetric pressure: they can theoretically regulate, but financial sector lobbying constrains enforcement, producing constrained rather than mobile exit. The piton perspective captures the theater: the narrative justification persists (maintains legitimacy) while functional coordination has atrophied relative to extraction mechanics.",
+    "perspectival_gap": "The perspectival gap in this constraint is extreme and diagnostic. The financial institution sees Rope — efficient capital allocation enabling consumer choice and productive investment. The wage-stagnant household sees Snare — trapped in perpetual debt service with no exit. The rate-sensitive borrower sees Tangled Rope — legitimate access to credit for homes/education alongside extraction through fees and rate adjustments. The policy coalition sees Tangled Rope — genuine coordination function (credit access matters) constrained by enforcement capture. The piton perspective reveals that the consumer credit narrative (rationality, choice, lifecycle optimization) has become decoupled from the mechanism's actual function (necessity-driven extraction). The analytical observer risks the false-summit error: presenting the cycle as natural outcome of capitalism rather than as a constructed institutional arrangement. The perspectival gap reveals that the constraint's type depends entirely on which agent's structural position you measure from — and that the dominant beneficiary (financial institutions) experience the constraint as coordination while the dominant victims experience extraction.",
+    "mandatrophy_analysis": "The household debt accumulation cycle resolves the mandatrophy by showing that Tangled Rope is the only coherent classification that captures the genuine coordination function (credit enabling home ownership, education, consumption smoothing) alongside the asymmetric extraction mechanism (interest margins, fees, securitization spreads, and suppression of deleveraging). A Rope-only classification would require denying the extraction: 'credit is just efficient allocation.' A Snare-only classification would require denying the coordination: 'all household credit is predatory.' The tangled classification preserves both: credit markets perform genuine coordination functions AND financial institutions use asymmetric information, regulatory capture, and suppression mechanisms to extract substantially more than the coordination function requires. The rising extractiveness and suppression metrics over time suggest the extraction mechanism is strengthening relative to coordination function — the tangle is becoming more snare-like. The piton perspective reveals that the coordination narrative ('building credit history,' 'investing in human capital') is increasingly theater. This suggests the constraint may be drifting from Tangled Rope toward Snare over a longer interval, but at current metrics (suppression 0.68, χ ≈ 0.50-0.65), Tangled Rope remains the accurate classification."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "wage_stagnation_mechanism",
-      "financial_institution_monopoly_pricing",
-      "bankruptcy_reform_reform_cycle",
-      "consumer_credit_predatory_design"
+      "wage_stagnation_structural",
+      "credit_score_systemic_penalty",
+      "student_debt_trap",
+      "healthcare_debt_bankruptcy"
     ],
-    "dual_formulation_note": "Household debt accumulation is upstream of multiple downstream constraints: wage stagnation removes exit paths; predatory lending design converts coordination into extraction; bankruptcy reform removes safety valves; regulatory capture prevents policy intervention. The constraint family decomposes into structural and behavioral components. Structural (resource allocation coordination function, real lending rates) has lower \u03b5; behavioral (predatory design, debt trap mechanisms, regulatory theater) has higher \u03b5."
+    "dual_formulation_note": "The household debt accumulation cycle is upstream of specific debt traps (student loans, medical debt, housing debt) but represents a distinct structural constraint operating across all consumer credit categories. Each specific debt trap has its own extractiveness values reflecting domain-specific mechanisms; the accumulation cycle captures the meta-mechanism that binds them together: necessity-driven borrowing + asymmetric fee structures + suppression of deleveraging."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.55
+      "d_value": 0.12
     }
   ]
 }

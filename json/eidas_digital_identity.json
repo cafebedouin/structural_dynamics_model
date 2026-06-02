@@ -4,23 +4,26 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "eidas"
+    "measurement_id_prefix": "eidas",
+    "story_uid": "04722e46-8550-4c42-94b4-485db19fd051"
   },
   "base_properties": {
-    "extractiveness": 0.58,
-    "suppression": 0.62,
-    "theater_ratio": 0.48,
+    "extractiveness": 0.52,
+    "suppression": 0.45,
+    "theater_ratio": 0.58,
     "claimed_type": "tangled_rope",
-    "human_readable": "eIDAS Digital Identity Regulation and Sovereign Control",
+    "human_readable": "eIDAS Digital Identity Regulation: EU Coordination vs Member State Sovereignty",
     "topic_domain": "governance/digital_infrastructure/privacy",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "eu_member_states",
-      "identity_service_providers"
+      "eu_coordination_authority",
+      "large_platform_operators",
+      "cross_border_service_providers"
     ],
     "victims": [
-      "citizens_cross_border_mobility",
-      "alternative_identity_ecosystems"
+      "member_state_identity_autonomy",
+      "alternative_identity_ecosystems",
+      "citizen_privacy_preferences"
     ]
   },
   "perspectives": [
@@ -29,18 +32,18 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "continental",
-      "label": "The Trapped Digital Citizen",
-      "comment": "PERSPECTIVE 1: TRAPPED CITIZEN (SNARE) \u2014 EU citizens cannot opt out of eIDAS framework for essential services (tax filing, banking, legal verification). Alternative identity ecosystems (decentralized identity, blockchain-based credentials) face regulatory suppression. High suppression (0.62): legal mandate, infrastructure investment by states, interoperability gatekeeping. No viable exit for essential transactions. Maximum extraction experienced."
+      "spatial_scope": "global",
+      "label": "The Digital Citizen",
+      "comment": "PERSPECTIVE 1: THE DIGITAL CITIZEN (SNARE) — Citizens cannot opt out of eIDAS-compliant identity without forfeiting cross-border digital services. Exit barriers are material: relocating identity infrastructure requires abandoning EU service access. No structurally parallel alternative exists. Trapped experiencing maximum extraction: identity surveillance and gate-keeping."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "moderate",
       "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Constrained Alternative Identity Provider",
-      "comment": "PERSPECTIVE 2: ALTERNATIVE IDENTITY ECOSYSTEM (TANGLED ROPE) \u2014 Blockchain-based SSI (Self-Sovereign Identity) projects, decentralized identity platforms face regulatory constraints but also benefit from eIDAS interoperability standards. Constrained by: compliance costs, legal uncertainty, pressure to conform to eIDAS trust framework. Benefit from: standardization enabling cross-border recognition, infrastructure investment. Moderate extraction with genuine coordination function \u2014 eIDAS creates specification layer that reduces fragmentation."
+      "spatial_scope": "continental",
+      "label": "The Member State Government",
+      "comment": "PERSPECTIVE 2: MEMBER STATE GOVERNMENT (TANGLED ROPE) — Constrained by coordination benefits (cross-border service delivery, mutual recognition) and EU authority enforcement, yet benefits from domestic identity control and biometric data collection. Significant extraction (loss of sovereignty) alongside genuine coordination gain (reduced friction for citizens). Can exit only at high cost (leaving EU framework or fragmenting services)."
     },
     {
       "classification_type": "rope",
@@ -48,17 +51,26 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "continental",
-      "label": "The Member State Authority",
-      "comment": "PERSPECTIVE 3: MEMBER STATE AUTHORITY (ROPE) \u2014 National eID issuing authorities (governmental actors) experience eIDAS as pure coordination. The regulation solves the collective action problem of cross-border mutual recognition without imposing extraction. Member states retain sovereignty over identity criteria and issuance; eIDAS standardizes notification and trust framework. Net beneficiary through arbitrage: can issue identity credentials that gain automatic EU-wide acceptance."
+      "label": "The Large Platform Operator",
+      "comment": "PERSPECTIVE 3: LARGE PLATFORM OPERATOR (ROPE) — Benefits substantially from eIDAS-mandated identity standardization. Reduces authentication overhead across borders; concentrates user identity and behavioral data. Arbitrage position: can operate across multiple jurisdictions leveraging EU authority. Pure coordination from this perspective — solves mutual recognition problem enabling cross-border commerce."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "powerful",
-      "time_horizon": "biographical",
+      "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The Regulated Tech Platform",
-      "comment": "PERSPECTIVE 4: REGULATED TECH PLATFORM (TANGLED ROPE) \u2014 Large digital service providers (Meta, Google, Amazon) are required to accept eIDAS credentials for identity verification, reducing their ability to maintain proprietary identity ecosystems. Constrained by: regulatory mandate to interoperate, reduced data collection for identity verification. Benefit from: credential trust layer enables higher-friction services, reduces fraud liability. Asymmetric extraction \u2014 platforms lose identity data control but gain verification reliability."
+      "label": "The Alternative Identity Ecosystem (Decentralized/Blockchain)",
+      "comment": "PERSPECTIVE 4: ALTERNATIVE IDENTITY ECOSYSTEM (TANGLED ROPE) — Structurally suppressed by eIDAS mandate requiring state-issued credentials for service access. No formal prohibition (coordination function exists — interoperability standards), but effective suppression through infrastructure gatekeeping. Must either integrate into eIDAS framework (losing autonomy) or operate outside it (losing legal status). Mixed: coordination benefits from interoperability requirement, extraction through gatekeeping."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "The Digital Rights Coalition",
+      "comment": "PERSPECTIVE 5: DIGITAL RIGHTS COALITION (SCAFFOLD) — Sees eIDAS as temporary scaffolding for EU digital infrastructure. Privacy provisions (data minimization, purpose limitation) are built-in coordination features with sunset logic: as decentralized identity technologies mature (self-sovereign identity, verifiable credentials), the regulatory framework can transition to lighter-touch interoperability standards. Constraints sunset as technology enables distributed verification."
     },
     {
       "classification_type": "piton",
@@ -66,122 +78,149 @@
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "continental",
-      "label": "The eIDAS Regulatory Theater",
-      "comment": "PERSPECTIVE 5: eIDAS REGULATORY FRAMEWORK AS PITON (PITON) \u2014 eIDAS 2.0 implementation largely consists of compliance reporting, certification processes, and interoperability testing that produce theater without functional digital identity transformation. Theater ratio (0.48) reflects performative compliance: many EU citizens still use paper identification for essential transactions. The regulation persists through institutional inertia and sovereignty preservation (states maintain issuing authority) rather than because a genuine alternative identity infrastructure has displaced legacy systems."
+      "label": "The EU Regulatory Apparatus",
+      "comment": "PERSPECTIVE 6: EU REGULATORY APPARATUS (PITON) — eIDAS implementation has become substantially performative. The regulation mandates mutual recognition and interoperability, but member states maintain parallel identity systems (eGovernment, banking, telecom infrastructures) with proprietary integrations. Compliance theater: formal adherence to eIDAS while de facto pluralism persists. High theater ratio reflects the gap between regulatory mandate and fragmented operational reality. Maintains authority through procedural weight rather than functional necessity."
     },
     {
       "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer (Natural Law View)",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) \u2014 From a universal perspective, digital identity governance faces immutable structural constraints: any system that verifies identity at scale must make trade-offs between privacy, security, and usability; any cross-border system must solve the mutual recognition problem; any digital credential system faces the binding problem (proving the digital credential belongs to the person presenting it). These constraints appear as natural law. However, structural analysis reveals eIDAS as a contingent institutional response to these problems, not the inevitable solution \u2014 the framework reflects European regulatory preferences and state sovereignty maintenance, not immutable necessity."
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Naturalized Sovereignty)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (MOUNTAIN) — From civilizational/universal perspective, the constraint appears as an immutable feature of multi-state cooperation: any transnational system requires shared identity standards, and shared standards necessarily constrain local autonomy. This perspective risks naturalizing what is actually a contingent institutional choice — the eIDAS framing (EU-mandated state credentials) versus alternative framings (mutual recognition of diverse identity systems, zero-knowledge proofs, decentralized verification). Engine false summit detection applies."
     }
   ],
   "omegas": [
     {
-      "id": "privacy_extraction_mechanism",
-      "question": "Does eIDAS framework extraction operate through data collection (privacy cost) or through regulatory gatekeeping (competitive cost)?",
-      "resolution_mechanism": "Comparative analysis of personal data flows: eIDAS credential issuance and verification vs alternative identity systems. Audit of member state data collection practices under eIDAS vs pre-eIDAS.",
-      "impact": "If primarily data extraction: classify as information_asymmetry snare. If primarily regulatory gatekeeping: classify as market_structure tangled_rope. Different extraction mechanisms suggest different victim prioritization.",
+      "id": "state_credential_necessity",
+      "question": "Is state-issued credential gateway a necessary feature of transnational coordination, or a contingent institutional choice that could be replaced by decentralized verification?",
+      "resolution_mechanism": "Technical analysis of alternative architectures: mutual recognition of diverse identity systems, zero-knowledge proofs, blockchain-based verifiable credentials, and assessment of their functional sufficiency for cross-border service delivery",
+      "impact": "If necessary: eIDAS is coordination mechanism with minimal extractive overhead (Rope from most perspectives). If contingent: eIDAS gatekeeping is extraction mechanism that could be replaced (Snare/Tangled Rope from more perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Necessity of state-issued credential gateway vs alternative identity verification"
+    },
+    {
+      "id": "data_minimization_enforcement",
+      "question": "Do eIDAS data minimization provisions (Article 6) actually constrain member states and platform operators from expanding identity data collection, or do they function as performative privacy theater?",
+      "resolution_mechanism": "Audit of actual identity data flows: comparison of mandated minimum attributes vs actual collection practices; analysis of scope creep in eIDAS implementations; tracking of consent-bundling and data-sharing agreements",
+      "impact": "If enforced: suppression value drops significantly (lower theater ratio). If theater: theater ratio reflects actual dynamic (suppression sustained through structural incentives despite formal privacy rules).",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether extraction operates through data collection or regulatory gatekeeping"
+      "description": "Actual enforcement of data minimization provisions"
     },
     {
-      "id": "decentralized_identity_suppression",
-      "question": "Is regulatory suppression of decentralized identity systems (blockchain SSI, DIDs) structural necessity or contingent policy choice?",
-      "resolution_mechanism": "Analysis of eIDAS 2.0 wallet requirements, trust framework gatekeeping, liability frameworks for non-governmental issuers. Comparison with jurisdictions permitting competitive identity ecosystems.",
-      "impact": "If structural necessity: suppression reflects binding problem of cross-border recognition. If contingent policy: suppression is extraction mechanism protecting member state monopoly on identity authority.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether decentralized identity suppression is structural or contingent"
-    },
-    {
-      "id": "cross_border_mobility_benefit",
-      "question": "Does eIDAS coordination function actually enable cross-border services that were impossible pre-regulation, or does it primarily formalize existing practice?",
-      "resolution_mechanism": "Longitudinal analysis of cross-border service adoption rates: banking, tax filing, healthcare pre-eIDAS vs post-eIDAS. Counterfactual: would market coordination have achieved similar interoperability without regulation?",
-      "impact": "If genuine enabler: coordination function is real, tangled_rope classification appropriate. If formalization of existing practice: coordination benefit is minimal, extraction function dominates, reclassify toward snare.",
+      "id": "member_state_sovereignty_exit",
+      "question": "What is the actual cost for a member state to maintain alternative identity infrastructure outside eIDAS framework while remaining in EU?",
+      "resolution_mechanism": "Legal and technical analysis of non-compliance costs: regulatory fines, service fragmentation penalties, citizen experience degradation, and feasibility of parallel systems",
+      "impact": "If high cost (>> relocation): member states are trapped (constrained exit at high cost). If moderate cost (strategic negotiations feasible): member states have more agency in constraining EU extraction.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether eIDAS enables new cross-border services or formalizes existing practice"
+      "description": "Exit cost for member states maintaining alternative identity infrastructure"
     },
     {
-      "id": "sovereign_dignity_vs_extraction",
-      "question": "Does member state retention of eID issuance authority represent legitimate sovereignty preservation or extractive gatekeeping mechanism protecting national monopoly?",
-      "resolution_mechanism": "Comparative institutional analysis: do other policy domains (banking regulation, telecommunications) permit competing infrastructure, or does eIDAS uniquely preserve state monopoly on identity?",
-      "impact": "If sovereignty preservation: member states are not victims, rope classification appropriate. If extractive monopoly: member states extract rents through regulatory gatekeeping, beneficiary status should be re-evaluated.",
-      "confidence": "low",
-      "type_class": "preference",
-      "description": "Whether state eID monopoly reflects legitimate sovereignty or extractive gatekeeping"
+      "id": "decentralized_identity_maturity",
+      "question": "Are self-sovereign identity and verifiable credential technologies actually viable alternatives for scaled cross-border service delivery, or are they currently too immature for the scaffold perspective's sunset logic?",
+      "resolution_mechanism": "Technical assessment: scalability testing, security audits, user adoption rates, regulatory clarity, and comparison with eIDAS implementation timeline and adoption curves",
+      "impact": "If viable: scaffold sunset is real and relatively near-term (10-15 years). If immature: scaffold sunset is aspirational rather than structural, and the constraint may persist longer than expected.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Viability and maturity timeline of decentralized identity alternatives"
+    },
+    {
+      "id": "member_state_implementation_variance",
+      "question": "How much do eIDAS implementations actually differ across member states in data protection, biometric collection, and citizen consent mechanisms? Is there de facto pluralism or de facto convergence toward surveillance-maximizing baseline?",
+      "resolution_mechanism": "Comparative audit of member state eIDAS implementations: data protection frameworks, biometric infrastructure, consent models, and scope of identity usage across government and private services",
+      "impact": "High variance: suppression value is lower (member states retain autonomy within eIDAS). Low variance / convergence toward surveillance baseline: suppression value reflects actual dynamic (extraction through harmonization toward surveillance).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Variance in member state eIDAS implementations"
     }
   ],
   "measurements": [
     {
-      "metric": "theater_ratio",
+      "metric": "base_extractiveness",
       "time_point": 0,
       "value": 0.35
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 3,
-      "value": 0.42
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 6,
-      "value": 0.48
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.44
     },
     {
       "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
       "time_point": 0,
       "value": 0.42
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 3,
+      "metric": "theater_ratio",
+      "time_point": 5,
       "value": 0.5
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 6,
+      "metric": "theater_ratio",
+      "time_point": 10,
       "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.45
     }
   ],
   "interval": {
     "start": 0,
-    "end": 6
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "The eIDAS (electronic IDentification, Authentication and trust Services) regulation represents the European Union's attempt to create a unified digital identity framework enabling cross-border recognition of national digital identities while preserving member state sovereignty over identity issuance. The regulation functions simultaneously as a coordination mechanism (solving mutual recognition problems) and an extraction mechanism (gatekeeping alternative identity ecosystems and concentrating control in state-authorized providers). The constraint exhibits high suppression (0.62) because the regulatory framework legally mandates eIDAS credential acceptance for essential services while suppressing decentralized and alternative identity systems through compliance barriers, liability frameworks, and wallet standardization. Theater has increased over the regulatory implementation period (0.35 to 0.48) as compliance reporting and certification processes have proliferated without corresponding transformation in actual digital identity adoption. Extractiveness has risen (0.42 to 0.58) as the regulatory framework has solidified into a gatekeeping mechanism protecting state and incumbent provider monopolies.",
+    "narrative_context": "The eIDAS (electronic IDentification, Authentication and trust Services) regulation represents the European Union's attempt to solve a genuine coordination problem: enabling cross-border recognition of national digital identities while preserving member state sovereignty. The regulation simultaneously functions as a coordination mechanism (reducing friction for cross-border services) and an extraction mechanism (gatekeeping alternative identity ecosystems, concentrating identity data, and subordinating member state autonomy to EU authority). The constraint exhibits different types from different structural positions. From a citizen's perspective, it appears as a snare: no legitimate alternative to eIDAS-compliant identity without losing cross-border service access. From a member state's perspective, it is a tangled rope: coordinated digital infrastructure alongside loss of identity autonomy. From a large platform operator's perspective, it is pure coordination: reduced authentication friction and concentrated data leverage. From decentralized identity systems, it is suppression through gatekeeping. From digital rights coalitions, it is temporary scaffolding with a sunset clause as SSI technology matures. From the EU regulatory apparatus itself, it is a degraded piton: formal mandate obscuring de facto pluralism in implementations. The analytical observer risks naturalizing this as an immutable feature of transnational cooperation, when it is actually a contingent institutional choice about where identity authority should concentrate.",
     "key_agents": [
-      "EU Citizens: Primary victims (powerless/trapped) \u2014 cannot opt out of eIDAS framework for essential services; alternative identity systems suppressed by regulation",
-      "Member States (eID Authorities): Primary beneficiary (institutional/arbitrage) \u2014 retain sovereignty over identity criteria; gain automatic EU-wide recognition; arbitrage between regulatory compliance and implementation timeline",
-      "Alternative Identity Ecosystems (SSI, DIDs, Blockchain): Secondary victims (moderate/constrained) \u2014 face regulatory barriers, liability uncertainty, compliance costs; also benefit from standardization enabling interoperability",
-      "Tech Platforms (Large Digital Service Providers): Secondary victim (powerful/constrained) \u2014 required to accept eIDAS credentials, reducing proprietary identity control; benefit from credential trust layer",
-      "Identity Service Providers (Private Companies): Secondary beneficiary (institutional/arbitrage) \u2014 gain certified provider status enabling market access; constrained by eIDAS standards",
-      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing regulatory framework as inevitable solution to identity governance problems"
+      "Digital Citizens: Primary victims (powerless/trapped) — cannot opt out without losing cross-border service access; experience identity surveillance and gatekeeping",
+      "Member State Governments: Primary constrained agents (moderate/constrained) — benefit from coordination but subordinate to EU authority; extract identity data domestically while ceding control to Brussels",
+      "Large Platform Operators: Primary beneficiaries (institutional/arbitrage) — benefit from standardized identity reducing authentication overhead; concentrate behavioral data across borders",
+      "Alternative Identity Ecosystems (Decentralized/Blockchain): Secondary victims (powerful/constrained) — structurally suppressed by eIDAS mandate despite interoperability goals; must either integrate (losing autonomy) or operate outside (losing legal status)",
+      "Digital Rights Coalition: Organized actors (organized/constrained) — see eIDAS as temporary scaffolding with sunset logic; pushing toward privacy-preserving decentralized alternatives",
+      "EU Regulatory Apparatus: Institutional actor (institutional/arbitrage) — maintains eIDAS authority through procedural weight; de facto pluralism in implementations reduces functional necessity (piton dynamic)",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing contingent institutional choice as immutable feature of transnational cooperation"
     ],
-    "logic_rationale": "Extractiveness (0.58): Moderate-high. The regulation extracts from citizens through mandatory adoption and from alternative identity ecosystems through competitive suppression. However, extraction is not severe (would justify \u22650.70) because the framework delivers genuine coordination benefits (cross-border mutual recognition) and member states retain authority, reducing perceived extraction from their perspective. The value reflects that extractiveness is asymmetric: high from trapped citizens' perspective, moderate from powerful tech platforms, low from member state authorities. Suppression (0.62): Moderate-high. Legal mandate for acceptance, infrastructure investment in eIDAS networks, regulatory barriers to alternative systems, and liability frameworks that disfavor non-governmental issuers create significant suppression. But suppression is not total (0.70+) because paper identification remains acceptable for many transactions, and some alternative systems (self-hosted credentials) remain technically feasible if legally risky. Theater ratio (0.48): Moderate. eIDAS implementation includes substantial performative elements: certification processes, interoperability testing, compliance reporting that do not translate to citizen adoption. However, the framework has genuine coordination function (standardization enabling cross-border service), and alternative identity systems have meaningful technical barriers that eIDAS addresses, so theater is not high (>0.70).",
-    "perspectival_gap": "The perspectival gap reveals that eIDAS is experienced as pure extraction (Snare) by trapped citizens, as mixed coordination-extraction (Tangled Rope) by moderate alternative identity providers and powerful tech platforms, as pure coordination (Rope) by member state authorities, and as theater (Piton) from civilizational view where the regulatory framework persists through inertia despite low actual digital identity transformation. The gap between the member state authority perspective (Rope \u2014 pure coordination) and the trapped citizen perspective (Snare \u2014 pure extraction) is maximal: the same regulatory framework solves a coordination problem for states while imposing extraction on citizens. This gap is diagnostic: it reveals that the coordination function is asymmetrically distributed. The member states are genuinely solving a mutual recognition problem. The citizens are being forced into a single identity infrastructure with suppressed alternatives.",
-    "directionality_logic": "Directionality (d) is derived from structural position relative to extraction flow. Member states have institutional power and arbitrage exit (can issue identity credentials that gain automatic EU-wide acceptance without cost): d \u2248 0.05 (beneficiary). Citizens have powerless status and trapped exit (cannot opt out of essential transactions): d \u2248 0.95 (full target). Alternative identity ecosystems have moderate power and constrained exit (face regulatory barriers but technically feasible): d \u2248 0.70 (victim with some agency). Tech platforms have powerful status but constrained exit within digital services market (must accept eIDAS credentials): d \u2248 0.55 (mixed). The derived directionality values map to experienced extractiveness (chi) through the sigmoid f(d). Citizens experience maximum effective extraction; member states experience minimum or negative extraction (subsidy); moderate actors experience moderate extraction proportional to their constraint-specific barriers.",
-    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that eIDAS is genuinely a tangled rope: it solves a real coordination problem (member state mutual recognition of digital identities) while simultaneously enabling extraction (gatekeeping alternative ecosystems, centralizing control in state-authorized providers). The tension between types is not ambiguity in the classification \u2014 it is structural reality. Member states see Rope because the coordination function is real for them. Citizens see Snare because they cannot exit and extraction is asymmetric. The analytical observer risks seeing Mountain (naturalizing the framework as inherent to digital identity governance) but structural analysis reveals this as false summit: the regulatory choices (state monopoly on issuance, suppression of alternatives) are contingent, not inevitable. The mandatrophy prevents mislabeling the framework as pure coordination (Rope) by clarifying that coordination benefits are asymmetrically captured: member states and incumbent providers benefit; citizens and alternative ecosystems bear costs. Conversely, it prevents mislabeling as pure extraction (Snare) by acknowledging the genuine cross-border coordination problem and the real service benefits (though asymmetrically distributed). Tangled Rope captures this dual structure: active enforcement of standards, genuine coordination function, asymmetric extraction."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The regulation provides genuine coordination value (cross-border service interoperability), but extraction occurs through multiple mechanisms: (1) gatekeeping of alternative identity systems (suppressing decentralized approaches), (2) concentrated identity data collection enabling surveillance, (3) subordination of member state sovereignty to EU authority. The extractiveness has increased over the decade from 0.35 to 0.52, reflecting both scope creep (eIDAS used for non-cross-border authentication) and member state data collection intensification. Suppression (0.45): Moderate. Barriers to exit include legal/regulatory barriers (citizen must use eIDAS to access cross-border services), technical barriers (alternative systems lack interoperability), and informational barriers (privacy impacts not salient to most citizens). But suppression is not maximal — some citizens can and do use privacy-preserving alternatives, and member states retain some implementation discretion. Theater ratio (0.58): Moderate-high. Significant performative element: eIDAS mandates mutual recognition and data minimization, but de facto implementations show variance, biometric scope creep, and consent bundling. The formal privacy architecture (Articles 5-6) contrasts with actual data flows. Theater has increased from 0.42 to 0.58 as implementations diverge and compliance becomes procedurally heavy.",
+    "perspectival_gap": "The gap between perspectives reveals the constraint's hybrid nature. Citizens see a snare (no exit). Member states see tangled rope (coordination benefits with sovereignty loss). Platforms see pure coordination. Alternative systems see suppression. The digital rights coalition sees temporary scaffolding with sunset. The regulatory apparatus sees its own implementation degradation (piton). The civilizational analytical observer risks a false summit — naturalizing what is contingent.",
+    "directionality_logic": "Each agent's d-value reflects their structural position: citizens (trapped powerless) experience maximum extraction; member states (constrained moderate) experience moderate extraction; platforms (arbitrage institutional) experience no extraction; alternative systems (constrained powerful) experience moderate extraction; digital rights coalitions (constrained organized) experience lower extraction; the regulatory apparatus (arbitrage institutional) experiences no extraction; the analytical observer (analytical) occupies a detached position.",
+    "mandatrophy_analysis": "eIDAS instantiates the core mandatrophy. It IS a coordination mechanism: it solves genuine cross-border service delivery problems. It IS an extraction mechanism: it gatekeeps alternative identity systems and concentrates authority. The mandatrophy is resolved by recognizing that both readings are structurally correct from different perspectives. Citizens experience extraction precisely because the regulation succeeds at coordination. Member states experience both because they gain service benefits while losing autonomy. The regulatory apparatus experiences its own implementation gap (piton) because de facto pluralism persists despite formal mandate. The false summit detection applies to the analytical observer who naturalizes this dynamic as inherent to transnational cooperation rather than recognizing it as a contingent institutional choice about authority concentration."
   },
   "boltzmann": {
-    "coordination_type": "enforcement_mechanism"
+    "coordination_type": "identity_coordination",
+    "boltzmann_floor_override": 0.12
   },
   "network": {
     "affects_constraints": [
-      "decentralized_identity_gatekeeping",
-      "eu_digital_sovereignty_framework"
+      "digital_sovereignty_erosion",
+      "decentralized_identity_adoption",
+      "member_state_biometric_expansion"
     ],
-    "dual_formulation_note": "eIDAS digital identity regulation has distinct structural aspects: (1) cross-border mutual recognition coordination (Rope-primary), (2) alternative identity ecosystem suppression (Snare-primary), (3) state monopoly on eID issuance (extraction via gatekeeping). These could decompose into three separate constraint stories with \u03b5 values: mutual_recognition_coordination (\u03b5\u22480.15, Rope), alternative_identity_suppression (\u03b5\u22480.65, Snare), state_eID_monopoly (\u03b5\u22480.45, Tangled Rope). The present story unifies them because they are inseparable in the regulatory implementation: the coordination mechanism IS the extraction mechanism \u2014 standardization gatekeeps alternatives; mutual recognition centralizes authority."
+    "dual_formulation_note": "eIDAS digital identity coordination is upstream of specific member state implementations (biometric systems, eGovernment service expansion) and downstream of the broader EU digital governance framework. The constraint's extractiveness reflects both the regulatory authority concentration at the EU level and the implementation variance at the member state level. Decomposition by observable would separate: (1) eIDAS as formal coordination framework (lower ε), (2) eIDAS as actual identity gatekeeping mechanism (higher ε). This story models the latter (extractiveness 0.52), capturing the empirical outcomes across member states."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.05
+      "d_value": 0.18
     }
   ]
 }

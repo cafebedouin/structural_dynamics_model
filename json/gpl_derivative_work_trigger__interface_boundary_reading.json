@@ -1,0 +1,237 @@
+{
+  "header": {
+    "constraint_id": "gpl_derivative_work_trigger__interface_boundary_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gpl_iface",
+    "story_uid": "fb04b166-b518-4905-9497-0df02d42e233"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.62,
+    "claimed_type": "scaffold",
+    "human_readable": "GPL Derivative Work Trigger: Interface Boundary Reading",
+    "topic_domain": "software_licensing/copyright_law/open_source_governance",
+    "requires_active_enforcement": true,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "ecosystem_integrators",
+      "modular_architecture_practitioners"
+    ],
+    "victims": [
+      "broad_copyleft_expectation_holders",
+      "downstream_users"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Downstream User (Trapped by Licensing Ambiguity)",
+      "comment": "PERSPECTIVE 1: DOWNSTREAM USER (SNARE) — Receives binary executables or compiled artifacts without source access. Cannot determine whether GPL obligations apply based on public APIs alone. Trapped between incompatible interpretations (broad vs. narrow) with no ability to inspect the technical coupling or negotiate terms. Maximum extraction: licensing uncertainty itself is the extraction mechanism."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The GPL Enforcement Coalition (Organized Advocates)",
+      "comment": "PERSPECTIVE 2: GPL ENFORCEMENT COALITION (TANGLED ROPE) — Software Freedom Conservancy, FSF, organized GPL defenders see the interface boundary reading as a genuine technical-legal compromise: it protects copyleft intent against linking circumvention while permitting modular architecture. Benefits from clarifying what is and is not a derivative work (reducing enforcement uncertainty). Constrained by difficulty establishing objective technical criteria; also benefits from having a clear doctrine to defend. Mixed: some coordination benefit (clarity) but significant asymmetry (defenders do unpaid labor)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Ecosystem Integrators (Primary Beneficiary)",
+      "comment": "PERSPECTIVE 3: ECOSYSTEM INTEGRATORS (ROPE) — Companies building on GPL-licensed infrastructure (Android, container ecosystems, microservice platforms) see clean API boundaries as enabling coordination: they can integrate GPL components while choosing their own licensing for proprietary layers. Benefits from the reading via architectural freedom and reduced licensing entanglement. Experiences constraint as pure coordination — the API boundary provides clear interface contract that enables integration without forced copyleft propagation."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Standards Bodies (Sunset Clause Mediators)",
+      "comment": "PERSPECTIVE 4: STANDARDS BODIES / GOVERNANCE (SCAFFOLD) — Linux Foundation, Apache Foundation, and evolving software license governance norms are converging toward explicit interface-boundary clauses. This perspective sees the current ambiguity as a temporary coordination failure with a defined exit: as license drafting practices mature (REUSE Specification, Software Package Data Exchange), the interface boundary will be formally codified in license text itself. Sunset clause: in 10-15 years, explicit derivative-work triggers based on API coupling will replace interpretive doctrine."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Traditional Copyright Framework (Degraded Institutional Layer)",
+      "comment": "PERSPECTIVE 5: TRADITIONAL COPYRIGHT FRAMEWORK (PITON) — Copyright law's concept of 'derivative work' is fundamentally analog-era doctrine: it presumes lineal transformation and creative recombination of expression. When applied to software, where 'derivative' could mean anything from binary linking to mere API invocation, the framework becomes theatrical — courts and practitioners perform copyright reasoning but with unclear technical referents. The doctrine persists through institutional inertia (copyright is the available legal tool) rather than functional fit. Theater ratio high because the framework's language (modification, adaptation, originality) does not map cleanly onto software modular boundaries."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View - False Summit Candidate)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW (MOUNTAIN) — From a theoretical view, software modularity itself is an immutable technical fact: clean API boundaries represent genuine separability at the machine-code level, and interaction through standardized interfaces is structurally distinct from embedding or compilation. From this perspective, the interface-boundary reading is not a legal doctrine but a recognition of technical reality — derivative works (through linking, embedding, code inclusion) are objectively distinguishable from interface-based composition. However, the constraint's beneficiary structure reveals this as a FALSE SUMMIT: the reading naturalizes what is actually a chosen jurisdictional boundary that privileges integrators and disadvantages users expecting copyleft propagation."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "api_tightness_threshold",
+      "question": "At what degree of API coupling does interface-based integration cross into 'derivative work' territory?",
+      "resolution_mechanism": "Technical analysis of interface specifications: measured through API surface area coverage, parameter passing patterns, and behavioral coupling; comparison with empirical linker output and compiler intermediate representations",
+      "impact": "If threshold is very tight (>95% behavioral coverage): interface boundary reading collapses toward narrow permissive reading, allowing almost any integration. If threshold is loose (<50% coverage): interface boundary reading converges with broad copyleft reading, making most integrations derivative.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Technical coupling threshold for derivative work classification"
+    },
+    {
+      "id": "license_intent_recovery",
+      "question": "Can GPL intent regarding modular architecture be reliably recovered from GPL v2/v3 text, or is the interface-boundary reading a neo-copyleft reinterpretation imposed on ambiguous language?",
+      "resolution_mechanism": "Historical textual analysis of GPL drafting process (Stallman interviews, FSF minutes); comparison with author statements about anticipated software architectures in 1989 vs. 2024; linguistic analysis of 'derivative work' definition in GPL v2/v3 vs. contemporaneous case law",
+      "impact": "If recoverable: reading is doctrinal clarification, not innovation — more stable, more authoritative. If reinterpretation: reading is a negotiated settlement between open-source factions, not linguistic recovery — more vulnerable to alternative readings in future contexts.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether interface-boundary reading recovers original GPL intent or represents reinterpretation"
+    },
+    {
+      "id": "technical_enforcement_tractability",
+      "question": "Can API-boundary-based derivative work detection be automated in compliance tooling, or does it require expensive human judgment?",
+      "resolution_mechanism": "Development and deployment of automated API-coupling analysis tools (SBOM-based, compiler-output-based, behavioral profiling); measurement of false-positive/false-negative rates in real-world software stacks; cost comparison with traditional source-code auditing",
+      "impact": "If automatable: reading becomes practically enforceable and will be adopted by compliance infrastructure, embedding it in developer workflows. If not: reading remains a legal doctrine that diverges from engineering practice, vulnerable to circumvention and re-litigation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether API-boundary detection can be automated for compliance"
+    },
+    {
+      "id": "reading_stability_under_modularity_increase",
+      "question": "As software architectures become more modular and distributed (microservices, serverless, mesh networks), does the interface-boundary reading remain stable or does it require continuous reinterpretation?",
+      "resolution_mechanism": "Longitudinal case analysis: track how courts and license authorities handle boundary questions as architectures evolve; assess whether API-based derivative work analysis produces consistent results across different architectural paradigms (monolithic, SOA, containerized, serverless)",
+      "impact": "If stable: reading is robust to future architectural change. If unstable: reading will fragment into domain-specific variants, potentially re-opening the broader-vs-narrow divide in different technical contexts.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Stability of interface-boundary reading under architectural change"
+    },
+    {
+      "id": "kernel_reading_contest",
+      "question": "What is the structural relationship between this interface-boundary reading and the competing broad-copyleft and narrow-linking readings of the GPL derivative-work kernel?",
+      "resolution_mechanism": "This omega documents the committer-frame uncertainty: are the three readings logically incompatible (forecloses relation), or do they coexist as different valid interpretations of ambiguous GPL text (coexists_with relation), or does one reading shape conditions for the others (influences relation)? Resolution requires analyzing the GPL's actual language and case-law precedents.",
+      "impact": "If forecloses: only one reading can be correct; adoption of this reading excludes the alternatives. If coexists: all three readings remain live for different parties (FSF vs. Linux Foundation vs. commercial integrators). If influences: this reading's success in standards bodies shapes whether competing readings remain viable in downstream contexts.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel reading relationships and logical compatibility"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.55
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.33
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The GPL derivative-work trigger is a contested legal-technical boundary with profound implications for open-source governance. At the center is a simple question: when does using a GPL-licensed library require the downstream user to also release their code under GPL? The interface-boundary reading proposes that clean API boundaries constitute non-derivative aggregation even with tight coupling — interaction through standardized interfaces does not constitute a 'derivative work' that would trigger copyleft obligations, whereas direct linking, embedding, or code inclusion does. This reading sits between two extremes: a broad copyleft interpretation (any technical coupling invokes GPL obligations) and a narrow linking interpretation (only binary dynamic linking triggers obligations, static linking and API use are always permitted). The interface-boundary reading is a scaffold — a temporary institutional compromise that clarifies the boundary while remaining vulnerable to being superseded as license language matures. The constraint exhibits significant perspectival variance: ecosystem integrators see liberation (Rope), organized GPL advocates see principled compromise (Tangled Rope), downstream users see licensing ambiguity as an extraction mechanism (Snare), standards bodies see a problem with a defined technical solution (Scaffold), traditional copyright doctrine sees an impossible-to-apply analog framework (Piton), and the analytical observer risks treating a contingent legal choice as a technical inevitability (false Mountain).",
+    "key_agents": [
+      "Ecosystem Integrators (institutional/arbitrage): Primary beneficiary — companies building on GPL infrastructure benefit from API boundaries that permit mixed licensing and modular composition",
+      "GPL Enforcement Coalition (organized/constrained): Secondary beneficiary / advocate — FSF, Software Freedom Conservancy defend the interface-boundary reading as a faithful interpretation protecting copyleft intent",
+      "Downstream Users (powerless/trapped): Primary victim — receive binaries or compiled artifacts without source; licensing obligations are opaque and cannot be determined from APIs alone",
+      "Standards Bodies (powerful/mobile): Mediator / scaffold agent — Linux Foundation, Apache Foundation developing explicit API-boundary clauses in license text to codify this reading",
+      "Traditional Copyright Law (institutional/arbitrage): Institutional layer — copyright doctrine provides the legal framework but is ill-fitted to software modularity; persists through inertia",
+      "Analytical Observer (analytical/analytical): Civilizational view — risks naturalizing the chosen interface boundary as a technical fact rather than a legal convention"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate-low. The interface-boundary reading trades away some copyleft reach for architectural clarity. Users expecting full-stack source coverage experience reduced copyleft scope as extraction, but the reading does provide legitimate benefit to modular architecture. The metric reflects that this is a negotiated compromise: genuine coordination value (clarity for integrators) coexists with genuine cost (reduced copyleft for users). The extractiveness increased over the interval (0.28 → 0.38) as the reading became more entrenched in standards bodies and Linux-based systems, reducing the negotiation space. Suppression (0.48): Moderate. Barriers to understanding and changing the boundary include: technical complexity of API coupling analysis, institutional entrenchment in Linux/Android ecosystems, and cost of license auditing for integrators. Downstream users are suppressed by lack of transparency about which components trigger copyleft. Theater ratio (0.62): Moderate-high. Traditional copyright review of API boundaries remains theatrical — courts and auditors apply analog-era 'derivative work' doctrine to digital modular composition, producing reasoning that maps poorly onto actual software structure. The theater increased over time (0.45 → 0.62) as the interface-boundary reading became formalized in standards, requiring practitioners to perform sophisticated API analysis to justify licensing decisions, but the underlying copyright framework remained unchanged.",
+    "directionality_logic": "The interface-boundary reading's directionality differs sharply across perspectives. Ecosystem integrators (institutional/arbitrage) experience low directionality (d ≈ 0.12) — they are net beneficiaries of the reading, experiencing it as enabling coordination (Rope classification produces low chi). GPL advocates (organized/constrained) experience moderate directionality (d ≈ 0.42) — they bear the enforcement labor and must justify the reading against both broad-copyleft and narrow-linking critiques (Tangled Rope classification). Downstream users (powerless/trapped) experience high directionality (d ≈ 0.88) — they are targets of the licensing structure and cannot exit (Snare classification). The analytical observer at civilizational scale (analytical/analytical) experiences moderate directionality (d ≈ 0.72) — the observer sees both the technical and political dimensions and risks naturalizing a contingent legal boundary.",
+    "perspectival_gap": "The interface-boundary reading produces the widest perspectival gap in the GPL derivative-work kernel. The ecosystem integrators (Rope) see a liberation: clean API boundaries enable architectural freedom and mixed licensing. The standards bodies (Scaffold) see a temporary problem being solved through technical codification. The organized advocates (Tangled Rope) see a principled compromise that requires ongoing defense. The downstream users (Snare) see licensing opacity that extracts uncertainty cost. The traditional copyright framework (Piton) sees a doctrine that no longer functions. The analytical observer (false Mountain) risks concluding that interface boundaries are technical facts rather than chosen legal boundaries. This perspectival range is diagnostic: no single classification is correct; the presheaf of classifications reveals the contested nature of the kernel.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy through kernel reading decomposition. The broad-copyleft reading and narrow-linking reading are separate constraints (separate JSON files) with different ε values, beneficiary structures, and victim sets. This interface-boundary reading is a third constraint, a scaffold that mediates between the two extremes. The mandatrophy is not 'which reading is correct?' but 'how does the ecosystem navigate three coexisting interpretations?' The three readings coexist_with each other — they are held by different parties (FSF vs. Linux Foundation vs. commercial integrators) and no single reading logically forecloses the others, though this reading does influence the others by establishing a middle-ground doctrine.",
+    "kernel_context": "This constraint is ONE READING of the GPL derivative-work trigger kernel (kernel_id: gpl_derivative_work_trigger). The reading instantiated here is interface_boundary_reading: clean API boundaries constitute non-derivative aggregation even with tight coupling. The sibling readings are: broad_copyleft_reading (any technical coupling invokes GPL obligations) and narrow_linking_permissive_reading (only binary dynamic linking triggers obligations). The interface-boundary reading coexists with both siblings — different parties hold each reading, and no reading logically forecloses the others within separate frameworks. However, this reading influences both siblings by establishing a middle-ground doctrine that shifts resource allocation (Linux Foundation authority) and developer expectations (standards adoption). The kernel itself is the contested concept of what constitutes a 'derivative work' under GPL v2/v3 — the text is ambiguous, and three structurally distinct readings have emerged in different communities."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "gpl_derivative_work_trigger__broad_copyleft_reading",
+      "gpl_derivative_work_trigger__narrow_linking_permissive_reading",
+      "software_licensing_ambiguity",
+      "api_contract_enforceability"
+    ],
+    "dual_formulation_note": "The GPL derivative-work kernel has three distinct readings with different ε values. The interface-boundary reading (this file) has ε ≈ 0.38 (Scaffold). The broad-copyleft reading has ε ≈ 0.55 (Tangled Rope) — more extraction but also more copyleft clarity. The narrow-linking reading has ε ≈ 0.25 (Rope) — minimal extraction but also minimal copyleft scope. All three readings are structurally distinct constraints with different beneficiary/victim structures. They are linked through network.affects_constraints to show the kernel family."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.42
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "gpl_derivative_work_trigger__broad_copyleft_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "gpl_derivative_work_trigger__narrow_linking_permissive_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "api_boundary_technical_separability",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "copyleft_intent_preserves_linking_but_not_integration",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      }
+    ],
+    "reference_frame": "gpl_v2_technical_neutrality",
+    "drift_state": {
+      "moment": "contemporary_containerization_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

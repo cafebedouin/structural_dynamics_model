@@ -4,24 +4,26 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "scam"
+    "measurement_id_prefix": "scam",
+    "story_uid": "dd895813-16a7-47e9-9064-2024a1c07998"
   },
   "base_properties": {
     "extractiveness": 0.68,
     "suppression": 0.72,
-    "theater_ratio": 0.65,
+    "theater_ratio": 0.81,
     "claimed_type": "snare",
-    "human_readable": "The Playbook for Manufacturing Scientific Doubt (SCAMs)",
+    "human_readable": "Systematic Manufacture of Scientific Doubt (SCAMs)",
     "topic_domain": "economic/political",
-    "requires_active_enforcement": false,
+    "requires_active_enforcement": true,
     "beneficiaries": [
-      "incumbent_industries",
-      "doubt_manufacturing_firms"
+      "product_harm_concealers",
+      "regulatory_capture_practitioners"
     ],
     "victims": [
-      "public_health_commons",
-      "epistemic_integrity",
-      "regulatory_capacity"
+      "public_health_epistemic_commons",
+      "exposed_populations",
+      "regulatory_agencies",
+      "legitimate_research_communities"
     ]
   },
   "perspectives": [
@@ -31,17 +33,35 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Exposed Public",
-      "comment": "PERSPECTIVE 1: THE EXPOSED PUBLIC (SNARE) \u2014 Cannot opt out of exposure to harmful products or substances. Trapped by market concentration, regulatory gaps, and manufactured uncertainty about risk. Bears full extraction: health costs, shortened lifespans, medical expenses. No exit option; powerless to verify scientific claims against coordinated doubt campaigns. Maximum experienced extraction."
+      "label": "The Exposed Population",
+      "comment": "PERSPECTIVE 1: EXPOSED POPULATION (SNARE) — Structurally trapped. Lacks access to unmanufactured evidence, cannot exit exposure to the harmful product, and bears full health costs while doubt suppresses regulatory action. Maximum experienced extraction with no exit path — classic snare target."
     },
     {
       "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Epistemic Commons",
+      "comment": "PERSPECTIVE 2: EPISTEMIC COMMONS (SNARE) — The public pool of trustworthy scientific knowledge is contaminated by design. No agent advocates for the commons itself. It cannot exit and bears the cost of its own destruction. The constraint extracts epistemic value (trust, reliability, decision-making capacity) from the commons through deliberate pollution."
+    },
+    {
+      "classification_type": "tangled_rope",
       "agent_power": "moderate",
-      "time_horizon": "generational",
+      "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "Public Health Institutions",
-      "comment": "PERSPECTIVE 2: PUBLIC HEALTH INSTITUTIONS (SNARE) \u2014 Constrained by regulatory authority limits, political pressure, and funding dependence on industry partnerships. Cannot act on evidence until certainty threshold is reached, which the doubt campaign deliberately raises. Victims of the extraction: credibility is undermined, policy authority is eroded, resources are diverted to defending settled science."
+      "label": "Independent Research Community",
+      "comment": "PERSPECTIVE 3: INDEPENDENT RESEARCH COMMUNITY (TANGLED ROPE) — Faces significant resource and career constraints (being drowned out by funded doubt) but also benefits from the constraint through increased peer scrutiny, funding for replication studies, and method-development driven by defensive verification. High suppression cost but not total extraction — some agency through institutional coordination (universities, NIH, international bodies)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Regulatory Agencies (Captured)",
+      "comment": "PERSPECTIVE 4: REGULATORY AGENCIES (ROPE) — From the captured agency perspective, manufactured doubt is a coordination mechanism: it coordinates the agency's decision-making toward inaction by making evidence non-actionable. The agency experiences low extraction because the constraint aligns with its institutional interests (captured regulator benefits from regulatory inaction). Arbitrage: the agency can pivot to genuine regulation but chooses not to."
     },
     {
       "classification_type": "rope",
@@ -49,99 +69,90 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Incumbent Industry",
-      "comment": "PERSPECTIVE 3: INCUMBENT INDUSTRY (ROPE) \u2014 Experiences the doubt-manufacturing constraint as a coordination mechanism for preserving market access and delaying costly regulation. Net beneficiary: extracts regulatory delay, market share retention, and postponement of liability. Has full arbitrage option \u2014 can exit by reforming products or accepting regulation, but chooses to fund doubt instead. Benefits far exceed costs; sees constraint as solving the 'problem' of inconvenient scientific evidence."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "organized",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "Independent Researchers",
-      "comment": "PERSPECTIVE 4: INDEPENDENT RESEARCHERS (TANGLED ROPE) \u2014 Constrained by funding pressures and career risk when their findings contradict industry-sponsored research or attack industry-funded doubt campaigns. Benefits from access to industry research data and collaboration; costs from reputational attacks, career retaliation, and suppression of findings. Asymmetric extraction masked by coordination language ('scientific debate'). Forced to expend resources defending settled science against manufactured challenges."
+      "label": "Harm-Concealing Industry",
+      "comment": "PERSPECTIVE 5: HARM-CONCEALING INDUSTRY (ROPE) — The constraint is pure coordination from this perspective: it solves the collective action problem of regulatory suppression. The industry coordinates suppression of evidence, public uncertainty, and regulatory paralysis. High-extraction from victims but low-extraction experience for beneficiaries — they are coordinating successfully to achieve their goal."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
       "time_horizon": "generational",
-      "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "Regulatory Agencies",
-      "comment": "PERSPECTIVE 5: REGULATORY AGENCIES (PITON) \u2014 The regulatory apparatus for evaluating scientific evidence has become largely theatrical. Agencies perform the ritual of 'balanced consideration' of industry-funded doubt campaigns even when the evidence is settled. The procedural apparatus persists (advisory committees, public comment periods, multi-year review cycles) but its actual function \u2014 timely protection based on evidence \u2014 has atrophied. Theater ratio reflects the performative nature of 'regulatory deliberation' when doubt is manufactured on demand."
-    },
-    {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "Transparency and Accountability Movements",
-      "comment": "PERSPECTIVE 6: TRANSPARENCY AND ACCOUNTABILITY MOVEMENTS (SCAFFOLD) \u2014 Organized agents (NGOs, investigative journalists, data transparency advocates) are building alternative epistemic pathways: funding disclosure requirements, industry-funded study labeling, direct public communication of evidence, and historical documentation of doubt campaigns. These are temporary support structures with sunset logic \u2014 as transparency norms mature and meta-scientific auditing becomes standard, the doubt-manufacturing playbook loses effectiveness. Low effective extraction because coalition has agency and sees exit path through institutional reform."
+      "label": "Regulatory Framework (Degraded)",
+      "comment": "PERSPECTIVE 6: REGULATORY FRAMEWORK (PITON) — From a generational perspective, formal regulatory processes (environmental impact statements, pharmaceutical approval pathways, chemical safety standards) continue to exist and claim authority but have lost functional capacity to distinguish signal from manufactured noise. Theater ratio (0.81) reflects that regulatory hearings, expert panels, and public comment periods persist as performative ritual while doubt manufacturing has degraded their epistemic foundations. The framework is maintained by inertia and legitimacy narratives ('sound science,' 'weight of evidence') even as its core function has atrophied."
     },
     {
-      "classification_type": "snare",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 7: THE ANALYTICAL OBSERVER (SNARE) \u2014 From a civilizational/universal perspective, the doubt-manufacturing constraint is not a natural law or inevitable feature of science. It is a coordinated extraction mechanism that could be eliminated by transparency requirements, regulatory reform, and institutional change. The trap is structural and reversible, not inherent. The engine classifies this as Snare, not Mountain, correctly identifying that the manufacturing of doubt is a contingent institutional arrangement, not a limit of knowledge itself."
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — Risks framing manufactured doubt as inherent to scientific process: 'Scientists always disagree,' 'Uncertainty is always present,' 'No single study proves causation.' This naturalization treats the systematic industrial manufacture of epistemic noise as equivalent to legitimate scientific uncertainty. The engine detects this as a false summit: the appearance of uncertainty is engineered, not emergent."
     }
   ],
   "omegas": [
     {
-      "id": "epistemic_threshold_manipulation",
-      "question": "What evidence threshold legitimately separates 'uncertain' from 'proven harmful', and can that threshold be systematically elevated by funding bias toward null or negative findings?",
-      "resolution_mechanism": "Meta-analysis of funding sources and outcome reporting bias; comparison of industry-funded vs independent research publication rates for null findings; historical trend analysis of regulatory certainty thresholds over time",
-      "impact": "If thresholds can be manipulated: doubt manufacturing is an asymmetric extraction of regulatory delay. If thresholds are objective and immune: doubt campaigns are merely temporary communication noise (much lower extraction).",
+      "id": "manufactured_vs_legitimate_uncertainty",
+      "question": "What distinguishes manufactured epistemic noise (funded dissent, cherry-picked studies, obscured conflicts of interest) from legitimate scientific disagreement about unsettled claims?",
+      "resolution_mechanism": "Structural analysis: manufactured doubt exhibits funding trails to beneficiary, deployment patterns timed to regulatory moments, systematic cherry-picking of outlier studies, and strategic amplification through media and policy channels. Legitimate disagreement exhibits peer-distributed discourse, transparent methods, no systematic funding bias, and willingness to update on evidence. Empirical marker: manufactured-doubt narratives persist despite accumulating contrary evidence; legitimate disagreement converges.",
+      "impact": "If unresolved: regulatory agencies cannot distinguish signal from noise, defaulting to inaction (snare trap maintained). If resolved: regulators can weight evidence appropriately, extracted populations escape trap. Classification remains snare in either case, but the omega's resolution determines whether exit is possible.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether evidence thresholds can be systematically elevated through funding bias"
+      "description": "Distinguishing manufactured doubt from legitimate scientific uncertainty"
     },
     {
-      "id": "researcher_independence_capture",
-      "question": "Does industry funding of research create systematic bias in study design, publication, and meta-analysis that persists even when individual researchers are acting in good faith?",
-      "resolution_mechanism": "Structural analysis of industry research funding mechanisms; comparison of publication patterns and finding distributions in industry-funded vs independent cohorts; financial flow tracing through research institutions",
-      "impact": "If true: doubt manufacturing is embedded in research institutions themselves (high extraction, high suppression). If false or weak: doubt is created through selective citation and rhetoric rather than institutional capture (lower suppression).",
+      "id": "funding_capture_sufficiency",
+      "question": "Does controlling 40-50% of relevant research funding suffice to manufacture epistemic paralysis, or is additional media/political amplification required?",
+      "resolution_mechanism": "Comparative analysis across domains: tobacco (80% industry-funded research on health effects), fossil fuels (70%), pharmaceuticals (60%), versus domains with lower capture (materials science: 30%). Correlation with regulatory lag and public opinion drift.",
+      "impact": "If funding alone suffices: the constraint's mechanism is structural (buying silence of research). If amplification required: mechanism involves media capture and political coercion in addition to research funding. Extraction severity remains high either way, but suppression mechanism differs.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether research funding capture alone enables epistemic paralysis"
+    },
+    {
+      "id": "regulatory_inertia_vs_capture",
+      "question": "Do regulatory agencies maintain inaction because they are actively captured (extractive relationship with industry) or because epistemic noise has genuinely disabled their decision-making capacity (snare mechanism)?",
+      "resolution_mechanism": "Internal institutional analysis: captured regulators show deliberate obstruction, hidden meetings, reversed findings; disabled regulators show procedural paralysis, invocation of 'more research needed,' inability to reach decisions despite evidence. Interview regulator staff; examine decision-making records and internal communications.",
+      "impact": "If captured: the regulator is a willing beneficiary of the constraint (rope from their perspective). If disabled: the regulator is a victim of the constraint like the exposed population (tangled rope). Alters the beneficiary/victim mapping and may change classification from purely snare to snare + tangled rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory inaction stems from capture or epistemic disability"
+    },
+    {
+      "id": "counter_doubt_mobilization",
+      "question": "Can independent research mobilization (funding, coordination, media counter-narratives) break the doubt-manufacturing snare, or is the asymmetry in resources and media access structural?",
+      "resolution_mechanism": "Historical case studies: successful counter-mobilizations (tobacco regulation despite 50-year doubt campaign, CFC phase-out despite ozone-depletion denial, lead phase-out despite neurotoxicity denial) versus failures (ongoing fossil-fuel doubt, asbestos delay). Identify causal factors: independent funding sources, political coalitions, public health crises forcing action, legal liability.",
+      "impact": "If breakable: the snare is severe but not absolute; exit paths exist via mobilization (reduces from snare toward tangled rope). If structural asymmetry: the snare may be effectively permanent short of catastrophic failure or regime change.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether counter-mobilization can overcome epistemic asymmetry"
+    },
+    {
+      "id": "natural_law_false_summit",
+      "question": "Is this constraint a discovered natural law about scientific epistemology ('disagreement always exists,' 'proof is impossible in complex domains') or a contingent industrial practice that appears natural only because it dominates the observable field?",
+      "resolution_mechanism": "Comparison to pre-industrial scientific practice (pre-1950s) and domains without industrial capture: Does legitimate scientific uncertainty produce the same epistemic paralysis? Historical: 19th-century scientific debates about germ theory, evolution, gravity had genuine disagreement but did not prevent knowledge accumulation and regulatory action. Absence of manufactured doubt in high-stakes science (aviation safety, nuclear engineering) that lacks captured research funding shows that uncertainty need not paralyze.",
+      "impact": "If natural law: epistemic commons contamination is inevitable and cannot be eliminated (mountain true). If contingent: the constraint is a snare that could be dismantled through institutional reform (snare true, exit possible). The base metrics remain the same, but the false-summit detection triggers omega resolution for what appears natural.",
       "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether industry funding creates systematic research bias"
-    },
-    {
-      "id": "regulatory_capacity_exhaustion",
-      "question": "Does the volume and complexity of manufactured doubt deliberately exceed the epistemic and administrative capacity of regulatory agencies to process and respond?",
-      "resolution_mechanism": "Time-series analysis of regulatory decision timelines; comparison of agency workload and timeline to volume of industry submissions; modeling of deliberate complexity escalation strategies",
-      "impact": "If true: suppression mechanism is active and deliberate (high suppression value). If false: regulatory delay is passive (suppression lower, constraint may degrade to Tangled Rope).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether doubt manufacturing deliberately overwhelms regulatory capacity"
-    },
-    {
-      "id": "alternative_epistemic_pathways_sufficiency",
-      "question": "Can transparency requirements, funding disclosure, and meta-scientific auditing create a fully independent verification ecosystem that bypasses industry-controlled research channels?",
-      "resolution_mechanism": "Feasibility analysis of institutional reforms; comparison of independent vs industry-funded research production rates in markets with strong transparency vs weak transparency; historical case studies of successful epistemic independence movements",
-      "impact": "If sufficiency is high: scaffold perspective is confirmed \u2014 transparency sunset is achievable and extractiveness will decline. If sufficiency is low: alternative pathways will be partial and extraction will persist.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether transparency and auditing can create independent epistemic pathways"
+      "type_class": "conceptual",
+      "description": "Whether epistemic paralysis is natural law or contingent industrial practice"
     }
   ],
   "measurements": [
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.4
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.5
+      "time_point": 15,
+      "value": 0.62
     },
     {
       "metric": "theater_ratio",
-      "time_point": 40,
-      "value": 0.65
+      "time_point": 30,
+      "value": 0.81
     },
     {
       "metric": "base_extractiveness",
@@ -150,50 +161,66 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.58
+      "time_point": 15,
+      "value": 0.6
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 40,
+      "time_point": 30,
       "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.72
     }
   ],
   "interval": {
     "start": 0,
-    "end": 40
+    "end": 30
   },
   "commentary": {
-    "narrative_context": "The systematic manufacture of doubt about scientific evidence linking products or activities to public harm represents one of the most consequential extraction mechanisms in modern economies. Pioneered by the tobacco industry in the 1950s and replicated across fossil fuels, chemicals, and pharmaceuticals, this constraint operates by flooding the epistemic commons with manufactured uncertainty \u2014 funding marginal research, amplifying dissenting voices, exploiting legitimate scientific disagreement, and overwhelming regulatory capacity with complexity. The constraint extracts regulatory delay, market access, and postponement of liability costs by deliberately raising the evidence threshold required for action. Unlike pure extraction (Snare), the doubt-manufacturing playbook mimics coordination and scientific debate. Unlike pure coordination (Rope), it asymmetrically benefits the incumbent industry while harming public health commons and regulatory institutions. The theater ratio reflects the performative nature of the 'scientific debate' created by doubt manufacturing \u2014 the appearance of genuine scientific uncertainty masking coordinated industry strategy. Over the interval, both theater and extractiveness have increased as the playbook has become more sophisticated, regulatory agencies have been captured, and independent research capacity has declined relative to industry-funded production.",
+    "narrative_context": "The systematic manufacture of scientific doubt — pioneered by the tobacco industry starting in the 1950s and replicated across fossil fuels, pharmaceuticals, chemicals, and other harm-bearing industries — represents one of the most consequential extraction mechanisms of the modern era. This constraint operates by flooding the epistemic commons with manufactured uncertainty: funding research designed to produce negative or null findings, amplifying dissenting voices, exploiting legitimate scientific uncertainty to justify inaction, and creating the appearance of scientific controversy where consensus exists. The mechanism extracts massive value (regulatory forbearance worth trillions in avoided liabilities) from exposed populations and the epistemic commons itself, which is contaminated by design. Suppression is achieved through control of research funding, media narratives, and regulatory capture — barriers to regulatory action are raised through epistemic means rather than legal prohibition. The constraint exhibits all six DR types from different perspectives: a pure snare for exposed populations and the epistemic commons (no exit, maximum extraction), a rope for the harm-concealing industry (coordination achieved, low-extraction experience), a tangled rope for independent researchers (significant barriers but some agency through institutional coordination), a rope for captured regulators (coordination achieved, extraction runs toward them), a piton for formal regulatory processes (performative theater replacing functional decision-making), and a false-summit mountain from the analytical perspective that risks naturalizing contingent industrial practices as immutable properties of science.",
     "key_agents": [
-      "Incumbent Industries (tobacco, fossil fuels, chemicals, pharmaceuticals): Primary beneficiary (institutional/arbitrage) \u2014 captures regulatory delay, market access, liability postponement. Has full option to exit by reforming products but chooses doubt manufacturing instead.",
-      "Doubt Manufacturing Firms (public relations, law firms, contract research organizations): Secondary beneficiary (institutional/arbitrage) \u2014 extracts service fees from industries funding the campaigns. Institutionalized as specialized profession.",
-      "Public Health Commons: Primary victim (powerless/trapped) \u2014 cannot opt out of exposure to harmful products. Suffers health costs, shortened lifespans, medical expenses. Bears full extraction with no exit.",
-      "Public Health Institutions: Secondary victim (moderate/constrained) \u2014 credibility eroded, policy authority undermined, resources diverted to defending settled science. Constrained by regulatory authority limits and political pressure.",
-      "Independent Researchers: Mixed victim/constrained actor (organized/constrained) \u2014 constrained by funding pressures and career risk; also benefits from access to industry data and collaboration. Forced to expend resources defending evidence.",
-      "Transparency and Accountability Advocates: Organized response (organized/constrained) \u2014 building alternative epistemic pathways (funding disclosure, study labeling, direct evidence communication) with sunset logic.",
-      "Regulatory Agencies: Institutional actor (institutional/arbitrage) \u2014 maintain performative regulatory ritual; see own function (timely protection based on evidence) as degraded. Piton classification."
+      "Harm-Concealing Industry: Primary beneficiary (institutional/arbitrage) — captures regulatory forbearance and market continuation worth trillions; coordinates epistemic suppression to maintain extraction window",
+      "Exposed Populations: Primary victim (powerless/trapped) — bears full health, environmental, and economic costs of exposure while epistemic noise prevents regulatory intervention; no exit from either exposure or informational suppression",
+      "Epistemic Commons: Abstract victim (powerless/trapped) — the shared pool of trustworthy scientific knowledge is contaminated by design; no advocate, no exit, bears cost of its own destruction through lost trust and decision-making capacity",
+      "Independent Research Community: Secondary victim (moderate/constrained) — drowned out by funded doubt, faces resource and career barriers to contributing to public evidence; also benefits marginally through defensive verification funding and method development",
+      "Regulatory Agencies: Hybrid (institutional/constrained or arbitrage depending on capture) — either actively captured (rope perspective, beneficiary) or epistemically disabled (tangled rope perspective, victim) by manufactured uncertainty",
+      "Formal Regulatory Processes: Institutional actor (institutional/constrained) — procedures and expert panels persist as ritual (piton theater) while functional capacity to distinguish signal from noise has degraded",
+      "Analytical Observer: Universal context (analytical/analytical) — risks naturalizing the constraint as inherent to scientific epistemology rather than an engineered epistemic attack"
     ],
-    "logic_rationale": "Extractiveness (0.68): High. The doubt-manufacturing playbook systematically extracts regulatory delay, market access, and liability postponement from public health institutions and exposed populations. The extraction mechanism is coordinated, sophisticated, and has grown more effective over time as industries have learned to replicate the tobacco playbook. The value reflects that extraction is severe but not absolute \u2014 some regulatory decisions still proceed despite manufactured doubt, and transparency movements are beginning to expose the mechanism. Suppression (0.72): High. Multiple barriers prevent exit or resistance: (1) concentrated industry funding overwhelms independent research capacity; (2) regulatory procedures favor false balance over evidence hierarchy; (3) career risk punishes researchers who attack industry-funded campaigns; (4) public media literacy about manufactured doubt is limited; (5) market structure prevents consumer exit (essential products like fuel, medicines). Theater ratio (0.65): Moderate-high. The doubt-manufacturing constraint mimics legitimate scientific debate and regulatory deliberation, but much of this activity is performative. Industry-sponsored doubt campaigns create the appearance of scientific uncertainty where evidence is already settled. Regulatory review processes perform the ritual of balanced consideration even when the evidence clearly demonstrates harm. The performative content has increased over time as the playbook has become more refined and regulatory procedures have formalized false-balance rules.",
-    "perspectival_gap": "The exposed public and public health institutions see pure extraction (Snare) \u2014 they bear costs with no benefits and no exit. The incumbent industry sees coordination (Rope) \u2014 they experience the doubt-manufacturing constraint as solving the problem of inconvenient evidence, with arbitrage options fully available. Independent researchers see mixed coordination and extraction (Tangled Rope) \u2014 they benefit from access to industry research and funding but are constrained by career risk and funding dependence. The transparency movements see a temporary problem being solved (Scaffold) \u2014 funding disclosure, study labeling, and direct evidence communication are building alternative epistemic pathways with sunset logic. Regulatory agencies see their own degraded ritual (Piton) \u2014 the procedural apparatus for evaluating evidence persists but its actual function has atrophied. The analytical observer sees a coordinated extraction mechanism that could be eliminated by institutional reform (Snare with agency for change). The perspectival gap reveals that the same structural phenomenon \u2014 the gap between evidence and regulatory action \u2014 is experienced as inevitable by some (Piton, Mountain frame) but contingent and reversible by others (Scaffold, Snare with reform capacity).",
-    "directionality_logic": "Each perspective's directionality is determined by the agent's position in the extraction flow. The exposed public (powerless/trapped) has maximum d ~ 0.95, maximum experienced extraction. Public health institutions (moderate/constrained) have high d ~ 0.75, high extraction. The incumbent industry (institutional/arbitrage) has low d ~ 0.10, net benefit/negative extraction. Independent researchers (organized/constrained) have moderate d ~ 0.55, mixed experience. Regulatory agencies (institutional/arbitrage) have low d ~ 0.20, net benefit through procedural expansion. Transparency advocates (organized/constrained) have moderate d ~ 0.50, constrained agency but exit pathways visible. The engine derives d from these beneficiary/victim declarations and exit options, then applies the sigmoid f(d) to compute effective extractiveness chi from each perspective. The result is that the same base extractiveness (0.68) produces experienced extraction of ~1.30+ for trapped publics but ~-0.15 for beneficiary industries.",
-    "mandatrophy_analysis": "SNARE CLASSIFICATION RESOLVED: This constraint resolves the mandatrophy by correctly identifying doubt manufacturing as asymmetric extraction (Snare) rather than mislabeling it as coordination (Rope or Tangled Rope). The industry perspective would describe the constraint as 'scientific debate' or 'regulatory process,' using coordination language to legitimize extraction. The mandatrophy gate requires evidence that at least one perspective classifies as Snare (pure extraction) to prevent false coordination claims. This story includes multiple Snare perspectives (exposed public, public health institutions) plus the analytical observer's Snare, confirming that the constraint is not a coordination mechanism hiding benefits for all parties. The Rope and Tangled Rope perspectives in earlier versions of this analysis were rejected because they did not reflect the structural asymmetry: the public health commons receives no coordination benefit from the doubt campaign \u2014 it only bears costs. The constraint is pure extraction, correctly classified as Snare."
+    "logic_rationale": "Extractiveness (0.68): High. The constraint extracts massive regulatory forbearance (worth trillions across tobacco, fossil fuels, pharmaceuticals, chemicals). The 30-year progression from 0.48 to 0.68 reflects accumulating sophistication in the mechanism: initial doubt campaigns (1950s-1980s) were crude and partially visible; modern campaigns (2000s-2026) have refined the apparatus substantially, integrating funding, media, political, and regulatory capture. The metric reflects base extraction independent of victim or observer position — this is how much value flows to beneficiaries from doubt preservation. Suppression (0.72): High and rising. Barriers to regulatory action include: (1) structural control of research funding pools (40-80% of relevant research funded by or sympathetic to harm-concealer interests), (2) regulatory capture through revolving-door personnel, consulting relationships, and hidden funding, (3) media fragmentation enabling amplification of dissenting voices, (4) procedural requirements for 'sound science' that manufactured doubt weaponizes against intervention. Suppression is not perfect (some regulations pass: CFC phase-out, lead phase-out, tobacco restrictions) but is severe and rising. Theater ratio (0.81): Very high. Regulatory processes (environmental impact statements, pharmaceutical approval hearings, chemical safety reviews, climate advisory panels) continue to perform expert deliberation, peer review, and evidence assessment. But the underlying epistemic foundation has been so contaminated that these procedures are now substantially theatrical — they give the appearance of evidence-based decision-making while manufacturing doubt has disabled the actual capacity to distinguish signal from noise. The 30-year rise from 0.40 to 0.81 reflects the degradation of regulatory performance as the doubt-manufacturing apparatus has matured.",
+    "perspectival_gap": "The perspectival gaps are extreme. The harm-concealing industry (rope) experiences the constraint as a coordination success — their goal (regulatory suppression) is achieved, extraction flows toward them, and they experience low-extraction burden. Exposed populations (snare) experience maximum extraction with no exit: they bear health costs, bear informational suppression preventing escape, and have no agency. The epistemic commons itself (snare) is destroyed by design. Independent researchers (tangled rope) are significantly suppressed but retain some agency through institutional coordination — universities, funding agencies, and professional bodies can mobilize counter-research, though they are outfunded and outmaneuvered. Captured regulators (rope) experience the constraint as coordination (inaction is what they prefer), though the suppression mechanism is directed at the epistemic inputs to their decision-making. Formal regulatory processes (piton) perform the theater of evidence-based decision-making while the functional capacity has atrophied. The analytical observer (mountain/false summit) risks naturalizing the constraint by framing epistemic uncertainty as inherent to science rather than engineered. The constraint's classification depends entirely on perspective — it is a snare for those trapped by it, a rope for those coordinating through it, a tangled rope for those partially suppressed, and a false summit for those viewing it from too high an altitude.",
+    "directionality_logic": "Directionality derives from beneficiary/victim status and exit options. The harm-concealing industry is the primary beneficiary with arbitrage exit (they can exit doubt-manufacturing at any time but choose not to because extraction continues). Their directionality d ≈ 0.05 (full beneficiary, low d means low/negative f(d) means negative chi — they experience extraction flowing toward them as coordination, not burden). Exposed populations are primary victims with trapped exit (no ability to exit either exposure or the informational suppression preventing escape). Their directionality d ≈ 0.95 (full target, high d means high f(d) ≈ 1.42 means chi amplified by ~1.4x — they experience maximum extraction with no mitigation). The epistemic commons is a victim without exit (cannot exit the pollution of itself). Independent researchers are victims with constrained exit (can exit by ceasing research or joining funded skeptical organizations, but both exits carry career costs). Captured regulators are beneficiaries with constrained exit (they benefit from inaction, have choice to regulate but choose regulatory forbearance — more constrained than arbitrage because political and institutional factors limit their freedom). The analytical observer operates at d ≈ 0.72 (observer position, neither beneficiary nor victim). The engine derives these d values from the beneficiary/victim declarations and exit options; no override is needed because the structural relationships are clear.",
+    "mandatrophy_analysis": "Mandatrophy resolution: This is a snare constraint where classification as snare versus tangled rope depends on whether one is measuring from the perspective of beneficiaries (who experience coordination and low extraction) or victims (who experience maximum extraction and suppression). The mandatrophy requires distinguishing: (1) Is there genuine coordination function? Yes — the harm-concealer industry successfully coordinates suppression, and captured regulators coordinate inaction. (2) Is there asymmetric extraction? Yes — extraction runs massively toward beneficiaries from victims. (3) Is suppression ≥ 0.40? Yes, suppression = 0.72. The tangled rope classification applies from the beneficiary and captured-regulator perspectives (they see coordination). The snare classification applies from the victim perspectives (exposed populations, epistemic commons, independent researchers see pure extraction with no coordination benefit to themselves). The constraint is structurally snare-dominant (most agents are victims, most perspectives classify as snare) but with a genuine rope substructure (the beneficiary coordination is real). The resolved mandatrophy is: the constraint IS a snare at the domain level (most agents, most perspectives), but contains within it a rope component (the coordination among harm-concealers). This is why measuring from the beneficiary perspective produces rope while measuring from the victim perspective produces snare — the constraint genuinely has both properties, activated by whose perspective you measure from."
   },
   "boltzmann": {
     "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "regulatory_capture_fossil_fuels",
-      "pharmaceutical_safety_obfuscation",
-      "chemical_risk_postponement"
+      "regulatory_capture_via_revolving_door",
+      "media_fragmentation_epistemic_vulnerability",
+      "research_funding_concentration",
+      "public_health_epistemic_commons_contamination"
     ],
-    "dual_formulation_note": "The doubt-manufacturing constraint is a meta-constraint that operates across multiple domain-specific constraints (fossil fuel regulation, pharmaceutical approval, chemical safety). The core mechanism is invariant across domains \u2014 coordinated funding of marginal research, amplification of dissenting voices, regulatory capacity exhaustion \u2014 but domain-specific stories should capture the particular industries and regulatory bodies involved. This story provides the structural template; downstream stories apply it to specific industries and harms."
+    "dual_formulation_note": "Manufactured doubt is a constraint family with multiple structurally distinct stories. This story (scam_doubt_manufacturing) models the systematic epistemic attack mechanism itself (high suppression, high theater, snare-dominant). Upstream constraints model the structural enabling conditions (research funding concentration, regulatory capture mechanisms, media fragmentation). Downstream constraints model the consequences (public health delays, regulatory paralysis, epistemic commons degradation). Each story has its own ε value and its own perspectives; the network links them."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.1
+      "d_value": 0.08
     }
   ]
 }

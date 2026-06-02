@@ -1,0 +1,265 @@
+{
+  "header": {
+    "constraint_id": "bitcoin_whitepaper_purpose__electronic_cash_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "btc_cash",
+    "story_uid": "8635dc4d-d375-4838-ac1c-b0266d4398fc"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.48,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Bitcoin Whitepaper Electronic Cash Purpose Constraint",
+    "topic_domain": "distributed_systems/monetary_theory/technology_governance",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "payment_processors",
+      "low_value_transactors",
+      "merchant_adoption_infrastructure"
+    ],
+    "victims": [
+      "node_operators",
+      "full_node_maintainers",
+      "bandwidth_constrained_participants"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Payment Processor (Beneficiary Institutional)",
+      "comment": "PERSPECTIVE 1: PAYMENT PROCESSOR (ROPE) — Experiences the electronic-cash telos as pure coordination: low-fee, high-throughput transaction processing enables merchant adoption and payment-network growth. Benefits from expanded on-chain capacity and fee compression. Coordination function is genuine — processors need reliable, low-cost settlement to operate. No meaningful extraction experienced."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Low-Value Transactor (Beneficiary Moderate)",
+      "comment": "PERSPECTIVE 2: LOW-VALUE TRANSACTOR (TANGLED ROPE) — Benefits from low-fee on-chain inclusion; can transact everyday purchases directly. But also constrained by block space competition and timing uncertainty. Mixed experience: genuine coordination need (wants low fees) with extraction pressure (competes with high-value transactions for block space). As transaction volume rises, escalates toward snare."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Full-Node Operator (Victim Powerless)",
+      "comment": "PERSPECTIVE 3: FULL-NODE OPERATOR (SNARE) — Bears the storage and bandwidth cost of expanded blocks required by electronic-cash telos. Cannot exit: dropping from the network means losing validation capacity and stake in the consensus. Trapped between supporting the protocol and bearing uncompensated infrastructure cost. Maximum experienced extraction — the whitepaper's purpose mandate extracts from this agent without compensation or choice."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Node-Operator Coalition (Victim Organized)",
+      "comment": "PERSPECTIVE 4: NODE-OPERATOR COALITION (TANGLED ROPE) — Organized agents (node infrastructure providers, validators, client developers) experience mixed constraints. The electronic-cash telos creates genuine coordination need (shared validation infrastructure) but enforces asymmetric costs: full nodes bear capacity burden while miners/processors capture fee benefits. Coalition can organize but faces structural disadvantage — the telos itself privileges transaction throughput over node-operator incentives."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Core Developer Authority (Institutional Theater)",
+      "comment": "PERSPECTIVE 5: CORE DEVELOPER AUTHORITY (PITON) — Claims to steward the whitepaper's original vision but presides over degraded enforcement. The electronic-cash mandate is maintained through ceremonial citation (references to 'the whitepaper's true purpose') but operationalized through political negotiation, not original-intent implementation. Core devs arbitrage between competing readings — maintaining plausible commitment to electronic cash while enabling high-fee scaling. Piton: high theater ratio (continuous 'electronic cash is our mission' rhetoric) with declining functional enforcement (actual fee levels, block sizes deviate from original specifications)."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Natural-Law View (False Summit Candidate)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — Risk of classifying the tension between whitepaper purpose and implementation as an immutable trilemma (scalability, decentralization, security) — a natural law of distributed systems. However, the structural data reveals this as naturalization: the tension is enforced through governance choices (block size, fee policy, protocol rules) that are contingent institutional decisions, not physical constants. False summit: beneficiaries and victims are identifiable; the telos is disputed; the constraint is maintained through active political choice, not natural necessity."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Merchant Infrastructure (Powerful Beneficiary)",
+      "comment": "PERSPECTIVE 7: MERCHANT INFRASTRUCTURE (ROPE) — Powerful actors (payment networks, large merchants, e-commerce platforms) benefit from low-fee settlement but have mobile exit options (can use Lightning, sidechains, or competing Layer 2 protocols). Experience the electronic-cash telos as coordination with exit optionality — they see the mandate as valuable but not binding. Pure rope from their perspective: genuine coordination need without extraction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "reading_vs_sibling_foreclosure",
+      "question": "Does the electronic-cash reading logically foreclose the store-of-value reading, or do both readings coexist as live positions held by different factions?",
+      "resolution_mechanism": "Examine whether holders of the electronic-cash reading (e.g., merchants, payment processors, on-chain scaling advocates) require that store-of-value reading (e.g., hodlers, HODL-maximalists, high-fee-preference agents) abandon their commitment to coexist. Historical analysis: are there any proposals that the electronic-cash faction would accept that the store-of-value faction would reject on principle, or can both adapt protocols to serve both functions?",
+      "impact": "If foreclosure: reading_relations entry is 'forecloses'. If coexistence: reading_relations entry is 'coexists_with'. Foreclosure suggests a genuine kernel contradiction; coexistence suggests factionalism within a larger commitment structure.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether electronic-cash reading forecloses store-of-value reading"
+    },
+    {
+      "id": "block_size_sufficiency_threshold",
+      "question": "What block size (or transaction throughput) is sufficient to instantiate 'low fees' in the whitepaper's electronic-cash specification?",
+      "resolution_mechanism": "Historical fee data analysis: establish threshold at which average transaction fees for low-value transfers become statistically indistinguishable from traditional payment networks (credit card processing, ACH); identify at what block size this threshold is crossed for sustained traffic patterns.",
+      "impact": "If threshold requires blocks > 8MB: electronic-cash reading is only coherent with radical on-chain scaling, making it incompatible with decentralization-maximalist axioms. If threshold is met by Layer 2 solutions: electronic-cash reading can coexist with store-of-value reading via protocol agnosticism about settlement layer.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Block size or throughput required for 'low fees' specification"
+    },
+    {
+      "id": "merchant_adoption_causality",
+      "question": "Does low on-chain fee availability causally drive merchant payment adoption, or is merchant adoption primarily driven by regulatory clarity, point-of-sale infrastructure maturity, and volatility stability?",
+      "resolution_mechanism": "Causal analysis of merchant adoption rates vs. on-chain fee levels over time; compare adoption rates in periods of low fees (2011-2013) vs high fees (2017-2021) vs Layer 2 periods (2021+). Control for infrastructure maturity and regulatory environment.",
+      "impact": "If fee causality strong: electronic-cash reading is empirically grounded. If causality weak: electronic-cash reading is performing a ceremonial function (theater) rather than achieving the stated purpose. Shifts classification toward piton if beneficiaries are performing low-fee commitment while accepting high-fee reality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal relationship between on-chain fees and merchant adoption"
+    },
+    {
+      "id": "whitepaper_telos_binding_force",
+      "question": "In what sense is the whitepaper's stated electronic-cash purpose 'binding' on protocol development?",
+      "resolution_mechanism": "Examine governance mechanisms: do Core developers, miners, or community consensus treat the whitepaper as normative law (binding precedent that requires justification to deviate from) or as historical reference (descriptive of original intent but permitting evolution)? Survey governance forums, protocol amendment discussions, and consensus-formation patterns.",
+      "impact": "If whitepaper is treated as binding normative authority: cs_structure.authority_grounding should be 'lineage' (transmission of original vision). If permitting evolution: authority_grounding should be 'distributed' or 'practice' (protocol evolves through community consensus). This affects how reading_relations are structured (foreclosure vs. coexistence).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Normative vs. historical status of whitepaper's stated purpose"
+    },
+    {
+      "id": "node_operator_exit_illusion",
+      "question": "Is the full-node operator's 'trapped' classification accurate, or do node operators have practical exit options (switch to light clients, SPV, or non-validating relay nodes) that would reclassify them as 'constrained' or even 'mobile'?",
+      "resolution_mechanism": "Survey full-node operators regarding actual costs of switching to lightweight alternatives; measure functional loss (validation capacity, stake in consensus, network resilience contribution) against cost savings. Identify what portion of the node operator base are volunteers (trapped by ideology/commitment) vs. paid operators (trapped by contract).",
+      "impact": "If exit is practical and low-cost: classification shifts to 'constrained' and chi decreases (lower f(d)). If exit requires becoming a different type of agent (losing validation role, stake, or community standing): classification remains 'trapped' (identity_locked element). This determines whether the snare classification holds or degrades to tangled_rope.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Exit options for full-node operators under electronic-cash mandate"
+    },
+    {
+      "id": "reading_kernel_codification_ambiguity",
+      "question": "Is the bitcoin whitepaper a 'fixed_text' kernel (treat words as binding law) or an 'implicit' kernel (the whitepaper is historical artifact; the real kernel is what the community does)?",
+      "resolution_mechanism": "Examine governance rhetoric: when disputes arise (e.g., block size wars, fee policy, hard forks), do protagonists cite the whitepaper as authoritative text that constrains choices, or cite it as historical context while arguing the true protocol is established through consensus? Track which governance decisions are justified as 'true to the whitepaper' vs. 'evolution beyond the whitepaper'.",
+      "impact": "If fixed_text: the electronic-cash reading is a reading of stable, unchanging words — kernel_codification = 'fixed_text'. If implicit: the whitepaper is symbolic/ceremonial and the real kernel is the evolving protocol consensus — kernel_codification = 'implicit'. This affects cs_structure and how reading_relations are computed.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whitepaper kernel codification status: fixed text vs. implicit consensus"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.2
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The Bitcoin whitepaper's electronic-cash telos — 'a purely peer-to-peer version of electronic cash would allow online payments to be sent directly from one party to another without going through a financial institution' — instantiates a binding constraint on protocol development in one reading, yet this reading is actively contested by an alternative store-of-value reading. This constraint story models the electronic-cash reading as a clean, ε-invariant constraint: a system commitment to support everyday low-fee transactional use. The constraint exhibits all six classification types from different observer perspectives, making it a diagnostic exemplar for kernel-reading dynamics. The measurement trajectory shows rising extractiveness, suppression, and theater ratio over Bitcoin's first decade (2009-2019), indicating that the electronic-cash telos became increasingly costly to maintain as protocol politics evolved and transaction fees rose. The theater ratio's rise reflects Core developers maintaining ceremonial commitment to 'the whitepaper's true purpose' while enabling high-fee transaction patterns — classic piton drift. The extractiveness rise reflects growing asymmetry between beneficiaries (payment processors, high-throughput use cases) and victims (node operators bearing capacity costs). This reading does NOT attempt to resolve the kernel dispute between electronic-cash and store-of-value readings; it models the electronic-cash reading's own structural coherence and the cost dynamics of maintaining it.",
+    "key_agents": [
+      "Payment Processors & Merchants: Primary beneficiaries (institutional/arbitrage) — benefit from low-fee settlement, support expanded on-chain capacity, promote electronic-cash reading",
+      "Low-Value Transactors: Secondary beneficiary (moderate/constrained) — need low-fee on-chain access for everyday payments but compete for block space",
+      "Full-Node Operators: Primary victims (powerless/trapped) — bear uncompensated storage and bandwidth costs of larger blocks; cannot exit without losing validation role",
+      "Node-Operator Coalition: Organized victim group (organized/constrained) — infrastructure providers that face structural cost asymmetry but can coordinate collective response",
+      "Core Developers: Authority custodians (institutional/arbitrage) — claim stewardship of original vision but arbitrage between readings in governance decisions; maintain high theater ratio",
+      "Store-of-Value Faction: Sibling-reading holders (powerful/mobile) — HODL-maximalists, high-fee-preference agents; hold competing reading of the same whitepaper kernel",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing governance choices (block size, fee policy) as immutable technical trilemmas"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, rising over the measurement interval. At t=0 (2009), the electronic-cash telos is operationally coherent and low-cost — blocks are small, fees are negligible, node-operator burden is minimal. At t=10 (2019), the telos remains formally operative but operationally expensive: transaction demand has exceeded protocol capacity, fees have risen, and maintaining the electronic-cash commitment would require protocol changes that conflict with store-of-value reading preferences. The extractiveness reflects the gap between the stated commitment and its operational cost — beneficiaries (payment processors) continue to receive the benefit of the rhetoric, but victims (node operators) bear rising actual costs. Suppression (0.48): Moderate. Node operators face real barriers to exit (loss of validation role, community standing, security contribution) but not total immobility. They can switch to light clients (but lose validation function) or participate in sidechains/Layer 2 (accepting that on-chain scaling isn't happening). The suppression reflects this partial constraint. Theater ratio (0.55): Moderate-high and rising. Core developers maintain ceremonial commitment to 'the whitepaper's original vision' in governance forums while enabling protocol evolution toward store-of-value reading (higher fees, smaller blocks relative to demand). The theater reflects the gap between stated telos and operational choice.",
+    "perspectival_gap": "The electronic-cash reading produces maximally divergent classifications across perspectives. Payment processors see pure coordination (Rope) — low-fee settlement directly solves their operational problem. Low-value transactors see mixed coordination and extraction (Tangled Rope) — they benefit from the telos but compete for scarce block space. Full-node operators see pure extraction (Snare) — the telos mandates their cost-bearing with no compensation. Core developers see a piton (theatrical obligation maintained through inertia) — the telos is cited ceremonially while protocol evolution proceeds through pragmatic governance. The store-of-value faction (not shown as a separate perspective in this story) would see the electronic-cash reading as imposing costs (block space constraints, lower transaction fees available to HODLers). The civilizational analytical observer risks naturalizing this political dispute as a technical law (the trilemma: scalability, decentralization, security). The perspectival gap reveals that the 'immutable law' framing is cover for a governance choice about whose interests the protocol prioritizes.",
+    "directionality_logic": "Each perspective's directionality (d) derives from the agent's structural relationship to the electronic-cash telos. Payment processors are beneficiaries with arbitrage options (can use Layer 2, sidechains, or accept the on-chain constraint as a feature): d ≈ 0.15 (low, negative effective extraction). Low-value transactors are beneficiaries with constrained options (need on-chain access for their use case but limited ability to build alternatives): d ≈ 0.40 (moderate). Full-node operators are victims with trapped exit (dropping validation means losing stake in the consensus): d ≈ 0.95 (near-maximum). Node-operator coalition are victims with some organizational capacity (can coordinate, can lobby for protocol changes, can fork): d ≈ 0.65 (high but not maximum). Core developers are beneficiaries with arbitrage options (can evolve the protocol, can bridge readings through Layer 2 solutions): d ≈ 0.20 (low). Store-of-value faction (if modeled as a separate perspective) are victims of the electronic-cash telos with mobile options (can move to other chains, can support hard forks): d ≈ 0.50-0.60. The analytical observer uses canonical d for analytical power atom: d ≈ 0.72. The engine derives f(d) from these values and multiplies by scope modifier σ(S) = 1.2 (global scope) to compute effective extraction chi.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel: bitcoin_whitepaper_purpose. The reading instantiated here is electronic_cash_reading, which commits to the whitepaper's literal stated goal: supporting everyday peer-to-peer transactions with low fees, minimal financial intermediation, and on-chain settlement. The sibling reading is store_of_value_reading, which interprets the same whitepaper as primarily establishing a scarce digital asset (HODL-maximalist reading) and treats high fees as acceptable price for security and decentralization. These readings do NOT have the same core premise. The electronic-cash reading prioritizes transaction throughput and fee minimization; the store-of-value reading prioritizes security and scarcity. A single protocol governance framework cannot fully satisfy both — expanding block size to reduce fees (electronic-cash preference) increases node-operator burden and may compromise decentralization (store-of-value concern). The readings coexist as competing factions within the Bitcoin community, neither fully ruling out the other within their own internal logic, but creating ongoing structural tension in governance decisions. The electronic-cash reading's foundational axioms are: (1) 'electronic_cash_primary_use_case' — the protocol's defining innovation is enabling peer-to-peer electronic payments without trusted intermediaries; (2) 'on_chain_scalability_feasible' — expanding on-chain capacity is a viable path to achieving payment-use adoption (as opposed to relegating payments to Layer 2 while the main chain serves other purposes). The store-of-value reading's foundational axioms would be: (1) 'scarce_digital_asset_primacy' — the protocol's innovation is creating a truly scarce digital asset resistant to inflation and censorship; (2) 'layered_settlement_architecture' — payment scaling happens through off-chain protocols (Lightning, sidechains) while the main chain provides settlement finality and security. These axiom pairs are in tension but not logical contradiction — a protocol could theoretically support both through sufficient on-chain capacity and robust Layer 2 infrastructure. The actual governance dispute is not whether the readings are logically foreclosed, but which reading the protocol's scarcest resource (block space) should be allocated to. This is a distributional/political choice, not a technical one.",
+    "mandatrophy_analysis": "The mandatrophy in this constraint arises from the gap between the stated telos (electronic cash, low fees, everyday payments) and the operational constraint (limited block space, rising fees, store-of-value reading prioritized in governance). The electronic-cash reading resolves mandatrophy by acknowledging that the telos is contested and costly to maintain: it is a real coordination mechanism (payment processing genuinely needs low-fee settlement) but operates alongside genuine asymmetric extraction (node operators bear costs without compensation). This is neither pure extraction (snare) nor pure coordination (rope) — it is tangled rope with rising extraction costs. The piton perspective (Core developer stewardship) reveals how mandatrophy is performed: ceremonial commitment to 'the whitepaper's original vision' masks pragmatic abandonment of the electronic-cash telos. The natural-law perspective (false summit) shows how the reading risks naturalizing a governance choice as technical necessity. The resolution is not to pick one type, but to recognize that the electronic-cash reading's structural coherence requires ongoing commitment to operational support for low-fee payments — which the actual protocol has not provided since 2017. This is the diagnostic signal: if the reading's core axioms were truly in force, the measurement trajectory would be flat or decreasing in extractiveness; instead, extractiveness rises, indicating that the axioms are being overridden by competing governance pressures."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "bitcoin_whitepaper_purpose__store_of_value_reading"
+    ],
+    "dual_formulation_note": "The bitcoin_whitepaper_purpose kernel is modeled as two separate constraint stories: electronic_cash_reading (this file) and store_of_value_reading (sibling file). They share the same kernel (the whitepaper's stated commitments) but instantiate different epsilon values, beneficiary/victim structures, and governance axioms. The electronic_cash_reading has higher extractiveness (0.58) because maintaining the telos is operationally costly; the store_of_value_reading would have lower extractiveness because HODL-maximalist preferences align with actual protocol development (high fees, limited on-chain capacity). Neither reading is a measurement artifact or perspectival variant of a single constraint — they are genuinely different commitments with different structural consequences. Link via network.affects_constraints to model the kernel family relationship."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.22
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "bitcoin_whitepaper_purpose__store_of_value_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "electronic_cash_primary_use_case",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "on_chain_scalability_sufficient",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "whitepaper_peer_to_peer_vision",
+    "drift_state": {
+      "moment": "contemporary_2024",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

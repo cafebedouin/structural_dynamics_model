@@ -1,0 +1,328 @@
+% ============================================================================
+% CONSTRAINT STORY: humane_treatment_standard__proportionality_balancing
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_humane_treatment_standard__proportionality_balancing, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    constraint_indexing:directionality_override/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:cs_story_uid/2,
+    narrative_ontology:cs_kernel_codification/2,
+    narrative_ontology:cs_authority_grounding/2,
+    narrative_ontology:cs_interpretation_layer_present/1,
+    narrative_ontology:cs_kernel_id/2,
+    narrative_ontology:cs_reading_relation/3,
+    narrative_ontology:cs_axiom/3,
+    narrative_ontology:cs_axiom_status/2,
+    narrative_ontology:cs_axiom_grounding/3,
+    narrative_ontology:cs_reference_frame/2,
+    narrative_ontology:cs_drift_state/3,
+    narrative_ontology:cs_created_at/2,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: humane_treatment_standard__proportionality_balancing
+ *   human_readable: Proportionality Balancing in Humane Treatment Standards (Common Article 3)
+ *   domain: international_humanitarian_law/human_rights/state_security
+ *
+ * SUMMARY:
+ *   Common Article 3 of the Geneva Conventions establishes the foundational
+ *   principle that all detainees receive humane treatment without 'violence
+ *   to life and person,' 'torture,' 'cruel, inhuman or degrading treatment,'
+ *   and 'outrages upon personal dignity.' The proportionality-balancing
+ *   reading interprets this standard as permitting treatment that is
+ *   degrading if proportional to legitimate security necessities. This
+ *   reading is distinct from two siblings: absolute-prohibition (no
+ *   degradation ever justified, regardless of security context) and
+ *   contextual-necessity (security necessity alone justifies any
+ *   interrogation method, with minimal normative constraint). The
+ *   proportionality reading occupies the middle ground, institutionalizing
+ *   courts as gatekeepers who adjudicate on a case-by-case basis whether
+ *   specific interrogation methods fall within the permitted range. This
+ *   constraint instantiates a tangled-rope structure: it provides genuine
+ *   coordination (clear procedural guidance, defined review authority) while
+ *   embedding asymmetric extraction (state retains maximum operational
+ *   discretion; detainees bear all dignity costs; courts perform post-hoc
+ *   rationalization). The extractiveness value (0.52) reflects the hybrid
+ *   nature: extraction exists but is limited by the proportionality ceiling
+ *   and the possibility of judicial review, distinguishing this from pure
+ *   snare. The theater ratio (0.65) indicates that judicial review of
+ *   proportionality claims is substantially performative—courts rarely
+ *   overturn security judgments, and the review ritual functions more as
+ *   legitimation than as constraint.
+ *
+ * KEY AGENTS:
+ *   - State Security Apparatus: Primary beneficiary (institutional/arbitrage) — gains maximum operational flexibility under proportionality standard; can expand interrogation methods within 'proportional' discretion
+ *   - Detainees: Primary victim (powerless/trapped) — physically confined; subject to treatment permissible under proportionality framework; no exit options
+ *   - Judicial Review Institutions: Secondary gatekeeper (institutional/arbitrage) — inherit proportionality standard as their operative rule; maintain arbitrage (can appeal to security deference); perform ritual review
+ *   - Human Rights Monitoring Bodies: Organized monitor (organized/constrained) — benefit from defined standard enabling adjudication but constrained by proportionality's elasticity in application
+ *   - Interrogation Practitioners: Mid-level operator (moderate/constrained) — receive flexibility to interrogate within proportionality but face legal exposure if judgment is later disputed
+ *   - Absolute-Prohibition Advocates: Competing doctrinal position (analytical/analytical) — hold that no degradation is ever justified; their reading is coexistent or foreclosed depending on framework analysis
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(humane_treatment_standard__proportionality_balancing, 0.52).
+domain_priors:suppression_score(humane_treatment_standard__proportionality_balancing, 0.58).
+domain_priors:theater_ratio(humane_treatment_standard__proportionality_balancing, 0.65).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(humane_treatment_standard__proportionality_balancing, extractiveness, 0.52).
+narrative_ontology:constraint_metric(humane_treatment_standard__proportionality_balancing, suppression_requirement, 0.58).
+narrative_ontology:constraint_metric(humane_treatment_standard__proportionality_balancing, theater_ratio, 0.65).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(humane_treatment_standard__proportionality_balancing, tangled_rope).
+narrative_ontology:human_readable(humane_treatment_standard__proportionality_balancing, "Proportionality Balancing in Humane Treatment Standards (Common Article 3)").
+narrative_ontology:topic_domain(humane_treatment_standard__proportionality_balancing, "international_humanitarian_law/human_rights/state_security").
+
+domain_priors:requires_active_enforcement(humane_treatment_standard__proportionality_balancing).
+
+% --- Commitment system structure ---
+narrative_ontology:cs_story_uid(humane_treatment_standard__proportionality_balancing, '90a65005-a9d0-4dc8-a587-178beb464415').
+narrative_ontology:cs_kernel_codification('90a65005-a9d0-4dc8-a587-178beb464415', formalized).
+narrative_ontology:cs_authority_grounding('90a65005-a9d0-4dc8-a587-178beb464415', lineage).
+narrative_ontology:cs_interpretation_layer_present('90a65005-a9d0-4dc8-a587-178beb464415').
+narrative_ontology:cs_reading_relation('90a65005-a9d0-4dc8-a587-178beb464415', absolute_prohibition_reading, coexists_with).
+narrative_ontology:cs_reading_relation('90a65005-a9d0-4dc8-a587-178beb464415', contextual_necessity_reading, influences).
+narrative_ontology:cs_axiom('90a65005-a9d0-4dc8-a587-178beb464415', foundational, degradation_justified_by_proportionality).
+narrative_ontology:cs_axiom_status(degradation_justified_by_proportionality, holdable).
+narrative_ontology:cs_axiom_grounding('90a65005-a9d0-4dc8-a587-178beb464415', degradation_justified_by_proportionality, deontological).
+narrative_ontology:cs_axiom('90a65005-a9d0-4dc8-a587-178beb464415', foundational, courts_as_proportionality_gatekeepers).
+narrative_ontology:cs_axiom_status(courts_as_proportionality_gatekeepers, holdable).
+narrative_ontology:cs_axiom_grounding('90a65005-a9d0-4dc8-a587-178beb464415', courts_as_proportionality_gatekeepers, conventional).
+narrative_ontology:cs_reference_frame('90a65005-a9d0-4dc8-a587-178beb464415', proportional_balancing_framework).
+narrative_ontology:cs_drift_state('90a65005-a9d0-4dc8-a587-178beb464415', contemporary_counterterrorism_era, gap(axiom_overriding, substantial, false)).
+narrative_ontology:cs_created_at('90a65005-a9d0-4dc8-a587-178beb464415', '2026-02-26T00:00:00Z').
+narrative_ontology:cs_kernel_id(humane_treatment_standard__proportionality_balancing, humane_treatment_standard).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(humane_treatment_standard__proportionality_balancing, state_security_apparatus).
+narrative_ontology:constraint_beneficiary(humane_treatment_standard__proportionality_balancing, interrogation_practitioners).
+narrative_ontology:constraint_victim(humane_treatment_standard__proportionality_balancing, detained_persons).
+narrative_ontology:constraint_victim(humane_treatment_standard__proportionality_balancing, judicial_integrity).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: DETAINEE (SNARE) — Physically trapped; subject to interrogation within a legal framework that permits 'proportional' treatment degradation. The proportionality standard does not prohibit suffering absolutely — only 'excessive' suffering relative to security aims. No meaningful exit. Extraction is severe and coercive; suppression total.
+constraint_indexing:constraint_classification(humane_treatment_standard__proportionality_balancing, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(global))).
+
+% PERSPECTIVE 2: HUMAN RIGHTS MONITORING BODIES (TANGLED ROPE) — Organized agents (UN treaty bodies, ICRC, national courts) benefit from a defined standard that permits them to adjudicate cases (coordination function: clarity on permitted vs prohibited treatment). But they are also constrained by the proportionality framework's inherent elasticity — 'proportional' permits broad discretion, making enforcement difficult. Asymmetric extraction embedded in the coordination: the state retains maximum discretion; monitors retain only review authority.
+constraint_indexing:constraint_classification(humane_treatment_standard__proportionality_balancing, tangled_rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: STATE SECURITY APPARATUS (ROPE) — Benefits from proportionality standard as pure coordination: the rule 'permit treatment proportional to security necessity' enables interrogation while appearing to constrain it. Proportionality is experienced as flexibility, not extraction. The state has arbitrage options (can appeal to security necessity, can redefine 'proportional' contextually). Suppression is low from this perspective — the rule legitimates interrogation.
+constraint_indexing:constraint_classification(humane_treatment_standard__proportionality_balancing, rope,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: INTERROGATION PRACTITIONERS (TANGLED ROPE) — Mid-level operatives face a coordination problem (clear guidance on permitted techniques) and extraction pressure (legal liability, career risk if proportionality judgment is later disputed). The standard provides cover ('I was acting within proportionality') while imposing legal exposure. Constrained exit — operators are embedded in state apparatus with career dependency.
+constraint_indexing:constraint_classification(humane_treatment_standard__proportionality_balancing, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: JUDICIAL REVIEW INSTITUTIONS (PITON) — Courts inherit the proportionality framework and perform ritual judgment — assessing whether interrogation was 'necessary' and 'proportional' after the fact, typically with deference to state security claims. Review is largely performative; post-hoc rationalization of state action. Theater ratio high because courts rarely overturn security judgments; the proportionality review ritual persists through institutional inertia.
+constraint_indexing:constraint_classification(humane_treatment_standard__proportionality_balancing, piton,
+    context(agent_power(institutional),
+            time_horizon(civilizational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From civilizational view, proportionality balancing is the reading that legitimizes courts as gatekeepers of interrogation. This reading produces Tangled Rope structure: coordination function (clear rules, predictable review) with embedded asymmetric extraction (state retains maximum operational discretion; detainees have no exit). The proportionality standard appears balanced but is structurally asymmetric.
+constraint_indexing:constraint_classification(humane_treatment_standard__proportionality_balancing, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(humane_treatment_standard__proportionality_balancing_tests).
+
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(humane_treatment_standard__proportionality_balancing, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(humane_treatment_standard__proportionality_balancing, TypeOther, context(agent_power(organized), _, _, _)),
+    TypePowerless \= TypeOther.
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(humane_treatment_standard__proportionality_balancing, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(humane_treatment_standard__proportionality_balancing, TR),
+    TR >= 0.70.
+
+:- end_tests(humane_treatment_standard__proportionality_balancing_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness (0.52): Moderate-high. The proportionality standard permits degradation in service of security necessity, creating asymmetric extraction—detainees lose dignity and bodily integrity; state security apparatus gains interrogation capability. But the extraction is not total (as in snare, ε ≥ 0.66) because the framework theoretically permits judicial review and sets a normative ceiling on permitted methods. The moderate-high value reflects that proportionality is more extractive than pure coordination (rope, ε ≤ 0.45) but not as severe as unconstrained interrogation (snare, ε ≥ 0.66). Measurement trajectory shows rising extractiveness over the interval, indicating that state practice has progressively expanded what counts as 'proportional' (waterboarding, prolonged isolation, stress positions have all been rationalized within proportionality frameworks). Suppression (0.58): Moderate-high. Detainees face severe barriers to exit—physical confinement, coercive interrogation pressure, informational asymmetry (they do not know what other detainees revealed), and legal asymmetry (proportionality permits behavior their states criminalize). However, suppression is not total because the framework includes due process elements (access to lawyers, judicial review possibilities), distinguishing it from unmediated detention. Theater ratio (0.65): Moderate-high. Judicial review of proportionality claims is substantially performative. Courts typically apply high deference to state security judgments; overturn rates are very low (empirically <5% in most jurisdictions); proportionality assessments are conducted post-hoc after interrogation is complete, limiting their preventive force. The theatrical element is the impression of constraint without substantial limitation of state action. Measurement shows rising theater ratio over interval, indicating that the performative character of judicial review has increased as courts have developed doctrines of 'security margin' and deference.
+ *
+ * PERSPECTIVAL GAP:
+ *   The detainee perspective (Snare) and the state security perspective (Rope) are maximally divergent. The detainee experiences the proportionality standard as permission for state torture rationalized as 'proportional'—no negotiable exit, no meaningful constraint, maximum extraction. The state security apparatus experiences proportionality as coordination—a rule that enables interrogation while appearing to limit it, providing legal cover and flexibility. The judicial review perspective (Piton) introduces a critical gap: courts inherit the proportionality standard as their operative rule but perform largely post-hoc judgment with high deference to state claims, making review ritual rather than constraint. The analytical observer's perspective (Tangled Rope, committer frame) reveals that proportionality is structurally a hybrid: it genuinely coordinates (provides clear procedural guidance) while structurally enabling asymmetric extraction (state retains maximum discretion; detainees have none). This is the core diagnostic signal that separates proportionality from pure rope (which would require genuine mutual benefit or symmetric constraints).
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Directionality is derived from beneficiary/victim declarations and exit options. The state security apparatus is declared a beneficiary with arbitrage exit options (can redefine proportional, can appeal to necessity, can relocate interrogation to lower-scrutiny venues)—this produces low d (around 0.15-0.25), yielding negative or near-zero effective extraction from their perspective. Detainees are declared victims with trapped exit (no possibility of leaving without permission)—this produces high d (around 0.90-0.95), yielding maximum effective extraction from their perspective. Interrogation practitioners are victims (face legal exposure) but with constrained rather than trapped exit (can leave state apparatus at career cost)—this produces moderate-high d (around 0.65-0.75). The perspectival gap in chi emerges directly from these structural asymmetries: the same constraint produces negative chi for beneficiaries (appears as coordination) and positive chi for victims (appears as extraction), which is the diagnostic signature of tangled rope.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   MANDATROPHY RESOLVED: The proportionality reading avoids mandatrophy by explicitly institutionalizing courts as gatekeepers and accepting that proportionality involves tradeoff between dignity and security. This reading is not claiming that proportionality is pure coordination (which would be mandatrophy—false framing of extraction as coordination). Instead, it is claiming that proportionality IS a hybrid: it coordinates (provides procedural guidance, defines review authority) while enabling asymmetric extraction (state retains operational discretion). This is the tangled-rope acknowledgment. The constraint is correctly classified as Tangled Rope, not Rope, because: (1) beneficiary and victim groups are explicitly declared with asymmetric structural positions; (2) coordination function is genuine (courts do adjudicate, rules do provide guidance) but asymmetric (state has more discretion than detainees); (3) enforcement is required and active (courts must review; states must justify). The mandatrophy resolution is achieved by accepting that proportionality is not neutral—it is a political choice that favors state security capacity over absolute dignity protection, and this choice is embedded in the structure, not hidden.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    proportionality_metric_indeterminacy,
+    'What operational measure determines whether degradation is ''proportional'' to security necessity? Who decides the metric?',
+    'Comparative jurisprudence across jurisdictions; analysis of how ''proportionality'' has been operationalized in actual case law (ECtHR, ICC, national courts)',
+    'If metric is clear and narrow: constraint behaves as moderate rope (coordination with minor extraction). If metric is elastic and subjective: constraint degrades to snare (state discretion dominates; review is post-hoc).',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(proportionality_metric_indeterminacy, empirical, 'Indeterminacy of proportionality metric operationalization').
+
+omega_variable(
+    absolute_vs_contextual_reading_foreclosure,
+    'Does the proportionality reading logically foreclose the absolute-prohibition reading, or do they coexist as live positions?',
+    'Analysis of foundational axioms: does proportionality''s core commitment (security necessity can justify degradation) directly contradict absolute prohibition''s core commitment (no degradation ever justified)? Or do they represent different parties'' positions without logical incompatibility?',
+    'If forecloses: one reading must eventually prevail; proportionality is the intermediate position between prohibition and unlimited discretion. If coexists: proportionality and absolute prohibition are competing commitments within the IHL kernel; both can be held by different state actors simultaneously.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(absolute_vs_contextual_reading_foreclosure, conceptual, 'Whether proportionality forecloses absolute prohibition or coexists with it').
+
+omega_variable(
+    judicial_deference_empirical_rate,
+    'In practice, what fraction of proportionality-based interrogation claims are actually overturned by reviewing courts? How does this compare to the theoretical possibility of judicial constraint?',
+    'Quantitative analysis of case outcomes: ratio of overturned to affirmed security claims across ECtHR, ICC, national supreme courts, and military commissions (2000-2026)',
+    'If overturn rate > 30%: courts function as genuine gatekeepers (Tangled Rope constraint holds). If overturn rate < 5%: courts perform ritual review (Piton degradation confirmed); constraint is effectively snare with judicial theater.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(judicial_deference_empirical_rate, empirical, 'Empirical rate of judicial override of proportionality claims').
+
+omega_variable(
+    committer_kernel_reading_identity,
+    'This constraint is the proportionality-balancing reading of the humane_treatment_standard kernel. What distinguishes this reading from absolute-prohibition and contextual-necessity siblings? Are these readings held by different institutional actors or do they coexist within the same legal system?',
+    'Doctrinal analysis of which states/courts adopt which reading; analysis of constitutional traditions and treaty reservations; assessment of whether readings coexist within single jurisdictions or are geographically/institutionally partitioned',
+    'If readings coexist within single systems: the kernel is under-determined; courts must choose among readings per case. If readings are geographically partitioned: the kernel functions differently in different jurisdictions; proportionality is the dominant reading in liberal democracies but less so in security-dominant regimes.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(committer_kernel_reading_identity, conceptual, 'Kernel reading identity and relational structure among siblings').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(humane_treatment_standard__proportionality_balancing, 0, 10).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(hts_prop_tr_t0, humane_treatment_standard__proportionality_balancing, theater_ratio, 0, 0.45).
+narrative_ontology:measurement(hts_prop_tr_t5, humane_treatment_standard__proportionality_balancing, theater_ratio, 5, 0.58).
+narrative_ontology:measurement(hts_prop_tr_t10, humane_treatment_standard__proportionality_balancing, theater_ratio, 10, 0.65).
+
+% Extraction over time
+narrative_ontology:measurement(hts_prop_be_t0, humane_treatment_standard__proportionality_balancing, base_extractiveness, 0, 0.38).
+narrative_ontology:measurement(hts_prop_be_t5, humane_treatment_standard__proportionality_balancing, base_extractiveness, 5, 0.47).
+narrative_ontology:measurement(hts_prop_be_t10, humane_treatment_standard__proportionality_balancing, base_extractiveness, 10, 0.52).
+
+% Suppression requirement over time
+narrative_ontology:measurement(hts_prop_su_t0, humane_treatment_standard__proportionality_balancing, suppression_requirement, 0, 0.48).
+narrative_ontology:measurement(hts_prop_su_t5, humane_treatment_standard__proportionality_balancing, suppression_requirement, 5, 0.54).
+narrative_ontology:measurement(hts_prop_su_t10, humane_treatment_standard__proportionality_balancing, suppression_requirement, 10, 0.58).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(humane_treatment_standard__proportionality_balancing, enforcement_mechanism).
+narrative_ontology:affects_constraint(humane_treatment_standard__proportionality_balancing, interrogation_coercion_justification).
+narrative_ontology:affects_constraint(humane_treatment_standard__proportionality_balancing, judicial_deference_security_claims).
+narrative_ontology:affects_constraint(humane_treatment_standard__proportionality_balancing, status_of_detainee_dignity_rights).
+
+% DUAL FORMULATION NOTE:
+% The humane_treatment_standard kernel has three structurally distinct readings (absolute-prohibition, proportionality-balancing, contextual-necessity) that produce different constraint structures. This story is the proportionality-balancing reading. Sibling readings should be authored as separate constraint stories with their own constraint_ids, linked via network.affects_constraints. The proportionality reading influences both siblings: it provides a doctrinal floor that absolute-prohibition appeals to (why prohibition? to protect absolute dignity—borrowed from proportionality's concern for dignity as a limiting principle) and a floor that contextual-necessity bumps against (how much degradation is 'proportional'? the contextual reading disputes where the ceiling sits).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+constraint_indexing:directionality_override(humane_treatment_standard__proportionality_balancing, institutional, 0.18).
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

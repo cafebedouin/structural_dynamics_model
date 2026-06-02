@@ -4,18 +4,23 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "maxdem"
+    "measurement_id_prefix": "maxdem",
+    "story_uid": "0914d0b4-ab37-49fa-91a1-62a1f119bcfe"
   },
   "base_properties": {
     "extractiveness": 0.08,
-    "suppression": 0.03,
+    "suppression": 0.02,
     "theater_ratio": 0.15,
     "claimed_type": "mountain",
     "human_readable": "Maxwell Demon Impossibility (Second Law of Thermodynamics)",
-    "topic_domain": "physics/thermodynamics",
+    "topic_domain": "physics/thermodynamics/statistical_mechanics",
     "emerges_naturally": true,
     "accessibility_collapse": 0.92,
-    "resistance": 0.08
+    "resistance": 0.08,
+    "beneficiaries": [
+      "entropic_universe_hypothesis"
+    ],
+    "victims": []
   },
   "perspectives": [
     {
@@ -24,17 +29,17 @@
       "time_horizon": "civilizational",
       "exit_options": "trapped",
       "spatial_scope": "universal",
-      "label": "The Isolated System",
-      "comment": "PERSPECTIVE 1: ISOLATED SYSTEM (MOUNTAIN) \u2014 Cannot violate entropy increase regardless of observer position, information capacity, or measurement precision. The constraint is absolute from the ground-level perspective."
+      "label": "The Isolated Physical System",
+      "comment": "PERSPECTIVE 1: ISOLATED PHYSICAL SYSTEM (MOUNTAIN) — Any attempt to decrease entropy via feedback, information, or control encounters identical thermodynamic barriers regardless of the agent's power or position. The constraint is physically invariant — no exit, no arbitrage, no workaround. The system itself has zero degrees of freedom with respect to this limit."
     },
     {
       "classification_type": "mountain",
-      "agent_power": "powerful",
+      "agent_power": "organized",
       "time_horizon": "civilizational",
-      "exit_options": "mobile",
+      "exit_options": "trapped",
       "spatial_scope": "universal",
-      "label": "The Hypothetical Maxwell Demon",
-      "comment": "PERSPECTIVE 2: MAXWELL DEMON (MOUNTAIN) \u2014 Even with perfect information and arbitrary physical power, cannot circumvent the constraint. High agency does not overcome immutable law. Demonstrates that the constraint is not dependent on agent capacity."
+      "label": "The Organized Research Program",
+      "comment": "PERSPECTIVE 2: ORGANIZED RESEARCH PROGRAM (MOUNTAIN) — Even highly coordinated, well-funded research efforts cannot circumvent the second law through experimental design, computational schemes, or theoretical innovation. The constraint applies to all proposed demon mechanisms with equal force. No degree of institutional organization creates exit capacity."
     },
     {
       "classification_type": "mountain",
@@ -43,36 +48,54 @@
       "exit_options": "analytical",
       "spatial_scope": "universal",
       "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From information-theoretic, thermodynamic, and quantum mechanical perspectives, all known resolutions converge on the same conclusion: entropy cannot decrease in an isolated system. The constraint is invariant across measurement basis and analytical frame."
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (MOUNTAIN) — From multiple independent theoretical frameworks (classical thermodynamics, information theory, computational mechanics, quantum measurement), the impossibility is structurally identical. No measurement basis, no alternative formalism, no observational context produces a different classification. The constraint is invariant across all valid analytical approaches."
     }
   ],
   "omegas": [
     {
-      "id": "information_thermodynamic_identity",
-      "question": "Is the impossibility a fundamental law of thermodynamics or a logical consequence of information theory?",
-      "resolution_mechanism": "Historical analysis of Maxwell's original formulation, Szilard's analysis, Landauer's principle, and Bennett's resolution. Determination of whether information-theoretic entropy and thermodynamic entropy refer to the same quantity or are distinct mathematical objects that happen to obey parallel laws.",
-      "impact": "If identical: the constraint is thermodynamic at base level. If distinct: the constraint represents a deep connection between information and physical law, possibly suggesting different mechanisms at different scales.",
+      "id": "natural_law_vs_emergent_property",
+      "question": "Is the second law a fundamental natural law of physics, or an emergent statistical property that could theoretically violate in finite isolated systems?",
+      "resolution_mechanism": "Long-timescale molecular dynamics simulations of closed systems; measurement of entropy fluctuations in ultracold atomic systems; theoretical analysis of time-symmetric microscopic laws vs arrow-of-time asymmetry",
+      "impact": "If fundamental law: classification remains mountain across all observables. If statistical emergence: classification shifts to rope or tangled_rope at human timescales but mountain at infinite time (perspectival). If rare violations exist: reclassifies to rope with very high suppression.",
       "confidence": "high",
-      "type_class": "conceptual",
-      "description": "Whether the impossibility is thermodynamic or information-theoretic in origin"
+      "type_class": "empirical",
+      "description": "Whether second law is fundamental or emergent statistical property"
     },
     {
-      "id": "quantum_measurement_coupling",
-      "question": "Does quantum measurement decoherence provide the unique sufficient mechanism for entropy increase, or are there classical information-theoretic arguments that work independently?",
-      "resolution_mechanism": "Review of Szilard, Bennett, and post-quantum-mechanics resolutions. Determination of whether classical thermodynamics requires quantum mechanics for its proofs or whether classical mechanics with sufficient detail can show the demon's impossibility.",
-      "impact": "If quantum-dependent: the constraint relies on measurement mechanics. If classical-sufficient: the constraint is a property of macroscopic physics independent of microscopic detail.",
+      "id": "information_theoretic_grounding",
+      "question": "Does the information-theoretic derivation (Szilard/Bennett: entropy increase tracks information erasure) provide independent confirmation of the second law, or does it merely restate the same constraint in different mathematical language?",
+      "resolution_mechanism": "Experimental measurement of information erasure during controlled thermodynamic processes; test whether information-erasure entropy predicts system entropy with independent measurement; identify whether any physical process separates information cost from thermodynamic cost",
+      "impact": "If independent confirmation: strengthens mountain classification (multiple routes converge). If restatement: mountain remains but indicates the constraint is fundamentally about information/coarse-graining, not about fundamental physics. If separation possible: indicates flaw in Bennett proof and reclassifies to tangled_rope.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Role of quantum measurement in entropy constraint"
+      "description": "Whether information-theoretic route independently confirms or restates the second law"
     },
     {
-      "id": "negentropy_extraction_distinction",
-      "question": "Can a hypothetical system extract order from chaos at the cost of producing disorder elsewhere, or is the constraint absolute across all distributed configurations?",
-      "resolution_mechanism": "Rigorous thermodynamic accounting of all degrees of freedom in systems claiming to demonstrate negentropy extraction (biological systems, self-organizing structures, Benard cells). Verification that entropy production in dissipative mechanism exceeds entropy decrease in organized subsystem.",
-      "impact": "If strict accounting confirms always positive total entropy: mountain classification holds universally. If distributed entropy accounting reveals edge cases: constraint may be tangled_rope (genuine order creation coupled to greater disorder production) rather than pure mountain.",
+      "id": "quantum_measurement_coupling_sufficiency",
+      "question": "Does the quantum measurement coupling argument (demon requires measurement; measurement entangles demon with system; entanglement carries entropy) fully account for all proposed quantum demon schemes, or do unmeasured/entanglement-free feedback mechanisms escape the proof?",
+      "resolution_mechanism": "Comprehensive review of quantum demon proposals post-Bennett (quantum Maxwell demon, Szilard engines, measurement-free feedback); identification of any scheme that circumvents measurement entanglement; proof that all feedback must couple to either measured or entangled degrees of freedom",
+      "impact": "If sufficient: quantum route confirms mountain classification. If gaps exist: reclassifies to tangled_rope with undiscovered escape routes. If fundamental loophole: second law becomes rope with high suppression and measurable violation capacity.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether entropy decrease in subsystems requires compensating entropy increase elsewhere"
+      "description": "Whether quantum measurement coupling fully blocks all demon schemes"
+    },
+    {
+      "id": "bennet_proof_circularity",
+      "question": "Does Bennett's computational mechanics proof (entropy cost of erasing demon's memory) assume the second law at an earlier step, or derive it circularly rather than independently?",
+      "resolution_mechanism": "Formal analysis of proof steps; identification of axioms and assumed theorems; construction of alternative demon model that violates Bennett's erasure entropy without violating logical consistency; meta-analysis of whether any proof of the second law can be non-circular",
+      "impact": "If circular: reduces confidence in the proof route; reclassifies to tangled_rope with unresolved logical grounding. If non-circular: strengthens mountain classification. If provably circular by necessity: indicates the second law may be a foundational axiom rather than derived, potentially reclassifying to mountain with different epistemic grounding.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether Bennett proof is circular or derives the second law independently"
+    },
+    {
+      "id": "universe_heat_death_necessity",
+      "question": "Does the second law's universality necessarily imply that the universe approaches maximum entropy (heat death), or are there interpretations where local entropy decreases are possible indefinitely given appropriate energy input?",
+      "resolution_mechanism": "Cosmological models with open energy supply; distinction between isolated vs open systems and whether universe can be treated as both; analysis of whether thermodynamic arrow requires universal entropy increase or only local-patch increases",
+      "impact": "If heat death necessary: strengthens mountain classification. If local indefinite decrease possible in open universe: mountain weakens to rope at local scale but remains mountain at universal scale. If interpretation-dependent: reclassifies to tangled_rope with perspectival variance.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether second law necessarily implies universal heat death"
     }
   ],
   "measurements": [
@@ -83,54 +106,60 @@
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
+      "time_point": 50,
       "value": 0.14
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
+      "time_point": 100,
       "value": 0.15
     },
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.08
+      "value": 0.07
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 5,
-      "value": 0.08
+      "time_point": 50,
+      "value": 0.078
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 100,
       "value": 0.08
     }
   ],
   "interval": {
     "start": 0,
-    "end": 10
+    "end": 100
   },
   "commentary": {
-    "narrative_context": "The Maxwell Demon impossibility represents a fundamental constraint on physical systems: no process can decrease the entropy of an isolated system. This constraint has been proven through multiple independent routes \u2014 classical thermodynamic arguments, Szilard's information-theoretic analysis, Bennett's computational mechanics, and quantum measurement coupling \u2014 all converging on the same conclusion. The constraint is invariant across all observables and measurement bases: whether analyzed thermodynamically, informationally, or quantum-mechanically, the impossibility persists. No degree of freedom, information access, or computational power can circumvent it. This makes it a canonical mountain: unchangeable, universally applicable, zero degrees of freedom.",
+    "narrative_context": "The Maxwell Demon impossibility is a fundamental natural law constraint on physical systems: no process can decrease the entropy of an isolated system below what it would be in equilibrium. This constraint has been proven through multiple independent routes — classical thermodynamic arguments from Clausius and Boltzmann, Szilard's information-theoretic analysis showing that the demon must pay an entropic cost to gather information, Bennett's computational mechanics argument that memory erasure carries thermodynamic cost, and quantum measurement coupling arguments showing that feedback requires entanglement that increases total entropy. All routes converge on the same conclusion with zero degrees of freedom for any agent, any time horizon, or any spatial scope. The constraint exhibits mountain classification universally: no observer position, experimental design, or theoretical framework discovers an escape route. The theater ratio is minimal (0.15) because the constraint requires no performative enforcement — it is structurally self-enforcing through the physics itself. Base extractiveness is negligible (0.08) because there is no 'extraction' in the economic sense — the constraint is not redistributing resources but forbidding a physical state transition. The beneficiary declaration of 'entropic_universe_hypothesis' is included to evaluate whether this genuine natural law might contain a false-summit candidate (identifiable beneficiary groups whose worldview profits from the constraint being treated as unchangeable). The analysis finds no institutional beneficiary — unlike social constraints naturalized as law, this constraint has no human actors profiting from its enforcement.",
     "key_agents": [
-      "Isolated Physical System: The system governed by the constraint. Entropy of the isolated system cannot decrease under any internal process.",
-      "Maxwell's Hypothetical Demon: Thought experiment agent with perfect information and arbitrary control. Even with maximal power and knowledge, cannot violate the constraint.",
-      "Analytical Observer: Universal perspective across all formulations (thermodynamic, information-theoretic, quantum) confirming the invariance."
+      "Isolated Physical System: Universal subject (powerless/trapped) — the universe or any closed thermodynamic system cannot exit the constraint",
+      "Organized Research Program: Investigative agents (organized/trapped) — physics research, materials science, information theory communities cannot find circumvention",
+      "Analytical Observer: Cross-position measurement (analytical/analytical) — all valid theoretical frameworks (classical, statistical, quantum, computational) yield identical classification",
+      "Entropic Universe Hypothesis: Conceptual beneficiary (analytical/analytical) — the hypothesis that the universe tends toward maximum entropy is supported by this constraint; benefits from being treated as law rather than contingent",
+      "Demon Proposer: Counterfactual agent (institutional/mobile in thought experiments) — in physics pedagogy, the demon is presented as an attempted violator to teach students why the law is inviolable"
     ],
-    "logic_rationale": "Extractiveness (0.08): Minimal. The constraint has no extraction mechanism \u2014 it does not transfer resources from one agent to another or enable asymmetric advantage. It is a pure natural law that applies uniformly. The low value reflects that there is no beneficiary or victim; the constraint simply is. Suppression (0.03): Minimal. The constraint does not suppress alternatives; it eliminates the impossible option entirely. There are no alternatives to suppress \u2014 the option (spontaneous decrease of entropy in isolation) is logically/physically void. Theater ratio (0.15): Very low. The constraint has no performative content. Its enforcement is absolute and immediate; no theater is required or possible. The small nonzero value reflects only the minimal formalism needed to state the constraint precisely, not functional theater.",
-    "perspectival_gap": "This constraint exhibits no perspectival gap. All three perspectives \u2014 ground-level, agent with high power, analytical observer \u2014 produce identical mountain classification. The uniformity is diagnostic of a true natural law. No observer position creates an alternative reading. The constraint is invariant under all transformations of perspective.",
-    "directionality_logic": "Not applicable. Mountain constraints have no directionality derivation. The constraint is not derived from beneficiary/victim relationships or power asymmetries. It applies identically regardless of the observer's position in power space or their exit options. The absence of directionality (d undefined for mountain) is itself confirmation of the mountain classification."
+    "logic_rationale": "Base extractiveness (0.08): Minimal. The constraint does not extract in the economic sense — it forbids a physical state transition (entropy decrease in isolated systems) rather than redistributing value. The small non-zero value reflects that the constraint does impose costs on would-be violators (thermodynamic work requirements exceed benefits, information acquisition requires energy, measurement entangles systems). Suppression (0.02): Minimal. The constraint requires no enforcement — it is self-enforcing through the structure of physics. No coercion, no suppression of alternatives (because alternatives are physically impossible, not institutionally forbidden). Theater ratio (0.15): Minimal. The constraint requires no performative activity. It is pure structural impossibility, not maintained by ritual or institutional practice. The small value reflects pedagogical theater around Maxwell Demon thought experiments in textbooks, but this is commentary on the law, not the law itself. Accessibility collapse (0.92): Very high. All agents, regardless of power or position, encounter identical access barriers — the laws of thermodynamics apply everywhere without exception. Resistance (0.08): Very low. No resistance to the constraint is possible; resistance is logically and physically unintelligible. Emerges naturally (true): The constraint derives from the fundamental asymmetry between the future and the past in physical law, requiring no institutional maintenance or enforcement.",
+    "perspectival_gap": "Unlike social or economic constraints, the Maxwell Demon impossibility shows ZERO perspectival gap. All observers, all power levels, all exit options, all time horizons, all spatial scopes produce identical mountain classification. This uniformity is diagnostically essential — it is what makes the constraint a natural law rather than a constructed constraint viewed from different positions. The beneficiary declaration ('entropic_universe_hypothesis') is included as an FSM candidate test: could the constraint be a false summit, with institutional beneficiaries (cosmologists, entropy researchers) profiting from treating it as immutable law? Analysis finds no institutional beneficiary — unlike constraints that benefit particular power structures, this constraint benefits no human agent. The hypothesis benefits, but hypotheses are not agents with exit options. The zero perspectival gap confirms genuine natural law status.",
+    "directionality_logic": "Standard directionality derivation (d from beneficiary/victim + exit options) does not apply to mountain constraints with zero beneficiaries. The canonical fallback (d ≈ 0.73 for analytical perspective) would yield f(d) ≈ 1.15, producing χ ≈ 0.08 × 1.15 × 1.0 = 0.092 at global scope. This is consistent with the measured base extractiveness and confirms that no correction via override is needed. The constraint is not extraction from any agent — it is a structural limit on all agents equally. Directionality is undefined in the traditional sense because there is no asymmetric distribution of benefit and cost between human actors.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy trivially: all six types collapse to mountain at all perspectives. There is no alternative reading, no competing classification, no perspectival variance. The mandatrophy is resolved by showing that this is not a case where mandatrophy applies — the constraint has no coordination function (no rope signature), no asymmetric extraction (no snare signature), no mixed structure (no tangled rope signature), no sunset (no scaffold signature), no degradation (no piton signature). It is purely natural law. The beneficiary declaration triggers FSM evaluation to test whether the constraint might be a false summit — identifiable institutional beneficiary groups could be profiting from treating a constructed constraint as natural law. The analysis finds no beneficiary, confirming that this is a genuine natural law rather than a naturalization of institutional interests.",
+    "kernel_context": "This constraint is not a kernel reading. It does not ground legitimacy in a contested or alternative interpretation of a fixed text or foundational claim. The second law is not a commitment system constraint — it does not adjudicate contested values or rest on any institution's authority structure. It is a purely physical constraint with no axis for legal, normative, or interpretive variance. Omit cs_structure entirely."
   },
   "boltzmann": {
     "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
-      "perpetual_motion_impossibility",
-      "carnot_efficiency_limit",
-      "arrow_of_time_asymmetry"
-    ]
+      "szilard_information_thermodynamic_equivalence",
+      "bennett_computational_entropy_cost",
+      "quantum_measurement_entropy_coupling",
+      "universe_arrow_of_time"
+    ],
+    "dual_formulation_note": "The Maxwell Demon impossibility is the core constraint; the four downstream constraints represent alternative derivation routes (information theory, computational mechanics, quantum measurement, cosmological arrow) that all converge on the same conclusion. They are not separate constraints but proofs/aspects of the same natural law from different perspectives. Each route exhibits its own structure but shares the identical terminal classification (mountain) with the core constraint. Decomposition is not needed because all routes have identical epsilon value (≤ 0.10) and identical classification. They are linked as confirmatory pathways rather than as truly distinct constraints."
   },
   "directionality_overrides": []
 }

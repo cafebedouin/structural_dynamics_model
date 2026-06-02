@@ -1,0 +1,222 @@
+{
+  "header": {
+    "constraint_id": "enforcement_asymmetry_axis",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "enfa",
+    "story_uid": "cb385cf4-f7b7-4e43-9b8f-86e8f311b387"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.61,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Enforcement Asymmetry in International Trade Dispute Resolution",
+    "topic_domain": "international_trade_law/development_economics/political_economy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "developed_economies",
+      "wto_enforcement_capacity"
+    ],
+    "victims": [
+      "developing_economies",
+      "least_developed_countries"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Least Developed Country",
+      "comment": "PERSPECTIVE 1: LEAST DEVELOPED COUNTRY (SNARE) — Structurally trapped in WTO dispute resolution. Cannot afford legal expertise for cases, lacks domestic enforcement capacity, bound by agreements that constrain policy space. Exit from trade architecture means economic isolation. Bears full cost of asymmetric enforcement: cannot credibly threaten retaliation, cannot enforce its own wins, and faces developed-economy enforcement of judgments against it. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Middle-Income Developing Economy",
+      "comment": "PERSPECTIVE 2: MIDDLE-INCOME DEVELOPING ECONOMY (TANGLED ROPE) — Constrained but not trapped. Can afford some legal capacity and has larger retaliatory capacity than LDCs. Genuinely benefits from trade coordination (market access, supply chain integration). But enforcement asymmetry persists: winning cases requires legal sophistication it lacks; enforcement of its wins depends on developed-economy forbearance. Mixed extraction with real coordination value."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Developed Economy",
+      "comment": "PERSPECTIVE 3: DEVELOPED ECONOMY (ROPE) — Sees dispute resolution as coordination mechanism. Has legal capacity to navigate disputes, retaliatory capacity to enforce wins, and can exit or renegotiate within the system. Net beneficiary from the enforcement asymmetry but experiences the system itself as legitimate coordination (rules-based trade). Experiences low or negative extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Coalition of Developing Countries",
+      "comment": "PERSPECTIVE 4: COALITION OF DEVELOPING COUNTRIES (TANGLED ROPE) — Organized aggregation (African Union, ALBA, ASEAN voting blocs) can mount collective legal strategies and coordinate retaliatory responses. Coordination value is genuine — pooled expertise, bulk negotiating power. But the underlying asymmetry persists: coalition itself requires coordination overhead and compliance enforcement. Experiences extraction through enforcement gaps but has some agency through coalition power."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The WTO Appellate Body",
+      "comment": "PERSPECTIVE 5: WTO APPELLATE BODY (PITON) — The dispute resolution mechanism itself has degraded as its primary function (adjudication of trade disputes) has been hollowed by enforcement asymmetry. The Appellate Body blocked since 2017; the institution persists through inertia (state compliance with previous rulings, institutional identity) but has lost operational force. Theater is high — dispute processes continue but without authoritative appellate recourse. The institution maintains legitimacy narratives ('rules-based order') despite functional degradation."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Structural Necessity View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / STRUCTURAL NECESSITY VIEW (MOUNTAIN) — From a universal/civilizational perspective, enforcement asymmetry may appear as an inevitable feature of any international system: compliance depends on state capacity and willingness, and these are unequally distributed. No global sovereign authority exists to compel enforcement equally across heterogeneous actors. This perspective risks naturalizing what is actually a contingent institutional design choice — the engine will identify this as a false summit, revealing that enforcement asymmetry is not an immutable law of international relations but a structured outcome of institutional architecture choices (dispute funding, retaliatory capacity requirements, diplomatic costs)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "enforcement_capacity_endogeneity",
+      "question": "Is enforcement capacity a pre-existing structural fact or an outcome of the trade system itself?",
+      "resolution_mechanism": "Longitudinal analysis of enforcement capacity trends: do countries that enter trade agreements experience declining enforcement capacity relative to peers? Does legal capacity investment follow WTO accession or precede it?",
+      "impact": "If endogenous (system-generated): enforcement asymmetry is a direct extraction mechanism built into the architecture. If exogenous (pre-existing): enforcement asymmetry reflects pre-existing power differentials that trade system manages but does not create. Changes classification from clear tangled_rope to mixed tangled_rope/coordinate depending on causality direction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether enforcement capacity is structurally created by trade system or pre-existing"
+    },
+    {
+      "id": "retaliatory_credibility_threshold",
+      "question": "What threshold of retaliatory capacity makes enforcement threat credible? Do small economies' retaliatory threats carry zero weight in practice?",
+      "resolution_mechanism": "Analysis of dispute settlement outcomes: correlation between retaliatory capacity and case win rates; frequency of developed economies challenging vs being challenged by different economy sizes; settlement patterns before vs after retaliatory threat.",
+      "impact": "If threshold is high and most developing economies fall below it: enforcement mechanism is purely extractive for LDCs (snare confirmed). If threshold is continuous and credible threats exist across capacity range: mixed coordination mechanism (tangled_rope confirmed).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Credibility threshold for retaliatory enforcement threats across economy sizes"
+    },
+    {
+      "id": "technical_assistance_sufficiency",
+      "question": "Can funded legal capacity assistance (WTO technical assistance programs, UNCTAD TRAINS, LDC dispute funds) meaningfully equalize enforcement capability?",
+      "resolution_mechanism": "Evaluation of LDC case success rates pre/post technical assistance; comparison of countries with assistance programs to control groups; tracking of whether assistance recipients move toward developed-economy case-win patterns.",
+      "impact": "If assistance is sufficient: enforcement asymmetry is policy-remediable without structural change (scaffold framing). If assistance cannot overcome structural gaps: asymmetry requires architectural reform (snare framing persists).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether technical assistance can equalize dispute enforcement capability"
+    },
+    {
+      "id": "false_summit_naturalization",
+      "question": "Is the claim that enforcement asymmetry is an inherent feature of international systems a naturalization of a contingent design choice?",
+      "resolution_mechanism": "Counterfactual analysis: design alternatives (supranational court authority, mandatory dispute insurance, enforcement pools, automatic retaliatory triggers) and feasibility assessment; comparison to other international systems (human rights treaty bodies, investment arbitration, regional courts) and their enforcement mechanisms.",
+      "impact": "If structural necessity: mountain classification holds. If contingent design: false summit — the constraint is tangled_rope with extractive architecture, not an immutable law. Triggers FSM engine detection.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether enforcement asymmetry is immutable law or contingent institutional design"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1995,
+      "value": 0.42,
+      "id_override": "enfa_extract_1995_wto_founding"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2005,
+      "value": 0.51,
+      "id_override": "enfa_extract_2005_doha_stall"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 2017,
+      "value": 0.58,
+      "id_override": "enfa_extract_2017_appellate_blocked"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1995,
+      "value": 0.52,
+      "id_override": "enfa_supp_1995_capacity_gap"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2005,
+      "value": 0.64,
+      "id_override": "enfa_supp_2005_enforcement_gaps"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2017,
+      "value": 0.68,
+      "id_override": "enfa_supp_2017_appellate_crisis"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1995,
+      "value": 0.45,
+      "id_override": "enfa_theater_1995_legitimacy_high"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2005,
+      "value": 0.54,
+      "id_override": "enfa_theater_2005_enforcement_questions"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 2017,
+      "value": 0.61,
+      "id_override": "enfa_theater_2017_appellate_crisis"
+    }
+  ],
+  "interval": {
+    "start": 1995,
+    "end": 2017
+  },
+  "commentary": {
+    "narrative_context": "The enforcement asymmetry axis in international trade law describes a structural feature of the WTO dispute settlement mechanism that creates systematically different costs and benefits across economy sizes. The system purports to be 'rules-based' and neutral — all members follow the same procedures, can bring cases, and submit to adjudication. In practice, enforcement depends on retaliatory capacity (the ability to impose economic costs if a trading partner ignores a judgment) and legal capacity (the ability to navigate complex dispute procedures). Developed economies possess both; least-developed countries possess neither. This creates an extraction mechanism masked by the language of neutral rules: developed economies win cases and enforce compliance; developing economies win cases that go unenforced; both operate within the same institutional framework. The mechanism is a tangled rope because it genuinely coordinates trade and produces beneficiaries (developing countries do gain market access, do use the system, do sometimes win cases and have them enforced) but the coordination is asymmetric — the extractive layer is built into the enforcement architecture itself. The theater_ratio has risen from 1995 (0.45, when the system was young and legitimacy was high) to 2017 (0.61, when the Appellate Body blocking and enforcement gaps became visible). The Appellate Body's paralysis since 2017 exemplifies piton dynamics: the institution persists through inertia and states' compliance with prior rulings but has lost operative force. Extractiveness has risen steadily as developing countries have gained capacity to mount cases but lack capacity to enforce wins, revealing what was always structural: the system distributes enforcement asymmetrically.",
+    "key_agents": [
+      "Least Developed Countries (LDCs): Primary victims (powerless/trapped) — cannot afford legal experts, cannot threaten retaliation, cannot enforce wins; bound by trade agreements that constrain policy space",
+      "Developing Economies (Middle-income): Secondary victims (moderate/constrained) — have some legal capacity and retaliatory power but still face enforcement gaps; benefit from market access but bear asymmetric enforcement costs",
+      "Developed Economies (US, EU, Japan): Primary beneficiaries (institutional/arbitrage) — command legal expertise, retaliatory capacity, enforcement power; experience the system as legitimate rules-based coordination",
+      "Coalition Organizations (African Union, ALBA, ASEAN): Organized agents (organized/constrained) — pool legal resources and retaliatory capacity; coordinate responses to asymmetric enforcement but cannot eliminate structural gap",
+      "WTO Dispute Settlement Body: Institutional structure (institutional/arbitrage) — manages case flow, issues rulings; depends on state compliance for enforcement (hence asymmetry reflects state capacity differences)",
+      "WTO Appellate Body: Institutional structure degraded (institutional/arbitrage) — provided appellate recourse but blocked by developed economies since 2017; persists through historical legitimacy and prior-ruling compliance but no longer functional",
+      "Analytical Observer: Civilizational view (analytical/analytical) — risks naturalizing enforcement asymmetry as inherent to international systems rather than recognizing it as a contingent design choice"
+    ],
+    "logic_rationale": "Extractiveness (0.58): The system extracts from developing economies in three mechanisms: (1) legal capacity requirements (only wealthy economies can afford sustained dispute litigation); (2) enforcement capacity requirements (only economies with retaliatory capacity can credibly threaten compliance); (3) compliance monitoring (developed economies enforce wins against developing economies more reliably than vice versa). The value reflects moderate but systematic extraction — not every interaction is extractive, but the system's architecture tilts extraction toward large economies. Suppression (0.68): High. Barriers to exit from the WTO are very high (economic isolation, loss of market access, reputational cost of withdrawal). Alternative dispute mechanisms (bilateral arbitration, regional courts) exist but lack legitimacy and enforceability. The system's legitimacy narrative ('rules-based order') suppresses recognition that enforcement is asymmetric. Theater ratio (0.61): Moderate-high. The dispute process itself is performative for developing countries that win cases but cannot enforce them — they go through the full legal procedure, get favorable rulings, and then see compliance fail. The ruling is real (formal victory) but functionally hollow (no enforcement). The rise in theater ratio from 1995 to 2017 reflects growing visibility of this performativity: early in the system's history, developing countries had fewer cases, lower visibility of enforcement gaps. By 2017, the pattern was clear and the Appellate Body's blocking made the theater explicit.",
+    "perspectival_gap": "The gap between developed-economy rope and least-developed-country snare is the widest in this constraint set. Both operate under the same WTO rules, same procedures, same institutional framework. But their material experience is inverted: the developed economy experiences the system as enabling coordination and benefits from rule-based dispute resolution; the LDC experiences it as binding and extractive. This gap is not a difference of opinion but a difference of structural position. The mapping from structural position to classification is determinate: once you fix power (institutional vs powerless), exit (arbitrage vs trapped), and directionality (beneficiary vs victim), the classification follows. The perspectival gap reveals that a single institutional system can function as rope for beneficiaries and snare for victims simultaneously.",
+    "directionality_logic": "Each perspective's directionality (d) is determined by structural position within the enforcement architecture. Least-developed countries: victims of asymmetric enforcement, no exit option, no retaliatory capacity → d ≈ 0.95 (full target) → maximum experienced extraction (snare). Middle-income developing economies: partial victims (enforcement gaps but real coordination value and some retaliatory capacity) → d ≈ 0.60 (mixed) → moderate extraction (tangled rope). Developed economies: beneficiaries of enforcement asymmetry, arbitrage exit option, command legal capacity → d ≈ 0.10 (beneficiary) → low or negative extraction (rope). Coalition of developing countries: organized response creates partial agency but structural asymmetry persists → d ≈ 0.55 (slight victim bias) → moderate extraction (tangled rope). WTO institutions: institutional beneficiary of dispute activity but have lost operative enforcement function → d ≈ 0.20 (slight beneficiary, but degraded) → piton (theater-driven classification overrides). Analytical observer: external viewpoint, no structural position, faces risk of naturalizing asymmetry → d ≈ 0.72 (analytical position) → classification tends toward mountain (the false summit that FSM will detect).",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by showing that tangled_rope is the correct type. The system has genuine coordination function (it coordinates trade, provides dispute resolution, creates market-access benefits) AND genuine extraction (enforcement asymmetry tilts benefits toward developed economies). The tangled_rope type unifies these: it is not pure extraction (snare) because coordination value is real; it is not pure coordination (rope) because extraction is asymmetric. The false summit perspective (mountain) is a diagnostic warning: the claim that enforcement asymmetry is inherent to international systems is a naturalization of architectural choices, not a law of nature. Counterfactual alternatives exist (supranational enforcement authority, mandatory dispute insurance, enforcement pools, automatic retaliation triggers) that would reduce the asymmetry. The false summit detection routes this perspective through the omega variables: the system's enforcement asymmetry is contingent, not necessary. The mandate-seeking crisis is avoided by acknowledging the constraint as mixed coordination-extraction rather than pretending it is pure coordination."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "intellectual_property_triage",
+      "agricultural_subsidy_lock",
+      "development_capacity_dependency"
+    ],
+    "dual_formulation_note": "Enforcement asymmetry is a distinct constraint from individual trade disputes or sectoral agreements. It operates at the meta-level of the dispute resolution system itself. Upstream constraints (specific tariff disputes, IP enforcement) are affected by enforcement asymmetry because the system's architecture determines which claims are enforced. Downstream effects: countries' development capacity is degraded by the inability to defend against trade litigation and enforce their own claims, which feeds into broader development dependency dynamics."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ],
+  "uke_scope": {
+    "epsilon_bin": "moderate_high",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "international_trade_architecture",
+      "power_differential_lock"
+    ]
+  }
+}

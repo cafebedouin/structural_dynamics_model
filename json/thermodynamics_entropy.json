@@ -4,15 +4,16 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "therm_ent"
+    "measurement_id_prefix": "thermo",
+    "story_uid": "9f917e82-461c-4756-ae02-8a5a54698658"
   },
   "base_properties": {
-    "extractiveness": 0.08,
+    "extractiveness": 0.12,
     "suppression": 0.02,
-    "theater_ratio": 0.05,
+    "theater_ratio": 0.08,
     "claimed_type": "mountain",
-    "human_readable": "The Second Law of Thermodynamics (Entropy)",
-    "topic_domain": "technological/physics/physical_law",
+    "human_readable": "The Second Law of Thermodynamics (Entropy Increase)",
+    "topic_domain": "physics/thermodynamics/natural_law",
     "emerges_naturally": true,
     "accessibility_collapse": 0.92,
     "resistance": 0.08
@@ -24,8 +25,17 @@
       "time_horizon": "civilizational",
       "exit_options": "trapped",
       "spatial_scope": "universal",
-      "label": "The Thermodynamic System (Physical Reality)",
-      "comment": "PERSPECTIVE 1: THERMODYNAMIC SYSTEM (MOUNTAIN) \u2014 All matter and energy configurations are subject to entropy increase. No escape from the fundamental constraint. Disorder in isolated systems must increase or remain constant. This is not a policy, not an institutional arrangement, not a coordination problem. It is an irreducible property of physical law. The system has zero degrees of freedom relative to this constraint."
+      "label": "The Living System (Entropy Accumulation)",
+      "comment": "PERSPECTIVE 1: LIVING SYSTEM (MOUNTAIN) — All living organisms are embedded in entropy increase. Metabolic processes require constant energy dissipation; growth, maintenance, and reproduction all generate waste heat and disorder. No organism can exit the constraint or negotiate with thermodynamic law. The second law is an immutable boundary of existence itself."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "moderate",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "universal",
+      "label": "The Engineer (Efficiency Optimization)",
+      "comment": "PERSPECTIVE 2: ENGINEER (MOUNTAIN) — Can optimize efficiency and slow entropy increase locally, but cannot violate the law. Every engine, refrigerator, and heat pump must accept that some energy becomes waste heat. The constraint is unchangeable even with power and resources. Engineering victory is minimizing, not escaping, entropy production."
     },
     {
       "classification_type": "mountain",
@@ -33,8 +43,8 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer (Universal Physical Law)",
-      "comment": "PERSPECTIVE 2: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From a mathematical and physical standpoint, the Second Law follows from probabilistic arguments about microstates and macroscopic observable properties. It is not enforced by any agent or institution. It emerges necessarily from the statistical mechanics of large ensembles. No observer, regardless of power or position, can violate or escape this constraint. It applies uniformly across all contexts and time horizons."
+      "label": "The Physicist (Mathematical Formulation)",
+      "comment": "PERSPECTIVE 3: PHYSICIST (MOUNTAIN) — The second law emerges from combinatorics of microstates and the ergodic hypothesis. Entropy increase is a statistical inevitability, not a mechanism that could be designed differently. The law is independent of how we measure it, what units we use, or which observer evaluates it. Universal, immutable, foundational."
     },
     {
       "classification_type": "mountain",
@@ -42,116 +52,89 @@
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "universal",
-      "label": "The Engineering Institution",
-      "comment": "PERSPECTIVE 3: ENGINEERING INSTITUTION (MOUNTAIN) \u2014 Even institutional actors with maximal power and arbitrage options cannot circumvent entropy increase. They may manage energy flows, design efficient processes, and redistribute disorder (entropy export to surroundings), but they cannot violate the Second Law. It is a constraint on their capabilities, not a constraint they can exploit or negotiate. The law is unchanged by their position or exit options."
-    },
-    {
-      "classification_type": "mountain",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The Collective of Agents (Technological Society)",
-      "comment": "PERSPECTIVE 4: COLLECTIVE OF AGENTS (MOUNTAIN) \u2014 Organized groups and societies cannot collectively escape entropy increase through coordination or coalition. Even global coordination mechanisms cannot violate the Second Law. The constraint is invariant across all forms of social organization and collective action. Technological advancement allows better management of entropy (Maxwell's demon designs, reversible computing), but not its violation."
+      "label": "The Energy Industry (Thermodynamic Limits)",
+      "comment": "PERSPECTIVE 4: ENERGY INDUSTRY (MOUNTAIN) — Even the most powerful institutional actors cannot exceed Carnot efficiency limits or eliminate waste heat. Fossil fuels, nuclear reactors, solar collectors — all obey the second law. Institutional power does not exempt the constraint; it only funds better engineering within thermodynamic bounds."
     }
   ],
   "omegas": [
     {
-      "id": "thermodynamic_boundary_definition",
-      "question": "Is entropy increase truly universal, or is it an artifact of how we define 'isolated system' boundaries?",
-      "resolution_mechanism": "Philosophical analysis of boundary conditions; examination of open vs closed systems in real-world scenarios; study of entropy accounting in complex multi-level systems",
-      "impact": "If boundary definition is fundamental: Mountain classification is robust. If boundary is observer-dependent: classification may shift to Rope (coordination via boundary choice). This is the core omega for whether the law is truly universal or partially conventional.",
+      "id": "time_asymmetry_grounding",
+      "question": "Is entropy increase a fundamental asymmetry of time or an emergent statistical property from symmetric microscopic laws?",
+      "resolution_mechanism": "Foundational physics: debate between fundamental second law (time asymmetry at base level) vs emergent second law (microstates symmetric, entropy increase emerges from initial conditions). T-symmetry violation vs coarse-graining perspectives.",
+      "impact": "Philosophical only — does not affect classification. Both interpretations produce mountain classification. Affects narrative framing of 'why' the law exists, not 'whether' it is immutable.",
       "confidence": "high",
       "type_class": "conceptual",
-      "description": "Whether entropy universality depends on boundary definition"
+      "description": "Whether entropy increase reflects fundamental time asymmetry or statistical emergence"
     },
     {
-      "id": "reversibility_and_practical_limits",
-      "question": "Do reversible processes (Carnot cycles, adiabatic operations) represent exceptions or limiting cases of the Second Law?",
-      "resolution_mechanism": "Theoretical examination of reversible vs irreversible processes; empirical testing of reversible computing and quantum algorithms; analysis of whether reversibility requires infinite time/energy",
-      "impact": "If reversible processes are true exceptions: classification may downgrade to Rope or Scaffold. If they are unattainable limiting cases: Mountain classification is reinforced.",
+      "id": "maxwell_demon_logical_status",
+      "question": "Do closed-system theoretical arguments against Maxwell's demon establish the second law's inviolability, or do they only establish practical impossibility?",
+      "resolution_mechanism": "Formal analysis of information-theoretic demon constructions; examination of whether information-theoretic cost arguments prove logical inevitability or only practical infeasibility. Szilard vs Landauer frameworks.",
+      "impact": "Does not change classification. Whether the second law is logically required or only practically universal, both produce mountain. But affects confidence in universality scope: purely practical bound is narrower than logical bound.",
       "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether reversible processes are true exceptions or limiting cases"
-    },
-    {
-      "id": "quantum_violations_and_measurement",
-      "question": "Do quantum phenomena (entanglement, time-reversal symmetry, measurement-induced state change) reveal fundamental violations of thermodynamic entropy in closed systems?",
-      "resolution_mechanism": "Resolution of the measurement problem in quantum mechanics; analysis of entropy in entangled systems; determination of whether quantum coherence preserves or violates classical entropy bounds",
-      "impact": "If quantum mechanics violates Second Law in principle: Mountain classification fails; constraint decomposes into classical (Mountain) and quantum (Snare or Tangled Rope) stories. If quantum mechanics preserves Second Law: Mountain is confirmed at all scales.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether quantum mechanics reveals violations of thermodynamic entropy"
-    },
-    {
-      "id": "cosmological_boundary_conditions",
-      "question": "Does the universe as a whole constitute an isolated system subject to the Second Law, or is it exempt by definition?",
-      "resolution_mechanism": "Cosmological analysis of the early universe's entropy state; determination of whether the universe's initial low-entropy condition is a boundary condition or a constraint violation; study of the arrow of time",
-      "impact": "If universe is genuinely isolated and constrained: Second Law is truly universal (Mountain). If universe's boundary conditions are set independently: the Second Law may be local to subsystems, not universal.",
-      "confidence": "low",
       "type_class": "conceptual",
-      "description": "Whether the universe is subject to the Second Law or exempt by definition"
+      "description": "Logical vs practical status of second-law inviolability"
+    },
+    {
+      "id": "open_system_boundary_ambiguity",
+      "question": "For a subsystem, entropy can decrease if we account for heat flow to the environment. Does this make the second law observer-relative (depends on system boundary choice) rather than universal?",
+      "resolution_mechanism": "Clarification: total entropy (system + environment) always increases. Local decrease is always paired with larger increase elsewhere. The law is universal if we define 'system' to include all relevant degrees of freedom. If observer selects a subsystem boundary, they must account for environment.",
+      "impact": "Does not change classification. The second law's universality is preserved by always considering the full system. Observer-relative subsystem entropy is not observer-relative universality.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Whether open-system entropy decrease contradicts universality"
     }
   ],
   "measurements": [
     {
-      "metric": "theater_ratio",
+      "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.05
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.05
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.05
+      "value": 0.12
     },
     {
       "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.12
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
       "time_point": 0,
       "value": 0.08
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 5,
+      "metric": "theater_ratio",
+      "time_point": 100,
       "value": 0.08
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 10,
+      "metric": "theater_ratio",
+      "time_point": 1000,
       "value": 0.08
     }
   ],
   "interval": {
     "start": 0,
-    "end": 10
+    "end": 1000
   },
   "commentary": {
-    "narrative_context": "The Second Law of Thermodynamics is a canonical example of a natural law constraint \u2014 a physical limit that applies uniformly across all observers, power levels, time horizons, and spatial scopes. The constraint states that in any isolated system, entropy (disorder) must increase or remain constant; it cannot decrease. This is not a policy enforced by institutions, not a coordination mechanism that could be negotiated, and not an extractive mechanism that benefits some agents at the expense of others. It is an immutable property of physical systems that emerges from the statistical mechanics of large ensembles. The constraint operates equally on technological systems, biological organisms, industrial processes, and cosmic phenomena. No agent, regardless of power or institutional position, can violate it through cleverness, organization, or arbitrage.",
+    "narrative_context": "The Second Law of Thermodynamics stands as a canonical natural law constraint — an irreducible physical limit that applies uniformly to all agents, all power levels, all time horizons, and all spatial scopes. No institution enforces it, no coordination mechanism created it, no beneficiary group benefits from it disproportionately, and no victim group bears its cost asymmetrically. The law states that entropy in an isolated system must increase or remain constant; it cannot spontaneously decrease. This constraint is simultaneously the most universal and the most impersonal: it applies whether you are powerless or institutional, immediate or civilizational, local or universal. The Second Law structures the energetic possibility space within which all other constraints operate. No institution can negotiate its terms, no technology can circumvent it, and no observer can perceive a loophole through different measurement. The extractiveness value (0.12) reflects the minimal definitional 'cost' of the law's existence — the universal requirement that all systems must dissipate energy — but this is not extraction in the DR sense (asymmetric value transfer). Rather, it is the baseline resource cost of thermodynamic existence itself. The theater ratio (0.08) indicates negligible performative content: the law is measured directly through calorimetry, entropy calculations, and temperature observations, with almost no interpretive mediation or institutional ritual.",
     "key_agents": [
-      "Thermodynamic Systems: Universal subject (all systems of matter and energy)",
-      "Engineers and Technology Designers: Attempt to manage entropy through efficient processes and energy distribution; subject to the constraint",
-      "Analytical Observer: Examines the constraint from a mathematical and physical standpoint; recognizes its universality",
-      "Technological Society: Collective agent attempting to optimize energy use and minimize waste; constrained by Second Law"
+      "Living Systems: Universal agent (all power levels/exit options) — subject to entropy accumulation through metabolism, reproduction, and death. No exit.",
+      "Engineers & Technologists: Moderate to institutional agents (constrained/arbitrage exit) — optimize efficiency within Carnot bounds but cannot violate the law.",
+      "Physicists & Theorists: Analytical agents (analytical/analytical exit) — understand the mathematical foundations and combinatorial inevitability of entropy increase.",
+      "Energy Industries: Institutional agent (institutional/arbitrage exit) — operate within thermodynamic limits; institutional power does not exempt the constraint.",
+      "The Physical Universe: Non-agent participant — entropy increase is the constraint's structural basis; the universe is the enforcement mechanism."
     ],
-    "logic_rationale": "Extractiveness (0.08): Minimal. The Second Law does not extract value from any agent for the benefit of another. It is a constraint on all systems equally, not a mechanism by which one agent's costs become another's benefits. The small non-zero value reflects that physical law does impose costs on all processes \u2014 irreversible processes dissipate energy \u2014 but this is not extraction in the institutional sense; it is a universal tax on all matter and energy transformations. Suppression (0.02): Negligible. There are no alternatives to the Second Law. It is not suppressed by keeping knowledge hidden or by preventing exit; it simply applies. Accessibility (0.92): Very high. The Second Law is experimentally verified, mathematically derived, and applies across all observed phenomena. There is no collapse or accessibility barrier \u2014 the law is fully transparent. Resistance (0.08): Very low. Empirical resistance to the Second Law is essentially zero. All observed physical systems obey it. Theater ratio (0.05): Minimal. The Second Law is not performed or theatrical. Its function is its reality \u2014 entropy increase happens whether or not anyone observes or documents it.",
-    "directionality_logic": "The Second Law does not have directionality in the institutional sense. All agents and systems are equally subject to it. The constraint applies uniformly regardless of power level (powerless individuals and institutional actors experience the same physical law), time horizon (immediate and civilizational perspectives both observe entropy increase), exit options (trapped and arbitrage agents cannot escape it), or spatial scope (local and universal systems all follow the law). The derivation chain for directionality is inapplicable to mountains \u2014 there are no beneficiaries or victims, only universal subjects of physical law.",
-    "perspectival_gap": "There is no perspectival gap for this constraint. All four perspectives classify it identically as Mountain. This is the hallmark of a natural law: the classification is invariant across all observational contexts. The powerless agent and the institutional actor see the same constraint. The immediate-horizon trader and the civilizational observer see the same constraint. The agent trapped in a local region and the global analyst see the same constraint. The absence of perspectival variation is itself the evidence for the mountain classification.",
-    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: This constraint exemplifies the mandatrophy solution through invariance. The mandatrophy asks: 'Is this pure coordination (Rope) mislabeled as extraction (Snare)?' For the Second Law, the answer is neither \u2014 it is pure constraint, not extraction or coordination. The constraint cannot be reframed as coordination because no agent benefits at another's expense; the cost (entropy increase) is universal and intrinsic, not transferred. It cannot be reframed as extraction because there is no beneficiary. The mandatrophy resolves to 'natural law' \u2014 a class distinct from both Rope and Snare. The Second Law's universality across all perspectives confirms that it is a Mountain, not a hidden Rope or Snare. If the perspectives had disagreed \u2014 if, for example, some observers saw it as extractive and others as coordination \u2014 that would signal a false mountain (naturalization of a contingent arrangement). The invariance proves the law."
+    "logic_rationale": "Extractiveness (0.12): Minimal. The second law imposes no asymmetric value extraction. All agents — powerless and institutional alike — are subject to identical thermodynamic limits. The value 0.12 reflects only the baseline resource dissipation required by the law's existence, not extraction of benefit from one group to another. Suppression (0.02): Negligible. There are no alternatives to suppress, no escape routes to close off, no coordination mechanisms to override. Agents cannot even imagine violating the law — it is not suppressed alternative but impossible alternative. Theater ratio (0.08): Minimal. The law is not maintained through ritual or institutional performance. Entropy increase is measured directly through calorimetry and statistical mechanics. Scientific practice involves experimental verification, but this is hypothesis-testing, not theater. The small residual value reflects the necessary interpretive work in boundary definitions and thermodynamic system specification, but interpretation is not performative. Accessibility collapse (0.92): Very high. No agent has access to a state in which the second law does not apply. All possible configurations obey it. The collapse is asymptotic to 1.0. Resistance (0.08): Very low. No actor or coalition actively resists the second law's application. Resistance is not zero because some historical scientists (perpetual-motion researchers) attempted to deny it, and some contemporary fringe thinkers still contest Maxwell's demon arguments. But organized, sustained resistance is negligible. The law's authority is not actively defended because no meaningful challenge exists.",
+    "perspectival_gap": "Minimal to absent. This is the diagnostic feature of a genuine mountain constraint: all perspectives produce mountain classification. Power, time horizon, exit options, and spatial scope do not change the classification because the law is immutable regardless of observer position. A powerless organism and an institutional energy company experience identical thermodynamic constraints. An engineer operating on immediate timeframes and a physicist thinking on civilizational timeframes both obey the same Carnot limits. Local subsystems and universal systems are both governed by entropy increase (once system boundaries are clarified). The absence of perspectival gap is evidence of the constraint's universality and immutability.",
+    "directionality_logic": "Directionality (d) is undefined for a genuine mountain constraint because there is no asymmetric extraction flow. No agent benefits disproportionately from the second law; no agent bears its cost disproportionately. The law applies universally and symmetrically. The f(d) sigmoid evaluation is non-applicable because d has no meaningful value. All agents experience the constraint's force directly, without mediation through institutional structures or power differentials. This universality is precisely what distinguishes the second law from extractive constraints that benefit some agents at others' expense."
   },
   "boltzmann": {
-    "coordination_type": "global_infrastructure"
-  },
-  "network": {
-    "affects_constraints": [
-      "heat_death_universe",
-      "reversible_computing_limits",
-      "maxwell_demon_impossibility"
-    ],
-    "dual_formulation_note": "The Second Law can be formulated in multiple ways (Clausius, Kelvin-Planck, Boltzmann statistical mechanics, information-theoretic) but all formulations are mathematically equivalent and empirically identical. These are not decomposed into separate constraint stories because they do not have different epsilon values or structural properties \u2014 they are alternative mathematical representations of the same physical law. The network links to downstream constraints that depend on the Second Law's universality."
-  },
-  "directionality_overrides": []
+    "coordination_type": "information_standard"
+  }
 }

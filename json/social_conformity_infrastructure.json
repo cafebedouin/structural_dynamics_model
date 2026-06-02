@@ -2,63 +2,73 @@
   "header": {
     "constraint_id": "social_conformity_infrastructure",
     "version": "1.0",
-    "generated_date": "2025-01-02",
+    "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "conform"
+    "measurement_id_prefix": "sconf",
+    "story_uid": "d575e14c-c55d-435d-919c-1ded49741bcc"
   },
   "base_properties": {
-    "extractiveness": 0.12,
-    "suppression": 0.03,
-    "theater_ratio": 0.15,
-    "claimed_type": "mountain",
+    "extractiveness": 0.38,
+    "suppression": 0.62,
+    "theater_ratio": 0.55,
+    "claimed_type": "tangled_rope",
     "human_readable": "Social Conformity Infrastructure as Cognitive Efficiency Mechanism",
     "topic_domain": "philosophy_of_mind/social_psychology/intellectual_autonomy",
-    "requires_active_enforcement": false,
-    "emerges_naturally": true,
-    "accessibility_collapse": 0.92,
-    "resistance": 0.08,
+    "requires_active_enforcement": true,
     "beneficiaries": [
-      "social_coordination_systems",
-      "group_decision_efficiency"
+      "group_coordination_efficiency",
+      "social_stability_mechanisms"
     ],
-    "victims": []
+    "victims": [
+      "individual_epistemic_autonomy",
+      "belief_diversity"
+    ]
   },
   "perspectives": [
     {
-      "classification_type": "mountain",
+      "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "immediate",
-      "exit_options": "trapped",
-      "spatial_scope": "local",
-      "label": "The Unreflective Conformer",
-      "comment": "PERSPECTIVE 1: UNREFLECTIVE CONFORMER (MOUNTAIN) \u2014 Experiences social conformity as an unchangeable feature of group membership. At immediate timescales and local scope, the cognitive efficiency of adopting group beliefs appears as natural as breathing. No perception of extraction \u2014 the mechanism operates below conscious awareness."
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "global",
+      "label": "The Individual Epistemic Agent",
+      "comment": "PERSPECTIVE 1: INDIVIDUAL EPISTEMIC AUTONOMY (SNARE) — The individual is identity-locked to group membership; exit from conformity pressure requires abandoning identity fusion with the group. Structural mobility exists (can physically relocate, change social circles) but identity constituted through group belonging prevents exercise of that mobility. Bears full extraction cost: must suppress authentic belief, internalize group judgment, accept reduced epistemic autonomy. No coordination benefit accrues to this agent — only suppression."
     },
     {
-      "classification_type": "mountain",
+      "classification_type": "tangled_rope",
       "agent_power": "moderate",
-      "time_horizon": "biographical",
+      "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Reflective Individual",
-      "comment": "PERSPECTIVE 2: REFLECTIVE INDIVIDUAL (MOUNTAIN) \u2014 Even with biographical perspective and moderate power, recognizes conformity pressure as a structural feature of human social cognition. Can resist specific instances but cannot exit the general phenomenon. Sees the infrastructure as coordination mechanism rather than extraction \u2014 groups that share beliefs coordinate more efficiently than those that don't."
+      "label": "The Minority Belief Holder",
+      "comment": "PERSPECTIVE 2: MINORITY BELIEF HOLDER (TANGLED ROPE) — Constrained by social cost of dissent (professional reputation, community standing, resource access), but also benefits from group coordination mechanisms during moments of alignment. The minority perceives genuine coordination function (shared norms enable cooperation) AND asymmetric extraction (bearing disproportionate cost for dissent). Biographical-scale conformity pressure is severe; generational-scale allows adaptive evolution of norms."
     },
     {
-      "classification_type": "mountain",
+      "classification_type": "rope",
       "agent_power": "organized",
-      "time_horizon": "generational",
+      "time_horizon": "immediate",
       "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "The Counter-Cultural Movement",
-      "comment": "PERSPECTIVE 3: COUNTER-CULTURAL MOVEMENT (MOUNTAIN) \u2014 Organized resistance to specific conformity pressures (punk, hippie, rationalist communities) discovers that rejecting mainstream beliefs simply creates alternative conformity structures. The infrastructure itself \u2014 the cognitive efficiency of belief-sharing \u2014 remains invariant. Can exit specific belief clusters but not the general mechanism."
+      "spatial_scope": "local",
+      "label": "The Community Coordinator",
+      "comment": "PERSPECTIVE 3: COMMUNITY COORDINATOR (ROPE) — Organized agents (community leaders, norm-setters, coordination facilitators) experience the conformity infrastructure primarily as a coordination mechanism. Immediate-scale conformity enables rapid collective action (disaster response, mutual aid, coordinated norm enforcement). Exit options are mobile — can shift coordination to different group. Low extraction because organized agents have agency over norm-setting. Benefits from coordination without bearing maximum suppression."
     },
     {
-      "classification_type": "mountain",
+      "classification_type": "scaffold",
       "agent_power": "institutional",
       "time_horizon": "generational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Educational Institution",
-      "comment": "PERSPECTIVE 4: EDUCATIONAL INSTITUTION (MOUNTAIN) \u2014 Benefits from conformity infrastructure (students adopt pedagogical frameworks efficiently) but recognizes it as a double-edged coordination mechanism, not an extractive tool. The same cognitive architecture that enables rapid knowledge transmission also enables rapid misinformation spread. Sees the infrastructure as a natural law of social learning."
+      "label": "The Deliberative Institution",
+      "comment": "PERSPECTIVE 4: DELIBERATIVE INSTITUTION (SCAFFOLD) — Institutional actors (academic communities, scientific societies, open deliberation forums) experience conformity infrastructure as a problem with a sunset: explicit epistemic norms, structured disagreement protocols, and diversity requirements are building alternative coordination pathways that reduce conformity pressure. Low effective extraction because the institution has designed exit mechanisms. Sunset logic: as deliberative cultures strengthen, conformity-based coordination becomes less necessary."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Folk Psychology Archive",
+      "comment": "PERSPECTIVE 5: FOLK PSYCHOLOGY / INSTITUTIONAL MEMORY (PITON) — The accumulated institutional knowledge about 'how groups work' treats conformity as natural, inevitable, and necessary for social stability. This framing persists through theater (motivational speeches about 'unity,' 'group identity,' 'loyalty') despite eroding empirical foundation. Neuroscience reveals conformity is learnable, trainable, context-dependent — not essential. Theater ratio is high because institutional actors maintain conformity narratives to justify hierarchy and discourage dissent. The piton is degraded — it was once necessary coordination mechanism; now it serves extractive institutional interests through performative framing."
     },
     {
       "classification_type": "mountain",
@@ -66,112 +76,138 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Cognitive Scientist",
-      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 Identifies conformity infrastructure as an emergent property of human social cognition with deep evolutionary roots. Asch experiments, opinion cascades, and belief clustering are surface manifestations of cognitive architecture optimized for rapid social learning. The infrastructure is not a policy choice or institutional arrangement \u2014 it is a feature of how human brains process social information. Extractiveness is minimal because the mechanism serves genuine coordination function: groups with shared beliefs can act collectively without constant negotiation."
-    },
-    {
-      "classification_type": "mountain",
-      "agent_power": "powerful",
-      "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "continental",
-      "label": "The Intellectual Contrarian",
-      "comment": "PERSPECTIVE 6: INTELLECTUAL CONTRARIAN (MOUNTAIN) \u2014 High-agency individual who actively resists conformity pressures discovers that even deliberate non-conformity operates within the same infrastructure. Contrarian positions cluster just as mainstream ones do. The infrastructure is substrate-neutral \u2014 it processes contrarian beliefs with the same efficiency as conventional ones. Experiences low extraction because contrarian identity provides social rewards in specific communities."
+      "label": "The Neurocognitive Natural Law View",
+      "comment": "PERSPECTIVE 6: NEUROCOGNITIVE NATURAL LAW (MOUNTAIN) — From evolutionary and neurocognitive perspectives, some degree of social conformity bias is inherent to human cognition: our brains are group-oriented, evolved in small-group contexts where conformity was adaptive, wired for social approval signals. This perspective argues the conformity infrastructure is a natural law of cognitive architecture, not a contingent social arrangement. However, the structural data (identified beneficiaries and victims, presence of active enforcement, measurable extraction) contradicts the mountain classification — the engine will compute this as false summit, revealing how evolutionary/neurocognitive inevitability narratives naturalize what are actually learnable, modifiable behavioral patterns."
     }
   ],
   "omegas": [
     {
-      "id": "evolutionary_optimality",
-      "question": "Is the current conformity infrastructure evolutionarily optimal, or does it reflect ancestral environment mismatch?",
-      "resolution_mechanism": "Cross-cultural conformity rate comparison; historical analysis of belief adoption speeds in pre-modern vs modern information environments; computational modeling of optimal social learning rates",
-      "impact": "If optimal: mountain classification confirmed across all contexts. If mismatched: some conformity pressure may be extractive artifact of scale mismatch between evolved mechanisms and modern group sizes.",
+      "id": "natural_law_vs_learned_behavior",
+      "question": "Is conformity bias a fixed cognitive architecture (natural law) or a learned social behavior (contingent institutional arrangement)?",
+      "resolution_mechanism": "Cross-cultural comparison of conformity effect magnitudes; longitudinal studies of conformity plasticity with explicit training in epistemic autonomy; neuroimaging of conformity response in different cultural contexts; analysis of historical variance in conformity norms across civilizations",
+      "impact": "If natural law: mountain classification is correct; conformity infrastructure is immutable. If learned: false-summit detection confirms tangled-rope; conformity infrastructure is modifiable. If intermediate: piton classification more accurate than mountain.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether conformity rates reflect evolutionary optimality or environment mismatch"
+      "description": "Whether conformity bias is innate cognitive architecture or learned social behavior"
     },
     {
-      "id": "conscious_override_capacity",
-      "question": "What proportion of conformity-driven belief adoption can be consciously overridden with training?",
-      "resolution_mechanism": "Longitudinal studies of rationality training, meditation practice, or philosophical education on conformity resistance; measurement of sustained vs temporary effects",
-      "impact": "If override capacity is high and trainable: classification shifts toward rope (coordination mechanism with accessible alternatives). If override capacity is low or temporary: mountain classification confirmed (infrastructure is largely immutable at individual level).",
+      "id": "identity_lock_mechanism_binding_strength",
+      "question": "What is the binding mechanism holding identity-locked conformists in the constraint? Is the identity fusion psychological (self-concept constituted through group), social (role expectations codified in institutions), or both?",
+      "resolution_mechanism": "Empirical study of conformists with explicit identity primes (activating group identity vs individual identity) and exit costs. Measurement of conformity persistence after institutional role exit vs after identity-reframing intervention. Cross-generational analysis of identity-lock strength in inherited group memberships.",
+      "impact": "If primarily psychological: intervention through cognitive reframing is feasible. If primarily institutional: intervention requires changing role structure. If both: requires simultaneous identity and institutional work. Classification may shift from identity_locked toward constrained if institutional component dominates.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Trainability of conscious resistance to conformity pressure"
+      "description": "Binding mechanism of identity-lock in social conformity"
     },
     {
-      "id": "digital_amplification",
-      "question": "Do digital social networks amplify conformity infrastructure beyond ancestral parameters, creating novel extraction mechanisms?",
-      "resolution_mechanism": "Comparison of conformity rates and belief adoption speeds in digital vs face-to-face environments; analysis of algorithmic curation effects on opinion clustering",
-      "impact": "If digital environments merely scale existing mechanisms: mountain classification holds. If digital environments create qualitatively new conformity dynamics: some perspectives may shift to tangled_rope (coordination infrastructure with embedded algorithmic extraction).",
+      "id": "coordination_necessity_versus_extraction_cover",
+      "question": "How much of the observed conformity infrastructure's suppression serves genuine group coordination versus serving extractive institutional interests through the cover story of 'necessary coordination'?",
+      "resolution_mechanism": "Comparison of conformity pressure in genuine coordination-requiring tasks (e.g., disaster response, collective action) versus coordination-unnecessary tasks (e.g., aesthetic preferences, historical facts, scientific claims). Analysis of conformity enforcement intensity; identification of who benefits most from suppression; measurement of group performance on coordination tasks before and after reducing conformity pressure.",
+      "impact": "If suppression is mostly genuine coordination cost: tangled_rope classification correct; reduce theater. If suppression mostly serves extraction: snare classification more accurate; conformity infrastructure is primarily extractive. If mixed: current tangled_rope is correct; measures success of deliberative institutions.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether digital networks create novel conformity mechanisms vs scaling existing ones"
+      "description": "Proportion of suppression serving genuine coordination versus extractive institutional interests"
+    },
+    {
+      "id": "epistemic_autonomy_cost_internalization",
+      "question": "To what extent have identity-locked conformists internalized the cost of suppressed autonomy (made it feel natural, necessary, even desirable) versus maintaining conscious awareness of the extraction?",
+      "resolution_mechanism": "Self-report studies with identity-priming to lower defensiveness; measurement of explicit vs implicit conformity preferences; analysis of narratives explaining conformity decisions (justification, inevitability, choice); longitudinal study of agents transitioning from conformity to epistemic dissent; measurement of psychological distress upon exiting conformity.",
+      "impact": "If mostly internalized: extraction appears as rope or scaffold from victim's perspective, despite objective snare structure. The identity-lock prevents perception of victimhood. If mostly conscious: victims perceive snare clearly; exit barriers may still hold despite high awareness. Internalization level affects both classification stability and feasibility of intervention.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Degree of internalization of epistemic autonomy cost in identity-locked conformists"
+    },
+    {
+      "id": "emergence_from_micro_interactions",
+      "question": "Is the conformity infrastructure an emergent property of millions of micro-scale social interactions, or is it actively enforced and maintained by institutional actors who benefit from it?",
+      "resolution_mechanism": "Historical analysis of conformity norm emergence in new groups; comparison of conformity strength in groups with explicit anti-conformity norms; measurement of institutional investment in conformity enforcement (education, incentive structures, penalties for dissent); analysis of how conformity norms change when enforcement mechanisms are removed.",
+      "impact": "If emergent: constraint is less amenable to institutional redesign; beneficiaries cannot easily sustain it if micro-interactions change. If institutionally enforced: constraint is more intentional; beneficiary identification is more actionable; removal is more feasible through institutional reform.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether conformity infrastructure emerges from interaction or is actively institutionally enforced"
     }
   ],
   "measurements": [
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.12,
-      "id_override": "conform_theater_ancestral"
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
-      "time_point": 50,
-      "value": 0.14,
-      "id_override": "conform_theater_premodern"
+      "time_point": 3,
+      "value": 0.48
     },
     {
       "metric": "theater_ratio",
-      "time_point": 100,
-      "value": 0.15,
-      "id_override": "conform_theater_modern"
+      "time_point": 6,
+      "value": 0.55
     },
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.1,
-      "id_override": "conform_extract_ancestral"
+      "value": 0.28
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 50,
-      "value": 0.11,
-      "id_override": "conform_extract_premodern"
+      "time_point": 3,
+      "value": 0.33
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 100,
-      "value": 0.12,
-      "id_override": "conform_extract_modern"
+      "time_point": 6,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.59
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.62
     }
   ],
   "interval": {
     "start": 0,
-    "end": 100
+    "end": 6
   },
   "commentary": {
-    "narrative_context": "The social conformity infrastructure represents the cognitive and social mechanisms by which individuals adopt group beliefs with minimal conscious deliberation. This constraint is a candidate natural law \u2014 a structural feature of human social cognition rather than a contingent institutional arrangement. The infrastructure manifests in Asch-type conformity experiments (individuals adopt obviously incorrect group judgments), opinion clustering in social networks (beliefs correlate more strongly with social ties than with evidence), and the speed differential between belief adoption and belief examination (people accept group positions faster than they could independently verify them). The key structural question is whether this infrastructure is an immutable feature of human psychology (mountain from all perspectives) or whether it contains extractive components that could be reduced through institutional design, education, or technological intervention. The measurements show minimal drift over civilizational timescales, suggesting deep structural stability.",
+    "narrative_context": "The social conformity infrastructure represents the cognitive and social mechanisms by which individuals adopt group beliefs, norms, and behaviors with minimal conscious deliberation. This constraint is a candidate false-summit natural law — presented as an inevitable feature of human cognition but actually serving identifiable institutional interests. The infrastructure manifests in Asch-type conformity experiments (individuals publicly adopt obviously incorrect group judgments), opinion clustering in social networks (beliefs correlate more strongly within groups than predicted by independent evaluation), institutional loyalty effects (individuals defend group positions despite contrary evidence), and epistemic deference to group consensus. The constraint exemplifies the DR framework's capacity to model the same structural phenomenon as mountain (natural law), rope (coordination), scaffold (temporary problem), piton (degraded institution), tangled rope (mixed coordination/extraction), and snare (pure extraction) from different perspectives. The trajectory shows theater ratio rising from 0.35 to 0.55 (conformity becoming more performative, less functionally necessary) and suppression increasing from 0.55 to 0.62 (enforcement mechanisms strengthening even as functional necessity declines). This pattern is diagnostic of a piton transitioning toward snare — institutional actors maintaining conformity infrastructure through narrative and enforcement rather than genuine coordination benefit.",
     "key_agents": [
-      "Unreflective Conformer: Powerless/trapped \u2014 operates within conformity infrastructure without conscious awareness; experiences it as natural feature of social reality",
-      "Reflective Individual: Moderate/constrained \u2014 aware of conformity pressure but recognizes it as coordination mechanism; can resist specific instances but not general phenomenon",
-      "Counter-Cultural Movement: Organized/mobile \u2014 attempts to exit mainstream conformity but discovers alternative conformity structures; demonstrates infrastructure invariance",
-      "Educational Institution: Institutional/arbitrage \u2014 benefits from efficient belief transmission but recognizes double-edged nature; sees coordination function rather than extraction",
-      "Cognitive Scientist: Analytical/analytical \u2014 identifies evolutionary and neurological basis; measures infrastructure as emergent property of social learning architecture",
-      "Intellectual Contrarian: Powerful/mobile \u2014 high-agency resistance reveals that contrarian beliefs cluster with same efficiency as conventional ones; infrastructure is substrate-neutral"
+      "Individual Epistemic Agent: Primary victim (powerless/identity_locked) — identity constituted through group membership; structurally mobile but identity-locked to conformity. Bears full suppression cost.",
+      "Minority Belief Holder: Secondary victim (moderate/constrained) — faces social cost of dissent; benefits from coordination during alignment. Generational-scale adaptation possible.",
+      "Community Coordinator: Organized beneficiary (organized/mobile) — experiences conformity as coordination mechanism enabling rapid collective action. Has agency over norm-setting.",
+      "Deliberative Institution: Secondary beneficiary (institutional/arbitrage) — designing explicit epistemic norms and structured disagreement protocols to reduce conformity dependence. Sunset trajectory embedded.",
+      "Folk Psychology / Institutional Memory: Extractive beneficiary (institutional/arbitrage) — maintains conformity narratives ('unity,' 'group loyalty') through theater to justify hierarchy and discourage dissent.",
+      "Neurocognitive Observer: Analytical observer (analytical/analytical) — risks naturalizing learned conformity behavior as innate cognitive architecture, enabling false-summit claim."
     ],
-    "logic_rationale": "Extractiveness (0.12): Very low. The conformity infrastructure primarily serves coordination function \u2014 groups with shared beliefs can act collectively without constant negotiation. The small extractive component reflects cases where belief adoption bypasses individual judgment in domains where independent verification would be valuable (scientific claims, policy positions, moral judgments). But most conformity serves genuine efficiency: adopting group traffic norms, language conventions, and social protocols without independent derivation is coordination, not extraction. Suppression (0.03): Minimal. Individuals can resist specific conformity pressures with effort, and organized groups can create alternative belief clusters. The infrastructure does not suppress alternatives \u2014 it makes shared beliefs cognitively cheaper than independent ones, which is a coordination mechanism. Accessibility collapse (0.92): Very high. The conformity infrastructure is accessible to all social animals with theory of mind. No special training, resources, or institutional position required \u2014 the mechanism operates automatically in social contexts. Resistance (0.08): Very low. Attempts to eliminate conformity infrastructure (radical individualist movements, rationalist training programs) consistently fail to prevent belief clustering. The infrastructure persists across cultures, historical periods, and deliberate resistance efforts. Theater ratio (0.15): Very low. The conformity infrastructure is functional, not performative. Belief adoption via social learning genuinely enables coordination. The small theatrical component reflects cases where individuals perform agreement without genuine belief adoption (preference falsification), but this is a minority of conformity instances.",
-    "directionality_logic": "All perspectives derive low directionality values because the conformity infrastructure is primarily a coordination mechanism rather than an extraction mechanism. Educational institutions and social coordination systems are listed as beneficiaries because they gain efficiency from shared belief structures, but this benefit does not come at the expense of victims \u2014 it is a positive-sum coordination gain. No victims are declared because the infrastructure does not systematically extract from any agent class. Individual cases of harmful conformity (adopting false beliefs, suppressing dissent) exist, but they are failure modes of a generally beneficial coordination mechanism, not structural extraction. The analytical perspective computes the lowest effective extraction because it sees the full evolutionary and neurological basis \u2014 the infrastructure is optimized for rapid social learning, which is net beneficial despite occasional costs.",
-    "perspectival_gap": "This constraint exhibits minimal perspectival gap \u2014 all six perspectives classify as mountain, which is the diagnostic signature of a genuine natural law. The unreflective conformer experiences conformity as unchangeable because they lack awareness of the mechanism. The reflective individual experiences it as unchangeable despite awareness because resistance is costly and only partially effective. The counter-cultural movement experiences it as unchangeable because alternative belief clusters form with the same efficiency as mainstream ones. The educational institution experiences it as unchangeable because the same cognitive architecture that enables teaching also enables conformity. The cognitive scientist measures it as unchangeable because it is rooted in evolutionary and neurological constraints. The intellectual contrarian experiences it as unchangeable because even deliberate non-conformity operates within the same infrastructure. The uniformity across perspectives, combined with high accessibility collapse and low resistance, confirms mountain classification. The constraint passes the natural law certification: emerges naturally (true), accessibility collapse \u2265 0.85 (0.92), resistance \u2264 0.15 (0.08), extractiveness \u2264 0.25 (0.12), suppression \u2264 0.05 (0.03).",
-    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating that not all social influence mechanisms are extractive. The conformity infrastructure could be misclassified as a snare if one focused only on cases where individuals adopt false beliefs against their interests. But the structural data reveals that the infrastructure is primarily a coordination mechanism: the cognitive efficiency of belief-sharing enables collective action, knowledge transmission, and social learning. The small extractive component (\u03b5 = 0.12) reflects genuine costs \u2014 cases where conformity bypasses valuable independent judgment \u2014 but these costs are outweighed by coordination benefits across most domains. The mountain classification from all perspectives indicates that the infrastructure is not a contingent institutional arrangement that could be redesigned for lower extraction, but rather an emergent property of human social cognition. Attempts to eliminate conformity (radical individualism, rationalist training) consistently fail because the infrastructure serves essential coordination functions. The mandatrophy resolution: social conformity infrastructure is a mountain (natural law of social cognition), not a snare (extractive mechanism), because its primary function is coordination and its extractive component is minimal and structurally unavoidable given current human cognitive architecture."
+    "logic_rationale": "Extractiveness (0.38): Moderate. The conformity infrastructure extracts epistemic autonomy from conformists while coordinating group action — genuine coordination function exists (individuals do align efficiently without constant negotiation) alongside asymmetric extraction (some agents bear disproportionate cost of suppressed autonomy, others benefit from coordination without paying costs). The modest extractiveness reflects that the constraint does coordinate genuine group needs, not purely extract. Suppression (0.62): Moderate-high. Significant barriers to epistemic independence include social disapproval, reputational cost, resource access contingent on conformity, identity fusion making exit unthinkable, institutional penalties for dissent. But suppression is not total — some agents do sustain dissent; institutional actors are explicitly working to reduce conformity dependence. Theater ratio (0.55): Moderate-high and rising. The conformity infrastructure increasingly operates through narrative (motivational speeches about 'unity,' institutional identity narratives) rather than genuine coordination necessity. Rising theater indicates institutional actors sustaining conformity through performance despite declining functional necessity. This trajectory is diagnostic of piton behavior — a degraded coordination mechanism maintained by institutional inertia and extractive interest.",
+    "perspectival_gap": "The fundamental perspectival gap lies between the identity-locked conformist's experience (snare: pure extraction, no exit, no benefit) and the organized coordinator's experience (rope: genuine coordination with agency). The conformist perceives the constraint as inevitable and identity-constituting; the coordinator perceives it as a useful coordination tool. The analytical observer risks synthesizing these into a false mountain (natural law of cognition) when the structural data reveals a contingent, institutionally maintained tangled rope. The beneficiary (institutional actors maintaining conformity narratives) perceives rope or even rope with benefits; the victim perceives snare. The deliberative institution perceives the entire constraint as a problem being solved (scaffold) — explicit epistemic norms, structured disagreement, and diversity-building are creating alternative coordination pathways. The folk-psychology institutional actor perceives degraded but necessary ritual (piton) — conformity is maintained through performance and narrative investment, not because it's functionally necessary.",
+    "directionality_logic": "Each perspective's directionality value is determined by the agent's structural position relative to the extraction flow. The identity-locked conformist is a victim with no exit (trapped exit, high d); the organized coordinator is a beneficiary with mobile options (high exit agency, low d). The institutional actors maintaining conformity narratives are beneficiaries with arbitrage options (very low d, negative effective extraction). The analytical observer has analytical context (canonical d ≈ 0.73). The minority belief holder is a victim with constrained exit (high d but below trapped). The directional flow is primarily from individual epistemic agents toward institutional actors and community coordinators. The computation of effective extractiveness (chi) scales base extractiveness by these directionality values and scope modifiers — a powerless conformist at global scope experiences higher chi than an institutional coordinator at local scope, even with identical base extractiveness.",
+    "mandatrophy_analysis": "The tangled_rope classification resolves the mandatrophy by specifying what coordination function the conformity infrastructure genuinely provides (rapid alignment without continuous negotiation, efficient group action on shared goals) versus what extraction occurs (suppression of minority belief, epistemic autonomy cost, institutional capture of norm-setting). The constraint genuinely coordinates group behavior AND asymmetrically extracts from identity-locked agents who bear suppression costs without receiving coordination benefits. The false-summit risk comes from the mountain perspective's claim that conformity is natural law — but the presence of identified beneficiaries (institutional norm-maintainers, organized coordinators), victims (epistemic agents, minority belief holders), and rising theater ratio all indicate institutionally maintained extraction, not natural law. The deliberative-institution perspective (scaffold) shows that conformity dependence is reducible — explicit epistemic norms, structured disagreement protocols, and institutional commitment to diversity are building alternative coordination mechanisms with lower conformity cost."
   },
   "boltzmann": {
-    "coordination_type": "information_standard",
-    "boltzmann_floor_override": 0.1
+    "coordination_type": "identity_coordination"
   },
   "network": {
-    "affects_constraints": [],
-    "dual_formulation_note": "This constraint is formulated at the level of general cognitive infrastructure. Specific instances of harmful conformity (cult dynamics, groupthink in organizations, political polarization) should be modeled as separate constraints with higher extractiveness values. Those constraints exploit the conformity infrastructure but are not identical to it. The infrastructure itself is the substrate; specific exploitative uses are distinct constraint stories that should reference this one via network.affects_constraints."
+    "affects_constraints": [
+      "belief_clustering_filter_bubbles",
+      "institutional_epistemic_closure",
+      "dissent_suppression_mechanisms"
+    ],
+    "dual_formulation_note": "The conformity infrastructure decomposes into structurally distinct constraints: conformity pressure in genuine coordination-requiring tasks versus conformity enforcement in coordination-unnecessary domains. The infrastructure's coordination function (enabling rapid collective action) is real but eroding (rising theater ratio). The extraction component (suppression of epistemic autonomy) is growing. These should be separately tracked as conformity-for-coordination (lower extractiveness) and conformity-for-compliance (higher extractiveness) stories if empirical data supports decomposition."
   },
-  "directionality_overrides": []
+  "directionality_overrides": [
+    {
+      "power_atom": "analytical",
+      "d_value": 0.72
+    }
+  ]
 }

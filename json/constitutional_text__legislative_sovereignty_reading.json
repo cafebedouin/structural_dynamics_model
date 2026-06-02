@@ -1,0 +1,246 @@
+{
+  "header": {
+    "constraint_id": "constitutional_text__legislative_sovereignty_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "constlegislsov",
+    "module_name_override": "constraint_constitutional_text__legislative_sovereignty_reading",
+    "story_uid": "c7ec9dc1-a4d1-4669-b66e-b752b3963677"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Constitutional Text—Legislative Sovereignty Reading",
+    "topic_domain": "constitutional_law/political_philosophy",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "majoritarian_coalition",
+      "legislative_authority"
+    ],
+    "victims": [
+      "minority_rights_protection",
+      "constitutional_rigidity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "Minority Rights Bearer",
+      "comment": "PERSPECTIVE 1: MINORITY RIGHTS BEARER (SNARE) — Structurally trapped by majoritarian override power. Legislative supremacy via notwithstanding clauses creates a trap: constitutional protections exist only at majoritarian sufferance. Cannot exit national legal framework; bears full extraction risk when majorities change. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Constitutional Court / Judicial Branch",
+      "comment": "PERSPECTIVE 2: JUDICIAL BRANCH (TANGLED ROPE) — Constrained by legislative override power but also benefits from coordinating constitutional meaning through advisory function. Courts preserve institutional prestige and interpretive influence (even if non-binding) while facing real suppression: their constitutional readings can be overridden at will. Mixed experience of coordination (judicial role in meaning-making) and extraction (powerlessness to bind outcomes)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Majoritarian Legislative Coalition",
+      "comment": "PERSPECTIVE 3: MAJORITARIAN LEGISLATIVE COALITION (ROPE) — Benefits from coordination function: legislative supremacy enables stable governance without deadlock via rigorous constitutional amendment procedures. No suppression experienced; full agency and exit options (can amend constitution, override courts, rewrite laws). Net beneficiary. Pure coordination from this perspective."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Parliamentary Tradition and Institutional Memory",
+      "comment": "PERSPECTIVE 4: PARLIAMENTARY TRADITION (PITON) — The supremacy doctrine persists through institutional and rhetorical commitment to parliamentary sovereignty, but the functional role has degraded: in practice, courts exercise substantial interpretive power despite formal subordination; legislatures often defer to judicial reasoning; constitutional override powers exist but are rarely invoked. The supremacy theater is maintained through formal doctrine while actual power has shifted. Theater ratio high; extractiveness lower than the formal rule suggests."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Constitutional Text as Stabilizing Kernel",
+      "comment": "PERSPECTIVE 5: CONSTITUTIONAL TEXT AS STABILIZING KERNEL (TANGLED ROPE) — From the perspective of the constitutional text itself as a coordination object: the text provides genuine coordination function (shared reference for legitimacy, dispute resolution framework) but is simultaneously undermined by the legislative override power embedded within it. The supremacy clause guarantees legislative extraction from the text's authority. Coordination + extraction hybrid."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer—Natural Law of Governance",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) — From a civilizational perspective, legislative supremacy in constitutional meaning may appear as a natural law: any living legal system must ultimately trace authority to a sovereign body that can enforce its interpretations; courts cannot bind a legislature without that legislature's consent; therefore supremacy must rest with the branch that controls enforcement. But this classification is a false summit — it naturalizes a choice about sovereignty location, not a law of nature."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "legislative_override_frequency_threshold",
+      "question": "How frequently must override powers be invoked for legislative supremacy to be structurally real rather than theoretically dormant?",
+      "resolution_mechanism": "Historical analysis of actual override/notwithstanding invocations vs. total years of constitutional operation; correlation between threat of override and judicial deference patterns",
+      "impact": "High invocation (>1% annually): supremacy is active extraction mechanism (Snare confirmed). Low invocation (<0.1% annually): supremacy is latent threat that shapes behavior through deterrence rather than extraction (classification shifts toward Rope). Dormancy (<0.01% annually): supremacy becomes purely formal; actual coordination via mutual deference (Rope or Mountain).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Frequency of legislative override invocation determining structural reality of supremacy"
+    },
+    {
+      "id": "judicial_deference_causality",
+      "question": "Does judicial deference to legislative judgment arise from formal subordination (supremacy doctrine) or from independent institutional roles and expertise deference?",
+      "resolution_mechanism": "Comparative analysis across jurisdictions: systems with formal legislative supremacy vs. systems with explicit judicial co-equality; correlation between doctrinal supremacy claims and actual judicial behavior; analysis of judicial opinions citing supremacy doctrine vs. those grounding deference in institutional role differentiation",
+      "impact": "If deference is caused by supremacy doctrine: removing the doctrine would shift power (validates extraction reading). If deference is caused by role differentiation: supremacy doctrine is ornamental (validates piton/mountain reading). If both mechanisms operate: decompose into separate constraints (ε-invariance principle).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether judicial deference is caused by supremacy doctrine or institutional role distinction"
+    },
+    {
+      "id": "reading_foreclosure_status",
+      "question": "Does legislative supremacy reading logically foreclose the judicial supremacy reading within a single constitutional framework, or can both coexist as different institutional readings?",
+      "resolution_mechanism": "Logical analysis of core premises: if legislative supremacy is defined as 'legislature has final say on meaning,' does that exclude 'courts have final say'? Or can both readings hold simultaneously as empirical claims about who actually decides in practice? Historical analysis of jurisdictions attempting both readings (Canada, UK).",
+      "impact": "If forecloses: the readings are competitors for a single authoritative position (rare—validates forecloses relation). If coexist: the readings partition institutional domains (validates coexists_with). If both are partial descriptions: decompose into observational constraints for each domain.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether legislative supremacy logically forecloses judicial supremacy reading"
+    },
+    {
+      "id": "constitutional_amendment_constraint_interaction",
+      "question": "If rigorous amendment procedures exist, do they constitute a separate constraint (constitutional amendment as Rope or Scaffold) or are they embedded within the legislative supremacy constraint?",
+      "resolution_mechanism": "Analysis of amendment procedure invocation rates, success rates, and institutional barriers relative to override procedures. If amendment procedures function as a stabilizing alternative to override (creating exit option for constitutional change), decompose into separate constraint.",
+      "impact": "If decomposed: legislative supremacy extractiveness may be lower (exit via amendment reduces suppression). If embedded: amendment procedures are part of the supremacy mechanism (unchanged extractiveness). Affects victim group definition (constitutional stability actors become beneficiaries if amendment is an exit option).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether amendment procedures constitute separate constraint or component of supremacy mechanism"
+    },
+    {
+      "id": "practical_power_distribution_vs_formal_doctrine",
+      "question": "In practice, do courts or legislatures exercise greater power over constitutional meaning in this jurisdiction?",
+      "resolution_mechanism": "Empirical analysis of outcomes: track cases where court interpretation was followed vs. overridden; track legislative attempts to override vs. acquiescence to judicial reasoning; measure compliance rates; analyze public justification patterns (does legislature cite its power or defer to court reasoning?)",
+      "impact": "If courts dominate in practice: formal supremacy doctrine is false summit (mountain perspective); actual constraint is judicial influence dressed as legislative supremacy (classification should shift per jurisdiction). If legislatures dominate: doctrine matches reality (validates supremacy reading). If balanced: neither supremacy nor court dominance applies; constraint is truly hybrid (validates tangled_rope across perspectives).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Empirical power distribution between courts and legislature over constitutional meaning"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.6
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.63
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.65
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The legislative sovereignty reading treats constitutional text as a kernel whose meaning is ultimately determined by parliamentary will, constrained only by the text's letter and subject to override through notwithstanding clauses, simple legislative majorities, or constitutional amendment procedures that require only parliamentary supermajority. This reading instantiates one corner of a contested constitutional space: other readings locate final authority in courts (judicial supremacy) or in 'the people' (popular sovereignty). The legislative sovereignty reading is prominent in Westminster traditions (UK, Canada, Australia) and in parliamentary constitutional systems generally. It grounds legitimacy in the principle that an elected body accountable to voters should have final say on constitutional meaning rather than an appointed judiciary. The constraint exhibits the signature of a tangled rope: genuine coordination function (the reading provides a framework for stable, predictable constitutional interpretation rooted in democratic accountability) combined with asymmetric extraction (minorities cannot exit; legislative majorities can override protections at will). The measurements show a modest upward drift in both theater ratio and extractiveness over the 20-year interval, reflecting judicial power increasing in practice while supremacy doctrine persists in form—a piton signature embedded within the tangled rope.",
+    "key_agents": [
+      "Majoritarian Legislative Coalition: Primary beneficiary (organized/arbitrage) — captures ultimate authority over constitutional meaning; exercises full agency",
+      "Minority Rights Bearer: Primary victim (powerless/trapped) — protected only at majoritarian sufferance; cannot exit national legal framework",
+      "Judicial Branch: Secondary actor (institutional/constrained) — constrained by override power but benefits from coordinating constitutional interpretation",
+      "Constitutional Text as Stabilizing Kernel: Structural actor (institutional/constrained) — provides coordination function but is simultaneously subordinated by supremacy principle",
+      "Parliamentary Tradition and Institutional Memory: Institutional inertia (institutional/arbitrage) — maintains supremacy theater despite practical power shifts"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The legislative supremacy reading centralizes authority in a majoritarian body without rigorous amendment procedures to bind future legislatures. This creates substantial extraction risk for minorities: their constitutional protections depend on majoritarian sufferance and can be overridden through ordinary legislative procedures (notwithstanding clauses) or ordinary-level constitutional amendments (in some jurisdictions). However, extractiveness is not maximal (0.72+) because: (a) coordination function is genuine—the reading provides a clear framework for stable governance without gridlock; (b) override powers, while real, are not costless—legislative action is visible and subject to electoral consequence; (c) some jurisdictions pair supremacy with procedural protections (supermajority requirements, referenda) that raise the cost of override. Suppression (0.65): Moderate-high. Minorities face strong suppression: they cannot exit the legal system, cannot block majoritarian will through judicial challenge (courts are advisory only), and cannot prevent constitutional override through formal procedures. However, suppression is not total (0.85+) because: (a) electoral mechanisms provide some voice (minorities can campaign for different majorities); (b) minority coalitions can sometimes block supermajorities in legislatures; (c) procedural visibility creates political cost to override. Theater ratio (0.48): Moderate-low. The legislative supremacy reading has relatively low theater compared to other constitutional doctrines—formal and practical authority largely align. Where theater rises (from 0.35 to 0.48 over the interval) is in the gap between the supremacy doctrine and actual judicial power: courts exercise substantial interpretive influence while the doctrine formally subordinates them. This gap is the piton signature.",
+    "perspectival_gap": "This constraint exhibits a profound perspectival gap between the majoritarian legislative coalition (Rope—pure coordination) and the minority rights bearer (Snare—pure extraction). Both perspectives read the same constitutional text, the same institutional arrangement, but experience opposite extractions. The legislative coalition experiences the supremacy reading as enabling stable, accountable governance: the text coordinates expectations, courts provide useful interpretation, legislatures retain final authority (which they rarely need to invoke). The minority rights bearer experiences the same arrangement as a trap: constitutional protections are legally hollow because they can be overridden at will. The gap is not empirical disagreement but structural difference in exit options and power—the minority has neither. The judicial branch occupies the middle (tangled rope): constrained by supremacy doctrine but also benefiting from interpretive role. The parliamentary tradition perspective (piton) reveals that the gap between doctrine and practice has widened over time—courts now exercise substantial power that supremacy formally denies them, yet the doctrine persists because legislatures have not invoked overrides frequently enough to make the subordination salient.",
+    "directionality_logic": "Legislative supremacy locates all constitutional authority in the elected body. The derivation chain produces: Majoritarian Coalition = beneficiary + arbitrage exit → d≈0.10 → f(d)≈-0.05 → effective extraction negative (coordination benefit). Minority Rights Bearer = victim + trapped exit → d≈0.95 → f(d)≈1.42 → maximum effective extraction. Judicial Branch = constrained exit + split role (partially victim of supremacy, partially beneficiary of interpretive role) → d≈0.55 → f(d)≈0.75 → moderate extraction. Constitutional Text = victim of subordination + constrained role → d≈0.65 → f(d)≈1.00 → moderate extraction. Parliamentary Tradition = beneficiary via doctrinal continuity + arbitrage exit → d≈0.20 → f(d)≈0.02 → near-zero effective extraction. Analytical Observer = analytical exit → canonical d≈0.73 → f(d)≈1.15 → moderate effective extraction (sees both coordination and extraction). The overrides are positioned at the constraints declared in base_properties: majoritarian_coalition and legislative_authority as beneficiaries (they derive positive from the reading); minority_rights_protection and constitutional_rigidity as victims (they derive extraction from the reading's subordination logic).",
+    "kernel_context": "This constraint is one reading of the contested kernel 'constitutional_text' (kernel_id: constitutional_text). The reading instantiates LEGISLATIVE_SOVEREIGNTY_READING. Sibling readings include JUDICIAL_SUPREMACY_READING (courts have final say on constitutional meaning, legislatures must obey judicial interpretation) and POPULAR_SOVEREIGNTY_READING (constitutional meaning is ultimately determined by popular will, expressed through referenda or constituent assemblies, neither legislature nor courts are supreme). The three readings partition the constitutional authority space: where should final interpretive power rest? These are not mere empirical differences about who actually decides; they are normative claims about who *should* decide. The readings coexist in practice: Canada holds both legislative supremacy (notwithstanding clause recognizes parliamentary will) and judicial supremacy (courts have struck down legislation, especially on rights). The UK holds legislative supremacy formally but courts exercise growing power. Switzerland holds popular sovereignty (referenda override any authority). The three readings are live competitors in constitutional design debates; none has eliminated the others.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy through kernel decomposition. A single natural-language concept ('constitutionalism,' 'the rule of law,' 'constitutional constraint on power') decomposes into three structurally distinct constraints: legislative supremacy (ε=0.58), judicial supremacy (ε would differ, likely ≤0.40 with beneficiary shift to judicial institution), and popular sovereignty (ε would differ again). The mandate is not 'which reading is correct'—all three are live in current constitutional practice—but 'which structural claim are you making about authority location?' This reading makes the claim that elected legislatures should have final say on constitutional meaning, which generates a snare for minorities, coordination for legislators, and extraction for minority protections. No single type resolves mandatrophy; the presheaf of readings over the constitutional kernel does."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "constitutional_text__judicial_supremacy_reading",
+      "constitutional_text__popular_sovereignty_reading",
+      "notwithstanding_clause_invocation_mechanism",
+      "constitutional_amendment_rigidity"
+    ],
+    "dual_formulation_note": "The legislative sovereignty reading is one of three structurally distinct constraints derived from the kernel 'constitutional_text'. Each reading locates final authority in a different branch or body (legislature, court, people). The three readings have different ε values, different beneficiary/victim structures, and different extractiveness characteristics. They are linked by network.affects_constraints to signal their common kernel and mutual structural influence: a shift from legislative to judicial supremacy changes who benefits and who bears extraction costs."
+  },
+  "directionality_overrides": [],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "parliamentary_sovereignty_tradition",
+    "drift_state": {
+      "moment": "contemporary_judicial_influence_era",
+      "direction": "authority_erosion",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "constitutional_text__judicial_supremacy_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "constitutional_text__popular_sovereignty_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "elected_bodies_final_constitutional_authority",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "judicial_review_advisory_not_binding",
+        "role": "foundational",
+        "status": "overridden",
+        "grounding_type": "conventional"
+      }
+    ]
+  }
+}

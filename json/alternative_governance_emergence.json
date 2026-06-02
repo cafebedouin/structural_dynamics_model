@@ -2,24 +2,26 @@
   "header": {
     "constraint_id": "alternative_governance_emergence",
     "version": "1.0",
-    "generated_date": "2026-02-26",
-    "status": "ACTIVE"
+    "generated_date": "2026-02-27",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "altgov",
+    "story_uid": "6dd12730-a41f-49a7-be30-b38cc9b28dd0"
   },
   "base_properties": {
     "extractiveness": 0.52,
-    "suppression": 0.65,
-    "theater_ratio": 0.58,
+    "suppression": 0.58,
+    "theater_ratio": 0.64,
     "claimed_type": "tangled_rope",
     "human_readable": "Alternative Governance Emergence Constraint",
     "topic_domain": "political/institutional/governance",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "incumbent_institutional_actors",
-      "coordinating_networks"
+      "incumbent_state_institutions",
+      "alternative_governance_platforms"
     ],
     "victims": [
-      "alternative_governance_participants",
-      "horizontal_coordination_capacity"
+      "participatory_legitimacy",
+      "coordination_commons"
     ]
   },
   "perspectives": [
@@ -28,9 +30,9 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "global",
-      "label": "Grassroots Alternative Governance Participant",
-      "comment": "PERSPECTIVE 1: GRASSROOTS PARTICIPANT (SNARE) \u2014 Participates in alternative governance structures (mutual aid networks, consensus-based communities, parallel institutions) but faces escalating barriers: legal prohibition, funding cutoff, media delegitimization, and social isolation. Cannot exit without losing access to alternative coordination entirely. Maximum extraction as the participant bears full cost of institutional hostility while receiving minimal external support."
+      "spatial_scope": "local",
+      "label": "The Participatory Commons",
+      "comment": "PERSPECTIVE 1: PARTICIPATORY COMMONS (SNARE) — Local actors who depend on coordination mechanisms for survival (mutual aid networks, community resource distribution) face high suppression through licensing requirements, permitting barriers, and legal harassment. No legitimate exit exists; the commons bears extraction costs without benefit. Incumbents extract legitimacy from alternative mechanisms without sharing power."
     },
     {
       "classification_type": "tangled_rope",
@@ -38,8 +40,8 @@
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "regional",
-      "label": "Local Alternative Governance Network",
-      "comment": "PERSPECTIVE 2: LOCAL ALTERNATIVE NETWORK (TANGLED ROPE) \u2014 Provides genuine coordination function (mutual aid, resource sharing, conflict resolution) while simultaneously extracting commitments from participants (time, labor, ideological alignment, reduced geographic mobility). Constrained exit: leaving the network means losing coordination benefits but also risks social sanction. Mixed coordination-extraction hybrid."
+      "label": "The Grassroots Network",
+      "comment": "PERSPECTIVE 2: GRASSROOTS ALTERNATIVE GOVERNANCE (TANGLED ROPE) — Community organizations and networks experience mixed coordination and extraction. The constraint provides coordination function (enables information flow, resource sharing, collective decision-making) but with asymmetric burden: grassroots actors contribute labor and legitimacy; incumbents extract institutional validation and political cover. Exit is costly (loss of coordination benefits, social isolation) but possible through formalization or merger with state structures."
     },
     {
       "classification_type": "rope",
@@ -47,26 +49,35 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "national",
-      "label": "Incumbent State/Corporate Institutions",
-      "comment": "PERSPECTIVE 3: INCUMBENT INSTITUTIONS (ROPE) \u2014 Experience alternative governance emergence as a pure coordination problem to be managed through selective incorporation, cooption, or suppression. Maintain arbitrage options: can selectively adopt alternative governance rhetoric (participatory budgeting, stakeholder engagement) while maintaining control. Net beneficiary through ability to adopt preferred coordination mechanisms while suppressing genuine alternatives."
+      "label": "The State Incorporation Apparatus",
+      "comment": "PERSPECTIVE 3: STATE INCORPORATION APPARATUS (ROPE) — State institutions and regulatory bodies experience the constraint primarily as coordination: legitimacy transfer from alternative mechanisms enhances state capacity, co-option of leaders distributes governance burden downward, formal recognition converts political threats into managed subsidiaries. Extraction is hidden within coordination framing. State actors have maximum arbitrage optionality — they can incorporate, regulate, or suppress."
     },
     {
-      "classification_type": "piton",
+      "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "continental",
-      "label": "Legacy NGO and Civil Society Institutions",
-      "comment": "PERSPECTIVE 4: LEGACY NGO SECTOR (PITON) \u2014 Previously served coordination function between states and citizens (advocacy, service delivery, representation). Now largely theatrical: maintains appearance of alternative voice while materially dependent on state and corporate funding. Theater ratio high: performative radicalism in messaging while operational conservatism in practice. Constrained by funding dependencies despite nominal independence."
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Open-Source Governance Platform",
+      "comment": "PERSPECTIVE 4: OPEN-SOURCE GOVERNANCE PLATFORM (ROPE) — Decentralized coordination platforms (blockchain governance, liquid democracy tools, distributed decision systems) experience the constraint as enabling coordination across jurisdictions. Extraction mechanism: platforms accumulate network effects and institutional legitimacy from users while remaining technically independent. Users perceive utility; platforms perceive governance capture and leverage leverage over adopters. Arbitrage optionality: platforms can pivot toward institutional partnerships, user fees, or protocol capture."
     },
     {
       "classification_type": "scaffold",
       "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Regulatory Reform Coalition",
+      "comment": "PERSPECTIVE 5: REGULATORY REFORM COALITION (SCAFFOLD) — Organized reformers (civil society coalitions, policy entrepreneurs, professional associations) perceive the constraint as a temporary institutional design problem with a sunset: legislative frameworks recognizing alternative governance (participatory budgeting statutes, cooperative legal structures, non-profit governance standards) are creating formal pathways that bypass suppression while legitimating coordination. Coalition sees 10-15 year timeline for normalization across advanced democracies. Theater is moderate because reform advocates must perform legitimacy work, but the sunset is visible."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Transnational Alternative Governance Coalition",
-      "comment": "PERSPECTIVE 5: TRANSNATIONAL COALITION (SCAFFOLD) \u2014 Organized networks (open-source governance protocols, decentralized coordination platforms, global mutual aid networks) building scalable alternatives with explicit sunset logic: as technologies and norms mature, parallel institutions become default rather than alternative. Constrained by resource scarcity and surveillance, but coalition has agency and visible exit pathway. Theater moderate: genuine experimentation documented and shared publicly."
+      "label": "The International Governance Norm",
+      "comment": "PERSPECTIVE 6: INTERNATIONAL GOVERNANCE NORM (PITON) — UN, OECD, World Bank, and regional multilateral bodies endorse participatory governance, alternative coordination, and civil society in formal declarations and development frameworks. The norm is substantially performative: actual authority remains concentrated in state structures; international endorsement provides cover for minimal implementation while legitimating incumbent power as 'inclusive.' The norm persists through inertia and institutional prestige despite low functional impact on state behavior."
     },
     {
       "classification_type": "mountain",
@@ -74,67 +85,91 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "Civilizational-Scale Analytical Observer",
-      "comment": "PERSPECTIVE 6: CIVILIZATIONAL OBSERVER (MOUNTAIN) \u2014 From universal perspective, some level of institutional hierarchy and centralized coordination is inherent to managing complexity at scale. Alternative governance structures at scale require coordination mechanisms that tend toward hierarchy; horizontal coordination remains hard-limited by cognitive and communication constraints. However, structural data contradicts this natural law framing \u2014 the extraction measured is contingent institutional choice, not physical law."
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From civilizational/universal scale, hierarchical state monopoly on legitimate coordination appears as an immutable structural feature of complex societies: large-scale coordination requires unified authority, enforcement capacity, and legitimacy concentration. Alternative mechanisms are seen as necessarily temporary, local, or supplementary — they cannot scale to the coordination demands of mass societies. However, the structural data contradicts this naturalization: the constraint's beneficiaries (state institutions, platforms) and victims (grassroots actors, participatory legitimacy) reveal contingent institutional arrangements masquerading as laws of organization."
     }
   ],
   "omegas": [
     {
-      "id": "scalability_vs_horizontality_tension",
-      "question": "Can truly horizontal governance maintain coordination quality at regional or larger scales, or does scale inevitably require specialization and hierarchy?",
-      "resolution_mechanism": "Long-term ethnographic study of successful large-scale alternative governance structures (bioregional networks, federated commons systems); measurement of decision quality and participant satisfaction versus traditional hierarchies at equivalent scale",
-      "impact": "If horizontal governance scales: alternative emergence is genuinely viable (extraction mechanisms are contingent, removable). If scale degrades horizontality: the mountain perspective contains truth (some hierarchization unavoidable), and alternative governance remains structurally limited to local contexts.",
-      "confidence": "low",
-      "type_class": "empirical",
-      "description": "Whether horizontal governance can scale without recreating hierarchy"
-    },
-    {
-      "id": "cooptation_vs_genuine_transformation",
-      "question": "When incumbent institutions adopt alternative governance language (participatory budgeting, stakeholder consultation), are they genuinely sharing power or performing transformation while maintaining control?",
-      "resolution_mechanism": "Comparative analysis of resource allocation decisions pre- and post-adoption; measurement of actual decision-making power held by alternative governance representatives; tracking of budget outcomes versus initial recommendations from participatory processes",
-      "impact": "If genuine power-sharing occurs: institutional adoption of alternatives is real transformation (Rope classification of incumbents is accurate). If only performative: incumbents remain net beneficiaries (rope with high theater, possible piton reclassification).",
+      "id": "scale_coordination_threshold",
+      "question": "What coordination scale threshold distinguishes genuinely scaling alternative governance from permanently local/supplementary mechanisms?",
+      "resolution_mechanism": "Historical analysis of successful non-state coordination at state and continental scales (EU subsidiarity, transnational climate networks, global open-source governance); identification of failure modes and sustainability patterns",
+      "impact": "If scaling beyond 10M agents is structurally possible: mountain classification is false summit (contingent institutional arrangement). If scaling fails at 1M agents: mountain perspective is structurally grounded in coordination physics.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether institutional adoption represents genuine power-sharing or cooptation"
+      "description": "Whether alternative governance can coordinate beyond local/regional scale"
     },
     {
-      "id": "suppression_mechanism_efficacy",
-      "question": "Do legal barriers, funding cutoffs, and delegitimization effectively constrain alternative governance emergence, or do they strengthen participant commitment through adversity?",
-      "resolution_mechanism": "Time-series analysis of alternative governance movement growth rates during periods of high versus low institutional suppression; measurement of participant retention and radicalization versus burnout and exit",
-      "impact": "If suppression constrains: extracted participants face material barriers (trapped/constrained exit accurate). If suppression strengthens: the suppression metric overestimates actual constraint, and identity_locked factors become primary binding mechanism.",
+      "id": "legitimacy_extraction_direction",
+      "question": "Does state incorporation of alternative governance mechanisms extract legitimacy FROM grassroots actors TO state institutions, or does it genuinely redistribute power and resources downward?",
+      "resolution_mechanism": "Longitudinal tracking of power distribution (decision-making authority, resource allocation, agenda-setting) before and after formal incorporation; comparison of outcomes for incorporated vs non-incorporated alternative networks",
+      "impact": "If extraction dominates: snare/tangled_rope classification confirmed; suppression is rational. If power genuinely distributes: rope classification for participants; state extraction is overstated.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Direction of legitimacy and power flow in state incorporation of alternatives"
+    },
+    {
+      "id": "platform_neutrality_sustainability",
+      "question": "Can decentralized governance platforms remain neutral infrastructure as they accumulate institutional power and user dependence, or do they inevitably extract institutional control?",
+      "resolution_mechanism": "Case studies of platform protocol capture (Ethereum, DAO governance, liquid democracy implementations); analysis of governance token concentration, decision-making concentration, and user exit costs over time",
+      "impact": "If platforms remain infrastructure: rope classification sustained; networks experience genuine coordination benefit. If platforms capture: platforms become snares for users; institutional benefits dominate.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether suppression constrains or strengthens alternative governance movements"
+      "description": "Whether governance platforms can sustain infrastructure neutrality"
     },
     {
-      "id": "identity_lock_depth_in_participants",
-      "question": "To what degree are alternative governance participants bound by identity fusion versus by material constraints and available alternatives?",
-      "resolution_mechanism": "Post-exit narrative analysis of former participants; measurement of perceived versus actual barriers; cognitive frame analysis of how participants describe their relationship to alternative structures",
-      "impact": "If high identity-lock: classification of powerless agents shifts from trapped to identity_locked (different structural diagnosis, different exit support implications). If low identity-lock: participants exit at high material cost, indicating structural traps rather than cognitive captures.",
+      "id": "suppression_mechanism_ambiguity",
+      "question": "Is measured suppression structural (legal barriers, enforcement capacity) or internalized (cultural normalization of state authority, delegitimization of alternatives)?",
+      "resolution_mechanism": "Post-suppression-removal trajectories: if suppression persists after legal/enforcement barriers are removed, reclassify as partially internalized. Cognitive captivity surveys of grassroots actors regarding alternative governance legitimacy.",
+      "impact": "If internalized: suppression acts as identity lock, and perspectival classifications remain stable. If structural: removal of barriers substantially changes experienced extractiveness and classifications.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Degree to which participants are bound by identity-fusion versus material constraints"
+      "description": "Structural vs internalized suppression mechanism"
     },
     {
-      "id": "network_interdependence_paradox",
-      "question": "Do alternative governance networks reduce participant dependence on incumbent institutions, or create new interdependencies (mutual aid creates dependence on the network, parallel institutions require material resource flows)?",
-      "resolution_mechanism": "Economic dependency mapping: measurement of participant self-sufficiency before/after network participation; tracking of resource flows within alternative networks; identification of critical resource bottlenecks",
-      "impact": "If true independence achieved: alternative governance delivers liberation (tangled rope resolves to genuine rope). If new interdependencies created: participants trade state/market dependence for network dependence, extraction persists in different form.",
-      "confidence": "low",
+      "id": "accountability_paradox",
+      "question": "Do alternative governance mechanisms provide superior accountability and responsiveness compared to state institutions, or do they simply relocate accountability burdens to participants?",
+      "resolution_mechanism": "Comparative measurement of decision reversibility, appeal mechanisms, participant exit costs, and outcome responsiveness across alternative networks vs state bureaucracies. Temporal analysis of decision quality and participant satisfaction.",
+      "impact": "If alternatives genuinely more accountable: snare classification overstates extraction; rope classification more accurate. If accountability burden shifted to participants: extraction mechanism confirmed; snare classification from powerless perspective is correct.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether alternative networks reduce or substitute participant dependence"
+      "description": "Whether alternatives provide superior accountability or relocate burdens"
+    },
+    {
+      "id": "sunset_clause_enforceability",
+      "question": "Are the regulatory reform pathways (participatory budgeting statutes, cooperative legal structures) creating genuine durable alternatives, or are they tokenistic accommodations that preserve state monopoly on legitimate coordination?",
+      "resolution_mechanism": "Longitudinal analysis of participatory budget implementation across cities; measurement of authority transfer (budget percentage, decision-making scope, reversibility); tracking of statute adoption and enforcement variation across jurisdictions",
+      "impact": "If reforms are durable with genuine authority transfer: scaffold classification confirmed, sunset is real (10-15 years for normalization). If reforms are tokenistic: scaffold classification is aspirational; state monopoly persists and suppression remains structural.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory reforms create durable alternatives or tokenistic accommodation"
     }
   ],
   "measurements": [
     {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.64
+    },
+    {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.32
+      "value": 0.38
     },
     {
       "metric": "base_extractiveness",
       "time_point": 5,
-      "value": 0.42
+      "value": 0.45
     },
     {
       "metric": "base_extractiveness",
@@ -142,65 +177,56 @@
       "value": 0.52
     },
     {
-      "metric": "theater_ratio",
+      "metric": "suppression_requirement",
       "time_point": 0,
-      "value": 0.38
+      "value": 0.52
     },
     {
-      "metric": "theater_ratio",
+      "metric": "suppression_requirement",
       "time_point": 5,
-      "value": 0.48
+      "value": 0.55
     },
     {
-      "metric": "theater_ratio",
+      "metric": "suppression_requirement",
       "time_point": 10,
       "value": 0.58
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 15,
-      "value": 0.48
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 15,
-      "value": 0.62
     }
   ],
   "interval": {
     "start": 0,
-    "end": 15
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "Alternative governance emergence represents structural tension between the proliferation of non-state coordination mechanisms and incumbent institutional responses that range from incorporation to suppression. This constraint operates across scales from local mutual aid networks to transnational open-source governance platforms, generating different classifications depending on observer position. The constraint exhibits genuine coordination function (solving problems incumbent institutions ignore or mismanage) layered with asymmetric extraction (participants bear surveillance, legal risk, resource scarcity while incumbents maintain control over state power and capital flows). Theater ratio increase (0.38\u21920.58) reflects growing performative adoption by incumbent institutions ('participatory governance' rhetoric) while actual power-sharing mechanisms remain limited. Extractiveness increase (0.32\u21920.52) indicates that as alternative governance movements grow, incumbent institutional hostility intensifies (legal barriers, funding pressure, surveillance), raising costs for participants. The constraint remains tangled rope rather than pure snare because genuine coordination function persists: alternative governance networks solve real coordination problems (resource distribution, conflict resolution, knowledge sharing) that incumbent institutions do not address effectively. The constraint remains tangled rope rather than scaffold because no credible sunset clause exists \u2014 incumbent institutions show no signs of deliberately transferring power to alternatives; instead, they oscillate between cooption and suppression.",
+    "narrative_context": "The alternative governance emergence constraint represents structural tension between the proliferation of non-state coordination mechanisms (mutual aid networks, open-source platforms, participatory budgeting, liquid democracy tools, decentralized autonomous organizations) and incumbent institutional responses that range from co-option to active suppression. This constraint exhibits the full range of Deferential Realism classifications from different observer positions, making it a key diagnostic exemplar. At local scale, grassroots actors experience pure extraction (Snare) — legal and political barriers suppress coordination without institutional benefit. At regional scale, alternative networks experience mixed coordination and extraction (Tangled Rope) — the mechanisms enable collective action but with asymmetric resource flows. State institutions experience the constraint primarily as coordination and legitimacy transfer (Rope) — incorporation of alternatives enhances state capacity without meaningful power distribution. Decentralized platforms experience enabling coordination with hidden extraction through network effects and institutional leverage (Rope). Organized reformers see a temporary problem with regulatory solutions (Scaffold) — new legal structures (cooperative statutes, participatory budgeting ordinances) are creating formal pathways for alternatives. International governance norms endorse participation while legitimating state monopoly (Piton) — the norm is performative. The civilizational analytical observer risks naturalizing contingent institutional arrangements as immutable limits on coordination scale (Mountain) — but structural decomposition reveals this as false summit. The constraint's theater_ratio (0.64) reflects substantial performative content: international endorsements of participatory governance coexist with minimal power transfer; legal incorporation of alternatives creates the appearance of pluralism while preserving state authority; platforms present themselves as neutral infrastructure while accumulating institutional control.",
     "key_agents": [
-      "Grassroots Alternative Governance Participants: Primary victims (powerless/trapped) \u2014 bear legal risk, surveillance, social isolation; cannot exit without losing coordination capacity",
-      "Local Alternative Governance Networks: Primary beneficiary of coordination function (moderate/constrained) \u2014 solve real coordination problems while creating participant dependence",
-      "Incumbent State and Corporate Institutions: Primary beneficiary of extraction capacity (institutional/arbitrage) \u2014 maintain control over state power, capital flows, and media narratives; can selectively adopt alternative governance language while suppressing genuine alternatives",
-      "Legacy NGO Sector: Institutional actor (institutional/constrained) \u2014 dependent on state and corporate funding despite nominal independence; increasingly theatrical in role as alternative networks become more radical",
-      "Transnational Alternative Governance Coalition: Organized secondary actor (organized/constrained) \u2014 building scalable alternatives; constrained by resource scarcity and surveillance but possesses strategic agency",
-      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional choices as inherent limits to human coordination capacity"
+      "Local Grassroots Networks: Primary victims (powerless/trapped) — mutual aid, community organizing, neighborhood coordination; experience suppression through licensing, permitting, legal harassment; bear full extraction costs",
+      "Regional Alternative Governance Movements: Secondary victims (moderate/constrained) — participatory budgeting initiatives, cooperative networks, local democracy experiments; experience mixed coordination and extraction; can exit through formalization or state merger but at high cost",
+      "State Institutions and Regulatory Bodies: Primary beneficiary (institutional/arbitrage) — extract legitimacy transfer, co-opt leaders, distribute governance burden downward; maintain ultimate authority while appearing inclusive; maximum optionality for incorporation, regulation, or suppression",
+      "Decentralized Governance Platforms: Secondary beneficiary (institutional/arbitrage) — accumulate institutional legitimacy and network effects from users; present as neutral infrastructure; extract control through protocol capture and token concentration",
+      "Regulatory Reform Coalition: Organized actors (organized/constrained) — civil society organizations, policy entrepreneurs, professional associations; perceive temporary institutional design problem with legislative solutions; constrained by reform timelines (10-15 years for normalization) and political feasibility",
+      "International Governance Norm Community: Institutional performative (institutional/arbitrage) — UN, OECD, World Bank, regional bodies; endorse participatory governance in declarations and frameworks; extract legitimacy for state structures through appearance of inclusivity; low functional impact on power distribution",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing state monopoly on legitimate coordination as immutable; risks missing contingent institutional arrangements that preserve hierarchy"
     ],
-    "logic_rationale": "Extractiveness (0.52): Moderate-high. Incumbent institutions extract through multiple mechanisms: capturing participants' labor through discourse of 'activism' without material reward, maintaining surveillance and legal harassment that increases participant costs, controlling access to scale through capital requirements and media gatekeeping, and selectively adopting alternative governance language while preventing genuine power-transfer. The extractiveness increased from 0.32 to 0.52 because institutional hostility intensified as alternative governance gained visibility. Suppression (0.65): High. Participants face material barriers: legal prohibition in many jurisdictions, funding cutoff (government and foundation grants conditional on serving incumbent purposes), social stigma through media delegitimization, surveillance (tracking participant networks), and geographic constraints (difficulty accessing alternative resources at scale). Theater ratio (0.58): Moderate-high. Growing performative adoption by incumbent institutions: participatory budgeting without real power-sharing, 'stakeholder engagement' processes that pre-determine outcomes, foundation funding for grassroots alternatives that require ideological alignment with funder preferences. Alternative governance networks themselves have lower theater ratio (genuine experimentation, transparent decision-making, publicly documented failures) but lower scale, while incumbent institutions have high theater ratio with dominant scale.",
-    "perspectival_gap": "Maximal divergence across all observer positions. Same structural phenomenon \u2014 the emergence of alternative governance mechanisms \u2014 classifies as snare to trapped powerless participants, tangled rope to moderate local networks, rope to institutional beneficiaries, piton to degraded legacy institutions, scaffold to organized transnational actors, and mountain to civilizational observers. The gap reveals how power position determines classification: high-power agents perceive low extraction; trapped agents perceive high extraction; organized agents perceive temporary problems; analytical observers risk naturalizing contingent arrangements as necessary laws.",
-    "directionality_logic": "Directionality (d) derives from structural power and relationship to extraction flow. Grassroots participants have d\u22480.95 (trapped victims with zero arbitrage options) producing high f(d)\u22481.42. Local networks have d\u22480.65 (mixed beneficiary/victim, constrained exit) producing moderate f(d)\u22481.00. Incumbent institutions have d\u22480.10 (beneficiaries with arbitrage options) producing negative f(d)\u2248-0.01. Transnational coalitions have d\u22480.45 (organized actors with constrained but real exit pathways) producing moderate f(d)\u22480.40. The directionality values reflect asymmetry: participants bear extraction costs without agency; incumbents extract while maintaining control options. No overrides needed \u2014 the structural derivation captures the power asymmetry directly.",
-    "mandatrophy_analysis": "This constraint resolves mandatrophy by clarifying which classification applies at which scale and to which observer. The mandatrophy question is: 'Is alternative governance emergence a coordination mechanism (rope/scaffold) that solves real problems, or an extraction mechanism (snare/tangled rope) that incumbent institutions exploit?' The answer: both are true from different positions. For powerless trapped participants, it is snare. For moderate constrained networks, it is tangled rope. For incumbent institutions, it is rope (they are solving their governance problem through selective adoption and suppression). For organized transnational actors, it is scaffold (they see a genuine exit pathway through technological maturity). The analytical observer risks mountain (naturalizing hierarchical necessity), but false summit detection catches this: extractive mechanisms are institutional choice, not physical law. The classification variance across perspectives is not a problem \u2014 it is the engine working correctly, revealing power asymmetry through perspectival divergence."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint involves substantial resource and authority asymmetry — state institutions and platforms benefit from legitimacy transfer and network effects while grassroots actors bear coordination costs and suppression burdens. However, the extraction is not maximal (0.70+) because genuine coordination benefits exist: alternative mechanisms do enable collective action, solve coordination problems, and create real value for participants. The beneficiaries include both extractive incumbents (state) and genuinely beneficial platforms, reducing average extraction magnitude. The measurement trajectory (0.38 → 0.52) reflects increasing extraction as state co-option mechanisms mature and platforms accumulate control. Suppression (0.58): Moderate-high. Significant barriers include legal restrictions on non-licensed coordination, permitting requirements for collective action, regulatory harassment of alternative platforms, cultural normalization of state authority, and resource scarcity that forces grassroots actors into dependence. Suppression is not maximal (0.85+) because legal pathways exist (cooperatives, nonprofits, participatory budgeting ordinances) and some jurisdictions actively enable alternatives. The measurement trajectory (0.52 → 0.58) reflects increasing enforcement intensity as incumbent institutions perceive threat from scaling alternatives and mount counter-mobilization. Theater ratio (0.64): Moderately high. Performative content includes: international governance norms that endorse participation without power transfer; state incorporation mechanisms that create appearance of pluralism while preserving authority; platform presentations as neutral infrastructure while extracting control; regulatory reform processes that signal responsiveness without enabling genuine alternatives. Theater has increased (0.48 → 0.64) as incumbent institutions developed sophisticated incorporation and legitimation strategies in response to alternative governance growth.",
+    "directionality_logic": "Directionality (d) values derive from agent structural position — power level, exit options, and relationship to extraction flow. Powerless grassroots actors with trapped exit options experience maximum directionality (d ≈ 0.95), facing full extraction force through the sigmoid f(d) ≈ 1.42. Moderate grassroots movements with constrained exit experience moderate-high directionality (d ≈ 0.65), producing f(d) ≈ 1.00, intermediate extraction. Institutional state apparatus with arbitrage options experiences minimal directionality (d ≈ 0.10), producing f(d) ≈ -0.05, negative experienced extraction (they are net beneficiaries). The constraint's effective extractiveness χ = ε × f(d) × σ(S) varies substantially across perspectives: for powerless local actors (σ=0.8), χ ≈ 0.52 × 1.42 × 0.8 ≈ 0.59 (snare territory); for moderate regional networks (σ=0.9), χ ≈ 0.52 × 1.00 × 0.9 ≈ 0.47 (tangled_rope); for institutional state (σ=1.0), χ ≈ 0.52 × (-0.05) × 1.0 ≈ -0.03 (rope/coordination perceived). The perspectival gap is extreme: the same constraint appears as pure extraction to trapped locals, mixed coordination to moderate networks, and legitimate coordination to institutional beneficiaries.",
+    "perspectival_gap": "This constraint demonstrates maximum perspectival divergence from unified structural data. The powerless grassroots actor sees Snare — suppression without benefit, extraction without exit. The moderate regional movement sees Tangled Rope — genuine coordination function alongside asymmetric extraction. The state institution sees Rope — pure coordination that enhances state capacity. The platform sees Rope — network effects and growing institutional power experienced as enabling coordination. The reform coalition sees Scaffold — temporary institutional design problem with legislative sunset paths (10-15 years for normalization). The international norm community sees Piton — performative governance endorsement maintaining state authority. The civilizational observer risks seeing Mountain — state monopoly as immutable law of complex societies. The gap reveals the constraint's core mechanism: incumbents benefit from legitimacy transfer while appearing to empower alternatives; alternatives experience mixed coordination and extraction; grassroots actors experience pure extraction. Each agent perceives the constraint through the lens of their exit options and power position.",
+    "mandatrophy_analysis": "TANGLED ROPE RESOLUTION: The constraint satisfies all three tangled_rope gates: (1) beneficiaries declared (incumbent_state_institutions, alternative_governance_platforms), (2) victims declared (participatory_legitimacy, coordination_commons), (3) active_enforcement required (true). The mandatrophy resolves by recognizing that the constraint simultaneously performs two structurally distinct functions: coordination function (enabling non-state actors to solve collective action problems, share resources, make decisions collectively) and extraction function (asymmetric resource flows favoring incumbents and platforms; legitimacy transfer to state without power redistribution; accumulation of institutional control by platforms without corresponding user benefit). The tangled_rope classification is accurate from the moderate agent perspective. The snare classification from powerless agents reflects that extraction dominates over coordination at that position. The rope classifications from beneficiary perspectives reflect that coordination benefits dominate their experience. The scaffold classification reflects the temporal structure — regulatory reform pathways are creating alternative institutional forms with sunset logic (10-15 year normalization timelines). The piton classification reflects the performative content of international norms. The mountain classification from the analytical observer is a false summit: state monopoly on coordination appears immutable at civilizational scale, but structural analysis reveals contingent institutional arrangements (legal barriers, resource concentration, legitimacy dynamics) that could be reorganized. The mandatrophy is resolved not by choosing one type but by recognizing that all types are legitimate perspectival readings of the constraint's dual function."
   },
   "boltzmann": {
-    "coordination_type": "identity_coordination"
+    "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "state_monopoly_on_violence",
-      "capital_concentration_extraction",
-      "institutional_legitimacy_maintenance"
+      "state_legitimacy_consolidation",
+      "platform_governance_capture",
+      "grassroots_organizational_capacity"
     ],
-    "dual_formulation_note": "Alternative governance emergence decomposes into two structurally distinct constraints: (1) local_coordination_capacity (\u03b5\u22480.30, genuine problem-solving), downstream affected by (2) institutional_hostility_mechanism (\u03b5\u22480.52, incumbent extraction response). This story tracks the composite constraint. The upstream local_coordination_capacity is rope/scaffold; the institutional response creates the tangled rope classification by layering extraction onto genuine coordination."
+    "dual_formulation_note": "Alternative governance emergence is a constraint family decomposed into three structurally distinct claims: (1) grassroots coordination mechanisms (ε ≈ 0.65, Snare), (2) decentralized platform governance (ε ≈ 0.48, Tangled Rope), (3) state co-option and incorporation (ε ≈ 0.42, Rope from state perspective). This story aggregates the systemwide constraint; individual stories track specific mechanisms."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.12
+      "d_value": 0.08
     }
   ]
 }

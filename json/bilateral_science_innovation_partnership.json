@@ -3,24 +3,25 @@
     "constraint_id": "bilateral_science_innovation_partnership",
     "version": "1.0",
     "generated_date": "2026-02-26",
-    "status": "ACTIVE"
+    "status": "ACTIVE",
+    "measurement_id_prefix": "bsip",
+    "story_uid": "3ae3220c-41e4-473a-b5d5-df108a8102ce"
   },
   "base_properties": {
     "extractiveness": 0.52,
-    "suppression": 0.48,
-    "theater_ratio": 0.55,
+    "suppression": 0.58,
+    "theater_ratio": 0.61,
     "claimed_type": "tangled_rope",
-    "human_readable": "Bilateral Science Innovation Partnership",
+    "human_readable": "Bilateral Science Innovation Partnership Between Research-Dominant and Research-Emerging Nations",
     "topic_domain": "international_science_policy/institutional_partnership",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "dominant_research_institutions",
-      "technology_exporting_nation"
+      "research_dominant_nation_institutions",
+      "research_dominant_nation_researchers"
     ],
     "victims": [
-      "junior_researchers",
-      "technology_importing_nation",
-      "epistemic_sovereignty"
+      "research_emerging_nation_scientific_autonomy",
+      "research_emerging_nation_researchers"
     ]
   },
   "perspectives": [
@@ -30,17 +31,17 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Junior Researcher",
-      "comment": "PERSPECTIVE 1: JUNIOR RESEARCHER (SNARE) \u2014 Early-career scientists in partner institutions face structural extraction through asymmetric publication norms, IP ownership disparity, and research agenda control. Exit is trapped \u2014 career survival depends on partnership participation. No alternatives exist at comparable resource levels. Maximum experienced extraction through suppression of independent research directions."
+      "label": "Research-Emerging Nation Researcher",
+      "comment": "PERSPECTIVE 1: EMERGING NATION RESEARCHER (SNARE) — Structurally dependent on partnership for research funding, equipment access, publication venues, and international visibility. Career advancement requires alignment with dominant-nation research agendas and methodologies. No alternative pathways for independent research establishment. Maximum experienced extraction — caught between local resource scarcity and global epistemic hierarchy."
     },
     {
-      "classification_type": "snare",
-      "agent_power": "powerless",
-      "time_horizon": "generational",
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "The Technology-Importing Nation",
-      "comment": "PERSPECTIVE 2: TECHNOLOGY-IMPORTING NATION (SNARE) \u2014 National research institutions become dependent on partnership infrastructure, methodologies, and validation frameworks. Long-term capacity building is subordinated to short-term resource access. Exit is constrained by institutional lock-in: domestic capacity atrophies as collaboration deepens. Generational horizon reveals systematic subordination of indigenous research directions."
+      "spatial_scope": "national",
+      "label": "Research-Emerging Nation Institution",
+      "comment": "PERSPECTIVE 2: EMERGING NATION INSTITUTION (TANGLED ROPE) — Genuine coordination function: partnership provides funding, infrastructure, and international legitimacy that enable local research capacity to grow. Simultaneously, partnership enforces research-agenda alignment with dominant nation priorities, constrains resource allocation autonomy, and creates institutional dependence on continued partnership access. Constrained exit: institution could theoretically exit but faces severe capacity reduction and loss of international standing."
     },
     {
       "classification_type": "rope",
@@ -48,112 +49,103 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Dominant Research Institution",
-      "comment": "PERSPECTIVE 3: DOMINANT RESEARCH INSTITUTION (ROPE) \u2014 Experiences partnership as coordination: sharing methodologies, accessing new research populations, expanding publication reach. Net beneficiary \u2014 receives IP rights, publication priority, student/researcher access. Can arbitrage participation by selectively deepening or withdrawing. Immediate horizon shows clear coordination benefit with favorable extraction dynamics."
+      "label": "Research-Dominant Nation Institution",
+      "comment": "PERSPECTIVE 3: DOMINANT NATION INSTITUTION (ROPE) — Experiences partnership primarily as coordination mechanism: access to diverse research populations, geographic data collection sites, novel study populations, and cost reduction for fieldwork. Can easily exit partnership and establish alternative collaborations; faces minimal career or institutional cost from exit. Net beneficiary experiencing the constraint as pure coordination."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Partner Nation Research Council",
-      "comment": "PERSPECTIVE 4: PARTNER NATION RESEARCH COUNCIL (TANGLED ROPE) \u2014 Organized institutional actor benefits from resource access and legitimacy conferred by partnership while bearing costs of agenda subordination and capacity-building diversion. Both genuine coordination (shared research infrastructure) and asymmetric extraction (IP terms, publication order) present. Constrained exit due to sunk institutional investment and political pressure to maintain partnership optics."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "organized",
+      "agent_power": "institutional",
       "time_horizon": "biographical",
-      "exit_options": "identity_locked",
+      "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The Captured Regulator",
-      "comment": "PERSPECTIVE 5: CAPTURED REGULATOR (TANGLED_ROPE / identity_locked) \u2014 National science policy administrators charged with building research capacity become identity-fused with partnership framework. They internalize the logic: 'partnership = progress,' 'collaboration = development,' 'openness = modernization.' Structurally mobile (could redirect policy) but identity-locked into partnership framing. Exit unthinkable because it would require abandoning the institutional identity they constructed as partnership architects. Both real coordination function (resource access) and real extraction (capacity subordination) present simultaneously, but the identity lock prevents the regulator from perceiving the extraction clearly."
-    },
-    {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "regional",
-      "label": "The South-South Science Coalition",
-      "comment": "PERSPECTIVE 6: SOUTH-SOUTH SCIENCE COALITION (SCAFFOLD) \u2014 Alternative bilateral partnerships among technology-importing nations create parallel verification and capacity-building pathways with explicit sunset logic: indigenous capacity development, knowledge transfer protocols, and exit timelines are negotiated upfront. Low extraction because coalition members have agency and negotiate symmetric benefit structures. Theater is low \u2014 substance of collaboration (capacity transfer) matches stated goals. Sunset clause: as indigenous capacity matures, partnerships transition from dependency to reciprocal exchange or conclude."
+      "label": "Research-Emerging Nation State (Policy Level)",
+      "comment": "PERSPECTIVE 4: EMERGING NATION STATE (TANGLED ROPE) — State-level actors see genuine coordination: partnership advances national research capacity, attracts talent retention, and signals scientific legitimacy on the global stage. Simultaneously, state loses autonomy over research priorities as funding flows toward domains prioritized by dominant partner, and national scientific infrastructure becomes dependent on foreign partnership continuity. Exit constrained by soft power implications and institutional momentum."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
-      "time_horizon": "civilizational",
+      "time_horizon": "generational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Partnership Administration",
-      "comment": "PERSPECTIVE 7: PARTNERSHIP ADMINISTRATION (PITON) \u2014 The formal structures, committees, and bureaucracies managing the partnership persist largely through institutional inertia. Theater ratio is high: progress reports document activity and legitimacy but actual research direction changes are minimal. The partnership administrative apparatus maintains itself by reporting success, but underlying innovation metrics (indigenous publication rates, domestic patent generation, capacity transfer) show degradation. Performative compliance replaces functional partnership."
+      "label": "Partnership Governance Framework",
+      "comment": "PERSPECTIVE 5: PARTNERSHIP GOVERNANCE FRAMEWORK (PITON) — The formal structures (memoranda of understanding, joint research committees, resource-sharing agreements) are substantially performative. Real decisions flow through informal channels (dominant researcher influence, funding source direction, publication prestige hierarchies). The governance theater persists because formal agreements signal legitimacy and sustainable commitment, but actual research-agenda setting occurs through power dynamics that the governance framework does not capture."
     },
     {
-      "classification_type": "mountain",
+      "classification_type": "tangled_rope",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer (Immutability View)",
-      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / IMMUTABILITY VIEW (MOUNTAIN) \u2014 From a universal/civilizational perspective, science is inherently global and hierarchical by resource distribution. Research capacity concentrates where funding concentrates. Partnerships are seen as natural expressions of this inherent structure. This perspective risks naturalizing what are contingent historical and political asymmetries (colonial-era scientific infrastructure, patent regime design, funding concentration) as inherent to scientific organization. The analytical observer's mountain classification is a false summit detector signal."
+      "label": "Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From civilizational scope, the partnership is structurally ambiguous: genuine coordination mechanism for building global research capacity (coordination function = real, extraction function = real). The constraint exhibits simultaneous coordination (both nations gain research capability) and extraction (dominant nation captures epistemic authority, emerging nation loses research autonomy). Tangled rope classification persists across all time horizons because the hybrid structure is irreducible — both functions are structural, neither can be eliminated without destroying the coordination benefit."
     }
   ],
   "omegas": [
     {
-      "id": "capacity_transfer_vs_dependency",
-      "question": "Is the partnership building genuine indigenous research capacity or deepening structural dependency on partner methodologies and validation frameworks?",
-      "resolution_mechanism": "Longitudinal analysis of: (1) domestic publication rates in partner vs non-partner institutions, (2) independent research agenda development post-partnership, (3) citation independence of partner nation researchers, (4) ability to conduct research without partner-nation validation",
-      "impact": "If capacity transfer is genuine: classification shifts toward Rope/Scaffold from more perspectives. If dependency deepens: Snare classification is vindicated, extraction mechanism is structural, partnership structure itself prevents escape.",
+      "id": "research_autonomy_definition",
+      "question": "What constitutes meaningful research autonomy in an asymmetric partnership? Is alignment with dominant-nation research agendas inherently extraction, or can it represent legitimate mutual problem-focusing?",
+      "resolution_mechanism": "Longitudinal analysis of research direction emergence: tracking whether emerging-nation researchers independently generate research questions that happen to align with dominant-nation priorities (weak extraction signal) versus generating research questions that are constrained to align (strong extraction signal). Indicator: diversity of emerging-nation research questions outside partnership domains.",
+      "impact": "If autonomy is preserved: extraction component is lower, classification shifts toward rope. If autonomy is constrained: extraction component is higher, classification confirmed as tangled rope or shifts toward snare.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether partnership transfers capacity or deepens dependency"
+      "description": "Whether research autonomy is preserved or constrained by partnership"
     },
     {
-      "id": "ip_asymmetry_scope",
-      "question": "What proportion of partnership-generated IP is accessible to technology-importing nation institutions without licensing restrictions? Is this proportion decreasing over partnership lifetime?",
-      "resolution_mechanism": "Analysis of partnership IP agreements; audit of IP licensing terms; comparison of IP ownership distribution across cohorts (early vs recent partnership years); tracking of licensing fee structures",
-      "impact": "If accessibility is high and symmetric: tangled rope with coordination function clearly dominant. If accessibility is low and deteriorating: suppression mechanism is institutional/contractual; extraction is primary function.",
+      "id": "knowledge_reverse_flow",
+      "question": "How much research capacity and methodological knowledge actually flows from emerging-nation institutions back to dominant-nation institutions? Is the partnership genuinely bidirectional or substantially unidirectional?",
+      "resolution_mechanism": "Citation analysis: tracking citations of emerging-nation researchers in dominant-nation publications, and vice versa. Co-authorship lead positions: counting first-author publications where emerging-nation researcher leads and dominant-nation researcher follows. Methodology adoption: identifying dominant-nation adoption of emerging-nation research methods or theoretical frameworks.",
+      "impact": "If reverse flow is substantial: partnership is more symmetric, classification confirms tangled rope with genuine coordination. If reverse flow is minimal: partnership is extraction mechanism, classification shifts toward snare.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "IP accessibility asymmetry in partnership terms"
+      "description": "Whether knowledge flows bidirectionally or is concentrated in dominant nation"
     },
     {
-      "id": "publication_order_neutrality",
-      "question": "Are publication order and corresponding authorship determined by research contribution magnitude, or by institutional affiliation and partner-nation advantage?",
-      "resolution_mechanism": "Analysis of contribution attribution vs actual authorship order across partnership publications; comparison with same research teams' non-partnership publications; survey of junior researchers on authorship negotiation power",
-      "impact": "If contribution-determined: coordination function is genuine. If affiliation-driven: suppression mechanism is embedded in publication norms; junior researchers' agency is systematically constrained.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether publication order reflects contribution or institutional advantage"
-    },
-    {
-      "id": "research_agenda_autonomy",
-      "question": "Do technology-importing nation researchers originate research questions independently, or do partnership frameworks channel them toward dominant-nation-defined priorities?",
-      "resolution_mechanism": "Analysis of research proposal flow; tracking of agenda-setting meetings; interview data on research priority formation; comparison of indigenous research trajectory (absent partnership) with actual trajectory",
-      "impact": "If agenda is autonomous: partnership is coordination mechanism. If channeled: partnership is extraction mechanism disguised as cooperation; victims' agency is systematically undermined.",
+      "id": "partnership_exit_distribution",
+      "question": "Do emerging-nation partners achieve sufficient research capacity that they can exit the partnership without severe scientific degradation? Or does dependence increase over the partnership duration?",
+      "resolution_mechanism": "Historical analysis: tracking research output metrics (publications, citations, funded grants) for emerging-nation institutions in years following partnership termination or reduction. Comparison with institutions that maintained similar partnerships continuously.",
+      "impact": "If capacity persists after exit: partnership built genuine institutional capacity, extraction component is moderate, tangled rope classification confirmed. If capacity collapses after exit: partnership created artificial dependence, extraction component is severe, classification shifts toward snare.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Research agenda autonomy in partnership framework"
+      "description": "Whether partnership builds exit-independent capacity or creates dependence"
     },
     {
-      "id": "identity_lock_brittle_point",
-      "question": "At what point of partnership asymmetry recognition does the captured regulator's identity lock break? What evidence triggers re-evaluation?",
-      "resolution_mechanism": "Case studies of policy reversals in partnership regimes; tracking of regulator testimony/rhetoric across partnership lifecycle; identification of threshold conditions (capacity metrics, publication outcomes, budget allocations) that triggered regulator skepticism in historical cases",
-      "impact": "If brittle point is identifiable: identity lock is contingent, not structural. Policy reframing could enable exit. If no threshold exists: identity lock is deeply rooted, may require generational change.",
+      "id": "epistemic_authority_concentration",
+      "question": "Over the partnership duration, does epistemic authority (standard-setting, methodology validation, theoretical framework legitimation) concentrate in dominant-nation hands or distribute toward emerging-nation institutions?",
+      "resolution_mechanism": "Editorial board composition analysis: tracking representation of emerging-nation researchers on editorial boards of partnership-generated journals or flagship collaborative publications. Grant review committee composition: analyzing who sets standards for partnership-funded research allocation. Methodology canonization: identifying whether dominant-nation methodologies become standard for partnership research or whether hybrid approaches emerge.",
+      "impact": "If authority distributes: partnership creates genuine scientific pluralism, suppression component is lower. If authority concentrates: partnership entrenches epistemic hierarchy, suppression component is higher.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether epistemic authority distributes or concentrates during partnership"
+    },
+    {
+      "id": "partnership_counterfactual_capacity",
+      "question": "What would have been the research trajectory of emerging-nation institutions absent the partnership? Is the partnership enabling research that would not otherwise occur, or accelerating research that was already underway?",
+      "resolution_mechanism": "Comparative analysis: identifying matched pairs of emerging-nation institutions with and without dominant-nation partnerships from the same region and historical period. Pre-partnership research capacity assessment of partner institutions. Identification of alternative funding or collaboration sources available to emerging-nation institutions.",
+      "impact": "If partnership enables novel research: coordination function is genuine and dominant, extraction is moderate, tangled rope confirmed. If partnership merely accelerates pre-existing trajectory: coordination function is weaker, extraction component becomes more salient, classification shifts toward snare.",
       "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether partnership enables novel capacity or accelerates existing trajectory"
+    },
+    {
+      "id": "false_summit_partnership_naturalization",
+      "question": "Is the partnership's asymmetry a natural consequence of research capability differences, or a constructed institutional arrangement that the capability difference is used to justify?",
+      "resolution_mechanism": "Historical analysis: tracking how partnerships were framed at inception versus how framing evolved. Identification of moments where asymmetry was challenged and how those challenges were resolved. Comparison with partnerships that successfully shifted toward equality despite initial capability gaps.",
+      "impact": "If asymmetry is naturalized: false summit risk present, engine FSM detector may reclassify. If asymmetry is acknowledged as constructed: tangled rope classification reflects institutional choice, not inevitable structure.",
+      "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Conditions for identity-lock breakdown in partnership administrators"
+      "description": "Whether partnership asymmetry is naturalized or acknowledged as constructed"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.28
+      "value": 0.38
     },
     {
       "metric": "base_extractiveness",
       "time_point": 5,
-      "value": 0.41
+      "value": 0.48
     },
     {
       "metric": "base_extractiveness",
@@ -163,17 +155,32 @@
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.35
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 5,
       "value": 0.48
     },
     {
       "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.55
+      "value": 0.61
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.56
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.58
     }
   ],
   "interval": {
@@ -181,37 +188,34 @@
     "end": 10
   },
   "commentary": {
-    "narrative_context": "Bilateral science innovation partnerships between research-dominant and research-emerging nations structure international collaboration through asymmetric institutional power, resource concentration, and epistemic authority. These partnerships present themselves as win-win coordination mechanisms: the dominant nation gains access to novel research populations, data, and talent; the emerging nation gains resource access and scientific legitimacy. However, the structural analysis reveals a complex hybrid. While genuine coordination functions exist (shared infrastructure, methodological exchange, capacity access), these are accompanied by systematic extraction mechanisms: IP ownership asymmetries, publication order control, research agenda subordination, and institutional dependency creation. The constraint exhibits all six classification types across different stakeholder perspectives, making it a diagnostic exemplar for how the same institutional arrangement can appear as coordination (to beneficiaries), extraction (to victims), or degraded ritual (to administrators maintaining the partnership through inertia). The theater ratio has increased from 0.35 to 0.55 over the partnership interval, indicating that progress reporting and administrative activity now substantially exceed functional innovation transfer. Extractiveness has increased from 0.28 to 0.52, reflecting systematic deepening of dependency and subordination mechanisms. A critical feature is the identity lock mechanism visible in the partner nation's research policy administrators, who have internalized the partnership logic so completely that alternative institutional arrangements become cognitively unavailable to them, even as the partnership's extractive dynamics become structurally visible to other observers.",
+    "narrative_context": "Bilateral science innovation partnerships between research-dominant and research-emerging nations present a structural ambiguity: they function simultaneously as coordination mechanisms enabling research capacity growth in emerging nations and as extraction mechanisms concentrating epistemic authority in dominant nations. The partnerships are formally structured as symmetric agreements with mutual benefit but operate through asymmetric institutional power, resource concentration, and research-agenda setting authority. The dominant nation gains access to novel research populations, geographic data collection sites, cost-reduced fieldwork, and talent from emerging regions; the emerging nation gains resource access, equipment, methodological training, and scientific legitimacy on the global stage. The constraint's evolution over the interval (extractiveness increasing from 0.38 to 0.52, theater ratio rising from 0.48 to 0.61) indicates that partnership maturation involves increasing performative governance and accumulating subtle extraction as initial coordination benefits reach diminishing returns and asymmetries become institutionalized.",
     "key_agents": [
-      "Dominant Research Institutions: Primary beneficiary (institutional/arbitrage) \u2014 capture IP rights, publication priority, research population access, talent recruitment with exit optionality",
-      "Junior Researchers: Primary victim (powerless/trapped) \u2014 bear costs of publication order subordination, IP ownership disparity, agenda control; career survival depends on partnership participation",
-      "Technology-Importing Nation: Secondary victim (powerless/constrained) \u2014 faces institutional lock-in from dependency deepening; domestic research capacity atrophies as partnership access substitutes for indigenous capacity development",
-      "Partner Nation Research Council: Organized actor (organized/constrained) \u2014 benefits from resource access and legitimacy while subordinating research capacity agenda to partnership terms; institutional investment creates sunk-cost exit barriers",
-      "Captured Regulator: Organized institutional actor (organized/identity_locked) \u2014 identity-fused with partnership framework; structurally mobile but perceives partnership logic as inherent to scientific modernization",
-      "South-South Coalition: Alternative pathway (organized/mobile) \u2014 builds symmetric partnerships with explicit capacity-transfer goals and sunset timelines; demonstrates that partnership extraction is contingent, not inherent",
-      "Partnership Administration: Institutional apparatus (institutional/arbitrage) \u2014 maintains partnership through performative compliance; theater substitutes for functional innovation transfer",
-      "Analytical Observer: Universal perspective (analytical/analytical) \u2014 risks naturalizing contingent institutional asymmetries as inherent to scientific hierarchy"
+      "Research-Dominant Nation Institutions: Primary beneficiary (institutional/arbitrage) — captures unilateral access to research populations, data, cost reduction; can exit without research-capacity loss",
+      "Research-Dominant Nation Researchers: Primary beneficiary (institutional/arbitrage) — gain career advancement through novel collaborations, publication opportunities in emerging geographies; maintain epistemic authority in partnership governance",
+      "Research-Emerging Nation Researcher: Primary victim (powerless/trapped) — dependent on partnership for funding, equipment, publication venues, career visibility; constrained to align research agendas with dominant-nation priorities; no alternative pathways",
+      "Research-Emerging Nation Institution: Secondary victim and mixed participant (moderate/constrained) — gains infrastructure and legitimacy but loses research-agenda autonomy; dependence deepens over time as institutional capacity becomes partnership-tuned",
+      "Research-Emerging Nation State: Institutional participant (institutional/constrained) — benefits from research-capacity signals and talent retention but loses strategic research autonomy as funding follows dominant-nation priorities",
+      "Partnership Governance Framework: Institutional theater (institutional/arbitrage) — formal agreements perform legitimacy and symmetry; real decisions flow through informal power channels (dominant-nation researcher influence, funding-source direction)"
     ],
-    "logic_rationale": "Extractiveness (0.52): Moderate-high, increasing over partnership lifetime. Initial partnerships often contain genuine coordination (0.28) \u2014 resource sharing, methodological exchange, collaborative research problems generate mutual benefit. But as partnerships institutionalize, extraction mechanisms accumulate: IP ownership rules subordinate partner-nation benefit; publication norms privilege dominant-nation researchers; agenda-setting processes channel partner resources toward dominant-nation priorities. The trajectory from 0.28 to 0.52 reflects this degradation. Suppression (0.48): Moderate. Junior researchers and emerging-nation institutions face significant barriers to exit: career dependence on partnership credentials, institutional lock-in from infrastructure investment, reputation costs of partnership departure, reduced funding access if partnerships are disrupted. But suppression is not maximal \u2014 some researchers can work outside partnerships, some institutions build alternatives, some nations have negotiated exit. Theater ratio (0.55): Moderate-high. Partnership administrations maintain substantial performative apparatus: progress reports, success metrics, committee activity, training program documentation. But underlying innovation transfer (domestic patent generation, indigenous publication rates, independent research capacity) does not match performance claims. The trajectory from 0.35 to 0.55 indicates increasing performative content as extraction deepens.",
-    "perspectival_gap": "The constraint generates perspectival gaps at multiple levels. (1) Power asymmetry gap: dominant institutions experience themselves as coordinators; junior researchers and partner nations experience themselves as extracted-from. (2) Temporal gap: immediate horizon shows partnership benefit; generational horizon reveals dependency accumulation. (3) Exit-capacity gap: institutional actors perceive arbitrage options; junior researchers perceive traps. (4) Framing gap: the captured regulator perceives partnership through an identity frame ('modernization,' 'capacity building') that makes extraction invisible, while other observers (particularly the south-south coalition) perceive the same arrangements as contingent extraction mechanisms. The false summit at the analytical/mountain perspective signals that this gap itself is diagnostic \u2014 it reveals that the 'inherent scientific hierarchy' framing naturalizes what are actually institutional choices.",
-    "directionality_logic": "The partnership's directionality varies sharply across stakeholder positions. Dominant institutions benefit \u2014 low d from beneficiary status + arbitrage mobility. Junior researchers bear costs \u2014 high d from victim status + career-dependent trapped mobility. Partner nation bears costs \u2014 high d from victim status + institutional-lock constrained mobility. The captured regulator's directionality is complex: they formally occupy an institutional position (moderate power, potentially mobile) but identity lock reduces their effective d by making extraction perception unavailable to them. The regulator perceives low extraction (partnership as coordination) even though the structural flow is high extraction (policy choices subordinate national research capacity). This mismatch is the oracle gap instantiation: the regulator's identity-locked position prevents them from seeing what the analytical observer sees (partnership as extraction mechanism). The south-south coalition demonstrates alternative directionality: symmetric partnerships with clear capacity-transfer terms and sunset clauses produce low-extraction structures even between research-asymmetric nations. The coalition's d values remain high (victim-like) but the constraint classification is Scaffold, not Snare, because the exit path is visible and negotiated.",
-    "mandatrophy_analysis": "The partnership constraint resolves mandatrophy by demonstrating that multiple classification types are simultaneously true from different structural positions. The institution benefits from coordination (Rope). The researcher is trapped in extraction (Snare). The partner nation faces dependency (Snare). The organized actors experience hybrid coordination-extraction (Tangled Rope). The administrators see degradation (Piton). The alternative coalition shows temporary solutions (Scaffold). The universal analytical view risks false naturalization (Mountain). No single type is 'correct' \u2014 the constraint's real structure is the presheaf of these perspectival readings. The mandatrophy dissolves when we recognize that 'is this partnership Rope or Snare?' is a category error. It is both simultaneously, depending on the observer's structural position. The meaningful analysis is: for which agents is it Rope, for which is it Snare, and what institutional changes would shift the classification? The south-south coalition answer is: partnerships can be designed as Scaffolds (lower extraction, visible sunset, symmetric benefit) instead of Snares. The path from current (Tangled Rope averaging toward Snare) to alternative (Scaffold) requires policy changes that the captured regulator is identity-locked against perceiving."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The partnership extracts emerging-nation research autonomy (research agenda becomes dependent on dominant-nation priority-setting), intellectual property (discoveries in partnership are typically attributed and controlled by dominant-nation institutions even when led by emerging-nation researchers), and talent (emerging-nation researchers who build capacity often emigrate to dominant nations, converting the capacity-building investment into brain drain). The extractiveness is not as severe as a pure snare (0.66+) because genuine research capacity does develop in emerging-nation institutions, and some fraction of talent remains. However, the extraction is substantial because the asymmetry in autonomy and epistemic authority is structural to the partnership design. Extractiveness increases over time (0.38→0.52) as initial enthusiasm for collaboration gives way to routine institutional dependence and subtle agenda-setting through funding channels. Suppression (0.58): Moderate-high. Barriers to emerging-nation researcher independence include: (1) equipment and funding concentration in dominant nation, (2) publication bias favoring dominant-nation research methodologies, (3) career incentives aligned with dominant-nation collaboration continuity, (4) lack of alternative sources for large-scale research infrastructure, (5) normalization of dominant-nation research standards as universal scientific standards. Suppression is not maximal (≥0.70) because emerging-nation researchers can and do conduct independent work; the suppression is structural constraint, not total barrier. Theater ratio (0.61): Moderate-high. Partnership governance is substantially performative. The formal structures (MOUs, joint committees, resource-sharing agreements) perform legitimacy and equal partnership; actual research-agenda setting flows through informal channels (dominant researcher influence in laboratory meetings, funding-source direction through grant cycles, publication prestige hierarchies that favor dominant-nation journals). The theater increases over time (0.48→0.61) as the governance framework becomes more elaborate and distant from actual decision-making. The governance theater is not as severe as piton levels (≥0.70) because the partnership does generate real research output; the theater is a layer over functional but asymmetric coordination, not a substitute for it.",
+    "perspectival_gap": "The partnership exhibits a stark perspectival gap between institutional beneficiaries and powerless victims. The dominant-nation institution perceives rope: coordination mechanism that solves the real problem of accessing diverse research populations and distributing research costs globally. The emerging-nation researcher perceives snare: structural dependence with no meaningful exit options. The emerging-nation state perceives tangled rope: genuine capacity building (coordination) but loss of strategic research autonomy (extraction). The partnership governance framework perceives itself as symmetric (piton theater) while real decision-making reproduces asymmetry (hidden through informal channels). The analytical observer perceives the full tangled rope structure: simultaneous coordination (research capacity genuinely grows in emerging nation) and extraction (emerging-nation research autonomy becomes dependent on dominant-nation priorities). This perspectival gap is diagnostic — the gap between 'rope' (dominant-nation beneficiary) and 'snare' (powerless victim) reveals that the partnership's coordination function is real but unequally distributed.",
+    "directionality_logic": "Directionality computation reflects each agent's structural position relative to the extraction flow. Research-dominant-nation institutions are beneficiaries with arbitrage-level exit options: they derive d≈0.15 (low directionality toward extraction target), which produces f(d)≈-0.01 (negative chi, indicating net benefit). Research-emerging-nation researchers are victims with trapped exit options: they derive d≈0.95 (high directionality toward extraction target), which produces f(d)≈1.42 (high chi amplification, indicating severe experienced extraction). Research-emerging-nation institutions occupy intermediate position: they are partial beneficiaries (gain infrastructure) and partial victims (lose autonomy), with constrained exit options: d≈0.55, f(d)≈0.75, indicating moderate experienced extraction. The analytical observer derives d≈0.72 (victim-leaning from global scope where extraction concentrates on powerless emerging-nation researchers), f(d)≈1.15, confirming tangled rope classification.",
+    "mandatrophy_analysis": "The bilateral partnership resolves mandatrophy by demonstrating that tangled rope is the stable classification across perspectives when both coordination and extraction functions are genuinely present. The constraint does not collapse to rope (which would misclassify the extraction) or snare (which would misclassify the coordination). Instead, tangled rope accurately captures that the partnership creates real research capacity growth (coordination function, beneficiary perspective: rope) while concentrating epistemic authority and constraining research autonomy (extraction function, victim perspective: snare). The mandatrophy is resolved not by choosing between rope and snare but by accepting that the same institutional mechanism serves both functions simultaneously: it coordinates research activity (both nations gain research capacity) while extracting research autonomy (emerging nation loses independent research-agenda setting). The tangled rope classification permits this structural coexistence — the constraint exhibits both genuine coordination (χ ≤ 0.90 due to coordination function) and substantial extraction (χ ≥ 0.40 due to asymmetric benefit distribution). No single type can characterize the partnership; the full six-type variation across perspectives is the correct description."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "brain_drain_from_emerging_nations",
-      "global_research_infrastructure_concentration",
-      "patent_regime_asymmetry"
+      "research_brain_drain_emerging_nations",
+      "scientific_standard_harmonization_asymmetry"
     ],
-    "dual_formulation_note": "The bilateral science partnership decomposes into distinct constraints: genuine coordination problems (methodological exchange, infrastructure sharing) versus extraction mechanisms (IP ownership, publication order control, agenda subordination). These have different epsilon values and should be tracked separately. This story represents the hybrid tangled_rope structure. Upstream constraints: global research funding concentration (creates asymmetry that partnerships express). Downstream constraints: brain drain, patent concentration (accelerated by partnership terms). Network affects are causal \u2014 partnership structure reinforces upstream funding concentration and downstream brain drain."
+    "dual_formulation_note": "The bilateral partnership encompasses multiple structurally distinct constraints. The knowledge-flow asymmetry (epistemic authority concentration) is a separate constraint from the resource-allocation asymmetry (funding concentration). The partnership story describes the composite institutional arrangement; sibling constraints track specific asymmetries that decompose the broader phenomenon."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.25
+      "d_value": 0.2
     }
   ]
 }

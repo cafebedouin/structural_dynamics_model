@@ -4,24 +4,25 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "merc"
+    "measurement_id_prefix": "mercosur_tariff",
+    "story_uid": "721865ad-f0ec-48fd-857d-15ad6aec6007"
   },
   "base_properties": {
     "extractiveness": 0.52,
-    "suppression": 0.48,
-    "theater_ratio": 0.55,
+    "suppression": 0.58,
+    "theater_ratio": 0.64,
     "claimed_type": "tangled_rope",
-    "human_readable": "Mercosur Tariff Harmonization Constraint",
+    "human_readable": "Mercosur Common External Tariff Harmonization",
     "topic_domain": "trade_policy/regional_integration",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "protected_domestic_industries",
-      "mercosur_bureaucracy"
+      "brazilian_industrial_firms",
+      "argentine_protected_sectors"
     ],
     "victims": [
-      "consumers",
-      "export_oriented_sectors",
-      "smaller_member_states"
+      "small_state_policy_autonomy",
+      "consumer_purchasing_power",
+      "uruguayan_agricultural_exporters"
     ]
   },
   "perspectives": [
@@ -31,26 +32,17 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "regional",
-      "label": "The Consumer Constituency",
-      "comment": "PERSPECTIVE 1: CONSUMERS (SNARE) \u2014 Trapped within tariff harmonization with no exit mechanism. Tariff floors are enforced across all member states; domestic consumers cannot opt out or access lower-priced imports. Face extraction through artificially elevated prices while bearing no benefit from coordination. Maximum experienced extraction \u2014 dispersed, disorganized group with no voice in negotiations."
+      "label": "The Consumer Under Tariff Lock",
+      "comment": "PERSPECTIVE 1: CONSUMER PURCHASING POWER (SNARE) — Trapped by tariff walls that raise domestic prices on manufactured goods. Cannot exit the regional market structure. Bears full cost of protection with no organizational voice. Extraction runs pure: prices remain artificially elevated to subsidize protected industrial sectors, with no coordination benefit to the consumer."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "powerful",
       "time_horizon": "biographical",
-      "exit_options": "mobile",
-      "spatial_scope": "national",
-      "label": "Protected Domestic Industries",
-      "comment": "PERSPECTIVE 2: PROTECTED DOMESTIC INDUSTRIES (TANGLED ROPE) \u2014 Primary beneficiary but faces real constraints from harmonization requirements. Benefits from tariff floors that protect from competition, but coordination function is genuine \u2014 harmonization prevents member states from undercutting each other's tariff protection, enabling mutual commitment to high external tariffs. Industry faces real costs of enforcing tariff uniformity (compliance monitoring, prevention of smuggling). Moderate extraction on consumer victims balanced by coordination benefit for industries themselves."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "organized",
-      "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "regional",
-      "label": "Smaller Member States",
-      "comment": "PERSPECTIVE 3: SMALLER MEMBER STATES (TANGLED ROPE) \u2014 Constrained by asymmetric bargaining power but also benefit from regional trade access. Smaller economies (Paraguay, Uruguay) face pressure to accept harmonized tariffs set by larger members (Brazil, Argentina), but gain access to larger market without individual negotiating capacity. Experience mixed extraction (forced into higher tariffs than preferred) and coordination benefit (regional market integration). Exit options (bilateral deals, MERCOSUR withdrawal) carry high political and economic costs."
+      "label": "The Small State (Paraguay/Uruguay)",
+      "comment": "PERSPECTIVE 2: SMALL MEMBER STATE (TANGLED ROPE) — Constrained by exit costs (trade dependence, regional isolation if departing, retaliation risk from larger members). But also benefits from regional market access and industrial development support. Extracted from: tariff rates are set by larger members; smaller states have disproportionate veto power in theory but face defection penalties. Mixed extraction — some coordination benefit (access to Mercosur market) layered with asymmetric cost-bearing."
     },
     {
       "classification_type": "rope",
@@ -58,149 +50,194 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "regional",
-      "label": "Mercosur Bureaucracy",
-      "comment": "PERSPECTIVE 4: MERCOSUR BUREAUCRACY (ROPE) \u2014 Experiences constraint as pure coordination mechanism: their institutional role is to enforce harmonization norms and resolve disputes. Bureaucratic agents have arbitrage options (enforcement discretion, interpretation variance, exemption management). Net beneficiary of the constraint structure \u2014 budgets, authority, and career pathways depend on maintaining the harmonization apparatus. Low experienced extraction; stable coordination apparatus that generates stable funding and institutional capacity."
+      "label": "The Brazilian Industrial Protected Sector",
+      "comment": "PERSPECTIVE 3: BRAZILIAN PROTECTED INDUSTRY (ROPE) — Primary beneficiary. Experiences CET as pure coordination: it enables them to coordinate with smaller members to maintain tariff discipline and block undercutting. Zero effective extraction for this actor — the constraint solves their core problem (preventing a tariff race to the bottom) while distributing costs elsewhere. Arbitrage option is strong (can exit and negotiate bilateral deals)."
     },
     {
-      "classification_type": "scaffold",
+      "classification_type": "tangled_rope",
       "agent_power": "organized",
       "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "global",
-      "label": "Export-Oriented Sectors and Services Liberalizers",
-      "comment": "PERSPECTIVE 5: EXPORT-ORIENTED SECTORS / SERVICES LIBERALIZERS (SCAFFOLD) \u2014 Organized interests (agricultural exporters, service providers, tech companies) push for tariff harmonization on THEIR inputs/services while resisting harmonization on their outputs. See the current tariff architecture as temporary \u2014 external pressure from WTO and bilateral free trade agreements creates a sunset logic: harmonized tariffs will eventually be disrupted by broader trade liberalization agreements. Experience constraint as temporary scaffolding blocking optimal trade patterns. Exit pathway visible through multilateral liberalization pressure. Organized coalition can apply pressure to modify terms; not trapped."
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Trade Labor Movement",
+      "comment": "PERSPECTIVE 4: REGIONAL TRADE LABOR UNIONS (TANGLED ROPE) — Organized agents face both coordination benefits (stable employment in protected sectors, predictable industrial policy) and extraction (wage suppression in tariff-sheltered industries, lower purchasing power from elevated consumer prices). Exit is constrained by regional labor market dependence. Real coordination function (labor protections, sectoral bargaining) exists alongside extraction (inability to renegotiate wage shares in protected rents)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Uruguayan Agricultural Exporters",
+      "comment": "PERSPECTIVE 5: URUGUAYAN AGRICULTURAL EXPORTERS (SNARE) — Trapped by a constraint that sacrifices their export competitiveness to protect Brazilian and Argentine industry. Uruguay has comparative advantage in livestock and agricultural products but faces CET rates that subsidize manufactured imports from larger members and reduce demand for their exports. No coordination function for this group — pure extraction with no exit option short of regional departure."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Mercosur Institutional Apparatus",
+      "comment": "PERSPECTIVE 6: MERCOSUR INSTITUTIONS (TANGLED ROPE) — The common market secretariat and dispute mechanisms face mixed incentives. They coordinate genuine regional trade (coordination function), but also enforce tariff discipline that benefits larger members and constrains smaller ones. Enforcement is selective — Brazil and Argentina face lower discipline costs than Paraguay and Uruguay. Extraction runs through the institution (selective enforcement) while coordination also runs through (dispute resolution, tariff negotiation protocols)."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
-      "spatial_scope": "regional",
-      "label": "Legacy Mercosur Institutional Identity",
-      "comment": "PERSPECTIVE 6: LEGACY MERCOSUR INSTITUTIONAL IDENTITY (PITON) \u2014 From the institutional longevity perspective, tariff harmonization is a vestigial commitment that persists through path dependence and institutional inertia rather than active coordination function. The original 1990s vision of deep customs union integration has not materialized (numerous exemptions exist, bilateral tariff deals undermine uniformity, common tariff code enforcement is weak). The harmonization apparatus persists because: (a) no member state has incentive to formally abandon it (defection costs are visible; cost of maintaining the fiction is diffuse), (b) the theater of harmonization (coordinated tariff announcements, dispute resolution processes) maintains the institutional legitimacy of MERCOSUR itself. Theater ratio reflects that much harmonization activity is performative \u2014 exceptions, exemptions, and bilateral carve-outs undermine the uniformity that harmonization claims to enforce."
+      "spatial_scope": "global",
+      "label": "The Post-WTO Trade Regime Framing",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (PITON FRAMING) — From a civilizational view, regional tariff harmonization could be seen as a necessary coordination mechanism in a fragmented global trade order. But the theater ratio (0.64) reveals that the CET regime maintains substantial performative infrastructure (committee structures, compliance monitoring, dispute panel procedures) that increasingly lacks functional power relative to bilateral trade agreements and supply-chain realities. The constraint persists through institutional inertia even as its core coordination function has atrophied."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Full structural view from civilizational/global scope reveals genuine coordination function (mutual commitment to external tariff protection, prevention of competitive undercutting) alongside asymmetric extraction (larger member dominance, consumer surplus transfer, constraint on smaller-state autonomy). The constraint persists because it solves a real coordination problem (commitment device) while distributing costs asymmetrically. Neither pure coordination nor pure extraction \u2014 the definitional case for tangled rope. Engine classification of this perspective validates the claimed type."
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL NATURAL LAW VIEW (MOUNTAIN) — Risk perspective that tariff harmonization appears as an immutable feature of regional integration: 'any customs union must harmonize tariffs.' But the structural data contradicts the mountain gate: tariff rates are continuously renegotiated, exemptions abound (automotive, sugar, ethanol special regimes), and the regime's extractive properties are contingent on political will, not physical necessity. False summit candidate — naturalization of a political arrangement."
     }
   ],
   "omegas": [
     {
-      "id": "harmonization_enforcement_credibility",
-      "question": "How credibly does Mercosur actually enforce uniform tariffs, or is the constraint substantially theatrical?",
-      "resolution_mechanism": "Empirical audit of tariff code enforcement actions, successful disputes resolved vs disputes that stalled, actual tariff variance across member states vs officially declared uniformity, incidence of bilateral carve-outs and exemptions",
-      "impact": "If enforcement is strong: extraction mechanism is tightly coupled to harmonization apparatus, suppression \u2248 0.48. If enforcement is weak: suppression should be lower (exit is easier through non-enforcement), theater_ratio should be higher, classify as piton not tangled_rope.",
+      "id": "brazil_hegemonic_extraction",
+      "question": "Does Brazil's structural dominance mean the CET regime is fundamentally extractive from smaller members, or does Brazil's enforcement of tariff discipline actually enable smaller states to maintain industrial protection they could not negotiate independently?",
+      "resolution_mechanism": "Counterfactual analysis: compare Paraguay and Uruguay sectoral tariff rates (if negotiated bilaterally with Brazil) to actual CET rates. Measure whether smaller states would achieve higher or lower effective protection without harmonization.",
+      "impact": "If smaller states benefit from CET discipline: reclassify from snare to tangled_rope for small-state perspective. If extraction exceeds benefit: snare classification confirmed. The mandatrophy hinges on this empirical question.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether Brazil's tariff enforcement benefits or exploits smaller members"
+    },
+    {
+      "id": "consumer_price_pass_through",
+      "question": "What fraction of CET-induced price elevations are passed through to consumers vs absorbed by retailer margins, distribution rents, or currency exchange dynamics?",
+      "resolution_mechanism": "Price surveys across Mercosur members: comparison of identical manufactured goods in tariff-protected vs tariff-free product categories, controlling for exchange rate and logistics costs.",
+      "impact": "If pass-through is high (>0.80): consumer extraction is severe; snare classification for consumer perspective confirmed. If pass-through is low (<0.50): extraction is primarily a transfer to retailers and distributors, not consumers; reclassify to piton (performative extraction). If mixed: tangled_rope applies to consumer perspective (some coordination benefit in the form of price stability, some extraction in elevated prices).",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Credibility of Mercosur tariff enforcement vs theater"
+      "description": "Fraction of tariff-induced price increases passed through to consumers"
     },
     {
-      "id": "harmonization_necessity_vs_preference",
-      "question": "Do member states genuinely commit to harmonized tariffs because of coordination need, or do they maintain harmonization facades while negotiating bilateral/trilateral deals to achieve preferred tariff structures?",
-      "resolution_mechanism": "Content analysis of Mercosur Council minutes and official tariff schedules vs revealed behavior in actual trade flows, bilateral agreement negotiations, informal tariff adjustments; interviews with trade policy officials on stated vs actual preferences",
-      "impact": "If genuine commitment: coordination function is real, classification stable. If preference misalignment: the constraint is theater sustained by institutional path dependence, classify as piton, extractiveness should be lower.",
+      "id": "regional_supply_chain_coordination",
+      "question": "To what extent does Mercosur tariff harmonization enable genuine supply-chain integration (intra-regional intermediate goods trade), vs functioning primarily as a protectionist cartel?",
+      "resolution_mechanism": "Supply-chain decomposition: measure intra-regional value-added in manufactured trade. Compare growth rates of intermediate vs final-good trade within Mercosur since CET adoption. Benchmark against pre-1995 and counterfactual bilateral scenarios.",
+      "impact": "If supply-chain coordination is strong: coordination function is real; rope classification strengthens for Brazilian/Argentine perspectives. If integration is weak: CET functions primarily as extraction; snare and tangled_rope classifications confirmed. The constraint's true type hinges on whether the tariff regime solves a real coordination problem or merely distributes rents.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether harmonization reflects genuine member commitment or institutional theater"
+      "description": "Whether CET enables genuine supply-chain integration or functions as protectionist cartel"
     },
     {
-      "id": "consumer_exit_cost_magnitude",
-      "question": "What is the actual economic magnitude of consumer harm from tariff harmonization floors, and how does it compare to perceived distribution in member states?",
-      "resolution_mechanism": "CGE modeling of consumer surplus loss under current tariff structure vs counterfactual unilateral liberalization; price comparison studies for harmonized vs non-harmonized commodity categories; welfare distribution analysis by income quintile",
-      "impact": "If consumer loss is large and concentrated in low-income groups: suppression is justified at \u22480.48, snare classification for consumer perspective is accurate. If loss is diffuse or moderate: suppression overestimated, should be lower, some consumers have exit options (parallel imports, regional shopping).",
+      "id": "exit_cost_measurement",
+      "question": "What is the actual cost to Paraguay or Uruguay of departing Mercosur vs negotiating bilateral tariff agreements with Brazil and Argentina?",
+      "resolution_mechanism": "Trade gravity modeling: estimate trade volumes and tariff revenue under withdrawal scenarios. Include retaliation penalties, loss of dispute panel access, and renegotiation deadweight loss. Compare to status quo and bilateral alternatives.",
+      "impact": "If exit cost is high (>30% trade loss): trapped classification confirmed for small states. If exit cost is moderate (10-30%): constrained classification confirmed. If exit cost is low (<10%): mobile classification implied; small-state perspective would shift toward rope or scaffold. The suppression metric depends critically on this measurement.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Magnitude of consumer welfare loss from tariff harmonization"
+      "description": "Actual trade and welfare cost to small members of Mercosur withdrawal"
     },
     {
-      "id": "smaller_state_bargaining_asymmetry",
-      "question": "Is Paraguay/Uruguay genuinely constrained by harmonization norms, or do they accept harmonization voluntarily because access to larger markets outweighs tariff costs?",
-      "resolution_mechanism": "Counterfactual analysis: modeling outcomes if smaller states withdraw from tariff harmonization (bilateral tariff negotiation dynamics); diplomatic cable analysis on how tariff decisions are negotiated; survey of trade policymakers in smaller states on perceived bargaining power and constraints",
-      "impact": "If constrained (extracted from): exit options lower, classification remains tangled_rope. If voluntary: exit options higher (mobile), should classify as rope, smaller state power should be powerful or organized, not constrained.",
-      "confidence": "low",
+      "id": "natural_law_naturalization_risk",
+      "question": "Is the mountain perspective's claim that 'tariff harmonization is inherent to customs unions' empirically grounded, or does it naturalize a contingent institutional choice?",
+      "resolution_mechanism": "Historical and comparative analysis: examine African Union, ASEAN, and other regional blocs to measure: (a) how many require perfect tariff harmonization vs allow flexibility, (b) whether harmonization correlates with integration success or is orthogonal to it, (c) how often harmonization clauses are invoked vs overridden in practice.",
+      "impact": "If harmonization is functionally necessary for regional stability: mountain classification (at civilizational scale) is justified. If harmonization is one design choice among many: false summit confirmed; engine reclassifies to tangled_rope based on beneficiary declarations. The natural law claim will fail the accessibility_collapse and resistance gates if alternative institutional designs exist.",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether smaller states are constrained by harmonization or voluntarily accept it"
+      "description": "Whether tariff harmonization is inherent to customs unions or contingent institutional choice"
     },
     {
-      "id": "external_trade_liberalization_sunset",
-      "question": "Is the scaffold classification valid? Will multilateral or bilateral free trade pressure actually force tariff restructuring, or is the harmonization constraint durable across generations?",
-      "resolution_mechanism": "Projection of regional trade agreement negotiation dynamics over 10-20 year horizon; monitoring of WTO dispute outcomes; tracking of bilateral FTA negotiations involving Mercosur members; trend analysis of external tariff rates and convergence pressures",
-      "impact": "If liberalization pressure is strong and structural: scaffold classification is valid, sunset is real, extractiveness \u22480.30 (temporary structure). If pressure is weak or absorbed through exemptions: sunset does not materialize, constraint is durable, classify as snare or tangled_rope indefinitely.",
-      "confidence": "low",
+      "id": "piton_theater_trajectory",
+      "question": "Is the theater ratio rising (piton degradation) or stable (piton equilibrium)?",
+      "resolution_mechanism": "Institutional analysis: track evolution of CET committee procedures, compliance disputes, and enforcement actions over 5-year rolling windows. Measure ratio of procedural output (meetings, directives, committee reports) to actual tariff revisions and policy changes.",
+      "impact": "If theater is rising: piton classification is confirmed and accelerating; the regime is increasingly performative. If theater is stable: piton is a steady state, not a degradation trajectory. If theater is falling: the regime is reconsolidating around genuine coordination; reclassify toward tangled_rope or rope.",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether external trade liberalization creates actual sunset for harmonization constraint"
+      "description": "Whether Mercosur CET committee theater is rising or stable"
     }
   ],
   "measurements": [
     {
-      "metric": "theater_ratio",
+      "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.38
+      "value": 0.35
     },
     {
-      "metric": "theater_ratio",
+      "metric": "base_extractiveness",
       "time_point": 7,
       "value": 0.48
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 14,
-      "value": 0.55
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 0,
-      "value": 0.42
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 7,
-      "value": 0.47
     },
     {
       "metric": "base_extractiveness",
       "time_point": 14,
       "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 7,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 14,
+      "value": 0.64
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 7,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 14,
+      "value": 0.58
     }
   ],
   "interval": {
-    "start": 0,
-    "end": 14
+    "start": 1995,
+    "end": 2023
   },
   "commentary": {
-    "narrative_context": "Mercosur tariff harmonization represents a structural commitment among four South American states (Brazil, Argentina, Paraguay, Uruguay) to maintain a common external tariff (CET) and restrict intra-regional tariff variance since 1995. The constraint exhibits mixed coordination and extraction characteristics: it solves a real collective action problem (preventing tariff competition that would undermine regional protection) while distributing costs asymmetrically across consumers, smaller member states, and liberalization-oriented sectors. The constraint's theater has increased over the interval (1995\u20132009) as actual enforcement has diverged from official harmonization claims \u2014 numerous bilateral carve-outs, exemptions, and informal tariff adjustments have proliferated while the harmonization apparatus maintains its formal structure. The constraint demonstrates how regional trade governance can simultaneously generate genuine coordination benefits (for protected industries and bureaucratic institutions) and severe extraction (for dispersed consumers and constrained smaller states).",
+    "narrative_context": "Mercosur tariff harmonization, formalized in 1995 with the Common External Tariff (CET), represents a structural commitment among four South American states (Brazil, Argentina, Paraguay, Uruguay) to maintain tariff alignment and restrict intra-regional variance. The constraint solves a real collective action problem — preventing unilateral tariff reductions that would undermine the regional protection bargain — while distributing costs asymmetrically across member states and domestic constituencies. Brazil and Argentina benefit from the enforcement of tariff discipline that enables them to maintain industrial protection; smaller members (Paraguay, Uruguay) face constrained policy autonomy; consumers across the region bear elevated prices; agricultural exporters in Uruguay lose competitiveness. The constraint exhibits all characteristics of a tangled rope: genuine coordination function (preventing a tariff race to the bottom), asymmetric extraction (costs concentrated on consumers and smaller states), active enforcement (CET committees, dispute mechanisms), and mixed power distributions across institutional actors. The theater ratio has risen over the interval as CET committee procedures have accumulated without corresponding deepening of actual tariff coordination — compliance disputes are now routed through increasingly elaborate institutional structures that produce limited tariff changes, suggesting the constraint is drifting toward piton (performative maintenance) as the core coordination problem becomes less acute and the institutional apparatus becomes an end in itself.",
     "key_agents": [
-      "Protected Domestic Industries: Primary beneficiary (powerful/mobile) \u2014 garner tariff protection preventing competition; benefit from mutual commitment of member states to high external tariffs",
-      "Consumers: Primary victim (powerless/trapped) \u2014 face artificially elevated prices and no exit mechanism; broadly dispersed, lack organization for political voice",
-      "Mercosur Bureaucracy: Secondary beneficiary (institutional/arbitrage) \u2014 derives institutional legitimacy, budgets, and enforcement authority from maintaining harmonization apparatus",
-      "Smaller Member States (Paraguay, Uruguay): Secondary victim (organized/constrained) \u2014 constrained by larger member state bargaining power; accept higher external tariffs than preferred in exchange for regional market access",
-      "Export-Oriented Sectors (Agriculture, Services): Organized victim-beneficiary (organized/mobile) \u2014 bear extraction through higher input costs but benefit from regional market access and see liberalization pressure as creating sunset",
-      "Analytical Observer: Structural analyst (analytical/analytical) \u2014 identifies genuine coordination function alongside asymmetric extraction, resolving classification to tangled rope"
+      "Brazilian Industrial Protected Sectors: Primary beneficiary (institutional/arbitrage) — capture rents from tariff protection and enforce tariff discipline against undercutting",
+      "Argentine Protected Industry: Secondary beneficiary (powerful/constrained) — benefits from CET protection but faces constraints from smaller members' pressure for flexibility",
+      "Consumers Across Mercosur: Primary victim (powerless/trapped) — bear elevated prices from tariff protection with no organizational voice or exit option",
+      "Small Member States (Paraguay, Uruguay): Secondary victim/constrained beneficiary (powerful/constrained) — face policy autonomy reduction and suffer sectoral losses (Uruguay agriculture) while gaining access to regional market",
+      "Uruguayan Agricultural Exporters: Tertiary victim (powerful/trapped) — lose export competitiveness due to CET structure that disadvantages agricultural goods relative to manufactures",
+      "Mercosur Institutional Apparatus: Enforcer (institutional/constrained) — coordinates tariff discipline while selectively applying enforcement to benefit larger members",
+      "Regional Trade Labor Unions: Organized affected actor (organized/constrained) — benefit from industrial protection and employment stability but face wage suppression and reduced consumer purchasing power",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing a contingent institutional choice as inherent to regional integration"
     ],
-    "logic_rationale": "Extractiveness (0.52): Moderate-high. The constraint transfers consumer surplus to protected industries and provides tariff revenue, but not as severe as pure extraction because genuine coordination benefits exist for member states (mutual commitment credibility, prevention of tariff undercutting). The measurement trajectory shows rising extractiveness from 0.42 (1995, immediately post-implementation) to 0.52 (2009), reflecting layered extraction: initial harmonization was partly efficiency-enhancing (regional integration benefit), but over time, the architecture has accumulated exemptions and bilateral carve-outs that preserve extraction while reducing coordination function. Suppression (0.48): Moderate. Consumers have theoretical alternatives (parallel imports, regional shopping, advocate for liberalization) but face significant barriers (transport costs, formal enforcement, lack of political organization). Smaller states have exit option (bilateral deals, potential MERCOSUR withdrawal) but carry high diplomatic and economic costs. Theater ratio (0.55): Moderate-rising. Harmonization apparatus maintains formal uniformity claims (CET schedules, dispute resolution processes) while actual tariff variance is substantial through exemptions (approximately 900 exemptions to CET as of 2009), bilateral tariff adjustments, and informal non-enforcement. Theater has risen over interval as the gap between claimed and actual harmonization has widened \u2014 the constraint maintains institutional legitimacy through performative activity (tariff announcement ceremonies, dispute resolution theater) while substance erodes.",
-    "perspectival_gap": "Gap between consumer perspective (Snare) and industry perspective (Rope) reflects fundamental disagreement on whether the constraint coordinates mutual benefit or enforces asymmetric extraction. Consumer gap to larger analytical view: consumers see mountain-like immutability of tariffs, but organized pressure (services liberalization, agricultural export interests, external trade pressure) reveals tariffs as contingent institutional arrangements, not natural law. Gap between smaller-state perception of constraint and larger-state perception: larger states (Brazil, Argentina) experience harmonization as coordination mechanism maintaining their protection; smaller states experience it as asymmetric constraint on their preferred tariff autonomy. Gap between bureaucratic perception (Rope) and actual enforcement data (Piton features): institution perceives itself as executing coordination, but rising exemptions and declining theater-to-substance ratio suggest institutional degradation.",
-    "directionality_logic": "Directionality values (d) for each perspective derive from their structural position relative to extraction flow. Consumers: trapped exit + victim status \u2192 d \u2248 0.95 (maximum target), f(d) \u2248 1.42, experience high chi. Protected industries: mobile exit + beneficiary status \u2192 d \u2248 0.20 (strong beneficiary), f(d) \u2248 0.02, experience low/negative chi (net benefit). Smaller states: constrained exit + victim status \u2192 d \u2248 0.70 (moderate target), f(d) \u2248 1.00, experience moderate chi. Mercosur bureaucracy: arbitrage exit + beneficiary status \u2192 d \u2248 0.10 (institutional beneficiary), f(d) \u2248 -0.10, net benefit (negative chi). Export-oriented sectors: mobile exit + mixed status \u2192 d \u2248 0.55 (symmetric), f(d) \u2248 0.75, moderate experienced extraction. Scope modifier \u03c3(regional) = 0.9 reduces chi across all perspectives. Effective extraction chi = \u03b5 \u00d7 f(d) \u00d7 \u03c3(S): ranges from \u03c7 \u2248 -0.05 (industries) to \u03c7 \u2248 0.65 (consumers), validating tangled rope classification (0.40 \u2264 \u03c7 \u2264 0.90 at institutional perspective).",
-    "mandatrophy_analysis": "The constraint avoids mandatrophy collapse by maintaining genuine coordination function alongside extraction. The defining feature preventing misclassification: protected industries genuinely need the coordination commitment (harmonization prevents member states from undercutting each other's tariffs, solving a prisoner's dilemma of tariff races). This is not theater \u2014 the commitment mechanism is real. Simultaneously, the extraction is not incidental coordination cost; it is asymmetric, concentrated, and borne by powerless dispersed actors. The constraint exhibits all tangled rope gates: (a) base_extraction \u2265 0.30 (0.52), (b) suppression \u2265 0.40 (0.48), (c) coordination function present (mutual tariff commitment), (d) asymmetric extraction present (consumers bear costs, industries reap benefits), (e) requires active enforcement (CET administration, dispute resolution, exemption monitoring). If the constraint were pure extraction (Snare), the coordination function would vanish \u2014 but organized industries genuinely need the commitment device. If it were pure coordination (Rope), the asymmetry would vanish \u2014 but distribution is asymmetric (d values differ sharply). The theater ratio trajectory (rising from 0.38 to 0.55) indicates potential degradation toward Piton over longer timescales if exemptions continue to undermine actual harmonization; current measurement does not yet justify piton classification (theater < 0.70), but omega variables document this risk."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The CET regime generates clear extraction from consumers (elevated prices), smaller-state policy autonomy (constrained tariff flexibility), and agricultural exporters (distorted incentive structure against agriculture). But extraction is not total because genuine coordination benefits exist: the constraint prevents a tariff race to the bottom that would benefit no one, enables smaller states to maintain industrial development capacity, and creates stable predictability for regional trade. The measurement captures this mixed profile. The trajectory over time shows extractiveness rising (0.35 → 0.52) as tariff rates have incrementally increased and the regime has locked in rather than evolved. Suppression (0.58): Moderate-high, stable across the interval. Barriers to exit include trade dependence (difficult for smaller members to renegotiate bilaterally), retaliation risk (departing members face trade punishment), institutional lock-in (dispute mechanisms and protocols create sunk costs), and lack of alternative regional arrangements. These are substantial barriers but not absolute — renegotiation is possible (as evidenced by various exemptions and special regimes), distinguishing this from total suppression (0.70+). Theater ratio (0.64): High and rising. CET committee structures, compliance monitoring, and dispute panels have proliferated without corresponding expansion in actual tariff changes. Many committee outputs are procedural rather than substantive. The rising trajectory (0.48 → 0.64) indicates the institutional apparatus is accumulating performance-of-coordination without deepening coordination itself, consistent with piton dynamics.",
+    "perspectival_gap": "This constraint demonstrates maximal perspectival divergence. The Brazilian protected industrial sector sees pure coordination (Rope) — the CET solves their problem of maintaining tariff discipline. The consumer sees pure extraction (Snare) — elevated prices with no exit. The small state (Paraguay/Uruguay) sees mixed extraction and benefit (Tangled Rope) — constrained but accessing the regional market. The Mercosur institution sees itself as enforcing coordination while selectively distributing extraction (Tangled Rope) — some institutional actors enforce discipline, others resist. The piton perspective reveals the institutional apparatus as increasingly performative — elaborate procedures generating limited actual tariff changes. The natural law perspective risks mischaracterizing the entire regime as inherent to regional integration, when it is actually a contingent institutional choice. The analytical observer's most valuable role is making visible what each actor takes for granted: the constraint simultaneously solves a real problem (preventing tariff race-to-the-bottom) and extracts value from those with least power to resist (consumers, small states, agricultural exporters).",
+    "directionality_logic": "Each perspective's directionality value derives from its structural position in the extraction flow. Brazilian protected industry: beneficiary + arbitrage option → low d (0.10-0.20) → negative or minimal χ. Consumer: victim + trapped → high d (0.85-0.95) → high χ. Small state: victim and beneficiary simultaneously, constrained options → moderate d (0.55-0.65) → moderate χ. Labor unions: organized victims with negotiation power → moderate-low d (0.50-0.60) → moderate χ. Mercosur institution: beneficiary of enforcement fees and institutional growth, but constrained by member states → moderate d (0.45-0.55) → moderate χ. The piton perspective itself is not indexed to a power atom — it is a observational classification revealing the theatrical quality of the institutional apparatus. The natural law perspective risks zero d (treating the constraint as background condition) but the engine's false summit detector will identify the beneficiary declarations (Brazilian industry, Argentine protected sectors) and flag the mountain classification as a false summit.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating that 'coordination or extraction?' is not a binary choice but an index-relative classification. The same rule (common external tariff of 35% on automotive, 20% on appliances, 15% on agriculture) solves the Brazilian industrial sector's coordination problem (maintaining protection) while extracting from consumers (elevated prices). The coordination and extraction are not sequential or conditional — they are simultaneous and inherent to the structure. The tangled rope type exists precisely to capture this simultaneity: genuine coordination function (preventing race-to-the-bottom) + asymmetric extraction (costs on consumers/small states) + active enforcement (tariff committees). Mandatrophy is resolved by recognizing that the constraint is tangled rope from the analytical observer's perspective (the structural reality is mixed), while individual actors perceive it from their position-specific index: rope for beneficiaries, snare for powerless victims. The natural law perspective's 'tariff harmonization is inherent to customs unions' would resolve mandatrophy only if empirical analysis confirmed that all working regional arrangements require perfect harmonization — but they do not, making the natural law claim a false summit."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "regional_trade_integration_enforcement",
-      "consumer_welfare_in_customs_unions"
+      "agricultural_subsidy_rents_mercosur",
+      "uruguayan_trade_isolation_risk",
+      "brazilian_industrial_rent_seeking"
     ],
-    "dual_formulation_note": "Mercosur tariff harmonization is upstream of broader regional integration enforcement (common market formation, labor mobility, regulatory harmonization). The tariff constraint establishes the precedent and institutional infrastructure for coordination mechanisms; downstream constraints inherit both its genuine coordination logic and its extractive asymmetries."
+    "dual_formulation_note": "Mercosur tariff harmonization is a single constraint with stable epsilon across observables. The apparent decomposition (coordination problem, extraction mechanism, institutional theater) is perspectival, not observable-dependent — all three are simultaneously present in the structure. Do not split into separate stories. The constraint exemplifies how a single structural arrangement can be Rope (coordination-dominant view) or Snare (extraction-dominant view) or Piton (theater-dominant view) depending on the observer's structural position and time horizon."
   },
   "directionality_overrides": [
     {
-      "power_atom": "organized",
-      "d_value": 0.7
+      "power_atom": "powerful",
+      "d_value": 0.62
     }
   ]
 }

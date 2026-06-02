@@ -4,25 +4,25 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "slot"
+    "measurement_id_prefix": "slot",
+    "story_uid": "f2ae3457-bbc7-48ad-b2b5-8ff546351689"
   },
   "base_properties": {
-    "extractiveness": 0.58,
-    "suppression": 0.52,
-    "theater_ratio": 0.38,
+    "extractiveness": 0.52,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
     "claimed_type": "tangled_rope",
     "human_readable": "Slot Trading Secondary Market Coordination with Extraction",
     "topic_domain": "economic/market_structure",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "slot_allocators",
-      "early_slot_holders",
-      "brokers"
+      "large_operators_with_capital",
+      "slot_brokers"
     ],
     "victims": [
-      "late_entrants",
+      "new_entrants",
       "small_operators",
-      "end_users"
+      "slot_allocation_fairness"
     ]
   },
   "perspectives": [
@@ -31,18 +31,18 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "regional",
-      "label": "The Late Entrant",
-      "comment": "PERSPECTIVE 1: LATE ENTRANT (SNARE) \u2014 New operators entering after slots have been allocated face no viable alternative to the secondary market. Purchase prices far exceed original allocation cost. No exit: must buy into the system or abandon business. High suppression through artificial scarcity and price barriers."
+      "spatial_scope": "global",
+      "label": "The New Market Entrant",
+      "comment": "PERSPECTIVE 1: NEW MARKET ENTRANT (SNARE) — Faces a two-tier entry cost: primary allocation cost plus secondary market premium. Capital-constrained entrants cannot acquire sufficient slots to reach viable scale. Trapped by the coordination mechanism itself — slots exist only through the secondary market at inflated prices. No exit without capital infusion or regulatory intervention."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "moderate",
       "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Small Operator",
-      "comment": "PERSPECTIVE 2: SMALL OPERATOR (TANGLED ROPE) \u2014 Benefits from some market coordination (slot liquidity, price discovery) but bears asymmetric extraction through broker fees and price markups. Can technically exit by relocating or changing business model, but costs are substantial. Mixed experience of coordination and extraction."
+      "spatial_scope": "regional",
+      "label": "The Small Regional Operator",
+      "comment": "PERSPECTIVE 2: SMALL REGIONAL OPERATOR (TANGLED ROPE) — Genuinely benefits from slot trading: can acquire marginal capacity without waiting for new allocation rounds. But constrained by capital barriers — buying slots competes with operational investment. Secondary market provides coordination function but with asymmetric distribution of benefits. Can remain viable but at reduced profitability relative to large operators."
     },
     {
       "classification_type": "rope",
@@ -50,82 +50,82 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Slot Allocator",
-      "comment": "PERSPECTIVE 3: SLOT ALLOCATOR (ROPE) \u2014 Experiences the secondary market as coordination enabling asset redeployment and continuous optimization. Captures administrative benefit from pricing signals and liquidity. Net beneficiary with high exit optionality \u2014 controls the allocation mechanism itself."
+      "label": "The Large Multi-National Operator",
+      "comment": "PERSPECTIVE 3: LARGE MULTI-NATIONAL OPERATOR (ROPE) — Pure coordinator and beneficiary. Has capital to acquire slots at any price; trades excess capacity for immediate liquidity; uses secondary market as flexible asset management tool. Experiences the constraint as pure coordination: buying and selling slots optimizes network utilization. Maximum arbitrage capacity — can exit any regional market while retaining global presence."
     },
     {
       "classification_type": "rope",
-      "agent_power": "powerful",
-      "time_horizon": "biographical",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Early Slot Holder",
-      "comment": "PERSPECTIVE 4: EARLY SLOT HOLDER (ROPE) \u2014 Received slots at original allocation (often zero or minimal cost). Secondary market enables profitable exit or lease arrangements. Significant arbitrage opportunity between original cost and secondary market price. Pure beneficiary."
+      "label": "The Slot Broker/Market Maker",
+      "comment": "PERSPECTIVE 4: SLOT BROKER/MARKET MAKER (ROPE) — Primary beneficiary of the market structure itself. Captures bid-ask spread; provides genuine liquidity function by warehousing slots and matching buyers to sellers. Low enforcement cost — market participants self-enforce through transaction incentives. Experiences secondary market as efficient coordination mechanism with built-in profit opportunity. Pure arbitrage capacity — can enter and exit any market segment."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Broker Ecosystem",
-      "comment": "PERSPECTIVE 5: BROKER ECOSYSTEM (TANGLED ROPE) \u2014 Brokers coordinate matching and price discovery (legitimate function) while extracting fees and spreads. Have some agency to develop alternative platforms but face switching costs and liquidity network effects. See constraint as both coordinating mechanism and extraction vehicle."
+      "spatial_scope": "global",
+      "label": "The Regulatory Authority",
+      "comment": "PERSPECTIVE 5: REGULATORY AUTHORITY (TANGLED ROPE) — Faces competing mandates: secondary markets coordinate supply efficiently (genuine benefit), but also create barrier to entry that concentrates market power. Enforces slot trading rules that enable extraction while providing coordination function. Constrained by political pressure from new entrants vs. efficiency benefits for large operators. Active enforcement required to prevent predatory behavior (slot hoarding, price collusion)."
     },
     {
-      "classification_type": "piton",
-      "agent_power": "institutional",
-      "time_horizon": "civilizational",
-      "exit_options": "arbitrage",
-      "spatial_scope": "national",
-      "label": "The Original Allocation Framework",
-      "comment": "PERSPECTIVE 6: ORIGINAL ALLOCATION FRAMEWORK (PITON) \u2014 The original allocation logic (first-come, lottery, merit-based) has been largely replaced by price-based secondary market as the de facto allocation mechanism. The original framework persists in ritual form but all real allocation now occurs through trading. Theater ratio high: regulatory oversight, transparency mandates, but actual function degraded as allocation has shifted entirely to secondary trading."
-    },
-    {
-      "classification_type": "tangled_rope",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a system view, slot secondary markets solve genuine coordination problems (matching supply and demand, enabling Coasean reallocation, price discovery) while simultaneously creating and maintaining artificial scarcity that benefits early holders at the expense of new entrants. The constraint is genuinely hybrid: coordination function is real; extraction mechanism is also real and asymmetrically distributed."
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a civilizational perspective, secondary markets for scarce allocated resources (spectrum, landing slots, environmental permits) appear as an immutable feature of coordination when primary allocation is fixed. Scarcity + reallocation = market mechanism. This perspective risks naturalizing a contingent institutional choice (fixed primary allocation) as an inherent law. The engine will identify this as a false summit — the 'immutability' rests on the assumption that primary allocation remains fixed."
     }
   ],
   "omegas": [
     {
-      "id": "allocation_fairness_threshold",
-      "question": "At what secondary market price markup does coordination benefit become dominated by extraction cost?",
-      "resolution_mechanism": "Comparative analysis of operators' profitability pre- and post-secondary market adoption; measurement of markup ratio relative to original allocation cost over time",
-      "impact": "If markup < 50%: coordination benefit dominates; reclassify toward Rope. If markup > 200%: extraction dominates; reclassify toward Snare for new entrants.",
-      "confidence": "medium",
+      "id": "primary_allocation_contingency",
+      "question": "Is the scarcity that drives secondary market extraction inherent to the resource, or contingent on the choice to cap primary allocation?",
+      "resolution_mechanism": "Historical comparison: markets where primary allocation expanded vs. those with fixed caps; counterfactual analysis of per-operator slot costs under different primary allocation policies",
+      "impact": "If contingent on allocation policy: mountain classification is false summit; the constraint is policy choice (tangled rope at best). If inherent to resource: scarcity is genuine natural constraint on coordination mechanism.",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Threshold between coordination value and extractive cost"
+      "description": "Whether secondary market extraction is inherent to scarcity or contingent on allocation policy"
     },
     {
-      "id": "original_allocation_design_intentionality",
-      "question": "Was the original allocation intentionally designed to create secondary market scarcity, or is secondary market extraction an unintended consequence?",
-      "resolution_mechanism": "Historical documentation of allocation design decisions; analysis of allocator incentives; comparison with alternative allocation mechanisms that could have supported secondary trading without scarcity-creation",
-      "impact": "If intentional: increases perceived extraction; mandatrophy shifts toward Snare. If unintended: maintains Tangled Rope classification; opens policy intervention pathways.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether scarcity-creating aspects of allocation were intentional"
-    },
-    {
-      "id": "alternative_platform_viability",
-      "question": "Could operators successfully migrate to alternative slot trading platforms without significant loss of liquidity and price discovery?",
-      "resolution_mechanism": "Network analysis of broker ecosystems; empirical testing of liquidity fragmentation effects; comparison with multi-platform trading environments in other markets",
-      "impact": "If viable: broker suppression is lower than measured; exit_options upgrade from constrained to mobile for some agents. If not viable: lock-in is structural; exit genuinely constrained.",
+      "id": "coordination_vs_rent_extraction_boundary",
+      "question": "What portion of secondary market pricing reflects genuine coordination cost (matching, settlement, inventory holding) vs. pure rent extraction from capacity scarcity?",
+      "resolution_mechanism": "Regression analysis of slot prices on: operator size, regional scarcity, broker spread, settlement time, inventory cost, collateral requirements. Decompose price premium into coordination cost and rent components.",
+      "impact": "If coordination >> rent (>80%): constraint is primarily Rope for most agents. If rent >> coordination (>70%): constraint is primarily Snare for capacity-constrained agents. If balanced (40-60%): tangled rope classification holds.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether alternative trading platforms could function at scale"
+      "description": "Proportion of secondary market pricing that reflects coordination vs. rent extraction"
     },
     {
-      "id": "slot_necessity_versus_privilege",
-      "question": "Are slots a genuine operational necessity or a privilege bundled with market access?",
-      "resolution_mechanism": "Comparative analysis of operators who secure slots versus those who operate without; cost-benefit analysis of slot acquisition versus alternative service delivery models",
-      "impact": "If necessity: trapped exit is accurate; Snare classification holds. If privilege: exit is more mobile than measured; reclassify constrained agents to mobile.",
+      "id": "entry_substitutability_alternatives",
+      "question": "Can new entrants bypass secondary market extraction through alternative market access mechanisms (partnerships, shared infrastructure, regulatory exemptions)?",
+      "resolution_mechanism": "Comparative analysis of entrant pathways: secondary market purchase vs. code-share partnerships, capacity-sharing agreements, or exemptions from primary allocation caps. Track entrant survival rates across pathways.",
+      "impact": "If rich alternatives exist: secondary market is coordination tool, not trap (Rope/Tangled Rope classification softens). If secondary market is sole viable pathway: extraction is binding, snare classification strengthens.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether slots are operational necessity or market privilege"
+      "description": "Whether alternative entry pathways can substitute for secondary market access"
+    },
+    {
+      "id": "price_discovery_efficiency",
+      "question": "Do secondary market prices efficiently reflect true operational value of slots, or do they reflect speculative dynamics and capital-availability inequalities among operators?",
+      "resolution_mechanism": "Time-series analysis of slot prices vs. utilization metrics, fuel costs, and demand; identification of price volatility not explained by operational fundamentals; comparison of buy-side vs. sell-side prices.",
+      "impact": "If prices efficient: market mechanism allocates slots to highest-value users (coordination advantage). If prices reflect speculation/capital inequality: extraction persists even with market clearing.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether secondary market prices reflect operational value or speculative dynamics"
+    },
+    {
+      "id": "regulatory_arbitrage_opportunity",
+      "question": "Can operators engineer regulatory arbitrage by shifting slot holdings across jurisdictions with different secondary market rules or tax treatment?",
+      "resolution_mechanism": "Network analysis of cross-border slot transfers; comparison of slot price differentials across jurisdictions; identification of transfers correlated with tax/regulatory changes.",
+      "impact": "If arbitrage possible: secondary market extraction is amplified by regulatory gaps (enforcement burden rises). If markets are arbitrage-tight: enforcement is more containable.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether regulatory arbitrage amplifies secondary market extraction"
     }
   ],
   "measurements": [
@@ -136,64 +136,78 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 3,
-      "value": 0.42
+      "time_point": 5,
+      "value": 0.4
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 6,
-      "value": 0.58
+      "time_point": 10,
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.15
+      "value": 0.3
     },
     {
       "metric": "theater_ratio",
-      "time_point": 3,
-      "value": 0.28
+      "time_point": 5,
+      "value": 0.32
     },
     {
       "metric": "theater_ratio",
-      "time_point": 6,
-      "value": 0.38
+      "time_point": 10,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.48
     }
   ],
   "interval": {
     "start": 0,
-    "end": 6
+    "end": 10
   },
   "commentary": {
-    "narrative_context": "Slot trading secondary markets create a structurally hybrid constraint combining genuine coordination function with asymmetric extraction. The secondary market solves real coordination problems: operators with excess capacity can relinquish slots; operators needing additional slots can acquire them without waiting for new primary allocation; prices provide signals for capacity optimization. However, the constraint simultaneously creates and maintains artificial scarcity that benefits early slot recipients (who received slots at original allocation cost, often zero or minimal) at the expense of late entrants who must purchase at secondary market prices significantly above original cost. The allocator benefits from both coordination (efficient resource use) and extraction (fee revenue and administrative control). Brokers facilitate price discovery while extracting bid-ask spreads. The original allocation framework, now degraded to ritual status, theoretically governed slot distribution, but actual allocation has shifted entirely to secondary trading. This constraint demonstrates how coordination and extraction can coexist within a single mechanism, with different agents experiencing fundamentally different classification outcomes depending on their structural position in the allocation hierarchy.",
+    "narrative_context": "Secondary slot trading markets create a structurally hybrid constraint that solves genuine coordination problems while enabling asymmetric extraction from capacity-constrained operators. The secondary market enables operators with excess capacity to relinquish slots without permanent loss; operators needing additional slots can acquire them without waiting for new primary allocation rounds; prices provide signals for capacity optimization. However, this coordination mechanism exists within a fixed primary allocation framework that creates scarcity rents. Large operators with capital can acquire slots at any price and use them flexibly; small operators face binding constraints on capital deployment; new entrants face a two-tier entry cost (primary allocation + secondary premium). The constraint exhibits all six DR types from different perspectives, revealing how market mechanisms can simultaneously coordinate and extract. The theater ratio (0.35) reflects relatively low performative content — secondary markets function primarily through price signals and transactions rather than ritual or compliance theater. The extractiveness trajectory (0.28 → 0.52 over 10 periods) indicates rising rent extraction as market maturity increases and operators accumulate slot holdings.",
     "key_agents": [
-      "Slot Allocators: Institutional beneficiary (institutional/arbitrage) \u2014 controls primary allocation and captures secondary market coordination fees; can reallocate slots at will",
-      "Early Slot Holders: Powerful beneficiary (powerful/arbitrage) \u2014 received initial allocation at minimal cost; benefit from secondary market price appreciation",
-      "Late Entrants: Powerless victim (powerless/trapped) \u2014 cannot access primary allocation after initial window; forced to purchase at secondary market prices often 2-10x original cost",
-      "Small Operators: Moderate victim (moderate/constrained) \u2014 can purchase slots but at substantial cost; benefit from some market coordination but bear asymmetric fees",
-      "Broker Ecosystem: Organized actor (organized/constrained) \u2014 coordinate matching and price discovery; extract bid-ask spreads; face switching costs preventing alternative platforms",
-      "End Users: Collective victim (powerless/trapped) \u2014 ultimately bear secondary market markups in final service delivery costs; no direct participation in trading",
-      "Analytical Observer: System view (analytical/analytical) \u2014 identifies hybrid structure as genuinely coordinating AND extracting"
+      "New Market Entrants: Primary victims (powerless/trapped) — face binding capital constraints and two-tier entry cost through secondary market; cannot exit without external capital",
+      "Small Regional Operators: Secondary victims (moderate/constrained) — benefit from flexible slot access but face rising operational costs and profitability compression",
+      "Large Multi-National Operators: Primary beneficiaries (institutional/arbitrage) — use secondary market as efficient asset management tool; can exit any regional market; capture rising rents from slot holdings",
+      "Slot Brokers and Market Makers: Secondary beneficiaries (institutional/arbitrage) — capture bid-ask spread and provide genuine liquidity; pure arbitrage capacity",
+      "Regulatory Authority: Institutional mediator (organized/constrained) — enforces coordination function while managing entry barriers; constrained by competing mandates for efficiency vs. fairness",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — risks naturalizing contingent allocation policy as inherent scarcity constraint"
     ],
-    "logic_rationale": "Extractiveness (0.58): Moderate-high. Reflects asymmetric price markups for late entrants alongside genuine coordination benefits for the overall system. The base value increased from 0.28 to 0.58 over the measurement interval as secondary market premiums accumulated and became the de facto allocation mechanism. Suppression (0.52): Moderate. Barriers include artificial slot scarcity (by design of primary allocation), network effects concentrating brokers, switching costs for alternative platforms, and regulatory barriers to new allocation mechanisms. However, suppression is not total \u2014 some operators do exit, some alternative platforms exist (though with reduced liquidity), and regulatory oversight provides some transparency. Theater ratio (0.38): Moderate. The original allocation framework maintains regulatory compliance and transparency requirements but performs minimal actual allocation function \u2014 all real distribution occurs via secondary trading. Theater has increased from 0.15 to 0.38 as regulatory ritual has grown while coordination function has shifted entirely to secondary markets.",
-    "directionality_logic": "Directionality derives from beneficiary/victim status plus exit options. Allocators and early holders are beneficiaries with arbitrage exit options (d \u2248 0.10-0.20), experiencing negative or low \u03c7 \u2014 the constraint subsidizes them. Late entrants are victims with trapped exit (d \u2248 0.95), experiencing maximum \u03c7 \u2014 the constraint extracts from them. Small operators occupy middle position: moderate power, constrained exit, mixed beneficiary/victim status (they benefit from some coordination but bear fees and price markups) produce d \u2248 0.65-0.70, yielding moderate \u03c7. Brokers as organized institutional actors with constrained exit (switching costs) derive d \u2248 0.55-0.60. The analytical observer (d \u2248 0.72) recognizes the system-level hybrid structure without being captured by any single agent's perspective.",
-    "perspectival_gap": "The core perspectival gap is between beneficiaries and victims of the original allocation. Allocators and early holders see pure coordination (Rope) \u2014 the market enables efficiency and price discovery. Late entrants see pure extraction (Snare) \u2014 the secondary market forces them to subsidize early recipients. Both are structurally correct from their own positions. Small operators and brokers occupy hybrid perspectives (Tangled Rope) reflecting genuine coordination benefits bundled with asymmetric extraction. The piton classification of the original allocation framework emerges from the gap between formal function (distributing slots) and actual function (price-based reallocation through secondary trading). The theater increases as regulatory requirements proliferate while substantive allocation has moved entirely to trading mechanisms.",
-    "mandatrophy_analysis": "The constraint resolves mandatrophy by demonstrating that Tangled Rope is the accurate analytical classification when all perspectives are integrated. Early holders' Rope classification is NOT wrong \u2014 they genuinely experience coordination without extraction. Late entrants' Snare classification is NOT wrong \u2014 they genuinely experience pure extraction. The analytical observer recognizes that both experiences are produced by the same constraint structure: the secondary market coordinates (real function) while extracting through artificial scarcity (real mechanism). Mandatrophy is resolved by acknowledging that hybrid classification does not dissolve the perspectival gap \u2014 it clarifies that the gap is a structural feature, not an observational ambiguity. The question 'is this coordination or extraction?' has answer: yes, both, and the asymmetry of who coordinates and who extracts is the constraint's defining property."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The secondary market enables genuine coordination (matching supply to demand dynamically) but within a fixed primary allocation framework that creates scarcity rents. New entrants and small operators bear the full cost of this rent through higher slot acquisition prices. The extractiveness reflects that slot brokers and large operators capture value that would otherwise distribute to smaller competitors or new entrants. The measurement trajectory shows rising extractiveness as markets mature and sophisticated operators accumulate holdings — this is not a measurement error but evidence that the extraction mechanism strengthens over time as market structure consolidates. Suppression (0.48): Moderate. Barriers to competition include capital requirements, information asymmetries in slot value assessment, and regulatory restrictions on slot accumulation. Suppression is active enforcement by brokers (who gatekeep transactions) and regulators (who enforce slot ownership limits). But suppression is not total — secondary markets themselves reduce barriers relative to waiting for new primary allocations. Theater ratio (0.35): Low. Secondary markets operate primarily through price mechanisms rather than performative compliance. Minimal ritual or symbolic content compared to allocation committee processes or regulatory review procedures.",
+    "perspectival_gap": "Each perspective captures a different relationship to the scarcity and coordination function. The beneficiaries experience primarily the coordination benefit (secondary markets solve their flexibility problem). The victims experience primarily the extraction cost (secondary markets make entry impossible). The mediator (regulatory authority) experiences both simultaneously and cannot resolve the tension without policy change. The analytical observer risks collapsing this structural complexity into a natural law (scarcity is inevitable) rather than recognizing it as an institutional choice (primary allocation is fixed by policy).",
+    "directionality_logic": "Directionality values (d) for each perspective are determined by the agent's capital position, exit options, and structural relationship to the scarcity rent. Large operators with arbitrage options experience low d (0.15-0.25) — they are beneficiaries with multiple exit paths. Slot brokers experience low d (0.20) — their function IS providing liquidity, and they can exit any market segment. Small operators with constrained capital experience moderate d (0.55-0.65) — they are partly victims of the scarcity rent but partly benefit from the coordination mechanism. New entrants face high d (0.85-0.95) — they are trapped by capital requirements and cannot access the market through any mechanism other than secondary market premium payment. Regulatory authorities experience moderate-high d (0.60-0.70) — they bear costs of enforcement without capturing the coordination benefits that accrue to operators. The analytical observer at the civilizational context experiences high d (0.72) — the perspective risks naturalizing a contingent policy as universal law, creating responsibility for perpetuating the extraction mechanism without recognizing it as policy choice.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that market mechanisms can be simultaneously coordination solutions and extraction mechanisms depending on the structural framework. The mandatrophy question is NOT 'is the secondary market good or bad?' but 'good for whom, and at what cost to whom else?' The large operator's rope is genuine coordination from their perspective. The new entrant's snare is genuine extraction from their perspective. The regulatory authority's tangled rope is the true structural position — they must enforce rules that enable both coordination and extraction simultaneously. The false summit (analytical mountain) reveals the core mandatrophy: calling secondary markets 'natural' or 'immutable' naturalizes the primary allocation policy that creates the scarcity they then coordinate. The resolution is transparency about which policy choices generate which distributional outcomes, not a single definitive classification."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "access_to_market_services",
-      "pricing_power_asymmetry"
+      "primary_allocation_rule_design",
+      "market_concentration_through_slot_accumulation"
     ],
-    "dual_formulation_note": "Slot trading secondary markets decompose into two distinct constraints: (1) Market Coordination Function (\u03b5\u22480.15, Rope) \u2014 genuine price discovery and liquidity provision; (2) Scarcity-Based Extraction (\u03b5\u22480.72, Snare) \u2014 the artificial scarcity created by original allocation design that benefits early holders. These are presented here as a single unified Tangled Rope story to capture the simultaneity of both functions in the operational constraint. Alternative decomposition: separate stories for coordination mechanics vs. extraction mechanism linked via affects_constraints."
+    "dual_formulation_note": "The secondary slot market is structurally dependent on primary allocation policy. If primary allocation were dynamic (expanding with demand), secondary market extractiveness would collapse to near zero — slots would be abundant and markets would be thin or absent. The constraint family includes: (1) primary_allocation_rule_design (ε~0.35, tangled_rope/rope depending on primary allocation generosity), (2) slot_trading_secondary_market (ε~0.52, tangled_rope), (3) market_concentration_through_slot_accumulation (ε~0.68, snare). These are causally linked: the primary allocation policy determines whether secondary markets exist; secondary market dynamics determine whether concentration accumulates."
   },
   "directionality_overrides": [
     {
-      "power_atom": "institutional",
-      "d_value": 0.15
+      "power_atom": "organized",
+      "d_value": 0.62
     }
   ]
 }

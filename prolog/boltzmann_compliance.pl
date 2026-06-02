@@ -2,6 +2,7 @@
     boltzmann_compliant/2,
     boltzmann_shadow_audit/2,
     cross_index_coupling/2,
+    coupling_liveness/3,
     detect_nonsensical_coupling/3,
     complexity_adjusted_threshold/2,
     epistemic_access_check/2,
@@ -258,6 +259,25 @@ classify_at_context_impl(C, Context, Type) :-
 %  is invariant across scopes. Each scope-level change in type
 %  counts as a violation.
 count_coupling_violations(Grid, Powers, Scopes, Violations) :-
+    coupling_violation_components(Grid, Powers, Scopes,
+                                  ScopeViolations, PowerViolations),
+    Violations is ScopeViolations + PowerViolations.
+
+%% coupling_violation_components(+Grid, +Powers, +Scopes, -ScopeViolations, -PowerViolations)
+%  Splits the violation count into its two independent channels, instead of
+%  only returning the sum:
+%    ScopeViolations — classification changes across scope at a FIXED power
+%      (the ±σ(S) multiplier crossing a threshold band — scope is a live index).
+%    PowerViolations — classification changes across power at a FIXED scope,
+%      EXCLUDING the divergences DR treats as expected indexical relativity
+%      (power is a live index beyond what the framework already licenses).
+%  count_coupling_violations/4 sums these for the coupling score; surfacing the
+%  components separately lets a consumer read WHICH index is live — the "seat"
+%  structure — rather than only the aggregate coupling magnitude. This is the
+%  SOLE source of the violation logic (the score path and coupling_liveness/3
+%  both route through it), so the two cannot silently drift apart.
+coupling_violation_components(Grid, Powers, Scopes,
+                              ScopeViolations, PowerViolations) :-
     findall(1,
         (   member(P, Powers),
             member(S1, Scopes),
@@ -267,9 +287,9 @@ count_coupling_violations(Grid, Powers, Scopes, Violations) :-
             member(classified(P, S2, T2), Grid),
             T1 \= T2
         ),
-        ViolationList
+        ScopeViolationList
     ),
-    length(ViolationList, ScopeViolations),
+    length(ScopeViolationList, ScopeViolations),
     % Also check power invariance at each scope
     findall(1,
         (   member(S, Scopes),
@@ -287,8 +307,30 @@ count_coupling_violations(Grid, Powers, Scopes, Violations) :-
         ),
         PowerViolationList
     ),
-    length(PowerViolationList, PowerViolations),
-    Violations is ScopeViolations + PowerViolations.
+    length(PowerViolationList, PowerViolations).
+
+%% coupling_liveness(+Constraint, -ScopeViolations, -PowerViolations)
+%  Per-constraint liveness profile: rebuilds the Power×Scope classification
+%  grid and reports the two violation channels separately (via
+%  coupling_violation_components/5). A constraint with (0, 0) is index-invariant
+%  on this grid — seat-free with respect to the observer index, which is
+%  consistent with a genuine Mountain (Boltzmann invariance is a PARTIAL test
+%  for Mountain-ness, not a pathology flag). Non-zero counts say which index
+%  moves the verdict: scope, power, or both. Fails (to be caught by callers)
+%  when the grid cannot be built — e.g. epistemic access is unavailable.
+coupling_liveness(C, ScopeViolations, PowerViolations) :-
+    coupling_test_powers(Powers),
+    coupling_test_scopes(Scopes),
+    findall(classified(P, S, T),
+        (   member(P, Powers),
+            member(S, Scopes),
+            coupling_test_context(P, S, Ctx),
+            classify_at_context(C, Ctx, T)
+        ),
+        Grid),
+    Grid \= [],
+    coupling_violation_components(Grid, Powers, Scopes,
+                                  ScopeViolations, PowerViolations).
 
 %% expected_power_divergence(+P1, +P2, +T1, +T2)
 %  Power-driven classification divergence is EXPECTED in DR.

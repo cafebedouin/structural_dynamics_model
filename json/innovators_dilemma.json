@@ -4,24 +4,24 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "innov"
+    "measurement_id_prefix": "innov",
+    "story_uid": "e2532d64-740a-4411-b1a4-9d26e8440ddb"
   },
   "base_properties": {
     "extractiveness": 0.52,
     "suppression": 0.48,
     "theater_ratio": 0.35,
     "claimed_type": "tangled_rope",
-    "human_readable": "The Innovator's Dilemma",
+    "human_readable": "The Innovator's Dilemma: Incumbent Constraint to Disruptive Entry",
     "topic_domain": "economic/technological",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "incumbent_firm_shareholders",
-      "high_margin_customer_segment"
+      "incumbent_firm_management"
     ],
     "victims": [
-      "disruptive_innovators",
-      "low_margin_market_entrants",
-      "future_competitive_position"
+      "disruptive_entrants",
+      "underserved_market_segments"
     ]
   },
   "perspectives": [
@@ -30,18 +30,27 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "The Disruptive Entrant",
+      "comment": "PERSPECTIVE 1: DISRUPTIVE ENTRANT (SNARE) — New firms entering with low-margin innovations face structural suppression: incumbent distribution networks, customer lock-in, brand preference, and capital barriers block market access. The entrant's only viable path (underserved low-margin segment) offers insufficient revenue to fund scaling. Trapped by economic geography — cannot afford to compete in incumbent-controlled channels."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "generational",
+      "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Disruptive Innovator (Startup)",
-      "comment": "PERSPECTIVE 1: DISRUPTIVE INNOVATOR (SNARE) \u2014 Small entrant with minimal resources, trapped in low-margin niche. Incumbent's rational R&D allocation starves alternative pathways. No exit: must either succeed against structural disadvantage or fail. Faces suppression through incumbent's scale advantages, distribution networks, and customer lock-in. Maximum extraction experienced."
+      "label": "Underserved Market Segments",
+      "comment": "PERSPECTIVE 2: UNDERSERVED MARKET SEGMENTS (SNARE) — Customer populations in low-margin segments remain structurally excluded from incumbent offerings because those offerings are optimized for premium segments. No incumbent incentive to serve them. Trapped by demand profile — cannot afford premium prices; cannot exit to alternative suppliers (none exist at their price point)."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "moderate",
-      "time_horizon": "generational",
+      "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Low-Margin Customer Base",
-      "comment": "PERSPECTIVE 2: LOW-MARGIN CUSTOMER BASE (TANGLED ROPE) \u2014 Constraints are both coordinating (access to improving products) and extracting (locked into low-margin alternatives, forced to accept slower innovation in their segment). Trapped by resource scarcity but also benefit from any innovation that reaches them. Constrained exit: could theoretically switch but switching costs are high."
+      "label": "The Incumbent Firm (Mid-Level Managers)",
+      "comment": "PERSPECTIVE 3: INCUMBENT FIRM MID-LEVEL MANAGERS (TANGLED ROPE) — Managers face a genuine coordination problem (maximizing shareholder value requires responsiveness to profitable customers) alongside extraction pressure (organizational structure and incentives foreclose lower-margin opportunities). Some mobility — can lobby for resource reallocation — but constrained by fiduciary duty and performance metrics. Experience both the logic of the dilemma and its constraints."
     },
     {
       "classification_type": "rope",
@@ -49,71 +58,71 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Incumbent Firm's Management",
-      "comment": "PERSPECTIVE 3: INCUMBENT FIRM MANAGEMENT (ROPE) \u2014 Rational coordination mechanism: listening to best customers, investing in high-margin products maximizes short-term shareholder value. Management experiences the constraint as sound business logic. High exit optionality: can reallocate capital, acquire disruptors, or pivot. Net beneficiary \u2014 extraction runs toward them."
+      "label": "Incumbent Firm Shareholders",
+      "comment": "PERSPECTIVE 4: INCUMBENT FIRM SHAREHOLDERS (ROPE) — Primary beneficiary. The constraint coordinates capital allocation toward high-margin segments, maximizing near-term returns. The firm's rational response to shareholder pressure is to dismiss low-margin opportunities (correctly, in pure financial terms). Exit via arbitrage — can reallocate capital if dissatisfied. Experience the constraint as optimal coordination."
     },
     {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "generational",
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
       "exit_options": "mobile",
       "spatial_scope": "global",
-      "label": "The Venture Capital Ecosystem",
-      "comment": "PERSPECTIVE 4: VENTURE CAPITAL ECOSYSTEM (SCAFFOLD) \u2014 Structured to fund disruptive entrants precisely because incumbents under-allocate to low-margin markets. VC capital is a temporary coordination solution with built-in sunset: successful disruptors scale up and eventually become the new incumbent (facing the same dilemma), or they fail and capital redeploys. Low extraction from VC perspective because they have organizational exit and see structural purpose. Theater is low \u2014 capital allocation is functional, not performative."
+      "label": "Disruptive Incumbent Spinoff",
+      "comment": "PERSPECTIVE 5: DISRUPTIVE INCUMBENT SPINOFF (ROPE) — When incumbent firms explicitly fund separate low-margin subsidiaries (e.g., IBM's personal computer division as spin-off), the organizational structure changes. Spinoff experiences the constraint as coordination only — separate P&L removes the profitability hierarchy that suppresses low-margin work. Mobile exit available (can be sold or wound down). Pure coordination function."
     },
     {
-      "classification_type": "piton",
-      "agent_power": "institutional",
-      "time_horizon": "civilizational",
-      "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "The Vertical Integration Constraint",
-      "comment": "PERSPECTIVE 5: VERTICAL INTEGRATION (PITON) \u2014 Incumbent firms are often bound into supply chain relationships, manufacturing commitments, and organizational structures optimized for high-margin product lines. These commitments persist through institutional inertia long after the strategic rationale has changed. Theater_ratio reflects that much 'commitment to customer' is ritual organizational behavior \u2014 stakeholder boards, customer advisory committees, market research ceremonies \u2014 that preserves the constraint through performance rather than functional necessity. The constraint decays as these relationships are unbundled."
-    },
-    {
-      "classification_type": "mountain",
+      "classification_type": "tangled_rope",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "universal",
-      "label": "The Analytical Observer (Efficiency Perspective)",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / EFFICIENCY VIEW (MOUNTAIN) \u2014 From a civilizational/universal analytical frame, the dilemma appears as a logical inevitability: firms maximize expected value given information and incentives, and rational maximization of present cash flow creates organizational rigidity toward future possibilities. This perspective sees the constraint as an immutable feature of capital allocation logic. However, the base properties reveal this is a false summit: the dilemma is not a law of economics but a contingent organizational and incentive structure that can be decomposed and redesigned (dual innovation processes, separate business units, venture arms)."
+      "spatial_scope": "global",
+      "label": "The Analytical Observer (Structural View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From a civilizational frame, the constraint exhibits both genuine coordination (shareholder capital discipline prevents wasteful low-margin investment) and structural extraction (that same discipline prevents serving legitimate demand from underserved segments). The dilemma is real — not a natural law but a genuine structural bind where no single actor can escape without loss."
     }
   ],
   "omegas": [
     {
-      "id": "organizational_capability_vs_incentive",
-      "question": "Is the innovator's dilemma fundamentally about organizational capability (ability to execute low-margin strategies) or about incentive misalignment (unwillingness to cannibalize high-margin business)?",
-      "resolution_mechanism": "Empirical analysis of incumbent firms that have successfully deployed dual innovation processes (e.g., IBM's PC division, Microsoft's cloud transition, incumbents with venture arms). Distinguish firms that failed due to capability gaps vs those that could have succeeded with different incentive structures.",
-      "impact": "If incentive-driven: the constraint is a tangled rope that can be restructured (separate P&L, modified compensation, sunset clauses on legacy products). If capability-driven: the constraint remains a snare for incumbents regardless of incentives.",
+      "id": "profitability_hierarchy_contingency",
+      "question": "Is the incumbent's inability to pursue low-margin innovation inherent to profit-maximization logic, or contingent on specific capital-structure assumptions?",
+      "resolution_mechanism": "Comparative analysis of incumbent responses across different ownership structures: widely-held public firms vs. founder-controlled firms vs. cooperative ownership vs. state-owned enterprises. If low-margin innovation rates differ substantially by ownership, the constraint is contingent on capital structure, not inherent to incumbency.",
+      "impact": "If contingent: constraint is a Tangled Rope that can be restructured via governance change (separate subsidiaries, cooperative models, or stakeholder governance). If inherent: constraint approaches Mountain classification — the dilemma is structural to competitive markets.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether dilemma is driven by organizational capability or incentive structure"
+      "description": "Whether profitability hierarchy is contingent on capital structure"
     },
     {
-      "id": "disruptor_margin_trajectory",
-      "question": "Do disruptive technologies inevitably migrate from low-margin to high-margin product tiers, or can they remain low-margin without losing viability?",
-      "resolution_mechanism": "Long-term margin analysis of canonical disruptors (digital photography, smartphones, cloud computing, electric vehicles) across their lifecycle. Identify whether margin compression is structural or contingent on competitive dynamics.",
-      "impact": "If inevitable: disruptors will eventually compete for incumbent's customer base, validating the dilemma's prediction. If contingent: low-margin niches can stabilize separately, reducing extraction on downstream entrants.",
-      "confidence": "medium",
+      "id": "spinoff_autonomy_sustainability",
+      "question": "When incumbents create autonomous low-margin subsidiaries, do they maintain genuine independence, or does parental pressure to contribute to consolidated returns gradually reintroduce the profitability hierarchy?",
+      "resolution_mechanism": "Longitudinal analysis of spinoff subsidiaries: budget autonomy, performance expectations, and independence trajectory over 5-10 years. Track whether low-margin focus persists or gets reoptimized toward higher margins after parental integration.",
+      "impact": "If autonomy persists: spinoff model is a structural escape from the dilemma. If autonomy erodes: the constraint is more robust than Christensen suggests — parental pull toward profitability is difficult to resist even with formal separation.",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether disruptor margin trajectory is inevitable or contingent"
+      "description": "Whether spinoff autonomy persists over time"
     },
     {
-      "id": "structural_decomposability",
-      "question": "Can the dilemma be structurally decomposed through organizational design (separate business units, distinct governance, modified incentives, venture arms) or is it an immutable consequence of rational profit maximization?",
-      "resolution_mechanism": "Meta-analysis of incumbent response strategies to disruption: do firms with dual innovation processes, separate venture units, or modified compensation show different disruptor response rates? Longitudinal tracking of organizational structures that have successfully navigated disruption.",
-      "impact": "If decomposable: the constraint is a tangled rope with redesign opportunities, not a snare. If immutable: the constraint borders on mountain (natural law of capital allocation), but the base properties still contradict \u2014 the suppression is institutional, not natural.",
+      "id": "incumbency_vs_market_dynamics",
+      "question": "Is the observed failure of incumbents to respond to disruption driven by the organizational constraint described in the dilemma, or by underlying market dynamics (switching costs, network effects, sunk capital) that would constrain ANY actor in the incumbent's position?",
+      "resolution_mechanism": "Counterfactual analysis: would a hypothetically rational, unconstrained incumbent with perfect foresight still rationally choose to prioritize high-margin segments? If yes, the constraint is more fundamental than organizational; if no, the organizational constraint is causal.",
+      "impact": "If fundamental: the dilemma is a structural feature of competition under uncertainty. If organizational: better governance structures (spinoffs, separate incentives) can overcome it.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Whether the dilemma can be decomposed through organizational redesign"
+      "description": "Whether constraint is organizational or market-structural"
+    },
+    {
+      "id": "entrant_advantage_sustainability",
+      "question": "Does the disruptive entrant's advantage persist as the technology matures and scales, or does the incumbent's superior resources eventually enable catch-up and recapture?",
+      "resolution_mechanism": "Historical pattern analysis across multiple disruption cycles: telecommunications (mobile vs landline), photography (digital vs film), automotive (electric vs combustion). Track whether entrants maintain advantage post-scaling or if incumbents recapture market share.",
+      "impact": "If entrant advantage persists: the dilemma creates permanent structural disadvantage for incumbents (long-term snare). If incumbents recapture: the dilemma is a temporary window; the constraint weakens once technology proves itself and high-margin routes emerge.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether disruptive advantage persists or erodes"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.38
     },
     {
       "metric": "base_extractiveness",
@@ -128,17 +137,32 @@
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.25
+      "value": 0.28
     },
     {
       "metric": "theater_ratio",
       "time_point": 5,
-      "value": 0.3
+      "value": 0.32
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
       "value": 0.35
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.48
     }
   ],
   "interval": {
@@ -146,35 +170,34 @@
     "end": 10
   },
   "commentary": {
-    "narrative_context": "The Innovator's Dilemma describes a structural constraint where incumbent firms, by rationally maximizing shareholder value through investment in high-margin products and responsiveness to their most profitable customer segments, create an organizational inability to respond competitively to disruptive technologies that begin in low-margin, underserved markets. This is not a failure of management competence or strategy \u2014 it is the rational output of profit-maximizing firms operating under standard capital allocation rules, customer feedback mechanisms, and quarterly earnings pressures. The constraint exhibits a perspectival range from pure coordination (incumbent's experience of listening to customers) to pure extraction (disruptor's experience of being locked out) to contingent temporary problems (venture capital's response) to degraded institutional patterns (vertical integration inertia) to false naturalizations (efficiency frame). The base extractiveness (0.52) reflects that the incumbent's rational behavior does extract from disruptors and low-margin segments, but it is not overwhelming suppression \u2014 disruptors can and do escape by acquiring capital, building scale, or moving into adjacent markets. The theater ratio (0.35) is low because the constraint operates through material incentive structures (quarterly earnings, customer profitability, capital allocation processes) rather than performative ritual. The constraint is primarily structural and functional, not theatrical.",
+    "narrative_context": "The Innovator's Dilemma describes a structural constraint where incumbent firms pursuing rational financial optimization become organizationally incapable of responding to disruptive technologies. The constraint operates at the intersection of shareholder capital discipline (a coordination mechanism that prevents wasteful low-margin investment) and market segmentation (which creates trapped populations in underserved, low-margin segments). The dilemma is that the same organizational structures and incentives that maximize incumbent profitability in existing markets actively suppress the incumbent's ability to pursue disruptive low-margin opportunities. Unlike simple market competition, which permits exit through product repositioning or resource reallocation, the innovator's dilemma creates an asymmetric structural bind: disruptive entrants face suppressed entry conditions and trapped market segments, while incumbents face suppressed innovation capacity and trapped strategic optionality. The constraint accumulates over time as market segmentation deepens, switching costs rise, and the profitability hierarchy becomes institutionalized in organizational structure and management incentives.",
     "key_agents": [
-      "Incumbent Firm Management: Primary beneficiary (institutional/arbitrage) \u2014 maximizes shareholder value through rational capital allocation",
-      "High-Margin Customer Segment: Secondary beneficiary (moderate/arbitrage) \u2014 receives preferential innovation investment and responsiveness",
-      "Disruptive Innovators: Primary victim (powerless/trapped) \u2014 locked out of incumbent's distribution, capital, and R&D resources; forced to bootstrap in low-margin niches",
-      "Low-Margin Market Entrants: Secondary victim (moderate/constrained) \u2014 constrained by incumbent's scale advantages and network effects; benefit from any innovation that reaches them",
-      "Future Competitive Position: Structural victim (analytical/analytical) \u2014 incumbent's rationality today creates organizational rigidity that prevents response to tomorrow's competitive threats",
-      "Venture Capital Ecosystem: Organized mediator (organized/mobile) \u2014 funds disruptors precisely because incumbents under-allocate; sees constraint as temporary coordination problem with sunset"
+      "Incumbent Firm Shareholders: Institutional beneficiary (institutional/arbitrage) — benefit from capital discipline and high-margin focus; can reallocate capital if dissatisfied",
+      "Incumbent Firm Management: Institutional beneficiary (institutional/constrained) — face fiduciary duty to prioritize profitable customers; structurally discouraged from low-margin exploration",
+      "Disruptive Entrant: Powerless victim (powerless/trapped) — face distribution barriers, capital constraints, and brand disadvantages; confined to low-margin segments",
+      "Underserved Market Segments: Powerless victim (powerless/trapped) — demand exists but is unserved because margins insufficient for incumbent economics; cannot access high-quality incumbent products at any price",
+      "Mid-Level Incumbent Managers: Moderate victim (moderate/constrained) — recognize opportunity but organizational structure and metrics suppress action; some agency through resource requests but constrained by profitability mandate",
+      "Disruptive Spinoff (if created): Institutional beneficiary (institutional/mobile) — separate P&L removes the profitability hierarchy that suppresses low-margin work; mobile exit available"
     ],
-    "logic_rationale": "Extractiveness (0.52): Moderate-high. The incumbent's rational allocation of capital and attention to high-margin customers directly starves alternative pathways and forces disruptors into low-margin traps. However, this is not the maximum extraction (0.70+) because disruptors have partial escape routes: venture capital funding, international markets, adjacent segments, and eventual acquisition. The extraction is real but not total suppression. It increases over time (0.35 \u2192 0.52) as incumbent's market dominance and customer lock-in deepen, making escape increasingly costly. Suppression (0.48): Moderate. Incumbents suppress disruptive pathways through scale advantages, distribution networks, and customer switching costs. However, suppression is not overwhelming \u2014 some disruptors do escape, venture capital can fund end-runs around incumbent advantages, and global markets provide geographic arbitrage. Theater ratio (0.35): Low. The constraint operates through functional material incentives (quarterly earnings, customer profitability metrics, capital allocation spreadsheets) rather than performative ritual. Management genuinely believes in listening to customers; the organizational processes that implement this belief are functional, not theatrical. As firms age and vertical integration deepens, theater does increase slightly (0.25 \u2192 0.35) as legacy commitments require performative justification.",
-    "perspectival_gap": "This constraint demonstrates fundamental disagreement about whether the dilemma is coordination or extraction. The incumbent sees rational coordination (Rope): they are solving the legitimate problem of allocating capital efficiently and responding to customer needs. The disruptive innovator sees pure extraction (Snare): they are locked out by incumbent's scale and have no exit. The VC ecosystem sees a temporary coordination failure (Scaffold): they can solve it by funding disruptors, but this solution has a built-in sunset as successful disruptors become new incumbents facing the same dilemma. The low-margin market segment sees mixed coordination and extraction (Tangled Rope): the incumbent's neglect of their segment is partially extractive (forcing them into inferior products) and partially coordinating (some innovation eventually reaches them). The efficiency observer risks seeing a natural law (Mountain): rational profit maximization necessarily produces this outcome \u2014 but the base properties reveal this is a false summit because the constraint can be decomposed through dual innovation processes, separate business units, and modified incentives.",
-    "directionality_logic": "Each agent's experienced extractiveness (chi) derives from their structural position relative to capital and customer attention flows. Incumbent management benefits from the constraint (d \u2248 0.1, low extraction) because they are rationally maximizing their objective function. High-margin customers benefit (d \u2248 0.2) because they receive preferential investment. Disruptive innovators experience maximum extraction (d \u2248 0.95) because they are locked out of incumbent's resources and face capital scarcity in low-margin markets. The VC ecosystem has moderate extraction (d \u2248 0.5) because they solve part of the problem but know their solution is temporary \u2014 successful disruptors will eventually become incumbents. The constraint's directional flow is from disruptors toward incumbents and their best customers: capital allocation, customer attention, distribution channels, and R&D resources all concentrate upmarket. Low-margin entrants bear the cost. Future competitive position (analytical perspective) experiences high extraction (d \u2248 0.85) because present rationality creates future organizational rigidity.",
-    "mandatrophy_analysis": "The mandatrophy here is the false distinction between 'this is coordination' (incumbent view) and 'this is pure extraction' (disruptor view). The constraint is genuinely a tangled rope: it has a real coordination function (capital allocation and customer focus are legitimate business disciplines that solve real problems) AND genuine asymmetric extraction (low-margin segments are starved of capital and innovation). The mandatrophy is resolved by recognizing that both perspectives are structurally accurate: the incumbent IS solving a coordination problem (capital scarcity is real), AND they ARE extracting from disruptors (low-margin market access is real). The constraint is not 'really' coordination disguised as extraction, or vice versa. It is a hybrid that genuinely combines both functions. The evidence for tangled rope classification is the dual presence of beneficiary groups (high-margin customers, incumbent shareholders) deriving real coordination benefits, victim groups (disruptors, low-margin entrants) bearing real extraction costs, and active enforcement (capital allocation processes, customer advisory boards, quarterly earnings pressures that maintain the flow). The constraint cannot be classified as pure rope (no asymmetric extraction gate passes) or pure snare (there is genuine coordination function present) \u2014 it is legitimately both."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The incumbent firm extracts value from underserved segments through suppressed competition (they don't serve these segments, preventing entrants from accessing either the segments or the profitable high-margin channels). The entrant faces a form of structural rent extraction — forced to operate at low margins with restricted access. However, extractiveness is not maximal because the incumbent is not actively extracting from the entrant (no predatory pricing, no sabotage) — rather, the incumbent's rational profit-maximization creates conditions that suppress entrant viability. The measurement tracks upward over the interval as the constraint accumulates: initial extractiveness reflects the market-access suppression; later measurements include organizational lock-in as the profitability hierarchy becomes embedded in incentive systems. Suppression (0.48): Moderate. Disruptive entrants face genuine barriers (capital, distribution, brand switching costs) but are not completely blocked — the underserved segment remains accessible and represents a viable (if constrained) entry point. Over time, suppression increases slightly as incumbents fortify distribution networks and customer lock-in deepens. Theater ratio (0.35): Low. The constraint's mechanism is largely functional, not performative. Incumbents genuinely do maximize shareholder value; managers genuinely do respond to profitable customers; the organizational structure genuinely does create the incentive hierarchy that suppresses low-margin work. There is minimal theater — the constraint works as described, with little performative cover story.",
+    "directionality_logic": "Each perspective's directionality reflects the agent's structural position in the extraction flow. Shareholders with arbitrage options experience low effective extraction — they benefit from the constraint and can reallocate if dissatisfied. Disruptive entrants trapped in low-margin segments experience maximum extraction — they cannot escape the margin structure or access higher-margin channels. Underserved customers trapped without alternative suppliers experience maximum extraction. Mid-level managers experience moderate extraction because they recognize the opportunity but face organizational constraints that suppress action — they have some agency (can request resources) but face suppression (fiduciary duty, performance metrics, profitability targets). The spinoff perspective (institutional/mobile) experiences the constraint as pure coordination because structural separation removes the profitability hierarchy that suppresses low-margin work — managers can prioritize low-margin innovation without fiduciary conflict. The analytical observer's directionality reflects the balanced structural position: the dilemma is real because both the coordination function (capital discipline) and the suppression mechanism (profitability hierarchy) are structural features that no single actor can escape without loss.",
+    "perspectival_gap": "The perspectival gap reflects the fundamental structural bind at the heart of the dilemma. Shareholders and top management see pure coordination (Rope) — rational capital allocation toward profitable segments maximizing returns. Disruptive entrants and underserved segments see pure extraction (Snare) — trapped in low-margin suppression with no exit. Mid-level managers see the mixed reality (Tangled Rope) — they understand both the coordination logic and its extractive consequences. The spinoff sees the constraint dissolve into pure coordination (Rope) — when organizational structure changes, the bind dissolves. The analytical observer at civilizational scale sees the dilemma as a genuine structural bind (Tangled Rope) — not resolvable by any single actor, not a coordination failure that can be fixed by information or alignment, but a real clash between two legitimate structural forces: capital discipline and innovation responsiveness.",
+    "mandatrophy_analysis": "The innovator's dilemma resolves mandatrophy by distinguishing genuine organizational constraint (Tangled Rope with both coordination and extraction) from simple extraction or coordination. A pure-extraction reading (Snare) would suggest that incumbents deliberately block disruptive innovation — intentional predation. A pure-coordination reading (Rope) would suggest that capital discipline is benign — no extraction occurs. The Tangled Rope classification captures the real structure: both coordination and extraction are structural, both are rational from the perspectives that experience them as coordination, and neither can be eliminated without loss. The constraint is not intentional predation (beneficiaries do not need to conspire — profit maximization produces the outcome naturally) and not benign coordination (genuine harm flows to trapped entrants and underserved segments) but a genuine structural bind where legitimate interests clash. Mandatrophy is resolved by accepting that the dilemma cannot be solved by choosing between coordination and extraction — the structure contains both, and structural change (spinoffs, governance change, market-segment separation) is required to unbind them."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "market_selection_efficiency",
-      "venture_capital_concentration",
-      "organizational_capability_lock"
+      "market_segmentation_lock",
+      "customer_demand_hierarchy"
     ],
-    "dual_formulation_note": "The Innovator's Dilemma could decompose into two structurally distinct constraints: (1) incumbent_capital_allocation (resource allocation rational from quarterly perspective), (2) disruptor_market_access (entry barriers to low-margin segments). However, the constraint operates as a unified system where incumbent rationality directly causes disruptor constraint \u2014 the single \u03b5=0.52 story captures this unity better than separate stories. Network links show how capital concentration and organizational capability lock-in propagate the constraint's effects downstream."
+    "dual_formulation_note": "The Innovator's Dilemma can be decomposed into three distinct constraints: (1) capital-allocation discipline (ε ≈ 0.08, Mountain candidate — shareholder capital discipline is rational) vs (2) market-segmentation lock (ε ≈ 0.45, Tangled Rope — incumbent distribution and brand create barriers) vs (3) profitability-hierarchy suppression (ε ≈ 0.52, Tangled Rope — organizational incentives suppress low-margin exploration). This story integrates all three perspectives into one constraint, but decomposition reveals the distinct mechanisms. The unified treatment is appropriate because the dilemma is precisely the interaction of these three elements — each is benign separately, but their combination creates the bind."
   },
   "directionality_overrides": [
     {
       "power_atom": "institutional",
-      "d_value": 0.08
+      "d_value": 0.15
     }
   ]
 }

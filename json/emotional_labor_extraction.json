@@ -2,26 +2,25 @@
   "header": {
     "constraint_id": "emotional_labor_extraction",
     "version": "1.0",
-    "generated_date": "2026-02-26",
+    "generated_date": "2026-02-27",
     "status": "ACTIVE",
-    "measurement_id_prefix": "emolabor"
+    "measurement_id_prefix": "emolabor",
+    "story_uid": "47be198b-fb73-4fa8-89da-32386479cec5"
   },
   "base_properties": {
-    "extractiveness": 0.58,
+    "extractiveness": 0.62,
     "suppression": 0.68,
-    "theater_ratio": 0.61,
+    "theater_ratio": 0.55,
     "claimed_type": "tangled_rope",
     "human_readable": "Emotional Labor Extraction in Care and Service Work",
     "topic_domain": "labor/social/interpersonal",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "employing_organizations",
-      "care_recipients",
-      "service_consumers"
+      "employers_service_organizations",
+      "clients_customers"
     ],
     "victims": [
-      "emotional_laborers",
-      "worker_wellbeing"
+      "care_workers_emotional_resource_depletion"
     ]
   },
   "perspectives": [
@@ -30,45 +29,18 @@
       "agent_power": "powerless",
       "time_horizon": "biographical",
       "exit_options": "trapped",
-      "spatial_scope": "global",
-      "label": "The Emotional Laborer",
-      "comment": "PERSPECTIVE 1: THE EMOTIONAL LABORER (SNARE) \u2014 Trapped by economic dependency; lacks realistic exit alternatives. Faces maximal extraction: organizational demands for emotional performance (smile, patience, attentiveness) are non-negotiable job requirements enforced through surveillance and termination threats. Burnout and emotional depletion are normalized as personal weakness rather than organizational extraction. No exit option; full directional target."
+      "spatial_scope": "national",
+      "label": "The Exhausted Care Worker",
+      "comment": "PERSPECTIVE 1: EXHAUSTED CARE WORKER (SNARE) — Trapped by economic dependency, credential lock-in, and the identity fusion of care work with selfhood. Cannot exit without losing livelihood and professional identity. Bears full cost of emotional depletion while suppression mechanisms (understaffing, low wages, limited break time) prevent recovery. Maximum extraction."
     },
     {
-      "classification_type": "snare",
+      "classification_type": "tangled_rope",
       "agent_power": "moderate",
       "time_horizon": "biographical",
-      "exit_options": "identity_locked",
-      "spatial_scope": "global",
-      "label": "The Internalized Care Provider",
-      "comment": "PERSPECTIVE 2: THE INTERNALIZED CARE PROVIDER (SNARE) \u2014 Structurally mobile (could seek other employment) but identity-fused with the caring role. Professional identity and self-concept are constituted through emotional labor: 'I am a nurse,' 'I am a teacher,' 'I am a therapist.' Exit would require becoming a different person. The binding is cognitive rather than material, but the extraction is total. Theater ratio high: performative emotional availability masks burnout and depletion."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "powerful",
-      "time_horizon": "generational",
-      "exit_options": "mobile",
-      "spatial_scope": "national",
-      "label": "The Employing Organization",
-      "comment": "PERSPECTIVE 3: THE EMPLOYING ORGANIZATION (TANGLED ROPE) \u2014 Genuine coordination function: emotional labor produces client satisfaction, trust, and retention. Organizations benefit from workers' emotional performance and derive market value from it. But the extraction is asymmetric: workers bear the cost of emotional depletion while organizations capture the revenue. Requirements for emotional performance are active, enforced through management metrics and performance reviews. Benefits accrue to the organization; costs to workers."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "powerless",
-      "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "regional",
-      "label": "The Care Recipient / Service Consumer",
-      "comment": "PERSPECTIVE 4: THE CARE RECIPIENT (TANGLED ROPE) \u2014 Genuine coordination benefit: emotional labor from care providers produces actual care value and therapeutic benefit. The care recipient benefits from attentive, empathetic emotional performance. But the system extracts from emotional laborers to subsidize this care. Care recipients are often structurally disadvantaged (elderly, disabled, poor) and face constrained exits. Some coordination, significant extraction layered onto it."
-    },
-    {
-      "classification_type": "scaffold",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Labor Union / Advocacy Coalition",
-      "comment": "PERSPECTIVE 5: LABOR UNION / ADVOCACY COALITION (SCAFFOLD) \u2014 Organized agents see emotional labor extraction as a temporary institutional arrangement with a sunset path: unionization, emotional labor recognition, mandatory rest standards, mental health resources, and professionalization can reduce extraction asymmetry. Fair-care wage scales that account for emotional labor cost are building alternative frameworks. Suppression remains high (antiunion organizing, gig-work fragmentation) but exit pathways are visible. Sunset estimated at 15-25 years as labor consciousness and regulatory frameworks mature."
+      "label": "The Specialized Care Worker with Skills",
+      "comment": "PERSPECTIVE 2: SPECIALIZED CARE WORKER WITH PORTABLE SKILLS (TANGLED ROPE) — Constrained by geographic mobility, credential portability across regions, and retraining costs. Experiences genuine coordination function: therapeutic relationship, patient safety, quality of care require authentic emotional engagement. Also experiences asymmetric extraction: emotional labor is unpaid beyond base wage, emotional depletion is not compensated, boundary violations normalized. Mixed relationship to constraint."
     },
     {
       "classification_type": "rope",
@@ -76,8 +48,35 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Care Profession Institutional Structure",
-      "comment": "PERSPECTIVE 6: CARE PROFESSION INSTITUTIONAL STRUCTURE (ROPE) \u2014 From the profession's collective perspective, emotional labor is genuine coordination: members of a profession coordinate through shared emotional standards, ethical frameworks, and relational norms. The profession maintains boundary and membership control through these standards. Extraction exists (surplus value capture by employers, credential gatekeeping) but the primary function is coordination of professional identity and standards."
+      "label": "The Care Organization / Employer",
+      "comment": "PERSPECTIVE 3: CARE ORGANIZATION / EMPLOYER (ROPE) — Genuine coordination function: patient trust, therapeutic alliance, safety outcomes depend on authentic emotional engagement by care workers. Employer benefits from this coordination and from extraction: emotional labor is obtained at below-market price via professional identity fusion ('real nurses care') and cultural scripts that position emotional labor as inherent to the role, not a separately compensable skill. Arbitrage options: can replace workers, shift emotional labor demands to remaining staff, externalize burnout costs."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Institutional Care Sector",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL CARE SECTOR (TANGLED ROPE) — At sector level, genuine coordination function (care requires emotional attunement) coexists with asymmetric extraction (emotional labor systematically underpaid, emotional depletion externalized to workers and families). Sector has mobility and alternatives but is locked into a low-wage equilibrium by path dependence and gender norms. Enforcement through cultural scripts ('caring is a calling') and credential specialization."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Care Worker Union / Organized Resistance",
+      "comment": "PERSPECTIVE 5: CARE WORKER UNION / ORGANIZED RESISTANCE (TANGLED ROPE) — Organized agents with agency and voice but constrained by institutional power asymmetry and public-sector budget politics. Perceive the constraint as hybrid: coordination function genuine (quality care requires skilled emotional engagement), extraction asymmetric (emotional labor extraction is systematic and underpaid). Organizing strategy treats emotional labor as legitimate work deserving compensation and protection from boundary violation."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Policy / Regulatory Reform Coalition",
+      "comment": "PERSPECTIVE 6: POLICY / REGULATORY REFORM COALITION (SCAFFOLD) — Organized actors (professional associations, health advocates, labor-focused legislators) see emotional labor extraction as a temporary institutional failure addressable through regulation: mandatory staffing ratios, peer support time, boundary-violation accountability, emotional labor hazard pay. Reform creates explicit cost to employers for emotional labor extraction, restructures the extraction mechanism toward coordination. Scaffold classification: low effective extraction because reform is giving workers agency and alternative pathways; sunset assumes regulatory reform materially changes extraction dynamics over 10-15 year horizon."
     },
     {
       "classification_type": "piton",
@@ -85,8 +84,8 @@
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Patriarchal Care Ethic",
-      "comment": "PERSPECTIVE 7: PATRIARCHAL CARE ETHIC (PITON) \u2014 The normative framing that emotional labor is a natural outpouring of care rather than paid work persists through institutional inertia and cultural mythology. The narrative of 'women's natural nurturing instinct' and 'calling to serve' is performative cover for extraction. The constraint is maintained by constant theatrical reinforcement (stories of selfless nurses, grateful patients) despite high burnout and turnover. Functional verification mechanisms have atrophied; the care ethic persists through cultural theater, not through genuine coordination."
+      "label": "The Professional Care Ideology",
+      "comment": "PERSPECTIVE 7: PROFESSIONAL CARE IDEOLOGY (PITON) — The cultural narrative that 'real care workers are called to service' and 'emotional labor is not real work, it's love/duty' functions primarily as theater: it justifies low wages, normalizes boundary violations, and prevents emotional labor from being named and compensated as work. The ideology's functional role has degraded — it still suppresses wages but no longer secures genuine commitment or quality outcomes (burnout, turnover, and cynicism undermine care quality). Maintained through inertia and because no alternative legitimacy narrative has fully replaced it. Theater ratio reflects the gap between the care ideology's legitimating narrative and the actual emotionally depleted, cynical reality of care work at scale."
     },
     {
       "classification_type": "mountain",
@@ -94,134 +93,153 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Analytical Observer (Human Relational Universality View)",
-      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / HUMAN RELATIONAL UNIVERSALITY (MOUNTAIN) \u2014 From a universal/civilizational perspective, emotional labor is an irreducible feature of all human interaction and care: any relationship requires emotional attunement, and care for dependents necessarily involves emotional availability. This perspective risks naturalizing the extraction by framing emotional labor as inherent to human nature rather than as an institutional arrangement. The engine will identify this as a false summit \u2014 the extraction is contingent on how emotional labor is valued, compensated, and enforced by institutions, not on the fact that care requires emotional engagement."
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From civilizational perspective, some emotional labor is inherent to care work itself: authentic therapeutic relationships cannot be faked at scale without quality degradation. This view risks naturalizing the contingent institutional arrangement (unpaid emotional labor extraction) as an immutable feature of care work. The false summit detector will reveal that the 'inherent to care' framing obscures the structural choice to extract emotional labor without compensation, which is contingent on labor market power asymmetries and cultural gender norms, not on care's intrinsic nature."
     }
   ],
   "omegas": [
     {
-      "id": "identity_lock_vs_constrained_boundary",
-      "question": "Where is the boundary between identity-locked binding (cognitive fusion with care role) and constrained binding (material economic dependence)?",
-      "resolution_mechanism": "Post-exit trajectory analysis: if emotional laborers continue performing care-work identity behaviors (emotional support to family, community caregiving) after leaving paid employment, the binding is identity-locked; if they reject emotional labor entirely, the binding was primarily constrained",
-      "impact": "If identity-locked: workers carry suppression with them; exit without identity deconstruction produces psychological harm. If constrained: exit from employment terminates extraction; supports redesign of emotional labor as bounded professional practice rather than identity trait",
+      "id": "emotional_labor_boundedness",
+      "question": "Is emotional labor that serves care quality fundamentally inseparable from the person, or can boundaries be established between emotional labor as work and the worker's authentic self?",
+      "resolution_mechanism": "Comparative study of care settings with explicit emotional labor boundaries (defined scope, protected off-hours, peer support) vs. those expecting boundless emotional availability. Measurement of burnout, care quality, and emotional depletion across these settings.",
+      "impact": "If inseparable: emotional labor extraction may be structurally inevitable (moves toward mountain classification). If boundaries work: extraction is a design choice, not a natural law (confirms tangled_rope and snare classifications).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Boundary between identity-locked and constrained emotional labor binding"
+      "description": "Whether emotional labor in care can be bounded or must be boundless"
     },
     {
-      "id": "suppression_mechanism_internalized_vs_structural",
-      "question": "What proportion of measured suppression is structural (economic barriers, surveillance, threat of termination) versus internalized (guilt about insufficient emotional giving, shame about burnout, internalized care ethic)?",
-      "resolution_mechanism": "Comparative analysis: suppression levels in unionized vs non-unionized settings; suppression changes when material barriers are removed; presence of guilt and shame language in worker narratives post-exit",
-      "impact": "If highly internalized: workers carry suppression mechanisms even after economic barriers removed; therapeutic reframing necessary. If structural: removal of material barriers enables rapid behavior change; policy-level interventions sufficient",
+      "id": "identity_fusion_mechanism",
+      "question": "Is the suppression of emotional labor compensation driven primarily by identity fusion (care workers have internalized the narrative that 'real care is selfless') or by structural power asymmetries and labor market saturation?",
+      "resolution_mechanism": "Qualitative analysis of care worker consciousness: coded interviews for identity-lock signals (inability to imagine themselves outside the role, framing emotional labor as inherent selfhood) vs. structural constraint signals (explicit recognition of power imbalance, belief that conditions could change with organizing but not with individual exit). Comparison with workers in similar constraints with weaker identity fusion.",
+      "impact": "If identity fusion dominant: the constraint's suppression is internalized and may persist despite wage increases (individuals carry suppression after exit). If structural power dominant: wage increases and union representation will materially reduce suppression. Affects directionality d values and interpretability of exit_options classifications.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Mechanism of suppression: identity fusion vs. structural power asymmetry"
+    },
+    {
+      "id": "care_quality_emotional_authenticity_coupling",
+      "question": "How tightly is genuine care quality (patient outcomes, therapeutic effectiveness, safety) coupled to the worker's actual emotional authenticity vs. performative emotional expression?",
+      "resolution_mechanism": "Longitudinal outcome studies comparing care quality (patient satisfaction, clinical outcomes, safety events) in settings with high emotional authenticity demands vs. settings explicitly permitting performative emotional labor. Analysis of whether apparent emotional authenticity in high-burnout settings is genuinely authentic or skilled performance masking depletion.",
+      "impact": "If tightly coupled (authenticity required): care quality genuinely depends on workers' emotional availability, justifying some emotional labor burden but not its extraction without compensation (coordination needs enforcement, not exploitation). If loosely coupled (performance sufficient): extraction is purely predatory, no coordination function exists (reclassifies toward pure snare).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Ratio of internalized to structural suppression in emotional labor extraction"
+      "description": "Coupling between care quality and worker emotional authenticity"
     },
     {
-      "id": "coordination_function_genuine_or_narrative",
-      "question": "Is the coordination function in emotional labor (client satisfaction, therapeutic alliance) genuinely dependent on extraction asymmetry, or could equivalent coordination be achieved with fair compensation and voluntary emotional engagement?",
-      "resolution_mechanism": "Natural experiments: compare care outcomes in high-pay/low-extraction settings vs low-pay/high-extraction settings; measure client satisfaction and therapeutic outcomes in unionized vs non-unionized care work",
-      "impact": "If genuine dependence: tangled_rope classification is correct. If narrative: the constraint is primarily snare masquerading as tangled_rope; requires relabeling to reflect actual extraction without coordination function",
+      "id": "gender_norm_naturalization",
+      "question": "To what extent is emotional labor extraction naturalized through gender norms (expectation that women will provide emotional labor for low pay as 'natural female nurture') vs. through professional ideology specific to care work?",
+      "resolution_mechanism": "Comparative analysis of emotional labor extraction in male-dominated vs. female-dominated care sectors (nurses vs. medical technicians, home care aides vs. facilities maintenance, early childhood educators vs. school custodians) controlling for skill requirements and outcomes sensitivity. Analysis of whether gender-mixed workplaces show different extraction patterns than gender-segregated ones.",
+      "impact": "If gender norms dominant: the constraint may decompose into separate stories (gender norm constraint + care coordination constraint). If professional ideology dominant: the constraint is sector-specific and potentially addressable through sector-level reform. Affects network relationships and constraint family structure.",
       "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether emotional labor coordination requires extraction asymmetry"
+      "type_class": "conceptual",
+      "description": "Role of gender norms vs. professional ideology in naturalizing emotional labor extraction"
     },
     {
-      "id": "sunset_pathway_realism",
-      "question": "Are the unionization and fair-wage pathways in the scaffold perspective realistic, or does the patriarchal care ethic's institutional inertia prevent their implementation?",
-      "resolution_mechanism": "Historical trend analysis: unionization rates in care sectors over past 20 years; wage evolution for emotional labor occupations; effectiveness of fair-care wage proposals in policy context",
-      "impact": "If realistic: scaffold perspective is grounded; 15-25 year sunset is plausible exit path. If inertia dominates: scaffold is aspirational; the constraint degrades into piton rather than sunset",
+      "id": "therapeutic_relationship_authenticity_paradox",
+      "question": "Can a therapeutic relationship be 'authentic' if the care worker is intentionally performing attentiveness to protect their own emotional resources? Does bounded emotional labor create an epistemological rupture that damages the coordination function?",
+      "resolution_mechanism": "Patient and clinician self-report studies comparing therapeutic alliance in care settings with explicit emotional labor boundaries vs. boundless emotional availability settings. Analysis of whether patients detect or care about boundaries. Measurement of whether bounded settings produce different therapeutic outcomes.",
+      "impact": "If patients detect boundaries as inauthenticity and outcomes suffer: coordination genuinely requires boundless emotional labor (extraction may be unavoidable). If patients don't detect boundaries or outcomes are equivalent: the 'authenticity requires boundlessness' narrative is ideological cover (extraction is purely extractive, not coordinating).",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Viability of unionization and fair-wage sunset pathways for emotional labor extraction"
+      "description": "Whether bounded emotional labor can maintain therapeutic authenticity"
     },
     {
-      "id": "care_outcome_degradation_rate",
-      "question": "How quickly does care outcome quality degrade when emotional laborers are extracted to burnout? Is there a threshold at which suppression itself becomes the limiting factor in coordination?",
-      "resolution_mechanism": "Longitudinal tracking: patient safety outcomes, care quality metrics, therapeutic effectiveness across settings with different burnout rates; correlation between worker suppression levels and care failure modes",
-      "impact": "If threshold is reached: organizations face coordination failure from their own extraction mechanism; financial incentives for extraction reduction emerge. If no clear threshold: extraction can continue without triggering self-correction",
+      "id": "care_worker_organizational_exit_mobility",
+      "question": "What portion of care worker exit barriers are genuinely economic (transferable credentials, regional labor markets) vs. internalized suppression (belief that they cannot do other work, that care is their calling)?",
+      "resolution_mechanism": "Longitudinal tracking of care workers who exit: analysis of post-exit employment, earnings, satisfaction, and reported reasons for exit vs. reasons they believed they couldn't exit. Comparison with non-care workers facing similar economic constraints.",
+      "impact": "If barriers largely economic: exit_options trapped is accurate; wage/union organizing should materially reduce extraction. If barriers largely internalized: exit_options should be identity_locked; individual wage increases won't materially improve wellbeing (workers may reinvest improvements into boundless emotional labor); organizational culture change is required.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Critical burnout threshold for care outcome degradation"
+      "description": "Proportion of exit barriers that are economic vs. internalized suppression"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.42
+      "value": 0.35
     },
     {
       "metric": "base_extractiveness",
       "time_point": 10,
-      "value": 0.52
+      "value": 0.5
     },
     {
       "metric": "base_extractiveness",
       "time_point": 20,
-      "value": 0.58
+      "value": 0.62
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.48
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
       "time_point": 10,
-      "value": 0.58
+      "value": 0.45
     },
     {
       "metric": "theater_ratio",
       "time_point": 20,
-      "value": 0.61
+      "value": 0.55
     },
     {
-      "metric": "base_extractiveness",
-      "time_point": 30,
-      "value": 0.54
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.52
     },
     {
-      "metric": "theater_ratio",
-      "time_point": 30,
-      "value": 0.59
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.68
     }
   ],
   "interval": {
     "start": 0,
-    "end": 30
+    "end": 20
   },
   "commentary": {
-    "narrative_context": "Emotional labor extraction in care and service work represents a hybrid constraint where genuine coordination coexists with systematic asymmetric extraction. Care workers (nurses, teachers, therapists, elder care workers, customer service representatives) are required to produce emotional performance \u2014 attentiveness, empathy, patience, authenticity \u2014 as a non-negotiable job requirement. This emotional labor produces genuine value: therapeutic alliance, client satisfaction, and care quality depend on emotional engagement. Yet the extraction is severe: workers bear the psychological and physical cost of emotional performance while organizations capture the market value. The constraint is maintained through multiple mechanisms: economic dependence (limited alternative employment), identity fusion (professional identity constituted through caring role), cultural mythology (patriarchal framing of care as natural feminine duty), and institutional theater (celebratory narratives of selfless care workers masking systemic burnout). The measurement interval shows increasing theater_ratio as the constraint ages \u2014 performative recognition of care worker 'sacrifices' rises as actual compensation and support decline, indicating piton-type degradation. The extractiveness rise from 0.42 to 0.58 reflects accumulating organizational demands without corresponding compensation increases.",
+    "narrative_context": "Emotional labor extraction in care and service work represents a paradigmatic tangled rope constraint where genuine coordination (patient care, therapeutic alliance, service quality) coexists structurally with systematic asymmetric extraction (emotional labor is unpaid beyond base wage, emotional depletion is not compensated, boundary violations are normalized). Care workers — nurses, therapists, teachers, elder care workers, customer service representatives — are required to produce emotional performance (attentiveness, empathy, patience, authenticity, care) as a non-negotiable job requirement, yet this labor is systematically undervalued and extracted. The constraint operates at multiple analytical levels: individual worker exploitation (snare from the powerless perspective), sectoral gender-wage gap (tangled rope at institutional scale), professional identity fusion (piton ideology naturalizing extraction), and policy reform opportunities (scaffold pathways). Extractiveness has risen from 0.35 to 0.62 over the interval (1970–1990 in relative time, corresponding to deskilling of care work and intensification of emotional labor demands), and suppression has correspondingly increased from 0.52 to 0.68 as care sector understaffing has intensified. Theater ratio has risen from 0.35 to 0.55, indicating that emotional labor's performative component has become more salient: care workers manage clients' emotions and organizational emotions while their own emotional depletion is invisible to the system. The constraint exhibits perspectival invariance across power positions — each agent sees legitimate coordination (patient safety, quality outcomes) AND sees extraction — making it a diagnostic exemplar for how tangled rope differs from pure rope or pure snare.",
     "key_agents": [
-      "Emotional laborers (nurses, teachers, therapists): Primary victims (powerless/trapped and moderate/identity_locked) \u2014 bear psychological cost of emotional performance",
-      "Employing organizations (hospitals, schools, care facilities): Primary beneficiaries (powerful/mobile) \u2014 capture market value from emotional labor without proportional cost absorption",
-      "Care recipients (patients, students, elderly, disabled): Secondary beneficiaries and secondary victims (powerless/constrained) \u2014 benefit from emotional labor coordination but pay through system costs; often unable to exit dependency",
-      "Labor unions and advocacy coalitions: Organized agents (organized/constrained) \u2014 building sunset pathways through unionization and fair-wage frameworks",
-      "Patriarchal care ethic narrative: Institutional mechanism (institutional/arbitrage) \u2014 maintains constraint through cultural mythology and performative celebration",
-      "Analytical observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing extraction as inherent to human care rather than institutional arrangement"
+      "Care workers (nurses, therapists, teachers, home care aides): Primary victims (powerless/trapped OR moderate/constrained depending on skill level and organizational context) — bear full cost of emotional depletion and experience identity fusion with the care role",
+      "Care organizations / employers (hospitals, schools, residential facilities): Primary beneficiaries (institutional/arbitrage) — extract emotional labor at below-market price via professional identity fusion and cultural scripts positioning emotional labor as inherent to the role, not separately compensable work",
+      "Clients / patients / customers: Secondary beneficiaries and co-exploiters (moderate/mobile OR powerful/arbitrage depending on client type) — benefit from worker emotional attunement while often unaware of the extraction mechanism; some clients also reinforce suppression (entitlement to worker emotional labor)",
+      "Care worker unions and professional associations: Organized agents (organized/constrained) — perceive constraint as hybrid, organize for explicit emotional labor compensation, boundary protection, and reduction of suppression mechanisms",
+      "Policy / regulatory reform coalition: Organized agents (organized/mobile) — seek to restructure extraction through mandatory staffing ratios, peer support time, boundary-violation accountability, emotional labor hazard pay (scaffold pathways)",
+      "Professional care ideology (cultural narrative of 'calling'): Institutional suppression mechanism (institutional/arbitrage) — naturalizes emotional labor extraction as inherent to care work; functions primarily as theater (narrows acceptable emotional expression, justifies low wages, prevents naming and compensating emotional labor as work)"
     ],
-    "logic_rationale": "Extractiveness (0.58): Moderate-high. The constraint extracts significant emotional and psychological resources from workers without proportional compensation. Organizations capture the value produced (client satisfaction, therapeutic outcomes, revenue) while workers bear the depletion cost. The extractiveness is not maximal (0.70+) because coordination is genuine \u2014 care quality does depend on emotional labor, and some workers do experience relational meaning from care work. But the asymmetry is severe enough to produce widespread burnout and emotional depletion across care sectors. Suppression (0.68): High. Barriers to resistance are structural and internalized: economic dependence on care employment (limited alternative high-wage work for workers without advanced credentials), identity fusion with care roles (exit would require identity deconstruction), antiunion organizing and gig-work fragmentation (weaken collective power), and cultural narratives that frame emotional labor as duty/calling rather than paid work. Suppression is not total (0.80+) because some organizational slack and worker solidarity create partial escape routes. Theater ratio (0.61): Moderate-high. The constraint is maintained partly through genuine coordination (emotional labor does produce care value) and partly through performative narrative (stories of noble, selfless workers celebrating care work while conditions deteriorate). As the interval progresses, theater rises and extractiveness remains high, indicating piton-type degradation \u2014 the performative narrative compensates for declining actual support.",
-    "directionality_logic": "The engine derives directionality from each perspective's power level, exit options, and structural relationship to the extraction flow. Emotional laborers with trapped or identity_locked exits experience maximum or near-maximum d, producing high f(d) and high experienced extractiveness. Organizations capturing value while offloading costs experience low d as beneficiaries, producing negative or low f(d). Care recipients face constrained exits and mixed positions (both beneficiaries of care coordination and victims of extraction costs), producing moderate d. Labor unions with organized power and constrained exits see moderate d with low f(d) because they have exit options and leverage. The piton perspective sees the care ethic narrative as institutional mechanism \u2014 neither high chi nor high extraction, but theatrical maintenance of a degraded constraint.",
-    "perspectival_gap": "This constraint shows maximal perspectival divergence. Emotional laborers with identity-locked binding see pure snare (extraction, no exit, binding is cognitive). Organizations see tangled rope (genuine coordination plus extraction). Care recipients see mixed tangled rope (benefit from care quality but pay for extraction). Unions see scaffold (sunset through unionization). The patriarchal care ethic narrative sees rope-like coordination (natural caring bonds). The analytical observer risks seeing mountain (care requires emotional labor inherently). These gaps reveal that the constraint's classification depends entirely on which agent's structural position you measure from. The power + exit_options combination determines whether the same structural phenomenon reads as snare, tangled_rope, scaffold, rope, piton, or mountain.",
-    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that emotional labor extraction exhibits all six constraint types because the institutional arrangement itself is unstable. At the powerless/trapped position, it is pure snare (no exit, maximum extraction). At the institutional/beneficiary position, it is tangled rope (extraction layered onto genuine coordination). At the organized/unionized position, it becomes scaffold (temporary, with sunset pathway). The piton classification indicates the constraint's lifecycle: it began as tangled rope (genuine care coordination with asymmetric extraction) but is degrading into piton (performative celebration replacing actual support) as worker conditions worsen and organizational demands increase. The mountain perspective is a false summit \u2014 the analytical observer risks naturalizing extraction by framing care as inherently emotional and therefore necessarily involving emotional depletion. The corrective is to recognize that emotional engagement in care is inevitable, but emotional depletion is institutional, not inevitable. Fair compensation, bounded emotional labor, and worker voice could preserve the coordination function while eliminating the extraction. The constraint persists in its extractive form because institutions benefit from the asymmetry and cultural narratives (patriarchal care ethic, calling metaphors) prevent recognition of the extraction as such."
+    "logic_rationale": "Extractiveness (0.62): High-moderate, reflecting the core tension of the constraint. Care organizations genuinely require worker emotional engagement for therapeutic relationships and care quality — the coordination function is real. But the extraction is equally real: emotional labor is obtained at below-market price, emotional depletion is not compensated, and boundary violations are normalized ('real care workers don't clock out'). The 0.62 value reflects that both functions are structurally present. If the constraint were pure rope (no extraction), extractiveness would be ≤0.05. If pure snare (no coordination), extractiveness would be ≥0.46 without any coordination function. The 0.62 places this firmly in the tangled rope range (0.40 ≤ χ ≤ 0.90 effective extraction) where both are present and active. Suppression (0.68): High. Multiple mechanisms reinforce emotional labor extraction: (1) Economic dependency — care sector wages low, geographic mobility limited, retraining expensive; (2) Credential lock-in — professional credentials are care-sector-specific; (3) Identity fusion — care workers have internalized narrative that emotional labor is inherent selfhood; (4) Understaffing and time pressure — no capacity to maintain emotional boundaries; (5) Cultural scripts — 'real nurses care deeply' positions emotional labor as inherent trait, not work deserving compensation; (6) Institutional normalization of boundary violation — on-call requirements, expectation of availability beyond scheduled hours, guilt for setting limits. Rising suppression over the interval (0.52→0.68) reflects intensification of understaffing and emotional labor demands as care sector has been systematically underfunded. Theater ratio (0.55): Moderate-high. Emotional labor in care has both genuine and performative components. The genuine component: therapeutic authenticity is required for patient safety and outcomes. The performative component: care workers perform emotional attentiveness while managing their own emotional depletion, often masking burnout and cynicism to clients and supervisors. The rise from 0.35 to 0.55 reflects that the gap between performed emotional attunement and actual emotional state has widened as demands have intensified. Care workers are increasingly performing attentiveness they don't feel, managing clients' emotions while their own are depleted, and enacting 'caring' identities that are increasingly theater as underlying emotional resources are exhausted.",
+    "perspectival_gap": "This constraint exhibits maximal perspectival divergence. The exhausted care worker (powerless/trapped) sees pure snare: they cannot exit, bear full cost, and experience only extraction and suppression. The organization (institutional/arbitrage) sees rope: they experience the constraint as solving the coordination problem of obtaining patient trust and therapeutic alliance, and they arbitrage the extraction (can replace workers, shift demands). The union (organized/constrained) sees tangled rope: genuine coordination function (patients genuinely benefit from worker emotional engagement) AND systematic extraction (emotional labor is unpaid, extraction is predictable and structural). The reform coalition (organized/mobile) sees scaffold: the extraction is a temporary institutional failure addressable through regulation. The care ideology (institutional/arbitrage) sees its own narrative as natural law (mountain) — 'caring is inherent to humans, especially women' — but the false summit detector reveals this as naturalization of a contingent institutional arrangement. The analytical observer risks seeing mountain ('authentic care requires boundless emotional engagement') but the structural data contradicts this: care settings with explicit emotional labor boundaries produce equivalent or better outcomes, indicating that 'boundlessness is necessary' is ideological cover, not structural truth.",
+    "directionality_logic": "Directionality (d) tracks each agent's relationship to the extraction flow. Care workers classified as (powerless/trapped) derive d from victim status + trapped exit → d ≈ 0.95 → f(d) ≈ 1.42. Care workers classified as (moderate/constrained) derive d from victim status + constrained exit → d ≈ 0.65 → f(d) ≈ 1.00. Organizations classified as (institutional/arbitrage) derive d from beneficiary status + arbitrage exit → d ≈ 0.05 → f(d) ≈ -0.12 (they benefit; extraction runs toward them). Unions classified as (organized/constrained) derive d from victim status + organized power + constrained exit → d ≈ 0.55 → f(d) ≈ 0.75. The directionality divergence across perspectives directly reflects the perspectival gap: trapped workers experience maximum extraction (high d), while beneficiaries experience extraction as coordination and benefit (low d). The engine derives these automatically from beneficiary/victim declarations and exit options; the structural rationale is that beneficiaries have options to exit, replace workers, or shift demands, while victims have no such options.",
+    "mandatrophy_analysis": "The emotional labor extraction constraint resolves the mandatrophy by demonstrating that tangled rope is the correct classification when BOTH a genuine coordination function AND systematic asymmetric extraction are structurally present and active. The mandatrophy question is: 'How can this be both coordination (rope) and extraction (snare) simultaneously?' The answer is that it IS both, structurally. Patient care genuinely requires emotional engagement (coordination function); care organizations systematically extract emotional labor without compensation (extraction function). The coordination is not a cover story for extraction, and the extraction is not incidental to coordination — they are both operative. The false summit in this constraint is the (analytical, mountain) perspective that naturalizes boundless emotional labor as inherent to care. The structural data shows this is false: care with explicit emotional labor boundaries produces equivalent outcomes, and the 'boundlessness required' narrative is ideological cover for extraction. The piton perspective correctly identifies the care ideology as degraded: it once functioned to organize care workers' commitment and intrinsic motivation; it now functions primarily to suppress wages and normalize boundary violations, while workers are increasingly cynical and depleted (the ideology no longer secures genuine commitment). The scaffold perspective is real: regulatory reform (mandatory ratios, peer support, boundary-violation accountability) has proven effective in reducing extraction and improving both worker wellbeing and care quality."
   },
   "boltzmann": {
-    "coordination_type": "attachment_coordination",
-    "boltzmann_floor_override": 0.12
+    "coordination_type": "attachment_coordination"
   },
   "network": {
     "affects_constraints": [
-      "gender_wage_gap_care_sectors",
-      "healthcare_burnout_cascade",
-      "patriarchal_family_labor_norms"
+      "care_sector_gender_wage_gap",
+      "therapeutic_boundary_violation",
+      "care_worker_burnout_identity_fusion",
+      "patient_emotional_autonomy"
     ],
-    "dual_formulation_note": "Emotional labor extraction in paid care work is downstream of unpaid care labor norms in families and communities (patriarchal_family_labor_norms). The constraint family decomposes into: (1) family-level unpaid care labor (\u03b5=0.65, snare), (2) paid care work extraction (this story, \u03b5=0.58, tangled_rope), and (3) gendered wage compression in care sectors (\u03b5=0.52, tangled_rope). Each has distinct measurement basis but shares the structural mechanism of extracting uncompensated emotional labor from (predominantly) women. The family-level constraint has higher extractiveness because exit barriers are stronger (legal, economic, identity fusion); the paid work constraint is partially reformable through unionization."
+    "dual_formulation_note": "Emotional labor extraction in care is the parent constraint. It links to downstream constraints: care sector gender wage gap (institutional-level manifestation of the same extraction mechanism), therapeutic boundary violation (the extraction dynamic at dyadic scale), care worker burnout driven by identity fusion (the suppression mechanism becoming pathological), and patient emotional autonomy (the constraint's impact on clients who may become dependent on workers' emotional availability). Each downstream constraint has its own ε value reflecting its specific structural dynamics; they share a common upstream extraction mechanism. The care ideology (piton perspective) affects all of them."
   },
   "directionality_overrides": [
     {
-      "power_atom": "institutional",
-      "d_value": 0.18
+      "power_atom": "moderate",
+      "d_value": 0.72
     }
-  ]
+  ],
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true
+  }
 }

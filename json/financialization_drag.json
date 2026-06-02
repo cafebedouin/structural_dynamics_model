@@ -4,26 +4,27 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "fingrav"
+    "measurement_id_prefix": "findrag",
+    "story_uid": "81b17595-fcc0-47d5-839c-65b34cb7e189"
   },
   "base_properties": {
     "extractiveness": 0.58,
-    "suppression": 0.68,
-    "theater_ratio": 0.64,
+    "suppression": 0.64,
+    "theater_ratio": 0.51,
     "claimed_type": "tangled_rope",
-    "human_readable": "The Financialization Gravity Well",
+    "human_readable": "Financialization Gravity Well",
     "topic_domain": "economic/technological",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "financial_intermediaries",
-      "asset_managers",
-      "institutional_investors"
+      "financial_sector",
+      "equity_holders",
+      "activist_investors"
     ],
     "victims": [
-      "productive_entrepreneurs",
-      "small_to_medium_enterprises",
-      "real_sector_workers",
-      "aggregate_productivity_growth"
+      "productive_enterprises",
+      "workers",
+      "productive_capacity",
+      "long_term_research"
     ]
   },
   "perspectives": [
@@ -33,26 +34,17 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Productive Entrepreneur",
-      "comment": "PERSPECTIVE 1: PRODUCTIVE ENTREPRENEUR (SNARE) \u2014 Trapped in a system where venture capital, private equity, and debt financing structures force short-term liquidity outcomes and extraction of shareholder value over reinvestment in productive capacity. Cannot exit without abandoning enterprise or accepting predatory terms. Maximum experienced extraction through mandatory financial engineering, subordination to investor returns, and loss of strategic autonomy."
-    },
-    {
-      "classification_type": "snare",
-      "agent_power": "powerless",
-      "time_horizon": "generational",
-      "exit_options": "trapped",
-      "spatial_scope": "global",
-      "label": "Real Sector Workers",
-      "comment": "PERSPECTIVE 2: REAL SECTOR WORKERS (SNARE) \u2014 Trapped as financialization incentivizes labor cost reduction, offshoring, and automation to boost quarterly returns. Suppression is extreme: retraining barriers, geographic immobility, pension system dependency on equity returns. No exit option without catastrophic personal cost. Extraction flows through wage suppression, benefits reduction, and income volatility as enterprises optimize for financial metrics rather than employment stability."
+      "label": "The Manufacturing Worker",
+      "comment": "PERSPECTIVE 1: MANUFACTURING WORKER (SNARE) — Trapped by capital mobility and financialized corporate structure. Worker cannot exit without accepting wage cuts in competing sectors or unemployment. The financialization mechanism (debt-driven restructuring, outsourcing for shareholder return optimization) extracts labor value with minimal coordination benefit. Maximum experienced extraction — no mobility, no agency, no alternative."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "organized",
+      "agent_power": "moderate",
       "time_horizon": "biographical",
       "exit_options": "constrained",
-      "spatial_scope": "regional",
-      "label": "Small-to-Medium Enterprises (SMEs)",
-      "comment": "PERSPECTIVE 3: SMALL-TO-MEDIUM ENTERPRISES (TANGLED ROPE) \u2014 Face dual coordination and extraction. SMEs benefit from access to capital markets, lower borrowing costs (in boom cycles), and growth capital availability. Simultaneously extracted through debt covenants, equity dilution requirements, mandatory financial reporting overhead, and pressure to adopt financialization metrics (EBITDA manipulation, financial engineering) to access capital. Constrained exit: cannot operate without finance, but finance dictates operational constraints."
+      "spatial_scope": "national",
+      "label": "The Mid-Market Manufacturer",
+      "comment": "PERSPECTIVE 2: MID-MARKET MANUFACTURER (TANGLED ROPE) — Constrained by debt covenants, supply-chain coordination requirements, and activist investor pressure. Can attempt exit through private equity buyout or cooperative restructuring, but at significant cost (loss of scale, market access, capital). Also benefits from access to capital markets and coordination with suppliers/customers. Mixed extraction and coordination."
     },
     {
       "classification_type": "rope",
@@ -60,73 +52,91 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Financial Intermediaries",
-      "comment": "PERSPECTIVE 4: FINANCIAL INTERMEDIARIES (ROPE) \u2014 Primary beneficiary. Experiences financialization as pure coordination: channeling capital allocation, matching risk seekers with capital providers, structuring deals, extracting fees at each step. Arbitrage options abundant: can reallocate capital across geographies, sectors, and time horizons with minimal friction. The constraint functions as a coordination mechanism from this position \u2014 making the financial system work by consolidating decision-making power into financial institutions."
+      "label": "The Financial Sector (Core Beneficiary)",
+      "comment": "PERSPECTIVE 3: FINANCIAL SECTOR (ROPE) — Experiences the financialization constraint as coordination: allocating capital, pricing risk, matching investors to opportunities. Net beneficiary with high arbitrage options (can deploy capital across sectors, geographies, time horizons). The coordination function is genuine — financial markets do aggregate information and enable capital flows. Extracted value flows toward this agent; they perceive minimal extraction cost."
     },
     {
-      "classification_type": "rope",
-      "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "arbitrage",
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "Asset Managers and Institutional Investors",
-      "comment": "PERSPECTIVE 5: ASSET MANAGERS AND INSTITUTIONAL INVESTORS (ROPE) \u2014 Secondary beneficiary. Experiences financialization as coordination of capital deployment. Benefits from fee extraction (management fees, performance fees), arbitrage opportunities, and the constraint that forces productive enterprises to maximize financial returns (directly serving investor mandates). Arbitrage options are extreme: can move capital to any asset class, geography, or financial instrument. The constraint appears as an alignment mechanism that ensures productive sector serves capital accumulation."
+      "label": "The Incumbent Industrial Firm",
+      "comment": "PERSPECTIVE 4: INCUMBENT INDUSTRIAL FIRM (TANGLED ROPE) — Powerful but constrained by capital market expectations, hostile takeover risk, and activist investor governance. Has agency to resist financialization (R&D investment, worker retention, long-term strategy) but faces shareholder value pressure and refinancing risk. Also benefits from access to capital and leverage. Mixed experience — some extraction from financial system pressure, some coordination benefit from capital access. Stronger power position than mid-market firms but real constraints."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Coalition / Stakeholder Capitalism Movement",
+      "comment": "PERSPECTIVE 5: LABOR COALITION & STAKEHOLDER ADVOCATES (SCAFFOLD) — Organized agents (unions, ESG investors, stakeholder capitalism advocates) perceive financialization as a temporary governance regime with potential sunset. Alternative frameworks (stakeholder governance, long-term value creation, worker power) are being institutionalized through legislation, pension fund pressure, and corporate charter reform. Low effective extraction because the coalition has agency and sees structural alternatives. Theater_ratio is lower in this perspective because the political/economic reorganization is functional, not merely performative."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
       "time_horizon": "civilizational",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "Regulatory and Central Bank Authorities",
-      "comment": "PERSPECTIVE 6: REGULATORY AND CENTRAL BANK AUTHORITIES (PITON) \u2014 Maintains financialization constraint through regulatory framework, monetary policy, and implicit too-big-to-fail guarantees. Performance is degraded: regulation intended to constrain financial extraction (Dodd-Frank, Basel III) has become primarily performative, enforcing reporting and disclosure without preventing structural extraction mechanisms. The constraint persists through institutional inertia and regulatory arbitrage rather than functional financial stability. Theater ratio high: stress tests, capital requirements, liquidity ratios are largely decoupled from actual systemic risk."
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Neoliberal Economic Order (Degraded Regime)",
+      "comment": "PERSPECTIVE 6: NEOLIBERAL ECONOMIC ORDER (PITON) — From civilizational scope, the financialization constraint appears as an institutional regime held together by performative ideology and inertia rather than functional coordination. The shareholder maximization doctrine is largely theater — empirical research shows no correlation between stock buybacks and long-term productivity or innovation. The regime persists because alternative institutional arrangements have not fully consolidated, and elite capture of regulatory and intellectual frameworks maintains the illusion of naturalness. High theater_ratio because the legitimating narratives (efficient markets, rational actors, wealth creation through financial engineering) are disconnected from actual productive outcomes."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From the civilizational/global analytical view, financialization exhibits dual function: genuine coordination of capital allocation (real coordination benefit) coupled with asymmetric extraction of productive sector returns for financial sector benefit. Effective extractiveness is not maximal because the coordination function is genuine and provides real liquidity and capital access. But the constraint is not pure coordination because suppression mechanisms prevent reallocation to alternatives (regulatory capture, central bank put, too-big-to-fail guarantees). The constraint persists in this hybrid form because dismantling it requires political will to sacrifice coordination benefits."
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Market Efficiency View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / MARKET EFFICIENCY VIEW (MOUNTAIN) — From a purely analytical perspective on capital allocation, financialization appears as an immutable natural law: capital always flows to highest risk-adjusted returns, and financial sector intermediation is structurally necessary. This perspective risks naturalizing what is actually a contingent institutional arrangement (tax policy favoring capital gains, regulatory capture preventing stakeholder governance, intellectual capture of economics disciplines). The engine will identify this as a false summit candidate — the structural beneficiaries (financial sector, equity holders) naturalize their extraction mechanism as economic law."
     }
   ],
   "omegas": [
     {
-      "id": "productivity_degradation_causality",
-      "question": "Is reduced productivity growth (U.S. total factor productivity ~1.5% annually vs. 3% pre-1980) causally driven by financialization or by technological saturation, demographic shifts, and measurement error?",
-      "resolution_mechanism": "Cross-national comparative analysis: countries with lower financialization ratios (non-Anglo financial systems) vs. high-financialization economies; sector-level analysis of productivity growth in finance-intensive vs. finance-light industries; econometric decomposition controlling for R&D spending and capital intensity",
-      "impact": "If financialization is primary driver: constraint classification as Snare strengthens (pure extraction mechanism). If causality is weak: constraint reclassifies toward Rope or Scaffold (financialization provides genuine coordination benefits despite side effects).",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Whether financialization causally reduces real productivity"
-    },
-    {
-      "id": "financial_engineering_counterfactual",
-      "question": "Would enterprises innovate and invest at comparable rates WITHOUT financialization incentives, or does the threat of extraction (acquisition, activism, deleveraging pressure) actually drive capital allocation efficiency?",
-      "resolution_mechanism": "Historical analysis of enterprise R&D and capital investment before and after financialization waves; comparison of enterprises with strong founder control (resistant to financialization) vs. dispersed ownership; natural experiments in regulatory regimes that restrict financial engineering",
-      "impact": "If enterprises would maintain investment rates: financialization is pure extraction mechanism (Snare). If financial discipline drives efficiency: financialization provides genuine coordination (Rope upgrade). If mixed: Tangled Rope classification confirmed.",
-      "confidence": "low",
-      "type_class": "conceptual",
-      "description": "Whether financialization incentives are necessary for capital allocation efficiency"
-    },
-    {
-      "id": "labor_exit_optionality",
-      "question": "Do real sector workers have genuine alternative exit options outside financialized labor markets, or is the 'no exit' assumption structural?",
-      "resolution_mechanism": "Analysis of worker mobility: geographic, sectoral, and skill-retraining barriers; comparison of labor outcomes in high-financialization vs. lower-financialization sectors and regions; measurement of worker agency in wage negotiation and employment terms",
-      "impact": "If exit options are completely blocked: Snare classification confirmed (maximum d \u2192 maximum chi). If some exit options exist: reclassify as Tangled Rope or constrained-exit scenarios, reducing derived d values and effective extractiveness.",
+      "id": "financialization_coordination_function",
+      "question": "Does financialization provide genuine capital allocation coordination or is the 'coordination' narrative a cover story for pure extraction?",
+      "resolution_mechanism": "Historical comparison: productivity/innovation outcomes under financialized vs stakeholder governance regimes; correlation analysis between M&A activity and actual operational improvement vs financial engineering returns; international comparison of economies with different financialization intensities",
+      "impact": "If genuine coordination: classification shifts toward Rope from more perspectives, χ decreases. If pure extraction: classification shifts toward Snare, χ increases, suppression floor rises.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether workers have viable exit options from financialized labor markets"
+      "description": "Whether financialization provides genuine coordination function or covers extraction"
     },
     {
-      "id": "regulatory_capture_reversibility",
-      "question": "Is the regulatory framework supporting financialization (central bank put, too-big-to-fail guarantees, capital requirements that favor large institutions) structurally irreversible, or could alternative regulatory architectures dismantle financialization without causing systemic collapse?",
-      "resolution_mechanism": "Policy analysis of regulatory alternatives (narrow banking, transaction taxes, equity-based capital requirements); historical precedent analysis (pre-1980 financial regulation); simulation of system behavior under alternative regulatory regimes",
-      "impact": "If irreversible: constraint approaches Mountain classification (structural limit of financial systems). If reversible: constraint is contingent institutional arrangement (Snare or Tangled Rope with sunset potential). If partially reversible: Scaffold classification with multi-decade sunset.",
+      "id": "worker_mobility_constraint_mechanism",
+      "question": "Is worker exit constraint primarily structural (wage geography, skill mismatch, capital requirements) or institutional (visa restrictions, licensing regimes, employer monopoly power)?",
+      "resolution_mechanism": "Comparative analysis of labor mobility across jurisdictions with different institutional regimes; tracking of worker transitions post-plant closure; wage elasticity of labor supply in financialized vs alternative sectors",
+      "impact": "If structural: constraint is robust to regulatory intervention. If institutional: targeted policy reform (labor mobility, anti-monopoly, collective bargaining) could reduce suppression substantially. Affects sustainability of current extraction regime.",
       "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether financialization regulatory framework is reversible"
+      "type_class": "empirical",
+      "description": "Whether worker exit constraints are structural or institutional"
+    },
+    {
+      "id": "alternative_governance_scalability",
+      "question": "Can stakeholder governance models (cooperative ownership, worker representation, long-term value metrics) scale to large institutional capital pools without reproducing extraction?",
+      "resolution_mechanism": "Case studies of cooperative scaling (Mondragon, John Lewis Partnership); performance of stakeholder-governed firms in global capital competition; mechanisms preventing stakeholder models from being captured by capital markets",
+      "impact": "If scalable without capture: scaffold perspective is structural reality, sunset is probable. If capture-prone: scaffold is aspirational only, financialization gravity well persists.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether alternative governance models can scale sustainably"
+    },
+    {
+      "id": "debt_covenants_functionality",
+      "question": "Do debt covenants represent functional capital discipline (preventing excessive risk) or extraction enforcement (enabling financial sector control over productive decisions)?",
+      "resolution_mechanism": "Comparative outcomes: firm performance under heavy covenant restriction vs looser terms; correlation between covenant stringency and financial sector profit extraction vs operational metrics; historical trends in covenant complexity and sophistication",
+      "impact": "If functional discipline: covenants are Rope-aligned coordination. If extraction enforcement: covenants are Snare-aligned control mechanism. Affects classification of incumbent firm perspective.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether debt covenants provide functional discipline or enable extraction control"
+    },
+    {
+      "id": "regulatory_capture_depth",
+      "question": "To what degree is the financialization regime maintained by active regulatory capture (financial sector actively preventing reform) versus passive institutional inertia (alternative institutions not yet sufficiently matured)?",
+      "resolution_mechanism": "Analysis of lobbying expenditure and legislative outcomes; tracking of regulatory bodies' revolving doors (financial sector staff in regulatory agencies); comparison of regulatory environments pre/post major financial crises; cross-national variation in regulatory stringency and its effects",
+      "impact": "If active capture: regime change requires political mobilization against entrenched interests. If passive inertia: regime change can be achieved through institutional demonstration effects. Affects timeline estimates for scaffold sunset and labor coalition effectiveness.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether financialization regime is maintained by active capture or passive inertia"
     }
   ],
   "measurements": [
@@ -137,66 +147,89 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 20,
-      "value": 0.45
+      "time_point": 15,
+      "value": 0.42
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 40,
+      "time_point": 30,
       "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.38
     },
     {
       "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.52
+      "time_point": 15,
+      "value": 0.46
     },
     {
       "metric": "theater_ratio",
-      "time_point": 40,
+      "time_point": 30,
+      "value": 0.51
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
       "value": 0.64
     }
   ],
   "interval": {
     "start": 0,
-    "end": 40
+    "end": 30
   },
   "commentary": {
-    "narrative_context": "The financialization gravity well describes a shift in resource allocation mechanisms from production-based returns to finance-engineered returns, creating a structural constraint where enterprises, workers, and productive sectors are increasingly subordinated to financial system imperatives. Beginning in the 1980s, but accelerating post-2008, this constraint operates through interconnected mechanisms: hostile takeovers and activist investors threatening management autonomy, debt-financed buybacks that reduce reinvestment, private equity acquisition and asset-stripping, regulatory frameworks (too-big-to-fail, central bank puts, capital requirements favoring size) that entrench financial intermediaries, and labor market financialization (pension dependency on equity returns, gig economy expansion, wage stagnation). The constraint exhibits the Tangled Rope signature: genuine coordination function (capital allocation, liquidity provision, risk distribution) coupled with asymmetric extraction (financial sector captures growing share of enterprise returns while bearing declining share of productive risk). Suppression is high (regulatory barriers to alternative financing, information asymmetries, switching costs) but not total \u2014 some enterprises and sectors escape financialization through alternative financing (private founders, cooperative structures, patient capital models) and some jurisdictions limit financialization through regulation. Theater ratio has increased over the 40-year interval as financial complexity (derivatives, structured products, algorithmic trading) has grown while core coordination functions have potentially degraded (financial crises in 1987, 1998, 2008 indicate system fragility despite increasing complexity).",
+    "narrative_context": "The financialization gravity well describes a decades-long shift in resource allocation from production-based returns to finance-engineered returns. Beginning in the 1980s (Reagan-Thatcher era deregulation) but accelerating after the 2008 financial crisis, this constraint operates through interconnected mechanisms: hostile takeover threats and activist investor governance imposing shareholder-value maximization; debt-financed capital structures prioritizing financial engineering over productive investment; stock buyback programs substituting financial returns for wage growth and R&D; and consolidation of financial sector power over non-financial enterprise decision-making. The constraint is tangled because it simultaneously provides genuine capital-allocation coordination (capital does flow to productive opportunities through financial markets) and enables substantial extraction (financial intermediaries capture spreads, activist investors extract via downsizing, equity holders gain while workers bear adjustment costs). The measurement trajectory shows base_extractiveness rising from 0.28 to 0.58 over 30 years, with theater_ratio and suppression_requirement both increasing — indicating the regime has accumulated more extraction mechanisms and required more performative legitimacy work to maintain. The constraint exhibits all six classification types depending on observer position, with the mountain perspective representing the risk of naturalizing what is actually a contingent institutional arrangement backed by regulatory capture and elite intellectual consensus.",
     "key_agents": [
-      "Financial Intermediaries (institutional/arbitrage): Primary beneficiaries \u2014 extract fees, commissions, and spread through every financial transaction; benefit from increased complexity and leverage",
-      "Asset Managers and Institutional Investors (institutional/arbitrage): Secondary beneficiaries \u2014 capture returns through capital allocation control; mandate financial engineering to maximize shareholder value",
-      "Productive Entrepreneurs (powerless/trapped): Primary victims \u2014 forced to adopt financialization metrics, sacrifice long-term reinvestment for quarterly returns, accept equity dilution and debt covenants",
-      "Real Sector Workers (powerless/trapped): Secondary victims \u2014 face wage suppression, job insecurity, retraining barriers, pension dependency on equity returns",
-      "Small-to-Medium Enterprises (organized/constrained): Mixed victim-beneficiary \u2014 need access to capital but extraction costs (debt covenants, equity dilution, financial reporting overhead) are high",
-      "Regulatory Authorities (institutional/constrained): Maintain the constraint through central bank policy, capital requirements, and too-big-to-fail guarantees; see own regulation as performative",
-      "Analytical Observer (analytical/analytical): Observes dual function (genuine coordination + asymmetric extraction); risks naturalizing contingent institutional arrangement as inevitable feature of modern capitalism"
+      "Manufacturing Workers: Primary victims (powerless/trapped) — experience wage stagnation, plant closures, outsourcing, and lack exit options due to capital mobility and wage geography",
+      "Mid-Market Manufacturers: Secondary victims (moderate/constrained) — face activist pressure, hostile takeovers, covenant restrictions; can exit but at significant cost",
+      "Incumbent Industrial Firms: Complex position (powerful/constrained) — powerful enough to resist some pressure but constrained by capital markets, refinancing risk, shareholder litigation threat",
+      "Financial Sector: Primary beneficiary (institutional/arbitrage) — captures spreads, advisory fees, trading profits, activist return extraction; highest exit optionality",
+      "Equity Holders: Primary beneficiary (varies by power level) — benefit from stock buybacks, takeover premiums, activist returns, but lose long-term productive returns",
+      "Activist Investors: Specialized beneficiary (institutional/arbitrage) — extract returns from restructuring, downsizing, financial engineering; highest exit optionality",
+      "Labor Coalition & Stakeholder Advocates: Organized resistance (organized/constrained) — building alternative governance frameworks with sunset potential",
+      "Analytical Observer: Civilizational perspective risk (analytical/analytical) — risks naturalizing financialization as economic law rather than institutional choice"
     ],
-    "logic_rationale": "Extractiveness (0.58): Moderately high. Financial intermediaries extract substantial value (estimated 2-3% of GDP annually in developed economies through fees, spreads, and trading profits) while also providing genuine coordination function (capital matching, liquidity provision, risk distribution). The extractiveness value reflects that the extraction is real and growing but not maximal \u2014 productive sectors still generate substantial returns and some enterprises successfully resist financialization. Suppression (0.68): Moderately high. Mechanisms preventing alternatives to financialization include regulatory barriers (capital requirements that advantage large institutions), information asymmetries (financial engineering complexity), switching costs (debt covenants, equity vesting), and implicit guarantees (too-big-to-fail puts). But suppression is not total \u2014 alternative financing channels exist (crowdfunding, private equity outside mainstream, cooperative structures, family offices) and some sectors maintain lower financialization ratios. Theater ratio (0.64): Moderately high. Financial regulatory apparatus (stress tests, capital ratios, liquidity requirements) is substantially performative \u2014 financial crises occur despite ostensibly stringent regulation, and regulatory compliance has become decoupled from actual systemic risk reduction. Complexity (derivatives, structured products, algorithmic trading) has increased while core coordination functions (capital allocation, risk management) show signs of degradation (increased volatility, contagion risk, flash crashes).",
-    "perspectival_gap": "The constraint demonstrates maximum perspectival divergence across power levels. Financial intermediaries and asset managers see pure coordination (Rope) \u2014 they experience the system as enabling capital allocation and generating profitable arbitrage. Entrepreneurs and workers see pure extraction (Snare) \u2014 they experience forced subordination to financial metrics with no exit option. SMEs experience the hybrid (Tangled Rope) \u2014 they benefit from access to capital but are trapped by extraction mechanisms. Regulatory authorities experience degraded ritual (Piton) \u2014 they maintain regulatory theater without effective constraint of extraction. The analytical observer sees genuine hybrid (Tangled Rope) \u2014 recognizing both the real coordination function and the asymmetric extraction mechanism. The perspectival gap is the core diagnostic: disagreement about classification type reflects fundamental disagreement about whether financialization is a necessary efficiency mechanism (beneficiary view) or a parasitic extraction mechanism (victim view).",
-    "directionality_logic": "Directionality derivation follows the extraction flow: financial intermediaries are beneficiaries with arbitrage options (derived d \u2248 0.05-0.15, low chi) while entrepreneurs and workers are victims with trapped exits (derived d \u2248 0.85-0.95, high chi). SMEs occupy intermediate position (beneficiary of capital access + victim of extraction terms) with constrained exits, producing moderate chi. The constraint persists as Tangled Rope because dismantling it would sacrifice genuine coordination benefits (capital allocation efficiency, liquidity provision) that financial intermediaries would resist, but maintaining it requires suppressing alternatives (regulatory capture) and accepting extraction costs (productivity drag, income inequality). The directionality values are stable across the measurement interval \u2014 the structure of extraction has not fundamentally changed, only increased in magnitude and complexity."
+    "logic_rationale": "Extractiveness (0.58): Moderate-high, reflecting that the financial sector and equity holders capture substantial value (~50% of corporate profits flow to financial sector vs historical ~20%), but the extraction is not absolute — productive firms still operate, innovation still occurs, capital does flow productively in many cases. The constraint permits functional coordination alongside extraction, which is the defining feature of tangled rope. Theater ratio (0.51): Moderate-low, slightly below tangled rope expected range, because much of the financial legitimation is genuinely functional (markets do price risk, capital does flow to high-return opportunities) but increasingly performative (stock buyback justifications disconnected from productivity, EVA metrics that don't correlate with long-term value). Measurement trajectory showing rising theater ratio reflects the accumulation of legitimation burden — more CEO messaging about shareholder value, more ESG theater, more justifications needed as productive outcomes deteriorate. Suppression (0.64): Moderate-high. Workers face structural constraints (capital mobility, global wage competition, skill depreciation) and institutional constraints (regulatory capture preventing stronger labor protections, visa restrictions limiting geographic mobility, employer consolidation reducing outside options). Incumbent firms face capital market constraints (covenant restrictions, refinancing risk, activist shareholder lawsuits). The suppression is high but not total — resistance exists (labor organizing, stakeholder governance movements, regulatory reform campaigns) and alternatives are being institutionalized (though slowly).",
+    "perspectival_gap": "The manufacturing worker sees the constraint as a snare — pure extraction with no exit. The financial sector sees it as rope — coordination with genuine profit from intermediation services. The incumbent firm sees it as mixed — constrained by capital markets but also benefiting from leverage and capital access. The labor coalition sees it as a temporary scaffold with a sunset — stakeholder governance, worker power, and alternative capital structures are being built and can replace financialization within a generation. The neoliberal order sees it as piton — a regime held together by performative ideology (shareholder value maximization) that no longer functions well but persists through institutional inertia. The analytical observer risks seeing it as mountain — natural law of capital allocation — but this is a false summit that naturalizes a contingent institutional arrangement benefiting specific financial sector actors. The gap reveals that the 'economic necessity' framing is perspectival, not objective.",
+    "directionality_logic": "The financial sector and equity holders derive low d values (beneficiaries with arbitrage exit options) — they experience the constraint as coordination or even subsidy. Institutional investors with high-frequency trading capability have d ≈ 0.05–0.15 (full beneficiaries with maximum arbitrage). Workers derive high d values (victims with trapped/constrained exit) — d ≈ 0.85–0.95 for manufacturing workers with no mobility, d ≈ 0.65–0.75 for constrained workers with some options. Mid-market manufacturers derive mid-range d values (d ≈ 0.55–0.65) reflecting mixed extraction and benefit, constrained exit. Incumbent industrial firms derive d ≈ 0.50–0.60 reflecting powerful position but capital market constraints. The labor coalition derives lower d values (d ≈ 0.40–0.50) reflecting organized resistance and alternative institutional development. The scope modifier reflects that financialization operates at global scale (σ = 1.2), amplifying the effective chi compared to local constraints — capital mobility and wage geography are most constraining when exit options are evaluated globally.",
+    "mandatrophy_analysis": "The financialization constraint resolves the mandatrophy by revealing how the same institutional phenomenon generates different classifications depending on structural position. The mandatrophy is not 'which type is correct?' but 'who benefits from calling it what?' Manufacturing workers correctly perceive snare (maximum extraction, trapped exit). The financial sector correctly perceives rope (genuine coordination, arbitrage exit). The incumbent firm correctly perceives tangled rope (mixed extraction and benefit, constrained exit). The analytical observer risks false summit (calling financialization a natural law) because that framing obscures the beneficiaries and naturalizes institutional choices as economic necessities. The scaffold perspective is not wrong — it correctly identifies that alternative governance models exist and are being built. The piton perspective correctly identifies that the legitimating narratives (efficient markets, shareholder value as universal good) are increasingly disconnected from observable outcomes. Mandatrophy resolution: there is no single 'correct' type because the constraint is genuinely multidimensional. The constraint is simultaneously coordination mechanism, extraction apparatus, and institutional regime. The different perspectival classifications are not errors but structural facts about how different positions experience the same causal mechanism.",
+    "kernel_context": "This constraint is not a kernel reading — it is an institutional constraint with identifiable beneficiaries and victims, not a contested foundational commitment."
   },
   "boltzmann": {
     "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "labor_commodification",
-      "pension_system_fragility",
-      "venture_capital_maturity_mismatch",
-      "corporate_debt_accumulation",
-      "real_estate_extraction"
+      "hostile_takeover_mechanism",
+      "stock_buyback_extraction",
+      "activist_investor_governance",
+      "debt_covenant_control",
+      "wage_stagnation_dynamics"
     ],
-    "dual_formulation_note": "Financialization gravity well is upstream of multiple economic constraints. The wage suppression mechanism (real sector workers perspective) is downstream of financialization incentives but represents a distinct constraint. Capital accumulation in unproductive sectors (real estate, financial engineering) is downstream of financialization resource allocation but distinct from the coordination function. Each downstream constraint shares the extractiveness structure but operates through different suppression mechanisms."
+    "dual_formulation_note": "The financialization gravity well is a macroeconomic institutional constraint. Specific mechanisms (hostile takeovers, activist investor pressure, debt covenants, stock buybacks) are micro-level constraints that feed into the macroeconomic structure. The family link enables analysis of how individual extraction mechanisms accumulate into systemic regime shift. Each micro-constraint has its own extractiveness value and perspectives; the macro-constraint aggregates their effects into the long-term capital structure reorientation."
   },
   "directionality_overrides": [
     {
-      "power_atom": "organized",
-      "d_value": 0.62
+      "power_atom": "powerful",
+      "d_value": 0.55
     }
-  ]
+  ],
+  "cs_structure": {
+    "kernel_codification": "implicit",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": false
+  }
 }

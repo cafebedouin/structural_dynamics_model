@@ -1,0 +1,245 @@
+{
+  "header": {
+    "constraint_id": "dsm_taxonomy_kernel__biomedical_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "dsm_biomed",
+    "story_uid": "57a85d9a-67d5-4159-a5c5-4191d7d86323"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "DSM Categories as Objective Neurobiological Disease Entities (Biomedical Reading)",
+    "topic_domain": "medical_epistemology/psychiatric_taxonomy/neuroscience",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "psychiatric_establishment",
+      "pharmaceutical_industry",
+      "institutional_conformity_apparatus"
+    ],
+    "victims": [
+      "diagnostic_threshold_population",
+      "neurodiversity_community",
+      "psychiatric_epistemic_commons"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Diagnosed Individual",
+      "comment": "PERSPECTIVE 1: DIAGNOSED INDIVIDUAL (SNARE) — Person meeting DSM threshold experiences the classification as immutable biological fact. Exit options are extremely constrained: challenging the diagnosis risks being labeled as lacking insight or denial; treatment refusal risks involuntary intervention; labeled status persists across institutional contexts (employment, housing, family). Suppression is maximal because the victim is positioned as irrational if they resist — their own cognitive objections to the label are pathologized as symptoms of the condition. Maximum experienced extraction."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Neurodiversity Community",
+      "comment": "PERSPECTIVE 2: NEURODIVERSITY COMMUNITY (SNARE) — Communities organized around non-standard neurology (autistic self-advocates, ADHD communities, bipolar peer networks) experience DSM biomedical framing as pathologizing their identity. High suppression: medicalization obscures the role of social environment and institutional design in creating 'disorder.' Constrained exit: communities can build alternative frameworks (neurodiversity paradigm) but face institutional barriers when schools, employers, insurers operate under DSM biomedical assumptions. Extraction is real but negotiable — some groups have developed countervailing institutional power."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Psychiatric Establishment and Pharmaceutical Industry",
+      "comment": "PERSPECTIVE 3: PSYCHIATRIC ESTABLISHMENT + PHARMA (ROPE) — The institutional beneficiary. DSM categories enable medical legitimacy, insurance reimbursement, pharmaceutical development pipelines, and professional scope. From this perspective, the constraint appears as pure coordination: establishing shared diagnostic language enables treatment, research collaboration, and resource allocation. Low experienced extraction because this agent captures the value and can exit by simply maintaining the framework. Coordination function is real: DSM enables communication across practitioners and insurance systems."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Reform-Oriented Psychiatric Researchers",
+      "comment": "PERSPECTIVE 4: REFORM PSYCHIATRY COALITION (TANGLED ROPE) — Researchers pushing for biological validation of DSM categories (RDoC initiative, computational psychiatry, neuroimaging biomarker research) experience the constraint as mixed. Genuine coordination function: shared taxonomic framework enables collaborative research. Embedded extraction: pressure to produce biomarkers that validate DSM categories creates publication bias and threatens to pathologize variation; researchers who fail to find biological bases face career barriers. Constrained exit: can critique DSM but must work within institutionalized frameworks to access funding and journals."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Insurance and Healthcare Administration",
+      "comment": "PERSPECTIVE 5: INSURANCE/HEALTHCARE ADMIN (PITON) — Institutional actors that rely on DSM for billing, coverage determination, and risk stratification experience the framework as increasingly degraded. The constraint persists through administrative inertia: changing coding systems would require massive system redesign, so DSM categories are maintained despite acknowledged limitations. Theater ratio is moderate-high: DSM categories serve administrative functions (billing codes) that are only loosely connected to actual clinical validity. These actors can exit by adopting alternative systems (ICD alternatives, dimensional frameworks) but the switching cost is prohibitive."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Biomedical Naturalism (Mountain View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL/BIOMEDICAL NATURALISM (MOUNTAIN) — Purely analytical stance that treats DSM categories as natural kinds (discoverable biological entities independent of social construction). From this perspective, the constraint appears immutable: psychiatric conditions ARE objectively real biological phenomena; the DSM is merely the imperfect mapping onto those real categories. Classification advances with better neuroscience will reveal the true biological boundaries. This perspective risks being a false summit — it naturalizes what may be a contingent institutional arrangement grounded in beneficiary interests."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "biological_validity_threshold",
+      "question": "What constitutes sufficient biological evidence to claim a DSM category maps to an objective disease entity?",
+      "resolution_mechanism": "Historical analysis of biomarker research programs; tracking of categories that gained or lost neurobiological evidence; meta-analysis of failed replication in psychiatric neuroscience",
+      "impact": "If threshold is very high (multiple converging biomarkers with clear mechanism): few DSM categories qualify as objective entities. If threshold is permissive (any neurobiological correlate): nearly all behavior has some neural correlate, making the claim empirically empty. This determines whether the biomedical reading is scientifically defensible or whether it's naturalizing social construction.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "What level of biological evidence validates DSM categories as natural kinds"
+    },
+    {
+      "id": "independence_of_diagnostic_framework",
+      "question": "Do the biological patterns attributed to DSM categories exist independently of the diagnostic framework, or are they constructed through the act of diagnosis and treatment?",
+      "resolution_mechanism": "Cross-cultural psychiatric epidemiology; longitudinal studies of untreated populations; analysis of diagnostic drift over DSM editions and corresponding biological literature; examination of whether biomarker research follows from theory or from DSM category membership",
+      "impact": "If biological patterns precede and constrain the DSM framework: the biomedical reading is valid — DSM maps to real biological entities. If biological patterns are shaped by diagnostic and treatment practices: the biomedical reading is backwards — diagnosis constructs the biological entity, not vice versa. This is the core oracle-gap uncertainty.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether biological patterns are independent of or constructed by the diagnostic framework"
+    },
+    {
+      "id": "kernel_reading_committer_distinction",
+      "question": "This constraint is the biomedical reading of a contested kernel. What structural differences distinguish this reading from the neurodiversity_reading and critical_psychiatry_reading?",
+      "resolution_mechanism": "Comparison of axioms, reference frames, and drift states across the three readings. The biomedical reading assumes mental health categories are objective biological entities; the neurodiversity reading assumes neurological variation is natural human diversity; the critical psychiatry reading assumes psychiatric categories are socially constructed power mechanisms. No empirical data resolves this — the readings are incommensurable frameworks.",
+      "impact": "Each reading produces a different constraint type (snare, rope, tangled_rope, etc.) from identical base facts. The constraint family demonstrates that indexical classification works at the kernel level: the same DSM system is seen as one type from the biomedical reading and a different type from the neurodiversity reading because the readings disagree on what the DSM IS (natural mapping vs. social construction).",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Kernel reading incommensurability: the three readings of DSM taxonomy kernel cannot be adjudicated by empirical data alone"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "Is the measured suppression (0.72) structural (institutional barriers, legal coercion, pharmaceutical dependence) or internalized (the diagnosed person accepts the biomedical framing and suppresses their own resistance)?",
+      "resolution_mechanism": "Post-exit suppression persistence; comparison of suppression trajectories for people who maintain biomedical identity vs. those who adopt neurodiversity framing; analysis of whether resistance to diagnosis is pathologized (coded as lack of insight) or respected",
+      "impact": "If suppression is primarily internalized: the constraint's actual suppressive force persists even if external barriers are removed (the person has been trained to self-pathologize). This would argue for higher effective suppression than the structural measure alone indicates. If primarily structural: removal of institutional enforcement would reduce suppression significantly.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Internalization vs. structural suppression in DSM biomedical framing"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.68
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 15,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 30,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.72
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 30
+  },
+  "commentary": {
+    "narrative_context": "The DSM (Diagnostic and Statistical Manual of Mental Disorders) represents the dominant institutional taxonomy for psychiatric diagnosis globally. The biomedical reading treats DSM categories as objective discoveries — real neurobiological disease entities that exist independently and will eventually be validated through empirical neuroscience. This reading justifies involuntary treatment, pharmaceutical intervention, and loss of civil capacity for diagnosed individuals. It enables the psychiatric establishment and pharmaceutical industry to capture substantial economic and epistemic value. However, this reading is contested. The neurodiversity reading claims that many DSM categories (autism, ADHD, bipolar disorder) describe natural neurological variation, not disease. The critical psychiatry reading claims that DSM categories are socially constructed mechanisms for medicalizing social nonconformity and normalizing institutional control. This constraint story instantiates the biomedical reading as a complete ε-invariant constraint — the core claim that DSM categories map to objective neurobiological entities. The measurement trajectory shows extractiveness, suppression, and theater ratio all increasing over 30 years (1993-2023: DSM-IV to DSM-5 era), reflecting the growing institutionalization of psychiatric diagnosis, pharmaceutical expansion, and the increasing incoherence of biomarker research programs relative to DSM category stability.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel dsm_taxonomy_kernel. The kernel is the claim 'DSM categories describe real psychiatric conditions.' The biomedical reading (THIS constraint) specifies: 'DSM categories ARE objective neurobiological disease entities discoverable through empirical research.' The neurodiversity_reading specifies: 'DSM categories describe natural neurological variation, not disease; the categories pathologize difference.' The critical_psychiatry_reading specifies: 'DSM categories are socially constructed mechanisms for institutionalizing behavioral control.' All three readings coexist in contemporary discourse. The readings are incommensurable — they disagree on what DSM IS (objective mapping vs. pathologization vs. power mechanism). No empirical data can resolve the disagreement because the dispute is about the epistemic status of the DSM itself, not about data that could be gathered within a shared framework.",
+    "key_agents": [
+      "Diagnosed individuals: Primary victims (powerless/trapped) — classified as having objective disease; resistance is pathologized as symptom; exit options are extremely limited (treatment refusal risks coercion; diagnosis persists across institutional contexts)",
+      "Neurodiversity communities: Secondary victims (moderate/constrained) — experience biomedical framing as pathologizing natural variation; institutional barriers prevent adoption of alternative frameworks despite community-level exit options",
+      "Psychiatric establishment: Primary beneficiary (institutional/arbitrage) — captures professional legitimacy, insurance reimbursement, research funding, and institutional authority through DSM framework",
+      "Pharmaceutical industry: Primary beneficiary (institutional/arbitrage) — development pipelines, patent markets, treatment expansion, and drug sales justified by DSM categories",
+      "Reform psychiatry researchers: Mixed actors (organized/constrained) — benefit from DSM as shared research framework; constrained by pressure to produce biomarkers validating DSM categories; face career barriers if research suggests DSM categories lack biological validity",
+      "Insurance/healthcare administration: Degraded institutional actor (institutional/arbitrage) — relies on DSM for administrative coding but system is increasingly incoherent; maintains through inertia despite acknowledged limitations",
+      "Analytical observer: Risks naturalizing contingent arrangement — the mountain perspective that DSM categories ARE objectively real biological entities may be a false summit masking social construction"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The biomedical reading justifies substantial institutional extraction from diagnosed individuals: pharmaceutical consumption, involuntary treatment authority, loss of legal capacity, employment discrimination (legally permitted), insurance discrimination, surveillance, and identity colonization. The extraction is particularly severe because resistance is pathologized — the diagnosed person's objections to treatment are coded as denial or lack of insight, eliminating a standard exit option (vocal resistance). The 0.68 value reflects that extractiveness is not absolute (some diagnosed individuals decline treatment, some communities build countervailing frameworks) but is substantial and systematized. Suppression (0.72): Very high. Multiple suppression mechanisms: (1) Institutional — legal coercion (involuntary commitment, forced medication), insurance systems requiring DSM diagnosis for coverage; (2) Epistemic — biomedical framing is institutionalized in research, education, clinical training; alternative framings are marginalized; (3) Cognitive — diagnosed individuals are trained to interpret their own resistance as symptoms; the diagnosis becomes part of identity, making exit unthinkable. The 0.72 value reflects that suppression is severe but not absolute — some jurisdictions have reduced involuntary commitment, some individuals reject diagnosis, some research communities are exploring alternatives. Theater ratio (0.58): Moderate-high. DSM categories appear as objective scientific discoveries (theater), but empirical support is mixed: biomarker research has failed to find biological bases for most DSM categories; category boundaries are historically contingent (diagnostic criteria change between DSM editions); comorbidity rates suggest categories are overlapping constructs, not distinct entities. The theater persists because the biomedical framing is institutionally dominant, not because the categories have strong empirical validation. Measurement trajectory: All three metrics increase over 30 years, reflecting accumulating extractiveness and suppression as psychiatric diagnosis has expanded institutionally and as pharmaceutical treatment has become normalized.",
+    "perspectival_gap": "The biomedical reading produces radically different classifications from the same structural data when compared to sibling readings. From the biomedical perspective: DSM categories are Rope (coordination function) or Tangled Rope (coordination + extraction for the reform psychiatry coalition). From the neurodiversity reading: DSM categories are Snare (pure extraction pathologizing natural variation). From the critical psychiatry reading: DSM categories are Snare (institutionalized power mechanism). The gap reveals that the readings disagree on the fundamental nature of the constraint — whether it is a genuine coordination mechanism for identifying real disease (biomedical) or a social construction pathologizing difference (neurodiversity, critical psychiatry). The three readings cannot be reconciled within a single framework; they are alternative epistemic positions on what the DSM IS.",
+    "directionality_logic": "The biomedical reading derives directionality from the assumption that DSM categories are objective disease entities. From this premise: diagnosed individuals are victims bearing costs of treatment/stigma (high d → high f(d) → high chi); the psychiatric establishment and pharma are beneficiaries capturing value from diagnostic framework (low d → negative f(d) → negative chi from their perspective). However, this directionality derivation is the crux of disagreement with sibling readings. The neurodiversity reading would derive different d values because it does not accept that DSM victims are legitimately identified as diseased — the 'disease' is the diagnostic framework itself, making the psychiatric establishment the true extractor. The critical psychiatry reading would argue d values are entirely backwards if the DSM's primary function is social control, not disease mapping. The biomedical reading's directionality logic is internally consistent but depends entirely on accepting the premise that DSM categories are objective entities — the premise the other readings deny.",
+    "mandatrophy_analysis": "This constraint does not resolve mandatrophy through data. Instead, it instantiates the oracle-gap paradox (Theorem 4): the biomedical reading's core claim (DSM categories are objective biological entities) cannot be evaluated using instruments available from within the biomedical framework. The question 'Are DSM categories real biological entities or socially constructed?' requires cross-position analysis — comparing the biomedical reading's model of reality to alternative readings' models. The biomedical analyst, working within biomedical epistemology, can produce biomarker research, but cannot determine whether the biomarkers are discovering pre-existing entities or being constructed through the research process itself. This is the irreducible uncertainty encoded in the omega variables. Mandatrophy is resolved by acknowledging that the three readings are incommensurable — each internally coherent, each supported by evidence within its own frame, but no empirical data can arbitrate between them."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism",
+    "boltzmann_floor_override": 0.18
+  },
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "extraction",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "neurodiversity_reading",
+        "relation": "forecloses"
+      },
+      {
+        "sibling_id": "critical_psychiatry_reading",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "dsm_categories_map_objective_biological_entities",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      },
+      {
+        "atom": "psychiatric_diagnosis_enables_medical_treatment",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "biomedical_taxonomy_validity",
+    "drift_state": {
+      "moment": "contemporary_post_dsm5_biomarker_impasse",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  },
+  "network": {
+    "affects_constraints": [
+      "psychiatric_pharmacological_expansion",
+      "involuntary_treatment_authority",
+      "neurodiversity_recognition_constraint"
+    ],
+    "dual_formulation_note": "The DSM taxonomy is a contested kernel with three structurally distinct readings. This file instantiates the biomedical reading (DSM = objective disease discovery). The neurodiversity_reading and critical_psychiatry_reading are separate constraint stories with different epsilon values, beneficiary/victim structures, and classifications. All three readings link via network.affects_constraints to show the family relationship. The epsilon values differ because the readings make incommensurable empirical claims about what the DSM is — the biomedical reading assumes valid mapping (lower extractiveness from within that frame), while the critical reading treats the DSM itself as the extraction mechanism (higher extractiveness)."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.08
+    }
+  ]
+}

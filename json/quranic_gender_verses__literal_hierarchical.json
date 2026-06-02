@@ -1,0 +1,266 @@
+{
+  "header": {
+    "constraint_id": "quranic_gender_verses__literal_hierarchical",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_quranic_gender_verses__literal_hierarchical",
+    "measurement_id_prefix": "qgv_lit",
+    "story_uid": "d967d39e-51c1-4c0a-95d2-e179d878e058"
+  },
+  "base_properties": {
+    "extractiveness": 0.68,
+    "suppression": 0.72,
+    "theater_ratio": 0.58,
+    "claimed_type": "snare",
+    "human_readable": "Qur'anic Gender Verses (Literal Hierarchical Reading): Divine Ordinance of Male Guardianship",
+    "topic_domain": "islamic_jurisprudence/legal_hermeneutics/gender_studies/religious_authority",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "male_household_heads",
+      "religious_court_authority",
+      "patrilineal_inheritance_beneficiaries"
+    ],
+    "victims": [
+      "women_under_guardianship",
+      "daughters_inheritance_claimants",
+      "female_testimony_bearers",
+      "women_seeking_autonomous_legal_personhood"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Women Under Guardianship (Trapped)",
+      "comment": "PERSPECTIVE 1: WOMEN UNDER GUARDIANSHIP — Trapped by legal structure (male guardian approval required for marriage, contract, inheritance disposition), religious authority (religious courts enforce guardianship rules), family structure (apostasy or defiance risks family rupture), and financial dependency (reduced inheritance rights, restricted property autonomy). Exit requires abandoning family, community, and religious identity simultaneously. Maximum experienced extraction — no exit options."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "identity_locked",
+      "spatial_scope": "regional",
+      "label": "Women Seeking Legal Autonomy (Identity-Locked)",
+      "comment": "PERSPECTIVE 2: WOMEN SEEKING LEGAL AUTONOMY — Structurally mobile (some exit to secular legal systems, professional careers, geographic relocation possible) but identity-locked by internalized legitimacy of religious authority, family honor codes, and community belonging. Exit requires abandoning Islamic identity frame or facing community expulsion. The binding is cognitive/identity-based rather than purely material — the constraint is changeable in principle but unthinkable from within the identity frame."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Male Household Heads (Beneficiary)",
+      "comment": "PERSPECTIVE 3: MALE HOUSEHOLD HEADS — Institutional power holder benefiting from guardianship authority, inheritance advantage (double share vs female relatives), and legal autonomy. Experiences the constraint as coordination mechanism for household decision-making and property management. Arbitrage exit: can switch between religious and secular legal frameworks depending on advantage in each case."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Religious Court Authority (Beneficiary)",
+      "comment": "PERSPECTIVE 4: RELIGIOUS COURT AUTHORITY — Institutional beneficiary wielding enforcement power over guardianship rules. Experiences constraint as legitimate coordination mechanism for family law adjudication. Arbitrage option: can defer to secular courts on technical matters while preserving authority over family structure interpretation."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "Modernist Islamic Scholars (Reinterpreters)",
+      "comment": "PERSPECTIVE 5: MODERNIST ISLAMIC SCHOLARS — Organized actors attempting to reinterpret the verses within the Islamic framework (contextual reading, historical contingency arguments). Constrained by textual literalism objections and orthodox authority; benefits from legitimacy-building in diaspora contexts. Experiences the constraint as a coordination problem solvable through hermeneutics, but faces suppression from orthodox authorities defending literal reading."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "Analytical Observer (Cross-Position View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER — Views the constraint from civilizational scope across multiple legal traditions. Sees the literal hierarchical reading as instantiating a pure extraction mechanism: it concentrates legal autonomy, inheritance rights, and contractual power in male agents while displacing costs to women. The constraint's coherence relies on treating the Qur'anic text as unambiguously hierarchical and enforcement as legitimate — both empirically contested. Chi = 0.68 × f(d_analytical) × σ_global, where f(d) reflects the observer's position outside the constraint's authority structure."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "textual_literal_vs_contextual_ambiguity",
+      "question": "Is Verse 4:34 (al-Qawwamun) an unambiguous mandate for male guardianship, or does the text admit contextual interpretation that renders male authority conditional on protective obligation?",
+      "resolution_mechanism": "Linguistic analysis of Qur'anic grammar and classical tafsir traditions; comparison of variant manuscript readings and lexical etymology of 'qawwamun' (maintainers/managers vs rulers); historical application patterns in early Islamic jurisprudence",
+      "impact": "If literal: male guardianship is divinely ordained and cannot be revised without denying scriptural authority. If contextual: male authority is contingent on protective competence and distributional conditions — enabling reinterpretation. This omega gates the core classification binary: Snare (literal reading) vs Tangled Rope (contextual reading with embedded extraction logic).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether Qur'anic gender verses admit contextual interpretation or mandate literal male hierarchy"
+    },
+    {
+      "id": "divine_ordinance_vs_historical_contingency",
+      "question": "Are these verses divine ordinances transcending historical context, or are they historically-rooted rulings that were progressive relative to 7th-century pre-Islamic Arabian norms?",
+      "resolution_mechanism": "Comparative analysis of women's legal status in contemporaneous Arabian, Byzantine, and Sassanid legal systems; historical documentation of verse application patterns across Islamic centuries; theological examination of revelation doctrine (does 'timeless' mean context-independent or eternally applicable within evolving contexts?)",
+      "impact": "If ordinance: classification holds as Snare with high legitimacy from religious authority. If contingent: the literal reading naturalizes a historical arrangement, triggering false summit dynamics — the constraint is extractive, not divine. This omega gates the false summit detection for this constraint.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether gender verses are context-transcending divine ordinance or historically-contingent rulings"
+    },
+    {
+      "id": "suppression_mechanism_internalization",
+      "question": "What proportion of the measured suppression (0.72) is structural (legal barriers, family economic dependency, enforcement machinery) versus internalized (acceptance of male authority as legitimate, identity fusion with guardian role, epistemic closure regarding alternative readings)?",
+      "resolution_mechanism": "Post-exit trajectory analysis: women exiting guardianship systems (via emigration, secular legal status, apostasy) show persistence or erosion of suppression patterns; comparative study of women transitioning from high-enforcement to low-enforcement contexts; discourse analysis of legitimacy claims in women's own accounts of guardianship acceptance",
+      "impact": "If high internalization: suppression measurement understates binding force — the constraint carries with exiting agents psychologically. If structural: suppression is removable by legal/institutional change without identity reconstruction. This omega informs the identity_locked vs trapped distinction in perspective 2.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of guardianship suppression that is structural versus internalized"
+    },
+    {
+      "id": "enforcement_machinery_variation",
+      "question": "How does enforcement intensity vary across Islamic legal schools and modern jurisdictions claiming Islamic authority? Does variation reveal extraction patterns or legitimate contextual application?",
+      "resolution_mechanism": "Comparative jurisprudence across Maliki, Hanafi, Shafi'i, Hanbali schools; enforcement statistics from Islamic courts in different modern states; documentation of formal vs informal enforcement patterns (legal requirement vs social sanction)",
+      "impact": "If variation is high and correlated with political extraction: enforcement is instrumentalized — the literal reading serves state or patriarchal interests, not divine ordinance. If variation tracks principled jurisprudential difference: the literal reading accommodates legitimate diversity. This omega feeds into the network.affects_constraints analysis and the sibling reading relationships.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Variation in guardianship enforcement across legal schools and jurisdictions"
+    },
+    {
+      "id": "identity_locked_binding_mechanism",
+      "question": "For women identity-locked within the guardianship system (Perspective 2), what is the specific mechanism of identity-fusion: internalized piety (submission is virtue), relational identity (selfhood constituted through family/guardian role), epistemic closure (alternative readings invisible from within the framework), or community belonging (exit = expulsion)?",
+      "resolution_mechanism": "Qualitative research with women exiting and women remaining in guardianship systems; analysis of discourse patterns in women's accounts of authority acceptance; psychological assessment of identity shift in migration contexts; theological examination of how 'obedience' is framed in devotional literature",
+      "impact": "Identifies which identity layer drives the lock: theological (piety reframe), relational (family identity), epistemic (interpretive closure), or social (belonging threat). Each mechanism suggests different intervention points and different classification implications. Identity-locked agents may reclassify if the identity frame shifts, whereas trapped agents perceive immutability regardless of frame change.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Identity-fusion mechanism in women's acceptance of guardianship constraint"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52,
+      "id_override": "qgv_lit_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 500,
+      "value": 0.63,
+      "id_override": "qgv_lit_extract_t500"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 1000,
+      "value": 0.68,
+      "id_override": "qgv_lit_extract_t1000"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.48,
+      "id_override": "qgv_lit_suppress_t0"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 500,
+      "value": 0.61,
+      "id_override": "qgv_lit_suppress_t500"
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 1000,
+      "value": 0.72,
+      "id_override": "qgv_lit_suppress_t1000"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42,
+      "id_override": "qgv_lit_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 500,
+      "value": 0.51,
+      "id_override": "qgv_lit_theater_t500"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 1000,
+      "value": 0.58,
+      "id_override": "qgv_lit_theater_t1000"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 1000
+  },
+  "commentary": {
+    "narrative_context": "Verses Qur'an 4:11 (inheritance allocation), 2:282 (witness testimony), and 4:34 (al-Qawwamun: male guardians/maintainers) establish, on the literal hierarchical reading, a divinely ordained differentiation of rights and authority between men and women. Under this reading, male household heads hold guardianship authority (wilayah); women's inheritance is fixed at half a male heir's share; female testimony in financial contracts is weighted at half that of male testimony. The literal reading treats these verses as timeless legal ordinances establishing permanent structural hierarchy. This constraint story instantiates the literal_hierarchical reading of the contested kernel quranic_gender_verses. Two sibling readings coexist: contextual_egalitarian (treating the verses as responsive to 7th-century contingency and subject to reinterpretation in light of changed circumstances) and progressive_abrogation (treating later Qur'anic verses about women's autonomy as implicitly superseding earlier hierarchical verses). This story generates ONLY the literal hierarchical reading — a single, ε-invariant constraint capturing how male beneficiaries, religious courts, and patrilineal inheritance systems experience and enforce these verses as extractive mechanisms.",
+    "key_agents": [
+      "Male Household Heads: Institutional beneficiary (institutional/arbitrage) — gain guardianship authority, double inheritance share, contractual autonomy",
+      "Religious Court Authority: Institutional beneficiary (institutional/arbitrage) — enforce guardianship and inheritance rules; derive legitimacy from literal textual interpretation",
+      "Women Under Guardianship: Primary victim (powerless/trapped) — require guardian approval for marriage, contracts, property disposition; restricted inheritance and testimony weight",
+      "Female Legal-Autonomy Seekers: Secondary victim (moderate/identity_locked) — structurally mobile but identity-fused with religious authority and community belonging; exit requires abandoning Islamic frame",
+      "Modernist Islamic Scholars: Reinterpreter (organized/constrained) — attempt contextual readings; constrained by orthodox authority; visible in diaspora intellectual spaces",
+      "Analytical Observer: Cross-position view (analytical/analytical) — civilizational scope; sees extraction and false-summit dynamics"
+    ],
+    "logic_rationale": "Extractiveness (0.68): High. The literal hierarchical reading concentrates legal autonomy, inheritance rights, and contractual authority in male agents. Women are locked into dependent legal status requiring guardian authorization for major life decisions. The measurement shows extraction rising from 0.52 to 0.68 over 1000 years (roughly 7th century CE to present), suggesting that enforcement intensity and resource-capture through inheritance rules have accumulated rather than remaining static. This trajectory reflects both institutional calcification (religious courts formalizing rules that began as jurisprudential guidance) and active enforcement amplification as patriarchal interests weaponized the literal reading against contextual alternatives. Suppression (0.72): High and rising. Structural barriers include legal requirement for guardian approval, reduced inheritance entitlement, and discounted testimony. Internalized suppression emerges through family honor codes, piety narratives that frame obedience as virtue, and epistemic closure regarding alternative interpretations. The measurement shows suppression rising from 0.48 to 0.72, indicating that enforcement machinery has intensified — religious courts now systematize what were once flexible family arrangements, and family structure increasingly relies on formal legal threat rather than informal social coordination. Theater ratio (0.58): Moderate. Some functionality exists (inheritance rules do allocate property, guardianship does coordinate family decisions) but increasing performativity. Religious scholars invest effort in defending the literal reading against contextual objections; the interpretive labor that goes into justifying fixed male authority relative to the actual administrative function of guardianship suggests theater has risen over time.",
+    "perspectival_gap": "This constraint manifests six distinct classification types depending on the observer's structural position. Women trapped in the system see pure extraction (Snare) with no exit. Women identity-locked by religious framing see the same structural barrier but perceive it as legitimately binding through divine authority — the classification is identical (Snare) but the binding mechanism is cognitive rather than purely material, which has implications for exit trajectories. Male household heads see a coordination mechanism (Rope) — they experience the verses as solving the problem of family decision-making and property continuity. Religious court authorities see legitimate authority exercise (Rope) — the verses grant them interpretive jurisdiction. Modernist scholars attempting reinterpretation see a constraint problem with organizational solutions (Tangled Rope) — the literal reading creates extraction but has a coordination function (family stability) that contextual readings might preserve while reducing asymmetry. The analytical observer at civilizational scope sees pure extraction (Snare), but with a layer of false-summit dynamics: the constraint is presented as divine ordinance (natural law) when its extractive character and historical contingency are identifiable. The perspectival gap is maximal here — from Rope (beneficiary) to Snare (victim) to Mountain-as-false-summit (analytical observer recognizing naturalization).",
+    "directionality_logic": "Directionality (d) is derived from beneficiary/victim status and exit options. Male household heads as beneficiaries with arbitrage exit (can switch between Islamic and secular legal frameworks) have low d (~0.15), producing negative chi contribution — they experience the constraint as subsidizing them. Women trapped as victims have maximum d (~0.95), producing high chi (~1.42× the base extraction). Women identity-locked as victims have d ~0.89, producing chi ~1.28× base extraction — lower than trapped because identity-locked agents maintain some structural mobility even as their identity frame prevents exercising it. This distinction is diagnostically important: at biographical time horizon, an identity_locked agent perceives the constraint as Rope (changeable in principle) while a trapped agent perceives Mountain (unchangeable). The identity lock is a perceptual filter on structural mobility, not immobility itself. Religious courts as institutional beneficiaries with arbitrage exit behave like male household heads (d ~0.15). The modernist scholars as organized agents with constrained exit (they can leave Islam but lose professional legitimacy and community standing) have d ~0.55, producing moderate chi. These directionality values drive the perspectival gap: the beneficiaries' low d makes them experience the constraint as coordination (Rope, chi ≤ 0.35); the trapped victims' high d makes them experience extraction (Snare, chi ≥ 0.66); the identity-locked agents at the boundary show the diagnostic gap between Rope (perceived mutability from within another identity frame) and Snare (perceived immutability from within this identity frame).",
+    "mandatrophy_analysis": "MANDATROPHY RESOLVED: The literal hierarchical reading instantiates a coherent extraction mechanism with genuine coordination function. Male guardianship DOES coordinate family decision-making and property allocation — these are real coordination problems in household economies. The extraction problem is not that the verses create coordination (they do), but that they solve coordination by concentrating power asymmetrically and hiding the asymmetry behind claims of divine ordinance. The literal reading achieves coordination THROUGH extraction, not despite it. Modernist reinterpretations argue that the coordination function (family stability, property allocation) could persist without the asymmetric extraction (equal inheritance, equal legal autonomy) — that the coordination and extraction are separable. The literal reading insists they are not — that asymmetric male authority IS the coordination mechanism. This is the fundamental disagreement between literal_hierarchical and contextual_egalitarian readings. The mandatrophy is resolved by recognizing that both the literal reading AND the modernist reading are Tangled Rope candidates in some analytical frames (real coordination + real extraction), but the literal reading ENFORCES the entanglement as theologically mandatory, while the modernist reading seeks to decompose them. The literal reading's Snare classification reflects that enforcement machinery now privileges the extraction benefit (inherited by male-centered institutions) over the coordination function (which could be achieved more efficiently without asymmetry). Theater ratio rising from 0.42 to 0.58 suggests that the interpretive work defending literal hierarchy has grown relative to the actual coordination work performed — more effort spent justifying asymmetry against modernist critiques than spent managing household decision-making. This is consistent with Snare dynamics: when extraction becomes fragile, enforcement intensifies.",
+    "kernel_context": "This constraint is ONE READING of the contested kernel quranic_gender_verses. The kernel is formalized (written Qur'anic text fixed ~650 CE) and fixed-text (authority grounds itself in scriptural interpretation). This story instantiates the literal_hierarchical reading: Verses 4:11, 2:282, and 4:34 are understood as unambiguous mandates for male guardianship and differentiated rights, divinely ordained and timeless. Sibling readings coexist: contextual_egalitarian (verses are historically rooted, progressive for their time, and subject to reinterpretation under changed social conditions) and progressive_abrogation (later Qur'anic verses affirming women's autonomy implicitly supersede earlier hierarchical verses). The three readings represent genuinely different epistemic claims about the Qur'an's semantic content and theological status, not merely different value judgments. They cannot all be correct as literal readings — the disagreement is about what the text actually means, not about whether hierarchy is good. The literal_hierarchical reading classifies the constraint as Snare at the victim level, Rope at the beneficiary level, and contains a false-summit element (presented as natural law/divine ordinance when extraction mechanisms are identifiable)."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation",
+    "boltzmann_floor_override": 0.25
+  },
+  "network": {
+    "affects_constraints": [
+      "quranic_gender_verses__contextual_egalitarian",
+      "quranic_gender_verses__progressive_abrogation",
+      "islamic_inheritance_law_gender_asymmetry",
+      "shariah_court_guardianship_enforcement"
+    ],
+    "dual_formulation_note": "The literal_hierarchical reading is one of three structurally distinct constraint stories sharing the kernel quranic_gender_verses. Each reading instantiates different epsilon values, beneficiary/victim structures, and classification types because they represent different empirical claims about the Qur'anic text's semantic content and theological status. The literal_hierarchical reading has high extractiveness (0.68) because it concentrates authority and resources; contextual_egalitarian may have lower extractiveness if it distributes authority more symmetrically while preserving coordination function; progressive_abrogation may classify as Rope or Tangled Rope depending on how supersession operates. Each reading is a self-contained constraint story with its own perspectives, omegas, and measurements. They are linked via network.affects_constraints because they compete for legitimacy within Islamic jurisprudence and each reading shapes institutional outcomes for the others."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.89
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "fixed_text",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "quranic_gender_verses__contextual_egalitarian",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "quranic_gender_verses__progressive_abrogation",
+        "relation": "coexists_with"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "hierarchical_verses_permanently_binding",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "conventional"
+      },
+      {
+        "atom": "male_authority_structural_necessity",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "instrumental"
+      }
+    ],
+    "reference_frame": "classical_patriarchal_hierarchy",
+    "drift_state": {
+      "moment": "contemporary_gender_autonomy_era",
+      "direction": "axiom_overriding",
+      "magnitude": "severe",
+      "acknowledged": false
+    }
+  }
+}

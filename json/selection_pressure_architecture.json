@@ -1,41 +1,85 @@
 {
   "header": {
     "constraint_id": "selection_pressure_architecture",
-    "version": "7.0-json",
-    "generated_date": "2026-03-15",
-    "status": "ACTIVE"
+    "version": "1.0",
+    "generated_date": "2026-02-27",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "spa",
+    "story_uid": "97bf19c1-5ae4-4e64-a7d1-7261dafaf5a3",
+    "created_at": "2026-02-27T14:32:00Z"
   },
-
   "base_properties": {
-    "extractiveness": 0.18,
-    "suppression": 0.03,
-    "theater_ratio": 0.10,
-    "claimed_type": "mountain",
-    "human_readable": "Selection Pressure as Architecture (Optimization Environments Select Against Verification)",
+    "extractiveness": 0.62,
+    "suppression": 0.58,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Selection Pressure as Architecture: Optimization Environments Select Against Verification",
     "topic_domain": "epistemology/information_theory/institutional",
-    "emerges_naturally": true,
-    "accessibility_collapse": 0.92,
-    "resistance": 0.08
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "signal_propagators",
+      "optimization_system_designers"
+    ],
+    "victims": [
+      "epistemic_commons",
+      "verification_agents",
+      "information_accuracy"
+    ]
   },
-
   "perspectives": [
     {
-      "classification_type": "mountain",
+      "classification_type": "snare",
       "agent_power": "powerless",
-      "time_horizon": "generational",
+      "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Information Consumer",
-      "comment": "Individual receiving outputs of optimization environments (social media feeds, news, AI outputs). The selection pressure is invisible and structurally unalterable from this position. Classified mountain: no achievable action changes the structural relationship between optimization objectives and truth-value."
+      "label": "The Epistemic Commons",
+      "comment": "PERSPECTIVE 1: EPISTEMIC COMMONS (SNARE) — The abstract collective good of information accuracy cannot organize, cannot exit, and bears the accumulated cost of optimization-driven signal distortion. No agent advocates for it; no constituency funds it. The epistemic commons experiences maximum extraction with zero degrees of freedom."
     },
     {
-      "classification_type": "mountain",
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "The Verification Agent",
+      "comment": "PERSPECTIVE 2: VERIFICATION AGENT (SNARE) — Agents tasked with verifying signal accuracy are structurally disadvantaged: verification is computationally expensive, produces negative rather than positive results (disconfirming rather than confirming), and is selected against by any optimization environment that rewards signal volume or speed. A verification agent faces systematic career penalty and resource constraint. Exit is impossible without abandoning the verification role entirely."
+    },
+    {
+      "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "civilizational",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Signal Propagator",
+      "comment": "PERSPECTIVE 3: SIGNAL PROPAGATOR (ROPE) — Institutional actors optimizing for signal propagation (media systems, algorithmic feeds, academic publish-or-perish incentives, trading systems) experience the constraint as pure coordination: the optimization function they follow naturally selects for accessibility, speed, and resonance. They benefit from the architecture because their success is measured by the same metrics the architecture optimizes. Arbitrage escape is always available: abandon the optimization and pursue truth-seeking instead (which they could do but do not)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Individual Communicator",
+      "comment": "PERSPECTIVE 4: INDIVIDUAL COMMUNICATOR (TANGLED ROPE) — A researcher, journalist, or public intellectual faces both the coordination benefit (reach, audience growth, career advancement through the optimization architecture) and the extraction cost (incentive to simplify, dramatize, or omit caveats to maximize signal propagation). They benefit from the system's propagation mechanism and are simultaneously selected to distort their own accuracy. Exit is costly (reduced reach, smaller audience, career damage) but possible through independent platforms or niche communities. Moderate experienced extraction reflects their partial agency."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The Platform Operator",
-      "comment": "Institutional actor designing or operating an optimization environment. Even an operator who wants to optimize for truth-value faces the mountain: truth is harder to measure than engagement, accuracy has longer feedback cycles than virality, and any proxy metric for truth is itself subject to Goodhart pressure. The constraint is mountain even for the operator because the difficulty is mathematical, not volitional."
+      "label": "The Verification Infrastructure Movement",
+      "comment": "PERSPECTIVE 5: VERIFICATION INFRASTRUCTURE MOVEMENT (SCAFFOLD) — Organized agents (fact-checkers, registered reports, preprint review communities, open-science advocates, decentralized reputation systems) build parallel verification pathways that operate on different optimization metrics: accuracy-first rather than propagation-first. These infrastructures are temporary scaffolds — they require constant effort maintenance and external funding because they operate against the default optimization pressure. They have sunset logic: as verification becomes institutionalized (integrating into academic hiring, media credibility metrics, algorithmic ranking), the scaffold transitions to rope. Current state: constrained by limited resources and institutional resistance."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Peer Review System (Performative View)",
+      "comment": "PERSPECTIVE 6: PEER REVIEW SYSTEM (PITON) — Traditional peer review was designed to verify accuracy but is now selected against by optimization pressure: it is slow (incompatible with propagation speed), expensive (incompatible with volume metrics), and produces binary reject/accept decisions (incompatible with algorithmic ranking). The system persists through institutional inertia and legitimacy theater, not functional verification. Theater ratio: journals maintain verification language while the actual selection mechanism has shifted to propagation metrics (citation count, impact factors, journal prestige based on aggregated signal, not accuracy). The institution acknowledges its degradation (constant crisis narratives about peer review's failures) but maintains the ritual."
     },
     {
       "classification_type": "mountain",
@@ -43,72 +87,141 @@
       "time_horizon": "civilizational",
       "exit_options": "analytical",
       "spatial_scope": "universal",
-      "label": "The Epistemologist",
-      "comment": "Analytical observer seeing the structural property of optimization itself. At universal scope, this is a theorem about optimization: any objective function that is not truth-value will select for non-truth-value. The constraint is invariant across all optimization domains — AI training, social media amplification, prestige journalism, academic incentives, political rhetoric."
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From a information-theoretic perspective, any optimization environment that does not explicitly include truth-value verification in its objective function will necessarily select for high-signal-volume strategies. This is not contingent on human intentions — it is a property of optimization itself. The observation resembles a theorem: given an optimization landscape where accessibility/speed/propagation are tracked and truth-value is not, the optimizer will find paths that maximize these dimensions. This perspective risks naturalizing what is actually a choice about objective function design. The engine will likely identify this as a false summit: the 'structure of optimization' framing naturalizes what is a contingent institutional choice to optimize for propagation rather than accuracy."
     },
     {
-      "classification_type": "mountain",
-      "agent_power": "organized",
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
       "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Reform Coalition",
-      "comment": "Organized group attempting to redesign information environments for epistemic quality. Faces the mountain: can change WHICH objective is optimized for, but cannot change the structural property that optimization selects for its objective. Any new objective introduces new Goodhart vulnerabilities. Coalition can shift the problem, not eliminate it."
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The System Designer",
+      "comment": "PERSPECTIVE 8: SYSTEM DESIGNER (TANGLED ROPE) — Architects of optimization systems (algorithm designers, platform engineers, incentive structure creators) experience the constraint as genuine coordination problem with embedded extraction. Coordination: they must design systems that propagate information and enable communication. Extraction: the optimization metrics available to them (engagement, reach, velocity) naturally select against verification. They could change the objective function (include accuracy, include uncertainty quantification, include disconfirming evidence) but face institutional pressure and resource constraints. Mobile exit exists but is costly: switching to accuracy-first optimization often requires rejecting profit incentives, institutional support, and user base. Experienced extraction is real but not maximal because they retain agency in metric selection."
     }
   ],
-
-  "interval": {
-    "start": 0,
-    "end": 100
-  },
-
   "omegas": [
     {
-      "id": "omega_mountain_validity",
-      "question": "Is the selection pressure a true mountain (thermodynamic — any optimization environment must select for its objective over non-objectives) or a piton of current platform design choices that could be redesigned?",
-      "resolution_mechanism": "Counterfactual platform analysis: if platforms were redesigned to optimize for truth-value (e.g., prediction markets, adversarial verification systems), does the selection-against-verification pressure persist in a different form (Goodhart on truth proxies), or does it genuinely resolve? If it persists, mountain confirmed. If it resolves, reclassify as piton or rope of current platform architecture.",
-      "impact": "If piton: reclassifies to piton with theater_ratio ≥ 0.70 (the 'inevitability' framing is itself theatrical). Downstream axes retain their classifications but lose the thermodynamic grounding — feedback suppression becomes a design failure rather than a structural inevitability.",
+      "id": "truth_value_formalization",
+      "question": "Is truth-value formally formalizable as an objective function for optimization environments?",
+      "resolution_mechanism": "Epistemological analysis and formal systems exploration: examine whether truth-value can be encoded as a computable metric analogous to engagement or reach; test whether ground-truth verification enables automated truth-seeking optimization",
+      "impact": "If formalizable: the constraint becomes a choice problem (designers select propagation over truth metrics). If not formalizable: the constraint resembles a natural law (optimization cannot include what cannot be formalized). Classification impact: Rope/Tangled Rope vs Mountain.",
       "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Thermodynamic vs. design-contingent selection pressure"
+      "type_class": "conceptual",
+      "description": "Whether truth-value can be formalized as an objective function"
     },
     {
-      "id": "omega_scope_invariance",
-      "question": "Does the selection pressure operate identically across all optimization domains (AI training, social media, journalism, academia, politics), or do domain-specific structures modulate it enough to break the universal claim?",
-      "resolution_mechanism": "Cross-domain measurement: compare divergence rates between propagation success and ground-truth accuracy across AI training, social media, prestige journalism, and academic publishing. If divergence rates differ by more than one order of magnitude across domains, the universal mountain claim is too strong — decompose into domain-specific stories.",
-      "impact": "If domain-specific: decompose into separate constraint stories (selection_pressure_ai_training, selection_pressure_social_media, etc.) linked by network.affects_constraints. The general principle becomes a commentary note, not a constraint.",
+      "id": "optimization_necessity",
+      "question": "Is optimization for signal propagation a necessary feature of communication systems or a contingent institutional choice?",
+      "resolution_mechanism": "Historical comparison of communication architectures: societies that prioritized accuracy metrics over propagation metrics; modern systems that implement accuracy-first optimization (e.g., Cochrane for medical evidence, PubPeer for research verification). Analysis of whether propagation optimization is driven by technical constraints or institutional incentives (profit, reach, influence).",
+      "impact": "If necessary: the constraint is architectural (mountain). If contingent: the constraint is institutional design (tangled rope/snare). This omega directly affects whether false-summit detection applies.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether propagation optimization is necessary or contingent"
+    },
+    {
+      "id": "verification_burden_distribution",
+      "question": "Can verification costs be distributed or absorbed without creating powerless trapped agents?",
+      "resolution_mechanism": "Design analysis of verification systems: explore whether verification can be embedded as a low-cost component of propagation (e.g., automated confidence scoring, uncertainty quantification, preprint scrutiny layers) or whether verification always requires dedicated high-cost agents. Test whether distributed verification (many-eyes) produces equivalent accuracy to centralized verification.",
+      "impact": "If distributeable and low-cost: verification can be integrated into the propagation architecture (Rope result). If verification always requires dedicated high-cost agents: the snare aspect (powerless verification agents) is structural and unavoidable.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Cross-domain invariance of selection pressure"
+      "description": "Whether verification burden can be distributed without creating trapped powerless agents"
+    },
+    {
+      "id": "objective_function_malleability",
+      "question": "Can optimization systems meaningfully shift toward accuracy-first metrics without collapsing propagation functionality?",
+      "resolution_mechanism": "Field experiments in platform redesign, academic incentive restructuring, and algorithmic metric weighting. Measure whether systems that prioritize accuracy-first (Cochrane, arXiv, PubPeer, registered reports) achieve adequate signal propagation or suffer adoption/reach collapse. Assess whether accuracy and propagation can coexist as weighted objectives.",
+      "impact": "If coexistence is possible: system designers have real agency (tangled rope, not snare). If accuracy-first causes propagation collapse or vice versa: the constraint is genuinely structural (mountain, snare, or rope depending on perspective). This omega informs whether the scaffold perspective is realistic.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether accuracy-first optimization can coexist with propagation"
     }
   ],
-
-  "commentary": {
-    "narrative_context": "Any environment optimized for signal propagation systematically selects for accessibility over truth-value, regardless of the intent or quality of individual actors within it. This is not a claim about bad actors or poor design — it is a structural property of optimization itself. When the objective function is not truth-value (and truth-value is notoriously difficult to formalize as an objective), the optimization process will find paths that maximize the actual objective while being orthogonal to or inversely correlated with epistemic accuracy. This applies to AI training pipelines (optimizing prediction accuracy over available data, not truth), social media platforms (optimizing engagement, not accuracy), prestige journalism (optimizing access and audience, not structural understanding), and academic publishing (optimizing citation count and novelty, not replication). The mountain claim is that this property is inherent to optimization, not an artifact of any particular implementation.",
-    "key_agents": [
-      "Information consumer (powerless/trapped): receives outputs shaped by selection pressure; cannot alter the structural relationship between optimization and truth-value",
-      "Platform operator (institutional/constrained): designs optimization environments but faces the mathematical difficulty of formalizing truth-value as an objective; Goodhart pressure applies to any proxy",
-      "Reform coalition (organized/constrained): can shift which objective is optimized, but cannot eliminate the structural property that optimization selects for its objective",
-      "Epistemologist (analytical/analytical): sees the invariance across domains; the structural property is a theorem about optimization, not a contingent fact about platforms"
-    ],
-    "logic_rationale": "Extractiveness is set at 0.18 — below the mountain ceiling of 0.25. The constraint extracts from no specific agent; it is a structural property of environments. The 'cost' is borne diffusely by anyone relying on optimization-environment outputs for epistemic purposes, but this is analogous to how entropy 'costs' ordered systems — no agent extracts, no beneficiary exists. Suppression at 0.03 reflects that the constraint does not actively prevent alternatives; it is simply the case that optimization works this way. Theater ratio at 0.10 reflects that the selection pressure is genuine, not performative. Accessibility collapse at 0.92: the constraint is nearly invisible to those inside optimization environments — the outputs look authoritative precisely because they were selected for looking authoritative. Resistance at 0.08: extremely low resistance to the claim's truth; the mathematical structure of optimization is well-established.",
-    "perspectival_gap": "No perspectival gap — this is a uniform-type mountain. All four perspectives classify as mountain because the structural property of optimization is invariant across power positions, time horizons, and exit options. The platform operator might appear to have more agency (could redesign the objective function), but even redesign faces the same mountain: the new objective introduces new Goodhart vulnerabilities. The organized reform coalition can shift the locus of the problem but not eliminate it. The uniformity is itself diagnostic: when every perspective sees the same classification, the constraint is likely structural rather than positional.",
-    "directionality_logic": "No beneficiary/victim declarations. Mountains do not have structural beneficiaries or victims — the constraint is a property of environments, not a relationship between agents. Downstream axes (feedback_suppression_tangled_rope, hyperstition_snare) instantiate the specific agent relationships where extraction occurs. The mountain establishes the structural condition; the downstream axes identify who benefits and who bears costs within specific institutional implementations.",
-    "mandatrophy_analysis": "Mountain classification prevents two mandatrophy errors: (1) Treating the selection pressure as a snare implies an extracting agent who could be held accountable — but the constraint operates without any agent's intent. Removing Mark Zuckerberg does not change the mathematics of optimization. (2) Treating the selection pressure as a rope implies it could be redesigned to serve all parties — but the Goodhart problem means any truth-proxy objective will eventually be gamed. The mountain classification correctly identifies the constraint as structural rather than volitional, directing corrective attention to downstream institutional implementations rather than to the impossible task of 'fixing optimization.'"
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.5
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
   },
-
+  "commentary": {
+    "narrative_context": "Selection pressure as architecture describes a structural property that emerges whenever an information environment optimizes for one metric while leaving another metric unmeasured. The constraint is not about bad actors, poor design, or malice — it is about the logic of optimization itself. If an environment optimizes for signal propagation (reach, speed, engagement, citation volume, trading velocity) and does not include truth-value verification in the objective function, the optimization process will find strategies that maximize propagation while truth-value drifts as a side effect. This is not a law of physics. It is a law of optimization: the system optimizes what it measures. The constraint has become more severe over the interval (0-20) as optimization environments have scaled (from pre-internet expert communities to planetary-scale algorithmic feeds) and as computational capacity to search the optimization landscape has increased. The trajectory shows rising extractiveness (optimization pressure intensifying), rising theater (peer review and verification language persisting while functional verification declines), and rising suppression (barriers to exit from propagation-optimized systems increasing as institutional entrenchment deepens). The constraint demonstrates all six DR types from different perspectives, revealing that classification depends entirely on the observer's structural position relative to the optimization flow.",
+    "key_agents": [
+      "Epistemic Commons: Primary victim (powerless/trapped) — abstract collective good of information accuracy that cannot organize, fund itself, or exit",
+      "Verification Agents: Secondary victim (powerless/trapped) — researchers, fact-checkers, auditors selected against by optimization pressure; career and resource disadvantage",
+      "Signal Propagators: Primary beneficiary (institutional/arbitrage) — media systems, algorithmic feeds, publish-or-perish academia, trading platforms that profit from propagation optimization",
+      "Individual Communicators: Secondary beneficiary (moderate/constrained) — researchers, journalists, public intellectuals who benefit from reach but are selected to distort accuracy",
+      "System Designers: Powerful actor (powerful/mobile) — algorithm architects and incentive structure creators who could change objective functions but face institutional pressure",
+      "Verification Infrastructure: Organized actor (organized/constrained) — fact-checkers, registered reports, open-science movements building alternative pathways",
+      "Peer Review Institution: Degraded actor (institutional/arbitrage) — maintains verification theater while functional verification declines due to optimization pressure",
+      "Analytical Observer: Civilizational position (analytical/analytical) — risks naturalizing contingent optimization choices as laws of information physics"
+    ],
+    "logic_rationale": "Extractiveness (0.62): High-moderate. The constraint extracts significant value from verification agents and the epistemic commons (they bear costs without benefiting), while benefiting signal propagators and individual communicators who ride the optimization wave. The value is not maximal (0.72+) because system designers retain some agency — they could shift metrics and do so in some contexts (academic hiring reforms, platform accuracy initiatives). The trajectory shows rising extractiveness (0-20: 0.35→0.62) indicating the optimization environment's increasing maturity and computational capacity to find propagation-maximizing strategies. Suppression (0.58): Moderate-high. Significant barriers to exit from propagation-optimized systems include: (1) institutional entrenchment (most communication channels are optimized for propagation), (2) career costs (switching to accuracy-first communication reduces reach and funding), (3) technical infrastructure (algorithmic ranking, recommendation systems, engagement metrics are built into platforms), (4) user base lock-in (leaving the optimization environment means losing audience). These are real but not total — niche communities and independent platforms exist and function, though at reduced scale. Theater ratio (0.68): High. The constraint exhibits high theater because verification language persists (peer review, fact-checking, accuracy claims) while the actual selection mechanism has shifted to propagation metrics. Journals claim verification while their prestige derives from propagation (citation counts, impact factors based on volume not accuracy). The theater has risen over the interval (0-20: 0.45→0.68) as optimization environments have scaled and as the gap between verification rhetoric and propagation reality has widened.",
+    "perspectival_gap": "The constraint demonstrates maximum perspectival divergence across the observation site. The epistemic commons sees pure extraction and immobility (Snare). Verification agents see the same extraction and immobility (Snare). Signal propagators see coordination without extraction (Rope) — they are solving a real problem of communicating information. System designers see mixed coordination and extraction (Tangled Rope) — they need to propagate signal but are selected to distort accuracy. Verification infrastructure sees a temporary problem with a sunset (Scaffold) — alternative pathways are buildable but require sustained effort. Peer review sees its own degradation (Piton) — performing verification ritual without functional verification. The analytical observer risks seeing a law of information physics (Mountain) — optimization necessarily selects for whatever is measured. The gap reflects that the constraint is not experienced uniformly: those riding the optimization wave (signal propagators) see coordination; those opposing it (verification agents) see extraction; those designing it (system designers) see both. No single type captures the full structure.",
+    "directionality_logic": "Directionality d (from 0.0 = full beneficiary to 1.0 = full target) is determined by each agent's structural position in the optimization flow. Signal propagators have d ≈ 0.1-0.2 (beneficiaries with arbitrage escape): they profit from the optimization environment and could choose accuracy-first metrics but do not. Verification agents have d ≈ 0.95 (full targets): they oppose the optimization flow and cannot escape it without abandoning verification. Epistemic commons has d ≈ 1.0 (extreme target): abstract good that cannot organize or exit. Individual communicators have d ≈ 0.55-0.60 (both beneficiary and victim): they benefit from reach but are selected to distort. System designers have d ≈ 0.40-0.50 (moderate targets): they could change the metrics but face institutional pressure. Verification infrastructure has d ≈ 0.65-0.70 (mostly target): they oppose the dominant optimization but have agency through organized action. The engine derives d from beneficiary/victim declarations and exit options; this perspective explicitly traces how structural position maps to experienced extractiveness.",
+    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that the constraint exhibits genuine coordination (signal propagation is a real problem requiring institutional solution) alongside genuine extraction (the solution selects against verification). The Tangled Rope classification (base properties: extractiveness 0.62, suppression 0.58, beneficiaries + victims + enforcement) correctly captures both dimensions. The false-summit risk (the mountain perspective naturalizing optimization as law) is mitigated by the structural data showing beneficiaries (signal propagators) whose interests depend on maintaining the propagation optimization. If the constraint were truly natural law, no beneficiaries would exist — the beneficiary presence reveals the constraint as constructed institutional choice. The mandatrophy resolves to: this is a hybrid constraint with genuine coordination function and asymmetric extraction, classified as Tangled Rope with false-summit risk flagged for analytical observers who might naturalize the optimization logic.",
+    "kernel_context": "This constraint is NOT a kernel reading. It describes a single structural claim about optimization pressure, not a contested interpretation of an ambiguous kernel. The constraint could be reframed as one reading of a contested kernel ('the nature of information systems') but the current authoring treats it as a straightforward tangled rope with a false summit risk."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
   "network": {
     "affects_constraints": [
-      "feedback_suppression_tangled_rope",
-      "hyperstition_snare",
-      "bureaucratic_ego_rope"
+      "verification_bottleneck",
+      "publish_or_perish_extraction",
+      "algorithmic_ranking_bias"
     ],
-    "dual_formulation_note": "This mountain is the structural source node for a three-axis constraint family. The general principle (optimization selects for its objective) generates specific institutional failure modes: feedback suppression (success ecology dismantles error-correction), hyperstition (propagation consumes verification), and bureaucratic ego (documentary consistency without experiential continuity). Each downstream axis has its own ε, its own beneficiary/victim structure, and its own classification. The mountain does not extract — the downstream axes do."
+    "dual_formulation_note": "Selection pressure architecture is the upstream constraint affecting specific downstream manifestations (academic publishing, media algorithms, trading systems). The upstream constraint describes the general optimization property; downstream constraints describe domain-specific instantiations. All are linked by the same mechanism: optimization for propagation without truth-value in the objective function."
   },
-
-  "uke_scope": {
-    "epsilon_bin": "high",
-    "hypothesis": "mountain",
-    "downstream_of": []
-  }
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.15
+    }
+  ]
 }

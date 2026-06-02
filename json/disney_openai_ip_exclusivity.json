@@ -4,24 +4,26 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "disneyoai"
+    "measurement_id_prefix": "disneyai",
+    "story_uid": "87ff3e42-6f70-4a8b-b162-f58dd5cf0c8a"
   },
   "base_properties": {
     "extractiveness": 0.58,
-    "suppression": 0.72,
-    "theater_ratio": 0.38,
+    "suppression": 0.68,
+    "theater_ratio": 0.55,
     "claimed_type": "tangled_rope",
-    "human_readable": "Exclusive IP licensing for generative AI training (Disney/OpenAI)",
-    "topic_domain": "technological/economic",
+    "human_readable": "Exclusive IP Licensing for Generative AI Training (Disney/OpenAI)",
+    "topic_domain": "technological/economic/intellectual_property",
     "requires_active_enforcement": true,
     "beneficiaries": [
-      "openai_sora_development",
-      "disney_strategic_positioning"
+      "openai_technical_capability",
+      "disney_licensing_revenue",
+      "disney_character_control"
     ],
     "victims": [
       "competing_ai_developers",
-      "character_derivative_ecosystem",
-      "public_generative_model_commons"
+      "open_source_ai_community",
+      "downstream_creators"
     ]
   },
   "perspectives": [
@@ -31,17 +33,17 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "Competing AI Developers",
-      "comment": "PERSPECTIVE 1: COMPETING AI DEVELOPERS (SNARE) \u2014 Smaller AI labs and open-source communities cannot access Disney's top-200 character library for model training. This exclusivity creates a structural asymmetry: OpenAI's Sora can generate authentic Disney characters, while competitors must build models blind to these high-value training targets. Exit options are trapped \u2014 competitors cannot negotiate for equivalent access regardless of technical merit or funding. The constraint extracts competitive advantage through suppression of alternatives. Experienced extractiveness is maximal because the character IP library is irreplaceable for video generation tasks."
+      "label": "Independent AI Developers (No IP Access)",
+      "comment": "PERSPECTIVE 1: INDEPENDENT AI DEVELOPERS (SNARE) — Structurally excluded from the highest-quality training data (Disney's top-200 character library). Cannot replicate Sora-level video generation without equivalent IP access. Trapped by capital barriers (acquiring licensed IP costs $1B+), legal barriers (IP licensing oligopoly), and technical barriers (training data that took Disney decades to accumulate). Maximum extraction: competitors are locked out while OpenAI builds a moat."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "moderate",
+      "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "Character Derivative Creator Ecosystem",
-      "comment": "PERSPECTIVE 2: CHARACTER DERIVATIVE CREATOR ECOSYSTEM (TANGLED ROPE) \u2014 Fan creators, indie studios, and licensed merchandise makers benefit from the broader Disney ecosystem (IP recognition, distribution networks, audience access) but now face a new asymmetry: OpenAI/Sora can generate derivative works using the character library directly, without human creators' labor. The ecosystem has constrained exit options \u2014 leaving Disney's platforms is costly, but remaining means competing against automated generation. This is mixed: the constraint enables some coordination (Disney franchising, content distribution) but simultaneously enables extraction of derivative value that previously went to human creators. Active enforcement required: Disney must monitor and license use of generated character content."
+      "spatial_scope": "global",
+      "label": "Open Source AI Community",
+      "comment": "PERSPECTIVE 2: OPEN SOURCE AI COMMUNITY (TANGLED ROPE) — Benefits from OpenAI's published research (Sora papers, technical infrastructure improvements cascade to open models). Constrained by inability to license Disney IP at any price (exclusivity contract precludes it). The constraint has both coordination function (Sora advances raise open-source baseline) and extraction (exclusivity prevents catch-up to frontier capabilities). Organized enough to respond strategically (synthetic data generation, alternative training sources) but subordinate position relative to the duopoly."
     },
     {
       "classification_type": "rope",
@@ -49,26 +51,26 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "OpenAI/Sora Development",
-      "comment": "PERSPECTIVE 3: OPENAI/SORA DEVELOPMENT (ROPE) \u2014 The exclusive access to Disney's character IP is experienced as pure coordination by OpenAI: Disney has solved a critical problem (training data scarcity for character-level video generation) through the partnership. OpenAI maintains arbitrage options \u2014 other entertainment IP holders could provide similar access, or synthetic training data could substitute. The constraint's function is coordination: enabling Sora to generate high-fidelity character content. Extraction overhead is minimal from this perspective \u2014 OpenAI pays fair value ($1B investment + ongoing licensing), and the benefit (competitive advantage in video generation) is proportional. This perspective sees the constraint as solving a genuine technical coordination problem."
+      "label": "OpenAI (Exclusive Licensee)",
+      "comment": "PERSPECTIVE 3: OPENAI (ROPE) — Solves legitimate technical coordination problem: character-level video generation requires unprecedented scale of coherent visual data. Disney's library provides 70+ years of character model sheets, animation cycles, and narrative context—irreplaceable training material. The licensing enables genuine research advancement (Sora capabilities). OpenAI experiences the constraint as pure coordination with first-mover advantage. Net benefit: exclusive access + prestige + technical moat. Zero suppression experienced; perfect arbitrage (can license other studios' IP, can exit to alternative training sources, but exclusivity agreement prevents others from accessing this specific path)."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
-      "time_horizon": "biographical",
+      "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Disney Strategic Positioning",
-      "comment": "PERSPECTIVE 4: DISNEY STRATEGIC POSITIONING (ROPE) \u2014 Disney benefits from the partnership through capital infusion ($1B), first-mover advantage in generative video, and expansion of character IP value into the AI era. Disney maintains arbitrage options \u2014 it could license to other AI companies, retain training data internally, or build its own generative model. The constraint's function is coordination: Disney solves OpenAI's training data bottleneck; OpenAI validates Disney's IP for AI-era markets. Both parties' costs are proportional to benefits. This perspective experiences the constraint as a solved coordination problem, not extraction."
+      "label": "Disney (Licensor)",
+      "comment": "PERSPECTIVE 4: DISNEY (ROPE) — Solves coordination problem: monetize IP in the AI era before open-source alternatives devalue it. The $1B licensing revenue is secondary; the primary benefit is control over how Disney characters are represented in generative models. By partnering with OpenAI (not open-sourcing the training data), Disney ensures branded character generation remains within Disney-approved boundaries. Experiences constraint as coordination: 'we provide training data, OpenAI ensures Mickey Mouse doesn't generate in competitors' models.' Zero suppression; pure beneficiary with high arbitrage (could license to competitors, could open-source, could build internal AI—chooses exclusivity for control)."
     },
     {
-      "classification_type": "tangled_rope",
-      "agent_power": "analytical",
-      "time_horizon": "civilizational",
-      "exit_options": "analytical",
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "Public AI Commons & Content Creator Class",
-      "comment": "PERSPECTIVE 5: PUBLIC AI COMMONS & CONTENT CREATOR CLASS (TANGLED ROPE) \u2014 The exclusivity constraint has a civilizational time horizon because it shapes whether generative AI becomes a coordination mechanism (distributed creative tools) or an extraction mechanism (concentrated wealth capture). From this perspective, the constraint exhibits both functions: it does coordinate Disney's IP with AI infrastructure (genuine efficiency gain), but it simultaneously extracts future rents by blocking open-source alternatives and undermining human creator compensation. Active enforcement is visible in licensing agreements, legal scrutiny of derived works, and restrictions on model weights. The constraint suppresses alternatives: open-source video models cannot access character IP, and creators cannot collectively bargain for automation compensation. Effective extraction depends on whether alternative character IP sources emerge (open-source animation, international franchises, synthetic character generation). If competitors achieve comparable character fidelity through legal training routes or synthetic generation, the exclusivity contract loses extraction power and becomes pure coordination."
+      "label": "Downstream Creators (Artists, Animators)",
+      "comment": "PERSPECTIVE 5: DOWNSTREAM CREATORS (SNARE) — Professional animators, concept artists, and character designers experience Sora as a capability that devalues their labor while blocking them from the same training sources. They cannot license Disney IP; Sora can. They cannot access OpenAI's exclusive training data; competitors building tools to replace their work can. High suppression: IP licensing is legally enforced, skill-based labor market is collapsing into commodification via generative models, no organizational structure to bargain collectively. Not fully trapped (some exit to niche work, animation for Sora itself) but heavily constrained. Moderate power level reflects that they are workers with some skills, not powerless, but the structural extraction is high."
     },
     {
       "classification_type": "scaffold",
@@ -76,8 +78,8 @@
       "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "Regulatory & Policy Response Coalition",
-      "comment": "PERSPECTIVE 6: REGULATORY & POLICY RESPONSE COALITION (SCAFFOLD) \u2014 From a coalition view (EU AI regulators, creator advocacy groups, open-source governance bodies), the exclusivity constraint is a temporary institutional arrangement with a sunset clause embedded in the 10-15 year horizon. AI training data access regulations, creator compensation mandates, or synthetic character generation breakthroughs could bypass the constraint entirely. The scaffold perspective sees the constraint as high-suppression but temporary: current legal frameworks lack mechanisms to force licensing or mandate access, so suppression is ~0.72. But policy coordination to require 'fair access' provisions, regulatory restrictions on exclusive AI training deals, or technological substitutes (synthetic characters) would collapse the constraint's extraction mechanism. Theater is low (0.38) because the extraction mechanism is transparent \u2014 the financial incentive is obvious. The sunset is driven by policy evolution, not inertia. High suppression is tolerated only because the time horizon is finite."
+      "label": "Synthetic Data & Fair-Use Coalition",
+      "comment": "PERSPECTIVE 6: SYNTHETIC DATA & FAIR-USE COALITION (SCAFFOLD) — Organized response to IP exclusivity via alternative training pathways: procedural character generation (synthetic data), fair-use litigation over training data, open-source model weights trained on non-Disney material. See the constraint as temporary—estimated 5-10 year sunset as (a) synthetic data techniques mature, (b) legal precedent around training data fair use solidifies, (c) open models achieve parity through alternative data sources. Low effective extraction because coalition agents see agency and a structural exit path. Sunset enforcement mechanism: successful fair-use court ruling or technical parity of open models would dissolve the exclusivity advantage."
     },
     {
       "classification_type": "piton",
@@ -85,46 +87,73 @@
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "Traditional Entertainment Industry Licensing Model",
-      "comment": "PERSPECTIVE 7: TRADITIONAL ENTERTAINMENT INDUSTRY LICENSING MODEL (PITON) \u2014 The exclusivity mechanism echoes the legacy licensing model: franchising, merchandise rights, and derivative content control. From this institutional perspective, the constraint is a Piton \u2014 the traditional IP licensing apparatus (character exclusivity contracts, derivative work restrictions) is being mechanically applied to AI training, but its functional role has atrophied. In the traditional era, exclusivity prevented market saturation by controlling who could produce merchandise; in the AI era, exclusivity prevents training data access but does NOT prevent unauthorized generation (once a model is trained, generation is trivial). The theater ratio is low (0.38) because the extraction is straightforward licensing revenue, not performative. But the constraint's primary function (controlling distribution and scarcity) no longer works for generative models \u2014 OpenAI's Sora doesn't need to renew the license to generate characters; it only needs to have been trained. The licensing apparatus persists through institutional inertia (contract law, corporate strategy templates) rather than functional necessity. As synthetic training data and alternative character sources mature, the exclusivity constraint becomes purely theatrical."
+      "label": "IP Licensing as Institutional Practice",
+      "comment": "PERSPECTIVE 7: IP LICENSING AS INSTITUTIONAL PRACTICE (PITON) — From a civilizational view, exclusive IP licensing is a degraded institutional mechanism. It persists through legal/contractual enforcement (theater_ratio=0.55) even though its original function—providing incentives for creative work—has been inverted. The constraint now suppresses the very creativity it was designed to incentivize. Disney does not need licensing revenue to fund animation; OpenAI does not need exclusivity to build Sora. The licensing persists through institutional inertia and path-dependent corporate strategy, not because it solves a problem that couldn't be solved another way. Theater is moderate (the coordination narrative is still credible) but the functional decline is evident."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — From universal/civilizational scope, the constraint appears to be an immutable feature of intellectual property law itself: exclusive licensing is 'how IP works.' Property rights are natural or inevitable features of innovation economies. Character IP is inherently scarce and excludable—no one else can own the legal claim to Mickey Mouse. This perspective risks naturalizing what is actually a choice about how to structure innovation incentives. The engine's false summit detector will flag this as a beneficiary-backed natural law (Disney and OpenAI benefit from the 'inevitability' framing). The mountain classification conceals that the constraint is contingent on specific policy choices (copyright length, fair-use scope, licensing as the primary vehicle for capital formation in media)."
     }
   ],
   "omegas": [
     {
-      "id": "synthetic_character_substitutability",
-      "question": "Can synthetically generated or procedurally created character training data achieve fidelity equivalent to Disney's canonical character library for video generation tasks?",
-      "resolution_mechanism": "Benchmark comparison of generated video quality: Sora (trained on Disney IP) vs. open-source Sora-equivalents trained on synthetic characters; user preference studies; downstream task performance (character consistency, emotional expression, action recognition)",
-      "impact": "If synthetic substitutes succeed: exclusive Disney IP becomes optional, not mandatory. Constraint reclassifies as Piton (legacy advantage, not structural necessity). If synthetic generation fails: Disney exclusivity remains structurally critical. Constraint remains Tangled Rope/Snare from competitors' perspectives.",
-      "confidence": "medium",
+      "id": "training_data_necessity_threshold",
+      "question": "Is exclusive access to Disney's character library actually necessary for character-level video generation, or would synthetic/procedural data + non-exclusive training achieve equivalent results?",
+      "resolution_mechanism": "Comparative analysis of Sora outputs trained on exclusive Disney data vs. open-source models trained on synthetic character data and public film corpora. Measurement of convergence timeline toward parity.",
+      "impact": "If synthetic data achieves parity within 3-5 years: exclusivity was a competitive advantage window, not a structural necessity. Reclassify to Scaffold (sunset already forming). If exclusive data remains 2+ years ahead: extraction mechanism is structural and sustained.",
+      "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether synthetic character generation can replace canonical Disney training data"
+      "description": "Whether exclusive Disney IP is technically necessary or merely advantageous"
     },
     {
-      "id": "regulatory_fair_access_mandate",
-      "question": "Will regulatory frameworks (EU AI Act, proposed creator protection laws) require compulsory licensing or fair-access provisions for entertainment IP used in generative model training?",
-      "resolution_mechanism": "Legislative tracking in EU, US, UK, and China; court precedents on AI training copyright; regulatory agency guidance on 'essential' IP assets for AI development; negotiated compensation agreements for training data access",
-      "impact": "If mandated: Disney must grant non-exclusive access or face regulatory penalties. Exclusivity contract becomes unenforceable. Constraint reclassifies as Rope (coordination only) across all institutional perspectives. If blocked: legal exclusivity remains enforceable indefinitely. Constraint remains Tangled Rope/Snare.",
+      "id": "fair_use_litigation_trajectory",
+      "question": "Will courts establish that training data use constitutes fair use, undermining the legal basis for exclusive licensing?",
+      "resolution_mechanism": "Outcome of pending litigation (Authors Guild v. Google precedent; current training-data fair-use cases). Legislative activity around fair use or copyright reform.",
+      "impact": "If fair use prevails: legal suppression of the constraint drops, exclusivity becomes unenforceable, Scaffold sunset triggers. If fair use fails: licensing remains enforceable and suppression stays high.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether regulation will mandate fair access to entertainment IP for AI training"
+      "description": "Legal precedent on training data as fair use"
     },
     {
-      "id": "model_weight_escape_liability",
-      "question": "Can competing labs legally reverse-engineer or extract character-generation weights from Sora outputs, and what legal liability attaches to unauthorized training data reconstruction?",
-      "resolution_mechanism": "Litigation over model weight recovery; technical feasibility studies of style-transfer attacks; comparison of Sora output forensics to canonical character attributes; enforcement actions by Disney against suspected model theft",
-      "impact": "If weights are escapable: exclusivity is a temporary technical advantage, not a structural constraint. Competitors can build equivalent models from outputs. Constraint becomes Scaffold with sunset driven by technical decay. If weights are secure: exclusivity remains enforced through legal IP protection. Constraint remains binding.",
+      "id": "synthetic_character_generation_feasibility",
+      "question": "Can procedurally generated synthetic character data (infinite permutations, photorealistic rendering) substitute for Disney's curated character library?",
+      "resolution_mechanism": "Benchmark comparisons: Sora outputs using Disney IP vs. using photorealistic synthetic characters; user studies on perceptual quality, controllability, and character consistency.",
+      "impact": "If synthetic generation achieves visual parity: independent developers can compete without Disney IP. Exit option for victims shifts from 'trapped' to 'constrained' (high cost but possible). If synthetic generation remains visually inferior: Disney IP remains strategically scarce.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether synthetic character generation can replace curated IP libraries"
+    },
+    {
+      "id": "licensing_revenue_motivation",
+      "question": "Is the exclusivity contract primarily motivated by Disney licensing revenue ($1B), or by Disney's desire to control how its characters are represented in generative models?",
+      "resolution_mechanism": "Corporate communication analysis; financial analysis of licensing revenue as percentage of Disney's AI investments and total revenue; examination of whether Disney has licensed equivalent IP to competitors at any price.",
+      "impact": "If revenue-driven: the constraint is economically contingent and renegotiable. If control-driven: the constraint reflects structural preference for monopoly over character representation, and Snare dynamics dominate. This determines whether beneficiary conflict is primary (revenue) or ideological (control).",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether exclusivity is revenue-driven or control-driven"
+    },
+    {
+      "id": "open_source_alternative_feasibility",
+      "question": "Could open-source AI development communities achieve character-level video generation through non-exclusive training data (synthetic + public domain + fair-use public media)?",
+      "resolution_mechanism": "Technical roadmap from open-source AI research; timeline to model parity; assessment of whether remaining gaps are due to training data scarcity or computational/architectural constraints.",
+      "impact": "If feasible: Scaffold perspective is correct and constraint has real sunset. If infeasible: Snare/Tangled Rope extraction mechanism is structural and sustained.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether non-exclusive training data suffices for open-source parity"
+    },
+    {
+      "id": "suppression_mechanism_composition",
+      "question": "What proportion of the measured suppression (0.68) is due to (a) legal/contractual enforcement (IP law), (b) capital barriers (cost of licensing equivalent data), vs. (c) technical barriers (data quality/curation)?",
+      "resolution_mechanism": "Structural decomposition analysis; cost-benefit analysis for each barrier type; counterfactual modeling (if IP law weakened by 50%, what suppression remains?).",
+      "impact": "If legal enforcement dominates (>50%): litigation strategy is primary lever. If capital barriers dominate: synthetic data strategies are primary lever. If technical barriers dominate: Snare mechanism is more structural than institutional.",
       "confidence": "low",
       "type_class": "empirical",
-      "description": "Whether model weights can be legally reverse-engineered from Sora outputs"
-    },
-    {
-      "id": "creator_compensation_collective_bargaining",
-      "question": "Can freelance character artists, animators, and derivative creators organize collective bargaining to demand compensation or licensing revenue from AI-generated derivative works?",
-      "resolution_mechanism": "Union organizing (animator guilds, writers' guilds, visual effects unions); class-action litigation; legislative automation compensation frameworks; industry negotiation of AI residuals",
-      "impact": "If successful: creator compensation mandates would require OpenAI/Disney to reserve revenue for human creators. Constraint becomes forced coordination (Tangled Rope with enforcement toward creators). If blocked: derivative creators have no claim on generated content. Constraint remains Snare from their perspective.",
-      "confidence": "medium",
-      "type_class": "preference",
-      "description": "Whether creators can organize to demand compensation for automated derivative works"
+      "description": "Decomposition of suppression into legal/capital/technical components"
     }
   ],
   "measurements": [
@@ -135,61 +164,80 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 3,
-      "value": 0.52
+      "time_point": 2,
+      "value": 0.5
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 6,
+      "time_point": 4,
       "value": 0.58
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.35
+      "value": 0.48
     },
     {
       "metric": "theater_ratio",
-      "time_point": 3,
-      "value": 0.37
+      "time_point": 2,
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
-      "time_point": 6,
-      "value": 0.38
+      "time_point": 4,
+      "value": 0.55
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 2,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 4,
+      "value": 0.68
     }
   ],
   "interval": {
     "start": 0,
-    "end": 6
+    "end": 4
   },
   "commentary": {
-    "narrative_context": "Disney's exclusive licensing of its top-200 character IP library to OpenAI for generative video model training (Sora) creates a structural tension between coordination and extraction in the AI-era media landscape. The $1B Disney investment in OpenAI functions superficially as a partnership solving a genuine technical problem (training data scarcity for character-level video generation), but simultaneously constructs an asymmetric barrier that suppresses competing AI developers' access to equivalent training targets and reshapes the economics of character derivative creation. The constraint exhibits a perspectival spectrum: OpenAI and Disney each experience coordination (Rope); competitors see extraction (Snare); the broader creator ecosystem sees mixed coordination and extraction (Tangled Rope); policy coalitions see a temporary institutional arrangement with regulatory sunset potential (Scaffold); the traditional licensing apparatus appears degraded and inertial (Piton). The extractiveness value (0.58) reflects that while the exclusivity does solve genuine coordination problems, the suppression mechanisms (legal exclusivity, capital barriers to independent character IP access, asymmetric training data availability) create structural rents that extend beyond fair coordination costs. The theater ratio (0.38) is low because the extraction mechanism is transparent \u2014 the financial incentives and competitive advantages are explicit in contract law and publicly visible in Sora's demonstrated capabilities. Unlike constraints sustained by obfuscation, this one operates through clear legal exclusivity.",
+    "narrative_context": "Disney's exclusive $1B licensing of its top-200 character IP library to OpenAI for generative video training (Sora) exemplifies the structural tension between coordination and extraction in AI-era intellectual property. The constraint superficially solves a genuine technical problem: training data scarcity for character-level video generation requires unprecedented scale of coherent visual material, curated over decades. Disney's library—70+ years of character model sheets, animation cycles, narrative context, brand consistency—is precisely the training signal that produces Sora's character fidelity. But the exclusivity simultaneously constructs an asymmetric barrier that suppresses competing AI developers' access to the same training source, while locking downstream creators (animators, concept artists) out of the training infrastructure that now replaces their labor. The constraint exhibits genuine coordination function (both parties solve real technical and financial problems) while simultaneously extracting from those outside the dyad. It is not pure extraction (Snare) because the coordination genuinely happens; it is not pure coordination (Rope) because the suppression is structural and enforced. The theater ratio (0.55) reflects moderate performative content: the 'partnership' narrative is credible (Sora does require training data; Disney does get licensing revenue) but conceals that non-exclusive alternatives could solve the technical problem while eliminating extraction.",
     "key_agents": [
-      "OpenAI/Sora Development Team: Primary beneficiary (institutional/arbitrage) \u2014 gains exclusive access to high-value training data; maintains arbitrage options with other entertainment IP holders; bears coordination costs (licensing fees, integration complexity) proportional to benefits",
-      "Disney Corporation: Primary beneficiary (institutional/arbitrage) \u2014 captures $1B investment, future licensing revenue, strategic positioning in AI-era media; retains arbitrage options (can license to other AI companies or build internal models); solves training data coordination problem",
-      "Competing AI Developers (Anthropic, Google DeepMind, Meta, open-source labs): Primary victims (powerless/trapped) \u2014 cannot negotiate equivalent access to Disney character IP; face structural disadvantage in character-level video generation; exit options are trapped (cannot walk away from character fidelity requirements without reduced competitiveness)",
-      "Character Derivative Creator Ecosystem (indie studios, fan creators, licensed merchandise makers): Secondary victims (moderate/constrained) \u2014 face displacement from automated generation; benefit from Disney platform access but compete against AI-generated derivatives; constrained exit (Disney platform dependency vs. autonomy)",
-      "Public AI Commons & Open-Source Communities: Structural victim (analytical/analytical) \u2014 excluded from training data access; witness concentration of generative AI capability in proprietary hands; bear risk of monopolistic outcome in generative video market",
-      "Regulatory & Policy Coalitions (EU AI regulators, creator protection advocates, antitrust authorities): Organized observers (organized/constrained) \u2014 perceive sunset potential through fair-access mandates or regulatory restrictions; maintain constrained exit (limited enforcement mechanisms but growing policy windows)",
-      "Traditional Entertainment Industry Licensing Apparatus: Institutional actor (institutional/arbitrage) \u2014 applies legacy IP exclusivity model to AI training; experiences constraint as inertial (functional role atrophied, legal apparatus persists)"
+      "OpenAI: Primary technical beneficiary (institutional/arbitrage) — exclusive access to 70+ years of curated character data; builds moat against competitors; experiences constraint as pure coordination",
+      "Disney: Primary financial & control beneficiary (institutional/arbitrage) — licensing revenue stream; controls character representation in generative models; arbitrage option (could license to competitors but chooses not to)",
+      "Independent AI Developers: Primary victims (powerless/trapped) — excluded from highest-quality training data; cannot afford to license equivalent IP; capital barriers ($1B+) + legal barriers (IP oligopoly) + technical barriers (data curation lag) = total structural lock-out",
+      "Open Source AI Community: Secondary victims (organized/constrained) — benefit from research spillover (Sora papers, published techniques) but excluded from exclusive training data; organized enough to develop alternative approaches but subordinate to duopoly",
+      "Downstream Creators (Animators, Concept Artists): Secondary victims (moderate/constrained) — professional labor devalued by generative models; cannot access training sources that competitors use; high suppression from IP licensing + collapsing labor market",
+      "Synthetic Data & Fair-Use Coalition: Organized resistor (organized/constrained) — developing alternative training pathways; building legal/technical case for fair use; see constraint as temporary (5-10 year sunset)",
+      "IP Licensing System: Institutional maintainer (institutional/arbitrage) — persists through legal/contractual enforcement; theater ratio (performative coordination narrative) masks functional decline"
     ],
-    "logic_rationale": "Extractiveness (0.58): Elevated from initial estimates. The constraint combines genuine coordination (Disney solves Sora's training data bottleneck; OpenAI validates Disney IP for AI markets) with structural extraction (competitors and creators are suppressed). The ratio is not extreme (0.70+) because the coordination function is real and proportional to some of the extracted value \u2014 this is not pure predation, but hybrid. The trajectory shows steady accumulation from 0.42 to 0.58 over six years, indicating that as Sora's capabilities compound and competitors fall further behind, the pure extraction component grows relative to coordination. Suppression (0.72): High. Legal exclusivity, capital barriers to independent IP creation, asymmetric access, and contractual restrictions create substantial alternatives suppression. Competitors cannot easily switch to equivalent training data; creators cannot collectively negotiate for compensation. However, suppression is not total (0.85+) because synthetic character generation and regulatory intervention remain credible escape routes within the 10-15 year horizon. Theater ratio (0.38): Low and stable. The extraction mechanism is transparent \u2014 financial incentives are explicit (Disney licensing revenue, OpenAI competitive advantage), legal frameworks are clear (IP contracts), and competitive advantages are measurable (Sora's character fidelity). No obfuscation is needed; the mechanism works through straightforward property rights and technical capability asymmetry. The constraint does not require theatrical justification because it operates within established IP law.",
-    "perspectival_gap": "The perspectival gap is stark and structural. OpenAI and Disney each experience Rope (coordination with proportional cost-benefit) because they hold symmetrical power and arbitrage options \u2014 either could walk away and find alternatives. Their effective extraction (chi) is low/negative. Competing AI developers experience Snare (pure extraction, no exit options, trapped power position) because the character IP library is irreplaceable and they cannot negotiate equivalent access. Their effective extraction is maximal. The character derivative ecosystem experiences Tangled Rope (mixed coordination and extraction) because they benefit from Disney ecosystem access but face displacement from automated generation. The public AI commons and policy coalitions experience the constraint as temporary (Scaffold) because regulatory intervention or technological substitutes could collapse the exclusivity mechanism within a generational timescale. The traditional licensing apparatus experiences the constraint as Piton (inertial, performative, degraded functional role) because legal exclusivity cannot prevent generation once training is complete. This perspectival spectrum reveals that the constraint's classification depends entirely on structural position \u2014 no single 'correct' type exists; the presheaf over observation positions IS the answer.",
-    "directionality_logic": "Directionality is derived from beneficiary/victim status plus exit options. OpenAI and Disney are beneficiaries with arbitrage options (d \u2248 0.15), yielding low effective extraction chi. Competitors are victims with trapped exit (d \u2248 0.95), yielding maximal chi. The derivative creator ecosystem are victims with constrained (not trapped) exit (d \u2248 0.70), yielding moderate-high chi. The analytical observer (public AI commons) occupies a structural position of analytical exit (d \u2248 0.72), perceiving the constraint as hybrid coordination-extraction with perspectival asymmetry. Directionality overrides are not needed; the structural derivation captures the relationships accurately. The beneficiary declaration (OpenAI, Disney) correctly identifies who benefits; the victim declaration (competitors, derivative creators, public commons) correctly identifies who bears costs.",
-    "mandatrophy_analysis": "RESOLVED: Mandatrophy is resolved by the perspectival decomposition. The constraint is NOT a snare (pure extraction with coordination theater) because OpenAI-Disney genuinely solve a coordination problem (training data scarcity). But it is also NOT a rope (pure coordination) because competitors are structurally suppressed with no exit options and no proportional benefit. The Tangled Rope classification (claimed type) captures this hybrid: real coordination function (beneficiaries: openai_sora_development, disney_strategic_positioning) + real asymmetric extraction (victims: competing_ai_developers, character_derivative_ecosystem, public_generative_model_commons) + required active enforcement (licensing contracts, legal IP protection, monitoring of derivative works). The mandatrophy is resolved by showing that the six-type spectrum is not contradiction but perspectival reality. The constraint genuinely appears as Rope from institutional beneficiaries, Snare from trapped competitors, Tangled Rope from the analytical horizon, Scaffold from policy coalitions, and Piton from the legacy licensing apparatus. No single reading is false; all are structural truths about different observer positions."
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts from multiple victims (independent developers, open-source communities, downstream creators) while providing genuine benefits to the beneficiaries (OpenAI solves a real technical problem; Disney monetizes IP in the AI era). The 0.58 value reflects that extraction is substantial but not maximal—the coordination function is genuine, and beneficiaries face real technical constraints that the agreement solves. This is the defining signature of Tangled Rope: both extraction and coordination are structurally real. Suppression (0.68): High. Multiple enforcement mechanisms: (a) legal/contractual—exclusive licensing is legally enforceable, competitors are contractually barred from accessing the same data; (b) capital barriers—licensing equivalent IP costs $1B+, beyond reach of independent developers; (c) technical barriers—Disney's character library required 70+ years to curate, competitors cannot recreate this data at comparable quality/speed. Theater ratio (0.55): Moderate. The partnership narrative is credible (both parties genuinely solve real problems), but performative elements are evident: the 'partnership' framing obscures that exclusivity was a choice (Disney could license to all parties equally, OpenAI could develop without exclusivity), and the coordination narrative conceals the suppression of alternatives.",
+    "perspectival_gap": "This constraint produces striking perspectival divergence. OpenAI and Disney both experience Rope (coordination with high arbitrage options and beneficiary status). Independent developers and animators experience Snare (trapped by barriers they cannot overcome). The open-source community experiences Tangled Rope (mixture of benefit from research spillover and exclusion from training data). The synthetic-data coalition experiences Scaffold (see the constraint as temporary and build alternatives). The IP licensing system itself appears Piton from civilizational scope (degraded mechanism persisting through inertia, not function). The analytical observer risks seeing Mountain—framing IP exclusivity as a natural law of intellectual property—but beneficiary presence triggers false summit detection. The perspectival gap is extreme: from OpenAI's position this is a straightforward coordination win; from an independent developer's position, it is total structural lock-out. The gap reveals that 'partnership' is a relational term—it benefits some and excludes others from the same resources.",
+    "directionality_logic": "Each perspective's directionality (d) is derived from agent power + exit options + beneficiary/victim status. OpenAI and Disney, as institutional beneficiaries with arbitrage options (they can license to competitors, can develop alternatives, but choose exclusivity), have low d values (~0.10-0.20) → low/negative effective extraction from their position. Independent developers, as powerless victims with trapped exit options (cannot afford licensing, cannot legally access without permission, cannot technologically replicate), have high d values (~0.90-0.95) → high effective extraction experienced. Open-source community, as organized victims with constrained (not trapped) exit options and some ability to develop alternatives, have moderate d values (~0.60-0.70) → moderate extraction. Downstream creators, as moderate-power victims with constrained options, have d values (~0.75-0.85) → moderately-high extraction. The Scaffold coalition, as organized agents with constrained options but clear exit paths (synthetic data, fair-use litigation), have lower d values (~0.50) → lower effective extraction because they see agency and a sunset. The directionality derivation explains why the same constraint classifies as Rope from beneficiary positions (low d, low chi), Snare/Tangled Rope from victim positions (high d, high chi), and Scaffold from organized-resistance positions (moderate d, organized power moderates chi despite high baseline extraction).",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves mandatrophy by clearly delineating coordination from extraction. The coordination function is genuine: Disney needed a capital partner and licensing model to monetize IP in the AI era; OpenAI needed training data at the scale Disney provides. Both parties solve real technical and financial problems. The extraction is also genuine: competitors are locked out, and downstream creators' labor is devalued. The constraint is Tangled Rope, not Rope, because suppression of alternatives is structural and enforced, not accidental. It is not Snare because the coordination is not purely performative—both parties actually solve problems and benefit. The classification prevents misattribution: calling it Rope (pure coordination) obscures the extraction; calling it Snare (pure extraction) obscures the genuine technical coordination. Tangled Rope is the structurally accurate type."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation",
-    "boltzmann_floor_override": 0.42
+    "coordination_type": "resource_allocation"
   },
   "network": {
     "affects_constraints": [
-      "training_data_access_asymmetry",
-      "ai_model_capability_stratification",
-      "creator_compensation_automation"
+      "generative_model_training_data_scarcity",
+      "copyright_fair_use_training_data",
+      "animator_labor_displacement_generative_video"
     ],
-    "dual_formulation_note": "Disney-OpenAI exclusivity decomposes into three downstream constraints: (1) training_data_access_asymmetry (\u03b5\u22480.45) \u2014 how competitors navigate IP scarcity; (2) ai_model_capability_stratification (\u03b5\u22480.52) \u2014 institutional stratification of generative capability; (3) creator_compensation_automation (\u03b5\u22480.62) \u2014 whether derivative creators can collectively bargain for automation compensation. Each upstream story affects the downstream constraints' extractiveness through resource and legal coupling."
+    "dual_formulation_note": "Exclusive IP licensing for AI training decomposes into three structurally distinct constraints: (1) training data scarcity as a technical problem (genuine coordination challenge), (2) IP licensing as a gatekeeping mechanism (asymmetric extraction), (3) downstream creator labor displacement (labor market compression driven by generative models). This story focuses on the licensing mechanism's structure. Upstream: training-data scarcity problem (ε ≈ 0.15, Rope). Downstream: creator labor displacement (ε ≈ 0.72, Snare). This story sits in the middle, modeling how licensing coordinates technical solutions while extracting from excluded parties."
   },
-  "directionality_overrides": []
+  "directionality_overrides": [
+    {
+      "power_atom": "organized",
+      "d_value": 0.55
+    }
+  ]
 }

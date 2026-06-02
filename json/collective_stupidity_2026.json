@@ -4,20 +4,21 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "cstupid"
+    "measurement_id_prefix": "stupidity",
+    "story_uid": "30ada4b4-f67f-49f4-925e-0b368f33a399"
   },
   "base_properties": {
     "extractiveness": 0.68,
     "suppression": 0.72,
-    "theater_ratio": 0.38,
+    "theater_ratio": 0.58,
     "claimed_type": "snare",
-    "human_readable": "The Cipolla-Galloway Stupidity Snare",
+    "human_readable": "Cipolla-Galloway Stupidity Snare: Uncompensated Harm Without Beneficiary",
     "topic_domain": "social/behavioral",
-    "requires_active_enforcement": false,
+    "requires_active_enforcement": true,
+    "beneficiaries": [],
     "victims": [
       "collective_welfare",
-      "rational_agents",
-      "shared_resources"
+      "harm_bearing_agents"
     ]
   },
   "perspectives": [
@@ -27,91 +28,64 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Rational Agent Bearing Uncompensated Harm",
-      "comment": "PERSPECTIVE 1: RATIONAL AGENT (SNARE) \u2014 Bears costs of others' destructive actions without benefit. Cannot exit the system of stupidity; harm is involuntary. Maximum extraction without direct coercion \u2014 the stupid agent provides no benefit to the victim, yet the victim cannot escape. Trapped in shared systems (institutions, commons, social groups) where stupid actors inflict damage."
+      "label": "The Harm-Bearing Agent",
+      "comment": "PERSPECTIVE 1: HARM-BEARING AGENT (SNARE) — Agents who experience damage from stupid actions have no exit and no appeal. The stupidity is uncompensated — the actor gains nothing, yet the victim bears full cost. Maximum extraction because the binding mechanism is not rational incentive but structural inevitability: stupid agents exist and act, and their targets cannot escape."
     },
     {
       "classification_type": "snare",
-      "agent_power": "powerless",
-      "time_horizon": "generational",
-      "exit_options": "trapped",
-      "spatial_scope": "global",
-      "label": "Collective Welfare and Shared Resources",
-      "comment": "PERSPECTIVE 2: COLLECTIVE WELFARE (SNARE) \u2014 Structural victim of cascading stupidity. Public goods (atmosphere, institutions, trust networks, commons) degrade through accumulated stupid actions. No exit mechanism; no way to quarantine harm. Intergenerational extraction: future generations inherit institutional damage and depleted commons without consent or compensation."
-    },
-    {
-      "classification_type": "tangled_rope",
       "agent_power": "moderate",
       "time_horizon": "biographical",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Stupid Agent",
-      "comment": "PERSPECTIVE 3: STUPID AGENT (TANGLED ROPE) \u2014 Mixed structure. The agent derives no personal gain from destructive action (pure stupidity per definition), yet operates within social/institutional systems that tolerate, enable, or accidentally reward them. Some benefit accrues: attention, social membership, resource access through coalitions of the stupid. Constrained exit \u2014 stupidity is often socially embedded; exiting requires cognitive or social resources the stupid agent may lack."
+      "label": "The Organized Victim Coalition",
+      "comment": "PERSPECTIVE 2: ORGANIZED VICTIM COALITION (SNARE) — Victims can coordinate defensive strategies (social ostracism, institutional screening, distributed warning networks), but the stupidity snare persists because stupid agents are not deterred by reputational cost — they lack the awareness to recognize causation between their action and the response. Coalition has limited leverage; the constraint's suppression derives from the actor's immunity to standard feedback mechanisms."
     },
     {
-      "classification_type": "piton",
-      "agent_power": "institutional",
-      "time_horizon": "generational",
-      "exit_options": "arbitrage",
-      "spatial_scope": "national",
-      "label": "Institutional Stupidity Systems",
-      "comment": "PERSPECTIVE 4: INSTITUTIONAL STUPIDITY SYSTEMS (PITON) \u2014 Bureaucracies, organizations, and policy regimes often embed stupid requirements that produce damage without institutional benefit. Theater ratio high: extensive rituals (compliance procedures, reporting requirements, approval chains) whose primary function has atrophied, maintained through inertia. Institutions have arbitrage options (policy reform, structural change) but exhibit degraded decision-making capacity. Pure institutional inertia."
-    },
-    {
-      "classification_type": "rope",
-      "agent_power": "organized",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "global",
-      "label": "Organized Epistemic Communities and Monitoring Systems",
-      "comment": "PERSPECTIVE 5: ORGANIZED EPISTEMIC COMMUNITIES (ROPE) \u2014 Scientists, engineers, auditors, and oversight bodies see the constraint as a coordination problem to be solved through better information, institutional design, and incentive structures. Moderate extractiveness: the monitoring/intervention function itself requires resources and creates asymmetries, but the net benefit is stabilization of commons. Constrained by knowledge/resource limits."
-    },
-    {
-      "classification_type": "mountain",
+      "classification_type": "snare",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "universal",
-      "label": "The Analytical Observer (Natural Limit View)",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LIMIT VIEW (MOUNTAIN) \u2014 From a civilizational frame, stupidity is an irreducible feature of any system with bounded rationality and cognitive heterogeneity. No agent can be fully rational; information asymmetries, attention limits, and cognitive biases are universal constraints on human decision-making. The existence of agents who cause harm without personal gain is a structural property of large-scale systems, not a contingent institutional arrangement. However, this risks naturalizing what is partly remediable through institutional design."
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 3: ANALYTICAL OBSERVER (SNARE) — From a universal civilizational view, stupidity as uncompensated harm-infliction is a permanent feature of distributed agency. No beneficiary exists to extract value; the constraint persists because coordination cannot prevent the bottom decile of capability from causing damage. Snare classification is invariant across all contexts — this is the rare uniform-type constraint."
     }
   ],
   "omegas": [
     {
-      "id": "stupidity_definition_boundary",
-      "question": "Does an agent who causes harm while pursuing a selfish goal that fails constitute stupidity, or is stupidity definitionally restricted to actions that provide zero personal gain?",
-      "resolution_mechanism": "Empirical classification of harm-causing agents: partition by whether intended benefit accrued vs. harm outweighed intended benefit. Analysis of rational choice failure vs. value misalignment.",
-      "impact": "If boundary is loose: stupidity becomes nearly synonymous with failed rationality (\u03b5 \u2192 0.35). If boundary is strict: stupidity remains rare and structural (\u03b5 \u2192 0.75).",
+      "id": "stupidity_agency_threshold",
+      "question": "At what threshold of capacity does an agent's action transition from 'stupid' (uncompensated harm) to 'malicious' (intended harm with implicit benefit to actor) or 'incompetent' (failure to achieve actor's own goals)?",
+      "resolution_mechanism": "Causal analysis of actor's intent, awareness, and capability; post-hoc examination of whether actor could have predicted harm; assessment of whether any secondary benefit to actor emerges from the harm",
+      "impact": "If threshold is low (capacity < 20th percentile): snare classification holds across wider range of behaviors. If high: only the most egregiously damaging actions count as stupid; most poor outcomes are reclassified as incompetence or rationality under constraints.",
       "confidence": "medium",
       "type_class": "conceptual",
-      "description": "Boundary between stupidity and failed rational action"
+      "description": "Definition boundary between stupidity, malice, and incompetence"
     },
     {
-      "id": "harm_measurability_asymmetry",
-      "question": "Is the asymmetry between measurable harm to others and unmeasurable (zero) benefit to the stupid agent stable, or do stupid agents often receive unmeasured social/psychological rewards (belonging, attention, sense of impact) that partly offset their definition?",
-      "resolution_mechanism": "Psychological study of stupid actors' subjective experience; social network analysis of stupid agents' position and ties; longitudinal tracking of compensation mechanisms (social status, resource flows) accruing to visibly stupid actors.",
-      "impact": "If hidden rewards are significant: the Snare classification weakens (effective extraction lower than structural extraction). If rewards are negligible: Snare is robust.",
+      "id": "harm_quantification_ambiguity",
+      "question": "How are distributed micro-harms (each stupid action causes small damage to many agents) compared to concentrated macro-harms (one stupid action causes severe damage to few agents)?",
+      "resolution_mechanism": "Utilitarian aggregation across harm recipients; empirical measurement of whether distributed micro-harm has higher total impact than concentrated macro-harm in specific domains",
+      "impact": "If distributed harm dominates: stupidity snare operates at population scale with diffuse suppression. If concentrated harm dominates: snare is concentrated on small victim sets with intense suppression.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether unmeasured rewards offset stupidity's zero-benefit definition"
+      "description": "Distribution of harm across victim populations"
     },
     {
-      "id": "institutional_amplification_mechanism",
-      "question": "Does stupidity primarily cause damage through individual action, or through institutional mechanisms that amplify and concentrate stupid choices (scaling them into public harm)?",
-      "resolution_mechanism": "Comparative analysis of stupid actions with vs. without institutional amplification; causal decomposition of harm into direct (individual) vs. systemic (institutional) components.",
-      "impact": "If primarily individual: the constraint is a coordination problem (Rope from more perspectives). If institutional amplification dominates: the constraint is an extractive trap (Snare structural property).",
-      "confidence": "high",
+      "id": "counterfactual_benefit_detection",
+      "question": "How do we distinguish 'stupid action with zero benefit to actor' from 'action with benefit to actor that we have not yet identified'?",
+      "resolution_mechanism": "Longitudinal tracking: does the actor repeat the behavior? Do they defend it if questioned? Do they show pleasure/satisfaction post-action? Do secondary institutional benefits accrue (career advancement, status gain)?",
+      "impact": "If secondary benefits exist: action reclassifies as strategic extraction (snare→tangled_rope or snare→snare-with-beneficiary). If truly zero benefit: stupidity classification holds and extractiveness increases (pure uncompensated harm).",
+      "confidence": "medium",
       "type_class": "empirical",
-      "description": "Role of institutional amplification in scaling stupidity to collective harm"
+      "description": "Distinguishing zero-benefit actions from unidentified secondary benefits"
     },
     {
-      "id": "exit_cost_heterogeneity",
-      "question": "Can rational agents effectively exit stupid systems or institutions, or is exit itself costly/dangerous (exit costs are endogenous to stupidity)?",
-      "resolution_mechanism": "Historical case analysis of exit from stupid institutions (colonies, cults, regimes, corporations); measurement of exit costs vs. cost of staying; correlation between exit barriers and stupidity persistence.",
-      "impact": "If exit is genuinely free: the snare is weaker (not all victims are trapped). If exit costs are high and endogenous: the snare is structural.",
-      "confidence": "high",
-      "type_class": "empirical",
-      "description": "Whether rational agents can exit systems with high stupidity density"
+      "id": "collective_welfare_definition",
+      "question": "Whose welfare counts as 'collective welfare' in the stupidity definition? Sum of all agents? Only organized communities? Humanity? Future generations?",
+      "resolution_mechanism": "Philosophical analysis of constituency; empirical testing of whether harm-bearing populations can organize and define themselves; institutional recognition of harm boundaries",
+      "impact": "If narrow definition (only organized agents count): many stupid actions fall outside snare classification. If broad definition (all sentient beings): stupidity snare encompasses ecosystem damage, animal harm, long-term civilizational risk.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Definition of collective welfare constituency"
     }
   ],
   "measurements": [
@@ -122,64 +96,79 @@
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 25,
-      "value": 0.58
+      "time_point": 2,
+      "value": 0.54
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 50,
+      "time_point": 4,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
       "value": 0.68
     },
     {
       "metric": "theater_ratio",
       "time_point": 0,
-      "value": 0.25
+      "value": 0.52
     },
     {
       "metric": "theater_ratio",
-      "time_point": 25,
-      "value": 0.32
+      "time_point": 2,
+      "value": 0.54
     },
     {
       "metric": "theater_ratio",
-      "time_point": 50,
-      "value": 0.38
+      "time_point": 4,
+      "value": 0.56
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.65
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 3,
+      "value": 0.69
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 6,
+      "value": 0.72
     }
   ],
   "interval": {
     "start": 0,
-    "end": 50
+    "end": 6
   },
   "commentary": {
-    "narrative_context": "The Cipolla-Galloway Stupidity Snare describes a structural constraint where agents cause damage to others without deriving personal benefit. This is not irrationality per se \u2014 rational agents can fail to achieve goals through ignorance or bad luck. Stupidity in this framework is specifically the class of actions that harm collective welfare while providing zero benefit to the actor. The constraint exhibits the essential properties of a snare: high suppression (victims cannot exit systems with stupid actors; stupid actors cannot be reliably identified before harm; institutional mechanisms amplify individual stupidity into systemic damage), high extractiveness (the rational victim bears uncompensated cost), and minimal theater (stupidity is fundamentally functional harm, not performative). The theater ratio is relatively low (0.38) because stupid harm is real, not ritualized. However, institutional responses to stupidity (bureaucratic oversight, ritual compliance checking) introduce performative elements. The constraint is a civilizational problem because heterogeneous cognitive capacity is intrinsic to large populations; no system can eliminate stupid actors entirely. Rational agents are trapped in the commons with them.",
+    "narrative_context": "The Cipolla-Galloway Stupidity Snare describes a structural constraint where certain agents perform actions that cause damage to others without deriving personal benefit. This is not irrationality — rational agents operating under incomplete information still pursue goals (however badly). Stupidity in this framework is the specific pathology where an action reduces both the actor's and the collective's welfare simultaneously. The snare persists because no beneficiary exists to maintain it: the extraction is pure harm-shedding, with the stupid agent as an inadvertent vector and the collective as an unwilling host. The constraint operates at population scale, driven by the inevitable distribution of cognitive capacity and attention across any large group. Those in the bottom decile of capability or awareness will predictably cause uncompensated harm; no institutional arrangement eliminates this floor. The suppression mechanism is structural rather than intentional — stupid agents are not deterred by standard feedback (reputation cost, legal penalty, social ostracism) because they lack the causal reasoning to connect their action to the response. Feedback mechanisms designed for rational agents fail catastrophically against stupidity. The theater ratio (0.58) reflects that institutional responses to stupid actors often become performative: compliance training, risk assessment protocols, bureaucratic procedures that create appearance of control without reducing underlying harm distribution.",
     "key_agents": [
-      "Rational Agents: Primary victims (powerless/trapped) \u2014 bear costs of stupid harm without compensation or exit option",
-      "Collective Welfare: Structural victim (powerless/trapped) \u2014 shared resources and public goods degrade through accumulated stupid actions; intergenerational harm",
-      "Stupid Agents: Paradoxical actors (moderate/constrained) \u2014 provide no benefit to themselves yet operate within systems that sometimes reward or tolerate them; embedded in social/institutional structures",
-      "Institutional Systems: Degraded enforcement (institutional/arbitrage) \u2014 bureaucracies embed stupid requirements; maintain high-theater responses to stupidity (audits, regulations) without addressing root causes",
-      "Epistemic Communities: Organized monitors (organized/constrained) \u2014 attempt to solve stupidity through information, design, and institutional reform; see the constraint as solvable coordination problem",
-      "Analytical Observer: Civilizational perspective (analytical/analytical) \u2014 risks naturalizing stupidity as irreducible feature of bounded rationality"
+      "Stupid Agents (powerless/trapped in own cognitive capacity): Inadvertent vectors of uncompensated harm; lack causal reasoning to recognize damage or respond to feedback; cannot exit their own lower quartile of capability",
+      "Harm-Bearing Agents (powerless/trapped): Direct recipients of stupid actions; no ability to escape or prevent damage; bear extraction with zero reciprocal benefit",
+      "Organized Victim Coalitions (moderate/constrained): Attempt to coordinate defensive screening, warning networks, ostracism; face structural limitation that stupid agents are immune to reputational cost",
+      "Collective Welfare (abstract/powerless): Diffuse concept of aggregate benefit; cannot organize or defend itself; bears distributed micro-harms from population-scale stupidity",
+      "Institutional Governance Structures (institutional/arbitrage): Design feedback mechanisms, screening protocols, liability rules; create performative theater around stupidity management; benefit from appearance of control",
+      "Analytical Observer (analytical/analytical): Observes that stupidity snare is a permanent feature of any population with distributed agency; recognizes futility of standard deterrence"
     ],
-    "logic_rationale": "Extractiveness (0.68): High. The constraint concentrates harm on rational victims who cannot identify or exit stupid actors in advance. The victim bears full cost; the stupid actor derives zero benefit. This is pure extraction in structural terms. The value reflects that stupidity is persistent (increases over the measurement interval from 0.45 to 0.68) and that institutional responses to stupidity (audits, regulations) add overhead without eliminating the underlying harm. Suppression (0.72): High. Mechanisms preventing escape: (1) Stupid actors are typically identifiable only post-hoc, after harm occurs; (2) Rational agents often cannot exit shared systems (institutions, commons, families) without substantial cost; (3) Institutional responses to stupidity can themselves be stupid, creating cascades; (4) Information asymmetries prevent rational agents from sorting away from stupid actors in advance. Theater ratio (0.38): Moderate-low. Institutional responses to stupidity (compliance procedures, regulatory audits, reporting requirements) are partly performative, but stupidity itself produces real harm that cannot be purely theatrical. The theater ratio has increased modestly over the interval (0.25 to 0.38) as institutions have added procedural overhead in response to visible stupidity, without addressing the underlying constraint.",
-    "perspectival_gap": "The Snare classification is dominant across perspectives, but with variation. The rational victim and collective welfare see maximal extraction (trapped, global scope). The stupid agent sees a tangled rope \u2014 some social/institutional systems enable their participation or provide indirect rewards (belonging, attention) while also confining them. The institutional system sees its own degradation (piton) \u2014 bureaucratic responses to stupidity are high-theater, low-function. The organized epistemic community sees a solvable coordination problem (rope) \u2014 better information, institutional design, and incentive alignment could reduce stupid harm. The civilizational analyst risks seeing an immutable natural law (mountain) \u2014 bounded rationality implies some stupidity in all systems \u2014 but this naturalizes what is partly remediable. The perspectival gap reveals whether the constraint is seen as structural/inevitable or as a design failure amenable to institutional reform.",
-    "directionality_logic": "Directionality values are derived from structural relationships. Rational victims have high d (0.85+) because they bear uncompensated cost with no benefit; trapped exit status maximizes their experienced extraction. Collective welfare has high d because it is a powerless abstract entity bearing intergenerational harm. Stupid agents occupy a paradoxical position: definitionally, they provide zero personal benefit (low d per naive reading), yet they operate within systems that sometimes reward or enable them (moderate d from institutional embeddedness). Institutional systems that respond to stupidity have moderate d because they deploy resources to manage externalities but often compound the problem. Epistemic communities attempting to solve stupidity through design have low d (arbitrage options, organized power) \u2014 they experience the constraint as solvable. The analytical observer has analytical directionality, risking naturalization of a contingent social problem.",
-    "mandatrophy_analysis": "The Cipolla-Galloway constraint resolves the mandatrophy by distinguishing between stupidity as irreducible cognitive heterogeneity (mountain) and stupidity as an institutional trap that concentrates damage on rational victims (snare). The false summit lies in the claim that 'bounded rationality implies stupidity is inevitable, therefore the harm is a natural law.' Empirically, stupid harm is not uniformly distributed: institutional design, information systems, and incentive structures determine how much stupid action causes damage. Some institutions minimize stupid harm (redundant systems, error-correction, separation of duties); others amplify it (blame-shifting, cascading failures, perverse incentives). This is not a natural law. The snare classification is therefore robust: the constraint is a real structural trap that extracts uncompensated harm from rational agents, and it is remediable through institutional design. The piton perspective (institutional inertia) and rope perspective (solvable through design) are the actionable insights \u2014 stupidity is not immutable, but institutions often degrade in their ability to contain it."
-  },
-  "boltzmann": {
-    "coordination_type": "enforcement_mechanism"
+    "logic_rationale": "Extractiveness (0.68): High and rising over the interval (0.45→0.68). The snare's extractiveness increases as populations grow and coordination becomes more difficult. Stupid agents cause damage at a rate proportional to their proportion in the population; as societies scale, the absolute number of stupidity-induced harms accumulates faster than institutional capacity to respond. The rising trajectory reflects growing consciousness of the problem (measurement sensitivity) rather than accelerating harm rates, but both contribute. Suppression (0.72): High and stable. The binding mechanism is structural — agents in the bottom quartile of cognitive capacity or attention will inevitably cause harm, and no standard feedback mechanisms deter them (they lack causal reasoning to connect action to response). Targets cannot exit because the stupid agents are distributed throughout the population, not concentrated in avoidable regions. Theater ratio (0.58): Moderate and rising. Institutional responses — mandatory safety training, risk assessment protocols, incident reporting systems — create appearance of control without reducing the underlying problem. The stupid agent completes the training but does not gain causal reasoning; the protocol documents the action but does not prevent it. Theater increases as institutions respond to visible stupidity crises by adding more performative procedures.",
+    "perspectival_gap": "The Cipolla-Galloway stupidity snare is a rare uniform-type constraint: it classifies as Snare from every perspective. There is no beneficiary to see coordination or legitimate exchange. There is no coalition powerful enough to reframe the constraint. Even the analytical observer, looking at civilizational scale, sees an invariant structural floor — stupidity is an immutable property of distributed agency in large populations. The perspectival gap is not about classification type but about hope: the harm-bearing agent experiences despair (uncompensated, unprevented); the organized coalition experiences frustration (we can coordinate but cannot eliminate); the analytical observer experiences acceptance (this is how populations work). The snare's uniformity makes it diagnostically unusual and theoretically important — it demonstrates that not all constraints benefit someone, and that extraction can be genuinely uncompensated.",
+    "mandatrophy_analysis": "The stupidity snare resolves the mandatrophy by confronting the classical oracle gap: can an analytical observer design a system that prevents the bottom decile of capability from causing harm? The answer from the constraint framework is 'no, not without sacrificing distributed agency.' Any system that grants action authority to agents must accept that some fraction will exercise it stupidly. This is not a coordination failure (which could be fixed with better incentives) but a capacity floor. The Cipolla-Galloway framework reframes stupid actions as not failures of rationality but failures of capability — and capability distributions are immutable across populations. The mandatrophy resolves by recognizing that the snare is not a design flaw but a feature: accepting stupidity (suppression through institutional tolerance, harm distribution through insurance, harm-reduction rather than prevention) is more realistic than attempting to eliminate it."
   },
   "network": {
     "affects_constraints": [
-      "institutional_degradation",
-      "commons_tragedy",
-      "rational_actor_assumption"
+      "institutional_coordination_failure",
+      "distributed_harm_accountability"
     ],
-    "dual_formulation_note": "The stupidity snare is structurally upstream of institutional degradation (piton forms when bureaucracies become stupid) and commons tragedy (stupid actors overexploit shared resources). The constraint is also a critique of the rational actor assumption in economics and political theory \u2014 stupidity reveals that bounded rationality is not merely a complication but a structural feature that enables extraction."
+    "dual_formulation_note": "Stupidity snare is upstream of many institutional failure modes. Specific stupid actions (environmental damage, medical errors, financial missteps) generate their own constraint stories with ε values tied to the specific domain. The stupidity snare describes the structural floor — that some fraction of agents will always cause uncompensated harm — while domain-specific stories describe how that floor manifests in particular contexts."
   },
-  "directionality_overrides": [
-    {
-      "power_atom": "moderate",
-      "d_value": 0.55
-    }
-  ]
+  "directionality_overrides": []
 }

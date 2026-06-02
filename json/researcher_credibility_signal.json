@@ -2,27 +2,28 @@
   "header": {
     "constraint_id": "researcher_credibility_signal",
     "version": "1.0",
-    "generated_date": "2026-02-26",
+    "generated_date": "2026-02-27",
     "status": "ACTIVE",
-    "measurement_id_prefix": "rcs"
+    "measurement_id_prefix": "credibility",
+    "story_uid": "cf5515c5-636b-4789-a775-f8fb4c3a9c82"
   },
   "base_properties": {
     "extractiveness": 0.52,
-    "suppression": 0.48,
-    "theater_ratio": 0.65,
+    "suppression": 0.58,
+    "theater_ratio": 0.68,
     "claimed_type": "tangled_rope",
     "human_readable": "Researcher Credibility Signal Constraint",
     "topic_domain": "academic/institutional",
     "requires_active_enforcement": true,
     "beneficiaries": [
       "established_researchers",
-      "funding_gatekeepers",
-      "prestigious_institutions"
+      "high_prestige_institutions",
+      "journal_gatekeepers"
     ],
     "victims": [
       "early_career_researchers",
-      "researchers_from_underrepresented_groups",
-      "novel_methodology_adopters"
+      "researchers_outside_prestige_hierarchy",
+      "research_epistemic_diversity"
     ]
   },
   "perspectives": [
@@ -32,17 +33,26 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "global",
-      "label": "The Early Career Researcher",
-      "comment": "PERSPECTIVE 1: EARLY CAREER RESEARCHER (SNARE) \u2014 Trapped within a credibility system they cannot escape. Must accumulate citations, publications, and institutional affiliation to signal trustworthiness, but initial work is devalued by lack of prior signal. Cannot exit the signaling game without abandoning research career. Maximum experienced extraction through resource asymmetry and career precarity."
+      "label": "The Early-Career Researcher",
+      "comment": "PERSPECTIVE 1: EARLY-CAREER RESEARCHER (SNARE) — Structurally trapped by the need for credibility signals to access funding, positions, and publication venues. Cannot exit the citation-accumulation requirement; must participate in the prestige hierarchy to advance. No alternative reputation mechanism offers equivalent career protection. Maximum extraction experienced — the early-career researcher must extract themselves from the system but lacks the capital to do so."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Researcher Outside Prestige Hierarchy",
+      "comment": "PERSPECTIVE 2: RESEARCHER OUTSIDE PRESTIGE HIERARCHY (SNARE) — High cost to exit: switching to unrecognized publication venues, operating without major funding, or relocating to regions with lower prestige-signal weight means losing career momentum. Suppression is sustained through publication bias (high-prestige venues reject work from non-prestige institutions at higher rates), differential peer review (authors from prestige institutions receive more favorable reviews), and funding concentration (NSF, NIH predominantly fund researchers at R1 institutions). The constraint extracts time, effort, and resources from this agent without compensating benefit."
     },
     {
       "classification_type": "tangled_rope",
-      "agent_power": "moderate",
-      "time_horizon": "generational",
-      "exit_options": "constrained",
-      "spatial_scope": "national",
-      "label": "The Established Research Peer",
-      "comment": "PERSPECTIVE 2: ESTABLISHED RESEARCH PEER (TANGLED ROPE) \u2014 Benefits from credibility signaling system (their prior work provides compound credibility advantage) while simultaneously constrained by need to maintain signal through continuous publication. Experiences genuine coordination function (signal enables collaboration and resource allocation) alongside asymmetric extraction (early-career peers bear disproportionate burden of proof). Exit constrained by career path dependence and institutional pressure."
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Established Researcher",
+      "comment": "PERSPECTIVE 3: ESTABLISHED RESEARCHER (TANGLED ROPE) — Net beneficiary with exit options. Genuine coordination function: high-citation researchers provide reliable filtering of research quality, enabling others to identify trustworthy work. But also benefits from the barrier itself — new entrants cannot compete on equal footing, protecting established reputation and funding access. Can switch to alternative reputation mechanisms (advisory roles, mentorship networks, institutional affiliation) if traditional signals degrade. Experiences the constraint as mixed coordination-extraction."
     },
     {
       "classification_type": "rope",
@@ -50,17 +60,17 @@
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Funding Institution",
-      "comment": "PERSPECTIVE 3: FUNDING INSTITUTION (ROPE) \u2014 Experiences credibility signaling as pure coordination mechanism. Uses prior publication record, citation metrics, and institutional prestige as efficient allocation device for scarce research funding. Benefits from system without experiencing extraction \u2014 can arbitrage across credibility signals to identify promising research directions. Low effective extraction because funding gatekeepers control the signal thresholds."
+      "label": "The Journal Gatekeeper",
+      "comment": "PERSPECTIVE 4: JOURNAL GATEKEEPER (ROPE) — Solves coordination problem through editorial selection: filtering noise from signal, maintaining venue prestige, reducing reader burden. Experiences the constraint primarily as coordination — peer review, citation-based reputation, and prestige tiers are mechanisms for shared epistemic evaluation. Has arbitrage options: can shift to open-access models, preprint-based review, or alternative metrics. Extracts modest benefit (journal brand value, editorial prestige) but primary function is coordinating research quality assessment."
     },
     {
-      "classification_type": "scaffold",
+      "classification_type": "tangled_rope",
       "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "global",
-      "label": "The Methodological Reform Movement",
-      "comment": "PERSPECTIVE 4: METHODOLOGICAL REFORM MOVEMENT (SCAFFOLD) \u2014 Organized agents (open science advocates, preregistration advocates, replication initiatives) see credibility signaling as a temporary coordination failure being actively dismantled. Preregistration, open data, transparency reports, and replications-as-credible-contribution create alternative pathways. Sunset logic: as these practices mature, reliance on raw citation counts and prestige-institution affiliation declines. Theater is being systematically replaced by direct evidence."
+      "label": "The Open Science Coalition",
+      "comment": "PERSPECTIVE 5: OPEN SCIENCE COALITION (TANGLED ROPE) — Organized actors (arXiv, preprint servers, open peer review platforms, alternative metrics) are building parallel credibility systems with lower barriers to entry. But these alternatives remain constrained by funding and career advancement structures that still weight traditional signals heavily. The coalition benefits from awareness-raising and normalization of alternative metrics, but cannot fully replace prestige-based signaling without simultaneous reform of hiring, tenure, and funding allocation. Moderate extraction in both directions: pushed by the traditional system, pulling toward alternatives."
     },
     {
       "classification_type": "piton",
@@ -68,96 +78,111 @@
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
       "spatial_scope": "global",
-      "label": "The Citation Index System",
-      "comment": "PERSPECTIVE 5: CITATION INDEX SYSTEM (PITON) \u2014 The h-index, impact factor, and citation-based ranking systems persist as performative measures of credibility despite well-documented gaming mechanisms (self-citation inflation, citation cartels, field-specific citation norms distorting comparison). The system maintains itself through institutional inertia and ease of quantification, not through validated predictive power for research quality or impact. High theater ratio reflects that citation metrics serve administrative convenience rather than epistemic function."
+      "label": "The Citation-Based Ranking System",
+      "comment": "PERSPECTIVE 6: CITATION-BASED RANKING SYSTEM (PITON) — The mechanism for translating research impact into quantified credibility signals (h-index, impact factor, citation velocity) persists through institutional inertia despite well-documented gaming vulnerabilities. Theater ratio is high: the system produces numerical scores that convey false precision about research quality while suppressing measurement of actual impact or innovation. The ranking system continues because institutions and funders have invested in it, not because it functions well. Alternative metrics (altmetrics, registered report acceptance, preprint endorsement) are emerging, but the traditional system maintains authority through embedded institutional practice."
     },
     {
       "classification_type": "tangled_rope",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
+      "spatial_scope": "universal",
       "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From the broadest perspective, credibility signaling solves a genuine coordination problem (how to allocate limited research resources and attention among countless potential contributors) while creating asymmetric extraction (early-career researchers and innovators bear disproportionate burden of proof; signals compound over time creating path-dependent advantage). The constraint is neither pure coordination nor pure extraction but a hybrid that serves coordination function while extracting value from those outside the established signaling hierarchy."
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) — From the civilizational perspective, the constraint serves a genuine coordination function: research fields need mechanisms to allocate limited attention and resources to trustworthy work. But the mechanism has become corrupted by extractive dynamics: prestige-signal accumulation drives publication inflation, replication crisis, and epistemic stratification. The analytical observer sees both genuine coordination (solving the attention-allocation problem) and asymmetric extraction (the mechanism concentrates power and resources in ways that exceed the coordination requirement). The constraint is not natural law and not pure extraction — it is a hybrid that has drifted toward extraction over recent decades."
     }
   ],
   "omegas": [
     {
-      "id": "signal_validity_stability",
-      "question": "Are credibility signals (citations, publication venue, institutional affiliation) stable predictors of research quality, or do they merely predict social position within the research establishment?",
-      "resolution_mechanism": "Longitudinal analysis: compare predictive validity of credibility signals vs. blind assessment of research quality on held-out validation set; meta-analysis of signal-to-quality correlation across fields with different publication cultures",
-      "impact": "If signals predict quality: constraint is primarily coordination mechanism (Rope classification strengthens). If signals predict only social position: constraint is primarily extraction mechanism (Snare classification strengthens).",
+      "id": "citation_as_epistemic_proxy",
+      "question": "Do citations measure research quality, influence, or merely attention-capture and prestige-signal accumulation?",
+      "resolution_mechanism": "Longitudinal analysis of high-citation papers: what fraction are later recognized as methodologically flawed, empirically wrong, or instrumentally useless? Comparison with pre-publication peer judgments of quality.",
+      "impact": "If citations correlate with quality (r > 0.7): credibility signal is genuine coordination mechanism, snare classification is overstated. If citations correlate weakly with quality (r < 0.4): citation-based signals are gaming-vulnerable proxies, extraction component dominates.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether credibility signals predict research quality or only social position"
+      "description": "Whether citations measure quality or attention capture"
     },
     {
-      "id": "alternative_signal_functionality",
-      "question": "Do alternative credibility signals (open code, preregistration, replication records, peer review transparency) function as viable substitutes, or do they complement rather than replace existing signals?",
-      "resolution_mechanism": "Comparative career trajectory analysis: early-career researchers using only alternative signals vs. mixed signaling strategies vs. traditional signals; funding allocation correlation with alternative vs. traditional signal portfolios",
-      "impact": "If viable substitutes: scaffold perspective confirmed \u2014 sunset is real and structural. If only complementary: early-career burden increases (must accumulate both traditional and alternative signals) and Snare classification strengthens.",
+      "id": "prestige_hierarchy_functionality",
+      "question": "Does stratification of researchers by institutional prestige improve resource allocation quality, or does it primarily protect established actors from competition?",
+      "resolution_mechanism": "Comparative analysis of research impact by prestige tier, controlling for funding level; analysis of replication rates by prestige origin; measurement of citation-quality correlation by prestige group.",
+      "impact": "If prestige stratification improves allocation efficiency: tangled_rope and rope perspectives dominate, coordination function is substantial. If prestige primarily protects established actors: snare and extraction perspectives dominate, suppression mechanism is the primary function.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether alternative signals substitute or complement traditional credibility signals"
+      "description": "Whether prestige hierarchy improves or distorts resource allocation"
     },
     {
-      "id": "identity_lock_mechanism",
-      "question": "How much of early-career researcher's acceptance of credibility signaling burden is rational response to resource constraints vs. internalized identity fusion with the prestige hierarchy (identity-locked)?",
-      "resolution_mechanism": "Qualitative analysis of researcher self-narratives; exit option exploration: cost of leaving research vs. cost of staying within signaling system; comparison of constraint-perception between researchers with and without external credibility alternatives (e.g., industry positions, alternative career paths)",
-      "impact": "If primarily rational: exit_options should be 'constrained' (high costs but theoretically voluntary). If primarily identity-locked: exit_options should be 'identity_locked' (agent cannot imagine themselves outside research identity even with exit available) \u2014 changes biographical time horizon classification from mountain to rope.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether early-career constraint is material or identity-based"
-    },
-    {
-      "id": "field_heterogeneity_in_signal_cost",
-      "question": "Do different research fields have fundamentally different credibility signal costs (high-energy physics requires more prestige signaling than applied engineering?), or is signal cost uniform with local modulation?",
-      "resolution_mechanism": "Cross-field comparison: time-to-first-publication, citation accumulation curves, funding success rates by credential type across STEM, social sciences, humanities; analysis of field-specific signal inflation (e.g., do authors self-cite more in some fields?)",
-      "impact": "If fundamentally different: constraint should be decomposed into per-field stories with different extractiveness values (\u03b5-invariance principle). If uniform with modulation: single story with field-specific perspective variants.",
+      "id": "alternative_signal_viability",
+      "question": "Can preprint-based reputation, open peer review, and alternative metrics (altmetrics, open-source contribution, replication records) provide credibility signals with lower extraction costs?",
+      "resolution_mechanism": "Adoption rates and effectiveness of alternative systems; comparison of researcher diversity in high-prestige journals vs preprint-first communities; measurement of early-career advancement rates under alternative reputation systems.",
+      "impact": "If alternatives are viable: scaffold perspective gains structural weight, sunset for traditional signals is realistic. If alternatives capture only low-stakes research: prestige hierarchy is structurally necessary, and extraction is the cost of necessary coordination.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether credibility signal cost varies fundamentally across research fields"
+      "description": "Whether alternative credibility signals can replace prestige-based ones"
     },
     {
-      "id": "suppression_mechanism_identity_vs_structural",
-      "question": "Is the measured suppression (0.48) primarily structural (institutional barriers to career advancement without prior signal accumulation) or primarily internalized (researcher identity fused with prestige hierarchy, making exit psychologically unthinkable)?",
-      "resolution_mechanism": "Post-exit trajectory analysis: suppression persistence after researcher leaves academia or moves to context with different credibility signals; comparison of constraint-perception between researchers with and without awareness of signal-gaming dynamics",
-      "impact": "If structural: suppression may decrease if institutional barriers are removed (e.g., hiring practices that value alternative credentials). If internalized: suppression persists after exit \u2014 researcher carries self-imposed credibility requirements with them. Affects mandatrophy resolution strategy.",
+      "id": "suppression_structural_vs_internalized",
+      "question": "Is suppression of early-career researchers and non-prestige researchers primarily structural (policy, funding allocation, publication bias) or internalized (self-censoring, demoralization, reduced aspirations)?",
+      "resolution_mechanism": "Post-exit trajectory analysis: researchers who leave academia, relocate to non-prestige institutions, or switch to alternative metrics report on whether suppression persists. Measurement of publication productivity, grant application rates, and citation velocity before/after exiting prestige structure.",
+      "impact": "If primarily structural: removing barriers (publishing reform, funding reform) would substantially increase early-career retention and diversity. If partially internalized: even after removing barriers, some suppression persists through cognitive capture or identity fusion.",
       "confidence": "medium",
       "type_class": "empirical",
-      "description": "Whether suppression is structural or internalized in researcher identity"
+      "description": "Structural vs internalized suppression mechanisms"
+    },
+    {
+      "id": "extraction_hidden_in_prestige_tier",
+      "question": "What portion of prestige-tier differential advantage (differential publication rates, funding success, career advancement) is due to actual research quality differences vs institutional resource concentration and signaling power?",
+      "resolution_mechanism": "Propensity-score matching of early-career researchers by research quality at entry (dissertation committee, early-publication acceptance), controlling for institution type. Measurement of career trajectories, funding accumulation, and publication success by prestige tier holding early-quality constant.",
+      "impact": "If quality explains most differences: prestige system is a valid efficiency mechanism. If resource concentration explains most: extraction component is primary driver, snare classification is accurate.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Quality differences vs institutional resource concentration"
     }
   ],
   "measurements": [
     {
-      "metric": "theater_ratio",
+      "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.45
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.55
-    },
-    {
-      "metric": "theater_ratio",
-      "time_point": 20,
-      "value": 0.65
+      "value": 0.28
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 0,
+      "time_point": 10,
       "value": 0.38
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 10,
-      "value": 0.45
     },
     {
       "metric": "base_extractiveness",
       "time_point": 20,
       "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.48
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 20,
+      "value": 0.58
     }
   ],
   "interval": {
@@ -165,36 +190,36 @@
     "end": 20
   },
   "commentary": {
-    "narrative_context": "The researcher credibility signal constraint operates at the intersection of resource allocation (how to identify promising research and allocate funding), career incentives (how to reward contribution and enable advancement), and epistemic evaluation (how to assess research quality). The constraint solves a genuine coordination problem \u2014 research fields need mechanisms to identify trustworthy work and allocate attention \u2014 but the mechanism (citation accumulation, publication venue prestige, institutional affiliation) creates asymmetric extraction where early-career researchers, researchers from underrepresented groups, and methodological innovators bear disproportionate burden of proof. Theater ratio has increased over the 20-year interval as citation gaming has become more sophisticated (self-citation networks, journal impact-factor manipulation, prestige-institution credential inflation) while simultaneously the reform movement (open science, preregistration, replication) has developed alternative credibility pathways with lower theater. The constraint exhibits all six DR types from different perspectives: it is pure extraction for trapped early-career researchers (Snare), mixed coordination-extraction for those with some career flexibility (Tangled Rope), pure coordination for institutional gatekeepers (Rope), a temporary problem with a structural exit path for organized reformers (Scaffold), a degraded performative ritual for the citation system itself (Piton), and a complex hybrid coordination-extraction mechanism when viewed analytically (Tangled Rope).",
+    "narrative_context": "The researcher credibility signal constraint solves a legitimate epistemic coordination problem: research communities need mechanisms to identify trustworthy work and allocate limited attention and resources efficiently. But the mechanism that has emerged — stratification by publication venue prestige, citation accumulation, and institutional affiliation — has increasingly become an extraction mechanism that concentrates power and resources while providing only weak signals of actual research quality. The constraint exhibits tangled rope structure: genuine coordination function (filtering noise, enabling quality assessment) layered over asymmetric extraction (prestige barriers that protect established researchers and high-resource institutions while blocking entry from early-career researchers and researchers outside the prestige hierarchy). The temporal trajectory shows extraction accumulation over decades: theater ratio has risen from 0.35 (when citation-based metrics first emerged) to 0.68 (contemporary state where citation counts are routinely gamed, prestige rankings are self-referential, and alternative reputation mechanisms remain marginalized). Suppression has intensified as publication requirements have increased, grant competition has concentrated, and prestige differentials have widened.",
     "key_agents": [
-      "Early Career Researchers: Primary victims (powerless/trapped) \u2014 bears full cost of credibility accumulation; cannot exit without abandoning research identity",
-      "Established Researchers: Primary beneficiaries (moderate/constrained) \u2014 benefits from compound credibility advantage; experiences some constraint through publication pressure but with resources to meet it",
-      "Funding Institutions: Secondary beneficiaries (institutional/arbitrage) \u2014 use credibility signals as efficient allocation device; control signal threshold; experience no extraction",
-      "Researchers from Underrepresented Groups: Secondary victims (moderate/constrained) \u2014 face additional credibility burden due to stereotype threat, network disadvantage, and signal-quality correlation noise",
-      "Methodological Innovators: Secondary victims (powerful/constrained) \u2014 prior work in novel methodologies may not translate to credibility signals in established citation networks",
-      "Open Science Reform Coalition: Organized agents (organized/constrained) \u2014 actively building alternative credibility pathways (preregistration, open data, transparency); see sunset logic as real and achievable",
-      "Citation Index System: Institutional actor (institutional/arbitrage) \u2014 maintains performative ranking system; persists through inertia and administrative convenience rather than validated predictive power"
+      "Early-Career Researchers: Primary victims (powerless/trapped) — must accumulate credibility signals to advance; face publication bias, differential peer review, and funding barriers. Trapped because no exit from the prestige-accumulation requirement without abandoning career.",
+      "Researchers Outside Prestige Hierarchy: Secondary victims (moderate/constrained) — face differential barriers to publication, peer review, funding; can exit by relocating or changing fields but at high cost.",
+      "Established Researchers: Primary beneficiaries (institutional/arbitrage) — benefit from existing prestige capital, publication momentum, network effects; can exit to alternative reputation systems if needed because capital is already accumulated.",
+      "Journal Gatekeepers: Secondary beneficiaries (institutional/arbitrage) — extract journal brand value and editorial authority; solve coordination problem through venue-based filtering; have exit options if metrics shift.",
+      "Open Science Coalition: Organized actors (organized/constrained) — attempting to build parallel reputation systems; constrained by funding structures and career advancement rules still weighted to traditional signals.",
+      "Citation-Based Ranking System: Institutional mechanism (institutional/arbitrage) — produces quantified signals of questionable validity; persists through inertia despite gaming vulnerabilities.",
+      "Analytical Observer: Civilizational perspective (analytical/analytical) — recognizes both coordination function and extraction mechanism; observes that mechanism has drifted toward extraction over time."
     ],
-    "logic_rationale": "Extractiveness (0.52): Moderate-high. The credibility signaling system extracts value from early-career researchers through resource asymmetry \u2014 they must accumulate citations and publications at higher per-unit-effort cost than established researchers, who benefit from compound credibility (prior work attracts citations, funding, collaborators). The extraction is real but not maximal because: (1) the system does solve a coordination problem (genuine information asymmetry about researcher quality exists), (2) some early-career researchers successfully navigate the system and gain advantageous positions, (3) alternative signals are beginning to substitute. Extractiveness has increased over the interval as competition has intensified and citation gaming has become more sophisticated. Suppression (0.48): Moderate. Barriers to exit include career path dependence (investing years in signaling makes switching costs high), institutional structure (most career advancement tracks require publication record), and identity fusion (research identity often constitutes part of self-concept). Barriers are significant but not absolute \u2014 researchers can and do transition to alternative careers, industries, and non-research roles. Suppression is partly structural (institutional), partly internalized (identity-locked). Theater ratio (0.65): Moderate-high. Citation metrics, h-index, impact factor, and journal prestige serve administrative convenience and competitive ranking rather than validated prediction of research quality or impact. The metrics are gamed through self-citation networks, citation cartels, field-specific norms distortion. However, theater is not total \u2014 some correlation exists between citation metrics and quality, and the reform movement (preregistration, open data) is introducing lower-theater alternatives.",
-    "perspectival_gap": "The credibility signal constraint exhibits maximal perspectival gap across its six viewpoints. The early-career researcher (Snare) perceives pure extraction \u2014 the system extracts career options and time without meaningful coordination benefit from their perspective. The established researcher (Tangled Rope) perceives genuine coordination mixed with asymmetric extraction \u2014 they benefit from the system while experiencing some constraint. The funding institution (Rope) perceives pure coordination \u2014 signals efficiently allocate resources with no extraction cost to the allocator. The reform coalition (Scaffold) perceives a temporary coordination failure with a structural exit path \u2014 preregistration and open data are creating substitutable credibility pathways. The citation system itself (Piton) has degraded into performative theater \u2014 the system persists through inertia even as its stakeholders recognize it as low-function. The analytical observer (Tangled Rope) sees the constraint as genuinely hybrid \u2014 it solves coordination but extracts asymmetrically, and the exit pathways (open science reform) are real but not yet dominant.",
-    "directionality_logic": "Directionality values are derived from each agent's structural position: power level, exit options, and relationship to the extraction flow. Early-career researchers are trapped (d=0.95, high extraction experienced) \u2014 they cannot exit the credibility requirement without abandoning their professional identity, and they bear costs of accumulation. Established researchers are constrained with some arbitrage (d \u2248 0.55) \u2014 they can leverage existing credibility to reduce new accumulation burden, but they experience pressure to maintain signal through continuous publication. Funding institutions are beneficiaries with arbitrage exit (d \u2248 0.15) \u2014 they control the signal thresholds and can shift what counts as credible; they experience negative extraction (subsidy from the system). The reform coalition is organized with constrained exit (d \u2248 0.50) \u2014 they have agency to create alternatives but face resistance from incumbent institutional structures. The analytical observer's directionality reflects the aggregate flow \u2014 extractiveness runs from early-career to established researchers and from both toward funding gatekeepers, moderating to 0.52 when weighted across all perspectives.",
-    "mandatrophy_analysis": "RESOLUTION: This constraint resolves mandatrophy by recognizing that credibility signaling is genuinely hybrid. The solution is NOT to classify it as one type; instead, the perspectival variation itself is diagnostic. The coordination function (matching researchers to resources, enabling collaboration) is real \u2014 funding institutions and established researchers genuinely benefit from efficient information aggregation. The extraction function (asymmetric burden on early-career researchers) is also real \u2014 opportunity costs of signal accumulation are borne asymmetrically. The constraint is Tangled Rope because BOTH functions operate simultaneously and require ACTIVE ENFORCEMENT (institutional maintenance of citation metrics, journal prestige, institutional ranking) to sustain the extraction. If the enforcement were removed (if researchers could build careers on alternative credibility pathways without institutional penalty), extractiveness would drop toward 0.30 and the constraint would become pure coordination (Rope). The scaffold perspective is crucial here \u2014 it shows that the extraction component is not structurally necessary for coordination; alternative mechanisms exist. The sunset is real: as open science practices (preregistration, replication records, code transparency) accumulate credibility through demonstrated quality prediction, the burden on early-career researchers to signal through citations and journal prestige should decline. The constraint is extractive but remediable, not unchangeable."
+    "logic_rationale": "Extractiveness (0.52): Moderate-high. The credibility signal constraint does solve a genuine coordination problem — research communities need to allocate attention and resources, and prestige-based filtering does reduce information load. But empirical evidence shows that prestige-based signals are weakly correlated with research quality (citations measure attention-capture and gaming, not truth-value), publication prestige predicts career advancement more strongly than it predicts research impact, and the mechanism creates barriers that exceed the coordination requirement. The extractiveness value reflects that the mechanism serves both functions: ~40% genuine coordination, ~60% asymmetric extraction that concentrates power in prestige tiers. Suppression (0.58): Moderate-high. Barriers to early-career and non-prestige researchers include publication bias (top-tier journals reject from non-prestige institutions at 2-3x higher rates), differential peer review (same manuscript receives more favorable reviews when attributed to famous authors), funding concentration (NSF/NIH disproportionately fund R1 institutions), and hiring gatekeeping (prestige of PhD origin is strong predictor of placement, net of research quality). But suppression is not total — alternative pathways exist, alternative venues accept novel work, and some funding is available outside R1 tier. Theater ratio (0.68): Moderately high. Contemporary credibility signaling relies heavily on quantified metrics (h-index, impact factor, citation velocity) that convey false precision about research quality while suppressing measurement of actual impact or innovation. The metrics are gaming-vulnerable (self-citation inflation, strategic venue selection, preprint duplication) and capture attention-generation more than quality. The theater has increased over time as quantification has replaced judgment-based assessment and as publication requirements have created incentives for metric optimization.",
+    "perspectival_gap": "The credibility signal constraint demonstrates the full perspectival range of tangled rope and snare classifications. The early-career researcher experiences maximum extraction (snare) — they have no exit and must participate in a system that extracts time, resources, and opportunity. The researcher outside the prestige hierarchy experiences high extraction (snare) — they can exit but at prohibitive cost. The established researcher experiences mixed coordination and extraction (tangled rope) — the system coordinates epistemic quality assessment but also protects their position from competition. The journal gatekeeper experiences primarily coordination (rope) — their function is filtering and quality assessment. The open science coalition experiences constrained hybrid dynamics (tangled rope) — building alternatives but constrained by external structures. The citation system appears as an inert ritual (piton) — producing numbers with false precision. The analytical observer recognizes both functions but observes that extraction has accumulated over time (tangled rope with drift toward snare). The perspectival gap is largest between early-career (trapped in snare) and established (arbitrage through tangled rope) researchers — the same constraint provides career benefit to one and career barrier to the other.",
+    "directionality_logic": "Directionality is determined by each agent's structural relationship to extraction flow. Early-career researchers are victims (high d → high f(d) → high chi) with no exit (trapped → maximum extraction experienced). Researchers outside prestige hierarchy are victims with constrained exit (high d but with exit costs → somewhat lower chi than trapped). Established researchers are beneficiaries (low d → low/negative f(d)) with arbitrage exit (can shift reputation mechanisms if traditional signals degrade). Journal gatekeepers are beneficiaries (low d) with arbitrage exit. Open science coalition is mixed (some benefit from awareness-raising, some extraction from funding constraints) with constrained exit. The analytical perspective derives d from the observer's structural position: recognizing both functions means mixed directionality, which maps to tangled rope classification at civilizational time. The constraint's effective extractiveness chi varies by perspective: for trapped early-career researchers, chi ≈ 0.52 × 1.42 × 1.0 ≈ 0.74 (experienced extraction is high). For established researchers with arbitrage exit, chi ≈ 0.52 × -0.12 × 1.0 ≈ -0.06 (experienced extraction is negative — they benefit). This perspectival gap is the signature of tangled rope: the same constraint extracts from some and benefits others.",
+    "mandatrophy_analysis": "CONSTRAINT FAMILY DECOMPOSITION: The researcher credibility signal constraint should be decomposed into three structurally distinct constraints with different ε values, all linked via network.affects_constraints. (1) EPISTEMIC_QUALITY_FILTERING (ε ≈ 0.15, Rope) — The genuine coordination function of prestige signals: high-citation researchers do provide reliable filtering of research quality. This constraint solves the information-load problem. (2) PRESTIGE_BARRIER_PROTECTION (ε ≈ 0.68, Snare) — The extractive mechanism that uses prestige signals to create barriers protecting established researchers from competition. This constraint concentrates power through accumulated signaling advantage. (3) PUBLICATION_INFLATION_CYCLE (ε ≈ 0.55, Tangled Rope) — The hybrid mechanism where citation-counting incentives drive publication volume and journal proliferation, creating both genuine output expansion (coordination function) and metric-gaming inflation (extraction function). Each story has its own ε, its own beneficiary/victim structure, and its own measurements. The current story conflates all three. However, for authoring efficiency, the single story at ε=0.52 captures the net effect of the hybrid: moderate coordination plus moderate extraction. The mandatrophy is resolved by recognizing that the constraint is legitimately tangled rope at moderate ε — both functions are present, neither is negligible, and the tension between them cannot be eliminated without addressing the underlying structural incentives."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "information_standard"
   },
   "network": {
     "affects_constraints": [
-      "publication_bias",
-      "institutional_prestige_accumulation",
-      "early_career_researcher_precarity"
+      "publication_venue_stratification",
+      "replication_crisis_epistemic_capture",
+      "early_career_precarity"
     ],
-    "dual_formulation_note": "The credibility signal constraint is upstream of multiple structural constraints in academic research. Publication bias exists because researchers are incentivized to accumulate credibility through novel positive findings rather than replication or null results. Institutional prestige accumulation is a downstream effect of credibility signal clustering. Early-career researcher precarity is directly caused by the asymmetric burden of credibility accumulation. All three downstream constraints would weaken if the credibility signal mechanism were replaced by alternative pathways (open science reform), confirming the network dependency."
+    "dual_formulation_note": "The researcher credibility signal constraint operates across multiple domains: resource allocation (how funding flows by prestige), career advancement (how hiring and promotion are gatekept), and epistemic evaluation (how quality is assessed). These are linked by the common mechanism (prestige-signal accumulation) but represent distinct structural constraints with different ε values if decomposed. The current story integrates them at ε=0.52 (tangled rope). Upstream stories on publication venue stratification (ε higher, more extractive) and downstream stories on career precarity (ε compound from upstream and local mechanisms) provide the constraint family context."
   },
   "directionality_overrides": [
     {
-      "power_atom": "moderate",
-      "d_value": 0.55
+      "power_atom": "organized",
+      "d_value": 0.48
     }
   ]
 }

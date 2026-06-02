@@ -4,25 +4,25 @@
     "version": "1.0",
     "generated_date": "2026-02-26",
     "status": "ACTIVE",
-    "measurement_id_prefix": "emr"
+    "measurement_id_prefix": "emerg",
+    "story_uid": "43cf1f04-ed8b-4b36-b05d-4b500ce5c7be"
   },
   "base_properties": {
-    "extractiveness": 0.52,
-    "suppression": 0.58,
-    "theater_ratio": 0.48,
-    "claimed_type": "tangled_rope",
+    "extractiveness": 0.58,
+    "suppression": 0.65,
+    "theater_ratio": 0.38,
+    "claimed_type": "snare",
     "human_readable": "Emergency Response Reach Constraint",
     "topic_domain": "public_safety/infrastructure",
-    "requires_active_enforcement": true,
+    "requires_active_enforcement": false,
     "beneficiaries": [
-      "urban_populations",
-      "affluent_suburban_areas",
-      "emergency_service_institutions"
+      "urban_affluent_jurisdictions",
+      "municipal_administration"
     ],
     "victims": [
       "rural_populations",
       "marginalized_urban_communities",
-      "remote_areas"
+      "low_income_neighborhoods"
     ]
   },
   "perspectives": [
@@ -32,8 +32,8 @@
       "time_horizon": "biographical",
       "exit_options": "trapped",
       "spatial_scope": "local",
-      "label": "The Rural Resident",
-      "comment": "PERSPECTIVE 1: RURAL RESIDENT (SNARE) \u2014 Faces geographic isolation from emergency response infrastructure with no meaningful exit option. Response times routinely exceed 45+ minutes; trapped in geography and constrained by limited alternative resources. Bears full cost of slow ambulance arrival, limited firefighting capacity, and sparse coverage."
+      "label": "The Rural Patient",
+      "comment": "PERSPECTIVE 1: RURAL PATIENT (SNARE) — Structurally immobile within their geographic location; cannot exit the service gap. Response times of 45+ minutes for cardiac arrest or severe trauma create a de facto death sentence from conditions that would be survivable in urban areas. No alternatives exist — cannot purchase faster ambulance service, cannot relocate without severing livelihood and community. Maximum extraction: trapped between geography and resource scarcity with no exit mechanism."
     },
     {
       "classification_type": "snare",
@@ -42,107 +42,125 @@
       "exit_options": "trapped",
       "spatial_scope": "local",
       "label": "The Marginalized Urban Community",
-      "comment": "PERSPECTIVE 2: MARGINALIZED URBAN COMMUNITY (SNARE) \u2014 Systematically underserved by emergency response despite urban density. Response bias toward affluent districts, longer wait times in high-crime areas, police targeting patterns. Trapped by socioeconomic barriers and neighborhood discrimination. No exit option from geography without significant relocation cost."
-    },
-    {
-      "classification_type": "tangled_rope",
-      "agent_power": "moderate",
-      "time_horizon": "biographical",
-      "exit_options": "constrained",
-      "spatial_scope": "regional",
-      "label": "The Suburban Community",
-      "comment": "PERSPECTIVE 3: SUBURBAN COMMUNITY (TANGLED ROPE) \u2014 Benefits from proximity-based service concentration but also benefits from genuine coordination of shared emergency resources (mutual aid agreements, regional dispatch). Experiences modest extraction through longer response times than affluent areas, but also genuine coordination function that reduces individual household costs."
+      "comment": "PERSPECTIVE 2: MARGINALIZED URBAN COMMUNITY (SNARE) — Despite urban geography, trapped by resource allocation decisions: fewer stations, longer response times, and implicit triage prioritization of affluent neighborhoods. Cannot exit without residential relocation, which economic barriers prevent. Suppression mechanism is dual: geographic (station density) and administrative (budget allocation). Response time disparity (8 minutes affluent vs 15 minutes marginalized urban) is structural, not accidental."
     },
     {
       "classification_type": "rope",
       "agent_power": "institutional",
       "time_horizon": "immediate",
       "exit_options": "arbitrage",
-      "spatial_scope": "national",
-      "label": "The Emergency Services Institution",
-      "comment": "PERSPECTIVE 4: EMERGENCY SERVICES INSTITUTION (ROPE) \u2014 Experiences the reach constraint as a coordination problem: optimizing coverage patterns, resource allocation, and dispatch efficiency. Benefits from institutional control over resource deployment; can arbitrage between jurisdictions and funding streams. The constraint enables their function."
+      "spatial_scope": "regional",
+      "label": "Urban Municipality Administration",
+      "comment": "PERSPECTIVE 3: URBAN MUNICIPALITY ADMINISTRATION (ROPE) — Experiences the constraint as coordination mechanism: concentrating resources in high-demand urban areas optimizes call-response efficiency and resource utilization. Coverage optimization is a legitimate coordination problem. The municipality perceives equitable distribution as a fiscal impossibility — spreading stations thinly produces worse outcomes everywhere than concentrating capacity. Exit option (arbitrage) comes from ability to shift resources between jurisdictions and to optimize fund allocation across domains."
     },
     {
-      "classification_type": "scaffold",
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Rural County Government",
+      "comment": "PERSPECTIVE 4: RURAL COUNTY GOVERNMENT (TANGLED ROPE) — Faces genuine coordination challenge (dispersed population geometry requires lower-density station networks) but also experiences extraction: federal funding mechanisms favor population-density metrics, creating systematic underfunding of rural systems. Must maintain minimum service legally but cannot fund it adequately. Active enforcement of state EMS regulations combined with insufficient resources produces the hybrid: coordination requirement + asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "Affluent Residential Area",
+      "comment": "PERSPECTIVE 5: AFFLUENT RESIDENTIAL AREA (ROPE) — Net beneficiary. Multiple fire stations, paramedic-staffed ambulances, average 4-minute response times. Experiences the system as coordination: quick response enables residents to pursue economic activity safely; infrastructure supports property values and quality of life. Mobile exit option: can organize private security or relocate if dissatisfied, but infrastructure already optimized for their benefit."
+    },
+    {
+      "classification_type": "tangled_rope",
       "agent_power": "organized",
       "time_horizon": "generational",
       "exit_options": "constrained",
       "spatial_scope": "national",
-      "label": "The Reform Coalition",
-      "comment": "PERSPECTIVE 5: REFORM COALITION (SCAFFOLD) \u2014 Organized actors (healthcare reformers, emergency management modernizers, equity advocates) see the reach gap as a temporary coordination failure with a sunset: remote station placement optimization, telemedicine triage protocols, and community paramedicine are building alternative verification pathways that bypass geography. The sunset clause is not yet explicit in policy but structurally implicit in the technology trajectory."
+      "label": "State Health Department Regulatory Authority",
+      "comment": "PERSPECTIVE 6: STATE HEALTH DEPARTMENT (TANGLED ROPE) — Mandates minimum response-time standards (coordination function) while chronically underfunding rural compliance (extraction mechanism). Requires universal 8-minute rural response times but allocates funding by metropolitan-weighted formulas. Active enforcement of the standard combined with resource constraints that make compliance impossible in rural zones produces the hybrid structure. Constrained by budget politics; cannot exit the standard without political backlash."
     },
     {
       "classification_type": "piton",
       "agent_power": "institutional",
       "time_horizon": "civilizational",
       "exit_options": "arbitrage",
-      "spatial_scope": "global",
-      "label": "The Legacy Coverage Model",
-      "comment": "PERSPECTIVE 6: LEGACY COVERAGE MODEL (PITON) \u2014 The dispatch-station model optimized for 20th-century conditions persists through institutional inertia despite being increasingly misaligned with actual settlement patterns. The model is maintained because alternatives haven't fully replaced it, not because it works. Theater ratio reflects the performative aspects of coverage metrics that don't track actual reach effectiveness."
+      "spatial_scope": "national",
+      "label": "Federal Emergency Management Framework",
+      "comment": "PERSPECTIVE 7: FEDERAL EMERGENCY MANAGEMENT (PITON) — The theoretical universal standard (equal access to emergency services) persists as a rhetorical commitment and regulatory framework despite decades of non-compliance and abandonment of enforcement. Theater ratio (0.38) is moderate — actual funding and station placement reveal the framework's degradation, but the normative commitment is repeatedly invoked in policy documents. The framework persists through inertia and because alternatives (openly unequal services) face political resistance."
     },
     {
-      "classification_type": "tangled_rope",
+      "classification_type": "mountain",
       "agent_power": "analytical",
       "time_horizon": "civilizational",
       "exit_options": "analytical",
-      "spatial_scope": "global",
-      "label": "The Analytical Observer",
-      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational view, emergency response reach exhibits genuine coordination (optimal placement, dispatch efficiency, mutual aid) alongside asymmetric extraction (geography-based inequity, resource concentration in profitable urban areas, structural disadvantage for marginalized populations). The constraint has both coordination function and embedded extraction mechanism."
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 8: ANALYTICAL OBSERVER (MOUNTAIN) — From a civilizational physics perspective, emergency response reach is constrained by irreducible geometric facts: disperse populations require proportionally larger systems to achieve equivalent response times; dense populations achieve faster response with less total resource investment. This perspective sees the differential reach as a natural consequence of geography and physics, not extraction. However, the structural data reveals beneficiary concentration and victim assignment — the constraint's beneficiaries are not random; they are systematically correlated with political power and tax base."
     }
   ],
   "omegas": [
     {
-      "id": "response_time_threshold",
-      "question": "What response time threshold distinguishes adequate emergency care from extractive under-resourcing?",
-      "resolution_mechanism": "Epidemiological analysis of outcome correlation with response time across different emergency types; identification of time windows where intervention effectiveness drops sharply",
-      "impact": "If threshold < 10 minutes for all emergencies: current rural system is catastrophically under-resourced. If threshold > 45 minutes for stable conditions: rural response times are adequate, reframing reach gap as theoretical rather than material.",
-      "confidence": "medium",
-      "type_class": "empirical",
-      "description": "Time threshold for adequate emergency response"
-    },
-    {
-      "id": "geographic_necessity_of_extraction",
-      "question": "Is the disparity in response reach an inevitable consequence of population density economics, or is it a contingent result of funding allocation choices?",
-      "resolution_mechanism": "International comparative analysis of emergency response reach across countries with similar geography but different funding models; assessment of alternative deployment strategies (regional hubs, air transport, distributed community paramedicine) in sparse-population contexts",
-      "impact": "If inevitable: reach constraint is a quasi-mountain (natural economic law). If contingent: reach constraint is pure tangled rope with extractive component driven by resource allocation choices.",
-      "confidence": "medium",
-      "type_class": "conceptual",
-      "description": "Whether response reach disparity is inevitable or contingent"
-    },
-    {
-      "id": "technology_substitution_feasibility",
-      "question": "Can telemedicine triage, remote monitoring, and autonomous dispatch substantially reduce the functional importance of physical station proximity, or are hands-on interventions too dependent on local presence?",
-      "resolution_mechanism": "Longitudinal tracking of outcomes under telemedicine-enhanced dispatch in rural pilot programs; analysis of intervention types that can vs cannot be delegated to remote clinical guidance",
-      "impact": "If feasible: scaffold sunset is real \u2014 technology will enable reach equalization. If limited: current geographic reach disparity is enduring, reframing reform as mitigation rather than resolution.",
+      "id": "geographic_inevitability_vs_political_choice",
+      "question": "Is the rural response-time gap an inevitable consequence of geography and physics, or a political choice about resource allocation?",
+      "resolution_mechanism": "Comparison of rural response time distributions across jurisdictions with equivalent geography but different funding models; analysis of counterfactual rural systems with substantially higher per-capita EMS funding",
+      "impact": "If inevitable: constraint is mountain (immutable geographic fact). If political: constraint is snare (extraction mechanism masked as natural law). Current data shows variance by funding choice — suggests political component is larger than geometric component.",
       "confidence": "high",
       "type_class": "empirical",
-      "description": "Whether technology can substitute for geographic proximity in emergency response"
+      "description": "Whether response-time gaps reflect geography or resource allocation choices"
     },
     {
-      "id": "extraction_mechanism_internalization",
-      "question": "To what extent do residents in under-served areas perceive the reach gap as a natural consequence of geography versus an extractive institutional choice to concentrate resources in profitable urban areas?",
-      "resolution_mechanism": "Qualitative research on how residents frame the reach constraint; analysis of whether perception patterns correlate with actual policy choices vs geographic necessity; comparison with resident perceptions in countries with more equitable reach",
-      "impact": "If largely naturalized: residents are identity-locked into accepting the constraint, increasing measured suppression. If widely recognized as extractive: suppression is lower and organizing potential is higher.",
+      "id": "station_density_optimization_boundary",
+      "question": "What station density in rural areas would achieve parity with urban response times, and what would be the marginal cost?",
+      "resolution_mechanism": "Engineering analysis of optimal rural station placement; cost-benefit modeling of response-time improvement per unit funding in rural vs urban systems; case studies of rural jurisdictions with above-median EMS funding",
+      "impact": "If cost is modest (< 2% additional public safety budget): current underfunding is choice-based extraction. If cost is severe (> 10%): constraint approaches mountain status — geometry genuinely prevents parity within realistic budgets.",
       "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Cost of achieving rural-urban response-time parity"
+    },
+    {
+      "id": "suppression_mechanism_structural_vs_intentional",
+      "question": "Is suppression of rural emergency access a structural byproduct of density-weighted funding formulas, or does intentional triage prioritization (implicit or explicit) increase the extraction?",
+      "resolution_mechanism": "Audit of funding allocation formulas and dispatch protocols; analysis of response-time disparities controlling for call volume and acuity; interviews with dispatch supervisors about prioritization logic",
+      "impact": "If purely structural: suppression is 0.40–0.50 (geometry-driven). If intentional triage overlaid: suppression is 0.65–0.75 (adds active enforcement to denial). Current assessment (0.65) assumes some intentional component.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether suppression is structural geometry or intentional triage"
+    },
+    {
+      "id": "false_summit_candidate",
+      "question": "Is the response-reach constraint fundamentally an immutable natural law (geography), a contingent institutional arrangement (resource allocation), or both layered?",
+      "resolution_mechanism": "Contrast between physics-based modeling (what geographic/resource optimization requires) and actual system design (what funding and policy actually produce); detection of systematic beneficiary concentration suggesting constructed constraint layered over geographic base",
+      "impact": "If pure natural law: mountain classification holds. If significant constructed component: false summit — the constraint naturalizes allocation choices. Current data suggests hybrid: geographic base + constructed extraction via allocation mechanisms.",
+      "confidence": "high",
       "type_class": "conceptual",
-      "description": "Whether reach disparity is perceived as natural or extractive"
+      "description": "Whether response-reach constraint is natural law or constructed extraction"
+    },
+    {
+      "id": "scalar_disparity_empirical_basis",
+      "question": "What is the actual scalar disparity in survival outcomes between equivalent patients in rural vs urban systems?",
+      "resolution_mechanism": "Trauma registry analysis, cardiac arrest outcome studies, stroke outcome analysis comparing equivalent cases in rural and urban systems with risk adjustment",
+      "impact": "If disparity is > 3:1 in survivability: extraction is severe (snare classification confirmed). If disparity is < 1.5:1: constraint may be rope (coordination) rather than snare (extraction). Current assessment assumes > 2:1 disparity for conditions like STEMI and severe trauma.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Scalar survival-outcome disparity between rural and urban systems"
     }
   ],
   "measurements": [
     {
       "metric": "base_extractiveness",
       "time_point": 0,
-      "value": 0.38
-    },
-    {
-      "metric": "base_extractiveness",
-      "time_point": 5,
       "value": 0.45
     },
     {
       "metric": "base_extractiveness",
-      "time_point": 10,
+      "time_point": 15,
       "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 30,
+      "value": 0.58
     },
     {
       "metric": "theater_ratio",
@@ -151,44 +169,60 @@
     },
     {
       "metric": "theater_ratio",
-      "time_point": 5,
-      "value": 0.4
+      "time_point": 15,
+      "value": 0.35
     },
     {
       "metric": "theater_ratio",
-      "time_point": 10,
-      "value": 0.48
+      "time_point": 30,
+      "value": 0.38
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 15,
+      "value": 0.62
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 30,
+      "value": 0.65
     }
   ],
   "interval": {
     "start": 0,
-    "end": 10
+    "end": 30
   },
   "commentary": {
-    "narrative_context": "The emergency response reach constraint describes the structural inequity in access to emergency medical, fire, and law enforcement services distributed geographically. Urban and affluent suburban populations benefit from dense station networks and short response times; rural populations and marginalized urban communities face significantly longer response intervals and lower resource availability. The constraint exhibits tangled coordination and extraction: genuine coordination function exists (optimized dispatch, mutual aid, resource sharing) alongside systematic extraction (geography-based inequity, concentration of resources in profitable areas, structural disadvantage for populations with least bargaining power). The reach disparity increases over time as urban density concentrates population and funding, widening the gap. Theater ratio reflects performative aspects of coverage metrics that do not capture actual reach effectiveness for underserved populations.",
+    "narrative_context": "The emergency response reach constraint describes the structural inequity in access to emergency medical, fire, and law enforcement services across geographic and socioeconomic lines. Urban and affluent suburban populations benefit from dense station networks, paramedic-staffed ambulances, and response times averaging 4–6 minutes; rural populations and marginalized urban communities face response times of 30–60+ minutes and systematically lower-capability resources. This constraint is classified as a Snare from the perspective of the victims (rural and marginalized populations) because it combines suppression (geographic barriers, resource scarcity, implicit triage) with extraction (disproportionate funding to affluent areas, lower survival outcomes in underserved zones). From the municipality and state authority perspectives, the constraint appears as Tangled Rope — genuine coordination problems (dispersed populations require larger systems; dense populations achieve efficiency) layered with extraction mechanisms (funding formulas that systematically disadvantage rural compliance; regulatory standards that cannot be met within allocated budgets). The constraint's evolution over the 30-year interval shows increasing extractiveness as funding gaps have widened and demographic concentration has sharpened urban-rural divergence. Theater ratio remains moderate because the actual system design does not heavily employ performative elements — the constraint operates through straightforward resource allocation, not through maintaining theatrical compliance with nominal standards.",
     "key_agents": [
-      "Rural populations: Primary victims (powerless/trapped) \u2014 bear full cost of geographic isolation with no exit option; response times routinely exceed 45+ minutes",
-      "Marginalized urban communities: Primary victims (powerless/trapped) \u2014 systematically under-served despite density; response bias toward affluent districts; trapped by socioeconomic and spatial barriers",
-      "Suburban communities: Mixed victims/beneficiaries (moderate/constrained) \u2014 benefit from proximity coordination but face longer waits than affluent areas; constrained by limited ability to enhance local resources independently",
-      "Urban affluent areas: Primary beneficiaries (institutional/arbitrage) \u2014 receive concentrated resources, shortest response times, highest service quality; can arbitrage between public and private providers",
-      "Emergency services institution: Institutional beneficiary (institutional/arbitrage) \u2014 coordinates system; benefits from control over resource allocation and deployment decisions",
-      "Reform coalition: Organized agents (organized/constrained) \u2014 equity advocates, emergency management modernizers building alternative pathways (telemedicine, community paramedicine, remote monitoring) with implicit sunset logic",
-      "Analytical observer: Civilizational view (analytical/analytical) \u2014 sees both genuine coordination function (dispatch optimization, mutual aid) and embedded extraction mechanism (geography-based inequity in resource concentration)"
+      "Rural Populations: Primary victim (powerless/trapped) — no geographic mobility option; cannot exit via purchasing alternative services; experience 45–60+ minute response times for life-threatening emergencies",
+      "Marginalized Urban Communities: Primary victim (powerless/trapped) — structurally urban but administratively underserved; implicit triage prioritization and lower station density create gaps despite urban classification; face 12–18 minute response times vs 4–6 minutes in affluent neighborhoods",
+      "Urban Affluent Jurisdictions: Primary beneficiary (institutional/arbitrage) — concentration of resources produces 4–6 minute response times and paramedic-staffed ambulances; can leverage threat of relocation to demand continued resource priority",
+      "State Health Department: Secondary actor (organized/constrained) — mandates universal response-time standards while underfunding rural compliance; enforces regulatory standards that are systematically unachievable in rural zones due to budget structures; constrained by state politics",
+      "County Government (Rural): Secondary actor (organized/constrained) — faces coordination challenge (dispersed population geometry) layered with extraction (insufficient funding to meet mandated standards); must maintain legal service while unable to fund adequately",
+      "Municipal Administration (Urban): Secondary beneficiary (institutional/arbitrage) — structures funding allocation to optimize for dense urban populations; perceives equitable distribution as fiscally impossible; rational from efficiency perspective but preserves extraction by design",
+      "Analytical Observer: Evaluates whether response-reach constraint is natural law (immutable geometry) or constructed extraction (political allocation choice) — current data suggests hybrid with significant constructed component"
     ],
-    "logic_rationale": "Extractiveness (0.52): Moderate-high and rising. The original research assessment (1990s-2000s) showed lower extractiveness (0.38) reflecting that geographic reach gaps were accepted as natural economic constraints. Rising to 0.52 reflects the constraint shifting from accepted natural limit to recognized extractive choice as technology enables alternatives (telemedicine, remote monitoring, distributed paramedicine). The extraction is partly embedded in institutional design (concentration of resources in urban areas despite stated equity goals) and partly in acceptance of that design as inevitable. Suppression (0.58): Moderate-high. Significant barriers include geographic barriers (isolation), economic barriers (funding concentration in profitable areas), institutional barriers (dispatch system optimization for density), and informational barriers (lack of visibility into disparities). Suppression is not total \u2014 rural residents have some exit options (relocation, private ambulance services, helicopter transport for critical cases) but at prohibitive cost. Theater ratio (0.48): Moderate and rising. The metric reflects growing performative content in coverage assessments: response time statistics that don't account for call-to-clinical-treatment latency, coverage maps that show geographic proximity without accounting for seasonal accessibility or staffing reality, and 'best possible time' standards that diverge from actual performance.",
-    "directionality_logic": "Directionality is derived from the agent's structural position relative to the extraction flow. Rural and marginalized populations are structurally trapped (maximum d) \u2014 they cannot exit the geographic constraint and bear full cost of response delays. Suburban communities are constrained but mixed (moderate d) \u2014 they benefit from some coordination but experience worse outcomes than affluent areas. Urban affluent areas are beneficiaries with arbitrage options (low d) \u2014 they benefit from resource concentration and can supplement with private alternatives. Emergency services institution is beneficiary with arbitrage (low d) \u2014 coordinates system deployment and controls resource distribution. The piton classification reflects institutional inertia: the legacy dispatch-station model persists despite being misaligned with settlement patterns, maintained because alternatives haven't fully replaced it. The scaffold classification reflects that telemedicine, remote monitoring, and community paramedicine are building alternative reach mechanisms that could sunset the geographic constraint by making physical proximity less functionally necessary.",
-    "perspectival_gap": "This constraint demonstrates profound perspectival divergence. Rural residents see a snare: trapped in geography with no exit and full extraction. Marginalized urban populations see a snare: systematic deprioritization and response bias despite density. Suburban communities see tangled rope: genuine coordination mixed with asymmetric distribution. Emergency services see rope: solving the coordination problem of optimal dispatch. Reform coalition sees scaffold: temporary problem with a sunset via technology and policy change. The legacy model sees piton: performative continuation of an outdated system. The analytical observer sees tangled rope: genuine coordination alongside embedded extraction. The perspectival gaps reveal the constraint's true structure: coordination function is real and necessary (optimal dispatch, mutual aid, resource sharing) but extraction mechanisms are also real and contingent (deliberate concentration of resources in profitable areas, institutional inertia preserving inefficient models, acceptance of disparity as natural).",
-    "mandatrophy_analysis": "The mandatrophy is resolved by recognizing that emergency response reach contains both genuine coordination and real extraction. The coordination component (dispatch optimization, mutual aid, regional resource sharing) would exist even in an equitable system \u2014 it solves a real problem of coordinating scarce emergency resources across space and time. The extraction component (geographic inequity, concentration in profitable areas, structural disadvantage for powerless populations) is a separate mechanism layered onto coordination. The constraint is tangled rope, not rope, because the extraction is not incidental but structural: the system's optimization function implicitly weights urban/affluent areas more heavily in resource allocation, and this weighting is actively maintained despite stated equity commitments. The reform coalition's scaffold perspective reveals that alternatives exist (telemedicine, remote monitoring, distributed paramedicine) that could provide coordination with lower extraction, suggesting the current extraction is not necessary to the coordination function. The mandatrophy is resolved not by eliminating either component but by making visible which component is coordination and which is extraction, enabling policy choices about whether the extraction is justified by coordination benefit."
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts substantially from rural and marginalized populations through the mechanism of resource allocation: funding formulas weight population density and call volume, which systematically favor urban areas. The extraction is not maximal (0.70+) because some portion reflects genuine geometric optimization — dispersed populations do require different service models. The measured value reflects that a significant component is choice-based (can point to alternative allocation models that would reduce disparity) rather than purely inevitable. Suppression (0.65): Moderate-high. Multiple suppression mechanisms operate: geographic barriers (dispersed population requires larger system), economic barriers (rural jurisdictions cannot fund adequate services within local tax base), regulatory barriers (state mandates that cannot be met with allocated funding), and implicit triage (dispatch prioritization may informally favor urban areas during resource scarcity). Suppression is not maximal (0.90+) because rural populations can technically exit via relocation or urban residents technically exit via private security, but exit costs are extremely high. Theater ratio (0.38): Low-moderate. The constraint does not rely heavily on performative elements — actual station placement and staffing patterns openly reflect the resource disparity. The theater present is maintenance of the federal universal-access standard as rhetorical commitment while funding realities contradict it. The low theater ratio indicates this is extraction through direct resource allocation, not through maintaining false compliance narratives. Claimed type (Snare): Justified from victim perspectives; the constraint meets snare thresholds (extractiveness ≥ 0.46, suppression ≥ 0.60, χ derivation produces high effective extraction for trapped agents). From beneficiary and state authority perspectives, the constraint appears as Tangled Rope or Rope because they perceive coordination benefits alongside extraction.",
+    "perspectival_gap": "The rural patient experiences the constraint as pure extraction (Snare) — trapped by geography with no exit, facing significantly reduced survival outcomes for conditions that would be survivable in urban areas. The urban municipality experiences the same constraint as legitimate coordination (Rope) — concentrating resources in high-demand areas is an efficient solution to the geometry problem of dispersed population serving. The state health department experiences it as mixed (Tangled Rope) — mandating standards (coordination) while underfunding compliance (extraction). The analytical observer risks naturalizing the constraint as immutable (Mountain) — geography and physics create inevitable disparity — but the structural data reveals choice: comparable rural systems with higher funding show substantially better outcomes, suggesting the current disparity reflects allocation decisions. The perspectival gap is diagnostic: if the gap is large and stable across time, the constraint is genuinely hybrid (different legitimate perspectives); if the gap is driven by beneficiary framing, it suggests the beneficiary classification is correct and the constraint is Snare with false coordination framing.",
+    "directionality_logic": "Beneficiaries (urban affluent jurisdictions, municipal administration) face low directionality values (d ≈ 0.15–0.25): they are systematically net extractors from the resource distribution mechanism. This derives from their institutional power (can demand continued priority), arbitrage exit options (can shift resources between domains, threaten relocation), and direct benefit from the current allocation. Victims (rural populations, marginalized urban communities) face high directionality values (d ≈ 0.85–0.95): they are systematically net targets of extraction. This derives from their powerless classification, trapped exit options (geographic immobility, economic barriers to relocation), and systematic disadvantage in the allocation mechanism. Rural county government occupies middle ground (d ≈ 0.60): organized power but constrained exit (must comply with state regulations but cannot fund compliance). The sigmoid f(d) function amplifies these differences in the chi computation — beneficiaries with low d experience suppression of effective extraction, while victims with high d experience amplification. At spatial scope local (rural areas), σ(S) = 0.8 dampens chi slightly; at spatial scope global (analyzing the national system), σ(S) = 1.0 applies full extraction metric. The directionality values are not overridden because the structural data (beneficiary/victim + power + exit) produces accurate d estimates.",
+    "mandatrophy_analysis": "The emergency response reach constraint resolves mandatrophy through perspectival decomposition: the constraint is genuinely Snare from victim perspectives, genuinely Tangled Rope from state authority perspectives, and genuinely Rope from beneficiary perspectives. The mandatrophy question ('Is this coordination or extraction?') has a determinate answer: it is both, from different structural positions. A rural patient experiences pure extraction (no coordination benefit, maximum cost). A municipality experiences coordination (efficiently matching resources to call density). A state health department experiences the hybrid (mandating standards it systematically underfunds). The resolution is not to pick one type, but to acknowledge that the constraint's function differs by position: it coordinates for beneficiaries, extracts from victims, and maintains a regulatory theater of coordination while enabling extraction at the state level. The mountain perspective (geography is destiny) is a false summit: the constraint naturalizes what is demonstrably a political choice about allocation. The corrected analysis sees a Snare with state-level institutional extraction (funding formulas that benefit dense urban areas) layered over genuine geometric constraints (serving dispersed populations costs more). Mandatrophy is resolved by showing that the constraint's extractive function is preserved through institutional design, not through inevitable physics."
   },
   "boltzmann": {
-    "coordination_type": "resource_allocation"
+    "coordination_type": "enforcement_mechanism"
   },
   "network": {
     "affects_constraints": [
-      "healthcare_access_inequality",
-      "disaster_response_capacity",
-      "public_safety_inequity"
-    ]
+      "urban_rural_tax_base_disparity",
+      "paramedic_training_pipeline_concentration",
+      "medical_outcome_inequality_scaling"
+    ],
+    "dual_formulation_note": "The response-reach constraint decomposes into at least three structurally distinct stories: (1) geographic service geometry (ε≈0.35, Tangled Rope: genuine coordination problem with population dispersion), (2) funding allocation mechanism (ε≈0.62, Snare: extraction via formula-based underfunding of rural compliance), (3) outcome inequality scaling (ε≈0.70, Snare: differential mortality outcomes from identical medical conditions). Each has different ε values and different primary mechanisms. The current story focuses on the allocation mechanism; linked stories cover geographic optimization and outcome inequality separately."
   },
   "directionality_overrides": []
 }

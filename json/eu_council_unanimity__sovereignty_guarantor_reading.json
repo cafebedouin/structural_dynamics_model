@@ -1,0 +1,225 @@
+{
+  "header": {
+    "constraint_id": "eu_council_unanimity__sovereignty_guarantor_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "module_name_override": "constraint_eu_council_unanimity__sovereignty_guarantor_reading",
+    "measurement_id_prefix": "eucoun_sg",
+    "story_uid": "1a75ac97-2575-4dec-9b1c-7ab3a0a78f5d"
+  },
+  "base_properties": {
+    "extractiveness": 0.32,
+    "suppression": 0.28,
+    "theater_ratio": 0.42,
+    "claimed_type": "tangled_rope",
+    "human_readable": "EU Council Unanimity as Sovereignty Protection (Sovereignty Guarantor Reading)",
+    "topic_domain": "institutional_design/international_relations",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "small_states",
+      "sovereign_equality_principle"
+    ],
+    "victims": [
+      "collective_action_capacity"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "Small State Protecting Sovereignty",
+      "comment": "PERSPECTIVE 1: SMALL STATE (ROPE) — Unanimity rule functions as genuine coordination mechanism for protecting state sovereignty from majoritarian override. Veto is a legitimate rights-exercise, not extraction. The constraint enables the small state to participate in collective decisions without surrendering sovereignty to larger states. Low extraction — the veto power is the thing being coordinated, not exploited."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Collective Action Coordination Body",
+      "comment": "PERSPECTIVE 2: EU COORDINATION CAPACITY (TANGLED ROPE) — Genuinely must coordinate action across diverse sovereigns (coordination function present); simultaneously bears extraction costs when unanimity requirement blocks decisions that would benefit the collective. Mixed: some vetoes are legitimate sovereignty defense; others represent hold-up or veto-bargaining for side benefits. The constraint enables sovereignty protection AND creates asymmetric extraction when veto power is weaponized."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Large State Bearing Coordination Costs",
+      "comment": "PERSPECTIVE 3: LARGE STATE IN MAJORITY (TANGLED ROPE) — Coordinates with other large states while constrained by unanimity requirement. Benefits from participating in collective framework; bears extraction costs when small states veto decisions that large-state coalitions want. The large state has higher exit costs (cannot abandon EU framework without severe economic/diplomatic consequences) than small states in some decision domains, creating asymmetric vulnerability to veto."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "Founding Treaty Principle",
+      "comment": "PERSPECTIVE 4: FOUNDING TREATY PRINCIPLE (ROPE) — Unanimity as instantiation of sovereign equality principle sees the constraint as pure coordination: the rule itself IS the mechanism for respecting state equality in collective decisions. No extraction — the rule is the coordination function. From the treaty's normative frame, unanimity is how collective decisions get legitimacy (all states consent) rather than how they get blocked."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "regional",
+      "label": "Citizen Affected by Blocked Policy",
+      "comment": "PERSPECTIVE 5: CITIZENS ACROSS EU (SNARE) — From the perspective of citizens needing coordinated action (climate policy, pandemic response, border management), unanimity rule becomes a snare: individual state vetoes block decisions that would benefit the collective, and citizens have no exit from the jurisdictions imposing those vetoes. Pure extraction from the citizen's view — sovereignty protection for states becomes sovereignty capture blocking citizen welfare improvements. The blocking coalition pays no cost; the blocked majority pays full cost."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "Analytical Observer (Natural Boundary View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN) — From a civilizational view, unanimity appears as a natural boundary protection: any collective agreement that requires state A to surrender sovereignty to majority decision-making without A's explicit consent is, by definition, a sovereignty violation. Unanimity is the logical wall protecting this boundary. However, the base properties contradict this — structural beneficiaries and victims exist, revealing the mountain as a false summit: the 'natural boundary' naturalizes what is actually a contingent institutional choice."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "veto_legitimacy_threshold",
+      "question": "At what frequency or scope of veto use does the sovereignty protection reading collapse into the veto-trap reading?",
+      "resolution_mechanism": "Empirical tracking: count vetoes per state per year; classify as sovereignty defense vs. hold-up bargaining based on ex-post justification; identify inflection point where veto becomes seen as blocking rather than protecting",
+      "impact": "If threshold is high (vetoes frequent): sovereignty reading holds — veto is normal exercise. If threshold is low (rare vetoes legitimate): even moderate use collapses into veto-trap framing. This is the reading_relations hinge point.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Frequency threshold distinguishing sovereignty defense from veto-trap"
+    },
+    {
+      "id": "extraction_vs_coordination_boundary",
+      "question": "Is the blocking of collective action by unanimity requirement a legitimate sovereignty exercise or an asymmetric extraction mechanism?",
+      "resolution_mechanism": "Welfare analysis: identify decisions where unanimity-blocked policy would have benefited majority; track whether small-state beneficiaries from blocking capture benefits or merely prevent externalities; measure whether blocking states offer alternative proposals or simply obstruct",
+      "impact": "If blocking is sovereignty defense: ε remains moderate (0.32), tangled_rope holds. If blocking is systematic hold-up for side benefits: ε rises to 0.50+, snare emerges at institutional perspective. The reading would shift from sovereignty_guarantor to veto_trap.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether blocking represents sovereignty defense or extractive hold-up"
+    },
+    {
+      "id": "sibling_reading_coherence",
+      "question": "Can the sovereignty-guarantor and veto-trap readings coexist in the same institutional framework, or does one reading's core premise logically foreclose the other?",
+      "resolution_mechanism": "Logical analysis: test whether 'unanimity protects sovereignty' and 'unanimity enables veto-trap extraction' can both be true of the same mechanism. Answer is YES coexist — both describe real properties of the same rule. The readings differ in framing (how the mechanism is justified) not in the underlying structure.",
+      "impact": "Determines reading_relations value: 'coexists_with' (likely) or 'forecloses' (unlikely). If coexistence is coherent, both readings remain live positions held by different parties in the EU institutional debate. If foreclosure is detected, one reading's legitimacy claim undermines the other's.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Logical relationship between sovereignty-guarantor and veto-trap readings"
+    },
+    {
+      "id": "unanimity_as_contingent_choice",
+      "question": "Is unanimity requirement a natural law protecting state sovereignty, or a contingent institutional design choice that could be replaced by alternative mechanisms (qualified majority voting with safeguards)?",
+      "resolution_mechanism": "Historical analysis: trace the treaty design rationale — was unanimity chosen as necessary protection or as pragmatic political settlement? Counterfactual analysis: what alternative decision rules would protect sovereignty while enabling more collective action? Design comparisons: do other federal systems use unanimity or alternatives?",
+      "impact": "If natural law: mountain classification holds (all perspectives should agree). If contingent: mountain is a false summit, revealed as naturalization of institutional choice. The engine will detect false summit via FSM; this omega documents why.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether unanimity is natural law or contingent institutional design"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.18
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.42
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "This constraint models the EU Council unanimity requirement through the lens of the sovereignty-guarantor reading: unanimity rule protects small states from majoritarian coercion by requiring explicit consent to all collective decisions that implicate state sovereignty. In this reading, veto is a legitimate rights-exercise, not an extraction mechanism. The constraint exhibits a perspectival gradient: from the small state's view, unanimity is pure coordination (rope); from the collective action body's view, it is mixed coordination with extraction costs (tangled rope); from blocked citizens' view, it becomes pure extraction (snare); from the analytical civilizational view, it risks appearing as natural law (mountain, revealed as false summit). This is one of three structurally distinct readings of the same kernel (EU Council unanimity). The veto-trap reading models the same rule as an asymmetric extraction mechanism where some states block decisions to extract side benefits. The diplomatic-capital reading models unanimity as a coordination mechanism that creates perverse incentives for side-bargaining and diplomatic capital accumulation. All three readings operate on the same institutional mechanism but with different ε values, different beneficiary/victim structures, and different classifications. The sovereignty-guarantor reading claims moderate extractiveness (ε=0.32) because coordination costs exist but systematic asymmetric extraction does not — veto is the mechanism being coordinated, not the target of extraction.",
+    "key_agents": [
+      "Small States: Primary beneficiary (powerful/mobile) — unanimity rule protects their sovereignty from majoritarian override; veto is their legitimate right-exercise",
+      "Large States in Majority Coalition: Mixed (institutional/constrained) — benefit from EU coordination; bear extraction costs when small states veto decisions large-state coalitions want",
+      "EU Collective Action Capacity: Victim (organized/constrained) — blocked by unanimity requirement when decisions would serve collective interest; requires ongoing negotiation overhead",
+      "Citizens Across EU: Victim (powerless/trapped) — when state-level veto blocks policies (climate action, pandemic response) that would benefit citizen welfare; no exit from blocked jurisdictions",
+      "Treaty Principle of Sovereign Equality: Beneficiary (institutional/arbitrage) — unanimity rule is the institutional embodiment of the principle; protected by the constraint structure",
+      "Analytical Observer: Positions the constraint as natural law boundary (analytical/analytical) — risks naturalizing contingent institutional choice"
+    ],
+    "logic_rationale": "Extractiveness (0.32): Moderate, reflecting the reading's core claim that veto is legitimate sovereignty defense rather than systematic extraction. The value is constrained by the upward trajectory in measurements (0.18 → 0.32 over 20 years), indicating that extraction costs have risen as the EU accumulated more collective-action domains and more vetoes accumulated. However, the trajectory does not approach snare territory (ε > 0.46) because the reading does not treat vetoes as extraction — the increase reflects growing coordination overhead, not growing asymmetric extraction. The trajectory would be steeper if modeling the veto-trap reading (ε would reach 0.55+ by year 20). Suppression (0.28): Low-moderate. Small states face some barriers to exiting the unanimity protection (EU membership itself is hard to exit; treaty change requires unanimous approval), but suppression is not high because the unanimity rule itself is the thing being protected — there is no alternative institutional arrangement being suppressed. Suppression would be much higher in the veto-trap reading (where blocking becomes coercive). Theater ratio (0.42): Moderate, and rising (0.30 → 0.42). The trend reflects that as unanimity vetoes became more frequent and more consequential for EU decision-making (climate, defense, fiscal integration), the performative element increased — debates about sovereignty increasingly frame positional bargaining and side-benefit extraction as principled defenses of national interest. The theater increase tracks the reading's divergence from pure coordination (rope-like) toward mixed coordination-extraction (tangled-rope-like).",
+    "perspectival_gap": "This constraint exhibits a systematic perspectival gradient across power levels and exit options. Small states with arbitrage options (can exit EU if needed, though costly) experience the constraint as pure coordination (rope) — the unanimity rule is precisely what gives them meaningful agency in collective decisions. Large states constrained by EU framework (exit is very costly) experience mixed coordination-extraction (tangled rope) — they benefit from collective decisions when they can form supermajorities but bear extraction costs when small-state vetoes block their preferred policies. Citizens powerless and trapped within blocked jurisdictions experience pure extraction (snare) — sovereign state vetoes prevent decisions that would benefit their welfare, and they have no mechanism to override the veto or exit the jurisdiction. The founding treaty principle sees pure coordination (rope) — unanimity IS the mechanism that coordinates sovereign equality. The analytical observer risks seeing natural law (mountain) — the sovereignty boundary appears immutable. This gradient shows that the constraint's type depends entirely on the observer's structural position, not on objective features of the rule. The 'same' unanimity requirement is simultaneously coordination, extraction, and natural boundary depending on where you stand.",
+    "directionality_logic": "Directionality is determined by each agent's structural relationship to the veto mechanism. Small states are beneficiaries with arbitrage options (can exit EU, though costly) — they experience low or negative d, experiencing the constraint as beneficial protection rather than extraction. The treaty principle of sovereign equality is the beneficiary-in-principle (arbitrage position) — d ≈ 0.15. Large states in majority coalitions are mixed: they benefit from EU collective action but are victims of veto-blocking — d ≈ 0.55, experiencing moderate extraction. The EU's collective action capacity is pure victim (trapped, no exit from the unanimity requirement without treaty change) — d ≈ 0.95, experiencing maximum extraction. Citizens are powerless victims with no exit (trapped) — d ≈ 0.98. The analytical observer's canonical d for analytical power is 0.73. These directionality values explain why perspectives produce different classifications despite the same base extractiveness: the sigmoid f(d) maps different d values to different effective extraction experiences. Small state (d ≈ 0.15) maps to rope (low chi); large state (d ≈ 0.55) maps to tangled rope (moderate chi); citizen (d ≈ 0.98) maps to snare (high chi). The constraint structure is stable; the experienced extraction varies by position.",
+    "kernel_context": "This constraint is the sovereignty-guarantor reading of the contested kernel eu_council_unanimity. The kernel is the EU Council's unanimity requirement for certain decision categories. The reading instantiates the normative claim that unanimity primarily functions to protect small-state sovereignty from majoritarian coercion — veto is a legitimate rights-exercise, not an extraction mechanism. Sibling readings: (1) veto_trap_reading models the same unanimity rule as an asymmetric extraction mechanism where some states block decisions strategically to extract side benefits, not to protect sovereignty; (2) diplomatic_capital_reading models unanimity as a coordination mechanism that creates perverse incentives for side-bargaining and accumulation of diplomatic capital (theater increases, strategic wheeling-and-dealing). This reading coexists with both siblings — all three are live positions held by different coalitions within EU institutional politics. No reading forecloses another; they differ in framing, not in underlying structure. The sibling readings would have different ε values: veto_trap_reading would show ε ≈ 0.55 (snare); diplomatic_capital_reading would show ε ≈ 0.48 (tangled rope with high theater). This reading's ε ≈ 0.32 is the lowest because it does not model veto as extraction.",
+    "mandatrophy_analysis": "This reading avoids mandatrophy by clearly distinguishing the coordination function (protection of sovereignty through unanimous consent requirement) from any extraction mechanism (veto as strategic blocking for side benefits). The tangled-rope classification acknowledges both: unanimity genuinely coordinates the protection of sovereign equality (no false symmetry here) AND creates measurable extraction costs for the collective action body and for citizens blocked by vetoes. The reading's moderate ε (0.32) reflects that extraction costs exist but are not treated as the primary function of the rule. If the veto-trap reading were instantiated instead, ε would rise to 0.55+ because the extraction mechanism would be primary. The mandatrophy is resolved by recognizing that the same rule has multiple true descriptions depending on which structural properties you weight — sovereignty protection OR coordination overhead OR strategic blocking. This reading chooses the sovereignty-protection description, yielding the moderate ε and tangled-rope classification."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [
+      "eu_council_unanimity__veto_trap_reading",
+      "eu_council_unanimity__diplomatic_capital_reading"
+    ],
+    "dual_formulation_note": "The EU Council unanimity requirement is modeled as three structurally distinct constraint stories, each with a different ε, beneficiary/victim structure, and classification. This story (sovereignty-guarantor reading) claims moderate ε (0.32) and tangled-rope type. The veto-trap reading claims higher ε (≈0.55) and snare type. The diplomatic-capital reading claims moderate ε (≈0.48) and tangled-rope with high theater. All three describe the same institutional mechanism but from different normative frames. They are linked as a constraint family via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.98
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reference_frame": "sovereign_equality_treaty_foundation",
+    "drift_state": {
+      "moment": "contemporary_climate_fiscal_integration_era",
+      "direction": "practice_drift",
+      "magnitude": "substantial",
+      "acknowledged": false
+    },
+    "reading_relations": [
+      {
+        "sibling_id": "eu_council_unanimity__veto_trap_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "eu_council_unanimity__diplomatic_capital_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "veto_as_sovereignty_defense",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "sovereignty_equality_principle",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      }
+    ]
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "header": {
+    "constraint_id": "end_of_life_authority__autonomy_reading",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "eol_autonomy",
+    "story_uid": "777379f2-848a-4afa-8cca-b726d0fa98a3"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "End-of-Life Authority: Patient Autonomy Reading",
+    "topic_domain": "medical_ethics/bioethics/constitutional_law",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "suffering_patient_self_determination"
+    ],
+    "victims": [
+      "pressured_vulnerable_patient",
+      "family_economic_coercion_exposure"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Economically Vulnerable Patient",
+      "comment": "PERSPECTIVE 1: ECONOMICALLY VULNERABLE PATIENT (SNARE) — Trapped at intersection of terminal illness, family financial pressure, and medical cost burden. Legally autonomous, structurally coerced. Cannot refuse family's implicit or explicit pressure to 'let go' when medical bills accumulate. No alternative to accepting the interpretation that death is merciful because survival is bankrupting. High experienced extraction — the autonomy framework masks structural coercion."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Patient With Decision-Making Capacity",
+      "comment": "PERSPECTIVE 2: PATIENT WITH DECISION-MAKING CAPACITY (TANGLED ROPE) — Has genuine agency over medical choices (coordination function: respects actual wishes) but faces suppressive conditions: inadequate palliative care access, family pressure, depression from chronic illness, incomplete information about prognosis. The autonomy framework provides real benefit (respects their voice) alongside extraction (treats choice-under-duress as authentic choice). Moderate experienced extraction — mixed coordination and coercion."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Healthcare Institution",
+      "comment": "PERSPECTIVE 3: HEALTHCARE INSTITUTION (ROPE) — Benefits substantially from autonomy framing: avoids liability, reduces end-of-life care costs, simplifies decision-making protocols. Experiences the constraint as coordinating mechanism — respecting patient wishes enables efficient resource allocation and reduces malpractice risk. Low experienced extraction because institutions have structural exit options (can always provide continued care; choose not to due to autonomy authorization)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Family Member Under Economic Strain",
+      "comment": "PERSPECTIVE 4: FAMILY MEMBER UNDER ECONOMIC STRAIN (TANGLED ROPE) — Simultaneously coordinating end-of-life care AND bearing catastrophic medical debt. Autonomy framework provides real benefit (respects patient wishes, legal protection) alongside extraction (family's interests become invisible; financial desperation frames 'respecting choice' as merciful death). Constrained by medical system's cost structure, not by formal authority. Moderate experienced extraction."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Palliative Care Profession",
+      "comment": "PERSPECTIVE 5: PALLIATIVE CARE PROFESSION (PITON) — Ostensibly focused on comfort and quality of life; in practice, many palliative frameworks function as theater masking resource triage. The profession's stated commitment to aggressive symptom management often gives way to cost-conscious 'natural death' narratives. High theater_ratio reflects the gap between palliative care's aspirational mission (maximize comfort) and its institutional role (manage decline with economic constraints). Performative rather than functionally robust."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Natural Law View)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER / NATURAL LAW VIEW (MOUNTAIN) — Autonomy over bodily integrity and decisions about death are presented as foundational, inalienable rights — natural laws of human dignity and self-determination. From civilizational perspective, respecting patient autonomy is treated as an immutable principle. However, the structural data (suppression ≥ 0.62, theater ≥ 0.68, identified beneficiaries with distinct structural position from victims) contradicts the mountain classification. This perspective risks naturalizing a contingent institutional arrangement (the autonomy framework that depends on functional palliative care and absence of coercive economic conditions) as an inviolable law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "autonomy_under_duress_validity",
+      "question": "When an economically vulnerable patient 'chooses' death to relieve family financial burden, does this choice instantiate genuine autonomy or structural coercion disguised as choice?",
+      "resolution_mechanism": "Prospective data collection: post-decision interviews with patients and families; correlation between reported financial pressure and timing of end-of-life requests; jurisdictions with vs without aggressive universal palliative care to measure choice distribution differences",
+      "impact": "If coercion-masked-as-choice: autonomy reading collapses into snare classification; requires economic preconditions (healthcare access, family support, palliative care) to achieve genuine autonomy. If authentic choice despite hardship: autonomy reading stands; economic conditions are suppressors but not invalidators of choice.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether economically pressured end-of-life choices are authentic autonomy or structural coercion"
+    },
+    {
+      "id": "palliative_care_adequacy_gap",
+      "question": "Does the autonomy framework's reliance on palliative care infrastructure create a hidden prerequisite that many patients cannot satisfy, effectively restricting autonomy to those with access?",
+      "resolution_mechanism": "Geographic analysis of end-of-life request rates by palliative care availability; international comparison of request rates (jurisdictions with universal palliative care vs market-based systems); patient surveys on whether inadequate symptom management motivated end-of-life decisions",
+      "impact": "If gap exists: autonomy framework requires expensive infrastructure unavailable to many; becomes means of rationing disguised as choice. If minimal: autonomy is robust across care settings.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Prerequisite gap: autonomy framework requires palliative care infrastructure many patients lack"
+    },
+    {
+      "id": "distinguishing_autonomy_from_dignity",
+      "question": "Is the foundational axiom of this reading (self-determination over bodily integrity) logically distinct from the dignity reading's foundational axiom (inherent dignity as inviolable), or are they two phrasings of the same claim?",
+      "resolution_mechanism": "Textual and jurisprudential analysis: how do courts, ethicists, and jurisdictions differentiate autonomy-based vs dignity-based arguments for right to die? Do they support different victim sets or beneficiary structures?",
+      "impact": "If logically distinct: the two readings truly coexist with different implications (autonomy emphasizes patient agency; dignity emphasizes inherent worth regardless of choice). If the same claim in different language: apparent coexistence masks a single framework with redundant naming.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Logical distinction between autonomy and dignity axioms"
+    },
+    {
+      "id": "coercion_detection_infrastructure",
+      "question": "What institutional mechanisms can reliably detect family or economic coercion in end-of-life decision-making? Do current consent frameworks (informed consent, capacity assessment, waiting periods) actually catch coerced choices?",
+      "resolution_mechanism": "Analysis of cases where coercion was later revealed; interviews with bioethicists and patient advocates on enforcement gaps; design analysis of consent procedures (do they test for coercion or only for capacity and information?).",
+      "impact": "If detection is robust: coercion risk is managed and autonomy framework can function. If detection is poor: many coerced choices appear autonomous, and suppression metric should be higher.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Effectiveness of coercion detection in consent infrastructure"
+    },
+    {
+      "id": "reading_foreclosure_test",
+      "question": "Does the autonomy reading's core axiom (self-determination is foundational) logically foreclose the sanctity reading's axiom (life has intrinsic value independent of choice), or can both be held in different institutional frameworks?",
+      "resolution_mechanism": "Jurisprudential analysis: jurisdictions that recognize autonomy rights; do any of them also mandate continued life-sustaining care against patient wishes? If yes, the readings coexist (different frameworks instantiate each). If no: autonomy reading forecloses sanctity within same legal system.",
+      "impact": "If foreclosure occurs: readings are not both live options within liberal democratic law; one framework supersedes the other. If coexistence: both readings survive in different jurisdictions or institutional contexts.",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Whether autonomy axiom forecloses or coexists with sanctity axiom"
+    },
+    {
+      "id": "consent_theater_ratio_calibration",
+      "question": "How much of the consent process (informed consent documents, capacity assessments, waiting periods) is functional (actually detects understanding, voluntariness, decisional capacity) vs performative (legal liability protection that would proceed identically regardless of outcome)?",
+      "resolution_mechanism": "Process analysis: review of actual consent interactions (video, audio, transcripts where available); cases where consent procedures were identical but outcomes differed; analysis of whether procedure changes would change outcomes vs only change legal risk profile.",
+      "impact": "If high theater (≥0.70): consent infrastructure functions as legitimation theater for cost-rationing. If low theater (≤0.40): consent infrastructure is genuinely protective of patient autonomy.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Theater ratio of consent infrastructure: functional vs performative"
+    },
+    {
+      "id": "sibling_reading_structural_delta",
+      "question": "How do the sanctity and dignity readings differ in their victim sets and beneficiary structures? What structural features does each reading instantiate that the autonomy reading does not?",
+      "resolution_mechanism": "Comparative analysis of the three readings (separate constraint stories). Identify which victims each reading exposes, which beneficiaries each names, where their extractiveness values diverge. This test validates the decomposition claim that each reading is structurally distinct.",
+      "impact": "If readings have substantially different victim sets: decomposition into separate constraints is justified (ε-invariance holds). If victim sets overlap and ε is similar: readings are phrasings of a single constraint, not separate instantiations of a kernel.",
+      "confidence": "high",
+      "type_class": "conceptual",
+      "description": "Structural distinctness of sibling readings (sanctity, dignity, autonomy)"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 5,
+      "value": 0.52
+    },
+    {
+      "metric": "suppression_requirement",
+      "time_point": 10,
+      "value": 0.62
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The autonomy reading of end-of-life authority grounds legitimacy in patient self-determination over bodily integrity as a foundational right. This reading treats the patient's voluntary choice to refuse or discontinue life-sustaining treatment as the primary moral and legal warrant for end-of-life decisions. The constraint is contested because two competing readings (sanctity of life, inherent dignity) ground legitimacy in different premises — intrinsic value of life itself, or human dignity independent of choice. This story instantiates the autonomy reading as a distinct constraint with its own victim set (economically pressured patients, families bearing medical debt), beneficiary structure (suffering patients whose wishes are respected, healthcare institutions managing costs via patient choice), and extractiveness signature (0.58: moderate-high, reflecting the gap between the ideal of autonomous choice and structural coercion in conditions of illness, poverty, and information asymmetry). The core tension: autonomy respects patient voice, but the voice is constrained by economic pressure, inadequate palliative care, depression, and family burden — making 'authentic choice' structurally ambiguous. Theater_ratio (0.68) reflects that consent procedures function partly as genuine capacity/voluntariness checks and partly as institutional liability protection — a functional process overlaid with performative documentation.",
+    "key_agents": [
+      "Suffering Patient (institutional/arbitrage): Primary beneficiary — autonomy framework respects their wishes and provides legal authorization for end-of-life decisions. Experiences minimal extraction because they have the structural position to define the outcome.",
+      "Economically Vulnerable Patient (powerless/trapped): Primary victim — legally autonomous but structurally coerced by medical costs and family financial burden. Bears maximum extraction: choice framing masks coercion, making coercion invisible and therefore unaddressable.",
+      "Pressured Family Member (moderate/constrained): Secondary victim and secondary beneficiary — bears financial desperation but also bears decision-making responsibility; experiences mixed extraction because autonomy framework both protects them (no longer formally responsible) and exposes them (family wishes become illegitimate input to patient choice).",
+      "Healthcare Institution (institutional/arbitrage): Beneficiary — autonomy framework authorizes cost-conscious end-of-life decisions and protects from malpractice liability; gains exit option (can discontinue care because patient 'chose').",
+      "Inadequate Palliative Care System (powerless/trapped): Victim — the autonomy framework masks gaps in palliative care capacity by reframing triage as choice; patients 'choose' death partly because adequate symptom management isn't available.",
+      "Bioethics Professional Community (institutional/constrained): Maintains the autonomy framework's authority; constrained by professional consensus but arbitrating meaning of 'autonomous choice' — benefits from framework clarity, pays cost of cognitive dissonance when framework masks coercion."
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The autonomy reading instantiates genuine coordination (respects patient wishes, provides legal clarity) alongside significant extraction. The extraction operates through suppression: patients' choices are shaped by economic pressure, inadequate symptom management, depression, family burden, and incomplete prognostic information. The growth trajectory (0.32→0.45→0.58 over the interval) reflects increasing awareness of coercion mechanisms and expanding use of end-of-life requests in contexts of healthcare cost burden. Suppression (0.62): Moderate-high and rising. Initial suppression includes medical uncertainty, psychological distress, and family dynamics. Over the interval, economic conditions intensify suppression: rising healthcare costs, erosion of palliative care funding, and increasing family-level medical debt create structural pressure toward 'choosing' death as relief from financial burden. Theater_ratio (0.68): Elevated and rising. Consent procedures (informed consent documents, capacity assessments, waiting periods) serve partly as genuine voluntariness checks and partly as legal performance — documentation that protects institutions from liability regardless of whether the process actually detects coercion. The rising trajectory reflects increasing routinization of end-of-life decisions and automation of consent processes, reducing functional assessment and increasing performative coverage.",
+    "perspectival_gap": "Extreme divergence between perspectives. The economically vulnerable patient sees pure extraction (Snare) — choice framing hides coercion. The patient with decision-making capacity sees mixed coordination and extraction (Tangled Rope) — framework respects genuine wishes but within suppressive conditions. The healthcare institution sees pure coordination (Rope) — framework aligns patient wishes with institutional interests. The family in economic strain sees mixed extraction and coordination (Tangled Rope) — simultaneously bearing decision responsibility and financial burden. Palliative care profession sees a degraded ritual (Piton) — its mission (comfort) is undermined by cost constraints but persists as institutional theater. The analytical observer risks seeing a natural law (Mountain) — autonomy as foundational right — but structural data reveals false summit: the framework depends on economic conditions (accessible palliative care, absence of financial coercion) many patients cannot satisfy. The gap between the beneficiary perspective (Rope: respecting wishes) and the powerless perspective (Snare: masked coercion) is maximal — the same constraint is coordination from one position and extraction from another.",
+    "directionality_logic": "Directionality (d) values derive from each agent's structural position. The suffering patient with agency (beneficiary) has low d (gains from framework) → low/negative χ. The economically vulnerable patient (victim, trapped) has high d (framework masks coercion) → high χ, maximum experienced extraction. The healthcare institution (beneficiary, arbitrage) has low d (authorization to discontinue care) → low χ. The family under strain (mixed victim-beneficiary, constrained) has moderate d (bears responsibility and benefit) → moderate χ. The analytical observer (observing from civilizational scope) has moderate-high d characteristic of analysis position (0.72) → χ ≈ 0.41. The perspectival gap emerges because the same constraint structure produces opposing d-values: the patient benefits (d≈0.15) while the economically pressured patient bears extraction (d≈0.92).",
+    "kernel_context": "This constraint instantiates the AUTONOMY READING of the end-of-life authority kernel. The kernel is the contested legitimacy claim grounding end-of-life decision authority. Three readings instantiate this kernel: (1) AUTONOMY READING (this story) — legitimacy derives from patient self-determination over bodily integrity; (2) SANCTITY READING (sibling constraint) — legitimacy derives from intrinsic value of human life independent of choice; (3) DIGNITY READING (sibling constraint) — legitimacy derives from inherent human dignity as inviolable. Each reading produces a different victim set, beneficiary structure, and ε value. The autonomy reading emphasizes the suffering patient's agency (beneficiary) and masks coercion of economically pressured patients (victims). The sanctity reading would emphasize the intrinsic value argument (different beneficiary: the principle of life-preservation) and would show different victim dynamics (victims of choice-to-die rather than victims of coercion). The dignity reading would ground legitimacy in categorical human worth rather than choice mechanics, producing yet different structural relationships. The three readings coexist in different jurisdictions and institutional contexts; no single reading forecloses the others within a coherent legal system, though each makes different institutional tradeoffs.",
+    "mandatrophy_analysis": "This constraint has HIGH ε (0.58 > 0.46) and is classified as Tangled Rope. The mandatrophy is: autonomy framework appears to be pure coordination (respecting patient wishes) but actually contains significant extraction (masking coercion through choice framing). The resolution demonstrates why the autonomy reading requires a distinct victim set: the economically vulnerable patient is invisible in the pure-coordination view but appears as primary victim in the structural view. The Tangled Rope classification resolves the mandatrophy by declaring both the coordination function (genuine respect for some patients' wishes) AND the extraction mechanism (coercion masked as choice for economically pressured patients) simultaneously. The beneficiary (suffering patient) and victims (pressured patient, inadequate care system) are structurally distinct, enabling active enforcement (institutional practices that claim to respect autonomy while enabling cost-rationing). The rising metrics over the interval suggest the extraction is accumulating faster than coordination capacity — the framework is increasingly used to justify triage rather than to enable genuine choice."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "end_of_life_authority__sanctity_reading",
+      "end_of_life_authority__dignity_reading",
+      "healthcare_cost_rationing_implicit",
+      "palliative_care_access_disparity"
+    ],
+    "dual_formulation_note": "The end-of-life authority kernel decomposes into three distinct readings, each with different ε values and victim sets. The autonomy reading (this story, ε=0.58) emphasizes patient agency alongside coercion risk. The sanctity reading (sibling) would emphasize life-preservation principles (likely higher ε, different beneficiary). The dignity reading (sibling) would emphasize categorical human worth (different victim exposure than autonomy reading). All three readings affect downstream constraints on healthcare rationing and palliative care access. The ε-invariance principle requires separate stories because the observable (what makes the end-of-life decision legitimate) changes across readings, producing different metrics."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "powerless",
+      "d_value": 0.92
+    }
+  ],
+  "cs_structure": {
+    "kernel_codification": "formalized",
+    "authority_grounding": "lineage",
+    "interpretation_layer_present": true,
+    "reading_relations": [
+      {
+        "sibling_id": "end_of_life_authority__sanctity_reading",
+        "relation": "coexists_with"
+      },
+      {
+        "sibling_id": "end_of_life_authority__dignity_reading",
+        "relation": "influences"
+      }
+    ],
+    "axioms": [
+      {
+        "atom": "self_determination_foundational",
+        "role": "foundational",
+        "status": "holdable",
+        "grounding_type": "deontological"
+      },
+      {
+        "atom": "informed_voluntary_choice_valid",
+        "role": "secondary",
+        "status": "holdable",
+        "grounding_type": "empirically_contingent"
+      }
+    ],
+    "reference_frame": "liberal_autonomy_framework",
+    "drift_state": {
+      "moment": "contemporary_healthcare_economics_era",
+      "direction": "axiom_overriding",
+      "magnitude": "substantial",
+      "acknowledged": false
+    }
+  }
+}

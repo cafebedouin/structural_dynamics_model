@@ -1,0 +1,171 @@
+{
+  "header": {
+    "constraint_id": "privilege_architecture_coordination",
+    "version": "1.0",
+    "generated_date": "2025-01-15",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "priv_arch",
+    "story_uid": "bc2acb6c-e723-40e8-99de-36171e110ec4",
+    "created_at": "2026-06-01T23:34:22.379185+00:00"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.42,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Attorney-Client Privilege Architecture Coordination in AI Legal Technology",
+    "topic_domain": "legal_technology/data_sovereignty/professional_services",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "law_firms_with_technical_capacity",
+      "enterprise_legal_departments",
+      "on_premise_vendors"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "Large Law Firm with Technical Infrastructure",
+      "comment": "PERSPECTIVE 1: LARGE LAW FIRM (ROPE) — Firm with capital and technical capacity to deploy on-premise AI systems experiences this as pure coordination: the privilege architecture requirement (physical custody + zero vendor access) is a legitimate technical specification that solves the Heppner waiver problem. The firm benefits from the coordination function (clear privilege boundary) and can arbitrage between deployment models based on case sensitivity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "Mid-Size Firm Without Infrastructure",
+      "comment": "PERSPECTIVE 2: MID-SIZE FIRM (TANGLED ROPE) — Firm without capital or technical staff to deploy on-premise systems faces genuine coordination need (privilege protection) but also experiences extraction: the architecture requirement creates a barrier to AI adoption that benefits firms with existing infrastructure. Can exit to SaaS with waiver risk or forego AI tools, but both options impose costs. Coordination function is real (privilege is a legitimate concern) but asymmetric extraction is also present (infrastructure barrier)."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "Enterprise Legal Department",
+      "comment": "PERSPECTIVE 3: ENTERPRISE LEGAL DEPARTMENT (ROPE) — In-house counsel with enterprise IT infrastructure experiences this as coordination: the privilege architecture is a technical specification that integrates with existing data governance. Mobile exit options (can deploy on-premise or negotiate vendor contracts with attestation architecture) and benefits from clear privilege boundaries. Low effective extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "On-Premise Vendor",
+      "comment": "PERSPECTIVE 4: ON-PREMISE VENDOR (ROPE) — Vendors offering on-premise deployment models benefit from the coordination function: the privilege architecture requirement creates demand for their product category. Experience this as legitimate coordination (solving a real technical problem) with mobile exit (can also offer SaaS with attestation architecture if market demands it)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "SaaS Vendor with Operational Access",
+      "comment": "PERSPECTIVE 5: SAAS VENDOR (TANGLED ROPE) — Vendors whose operational model requires access to customer data (for model training, system maintenance, or support) face genuine coordination need (customers need AI tools) but also experience extraction: the privilege architecture requirement creates a structural disadvantage relative to on-premise competitors. Can exit by redesigning architecture (zero-knowledge systems, client-side processing) but this imposes significant engineering costs. Coordination and extraction both present."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (ROPE) — From the analytical perspective, the privilege architecture is a coordination mechanism that solves a genuine collective action problem: how to adopt AI tools in legal practice without waiving attorney-client privilege. The Heppner doctrine (third-party access waives privilege) is the upstream constraint; the architecture requirement is a technical response that preserves privilege while enabling technology adoption. Base extraction is moderate (0.38) because infrastructure requirements create barriers, but the coordination function is genuine and the constraint does not require active enforcement to suppress alternatives."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "attestation_architecture_sufficiency",
+      "question": "Do cryptographic attestation architectures (zero-knowledge proofs, client-side processing, encrypted enclaves) provide privilege protection equivalent to physical custody?",
+      "resolution_mechanism": "Case law development on whether technical controls preventing vendor access satisfy Heppner's 'reasonable expectation of confidentiality' standard; expert testimony on cryptographic guarantees vs physical custody",
+      "impact": "If equivalent: SaaS vendors can compete on equal footing by redesigning architecture, reducing extraction. If not equivalent: physical custody remains privileged, maintaining infrastructure barrier.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether attestation architecture provides privilege protection equivalent to physical custody"
+    },
+    {
+      "id": "waiver_risk_threshold",
+      "question": "What level of vendor operational access triggers Heppner waiver? Is any vendor access fatal, or only access to privileged content?",
+      "resolution_mechanism": "Judicial interpretation of Heppner in AI/SaaS context; distinction between access to system (metadata, logs, performance metrics) vs access to privileged communications",
+      "impact": "If any access is fatal: on-premise deployment is the only safe harbor, maximizing extraction. If only content access matters: SaaS vendors can offer privilege-preserving services with operational access to non-privileged system data.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Threshold of vendor access that triggers privilege waiver"
+    },
+    {
+      "id": "infrastructure_cost_trajectory",
+      "question": "Are on-premise deployment costs rising or falling relative to SaaS? Does cloud infrastructure commoditization reduce the barrier?",
+      "resolution_mechanism": "Market analysis of total cost of ownership for on-premise AI systems vs SaaS; tracking of cloud infrastructure pricing and managed service offerings",
+      "impact": "If costs converge: infrastructure barrier diminishes, reducing extraction. If costs diverge: barrier increases, amplifying extraction toward firms with existing infrastructure.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Trajectory of infrastructure cost differential between on-premise and SaaS"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.34
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The attorney-client privilege architecture constraint emerges from the intersection of the Heppner doctrine (third-party access to privileged communications waives privilege) and AI legal technology deployment models. Law firms adopting AI tools for document review, legal research, or contract analysis face a structural choice: deploy on-premise systems where the firm maintains physical custody and no vendor has operational access (privilege preserved), or use SaaS platforms where vendor operational access (for maintenance, support, model training, or system monitoring) may trigger Heppner waiver. This constraint is fundamentally a coordination mechanism — it solves the collective action problem of 'how do we adopt AI without waiving privilege?' — but the coordination function has asymmetric effects because infrastructure requirements create barriers that benefit firms with existing technical capacity. The constraint does not require active enforcement (no regulatory body mandates on-premise deployment), but the legal risk of waiver creates strong incentives for privilege-preserving architectures. Theater ratio is moderate and rising (0.35) as some firms adopt 'privilege-washing' practices (contractual terms claiming privilege protection without actual architectural guarantees), but the core coordination function remains genuine.",
+    "key_agents": [
+      "Large Law Firms with Technical Infrastructure: Primary beneficiary (institutional/arbitrage) — can deploy on-premise systems, experience pure coordination",
+      "Mid-Size Firms Without Infrastructure: Mixed position (moderate/constrained) — need AI tools but lack capital/staff for on-premise deployment; experience coordination + extraction",
+      "Enterprise Legal Departments: Beneficiary (institutional/mobile) — existing IT infrastructure makes on-premise deployment feasible; experience coordination",
+      "On-Premise Vendors: Beneficiary (powerful/mobile) — privilege architecture requirement creates demand for their product category",
+      "SaaS Vendors with Operational Access: Mixed position (moderate/constrained) — operational model conflicts with privilege architecture; can exit by redesigning but at cost",
+      "Analytical Observer: Sees coordination mechanism (analytical/analytical) — genuine collective action problem with asymmetric infrastructure barrier"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. The privilege architecture requirement creates a genuine barrier to AI adoption for firms without technical infrastructure, but the extraction is not severe because: (1) the coordination function is real (privilege protection is a legitimate concern, not a pretext), (2) alternative architectures are emerging (attestation systems, zero-knowledge proofs, client-side processing), and (3) cloud infrastructure commoditization is reducing deployment costs. The extraction is rising slowly (0.30 → 0.38 over 6 years) as AI adoption accelerates and the infrastructure gap becomes more salient. Suppression (0.42): Moderate. Barriers include capital requirements for on-premise deployment, technical staff expertise, ongoing maintenance costs, and legal risk of waiver if architecture is misconfigured. But suppression is not high because: (1) SaaS options exist (with waiver risk trade-off), (2) managed service providers can reduce technical burden, and (3) no regulatory mandate prevents alternative approaches. Theater ratio (0.35): Moderate and rising. Some theater is present in contractual 'privilege protection' claims that lack architectural substance (vendor contracts claiming privilege preservation without actual zero-access guarantees), and in performative security audits that don't verify operational access controls. But the core function (privilege preservation via architecture) is not theatrical — the technical distinction between physical custody and vendor access is real and measurable.",
+    "directionality_logic": "Large law firms with existing infrastructure are beneficiaries — they experience the privilege architecture as pure coordination (solving a real problem) and have arbitrage exit options (can choose deployment model based on case sensitivity). Their low d value reflects that extraction flows away from them. Mid-size firms without infrastructure are partial victims — they need AI tools (coordination function is real) but the architecture requirement imposes costs they cannot easily absorb (extraction). Their moderate d value reflects mixed experience. Enterprise legal departments are beneficiaries with mobile exit — existing IT infrastructure makes compliance feasible. On-premise vendors are beneficiaries — the constraint creates demand for their product. SaaS vendors with operational access are partial victims — their business model conflicts with the architecture requirement, but they can exit by redesigning (constrained, not trapped). The analytical observer sees coordination — the Heppner doctrine is the upstream constraint; the architecture requirement is a technical response that preserves privilege while enabling AI adoption.",
+    "perspectival_gap": "The constraint demonstrates how a genuine coordination mechanism (privilege preservation) can produce asymmetric effects based on infrastructure capacity. Large firms and enterprise legal departments experience pure coordination (Rope) — the architecture requirement solves a real problem they can afford to solve. Mid-size firms and SaaS vendors experience mixed coordination and extraction (Tangled Rope) — the problem is real but the solution imposes costs that benefit competitors with existing infrastructure. The analytical observer confirms the coordination function is genuine (Rope from civilizational perspective) — this is not a false summit naturalizing extraction as law. The perspectival gap is structural: agents with infrastructure see coordination; agents without infrastructure see coordination + barrier. The gap is measurable via exit options (arbitrage vs constrained) and beneficiary/victim status.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating that moderate extraction (0.38) can coexist with genuine coordination function, producing Tangled Rope from some perspectives and Rope from others. The coordination function is not pretextual — attorney-client privilege is a real legal doctrine, Heppner waiver is a real risk, and the architecture requirement is a legitimate technical response. But the coordination mechanism has asymmetric effects because infrastructure requirements create barriers. The constraint is not a Snare (extraction is moderate, not severe; suppression is moderate, not high; no victims are trapped) and not a Mountain (it does not emerge naturally; it is a constructed response to the Heppner doctrine). The Rope classification from the analytical perspective reflects that the coordination function is genuine and the constraint does not require active enforcement. The Tangled Rope classification from mid-size firms reflects that coordination and extraction are both structurally present for agents without infrastructure."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "The privilege architecture constraint is downstream of the Heppner doctrine (third-party access waives privilege). Heppner is the upstream legal constraint; the architecture requirement is a technical coordination response. If Heppner were relaxed or clarified (e.g., courts rule that cryptographic attestation satisfies 'reasonable expectation of confidentiality'), the architecture constraint's extraction would decrease as SaaS vendors could compete on equal footing."
+  },
+  "directionality_overrides": []
+}
