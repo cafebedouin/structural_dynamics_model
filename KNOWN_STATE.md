@@ -20,6 +20,48 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-02 — Removed superseded observer-axis husk (saturation_floor) — commit ef92a61d
+
+**If you are looking for the `--- HUSK SIGNATURE ---` report section or `saturation_floor` /
+`born_saturated` / `husk_metrics` and cannot find them: they were deleted, deliberately.**
+Commit `ef92a61d` removed the observer-axis husk machinery. Do not re-add it as "missing."
+
+**Two husks existed; only the observer one was removed. The CS one is live and untouched.**
+- **Removed (observer axis, cruft):** `husk_series/3`, `ep_native_series/3`, `husk_exists/3`,
+  `husk_point/5` in `drl_composition.pl`; the `husk_report.pl` standalone; `outputs/husk_data.json`
+  + `outputs/husk_report.md`; `_load_eps_series` + the `saturation_floor`/`born_saturated`/
+  `husk_metrics` block in `enrich_pipeline_json.py`; `build_husk_signature` + the HUSK SIGNATURE
+  section in `enhanced_report.py`; the `_prolog_husk` pipeline step in `run_pipeline.py`; both
+  `husk_metrics` schema rows in `shared/schemas.py`.
+- **Kept (committer axis, live):** `cs_terminal_attractor(..., husk)` in `cs_drift_engine.pl` and
+  its 9 consumers (`cs_pattern_detection`, `cs_axiom_engine`, `cs_drift_mismatch`, ...). This is
+  the framework's real husk — design-endorsed (`design_discipline.md:344`), reads authored
+  `cs_drift_state` gap vectors, NOT the ε series. **The "husk 57" §5.11 count (`ISSUES.md:803`)
+  and the `husk_reading` corpus story used as a `:738` positive control are this husk, not the
+  removed one — leave them.**
+
+**Why removed (cruft, not a wiring gap).** Provenance: the observer husk landed 2026-05-25 06:43
+(`e56bc18c`, "Second round") and was superseded ~4h later by the categorical CS husk attractor
+(`624e3b66`, 10:41); the first draft was never deleted. It had **zero engine consumers** — a closed
+produce→report loop terminating in a display string the report itself disclaimed as "ε authoring,
+not an observed property." Wiring it to the CS engine would be a cross-axis reduction
+(`two_axis_architecture_v7.md:124`), i.e. construction, not closing an existing wire.
+
+**Blast radius (witnessed):** one behavioral change — generated reports no longer emit the
+`--- HUSK SIGNATURE ---` block. Engine `[stack]` loads clean; the four Python files compile + import
+clean; zero dangling references. No classification / χ / drift / purity / CS verdict read any
+removed symbol.
+
+**Two loose ends, both still OPEN (not closed by this commit):**
+1. The 71 `[ENRICH] WARN ... saturation_floor suppressed` warnings are gone (the gated field is
+   gone). No OQ ever tracked them; nothing to retract in `ISSUES.md`.
+2. The **real** finding underneath is untouched: static `constraint_data:base_extractiveness/2`
+   (the ε χ consumes) understates the depicted ε-series peak for **70/499 (14%) of with-series
+   readings, one-sided (0 overshoots), ~2× higher rate among kernel readings (14.4% vs 7.1%)**.
+   That is a χ-input question on the observer axis, independent of the deleted report field. It is
+   **not** yet an OQ — open one if it graduates from "authoring-convention note" to a classification
+   concern.
+
 ## 2026-06-01 — `signature_detection.pl`: honest `unknown` now SURFACES (override removed, OQ-37)
 
 **What changed (commit `c90c5482`).** The FNL/FCR overrides no longer launder an honest
