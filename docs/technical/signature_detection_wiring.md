@@ -56,6 +56,10 @@ findall(C, ( member(C, Cs),
 
 See `engine_measurement_gotchas.md` §1 (the same key-binding rule bites
 `cs_kernel_divergence` in the opposite direction — a cross-product explosion).
+The same clause-head-unification mechanism has a *write*-side variant in
+`classify_at_time_wiring.md` §4: `is_X(_,_,fail)` (`drl_core.pl`) is an unconditional
+catch-all clause, so binding the outcome arg to `fail` matches it and skips the real test —
+a vacuous "not of type X" gate (it sank the `type_1_false_summit` detector).
 
 ---
 

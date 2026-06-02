@@ -1761,11 +1761,14 @@ Audit the 404 on their own merits; do **not** populate `intent_*` as maintenance
 (`classify_at_time`) currently bridges absent temporal `suppression_requirement` to the authored
 **scalar** value — a **labeled stopgap**, not a sanctioned second representation. The real fix is
 **upstream, in generation**: the story template must author a *temporal* `suppression_requirement`
-series (today 650/656 timeline rows have only the scalar). This is a **generation-template
-requirement, not an engine representation ruling** — i.e. D4 (G5 scalar-vs-temporal) for suppression
-is resolved by authoring the series, not by the engine choosing a representation. **Once the template
-authors the series: delete the scalar-fallback clause in `classify_at_time` and let the temporal path
-stand alone.** Do **not** build a scalar/temporal equivalence check on the bridge — skip it; the
+series. **Partially progressed by the 2026-06 rebuild:** engine-measured on the live corpus, the
+template now authors a temporal series for **471/562** constraints; **91/562** remain scalar-only and
+still hit the stopgap (0/562 reach `unknown`). (Pre-rebuild this was inverted — 650/656 rows had only
+the scalar.) This is a **generation-template requirement, not an engine representation ruling** — i.e.
+D4 (G5 scalar-vs-temporal) for suppression is resolved by authoring the series, not by the engine
+choosing a representation. **Once the template authors the series for the remaining 91: delete the
+scalar-fallback clause in `classify_at_time` and let the temporal path stand alone** (it is still
+load-bearing for those 91 — do not delete early). Do **not** build a scalar/temporal equivalence check on the bridge — skip it; the
 bridge is temporary. Sequenced: this rides the regeneration arc (OQ-47), not Commit B.
 
 ## OQ-47 — Audit the SCOPE→seed seam BEFORE the de-stamp regeneration batch
@@ -1963,8 +1966,55 @@ coupling is real but was not exercised by Move 1 — decouple moves from "deferr
 "**latent-hazard, required-before any OQ-48 recalibration that moves the χ-floor across the naturalized
 χ-range**." Not decoupled this session.
 
+## OQ-50 — False-summit forensic: explainer/detector coherence + sibling-clause bound-Context latent trap (post-repair follow-ups)
+
+**Ω-type:** OPEN-1 is Ω_C (design choice — what "false summit" explains against). OPEN-2 is an
+engine-hardening question, not a design Omega.
+
+**Status: open (two follow-ups). The core detector bug is RESOLVED** — see KNOWN_STATE.md
+2026-06-02 "False-summit forensic detector repaired." Summary of what was fixed (do not re-open):
+`drl_core.pl:548` `type_1_false_summit` used `is_mountain(C, Context, fail)`, which matches the
+unconditional catch-all clause `is_mountain(_,_,fail)` (`:123`) and never ran a test; with the cut it
+returned the first mountain-claimer with `Context` unbound. Now negates `dr_type/3` over
+`standard_context` (no cut). `report_generator.pl:445` queried the never-produced atom
+`type_1_false_mountain` (→ always "all validated"); `:447` counted (C,Context) pairs as constraints.
+All three fixed. Live result: 4 false summits (papal, press, statutory, total_war) across 14
+observer-context instances; 4 genuine mountains correctly excluded.
+
+**OPEN-1 — explainer disagrees with the (now-correct) detector.** `forensic_explain_false_mountain`
+(`report_generator.pl:459+`) re-derives its verdict from raw `suppression_requirement` /
+`base_extractiveness` heuristics (suppression-vs-mountain-ceiling), **independent of `dr_type`**. It
+printed FORENSIC VERDICT "AMBIGUOUS (review data)" for `papal_temporal_authority_mountain` even
+though the detector flagged it correctly because `dr_type=scaffold ≠ mountain` at the
+moderate/institutional contexts. The detection layer and the explanation layer now use **different
+notions of "is a mountain"** (post-signature `dr_type` vs pre-signature raw metrics), so the
+explanation can contradict a correct flag. **What resolution changes:** rebase the explainer on
+`dr_type` (report the actual per-context `ActualType` and why it departs from the claim), or
+explicitly state the two-layer split in the output. Until then, treat the explainer's verdict as a
+**metric-level annotation, not the detector's reason**. This is the same metric-vs-`dr_type` seam
+the detector fix turned on.
+
+**OPEN-2 — sibling claim-mismatch clauses share the bound-Context latent trap.**
+`type_3_snare_as_rope` (`drl_core.pl:555`, `is_snare(C, Context, snare)`) and `type_5_piton_as_snare`
+(`:562`, `is_piton(C, Context, piton)`) require `Context` **bound** — clause 1 of `is_snare`/`is_piton`
+computes Chi via `extractiveness_for_agent(C, Context, _)`. Unlike the old `type_1`, they are **not**
+vacuous: they ask for the positive type atom, so clause-head unification selects the real-test clause
+1, not the `(_,_,fail)` catch-all. But if either is ever called with `Context` unbound (as the report
+called `type_1` via `dr_mismatch/4` with an unbound `Ctx`), they would silently **no-op / mis-bind**
+rather than enumerate. Currently both are only reached with bound Context (via `dr_mismatch/3` →
+`default_context`, or `genuine_findings_query.pl:157` with C bound and Ctx2 collected). **What
+resolution changes:** either give them the same `standard_context(Context)` enumeration `type_1` now
+has (so they locate the break per context and survive unbound-Ctx callers), or assert a bound-Context
+precondition. Decide alongside whether claim-mismatch detection is uniformly per-context.
+
+**Cross-refs:** the original `type_1` defect is a **Pattern-5 sibling** — a gate satisfied by
+*absence of a real test* via clause-head unification (the `(_,_,fail)` catch-all), distinct from
+OQ-44's empty-table satisfy-on-absence but the same spine ("absence presents as presence"). Connects
+to OQ-44 (engine-wide no-gate-satisfied-by-absence), build_discipline Pattern 5. Item 3 of the
+2026-06-02 orbit-work recon (false-mountain orbit) depends on this detector being correct.
+
 ---
 
-*Last updated: 2026-06-01. Add new items with sequential OQ-NN labels. Mark
+*Last updated: 2026-06-02. Add new items with sequential OQ-NN labels. Mark
 resolved items with **Status: resolved** and a resolution note rather than
 deleting — provenance matters.*

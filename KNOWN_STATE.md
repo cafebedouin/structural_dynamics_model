@@ -20,6 +20,86 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-02 — False-summit forensic detector repaired (was vacuous) + two report bugs + stale comment
+
+**If you are editing `drl_core.pl` false-mountain detection, `report_generator.pl`'s forensic
+audit, or `drl_composition.pl`'s `classify_at_time` temporal comment — read this first.** Four
+fixes landed together this session; three are output-changing. Open follow-ups are **OQ-50**.
+
+**1. `drl_core.pl:548` `dr_claim_mismatch(_,_,type_1_false_summit,_)` was a vacuous gate that had
+never functioned.** The body was `is_mountain(C, Context, fail)`. `is_mountain/3` has a second
+clause `is_mountain(_,_,fail).` (`drl_core.pl:123`) that is an **unconditional catch-all** — it
+unifies with any `(C, Context)` because the third arg `fail` matches; clause 1's head (third arg
+`mountain`) never unifies with `fail`, so the metric test never runs. Positive control:
+`is_mountain(C, boundCtx, fail)` SUCCEEDS while `is_mountain(C, boundCtx, R)` gives `R=mountain` —
+i.e. the constraint **is** a mountain yet the `fail` call also succeeds. The trailing `!` then
+committed to the **first** mountain-claimer, with `Context` left **unbound** (reports printed
+`Context: _NNNN`). Net: the detector returned one arbitrary mountain-claimer — and that one
+(`honor_satisfaction_mechanism__contraction_reading`) is a **genuine** mountain (`dr_type=mountain`
+at all 4 contexts). It detected nothing and accused the floor.
+
+**Fix: negate `dr_type/3` (post-signature), enumerate `standard_context`, drop the cut.** Now:
+```prolog
+dr_claim_mismatch(C, Context, type_1_false_summit, severe) :-
+    narrative_ontology:constraint_claim(C, mountain),
+    standard_context(Context),
+    dr_type(C, Context, ActualType),
+    ActualType \= mountain.
+```
+**Why `dr_type`, not `is_mountain` (evidence-settled, not preference).** `is_mountain`
+(classify_from_metrics, **pre-signature**) returns non-mountain at the moderate+institutional power
+contexts for **all 8** mountain-claimers — a χ=ε·f(d)·σ(S) power-scaling artifact (mid-power shifts
+off the mountain band); the signature layer then restores genuine mountains in `dr_type`. So
+negating `is_mountain` flags every claimer including the 4 genuine mountains; negating `dr_type`
+flags only constraints whose authoritative classification actually departs from the claim. `dr_type`
+does **not** call `dr_mismatch`, so no recursion. **Do not "simplify" this back to `is_mountain`,
+and do not re-add the cut** (the cut stops the per-context enumeration that locates the break).
+
+Live-corpus result after fix: **4** false summits across **14** (constraint, context) instances —
+`papal_temporal_authority_mountain` (moderate+institutional; mountain at powerless/analytical),
+`press_reformation_causality__technological_inevitability`, `statutory_debt_ceiling__constitutional_nullity_reading`,
+`total_war_winnability_post1945__structural_contraction_reading` (all 4 contexts, never mountain).
+The 4 genuine mountains (`honor_…`, `state_killing_…__abolition`, `tsunami_stone_…`, `zero_as_number_…`)
+are correctly **excluded**.
+
+**2. `report_generator.pl:445` queried `type_1_false_mountain` — an atom no clause produces.** The
+producer emits `type_1_false_summit` (above). The `setof` therefore always failed → the forensic
+audit always printed *"All mountains are structurally validated"* whenever any mountain was claimed
+(Pattern-5 absence-pass: a dead query reads identically to a clean result). Positive control:
+pre-fix old-atom solution count = 0; `type_1_false_summit` solution count = 14. Fixed the atom.
+**This means the audit was doubly-dormant: wrong atom queried, and the detector under it vacuous.**
+
+**3. `report_generator.pl:447` miscounted.** Header said "Detected N constraint(s)" using
+`length(FalseMountains, N)` where `FalseMountains` is a list of (C, Context) **pairs** — 14 pairs
+across 4 constraints read as "14 constraints." Now reports distinct constraints + instance count:
+*"Detected 4 constraint(s) … across 14 observer-context instance(s)."* (Vocabulary note: the
+report register is **context / observer / perspective**, not "seat" — "seat" is `design_discipline.md`
+internal design language and must not appear in product output. There are only 4 observer contexts;
+the 14 is constraint×context instances.)
+
+**4. `drl_composition.pl:174` stale comment.** The OQ-41 fail-close comment cited "650/656 rows had
+no temporal suppression series" — pre-rebuild (n=656 era) provenance. Engine-measured on the live
+corpus: **471/562** carry a temporal `suppression_requirement` series (the temporal path), **91/562**
+are scalar-only (hit the STOPGAP fallback), **0/562** reach `unknown` (every constraint authors at
+least a scalar). The stopgap scalar clause is **still load-bearing for the 91** — do not delete it
+until coverage is complete. Comment updated; code unchanged.
+
+**Untouched, recorded as OQ-50 (do not assume these work):**
+- `forensic_explain_false_mountain` (`report_generator.pl:459+`) re-derives its verdict from raw
+  suppression/extractiveness heuristics **independent of `dr_type`** — it printed "AMBIGUOUS" for
+  `papal` even though the detector correctly flagged it (`dr_type=scaffold≠mountain`). The
+  explanation can disagree with the (now-correct) detection.
+- Sibling clauses `type_3_snare_as_rope` (`drl_core.pl:555`) and `type_5_piton_as_snare` (`:562`)
+  share the **bound-Context requirement** (clause 1 of `is_snare`/`is_piton` computes Chi from
+  Context). They are **not** vacuous (they ask for the positive type atom → clause 1's real test),
+  but would silently no-op if ever called with `Context` unbound. Currently only reached with bound
+  context. Same latent-trap class as the `type_1` bug.
+
+The vacuous catch-all gate is a **new Pattern-5 sibling** (absence-of-a-real-test satisfies via
+clause-head unification, not empty-table — see `build_discipline.md` Pattern 5 / OQ-44).
+
+---
+
 ## 2026-06-02 — Removed superseded observer-axis husk (saturation_floor) — commit ef92a61d
 
 **If you are looking for the `--- HUSK SIGNATURE ---` report section or `saturation_floor` /

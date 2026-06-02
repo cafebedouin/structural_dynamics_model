@@ -31,18 +31,26 @@ primitive), OQ-33 (suppression fabrication), or the Surface-2 Boltzmann floor pr
 - **The schema ALLOWS temporal suppression.** `$defs/MeasurementMetric` is
   `[theater_ratio, base_extractiveness, suppression_requirement]` — three metrics. A story may
   author a `suppression_requirement` measurement series; `generate_constraint_pl.py` emits it (the
-  `sr_measurements` branch — see `generator_emission_map.md`'s measurement whitelist). **Live: 6
-  suppression `measurement/5` facts exist**, not 0.
+  `sr_measurements` branch — see `generator_emission_map.md`'s measurement whitelist).
 - **The `Supp=0.5` fabrication is gone (row-23, OQ-41).** Absent temporal suppression falls back to
   the authored *scalar* `constraint_metric(C, suppression_requirement, _)` — real per-constraint
   data — and returns `unknown` only if no suppression is authored anywhere (0 rows on the live corpus).
 
-**Why it still matters:** most constraints author only the scalar (650/656 timeline rows have **no**
-temporal suppression series), so the scalar fallback is the live path for nearly all temporal
-classification. It is no longer a *fabrication* (it is authored data), but it is still not a measured
-*trajectory* — it is a STOPGAP until the generation template authors temporal series (OQ-46). A
-Surface-3 temporal-suppression primitive should still wait on OQ-46, but for the corrected reason
-(scalar-as-constant, not "schema-forbidden").
+> **UPDATED 2026-06-02 (post-rebuild) — the temporal path is now the MAJORITY path; the figures
+> below replace the pre-rebuild "6 facts / 650-of-656-lack-it" counts that appeared here.** The 2026-06
+> corpus regeneration authors temporal suppression series for most constraints. Engine-measured on
+> the live corpus (562 testsets): **1452** `suppression_requirement` `measurement/5` facts; **471/562**
+> constraints carry a temporal series (first branch); **91/562** are scalar-only (the STOPGAP branch);
+> **0/562** reach `unknown` (every constraint authors at least a scalar). So the *temporal* path —
+> not the scalar fallback — is the live path for the majority. Recompute before citing (corpus grows):
+> `aggregate_all(set(C), narrative_ontology:measurement(_,C,suppression_requirement,_,_), L), length(L,N).`
+
+**Why it still matters:** the scalar fallback is still load-bearing for the **91** scalar-only
+constraints, and even an authored scalar is not a measured *trajectory* — for those 91 it is a
+STOPGAP until the generation template authors temporal series (OQ-46). It is no longer a
+*fabrication* (it is authored data). A Surface-3 temporal-suppression primitive should still wait on
+OQ-46, but only for the residual 91, and for the corrected reason (scalar-as-constant, not
+"schema-forbidden").
 
 **Historical tripwire (2026-05-30, the pre-row-23 `Supp=0.5` fabrication, kept as the row-23 witness):**
 source-patch `Supp=0.5` → `999.9`, `constraint_history` over the corpus: 279/647 rows changed (219
@@ -144,3 +152,47 @@ documented fallback with a named config param.
 
 `coordination_type_offset/2` has the same three-clause structure with `complexity_offset_default`
 as the catch-all.
+
+---
+
+## 4. The `is_X/3` type-test family shares §2's pre-signature seam — and `is_X(_,_,fail)` is a vacuous catch-all
+
+Same root as §2 (`classify_from_metrics` is pre-signature; `dr_type/3` adds
+`integrate_signature_with_modal`), but a different consumer family — and it bit a real detector.
+
+**`is_mountain/3`, `is_snare/3`, `is_piton/3` (`drl_core.pl:118+`) call `classify_from_metrics`
+directly**, bypassing the signature layer exactly as `classify_at_time` does:
+
+```prolog
+is_mountain(C, Context, mountain) :-
+    ..., classify_from_metrics(C, BaseEps, Chi, Supp, Context, mountain), !.
+is_mountain(_C, _Context, fail).        % ← unconditional catch-all
+```
+
+**Consequence 1 — they disagree with `dr_type` on signature-locked constraints.** Because
+`is_X/3` is pre-signature, it returns the *metric* type, not the authoritative `dr_type`. Witnessed:
+`is_mountain` returns non-mountain at the moderate/institutional power contexts for **all** mountain-
+claimers — a χ=ε·f(d)·σ(S) power-scaling artifact (mid-power shifts off the mountain band) — which
+the signature layer then *restores* to `mountain` in `dr_type` for genuine mountains. So
+`\+ is_mountain(C, Ctx, mountain)` flags genuine mountains; **negate `dr_type/3`, not `is_X/3`,
+when you need the authoritative "is this really type T from this context."** (`dr_type` does not call
+`dr_mismatch`/`is_X`, so negating it inside a diagnostic is non-recursive.)
+
+**Consequence 2 — `is_X(C, Context, fail)` is a vacuous always-true test.** Clause 2
+`is_X(_,_,fail)` is an unconditional catch-all; calling with the third arg bound to `fail` matches it
+directly and **never runs clause 1's metric test** (clause 1's head third-arg `mountain` doesn't
+unify with `fail`). Positive control: `is_mountain(C, boundCtx, fail)` SUCCEEDS while
+`is_mountain(C, boundCtx, R)` gives `R=mountain`. This is a Pattern-5 sibling — *absence of a real
+test* satisfying a gate via clause-head unification, not an empty table (`build_discipline.md`
+Pattern 5; OQ-44). **Never use `is_X(_,_,fail)` as a "not of type X" test; use `\+ is_X(_,_,T)`,
+or better, negate `dr_type` per Consequence 1.**
+
+**Where it bit (fixed 2026-06-02, KNOWN_STATE):** `dr_claim_mismatch(C, Context, type_1_false_summit,
+severe)` (`drl_core.pl:548`) used `is_mountain(C, Context, fail)` — vacuous — plus a `!` that, with
+`Context` arriving unbound from the report's `setof`, returned the *first* mountain-claimer (a genuine
+mountain) with an unbound context. Now: `constraint_claim(C, mountain), standard_context(Context),
+dr_type(C, Context, T), T \= mountain`. **Latent siblings:** `type_3_snare_as_rope` (`:555`) and
+`type_5_piton_as_snare` (`:562`) are *not* vacuous (they ask for the positive type atom, hitting
+clause 1) but share the bound-`Context` requirement — they silently no-op if ever called with
+`Context` unbound (OQ-50). The `is_X(_,_,fail)` idiom and the unbound-key-via-`setof` trap are the
+same family as `engine_measurement_gotchas.md` §1 (bind the key from a generator).

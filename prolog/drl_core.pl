@@ -545,10 +545,28 @@ dr_mismatch(C, perspectival_gap(Type1, Ctx1, Type2, Ctx2),
 % Naturalized constraints are the primary vector: extraction so structurally
 % pervasive it registers as ambient background, letting a false Mountain claim
 % go unchallenged from lower-power positions.  See classify_from_metrics/6.
+%
+% Context is ENUMERATED over the standard observer site (like the perspectival_gap
+% clause above) so this fires once per observer context from which the mountain-claim
+% fails, locating the break. The earlier form `is_mountain(C, Context, fail)` was a vacuous
+% gate: is_mountain/3 clause 2 (`is_mountain(_,_,fail)`) is an unconditional catch-all,
+% so it succeeded for every mountain-claimer (even genuine mountains) and never ran the
+% test — and with Context unbound it left the reported seat unbound.
+%
+% The test negates dr_type/3 (the post-signature authoritative classification), NOT the
+% metric-level is_mountain/3. Evidence forced this: is_mountain (classify_from_metrics,
+% pre-signature) returns non-mountain at the moderate/institutional power seats for ALL
+% mountain-claimers — a power-scaling artifact (χ = ε·f(d)·σ(S) shifts the mid-power
+% contexts off the mountain band) that the signature layer then restores in dr_type for
+% genuine mountains.
+% Negating is_mountain therefore flags every claimer, including genuine mountains; negating
+% dr_type flags only constraints whose authoritative classification actually departs from
+% the mountain claim. dr_type does not depend on dr_mismatch, so there is no recursion.
 dr_claim_mismatch(C, Context, type_1_false_summit, severe) :-
     narrative_ontology:constraint_claim(C, mountain),
-    is_mountain(C, Context, fail),
-    !.
+    standard_context(Context),
+    dr_type(C, Context, ActualType),
+    ActualType \= mountain.
 
 % Type 3: Snare Misidentified as Rope (Indexed)
 % Claimed as Rope but is actually Snare from this context

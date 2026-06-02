@@ -442,10 +442,12 @@ forensic_audit_false_mountains :-
     %  Only print when at least one constraint claims mountain status
     (   narrative_ontology:constraint_claim(_, mountain)
     ->  format('~n[ONTOLOGICAL FORENSIC AUDIT: FALSE MOUNTAINS]~n'),
-        (   setof(C-Ctx, Sev^(drl_core:dr_mismatch(C, Ctx, type_1_false_mountain, Sev)),
+        (   setof(C-Ctx, Sev^(drl_core:dr_mismatch(C, Ctx, type_1_false_summit, Sev)),
                   FalseMountains)
-        ->  (length(FalseMountains, Count),
-             format('  Detected ~w constraint(s) falsely claiming "Mountain" status:~n~n', [Count]),
+        ->  (length(FalseMountains, NPairs),
+             findall(FC, member(FC-_, FalseMountains), FCs0), sort(FCs0, DistinctCs),
+             length(DistinctCs, NConstraints),
+             format('  Detected ~w constraint(s) falsely claiming "Mountain" status, across ~w observer-context instance(s):~n~n', [NConstraints, NPairs]),
              forall(member(C-Context, FalseMountains),
                     forensic_explain_false_mountain(C, Context)))
         ;   format('  All mountains are structurally validated.~n')
