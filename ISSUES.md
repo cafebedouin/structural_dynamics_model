@@ -2412,12 +2412,14 @@ data repair.
 
 ## OQ-58 — Dangling cs_reading_relation targets: edges naming a reading that does not exist
 
-**Ω-type:** Ω_P (content decision — generate / delete / flag, no mechanical default; the user's to rule).
+**Ω-type:** Ω_P (content decision). **Disposition policy ruled 2026-06-02 (below); the per-edge
+missing-vs-typo-vs-noise sort is a later narrative-read pass, not a mechanical rule.**
 
-**Status:** open
+**Status:** policy ruled 2026-06-02; per-edge disposition pending the narrative-read pass on the residue.
 **Origin:** Reading-axis obstruction build (OQ-54), 2026-06-02. Surfaced by the independent
 must-flag oracle when partitioning non-canonical `cs_reading_relation` targets.
-**Files:** authored testset `.pl` files; emitter `python/generate_constraint_pl.py:482`.
+**Files:** authored testset `.pl` files; emitter `python/generate_constraint_pl.py:482`;
+quarantine view `cs_kernel_registry:cs_reading_relation_unresolved/4`.
 
 **Specific question:** After the name-form normalization (short → `<kernel>__<short>`) repaired 86
 edges, **99 `cs_reading_relation` edges remain dangling** — their target resolves to no reading in the
@@ -2433,20 +2435,50 @@ flagging the kernel defers. The normalization pass deliberately left these untou
 counts unchanged 13/59/27 before and after the 86-edge repair) so the sweep did not silently rule a
 question that is the user's.
 
-**Three options per dangling edge (to be ruled):**
-1. **Generate the missing reading** — completes the kernel; most work; correct where the foreclosed
-   sibling is a real position the corpus should hold.
-2. **Delete the edge** — removes a commitment to a non-existent referent; correct where the edge is
-   spurious/mistyped and no such reading is intended.
-3. **Repair the typo** — for sub-class (b), map the mistyped target to the intended existing reading
-   (a per-edge judgement, not a mechanical normalization — the typos are not uniform).
+**Disposition policy (ruled 2026-06-02).** The two sub-classes are real and the right seam —
+ontology-incompleteness (target conceptually intended, node not yet generated) vs data-malformation
+(typo against an existing node) — and conflating them is the actual loss (it hides whether to grow the
+reading inventory or clean the edge corpus). But the sub-class is the **output of a review with the
+kernel's source narrative in hand, not an automated classification** — because the witness that
+distinguishes "missing reading the author meant" from "typo into a well-formed string never meant" is
+in the *narrative*, not in the edge. So there are exactly **two automated outcomes**:
 
-**What resolution changes:** Closes the residue the OQ-54 obstruction currently reports as `untyped`/
-absent-referent. Until ruled, the obstruction is correct-on-resolvable-edges and fail-closed on these
-(does not invent a gluing status for an absent referent). The flow fix
-(`generate_constraint_pl.py` canonicalization) prevents the *name-form* class recurring but cannot
-catch the *dangling* class without the kernel manifest — full referential integrity (target ∈ kernel's
-declared readings) would need a kernel-level validation pass in `agent/generate_kernel_corpus.py`.
+1. **canonical → attach** — target resolves to a declared reading in the same kernel.
+2. **everything else → quarantine** — surfaced for reviewed disposition, never auto-written.
+
+What was **rejected**, and why (both are a green-check standing in for a witness):
+- **No auto-rewrite tier.** "High-confidence unique match → rewrite the edge" writes to authored
+  commitment structure on an uncalibrated confidence threshold, on a corpus whose whole problem is
+  inconsistent authoring. One wrong rewrite silently edits what a reading *forecloses* — the content
+  the committer axis exists to preserve. This contradicts the fail-closed default chosen everywhere
+  else (untyped-on-absence, dirty-edges-fail-loudly, the no-resolver tripwire). Even "obvious" typo
+  repairs go through an explicit reviewed batch — every edit to authored structure has a human seat.
+- **No plausible-form tier.** "No match but `<kernel>__<name>` is structurally plausible → record a
+  missing-reading defect" resolves a content ambiguity on a *syntactic* tell (well-formed ≠ intended)
+  and does so toward *inventing* a reading. A plausible-but-absent target is **unresolved → quarantine**,
+  same bucket as noise, flagged for the narrative check — not pre-classified as a generation gap.
+
+The sub-class sort (missing-reading-defect vs typo vs noise) is the **review's** output, made on the
+narrative; the policy's automated job is only canonical-vs-quarantine.
+
+**Generator shape set by the policy (this is the flow side).** The referential-integrity check is
+**hard-fail**: a generated `cs_reading_relation` target must resolve to a declared reading in the same
+kernel, with **no plausible-form escape hatch** (a well-formed `<kernel>__<name>` that names no declared
+reading fails, same as a typo). Its output channel for failures is the **quarantine bucket**, so the
+check and the bucket are one mechanism. The name-form canonicalization already in
+`generate_constraint_pl.py:482` is a *normalize* step and is **not** the referential-integrity
+guarantee — it has no manifest at the per-constraint emit site, so the hard-fail belongs at the
+kernel-level pass in `agent/generate_kernel_corpus.py` where the declared-reading set is known.
+
+**Stock quarantine bucket (queryable now):** `cs_kernel_registry:cs_reading_relation_unresolved/4` —
+the review queue of existing unresolved edges (the 99). It is a derived view (no new storage); the
+obstruction stays fail-closed on these (does not invent a gluing status for an absent referent) and
+this predicate makes them *loud* for the narrative-read pass.
+
+**What resolution changes:** The per-edge narrative-read pass (later) empties the quarantine bucket by
+the policy above — each unresolved edge → {generate the missing reading | repair to an existing reading
+| delete the edge}, decided on the source narrative. Closing it reclassifies the OQ-54 `untyped`/
+absent-referent residue.
 
 ---
 

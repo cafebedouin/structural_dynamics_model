@@ -25,7 +25,8 @@
     cs_kernel_divergence/4,
     cs_kernel_obstruction/4,
     cs_kernel_obstruction_status/2,
-    cs_kernel_obstruction_report/0
+    cs_kernel_obstruction_report/0,
+    cs_reading_relation_unresolved/4
 ]).
 
 :- use_module(narrative_ontology).
@@ -145,3 +146,19 @@ cs_kernel_obstruction_report :-
     forall(member(S, [singleton, untyped, licensed_plurality, real_closure]),
            ( aggregate_all(count, member(S, Statuses), N),
              format("  ~w~t~22|~w~n", [S, N]) )).
+
+%% cs_reading_relation_unresolved(-Kernel, -SourceReading, -Target, -Rel)
+%  Quarantine view (OQ-58): every authored cs_reading_relation edge whose target
+%  does NOT resolve to a declared reading in the source's kernel — neither the
+%  exact name nor the kernel-qualified <Kernel>__<Target> is a registered reading.
+%  These are the dangling/unresolved edges the obstruction fail-closes on; this
+%  predicate makes them LOUD for the reviewed-disposition pass. Per the OQ-58
+%  policy there is no auto-repair tier and no plausible-form tier: an unresolved
+%  edge is quarantined (surfaced here), never silently coerced or pre-classified.
+cs_reading_relation_unresolved(K, SrcC, T, Rel) :-
+    narrative_ontology:cs_kernel_id(SrcC, K), atom(K),
+    narrative_ontology:cs_story_uid(SrcC, U),
+    narrative_ontology:cs_reading_relation(U, T, Rel),
+    cs_readings_for_kernel(K, Pairs),
+    \+ memberchk(_-T, Pairs),
+    \+ ( atom_concat(K, '__', P), atom_concat(P, T, Canon), memberchk(_-Canon, Pairs) ).

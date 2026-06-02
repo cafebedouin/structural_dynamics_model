@@ -44,11 +44,25 @@ script asserted every edit matched, 0 zero-match). **Predicted-delta positive co
 were **rejected** — three consumers must not drift to three counts, and a resolver is self-blinding (it
 would hide whether the generator fix worked; exact-match on cleaned data is self-witnessing).
 
-**Flow fix (generator).** `generate_constraint_pl.py:482` now canonicalizes the emitted target to
-`<kernel_id>__<short>` (a hard transform, not a prompt request) so the name-form class cannot recur. It
-does NOT catch the **dangling** class (target naming an absent reading) — that needs the kernel manifest
-and is a *content* decision → **OQ-58** (generate / delete / repair-typo, the user's to rule). Full
-referential integrity would be a kernel-level validation in `agent/generate_kernel_corpus.py`.
+**Flow fix (generator), two layers.** (1) `generate_constraint_pl.py:482` canonicalizes the emitted
+target to `<kernel_id>__<short>` (hard transform, not a prompt request) — fixes the name-form class.
+(2) `generate_kernel_corpus.py:validate_reading_relation_integrity/3` (called after
+`stamp_kernel_linkage`) is the **hard-fail referential-integrity** check: a target must resolve to a
+declared reading whose canonical file `<kernel>__<short>.pl` exists on disk — **no plausible-form escape**
+(a well-formed but absent `<kernel>__<name>` fails like a typo). Unresolved edges route to a
+**quarantine bucket** (`cs_reading_relation_quarantine.json`), reported loudly, **never auto-written /
+rewritten / pre-classified**. Positive control passed (synthetic fixtures: canonical + short-of-existing
+attach; absent-full + typo quarantine).
+
+**Stock quarantine view:** `cs_kernel_registry:cs_reading_relation_unresolved/4` enumerates the existing
+unresolved edges (currently **99**: forecloses 13 / coexists 59 / influences 27) — the review queue for
+the OQ-58 narrative-read pass. The obstruction stays fail-closed on these (no invented gluing status).
+
+**OQ-58 policy (ruled 2026-06-02):** exactly two automated outcomes — *canonical → attach*,
+*everything else → quarantine*. **No** auto-rewrite tier (writes authored structure on an uncalibrated
+confidence) and **no** plausible-form tier (well-formed ≠ intended; that's a syntactic tell, not
+evidence). The missing-vs-typo-vs-noise sort is the **review's** output, made on the source narrative —
+the only place that evidence lives — not a mechanical rule.
 
 **Tripwire:** `cs_reading_relation` targets are now canonical full names in the live corpus, and consumers
 stay **exact-match** (self-witnessing). Do NOT add a read-time short→full resolver — it re-hides the

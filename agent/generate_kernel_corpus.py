@@ -721,6 +721,57 @@ def stamp_kernel_linkage(gen_seeds, json_dir, testsets_dir):
             print(f"    {cid}")
 
 
+def validate_reading_relation_integrity(gen_seeds, json_dir, testsets_dir):
+    """Hard-fail referential integrity for cs_reading_relation targets (OQ-58).
+
+    Every generated edge's target must resolve to a DECLARED reading in the same
+    kernel — i.e. the canonical reading file ``<kernel>__<short>.pl`` must exist on
+    disk (the authoritative manifest). There is NO plausible-form escape hatch: a
+    well-formed but absent ``<kernel>__<name>`` fails exactly like a typo, because a
+    well-formed string is not evidence the reading was intended (that evidence is in
+    the source narrative, not the edge). Unresolved edges are routed to the
+    QUARANTINE bucket — reported and written for a reviewed disposition — never
+    silently attached, auto-rewritten, or pre-classified as missing-vs-typo. This is
+    the flow guard that stops the name-form / dangling under-count recurring at the
+    source; the disposition policy is ISSUES.md OQ-58, the stock view is
+    cs_kernel_registry:cs_reading_relation_unresolved/4.
+    """
+    quarantine = []
+    for s in gen_seeds:
+        kernel_id = s.get("kernel_id")
+        if not kernel_id:
+            continue
+        cid = s["constraint_id"]
+        jp = json_dir / f"{cid}.json"
+        if not jp.exists():
+            continue
+        try:
+            cs = (json.loads(jp.read_text(encoding="utf-8")).get("cs_structure") or {})
+        except (json.JSONDecodeError, OSError):
+            continue
+        for rr in cs.get("reading_relations") or []:
+            target = rr.get("sibling_id", "")
+            rel = rr.get("relation", "")
+            canon = target if "__" in target else f"{kernel_id}__{target}"
+            if not (testsets_dir / f"{canon}.pl").exists():
+                quarantine.append({"kernel": kernel_id, "source": cid,
+                                   "target": target, "canonical": canon, "relation": rel})
+
+    print(f"\nReading-relation referential integrity ({testsets_dir.name}):")
+    print(f"  {len(quarantine):3d} UNRESOLVED edge(s) -> quarantine "
+          f"(reviewed disposition, OQ-58; no auto-write)")
+    if quarantine:
+        qf = testsets_dir.parent / "cs_reading_relation_quarantine.json"
+        qf.write_text(json.dumps(quarantine, indent=2, ensure_ascii=False) + "\n",
+                      encoding="utf-8")
+        print(f"  quarantine written: {qf}")
+        for q in quarantine[:10]:
+            print(f"    {q['kernel']} :: {q['source']} -{q['relation']}-> {q['target']}")
+        if len(quarantine) > 10:
+            print(f"    ... +{len(quarantine) - 10} more")
+    return quarantine
+
+
 # ---------------------------------------------------------------------------
 # Step E: Coherence eyeball (manual check — not a gate)
 # ---------------------------------------------------------------------------
@@ -1232,6 +1283,7 @@ def main():
 
     print("\nStamping kernel linkage...")
     stamp_kernel_linkage(gen_seeds, json_dir, testsets_dir)
+    validate_reading_relation_integrity(gen_seeds, json_dir, testsets_dir)
 
     coherence_eyeball(manifests, json_dir, manifests_dir)
 
