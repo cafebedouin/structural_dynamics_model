@@ -200,6 +200,26 @@ def _explain_h1_band(h1, perspectives):
     return static.get(h1, "unknown")
 
 
+# Discrete gluing regime (sheaf_status): synthesis of H^1 + Arakelov height,
+# from sheaf_analysis:sheaf_status/2. Diagnostic annotation, not a classifier.
+_SHEAF_STATUS_EXPLAIN = {
+    "genuine_sheaf": "local readings glue — global section exists (H^1=0, height below corpus p75)",
+    "fragile_presheaf": "readings glue but high Arakelov complexity (H^1=0, height above corpus p75)",
+    "manifest_presheaf": "no global section — observers disagree (H^1>0)",
+}
+
+
+def _render_sheaf_status(status):
+    """Render sheaf_status. Renders explicitly when null/absent (do not silently
+    omit — a missing value must be visible, not invisible) and when unrecognized."""
+    if status is None:
+        return "null — not computed (sheaf_status absent from pipeline output)"
+    expl = _SHEAF_STATUS_EXPLAIN.get(status)
+    if expl is None:
+        return f"{status} — unrecognized sheaf status"
+    return f"{status} — {expl}"
+
+
 def find_constraint_entry(pipeline_data, constraint_id):
     """Find a constraint in enriched_pipeline.json per_constraint array."""
     if pipeline_data is None:
@@ -848,6 +868,10 @@ def build_level2_convergence(constraint_id, pipeline_data):
         perspectives = entry.get("perspectives", {})
         h1_explanation = _explain_h1_band(h1, perspectives)
         lines.append(f"    H^1 band:         {h1} — {h1_explanation}")
+
+    # Sheaf status (discrete gluing regime — synthesis of H^1 + Arakelov height).
+    # Rendered unconditionally incl. null: a missing value must be seen, not omitted.
+    lines.append(f"    Sheaf status:     {_render_sheaf_status(entry.get('sheaf_status'))}")
 
     return "\n".join(lines)
 
