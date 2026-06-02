@@ -20,6 +20,43 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-02 — Dirac Axis-1 (`derived_from/3`) removed → design gap; `gauge_fixed/3` straggler fixed
+
+**If you are editing `dirac_classification.pl` or looking for primary/secondary constraint
+tracking — read this.** Two changes landed together; neither is output-changing for the live
+pipeline (the affected predicates had no consumers).
+
+**1. `derived_from/3` + `constraint_generation_order/2` removed (Dirac Axis-1, primary/secondary).**
+Declared `:- multifile/:- dynamic` so testsets *could* assert derivation chains, read only by
+`constraint_generation_order/2`, which was called only by `full_dirac_report/3`. **Zero producers
+corpus-wide** — no testset, no generator, no engine code ever asserted a fact (witnessed:
+`grep -rln derived_from` over `testsets/`, `testsets_sotu/`, `testsets_3000/` all empty). So
+`constraint_generation_order/2` returned `primary` for every constraint via the `\+ derived_from`
+cut — absence presenting as a presence (Build Discipline Pattern 5). The module's own header had
+already sorted this axis into "merely relabels." Removed: the two export entries, the §4 block
+(comment + declarations + both clauses; §5 renumbered → §4), and the `generation_order(Order)`
+field of `full_dirac_report/3` (now 7 fields; nothing external destructured it). The capability it
+reached for — systematic derivation-chain tracking, with a typed `Reason` slot the live
+`affects_constraint/2` edge cannot carry — is now recorded as **GAP-01 in
+`docs/design/design_gaps.md`** (new design-doc, a ledger of declared absences; pointer added to
+CLAUDE.md "Design intent"). Re-opening is a framework-direction decision, not a code fix; do NOT
+re-add an unfed `derived_from/3`.
+
+**2. `gauge_fixed/3:208` straggler fixed.** It still called the removed `standard_context/1` (deleted
+in the v2.0 SITE CONTEXTS migration, which moved `gauge_orbit/2` and
+`preserved_under_context_shift/2` to `constraint_indexing:site_contexts/1` but missed this one).
+Latent because `full_dirac_report/3` — its only path to `gauge_fixed/3` with a real `context(...)`
+tuple — has no callers, so the `Unknown procedure` throw never surfaced. Now delegates via
+`constraint_indexing:site_contexts(Contexts), member(AltCtx, Contexts)` like its siblings.
+Witnessed end-to-end: `gauge_fixed(abrahamic_covenant__isaac_covenant_reading, <analytical ctx>, true)`
+and `full_dirac_report/3` returns a complete 7-field `dirac_report(...)` (was: `Unknown procedure:
+standard_context/1`).
+
+**Standing note:** `full_dirac_report/3` itself is still a dangling wire (no consumers). It works
+now, but if it stays unconsumed it is a candidate for the same removal treatment as Axis-1.
+
+---
+
 ## 2026-06-02 — False-summit forensic detector repaired (was vacuous) + two report bugs + stale comment
 
 **If you are editing `drl_core.pl` false-mountain detection, `report_generator.pl`'s forensic

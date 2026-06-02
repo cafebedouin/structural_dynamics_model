@@ -95,6 +95,11 @@ sorting). Both are living documents — consult at session start, and amend as d
 made and recorded. The design Omegas §6 sorts (Ω_E/Ω_C/Ω_P) are tagged by type directly on the
 relevant open questions in `ISSUES.md` (the single source for open-question tracking); the Ω-type
 taxonomy is defined in `docs/omega_variables.md`. Do not maintain a separate design-Omega ledger.
+`docs/design/design_gaps.md` is the third member of the design-doc family: a ledger of *declared
+absences* — capabilities the engine deliberately does not yet have, recorded so an empty placeholder
+is never mistaken for a working feature. Before reviving a removed/unfed predicate or proposing a
+new provenance/tracking surface, check it (GAP-01 is derivation-chain tracking). A defect that reads
+as working goes to `ISSUES.md`; an absence the design admits goes here.
 
 ## Typical Workflow
 

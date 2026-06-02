@@ -225,4 +225,4 @@ Schema drift warnings (sidecar test):
 | F0b-bug | Piton declared at theater_ratio=0.58 in cultural_backlash_mobilization and elite_legitimacy_collapse; engine produces tangled_rope/rope at all perspectives — piton gate unreachable | Regenerate or correct the two testsets. Not a fork — fix direction is clear. |
 | F0c-regex | linter.py found_types regex (DOTALL) spans into comments; 1/223 testsets affected (generational_economic_decline only) | Strip comments or fix pattern; does not infect F1–F4 findings |
 | E2/E3 | validation section has no schema contract | Add VALIDATION_FIELDS analog if section grows? |
-| E6-consumers | stability_band and husk_metrics sidecar consumers unconfirmed | Determine DRIFT-A-cosmetic vs DRIFT-A-dataloss |
+| E6-consumers | stability_band sidecar consumer unconfirmed | Determine DRIFT-A-cosmetic vs DRIFT-A-dataloss. (husk_metrics half RESOLVED 2026-06-02: sole consumer was enhanced_report.py `build_husk_signature` — cosmetic/report-only — and the field was removed with the observer husk in ef92a61d; see design_gaps.md GAP-02.) |
