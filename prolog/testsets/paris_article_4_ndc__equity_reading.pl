@@ -145,7 +145,7 @@ narrative_ontology:cs_kernel_codification('023df3d9-144a-40a7-b966-371748764b3d'
 narrative_ontology:cs_authority_grounding('023df3d9-144a-40a7-b966-371748764b3d', lineage).
 narrative_ontology:cs_interpretation_layer_present('023df3d9-144a-40a7-b966-371748764b3d').
 narrative_ontology:cs_reading_relation('023df3d9-144a-40a7-b966-371748764b3d', paris_article_4_ndc_sovereigntist_reading, influences).
-narrative_ontology:cs_reading_relation('023df3d9-144a-40a7-b966-371748764b3d', paris_article_4_ndc_supranational_reading, forecloses).
+narrative_ontology:cs_reading_relation('023df3d9-144a-40a7-b966-371748764b3d', paris_article_4_ndc__supranational_reading, forecloses).
 narrative_ontology:cs_axiom('023df3d9-144a-40a7-b966-371748764b3d', foundational, historical_responsibility_legitimates_differentiation).
 narrative_ontology:cs_axiom_status(historical_responsibility_legitimates_differentiation, holdable).
 narrative_ontology:cs_axiom_grounding('023df3d9-144a-40a7-b966-371748764b3d', historical_responsibility_legitimates_differentiation, deontological).
