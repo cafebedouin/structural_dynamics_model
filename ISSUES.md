@@ -2020,12 +2020,16 @@ to OQ-44 (engine-wide no-gate-satisfied-by-absence), build_discipline Pattern 5.
 **Ω-type:** Ω_C (design choice — whether/how to reconcile two obstruction measures that the framework
 calls complements).
 
-**Status:** open
+**Status:** partially resolved — the **22 cell (H1>0 ∧ W1≈0) is probed and explained** (2026-06-02,
+below); the **36 cell (H1=0 ∧ W1>0) remains open**. **Related:** OQ-37 (honest `unknown` now surfaces
+in `dr_type`), OQ-52 (manifest rows for the false-mountain cross — must exclude the unknown-driven
+subset found here).
 **Origin:** W1 × sheaf_status join, 2026-06-02 (n=563, commit b5ccee0). Tool:
 `python/w1_sheaf_join.py`; output `outputs/w1_sheaf_join.{json,md}`.
-**Files:** `prolog/grothendieck_cohomology.pl:149` (`cohomological_obstruction/3`, H1),
-`prolog/measurement_layer.pl:264` (`wasserstein_total_fracture/2`, W1),
-`prolog/json_report.pl:389` (calls W1 the "continuous complement to H1").
+**Files:** `prolog/grothendieck_cohomology.pl:149` (`cohomological_obstruction/3`, H1) and `:128`
+(`orbit_vector/2`) and `count_disagreeing_pairs/2`; `prolog/measurement_layer.pl:264`
+(`wasserstein_total_fracture/2`, W1); `prolog/json_report.pl:389` (calls W1 the "continuous complement
+to H1").
 
 **Specific question:** H1 (count of disagreeing context-pairs on the 4-point site) and W1 (transport
 cost between MaxEnt distributions across the power axis) are framed as discrete/continuous readings of
@@ -2049,20 +2053,63 @@ or only approximate?
   while W1 measures the MaxEnt mass shift that the type label discards. If so, W1>0 ∧ H1=0 is the
   *expected* signature of "same type, drifting distribution," not a contradiction — and these 36 are
   the constraints where the type label hides the most movement.
-- **22 with H1>0 ∧ W1≈0** (types disagree across seats, but transport mass barely moves). Hypothesis:
-  adjacent-type disagreements whose MaxEnt distributions are near-identical (the disagreement is a
-  threshold-crossing, not a mass relocation).
+- **22 with H1>0 ∧ W1≈0** (types disagree across seats, but transport mass does not move). *Original
+  hypothesis — adjacent-type threshold-crossing — **REFUTED** 2026-06-02; see "Result: the 22" below.*
 
-**Evidence so far:** all 58 ids with per-id W1/H1/sheaf_status are listed in
-`outputs/w1_sheaf_join.md` ("Off-diagonal rows"). On-diagonal bulk is 506/564, so the measures
-*largely* coincide; the 58 are the residual the complement-framing does not cover.
+### Result — the 22 (H1>0 ∧ W1≈0), probed 2026-06-02
 
-**What resolution changes:** if the off-diagonal is structural (type-invariant drift vs
-threshold-crossing disagreement), the paper should state W1 and H1 as **non-redundant** measures (W1
-sees intra-type drift H1 cannot), not as exact complements — and the 36 "type glues, mass moves"
-constraints become a named phenomenon. If instead it is an artifact (e.g. W1 thresholding, or MaxEnt
-contexts not matching the 4 canonical type contexts), it is a calibration bug. Diagnostic: for the 36,
-compare per-seat MaxEnt distributions against per-seat types to confirm same-type/different-distribution.
+Direct probe on the maxent-first path (temp script, removed after): for each of the 22, the raw H1,
+the per-seat type vector, the disagreeing position-pairs (count cross-checked `== H1` — **OK for all
+22**), and the four-seat MaxEnt distributions. *Probe caveat:* it ran against the live corpus, which
+had grown to n=771 (the join was n=563); per-constraint MaxEnt distributions and H1 are
+corpus-independent and the H1 values matched the join, so the finding holds.
+
+1. **`h1_band` is the raw disagreeing-pair count, not banded.** `cohomological_obstruction/3` returns
+   `count_disagreeing_pairs(TypeVector, H1)` directly (0..6 = C(4,2)); `json_report.pl` emits it
+   unbanded. There is no pre-band value — "raw H1" *is* `h1_band`.
+
+2. **Every disagreement involves `unknown`, over MaxEnt distributions identical across all 4 seats.**
+   In 21 of 22 the four seat distributions are byte-identical (`tangled_rope=0.950`, every other type
+   `0.010`) while the type vector is e.g. `[unknown, tangled_rope, tangled_rope, tangled_rope]` — the
+   disagreeing pairs are *exactly* the `unknown`↔`tangled_rope` crossings. The lone partial exception,
+   `ietf_openness_commitment__commons_stewardship_reading`, is `unknown`↔`rope` with near-identical
+   rope-dominant distributions (seat3 rope=0.738 vs 0.999 elsewhere — minor, still W1≈0).
+
+**Interpretation (refutes the original hypothesis).** These are *not* adjacent-type threshold
+disagreements. The MaxEnt distribution is the **same at every seat** (so W1=0 is correct — no mass
+moves), while `dr_type` returns **`unknown`** at one or more seats (the honest-unknown surfaced by
+OQ-37). `orbit_vector` → `count_disagreeing_pairs` treats `unknown` as **a type that disagrees with
+`tangled_rope`**, inflating H1 and producing `manifest_presheaf`. So these 22 manifest classifications
+are **driven solely by `unknown`-as-disagreement** — a classifier *abstention* counted as a
+perspectival *disagreement*, with zero distributional support. Drop the `unknown` seat and the
+remaining seats agree (all `tangled_rope` / all `rope`) → H1 would be 0 → `genuine`/`fragile`, **not
+manifest**. This is the absence-presenting-as-presence pattern (build_discipline.md): `unknown` (an
+*absence* of classification) entering the H1 type vector as a *present* disagreeing type.
+
+**Root cause for OQ-51 as a whole — two classifiers, not one.** H1 is computed from `dr_type` (which
+emits `unknown`); W1 is computed from the MaxEnt distribution (which never goes `unknown` — it stays a
+6-type simplex). The "continuous complement to H1" framing (`json_report.pl:389`) assumes one
+underlying classification; there are two. The 22 are the `dr_type`-emits-`unknown`-where-MaxEnt-is-
+confident corner of that gap.
+
+**Evidence so far:** all 58 ids with per-id W1/H1/sheaf_status are in `outputs/w1_sheaf_join.md`
+("Off-diagonal rows"); the 22-cell probe output is the witness for the above. On-diagonal bulk is
+506/564, so the measures *largely* coincide; the 58 are the residual the complement-framing does not
+cover. The **36 cell (H1=0 ∧ W1>0) is not yet probed** — the converse corner (same `dr_type`,
+drifting MaxEnt mass).
+
+**What resolution changes:**
+- **Engine question (new, from the 22):** should `orbit_vector`/`count_disagreeing_pairs` treat
+  `unknown` as a disagreeing type, or exclude it (abstention ≠ disagreement)? Excluding it would
+  reclassify all 22 out of `manifest_presheaf` and shrink the 98-strong manifest set by the
+  unknown-driven subset — a material change to the sheaf_status distribution. Decide alongside OQ-37
+  (do not re-suppress `unknown`; the question is how H1 *consumes* it, not whether `dr_type` emits it).
+- **36 cell (still open):** if it is type-invariant MaxEnt drift, W1 and H1 are **non-redundant** (W1
+  sees intra-type drift H1 cannot), not exact complements, and the 36 "type glues, mass moves"
+  constraints become a named phenomenon. Diagnostic: for the 36, compare per-seat MaxEnt distributions
+  against per-seat types to confirm same-type/different-distribution (the converse of the 22 probe).
+- **Framing:** the paper should state W1 and H1 as readings of **two different classifiers** (MaxEnt
+  vs `dr_type`), reconciled, not as discrete/continuous views of one.
 
 ## OQ-52 — False-mountain cross: do the naturalized→snare manifest rows have an authored beneficiary?
 
