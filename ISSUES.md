@@ -2415,11 +2415,29 @@ data repair.
 **Ω-type:** Ω_P (content decision). **Disposition policy ruled 2026-06-02 (below); the per-edge
 missing-vs-typo-vs-noise sort is a later narrative-read pass, not a mechanical rule.**
 
-**Status:** policy ruled 2026-06-02; per-edge disposition pending the narrative-read pass on the residue.
+**Status:** policy ruled; narrative-read pass run on the 13 forecloses (6 repaired); the residue is a
+**kernel-completeness** problem, not edge-patching — see the finding below.
 **Origin:** Reading-axis obstruction build (OQ-54), 2026-06-02. Surfaced by the independent
 must-flag oracle when partitioning non-canonical `cs_reading_relation` targets.
 **Files:** authored testset `.pl` files; emitter `python/generate_constraint_pl.py:482`;
-quarantine view `cs_kernel_registry:cs_reading_relation_unresolved/4`.
+quarantine view `cs_kernel_registry:cs_reading_relation_unresolved/4`; linter/reporter
+`python/audits/reading_reference_linter.py`.
+
+**FINDING (2026-06-02, linter-as-reporter) — it's "complete kernels," not "patch edges."** A
+reference-census linter (`reading_reference_linter.py`; census of `cs_reading_relation` +
+`affects_constraint`; three rules each with a synthetic positive control) gives the
+**incompleteness rate**: **143 dangling committer edges → 119 distinct missing readings across 69
+kernels** (37 missing >1; e.g. `scriptural_authority_contest`, `soteriological_kernel_contest` each
+missing 4). The dangling edges are the *symptom*; the disease is that ~69 contested kernels were
+decomposed (into N readings named in their own commentary) but only some readings were authored. The
+6 GENERATE edges found by the narrative read are a small visible slice — the unit of work is **kernel
+completion**, with the quarantine/linter as the backlog spec. Two reference *kinds* must stay
+separate: `cs_reading_relation` targets MUST be sibling readings (integrity applies → the rate above);
+`affects_constraint` targets are causal-network nodes that may be abstract (1680 "danglings" — NOT a
+clean integrity signal, excluded from the rate). Also: 4 forecloses edges repaired this pass
+(genesis/magna_carta/fair_use/npt → existing readings, commentary-cited; `real_closure` 95→98); 6
+more non-canonical (delimiter-typo) `cs_reading_relation` refs in coexists/influences are repairable
+to existing readings (R2).
 
 **Specific question:** After the name-form normalization (short → `<kernel>__<short>`) repaired 86
 edges, **99 `cs_reading_relation` edges remain dangling** — their target resolves to no reading in the
@@ -2487,9 +2505,23 @@ absent-referent residue.
 **Ω-type:** Ω_E (empirical — detectable by scanning reading-name stems per kernel; a content/merge
 decision once sized).
 
-**Status:** open
+**Status:** sized (linter R3); **gradated/graduated ruled MERGE**; conditional/r2p held for a read.
 **Origin:** OQ-58 narrative-disposition pass, Bucket C, 2026-06-02.
-**Files:** testset `.pl` (`cs_kernel_id`); `cs_kernel_registry:cs_kernel_obstruction/4`.
+**Files:** testset `.pl` (`cs_kernel_id`); `cs_kernel_registry:cs_kernel_obstruction/4`;
+detector `python/audits/reading_reference_linter.py` (R3).
+
+**Sized + ruled (2026-06-02).** The linter's R3 (near-duplicate reading-stems per kernel) flags **9
+candidate pairs** — and it **over-flags by design**: near-naming is usually *intentional* for
+contrasting positions (`nws/nnws` = nuclear vs non-nuclear; `homoousios/homoiousios` = same- vs
+similar-substance — the iota that split Christendom; `created/uncreated` = opposite Qur'an-ontology
+positions; `arian/semi_arian`, `hanbali/hanafi`, etc. all DISTINCT). R3 is a **review-trigger, not a
+verdict**. Of the 9, **only `westphalian_sovereignty: gradated_reading ≈ graduated_sovereignty` is a
+confirmed duplicate** (both read sovereignty-legitimacy as graded by governance quality — same
+position, two names). **Ruling:** *merge* gradated/graduated (a content op — pick the survivor, redirect
+its edges incl. the held `absolutist_reading` Bucket-C edge, delete the dup; needs a survivor decision
+before the file op). **`conditional_sovereignty` vs `r2p_reading` held** — a real consistency
+sub-question (is R2P-specific distinct from general-conditional in this kernel's terms?), the user's
+read, not a default-duplicate.
 
 **Specific question:** `westphalian_sovereignty` holds readings `[gradated_reading, graduated_sovereignty,
 absolute_sovereignty, r2p_reading, conditional_sovereignty]`. Several look like one position under

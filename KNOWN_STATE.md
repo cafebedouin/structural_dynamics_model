@@ -20,6 +20,32 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-02 — Reading-reference linter + the "complete kernels, not patch edges" finding
+
+**Tool:** `python/audits/reading_reference_linter.py` — a reporter (not a fixer). Census of every
+reference to a reading/constraint name (`cs_reading_relation` + `affects_constraint`), three rules each
+gated by a **synthetic positive control** that must flag a known-dirty fixture: R1 dangling, R2
+non-canonical (short / delimiter-typo → existing), R3 within-kernel near-duplicate stems.
+
+**Two corrections baked into the linter (its first cut had both defects):** (1) referential integrity
+applies ONLY to `cs_reading_relation` (targets MUST be sibling readings); `affects_constraint` is a
+causal edge whose targets may be abstract nodes (`mass_shooting_externality`) — 1680 of its refs are
+"dangling" but that's NOT an integrity signal, excluded from the rate. (2) R3 **over-flags by design** —
+near-naming is usually intentional (`nws/nnws`, `homoousios/homoiousios`, `created/uncreated` are
+DISTINCT); R3 is a review-trigger, only westphalian `gradated/graduated` is a confirmed dup.
+
+**Finding (the headline):** incompleteness rate = **143 dangling committer edges → 119 distinct missing
+readings across 69 kernels** (37 missing >1). So the dangling-edge problem is a **kernel-completeness**
+problem — ~69 contested kernels decomposed but only partly authored — NOT edge-patching. The
+quarantine/linter is the generation backlog spec. See ISSUES.md OQ-58.
+
+**Also this pass:** 4 forecloses edges repaired to existing readings (genesis/magna_carta/fair_use/npt,
+commentary-cited; `real_closure` 95→98, quarantine 97→93). fair_use was held a turn earlier as a
+stem-judgment, then licensed by the decomposition statement (`fair_use…:336` names the
+transformative-right sibling) — held-then-narrative-confirmed, not auto-applied on stem similarity.
+
+---
+
 ## 2026-06-02 — Reading-axis structural obstruction built + cs_reading_relation name-form repair
 
 **Built (OQ-54, "establish").** `cs_kernel_obstruction/4` + `cs_kernel_obstruction_status/2` +
