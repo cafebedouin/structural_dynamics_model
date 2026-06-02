@@ -453,9 +453,6 @@ def build_sidecar_data(constraint_id, entry, prolog_output, iteration_round=None
     # --- Post-synthesis flags ---
     sidecar["post_synthesis_flags"] = list(entry.get("post_synthesis_flags", [])) if entry else []
 
-    # --- Husk metrics ---
-    sidecar["husk_metrics"] = entry.get("husk_metrics") if entry else None
-
     return sidecar
 
 
@@ -803,126 +800,6 @@ def build_contamination_network(constraint_id, pipeline_data):
                 f"  No significant contamination — "
                 f"purity unchanged across {len(neighbors)} neighbor(s)."
             )
-
-    return "\n".join(lines)
-
-
-# --- HUSK SIGNATURE ---
-
-def build_husk_signature(constraint_id, pipeline_data):
-    """Render the HUSK SIGNATURE section from husk_metrics in enriched pipeline."""
-    lines = ["", "--- HUSK SIGNATURE ---", ""]
-
-    if pipeline_data is None:
-        lines.append("  [enriched_pipeline.json not available]")
-        return "\n".join(lines)
-
-    entry = find_constraint_entry(pipeline_data, constraint_id)
-    if entry is None:
-        lines.append("  [constraint not in batch]")
-        return "\n".join(lines)
-
-    hm = entry.get("husk_metrics")
-    if not hm:
-        lines.append("  [husk_metrics not computed — run pipeline with husk phase]")
-        return "\n".join(lines)
-
-    husk_exists = hm.get("husk_exists", False)
-    ep0 = hm.get("ep_t0")
-    ep_last = hm.get("ep_tlast")
-    type_stable = hm.get("type_stable")
-    stable_type = hm.get("stable_type")
-    sat_floor = hm.get("saturation_floor")
-    native_floor = hm.get("native_floor")
-    born_sat = hm.get("born_saturated", False)
-    ep_series = hm.get("ep_native_series") or []
-
-    # --- Existence (calibration-invariant) ---
-    if husk_exists and ep0 is not None and ep_last is not None and stable_type:
-        lines.append(f"  Existence (invariant):  YES")
-        lines.append(f"    EP falls {ep0:.4f} → {ep_last:.4f} under stable {stable_type}")
-        lines.append(f"                                          [floor-invariant; series-determined]")
-    elif type_stable is False:
-        lines.append(f"  Existence:  NO  (type unstable across series)")
-    elif ep0 is not None and ep_last is not None and ep0 <= ep_last:
-        lines.append(f"  Existence:  NO  (EP does not fall: {ep0:.4f} → {ep_last:.4f})")
-    else:
-        lines.append(f"  Existence:  NO")
-
-    lines.append("")
-
-    # --- Saturation boundary ---
-    if sat_floor is not None and native_floor is not None:
-        regime = "flag" if native_floor < sat_floor else "full glide"
-        lines.append(f"  Saturation boundary:    {sat_floor:.4f}")
-        if regime == "flag":
-            lines.append(
-                f"    {regime} regime: native floor ({native_floor:.2f}) < {sat_floor:.4f}"
-                f" — single-step burn, not glide"
-            )
-        else:
-            lines.append(
-                f"    {regime} regime: native floor ({native_floor:.2f}) ≥ {sat_floor:.4f}"
-                f" — EX glides across floor"
-            )
-        lines.append(
-            f"    [floor-invariant, series-determined; for generated constraints reflects"
-        )
-        lines.append(
-            f"     ε authoring, not an observed property of the underlying phenomenon]"
-        )
-    elif sat_floor is None:
-        lines.append(f"  Saturation boundary:    N/A (no ε measurement series)")
-
-    lines.append("")
-
-    # --- Saturation crossover check ---
-    # born_saturated = saturation_floor < native_floor
-    #   = max(ε) - 0.50 < native_floor
-    #   = max(ε) < native_floor + 0.50
-    # Meaning: saturation crossover (native_floor + 0.50) is above max(ε);
-    # EX was always positive — the series never triggered EX saturation.
-    if sat_floor is not None and native_floor is not None:
-        crossover = round(native_floor + 0.50, 4)
-        if born_sat:
-            lines.append(
-                f"  Saturation crossover:   NOT REACHED"
-                f"  (max ε < {crossover:.2f} — EX was positive throughout;"
-            )
-            lines.append(
-                f"                           EP decay, if any, came from F/SI/CC, not EX fall)"
-            )
-        else:
-            lines.append(
-                f"  Saturation crossover:   REACHED"
-                f"  (max ε ≥ {crossover:.2f} — EX hit zero within the series;"
-            )
-            lines.append(
-                f"                           EX decay is the EP driver)"
-            )
-    else:
-        lines.append(f"  Saturation crossover:   N/A")
-
-    lines.append("")
-
-    # --- EP at native floor (labeled series) ---
-    if ep_series and native_floor is not None:
-        # coordination_type from boltzmann config; we only have native_floor here
-        lines.append(
-            f"  EP at native floor ({native_floor:.2f}):"
-        )
-        lines.append(
-            f"    NOT cross-comparable across constraint families;"
-            f" native floor varies by coordination type."
-        )
-        lines.append(f"    [context: powerless canonical — victim perspective]")
-        for pt in ep_series:
-            t_val = pt.get("t", "?")
-            ep_val = pt.get("ep")
-            if ep_val is not None:
-                lines.append(f"    t={t_val:>3}  EP={ep_val:.4f}")
-    else:
-        lines.append(f"  EP native series:  N/A")
 
     return "\n".join(lines)
 
@@ -2685,7 +2562,6 @@ def generate_report(constraint_id, data, iteration_round=None):
     l2_cs_kernel = build_kernel_reading_section(constraint_id, data["pipeline"])
     # Level 1: FPN contamination topology (Gap analysis Change 4 — resolved)
     l1_contamination = build_contamination_network(constraint_id, data["pipeline"])
-    l1_husk = build_husk_signature(constraint_id, data["pipeline"])
 
     # Post-synthesis (only if T12 flags exist)
     post = build_post_synthesis(constraint_id, data["pipeline"])
@@ -2710,7 +2586,7 @@ def generate_report(constraint_id, data, iteration_round=None):
         l2_cs_kernel,    # kernel cross-reading panel — first (Phase 2: kernel-terminal)
         xcon_synthesis,
         build_level_header(1, "SELF-CONSISTENCY"),
-        l1_identity, l1_trajectory, l1_contamination, l1_husk, l1_orbit, l1_omega,
+        l1_identity, l1_trajectory, l1_contamination, l1_orbit, l1_omega,
         build_level_header(2, "DIAGNOSTIC CONVERGENCE"),
         l2_convergence, l2_maxent, l2_persistence, l2_stability, l2_abductive,
         l2_axiom2, l2_verdict, l2_theorems, l2_cs_pattern, l2_cs_extended,

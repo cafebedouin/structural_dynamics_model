@@ -248,8 +248,6 @@ ENRICHED_EXTRA_FIELDS = [
     ("tangled_psi",         (int, float), True),
     ("tangled_band",        str,         True),
     ("abductive_triggers",  list,        True),   # None when abductive_data.json absent
-    # --- Husk metrics (temporal EP decay analysis) ---
-    ("husk_metrics",        dict,        True),
     # --- Game theory ---
     ("nash_distance_structural",  int,          True),
     ("nash_stable_structural",    bool,         True),
@@ -688,9 +686,8 @@ SIDECAR_FIELDS = [
     ("mandatrophy_gap",       dict,         True),
     ("structural_signature",  str,          True),
     ("purity",                dict,         True),
-    # Fields added by enhanced_report.py stability band and husk phases
+    # Fields added by enhanced_report.py stability band phase
     ("stability_band",        dict,         True),  # null when no kernel linkage
-    ("husk_metrics",          dict,         True),  # null when husk phase not run
 ]
 
 _SIDECAR_VERDICTS = {"GREEN", "YELLOW", "RED", "UNKNOWN"}

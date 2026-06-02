@@ -33,13 +33,10 @@ from shared.schemas import validate_pipeline_output, validate_enriched_pipeline
 
 ORBIT_JSON = OUTPUT_DIR / "orbit_data.json"
 ABDUCTIVE_JSON = OUTPUT_DIR / "abductive_data.json"
-HUSK_JSON = OUTPUT_DIR / "husk_data.json"
 NASH_JSON = OUTPUT_DIR / "game_theory_nash.json"
 STABILITY_JSON = OUTPUT_DIR / "game_theory_stability.json"
 MIXED_JSON = OUTPUT_DIR / "game_theory_mixed_strategy.json"
 COVER_JSON = OUTPUT_DIR / "game_theory_cover_story.json"
-
-JSON_DIR = OUTPUT_DIR.parent / "json"
 
 
 # ---------------------------------------------------------------------------
@@ -54,21 +51,6 @@ def _safe_load(path, label):
     except (FileNotFoundError, json.JSONDecodeError) as e:
         print(f"[ENRICH] Warning: Could not load {label}: {e}", file=sys.stderr)
         return None
-
-
-def _load_eps_series(cid):
-    """Return sorted list of base_extractiveness values from json/{cid}.json measurements.
-
-    Returns [] if the file is absent or has no base_extractiveness measurements.
-    """
-    path = JSON_DIR / f"{cid}.json"
-    try:
-        with open(path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-        meas = data.get("measurements", [])
-        return sorted(m["value"] for m in meas if m.get("metric") == "base_extractiveness")
-    except (FileNotFoundError, json.JSONDecodeError, KeyError):
-        return []
 
 
 def _build_lookup(data):
@@ -89,8 +71,7 @@ def _build_lookup(data):
 
 def enrich_entry(entry, orbit_data, abd_data=None,
                  nash_data=None, stability_data=None,
-                 mixed_data=None, cover_data=None,
-                 husk_data=None):
+                 mixed_data=None, cover_data=None):
     """Add all derived fields to a single per_constraint entry."""
     dist = entry.get("maxent_probs")
     raw_dist = entry.get("raw_maxent_probs")
@@ -175,46 +156,6 @@ def enrich_entry(entry, orbit_data, abd_data=None,
     else:
         entry["abductive_triggers"] = abd_data.get(cid, [])
 
-    # --- Husk metrics (from husk_data.json + json/{cid}.json ε series) ---
-    if husk_data is None:
-        husk_data = {}
-    husk_entry = husk_data.get(cid, {})
-
-    eps_series = _load_eps_series(cid)
-    if eps_series:
-        eps_max = max(eps_series)
-        eps_static = entry.get("base_extractiveness")
-        if eps_static is not None and abs(eps_static - eps_max) > 1e-6:
-            print(
-                f"[ENRICH] WARN {cid}: static ε={eps_static} ≠ series max={eps_max}; "
-                "saturation_floor suppressed",
-                file=sys.stderr,
-            )
-            saturation_floor = None
-        else:
-            saturation_floor = round(eps_max - 0.50, 6)
-    else:
-        saturation_floor = None
-
-    native_floor = husk_entry.get("native_floor")
-    born_saturated = (
-        saturation_floor is not None
-        and native_floor is not None
-        and saturation_floor < native_floor
-    )
-
-    entry["husk_metrics"] = {
-        "husk_exists":      husk_entry.get("husk_exists", False),
-        "ep_native_series": husk_entry.get("ep_native_series"),
-        "type_stable":      husk_entry.get("type_stable"),
-        "stable_type":      husk_entry.get("stable_type"),
-        "ep_t0":            husk_entry.get("ep_t0"),
-        "ep_tlast":         husk_entry.get("ep_tlast"),
-        "native_floor":     native_floor,
-        "saturation_floor": saturation_floor,
-        "born_saturated":   born_saturated,
-    }
-
     # --- Game-theory fields (from external JSONs) ---
     if nash_data is None:
         nash_data = {}
@@ -284,10 +225,6 @@ def main():
     except (FileNotFoundError, json.JSONDecodeError) as e:
         print(f"[ENRICH] Warning: Could not load {ABDUCTIVE_JSON}: {e}", file=sys.stderr)
 
-    # Load husk_data.json
-    print("[ENRICH] Loading husk_data.json...", file=sys.stderr)
-    husk_data = _safe_load(HUSK_JSON, "husk_data.json") or {}
-
     # Load game-theory JSONs
     print("[ENRICH] Loading game-theory data...", file=sys.stderr)
     nash_data = _build_lookup(_safe_load(NASH_JSON, "game_theory_nash.json"))
@@ -301,8 +238,7 @@ def main():
 
     for entry in per_constraint:
         enrich_entry(entry, orbit_data, abd_data,
-                     nash_data, stability_data, mixed_data, cover_data,
-                     husk_data=husk_data)
+                     nash_data, stability_data, mixed_data, cover_data)
 
     # Validate enriched output schema
     errors = validate_enriched_pipeline(pipeline)
