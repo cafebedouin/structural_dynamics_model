@@ -194,3 +194,88 @@ outputs and document it beside the manifest convention. Until then the sidecar i
 **Status:** Deferred by sidecar. The capability (uniform in-file manifest) is absent for id-keyed
 outputs by consumer constraint, not by oversight. Tripwire in `KNOWN_STATE.md` (2026-06-02) so no one
 re-attempts the inline injection.
+
+---
+
+## GAP-04 — No first-class kernel/reading axis: the two axes are conflated in the classifier
+
+**The capability:** A *kernel* is an idea-space (e.g. `rule_of_law`, `animal_status`); a *reading* is a
+declared standpoint on it (e.g. natural / positivist / realist; property / welfare / abolitionist). The
+engine should be able to (a) hold a kernel fixed and compare its readings *as a set*, and (b) hold a
+reading-stance fixed and sweep it across kernels (the transpose). Neither is a first-class operation.
+
+**Why it is absent:** The kernel/reading corpus did not exist until 2026-06-02. Readings are currently
+represented only as sibling constraint files sharing a `kernel__reading_name` prefix, linked by
+`cs_kernel_registry`; the kernel is an implicit string prefix, not a queryable object with enumerable
+readings. Every reading is classified *independently* through the observer pipeline (power×scope), so the
+two axes — **observer** (power/scope index, live) and **reading** (which standpoint on the kernel) — are
+not distinguished by the classifier. There is no predicate that takes a kernel and returns its readings
+as a compared set, and no reading-stance label comparable *across* kernels to enable the transpose.
+
+**Evidence (manifest `ae10e7e`, run 2026-06-02T18:54:31Z, n=772):** 542 readings sit under 183
+multi-reading kernels; 231 constraints are standalone (no reading decomposition). Within a kernel,
+readings differentiate (ε differs in 176/183 kernels, victim-set in 183/183, `claimed_type` in 113/183),
+so the distinction is real and carried in the data but not surfaced as an axis. Example `animal_status`:
+`property_reading` (ε 0.05, rope) / `welfare_reading` (ε 0.45, tangled_rope) / `abolitionist_reading`
+(ε 0.92, snare) — three standpoints, three seats, classified as three unrelated constraints.
+
+**What closing the gap would require:** (1) promote the kernel to a queryable object with enumerable
+readings; (2) a reading-stance vocabulary comparable across kernels (the selection-seat of OQ-56 / Seat
+Theorem Cor 2b — a declared, contestable premise, not derivable, and blocked on the cross-kernel
+clustering analysis only now possible); (3) a kernel-fixed reading-comparison predicate and its
+transpose, each with a consumer. Open question + resolution criteria: **OQ-53**.
+
+**Status:** Deferred. Named here on first availability of a corpus that exercises it (2026-06-02).
+
+---
+
+## GAP-05 — The reading axis has no cross-index gluing test (Boltzmann is observer-axis only)
+
+**The capability:** "Do a kernel's readings glue into a global section, or are they irreducibly plural?"
+— the sheaf/H¹ question on the *reading* axis. The engine has one cross-index test, `boltzmann_compliant/2`
+(the Power×Scope factorization / coupling test in `boltzmann_compliance.pl`), and it runs **only on the
+observer axis**. Nothing tests factorization or gluing across the readings of a kernel.
+
+**Why it is absent:** Same root as GAP-04 — until 2026-06-02 there was no kernel/reading corpus to run a
+reading-axis test against. The Boltzmann coupling test predates it and was built for the observer index
+(`coupling_test_powers/1`, `coupling_test_scopes/1`). Note the corrected framing: Boltzmann
+non-compliance is **not a pathology** — by the Seat Theorem (Coupling Theorem, §4) an index-invariant
+verdict is seat-free/contentless, so Boltzmann invariance is a *partial test for Mountain-ness*, and
+non-compliance = the verdict is seated on the observer index. The reading axis needs its *own* such test;
+it cannot be read off the observer one. The `w1_sheaf_join` / `sheaf_status` / `h1_band` machinery is the
+natural home for the reading-axis cohomology but is not yet wired to the kernel/reading grouping as a
+gluing test.
+
+**What closing the gap would require:** (1) define the reading-axis site (a kernel's readings as the cover)
+and a gluing/obstruction measure on it, distinct from observer coupling; (2) decide how it relates to the
+existing H¹/W1 obstruction (cf. OQ-51) and to seat-orthogonality / detection-independence — Seat Theorem
+§3's correction is that two seats can be mutually non-representable (Theorem 7), so a reading-axis
+obstruction may be gradient-orthogonal to the observer one and must not be reduced to it; (3) a consumer.
+Open question + operationalization: **OQ-54**.
+
+**Status:** Deferred. The observer-axis test is correct for its axis; the reading-axis test is genuinely
+absent, not relocated.
+
+---
+
+## GAP-06 — Reading-disagreement is not trifurcated (no Type A/B/C router)
+
+**The capability:** When two readings of a kernel disagree, classify *why*, per
+`docs/debugging_philosophy.md` §6: **Type C** (index ambiguity — the readings answer under different
+declared seats; the common, correct case for genuine plurality like natural/positivist/realist → specify
+index, do not collapse); **Type A** (frame drift — a criterion slides within what should be one seat →
+frame-fix); **Type B** (structural — the kernel's own commitments are inconsistent → genuine fracture).
+The engine has the raw pieces (`sheaf_status`, `h1_band`, `cs_pattern`, `cs_axiom_foreclosed`,
+`drift_events`) but no predicate that takes a kernel's reading-set and returns {ambiguity, drift,
+structure}.
+
+**Why it is absent:** Same root — no kernel/reading corpus to test a disagreement router against until
+2026-06-02. The trifurcation is the operational core of the kernel/reading engine and is the natural
+consumer of GAP-05's reading-axis gluing test (H¹≠0 with each reading internally coherent ⇒ Type C;
+internal incoherence ⇒ Type B; same-seat criterion drift ⇒ Type A).
+
+**What closing the gap would require:** (1) GAP-05's reading-axis obstruction as input; (2) the
+three-stage diagnostic of `debugging_philosophy.md` §6 implemented over a kernel's readings, mapping
+existing diagnostics onto A/B/C; (3) a consumer that reads the verdict. Open question: **OQ-55**.
+
+**Status:** Deferred. Named on first availability of the corpus that exercises it (2026-06-02).

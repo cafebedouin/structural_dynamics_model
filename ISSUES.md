@@ -2259,6 +2259,142 @@ explained), so the prior "do not scope until OQ-51 settled" gate is lifted.
 
 ---
 
+## OQ-53 — Observer and reading axes are conflated in the classifier (no kernel-fixed reading comparison)
+
+**Ω-type:** Ω_C (design choice — is the kernel/reading axis first-class?).
+
+**Status:** open
+**Origin:** Kernel/reading review, 2026-06-02 (first kernel/reading corpus landed this day).
+**Files:** `cs_kernel_registry.pl`, `logical_fingerprint.pl`, `json_report.pl`; readings as
+`kernel__reading_name` sibling files.
+
+**Specific question:** Should "hold a kernel fixed and compare its readings as a set" — and its
+transpose, "hold a reading-stance fixed and sweep across kernels" — be a first-class engine operation,
+distinct from the observer (power×scope) pipeline that currently classifies each reading independently?
+
+**Evidence so far:** Manifest `ae10e7e` (run 2026-06-02T18:54:31Z, n=772): 542 readings under 183
+multi-reading kernels; 231 standalone constraints. Readings differentiate within a kernel (ε in 176/183,
+victim-set in 183/183, `claimed_type` in 113/183) but the kernel is only an implicit string prefix and
+the two axes are not distinguished by the classifier. Pairs **GAP-04**.
+
+**What resolution changes:** If first-class, the kernel becomes a queryable object with enumerable
+readings and the transpose query becomes available — but it is gated on a reading-stance vocabulary
+(OQ-56). If not, the kernel/reading structure stays a naming convention over independent constraints.
+
+---
+
+## OQ-54 — The reading axis has no cross-index gluing test; how to operationalize it (and keep it distinct from observer Boltzmann)
+
+**Ω-type:** Ω_C (design — define the reading-axis site and obstruction).
+
+**Status:** open
+**Origin:** Kernel/reading review, 2026-06-02.
+**Files:** `boltzmann_compliance.pl` (observer-axis coupling), `w1_sheaf_join.py`, `sheaf_status`/`h1_band`.
+
+**Specific question:** The only cross-index test, `boltzmann_compliant/2`, factorizes classification across
+Power×Scope — the **observer** axis only. What is the analogous test on the **reading** axis ("do a
+kernel's readings glue into a global section, or are they irreducibly plural?"), and how should it relate
+to the existing H¹/W1 obstruction (OQ-51) and to seat-orthogonality?
+
+**Evidence so far:** Corrected framing (Seat Theorem §4 Coupling Theorem): an index-invariant verdict is
+seat-free/contentless, so Boltzmann invariance is a *partial test for Mountain-ness* and non-compliance =
+the verdict is **seated** on the observer index — not a pathology. The reading axis needs its own gluing
+test; Seat Theorem §3's correction (two seats can be mutually non-representable — detection-independence,
+Theorem 7) means a reading-axis obstruction may be gradient-orthogonal to the observer one and **must not
+be reduced to it**. `w1_sheaf_join`/`sheaf_status` is the candidate home but is not yet wired to the
+kernel/reading grouping as a gluing test. Pairs **GAP-05**.
+
+**What resolution changes:** Defines whether reading-plurality is measured by reusing the W1/H¹ obstruction
+on a reading-indexed site or by a new construction; sets the input to the OQ-55 trifurcation router. Open
+sub-question: is the reading-axis obstruction the same object as OQ-51's discrete/continuous obstruction,
+or a third axis?
+
+---
+
+## OQ-55 — Reading-disagreement is not trifurcated (Type A/B/C router absent)
+
+**Ω-type:** Ω_C (design — adopt the debugging-philosophy trifurcation as the disagreement router).
+
+**Status:** open
+**Origin:** Kernel/reading review, 2026-06-02.
+**Files:** `sheaf_status`/`h1_band`, `cs_pattern`, `cs_axiom_foreclosed`, `drift_events.pl`;
+spec in `docs/debugging_philosophy.md` §6.
+
+**Specific question:** When two readings of a kernel disagree, can the engine classify *why* per the
+three-stage diagnostic: **Type C** (index ambiguity — different declared seats, the correct case for
+genuine plurality → specify index, do not collapse), **Type A** (frame drift — criterion slides within
+one seat → frame-fix), **Type B** (structural — the kernel's commitments are inconsistent → fracture)?
+
+**Evidence so far:** The raw diagnostics exist (`sheaf_status`, `cs_pattern`, `cs_axiom_foreclosed`,
+`drift_events`) but no predicate maps a kernel's reading-set onto {ambiguity, drift, structure}. Natural
+wiring: OQ-54's reading-axis gluing test feeds it (H¹≠0 with each reading internally coherent ⇒ Type C;
+internal incoherence ⇒ Type B; same-seat criterion drift ⇒ Type A). Pairs **GAP-06**.
+
+**What resolution changes:** Turns "the readings disagree" from an undifferentiated fact into a routed
+verdict that says whether the disagreement is a specification choice (most plural kernels), a fixable
+drift, or a genuine fracture — the operational core of the kernel/reading engine.
+
+---
+
+## OQ-56 — Reading-stance taxonomy: the selection-seat is blocked on cross-kernel clustering
+
+**Ω-type:** Ω_P (preference/stakeholder — a declared, contestable selection premise, not derivable).
+
+**Status:** open
+**Origin:** Kernel/reading review, 2026-06-02.
+**Files:** readings (`kernel__reading_name`), `cs_kernel_registry.pl`.
+
+**Specific question:** The transpose query (OQ-53) and any cross-kernel comparison need a reading-stance
+vocabulary *comparable across kernels* (e.g. every kernel's naturalizing vs. coordination vs.
+power-revealing reading). What is that vocabulary?
+
+**Evidence so far:** Readings currently have free-form names (`isaac_covenant_reading`,
+`abolitionist_reading`) that do not align across kernels. Per Seat Theorem Cor 2b, the selection rule for
+*which* seats matter is a **declared, contestable premise, not a theorem** — so this is a human-ruled
+choice (Ω_P), not one the engine can derive. Critically, choosing it well requires first seeing **how
+readings actually cluster across kernels**, and that analysis was impossible until a kernel/reading corpus
+existed (landed 2026-06-02). Pairs **GAP-04** (step 2).
+
+**What resolution changes:** Unblocks OQ-53's transpose and OQ-55's cross-kernel reading comparison.
+**Sequencing:** the cross-kernel clustering analysis is the prerequisite step and is now possible; it
+should run before the taxonomy is declared, and the taxonomy is the user's to rule, not the engine's.
+
+---
+
+## OQ-57 — Drift report throws on a constraint missing `requires_active_enforcement/1`
+
+**Ω-type:** Ω_E (empirical — data-completeness defect; run the corpus, find the gap).
+
+**Status:** open
+**Origin:** Dynamic validation suite run, 2026-06-02 (surfaced while regression-checking the coupling
+liveness wire — pre-existing, unrelated to that change).
+**File:** `drift_events.pl:230` (`drift_event/3` calls `narrative_ontology:requires_active_enforcement/1`).
+
+**Specific question:** `run_dynamic_suite` throws
+`existence_error(procedure, narrative_ontology:requires_active_enforcement/1)` for
+`kodashim_obligation__memorial_archival` during the lifecycle drift scan. Is this a missing **fact** for
+that one constraint (data-completeness gap in the rebuilt corpus), or a missing **predicate
+declaration** (`:- dynamic`/`:- discontiguous`) that would bite any constraint lacking the fact, masked
+in the live corpus only because other constraints happen to author it?
+
+**Evidence so far:** Witnessed pre-existing: the failure reproduces with the coupling-liveness edits
+reverted (`git stash` of `boltzmann_compliance.pl`/`json_report.pl`), and the failing frames
+(`drift_report` → `drift_events:230` → `narrative_ontology:requires_active_enforcement`) are in files
+untouched this session. `drift_event/3` calls the predicate **unguarded** (no `catch`, no existence
+check), so the constraint's drift scan aborts rather than degrading. The same field is emitted fine in
+the per-constraint JSON (`requires_active_enforcement` key), so the data exists for most constraints —
+consistent with a per-constraint authored-fact gap rather than a wholesale missing predicate. Build
+Discipline Pattern 5 lens: an unguarded call where absence should fail-closed/skip, not throw.
+
+**What resolution changes:** Either (a) author the missing fact for the affected constraint(s) and add a
+generation-template check, or (b) guard the call in `drift_events.pl:230` to treat an absent
+`requires_active_enforcement` as a defined default (skip / `false`) — which is the more robust fix if the
+predicate is legitimately optional. Diagnostic first: count how many corpus constraints lack the fact
+(`\+ narrative_ontology:requires_active_enforcement(C)`); a count >1 favors the guard, ==1 favors the
+data repair.
+
+---
+
 *Last updated: 2026-06-02. Add new items with sequential OQ-NN labels. Mark
 resolved items with **Status: resolved** and a resolution note rather than
 deleting — provenance matters.*

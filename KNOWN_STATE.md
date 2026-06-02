@@ -20,6 +20,44 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-02 — Coupling liveness profile wired into per-constraint JSON (seat structure, not just verdict)
+
+**What & why.** The Boltzmann coupling test computed scope-violations and power-violations
+separately inside `count_coupling_violations/4` and then summed them, discarding *which* observer
+index moves the verdict (Build-Discipline Pattern 1: produced-but-not-consumed). Now surfaced.
+
+**Changes (all behavior-preserving for the coupling score):**
+- `boltzmann_compliance.pl`: refactored `count_coupling_violations/4` to delegate to a new
+  `coupling_violation_components/5` (SOLE source of the violation logic — score path and the new
+  liveness predicate both route through it, so they cannot drift). Added + exported
+  `coupling_liveness/3` (rebuilds the Power×Scope grid, returns ScopeViolations, PowerViolations).
+- `json_report.pl`: `write_coupling_object/2` now emits `scope_violations`, `power_violations`,
+  `live_index` (`none|scope|power|both|inconclusive`) in the per-constraint `coupling` object.
+  No-epistemic-access constraints emit nulls + `inconclusive` (absence reported as absence, not
+  defaulted to a `(0,0)` "seat-free" reading).
+- Consumers (so it is not produced-but-not-consumed): `query.py` (row dict + `--detail` display),
+  `enhanced_report.py` (batch Identity block).
+
+**Witness.** Full pipeline regenerated (manifest `ae10e7e`, 50.3s, all steps ok). Positive control:
+engine-emitted `(scope_violations, power_violations)` matched an independent oracle
+(`/tmp/decomp_out.csv`, same filter) for **772/772**, 0 mismatches; `live_index` agrees with the
+(SV,PV) signs everywhere; 1 constraint correctly `inconclusive`. Corpus `live_index` distribution:
+both 591, none 87, power 87, scope 7, inconclusive 1 — `none` (87) tracks the ~90
+Boltzmann-compliant/invariant population.
+
+**Score behavior-preserving (witnessed).** Direct `cross_index_coupling` under the old code (parent
+`51612b0d`, pre-refactor) vs the new code on the same 772-constraint corpus is **byte-identical for
+773/773** (`/tmp/old_scores.csv` vs `/tmp/new_scores_direct.csv`, 0 mismatches) — the refactor sums the
+same components it now also exposes. The score path is unchanged; only the per-constraint JSON gained
+the liveness fields.
+
+**Framing note (corrected this session).** Boltzmann invariance is a *partial test for Mountain-ness*,
+not a pathology flag: an index-invariant verdict is seat-free/contentless (Seat Theorem §4), so
+`live_index=none` is Mountain-consistent and non-`none` = the verdict is seated on the observer index.
+The reading-axis analog is NOT built — see GAP-04/05/06 and OQ-53..56.
+
+---
+
 ## 2026-06-02 — Toy corpus finished 769/770; generator repair + 3 robustness fixes
 
 **Result.** The kernel-aware toy corpus is complete at **769/770** (ladder `beta_processed.txt`;
