@@ -1540,6 +1540,13 @@ scaffold→tangled 6, mountain→tangled 3, …). N=8 is the **masked-unknown po
 husk / abolition (metric=snare, sig=false_natural_law — same `:738` clause, non-unknown modal type)
 **stay tangled_rope** (guard does not over-fire). Validation suite 0 errors / 0 warnings.
 
+**Downstream consumption of the surfaced `unknown` — ruled in OQ-51 (2026-06-02):** now that `unknown`
+surfaces, `cohomological_obstruction`/`count_disagreeing_pairs` must treat it as **N/A, not a
+disagreeing type** (a constraint with <2 real-type seats → H1=N/A, not 0). That is a *consumption*
+rule for the honest `unknown` this OQ created — it does **not** re-suppress it here. Design + projected
+impact (26 constraints leave `manifest_presheaf`, 5 → undetermined) live in OQ-51's "What resolution
+changes"; scoped output-changing task, not yet built.
+
 **Opened by this work (escalated, not self-resolved):**
 1. **Taxonomy-coverage.** Does the type system need a band/type for the uncovered region
    χ∈(rope_ceil 0.35, tr_floor 0.40) and/or supp<tr_supp_floor 0.40 with χ/ε in the tangled band?
@@ -2143,11 +2150,37 @@ ignores off-chain mass and its magnitude is corpus-ephemeral. **Gate for the fal
 real W1 threshold (≥~0.05) rather than `1e-9`.
 
 **What resolution changes:**
-- **Engine question (new, from the 22):** should `orbit_vector`/`count_disagreeing_pairs` treat
-  `unknown` as a disagreeing type, or exclude it (abstention ≠ disagreement)? Excluding it would
-  reclassify all 22 out of `manifest_presheaf` and shrink the 98-strong manifest set by the
-  unknown-driven subset — a material change to the sheaf_status distribution. Decide alongside OQ-37
-  (do not re-suppress `unknown`; the question is how H1 *consumes* it, not whether `dr_type` emits it).
+- **Engine question — RULED 2026-06-02 (design decision, human): `unknown` is N/A, not a disagreeing
+  type.** "The data needed to run this diagnostic isn't available, where it isn't." So
+  `count_disagreeing_pairs` must count only pairs where *both* seats carry a real (non-`unknown`) type,
+  and a pair touching `unknown` is N/A — neither agreement nor disagreement. **Critical guard
+  (Pattern 5):** a constraint with **<2 real-type seats** must return **H1=N/A, not H1=0** — excluding
+  unknown-pairs naively makes an all-unknown constraint read as "glues perfectly" (genuine_sheaf), which
+  is absence-satisfying-the-gate. Fail-N/A on absence, not fail-0.
+
+  **Design (for the implementer):** `cohomological_obstruction/3` and `count_disagreeing_pairs` →
+  compute H0/H1 over the real-type seats only; if `RealSeats < 2` ⇒ H0=H1=`na` (insufficient data);
+  `sheaf_status/2` gains a 4th value (e.g. `undetermined_sheaf`/`insufficient_data`) for the N/A case —
+  **never** `genuine_sheaf`; `contextuality_fraction` = H1 / (count of comparable pairs), and `null`
+  when no comparable pairs (sub-decision: denominator = comparable-pairs vs fixed 6 — pick
+  comparable-pairs to match "N/A where data is absent"). H1 emits `null`/`na` in JSON, not `0`, for the
+  N/A case.
+
+  **Projected impact (from the corpus-stable vectors, n=771): 741/772 unaffected; 26 drop H1>0→0**
+  (≥2 real seats that agree — the 22-cell set, now 26 — moving `manifest_presheaf`→`genuine`/`fragile`,
+  a real partial global section, correct); **5 become H1=N/A** (<2 real seats; 1 all-unknown:
+  `catholic_church_1200`); **0 retain H1>0-reduced**. The 16 false-mountain rows (OQ-52) are untouched
+  (no unknown). So the 98-manifest set shrinks by ~26 and 5 leave the genuine/fragile space into a new
+  undetermined state.
+
+  **Status of the ruling: decided, not yet built — scoped output-changing task (declare-don't-build).**
+  ~30 consumers of `cohomological_obstruction`/`h1_band`/`contextuality_fraction`/`sheaf_status` (Prolog
+  + Python) and paper figures (v6.11–6.13 cite H1/contextuality) must move together; land under
+  output-changing-commit discipline with positive controls (an all-unknown constraint must reach
+  `undetermined`, not `genuine_sheaf`), then re-run the pipeline and reconcile the paper. Tied to OQ-37
+  (this is *how H1 consumes* the honest `unknown`; do **not** re-suppress `unknown` in `dr_type`). One
+  remaining sub-decision before building: the exact name/encoding of the N/A `sheaf_status` value and
+  the JSON representation of N/A H1.
 - **36 cell (resolved):** confirmed type-invariant MaxEnt drift for ~6 constraints, so W1 and H1 are
   **non-redundant** (W1 sees intra-type drift H1 cannot) — but the practical value is limited by W1's
   chain-conditional scope and corpus-dependence (above). The off-chain analogue (mass moving into
