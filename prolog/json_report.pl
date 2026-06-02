@@ -31,6 +31,7 @@
 :- use_module(maxent_classifier).
 :- use_module(grothendieck_cohomology).
 :- use_module(measurement_layer).
+:- use_module(sheaf_analysis, []).  % sheaf_status/2, called module-qualified
 :- use_module(diagnostic_summary).
 :- use_module(post_synthesis).
 :- use_module(drl_fpn, [fpn_ep/3, fpn_intrinsic/2]).
@@ -384,6 +385,12 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     (   catch(grothendieck_cohomology:cohomological_obstruction(C, _H0, H1), _, fail)
     ->  format(S, '      "h1_band": ~w,~n', [H1])
     ;   format(S, '      "h1_band": null,~n', [])
+    ),
+
+    % sheaf_status (discrete gluing regime: genuine_sheaf / fragile_presheaf / manifest_presheaf)
+    (   catch(sheaf_analysis:sheaf_status(C, SheafStatus), _, fail)
+    ->  format(S, '      "sheaf_status": "~w",~n', [SheafStatus])
+    ;   format(S, '      "sheaf_status": null,~n', [])
     ),
 
     % wasserstein transport (continuous complement to H1)

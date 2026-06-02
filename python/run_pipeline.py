@@ -814,11 +814,20 @@ def run_pipeline(
     def _manifest_step():
         manifest = build_manifest(run_at)
         inject_manifest(OUTPUTS_DIR / "pipeline_output.json", manifest)
+        # Sidecar provenance for orbit_data.json. orbit_data.json is a pure
+        # id->orbit dict consumed by iterating readers (game_theory_*, sheaf_audit,
+        # extract_corpus_data, normalize_orbit_ids, meta_reporter,
+        # container_typology_analysis), so a sibling "manifest" key cannot be
+        # injected in-file. The sidecar carries the SAME manifest dict, making
+        # orbit_data.json provably the same run as pipeline_output.json.
+        orbit_manifest_path = OUTPUTS_DIR / "orbit_data.manifest.json"
+        with open(orbit_manifest_path, "w", encoding="utf-8") as f:
+            json.dump({"manifest": manifest}, f, indent=2)
         orbits_path = OUTPUTS_DIR / "product_site_orbits.json"
         check_orbits_corpus_hash(orbits_path)
         if progress:
             progress("pipeline",
-                     f"[MANIFEST] Stamped pipeline_output.json: "
+                     f"[MANIFEST] Stamped pipeline_output.json + orbit_data.manifest.json: "
                      f"run_at={manifest['pipeline_run_at']}, "
                      f"commit={manifest['code_commit_short']}, "
                      f"n={manifest['n_constraints']}, dirty={manifest['code_dirty']}")

@@ -20,6 +20,50 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-02 — `sheaf_status` now persisted (W1×sheaf join built); orbit provenance is a sidecar
+
+**If you are editing `json_report.pl`, `run_pipeline.py`'s `_manifest_step`, or anything that reads
+`orbit_data.json` — read this.** Two additive changes landed plus a new join tool. The pipeline ran
+clean afterward (exit 0, all steps `ok`).
+
+**1. `json_report.pl` now emits `sheaf_status` per constraint (closes a produced-but-not-consumed
+gap).** `sheaf_analysis:sheaf_status/2` (`sheaf_analysis.pl:54-63`: `manifest_presheaf` if H1>0; else
+`fragile_presheaf` if Arakelov height > corpus p75 threshold; else `genuine_sheaf`) was computed but
+never written to disk — only `h1_band` was. Added a `sheaf_status` emit beside the `h1_band` block
+(after `json_report.pl:387`) and `:- use_module(sheaf_analysis, []).` (after `:33`; called
+module-qualified). Additive only — the `sheaf_status/2`, cohomology, and W1 predicates are untouched.
+Live result at n=563: `manifest_presheaf` 98 / `fragile_presheaf` 100 / `genuine_sheaf` 366; emit-sanity
+holds (manifest count == h1_band>0 count == 98).
+
+**2. `run_pipeline.py:_manifest_step` writes the `orbit_data.manifest.json` sidecar.** Same
+`build_manifest(run_at)` dict as `pipeline_output.json`, so `orbit_data.json` is provably the same
+run. **Tripwire (silent-corruption risk):** `orbit_data.json` provenance lives in the **sidecar, NOT
+in-file**. Do **not** `inject_manifest` a `"manifest"` key into `orbit_data.json` — it is a pure
+`id→orbit` dict that **7 consumers iterate** with bare `.items()` (`game_theory_nash.py:158`,
+`game_theory_mixed_strategy.py:89`, `sheaf_audit.py:310`, `container_typology_analysis.py:259`,
+`meta_reporter.py:100`, `extract_corpus_data.py:250`, `normalize_orbit_ids.py:43`); an inline
+`"manifest"` key would be silently read as a fake constraint by all of them. This is recorded as a
+design gap (`design_gaps.md` GAP-03). See OQ-51/OQ-52 in `ISSUES.md` for the findings.
+
+**3. Bare-context vacuity extends to `sheaf_status` / Arakelov, not just W1.** A smoke test that ran
+`sheaf_status/2` after `[stack] + load_all_testsets` but **without** `maxent_multi_run` returned
+`fragile_presheaf=0` (vs 100 in the full pipeline). Arakelov height reads
+`maxent_distribution_raw/3`, populated only by the MaxEnt run, so heights degenerate and the p75
+fragile/genuine split collapses in a bare context — the same vacuous-path trap as W1
+(`test_harness.pl:76`), one layer over. **Compute `sheaf_status` only on the maxent-first pipeline
+path; a bare `[stack]` recompute is vacuous (reads as "no fragile presheaves").**
+
+**4. New tool `python/w1_sheaf_join.py` (read + join, no Prolog recompute).** Reads
+`pipeline_output.json` (W1=`wasserstein_total_fracture`, `h1_band`, `sheaf_status`) + `orbit_data.json`
+(shift vector), guarded same-run by the sidecar; merges on id, sorts descending by W1, writes
+`outputs/w1_sheaf_join.{json,md}` (full 564-row ranked table + 2×2 concordance + per-id off-diagonal
+rows + the four positive controls). Run at n=563 (commit b5ccee0): W1 sum 33.47, nonzero 112, max
+1.904589 (`privilege_architecture_coordination`). **W1-max field-identity CONFIRMED**
+(`wasserstein_total_fracture` = sum of the 3 canonical edges, proven on the argmax); the recon's ~4.7
+does **not** reproduce and appears nowhere in the repo as a W1 value — likely the longer tail of the
+larger archived `testsets_3000` (3,380), **not** staleness or field-misidentification (testsets_3000
+max unverified). 2×2 concordance: 58 off-diagonal (36 with H1=0∧W1>0, 22 with H1>0∧W1≈0) — see OQ-51.
+
 ## 2026-06-02 — Dirac Axis-1 (`derived_from/3`) removed → design gap; `gauge_fixed/3` straggler fixed
 
 **If you are editing `dirac_classification.pl` or looking for primary/secondary constraint

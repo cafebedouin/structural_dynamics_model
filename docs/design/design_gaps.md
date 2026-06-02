@@ -153,3 +153,44 @@ trajectory-shape one. So the capability is genuinely absent, not merely relocate
 **Status:** Deferred. Apparatus removed (`ef92a61d`); gap recorded here. Whether born-vs-glide is
 wanted is a framework-direction decision (does the committer axis want a retrospective
 trajectory-shape diagnostic beside its prospective attractor?), not a code fix.
+
+---
+
+## GAP-03 — `orbit_data.json` cannot carry an in-file manifest (provenance is sidecar-only)
+
+**The capability:** The repo's manifest convention (see `CLAUDE.md`, "Pipeline Output Manifest
+Convention") is that a pipeline-output JSON carries a top-level `manifest` key stamping run
+provenance (timestamp, corpus counts, commit, dirty flag), injected by `run_pipeline.py`'s
+`inject_manifest`. `pipeline_output.json` has it. The intended uniform capability is: *every pipeline
+output is self-describing — open the file, read its manifest, know the run.* `orbit_data.json` does
+**not** have this, and by construction **cannot**.
+
+**Why it is absent:** `orbit_data.json` is a pure `id → {orbit_signature, contexts}` dict consumed by
+**7 readers that iterate it with bare `.items()`** (`game_theory_nash.py:158`,
+`game_theory_mixed_strategy.py:89`, `python/audits/sheaf_audit.py:310`,
+`container_typology_analysis.py:259`, `python/reports/queries/meta_reporter.py:100`,
+`extract_corpus_data.py:250`, `normalize_orbit_ids.py:43`). `inject_manifest` prepends a sibling
+`"manifest"` key; into this file that key would be silently iterated as a **fake constraint** by all
+7 — the exact absence-presenting-as-presence failure this ledger guards against, except here the
+*presence* (a junk "manifest" pseudo-constraint) is what would be injected. The id-keyed schema has
+no reserved namespace for metadata, so no sibling key is safe.
+
+**What was built (the honest deferral):** rather than restructure the schema (a nested
+`{"manifest":…, "orbits":{…}}` would break *all* consumers, including the `.get(cid)` ones) or patch
+7 iterating call sites with an old-vs-new diff each (large blast radius for a read-only provenance
+need), provenance was externalized to a **sidecar**: `run_pipeline.py:_manifest_step` writes
+`orbit_data.manifest.json` carrying the *same* `build_manifest(run_at)` dict in the same step, so the
+two files are provably the same run. Consumers that need the join-provenance read the sidecar
+(`python/w1_sheaf_join.py` asserts sidecar-manifest == pipeline-manifest before merging); the 7
+iterators are untouched.
+
+**What closing the gap would require:** a reserved-namespace decision for orbit-style id-keyed
+outputs — either (a) migrate all id-keyed pipeline JSONs to a `{"manifest":…, "<payload-key>":{…}}`
+envelope and update every consumer (a corpus-wide schema migration, justified only if more id-keyed
+outputs need in-file provenance), or (b) ratify the sidecar as the standing convention for id-keyed
+outputs and document it beside the manifest convention. Until then the sidecar is the rule for
+`orbit_data.json`.
+
+**Status:** Deferred by sidecar. The capability (uniform in-file manifest) is absent for id-keyed
+outputs by consumer constraint, not by oversight. Tripwire in `KNOWN_STATE.md` (2026-06-02) so no one
+re-attempts the inline injection.

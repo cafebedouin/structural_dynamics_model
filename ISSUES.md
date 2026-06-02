@@ -2015,6 +2015,97 @@ to OQ-44 (engine-wide no-gate-satisfied-by-absence), build_discipline Pattern 5.
 
 ---
 
+## OQ-51 — Discrete (H1) vs continuous (W1) obstruction disagree on 58 constraints: what does the off-diagonal mean?
+
+**Ω-type:** Ω_C (design choice — whether/how to reconcile two obstruction measures that the framework
+calls complements).
+
+**Status:** open
+**Origin:** W1 × sheaf_status join, 2026-06-02 (n=563, commit b5ccee0). Tool:
+`python/w1_sheaf_join.py`; output `outputs/w1_sheaf_join.{json,md}`.
+**Files:** `prolog/grothendieck_cohomology.pl:149` (`cohomological_obstruction/3`, H1),
+`prolog/measurement_layer.pl:264` (`wasserstein_total_fracture/2`, W1),
+`prolog/json_report.pl:389` (calls W1 the "continuous complement to H1").
+
+**Specific question:** H1 (count of disagreeing context-pairs on the 4-point site) and W1 (transport
+cost between MaxEnt distributions across the power axis) are framed as discrete/continuous readings of
+the *same* gluing failure — so H1=0 should track W1≈0 and H1>0 should track W1>0. The join's 2×2
+concordance shows **58 of 563 off-diagonal**:
+
+| | W1≈0 | W1>0 |
+|---|---|---|
+| **H1=0** | 430 | **36** |
+| **H1>0** | **22** | 76 |
+
+What do the two off-diagonal cells mean, and is the "complement" framing (`json_report.pl:389`) exact
+or only approximate?
+
+- **36 with H1=0 ∧ W1>0** (sections glue, distributions still far apart). The top ones —
+  `monopoly_rulebook__tournament_orthodoxy_reading` (W1=1.79), `lausanne_minority_protections__expansive_reading`
+  (1.68), `licensing_statute_mandate__public_safety_coordination` (1.30) — read **uniform
+  `tangled_rope` across all 4 seats** (so H1=0 by type-agreement) yet carry the corpus's *highest* W1
+  outside the manifest set. Hypothesis: H1 is computed from the discrete *type* per context
+  (`orbit_vector` → `type_at_context`), which is invariant under intra-type distributional drift,
+  while W1 measures the MaxEnt mass shift that the type label discards. If so, W1>0 ∧ H1=0 is the
+  *expected* signature of "same type, drifting distribution," not a contradiction — and these 36 are
+  the constraints where the type label hides the most movement.
+- **22 with H1>0 ∧ W1≈0** (types disagree across seats, but transport mass barely moves). Hypothesis:
+  adjacent-type disagreements whose MaxEnt distributions are near-identical (the disagreement is a
+  threshold-crossing, not a mass relocation).
+
+**Evidence so far:** all 58 ids with per-id W1/H1/sheaf_status are listed in
+`outputs/w1_sheaf_join.md` ("Off-diagonal rows"). On-diagonal bulk is 506/564, so the measures
+*largely* coincide; the 58 are the residual the complement-framing does not cover.
+
+**What resolution changes:** if the off-diagonal is structural (type-invariant drift vs
+threshold-crossing disagreement), the paper should state W1 and H1 as **non-redundant** measures (W1
+sees intra-type drift H1 cannot), not as exact complements — and the 36 "type glues, mass moves"
+constraints become a named phenomenon. If instead it is an artifact (e.g. W1 thresholding, or MaxEnt
+contexts not matching the 4 canonical type contexts), it is a calibration bug. Diagnostic: for the 36,
+compare per-seat MaxEnt distributions against per-seat types to confirm same-type/different-distribution.
+
+## OQ-52 — False-mountain cross: do the naturalized→snare manifest rows have an authored beneficiary?
+
+**Ω-type:** Ω_C (design choice — what the false-mountain / false-summit read is *for*, and whether the
+beneficiary channel is the right disqualifier). Related: OQ-43 (NL certifications mean "no beneficiary
+*authored*," not "none exists"), OQ-50 (false-summit detector repaired but post-fix firings unwitnessed
+at scale).
+
+**Status:** open
+**Origin:** W1 × sheaf_status join, 2026-06-02; the flagged forward step from that build. Tool to
+extend: `python/w1_sheaf_join.py` (join `sheaf_status × beneficiary/victim`).
+**Files:** `prolog/sheaf_analysis.pl:54-63` (`sheaf_status/2`), beneficiary channel
+(`narrative_ontology:constraint_beneficiary/2`, `intent_power_change` — empty corpus-wide per OQ-43),
+false-summit detector (`drl_core.pl:548`, repaired — see KNOWN_STATE.md 2026-06-02).
+
+**Specific question:** Among the high-W1 `manifest_presheaf` rows, a distinct shift-vector signature
+recurs: **`naturalized` at the powerless seat collapsing to `snare` at the analytical seat** — e.g.
+`quran_9_5_scope__abrogating_universal` ([naturalized, snare, naturalized, snare], W1=1.20, H1=4),
+`article_9_war_renunciation__strict_pacifist_reading` ([naturalized, tangled_rope, snare, snare],
+W1=1.13, H1=5), `abrahamic_covenant__isaac_covenant_reading` ([naturalized, tangled_rope, rope, snare],
+W1=1.02, H1=6), `july_charter_sovereign_legitimacy__guided_nationalism_reading`, `doomsday_clock_metric__objective_index_reading`.
+This is the **false-mountain orbit**: a constraint that *reads as natural* (`naturalized`) to the
+powerless seat but is *seen as extraction* (`snare`) by the analytical seat. The question: **do these
+constraints carry an authored beneficiary/victim** — i.e., is the naturalized→snare gap backed by an
+authored extraction structure, or is it an observer-relative reading with no authored disqualifier?
+
+**Evidence so far:** the shift vectors are in `outputs/w1_sheaf_join.md` (top-15 and full table).
+The beneficiary channel (`intent_power_change`) is empty corpus-wide (OQ-43), so a naive
+beneficiary-count cross would pass-by-absence (Build Discipline Pattern 5) — **the cross must
+distinguish authored-zero from absent**, not read empty beneficiary as "no extraction."
+
+**What resolution changes:** this is the false-mountain-orbit read (the join's flagged forward step).
+If the naturalized→snare manifest rows have authored beneficiaries/victims, the false-mountain signature
+is *authored extraction visible only to the analytical seat* — a corrective-grade finding. If they do
+not (beneficiary absent), the signature is *observer-relative naturalization with no authored
+disqualifier* — commentary-grade, and the read must say so rather than imputing extraction.
+**Sequencing constraint:** run this on the **repaired** false-summit detector (OQ-50 core fix is
+resolved), and confirm the beneficiary cross fails-closed on absence before trusting any "no
+beneficiary" verdict. Do not scope this until OQ-51's H1/W1 framing is settled, since it selects rows
+by `manifest_presheaf` (H1>0) and high W1 — both measures whose relationship OQ-51 questions.
+
+---
+
 *Last updated: 2026-06-02. Add new items with sequential OQ-NN labels. Mark
 resolved items with **Status: resolved** and a resolution note rather than
 deleting — provenance matters.*
