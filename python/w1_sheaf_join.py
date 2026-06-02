@@ -41,9 +41,15 @@ W1_ZERO = 1e-9  # below this, W1 is "≈0"
 CONTEXT_ORDER = ["powerless", "moderate", "institutional", "analytical"]
 
 
+class JoinAborted(Exception):
+    """Raised when a precondition fails (missing input, same-run guard mismatch,
+    vacuous W1). Library-safe: callers (e.g. run_pipeline.py) catch this and
+    treat the join as a non-critical step; the __main__ wrapper turns it into
+    exit(1) for standalone use."""
+
+
 def die(msg):
-    print(f"\n[STOP] {msg}", file=sys.stderr)
-    sys.exit(1)
+    raise JoinAborted(msg)
 
 
 def load_json(path):
@@ -239,6 +245,19 @@ def main():
                  f"`code_dirty`: {m.get('code_dirty')}")
     lines.append(f"- same-run guard (orbit sidecar == pipeline): **{'PASS' if same_run else 'FAIL'}**\n")
 
+    lines.append("## W1 health — read before citing any magnitude (OQ-51)\n")
+    lines.append("- **W1 is chain-conditional**, not total variation: it is the earth-mover distance "
+                 "over `extraction_chain([mountain,rope,tangled_rope,snare])` after renormalizing by "
+                 "on-chain mass. Off-chain mass (scaffold/piton/naturalized) is **excluded** and lives "
+                 "in `wasserstein_incomparable_mass` (not joined here) — so **W1≈0 does not mean the "
+                 "distributions are identical**.")
+    lines.append("- **W1 is corpus-relative** (OQ-26): magnitudes shift with corpus size (observed "
+                 "~100× swings n=563→772). The ranking below is valid **only for the run manifest "
+                 "above**; do not inherit it across corpus changes.")
+    lines.append("- **H1 is corpus-stable** (per-constraint `dr_type`); for a stable ordering use the "
+                 "H1 column, not W1. `unknown` seats currently still inflate H1 (the unknown=N/A "
+                 "ruling is declared but unbuilt — OQ-51).\n")
+
     lines.append("## Positive controls\n")
     lines.append(f"1. **W1 non-vacuous:** sum={w1_sum:.4f}, nonzero={len(w1_nonzero)} "
                  f"of {len(w1_present)}; argmax = `{argmax_id}` @ W1={argmax_w1:.6f}.")
@@ -342,4 +361,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except JoinAborted as e:
+        print(f"\n[STOP] {e}", file=sys.stderr)
+        sys.exit(1)

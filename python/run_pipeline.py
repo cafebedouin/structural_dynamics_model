@@ -844,6 +844,16 @@ def run_pipeline(
 
     collect(_run_step("false_mountain_json", _false_mountain_json, progress))
 
+    # W1 × sheaf_status join — refresh the ranked obstruction artifact each run so it
+    # never goes stale against pipeline_output.json. Depends on the manifest step
+    # (its same-run guard reads orbit_data.manifest.json + pipeline_output.json's
+    # manifest). Non-critical: a guard failure raises JoinAborted, caught by _run_step.
+    def _w1_sheaf_join():
+        import w1_sheaf_join
+        w1_sheaf_join.main()
+
+    collect(_run_step("w1_sheaf_join", _w1_sheaf_join, progress))
+
     # Phase 5: PYTHON TIER 2 (parallel) — depends on corpus_data.json
     if (OUTPUTS_DIR / "corpus_data.json").exists():
         collect(_phase_python_tier2(progress, parallel))
