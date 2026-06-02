@@ -2168,12 +2168,26 @@ beneficiary channel is the right disqualifier). Related: OQ-43 (NL certification
 *authored*," not "none exists"), OQ-50 (false-summit detector repaired but post-fix firings unwitnessed
 at scale).
 
-**Status:** open
+**Status:** core question resolved (provisional, type-vector based, 2026-06-02); W1-magnitude ranking
+deferred behind the OQ-51 W1 rebuild. **Result:** of the 98 `manifest_presheaf`, **16 are
+false-mountain-shaped** (13 strict: powerless=`naturalized` ∧ analytical=`snare`; 3 loose:
+`naturalized`+`snare` both present), and **all 16 carry both an authored beneficiary AND an authored
+victim** — 0 observer-relative / no-disqualifier cases. So the naturalized→snare reading is **authored
+extraction** that reads as natural to the powerless seat and surfaces as `snare` only at the analytical
+seat (corrective-grade, not commentary-grade). Canonical signature: 7 of the 13 strict share the
+identical vector `[naturalized, tangled_rope, rope, snare]` at H1=6 — a monotone climb up the power
+axis. None of the 16 contain `unknown`, so this set is **disjoint from the OQ-51 unknown-artifact**.
+This rests only on (a) the four-seat type vectors (confirmed **100% corpus-stable**, 563/563 identical
+n=563→771) and (b) authored `constraint_beneficiary/victim` — **W1 was not used**, so the result does
+not inherit W1's corpus-ephemerality.
+
 **Origin:** W1 × sheaf_status join, 2026-06-02; the flagged forward step from that build. Tool to
 extend: `python/w1_sheaf_join.py` (join `sheaf_status × beneficiary/victim`).
-**Files:** `prolog/sheaf_analysis.pl:54-63` (`sheaf_status/2`), beneficiary channel
-(`narrative_ontology:constraint_beneficiary/2`, `intent_power_change` — empty corpus-wide per OQ-43),
-false-summit detector (`drl_core.pl:548`, repaired — see KNOWN_STATE.md 2026-06-02).
+**Files:** `prolog/sheaf_analysis.pl:54-63` (`sheaf_status/2`); the disqualifier channel is
+`narrative_ontology:constraint_beneficiary/2` + `constraint_victim/2` (authored, **populated** 552/504
+of 563; emitted via findall in `json_report.pl:302-312` as `[]` when none authored) — **note: this is
+NOT `intent_power_change`**, the empty channel of OQ-43; that conflation is resolved here; false-summit
+detector (`drl_core.pl:548`, repaired — see KNOWN_STATE.md 2026-06-02).
 
 **Specific question:** Among the high-W1 `manifest_presheaf` rows, a distinct shift-vector signature
 recurs: **`naturalized` at the powerless seat collapsing to `snare` at the analytical seat** — e.g.
@@ -2186,20 +2200,29 @@ powerless seat but is *seen as extraction* (`snare`) by the analytical seat. The
 constraints carry an authored beneficiary/victim** — i.e., is the naturalized→snare gap backed by an
 authored extraction structure, or is it an observer-relative reading with no authored disqualifier?
 
-**Evidence so far:** the shift vectors are in `outputs/w1_sheaf_join.md` (top-15 and full table).
-The beneficiary channel (`intent_power_change`) is empty corpus-wide (OQ-43), so a naive
-beneficiary-count cross would pass-by-absence (Build Discipline Pattern 5) — **the cross must
-distinguish authored-zero from absent**, not read empty beneficiary as "no extraction."
+**Evidence (provisional read done 2026-06-02):** selection on the stable type vectors
+(`outputs/orbit_data.json`, confirmed 563/563 identical n=563→771) × `sheaf_status` × authored
+`constraint_beneficiary/victim` from `pipeline_output.json`. Fail-closed check satisfied: the channel
+is genuinely authored (552/563 have ≥1 beneficiary, 504/563 ≥1 victim; `[]` = none authored, no
+fabricated default), so "all 16 authored" is a real finding, not pass-by-absence (Build Discipline
+Pattern 5). The 16: 13 strict + 3 loose (full list with H1 / vector / beneficiary+victim counts is in
+the session probe; reproducible by the selection above).
 
-**What resolution changes:** this is the false-mountain-orbit read (the join's flagged forward step).
-If the naturalized→snare manifest rows have authored beneficiaries/victims, the false-mountain signature
-is *authored extraction visible only to the analytical seat* — a corrective-grade finding. If they do
-not (beneficiary absent), the signature is *observer-relative naturalization with no authored
-disqualifier* — commentary-grade, and the read must say so rather than imputing extraction.
-**Sequencing constraint:** run this on the **repaired** false-summit detector (OQ-50 core fix is
-resolved), and confirm the beneficiary cross fails-closed on absence before trusting any "no
-beneficiary" verdict. Do not scope this until OQ-51's H1/W1 framing is settled, since it selects rows
-by `manifest_presheaf` (H1>0) and high W1 — both measures whose relationship OQ-51 questions.
+**What resolution changes — ANSWERED (corrective-grade):** all 16 false-mountain-shaped manifest rows
+have authored beneficiaries *and* victims → the naturalized→snare signature is **authored extraction
+visible only to the analytical seat**, not observer-relative naturalization. No commentary-grade
+(no-disqualifier) cases exist in the current corpus. The provisional read is complete on the stable
+inputs.
+
+**Deferred (Option-1, before any W1-magnitude claim):** the *magnitude* of each false-mountain
+fracture (how hard it cleaves) needs the OQ-51 W1 rebuild — snapshot-pinned, `incomparable_mass`
+joined, real threshold — because inherited W1 is chain-conditional and corpus-ephemeral. The H1
+ranking (H1=6 strongest; the 7 `[naturalized,tangled_rope,rope,snare]` monotone-climb rows) is the
+**stable** ranking to use until then. The original "high-W1" selection criterion is **dropped** in
+favor of the type-vector signature, which is corpus-stable.
+**Sequencing satisfied:** ran on the repaired false-summit detector (OQ-50 core fixed); selects by
+type-vector shape (stable) not W1; fail-closed check passed. OQ-51 framing is now settled (both corners
+explained), so the prior "do not scope until OQ-51 settled" gate is lifted.
 
 ---
 
