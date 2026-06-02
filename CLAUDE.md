@@ -244,6 +244,15 @@ manifest convention exists so audits *can* cite provenance but nothing enforces 
 do. **Rule: a producer is not done until something consumes its output.** When you add a
 step that writes data, either wire the consumer in the same change or add a check that
 fails loudly when the output is unconsumed. A meter with no dial is not a meter.
+**And consumed-once is not kept-fresh:** wire every new producer/consumer into
+`python/run_pipeline.py` in dependency order, and re-certify the *whole transitive chain*
+downstream of your insertion point — anything `enhanced_report.py` reads flows
+`pipeline_output.json` → `enrich` → `enriched_pipeline.json` → `enhanced_report.py`, and a
+post-process the orchestrator never re-runs (e.g. the `w1_sheaf_join` artifact, which froze
+at n=563 while the corpus grew to 772) silently goes stale and reads as current. Make
+freshness *checkable*: stamp the run manifest into co-produced artifacts (the
+`orbit_data.manifest.json` sidecar) and assert same-run before joining. See
+`build_discipline.md` Pattern 1.
 
 **2. One-canonical-thing-became-two (the silent fork).** A file or record gets copied to
 a scratch/test location, edited, and now two versions exist with no queryable fact saying

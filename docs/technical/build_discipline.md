@@ -58,10 +58,36 @@ consumer, so nothing fails — the information just sits unused.
   query. The cross-reading machinery therefore could not gather a kernel's readings.
 - The pipeline manifest convention exists so audits *can* cite provenance, but nothing
   enforces that an audit actually does.
+- `python/w1_sheaf_join.py` wrote `outputs/w1_sheaf_join.{json,md}` as a post-process that
+  `run_pipeline.py` never re-ran. A later pipeline run refreshed `pipeline_output.json`
+  (n=563 → 772) but left the join frozen at the old snapshot — its embedded manifest still
+  read `n=563 / b5ccee0` while the corpus had moved on. The artifact had *consumed* its
+  inputs once, so it looked done; nothing re-ran it, so it silently went stale and read as
+  current. Fixed by wiring it into `run_pipeline.py` after the manifest step.
 
 **Rule:** a producer is not done until something consumes its output. When you add a step
 that writes data, in the same change either wire the consumer or add a check that fails
 loudly when the output is left unconsumed.
+
+**Sub-pattern — consumed-once ≠ kept-fresh (the staleness chain).** Wiring a consumer *once*
+is not enough: a derived artifact is stale the instant any input is regenerated without it.
+The bar is not "a consumer exists somewhere" but "the orchestrator (`run_pipeline.py`) re-runs
+the consumer whenever upstream changes." Three obligations when you add to the chain:
+
+- **Wire it into `run_pipeline.py` in dependency order.** Place a new step after the steps
+  that produce its inputs and before the steps that read its output. A step run out of order
+  reads stale inputs and writes a stale-but-error-free result. Canonical chain to respect:
+  `pipeline_output.json` (Prolog) → `enrich_pipeline_json.py` → `enriched_pipeline.json` →
+  `enhanced_report.py`; anything `enhanced_report.py` newly consumes must have its producer
+  wired and ordered upstream of it, not just exist.
+- **Certify the whole transitive chain, not just your link.** Second-order staleness: if your
+  step reads an artifact that can itself go stale, or writes one others read, staleness
+  propagates. Adding a node means re-running and re-certifying everything downstream of the
+  insertion point, out to the leaves — not only the node you touched.
+- **Make freshness checkable, not assumed.** Stamp the same run manifest into co-produced
+  artifacts (the `orbit_data.manifest.json` sidecar) and have consumers assert same-run before
+  joining (the `w1_sheaf_join` guard). Then a mismatch fails loudly instead of yielding a
+  stale join that reads as current.
 
 **Diagnostic — find orphaned outputs:**
 ```bash
@@ -77,6 +103,17 @@ done
 for f in prolog/testsets/*.pl; do
   grep -q cs_story_uid "$f" && ! grep -q cs_kernel_id "$f" && basename "$f"
 done
+
+# stale derived artifacts: embedded manifest older than the latest pipeline run
+python3 - <<'PY'
+import json, glob, os
+ref = json.load(open("outputs/pipeline_output.json"))["manifest"]["pipeline_run_at"]
+for f in glob.glob("outputs/*.json"):
+    try: m = json.load(open(f)).get("manifest")
+    except Exception: continue
+    if m and m.get("pipeline_run_at") and m["pipeline_run_at"] != ref:
+        print(f"STALE: {os.path.basename(f)} @ {m['pipeline_run_at']} (pipeline @ {ref})")
+PY
 ```
 
 ---
