@@ -2703,6 +2703,17 @@ conventional/deontological and B inverts to deontological/conventional → `key_
 `prolog/tests/test_axiom_diff.pl` (4, all pass). **OQ-59 fully disposed** (#1–#4 done); the only residue
 is the flagged prose at `governance_quality_reading.pl:226` (a content pass, not tracked here).
 
+**OQ-58 progress (2026-06-03, never-generated generation, commit `64cc249a`):** generating the 300
+never-generated kernel readings surfaced **16 dangling `cs_reading_relation` edges** via the integrity
+sweep (which the no-scope generation path does NOT run automatically — see KNOWN_STATE.md 2026-06-03).
+**5 repaired** (naming-variant typos of readings that DID generate, fixed across `cs_reading_relation`
++ `affects_constraint` + the json `sibling_readings` list, json AND pl, with per-edit count guards):
+`vatican composite_reading→composite_overdetermination_reading`; `federation integration/sovereignty_primary_reading→`
+strip spurious `_reading`; `ai_safety ai_safety_*_reading→` strip spurious `ai_safety_` prefix. Witnessed
+16→8 after repair; corpus loads 1103. The **residual 8 are quarantined collateral of 4 hard-fail readings**
+(`outputs/no_scope_runs/failures.json`) — they target readings that failed generation, so they resolve only
+if those readings are regenerated, NOT a disposition question. Quarantine: `prolog/cs_reading_relation_quarantine.json`.
+
 ---
 
 *Last updated: 2026-06-02. Add new items with sequential OQ-NN labels. Mark

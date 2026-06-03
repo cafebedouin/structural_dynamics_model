@@ -102,3 +102,17 @@ each a separate pass (see ISSUES.md OQ-59 and KNOWN_STATE.md 2026-06-03):
   `cs_axiom_grounding/3` (the two absolute readings name axioms differently and differ on grounding —
   conventional vs deontological — a real axiom-level disparity under a semantic key). Design after #2's
   cell-layer key pattern so the alignment-seat isn't solved twice inconsistently.
+
+## never-generated kernels generated — follow-on work (added 2026-06-03)
+
+300/304 never-generated kernel readings generated + committed (`64cc249a`); corpus 803→1103. See
+KNOWN_STATE.md 2026-06-03 and ISSUES.md OQ-58 progress. Open follow-ons:
+
+- **#1 Pipeline reclassify.** Re-run `python/run_pipeline.py` so `outputs/pipeline_output.json` reflects
+  the 1103-testset corpus (was stale at generation time). *(Run 2026-06-03 — confirm manifest `n_constraints`.)*
+- **#2 Regen-polish the lint backlog.** ~268 lint warnings across the new readings, via
+  `regenerate_stories.py`: `LOW_THEATER_RATIO` (221), `MISSING_SUNSET_CLAUSE` (109),
+  `INVALID_COORDINATION_TYPE` (95 — model invented `identity_coordination`/`attachment_coordination`).
+- **#3 The 4 hard-fail readings.** Fail-closed semantic-schema rejections that reproduce across rolls
+  (`outputs/no_scope_runs/failures.json`); need a prompt/schema-bound fix, not a re-roll. Clearing them
+  also resolves the 8 quarantined collateral edges (OQ-58).

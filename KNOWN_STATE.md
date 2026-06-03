@@ -20,6 +20,46 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-03 — never-generated kernels generated (300/304); corpus 803→1103
+
+The never-generated set (SCOPE-declared contested kernels with **zero** declared readings
+on disk) was examined read-only, then generated. Examination found the ~102 are
+overwhelmingly **run-to-run kernel-id + family-id naming drift over an already-covered
+contest space, not missing content** — generated anyway per the user's ruling that a
+same-topic sibling kernel is a *distinct* kernel (different reading-set + ε), an invariant
+probe, not a duplicate to prune. Committed `64cc249a`.
+
+- **Counts:** 304 declared readings seeded (101 kernels) → **300 generated** (298 + 2
+  re-roll); corpus testsets **803 → 1103**, loads exit 0. Tool:
+  `agent/build_never_generated_seeds.py` (sibling of `build_completion_seeds.py`, which
+  deliberately skips this set). Seed file `outputs/completion_seeds/never_generated_seeds.json`.
+- **4 hard-fail tail** (fail-closed semantic schema — out-of-bounds metric `0.08>max 0.05`,
+  invalid enum `'conceptual'`, required `'impact'`; reproduce across rolls →
+  `outputs/no_scope_runs/failures.json`): `animal_status_kernel__abolitionist_reading`,
+  `honor_satisfaction_substrate__cultural_contraction_reading`,
+  `dueling_disappearance_mechanism__contraction_reading`,
+  `total_war_possibility_space__space_contraction_reading`.
+
+**Tripwire (silent):** `generate_kernel_corpus.py` **no-scope mode does NOT run the OQ-58
+reading-relation integrity sweep** (`validate_reading_relation_integrity`) or
+axiom-contradiction emission — those only run in `--scope` mode. It stamps
+`cs_kernel_id`/`cs_story_uid` inline, so the files *look* complete, but dangling
+`cs_reading_relation`/`affects_constraint` edges are never checked. After ANY no-scope
+batch, run the sweep manually (see the snippet in this entry's session / memory
+`reference_no_scope_skips_integrity_sweep`). This run: 16→8 after repairing 5
+naming-variant edges; the 8 residual are collateral of the 4 hard failures (OQ-58).
+
+**Follow-ups open:** ~~`python/run_pipeline.py` reclassify against the larger corpus~~ —
+**DONE 2026-06-03**, manifest `n_constraints` 1103, all 41 stages ok, 80s; regen-polish the
+~268 lint warnings (LOW_THEATER_RATIO 221, MISSING_SUNSET_CLAUSE 109, INVALID_COORDINATION_TYPE 95).
+
+**Note (pipeline side effect, expected):** `run_pipeline.py` regenerates
+`prolog/validation_suite.pl` from the live corpus (via `python_test_suite.build_suite()`,
+`OUTPUT_FILE = prolog/validation_suite.pl`). A **modified `validation_suite.pl` after any
+pipeline run is expected, not a hand edit** — it just re-synced its `test_case/4` list to the
+corpus. Do not investigate or `git checkout` it as a surprise change (it desyncs the suite).
+Same posture as `pipeline_output.json`.
+
 ## 2026-06-03 — `reading_diff.pl`: the cyclopean disparity operator (OQ-59 disposition)
 
 **New module `prolog/reading_diff.pl`** (wired into `stack.pl` diagnostic load list; queryable after
