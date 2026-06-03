@@ -340,13 +340,27 @@ predicates, not the corpus.
 **What closing the gap would require:** (1) a structural-class resolver mapping a target to its
 fingerprint class; (2) fail-closed consumers -- a network consumer must distinguish edge-to-interior,
 edge-to-resolved-class, and edge-to-unresolved (terminus), never silently traverse a phantom; (3)
-repair the 9 delimiter typos *first* so the frontier set is clean (else a typo resolves to / would
-regenerate an existing node -- straight into OQ-59); (4) decide whether the resolver keys on five
-structural dims or six -- `shift` is a different (constraint x fixed-context) space, and `coupling` is
-high-cardinality and possibly over-resolved (239/772), so it may be excluded or quantized. Open
+repair the delimiter typos *first* so the frontier set is clean (else a typo resolves to / would
+regenerate an existing node -- straight into OQ-59) -- **DONE 2026-06-03**: 10 `affects_constraint`
+edges (9 distinct targets; `paris_article_4_ndc__supranational_reading` is targeted twice) repaired,
+dangling 1710->1700, witnessed target-arg-only diff (branch `repair-affects-constraint-typos`); the
+same 9 strings in 6 `cs_reading_relation` edges are held as a separate OQ-58 batch. (4) **RULED
+2026-06-03 -- key on the five structural dims; exclude `shift` and `coupling`.** `coupling` is
+near-injective (239/772; the full 7-dim fingerprint is 872 classes at v5, ~3.9 constraints/class),
+giving almost no populated resolution targets. `shift` is excluded *not* as redundant -- it adds real
+splits (99->199 classes at v5) -- but because those splits are the wrong kind: it is a different
+(constraint x fixed-4-context) space, and adding it **doubles singleton-stranding** (v5 1.5%->3.0%,
+current 9.8%->14.4%) and halves class size, degrading exactly the populated-class property a resolver
+needs. The five structural dims give 99 classes at v5 with **98.5% of constraints in populated
+(non-singleton) classes**, and singleton-stranding *falls* with scale (current 9.8% -> v5 1.5%), so the
+resolver improves as the corpus grows. The ~half redundancy among the five (MI, `mi_structure.py`) is
+acceptable/robust, not a reason to drop dims. Witness: the 5-vs-6 singleton table, re-derivable from the
+fingerprint dump. Open
 questions: **OQ-58**, **OQ-59**; related untyped-edge gap: **GAP-01**.
 
-**Status:** Deferred; bounded-attractor basis analyzed 2026-06-02 (scripts above, all re-runnable on a
-fingerprint dump). **Drift framing held deliberately:** the post-saturation corpus is a *bounded state
+**Status:** Partially closed. Bounded-attractor basis analyzed 2026-06-02; typo repair done and the
+resolver keying ruled 2026-06-03 (items 3-4 above). **Remaining to close:** the resolver itself
+(item 1) and its fail-closed consumers (item 2). Scripts above re-runnable on a fingerprint dump.
+**Drift framing held deliberately:** the post-saturation corpus is a *bounded state
 set*; whether change over it has memory (Markov vs higher-order) is an **open measurement** pending
 `fingerprint_drift` velocity/acceleration -- not yet asserted.
