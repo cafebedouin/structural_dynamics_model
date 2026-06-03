@@ -136,7 +136,7 @@ narrative_ontology:cs_story_uid(westphalian_sovereignty__r2p_reading, 'e7c2a3f1-
 narrative_ontology:cs_kernel_codification('e7c2a3f1-9d4e-4b8a-b9e2-6f1c5a8d3e4b', formalized).
 narrative_ontology:cs_authority_grounding('e7c2a3f1-9d4e-4b8a-b9e2-6f1c5a8d3e4b', extraction).
 narrative_ontology:cs_interpretation_layer_present('e7c2a3f1-9d4e-4b8a-b9e2-6f1c5a8d3e4b').
-narrative_ontology:cs_reading_relation('e7c2a3f1-9d4e-4b8a-b9e2-6f1c5a8d3e4b', westphalian_sovereignty__absolutist_reading, forecloses).
+narrative_ontology:cs_reading_relation('e7c2a3f1-9d4e-4b8a-b9e2-6f1c5a8d3e4b', westphalian_sovereignty__absolute_sovereignty, forecloses).
 narrative_ontology:cs_reading_relation('e7c2a3f1-9d4e-4b8a-b9e2-6f1c5a8d3e4b', westphalian_sovereignty__governance_quality_reading, coexists_with).
 narrative_ontology:cs_axiom('e7c2a3f1-9d4e-4b8a-b9e2-6f1c5a8d3e4b', foundational, mass_atrocity_threshold_conditions_sovereignty).
 narrative_ontology:cs_axiom_status(mass_atrocity_threshold_conditions_sovereignty, holdable).
@@ -338,7 +338,7 @@ narrative_ontology:measurement(r2p_su_t15, westphalian_sovereignty__r2p_reading,
    ========================================================================== */
 
 narrative_ontology:coordination_type(westphalian_sovereignty__r2p_reading, enforcement_mechanism).
-narrative_ontology:affects_constraint(westphalian_sovereignty__r2p_reading, westphalian_sovereignty__absolutist_reading).
+narrative_ontology:affects_constraint(westphalian_sovereignty__r2p_reading, westphalian_sovereignty__absolute_sovereignty).
 narrative_ontology:affects_constraint(westphalian_sovereignty__r2p_reading, westphalian_sovereignty__governance_quality_reading).
 narrative_ontology:affects_constraint(westphalian_sovereignty__r2p_reading, unsc_permanent_member_veto_authority).
 narrative_ontology:affects_constraint(westphalian_sovereignty__r2p_reading, humanitarian_intervention_legitimacy).

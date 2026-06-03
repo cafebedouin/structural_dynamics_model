@@ -127,7 +127,7 @@ narrative_ontology:cs_story_uid(westphalian_sovereignty__governance_quality_read
 narrative_ontology:cs_kernel_codification('b07129d6-2ed3-4825-bad1-20431230422b', formalized).
 narrative_ontology:cs_authority_grounding('b07129d6-2ed3-4825-bad1-20431230422b', extraction).
 narrative_ontology:cs_interpretation_layer_present('b07129d6-2ed3-4825-bad1-20431230422b').
-narrative_ontology:cs_reading_relation('b07129d6-2ed3-4825-bad1-20431230422b', westphalian_sovereignty__absolutist_reading, coexists_with).
+narrative_ontology:cs_reading_relation('b07129d6-2ed3-4825-bad1-20431230422b', westphalian_sovereignty__absolute_sovereignty, coexists_with).
 narrative_ontology:cs_reading_relation('b07129d6-2ed3-4825-bad1-20431230422b', westphalian_sovereignty__r2p_reading, coexists_with).
 narrative_ontology:cs_axiom('b07129d6-2ed3-4825-bad1-20431230422b', foundational, governance_quality_correlates_sovereignty_legitimacy).
 narrative_ontology:cs_axiom_status(governance_quality_correlates_sovereignty_legitimacy, holdable).
@@ -318,7 +318,7 @@ narrative_ontology:measurement(wsov_grad_su_t20, westphalian_sovereignty__govern
    ========================================================================== */
 
 narrative_ontology:coordination_type(westphalian_sovereignty__governance_quality_reading, enforcement_mechanism).
-narrative_ontology:affects_constraint(westphalian_sovereignty__governance_quality_reading, westphalian_sovereignty__absolutist_reading).
+narrative_ontology:affects_constraint(westphalian_sovereignty__governance_quality_reading, westphalian_sovereignty__absolute_sovereignty).
 narrative_ontology:affects_constraint(westphalian_sovereignty__governance_quality_reading, westphalian_sovereignty__r2p_reading).
 narrative_ontology:affects_constraint(westphalian_sovereignty__governance_quality_reading, humanitarian_intervention_prerogative).
 narrative_ontology:affects_constraint(westphalian_sovereignty__governance_quality_reading, democratic_peace_hypothesis).

@@ -2577,7 +2577,11 @@ items graduate into the defensible backlog. *(Candidate: wire it as a non-gating
 **Ω-type:** Ω_E (empirical — detectable by scanning reading-name stems per kernel; a content/merge
 decision once sized).
 
-**Status:** sized (linter R3); **gradated/graduated ruled MERGE**; conditional/r2p held for a read.
+**Status:** **disposed (2026-06-03): preserve-and-diff, not merge** — operator built (`reading_diff.pl`);
+**edge-repair #1 DONE (2026-06-03)** — 4 `absolutist_reading` edges retargeted → `absolute_sovereignty`,
+R1 dangling 89→87, affects_constraint 1668→1666, corpus loads 803. Remaining: #3 corpus-wide run, #4
+axiom diff; plus 1 flagged prose mention (`governance_quality_reading.pl:226`) — a content judgment, not
+an edge. (Earlier: sized via linter R3; gradated→governance_quality_reading rename done.)
 **Origin:** OQ-58 narrative-disposition pass, Bucket C, 2026-06-02.
 **Files:** testset `.pl` (`cs_kernel_id`); `cs_kernel_registry:cs_kernel_obstruction/4`;
 detector `python/audits/reading_reference_linter.py` (R3).
@@ -2646,6 +2650,28 @@ stem-judgment needing a seat), and all of Bucket B (generate-vs-delete needs the
 `cross_kernel = 0` confirmed a *finding* (positive control: an injected cross-kernel target flags). Also
 noted: the same delimiter typo appears in `affects_constraint/2` (logos:340, paris:345) — a separate
 network-layer referential issue, NOT touched here.
+
+**DISPOSITION (2026-06-03): preserve-and-diff, not merge.** The user ruled against merging near-doctrine
+readings — averaging two readings is the cyclopean move; the disparity *is* the depth. Built
+`prolog/reading_diff.pl` (`reading_diff/6` + `report_pair/3`, authored-cells-only, kernel-agnostic): it
+partitions any two readings, per declared alignment key, into agreement (situation-fixed) / disparity
+(standpoint-set) / blind-spots (coverage gap), and ships an order-independent stability verdict
+(robustly_binocular / key_fragile / robustly_undersampled). Witnessed on the two westphalia↔westphalian
+**cross-kernel** pairs (the spellings are distinct sibling kernels per the user's ruling, NOT duplicates):
+absolute pair robustly_binocular (disparity piton↔rope at the establishment cell); graded + conditional
+pairs key_fragile (undersampled under exact, binocular under fuzzy_agent_power). See KNOWN_STATE.md
+2026-06-03 and `tests/test_reading_diff.pl`. **#1 edge-repair DONE (2026-06-03):** the 4 dangling
+`westphalian_sovereignty__absolutist_reading` edges (2 `cs_reading_relation` + 2 `affects_constraint`, in
+`governance_quality_reading.pl` lines 130/321 and `r2p_reading.pl` lines 139/341) retargeted →
+`westphalian_sovereignty__absolute_sovereignty` (alias ruled at lines 2560–2561 above). Witnessed:
+git diff shows only the target arg changed; R1 dangling **89→87**, affects_constraint **1668→1666**,
+`absolutist` absent from the dangling report (was 1); corpus loads 803, edges resolve to a loaded
+reading. **NOT repaired (flagged, content judgment):** the prose at `governance_quality_reading.pl:226`
+also names `westphalian_sovereignty__absolutist_reading` AND characterizes it ("binary and equal — Rope
+or Mountain from all perspectives") inconsistently with `absolute_sovereignty`'s authored cells
+(snare/tangled_rope/rope/mountain) — a narrative claim, not a mechanical edge, left for a content pass.
+**Still OPEN:** #3 corpus-wide twin run via `reading_diff` over the `outputs/cross_reading_diff.md`
+set; #4 axiom-level diff over `cs_axiom`/`cs_axiom_grounding`. See AGENDA.md.
 
 ---
 

@@ -82,3 +82,23 @@ Additional research-level questions (not in the structured tracker):
 
 - Pipeline refactors beyond Item I-1's mechanical signature change. The two MaxEnt sessions (clean vs accumulated) became consistent after the fix; further refactor of the dual-session architecture isn't justified by current findings.
 
+
+---
+
+## reading_diff operator — follow-on work (added 2026-06-03)
+
+Part #2 landed: `prolog/reading_diff.pl` (the cyclopean disparity operator) + `tests/test_reading_diff.pl`
+(10 tests pass), wired into `stack.pl`. OQ-59 disposed as preserve-and-diff. Three sequenced follow-ons,
+each a separate pass (see ISSUES.md OQ-59 and KNOWN_STATE.md 2026-06-03):
+
+- **#1 OQ-59 edge-repair — DONE 2026-06-03.** Retargeted the 4 dangling
+  `westphalian_sovereignty__absolutist_reading` edges → `__absolute_sovereignty`
+  (`governance_quality_reading.pl` 130/321, `r2p_reading.pl` 139/341). Witnessed: git diff = only target
+  arg; R1 dangling 89→87, affects_constraint 1668→1666, corpus loads 803, edges resolve. Flagged-not-
+  repaired: the prose mention at `governance_quality_reading.pl:226` (content judgment, separate pass).
+- **#3 Corpus-wide twin run.** After #1 + #2, run `reading_diff` across the `outputs/cross_reading_diff.md`
+  twin-candidate set — a binocular/undersampled census. Size only after seeing that set.
+- **#4 Axiom-level diff.** Lift the same agreement/disparity/blind partition to `cs_axiom/3` +
+  `cs_axiom_grounding/3` (the two absolute readings name axioms differently and differ on grounding —
+  conventional vs deontological — a real axiom-level disparity under a semantic key). Design after #2's
+  cell-layer key pattern so the alignment-seat isn't solved twice inconsistently.

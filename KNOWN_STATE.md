@@ -20,6 +20,58 @@ End-of-Session Documentation Review), not in CLAUDE.md.
 
 ---
 
+## 2026-06-03 — `reading_diff.pl`: the cyclopean disparity operator (OQ-59 disposition)
+
+**New module `prolog/reading_diff.pl`** (wired into `stack.pl` diagnostic load list; queryable after
+`[stack]`). Diffs two readings cell-by-cell over the closed `(P,T,E,S)` tuple, keyed on a **declared
+alignment relation** (the seat). Partitions into AgreementCells (situation-fixed = objective),
+DisparityCells (standpoint-set = the depth), BlindSpots (coverage gap). OQ-59 ruled **preserve-and-diff,
+not merge**: averaging two readings is the cyclopean move; the disparity is the depth.
+
+**Invariants a cold reader must not break:**
+- **Authored-cells-only.** Reads `constraint_indexing:constraint_classification/3` and (label-only)
+  `cs_kernel_id/2` — NEVER recomputed χ, NEVER `product_site_orbits.json`. The existing
+  `python/tests/cross_reading_diff.py` reads the computed export (full coverage → no blind-spots
+  possible) and is a *relative*, not this operator. Do not "unify" them onto the export.
+- **The regime is pair × key, not pair.** `report_pair` never emits a bare regime label; it tags each
+  per-key regime with its key and ships a **stability verdict** (`robustly_binocular` / `key_fragile` /
+  `robustly_undersampled`), defined **order-independently** (∀/∃ over the declared keys — well-defined
+  for any key set, chain or not). A verdict that omits its key is the manufactured-center failure
+  recurring *inside the tool*.
+- **Counting = vantage-groups (declared).** Headline counts are over aligned vantage-groups (equivalence
+  classes of the key); pair-level fan-out is reported separately as multiplicity. Pair-counting inflates
+  disparity with an alignment artifact. Consequence: fuzzy self-diff = **0 disparity vantages** (a reading
+  agrees with itself as a set-valued map) but **2 disparity pairs** in fan-out — the latter is the
+  documented-non-zero, NOT a regression.
+- **`all_keys` = `[exact, fuzzy_agent_power]` only** (a monotone chain). `weighted(Ws,Thr)` is opt-in
+  with an explicit spec — it has no vantage partition (tolerance relation, not transitive), so
+  `reading_diff/6` throws on it; use `aligned_pairs/5` / `report_pair/3`. The "blind non-increasing as
+  the key loosens" line is a chain-only **observation**, not part of the verdict.
+
+**Witnessed (exact key), cross-impl check in `tests/test_reading_diff.pl` (10 tests, all pass):**
+self-diff 6/0/0; absolute pair (cross-kernel) 4 agree / 1 disparity / 2 blind, disparity piton↔rope at
+`(institutional,civilizational,arbitrage,global)` → `robustly_binocular`; graded pair 3/0/6 exact,
+fuzzy headline 2 disparity / fan-out 5 → `key_fragile`; conditional pair (third probe) 4/0/6 exact,
+4/1/1 fuzzy → `key_fragile`.
+
+**Kernel ruling (user):** `westphalia_sovereignty` (3 readings) and `westphalian_sovereignty` (5) are
+**distinct sibling kernels, not a spelling-duplicate** (different reading-sets + ε calibration); both
+preserved. So the westphalia↔westphalian test pairs are **cross-kernel** invariant probes. `reading_diff`
+is kernel-agnostic by design. (Run with `run_tests(reading_diff)` to skip the ~626 pre-existing embedded
+testset-assertion failures that a bare `run_tests` sweeps up — those are authored-claim tests, unrelated.)
+Positive control on the wiring: stashed-baseline `run_tests` = 626 failed / 1440 passed, with-wiring =
+626 failed / 1450 passed (+10 mine, 0 new failures) — `stack.pl` change introduces no load-order regression.
+
+**OQ-59 #1 edge-repair DONE (2026-06-03).** Retargeted the 4 dangling
+`westphalian_sovereignty__absolutist_reading` edges → `__absolute_sovereignty`
+(`governance_quality_reading.pl` 130/321, `r2p_reading.pl` 139/341). Witnessed: git diff = only the
+target arg changed (4 lines); R1 dangling `cs_reading_relation` **89→87**, `affects_constraint`
+**1668→1666**, `absolutist` gone from the linter dangling report (was 1); corpus loads 803, edges resolve.
+**Left flagged (NOT repaired):** prose at `governance_quality_reading.pl:226` names the alias AND
+mis-characterizes it vs `absolute_sovereignty`'s authored cells — a content judgment for a later pass.
+
+---
+
 ## 2026-06-02 — Reading-reference linter + the "complete kernels, not patch edges" finding
 
 **Tool:** `python/audits/reading_reference_linter.py` — a reporter (not a fixer). Census of every
