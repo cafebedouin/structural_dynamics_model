@@ -130,7 +130,7 @@ narrative_ontology:cs_kernel_codification('2b0c6751-92d3-4f73-ac88-e5f05ccd8937'
 narrative_ontology:cs_authority_grounding('2b0c6751-92d3-4f73-ac88-e5f05ccd8937', extraction).
 narrative_ontology:cs_interpretation_layer_present('2b0c6751-92d3-4f73-ac88-e5f05ccd8937').
 narrative_ontology:cs_reading_relation('2b0c6751-92d3-4f73-ac88-e5f05ccd8937', john_1_1_logos__orthodox_christological, forecloses).
-narrative_ontology:cs_reading_relation('2b0c6751-92d3-4f73-ac88-e5f05ccd8937', john_1_1_logos_non_incarnational_monotheist, influences).
+narrative_ontology:cs_reading_relation('2b0c6751-92d3-4f73-ac88-e5f05ccd8937', john_1_1_logos__non_incarnational_monotheist, influences).
 narrative_ontology:cs_axiom('2b0c6751-92d3-4f73-ac88-e5f05ccd8937', foundational, logos_created_being).
 narrative_ontology:cs_axiom_status(logos_created_being, holdable).
 narrative_ontology:cs_axiom_grounding('2b0c6751-92d3-4f73-ac88-e5f05ccd8937', logos_created_being, empirically_contingent).

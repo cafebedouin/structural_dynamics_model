@@ -122,8 +122,8 @@ narrative_ontology:cs_story_uid(paris_article_4_ndc__sovereigntist_reading, 'par
 narrative_ontology:cs_kernel_codification('paris-a4-sov-2026-02-26', fixed_text).
 narrative_ontology:cs_authority_grounding('paris-a4-sov-2026-02-26', lineage).
 narrative_ontology:cs_interpretation_layer_present('paris-a4-sov-2026-02-26').
-narrative_ontology:cs_reading_relation('paris-a4-sov-2026-02-26', paris_article_4_ndc_supranational_reading, coexists_with).
-narrative_ontology:cs_reading_relation('paris-a4-sov-2026-02-26', paris_article_4_ndc_equity_reading, coexists_with).
+narrative_ontology:cs_reading_relation('paris-a4-sov-2026-02-26', paris_article_4_ndc__supranational_reading, coexists_with).
+narrative_ontology:cs_reading_relation('paris-a4-sov-2026-02-26', paris_article_4_ndc__equity_reading, coexists_with).
 narrative_ontology:cs_axiom('paris-a4-sov-2026-02-26', foundational, state_energy_sovereignty_preservable).
 narrative_ontology:cs_axiom_status(state_energy_sovereignty_preservable, holdable).
 narrative_ontology:cs_axiom_grounding('paris-a4-sov-2026-02-26', state_energy_sovereignty_preservable, deontological).

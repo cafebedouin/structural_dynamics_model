@@ -125,8 +125,8 @@ narrative_ontology:cs_story_uid(gelassenheit_separation__principle_reading, '127
 narrative_ontology:cs_kernel_codification('12787607-dc6e-42d5-ace8-27154c4ec3b7', fixed_text).
 narrative_ontology:cs_authority_grounding('12787607-dc6e-42d5-ace8-27154c4ec3b7', lineage).
 narrative_ontology:cs_interpretation_layer_present('12787607-dc6e-42d5-ace8-27154c4ec3b7').
-narrative_ontology:cs_reading_relation('12787607-dc6e-42d5-ace8-27154c4ec3b7', gelassenheit_separation_artifact_reading, coexists_with).
-narrative_ontology:cs_reading_relation('12787607-dc6e-42d5-ace8-27154c4ec3b7', gelassenheit_separation_consequence_reading, coexists_with).
+narrative_ontology:cs_reading_relation('12787607-dc6e-42d5-ace8-27154c4ec3b7', gelassenheit_separation__artifact_reading, coexists_with).
+narrative_ontology:cs_reading_relation('12787607-dc6e-42d5-ace8-27154c4ec3b7', gelassenheit_separation__consequence_reading, coexists_with).
 narrative_ontology:cs_axiom('12787607-dc6e-42d5-ace8-27154c4ec3b7', foundational, functional_isolation_sufficient).
 narrative_ontology:cs_axiom_status(functional_isolation_sufficient, holdable).
 narrative_ontology:cs_axiom_grounding('12787607-dc6e-42d5-ace8-27154c4ec3b7', functional_isolation_sufficient, deontological).
