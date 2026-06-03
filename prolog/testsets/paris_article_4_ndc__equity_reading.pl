@@ -341,8 +341,8 @@ narrative_ontology:measurement(ndc_equity_suppression_t15, paris_article_4_ndc__
    ========================================================================== */
 
 narrative_ontology:coordination_type(paris_article_4_ndc__equity_reading, resource_allocation).
-narrative_ontology:affects_constraint(paris_article_4_ndc__equity_reading, paris_article_4_ndc_sovereigntist_reading).
-narrative_ontology:affects_constraint(paris_article_4_ndc__equity_reading, paris_article_4_ndc_supranational_reading).
+narrative_ontology:affects_constraint(paris_article_4_ndc__equity_reading, paris_article_4_ndc__sovereigntist_reading).
+narrative_ontology:affects_constraint(paris_article_4_ndc__equity_reading, paris_article_4_ndc__supranational_reading).
 narrative_ontology:affects_constraint(paris_article_4_ndc__equity_reading, climate_finance_conditionality).
 narrative_ontology:affects_constraint(paris_article_4_ndc__equity_reading, manufacturing_emissions_outsourcing).
 

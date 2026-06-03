@@ -326,8 +326,8 @@ narrative_ontology:measurement(a51_prev_supp_t30, article_51_self_defense__expan
    ========================================================================== */
 
 narrative_ontology:coordination_type(article_51_self_defense__expansive_preventive_reading, enforcement_mechanism).
-narrative_ontology:affects_constraint(article_51_self_defense__expansive_preventive_reading, article_51_self_defense_narrow_armed_attack_reading).
-narrative_ontology:affects_constraint(article_51_self_defense__expansive_preventive_reading, article_51_self_defense_unable_unwilling_doctrine_reading).
+narrative_ontology:affects_constraint(article_51_self_defense__expansive_preventive_reading, article_51_self_defense__narrow_armed_attack_reading).
+narrative_ontology:affects_constraint(article_51_self_defense__expansive_preventive_reading, article_51_self_defense__unable_unwilling_doctrine_reading).
 narrative_ontology:affects_constraint(article_51_self_defense__expansive_preventive_reading, jus_ad_bellum_proportionality_constraint).
 narrative_ontology:affects_constraint(article_51_self_defense__expansive_preventive_reading, international_humanitarian_law_civilian_protection).
 

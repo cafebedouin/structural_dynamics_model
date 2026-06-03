@@ -297,8 +297,8 @@ narrative_ontology:measurement(gelassenheit_prin_su_t40, gelassenheit_separation
    ========================================================================== */
 
 narrative_ontology:coordination_type(gelassenheit_separation__principle_reading, enforcement_mechanism).
-narrative_ontology:affects_constraint(gelassenheit_separation__principle_reading, gelassenheit_separation_artifact_reading).
-narrative_ontology:affects_constraint(gelassenheit_separation__principle_reading, gelassenheit_separation_consequence_reading).
+narrative_ontology:affects_constraint(gelassenheit_separation__principle_reading, gelassenheit_separation__artifact_reading).
+narrative_ontology:affects_constraint(gelassenheit_separation__principle_reading, gelassenheit_separation__consequence_reading).
 
 % DUAL FORMULATION NOTE:
 % The gelassenheit separation kernel has three structurally distinct constraint readings. This file covers the principle reading (functional isolation rule). The artifact and consequence readings are separate constraint stories with different epsilon values reflecting different observables: the artifact reading measures which material objects the principle forbids (higher epsilon, more categorical); the consequence reading measures empirical correlation between technology use and contemplative quality (variable epsilon depending on specific technologies and communities). All three readings are linked via network.affects_constraints to enable cross-reading analysis and identify which reading dominates in specific communities or time periods.
