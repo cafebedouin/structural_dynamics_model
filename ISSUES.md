@@ -2547,14 +2547,21 @@ scoped-but-never-generated kernels** that are NOT completion targets (near-dupli
 exploratory decompositions — e.g. `state_killing_legitimacy`/`_authority`/`_execution_authority`). (2)
 **∩ live dangling edges** (manifest-declared AND actually referenced by the live corpus) → 30/25; drops
 the stale `westphalian__gradated_reading` (renamed → `governance_quality_reading` last turn — the
-manifest is stale). (3) **defer near-duplicate kernel pairs + the OQ-59 alias** — both live, each wanting
-the same reading, so completing both makes duplicates; a dedup ruling (which kernel survives) is the
-user's, like gradated/graduated: `constitutional_interpretive_authority`↔`constitutional_text`,
-`basic_law_interpretive_boundary`↔`_authority`, `geneva_conventions_protective_scope`↔`common_article_3_scope`,
-`us_constitution_interpretive`↔`_1787`, plus `westphalian__absolutist_reading` (OQ-59). **Group 1 =
-18 unambiguous readings / 16 kernels** (generating); **12 deferred** to the dedup ruling. Stale-manifest
-risk is general: a rename/merge must also update the SCOPE manifest, or the completion builder re-proposes
-the old name (the ∩-live-edges pass catches it, but it's a tripwire).
+manifest is stale). (3) **Group 1 = 18 unambiguous readings / 16 kernels** (generated, background-polled).
+
+**CORRECTION (2026-06-03) — the "near-duplicate kernel pairs" were NOT duplicates; I misdiagnosed from
+filename + shared-reading-name similarity (the unfalsified-diagnostic trap).** The kernel_id keys the
+reading, so a shared reading *name* means different things per kernel. Verified by reading the content:
+`basic_law_interpretive_boundary` (where the boundary between branches *sits*, ε=0.38) vs
+`_interpretive_authority` (who holds *final* authority, ε=0.52); `geneva_conventions_protective_scope`
+(the **whole** framework, scaling across AP I / AP II / Common Art. 3) vs `common_article_3_scope` (**just**
+Common Article 3's reach); `constitutional_interpretive_authority` (who decides) vs `constitutional_text`
+(how the text reads). All **distinct** — complete them all (**group 2 = 11 readings / 8 kernels**). The
+**only** genuine deferral is `westphalian__absolutist_reading` — a *within-kernel* alias
+(absolutist ≈ absolute_sovereignty, same kernel) → OQ-59 edge-repair, not a generate. **The same caution
+applies to the 103 never-generated kernels:** "near-named ⇒ duplicate" is the same trap — they need
+*content* examination before any prune, not a filename verdict. Stale-manifest tripwire stands: a
+rename/merge must update the SCOPE manifest too (the ∩-live-edges pass caught `gradated_reading`).
 
 **The commentary-only tail (98 readings / 49 kernels) is parked behind the defensible set — as the
 LINTER'S STANDING JOB, not "ignore."** `python/audits/reading_reference_linter.py` is the recurring
