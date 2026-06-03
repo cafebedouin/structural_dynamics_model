@@ -2516,12 +2516,24 @@ contrasting positions (`nws/nnws` = nuclear vs non-nuclear; `homoousios/homoious
 similar-substance — the iota that split Christendom; `created/uncreated` = opposite Qur'an-ontology
 positions; `arian/semi_arian`, `hanbali/hanafi`, etc. all DISTINCT). R3 is a **review-trigger, not a
 verdict**. Of the 9, **only `westphalian_sovereignty: gradated_reading ≈ graduated_sovereignty` is a
-confirmed duplicate** (both read sovereignty-legitimacy as graded by governance quality — same
-position, two names). **Ruling:** *merge* gradated/graduated (a content op — pick the survivor, redirect
-its edges incl. the held `absolutist_reading` Bucket-C edge, delete the dup; needs a survivor decision
-before the file op). **`conditional_sovereignty` vs `r2p_reading` held** — a real consistency
-sub-question (is R2P-specific distinct from general-conditional in this kernel's terms?), the user's
-read, not a default-duplicate.
+confirmed-looking duplicate by NAME (gradated ≈ graduated).
+
+**Content comparison (2026-06-02) — merge QUESTIONED, not confirmed** (R3's over-flag risk
+materializing on the one case I called a true dup). Reading both files in full:
+- `gradated_reading` — "Legitimacy Scaled to Domestic **Governance Quality**" (ε 0.58, claim
+  **tangled_rope**): legitimacy by *liberal-democratic governance values*; explicitly positions itself
+  *against* the absolutist and R2P readings.
+- `graduated_sovereignty` — "State **Capacity** as Legitimacy Threshold" (ε 0.58, claim **snare**):
+  legitimacy by *measurable administrative/technocratic capacity*; derives *from* R2P + capacity-building
+  development economics.
+
+Same STRUCTURE (graded sovereignty → external intervention) but a real difference of axis (values vs
+capacity — a state can be high-capacity/illiberal or low-capacity/democratic) and **different engine
+claims** (tangled_rope vs snare). So they may be **distinct readings that are merely near-named**, not a
+duplicate. **Merge direction is the user's to confirm against this comparison; until confirmed, do NOT
+merge** (the alternative fix is to rename for de-confusion and keep both). `conditional_sovereignty` vs
+`r2p_reading` **held distinct** — the text distinguishes them (gradated's own summary names absolutist
+and R2P as separate readings), so they do not collapse.
 
 **Specific question:** `westphalian_sovereignty` holds readings `[gradated_reading, graduated_sovereignty,
 absolute_sovereignty, r2p_reading, conditional_sovereignty]`. Several look like one position under

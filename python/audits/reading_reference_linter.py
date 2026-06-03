@@ -130,18 +130,22 @@ def rule_duplication(declared):
 
 
 def incompleteness_rate(danglings, declared):
-    """Collapse dangling refs to distinct (kernel, canonical missing-target)."""
-    missing = collections.defaultdict(set)  # kernel -> {canonical target}
-    edges_per = collections.Counter()
+    """Collapse dangling refs to distinct (kernel, canonical missing-target), and
+    record the in-degree = number of DISTINCT SOURCE readings that reference each
+    missing target. In-degree >= 2 means independent sibling readings corroborate
+    the missing reading (commentary + independent-edge); in-degree == 1 leans on a
+    single edge (commentary-only — where a one-off typo/noise can hide)."""
+    missing = collections.defaultdict(set)        # kernel -> {canonical target}
+    sources_per = collections.defaultdict(set)    # (kernel, canon) -> {distinct sources}
     for r in danglings:
         k = kernel_of(r.source)
         canon = r.target if "__" in r.target else f"{k}__{r.target}"
         missing[k].add(canon)
-        edges_per[(k, canon)] += 1
+        sources_per[(k, canon)].add(r.source)
     n_edges = len(danglings)
     n_missing = sum(len(v) for v in missing.values())
     n_kernels = len(missing)
-    return n_edges, n_missing, n_kernels, missing, edges_per
+    return n_edges, n_missing, n_kernels, missing, sources_per
 
 
 # ---------------------------------------------------------------------------
@@ -216,15 +220,28 @@ def main():
     print(f"   integrity does NOT require these to be declared readings. Reported for awareness, "
           f"not folded into the rate.")
 
-    n_edges, n_missing, n_kernels, missing, edges_per = incompleteness_rate(csr_dangling, declared)
+    n_edges, n_missing, n_kernels, missing, sources_per = incompleteness_rate(csr_dangling, declared)
     print(f"\n== INCOMPLETENESS RATE (cs_reading_relation only) ==")
     print(f"  {n_edges} dangling committer edges  ->  {n_missing} distinct missing readings  "
           f"across  {n_kernels} kernels")
-    multi = [(k, len(v)) for k, v in missing.items() if len(v) > 1]
-    print(f"  kernels missing >1 reading: {len(multi)}  (=> 'complete kernels' if large; "
-          f"'patch edges' if it's ~1 per kernel)")
-    for k, n in sorted(multi, key=lambda x: -x[1])[:15]:
-        print(f"    {k}: {n} missing  ({', '.join(sorted(s.split('__',1)[1] for s in missing[k]))})")
+
+    # Witness-count split: in-degree >= 2 (independent-edge corroborated) vs == 1.
+    strong = {kc for kc, srcs in sources_per.items() if len(srcs) >= 2}
+    weak = {kc for kc, srcs in sources_per.items() if len(srcs) == 1}
+    strong_kernels = {k for k, _ in strong}
+    weak_kernels = {k for k, _ in weak}
+    print(f"\n== WITNESS-COUNT SPLIT ==")
+    print(f"  in-degree>=2 (commentary + independent edges; DEFENSIBLE BACKLOG): "
+          f"{len(strong)} missing readings across {len(strong_kernels)} kernels")
+    print(f"  in-degree==1 (single edge; commentary-only — per-edge narrative check): "
+          f"{len(weak)} missing readings across {len(weak_kernels)} kernels")
+    print(f"\n  -- DEFENSIBLE BACKLOG (in-degree>=2), grouped by kernel --")
+    by_k = collections.defaultdict(list)
+    for (k, canon) in strong:
+        by_k[k].append((canon.split("__", 1)[1], len(sources_per[(k, canon)])))
+    for k in sorted(by_k, key=lambda k: -len(by_k[k])):
+        items = ", ".join(f"{r}(x{d})" for r, d in sorted(by_k[k]))
+        print(f"    {k}: {len(by_k[k])}  [{items}]")
 
 
 if __name__ == "__main__":
