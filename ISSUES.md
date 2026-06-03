@@ -2533,6 +2533,29 @@ skips.) Generation of the seeds is still the LLM step (Sonnet/API) — the fix o
 *complete*; the obstruction re-measure gate (author marriage_authority first, verify sensible movement)
 is unchanged.
 
+**FIRST BATCH DONE + GATE PASSED (2026-06-02).** marriage_authority's 2 dropped readings generated via
+Sonnet batch (`msgbatch_01YBozr…`, scoped to 2; commit `df3ebb63`). Obstruction moved sensibly: kernel
+3→5 readings, its dangling edges 6→0, `real_closure` H1r=4 (true structure), corpus quarantine 87→81,
+new readings author CANONICAL edges. Quality flags noted (one type-deviation Scaffold→tangled_rope; lint
+warnings) for a later regen-polish pass.
+
+**BACKLOG CURATED (2026-06-02) — the manifest count needed cleaning, not all 49 are generate targets.**
+New seed-builder `agent/build_completion_seeds.py` (scans manifests, enriches dropped-reading seeds with
+existing siblings' `json/` context). Curation passes: (1) **partial kernels only** (`existing>0`) — 28
+kernels / 35 readings; the broader manifest scan returns 132/344 because it also catches **103
+scoped-but-never-generated kernels** that are NOT completion targets (near-duplicate / superseded /
+exploratory decompositions — e.g. `state_killing_legitimacy`/`_authority`/`_execution_authority`). (2)
+**∩ live dangling edges** (manifest-declared AND actually referenced by the live corpus) → 30/25; drops
+the stale `westphalian__gradated_reading` (renamed → `governance_quality_reading` last turn — the
+manifest is stale). (3) **defer near-duplicate kernel pairs + the OQ-59 alias** — both live, each wanting
+the same reading, so completing both makes duplicates; a dedup ruling (which kernel survives) is the
+user's, like gradated/graduated: `constitutional_interpretive_authority`↔`constitutional_text`,
+`basic_law_interpretive_boundary`↔`_authority`, `geneva_conventions_protective_scope`↔`common_article_3_scope`,
+`us_constitution_interpretive`↔`_1787`, plus `westphalian__absolutist_reading` (OQ-59). **Group 1 =
+18 unambiguous readings / 16 kernels** (generating); **12 deferred** to the dedup ruling. Stale-manifest
+risk is general: a rename/merge must also update the SCOPE manifest, or the completion builder re-proposes
+the old name (the ∩-live-edges pass catches it, but it's a tripwire).
+
 **The commentary-only tail (98 readings / 49 kernels) is parked behind the defensible set — as the
 LINTER'S STANDING JOB, not "ignore."** `python/audits/reading_reference_linter.py` is the recurring
 referential-integrity + incompleteness check: run it as the corpus grows to (a) catch new dangling /
