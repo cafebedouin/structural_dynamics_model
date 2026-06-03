@@ -125,8 +125,8 @@ narrative_ontology:cs_story_uid(common_article_3_scope__icrc_customary_reading, 
 narrative_ontology:cs_kernel_codification('149df139-1e1b-419a-837e-e874073c8fd2', fixed_text).
 narrative_ontology:cs_authority_grounding('149df139-1e1b-419a-837e-e874073c8fd2', lineage).
 narrative_ontology:cs_interpretation_layer_present('149df139-1e1b-419a-837e-e874073c8fd2').
-narrative_ontology:cs_reading_relation('149df139-1e1b-419a-837e-e874073c8fd2', ca3_scope__state_centric_reading, coexists_with).
-narrative_ontology:cs_reading_relation('149df139-1e1b-419a-837e-e874073c8fd2', ca3_scope__expansive_human_rights_reading, influences).
+narrative_ontology:cs_reading_relation('149df139-1e1b-419a-837e-e874073c8fd2', common_article_3_scope__state_centric_reading, coexists_with).
+narrative_ontology:cs_reading_relation('149df139-1e1b-419a-837e-e874073c8fd2', common_article_3_scope__expansive_human_rights_reading, influences).
 narrative_ontology:cs_axiom('149df139-1e1b-419a-837e-e874073c8fd2', foundational, customary_law_determination_authority).
 narrative_ontology:cs_axiom_status(customary_law_determination_authority, holdable).
 narrative_ontology:cs_axiom_grounding('149df139-1e1b-419a-837e-e874073c8fd2', customary_law_determination_authority, conventional).

@@ -126,8 +126,8 @@ narrative_ontology:cs_story_uid(us_constitution_interpretive__originalist_readin
 narrative_ontology:cs_kernel_codification('9953918e-2e70-4de8-953c-284c7c0aceae', fixed_text).
 narrative_ontology:cs_authority_grounding('9953918e-2e70-4de8-953c-284c7c0aceae', lineage).
 narrative_ontology:cs_interpretation_layer_present('9953918e-2e70-4de8-953c-284c7c0aceae').
-narrative_ontology:cs_reading_relation('9953918e-2e70-4de8-953c-284c7c0aceae', us_constitution_interpretive_living_reading, coexists_with).
-narrative_ontology:cs_reading_relation('9953918e-2e70-4de8-953c-284c7c0aceae', us_constitution_interpretive_popular_constitutionalism_reading, influences).
+narrative_ontology:cs_reading_relation('9953918e-2e70-4de8-953c-284c7c0aceae', us_constitution_interpretive__living_constitution_reading, coexists_with).
+narrative_ontology:cs_reading_relation('9953918e-2e70-4de8-953c-284c7c0aceae', us_constitution_interpretive__popular_constitutionalism_reading, influences).
 narrative_ontology:cs_axiom('9953918e-2e70-4de8-953c-284c7c0aceae', foundational, constitutional_meaning_fixed_at_ratification).
 narrative_ontology:cs_axiom_status(constitutional_meaning_fixed_at_ratification, holdable).
 narrative_ontology:cs_axiom_grounding('9953918e-2e70-4de8-953c-284c7c0aceae', constitutional_meaning_fixed_at_ratification, conventional).
