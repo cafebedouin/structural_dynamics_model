@@ -48,6 +48,7 @@
 :- use_module(drl_lifecycle, []).       % facade — reexports from above
 
 % 4. Load Diagnostic & UI
+:- use_module(reading_diff, []).        % cyclopean disparity operator (authored-cells-only)
 :- use_module(bifurcation_export, []).
 :- use_module(persistence_export, []).
 :- use_module(arakelov_height, []).
